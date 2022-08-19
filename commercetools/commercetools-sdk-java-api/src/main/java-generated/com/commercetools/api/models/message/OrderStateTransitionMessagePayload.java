@@ -15,7 +15,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * OrderStateTransitionMessagePayload
+ *  <p>Generated after a successful Transition State update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -35,7 +35,7 @@ public interface OrderStateTransitionMessagePayload extends OrderMessagePayload 
     String ORDER_STATE_TRANSITION = "OrderStateTransition";
 
     /**
-     *  <p>Reference to a State.</p>
+     *  <p>OrderState after the Transition State update action.</p>
      */
     @NotNull
     @Valid
@@ -43,14 +43,14 @@ public interface OrderStateTransitionMessagePayload extends OrderMessagePayload 
     public StateReference getState();
 
     /**
-     *  <p>Reference to a State.</p>
+     *  <p>OrderState before the Transition State update action.</p>
      */
     @Valid
     @JsonProperty("oldState")
     public StateReference getOldState();
 
     /**
-     *
+     *  <p>Whether State transition validations were turned off during the Transition State update action.</p>
      */
     @NotNull
     @JsonProperty("force")

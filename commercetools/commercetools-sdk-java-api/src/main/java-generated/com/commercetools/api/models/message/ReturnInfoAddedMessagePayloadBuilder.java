@@ -8,37 +8,37 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * OrderReturnInfoAddedMessagePayloadBuilder
+ * ReturnInfoAddedMessagePayloadBuilder
  * <hr>
  * Example to create an instance using the builder pattern
  * <div class=code-example>
  * <pre><code class='java'>
- *     OrderReturnInfoAddedMessagePayload orderReturnInfoAddedMessagePayload = OrderReturnInfoAddedMessagePayload.builder()
+ *     ReturnInfoAddedMessagePayload returnInfoAddedMessagePayload = ReturnInfoAddedMessagePayload.builder()
  *             .returnInfo(returnInfoBuilder -> returnInfoBuilder)
  *             .build()
  * </code></pre>
  * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-public class OrderReturnInfoAddedMessagePayloadBuilder implements Builder<OrderReturnInfoAddedMessagePayload> {
+public class ReturnInfoAddedMessagePayloadBuilder implements Builder<ReturnInfoAddedMessagePayload> {
 
     private com.commercetools.api.models.order.ReturnInfo returnInfo;
 
     /**
-     *
+     *  <p>The ReturnInfo that was added to the Order.</p>
      */
 
-    public OrderReturnInfoAddedMessagePayloadBuilder returnInfo(
+    public ReturnInfoAddedMessagePayloadBuilder returnInfo(
             Function<com.commercetools.api.models.order.ReturnInfoBuilder, com.commercetools.api.models.order.ReturnInfoBuilder> builder) {
         this.returnInfo = builder.apply(com.commercetools.api.models.order.ReturnInfoBuilder.of()).build();
         return this;
     }
 
     /**
-     *
+     *  <p>The ReturnInfo that was added to the Order.</p>
      */
 
-    public OrderReturnInfoAddedMessagePayloadBuilder returnInfo(
+    public ReturnInfoAddedMessagePayloadBuilder returnInfo(
             final com.commercetools.api.models.order.ReturnInfo returnInfo) {
         this.returnInfo = returnInfo;
         return this;
@@ -48,24 +48,24 @@ public class OrderReturnInfoAddedMessagePayloadBuilder implements Builder<OrderR
         return this.returnInfo;
     }
 
-    public OrderReturnInfoAddedMessagePayload build() {
-        Objects.requireNonNull(returnInfo, OrderReturnInfoAddedMessagePayload.class + ": returnInfo is missing");
-        return new OrderReturnInfoAddedMessagePayloadImpl(returnInfo);
+    public ReturnInfoAddedMessagePayload build() {
+        Objects.requireNonNull(returnInfo, ReturnInfoAddedMessagePayload.class + ": returnInfo is missing");
+        return new ReturnInfoAddedMessagePayloadImpl(returnInfo);
     }
 
     /**
-     * builds OrderReturnInfoAddedMessagePayload without checking for non null required values
+     * builds ReturnInfoAddedMessagePayload without checking for non null required values
      */
-    public OrderReturnInfoAddedMessagePayload buildUnchecked() {
-        return new OrderReturnInfoAddedMessagePayloadImpl(returnInfo);
+    public ReturnInfoAddedMessagePayload buildUnchecked() {
+        return new ReturnInfoAddedMessagePayloadImpl(returnInfo);
     }
 
-    public static OrderReturnInfoAddedMessagePayloadBuilder of() {
-        return new OrderReturnInfoAddedMessagePayloadBuilder();
+    public static ReturnInfoAddedMessagePayloadBuilder of() {
+        return new ReturnInfoAddedMessagePayloadBuilder();
     }
 
-    public static OrderReturnInfoAddedMessagePayloadBuilder of(final OrderReturnInfoAddedMessagePayload template) {
-        OrderReturnInfoAddedMessagePayloadBuilder builder = new OrderReturnInfoAddedMessagePayloadBuilder();
+    public static ReturnInfoAddedMessagePayloadBuilder of(final ReturnInfoAddedMessagePayload template) {
+        ReturnInfoAddedMessagePayloadBuilder builder = new ReturnInfoAddedMessagePayloadBuilder();
         builder.returnInfo = template.getReturnInfo();
         return builder;
     }

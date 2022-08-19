@@ -15,7 +15,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * OrderCustomLineItemRemovedMessagePayload
+ *  <p>Generated after a successful Remove Custom Line Item update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -35,14 +35,14 @@ public interface OrderCustomLineItemRemovedMessagePayload extends OrderMessagePa
     String ORDER_CUSTOM_LINE_ITEM_REMOVED = "OrderCustomLineItemRemoved";
 
     /**
-     *
+     *  <p>Unique identifier of the Custom Line Item.</p>
      */
     @NotNull
     @JsonProperty("customLineItemId")
     public String getCustomLineItemId();
 
     /**
-     *
+     *  <p>Custom Line Item that was removed from the Order.</p>
      */
     @NotNull
     @Valid

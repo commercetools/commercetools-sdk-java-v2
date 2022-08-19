@@ -15,7 +15,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * DeliveryAddressSetMessagePayload
+ *  <p>Generated after a successful Set Delivery Address update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -34,21 +34,21 @@ public interface DeliveryAddressSetMessagePayload extends OrderMessagePayload {
     String DELIVERY_ADDRESS_SET = "DeliveryAddressSet";
 
     /**
-     *
+     *  <p>Unique identifier of the Parcel.</p>
      */
     @NotNull
     @JsonProperty("deliveryId")
     public String getDeliveryId();
 
     /**
-     *
+     *  <p>Address after the Set Delivery Address update action.</p>
      */
     @Valid
     @JsonProperty("address")
     public Address getAddress();
 
     /**
-     *
+     *  <p>Address before the Set Delivery Address update action.</p>
      */
     @Valid
     @JsonProperty("oldAddress")

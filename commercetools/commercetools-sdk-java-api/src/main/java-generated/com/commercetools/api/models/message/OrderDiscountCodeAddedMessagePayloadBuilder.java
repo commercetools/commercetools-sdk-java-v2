@@ -25,7 +25,7 @@ public class OrderDiscountCodeAddedMessagePayloadBuilder implements Builder<Orde
     private com.commercetools.api.models.discount_code.DiscountCodeReference discountCode;
 
     /**
-     *  <p>Reference to a DiscountCode.</p>
+     *  <p>DiscountCode that was added.</p>
      */
 
     public OrderDiscountCodeAddedMessagePayloadBuilder discountCode(
@@ -36,7 +36,7 @@ public class OrderDiscountCodeAddedMessagePayloadBuilder implements Builder<Orde
     }
 
     /**
-     *  <p>Reference to a DiscountCode.</p>
+     *  <p>DiscountCode that was added.</p>
      */
 
     public OrderDiscountCodeAddedMessagePayloadBuilder discountCode(

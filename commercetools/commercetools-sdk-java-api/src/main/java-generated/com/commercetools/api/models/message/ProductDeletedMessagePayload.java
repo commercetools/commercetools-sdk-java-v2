@@ -15,7 +15,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * ProductDeletedMessagePayload
+ *  <p>Generated after a successful Delete Product request.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -23,7 +23,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     ProductDeletedMessagePayload productDeletedMessagePayload = ProductDeletedMessagePayload.builder()
  *             .plusRemovedImageUrls(removedImageUrlsBuilder -> removedImageUrlsBuilder)
- *             .currentProjection(currentProjectionBuilder -> currentProjectionBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -35,16 +34,15 @@ public interface ProductDeletedMessagePayload extends MessagePayload {
     String PRODUCT_DELETED = "ProductDeleted";
 
     /**
-     *
+     *  <p>List of image URLs that were removed during the Delete Product request.</p>
      */
     @NotNull
     @JsonProperty("removedImageUrls")
     public List<String> getRemovedImageUrls();
 
     /**
-     *
+     *  <p>Current Product Projection of the deleted Product.</p>
      */
-    @NotNull
     @Valid
     @JsonProperty("currentProjection")
     public ProductProjection getCurrentProjection();

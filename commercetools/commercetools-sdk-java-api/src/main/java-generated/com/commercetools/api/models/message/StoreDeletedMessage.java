@@ -11,7 +11,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * StoreDeletedMessage
+ *  <p>Generated after a successful Delete Store request.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

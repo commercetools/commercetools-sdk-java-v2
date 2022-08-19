@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * ParcelMeasurementsUpdatedMessage
+ *  <p>Generated after a successful Set Parcel Measurements update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ParcelMeasurementsUpdatedMessageImpl implements ParcelMeasurementsUpdatedMessage, ModelBase {
@@ -82,7 +82,7 @@ public class ParcelMeasurementsUpdatedMessageImpl implements ParcelMeasurementsU
     }
 
     /**
-     *  <p>Unique identifier of the Message.</p>
+     *  <p>Unique identifier of the Message. Can be used to track which Messages have been processed.</p>
      */
 
     public String getId() {
@@ -90,7 +90,7 @@ public class ParcelMeasurementsUpdatedMessageImpl implements ParcelMeasurementsU
     }
 
     /**
-     *
+     *  <p>Version of a resource. In case of Messages, this is always <code>1</code>.</p>
      */
 
     public Long getVersion() {
@@ -98,7 +98,7 @@ public class ParcelMeasurementsUpdatedMessageImpl implements ParcelMeasurementsU
     }
 
     /**
-     *
+     *  <p>Date and time (UTC) the Message was generated.</p>
      */
 
     public java.time.ZonedDateTime getCreatedAt() {
@@ -106,7 +106,7 @@ public class ParcelMeasurementsUpdatedMessageImpl implements ParcelMeasurementsU
     }
 
     /**
-     *
+     *  <p>Value of <code>createdAt</code>.</p>
      */
 
     public java.time.ZonedDateTime getLastModifiedAt() {
@@ -114,7 +114,7 @@ public class ParcelMeasurementsUpdatedMessageImpl implements ParcelMeasurementsU
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>Value of <code>createdBy</code>.</p>
      */
 
     public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy() {
@@ -130,7 +130,7 @@ public class ParcelMeasurementsUpdatedMessageImpl implements ParcelMeasurementsU
     }
 
     /**
-     *
+     *  <p>Message number in relation to other Messages for a given resource. The <code>sequenceNumber</code> of the next Message for the resource is the successor of the <code>sequenceNumber</code> of the current Message. Meaning, the <code>sequenceNumber</code> of the next Message equals the <code>sequenceNumber</code> of the current Message + 1. <code>sequenceNumber</code> can be used to ensure that Messages are processed in the correct order for a particular resource.</p>
      */
 
     public Long getSequenceNumber() {
@@ -138,7 +138,7 @@ public class ParcelMeasurementsUpdatedMessageImpl implements ParcelMeasurementsU
     }
 
     /**
-     *  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
+     *  <p>Reference to the resource on which the change or action was performed.</p>
      */
 
     public com.commercetools.api.models.common.Reference getResource() {
@@ -146,7 +146,7 @@ public class ParcelMeasurementsUpdatedMessageImpl implements ParcelMeasurementsU
     }
 
     /**
-     *
+     *  <p>Version of the resource on which the change or action was performed.</p>
      */
 
     public Long getResourceVersion() {
@@ -154,7 +154,7 @@ public class ParcelMeasurementsUpdatedMessageImpl implements ParcelMeasurementsU
     }
 
     /**
-     *
+     *  <p>Message Type of the Message.</p>
      */
 
     public String getType() {
@@ -162,7 +162,7 @@ public class ParcelMeasurementsUpdatedMessageImpl implements ParcelMeasurementsU
     }
 
     /**
-     *
+     *  <p>User-provided identifiers of the resource, such as <code>key</code> or <code>externalId</code>. Only present if the resource has such identifiers.</p>
      */
 
     public com.commercetools.api.models.message.UserProvidedIdentifiers getResourceUserProvidedIdentifiers() {
@@ -170,7 +170,7 @@ public class ParcelMeasurementsUpdatedMessageImpl implements ParcelMeasurementsU
     }
 
     /**
-     *
+     *  <p>Unique identifier of the Delivery.</p>
      */
 
     public String getDeliveryId() {
@@ -178,7 +178,7 @@ public class ParcelMeasurementsUpdatedMessageImpl implements ParcelMeasurementsU
     }
 
     /**
-     *
+     *  <p>Unique identifier of the Parcel.</p>
      */
 
     public String getParcelId() {
@@ -186,7 +186,7 @@ public class ParcelMeasurementsUpdatedMessageImpl implements ParcelMeasurementsU
     }
 
     /**
-     *
+     *  <p>The Parcel Measurements that were set on the Parcel.</p>
      */
 
     public com.commercetools.api.models.order.ParcelMeasurements getMeasurements() {

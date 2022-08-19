@@ -29,7 +29,7 @@ public class OrderCustomerEmailSetMessagePayloadBuilder implements Builder<Order
     private String oldEmail;
 
     /**
-     *
+     *  <p>Email address on the Order after the Set Customer Email update action.</p>
      */
 
     public OrderCustomerEmailSetMessagePayloadBuilder email(@Nullable final String email) {
@@ -38,7 +38,7 @@ public class OrderCustomerEmailSetMessagePayloadBuilder implements Builder<Order
     }
 
     /**
-     *
+     *  <p>Email address on the Order before the Set Customer Email update action.</p>
      */
 
     public OrderCustomerEmailSetMessagePayloadBuilder oldEmail(@Nullable final String oldEmail) {

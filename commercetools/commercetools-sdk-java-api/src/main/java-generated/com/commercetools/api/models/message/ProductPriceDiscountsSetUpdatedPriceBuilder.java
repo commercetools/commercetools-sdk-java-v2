@@ -42,7 +42,7 @@ public class ProductPriceDiscountsSetUpdatedPriceBuilder implements Builder<Prod
     private Boolean staged;
 
     /**
-     *
+     *  <p>Unique identifier of the ProductVariant for which the Discount was set.</p>
      */
 
     public ProductPriceDiscountsSetUpdatedPriceBuilder variantId(final Integer variantId) {
@@ -51,7 +51,7 @@ public class ProductPriceDiscountsSetUpdatedPriceBuilder implements Builder<Prod
     }
 
     /**
-     *
+     *  <p>Key of the ProductVariant for which Discount was set.</p>
      */
 
     public ProductPriceDiscountsSetUpdatedPriceBuilder variantKey(@Nullable final String variantKey) {
@@ -60,7 +60,7 @@ public class ProductPriceDiscountsSetUpdatedPriceBuilder implements Builder<Prod
     }
 
     /**
-     *
+     *  <p>SKU of the ProductVariant for which Discount was set.</p>
      */
 
     public ProductPriceDiscountsSetUpdatedPriceBuilder sku(@Nullable final String sku) {
@@ -69,7 +69,7 @@ public class ProductPriceDiscountsSetUpdatedPriceBuilder implements Builder<Prod
     }
 
     /**
-     *
+     *  <p>Unique identifier of the Price.</p>
      */
 
     public ProductPriceDiscountsSetUpdatedPriceBuilder priceId(final String priceId) {
@@ -78,7 +78,7 @@ public class ProductPriceDiscountsSetUpdatedPriceBuilder implements Builder<Prod
     }
 
     /**
-     *
+     *  <p>Discounted Price for the ProductVariant for which Discount was set.</p>
      */
 
     public ProductPriceDiscountsSetUpdatedPriceBuilder discounted(
@@ -88,7 +88,7 @@ public class ProductPriceDiscountsSetUpdatedPriceBuilder implements Builder<Prod
     }
 
     /**
-     *
+     *  <p>Discounted Price for the ProductVariant for which Discount was set.</p>
      */
 
     public ProductPriceDiscountsSetUpdatedPriceBuilder discounted(
@@ -98,7 +98,7 @@ public class ProductPriceDiscountsSetUpdatedPriceBuilder implements Builder<Prod
     }
 
     /**
-     *
+     *  <p>Whether the update was only applied to the staged ProductProjection.</p>
      */
 
     public ProductPriceDiscountsSetUpdatedPriceBuilder staged(final Boolean staged) {

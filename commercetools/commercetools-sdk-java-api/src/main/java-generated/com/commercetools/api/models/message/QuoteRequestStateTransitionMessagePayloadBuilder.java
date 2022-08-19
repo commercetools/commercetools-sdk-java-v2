@@ -74,7 +74,7 @@ public class QuoteRequestStateTransitionMessagePayloadBuilder
     }
 
     /**
-     *  <p><code>true</code>, if State transition validations were turned off during the Transition State update action.</p>
+     *  <p>Whether State transition validations were turned off during the Transition State update action.</p>
      */
 
     public QuoteRequestStateTransitionMessagePayloadBuilder force(final Boolean force) {

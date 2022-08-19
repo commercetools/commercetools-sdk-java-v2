@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * ProductRemovedFromCategoryMessagePayload
+ *  <p>Generated after a successful Remove From Category update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductRemovedFromCategoryMessagePayloadImpl
@@ -49,7 +49,7 @@ public class ProductRemovedFromCategoryMessagePayloadImpl
     }
 
     /**
-     *  <p>Reference to a Category.</p>
+     *  <p>Category the Product was removed from.</p>
      */
 
     public com.commercetools.api.models.category.CategoryReference getCategory() {
@@ -57,7 +57,7 @@ public class ProductRemovedFromCategoryMessagePayloadImpl
     }
 
     /**
-     *
+     *  <p>Whether the update was only applied to the staged Product Projection.</p>
      */
 
     public Boolean getStaged() {

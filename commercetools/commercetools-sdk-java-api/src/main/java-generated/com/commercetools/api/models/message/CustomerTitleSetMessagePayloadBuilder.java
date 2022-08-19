@@ -26,7 +26,7 @@ public class CustomerTitleSetMessagePayloadBuilder implements Builder<CustomerTi
     private String title;
 
     /**
-     *
+     *  <p>The <code>title</code> that was set during the Set Title update action.</p>
      */
 
     public CustomerTitleSetMessagePayloadBuilder title(@Nullable final String title) {

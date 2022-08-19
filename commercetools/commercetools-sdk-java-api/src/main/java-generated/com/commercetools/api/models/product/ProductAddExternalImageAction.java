@@ -15,7 +15,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>Either <code>variantId</code> or <code>sku</code> is required. Produces the ProductImageAddedMessage.</p>
+ *  <p>Either <code>variantId</code> or <code>sku</code> is required. Produces the ProductImageAdded Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

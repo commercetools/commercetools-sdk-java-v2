@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * ProductRevertedStagedChangesMessagePayload
+ *  <p>Generated after a successful Revert Staged Changes update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductRevertedStagedChangesMessagePayloadImpl
@@ -45,7 +45,7 @@ public class ProductRevertedStagedChangesMessagePayloadImpl
     }
 
     /**
-     *
+     *  <p>List of image URLs that were removed during the Revert Staged Changes update action.</p>
      */
 
     public java.util.List<String> getRemovedImageUrls() {

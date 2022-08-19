@@ -14,7 +14,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * OrderShippingInfoSetMessagePayload
+ *  <p>Generated after a successful Set Shipping Method and Set Custom Shipping Method update actions.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -32,14 +32,14 @@ public interface OrderShippingInfoSetMessagePayload extends OrderMessagePayload 
     String ORDER_SHIPPING_INFO_SET = "OrderShippingInfoSet";
 
     /**
-     *
+     *  <p>ShippingInfo after the Set Shipping Method or Set Custom Shipping Method update action.</p>
      */
     @Valid
     @JsonProperty("shippingInfo")
     public ShippingInfo getShippingInfo();
 
     /**
-     *
+     *  <p>ShippingInfo before the Set Shipping Method or Set Custom Shipping Method update action.</p>
      */
     @Valid
     @JsonProperty("oldShippingInfo")

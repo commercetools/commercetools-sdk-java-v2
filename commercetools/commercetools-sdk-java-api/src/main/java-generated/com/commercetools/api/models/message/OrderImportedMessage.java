@@ -15,7 +15,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * OrderImportedMessage
+ *  <p>Generated after a successful Order Import.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -41,7 +41,7 @@ public interface OrderImportedMessage extends OrderMessage {
     String ORDER_IMPORTED = "OrderImported";
 
     /**
-     *
+     *  <p>Order that was imported.</p>
      */
     @NotNull
     @Valid

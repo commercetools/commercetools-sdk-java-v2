@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * PaymentStatusInterfaceCodeSetMessagePayload
+ *  <p>Generated after a successful Set StatusInterfaceCode update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class PaymentStatusInterfaceCodeSetMessagePayloadImpl
@@ -48,7 +48,7 @@ public class PaymentStatusInterfaceCodeSetMessagePayloadImpl
     }
 
     /**
-     *
+     *  <p>Unique identifier for the Payment for which the Set StatusInterfaceCode update action was applied.</p>
      */
 
     public String getPaymentId() {
@@ -56,7 +56,7 @@ public class PaymentStatusInterfaceCodeSetMessagePayloadImpl
     }
 
     /**
-     *
+     *  <p>The <code>interfaceCode</code> that was set during the Set StatusInterfaceCode update action.</p>
      */
 
     public String getInterfaceCode() {

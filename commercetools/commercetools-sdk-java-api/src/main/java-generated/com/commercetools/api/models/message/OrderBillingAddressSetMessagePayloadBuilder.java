@@ -30,7 +30,7 @@ public class OrderBillingAddressSetMessagePayloadBuilder implements Builder<Orde
     private com.commercetools.api.models.common.Address oldAddress;
 
     /**
-     *
+     *  <p>Billing address on the Order after the Set Billing Address update action.</p>
      */
 
     public OrderBillingAddressSetMessagePayloadBuilder address(
@@ -40,7 +40,7 @@ public class OrderBillingAddressSetMessagePayloadBuilder implements Builder<Orde
     }
 
     /**
-     *
+     *  <p>Billing address on the Order after the Set Billing Address update action.</p>
      */
 
     public OrderBillingAddressSetMessagePayloadBuilder address(
@@ -50,7 +50,7 @@ public class OrderBillingAddressSetMessagePayloadBuilder implements Builder<Orde
     }
 
     /**
-     *
+     *  <p>Billing address on the Order before the Set Billing Address update action.</p>
      */
 
     public OrderBillingAddressSetMessagePayloadBuilder oldAddress(
@@ -60,7 +60,7 @@ public class OrderBillingAddressSetMessagePayloadBuilder implements Builder<Orde
     }
 
     /**
-     *
+     *  <p>Billing address on the Order before the Set Billing Address update action.</p>
      */
 
     public OrderBillingAddressSetMessagePayloadBuilder oldAddress(

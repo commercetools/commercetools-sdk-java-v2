@@ -26,7 +26,7 @@ public class CustomerLastNameSetMessagePayloadBuilder implements Builder<Custome
     private String lastName;
 
     /**
-     *
+     *  <p>The <code>lastName</code> that was set during the Set Last Name update action.</p>
      */
 
     public CustomerLastNameSetMessagePayloadBuilder lastName(@Nullable final String lastName) {

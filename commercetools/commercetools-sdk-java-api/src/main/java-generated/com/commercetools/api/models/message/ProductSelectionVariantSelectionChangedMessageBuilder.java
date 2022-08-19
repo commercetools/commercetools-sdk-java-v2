@@ -24,6 +24,8 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .resource(resourceBuilder -> resourceBuilder)
  *             .resourceVersion(0.3)
  *             .product(productBuilder -> productBuilder)
+ *             .oldVariantSelection(oldVariantSelectionBuilder -> oldVariantSelectionBuilder)
+ *             .newVariantSelection(newVariantSelectionBuilder -> newVariantSelectionBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -57,14 +59,12 @@ public class ProductSelectionVariantSelectionChangedMessageBuilder
 
     private com.commercetools.api.models.product.ProductReference product;
 
-    @Nullable
     private com.commercetools.api.models.product_selection.ProductVariantSelection oldVariantSelection;
 
-    @Nullable
     private com.commercetools.api.models.product_selection.ProductVariantSelection newVariantSelection;
 
     /**
-     *  <p>Unique identifier of the Message.</p>
+     *  <p>Unique identifier of the Message. Can be used to track which Messages have been processed.</p>
      */
 
     public ProductSelectionVariantSelectionChangedMessageBuilder id(final String id) {
@@ -73,7 +73,7 @@ public class ProductSelectionVariantSelectionChangedMessageBuilder
     }
 
     /**
-     *
+     *  <p>Version of a resource. In case of Messages, this is always <code>1</code>.</p>
      */
 
     public ProductSelectionVariantSelectionChangedMessageBuilder version(final Long version) {
@@ -82,7 +82,7 @@ public class ProductSelectionVariantSelectionChangedMessageBuilder
     }
 
     /**
-     *
+     *  <p>Date and time (UTC) the Message was generated.</p>
      */
 
     public ProductSelectionVariantSelectionChangedMessageBuilder createdAt(final java.time.ZonedDateTime createdAt) {
@@ -91,7 +91,7 @@ public class ProductSelectionVariantSelectionChangedMessageBuilder
     }
 
     /**
-     *
+     *  <p>Value of <code>createdAt</code>.</p>
      */
 
     public ProductSelectionVariantSelectionChangedMessageBuilder lastModifiedAt(
@@ -101,7 +101,7 @@ public class ProductSelectionVariantSelectionChangedMessageBuilder
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>Value of <code>createdBy</code>.</p>
      */
 
     public ProductSelectionVariantSelectionChangedMessageBuilder lastModifiedBy(
@@ -111,7 +111,7 @@ public class ProductSelectionVariantSelectionChangedMessageBuilder
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>Value of <code>createdBy</code>.</p>
      */
 
     public ProductSelectionVariantSelectionChangedMessageBuilder lastModifiedBy(
@@ -141,7 +141,7 @@ public class ProductSelectionVariantSelectionChangedMessageBuilder
     }
 
     /**
-     *
+     *  <p>Message number in relation to other Messages for a given resource. The <code>sequenceNumber</code> of the next Message for the resource is the successor of the <code>sequenceNumber</code> of the current Message. Meaning, the <code>sequenceNumber</code> of the next Message equals the <code>sequenceNumber</code> of the current Message + 1. <code>sequenceNumber</code> can be used to ensure that Messages are processed in the correct order for a particular resource.</p>
      */
 
     public ProductSelectionVariantSelectionChangedMessageBuilder sequenceNumber(final Long sequenceNumber) {
@@ -150,7 +150,7 @@ public class ProductSelectionVariantSelectionChangedMessageBuilder
     }
 
     /**
-     *  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
+     *  <p>Reference to the resource on which the change or action was performed.</p>
      */
 
     public ProductSelectionVariantSelectionChangedMessageBuilder resource(
@@ -160,7 +160,7 @@ public class ProductSelectionVariantSelectionChangedMessageBuilder
     }
 
     /**
-     *  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
+     *  <p>Reference to the resource on which the change or action was performed.</p>
      */
 
     public ProductSelectionVariantSelectionChangedMessageBuilder resource(
@@ -170,7 +170,7 @@ public class ProductSelectionVariantSelectionChangedMessageBuilder
     }
 
     /**
-     *
+     *  <p>Version of the resource on which the change or action was performed.</p>
      */
 
     public ProductSelectionVariantSelectionChangedMessageBuilder resourceVersion(final Long resourceVersion) {
@@ -179,7 +179,7 @@ public class ProductSelectionVariantSelectionChangedMessageBuilder
     }
 
     /**
-     *
+     *  <p>User-provided identifiers of the resource, such as <code>key</code> or <code>externalId</code>. Only present if the resource has such identifiers.</p>
      */
 
     public ProductSelectionVariantSelectionChangedMessageBuilder resourceUserProvidedIdentifiers(
@@ -191,7 +191,7 @@ public class ProductSelectionVariantSelectionChangedMessageBuilder
     }
 
     /**
-     *
+     *  <p>User-provided identifiers of the resource, such as <code>key</code> or <code>externalId</code>. Only present if the resource has such identifiers.</p>
      */
 
     public ProductSelectionVariantSelectionChangedMessageBuilder resourceUserProvidedIdentifiers(
@@ -201,7 +201,7 @@ public class ProductSelectionVariantSelectionChangedMessageBuilder
     }
 
     /**
-     *  <p>Reference to a Product.</p>
+     *  <p>Product for which the Product Variant Selection changed.</p>
      */
 
     public ProductSelectionVariantSelectionChangedMessageBuilder product(
@@ -211,7 +211,7 @@ public class ProductSelectionVariantSelectionChangedMessageBuilder
     }
 
     /**
-     *  <p>Reference to a Product.</p>
+     *  <p>Product for which the Product Variant Selection changed.</p>
      */
 
     public ProductSelectionVariantSelectionChangedMessageBuilder product(
@@ -221,17 +221,17 @@ public class ProductSelectionVariantSelectionChangedMessageBuilder
     }
 
     /**
-     *  <p>The former Product Variant Selection if any.</p>
+     *  <p>Product Variant Selection before the Set Variant Selection update action.</p>
      */
 
     public ProductSelectionVariantSelectionChangedMessageBuilder oldVariantSelection(
-            @Nullable final com.commercetools.api.models.product_selection.ProductVariantSelection oldVariantSelection) {
+            final com.commercetools.api.models.product_selection.ProductVariantSelection oldVariantSelection) {
         this.oldVariantSelection = oldVariantSelection;
         return this;
     }
 
     /**
-     *  <p>The former Product Variant Selection if any.</p>
+     *  <p>Product Variant Selection before the Set Variant Selection update action.</p>
      */
 
     public ProductSelectionVariantSelectionChangedMessageBuilder oldVariantSelection(
@@ -243,17 +243,17 @@ public class ProductSelectionVariantSelectionChangedMessageBuilder
     }
 
     /**
-     *  <p>The updated Product Variant Selection if any.</p>
+     *  <p>Product Variant Selection after the Set Variant Selection update action.</p>
      */
 
     public ProductSelectionVariantSelectionChangedMessageBuilder newVariantSelection(
-            @Nullable final com.commercetools.api.models.product_selection.ProductVariantSelection newVariantSelection) {
+            final com.commercetools.api.models.product_selection.ProductVariantSelection newVariantSelection) {
         this.newVariantSelection = newVariantSelection;
         return this;
     }
 
     /**
-     *  <p>The updated Product Variant Selection if any.</p>
+     *  <p>Product Variant Selection after the Set Variant Selection update action.</p>
      */
 
     public ProductSelectionVariantSelectionChangedMessageBuilder newVariantSelection(
@@ -311,12 +311,10 @@ public class ProductSelectionVariantSelectionChangedMessageBuilder
         return this.product;
     }
 
-    @Nullable
     public com.commercetools.api.models.product_selection.ProductVariantSelection getOldVariantSelection() {
         return this.oldVariantSelection;
     }
 
-    @Nullable
     public com.commercetools.api.models.product_selection.ProductVariantSelection getNewVariantSelection() {
         return this.newVariantSelection;
     }
@@ -335,6 +333,10 @@ public class ProductSelectionVariantSelectionChangedMessageBuilder
         Objects.requireNonNull(resourceVersion,
             ProductSelectionVariantSelectionChangedMessage.class + ": resourceVersion is missing");
         Objects.requireNonNull(product, ProductSelectionVariantSelectionChangedMessage.class + ": product is missing");
+        Objects.requireNonNull(oldVariantSelection,
+            ProductSelectionVariantSelectionChangedMessage.class + ": oldVariantSelection is missing");
+        Objects.requireNonNull(newVariantSelection,
+            ProductSelectionVariantSelectionChangedMessage.class + ": newVariantSelection is missing");
         return new ProductSelectionVariantSelectionChangedMessageImpl(id, version, createdAt, lastModifiedAt,
             lastModifiedBy, createdBy, sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers,
             product, oldVariantSelection, newVariantSelection);

@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * ParcelRemovedFromDeliveryMessagePayload
+ *  <p>Generated after a successful Remove Parcel From Delivery update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ParcelRemovedFromDeliveryMessagePayloadImpl implements ParcelRemovedFromDeliveryMessagePayload, ModelBase {
@@ -47,7 +47,7 @@ public class ParcelRemovedFromDeliveryMessagePayloadImpl implements ParcelRemove
     }
 
     /**
-     *
+     *  <p>Unique identifier of the Delivery.</p>
      */
 
     public String getDeliveryId() {
@@ -55,7 +55,7 @@ public class ParcelRemovedFromDeliveryMessagePayloadImpl implements ParcelRemove
     }
 
     /**
-     *
+     *  <p>Parcel that was removed from the Delivery.</p>
      */
 
     public com.commercetools.api.models.order.Parcel getParcel() {

@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * ProductImageAddedMessagePayload
+ *  <p>Generated after a successful Add External Image update action or after the successful upload of an image.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductImageAddedMessagePayloadImpl implements ProductImageAddedMessagePayload, ModelBase {
@@ -51,7 +51,7 @@ public class ProductImageAddedMessagePayloadImpl implements ProductImageAddedMes
     }
 
     /**
-     *
+     *  <p>Unique identifier of the Product Variant to which the Image was added.</p>
      */
 
     public Long getVariantId() {
@@ -59,7 +59,7 @@ public class ProductImageAddedMessagePayloadImpl implements ProductImageAddedMes
     }
 
     /**
-     *
+     *  <p>Image that was added.</p>
      */
 
     public com.commercetools.api.models.common.Image getImage() {
@@ -67,7 +67,7 @@ public class ProductImageAddedMessagePayloadImpl implements ProductImageAddedMes
     }
 
     /**
-     *
+     *  <p>Whether the update was only applied to the staged Product Projection.</p>
      */
 
     public Boolean getStaged() {

@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * CustomerDateOfBirthSetMessagePayload
+ *  <p>Generated after a successful Set Date of Birth update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomerDateOfBirthSetMessagePayloadImpl implements CustomerDateOfBirthSetMessagePayload, ModelBase {
@@ -43,7 +43,7 @@ public class CustomerDateOfBirthSetMessagePayloadImpl implements CustomerDateOfB
     }
 
     /**
-     *
+     *  <p>The <code>dateOfBirth</code> that was set during the Set Date of Birth update action.</p>
      */
 
     public java.time.LocalDate getDateOfBirth() {

@@ -10,47 +10,47 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * OrderReturnInfoSetMessagePayloadBuilder
+ * ReturnInfoSetMessagePayloadBuilder
  * <hr>
  * Example to create an instance using the builder pattern
  * <div class=code-example>
  * <pre><code class='java'>
- *     OrderReturnInfoSetMessagePayload orderReturnInfoSetMessagePayload = OrderReturnInfoSetMessagePayload.builder()
+ *     ReturnInfoSetMessagePayload returnInfoSetMessagePayload = ReturnInfoSetMessagePayload.builder()
  *             .build()
  * </code></pre>
  * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-public class OrderReturnInfoSetMessagePayloadBuilder implements Builder<OrderReturnInfoSetMessagePayload> {
+public class ReturnInfoSetMessagePayloadBuilder implements Builder<ReturnInfoSetMessagePayload> {
 
     @Nullable
     private java.util.List<com.commercetools.api.models.order.ReturnInfo> returnInfo;
 
     /**
-     *
+     *  <p>The ReturnInfo that was set on the Order or Order Edit.</p>
      */
 
-    public OrderReturnInfoSetMessagePayloadBuilder returnInfo(
+    public ReturnInfoSetMessagePayloadBuilder returnInfo(
             @Nullable final com.commercetools.api.models.order.ReturnInfo... returnInfo) {
         this.returnInfo = new ArrayList<>(Arrays.asList(returnInfo));
         return this;
     }
 
     /**
-     *
+     *  <p>The ReturnInfo that was set on the Order or Order Edit.</p>
      */
 
-    public OrderReturnInfoSetMessagePayloadBuilder returnInfo(
+    public ReturnInfoSetMessagePayloadBuilder returnInfo(
             @Nullable final java.util.List<com.commercetools.api.models.order.ReturnInfo> returnInfo) {
         this.returnInfo = returnInfo;
         return this;
     }
 
     /**
-     *
+     *  <p>The ReturnInfo that was set on the Order or Order Edit.</p>
      */
 
-    public OrderReturnInfoSetMessagePayloadBuilder plusReturnInfo(
+    public ReturnInfoSetMessagePayloadBuilder plusReturnInfo(
             @Nullable final com.commercetools.api.models.order.ReturnInfo... returnInfo) {
         if (this.returnInfo == null) {
             this.returnInfo = new ArrayList<>();
@@ -60,10 +60,10 @@ public class OrderReturnInfoSetMessagePayloadBuilder implements Builder<OrderRet
     }
 
     /**
-     *
+     *  <p>The ReturnInfo that was set on the Order or Order Edit.</p>
      */
 
-    public OrderReturnInfoSetMessagePayloadBuilder plusReturnInfo(
+    public ReturnInfoSetMessagePayloadBuilder plusReturnInfo(
             Function<com.commercetools.api.models.order.ReturnInfoBuilder, com.commercetools.api.models.order.ReturnInfoBuilder> builder) {
         if (this.returnInfo == null) {
             this.returnInfo = new ArrayList<>();
@@ -73,10 +73,10 @@ public class OrderReturnInfoSetMessagePayloadBuilder implements Builder<OrderRet
     }
 
     /**
-     *
+     *  <p>The ReturnInfo that was set on the Order or Order Edit.</p>
      */
 
-    public OrderReturnInfoSetMessagePayloadBuilder withReturnInfo(
+    public ReturnInfoSetMessagePayloadBuilder withReturnInfo(
             Function<com.commercetools.api.models.order.ReturnInfoBuilder, com.commercetools.api.models.order.ReturnInfoBuilder> builder) {
         this.returnInfo = new ArrayList<>();
         this.returnInfo.add(builder.apply(com.commercetools.api.models.order.ReturnInfoBuilder.of()).build());
@@ -88,23 +88,23 @@ public class OrderReturnInfoSetMessagePayloadBuilder implements Builder<OrderRet
         return this.returnInfo;
     }
 
-    public OrderReturnInfoSetMessagePayload build() {
-        return new OrderReturnInfoSetMessagePayloadImpl(returnInfo);
+    public ReturnInfoSetMessagePayload build() {
+        return new ReturnInfoSetMessagePayloadImpl(returnInfo);
     }
 
     /**
-     * builds OrderReturnInfoSetMessagePayload without checking for non null required values
+     * builds ReturnInfoSetMessagePayload without checking for non null required values
      */
-    public OrderReturnInfoSetMessagePayload buildUnchecked() {
-        return new OrderReturnInfoSetMessagePayloadImpl(returnInfo);
+    public ReturnInfoSetMessagePayload buildUnchecked() {
+        return new ReturnInfoSetMessagePayloadImpl(returnInfo);
     }
 
-    public static OrderReturnInfoSetMessagePayloadBuilder of() {
-        return new OrderReturnInfoSetMessagePayloadBuilder();
+    public static ReturnInfoSetMessagePayloadBuilder of() {
+        return new ReturnInfoSetMessagePayloadBuilder();
     }
 
-    public static OrderReturnInfoSetMessagePayloadBuilder of(final OrderReturnInfoSetMessagePayload template) {
-        OrderReturnInfoSetMessagePayloadBuilder builder = new OrderReturnInfoSetMessagePayloadBuilder();
+    public static ReturnInfoSetMessagePayloadBuilder of(final ReturnInfoSetMessagePayload template) {
+        ReturnInfoSetMessagePayloadBuilder builder = new ReturnInfoSetMessagePayloadBuilder();
         builder.returnInfo = template.getReturnInfo();
         return builder;
     }

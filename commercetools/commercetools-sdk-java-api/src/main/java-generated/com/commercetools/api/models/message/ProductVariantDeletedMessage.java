@@ -15,7 +15,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * ProductVariantDeletedMessage
+ *  <p>Generated after a successful Remove Product Variant update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -29,7 +29,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .sequenceNumber(0.3)
  *             .resource(resourceBuilder -> resourceBuilder)
  *             .resourceVersion(0.3)
- *             .variant(variantBuilder -> variantBuilder)
  *             .plusRemovedImageUrls(removedImageUrlsBuilder -> removedImageUrlsBuilder)
  *             .build()
  * </code></pre>
@@ -42,15 +41,14 @@ public interface ProductVariantDeletedMessage extends Message {
     String PRODUCT_VARIANT_DELETED = "ProductVariantDeleted";
 
     /**
-     *  <p>A concrete sellable good for which inventory can be tracked. Product Variants are generally mapped to specific SKUs.</p>
+     *  <p>Unique identifier of the Product Variant that was added.</p>
      */
-    @NotNull
     @Valid
     @JsonProperty("variant")
     public ProductVariant getVariant();
 
     /**
-     *
+     *  <p>List of image URLs that were removed with the Remove Product Variant update action.</p>
      */
     @NotNull
     @JsonProperty("removedImageUrls")

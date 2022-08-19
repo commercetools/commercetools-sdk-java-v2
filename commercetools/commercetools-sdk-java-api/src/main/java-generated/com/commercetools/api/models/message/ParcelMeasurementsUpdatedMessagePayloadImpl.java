@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * ParcelMeasurementsUpdatedMessagePayload
+ *  <p>Generated after a successful Set Parcel Measurements update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ParcelMeasurementsUpdatedMessagePayloadImpl implements ParcelMeasurementsUpdatedMessagePayload, ModelBase {
@@ -51,7 +51,7 @@ public class ParcelMeasurementsUpdatedMessagePayloadImpl implements ParcelMeasur
     }
 
     /**
-     *
+     *  <p>Unique identifier of the Delivery.</p>
      */
 
     public String getDeliveryId() {
@@ -59,7 +59,7 @@ public class ParcelMeasurementsUpdatedMessagePayloadImpl implements ParcelMeasur
     }
 
     /**
-     *
+     *  <p>Unique identifier of the Parcel.</p>
      */
 
     public String getParcelId() {
@@ -67,7 +67,7 @@ public class ParcelMeasurementsUpdatedMessagePayloadImpl implements ParcelMeasur
     }
 
     /**
-     *
+     *  <p>The Parcel Measurements that were set on the Parcel.</p>
      */
 
     public com.commercetools.api.models.order.ParcelMeasurements getMeasurements() {

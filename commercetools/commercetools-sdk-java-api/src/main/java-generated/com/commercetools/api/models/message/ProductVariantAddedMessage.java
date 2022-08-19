@@ -15,7 +15,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * ProductVariantAddedMessage
+ *  <p>Generated after a successful Add Product Variant update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -42,7 +42,7 @@ public interface ProductVariantAddedMessage extends Message {
     String PRODUCT_VARIANT_ADDED = "ProductVariantAdded";
 
     /**
-     *  <p>A concrete sellable good for which inventory can be tracked. Product Variants are generally mapped to specific SKUs.</p>
+     *  <p>Unique identifier of the Product Variant that was added.</p>
      */
     @NotNull
     @Valid
@@ -50,7 +50,7 @@ public interface ProductVariantAddedMessage extends Message {
     public ProductVariant getVariant();
 
     /**
-     *
+     *  <p>Whether the update was only applied to the staged Product Projection.</p>
      */
     @NotNull
     @JsonProperty("staged")

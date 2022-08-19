@@ -15,7 +15,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * ProductCreatedMessagePayload
+ *  <p>Generated after a successful Create Product request.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -34,7 +34,7 @@ public interface ProductCreatedMessagePayload extends MessagePayload {
     String PRODUCT_CREATED = "ProductCreated";
 
     /**
-     *
+     *  <p>The staged Product Projection of the Product at the time of creation.</p>
      */
     @NotNull
     @Valid

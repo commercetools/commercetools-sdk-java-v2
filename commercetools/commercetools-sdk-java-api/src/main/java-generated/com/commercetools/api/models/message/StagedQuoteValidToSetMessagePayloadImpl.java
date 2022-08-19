@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * StagedQuoteValidToSetMessagePayload
+ *  <p>Generated after a successful Set Valid To update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StagedQuoteValidToSetMessagePayloadImpl implements StagedQuoteValidToSetMessagePayload, ModelBase {
@@ -43,7 +43,7 @@ public class StagedQuoteValidToSetMessagePayloadImpl implements StagedQuoteValid
     }
 
     /**
-     *
+     *  <p>Expiration date for the Staged Quote after the Set Valid To update action.</p>
      */
 
     public java.time.ZonedDateTime getValidTo() {

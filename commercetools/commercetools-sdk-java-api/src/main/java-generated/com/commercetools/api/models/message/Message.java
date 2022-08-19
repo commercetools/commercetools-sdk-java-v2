@@ -19,7 +19,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * Message
+ *  <p>Base representation of a Message containing common fields to all Message Types.</p>
  *
  * <hr>
  * Example to create a subtype instance using the builder pattern
@@ -85,8 +85,6 @@ import io.vrap.rmf.base.client.utils.Generated;
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.OrderLineItemRemovedMessageImpl.class, name = OrderLineItemRemovedMessage.ORDER_LINE_ITEM_REMOVED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.OrderPaymentAddedMessageImpl.class, name = OrderPaymentAddedMessage.ORDER_PAYMENT_ADDED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.OrderPaymentStateChangedMessageImpl.class, name = OrderPaymentStateChangedMessage.ORDER_PAYMENT_STATE_CHANGED),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.OrderReturnInfoAddedMessageImpl.class, name = OrderReturnInfoAddedMessage.RETURN_INFO_ADDED),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.OrderReturnInfoSetMessageImpl.class, name = OrderReturnInfoSetMessage.RETURN_INFO_SET),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.OrderReturnShipmentStateChangedMessageImpl.class, name = OrderReturnShipmentStateChangedMessage.ORDER_RETURN_SHIPMENT_STATE_CHANGED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.OrderShipmentStateChangedMessageImpl.class, name = OrderShipmentStateChangedMessage.ORDER_SHIPMENT_STATE_CHANGED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.OrderShippingAddressSetMessageImpl.class, name = OrderShippingAddressSetMessage.ORDER_SHIPPING_ADDRESS_SET),
@@ -133,6 +131,8 @@ import io.vrap.rmf.base.client.utils.Generated;
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.QuoteRequestStateTransitionMessageImpl.class, name = QuoteRequestStateTransitionMessage.QUOTE_REQUEST_STATE_TRANSITION),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.QuoteStateChangedMessageImpl.class, name = QuoteStateChangedMessage.QUOTE_STATE_CHANGED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.QuoteStateTransitionMessageImpl.class, name = QuoteStateTransitionMessage.QUOTE_STATE_TRANSITION),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.message.ReturnInfoAddedMessageImpl.class, name = ReturnInfoAddedMessage.RETURN_INFO_ADDED),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.message.ReturnInfoSetMessageImpl.class, name = ReturnInfoSetMessage.RETURN_INFO_SET),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.ReviewCreatedMessageImpl.class, name = ReviewCreatedMessage.REVIEW_CREATED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.ReviewRatingSetMessageImpl.class, name = ReviewRatingSetMessage.REVIEW_RATING_SET),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.ReviewStateTransitionMessageImpl.class, name = ReviewStateTransitionMessage.REVIEW_STATE_TRANSITION),
@@ -158,35 +158,35 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface Message extends BaseResource, com.commercetools.api.models.DomainResource<Message> {
 
     /**
-     *  <p>Unique identifier of the Message.</p>
+     *  <p>Unique identifier of the Message. Can be used to track which Messages have been processed.</p>
      */
     @NotNull
     @JsonProperty("id")
     public String getId();
 
     /**
-     *
+     *  <p>Version of a resource. In case of Messages, this is always <code>1</code>.</p>
      */
     @NotNull
     @JsonProperty("version")
     public Long getVersion();
 
     /**
-     *
+     *  <p>Date and time (UTC) the Message was generated.</p>
      */
     @NotNull
     @JsonProperty("createdAt")
     public ZonedDateTime getCreatedAt();
 
     /**
-     *
+     *  <p>Value of <code>createdAt</code>.</p>
      */
     @NotNull
     @JsonProperty("lastModifiedAt")
     public ZonedDateTime getLastModifiedAt();
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>Value of <code>createdBy</code>.</p>
      */
     @Valid
     @JsonProperty("lastModifiedBy")
@@ -200,14 +200,14 @@ public interface Message extends BaseResource, com.commercetools.api.models.Doma
     public CreatedBy getCreatedBy();
 
     /**
-     *
+     *  <p>Message number in relation to other Messages for a given resource. The <code>sequenceNumber</code> of the next Message for the resource is the successor of the <code>sequenceNumber</code> of the current Message. Meaning, the <code>sequenceNumber</code> of the next Message equals the <code>sequenceNumber</code> of the current Message + 1. <code>sequenceNumber</code> can be used to ensure that Messages are processed in the correct order for a particular resource.</p>
      */
     @NotNull
     @JsonProperty("sequenceNumber")
     public Long getSequenceNumber();
 
     /**
-     *  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
+     *  <p>Reference to the resource on which the change or action was performed.</p>
      */
     @NotNull
     @Valid
@@ -215,21 +215,21 @@ public interface Message extends BaseResource, com.commercetools.api.models.Doma
     public Reference getResource();
 
     /**
-     *
+     *  <p>Version of the resource on which the change or action was performed.</p>
      */
     @NotNull
     @JsonProperty("resourceVersion")
     public Long getResourceVersion();
 
     /**
-     *
+     *  <p>Message Type of the Message.</p>
      */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     *
+     *  <p>User-provided identifiers of the resource, such as <code>key</code> or <code>externalId</code>. Only present if the resource has such identifiers.</p>
      */
     @Valid
     @JsonProperty("resourceUserProvidedIdentifiers")
@@ -439,14 +439,6 @@ public interface Message extends BaseResource, com.commercetools.api.models.Doma
         return com.commercetools.api.models.message.OrderPaymentStateChangedMessageBuilder.of();
     }
 
-    public static com.commercetools.api.models.message.OrderReturnInfoAddedMessageBuilder returnInfoAddedBuilder() {
-        return com.commercetools.api.models.message.OrderReturnInfoAddedMessageBuilder.of();
-    }
-
-    public static com.commercetools.api.models.message.OrderReturnInfoSetMessageBuilder returnInfoSetBuilder() {
-        return com.commercetools.api.models.message.OrderReturnInfoSetMessageBuilder.of();
-    }
-
     public static com.commercetools.api.models.message.OrderReturnShipmentStateChangedMessageBuilder orderReturnShipmentStateChangedBuilder() {
         return com.commercetools.api.models.message.OrderReturnShipmentStateChangedMessageBuilder.of();
     }
@@ -629,6 +621,14 @@ public interface Message extends BaseResource, com.commercetools.api.models.Doma
 
     public static com.commercetools.api.models.message.QuoteStateTransitionMessageBuilder quoteStateTransitionBuilder() {
         return com.commercetools.api.models.message.QuoteStateTransitionMessageBuilder.of();
+    }
+
+    public static com.commercetools.api.models.message.ReturnInfoAddedMessageBuilder returnInfoAddedBuilder() {
+        return com.commercetools.api.models.message.ReturnInfoAddedMessageBuilder.of();
+    }
+
+    public static com.commercetools.api.models.message.ReturnInfoSetMessageBuilder returnInfoSetBuilder() {
+        return com.commercetools.api.models.message.ReturnInfoSetMessageBuilder.of();
     }
 
     public static com.commercetools.api.models.message.ReviewCreatedMessageBuilder reviewCreatedBuilder() {

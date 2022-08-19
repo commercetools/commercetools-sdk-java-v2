@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * DeliveryRemovedMessagePayload
+ *  <p>Generated after a successful Remove Delivery update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class DeliveryRemovedMessagePayloadImpl implements DeliveryRemovedMessagePayload, ModelBase {
@@ -44,7 +44,7 @@ public class DeliveryRemovedMessagePayloadImpl implements DeliveryRemovedMessage
     }
 
     /**
-     *
+     *  <p>The Delivery that was removed from the Order.</p>
      */
 
     public com.commercetools.api.models.order.Delivery getDelivery() {

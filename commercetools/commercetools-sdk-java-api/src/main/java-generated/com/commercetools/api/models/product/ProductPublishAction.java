@@ -12,7 +12,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>Publishes product data from the Product's staged projection to its current projection. Produces the ProductPublishedMessage.</p>
+ *  <p>Publishes product data from the Product's staged projection to its current projection. Produces the ProductPublished Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

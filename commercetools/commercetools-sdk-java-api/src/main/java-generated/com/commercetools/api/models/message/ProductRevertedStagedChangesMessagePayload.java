@@ -13,7 +13,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * ProductRevertedStagedChangesMessagePayload
+ *  <p>Generated after a successful Revert Staged Changes update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -32,7 +32,7 @@ public interface ProductRevertedStagedChangesMessagePayload extends MessagePaylo
     String PRODUCT_REVERTED_STAGED_CHANGES = "ProductRevertedStagedChanges";
 
     /**
-     *
+     *  <p>List of image URLs that were removed during the Revert Staged Changes update action.</p>
      */
     @NotNull
     @JsonProperty("removedImageUrls")

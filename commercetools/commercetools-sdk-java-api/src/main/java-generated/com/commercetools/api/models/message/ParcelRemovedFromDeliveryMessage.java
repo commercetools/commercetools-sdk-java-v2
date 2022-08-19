@@ -15,7 +15,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * ParcelRemovedFromDeliveryMessage
+ *  <p>Generated after a successful Remove Parcel From Delivery update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -42,14 +42,14 @@ public interface ParcelRemovedFromDeliveryMessage extends OrderMessage {
     String PARCEL_REMOVED_FROM_DELIVERY = "ParcelRemovedFromDelivery";
 
     /**
-     *
+     *  <p>Unique identifier of the Delivery.</p>
      */
     @NotNull
     @JsonProperty("deliveryId")
     public String getDeliveryId();
 
     /**
-     *
+     *  <p>Parcel that was removed from the Delivery.</p>
      */
     @NotNull
     @Valid

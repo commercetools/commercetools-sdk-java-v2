@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * ProductPublishedMessagePayload
+ *  <p>Generated after a successful Publish update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductPublishedMessagePayloadImpl implements ProductPublishedMessagePayload, ModelBase {
@@ -51,7 +51,7 @@ public class ProductPublishedMessagePayloadImpl implements ProductPublishedMessa
     }
 
     /**
-     *
+     *  <p>List of image URLs which were removed during the Publish update action.</p>
      */
 
     public java.util.List<String> getRemovedImageUrls() {
@@ -59,7 +59,7 @@ public class ProductPublishedMessagePayloadImpl implements ProductPublishedMessa
     }
 
     /**
-     *
+     *  <p>Current Product Projection of the Product at the time of creation.</p>
      */
 
     public com.commercetools.api.models.product.ProductProjection getProductProjection() {
@@ -67,7 +67,7 @@ public class ProductPublishedMessagePayloadImpl implements ProductPublishedMessa
     }
 
     /**
-     *  <p>The scope controls which part of the product information is published.</p>
+     *  <p>Publishing Scope that was used during the Publish update action.</p>
      */
 
     public com.commercetools.api.models.cart.ProductPublishScope getScope() {

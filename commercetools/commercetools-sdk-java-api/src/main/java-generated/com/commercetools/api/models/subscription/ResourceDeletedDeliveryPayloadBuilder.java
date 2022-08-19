@@ -71,7 +71,7 @@ public class ResourceDeletedDeliveryPayloadBuilder implements Builder<ResourceDe
     }
 
     /**
-     *
+     *  <p>User-provided identifiers present on the resource for which the Message is created. The value of the identifier stored in the Message corresponds to the one that was set on the resource at the version shown in <code>resourceVersion</code>.</p>
      */
 
     public ResourceDeletedDeliveryPayloadBuilder resourceUserProvidedIdentifiers(
@@ -83,7 +83,7 @@ public class ResourceDeletedDeliveryPayloadBuilder implements Builder<ResourceDe
     }
 
     /**
-     *
+     *  <p>User-provided identifiers present on the resource for which the Message is created. The value of the identifier stored in the Message corresponds to the one that was set on the resource at the version shown in <code>resourceVersion</code>.</p>
      */
 
     public ResourceDeletedDeliveryPayloadBuilder resourceUserProvidedIdentifiers(

@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * ProductDeletedMessagePayload
+ *  <p>Generated after a successful Delete Product request.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductDeletedMessagePayloadImpl implements ProductDeletedMessagePayload, ModelBase {
@@ -47,7 +47,7 @@ public class ProductDeletedMessagePayloadImpl implements ProductDeletedMessagePa
     }
 
     /**
-     *
+     *  <p>List of image URLs that were removed during the Delete Product request.</p>
      */
 
     public java.util.List<String> getRemovedImageUrls() {
@@ -55,7 +55,7 @@ public class ProductDeletedMessagePayloadImpl implements ProductDeletedMessagePa
     }
 
     /**
-     *
+     *  <p>Current Product Projection of the deleted Product.</p>
      */
 
     public com.commercetools.api.models.product.ProductProjection getCurrentProjection() {

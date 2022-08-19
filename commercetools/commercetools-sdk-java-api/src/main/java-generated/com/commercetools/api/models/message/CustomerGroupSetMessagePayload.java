@@ -14,7 +14,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * CustomerGroupSetMessagePayload
+ *  <p>Generated after a successful Set Customer Group update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -32,7 +32,7 @@ public interface CustomerGroupSetMessagePayload extends MessagePayload {
     String CUSTOMER_GROUP_SET = "CustomerGroupSet";
 
     /**
-     *  <p>Reference to a CustomerGroup.</p>
+     *  <p>Customer Group that was set during the Set Customer Group update action.</p>
      */
     @Valid
     @JsonProperty("customerGroup")

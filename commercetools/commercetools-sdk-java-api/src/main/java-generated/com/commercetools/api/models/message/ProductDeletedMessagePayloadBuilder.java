@@ -4,6 +4,8 @@ package com.commercetools.api.models.message;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
+
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -15,7 +17,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     ProductDeletedMessagePayload productDeletedMessagePayload = ProductDeletedMessagePayload.builder()
  *             .plusRemovedImageUrls(removedImageUrlsBuilder -> removedImageUrlsBuilder)
- *             .currentProjection(currentProjectionBuilder -> currentProjectionBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -25,10 +26,11 @@ public class ProductDeletedMessagePayloadBuilder implements Builder<ProductDelet
 
     private java.util.List<String> removedImageUrls;
 
+    @Nullable
     private com.commercetools.api.models.product.ProductProjection currentProjection;
 
     /**
-     *
+     *  <p>List of image URLs that were removed during the Delete Product request.</p>
      */
 
     public ProductDeletedMessagePayloadBuilder removedImageUrls(final String... removedImageUrls) {
@@ -37,7 +39,7 @@ public class ProductDeletedMessagePayloadBuilder implements Builder<ProductDelet
     }
 
     /**
-     *
+     *  <p>List of image URLs that were removed during the Delete Product request.</p>
      */
 
     public ProductDeletedMessagePayloadBuilder removedImageUrls(final java.util.List<String> removedImageUrls) {
@@ -46,7 +48,7 @@ public class ProductDeletedMessagePayloadBuilder implements Builder<ProductDelet
     }
 
     /**
-     *
+     *  <p>List of image URLs that were removed during the Delete Product request.</p>
      */
 
     public ProductDeletedMessagePayloadBuilder plusRemovedImageUrls(final String... removedImageUrls) {
@@ -58,7 +60,7 @@ public class ProductDeletedMessagePayloadBuilder implements Builder<ProductDelet
     }
 
     /**
-     *
+     *  <p>Current Product Projection of the deleted Product.</p>
      */
 
     public ProductDeletedMessagePayloadBuilder currentProjection(
@@ -69,11 +71,11 @@ public class ProductDeletedMessagePayloadBuilder implements Builder<ProductDelet
     }
 
     /**
-     *
+     *  <p>Current Product Projection of the deleted Product.</p>
      */
 
     public ProductDeletedMessagePayloadBuilder currentProjection(
-            final com.commercetools.api.models.product.ProductProjection currentProjection) {
+            @Nullable final com.commercetools.api.models.product.ProductProjection currentProjection) {
         this.currentProjection = currentProjection;
         return this;
     }
@@ -82,14 +84,13 @@ public class ProductDeletedMessagePayloadBuilder implements Builder<ProductDelet
         return this.removedImageUrls;
     }
 
+    @Nullable
     public com.commercetools.api.models.product.ProductProjection getCurrentProjection() {
         return this.currentProjection;
     }
 
     public ProductDeletedMessagePayload build() {
         Objects.requireNonNull(removedImageUrls, ProductDeletedMessagePayload.class + ": removedImageUrls is missing");
-        Objects.requireNonNull(currentProjection,
-            ProductDeletedMessagePayload.class + ": currentProjection is missing");
         return new ProductDeletedMessagePayloadImpl(removedImageUrls, currentProjection);
     }
 

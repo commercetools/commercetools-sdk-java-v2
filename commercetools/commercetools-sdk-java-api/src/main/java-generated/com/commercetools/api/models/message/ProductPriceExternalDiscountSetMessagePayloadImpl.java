@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * ProductPriceExternalDiscountSetMessagePayload
+ *  <p>Generated after a successful Set Discounted Embedded Price update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductPriceExternalDiscountSetMessagePayloadImpl
@@ -63,7 +63,7 @@ public class ProductPriceExternalDiscountSetMessagePayloadImpl
     }
 
     /**
-     *
+     *  <p>Unique identifier of the Product Variant for which the Discount was set.</p>
      */
 
     public Integer getVariantId() {
@@ -71,7 +71,7 @@ public class ProductPriceExternalDiscountSetMessagePayloadImpl
     }
 
     /**
-     *
+     *  <p>Key of the Product Variant for which the Discount was set.</p>
      */
 
     public String getVariantKey() {
@@ -79,7 +79,7 @@ public class ProductPriceExternalDiscountSetMessagePayloadImpl
     }
 
     /**
-     *
+     *  <p>SKU of the Product Variant for which Discount was set.</p>
      */
 
     public String getSku() {
@@ -87,7 +87,7 @@ public class ProductPriceExternalDiscountSetMessagePayloadImpl
     }
 
     /**
-     *
+     *  <p>Unique identifier of the Price.</p>
      */
 
     public String getPriceId() {
@@ -95,7 +95,7 @@ public class ProductPriceExternalDiscountSetMessagePayloadImpl
     }
 
     /**
-     *
+     *  <p>Discounted Price for the Product Variant for which Discount was set.</p>
      */
 
     public com.commercetools.api.models.common.DiscountedPrice getDiscounted() {
@@ -103,7 +103,7 @@ public class ProductPriceExternalDiscountSetMessagePayloadImpl
     }
 
     /**
-     *
+     *  <p>Whether the update was only applied to the staged Product Projection.</p>
      */
 
     public Boolean getStaged() {

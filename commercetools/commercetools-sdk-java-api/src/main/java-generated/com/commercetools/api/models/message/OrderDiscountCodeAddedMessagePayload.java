@@ -15,7 +15,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * OrderDiscountCodeAddedMessagePayload
+ *  <p>Generated after a successful Add Discount Code update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -34,7 +34,7 @@ public interface OrderDiscountCodeAddedMessagePayload extends OrderMessagePayloa
     String ORDER_DISCOUNT_CODE_ADDED = "OrderDiscountCodeAdded";
 
     /**
-     *  <p>Reference to a DiscountCode.</p>
+     *  <p>DiscountCode that was added.</p>
      */
     @NotNull
     @Valid

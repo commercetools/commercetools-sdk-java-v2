@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * ParcelTrackingDataUpdatedMessagePayload
+ *  <p>Generated after a successful Set Parcel TrackingData update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ParcelTrackingDataUpdatedMessagePayloadImpl implements ParcelTrackingDataUpdatedMessagePayload, ModelBase {
@@ -51,7 +51,7 @@ public class ParcelTrackingDataUpdatedMessagePayloadImpl implements ParcelTracki
     }
 
     /**
-     *
+     *  <p>Unique identifier of the Delivery.</p>
      */
 
     public String getDeliveryId() {
@@ -59,7 +59,7 @@ public class ParcelTrackingDataUpdatedMessagePayloadImpl implements ParcelTracki
     }
 
     /**
-     *
+     *  <p>Unique identifier of the Parcel.</p>
      */
 
     public String getParcelId() {
@@ -67,7 +67,7 @@ public class ParcelTrackingDataUpdatedMessagePayloadImpl implements ParcelTracki
     }
 
     /**
-     *
+     *  <p>The Tracking Data that was added to the Parcel.</p>
      */
 
     public com.commercetools.api.models.order.TrackingData getTrackingData() {

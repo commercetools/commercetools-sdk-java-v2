@@ -15,18 +15,18 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * ProductSelectionCreatedMessagePayload
+ *  <p>Generated after a successful Create Product Selection request.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductSelectionCreatedMessagePayloadImpl implements ProductSelectionCreatedMessagePayload, ModelBase {
 
     private String type;
 
-    private com.commercetools.api.models.product_selection.ProductSelectionType productSelection;
+    private com.commercetools.api.models.product_selection.IndividualProductSelectionType productSelection;
 
     @JsonCreator
     ProductSelectionCreatedMessagePayloadImpl(
-            @JsonProperty("productSelection") final com.commercetools.api.models.product_selection.ProductSelectionType productSelection) {
+            @JsonProperty("productSelection") final com.commercetools.api.models.product_selection.IndividualProductSelectionType productSelection) {
         this.productSelection = productSelection;
         this.type = PRODUCT_SELECTION_CREATED;
     }
@@ -44,15 +44,15 @@ public class ProductSelectionCreatedMessagePayloadImpl implements ProductSelecti
     }
 
     /**
-     *
+     *  <p>The <code>type</code> and <code>name</code> of the individual Product Selection.</p>
      */
 
-    public com.commercetools.api.models.product_selection.ProductSelectionType getProductSelection() {
+    public com.commercetools.api.models.product_selection.IndividualProductSelectionType getProductSelection() {
         return this.productSelection;
     }
 
     public void setProductSelection(
-            final com.commercetools.api.models.product_selection.ProductSelectionType productSelection) {
+            final com.commercetools.api.models.product_selection.IndividualProductSelectionType productSelection) {
         this.productSelection = productSelection;
     }
 

@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * ProductCreatedMessagePayload
+ *  <p>Generated after a successful Create Product request.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductCreatedMessagePayloadImpl implements ProductCreatedMessagePayload, ModelBase {
@@ -44,7 +44,7 @@ public class ProductCreatedMessagePayloadImpl implements ProductCreatedMessagePa
     }
 
     /**
-     *
+     *  <p>The staged Product Projection of the Product at the time of creation.</p>
      */
 
     public com.commercetools.api.models.product.ProductProjection getProductProjection() {

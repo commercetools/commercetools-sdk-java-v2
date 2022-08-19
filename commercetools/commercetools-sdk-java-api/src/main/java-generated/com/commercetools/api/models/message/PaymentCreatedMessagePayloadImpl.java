@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * PaymentCreatedMessagePayload
+ *  <p>Generated after a successful Create Payment request.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class PaymentCreatedMessagePayloadImpl implements PaymentCreatedMessagePayload, ModelBase {
@@ -44,7 +44,7 @@ public class PaymentCreatedMessagePayloadImpl implements PaymentCreatedMessagePa
     }
 
     /**
-     *
+     *  <p>Payment that was created.</p>
      */
 
     public com.commercetools.api.models.payment.Payment getPayment() {

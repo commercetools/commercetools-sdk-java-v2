@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * CustomerEmailChangedMessagePayload
+ *  <p>Generated after a successful Change Email update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomerEmailChangedMessagePayloadImpl implements CustomerEmailChangedMessagePayload, ModelBase {
@@ -43,7 +43,7 @@ public class CustomerEmailChangedMessagePayloadImpl implements CustomerEmailChan
     }
 
     /**
-     *
+     *  <p>The <code>email</code> that was set during the Change Email update action.</p>
      */
 
     public String getEmail() {

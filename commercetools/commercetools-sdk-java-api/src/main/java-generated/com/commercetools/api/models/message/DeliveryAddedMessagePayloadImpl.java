@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * DeliveryAddedMessagePayload
+ *  <p>Generated after a successful Add Delivery update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class DeliveryAddedMessagePayloadImpl implements DeliveryAddedMessagePayload, ModelBase {
@@ -44,7 +44,7 @@ public class DeliveryAddedMessagePayloadImpl implements DeliveryAddedMessagePayl
     }
 
     /**
-     *
+     *  <p>Delivery that was added to the Order. The Delivery in the Message body does not contain Parcels if those were part of the initial Add Delivery update action. In that case, the update action produces an additional ParcelAddedToDelivery Message containing information about the Parcels.</p>
      */
 
     public com.commercetools.api.models.order.Delivery getDelivery() {

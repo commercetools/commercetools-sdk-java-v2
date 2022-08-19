@@ -31,7 +31,7 @@ public class DeliveryItemsUpdatedMessagePayloadBuilder implements Builder<Delive
     private java.util.List<com.commercetools.api.models.order.DeliveryItem> oldItems;
 
     /**
-     *
+     *  <p>Unique identifier of the Delivery.</p>
      */
 
     public DeliveryItemsUpdatedMessagePayloadBuilder deliveryId(final String deliveryId) {
@@ -40,7 +40,7 @@ public class DeliveryItemsUpdatedMessagePayloadBuilder implements Builder<Delive
     }
 
     /**
-     *
+     *  <p>Delivery Items after the Set Delivery Items update action.</p>
      */
 
     public DeliveryItemsUpdatedMessagePayloadBuilder items(
@@ -50,7 +50,7 @@ public class DeliveryItemsUpdatedMessagePayloadBuilder implements Builder<Delive
     }
 
     /**
-     *
+     *  <p>Delivery Items after the Set Delivery Items update action.</p>
      */
 
     public DeliveryItemsUpdatedMessagePayloadBuilder items(
@@ -60,7 +60,7 @@ public class DeliveryItemsUpdatedMessagePayloadBuilder implements Builder<Delive
     }
 
     /**
-     *
+     *  <p>Delivery Items after the Set Delivery Items update action.</p>
      */
 
     public DeliveryItemsUpdatedMessagePayloadBuilder plusItems(
@@ -73,7 +73,7 @@ public class DeliveryItemsUpdatedMessagePayloadBuilder implements Builder<Delive
     }
 
     /**
-     *
+     *  <p>Delivery Items after the Set Delivery Items update action.</p>
      */
 
     public DeliveryItemsUpdatedMessagePayloadBuilder plusItems(
@@ -86,7 +86,7 @@ public class DeliveryItemsUpdatedMessagePayloadBuilder implements Builder<Delive
     }
 
     /**
-     *
+     *  <p>Delivery Items after the Set Delivery Items update action.</p>
      */
 
     public DeliveryItemsUpdatedMessagePayloadBuilder withItems(
@@ -97,7 +97,7 @@ public class DeliveryItemsUpdatedMessagePayloadBuilder implements Builder<Delive
     }
 
     /**
-     *
+     *  <p>Delivery Items before the Set Delivery Items update action.</p>
      */
 
     public DeliveryItemsUpdatedMessagePayloadBuilder oldItems(
@@ -107,7 +107,7 @@ public class DeliveryItemsUpdatedMessagePayloadBuilder implements Builder<Delive
     }
 
     /**
-     *
+     *  <p>Delivery Items before the Set Delivery Items update action.</p>
      */
 
     public DeliveryItemsUpdatedMessagePayloadBuilder oldItems(
@@ -117,7 +117,7 @@ public class DeliveryItemsUpdatedMessagePayloadBuilder implements Builder<Delive
     }
 
     /**
-     *
+     *  <p>Delivery Items before the Set Delivery Items update action.</p>
      */
 
     public DeliveryItemsUpdatedMessagePayloadBuilder plusOldItems(
@@ -130,7 +130,7 @@ public class DeliveryItemsUpdatedMessagePayloadBuilder implements Builder<Delive
     }
 
     /**
-     *
+     *  <p>Delivery Items before the Set Delivery Items update action.</p>
      */
 
     public DeliveryItemsUpdatedMessagePayloadBuilder plusOldItems(
@@ -143,7 +143,7 @@ public class DeliveryItemsUpdatedMessagePayloadBuilder implements Builder<Delive
     }
 
     /**
-     *
+     *  <p>Delivery Items before the Set Delivery Items update action.</p>
      */
 
     public DeliveryItemsUpdatedMessagePayloadBuilder withOldItems(

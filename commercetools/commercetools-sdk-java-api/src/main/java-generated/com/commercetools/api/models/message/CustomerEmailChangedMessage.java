@@ -13,7 +13,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * CustomerEmailChangedMessage
+ *  <p>Generated after a successful Change Email update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -39,7 +39,7 @@ public interface CustomerEmailChangedMessage extends Message {
     String CUSTOMER_EMAIL_CHANGED = "CustomerEmailChanged";
 
     /**
-     *
+     *  <p>The <code>email</code> that was set during the Change Email update action.</p>
      */
     @NotNull
     @JsonProperty("email")

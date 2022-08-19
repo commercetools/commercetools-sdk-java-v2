@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * QuoteCreatedMessage
+ *  <p>Generated after a successful Create Quote request.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class QuoteCreatedMessageImpl implements QuoteCreatedMessage, ModelBase {
@@ -42,6 +42,8 @@ public class QuoteCreatedMessageImpl implements QuoteCreatedMessage, ModelBase {
 
     private com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers;
 
+    private com.commercetools.api.models.quote.Quote quote;
+
     @JsonCreator
     QuoteCreatedMessageImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version,
             @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt,
@@ -51,7 +53,8 @@ public class QuoteCreatedMessageImpl implements QuoteCreatedMessage, ModelBase {
             @JsonProperty("sequenceNumber") final Long sequenceNumber,
             @JsonProperty("resource") final com.commercetools.api.models.common.Reference resource,
             @JsonProperty("resourceVersion") final Long resourceVersion,
-            @JsonProperty("resourceUserProvidedIdentifiers") final com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers) {
+            @JsonProperty("resourceUserProvidedIdentifiers") final com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers,
+            @JsonProperty("quote") final com.commercetools.api.models.quote.Quote quote) {
         this.id = id;
         this.version = version;
         this.createdAt = createdAt;
@@ -62,6 +65,7 @@ public class QuoteCreatedMessageImpl implements QuoteCreatedMessage, ModelBase {
         this.resource = resource;
         this.resourceVersion = resourceVersion;
         this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
+        this.quote = quote;
         this.type = QUOTE_CREATED;
     }
 
@@ -70,7 +74,7 @@ public class QuoteCreatedMessageImpl implements QuoteCreatedMessage, ModelBase {
     }
 
     /**
-     *  <p>Unique identifier of the Message.</p>
+     *  <p>Unique identifier of the Message. Can be used to track which Messages have been processed.</p>
      */
 
     public String getId() {
@@ -78,7 +82,7 @@ public class QuoteCreatedMessageImpl implements QuoteCreatedMessage, ModelBase {
     }
 
     /**
-     *
+     *  <p>Version of a resource. In case of Messages, this is always <code>1</code>.</p>
      */
 
     public Long getVersion() {
@@ -86,7 +90,7 @@ public class QuoteCreatedMessageImpl implements QuoteCreatedMessage, ModelBase {
     }
 
     /**
-     *
+     *  <p>Date and time (UTC) the Message was generated.</p>
      */
 
     public java.time.ZonedDateTime getCreatedAt() {
@@ -94,7 +98,7 @@ public class QuoteCreatedMessageImpl implements QuoteCreatedMessage, ModelBase {
     }
 
     /**
-     *
+     *  <p>Value of <code>createdAt</code>.</p>
      */
 
     public java.time.ZonedDateTime getLastModifiedAt() {
@@ -102,7 +106,7 @@ public class QuoteCreatedMessageImpl implements QuoteCreatedMessage, ModelBase {
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>Value of <code>createdBy</code>.</p>
      */
 
     public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy() {
@@ -118,7 +122,7 @@ public class QuoteCreatedMessageImpl implements QuoteCreatedMessage, ModelBase {
     }
 
     /**
-     *
+     *  <p>Message number in relation to other Messages for a given resource. The <code>sequenceNumber</code> of the next Message for the resource is the successor of the <code>sequenceNumber</code> of the current Message. Meaning, the <code>sequenceNumber</code> of the next Message equals the <code>sequenceNumber</code> of the current Message + 1. <code>sequenceNumber</code> can be used to ensure that Messages are processed in the correct order for a particular resource.</p>
      */
 
     public Long getSequenceNumber() {
@@ -126,7 +130,7 @@ public class QuoteCreatedMessageImpl implements QuoteCreatedMessage, ModelBase {
     }
 
     /**
-     *  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
+     *  <p>Reference to the resource on which the change or action was performed.</p>
      */
 
     public com.commercetools.api.models.common.Reference getResource() {
@@ -134,7 +138,7 @@ public class QuoteCreatedMessageImpl implements QuoteCreatedMessage, ModelBase {
     }
 
     /**
-     *
+     *  <p>Version of the resource on which the change or action was performed.</p>
      */
 
     public Long getResourceVersion() {
@@ -142,7 +146,7 @@ public class QuoteCreatedMessageImpl implements QuoteCreatedMessage, ModelBase {
     }
 
     /**
-     *
+     *  <p>Message Type of the Message.</p>
      */
 
     public String getType() {
@@ -150,11 +154,19 @@ public class QuoteCreatedMessageImpl implements QuoteCreatedMessage, ModelBase {
     }
 
     /**
-     *
+     *  <p>User-provided identifiers of the resource, such as <code>key</code> or <code>externalId</code>. Only present if the resource has such identifiers.</p>
      */
 
     public com.commercetools.api.models.message.UserProvidedIdentifiers getResourceUserProvidedIdentifiers() {
         return this.resourceUserProvidedIdentifiers;
+    }
+
+    /**
+     *  <p>Quote that was created.</p>
+     */
+
+    public com.commercetools.api.models.quote.Quote getQuote() {
+        return this.quote;
     }
 
     public void setId(final String id) {
@@ -198,6 +210,10 @@ public class QuoteCreatedMessageImpl implements QuoteCreatedMessage, ModelBase {
         this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
     }
 
+    public void setQuote(final com.commercetools.api.models.quote.Quote quote) {
+        this.quote = quote;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -219,6 +235,7 @@ public class QuoteCreatedMessageImpl implements QuoteCreatedMessage, ModelBase {
                 .append(resourceVersion, that.resourceVersion)
                 .append(type, that.type)
                 .append(resourceUserProvidedIdentifiers, that.resourceUserProvidedIdentifiers)
+                .append(quote, that.quote)
                 .isEquals();
     }
 
@@ -235,6 +252,7 @@ public class QuoteCreatedMessageImpl implements QuoteCreatedMessage, ModelBase {
                 .append(resourceVersion)
                 .append(type)
                 .append(resourceUserProvidedIdentifiers)
+                .append(quote)
                 .toHashCode();
     }
 

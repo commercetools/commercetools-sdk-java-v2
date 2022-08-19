@@ -23,7 +23,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .sequenceNumber(0.3)
  *             .resource(resourceBuilder -> resourceBuilder)
  *             .resourceVersion(0.3)
- *             .store(storeBuilder -> storeBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -54,10 +53,11 @@ public class OrderStoreSetMessageBuilder implements Builder<OrderStoreSetMessage
     @Nullable
     private com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers;
 
+    @Nullable
     private com.commercetools.api.models.store.StoreKeyReference store;
 
     /**
-     *  <p>Unique identifier of the Message.</p>
+     *  <p>Unique identifier of the Message. Can be used to track which Messages have been processed.</p>
      */
 
     public OrderStoreSetMessageBuilder id(final String id) {
@@ -66,7 +66,7 @@ public class OrderStoreSetMessageBuilder implements Builder<OrderStoreSetMessage
     }
 
     /**
-     *
+     *  <p>Version of a resource. In case of Messages, this is always <code>1</code>.</p>
      */
 
     public OrderStoreSetMessageBuilder version(final Long version) {
@@ -75,7 +75,7 @@ public class OrderStoreSetMessageBuilder implements Builder<OrderStoreSetMessage
     }
 
     /**
-     *
+     *  <p>Date and time (UTC) the Message was generated.</p>
      */
 
     public OrderStoreSetMessageBuilder createdAt(final java.time.ZonedDateTime createdAt) {
@@ -84,7 +84,7 @@ public class OrderStoreSetMessageBuilder implements Builder<OrderStoreSetMessage
     }
 
     /**
-     *
+     *  <p>Value of <code>createdAt</code>.</p>
      */
 
     public OrderStoreSetMessageBuilder lastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {
@@ -93,7 +93,7 @@ public class OrderStoreSetMessageBuilder implements Builder<OrderStoreSetMessage
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>Value of <code>createdBy</code>.</p>
      */
 
     public OrderStoreSetMessageBuilder lastModifiedBy(
@@ -103,7 +103,7 @@ public class OrderStoreSetMessageBuilder implements Builder<OrderStoreSetMessage
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>Value of <code>createdBy</code>.</p>
      */
 
     public OrderStoreSetMessageBuilder lastModifiedBy(
@@ -133,7 +133,7 @@ public class OrderStoreSetMessageBuilder implements Builder<OrderStoreSetMessage
     }
 
     /**
-     *
+     *  <p>Message number in relation to other Messages for a given resource. The <code>sequenceNumber</code> of the next Message for the resource is the successor of the <code>sequenceNumber</code> of the current Message. Meaning, the <code>sequenceNumber</code> of the next Message equals the <code>sequenceNumber</code> of the current Message + 1. <code>sequenceNumber</code> can be used to ensure that Messages are processed in the correct order for a particular resource.</p>
      */
 
     public OrderStoreSetMessageBuilder sequenceNumber(final Long sequenceNumber) {
@@ -142,7 +142,7 @@ public class OrderStoreSetMessageBuilder implements Builder<OrderStoreSetMessage
     }
 
     /**
-     *  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
+     *  <p>Reference to the resource on which the change or action was performed.</p>
      */
 
     public OrderStoreSetMessageBuilder resource(final com.commercetools.api.models.common.Reference resource) {
@@ -151,7 +151,7 @@ public class OrderStoreSetMessageBuilder implements Builder<OrderStoreSetMessage
     }
 
     /**
-     *  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
+     *  <p>Reference to the resource on which the change or action was performed.</p>
      */
 
     public OrderStoreSetMessageBuilder resource(
@@ -161,7 +161,7 @@ public class OrderStoreSetMessageBuilder implements Builder<OrderStoreSetMessage
     }
 
     /**
-     *
+     *  <p>Version of the resource on which the change or action was performed.</p>
      */
 
     public OrderStoreSetMessageBuilder resourceVersion(final Long resourceVersion) {
@@ -170,7 +170,7 @@ public class OrderStoreSetMessageBuilder implements Builder<OrderStoreSetMessage
     }
 
     /**
-     *
+     *  <p>User-provided identifiers of the resource, such as <code>key</code> or <code>externalId</code>. Only present if the resource has such identifiers.</p>
      */
 
     public OrderStoreSetMessageBuilder resourceUserProvidedIdentifiers(
@@ -182,7 +182,7 @@ public class OrderStoreSetMessageBuilder implements Builder<OrderStoreSetMessage
     }
 
     /**
-     *
+     *  <p>User-provided identifiers of the resource, such as <code>key</code> or <code>externalId</code>. Only present if the resource has such identifiers.</p>
      */
 
     public OrderStoreSetMessageBuilder resourceUserProvidedIdentifiers(
@@ -192,7 +192,7 @@ public class OrderStoreSetMessageBuilder implements Builder<OrderStoreSetMessage
     }
 
     /**
-     *  <p>Reference to a Store by its key.</p>
+     *  <p>Store that was set.</p>
      */
 
     public OrderStoreSetMessageBuilder store(
@@ -202,10 +202,11 @@ public class OrderStoreSetMessageBuilder implements Builder<OrderStoreSetMessage
     }
 
     /**
-     *  <p>Reference to a Store by its key.</p>
+     *  <p>Store that was set.</p>
      */
 
-    public OrderStoreSetMessageBuilder store(final com.commercetools.api.models.store.StoreKeyReference store) {
+    public OrderStoreSetMessageBuilder store(
+            @Nullable final com.commercetools.api.models.store.StoreKeyReference store) {
         this.store = store;
         return this;
     }
@@ -253,6 +254,7 @@ public class OrderStoreSetMessageBuilder implements Builder<OrderStoreSetMessage
         return this.resourceUserProvidedIdentifiers;
     }
 
+    @Nullable
     public com.commercetools.api.models.store.StoreKeyReference getStore() {
         return this.store;
     }
@@ -265,7 +267,6 @@ public class OrderStoreSetMessageBuilder implements Builder<OrderStoreSetMessage
         Objects.requireNonNull(sequenceNumber, OrderStoreSetMessage.class + ": sequenceNumber is missing");
         Objects.requireNonNull(resource, OrderStoreSetMessage.class + ": resource is missing");
         Objects.requireNonNull(resourceVersion, OrderStoreSetMessage.class + ": resourceVersion is missing");
-        Objects.requireNonNull(store, OrderStoreSetMessage.class + ": store is missing");
         return new OrderStoreSetMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
             sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, store);
     }

@@ -14,7 +14,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * ProductPriceDiscountsSetMessagePayload
+ *  <p>Generated after a Price is updated due to a Product Discount.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -33,7 +33,7 @@ public interface ProductPriceDiscountsSetMessagePayload extends MessagePayload {
     String PRODUCT_PRICE_DISCOUNTS_SET = "ProductPriceDiscountsSet";
 
     /**
-     *
+     *  <p>Array containing details about the Prices that were updated.</p>
      */
     @NotNull
     @Valid

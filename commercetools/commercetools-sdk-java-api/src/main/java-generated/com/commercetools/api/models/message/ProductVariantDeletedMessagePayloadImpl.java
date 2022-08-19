@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * ProductVariantDeletedMessagePayload
+ *  <p>Generated after a successful Remove Product Variant update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductVariantDeletedMessagePayloadImpl implements ProductVariantDeletedMessagePayload, ModelBase {
@@ -48,7 +48,7 @@ public class ProductVariantDeletedMessagePayloadImpl implements ProductVariantDe
     }
 
     /**
-     *  <p>A concrete sellable good for which inventory can be tracked. Product Variants are generally mapped to specific SKUs.</p>
+     *  <p>Unique identifier of the Product Variant that was added.</p>
      */
 
     public com.commercetools.api.models.product.ProductVariant getVariant() {
@@ -56,7 +56,7 @@ public class ProductVariantDeletedMessagePayloadImpl implements ProductVariantDe
     }
 
     /**
-     *
+     *  <p>List of image URLs that were removed with the Remove Product Variant update action.</p>
      */
 
     public java.util.List<String> getRemovedImageUrls() {

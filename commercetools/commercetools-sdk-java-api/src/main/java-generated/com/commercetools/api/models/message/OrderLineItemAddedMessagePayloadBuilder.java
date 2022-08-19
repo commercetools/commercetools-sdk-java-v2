@@ -28,7 +28,7 @@ public class OrderLineItemAddedMessagePayloadBuilder implements Builder<OrderLin
     private Long addedQuantity;
 
     /**
-     *
+     *  <p>Line Item that was added to the Order.</p>
      */
 
     public OrderLineItemAddedMessagePayloadBuilder lineItem(
@@ -38,7 +38,7 @@ public class OrderLineItemAddedMessagePayloadBuilder implements Builder<OrderLin
     }
 
     /**
-     *
+     *  <p>Line Item that was added to the Order.</p>
      */
 
     public OrderLineItemAddedMessagePayloadBuilder lineItem(final com.commercetools.api.models.cart.LineItem lineItem) {
@@ -47,7 +47,7 @@ public class OrderLineItemAddedMessagePayloadBuilder implements Builder<OrderLin
     }
 
     /**
-     *
+     *  <p>Quantity of Line Items that were added to the Order.</p>
      */
 
     public OrderLineItemAddedMessagePayloadBuilder addedQuantity(final Long addedQuantity) {

@@ -28,7 +28,7 @@ public class ProductVariantAddedMessagePayloadBuilder implements Builder<Product
     private Boolean staged;
 
     /**
-     *  <p>A concrete sellable good for which inventory can be tracked. Product Variants are generally mapped to specific SKUs.</p>
+     *  <p>Unique identifier of the Product Variant that was added.</p>
      */
 
     public ProductVariantAddedMessagePayloadBuilder variant(
@@ -38,7 +38,7 @@ public class ProductVariantAddedMessagePayloadBuilder implements Builder<Product
     }
 
     /**
-     *  <p>A concrete sellable good for which inventory can be tracked. Product Variants are generally mapped to specific SKUs.</p>
+     *  <p>Unique identifier of the Product Variant that was added.</p>
      */
 
     public ProductVariantAddedMessagePayloadBuilder variant(
@@ -48,7 +48,7 @@ public class ProductVariantAddedMessagePayloadBuilder implements Builder<Product
     }
 
     /**
-     *
+     *  <p>Whether the update was only applied to the staged Product Projection.</p>
      */
 
     public ProductVariantAddedMessagePayloadBuilder staged(final Boolean staged) {

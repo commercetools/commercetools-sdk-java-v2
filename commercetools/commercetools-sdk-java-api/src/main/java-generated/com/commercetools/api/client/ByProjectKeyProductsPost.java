@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>To create a new Product, send a representation that is going to become the initial <em>staged</em> representation of the new Product in the master catalog. If Price Selection query parameters are provided, selected Prices will be added to the response. Produces the ProductCreatedMessage.</p>
+ *  <p>To create a new Product, send a representation that is going to become the initial <em>staged</em> representation of the new Product in the master catalog. If Price Selection query parameters are provided, selected Prices will be added to the response. Produces the ProductCreated Message.</p>
  *
  * <hr>
  * <div class=code-example>

@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * ProductSelectionProductAddedMessagePayload
+ *  <p>Generated after a successful Add Product update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductSelectionProductAddedMessagePayloadImpl
@@ -49,7 +49,7 @@ public class ProductSelectionProductAddedMessagePayloadImpl
     }
 
     /**
-     *  <p>Reference to a Product.</p>
+     *  <p>Product that was added to the Product Selection.</p>
      */
 
     public com.commercetools.api.models.product.ProductReference getProduct() {
@@ -57,7 +57,7 @@ public class ProductSelectionProductAddedMessagePayloadImpl
     }
 
     /**
-     *  <p>Polymorphic base type for Product Variant Selections. The actual type is determined by the <code>type</code> field.</p>
+     *  <p>Product Variant Selection after the Add Product update action.</p>
      */
 
     public com.commercetools.api.models.product_selection.ProductVariantSelection getVariantSelection() {

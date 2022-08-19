@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * ProductVariantAddedMessagePayload
+ *  <p>Generated after a successful Add Product Variant update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductVariantAddedMessagePayloadImpl implements ProductVariantAddedMessagePayload, ModelBase {
@@ -48,7 +48,7 @@ public class ProductVariantAddedMessagePayloadImpl implements ProductVariantAdde
     }
 
     /**
-     *  <p>A concrete sellable good for which inventory can be tracked. Product Variants are generally mapped to specific SKUs.</p>
+     *  <p>Unique identifier of the Product Variant that was added.</p>
      */
 
     public com.commercetools.api.models.product.ProductVariant getVariant() {
@@ -56,7 +56,7 @@ public class ProductVariantAddedMessagePayloadImpl implements ProductVariantAdde
     }
 
     /**
-     *
+     *  <p>Whether the update was only applied to the staged Product Projection.</p>
      */
 
     public Boolean getStaged() {

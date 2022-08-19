@@ -25,7 +25,7 @@ public class DeliveryRemovedMessagePayloadBuilder implements Builder<DeliveryRem
     private com.commercetools.api.models.order.Delivery delivery;
 
     /**
-     *
+     *  <p>The Delivery that was removed from the Order.</p>
      */
 
     public DeliveryRemovedMessagePayloadBuilder delivery(
@@ -35,7 +35,7 @@ public class DeliveryRemovedMessagePayloadBuilder implements Builder<DeliveryRem
     }
 
     /**
-     *
+     *  <p>The Delivery that was removed from the Order.</p>
      */
 
     public DeliveryRemovedMessagePayloadBuilder delivery(final com.commercetools.api.models.order.Delivery delivery) {

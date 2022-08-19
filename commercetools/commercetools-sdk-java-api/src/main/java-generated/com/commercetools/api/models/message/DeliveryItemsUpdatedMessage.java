@@ -15,7 +15,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * DeliveryItemsUpdatedMessage
+ *  <p>Generated after a successful Set Delivery Items update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -43,14 +43,14 @@ public interface DeliveryItemsUpdatedMessage extends OrderMessage {
     String DELIVERY_ITEMS_UPDATED = "DeliveryItemsUpdated";
 
     /**
-     *
+     *  <p>Unique identifier of the Delivery.</p>
      */
     @NotNull
     @JsonProperty("deliveryId")
     public String getDeliveryId();
 
     /**
-     *
+     *  <p>Delivery Items after the Set Delivery Items update action.</p>
      */
     @NotNull
     @Valid
@@ -58,7 +58,7 @@ public interface DeliveryItemsUpdatedMessage extends OrderMessage {
     public List<DeliveryItem> getItems();
 
     /**
-     *
+     *  <p>Delivery Items before the Set Delivery Items update action.</p>
      */
     @NotNull
     @Valid

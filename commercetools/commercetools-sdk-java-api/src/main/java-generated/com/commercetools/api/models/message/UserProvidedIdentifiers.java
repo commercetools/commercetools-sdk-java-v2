@@ -14,7 +14,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * UserProvidedIdentifiers
+ *  <p>User-provided identifiers present on the resource for which the Message is created. The value of the identifier stored in the Message corresponds to the one that was set on the resource at the version shown in <code>resourceVersion</code>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -37,42 +37,42 @@ public interface UserProvidedIdentifiers {
     public String getKey();
 
     /**
-     *
+     *  <p>User-provided unique identifier of the resource.</p>
      */
 
     @JsonProperty("externalId")
     public String getExternalId();
 
     /**
-     *
+     *  <p>User-provided unique identifier of an Order.</p>
      */
 
     @JsonProperty("orderNumber")
     public String getOrderNumber();
 
     /**
-     *
+     *  <p>User-provided unique identifier of a Customer.</p>
      */
 
     @JsonProperty("customerNumber")
     public String getCustomerNumber();
 
     /**
-     *
+     *  <p>Unique SKU of a Product Variant.</p>
      */
 
     @JsonProperty("sku")
     public String getSku();
 
     /**
-     *  <p>JSON object where the keys are of type Locale, and the values are the strings used for the corresponding language.</p>
+     *  <p>Unique identifier usually used in deep-link URLs for a Product. The value corresponds to the slug in the <code>current</code> Product Projection.</p>
      */
     @Valid
     @JsonProperty("slug")
     public LocalizedString getSlug();
 
     /**
-     *  <p>Custom Objects are grouped into containers, which can be used like namespaces. Within a given container, a user-defined key can be used to uniquely identify resources.</p>
+     *  <p>Unique identifier of a Custom Object.</p>
      */
     @Valid
     @JsonProperty("containerAndKey")

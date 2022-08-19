@@ -34,7 +34,7 @@ public class ParcelMeasurementsUpdatedMessagePayloadBuilder
     private com.commercetools.api.models.order.ParcelMeasurements measurements;
 
     /**
-     *
+     *  <p>Unique identifier of the Delivery.</p>
      */
 
     public ParcelMeasurementsUpdatedMessagePayloadBuilder deliveryId(final String deliveryId) {
@@ -43,7 +43,7 @@ public class ParcelMeasurementsUpdatedMessagePayloadBuilder
     }
 
     /**
-     *
+     *  <p>Unique identifier of the Parcel.</p>
      */
 
     public ParcelMeasurementsUpdatedMessagePayloadBuilder parcelId(final String parcelId) {
@@ -52,7 +52,7 @@ public class ParcelMeasurementsUpdatedMessagePayloadBuilder
     }
 
     /**
-     *
+     *  <p>The Parcel Measurements that were set on the Parcel.</p>
      */
 
     public ParcelMeasurementsUpdatedMessagePayloadBuilder measurements(
@@ -62,7 +62,7 @@ public class ParcelMeasurementsUpdatedMessagePayloadBuilder
     }
 
     /**
-     *
+     *  <p>The Parcel Measurements that were set on the Parcel.</p>
      */
 
     public ParcelMeasurementsUpdatedMessagePayloadBuilder measurements(

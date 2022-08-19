@@ -34,7 +34,7 @@ public class OrderCustomLineItemDiscountSetMessagePayloadBuilder
     private com.commercetools.api.models.cart.TaxedItemPrice taxedPrice;
 
     /**
-     *
+     *  <p>Unique identifier for the Custom Line Item.</p>
      */
 
     public OrderCustomLineItemDiscountSetMessagePayloadBuilder customLineItemId(final String customLineItemId) {
@@ -43,7 +43,7 @@ public class OrderCustomLineItemDiscountSetMessagePayloadBuilder
     }
 
     /**
-     *
+     *  <p>Array of DiscountedLineItemPriceForQuantity after the Discount recalculation.</p>
      */
 
     public OrderCustomLineItemDiscountSetMessagePayloadBuilder discountedPricePerQuantity(
@@ -53,7 +53,7 @@ public class OrderCustomLineItemDiscountSetMessagePayloadBuilder
     }
 
     /**
-     *
+     *  <p>Array of DiscountedLineItemPriceForQuantity after the Discount recalculation.</p>
      */
 
     public OrderCustomLineItemDiscountSetMessagePayloadBuilder discountedPricePerQuantity(
@@ -63,7 +63,7 @@ public class OrderCustomLineItemDiscountSetMessagePayloadBuilder
     }
 
     /**
-     *
+     *  <p>Array of DiscountedLineItemPriceForQuantity after the Discount recalculation.</p>
      */
 
     public OrderCustomLineItemDiscountSetMessagePayloadBuilder plusDiscountedPricePerQuantity(
@@ -76,7 +76,7 @@ public class OrderCustomLineItemDiscountSetMessagePayloadBuilder
     }
 
     /**
-     *
+     *  <p>Array of DiscountedLineItemPriceForQuantity after the Discount recalculation.</p>
      */
 
     public OrderCustomLineItemDiscountSetMessagePayloadBuilder plusDiscountedPricePerQuantity(
@@ -90,7 +90,7 @@ public class OrderCustomLineItemDiscountSetMessagePayloadBuilder
     }
 
     /**
-     *
+     *  <p>Array of DiscountedLineItemPriceForQuantity after the Discount recalculation.</p>
      */
 
     public OrderCustomLineItemDiscountSetMessagePayloadBuilder withDiscountedPricePerQuantity(
@@ -102,7 +102,7 @@ public class OrderCustomLineItemDiscountSetMessagePayloadBuilder
     }
 
     /**
-     *
+     *  <p>TaxedItemPrice of the Custom Line Item after the Discount recalculation.</p>
      */
 
     public OrderCustomLineItemDiscountSetMessagePayloadBuilder taxedPrice(
@@ -112,7 +112,7 @@ public class OrderCustomLineItemDiscountSetMessagePayloadBuilder
     }
 
     /**
-     *
+     *  <p>TaxedItemPrice of the Custom Line Item after the Discount recalculation.</p>
      */
 
     public OrderCustomLineItemDiscountSetMessagePayloadBuilder taxedPrice(

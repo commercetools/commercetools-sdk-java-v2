@@ -31,7 +31,7 @@ public class ProductPublishedMessagePayloadBuilder implements Builder<ProductPub
     private com.commercetools.api.models.cart.ProductPublishScope scope;
 
     /**
-     *
+     *  <p>List of image URLs which were removed during the Publish update action.</p>
      */
 
     public ProductPublishedMessagePayloadBuilder removedImageUrls(final String... removedImageUrls) {
@@ -40,7 +40,7 @@ public class ProductPublishedMessagePayloadBuilder implements Builder<ProductPub
     }
 
     /**
-     *
+     *  <p>List of image URLs which were removed during the Publish update action.</p>
      */
 
     public ProductPublishedMessagePayloadBuilder removedImageUrls(final java.util.List<String> removedImageUrls) {
@@ -49,7 +49,7 @@ public class ProductPublishedMessagePayloadBuilder implements Builder<ProductPub
     }
 
     /**
-     *
+     *  <p>List of image URLs which were removed during the Publish update action.</p>
      */
 
     public ProductPublishedMessagePayloadBuilder plusRemovedImageUrls(final String... removedImageUrls) {
@@ -61,7 +61,7 @@ public class ProductPublishedMessagePayloadBuilder implements Builder<ProductPub
     }
 
     /**
-     *
+     *  <p>Current Product Projection of the Product at the time of creation.</p>
      */
 
     public ProductPublishedMessagePayloadBuilder productProjection(
@@ -72,7 +72,7 @@ public class ProductPublishedMessagePayloadBuilder implements Builder<ProductPub
     }
 
     /**
-     *
+     *  <p>Current Product Projection of the Product at the time of creation.</p>
      */
 
     public ProductPublishedMessagePayloadBuilder productProjection(
@@ -82,7 +82,7 @@ public class ProductPublishedMessagePayloadBuilder implements Builder<ProductPub
     }
 
     /**
-     *  <p>The scope controls which part of the product information is published.</p>
+     *  <p>Publishing Scope that was used during the Publish update action.</p>
      */
 
     public ProductPublishedMessagePayloadBuilder scope(

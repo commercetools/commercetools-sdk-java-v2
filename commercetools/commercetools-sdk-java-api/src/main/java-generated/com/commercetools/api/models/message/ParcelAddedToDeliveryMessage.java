@@ -16,7 +16,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * ParcelAddedToDeliveryMessage
+ *  <p>Generated after a successful Add Parcel To Delivery update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -43,7 +43,7 @@ public interface ParcelAddedToDeliveryMessage extends OrderMessage {
     String PARCEL_ADDED_TO_DELIVERY = "ParcelAddedToDelivery";
 
     /**
-     *
+     *  <p>Unique identifier of the Delivery.</p>
      */
     @NotNull
     @Valid
@@ -51,7 +51,7 @@ public interface ParcelAddedToDeliveryMessage extends OrderMessage {
     public Delivery getDelivery();
 
     /**
-     *
+     *  <p>Parcel that was added to the Delivery.</p>
      */
     @NotNull
     @Valid

@@ -15,7 +15,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * CustomerAddressChangedMessage
+ *  <p>Generated after a successful Change Address update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -41,7 +41,7 @@ public interface CustomerAddressChangedMessage extends Message {
     String CUSTOMER_ADDRESS_CHANGED = "CustomerAddressChanged";
 
     /**
-     *
+     *  <p>Address that was set during the Change Address update action.</p>
      */
     @NotNull
     @Valid

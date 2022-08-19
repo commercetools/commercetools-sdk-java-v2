@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * DeliveryAddressSetMessagePayload
+ *  <p>Generated after a successful Set Delivery Address update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class DeliveryAddressSetMessagePayloadImpl implements DeliveryAddressSetMessagePayload, ModelBase {
@@ -51,7 +51,7 @@ public class DeliveryAddressSetMessagePayloadImpl implements DeliveryAddressSetM
     }
 
     /**
-     *
+     *  <p>Unique identifier of the Parcel.</p>
      */
 
     public String getDeliveryId() {
@@ -59,7 +59,7 @@ public class DeliveryAddressSetMessagePayloadImpl implements DeliveryAddressSetM
     }
 
     /**
-     *
+     *  <p>Address after the Set Delivery Address update action.</p>
      */
 
     public com.commercetools.api.models.common.Address getAddress() {
@@ -67,7 +67,7 @@ public class DeliveryAddressSetMessagePayloadImpl implements DeliveryAddressSetM
     }
 
     /**
-     *
+     *  <p>Address before the Set Delivery Address update action.</p>
      */
 
     public com.commercetools.api.models.common.Address getOldAddress() {

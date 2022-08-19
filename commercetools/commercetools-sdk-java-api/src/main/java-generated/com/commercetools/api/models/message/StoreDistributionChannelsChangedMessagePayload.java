@@ -35,7 +35,7 @@ public interface StoreDistributionChannelsChangedMessagePayload extends MessageP
     String STORE_DISTRIBUTION_CHANNELS_CHANGED = "StoreDistributionChannelsChanged";
 
     /**
-     *  <p>The product distribution channels that have been added.</p>
+     *  <p>Product distribution Channels that have been added to the Store.</p>
      */
     @NotNull
     @Valid
@@ -43,7 +43,7 @@ public interface StoreDistributionChannelsChangedMessagePayload extends MessageP
     public List<ChannelReference> getAddedDistributionChannels();
 
     /**
-     *  <p>The product distribution channels that have been removed.</p>
+     *  <p>Product distribution Channels that have been removed from the Store.</p>
      */
     @NotNull
     @Valid

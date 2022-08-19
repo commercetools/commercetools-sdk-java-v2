@@ -33,7 +33,7 @@ public class DeliveryAddressSetMessagePayloadBuilder implements Builder<Delivery
     private com.commercetools.api.models.common.Address oldAddress;
 
     /**
-     *
+     *  <p>Unique identifier of the Parcel.</p>
      */
 
     public DeliveryAddressSetMessagePayloadBuilder deliveryId(final String deliveryId) {
@@ -42,7 +42,7 @@ public class DeliveryAddressSetMessagePayloadBuilder implements Builder<Delivery
     }
 
     /**
-     *
+     *  <p>Address after the Set Delivery Address update action.</p>
      */
 
     public DeliveryAddressSetMessagePayloadBuilder address(
@@ -52,7 +52,7 @@ public class DeliveryAddressSetMessagePayloadBuilder implements Builder<Delivery
     }
 
     /**
-     *
+     *  <p>Address after the Set Delivery Address update action.</p>
      */
 
     public DeliveryAddressSetMessagePayloadBuilder address(
@@ -62,7 +62,7 @@ public class DeliveryAddressSetMessagePayloadBuilder implements Builder<Delivery
     }
 
     /**
-     *
+     *  <p>Address before the Set Delivery Address update action.</p>
      */
 
     public DeliveryAddressSetMessagePayloadBuilder oldAddress(
@@ -72,7 +72,7 @@ public class DeliveryAddressSetMessagePayloadBuilder implements Builder<Delivery
     }
 
     /**
-     *
+     *  <p>Address before the Set Delivery Address update action.</p>
      */
 
     public DeliveryAddressSetMessagePayloadBuilder oldAddress(

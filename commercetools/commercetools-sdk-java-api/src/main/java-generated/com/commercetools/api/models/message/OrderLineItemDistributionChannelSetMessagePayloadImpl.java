@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * OrderLineItemDistributionChannelSetMessagePayload
+ *  <p>Generated after a successful Set Line Item Distribution Channel update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderLineItemDistributionChannelSetMessagePayloadImpl
@@ -48,7 +48,7 @@ public class OrderLineItemDistributionChannelSetMessagePayloadImpl
     }
 
     /**
-     *
+     *  <p>Unique identifier of the Line Item.</p>
      */
 
     public String getLineItemId() {
@@ -56,7 +56,7 @@ public class OrderLineItemDistributionChannelSetMessagePayloadImpl
     }
 
     /**
-     *  <p>Reference to a Channel.</p>
+     *  <p>Distribution Channel that was set.</p>
      */
 
     public com.commercetools.api.models.channel.ChannelReference getDistributionChannel() {

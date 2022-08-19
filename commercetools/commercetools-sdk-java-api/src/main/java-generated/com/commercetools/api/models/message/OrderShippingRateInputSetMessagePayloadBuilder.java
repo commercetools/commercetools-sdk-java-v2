@@ -31,7 +31,7 @@ public class OrderShippingRateInputSetMessagePayloadBuilder
     private com.commercetools.api.models.cart.ShippingRateInput oldShippingRateInput;
 
     /**
-     *
+     *  <p>ShippingRateInput after the Set ShippingRateInput update action.</p>
      */
 
     public OrderShippingRateInputSetMessagePayloadBuilder shippingRateInput(
@@ -41,7 +41,7 @@ public class OrderShippingRateInputSetMessagePayloadBuilder
     }
 
     /**
-     *
+     *  <p>ShippingRateInput after the Set ShippingRateInput update action.</p>
      */
 
     public OrderShippingRateInputSetMessagePayloadBuilder shippingRateInput(
@@ -51,7 +51,7 @@ public class OrderShippingRateInputSetMessagePayloadBuilder
     }
 
     /**
-     *
+     *  <p>ShippingRateInput before the Set ShippingRateInput update action.</p>
      */
 
     public OrderShippingRateInputSetMessagePayloadBuilder oldShippingRateInput(
@@ -61,7 +61,7 @@ public class OrderShippingRateInputSetMessagePayloadBuilder
     }
 
     /**
-     *
+     *  <p>ShippingRateInput before the Set ShippingRateInput update action.</p>
      */
 
     public OrderShippingRateInputSetMessagePayloadBuilder oldShippingRateInput(

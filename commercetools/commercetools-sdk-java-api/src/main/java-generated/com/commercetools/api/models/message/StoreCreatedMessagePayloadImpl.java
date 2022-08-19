@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * StoreCreatedMessagePayload
+ *  <p>Generated after a successful Create Store request.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StoreCreatedMessagePayloadImpl implements StoreCreatedMessagePayload, ModelBase {
@@ -63,7 +63,7 @@ public class StoreCreatedMessagePayloadImpl implements StoreCreatedMessagePayloa
     }
 
     /**
-     *  <p>JSON object where the keys are of type Locale, and the values are the strings used for the corresponding language.</p>
+     *  <p>The <code>name</code> of the Store that was created.</p>
      */
 
     public com.commercetools.api.models.common.LocalizedString getName() {
@@ -71,7 +71,7 @@ public class StoreCreatedMessagePayloadImpl implements StoreCreatedMessagePayloa
     }
 
     /**
-     *
+     *  <p>Languages of the Store that was created. Languages are represented as IETF language tags.</p>
      */
 
     public java.util.List<String> getLanguages() {
@@ -79,7 +79,7 @@ public class StoreCreatedMessagePayloadImpl implements StoreCreatedMessagePayloa
     }
 
     /**
-     *
+     *  <p>Distribution Channels of the Store that was created.</p>
      */
 
     public java.util.List<com.commercetools.api.models.channel.ChannelReference> getDistributionChannels() {
@@ -87,7 +87,7 @@ public class StoreCreatedMessagePayloadImpl implements StoreCreatedMessagePayloa
     }
 
     /**
-     *
+     *  <p>Supply Channels of the Store that was created.</p>
      */
 
     public java.util.List<com.commercetools.api.models.channel.ChannelReference> getSupplyChannels() {
@@ -95,7 +95,7 @@ public class StoreCreatedMessagePayloadImpl implements StoreCreatedMessagePayloa
     }
 
     /**
-     *
+     *  <p>ProductSelectionSettings of the Store that was created.</p>
      */
 
     public java.util.List<com.commercetools.api.models.store.ProductSelectionSetting> getProductSelections() {
@@ -103,7 +103,7 @@ public class StoreCreatedMessagePayloadImpl implements StoreCreatedMessagePayloa
     }
 
     /**
-     *  <p>Serves as value of the <code>custom</code> field on a resource or data type customized with a Type.</p>
+     *  <p>Custom Fields on the Store that was created.</p>
      */
 
     public com.commercetools.api.models.type.CustomFields getCustom() {

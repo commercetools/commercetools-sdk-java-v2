@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * OrderCustomLineItemDiscountSetMessagePayload
+ *  <p>Generated after a successful recalculation of a Discount on a Custom Line Item.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderCustomLineItemDiscountSetMessagePayloadImpl
@@ -52,7 +52,7 @@ public class OrderCustomLineItemDiscountSetMessagePayloadImpl
     }
 
     /**
-     *
+     *  <p>Unique identifier for the Custom Line Item.</p>
      */
 
     public String getCustomLineItemId() {
@@ -60,7 +60,7 @@ public class OrderCustomLineItemDiscountSetMessagePayloadImpl
     }
 
     /**
-     *
+     *  <p>Array of DiscountedLineItemPriceForQuantity after the Discount recalculation.</p>
      */
 
     public java.util.List<com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantity> getDiscountedPricePerQuantity() {
@@ -68,7 +68,7 @@ public class OrderCustomLineItemDiscountSetMessagePayloadImpl
     }
 
     /**
-     *
+     *  <p>TaxedItemPrice of the Custom Line Item after the Discount recalculation.</p>
      */
 
     public com.commercetools.api.models.cart.TaxedItemPrice getTaxedPrice() {

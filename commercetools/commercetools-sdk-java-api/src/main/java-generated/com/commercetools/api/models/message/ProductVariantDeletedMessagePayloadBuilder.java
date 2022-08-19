@@ -4,6 +4,8 @@ package com.commercetools.api.models.message;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
+
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -14,7 +16,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <div class=code-example>
  * <pre><code class='java'>
  *     ProductVariantDeletedMessagePayload productVariantDeletedMessagePayload = ProductVariantDeletedMessagePayload.builder()
- *             .variant(variantBuilder -> variantBuilder)
  *             .plusRemovedImageUrls(removedImageUrlsBuilder -> removedImageUrlsBuilder)
  *             .build()
  * </code></pre>
@@ -23,12 +24,13 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductVariantDeletedMessagePayloadBuilder implements Builder<ProductVariantDeletedMessagePayload> {
 
+    @Nullable
     private com.commercetools.api.models.product.ProductVariant variant;
 
     private java.util.List<String> removedImageUrls;
 
     /**
-     *  <p>A concrete sellable good for which inventory can be tracked. Product Variants are generally mapped to specific SKUs.</p>
+     *  <p>Unique identifier of the Product Variant that was added.</p>
      */
 
     public ProductVariantDeletedMessagePayloadBuilder variant(
@@ -38,17 +40,17 @@ public class ProductVariantDeletedMessagePayloadBuilder implements Builder<Produ
     }
 
     /**
-     *  <p>A concrete sellable good for which inventory can be tracked. Product Variants are generally mapped to specific SKUs.</p>
+     *  <p>Unique identifier of the Product Variant that was added.</p>
      */
 
     public ProductVariantDeletedMessagePayloadBuilder variant(
-            final com.commercetools.api.models.product.ProductVariant variant) {
+            @Nullable final com.commercetools.api.models.product.ProductVariant variant) {
         this.variant = variant;
         return this;
     }
 
     /**
-     *
+     *  <p>List of image URLs that were removed with the Remove Product Variant update action.</p>
      */
 
     public ProductVariantDeletedMessagePayloadBuilder removedImageUrls(final String... removedImageUrls) {
@@ -57,7 +59,7 @@ public class ProductVariantDeletedMessagePayloadBuilder implements Builder<Produ
     }
 
     /**
-     *
+     *  <p>List of image URLs that were removed with the Remove Product Variant update action.</p>
      */
 
     public ProductVariantDeletedMessagePayloadBuilder removedImageUrls(final java.util.List<String> removedImageUrls) {
@@ -66,7 +68,7 @@ public class ProductVariantDeletedMessagePayloadBuilder implements Builder<Produ
     }
 
     /**
-     *
+     *  <p>List of image URLs that were removed with the Remove Product Variant update action.</p>
      */
 
     public ProductVariantDeletedMessagePayloadBuilder plusRemovedImageUrls(final String... removedImageUrls) {
@@ -77,6 +79,7 @@ public class ProductVariantDeletedMessagePayloadBuilder implements Builder<Produ
         return this;
     }
 
+    @Nullable
     public com.commercetools.api.models.product.ProductVariant getVariant() {
         return this.variant;
     }
@@ -86,7 +89,6 @@ public class ProductVariantDeletedMessagePayloadBuilder implements Builder<Produ
     }
 
     public ProductVariantDeletedMessagePayload build() {
-        Objects.requireNonNull(variant, ProductVariantDeletedMessagePayload.class + ": variant is missing");
         Objects.requireNonNull(removedImageUrls,
             ProductVariantDeletedMessagePayload.class + ": removedImageUrls is missing");
         return new ProductVariantDeletedMessagePayloadImpl(variant, removedImageUrls);

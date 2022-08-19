@@ -29,7 +29,7 @@ public class StoreDistributionChannelsChangedMessagePayloadBuilder
     private java.util.List<com.commercetools.api.models.channel.ChannelReference> removedDistributionChannels;
 
     /**
-     *  <p>The product distribution channels that have been added.</p>
+     *  <p>Product distribution Channels that have been added to the Store.</p>
      */
 
     public StoreDistributionChannelsChangedMessagePayloadBuilder addedDistributionChannels(
@@ -39,7 +39,7 @@ public class StoreDistributionChannelsChangedMessagePayloadBuilder
     }
 
     /**
-     *  <p>The product distribution channels that have been added.</p>
+     *  <p>Product distribution Channels that have been added to the Store.</p>
      */
 
     public StoreDistributionChannelsChangedMessagePayloadBuilder addedDistributionChannels(
@@ -49,7 +49,7 @@ public class StoreDistributionChannelsChangedMessagePayloadBuilder
     }
 
     /**
-     *  <p>The product distribution channels that have been added.</p>
+     *  <p>Product distribution Channels that have been added to the Store.</p>
      */
 
     public StoreDistributionChannelsChangedMessagePayloadBuilder plusAddedDistributionChannels(
@@ -62,7 +62,7 @@ public class StoreDistributionChannelsChangedMessagePayloadBuilder
     }
 
     /**
-     *  <p>The product distribution channels that have been added.</p>
+     *  <p>Product distribution Channels that have been added to the Store.</p>
      */
 
     public StoreDistributionChannelsChangedMessagePayloadBuilder plusAddedDistributionChannels(
@@ -76,7 +76,7 @@ public class StoreDistributionChannelsChangedMessagePayloadBuilder
     }
 
     /**
-     *  <p>The product distribution channels that have been added.</p>
+     *  <p>Product distribution Channels that have been added to the Store.</p>
      */
 
     public StoreDistributionChannelsChangedMessagePayloadBuilder withAddedDistributionChannels(
@@ -88,7 +88,7 @@ public class StoreDistributionChannelsChangedMessagePayloadBuilder
     }
 
     /**
-     *  <p>The product distribution channels that have been removed.</p>
+     *  <p>Product distribution Channels that have been removed from the Store.</p>
      */
 
     public StoreDistributionChannelsChangedMessagePayloadBuilder removedDistributionChannels(
@@ -98,7 +98,7 @@ public class StoreDistributionChannelsChangedMessagePayloadBuilder
     }
 
     /**
-     *  <p>The product distribution channels that have been removed.</p>
+     *  <p>Product distribution Channels that have been removed from the Store.</p>
      */
 
     public StoreDistributionChannelsChangedMessagePayloadBuilder removedDistributionChannels(
@@ -108,7 +108,7 @@ public class StoreDistributionChannelsChangedMessagePayloadBuilder
     }
 
     /**
-     *  <p>The product distribution channels that have been removed.</p>
+     *  <p>Product distribution Channels that have been removed from the Store.</p>
      */
 
     public StoreDistributionChannelsChangedMessagePayloadBuilder plusRemovedDistributionChannels(
@@ -121,7 +121,7 @@ public class StoreDistributionChannelsChangedMessagePayloadBuilder
     }
 
     /**
-     *  <p>The product distribution channels that have been removed.</p>
+     *  <p>Product distribution Channels that have been removed from the Store.</p>
      */
 
     public StoreDistributionChannelsChangedMessagePayloadBuilder plusRemovedDistributionChannels(
@@ -135,7 +135,7 @@ public class StoreDistributionChannelsChangedMessagePayloadBuilder
     }
 
     /**
-     *  <p>The product distribution channels that have been removed.</p>
+     *  <p>Product distribution Channels that have been removed from the Store.</p>
      */
 
     public StoreDistributionChannelsChangedMessagePayloadBuilder withRemovedDistributionChannels(

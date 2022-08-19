@@ -28,7 +28,7 @@ public class PaymentTransactionStateChangedMessagePayloadBuilder
     private com.commercetools.api.models.payment.TransactionState state;
 
     /**
-     *
+     *  <p>Unique identifier for the Transaction for which the Transaction State changed.</p>
      */
 
     public PaymentTransactionStateChangedMessagePayloadBuilder transactionId(final String transactionId) {
@@ -37,7 +37,7 @@ public class PaymentTransactionStateChangedMessagePayloadBuilder
     }
 
     /**
-     *
+     *  <p>Transaction State after the Change Transaction State update action.</p>
      */
 
     public PaymentTransactionStateChangedMessagePayloadBuilder state(

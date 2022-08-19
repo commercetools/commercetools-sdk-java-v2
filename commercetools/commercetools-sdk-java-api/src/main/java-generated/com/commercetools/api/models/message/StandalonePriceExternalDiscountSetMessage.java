@@ -14,7 +14,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>This Message is the result of the Standalone Price SetDiscountedPrice update action.</p>
+ *  <p>Generated after a successful Set Discounted Price update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -39,7 +39,7 @@ public interface StandalonePriceExternalDiscountSetMessage extends Message {
     String STANDALONE_PRICE_EXTERNAL_DISCOUNT_SET = "StandalonePriceExternalDiscountSet";
 
     /**
-     *  <p>The new <code>discounted</code> value of the updated StandalonePrice.</p>
+     *  <p>The <code>discounted</code> value of the StandalonePrice after the Set Discounted Price update action.</p>
      */
     @Valid
     @JsonProperty("discounted")

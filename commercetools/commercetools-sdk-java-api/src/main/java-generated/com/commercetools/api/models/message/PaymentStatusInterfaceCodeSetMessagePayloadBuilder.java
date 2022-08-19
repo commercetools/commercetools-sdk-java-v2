@@ -3,6 +3,8 @@ package com.commercetools.api.models.message;
 
 import java.util.*;
 
+import javax.annotation.Nullable;
+
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -14,7 +16,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     PaymentStatusInterfaceCodeSetMessagePayload paymentStatusInterfaceCodeSetMessagePayload = PaymentStatusInterfaceCodeSetMessagePayload.builder()
  *             .paymentId("{paymentId}")
- *             .interfaceCode("{interfaceCode}")
  *             .build()
  * </code></pre>
  * </div>
@@ -25,10 +26,11 @@ public class PaymentStatusInterfaceCodeSetMessagePayloadBuilder
 
     private String paymentId;
 
+    @Nullable
     private String interfaceCode;
 
     /**
-     *
+     *  <p>Unique identifier for the Payment for which the Set StatusInterfaceCode update action was applied.</p>
      */
 
     public PaymentStatusInterfaceCodeSetMessagePayloadBuilder paymentId(final String paymentId) {
@@ -37,10 +39,10 @@ public class PaymentStatusInterfaceCodeSetMessagePayloadBuilder
     }
 
     /**
-     *
+     *  <p>The <code>interfaceCode</code> that was set during the Set StatusInterfaceCode update action.</p>
      */
 
-    public PaymentStatusInterfaceCodeSetMessagePayloadBuilder interfaceCode(final String interfaceCode) {
+    public PaymentStatusInterfaceCodeSetMessagePayloadBuilder interfaceCode(@Nullable final String interfaceCode) {
         this.interfaceCode = interfaceCode;
         return this;
     }
@@ -49,14 +51,13 @@ public class PaymentStatusInterfaceCodeSetMessagePayloadBuilder
         return this.paymentId;
     }
 
+    @Nullable
     public String getInterfaceCode() {
         return this.interfaceCode;
     }
 
     public PaymentStatusInterfaceCodeSetMessagePayload build() {
         Objects.requireNonNull(paymentId, PaymentStatusInterfaceCodeSetMessagePayload.class + ": paymentId is missing");
-        Objects.requireNonNull(interfaceCode,
-            PaymentStatusInterfaceCodeSetMessagePayload.class + ": interfaceCode is missing");
         return new PaymentStatusInterfaceCodeSetMessagePayloadImpl(paymentId, interfaceCode);
     }
 

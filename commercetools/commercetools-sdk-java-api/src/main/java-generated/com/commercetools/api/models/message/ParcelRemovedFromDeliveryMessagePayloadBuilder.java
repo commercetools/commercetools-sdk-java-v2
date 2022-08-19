@@ -29,7 +29,7 @@ public class ParcelRemovedFromDeliveryMessagePayloadBuilder
     private com.commercetools.api.models.order.Parcel parcel;
 
     /**
-     *
+     *  <p>Unique identifier of the Delivery.</p>
      */
 
     public ParcelRemovedFromDeliveryMessagePayloadBuilder deliveryId(final String deliveryId) {
@@ -38,7 +38,7 @@ public class ParcelRemovedFromDeliveryMessagePayloadBuilder
     }
 
     /**
-     *
+     *  <p>Parcel that was removed from the Delivery.</p>
      */
 
     public ParcelRemovedFromDeliveryMessagePayloadBuilder parcel(
@@ -48,7 +48,7 @@ public class ParcelRemovedFromDeliveryMessagePayloadBuilder
     }
 
     /**
-     *
+     *  <p>Parcel that was removed from the Delivery.</p>
      */
 
     public ParcelRemovedFromDeliveryMessagePayloadBuilder parcel(

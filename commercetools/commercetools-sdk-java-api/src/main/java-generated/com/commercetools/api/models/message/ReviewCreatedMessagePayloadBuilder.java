@@ -25,7 +25,7 @@ public class ReviewCreatedMessagePayloadBuilder implements Builder<ReviewCreated
     private com.commercetools.api.models.review.Review review;
 
     /**
-     *
+     *  <p>Review that was created.</p>
      */
 
     public ReviewCreatedMessagePayloadBuilder review(
@@ -35,7 +35,7 @@ public class ReviewCreatedMessagePayloadBuilder implements Builder<ReviewCreated
     }
 
     /**
-     *
+     *  <p>Review that was created.</p>
      */
 
     public ReviewCreatedMessagePayloadBuilder review(final com.commercetools.api.models.review.Review review) {

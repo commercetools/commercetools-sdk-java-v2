@@ -16,7 +16,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * OrderCustomLineItemDiscountSetMessagePayload
+ *  <p>Generated after a successful recalculation of a Discount on a Custom Line Item.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -36,14 +36,14 @@ public interface OrderCustomLineItemDiscountSetMessagePayload extends OrderMessa
     String ORDER_CUSTOM_LINE_ITEM_DISCOUNT_SET = "OrderCustomLineItemDiscountSet";
 
     /**
-     *
+     *  <p>Unique identifier for the Custom Line Item.</p>
      */
     @NotNull
     @JsonProperty("customLineItemId")
     public String getCustomLineItemId();
 
     /**
-     *
+     *  <p>Array of DiscountedLineItemPriceForQuantity after the Discount recalculation.</p>
      */
     @NotNull
     @Valid
@@ -51,7 +51,7 @@ public interface OrderCustomLineItemDiscountSetMessagePayload extends OrderMessa
     public List<DiscountedLineItemPriceForQuantity> getDiscountedPricePerQuantity();
 
     /**
-     *
+     *  <p>TaxedItemPrice of the Custom Line Item after the Discount recalculation.</p>
      */
     @Valid
     @JsonProperty("taxedPrice")

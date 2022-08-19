@@ -28,7 +28,7 @@ public class ProductStateTransitionMessagePayloadBuilder implements Builder<Prod
     private Boolean force;
 
     /**
-     *  <p>Reference to a State.</p>
+     *  <p>Product State after the Transition State update action.</p>
      */
 
     public ProductStateTransitionMessagePayloadBuilder state(
@@ -38,7 +38,7 @@ public class ProductStateTransitionMessagePayloadBuilder implements Builder<Prod
     }
 
     /**
-     *  <p>Reference to a State.</p>
+     *  <p>Product State after the Transition State update action.</p>
      */
 
     public ProductStateTransitionMessagePayloadBuilder state(
@@ -48,7 +48,7 @@ public class ProductStateTransitionMessagePayloadBuilder implements Builder<Prod
     }
 
     /**
-     *
+     *  <p>Whether State transition validations were turned off during the Transition State update action.</p>
      */
 
     public ProductStateTransitionMessagePayloadBuilder force(final Boolean force) {

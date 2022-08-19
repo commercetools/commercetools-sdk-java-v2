@@ -24,7 +24,7 @@ public class CustomerEmailChangedMessagePayloadBuilder implements Builder<Custom
     private String email;
 
     /**
-     *
+     *  <p>The <code>email</code> that was set during the Change Email update action.</p>
      */
 
     public CustomerEmailChangedMessagePayloadBuilder email(final String email) {

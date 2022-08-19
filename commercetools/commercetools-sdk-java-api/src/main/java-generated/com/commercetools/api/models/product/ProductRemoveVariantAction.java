@@ -11,7 +11,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>Either <code>id</code> or <code>sku</code> is required. Produces the ProductVariantDeletedMessage.</p>
+ *  <p>Either <code>id</code> or <code>sku</code> is required. Produces the ProductVariantDeleted Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

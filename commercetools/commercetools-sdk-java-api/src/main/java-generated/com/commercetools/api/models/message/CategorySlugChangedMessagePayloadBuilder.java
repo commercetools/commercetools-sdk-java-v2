@@ -30,7 +30,7 @@ public class CategorySlugChangedMessagePayloadBuilder implements Builder<Categor
     private com.commercetools.api.models.common.LocalizedString oldSlug;
 
     /**
-     *  <p>JSON object where the keys are of type Locale, and the values are the strings used for the corresponding language.</p>
+     *  <p>The slug of the Category after the Change Slug update action.</p>
      */
 
     public CategorySlugChangedMessagePayloadBuilder slug(
@@ -40,7 +40,7 @@ public class CategorySlugChangedMessagePayloadBuilder implements Builder<Categor
     }
 
     /**
-     *  <p>JSON object where the keys are of type Locale, and the values are the strings used for the corresponding language.</p>
+     *  <p>The slug of the Category after the Change Slug update action.</p>
      */
 
     public CategorySlugChangedMessagePayloadBuilder slug(
@@ -50,7 +50,7 @@ public class CategorySlugChangedMessagePayloadBuilder implements Builder<Categor
     }
 
     /**
-     *  <p>JSON object where the keys are of type Locale, and the values are the strings used for the corresponding language.</p>
+     *  <p>The slug of the Category before the Change Slug update action.</p>
      */
 
     public CategorySlugChangedMessagePayloadBuilder oldSlug(
@@ -60,7 +60,7 @@ public class CategorySlugChangedMessagePayloadBuilder implements Builder<Categor
     }
 
     /**
-     *  <p>JSON object where the keys are of type Locale, and the values are the strings used for the corresponding language.</p>
+     *  <p>The slug of the Category before the Change Slug update action.</p>
      */
 
     public CategorySlugChangedMessagePayloadBuilder oldSlug(

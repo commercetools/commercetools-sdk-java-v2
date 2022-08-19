@@ -14,7 +14,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * PaymentTransactionStateChangedMessage
+ *  <p>Generated after a successful Change Transaction State update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -41,14 +41,14 @@ public interface PaymentTransactionStateChangedMessage extends Message {
     String PAYMENT_TRANSACTION_STATE_CHANGED = "PaymentTransactionStateChanged";
 
     /**
-     *
+     *  <p>Unique identifier for the Transaction for which the Transaction State changed.</p>
      */
     @NotNull
     @JsonProperty("transactionId")
     public String getTransactionId();
 
     /**
-     *
+     *  <p>Transaction State after the Change Transaction State update action.</p>
      */
     @NotNull
     @JsonProperty("state")

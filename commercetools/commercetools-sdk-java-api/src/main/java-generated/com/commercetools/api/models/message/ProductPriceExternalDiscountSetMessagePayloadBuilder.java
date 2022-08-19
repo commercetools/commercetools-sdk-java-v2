@@ -43,7 +43,7 @@ public class ProductPriceExternalDiscountSetMessagePayloadBuilder
     private Boolean staged;
 
     /**
-     *
+     *  <p>Unique identifier of the Product Variant for which the Discount was set.</p>
      */
 
     public ProductPriceExternalDiscountSetMessagePayloadBuilder variantId(final Integer variantId) {
@@ -52,7 +52,7 @@ public class ProductPriceExternalDiscountSetMessagePayloadBuilder
     }
 
     /**
-     *
+     *  <p>Key of the Product Variant for which the Discount was set.</p>
      */
 
     public ProductPriceExternalDiscountSetMessagePayloadBuilder variantKey(@Nullable final String variantKey) {
@@ -61,7 +61,7 @@ public class ProductPriceExternalDiscountSetMessagePayloadBuilder
     }
 
     /**
-     *
+     *  <p>SKU of the Product Variant for which Discount was set.</p>
      */
 
     public ProductPriceExternalDiscountSetMessagePayloadBuilder sku(@Nullable final String sku) {
@@ -70,7 +70,7 @@ public class ProductPriceExternalDiscountSetMessagePayloadBuilder
     }
 
     /**
-     *
+     *  <p>Unique identifier of the Price.</p>
      */
 
     public ProductPriceExternalDiscountSetMessagePayloadBuilder priceId(final String priceId) {
@@ -79,7 +79,7 @@ public class ProductPriceExternalDiscountSetMessagePayloadBuilder
     }
 
     /**
-     *
+     *  <p>Discounted Price for the Product Variant for which Discount was set.</p>
      */
 
     public ProductPriceExternalDiscountSetMessagePayloadBuilder discounted(
@@ -89,7 +89,7 @@ public class ProductPriceExternalDiscountSetMessagePayloadBuilder
     }
 
     /**
-     *
+     *  <p>Discounted Price for the Product Variant for which Discount was set.</p>
      */
 
     public ProductPriceExternalDiscountSetMessagePayloadBuilder discounted(
@@ -99,7 +99,7 @@ public class ProductPriceExternalDiscountSetMessagePayloadBuilder
     }
 
     /**
-     *
+     *  <p>Whether the update was only applied to the staged Product Projection.</p>
      */
 
     public ProductPriceExternalDiscountSetMessagePayloadBuilder staged(final Boolean staged) {

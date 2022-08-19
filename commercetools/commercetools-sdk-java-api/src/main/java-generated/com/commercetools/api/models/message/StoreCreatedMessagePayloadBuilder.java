@@ -16,7 +16,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <div class=code-example>
  * <pre><code class='java'>
  *     StoreCreatedMessagePayload storeCreatedMessagePayload = StoreCreatedMessagePayload.builder()
- *             .plusLanguages(languagesBuilder -> languagesBuilder)
  *             .plusDistributionChannels(distributionChannelsBuilder -> distributionChannelsBuilder)
  *             .plusSupplyChannels(supplyChannelsBuilder -> supplyChannelsBuilder)
  *             .plusProductSelections(productSelectionsBuilder -> productSelectionsBuilder)
@@ -30,6 +29,7 @@ public class StoreCreatedMessagePayloadBuilder implements Builder<StoreCreatedMe
     @Nullable
     private com.commercetools.api.models.common.LocalizedString name;
 
+    @Nullable
     private java.util.List<String> languages;
 
     private java.util.List<com.commercetools.api.models.channel.ChannelReference> distributionChannels;
@@ -42,7 +42,7 @@ public class StoreCreatedMessagePayloadBuilder implements Builder<StoreCreatedMe
     private com.commercetools.api.models.type.CustomFields custom;
 
     /**
-     *  <p>JSON object where the keys are of type Locale, and the values are the strings used for the corresponding language.</p>
+     *  <p>The <code>name</code> of the Store that was created.</p>
      */
 
     public StoreCreatedMessagePayloadBuilder name(
@@ -52,7 +52,7 @@ public class StoreCreatedMessagePayloadBuilder implements Builder<StoreCreatedMe
     }
 
     /**
-     *  <p>JSON object where the keys are of type Locale, and the values are the strings used for the corresponding language.</p>
+     *  <p>The <code>name</code> of the Store that was created.</p>
      */
 
     public StoreCreatedMessagePayloadBuilder name(
@@ -62,28 +62,28 @@ public class StoreCreatedMessagePayloadBuilder implements Builder<StoreCreatedMe
     }
 
     /**
-     *
+     *  <p>Languages of the Store that was created. Languages are represented as IETF language tags.</p>
      */
 
-    public StoreCreatedMessagePayloadBuilder languages(final String... languages) {
+    public StoreCreatedMessagePayloadBuilder languages(@Nullable final String... languages) {
         this.languages = new ArrayList<>(Arrays.asList(languages));
         return this;
     }
 
     /**
-     *
+     *  <p>Languages of the Store that was created. Languages are represented as IETF language tags.</p>
      */
 
-    public StoreCreatedMessagePayloadBuilder languages(final java.util.List<String> languages) {
+    public StoreCreatedMessagePayloadBuilder languages(@Nullable final java.util.List<String> languages) {
         this.languages = languages;
         return this;
     }
 
     /**
-     *
+     *  <p>Languages of the Store that was created. Languages are represented as IETF language tags.</p>
      */
 
-    public StoreCreatedMessagePayloadBuilder plusLanguages(final String... languages) {
+    public StoreCreatedMessagePayloadBuilder plusLanguages(@Nullable final String... languages) {
         if (this.languages == null) {
             this.languages = new ArrayList<>();
         }
@@ -92,7 +92,7 @@ public class StoreCreatedMessagePayloadBuilder implements Builder<StoreCreatedMe
     }
 
     /**
-     *
+     *  <p>Distribution Channels of the Store that was created.</p>
      */
 
     public StoreCreatedMessagePayloadBuilder distributionChannels(
@@ -102,7 +102,7 @@ public class StoreCreatedMessagePayloadBuilder implements Builder<StoreCreatedMe
     }
 
     /**
-     *
+     *  <p>Distribution Channels of the Store that was created.</p>
      */
 
     public StoreCreatedMessagePayloadBuilder distributionChannels(
@@ -112,7 +112,7 @@ public class StoreCreatedMessagePayloadBuilder implements Builder<StoreCreatedMe
     }
 
     /**
-     *
+     *  <p>Distribution Channels of the Store that was created.</p>
      */
 
     public StoreCreatedMessagePayloadBuilder plusDistributionChannels(
@@ -125,7 +125,7 @@ public class StoreCreatedMessagePayloadBuilder implements Builder<StoreCreatedMe
     }
 
     /**
-     *
+     *  <p>Distribution Channels of the Store that was created.</p>
      */
 
     public StoreCreatedMessagePayloadBuilder plusDistributionChannels(
@@ -139,7 +139,7 @@ public class StoreCreatedMessagePayloadBuilder implements Builder<StoreCreatedMe
     }
 
     /**
-     *
+     *  <p>Distribution Channels of the Store that was created.</p>
      */
 
     public StoreCreatedMessagePayloadBuilder withDistributionChannels(
@@ -151,7 +151,7 @@ public class StoreCreatedMessagePayloadBuilder implements Builder<StoreCreatedMe
     }
 
     /**
-     *
+     *  <p>Supply Channels of the Store that was created.</p>
      */
 
     public StoreCreatedMessagePayloadBuilder supplyChannels(
@@ -161,7 +161,7 @@ public class StoreCreatedMessagePayloadBuilder implements Builder<StoreCreatedMe
     }
 
     /**
-     *
+     *  <p>Supply Channels of the Store that was created.</p>
      */
 
     public StoreCreatedMessagePayloadBuilder supplyChannels(
@@ -171,7 +171,7 @@ public class StoreCreatedMessagePayloadBuilder implements Builder<StoreCreatedMe
     }
 
     /**
-     *
+     *  <p>Supply Channels of the Store that was created.</p>
      */
 
     public StoreCreatedMessagePayloadBuilder plusSupplyChannels(
@@ -184,7 +184,7 @@ public class StoreCreatedMessagePayloadBuilder implements Builder<StoreCreatedMe
     }
 
     /**
-     *
+     *  <p>Supply Channels of the Store that was created.</p>
      */
 
     public StoreCreatedMessagePayloadBuilder plusSupplyChannels(
@@ -198,7 +198,7 @@ public class StoreCreatedMessagePayloadBuilder implements Builder<StoreCreatedMe
     }
 
     /**
-     *
+     *  <p>Supply Channels of the Store that was created.</p>
      */
 
     public StoreCreatedMessagePayloadBuilder withSupplyChannels(
@@ -210,7 +210,7 @@ public class StoreCreatedMessagePayloadBuilder implements Builder<StoreCreatedMe
     }
 
     /**
-     *
+     *  <p>ProductSelectionSettings of the Store that was created.</p>
      */
 
     public StoreCreatedMessagePayloadBuilder productSelections(
@@ -220,7 +220,7 @@ public class StoreCreatedMessagePayloadBuilder implements Builder<StoreCreatedMe
     }
 
     /**
-     *
+     *  <p>ProductSelectionSettings of the Store that was created.</p>
      */
 
     public StoreCreatedMessagePayloadBuilder productSelections(
@@ -230,7 +230,7 @@ public class StoreCreatedMessagePayloadBuilder implements Builder<StoreCreatedMe
     }
 
     /**
-     *
+     *  <p>ProductSelectionSettings of the Store that was created.</p>
      */
 
     public StoreCreatedMessagePayloadBuilder plusProductSelections(
@@ -243,7 +243,7 @@ public class StoreCreatedMessagePayloadBuilder implements Builder<StoreCreatedMe
     }
 
     /**
-     *
+     *  <p>ProductSelectionSettings of the Store that was created.</p>
      */
 
     public StoreCreatedMessagePayloadBuilder plusProductSelections(
@@ -257,7 +257,7 @@ public class StoreCreatedMessagePayloadBuilder implements Builder<StoreCreatedMe
     }
 
     /**
-     *
+     *  <p>ProductSelectionSettings of the Store that was created.</p>
      */
 
     public StoreCreatedMessagePayloadBuilder withProductSelections(
@@ -269,7 +269,7 @@ public class StoreCreatedMessagePayloadBuilder implements Builder<StoreCreatedMe
     }
 
     /**
-     *  <p>Serves as value of the <code>custom</code> field on a resource or data type customized with a Type.</p>
+     *  <p>Custom Fields on the Store that was created.</p>
      */
 
     public StoreCreatedMessagePayloadBuilder custom(
@@ -279,7 +279,7 @@ public class StoreCreatedMessagePayloadBuilder implements Builder<StoreCreatedMe
     }
 
     /**
-     *  <p>Serves as value of the <code>custom</code> field on a resource or data type customized with a Type.</p>
+     *  <p>Custom Fields on the Store that was created.</p>
      */
 
     public StoreCreatedMessagePayloadBuilder custom(
@@ -293,6 +293,7 @@ public class StoreCreatedMessagePayloadBuilder implements Builder<StoreCreatedMe
         return this.name;
     }
 
+    @Nullable
     public java.util.List<String> getLanguages() {
         return this.languages;
     }
@@ -315,7 +316,6 @@ public class StoreCreatedMessagePayloadBuilder implements Builder<StoreCreatedMe
     }
 
     public StoreCreatedMessagePayload build() {
-        Objects.requireNonNull(languages, StoreCreatedMessagePayload.class + ": languages is missing");
         Objects.requireNonNull(distributionChannels,
             StoreCreatedMessagePayload.class + ": distributionChannels is missing");
         Objects.requireNonNull(supplyChannels, StoreCreatedMessagePayload.class + ": supplyChannels is missing");

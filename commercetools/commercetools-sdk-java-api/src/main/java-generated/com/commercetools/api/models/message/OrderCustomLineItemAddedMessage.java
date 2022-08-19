@@ -15,7 +15,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * OrderCustomLineItemAddedMessage
+ *  <p>Generated after a successful Add Custom Line Item update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -41,7 +41,7 @@ public interface OrderCustomLineItemAddedMessage extends OrderMessage {
     String ORDER_CUSTOM_LINE_ITEM_ADDED = "OrderCustomLineItemAdded";
 
     /**
-     *
+     *  <p>Custom Line Item that was added to the Order.</p>
      */
     @NotNull
     @Valid

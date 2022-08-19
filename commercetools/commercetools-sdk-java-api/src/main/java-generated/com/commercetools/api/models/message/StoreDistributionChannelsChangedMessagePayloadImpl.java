@@ -49,7 +49,7 @@ public class StoreDistributionChannelsChangedMessagePayloadImpl
     }
 
     /**
-     *  <p>The product distribution channels that have been added.</p>
+     *  <p>Product distribution Channels that have been added to the Store.</p>
      */
 
     public java.util.List<com.commercetools.api.models.channel.ChannelReference> getAddedDistributionChannels() {
@@ -57,7 +57,7 @@ public class StoreDistributionChannelsChangedMessagePayloadImpl
     }
 
     /**
-     *  <p>The product distribution channels that have been removed.</p>
+     *  <p>Product distribution Channels that have been removed from the Store.</p>
      */
 
     public java.util.List<com.commercetools.api.models.channel.ChannelReference> getRemovedDistributionChannels() {

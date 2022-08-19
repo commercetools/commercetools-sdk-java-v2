@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * OrderShippingInfoSetMessagePayload
+ *  <p>Generated after a successful Set Shipping Method and Set Custom Shipping Method update actions.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderShippingInfoSetMessagePayloadImpl implements OrderShippingInfoSetMessagePayload, ModelBase {
@@ -48,7 +48,7 @@ public class OrderShippingInfoSetMessagePayloadImpl implements OrderShippingInfo
     }
 
     /**
-     *
+     *  <p>ShippingInfo after the Set Shipping Method or Set Custom Shipping Method update action.</p>
      */
 
     public com.commercetools.api.models.cart.ShippingInfo getShippingInfo() {
@@ -56,7 +56,7 @@ public class OrderShippingInfoSetMessagePayloadImpl implements OrderShippingInfo
     }
 
     /**
-     *
+     *  <p>ShippingInfo before the Set Shipping Method or Set Custom Shipping Method update action.</p>
      */
 
     public com.commercetools.api.models.cart.ShippingInfo getOldShippingInfo() {

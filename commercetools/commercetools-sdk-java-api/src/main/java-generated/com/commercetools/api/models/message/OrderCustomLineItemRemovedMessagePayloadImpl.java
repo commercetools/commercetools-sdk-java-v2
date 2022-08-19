@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * OrderCustomLineItemRemovedMessagePayload
+ *  <p>Generated after a successful Remove Custom Line Item update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderCustomLineItemRemovedMessagePayloadImpl
@@ -48,7 +48,7 @@ public class OrderCustomLineItemRemovedMessagePayloadImpl
     }
 
     /**
-     *
+     *  <p>Unique identifier of the Custom Line Item.</p>
      */
 
     public String getCustomLineItemId() {
@@ -56,7 +56,7 @@ public class OrderCustomLineItemRemovedMessagePayloadImpl
     }
 
     /**
-     *
+     *  <p>Custom Line Item that was removed from the Order.</p>
      */
 
     public com.commercetools.api.models.cart.CustomLineItem getCustomLineItem() {

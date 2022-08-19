@@ -15,7 +15,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * ParcelItemsUpdatedMessage
+ *  <p>Generated after a successful Set Parcel Items update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -30,6 +30,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .resource(resourceBuilder -> resourceBuilder)
  *             .resourceVersion(0.3)
  *             .parcelId("{parcelId}")
+ *             .deliveryId("{deliveryId}")
  *             .plusItems(itemsBuilder -> itemsBuilder)
  *             .plusOldItems(oldItemsBuilder -> oldItemsBuilder)
  *             .build()
@@ -43,21 +44,21 @@ public interface ParcelItemsUpdatedMessage extends OrderMessage {
     String PARCEL_ITEMS_UPDATED = "ParcelItemsUpdated";
 
     /**
-     *
+     *  <p>Unique identifier of the Parcel.</p>
      */
     @NotNull
     @JsonProperty("parcelId")
     public String getParcelId();
 
     /**
-     *
+     *  <p>Unique identifier of the Delivery.</p>
      */
-
+    @NotNull
     @JsonProperty("deliveryId")
     public String getDeliveryId();
 
     /**
-     *
+     *  <p>Delivery Items after the Set Parcel Items update action.</p>
      */
     @NotNull
     @Valid
@@ -65,7 +66,7 @@ public interface ParcelItemsUpdatedMessage extends OrderMessage {
     public List<DeliveryItem> getItems();
 
     /**
-     *
+     *  <p>Delivery Items before the Set Parcel Items update action.</p>
      */
     @NotNull
     @Valid

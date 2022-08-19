@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * OrderLineItemDiscountSetMessagePayload
+ *  <p>Generated after a successful recalculation of a Discount on a Line Item.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderLineItemDiscountSetMessagePayloadImpl implements OrderLineItemDiscountSetMessagePayload, ModelBase {
@@ -55,7 +55,7 @@ public class OrderLineItemDiscountSetMessagePayloadImpl implements OrderLineItem
     }
 
     /**
-     *
+     *  <p>Unique identifier for the Line Item.</p>
      */
 
     public String getLineItemId() {
@@ -63,7 +63,7 @@ public class OrderLineItemDiscountSetMessagePayloadImpl implements OrderLineItem
     }
 
     /**
-     *
+     *  <p>Array of DiscountedLineItemPriceForQuantity after the Discount recalculation.</p>
      */
 
     public java.util.List<com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantity> getDiscountedPricePerQuantity() {
@@ -71,8 +71,7 @@ public class OrderLineItemDiscountSetMessagePayloadImpl implements OrderLineItem
     }
 
     /**
-     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
-     *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
+     *  <p>Total Price of the Line Item after the Discount recalculation.</p>
      */
 
     public com.commercetools.api.models.common.Money getTotalPrice() {
@@ -80,7 +79,7 @@ public class OrderLineItemDiscountSetMessagePayloadImpl implements OrderLineItem
     }
 
     /**
-     *
+     *  <p>TaxedItemPrice of the Line Item after the Discount recalculation.</p>
      */
 
     public com.commercetools.api.models.cart.TaxedItemPrice getTaxedPrice() {

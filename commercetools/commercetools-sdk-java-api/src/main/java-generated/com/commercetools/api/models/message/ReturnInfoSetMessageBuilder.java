@@ -10,12 +10,12 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * OrderReturnInfoAddedMessageBuilder
+ * ReturnInfoSetMessageBuilder
  * <hr>
  * Example to create an instance using the builder pattern
  * <div class=code-example>
  * <pre><code class='java'>
- *     OrderReturnInfoAddedMessage orderReturnInfoAddedMessage = OrderReturnInfoAddedMessage.builder()
+ *     ReturnInfoSetMessage returnInfoSetMessage = ReturnInfoSetMessage.builder()
  *             .id("{id}")
  *             .version(0.3)
  *             .createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
@@ -23,13 +23,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .sequenceNumber(0.3)
  *             .resource(resourceBuilder -> resourceBuilder)
  *             .resourceVersion(0.3)
- *             .returnInfo(returnInfoBuilder -> returnInfoBuilder)
  *             .build()
  * </code></pre>
  * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-public class OrderReturnInfoAddedMessageBuilder implements Builder<OrderReturnInfoAddedMessage> {
+public class ReturnInfoSetMessageBuilder implements Builder<ReturnInfoSetMessage> {
 
     private String id;
 
@@ -54,59 +53,60 @@ public class OrderReturnInfoAddedMessageBuilder implements Builder<OrderReturnIn
     @Nullable
     private com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers;
 
-    private com.commercetools.api.models.order.ReturnInfo returnInfo;
+    @Nullable
+    private java.util.List<com.commercetools.api.models.order.ReturnInfo> returnInfo;
 
     /**
-     *  <p>Unique identifier of the Message.</p>
+     *  <p>Unique identifier of the Message. Can be used to track which Messages have been processed.</p>
      */
 
-    public OrderReturnInfoAddedMessageBuilder id(final String id) {
+    public ReturnInfoSetMessageBuilder id(final String id) {
         this.id = id;
         return this;
     }
 
     /**
-     *
+     *  <p>Version of a resource. In case of Messages, this is always <code>1</code>.</p>
      */
 
-    public OrderReturnInfoAddedMessageBuilder version(final Long version) {
+    public ReturnInfoSetMessageBuilder version(final Long version) {
         this.version = version;
         return this;
     }
 
     /**
-     *
+     *  <p>Date and time (UTC) the Message was generated.</p>
      */
 
-    public OrderReturnInfoAddedMessageBuilder createdAt(final java.time.ZonedDateTime createdAt) {
+    public ReturnInfoSetMessageBuilder createdAt(final java.time.ZonedDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
     }
 
     /**
-     *
+     *  <p>Value of <code>createdAt</code>.</p>
      */
 
-    public OrderReturnInfoAddedMessageBuilder lastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {
+    public ReturnInfoSetMessageBuilder lastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {
         this.lastModifiedAt = lastModifiedAt;
         return this;
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>Value of <code>createdBy</code>.</p>
      */
 
-    public OrderReturnInfoAddedMessageBuilder lastModifiedBy(
+    public ReturnInfoSetMessageBuilder lastModifiedBy(
             Function<com.commercetools.api.models.common.LastModifiedByBuilder, com.commercetools.api.models.common.LastModifiedByBuilder> builder) {
         this.lastModifiedBy = builder.apply(com.commercetools.api.models.common.LastModifiedByBuilder.of()).build();
         return this;
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>Value of <code>createdBy</code>.</p>
      */
 
-    public OrderReturnInfoAddedMessageBuilder lastModifiedBy(
+    public ReturnInfoSetMessageBuilder lastModifiedBy(
             @Nullable final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy) {
         this.lastModifiedBy = lastModifiedBy;
         return this;
@@ -116,7 +116,7 @@ public class OrderReturnInfoAddedMessageBuilder implements Builder<OrderReturnIn
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
-    public OrderReturnInfoAddedMessageBuilder createdBy(
+    public ReturnInfoSetMessageBuilder createdBy(
             Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedByBuilder> builder) {
         this.createdBy = builder.apply(com.commercetools.api.models.common.CreatedByBuilder.of()).build();
         return this;
@@ -126,54 +126,54 @@ public class OrderReturnInfoAddedMessageBuilder implements Builder<OrderReturnIn
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
-    public OrderReturnInfoAddedMessageBuilder createdBy(
+    public ReturnInfoSetMessageBuilder createdBy(
             @Nullable final com.commercetools.api.models.common.CreatedBy createdBy) {
         this.createdBy = createdBy;
         return this;
     }
 
     /**
-     *
+     *  <p>Message number in relation to other Messages for a given resource. The <code>sequenceNumber</code> of the next Message for the resource is the successor of the <code>sequenceNumber</code> of the current Message. Meaning, the <code>sequenceNumber</code> of the next Message equals the <code>sequenceNumber</code> of the current Message + 1. <code>sequenceNumber</code> can be used to ensure that Messages are processed in the correct order for a particular resource.</p>
      */
 
-    public OrderReturnInfoAddedMessageBuilder sequenceNumber(final Long sequenceNumber) {
+    public ReturnInfoSetMessageBuilder sequenceNumber(final Long sequenceNumber) {
         this.sequenceNumber = sequenceNumber;
         return this;
     }
 
     /**
-     *  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
+     *  <p>Reference to the resource on which the change or action was performed.</p>
      */
 
-    public OrderReturnInfoAddedMessageBuilder resource(final com.commercetools.api.models.common.Reference resource) {
+    public ReturnInfoSetMessageBuilder resource(final com.commercetools.api.models.common.Reference resource) {
         this.resource = resource;
         return this;
     }
 
     /**
-     *  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
+     *  <p>Reference to the resource on which the change or action was performed.</p>
      */
 
-    public OrderReturnInfoAddedMessageBuilder resource(
+    public ReturnInfoSetMessageBuilder resource(
             Function<com.commercetools.api.models.common.ReferenceBuilder, Builder<? extends com.commercetools.api.models.common.Reference>> builder) {
         this.resource = builder.apply(com.commercetools.api.models.common.ReferenceBuilder.of()).build();
         return this;
     }
 
     /**
-     *
+     *  <p>Version of the resource on which the change or action was performed.</p>
      */
 
-    public OrderReturnInfoAddedMessageBuilder resourceVersion(final Long resourceVersion) {
+    public ReturnInfoSetMessageBuilder resourceVersion(final Long resourceVersion) {
         this.resourceVersion = resourceVersion;
         return this;
     }
 
     /**
-     *
+     *  <p>User-provided identifiers of the resource, such as <code>key</code> or <code>externalId</code>. Only present if the resource has such identifiers.</p>
      */
 
-    public OrderReturnInfoAddedMessageBuilder resourceUserProvidedIdentifiers(
+    public ReturnInfoSetMessageBuilder resourceUserProvidedIdentifiers(
             Function<com.commercetools.api.models.message.UserProvidedIdentifiersBuilder, com.commercetools.api.models.message.UserProvidedIdentifiersBuilder> builder) {
         this.resourceUserProvidedIdentifiers = builder
                 .apply(com.commercetools.api.models.message.UserProvidedIdentifiersBuilder.of())
@@ -182,32 +182,69 @@ public class OrderReturnInfoAddedMessageBuilder implements Builder<OrderReturnIn
     }
 
     /**
-     *
+     *  <p>User-provided identifiers of the resource, such as <code>key</code> or <code>externalId</code>. Only present if the resource has such identifiers.</p>
      */
 
-    public OrderReturnInfoAddedMessageBuilder resourceUserProvidedIdentifiers(
+    public ReturnInfoSetMessageBuilder resourceUserProvidedIdentifiers(
             @Nullable final com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers) {
         this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
         return this;
     }
 
     /**
-     *
+     *  <p>The ReturnInfo that was set on the Order or Order Edit.</p>
      */
 
-    public OrderReturnInfoAddedMessageBuilder returnInfo(
-            Function<com.commercetools.api.models.order.ReturnInfoBuilder, com.commercetools.api.models.order.ReturnInfoBuilder> builder) {
-        this.returnInfo = builder.apply(com.commercetools.api.models.order.ReturnInfoBuilder.of()).build();
+    public ReturnInfoSetMessageBuilder returnInfo(
+            @Nullable final com.commercetools.api.models.order.ReturnInfo... returnInfo) {
+        this.returnInfo = new ArrayList<>(Arrays.asList(returnInfo));
         return this;
     }
 
     /**
-     *
+     *  <p>The ReturnInfo that was set on the Order or Order Edit.</p>
      */
 
-    public OrderReturnInfoAddedMessageBuilder returnInfo(
-            final com.commercetools.api.models.order.ReturnInfo returnInfo) {
+    public ReturnInfoSetMessageBuilder returnInfo(
+            @Nullable final java.util.List<com.commercetools.api.models.order.ReturnInfo> returnInfo) {
         this.returnInfo = returnInfo;
+        return this;
+    }
+
+    /**
+     *  <p>The ReturnInfo that was set on the Order or Order Edit.</p>
+     */
+
+    public ReturnInfoSetMessageBuilder plusReturnInfo(
+            @Nullable final com.commercetools.api.models.order.ReturnInfo... returnInfo) {
+        if (this.returnInfo == null) {
+            this.returnInfo = new ArrayList<>();
+        }
+        this.returnInfo.addAll(Arrays.asList(returnInfo));
+        return this;
+    }
+
+    /**
+     *  <p>The ReturnInfo that was set on the Order or Order Edit.</p>
+     */
+
+    public ReturnInfoSetMessageBuilder plusReturnInfo(
+            Function<com.commercetools.api.models.order.ReturnInfoBuilder, com.commercetools.api.models.order.ReturnInfoBuilder> builder) {
+        if (this.returnInfo == null) {
+            this.returnInfo = new ArrayList<>();
+        }
+        this.returnInfo.add(builder.apply(com.commercetools.api.models.order.ReturnInfoBuilder.of()).build());
+        return this;
+    }
+
+    /**
+     *  <p>The ReturnInfo that was set on the Order or Order Edit.</p>
+     */
+
+    public ReturnInfoSetMessageBuilder withReturnInfo(
+            Function<com.commercetools.api.models.order.ReturnInfoBuilder, com.commercetools.api.models.order.ReturnInfoBuilder> builder) {
+        this.returnInfo = new ArrayList<>();
+        this.returnInfo.add(builder.apply(com.commercetools.api.models.order.ReturnInfoBuilder.of()).build());
         return this;
     }
 
@@ -254,37 +291,37 @@ public class OrderReturnInfoAddedMessageBuilder implements Builder<OrderReturnIn
         return this.resourceUserProvidedIdentifiers;
     }
 
-    public com.commercetools.api.models.order.ReturnInfo getReturnInfo() {
+    @Nullable
+    public java.util.List<com.commercetools.api.models.order.ReturnInfo> getReturnInfo() {
         return this.returnInfo;
     }
 
-    public OrderReturnInfoAddedMessage build() {
-        Objects.requireNonNull(id, OrderReturnInfoAddedMessage.class + ": id is missing");
-        Objects.requireNonNull(version, OrderReturnInfoAddedMessage.class + ": version is missing");
-        Objects.requireNonNull(createdAt, OrderReturnInfoAddedMessage.class + ": createdAt is missing");
-        Objects.requireNonNull(lastModifiedAt, OrderReturnInfoAddedMessage.class + ": lastModifiedAt is missing");
-        Objects.requireNonNull(sequenceNumber, OrderReturnInfoAddedMessage.class + ": sequenceNumber is missing");
-        Objects.requireNonNull(resource, OrderReturnInfoAddedMessage.class + ": resource is missing");
-        Objects.requireNonNull(resourceVersion, OrderReturnInfoAddedMessage.class + ": resourceVersion is missing");
-        Objects.requireNonNull(returnInfo, OrderReturnInfoAddedMessage.class + ": returnInfo is missing");
-        return new OrderReturnInfoAddedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
+    public ReturnInfoSetMessage build() {
+        Objects.requireNonNull(id, ReturnInfoSetMessage.class + ": id is missing");
+        Objects.requireNonNull(version, ReturnInfoSetMessage.class + ": version is missing");
+        Objects.requireNonNull(createdAt, ReturnInfoSetMessage.class + ": createdAt is missing");
+        Objects.requireNonNull(lastModifiedAt, ReturnInfoSetMessage.class + ": lastModifiedAt is missing");
+        Objects.requireNonNull(sequenceNumber, ReturnInfoSetMessage.class + ": sequenceNumber is missing");
+        Objects.requireNonNull(resource, ReturnInfoSetMessage.class + ": resource is missing");
+        Objects.requireNonNull(resourceVersion, ReturnInfoSetMessage.class + ": resourceVersion is missing");
+        return new ReturnInfoSetMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
             sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, returnInfo);
     }
 
     /**
-     * builds OrderReturnInfoAddedMessage without checking for non null required values
+     * builds ReturnInfoSetMessage without checking for non null required values
      */
-    public OrderReturnInfoAddedMessage buildUnchecked() {
-        return new OrderReturnInfoAddedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
+    public ReturnInfoSetMessage buildUnchecked() {
+        return new ReturnInfoSetMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
             sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, returnInfo);
     }
 
-    public static OrderReturnInfoAddedMessageBuilder of() {
-        return new OrderReturnInfoAddedMessageBuilder();
+    public static ReturnInfoSetMessageBuilder of() {
+        return new ReturnInfoSetMessageBuilder();
     }
 
-    public static OrderReturnInfoAddedMessageBuilder of(final OrderReturnInfoAddedMessage template) {
-        OrderReturnInfoAddedMessageBuilder builder = new OrderReturnInfoAddedMessageBuilder();
+    public static ReturnInfoSetMessageBuilder of(final ReturnInfoSetMessage template) {
+        ReturnInfoSetMessageBuilder builder = new ReturnInfoSetMessageBuilder();
         builder.id = template.getId();
         builder.version = template.getVersion();
         builder.createdAt = template.getCreatedAt();

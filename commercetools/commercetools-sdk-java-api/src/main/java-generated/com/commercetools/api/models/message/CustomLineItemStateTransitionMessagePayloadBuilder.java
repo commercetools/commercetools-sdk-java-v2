@@ -38,7 +38,7 @@ public class CustomLineItemStateTransitionMessagePayloadBuilder
     private com.commercetools.api.models.state.StateReference toState;
 
     /**
-     *
+     *  <p>Unique identifier of the Custom Line Item.</p>
      */
 
     public CustomLineItemStateTransitionMessagePayloadBuilder customLineItemId(final String customLineItemId) {
@@ -47,7 +47,7 @@ public class CustomLineItemStateTransitionMessagePayloadBuilder
     }
 
     /**
-     *
+     *  <p>Date and time (UTC) when the transition of the Custom Line Item State was performed.</p>
      */
 
     public CustomLineItemStateTransitionMessagePayloadBuilder transitionDate(
@@ -57,7 +57,7 @@ public class CustomLineItemStateTransitionMessagePayloadBuilder
     }
 
     /**
-     *
+     *  <p>Number of Custom Line Items for which the State was transitioned.</p>
      */
 
     public CustomLineItemStateTransitionMessagePayloadBuilder quantity(final Long quantity) {
@@ -66,7 +66,7 @@ public class CustomLineItemStateTransitionMessagePayloadBuilder
     }
 
     /**
-     *  <p>Reference to a State.</p>
+     *  <p>State the Custom Line Item was transitioned from.</p>
      */
 
     public CustomLineItemStateTransitionMessagePayloadBuilder fromState(
@@ -76,7 +76,7 @@ public class CustomLineItemStateTransitionMessagePayloadBuilder
     }
 
     /**
-     *  <p>Reference to a State.</p>
+     *  <p>State the Custom Line Item was transitioned from.</p>
      */
 
     public CustomLineItemStateTransitionMessagePayloadBuilder fromState(
@@ -86,7 +86,7 @@ public class CustomLineItemStateTransitionMessagePayloadBuilder
     }
 
     /**
-     *  <p>Reference to a State.</p>
+     *  <p>State the Custom Line Item was transitioned to.</p>
      */
 
     public CustomLineItemStateTransitionMessagePayloadBuilder toState(
@@ -96,7 +96,7 @@ public class CustomLineItemStateTransitionMessagePayloadBuilder
     }
 
     /**
-     *  <p>Reference to a State.</p>
+     *  <p>State the Custom Line Item was transitioned to.</p>
      */
 
     public CustomLineItemStateTransitionMessagePayloadBuilder toState(

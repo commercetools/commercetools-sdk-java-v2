@@ -15,24 +15,24 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * OrderReturnInfoAddedMessagePayload
+ *  <p>Generated after a successful Set Return Info update action on Orders and Order Edits.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-public class OrderReturnInfoAddedMessagePayloadImpl implements OrderReturnInfoAddedMessagePayload, ModelBase {
+public class ReturnInfoSetMessagePayloadImpl implements ReturnInfoSetMessagePayload, ModelBase {
 
     private String type;
 
-    private com.commercetools.api.models.order.ReturnInfo returnInfo;
+    private java.util.List<com.commercetools.api.models.order.ReturnInfo> returnInfo;
 
     @JsonCreator
-    OrderReturnInfoAddedMessagePayloadImpl(
-            @JsonProperty("returnInfo") final com.commercetools.api.models.order.ReturnInfo returnInfo) {
+    ReturnInfoSetMessagePayloadImpl(
+            @JsonProperty("returnInfo") final java.util.List<com.commercetools.api.models.order.ReturnInfo> returnInfo) {
         this.returnInfo = returnInfo;
-        this.type = RETURN_INFO_ADDED;
+        this.type = RETURN_INFO_SET;
     }
 
-    public OrderReturnInfoAddedMessagePayloadImpl() {
-        this.type = RETURN_INFO_ADDED;
+    public ReturnInfoSetMessagePayloadImpl() {
+        this.type = RETURN_INFO_SET;
     }
 
     /**
@@ -44,14 +44,18 @@ public class OrderReturnInfoAddedMessagePayloadImpl implements OrderReturnInfoAd
     }
 
     /**
-     *
+     *  <p>The ReturnInfo that was set on the Order or Order Edit.</p>
      */
 
-    public com.commercetools.api.models.order.ReturnInfo getReturnInfo() {
+    public java.util.List<com.commercetools.api.models.order.ReturnInfo> getReturnInfo() {
         return this.returnInfo;
     }
 
-    public void setReturnInfo(final com.commercetools.api.models.order.ReturnInfo returnInfo) {
+    public void setReturnInfo(final com.commercetools.api.models.order.ReturnInfo... returnInfo) {
+        this.returnInfo = new ArrayList<>(Arrays.asList(returnInfo));
+    }
+
+    public void setReturnInfo(final java.util.List<com.commercetools.api.models.order.ReturnInfo> returnInfo) {
         this.returnInfo = returnInfo;
     }
 
@@ -63,7 +67,7 @@ public class OrderReturnInfoAddedMessagePayloadImpl implements OrderReturnInfoAd
         if (o == null || getClass() != o.getClass())
             return false;
 
-        OrderReturnInfoAddedMessagePayloadImpl that = (OrderReturnInfoAddedMessagePayloadImpl) o;
+        ReturnInfoSetMessagePayloadImpl that = (ReturnInfoSetMessagePayloadImpl) o;
 
         return new EqualsBuilder().append(type, that.type).append(returnInfo, that.returnInfo).isEquals();
     }

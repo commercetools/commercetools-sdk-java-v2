@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * ParcelAddedToDeliveryMessagePayload
+ *  <p>Generated after a successful Add Parcel To Delivery update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ParcelAddedToDeliveryMessagePayloadImpl implements ParcelAddedToDeliveryMessagePayload, ModelBase {
@@ -48,7 +48,7 @@ public class ParcelAddedToDeliveryMessagePayloadImpl implements ParcelAddedToDel
     }
 
     /**
-     *
+     *  <p>Unique identifier of the Delivery.</p>
      */
 
     public com.commercetools.api.models.order.Delivery getDelivery() {
@@ -56,7 +56,7 @@ public class ParcelAddedToDeliveryMessagePayloadImpl implements ParcelAddedToDel
     }
 
     /**
-     *
+     *  <p>Parcel that was added to the Delivery.</p>
      */
 
     public com.commercetools.api.models.order.Parcel getParcel() {

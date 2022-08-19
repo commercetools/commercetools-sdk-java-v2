@@ -18,14 +18,13 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * StoreCreatedMessagePayload
+ *  <p>Generated after a successful Create Store request.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
  * <div class=code-example>
  * <pre><code class='java'>
  *     StoreCreatedMessagePayload storeCreatedMessagePayload = StoreCreatedMessagePayload.builder()
- *             .plusLanguages(languagesBuilder -> languagesBuilder)
  *             .plusDistributionChannels(distributionChannelsBuilder -> distributionChannelsBuilder)
  *             .plusSupplyChannels(supplyChannelsBuilder -> supplyChannelsBuilder)
  *             .plusProductSelections(productSelectionsBuilder -> productSelectionsBuilder)
@@ -40,21 +39,21 @@ public interface StoreCreatedMessagePayload extends MessagePayload {
     String STORE_CREATED = "StoreCreated";
 
     /**
-     *  <p>JSON object where the keys are of type Locale, and the values are the strings used for the corresponding language.</p>
+     *  <p>The <code>name</code> of the Store that was created.</p>
      */
     @Valid
     @JsonProperty("name")
     public LocalizedString getName();
 
     /**
-     *
+     *  <p>Languages of the Store that was created. Languages are represented as IETF language tags.</p>
      */
-    @NotNull
+
     @JsonProperty("languages")
     public List<String> getLanguages();
 
     /**
-     *
+     *  <p>Distribution Channels of the Store that was created.</p>
      */
     @NotNull
     @Valid
@@ -62,7 +61,7 @@ public interface StoreCreatedMessagePayload extends MessagePayload {
     public List<ChannelReference> getDistributionChannels();
 
     /**
-     *
+     *  <p>Supply Channels of the Store that was created.</p>
      */
     @NotNull
     @Valid
@@ -70,7 +69,7 @@ public interface StoreCreatedMessagePayload extends MessagePayload {
     public List<ChannelReference> getSupplyChannels();
 
     /**
-     *
+     *  <p>ProductSelectionSettings of the Store that was created.</p>
      */
     @NotNull
     @Valid
@@ -78,7 +77,7 @@ public interface StoreCreatedMessagePayload extends MessagePayload {
     public List<ProductSelectionSetting> getProductSelections();
 
     /**
-     *  <p>Serves as value of the <code>custom</code> field on a resource or data type customized with a Type.</p>
+     *  <p>Custom Fields on the Store that was created.</p>
      */
     @Valid
     @JsonProperty("custom")

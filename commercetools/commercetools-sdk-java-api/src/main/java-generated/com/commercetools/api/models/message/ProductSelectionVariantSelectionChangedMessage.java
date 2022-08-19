@@ -16,7 +16,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * ProductSelectionVariantSelectionChangedMessage
+ *  <p>Generated after a successful Set Variant Selection update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -31,6 +31,8 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .resource(resourceBuilder -> resourceBuilder)
  *             .resourceVersion(0.3)
  *             .product(productBuilder -> productBuilder)
+ *             .oldVariantSelection(oldVariantSelectionBuilder -> oldVariantSelectionBuilder)
+ *             .newVariantSelection(newVariantSelectionBuilder -> newVariantSelectionBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -42,7 +44,7 @@ public interface ProductSelectionVariantSelectionChangedMessage extends Message 
     String PRODUCT_SELECTION_VARIANT_SELECTION_CHANGED = "ProductSelectionVariantSelectionChanged";
 
     /**
-     *  <p>Reference to a Product.</p>
+     *  <p>Product for which the Product Variant Selection changed.</p>
      */
     @NotNull
     @Valid
@@ -50,15 +52,17 @@ public interface ProductSelectionVariantSelectionChangedMessage extends Message 
     public ProductReference getProduct();
 
     /**
-     *  <p>The former Product Variant Selection if any.</p>
+     *  <p>Product Variant Selection before the Set Variant Selection update action.</p>
      */
+    @NotNull
     @Valid
     @JsonProperty("oldVariantSelection")
     public ProductVariantSelection getOldVariantSelection();
 
     /**
-     *  <p>The updated Product Variant Selection if any.</p>
+     *  <p>Product Variant Selection after the Set Variant Selection update action.</p>
      */
+    @NotNull
     @Valid
     @JsonProperty("newVariantSelection")
     public ProductVariantSelection getNewVariantSelection();

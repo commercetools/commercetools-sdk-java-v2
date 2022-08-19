@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * OrderCustomerGroupSetMessagePayload
+ *  <p>Generated after a successful Set Customer Group update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderCustomerGroupSetMessagePayloadImpl implements OrderCustomerGroupSetMessagePayload, ModelBase {
@@ -48,7 +48,7 @@ public class OrderCustomerGroupSetMessagePayloadImpl implements OrderCustomerGro
     }
 
     /**
-     *  <p>Reference to a CustomerGroup.</p>
+     *  <p>CustomerGroup on the Order after the Set Customer Group update action.</p>
      */
 
     public com.commercetools.api.models.customer_group.CustomerGroupReference getCustomerGroup() {
@@ -56,7 +56,7 @@ public class OrderCustomerGroupSetMessagePayloadImpl implements OrderCustomerGro
     }
 
     /**
-     *  <p>Reference to a CustomerGroup.</p>
+     *  <p>CustomerGroup on the Order before the Set Customer Group update action.</p>
      */
 
     public com.commercetools.api.models.customer_group.CustomerGroupReference getOldCustomerGroup() {

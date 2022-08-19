@@ -15,7 +15,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * CustomerAddressRemovedMessage
+ *  <p>Generated after a successful Remove Address update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -41,7 +41,7 @@ public interface CustomerAddressRemovedMessage extends Message {
     String CUSTOMER_ADDRESS_REMOVED = "CustomerAddressRemoved";
 
     /**
-     *
+     *  <p>Address that was removed during the Remove Address update action.</p>
      */
     @NotNull
     @Valid

@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * OrderDiscountCodeRemovedMessagePayload
+ *  <p>Generated after a successful Remove Discount Code update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderDiscountCodeRemovedMessagePayloadImpl implements OrderDiscountCodeRemovedMessagePayload, ModelBase {
@@ -44,7 +44,7 @@ public class OrderDiscountCodeRemovedMessagePayloadImpl implements OrderDiscount
     }
 
     /**
-     *  <p>Reference to a DiscountCode.</p>
+     *  <p>DiscountCode that was removed.</p>
      */
 
     public com.commercetools.api.models.discount_code.DiscountCodeReference getDiscountCode() {

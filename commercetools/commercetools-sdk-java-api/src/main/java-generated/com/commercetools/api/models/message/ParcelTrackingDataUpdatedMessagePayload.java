@@ -15,7 +15,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * ParcelTrackingDataUpdatedMessagePayload
+ *  <p>Generated after a successful Set Parcel TrackingData update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -35,21 +35,21 @@ public interface ParcelTrackingDataUpdatedMessagePayload extends OrderMessagePay
     String PARCEL_TRACKING_DATA_UPDATED = "ParcelTrackingDataUpdated";
 
     /**
-     *
+     *  <p>Unique identifier of the Delivery.</p>
      */
     @NotNull
     @JsonProperty("deliveryId")
     public String getDeliveryId();
 
     /**
-     *
+     *  <p>Unique identifier of the Parcel.</p>
      */
     @NotNull
     @JsonProperty("parcelId")
     public String getParcelId();
 
     /**
-     *
+     *  <p>The Tracking Data that was added to the Parcel.</p>
      */
     @Valid
     @JsonProperty("trackingData")

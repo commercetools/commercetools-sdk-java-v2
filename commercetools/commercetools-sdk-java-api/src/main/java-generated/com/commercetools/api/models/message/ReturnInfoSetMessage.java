@@ -14,13 +14,13 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * OrderReturnInfoSetMessage
+ *  <p>Generated after a successful Set Return Info update action on Orders and Order Edits.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
  * <div class=code-example>
  * <pre><code class='java'>
- *     OrderReturnInfoSetMessage orderReturnInfoSetMessage = OrderReturnInfoSetMessage.builder()
+ *     ReturnInfoSetMessage returnInfoSetMessage = ReturnInfoSetMessage.builder()
  *             .id("{id}")
  *             .version(0.3)
  *             .createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
@@ -33,13 +33,13 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-@JsonDeserialize(as = OrderReturnInfoSetMessageImpl.class)
-public interface OrderReturnInfoSetMessage extends OrderMessage {
+@JsonDeserialize(as = ReturnInfoSetMessageImpl.class)
+public interface ReturnInfoSetMessage extends OrderMessage {
 
     String RETURN_INFO_SET = "ReturnInfoSet";
 
     /**
-     *
+     *  <p>The ReturnInfo that was set on the Order or Order Edit.</p>
      */
     @Valid
     @JsonProperty("returnInfo")
@@ -50,12 +50,12 @@ public interface OrderReturnInfoSetMessage extends OrderMessage {
 
     public void setReturnInfo(final List<ReturnInfo> returnInfo);
 
-    public static OrderReturnInfoSetMessage of() {
-        return new OrderReturnInfoSetMessageImpl();
+    public static ReturnInfoSetMessage of() {
+        return new ReturnInfoSetMessageImpl();
     }
 
-    public static OrderReturnInfoSetMessage of(final OrderReturnInfoSetMessage template) {
-        OrderReturnInfoSetMessageImpl instance = new OrderReturnInfoSetMessageImpl();
+    public static ReturnInfoSetMessage of(final ReturnInfoSetMessage template) {
+        ReturnInfoSetMessageImpl instance = new ReturnInfoSetMessageImpl();
         instance.setId(template.getId());
         instance.setVersion(template.getVersion());
         instance.setCreatedAt(template.getCreatedAt());
@@ -70,23 +70,23 @@ public interface OrderReturnInfoSetMessage extends OrderMessage {
         return instance;
     }
 
-    public static OrderReturnInfoSetMessageBuilder builder() {
-        return OrderReturnInfoSetMessageBuilder.of();
+    public static ReturnInfoSetMessageBuilder builder() {
+        return ReturnInfoSetMessageBuilder.of();
     }
 
-    public static OrderReturnInfoSetMessageBuilder builder(final OrderReturnInfoSetMessage template) {
-        return OrderReturnInfoSetMessageBuilder.of(template);
+    public static ReturnInfoSetMessageBuilder builder(final ReturnInfoSetMessage template) {
+        return ReturnInfoSetMessageBuilder.of(template);
     }
 
-    default <T> T withOrderReturnInfoSetMessage(Function<OrderReturnInfoSetMessage, T> helper) {
+    default <T> T withReturnInfoSetMessage(Function<ReturnInfoSetMessage, T> helper) {
         return helper.apply(this);
     }
 
-    public static com.fasterxml.jackson.core.type.TypeReference<OrderReturnInfoSetMessage> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<OrderReturnInfoSetMessage>() {
+    public static com.fasterxml.jackson.core.type.TypeReference<ReturnInfoSetMessage> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ReturnInfoSetMessage>() {
             @Override
             public String toString() {
-                return "TypeReference<OrderReturnInfoSetMessage>";
+                return "TypeReference<ReturnInfoSetMessage>";
             }
         };
     }

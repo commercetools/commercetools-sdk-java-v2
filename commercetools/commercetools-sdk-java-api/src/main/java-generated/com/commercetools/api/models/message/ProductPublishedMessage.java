@@ -16,7 +16,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * ProductPublishedMessage
+ *  <p>Generated after a successful Publish update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -44,14 +44,14 @@ public interface ProductPublishedMessage extends Message {
     String PRODUCT_PUBLISHED = "ProductPublished";
 
     /**
-     *
+     *  <p>List of image URLs which were removed during the Publish update action.</p>
      */
     @NotNull
     @JsonProperty("removedImageUrls")
     public List<String> getRemovedImageUrls();
 
     /**
-     *
+     *  <p>Current Product Projection of the Product at the time of creation.</p>
      */
     @NotNull
     @Valid
@@ -59,7 +59,7 @@ public interface ProductPublishedMessage extends Message {
     public ProductProjection getProductProjection();
 
     /**
-     *  <p>The scope controls which part of the product information is published.</p>
+     *  <p>Publishing Scope that was used during the Publish update action.</p>
      */
     @NotNull
     @JsonProperty("scope")

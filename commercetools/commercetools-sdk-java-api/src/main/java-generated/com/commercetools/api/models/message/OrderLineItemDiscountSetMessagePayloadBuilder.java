@@ -36,7 +36,7 @@ public class OrderLineItemDiscountSetMessagePayloadBuilder implements Builder<Or
     private com.commercetools.api.models.cart.TaxedItemPrice taxedPrice;
 
     /**
-     *
+     *  <p>Unique identifier for the Line Item.</p>
      */
 
     public OrderLineItemDiscountSetMessagePayloadBuilder lineItemId(final String lineItemId) {
@@ -45,7 +45,7 @@ public class OrderLineItemDiscountSetMessagePayloadBuilder implements Builder<Or
     }
 
     /**
-     *
+     *  <p>Array of DiscountedLineItemPriceForQuantity after the Discount recalculation.</p>
      */
 
     public OrderLineItemDiscountSetMessagePayloadBuilder discountedPricePerQuantity(
@@ -55,7 +55,7 @@ public class OrderLineItemDiscountSetMessagePayloadBuilder implements Builder<Or
     }
 
     /**
-     *
+     *  <p>Array of DiscountedLineItemPriceForQuantity after the Discount recalculation.</p>
      */
 
     public OrderLineItemDiscountSetMessagePayloadBuilder discountedPricePerQuantity(
@@ -65,7 +65,7 @@ public class OrderLineItemDiscountSetMessagePayloadBuilder implements Builder<Or
     }
 
     /**
-     *
+     *  <p>Array of DiscountedLineItemPriceForQuantity after the Discount recalculation.</p>
      */
 
     public OrderLineItemDiscountSetMessagePayloadBuilder plusDiscountedPricePerQuantity(
@@ -78,7 +78,7 @@ public class OrderLineItemDiscountSetMessagePayloadBuilder implements Builder<Or
     }
 
     /**
-     *
+     *  <p>Array of DiscountedLineItemPriceForQuantity after the Discount recalculation.</p>
      */
 
     public OrderLineItemDiscountSetMessagePayloadBuilder plusDiscountedPricePerQuantity(
@@ -92,7 +92,7 @@ public class OrderLineItemDiscountSetMessagePayloadBuilder implements Builder<Or
     }
 
     /**
-     *
+     *  <p>Array of DiscountedLineItemPriceForQuantity after the Discount recalculation.</p>
      */
 
     public OrderLineItemDiscountSetMessagePayloadBuilder withDiscountedPricePerQuantity(
@@ -104,8 +104,7 @@ public class OrderLineItemDiscountSetMessagePayloadBuilder implements Builder<Or
     }
 
     /**
-     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
-     *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
+     *  <p>Total Price of the Line Item after the Discount recalculation.</p>
      */
 
     public OrderLineItemDiscountSetMessagePayloadBuilder totalPrice(
@@ -115,8 +114,7 @@ public class OrderLineItemDiscountSetMessagePayloadBuilder implements Builder<Or
     }
 
     /**
-     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
-     *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
+     *  <p>Total Price of the Line Item after the Discount recalculation.</p>
      */
 
     public OrderLineItemDiscountSetMessagePayloadBuilder totalPrice(
@@ -126,7 +124,7 @@ public class OrderLineItemDiscountSetMessagePayloadBuilder implements Builder<Or
     }
 
     /**
-     *
+     *  <p>TaxedItemPrice of the Line Item after the Discount recalculation.</p>
      */
 
     public OrderLineItemDiscountSetMessagePayloadBuilder taxedPrice(
@@ -136,7 +134,7 @@ public class OrderLineItemDiscountSetMessagePayloadBuilder implements Builder<Or
     }
 
     /**
-     *
+     *  <p>TaxedItemPrice of the Line Item after the Discount recalculation.</p>
      */
 
     public OrderLineItemDiscountSetMessagePayloadBuilder taxedPrice(

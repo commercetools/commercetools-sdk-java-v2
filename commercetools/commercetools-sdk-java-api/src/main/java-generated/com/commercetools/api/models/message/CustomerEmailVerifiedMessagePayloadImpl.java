@@ -14,7 +14,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * CustomerEmailVerifiedMessagePayload
+ *  <p>Generated after a successful Verify Customer's Email request.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomerEmailVerifiedMessagePayloadImpl implements CustomerEmailVerifiedMessagePayload, ModelBase {

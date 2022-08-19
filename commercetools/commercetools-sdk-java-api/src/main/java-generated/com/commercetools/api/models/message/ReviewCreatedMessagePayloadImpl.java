@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * ReviewCreatedMessagePayload
+ *  <p>Generated after a successful Create Review request.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ReviewCreatedMessagePayloadImpl implements ReviewCreatedMessagePayload, ModelBase {
@@ -43,7 +43,7 @@ public class ReviewCreatedMessagePayloadImpl implements ReviewCreatedMessagePayl
     }
 
     /**
-     *
+     *  <p>Review that was created.</p>
      */
 
     public com.commercetools.api.models.review.Review getReview() {

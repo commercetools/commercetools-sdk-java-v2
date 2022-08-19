@@ -15,7 +15,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * CategoryCreatedMessagePayload
+ *  <p>Generated after a successful Create Category request.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -34,7 +34,7 @@ public interface CategoryCreatedMessagePayload extends MessagePayload {
     String CATEGORY_CREATED = "CategoryCreated";
 
     /**
-     *
+     *  <p>Category that was created.</p>
      */
     @NotNull
     @Valid

@@ -14,7 +14,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * StagedQuoteValidToSetMessagePayload
+ *  <p>Generated after a successful Set Valid To update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -33,7 +33,7 @@ public interface StagedQuoteValidToSetMessagePayload extends MessagePayload {
     String STAGED_QUOTE_VALID_TO_SET = "StagedQuoteValidToSet";
 
     /**
-     *
+     *  <p>Expiration date for the Staged Quote after the Set Valid To update action.</p>
      */
     @NotNull
     @JsonProperty("validTo")

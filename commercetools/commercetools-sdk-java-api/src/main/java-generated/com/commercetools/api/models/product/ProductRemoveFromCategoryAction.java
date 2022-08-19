@@ -15,7 +15,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>Produces the ProductRemovedFromCategoryMessage.</p>
+ *  <p>Produces the ProductRemovedFromCategory Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

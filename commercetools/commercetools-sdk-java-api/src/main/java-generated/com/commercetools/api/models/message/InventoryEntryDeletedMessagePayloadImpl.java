@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * InventoryEntryDeletedMessagePayload
+ *  <p>Generated after a successful Delete InventoryEntry request.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class InventoryEntryDeletedMessagePayloadImpl implements InventoryEntryDeletedMessagePayload, ModelBase {
@@ -47,7 +47,7 @@ public class InventoryEntryDeletedMessagePayloadImpl implements InventoryEntryDe
     }
 
     /**
-     *
+     *  <p>The <code>sku</code> of the InventoryEntry that was deleted.</p>
      */
 
     public String getSku() {
@@ -55,7 +55,7 @@ public class InventoryEntryDeletedMessagePayloadImpl implements InventoryEntryDe
     }
 
     /**
-     *  <p>Reference to a Channel.</p>
+     *  <p>Reference to the Channel where the InventoryEntry was deleted.</p>
      */
 
     public com.commercetools.api.models.channel.ChannelReference getSupplyChannel() {

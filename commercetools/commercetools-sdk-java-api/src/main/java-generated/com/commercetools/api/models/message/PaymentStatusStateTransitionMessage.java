@@ -15,7 +15,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * PaymentStatusStateTransitionMessage
+ *  <p>Generated after a successful Transition State update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -42,7 +42,7 @@ public interface PaymentStatusStateTransitionMessage extends Message {
     String PAYMENT_STATUS_STATE_TRANSITION = "PaymentStatusStateTransition";
 
     /**
-     *  <p>Reference to a State.</p>
+     *  <p>State of the Payment after the Transition State update action.</p>
      */
     @NotNull
     @Valid
@@ -50,7 +50,7 @@ public interface PaymentStatusStateTransitionMessage extends Message {
     public StateReference getState();
 
     /**
-     *
+     *  <p>Whether State transition validations were turned off during the Change Transaction State update action.</p>
      */
     @NotNull
     @JsonProperty("force")

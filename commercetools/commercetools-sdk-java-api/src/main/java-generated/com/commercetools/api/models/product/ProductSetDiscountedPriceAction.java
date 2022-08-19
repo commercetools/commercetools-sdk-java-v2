@@ -15,7 +15,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>Produces the ProductPriceExternalDiscountSetMessage.</p>
+ *  <p>Produces the ProductPriceExternalDiscountSet Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

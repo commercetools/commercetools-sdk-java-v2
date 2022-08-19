@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * OrderDiscountCodeStateSetMessagePayload
+ *  <p>Generated after the DiscountCodeState changes due to a recalculation.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderDiscountCodeStateSetMessagePayloadImpl implements OrderDiscountCodeStateSetMessagePayload, ModelBase {
@@ -52,7 +52,7 @@ public class OrderDiscountCodeStateSetMessagePayloadImpl implements OrderDiscoun
     }
 
     /**
-     *  <p>Reference to a DiscountCode.</p>
+     *  <p>DiscountCode that changed due to the recalculation.</p>
      */
 
     public com.commercetools.api.models.discount_code.DiscountCodeReference getDiscountCode() {
@@ -60,7 +60,7 @@ public class OrderDiscountCodeStateSetMessagePayloadImpl implements OrderDiscoun
     }
 
     /**
-     *
+     *  <p>DiscountCodeState after the recalculation.</p>
      */
 
     public com.commercetools.api.models.cart.DiscountCodeState getState() {
@@ -68,7 +68,7 @@ public class OrderDiscountCodeStateSetMessagePayloadImpl implements OrderDiscoun
     }
 
     /**
-     *
+     *  <p>DiscountCodeState before the recalculation.</p>
      */
 
     public com.commercetools.api.models.cart.DiscountCodeState getOldState() {

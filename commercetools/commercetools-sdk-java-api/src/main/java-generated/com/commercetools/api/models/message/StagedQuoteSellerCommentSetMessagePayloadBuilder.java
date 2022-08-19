@@ -25,7 +25,7 @@ public class StagedQuoteSellerCommentSetMessagePayloadBuilder
     private String sellerComment;
 
     /**
-     *
+     *  <p><code>sellerComment</code> on the StagedQuote after a successful Set Seller Comment update action.</p>
      */
 
     public StagedQuoteSellerCommentSetMessagePayloadBuilder sellerComment(final String sellerComment) {

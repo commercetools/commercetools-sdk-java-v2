@@ -25,7 +25,7 @@ public class ProductRevertedStagedChangesMessagePayloadBuilder
     private java.util.List<String> removedImageUrls;
 
     /**
-     *
+     *  <p>List of image URLs that were removed during the Revert Staged Changes update action.</p>
      */
 
     public ProductRevertedStagedChangesMessagePayloadBuilder removedImageUrls(final String... removedImageUrls) {
@@ -34,7 +34,7 @@ public class ProductRevertedStagedChangesMessagePayloadBuilder
     }
 
     /**
-     *
+     *  <p>List of image URLs that were removed during the Revert Staged Changes update action.</p>
      */
 
     public ProductRevertedStagedChangesMessagePayloadBuilder removedImageUrls(
@@ -44,7 +44,7 @@ public class ProductRevertedStagedChangesMessagePayloadBuilder
     }
 
     /**
-     *
+     *  <p>List of image URLs that were removed during the Revert Staged Changes update action.</p>
      */
 
     public ProductRevertedStagedChangesMessagePayloadBuilder plusRemovedImageUrls(final String... removedImageUrls) {

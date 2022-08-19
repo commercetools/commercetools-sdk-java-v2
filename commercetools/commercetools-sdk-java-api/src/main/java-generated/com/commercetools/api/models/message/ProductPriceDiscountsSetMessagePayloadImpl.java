@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * ProductPriceDiscountsSetMessagePayload
+ *  <p>Generated after a Price is updated due to a Product Discount.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductPriceDiscountsSetMessagePayloadImpl implements ProductPriceDiscountsSetMessagePayload, ModelBase {
@@ -44,7 +44,7 @@ public class ProductPriceDiscountsSetMessagePayloadImpl implements ProductPriceD
     }
 
     /**
-     *
+     *  <p>Array containing details about the Prices that were updated.</p>
      */
 
     public java.util.List<com.commercetools.api.models.message.ProductPriceDiscountsSetUpdatedPrice> getUpdatedPrices() {

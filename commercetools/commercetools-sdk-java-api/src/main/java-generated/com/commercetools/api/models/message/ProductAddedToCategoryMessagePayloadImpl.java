@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * ProductAddedToCategoryMessagePayload
+ *  <p>Generated after a successful Add To Category update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductAddedToCategoryMessagePayloadImpl implements ProductAddedToCategoryMessagePayload, ModelBase {
@@ -48,7 +48,7 @@ public class ProductAddedToCategoryMessagePayloadImpl implements ProductAddedToC
     }
 
     /**
-     *  <p>Reference to a Category.</p>
+     *  <p>Category the Product was added to.</p>
      */
 
     public com.commercetools.api.models.category.CategoryReference getCategory() {
@@ -56,7 +56,7 @@ public class ProductAddedToCategoryMessagePayloadImpl implements ProductAddedToC
     }
 
     /**
-     *
+     *  <p>Whether the update was only applied to the staged Product Projection.</p>
      */
 
     public Boolean getStaged() {

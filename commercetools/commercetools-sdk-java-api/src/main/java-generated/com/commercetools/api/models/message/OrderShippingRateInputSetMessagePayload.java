@@ -14,7 +14,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * OrderShippingRateInputSetMessagePayload
+ *  <p>Generated after a successful Set ShippingRateInput update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -32,14 +32,14 @@ public interface OrderShippingRateInputSetMessagePayload extends OrderMessagePay
     String ORDER_SHIPPING_RATE_INPUT_SET = "OrderShippingRateInputSet";
 
     /**
-     *
+     *  <p>ShippingRateInput after the Set ShippingRateInput update action.</p>
      */
     @Valid
     @JsonProperty("shippingRateInput")
     public ShippingRateInput getShippingRateInput();
 
     /**
-     *
+     *  <p>ShippingRateInput before the Set ShippingRateInput update action.</p>
      */
     @Valid
     @JsonProperty("oldShippingRateInput")

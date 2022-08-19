@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Either <code>variantId</code> or <code>sku</code> is required. Produces the ProductImageAddedMessage.</p>
+ *  <p>Either <code>variantId</code> or <code>sku</code> is required. Produces the ProductImageAdded Message.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductAddExternalImageActionImpl implements ProductAddExternalImageAction, ModelBase {

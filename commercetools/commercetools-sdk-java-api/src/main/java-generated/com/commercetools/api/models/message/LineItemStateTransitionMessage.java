@@ -16,7 +16,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * LineItemStateTransitionMessage
+ *  <p>Generated after a successful Transition Line Item State update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -46,28 +46,28 @@ public interface LineItemStateTransitionMessage extends OrderMessage {
     String LINE_ITEM_STATE_TRANSITION = "LineItemStateTransition";
 
     /**
-     *
+     *  <p>Unique identifier of the Line Item.</p>
      */
     @NotNull
     @JsonProperty("lineItemId")
     public String getLineItemId();
 
     /**
-     *
+     *  <p>Date and time (UTC) when the transition of the Line Item State was performed.</p>
      */
     @NotNull
     @JsonProperty("transitionDate")
     public ZonedDateTime getTransitionDate();
 
     /**
-     *
+     *  <p>Number of Line Items for which the State was transitioned.</p>
      */
     @NotNull
     @JsonProperty("quantity")
     public Long getQuantity();
 
     /**
-     *  <p>Reference to a State.</p>
+     *  <p>State the Line Item was transitioned from.</p>
      */
     @NotNull
     @Valid
@@ -75,7 +75,7 @@ public interface LineItemStateTransitionMessage extends OrderMessage {
     public StateReference getFromState();
 
     /**
-     *  <p>Reference to a State.</p>
+     *  <p>State the Line Item was transitioned to.</p>
      */
     @NotNull
     @Valid

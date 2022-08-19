@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * LineItemStateTransitionMessagePayload
+ *  <p>Generated after a successful Transition Line Item State update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class LineItemStateTransitionMessagePayloadImpl implements LineItemStateTransitionMessagePayload, ModelBase {
@@ -59,7 +59,7 @@ public class LineItemStateTransitionMessagePayloadImpl implements LineItemStateT
     }
 
     /**
-     *
+     *  <p>Unique identifier of the Line Item.</p>
      */
 
     public String getLineItemId() {
@@ -67,7 +67,7 @@ public class LineItemStateTransitionMessagePayloadImpl implements LineItemStateT
     }
 
     /**
-     *
+     *  <p>Date and time (UTC) when the transition of the Line Item State was performed.</p>
      */
 
     public java.time.ZonedDateTime getTransitionDate() {
@@ -75,7 +75,7 @@ public class LineItemStateTransitionMessagePayloadImpl implements LineItemStateT
     }
 
     /**
-     *
+     *  <p>Number of Line Items for which the State was transitioned.</p>
      */
 
     public Long getQuantity() {
@@ -83,7 +83,7 @@ public class LineItemStateTransitionMessagePayloadImpl implements LineItemStateT
     }
 
     /**
-     *  <p>Reference to a State.</p>
+     *  <p>State the Line Item was transitioned from.</p>
      */
 
     public com.commercetools.api.models.state.StateReference getFromState() {
@@ -91,7 +91,7 @@ public class LineItemStateTransitionMessagePayloadImpl implements LineItemStateT
     }
 
     /**
-     *  <p>Reference to a State.</p>
+     *  <p>State the Line Item was transitioned to.</p>
      */
 
     public com.commercetools.api.models.state.StateReference getToState() {

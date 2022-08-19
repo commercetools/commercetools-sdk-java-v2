@@ -5,19 +5,24 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
+
+import com.commercetools.api.models.quote.Quote;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * QuoteCreatedMessagePayload
+ *  <p>Generated after a successful Create Quote request.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
  * <div class=code-example>
  * <pre><code class='java'>
  *     QuoteCreatedMessagePayload quoteCreatedMessagePayload = QuoteCreatedMessagePayload.builder()
+ *             .quote(quoteBuilder -> quoteBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -28,12 +33,23 @@ public interface QuoteCreatedMessagePayload extends MessagePayload {
 
     String QUOTE_CREATED = "QuoteCreated";
 
+    /**
+     *  <p>Quote that was created.</p>
+     */
+    @NotNull
+    @Valid
+    @JsonProperty("quote")
+    public Quote getQuote();
+
+    public void setQuote(final Quote quote);
+
     public static QuoteCreatedMessagePayload of() {
         return new QuoteCreatedMessagePayloadImpl();
     }
 
     public static QuoteCreatedMessagePayload of(final QuoteCreatedMessagePayload template) {
         QuoteCreatedMessagePayloadImpl instance = new QuoteCreatedMessagePayloadImpl();
+        instance.setQuote(template.getQuote());
         return instance;
     }
 

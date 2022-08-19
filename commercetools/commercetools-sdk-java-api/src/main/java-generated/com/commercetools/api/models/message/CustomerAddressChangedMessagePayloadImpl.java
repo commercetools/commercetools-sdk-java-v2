@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * CustomerAddressChangedMessagePayload
+ *  <p>Generated after a successful Change Address update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomerAddressChangedMessagePayloadImpl implements CustomerAddressChangedMessagePayload, ModelBase {
@@ -44,7 +44,7 @@ public class CustomerAddressChangedMessagePayloadImpl implements CustomerAddress
     }
 
     /**
-     *
+     *  <p>Address that was set during the Change Address update action.</p>
      */
 
     public com.commercetools.api.models.common.Address getAddress() {

@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * CustomerAddressRemovedMessagePayload
+ *  <p>Generated after a successful Remove Address update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomerAddressRemovedMessagePayloadImpl implements CustomerAddressRemovedMessagePayload, ModelBase {
@@ -44,7 +44,7 @@ public class CustomerAddressRemovedMessagePayloadImpl implements CustomerAddress
     }
 
     /**
-     *
+     *  <p>Address that was removed during the Remove Address update action.</p>
      */
 
     public com.commercetools.api.models.common.Address getAddress() {

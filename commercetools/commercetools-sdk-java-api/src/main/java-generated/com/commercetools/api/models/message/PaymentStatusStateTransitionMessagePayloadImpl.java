@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * PaymentStatusStateTransitionMessagePayload
+ *  <p>Generated after a successful Transition State update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class PaymentStatusStateTransitionMessagePayloadImpl
@@ -49,7 +49,7 @@ public class PaymentStatusStateTransitionMessagePayloadImpl
     }
 
     /**
-     *  <p>Reference to a State.</p>
+     *  <p>State of the Payment after the Transition State update action.</p>
      */
 
     public com.commercetools.api.models.state.StateReference getState() {
@@ -57,7 +57,7 @@ public class PaymentStatusStateTransitionMessagePayloadImpl
     }
 
     /**
-     *
+     *  <p>Whether State transition validations were turned off during the Change Transaction State update action.</p>
      */
 
     public Boolean getForce() {

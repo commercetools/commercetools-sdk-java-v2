@@ -15,7 +15,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * OrderPaymentAddedMessage
+ *  <p>Generated after a successful Add Payment update action or when a Payment is added via Order Edits.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -41,7 +41,7 @@ public interface OrderPaymentAddedMessage extends Message {
     String ORDER_PAYMENT_ADDED = "OrderPaymentAdded";
 
     /**
-     *  <p>Reference to a Payment.</p>
+     *  <p>Payment that was added to the Order.</p>
      */
     @NotNull
     @Valid

@@ -15,7 +15,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * InventoryEntryDeletedMessage
+ *  <p>Generated after a successful Delete InventoryEntry request.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -41,14 +41,14 @@ public interface InventoryEntryDeletedMessage extends Message {
     String INVENTORY_ENTRY_DELETED = "InventoryEntryDeleted";
 
     /**
-     *
+     *  <p>The <code>sku</code> of the InventoryEntry that was deleted.</p>
      */
     @NotNull
     @JsonProperty("sku")
     public String getSku();
 
     /**
-     *  <p>Reference to a Channel.</p>
+     *  <p>Reference to the Channel where the InventoryEntry was deleted.</p>
      */
     @Valid
     @JsonProperty("supplyChannel")

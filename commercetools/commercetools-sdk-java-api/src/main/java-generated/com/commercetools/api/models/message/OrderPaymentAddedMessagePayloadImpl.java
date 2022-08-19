@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * OrderPaymentAddedMessagePayload
+ *  <p>Generated after a successful Add Payment update action or when a Payment is added via Order Edits.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderPaymentAddedMessagePayloadImpl implements OrderPaymentAddedMessagePayload, ModelBase {
@@ -44,7 +44,7 @@ public class OrderPaymentAddedMessagePayloadImpl implements OrderPaymentAddedMes
     }
 
     /**
-     *  <p>Reference to a Payment.</p>
+     *  <p>Payment that was added to the Order.</p>
      */
 
     public com.commercetools.api.models.payment.PaymentReference getPayment() {

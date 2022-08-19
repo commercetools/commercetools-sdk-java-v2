@@ -24,7 +24,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .resource(resourceBuilder -> resourceBuilder)
  *             .resourceVersion(0.3)
  *             .plusRemovedImageUrls(removedImageUrlsBuilder -> removedImageUrlsBuilder)
- *             .currentProjection(currentProjectionBuilder -> currentProjectionBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -57,10 +56,11 @@ public class ProductDeletedMessageBuilder implements Builder<ProductDeletedMessa
 
     private java.util.List<String> removedImageUrls;
 
+    @Nullable
     private com.commercetools.api.models.product.ProductProjection currentProjection;
 
     /**
-     *  <p>Unique identifier of the Message.</p>
+     *  <p>Unique identifier of the Message. Can be used to track which Messages have been processed.</p>
      */
 
     public ProductDeletedMessageBuilder id(final String id) {
@@ -69,7 +69,7 @@ public class ProductDeletedMessageBuilder implements Builder<ProductDeletedMessa
     }
 
     /**
-     *
+     *  <p>Version of a resource. In case of Messages, this is always <code>1</code>.</p>
      */
 
     public ProductDeletedMessageBuilder version(final Long version) {
@@ -78,7 +78,7 @@ public class ProductDeletedMessageBuilder implements Builder<ProductDeletedMessa
     }
 
     /**
-     *
+     *  <p>Date and time (UTC) the Message was generated.</p>
      */
 
     public ProductDeletedMessageBuilder createdAt(final java.time.ZonedDateTime createdAt) {
@@ -87,7 +87,7 @@ public class ProductDeletedMessageBuilder implements Builder<ProductDeletedMessa
     }
 
     /**
-     *
+     *  <p>Value of <code>createdAt</code>.</p>
      */
 
     public ProductDeletedMessageBuilder lastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {
@@ -96,7 +96,7 @@ public class ProductDeletedMessageBuilder implements Builder<ProductDeletedMessa
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>Value of <code>createdBy</code>.</p>
      */
 
     public ProductDeletedMessageBuilder lastModifiedBy(
@@ -106,7 +106,7 @@ public class ProductDeletedMessageBuilder implements Builder<ProductDeletedMessa
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>Value of <code>createdBy</code>.</p>
      */
 
     public ProductDeletedMessageBuilder lastModifiedBy(
@@ -136,7 +136,7 @@ public class ProductDeletedMessageBuilder implements Builder<ProductDeletedMessa
     }
 
     /**
-     *
+     *  <p>Message number in relation to other Messages for a given resource. The <code>sequenceNumber</code> of the next Message for the resource is the successor of the <code>sequenceNumber</code> of the current Message. Meaning, the <code>sequenceNumber</code> of the next Message equals the <code>sequenceNumber</code> of the current Message + 1. <code>sequenceNumber</code> can be used to ensure that Messages are processed in the correct order for a particular resource.</p>
      */
 
     public ProductDeletedMessageBuilder sequenceNumber(final Long sequenceNumber) {
@@ -145,7 +145,7 @@ public class ProductDeletedMessageBuilder implements Builder<ProductDeletedMessa
     }
 
     /**
-     *  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
+     *  <p>Reference to the resource on which the change or action was performed.</p>
      */
 
     public ProductDeletedMessageBuilder resource(final com.commercetools.api.models.common.Reference resource) {
@@ -154,7 +154,7 @@ public class ProductDeletedMessageBuilder implements Builder<ProductDeletedMessa
     }
 
     /**
-     *  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
+     *  <p>Reference to the resource on which the change or action was performed.</p>
      */
 
     public ProductDeletedMessageBuilder resource(
@@ -164,7 +164,7 @@ public class ProductDeletedMessageBuilder implements Builder<ProductDeletedMessa
     }
 
     /**
-     *
+     *  <p>Version of the resource on which the change or action was performed.</p>
      */
 
     public ProductDeletedMessageBuilder resourceVersion(final Long resourceVersion) {
@@ -173,7 +173,7 @@ public class ProductDeletedMessageBuilder implements Builder<ProductDeletedMessa
     }
 
     /**
-     *
+     *  <p>User-provided identifiers of the resource, such as <code>key</code> or <code>externalId</code>. Only present if the resource has such identifiers.</p>
      */
 
     public ProductDeletedMessageBuilder resourceUserProvidedIdentifiers(
@@ -185,7 +185,7 @@ public class ProductDeletedMessageBuilder implements Builder<ProductDeletedMessa
     }
 
     /**
-     *
+     *  <p>User-provided identifiers of the resource, such as <code>key</code> or <code>externalId</code>. Only present if the resource has such identifiers.</p>
      */
 
     public ProductDeletedMessageBuilder resourceUserProvidedIdentifiers(
@@ -195,7 +195,7 @@ public class ProductDeletedMessageBuilder implements Builder<ProductDeletedMessa
     }
 
     /**
-     *
+     *  <p>List of image URLs that were removed during the Delete Product request.</p>
      */
 
     public ProductDeletedMessageBuilder removedImageUrls(final String... removedImageUrls) {
@@ -204,7 +204,7 @@ public class ProductDeletedMessageBuilder implements Builder<ProductDeletedMessa
     }
 
     /**
-     *
+     *  <p>List of image URLs that were removed during the Delete Product request.</p>
      */
 
     public ProductDeletedMessageBuilder removedImageUrls(final java.util.List<String> removedImageUrls) {
@@ -213,7 +213,7 @@ public class ProductDeletedMessageBuilder implements Builder<ProductDeletedMessa
     }
 
     /**
-     *
+     *  <p>List of image URLs that were removed during the Delete Product request.</p>
      */
 
     public ProductDeletedMessageBuilder plusRemovedImageUrls(final String... removedImageUrls) {
@@ -225,7 +225,7 @@ public class ProductDeletedMessageBuilder implements Builder<ProductDeletedMessa
     }
 
     /**
-     *
+     *  <p>Current Product Projection of the deleted Product.</p>
      */
 
     public ProductDeletedMessageBuilder currentProjection(
@@ -236,11 +236,11 @@ public class ProductDeletedMessageBuilder implements Builder<ProductDeletedMessa
     }
 
     /**
-     *
+     *  <p>Current Product Projection of the deleted Product.</p>
      */
 
     public ProductDeletedMessageBuilder currentProjection(
-            final com.commercetools.api.models.product.ProductProjection currentProjection) {
+            @Nullable final com.commercetools.api.models.product.ProductProjection currentProjection) {
         this.currentProjection = currentProjection;
         return this;
     }
@@ -292,6 +292,7 @@ public class ProductDeletedMessageBuilder implements Builder<ProductDeletedMessa
         return this.removedImageUrls;
     }
 
+    @Nullable
     public com.commercetools.api.models.product.ProductProjection getCurrentProjection() {
         return this.currentProjection;
     }
@@ -305,7 +306,6 @@ public class ProductDeletedMessageBuilder implements Builder<ProductDeletedMessa
         Objects.requireNonNull(resource, ProductDeletedMessage.class + ": resource is missing");
         Objects.requireNonNull(resourceVersion, ProductDeletedMessage.class + ": resourceVersion is missing");
         Objects.requireNonNull(removedImageUrls, ProductDeletedMessage.class + ": removedImageUrls is missing");
-        Objects.requireNonNull(currentProjection, ProductDeletedMessage.class + ": currentProjection is missing");
         return new ProductDeletedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
             sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, removedImageUrls,
             currentProjection);

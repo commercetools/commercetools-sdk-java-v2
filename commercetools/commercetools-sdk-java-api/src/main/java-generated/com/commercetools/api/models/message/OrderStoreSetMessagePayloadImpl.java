@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * OrderStoreSetMessagePayload
+ *  <p>Generated after a successful Set Store update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderStoreSetMessagePayloadImpl implements OrderStoreSetMessagePayload, ModelBase {
@@ -44,7 +44,7 @@ public class OrderStoreSetMessagePayloadImpl implements OrderStoreSetMessagePayl
     }
 
     /**
-     *  <p>Reference to a Store by its key.</p>
+     *  <p>Store that was set.</p>
      */
 
     public com.commercetools.api.models.store.StoreKeyReference getStore() {

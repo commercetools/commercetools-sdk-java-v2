@@ -17,7 +17,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * OrderLineItemDiscountSetMessage
+ *  <p>Generated after a successful recalculation of a Discount on a Line Item.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -45,14 +45,14 @@ public interface OrderLineItemDiscountSetMessage extends OrderMessage {
     String ORDER_LINE_ITEM_DISCOUNT_SET = "OrderLineItemDiscountSet";
 
     /**
-     *
+     *  <p>Unique identifier for the Line Item.</p>
      */
     @NotNull
     @JsonProperty("lineItemId")
     public String getLineItemId();
 
     /**
-     *
+     *  <p>Array of DiscountedLineItemPriceForQuantity after the Discount recalculation.</p>
      */
     @NotNull
     @Valid
@@ -60,8 +60,7 @@ public interface OrderLineItemDiscountSetMessage extends OrderMessage {
     public List<DiscountedLineItemPriceForQuantity> getDiscountedPricePerQuantity();
 
     /**
-     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
-     *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
+     *  <p>Total Price of the Line Item after the Discount recalculation.</p>
      */
     @NotNull
     @Valid
@@ -69,7 +68,7 @@ public interface OrderLineItemDiscountSetMessage extends OrderMessage {
     public Money getTotalPrice();
 
     /**
-     *
+     *  <p>TaxedItemPrice of the Line Item after the Discount recalculation.</p>
      */
     @Valid
     @JsonProperty("taxedPrice")

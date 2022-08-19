@@ -16,7 +16,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * OrderDiscountCodeStateSetMessagePayload
+ *  <p>Generated after the DiscountCodeState changes due to a recalculation.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -36,7 +36,7 @@ public interface OrderDiscountCodeStateSetMessagePayload extends OrderMessagePay
     String ORDER_DISCOUNT_CODE_STATE_SET = "OrderDiscountCodeStateSet";
 
     /**
-     *  <p>Reference to a DiscountCode.</p>
+     *  <p>DiscountCode that changed due to the recalculation.</p>
      */
     @NotNull
     @Valid
@@ -44,14 +44,14 @@ public interface OrderDiscountCodeStateSetMessagePayload extends OrderMessagePay
     public DiscountCodeReference getDiscountCode();
 
     /**
-     *
+     *  <p>DiscountCodeState after the recalculation.</p>
      */
     @NotNull
     @JsonProperty("state")
     public DiscountCodeState getState();
 
     /**
-     *
+     *  <p>DiscountCodeState before the recalculation.</p>
      */
 
     @JsonProperty("oldState")

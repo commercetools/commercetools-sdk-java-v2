@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * CustomerCreatedMessagePayload
+ *  <p>Generated after a successful Create Customer request.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomerCreatedMessagePayloadImpl implements CustomerCreatedMessagePayload, ModelBase {
@@ -44,7 +44,7 @@ public class CustomerCreatedMessagePayloadImpl implements CustomerCreatedMessage
     }
 
     /**
-     *
+     *  <p>Customer that was created.</p>
      */
 
     public com.commercetools.api.models.customer.Customer getCustomer() {

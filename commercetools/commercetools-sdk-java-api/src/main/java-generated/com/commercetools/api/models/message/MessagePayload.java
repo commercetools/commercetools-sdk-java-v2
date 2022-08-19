@@ -72,8 +72,6 @@ import io.vrap.rmf.base.client.utils.Generated;
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.OrderLineItemRemovedMessagePayloadImpl.class, name = OrderLineItemRemovedMessagePayload.ORDER_LINE_ITEM_REMOVED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.OrderPaymentAddedMessagePayloadImpl.class, name = OrderPaymentAddedMessagePayload.ORDER_PAYMENT_ADDED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.OrderPaymentStateChangedMessagePayloadImpl.class, name = OrderPaymentStateChangedMessagePayload.ORDER_PAYMENT_STATE_CHANGED),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.OrderReturnInfoAddedMessagePayloadImpl.class, name = OrderReturnInfoAddedMessagePayload.RETURN_INFO_ADDED),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.OrderReturnInfoSetMessagePayloadImpl.class, name = OrderReturnInfoSetMessagePayload.RETURN_INFO_SET),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.OrderReturnShipmentStateChangedMessagePayloadImpl.class, name = OrderReturnShipmentStateChangedMessagePayload.ORDER_RETURN_SHIPMENT_STATE_CHANGED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.OrderShipmentStateChangedMessagePayloadImpl.class, name = OrderShipmentStateChangedMessagePayload.ORDER_SHIPMENT_STATE_CHANGED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.OrderShippingAddressSetMessagePayloadImpl.class, name = OrderShippingAddressSetMessagePayload.ORDER_SHIPPING_ADDRESS_SET),
@@ -120,6 +118,8 @@ import io.vrap.rmf.base.client.utils.Generated;
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.QuoteRequestStateTransitionMessagePayloadImpl.class, name = QuoteRequestStateTransitionMessagePayload.QUOTE_REQUEST_STATE_TRANSITION),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.QuoteStateChangedMessagePayloadImpl.class, name = QuoteStateChangedMessagePayload.QUOTE_STATE_CHANGED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.QuoteStateTransitionMessagePayloadImpl.class, name = QuoteStateTransitionMessagePayload.QUOTE_STATE_TRANSITION),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.message.ReturnInfoAddedMessagePayloadImpl.class, name = ReturnInfoAddedMessagePayload.RETURN_INFO_ADDED),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.message.ReturnInfoSetMessagePayloadImpl.class, name = ReturnInfoSetMessagePayload.RETURN_INFO_SET),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.ReviewCreatedMessagePayloadImpl.class, name = ReviewCreatedMessagePayload.REVIEW_CREATED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.ReviewRatingSetMessagePayloadImpl.class, name = ReviewRatingSetMessagePayload.REVIEW_RATING_SET),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.ReviewStateTransitionMessagePayloadImpl.class, name = ReviewStateTransitionMessagePayload.REVIEW_STATE_TRANSITION),
@@ -336,14 +336,6 @@ public interface MessagePayload {
         return com.commercetools.api.models.message.OrderPaymentStateChangedMessagePayloadBuilder.of();
     }
 
-    public static com.commercetools.api.models.message.OrderReturnInfoAddedMessagePayloadBuilder returnInfoAddedBuilder() {
-        return com.commercetools.api.models.message.OrderReturnInfoAddedMessagePayloadBuilder.of();
-    }
-
-    public static com.commercetools.api.models.message.OrderReturnInfoSetMessagePayloadBuilder returnInfoSetBuilder() {
-        return com.commercetools.api.models.message.OrderReturnInfoSetMessagePayloadBuilder.of();
-    }
-
     public static com.commercetools.api.models.message.OrderReturnShipmentStateChangedMessagePayloadBuilder orderReturnShipmentStateChangedBuilder() {
         return com.commercetools.api.models.message.OrderReturnShipmentStateChangedMessagePayloadBuilder.of();
     }
@@ -526,6 +518,14 @@ public interface MessagePayload {
 
     public static com.commercetools.api.models.message.QuoteStateTransitionMessagePayloadBuilder quoteStateTransitionBuilder() {
         return com.commercetools.api.models.message.QuoteStateTransitionMessagePayloadBuilder.of();
+    }
+
+    public static com.commercetools.api.models.message.ReturnInfoAddedMessagePayloadBuilder returnInfoAddedBuilder() {
+        return com.commercetools.api.models.message.ReturnInfoAddedMessagePayloadBuilder.of();
+    }
+
+    public static com.commercetools.api.models.message.ReturnInfoSetMessagePayloadBuilder returnInfoSetBuilder() {
+        return com.commercetools.api.models.message.ReturnInfoSetMessagePayloadBuilder.of();
     }
 
     public static com.commercetools.api.models.message.ReviewCreatedMessagePayloadBuilder reviewCreatedBuilder() {

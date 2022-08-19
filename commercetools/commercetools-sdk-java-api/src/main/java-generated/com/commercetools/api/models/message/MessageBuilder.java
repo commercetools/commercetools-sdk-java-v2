@@ -195,14 +195,6 @@ public class MessageBuilder {
         return com.commercetools.api.models.message.OrderPaymentStateChangedMessageBuilder.of();
     }
 
-    public com.commercetools.api.models.message.OrderReturnInfoAddedMessageBuilder returnInfoAddedBuilder() {
-        return com.commercetools.api.models.message.OrderReturnInfoAddedMessageBuilder.of();
-    }
-
-    public com.commercetools.api.models.message.OrderReturnInfoSetMessageBuilder returnInfoSetBuilder() {
-        return com.commercetools.api.models.message.OrderReturnInfoSetMessageBuilder.of();
-    }
-
     public com.commercetools.api.models.message.OrderReturnShipmentStateChangedMessageBuilder orderReturnShipmentStateChangedBuilder() {
         return com.commercetools.api.models.message.OrderReturnShipmentStateChangedMessageBuilder.of();
     }
@@ -385,6 +377,14 @@ public class MessageBuilder {
 
     public com.commercetools.api.models.message.QuoteStateTransitionMessageBuilder quoteStateTransitionBuilder() {
         return com.commercetools.api.models.message.QuoteStateTransitionMessageBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.ReturnInfoAddedMessageBuilder returnInfoAddedBuilder() {
+        return com.commercetools.api.models.message.ReturnInfoAddedMessageBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.ReturnInfoSetMessageBuilder returnInfoSetBuilder() {
+        return com.commercetools.api.models.message.ReturnInfoSetMessageBuilder.of();
     }
 
     public com.commercetools.api.models.message.ReviewCreatedMessageBuilder reviewCreatedBuilder() {

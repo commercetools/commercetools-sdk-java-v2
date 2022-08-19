@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * QuoteStateChangedMessagePayload
+ *  <p>Generated after a successful Change Quote State update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class QuoteStateChangedMessagePayloadImpl implements QuoteStateChangedMessagePayload, ModelBase {
@@ -48,7 +48,7 @@ public class QuoteStateChangedMessagePayloadImpl implements QuoteStateChangedMes
     }
 
     /**
-     *  <p>Predefined states tracking the status of the Quote.</p>
+     *  <p>State of the Quote after the Change Quote State update action.</p>
      */
 
     public com.commercetools.api.models.quote.QuoteState getQuoteState() {
@@ -56,7 +56,7 @@ public class QuoteStateChangedMessagePayloadImpl implements QuoteStateChangedMes
     }
 
     /**
-     *  <p>Predefined states tracking the status of the Quote.</p>
+     *  <p>State of the Quote before the Change Quote State update action.</p>
      */
 
     public com.commercetools.api.models.quote.QuoteState getOldQuoteState() {

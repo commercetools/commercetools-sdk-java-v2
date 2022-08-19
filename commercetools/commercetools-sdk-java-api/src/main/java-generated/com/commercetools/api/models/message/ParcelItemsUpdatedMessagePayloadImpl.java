@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * ParcelItemsUpdatedMessagePayload
+ *  <p>Generated after a successful Set Parcel Items update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ParcelItemsUpdatedMessagePayloadImpl implements ParcelItemsUpdatedMessagePayload, ModelBase {
@@ -55,7 +55,7 @@ public class ParcelItemsUpdatedMessagePayloadImpl implements ParcelItemsUpdatedM
     }
 
     /**
-     *
+     *  <p>Unique identifier of the Parcel.</p>
      */
 
     public String getParcelId() {
@@ -63,7 +63,7 @@ public class ParcelItemsUpdatedMessagePayloadImpl implements ParcelItemsUpdatedM
     }
 
     /**
-     *
+     *  <p>Unique identifier of the Delivery.</p>
      */
 
     public String getDeliveryId() {
@@ -71,7 +71,7 @@ public class ParcelItemsUpdatedMessagePayloadImpl implements ParcelItemsUpdatedM
     }
 
     /**
-     *
+     *  <p>Delivery Items after the Set Parcel Items update action.</p>
      */
 
     public java.util.List<com.commercetools.api.models.order.DeliveryItem> getItems() {
@@ -79,7 +79,7 @@ public class ParcelItemsUpdatedMessagePayloadImpl implements ParcelItemsUpdatedM
     }
 
     /**
-     *
+     *  <p>Delivery Items before the Set Parcel Items update action.</p>
      */
 
     public java.util.List<com.commercetools.api.models.order.DeliveryItem> getOldItems() {

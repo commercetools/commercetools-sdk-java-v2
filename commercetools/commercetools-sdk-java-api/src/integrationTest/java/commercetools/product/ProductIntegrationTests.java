@@ -14,19 +14,14 @@ import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.commercetools.api.client.ByProjectKeyProductProjectionsGet;
 import com.commercetools.api.client.ProjectApiRoot;
 import com.commercetools.api.models.common.LocalizedString;
-import com.commercetools.api.models.graph_ql.GraphQLRequest;
 import com.commercetools.api.models.product.*;
 import commercetools.utils.CommercetoolsTestUtils;
 
-import io.vrap.rmf.base.client.ApiHttpRequest;
 import org.apache.commons.io.IOUtils;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-
-import javax.money.CurrencyUnit;
 
 public class ProductIntegrationTests {
 
@@ -77,7 +72,7 @@ public class ProductIntegrationTests {
                     .productProjections()
                     .get()
                     .withWhere("masterVariant(sku in :sku) or variants(sku in :sku)", "sku",
-                            product.getMasterData().getCurrent().getMasterVariant().getSku())
+                        product.getMasterData().getCurrent().getMasterVariant().getSku())
                     .withLimit(1)
                     .withStaged(true)
                     .executeBlocking()
@@ -92,7 +87,8 @@ public class ProductIntegrationTests {
                         .productProjections()
                         .search()
                         .get()
-                        .withFilterQuery("variants.sku:\"" + product.getMasterData().getCurrent().getMasterVariant().getSku() + "\"")
+                        .withFilterQuery(
+                            "variants.sku:\"" + product.getMasterData().getCurrent().getMasterVariant().getSku() + "\"")
                         .withLimit(1)
                         .withStaged(true)
                         .executeBlocking()

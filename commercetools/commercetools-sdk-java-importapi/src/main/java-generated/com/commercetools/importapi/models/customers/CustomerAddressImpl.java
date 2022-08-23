@@ -68,6 +68,8 @@ public class CustomerAddressImpl implements CustomerAddress, ModelBase {
 
     private String externalId;
 
+    private com.commercetools.importapi.models.customfields.Custom custom;
+
     @JsonCreator
     CustomerAddressImpl(@JsonProperty("key") final String key, @JsonProperty("title") final String title,
             @JsonProperty("salutation") final String salutation, @JsonProperty("firstName") final String firstName,
@@ -82,7 +84,8 @@ public class CustomerAddressImpl implements CustomerAddress, ModelBase {
             @JsonProperty("phone") final String phone, @JsonProperty("mobile") final String mobile,
             @JsonProperty("email") final String email, @JsonProperty("fax") final String fax,
             @JsonProperty("additionalAddressInfo") final String additionalAddressInfo,
-            @JsonProperty("externalId") final String externalId) {
+            @JsonProperty("externalId") final String externalId,
+            @JsonProperty("custom") final com.commercetools.importapi.models.customfields.Custom custom) {
         this.key = key;
         this.title = title;
         this.salutation = salutation;
@@ -107,6 +110,7 @@ public class CustomerAddressImpl implements CustomerAddress, ModelBase {
         this.fax = fax;
         this.additionalAddressInfo = additionalAddressInfo;
         this.externalId = externalId;
+        this.custom = custom;
     }
 
     public CustomerAddressImpl() {
@@ -304,6 +308,14 @@ public class CustomerAddressImpl implements CustomerAddress, ModelBase {
         return this.externalId;
     }
 
+    /**
+     *  <p>Custom Fields for the address.</p>
+     */
+
+    public com.commercetools.importapi.models.customfields.Custom getCustom() {
+        return this.custom;
+    }
+
     public void setKey(final String key) {
         this.key = key;
     }
@@ -400,6 +412,10 @@ public class CustomerAddressImpl implements CustomerAddress, ModelBase {
         this.externalId = externalId;
     }
 
+    public void setCustom(final com.commercetools.importapi.models.customfields.Custom custom) {
+        this.custom = custom;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -434,6 +450,7 @@ public class CustomerAddressImpl implements CustomerAddress, ModelBase {
                 .append(fax, that.fax)
                 .append(additionalAddressInfo, that.additionalAddressInfo)
                 .append(externalId, that.externalId)
+                .append(custom, that.custom)
                 .isEquals();
     }
 
@@ -463,6 +480,7 @@ public class CustomerAddressImpl implements CustomerAddress, ModelBase {
                 .append(fax)
                 .append(additionalAddressInfo)
                 .append(externalId)
+                .append(custom)
                 .toHashCode();
     }
 

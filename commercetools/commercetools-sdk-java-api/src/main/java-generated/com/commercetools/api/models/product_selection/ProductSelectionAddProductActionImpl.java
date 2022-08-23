@@ -48,7 +48,7 @@ public class ProductSelectionAddProductActionImpl implements ProductSelectionAdd
     }
 
     /**
-     *  <p>ResourceIdentifier to Product</p>
+     *  <p>ResourceIdentifier of the Product</p>
      */
 
     public com.commercetools.api.models.product.ProductResourceIdentifier getProduct() {

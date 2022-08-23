@@ -46,6 +46,8 @@ public class QuoteImpl implements Quote, ModelBase {
 
     private String sellerComment;
 
+    private String buyerComment;
+
     private com.commercetools.api.models.store.StoreKeyReference store;
 
     private java.util.List<com.commercetools.api.models.cart.LineItem> lineItems;
@@ -97,6 +99,7 @@ public class QuoteImpl implements Quote, ModelBase {
             @JsonProperty("customerGroup") final com.commercetools.api.models.customer_group.CustomerGroupReference customerGroup,
             @JsonProperty("validTo") final java.time.ZonedDateTime validTo,
             @JsonProperty("sellerComment") final String sellerComment,
+            @JsonProperty("buyerComment") final String buyerComment,
             @JsonProperty("store") final com.commercetools.api.models.store.StoreKeyReference store,
             @JsonProperty("lineItems") final java.util.List<com.commercetools.api.models.cart.LineItem> lineItems,
             @JsonProperty("customLineItems") final java.util.List<com.commercetools.api.models.cart.CustomLineItem> customLineItems,
@@ -129,6 +132,7 @@ public class QuoteImpl implements Quote, ModelBase {
         this.customerGroup = customerGroup;
         this.validTo = validTo;
         this.sellerComment = sellerComment;
+        this.buyerComment = buyerComment;
         this.store = store;
         this.lineItems = lineItems;
         this.customLineItems = customLineItems;
@@ -210,7 +214,7 @@ public class QuoteImpl implements Quote, ModelBase {
     }
 
     /**
-     *  <p>The Quote Request related to this Quote.</p>
+     *  <p>Quote Request related to the Quote.</p>
      */
 
     public com.commercetools.api.models.quote_request.QuoteRequestReference getQuoteRequest() {
@@ -218,7 +222,7 @@ public class QuoteImpl implements Quote, ModelBase {
     }
 
     /**
-     *  <p>The Staged Quote related to this Quote.</p>
+     *  <p>Staged Quote related to the Quote.</p>
      */
 
     public com.commercetools.api.models.staged_quote.StagedQuoteReference getStagedQuote() {
@@ -226,7 +230,7 @@ public class QuoteImpl implements Quote, ModelBase {
     }
 
     /**
-     *  <p>The Buyer who requested this Quote.</p>
+     *  <p>The Buyer who requested the Quote.</p>
      */
 
     public com.commercetools.api.models.customer.CustomerReference getCustomer() {
@@ -250,11 +254,19 @@ public class QuoteImpl implements Quote, ModelBase {
     }
 
     /**
-     *  <p>The text message included in the offer from the Seller.</p>
+     *  <p>Message from the Seller included in the offer.</p>
      */
 
     public String getSellerComment() {
         return this.sellerComment;
+    }
+
+    /**
+     *  <p>Message from the Buyer included in the renegotiation request.</p>
+     */
+
+    public String getBuyerComment() {
+        return this.buyerComment;
     }
 
     /**
@@ -282,7 +294,7 @@ public class QuoteImpl implements Quote, ModelBase {
     }
 
     /**
-     *  <p>The sum of all <code>totalPrice</code> fields of the <code>lineItems</code> and <code>customLineItems</code>, as well as the <code>price</code> field of <code>shippingInfo</code> (if it exists). <code>totalPrice</code> may or may not include the taxes: it depends on the taxRate.includedInPrice property of each price.</p>
+     *  <p>Sum of all <code>totalPrice</code> fields of the <code>lineItems</code> and <code>customLineItems</code>, as well as the <code>price</code> field of <code>shippingInfo</code> (if it exists). <code>totalPrice</code> may or may not include the taxes: it depends on the taxRate.includedInPrice property of each price.</p>
      */
 
     public com.commercetools.api.models.common.TypedMoney getTotalPrice() {
@@ -306,7 +318,7 @@ public class QuoteImpl implements Quote, ModelBase {
     }
 
     /**
-     *  <p>The address used for invoicing.</p>
+     *  <p>Address used for invoicing.</p>
      */
 
     public com.commercetools.api.models.common.Address getBillingAddress() {
@@ -314,7 +326,7 @@ public class QuoteImpl implements Quote, ModelBase {
     }
 
     /**
-     *  <p>The inventory mode of the Cart referenced in the QuoteRequestDraft.</p>
+     *  <p>Inventory mode of the Cart referenced in the QuoteRequestDraft.</p>
      */
 
     public com.commercetools.api.models.cart.InventoryMode getInventoryMode() {
@@ -322,7 +334,7 @@ public class QuoteImpl implements Quote, ModelBase {
     }
 
     /**
-     *  <p>The tax mode of the Cart referenced in the QuoteRequestDraft.</p>
+     *  <p>Tax mode of the Cart referenced in the QuoteRequestDraft.</p>
      */
 
     public com.commercetools.api.models.cart.TaxMode getTaxMode() {
@@ -362,7 +374,7 @@ public class QuoteImpl implements Quote, ModelBase {
     }
 
     /**
-     *  <p>Log of payment transactions related to this quote.</p>
+     *  <p>Log of payment transactions related to the Quote.</p>
      */
 
     public com.commercetools.api.models.order.PaymentInfo getPaymentInfo() {
@@ -386,7 +398,7 @@ public class QuoteImpl implements Quote, ModelBase {
     }
 
     /**
-     *  <p>Discounts only valid for this Quote, those cannot be associated to any other Cart or Order.</p>
+     *  <p>Discounts that are only valid for the Quote and cannot be associated to any other Cart or Order.</p>
      */
 
     public java.util.List<com.commercetools.api.models.cart.DirectDiscount> getDirectDiscounts() {
@@ -394,7 +406,7 @@ public class QuoteImpl implements Quote, ModelBase {
     }
 
     /**
-     *  <p>Custom Fields of this Quote.</p>
+     *  <p>Custom Fields on the Quote.</p>
      */
 
     public com.commercetools.api.models.type.CustomFields getCustom() {
@@ -460,6 +472,10 @@ public class QuoteImpl implements Quote, ModelBase {
 
     public void setSellerComment(final String sellerComment) {
         this.sellerComment = sellerComment;
+    }
+
+    public void setBuyerComment(final String buyerComment) {
+        this.buyerComment = buyerComment;
     }
 
     public void setStore(final com.commercetools.api.models.store.StoreKeyReference store) {
@@ -580,6 +596,7 @@ public class QuoteImpl implements Quote, ModelBase {
                 .append(customerGroup, that.customerGroup)
                 .append(validTo, that.validTo)
                 .append(sellerComment, that.sellerComment)
+                .append(buyerComment, that.buyerComment)
                 .append(store, that.store)
                 .append(lineItems, that.lineItems)
                 .append(customLineItems, that.customLineItems)
@@ -617,6 +634,7 @@ public class QuoteImpl implements Quote, ModelBase {
                 .append(customerGroup)
                 .append(validTo)
                 .append(sellerComment)
+                .append(buyerComment)
                 .append(store)
                 .append(lineItems)
                 .append(customLineItems)

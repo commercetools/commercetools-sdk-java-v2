@@ -39,7 +39,7 @@ public class StagedQuoteDraftBuilder implements Builder<StagedQuoteDraft> {
     private com.commercetools.api.models.state.StateReference state;
 
     /**
-     *  <p>The QuoteRequest from which this StagedQuote is created.</p>
+     *  <p>QuoteRequest from which the StagedQuote is created.</p>
      */
 
     public StagedQuoteDraftBuilder quoteRequest(
@@ -51,7 +51,7 @@ public class StagedQuoteDraftBuilder implements Builder<StagedQuoteDraft> {
     }
 
     /**
-     *  <p>The QuoteRequest from which this StagedQuote is created.</p>
+     *  <p>QuoteRequest from which the StagedQuote is created.</p>
      */
 
     public StagedQuoteDraftBuilder quoteRequest(
@@ -106,7 +106,7 @@ public class StagedQuoteDraftBuilder implements Builder<StagedQuoteDraft> {
     }
 
     /**
-     *  <p>State of this Staged Quote. This reference can point to a State in a custom workflow.</p>
+     *  <p>State of the Staged Quote. This reference can point to a State in a custom workflow.</p>
      */
 
     public StagedQuoteDraftBuilder state(
@@ -116,7 +116,7 @@ public class StagedQuoteDraftBuilder implements Builder<StagedQuoteDraft> {
     }
 
     /**
-     *  <p>State of this Staged Quote. This reference can point to a State in a custom workflow.</p>
+     *  <p>State of the Staged Quote. This reference can point to a State in a custom workflow.</p>
      */
 
     public StagedQuoteDraftBuilder state(@Nullable final com.commercetools.api.models.state.StateReference state) {

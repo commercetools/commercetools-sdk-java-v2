@@ -44,7 +44,7 @@ public class QuoteChangeQuoteStateActionImpl implements QuoteChangeQuoteStateAct
     }
 
     /**
-     *  <p>The new quote state to be set for the Quote.</p>
+     *  <p>New state to be set for the Quote.</p>
      */
 
     public com.commercetools.api.models.quote.QuoteState getQuoteState() {

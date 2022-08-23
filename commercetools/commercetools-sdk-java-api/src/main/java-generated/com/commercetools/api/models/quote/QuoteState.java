@@ -21,17 +21,22 @@ public interface QuoteState {
     */
     QuoteState PENDING = QuoteStateEnum.PENDING;
     /**
-    	<p>A state indicating the Quote has been declined the <a href="/../api/quotes-overview#buyer">Buyer</a>.</p>
+    	<p>A state indicating the Quote has been declined by the <a href="/../api/quotes-overview#buyer">Buyer</a>.</p>
 
     */
     QuoteState DECLINED = QuoteStateEnum.DECLINED;
+    /**
+    	<p>A state indicating the Quote has been declined by the <a href="/../api/quotes-overview#buyer">Buyer</a> with the request for <a href="ctp:api:type:QuoteRequestQuoteRenegotiationAction">renegotiation</a>.</p>
+
+    */
+    QuoteState DECLINED_FOR_RENEGOTIATION = QuoteStateEnum.DECLINED_FOR_RENEGOTIATION;
     /**
     	<p>A state indicating the <a href="/../api/quotes-overview#buyer">Buyer</a> has accepted the Quote.</p>
 
     */
     QuoteState ACCEPTED = QuoteStateEnum.ACCEPTED;
     /**
-    	<p>A state indicating a circumstance other than declining by the <a href="/../api/quotes-overview#buyer">Buyer</a> that led the quote to fail.</p>
+    	<p>A state indicating a circumstance - other than the <a href="/../api/quotes-overview#buyer">Buyer</a> declining - that led to the Quote failing.</p>
 
     */
     QuoteState FAILED = QuoteStateEnum.FAILED;
@@ -45,6 +50,8 @@ public interface QuoteState {
         PENDING("Pending"),
 
         DECLINED("Declined"),
+
+        DECLINED_FOR_RENEGOTIATION("DeclinedForRenegotiation"),
 
         ACCEPTED("Accepted"),
 

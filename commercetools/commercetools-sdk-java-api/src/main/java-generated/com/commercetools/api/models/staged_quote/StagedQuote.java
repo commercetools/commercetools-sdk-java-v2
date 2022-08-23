@@ -102,14 +102,14 @@ public interface StagedQuote extends BaseResource {
     public StagedQuoteState getStagedQuoteState();
 
     /**
-     *  <p>The Buyer who requested the quote.</p>
+     *  <p>The Buyer who requested the Quote.</p>
      */
     @Valid
     @JsonProperty("customer")
     public CustomerReference getCustomer();
 
     /**
-     *  <p>The Quote Request related to this Staged Quote.</p>
+     *  <p>Quote Request related to the Staged Quote.</p>
      */
     @NotNull
     @Valid
@@ -117,7 +117,7 @@ public interface StagedQuote extends BaseResource {
     public QuoteRequestReference getQuoteRequest();
 
     /**
-     *  <p>The Cart containing the offered items.</p>
+     *  <p>Cart containing the offered items. May contain either DirectDiscounts or CartDiscounts.</p>
      */
     @NotNull
     @Valid
@@ -125,28 +125,28 @@ public interface StagedQuote extends BaseResource {
     public CartReference getQuotationCart();
 
     /**
-     *  <p>Expiration date for the quote.</p>
+     *  <p>Expiration date for the Quote.</p>
      */
 
     @JsonProperty("validTo")
     public ZonedDateTime getValidTo();
 
     /**
-     *  <p>The text message included in the offer from the Seller.</p>
+     *  <p>Message from the Seller included in the offer.</p>
      */
 
     @JsonProperty("sellerComment")
     public String getSellerComment();
 
     /**
-     *  <p>Custom Fields of this Staged Quote.</p>
+     *  <p>Custom Fields of the Staged Quote.</p>
      */
     @Valid
     @JsonProperty("custom")
     public CustomFields getCustom();
 
     /**
-     *  <p>State of this Staged Quote. This reference can point to a State in a custom workflow.</p>
+     *  <p>State of the Staged Quote. This reference can point to a State in a custom workflow.</p>
      */
     @Valid
     @JsonProperty("state")

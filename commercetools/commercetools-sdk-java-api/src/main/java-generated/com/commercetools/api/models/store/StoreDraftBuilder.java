@@ -103,7 +103,7 @@ public class StoreDraftBuilder implements Builder<StoreDraft> {
     }
 
     /**
-     *  <p>ResourceIdentifier to a Channel with <code>ProductDistribution</code> ChannelRoleEnum.</p>
+     *  <p>ResourceIdentifier of a Channel with <code>ProductDistribution</code> ChannelRoleEnum.</p>
      */
 
     public StoreDraftBuilder distributionChannels(
@@ -113,7 +113,7 @@ public class StoreDraftBuilder implements Builder<StoreDraft> {
     }
 
     /**
-     *  <p>ResourceIdentifier to a Channel with <code>ProductDistribution</code> ChannelRoleEnum.</p>
+     *  <p>ResourceIdentifier of a Channel with <code>ProductDistribution</code> ChannelRoleEnum.</p>
      */
 
     public StoreDraftBuilder distributionChannels(
@@ -123,7 +123,7 @@ public class StoreDraftBuilder implements Builder<StoreDraft> {
     }
 
     /**
-     *  <p>ResourceIdentifier to a Channel with <code>ProductDistribution</code> ChannelRoleEnum.</p>
+     *  <p>ResourceIdentifier of a Channel with <code>ProductDistribution</code> ChannelRoleEnum.</p>
      */
 
     public StoreDraftBuilder plusDistributionChannels(
@@ -136,7 +136,7 @@ public class StoreDraftBuilder implements Builder<StoreDraft> {
     }
 
     /**
-     *  <p>ResourceIdentifier to a Channel with <code>ProductDistribution</code> ChannelRoleEnum.</p>
+     *  <p>ResourceIdentifier of a Channel with <code>ProductDistribution</code> ChannelRoleEnum.</p>
      */
 
     public StoreDraftBuilder plusDistributionChannels(
@@ -150,7 +150,7 @@ public class StoreDraftBuilder implements Builder<StoreDraft> {
     }
 
     /**
-     *  <p>ResourceIdentifier to a Channel with <code>ProductDistribution</code> ChannelRoleEnum.</p>
+     *  <p>ResourceIdentifier of a Channel with <code>ProductDistribution</code> ChannelRoleEnum.</p>
      */
 
     public StoreDraftBuilder withDistributionChannels(
@@ -162,7 +162,7 @@ public class StoreDraftBuilder implements Builder<StoreDraft> {
     }
 
     /**
-     *  <p>ResourceIdentifier to a Channel with <code>InventorySupply</code> ChannelRoleEnum.</p>
+     *  <p>ResourceIdentifier of a Channel with <code>InventorySupply</code> ChannelRoleEnum.</p>
      */
 
     public StoreDraftBuilder supplyChannels(
@@ -172,7 +172,7 @@ public class StoreDraftBuilder implements Builder<StoreDraft> {
     }
 
     /**
-     *  <p>ResourceIdentifier to a Channel with <code>InventorySupply</code> ChannelRoleEnum.</p>
+     *  <p>ResourceIdentifier of a Channel with <code>InventorySupply</code> ChannelRoleEnum.</p>
      */
 
     public StoreDraftBuilder supplyChannels(
@@ -182,7 +182,7 @@ public class StoreDraftBuilder implements Builder<StoreDraft> {
     }
 
     /**
-     *  <p>ResourceIdentifier to a Channel with <code>InventorySupply</code> ChannelRoleEnum.</p>
+     *  <p>ResourceIdentifier of a Channel with <code>InventorySupply</code> ChannelRoleEnum.</p>
      */
 
     public StoreDraftBuilder plusSupplyChannels(
@@ -195,7 +195,7 @@ public class StoreDraftBuilder implements Builder<StoreDraft> {
     }
 
     /**
-     *  <p>ResourceIdentifier to a Channel with <code>InventorySupply</code> ChannelRoleEnum.</p>
+     *  <p>ResourceIdentifier of a Channel with <code>InventorySupply</code> ChannelRoleEnum.</p>
      */
 
     public StoreDraftBuilder plusSupplyChannels(
@@ -209,7 +209,7 @@ public class StoreDraftBuilder implements Builder<StoreDraft> {
     }
 
     /**
-     *  <p>ResourceIdentifier to a Channel with <code>InventorySupply</code> ChannelRoleEnum.</p>
+     *  <p>ResourceIdentifier of a Channel with <code>InventorySupply</code> ChannelRoleEnum.</p>
      */
 
     public StoreDraftBuilder withSupplyChannels(

@@ -163,7 +163,7 @@ public class StagedQuoteBuilder implements Builder<StagedQuote> {
     }
 
     /**
-     *  <p>The Buyer who requested the quote.</p>
+     *  <p>The Buyer who requested the Quote.</p>
      */
 
     public StagedQuoteBuilder customer(
@@ -173,7 +173,7 @@ public class StagedQuoteBuilder implements Builder<StagedQuote> {
     }
 
     /**
-     *  <p>The Buyer who requested the quote.</p>
+     *  <p>The Buyer who requested the Quote.</p>
      */
 
     public StagedQuoteBuilder customer(
@@ -183,7 +183,7 @@ public class StagedQuoteBuilder implements Builder<StagedQuote> {
     }
 
     /**
-     *  <p>The Quote Request related to this Staged Quote.</p>
+     *  <p>Quote Request related to the Staged Quote.</p>
      */
 
     public StagedQuoteBuilder quoteRequest(
@@ -194,7 +194,7 @@ public class StagedQuoteBuilder implements Builder<StagedQuote> {
     }
 
     /**
-     *  <p>The Quote Request related to this Staged Quote.</p>
+     *  <p>Quote Request related to the Staged Quote.</p>
      */
 
     public StagedQuoteBuilder quoteRequest(
@@ -204,7 +204,7 @@ public class StagedQuoteBuilder implements Builder<StagedQuote> {
     }
 
     /**
-     *  <p>The Cart containing the offered items.</p>
+     *  <p>Cart containing the offered items. May contain either DirectDiscounts or CartDiscounts.</p>
      */
 
     public StagedQuoteBuilder quotationCart(
@@ -214,7 +214,7 @@ public class StagedQuoteBuilder implements Builder<StagedQuote> {
     }
 
     /**
-     *  <p>The Cart containing the offered items.</p>
+     *  <p>Cart containing the offered items. May contain either DirectDiscounts or CartDiscounts.</p>
      */
 
     public StagedQuoteBuilder quotationCart(final com.commercetools.api.models.cart.CartReference quotationCart) {
@@ -223,7 +223,7 @@ public class StagedQuoteBuilder implements Builder<StagedQuote> {
     }
 
     /**
-     *  <p>Expiration date for the quote.</p>
+     *  <p>Expiration date for the Quote.</p>
      */
 
     public StagedQuoteBuilder validTo(@Nullable final java.time.ZonedDateTime validTo) {
@@ -232,7 +232,7 @@ public class StagedQuoteBuilder implements Builder<StagedQuote> {
     }
 
     /**
-     *  <p>The text message included in the offer from the Seller.</p>
+     *  <p>Message from the Seller included in the offer.</p>
      */
 
     public StagedQuoteBuilder sellerComment(@Nullable final String sellerComment) {
@@ -241,7 +241,7 @@ public class StagedQuoteBuilder implements Builder<StagedQuote> {
     }
 
     /**
-     *  <p>Custom Fields of this Staged Quote.</p>
+     *  <p>Custom Fields of the Staged Quote.</p>
      */
 
     public StagedQuoteBuilder custom(
@@ -251,7 +251,7 @@ public class StagedQuoteBuilder implements Builder<StagedQuote> {
     }
 
     /**
-     *  <p>Custom Fields of this Staged Quote.</p>
+     *  <p>Custom Fields of the Staged Quote.</p>
      */
 
     public StagedQuoteBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFields custom) {
@@ -260,7 +260,7 @@ public class StagedQuoteBuilder implements Builder<StagedQuote> {
     }
 
     /**
-     *  <p>State of this Staged Quote. This reference can point to a State in a custom workflow.</p>
+     *  <p>State of the Staged Quote. This reference can point to a State in a custom workflow.</p>
      */
 
     public StagedQuoteBuilder state(
@@ -270,7 +270,7 @@ public class StagedQuoteBuilder implements Builder<StagedQuote> {
     }
 
     /**
-     *  <p>State of this Staged Quote. This reference can point to a State in a custom workflow.</p>
+     *  <p>State of the Staged Quote. This reference can point to a State in a custom workflow.</p>
      */
 
     public StagedQuoteBuilder state(@Nullable final com.commercetools.api.models.state.StateReference state) {

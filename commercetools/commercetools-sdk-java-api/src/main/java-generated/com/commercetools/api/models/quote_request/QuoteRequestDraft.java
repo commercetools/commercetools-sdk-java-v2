@@ -58,7 +58,7 @@ public interface QuoteRequestDraft {
     public String getKey();
 
     /**
-     *  <p>Text message included in the request.</p>
+     *  <p>Message from the Buyer included in the Quote Request.</p>
      */
     @NotNull
     @JsonProperty("comment")

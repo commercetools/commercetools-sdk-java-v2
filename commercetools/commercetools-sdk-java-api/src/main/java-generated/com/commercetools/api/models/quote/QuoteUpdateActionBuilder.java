@@ -15,6 +15,10 @@ public class QuoteUpdateActionBuilder {
         return com.commercetools.api.models.quote.QuoteChangeQuoteStateActionBuilder.of();
     }
 
+    public com.commercetools.api.models.quote.QuoteRequestQuoteRenegotiationActionBuilder requestQuoteRenegotiationBuilder() {
+        return com.commercetools.api.models.quote.QuoteRequestQuoteRenegotiationActionBuilder.of();
+    }
+
     public com.commercetools.api.models.quote.QuoteSetCustomFieldActionBuilder setCustomFieldBuilder() {
         return com.commercetools.api.models.quote.QuoteSetCustomFieldActionBuilder.of();
     }

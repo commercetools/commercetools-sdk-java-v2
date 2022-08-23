@@ -35,7 +35,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface QuoteDraft {
 
     /**
-     *  <p>The StagedQuote from which this Quote is created.</p>
+     *  <p>StagedQuote from which the Quote is created.</p>
      */
     @NotNull
     @Valid

@@ -35,7 +35,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface StagedQuoteDraft {
 
     /**
-     *  <p>The QuoteRequest from which this StagedQuote is created.</p>
+     *  <p>QuoteRequest from which the StagedQuote is created.</p>
      */
     @NotNull
     @Valid
@@ -68,7 +68,7 @@ public interface StagedQuoteDraft {
     public CustomFieldsDraft getCustom();
 
     /**
-     *  <p>State of this Staged Quote. This reference can point to a State in a custom workflow.</p>
+     *  <p>State of the Staged Quote. This reference can point to a State in a custom workflow.</p>
      */
     @Valid
     @JsonProperty("state")

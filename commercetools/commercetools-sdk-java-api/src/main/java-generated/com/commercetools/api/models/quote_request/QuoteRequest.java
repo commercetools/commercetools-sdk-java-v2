@@ -120,7 +120,7 @@ public interface QuoteRequest extends BaseResource {
     public QuoteRequestState getQuoteRequestState();
 
     /**
-     *  <p>Text message included in the request.</p>
+     *  <p>Message from the Buyer included in the Quote Request.</p>
      */
 
     @JsonProperty("comment")
@@ -149,7 +149,7 @@ public interface QuoteRequest extends BaseResource {
     public StoreKeyReference getStore();
 
     /**
-     *  <p>The Line Items for which a quote is requested.</p>
+     *  <p>The Line Items for which a Quote is requested.</p>
      */
     @NotNull
     @Valid
@@ -157,7 +157,7 @@ public interface QuoteRequest extends BaseResource {
     public List<LineItem> getLineItems();
 
     /**
-     *  <p>The Custom Line Items for which a quote is requested.</p>
+     *  <p>The Custom Line Items for which a Quote is requested.</p>
      */
     @NotNull
     @Valid
@@ -165,7 +165,7 @@ public interface QuoteRequest extends BaseResource {
     public List<CustomLineItem> getCustomLineItems();
 
     /**
-     *  <p>The sum of all <code>totalPrice</code> fields of the <code>lineItems</code> and <code>customLineItems</code>, as well as the <code>price</code> field of <code>shippingInfo</code> (if it exists). <code>totalPrice</code> may or may not include the taxes: it depends on the taxRate.includedInPrice property of each price.</p>
+     *  <p>Sum of all <code>totalPrice</code> fields of the <code>lineItems</code> and <code>customLineItems</code>, as well as the <code>price</code> field of <code>shippingInfo</code> (if it exists). <code>totalPrice</code> may or may not include the taxes: it depends on the taxRate.includedInPrice property of each price.</p>
      */
     @NotNull
     @Valid
@@ -187,21 +187,21 @@ public interface QuoteRequest extends BaseResource {
     public Address getShippingAddress();
 
     /**
-     *  <p>The address used for invoicing.</p>
+     *  <p>Address used for invoicing.</p>
      */
     @Valid
     @JsonProperty("billingAddress")
     public Address getBillingAddress();
 
     /**
-     *  <p>The inventory mode of the Cart referenced in the QuoteRequestDraft.</p>
+     *  <p>Inventory mode of the Cart referenced in the QuoteRequestDraft.</p>
      */
 
     @JsonProperty("inventoryMode")
     public InventoryMode getInventoryMode();
 
     /**
-     *  <p>The tax mode of the Cart referenced in the QuoteRequestDraft.</p>
+     *  <p>Tax mode of the Cart referenced in the QuoteRequestDraft.</p>
      */
     @NotNull
     @JsonProperty("taxMode")
@@ -236,7 +236,7 @@ public interface QuoteRequest extends BaseResource {
     public ShippingInfo getShippingInfo();
 
     /**
-     *  <p>Log of payment transactions related to this quote.</p>
+     *  <p>Log of payment transactions related to the Quote.</p>
      */
     @Valid
     @JsonProperty("paymentInfo")
@@ -257,21 +257,21 @@ public interface QuoteRequest extends BaseResource {
     public List<Address> getItemShippingAddresses();
 
     /**
-     *  <p>Discounts only valid for this Quote, those cannot be associated to any other Cart or Order.</p>
+     *  <p>Discounts that are only valid for the Quote and cannot be associated to any other Cart or Order.</p>
      */
     @Valid
     @JsonProperty("directDiscounts")
     public List<DirectDiscount> getDirectDiscounts();
 
     /**
-     *  <p>Custom Fields of this Quote Request.</p>
+     *  <p>Custom Fields of the Quote Request.</p>
      */
     @Valid
     @JsonProperty("custom")
     public CustomFields getCustom();
 
     /**
-     *  <p>State of this Quote Request. This reference can point to a State in a custom workflow.</p>
+     *  <p>State of the Quote Request. This reference can point to a State in a custom workflow.</p>
      */
     @Valid
     @JsonProperty("state")

@@ -25,7 +25,7 @@ public class StagedQuoteChangeStagedQuoteStateActionBuilder
     private com.commercetools.api.models.staged_quote.StagedQuoteState stagedQuoteState;
 
     /**
-     *  <p>The new quote staged state to be set for the Quote Staged.</p>
+     *  <p>New state to be set for the Staged Quote.</p>
      */
 
     public StagedQuoteChangeStagedQuoteStateActionBuilder stagedQuoteState(

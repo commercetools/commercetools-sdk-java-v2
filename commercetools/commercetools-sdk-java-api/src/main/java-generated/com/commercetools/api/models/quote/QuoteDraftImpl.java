@@ -47,7 +47,7 @@ public class QuoteDraftImpl implements QuoteDraft, ModelBase {
     }
 
     /**
-     *  <p>The StagedQuote from which this Quote is created.</p>
+     *  <p>StagedQuote from which the Quote is created.</p>
      */
 
     public com.commercetools.api.models.staged_quote.StagedQuoteResourceIdentifier getStagedQuote() {

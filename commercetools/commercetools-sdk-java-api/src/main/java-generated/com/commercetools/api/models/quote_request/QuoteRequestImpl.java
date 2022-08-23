@@ -210,7 +210,7 @@ public class QuoteRequestImpl implements QuoteRequest, ModelBase {
     }
 
     /**
-     *  <p>Text message included in the request.</p>
+     *  <p>Message from the Buyer included in the Quote Request.</p>
      */
 
     public String getComment() {
@@ -242,7 +242,7 @@ public class QuoteRequestImpl implements QuoteRequest, ModelBase {
     }
 
     /**
-     *  <p>The Line Items for which a quote is requested.</p>
+     *  <p>The Line Items for which a Quote is requested.</p>
      */
 
     public java.util.List<com.commercetools.api.models.cart.LineItem> getLineItems() {
@@ -250,7 +250,7 @@ public class QuoteRequestImpl implements QuoteRequest, ModelBase {
     }
 
     /**
-     *  <p>The Custom Line Items for which a quote is requested.</p>
+     *  <p>The Custom Line Items for which a Quote is requested.</p>
      */
 
     public java.util.List<com.commercetools.api.models.cart.CustomLineItem> getCustomLineItems() {
@@ -258,7 +258,7 @@ public class QuoteRequestImpl implements QuoteRequest, ModelBase {
     }
 
     /**
-     *  <p>The sum of all <code>totalPrice</code> fields of the <code>lineItems</code> and <code>customLineItems</code>, as well as the <code>price</code> field of <code>shippingInfo</code> (if it exists). <code>totalPrice</code> may or may not include the taxes: it depends on the taxRate.includedInPrice property of each price.</p>
+     *  <p>Sum of all <code>totalPrice</code> fields of the <code>lineItems</code> and <code>customLineItems</code>, as well as the <code>price</code> field of <code>shippingInfo</code> (if it exists). <code>totalPrice</code> may or may not include the taxes: it depends on the taxRate.includedInPrice property of each price.</p>
      */
 
     public com.commercetools.api.models.common.TypedMoney getTotalPrice() {
@@ -282,7 +282,7 @@ public class QuoteRequestImpl implements QuoteRequest, ModelBase {
     }
 
     /**
-     *  <p>The address used for invoicing.</p>
+     *  <p>Address used for invoicing.</p>
      */
 
     public com.commercetools.api.models.common.Address getBillingAddress() {
@@ -290,7 +290,7 @@ public class QuoteRequestImpl implements QuoteRequest, ModelBase {
     }
 
     /**
-     *  <p>The inventory mode of the Cart referenced in the QuoteRequestDraft.</p>
+     *  <p>Inventory mode of the Cart referenced in the QuoteRequestDraft.</p>
      */
 
     public com.commercetools.api.models.cart.InventoryMode getInventoryMode() {
@@ -298,7 +298,7 @@ public class QuoteRequestImpl implements QuoteRequest, ModelBase {
     }
 
     /**
-     *  <p>The tax mode of the Cart referenced in the QuoteRequestDraft.</p>
+     *  <p>Tax mode of the Cart referenced in the QuoteRequestDraft.</p>
      */
 
     public com.commercetools.api.models.cart.TaxMode getTaxMode() {
@@ -338,7 +338,7 @@ public class QuoteRequestImpl implements QuoteRequest, ModelBase {
     }
 
     /**
-     *  <p>Log of payment transactions related to this quote.</p>
+     *  <p>Log of payment transactions related to the Quote.</p>
      */
 
     public com.commercetools.api.models.order.PaymentInfo getPaymentInfo() {
@@ -362,7 +362,7 @@ public class QuoteRequestImpl implements QuoteRequest, ModelBase {
     }
 
     /**
-     *  <p>Discounts only valid for this Quote, those cannot be associated to any other Cart or Order.</p>
+     *  <p>Discounts that are only valid for the Quote and cannot be associated to any other Cart or Order.</p>
      */
 
     public java.util.List<com.commercetools.api.models.cart.DirectDiscount> getDirectDiscounts() {
@@ -370,7 +370,7 @@ public class QuoteRequestImpl implements QuoteRequest, ModelBase {
     }
 
     /**
-     *  <p>Custom Fields of this Quote Request.</p>
+     *  <p>Custom Fields of the Quote Request.</p>
      */
 
     public com.commercetools.api.models.type.CustomFields getCustom() {
@@ -378,7 +378,7 @@ public class QuoteRequestImpl implements QuoteRequest, ModelBase {
     }
 
     /**
-     *  <p>State of this Quote Request. This reference can point to a State in a custom workflow.</p>
+     *  <p>State of the Quote Request. This reference can point to a State in a custom workflow.</p>
      */
 
     public com.commercetools.api.models.state.StateReference getState() {

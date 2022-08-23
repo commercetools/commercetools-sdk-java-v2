@@ -34,7 +34,7 @@ public interface ProductSelectionAddProductAction extends ProductSelectionUpdate
     String ADD_PRODUCT = "addProduct";
 
     /**
-     *  <p>ResourceIdentifier to Product</p>
+     *  <p>ResourceIdentifier of the Product</p>
      */
     @NotNull
     @Valid

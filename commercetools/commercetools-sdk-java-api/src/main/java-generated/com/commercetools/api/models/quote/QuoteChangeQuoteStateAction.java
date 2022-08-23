@@ -32,7 +32,7 @@ public interface QuoteChangeQuoteStateAction extends QuoteUpdateAction {
     String CHANGE_QUOTE_STATE = "changeQuoteState";
 
     /**
-     *  <p>The new quote state to be set for the Quote.</p>
+     *  <p>New state to be set for the Quote.</p>
      */
     @NotNull
     @JsonProperty("quoteState")

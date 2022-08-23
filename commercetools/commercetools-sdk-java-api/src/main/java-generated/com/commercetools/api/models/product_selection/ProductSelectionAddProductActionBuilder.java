@@ -30,7 +30,7 @@ public class ProductSelectionAddProductActionBuilder implements Builder<ProductS
     private com.commercetools.api.models.product_selection.ProductVariantSelection variantSelection;
 
     /**
-     *  <p>ResourceIdentifier to Product</p>
+     *  <p>ResourceIdentifier of the Product</p>
      */
 
     public ProductSelectionAddProductActionBuilder product(
@@ -41,7 +41,7 @@ public class ProductSelectionAddProductActionBuilder implements Builder<ProductS
     }
 
     /**
-     *  <p>ResourceIdentifier to Product</p>
+     *  <p>ResourceIdentifier of the Product</p>
      */
 
     public ProductSelectionAddProductActionBuilder product(

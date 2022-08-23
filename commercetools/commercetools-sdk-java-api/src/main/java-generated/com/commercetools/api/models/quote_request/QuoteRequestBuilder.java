@@ -208,7 +208,7 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
     }
 
     /**
-     *  <p>Text message included in the request.</p>
+     *  <p>Message from the Buyer included in the Quote Request.</p>
      */
 
     public QuoteRequestBuilder comment(@Nullable final String comment) {
@@ -277,7 +277,7 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
     }
 
     /**
-     *  <p>The Line Items for which a quote is requested.</p>
+     *  <p>The Line Items for which a Quote is requested.</p>
      */
 
     public QuoteRequestBuilder lineItems(final com.commercetools.api.models.cart.LineItem... lineItems) {
@@ -286,7 +286,7 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
     }
 
     /**
-     *  <p>The Line Items for which a quote is requested.</p>
+     *  <p>The Line Items for which a Quote is requested.</p>
      */
 
     public QuoteRequestBuilder lineItems(final java.util.List<com.commercetools.api.models.cart.LineItem> lineItems) {
@@ -295,7 +295,7 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
     }
 
     /**
-     *  <p>The Line Items for which a quote is requested.</p>
+     *  <p>The Line Items for which a Quote is requested.</p>
      */
 
     public QuoteRequestBuilder plusLineItems(final com.commercetools.api.models.cart.LineItem... lineItems) {
@@ -307,7 +307,7 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
     }
 
     /**
-     *  <p>The Line Items for which a quote is requested.</p>
+     *  <p>The Line Items for which a Quote is requested.</p>
      */
 
     public QuoteRequestBuilder plusLineItems(
@@ -320,7 +320,7 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
     }
 
     /**
-     *  <p>The Line Items for which a quote is requested.</p>
+     *  <p>The Line Items for which a Quote is requested.</p>
      */
 
     public QuoteRequestBuilder withLineItems(
@@ -331,7 +331,7 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
     }
 
     /**
-     *  <p>The Custom Line Items for which a quote is requested.</p>
+     *  <p>The Custom Line Items for which a Quote is requested.</p>
      */
 
     public QuoteRequestBuilder customLineItems(
@@ -341,7 +341,7 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
     }
 
     /**
-     *  <p>The Custom Line Items for which a quote is requested.</p>
+     *  <p>The Custom Line Items for which a Quote is requested.</p>
      */
 
     public QuoteRequestBuilder customLineItems(
@@ -351,7 +351,7 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
     }
 
     /**
-     *  <p>The Custom Line Items for which a quote is requested.</p>
+     *  <p>The Custom Line Items for which a Quote is requested.</p>
      */
 
     public QuoteRequestBuilder plusCustomLineItems(
@@ -364,7 +364,7 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
     }
 
     /**
-     *  <p>The Custom Line Items for which a quote is requested.</p>
+     *  <p>The Custom Line Items for which a Quote is requested.</p>
      */
 
     public QuoteRequestBuilder plusCustomLineItems(
@@ -377,7 +377,7 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
     }
 
     /**
-     *  <p>The Custom Line Items for which a quote is requested.</p>
+     *  <p>The Custom Line Items for which a Quote is requested.</p>
      */
 
     public QuoteRequestBuilder withCustomLineItems(
@@ -388,7 +388,7 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
     }
 
     /**
-     *  <p>The sum of all <code>totalPrice</code> fields of the <code>lineItems</code> and <code>customLineItems</code>, as well as the <code>price</code> field of <code>shippingInfo</code> (if it exists). <code>totalPrice</code> may or may not include the taxes: it depends on the taxRate.includedInPrice property of each price.</p>
+     *  <p>Sum of all <code>totalPrice</code> fields of the <code>lineItems</code> and <code>customLineItems</code>, as well as the <code>price</code> field of <code>shippingInfo</code> (if it exists). <code>totalPrice</code> may or may not include the taxes: it depends on the taxRate.includedInPrice property of each price.</p>
      */
 
     public QuoteRequestBuilder totalPrice(final com.commercetools.api.models.common.TypedMoney totalPrice) {
@@ -397,7 +397,7 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
     }
 
     /**
-     *  <p>The sum of all <code>totalPrice</code> fields of the <code>lineItems</code> and <code>customLineItems</code>, as well as the <code>price</code> field of <code>shippingInfo</code> (if it exists). <code>totalPrice</code> may or may not include the taxes: it depends on the taxRate.includedInPrice property of each price.</p>
+     *  <p>Sum of all <code>totalPrice</code> fields of the <code>lineItems</code> and <code>customLineItems</code>, as well as the <code>price</code> field of <code>shippingInfo</code> (if it exists). <code>totalPrice</code> may or may not include the taxes: it depends on the taxRate.includedInPrice property of each price.</p>
      */
 
     public QuoteRequestBuilder totalPrice(
@@ -446,7 +446,7 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
     }
 
     /**
-     *  <p>The address used for invoicing.</p>
+     *  <p>Address used for invoicing.</p>
      */
 
     public QuoteRequestBuilder billingAddress(
@@ -456,7 +456,7 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
     }
 
     /**
-     *  <p>The address used for invoicing.</p>
+     *  <p>Address used for invoicing.</p>
      */
 
     public QuoteRequestBuilder billingAddress(
@@ -466,7 +466,7 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
     }
 
     /**
-     *  <p>The inventory mode of the Cart referenced in the QuoteRequestDraft.</p>
+     *  <p>Inventory mode of the Cart referenced in the QuoteRequestDraft.</p>
      */
 
     public QuoteRequestBuilder inventoryMode(
@@ -476,7 +476,7 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
     }
 
     /**
-     *  <p>The tax mode of the Cart referenced in the QuoteRequestDraft.</p>
+     *  <p>Tax mode of the Cart referenced in the QuoteRequestDraft.</p>
      */
 
     public QuoteRequestBuilder taxMode(final com.commercetools.api.models.cart.TaxMode taxMode) {
@@ -533,7 +533,7 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
     }
 
     /**
-     *  <p>Log of payment transactions related to this quote.</p>
+     *  <p>Log of payment transactions related to the Quote.</p>
      */
 
     public QuoteRequestBuilder paymentInfo(
@@ -543,7 +543,7 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
     }
 
     /**
-     *  <p>Log of payment transactions related to this quote.</p>
+     *  <p>Log of payment transactions related to the Quote.</p>
      */
 
     public QuoteRequestBuilder paymentInfo(@Nullable final com.commercetools.api.models.order.PaymentInfo paymentInfo) {
@@ -629,7 +629,7 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
     }
 
     /**
-     *  <p>Discounts only valid for this Quote, those cannot be associated to any other Cart or Order.</p>
+     *  <p>Discounts that are only valid for the Quote and cannot be associated to any other Cart or Order.</p>
      */
 
     public QuoteRequestBuilder directDiscounts(
@@ -639,7 +639,7 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
     }
 
     /**
-     *  <p>Discounts only valid for this Quote, those cannot be associated to any other Cart or Order.</p>
+     *  <p>Discounts that are only valid for the Quote and cannot be associated to any other Cart or Order.</p>
      */
 
     public QuoteRequestBuilder directDiscounts(
@@ -649,7 +649,7 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
     }
 
     /**
-     *  <p>Discounts only valid for this Quote, those cannot be associated to any other Cart or Order.</p>
+     *  <p>Discounts that are only valid for the Quote and cannot be associated to any other Cart or Order.</p>
      */
 
     public QuoteRequestBuilder plusDirectDiscounts(
@@ -662,7 +662,7 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
     }
 
     /**
-     *  <p>Discounts only valid for this Quote, those cannot be associated to any other Cart or Order.</p>
+     *  <p>Discounts that are only valid for the Quote and cannot be associated to any other Cart or Order.</p>
      */
 
     public QuoteRequestBuilder plusDirectDiscounts(
@@ -675,7 +675,7 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
     }
 
     /**
-     *  <p>Discounts only valid for this Quote, those cannot be associated to any other Cart or Order.</p>
+     *  <p>Discounts that are only valid for the Quote and cannot be associated to any other Cart or Order.</p>
      */
 
     public QuoteRequestBuilder withDirectDiscounts(
@@ -686,7 +686,7 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
     }
 
     /**
-     *  <p>Custom Fields of this Quote Request.</p>
+     *  <p>Custom Fields of the Quote Request.</p>
      */
 
     public QuoteRequestBuilder custom(
@@ -696,7 +696,7 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
     }
 
     /**
-     *  <p>Custom Fields of this Quote Request.</p>
+     *  <p>Custom Fields of the Quote Request.</p>
      */
 
     public QuoteRequestBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFields custom) {
@@ -705,7 +705,7 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
     }
 
     /**
-     *  <p>State of this Quote Request. This reference can point to a State in a custom workflow.</p>
+     *  <p>State of the Quote Request. This reference can point to a State in a custom workflow.</p>
      */
 
     public QuoteRequestBuilder state(
@@ -715,7 +715,7 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
     }
 
     /**
-     *  <p>State of this Quote Request. This reference can point to a State in a custom workflow.</p>
+     *  <p>State of the Quote Request. This reference can point to a State in a custom workflow.</p>
      */
 
     public QuoteRequestBuilder state(@Nullable final com.commercetools.api.models.state.StateReference state) {

@@ -47,7 +47,7 @@ public class StagedQuoteDraftImpl implements StagedQuoteDraft, ModelBase {
     }
 
     /**
-     *  <p>The QuoteRequest from which this StagedQuote is created.</p>
+     *  <p>QuoteRequest from which the StagedQuote is created.</p>
      */
 
     public com.commercetools.api.models.quote_request.QuoteRequestResourceIdentifier getQuoteRequest() {
@@ -83,7 +83,7 @@ public class StagedQuoteDraftImpl implements StagedQuoteDraft, ModelBase {
     }
 
     /**
-     *  <p>State of this Staged Quote. This reference can point to a State in a custom workflow.</p>
+     *  <p>State of the Staged Quote. This reference can point to a State in a custom workflow.</p>
      */
 
     public com.commercetools.api.models.state.StateReference getState() {

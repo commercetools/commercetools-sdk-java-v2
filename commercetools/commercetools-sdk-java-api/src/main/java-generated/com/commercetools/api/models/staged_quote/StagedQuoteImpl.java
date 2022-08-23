@@ -150,7 +150,7 @@ public class StagedQuoteImpl implements StagedQuote, ModelBase {
     }
 
     /**
-     *  <p>The Buyer who requested the quote.</p>
+     *  <p>The Buyer who requested the Quote.</p>
      */
 
     public com.commercetools.api.models.customer.CustomerReference getCustomer() {
@@ -158,7 +158,7 @@ public class StagedQuoteImpl implements StagedQuote, ModelBase {
     }
 
     /**
-     *  <p>The Quote Request related to this Staged Quote.</p>
+     *  <p>Quote Request related to the Staged Quote.</p>
      */
 
     public com.commercetools.api.models.quote_request.QuoteRequestReference getQuoteRequest() {
@@ -166,7 +166,7 @@ public class StagedQuoteImpl implements StagedQuote, ModelBase {
     }
 
     /**
-     *  <p>The Cart containing the offered items.</p>
+     *  <p>Cart containing the offered items. May contain either DirectDiscounts or CartDiscounts.</p>
      */
 
     public com.commercetools.api.models.cart.CartReference getQuotationCart() {
@@ -174,7 +174,7 @@ public class StagedQuoteImpl implements StagedQuote, ModelBase {
     }
 
     /**
-     *  <p>Expiration date for the quote.</p>
+     *  <p>Expiration date for the Quote.</p>
      */
 
     public java.time.ZonedDateTime getValidTo() {
@@ -182,7 +182,7 @@ public class StagedQuoteImpl implements StagedQuote, ModelBase {
     }
 
     /**
-     *  <p>The text message included in the offer from the Seller.</p>
+     *  <p>Message from the Seller included in the offer.</p>
      */
 
     public String getSellerComment() {
@@ -190,7 +190,7 @@ public class StagedQuoteImpl implements StagedQuote, ModelBase {
     }
 
     /**
-     *  <p>Custom Fields of this Staged Quote.</p>
+     *  <p>Custom Fields of the Staged Quote.</p>
      */
 
     public com.commercetools.api.models.type.CustomFields getCustom() {
@@ -198,7 +198,7 @@ public class StagedQuoteImpl implements StagedQuote, ModelBase {
     }
 
     /**
-     *  <p>State of this Staged Quote. This reference can point to a State in a custom workflow.</p>
+     *  <p>State of the Staged Quote. This reference can point to a State in a custom workflow.</p>
      */
 
     public com.commercetools.api.models.state.StateReference getState() {

@@ -5,21 +5,28 @@ import static commercetools.category.CategoryFixtures.*;
 import static commercetools.product.ProductFixtures.*;
 import static commercetools.product_type.ProductTypeFixtures.*;
 import static commercetools.tax_category.TaxCategoryFixtures.*;
+import static commercetools.utils.CommercetoolsTestUtils.assertEventually;
 
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.commercetools.api.client.ByProjectKeyProductProjectionsGet;
 import com.commercetools.api.client.ProjectApiRoot;
 import com.commercetools.api.models.common.LocalizedString;
+import com.commercetools.api.models.graph_ql.GraphQLRequest;
 import com.commercetools.api.models.product.*;
 import commercetools.utils.CommercetoolsTestUtils;
 
+import io.vrap.rmf.base.client.ApiHttpRequest;
 import org.apache.commons.io.IOUtils;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+
+import javax.money.CurrencyUnit;
 
 public class ProductIntegrationTests {
 
@@ -60,6 +67,41 @@ public class ProductIntegrationTests {
                     .getBody();
             Assertions.assertNotNull(queriedProduct);
             Assertions.assertEquals(product.getKey(), queriedProduct.getKey());
+        });
+    }
+
+    @Test
+    public void getBySKU() {
+        withProduct(product -> {
+            List<ProductProjection> queriedProduct = CommercetoolsTestUtils.getProjectApiRoot()
+                    .productProjections()
+                    .get()
+                    .withWhere("masterVariant(sku in :sku) or variants(sku in :sku)", "sku",
+                            product.getMasterData().getCurrent().getMasterVariant().getSku())
+                    .withLimit(1)
+                    .withStaged(true)
+                    .executeBlocking()
+                    .getBody()
+                    .getResults();
+            Assertions.assertNotNull(queriedProduct);
+            Assertions.assertEquals(1, queriedProduct.size());
+            Assertions.assertEquals(product.getKey(), queriedProduct.get(0).getKey());
+
+            assertEventually(Duration.ofSeconds(60), Duration.ofMillis(500), () -> {
+                List<ProductProjection> searchProduct = CommercetoolsTestUtils.getProjectApiRoot()
+                        .productProjections()
+                        .search()
+                        .get()
+                        .withFilterQuery("variants.sku:\"" + product.getMasterData().getCurrent().getMasterVariant().getSku() + "\"")
+                        .withLimit(1)
+                        .withStaged(true)
+                        .executeBlocking()
+                        .getBody()
+                        .getResults();
+                Assertions.assertNotNull(searchProduct);
+                Assertions.assertEquals(1, searchProduct.size());
+                Assertions.assertEquals(product.getKey(), searchProduct.get(0).getKey());
+            });
         });
     }
 

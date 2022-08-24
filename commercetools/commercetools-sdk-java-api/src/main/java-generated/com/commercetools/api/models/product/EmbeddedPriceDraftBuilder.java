@@ -152,7 +152,7 @@ public class EmbeddedPriceDraftBuilder implements Builder<EmbeddedPriceDraft> {
     }
 
     /**
-     *  <p>Sets the date from which the EmbeddedPrice is valid.</p>
+     *  <p>Sets the date from which the EmbeddedPrice is valid. Must be at least 1 ms before <code>validUntil</code>.</p>
      */
 
     public EmbeddedPriceDraftBuilder validFrom(@Nullable final java.time.ZonedDateTime validFrom) {
@@ -161,7 +161,7 @@ public class EmbeddedPriceDraftBuilder implements Builder<EmbeddedPriceDraft> {
     }
 
     /**
-     *  <p>Sets the date until the EmbeddedPrice is valid.</p>
+     *  <p>Sets the date until the EmbeddedPrice is valid. Must be at least 1 ms after <code>validFrom</code>.</p>
      */
 
     public EmbeddedPriceDraftBuilder validUntil(@Nullable final java.time.ZonedDateTime validUntil) {

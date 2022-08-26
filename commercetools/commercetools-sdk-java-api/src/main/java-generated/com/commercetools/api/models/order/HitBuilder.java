@@ -3,6 +3,8 @@ package com.commercetools.api.models.order;
 
 import java.util.*;
 
+import javax.annotation.Nullable;
+
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -15,7 +17,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     Hit hit = Hit.builder()
  *             .id("{id}")
  *             .version(0.3)
- *             .relevance(0.3)
  *             .build()
  * </code></pre>
  * </div>
@@ -27,6 +28,7 @@ public class HitBuilder implements Builder<Hit> {
 
     private Long version;
 
+    @Nullable
     private Double relevance;
 
     /**
@@ -51,7 +53,7 @@ public class HitBuilder implements Builder<Hit> {
      *  <p>The higher the value is, the more relevant the hit is for the search request.</p>
      */
 
-    public HitBuilder relevance(final Double relevance) {
+    public HitBuilder relevance(@Nullable final Double relevance) {
         this.relevance = relevance;
         return this;
     }
@@ -64,6 +66,7 @@ public class HitBuilder implements Builder<Hit> {
         return this.version;
     }
 
+    @Nullable
     public Double getRelevance() {
         return this.relevance;
     }
@@ -71,7 +74,6 @@ public class HitBuilder implements Builder<Hit> {
     public Hit build() {
         Objects.requireNonNull(id, Hit.class + ": id is missing");
         Objects.requireNonNull(version, Hit.class + ": version is missing");
-        Objects.requireNonNull(relevance, Hit.class + ": relevance is missing");
         return new HitImpl(id, version, relevance);
     }
 

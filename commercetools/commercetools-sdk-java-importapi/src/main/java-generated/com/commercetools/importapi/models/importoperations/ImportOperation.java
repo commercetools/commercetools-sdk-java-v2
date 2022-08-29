@@ -77,7 +77,7 @@ public interface ImportOperation {
     public ProcessingState getState();
 
     /**
-     *  <p>The version of the impmorted resource when the import was successful.</p>
+     *  <p>The version of the imported resource when the import was successful.</p>
      */
 
     @JsonProperty("resourceVersion")

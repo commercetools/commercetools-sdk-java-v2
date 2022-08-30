@@ -46,6 +46,8 @@ public class ParcelRemovedFromDeliveryMessageImpl implements ParcelRemovedFromDe
 
     private com.commercetools.api.models.order.Parcel parcel;
 
+    private String shippingKey;
+
     @JsonCreator
     ParcelRemovedFromDeliveryMessageImpl(@JsonProperty("id") final String id,
             @JsonProperty("version") final Long version,
@@ -58,7 +60,8 @@ public class ParcelRemovedFromDeliveryMessageImpl implements ParcelRemovedFromDe
             @JsonProperty("resourceVersion") final Long resourceVersion,
             @JsonProperty("resourceUserProvidedIdentifiers") final com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers,
             @JsonProperty("deliveryId") final String deliveryId,
-            @JsonProperty("parcel") final com.commercetools.api.models.order.Parcel parcel) {
+            @JsonProperty("parcel") final com.commercetools.api.models.order.Parcel parcel,
+            @JsonProperty("shippingKey") final String shippingKey) {
         this.id = id;
         this.version = version;
         this.createdAt = createdAt;
@@ -71,6 +74,7 @@ public class ParcelRemovedFromDeliveryMessageImpl implements ParcelRemovedFromDe
         this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
         this.deliveryId = deliveryId;
         this.parcel = parcel;
+        this.shippingKey = shippingKey;
         this.type = PARCEL_REMOVED_FROM_DELIVERY;
     }
 
@@ -182,6 +186,14 @@ public class ParcelRemovedFromDeliveryMessageImpl implements ParcelRemovedFromDe
         return this.parcel;
     }
 
+    /**
+     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multi</code> ShippingMode.</p>
+     */
+
+    public String getShippingKey() {
+        return this.shippingKey;
+    }
+
     public void setId(final String id) {
         this.id = id;
     }
@@ -231,6 +243,10 @@ public class ParcelRemovedFromDeliveryMessageImpl implements ParcelRemovedFromDe
         this.parcel = parcel;
     }
 
+    public void setShippingKey(final String shippingKey) {
+        this.shippingKey = shippingKey;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -254,6 +270,7 @@ public class ParcelRemovedFromDeliveryMessageImpl implements ParcelRemovedFromDe
                 .append(resourceUserProvidedIdentifiers, that.resourceUserProvidedIdentifiers)
                 .append(deliveryId, that.deliveryId)
                 .append(parcel, that.parcel)
+                .append(shippingKey, that.shippingKey)
                 .isEquals();
     }
 
@@ -272,6 +289,7 @@ public class ParcelRemovedFromDeliveryMessageImpl implements ParcelRemovedFromDe
                 .append(resourceUserProvidedIdentifiers)
                 .append(deliveryId)
                 .append(parcel)
+                .append(shippingKey)
                 .toHashCode();
     }
 

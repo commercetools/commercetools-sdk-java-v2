@@ -50,11 +50,17 @@ public class CartImpl implements Cart, ModelBase {
 
     private com.commercetools.api.models.cart.TaxedPrice taxedPrice;
 
+    private com.commercetools.api.models.cart.TaxedPrice taxedShippingPrice;
+
     private com.commercetools.api.models.cart.CartState cartState;
 
     private com.commercetools.api.models.common.Address shippingAddress;
 
     private com.commercetools.api.models.common.Address billingAddress;
+
+    private com.commercetools.api.models.cart.ShippingMode shippingMode;
+
+    private java.util.List<com.commercetools.api.models.cart.Shipping> shipping;
 
     private com.commercetools.api.models.cart.InventoryMode inventoryMode;
 
@@ -107,9 +113,12 @@ public class CartImpl implements Cart, ModelBase {
             @JsonProperty("customLineItems") final java.util.List<com.commercetools.api.models.cart.CustomLineItem> customLineItems,
             @JsonProperty("totalPrice") final com.commercetools.api.models.common.TypedMoney totalPrice,
             @JsonProperty("taxedPrice") final com.commercetools.api.models.cart.TaxedPrice taxedPrice,
+            @JsonProperty("taxedShippingPrice") final com.commercetools.api.models.cart.TaxedPrice taxedShippingPrice,
             @JsonProperty("cartState") final com.commercetools.api.models.cart.CartState cartState,
             @JsonProperty("shippingAddress") final com.commercetools.api.models.common.Address shippingAddress,
             @JsonProperty("billingAddress") final com.commercetools.api.models.common.Address billingAddress,
+            @JsonProperty("shippingMode") final com.commercetools.api.models.cart.ShippingMode shippingMode,
+            @JsonProperty("shipping") final java.util.List<com.commercetools.api.models.cart.Shipping> shipping,
             @JsonProperty("inventoryMode") final com.commercetools.api.models.cart.InventoryMode inventoryMode,
             @JsonProperty("taxMode") final com.commercetools.api.models.cart.TaxMode taxMode,
             @JsonProperty("taxRoundingMode") final com.commercetools.api.models.cart.RoundingMode taxRoundingMode,
@@ -143,9 +152,12 @@ public class CartImpl implements Cart, ModelBase {
         this.customLineItems = customLineItems;
         this.totalPrice = totalPrice;
         this.taxedPrice = taxedPrice;
+        this.taxedShippingPrice = taxedShippingPrice;
         this.cartState = cartState;
         this.shippingAddress = shippingAddress;
         this.billingAddress = billingAddress;
+        this.shippingMode = shippingMode;
+        this.shipping = shipping;
         this.inventoryMode = inventoryMode;
         this.taxMode = taxMode;
         this.taxRoundingMode = taxRoundingMode;
@@ -290,6 +302,14 @@ public class CartImpl implements Cart, ModelBase {
     }
 
     /**
+     *  <p>Sum of <code>taxedPrice</code> of ShippingInfo across all Shipping Methods. For <code>Platform</code> TaxMode, it is set automatically only if shipping address is set or Shipping Method is added to the Cart.</p>
+     */
+
+    public com.commercetools.api.models.cart.TaxedPrice getTaxedShippingPrice() {
+        return this.taxedShippingPrice;
+    }
+
+    /**
      *
      */
 
@@ -311,6 +331,23 @@ public class CartImpl implements Cart, ModelBase {
 
     public com.commercetools.api.models.common.Address getBillingAddress() {
         return this.billingAddress;
+    }
+
+    /**
+     *  <p>Indicates whether one or multiple Shipping Methods are added to the Cart.</p>
+     */
+
+    public com.commercetools.api.models.cart.ShippingMode getShippingMode() {
+        return this.shippingMode;
+    }
+
+    /**
+     *  <p>Holds all shipping-related information per Shipping Method of a Cart with <code>Multi</code> ShippingMode.</p>
+     *  <p>It is automatically updated after the Shipping Method is added.</p>
+     */
+
+    public java.util.List<com.commercetools.api.models.cart.Shipping> getShipping() {
+        return this.shipping;
     }
 
     /**
@@ -362,7 +399,7 @@ public class CartImpl implements Cart, ModelBase {
     }
 
     /**
-     *  <p>Set automatically once the ShippingMethod is set.</p>
+     *  <p>Shipping-related information of a Cart with <code>Single</code> ShippingMode. Set automatically once the ShippingMethod is set.</p>
      */
 
     public com.commercetools.api.models.cart.ShippingInfo getShippingInfo() {
@@ -526,6 +563,10 @@ public class CartImpl implements Cart, ModelBase {
         this.taxedPrice = taxedPrice;
     }
 
+    public void setTaxedShippingPrice(final com.commercetools.api.models.cart.TaxedPrice taxedShippingPrice) {
+        this.taxedShippingPrice = taxedShippingPrice;
+    }
+
     public void setCartState(final com.commercetools.api.models.cart.CartState cartState) {
         this.cartState = cartState;
     }
@@ -536,6 +577,18 @@ public class CartImpl implements Cart, ModelBase {
 
     public void setBillingAddress(final com.commercetools.api.models.common.Address billingAddress) {
         this.billingAddress = billingAddress;
+    }
+
+    public void setShippingMode(final com.commercetools.api.models.cart.ShippingMode shippingMode) {
+        this.shippingMode = shippingMode;
+    }
+
+    public void setShipping(final com.commercetools.api.models.cart.Shipping... shipping) {
+        this.shipping = new ArrayList<>(Arrays.asList(shipping));
+    }
+
+    public void setShipping(final java.util.List<com.commercetools.api.models.cart.Shipping> shipping) {
+        this.shipping = shipping;
     }
 
     public void setInventoryMode(final com.commercetools.api.models.cart.InventoryMode inventoryMode) {
@@ -657,9 +710,12 @@ public class CartImpl implements Cart, ModelBase {
                 .append(customLineItems, that.customLineItems)
                 .append(totalPrice, that.totalPrice)
                 .append(taxedPrice, that.taxedPrice)
+                .append(taxedShippingPrice, that.taxedShippingPrice)
                 .append(cartState, that.cartState)
                 .append(shippingAddress, that.shippingAddress)
                 .append(billingAddress, that.billingAddress)
+                .append(shippingMode, that.shippingMode)
+                .append(shipping, that.shipping)
                 .append(inventoryMode, that.inventoryMode)
                 .append(taxMode, that.taxMode)
                 .append(taxRoundingMode, that.taxRoundingMode)
@@ -698,9 +754,12 @@ public class CartImpl implements Cart, ModelBase {
                 .append(customLineItems)
                 .append(totalPrice)
                 .append(taxedPrice)
+                .append(taxedShippingPrice)
                 .append(cartState)
                 .append(shippingAddress)
                 .append(billingAddress)
+                .append(shippingMode)
+                .append(shipping)
                 .append(inventoryMode)
                 .append(taxMode)
                 .append(taxRoundingMode)

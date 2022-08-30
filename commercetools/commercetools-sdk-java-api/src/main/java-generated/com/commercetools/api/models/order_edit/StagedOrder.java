@@ -26,6 +26,8 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusLineItems(lineItemsBuilder -> lineItemsBuilder)
  *             .plusCustomLineItems(customLineItemsBuilder -> customLineItemsBuilder)
  *             .totalPrice(totalPriceBuilder -> totalPriceBuilder)
+ *             .shippingMode(ShippingMode.SINGLE)
+ *             .plusShipping(shippingBuilder -> shippingBuilder)
  *             .orderState(OrderState.OPEN)
  *             .plusSyncInfo(syncInfoBuilder -> syncInfoBuilder)
  *             .origin(CartOrigin.CUSTOMER)
@@ -60,8 +62,11 @@ public interface StagedOrder extends Order {
         instance.setCustomLineItems(template.getCustomLineItems());
         instance.setTotalPrice(template.getTotalPrice());
         instance.setTaxedPrice(template.getTaxedPrice());
+        instance.setTaxedShippingPrice(template.getTaxedShippingPrice());
         instance.setShippingAddress(template.getShippingAddress());
         instance.setBillingAddress(template.getBillingAddress());
+        instance.setShippingMode(template.getShippingMode());
+        instance.setShipping(template.getShipping());
         instance.setTaxMode(template.getTaxMode());
         instance.setTaxRoundingMode(template.getTaxRoundingMode());
         instance.setCustomerGroup(template.getCustomerGroup());

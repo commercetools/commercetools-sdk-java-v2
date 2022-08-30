@@ -23,6 +23,8 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusLineItems(lineItemsBuilder -> lineItemsBuilder)
  *             .plusCustomLineItems(customLineItemsBuilder -> customLineItemsBuilder)
  *             .totalPrice(totalPriceBuilder -> totalPriceBuilder)
+ *             .shippingMode(ShippingMode.SINGLE)
+ *             .plusShipping(shippingBuilder -> shippingBuilder)
  *             .orderState(OrderState.OPEN)
  *             .plusSyncInfo(syncInfoBuilder -> syncInfoBuilder)
  *             .origin(CartOrigin.CUSTOMER)
@@ -76,10 +78,17 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
     private com.commercetools.api.models.cart.TaxedPrice taxedPrice;
 
     @Nullable
+    private com.commercetools.api.models.cart.TaxedPrice taxedShippingPrice;
+
+    @Nullable
     private com.commercetools.api.models.common.Address shippingAddress;
 
     @Nullable
     private com.commercetools.api.models.common.Address billingAddress;
+
+    private com.commercetools.api.models.cart.ShippingMode shippingMode;
+
+    private java.util.List<com.commercetools.api.models.cart.Shipping> shipping;
 
     @Nullable
     private com.commercetools.api.models.cart.TaxMode taxMode;
@@ -439,7 +448,28 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
     }
 
     /**
-     *
+     *  <p>Sum of <code>taxedPrice</code> of ShippingInfo across all Shipping Methods. For <code>Platform</code> TaxMode, it is set automatically only if shipping address is set or Shipping Method is added to the Cart.</p>
+     */
+
+    public StagedOrderBuilder taxedShippingPrice(
+            Function<com.commercetools.api.models.cart.TaxedPriceBuilder, com.commercetools.api.models.cart.TaxedPriceBuilder> builder) {
+        this.taxedShippingPrice = builder.apply(com.commercetools.api.models.cart.TaxedPriceBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Sum of <code>taxedPrice</code> of ShippingInfo across all Shipping Methods. For <code>Platform</code> TaxMode, it is set automatically only if shipping address is set or Shipping Method is added to the Cart.</p>
+     */
+
+    public StagedOrderBuilder taxedShippingPrice(
+            @Nullable final com.commercetools.api.models.cart.TaxedPrice taxedShippingPrice) {
+        this.taxedShippingPrice = taxedShippingPrice;
+        return this;
+    }
+
+    /**
+     *  <p>Holds all shipping-related information per Shipping Method.</p>
+     *  <p>For <code>Multi</code> ShippingMode, it is updated automatically after the Shipping Methods are added.</p>
      */
 
     public StagedOrderBuilder shippingAddress(
@@ -449,7 +479,8 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
     }
 
     /**
-     *
+     *  <p>Holds all shipping-related information per Shipping Method.</p>
+     *  <p>For <code>Multi</code> ShippingMode, it is updated automatically after the Shipping Methods are added.</p>
      */
 
     public StagedOrderBuilder shippingAddress(
@@ -475,6 +506,74 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
     public StagedOrderBuilder billingAddress(
             @Nullable final com.commercetools.api.models.common.Address billingAddress) {
         this.billingAddress = billingAddress;
+        return this;
+    }
+
+    /**
+     *  <p>Indicates whether one or multiple Shipping Methods are added to the Cart.</p>
+     */
+
+    public StagedOrderBuilder shippingMode(final com.commercetools.api.models.cart.ShippingMode shippingMode) {
+        this.shippingMode = shippingMode;
+        return this;
+    }
+
+    /**
+     *  <p>Holds all shipping-related information per Shipping Method for <code>Multi</code> ShippingMode.</p>
+     *  <p>It is updated automatically after the Shipping Method is added.</p>
+     */
+
+    public StagedOrderBuilder shipping(final com.commercetools.api.models.cart.Shipping... shipping) {
+        this.shipping = new ArrayList<>(Arrays.asList(shipping));
+        return this;
+    }
+
+    /**
+     *  <p>Holds all shipping-related information per Shipping Method for <code>Multi</code> ShippingMode.</p>
+     *  <p>It is updated automatically after the Shipping Method is added.</p>
+     */
+
+    public StagedOrderBuilder shipping(final java.util.List<com.commercetools.api.models.cart.Shipping> shipping) {
+        this.shipping = shipping;
+        return this;
+    }
+
+    /**
+     *  <p>Holds all shipping-related information per Shipping Method for <code>Multi</code> ShippingMode.</p>
+     *  <p>It is updated automatically after the Shipping Method is added.</p>
+     */
+
+    public StagedOrderBuilder plusShipping(final com.commercetools.api.models.cart.Shipping... shipping) {
+        if (this.shipping == null) {
+            this.shipping = new ArrayList<>();
+        }
+        this.shipping.addAll(Arrays.asList(shipping));
+        return this;
+    }
+
+    /**
+     *  <p>Holds all shipping-related information per Shipping Method for <code>Multi</code> ShippingMode.</p>
+     *  <p>It is updated automatically after the Shipping Method is added.</p>
+     */
+
+    public StagedOrderBuilder plusShipping(
+            Function<com.commercetools.api.models.cart.ShippingBuilder, com.commercetools.api.models.cart.ShippingBuilder> builder) {
+        if (this.shipping == null) {
+            this.shipping = new ArrayList<>();
+        }
+        this.shipping.add(builder.apply(com.commercetools.api.models.cart.ShippingBuilder.of()).build());
+        return this;
+    }
+
+    /**
+     *  <p>Holds all shipping-related information per Shipping Method for <code>Multi</code> ShippingMode.</p>
+     *  <p>It is updated automatically after the Shipping Method is added.</p>
+     */
+
+    public StagedOrderBuilder withShipping(
+            Function<com.commercetools.api.models.cart.ShippingBuilder, com.commercetools.api.models.cart.ShippingBuilder> builder) {
+        this.shipping = new ArrayList<>();
+        this.shipping.add(builder.apply(com.commercetools.api.models.cart.ShippingBuilder.of()).build());
         return this;
     }
 
@@ -1096,6 +1195,11 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
     }
 
     @Nullable
+    public com.commercetools.api.models.cart.TaxedPrice getTaxedShippingPrice() {
+        return this.taxedShippingPrice;
+    }
+
+    @Nullable
     public com.commercetools.api.models.common.Address getShippingAddress() {
         return this.shippingAddress;
     }
@@ -1103,6 +1207,14 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
     @Nullable
     public com.commercetools.api.models.common.Address getBillingAddress() {
         return this.billingAddress;
+    }
+
+    public com.commercetools.api.models.cart.ShippingMode getShippingMode() {
+        return this.shippingMode;
+    }
+
+    public java.util.List<com.commercetools.api.models.cart.Shipping> getShipping() {
+        return this.shipping;
     }
 
     @Nullable
@@ -1230,16 +1342,18 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
         Objects.requireNonNull(lineItems, StagedOrder.class + ": lineItems is missing");
         Objects.requireNonNull(customLineItems, StagedOrder.class + ": customLineItems is missing");
         Objects.requireNonNull(totalPrice, StagedOrder.class + ": totalPrice is missing");
+        Objects.requireNonNull(shippingMode, StagedOrder.class + ": shippingMode is missing");
+        Objects.requireNonNull(shipping, StagedOrder.class + ": shipping is missing");
         Objects.requireNonNull(orderState, StagedOrder.class + ": orderState is missing");
         Objects.requireNonNull(syncInfo, StagedOrder.class + ": syncInfo is missing");
         Objects.requireNonNull(origin, StagedOrder.class + ": origin is missing");
         Objects.requireNonNull(refusedGifts, StagedOrder.class + ": refusedGifts is missing");
         return new StagedOrderImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, completedAt,
             orderNumber, customerId, customerEmail, anonymousId, store, lineItems, customLineItems, totalPrice,
-            taxedPrice, shippingAddress, billingAddress, taxMode, taxRoundingMode, customerGroup, country, orderState,
-            state, shipmentState, paymentState, shippingInfo, syncInfo, returnInfo, discountCodes,
-            lastMessageSequenceNumber, cart, quote, custom, paymentInfo, locale, inventoryMode, origin,
-            taxCalculationMode, shippingRateInput, itemShippingAddresses, refusedGifts);
+            taxedPrice, taxedShippingPrice, shippingAddress, billingAddress, shippingMode, shipping, taxMode,
+            taxRoundingMode, customerGroup, country, orderState, state, shipmentState, paymentState, shippingInfo,
+            syncInfo, returnInfo, discountCodes, lastMessageSequenceNumber, cart, quote, custom, paymentInfo, locale,
+            inventoryMode, origin, taxCalculationMode, shippingRateInput, itemShippingAddresses, refusedGifts);
     }
 
     /**
@@ -1248,10 +1362,10 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
     public StagedOrder buildUnchecked() {
         return new StagedOrderImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, completedAt,
             orderNumber, customerId, customerEmail, anonymousId, store, lineItems, customLineItems, totalPrice,
-            taxedPrice, shippingAddress, billingAddress, taxMode, taxRoundingMode, customerGroup, country, orderState,
-            state, shipmentState, paymentState, shippingInfo, syncInfo, returnInfo, discountCodes,
-            lastMessageSequenceNumber, cart, quote, custom, paymentInfo, locale, inventoryMode, origin,
-            taxCalculationMode, shippingRateInput, itemShippingAddresses, refusedGifts);
+            taxedPrice, taxedShippingPrice, shippingAddress, billingAddress, shippingMode, shipping, taxMode,
+            taxRoundingMode, customerGroup, country, orderState, state, shipmentState, paymentState, shippingInfo,
+            syncInfo, returnInfo, discountCodes, lastMessageSequenceNumber, cart, quote, custom, paymentInfo, locale,
+            inventoryMode, origin, taxCalculationMode, shippingRateInput, itemShippingAddresses, refusedGifts);
     }
 
     public static StagedOrderBuilder of() {
@@ -1276,8 +1390,11 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
         builder.customLineItems = template.getCustomLineItems();
         builder.totalPrice = template.getTotalPrice();
         builder.taxedPrice = template.getTaxedPrice();
+        builder.taxedShippingPrice = template.getTaxedShippingPrice();
         builder.shippingAddress = template.getShippingAddress();
         builder.billingAddress = template.getBillingAddress();
+        builder.shippingMode = template.getShippingMode();
+        builder.shipping = template.getShipping();
         builder.taxMode = template.getTaxMode();
         builder.taxRoundingMode = template.getTaxRoundingMode();
         builder.customerGroup = template.getCustomerGroup();

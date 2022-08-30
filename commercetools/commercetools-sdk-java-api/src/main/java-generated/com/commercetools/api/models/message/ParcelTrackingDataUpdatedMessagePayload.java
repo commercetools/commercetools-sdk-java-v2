@@ -55,11 +55,20 @@ public interface ParcelTrackingDataUpdatedMessagePayload extends OrderMessagePay
     @JsonProperty("trackingData")
     public TrackingData getTrackingData();
 
+    /**
+     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multi</code> ShippingMode.</p>
+     */
+
+    @JsonProperty("shippingKey")
+    public String getShippingKey();
+
     public void setDeliveryId(final String deliveryId);
 
     public void setParcelId(final String parcelId);
 
     public void setTrackingData(final TrackingData trackingData);
+
+    public void setShippingKey(final String shippingKey);
 
     public static ParcelTrackingDataUpdatedMessagePayload of() {
         return new ParcelTrackingDataUpdatedMessagePayloadImpl();
@@ -70,6 +79,7 @@ public interface ParcelTrackingDataUpdatedMessagePayload extends OrderMessagePay
         instance.setDeliveryId(template.getDeliveryId());
         instance.setParcelId(template.getParcelId());
         instance.setTrackingData(template.getTrackingData());
+        instance.setShippingKey(template.getShippingKey());
         return instance;
     }
 

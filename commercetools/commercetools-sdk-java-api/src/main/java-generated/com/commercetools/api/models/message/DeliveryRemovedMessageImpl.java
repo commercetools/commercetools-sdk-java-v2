@@ -44,6 +44,8 @@ public class DeliveryRemovedMessageImpl implements DeliveryRemovedMessage, Model
 
     private com.commercetools.api.models.order.Delivery delivery;
 
+    private String shippingKey;
+
     @JsonCreator
     DeliveryRemovedMessageImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version,
             @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt,
@@ -54,7 +56,8 @@ public class DeliveryRemovedMessageImpl implements DeliveryRemovedMessage, Model
             @JsonProperty("resource") final com.commercetools.api.models.common.Reference resource,
             @JsonProperty("resourceVersion") final Long resourceVersion,
             @JsonProperty("resourceUserProvidedIdentifiers") final com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers,
-            @JsonProperty("delivery") final com.commercetools.api.models.order.Delivery delivery) {
+            @JsonProperty("delivery") final com.commercetools.api.models.order.Delivery delivery,
+            @JsonProperty("shippingKey") final String shippingKey) {
         this.id = id;
         this.version = version;
         this.createdAt = createdAt;
@@ -66,6 +69,7 @@ public class DeliveryRemovedMessageImpl implements DeliveryRemovedMessage, Model
         this.resourceVersion = resourceVersion;
         this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
         this.delivery = delivery;
+        this.shippingKey = shippingKey;
         this.type = DELIVERY_REMOVED;
     }
 
@@ -169,6 +173,14 @@ public class DeliveryRemovedMessageImpl implements DeliveryRemovedMessage, Model
         return this.delivery;
     }
 
+    /**
+     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multi</code> ShippingMode.</p>
+     */
+
+    public String getShippingKey() {
+        return this.shippingKey;
+    }
+
     public void setId(final String id) {
         this.id = id;
     }
@@ -214,6 +226,10 @@ public class DeliveryRemovedMessageImpl implements DeliveryRemovedMessage, Model
         this.delivery = delivery;
     }
 
+    public void setShippingKey(final String shippingKey) {
+        this.shippingKey = shippingKey;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -236,6 +252,7 @@ public class DeliveryRemovedMessageImpl implements DeliveryRemovedMessage, Model
                 .append(type, that.type)
                 .append(resourceUserProvidedIdentifiers, that.resourceUserProvidedIdentifiers)
                 .append(delivery, that.delivery)
+                .append(shippingKey, that.shippingKey)
                 .isEquals();
     }
 
@@ -253,6 +270,7 @@ public class DeliveryRemovedMessageImpl implements DeliveryRemovedMessage, Model
                 .append(type)
                 .append(resourceUserProvidedIdentifiers)
                 .append(delivery)
+                .append(shippingKey)
                 .toHashCode();
     }
 

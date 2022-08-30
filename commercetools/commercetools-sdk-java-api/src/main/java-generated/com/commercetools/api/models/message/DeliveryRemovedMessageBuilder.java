@@ -56,6 +56,9 @@ public class DeliveryRemovedMessageBuilder implements Builder<DeliveryRemovedMes
 
     private com.commercetools.api.models.order.Delivery delivery;
 
+    @Nullable
+    private String shippingKey;
+
     /**
      *  <p>Unique identifier of the Message. Can be used to track which Messages have been processed.</p>
      */
@@ -210,6 +213,15 @@ public class DeliveryRemovedMessageBuilder implements Builder<DeliveryRemovedMes
         return this;
     }
 
+    /**
+     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multi</code> ShippingMode.</p>
+     */
+
+    public DeliveryRemovedMessageBuilder shippingKey(@Nullable final String shippingKey) {
+        this.shippingKey = shippingKey;
+        return this;
+    }
+
     public String getId() {
         return this.id;
     }
@@ -257,6 +269,11 @@ public class DeliveryRemovedMessageBuilder implements Builder<DeliveryRemovedMes
         return this.delivery;
     }
 
+    @Nullable
+    public String getShippingKey() {
+        return this.shippingKey;
+    }
+
     public DeliveryRemovedMessage build() {
         Objects.requireNonNull(id, DeliveryRemovedMessage.class + ": id is missing");
         Objects.requireNonNull(version, DeliveryRemovedMessage.class + ": version is missing");
@@ -267,7 +284,7 @@ public class DeliveryRemovedMessageBuilder implements Builder<DeliveryRemovedMes
         Objects.requireNonNull(resourceVersion, DeliveryRemovedMessage.class + ": resourceVersion is missing");
         Objects.requireNonNull(delivery, DeliveryRemovedMessage.class + ": delivery is missing");
         return new DeliveryRemovedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
-            sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, delivery);
+            sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, delivery, shippingKey);
     }
 
     /**
@@ -275,7 +292,7 @@ public class DeliveryRemovedMessageBuilder implements Builder<DeliveryRemovedMes
      */
     public DeliveryRemovedMessage buildUnchecked() {
         return new DeliveryRemovedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
-            sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, delivery);
+            sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, delivery, shippingKey);
     }
 
     public static DeliveryRemovedMessageBuilder of() {
@@ -295,6 +312,7 @@ public class DeliveryRemovedMessageBuilder implements Builder<DeliveryRemovedMes
         builder.resourceVersion = template.getResourceVersion();
         builder.resourceUserProvidedIdentifiers = template.getResourceUserProvidedIdentifiers();
         builder.delivery = template.getDelivery();
+        builder.shippingKey = template.getShippingKey();
         return builder;
     }
 

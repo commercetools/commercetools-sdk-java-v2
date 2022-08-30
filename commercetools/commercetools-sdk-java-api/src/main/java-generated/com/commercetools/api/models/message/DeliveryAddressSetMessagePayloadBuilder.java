@@ -32,6 +32,9 @@ public class DeliveryAddressSetMessagePayloadBuilder implements Builder<Delivery
     @Nullable
     private com.commercetools.api.models.common.Address oldAddress;
 
+    @Nullable
+    private String shippingKey;
+
     /**
      *  <p>Unique identifier of the Parcel.</p>
      */
@@ -81,6 +84,15 @@ public class DeliveryAddressSetMessagePayloadBuilder implements Builder<Delivery
         return this;
     }
 
+    /**
+     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multi</code> ShippingMode.</p>
+     */
+
+    public DeliveryAddressSetMessagePayloadBuilder shippingKey(@Nullable final String shippingKey) {
+        this.shippingKey = shippingKey;
+        return this;
+    }
+
     public String getDeliveryId() {
         return this.deliveryId;
     }
@@ -95,16 +107,21 @@ public class DeliveryAddressSetMessagePayloadBuilder implements Builder<Delivery
         return this.oldAddress;
     }
 
+    @Nullable
+    public String getShippingKey() {
+        return this.shippingKey;
+    }
+
     public DeliveryAddressSetMessagePayload build() {
         Objects.requireNonNull(deliveryId, DeliveryAddressSetMessagePayload.class + ": deliveryId is missing");
-        return new DeliveryAddressSetMessagePayloadImpl(deliveryId, address, oldAddress);
+        return new DeliveryAddressSetMessagePayloadImpl(deliveryId, address, oldAddress, shippingKey);
     }
 
     /**
      * builds DeliveryAddressSetMessagePayload without checking for non null required values
      */
     public DeliveryAddressSetMessagePayload buildUnchecked() {
-        return new DeliveryAddressSetMessagePayloadImpl(deliveryId, address, oldAddress);
+        return new DeliveryAddressSetMessagePayloadImpl(deliveryId, address, oldAddress, shippingKey);
     }
 
     public static DeliveryAddressSetMessagePayloadBuilder of() {
@@ -116,6 +133,7 @@ public class DeliveryAddressSetMessagePayloadBuilder implements Builder<Delivery
         builder.deliveryId = template.getDeliveryId();
         builder.address = template.getAddress();
         builder.oldAddress = template.getOldAddress();
+        builder.shippingKey = template.getShippingKey();
         return builder;
     }
 

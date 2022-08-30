@@ -26,6 +26,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .lineItemId("{lineItemId}")
  *             .plusDiscountedPricePerQuantity(discountedPricePerQuantityBuilder -> discountedPricePerQuantityBuilder)
  *             .totalPrice(totalPriceBuilder -> totalPriceBuilder)
+ *             .plusTaxedPricePortions(taxedPricePortionsBuilder -> taxedPricePortionsBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -64,6 +65,8 @@ public class OrderLineItemDiscountSetMessageBuilder implements Builder<OrderLine
 
     @Nullable
     private com.commercetools.api.models.cart.TaxedItemPrice taxedPrice;
+
+    private java.util.List<com.commercetools.api.models.cart.MethodTaxedPrice> taxedPricePortions;
 
     /**
      *  <p>Unique identifier of the Message. Can be used to track which Messages have been processed.</p>
@@ -309,6 +312,65 @@ public class OrderLineItemDiscountSetMessageBuilder implements Builder<OrderLine
         return this;
     }
 
+    /**
+     *  <p>Taxed price of the Shipping Methods in a Cart with <code>Multi</code> ShippingMode..</p>
+     */
+
+    public OrderLineItemDiscountSetMessageBuilder taxedPricePortions(
+            final com.commercetools.api.models.cart.MethodTaxedPrice... taxedPricePortions) {
+        this.taxedPricePortions = new ArrayList<>(Arrays.asList(taxedPricePortions));
+        return this;
+    }
+
+    /**
+     *  <p>Taxed price of the Shipping Methods in a Cart with <code>Multi</code> ShippingMode..</p>
+     */
+
+    public OrderLineItemDiscountSetMessageBuilder taxedPricePortions(
+            final java.util.List<com.commercetools.api.models.cart.MethodTaxedPrice> taxedPricePortions) {
+        this.taxedPricePortions = taxedPricePortions;
+        return this;
+    }
+
+    /**
+     *  <p>Taxed price of the Shipping Methods in a Cart with <code>Multi</code> ShippingMode..</p>
+     */
+
+    public OrderLineItemDiscountSetMessageBuilder plusTaxedPricePortions(
+            final com.commercetools.api.models.cart.MethodTaxedPrice... taxedPricePortions) {
+        if (this.taxedPricePortions == null) {
+            this.taxedPricePortions = new ArrayList<>();
+        }
+        this.taxedPricePortions.addAll(Arrays.asList(taxedPricePortions));
+        return this;
+    }
+
+    /**
+     *  <p>Taxed price of the Shipping Methods in a Cart with <code>Multi</code> ShippingMode..</p>
+     */
+
+    public OrderLineItemDiscountSetMessageBuilder plusTaxedPricePortions(
+            Function<com.commercetools.api.models.cart.MethodTaxedPriceBuilder, com.commercetools.api.models.cart.MethodTaxedPriceBuilder> builder) {
+        if (this.taxedPricePortions == null) {
+            this.taxedPricePortions = new ArrayList<>();
+        }
+        this.taxedPricePortions
+                .add(builder.apply(com.commercetools.api.models.cart.MethodTaxedPriceBuilder.of()).build());
+        return this;
+    }
+
+    /**
+     *  <p>Taxed price of the Shipping Methods in a Cart with <code>Multi</code> ShippingMode..</p>
+     */
+
+    public OrderLineItemDiscountSetMessageBuilder withTaxedPricePortions(
+            Function<com.commercetools.api.models.cart.MethodTaxedPriceBuilder, com.commercetools.api.models.cart.MethodTaxedPriceBuilder> builder) {
+        this.taxedPricePortions = new ArrayList<>();
+        this.taxedPricePortions
+                .add(builder.apply(com.commercetools.api.models.cart.MethodTaxedPriceBuilder.of()).build());
+        return this;
+    }
+
     public String getId() {
         return this.id;
     }
@@ -369,6 +431,10 @@ public class OrderLineItemDiscountSetMessageBuilder implements Builder<OrderLine
         return this.taxedPrice;
     }
 
+    public java.util.List<com.commercetools.api.models.cart.MethodTaxedPrice> getTaxedPricePortions() {
+        return this.taxedPricePortions;
+    }
+
     public OrderLineItemDiscountSetMessage build() {
         Objects.requireNonNull(id, OrderLineItemDiscountSetMessage.class + ": id is missing");
         Objects.requireNonNull(version, OrderLineItemDiscountSetMessage.class + ": version is missing");
@@ -381,9 +447,11 @@ public class OrderLineItemDiscountSetMessageBuilder implements Builder<OrderLine
         Objects.requireNonNull(discountedPricePerQuantity,
             OrderLineItemDiscountSetMessage.class + ": discountedPricePerQuantity is missing");
         Objects.requireNonNull(totalPrice, OrderLineItemDiscountSetMessage.class + ": totalPrice is missing");
+        Objects.requireNonNull(taxedPricePortions,
+            OrderLineItemDiscountSetMessage.class + ": taxedPricePortions is missing");
         return new OrderLineItemDiscountSetMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy,
             createdBy, sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, lineItemId,
-            discountedPricePerQuantity, totalPrice, taxedPrice);
+            discountedPricePerQuantity, totalPrice, taxedPrice, taxedPricePortions);
     }
 
     /**
@@ -392,7 +460,7 @@ public class OrderLineItemDiscountSetMessageBuilder implements Builder<OrderLine
     public OrderLineItemDiscountSetMessage buildUnchecked() {
         return new OrderLineItemDiscountSetMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy,
             createdBy, sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, lineItemId,
-            discountedPricePerQuantity, totalPrice, taxedPrice);
+            discountedPricePerQuantity, totalPrice, taxedPrice, taxedPricePortions);
     }
 
     public static OrderLineItemDiscountSetMessageBuilder of() {
@@ -415,6 +483,7 @@ public class OrderLineItemDiscountSetMessageBuilder implements Builder<OrderLine
         builder.discountedPricePerQuantity = template.getDiscountedPricePerQuantity();
         builder.totalPrice = template.getTotalPrice();
         builder.taxedPrice = template.getTaxedPrice();
+        builder.taxedPricePortions = template.getTaxedPricePortions();
         return builder;
     }
 

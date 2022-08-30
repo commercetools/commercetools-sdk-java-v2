@@ -62,6 +62,9 @@ public class DeliveryItemsUpdatedMessageBuilder implements Builder<DeliveryItems
 
     private java.util.List<com.commercetools.api.models.order.DeliveryItem> oldItems;
 
+    @Nullable
+    private String shippingKey;
+
     /**
      *  <p>Unique identifier of the Message. Can be used to track which Messages have been processed.</p>
      */
@@ -319,6 +322,15 @@ public class DeliveryItemsUpdatedMessageBuilder implements Builder<DeliveryItems
         return this;
     }
 
+    /**
+     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multi</code> ShippingMode.</p>
+     */
+
+    public DeliveryItemsUpdatedMessageBuilder shippingKey(@Nullable final String shippingKey) {
+        this.shippingKey = shippingKey;
+        return this;
+    }
+
     public String getId() {
         return this.id;
     }
@@ -374,6 +386,11 @@ public class DeliveryItemsUpdatedMessageBuilder implements Builder<DeliveryItems
         return this.oldItems;
     }
 
+    @Nullable
+    public String getShippingKey() {
+        return this.shippingKey;
+    }
+
     public DeliveryItemsUpdatedMessage build() {
         Objects.requireNonNull(id, DeliveryItemsUpdatedMessage.class + ": id is missing");
         Objects.requireNonNull(version, DeliveryItemsUpdatedMessage.class + ": version is missing");
@@ -386,7 +403,8 @@ public class DeliveryItemsUpdatedMessageBuilder implements Builder<DeliveryItems
         Objects.requireNonNull(items, DeliveryItemsUpdatedMessage.class + ": items is missing");
         Objects.requireNonNull(oldItems, DeliveryItemsUpdatedMessage.class + ": oldItems is missing");
         return new DeliveryItemsUpdatedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
-            sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, deliveryId, items, oldItems);
+            sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, deliveryId, items, oldItems,
+            shippingKey);
     }
 
     /**
@@ -394,7 +412,8 @@ public class DeliveryItemsUpdatedMessageBuilder implements Builder<DeliveryItems
      */
     public DeliveryItemsUpdatedMessage buildUnchecked() {
         return new DeliveryItemsUpdatedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
-            sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, deliveryId, items, oldItems);
+            sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, deliveryId, items, oldItems,
+            shippingKey);
     }
 
     public static DeliveryItemsUpdatedMessageBuilder of() {
@@ -416,6 +435,7 @@ public class DeliveryItemsUpdatedMessageBuilder implements Builder<DeliveryItems
         builder.deliveryId = template.getDeliveryId();
         builder.items = template.getItems();
         builder.oldItems = template.getOldItems();
+        builder.shippingKey = template.getShippingKey();
         return builder;
     }
 

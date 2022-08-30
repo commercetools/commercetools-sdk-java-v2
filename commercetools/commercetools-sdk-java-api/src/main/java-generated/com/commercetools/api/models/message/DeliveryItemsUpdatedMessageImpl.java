@@ -48,6 +48,8 @@ public class DeliveryItemsUpdatedMessageImpl implements DeliveryItemsUpdatedMess
 
     private java.util.List<com.commercetools.api.models.order.DeliveryItem> oldItems;
 
+    private String shippingKey;
+
     @JsonCreator
     DeliveryItemsUpdatedMessageImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version,
             @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt,
@@ -60,7 +62,8 @@ public class DeliveryItemsUpdatedMessageImpl implements DeliveryItemsUpdatedMess
             @JsonProperty("resourceUserProvidedIdentifiers") final com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers,
             @JsonProperty("deliveryId") final String deliveryId,
             @JsonProperty("items") final java.util.List<com.commercetools.api.models.order.DeliveryItem> items,
-            @JsonProperty("oldItems") final java.util.List<com.commercetools.api.models.order.DeliveryItem> oldItems) {
+            @JsonProperty("oldItems") final java.util.List<com.commercetools.api.models.order.DeliveryItem> oldItems,
+            @JsonProperty("shippingKey") final String shippingKey) {
         this.id = id;
         this.version = version;
         this.createdAt = createdAt;
@@ -74,6 +77,7 @@ public class DeliveryItemsUpdatedMessageImpl implements DeliveryItemsUpdatedMess
         this.deliveryId = deliveryId;
         this.items = items;
         this.oldItems = oldItems;
+        this.shippingKey = shippingKey;
         this.type = DELIVERY_ITEMS_UPDATED;
     }
 
@@ -193,6 +197,14 @@ public class DeliveryItemsUpdatedMessageImpl implements DeliveryItemsUpdatedMess
         return this.oldItems;
     }
 
+    /**
+     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multi</code> ShippingMode.</p>
+     */
+
+    public String getShippingKey() {
+        return this.shippingKey;
+    }
+
     public void setId(final String id) {
         this.id = id;
     }
@@ -254,6 +266,10 @@ public class DeliveryItemsUpdatedMessageImpl implements DeliveryItemsUpdatedMess
         this.oldItems = oldItems;
     }
 
+    public void setShippingKey(final String shippingKey) {
+        this.shippingKey = shippingKey;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -278,6 +294,7 @@ public class DeliveryItemsUpdatedMessageImpl implements DeliveryItemsUpdatedMess
                 .append(deliveryId, that.deliveryId)
                 .append(items, that.items)
                 .append(oldItems, that.oldItems)
+                .append(shippingKey, that.shippingKey)
                 .isEquals();
     }
 
@@ -297,6 +314,7 @@ public class DeliveryItemsUpdatedMessageImpl implements DeliveryItemsUpdatedMess
                 .append(deliveryId)
                 .append(items)
                 .append(oldItems)
+                .append(shippingKey)
                 .toHashCode();
     }
 

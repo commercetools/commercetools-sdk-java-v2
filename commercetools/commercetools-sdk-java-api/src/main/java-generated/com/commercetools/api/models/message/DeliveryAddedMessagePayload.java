@@ -41,7 +41,16 @@ public interface DeliveryAddedMessagePayload extends OrderMessagePayload {
     @JsonProperty("delivery")
     public Delivery getDelivery();
 
+    /**
+     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multi</code> ShippingMode.</p>
+     */
+
+    @JsonProperty("shippingKey")
+    public String getShippingKey();
+
     public void setDelivery(final Delivery delivery);
+
+    public void setShippingKey(final String shippingKey);
 
     public static DeliveryAddedMessagePayload of() {
         return new DeliveryAddedMessagePayloadImpl();
@@ -50,6 +59,7 @@ public interface DeliveryAddedMessagePayload extends OrderMessagePayload {
     public static DeliveryAddedMessagePayload of(final DeliveryAddedMessagePayload template) {
         DeliveryAddedMessagePayloadImpl instance = new DeliveryAddedMessagePayloadImpl();
         instance.setDelivery(template.getDelivery());
+        instance.setShippingKey(template.getShippingKey());
         return instance;
     }
 

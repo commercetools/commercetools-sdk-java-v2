@@ -54,11 +54,20 @@ public interface DeliveryAddressSetMessagePayload extends OrderMessagePayload {
     @JsonProperty("oldAddress")
     public Address getOldAddress();
 
+    /**
+     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multi</code> ShippingMode.</p>
+     */
+
+    @JsonProperty("shippingKey")
+    public String getShippingKey();
+
     public void setDeliveryId(final String deliveryId);
 
     public void setAddress(final Address address);
 
     public void setOldAddress(final Address oldAddress);
+
+    public void setShippingKey(final String shippingKey);
 
     public static DeliveryAddressSetMessagePayload of() {
         return new DeliveryAddressSetMessagePayloadImpl();
@@ -69,6 +78,7 @@ public interface DeliveryAddressSetMessagePayload extends OrderMessagePayload {
         instance.setDeliveryId(template.getDeliveryId());
         instance.setAddress(template.getAddress());
         instance.setOldAddress(template.getOldAddress());
+        instance.setShippingKey(template.getShippingKey());
         return instance;
     }
 

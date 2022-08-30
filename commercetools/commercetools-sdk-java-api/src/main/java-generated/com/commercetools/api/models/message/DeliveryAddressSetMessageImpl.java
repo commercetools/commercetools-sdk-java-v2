@@ -48,6 +48,8 @@ public class DeliveryAddressSetMessageImpl implements DeliveryAddressSetMessage,
 
     private com.commercetools.api.models.common.Address oldAddress;
 
+    private String shippingKey;
+
     @JsonCreator
     DeliveryAddressSetMessageImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version,
             @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt,
@@ -60,7 +62,8 @@ public class DeliveryAddressSetMessageImpl implements DeliveryAddressSetMessage,
             @JsonProperty("resourceUserProvidedIdentifiers") final com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers,
             @JsonProperty("deliveryId") final String deliveryId,
             @JsonProperty("address") final com.commercetools.api.models.common.Address address,
-            @JsonProperty("oldAddress") final com.commercetools.api.models.common.Address oldAddress) {
+            @JsonProperty("oldAddress") final com.commercetools.api.models.common.Address oldAddress,
+            @JsonProperty("shippingKey") final String shippingKey) {
         this.id = id;
         this.version = version;
         this.createdAt = createdAt;
@@ -74,6 +77,7 @@ public class DeliveryAddressSetMessageImpl implements DeliveryAddressSetMessage,
         this.deliveryId = deliveryId;
         this.address = address;
         this.oldAddress = oldAddress;
+        this.shippingKey = shippingKey;
         this.type = DELIVERY_ADDRESS_SET;
     }
 
@@ -193,6 +197,14 @@ public class DeliveryAddressSetMessageImpl implements DeliveryAddressSetMessage,
         return this.oldAddress;
     }
 
+    /**
+     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multi</code> ShippingMode.</p>
+     */
+
+    public String getShippingKey() {
+        return this.shippingKey;
+    }
+
     public void setId(final String id) {
         this.id = id;
     }
@@ -246,6 +258,10 @@ public class DeliveryAddressSetMessageImpl implements DeliveryAddressSetMessage,
         this.oldAddress = oldAddress;
     }
 
+    public void setShippingKey(final String shippingKey) {
+        this.shippingKey = shippingKey;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -270,6 +286,7 @@ public class DeliveryAddressSetMessageImpl implements DeliveryAddressSetMessage,
                 .append(deliveryId, that.deliveryId)
                 .append(address, that.address)
                 .append(oldAddress, that.oldAddress)
+                .append(shippingKey, that.shippingKey)
                 .isEquals();
     }
 
@@ -289,6 +306,7 @@ public class DeliveryAddressSetMessageImpl implements DeliveryAddressSetMessage,
                 .append(deliveryId)
                 .append(address)
                 .append(oldAddress)
+                .append(shippingKey)
                 .toHashCode();
     }
 

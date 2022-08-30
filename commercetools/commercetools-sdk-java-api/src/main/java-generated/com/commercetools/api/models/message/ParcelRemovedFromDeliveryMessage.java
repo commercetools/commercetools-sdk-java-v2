@@ -56,9 +56,18 @@ public interface ParcelRemovedFromDeliveryMessage extends OrderMessage {
     @JsonProperty("parcel")
     public Parcel getParcel();
 
+    /**
+     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multi</code> ShippingMode.</p>
+     */
+
+    @JsonProperty("shippingKey")
+    public String getShippingKey();
+
     public void setDeliveryId(final String deliveryId);
 
     public void setParcel(final Parcel parcel);
+
+    public void setShippingKey(final String shippingKey);
 
     public static ParcelRemovedFromDeliveryMessage of() {
         return new ParcelRemovedFromDeliveryMessageImpl();
@@ -78,6 +87,7 @@ public interface ParcelRemovedFromDeliveryMessage extends OrderMessage {
         instance.setResourceUserProvidedIdentifiers(template.getResourceUserProvidedIdentifiers());
         instance.setDeliveryId(template.getDeliveryId());
         instance.setParcel(template.getParcel());
+        instance.setShippingKey(template.getShippingKey());
         return instance;
     }
 

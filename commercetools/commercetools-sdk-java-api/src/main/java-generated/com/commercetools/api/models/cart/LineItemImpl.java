@@ -38,6 +38,8 @@ public class LineItemImpl implements LineItem, ModelBase {
 
     private com.commercetools.api.models.cart.TaxedItemPrice taxedPrice;
 
+    private java.util.List<com.commercetools.api.models.cart.MethodTaxedPrice> taxedPricePortions;
+
     private com.commercetools.api.models.common.TypedMoney totalPrice;
 
     private Long quantity;
@@ -47,6 +49,8 @@ public class LineItemImpl implements LineItem, ModelBase {
     private java.util.List<com.commercetools.api.models.order.ItemState> state;
 
     private com.commercetools.api.models.tax_category.TaxRate taxRate;
+
+    private java.util.List<com.commercetools.api.models.cart.MethodTaxRate> perMethodTaxRate;
 
     private com.commercetools.api.models.channel.ChannelReference supplyChannel;
 
@@ -75,11 +79,13 @@ public class LineItemImpl implements LineItem, ModelBase {
             @JsonProperty("variant") final com.commercetools.api.models.product.ProductVariant variant,
             @JsonProperty("price") final com.commercetools.api.models.common.Price price,
             @JsonProperty("taxedPrice") final com.commercetools.api.models.cart.TaxedItemPrice taxedPrice,
+            @JsonProperty("taxedPricePortions") final java.util.List<com.commercetools.api.models.cart.MethodTaxedPrice> taxedPricePortions,
             @JsonProperty("totalPrice") final com.commercetools.api.models.common.TypedMoney totalPrice,
             @JsonProperty("quantity") final Long quantity,
             @JsonProperty("addedAt") final java.time.ZonedDateTime addedAt,
             @JsonProperty("state") final java.util.List<com.commercetools.api.models.order.ItemState> state,
             @JsonProperty("taxRate") final com.commercetools.api.models.tax_category.TaxRate taxRate,
+            @JsonProperty("perMethodTaxRate") final java.util.List<com.commercetools.api.models.cart.MethodTaxRate> perMethodTaxRate,
             @JsonProperty("supplyChannel") final com.commercetools.api.models.channel.ChannelReference supplyChannel,
             @JsonProperty("distributionChannel") final com.commercetools.api.models.channel.ChannelReference distributionChannel,
             @JsonProperty("discountedPricePerQuantity") final java.util.List<com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantity> discountedPricePerQuantity,
@@ -98,11 +104,13 @@ public class LineItemImpl implements LineItem, ModelBase {
         this.variant = variant;
         this.price = price;
         this.taxedPrice = taxedPrice;
+        this.taxedPricePortions = taxedPricePortions;
         this.totalPrice = totalPrice;
         this.quantity = quantity;
         this.addedAt = addedAt;
         this.state = state;
         this.taxRate = taxRate;
+        this.perMethodTaxRate = perMethodTaxRate;
         this.supplyChannel = supplyChannel;
         this.distributionChannel = distributionChannel;
         this.discountedPricePerQuantity = discountedPricePerQuantity;
@@ -190,6 +198,14 @@ public class LineItemImpl implements LineItem, ModelBase {
     }
 
     /**
+     *  <p>Taxed price of the Shipping Method that is set automatically after <code>perMethodTaxRate</code> is set.</p>
+     */
+
+    public java.util.List<com.commercetools.api.models.cart.MethodTaxedPrice> getTaxedPricePortions() {
+        return this.taxedPricePortions;
+    }
+
+    /**
      *  <p>The total price of this line item. If the line item is discounted, then the <code>totalPrice</code> is the DiscountedLineItemPriceForQuantity multiplied by <code>quantity</code>. Otherwise the total price is the product price multiplied by the <code>quantity</code>. <code>totalPrice</code> may or may not include the taxes: it depends on the taxRate.includedInPrice property.</p>
      */
 
@@ -227,6 +243,15 @@ public class LineItemImpl implements LineItem, ModelBase {
 
     public com.commercetools.api.models.tax_category.TaxRate getTaxRate() {
         return this.taxRate;
+    }
+
+    /**
+     *  <p>Tax Rate per Shipping Method that is automatically set after the Shipping Method is added to a Cart with the <code>Platform</code> TaxMode and <code>Multi</code> ShippingMode.</p>
+     *  <p>For the <code>External</code> TaxMode, the Tax Rate must be set with ExternalTaxRateDraft.</p>
+     */
+
+    public java.util.List<com.commercetools.api.models.cart.MethodTaxRate> getPerMethodTaxRate() {
+        return this.perMethodTaxRate;
     }
 
     /**
@@ -337,6 +362,15 @@ public class LineItemImpl implements LineItem, ModelBase {
         this.taxedPrice = taxedPrice;
     }
 
+    public void setTaxedPricePortions(final com.commercetools.api.models.cart.MethodTaxedPrice... taxedPricePortions) {
+        this.taxedPricePortions = new ArrayList<>(Arrays.asList(taxedPricePortions));
+    }
+
+    public void setTaxedPricePortions(
+            final java.util.List<com.commercetools.api.models.cart.MethodTaxedPrice> taxedPricePortions) {
+        this.taxedPricePortions = taxedPricePortions;
+    }
+
     public void setTotalPrice(final com.commercetools.api.models.common.TypedMoney totalPrice) {
         this.totalPrice = totalPrice;
     }
@@ -359,6 +393,15 @@ public class LineItemImpl implements LineItem, ModelBase {
 
     public void setTaxRate(final com.commercetools.api.models.tax_category.TaxRate taxRate) {
         this.taxRate = taxRate;
+    }
+
+    public void setPerMethodTaxRate(final com.commercetools.api.models.cart.MethodTaxRate... perMethodTaxRate) {
+        this.perMethodTaxRate = new ArrayList<>(Arrays.asList(perMethodTaxRate));
+    }
+
+    public void setPerMethodTaxRate(
+            final java.util.List<com.commercetools.api.models.cart.MethodTaxRate> perMethodTaxRate) {
+        this.perMethodTaxRate = perMethodTaxRate;
     }
 
     public void setSupplyChannel(final com.commercetools.api.models.channel.ChannelReference supplyChannel) {
@@ -423,11 +466,13 @@ public class LineItemImpl implements LineItem, ModelBase {
                 .append(variant, that.variant)
                 .append(price, that.price)
                 .append(taxedPrice, that.taxedPrice)
+                .append(taxedPricePortions, that.taxedPricePortions)
                 .append(totalPrice, that.totalPrice)
                 .append(quantity, that.quantity)
                 .append(addedAt, that.addedAt)
                 .append(state, that.state)
                 .append(taxRate, that.taxRate)
+                .append(perMethodTaxRate, that.perMethodTaxRate)
                 .append(supplyChannel, that.supplyChannel)
                 .append(distributionChannel, that.distributionChannel)
                 .append(discountedPricePerQuantity, that.discountedPricePerQuantity)
@@ -451,11 +496,13 @@ public class LineItemImpl implements LineItem, ModelBase {
                 .append(variant)
                 .append(price)
                 .append(taxedPrice)
+                .append(taxedPricePortions)
                 .append(totalPrice)
                 .append(quantity)
                 .append(addedAt)
                 .append(state)
                 .append(taxRate)
+                .append(perMethodTaxRate)
                 .append(supplyChannel)
                 .append(distributionChannel)
                 .append(discountedPricePerQuantity)

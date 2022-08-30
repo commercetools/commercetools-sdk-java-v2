@@ -59,6 +59,9 @@ public class ParcelRemovedFromDeliveryMessageBuilder implements Builder<ParcelRe
 
     private com.commercetools.api.models.order.Parcel parcel;
 
+    @Nullable
+    private String shippingKey;
+
     /**
      *  <p>Unique identifier of the Message. Can be used to track which Messages have been processed.</p>
      */
@@ -223,6 +226,15 @@ public class ParcelRemovedFromDeliveryMessageBuilder implements Builder<ParcelRe
         return this;
     }
 
+    /**
+     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multi</code> ShippingMode.</p>
+     */
+
+    public ParcelRemovedFromDeliveryMessageBuilder shippingKey(@Nullable final String shippingKey) {
+        this.shippingKey = shippingKey;
+        return this;
+    }
+
     public String getId() {
         return this.id;
     }
@@ -274,6 +286,11 @@ public class ParcelRemovedFromDeliveryMessageBuilder implements Builder<ParcelRe
         return this.parcel;
     }
 
+    @Nullable
+    public String getShippingKey() {
+        return this.shippingKey;
+    }
+
     public ParcelRemovedFromDeliveryMessage build() {
         Objects.requireNonNull(id, ParcelRemovedFromDeliveryMessage.class + ": id is missing");
         Objects.requireNonNull(version, ParcelRemovedFromDeliveryMessage.class + ": version is missing");
@@ -286,7 +303,8 @@ public class ParcelRemovedFromDeliveryMessageBuilder implements Builder<ParcelRe
         Objects.requireNonNull(deliveryId, ParcelRemovedFromDeliveryMessage.class + ": deliveryId is missing");
         Objects.requireNonNull(parcel, ParcelRemovedFromDeliveryMessage.class + ": parcel is missing");
         return new ParcelRemovedFromDeliveryMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy,
-            createdBy, sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, deliveryId, parcel);
+            createdBy, sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, deliveryId, parcel,
+            shippingKey);
     }
 
     /**
@@ -294,7 +312,8 @@ public class ParcelRemovedFromDeliveryMessageBuilder implements Builder<ParcelRe
      */
     public ParcelRemovedFromDeliveryMessage buildUnchecked() {
         return new ParcelRemovedFromDeliveryMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy,
-            createdBy, sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, deliveryId, parcel);
+            createdBy, sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, deliveryId, parcel,
+            shippingKey);
     }
 
     public static ParcelRemovedFromDeliveryMessageBuilder of() {
@@ -315,6 +334,7 @@ public class ParcelRemovedFromDeliveryMessageBuilder implements Builder<ParcelRe
         builder.resourceUserProvidedIdentifiers = template.getResourceUserProvidedIdentifiers();
         builder.deliveryId = template.getDeliveryId();
         builder.parcel = template.getParcel();
+        builder.shippingKey = template.getShippingKey();
         return builder;
     }
 

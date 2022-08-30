@@ -26,11 +26,15 @@ public class ParcelRemovedFromDeliveryMessagePayloadImpl implements ParcelRemove
 
     private com.commercetools.api.models.order.Parcel parcel;
 
+    private String shippingKey;
+
     @JsonCreator
     ParcelRemovedFromDeliveryMessagePayloadImpl(@JsonProperty("deliveryId") final String deliveryId,
-            @JsonProperty("parcel") final com.commercetools.api.models.order.Parcel parcel) {
+            @JsonProperty("parcel") final com.commercetools.api.models.order.Parcel parcel,
+            @JsonProperty("shippingKey") final String shippingKey) {
         this.deliveryId = deliveryId;
         this.parcel = parcel;
+        this.shippingKey = shippingKey;
         this.type = PARCEL_REMOVED_FROM_DELIVERY;
     }
 
@@ -62,12 +66,24 @@ public class ParcelRemovedFromDeliveryMessagePayloadImpl implements ParcelRemove
         return this.parcel;
     }
 
+    /**
+     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multi</code> ShippingMode.</p>
+     */
+
+    public String getShippingKey() {
+        return this.shippingKey;
+    }
+
     public void setDeliveryId(final String deliveryId) {
         this.deliveryId = deliveryId;
     }
 
     public void setParcel(final com.commercetools.api.models.order.Parcel parcel) {
         this.parcel = parcel;
+    }
+
+    public void setShippingKey(final String shippingKey) {
+        this.shippingKey = shippingKey;
     }
 
     @Override
@@ -83,12 +99,17 @@ public class ParcelRemovedFromDeliveryMessagePayloadImpl implements ParcelRemove
         return new EqualsBuilder().append(type, that.type)
                 .append(deliveryId, that.deliveryId)
                 .append(parcel, that.parcel)
+                .append(shippingKey, that.shippingKey)
                 .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(type).append(deliveryId).append(parcel).toHashCode();
+        return new HashCodeBuilder(17, 37).append(type)
+                .append(deliveryId)
+                .append(parcel)
+                .append(shippingKey)
+                .toHashCode();
     }
 
 }

@@ -50,6 +50,8 @@ public class OrderLineItemDiscountSetMessageImpl implements OrderLineItemDiscoun
 
     private com.commercetools.api.models.cart.TaxedItemPrice taxedPrice;
 
+    private java.util.List<com.commercetools.api.models.cart.MethodTaxedPrice> taxedPricePortions;
+
     @JsonCreator
     OrderLineItemDiscountSetMessageImpl(@JsonProperty("id") final String id,
             @JsonProperty("version") final Long version,
@@ -64,7 +66,8 @@ public class OrderLineItemDiscountSetMessageImpl implements OrderLineItemDiscoun
             @JsonProperty("lineItemId") final String lineItemId,
             @JsonProperty("discountedPricePerQuantity") final java.util.List<com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantity> discountedPricePerQuantity,
             @JsonProperty("totalPrice") final com.commercetools.api.models.common.Money totalPrice,
-            @JsonProperty("taxedPrice") final com.commercetools.api.models.cart.TaxedItemPrice taxedPrice) {
+            @JsonProperty("taxedPrice") final com.commercetools.api.models.cart.TaxedItemPrice taxedPrice,
+            @JsonProperty("taxedPricePortions") final java.util.List<com.commercetools.api.models.cart.MethodTaxedPrice> taxedPricePortions) {
         this.id = id;
         this.version = version;
         this.createdAt = createdAt;
@@ -79,6 +82,7 @@ public class OrderLineItemDiscountSetMessageImpl implements OrderLineItemDiscoun
         this.discountedPricePerQuantity = discountedPricePerQuantity;
         this.totalPrice = totalPrice;
         this.taxedPrice = taxedPrice;
+        this.taxedPricePortions = taxedPricePortions;
         this.type = ORDER_LINE_ITEM_DISCOUNT_SET;
     }
 
@@ -206,6 +210,14 @@ public class OrderLineItemDiscountSetMessageImpl implements OrderLineItemDiscoun
         return this.taxedPrice;
     }
 
+    /**
+     *  <p>Taxed price of the Shipping Methods in a Cart with <code>Multi</code> ShippingMode..</p>
+     */
+
+    public java.util.List<com.commercetools.api.models.cart.MethodTaxedPrice> getTaxedPricePortions() {
+        return this.taxedPricePortions;
+    }
+
     public void setId(final String id) {
         this.id = id;
     }
@@ -269,6 +281,15 @@ public class OrderLineItemDiscountSetMessageImpl implements OrderLineItemDiscoun
         this.taxedPrice = taxedPrice;
     }
 
+    public void setTaxedPricePortions(final com.commercetools.api.models.cart.MethodTaxedPrice... taxedPricePortions) {
+        this.taxedPricePortions = new ArrayList<>(Arrays.asList(taxedPricePortions));
+    }
+
+    public void setTaxedPricePortions(
+            final java.util.List<com.commercetools.api.models.cart.MethodTaxedPrice> taxedPricePortions) {
+        this.taxedPricePortions = taxedPricePortions;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -294,6 +315,7 @@ public class OrderLineItemDiscountSetMessageImpl implements OrderLineItemDiscoun
                 .append(discountedPricePerQuantity, that.discountedPricePerQuantity)
                 .append(totalPrice, that.totalPrice)
                 .append(taxedPrice, that.taxedPrice)
+                .append(taxedPricePortions, that.taxedPricePortions)
                 .isEquals();
     }
 
@@ -314,6 +336,7 @@ public class OrderLineItemDiscountSetMessageImpl implements OrderLineItemDiscoun
                 .append(discountedPricePerQuantity)
                 .append(totalPrice)
                 .append(taxedPrice)
+                .append(taxedPricePortions)
                 .toHashCode();
     }
 

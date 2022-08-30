@@ -9,6 +9,7 @@ import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantity;
+import com.commercetools.api.models.cart.MethodTaxedPrice;
 import com.commercetools.api.models.cart.TaxedItemPrice;
 import com.commercetools.api.models.common.Money;
 import com.fasterxml.jackson.annotation.*;
@@ -34,6 +35,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .lineItemId("{lineItemId}")
  *             .plusDiscountedPricePerQuantity(discountedPricePerQuantityBuilder -> discountedPricePerQuantityBuilder)
  *             .totalPrice(totalPriceBuilder -> totalPriceBuilder)
+ *             .plusTaxedPricePortions(taxedPricePortionsBuilder -> taxedPricePortionsBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -74,6 +76,14 @@ public interface OrderLineItemDiscountSetMessage extends OrderMessage {
     @JsonProperty("taxedPrice")
     public TaxedItemPrice getTaxedPrice();
 
+    /**
+     *  <p>Taxed price of the Shipping Methods in a Cart with <code>Multi</code> ShippingMode..</p>
+     */
+    @NotNull
+    @Valid
+    @JsonProperty("taxedPricePortions")
+    public List<MethodTaxedPrice> getTaxedPricePortions();
+
     public void setLineItemId(final String lineItemId);
 
     @JsonIgnore
@@ -85,6 +95,11 @@ public interface OrderLineItemDiscountSetMessage extends OrderMessage {
     public void setTotalPrice(final Money totalPrice);
 
     public void setTaxedPrice(final TaxedItemPrice taxedPrice);
+
+    @JsonIgnore
+    public void setTaxedPricePortions(final MethodTaxedPrice... taxedPricePortions);
+
+    public void setTaxedPricePortions(final List<MethodTaxedPrice> taxedPricePortions);
 
     public static OrderLineItemDiscountSetMessage of() {
         return new OrderLineItemDiscountSetMessageImpl();
@@ -106,6 +121,7 @@ public interface OrderLineItemDiscountSetMessage extends OrderMessage {
         instance.setDiscountedPricePerQuantity(template.getDiscountedPricePerQuantity());
         instance.setTotalPrice(template.getTotalPrice());
         instance.setTaxedPrice(template.getTaxedPrice());
+        instance.setTaxedPricePortions(template.getTaxedPricePortions());
         return instance;
     }
 

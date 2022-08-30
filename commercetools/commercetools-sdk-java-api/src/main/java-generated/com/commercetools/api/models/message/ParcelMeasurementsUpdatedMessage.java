@@ -62,11 +62,20 @@ public interface ParcelMeasurementsUpdatedMessage extends OrderMessage {
     @JsonProperty("measurements")
     public ParcelMeasurements getMeasurements();
 
+    /**
+     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multi</code> ShippingMode.</p>
+     */
+
+    @JsonProperty("shippingKey")
+    public String getShippingKey();
+
     public void setDeliveryId(final String deliveryId);
 
     public void setParcelId(final String parcelId);
 
     public void setMeasurements(final ParcelMeasurements measurements);
+
+    public void setShippingKey(final String shippingKey);
 
     public static ParcelMeasurementsUpdatedMessage of() {
         return new ParcelMeasurementsUpdatedMessageImpl();
@@ -87,6 +96,7 @@ public interface ParcelMeasurementsUpdatedMessage extends OrderMessage {
         instance.setDeliveryId(template.getDeliveryId());
         instance.setParcelId(template.getParcelId());
         instance.setMeasurements(template.getMeasurements());
+        instance.setShippingKey(template.getShippingKey());
         return instance;
     }
 

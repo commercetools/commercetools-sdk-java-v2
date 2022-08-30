@@ -46,6 +46,8 @@ public class ParcelAddedToDeliveryMessageImpl implements ParcelAddedToDeliveryMe
 
     private com.commercetools.api.models.order.Parcel parcel;
 
+    private String shippingKey;
+
     @JsonCreator
     ParcelAddedToDeliveryMessageImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version,
             @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt,
@@ -57,7 +59,8 @@ public class ParcelAddedToDeliveryMessageImpl implements ParcelAddedToDeliveryMe
             @JsonProperty("resourceVersion") final Long resourceVersion,
             @JsonProperty("resourceUserProvidedIdentifiers") final com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers,
             @JsonProperty("delivery") final com.commercetools.api.models.order.Delivery delivery,
-            @JsonProperty("parcel") final com.commercetools.api.models.order.Parcel parcel) {
+            @JsonProperty("parcel") final com.commercetools.api.models.order.Parcel parcel,
+            @JsonProperty("shippingKey") final String shippingKey) {
         this.id = id;
         this.version = version;
         this.createdAt = createdAt;
@@ -70,6 +73,7 @@ public class ParcelAddedToDeliveryMessageImpl implements ParcelAddedToDeliveryMe
         this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
         this.delivery = delivery;
         this.parcel = parcel;
+        this.shippingKey = shippingKey;
         this.type = PARCEL_ADDED_TO_DELIVERY;
     }
 
@@ -181,6 +185,14 @@ public class ParcelAddedToDeliveryMessageImpl implements ParcelAddedToDeliveryMe
         return this.parcel;
     }
 
+    /**
+     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multi</code> ShippingMode.</p>
+     */
+
+    public String getShippingKey() {
+        return this.shippingKey;
+    }
+
     public void setId(final String id) {
         this.id = id;
     }
@@ -230,6 +242,10 @@ public class ParcelAddedToDeliveryMessageImpl implements ParcelAddedToDeliveryMe
         this.parcel = parcel;
     }
 
+    public void setShippingKey(final String shippingKey) {
+        this.shippingKey = shippingKey;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -253,6 +269,7 @@ public class ParcelAddedToDeliveryMessageImpl implements ParcelAddedToDeliveryMe
                 .append(resourceUserProvidedIdentifiers, that.resourceUserProvidedIdentifiers)
                 .append(delivery, that.delivery)
                 .append(parcel, that.parcel)
+                .append(shippingKey, that.shippingKey)
                 .isEquals();
     }
 
@@ -271,6 +288,7 @@ public class ParcelAddedToDeliveryMessageImpl implements ParcelAddedToDeliveryMe
                 .append(resourceUserProvidedIdentifiers)
                 .append(delivery)
                 .append(parcel)
+                .append(shippingKey)
                 .toHashCode();
     }
 

@@ -24,6 +24,8 @@ public class OrderAddDeliveryActionImpl implements OrderAddDeliveryAction, Model
 
     private java.util.List<com.commercetools.api.models.order.DeliveryItem> items;
 
+    private String shippingKey;
+
     private com.commercetools.api.models.common.BaseAddress address;
 
     private java.util.List<com.commercetools.api.models.order.ParcelDraft> parcels;
@@ -33,10 +35,12 @@ public class OrderAddDeliveryActionImpl implements OrderAddDeliveryAction, Model
     @JsonCreator
     OrderAddDeliveryActionImpl(
             @JsonProperty("items") final java.util.List<com.commercetools.api.models.order.DeliveryItem> items,
+            @JsonProperty("shippingKey") final String shippingKey,
             @JsonProperty("address") final com.commercetools.api.models.common.BaseAddress address,
             @JsonProperty("parcels") final java.util.List<com.commercetools.api.models.order.ParcelDraft> parcels,
             @JsonProperty("custom") final com.commercetools.api.models.type.CustomFieldsDraft custom) {
         this.items = items;
+        this.shippingKey = shippingKey;
         this.address = address;
         this.parcels = parcels;
         this.custom = custom;
@@ -61,6 +65,14 @@ public class OrderAddDeliveryActionImpl implements OrderAddDeliveryAction, Model
 
     public java.util.List<com.commercetools.api.models.order.DeliveryItem> getItems() {
         return this.items;
+    }
+
+    /**
+     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multi</code> ShippingMode.</p>
+     */
+
+    public String getShippingKey() {
+        return this.shippingKey;
     }
 
     /**
@@ -95,6 +107,10 @@ public class OrderAddDeliveryActionImpl implements OrderAddDeliveryAction, Model
         this.items = items;
     }
 
+    public void setShippingKey(final String shippingKey) {
+        this.shippingKey = shippingKey;
+    }
+
     public void setAddress(final com.commercetools.api.models.common.BaseAddress address) {
         this.address = address;
     }
@@ -123,6 +139,7 @@ public class OrderAddDeliveryActionImpl implements OrderAddDeliveryAction, Model
 
         return new EqualsBuilder().append(action, that.action)
                 .append(items, that.items)
+                .append(shippingKey, that.shippingKey)
                 .append(address, that.address)
                 .append(parcels, that.parcels)
                 .append(custom, that.custom)
@@ -133,6 +150,7 @@ public class OrderAddDeliveryActionImpl implements OrderAddDeliveryAction, Model
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(action)
                 .append(items)
+                .append(shippingKey)
                 .append(address)
                 .append(parcels)
                 .append(custom)

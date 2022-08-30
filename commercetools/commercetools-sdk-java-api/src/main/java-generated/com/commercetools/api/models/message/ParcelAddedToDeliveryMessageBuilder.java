@@ -59,6 +59,9 @@ public class ParcelAddedToDeliveryMessageBuilder implements Builder<ParcelAddedT
 
     private com.commercetools.api.models.order.Parcel parcel;
 
+    @Nullable
+    private String shippingKey;
+
     /**
      *  <p>Unique identifier of the Message. Can be used to track which Messages have been processed.</p>
      */
@@ -232,6 +235,15 @@ public class ParcelAddedToDeliveryMessageBuilder implements Builder<ParcelAddedT
         return this;
     }
 
+    /**
+     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multi</code> ShippingMode.</p>
+     */
+
+    public ParcelAddedToDeliveryMessageBuilder shippingKey(@Nullable final String shippingKey) {
+        this.shippingKey = shippingKey;
+        return this;
+    }
+
     public String getId() {
         return this.id;
     }
@@ -283,6 +295,11 @@ public class ParcelAddedToDeliveryMessageBuilder implements Builder<ParcelAddedT
         return this.parcel;
     }
 
+    @Nullable
+    public String getShippingKey() {
+        return this.shippingKey;
+    }
+
     public ParcelAddedToDeliveryMessage build() {
         Objects.requireNonNull(id, ParcelAddedToDeliveryMessage.class + ": id is missing");
         Objects.requireNonNull(version, ParcelAddedToDeliveryMessage.class + ": version is missing");
@@ -294,7 +311,7 @@ public class ParcelAddedToDeliveryMessageBuilder implements Builder<ParcelAddedT
         Objects.requireNonNull(delivery, ParcelAddedToDeliveryMessage.class + ": delivery is missing");
         Objects.requireNonNull(parcel, ParcelAddedToDeliveryMessage.class + ": parcel is missing");
         return new ParcelAddedToDeliveryMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
-            sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, delivery, parcel);
+            sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, delivery, parcel, shippingKey);
     }
 
     /**
@@ -302,7 +319,7 @@ public class ParcelAddedToDeliveryMessageBuilder implements Builder<ParcelAddedT
      */
     public ParcelAddedToDeliveryMessage buildUnchecked() {
         return new ParcelAddedToDeliveryMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
-            sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, delivery, parcel);
+            sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, delivery, parcel, shippingKey);
     }
 
     public static ParcelAddedToDeliveryMessageBuilder of() {
@@ -323,6 +340,7 @@ public class ParcelAddedToDeliveryMessageBuilder implements Builder<ParcelAddedT
         builder.resourceUserProvidedIdentifiers = template.getResourceUserProvidedIdentifiers();
         builder.delivery = template.getDelivery();
         builder.parcel = template.getParcel();
+        builder.shippingKey = template.getShippingKey();
         return builder;
     }
 

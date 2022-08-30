@@ -58,9 +58,18 @@ public interface ParcelAddedToDeliveryMessage extends OrderMessage {
     @JsonProperty("parcel")
     public Parcel getParcel();
 
+    /**
+     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multi</code> ShippingMode.</p>
+     */
+
+    @JsonProperty("shippingKey")
+    public String getShippingKey();
+
     public void setDelivery(final Delivery delivery);
 
     public void setParcel(final Parcel parcel);
+
+    public void setShippingKey(final String shippingKey);
 
     public static ParcelAddedToDeliveryMessage of() {
         return new ParcelAddedToDeliveryMessageImpl();
@@ -80,6 +89,7 @@ public interface ParcelAddedToDeliveryMessage extends OrderMessage {
         instance.setResourceUserProvidedIdentifiers(template.getResourceUserProvidedIdentifiers());
         instance.setDelivery(template.getDelivery());
         instance.setParcel(template.getParcel());
+        instance.setShippingKey(template.getShippingKey());
         return instance;
     }
 

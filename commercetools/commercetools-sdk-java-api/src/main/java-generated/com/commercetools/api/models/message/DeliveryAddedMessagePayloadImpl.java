@@ -24,10 +24,14 @@ public class DeliveryAddedMessagePayloadImpl implements DeliveryAddedMessagePayl
 
     private com.commercetools.api.models.order.Delivery delivery;
 
+    private String shippingKey;
+
     @JsonCreator
     DeliveryAddedMessagePayloadImpl(
-            @JsonProperty("delivery") final com.commercetools.api.models.order.Delivery delivery) {
+            @JsonProperty("delivery") final com.commercetools.api.models.order.Delivery delivery,
+            @JsonProperty("shippingKey") final String shippingKey) {
         this.delivery = delivery;
+        this.shippingKey = shippingKey;
         this.type = DELIVERY_ADDED;
     }
 
@@ -51,8 +55,20 @@ public class DeliveryAddedMessagePayloadImpl implements DeliveryAddedMessagePayl
         return this.delivery;
     }
 
+    /**
+     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multi</code> ShippingMode.</p>
+     */
+
+    public String getShippingKey() {
+        return this.shippingKey;
+    }
+
     public void setDelivery(final com.commercetools.api.models.order.Delivery delivery) {
         this.delivery = delivery;
+    }
+
+    public void setShippingKey(final String shippingKey) {
+        this.shippingKey = shippingKey;
     }
 
     @Override
@@ -65,12 +81,15 @@ public class DeliveryAddedMessagePayloadImpl implements DeliveryAddedMessagePayl
 
         DeliveryAddedMessagePayloadImpl that = (DeliveryAddedMessagePayloadImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).append(delivery, that.delivery).isEquals();
+        return new EqualsBuilder().append(type, that.type)
+                .append(delivery, that.delivery)
+                .append(shippingKey, that.shippingKey)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(type).append(delivery).toHashCode();
+        return new HashCodeBuilder(17, 37).append(type).append(delivery).append(shippingKey).toHashCode();
     }
 
 }

@@ -62,6 +62,9 @@ public class ParcelTrackingDataUpdatedMessageBuilder implements Builder<ParcelTr
     @Nullable
     private com.commercetools.api.models.order.TrackingData trackingData;
 
+    @Nullable
+    private String shippingKey;
+
     /**
      *  <p>Unique identifier of the Message. Can be used to track which Messages have been processed.</p>
      */
@@ -236,6 +239,15 @@ public class ParcelTrackingDataUpdatedMessageBuilder implements Builder<ParcelTr
         return this;
     }
 
+    /**
+     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multi</code> ShippingMode.</p>
+     */
+
+    public ParcelTrackingDataUpdatedMessageBuilder shippingKey(@Nullable final String shippingKey) {
+        this.shippingKey = shippingKey;
+        return this;
+    }
+
     public String getId() {
         return this.id;
     }
@@ -292,6 +304,11 @@ public class ParcelTrackingDataUpdatedMessageBuilder implements Builder<ParcelTr
         return this.trackingData;
     }
 
+    @Nullable
+    public String getShippingKey() {
+        return this.shippingKey;
+    }
+
     public ParcelTrackingDataUpdatedMessage build() {
         Objects.requireNonNull(id, ParcelTrackingDataUpdatedMessage.class + ": id is missing");
         Objects.requireNonNull(version, ParcelTrackingDataUpdatedMessage.class + ": version is missing");
@@ -305,7 +322,7 @@ public class ParcelTrackingDataUpdatedMessageBuilder implements Builder<ParcelTr
         Objects.requireNonNull(parcelId, ParcelTrackingDataUpdatedMessage.class + ": parcelId is missing");
         return new ParcelTrackingDataUpdatedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy,
             createdBy, sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, deliveryId, parcelId,
-            trackingData);
+            trackingData, shippingKey);
     }
 
     /**
@@ -314,7 +331,7 @@ public class ParcelTrackingDataUpdatedMessageBuilder implements Builder<ParcelTr
     public ParcelTrackingDataUpdatedMessage buildUnchecked() {
         return new ParcelTrackingDataUpdatedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy,
             createdBy, sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, deliveryId, parcelId,
-            trackingData);
+            trackingData, shippingKey);
     }
 
     public static ParcelTrackingDataUpdatedMessageBuilder of() {
@@ -336,6 +353,7 @@ public class ParcelTrackingDataUpdatedMessageBuilder implements Builder<ParcelTr
         builder.deliveryId = template.getDeliveryId();
         builder.parcelId = template.getParcelId();
         builder.trackingData = template.getTrackingData();
+        builder.shippingKey = template.getShippingKey();
         return builder;
     }
 

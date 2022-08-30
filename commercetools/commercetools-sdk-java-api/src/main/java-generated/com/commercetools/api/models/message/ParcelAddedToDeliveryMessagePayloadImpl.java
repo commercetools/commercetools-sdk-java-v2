@@ -26,12 +26,16 @@ public class ParcelAddedToDeliveryMessagePayloadImpl implements ParcelAddedToDel
 
     private com.commercetools.api.models.order.Parcel parcel;
 
+    private String shippingKey;
+
     @JsonCreator
     ParcelAddedToDeliveryMessagePayloadImpl(
             @JsonProperty("delivery") final com.commercetools.api.models.order.Delivery delivery,
-            @JsonProperty("parcel") final com.commercetools.api.models.order.Parcel parcel) {
+            @JsonProperty("parcel") final com.commercetools.api.models.order.Parcel parcel,
+            @JsonProperty("shippingKey") final String shippingKey) {
         this.delivery = delivery;
         this.parcel = parcel;
+        this.shippingKey = shippingKey;
         this.type = PARCEL_ADDED_TO_DELIVERY;
     }
 
@@ -63,12 +67,24 @@ public class ParcelAddedToDeliveryMessagePayloadImpl implements ParcelAddedToDel
         return this.parcel;
     }
 
+    /**
+     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multi</code> ShippingMode.</p>
+     */
+
+    public String getShippingKey() {
+        return this.shippingKey;
+    }
+
     public void setDelivery(final com.commercetools.api.models.order.Delivery delivery) {
         this.delivery = delivery;
     }
 
     public void setParcel(final com.commercetools.api.models.order.Parcel parcel) {
         this.parcel = parcel;
+    }
+
+    public void setShippingKey(final String shippingKey) {
+        this.shippingKey = shippingKey;
     }
 
     @Override
@@ -84,12 +100,17 @@ public class ParcelAddedToDeliveryMessagePayloadImpl implements ParcelAddedToDel
         return new EqualsBuilder().append(type, that.type)
                 .append(delivery, that.delivery)
                 .append(parcel, that.parcel)
+                .append(shippingKey, that.shippingKey)
                 .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(type).append(delivery).append(parcel).toHashCode();
+        return new HashCodeBuilder(17, 37).append(type)
+                .append(delivery)
+                .append(parcel)
+                .append(shippingKey)
+                .toHashCode();
     }
 
 }

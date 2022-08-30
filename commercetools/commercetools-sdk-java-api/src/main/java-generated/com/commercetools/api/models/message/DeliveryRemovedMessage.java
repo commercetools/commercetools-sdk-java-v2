@@ -48,7 +48,16 @@ public interface DeliveryRemovedMessage extends OrderMessage {
     @JsonProperty("delivery")
     public Delivery getDelivery();
 
+    /**
+     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multi</code> ShippingMode.</p>
+     */
+
+    @JsonProperty("shippingKey")
+    public String getShippingKey();
+
     public void setDelivery(final Delivery delivery);
+
+    public void setShippingKey(final String shippingKey);
 
     public static DeliveryRemovedMessage of() {
         return new DeliveryRemovedMessageImpl();
@@ -67,6 +76,7 @@ public interface DeliveryRemovedMessage extends OrderMessage {
         instance.setResourceVersion(template.getResourceVersion());
         instance.setResourceUserProvidedIdentifiers(template.getResourceUserProvidedIdentifiers());
         instance.setDelivery(template.getDelivery());
+        instance.setShippingKey(template.getShippingKey());
         return instance;
     }
 

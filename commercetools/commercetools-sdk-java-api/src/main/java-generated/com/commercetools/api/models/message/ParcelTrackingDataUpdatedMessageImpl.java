@@ -48,6 +48,8 @@ public class ParcelTrackingDataUpdatedMessageImpl implements ParcelTrackingDataU
 
     private com.commercetools.api.models.order.TrackingData trackingData;
 
+    private String shippingKey;
+
     @JsonCreator
     ParcelTrackingDataUpdatedMessageImpl(@JsonProperty("id") final String id,
             @JsonProperty("version") final Long version,
@@ -60,7 +62,8 @@ public class ParcelTrackingDataUpdatedMessageImpl implements ParcelTrackingDataU
             @JsonProperty("resourceVersion") final Long resourceVersion,
             @JsonProperty("resourceUserProvidedIdentifiers") final com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers,
             @JsonProperty("deliveryId") final String deliveryId, @JsonProperty("parcelId") final String parcelId,
-            @JsonProperty("trackingData") final com.commercetools.api.models.order.TrackingData trackingData) {
+            @JsonProperty("trackingData") final com.commercetools.api.models.order.TrackingData trackingData,
+            @JsonProperty("shippingKey") final String shippingKey) {
         this.id = id;
         this.version = version;
         this.createdAt = createdAt;
@@ -74,6 +77,7 @@ public class ParcelTrackingDataUpdatedMessageImpl implements ParcelTrackingDataU
         this.deliveryId = deliveryId;
         this.parcelId = parcelId;
         this.trackingData = trackingData;
+        this.shippingKey = shippingKey;
         this.type = PARCEL_TRACKING_DATA_UPDATED;
     }
 
@@ -193,6 +197,14 @@ public class ParcelTrackingDataUpdatedMessageImpl implements ParcelTrackingDataU
         return this.trackingData;
     }
 
+    /**
+     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multi</code> ShippingMode.</p>
+     */
+
+    public String getShippingKey() {
+        return this.shippingKey;
+    }
+
     public void setId(final String id) {
         this.id = id;
     }
@@ -246,6 +258,10 @@ public class ParcelTrackingDataUpdatedMessageImpl implements ParcelTrackingDataU
         this.trackingData = trackingData;
     }
 
+    public void setShippingKey(final String shippingKey) {
+        this.shippingKey = shippingKey;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -270,6 +286,7 @@ public class ParcelTrackingDataUpdatedMessageImpl implements ParcelTrackingDataU
                 .append(deliveryId, that.deliveryId)
                 .append(parcelId, that.parcelId)
                 .append(trackingData, that.trackingData)
+                .append(shippingKey, that.shippingKey)
                 .isEquals();
     }
 
@@ -289,6 +306,7 @@ public class ParcelTrackingDataUpdatedMessageImpl implements ParcelTrackingDataU
                 .append(deliveryId)
                 .append(parcelId)
                 .append(trackingData)
+                .append(shippingKey)
                 .toHashCode();
     }
 

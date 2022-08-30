@@ -62,6 +62,9 @@ public class ParcelMeasurementsUpdatedMessageBuilder implements Builder<ParcelMe
     @Nullable
     private com.commercetools.api.models.order.ParcelMeasurements measurements;
 
+    @Nullable
+    private String shippingKey;
+
     /**
      *  <p>Unique identifier of the Message. Can be used to track which Messages have been processed.</p>
      */
@@ -236,6 +239,15 @@ public class ParcelMeasurementsUpdatedMessageBuilder implements Builder<ParcelMe
         return this;
     }
 
+    /**
+     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multi</code> ShippingMode.</p>
+     */
+
+    public ParcelMeasurementsUpdatedMessageBuilder shippingKey(@Nullable final String shippingKey) {
+        this.shippingKey = shippingKey;
+        return this;
+    }
+
     public String getId() {
         return this.id;
     }
@@ -292,6 +304,11 @@ public class ParcelMeasurementsUpdatedMessageBuilder implements Builder<ParcelMe
         return this.measurements;
     }
 
+    @Nullable
+    public String getShippingKey() {
+        return this.shippingKey;
+    }
+
     public ParcelMeasurementsUpdatedMessage build() {
         Objects.requireNonNull(id, ParcelMeasurementsUpdatedMessage.class + ": id is missing");
         Objects.requireNonNull(version, ParcelMeasurementsUpdatedMessage.class + ": version is missing");
@@ -305,7 +322,7 @@ public class ParcelMeasurementsUpdatedMessageBuilder implements Builder<ParcelMe
         Objects.requireNonNull(parcelId, ParcelMeasurementsUpdatedMessage.class + ": parcelId is missing");
         return new ParcelMeasurementsUpdatedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy,
             createdBy, sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, deliveryId, parcelId,
-            measurements);
+            measurements, shippingKey);
     }
 
     /**
@@ -314,7 +331,7 @@ public class ParcelMeasurementsUpdatedMessageBuilder implements Builder<ParcelMe
     public ParcelMeasurementsUpdatedMessage buildUnchecked() {
         return new ParcelMeasurementsUpdatedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy,
             createdBy, sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, deliveryId, parcelId,
-            measurements);
+            measurements, shippingKey);
     }
 
     public static ParcelMeasurementsUpdatedMessageBuilder of() {
@@ -336,6 +353,7 @@ public class ParcelMeasurementsUpdatedMessageBuilder implements Builder<ParcelMe
         builder.deliveryId = template.getDeliveryId();
         builder.parcelId = template.getParcelId();
         builder.measurements = template.getMeasurements();
+        builder.shippingKey = template.getShippingKey();
         return builder;
     }
 

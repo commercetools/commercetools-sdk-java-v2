@@ -16,7 +16,9 @@ import com.commercetools.api.models.cart.DiscountCodeInfo;
 import com.commercetools.api.models.cart.InventoryMode;
 import com.commercetools.api.models.cart.LineItem;
 import com.commercetools.api.models.cart.RoundingMode;
+import com.commercetools.api.models.cart.Shipping;
 import com.commercetools.api.models.cart.ShippingInfo;
+import com.commercetools.api.models.cart.ShippingMode;
 import com.commercetools.api.models.cart.ShippingRateInput;
 import com.commercetools.api.models.cart.TaxCalculationMode;
 import com.commercetools.api.models.cart.TaxMode;
@@ -52,6 +54,8 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusLineItems(lineItemsBuilder -> lineItemsBuilder)
  *             .plusCustomLineItems(customLineItemsBuilder -> customLineItemsBuilder)
  *             .totalPrice(totalPriceBuilder -> totalPriceBuilder)
+ *             .shippingMode(ShippingMode.SINGLE)
+ *             .plusShipping(shippingBuilder -> shippingBuilder)
  *             .orderState(OrderState.OPEN)
  *             .plusSyncInfo(syncInfoBuilder -> syncInfoBuilder)
  *             .origin(CartOrigin.CUSTOMER)
@@ -182,7 +186,15 @@ public interface Order extends BaseResource, com.commercetools.api.models.Domain
     public TaxedPrice getTaxedPrice();
 
     /**
-     *
+     *  <p>Sum of <code>taxedPrice</code> of ShippingInfo across all Shipping Methods. For <code>Platform</code> TaxMode, it is set automatically only if shipping address is set or Shipping Method is added to the Cart.</p>
+     */
+    @Valid
+    @JsonProperty("taxedShippingPrice")
+    public TaxedPrice getTaxedShippingPrice();
+
+    /**
+     *  <p>Holds all shipping-related information per Shipping Method.</p>
+     *  <p>For <code>Multi</code> ShippingMode, it is updated automatically after the Shipping Methods are added.</p>
      */
     @Valid
     @JsonProperty("shippingAddress")
@@ -194,6 +206,22 @@ public interface Order extends BaseResource, com.commercetools.api.models.Domain
     @Valid
     @JsonProperty("billingAddress")
     public Address getBillingAddress();
+
+    /**
+     *  <p>Indicates whether one or multiple Shipping Methods are added to the Cart.</p>
+     */
+    @NotNull
+    @JsonProperty("shippingMode")
+    public ShippingMode getShippingMode();
+
+    /**
+     *  <p>Holds all shipping-related information per Shipping Method for <code>Multi</code> ShippingMode.</p>
+     *  <p>It is updated automatically after the Shipping Method is added.</p>
+     */
+    @NotNull
+    @Valid
+    @JsonProperty("shipping")
+    public List<Shipping> getShipping();
 
     /**
      *
@@ -403,9 +431,18 @@ public interface Order extends BaseResource, com.commercetools.api.models.Domain
 
     public void setTaxedPrice(final TaxedPrice taxedPrice);
 
+    public void setTaxedShippingPrice(final TaxedPrice taxedShippingPrice);
+
     public void setShippingAddress(final Address shippingAddress);
 
     public void setBillingAddress(final Address billingAddress);
+
+    public void setShippingMode(final ShippingMode shippingMode);
+
+    @JsonIgnore
+    public void setShipping(final Shipping... shipping);
+
+    public void setShipping(final List<Shipping> shipping);
 
     public void setTaxMode(final TaxMode taxMode);
 
@@ -493,8 +530,11 @@ public interface Order extends BaseResource, com.commercetools.api.models.Domain
         instance.setCustomLineItems(template.getCustomLineItems());
         instance.setTotalPrice(template.getTotalPrice());
         instance.setTaxedPrice(template.getTaxedPrice());
+        instance.setTaxedShippingPrice(template.getTaxedShippingPrice());
         instance.setShippingAddress(template.getShippingAddress());
         instance.setBillingAddress(template.getBillingAddress());
+        instance.setShippingMode(template.getShippingMode());
+        instance.setShipping(template.getShipping());
         instance.setTaxMode(template.getTaxMode());
         instance.setTaxRoundingMode(template.getTaxRoundingMode());
         instance.setCustomerGroup(template.getCustomerGroup());

@@ -73,6 +73,13 @@ public interface ParcelItemsUpdatedMessage extends OrderMessage {
     @JsonProperty("oldItems")
     public List<DeliveryItem> getOldItems();
 
+    /**
+     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multi</code> ShippingMode.</p>
+     */
+
+    @JsonProperty("shippingKey")
+    public String getShippingKey();
+
     public void setParcelId(final String parcelId);
 
     public void setDeliveryId(final String deliveryId);
@@ -86,6 +93,8 @@ public interface ParcelItemsUpdatedMessage extends OrderMessage {
     public void setOldItems(final DeliveryItem... oldItems);
 
     public void setOldItems(final List<DeliveryItem> oldItems);
+
+    public void setShippingKey(final String shippingKey);
 
     public static ParcelItemsUpdatedMessage of() {
         return new ParcelItemsUpdatedMessageImpl();
@@ -107,6 +116,7 @@ public interface ParcelItemsUpdatedMessage extends OrderMessage {
         instance.setDeliveryId(template.getDeliveryId());
         instance.setItems(template.getItems());
         instance.setOldItems(template.getOldItems());
+        instance.setShippingKey(template.getShippingKey());
         return instance;
     }
 

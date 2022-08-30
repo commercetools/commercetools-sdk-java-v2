@@ -33,6 +33,9 @@ public class ParcelTrackingDataUpdatedMessagePayloadBuilder
     @Nullable
     private com.commercetools.api.models.order.TrackingData trackingData;
 
+    @Nullable
+    private String shippingKey;
+
     /**
      *  <p>Unique identifier of the Delivery.</p>
      */
@@ -71,6 +74,15 @@ public class ParcelTrackingDataUpdatedMessagePayloadBuilder
         return this;
     }
 
+    /**
+     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multi</code> ShippingMode.</p>
+     */
+
+    public ParcelTrackingDataUpdatedMessagePayloadBuilder shippingKey(@Nullable final String shippingKey) {
+        this.shippingKey = shippingKey;
+        return this;
+    }
+
     public String getDeliveryId() {
         return this.deliveryId;
     }
@@ -84,17 +96,22 @@ public class ParcelTrackingDataUpdatedMessagePayloadBuilder
         return this.trackingData;
     }
 
+    @Nullable
+    public String getShippingKey() {
+        return this.shippingKey;
+    }
+
     public ParcelTrackingDataUpdatedMessagePayload build() {
         Objects.requireNonNull(deliveryId, ParcelTrackingDataUpdatedMessagePayload.class + ": deliveryId is missing");
         Objects.requireNonNull(parcelId, ParcelTrackingDataUpdatedMessagePayload.class + ": parcelId is missing");
-        return new ParcelTrackingDataUpdatedMessagePayloadImpl(deliveryId, parcelId, trackingData);
+        return new ParcelTrackingDataUpdatedMessagePayloadImpl(deliveryId, parcelId, trackingData, shippingKey);
     }
 
     /**
      * builds ParcelTrackingDataUpdatedMessagePayload without checking for non null required values
      */
     public ParcelTrackingDataUpdatedMessagePayload buildUnchecked() {
-        return new ParcelTrackingDataUpdatedMessagePayloadImpl(deliveryId, parcelId, trackingData);
+        return new ParcelTrackingDataUpdatedMessagePayloadImpl(deliveryId, parcelId, trackingData, shippingKey);
     }
 
     public static ParcelTrackingDataUpdatedMessagePayloadBuilder of() {
@@ -107,6 +124,7 @@ public class ParcelTrackingDataUpdatedMessagePayloadBuilder
         builder.deliveryId = template.getDeliveryId();
         builder.parcelId = template.getParcelId();
         builder.trackingData = template.getTrackingData();
+        builder.shippingKey = template.getShippingKey();
         return builder;
     }
 

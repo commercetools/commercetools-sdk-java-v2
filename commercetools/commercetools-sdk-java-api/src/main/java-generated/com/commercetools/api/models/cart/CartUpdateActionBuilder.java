@@ -15,6 +15,10 @@ public class CartUpdateActionBuilder {
         return com.commercetools.api.models.cart.CartAddCustomLineItemActionBuilder.of();
     }
 
+    public com.commercetools.api.models.cart.CartAddCustomShippingMethodActionBuilder addCustomShippingMethodBuilder() {
+        return com.commercetools.api.models.cart.CartAddCustomShippingMethodActionBuilder.of();
+    }
+
     public com.commercetools.api.models.cart.CartAddDiscountCodeActionBuilder addDiscountCodeBuilder() {
         return com.commercetools.api.models.cart.CartAddDiscountCodeActionBuilder.of();
     }
@@ -29,6 +33,10 @@ public class CartUpdateActionBuilder {
 
     public com.commercetools.api.models.cart.CartAddPaymentActionBuilder addPaymentBuilder() {
         return com.commercetools.api.models.cart.CartAddPaymentActionBuilder.of();
+    }
+
+    public com.commercetools.api.models.cart.CartAddShippingMethodActionBuilder addShippingMethodBuilder() {
+        return com.commercetools.api.models.cart.CartAddShippingMethodActionBuilder.of();
     }
 
     public com.commercetools.api.models.cart.CartAddShoppingListActionBuilder addShoppingListBuilder() {
@@ -93,6 +101,10 @@ public class CartUpdateActionBuilder {
 
     public com.commercetools.api.models.cart.CartRemovePaymentActionBuilder removePaymentBuilder() {
         return com.commercetools.api.models.cart.CartRemovePaymentActionBuilder.of();
+    }
+
+    public com.commercetools.api.models.cart.CartRemoveShippingMethodActionBuilder removeShippingMethodBuilder() {
+        return com.commercetools.api.models.cart.CartRemoveShippingMethodActionBuilder.of();
     }
 
     public com.commercetools.api.models.cart.CartSetAnonymousIdActionBuilder setAnonymousIdBuilder() {
@@ -241,6 +253,14 @@ public class CartUpdateActionBuilder {
 
     public com.commercetools.api.models.cart.CartSetShippingAddressCustomTypeActionBuilder setShippingAddressCustomTypeBuilder() {
         return com.commercetools.api.models.cart.CartSetShippingAddressCustomTypeActionBuilder.of();
+    }
+
+    public com.commercetools.api.models.cart.CartSetShippingCustomFieldActionBuilder setShippingCustomFieldBuilder() {
+        return com.commercetools.api.models.cart.CartSetShippingCustomFieldActionBuilder.of();
+    }
+
+    public com.commercetools.api.models.cart.CartSetShippingCustomTypeActionBuilder setShippingCustomTypeBuilder() {
+        return com.commercetools.api.models.cart.CartSetShippingCustomTypeActionBuilder.of();
     }
 
     public com.commercetools.api.models.cart.CartSetShippingMethodActionBuilder setShippingMethodBuilder() {

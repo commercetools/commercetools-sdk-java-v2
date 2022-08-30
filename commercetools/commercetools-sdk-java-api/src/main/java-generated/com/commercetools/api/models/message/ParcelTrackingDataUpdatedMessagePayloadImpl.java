@@ -28,13 +28,17 @@ public class ParcelTrackingDataUpdatedMessagePayloadImpl implements ParcelTracki
 
     private com.commercetools.api.models.order.TrackingData trackingData;
 
+    private String shippingKey;
+
     @JsonCreator
     ParcelTrackingDataUpdatedMessagePayloadImpl(@JsonProperty("deliveryId") final String deliveryId,
             @JsonProperty("parcelId") final String parcelId,
-            @JsonProperty("trackingData") final com.commercetools.api.models.order.TrackingData trackingData) {
+            @JsonProperty("trackingData") final com.commercetools.api.models.order.TrackingData trackingData,
+            @JsonProperty("shippingKey") final String shippingKey) {
         this.deliveryId = deliveryId;
         this.parcelId = parcelId;
         this.trackingData = trackingData;
+        this.shippingKey = shippingKey;
         this.type = PARCEL_TRACKING_DATA_UPDATED;
     }
 
@@ -74,6 +78,14 @@ public class ParcelTrackingDataUpdatedMessagePayloadImpl implements ParcelTracki
         return this.trackingData;
     }
 
+    /**
+     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multi</code> ShippingMode.</p>
+     */
+
+    public String getShippingKey() {
+        return this.shippingKey;
+    }
+
     public void setDeliveryId(final String deliveryId) {
         this.deliveryId = deliveryId;
     }
@@ -84,6 +96,10 @@ public class ParcelTrackingDataUpdatedMessagePayloadImpl implements ParcelTracki
 
     public void setTrackingData(final com.commercetools.api.models.order.TrackingData trackingData) {
         this.trackingData = trackingData;
+    }
+
+    public void setShippingKey(final String shippingKey) {
+        this.shippingKey = shippingKey;
     }
 
     @Override
@@ -100,6 +116,7 @@ public class ParcelTrackingDataUpdatedMessagePayloadImpl implements ParcelTracki
                 .append(deliveryId, that.deliveryId)
                 .append(parcelId, that.parcelId)
                 .append(trackingData, that.trackingData)
+                .append(shippingKey, that.shippingKey)
                 .isEquals();
     }
 
@@ -109,6 +126,7 @@ public class ParcelTrackingDataUpdatedMessagePayloadImpl implements ParcelTracki
                 .append(deliveryId)
                 .append(parcelId)
                 .append(trackingData)
+                .append(shippingKey)
                 .toHashCode();
     }
 

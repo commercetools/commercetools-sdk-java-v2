@@ -27,6 +27,9 @@ public class OrderAddDeliveryActionBuilder implements Builder<OrderAddDeliveryAc
     private java.util.List<com.commercetools.api.models.order.DeliveryItem> items;
 
     @Nullable
+    private String shippingKey;
+
+    @Nullable
     private com.commercetools.api.models.common.BaseAddress address;
 
     @Nullable
@@ -89,6 +92,15 @@ public class OrderAddDeliveryActionBuilder implements Builder<OrderAddDeliveryAc
             Function<com.commercetools.api.models.order.DeliveryItemBuilder, com.commercetools.api.models.order.DeliveryItemBuilder> builder) {
         this.items = new ArrayList<>();
         this.items.add(builder.apply(com.commercetools.api.models.order.DeliveryItemBuilder.of()).build());
+        return this;
+    }
+
+    /**
+     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multi</code> ShippingMode.</p>
+     */
+
+    public OrderAddDeliveryActionBuilder shippingKey(@Nullable final String shippingKey) {
+        this.shippingKey = shippingKey;
         return this;
     }
 
@@ -195,6 +207,11 @@ public class OrderAddDeliveryActionBuilder implements Builder<OrderAddDeliveryAc
     }
 
     @Nullable
+    public String getShippingKey() {
+        return this.shippingKey;
+    }
+
+    @Nullable
     public com.commercetools.api.models.common.BaseAddress getAddress() {
         return this.address;
     }
@@ -210,14 +227,14 @@ public class OrderAddDeliveryActionBuilder implements Builder<OrderAddDeliveryAc
     }
 
     public OrderAddDeliveryAction build() {
-        return new OrderAddDeliveryActionImpl(items, address, parcels, custom);
+        return new OrderAddDeliveryActionImpl(items, shippingKey, address, parcels, custom);
     }
 
     /**
      * builds OrderAddDeliveryAction without checking for non null required values
      */
     public OrderAddDeliveryAction buildUnchecked() {
-        return new OrderAddDeliveryActionImpl(items, address, parcels, custom);
+        return new OrderAddDeliveryActionImpl(items, shippingKey, address, parcels, custom);
     }
 
     public static OrderAddDeliveryActionBuilder of() {
@@ -227,6 +244,7 @@ public class OrderAddDeliveryActionBuilder implements Builder<OrderAddDeliveryAc
     public static OrderAddDeliveryActionBuilder of(final OrderAddDeliveryAction template) {
         OrderAddDeliveryActionBuilder builder = new OrderAddDeliveryActionBuilder();
         builder.items = template.getItems();
+        builder.shippingKey = template.getShippingKey();
         builder.address = template.getAddress();
         builder.parcels = template.getParcels();
         builder.custom = template.getCustom();

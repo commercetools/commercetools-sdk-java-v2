@@ -28,13 +28,17 @@ public class DeliveryAddressSetMessagePayloadImpl implements DeliveryAddressSetM
 
     private com.commercetools.api.models.common.Address oldAddress;
 
+    private String shippingKey;
+
     @JsonCreator
     DeliveryAddressSetMessagePayloadImpl(@JsonProperty("deliveryId") final String deliveryId,
             @JsonProperty("address") final com.commercetools.api.models.common.Address address,
-            @JsonProperty("oldAddress") final com.commercetools.api.models.common.Address oldAddress) {
+            @JsonProperty("oldAddress") final com.commercetools.api.models.common.Address oldAddress,
+            @JsonProperty("shippingKey") final String shippingKey) {
         this.deliveryId = deliveryId;
         this.address = address;
         this.oldAddress = oldAddress;
+        this.shippingKey = shippingKey;
         this.type = DELIVERY_ADDRESS_SET;
     }
 
@@ -74,6 +78,14 @@ public class DeliveryAddressSetMessagePayloadImpl implements DeliveryAddressSetM
         return this.oldAddress;
     }
 
+    /**
+     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multi</code> ShippingMode.</p>
+     */
+
+    public String getShippingKey() {
+        return this.shippingKey;
+    }
+
     public void setDeliveryId(final String deliveryId) {
         this.deliveryId = deliveryId;
     }
@@ -84,6 +96,10 @@ public class DeliveryAddressSetMessagePayloadImpl implements DeliveryAddressSetM
 
     public void setOldAddress(final com.commercetools.api.models.common.Address oldAddress) {
         this.oldAddress = oldAddress;
+    }
+
+    public void setShippingKey(final String shippingKey) {
+        this.shippingKey = shippingKey;
     }
 
     @Override
@@ -100,6 +116,7 @@ public class DeliveryAddressSetMessagePayloadImpl implements DeliveryAddressSetM
                 .append(deliveryId, that.deliveryId)
                 .append(address, that.address)
                 .append(oldAddress, that.oldAddress)
+                .append(shippingKey, that.shippingKey)
                 .isEquals();
     }
 
@@ -109,6 +126,7 @@ public class DeliveryAddressSetMessagePayloadImpl implements DeliveryAddressSetM
                 .append(deliveryId)
                 .append(address)
                 .append(oldAddress)
+                .append(shippingKey)
                 .toHashCode();
     }
 

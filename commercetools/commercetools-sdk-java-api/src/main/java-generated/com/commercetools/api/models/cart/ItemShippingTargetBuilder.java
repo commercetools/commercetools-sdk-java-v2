@@ -3,6 +3,8 @@ package com.commercetools.api.models.cart;
 
 import java.util.*;
 
+import javax.annotation.Nullable;
+
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -26,6 +28,9 @@ public class ItemShippingTargetBuilder implements Builder<ItemShippingTarget> {
 
     private Long quantity;
 
+    @Nullable
+    private String shippingMethodKey;
+
     /**
      *  <p>The key of the address in the cart's <code>itemShippingAddresses</code></p>
      */
@@ -44,6 +49,16 @@ public class ItemShippingTargetBuilder implements Builder<ItemShippingTarget> {
         return this;
     }
 
+    /**
+     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multi</code> ShippingMode.</p>
+     *  <p>It connects Line Item quantities with individual shipping addresses.</p>
+     */
+
+    public ItemShippingTargetBuilder shippingMethodKey(@Nullable final String shippingMethodKey) {
+        this.shippingMethodKey = shippingMethodKey;
+        return this;
+    }
+
     public String getAddressKey() {
         return this.addressKey;
     }
@@ -52,17 +67,22 @@ public class ItemShippingTargetBuilder implements Builder<ItemShippingTarget> {
         return this.quantity;
     }
 
+    @Nullable
+    public String getShippingMethodKey() {
+        return this.shippingMethodKey;
+    }
+
     public ItemShippingTarget build() {
         Objects.requireNonNull(addressKey, ItemShippingTarget.class + ": addressKey is missing");
         Objects.requireNonNull(quantity, ItemShippingTarget.class + ": quantity is missing");
-        return new ItemShippingTargetImpl(addressKey, quantity);
+        return new ItemShippingTargetImpl(addressKey, quantity, shippingMethodKey);
     }
 
     /**
      * builds ItemShippingTarget without checking for non null required values
      */
     public ItemShippingTarget buildUnchecked() {
-        return new ItemShippingTargetImpl(addressKey, quantity);
+        return new ItemShippingTargetImpl(addressKey, quantity, shippingMethodKey);
     }
 
     public static ItemShippingTargetBuilder of() {
@@ -73,6 +93,7 @@ public class ItemShippingTargetBuilder implements Builder<ItemShippingTarget> {
         ItemShippingTargetBuilder builder = new ItemShippingTargetBuilder();
         builder.addressKey = template.getAddressKey();
         builder.quantity = template.getQuantity();
+        builder.shippingMethodKey = template.getShippingMethodKey();
         return builder;
     }
 

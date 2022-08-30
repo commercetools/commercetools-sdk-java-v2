@@ -44,9 +44,19 @@ public interface ItemShippingTarget {
     @JsonProperty("quantity")
     public Long getQuantity();
 
+    /**
+     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multi</code> ShippingMode.</p>
+     *  <p>It connects Line Item quantities with individual shipping addresses.</p>
+     */
+
+    @JsonProperty("shippingMethodKey")
+    public String getShippingMethodKey();
+
     public void setAddressKey(final String addressKey);
 
     public void setQuantity(final Long quantity);
+
+    public void setShippingMethodKey(final String shippingMethodKey);
 
     public static ItemShippingTarget of() {
         return new ItemShippingTargetImpl();
@@ -56,6 +66,7 @@ public interface ItemShippingTarget {
         ItemShippingTargetImpl instance = new ItemShippingTargetImpl();
         instance.setAddressKey(template.getAddressKey());
         instance.setQuantity(template.getQuantity());
+        instance.setShippingMethodKey(template.getShippingMethodKey());
         return instance;
     }
 

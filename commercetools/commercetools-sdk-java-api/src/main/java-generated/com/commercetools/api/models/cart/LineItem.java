@@ -37,9 +37,11 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .productType(productTypeBuilder -> productTypeBuilder)
  *             .variant(variantBuilder -> variantBuilder)
  *             .price(priceBuilder -> priceBuilder)
+ *             .plusTaxedPricePortions(taxedPricePortionsBuilder -> taxedPricePortionsBuilder)
  *             .totalPrice(totalPriceBuilder -> totalPriceBuilder)
  *             .quantity(0.3)
  *             .plusState(stateBuilder -> stateBuilder)
+ *             .plusPerMethodTaxRate(perMethodTaxRateBuilder -> perMethodTaxRateBuilder)
  *             .plusDiscountedPricePerQuantity(discountedPricePerQuantityBuilder -> discountedPricePerQuantityBuilder)
  *             .priceMode(LineItemPriceMode.PLATFORM)
  *             .lineItemMode(LineItemMode.STANDARD)
@@ -119,6 +121,14 @@ public interface LineItem extends com.commercetools.api.models.Customizable<Line
     public TaxedItemPrice getTaxedPrice();
 
     /**
+     *  <p>Taxed price of the Shipping Method that is set automatically after <code>perMethodTaxRate</code> is set.</p>
+     */
+    @NotNull
+    @Valid
+    @JsonProperty("taxedPricePortions")
+    public List<MethodTaxedPrice> getTaxedPricePortions();
+
+    /**
      *  <p>The total price of this line item. If the line item is discounted, then the <code>totalPrice</code> is the DiscountedLineItemPriceForQuantity multiplied by <code>quantity</code>. Otherwise the total price is the product price multiplied by the <code>quantity</code>. <code>totalPrice</code> may or may not include the taxes: it depends on the taxRate.includedInPrice property.</p>
      */
     @NotNull
@@ -154,6 +164,15 @@ public interface LineItem extends com.commercetools.api.models.Customizable<Line
     @Valid
     @JsonProperty("taxRate")
     public TaxRate getTaxRate();
+
+    /**
+     *  <p>Tax Rate per Shipping Method that is automatically set after the Shipping Method is added to a Cart with the <code>Platform</code> TaxMode and <code>Multi</code> ShippingMode.</p>
+     *  <p>For the <code>External</code> TaxMode, the Tax Rate must be set with ExternalTaxRateDraft.</p>
+     */
+    @NotNull
+    @Valid
+    @JsonProperty("perMethodTaxRate")
+    public List<MethodTaxRate> getPerMethodTaxRate();
 
     /**
      *  <p>The supply channel identifies the inventory entries that should be reserved. The channel has the role InventorySupply.</p>
@@ -237,6 +256,11 @@ public interface LineItem extends com.commercetools.api.models.Customizable<Line
 
     public void setTaxedPrice(final TaxedItemPrice taxedPrice);
 
+    @JsonIgnore
+    public void setTaxedPricePortions(final MethodTaxedPrice... taxedPricePortions);
+
+    public void setTaxedPricePortions(final List<MethodTaxedPrice> taxedPricePortions);
+
     public void setTotalPrice(final TypedMoney totalPrice);
 
     public void setQuantity(final Long quantity);
@@ -249,6 +273,11 @@ public interface LineItem extends com.commercetools.api.models.Customizable<Line
     public void setState(final List<ItemState> state);
 
     public void setTaxRate(final TaxRate taxRate);
+
+    @JsonIgnore
+    public void setPerMethodTaxRate(final MethodTaxRate... perMethodTaxRate);
+
+    public void setPerMethodTaxRate(final List<MethodTaxRate> perMethodTaxRate);
 
     public void setSupplyChannel(final ChannelReference supplyChannel);
 
@@ -287,11 +316,13 @@ public interface LineItem extends com.commercetools.api.models.Customizable<Line
         instance.setVariant(template.getVariant());
         instance.setPrice(template.getPrice());
         instance.setTaxedPrice(template.getTaxedPrice());
+        instance.setTaxedPricePortions(template.getTaxedPricePortions());
         instance.setTotalPrice(template.getTotalPrice());
         instance.setQuantity(template.getQuantity());
         instance.setAddedAt(template.getAddedAt());
         instance.setState(template.getState());
         instance.setTaxRate(template.getTaxRate());
+        instance.setPerMethodTaxRate(template.getPerMethodTaxRate());
         instance.setSupplyChannel(template.getSupplyChannel());
         instance.setDistributionChannel(template.getDistributionChannel());
         instance.setDiscountedPricePerQuantity(template.getDiscountedPricePerQuantity());

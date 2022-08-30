@@ -4,6 +4,8 @@ package com.commercetools.api.models.message;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
+
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -27,6 +29,9 @@ public class ParcelRemovedFromDeliveryMessagePayloadBuilder
     private String deliveryId;
 
     private com.commercetools.api.models.order.Parcel parcel;
+
+    @Nullable
+    private String shippingKey;
 
     /**
      *  <p>Unique identifier of the Delivery.</p>
@@ -57,6 +62,15 @@ public class ParcelRemovedFromDeliveryMessagePayloadBuilder
         return this;
     }
 
+    /**
+     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multi</code> ShippingMode.</p>
+     */
+
+    public ParcelRemovedFromDeliveryMessagePayloadBuilder shippingKey(@Nullable final String shippingKey) {
+        this.shippingKey = shippingKey;
+        return this;
+    }
+
     public String getDeliveryId() {
         return this.deliveryId;
     }
@@ -65,17 +79,22 @@ public class ParcelRemovedFromDeliveryMessagePayloadBuilder
         return this.parcel;
     }
 
+    @Nullable
+    public String getShippingKey() {
+        return this.shippingKey;
+    }
+
     public ParcelRemovedFromDeliveryMessagePayload build() {
         Objects.requireNonNull(deliveryId, ParcelRemovedFromDeliveryMessagePayload.class + ": deliveryId is missing");
         Objects.requireNonNull(parcel, ParcelRemovedFromDeliveryMessagePayload.class + ": parcel is missing");
-        return new ParcelRemovedFromDeliveryMessagePayloadImpl(deliveryId, parcel);
+        return new ParcelRemovedFromDeliveryMessagePayloadImpl(deliveryId, parcel, shippingKey);
     }
 
     /**
      * builds ParcelRemovedFromDeliveryMessagePayload without checking for non null required values
      */
     public ParcelRemovedFromDeliveryMessagePayload buildUnchecked() {
-        return new ParcelRemovedFromDeliveryMessagePayloadImpl(deliveryId, parcel);
+        return new ParcelRemovedFromDeliveryMessagePayloadImpl(deliveryId, parcel, shippingKey);
     }
 
     public static ParcelRemovedFromDeliveryMessagePayloadBuilder of() {
@@ -87,6 +106,7 @@ public class ParcelRemovedFromDeliveryMessagePayloadBuilder
         ParcelRemovedFromDeliveryMessagePayloadBuilder builder = new ParcelRemovedFromDeliveryMessagePayloadBuilder();
         builder.deliveryId = template.getDeliveryId();
         builder.parcel = template.getParcel();
+        builder.shippingKey = template.getShippingKey();
         return builder;
     }
 

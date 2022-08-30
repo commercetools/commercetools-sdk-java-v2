@@ -48,6 +48,8 @@ public class ParcelMeasurementsUpdatedMessageImpl implements ParcelMeasurementsU
 
     private com.commercetools.api.models.order.ParcelMeasurements measurements;
 
+    private String shippingKey;
+
     @JsonCreator
     ParcelMeasurementsUpdatedMessageImpl(@JsonProperty("id") final String id,
             @JsonProperty("version") final Long version,
@@ -60,7 +62,8 @@ public class ParcelMeasurementsUpdatedMessageImpl implements ParcelMeasurementsU
             @JsonProperty("resourceVersion") final Long resourceVersion,
             @JsonProperty("resourceUserProvidedIdentifiers") final com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers,
             @JsonProperty("deliveryId") final String deliveryId, @JsonProperty("parcelId") final String parcelId,
-            @JsonProperty("measurements") final com.commercetools.api.models.order.ParcelMeasurements measurements) {
+            @JsonProperty("measurements") final com.commercetools.api.models.order.ParcelMeasurements measurements,
+            @JsonProperty("shippingKey") final String shippingKey) {
         this.id = id;
         this.version = version;
         this.createdAt = createdAt;
@@ -74,6 +77,7 @@ public class ParcelMeasurementsUpdatedMessageImpl implements ParcelMeasurementsU
         this.deliveryId = deliveryId;
         this.parcelId = parcelId;
         this.measurements = measurements;
+        this.shippingKey = shippingKey;
         this.type = PARCEL_MEASUREMENTS_UPDATED;
     }
 
@@ -193,6 +197,14 @@ public class ParcelMeasurementsUpdatedMessageImpl implements ParcelMeasurementsU
         return this.measurements;
     }
 
+    /**
+     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multi</code> ShippingMode.</p>
+     */
+
+    public String getShippingKey() {
+        return this.shippingKey;
+    }
+
     public void setId(final String id) {
         this.id = id;
     }
@@ -246,6 +258,10 @@ public class ParcelMeasurementsUpdatedMessageImpl implements ParcelMeasurementsU
         this.measurements = measurements;
     }
 
+    public void setShippingKey(final String shippingKey) {
+        this.shippingKey = shippingKey;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -270,6 +286,7 @@ public class ParcelMeasurementsUpdatedMessageImpl implements ParcelMeasurementsU
                 .append(deliveryId, that.deliveryId)
                 .append(parcelId, that.parcelId)
                 .append(measurements, that.measurements)
+                .append(shippingKey, that.shippingKey)
                 .isEquals();
     }
 
@@ -289,6 +306,7 @@ public class ParcelMeasurementsUpdatedMessageImpl implements ParcelMeasurementsU
                 .append(deliveryId)
                 .append(parcelId)
                 .append(measurements)
+                .append(shippingKey)
                 .toHashCode();
     }
 

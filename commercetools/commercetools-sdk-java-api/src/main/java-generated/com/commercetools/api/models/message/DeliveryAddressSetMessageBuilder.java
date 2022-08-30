@@ -62,6 +62,9 @@ public class DeliveryAddressSetMessageBuilder implements Builder<DeliveryAddress
     @Nullable
     private com.commercetools.api.models.common.Address oldAddress;
 
+    @Nullable
+    private String shippingKey;
+
     /**
      *  <p>Unique identifier of the Message. Can be used to track which Messages have been processed.</p>
      */
@@ -246,6 +249,15 @@ public class DeliveryAddressSetMessageBuilder implements Builder<DeliveryAddress
         return this;
     }
 
+    /**
+     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multi</code> ShippingMode.</p>
+     */
+
+    public DeliveryAddressSetMessageBuilder shippingKey(@Nullable final String shippingKey) {
+        this.shippingKey = shippingKey;
+        return this;
+    }
+
     public String getId() {
         return this.id;
     }
@@ -303,6 +315,11 @@ public class DeliveryAddressSetMessageBuilder implements Builder<DeliveryAddress
         return this.oldAddress;
     }
 
+    @Nullable
+    public String getShippingKey() {
+        return this.shippingKey;
+    }
+
     public DeliveryAddressSetMessage build() {
         Objects.requireNonNull(id, DeliveryAddressSetMessage.class + ": id is missing");
         Objects.requireNonNull(version, DeliveryAddressSetMessage.class + ": version is missing");
@@ -313,8 +330,8 @@ public class DeliveryAddressSetMessageBuilder implements Builder<DeliveryAddress
         Objects.requireNonNull(resourceVersion, DeliveryAddressSetMessage.class + ": resourceVersion is missing");
         Objects.requireNonNull(deliveryId, DeliveryAddressSetMessage.class + ": deliveryId is missing");
         return new DeliveryAddressSetMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
-            sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, deliveryId, address,
-            oldAddress);
+            sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, deliveryId, address, oldAddress,
+            shippingKey);
     }
 
     /**
@@ -322,8 +339,8 @@ public class DeliveryAddressSetMessageBuilder implements Builder<DeliveryAddress
      */
     public DeliveryAddressSetMessage buildUnchecked() {
         return new DeliveryAddressSetMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
-            sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, deliveryId, address,
-            oldAddress);
+            sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, deliveryId, address, oldAddress,
+            shippingKey);
     }
 
     public static DeliveryAddressSetMessageBuilder of() {
@@ -345,6 +362,7 @@ public class DeliveryAddressSetMessageBuilder implements Builder<DeliveryAddress
         builder.deliveryId = template.getDeliveryId();
         builder.address = template.getAddress();
         builder.oldAddress = template.getOldAddress();
+        builder.shippingKey = template.getShippingKey();
         return builder;
     }
 

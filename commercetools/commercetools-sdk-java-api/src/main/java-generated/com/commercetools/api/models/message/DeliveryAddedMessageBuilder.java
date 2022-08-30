@@ -56,6 +56,9 @@ public class DeliveryAddedMessageBuilder implements Builder<DeliveryAddedMessage
 
     private com.commercetools.api.models.order.Delivery delivery;
 
+    @Nullable
+    private String shippingKey;
+
     /**
      *  <p>Unique identifier of the Message. Can be used to track which Messages have been processed.</p>
      */
@@ -210,6 +213,15 @@ public class DeliveryAddedMessageBuilder implements Builder<DeliveryAddedMessage
         return this;
     }
 
+    /**
+     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multi</code> ShippingMode.</p>
+     */
+
+    public DeliveryAddedMessageBuilder shippingKey(@Nullable final String shippingKey) {
+        this.shippingKey = shippingKey;
+        return this;
+    }
+
     public String getId() {
         return this.id;
     }
@@ -257,6 +269,11 @@ public class DeliveryAddedMessageBuilder implements Builder<DeliveryAddedMessage
         return this.delivery;
     }
 
+    @Nullable
+    public String getShippingKey() {
+        return this.shippingKey;
+    }
+
     public DeliveryAddedMessage build() {
         Objects.requireNonNull(id, DeliveryAddedMessage.class + ": id is missing");
         Objects.requireNonNull(version, DeliveryAddedMessage.class + ": version is missing");
@@ -267,7 +284,7 @@ public class DeliveryAddedMessageBuilder implements Builder<DeliveryAddedMessage
         Objects.requireNonNull(resourceVersion, DeliveryAddedMessage.class + ": resourceVersion is missing");
         Objects.requireNonNull(delivery, DeliveryAddedMessage.class + ": delivery is missing");
         return new DeliveryAddedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
-            sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, delivery);
+            sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, delivery, shippingKey);
     }
 
     /**
@@ -275,7 +292,7 @@ public class DeliveryAddedMessageBuilder implements Builder<DeliveryAddedMessage
      */
     public DeliveryAddedMessage buildUnchecked() {
         return new DeliveryAddedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
-            sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, delivery);
+            sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, delivery, shippingKey);
     }
 
     public static DeliveryAddedMessageBuilder of() {
@@ -295,6 +312,7 @@ public class DeliveryAddedMessageBuilder implements Builder<DeliveryAddedMessage
         builder.resourceVersion = template.getResourceVersion();
         builder.resourceUserProvidedIdentifiers = template.getResourceUserProvidedIdentifiers();
         builder.delivery = template.getDelivery();
+        builder.shippingKey = template.getShippingKey();
         return builder;
     }
 

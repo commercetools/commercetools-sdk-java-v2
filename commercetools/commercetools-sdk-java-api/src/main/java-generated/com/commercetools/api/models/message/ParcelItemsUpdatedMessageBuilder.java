@@ -65,6 +65,9 @@ public class ParcelItemsUpdatedMessageBuilder implements Builder<ParcelItemsUpda
 
     private java.util.List<com.commercetools.api.models.order.DeliveryItem> oldItems;
 
+    @Nullable
+    private String shippingKey;
+
     /**
      *  <p>Unique identifier of the Message. Can be used to track which Messages have been processed.</p>
      */
@@ -330,6 +333,15 @@ public class ParcelItemsUpdatedMessageBuilder implements Builder<ParcelItemsUpda
         return this;
     }
 
+    /**
+     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multi</code> ShippingMode.</p>
+     */
+
+    public ParcelItemsUpdatedMessageBuilder shippingKey(@Nullable final String shippingKey) {
+        this.shippingKey = shippingKey;
+        return this;
+    }
+
     public String getId() {
         return this.id;
     }
@@ -389,6 +401,11 @@ public class ParcelItemsUpdatedMessageBuilder implements Builder<ParcelItemsUpda
         return this.oldItems;
     }
 
+    @Nullable
+    public String getShippingKey() {
+        return this.shippingKey;
+    }
+
     public ParcelItemsUpdatedMessage build() {
         Objects.requireNonNull(id, ParcelItemsUpdatedMessage.class + ": id is missing");
         Objects.requireNonNull(version, ParcelItemsUpdatedMessage.class + ": version is missing");
@@ -403,7 +420,7 @@ public class ParcelItemsUpdatedMessageBuilder implements Builder<ParcelItemsUpda
         Objects.requireNonNull(oldItems, ParcelItemsUpdatedMessage.class + ": oldItems is missing");
         return new ParcelItemsUpdatedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
             sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, parcelId, deliveryId, items,
-            oldItems);
+            oldItems, shippingKey);
     }
 
     /**
@@ -412,7 +429,7 @@ public class ParcelItemsUpdatedMessageBuilder implements Builder<ParcelItemsUpda
     public ParcelItemsUpdatedMessage buildUnchecked() {
         return new ParcelItemsUpdatedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
             sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, parcelId, deliveryId, items,
-            oldItems);
+            oldItems, shippingKey);
     }
 
     public static ParcelItemsUpdatedMessageBuilder of() {
@@ -435,6 +452,7 @@ public class ParcelItemsUpdatedMessageBuilder implements Builder<ParcelItemsUpda
         builder.deliveryId = template.getDeliveryId();
         builder.items = template.getItems();
         builder.oldItems = template.getOldItems();
+        builder.shippingKey = template.getShippingKey();
         return builder;
     }
 

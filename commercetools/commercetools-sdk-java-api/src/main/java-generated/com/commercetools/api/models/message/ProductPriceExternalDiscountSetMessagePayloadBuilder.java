@@ -70,7 +70,7 @@ public class ProductPriceExternalDiscountSetMessagePayloadBuilder
     }
 
     /**
-     *  <p>Unique identifier of the Price.</p>
+     *  <p>Unique identifier of the Embedded Price.</p>
      */
 
     public ProductPriceExternalDiscountSetMessagePayloadBuilder priceId(final String priceId) {

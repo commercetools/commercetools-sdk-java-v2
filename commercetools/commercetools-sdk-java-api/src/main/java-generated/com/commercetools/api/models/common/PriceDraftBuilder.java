@@ -122,7 +122,7 @@ public class PriceDraftBuilder implements Builder<PriceDraft> {
     }
 
     /**
-     *  <p>Set this field if this Price is valid only valid from the specified date and time.</p>
+     *  <p>Set this field if this Price is only valid from the specified date and time. Must be at least 1 ms earlier than <code>validUntil</code>.</p>
      */
 
     public PriceDraftBuilder validFrom(@Nullable final java.time.ZonedDateTime validFrom) {
@@ -131,7 +131,7 @@ public class PriceDraftBuilder implements Builder<PriceDraft> {
     }
 
     /**
-     *  <p>Set this field if this Price is valid only valid until the specified date and time.</p>
+     *  <p>Set this field if this Price is only valid until the specified date and time. Must be at least 1 ms later than <code>validFrom</code>.</p>
      */
 
     public PriceDraftBuilder validUntil(@Nullable final java.time.ZonedDateTime validUntil) {
@@ -140,8 +140,8 @@ public class PriceDraftBuilder implements Builder<PriceDraft> {
     }
 
     /**
-     *  <p>Set this field to add a DiscountedPrice from an external service.</p>
-     *  <p>The API sets this field automatically if at least one ProductDiscount applies. The DiscountedPrice must reference a ProductDiscount with:</p>
+     *  <p>Set this field to add a DiscountedPrice from an <strong>external service</strong>.</p>
+     *  <p>Otherwise, Composable Commerce sets this field automatically if at least one ProductDiscount applies. The DiscountedPrice must reference a ProductDiscount with:</p>
      *  <ul>
      *   <li>The <code>isActive</code> flag set to <code>true</code>.</li>
      *   <li>A ProductDiscountValue of type <code>external</code>.</li>
@@ -156,8 +156,8 @@ public class PriceDraftBuilder implements Builder<PriceDraft> {
     }
 
     /**
-     *  <p>Set this field to add a DiscountedPrice from an external service.</p>
-     *  <p>The API sets this field automatically if at least one ProductDiscount applies. The DiscountedPrice must reference a ProductDiscount with:</p>
+     *  <p>Set this field to add a DiscountedPrice from an <strong>external service</strong>.</p>
+     *  <p>Otherwise, Composable Commerce sets this field automatically if at least one ProductDiscount applies. The DiscountedPrice must reference a ProductDiscount with:</p>
      *  <ul>
      *   <li>The <code>isActive</code> flag set to <code>true</code>.</li>
      *   <li>A ProductDiscountValue of type <code>external</code>.</li>

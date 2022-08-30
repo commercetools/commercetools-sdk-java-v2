@@ -61,7 +61,7 @@ public interface ProductVariant {
      */
     @Valid
     @JsonProperty("prices")
-    public List<EmbeddedPrice> getPrices();
+    public List<Price> getPrices();
 
     /**
      *  <p>Attributes of the Product Variant.</p>
@@ -126,9 +126,9 @@ public interface ProductVariant {
     public void setKey(final String key);
 
     @JsonIgnore
-    public void setPrices(final EmbeddedPrice... prices);
+    public void setPrices(final Price... prices);
 
-    public void setPrices(final List<EmbeddedPrice> prices);
+    public void setPrices(final List<Price> prices);
 
     @JsonIgnore
     public void setAttributes(final Attribute... attributes);

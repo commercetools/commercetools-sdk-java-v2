@@ -5,6 +5,9 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -18,6 +21,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <div class=code-example>
  * <pre><code class='java'>
  *     SearchKeywords searchKeywords = SearchKeywords.builder()
+ *             .plus/^[a-z]{2}(-[A-Z]{2})?$/(/^[a-z]{2}(-[A-Z]{2})?$/Builder -> /^[a-z]{2}(-[A-Z]{2})?$/Builder)
  *             .build()
  * </code></pre>
  * </div>
@@ -25,6 +29,17 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = SearchKeywordsImpl.class)
 public interface SearchKeywords {
+
+    /**
+     *
+     */
+    @NotNull
+    @Valid
+    @JsonAnyGetter
+    public Map<String, List<SearchKeyword>> values();
+
+    @JsonAnySetter
+    public void setValue(String key, List<SearchKeyword> value);
 
     public static SearchKeywords of() {
         return new SearchKeywordsImpl();

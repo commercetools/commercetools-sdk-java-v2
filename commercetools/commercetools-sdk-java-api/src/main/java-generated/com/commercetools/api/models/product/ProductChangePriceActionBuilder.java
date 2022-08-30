@@ -27,13 +27,13 @@ public class ProductChangePriceActionBuilder implements Builder<ProductChangePri
 
     private String priceId;
 
-    private com.commercetools.api.models.product.EmbeddedPriceDraft price;
+    private com.commercetools.api.models.common.PriceDraft price;
 
     @Nullable
     private Boolean staged;
 
     /**
-     *  <p>The <code>id</code> of the EmbeddedPrice to update.</p>
+     *  <p>The <code>id</code> of the Embedded Price to update.</p>
      */
 
     public ProductChangePriceActionBuilder priceId(final String priceId) {
@@ -46,8 +46,8 @@ public class ProductChangePriceActionBuilder implements Builder<ProductChangePri
      */
 
     public ProductChangePriceActionBuilder price(
-            Function<com.commercetools.api.models.product.EmbeddedPriceDraftBuilder, com.commercetools.api.models.product.EmbeddedPriceDraftBuilder> builder) {
-        this.price = builder.apply(com.commercetools.api.models.product.EmbeddedPriceDraftBuilder.of()).build();
+            Function<com.commercetools.api.models.common.PriceDraftBuilder, com.commercetools.api.models.common.PriceDraftBuilder> builder) {
+        this.price = builder.apply(com.commercetools.api.models.common.PriceDraftBuilder.of()).build();
         return this;
     }
 
@@ -55,13 +55,13 @@ public class ProductChangePriceActionBuilder implements Builder<ProductChangePri
      *  <p>Value to set.</p>
      */
 
-    public ProductChangePriceActionBuilder price(final com.commercetools.api.models.product.EmbeddedPriceDraft price) {
+    public ProductChangePriceActionBuilder price(final com.commercetools.api.models.common.PriceDraft price) {
         this.price = price;
         return this;
     }
 
     /**
-     *  <p>If <code>true</code>, only the staged EmbeddedPrice is updated. If <code>false</code>, both the current and staged EmbeddedPrice are updated.</p>
+     *  <p>If <code>true</code>, only the staged Embedded Price is updated. If <code>false</code>, both the current and staged Embedded Price are updated.</p>
      */
 
     public ProductChangePriceActionBuilder staged(@Nullable final Boolean staged) {
@@ -73,7 +73,7 @@ public class ProductChangePriceActionBuilder implements Builder<ProductChangePri
         return this.priceId;
     }
 
-    public com.commercetools.api.models.product.EmbeddedPriceDraft getPrice() {
+    public com.commercetools.api.models.common.PriceDraft getPrice() {
         return this.price;
     }
 

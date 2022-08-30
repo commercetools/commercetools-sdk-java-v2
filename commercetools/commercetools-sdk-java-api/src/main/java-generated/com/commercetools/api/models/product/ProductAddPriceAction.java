@@ -8,6 +8,7 @@ import java.util.function.Function;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
+import com.commercetools.api.models.common.PriceDraft;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -47,12 +48,12 @@ public interface ProductAddPriceAction extends ProductUpdateAction {
     public String getSku();
 
     /**
-     *  <p>EmbeddedPrice to add to the Product Variant.</p>
+     *  <p>Embedded Price to add to the Product Variant.</p>
      */
     @NotNull
     @Valid
     @JsonProperty("price")
-    public EmbeddedPriceDraft getPrice();
+    public PriceDraft getPrice();
 
     /**
      *  <p>If <code>true</code>, only the staged <code>prices</code> is updated. If <code>false</code>, both the current and staged <code>prices</code> are updated.</p>
@@ -65,7 +66,7 @@ public interface ProductAddPriceAction extends ProductUpdateAction {
 
     public void setSku(final String sku);
 
-    public void setPrice(final EmbeddedPriceDraft price);
+    public void setPrice(final PriceDraft price);
 
     public void setStaged(final Boolean staged);
 

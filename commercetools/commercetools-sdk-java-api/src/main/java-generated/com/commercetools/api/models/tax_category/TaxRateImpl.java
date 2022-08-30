@@ -76,7 +76,7 @@ public class TaxRateImpl implements TaxRate, ModelBase {
     }
 
     /**
-     *  <p>If <code>true</code>, tax is included in Prices and the <code>taxedPrice</code> is present on LineItems. In this case, the <code>totalNet</code> price on TaxedPrice includes the TaxRate.</p>
+     *  <p>If <code>true</code>, tax is included in Embedded Prices and the <code>taxedPrice</code> is present on LineItems. In this case, the <code>totalNet</code> price on TaxedPrice includes the TaxRate.</p>
      */
 
     public Boolean getIncludedInPrice() {

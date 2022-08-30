@@ -26,13 +26,13 @@ public class ProductAddPriceActionImpl implements ProductAddPriceAction, ModelBa
 
     private String sku;
 
-    private com.commercetools.api.models.product.EmbeddedPriceDraft price;
+    private com.commercetools.api.models.common.PriceDraft price;
 
     private Boolean staged;
 
     @JsonCreator
     ProductAddPriceActionImpl(@JsonProperty("variantId") final Long variantId, @JsonProperty("sku") final String sku,
-            @JsonProperty("price") final com.commercetools.api.models.product.EmbeddedPriceDraft price,
+            @JsonProperty("price") final com.commercetools.api.models.common.PriceDraft price,
             @JsonProperty("staged") final Boolean staged) {
         this.variantId = variantId;
         this.sku = sku;
@@ -70,10 +70,10 @@ public class ProductAddPriceActionImpl implements ProductAddPriceAction, ModelBa
     }
 
     /**
-     *  <p>EmbeddedPrice to add to the Product Variant.</p>
+     *  <p>Embedded Price to add to the Product Variant.</p>
      */
 
-    public com.commercetools.api.models.product.EmbeddedPriceDraft getPrice() {
+    public com.commercetools.api.models.common.PriceDraft getPrice() {
         return this.price;
     }
 
@@ -93,7 +93,7 @@ public class ProductAddPriceActionImpl implements ProductAddPriceAction, ModelBa
         this.sku = sku;
     }
 
-    public void setPrice(final com.commercetools.api.models.product.EmbeddedPriceDraft price) {
+    public void setPrice(final com.commercetools.api.models.common.PriceDraft price) {
         this.price = price;
     }
 

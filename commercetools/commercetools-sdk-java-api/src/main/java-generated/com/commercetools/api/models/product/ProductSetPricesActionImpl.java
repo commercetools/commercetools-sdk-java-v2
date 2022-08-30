@@ -26,13 +26,13 @@ public class ProductSetPricesActionImpl implements ProductSetPricesAction, Model
 
     private String sku;
 
-    private java.util.List<com.commercetools.api.models.product.EmbeddedPriceDraft> prices;
+    private java.util.List<com.commercetools.api.models.common.PriceDraft> prices;
 
     private Boolean staged;
 
     @JsonCreator
     ProductSetPricesActionImpl(@JsonProperty("variantId") final Long variantId, @JsonProperty("sku") final String sku,
-            @JsonProperty("prices") final java.util.List<com.commercetools.api.models.product.EmbeddedPriceDraft> prices,
+            @JsonProperty("prices") final java.util.List<com.commercetools.api.models.common.PriceDraft> prices,
             @JsonProperty("staged") final Boolean staged) {
         this.variantId = variantId;
         this.sku = sku;
@@ -73,7 +73,7 @@ public class ProductSetPricesActionImpl implements ProductSetPricesAction, Model
      *  <p>The Embedded Prices to set. Each Price must have its unique Price scope (with same currency, country, Customer Group, Channel, <code>validFrom</code> and <code>validUntil</code>).</p>
      */
 
-    public java.util.List<com.commercetools.api.models.product.EmbeddedPriceDraft> getPrices() {
+    public java.util.List<com.commercetools.api.models.common.PriceDraft> getPrices() {
         return this.prices;
     }
 
@@ -93,11 +93,11 @@ public class ProductSetPricesActionImpl implements ProductSetPricesAction, Model
         this.sku = sku;
     }
 
-    public void setPrices(final com.commercetools.api.models.product.EmbeddedPriceDraft... prices) {
+    public void setPrices(final com.commercetools.api.models.common.PriceDraft... prices) {
         this.prices = new ArrayList<>(Arrays.asList(prices));
     }
 
-    public void setPrices(final java.util.List<com.commercetools.api.models.product.EmbeddedPriceDraft> prices) {
+    public void setPrices(final java.util.List<com.commercetools.api.models.common.PriceDraft> prices) {
         this.prices = prices;
     }
 

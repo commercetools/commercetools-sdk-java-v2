@@ -15,7 +15,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>Details about a Price that was updated due to a Discount. Specific to ProductPriceDiscountsSet Message.</p>
+ *  <p>Details about a Embedded Price that was updated due to a Discount. Specific to ProductPriceDiscountsSet Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -55,7 +55,7 @@ public interface ProductPriceDiscountsSetUpdatedPrice {
     public String getSku();
 
     /**
-     *  <p>Unique identifier of the Price.</p>
+     *  <p>Unique identifier of the Embedded Price.</p>
      */
     @NotNull
     @JsonProperty("priceId")

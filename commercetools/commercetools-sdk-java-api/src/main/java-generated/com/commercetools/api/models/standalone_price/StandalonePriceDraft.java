@@ -82,14 +82,14 @@ public interface StandalonePriceDraft {
     public ChannelResourceIdentifier getChannel();
 
     /**
-     *  <p>Sets the date from which the Price is valid. Must be at least 1 ms before <code>validUntil</code>.</p>
+     *  <p>Sets the date from which the Price is valid. Must be at least 1 ms earlier than <code>validUntil</code>.</p>
      */
 
     @JsonProperty("validFrom")
     public ZonedDateTime getValidFrom();
 
     /**
-     *  <p>Sets the date until the Price is valid. Must be at least 1 ms after <code>validFrom</code>.</p>
+     *  <p>Sets the date until the Price is valid. Must be at least 1 ms later than <code>validFrom</code>.</p>
      */
 
     @JsonProperty("validUntil")

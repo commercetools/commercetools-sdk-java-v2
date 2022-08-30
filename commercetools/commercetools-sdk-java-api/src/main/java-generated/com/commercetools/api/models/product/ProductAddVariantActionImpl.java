@@ -26,7 +26,7 @@ public class ProductAddVariantActionImpl implements ProductAddVariantAction, Mod
 
     private String key;
 
-    private java.util.List<com.commercetools.api.models.product.EmbeddedPriceDraft> prices;
+    private java.util.List<com.commercetools.api.models.common.PriceDraft> prices;
 
     private java.util.List<com.commercetools.api.models.common.Image> images;
 
@@ -38,7 +38,7 @@ public class ProductAddVariantActionImpl implements ProductAddVariantAction, Mod
 
     @JsonCreator
     ProductAddVariantActionImpl(@JsonProperty("sku") final String sku, @JsonProperty("key") final String key,
-            @JsonProperty("prices") final java.util.List<com.commercetools.api.models.product.EmbeddedPriceDraft> prices,
+            @JsonProperty("prices") final java.util.List<com.commercetools.api.models.common.PriceDraft> prices,
             @JsonProperty("images") final java.util.List<com.commercetools.api.models.common.Image> images,
             @JsonProperty("attributes") final java.util.List<com.commercetools.api.models.product.Attribute> attributes,
             @JsonProperty("staged") final Boolean staged,
@@ -82,10 +82,10 @@ public class ProductAddVariantActionImpl implements ProductAddVariantAction, Mod
     }
 
     /**
-     *  <p>EmbeddedPrices for the Product Variant.</p>
+     *  <p>Embedded Prices for the Product Variant.</p>
      */
 
-    public java.util.List<com.commercetools.api.models.product.EmbeddedPriceDraft> getPrices() {
+    public java.util.List<com.commercetools.api.models.common.PriceDraft> getPrices() {
         return this.prices;
     }
 
@@ -129,11 +129,11 @@ public class ProductAddVariantActionImpl implements ProductAddVariantAction, Mod
         this.key = key;
     }
 
-    public void setPrices(final com.commercetools.api.models.product.EmbeddedPriceDraft... prices) {
+    public void setPrices(final com.commercetools.api.models.common.PriceDraft... prices) {
         this.prices = new ArrayList<>(Arrays.asList(prices));
     }
 
-    public void setPrices(final java.util.List<com.commercetools.api.models.product.EmbeddedPriceDraft> prices) {
+    public void setPrices(final java.util.List<com.commercetools.api.models.common.PriceDraft> prices) {
         this.prices = prices;
     }
 

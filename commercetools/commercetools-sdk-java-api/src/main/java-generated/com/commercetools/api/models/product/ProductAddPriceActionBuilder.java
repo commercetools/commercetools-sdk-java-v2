@@ -30,7 +30,7 @@ public class ProductAddPriceActionBuilder implements Builder<ProductAddPriceActi
     @Nullable
     private String sku;
 
-    private com.commercetools.api.models.product.EmbeddedPriceDraft price;
+    private com.commercetools.api.models.common.PriceDraft price;
 
     @Nullable
     private Boolean staged;
@@ -54,20 +54,20 @@ public class ProductAddPriceActionBuilder implements Builder<ProductAddPriceActi
     }
 
     /**
-     *  <p>EmbeddedPrice to add to the Product Variant.</p>
+     *  <p>Embedded Price to add to the Product Variant.</p>
      */
 
     public ProductAddPriceActionBuilder price(
-            Function<com.commercetools.api.models.product.EmbeddedPriceDraftBuilder, com.commercetools.api.models.product.EmbeddedPriceDraftBuilder> builder) {
-        this.price = builder.apply(com.commercetools.api.models.product.EmbeddedPriceDraftBuilder.of()).build();
+            Function<com.commercetools.api.models.common.PriceDraftBuilder, com.commercetools.api.models.common.PriceDraftBuilder> builder) {
+        this.price = builder.apply(com.commercetools.api.models.common.PriceDraftBuilder.of()).build();
         return this;
     }
 
     /**
-     *  <p>EmbeddedPrice to add to the Product Variant.</p>
+     *  <p>Embedded Price to add to the Product Variant.</p>
      */
 
-    public ProductAddPriceActionBuilder price(final com.commercetools.api.models.product.EmbeddedPriceDraft price) {
+    public ProductAddPriceActionBuilder price(final com.commercetools.api.models.common.PriceDraft price) {
         this.price = price;
         return this;
     }
@@ -91,7 +91,7 @@ public class ProductAddPriceActionBuilder implements Builder<ProductAddPriceActi
         return this.sku;
     }
 
-    public com.commercetools.api.models.product.EmbeddedPriceDraft getPrice() {
+    public com.commercetools.api.models.common.PriceDraft getPrice() {
         return this.price;
     }
 

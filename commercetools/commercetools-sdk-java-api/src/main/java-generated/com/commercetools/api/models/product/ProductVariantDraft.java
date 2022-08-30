@@ -9,6 +9,7 @@ import javax.validation.Valid;
 
 import com.commercetools.api.models.common.AssetDraft;
 import com.commercetools.api.models.common.Image;
+import com.commercetools.api.models.common.PriceDraft;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -49,7 +50,7 @@ public interface ProductVariantDraft {
      */
     @Valid
     @JsonProperty("prices")
-    public List<EmbeddedPriceDraft> getPrices();
+    public List<PriceDraft> getPrices();
 
     /**
      *  <p>Attributes according to the respective AttributeDefinition.</p>
@@ -77,9 +78,9 @@ public interface ProductVariantDraft {
     public void setKey(final String key);
 
     @JsonIgnore
-    public void setPrices(final EmbeddedPriceDraft... prices);
+    public void setPrices(final PriceDraft... prices);
 
-    public void setPrices(final List<EmbeddedPriceDraft> prices);
+    public void setPrices(final List<PriceDraft> prices);
 
     @JsonIgnore
     public void setAttributes(final Attribute... attributes);

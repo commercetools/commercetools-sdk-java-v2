@@ -9,6 +9,7 @@ import javax.validation.Valid;
 
 import com.commercetools.api.models.common.Asset;
 import com.commercetools.api.models.common.Image;
+import com.commercetools.api.models.common.PriceDraft;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -47,11 +48,11 @@ public interface ProductAddVariantAction extends ProductUpdateAction {
     public String getKey();
 
     /**
-     *  <p>EmbeddedPrices for the Product Variant.</p>
+     *  <p>Embedded Prices for the Product Variant.</p>
      */
     @Valid
     @JsonProperty("prices")
-    public List<EmbeddedPriceDraft> getPrices();
+    public List<PriceDraft> getPrices();
 
     /**
      *  <p>Images for the Product Variant.</p>
@@ -86,9 +87,9 @@ public interface ProductAddVariantAction extends ProductUpdateAction {
     public void setKey(final String key);
 
     @JsonIgnore
-    public void setPrices(final EmbeddedPriceDraft... prices);
+    public void setPrices(final PriceDraft... prices);
 
-    public void setPrices(final List<EmbeddedPriceDraft> prices);
+    public void setPrices(final List<PriceDraft> prices);
 
     @JsonIgnore
     public void setImages(final Image... images);

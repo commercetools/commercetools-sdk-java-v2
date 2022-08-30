@@ -44,7 +44,7 @@ public class ProductPriceDiscountsSetMessagePayloadImpl implements ProductPriceD
     }
 
     /**
-     *  <p>Array containing details about the Prices that were updated.</p>
+     *  <p>Array containing details about the Embedded Prices that were updated.</p>
      */
 
     public java.util.List<com.commercetools.api.models.message.ProductPriceDiscountsSetUpdatedPrice> getUpdatedPrices() {

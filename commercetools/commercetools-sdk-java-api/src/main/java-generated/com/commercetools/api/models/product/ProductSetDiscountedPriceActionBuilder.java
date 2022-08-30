@@ -33,7 +33,7 @@ public class ProductSetDiscountedPriceActionBuilder implements Builder<ProductSe
     private com.commercetools.api.models.common.DiscountedPriceDraft discounted;
 
     /**
-     *  <p>The <code>id</code> of the EmbeddedPrice to set the Discount.</p>
+     *  <p>The <code>id</code> of the Embedded Price to set the Discount.</p>
      */
 
     public ProductSetDiscountedPriceActionBuilder priceId(final String priceId) {
@@ -42,7 +42,7 @@ public class ProductSetDiscountedPriceActionBuilder implements Builder<ProductSe
     }
 
     /**
-     *  <p>If <code>true</code>, only the staged EmbeddedPrice is updated. If <code>false</code>, both the current and staged EmbeddedPrice are updated.</p>
+     *  <p>If <code>true</code>, only the staged Embedded Price is updated. If <code>false</code>, both the current and staged Embedded Price are updated.</p>
      */
 
     public ProductSetDiscountedPriceActionBuilder staged(@Nullable final Boolean staged) {

@@ -24,13 +24,13 @@ public class ProductChangePriceActionImpl implements ProductChangePriceAction, M
 
     private String priceId;
 
-    private com.commercetools.api.models.product.EmbeddedPriceDraft price;
+    private com.commercetools.api.models.common.PriceDraft price;
 
     private Boolean staged;
 
     @JsonCreator
     ProductChangePriceActionImpl(@JsonProperty("priceId") final String priceId,
-            @JsonProperty("price") final com.commercetools.api.models.product.EmbeddedPriceDraft price,
+            @JsonProperty("price") final com.commercetools.api.models.common.PriceDraft price,
             @JsonProperty("staged") final Boolean staged) {
         this.priceId = priceId;
         this.price = price;
@@ -51,7 +51,7 @@ public class ProductChangePriceActionImpl implements ProductChangePriceAction, M
     }
 
     /**
-     *  <p>The <code>id</code> of the EmbeddedPrice to update.</p>
+     *  <p>The <code>id</code> of the Embedded Price to update.</p>
      */
 
     public String getPriceId() {
@@ -62,12 +62,12 @@ public class ProductChangePriceActionImpl implements ProductChangePriceAction, M
      *  <p>Value to set.</p>
      */
 
-    public com.commercetools.api.models.product.EmbeddedPriceDraft getPrice() {
+    public com.commercetools.api.models.common.PriceDraft getPrice() {
         return this.price;
     }
 
     /**
-     *  <p>If <code>true</code>, only the staged EmbeddedPrice is updated. If <code>false</code>, both the current and staged EmbeddedPrice are updated.</p>
+     *  <p>If <code>true</code>, only the staged Embedded Price is updated. If <code>false</code>, both the current and staged Embedded Price are updated.</p>
      */
 
     public Boolean getStaged() {
@@ -78,7 +78,7 @@ public class ProductChangePriceActionImpl implements ProductChangePriceAction, M
         this.priceId = priceId;
     }
 
-    public void setPrice(final com.commercetools.api.models.product.EmbeddedPriceDraft price) {
+    public void setPrice(final com.commercetools.api.models.common.PriceDraft price) {
         this.price = price;
     }
 

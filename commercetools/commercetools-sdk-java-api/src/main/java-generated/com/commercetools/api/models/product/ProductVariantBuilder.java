@@ -33,7 +33,7 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
     private String key;
 
     @Nullable
-    private java.util.List<com.commercetools.api.models.product.EmbeddedPrice> prices;
+    private java.util.List<com.commercetools.api.models.common.Price> prices;
 
     @Nullable
     private java.util.List<com.commercetools.api.models.product.Attribute> attributes;
@@ -91,7 +91,7 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
      *  <p>The Embedded Prices of the Product Variant. Cannot contain two Prices of the same Price scope (with same currency, country, Customer Group, Channel, <code>validFrom</code> and <code>validUntil</code>).</p>
      */
 
-    public ProductVariantBuilder prices(@Nullable final com.commercetools.api.models.product.EmbeddedPrice... prices) {
+    public ProductVariantBuilder prices(@Nullable final com.commercetools.api.models.common.Price... prices) {
         this.prices = new ArrayList<>(Arrays.asList(prices));
         return this;
     }
@@ -101,7 +101,7 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
      */
 
     public ProductVariantBuilder prices(
-            @Nullable final java.util.List<com.commercetools.api.models.product.EmbeddedPrice> prices) {
+            @Nullable final java.util.List<com.commercetools.api.models.common.Price> prices) {
         this.prices = prices;
         return this;
     }
@@ -110,8 +110,7 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
      *  <p>The Embedded Prices of the Product Variant. Cannot contain two Prices of the same Price scope (with same currency, country, Customer Group, Channel, <code>validFrom</code> and <code>validUntil</code>).</p>
      */
 
-    public ProductVariantBuilder plusPrices(
-            @Nullable final com.commercetools.api.models.product.EmbeddedPrice... prices) {
+    public ProductVariantBuilder plusPrices(@Nullable final com.commercetools.api.models.common.Price... prices) {
         if (this.prices == null) {
             this.prices = new ArrayList<>();
         }
@@ -124,11 +123,11 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
      */
 
     public ProductVariantBuilder plusPrices(
-            Function<com.commercetools.api.models.product.EmbeddedPriceBuilder, com.commercetools.api.models.product.EmbeddedPriceBuilder> builder) {
+            Function<com.commercetools.api.models.common.PriceBuilder, com.commercetools.api.models.common.PriceBuilder> builder) {
         if (this.prices == null) {
             this.prices = new ArrayList<>();
         }
-        this.prices.add(builder.apply(com.commercetools.api.models.product.EmbeddedPriceBuilder.of()).build());
+        this.prices.add(builder.apply(com.commercetools.api.models.common.PriceBuilder.of()).build());
         return this;
     }
 
@@ -137,9 +136,9 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
      */
 
     public ProductVariantBuilder withPrices(
-            Function<com.commercetools.api.models.product.EmbeddedPriceBuilder, com.commercetools.api.models.product.EmbeddedPriceBuilder> builder) {
+            Function<com.commercetools.api.models.common.PriceBuilder, com.commercetools.api.models.common.PriceBuilder> builder) {
         this.prices = new ArrayList<>();
-        this.prices.add(builder.apply(com.commercetools.api.models.product.EmbeddedPriceBuilder.of()).build());
+        this.prices.add(builder.apply(com.commercetools.api.models.common.PriceBuilder.of()).build());
         return this;
     }
 
@@ -403,7 +402,7 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
     }
 
     @Nullable
-    public java.util.List<com.commercetools.api.models.product.EmbeddedPrice> getPrices() {
+    public java.util.List<com.commercetools.api.models.common.Price> getPrices() {
         return this.prices;
     }
 

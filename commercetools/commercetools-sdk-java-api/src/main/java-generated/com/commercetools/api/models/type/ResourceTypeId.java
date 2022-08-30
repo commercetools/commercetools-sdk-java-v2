@@ -108,7 +108,7 @@ public interface ResourceTypeId {
     */
     ResourceTypeId PAYMENT_INTERFACE_INTERACTION = ResourceTypeIdEnum.PAYMENT_INTERFACE_INTERACTION;
     /**
-    	<p><a href="ctp:api:type:Price">Price</a> on <a href="ctp:api:type:ProductVariant">ProductVariant</a></p>
+    	<p><a href="ctp:api:type:Price">Embedded Price</a> on <a href="ctp:api:type:ProductVariant">ProductVariant</a></p>
 
     */
     ResourceTypeId PRODUCT_PRICE = ResourceTypeIdEnum.PRODUCT_PRICE;

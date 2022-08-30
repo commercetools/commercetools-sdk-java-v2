@@ -57,7 +57,7 @@ public interface ProductPriceExternalDiscountSetMessagePayload extends MessagePa
     public String getSku();
 
     /**
-     *  <p>Unique identifier of the Price.</p>
+     *  <p>Unique identifier of the Embedded Price.</p>
      */
     @NotNull
     @JsonProperty("priceId")

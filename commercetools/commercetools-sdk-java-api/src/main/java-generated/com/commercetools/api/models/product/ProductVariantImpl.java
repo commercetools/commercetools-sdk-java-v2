@@ -26,7 +26,7 @@ public class ProductVariantImpl implements ProductVariant, ModelBase {
 
     private String key;
 
-    private java.util.List<com.commercetools.api.models.product.EmbeddedPrice> prices;
+    private java.util.List<com.commercetools.api.models.common.Price> prices;
 
     private java.util.List<com.commercetools.api.models.product.Attribute> attributes;
 
@@ -47,7 +47,7 @@ public class ProductVariantImpl implements ProductVariant, ModelBase {
     @JsonCreator
     ProductVariantImpl(@JsonProperty("id") final Long id, @JsonProperty("sku") final String sku,
             @JsonProperty("key") final String key,
-            @JsonProperty("prices") final java.util.List<com.commercetools.api.models.product.EmbeddedPrice> prices,
+            @JsonProperty("prices") final java.util.List<com.commercetools.api.models.common.Price> prices,
             @JsonProperty("attributes") final java.util.List<com.commercetools.api.models.product.Attribute> attributes,
             @JsonProperty("price") final com.commercetools.api.models.common.Price price,
             @JsonProperty("images") final java.util.List<com.commercetools.api.models.common.Image> images,
@@ -102,7 +102,7 @@ public class ProductVariantImpl implements ProductVariant, ModelBase {
      *  <p>The Embedded Prices of the Product Variant. Cannot contain two Prices of the same Price scope (with same currency, country, Customer Group, Channel, <code>validFrom</code> and <code>validUntil</code>).</p>
      */
 
-    public java.util.List<com.commercetools.api.models.product.EmbeddedPrice> getPrices() {
+    public java.util.List<com.commercetools.api.models.common.Price> getPrices() {
         return this.prices;
     }
 
@@ -182,11 +182,11 @@ public class ProductVariantImpl implements ProductVariant, ModelBase {
         this.key = key;
     }
 
-    public void setPrices(final com.commercetools.api.models.product.EmbeddedPrice... prices) {
+    public void setPrices(final com.commercetools.api.models.common.Price... prices) {
         this.prices = new ArrayList<>(Arrays.asList(prices));
     }
 
-    public void setPrices(final java.util.List<com.commercetools.api.models.product.EmbeddedPrice> prices) {
+    public void setPrices(final java.util.List<com.commercetools.api.models.common.Price> prices) {
         this.prices = prices;
     }
 

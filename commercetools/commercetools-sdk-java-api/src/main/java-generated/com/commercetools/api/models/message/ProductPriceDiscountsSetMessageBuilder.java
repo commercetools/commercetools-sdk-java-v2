@@ -193,7 +193,7 @@ public class ProductPriceDiscountsSetMessageBuilder implements Builder<ProductPr
     }
 
     /**
-     *  <p>Array containing details about the Prices that were updated.</p>
+     *  <p>Array containing details about the Embedded Prices that were updated.</p>
      */
 
     public ProductPriceDiscountsSetMessageBuilder updatedPrices(
@@ -203,7 +203,7 @@ public class ProductPriceDiscountsSetMessageBuilder implements Builder<ProductPr
     }
 
     /**
-     *  <p>Array containing details about the Prices that were updated.</p>
+     *  <p>Array containing details about the Embedded Prices that were updated.</p>
      */
 
     public ProductPriceDiscountsSetMessageBuilder updatedPrices(
@@ -213,7 +213,7 @@ public class ProductPriceDiscountsSetMessageBuilder implements Builder<ProductPr
     }
 
     /**
-     *  <p>Array containing details about the Prices that were updated.</p>
+     *  <p>Array containing details about the Embedded Prices that were updated.</p>
      */
 
     public ProductPriceDiscountsSetMessageBuilder plusUpdatedPrices(
@@ -226,7 +226,7 @@ public class ProductPriceDiscountsSetMessageBuilder implements Builder<ProductPr
     }
 
     /**
-     *  <p>Array containing details about the Prices that were updated.</p>
+     *  <p>Array containing details about the Embedded Prices that were updated.</p>
      */
 
     public ProductPriceDiscountsSetMessageBuilder plusUpdatedPrices(
@@ -241,7 +241,7 @@ public class ProductPriceDiscountsSetMessageBuilder implements Builder<ProductPr
     }
 
     /**
-     *  <p>Array containing details about the Prices that were updated.</p>
+     *  <p>Array containing details about the Embedded Prices that were updated.</p>
      */
 
     public ProductPriceDiscountsSetMessageBuilder withUpdatedPrices(

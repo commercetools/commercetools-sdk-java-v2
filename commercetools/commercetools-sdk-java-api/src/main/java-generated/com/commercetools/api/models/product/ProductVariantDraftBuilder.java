@@ -30,7 +30,7 @@ public class ProductVariantDraftBuilder implements Builder<ProductVariantDraft> 
     private String key;
 
     @Nullable
-    private java.util.List<com.commercetools.api.models.product.EmbeddedPriceDraft> prices;
+    private java.util.List<com.commercetools.api.models.common.PriceDraft> prices;
 
     @Nullable
     private java.util.List<com.commercetools.api.models.product.Attribute> attributes;
@@ -63,8 +63,7 @@ public class ProductVariantDraftBuilder implements Builder<ProductVariantDraft> 
      *  <p>The Embedded Prices for the Product Variant. Each Price must have its unique Price scope (with same currency, country, Customer Group, Channel, <code>validFrom</code> and <code>validUntil</code>).</p>
      */
 
-    public ProductVariantDraftBuilder prices(
-            @Nullable final com.commercetools.api.models.product.EmbeddedPriceDraft... prices) {
+    public ProductVariantDraftBuilder prices(@Nullable final com.commercetools.api.models.common.PriceDraft... prices) {
         this.prices = new ArrayList<>(Arrays.asList(prices));
         return this;
     }
@@ -74,7 +73,7 @@ public class ProductVariantDraftBuilder implements Builder<ProductVariantDraft> 
      */
 
     public ProductVariantDraftBuilder prices(
-            @Nullable final java.util.List<com.commercetools.api.models.product.EmbeddedPriceDraft> prices) {
+            @Nullable final java.util.List<com.commercetools.api.models.common.PriceDraft> prices) {
         this.prices = prices;
         return this;
     }
@@ -84,7 +83,7 @@ public class ProductVariantDraftBuilder implements Builder<ProductVariantDraft> 
      */
 
     public ProductVariantDraftBuilder plusPrices(
-            @Nullable final com.commercetools.api.models.product.EmbeddedPriceDraft... prices) {
+            @Nullable final com.commercetools.api.models.common.PriceDraft... prices) {
         if (this.prices == null) {
             this.prices = new ArrayList<>();
         }
@@ -97,11 +96,11 @@ public class ProductVariantDraftBuilder implements Builder<ProductVariantDraft> 
      */
 
     public ProductVariantDraftBuilder plusPrices(
-            Function<com.commercetools.api.models.product.EmbeddedPriceDraftBuilder, com.commercetools.api.models.product.EmbeddedPriceDraftBuilder> builder) {
+            Function<com.commercetools.api.models.common.PriceDraftBuilder, com.commercetools.api.models.common.PriceDraftBuilder> builder) {
         if (this.prices == null) {
             this.prices = new ArrayList<>();
         }
-        this.prices.add(builder.apply(com.commercetools.api.models.product.EmbeddedPriceDraftBuilder.of()).build());
+        this.prices.add(builder.apply(com.commercetools.api.models.common.PriceDraftBuilder.of()).build());
         return this;
     }
 
@@ -110,9 +109,9 @@ public class ProductVariantDraftBuilder implements Builder<ProductVariantDraft> 
      */
 
     public ProductVariantDraftBuilder withPrices(
-            Function<com.commercetools.api.models.product.EmbeddedPriceDraftBuilder, com.commercetools.api.models.product.EmbeddedPriceDraftBuilder> builder) {
+            Function<com.commercetools.api.models.common.PriceDraftBuilder, com.commercetools.api.models.common.PriceDraftBuilder> builder) {
         this.prices = new ArrayList<>();
-        this.prices.add(builder.apply(com.commercetools.api.models.product.EmbeddedPriceDraftBuilder.of()).build());
+        this.prices.add(builder.apply(com.commercetools.api.models.common.PriceDraftBuilder.of()).build());
         return this;
     }
 
@@ -295,7 +294,7 @@ public class ProductVariantDraftBuilder implements Builder<ProductVariantDraft> 
     }
 
     @Nullable
-    public java.util.List<com.commercetools.api.models.product.EmbeddedPriceDraft> getPrices() {
+    public java.util.List<com.commercetools.api.models.common.PriceDraft> getPrices() {
         return this.prices;
     }
 

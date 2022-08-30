@@ -4,6 +4,8 @@ package com.commercetools.api.models.message;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
+
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -14,8 +16,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <div class=code-example>
  * <pre><code class='java'>
  *     StoreDistributionChannelsChangedMessagePayload storeDistributionChannelsChangedMessagePayload = StoreDistributionChannelsChangedMessagePayload.builder()
- *             .plusAddedDistributionChannels(addedDistributionChannelsBuilder -> addedDistributionChannelsBuilder)
- *             .plusRemovedDistributionChannels(removedDistributionChannelsBuilder -> removedDistributionChannelsBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -24,8 +24,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 public class StoreDistributionChannelsChangedMessagePayloadBuilder
         implements Builder<StoreDistributionChannelsChangedMessagePayload> {
 
+    @Nullable
     private java.util.List<com.commercetools.api.models.channel.ChannelReference> addedDistributionChannels;
 
+    @Nullable
     private java.util.List<com.commercetools.api.models.channel.ChannelReference> removedDistributionChannels;
 
     /**
@@ -33,7 +35,7 @@ public class StoreDistributionChannelsChangedMessagePayloadBuilder
      */
 
     public StoreDistributionChannelsChangedMessagePayloadBuilder addedDistributionChannels(
-            final com.commercetools.api.models.channel.ChannelReference... addedDistributionChannels) {
+            @Nullable final com.commercetools.api.models.channel.ChannelReference... addedDistributionChannels) {
         this.addedDistributionChannels = new ArrayList<>(Arrays.asList(addedDistributionChannels));
         return this;
     }
@@ -43,7 +45,7 @@ public class StoreDistributionChannelsChangedMessagePayloadBuilder
      */
 
     public StoreDistributionChannelsChangedMessagePayloadBuilder addedDistributionChannels(
-            final java.util.List<com.commercetools.api.models.channel.ChannelReference> addedDistributionChannels) {
+            @Nullable final java.util.List<com.commercetools.api.models.channel.ChannelReference> addedDistributionChannels) {
         this.addedDistributionChannels = addedDistributionChannels;
         return this;
     }
@@ -53,7 +55,7 @@ public class StoreDistributionChannelsChangedMessagePayloadBuilder
      */
 
     public StoreDistributionChannelsChangedMessagePayloadBuilder plusAddedDistributionChannels(
-            final com.commercetools.api.models.channel.ChannelReference... addedDistributionChannels) {
+            @Nullable final com.commercetools.api.models.channel.ChannelReference... addedDistributionChannels) {
         if (this.addedDistributionChannels == null) {
             this.addedDistributionChannels = new ArrayList<>();
         }
@@ -92,7 +94,7 @@ public class StoreDistributionChannelsChangedMessagePayloadBuilder
      */
 
     public StoreDistributionChannelsChangedMessagePayloadBuilder removedDistributionChannels(
-            final com.commercetools.api.models.channel.ChannelReference... removedDistributionChannels) {
+            @Nullable final com.commercetools.api.models.channel.ChannelReference... removedDistributionChannels) {
         this.removedDistributionChannels = new ArrayList<>(Arrays.asList(removedDistributionChannels));
         return this;
     }
@@ -102,7 +104,7 @@ public class StoreDistributionChannelsChangedMessagePayloadBuilder
      */
 
     public StoreDistributionChannelsChangedMessagePayloadBuilder removedDistributionChannels(
-            final java.util.List<com.commercetools.api.models.channel.ChannelReference> removedDistributionChannels) {
+            @Nullable final java.util.List<com.commercetools.api.models.channel.ChannelReference> removedDistributionChannels) {
         this.removedDistributionChannels = removedDistributionChannels;
         return this;
     }
@@ -112,7 +114,7 @@ public class StoreDistributionChannelsChangedMessagePayloadBuilder
      */
 
     public StoreDistributionChannelsChangedMessagePayloadBuilder plusRemovedDistributionChannels(
-            final com.commercetools.api.models.channel.ChannelReference... removedDistributionChannels) {
+            @Nullable final com.commercetools.api.models.channel.ChannelReference... removedDistributionChannels) {
         if (this.removedDistributionChannels == null) {
             this.removedDistributionChannels = new ArrayList<>();
         }
@@ -146,19 +148,17 @@ public class StoreDistributionChannelsChangedMessagePayloadBuilder
         return this;
     }
 
+    @Nullable
     public java.util.List<com.commercetools.api.models.channel.ChannelReference> getAddedDistributionChannels() {
         return this.addedDistributionChannels;
     }
 
+    @Nullable
     public java.util.List<com.commercetools.api.models.channel.ChannelReference> getRemovedDistributionChannels() {
         return this.removedDistributionChannels;
     }
 
     public StoreDistributionChannelsChangedMessagePayload build() {
-        Objects.requireNonNull(addedDistributionChannels,
-            StoreDistributionChannelsChangedMessagePayload.class + ": addedDistributionChannels is missing");
-        Objects.requireNonNull(removedDistributionChannels,
-            StoreDistributionChannelsChangedMessagePayload.class + ": removedDistributionChannels is missing");
         return new StoreDistributionChannelsChangedMessagePayloadImpl(addedDistributionChannels,
             removedDistributionChannels);
     }

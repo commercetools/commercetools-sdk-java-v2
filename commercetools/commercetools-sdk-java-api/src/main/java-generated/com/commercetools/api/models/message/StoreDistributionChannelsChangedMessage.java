@@ -6,7 +6,6 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.channel.ChannelReference;
 import com.fasterxml.jackson.annotation.*;
@@ -29,8 +28,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .sequenceNumber(0.3)
  *             .resource(resourceBuilder -> resourceBuilder)
  *             .resourceVersion(0.3)
- *             .plusAddedDistributionChannels(addedDistributionChannelsBuilder -> addedDistributionChannelsBuilder)
- *             .plusRemovedDistributionChannels(removedDistributionChannelsBuilder -> removedDistributionChannelsBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -44,7 +41,6 @@ public interface StoreDistributionChannelsChangedMessage extends Message {
     /**
      *  <p>Product distribution Channels that have been added to the Store.</p>
      */
-    @NotNull
     @Valid
     @JsonProperty("addedDistributionChannels")
     public List<ChannelReference> getAddedDistributionChannels();
@@ -52,7 +48,6 @@ public interface StoreDistributionChannelsChangedMessage extends Message {
     /**
      *  <p>Product distribution Channels that have been removed from the Store.</p>
      */
-    @NotNull
     @Valid
     @JsonProperty("removedDistributionChannels")
     public List<ChannelReference> getRemovedDistributionChannels();

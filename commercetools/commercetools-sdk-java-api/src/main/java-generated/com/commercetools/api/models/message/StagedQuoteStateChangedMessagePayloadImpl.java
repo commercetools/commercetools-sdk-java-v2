@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * StagedQuoteStateChangedMessagePayload
+ *  <p>Generated after a successful Change Staged Quote State update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StagedQuoteStateChangedMessagePayloadImpl implements StagedQuoteStateChangedMessagePayload, ModelBase {
@@ -48,7 +48,7 @@ public class StagedQuoteStateChangedMessagePayloadImpl implements StagedQuoteSta
     }
 
     /**
-     *  <p>Predefined states tracking the status of the Staged Quote.</p>
+     *  <p>State of the Staged Quote after the Change Staged Quote State update action.</p>
      */
 
     public com.commercetools.api.models.staged_quote.StagedQuoteState getStagedQuoteState() {
@@ -56,7 +56,7 @@ public class StagedQuoteStateChangedMessagePayloadImpl implements StagedQuoteSta
     }
 
     /**
-     *  <p>Predefined states tracking the status of the Staged Quote.</p>
+     *  <p>State of the Staged Quote before the Change Staged Quote State update action.</p>
      */
 
     public com.commercetools.api.models.staged_quote.StagedQuoteState getOldStagedQuoteState() {

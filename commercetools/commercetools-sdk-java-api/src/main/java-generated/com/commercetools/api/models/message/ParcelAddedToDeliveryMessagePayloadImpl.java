@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * ParcelAddedToDeliveryMessagePayload
+ *  <p>Generated after a successful Add Parcel To Delivery update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ParcelAddedToDeliveryMessagePayloadImpl implements ParcelAddedToDeliveryMessagePayload, ModelBase {
@@ -26,12 +26,16 @@ public class ParcelAddedToDeliveryMessagePayloadImpl implements ParcelAddedToDel
 
     private com.commercetools.api.models.order.Parcel parcel;
 
+    private String shippingKey;
+
     @JsonCreator
     ParcelAddedToDeliveryMessagePayloadImpl(
             @JsonProperty("delivery") final com.commercetools.api.models.order.Delivery delivery,
-            @JsonProperty("parcel") final com.commercetools.api.models.order.Parcel parcel) {
+            @JsonProperty("parcel") final com.commercetools.api.models.order.Parcel parcel,
+            @JsonProperty("shippingKey") final String shippingKey) {
         this.delivery = delivery;
         this.parcel = parcel;
+        this.shippingKey = shippingKey;
         this.type = PARCEL_ADDED_TO_DELIVERY;
     }
 
@@ -48,7 +52,7 @@ public class ParcelAddedToDeliveryMessagePayloadImpl implements ParcelAddedToDel
     }
 
     /**
-     *
+     *  <p>Unique identifier of the Delivery.</p>
      */
 
     public com.commercetools.api.models.order.Delivery getDelivery() {
@@ -56,11 +60,19 @@ public class ParcelAddedToDeliveryMessagePayloadImpl implements ParcelAddedToDel
     }
 
     /**
-     *
+     *  <p>Parcel that was added to the Delivery.</p>
      */
 
     public com.commercetools.api.models.order.Parcel getParcel() {
         return this.parcel;
+    }
+
+    /**
+     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multi</code> ShippingMode.</p>
+     */
+
+    public String getShippingKey() {
+        return this.shippingKey;
     }
 
     public void setDelivery(final com.commercetools.api.models.order.Delivery delivery) {
@@ -69,6 +81,10 @@ public class ParcelAddedToDeliveryMessagePayloadImpl implements ParcelAddedToDel
 
     public void setParcel(final com.commercetools.api.models.order.Parcel parcel) {
         this.parcel = parcel;
+    }
+
+    public void setShippingKey(final String shippingKey) {
+        this.shippingKey = shippingKey;
     }
 
     @Override
@@ -84,12 +100,17 @@ public class ParcelAddedToDeliveryMessagePayloadImpl implements ParcelAddedToDel
         return new EqualsBuilder().append(type, that.type)
                 .append(delivery, that.delivery)
                 .append(parcel, that.parcel)
+                .append(shippingKey, that.shippingKey)
                 .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(type).append(delivery).append(parcel).toHashCode();
+        return new HashCodeBuilder(17, 37).append(type)
+                .append(delivery)
+                .append(parcel)
+                .append(shippingKey)
+                .toHashCode();
     }
 
 }

@@ -16,7 +16,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * ParcelAddedToDeliveryMessagePayload
+ *  <p>Generated after a successful Add Parcel To Delivery update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -36,7 +36,7 @@ public interface ParcelAddedToDeliveryMessagePayload extends OrderMessagePayload
     String PARCEL_ADDED_TO_DELIVERY = "ParcelAddedToDelivery";
 
     /**
-     *
+     *  <p>Unique identifier of the Delivery.</p>
      */
     @NotNull
     @Valid
@@ -44,16 +44,25 @@ public interface ParcelAddedToDeliveryMessagePayload extends OrderMessagePayload
     public Delivery getDelivery();
 
     /**
-     *
+     *  <p>Parcel that was added to the Delivery.</p>
      */
     @NotNull
     @Valid
     @JsonProperty("parcel")
     public Parcel getParcel();
 
+    /**
+     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multi</code> ShippingMode.</p>
+     */
+
+    @JsonProperty("shippingKey")
+    public String getShippingKey();
+
     public void setDelivery(final Delivery delivery);
 
     public void setParcel(final Parcel parcel);
+
+    public void setShippingKey(final String shippingKey);
 
     public static ParcelAddedToDeliveryMessagePayload of() {
         return new ParcelAddedToDeliveryMessagePayloadImpl();
@@ -63,6 +72,7 @@ public interface ParcelAddedToDeliveryMessagePayload extends OrderMessagePayload
         ParcelAddedToDeliveryMessagePayloadImpl instance = new ParcelAddedToDeliveryMessagePayloadImpl();
         instance.setDelivery(template.getDelivery());
         instance.setParcel(template.getParcel());
+        instance.setShippingKey(template.getShippingKey());
         return instance;
     }
 

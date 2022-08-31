@@ -91,7 +91,7 @@ public interface ReferenceTypeId {
     */
     ReferenceTypeId PRODUCT_DISCOUNT = ReferenceTypeIdEnum.PRODUCT_DISCOUNT;
     /**
-    	<p>References an <a href="ctp:api:type:EmbeddedPrice">EmbeddedPrice</a>.</p>
+    	<p>References an <a href="ctp:api:type:Price">Embedded Price</a>.</p>
 
     */
     ReferenceTypeId PRODUCT_PRICE = ReferenceTypeIdEnum.PRODUCT_PRICE;

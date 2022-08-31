@@ -22,9 +22,11 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .productType(productTypeBuilder -> productTypeBuilder)
  *             .variant(variantBuilder -> variantBuilder)
  *             .price(priceBuilder -> priceBuilder)
+ *             .plusTaxedPricePortions(taxedPricePortionsBuilder -> taxedPricePortionsBuilder)
  *             .totalPrice(totalPriceBuilder -> totalPriceBuilder)
  *             .quantity(0.3)
  *             .plusState(stateBuilder -> stateBuilder)
+ *             .plusPerMethodTaxRate(perMethodTaxRateBuilder -> perMethodTaxRateBuilder)
  *             .plusDiscountedPricePerQuantity(discountedPricePerQuantityBuilder -> discountedPricePerQuantityBuilder)
  *             .priceMode(LineItemPriceMode.PLATFORM)
  *             .lineItemMode(LineItemMode.STANDARD)
@@ -56,6 +58,8 @@ public class LineItemBuilder implements Builder<LineItem> {
     @Nullable
     private com.commercetools.api.models.cart.TaxedItemPrice taxedPrice;
 
+    private java.util.List<com.commercetools.api.models.cart.MethodTaxedPrice> taxedPricePortions;
+
     private com.commercetools.api.models.common.TypedMoney totalPrice;
 
     private Long quantity;
@@ -67,6 +71,8 @@ public class LineItemBuilder implements Builder<LineItem> {
 
     @Nullable
     private com.commercetools.api.models.tax_category.TaxRate taxRate;
+
+    private java.util.List<com.commercetools.api.models.cart.MethodTaxRate> perMethodTaxRate;
 
     @Nullable
     private com.commercetools.api.models.channel.ChannelReference supplyChannel;
@@ -237,6 +243,65 @@ public class LineItemBuilder implements Builder<LineItem> {
     }
 
     /**
+     *  <p>Taxed price of the Shipping Method that is set automatically after <code>perMethodTaxRate</code> is set.</p>
+     */
+
+    public LineItemBuilder taxedPricePortions(
+            final com.commercetools.api.models.cart.MethodTaxedPrice... taxedPricePortions) {
+        this.taxedPricePortions = new ArrayList<>(Arrays.asList(taxedPricePortions));
+        return this;
+    }
+
+    /**
+     *  <p>Taxed price of the Shipping Method that is set automatically after <code>perMethodTaxRate</code> is set.</p>
+     */
+
+    public LineItemBuilder taxedPricePortions(
+            final java.util.List<com.commercetools.api.models.cart.MethodTaxedPrice> taxedPricePortions) {
+        this.taxedPricePortions = taxedPricePortions;
+        return this;
+    }
+
+    /**
+     *  <p>Taxed price of the Shipping Method that is set automatically after <code>perMethodTaxRate</code> is set.</p>
+     */
+
+    public LineItemBuilder plusTaxedPricePortions(
+            final com.commercetools.api.models.cart.MethodTaxedPrice... taxedPricePortions) {
+        if (this.taxedPricePortions == null) {
+            this.taxedPricePortions = new ArrayList<>();
+        }
+        this.taxedPricePortions.addAll(Arrays.asList(taxedPricePortions));
+        return this;
+    }
+
+    /**
+     *  <p>Taxed price of the Shipping Method that is set automatically after <code>perMethodTaxRate</code> is set.</p>
+     */
+
+    public LineItemBuilder plusTaxedPricePortions(
+            Function<com.commercetools.api.models.cart.MethodTaxedPriceBuilder, com.commercetools.api.models.cart.MethodTaxedPriceBuilder> builder) {
+        if (this.taxedPricePortions == null) {
+            this.taxedPricePortions = new ArrayList<>();
+        }
+        this.taxedPricePortions
+                .add(builder.apply(com.commercetools.api.models.cart.MethodTaxedPriceBuilder.of()).build());
+        return this;
+    }
+
+    /**
+     *  <p>Taxed price of the Shipping Method that is set automatically after <code>perMethodTaxRate</code> is set.</p>
+     */
+
+    public LineItemBuilder withTaxedPricePortions(
+            Function<com.commercetools.api.models.cart.MethodTaxedPriceBuilder, com.commercetools.api.models.cart.MethodTaxedPriceBuilder> builder) {
+        this.taxedPricePortions = new ArrayList<>();
+        this.taxedPricePortions
+                .add(builder.apply(com.commercetools.api.models.cart.MethodTaxedPriceBuilder.of()).build());
+        return this;
+    }
+
+    /**
      *  <p>The total price of this line item. If the line item is discounted, then the <code>totalPrice</code> is the DiscountedLineItemPriceForQuantity multiplied by <code>quantity</code>. Otherwise the total price is the product price multiplied by the <code>quantity</code>. <code>totalPrice</code> may or may not include the taxes: it depends on the taxRate.includedInPrice property.</p>
      */
 
@@ -343,6 +408,67 @@ public class LineItemBuilder implements Builder<LineItem> {
 
     public LineItemBuilder taxRate(@Nullable final com.commercetools.api.models.tax_category.TaxRate taxRate) {
         this.taxRate = taxRate;
+        return this;
+    }
+
+    /**
+     *  <p>Tax Rate per Shipping Method that is automatically set after the Shipping Method is added to a Cart with the <code>Platform</code> TaxMode and <code>Multi</code> ShippingMode.</p>
+     *  <p>For the <code>External</code> TaxMode, the Tax Rate must be set with ExternalTaxRateDraft.</p>
+     */
+
+    public LineItemBuilder perMethodTaxRate(final com.commercetools.api.models.cart.MethodTaxRate... perMethodTaxRate) {
+        this.perMethodTaxRate = new ArrayList<>(Arrays.asList(perMethodTaxRate));
+        return this;
+    }
+
+    /**
+     *  <p>Tax Rate per Shipping Method that is automatically set after the Shipping Method is added to a Cart with the <code>Platform</code> TaxMode and <code>Multi</code> ShippingMode.</p>
+     *  <p>For the <code>External</code> TaxMode, the Tax Rate must be set with ExternalTaxRateDraft.</p>
+     */
+
+    public LineItemBuilder perMethodTaxRate(
+            final java.util.List<com.commercetools.api.models.cart.MethodTaxRate> perMethodTaxRate) {
+        this.perMethodTaxRate = perMethodTaxRate;
+        return this;
+    }
+
+    /**
+     *  <p>Tax Rate per Shipping Method that is automatically set after the Shipping Method is added to a Cart with the <code>Platform</code> TaxMode and <code>Multi</code> ShippingMode.</p>
+     *  <p>For the <code>External</code> TaxMode, the Tax Rate must be set with ExternalTaxRateDraft.</p>
+     */
+
+    public LineItemBuilder plusPerMethodTaxRate(
+            final com.commercetools.api.models.cart.MethodTaxRate... perMethodTaxRate) {
+        if (this.perMethodTaxRate == null) {
+            this.perMethodTaxRate = new ArrayList<>();
+        }
+        this.perMethodTaxRate.addAll(Arrays.asList(perMethodTaxRate));
+        return this;
+    }
+
+    /**
+     *  <p>Tax Rate per Shipping Method that is automatically set after the Shipping Method is added to a Cart with the <code>Platform</code> TaxMode and <code>Multi</code> ShippingMode.</p>
+     *  <p>For the <code>External</code> TaxMode, the Tax Rate must be set with ExternalTaxRateDraft.</p>
+     */
+
+    public LineItemBuilder plusPerMethodTaxRate(
+            Function<com.commercetools.api.models.cart.MethodTaxRateBuilder, com.commercetools.api.models.cart.MethodTaxRateBuilder> builder) {
+        if (this.perMethodTaxRate == null) {
+            this.perMethodTaxRate = new ArrayList<>();
+        }
+        this.perMethodTaxRate.add(builder.apply(com.commercetools.api.models.cart.MethodTaxRateBuilder.of()).build());
+        return this;
+    }
+
+    /**
+     *  <p>Tax Rate per Shipping Method that is automatically set after the Shipping Method is added to a Cart with the <code>Platform</code> TaxMode and <code>Multi</code> ShippingMode.</p>
+     *  <p>For the <code>External</code> TaxMode, the Tax Rate must be set with ExternalTaxRateDraft.</p>
+     */
+
+    public LineItemBuilder withPerMethodTaxRate(
+            Function<com.commercetools.api.models.cart.MethodTaxRateBuilder, com.commercetools.api.models.cart.MethodTaxRateBuilder> builder) {
+        this.perMethodTaxRate = new ArrayList<>();
+        this.perMethodTaxRate.add(builder.apply(com.commercetools.api.models.cart.MethodTaxRateBuilder.of()).build());
         return this;
     }
 
@@ -561,6 +687,10 @@ public class LineItemBuilder implements Builder<LineItem> {
         return this.taxedPrice;
     }
 
+    public java.util.List<com.commercetools.api.models.cart.MethodTaxedPrice> getTaxedPricePortions() {
+        return this.taxedPricePortions;
+    }
+
     public com.commercetools.api.models.common.TypedMoney getTotalPrice() {
         return this.totalPrice;
     }
@@ -581,6 +711,10 @@ public class LineItemBuilder implements Builder<LineItem> {
     @Nullable
     public com.commercetools.api.models.tax_category.TaxRate getTaxRate() {
         return this.taxRate;
+    }
+
+    public java.util.List<com.commercetools.api.models.cart.MethodTaxRate> getPerMethodTaxRate() {
+        return this.perMethodTaxRate;
     }
 
     @Nullable
@@ -632,16 +766,18 @@ public class LineItemBuilder implements Builder<LineItem> {
         Objects.requireNonNull(productType, LineItem.class + ": productType is missing");
         Objects.requireNonNull(variant, LineItem.class + ": variant is missing");
         Objects.requireNonNull(price, LineItem.class + ": price is missing");
+        Objects.requireNonNull(taxedPricePortions, LineItem.class + ": taxedPricePortions is missing");
         Objects.requireNonNull(totalPrice, LineItem.class + ": totalPrice is missing");
         Objects.requireNonNull(quantity, LineItem.class + ": quantity is missing");
         Objects.requireNonNull(state, LineItem.class + ": state is missing");
+        Objects.requireNonNull(perMethodTaxRate, LineItem.class + ": perMethodTaxRate is missing");
         Objects.requireNonNull(discountedPricePerQuantity, LineItem.class + ": discountedPricePerQuantity is missing");
         Objects.requireNonNull(priceMode, LineItem.class + ": priceMode is missing");
         Objects.requireNonNull(lineItemMode, LineItem.class + ": lineItemMode is missing");
         return new LineItemImpl(id, productId, productKey, name, productSlug, productType, variant, price, taxedPrice,
-            totalPrice, quantity, addedAt, state, taxRate, supplyChannel, distributionChannel,
-            discountedPricePerQuantity, priceMode, lineItemMode, custom, inventoryMode, shippingDetails,
-            lastModifiedAt);
+            taxedPricePortions, totalPrice, quantity, addedAt, state, taxRate, perMethodTaxRate, supplyChannel,
+            distributionChannel, discountedPricePerQuantity, priceMode, lineItemMode, custom, inventoryMode,
+            shippingDetails, lastModifiedAt);
     }
 
     /**
@@ -649,9 +785,9 @@ public class LineItemBuilder implements Builder<LineItem> {
      */
     public LineItem buildUnchecked() {
         return new LineItemImpl(id, productId, productKey, name, productSlug, productType, variant, price, taxedPrice,
-            totalPrice, quantity, addedAt, state, taxRate, supplyChannel, distributionChannel,
-            discountedPricePerQuantity, priceMode, lineItemMode, custom, inventoryMode, shippingDetails,
-            lastModifiedAt);
+            taxedPricePortions, totalPrice, quantity, addedAt, state, taxRate, perMethodTaxRate, supplyChannel,
+            distributionChannel, discountedPricePerQuantity, priceMode, lineItemMode, custom, inventoryMode,
+            shippingDetails, lastModifiedAt);
     }
 
     public static LineItemBuilder of() {
@@ -669,11 +805,13 @@ public class LineItemBuilder implements Builder<LineItem> {
         builder.variant = template.getVariant();
         builder.price = template.getPrice();
         builder.taxedPrice = template.getTaxedPrice();
+        builder.taxedPricePortions = template.getTaxedPricePortions();
         builder.totalPrice = template.getTotalPrice();
         builder.quantity = template.getQuantity();
         builder.addedAt = template.getAddedAt();
         builder.state = template.getState();
         builder.taxRate = template.getTaxRate();
+        builder.perMethodTaxRate = template.getPerMethodTaxRate();
         builder.supplyChannel = template.getSupplyChannel();
         builder.distributionChannel = template.getDistributionChannel();
         builder.discountedPricePerQuantity = template.getDiscountedPricePerQuantity();

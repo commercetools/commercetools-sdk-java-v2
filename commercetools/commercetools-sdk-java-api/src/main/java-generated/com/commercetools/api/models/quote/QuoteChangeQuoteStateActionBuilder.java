@@ -24,7 +24,7 @@ public class QuoteChangeQuoteStateActionBuilder implements Builder<QuoteChangeQu
     private com.commercetools.api.models.quote.QuoteState quoteState;
 
     /**
-     *  <p>The new quote state to be set for the Quote.</p>
+     *  <p>New state to be set for the Quote.</p>
      */
 
     public QuoteChangeQuoteStateActionBuilder quoteState(

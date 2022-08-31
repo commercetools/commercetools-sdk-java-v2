@@ -29,7 +29,7 @@ public class PaymentStatusStateTransitionMessagePayloadBuilder
     private Boolean force;
 
     /**
-     *  <p>Reference to a State.</p>
+     *  <p>State of the Payment after the Transition State update action.</p>
      */
 
     public PaymentStatusStateTransitionMessagePayloadBuilder state(
@@ -39,7 +39,7 @@ public class PaymentStatusStateTransitionMessagePayloadBuilder
     }
 
     /**
-     *  <p>Reference to a State.</p>
+     *  <p>State of the Payment after the Transition State update action.</p>
      */
 
     public PaymentStatusStateTransitionMessagePayloadBuilder state(
@@ -49,7 +49,7 @@ public class PaymentStatusStateTransitionMessagePayloadBuilder
     }
 
     /**
-     *
+     *  <p>Whether State transition validations were turned off during the Change Transaction State update action.</p>
      */
 
     public PaymentStatusStateTransitionMessagePayloadBuilder force(final Boolean force) {

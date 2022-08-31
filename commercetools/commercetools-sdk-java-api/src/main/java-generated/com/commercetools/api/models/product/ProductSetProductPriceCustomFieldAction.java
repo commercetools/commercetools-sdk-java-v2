@@ -33,14 +33,14 @@ public interface ProductSetProductPriceCustomFieldAction extends ProductUpdateAc
     String SET_PRODUCT_PRICE_CUSTOM_FIELD = "setProductPriceCustomField";
 
     /**
-     *
+     *  <p>The <code>id</code> of the Embedded Price to update.</p>
      */
     @NotNull
     @JsonProperty("priceId")
     public String getPriceId();
 
     /**
-     *
+     *  <p>If <code>true</code>, only the staged Embedded Price Custom Field is updated. If <code>false</code>, both the current and staged Embedded Price Custom Field are updated.</p>
      */
 
     @JsonProperty("staged")

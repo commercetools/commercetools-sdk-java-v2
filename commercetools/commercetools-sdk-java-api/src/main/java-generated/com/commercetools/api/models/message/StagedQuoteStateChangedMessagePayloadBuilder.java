@@ -27,7 +27,7 @@ public class StagedQuoteStateChangedMessagePayloadBuilder implements Builder<Sta
     private com.commercetools.api.models.staged_quote.StagedQuoteState oldStagedQuoteState;
 
     /**
-     *  <p>Predefined states tracking the status of the Staged Quote.</p>
+     *  <p>State of the Staged Quote after the Change Staged Quote State update action.</p>
      */
 
     public StagedQuoteStateChangedMessagePayloadBuilder stagedQuoteState(
@@ -37,7 +37,7 @@ public class StagedQuoteStateChangedMessagePayloadBuilder implements Builder<Sta
     }
 
     /**
-     *  <p>Predefined states tracking the status of the Staged Quote.</p>
+     *  <p>State of the Staged Quote before the Change Staged Quote State update action.</p>
      */
 
     public StagedQuoteStateChangedMessagePayloadBuilder oldStagedQuoteState(

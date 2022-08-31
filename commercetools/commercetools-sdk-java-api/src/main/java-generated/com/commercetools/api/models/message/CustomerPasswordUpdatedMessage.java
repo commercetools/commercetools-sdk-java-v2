@@ -13,7 +13,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * CustomerPasswordUpdatedMessage
+ *  <p>Generated after a successful Reset Customer's Password, Reset Customer's Password in a Store, Change Customer's Password, or Change Customer's Password in a Store request. This Message is also produced during equivalent requests to the My Customer Profile endpoint.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -39,7 +39,7 @@ public interface CustomerPasswordUpdatedMessage extends Message {
     String CUSTOMER_PASSWORD_UPDATED = "CustomerPasswordUpdated";
 
     /**
-     *  <p>true, if password has been updated during Customer's Password Reset workflow.</p>
+     *  <p>Whether the Customer's password was updated during the Customer's Password Reset workflow.</p>
      */
     @NotNull
     @JsonProperty("reset")

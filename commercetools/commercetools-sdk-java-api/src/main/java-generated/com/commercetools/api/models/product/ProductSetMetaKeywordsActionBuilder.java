@@ -30,7 +30,7 @@ public class ProductSetMetaKeywordsActionBuilder implements Builder<ProductSetMe
     private Boolean staged;
 
     /**
-     *
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
      */
 
     public ProductSetMetaKeywordsActionBuilder metaKeywords(
@@ -40,7 +40,7 @@ public class ProductSetMetaKeywordsActionBuilder implements Builder<ProductSetMe
     }
 
     /**
-     *
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
      */
 
     public ProductSetMetaKeywordsActionBuilder metaKeywords(
@@ -50,7 +50,7 @@ public class ProductSetMetaKeywordsActionBuilder implements Builder<ProductSetMe
     }
 
     /**
-     *
+     *  <p>If <code>true</code>, only the staged <code>metaKeywords</code> is updated. If <code>false</code>, both the current and staged <code>metaKeywords</code> are updated.</p>
      */
 
     public ProductSetMetaKeywordsActionBuilder staged(@Nullable final Boolean staged) {

@@ -5,7 +5,6 @@ import java.time.*;
 import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
@@ -15,23 +14,15 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * ProductSelectionDeletedMessagePayload
+ *  <p>Generated after a successful Delete Product Selection request.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductSelectionDeletedMessagePayloadImpl implements ProductSelectionDeletedMessagePayload, ModelBase {
 
     private String type;
 
-    private com.commercetools.api.models.common.LocalizedString name;
-
     @JsonCreator
-    ProductSelectionDeletedMessagePayloadImpl(
-            @JsonProperty("name") final com.commercetools.api.models.common.LocalizedString name) {
-        this.name = name;
-        this.type = PRODUCT_SELECTION_DELETED;
-    }
-
-    public ProductSelectionDeletedMessagePayloadImpl() {
+    ProductSelectionDeletedMessagePayloadImpl() {
         this.type = PRODUCT_SELECTION_DELETED;
     }
 
@@ -41,18 +32,6 @@ public class ProductSelectionDeletedMessagePayloadImpl implements ProductSelecti
 
     public String getType() {
         return this.type;
-    }
-
-    /**
-     *  <p>JSON object where the keys are of type Locale, and the values are the strings used for the corresponding language.</p>
-     */
-
-    public com.commercetools.api.models.common.LocalizedString getName() {
-        return this.name;
-    }
-
-    public void setName(final com.commercetools.api.models.common.LocalizedString name) {
-        this.name = name;
     }
 
     @Override
@@ -65,12 +44,12 @@ public class ProductSelectionDeletedMessagePayloadImpl implements ProductSelecti
 
         ProductSelectionDeletedMessagePayloadImpl that = (ProductSelectionDeletedMessagePayloadImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).append(name, that.name).isEquals();
+        return new EqualsBuilder().append(type, that.type).isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(type).append(name).toHashCode();
+        return new HashCodeBuilder(17, 37).append(type).toHashCode();
     }
 
 }

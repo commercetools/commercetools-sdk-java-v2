@@ -15,7 +15,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * PaymentCreatedMessage
+ *  <p>Generated after a successful Create Payment request.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -41,7 +41,7 @@ public interface PaymentCreatedMessage extends Message {
     String PAYMENT_CREATED = "PaymentCreated";
 
     /**
-     *
+     *  <p>Payment that was created.</p>
      */
     @NotNull
     @Valid

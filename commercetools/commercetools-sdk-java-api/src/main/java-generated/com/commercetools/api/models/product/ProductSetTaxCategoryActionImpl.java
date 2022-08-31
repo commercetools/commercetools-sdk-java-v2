@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * ProductSetTaxCategoryAction
+ *  <p>Cannot be staged. Published Products are immediately updated.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductSetTaxCategoryActionImpl implements ProductSetTaxCategoryAction, ModelBase {
@@ -44,7 +44,7 @@ public class ProductSetTaxCategoryActionImpl implements ProductSetTaxCategoryAct
     }
 
     /**
-     *  <p>If left blank or set to <code>null</code>, the tax category is unset/removed.</p>
+     *  <p>The Tax Category to set. If empty, any existing value will be removed.</p>
      */
 
     public com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier getTaxCategory() {

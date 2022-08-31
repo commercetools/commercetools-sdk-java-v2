@@ -190,6 +190,30 @@ public interface CartDraft extends com.commercetools.api.models.CustomizableDraf
     public CartOrigin getOrigin();
 
     /**
+     *  <ul>
+     *   <li>If <code>Single</code>, only a single Shipping Method can be added to the Cart.</li>
+     *   <li>If <code>Multi</code>, multiple Shipping Methods can be added to the Cart.</li>
+     *  </ul>
+     */
+
+    @JsonProperty("shippingMode")
+    public ShippingMode getShippingMode();
+
+    /**
+     *  <p>Custom Shipping Methods for a Cart with <code>Multi</code> ShippingMode.</p>
+     */
+    @Valid
+    @JsonProperty("customShipping")
+    public List<CustomShippingDraft> getCustomShipping();
+
+    /**
+     *  <p>Shipping Methods for a Cart with <code>Multi</code> ShippingMode.</p>
+     */
+    @Valid
+    @JsonProperty("shipping")
+    public List<ShippingDraft> getShipping();
+
+    /**
      *  <p>The shippingRateInput is used as an input to select a ShippingRatePriceTier. Based on the definition of ShippingRateInputType. If CartClassification is defined, it must be ClassificationShippingRateInput. If CartScore is defined, it must be ScoreShippingRateInput. Otherwise it can not bet set.</p>
      */
     @Valid
@@ -260,6 +284,18 @@ public interface CartDraft extends com.commercetools.api.models.CustomizableDraf
 
     public void setOrigin(final CartOrigin origin);
 
+    public void setShippingMode(final ShippingMode shippingMode);
+
+    @JsonIgnore
+    public void setCustomShipping(final CustomShippingDraft... customShipping);
+
+    public void setCustomShipping(final List<CustomShippingDraft> customShipping);
+
+    @JsonIgnore
+    public void setShipping(final ShippingDraft... shipping);
+
+    public void setShipping(final List<ShippingDraft> shipping);
+
     public void setShippingRateInput(final ShippingRateInputDraft shippingRateInput);
 
     @JsonIgnore
@@ -300,6 +336,9 @@ public interface CartDraft extends com.commercetools.api.models.CustomizableDraf
         instance.setLocale(template.getLocale());
         instance.setDeleteDaysAfterLastModification(template.getDeleteDaysAfterLastModification());
         instance.setOrigin(template.getOrigin());
+        instance.setShippingMode(template.getShippingMode());
+        instance.setCustomShipping(template.getCustomShipping());
+        instance.setShipping(template.getShipping());
         instance.setShippingRateInput(template.getShippingRateInput());
         instance.setItemShippingAddresses(template.getItemShippingAddresses());
         instance.setDiscountCodes(template.getDiscountCodes());

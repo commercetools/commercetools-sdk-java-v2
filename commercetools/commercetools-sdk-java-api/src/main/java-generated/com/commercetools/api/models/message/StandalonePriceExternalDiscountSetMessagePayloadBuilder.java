@@ -28,7 +28,7 @@ public class StandalonePriceExternalDiscountSetMessagePayloadBuilder
     private com.commercetools.api.models.common.DiscountedPrice discounted;
 
     /**
-     *  <p>The new <code>discounted</code> value of the updated StandalonePrice.</p>
+     *  <p>The <code>discounted</code> value of the StandalonePrice after the Set Discounted Price update action.</p>
      */
 
     public StandalonePriceExternalDiscountSetMessagePayloadBuilder discounted(
@@ -38,7 +38,7 @@ public class StandalonePriceExternalDiscountSetMessagePayloadBuilder
     }
 
     /**
-     *  <p>The new <code>discounted</code> value of the updated StandalonePrice.</p>
+     *  <p>The <code>discounted</code> value of the StandalonePrice after the Set Discounted Price update action.</p>
      */
 
     public StandalonePriceExternalDiscountSetMessagePayloadBuilder discounted(

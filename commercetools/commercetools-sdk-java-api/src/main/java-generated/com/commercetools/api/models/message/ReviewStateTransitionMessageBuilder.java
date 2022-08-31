@@ -23,11 +23,9 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .sequenceNumber(0.3)
  *             .resource(resourceBuilder -> resourceBuilder)
  *             .resourceVersion(0.3)
- *             .oldState(oldStateBuilder -> oldStateBuilder)
  *             .newState(newStateBuilder -> newStateBuilder)
  *             .oldIncludedInStatistics(true)
  *             .newIncludedInStatistics(true)
- *             .target(targetBuilder -> targetBuilder)
  *             .force(true)
  *             .build()
  * </code></pre>
@@ -59,6 +57,7 @@ public class ReviewStateTransitionMessageBuilder implements Builder<ReviewStateT
     @Nullable
     private com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers;
 
+    @Nullable
     private com.commercetools.api.models.state.StateReference oldState;
 
     private com.commercetools.api.models.state.StateReference newState;
@@ -67,12 +66,13 @@ public class ReviewStateTransitionMessageBuilder implements Builder<ReviewStateT
 
     private Boolean newIncludedInStatistics;
 
+    @Nullable
     private com.commercetools.api.models.common.Reference target;
 
     private Boolean force;
 
     /**
-     *  <p>Unique identifier of the Message.</p>
+     *  <p>Unique identifier of the Message. Can be used to track which Messages have been processed.</p>
      */
 
     public ReviewStateTransitionMessageBuilder id(final String id) {
@@ -81,7 +81,7 @@ public class ReviewStateTransitionMessageBuilder implements Builder<ReviewStateT
     }
 
     /**
-     *
+     *  <p>Version of a resource. In case of Messages, this is always <code>1</code>.</p>
      */
 
     public ReviewStateTransitionMessageBuilder version(final Long version) {
@@ -90,7 +90,7 @@ public class ReviewStateTransitionMessageBuilder implements Builder<ReviewStateT
     }
 
     /**
-     *
+     *  <p>Date and time (UTC) the Message was generated.</p>
      */
 
     public ReviewStateTransitionMessageBuilder createdAt(final java.time.ZonedDateTime createdAt) {
@@ -99,7 +99,7 @@ public class ReviewStateTransitionMessageBuilder implements Builder<ReviewStateT
     }
 
     /**
-     *
+     *  <p>Value of <code>createdAt</code>.</p>
      */
 
     public ReviewStateTransitionMessageBuilder lastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {
@@ -108,7 +108,7 @@ public class ReviewStateTransitionMessageBuilder implements Builder<ReviewStateT
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>Value of <code>createdBy</code>.</p>
      */
 
     public ReviewStateTransitionMessageBuilder lastModifiedBy(
@@ -118,7 +118,7 @@ public class ReviewStateTransitionMessageBuilder implements Builder<ReviewStateT
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>Value of <code>createdBy</code>.</p>
      */
 
     public ReviewStateTransitionMessageBuilder lastModifiedBy(
@@ -148,7 +148,7 @@ public class ReviewStateTransitionMessageBuilder implements Builder<ReviewStateT
     }
 
     /**
-     *
+     *  <p>Message number in relation to other Messages for a given resource. The <code>sequenceNumber</code> of the next Message for the resource is the successor of the <code>sequenceNumber</code> of the current Message. Meaning, the <code>sequenceNumber</code> of the next Message equals the <code>sequenceNumber</code> of the current Message + 1. <code>sequenceNumber</code> can be used to ensure that Messages are processed in the correct order for a particular resource.</p>
      */
 
     public ReviewStateTransitionMessageBuilder sequenceNumber(final Long sequenceNumber) {
@@ -157,7 +157,7 @@ public class ReviewStateTransitionMessageBuilder implements Builder<ReviewStateT
     }
 
     /**
-     *  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
+     *  <p>Reference to the resource on which the change or action was performed.</p>
      */
 
     public ReviewStateTransitionMessageBuilder resource(final com.commercetools.api.models.common.Reference resource) {
@@ -166,7 +166,7 @@ public class ReviewStateTransitionMessageBuilder implements Builder<ReviewStateT
     }
 
     /**
-     *  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
+     *  <p>Reference to the resource on which the change or action was performed.</p>
      */
 
     public ReviewStateTransitionMessageBuilder resource(
@@ -176,7 +176,7 @@ public class ReviewStateTransitionMessageBuilder implements Builder<ReviewStateT
     }
 
     /**
-     *
+     *  <p>Version of the resource on which the change or action was performed.</p>
      */
 
     public ReviewStateTransitionMessageBuilder resourceVersion(final Long resourceVersion) {
@@ -185,7 +185,7 @@ public class ReviewStateTransitionMessageBuilder implements Builder<ReviewStateT
     }
 
     /**
-     *
+     *  <p>User-provided identifiers of the resource, such as <code>key</code> or <code>externalId</code>. Only present if the resource has such identifiers.</p>
      */
 
     public ReviewStateTransitionMessageBuilder resourceUserProvidedIdentifiers(
@@ -197,7 +197,7 @@ public class ReviewStateTransitionMessageBuilder implements Builder<ReviewStateT
     }
 
     /**
-     *
+     *  <p>User-provided identifiers of the resource, such as <code>key</code> or <code>externalId</code>. Only present if the resource has such identifiers.</p>
      */
 
     public ReviewStateTransitionMessageBuilder resourceUserProvidedIdentifiers(
@@ -207,7 +207,7 @@ public class ReviewStateTransitionMessageBuilder implements Builder<ReviewStateT
     }
 
     /**
-     *  <p>Reference to a State.</p>
+     *  <p>State of the Review before the Transition State update action.</p>
      */
 
     public ReviewStateTransitionMessageBuilder oldState(
@@ -217,17 +217,17 @@ public class ReviewStateTransitionMessageBuilder implements Builder<ReviewStateT
     }
 
     /**
-     *  <p>Reference to a State.</p>
+     *  <p>State of the Review before the Transition State update action.</p>
      */
 
     public ReviewStateTransitionMessageBuilder oldState(
-            final com.commercetools.api.models.state.StateReference oldState) {
+            @Nullable final com.commercetools.api.models.state.StateReference oldState) {
         this.oldState = oldState;
         return this;
     }
 
     /**
-     *  <p>Reference to a State.</p>
+     *  <p>State of the Review after the Transition State update action.</p>
      */
 
     public ReviewStateTransitionMessageBuilder newState(
@@ -237,7 +237,7 @@ public class ReviewStateTransitionMessageBuilder implements Builder<ReviewStateT
     }
 
     /**
-     *  <p>Reference to a State.</p>
+     *  <p>State of the Review after the Transition State update action.</p>
      */
 
     public ReviewStateTransitionMessageBuilder newState(
@@ -247,7 +247,7 @@ public class ReviewStateTransitionMessageBuilder implements Builder<ReviewStateT
     }
 
     /**
-     *
+     *  <p>Whether the old Review was taken into account in the rating statistics of the target before the state transition.</p>
      */
 
     public ReviewStateTransitionMessageBuilder oldIncludedInStatistics(final Boolean oldIncludedInStatistics) {
@@ -256,7 +256,7 @@ public class ReviewStateTransitionMessageBuilder implements Builder<ReviewStateT
     }
 
     /**
-     *
+     *  <p>Whether the new Review was taken into account in the rating statistics of the target after the state transition.</p>
      */
 
     public ReviewStateTransitionMessageBuilder newIncludedInStatistics(final Boolean newIncludedInStatistics) {
@@ -265,16 +265,17 @@ public class ReviewStateTransitionMessageBuilder implements Builder<ReviewStateT
     }
 
     /**
-     *  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
+     *  <p>Reference to the resource that the Review belongs to.</p>
      */
 
-    public ReviewStateTransitionMessageBuilder target(final com.commercetools.api.models.common.Reference target) {
+    public ReviewStateTransitionMessageBuilder target(
+            @Nullable final com.commercetools.api.models.common.Reference target) {
         this.target = target;
         return this;
     }
 
     /**
-     *  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
+     *  <p>Reference to the resource that the Review belongs to.</p>
      */
 
     public ReviewStateTransitionMessageBuilder target(
@@ -284,7 +285,7 @@ public class ReviewStateTransitionMessageBuilder implements Builder<ReviewStateT
     }
 
     /**
-     *
+     *  <p>Whether State transition validations were turned off during the Transition State update action.</p>
      */
 
     public ReviewStateTransitionMessageBuilder force(final Boolean force) {
@@ -335,6 +336,7 @@ public class ReviewStateTransitionMessageBuilder implements Builder<ReviewStateT
         return this.resourceUserProvidedIdentifiers;
     }
 
+    @Nullable
     public com.commercetools.api.models.state.StateReference getOldState() {
         return this.oldState;
     }
@@ -351,6 +353,7 @@ public class ReviewStateTransitionMessageBuilder implements Builder<ReviewStateT
         return this.newIncludedInStatistics;
     }
 
+    @Nullable
     public com.commercetools.api.models.common.Reference getTarget() {
         return this.target;
     }
@@ -367,13 +370,11 @@ public class ReviewStateTransitionMessageBuilder implements Builder<ReviewStateT
         Objects.requireNonNull(sequenceNumber, ReviewStateTransitionMessage.class + ": sequenceNumber is missing");
         Objects.requireNonNull(resource, ReviewStateTransitionMessage.class + ": resource is missing");
         Objects.requireNonNull(resourceVersion, ReviewStateTransitionMessage.class + ": resourceVersion is missing");
-        Objects.requireNonNull(oldState, ReviewStateTransitionMessage.class + ": oldState is missing");
         Objects.requireNonNull(newState, ReviewStateTransitionMessage.class + ": newState is missing");
         Objects.requireNonNull(oldIncludedInStatistics,
             ReviewStateTransitionMessage.class + ": oldIncludedInStatistics is missing");
         Objects.requireNonNull(newIncludedInStatistics,
             ReviewStateTransitionMessage.class + ": newIncludedInStatistics is missing");
-        Objects.requireNonNull(target, ReviewStateTransitionMessage.class + ": target is missing");
         Objects.requireNonNull(force, ReviewStateTransitionMessage.class + ": force is missing");
         return new ReviewStateTransitionMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
             sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, oldState, newState,

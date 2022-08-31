@@ -11,7 +11,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * ProductSetPriceModeAction
+ *  <p>Controls whether the Prices of a Product Variant are embedded into the Product or standalone.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -29,7 +29,7 @@ public interface ProductSetPriceModeAction extends ProductUpdateAction {
     String SET_PRICE_MODE = "setPriceMode";
 
     /**
-     *  <p>Specifies which type of prices should be used when looking up a price for this product. If not set, <code>Embedded</code> ProductPriceMode is used.</p>
+     *  <p>Specifies which type of Prices should be used when looking up a price for the Product.</p>
      */
 
     @JsonProperty("priceMode")

@@ -15,7 +15,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * ParcelItemsUpdatedMessagePayload
+ *  <p>Generated after a successful Set Parcel Items update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -23,6 +23,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     ParcelItemsUpdatedMessagePayload parcelItemsUpdatedMessagePayload = ParcelItemsUpdatedMessagePayload.builder()
  *             .parcelId("{parcelId}")
+ *             .deliveryId("{deliveryId}")
  *             .plusItems(itemsBuilder -> itemsBuilder)
  *             .plusOldItems(oldItemsBuilder -> oldItemsBuilder)
  *             .build()
@@ -36,21 +37,21 @@ public interface ParcelItemsUpdatedMessagePayload extends OrderMessagePayload {
     String PARCEL_ITEMS_UPDATED = "ParcelItemsUpdated";
 
     /**
-     *
+     *  <p>Unique identifier of the Parcel.</p>
      */
     @NotNull
     @JsonProperty("parcelId")
     public String getParcelId();
 
     /**
-     *
+     *  <p>Unique identifier of the Delivery.</p>
      */
-
+    @NotNull
     @JsonProperty("deliveryId")
     public String getDeliveryId();
 
     /**
-     *
+     *  <p>Delivery Items after the Set Parcel Items update action.</p>
      */
     @NotNull
     @Valid
@@ -58,12 +59,19 @@ public interface ParcelItemsUpdatedMessagePayload extends OrderMessagePayload {
     public List<DeliveryItem> getItems();
 
     /**
-     *
+     *  <p>Delivery Items before the Set Parcel Items update action.</p>
      */
     @NotNull
     @Valid
     @JsonProperty("oldItems")
     public List<DeliveryItem> getOldItems();
+
+    /**
+     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multi</code> ShippingMode.</p>
+     */
+
+    @JsonProperty("shippingKey")
+    public String getShippingKey();
 
     public void setParcelId(final String parcelId);
 
@@ -79,6 +87,8 @@ public interface ParcelItemsUpdatedMessagePayload extends OrderMessagePayload {
 
     public void setOldItems(final List<DeliveryItem> oldItems);
 
+    public void setShippingKey(final String shippingKey);
+
     public static ParcelItemsUpdatedMessagePayload of() {
         return new ParcelItemsUpdatedMessagePayloadImpl();
     }
@@ -89,6 +99,7 @@ public interface ParcelItemsUpdatedMessagePayload extends OrderMessagePayload {
         instance.setDeliveryId(template.getDeliveryId());
         instance.setItems(template.getItems());
         instance.setOldItems(template.getOldItems());
+        instance.setShippingKey(template.getShippingKey());
         return instance;
     }
 

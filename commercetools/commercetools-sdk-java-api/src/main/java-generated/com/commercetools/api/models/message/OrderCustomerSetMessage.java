@@ -15,7 +15,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * OrderCustomerSetMessage
+ *  <p>Generated after a successful Set Customer Id update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -40,28 +40,28 @@ public interface OrderCustomerSetMessage extends OrderMessage {
     String ORDER_CUSTOMER_SET = "OrderCustomerSet";
 
     /**
-     *  <p>Reference to a Customer.</p>
+     *  <p>Customer on the Order after the Set Customer Id update action.</p>
      */
     @Valid
     @JsonProperty("customer")
     public CustomerReference getCustomer();
 
     /**
-     *  <p>Reference to a CustomerGroup.</p>
+     *  <p>CustomerGroup on the Order after the Set Customer Id update action.</p>
      */
     @Valid
     @JsonProperty("customerGroup")
     public CustomerGroupReference getCustomerGroup();
 
     /**
-     *  <p>Reference to a Customer.</p>
+     *  <p>Customer on the Order before the Set Customer Id update action.</p>
      */
     @Valid
     @JsonProperty("oldCustomer")
     public CustomerReference getOldCustomer();
 
     /**
-     *  <p>Reference to a CustomerGroup.</p>
+     *  <p>CustomerGroup on the Order before the Set Customer Id update action.</p>
      */
     @Valid
     @JsonProperty("oldCustomerGroup")

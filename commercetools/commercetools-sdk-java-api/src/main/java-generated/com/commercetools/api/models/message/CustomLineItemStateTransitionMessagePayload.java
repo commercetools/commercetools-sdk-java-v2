@@ -16,7 +16,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * CustomLineItemStateTransitionMessagePayload
+ *  <p>Generated after a successful Transition Custom Line Item State update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -39,28 +39,28 @@ public interface CustomLineItemStateTransitionMessagePayload extends OrderMessag
     String CUSTOM_LINE_ITEM_STATE_TRANSITION = "CustomLineItemStateTransition";
 
     /**
-     *
+     *  <p>Unique identifier of the Custom Line Item.</p>
      */
     @NotNull
     @JsonProperty("customLineItemId")
     public String getCustomLineItemId();
 
     /**
-     *
+     *  <p>Date and time (UTC) when the transition of the Custom Line Item State was performed.</p>
      */
     @NotNull
     @JsonProperty("transitionDate")
     public ZonedDateTime getTransitionDate();
 
     /**
-     *
+     *  <p>Number of Custom Line Items for which the State was transitioned.</p>
      */
     @NotNull
     @JsonProperty("quantity")
     public Long getQuantity();
 
     /**
-     *  <p>Reference to a State.</p>
+     *  <p>State the Custom Line Item was transitioned from.</p>
      */
     @NotNull
     @Valid
@@ -68,7 +68,7 @@ public interface CustomLineItemStateTransitionMessagePayload extends OrderMessag
     public StateReference getFromState();
 
     /**
-     *  <p>Reference to a State.</p>
+     *  <p>State the Custom Line Item was transitioned to.</p>
      */
     @NotNull
     @Valid

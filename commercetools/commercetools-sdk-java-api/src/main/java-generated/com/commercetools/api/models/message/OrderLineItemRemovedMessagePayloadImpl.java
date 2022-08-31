@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * OrderLineItemRemovedMessagePayload
+ *  <p>Generated after a successful Remove Line Item update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderLineItemRemovedMessagePayloadImpl implements OrderLineItemRemovedMessagePayload, ModelBase {
@@ -30,7 +30,7 @@ public class OrderLineItemRemovedMessagePayloadImpl implements OrderLineItemRemo
 
     private java.util.List<com.commercetools.api.models.order.ItemState> newState;
 
-    private com.commercetools.api.models.common.TypedMoney newTotalPrice;
+    private com.commercetools.api.models.common.CentPrecisionMoney newTotalPrice;
 
     private com.commercetools.api.models.cart.TaxedItemPrice newTaxedPrice;
 
@@ -43,7 +43,7 @@ public class OrderLineItemRemovedMessagePayloadImpl implements OrderLineItemRemo
             @JsonProperty("removedQuantity") final Long removedQuantity,
             @JsonProperty("newQuantity") final Long newQuantity,
             @JsonProperty("newState") final java.util.List<com.commercetools.api.models.order.ItemState> newState,
-            @JsonProperty("newTotalPrice") final com.commercetools.api.models.common.TypedMoney newTotalPrice,
+            @JsonProperty("newTotalPrice") final com.commercetools.api.models.common.CentPrecisionMoney newTotalPrice,
             @JsonProperty("newTaxedPrice") final com.commercetools.api.models.cart.TaxedItemPrice newTaxedPrice,
             @JsonProperty("newPrice") final com.commercetools.api.models.common.Price newPrice,
             @JsonProperty("newShippingDetail") final com.commercetools.api.models.cart.ItemShippingDetails newShippingDetail) {
@@ -71,7 +71,7 @@ public class OrderLineItemRemovedMessagePayloadImpl implements OrderLineItemRemo
     }
 
     /**
-     *
+     *  <p>Unique identifier of the Line Item.</p>
      */
 
     public String getLineItemId() {
@@ -79,7 +79,7 @@ public class OrderLineItemRemovedMessagePayloadImpl implements OrderLineItemRemo
     }
 
     /**
-     *
+     *  <p>Quantity of Line Items that were removed during the Remove Line Item update action.</p>
      */
 
     public Long getRemovedQuantity() {
@@ -87,7 +87,7 @@ public class OrderLineItemRemovedMessagePayloadImpl implements OrderLineItemRemo
     }
 
     /**
-     *
+     *  <p>Line Item quantity after the Remove Line Item update action.</p>
      */
 
     public Long getNewQuantity() {
@@ -95,7 +95,7 @@ public class OrderLineItemRemovedMessagePayloadImpl implements OrderLineItemRemo
     }
 
     /**
-     *
+     *  <p>ItemStates after the Remove Line Item update action.</p>
      */
 
     public java.util.List<com.commercetools.api.models.order.ItemState> getNewState() {
@@ -103,15 +103,15 @@ public class OrderLineItemRemovedMessagePayloadImpl implements OrderLineItemRemo
     }
 
     /**
-     *  <p>Base polymorphic read-only Money type which is stored in cent precision or high precision. The actual type is determined by the <code>type</code> field.</p>
+     *  <p><code>totalPrice</code> of the Order after the Remove Line Item update action.</p>
      */
 
-    public com.commercetools.api.models.common.TypedMoney getNewTotalPrice() {
+    public com.commercetools.api.models.common.CentPrecisionMoney getNewTotalPrice() {
         return this.newTotalPrice;
     }
 
     /**
-     *
+     *  <p>TaxedItemPrice of the Order after the Remove Line Item update action.</p>
      */
 
     public com.commercetools.api.models.cart.TaxedItemPrice getNewTaxedPrice() {
@@ -119,7 +119,7 @@ public class OrderLineItemRemovedMessagePayloadImpl implements OrderLineItemRemo
     }
 
     /**
-     *
+     *  <p>Price of the Order after the Remove Line Item update action.</p>
      */
 
     public com.commercetools.api.models.common.Price getNewPrice() {
@@ -127,7 +127,7 @@ public class OrderLineItemRemovedMessagePayloadImpl implements OrderLineItemRemo
     }
 
     /**
-     *
+     *  <p>Shipping Details of the Order after the Remove Line Item update action.</p>
      */
 
     public com.commercetools.api.models.cart.ItemShippingDetails getNewShippingDetail() {
@@ -154,7 +154,7 @@ public class OrderLineItemRemovedMessagePayloadImpl implements OrderLineItemRemo
         this.newState = newState;
     }
 
-    public void setNewTotalPrice(final com.commercetools.api.models.common.TypedMoney newTotalPrice) {
+    public void setNewTotalPrice(final com.commercetools.api.models.common.CentPrecisionMoney newTotalPrice) {
         this.newTotalPrice = newTotalPrice;
     }
 

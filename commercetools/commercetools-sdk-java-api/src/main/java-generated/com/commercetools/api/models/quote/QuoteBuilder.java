@@ -69,6 +69,9 @@ public class QuoteBuilder implements Builder<Quote> {
     private String sellerComment;
 
     @Nullable
+    private String buyerComment;
+
+    @Nullable
     private com.commercetools.api.models.store.StoreKeyReference store;
 
     private java.util.List<com.commercetools.api.models.cart.LineItem> lineItems;
@@ -115,6 +118,9 @@ public class QuoteBuilder implements Builder<Quote> {
 
     @Nullable
     private com.commercetools.api.models.type.CustomFields custom;
+
+    @Nullable
+    private com.commercetools.api.models.state.StateReference state;
 
     /**
      *  <p>Unique identifier of the Quote.</p>
@@ -201,7 +207,7 @@ public class QuoteBuilder implements Builder<Quote> {
     }
 
     /**
-     *  <p>The Quote Request related to this Quote.</p>
+     *  <p>Quote Request related to the Quote.</p>
      */
 
     public QuoteBuilder quoteRequest(
@@ -212,7 +218,7 @@ public class QuoteBuilder implements Builder<Quote> {
     }
 
     /**
-     *  <p>The Quote Request related to this Quote.</p>
+     *  <p>Quote Request related to the Quote.</p>
      */
 
     public QuoteBuilder quoteRequest(
@@ -222,7 +228,7 @@ public class QuoteBuilder implements Builder<Quote> {
     }
 
     /**
-     *  <p>The Staged Quote related to this Quote.</p>
+     *  <p>Staged Quote related to the Quote.</p>
      */
 
     public QuoteBuilder stagedQuote(
@@ -233,7 +239,7 @@ public class QuoteBuilder implements Builder<Quote> {
     }
 
     /**
-     *  <p>The Staged Quote related to this Quote.</p>
+     *  <p>Staged Quote related to the Quote.</p>
      */
 
     public QuoteBuilder stagedQuote(final com.commercetools.api.models.staged_quote.StagedQuoteReference stagedQuote) {
@@ -242,7 +248,7 @@ public class QuoteBuilder implements Builder<Quote> {
     }
 
     /**
-     *  <p>The Buyer who requested this Quote.</p>
+     *  <p>The Buyer who requested the Quote.</p>
      */
 
     public QuoteBuilder customer(
@@ -252,7 +258,7 @@ public class QuoteBuilder implements Builder<Quote> {
     }
 
     /**
-     *  <p>The Buyer who requested this Quote.</p>
+     *  <p>The Buyer who requested the Quote.</p>
      */
 
     public QuoteBuilder customer(@Nullable final com.commercetools.api.models.customer.CustomerReference customer) {
@@ -292,11 +298,20 @@ public class QuoteBuilder implements Builder<Quote> {
     }
 
     /**
-     *  <p>The text message included in the offer from the Seller.</p>
+     *  <p>Message from the Seller included in the offer.</p>
      */
 
     public QuoteBuilder sellerComment(@Nullable final String sellerComment) {
         this.sellerComment = sellerComment;
+        return this;
+    }
+
+    /**
+     *  <p>Message from the Buyer included in the renegotiation request.</p>
+     */
+
+    public QuoteBuilder buyerComment(@Nullable final String buyerComment) {
+        this.buyerComment = buyerComment;
         return this;
     }
 
@@ -429,7 +444,7 @@ public class QuoteBuilder implements Builder<Quote> {
     }
 
     /**
-     *  <p>The sum of all <code>totalPrice</code> fields of the <code>lineItems</code> and <code>customLineItems</code>, as well as the <code>price</code> field of <code>shippingInfo</code> (if it exists). <code>totalPrice</code> may or may not include the taxes: it depends on the taxRate.includedInPrice property of each price.</p>
+     *  <p>Sum of all <code>totalPrice</code> fields of the <code>lineItems</code> and <code>customLineItems</code>, as well as the <code>price</code> field of <code>shippingInfo</code> (if it exists). <code>totalPrice</code> may or may not include the taxes: it depends on the taxRate.includedInPrice property of each price.</p>
      */
 
     public QuoteBuilder totalPrice(final com.commercetools.api.models.common.TypedMoney totalPrice) {
@@ -438,7 +453,7 @@ public class QuoteBuilder implements Builder<Quote> {
     }
 
     /**
-     *  <p>The sum of all <code>totalPrice</code> fields of the <code>lineItems</code> and <code>customLineItems</code>, as well as the <code>price</code> field of <code>shippingInfo</code> (if it exists). <code>totalPrice</code> may or may not include the taxes: it depends on the taxRate.includedInPrice property of each price.</p>
+     *  <p>Sum of all <code>totalPrice</code> fields of the <code>lineItems</code> and <code>customLineItems</code>, as well as the <code>price</code> field of <code>shippingInfo</code> (if it exists). <code>totalPrice</code> may or may not include the taxes: it depends on the taxRate.includedInPrice property of each price.</p>
      */
 
     public QuoteBuilder totalPrice(
@@ -486,7 +501,7 @@ public class QuoteBuilder implements Builder<Quote> {
     }
 
     /**
-     *  <p>The address used for invoicing.</p>
+     *  <p>Address used for invoicing.</p>
      */
 
     public QuoteBuilder billingAddress(
@@ -496,7 +511,7 @@ public class QuoteBuilder implements Builder<Quote> {
     }
 
     /**
-     *  <p>The address used for invoicing.</p>
+     *  <p>Address used for invoicing.</p>
      */
 
     public QuoteBuilder billingAddress(@Nullable final com.commercetools.api.models.common.Address billingAddress) {
@@ -505,7 +520,7 @@ public class QuoteBuilder implements Builder<Quote> {
     }
 
     /**
-     *  <p>The inventory mode of the Cart referenced in the QuoteRequestDraft.</p>
+     *  <p>Inventory mode of the Cart referenced in the QuoteRequestDraft.</p>
      */
 
     public QuoteBuilder inventoryMode(@Nullable final com.commercetools.api.models.cart.InventoryMode inventoryMode) {
@@ -514,7 +529,7 @@ public class QuoteBuilder implements Builder<Quote> {
     }
 
     /**
-     *  <p>The tax mode of the Cart referenced in the QuoteRequestDraft.</p>
+     *  <p>Tax mode of the Cart referenced in the QuoteRequestDraft.</p>
      */
 
     public QuoteBuilder taxMode(final com.commercetools.api.models.cart.TaxMode taxMode) {
@@ -570,7 +585,7 @@ public class QuoteBuilder implements Builder<Quote> {
     }
 
     /**
-     *  <p>Log of payment transactions related to this quote.</p>
+     *  <p>Log of payment transactions related to the Quote.</p>
      */
 
     public QuoteBuilder paymentInfo(
@@ -580,7 +595,7 @@ public class QuoteBuilder implements Builder<Quote> {
     }
 
     /**
-     *  <p>Log of payment transactions related to this quote.</p>
+     *  <p>Log of payment transactions related to the Quote.</p>
      */
 
     public QuoteBuilder paymentInfo(@Nullable final com.commercetools.api.models.order.PaymentInfo paymentInfo) {
@@ -666,7 +681,7 @@ public class QuoteBuilder implements Builder<Quote> {
     }
 
     /**
-     *  <p>Discounts only valid for this Quote, those cannot be associated to any other Cart or Order.</p>
+     *  <p>Discounts that are only valid for the Quote and cannot be associated to any other Cart or Order.</p>
      */
 
     public QuoteBuilder directDiscounts(
@@ -676,7 +691,7 @@ public class QuoteBuilder implements Builder<Quote> {
     }
 
     /**
-     *  <p>Discounts only valid for this Quote, those cannot be associated to any other Cart or Order.</p>
+     *  <p>Discounts that are only valid for the Quote and cannot be associated to any other Cart or Order.</p>
      */
 
     public QuoteBuilder directDiscounts(
@@ -686,7 +701,7 @@ public class QuoteBuilder implements Builder<Quote> {
     }
 
     /**
-     *  <p>Discounts only valid for this Quote, those cannot be associated to any other Cart or Order.</p>
+     *  <p>Discounts that are only valid for the Quote and cannot be associated to any other Cart or Order.</p>
      */
 
     public QuoteBuilder plusDirectDiscounts(
@@ -699,7 +714,7 @@ public class QuoteBuilder implements Builder<Quote> {
     }
 
     /**
-     *  <p>Discounts only valid for this Quote, those cannot be associated to any other Cart or Order.</p>
+     *  <p>Discounts that are only valid for the Quote and cannot be associated to any other Cart or Order.</p>
      */
 
     public QuoteBuilder plusDirectDiscounts(
@@ -712,7 +727,7 @@ public class QuoteBuilder implements Builder<Quote> {
     }
 
     /**
-     *  <p>Discounts only valid for this Quote, those cannot be associated to any other Cart or Order.</p>
+     *  <p>Discounts that are only valid for the Quote and cannot be associated to any other Cart or Order.</p>
      */
 
     public QuoteBuilder withDirectDiscounts(
@@ -723,7 +738,7 @@ public class QuoteBuilder implements Builder<Quote> {
     }
 
     /**
-     *  <p>Custom Fields of this Quote.</p>
+     *  <p>Custom Fields on the Quote.</p>
      */
 
     public QuoteBuilder custom(
@@ -733,11 +748,30 @@ public class QuoteBuilder implements Builder<Quote> {
     }
 
     /**
-     *  <p>Custom Fields of this Quote.</p>
+     *  <p>Custom Fields on the Quote.</p>
      */
 
     public QuoteBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFields custom) {
         this.custom = custom;
+        return this;
+    }
+
+    /**
+     *  <p>State of the Quote. This reference can point to a State in a custom workflow.</p>
+     */
+
+    public QuoteBuilder state(
+            Function<com.commercetools.api.models.state.StateReferenceBuilder, com.commercetools.api.models.state.StateReferenceBuilder> builder) {
+        this.state = builder.apply(com.commercetools.api.models.state.StateReferenceBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>State of the Quote. This reference can point to a State in a custom workflow.</p>
+     */
+
+    public QuoteBuilder state(@Nullable final com.commercetools.api.models.state.StateReference state) {
+        this.state = state;
         return this;
     }
 
@@ -798,6 +832,11 @@ public class QuoteBuilder implements Builder<Quote> {
     @Nullable
     public String getSellerComment() {
         return this.sellerComment;
+    }
+
+    @Nullable
+    public String getBuyerComment() {
+        return this.buyerComment;
     }
 
     @Nullable
@@ -884,6 +923,11 @@ public class QuoteBuilder implements Builder<Quote> {
         return this.custom;
     }
 
+    @Nullable
+    public com.commercetools.api.models.state.StateReference getState() {
+        return this.state;
+    }
+
     public Quote build() {
         Objects.requireNonNull(id, Quote.class + ": id is missing");
         Objects.requireNonNull(version, Quote.class + ": version is missing");
@@ -898,9 +942,10 @@ public class QuoteBuilder implements Builder<Quote> {
         Objects.requireNonNull(taxRoundingMode, Quote.class + ": taxRoundingMode is missing");
         Objects.requireNonNull(taxCalculationMode, Quote.class + ": taxCalculationMode is missing");
         return new QuoteImpl(id, version, createdAt, lastModifiedAt, key, lastModifiedBy, createdBy, quoteRequest,
-            stagedQuote, customer, customerGroup, validTo, sellerComment, store, lineItems, customLineItems, totalPrice,
-            taxedPrice, shippingAddress, billingAddress, inventoryMode, taxMode, taxRoundingMode, taxCalculationMode,
-            country, shippingInfo, paymentInfo, shippingRateInput, itemShippingAddresses, directDiscounts, custom);
+            stagedQuote, customer, customerGroup, validTo, sellerComment, buyerComment, store, lineItems,
+            customLineItems, totalPrice, taxedPrice, shippingAddress, billingAddress, inventoryMode, taxMode,
+            taxRoundingMode, taxCalculationMode, country, shippingInfo, paymentInfo, shippingRateInput,
+            itemShippingAddresses, directDiscounts, custom, state);
     }
 
     /**
@@ -908,9 +953,10 @@ public class QuoteBuilder implements Builder<Quote> {
      */
     public Quote buildUnchecked() {
         return new QuoteImpl(id, version, createdAt, lastModifiedAt, key, lastModifiedBy, createdBy, quoteRequest,
-            stagedQuote, customer, customerGroup, validTo, sellerComment, store, lineItems, customLineItems, totalPrice,
-            taxedPrice, shippingAddress, billingAddress, inventoryMode, taxMode, taxRoundingMode, taxCalculationMode,
-            country, shippingInfo, paymentInfo, shippingRateInput, itemShippingAddresses, directDiscounts, custom);
+            stagedQuote, customer, customerGroup, validTo, sellerComment, buyerComment, store, lineItems,
+            customLineItems, totalPrice, taxedPrice, shippingAddress, billingAddress, inventoryMode, taxMode,
+            taxRoundingMode, taxCalculationMode, country, shippingInfo, paymentInfo, shippingRateInput,
+            itemShippingAddresses, directDiscounts, custom, state);
     }
 
     public static QuoteBuilder of() {
@@ -932,6 +978,7 @@ public class QuoteBuilder implements Builder<Quote> {
         builder.customerGroup = template.getCustomerGroup();
         builder.validTo = template.getValidTo();
         builder.sellerComment = template.getSellerComment();
+        builder.buyerComment = template.getBuyerComment();
         builder.store = template.getStore();
         builder.lineItems = template.getLineItems();
         builder.customLineItems = template.getCustomLineItems();
@@ -950,6 +997,7 @@ public class QuoteBuilder implements Builder<Quote> {
         builder.itemShippingAddresses = template.getItemShippingAddresses();
         builder.directDiscounts = template.getDirectDiscounts();
         builder.custom = template.getCustom();
+        builder.state = template.getState();
         return builder;
     }
 

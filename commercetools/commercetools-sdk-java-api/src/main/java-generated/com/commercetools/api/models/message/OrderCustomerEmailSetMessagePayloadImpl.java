@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * OrderCustomerEmailSetMessagePayload
+ *  <p>Generated after a successful Set Customer Email update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderCustomerEmailSetMessagePayloadImpl implements OrderCustomerEmailSetMessagePayload, ModelBase {
@@ -47,7 +47,7 @@ public class OrderCustomerEmailSetMessagePayloadImpl implements OrderCustomerEma
     }
 
     /**
-     *
+     *  <p>Email address on the Order after the Set Customer Email update action.</p>
      */
 
     public String getEmail() {
@@ -55,7 +55,7 @@ public class OrderCustomerEmailSetMessagePayloadImpl implements OrderCustomerEma
     }
 
     /**
-     *
+     *  <p>Email address on the Order before the Set Customer Email update action.</p>
      */
 
     public String getOldEmail() {

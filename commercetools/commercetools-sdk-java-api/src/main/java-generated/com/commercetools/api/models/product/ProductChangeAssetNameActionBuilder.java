@@ -42,7 +42,7 @@ public class ProductChangeAssetNameActionBuilder implements Builder<ProductChang
     private com.commercetools.api.models.common.LocalizedString name;
 
     /**
-     *
+     *  <p>The <code>id</code> of the ProductVariant to update.</p>
      */
 
     public ProductChangeAssetNameActionBuilder variantId(@Nullable final Long variantId) {
@@ -51,7 +51,7 @@ public class ProductChangeAssetNameActionBuilder implements Builder<ProductChang
     }
 
     /**
-     *
+     *  <p>The <code>sku</code> of the ProductVariant to update.</p>
      */
 
     public ProductChangeAssetNameActionBuilder sku(@Nullable final String sku) {
@@ -60,7 +60,7 @@ public class ProductChangeAssetNameActionBuilder implements Builder<ProductChang
     }
 
     /**
-     *
+     *  <p>If <code>true</code>, only the staged Asset is updated. If <code>false</code>, both the current and staged Asset is updated.</p>
      */
 
     public ProductChangeAssetNameActionBuilder staged(@Nullable final Boolean staged) {
@@ -69,7 +69,7 @@ public class ProductChangeAssetNameActionBuilder implements Builder<ProductChang
     }
 
     /**
-     *
+     *  <p>The <code>id</code> of the Asset to update.</p>
      */
 
     public ProductChangeAssetNameActionBuilder assetId(@Nullable final String assetId) {
@@ -78,7 +78,7 @@ public class ProductChangeAssetNameActionBuilder implements Builder<ProductChang
     }
 
     /**
-     *
+     *  <p>The <code>key</code> of the Asset to update.</p>
      */
 
     public ProductChangeAssetNameActionBuilder assetKey(@Nullable final String assetKey) {
@@ -87,7 +87,7 @@ public class ProductChangeAssetNameActionBuilder implements Builder<ProductChang
     }
 
     /**
-     *
+     *  <p>New value to set. Must not be empty.</p>
      */
 
     public ProductChangeAssetNameActionBuilder name(
@@ -97,7 +97,7 @@ public class ProductChangeAssetNameActionBuilder implements Builder<ProductChang
     }
 
     /**
-     *
+     *  <p>New value to set. Must not be empty.</p>
      */
 
     public ProductChangeAssetNameActionBuilder name(final com.commercetools.api.models.common.LocalizedString name) {

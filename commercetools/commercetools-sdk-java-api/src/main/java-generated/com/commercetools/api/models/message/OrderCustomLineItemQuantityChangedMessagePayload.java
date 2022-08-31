@@ -13,7 +13,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * OrderCustomLineItemQuantityChangedMessagePayload
+ *  <p>Generated after a successful Change Custom Line Item Quantity update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -34,21 +34,21 @@ public interface OrderCustomLineItemQuantityChangedMessagePayload extends OrderM
     String ORDER_CUSTOM_LINE_ITEM_QUANTITY_CHANGED = "OrderCustomLineItemQuantityChanged";
 
     /**
-     *
+     *  <p>Unique identifier of the Custom Line Item.</p>
      */
     @NotNull
     @JsonProperty("customLineItemId")
     public String getCustomLineItemId();
 
     /**
-     *
+     *  <p>Custom Line Item quantity after the Change Custom Line Item Quantity update action.</p>
      */
     @NotNull
     @JsonProperty("quantity")
     public Long getQuantity();
 
     /**
-     *
+     *  <p>Custom Line Item quantity before the Change Custom Line Item Quantity update action.</p>
      */
     @NotNull
     @JsonProperty("oldQuantity")

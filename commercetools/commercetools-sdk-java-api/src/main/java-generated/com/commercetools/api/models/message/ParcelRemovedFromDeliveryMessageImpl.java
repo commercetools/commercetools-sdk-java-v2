@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * ParcelRemovedFromDeliveryMessage
+ *  <p>Generated after a successful Remove Parcel From Delivery update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ParcelRemovedFromDeliveryMessageImpl implements ParcelRemovedFromDeliveryMessage, ModelBase {
@@ -46,6 +46,8 @@ public class ParcelRemovedFromDeliveryMessageImpl implements ParcelRemovedFromDe
 
     private com.commercetools.api.models.order.Parcel parcel;
 
+    private String shippingKey;
+
     @JsonCreator
     ParcelRemovedFromDeliveryMessageImpl(@JsonProperty("id") final String id,
             @JsonProperty("version") final Long version,
@@ -58,7 +60,8 @@ public class ParcelRemovedFromDeliveryMessageImpl implements ParcelRemovedFromDe
             @JsonProperty("resourceVersion") final Long resourceVersion,
             @JsonProperty("resourceUserProvidedIdentifiers") final com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers,
             @JsonProperty("deliveryId") final String deliveryId,
-            @JsonProperty("parcel") final com.commercetools.api.models.order.Parcel parcel) {
+            @JsonProperty("parcel") final com.commercetools.api.models.order.Parcel parcel,
+            @JsonProperty("shippingKey") final String shippingKey) {
         this.id = id;
         this.version = version;
         this.createdAt = createdAt;
@@ -71,6 +74,7 @@ public class ParcelRemovedFromDeliveryMessageImpl implements ParcelRemovedFromDe
         this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
         this.deliveryId = deliveryId;
         this.parcel = parcel;
+        this.shippingKey = shippingKey;
         this.type = PARCEL_REMOVED_FROM_DELIVERY;
     }
 
@@ -79,7 +83,7 @@ public class ParcelRemovedFromDeliveryMessageImpl implements ParcelRemovedFromDe
     }
 
     /**
-     *  <p>Unique identifier of the Message.</p>
+     *  <p>Unique identifier of the Message. Can be used to track which Messages have been processed.</p>
      */
 
     public String getId() {
@@ -87,7 +91,7 @@ public class ParcelRemovedFromDeliveryMessageImpl implements ParcelRemovedFromDe
     }
 
     /**
-     *
+     *  <p>Version of a resource. In case of Messages, this is always <code>1</code>.</p>
      */
 
     public Long getVersion() {
@@ -95,7 +99,7 @@ public class ParcelRemovedFromDeliveryMessageImpl implements ParcelRemovedFromDe
     }
 
     /**
-     *
+     *  <p>Date and time (UTC) the Message was generated.</p>
      */
 
     public java.time.ZonedDateTime getCreatedAt() {
@@ -103,7 +107,7 @@ public class ParcelRemovedFromDeliveryMessageImpl implements ParcelRemovedFromDe
     }
 
     /**
-     *
+     *  <p>Value of <code>createdAt</code>.</p>
      */
 
     public java.time.ZonedDateTime getLastModifiedAt() {
@@ -111,7 +115,7 @@ public class ParcelRemovedFromDeliveryMessageImpl implements ParcelRemovedFromDe
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>Value of <code>createdBy</code>.</p>
      */
 
     public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy() {
@@ -127,7 +131,7 @@ public class ParcelRemovedFromDeliveryMessageImpl implements ParcelRemovedFromDe
     }
 
     /**
-     *
+     *  <p>Message number in relation to other Messages for a given resource. The <code>sequenceNumber</code> of the next Message for the resource is the successor of the <code>sequenceNumber</code> of the current Message. Meaning, the <code>sequenceNumber</code> of the next Message equals the <code>sequenceNumber</code> of the current Message + 1. <code>sequenceNumber</code> can be used to ensure that Messages are processed in the correct order for a particular resource.</p>
      */
 
     public Long getSequenceNumber() {
@@ -135,7 +139,7 @@ public class ParcelRemovedFromDeliveryMessageImpl implements ParcelRemovedFromDe
     }
 
     /**
-     *  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
+     *  <p>Reference to the resource on which the change or action was performed.</p>
      */
 
     public com.commercetools.api.models.common.Reference getResource() {
@@ -143,7 +147,7 @@ public class ParcelRemovedFromDeliveryMessageImpl implements ParcelRemovedFromDe
     }
 
     /**
-     *
+     *  <p>Version of the resource on which the change or action was performed.</p>
      */
 
     public Long getResourceVersion() {
@@ -151,7 +155,7 @@ public class ParcelRemovedFromDeliveryMessageImpl implements ParcelRemovedFromDe
     }
 
     /**
-     *
+     *  <p>Message Type of the Message.</p>
      */
 
     public String getType() {
@@ -159,7 +163,7 @@ public class ParcelRemovedFromDeliveryMessageImpl implements ParcelRemovedFromDe
     }
 
     /**
-     *
+     *  <p>User-provided identifiers of the resource, such as <code>key</code> or <code>externalId</code>. Only present if the resource has such identifiers.</p>
      */
 
     public com.commercetools.api.models.message.UserProvidedIdentifiers getResourceUserProvidedIdentifiers() {
@@ -167,7 +171,7 @@ public class ParcelRemovedFromDeliveryMessageImpl implements ParcelRemovedFromDe
     }
 
     /**
-     *
+     *  <p>Unique identifier of the Delivery.</p>
      */
 
     public String getDeliveryId() {
@@ -175,11 +179,19 @@ public class ParcelRemovedFromDeliveryMessageImpl implements ParcelRemovedFromDe
     }
 
     /**
-     *
+     *  <p>Parcel that was removed from the Delivery.</p>
      */
 
     public com.commercetools.api.models.order.Parcel getParcel() {
         return this.parcel;
+    }
+
+    /**
+     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multi</code> ShippingMode.</p>
+     */
+
+    public String getShippingKey() {
+        return this.shippingKey;
     }
 
     public void setId(final String id) {
@@ -231,6 +243,10 @@ public class ParcelRemovedFromDeliveryMessageImpl implements ParcelRemovedFromDe
         this.parcel = parcel;
     }
 
+    public void setShippingKey(final String shippingKey) {
+        this.shippingKey = shippingKey;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -254,6 +270,7 @@ public class ParcelRemovedFromDeliveryMessageImpl implements ParcelRemovedFromDe
                 .append(resourceUserProvidedIdentifiers, that.resourceUserProvidedIdentifiers)
                 .append(deliveryId, that.deliveryId)
                 .append(parcel, that.parcel)
+                .append(shippingKey, that.shippingKey)
                 .isEquals();
     }
 
@@ -272,6 +289,7 @@ public class ParcelRemovedFromDeliveryMessageImpl implements ParcelRemovedFromDe
                 .append(resourceUserProvidedIdentifiers)
                 .append(deliveryId)
                 .append(parcel)
+                .append(shippingKey)
                 .toHashCode();
     }
 

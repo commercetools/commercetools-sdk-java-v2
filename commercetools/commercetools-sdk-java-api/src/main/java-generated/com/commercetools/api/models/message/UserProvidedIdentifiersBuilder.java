@@ -54,7 +54,7 @@ public class UserProvidedIdentifiersBuilder implements Builder<UserProvidedIdent
     }
 
     /**
-     *
+     *  <p>User-provided unique identifier of the resource.</p>
      */
 
     public UserProvidedIdentifiersBuilder externalId(@Nullable final String externalId) {
@@ -63,7 +63,7 @@ public class UserProvidedIdentifiersBuilder implements Builder<UserProvidedIdent
     }
 
     /**
-     *
+     *  <p>User-provided unique identifier of an Order.</p>
      */
 
     public UserProvidedIdentifiersBuilder orderNumber(@Nullable final String orderNumber) {
@@ -72,7 +72,7 @@ public class UserProvidedIdentifiersBuilder implements Builder<UserProvidedIdent
     }
 
     /**
-     *
+     *  <p>User-provided unique identifier of a Customer.</p>
      */
 
     public UserProvidedIdentifiersBuilder customerNumber(@Nullable final String customerNumber) {
@@ -81,7 +81,7 @@ public class UserProvidedIdentifiersBuilder implements Builder<UserProvidedIdent
     }
 
     /**
-     *
+     *  <p>Unique SKU of a Product Variant.</p>
      */
 
     public UserProvidedIdentifiersBuilder sku(@Nullable final String sku) {
@@ -90,7 +90,7 @@ public class UserProvidedIdentifiersBuilder implements Builder<UserProvidedIdent
     }
 
     /**
-     *  <p>JSON object where the keys are of type Locale, and the values are the strings used for the corresponding language.</p>
+     *  <p>Unique identifier usually used in deep-link URLs for a Product. The value corresponds to the slug in the <code>current</code> Product Projection.</p>
      */
 
     public UserProvidedIdentifiersBuilder slug(
@@ -100,7 +100,7 @@ public class UserProvidedIdentifiersBuilder implements Builder<UserProvidedIdent
     }
 
     /**
-     *  <p>JSON object where the keys are of type Locale, and the values are the strings used for the corresponding language.</p>
+     *  <p>Unique identifier usually used in deep-link URLs for a Product. The value corresponds to the slug in the <code>current</code> Product Projection.</p>
      */
 
     public UserProvidedIdentifiersBuilder slug(
@@ -110,7 +110,7 @@ public class UserProvidedIdentifiersBuilder implements Builder<UserProvidedIdent
     }
 
     /**
-     *  <p>Custom Objects are grouped into containers, which can be used like namespaces. Within a given container, a user-defined key can be used to uniquely identify resources.</p>
+     *  <p>Unique identifier of a Custom Object.</p>
      */
 
     public UserProvidedIdentifiersBuilder containerAndKey(
@@ -120,7 +120,7 @@ public class UserProvidedIdentifiersBuilder implements Builder<UserProvidedIdent
     }
 
     /**
-     *  <p>Custom Objects are grouped into containers, which can be used like namespaces. Within a given container, a user-defined key can be used to uniquely identify resources.</p>
+     *  <p>Unique identifier of a Custom Object.</p>
      */
 
     public UserProvidedIdentifiersBuilder containerAndKey(

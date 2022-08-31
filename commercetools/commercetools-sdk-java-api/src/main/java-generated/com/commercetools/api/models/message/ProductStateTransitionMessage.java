@@ -15,7 +15,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * ProductStateTransitionMessage
+ *  <p>Generated after a successful Transition State update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -42,7 +42,7 @@ public interface ProductStateTransitionMessage extends Message {
     String PRODUCT_STATE_TRANSITION = "ProductStateTransition";
 
     /**
-     *  <p>Reference to a State.</p>
+     *  <p>Product State after the Transition State update action.</p>
      */
     @NotNull
     @Valid
@@ -50,7 +50,7 @@ public interface ProductStateTransitionMessage extends Message {
     public StateReference getState();
 
     /**
-     *
+     *  <p>Whether State transition validations were turned off during the Transition State update action.</p>
      */
     @NotNull
     @JsonProperty("force")

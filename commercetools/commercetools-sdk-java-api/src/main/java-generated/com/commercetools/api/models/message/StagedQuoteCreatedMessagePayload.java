@@ -5,19 +5,24 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
+
+import com.commercetools.api.models.staged_quote.StagedQuote;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * StagedQuoteCreatedMessagePayload
+ *  <p>Generated after a successful Create Staged Quote request.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
  * <div class=code-example>
  * <pre><code class='java'>
  *     StagedQuoteCreatedMessagePayload stagedQuoteCreatedMessagePayload = StagedQuoteCreatedMessagePayload.builder()
+ *             .stagedQuote(stagedQuoteBuilder -> stagedQuoteBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -28,12 +33,23 @@ public interface StagedQuoteCreatedMessagePayload extends MessagePayload {
 
     String STAGED_QUOTE_CREATED = "StagedQuoteCreated";
 
+    /**
+     *  <p>Staged Quote that was created.</p>
+     */
+    @NotNull
+    @Valid
+    @JsonProperty("stagedQuote")
+    public StagedQuote getStagedQuote();
+
+    public void setStagedQuote(final StagedQuote stagedQuote);
+
     public static StagedQuoteCreatedMessagePayload of() {
         return new StagedQuoteCreatedMessagePayloadImpl();
     }
 
     public static StagedQuoteCreatedMessagePayload of(final StagedQuoteCreatedMessagePayload template) {
         StagedQuoteCreatedMessagePayloadImpl instance = new StagedQuoteCreatedMessagePayloadImpl();
+        instance.setStagedQuote(template.getStagedQuote());
         return instance;
     }
 

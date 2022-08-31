@@ -34,49 +34,49 @@ public interface ProductAddVariantAction extends ProductUpdateAction {
     String ADD_VARIANT = "addVariant";
 
     /**
-     *
+     *  <p>Value to set. Must be unique.</p>
      */
 
     @JsonProperty("sku")
     public String getSku();
 
     /**
-     *
+     *  <p>Value to set. Must be unique.</p>
      */
 
     @JsonProperty("key")
     public String getKey();
 
     /**
-     *
+     *  <p>Embedded Prices for the Product Variant.</p>
      */
     @Valid
     @JsonProperty("prices")
     public List<PriceDraft> getPrices();
 
     /**
-     *
+     *  <p>Images for the Product Variant.</p>
      */
     @Valid
     @JsonProperty("images")
     public List<Image> getImages();
 
     /**
-     *
+     *  <p>Attributes for the Product Variant.</p>
      */
     @Valid
     @JsonProperty("attributes")
     public List<Attribute> getAttributes();
 
     /**
-     *
+     *  <p>If <code>true</code> the new Product Variant is only staged. If <code>false</code> the new Product Variant is both current and staged.</p>
      */
 
     @JsonProperty("staged")
     public Boolean getStaged();
 
     /**
-     *
+     *  <p>Media assets for the Product Variant.</p>
      */
     @Valid
     @JsonProperty("assets")

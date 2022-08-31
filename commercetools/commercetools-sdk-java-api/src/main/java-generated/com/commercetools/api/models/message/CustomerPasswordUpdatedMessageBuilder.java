@@ -57,7 +57,7 @@ public class CustomerPasswordUpdatedMessageBuilder implements Builder<CustomerPa
     private Boolean reset;
 
     /**
-     *  <p>Unique identifier of the Message.</p>
+     *  <p>Unique identifier of the Message. Can be used to track which Messages have been processed.</p>
      */
 
     public CustomerPasswordUpdatedMessageBuilder id(final String id) {
@@ -66,7 +66,7 @@ public class CustomerPasswordUpdatedMessageBuilder implements Builder<CustomerPa
     }
 
     /**
-     *
+     *  <p>Version of a resource. In case of Messages, this is always <code>1</code>.</p>
      */
 
     public CustomerPasswordUpdatedMessageBuilder version(final Long version) {
@@ -75,7 +75,7 @@ public class CustomerPasswordUpdatedMessageBuilder implements Builder<CustomerPa
     }
 
     /**
-     *
+     *  <p>Date and time (UTC) the Message was generated.</p>
      */
 
     public CustomerPasswordUpdatedMessageBuilder createdAt(final java.time.ZonedDateTime createdAt) {
@@ -84,7 +84,7 @@ public class CustomerPasswordUpdatedMessageBuilder implements Builder<CustomerPa
     }
 
     /**
-     *
+     *  <p>Value of <code>createdAt</code>.</p>
      */
 
     public CustomerPasswordUpdatedMessageBuilder lastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {
@@ -93,7 +93,7 @@ public class CustomerPasswordUpdatedMessageBuilder implements Builder<CustomerPa
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>Value of <code>createdBy</code>.</p>
      */
 
     public CustomerPasswordUpdatedMessageBuilder lastModifiedBy(
@@ -103,7 +103,7 @@ public class CustomerPasswordUpdatedMessageBuilder implements Builder<CustomerPa
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>Value of <code>createdBy</code>.</p>
      */
 
     public CustomerPasswordUpdatedMessageBuilder lastModifiedBy(
@@ -133,7 +133,7 @@ public class CustomerPasswordUpdatedMessageBuilder implements Builder<CustomerPa
     }
 
     /**
-     *
+     *  <p>Message number in relation to other Messages for a given resource. The <code>sequenceNumber</code> of the next Message for the resource is the successor of the <code>sequenceNumber</code> of the current Message. Meaning, the <code>sequenceNumber</code> of the next Message equals the <code>sequenceNumber</code> of the current Message + 1. <code>sequenceNumber</code> can be used to ensure that Messages are processed in the correct order for a particular resource.</p>
      */
 
     public CustomerPasswordUpdatedMessageBuilder sequenceNumber(final Long sequenceNumber) {
@@ -142,7 +142,7 @@ public class CustomerPasswordUpdatedMessageBuilder implements Builder<CustomerPa
     }
 
     /**
-     *  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
+     *  <p>Reference to the resource on which the change or action was performed.</p>
      */
 
     public CustomerPasswordUpdatedMessageBuilder resource(
@@ -152,7 +152,7 @@ public class CustomerPasswordUpdatedMessageBuilder implements Builder<CustomerPa
     }
 
     /**
-     *  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
+     *  <p>Reference to the resource on which the change or action was performed.</p>
      */
 
     public CustomerPasswordUpdatedMessageBuilder resource(
@@ -162,7 +162,7 @@ public class CustomerPasswordUpdatedMessageBuilder implements Builder<CustomerPa
     }
 
     /**
-     *
+     *  <p>Version of the resource on which the change or action was performed.</p>
      */
 
     public CustomerPasswordUpdatedMessageBuilder resourceVersion(final Long resourceVersion) {
@@ -171,7 +171,7 @@ public class CustomerPasswordUpdatedMessageBuilder implements Builder<CustomerPa
     }
 
     /**
-     *
+     *  <p>User-provided identifiers of the resource, such as <code>key</code> or <code>externalId</code>. Only present if the resource has such identifiers.</p>
      */
 
     public CustomerPasswordUpdatedMessageBuilder resourceUserProvidedIdentifiers(
@@ -183,7 +183,7 @@ public class CustomerPasswordUpdatedMessageBuilder implements Builder<CustomerPa
     }
 
     /**
-     *
+     *  <p>User-provided identifiers of the resource, such as <code>key</code> or <code>externalId</code>. Only present if the resource has such identifiers.</p>
      */
 
     public CustomerPasswordUpdatedMessageBuilder resourceUserProvidedIdentifiers(
@@ -193,7 +193,7 @@ public class CustomerPasswordUpdatedMessageBuilder implements Builder<CustomerPa
     }
 
     /**
-     *  <p>true, if password has been updated during Customer's Password Reset workflow.</p>
+     *  <p>Whether the Customer's password was updated during the Customer's Password Reset workflow.</p>
      */
 
     public CustomerPasswordUpdatedMessageBuilder reset(final Boolean reset) {

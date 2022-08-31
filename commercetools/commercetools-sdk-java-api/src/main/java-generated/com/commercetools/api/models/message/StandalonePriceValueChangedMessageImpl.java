@@ -44,6 +44,8 @@ public class StandalonePriceValueChangedMessageImpl implements StandalonePriceVa
 
     private com.commercetools.api.models.common.Money value;
 
+    private Boolean staged;
+
     @JsonCreator
     StandalonePriceValueChangedMessageImpl(@JsonProperty("id") final String id,
             @JsonProperty("version") final Long version,
@@ -55,7 +57,8 @@ public class StandalonePriceValueChangedMessageImpl implements StandalonePriceVa
             @JsonProperty("resource") final com.commercetools.api.models.common.Reference resource,
             @JsonProperty("resourceVersion") final Long resourceVersion,
             @JsonProperty("resourceUserProvidedIdentifiers") final com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers,
-            @JsonProperty("value") final com.commercetools.api.models.common.Money value) {
+            @JsonProperty("value") final com.commercetools.api.models.common.Money value,
+            @JsonProperty("staged") final Boolean staged) {
         this.id = id;
         this.version = version;
         this.createdAt = createdAt;
@@ -67,6 +70,7 @@ public class StandalonePriceValueChangedMessageImpl implements StandalonePriceVa
         this.resourceVersion = resourceVersion;
         this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
         this.value = value;
+        this.staged = staged;
         this.type = STANDALONE_PRICE_VALUE_CHANGED;
     }
 
@@ -75,7 +79,7 @@ public class StandalonePriceValueChangedMessageImpl implements StandalonePriceVa
     }
 
     /**
-     *  <p>Unique identifier of the Message.</p>
+     *  <p>Unique identifier of the Message. Can be used to track which Messages have been processed.</p>
      */
 
     public String getId() {
@@ -83,7 +87,7 @@ public class StandalonePriceValueChangedMessageImpl implements StandalonePriceVa
     }
 
     /**
-     *
+     *  <p>Version of a resource. In case of Messages, this is always <code>1</code>.</p>
      */
 
     public Long getVersion() {
@@ -91,7 +95,7 @@ public class StandalonePriceValueChangedMessageImpl implements StandalonePriceVa
     }
 
     /**
-     *
+     *  <p>Date and time (UTC) the Message was generated.</p>
      */
 
     public java.time.ZonedDateTime getCreatedAt() {
@@ -99,7 +103,7 @@ public class StandalonePriceValueChangedMessageImpl implements StandalonePriceVa
     }
 
     /**
-     *
+     *  <p>Value of <code>createdAt</code>.</p>
      */
 
     public java.time.ZonedDateTime getLastModifiedAt() {
@@ -107,7 +111,7 @@ public class StandalonePriceValueChangedMessageImpl implements StandalonePriceVa
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>Value of <code>createdBy</code>.</p>
      */
 
     public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy() {
@@ -123,7 +127,7 @@ public class StandalonePriceValueChangedMessageImpl implements StandalonePriceVa
     }
 
     /**
-     *
+     *  <p>Message number in relation to other Messages for a given resource. The <code>sequenceNumber</code> of the next Message for the resource is the successor of the <code>sequenceNumber</code> of the current Message. Meaning, the <code>sequenceNumber</code> of the next Message equals the <code>sequenceNumber</code> of the current Message + 1. <code>sequenceNumber</code> can be used to ensure that Messages are processed in the correct order for a particular resource.</p>
      */
 
     public Long getSequenceNumber() {
@@ -131,7 +135,7 @@ public class StandalonePriceValueChangedMessageImpl implements StandalonePriceVa
     }
 
     /**
-     *  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
+     *  <p>Reference to the resource on which the change or action was performed.</p>
      */
 
     public com.commercetools.api.models.common.Reference getResource() {
@@ -139,7 +143,7 @@ public class StandalonePriceValueChangedMessageImpl implements StandalonePriceVa
     }
 
     /**
-     *
+     *  <p>Version of the resource on which the change or action was performed.</p>
      */
 
     public Long getResourceVersion() {
@@ -147,7 +151,7 @@ public class StandalonePriceValueChangedMessageImpl implements StandalonePriceVa
     }
 
     /**
-     *
+     *  <p>Message Type of the Message.</p>
      */
 
     public String getType() {
@@ -155,7 +159,7 @@ public class StandalonePriceValueChangedMessageImpl implements StandalonePriceVa
     }
 
     /**
-     *
+     *  <p>User-provided identifiers of the resource, such as <code>key</code> or <code>externalId</code>. Only present if the resource has such identifiers.</p>
      */
 
     public com.commercetools.api.models.message.UserProvidedIdentifiers getResourceUserProvidedIdentifiers() {
@@ -168,6 +172,14 @@ public class StandalonePriceValueChangedMessageImpl implements StandalonePriceVa
 
     public com.commercetools.api.models.common.Money getValue() {
         return this.value;
+    }
+
+    /**
+     *  <p>Whether the new value was applied to the current or the staged representation of the StandalonePrice. Staged changes are stored on the StagedStandalonePrice.</p>
+     */
+
+    public Boolean getStaged() {
+        return this.staged;
     }
 
     public void setId(final String id) {
@@ -215,6 +227,10 @@ public class StandalonePriceValueChangedMessageImpl implements StandalonePriceVa
         this.value = value;
     }
 
+    public void setStaged(final Boolean staged) {
+        this.staged = staged;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -237,6 +253,7 @@ public class StandalonePriceValueChangedMessageImpl implements StandalonePriceVa
                 .append(type, that.type)
                 .append(resourceUserProvidedIdentifiers, that.resourceUserProvidedIdentifiers)
                 .append(value, that.value)
+                .append(staged, that.staged)
                 .isEquals();
     }
 
@@ -254,6 +271,7 @@ public class StandalonePriceValueChangedMessageImpl implements StandalonePriceVa
                 .append(type)
                 .append(resourceUserProvidedIdentifiers)
                 .append(value)
+                .append(staged)
                 .toHashCode();
     }
 

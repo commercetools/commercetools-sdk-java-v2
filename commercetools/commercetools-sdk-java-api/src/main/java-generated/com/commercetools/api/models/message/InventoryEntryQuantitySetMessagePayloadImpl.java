@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * InventoryEntryQuantitySetMessagePayload
+ *  <p>Generated after a successful Add Quantity, Remove Quantity or Change Quantity update action. Inventory changes as a result of Order creation do not trigger this message.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class InventoryEntryQuantitySetMessagePayloadImpl implements InventoryEntryQuantitySetMessagePayload, ModelBase {
@@ -59,7 +59,7 @@ public class InventoryEntryQuantitySetMessagePayloadImpl implements InventoryEnt
     }
 
     /**
-     *
+     *  <p>Quantity on stock for the InventoryEntry before the quantity was updated.</p>
      */
 
     public Long getOldQuantityOnStock() {
@@ -67,7 +67,7 @@ public class InventoryEntryQuantitySetMessagePayloadImpl implements InventoryEnt
     }
 
     /**
-     *
+     *  <p>Quantity on stock for the InventoryEntry after the quantity was updated.</p>
      */
 
     public Long getNewQuantityOnStock() {
@@ -75,7 +75,7 @@ public class InventoryEntryQuantitySetMessagePayloadImpl implements InventoryEnt
     }
 
     /**
-     *
+     *  <p>Available quantity for the InventoryEntry before the quantity was updated.</p>
      */
 
     public Long getOldAvailableQuantity() {
@@ -83,7 +83,7 @@ public class InventoryEntryQuantitySetMessagePayloadImpl implements InventoryEnt
     }
 
     /**
-     *
+     *  <p>Available quantity for the InventoryEntry after the quantity was updated.</p>
      */
 
     public Long getNewAvailableQuantity() {
@@ -91,7 +91,7 @@ public class InventoryEntryQuantitySetMessagePayloadImpl implements InventoryEnt
     }
 
     /**
-     *  <p>Reference to a Channel.</p>
+     *  <p>Reference to the Channel where the InventoryEntry quantity was set.</p>
      */
 
     public com.commercetools.api.models.channel.ChannelReference getSupplyChannel() {

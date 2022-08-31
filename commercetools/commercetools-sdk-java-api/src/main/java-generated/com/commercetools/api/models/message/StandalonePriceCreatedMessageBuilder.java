@@ -57,7 +57,7 @@ public class StandalonePriceCreatedMessageBuilder implements Builder<StandaloneP
     private com.commercetools.api.models.standalone_price.StandalonePrice standalonePrice;
 
     /**
-     *  <p>Unique identifier of the Message.</p>
+     *  <p>Unique identifier of the Message. Can be used to track which Messages have been processed.</p>
      */
 
     public StandalonePriceCreatedMessageBuilder id(final String id) {
@@ -66,7 +66,7 @@ public class StandalonePriceCreatedMessageBuilder implements Builder<StandaloneP
     }
 
     /**
-     *
+     *  <p>Version of a resource. In case of Messages, this is always <code>1</code>.</p>
      */
 
     public StandalonePriceCreatedMessageBuilder version(final Long version) {
@@ -75,7 +75,7 @@ public class StandalonePriceCreatedMessageBuilder implements Builder<StandaloneP
     }
 
     /**
-     *
+     *  <p>Date and time (UTC) the Message was generated.</p>
      */
 
     public StandalonePriceCreatedMessageBuilder createdAt(final java.time.ZonedDateTime createdAt) {
@@ -84,7 +84,7 @@ public class StandalonePriceCreatedMessageBuilder implements Builder<StandaloneP
     }
 
     /**
-     *
+     *  <p>Value of <code>createdAt</code>.</p>
      */
 
     public StandalonePriceCreatedMessageBuilder lastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {
@@ -93,7 +93,7 @@ public class StandalonePriceCreatedMessageBuilder implements Builder<StandaloneP
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>Value of <code>createdBy</code>.</p>
      */
 
     public StandalonePriceCreatedMessageBuilder lastModifiedBy(
@@ -103,7 +103,7 @@ public class StandalonePriceCreatedMessageBuilder implements Builder<StandaloneP
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>Value of <code>createdBy</code>.</p>
      */
 
     public StandalonePriceCreatedMessageBuilder lastModifiedBy(
@@ -133,7 +133,7 @@ public class StandalonePriceCreatedMessageBuilder implements Builder<StandaloneP
     }
 
     /**
-     *
+     *  <p>Message number in relation to other Messages for a given resource. The <code>sequenceNumber</code> of the next Message for the resource is the successor of the <code>sequenceNumber</code> of the current Message. Meaning, the <code>sequenceNumber</code> of the next Message equals the <code>sequenceNumber</code> of the current Message + 1. <code>sequenceNumber</code> can be used to ensure that Messages are processed in the correct order for a particular resource.</p>
      */
 
     public StandalonePriceCreatedMessageBuilder sequenceNumber(final Long sequenceNumber) {
@@ -142,7 +142,7 @@ public class StandalonePriceCreatedMessageBuilder implements Builder<StandaloneP
     }
 
     /**
-     *  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
+     *  <p>Reference to the resource on which the change or action was performed.</p>
      */
 
     public StandalonePriceCreatedMessageBuilder resource(final com.commercetools.api.models.common.Reference resource) {
@@ -151,7 +151,7 @@ public class StandalonePriceCreatedMessageBuilder implements Builder<StandaloneP
     }
 
     /**
-     *  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
+     *  <p>Reference to the resource on which the change or action was performed.</p>
      */
 
     public StandalonePriceCreatedMessageBuilder resource(
@@ -161,7 +161,7 @@ public class StandalonePriceCreatedMessageBuilder implements Builder<StandaloneP
     }
 
     /**
-     *
+     *  <p>Version of the resource on which the change or action was performed.</p>
      */
 
     public StandalonePriceCreatedMessageBuilder resourceVersion(final Long resourceVersion) {
@@ -170,7 +170,7 @@ public class StandalonePriceCreatedMessageBuilder implements Builder<StandaloneP
     }
 
     /**
-     *
+     *  <p>User-provided identifiers of the resource, such as <code>key</code> or <code>externalId</code>. Only present if the resource has such identifiers.</p>
      */
 
     public StandalonePriceCreatedMessageBuilder resourceUserProvidedIdentifiers(
@@ -182,7 +182,7 @@ public class StandalonePriceCreatedMessageBuilder implements Builder<StandaloneP
     }
 
     /**
-     *
+     *  <p>User-provided identifiers of the resource, such as <code>key</code> or <code>externalId</code>. Only present if the resource has such identifiers.</p>
      */
 
     public StandalonePriceCreatedMessageBuilder resourceUserProvidedIdentifiers(
@@ -192,7 +192,7 @@ public class StandalonePriceCreatedMessageBuilder implements Builder<StandaloneP
     }
 
     /**
-     *  <p>The Standalone Price as it was created.</p>
+     *  <p>Standalone Price that was created.</p>
      */
 
     public StandalonePriceCreatedMessageBuilder standalonePrice(
@@ -203,7 +203,7 @@ public class StandalonePriceCreatedMessageBuilder implements Builder<StandaloneP
     }
 
     /**
-     *  <p>The Standalone Price as it was created.</p>
+     *  <p>Standalone Price that was created.</p>
      */
 
     public StandalonePriceCreatedMessageBuilder standalonePrice(

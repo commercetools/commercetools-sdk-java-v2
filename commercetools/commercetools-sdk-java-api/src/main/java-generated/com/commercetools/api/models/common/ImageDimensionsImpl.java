@@ -34,7 +34,7 @@ public class ImageDimensionsImpl implements ImageDimensions, ModelBase {
     }
 
     /**
-     *
+     *  <p>Width of the image.</p>
      */
 
     public Integer getW() {
@@ -42,7 +42,7 @@ public class ImageDimensionsImpl implements ImageDimensions, ModelBase {
     }
 
     /**
-     *
+     *  <p>Height of the image.</p>
      */
 
     public Integer getH() {

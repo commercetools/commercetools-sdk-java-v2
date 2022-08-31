@@ -10,8 +10,8 @@ import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.cart.ItemShippingDetails;
 import com.commercetools.api.models.cart.TaxedItemPrice;
+import com.commercetools.api.models.common.CentPrecisionMoney;
 import com.commercetools.api.models.common.Price;
-import com.commercetools.api.models.common.TypedMoney;
 import com.commercetools.api.models.order.ItemState;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
@@ -19,7 +19,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * OrderLineItemRemovedMessagePayload
+ *  <p>Generated after a successful Remove Line Item update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -42,28 +42,28 @@ public interface OrderLineItemRemovedMessagePayload extends OrderMessagePayload 
     String ORDER_LINE_ITEM_REMOVED = "OrderLineItemRemoved";
 
     /**
-     *
+     *  <p>Unique identifier of the Line Item.</p>
      */
     @NotNull
     @JsonProperty("lineItemId")
     public String getLineItemId();
 
     /**
-     *
+     *  <p>Quantity of Line Items that were removed during the Remove Line Item update action.</p>
      */
     @NotNull
     @JsonProperty("removedQuantity")
     public Long getRemovedQuantity();
 
     /**
-     *
+     *  <p>Line Item quantity after the Remove Line Item update action.</p>
      */
     @NotNull
     @JsonProperty("newQuantity")
     public Long getNewQuantity();
 
     /**
-     *
+     *  <p>ItemStates after the Remove Line Item update action.</p>
      */
     @NotNull
     @Valid
@@ -71,29 +71,29 @@ public interface OrderLineItemRemovedMessagePayload extends OrderMessagePayload 
     public List<ItemState> getNewState();
 
     /**
-     *  <p>Base polymorphic read-only Money type which is stored in cent precision or high precision. The actual type is determined by the <code>type</code> field.</p>
+     *  <p><code>totalPrice</code> of the Order after the Remove Line Item update action.</p>
      */
     @NotNull
     @Valid
     @JsonProperty("newTotalPrice")
-    public TypedMoney getNewTotalPrice();
+    public CentPrecisionMoney getNewTotalPrice();
 
     /**
-     *
+     *  <p>TaxedItemPrice of the Order after the Remove Line Item update action.</p>
      */
     @Valid
     @JsonProperty("newTaxedPrice")
     public TaxedItemPrice getNewTaxedPrice();
 
     /**
-     *
+     *  <p>Price of the Order after the Remove Line Item update action.</p>
      */
     @Valid
     @JsonProperty("newPrice")
     public Price getNewPrice();
 
     /**
-     *
+     *  <p>Shipping Details of the Order after the Remove Line Item update action.</p>
      */
     @Valid
     @JsonProperty("newShippingDetail")
@@ -110,7 +110,7 @@ public interface OrderLineItemRemovedMessagePayload extends OrderMessagePayload 
 
     public void setNewState(final List<ItemState> newState);
 
-    public void setNewTotalPrice(final TypedMoney newTotalPrice);
+    public void setNewTotalPrice(final CentPrecisionMoney newTotalPrice);
 
     public void setNewTaxedPrice(final TaxedItemPrice newTaxedPrice);
 

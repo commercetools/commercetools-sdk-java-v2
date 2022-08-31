@@ -15,7 +15,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * InventoryEntryQuantitySetMessage
+ *  <p>Generated after a successful Add Quantity, Remove Quantity or Change Quantity update action. Inventory changes as a result of Order creation do not trigger this message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -44,35 +44,35 @@ public interface InventoryEntryQuantitySetMessage extends Message {
     String INVENTORY_ENTRY_QUANTITY_SET = "InventoryEntryQuantitySet";
 
     /**
-     *
+     *  <p>Quantity on stock for the InventoryEntry before the quantity was updated.</p>
      */
     @NotNull
     @JsonProperty("oldQuantityOnStock")
     public Long getOldQuantityOnStock();
 
     /**
-     *
+     *  <p>Quantity on stock for the InventoryEntry after the quantity was updated.</p>
      */
     @NotNull
     @JsonProperty("newQuantityOnStock")
     public Long getNewQuantityOnStock();
 
     /**
-     *
+     *  <p>Available quantity for the InventoryEntry before the quantity was updated.</p>
      */
     @NotNull
     @JsonProperty("oldAvailableQuantity")
     public Long getOldAvailableQuantity();
 
     /**
-     *
+     *  <p>Available quantity for the InventoryEntry after the quantity was updated.</p>
      */
     @NotNull
     @JsonProperty("newAvailableQuantity")
     public Long getNewAvailableQuantity();
 
     /**
-     *  <p>Reference to a Channel.</p>
+     *  <p>Reference to the Channel where the InventoryEntry quantity was set.</p>
      */
     @Valid
     @JsonProperty("supplyChannel")

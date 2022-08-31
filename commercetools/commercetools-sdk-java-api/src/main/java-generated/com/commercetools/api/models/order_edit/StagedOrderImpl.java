@@ -52,9 +52,15 @@ public class StagedOrderImpl implements StagedOrder, ModelBase {
 
     private com.commercetools.api.models.cart.TaxedPrice taxedPrice;
 
+    private com.commercetools.api.models.cart.TaxedPrice taxedShippingPrice;
+
     private com.commercetools.api.models.common.Address shippingAddress;
 
     private com.commercetools.api.models.common.Address billingAddress;
+
+    private com.commercetools.api.models.cart.ShippingMode shippingMode;
+
+    private java.util.List<com.commercetools.api.models.cart.Shipping> shipping;
 
     private com.commercetools.api.models.cart.TaxMode taxMode;
 
@@ -120,8 +126,11 @@ public class StagedOrderImpl implements StagedOrder, ModelBase {
             @JsonProperty("customLineItems") final java.util.List<com.commercetools.api.models.cart.CustomLineItem> customLineItems,
             @JsonProperty("totalPrice") final com.commercetools.api.models.common.TypedMoney totalPrice,
             @JsonProperty("taxedPrice") final com.commercetools.api.models.cart.TaxedPrice taxedPrice,
+            @JsonProperty("taxedShippingPrice") final com.commercetools.api.models.cart.TaxedPrice taxedShippingPrice,
             @JsonProperty("shippingAddress") final com.commercetools.api.models.common.Address shippingAddress,
             @JsonProperty("billingAddress") final com.commercetools.api.models.common.Address billingAddress,
+            @JsonProperty("shippingMode") final com.commercetools.api.models.cart.ShippingMode shippingMode,
+            @JsonProperty("shipping") final java.util.List<com.commercetools.api.models.cart.Shipping> shipping,
             @JsonProperty("taxMode") final com.commercetools.api.models.cart.TaxMode taxMode,
             @JsonProperty("taxRoundingMode") final com.commercetools.api.models.cart.RoundingMode taxRoundingMode,
             @JsonProperty("customerGroup") final com.commercetools.api.models.customer_group.CustomerGroupReference customerGroup,
@@ -162,8 +171,11 @@ public class StagedOrderImpl implements StagedOrder, ModelBase {
         this.customLineItems = customLineItems;
         this.totalPrice = totalPrice;
         this.taxedPrice = taxedPrice;
+        this.taxedShippingPrice = taxedShippingPrice;
         this.shippingAddress = shippingAddress;
         this.billingAddress = billingAddress;
+        this.shippingMode = shippingMode;
+        this.shipping = shipping;
         this.taxMode = taxMode;
         this.taxRoundingMode = taxRoundingMode;
         this.customerGroup = customerGroup;
@@ -322,7 +334,16 @@ public class StagedOrderImpl implements StagedOrder, ModelBase {
     }
 
     /**
-     *
+     *  <p>Sum of <code>taxedPrice</code> of ShippingInfo across all Shipping Methods. For <code>Platform</code> TaxMode, it is set automatically only if shipping address is set or Shipping Method is added to the Cart.</p>
+     */
+
+    public com.commercetools.api.models.cart.TaxedPrice getTaxedShippingPrice() {
+        return this.taxedShippingPrice;
+    }
+
+    /**
+     *  <p>Holds all shipping-related information per Shipping Method.</p>
+     *  <p>For <code>Multi</code> ShippingMode, it is updated automatically after the Shipping Methods are added.</p>
      */
 
     public com.commercetools.api.models.common.Address getShippingAddress() {
@@ -335,6 +356,23 @@ public class StagedOrderImpl implements StagedOrder, ModelBase {
 
     public com.commercetools.api.models.common.Address getBillingAddress() {
         return this.billingAddress;
+    }
+
+    /**
+     *  <p>Indicates whether one or multiple Shipping Methods are added to the Cart.</p>
+     */
+
+    public com.commercetools.api.models.cart.ShippingMode getShippingMode() {
+        return this.shippingMode;
+    }
+
+    /**
+     *  <p>Holds all shipping-related information per Shipping Method for <code>Multi</code> ShippingMode.</p>
+     *  <p>It is updated automatically after the Shipping Method is added.</p>
+     */
+
+    public java.util.List<com.commercetools.api.models.cart.Shipping> getShipping() {
+        return this.shipping;
     }
 
     /**
@@ -602,12 +640,28 @@ public class StagedOrderImpl implements StagedOrder, ModelBase {
         this.taxedPrice = taxedPrice;
     }
 
+    public void setTaxedShippingPrice(final com.commercetools.api.models.cart.TaxedPrice taxedShippingPrice) {
+        this.taxedShippingPrice = taxedShippingPrice;
+    }
+
     public void setShippingAddress(final com.commercetools.api.models.common.Address shippingAddress) {
         this.shippingAddress = shippingAddress;
     }
 
     public void setBillingAddress(final com.commercetools.api.models.common.Address billingAddress) {
         this.billingAddress = billingAddress;
+    }
+
+    public void setShippingMode(final com.commercetools.api.models.cart.ShippingMode shippingMode) {
+        this.shippingMode = shippingMode;
+    }
+
+    public void setShipping(final com.commercetools.api.models.cart.Shipping... shipping) {
+        this.shipping = new ArrayList<>(Arrays.asList(shipping));
+    }
+
+    public void setShipping(final java.util.List<com.commercetools.api.models.cart.Shipping> shipping) {
+        this.shipping = shipping;
     }
 
     public void setTaxMode(final com.commercetools.api.models.cart.TaxMode taxMode) {
@@ -758,8 +812,11 @@ public class StagedOrderImpl implements StagedOrder, ModelBase {
                 .append(customLineItems, that.customLineItems)
                 .append(totalPrice, that.totalPrice)
                 .append(taxedPrice, that.taxedPrice)
+                .append(taxedShippingPrice, that.taxedShippingPrice)
                 .append(shippingAddress, that.shippingAddress)
                 .append(billingAddress, that.billingAddress)
+                .append(shippingMode, that.shippingMode)
+                .append(shipping, that.shipping)
                 .append(taxMode, that.taxMode)
                 .append(taxRoundingMode, that.taxRoundingMode)
                 .append(customerGroup, that.customerGroup)
@@ -805,8 +862,11 @@ public class StagedOrderImpl implements StagedOrder, ModelBase {
                 .append(customLineItems)
                 .append(totalPrice)
                 .append(taxedPrice)
+                .append(taxedShippingPrice)
                 .append(shippingAddress)
                 .append(billingAddress)
+                .append(shippingMode)
+                .append(shipping)
                 .append(taxMode)
                 .append(taxRoundingMode)
                 .append(customerGroup)

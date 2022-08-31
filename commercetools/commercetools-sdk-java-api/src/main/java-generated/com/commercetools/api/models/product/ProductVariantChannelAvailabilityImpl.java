@@ -26,20 +26,27 @@ public class ProductVariantChannelAvailabilityImpl implements ProductVariantChan
 
     private Long availableQuantity;
 
+    private String id;
+
+    private Long version;
+
     @JsonCreator
     ProductVariantChannelAvailabilityImpl(@JsonProperty("isOnStock") final Boolean isOnStock,
             @JsonProperty("restockableInDays") final Long restockableInDays,
-            @JsonProperty("availableQuantity") final Long availableQuantity) {
+            @JsonProperty("availableQuantity") final Long availableQuantity, @JsonProperty("id") final String id,
+            @JsonProperty("version") final Long version) {
         this.isOnStock = isOnStock;
         this.restockableInDays = restockableInDays;
         this.availableQuantity = availableQuantity;
+        this.id = id;
+        this.version = version;
     }
 
     public ProductVariantChannelAvailabilityImpl() {
     }
 
     /**
-     *
+     *  <p>Indicates whether a Product Variant is in stock in a specified Channel.</p>
      */
 
     public Boolean getIsOnStock() {
@@ -47,7 +54,7 @@ public class ProductVariantChannelAvailabilityImpl implements ProductVariantChan
     }
 
     /**
-     *
+     *  <p>Number of days to restock a Product Variant once it is out of stock in a specified Channel.</p>
      */
 
     public Long getRestockableInDays() {
@@ -55,11 +62,27 @@ public class ProductVariantChannelAvailabilityImpl implements ProductVariantChan
     }
 
     /**
-     *
+     *  <p>Number of items of this Product Variant that are in stock in a specified Channel.</p>
      */
 
     public Long getAvailableQuantity() {
         return this.availableQuantity;
+    }
+
+    /**
+     *  <p>Unique identifier of the InventoryEntry.</p>
+     */
+
+    public String getId() {
+        return this.id;
+    }
+
+    /**
+     *  <p>Current version of the InventoryEntry.</p>
+     */
+
+    public Long getVersion() {
+        return this.version;
     }
 
     public void setIsOnStock(final Boolean isOnStock) {
@@ -72,6 +95,14 @@ public class ProductVariantChannelAvailabilityImpl implements ProductVariantChan
 
     public void setAvailableQuantity(final Long availableQuantity) {
         this.availableQuantity = availableQuantity;
+    }
+
+    public void setId(final String id) {
+        this.id = id;
+    }
+
+    public void setVersion(final Long version) {
+        this.version = version;
     }
 
     @Override
@@ -87,6 +118,8 @@ public class ProductVariantChannelAvailabilityImpl implements ProductVariantChan
         return new EqualsBuilder().append(isOnStock, that.isOnStock)
                 .append(restockableInDays, that.restockableInDays)
                 .append(availableQuantity, that.availableQuantity)
+                .append(id, that.id)
+                .append(version, that.version)
                 .isEquals();
     }
 
@@ -95,6 +128,8 @@ public class ProductVariantChannelAvailabilityImpl implements ProductVariantChan
         return new HashCodeBuilder(17, 37).append(isOnStock)
                 .append(restockableInDays)
                 .append(availableQuantity)
+                .append(id)
+                .append(version)
                 .toHashCode();
     }
 

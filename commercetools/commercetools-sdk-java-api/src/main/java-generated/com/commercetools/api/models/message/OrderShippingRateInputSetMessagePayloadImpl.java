@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * OrderShippingRateInputSetMessagePayload
+ *  <p>Generated after a successful Set ShippingRateInput update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderShippingRateInputSetMessagePayloadImpl implements OrderShippingRateInputSetMessagePayload, ModelBase {
@@ -48,7 +48,7 @@ public class OrderShippingRateInputSetMessagePayloadImpl implements OrderShippin
     }
 
     /**
-     *
+     *  <p>ShippingRateInput after the Set ShippingRateInput update action.</p>
      */
 
     public com.commercetools.api.models.cart.ShippingRateInput getShippingRateInput() {
@@ -56,7 +56,7 @@ public class OrderShippingRateInputSetMessagePayloadImpl implements OrderShippin
     }
 
     /**
-     *
+     *  <p>ShippingRateInput before the Set ShippingRateInput update action.</p>
      */
 
     public com.commercetools.api.models.cart.ShippingRateInput getOldShippingRateInput() {

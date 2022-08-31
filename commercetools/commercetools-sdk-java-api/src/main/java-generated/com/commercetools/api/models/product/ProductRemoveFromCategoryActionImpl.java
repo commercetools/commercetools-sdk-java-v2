@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * ProductRemoveFromCategoryAction
+ *  <p>Produces the ProductRemovedFromCategory Message.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductRemoveFromCategoryActionImpl implements ProductRemoveFromCategoryAction, ModelBase {
@@ -48,7 +48,7 @@ public class ProductRemoveFromCategoryActionImpl implements ProductRemoveFromCat
     }
 
     /**
-     *
+     *  <p>The Category to remove.</p>
      */
 
     public com.commercetools.api.models.category.CategoryResourceIdentifier getCategory() {
@@ -56,7 +56,7 @@ public class ProductRemoveFromCategoryActionImpl implements ProductRemoveFromCat
     }
 
     /**
-     *
+     *  <p>If <code>true</code>, only the staged <code>categories</code> and <code>categoryOrderHints</code> are removed. If <code>false</code>, both the current and staged <code>categories</code> and <code>categoryOrderHints</code> are removed.</p>
      */
 
     public Boolean getStaged() {

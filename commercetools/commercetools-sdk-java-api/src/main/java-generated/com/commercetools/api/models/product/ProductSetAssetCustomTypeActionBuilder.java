@@ -45,7 +45,7 @@ public class ProductSetAssetCustomTypeActionBuilder implements Builder<ProductSe
     private com.commercetools.api.models.type.FieldContainer fields;
 
     /**
-     *
+     *  <p>The <code>id</code> of the ProductVariant to update.</p>
      */
 
     public ProductSetAssetCustomTypeActionBuilder variantId(@Nullable final Long variantId) {
@@ -54,7 +54,7 @@ public class ProductSetAssetCustomTypeActionBuilder implements Builder<ProductSe
     }
 
     /**
-     *
+     *  <p>The <code>sku</code> of the ProductVariant to update.</p>
      */
 
     public ProductSetAssetCustomTypeActionBuilder sku(@Nullable final String sku) {
@@ -63,7 +63,7 @@ public class ProductSetAssetCustomTypeActionBuilder implements Builder<ProductSe
     }
 
     /**
-     *
+     *  <p>If <code>true</code>, only the staged Asset is updated. If <code>false</code>, both the current and staged Asset is updated.</p>
      */
 
     public ProductSetAssetCustomTypeActionBuilder staged(@Nullable final Boolean staged) {
@@ -72,7 +72,7 @@ public class ProductSetAssetCustomTypeActionBuilder implements Builder<ProductSe
     }
 
     /**
-     *
+     *  <p>The <code>id</code> of the Asset to update.</p>
      */
 
     public ProductSetAssetCustomTypeActionBuilder assetId(@Nullable final String assetId) {
@@ -81,7 +81,7 @@ public class ProductSetAssetCustomTypeActionBuilder implements Builder<ProductSe
     }
 
     /**
-     *
+     *  <p>The <code>key</code> of the Asset to update.</p>
      */
 
     public ProductSetAssetCustomTypeActionBuilder assetKey(@Nullable final String assetKey) {

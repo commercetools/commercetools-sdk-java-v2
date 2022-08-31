@@ -15,14 +15,13 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * ProductVariantDeletedMessagePayload
+ *  <p>Generated after a successful Remove Product Variant update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
  * <div class=code-example>
  * <pre><code class='java'>
  *     ProductVariantDeletedMessagePayload productVariantDeletedMessagePayload = ProductVariantDeletedMessagePayload.builder()
- *             .variant(variantBuilder -> variantBuilder)
  *             .plusRemovedImageUrls(removedImageUrlsBuilder -> removedImageUrlsBuilder)
  *             .build()
  * </code></pre>
@@ -35,15 +34,14 @@ public interface ProductVariantDeletedMessagePayload extends MessagePayload {
     String PRODUCT_VARIANT_DELETED = "ProductVariantDeleted";
 
     /**
-     *
+     *  <p>Unique identifier of the Product Variant that was added.</p>
      */
-    @NotNull
     @Valid
     @JsonProperty("variant")
     public ProductVariant getVariant();
 
     /**
-     *
+     *  <p>List of image URLs that were removed with the Remove Product Variant update action.</p>
      */
     @NotNull
     @JsonProperty("removedImageUrls")

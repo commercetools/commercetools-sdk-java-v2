@@ -25,7 +25,7 @@ public class CustomerAddressChangedMessagePayloadBuilder implements Builder<Cust
     private com.commercetools.api.models.common.Address address;
 
     /**
-     *
+     *  <p>Address that was set during the Change Address update action.</p>
      */
 
     public CustomerAddressChangedMessagePayloadBuilder address(
@@ -35,7 +35,7 @@ public class CustomerAddressChangedMessagePayloadBuilder implements Builder<Cust
     }
 
     /**
-     *
+     *  <p>Address that was set during the Change Address update action.</p>
      */
 
     public CustomerAddressChangedMessagePayloadBuilder address(

@@ -16,7 +16,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * ProductData
+ *  <p>Contains all the data of a Product and its Product Variants.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -38,7 +38,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ProductData extends ProductDataLike {
 
     /**
-     *  <p>JSON object where the keys are of type Locale, and the values are the strings used for the corresponding language.</p>
+     *  <p>Name of the Product.</p>
      */
     @NotNull
     @Valid
@@ -46,7 +46,7 @@ public interface ProductData extends ProductDataLike {
     public LocalizedString getName();
 
     /**
-     *
+     *  <p>Categories assigned to the Product.</p>
      */
     @NotNull
     @Valid
@@ -54,21 +54,21 @@ public interface ProductData extends ProductDataLike {
     public List<CategoryReference> getCategories();
 
     /**
-     *
+     *  <p>Numerical values to allow ordering of Products within a specified Category.</p>
      */
     @Valid
     @JsonProperty("categoryOrderHints")
     public CategoryOrderHints getCategoryOrderHints();
 
     /**
-     *  <p>JSON object where the keys are of type Locale, and the values are the strings used for the corresponding language.</p>
+     *  <p>Description of the Product.</p>
      */
     @Valid
     @JsonProperty("description")
     public LocalizedString getDescription();
 
     /**
-     *  <p>JSON object where the keys are of type Locale, and the values are the strings used for the corresponding language.</p>
+     *  <p>User-defined identifier used in a deep-link URL for the Product. Must be unique across a Project, but can be the same for Products in different Locales. Matches the pattern <code>[a-zA-Z0-9_\\-]{2,256}</code>.</p>
      */
     @NotNull
     @Valid
@@ -76,28 +76,28 @@ public interface ProductData extends ProductDataLike {
     public LocalizedString getSlug();
 
     /**
-     *  <p>JSON object where the keys are of type Locale, and the values are the strings used for the corresponding language.</p>
+     *  <p>Title of the Product displayed in search results.</p>
      */
     @Valid
     @JsonProperty("metaTitle")
     public LocalizedString getMetaTitle();
 
     /**
-     *  <p>JSON object where the keys are of type Locale, and the values are the strings used for the corresponding language.</p>
+     *  <p>Description of the Product displayed in search results below the meta title.</p>
      */
     @Valid
     @JsonProperty("metaDescription")
     public LocalizedString getMetaDescription();
 
     /**
-     *  <p>JSON object where the keys are of type Locale, and the values are the strings used for the corresponding language.</p>
+     *  <p>Keywords that give additional information about the Product to search engines.</p>
      */
     @Valid
     @JsonProperty("metaKeywords")
     public LocalizedString getMetaKeywords();
 
     /**
-     *
+     *  <p>The Master Variant of the Product.</p>
      */
     @NotNull
     @Valid
@@ -105,7 +105,7 @@ public interface ProductData extends ProductDataLike {
     public ProductVariant getMasterVariant();
 
     /**
-     *
+     *  <p>Additional Product Variants.</p>
      */
     @NotNull
     @Valid
@@ -113,7 +113,7 @@ public interface ProductData extends ProductDataLike {
     public List<ProductVariant> getVariants();
 
     /**
-     *
+     *  <p>Used by Product Suggestions, but is also considered for a full text search.</p>
      */
     @NotNull
     @Valid

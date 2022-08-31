@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * OrderBillingAddressSetMessagePayload
+ *  <p>Generated after a successful Set Billing Address update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderBillingAddressSetMessagePayloadImpl implements OrderBillingAddressSetMessagePayload, ModelBase {
@@ -48,7 +48,7 @@ public class OrderBillingAddressSetMessagePayloadImpl implements OrderBillingAdd
     }
 
     /**
-     *
+     *  <p>Billing address on the Order after the Set Billing Address update action.</p>
      */
 
     public com.commercetools.api.models.common.Address getAddress() {
@@ -56,7 +56,7 @@ public class OrderBillingAddressSetMessagePayloadImpl implements OrderBillingAdd
     }
 
     /**
-     *
+     *  <p>Billing address on the Order before the Set Billing Address update action.</p>
      */
 
     public com.commercetools.api.models.common.Address getOldAddress() {

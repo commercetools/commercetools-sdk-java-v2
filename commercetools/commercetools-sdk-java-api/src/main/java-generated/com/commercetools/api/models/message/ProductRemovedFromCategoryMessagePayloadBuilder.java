@@ -29,7 +29,7 @@ public class ProductRemovedFromCategoryMessagePayloadBuilder
     private Boolean staged;
 
     /**
-     *  <p>Reference to a Category.</p>
+     *  <p>Category the Product was removed from.</p>
      */
 
     public ProductRemovedFromCategoryMessagePayloadBuilder category(
@@ -39,7 +39,7 @@ public class ProductRemovedFromCategoryMessagePayloadBuilder
     }
 
     /**
-     *  <p>Reference to a Category.</p>
+     *  <p>Category the Product was removed from.</p>
      */
 
     public ProductRemovedFromCategoryMessagePayloadBuilder category(
@@ -49,7 +49,7 @@ public class ProductRemovedFromCategoryMessagePayloadBuilder
     }
 
     /**
-     *
+     *  <p>Whether the update was only applied to the staged Product Projection.</p>
      */
 
     public ProductRemovedFromCategoryMessagePayloadBuilder staged(final Boolean staged) {

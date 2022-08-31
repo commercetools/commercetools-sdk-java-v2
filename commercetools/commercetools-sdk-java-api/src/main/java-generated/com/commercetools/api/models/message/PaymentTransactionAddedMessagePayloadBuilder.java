@@ -25,7 +25,7 @@ public class PaymentTransactionAddedMessagePayloadBuilder implements Builder<Pay
     private com.commercetools.api.models.payment.Transaction transaction;
 
     /**
-     *
+     *  <p>Transaction that was added to the Payment.</p>
      */
 
     public PaymentTransactionAddedMessagePayloadBuilder transaction(
@@ -35,7 +35,7 @@ public class PaymentTransactionAddedMessagePayloadBuilder implements Builder<Pay
     }
 
     /**
-     *
+     *  <p>Transaction that was added to the Payment.</p>
      */
 
     public PaymentTransactionAddedMessagePayloadBuilder transaction(

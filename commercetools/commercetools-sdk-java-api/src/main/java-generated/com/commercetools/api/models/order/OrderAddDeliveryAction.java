@@ -41,6 +41,13 @@ public interface OrderAddDeliveryAction
     public List<DeliveryItem> getItems();
 
     /**
+     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multi</code> ShippingMode.</p>
+     */
+
+    @JsonProperty("shippingKey")
+    public String getShippingKey();
+
+    /**
      *
      */
     @Valid
@@ -66,6 +73,8 @@ public interface OrderAddDeliveryAction
 
     public void setItems(final List<DeliveryItem> items);
 
+    public void setShippingKey(final String shippingKey);
+
     public void setAddress(final BaseAddress address);
 
     @JsonIgnore
@@ -82,6 +91,7 @@ public interface OrderAddDeliveryAction
     public static OrderAddDeliveryAction of(final OrderAddDeliveryAction template) {
         OrderAddDeliveryActionImpl instance = new OrderAddDeliveryActionImpl();
         instance.setItems(template.getItems());
+        instance.setShippingKey(template.getShippingKey());
         instance.setAddress(template.getAddress());
         instance.setParcels(template.getParcels());
         instance.setCustom(template.getCustom());

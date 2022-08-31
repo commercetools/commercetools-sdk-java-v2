@@ -24,7 +24,7 @@ public class CustomTokenizerBuilder implements Builder<CustomTokenizer> {
     private java.util.List<String> inputs;
 
     /**
-     *
+     *  <p>Contains custom tokens.</p>
      */
 
     public CustomTokenizerBuilder inputs(final String... inputs) {
@@ -33,7 +33,7 @@ public class CustomTokenizerBuilder implements Builder<CustomTokenizer> {
     }
 
     /**
-     *
+     *  <p>Contains custom tokens.</p>
      */
 
     public CustomTokenizerBuilder inputs(final java.util.List<String> inputs) {
@@ -42,7 +42,7 @@ public class CustomTokenizerBuilder implements Builder<CustomTokenizer> {
     }
 
     /**
-     *
+     *  <p>Contains custom tokens.</p>
      */
 
     public CustomTokenizerBuilder plusInputs(final String... inputs) {

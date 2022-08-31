@@ -17,8 +17,8 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     ProductPagedQueryResponse productPagedQueryResponse = ProductPagedQueryResponse.builder()
  *             .limit(0.3)
- *             .count(0.3)
  *             .offset(0.3)
+ *             .count(0.3)
  *             .plusResults(resultsBuilder -> resultsBuilder)
  *             .build()
  * </code></pre>
@@ -29,12 +29,12 @@ public class ProductPagedQueryResponseBuilder implements Builder<ProductPagedQue
 
     private Long limit;
 
+    private Long offset;
+
     private Long count;
 
     @Nullable
     private Long total;
-
-    private Long offset;
 
     private java.util.List<com.commercetools.api.models.product.Product> results;
 
@@ -48,24 +48,6 @@ public class ProductPagedQueryResponseBuilder implements Builder<ProductPagedQue
     }
 
     /**
-     *
-     */
-
-    public ProductPagedQueryResponseBuilder count(final Long count) {
-        this.count = count;
-        return this;
-    }
-
-    /**
-     *
-     */
-
-    public ProductPagedQueryResponseBuilder total(@Nullable final Long total) {
-        this.total = total;
-        return this;
-    }
-
-    /**
      *  <p>Number of elements skipped.</p>
      */
 
@@ -75,7 +57,25 @@ public class ProductPagedQueryResponseBuilder implements Builder<ProductPagedQue
     }
 
     /**
-     *
+     *  <p>Actual number of results returned.</p>
+     */
+
+    public ProductPagedQueryResponseBuilder count(final Long count) {
+        this.count = count;
+        return this;
+    }
+
+    /**
+     *  <p>Total number of results matching the query. This number is an estimation that is not strongly consistent. This field is returned by default. For improved performance, calculating this field can be deactivated by using the query parameter <code>withTotal=false</code>. When the results are filtered with a Query Predicate, <code>total</code> is subject to a limit.</p>
+     */
+
+    public ProductPagedQueryResponseBuilder total(@Nullable final Long total) {
+        this.total = total;
+        return this;
+    }
+
+    /**
+     *  <p>Products matching the query.</p>
      */
 
     public ProductPagedQueryResponseBuilder results(final com.commercetools.api.models.product.Product... results) {
@@ -84,7 +84,7 @@ public class ProductPagedQueryResponseBuilder implements Builder<ProductPagedQue
     }
 
     /**
-     *
+     *  <p>Products matching the query.</p>
      */
 
     public ProductPagedQueryResponseBuilder results(
@@ -94,7 +94,7 @@ public class ProductPagedQueryResponseBuilder implements Builder<ProductPagedQue
     }
 
     /**
-     *
+     *  <p>Products matching the query.</p>
      */
 
     public ProductPagedQueryResponseBuilder plusResults(final com.commercetools.api.models.product.Product... results) {
@@ -106,7 +106,7 @@ public class ProductPagedQueryResponseBuilder implements Builder<ProductPagedQue
     }
 
     /**
-     *
+     *  <p>Products matching the query.</p>
      */
 
     public ProductPagedQueryResponseBuilder plusResults(
@@ -119,7 +119,7 @@ public class ProductPagedQueryResponseBuilder implements Builder<ProductPagedQue
     }
 
     /**
-     *
+     *  <p>Products matching the query.</p>
      */
 
     public ProductPagedQueryResponseBuilder withResults(
@@ -133,6 +133,10 @@ public class ProductPagedQueryResponseBuilder implements Builder<ProductPagedQue
         return this.limit;
     }
 
+    public Long getOffset() {
+        return this.offset;
+    }
+
     public Long getCount() {
         return this.count;
     }
@@ -142,27 +146,23 @@ public class ProductPagedQueryResponseBuilder implements Builder<ProductPagedQue
         return this.total;
     }
 
-    public Long getOffset() {
-        return this.offset;
-    }
-
     public java.util.List<com.commercetools.api.models.product.Product> getResults() {
         return this.results;
     }
 
     public ProductPagedQueryResponse build() {
         Objects.requireNonNull(limit, ProductPagedQueryResponse.class + ": limit is missing");
-        Objects.requireNonNull(count, ProductPagedQueryResponse.class + ": count is missing");
         Objects.requireNonNull(offset, ProductPagedQueryResponse.class + ": offset is missing");
+        Objects.requireNonNull(count, ProductPagedQueryResponse.class + ": count is missing");
         Objects.requireNonNull(results, ProductPagedQueryResponse.class + ": results is missing");
-        return new ProductPagedQueryResponseImpl(limit, count, total, offset, results);
+        return new ProductPagedQueryResponseImpl(limit, offset, count, total, results);
     }
 
     /**
      * builds ProductPagedQueryResponse without checking for non null required values
      */
     public ProductPagedQueryResponse buildUnchecked() {
-        return new ProductPagedQueryResponseImpl(limit, count, total, offset, results);
+        return new ProductPagedQueryResponseImpl(limit, offset, count, total, results);
     }
 
     public static ProductPagedQueryResponseBuilder of() {
@@ -172,9 +172,9 @@ public class ProductPagedQueryResponseBuilder implements Builder<ProductPagedQue
     public static ProductPagedQueryResponseBuilder of(final ProductPagedQueryResponse template) {
         ProductPagedQueryResponseBuilder builder = new ProductPagedQueryResponseBuilder();
         builder.limit = template.getLimit();
+        builder.offset = template.getOffset();
         builder.count = template.getCount();
         builder.total = template.getTotal();
-        builder.offset = template.getOffset();
         builder.results = template.getResults();
         return builder;
     }

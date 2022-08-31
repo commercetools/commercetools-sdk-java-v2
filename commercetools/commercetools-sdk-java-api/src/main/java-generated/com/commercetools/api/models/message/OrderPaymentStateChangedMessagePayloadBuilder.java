@@ -29,7 +29,7 @@ public class OrderPaymentStateChangedMessagePayloadBuilder implements Builder<Or
     private com.commercetools.api.models.order.PaymentState oldPaymentState;
 
     /**
-     *
+     *  <p>PaymentState after the Change Payment State update action.</p>
      */
 
     public OrderPaymentStateChangedMessagePayloadBuilder paymentState(
@@ -39,7 +39,7 @@ public class OrderPaymentStateChangedMessagePayloadBuilder implements Builder<Or
     }
 
     /**
-     *
+     *  <p>PaymentState before the Change Payment State update action.</p>
      */
 
     public OrderPaymentStateChangedMessagePayloadBuilder oldPaymentState(

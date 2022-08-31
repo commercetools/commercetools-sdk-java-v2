@@ -15,7 +15,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * ReviewCreatedMessagePayload
+ *  <p>Generated after a successful Create Review request.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -34,7 +34,7 @@ public interface ReviewCreatedMessagePayload extends MessagePayload {
     String REVIEW_CREATED = "ReviewCreated";
 
     /**
-     *
+     *  <p>Review that was created.</p>
      */
     @NotNull
     @Valid

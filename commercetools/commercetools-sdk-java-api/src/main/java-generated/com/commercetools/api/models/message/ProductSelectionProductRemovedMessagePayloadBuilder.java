@@ -26,7 +26,7 @@ public class ProductSelectionProductRemovedMessagePayloadBuilder
     private com.commercetools.api.models.product.ProductReference product;
 
     /**
-     *  <p>Reference to a Product.</p>
+     *  <p>Product that was removed from the Product Selection.</p>
      */
 
     public ProductSelectionProductRemovedMessagePayloadBuilder product(
@@ -36,7 +36,7 @@ public class ProductSelectionProductRemovedMessagePayloadBuilder
     }
 
     /**
-     *  <p>Reference to a Product.</p>
+     *  <p>Product that was removed from the Product Selection.</p>
      */
 
     public ProductSelectionProductRemovedMessagePayloadBuilder product(

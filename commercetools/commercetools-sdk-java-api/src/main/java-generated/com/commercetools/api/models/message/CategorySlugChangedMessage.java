@@ -15,7 +15,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * CategorySlugChangedMessage
+ *  <p>Generated after a successful Change Slug update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -41,7 +41,7 @@ public interface CategorySlugChangedMessage extends Message {
     String CATEGORY_SLUG_CHANGED = "CategorySlugChanged";
 
     /**
-     *  <p>JSON object where the keys are of type Locale, and the values are the strings used for the corresponding language.</p>
+     *  <p>The slug of the Category after the Change Slug update action.</p>
      */
     @NotNull
     @Valid
@@ -49,7 +49,7 @@ public interface CategorySlugChangedMessage extends Message {
     public LocalizedString getSlug();
 
     /**
-     *  <p>JSON object where the keys are of type Locale, and the values are the strings used for the corresponding language.</p>
+     *  <p>The slug of the Category before the Change Slug update action.</p>
      */
     @Valid
     @JsonProperty("oldSlug")

@@ -8,6 +8,7 @@ import java.util.function.Function;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
+import com.commercetools.api.models.cart.CustomLineItemPriceMode;
 import com.commercetools.api.models.cart.ExternalTaxRateDraft;
 import com.commercetools.api.models.common.LocalizedString;
 import com.commercetools.api.models.common.Money;
@@ -93,6 +94,16 @@ public interface StagedOrderAddCustomLineItemAction extends StagedOrderUpdateAct
     @JsonProperty("externalTaxRate")
     public ExternalTaxRateDraft getExternalTaxRate();
 
+    /**
+     *  <ul>
+     *   <li>If <code>Standard</code>, Cart Discounts with a matching CartDiscountCustomLineItemsTarget are applied to the Custom Line Item.</li>
+     *   <li>If <code>External</code>, Cart Discounts are not considered on the Custom Line Item.</li>
+     *  </ul>
+     */
+
+    @JsonProperty("priceMode")
+    public CustomLineItemPriceMode getPriceMode();
+
     public void setMoney(final Money money);
 
     public void setName(final LocalizedString name);
@@ -107,6 +118,8 @@ public interface StagedOrderAddCustomLineItemAction extends StagedOrderUpdateAct
 
     public void setExternalTaxRate(final ExternalTaxRateDraft externalTaxRate);
 
+    public void setPriceMode(final CustomLineItemPriceMode priceMode);
+
     public static StagedOrderAddCustomLineItemAction of() {
         return new StagedOrderAddCustomLineItemActionImpl();
     }
@@ -120,6 +133,7 @@ public interface StagedOrderAddCustomLineItemAction extends StagedOrderUpdateAct
         instance.setTaxCategory(template.getTaxCategory());
         instance.setCustom(template.getCustom());
         instance.setExternalTaxRate(template.getExternalTaxRate());
+        instance.setPriceMode(template.getPriceMode());
         return instance;
     }
 

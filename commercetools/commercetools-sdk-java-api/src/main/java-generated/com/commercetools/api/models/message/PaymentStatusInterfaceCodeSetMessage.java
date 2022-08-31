@@ -13,7 +13,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * PaymentStatusInterfaceCodeSetMessage
+ *  <p>Generated after a successful Set StatusInterfaceCode update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -28,7 +28,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .resource(resourceBuilder -> resourceBuilder)
  *             .resourceVersion(0.3)
  *             .paymentId("{paymentId}")
- *             .interfaceCode("{interfaceCode}")
  *             .build()
  * </code></pre>
  * </div>
@@ -40,16 +39,16 @@ public interface PaymentStatusInterfaceCodeSetMessage extends Message {
     String PAYMENT_STATUS_INTERFACE_CODE_SET = "PaymentStatusInterfaceCodeSet";
 
     /**
-     *
+     *  <p>Unique identifier for the Payment for which the Set StatusInterfaceCode update action was applied.</p>
      */
     @NotNull
     @JsonProperty("paymentId")
     public String getPaymentId();
 
     /**
-     *
+     *  <p>The <code>interfaceCode</code> that was set during the Set StatusInterfaceCode update action.</p>
      */
-    @NotNull
+
     @JsonProperty("interfaceCode")
     public String getInterfaceCode();
 

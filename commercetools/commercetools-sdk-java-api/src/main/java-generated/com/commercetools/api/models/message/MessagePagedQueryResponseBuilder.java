@@ -48,7 +48,7 @@ public class MessagePagedQueryResponseBuilder implements Builder<MessagePagedQue
     }
 
     /**
-     *
+     *  <p>Actual number of results returned.</p>
      */
 
     public MessagePagedQueryResponseBuilder count(final Long count) {
@@ -57,7 +57,7 @@ public class MessagePagedQueryResponseBuilder implements Builder<MessagePagedQue
     }
 
     /**
-     *
+     *  <p>Total number of results matching the query. This number is an estimation that is not strongly consistent. This field is returned by default. For improved performance, calculating this field can be deactivated by using the query parameter <code>withTotal=false</code>. When the results are filtered with a Query Predicate, <code>total</code> is subject to a limit.</p>
      */
 
     public MessagePagedQueryResponseBuilder total(@Nullable final Long total) {
@@ -75,7 +75,7 @@ public class MessagePagedQueryResponseBuilder implements Builder<MessagePagedQue
     }
 
     /**
-     *
+     *  <p>Messages matching the query.</p>
      */
 
     public MessagePagedQueryResponseBuilder results(final com.commercetools.api.models.message.Message... results) {
@@ -84,7 +84,7 @@ public class MessagePagedQueryResponseBuilder implements Builder<MessagePagedQue
     }
 
     /**
-     *
+     *  <p>Messages matching the query.</p>
      */
 
     public MessagePagedQueryResponseBuilder results(
@@ -94,7 +94,7 @@ public class MessagePagedQueryResponseBuilder implements Builder<MessagePagedQue
     }
 
     /**
-     *
+     *  <p>Messages matching the query.</p>
      */
 
     public MessagePagedQueryResponseBuilder plusResults(final com.commercetools.api.models.message.Message... results) {
@@ -106,7 +106,7 @@ public class MessagePagedQueryResponseBuilder implements Builder<MessagePagedQue
     }
 
     /**
-     *
+     *  <p>Messages matching the query.</p>
      */
 
     public MessagePagedQueryResponseBuilder plusResults(
@@ -119,7 +119,7 @@ public class MessagePagedQueryResponseBuilder implements Builder<MessagePagedQue
     }
 
     /**
-     *
+     *  <p>Messages matching the query.</p>
      */
 
     public MessagePagedQueryResponseBuilder withResults(

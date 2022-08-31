@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * ReviewRatingSetMessagePayload
+ *  <p>Generated after a successful Set Rating update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ReviewRatingSetMessagePayloadImpl implements ReviewRatingSetMessagePayload, ModelBase {
@@ -55,7 +55,7 @@ public class ReviewRatingSetMessagePayloadImpl implements ReviewRatingSetMessage
     }
 
     /**
-     *
+     *  <p>The <code>rating</code> of the Review before the Set Rating update action.</p>
      */
 
     public Double getOldRating() {
@@ -63,7 +63,7 @@ public class ReviewRatingSetMessagePayloadImpl implements ReviewRatingSetMessage
     }
 
     /**
-     *
+     *  <p>The <code>rating</code> of the Review after the Set Rating update action.</p>
      */
 
     public Double getNewRating() {
@@ -71,7 +71,7 @@ public class ReviewRatingSetMessagePayloadImpl implements ReviewRatingSetMessage
     }
 
     /**
-     *
+     *  <p>Whether the Review was taken into account in the ratings statistics of the target.</p>
      */
 
     public Boolean getIncludedInStatistics() {
@@ -79,7 +79,7 @@ public class ReviewRatingSetMessagePayloadImpl implements ReviewRatingSetMessage
     }
 
     /**
-     *  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
+     *  <p>Reference to the resource that the Review belongs to.</p>
      */
 
     public com.commercetools.api.models.common.Reference getTarget() {

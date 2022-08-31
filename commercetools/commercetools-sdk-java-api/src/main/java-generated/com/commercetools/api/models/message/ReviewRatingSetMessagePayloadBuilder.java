@@ -36,7 +36,7 @@ public class ReviewRatingSetMessagePayloadBuilder implements Builder<ReviewRatin
     private com.commercetools.api.models.common.Reference target;
 
     /**
-     *
+     *  <p>The <code>rating</code> of the Review before the Set Rating update action.</p>
      */
 
     public ReviewRatingSetMessagePayloadBuilder oldRating(@Nullable final Double oldRating) {
@@ -45,7 +45,7 @@ public class ReviewRatingSetMessagePayloadBuilder implements Builder<ReviewRatin
     }
 
     /**
-     *
+     *  <p>The <code>rating</code> of the Review after the Set Rating update action.</p>
      */
 
     public ReviewRatingSetMessagePayloadBuilder newRating(@Nullable final Double newRating) {
@@ -54,7 +54,7 @@ public class ReviewRatingSetMessagePayloadBuilder implements Builder<ReviewRatin
     }
 
     /**
-     *
+     *  <p>Whether the Review was taken into account in the ratings statistics of the target.</p>
      */
 
     public ReviewRatingSetMessagePayloadBuilder includedInStatistics(final Boolean includedInStatistics) {
@@ -63,7 +63,7 @@ public class ReviewRatingSetMessagePayloadBuilder implements Builder<ReviewRatin
     }
 
     /**
-     *  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
+     *  <p>Reference to the resource that the Review belongs to.</p>
      */
 
     public ReviewRatingSetMessagePayloadBuilder target(
@@ -73,7 +73,7 @@ public class ReviewRatingSetMessagePayloadBuilder implements Builder<ReviewRatin
     }
 
     /**
-     *  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
+     *  <p>Reference to the resource that the Review belongs to.</p>
      */
 
     public ReviewRatingSetMessagePayloadBuilder target(

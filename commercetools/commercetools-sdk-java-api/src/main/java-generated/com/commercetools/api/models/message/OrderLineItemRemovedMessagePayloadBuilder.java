@@ -36,7 +36,7 @@ public class OrderLineItemRemovedMessagePayloadBuilder implements Builder<OrderL
 
     private java.util.List<com.commercetools.api.models.order.ItemState> newState;
 
-    private com.commercetools.api.models.common.TypedMoney newTotalPrice;
+    private com.commercetools.api.models.common.CentPrecisionMoney newTotalPrice;
 
     @Nullable
     private com.commercetools.api.models.cart.TaxedItemPrice newTaxedPrice;
@@ -48,7 +48,7 @@ public class OrderLineItemRemovedMessagePayloadBuilder implements Builder<OrderL
     private com.commercetools.api.models.cart.ItemShippingDetails newShippingDetail;
 
     /**
-     *
+     *  <p>Unique identifier of the Line Item.</p>
      */
 
     public OrderLineItemRemovedMessagePayloadBuilder lineItemId(final String lineItemId) {
@@ -57,7 +57,7 @@ public class OrderLineItemRemovedMessagePayloadBuilder implements Builder<OrderL
     }
 
     /**
-     *
+     *  <p>Quantity of Line Items that were removed during the Remove Line Item update action.</p>
      */
 
     public OrderLineItemRemovedMessagePayloadBuilder removedQuantity(final Long removedQuantity) {
@@ -66,7 +66,7 @@ public class OrderLineItemRemovedMessagePayloadBuilder implements Builder<OrderL
     }
 
     /**
-     *
+     *  <p>Line Item quantity after the Remove Line Item update action.</p>
      */
 
     public OrderLineItemRemovedMessagePayloadBuilder newQuantity(final Long newQuantity) {
@@ -75,7 +75,7 @@ public class OrderLineItemRemovedMessagePayloadBuilder implements Builder<OrderL
     }
 
     /**
-     *
+     *  <p>ItemStates after the Remove Line Item update action.</p>
      */
 
     public OrderLineItemRemovedMessagePayloadBuilder newState(
@@ -85,7 +85,7 @@ public class OrderLineItemRemovedMessagePayloadBuilder implements Builder<OrderL
     }
 
     /**
-     *
+     *  <p>ItemStates after the Remove Line Item update action.</p>
      */
 
     public OrderLineItemRemovedMessagePayloadBuilder newState(
@@ -95,7 +95,7 @@ public class OrderLineItemRemovedMessagePayloadBuilder implements Builder<OrderL
     }
 
     /**
-     *
+     *  <p>ItemStates after the Remove Line Item update action.</p>
      */
 
     public OrderLineItemRemovedMessagePayloadBuilder plusNewState(
@@ -108,7 +108,7 @@ public class OrderLineItemRemovedMessagePayloadBuilder implements Builder<OrderL
     }
 
     /**
-     *
+     *  <p>ItemStates after the Remove Line Item update action.</p>
      */
 
     public OrderLineItemRemovedMessagePayloadBuilder plusNewState(
@@ -121,7 +121,7 @@ public class OrderLineItemRemovedMessagePayloadBuilder implements Builder<OrderL
     }
 
     /**
-     *
+     *  <p>ItemStates after the Remove Line Item update action.</p>
      */
 
     public OrderLineItemRemovedMessagePayloadBuilder withNewState(
@@ -132,27 +132,27 @@ public class OrderLineItemRemovedMessagePayloadBuilder implements Builder<OrderL
     }
 
     /**
-     *  <p>Base polymorphic read-only Money type which is stored in cent precision or high precision. The actual type is determined by the <code>type</code> field.</p>
+     *  <p><code>totalPrice</code> of the Order after the Remove Line Item update action.</p>
      */
 
     public OrderLineItemRemovedMessagePayloadBuilder newTotalPrice(
-            final com.commercetools.api.models.common.TypedMoney newTotalPrice) {
+            Function<com.commercetools.api.models.common.CentPrecisionMoneyBuilder, com.commercetools.api.models.common.CentPrecisionMoneyBuilder> builder) {
+        this.newTotalPrice = builder.apply(com.commercetools.api.models.common.CentPrecisionMoneyBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p><code>totalPrice</code> of the Order after the Remove Line Item update action.</p>
+     */
+
+    public OrderLineItemRemovedMessagePayloadBuilder newTotalPrice(
+            final com.commercetools.api.models.common.CentPrecisionMoney newTotalPrice) {
         this.newTotalPrice = newTotalPrice;
         return this;
     }
 
     /**
-     *  <p>Base polymorphic read-only Money type which is stored in cent precision or high precision. The actual type is determined by the <code>type</code> field.</p>
-     */
-
-    public OrderLineItemRemovedMessagePayloadBuilder newTotalPrice(
-            Function<com.commercetools.api.models.common.TypedMoneyBuilder, Builder<? extends com.commercetools.api.models.common.TypedMoney>> builder) {
-        this.newTotalPrice = builder.apply(com.commercetools.api.models.common.TypedMoneyBuilder.of()).build();
-        return this;
-    }
-
-    /**
-     *
+     *  <p>TaxedItemPrice of the Order after the Remove Line Item update action.</p>
      */
 
     public OrderLineItemRemovedMessagePayloadBuilder newTaxedPrice(
@@ -162,7 +162,7 @@ public class OrderLineItemRemovedMessagePayloadBuilder implements Builder<OrderL
     }
 
     /**
-     *
+     *  <p>TaxedItemPrice of the Order after the Remove Line Item update action.</p>
      */
 
     public OrderLineItemRemovedMessagePayloadBuilder newTaxedPrice(
@@ -172,7 +172,7 @@ public class OrderLineItemRemovedMessagePayloadBuilder implements Builder<OrderL
     }
 
     /**
-     *
+     *  <p>Price of the Order after the Remove Line Item update action.</p>
      */
 
     public OrderLineItemRemovedMessagePayloadBuilder newPrice(
@@ -182,7 +182,7 @@ public class OrderLineItemRemovedMessagePayloadBuilder implements Builder<OrderL
     }
 
     /**
-     *
+     *  <p>Price of the Order after the Remove Line Item update action.</p>
      */
 
     public OrderLineItemRemovedMessagePayloadBuilder newPrice(
@@ -192,7 +192,7 @@ public class OrderLineItemRemovedMessagePayloadBuilder implements Builder<OrderL
     }
 
     /**
-     *
+     *  <p>Shipping Details of the Order after the Remove Line Item update action.</p>
      */
 
     public OrderLineItemRemovedMessagePayloadBuilder newShippingDetail(
@@ -203,7 +203,7 @@ public class OrderLineItemRemovedMessagePayloadBuilder implements Builder<OrderL
     }
 
     /**
-     *
+     *  <p>Shipping Details of the Order after the Remove Line Item update action.</p>
      */
 
     public OrderLineItemRemovedMessagePayloadBuilder newShippingDetail(
@@ -228,7 +228,7 @@ public class OrderLineItemRemovedMessagePayloadBuilder implements Builder<OrderL
         return this.newState;
     }
 
-    public com.commercetools.api.models.common.TypedMoney getNewTotalPrice() {
+    public com.commercetools.api.models.common.CentPrecisionMoney getNewTotalPrice() {
         return this.newTotalPrice;
     }
 

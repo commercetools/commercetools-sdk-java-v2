@@ -14,7 +14,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * OrderPaymentStateChangedMessage
+ *  <p>Generated after a successful Change Payment State update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -40,14 +40,14 @@ public interface OrderPaymentStateChangedMessage extends OrderMessage {
     String ORDER_PAYMENT_STATE_CHANGED = "OrderPaymentStateChanged";
 
     /**
-     *
+     *  <p>PaymentState after the Change Payment State update action.</p>
      */
     @NotNull
     @JsonProperty("paymentState")
     public PaymentState getPaymentState();
 
     /**
-     *
+     *  <p>PaymentState before the Change Payment State update action.</p>
      */
 
     @JsonProperty("oldPaymentState")

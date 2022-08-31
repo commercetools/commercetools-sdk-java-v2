@@ -11,7 +11,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * ProductUnpublishedMessage
+ *  <p>Generated after a successful Unpublish Product update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

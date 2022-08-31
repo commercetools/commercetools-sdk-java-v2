@@ -5,13 +5,17 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
+
+import com.commercetools.api.models.staged_quote.StagedQuote;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * StagedQuoteCreatedMessage
+ *  <p>Generated after a successful Create Staged Quote request.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -25,6 +29,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .sequenceNumber(0.3)
  *             .resource(resourceBuilder -> resourceBuilder)
  *             .resourceVersion(0.3)
+ *             .stagedQuote(stagedQuoteBuilder -> stagedQuoteBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -34,6 +39,16 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface StagedQuoteCreatedMessage extends Message {
 
     String STAGED_QUOTE_CREATED = "StagedQuoteCreated";
+
+    /**
+     *  <p>Staged Quote that was created.</p>
+     */
+    @NotNull
+    @Valid
+    @JsonProperty("stagedQuote")
+    public StagedQuote getStagedQuote();
+
+    public void setStagedQuote(final StagedQuote stagedQuote);
 
     public static StagedQuoteCreatedMessage of() {
         return new StagedQuoteCreatedMessageImpl();
@@ -51,6 +66,7 @@ public interface StagedQuoteCreatedMessage extends Message {
         instance.setResource(template.getResource());
         instance.setResourceVersion(template.getResourceVersion());
         instance.setResourceUserProvidedIdentifiers(template.getResourceUserProvidedIdentifiers());
+        instance.setStagedQuote(template.getStagedQuote());
         return instance;
     }
 

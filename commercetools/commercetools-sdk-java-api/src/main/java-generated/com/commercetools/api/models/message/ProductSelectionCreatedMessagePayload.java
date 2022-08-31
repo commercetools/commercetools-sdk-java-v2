@@ -8,14 +8,14 @@ import java.util.function.Function;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
-import com.commercetools.api.models.product_selection.ProductSelectionType;
+import com.commercetools.api.models.product_selection.IndividualProductSelectionType;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * ProductSelectionCreatedMessagePayload
+ *  <p>Generated after a successful Create Product Selection request.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -34,14 +34,14 @@ public interface ProductSelectionCreatedMessagePayload extends MessagePayload {
     String PRODUCT_SELECTION_CREATED = "ProductSelectionCreated";
 
     /**
-     *
+     *  <p>The <code>type</code> and <code>name</code> of the individual Product Selection.</p>
      */
     @NotNull
     @Valid
     @JsonProperty("productSelection")
-    public ProductSelectionType getProductSelection();
+    public IndividualProductSelectionType getProductSelection();
 
-    public void setProductSelection(final ProductSelectionType productSelection);
+    public void setProductSelection(final IndividualProductSelectionType productSelection);
 
     public static ProductSelectionCreatedMessagePayload of() {
         return new ProductSelectionCreatedMessagePayloadImpl();

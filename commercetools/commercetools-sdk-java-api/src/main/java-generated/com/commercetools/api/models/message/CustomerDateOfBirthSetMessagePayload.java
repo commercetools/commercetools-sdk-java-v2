@@ -12,7 +12,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * CustomerDateOfBirthSetMessagePayload
+ *  <p>Generated after a successful Set Date of Birth update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -30,7 +30,7 @@ public interface CustomerDateOfBirthSetMessagePayload extends MessagePayload {
     String CUSTOMER_DATE_OF_BIRTH_SET = "CustomerDateOfBirthSet";
 
     /**
-     *
+     *  <p>The <code>dateOfBirth</code> that was set during the Set Date of Birth update action.</p>
      */
 
     @JsonProperty("dateOfBirth")

@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * OrderDiscountCodeAddedMessagePayload
+ *  <p>Generated after a successful Add Discount Code update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderDiscountCodeAddedMessagePayloadImpl implements OrderDiscountCodeAddedMessagePayload, ModelBase {
@@ -44,7 +44,7 @@ public class OrderDiscountCodeAddedMessagePayloadImpl implements OrderDiscountCo
     }
 
     /**
-     *  <p>Reference to a DiscountCode.</p>
+     *  <p>DiscountCode that was added.</p>
      */
 
     public com.commercetools.api.models.discount_code.DiscountCodeReference getDiscountCode() {

@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * ProductMoveImageToPositionAction
+ *  <p>Either <code>variantId</code> or <code>sku</code> is required.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductMoveImageToPositionActionImpl implements ProductMoveImageToPositionAction, ModelBase {
@@ -57,7 +57,7 @@ public class ProductMoveImageToPositionActionImpl implements ProductMoveImageToP
     }
 
     /**
-     *
+     *  <p>The <code>id</code> of the ProductVariant to update.</p>
      */
 
     public Long getVariantId() {
@@ -65,7 +65,7 @@ public class ProductMoveImageToPositionActionImpl implements ProductMoveImageToP
     }
 
     /**
-     *
+     *  <p>The <code>sku</code> of the ProductVariant to update.</p>
      */
 
     public String getSku() {
@@ -73,7 +73,7 @@ public class ProductMoveImageToPositionActionImpl implements ProductMoveImageToP
     }
 
     /**
-     *  <p>The URL of the image</p>
+     *  <p>The URL of the image to update.</p>
      */
 
     public String getImageUrl() {
@@ -81,7 +81,7 @@ public class ProductMoveImageToPositionActionImpl implements ProductMoveImageToP
     }
 
     /**
-     *
+     *  <p>Position in <code>images</code> where the image should be moved. Must be between <code>0</code> and the total number of images minus <code>1</code>.</p>
      */
 
     public Long getPosition() {
@@ -89,7 +89,7 @@ public class ProductMoveImageToPositionActionImpl implements ProductMoveImageToP
     }
 
     /**
-     *
+     *  <p>If <code>true</code>, only the staged <code>images</code> is updated. If <code>false</code>, both the current and staged <code>images</code> is updated.</p>
      */
 
     public Boolean getStaged() {

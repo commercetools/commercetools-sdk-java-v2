@@ -24,11 +24,15 @@ public class ItemShippingTargetImpl implements ItemShippingTarget, ModelBase {
 
     private Long quantity;
 
+    private String shippingMethodKey;
+
     @JsonCreator
     ItemShippingTargetImpl(@JsonProperty("addressKey") final String addressKey,
-            @JsonProperty("quantity") final Long quantity) {
+            @JsonProperty("quantity") final Long quantity,
+            @JsonProperty("shippingMethodKey") final String shippingMethodKey) {
         this.addressKey = addressKey;
         this.quantity = quantity;
+        this.shippingMethodKey = shippingMethodKey;
     }
 
     public ItemShippingTargetImpl() {
@@ -50,12 +54,25 @@ public class ItemShippingTargetImpl implements ItemShippingTarget, ModelBase {
         return this.quantity;
     }
 
+    /**
+     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multi</code> ShippingMode.</p>
+     *  <p>It connects Line Item quantities with individual shipping addresses.</p>
+     */
+
+    public String getShippingMethodKey() {
+        return this.shippingMethodKey;
+    }
+
     public void setAddressKey(final String addressKey) {
         this.addressKey = addressKey;
     }
 
     public void setQuantity(final Long quantity) {
         this.quantity = quantity;
+    }
+
+    public void setShippingMethodKey(final String shippingMethodKey) {
+        this.shippingMethodKey = shippingMethodKey;
     }
 
     @Override
@@ -68,12 +85,15 @@ public class ItemShippingTargetImpl implements ItemShippingTarget, ModelBase {
 
         ItemShippingTargetImpl that = (ItemShippingTargetImpl) o;
 
-        return new EqualsBuilder().append(addressKey, that.addressKey).append(quantity, that.quantity).isEquals();
+        return new EqualsBuilder().append(addressKey, that.addressKey)
+                .append(quantity, that.quantity)
+                .append(shippingMethodKey, that.shippingMethodKey)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(addressKey).append(quantity).toHashCode();
+        return new HashCodeBuilder(17, 37).append(addressKey).append(quantity).append(shippingMethodKey).toHashCode();
     }
 
 }

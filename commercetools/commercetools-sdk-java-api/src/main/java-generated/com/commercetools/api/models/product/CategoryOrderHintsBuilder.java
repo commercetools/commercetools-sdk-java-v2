@@ -13,7 +13,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <div class=code-example>
  * <pre><code class='java'>
  *     CategoryOrderHints categoryOrderHints = CategoryOrderHints.builder()
- *             ./^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$/("{/^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$/}")
+ *             ./[0-9].[0-9]*[1-9]/("{/[0-9].[0-9]*[1-9]/}")
  *             .build()
  * </code></pre>
  * </div>
@@ -24,7 +24,7 @@ public class CategoryOrderHintsBuilder implements Builder<CategoryOrderHints> {
     private Map<String, String> values = new HashMap<>();
 
     /**
-     *
+     *  <p>A string representing a number between 0 and 1 that must start with <code>0.</code> and cannot end with <code>0</code>.</p>
      */
 
     public CategoryOrderHintsBuilder values(final Map<String, String> values) {
@@ -33,7 +33,7 @@ public class CategoryOrderHintsBuilder implements Builder<CategoryOrderHints> {
     }
 
     /**
-     *
+     *  <p>A string representing a number between 0 and 1 that must start with <code>0.</code> and cannot end with <code>0</code>.</p>
      */
 
     public CategoryOrderHintsBuilder addValue(final String key, final String value) {

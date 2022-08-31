@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * OrderLineItemDiscountSetMessagePayload
+ *  <p>Generated after a successful recalculation of a Discount on a Line Item.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderLineItemDiscountSetMessagePayloadImpl implements OrderLineItemDiscountSetMessagePayload, ModelBase {
@@ -30,15 +30,19 @@ public class OrderLineItemDiscountSetMessagePayloadImpl implements OrderLineItem
 
     private com.commercetools.api.models.cart.TaxedItemPrice taxedPrice;
 
+    private java.util.List<com.commercetools.api.models.cart.MethodTaxedPrice> taxedPricePortions;
+
     @JsonCreator
     OrderLineItemDiscountSetMessagePayloadImpl(@JsonProperty("lineItemId") final String lineItemId,
             @JsonProperty("discountedPricePerQuantity") final java.util.List<com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantity> discountedPricePerQuantity,
             @JsonProperty("totalPrice") final com.commercetools.api.models.common.Money totalPrice,
-            @JsonProperty("taxedPrice") final com.commercetools.api.models.cart.TaxedItemPrice taxedPrice) {
+            @JsonProperty("taxedPrice") final com.commercetools.api.models.cart.TaxedItemPrice taxedPrice,
+            @JsonProperty("taxedPricePortions") final java.util.List<com.commercetools.api.models.cart.MethodTaxedPrice> taxedPricePortions) {
         this.lineItemId = lineItemId;
         this.discountedPricePerQuantity = discountedPricePerQuantity;
         this.totalPrice = totalPrice;
         this.taxedPrice = taxedPrice;
+        this.taxedPricePortions = taxedPricePortions;
         this.type = ORDER_LINE_ITEM_DISCOUNT_SET;
     }
 
@@ -55,7 +59,7 @@ public class OrderLineItemDiscountSetMessagePayloadImpl implements OrderLineItem
     }
 
     /**
-     *
+     *  <p>Unique identifier for the Line Item.</p>
      */
 
     public String getLineItemId() {
@@ -63,7 +67,7 @@ public class OrderLineItemDiscountSetMessagePayloadImpl implements OrderLineItem
     }
 
     /**
-     *
+     *  <p>Array of DiscountedLineItemPriceForQuantity after the Discount recalculation.</p>
      */
 
     public java.util.List<com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantity> getDiscountedPricePerQuantity() {
@@ -71,8 +75,7 @@ public class OrderLineItemDiscountSetMessagePayloadImpl implements OrderLineItem
     }
 
     /**
-     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
-     *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
+     *  <p>Total Price of the Line Item after the Discount recalculation.</p>
      */
 
     public com.commercetools.api.models.common.Money getTotalPrice() {
@@ -80,11 +83,19 @@ public class OrderLineItemDiscountSetMessagePayloadImpl implements OrderLineItem
     }
 
     /**
-     *
+     *  <p>TaxedItemPrice of the Line Item after the Discount recalculation.</p>
      */
 
     public com.commercetools.api.models.cart.TaxedItemPrice getTaxedPrice() {
         return this.taxedPrice;
+    }
+
+    /**
+     *  <p>Taxed price of the Shipping Methods in a Cart with <code>Multi</code> ShippingMode..</p>
+     */
+
+    public java.util.List<com.commercetools.api.models.cart.MethodTaxedPrice> getTaxedPricePortions() {
+        return this.taxedPricePortions;
     }
 
     public void setLineItemId(final String lineItemId) {
@@ -109,6 +120,15 @@ public class OrderLineItemDiscountSetMessagePayloadImpl implements OrderLineItem
         this.taxedPrice = taxedPrice;
     }
 
+    public void setTaxedPricePortions(final com.commercetools.api.models.cart.MethodTaxedPrice... taxedPricePortions) {
+        this.taxedPricePortions = new ArrayList<>(Arrays.asList(taxedPricePortions));
+    }
+
+    public void setTaxedPricePortions(
+            final java.util.List<com.commercetools.api.models.cart.MethodTaxedPrice> taxedPricePortions) {
+        this.taxedPricePortions = taxedPricePortions;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -124,6 +144,7 @@ public class OrderLineItemDiscountSetMessagePayloadImpl implements OrderLineItem
                 .append(discountedPricePerQuantity, that.discountedPricePerQuantity)
                 .append(totalPrice, that.totalPrice)
                 .append(taxedPrice, that.taxedPrice)
+                .append(taxedPricePortions, that.taxedPricePortions)
                 .isEquals();
     }
 
@@ -134,6 +155,7 @@ public class OrderLineItemDiscountSetMessagePayloadImpl implements OrderLineItem
                 .append(discountedPricePerQuantity)
                 .append(totalPrice)
                 .append(taxedPrice)
+                .append(taxedPricePortions)
                 .toHashCode();
     }
 

@@ -9,6 +9,7 @@ import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantity;
+import com.commercetools.api.models.cart.MethodTaxedPrice;
 import com.commercetools.api.models.cart.TaxedItemPrice;
 import com.commercetools.api.models.common.Money;
 import com.fasterxml.jackson.annotation.*;
@@ -17,7 +18,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * OrderLineItemDiscountSetMessage
+ *  <p>Generated after a successful recalculation of a Discount on a Line Item.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -34,6 +35,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .lineItemId("{lineItemId}")
  *             .plusDiscountedPricePerQuantity(discountedPricePerQuantityBuilder -> discountedPricePerQuantityBuilder)
  *             .totalPrice(totalPriceBuilder -> totalPriceBuilder)
+ *             .plusTaxedPricePortions(taxedPricePortionsBuilder -> taxedPricePortionsBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -45,14 +47,14 @@ public interface OrderLineItemDiscountSetMessage extends OrderMessage {
     String ORDER_LINE_ITEM_DISCOUNT_SET = "OrderLineItemDiscountSet";
 
     /**
-     *
+     *  <p>Unique identifier for the Line Item.</p>
      */
     @NotNull
     @JsonProperty("lineItemId")
     public String getLineItemId();
 
     /**
-     *
+     *  <p>Array of DiscountedLineItemPriceForQuantity after the Discount recalculation.</p>
      */
     @NotNull
     @Valid
@@ -60,8 +62,7 @@ public interface OrderLineItemDiscountSetMessage extends OrderMessage {
     public List<DiscountedLineItemPriceForQuantity> getDiscountedPricePerQuantity();
 
     /**
-     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
-     *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
+     *  <p>Total Price of the Line Item after the Discount recalculation.</p>
      */
     @NotNull
     @Valid
@@ -69,11 +70,19 @@ public interface OrderLineItemDiscountSetMessage extends OrderMessage {
     public Money getTotalPrice();
 
     /**
-     *
+     *  <p>TaxedItemPrice of the Line Item after the Discount recalculation.</p>
      */
     @Valid
     @JsonProperty("taxedPrice")
     public TaxedItemPrice getTaxedPrice();
+
+    /**
+     *  <p>Taxed price of the Shipping Methods in a Cart with <code>Multi</code> ShippingMode..</p>
+     */
+    @NotNull
+    @Valid
+    @JsonProperty("taxedPricePortions")
+    public List<MethodTaxedPrice> getTaxedPricePortions();
 
     public void setLineItemId(final String lineItemId);
 
@@ -86,6 +95,11 @@ public interface OrderLineItemDiscountSetMessage extends OrderMessage {
     public void setTotalPrice(final Money totalPrice);
 
     public void setTaxedPrice(final TaxedItemPrice taxedPrice);
+
+    @JsonIgnore
+    public void setTaxedPricePortions(final MethodTaxedPrice... taxedPricePortions);
+
+    public void setTaxedPricePortions(final List<MethodTaxedPrice> taxedPricePortions);
 
     public static OrderLineItemDiscountSetMessage of() {
         return new OrderLineItemDiscountSetMessageImpl();
@@ -107,6 +121,7 @@ public interface OrderLineItemDiscountSetMessage extends OrderMessage {
         instance.setDiscountedPricePerQuantity(template.getDiscountedPricePerQuantity());
         instance.setTotalPrice(template.getTotalPrice());
         instance.setTaxedPrice(template.getTaxedPrice());
+        instance.setTaxedPricePortions(template.getTaxedPricePortions());
         return instance;
     }
 

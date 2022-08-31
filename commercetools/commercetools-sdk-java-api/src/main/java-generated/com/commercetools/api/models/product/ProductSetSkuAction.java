@@ -13,7 +13,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * ProductSetSkuAction
+ *  <p>SKU cannot be changed or removed if it is associated with an InventoryEntry.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -32,21 +32,21 @@ public interface ProductSetSkuAction extends ProductUpdateAction {
     String SET_SKU = "setSku";
 
     /**
-     *
+     *  <p>The <code>id</code> of the ProductVariant to update.</p>
      */
     @NotNull
     @JsonProperty("variantId")
     public Long getVariantId();
 
     /**
-     *  <p>SKU must be unique. If left blank or set to <code>null</code>, the sku is unset/removed.</p>
+     *  <p>Value to set. Must be unique. If empty, any existing value will be removed.</p>
      */
 
     @JsonProperty("sku")
     public String getSku();
 
     /**
-     *
+     *  <p>If <code>true</code>, only the staged <code>sku</code> is updated. If <code>false</code>, both the current and staged <code>sku</code> are updated.</p>
      */
 
     @JsonProperty("staged")

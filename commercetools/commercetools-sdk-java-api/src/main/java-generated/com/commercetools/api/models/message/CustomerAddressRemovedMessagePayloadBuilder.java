@@ -25,7 +25,7 @@ public class CustomerAddressRemovedMessagePayloadBuilder implements Builder<Cust
     private com.commercetools.api.models.common.Address address;
 
     /**
-     *
+     *  <p>Address that was removed during the Remove Address update action.</p>
      */
 
     public CustomerAddressRemovedMessagePayloadBuilder address(
@@ -35,7 +35,7 @@ public class CustomerAddressRemovedMessagePayloadBuilder implements Builder<Cust
     }
 
     /**
-     *
+     *  <p>Address that was removed during the Remove Address update action.</p>
      */
 
     public CustomerAddressRemovedMessagePayloadBuilder address(

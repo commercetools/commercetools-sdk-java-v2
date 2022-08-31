@@ -48,6 +48,8 @@ public class StagedQuoteImpl implements StagedQuote, ModelBase {
 
     private com.commercetools.api.models.type.CustomFields custom;
 
+    private com.commercetools.api.models.state.StateReference state;
+
     @JsonCreator
     StagedQuoteImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version,
             @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt,
@@ -61,7 +63,8 @@ public class StagedQuoteImpl implements StagedQuote, ModelBase {
             @JsonProperty("quotationCart") final com.commercetools.api.models.cart.CartReference quotationCart,
             @JsonProperty("validTo") final java.time.ZonedDateTime validTo,
             @JsonProperty("sellerComment") final String sellerComment,
-            @JsonProperty("custom") final com.commercetools.api.models.type.CustomFields custom) {
+            @JsonProperty("custom") final com.commercetools.api.models.type.CustomFields custom,
+            @JsonProperty("state") final com.commercetools.api.models.state.StateReference state) {
         this.id = id;
         this.version = version;
         this.createdAt = createdAt;
@@ -76,6 +79,7 @@ public class StagedQuoteImpl implements StagedQuote, ModelBase {
         this.validTo = validTo;
         this.sellerComment = sellerComment;
         this.custom = custom;
+        this.state = state;
     }
 
     public StagedQuoteImpl() {
@@ -146,7 +150,7 @@ public class StagedQuoteImpl implements StagedQuote, ModelBase {
     }
 
     /**
-     *  <p>The Buyer who requested the quote.</p>
+     *  <p>The Buyer who requested the Quote.</p>
      */
 
     public com.commercetools.api.models.customer.CustomerReference getCustomer() {
@@ -154,7 +158,7 @@ public class StagedQuoteImpl implements StagedQuote, ModelBase {
     }
 
     /**
-     *  <p>The Quote Request related to this Staged Quote.</p>
+     *  <p>Quote Request related to the Staged Quote.</p>
      */
 
     public com.commercetools.api.models.quote_request.QuoteRequestReference getQuoteRequest() {
@@ -162,7 +166,7 @@ public class StagedQuoteImpl implements StagedQuote, ModelBase {
     }
 
     /**
-     *  <p>The Cart containing the offered items.</p>
+     *  <p>Cart containing the offered items. May contain either DirectDiscounts or CartDiscounts.</p>
      */
 
     public com.commercetools.api.models.cart.CartReference getQuotationCart() {
@@ -170,7 +174,7 @@ public class StagedQuoteImpl implements StagedQuote, ModelBase {
     }
 
     /**
-     *  <p>Expiration date for the quote.</p>
+     *  <p>Expiration date for the Quote.</p>
      */
 
     public java.time.ZonedDateTime getValidTo() {
@@ -178,7 +182,7 @@ public class StagedQuoteImpl implements StagedQuote, ModelBase {
     }
 
     /**
-     *  <p>The text message included in the offer from the Seller.</p>
+     *  <p>Message from the Seller included in the offer.</p>
      */
 
     public String getSellerComment() {
@@ -186,11 +190,19 @@ public class StagedQuoteImpl implements StagedQuote, ModelBase {
     }
 
     /**
-     *  <p>Custom Fields of this Staged Quote.</p>
+     *  <p>Custom Fields of the Staged Quote.</p>
      */
 
     public com.commercetools.api.models.type.CustomFields getCustom() {
         return this.custom;
+    }
+
+    /**
+     *  <p>State of the Staged Quote. This reference can point to a State in a custom workflow.</p>
+     */
+
+    public com.commercetools.api.models.state.StateReference getState() {
+        return this.state;
     }
 
     public void setId(final String id) {
@@ -249,6 +261,10 @@ public class StagedQuoteImpl implements StagedQuote, ModelBase {
         this.custom = custom;
     }
 
+    public void setState(final com.commercetools.api.models.state.StateReference state) {
+        this.state = state;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -273,6 +289,7 @@ public class StagedQuoteImpl implements StagedQuote, ModelBase {
                 .append(validTo, that.validTo)
                 .append(sellerComment, that.sellerComment)
                 .append(custom, that.custom)
+                .append(state, that.state)
                 .isEquals();
     }
 
@@ -292,6 +309,7 @@ public class StagedQuoteImpl implements StagedQuote, ModelBase {
                 .append(validTo)
                 .append(sellerComment)
                 .append(custom)
+                .append(state)
                 .toHashCode();
     }
 

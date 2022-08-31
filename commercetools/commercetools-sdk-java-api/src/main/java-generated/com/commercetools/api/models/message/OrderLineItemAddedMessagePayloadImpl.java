@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * OrderLineItemAddedMessagePayload
+ *  <p>Generated after a successful Add Line Item update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderLineItemAddedMessagePayloadImpl implements OrderLineItemAddedMessagePayload, ModelBase {
@@ -48,7 +48,7 @@ public class OrderLineItemAddedMessagePayloadImpl implements OrderLineItemAddedM
     }
 
     /**
-     *
+     *  <p>Line Item that was added to the Order.</p>
      */
 
     public com.commercetools.api.models.cart.LineItem getLineItem() {
@@ -56,7 +56,7 @@ public class OrderLineItemAddedMessagePayloadImpl implements OrderLineItemAddedM
     }
 
     /**
-     *
+     *  <p>Quantity of Line Items that were added to the Order.</p>
      */
 
     public Long getAddedQuantity() {

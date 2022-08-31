@@ -33,7 +33,7 @@ public class OrderStateTransitionMessagePayloadBuilder implements Builder<OrderS
     private Boolean force;
 
     /**
-     *  <p>Reference to a State.</p>
+     *  <p>OrderState after the Transition State update action.</p>
      */
 
     public OrderStateTransitionMessagePayloadBuilder state(
@@ -43,7 +43,7 @@ public class OrderStateTransitionMessagePayloadBuilder implements Builder<OrderS
     }
 
     /**
-     *  <p>Reference to a State.</p>
+     *  <p>OrderState after the Transition State update action.</p>
      */
 
     public OrderStateTransitionMessagePayloadBuilder state(
@@ -53,7 +53,7 @@ public class OrderStateTransitionMessagePayloadBuilder implements Builder<OrderS
     }
 
     /**
-     *  <p>Reference to a State.</p>
+     *  <p>OrderState before the Transition State update action.</p>
      */
 
     public OrderStateTransitionMessagePayloadBuilder oldState(
@@ -63,7 +63,7 @@ public class OrderStateTransitionMessagePayloadBuilder implements Builder<OrderS
     }
 
     /**
-     *  <p>Reference to a State.</p>
+     *  <p>OrderState before the Transition State update action.</p>
      */
 
     public OrderStateTransitionMessagePayloadBuilder oldState(
@@ -73,7 +73,7 @@ public class OrderStateTransitionMessagePayloadBuilder implements Builder<OrderS
     }
 
     /**
-     *
+     *  <p>Whether State transition validations were turned off during the Transition State update action.</p>
      */
 
     public OrderStateTransitionMessagePayloadBuilder force(final Boolean force) {

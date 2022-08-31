@@ -15,7 +15,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * OrderLineItemAddedMessage
+ *  <p>Generated after a successful Add Line Item update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -42,7 +42,7 @@ public interface OrderLineItemAddedMessage extends OrderMessage {
     String ORDER_LINE_ITEM_ADDED = "OrderLineItemAdded";
 
     /**
-     *
+     *  <p>Line Item that was added to the Order.</p>
      */
     @NotNull
     @Valid
@@ -50,7 +50,7 @@ public interface OrderLineItemAddedMessage extends OrderMessage {
     public LineItem getLineItem();
 
     /**
-     *
+     *  <p>Quantity of Line Items that were added to the Order.</p>
      */
     @NotNull
     @JsonProperty("addedQuantity")

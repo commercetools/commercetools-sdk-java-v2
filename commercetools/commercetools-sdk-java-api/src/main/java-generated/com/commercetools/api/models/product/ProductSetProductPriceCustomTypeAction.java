@@ -35,28 +35,28 @@ public interface ProductSetProductPriceCustomTypeAction extends ProductUpdateAct
     String SET_PRODUCT_PRICE_CUSTOM_TYPE = "setProductPriceCustomType";
 
     /**
-     *
+     *  <p>The <code>id</code> of the Embedded Price to update.</p>
      */
     @NotNull
     @JsonProperty("priceId")
     public String getPriceId();
 
     /**
-     *
+     *  <p>If <code>true</code>, only the staged Embedded Price is updated. If <code>false</code>, both the current and staged Embedded Price is updated.</p>
      */
 
     @JsonProperty("staged")
     public Boolean getStaged();
 
     /**
-     *  <p>Defines the Type that extends the Price with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Price.</p>
+     *  <p>Defines the Type that extends the Price with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Embedded Price.</p>
      */
     @Valid
     @JsonProperty("type")
     public TypeResourceIdentifier getType();
 
     /**
-     *  <p>Sets the Custom Fields fields for the Price.</p>
+     *  <p>Sets the Custom Fields fields for the Embedded Price.</p>
      */
     @Valid
     @JsonProperty("fields")

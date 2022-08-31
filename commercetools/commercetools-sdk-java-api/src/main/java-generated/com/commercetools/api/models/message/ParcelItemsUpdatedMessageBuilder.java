@@ -24,6 +24,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .resource(resourceBuilder -> resourceBuilder)
  *             .resourceVersion(0.3)
  *             .parcelId("{parcelId}")
+ *             .deliveryId("{deliveryId}")
  *             .plusItems(itemsBuilder -> itemsBuilder)
  *             .plusOldItems(oldItemsBuilder -> oldItemsBuilder)
  *             .build()
@@ -58,15 +59,17 @@ public class ParcelItemsUpdatedMessageBuilder implements Builder<ParcelItemsUpda
 
     private String parcelId;
 
-    @Nullable
     private String deliveryId;
 
     private java.util.List<com.commercetools.api.models.order.DeliveryItem> items;
 
     private java.util.List<com.commercetools.api.models.order.DeliveryItem> oldItems;
 
+    @Nullable
+    private String shippingKey;
+
     /**
-     *  <p>Unique identifier of the Message.</p>
+     *  <p>Unique identifier of the Message. Can be used to track which Messages have been processed.</p>
      */
 
     public ParcelItemsUpdatedMessageBuilder id(final String id) {
@@ -75,7 +78,7 @@ public class ParcelItemsUpdatedMessageBuilder implements Builder<ParcelItemsUpda
     }
 
     /**
-     *
+     *  <p>Version of a resource. In case of Messages, this is always <code>1</code>.</p>
      */
 
     public ParcelItemsUpdatedMessageBuilder version(final Long version) {
@@ -84,7 +87,7 @@ public class ParcelItemsUpdatedMessageBuilder implements Builder<ParcelItemsUpda
     }
 
     /**
-     *
+     *  <p>Date and time (UTC) the Message was generated.</p>
      */
 
     public ParcelItemsUpdatedMessageBuilder createdAt(final java.time.ZonedDateTime createdAt) {
@@ -93,7 +96,7 @@ public class ParcelItemsUpdatedMessageBuilder implements Builder<ParcelItemsUpda
     }
 
     /**
-     *
+     *  <p>Value of <code>createdAt</code>.</p>
      */
 
     public ParcelItemsUpdatedMessageBuilder lastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {
@@ -102,7 +105,7 @@ public class ParcelItemsUpdatedMessageBuilder implements Builder<ParcelItemsUpda
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>Value of <code>createdBy</code>.</p>
      */
 
     public ParcelItemsUpdatedMessageBuilder lastModifiedBy(
@@ -112,7 +115,7 @@ public class ParcelItemsUpdatedMessageBuilder implements Builder<ParcelItemsUpda
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>Value of <code>createdBy</code>.</p>
      */
 
     public ParcelItemsUpdatedMessageBuilder lastModifiedBy(
@@ -142,7 +145,7 @@ public class ParcelItemsUpdatedMessageBuilder implements Builder<ParcelItemsUpda
     }
 
     /**
-     *
+     *  <p>Message number in relation to other Messages for a given resource. The <code>sequenceNumber</code> of the next Message for the resource is the successor of the <code>sequenceNumber</code> of the current Message. Meaning, the <code>sequenceNumber</code> of the next Message equals the <code>sequenceNumber</code> of the current Message + 1. <code>sequenceNumber</code> can be used to ensure that Messages are processed in the correct order for a particular resource.</p>
      */
 
     public ParcelItemsUpdatedMessageBuilder sequenceNumber(final Long sequenceNumber) {
@@ -151,7 +154,7 @@ public class ParcelItemsUpdatedMessageBuilder implements Builder<ParcelItemsUpda
     }
 
     /**
-     *  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
+     *  <p>Reference to the resource on which the change or action was performed.</p>
      */
 
     public ParcelItemsUpdatedMessageBuilder resource(final com.commercetools.api.models.common.Reference resource) {
@@ -160,7 +163,7 @@ public class ParcelItemsUpdatedMessageBuilder implements Builder<ParcelItemsUpda
     }
 
     /**
-     *  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
+     *  <p>Reference to the resource on which the change or action was performed.</p>
      */
 
     public ParcelItemsUpdatedMessageBuilder resource(
@@ -170,7 +173,7 @@ public class ParcelItemsUpdatedMessageBuilder implements Builder<ParcelItemsUpda
     }
 
     /**
-     *
+     *  <p>Version of the resource on which the change or action was performed.</p>
      */
 
     public ParcelItemsUpdatedMessageBuilder resourceVersion(final Long resourceVersion) {
@@ -179,7 +182,7 @@ public class ParcelItemsUpdatedMessageBuilder implements Builder<ParcelItemsUpda
     }
 
     /**
-     *
+     *  <p>User-provided identifiers of the resource, such as <code>key</code> or <code>externalId</code>. Only present if the resource has such identifiers.</p>
      */
 
     public ParcelItemsUpdatedMessageBuilder resourceUserProvidedIdentifiers(
@@ -191,7 +194,7 @@ public class ParcelItemsUpdatedMessageBuilder implements Builder<ParcelItemsUpda
     }
 
     /**
-     *
+     *  <p>User-provided identifiers of the resource, such as <code>key</code> or <code>externalId</code>. Only present if the resource has such identifiers.</p>
      */
 
     public ParcelItemsUpdatedMessageBuilder resourceUserProvidedIdentifiers(
@@ -201,7 +204,7 @@ public class ParcelItemsUpdatedMessageBuilder implements Builder<ParcelItemsUpda
     }
 
     /**
-     *
+     *  <p>Unique identifier of the Parcel.</p>
      */
 
     public ParcelItemsUpdatedMessageBuilder parcelId(final String parcelId) {
@@ -210,16 +213,16 @@ public class ParcelItemsUpdatedMessageBuilder implements Builder<ParcelItemsUpda
     }
 
     /**
-     *
+     *  <p>Unique identifier of the Delivery.</p>
      */
 
-    public ParcelItemsUpdatedMessageBuilder deliveryId(@Nullable final String deliveryId) {
+    public ParcelItemsUpdatedMessageBuilder deliveryId(final String deliveryId) {
         this.deliveryId = deliveryId;
         return this;
     }
 
     /**
-     *
+     *  <p>Delivery Items after the Set Parcel Items update action.</p>
      */
 
     public ParcelItemsUpdatedMessageBuilder items(final com.commercetools.api.models.order.DeliveryItem... items) {
@@ -228,7 +231,7 @@ public class ParcelItemsUpdatedMessageBuilder implements Builder<ParcelItemsUpda
     }
 
     /**
-     *
+     *  <p>Delivery Items after the Set Parcel Items update action.</p>
      */
 
     public ParcelItemsUpdatedMessageBuilder items(
@@ -238,7 +241,7 @@ public class ParcelItemsUpdatedMessageBuilder implements Builder<ParcelItemsUpda
     }
 
     /**
-     *
+     *  <p>Delivery Items after the Set Parcel Items update action.</p>
      */
 
     public ParcelItemsUpdatedMessageBuilder plusItems(final com.commercetools.api.models.order.DeliveryItem... items) {
@@ -250,7 +253,7 @@ public class ParcelItemsUpdatedMessageBuilder implements Builder<ParcelItemsUpda
     }
 
     /**
-     *
+     *  <p>Delivery Items after the Set Parcel Items update action.</p>
      */
 
     public ParcelItemsUpdatedMessageBuilder plusItems(
@@ -263,7 +266,7 @@ public class ParcelItemsUpdatedMessageBuilder implements Builder<ParcelItemsUpda
     }
 
     /**
-     *
+     *  <p>Delivery Items after the Set Parcel Items update action.</p>
      */
 
     public ParcelItemsUpdatedMessageBuilder withItems(
@@ -274,7 +277,7 @@ public class ParcelItemsUpdatedMessageBuilder implements Builder<ParcelItemsUpda
     }
 
     /**
-     *
+     *  <p>Delivery Items before the Set Parcel Items update action.</p>
      */
 
     public ParcelItemsUpdatedMessageBuilder oldItems(
@@ -284,7 +287,7 @@ public class ParcelItemsUpdatedMessageBuilder implements Builder<ParcelItemsUpda
     }
 
     /**
-     *
+     *  <p>Delivery Items before the Set Parcel Items update action.</p>
      */
 
     public ParcelItemsUpdatedMessageBuilder oldItems(
@@ -294,7 +297,7 @@ public class ParcelItemsUpdatedMessageBuilder implements Builder<ParcelItemsUpda
     }
 
     /**
-     *
+     *  <p>Delivery Items before the Set Parcel Items update action.</p>
      */
 
     public ParcelItemsUpdatedMessageBuilder plusOldItems(
@@ -307,7 +310,7 @@ public class ParcelItemsUpdatedMessageBuilder implements Builder<ParcelItemsUpda
     }
 
     /**
-     *
+     *  <p>Delivery Items before the Set Parcel Items update action.</p>
      */
 
     public ParcelItemsUpdatedMessageBuilder plusOldItems(
@@ -320,13 +323,22 @@ public class ParcelItemsUpdatedMessageBuilder implements Builder<ParcelItemsUpda
     }
 
     /**
-     *
+     *  <p>Delivery Items before the Set Parcel Items update action.</p>
      */
 
     public ParcelItemsUpdatedMessageBuilder withOldItems(
             Function<com.commercetools.api.models.order.DeliveryItemBuilder, com.commercetools.api.models.order.DeliveryItemBuilder> builder) {
         this.oldItems = new ArrayList<>();
         this.oldItems.add(builder.apply(com.commercetools.api.models.order.DeliveryItemBuilder.of()).build());
+        return this;
+    }
+
+    /**
+     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multi</code> ShippingMode.</p>
+     */
+
+    public ParcelItemsUpdatedMessageBuilder shippingKey(@Nullable final String shippingKey) {
+        this.shippingKey = shippingKey;
         return this;
     }
 
@@ -377,7 +389,6 @@ public class ParcelItemsUpdatedMessageBuilder implements Builder<ParcelItemsUpda
         return this.parcelId;
     }
 
-    @Nullable
     public String getDeliveryId() {
         return this.deliveryId;
     }
@@ -390,6 +401,11 @@ public class ParcelItemsUpdatedMessageBuilder implements Builder<ParcelItemsUpda
         return this.oldItems;
     }
 
+    @Nullable
+    public String getShippingKey() {
+        return this.shippingKey;
+    }
+
     public ParcelItemsUpdatedMessage build() {
         Objects.requireNonNull(id, ParcelItemsUpdatedMessage.class + ": id is missing");
         Objects.requireNonNull(version, ParcelItemsUpdatedMessage.class + ": version is missing");
@@ -399,11 +415,12 @@ public class ParcelItemsUpdatedMessageBuilder implements Builder<ParcelItemsUpda
         Objects.requireNonNull(resource, ParcelItemsUpdatedMessage.class + ": resource is missing");
         Objects.requireNonNull(resourceVersion, ParcelItemsUpdatedMessage.class + ": resourceVersion is missing");
         Objects.requireNonNull(parcelId, ParcelItemsUpdatedMessage.class + ": parcelId is missing");
+        Objects.requireNonNull(deliveryId, ParcelItemsUpdatedMessage.class + ": deliveryId is missing");
         Objects.requireNonNull(items, ParcelItemsUpdatedMessage.class + ": items is missing");
         Objects.requireNonNull(oldItems, ParcelItemsUpdatedMessage.class + ": oldItems is missing");
         return new ParcelItemsUpdatedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
             sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, parcelId, deliveryId, items,
-            oldItems);
+            oldItems, shippingKey);
     }
 
     /**
@@ -412,7 +429,7 @@ public class ParcelItemsUpdatedMessageBuilder implements Builder<ParcelItemsUpda
     public ParcelItemsUpdatedMessage buildUnchecked() {
         return new ParcelItemsUpdatedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
             sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, parcelId, deliveryId, items,
-            oldItems);
+            oldItems, shippingKey);
     }
 
     public static ParcelItemsUpdatedMessageBuilder of() {
@@ -435,6 +452,7 @@ public class ParcelItemsUpdatedMessageBuilder implements Builder<ParcelItemsUpda
         builder.deliveryId = template.getDeliveryId();
         builder.items = template.getItems();
         builder.oldItems = template.getOldItems();
+        builder.shippingKey = template.getShippingKey();
         return builder;
     }
 

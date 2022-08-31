@@ -54,7 +54,7 @@ public class ScopedPriceBuilder implements Builder<ScopedPrice> {
     private com.commercetools.api.models.type.CustomFields custom;
 
     /**
-     *
+     *  <p>Platform-generated unique identifier of the Price.</p>
      */
 
     public ScopedPriceBuilder id(final String id) {
@@ -63,7 +63,7 @@ public class ScopedPriceBuilder implements Builder<ScopedPrice> {
     }
 
     /**
-     *  <p>Base polymorphic read-only Money type which is stored in cent precision or high precision. The actual type is determined by the <code>type</code> field.</p>
+     *  <p>Original value of the Price.</p>
      */
 
     public ScopedPriceBuilder value(final com.commercetools.api.models.common.TypedMoney value) {
@@ -72,7 +72,7 @@ public class ScopedPriceBuilder implements Builder<ScopedPrice> {
     }
 
     /**
-     *  <p>Base polymorphic read-only Money type which is stored in cent precision or high precision. The actual type is determined by the <code>type</code> field.</p>
+     *  <p>Original value of the Price.</p>
      */
 
     public ScopedPriceBuilder value(
@@ -82,7 +82,7 @@ public class ScopedPriceBuilder implements Builder<ScopedPrice> {
     }
 
     /**
-     *  <p>Base polymorphic read-only Money type which is stored in cent precision or high precision. The actual type is determined by the <code>type</code> field.</p>
+     *  <p>If available, either the original price <code>value</code> or <code>discounted</code> value.</p>
      */
 
     public ScopedPriceBuilder currentValue(final com.commercetools.api.models.common.TypedMoney currentValue) {
@@ -91,7 +91,7 @@ public class ScopedPriceBuilder implements Builder<ScopedPrice> {
     }
 
     /**
-     *  <p>Base polymorphic read-only Money type which is stored in cent precision or high precision. The actual type is determined by the <code>type</code> field.</p>
+     *  <p>If available, either the original price <code>value</code> or <code>discounted</code> value.</p>
      */
 
     public ScopedPriceBuilder currentValue(
@@ -101,7 +101,7 @@ public class ScopedPriceBuilder implements Builder<ScopedPrice> {
     }
 
     /**
-     *  <p>Two-digit country code as per ISO 3166-1 alpha-2.</p>
+     *  <p>Country code of the geographic location.</p>
      */
 
     public ScopedPriceBuilder country(@Nullable final String country) {
@@ -151,7 +151,7 @@ public class ScopedPriceBuilder implements Builder<ScopedPrice> {
     }
 
     /**
-     *
+     *  <p>Date and time from which the Price is valid.</p>
      */
 
     public ScopedPriceBuilder validFrom(@Nullable final java.time.ZonedDateTime validFrom) {
@@ -160,7 +160,7 @@ public class ScopedPriceBuilder implements Builder<ScopedPrice> {
     }
 
     /**
-     *
+     *  <p>Date and time until which the Price is valid.</p>
      */
 
     public ScopedPriceBuilder validUntil(@Nullable final java.time.ZonedDateTime validUntil) {
@@ -169,7 +169,8 @@ public class ScopedPriceBuilder implements Builder<ScopedPrice> {
     }
 
     /**
-     *
+     *  <p>Is set if a matching ProductDiscount exists. If set, the Cart uses the discounted value for the Cart Price calculation.</p>
+     *  <p>When a relative Product Discount is applied and the fractional part of the discounted Price is 0.5, the discounted Price is rounded half down in favor of the Customer.</p>
      */
 
     public ScopedPriceBuilder discounted(
@@ -179,7 +180,8 @@ public class ScopedPriceBuilder implements Builder<ScopedPrice> {
     }
 
     /**
-     *
+     *  <p>Is set if a matching ProductDiscount exists. If set, the Cart uses the discounted value for the Cart Price calculation.</p>
+     *  <p>When a relative Product Discount is applied and the fractional part of the discounted Price is 0.5, the discounted Price is rounded half down in favor of the Customer.</p>
      */
 
     public ScopedPriceBuilder discounted(
@@ -189,7 +191,7 @@ public class ScopedPriceBuilder implements Builder<ScopedPrice> {
     }
 
     /**
-     *  <p>Serves as value of the <code>custom</code> field on a resource or data type customized with a Type.</p>
+     *  <p>Custom Fields for the Price.</p>
      */
 
     public ScopedPriceBuilder custom(
@@ -199,7 +201,7 @@ public class ScopedPriceBuilder implements Builder<ScopedPrice> {
     }
 
     /**
-     *  <p>Serves as value of the <code>custom</code> field on a resource or data type customized with a Type.</p>
+     *  <p>Custom Fields for the Price.</p>
      */
 
     public ScopedPriceBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFields custom) {

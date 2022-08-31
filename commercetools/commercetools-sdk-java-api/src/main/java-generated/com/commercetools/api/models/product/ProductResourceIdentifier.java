@@ -12,7 +12,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>ResourceIdentifier to a Product.</p>
+ *  <p>ResourceIdentifier to a Product. Either <code>id</code> or <code>key</code> is required.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -31,14 +31,14 @@ public interface ProductResourceIdentifier
     String PRODUCT = "product";
 
     /**
-     *  <p>Unique identifier of the referenced Product. Either <code>id</code> or <code>key</code> is required.</p>
+     *  <p>Unique identifier of the referenced Product.</p>
      */
 
     @JsonProperty("id")
     public String getId();
 
     /**
-     *  <p>User-defined unique identifier of the referenced Product. Either <code>id</code> or <code>key</code> is required.</p>
+     *  <p>User-defined unique identifier of the referenced Product.</p>
      */
 
     @JsonProperty("key")

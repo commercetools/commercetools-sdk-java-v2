@@ -13,7 +13,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * ProductSetAssetCustomFieldAction
+ *  <p>Either <code>variantId</code> or <code>sku</code> is required. The Asset to update must be specified using either <code>assetId</code> or <code>assetKey</code>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -32,35 +32,35 @@ public interface ProductSetAssetCustomFieldAction extends ProductUpdateAction {
     String SET_ASSET_CUSTOM_FIELD = "setAssetCustomField";
 
     /**
-     *
+     *  <p>The <code>id</code> of the ProductVariant to update.</p>
      */
 
     @JsonProperty("variantId")
     public Long getVariantId();
 
     /**
-     *
+     *  <p>The <code>sku</code> of the ProductVariant to update.</p>
      */
 
     @JsonProperty("sku")
     public String getSku();
 
     /**
-     *
+     *  <p>If <code>true</code>, only the staged Asset is updated. If <code>false</code>, both the current and staged Asset is updated.</p>
      */
 
     @JsonProperty("staged")
     public Boolean getStaged();
 
     /**
-     *
+     *  <p>The <code>id</code> of the Asset to update.</p>
      */
 
     @JsonProperty("assetId")
     public String getAssetId();
 
     /**
-     *
+     *  <p>The <code>key</code> of the Asset to update.</p>
      */
 
     @JsonProperty("assetKey")

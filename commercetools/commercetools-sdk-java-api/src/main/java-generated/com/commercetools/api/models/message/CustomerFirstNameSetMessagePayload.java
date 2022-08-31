@@ -11,7 +11,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * CustomerFirstNameSetMessagePayload
+ *  <p>Generated after a successful Set First Name update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -29,7 +29,7 @@ public interface CustomerFirstNameSetMessagePayload extends MessagePayload {
     String CUSTOMER_FIRST_NAME_SET = "CustomerFirstNameSet";
 
     /**
-     *
+     *  <p>The <code>firstName</code> that was set during the Set First Name update action.</p>
      */
 
     @JsonProperty("firstName")

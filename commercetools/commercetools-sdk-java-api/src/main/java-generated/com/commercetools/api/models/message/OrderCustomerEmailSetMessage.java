@@ -11,7 +11,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * OrderCustomerEmailSetMessage
+ *  <p>Generated after a successful Set Customer Email update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -36,14 +36,14 @@ public interface OrderCustomerEmailSetMessage extends OrderMessage {
     String ORDER_CUSTOMER_EMAIL_SET = "OrderCustomerEmailSet";
 
     /**
-     *
+     *  <p>Email address on the Order after the Set Customer Email update action.</p>
      */
 
     @JsonProperty("email")
     public String getEmail();
 
     /**
-     *
+     *  <p>Email address on the Order before the Set Customer Email update action.</p>
      */
 
     @JsonProperty("oldEmail")

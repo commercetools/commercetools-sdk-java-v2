@@ -29,7 +29,7 @@ public class OrderCustomLineItemRemovedMessagePayloadBuilder
     private com.commercetools.api.models.cart.CustomLineItem customLineItem;
 
     /**
-     *
+     *  <p>Unique identifier of the Custom Line Item.</p>
      */
 
     public OrderCustomLineItemRemovedMessagePayloadBuilder customLineItemId(final String customLineItemId) {
@@ -38,7 +38,7 @@ public class OrderCustomLineItemRemovedMessagePayloadBuilder
     }
 
     /**
-     *
+     *  <p>Custom Line Item that was removed from the Order.</p>
      */
 
     public OrderCustomLineItemRemovedMessagePayloadBuilder customLineItem(
@@ -48,7 +48,7 @@ public class OrderCustomLineItemRemovedMessagePayloadBuilder
     }
 
     /**
-     *
+     *  <p>Custom Line Item that was removed from the Order.</p>
      */
 
     public OrderCustomLineItemRemovedMessagePayloadBuilder customLineItem(

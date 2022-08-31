@@ -6,7 +6,6 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.store.StoreKeyReference;
 import com.fasterxml.jackson.annotation.*;
@@ -15,7 +14,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * OrderStoreSetMessage
+ *  <p>Generated after a successful Set Store update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -29,7 +28,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .sequenceNumber(0.3)
  *             .resource(resourceBuilder -> resourceBuilder)
  *             .resourceVersion(0.3)
- *             .store(storeBuilder -> storeBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -41,9 +39,8 @@ public interface OrderStoreSetMessage extends OrderMessage {
     String ORDER_STORE_SET = "OrderStoreSet";
 
     /**
-     *  <p>Reference to a Store by its key.</p>
+     *  <p>Store that was set.</p>
      */
-    @NotNull
     @Valid
     @JsonProperty("store")
     public StoreKeyReference getStore();

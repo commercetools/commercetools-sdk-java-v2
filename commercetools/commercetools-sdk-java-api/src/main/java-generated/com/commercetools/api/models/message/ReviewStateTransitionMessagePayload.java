@@ -16,18 +16,16 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * ReviewStateTransitionMessagePayload
+ *  <p>Generated after a successful Transition State update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
  * <div class=code-example>
  * <pre><code class='java'>
  *     ReviewStateTransitionMessagePayload reviewStateTransitionMessagePayload = ReviewStateTransitionMessagePayload.builder()
- *             .oldState(oldStateBuilder -> oldStateBuilder)
  *             .newState(newStateBuilder -> newStateBuilder)
  *             .oldIncludedInStatistics(true)
  *             .newIncludedInStatistics(true)
- *             .target(targetBuilder -> targetBuilder)
  *             .force(true)
  *             .build()
  * </code></pre>
@@ -40,15 +38,14 @@ public interface ReviewStateTransitionMessagePayload extends MessagePayload {
     String REVIEW_STATE_TRANSITION = "ReviewStateTransition";
 
     /**
-     *  <p>Reference to a State.</p>
+     *  <p>State of the Review before the Transition State update action.</p>
      */
-    @NotNull
     @Valid
     @JsonProperty("oldState")
     public StateReference getOldState();
 
     /**
-     *  <p>Reference to a State.</p>
+     *  <p>State of the Review after the Transition State update action.</p>
      */
     @NotNull
     @Valid
@@ -56,29 +53,28 @@ public interface ReviewStateTransitionMessagePayload extends MessagePayload {
     public StateReference getNewState();
 
     /**
-     *
+     *  <p>Whether the old Review was taken into account in the rating statistics of the target before the state transition.</p>
      */
     @NotNull
     @JsonProperty("oldIncludedInStatistics")
     public Boolean getOldIncludedInStatistics();
 
     /**
-     *
+     *  <p>Whether the new Review was taken into account in the rating statistics of the target after the state transition.</p>
      */
     @NotNull
     @JsonProperty("newIncludedInStatistics")
     public Boolean getNewIncludedInStatistics();
 
     /**
-     *  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
+     *  <p>Reference to the resource that the Review belongs to.</p>
      */
-    @NotNull
     @Valid
     @JsonProperty("target")
     public Reference getTarget();
 
     /**
-     *
+     *  <p>Whether State transition validations were turned off during the Transition State update action.</p>
      */
     @NotNull
     @JsonProperty("force")

@@ -14,7 +14,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * OrderReturnShipmentStateChangedMessagePayload
+ *  <p>Generated after a successful Set Return Shipment State update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -34,14 +34,14 @@ public interface OrderReturnShipmentStateChangedMessagePayload extends OrderMess
     String ORDER_RETURN_SHIPMENT_STATE_CHANGED = "OrderReturnShipmentStateChanged";
 
     /**
-     *
+     *  <p>Unique identifier of the ReturnItem.</p>
      */
     @NotNull
     @JsonProperty("returnItemId")
     public String getReturnItemId();
 
     /**
-     *
+     *  <p>State of the ReturnItem after the Set Return Shipment State update action.</p>
      */
     @NotNull
     @JsonProperty("returnShipmentState")

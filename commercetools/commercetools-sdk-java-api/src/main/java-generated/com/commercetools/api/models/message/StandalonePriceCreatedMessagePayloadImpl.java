@@ -44,7 +44,7 @@ public class StandalonePriceCreatedMessagePayloadImpl implements StandalonePrice
     }
 
     /**
-     *  <p>The Standalone Price as it was created.</p>
+     *  <p>Standalone Price that was created.</p>
      */
 
     public com.commercetools.api.models.standalone_price.StandalonePrice getStandalonePrice() {

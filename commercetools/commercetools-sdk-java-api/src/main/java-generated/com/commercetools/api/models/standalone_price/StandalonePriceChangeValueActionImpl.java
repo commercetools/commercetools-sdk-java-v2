@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Produces the StandalonePriceValueChangedMessage.</p>
+ *  <p>Updating the value of a StandalonePrice produces the StandalonePriceValueChangedMessage.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StandalonePriceChangeValueActionImpl implements StandalonePriceChangeValueAction, ModelBase {
@@ -24,9 +24,13 @@ public class StandalonePriceChangeValueActionImpl implements StandalonePriceChan
 
     private com.commercetools.api.models.common.Money value;
 
+    private Boolean staged;
+
     @JsonCreator
-    StandalonePriceChangeValueActionImpl(@JsonProperty("value") final com.commercetools.api.models.common.Money value) {
+    StandalonePriceChangeValueActionImpl(@JsonProperty("value") final com.commercetools.api.models.common.Money value,
+            @JsonProperty("staged") final Boolean staged) {
         this.value = value;
+        this.staged = staged;
         this.action = CHANGE_VALUE;
     }
 
@@ -50,8 +54,20 @@ public class StandalonePriceChangeValueActionImpl implements StandalonePriceChan
         return this.value;
     }
 
+    /**
+     *  <p>If set to <code>true</code> the update action applies to the StagedStandalonePrice. If set to <code>false</code>, the update action applies to the current StandalonePrice.</p>
+     */
+
+    public Boolean getStaged() {
+        return this.staged;
+    }
+
     public void setValue(final com.commercetools.api.models.common.Money value) {
         this.value = value;
+    }
+
+    public void setStaged(final Boolean staged) {
+        this.staged = staged;
     }
 
     @Override
@@ -64,12 +80,15 @@ public class StandalonePriceChangeValueActionImpl implements StandalonePriceChan
 
         StandalonePriceChangeValueActionImpl that = (StandalonePriceChangeValueActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(value, that.value).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(value, that.value)
+                .append(staged, that.staged)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(action).append(value).toHashCode();
+        return new HashCodeBuilder(17, 37).append(action).append(value).append(staged).toHashCode();
     }
 
 }

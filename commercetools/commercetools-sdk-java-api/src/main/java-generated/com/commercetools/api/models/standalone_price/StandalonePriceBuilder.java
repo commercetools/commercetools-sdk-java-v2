@@ -74,6 +74,9 @@ public class StandalonePriceBuilder implements Builder<StandalonePrice> {
     @Nullable
     private com.commercetools.api.models.type.CustomFields custom;
 
+    @Nullable
+    private com.commercetools.api.models.standalone_price.StagedStandalonePrice staged;
+
     /**
      *  <p>Unique identifier of the StandalonePrice.</p>
      */
@@ -349,6 +352,27 @@ public class StandalonePriceBuilder implements Builder<StandalonePrice> {
         return this;
     }
 
+    /**
+     *  <p>Staged changes of the StandalonePrice. Only present if the StandalonePrice has staged changes.</p>
+     */
+
+    public StandalonePriceBuilder staged(
+            Function<com.commercetools.api.models.standalone_price.StagedStandalonePriceBuilder, com.commercetools.api.models.standalone_price.StagedStandalonePriceBuilder> builder) {
+        this.staged = builder.apply(com.commercetools.api.models.standalone_price.StagedStandalonePriceBuilder.of())
+                .build();
+        return this;
+    }
+
+    /**
+     *  <p>Staged changes of the StandalonePrice. Only present if the StandalonePrice has staged changes.</p>
+     */
+
+    public StandalonePriceBuilder staged(
+            @Nullable final com.commercetools.api.models.standalone_price.StagedStandalonePrice staged) {
+        this.staged = staged;
+        return this;
+    }
+
     public String getId() {
         return this.id;
     }
@@ -428,6 +452,11 @@ public class StandalonePriceBuilder implements Builder<StandalonePrice> {
         return this.custom;
     }
 
+    @Nullable
+    public com.commercetools.api.models.standalone_price.StagedStandalonePrice getStaged() {
+        return this.staged;
+    }
+
     public StandalonePrice build() {
         Objects.requireNonNull(id, StandalonePrice.class + ": id is missing");
         Objects.requireNonNull(version, StandalonePrice.class + ": version is missing");
@@ -436,7 +465,7 @@ public class StandalonePriceBuilder implements Builder<StandalonePrice> {
         Objects.requireNonNull(sku, StandalonePrice.class + ": sku is missing");
         Objects.requireNonNull(value, StandalonePrice.class + ": value is missing");
         return new StandalonePriceImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, key, sku,
-            value, country, customerGroup, channel, validFrom, validUntil, tiers, discounted, custom);
+            value, country, customerGroup, channel, validFrom, validUntil, tiers, discounted, custom, staged);
     }
 
     /**
@@ -444,7 +473,7 @@ public class StandalonePriceBuilder implements Builder<StandalonePrice> {
      */
     public StandalonePrice buildUnchecked() {
         return new StandalonePriceImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, key, sku,
-            value, country, customerGroup, channel, validFrom, validUntil, tiers, discounted, custom);
+            value, country, customerGroup, channel, validFrom, validUntil, tiers, discounted, custom, staged);
     }
 
     public static StandalonePriceBuilder of() {
@@ -470,6 +499,7 @@ public class StandalonePriceBuilder implements Builder<StandalonePrice> {
         builder.tiers = template.getTiers();
         builder.discounted = template.getDiscounted();
         builder.custom = template.getCustom();
+        builder.staged = template.getStaged();
         return builder;
     }
 

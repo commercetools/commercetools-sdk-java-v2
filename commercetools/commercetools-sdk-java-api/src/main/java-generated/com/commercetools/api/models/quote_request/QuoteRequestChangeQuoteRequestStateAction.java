@@ -32,7 +32,7 @@ public interface QuoteRequestChangeQuoteRequestStateAction extends QuoteRequestU
     String CHANGE_QUOTE_REQUEST_STATE = "changeQuoteRequestState";
 
     /**
-     *  <p>The new state to be set for the Quote Request.</p>
+     *  <p>New state to be set for the Quote Request.</p>
      */
     @NotNull
     @JsonProperty("quoteRequestState")

@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * ProductPublishAction
+ *  <p>Publishes product data from the Product's staged projection to its current projection. Produces the ProductPublished Message.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductPublishActionImpl implements ProductPublishAction, ModelBase {
@@ -43,7 +43,7 @@ public class ProductPublishActionImpl implements ProductPublishAction, ModelBase
     }
 
     /**
-     *
+     *  <p><code>All</code> or <code>Prices</code></p>
      */
 
     public com.commercetools.api.models.cart.ProductPublishScope getScope() {

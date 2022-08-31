@@ -30,10 +30,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  */
 @JsonSubTypes({
         @JsonSubTypes.Type(value = com.commercetools.api.models.cart.CartAddCustomLineItemActionImpl.class, name = CartAddCustomLineItemAction.ADD_CUSTOM_LINE_ITEM),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.cart.CartAddCustomShippingMethodActionImpl.class, name = CartAddCustomShippingMethodAction.ADD_CUSTOM_SHIPPING_METHOD),
         @JsonSubTypes.Type(value = com.commercetools.api.models.cart.CartAddDiscountCodeActionImpl.class, name = CartAddDiscountCodeAction.ADD_DISCOUNT_CODE),
         @JsonSubTypes.Type(value = com.commercetools.api.models.cart.CartAddItemShippingAddressActionImpl.class, name = CartAddItemShippingAddressAction.ADD_ITEM_SHIPPING_ADDRESS),
         @JsonSubTypes.Type(value = com.commercetools.api.models.cart.CartAddLineItemActionImpl.class, name = CartAddLineItemAction.ADD_LINE_ITEM),
         @JsonSubTypes.Type(value = com.commercetools.api.models.cart.CartAddPaymentActionImpl.class, name = CartAddPaymentAction.ADD_PAYMENT),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.cart.CartAddShippingMethodActionImpl.class, name = CartAddShippingMethodAction.ADD_SHIPPING_METHOD),
         @JsonSubTypes.Type(value = com.commercetools.api.models.cart.CartAddShoppingListActionImpl.class, name = CartAddShoppingListAction.ADD_SHOPPING_LIST),
         @JsonSubTypes.Type(value = com.commercetools.api.models.cart.CartApplyDeltaToCustomLineItemShippingDetailsTargetsActionImpl.class, name = CartApplyDeltaToCustomLineItemShippingDetailsTargetsAction.APPLY_DELTA_TO_CUSTOM_LINE_ITEM_SHIPPING_DETAILS_TARGETS),
         @JsonSubTypes.Type(value = com.commercetools.api.models.cart.CartApplyDeltaToLineItemShippingDetailsTargetsActionImpl.class, name = CartApplyDeltaToLineItemShippingDetailsTargetsAction.APPLY_DELTA_TO_LINE_ITEM_SHIPPING_DETAILS_TARGETS),
@@ -50,6 +52,7 @@ import io.vrap.rmf.base.client.utils.Generated;
         @JsonSubTypes.Type(value = com.commercetools.api.models.cart.CartRemoveItemShippingAddressActionImpl.class, name = CartRemoveItemShippingAddressAction.REMOVE_ITEM_SHIPPING_ADDRESS),
         @JsonSubTypes.Type(value = com.commercetools.api.models.cart.CartRemoveLineItemActionImpl.class, name = CartRemoveLineItemAction.REMOVE_LINE_ITEM),
         @JsonSubTypes.Type(value = com.commercetools.api.models.cart.CartRemovePaymentActionImpl.class, name = CartRemovePaymentAction.REMOVE_PAYMENT),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.cart.CartRemoveShippingMethodActionImpl.class, name = CartRemoveShippingMethodAction.REMOVE_SHIPPING_METHOD),
         @JsonSubTypes.Type(value = com.commercetools.api.models.cart.CartSetAnonymousIdActionImpl.class, name = CartSetAnonymousIdAction.SET_ANONYMOUS_ID),
         @JsonSubTypes.Type(value = com.commercetools.api.models.cart.CartSetBillingAddressActionImpl.class, name = CartSetBillingAddressAction.SET_BILLING_ADDRESS),
         @JsonSubTypes.Type(value = com.commercetools.api.models.cart.CartSetBillingAddressCustomFieldActionImpl.class, name = CartSetBillingAddressCustomFieldAction.SET_BILLING_ADDRESS_CUSTOM_FIELD),
@@ -87,6 +90,8 @@ import io.vrap.rmf.base.client.utils.Generated;
         @JsonSubTypes.Type(value = com.commercetools.api.models.cart.CartSetShippingAddressActionImpl.class, name = CartSetShippingAddressAction.SET_SHIPPING_ADDRESS),
         @JsonSubTypes.Type(value = com.commercetools.api.models.cart.CartSetShippingAddressCustomFieldActionImpl.class, name = CartSetShippingAddressCustomFieldAction.SET_SHIPPING_ADDRESS_CUSTOM_FIELD),
         @JsonSubTypes.Type(value = com.commercetools.api.models.cart.CartSetShippingAddressCustomTypeActionImpl.class, name = CartSetShippingAddressCustomTypeAction.SET_SHIPPING_ADDRESS_CUSTOM_TYPE),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.cart.CartSetShippingCustomFieldActionImpl.class, name = CartSetShippingCustomFieldAction.SET_SHIPPING_CUSTOM_FIELD),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.cart.CartSetShippingCustomTypeActionImpl.class, name = CartSetShippingCustomTypeAction.SET_SHIPPING_CUSTOM_TYPE),
         @JsonSubTypes.Type(value = com.commercetools.api.models.cart.CartSetShippingMethodActionImpl.class, name = CartSetShippingMethodAction.SET_SHIPPING_METHOD),
         @JsonSubTypes.Type(value = com.commercetools.api.models.cart.CartSetShippingMethodTaxAmountActionImpl.class, name = CartSetShippingMethodTaxAmountAction.SET_SHIPPING_METHOD_TAX_AMOUNT),
         @JsonSubTypes.Type(value = com.commercetools.api.models.cart.CartSetShippingMethodTaxRateActionImpl.class, name = CartSetShippingMethodTaxRateAction.SET_SHIPPING_METHOD_TAX_RATE),
@@ -108,6 +113,10 @@ public interface CartUpdateAction extends com.commercetools.api.models.ResourceU
         return com.commercetools.api.models.cart.CartAddCustomLineItemActionBuilder.of();
     }
 
+    public static com.commercetools.api.models.cart.CartAddCustomShippingMethodActionBuilder addCustomShippingMethodBuilder() {
+        return com.commercetools.api.models.cart.CartAddCustomShippingMethodActionBuilder.of();
+    }
+
     public static com.commercetools.api.models.cart.CartAddDiscountCodeActionBuilder addDiscountCodeBuilder() {
         return com.commercetools.api.models.cart.CartAddDiscountCodeActionBuilder.of();
     }
@@ -122,6 +131,10 @@ public interface CartUpdateAction extends com.commercetools.api.models.ResourceU
 
     public static com.commercetools.api.models.cart.CartAddPaymentActionBuilder addPaymentBuilder() {
         return com.commercetools.api.models.cart.CartAddPaymentActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.cart.CartAddShippingMethodActionBuilder addShippingMethodBuilder() {
+        return com.commercetools.api.models.cart.CartAddShippingMethodActionBuilder.of();
     }
 
     public static com.commercetools.api.models.cart.CartAddShoppingListActionBuilder addShoppingListBuilder() {
@@ -186,6 +199,10 @@ public interface CartUpdateAction extends com.commercetools.api.models.ResourceU
 
     public static com.commercetools.api.models.cart.CartRemovePaymentActionBuilder removePaymentBuilder() {
         return com.commercetools.api.models.cart.CartRemovePaymentActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.cart.CartRemoveShippingMethodActionBuilder removeShippingMethodBuilder() {
+        return com.commercetools.api.models.cart.CartRemoveShippingMethodActionBuilder.of();
     }
 
     public static com.commercetools.api.models.cart.CartSetAnonymousIdActionBuilder setAnonymousIdBuilder() {
@@ -334,6 +351,14 @@ public interface CartUpdateAction extends com.commercetools.api.models.ResourceU
 
     public static com.commercetools.api.models.cart.CartSetShippingAddressCustomTypeActionBuilder setShippingAddressCustomTypeBuilder() {
         return com.commercetools.api.models.cart.CartSetShippingAddressCustomTypeActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.cart.CartSetShippingCustomFieldActionBuilder setShippingCustomFieldBuilder() {
+        return com.commercetools.api.models.cart.CartSetShippingCustomFieldActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.cart.CartSetShippingCustomTypeActionBuilder setShippingCustomTypeBuilder() {
+        return com.commercetools.api.models.cart.CartSetShippingCustomTypeActionBuilder.of();
     }
 
     public static com.commercetools.api.models.cart.CartSetShippingMethodActionBuilder setShippingMethodBuilder() {

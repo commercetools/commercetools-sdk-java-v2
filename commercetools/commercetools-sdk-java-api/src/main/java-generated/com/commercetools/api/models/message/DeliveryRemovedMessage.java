@@ -15,7 +15,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * DeliveryRemovedMessage
+ *  <p>Generated after a successful Remove Delivery update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -41,14 +41,23 @@ public interface DeliveryRemovedMessage extends OrderMessage {
     String DELIVERY_REMOVED = "DeliveryRemoved";
 
     /**
-     *
+     *  <p>The Delivery that was removed from the Order.</p>
      */
     @NotNull
     @Valid
     @JsonProperty("delivery")
     public Delivery getDelivery();
 
+    /**
+     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multi</code> ShippingMode.</p>
+     */
+
+    @JsonProperty("shippingKey")
+    public String getShippingKey();
+
     public void setDelivery(final Delivery delivery);
+
+    public void setShippingKey(final String shippingKey);
 
     public static DeliveryRemovedMessage of() {
         return new DeliveryRemovedMessageImpl();
@@ -67,6 +76,7 @@ public interface DeliveryRemovedMessage extends OrderMessage {
         instance.setResourceVersion(template.getResourceVersion());
         instance.setResourceUserProvidedIdentifiers(template.getResourceUserProvidedIdentifiers());
         instance.setDelivery(template.getDelivery());
+        instance.setShippingKey(template.getShippingKey());
         return instance;
     }
 

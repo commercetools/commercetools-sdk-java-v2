@@ -15,12 +15,20 @@ public class QuoteUpdateActionBuilder {
         return com.commercetools.api.models.quote.QuoteChangeQuoteStateActionBuilder.of();
     }
 
+    public com.commercetools.api.models.quote.QuoteRequestQuoteRenegotiationActionBuilder requestQuoteRenegotiationBuilder() {
+        return com.commercetools.api.models.quote.QuoteRequestQuoteRenegotiationActionBuilder.of();
+    }
+
     public com.commercetools.api.models.quote.QuoteSetCustomFieldActionBuilder setCustomFieldBuilder() {
         return com.commercetools.api.models.quote.QuoteSetCustomFieldActionBuilder.of();
     }
 
     public com.commercetools.api.models.quote.QuoteSetCustomTypeActionBuilder setCustomTypeBuilder() {
         return com.commercetools.api.models.quote.QuoteSetCustomTypeActionBuilder.of();
+    }
+
+    public com.commercetools.api.models.quote.QuoteTransitionStateActionBuilder transitionStateBuilder() {
+        return com.commercetools.api.models.quote.QuoteTransitionStateActionBuilder.of();
     }
 
     public static QuoteUpdateActionBuilder of() {

@@ -25,7 +25,7 @@ public class OrderCustomLineItemAddedMessagePayloadBuilder implements Builder<Or
     private com.commercetools.api.models.cart.CustomLineItem customLineItem;
 
     /**
-     *
+     *  <p>Custom Line Item that was added to the Order.</p>
      */
 
     public OrderCustomLineItemAddedMessagePayloadBuilder customLineItem(
@@ -35,7 +35,7 @@ public class OrderCustomLineItemAddedMessagePayloadBuilder implements Builder<Or
     }
 
     /**
-     *
+     *  <p>Custom Line Item that was added to the Order.</p>
      */
 
     public OrderCustomLineItemAddedMessagePayloadBuilder customLineItem(

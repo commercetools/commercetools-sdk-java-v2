@@ -25,7 +25,7 @@ public class CategoryCreatedMessagePayloadBuilder implements Builder<CategoryCre
     private com.commercetools.api.models.category.Category category;
 
     /**
-     *
+     *  <p>Category that was created.</p>
      */
 
     public CategoryCreatedMessagePayloadBuilder category(
@@ -35,7 +35,7 @@ public class CategoryCreatedMessagePayloadBuilder implements Builder<CategoryCre
     }
 
     /**
-     *
+     *  <p>Category that was created.</p>
      */
 
     public CategoryCreatedMessagePayloadBuilder category(

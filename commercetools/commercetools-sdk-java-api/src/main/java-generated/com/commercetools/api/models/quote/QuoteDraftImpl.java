@@ -28,22 +28,26 @@ public class QuoteDraftImpl implements QuoteDraft, ModelBase {
 
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
 
+    private com.commercetools.api.models.state.StateReference state;
+
     @JsonCreator
     QuoteDraftImpl(
             @JsonProperty("stagedQuote") final com.commercetools.api.models.staged_quote.StagedQuoteResourceIdentifier stagedQuote,
             @JsonProperty("stagedQuoteVersion") final Long stagedQuoteVersion, @JsonProperty("key") final String key,
-            @JsonProperty("custom") final com.commercetools.api.models.type.CustomFieldsDraft custom) {
+            @JsonProperty("custom") final com.commercetools.api.models.type.CustomFieldsDraft custom,
+            @JsonProperty("state") final com.commercetools.api.models.state.StateReference state) {
         this.stagedQuote = stagedQuote;
         this.stagedQuoteVersion = stagedQuoteVersion;
         this.key = key;
         this.custom = custom;
+        this.state = state;
     }
 
     public QuoteDraftImpl() {
     }
 
     /**
-     *  <p>The StagedQuote from which this Quote is created.</p>
+     *  <p>StagedQuote from which the Quote is created.</p>
      */
 
     public com.commercetools.api.models.staged_quote.StagedQuoteResourceIdentifier getStagedQuote() {
@@ -78,6 +82,14 @@ public class QuoteDraftImpl implements QuoteDraft, ModelBase {
         return this.custom;
     }
 
+    /**
+     *  <p>State of the Quote. This reference can point to a State in a custom workflow.</p>
+     */
+
+    public com.commercetools.api.models.state.StateReference getState() {
+        return this.state;
+    }
+
     public void setStagedQuote(
             final com.commercetools.api.models.staged_quote.StagedQuoteResourceIdentifier stagedQuote) {
         this.stagedQuote = stagedQuote;
@@ -95,6 +107,10 @@ public class QuoteDraftImpl implements QuoteDraft, ModelBase {
         this.custom = custom;
     }
 
+    public void setState(final com.commercetools.api.models.state.StateReference state) {
+        this.state = state;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -109,6 +125,7 @@ public class QuoteDraftImpl implements QuoteDraft, ModelBase {
                 .append(stagedQuoteVersion, that.stagedQuoteVersion)
                 .append(key, that.key)
                 .append(custom, that.custom)
+                .append(state, that.state)
                 .isEquals();
     }
 
@@ -118,6 +135,7 @@ public class QuoteDraftImpl implements QuoteDraft, ModelBase {
                 .append(stagedQuoteVersion)
                 .append(key)
                 .append(custom)
+                .append(state)
                 .toHashCode();
     }
 

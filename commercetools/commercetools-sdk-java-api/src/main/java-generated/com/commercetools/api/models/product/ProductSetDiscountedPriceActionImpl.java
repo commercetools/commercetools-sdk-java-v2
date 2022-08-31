@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * ProductSetDiscountedPriceAction
+ *  <p>Produces the ProductPriceExternalDiscountSet Message.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductSetDiscountedPriceActionImpl implements ProductSetDiscountedPriceAction, ModelBase {
@@ -51,7 +51,7 @@ public class ProductSetDiscountedPriceActionImpl implements ProductSetDiscounted
     }
 
     /**
-     *
+     *  <p>The <code>id</code> of the Embedded Price to set the Discount.</p>
      */
 
     public String getPriceId() {
@@ -59,7 +59,7 @@ public class ProductSetDiscountedPriceActionImpl implements ProductSetDiscounted
     }
 
     /**
-     *
+     *  <p>If <code>true</code>, only the staged Embedded Price is updated. If <code>false</code>, both the current and staged Embedded Price are updated.</p>
      */
 
     public Boolean getStaged() {
@@ -67,7 +67,7 @@ public class ProductSetDiscountedPriceActionImpl implements ProductSetDiscounted
     }
 
     /**
-     *
+     *  <p>Value to set. If empty, any existing value will be removed. The referenced ProductDiscount must have the Type <code>external</code>, be active, and its predicate must match the referenced Price.</p>
      */
 
     public com.commercetools.api.models.common.DiscountedPriceDraft getDiscounted() {

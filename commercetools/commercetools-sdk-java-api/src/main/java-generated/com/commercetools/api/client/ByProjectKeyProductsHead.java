@@ -6,6 +6,9 @@ import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
+import java.util.function.Function;
+import java.util.function.Supplier;
+import java.util.stream.Collectors;
 
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -14,7 +17,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Checks if products exist.</p>
+ *  <p>Check if Products exist. Responds with a <code>200 OK</code> status if any Products match the Query Predicate, or <code>404 Not Found</code> otherwise.</p>
  *
  * <hr>
  * <div class=code-example>
@@ -71,8 +74,71 @@ public class ByProjectKeyProductsHead
         return this.projectKey;
     }
 
+    public List<String> getWhere() {
+        return this.getQueryParam("where");
+    }
+
     public void setProjectKey(final String projectKey) {
         this.projectKey = projectKey;
+    }
+
+    /**
+     * set where with the specified value
+     */
+    public <TValue> ByProjectKeyProductsHead withWhere(final TValue where) {
+        return copy().withQueryParam("where", where);
+    }
+
+    /**
+     * add additional where query parameter
+     */
+    public <TValue> ByProjectKeyProductsHead addWhere(final TValue where) {
+        return copy().addQueryParam("where", where);
+    }
+
+    /**
+     * set where with the specified value
+     */
+    public ByProjectKeyProductsHead withWhere(final Supplier<String> supplier) {
+        return copy().withQueryParam("where", supplier.get());
+    }
+
+    /**
+     * add additional where query parameter
+     */
+    public ByProjectKeyProductsHead addWhere(final Supplier<String> supplier) {
+        return copy().addQueryParam("where", supplier.get());
+    }
+
+    /**
+     * set where with the specified value
+     */
+    public ByProjectKeyProductsHead withWhere(final Function<StringBuilder, StringBuilder> op) {
+        return copy().withQueryParam("where", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * add additional where query parameter
+     */
+    public ByProjectKeyProductsHead addWhere(final Function<StringBuilder, StringBuilder> op) {
+        return copy().addQueryParam("where", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * set where with the specified values
+     */
+    public <TValue> ByProjectKeyProductsHead withWhere(final List<TValue> where) {
+        return copy().withoutQueryParam("where")
+                .addQueryParams(
+                    where.stream().map(s -> new ParamEntry<>("where", s.toString())).collect(Collectors.toList()));
+    }
+
+    /**
+     * add additional where query parameters
+     */
+    public <TValue> ByProjectKeyProductsHead addWhere(final List<TValue> where) {
+        return copy().addQueryParams(
+            where.stream().map(s -> new ParamEntry<>("where", s.toString())).collect(Collectors.toList()));
     }
 
     @Override

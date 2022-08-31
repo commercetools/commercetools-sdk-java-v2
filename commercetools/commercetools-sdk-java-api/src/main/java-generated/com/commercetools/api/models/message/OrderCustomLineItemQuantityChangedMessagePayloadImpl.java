@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * OrderCustomLineItemQuantityChangedMessagePayload
+ *  <p>Generated after a successful Change Custom Line Item Quantity update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderCustomLineItemQuantityChangedMessagePayloadImpl
@@ -52,7 +52,7 @@ public class OrderCustomLineItemQuantityChangedMessagePayloadImpl
     }
 
     /**
-     *
+     *  <p>Unique identifier of the Custom Line Item.</p>
      */
 
     public String getCustomLineItemId() {
@@ -60,7 +60,7 @@ public class OrderCustomLineItemQuantityChangedMessagePayloadImpl
     }
 
     /**
-     *
+     *  <p>Custom Line Item quantity after the Change Custom Line Item Quantity update action.</p>
      */
 
     public Long getQuantity() {
@@ -68,7 +68,7 @@ public class OrderCustomLineItemQuantityChangedMessagePayloadImpl
     }
 
     /**
-     *
+     *  <p>Custom Line Item quantity before the Change Custom Line Item Quantity update action.</p>
      */
 
     public Long getOldQuantity() {

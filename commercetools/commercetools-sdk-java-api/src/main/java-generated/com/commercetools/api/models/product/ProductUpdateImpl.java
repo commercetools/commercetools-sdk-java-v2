@@ -35,7 +35,7 @@ public class ProductUpdateImpl implements ProductUpdate, ModelBase {
     }
 
     /**
-     *
+     *  <p>Expected version of the Product on which the changes should be applied. If the expected version does not match the actual version, a 409 Conflict will be returned.</p>
      */
 
     public Long getVersion() {
@@ -43,7 +43,7 @@ public class ProductUpdateImpl implements ProductUpdate, ModelBase {
     }
 
     /**
-     *
+     *  <p>Update actions to be performed on the Product.</p>
      */
 
     public java.util.List<com.commercetools.api.models.product.ProductUpdateAction> getActions() {

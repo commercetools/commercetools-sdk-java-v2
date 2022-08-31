@@ -25,7 +25,7 @@ public class PaymentInteractionAddedMessagePayloadBuilder implements Builder<Pay
     private com.commercetools.api.models.type.CustomFields interaction;
 
     /**
-     *  <p>Serves as value of the <code>custom</code> field on a resource or data type customized with a Type.</p>
+     *  <p>The interface interaction that was added to the Payment.</p>
      */
 
     public PaymentInteractionAddedMessagePayloadBuilder interaction(
@@ -35,7 +35,7 @@ public class PaymentInteractionAddedMessagePayloadBuilder implements Builder<Pay
     }
 
     /**
-     *  <p>Serves as value of the <code>custom</code> field on a resource or data type customized with a Type.</p>
+     *  <p>The interface interaction that was added to the Payment.</p>
      */
 
     public PaymentInteractionAddedMessagePayloadBuilder interaction(

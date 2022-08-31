@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * DeliveryItemsUpdatedMessagePayload
+ *  <p>Generated after a successful Set Delivery Items update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class DeliveryItemsUpdatedMessagePayloadImpl implements DeliveryItemsUpdatedMessagePayload, ModelBase {
@@ -28,13 +28,17 @@ public class DeliveryItemsUpdatedMessagePayloadImpl implements DeliveryItemsUpda
 
     private java.util.List<com.commercetools.api.models.order.DeliveryItem> oldItems;
 
+    private String shippingKey;
+
     @JsonCreator
     DeliveryItemsUpdatedMessagePayloadImpl(@JsonProperty("deliveryId") final String deliveryId,
             @JsonProperty("items") final java.util.List<com.commercetools.api.models.order.DeliveryItem> items,
-            @JsonProperty("oldItems") final java.util.List<com.commercetools.api.models.order.DeliveryItem> oldItems) {
+            @JsonProperty("oldItems") final java.util.List<com.commercetools.api.models.order.DeliveryItem> oldItems,
+            @JsonProperty("shippingKey") final String shippingKey) {
         this.deliveryId = deliveryId;
         this.items = items;
         this.oldItems = oldItems;
+        this.shippingKey = shippingKey;
         this.type = DELIVERY_ITEMS_UPDATED;
     }
 
@@ -51,7 +55,7 @@ public class DeliveryItemsUpdatedMessagePayloadImpl implements DeliveryItemsUpda
     }
 
     /**
-     *
+     *  <p>Unique identifier of the Delivery.</p>
      */
 
     public String getDeliveryId() {
@@ -59,7 +63,7 @@ public class DeliveryItemsUpdatedMessagePayloadImpl implements DeliveryItemsUpda
     }
 
     /**
-     *
+     *  <p>Delivery Items after the Set Delivery Items update action.</p>
      */
 
     public java.util.List<com.commercetools.api.models.order.DeliveryItem> getItems() {
@@ -67,11 +71,19 @@ public class DeliveryItemsUpdatedMessagePayloadImpl implements DeliveryItemsUpda
     }
 
     /**
-     *
+     *  <p>Delivery Items before the Set Delivery Items update action.</p>
      */
 
     public java.util.List<com.commercetools.api.models.order.DeliveryItem> getOldItems() {
         return this.oldItems;
+    }
+
+    /**
+     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multi</code> ShippingMode.</p>
+     */
+
+    public String getShippingKey() {
+        return this.shippingKey;
     }
 
     public void setDeliveryId(final String deliveryId) {
@@ -94,6 +106,10 @@ public class DeliveryItemsUpdatedMessagePayloadImpl implements DeliveryItemsUpda
         this.oldItems = oldItems;
     }
 
+    public void setShippingKey(final String shippingKey) {
+        this.shippingKey = shippingKey;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -108,12 +124,18 @@ public class DeliveryItemsUpdatedMessagePayloadImpl implements DeliveryItemsUpda
                 .append(deliveryId, that.deliveryId)
                 .append(items, that.items)
                 .append(oldItems, that.oldItems)
+                .append(shippingKey, that.shippingKey)
                 .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(type).append(deliveryId).append(items).append(oldItems).toHashCode();
+        return new HashCodeBuilder(17, 37).append(type)
+                .append(deliveryId)
+                .append(items)
+                .append(oldItems)
+                .append(shippingKey)
+                .toHashCode();
     }
 
 }

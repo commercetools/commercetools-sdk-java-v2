@@ -62,8 +62,11 @@ public class ParcelMeasurementsUpdatedMessageBuilder implements Builder<ParcelMe
     @Nullable
     private com.commercetools.api.models.order.ParcelMeasurements measurements;
 
+    @Nullable
+    private String shippingKey;
+
     /**
-     *  <p>Unique identifier of the Message.</p>
+     *  <p>Unique identifier of the Message. Can be used to track which Messages have been processed.</p>
      */
 
     public ParcelMeasurementsUpdatedMessageBuilder id(final String id) {
@@ -72,7 +75,7 @@ public class ParcelMeasurementsUpdatedMessageBuilder implements Builder<ParcelMe
     }
 
     /**
-     *
+     *  <p>Version of a resource. In case of Messages, this is always <code>1</code>.</p>
      */
 
     public ParcelMeasurementsUpdatedMessageBuilder version(final Long version) {
@@ -81,7 +84,7 @@ public class ParcelMeasurementsUpdatedMessageBuilder implements Builder<ParcelMe
     }
 
     /**
-     *
+     *  <p>Date and time (UTC) the Message was generated.</p>
      */
 
     public ParcelMeasurementsUpdatedMessageBuilder createdAt(final java.time.ZonedDateTime createdAt) {
@@ -90,7 +93,7 @@ public class ParcelMeasurementsUpdatedMessageBuilder implements Builder<ParcelMe
     }
 
     /**
-     *
+     *  <p>Value of <code>createdAt</code>.</p>
      */
 
     public ParcelMeasurementsUpdatedMessageBuilder lastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {
@@ -99,7 +102,7 @@ public class ParcelMeasurementsUpdatedMessageBuilder implements Builder<ParcelMe
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>Value of <code>createdBy</code>.</p>
      */
 
     public ParcelMeasurementsUpdatedMessageBuilder lastModifiedBy(
@@ -109,7 +112,7 @@ public class ParcelMeasurementsUpdatedMessageBuilder implements Builder<ParcelMe
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>Value of <code>createdBy</code>.</p>
      */
 
     public ParcelMeasurementsUpdatedMessageBuilder lastModifiedBy(
@@ -139,7 +142,7 @@ public class ParcelMeasurementsUpdatedMessageBuilder implements Builder<ParcelMe
     }
 
     /**
-     *
+     *  <p>Message number in relation to other Messages for a given resource. The <code>sequenceNumber</code> of the next Message for the resource is the successor of the <code>sequenceNumber</code> of the current Message. Meaning, the <code>sequenceNumber</code> of the next Message equals the <code>sequenceNumber</code> of the current Message + 1. <code>sequenceNumber</code> can be used to ensure that Messages are processed in the correct order for a particular resource.</p>
      */
 
     public ParcelMeasurementsUpdatedMessageBuilder sequenceNumber(final Long sequenceNumber) {
@@ -148,7 +151,7 @@ public class ParcelMeasurementsUpdatedMessageBuilder implements Builder<ParcelMe
     }
 
     /**
-     *  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
+     *  <p>Reference to the resource on which the change or action was performed.</p>
      */
 
     public ParcelMeasurementsUpdatedMessageBuilder resource(
@@ -158,7 +161,7 @@ public class ParcelMeasurementsUpdatedMessageBuilder implements Builder<ParcelMe
     }
 
     /**
-     *  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
+     *  <p>Reference to the resource on which the change or action was performed.</p>
      */
 
     public ParcelMeasurementsUpdatedMessageBuilder resource(
@@ -168,7 +171,7 @@ public class ParcelMeasurementsUpdatedMessageBuilder implements Builder<ParcelMe
     }
 
     /**
-     *
+     *  <p>Version of the resource on which the change or action was performed.</p>
      */
 
     public ParcelMeasurementsUpdatedMessageBuilder resourceVersion(final Long resourceVersion) {
@@ -177,7 +180,7 @@ public class ParcelMeasurementsUpdatedMessageBuilder implements Builder<ParcelMe
     }
 
     /**
-     *
+     *  <p>User-provided identifiers of the resource, such as <code>key</code> or <code>externalId</code>. Only present if the resource has such identifiers.</p>
      */
 
     public ParcelMeasurementsUpdatedMessageBuilder resourceUserProvidedIdentifiers(
@@ -189,7 +192,7 @@ public class ParcelMeasurementsUpdatedMessageBuilder implements Builder<ParcelMe
     }
 
     /**
-     *
+     *  <p>User-provided identifiers of the resource, such as <code>key</code> or <code>externalId</code>. Only present if the resource has such identifiers.</p>
      */
 
     public ParcelMeasurementsUpdatedMessageBuilder resourceUserProvidedIdentifiers(
@@ -199,7 +202,7 @@ public class ParcelMeasurementsUpdatedMessageBuilder implements Builder<ParcelMe
     }
 
     /**
-     *
+     *  <p>Unique identifier of the Delivery.</p>
      */
 
     public ParcelMeasurementsUpdatedMessageBuilder deliveryId(final String deliveryId) {
@@ -208,7 +211,7 @@ public class ParcelMeasurementsUpdatedMessageBuilder implements Builder<ParcelMe
     }
 
     /**
-     *
+     *  <p>Unique identifier of the Parcel.</p>
      */
 
     public ParcelMeasurementsUpdatedMessageBuilder parcelId(final String parcelId) {
@@ -217,7 +220,7 @@ public class ParcelMeasurementsUpdatedMessageBuilder implements Builder<ParcelMe
     }
 
     /**
-     *
+     *  <p>The Parcel Measurements that were set on the Parcel.</p>
      */
 
     public ParcelMeasurementsUpdatedMessageBuilder measurements(
@@ -227,12 +230,21 @@ public class ParcelMeasurementsUpdatedMessageBuilder implements Builder<ParcelMe
     }
 
     /**
-     *
+     *  <p>The Parcel Measurements that were set on the Parcel.</p>
      */
 
     public ParcelMeasurementsUpdatedMessageBuilder measurements(
             @Nullable final com.commercetools.api.models.order.ParcelMeasurements measurements) {
         this.measurements = measurements;
+        return this;
+    }
+
+    /**
+     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multi</code> ShippingMode.</p>
+     */
+
+    public ParcelMeasurementsUpdatedMessageBuilder shippingKey(@Nullable final String shippingKey) {
+        this.shippingKey = shippingKey;
         return this;
     }
 
@@ -292,6 +304,11 @@ public class ParcelMeasurementsUpdatedMessageBuilder implements Builder<ParcelMe
         return this.measurements;
     }
 
+    @Nullable
+    public String getShippingKey() {
+        return this.shippingKey;
+    }
+
     public ParcelMeasurementsUpdatedMessage build() {
         Objects.requireNonNull(id, ParcelMeasurementsUpdatedMessage.class + ": id is missing");
         Objects.requireNonNull(version, ParcelMeasurementsUpdatedMessage.class + ": version is missing");
@@ -305,7 +322,7 @@ public class ParcelMeasurementsUpdatedMessageBuilder implements Builder<ParcelMe
         Objects.requireNonNull(parcelId, ParcelMeasurementsUpdatedMessage.class + ": parcelId is missing");
         return new ParcelMeasurementsUpdatedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy,
             createdBy, sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, deliveryId, parcelId,
-            measurements);
+            measurements, shippingKey);
     }
 
     /**
@@ -314,7 +331,7 @@ public class ParcelMeasurementsUpdatedMessageBuilder implements Builder<ParcelMe
     public ParcelMeasurementsUpdatedMessage buildUnchecked() {
         return new ParcelMeasurementsUpdatedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy,
             createdBy, sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, deliveryId, parcelId,
-            measurements);
+            measurements, shippingKey);
     }
 
     public static ParcelMeasurementsUpdatedMessageBuilder of() {
@@ -336,6 +353,7 @@ public class ParcelMeasurementsUpdatedMessageBuilder implements Builder<ParcelMe
         builder.deliveryId = template.getDeliveryId();
         builder.parcelId = template.getParcelId();
         builder.measurements = template.getMeasurements();
+        builder.shippingKey = template.getShippingKey();
         return builder;
     }
 

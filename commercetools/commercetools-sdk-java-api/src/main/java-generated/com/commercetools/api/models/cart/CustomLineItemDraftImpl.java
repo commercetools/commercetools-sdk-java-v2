@@ -36,6 +36,8 @@ public class CustomLineItemDraftImpl implements CustomLineItemDraft, ModelBase {
 
     private com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails;
 
+    private com.commercetools.api.models.cart.CustomLineItemPriceMode priceMode;
+
     @JsonCreator
     CustomLineItemDraftImpl(@JsonProperty("name") final com.commercetools.api.models.common.LocalizedString name,
             @JsonProperty("quantity") final Long quantity,
@@ -44,7 +46,8 @@ public class CustomLineItemDraftImpl implements CustomLineItemDraft, ModelBase {
             @JsonProperty("taxCategory") final com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier taxCategory,
             @JsonProperty("externalTaxRate") final com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate,
             @JsonProperty("custom") final com.commercetools.api.models.type.CustomFieldsDraft custom,
-            @JsonProperty("shippingDetails") final com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails) {
+            @JsonProperty("shippingDetails") final com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails,
+            @JsonProperty("priceMode") final com.commercetools.api.models.cart.CustomLineItemPriceMode priceMode) {
         this.name = name;
         this.quantity = quantity;
         this.money = money;
@@ -53,6 +56,7 @@ public class CustomLineItemDraftImpl implements CustomLineItemDraft, ModelBase {
         this.externalTaxRate = externalTaxRate;
         this.custom = custom;
         this.shippingDetails = shippingDetails;
+        this.priceMode = priceMode;
     }
 
     public CustomLineItemDraftImpl() {
@@ -122,6 +126,17 @@ public class CustomLineItemDraftImpl implements CustomLineItemDraft, ModelBase {
         return this.shippingDetails;
     }
 
+    /**
+     *  <ul>
+     *   <li>If <code>Standard</code>, Cart Discounts with a matching CartDiscountCustomLineItemsTarget are applied to the Custom Line Item.</li>
+     *   <li>If <code>External</code>, Cart Discounts are not considered on the Custom Line Item.</li>
+     *  </ul>
+     */
+
+    public com.commercetools.api.models.cart.CustomLineItemPriceMode getPriceMode() {
+        return this.priceMode;
+    }
+
     public void setName(final com.commercetools.api.models.common.LocalizedString name) {
         this.name = name;
     }
@@ -155,6 +170,10 @@ public class CustomLineItemDraftImpl implements CustomLineItemDraft, ModelBase {
         this.shippingDetails = shippingDetails;
     }
 
+    public void setPriceMode(final com.commercetools.api.models.cart.CustomLineItemPriceMode priceMode) {
+        this.priceMode = priceMode;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -173,6 +192,7 @@ public class CustomLineItemDraftImpl implements CustomLineItemDraft, ModelBase {
                 .append(externalTaxRate, that.externalTaxRate)
                 .append(custom, that.custom)
                 .append(shippingDetails, that.shippingDetails)
+                .append(priceMode, that.priceMode)
                 .isEquals();
     }
 
@@ -186,6 +206,7 @@ public class CustomLineItemDraftImpl implements CustomLineItemDraft, ModelBase {
                 .append(externalTaxRate)
                 .append(custom)
                 .append(shippingDetails)
+                .append(priceMode)
                 .toHashCode();
     }
 

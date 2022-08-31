@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * CustomLineItemStateTransitionMessagePayload
+ *  <p>Generated after a successful Transition Custom Line Item State update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomLineItemStateTransitionMessagePayloadImpl
@@ -60,7 +60,7 @@ public class CustomLineItemStateTransitionMessagePayloadImpl
     }
 
     /**
-     *
+     *  <p>Unique identifier of the Custom Line Item.</p>
      */
 
     public String getCustomLineItemId() {
@@ -68,7 +68,7 @@ public class CustomLineItemStateTransitionMessagePayloadImpl
     }
 
     /**
-     *
+     *  <p>Date and time (UTC) when the transition of the Custom Line Item State was performed.</p>
      */
 
     public java.time.ZonedDateTime getTransitionDate() {
@@ -76,7 +76,7 @@ public class CustomLineItemStateTransitionMessagePayloadImpl
     }
 
     /**
-     *
+     *  <p>Number of Custom Line Items for which the State was transitioned.</p>
      */
 
     public Long getQuantity() {
@@ -84,7 +84,7 @@ public class CustomLineItemStateTransitionMessagePayloadImpl
     }
 
     /**
-     *  <p>Reference to a State.</p>
+     *  <p>State the Custom Line Item was transitioned from.</p>
      */
 
     public com.commercetools.api.models.state.StateReference getFromState() {
@@ -92,7 +92,7 @@ public class CustomLineItemStateTransitionMessagePayloadImpl
     }
 
     /**
-     *  <p>Reference to a State.</p>
+     *  <p>State the Custom Line Item was transitioned to.</p>
      */
 
     public com.commercetools.api.models.state.StateReference getToState() {

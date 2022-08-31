@@ -31,6 +31,10 @@ public class StagedQuoteUpdateActionBuilder {
         return com.commercetools.api.models.staged_quote.StagedQuoteSetValidToActionBuilder.of();
     }
 
+    public com.commercetools.api.models.staged_quote.StagedQuoteTransitionStateActionBuilder transitionStateBuilder() {
+        return com.commercetools.api.models.staged_quote.StagedQuoteTransitionStateActionBuilder.of();
+    }
+
     public static StagedQuoteUpdateActionBuilder of() {
         return new StagedQuoteUpdateActionBuilder();
     }

@@ -15,7 +15,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * DeliveryAddressSetMessage
+ *  <p>Generated after a successful Set Delivery Address update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -41,31 +41,40 @@ public interface DeliveryAddressSetMessage extends OrderMessage {
     String DELIVERY_ADDRESS_SET = "DeliveryAddressSet";
 
     /**
-     *
+     *  <p>Unique identifier of the Parcel.</p>
      */
     @NotNull
     @JsonProperty("deliveryId")
     public String getDeliveryId();
 
     /**
-     *
+     *  <p>Address after the Set Delivery Address update action.</p>
      */
     @Valid
     @JsonProperty("address")
     public Address getAddress();
 
     /**
-     *
+     *  <p>Address before the Set Delivery Address update action.</p>
      */
     @Valid
     @JsonProperty("oldAddress")
     public Address getOldAddress();
+
+    /**
+     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multi</code> ShippingMode.</p>
+     */
+
+    @JsonProperty("shippingKey")
+    public String getShippingKey();
 
     public void setDeliveryId(final String deliveryId);
 
     public void setAddress(final Address address);
 
     public void setOldAddress(final Address oldAddress);
+
+    public void setShippingKey(final String shippingKey);
 
     public static DeliveryAddressSetMessage of() {
         return new DeliveryAddressSetMessageImpl();
@@ -86,6 +95,7 @@ public interface DeliveryAddressSetMessage extends OrderMessage {
         instance.setDeliveryId(template.getDeliveryId());
         instance.setAddress(template.getAddress());
         instance.setOldAddress(template.getOldAddress());
+        instance.setShippingKey(template.getShippingKey());
         return instance;
     }
 

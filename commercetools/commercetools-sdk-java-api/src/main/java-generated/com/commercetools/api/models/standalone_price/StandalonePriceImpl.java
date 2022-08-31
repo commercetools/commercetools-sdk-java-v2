@@ -54,6 +54,8 @@ public class StandalonePriceImpl implements StandalonePrice, ModelBase {
 
     private com.commercetools.api.models.type.CustomFields custom;
 
+    private com.commercetools.api.models.standalone_price.StagedStandalonePrice staged;
+
     @JsonCreator
     StandalonePriceImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version,
             @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt,
@@ -69,7 +71,8 @@ public class StandalonePriceImpl implements StandalonePrice, ModelBase {
             @JsonProperty("validUntil") final java.time.ZonedDateTime validUntil,
             @JsonProperty("tiers") final java.util.List<com.commercetools.api.models.common.PriceTier> tiers,
             @JsonProperty("discounted") final com.commercetools.api.models.common.DiscountedPrice discounted,
-            @JsonProperty("custom") final com.commercetools.api.models.type.CustomFields custom) {
+            @JsonProperty("custom") final com.commercetools.api.models.type.CustomFields custom,
+            @JsonProperty("staged") final com.commercetools.api.models.standalone_price.StagedStandalonePrice staged) {
         this.id = id;
         this.version = version;
         this.createdAt = createdAt;
@@ -87,6 +90,7 @@ public class StandalonePriceImpl implements StandalonePrice, ModelBase {
         this.tiers = tiers;
         this.discounted = discounted;
         this.custom = custom;
+        this.staged = staged;
     }
 
     public StandalonePriceImpl() {
@@ -228,6 +232,14 @@ public class StandalonePriceImpl implements StandalonePrice, ModelBase {
         return this.custom;
     }
 
+    /**
+     *  <p>Staged changes of the StandalonePrice. Only present if the StandalonePrice has staged changes.</p>
+     */
+
+    public com.commercetools.api.models.standalone_price.StagedStandalonePrice getStaged() {
+        return this.staged;
+    }
+
     public void setId(final String id) {
         this.id = id;
     }
@@ -301,6 +313,10 @@ public class StandalonePriceImpl implements StandalonePrice, ModelBase {
         this.custom = custom;
     }
 
+    public void setStaged(final com.commercetools.api.models.standalone_price.StagedStandalonePrice staged) {
+        this.staged = staged;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -328,6 +344,7 @@ public class StandalonePriceImpl implements StandalonePrice, ModelBase {
                 .append(tiers, that.tiers)
                 .append(discounted, that.discounted)
                 .append(custom, that.custom)
+                .append(staged, that.staged)
                 .isEquals();
     }
 
@@ -350,6 +367,7 @@ public class StandalonePriceImpl implements StandalonePrice, ModelBase {
                 .append(tiers)
                 .append(discounted)
                 .append(custom)
+                .append(staged)
                 .toHashCode();
     }
 

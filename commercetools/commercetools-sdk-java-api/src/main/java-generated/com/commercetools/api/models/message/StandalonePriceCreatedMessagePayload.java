@@ -34,7 +34,7 @@ public interface StandalonePriceCreatedMessagePayload extends MessagePayload {
     String STANDALONE_PRICE_CREATED = "StandalonePriceCreated";
 
     /**
-     *  <p>The Standalone Price as it was created.</p>
+     *  <p>Standalone Price that was created.</p>
      */
     @NotNull
     @Valid

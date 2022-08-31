@@ -13,7 +13,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * ProductRevertStagedVariantChangesAction
+ *  <p>Reverts the staged version of a ProductVariant to the current version.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -32,7 +32,7 @@ public interface ProductRevertStagedVariantChangesAction extends ProductUpdateAc
     String REVERT_STAGED_VARIANT_CHANGES = "revertStagedVariantChanges";
 
     /**
-     *
+     *  <p>The <code>id</code> of the ProductVariant to revert.</p>
      */
     @NotNull
     @JsonProperty("variantId")

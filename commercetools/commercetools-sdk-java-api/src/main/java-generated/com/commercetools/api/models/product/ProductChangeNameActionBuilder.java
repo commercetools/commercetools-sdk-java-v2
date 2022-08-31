@@ -30,7 +30,7 @@ public class ProductChangeNameActionBuilder implements Builder<ProductChangeName
     private Boolean staged;
 
     /**
-     *
+     *  <p>Value to set. Must not be empty.</p>
      */
 
     public ProductChangeNameActionBuilder name(
@@ -40,7 +40,7 @@ public class ProductChangeNameActionBuilder implements Builder<ProductChangeName
     }
 
     /**
-     *
+     *  <p>Value to set. Must not be empty.</p>
      */
 
     public ProductChangeNameActionBuilder name(final com.commercetools.api.models.common.LocalizedString name) {
@@ -49,7 +49,7 @@ public class ProductChangeNameActionBuilder implements Builder<ProductChangeName
     }
 
     /**
-     *
+     *  <p>If <code>true</code>, only the staged <code>name</code> is updated. If <code>false</code>, both the current and staged <code>name</code> are updated.</p>
      */
 
     public ProductChangeNameActionBuilder staged(@Nullable final Boolean staged) {

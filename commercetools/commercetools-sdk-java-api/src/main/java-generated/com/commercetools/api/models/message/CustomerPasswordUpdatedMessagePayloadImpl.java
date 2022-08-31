@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * CustomerPasswordUpdatedMessagePayload
+ *  <p>Generated after a successful Reset Customer's Password, Reset Customer's Password in a Store, Change Customer's Password, or Change Customer's Password in a Store request. This Message is also produced during equivalent requests to the My Customer Profile endpoint.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomerPasswordUpdatedMessagePayloadImpl implements CustomerPasswordUpdatedMessagePayload, ModelBase {
@@ -43,7 +43,7 @@ public class CustomerPasswordUpdatedMessagePayloadImpl implements CustomerPasswo
     }
 
     /**
-     *  <p>true, if password has been updated during Customer's Password Reset workflow.</p>
+     *  <p>Whether the Customer's password was updated during the Customer's Password Reset workflow.</p>
      */
 
     public Boolean getReset() {

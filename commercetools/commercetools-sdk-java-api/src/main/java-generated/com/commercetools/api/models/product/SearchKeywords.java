@@ -14,7 +14,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * SearchKeywords
+ *  <p>Search keywords are JSON objects primarily used by Product Suggestions, but are also considered for a full text search. The keys are of type Locale, and the values are an array of SearchKeyword.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

@@ -35,14 +35,14 @@ public interface ProductChangePriceAction extends ProductUpdateAction {
     String CHANGE_PRICE = "changePrice";
 
     /**
-     *  <p>ID of the EmbeddedPrice</p>
+     *  <p>The <code>id</code> of the Embedded Price to update.</p>
      */
     @NotNull
     @JsonProperty("priceId")
     public String getPriceId();
 
     /**
-     *
+     *  <p>Value to set.</p>
      */
     @NotNull
     @Valid
@@ -50,7 +50,7 @@ public interface ProductChangePriceAction extends ProductUpdateAction {
     public PriceDraft getPrice();
 
     /**
-     *
+     *  <p>If <code>true</code>, only the staged Embedded Price is updated. If <code>false</code>, both the current and staged Embedded Price are updated.</p>
      */
 
     @JsonProperty("staged")

@@ -35,7 +35,7 @@ public class ProductRemoveImageActionBuilder implements Builder<ProductRemoveIma
     private Boolean staged;
 
     /**
-     *
+     *  <p>The <code>id</code> of the ProductVariant to update.</p>
      */
 
     public ProductRemoveImageActionBuilder variantId(@Nullable final Long variantId) {
@@ -44,7 +44,7 @@ public class ProductRemoveImageActionBuilder implements Builder<ProductRemoveIma
     }
 
     /**
-     *
+     *  <p>The <code>sku</code> of the ProductVariant to update.</p>
      */
 
     public ProductRemoveImageActionBuilder sku(@Nullable final String sku) {
@@ -53,7 +53,7 @@ public class ProductRemoveImageActionBuilder implements Builder<ProductRemoveIma
     }
 
     /**
-     *  <p>The URL of the image.</p>
+     *  <p>The URL of the image to remove.</p>
      */
 
     public ProductRemoveImageActionBuilder imageUrl(final String imageUrl) {
@@ -62,7 +62,7 @@ public class ProductRemoveImageActionBuilder implements Builder<ProductRemoveIma
     }
 
     /**
-     *
+     *  <p>If <code>true</code>, only the staged image is removed. If <code>false</code>, both the current and staged image is removed.</p>
      */
 
     public ProductRemoveImageActionBuilder staged(@Nullable final Boolean staged) {

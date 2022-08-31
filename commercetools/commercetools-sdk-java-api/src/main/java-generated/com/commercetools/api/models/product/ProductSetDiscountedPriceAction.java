@@ -15,7 +15,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * ProductSetDiscountedPriceAction
+ *  <p>Produces the ProductPriceExternalDiscountSet Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -34,21 +34,21 @@ public interface ProductSetDiscountedPriceAction extends ProductUpdateAction {
     String SET_DISCOUNTED_PRICE = "setDiscountedPrice";
 
     /**
-     *
+     *  <p>The <code>id</code> of the Embedded Price to set the Discount.</p>
      */
     @NotNull
     @JsonProperty("priceId")
     public String getPriceId();
 
     /**
-     *
+     *  <p>If <code>true</code>, only the staged Embedded Price is updated. If <code>false</code>, both the current and staged Embedded Price are updated.</p>
      */
 
     @JsonProperty("staged")
     public Boolean getStaged();
 
     /**
-     *
+     *  <p>Value to set. If empty, any existing value will be removed. The referenced ProductDiscount must have the Type <code>external</code>, be active, and its predicate must match the referenced Price.</p>
      */
     @Valid
     @JsonProperty("discounted")

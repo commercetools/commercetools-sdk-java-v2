@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * OrderReturnShipmentStateChangedMessagePayload
+ *  <p>Generated after a successful Set Return Shipment State update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderReturnShipmentStateChangedMessagePayloadImpl
@@ -48,7 +48,7 @@ public class OrderReturnShipmentStateChangedMessagePayloadImpl
     }
 
     /**
-     *
+     *  <p>Unique identifier of the ReturnItem.</p>
      */
 
     public String getReturnItemId() {
@@ -56,7 +56,7 @@ public class OrderReturnShipmentStateChangedMessagePayloadImpl
     }
 
     /**
-     *
+     *  <p>State of the ReturnItem after the Set Return Shipment State update action.</p>
      */
 
     public com.commercetools.api.models.order.ReturnShipmentState getReturnShipmentState() {

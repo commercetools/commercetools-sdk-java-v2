@@ -146,7 +146,7 @@ public class StandalonePriceDraftBuilder implements Builder<StandalonePriceDraft
     }
 
     /**
-     *  <p>Sets the date from which the Price is valid.</p>
+     *  <p>Sets the date from which the Price is valid. Must be at least 1 ms earlier than <code>validUntil</code>.</p>
      */
 
     public StandalonePriceDraftBuilder validFrom(@Nullable final java.time.ZonedDateTime validFrom) {
@@ -155,7 +155,7 @@ public class StandalonePriceDraftBuilder implements Builder<StandalonePriceDraft
     }
 
     /**
-     *  <p>Sets the date until the Price is valid.</p>
+     *  <p>Sets the date until the Price is valid. Must be at least 1 ms later than <code>validFrom</code>.</p>
      */
 
     public StandalonePriceDraftBuilder validUntil(@Nullable final java.time.ZonedDateTime validUntil) {

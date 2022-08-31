@@ -4,8 +4,6 @@ package com.commercetools.api.models.message;
 import java.util.*;
 import java.util.function.Function;
 
-import javax.annotation.Nullable;
-
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,6 +15,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     ProductSelectionProductAddedMessagePayload productSelectionProductAddedMessagePayload = ProductSelectionProductAddedMessagePayload.builder()
  *             .product(productBuilder -> productBuilder)
+ *             .variantSelection(variantSelectionBuilder -> variantSelectionBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -27,11 +26,10 @@ public class ProductSelectionProductAddedMessagePayloadBuilder
 
     private com.commercetools.api.models.product.ProductReference product;
 
-    @Nullable
     private com.commercetools.api.models.product_selection.ProductVariantSelection variantSelection;
 
     /**
-     *  <p>Reference to a Product.</p>
+     *  <p>Product that was added to the Product Selection.</p>
      */
 
     public ProductSelectionProductAddedMessagePayloadBuilder product(
@@ -41,7 +39,7 @@ public class ProductSelectionProductAddedMessagePayloadBuilder
     }
 
     /**
-     *  <p>Reference to a Product.</p>
+     *  <p>Product that was added to the Product Selection.</p>
      */
 
     public ProductSelectionProductAddedMessagePayloadBuilder product(
@@ -51,17 +49,17 @@ public class ProductSelectionProductAddedMessagePayloadBuilder
     }
 
     /**
-     *  <p>Polymorphic base type for Product Variant Selections. The actual type is determined by the <code>type</code> field.</p>
+     *  <p>Product Variant Selection after the Add Product update action.</p>
      */
 
     public ProductSelectionProductAddedMessagePayloadBuilder variantSelection(
-            @Nullable final com.commercetools.api.models.product_selection.ProductVariantSelection variantSelection) {
+            final com.commercetools.api.models.product_selection.ProductVariantSelection variantSelection) {
         this.variantSelection = variantSelection;
         return this;
     }
 
     /**
-     *  <p>Polymorphic base type for Product Variant Selections. The actual type is determined by the <code>type</code> field.</p>
+     *  <p>Product Variant Selection after the Add Product update action.</p>
      */
 
     public ProductSelectionProductAddedMessagePayloadBuilder variantSelection(
@@ -76,13 +74,14 @@ public class ProductSelectionProductAddedMessagePayloadBuilder
         return this.product;
     }
 
-    @Nullable
     public com.commercetools.api.models.product_selection.ProductVariantSelection getVariantSelection() {
         return this.variantSelection;
     }
 
     public ProductSelectionProductAddedMessagePayload build() {
         Objects.requireNonNull(product, ProductSelectionProductAddedMessagePayload.class + ": product is missing");
+        Objects.requireNonNull(variantSelection,
+            ProductSelectionProductAddedMessagePayload.class + ": variantSelection is missing");
         return new ProductSelectionProductAddedMessagePayloadImpl(product, variantSelection);
     }
 

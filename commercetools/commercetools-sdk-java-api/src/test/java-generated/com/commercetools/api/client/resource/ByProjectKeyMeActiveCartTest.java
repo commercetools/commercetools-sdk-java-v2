@@ -64,12 +64,21 @@ public class ByProjectKeyMeActiveCartTest {
     @DataProvider
     public static Object[][] requestWithMethodParameters() {
         return new Object[][] {
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .me()
+                        .activeCart()
+                        .get()
+                        .withExpand("expand")
+                        .createHttpRequest(), "get", "/test_projectKey/me/active-cart?expand=expand", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey").me().activeCart().get().createHttpRequest(),
                         "get", "/test_projectKey/me/active-cart", } };
     }
 
     @DataProvider
     public static Object[][] executeMethodParameters() {
-        return new Object[][] { new Object[] { apiRoot.withProjectKey("test_projectKey").me().activeCart().get(), } };
+        return new Object[][] {
+                new Object[] {
+                        apiRoot.withProjectKey("test_projectKey").me().activeCart().get().withExpand("expand"), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey").me().activeCart().get(), } };
     }
 }

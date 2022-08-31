@@ -38,7 +38,7 @@ public class ProductSetAttributeActionBuilder implements Builder<ProductSetAttri
     private Boolean staged;
 
     /**
-     *
+     *  <p>The <code>id</code> of the ProductVariant to update.</p>
      */
 
     public ProductSetAttributeActionBuilder variantId(@Nullable final Long variantId) {
@@ -47,7 +47,7 @@ public class ProductSetAttributeActionBuilder implements Builder<ProductSetAttri
     }
 
     /**
-     *
+     *  <p>The <code>sku</code> of the ProductVariant to update.</p>
      */
 
     public ProductSetAttributeActionBuilder sku(@Nullable final String sku) {
@@ -56,7 +56,7 @@ public class ProductSetAttributeActionBuilder implements Builder<ProductSetAttri
     }
 
     /**
-     *
+     *  <p>The name of the Attribute to set.</p>
      */
 
     public ProductSetAttributeActionBuilder name(final String name) {
@@ -65,7 +65,16 @@ public class ProductSetAttributeActionBuilder implements Builder<ProductSetAttri
     }
 
     /**
-     *  <p>If the attribute exists and the value is omitted or set to <code>null</code>, the attribute is removed. If the attribute exists and a value is provided, the new value is applied. If the attribute does not exist and a value is provided, it is added as a new attribute.</p>
+     *  <p>Value to set for the Attribute. If empty, any existing value will be removed.</p>
+     *  <p>The AttributeType determines the format of the Attribute <code>value</code> to be provided:</p>
+     *  <ul>
+     *   <li>For Enum Type and Localized Enum Type, use the <code>key</code> of the Plain Enum Value or Localized Enum Value objects, or the complete objects as <code>value</code>.</li>
+     *   <li>For Localizable Text Type, use the LocalizedString object as <code>value</code>.</li>
+     *   <li>For Money Type Attributes, use the Money object as <code>value</code>.</li>
+     *   <li>For Set Type Attributes, use the entire <code>set</code> object as <code>value</code>.</li>
+     *   <li>For Nested Type Attributes, use the list of values of all Attributes of the nested Product as <code>value</code>.</li>
+     *   <li>For Reference Type Attributes, use the Reference object as <code>value</code>.</li>
+     *  </ul>
      */
 
     public ProductSetAttributeActionBuilder value(@Nullable final java.lang.Object value) {
@@ -74,7 +83,7 @@ public class ProductSetAttributeActionBuilder implements Builder<ProductSetAttri
     }
 
     /**
-     *
+     *  <p>If <code>true</code>, only the staged Attribute is set. If <code>false</code>, both current and staged Attribute is set.</p>
      */
 
     public ProductSetAttributeActionBuilder staged(@Nullable final Boolean staged) {

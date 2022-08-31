@@ -102,7 +102,7 @@ public class ImportOperationBuilder implements Builder<ImportOperation> {
     }
 
     /**
-     *  <p>The version of the impmorted resource when the import was successful.</p>
+     *  <p>The version of the imported resource when the import was successful.</p>
      */
 
     public ImportOperationBuilder resourceVersion(@Nullable final Long resourceVersion) {

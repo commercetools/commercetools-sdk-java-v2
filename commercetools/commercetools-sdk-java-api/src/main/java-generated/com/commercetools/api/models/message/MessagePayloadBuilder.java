@@ -195,14 +195,6 @@ public class MessagePayloadBuilder {
         return com.commercetools.api.models.message.OrderPaymentStateChangedMessagePayloadBuilder.of();
     }
 
-    public com.commercetools.api.models.message.OrderReturnInfoAddedMessagePayloadBuilder returnInfoAddedBuilder() {
-        return com.commercetools.api.models.message.OrderReturnInfoAddedMessagePayloadBuilder.of();
-    }
-
-    public com.commercetools.api.models.message.OrderReturnInfoSetMessagePayloadBuilder returnInfoSetBuilder() {
-        return com.commercetools.api.models.message.OrderReturnInfoSetMessagePayloadBuilder.of();
-    }
-
     public com.commercetools.api.models.message.OrderReturnShipmentStateChangedMessagePayloadBuilder orderReturnShipmentStateChangedBuilder() {
         return com.commercetools.api.models.message.OrderReturnShipmentStateChangedMessagePayloadBuilder.of();
     }
@@ -375,8 +367,24 @@ public class MessagePayloadBuilder {
         return com.commercetools.api.models.message.QuoteRequestStateChangedMessagePayloadBuilder.of();
     }
 
+    public com.commercetools.api.models.message.QuoteRequestStateTransitionMessagePayloadBuilder quoteRequestStateTransitionBuilder() {
+        return com.commercetools.api.models.message.QuoteRequestStateTransitionMessagePayloadBuilder.of();
+    }
+
     public com.commercetools.api.models.message.QuoteStateChangedMessagePayloadBuilder quoteStateChangedBuilder() {
         return com.commercetools.api.models.message.QuoteStateChangedMessagePayloadBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.QuoteStateTransitionMessagePayloadBuilder quoteStateTransitionBuilder() {
+        return com.commercetools.api.models.message.QuoteStateTransitionMessagePayloadBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.ReturnInfoAddedMessagePayloadBuilder returnInfoAddedBuilder() {
+        return com.commercetools.api.models.message.ReturnInfoAddedMessagePayloadBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.ReturnInfoSetMessagePayloadBuilder returnInfoSetBuilder() {
+        return com.commercetools.api.models.message.ReturnInfoSetMessagePayloadBuilder.of();
     }
 
     public com.commercetools.api.models.message.ReviewCreatedMessagePayloadBuilder reviewCreatedBuilder() {
@@ -411,6 +419,10 @@ public class MessagePayloadBuilder {
         return com.commercetools.api.models.message.StagedQuoteStateChangedMessagePayloadBuilder.of();
     }
 
+    public com.commercetools.api.models.message.StagedQuoteStateTransitionMessagePayloadBuilder stagedQuoteStateTransitionBuilder() {
+        return com.commercetools.api.models.message.StagedQuoteStateTransitionMessagePayloadBuilder.of();
+    }
+
     public com.commercetools.api.models.message.StagedQuoteValidToSetMessagePayloadBuilder stagedQuoteValidToSetBuilder() {
         return com.commercetools.api.models.message.StagedQuoteValidToSetMessagePayloadBuilder.of();
     }
@@ -431,6 +443,10 @@ public class MessagePayloadBuilder {
         return com.commercetools.api.models.message.StandalonePriceExternalDiscountSetMessagePayloadBuilder.of();
     }
 
+    public com.commercetools.api.models.message.StandalonePriceStagedChangesAppliedMessagePayloadBuilder standalonePriceStagedChangesAppliedBuilder() {
+        return com.commercetools.api.models.message.StandalonePriceStagedChangesAppliedMessagePayloadBuilder.of();
+    }
+
     public com.commercetools.api.models.message.StandalonePriceValueChangedMessagePayloadBuilder standalonePriceValueChangedBuilder() {
         return com.commercetools.api.models.message.StandalonePriceValueChangedMessagePayloadBuilder.of();
     }
@@ -445,6 +461,10 @@ public class MessagePayloadBuilder {
 
     public com.commercetools.api.models.message.StoreDistributionChannelsChangedMessagePayloadBuilder storeDistributionChannelsChangedBuilder() {
         return com.commercetools.api.models.message.StoreDistributionChannelsChangedMessagePayloadBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.StoreLanguagesChangedMessagePayloadBuilder storeLanguagesChangedBuilder() {
+        return com.commercetools.api.models.message.StoreLanguagesChangedMessagePayloadBuilder.of();
     }
 
     public com.commercetools.api.models.message.StoreProductSelectionsChangedMessagePayloadBuilder storeProductSelectionsChangedBuilder() {

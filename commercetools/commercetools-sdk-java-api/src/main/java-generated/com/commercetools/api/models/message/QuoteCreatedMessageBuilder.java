@@ -23,6 +23,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .sequenceNumber(0.3)
  *             .resource(resourceBuilder -> resourceBuilder)
  *             .resourceVersion(0.3)
+ *             .quote(quoteBuilder -> quoteBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -53,8 +54,10 @@ public class QuoteCreatedMessageBuilder implements Builder<QuoteCreatedMessage> 
     @Nullable
     private com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers;
 
+    private com.commercetools.api.models.quote.Quote quote;
+
     /**
-     *  <p>Unique identifier of the Message.</p>
+     *  <p>Unique identifier of the Message. Can be used to track which Messages have been processed.</p>
      */
 
     public QuoteCreatedMessageBuilder id(final String id) {
@@ -63,7 +66,7 @@ public class QuoteCreatedMessageBuilder implements Builder<QuoteCreatedMessage> 
     }
 
     /**
-     *
+     *  <p>Version of a resource. In case of Messages, this is always <code>1</code>.</p>
      */
 
     public QuoteCreatedMessageBuilder version(final Long version) {
@@ -72,7 +75,7 @@ public class QuoteCreatedMessageBuilder implements Builder<QuoteCreatedMessage> 
     }
 
     /**
-     *
+     *  <p>Date and time (UTC) the Message was generated.</p>
      */
 
     public QuoteCreatedMessageBuilder createdAt(final java.time.ZonedDateTime createdAt) {
@@ -81,7 +84,7 @@ public class QuoteCreatedMessageBuilder implements Builder<QuoteCreatedMessage> 
     }
 
     /**
-     *
+     *  <p>Value of <code>createdAt</code>.</p>
      */
 
     public QuoteCreatedMessageBuilder lastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {
@@ -90,7 +93,7 @@ public class QuoteCreatedMessageBuilder implements Builder<QuoteCreatedMessage> 
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>Value of <code>createdBy</code>.</p>
      */
 
     public QuoteCreatedMessageBuilder lastModifiedBy(
@@ -100,7 +103,7 @@ public class QuoteCreatedMessageBuilder implements Builder<QuoteCreatedMessage> 
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>Value of <code>createdBy</code>.</p>
      */
 
     public QuoteCreatedMessageBuilder lastModifiedBy(
@@ -130,7 +133,7 @@ public class QuoteCreatedMessageBuilder implements Builder<QuoteCreatedMessage> 
     }
 
     /**
-     *
+     *  <p>Message number in relation to other Messages for a given resource. The <code>sequenceNumber</code> of the next Message for the resource is the successor of the <code>sequenceNumber</code> of the current Message. Meaning, the <code>sequenceNumber</code> of the next Message equals the <code>sequenceNumber</code> of the current Message + 1. <code>sequenceNumber</code> can be used to ensure that Messages are processed in the correct order for a particular resource.</p>
      */
 
     public QuoteCreatedMessageBuilder sequenceNumber(final Long sequenceNumber) {
@@ -139,7 +142,7 @@ public class QuoteCreatedMessageBuilder implements Builder<QuoteCreatedMessage> 
     }
 
     /**
-     *  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
+     *  <p>Reference to the resource on which the change or action was performed.</p>
      */
 
     public QuoteCreatedMessageBuilder resource(final com.commercetools.api.models.common.Reference resource) {
@@ -148,7 +151,7 @@ public class QuoteCreatedMessageBuilder implements Builder<QuoteCreatedMessage> 
     }
 
     /**
-     *  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
+     *  <p>Reference to the resource on which the change or action was performed.</p>
      */
 
     public QuoteCreatedMessageBuilder resource(
@@ -158,7 +161,7 @@ public class QuoteCreatedMessageBuilder implements Builder<QuoteCreatedMessage> 
     }
 
     /**
-     *
+     *  <p>Version of the resource on which the change or action was performed.</p>
      */
 
     public QuoteCreatedMessageBuilder resourceVersion(final Long resourceVersion) {
@@ -167,7 +170,7 @@ public class QuoteCreatedMessageBuilder implements Builder<QuoteCreatedMessage> 
     }
 
     /**
-     *
+     *  <p>User-provided identifiers of the resource, such as <code>key</code> or <code>externalId</code>. Only present if the resource has such identifiers.</p>
      */
 
     public QuoteCreatedMessageBuilder resourceUserProvidedIdentifiers(
@@ -179,12 +182,31 @@ public class QuoteCreatedMessageBuilder implements Builder<QuoteCreatedMessage> 
     }
 
     /**
-     *
+     *  <p>User-provided identifiers of the resource, such as <code>key</code> or <code>externalId</code>. Only present if the resource has such identifiers.</p>
      */
 
     public QuoteCreatedMessageBuilder resourceUserProvidedIdentifiers(
             @Nullable final com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers) {
         this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
+        return this;
+    }
+
+    /**
+     *  <p>Quote that was created.</p>
+     */
+
+    public QuoteCreatedMessageBuilder quote(
+            Function<com.commercetools.api.models.quote.QuoteBuilder, com.commercetools.api.models.quote.QuoteBuilder> builder) {
+        this.quote = builder.apply(com.commercetools.api.models.quote.QuoteBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Quote that was created.</p>
+     */
+
+    public QuoteCreatedMessageBuilder quote(final com.commercetools.api.models.quote.Quote quote) {
+        this.quote = quote;
         return this;
     }
 
@@ -231,6 +253,10 @@ public class QuoteCreatedMessageBuilder implements Builder<QuoteCreatedMessage> 
         return this.resourceUserProvidedIdentifiers;
     }
 
+    public com.commercetools.api.models.quote.Quote getQuote() {
+        return this.quote;
+    }
+
     public QuoteCreatedMessage build() {
         Objects.requireNonNull(id, QuoteCreatedMessage.class + ": id is missing");
         Objects.requireNonNull(version, QuoteCreatedMessage.class + ": version is missing");
@@ -239,8 +265,9 @@ public class QuoteCreatedMessageBuilder implements Builder<QuoteCreatedMessage> 
         Objects.requireNonNull(sequenceNumber, QuoteCreatedMessage.class + ": sequenceNumber is missing");
         Objects.requireNonNull(resource, QuoteCreatedMessage.class + ": resource is missing");
         Objects.requireNonNull(resourceVersion, QuoteCreatedMessage.class + ": resourceVersion is missing");
+        Objects.requireNonNull(quote, QuoteCreatedMessage.class + ": quote is missing");
         return new QuoteCreatedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
-            sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers);
+            sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, quote);
     }
 
     /**
@@ -248,7 +275,7 @@ public class QuoteCreatedMessageBuilder implements Builder<QuoteCreatedMessage> 
      */
     public QuoteCreatedMessage buildUnchecked() {
         return new QuoteCreatedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
-            sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers);
+            sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, quote);
     }
 
     public static QuoteCreatedMessageBuilder of() {
@@ -267,6 +294,7 @@ public class QuoteCreatedMessageBuilder implements Builder<QuoteCreatedMessage> 
         builder.resource = template.getResource();
         builder.resourceVersion = template.getResourceVersion();
         builder.resourceUserProvidedIdentifiers = template.getResourceUserProvidedIdentifiers();
+        builder.quote = template.getQuote();
         return builder;
     }
 

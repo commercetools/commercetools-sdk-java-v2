@@ -14,7 +14,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * OrderBillingAddressSetMessagePayload
+ *  <p>Generated after a successful Set Billing Address update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -32,14 +32,14 @@ public interface OrderBillingAddressSetMessagePayload extends OrderMessagePayloa
     String ORDER_BILLING_ADDRESS_SET = "OrderBillingAddressSet";
 
     /**
-     *
+     *  <p>Billing address on the Order after the Set Billing Address update action.</p>
      */
     @Valid
     @JsonProperty("address")
     public Address getAddress();
 
     /**
-     *
+     *  <p>Billing address on the Order before the Set Billing Address update action.</p>
      */
     @Valid
     @JsonProperty("oldAddress")

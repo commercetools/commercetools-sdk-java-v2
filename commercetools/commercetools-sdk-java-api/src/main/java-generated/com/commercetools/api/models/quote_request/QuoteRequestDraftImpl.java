@@ -30,16 +30,20 @@ public class QuoteRequestDraftImpl implements QuoteRequestDraft, ModelBase {
 
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
 
+    private com.commercetools.api.models.state.StateReference state;
+
     @JsonCreator
     QuoteRequestDraftImpl(@JsonProperty("cart") final com.commercetools.api.models.cart.CartResourceIdentifier cart,
             @JsonProperty("cartVersion") final Long cartVersion, @JsonProperty("key") final String key,
             @JsonProperty("comment") final String comment,
-            @JsonProperty("custom") final com.commercetools.api.models.type.CustomFieldsDraft custom) {
+            @JsonProperty("custom") final com.commercetools.api.models.type.CustomFieldsDraft custom,
+            @JsonProperty("state") final com.commercetools.api.models.state.StateReference state) {
         this.cart = cart;
         this.cartVersion = cartVersion;
         this.key = key;
         this.comment = comment;
         this.custom = custom;
+        this.state = state;
     }
 
     public QuoteRequestDraftImpl() {
@@ -70,7 +74,7 @@ public class QuoteRequestDraftImpl implements QuoteRequestDraft, ModelBase {
     }
 
     /**
-     *  <p>Text message included in the request.</p>
+     *  <p>Message from the Buyer included in the Quote Request.</p>
      */
 
     public String getComment() {
@@ -83,6 +87,14 @@ public class QuoteRequestDraftImpl implements QuoteRequestDraft, ModelBase {
 
     public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
         return this.custom;
+    }
+
+    /**
+     *  <p>State of this Quote Request. This reference can point to a State in a custom workflow.</p>
+     */
+
+    public com.commercetools.api.models.state.StateReference getState() {
+        return this.state;
     }
 
     public void setCart(final com.commercetools.api.models.cart.CartResourceIdentifier cart) {
@@ -105,6 +117,10 @@ public class QuoteRequestDraftImpl implements QuoteRequestDraft, ModelBase {
         this.custom = custom;
     }
 
+    public void setState(final com.commercetools.api.models.state.StateReference state) {
+        this.state = state;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -120,6 +136,7 @@ public class QuoteRequestDraftImpl implements QuoteRequestDraft, ModelBase {
                 .append(key, that.key)
                 .append(comment, that.comment)
                 .append(custom, that.custom)
+                .append(state, that.state)
                 .isEquals();
     }
 
@@ -130,6 +147,7 @@ public class QuoteRequestDraftImpl implements QuoteRequestDraft, ModelBase {
                 .append(key)
                 .append(comment)
                 .append(custom)
+                .append(state)
                 .toHashCode();
     }
 

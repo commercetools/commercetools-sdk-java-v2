@@ -15,7 +15,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * ParcelTrackingDataUpdatedMessagePayload
+ *  <p>Generated after a successful Set Parcel TrackingData update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -35,31 +35,40 @@ public interface ParcelTrackingDataUpdatedMessagePayload extends OrderMessagePay
     String PARCEL_TRACKING_DATA_UPDATED = "ParcelTrackingDataUpdated";
 
     /**
-     *
+     *  <p>Unique identifier of the Delivery.</p>
      */
     @NotNull
     @JsonProperty("deliveryId")
     public String getDeliveryId();
 
     /**
-     *
+     *  <p>Unique identifier of the Parcel.</p>
      */
     @NotNull
     @JsonProperty("parcelId")
     public String getParcelId();
 
     /**
-     *
+     *  <p>The Tracking Data that was added to the Parcel.</p>
      */
     @Valid
     @JsonProperty("trackingData")
     public TrackingData getTrackingData();
+
+    /**
+     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multi</code> ShippingMode.</p>
+     */
+
+    @JsonProperty("shippingKey")
+    public String getShippingKey();
 
     public void setDeliveryId(final String deliveryId);
 
     public void setParcelId(final String parcelId);
 
     public void setTrackingData(final TrackingData trackingData);
+
+    public void setShippingKey(final String shippingKey);
 
     public static ParcelTrackingDataUpdatedMessagePayload of() {
         return new ParcelTrackingDataUpdatedMessagePayloadImpl();
@@ -70,6 +79,7 @@ public interface ParcelTrackingDataUpdatedMessagePayload extends OrderMessagePay
         instance.setDeliveryId(template.getDeliveryId());
         instance.setParcelId(template.getParcelId());
         instance.setTrackingData(template.getTrackingData());
+        instance.setShippingKey(template.getShippingKey());
         return instance;
     }
 

@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * ProductPriceDiscountsSetUpdatedPrice
+ *  <p>Details about a Embedded Price that was updated due to a Discount. Specific to ProductPriceDiscountsSet Message.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductPriceDiscountsSetUpdatedPriceImpl implements ProductPriceDiscountsSetUpdatedPrice, ModelBase {
@@ -50,7 +50,7 @@ public class ProductPriceDiscountsSetUpdatedPriceImpl implements ProductPriceDis
     }
 
     /**
-     *
+     *  <p>Unique identifier of the ProductVariant for which the Discount was set.</p>
      */
 
     public Integer getVariantId() {
@@ -58,7 +58,7 @@ public class ProductPriceDiscountsSetUpdatedPriceImpl implements ProductPriceDis
     }
 
     /**
-     *
+     *  <p>Key of the ProductVariant for which Discount was set.</p>
      */
 
     public String getVariantKey() {
@@ -66,7 +66,7 @@ public class ProductPriceDiscountsSetUpdatedPriceImpl implements ProductPriceDis
     }
 
     /**
-     *
+     *  <p>SKU of the ProductVariant for which Discount was set.</p>
      */
 
     public String getSku() {
@@ -74,7 +74,7 @@ public class ProductPriceDiscountsSetUpdatedPriceImpl implements ProductPriceDis
     }
 
     /**
-     *
+     *  <p>Unique identifier of the Embedded Price.</p>
      */
 
     public String getPriceId() {
@@ -82,7 +82,7 @@ public class ProductPriceDiscountsSetUpdatedPriceImpl implements ProductPriceDis
     }
 
     /**
-     *
+     *  <p>Discounted Price for the ProductVariant for which Discount was set.</p>
      */
 
     public com.commercetools.api.models.common.DiscountedPrice getDiscounted() {
@@ -90,7 +90,7 @@ public class ProductPriceDiscountsSetUpdatedPriceImpl implements ProductPriceDis
     }
 
     /**
-     *
+     *  <p>Whether the update was only applied to the staged ProductProjection.</p>
      */
 
     public Boolean getStaged() {

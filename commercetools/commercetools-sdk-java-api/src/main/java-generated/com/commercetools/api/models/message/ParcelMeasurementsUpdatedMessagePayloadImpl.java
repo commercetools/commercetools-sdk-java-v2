@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * ParcelMeasurementsUpdatedMessagePayload
+ *  <p>Generated after a successful Set Parcel Measurements update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ParcelMeasurementsUpdatedMessagePayloadImpl implements ParcelMeasurementsUpdatedMessagePayload, ModelBase {
@@ -28,13 +28,17 @@ public class ParcelMeasurementsUpdatedMessagePayloadImpl implements ParcelMeasur
 
     private com.commercetools.api.models.order.ParcelMeasurements measurements;
 
+    private String shippingKey;
+
     @JsonCreator
     ParcelMeasurementsUpdatedMessagePayloadImpl(@JsonProperty("deliveryId") final String deliveryId,
             @JsonProperty("parcelId") final String parcelId,
-            @JsonProperty("measurements") final com.commercetools.api.models.order.ParcelMeasurements measurements) {
+            @JsonProperty("measurements") final com.commercetools.api.models.order.ParcelMeasurements measurements,
+            @JsonProperty("shippingKey") final String shippingKey) {
         this.deliveryId = deliveryId;
         this.parcelId = parcelId;
         this.measurements = measurements;
+        this.shippingKey = shippingKey;
         this.type = PARCEL_MEASUREMENTS_UPDATED;
     }
 
@@ -51,7 +55,7 @@ public class ParcelMeasurementsUpdatedMessagePayloadImpl implements ParcelMeasur
     }
 
     /**
-     *
+     *  <p>Unique identifier of the Delivery.</p>
      */
 
     public String getDeliveryId() {
@@ -59,7 +63,7 @@ public class ParcelMeasurementsUpdatedMessagePayloadImpl implements ParcelMeasur
     }
 
     /**
-     *
+     *  <p>Unique identifier of the Parcel.</p>
      */
 
     public String getParcelId() {
@@ -67,11 +71,19 @@ public class ParcelMeasurementsUpdatedMessagePayloadImpl implements ParcelMeasur
     }
 
     /**
-     *
+     *  <p>The Parcel Measurements that were set on the Parcel.</p>
      */
 
     public com.commercetools.api.models.order.ParcelMeasurements getMeasurements() {
         return this.measurements;
+    }
+
+    /**
+     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multi</code> ShippingMode.</p>
+     */
+
+    public String getShippingKey() {
+        return this.shippingKey;
     }
 
     public void setDeliveryId(final String deliveryId) {
@@ -84,6 +96,10 @@ public class ParcelMeasurementsUpdatedMessagePayloadImpl implements ParcelMeasur
 
     public void setMeasurements(final com.commercetools.api.models.order.ParcelMeasurements measurements) {
         this.measurements = measurements;
+    }
+
+    public void setShippingKey(final String shippingKey) {
+        this.shippingKey = shippingKey;
     }
 
     @Override
@@ -100,6 +116,7 @@ public class ParcelMeasurementsUpdatedMessagePayloadImpl implements ParcelMeasur
                 .append(deliveryId, that.deliveryId)
                 .append(parcelId, that.parcelId)
                 .append(measurements, that.measurements)
+                .append(shippingKey, that.shippingKey)
                 .isEquals();
     }
 
@@ -109,6 +126,7 @@ public class ParcelMeasurementsUpdatedMessagePayloadImpl implements ParcelMeasur
                 .append(deliveryId)
                 .append(parcelId)
                 .append(measurements)
+                .append(shippingKey)
                 .toHashCode();
     }
 

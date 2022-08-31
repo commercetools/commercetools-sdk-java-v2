@@ -16,7 +16,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>ResourceIdentifier to a Product.</p>
+ *  <p>ResourceIdentifier to a Product. Either <code>id</code> or <code>key</code> is required.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductResourceIdentifierImpl implements ProductResourceIdentifier, ModelBase {
@@ -47,7 +47,7 @@ public class ProductResourceIdentifierImpl implements ProductResourceIdentifier,
     }
 
     /**
-     *  <p>Unique identifier of the referenced Product. Either <code>id</code> or <code>key</code> is required.</p>
+     *  <p>Unique identifier of the referenced Product.</p>
      */
 
     public String getId() {
@@ -55,7 +55,7 @@ public class ProductResourceIdentifierImpl implements ProductResourceIdentifier,
     }
 
     /**
-     *  <p>User-defined unique identifier of the referenced Product. Either <code>id</code> or <code>key</code> is required.</p>
+     *  <p>User-defined unique identifier of the referenced Product.</p>
      */
 
     public String getKey() {

@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * StoreCreatedMessage
+ *  <p>Generated after a successful Create Store request.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StoreCreatedMessageImpl implements StoreCreatedMessage, ModelBase {
@@ -94,7 +94,7 @@ public class StoreCreatedMessageImpl implements StoreCreatedMessage, ModelBase {
     }
 
     /**
-     *  <p>Unique identifier of the Message.</p>
+     *  <p>Unique identifier of the Message. Can be used to track which Messages have been processed.</p>
      */
 
     public String getId() {
@@ -102,7 +102,7 @@ public class StoreCreatedMessageImpl implements StoreCreatedMessage, ModelBase {
     }
 
     /**
-     *
+     *  <p>Version of a resource. In case of Messages, this is always <code>1</code>.</p>
      */
 
     public Long getVersion() {
@@ -110,7 +110,7 @@ public class StoreCreatedMessageImpl implements StoreCreatedMessage, ModelBase {
     }
 
     /**
-     *
+     *  <p>Date and time (UTC) the Message was generated.</p>
      */
 
     public java.time.ZonedDateTime getCreatedAt() {
@@ -118,7 +118,7 @@ public class StoreCreatedMessageImpl implements StoreCreatedMessage, ModelBase {
     }
 
     /**
-     *
+     *  <p>Value of <code>createdAt</code>.</p>
      */
 
     public java.time.ZonedDateTime getLastModifiedAt() {
@@ -126,7 +126,7 @@ public class StoreCreatedMessageImpl implements StoreCreatedMessage, ModelBase {
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>Value of <code>createdBy</code>.</p>
      */
 
     public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy() {
@@ -142,7 +142,7 @@ public class StoreCreatedMessageImpl implements StoreCreatedMessage, ModelBase {
     }
 
     /**
-     *
+     *  <p>Message number in relation to other Messages for a given resource. The <code>sequenceNumber</code> of the next Message for the resource is the successor of the <code>sequenceNumber</code> of the current Message. Meaning, the <code>sequenceNumber</code> of the next Message equals the <code>sequenceNumber</code> of the current Message + 1. <code>sequenceNumber</code> can be used to ensure that Messages are processed in the correct order for a particular resource.</p>
      */
 
     public Long getSequenceNumber() {
@@ -150,7 +150,7 @@ public class StoreCreatedMessageImpl implements StoreCreatedMessage, ModelBase {
     }
 
     /**
-     *  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
+     *  <p>Reference to the resource on which the change or action was performed.</p>
      */
 
     public com.commercetools.api.models.common.Reference getResource() {
@@ -158,7 +158,7 @@ public class StoreCreatedMessageImpl implements StoreCreatedMessage, ModelBase {
     }
 
     /**
-     *
+     *  <p>Version of the resource on which the change or action was performed.</p>
      */
 
     public Long getResourceVersion() {
@@ -166,7 +166,7 @@ public class StoreCreatedMessageImpl implements StoreCreatedMessage, ModelBase {
     }
 
     /**
-     *
+     *  <p>Message Type of the Message.</p>
      */
 
     public String getType() {
@@ -174,7 +174,7 @@ public class StoreCreatedMessageImpl implements StoreCreatedMessage, ModelBase {
     }
 
     /**
-     *
+     *  <p>User-provided identifiers of the resource, such as <code>key</code> or <code>externalId</code>. Only present if the resource has such identifiers.</p>
      */
 
     public com.commercetools.api.models.message.UserProvidedIdentifiers getResourceUserProvidedIdentifiers() {
@@ -182,7 +182,7 @@ public class StoreCreatedMessageImpl implements StoreCreatedMessage, ModelBase {
     }
 
     /**
-     *  <p>JSON object where the keys are of type Locale, and the values are the strings used for the corresponding language.</p>
+     *  <p>The <code>name</code> of the Store that was created.</p>
      */
 
     public com.commercetools.api.models.common.LocalizedString getName() {
@@ -190,7 +190,7 @@ public class StoreCreatedMessageImpl implements StoreCreatedMessage, ModelBase {
     }
 
     /**
-     *
+     *  <p>Languages of the Store that was created. Languages are represented as IETF language tags.</p>
      */
 
     public java.util.List<String> getLanguages() {
@@ -198,7 +198,7 @@ public class StoreCreatedMessageImpl implements StoreCreatedMessage, ModelBase {
     }
 
     /**
-     *
+     *  <p>Distribution Channels of the Store that was created.</p>
      */
 
     public java.util.List<com.commercetools.api.models.channel.ChannelReference> getDistributionChannels() {
@@ -206,7 +206,7 @@ public class StoreCreatedMessageImpl implements StoreCreatedMessage, ModelBase {
     }
 
     /**
-     *
+     *  <p>Supply Channels of the Store that was created.</p>
      */
 
     public java.util.List<com.commercetools.api.models.channel.ChannelReference> getSupplyChannels() {
@@ -214,7 +214,7 @@ public class StoreCreatedMessageImpl implements StoreCreatedMessage, ModelBase {
     }
 
     /**
-     *
+     *  <p>ProductSelectionSettings of the Store that was created.</p>
      */
 
     public java.util.List<com.commercetools.api.models.store.ProductSelectionSetting> getProductSelections() {
@@ -222,7 +222,7 @@ public class StoreCreatedMessageImpl implements StoreCreatedMessage, ModelBase {
     }
 
     /**
-     *  <p>Serves as value of the <code>custom</code> field on a resource or data type customized with a Type.</p>
+     *  <p>Custom Fields on the Store that was created.</p>
      */
 
     public com.commercetools.api.models.type.CustomFields getCustom() {

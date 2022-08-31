@@ -66,7 +66,7 @@ public class ProductAddVariantActionImpl implements ProductAddVariantAction, Mod
     }
 
     /**
-     *
+     *  <p>Value to set. Must be unique.</p>
      */
 
     public String getSku() {
@@ -74,7 +74,7 @@ public class ProductAddVariantActionImpl implements ProductAddVariantAction, Mod
     }
 
     /**
-     *
+     *  <p>Value to set. Must be unique.</p>
      */
 
     public String getKey() {
@@ -82,7 +82,7 @@ public class ProductAddVariantActionImpl implements ProductAddVariantAction, Mod
     }
 
     /**
-     *
+     *  <p>Embedded Prices for the Product Variant.</p>
      */
 
     public java.util.List<com.commercetools.api.models.common.PriceDraft> getPrices() {
@@ -90,7 +90,7 @@ public class ProductAddVariantActionImpl implements ProductAddVariantAction, Mod
     }
 
     /**
-     *
+     *  <p>Images for the Product Variant.</p>
      */
 
     public java.util.List<com.commercetools.api.models.common.Image> getImages() {
@@ -98,7 +98,7 @@ public class ProductAddVariantActionImpl implements ProductAddVariantAction, Mod
     }
 
     /**
-     *
+     *  <p>Attributes for the Product Variant.</p>
      */
 
     public java.util.List<com.commercetools.api.models.product.Attribute> getAttributes() {
@@ -106,7 +106,7 @@ public class ProductAddVariantActionImpl implements ProductAddVariantAction, Mod
     }
 
     /**
-     *
+     *  <p>If <code>true</code> the new Product Variant is only staged. If <code>false</code> the new Product Variant is both current and staged.</p>
      */
 
     public Boolean getStaged() {
@@ -114,7 +114,7 @@ public class ProductAddVariantActionImpl implements ProductAddVariantAction, Mod
     }
 
     /**
-     *
+     *  <p>Media assets for the Product Variant.</p>
      */
 
     public java.util.List<com.commercetools.api.models.common.Asset> getAssets() {

@@ -41,6 +41,8 @@ public class LineItemImportDraftImpl implements LineItemImportDraft, ModelBase {
 
     private com.commercetools.importapi.models.orders.ItemShippingDetailsDraft shippingDetails;
 
+    private com.commercetools.importapi.models.customfields.Custom custom;
+
     @JsonCreator
     LineItemImportDraftImpl(
             @JsonProperty("product") final com.commercetools.importapi.models.common.ProductKeyReference product,
@@ -52,7 +54,8 @@ public class LineItemImportDraftImpl implements LineItemImportDraft, ModelBase {
             @JsonProperty("supplyChannel") final com.commercetools.importapi.models.common.ChannelKeyReference supplyChannel,
             @JsonProperty("distributionChannel") final com.commercetools.importapi.models.common.ChannelKeyReference distributionChannel,
             @JsonProperty("taxRate") final com.commercetools.importapi.models.prices.TaxRate taxRate,
-            @JsonProperty("shippingDetails") final com.commercetools.importapi.models.orders.ItemShippingDetailsDraft shippingDetails) {
+            @JsonProperty("shippingDetails") final com.commercetools.importapi.models.orders.ItemShippingDetailsDraft shippingDetails,
+            @JsonProperty("custom") final com.commercetools.importapi.models.customfields.Custom custom) {
         this.product = product;
         this.name = name;
         this.variant = variant;
@@ -63,6 +66,7 @@ public class LineItemImportDraftImpl implements LineItemImportDraft, ModelBase {
         this.distributionChannel = distributionChannel;
         this.taxRate = taxRate;
         this.shippingDetails = shippingDetails;
+        this.custom = custom;
     }
 
     public LineItemImportDraftImpl() {
@@ -148,6 +152,14 @@ public class LineItemImportDraftImpl implements LineItemImportDraft, ModelBase {
         return this.shippingDetails;
     }
 
+    /**
+     *  <p>Custom Fields for this Line Item.</p>
+     */
+
+    public com.commercetools.importapi.models.customfields.Custom getCustom() {
+        return this.custom;
+    }
+
     public void setProduct(final com.commercetools.importapi.models.common.ProductKeyReference product) {
         this.product = product;
     }
@@ -194,6 +206,10 @@ public class LineItemImportDraftImpl implements LineItemImportDraft, ModelBase {
         this.shippingDetails = shippingDetails;
     }
 
+    public void setCustom(final com.commercetools.importapi.models.customfields.Custom custom) {
+        this.custom = custom;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -214,6 +230,7 @@ public class LineItemImportDraftImpl implements LineItemImportDraft, ModelBase {
                 .append(distributionChannel, that.distributionChannel)
                 .append(taxRate, that.taxRate)
                 .append(shippingDetails, that.shippingDetails)
+                .append(custom, that.custom)
                 .isEquals();
     }
 
@@ -229,6 +246,7 @@ public class LineItemImportDraftImpl implements LineItemImportDraft, ModelBase {
                 .append(distributionChannel)
                 .append(taxRate)
                 .append(shippingDetails)
+                .append(custom)
                 .toHashCode();
     }
 

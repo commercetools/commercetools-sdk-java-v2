@@ -31,7 +31,7 @@ public class MyQuoteRequestDraftBuilder implements Builder<MyQuoteRequestDraft> 
     private String comment;
 
     /**
-     *  <p>ResourceIdentifier to the Cart from which this quote request is created.</p>
+     *  <p>ResourceIdentifier of the Cart from which the Quote Request is created.</p>
      */
 
     public MyQuoteRequestDraftBuilder cart(
@@ -41,7 +41,7 @@ public class MyQuoteRequestDraftBuilder implements Builder<MyQuoteRequestDraft> 
     }
 
     /**
-     *  <p>ResourceIdentifier to the Cart from which this quote request is created.</p>
+     *  <p>ResourceIdentifier of the Cart from which the Quote Request is created.</p>
      */
 
     public MyQuoteRequestDraftBuilder cart(final com.commercetools.api.models.cart.CartResourceIdentifier cart) {
@@ -59,7 +59,7 @@ public class MyQuoteRequestDraftBuilder implements Builder<MyQuoteRequestDraft> 
     }
 
     /**
-     *  <p>Text message included in the request.</p>
+     *  <p>Message from the Buyer included in the Quote Request.</p>
      */
 
     public MyQuoteRequestDraftBuilder comment(final String comment) {

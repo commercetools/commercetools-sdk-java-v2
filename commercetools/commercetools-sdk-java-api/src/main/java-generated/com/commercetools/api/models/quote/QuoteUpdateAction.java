@@ -27,8 +27,10 @@ import io.vrap.rmf.base.client.utils.Generated;
  */
 @JsonSubTypes({
         @JsonSubTypes.Type(value = com.commercetools.api.models.quote.QuoteChangeQuoteStateActionImpl.class, name = QuoteChangeQuoteStateAction.CHANGE_QUOTE_STATE),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.quote.QuoteRequestQuoteRenegotiationActionImpl.class, name = QuoteRequestQuoteRenegotiationAction.REQUEST_QUOTE_RENEGOTIATION),
         @JsonSubTypes.Type(value = com.commercetools.api.models.quote.QuoteSetCustomFieldActionImpl.class, name = QuoteSetCustomFieldAction.SET_CUSTOM_FIELD),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.quote.QuoteSetCustomTypeActionImpl.class, name = QuoteSetCustomTypeAction.SET_CUSTOM_TYPE) })
+        @JsonSubTypes.Type(value = com.commercetools.api.models.quote.QuoteSetCustomTypeActionImpl.class, name = QuoteSetCustomTypeAction.SET_CUSTOM_TYPE),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.quote.QuoteTransitionStateActionImpl.class, name = QuoteTransitionStateAction.TRANSITION_STATE) })
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "action", defaultImpl = QuoteUpdateActionImpl.class, visible = true)
 @JsonDeserialize(as = QuoteUpdateActionImpl.class)
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
@@ -45,12 +47,20 @@ public interface QuoteUpdateAction extends com.commercetools.api.models.Resource
         return com.commercetools.api.models.quote.QuoteChangeQuoteStateActionBuilder.of();
     }
 
+    public static com.commercetools.api.models.quote.QuoteRequestQuoteRenegotiationActionBuilder requestQuoteRenegotiationBuilder() {
+        return com.commercetools.api.models.quote.QuoteRequestQuoteRenegotiationActionBuilder.of();
+    }
+
     public static com.commercetools.api.models.quote.QuoteSetCustomFieldActionBuilder setCustomFieldBuilder() {
         return com.commercetools.api.models.quote.QuoteSetCustomFieldActionBuilder.of();
     }
 
     public static com.commercetools.api.models.quote.QuoteSetCustomTypeActionBuilder setCustomTypeBuilder() {
         return com.commercetools.api.models.quote.QuoteSetCustomTypeActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.quote.QuoteTransitionStateActionBuilder transitionStateBuilder() {
+        return com.commercetools.api.models.quote.QuoteTransitionStateActionBuilder.of();
     }
 
     default <T> T withQuoteUpdateAction(Function<QuoteUpdateAction, T> helper) {

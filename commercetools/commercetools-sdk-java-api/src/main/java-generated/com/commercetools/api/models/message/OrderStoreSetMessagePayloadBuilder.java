@@ -4,6 +4,8 @@ package com.commercetools.api.models.message;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
+
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -14,7 +16,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <div class=code-example>
  * <pre><code class='java'>
  *     OrderStoreSetMessagePayload orderStoreSetMessagePayload = OrderStoreSetMessagePayload.builder()
- *             .store(storeBuilder -> storeBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -22,10 +23,11 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderStoreSetMessagePayloadBuilder implements Builder<OrderStoreSetMessagePayload> {
 
+    @Nullable
     private com.commercetools.api.models.store.StoreKeyReference store;
 
     /**
-     *  <p>Reference to a Store by its key.</p>
+     *  <p>Store that was set.</p>
      */
 
     public OrderStoreSetMessagePayloadBuilder store(
@@ -35,20 +37,21 @@ public class OrderStoreSetMessagePayloadBuilder implements Builder<OrderStoreSet
     }
 
     /**
-     *  <p>Reference to a Store by its key.</p>
+     *  <p>Store that was set.</p>
      */
 
-    public OrderStoreSetMessagePayloadBuilder store(final com.commercetools.api.models.store.StoreKeyReference store) {
+    public OrderStoreSetMessagePayloadBuilder store(
+            @Nullable final com.commercetools.api.models.store.StoreKeyReference store) {
         this.store = store;
         return this;
     }
 
+    @Nullable
     public com.commercetools.api.models.store.StoreKeyReference getStore() {
         return this.store;
     }
 
     public OrderStoreSetMessagePayload build() {
-        Objects.requireNonNull(store, OrderStoreSetMessagePayload.class + ": store is missing");
         return new OrderStoreSetMessagePayloadImpl(store);
     }
 

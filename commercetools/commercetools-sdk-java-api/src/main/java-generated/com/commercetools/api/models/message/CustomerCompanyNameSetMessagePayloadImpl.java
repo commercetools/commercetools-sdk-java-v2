@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * CustomerCompanyNameSetMessagePayload
+ *  <p>Generated after a successful Set Company Name update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomerCompanyNameSetMessagePayloadImpl implements CustomerCompanyNameSetMessagePayload, ModelBase {
@@ -43,7 +43,7 @@ public class CustomerCompanyNameSetMessagePayloadImpl implements CustomerCompany
     }
 
     /**
-     *
+     *  <p>The <code>companyName</code> that was set during the Set Company Name update action.</p>
      */
 
     public String getCompanyName() {

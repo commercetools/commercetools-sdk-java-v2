@@ -31,7 +31,7 @@ public class OrderLineItemDistributionChannelSetMessagePayloadBuilder
     private com.commercetools.api.models.channel.ChannelReference distributionChannel;
 
     /**
-     *
+     *  <p>Unique identifier of the Line Item.</p>
      */
 
     public OrderLineItemDistributionChannelSetMessagePayloadBuilder lineItemId(final String lineItemId) {
@@ -40,7 +40,7 @@ public class OrderLineItemDistributionChannelSetMessagePayloadBuilder
     }
 
     /**
-     *  <p>Reference to a Channel.</p>
+     *  <p>Distribution Channel that was set.</p>
      */
 
     public OrderLineItemDistributionChannelSetMessagePayloadBuilder distributionChannel(
@@ -51,7 +51,7 @@ public class OrderLineItemDistributionChannelSetMessagePayloadBuilder
     }
 
     /**
-     *  <p>Reference to a Channel.</p>
+     *  <p>Distribution Channel that was set.</p>
      */
 
     public OrderLineItemDistributionChannelSetMessagePayloadBuilder distributionChannel(

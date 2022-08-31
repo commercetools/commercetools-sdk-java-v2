@@ -26,6 +26,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .lineItemId("{lineItemId}")
  *             .plusDiscountedPricePerQuantity(discountedPricePerQuantityBuilder -> discountedPricePerQuantityBuilder)
  *             .totalPrice(totalPriceBuilder -> totalPriceBuilder)
+ *             .plusTaxedPricePortions(taxedPricePortionsBuilder -> taxedPricePortionsBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -65,8 +66,10 @@ public class OrderLineItemDiscountSetMessageBuilder implements Builder<OrderLine
     @Nullable
     private com.commercetools.api.models.cart.TaxedItemPrice taxedPrice;
 
+    private java.util.List<com.commercetools.api.models.cart.MethodTaxedPrice> taxedPricePortions;
+
     /**
-     *  <p>Unique identifier of the Message.</p>
+     *  <p>Unique identifier of the Message. Can be used to track which Messages have been processed.</p>
      */
 
     public OrderLineItemDiscountSetMessageBuilder id(final String id) {
@@ -75,7 +78,7 @@ public class OrderLineItemDiscountSetMessageBuilder implements Builder<OrderLine
     }
 
     /**
-     *
+     *  <p>Version of a resource. In case of Messages, this is always <code>1</code>.</p>
      */
 
     public OrderLineItemDiscountSetMessageBuilder version(final Long version) {
@@ -84,7 +87,7 @@ public class OrderLineItemDiscountSetMessageBuilder implements Builder<OrderLine
     }
 
     /**
-     *
+     *  <p>Date and time (UTC) the Message was generated.</p>
      */
 
     public OrderLineItemDiscountSetMessageBuilder createdAt(final java.time.ZonedDateTime createdAt) {
@@ -93,7 +96,7 @@ public class OrderLineItemDiscountSetMessageBuilder implements Builder<OrderLine
     }
 
     /**
-     *
+     *  <p>Value of <code>createdAt</code>.</p>
      */
 
     public OrderLineItemDiscountSetMessageBuilder lastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {
@@ -102,7 +105,7 @@ public class OrderLineItemDiscountSetMessageBuilder implements Builder<OrderLine
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>Value of <code>createdBy</code>.</p>
      */
 
     public OrderLineItemDiscountSetMessageBuilder lastModifiedBy(
@@ -112,7 +115,7 @@ public class OrderLineItemDiscountSetMessageBuilder implements Builder<OrderLine
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>Value of <code>createdBy</code>.</p>
      */
 
     public OrderLineItemDiscountSetMessageBuilder lastModifiedBy(
@@ -142,7 +145,7 @@ public class OrderLineItemDiscountSetMessageBuilder implements Builder<OrderLine
     }
 
     /**
-     *
+     *  <p>Message number in relation to other Messages for a given resource. The <code>sequenceNumber</code> of the next Message for the resource is the successor of the <code>sequenceNumber</code> of the current Message. Meaning, the <code>sequenceNumber</code> of the next Message equals the <code>sequenceNumber</code> of the current Message + 1. <code>sequenceNumber</code> can be used to ensure that Messages are processed in the correct order for a particular resource.</p>
      */
 
     public OrderLineItemDiscountSetMessageBuilder sequenceNumber(final Long sequenceNumber) {
@@ -151,7 +154,7 @@ public class OrderLineItemDiscountSetMessageBuilder implements Builder<OrderLine
     }
 
     /**
-     *  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
+     *  <p>Reference to the resource on which the change or action was performed.</p>
      */
 
     public OrderLineItemDiscountSetMessageBuilder resource(
@@ -161,7 +164,7 @@ public class OrderLineItemDiscountSetMessageBuilder implements Builder<OrderLine
     }
 
     /**
-     *  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
+     *  <p>Reference to the resource on which the change or action was performed.</p>
      */
 
     public OrderLineItemDiscountSetMessageBuilder resource(
@@ -171,7 +174,7 @@ public class OrderLineItemDiscountSetMessageBuilder implements Builder<OrderLine
     }
 
     /**
-     *
+     *  <p>Version of the resource on which the change or action was performed.</p>
      */
 
     public OrderLineItemDiscountSetMessageBuilder resourceVersion(final Long resourceVersion) {
@@ -180,7 +183,7 @@ public class OrderLineItemDiscountSetMessageBuilder implements Builder<OrderLine
     }
 
     /**
-     *
+     *  <p>User-provided identifiers of the resource, such as <code>key</code> or <code>externalId</code>. Only present if the resource has such identifiers.</p>
      */
 
     public OrderLineItemDiscountSetMessageBuilder resourceUserProvidedIdentifiers(
@@ -192,7 +195,7 @@ public class OrderLineItemDiscountSetMessageBuilder implements Builder<OrderLine
     }
 
     /**
-     *
+     *  <p>User-provided identifiers of the resource, such as <code>key</code> or <code>externalId</code>. Only present if the resource has such identifiers.</p>
      */
 
     public OrderLineItemDiscountSetMessageBuilder resourceUserProvidedIdentifiers(
@@ -202,7 +205,7 @@ public class OrderLineItemDiscountSetMessageBuilder implements Builder<OrderLine
     }
 
     /**
-     *
+     *  <p>Unique identifier for the Line Item.</p>
      */
 
     public OrderLineItemDiscountSetMessageBuilder lineItemId(final String lineItemId) {
@@ -211,7 +214,7 @@ public class OrderLineItemDiscountSetMessageBuilder implements Builder<OrderLine
     }
 
     /**
-     *
+     *  <p>Array of DiscountedLineItemPriceForQuantity after the Discount recalculation.</p>
      */
 
     public OrderLineItemDiscountSetMessageBuilder discountedPricePerQuantity(
@@ -221,7 +224,7 @@ public class OrderLineItemDiscountSetMessageBuilder implements Builder<OrderLine
     }
 
     /**
-     *
+     *  <p>Array of DiscountedLineItemPriceForQuantity after the Discount recalculation.</p>
      */
 
     public OrderLineItemDiscountSetMessageBuilder discountedPricePerQuantity(
@@ -231,7 +234,7 @@ public class OrderLineItemDiscountSetMessageBuilder implements Builder<OrderLine
     }
 
     /**
-     *
+     *  <p>Array of DiscountedLineItemPriceForQuantity after the Discount recalculation.</p>
      */
 
     public OrderLineItemDiscountSetMessageBuilder plusDiscountedPricePerQuantity(
@@ -244,7 +247,7 @@ public class OrderLineItemDiscountSetMessageBuilder implements Builder<OrderLine
     }
 
     /**
-     *
+     *  <p>Array of DiscountedLineItemPriceForQuantity after the Discount recalculation.</p>
      */
 
     public OrderLineItemDiscountSetMessageBuilder plusDiscountedPricePerQuantity(
@@ -258,7 +261,7 @@ public class OrderLineItemDiscountSetMessageBuilder implements Builder<OrderLine
     }
 
     /**
-     *
+     *  <p>Array of DiscountedLineItemPriceForQuantity after the Discount recalculation.</p>
      */
 
     public OrderLineItemDiscountSetMessageBuilder withDiscountedPricePerQuantity(
@@ -270,8 +273,7 @@ public class OrderLineItemDiscountSetMessageBuilder implements Builder<OrderLine
     }
 
     /**
-     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
-     *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
+     *  <p>Total Price of the Line Item after the Discount recalculation.</p>
      */
 
     public OrderLineItemDiscountSetMessageBuilder totalPrice(
@@ -281,8 +283,7 @@ public class OrderLineItemDiscountSetMessageBuilder implements Builder<OrderLine
     }
 
     /**
-     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
-     *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
+     *  <p>Total Price of the Line Item after the Discount recalculation.</p>
      */
 
     public OrderLineItemDiscountSetMessageBuilder totalPrice(
@@ -292,7 +293,7 @@ public class OrderLineItemDiscountSetMessageBuilder implements Builder<OrderLine
     }
 
     /**
-     *
+     *  <p>TaxedItemPrice of the Line Item after the Discount recalculation.</p>
      */
 
     public OrderLineItemDiscountSetMessageBuilder taxedPrice(
@@ -302,12 +303,71 @@ public class OrderLineItemDiscountSetMessageBuilder implements Builder<OrderLine
     }
 
     /**
-     *
+     *  <p>TaxedItemPrice of the Line Item after the Discount recalculation.</p>
      */
 
     public OrderLineItemDiscountSetMessageBuilder taxedPrice(
             @Nullable final com.commercetools.api.models.cart.TaxedItemPrice taxedPrice) {
         this.taxedPrice = taxedPrice;
+        return this;
+    }
+
+    /**
+     *  <p>Taxed price of the Shipping Methods in a Cart with <code>Multi</code> ShippingMode..</p>
+     */
+
+    public OrderLineItemDiscountSetMessageBuilder taxedPricePortions(
+            final com.commercetools.api.models.cart.MethodTaxedPrice... taxedPricePortions) {
+        this.taxedPricePortions = new ArrayList<>(Arrays.asList(taxedPricePortions));
+        return this;
+    }
+
+    /**
+     *  <p>Taxed price of the Shipping Methods in a Cart with <code>Multi</code> ShippingMode..</p>
+     */
+
+    public OrderLineItemDiscountSetMessageBuilder taxedPricePortions(
+            final java.util.List<com.commercetools.api.models.cart.MethodTaxedPrice> taxedPricePortions) {
+        this.taxedPricePortions = taxedPricePortions;
+        return this;
+    }
+
+    /**
+     *  <p>Taxed price of the Shipping Methods in a Cart with <code>Multi</code> ShippingMode..</p>
+     */
+
+    public OrderLineItemDiscountSetMessageBuilder plusTaxedPricePortions(
+            final com.commercetools.api.models.cart.MethodTaxedPrice... taxedPricePortions) {
+        if (this.taxedPricePortions == null) {
+            this.taxedPricePortions = new ArrayList<>();
+        }
+        this.taxedPricePortions.addAll(Arrays.asList(taxedPricePortions));
+        return this;
+    }
+
+    /**
+     *  <p>Taxed price of the Shipping Methods in a Cart with <code>Multi</code> ShippingMode..</p>
+     */
+
+    public OrderLineItemDiscountSetMessageBuilder plusTaxedPricePortions(
+            Function<com.commercetools.api.models.cart.MethodTaxedPriceBuilder, com.commercetools.api.models.cart.MethodTaxedPriceBuilder> builder) {
+        if (this.taxedPricePortions == null) {
+            this.taxedPricePortions = new ArrayList<>();
+        }
+        this.taxedPricePortions
+                .add(builder.apply(com.commercetools.api.models.cart.MethodTaxedPriceBuilder.of()).build());
+        return this;
+    }
+
+    /**
+     *  <p>Taxed price of the Shipping Methods in a Cart with <code>Multi</code> ShippingMode..</p>
+     */
+
+    public OrderLineItemDiscountSetMessageBuilder withTaxedPricePortions(
+            Function<com.commercetools.api.models.cart.MethodTaxedPriceBuilder, com.commercetools.api.models.cart.MethodTaxedPriceBuilder> builder) {
+        this.taxedPricePortions = new ArrayList<>();
+        this.taxedPricePortions
+                .add(builder.apply(com.commercetools.api.models.cart.MethodTaxedPriceBuilder.of()).build());
         return this;
     }
 
@@ -371,6 +431,10 @@ public class OrderLineItemDiscountSetMessageBuilder implements Builder<OrderLine
         return this.taxedPrice;
     }
 
+    public java.util.List<com.commercetools.api.models.cart.MethodTaxedPrice> getTaxedPricePortions() {
+        return this.taxedPricePortions;
+    }
+
     public OrderLineItemDiscountSetMessage build() {
         Objects.requireNonNull(id, OrderLineItemDiscountSetMessage.class + ": id is missing");
         Objects.requireNonNull(version, OrderLineItemDiscountSetMessage.class + ": version is missing");
@@ -383,9 +447,11 @@ public class OrderLineItemDiscountSetMessageBuilder implements Builder<OrderLine
         Objects.requireNonNull(discountedPricePerQuantity,
             OrderLineItemDiscountSetMessage.class + ": discountedPricePerQuantity is missing");
         Objects.requireNonNull(totalPrice, OrderLineItemDiscountSetMessage.class + ": totalPrice is missing");
+        Objects.requireNonNull(taxedPricePortions,
+            OrderLineItemDiscountSetMessage.class + ": taxedPricePortions is missing");
         return new OrderLineItemDiscountSetMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy,
             createdBy, sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, lineItemId,
-            discountedPricePerQuantity, totalPrice, taxedPrice);
+            discountedPricePerQuantity, totalPrice, taxedPrice, taxedPricePortions);
     }
 
     /**
@@ -394,7 +460,7 @@ public class OrderLineItemDiscountSetMessageBuilder implements Builder<OrderLine
     public OrderLineItemDiscountSetMessage buildUnchecked() {
         return new OrderLineItemDiscountSetMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy,
             createdBy, sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, lineItemId,
-            discountedPricePerQuantity, totalPrice, taxedPrice);
+            discountedPricePerQuantity, totalPrice, taxedPrice, taxedPricePortions);
     }
 
     public static OrderLineItemDiscountSetMessageBuilder of() {
@@ -417,6 +483,7 @@ public class OrderLineItemDiscountSetMessageBuilder implements Builder<OrderLine
         builder.discountedPricePerQuantity = template.getDiscountedPricePerQuantity();
         builder.totalPrice = template.getTotalPrice();
         builder.taxedPrice = template.getTaxedPrice();
+        builder.taxedPricePortions = template.getTaxedPricePortions();
         return builder;
     }
 

@@ -5,17 +5,13 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
-import com.commercetools.api.models.common.LocalizedString;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * ProductSelectionDeletedMessage
+ *  <p>Generated after a successful Delete Product Selection request.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -29,7 +25,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .sequenceNumber(0.3)
  *             .resource(resourceBuilder -> resourceBuilder)
  *             .resourceVersion(0.3)
- *             .name(nameBuilder -> nameBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -39,16 +34,6 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ProductSelectionDeletedMessage extends Message {
 
     String PRODUCT_SELECTION_DELETED = "ProductSelectionDeleted";
-
-    /**
-     *  <p>JSON object where the keys are of type Locale, and the values are the strings used for the corresponding language.</p>
-     */
-    @NotNull
-    @Valid
-    @JsonProperty("name")
-    public LocalizedString getName();
-
-    public void setName(final LocalizedString name);
 
     public static ProductSelectionDeletedMessage of() {
         return new ProductSelectionDeletedMessageImpl();
@@ -66,7 +51,6 @@ public interface ProductSelectionDeletedMessage extends Message {
         instance.setResource(template.getResource());
         instance.setResourceVersion(template.getResourceVersion());
         instance.setResourceUserProvidedIdentifiers(template.getResourceUserProvidedIdentifiers());
-        instance.setName(template.getName());
         return instance;
     }
 

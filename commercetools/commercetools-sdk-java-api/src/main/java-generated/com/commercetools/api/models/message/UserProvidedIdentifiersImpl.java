@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * UserProvidedIdentifiers
+ *  <p>User-provided identifiers present on the resource for which the Message is created. The value of the identifier stored in the Message corresponds to the one that was set on the resource at the version shown in <code>resourceVersion</code>.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class UserProvidedIdentifiersImpl implements UserProvidedIdentifiers, ModelBase {
@@ -61,7 +61,7 @@ public class UserProvidedIdentifiersImpl implements UserProvidedIdentifiers, Mod
     }
 
     /**
-     *
+     *  <p>User-provided unique identifier of the resource.</p>
      */
 
     public String getExternalId() {
@@ -69,7 +69,7 @@ public class UserProvidedIdentifiersImpl implements UserProvidedIdentifiers, Mod
     }
 
     /**
-     *
+     *  <p>User-provided unique identifier of an Order.</p>
      */
 
     public String getOrderNumber() {
@@ -77,7 +77,7 @@ public class UserProvidedIdentifiersImpl implements UserProvidedIdentifiers, Mod
     }
 
     /**
-     *
+     *  <p>User-provided unique identifier of a Customer.</p>
      */
 
     public String getCustomerNumber() {
@@ -85,7 +85,7 @@ public class UserProvidedIdentifiersImpl implements UserProvidedIdentifiers, Mod
     }
 
     /**
-     *
+     *  <p>Unique SKU of a Product Variant.</p>
      */
 
     public String getSku() {
@@ -93,7 +93,7 @@ public class UserProvidedIdentifiersImpl implements UserProvidedIdentifiers, Mod
     }
 
     /**
-     *  <p>JSON object where the keys are of type Locale, and the values are the strings used for the corresponding language.</p>
+     *  <p>Unique identifier usually used in deep-link URLs for a Product. The value corresponds to the slug in the <code>current</code> Product Projection.</p>
      */
 
     public com.commercetools.api.models.common.LocalizedString getSlug() {
@@ -101,7 +101,7 @@ public class UserProvidedIdentifiersImpl implements UserProvidedIdentifiers, Mod
     }
 
     /**
-     *  <p>Custom Objects are grouped into containers, which can be used like namespaces. Within a given container, a user-defined key can be used to uniquely identify resources.</p>
+     *  <p>Unique identifier of a Custom Object.</p>
      */
 
     public com.commercetools.api.models.message.ContainerAndKey getContainerAndKey() {

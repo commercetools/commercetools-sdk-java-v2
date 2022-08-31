@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * CustomerAddressAddedMessagePayload
+ *  <p>Generated after a successful Add Address update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomerAddressAddedMessagePayloadImpl implements CustomerAddressAddedMessagePayload, ModelBase {
@@ -44,7 +44,7 @@ public class CustomerAddressAddedMessagePayloadImpl implements CustomerAddressAd
     }
 
     /**
-     *
+     *  <p>Address that was added during the Add Address update action.</p>
      */
 
     public com.commercetools.api.models.common.Address getAddress() {

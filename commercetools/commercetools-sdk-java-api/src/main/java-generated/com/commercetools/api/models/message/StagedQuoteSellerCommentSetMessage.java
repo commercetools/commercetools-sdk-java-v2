@@ -13,7 +13,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * StagedQuoteSellerCommentSetMessage
+ *  <p>Generated after a successful Set Seller Comment update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -39,7 +39,7 @@ public interface StagedQuoteSellerCommentSetMessage extends Message {
     String STAGED_QUOTE_SELLER_COMMENT_SET = "StagedQuoteSellerCommentSet";
 
     /**
-     *
+     *  <p><code>sellerComment</code> on the StagedQuote after a successful Set Seller Comment update action.</p>
      */
     @NotNull
     @JsonProperty("sellerComment")

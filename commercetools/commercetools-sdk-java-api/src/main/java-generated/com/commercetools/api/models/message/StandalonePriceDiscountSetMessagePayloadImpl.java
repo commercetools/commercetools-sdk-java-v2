@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Emitted when the affected StandalonePrice is updated based on a Product Discount being applied.</p>
+ *  <p>Generated after a Product Discount is successfully applied to a StandalonePrice.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StandalonePriceDiscountSetMessagePayloadImpl

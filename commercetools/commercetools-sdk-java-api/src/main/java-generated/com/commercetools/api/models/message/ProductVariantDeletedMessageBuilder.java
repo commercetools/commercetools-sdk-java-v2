@@ -23,7 +23,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .sequenceNumber(0.3)
  *             .resource(resourceBuilder -> resourceBuilder)
  *             .resourceVersion(0.3)
- *             .variant(variantBuilder -> variantBuilder)
  *             .plusRemovedImageUrls(removedImageUrlsBuilder -> removedImageUrlsBuilder)
  *             .build()
  * </code></pre>
@@ -55,12 +54,13 @@ public class ProductVariantDeletedMessageBuilder implements Builder<ProductVaria
     @Nullable
     private com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers;
 
+    @Nullable
     private com.commercetools.api.models.product.ProductVariant variant;
 
     private java.util.List<String> removedImageUrls;
 
     /**
-     *  <p>Unique identifier of the Message.</p>
+     *  <p>Unique identifier of the Message. Can be used to track which Messages have been processed.</p>
      */
 
     public ProductVariantDeletedMessageBuilder id(final String id) {
@@ -69,7 +69,7 @@ public class ProductVariantDeletedMessageBuilder implements Builder<ProductVaria
     }
 
     /**
-     *
+     *  <p>Version of a resource. In case of Messages, this is always <code>1</code>.</p>
      */
 
     public ProductVariantDeletedMessageBuilder version(final Long version) {
@@ -78,7 +78,7 @@ public class ProductVariantDeletedMessageBuilder implements Builder<ProductVaria
     }
 
     /**
-     *
+     *  <p>Date and time (UTC) the Message was generated.</p>
      */
 
     public ProductVariantDeletedMessageBuilder createdAt(final java.time.ZonedDateTime createdAt) {
@@ -87,7 +87,7 @@ public class ProductVariantDeletedMessageBuilder implements Builder<ProductVaria
     }
 
     /**
-     *
+     *  <p>Value of <code>createdAt</code>.</p>
      */
 
     public ProductVariantDeletedMessageBuilder lastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {
@@ -96,7 +96,7 @@ public class ProductVariantDeletedMessageBuilder implements Builder<ProductVaria
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>Value of <code>createdBy</code>.</p>
      */
 
     public ProductVariantDeletedMessageBuilder lastModifiedBy(
@@ -106,7 +106,7 @@ public class ProductVariantDeletedMessageBuilder implements Builder<ProductVaria
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>Value of <code>createdBy</code>.</p>
      */
 
     public ProductVariantDeletedMessageBuilder lastModifiedBy(
@@ -136,7 +136,7 @@ public class ProductVariantDeletedMessageBuilder implements Builder<ProductVaria
     }
 
     /**
-     *
+     *  <p>Message number in relation to other Messages for a given resource. The <code>sequenceNumber</code> of the next Message for the resource is the successor of the <code>sequenceNumber</code> of the current Message. Meaning, the <code>sequenceNumber</code> of the next Message equals the <code>sequenceNumber</code> of the current Message + 1. <code>sequenceNumber</code> can be used to ensure that Messages are processed in the correct order for a particular resource.</p>
      */
 
     public ProductVariantDeletedMessageBuilder sequenceNumber(final Long sequenceNumber) {
@@ -145,7 +145,7 @@ public class ProductVariantDeletedMessageBuilder implements Builder<ProductVaria
     }
 
     /**
-     *  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
+     *  <p>Reference to the resource on which the change or action was performed.</p>
      */
 
     public ProductVariantDeletedMessageBuilder resource(final com.commercetools.api.models.common.Reference resource) {
@@ -154,7 +154,7 @@ public class ProductVariantDeletedMessageBuilder implements Builder<ProductVaria
     }
 
     /**
-     *  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
+     *  <p>Reference to the resource on which the change or action was performed.</p>
      */
 
     public ProductVariantDeletedMessageBuilder resource(
@@ -164,7 +164,7 @@ public class ProductVariantDeletedMessageBuilder implements Builder<ProductVaria
     }
 
     /**
-     *
+     *  <p>Version of the resource on which the change or action was performed.</p>
      */
 
     public ProductVariantDeletedMessageBuilder resourceVersion(final Long resourceVersion) {
@@ -173,7 +173,7 @@ public class ProductVariantDeletedMessageBuilder implements Builder<ProductVaria
     }
 
     /**
-     *
+     *  <p>User-provided identifiers of the resource, such as <code>key</code> or <code>externalId</code>. Only present if the resource has such identifiers.</p>
      */
 
     public ProductVariantDeletedMessageBuilder resourceUserProvidedIdentifiers(
@@ -185,7 +185,7 @@ public class ProductVariantDeletedMessageBuilder implements Builder<ProductVaria
     }
 
     /**
-     *
+     *  <p>User-provided identifiers of the resource, such as <code>key</code> or <code>externalId</code>. Only present if the resource has such identifiers.</p>
      */
 
     public ProductVariantDeletedMessageBuilder resourceUserProvidedIdentifiers(
@@ -195,7 +195,7 @@ public class ProductVariantDeletedMessageBuilder implements Builder<ProductVaria
     }
 
     /**
-     *
+     *  <p>Unique identifier of the Product Variant that was added.</p>
      */
 
     public ProductVariantDeletedMessageBuilder variant(
@@ -205,17 +205,17 @@ public class ProductVariantDeletedMessageBuilder implements Builder<ProductVaria
     }
 
     /**
-     *
+     *  <p>Unique identifier of the Product Variant that was added.</p>
      */
 
     public ProductVariantDeletedMessageBuilder variant(
-            final com.commercetools.api.models.product.ProductVariant variant) {
+            @Nullable final com.commercetools.api.models.product.ProductVariant variant) {
         this.variant = variant;
         return this;
     }
 
     /**
-     *
+     *  <p>List of image URLs that were removed with the Remove Product Variant update action.</p>
      */
 
     public ProductVariantDeletedMessageBuilder removedImageUrls(final String... removedImageUrls) {
@@ -224,7 +224,7 @@ public class ProductVariantDeletedMessageBuilder implements Builder<ProductVaria
     }
 
     /**
-     *
+     *  <p>List of image URLs that were removed with the Remove Product Variant update action.</p>
      */
 
     public ProductVariantDeletedMessageBuilder removedImageUrls(final java.util.List<String> removedImageUrls) {
@@ -233,7 +233,7 @@ public class ProductVariantDeletedMessageBuilder implements Builder<ProductVaria
     }
 
     /**
-     *
+     *  <p>List of image URLs that were removed with the Remove Product Variant update action.</p>
      */
 
     public ProductVariantDeletedMessageBuilder plusRemovedImageUrls(final String... removedImageUrls) {
@@ -287,6 +287,7 @@ public class ProductVariantDeletedMessageBuilder implements Builder<ProductVaria
         return this.resourceUserProvidedIdentifiers;
     }
 
+    @Nullable
     public com.commercetools.api.models.product.ProductVariant getVariant() {
         return this.variant;
     }
@@ -303,7 +304,6 @@ public class ProductVariantDeletedMessageBuilder implements Builder<ProductVaria
         Objects.requireNonNull(sequenceNumber, ProductVariantDeletedMessage.class + ": sequenceNumber is missing");
         Objects.requireNonNull(resource, ProductVariantDeletedMessage.class + ": resource is missing");
         Objects.requireNonNull(resourceVersion, ProductVariantDeletedMessage.class + ": resourceVersion is missing");
-        Objects.requireNonNull(variant, ProductVariantDeletedMessage.class + ": variant is missing");
         Objects.requireNonNull(removedImageUrls, ProductVariantDeletedMessage.class + ": removedImageUrls is missing");
         return new ProductVariantDeletedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
             sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, variant, removedImageUrls);

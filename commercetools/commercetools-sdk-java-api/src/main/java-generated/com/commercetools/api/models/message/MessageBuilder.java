@@ -195,14 +195,6 @@ public class MessageBuilder {
         return com.commercetools.api.models.message.OrderPaymentStateChangedMessageBuilder.of();
     }
 
-    public com.commercetools.api.models.message.OrderReturnInfoAddedMessageBuilder returnInfoAddedBuilder() {
-        return com.commercetools.api.models.message.OrderReturnInfoAddedMessageBuilder.of();
-    }
-
-    public com.commercetools.api.models.message.OrderReturnInfoSetMessageBuilder returnInfoSetBuilder() {
-        return com.commercetools.api.models.message.OrderReturnInfoSetMessageBuilder.of();
-    }
-
     public com.commercetools.api.models.message.OrderReturnShipmentStateChangedMessageBuilder orderReturnShipmentStateChangedBuilder() {
         return com.commercetools.api.models.message.OrderReturnShipmentStateChangedMessageBuilder.of();
     }
@@ -375,8 +367,24 @@ public class MessageBuilder {
         return com.commercetools.api.models.message.QuoteRequestStateChangedMessageBuilder.of();
     }
 
+    public com.commercetools.api.models.message.QuoteRequestStateTransitionMessageBuilder quoteRequestStateTransitionBuilder() {
+        return com.commercetools.api.models.message.QuoteRequestStateTransitionMessageBuilder.of();
+    }
+
     public com.commercetools.api.models.message.QuoteStateChangedMessageBuilder quoteStateChangedBuilder() {
         return com.commercetools.api.models.message.QuoteStateChangedMessageBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.QuoteStateTransitionMessageBuilder quoteStateTransitionBuilder() {
+        return com.commercetools.api.models.message.QuoteStateTransitionMessageBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.ReturnInfoAddedMessageBuilder returnInfoAddedBuilder() {
+        return com.commercetools.api.models.message.ReturnInfoAddedMessageBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.ReturnInfoSetMessageBuilder returnInfoSetBuilder() {
+        return com.commercetools.api.models.message.ReturnInfoSetMessageBuilder.of();
     }
 
     public com.commercetools.api.models.message.ReviewCreatedMessageBuilder reviewCreatedBuilder() {
@@ -407,6 +415,10 @@ public class MessageBuilder {
         return com.commercetools.api.models.message.StagedQuoteStateChangedMessageBuilder.of();
     }
 
+    public com.commercetools.api.models.message.StagedQuoteStateTransitionMessageBuilder stagedQuoteStateTransitionBuilder() {
+        return com.commercetools.api.models.message.StagedQuoteStateTransitionMessageBuilder.of();
+    }
+
     public com.commercetools.api.models.message.StagedQuoteValidToSetMessageBuilder stagedQuoteValidToSetBuilder() {
         return com.commercetools.api.models.message.StagedQuoteValidToSetMessageBuilder.of();
     }
@@ -427,6 +439,10 @@ public class MessageBuilder {
         return com.commercetools.api.models.message.StandalonePriceExternalDiscountSetMessageBuilder.of();
     }
 
+    public com.commercetools.api.models.message.StandalonePriceStagedChangesAppliedMessageBuilder standalonePriceStagedChangesAppliedBuilder() {
+        return com.commercetools.api.models.message.StandalonePriceStagedChangesAppliedMessageBuilder.of();
+    }
+
     public com.commercetools.api.models.message.StandalonePriceValueChangedMessageBuilder standalonePriceValueChangedBuilder() {
         return com.commercetools.api.models.message.StandalonePriceValueChangedMessageBuilder.of();
     }
@@ -441,6 +457,10 @@ public class MessageBuilder {
 
     public com.commercetools.api.models.message.StoreDistributionChannelsChangedMessageBuilder storeDistributionChannelsChangedBuilder() {
         return com.commercetools.api.models.message.StoreDistributionChannelsChangedMessageBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.StoreLanguagesChangedMessageBuilder storeLanguagesChangedBuilder() {
+        return com.commercetools.api.models.message.StoreLanguagesChangedMessageBuilder.of();
     }
 
     public com.commercetools.api.models.message.StoreProductSelectionsChangedMessageBuilder storeProductSelectionsChangedBuilder() {

@@ -15,7 +15,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * DeliveryItemsUpdatedMessagePayload
+ *  <p>Generated after a successful Set Delivery Items update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -36,14 +36,14 @@ public interface DeliveryItemsUpdatedMessagePayload extends OrderMessagePayload 
     String DELIVERY_ITEMS_UPDATED = "DeliveryItemsUpdated";
 
     /**
-     *
+     *  <p>Unique identifier of the Delivery.</p>
      */
     @NotNull
     @JsonProperty("deliveryId")
     public String getDeliveryId();
 
     /**
-     *
+     *  <p>Delivery Items after the Set Delivery Items update action.</p>
      */
     @NotNull
     @Valid
@@ -51,12 +51,19 @@ public interface DeliveryItemsUpdatedMessagePayload extends OrderMessagePayload 
     public List<DeliveryItem> getItems();
 
     /**
-     *
+     *  <p>Delivery Items before the Set Delivery Items update action.</p>
      */
     @NotNull
     @Valid
     @JsonProperty("oldItems")
     public List<DeliveryItem> getOldItems();
+
+    /**
+     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multi</code> ShippingMode.</p>
+     */
+
+    @JsonProperty("shippingKey")
+    public String getShippingKey();
 
     public void setDeliveryId(final String deliveryId);
 
@@ -70,6 +77,8 @@ public interface DeliveryItemsUpdatedMessagePayload extends OrderMessagePayload 
 
     public void setOldItems(final List<DeliveryItem> oldItems);
 
+    public void setShippingKey(final String shippingKey);
+
     public static DeliveryItemsUpdatedMessagePayload of() {
         return new DeliveryItemsUpdatedMessagePayloadImpl();
     }
@@ -79,6 +88,7 @@ public interface DeliveryItemsUpdatedMessagePayload extends OrderMessagePayload 
         instance.setDeliveryId(template.getDeliveryId());
         instance.setItems(template.getItems());
         instance.setOldItems(template.getOldItems());
+        instance.setShippingKey(template.getShippingKey());
         return instance;
     }
 

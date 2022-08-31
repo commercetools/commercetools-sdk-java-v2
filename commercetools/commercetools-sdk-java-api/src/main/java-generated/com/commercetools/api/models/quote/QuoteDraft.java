@@ -9,6 +9,7 @@ import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.staged_quote.StagedQuoteResourceIdentifier;
+import com.commercetools.api.models.state.StateReference;
 import com.commercetools.api.models.type.CustomFieldsDraft;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
@@ -34,7 +35,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface QuoteDraft {
 
     /**
-     *  <p>The StagedQuote from which this Quote is created.</p>
+     *  <p>StagedQuote from which the Quote is created.</p>
      */
     @NotNull
     @Valid
@@ -66,6 +67,13 @@ public interface QuoteDraft {
     @JsonProperty("custom")
     public CustomFieldsDraft getCustom();
 
+    /**
+     *  <p>State of the Quote. This reference can point to a State in a custom workflow.</p>
+     */
+    @Valid
+    @JsonProperty("state")
+    public StateReference getState();
+
     public void setStagedQuote(final StagedQuoteResourceIdentifier stagedQuote);
 
     public void setStagedQuoteVersion(final Long stagedQuoteVersion);
@@ -73,6 +81,8 @@ public interface QuoteDraft {
     public void setKey(final String key);
 
     public void setCustom(final CustomFieldsDraft custom);
+
+    public void setState(final StateReference state);
 
     public static QuoteDraft of() {
         return new QuoteDraftImpl();
@@ -84,6 +94,7 @@ public interface QuoteDraft {
         instance.setStagedQuoteVersion(template.getStagedQuoteVersion());
         instance.setKey(template.getKey());
         instance.setCustom(template.getCustom());
+        instance.setState(template.getState());
         return instance;
     }
 

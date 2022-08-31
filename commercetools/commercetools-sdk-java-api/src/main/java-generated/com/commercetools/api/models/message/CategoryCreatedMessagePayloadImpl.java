@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * CategoryCreatedMessagePayload
+ *  <p>Generated after a successful Create Category request.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CategoryCreatedMessagePayloadImpl implements CategoryCreatedMessagePayload, ModelBase {
@@ -44,7 +44,7 @@ public class CategoryCreatedMessagePayloadImpl implements CategoryCreatedMessage
     }
 
     /**
-     *
+     *  <p>Category that was created.</p>
      */
 
     public com.commercetools.api.models.category.Category getCategory() {

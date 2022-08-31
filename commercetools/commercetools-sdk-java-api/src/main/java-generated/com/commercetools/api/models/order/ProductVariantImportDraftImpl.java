@@ -62,7 +62,7 @@ public class ProductVariantImportDraftImpl implements ProductVariantImportDraft,
     }
 
     /**
-     *  <p>The EmbeddedPrices of the variant. The prices should not contain two prices for the same price scope (same currency, country, customer group, channel, valid from and valid until). If this property is defined, then it will override the <code>prices</code> property from the original product variant, otherwise <code>prices</code> property from the original product variant would be copied in the resulting order.</p>
+     *  <p>The Embedded Prices of the variant. The prices should not contain two prices for the same price scope (same currency, country, customer group, channel, valid from and valid until). If this property is defined, then it will override the <code>prices</code> property from the original product variant, otherwise <code>prices</code> property from the original product variant would be copied in the resulting order.</p>
      */
 
     public java.util.List<com.commercetools.api.models.common.PriceDraft> getPrices() {

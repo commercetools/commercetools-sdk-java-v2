@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * ProductSlugChangedMessagePayload
+ *  <p>Generated after a successful Change Slug update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductSlugChangedMessagePayloadImpl implements ProductSlugChangedMessagePayload, ModelBase {
@@ -48,7 +48,7 @@ public class ProductSlugChangedMessagePayloadImpl implements ProductSlugChangedM
     }
 
     /**
-     *  <p>JSON object where the keys are of type Locale, and the values are the strings used for the corresponding language.</p>
+     *  <p>The slug of the Product after the Change Slug update action.</p>
      */
 
     public com.commercetools.api.models.common.LocalizedString getSlug() {
@@ -56,7 +56,7 @@ public class ProductSlugChangedMessagePayloadImpl implements ProductSlugChangedM
     }
 
     /**
-     *  <p>JSON object where the keys are of type Locale, and the values are the strings used for the corresponding language.</p>
+     *  <p>The slug of the Product before the Change Slug update action.</p>
      */
 
     public com.commercetools.api.models.common.LocalizedString getOldSlug() {

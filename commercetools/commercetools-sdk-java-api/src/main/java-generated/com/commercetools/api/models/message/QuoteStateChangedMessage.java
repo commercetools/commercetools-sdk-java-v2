@@ -14,7 +14,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * QuoteStateChangedMessage
+ *  <p>Generated after a successful Change Quote State update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -41,14 +41,14 @@ public interface QuoteStateChangedMessage extends Message {
     String QUOTE_STATE_CHANGED = "QuoteStateChanged";
 
     /**
-     *  <p>Predefined states tracking the status of the Quote.</p>
+     *  <p>State of the Quote after the Change Quote State update action.</p>
      */
     @NotNull
     @JsonProperty("quoteState")
     public QuoteState getQuoteState();
 
     /**
-     *  <p>Predefined states tracking the status of the Quote.</p>
+     *  <p>State of the Quote before the Change Quote State update action.</p>
      */
     @NotNull
     @JsonProperty("oldQuoteState")

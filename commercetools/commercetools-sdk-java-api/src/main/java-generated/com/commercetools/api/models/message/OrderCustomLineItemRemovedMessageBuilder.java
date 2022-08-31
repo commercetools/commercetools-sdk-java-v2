@@ -60,7 +60,7 @@ public class OrderCustomLineItemRemovedMessageBuilder implements Builder<OrderCu
     private com.commercetools.api.models.cart.CustomLineItem customLineItem;
 
     /**
-     *  <p>Unique identifier of the Message.</p>
+     *  <p>Unique identifier of the Message. Can be used to track which Messages have been processed.</p>
      */
 
     public OrderCustomLineItemRemovedMessageBuilder id(final String id) {
@@ -69,7 +69,7 @@ public class OrderCustomLineItemRemovedMessageBuilder implements Builder<OrderCu
     }
 
     /**
-     *
+     *  <p>Version of a resource. In case of Messages, this is always <code>1</code>.</p>
      */
 
     public OrderCustomLineItemRemovedMessageBuilder version(final Long version) {
@@ -78,7 +78,7 @@ public class OrderCustomLineItemRemovedMessageBuilder implements Builder<OrderCu
     }
 
     /**
-     *
+     *  <p>Date and time (UTC) the Message was generated.</p>
      */
 
     public OrderCustomLineItemRemovedMessageBuilder createdAt(final java.time.ZonedDateTime createdAt) {
@@ -87,7 +87,7 @@ public class OrderCustomLineItemRemovedMessageBuilder implements Builder<OrderCu
     }
 
     /**
-     *
+     *  <p>Value of <code>createdAt</code>.</p>
      */
 
     public OrderCustomLineItemRemovedMessageBuilder lastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {
@@ -96,7 +96,7 @@ public class OrderCustomLineItemRemovedMessageBuilder implements Builder<OrderCu
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>Value of <code>createdBy</code>.</p>
      */
 
     public OrderCustomLineItemRemovedMessageBuilder lastModifiedBy(
@@ -106,7 +106,7 @@ public class OrderCustomLineItemRemovedMessageBuilder implements Builder<OrderCu
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>Value of <code>createdBy</code>.</p>
      */
 
     public OrderCustomLineItemRemovedMessageBuilder lastModifiedBy(
@@ -136,7 +136,7 @@ public class OrderCustomLineItemRemovedMessageBuilder implements Builder<OrderCu
     }
 
     /**
-     *
+     *  <p>Message number in relation to other Messages for a given resource. The <code>sequenceNumber</code> of the next Message for the resource is the successor of the <code>sequenceNumber</code> of the current Message. Meaning, the <code>sequenceNumber</code> of the next Message equals the <code>sequenceNumber</code> of the current Message + 1. <code>sequenceNumber</code> can be used to ensure that Messages are processed in the correct order for a particular resource.</p>
      */
 
     public OrderCustomLineItemRemovedMessageBuilder sequenceNumber(final Long sequenceNumber) {
@@ -145,7 +145,7 @@ public class OrderCustomLineItemRemovedMessageBuilder implements Builder<OrderCu
     }
 
     /**
-     *  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
+     *  <p>Reference to the resource on which the change or action was performed.</p>
      */
 
     public OrderCustomLineItemRemovedMessageBuilder resource(
@@ -155,7 +155,7 @@ public class OrderCustomLineItemRemovedMessageBuilder implements Builder<OrderCu
     }
 
     /**
-     *  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
+     *  <p>Reference to the resource on which the change or action was performed.</p>
      */
 
     public OrderCustomLineItemRemovedMessageBuilder resource(
@@ -165,7 +165,7 @@ public class OrderCustomLineItemRemovedMessageBuilder implements Builder<OrderCu
     }
 
     /**
-     *
+     *  <p>Version of the resource on which the change or action was performed.</p>
      */
 
     public OrderCustomLineItemRemovedMessageBuilder resourceVersion(final Long resourceVersion) {
@@ -174,7 +174,7 @@ public class OrderCustomLineItemRemovedMessageBuilder implements Builder<OrderCu
     }
 
     /**
-     *
+     *  <p>User-provided identifiers of the resource, such as <code>key</code> or <code>externalId</code>. Only present if the resource has such identifiers.</p>
      */
 
     public OrderCustomLineItemRemovedMessageBuilder resourceUserProvidedIdentifiers(
@@ -186,7 +186,7 @@ public class OrderCustomLineItemRemovedMessageBuilder implements Builder<OrderCu
     }
 
     /**
-     *
+     *  <p>User-provided identifiers of the resource, such as <code>key</code> or <code>externalId</code>. Only present if the resource has such identifiers.</p>
      */
 
     public OrderCustomLineItemRemovedMessageBuilder resourceUserProvidedIdentifiers(
@@ -196,7 +196,7 @@ public class OrderCustomLineItemRemovedMessageBuilder implements Builder<OrderCu
     }
 
     /**
-     *
+     *  <p>Unique identifier of the Custom Line Item.</p>
      */
 
     public OrderCustomLineItemRemovedMessageBuilder customLineItemId(final String customLineItemId) {
@@ -205,7 +205,7 @@ public class OrderCustomLineItemRemovedMessageBuilder implements Builder<OrderCu
     }
 
     /**
-     *
+     *  <p>Custom Line Item that was removed from the Order.</p>
      */
 
     public OrderCustomLineItemRemovedMessageBuilder customLineItem(
@@ -215,7 +215,7 @@ public class OrderCustomLineItemRemovedMessageBuilder implements Builder<OrderCu
     }
 
     /**
-     *
+     *  <p>Custom Line Item that was removed from the Order.</p>
      */
 
     public OrderCustomLineItemRemovedMessageBuilder customLineItem(

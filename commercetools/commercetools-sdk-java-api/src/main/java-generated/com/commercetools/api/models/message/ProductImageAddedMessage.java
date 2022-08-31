@@ -15,7 +15,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * ProductImageAddedMessage
+ *  <p>Generated after a successful Add External Image update action or after the successful upload of an image.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -43,14 +43,14 @@ public interface ProductImageAddedMessage extends Message {
     String PRODUCT_IMAGE_ADDED = "ProductImageAdded";
 
     /**
-     *
+     *  <p>Unique identifier of the Product Variant to which the Image was added.</p>
      */
     @NotNull
     @JsonProperty("variantId")
     public Long getVariantId();
 
     /**
-     *
+     *  <p>Image that was added.</p>
      */
     @NotNull
     @Valid
@@ -58,7 +58,7 @@ public interface ProductImageAddedMessage extends Message {
     public Image getImage();
 
     /**
-     *
+     *  <p>Whether the update was only applied to the staged Product Projection.</p>
      */
     @NotNull
     @JsonProperty("staged")

@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * ParcelTrackingDataUpdatedMessage
+ *  <p>Generated after a successful Set Parcel TrackingData update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ParcelTrackingDataUpdatedMessageImpl implements ParcelTrackingDataUpdatedMessage, ModelBase {
@@ -48,6 +48,8 @@ public class ParcelTrackingDataUpdatedMessageImpl implements ParcelTrackingDataU
 
     private com.commercetools.api.models.order.TrackingData trackingData;
 
+    private String shippingKey;
+
     @JsonCreator
     ParcelTrackingDataUpdatedMessageImpl(@JsonProperty("id") final String id,
             @JsonProperty("version") final Long version,
@@ -60,7 +62,8 @@ public class ParcelTrackingDataUpdatedMessageImpl implements ParcelTrackingDataU
             @JsonProperty("resourceVersion") final Long resourceVersion,
             @JsonProperty("resourceUserProvidedIdentifiers") final com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers,
             @JsonProperty("deliveryId") final String deliveryId, @JsonProperty("parcelId") final String parcelId,
-            @JsonProperty("trackingData") final com.commercetools.api.models.order.TrackingData trackingData) {
+            @JsonProperty("trackingData") final com.commercetools.api.models.order.TrackingData trackingData,
+            @JsonProperty("shippingKey") final String shippingKey) {
         this.id = id;
         this.version = version;
         this.createdAt = createdAt;
@@ -74,6 +77,7 @@ public class ParcelTrackingDataUpdatedMessageImpl implements ParcelTrackingDataU
         this.deliveryId = deliveryId;
         this.parcelId = parcelId;
         this.trackingData = trackingData;
+        this.shippingKey = shippingKey;
         this.type = PARCEL_TRACKING_DATA_UPDATED;
     }
 
@@ -82,7 +86,7 @@ public class ParcelTrackingDataUpdatedMessageImpl implements ParcelTrackingDataU
     }
 
     /**
-     *  <p>Unique identifier of the Message.</p>
+     *  <p>Unique identifier of the Message. Can be used to track which Messages have been processed.</p>
      */
 
     public String getId() {
@@ -90,7 +94,7 @@ public class ParcelTrackingDataUpdatedMessageImpl implements ParcelTrackingDataU
     }
 
     /**
-     *
+     *  <p>Version of a resource. In case of Messages, this is always <code>1</code>.</p>
      */
 
     public Long getVersion() {
@@ -98,7 +102,7 @@ public class ParcelTrackingDataUpdatedMessageImpl implements ParcelTrackingDataU
     }
 
     /**
-     *
+     *  <p>Date and time (UTC) the Message was generated.</p>
      */
 
     public java.time.ZonedDateTime getCreatedAt() {
@@ -106,7 +110,7 @@ public class ParcelTrackingDataUpdatedMessageImpl implements ParcelTrackingDataU
     }
 
     /**
-     *
+     *  <p>Value of <code>createdAt</code>.</p>
      */
 
     public java.time.ZonedDateTime getLastModifiedAt() {
@@ -114,7 +118,7 @@ public class ParcelTrackingDataUpdatedMessageImpl implements ParcelTrackingDataU
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>Value of <code>createdBy</code>.</p>
      */
 
     public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy() {
@@ -130,7 +134,7 @@ public class ParcelTrackingDataUpdatedMessageImpl implements ParcelTrackingDataU
     }
 
     /**
-     *
+     *  <p>Message number in relation to other Messages for a given resource. The <code>sequenceNumber</code> of the next Message for the resource is the successor of the <code>sequenceNumber</code> of the current Message. Meaning, the <code>sequenceNumber</code> of the next Message equals the <code>sequenceNumber</code> of the current Message + 1. <code>sequenceNumber</code> can be used to ensure that Messages are processed in the correct order for a particular resource.</p>
      */
 
     public Long getSequenceNumber() {
@@ -138,7 +142,7 @@ public class ParcelTrackingDataUpdatedMessageImpl implements ParcelTrackingDataU
     }
 
     /**
-     *  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
+     *  <p>Reference to the resource on which the change or action was performed.</p>
      */
 
     public com.commercetools.api.models.common.Reference getResource() {
@@ -146,7 +150,7 @@ public class ParcelTrackingDataUpdatedMessageImpl implements ParcelTrackingDataU
     }
 
     /**
-     *
+     *  <p>Version of the resource on which the change or action was performed.</p>
      */
 
     public Long getResourceVersion() {
@@ -154,7 +158,7 @@ public class ParcelTrackingDataUpdatedMessageImpl implements ParcelTrackingDataU
     }
 
     /**
-     *
+     *  <p>Message Type of the Message.</p>
      */
 
     public String getType() {
@@ -162,7 +166,7 @@ public class ParcelTrackingDataUpdatedMessageImpl implements ParcelTrackingDataU
     }
 
     /**
-     *
+     *  <p>User-provided identifiers of the resource, such as <code>key</code> or <code>externalId</code>. Only present if the resource has such identifiers.</p>
      */
 
     public com.commercetools.api.models.message.UserProvidedIdentifiers getResourceUserProvidedIdentifiers() {
@@ -170,7 +174,7 @@ public class ParcelTrackingDataUpdatedMessageImpl implements ParcelTrackingDataU
     }
 
     /**
-     *
+     *  <p>Unique identifier of the Delivery.</p>
      */
 
     public String getDeliveryId() {
@@ -178,7 +182,7 @@ public class ParcelTrackingDataUpdatedMessageImpl implements ParcelTrackingDataU
     }
 
     /**
-     *
+     *  <p>Unique identifier of the Parcel.</p>
      */
 
     public String getParcelId() {
@@ -186,11 +190,19 @@ public class ParcelTrackingDataUpdatedMessageImpl implements ParcelTrackingDataU
     }
 
     /**
-     *
+     *  <p>The Tracking Data that was added to the Parcel.</p>
      */
 
     public com.commercetools.api.models.order.TrackingData getTrackingData() {
         return this.trackingData;
+    }
+
+    /**
+     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multi</code> ShippingMode.</p>
+     */
+
+    public String getShippingKey() {
+        return this.shippingKey;
     }
 
     public void setId(final String id) {
@@ -246,6 +258,10 @@ public class ParcelTrackingDataUpdatedMessageImpl implements ParcelTrackingDataU
         this.trackingData = trackingData;
     }
 
+    public void setShippingKey(final String shippingKey) {
+        this.shippingKey = shippingKey;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -270,6 +286,7 @@ public class ParcelTrackingDataUpdatedMessageImpl implements ParcelTrackingDataU
                 .append(deliveryId, that.deliveryId)
                 .append(parcelId, that.parcelId)
                 .append(trackingData, that.trackingData)
+                .append(shippingKey, that.shippingKey)
                 .isEquals();
     }
 
@@ -289,6 +306,7 @@ public class ParcelTrackingDataUpdatedMessageImpl implements ParcelTrackingDataU
                 .append(deliveryId)
                 .append(parcelId)
                 .append(trackingData)
+                .append(shippingKey)
                 .toHashCode();
     }
 

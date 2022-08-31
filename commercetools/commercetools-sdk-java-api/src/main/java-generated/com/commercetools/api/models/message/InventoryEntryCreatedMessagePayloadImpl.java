@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * InventoryEntryCreatedMessagePayload
+ *  <p>Generated after a successful Create InventoryEntry request.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class InventoryEntryCreatedMessagePayloadImpl implements InventoryEntryCreatedMessagePayload, ModelBase {
@@ -44,7 +44,7 @@ public class InventoryEntryCreatedMessagePayloadImpl implements InventoryEntryCr
     }
 
     /**
-     *
+     *  <p>InventoryEntry that was created.</p>
      */
 
     public com.commercetools.api.models.inventory.InventoryEntry getInventoryEntry() {

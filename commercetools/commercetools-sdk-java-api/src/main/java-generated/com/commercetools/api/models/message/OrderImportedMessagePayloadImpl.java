@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * OrderImportedMessagePayload
+ *  <p>Generated after a successful Order Import.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderImportedMessagePayloadImpl implements OrderImportedMessagePayload, ModelBase {
@@ -43,7 +43,7 @@ public class OrderImportedMessagePayloadImpl implements OrderImportedMessagePayl
     }
 
     /**
-     *
+     *  <p>Order that was imported.</p>
      */
 
     public com.commercetools.api.models.order.Order getOrder() {

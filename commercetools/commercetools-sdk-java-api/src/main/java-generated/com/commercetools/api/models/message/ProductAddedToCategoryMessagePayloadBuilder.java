@@ -28,7 +28,7 @@ public class ProductAddedToCategoryMessagePayloadBuilder implements Builder<Prod
     private Boolean staged;
 
     /**
-     *  <p>Reference to a Category.</p>
+     *  <p>Category the Product was added to.</p>
      */
 
     public ProductAddedToCategoryMessagePayloadBuilder category(
@@ -38,7 +38,7 @@ public class ProductAddedToCategoryMessagePayloadBuilder implements Builder<Prod
     }
 
     /**
-     *  <p>Reference to a Category.</p>
+     *  <p>Category the Product was added to.</p>
      */
 
     public ProductAddedToCategoryMessagePayloadBuilder category(
@@ -48,7 +48,7 @@ public class ProductAddedToCategoryMessagePayloadBuilder implements Builder<Prod
     }
 
     /**
-     *
+     *  <p>Whether the update was only applied to the staged Product Projection.</p>
      */
 
     public ProductAddedToCategoryMessagePayloadBuilder staged(final Boolean staged) {

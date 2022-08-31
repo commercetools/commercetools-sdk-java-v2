@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * ReviewStateTransitionMessagePayload
+ *  <p>Generated after a successful Transition State update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ReviewStateTransitionMessagePayloadImpl implements ReviewStateTransitionMessagePayload, ModelBase {
@@ -64,7 +64,7 @@ public class ReviewStateTransitionMessagePayloadImpl implements ReviewStateTrans
     }
 
     /**
-     *  <p>Reference to a State.</p>
+     *  <p>State of the Review before the Transition State update action.</p>
      */
 
     public com.commercetools.api.models.state.StateReference getOldState() {
@@ -72,7 +72,7 @@ public class ReviewStateTransitionMessagePayloadImpl implements ReviewStateTrans
     }
 
     /**
-     *  <p>Reference to a State.</p>
+     *  <p>State of the Review after the Transition State update action.</p>
      */
 
     public com.commercetools.api.models.state.StateReference getNewState() {
@@ -80,7 +80,7 @@ public class ReviewStateTransitionMessagePayloadImpl implements ReviewStateTrans
     }
 
     /**
-     *
+     *  <p>Whether the old Review was taken into account in the rating statistics of the target before the state transition.</p>
      */
 
     public Boolean getOldIncludedInStatistics() {
@@ -88,7 +88,7 @@ public class ReviewStateTransitionMessagePayloadImpl implements ReviewStateTrans
     }
 
     /**
-     *
+     *  <p>Whether the new Review was taken into account in the rating statistics of the target after the state transition.</p>
      */
 
     public Boolean getNewIncludedInStatistics() {
@@ -96,7 +96,7 @@ public class ReviewStateTransitionMessagePayloadImpl implements ReviewStateTrans
     }
 
     /**
-     *  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
+     *  <p>Reference to the resource that the Review belongs to.</p>
      */
 
     public com.commercetools.api.models.common.Reference getTarget() {
@@ -104,7 +104,7 @@ public class ReviewStateTransitionMessagePayloadImpl implements ReviewStateTrans
     }
 
     /**
-     *
+     *  <p>Whether State transition validations were turned off during the Transition State update action.</p>
      */
 
     public Boolean getForce() {

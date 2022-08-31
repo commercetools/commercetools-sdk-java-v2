@@ -36,7 +36,7 @@ public class ProductSetProductPriceCustomTypeActionBuilder implements Builder<Pr
     private com.commercetools.api.models.type.FieldContainer fields;
 
     /**
-     *
+     *  <p>The <code>id</code> of the Embedded Price to update.</p>
      */
 
     public ProductSetProductPriceCustomTypeActionBuilder priceId(final String priceId) {
@@ -45,7 +45,7 @@ public class ProductSetProductPriceCustomTypeActionBuilder implements Builder<Pr
     }
 
     /**
-     *
+     *  <p>If <code>true</code>, only the staged Embedded Price is updated. If <code>false</code>, both the current and staged Embedded Price is updated.</p>
      */
 
     public ProductSetProductPriceCustomTypeActionBuilder staged(@Nullable final Boolean staged) {
@@ -54,7 +54,7 @@ public class ProductSetProductPriceCustomTypeActionBuilder implements Builder<Pr
     }
 
     /**
-     *  <p>Defines the Type that extends the Price with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Price.</p>
+     *  <p>Defines the Type that extends the Price with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Embedded Price.</p>
      */
 
     public ProductSetProductPriceCustomTypeActionBuilder type(
@@ -64,7 +64,7 @@ public class ProductSetProductPriceCustomTypeActionBuilder implements Builder<Pr
     }
 
     /**
-     *  <p>Defines the Type that extends the Price with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Price.</p>
+     *  <p>Defines the Type that extends the Price with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Embedded Price.</p>
      */
 
     public ProductSetProductPriceCustomTypeActionBuilder type(
@@ -74,7 +74,7 @@ public class ProductSetProductPriceCustomTypeActionBuilder implements Builder<Pr
     }
 
     /**
-     *  <p>Sets the Custom Fields fields for the Price.</p>
+     *  <p>Sets the Custom Fields fields for the Embedded Price.</p>
      */
 
     public ProductSetProductPriceCustomTypeActionBuilder fields(
@@ -84,7 +84,7 @@ public class ProductSetProductPriceCustomTypeActionBuilder implements Builder<Pr
     }
 
     /**
-     *  <p>Sets the Custom Fields fields for the Price.</p>
+     *  <p>Sets the Custom Fields fields for the Embedded Price.</p>
      */
 
     public ProductSetProductPriceCustomTypeActionBuilder fields(

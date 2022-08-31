@@ -16,7 +16,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * ProductSelectionProductAddedMessagePayload
+ *  <p>Generated after a successful Add Product update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -24,6 +24,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     ProductSelectionProductAddedMessagePayload productSelectionProductAddedMessagePayload = ProductSelectionProductAddedMessagePayload.builder()
  *             .product(productBuilder -> productBuilder)
+ *             .variantSelection(variantSelectionBuilder -> variantSelectionBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -35,7 +36,7 @@ public interface ProductSelectionProductAddedMessagePayload extends MessagePaylo
     String PRODUCT_SELECTION_PRODUCT_ADDED = "ProductSelectionProductAdded";
 
     /**
-     *  <p>Reference to a Product.</p>
+     *  <p>Product that was added to the Product Selection.</p>
      */
     @NotNull
     @Valid
@@ -43,8 +44,9 @@ public interface ProductSelectionProductAddedMessagePayload extends MessagePaylo
     public ProductReference getProduct();
 
     /**
-     *  <p>Polymorphic base type for Product Variant Selections. The actual type is determined by the <code>type</code> field.</p>
+     *  <p>Product Variant Selection after the Add Product update action.</p>
      */
+    @NotNull
     @Valid
     @JsonProperty("variantSelection")
     public ProductVariantSelection getVariantSelection();

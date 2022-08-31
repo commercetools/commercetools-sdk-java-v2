@@ -15,7 +15,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>Changing the slug produces the CategorySlugChangedMessage.</p>
+ *  <p>Changing the slug produces the CategorySlugChanged Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

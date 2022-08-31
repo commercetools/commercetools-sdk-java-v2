@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * ProductAddPriceAction
+ *  <p>Adds the given Price to the <code>prices</code> array of the ProductVariant. Either <code>variantId</code> or <code>sku</code> is required.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductAddPriceActionImpl implements ProductAddPriceAction, ModelBase {
@@ -54,7 +54,7 @@ public class ProductAddPriceActionImpl implements ProductAddPriceAction, ModelBa
     }
 
     /**
-     *
+     *  <p>The <code>id</code> of the ProductVariant to update.</p>
      */
 
     public Long getVariantId() {
@@ -62,7 +62,7 @@ public class ProductAddPriceActionImpl implements ProductAddPriceAction, ModelBa
     }
 
     /**
-     *
+     *  <p>The <code>sku</code> of the ProductVariant to update.</p>
      */
 
     public String getSku() {
@@ -70,7 +70,7 @@ public class ProductAddPriceActionImpl implements ProductAddPriceAction, ModelBa
     }
 
     /**
-     *
+     *  <p>Embedded Price to add to the Product Variant.</p>
      */
 
     public com.commercetools.api.models.common.PriceDraft getPrice() {
@@ -78,7 +78,7 @@ public class ProductAddPriceActionImpl implements ProductAddPriceAction, ModelBa
     }
 
     /**
-     *
+     *  <p>If <code>true</code>, only the staged <code>prices</code> is updated. If <code>false</code>, both the current and staged <code>prices</code> are updated.</p>
      */
 
     public Boolean getStaged() {

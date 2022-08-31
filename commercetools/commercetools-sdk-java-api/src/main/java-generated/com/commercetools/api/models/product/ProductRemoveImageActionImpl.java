@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * ProductRemoveImageAction
+ *  <p>Removes a Product image and deletes it from the Content Delivery Network (external images are not deleted). Deletion from the CDN is not instant, which means the image file itself will stay available for some time after the deletion. Either <code>variantId</code> or <code>sku</code> is required.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductRemoveImageActionImpl implements ProductRemoveImageAction, ModelBase {
@@ -53,7 +53,7 @@ public class ProductRemoveImageActionImpl implements ProductRemoveImageAction, M
     }
 
     /**
-     *
+     *  <p>The <code>id</code> of the ProductVariant to update.</p>
      */
 
     public Long getVariantId() {
@@ -61,7 +61,7 @@ public class ProductRemoveImageActionImpl implements ProductRemoveImageAction, M
     }
 
     /**
-     *
+     *  <p>The <code>sku</code> of the ProductVariant to update.</p>
      */
 
     public String getSku() {
@@ -69,7 +69,7 @@ public class ProductRemoveImageActionImpl implements ProductRemoveImageAction, M
     }
 
     /**
-     *  <p>The URL of the image.</p>
+     *  <p>The URL of the image to remove.</p>
      */
 
     public String getImageUrl() {
@@ -77,7 +77,7 @@ public class ProductRemoveImageActionImpl implements ProductRemoveImageAction, M
     }
 
     /**
-     *
+     *  <p>If <code>true</code>, only the staged image is removed. If <code>false</code>, both the current and staged image is removed.</p>
      */
 
     public Boolean getStaged() {

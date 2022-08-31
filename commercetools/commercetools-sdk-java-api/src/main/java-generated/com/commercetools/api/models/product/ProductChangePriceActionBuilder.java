@@ -33,7 +33,7 @@ public class ProductChangePriceActionBuilder implements Builder<ProductChangePri
     private Boolean staged;
 
     /**
-     *  <p>ID of the EmbeddedPrice</p>
+     *  <p>The <code>id</code> of the Embedded Price to update.</p>
      */
 
     public ProductChangePriceActionBuilder priceId(final String priceId) {
@@ -42,7 +42,7 @@ public class ProductChangePriceActionBuilder implements Builder<ProductChangePri
     }
 
     /**
-     *
+     *  <p>Value to set.</p>
      */
 
     public ProductChangePriceActionBuilder price(
@@ -52,7 +52,7 @@ public class ProductChangePriceActionBuilder implements Builder<ProductChangePri
     }
 
     /**
-     *
+     *  <p>Value to set.</p>
      */
 
     public ProductChangePriceActionBuilder price(final com.commercetools.api.models.common.PriceDraft price) {
@@ -61,7 +61,7 @@ public class ProductChangePriceActionBuilder implements Builder<ProductChangePri
     }
 
     /**
-     *
+     *  <p>If <code>true</code>, only the staged Embedded Price is updated. If <code>false</code>, both the current and staged Embedded Price are updated.</p>
      */
 
     public ProductChangePriceActionBuilder staged(@Nullable final Boolean staged) {

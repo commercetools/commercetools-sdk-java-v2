@@ -4,6 +4,8 @@ package com.commercetools.api.models.message;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
+
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -14,11 +16,9 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <div class=code-example>
  * <pre><code class='java'>
  *     ReviewStateTransitionMessagePayload reviewStateTransitionMessagePayload = ReviewStateTransitionMessagePayload.builder()
- *             .oldState(oldStateBuilder -> oldStateBuilder)
  *             .newState(newStateBuilder -> newStateBuilder)
  *             .oldIncludedInStatistics(true)
  *             .newIncludedInStatistics(true)
- *             .target(targetBuilder -> targetBuilder)
  *             .force(true)
  *             .build()
  * </code></pre>
@@ -27,6 +27,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ReviewStateTransitionMessagePayloadBuilder implements Builder<ReviewStateTransitionMessagePayload> {
 
+    @Nullable
     private com.commercetools.api.models.state.StateReference oldState;
 
     private com.commercetools.api.models.state.StateReference newState;
@@ -35,12 +36,13 @@ public class ReviewStateTransitionMessagePayloadBuilder implements Builder<Revie
 
     private Boolean newIncludedInStatistics;
 
+    @Nullable
     private com.commercetools.api.models.common.Reference target;
 
     private Boolean force;
 
     /**
-     *  <p>Reference to a State.</p>
+     *  <p>State of the Review before the Transition State update action.</p>
      */
 
     public ReviewStateTransitionMessagePayloadBuilder oldState(
@@ -50,17 +52,17 @@ public class ReviewStateTransitionMessagePayloadBuilder implements Builder<Revie
     }
 
     /**
-     *  <p>Reference to a State.</p>
+     *  <p>State of the Review before the Transition State update action.</p>
      */
 
     public ReviewStateTransitionMessagePayloadBuilder oldState(
-            final com.commercetools.api.models.state.StateReference oldState) {
+            @Nullable final com.commercetools.api.models.state.StateReference oldState) {
         this.oldState = oldState;
         return this;
     }
 
     /**
-     *  <p>Reference to a State.</p>
+     *  <p>State of the Review after the Transition State update action.</p>
      */
 
     public ReviewStateTransitionMessagePayloadBuilder newState(
@@ -70,7 +72,7 @@ public class ReviewStateTransitionMessagePayloadBuilder implements Builder<Revie
     }
 
     /**
-     *  <p>Reference to a State.</p>
+     *  <p>State of the Review after the Transition State update action.</p>
      */
 
     public ReviewStateTransitionMessagePayloadBuilder newState(
@@ -80,7 +82,7 @@ public class ReviewStateTransitionMessagePayloadBuilder implements Builder<Revie
     }
 
     /**
-     *
+     *  <p>Whether the old Review was taken into account in the rating statistics of the target before the state transition.</p>
      */
 
     public ReviewStateTransitionMessagePayloadBuilder oldIncludedInStatistics(final Boolean oldIncludedInStatistics) {
@@ -89,7 +91,7 @@ public class ReviewStateTransitionMessagePayloadBuilder implements Builder<Revie
     }
 
     /**
-     *
+     *  <p>Whether the new Review was taken into account in the rating statistics of the target after the state transition.</p>
      */
 
     public ReviewStateTransitionMessagePayloadBuilder newIncludedInStatistics(final Boolean newIncludedInStatistics) {
@@ -98,17 +100,17 @@ public class ReviewStateTransitionMessagePayloadBuilder implements Builder<Revie
     }
 
     /**
-     *  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
+     *  <p>Reference to the resource that the Review belongs to.</p>
      */
 
     public ReviewStateTransitionMessagePayloadBuilder target(
-            final com.commercetools.api.models.common.Reference target) {
+            @Nullable final com.commercetools.api.models.common.Reference target) {
         this.target = target;
         return this;
     }
 
     /**
-     *  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
+     *  <p>Reference to the resource that the Review belongs to.</p>
      */
 
     public ReviewStateTransitionMessagePayloadBuilder target(
@@ -118,7 +120,7 @@ public class ReviewStateTransitionMessagePayloadBuilder implements Builder<Revie
     }
 
     /**
-     *
+     *  <p>Whether State transition validations were turned off during the Transition State update action.</p>
      */
 
     public ReviewStateTransitionMessagePayloadBuilder force(final Boolean force) {
@@ -126,6 +128,7 @@ public class ReviewStateTransitionMessagePayloadBuilder implements Builder<Revie
         return this;
     }
 
+    @Nullable
     public com.commercetools.api.models.state.StateReference getOldState() {
         return this.oldState;
     }
@@ -142,6 +145,7 @@ public class ReviewStateTransitionMessagePayloadBuilder implements Builder<Revie
         return this.newIncludedInStatistics;
     }
 
+    @Nullable
     public com.commercetools.api.models.common.Reference getTarget() {
         return this.target;
     }
@@ -151,13 +155,11 @@ public class ReviewStateTransitionMessagePayloadBuilder implements Builder<Revie
     }
 
     public ReviewStateTransitionMessagePayload build() {
-        Objects.requireNonNull(oldState, ReviewStateTransitionMessagePayload.class + ": oldState is missing");
         Objects.requireNonNull(newState, ReviewStateTransitionMessagePayload.class + ": newState is missing");
         Objects.requireNonNull(oldIncludedInStatistics,
             ReviewStateTransitionMessagePayload.class + ": oldIncludedInStatistics is missing");
         Objects.requireNonNull(newIncludedInStatistics,
             ReviewStateTransitionMessagePayload.class + ": newIncludedInStatistics is missing");
-        Objects.requireNonNull(target, ReviewStateTransitionMessagePayload.class + ": target is missing");
         Objects.requireNonNull(force, ReviewStateTransitionMessagePayload.class + ": force is missing");
         return new ReviewStateTransitionMessagePayloadImpl(oldState, newState, oldIncludedInStatistics,
             newIncludedInStatistics, target, force);

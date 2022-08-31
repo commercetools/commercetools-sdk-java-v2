@@ -31,7 +31,7 @@ public class ProductImageAddedMessagePayloadBuilder implements Builder<ProductIm
     private Boolean staged;
 
     /**
-     *
+     *  <p>Unique identifier of the Product Variant to which the Image was added.</p>
      */
 
     public ProductImageAddedMessagePayloadBuilder variantId(final Long variantId) {
@@ -40,7 +40,7 @@ public class ProductImageAddedMessagePayloadBuilder implements Builder<ProductIm
     }
 
     /**
-     *
+     *  <p>Image that was added.</p>
      */
 
     public ProductImageAddedMessagePayloadBuilder image(
@@ -50,7 +50,7 @@ public class ProductImageAddedMessagePayloadBuilder implements Builder<ProductIm
     }
 
     /**
-     *
+     *  <p>Image that was added.</p>
      */
 
     public ProductImageAddedMessagePayloadBuilder image(final com.commercetools.api.models.common.Image image) {
@@ -59,7 +59,7 @@ public class ProductImageAddedMessagePayloadBuilder implements Builder<ProductIm
     }
 
     /**
-     *
+     *  <p>Whether the update was only applied to the staged Product Projection.</p>
      */
 
     public ProductImageAddedMessagePayloadBuilder staged(final Boolean staged) {

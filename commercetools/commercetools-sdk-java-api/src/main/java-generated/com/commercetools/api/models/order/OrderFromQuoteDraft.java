@@ -34,7 +34,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface OrderFromQuoteDraft {
 
     /**
-     *  <p>ResourceIdentifier to the Quote from which this order is created. If the quote has <code>QuoteState</code> in <code>Accepted</code>, <code>Declined</code> or <code>Withdrawn</code> then the order creation will fail. The creation will also if the <code>Quote</code> has expired (<code>validTo</code> check).</p>
+     *  <p>ResourceIdentifier of the Quote from which this Order is created. If the Quote has <code>QuoteState</code> in <code>Accepted</code>, <code>Declined</code> or <code>Withdrawn</code> then the order creation will fail. The creation will also if the <code>Quote</code> has expired (<code>validTo</code> check).</p>
      */
     @NotNull
     @Valid
@@ -42,7 +42,7 @@ public interface OrderFromQuoteDraft {
     public QuoteResourceIdentifier getQuote();
 
     /**
-     *  <p>The <code>version</code> of the Quote from which an Order is created.</p>
+     *  <p><code>version</code> of the Quote from which an Order is created.</p>
      */
     @NotNull
     @JsonProperty("version")

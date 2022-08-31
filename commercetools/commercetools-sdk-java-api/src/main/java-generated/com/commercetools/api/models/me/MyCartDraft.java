@@ -8,7 +8,6 @@ import java.util.function.Function;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
-import com.commercetools.api.models.cart.DiscountCodeInfo;
 import com.commercetools.api.models.cart.InventoryMode;
 import com.commercetools.api.models.cart.TaxMode;
 import com.commercetools.api.models.common.BaseAddress;
@@ -136,11 +135,11 @@ public interface MyCartDraft extends com.commercetools.api.models.CustomizableDr
     public StoreKeyReference getStore();
 
     /**
-     *
+     *  <p>The code of existing DiscountCodes.</p>
      */
-    @Valid
+
     @JsonProperty("discountCodes")
-    public List<DiscountCodeInfo> getDiscountCodes();
+    public List<String> getDiscountCodes();
 
     public void setCurrency(final String currency);
 
@@ -177,9 +176,9 @@ public interface MyCartDraft extends com.commercetools.api.models.CustomizableDr
     public void setStore(final StoreKeyReference store);
 
     @JsonIgnore
-    public void setDiscountCodes(final DiscountCodeInfo... discountCodes);
+    public void setDiscountCodes(final String... discountCodes);
 
-    public void setDiscountCodes(final List<DiscountCodeInfo> discountCodes);
+    public void setDiscountCodes(final List<String> discountCodes);
 
     public static MyCartDraft of() {
         return new MyCartDraftImpl();

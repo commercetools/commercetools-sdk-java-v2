@@ -15,7 +15,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * DeliveryItemsUpdatedMessage
+ *  <p>Generated after a successful Set Delivery Items update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -43,14 +43,14 @@ public interface DeliveryItemsUpdatedMessage extends OrderMessage {
     String DELIVERY_ITEMS_UPDATED = "DeliveryItemsUpdated";
 
     /**
-     *
+     *  <p>Unique identifier of the Delivery.</p>
      */
     @NotNull
     @JsonProperty("deliveryId")
     public String getDeliveryId();
 
     /**
-     *
+     *  <p>Delivery Items after the Set Delivery Items update action.</p>
      */
     @NotNull
     @Valid
@@ -58,12 +58,19 @@ public interface DeliveryItemsUpdatedMessage extends OrderMessage {
     public List<DeliveryItem> getItems();
 
     /**
-     *
+     *  <p>Delivery Items before the Set Delivery Items update action.</p>
      */
     @NotNull
     @Valid
     @JsonProperty("oldItems")
     public List<DeliveryItem> getOldItems();
+
+    /**
+     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multi</code> ShippingMode.</p>
+     */
+
+    @JsonProperty("shippingKey")
+    public String getShippingKey();
 
     public void setDeliveryId(final String deliveryId);
 
@@ -76,6 +83,8 @@ public interface DeliveryItemsUpdatedMessage extends OrderMessage {
     public void setOldItems(final DeliveryItem... oldItems);
 
     public void setOldItems(final List<DeliveryItem> oldItems);
+
+    public void setShippingKey(final String shippingKey);
 
     public static DeliveryItemsUpdatedMessage of() {
         return new DeliveryItemsUpdatedMessageImpl();
@@ -96,6 +105,7 @@ public interface DeliveryItemsUpdatedMessage extends OrderMessage {
         instance.setDeliveryId(template.getDeliveryId());
         instance.setItems(template.getItems());
         instance.setOldItems(template.getOldItems());
+        instance.setShippingKey(template.getShippingKey());
         return instance;
     }
 

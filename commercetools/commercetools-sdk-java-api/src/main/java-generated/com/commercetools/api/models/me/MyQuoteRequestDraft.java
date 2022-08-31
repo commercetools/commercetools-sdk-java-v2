@@ -34,7 +34,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface MyQuoteRequestDraft {
 
     /**
-     *  <p>ResourceIdentifier to the Cart from which this quote request is created.</p>
+     *  <p>ResourceIdentifier of the Cart from which the Quote Request is created.</p>
      */
     @NotNull
     @Valid
@@ -49,7 +49,7 @@ public interface MyQuoteRequestDraft {
     public Long getVersion();
 
     /**
-     *  <p>Text message included in the request.</p>
+     *  <p>Message from the Buyer included in the Quote Request.</p>
      */
     @NotNull
     @JsonProperty("comment")

@@ -33,8 +33,11 @@ public class ParcelMeasurementsUpdatedMessagePayloadBuilder
     @Nullable
     private com.commercetools.api.models.order.ParcelMeasurements measurements;
 
+    @Nullable
+    private String shippingKey;
+
     /**
-     *
+     *  <p>Unique identifier of the Delivery.</p>
      */
 
     public ParcelMeasurementsUpdatedMessagePayloadBuilder deliveryId(final String deliveryId) {
@@ -43,7 +46,7 @@ public class ParcelMeasurementsUpdatedMessagePayloadBuilder
     }
 
     /**
-     *
+     *  <p>Unique identifier of the Parcel.</p>
      */
 
     public ParcelMeasurementsUpdatedMessagePayloadBuilder parcelId(final String parcelId) {
@@ -52,7 +55,7 @@ public class ParcelMeasurementsUpdatedMessagePayloadBuilder
     }
 
     /**
-     *
+     *  <p>The Parcel Measurements that were set on the Parcel.</p>
      */
 
     public ParcelMeasurementsUpdatedMessagePayloadBuilder measurements(
@@ -62,12 +65,21 @@ public class ParcelMeasurementsUpdatedMessagePayloadBuilder
     }
 
     /**
-     *
+     *  <p>The Parcel Measurements that were set on the Parcel.</p>
      */
 
     public ParcelMeasurementsUpdatedMessagePayloadBuilder measurements(
             @Nullable final com.commercetools.api.models.order.ParcelMeasurements measurements) {
         this.measurements = measurements;
+        return this;
+    }
+
+    /**
+     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multi</code> ShippingMode.</p>
+     */
+
+    public ParcelMeasurementsUpdatedMessagePayloadBuilder shippingKey(@Nullable final String shippingKey) {
+        this.shippingKey = shippingKey;
         return this;
     }
 
@@ -84,17 +96,22 @@ public class ParcelMeasurementsUpdatedMessagePayloadBuilder
         return this.measurements;
     }
 
+    @Nullable
+    public String getShippingKey() {
+        return this.shippingKey;
+    }
+
     public ParcelMeasurementsUpdatedMessagePayload build() {
         Objects.requireNonNull(deliveryId, ParcelMeasurementsUpdatedMessagePayload.class + ": deliveryId is missing");
         Objects.requireNonNull(parcelId, ParcelMeasurementsUpdatedMessagePayload.class + ": parcelId is missing");
-        return new ParcelMeasurementsUpdatedMessagePayloadImpl(deliveryId, parcelId, measurements);
+        return new ParcelMeasurementsUpdatedMessagePayloadImpl(deliveryId, parcelId, measurements, shippingKey);
     }
 
     /**
      * builds ParcelMeasurementsUpdatedMessagePayload without checking for non null required values
      */
     public ParcelMeasurementsUpdatedMessagePayload buildUnchecked() {
-        return new ParcelMeasurementsUpdatedMessagePayloadImpl(deliveryId, parcelId, measurements);
+        return new ParcelMeasurementsUpdatedMessagePayloadImpl(deliveryId, parcelId, measurements, shippingKey);
     }
 
     public static ParcelMeasurementsUpdatedMessagePayloadBuilder of() {
@@ -107,6 +124,7 @@ public class ParcelMeasurementsUpdatedMessagePayloadBuilder
         builder.deliveryId = template.getDeliveryId();
         builder.parcelId = template.getParcelId();
         builder.measurements = template.getMeasurements();
+        builder.shippingKey = template.getShippingKey();
         return builder;
     }
 

@@ -90,6 +90,15 @@ public class CartDraftBuilder implements Builder<CartDraft> {
     private com.commercetools.api.models.cart.CartOrigin origin;
 
     @Nullable
+    private com.commercetools.api.models.cart.ShippingMode shippingMode;
+
+    @Nullable
+    private java.util.List<com.commercetools.api.models.cart.CustomShippingDraft> customShipping;
+
+    @Nullable
+    private java.util.List<com.commercetools.api.models.cart.ShippingDraft> shipping;
+
+    @Nullable
     private com.commercetools.api.models.cart.ShippingRateInputDraft shippingRateInput;
 
     @Nullable
@@ -478,6 +487,132 @@ public class CartDraftBuilder implements Builder<CartDraft> {
     }
 
     /**
+     *  <ul>
+     *   <li>If <code>Single</code>, only a single Shipping Method can be added to the Cart.</li>
+     *   <li>If <code>Multi</code>, multiple Shipping Methods can be added to the Cart.</li>
+     *  </ul>
+     */
+
+    public CartDraftBuilder shippingMode(@Nullable final com.commercetools.api.models.cart.ShippingMode shippingMode) {
+        this.shippingMode = shippingMode;
+        return this;
+    }
+
+    /**
+     *  <p>Custom Shipping Methods for a Cart with <code>Multi</code> ShippingMode.</p>
+     */
+
+    public CartDraftBuilder customShipping(
+            @Nullable final com.commercetools.api.models.cart.CustomShippingDraft... customShipping) {
+        this.customShipping = new ArrayList<>(Arrays.asList(customShipping));
+        return this;
+    }
+
+    /**
+     *  <p>Custom Shipping Methods for a Cart with <code>Multi</code> ShippingMode.</p>
+     */
+
+    public CartDraftBuilder customShipping(
+            @Nullable final java.util.List<com.commercetools.api.models.cart.CustomShippingDraft> customShipping) {
+        this.customShipping = customShipping;
+        return this;
+    }
+
+    /**
+     *  <p>Custom Shipping Methods for a Cart with <code>Multi</code> ShippingMode.</p>
+     */
+
+    public CartDraftBuilder plusCustomShipping(
+            @Nullable final com.commercetools.api.models.cart.CustomShippingDraft... customShipping) {
+        if (this.customShipping == null) {
+            this.customShipping = new ArrayList<>();
+        }
+        this.customShipping.addAll(Arrays.asList(customShipping));
+        return this;
+    }
+
+    /**
+     *  <p>Custom Shipping Methods for a Cart with <code>Multi</code> ShippingMode.</p>
+     */
+
+    public CartDraftBuilder plusCustomShipping(
+            Function<com.commercetools.api.models.cart.CustomShippingDraftBuilder, com.commercetools.api.models.cart.CustomShippingDraftBuilder> builder) {
+        if (this.customShipping == null) {
+            this.customShipping = new ArrayList<>();
+        }
+        this.customShipping
+                .add(builder.apply(com.commercetools.api.models.cart.CustomShippingDraftBuilder.of()).build());
+        return this;
+    }
+
+    /**
+     *  <p>Custom Shipping Methods for a Cart with <code>Multi</code> ShippingMode.</p>
+     */
+
+    public CartDraftBuilder withCustomShipping(
+            Function<com.commercetools.api.models.cart.CustomShippingDraftBuilder, com.commercetools.api.models.cart.CustomShippingDraftBuilder> builder) {
+        this.customShipping = new ArrayList<>();
+        this.customShipping
+                .add(builder.apply(com.commercetools.api.models.cart.CustomShippingDraftBuilder.of()).build());
+        return this;
+    }
+
+    /**
+     *  <p>Shipping Methods for a Cart with <code>Multi</code> ShippingMode.</p>
+     */
+
+    public CartDraftBuilder shipping(@Nullable final com.commercetools.api.models.cart.ShippingDraft... shipping) {
+        this.shipping = new ArrayList<>(Arrays.asList(shipping));
+        return this;
+    }
+
+    /**
+     *  <p>Shipping Methods for a Cart with <code>Multi</code> ShippingMode.</p>
+     */
+
+    public CartDraftBuilder shipping(
+            @Nullable final java.util.List<com.commercetools.api.models.cart.ShippingDraft> shipping) {
+        this.shipping = shipping;
+        return this;
+    }
+
+    /**
+     *  <p>Shipping Methods for a Cart with <code>Multi</code> ShippingMode.</p>
+     */
+
+    public CartDraftBuilder plusShipping(@Nullable final com.commercetools.api.models.cart.ShippingDraft... shipping) {
+        if (this.shipping == null) {
+            this.shipping = new ArrayList<>();
+        }
+        this.shipping.addAll(Arrays.asList(shipping));
+        return this;
+    }
+
+    /**
+     *  <p>Shipping Methods for a Cart with <code>Multi</code> ShippingMode.</p>
+     */
+
+    public CartDraftBuilder plusShipping(
+            Function<com.commercetools.api.models.cart.ShippingDraftBuilder, com.commercetools.api.models.cart.ShippingDraftBuilder> builder) {
+        if (this.shipping == null) {
+            this.shipping = new ArrayList<>();
+        }
+        this.shipping.add(builder.apply(com.commercetools.api.models.cart.ShippingDraftBuilder.of()).build());
+        return this;
+    }
+
+    /**
+     *  <p>Shipping Methods for a Cart with <code>Multi</code> ShippingMode.</p>
+     */
+
+    public CartDraftBuilder withShipping(
+            Function<com.commercetools.api.models.cart.ShippingDraftBuilder, com.commercetools.api.models.cart.ShippingDraftBuilder> builder) {
+        this.shipping = new ArrayList<>();
+        this.shipping.add(builder.apply(com.commercetools.api.models.cart.ShippingDraftBuilder.of()).build());
+        return this;
+    }
+
+    /**
      *  <p>The shippingRateInput is used as an input to select a ShippingRatePriceTier. Based on the definition of ShippingRateInputType. If CartClassification is defined, it must be ClassificationShippingRateInput. If CartScore is defined, it must be ScoreShippingRateInput. Otherwise it can not bet set.</p>
      */
 
@@ -697,6 +832,21 @@ public class CartDraftBuilder implements Builder<CartDraft> {
     }
 
     @Nullable
+    public com.commercetools.api.models.cart.ShippingMode getShippingMode() {
+        return this.shippingMode;
+    }
+
+    @Nullable
+    public java.util.List<com.commercetools.api.models.cart.CustomShippingDraft> getCustomShipping() {
+        return this.customShipping;
+    }
+
+    @Nullable
+    public java.util.List<com.commercetools.api.models.cart.ShippingDraft> getShipping() {
+        return this.shipping;
+    }
+
+    @Nullable
     public com.commercetools.api.models.cart.ShippingRateInputDraft getShippingRateInput() {
         return this.shippingRateInput;
     }
@@ -716,7 +866,8 @@ public class CartDraftBuilder implements Builder<CartDraft> {
         return new CartDraftImpl(currency, key, customerId, customerEmail, customerGroup, anonymousId, store, country,
             inventoryMode, taxMode, taxRoundingMode, taxCalculationMode, lineItems, customLineItems, shippingAddress,
             billingAddress, shippingMethod, externalTaxRateForShippingMethod, custom, locale,
-            deleteDaysAfterLastModification, origin, shippingRateInput, itemShippingAddresses, discountCodes);
+            deleteDaysAfterLastModification, origin, shippingMode, customShipping, shipping, shippingRateInput,
+            itemShippingAddresses, discountCodes);
     }
 
     /**
@@ -726,7 +877,8 @@ public class CartDraftBuilder implements Builder<CartDraft> {
         return new CartDraftImpl(currency, key, customerId, customerEmail, customerGroup, anonymousId, store, country,
             inventoryMode, taxMode, taxRoundingMode, taxCalculationMode, lineItems, customLineItems, shippingAddress,
             billingAddress, shippingMethod, externalTaxRateForShippingMethod, custom, locale,
-            deleteDaysAfterLastModification, origin, shippingRateInput, itemShippingAddresses, discountCodes);
+            deleteDaysAfterLastModification, origin, shippingMode, customShipping, shipping, shippingRateInput,
+            itemShippingAddresses, discountCodes);
     }
 
     public static CartDraftBuilder of() {
@@ -757,6 +909,9 @@ public class CartDraftBuilder implements Builder<CartDraft> {
         builder.locale = template.getLocale();
         builder.deleteDaysAfterLastModification = template.getDeleteDaysAfterLastModification();
         builder.origin = template.getOrigin();
+        builder.shippingMode = template.getShippingMode();
+        builder.customShipping = template.getCustomShipping();
+        builder.shipping = template.getShipping();
         builder.shippingRateInput = template.getShippingRateInput();
         builder.itemShippingAddresses = template.getItemShippingAddresses();
         builder.discountCodes = template.getDiscountCodes();

@@ -4,8 +4,6 @@ package com.commercetools.api.models.message;
 import java.util.*;
 import java.util.function.Function;
 
-import javax.annotation.Nullable;
-
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,6 +15,8 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     ProductSelectionVariantSelectionChangedMessagePayload productSelectionVariantSelectionChangedMessagePayload = ProductSelectionVariantSelectionChangedMessagePayload.builder()
  *             .product(productBuilder -> productBuilder)
+ *             .oldVariantSelection(oldVariantSelectionBuilder -> oldVariantSelectionBuilder)
+ *             .newVariantSelection(newVariantSelectionBuilder -> newVariantSelectionBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -27,14 +27,12 @@ public class ProductSelectionVariantSelectionChangedMessagePayloadBuilder
 
     private com.commercetools.api.models.product.ProductReference product;
 
-    @Nullable
     private com.commercetools.api.models.product_selection.ProductVariantSelection oldVariantSelection;
 
-    @Nullable
     private com.commercetools.api.models.product_selection.ProductVariantSelection newVariantSelection;
 
     /**
-     *  <p>Reference to a Product.</p>
+     *  <p>Product for which the Product Variant Selection changed.</p>
      */
 
     public ProductSelectionVariantSelectionChangedMessagePayloadBuilder product(
@@ -44,7 +42,7 @@ public class ProductSelectionVariantSelectionChangedMessagePayloadBuilder
     }
 
     /**
-     *  <p>Reference to a Product.</p>
+     *  <p>Product for which the Product Variant Selection changed.</p>
      */
 
     public ProductSelectionVariantSelectionChangedMessagePayloadBuilder product(
@@ -54,17 +52,17 @@ public class ProductSelectionVariantSelectionChangedMessagePayloadBuilder
     }
 
     /**
-     *  <p>The former Product Variant Selection if any.</p>
+     *  <p>Product Variant Selection before the Set Variant Selection update action.</p>
      */
 
     public ProductSelectionVariantSelectionChangedMessagePayloadBuilder oldVariantSelection(
-            @Nullable final com.commercetools.api.models.product_selection.ProductVariantSelection oldVariantSelection) {
+            final com.commercetools.api.models.product_selection.ProductVariantSelection oldVariantSelection) {
         this.oldVariantSelection = oldVariantSelection;
         return this;
     }
 
     /**
-     *  <p>The former Product Variant Selection if any.</p>
+     *  <p>Product Variant Selection before the Set Variant Selection update action.</p>
      */
 
     public ProductSelectionVariantSelectionChangedMessagePayloadBuilder oldVariantSelection(
@@ -76,17 +74,17 @@ public class ProductSelectionVariantSelectionChangedMessagePayloadBuilder
     }
 
     /**
-     *  <p>The updated Product Variant Selection if any.</p>
+     *  <p>Product Variant Selection after the Set Variant Selection update action.</p>
      */
 
     public ProductSelectionVariantSelectionChangedMessagePayloadBuilder newVariantSelection(
-            @Nullable final com.commercetools.api.models.product_selection.ProductVariantSelection newVariantSelection) {
+            final com.commercetools.api.models.product_selection.ProductVariantSelection newVariantSelection) {
         this.newVariantSelection = newVariantSelection;
         return this;
     }
 
     /**
-     *  <p>The updated Product Variant Selection if any.</p>
+     *  <p>Product Variant Selection after the Set Variant Selection update action.</p>
      */
 
     public ProductSelectionVariantSelectionChangedMessagePayloadBuilder newVariantSelection(
@@ -101,12 +99,10 @@ public class ProductSelectionVariantSelectionChangedMessagePayloadBuilder
         return this.product;
     }
 
-    @Nullable
     public com.commercetools.api.models.product_selection.ProductVariantSelection getOldVariantSelection() {
         return this.oldVariantSelection;
     }
 
-    @Nullable
     public com.commercetools.api.models.product_selection.ProductVariantSelection getNewVariantSelection() {
         return this.newVariantSelection;
     }
@@ -114,6 +110,10 @@ public class ProductSelectionVariantSelectionChangedMessagePayloadBuilder
     public ProductSelectionVariantSelectionChangedMessagePayload build() {
         Objects.requireNonNull(product,
             ProductSelectionVariantSelectionChangedMessagePayload.class + ": product is missing");
+        Objects.requireNonNull(oldVariantSelection,
+            ProductSelectionVariantSelectionChangedMessagePayload.class + ": oldVariantSelection is missing");
+        Objects.requireNonNull(newVariantSelection,
+            ProductSelectionVariantSelectionChangedMessagePayload.class + ": newVariantSelection is missing");
         return new ProductSelectionVariantSelectionChangedMessagePayloadImpl(product, oldVariantSelection,
             newVariantSelection);
     }

@@ -64,6 +64,12 @@ public class CartDraftImpl implements CartDraft, ModelBase {
 
     private com.commercetools.api.models.cart.CartOrigin origin;
 
+    private com.commercetools.api.models.cart.ShippingMode shippingMode;
+
+    private java.util.List<com.commercetools.api.models.cart.CustomShippingDraft> customShipping;
+
+    private java.util.List<com.commercetools.api.models.cart.ShippingDraft> shipping;
+
     private com.commercetools.api.models.cart.ShippingRateInputDraft shippingRateInput;
 
     private java.util.List<com.commercetools.api.models.common.BaseAddress> itemShippingAddresses;
@@ -92,6 +98,9 @@ public class CartDraftImpl implements CartDraft, ModelBase {
             @JsonProperty("locale") final String locale,
             @JsonProperty("deleteDaysAfterLastModification") final Long deleteDaysAfterLastModification,
             @JsonProperty("origin") final com.commercetools.api.models.cart.CartOrigin origin,
+            @JsonProperty("shippingMode") final com.commercetools.api.models.cart.ShippingMode shippingMode,
+            @JsonProperty("customShipping") final java.util.List<com.commercetools.api.models.cart.CustomShippingDraft> customShipping,
+            @JsonProperty("shipping") final java.util.List<com.commercetools.api.models.cart.ShippingDraft> shipping,
             @JsonProperty("shippingRateInput") final com.commercetools.api.models.cart.ShippingRateInputDraft shippingRateInput,
             @JsonProperty("itemShippingAddresses") final java.util.List<com.commercetools.api.models.common.BaseAddress> itemShippingAddresses,
             @JsonProperty("discountCodes") final java.util.List<String> discountCodes) {
@@ -117,6 +126,9 @@ public class CartDraftImpl implements CartDraft, ModelBase {
         this.locale = locale;
         this.deleteDaysAfterLastModification = deleteDaysAfterLastModification;
         this.origin = origin;
+        this.shippingMode = shippingMode;
+        this.customShipping = customShipping;
+        this.shipping = shipping;
         this.shippingRateInput = shippingRateInput;
         this.itemShippingAddresses = itemShippingAddresses;
         this.discountCodes = discountCodes;
@@ -302,6 +314,33 @@ public class CartDraftImpl implements CartDraft, ModelBase {
     }
 
     /**
+     *  <ul>
+     *   <li>If <code>Single</code>, only a single Shipping Method can be added to the Cart.</li>
+     *   <li>If <code>Multi</code>, multiple Shipping Methods can be added to the Cart.</li>
+     *  </ul>
+     */
+
+    public com.commercetools.api.models.cart.ShippingMode getShippingMode() {
+        return this.shippingMode;
+    }
+
+    /**
+     *  <p>Custom Shipping Methods for a Cart with <code>Multi</code> ShippingMode.</p>
+     */
+
+    public java.util.List<com.commercetools.api.models.cart.CustomShippingDraft> getCustomShipping() {
+        return this.customShipping;
+    }
+
+    /**
+     *  <p>Shipping Methods for a Cart with <code>Multi</code> ShippingMode.</p>
+     */
+
+    public java.util.List<com.commercetools.api.models.cart.ShippingDraft> getShipping() {
+        return this.shipping;
+    }
+
+    /**
      *  <p>The shippingRateInput is used as an input to select a ShippingRatePriceTier. Based on the definition of ShippingRateInputType. If CartClassification is defined, it must be ClassificationShippingRateInput. If CartScore is defined, it must be ScoreShippingRateInput. Otherwise it can not bet set.</p>
      */
 
@@ -425,6 +464,27 @@ public class CartDraftImpl implements CartDraft, ModelBase {
         this.origin = origin;
     }
 
+    public void setShippingMode(final com.commercetools.api.models.cart.ShippingMode shippingMode) {
+        this.shippingMode = shippingMode;
+    }
+
+    public void setCustomShipping(final com.commercetools.api.models.cart.CustomShippingDraft... customShipping) {
+        this.customShipping = new ArrayList<>(Arrays.asList(customShipping));
+    }
+
+    public void setCustomShipping(
+            final java.util.List<com.commercetools.api.models.cart.CustomShippingDraft> customShipping) {
+        this.customShipping = customShipping;
+    }
+
+    public void setShipping(final com.commercetools.api.models.cart.ShippingDraft... shipping) {
+        this.shipping = new ArrayList<>(Arrays.asList(shipping));
+    }
+
+    public void setShipping(final java.util.List<com.commercetools.api.models.cart.ShippingDraft> shipping) {
+        this.shipping = shipping;
+    }
+
     public void setShippingRateInput(final com.commercetools.api.models.cart.ShippingRateInputDraft shippingRateInput) {
         this.shippingRateInput = shippingRateInput;
     }
@@ -479,6 +539,9 @@ public class CartDraftImpl implements CartDraft, ModelBase {
                 .append(locale, that.locale)
                 .append(deleteDaysAfterLastModification, that.deleteDaysAfterLastModification)
                 .append(origin, that.origin)
+                .append(shippingMode, that.shippingMode)
+                .append(customShipping, that.customShipping)
+                .append(shipping, that.shipping)
                 .append(shippingRateInput, that.shippingRateInput)
                 .append(itemShippingAddresses, that.itemShippingAddresses)
                 .append(discountCodes, that.discountCodes)
@@ -509,6 +572,9 @@ public class CartDraftImpl implements CartDraft, ModelBase {
                 .append(locale)
                 .append(deleteDaysAfterLastModification)
                 .append(origin)
+                .append(shippingMode)
+                .append(customShipping)
+                .append(shipping)
                 .append(shippingRateInput)
                 .append(itemShippingAddresses)
                 .append(discountCodes)

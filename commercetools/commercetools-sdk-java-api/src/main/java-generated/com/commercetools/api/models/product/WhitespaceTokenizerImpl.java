@@ -14,7 +14,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * WhitespaceTokenizer
+ *  <p>Creates tokens by splitting the <code>text</code> field in SearchKeyword by whitespaces.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class WhitespaceTokenizerImpl implements WhitespaceTokenizer, ModelBase {

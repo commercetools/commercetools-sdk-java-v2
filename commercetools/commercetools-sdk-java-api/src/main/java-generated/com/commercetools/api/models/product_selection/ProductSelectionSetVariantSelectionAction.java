@@ -34,7 +34,7 @@ public interface ProductSelectionSetVariantSelectionAction extends ProductSelect
     String SET_VARIANT_SELECTION = "setVariantSelection";
 
     /**
-     *  <p>ResourceIdentifier to Product</p>
+     *  <p>ResourceIdentifier of the Product</p>
      */
     @NotNull
     @Valid

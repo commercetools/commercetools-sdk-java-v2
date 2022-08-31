@@ -31,7 +31,7 @@ public class OrderCustomLineItemQuantityChangedMessagePayloadBuilder
     private Long oldQuantity;
 
     /**
-     *
+     *  <p>Unique identifier of the Custom Line Item.</p>
      */
 
     public OrderCustomLineItemQuantityChangedMessagePayloadBuilder customLineItemId(final String customLineItemId) {
@@ -40,7 +40,7 @@ public class OrderCustomLineItemQuantityChangedMessagePayloadBuilder
     }
 
     /**
-     *
+     *  <p>Custom Line Item quantity after the Change Custom Line Item Quantity update action.</p>
      */
 
     public OrderCustomLineItemQuantityChangedMessagePayloadBuilder quantity(final Long quantity) {
@@ -49,7 +49,7 @@ public class OrderCustomLineItemQuantityChangedMessagePayloadBuilder
     }
 
     /**
-     *
+     *  <p>Custom Line Item quantity before the Change Custom Line Item Quantity update action.</p>
      */
 
     public OrderCustomLineItemQuantityChangedMessagePayloadBuilder oldQuantity(final Long oldQuantity) {

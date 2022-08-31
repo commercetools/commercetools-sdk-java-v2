@@ -15,7 +15,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * ProductAddedToCategoryMessagePayload
+ *  <p>Generated after a successful Add To Category update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -35,7 +35,7 @@ public interface ProductAddedToCategoryMessagePayload extends MessagePayload {
     String PRODUCT_ADDED_TO_CATEGORY = "ProductAddedToCategory";
 
     /**
-     *  <p>Reference to a Category.</p>
+     *  <p>Category the Product was added to.</p>
      */
     @NotNull
     @Valid
@@ -43,7 +43,7 @@ public interface ProductAddedToCategoryMessagePayload extends MessagePayload {
     public CategoryReference getCategory();
 
     /**
-     *
+     *  <p>Whether the update was only applied to the staged Product Projection.</p>
      */
     @NotNull
     @JsonProperty("staged")

@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * StagedQuoteSellerCommentSetMessagePayload
+ *  <p>Generated after a successful Set Seller Comment update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StagedQuoteSellerCommentSetMessagePayloadImpl
@@ -44,7 +44,7 @@ public class StagedQuoteSellerCommentSetMessagePayloadImpl
     }
 
     /**
-     *
+     *  <p><code>sellerComment</code> on the StagedQuote after a successful Set Seller Comment update action.</p>
      */
 
     public String getSellerComment() {

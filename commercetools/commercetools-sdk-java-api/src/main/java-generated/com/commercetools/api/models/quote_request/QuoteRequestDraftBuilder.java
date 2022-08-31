@@ -38,6 +38,9 @@ public class QuoteRequestDraftBuilder implements Builder<QuoteRequestDraft> {
     @Nullable
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
 
+    @Nullable
+    private com.commercetools.api.models.state.StateReference state;
+
     /**
      *  <p>Cart for which a Quote is requested. Anonymous Carts as well as Carts with Discount Codes are not supported.</p>
      */
@@ -76,7 +79,7 @@ public class QuoteRequestDraftBuilder implements Builder<QuoteRequestDraft> {
     }
 
     /**
-     *  <p>Text message included in the request.</p>
+     *  <p>Message from the Buyer included in the Quote Request.</p>
      */
 
     public QuoteRequestDraftBuilder comment(final String comment) {
@@ -103,6 +106,25 @@ public class QuoteRequestDraftBuilder implements Builder<QuoteRequestDraft> {
         return this;
     }
 
+    /**
+     *  <p>State of this Quote Request. This reference can point to a State in a custom workflow.</p>
+     */
+
+    public QuoteRequestDraftBuilder state(
+            Function<com.commercetools.api.models.state.StateReferenceBuilder, com.commercetools.api.models.state.StateReferenceBuilder> builder) {
+        this.state = builder.apply(com.commercetools.api.models.state.StateReferenceBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>State of this Quote Request. This reference can point to a State in a custom workflow.</p>
+     */
+
+    public QuoteRequestDraftBuilder state(@Nullable final com.commercetools.api.models.state.StateReference state) {
+        this.state = state;
+        return this;
+    }
+
     public com.commercetools.api.models.cart.CartResourceIdentifier getCart() {
         return this.cart;
     }
@@ -125,18 +147,23 @@ public class QuoteRequestDraftBuilder implements Builder<QuoteRequestDraft> {
         return this.custom;
     }
 
+    @Nullable
+    public com.commercetools.api.models.state.StateReference getState() {
+        return this.state;
+    }
+
     public QuoteRequestDraft build() {
         Objects.requireNonNull(cart, QuoteRequestDraft.class + ": cart is missing");
         Objects.requireNonNull(cartVersion, QuoteRequestDraft.class + ": cartVersion is missing");
         Objects.requireNonNull(comment, QuoteRequestDraft.class + ": comment is missing");
-        return new QuoteRequestDraftImpl(cart, cartVersion, key, comment, custom);
+        return new QuoteRequestDraftImpl(cart, cartVersion, key, comment, custom, state);
     }
 
     /**
      * builds QuoteRequestDraft without checking for non null required values
      */
     public QuoteRequestDraft buildUnchecked() {
-        return new QuoteRequestDraftImpl(cart, cartVersion, key, comment, custom);
+        return new QuoteRequestDraftImpl(cart, cartVersion, key, comment, custom, state);
     }
 
     public static QuoteRequestDraftBuilder of() {
@@ -150,6 +177,7 @@ public class QuoteRequestDraftBuilder implements Builder<QuoteRequestDraft> {
         builder.key = template.getKey();
         builder.comment = template.getComment();
         builder.custom = template.getCustom();
+        builder.state = template.getState();
         return builder;
     }
 

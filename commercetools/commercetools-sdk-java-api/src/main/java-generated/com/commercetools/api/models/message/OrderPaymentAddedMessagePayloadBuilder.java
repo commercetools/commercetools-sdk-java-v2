@@ -25,7 +25,7 @@ public class OrderPaymentAddedMessagePayloadBuilder implements Builder<OrderPaym
     private com.commercetools.api.models.payment.PaymentReference payment;
 
     /**
-     *  <p>Reference to a Payment.</p>
+     *  <p>Payment that was added to the Order.</p>
      */
 
     public OrderPaymentAddedMessagePayloadBuilder payment(
@@ -35,7 +35,7 @@ public class OrderPaymentAddedMessagePayloadBuilder implements Builder<OrderPaym
     }
 
     /**
-     *  <p>Reference to a Payment.</p>
+     *  <p>Payment that was added to the Order.</p>
      */
 
     public OrderPaymentAddedMessagePayloadBuilder payment(

@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
@@ -14,15 +15,22 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * QuoteCreatedMessagePayload
+ *  <p>Generated after a successful Create Quote request.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class QuoteCreatedMessagePayloadImpl implements QuoteCreatedMessagePayload, ModelBase {
 
     private String type;
 
+    private com.commercetools.api.models.quote.Quote quote;
+
     @JsonCreator
-    QuoteCreatedMessagePayloadImpl() {
+    QuoteCreatedMessagePayloadImpl(@JsonProperty("quote") final com.commercetools.api.models.quote.Quote quote) {
+        this.quote = quote;
+        this.type = QUOTE_CREATED;
+    }
+
+    public QuoteCreatedMessagePayloadImpl() {
         this.type = QUOTE_CREATED;
     }
 
@@ -32,6 +40,18 @@ public class QuoteCreatedMessagePayloadImpl implements QuoteCreatedMessagePayloa
 
     public String getType() {
         return this.type;
+    }
+
+    /**
+     *  <p>Quote that was created.</p>
+     */
+
+    public com.commercetools.api.models.quote.Quote getQuote() {
+        return this.quote;
+    }
+
+    public void setQuote(final com.commercetools.api.models.quote.Quote quote) {
+        this.quote = quote;
     }
 
     @Override
@@ -44,12 +64,12 @@ public class QuoteCreatedMessagePayloadImpl implements QuoteCreatedMessagePayloa
 
         QuoteCreatedMessagePayloadImpl that = (QuoteCreatedMessagePayloadImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).isEquals();
+        return new EqualsBuilder().append(type, that.type).append(quote, that.quote).isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(type).toHashCode();
+        return new HashCodeBuilder(17, 37).append(type).append(quote).toHashCode();
     }
 
 }

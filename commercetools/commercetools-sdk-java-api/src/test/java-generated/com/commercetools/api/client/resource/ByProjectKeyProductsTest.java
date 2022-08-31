@@ -63,7 +63,9 @@ public class ByProjectKeyProductsTest {
 
     @DataProvider
     public static Object[][] requestWithMethodParameters() {
-        return new Object[][] {
+        return new Object[][] { new Object[] {
+                apiRoot.withProjectKey("test_projectKey").products().get().withWhere("where").createHttpRequest(),
+                "get", "/test_projectKey/products?where=where", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .products()
                         .get()
@@ -108,15 +110,15 @@ public class ByProjectKeyProductsTest {
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .products()
                         .get()
-                        .withWhere("where")
-                        .createHttpRequest(), "get", "/test_projectKey/products?where=where", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey")
-                        .products()
-                        .get()
                         .withPredicateVar("varName", "var.varName")
                         .createHttpRequest(), "get", "/test_projectKey/products?var.varName=var.varName", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey").products().get().createHttpRequest(), "get",
                         "/test_projectKey/products", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .products()
+                        .head()
+                        .withWhere("where")
+                        .createHttpRequest(), "head", "/test_projectKey/products?where=where", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey").products().head().createHttpRequest(), "head",
                         "/test_projectKey/products", },
                 new Object[] {
@@ -154,8 +156,12 @@ public class ByProjectKeyProductsTest {
 
     @DataProvider
     public static Object[][] executeMethodParameters() {
-        return new Object[][] { new Object[] {
-                apiRoot.withProjectKey("test_projectKey").products().get().withPriceCurrency("priceCurrency"), },
+        return new Object[][] {
+                new Object[] { apiRoot.withProjectKey("test_projectKey").products().get().withWhere("where"), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .products()
+                        .get()
+                        .withPriceCurrency("priceCurrency"), },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey").products().get().withPriceCountry("priceCountry"), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
@@ -169,12 +175,12 @@ public class ByProjectKeyProductsTest {
                 new Object[] { apiRoot.withProjectKey("test_projectKey").products().get().withLimit(7), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey").products().get().withOffset(3), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey").products().get().withWithTotal(true), },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").products().get().withWhere("where"), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .products()
                         .get()
                         .withPredicateVar("varName", "var.varName"), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey").products().get(), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey").products().head().withWhere("where"), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey").products().head(), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .products()

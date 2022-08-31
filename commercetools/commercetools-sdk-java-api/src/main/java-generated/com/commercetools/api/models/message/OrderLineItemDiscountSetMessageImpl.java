@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * OrderLineItemDiscountSetMessage
+ *  <p>Generated after a successful recalculation of a Discount on a Line Item.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderLineItemDiscountSetMessageImpl implements OrderLineItemDiscountSetMessage, ModelBase {
@@ -50,6 +50,8 @@ public class OrderLineItemDiscountSetMessageImpl implements OrderLineItemDiscoun
 
     private com.commercetools.api.models.cart.TaxedItemPrice taxedPrice;
 
+    private java.util.List<com.commercetools.api.models.cart.MethodTaxedPrice> taxedPricePortions;
+
     @JsonCreator
     OrderLineItemDiscountSetMessageImpl(@JsonProperty("id") final String id,
             @JsonProperty("version") final Long version,
@@ -64,7 +66,8 @@ public class OrderLineItemDiscountSetMessageImpl implements OrderLineItemDiscoun
             @JsonProperty("lineItemId") final String lineItemId,
             @JsonProperty("discountedPricePerQuantity") final java.util.List<com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantity> discountedPricePerQuantity,
             @JsonProperty("totalPrice") final com.commercetools.api.models.common.Money totalPrice,
-            @JsonProperty("taxedPrice") final com.commercetools.api.models.cart.TaxedItemPrice taxedPrice) {
+            @JsonProperty("taxedPrice") final com.commercetools.api.models.cart.TaxedItemPrice taxedPrice,
+            @JsonProperty("taxedPricePortions") final java.util.List<com.commercetools.api.models.cart.MethodTaxedPrice> taxedPricePortions) {
         this.id = id;
         this.version = version;
         this.createdAt = createdAt;
@@ -79,6 +82,7 @@ public class OrderLineItemDiscountSetMessageImpl implements OrderLineItemDiscoun
         this.discountedPricePerQuantity = discountedPricePerQuantity;
         this.totalPrice = totalPrice;
         this.taxedPrice = taxedPrice;
+        this.taxedPricePortions = taxedPricePortions;
         this.type = ORDER_LINE_ITEM_DISCOUNT_SET;
     }
 
@@ -87,7 +91,7 @@ public class OrderLineItemDiscountSetMessageImpl implements OrderLineItemDiscoun
     }
 
     /**
-     *  <p>Unique identifier of the Message.</p>
+     *  <p>Unique identifier of the Message. Can be used to track which Messages have been processed.</p>
      */
 
     public String getId() {
@@ -95,7 +99,7 @@ public class OrderLineItemDiscountSetMessageImpl implements OrderLineItemDiscoun
     }
 
     /**
-     *
+     *  <p>Version of a resource. In case of Messages, this is always <code>1</code>.</p>
      */
 
     public Long getVersion() {
@@ -103,7 +107,7 @@ public class OrderLineItemDiscountSetMessageImpl implements OrderLineItemDiscoun
     }
 
     /**
-     *
+     *  <p>Date and time (UTC) the Message was generated.</p>
      */
 
     public java.time.ZonedDateTime getCreatedAt() {
@@ -111,7 +115,7 @@ public class OrderLineItemDiscountSetMessageImpl implements OrderLineItemDiscoun
     }
 
     /**
-     *
+     *  <p>Value of <code>createdAt</code>.</p>
      */
 
     public java.time.ZonedDateTime getLastModifiedAt() {
@@ -119,7 +123,7 @@ public class OrderLineItemDiscountSetMessageImpl implements OrderLineItemDiscoun
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>Value of <code>createdBy</code>.</p>
      */
 
     public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy() {
@@ -135,7 +139,7 @@ public class OrderLineItemDiscountSetMessageImpl implements OrderLineItemDiscoun
     }
 
     /**
-     *
+     *  <p>Message number in relation to other Messages for a given resource. The <code>sequenceNumber</code> of the next Message for the resource is the successor of the <code>sequenceNumber</code> of the current Message. Meaning, the <code>sequenceNumber</code> of the next Message equals the <code>sequenceNumber</code> of the current Message + 1. <code>sequenceNumber</code> can be used to ensure that Messages are processed in the correct order for a particular resource.</p>
      */
 
     public Long getSequenceNumber() {
@@ -143,7 +147,7 @@ public class OrderLineItemDiscountSetMessageImpl implements OrderLineItemDiscoun
     }
 
     /**
-     *  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
+     *  <p>Reference to the resource on which the change or action was performed.</p>
      */
 
     public com.commercetools.api.models.common.Reference getResource() {
@@ -151,7 +155,7 @@ public class OrderLineItemDiscountSetMessageImpl implements OrderLineItemDiscoun
     }
 
     /**
-     *
+     *  <p>Version of the resource on which the change or action was performed.</p>
      */
 
     public Long getResourceVersion() {
@@ -159,7 +163,7 @@ public class OrderLineItemDiscountSetMessageImpl implements OrderLineItemDiscoun
     }
 
     /**
-     *
+     *  <p>Message Type of the Message.</p>
      */
 
     public String getType() {
@@ -167,7 +171,7 @@ public class OrderLineItemDiscountSetMessageImpl implements OrderLineItemDiscoun
     }
 
     /**
-     *
+     *  <p>User-provided identifiers of the resource, such as <code>key</code> or <code>externalId</code>. Only present if the resource has such identifiers.</p>
      */
 
     public com.commercetools.api.models.message.UserProvidedIdentifiers getResourceUserProvidedIdentifiers() {
@@ -175,7 +179,7 @@ public class OrderLineItemDiscountSetMessageImpl implements OrderLineItemDiscoun
     }
 
     /**
-     *
+     *  <p>Unique identifier for the Line Item.</p>
      */
 
     public String getLineItemId() {
@@ -183,7 +187,7 @@ public class OrderLineItemDiscountSetMessageImpl implements OrderLineItemDiscoun
     }
 
     /**
-     *
+     *  <p>Array of DiscountedLineItemPriceForQuantity after the Discount recalculation.</p>
      */
 
     public java.util.List<com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantity> getDiscountedPricePerQuantity() {
@@ -191,8 +195,7 @@ public class OrderLineItemDiscountSetMessageImpl implements OrderLineItemDiscoun
     }
 
     /**
-     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
-     *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
+     *  <p>Total Price of the Line Item after the Discount recalculation.</p>
      */
 
     public com.commercetools.api.models.common.Money getTotalPrice() {
@@ -200,11 +203,19 @@ public class OrderLineItemDiscountSetMessageImpl implements OrderLineItemDiscoun
     }
 
     /**
-     *
+     *  <p>TaxedItemPrice of the Line Item after the Discount recalculation.</p>
      */
 
     public com.commercetools.api.models.cart.TaxedItemPrice getTaxedPrice() {
         return this.taxedPrice;
+    }
+
+    /**
+     *  <p>Taxed price of the Shipping Methods in a Cart with <code>Multi</code> ShippingMode..</p>
+     */
+
+    public java.util.List<com.commercetools.api.models.cart.MethodTaxedPrice> getTaxedPricePortions() {
+        return this.taxedPricePortions;
     }
 
     public void setId(final String id) {
@@ -270,6 +281,15 @@ public class OrderLineItemDiscountSetMessageImpl implements OrderLineItemDiscoun
         this.taxedPrice = taxedPrice;
     }
 
+    public void setTaxedPricePortions(final com.commercetools.api.models.cart.MethodTaxedPrice... taxedPricePortions) {
+        this.taxedPricePortions = new ArrayList<>(Arrays.asList(taxedPricePortions));
+    }
+
+    public void setTaxedPricePortions(
+            final java.util.List<com.commercetools.api.models.cart.MethodTaxedPrice> taxedPricePortions) {
+        this.taxedPricePortions = taxedPricePortions;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -295,6 +315,7 @@ public class OrderLineItemDiscountSetMessageImpl implements OrderLineItemDiscoun
                 .append(discountedPricePerQuantity, that.discountedPricePerQuantity)
                 .append(totalPrice, that.totalPrice)
                 .append(taxedPrice, that.taxedPrice)
+                .append(taxedPricePortions, that.taxedPricePortions)
                 .isEquals();
     }
 
@@ -315,6 +336,7 @@ public class OrderLineItemDiscountSetMessageImpl implements OrderLineItemDiscoun
                 .append(discountedPricePerQuantity)
                 .append(totalPrice)
                 .append(taxedPrice)
+                .append(taxedPricePortions)
                 .toHashCode();
     }
 

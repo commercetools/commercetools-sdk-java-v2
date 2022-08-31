@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * OrderDeletedMessagePayload
+ *  <p>Generated after a successful Delete Order request.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderDeletedMessagePayloadImpl implements OrderDeletedMessagePayload, ModelBase {
@@ -43,7 +43,7 @@ public class OrderDeletedMessagePayloadImpl implements OrderDeletedMessagePayloa
     }
 
     /**
-     *
+     *  <p>Order that has been deleted.</p>
      */
 
     public com.commercetools.api.models.order.Order getOrder() {

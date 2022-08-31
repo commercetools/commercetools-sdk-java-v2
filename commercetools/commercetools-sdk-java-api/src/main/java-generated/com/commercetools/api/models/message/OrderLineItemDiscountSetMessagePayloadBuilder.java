@@ -19,6 +19,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .lineItemId("{lineItemId}")
  *             .plusDiscountedPricePerQuantity(discountedPricePerQuantityBuilder -> discountedPricePerQuantityBuilder)
  *             .totalPrice(totalPriceBuilder -> totalPriceBuilder)
+ *             .plusTaxedPricePortions(taxedPricePortionsBuilder -> taxedPricePortionsBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -35,8 +36,10 @@ public class OrderLineItemDiscountSetMessagePayloadBuilder implements Builder<Or
     @Nullable
     private com.commercetools.api.models.cart.TaxedItemPrice taxedPrice;
 
+    private java.util.List<com.commercetools.api.models.cart.MethodTaxedPrice> taxedPricePortions;
+
     /**
-     *
+     *  <p>Unique identifier for the Line Item.</p>
      */
 
     public OrderLineItemDiscountSetMessagePayloadBuilder lineItemId(final String lineItemId) {
@@ -45,7 +48,7 @@ public class OrderLineItemDiscountSetMessagePayloadBuilder implements Builder<Or
     }
 
     /**
-     *
+     *  <p>Array of DiscountedLineItemPriceForQuantity after the Discount recalculation.</p>
      */
 
     public OrderLineItemDiscountSetMessagePayloadBuilder discountedPricePerQuantity(
@@ -55,7 +58,7 @@ public class OrderLineItemDiscountSetMessagePayloadBuilder implements Builder<Or
     }
 
     /**
-     *
+     *  <p>Array of DiscountedLineItemPriceForQuantity after the Discount recalculation.</p>
      */
 
     public OrderLineItemDiscountSetMessagePayloadBuilder discountedPricePerQuantity(
@@ -65,7 +68,7 @@ public class OrderLineItemDiscountSetMessagePayloadBuilder implements Builder<Or
     }
 
     /**
-     *
+     *  <p>Array of DiscountedLineItemPriceForQuantity after the Discount recalculation.</p>
      */
 
     public OrderLineItemDiscountSetMessagePayloadBuilder plusDiscountedPricePerQuantity(
@@ -78,7 +81,7 @@ public class OrderLineItemDiscountSetMessagePayloadBuilder implements Builder<Or
     }
 
     /**
-     *
+     *  <p>Array of DiscountedLineItemPriceForQuantity after the Discount recalculation.</p>
      */
 
     public OrderLineItemDiscountSetMessagePayloadBuilder plusDiscountedPricePerQuantity(
@@ -92,7 +95,7 @@ public class OrderLineItemDiscountSetMessagePayloadBuilder implements Builder<Or
     }
 
     /**
-     *
+     *  <p>Array of DiscountedLineItemPriceForQuantity after the Discount recalculation.</p>
      */
 
     public OrderLineItemDiscountSetMessagePayloadBuilder withDiscountedPricePerQuantity(
@@ -104,8 +107,7 @@ public class OrderLineItemDiscountSetMessagePayloadBuilder implements Builder<Or
     }
 
     /**
-     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
-     *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
+     *  <p>Total Price of the Line Item after the Discount recalculation.</p>
      */
 
     public OrderLineItemDiscountSetMessagePayloadBuilder totalPrice(
@@ -115,8 +117,7 @@ public class OrderLineItemDiscountSetMessagePayloadBuilder implements Builder<Or
     }
 
     /**
-     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
-     *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
+     *  <p>Total Price of the Line Item after the Discount recalculation.</p>
      */
 
     public OrderLineItemDiscountSetMessagePayloadBuilder totalPrice(
@@ -126,7 +127,7 @@ public class OrderLineItemDiscountSetMessagePayloadBuilder implements Builder<Or
     }
 
     /**
-     *
+     *  <p>TaxedItemPrice of the Line Item after the Discount recalculation.</p>
      */
 
     public OrderLineItemDiscountSetMessagePayloadBuilder taxedPrice(
@@ -136,12 +137,71 @@ public class OrderLineItemDiscountSetMessagePayloadBuilder implements Builder<Or
     }
 
     /**
-     *
+     *  <p>TaxedItemPrice of the Line Item after the Discount recalculation.</p>
      */
 
     public OrderLineItemDiscountSetMessagePayloadBuilder taxedPrice(
             @Nullable final com.commercetools.api.models.cart.TaxedItemPrice taxedPrice) {
         this.taxedPrice = taxedPrice;
+        return this;
+    }
+
+    /**
+     *  <p>Taxed price of the Shipping Methods in a Cart with <code>Multi</code> ShippingMode..</p>
+     */
+
+    public OrderLineItemDiscountSetMessagePayloadBuilder taxedPricePortions(
+            final com.commercetools.api.models.cart.MethodTaxedPrice... taxedPricePortions) {
+        this.taxedPricePortions = new ArrayList<>(Arrays.asList(taxedPricePortions));
+        return this;
+    }
+
+    /**
+     *  <p>Taxed price of the Shipping Methods in a Cart with <code>Multi</code> ShippingMode..</p>
+     */
+
+    public OrderLineItemDiscountSetMessagePayloadBuilder taxedPricePortions(
+            final java.util.List<com.commercetools.api.models.cart.MethodTaxedPrice> taxedPricePortions) {
+        this.taxedPricePortions = taxedPricePortions;
+        return this;
+    }
+
+    /**
+     *  <p>Taxed price of the Shipping Methods in a Cart with <code>Multi</code> ShippingMode..</p>
+     */
+
+    public OrderLineItemDiscountSetMessagePayloadBuilder plusTaxedPricePortions(
+            final com.commercetools.api.models.cart.MethodTaxedPrice... taxedPricePortions) {
+        if (this.taxedPricePortions == null) {
+            this.taxedPricePortions = new ArrayList<>();
+        }
+        this.taxedPricePortions.addAll(Arrays.asList(taxedPricePortions));
+        return this;
+    }
+
+    /**
+     *  <p>Taxed price of the Shipping Methods in a Cart with <code>Multi</code> ShippingMode..</p>
+     */
+
+    public OrderLineItemDiscountSetMessagePayloadBuilder plusTaxedPricePortions(
+            Function<com.commercetools.api.models.cart.MethodTaxedPriceBuilder, com.commercetools.api.models.cart.MethodTaxedPriceBuilder> builder) {
+        if (this.taxedPricePortions == null) {
+            this.taxedPricePortions = new ArrayList<>();
+        }
+        this.taxedPricePortions
+                .add(builder.apply(com.commercetools.api.models.cart.MethodTaxedPriceBuilder.of()).build());
+        return this;
+    }
+
+    /**
+     *  <p>Taxed price of the Shipping Methods in a Cart with <code>Multi</code> ShippingMode..</p>
+     */
+
+    public OrderLineItemDiscountSetMessagePayloadBuilder withTaxedPricePortions(
+            Function<com.commercetools.api.models.cart.MethodTaxedPriceBuilder, com.commercetools.api.models.cart.MethodTaxedPriceBuilder> builder) {
+        this.taxedPricePortions = new ArrayList<>();
+        this.taxedPricePortions
+                .add(builder.apply(com.commercetools.api.models.cart.MethodTaxedPriceBuilder.of()).build());
         return this;
     }
 
@@ -162,13 +222,19 @@ public class OrderLineItemDiscountSetMessagePayloadBuilder implements Builder<Or
         return this.taxedPrice;
     }
 
+    public java.util.List<com.commercetools.api.models.cart.MethodTaxedPrice> getTaxedPricePortions() {
+        return this.taxedPricePortions;
+    }
+
     public OrderLineItemDiscountSetMessagePayload build() {
         Objects.requireNonNull(lineItemId, OrderLineItemDiscountSetMessagePayload.class + ": lineItemId is missing");
         Objects.requireNonNull(discountedPricePerQuantity,
             OrderLineItemDiscountSetMessagePayload.class + ": discountedPricePerQuantity is missing");
         Objects.requireNonNull(totalPrice, OrderLineItemDiscountSetMessagePayload.class + ": totalPrice is missing");
+        Objects.requireNonNull(taxedPricePortions,
+            OrderLineItemDiscountSetMessagePayload.class + ": taxedPricePortions is missing");
         return new OrderLineItemDiscountSetMessagePayloadImpl(lineItemId, discountedPricePerQuantity, totalPrice,
-            taxedPrice);
+            taxedPrice, taxedPricePortions);
     }
 
     /**
@@ -176,7 +242,7 @@ public class OrderLineItemDiscountSetMessagePayloadBuilder implements Builder<Or
      */
     public OrderLineItemDiscountSetMessagePayload buildUnchecked() {
         return new OrderLineItemDiscountSetMessagePayloadImpl(lineItemId, discountedPricePerQuantity, totalPrice,
-            taxedPrice);
+            taxedPrice, taxedPricePortions);
     }
 
     public static OrderLineItemDiscountSetMessagePayloadBuilder of() {
@@ -190,6 +256,7 @@ public class OrderLineItemDiscountSetMessagePayloadBuilder implements Builder<Or
         builder.discountedPricePerQuantity = template.getDiscountedPricePerQuantity();
         builder.totalPrice = template.getTotalPrice();
         builder.taxedPrice = template.getTaxedPrice();
+        builder.taxedPricePortions = template.getTaxedPricePortions();
         return builder;
     }
 

@@ -31,14 +31,14 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ImageDimensions {
 
     /**
-     *
+     *  <p>Width of the image.</p>
      */
     @NotNull
     @JsonProperty("w")
     public Integer getW();
 
     /**
-     *
+     *  <p>Height of the image.</p>
      */
     @NotNull
     @JsonProperty("h")

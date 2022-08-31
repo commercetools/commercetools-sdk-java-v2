@@ -15,7 +15,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * ProductPriceDiscountsSetUpdatedPrice
+ *  <p>Details about a Embedded Price that was updated due to a Discount. Specific to ProductPriceDiscountsSet Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -34,42 +34,42 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ProductPriceDiscountsSetUpdatedPrice {
 
     /**
-     *
+     *  <p>Unique identifier of the ProductVariant for which the Discount was set.</p>
      */
     @NotNull
     @JsonProperty("variantId")
     public Integer getVariantId();
 
     /**
-     *
+     *  <p>Key of the ProductVariant for which Discount was set.</p>
      */
 
     @JsonProperty("variantKey")
     public String getVariantKey();
 
     /**
-     *
+     *  <p>SKU of the ProductVariant for which Discount was set.</p>
      */
 
     @JsonProperty("sku")
     public String getSku();
 
     /**
-     *
+     *  <p>Unique identifier of the Embedded Price.</p>
      */
     @NotNull
     @JsonProperty("priceId")
     public String getPriceId();
 
     /**
-     *
+     *  <p>Discounted Price for the ProductVariant for which Discount was set.</p>
      */
     @Valid
     @JsonProperty("discounted")
     public DiscountedPrice getDiscounted();
 
     /**
-     *
+     *  <p>Whether the update was only applied to the staged ProductProjection.</p>
      */
     @NotNull
     @JsonProperty("staged")

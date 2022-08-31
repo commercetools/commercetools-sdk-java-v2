@@ -40,6 +40,21 @@ public interface StateTypeEnum {
 
     */
     StateTypeEnum PAYMENT_STATE = StateTypeEnumEnum.PAYMENT_STATE;
+    /**
+    	<p>Used by <a href="ctp:api:type:QuoteRequest">QuoteRequest</a>.</p>
+
+    */
+    StateTypeEnum QUOTE_REQUEST_STATE = StateTypeEnumEnum.QUOTE_REQUEST_STATE;
+    /**
+    	<p>Used by <a href="ctp:api:type:StagedQuote">StagedQuote</a>.</p>
+
+    */
+    StateTypeEnum STAGED_QUOTE_STATE = StateTypeEnumEnum.STAGED_QUOTE_STATE;
+    /**
+    	<p>Used by <a href="ctp:api:type:Quote">Quote</a>.</p>
+
+    */
+    StateTypeEnum QUOTE_STATE = StateTypeEnumEnum.QUOTE_STATE;
 
     enum StateTypeEnumEnum implements StateTypeEnum {
         ORDER_STATE("OrderState"),
@@ -50,7 +65,13 @@ public interface StateTypeEnum {
 
         REVIEW_STATE("ReviewState"),
 
-        PAYMENT_STATE("PaymentState");
+        PAYMENT_STATE("PaymentState"),
+
+        QUOTE_REQUEST_STATE("QuoteRequestState"),
+
+        STAGED_QUOTE_STATE("StagedQuoteState"),
+
+        QUOTE_STATE("QuoteState");
         private final String jsonName;
 
         private StateTypeEnumEnum(final String jsonName) {

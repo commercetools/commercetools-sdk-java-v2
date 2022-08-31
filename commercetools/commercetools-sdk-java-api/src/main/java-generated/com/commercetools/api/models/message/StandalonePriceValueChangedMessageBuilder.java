@@ -24,6 +24,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .resource(resourceBuilder -> resourceBuilder)
  *             .resourceVersion(0.3)
  *             .value(valueBuilder -> valueBuilder)
+ *             .staged(true)
  *             .build()
  * </code></pre>
  * </div>
@@ -56,8 +57,10 @@ public class StandalonePriceValueChangedMessageBuilder implements Builder<Standa
 
     private com.commercetools.api.models.common.Money value;
 
+    private Boolean staged;
+
     /**
-     *  <p>Unique identifier of the Message.</p>
+     *  <p>Unique identifier of the Message. Can be used to track which Messages have been processed.</p>
      */
 
     public StandalonePriceValueChangedMessageBuilder id(final String id) {
@@ -66,7 +69,7 @@ public class StandalonePriceValueChangedMessageBuilder implements Builder<Standa
     }
 
     /**
-     *
+     *  <p>Version of a resource. In case of Messages, this is always <code>1</code>.</p>
      */
 
     public StandalonePriceValueChangedMessageBuilder version(final Long version) {
@@ -75,7 +78,7 @@ public class StandalonePriceValueChangedMessageBuilder implements Builder<Standa
     }
 
     /**
-     *
+     *  <p>Date and time (UTC) the Message was generated.</p>
      */
 
     public StandalonePriceValueChangedMessageBuilder createdAt(final java.time.ZonedDateTime createdAt) {
@@ -84,7 +87,7 @@ public class StandalonePriceValueChangedMessageBuilder implements Builder<Standa
     }
 
     /**
-     *
+     *  <p>Value of <code>createdAt</code>.</p>
      */
 
     public StandalonePriceValueChangedMessageBuilder lastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {
@@ -93,7 +96,7 @@ public class StandalonePriceValueChangedMessageBuilder implements Builder<Standa
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>Value of <code>createdBy</code>.</p>
      */
 
     public StandalonePriceValueChangedMessageBuilder lastModifiedBy(
@@ -103,7 +106,7 @@ public class StandalonePriceValueChangedMessageBuilder implements Builder<Standa
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>Value of <code>createdBy</code>.</p>
      */
 
     public StandalonePriceValueChangedMessageBuilder lastModifiedBy(
@@ -133,7 +136,7 @@ public class StandalonePriceValueChangedMessageBuilder implements Builder<Standa
     }
 
     /**
-     *
+     *  <p>Message number in relation to other Messages for a given resource. The <code>sequenceNumber</code> of the next Message for the resource is the successor of the <code>sequenceNumber</code> of the current Message. Meaning, the <code>sequenceNumber</code> of the next Message equals the <code>sequenceNumber</code> of the current Message + 1. <code>sequenceNumber</code> can be used to ensure that Messages are processed in the correct order for a particular resource.</p>
      */
 
     public StandalonePriceValueChangedMessageBuilder sequenceNumber(final Long sequenceNumber) {
@@ -142,7 +145,7 @@ public class StandalonePriceValueChangedMessageBuilder implements Builder<Standa
     }
 
     /**
-     *  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
+     *  <p>Reference to the resource on which the change or action was performed.</p>
      */
 
     public StandalonePriceValueChangedMessageBuilder resource(
@@ -152,7 +155,7 @@ public class StandalonePriceValueChangedMessageBuilder implements Builder<Standa
     }
 
     /**
-     *  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
+     *  <p>Reference to the resource on which the change or action was performed.</p>
      */
 
     public StandalonePriceValueChangedMessageBuilder resource(
@@ -162,7 +165,7 @@ public class StandalonePriceValueChangedMessageBuilder implements Builder<Standa
     }
 
     /**
-     *
+     *  <p>Version of the resource on which the change or action was performed.</p>
      */
 
     public StandalonePriceValueChangedMessageBuilder resourceVersion(final Long resourceVersion) {
@@ -171,7 +174,7 @@ public class StandalonePriceValueChangedMessageBuilder implements Builder<Standa
     }
 
     /**
-     *
+     *  <p>User-provided identifiers of the resource, such as <code>key</code> or <code>externalId</code>. Only present if the resource has such identifiers.</p>
      */
 
     public StandalonePriceValueChangedMessageBuilder resourceUserProvidedIdentifiers(
@@ -183,7 +186,7 @@ public class StandalonePriceValueChangedMessageBuilder implements Builder<Standa
     }
 
     /**
-     *
+     *  <p>User-provided identifiers of the resource, such as <code>key</code> or <code>externalId</code>. Only present if the resource has such identifiers.</p>
      */
 
     public StandalonePriceValueChangedMessageBuilder resourceUserProvidedIdentifiers(
@@ -208,6 +211,15 @@ public class StandalonePriceValueChangedMessageBuilder implements Builder<Standa
 
     public StandalonePriceValueChangedMessageBuilder value(final com.commercetools.api.models.common.Money value) {
         this.value = value;
+        return this;
+    }
+
+    /**
+     *  <p>Whether the new value was applied to the current or the staged representation of the StandalonePrice. Staged changes are stored on the StagedStandalonePrice.</p>
+     */
+
+    public StandalonePriceValueChangedMessageBuilder staged(final Boolean staged) {
+        this.staged = staged;
         return this;
     }
 
@@ -258,6 +270,10 @@ public class StandalonePriceValueChangedMessageBuilder implements Builder<Standa
         return this.value;
     }
 
+    public Boolean getStaged() {
+        return this.staged;
+    }
+
     public StandalonePriceValueChangedMessage build() {
         Objects.requireNonNull(id, StandalonePriceValueChangedMessage.class + ": id is missing");
         Objects.requireNonNull(version, StandalonePriceValueChangedMessage.class + ": version is missing");
@@ -270,8 +286,9 @@ public class StandalonePriceValueChangedMessageBuilder implements Builder<Standa
         Objects.requireNonNull(resourceVersion,
             StandalonePriceValueChangedMessage.class + ": resourceVersion is missing");
         Objects.requireNonNull(value, StandalonePriceValueChangedMessage.class + ": value is missing");
+        Objects.requireNonNull(staged, StandalonePriceValueChangedMessage.class + ": staged is missing");
         return new StandalonePriceValueChangedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy,
-            createdBy, sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, value);
+            createdBy, sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, value, staged);
     }
 
     /**
@@ -279,7 +296,7 @@ public class StandalonePriceValueChangedMessageBuilder implements Builder<Standa
      */
     public StandalonePriceValueChangedMessage buildUnchecked() {
         return new StandalonePriceValueChangedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy,
-            createdBy, sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, value);
+            createdBy, sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, value, staged);
     }
 
     public static StandalonePriceValueChangedMessageBuilder of() {
@@ -299,6 +316,7 @@ public class StandalonePriceValueChangedMessageBuilder implements Builder<Standa
         builder.resourceVersion = template.getResourceVersion();
         builder.resourceUserProvidedIdentifiers = template.getResourceUserProvidedIdentifiers();
         builder.value = template.getValue();
+        builder.staged = template.getStaged();
         return builder;
     }
 

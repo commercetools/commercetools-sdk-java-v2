@@ -15,6 +15,8 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <div class=code-example>
  * <pre><code class='java'>
  *     ProductVariantChannelAvailability productVariantChannelAvailability = ProductVariantChannelAvailability.builder()
+ *             .id("{id}")
+ *             .version(0.3)
  *             .build()
  * </code></pre>
  * </div>
@@ -31,8 +33,12 @@ public class ProductVariantChannelAvailabilityBuilder implements Builder<Product
     @Nullable
     private Long availableQuantity;
 
+    private String id;
+
+    private Long version;
+
     /**
-     *
+     *  <p>Indicates whether a Product Variant is in stock in a specified Channel.</p>
      */
 
     public ProductVariantChannelAvailabilityBuilder isOnStock(@Nullable final Boolean isOnStock) {
@@ -41,7 +47,7 @@ public class ProductVariantChannelAvailabilityBuilder implements Builder<Product
     }
 
     /**
-     *
+     *  <p>Number of days to restock a Product Variant once it is out of stock in a specified Channel.</p>
      */
 
     public ProductVariantChannelAvailabilityBuilder restockableInDays(@Nullable final Long restockableInDays) {
@@ -50,11 +56,29 @@ public class ProductVariantChannelAvailabilityBuilder implements Builder<Product
     }
 
     /**
-     *
+     *  <p>Number of items of this Product Variant that are in stock in a specified Channel.</p>
      */
 
     public ProductVariantChannelAvailabilityBuilder availableQuantity(@Nullable final Long availableQuantity) {
         this.availableQuantity = availableQuantity;
+        return this;
+    }
+
+    /**
+     *  <p>Unique identifier of the InventoryEntry.</p>
+     */
+
+    public ProductVariantChannelAvailabilityBuilder id(final String id) {
+        this.id = id;
+        return this;
+    }
+
+    /**
+     *  <p>Current version of the InventoryEntry.</p>
+     */
+
+    public ProductVariantChannelAvailabilityBuilder version(final Long version) {
+        this.version = version;
         return this;
     }
 
@@ -73,15 +97,25 @@ public class ProductVariantChannelAvailabilityBuilder implements Builder<Product
         return this.availableQuantity;
     }
 
+    public String getId() {
+        return this.id;
+    }
+
+    public Long getVersion() {
+        return this.version;
+    }
+
     public ProductVariantChannelAvailability build() {
-        return new ProductVariantChannelAvailabilityImpl(isOnStock, restockableInDays, availableQuantity);
+        Objects.requireNonNull(id, ProductVariantChannelAvailability.class + ": id is missing");
+        Objects.requireNonNull(version, ProductVariantChannelAvailability.class + ": version is missing");
+        return new ProductVariantChannelAvailabilityImpl(isOnStock, restockableInDays, availableQuantity, id, version);
     }
 
     /**
      * builds ProductVariantChannelAvailability without checking for non null required values
      */
     public ProductVariantChannelAvailability buildUnchecked() {
-        return new ProductVariantChannelAvailabilityImpl(isOnStock, restockableInDays, availableQuantity);
+        return new ProductVariantChannelAvailabilityImpl(isOnStock, restockableInDays, availableQuantity, id, version);
     }
 
     public static ProductVariantChannelAvailabilityBuilder of() {
@@ -93,6 +127,8 @@ public class ProductVariantChannelAvailabilityBuilder implements Builder<Product
         builder.isOnStock = template.getIsOnStock();
         builder.restockableInDays = template.getRestockableInDays();
         builder.availableQuantity = template.getAvailableQuantity();
+        builder.id = template.getId();
+        builder.version = template.getVersion();
         return builder;
     }
 

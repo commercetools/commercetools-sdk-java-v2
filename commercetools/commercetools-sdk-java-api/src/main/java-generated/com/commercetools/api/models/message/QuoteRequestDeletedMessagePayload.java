@@ -11,7 +11,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * QuoteRequestDeletedMessagePayload
+ *  <p>Generated after a successful Delete Quote Request request.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

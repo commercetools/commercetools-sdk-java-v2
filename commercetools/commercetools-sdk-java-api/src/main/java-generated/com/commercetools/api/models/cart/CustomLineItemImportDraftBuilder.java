@@ -20,6 +20,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .quantity(0.3)
  *             .money(moneyBuilder -> moneyBuilder)
  *             .slug("{slug}")
+ *             .priceMode(CustomLineItemPriceMode.STANDARD)
  *             .build()
  * </code></pre>
  * </div>
@@ -49,6 +50,8 @@ public class CustomLineItemImportDraftBuilder implements Builder<CustomLineItemI
 
     @Nullable
     private com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails;
+
+    private com.commercetools.api.models.cart.CustomLineItemPriceMode priceMode;
 
     /**
      *
@@ -246,6 +249,19 @@ public class CustomLineItemImportDraftBuilder implements Builder<CustomLineItemI
         return this;
     }
 
+    /**
+     *  <ul>
+     *   <li>If <code>Standard</code>, Cart Discounts with a matching CartDiscountCustomLineItemsTarget are applied to the Custom Line Item.</li>
+     *   <li>If <code>External</code>, Cart Discounts are not considered on the Custom Line Item.</li>
+     *  </ul>
+     */
+
+    public CustomLineItemImportDraftBuilder priceMode(
+            final com.commercetools.api.models.cart.CustomLineItemPriceMode priceMode) {
+        this.priceMode = priceMode;
+        return this;
+    }
+
     public com.commercetools.api.models.common.LocalizedString getName() {
         return this.name;
     }
@@ -287,13 +303,18 @@ public class CustomLineItemImportDraftBuilder implements Builder<CustomLineItemI
         return this.shippingDetails;
     }
 
+    public com.commercetools.api.models.cart.CustomLineItemPriceMode getPriceMode() {
+        return this.priceMode;
+    }
+
     public CustomLineItemImportDraft build() {
         Objects.requireNonNull(name, CustomLineItemImportDraft.class + ": name is missing");
         Objects.requireNonNull(quantity, CustomLineItemImportDraft.class + ": quantity is missing");
         Objects.requireNonNull(money, CustomLineItemImportDraft.class + ": money is missing");
         Objects.requireNonNull(slug, CustomLineItemImportDraft.class + ": slug is missing");
+        Objects.requireNonNull(priceMode, CustomLineItemImportDraft.class + ": priceMode is missing");
         return new CustomLineItemImportDraftImpl(name, quantity, money, slug, state, taxRate, taxCategory, custom,
-            shippingDetails);
+            shippingDetails, priceMode);
     }
 
     /**
@@ -301,7 +322,7 @@ public class CustomLineItemImportDraftBuilder implements Builder<CustomLineItemI
      */
     public CustomLineItemImportDraft buildUnchecked() {
         return new CustomLineItemImportDraftImpl(name, quantity, money, slug, state, taxRate, taxCategory, custom,
-            shippingDetails);
+            shippingDetails, priceMode);
     }
 
     public static CustomLineItemImportDraftBuilder of() {
@@ -319,6 +340,7 @@ public class CustomLineItemImportDraftBuilder implements Builder<CustomLineItemI
         builder.taxCategory = template.getTaxCategory();
         builder.custom = template.getCustom();
         builder.shippingDetails = template.getShippingDetails();
+        builder.priceMode = template.getPriceMode();
         return builder;
     }
 

@@ -15,7 +15,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * ProductPriceExternalDiscountSetMessagePayload
+ *  <p>Generated after a successful Set Discounted Embedded Price update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -36,42 +36,42 @@ public interface ProductPriceExternalDiscountSetMessagePayload extends MessagePa
     String PRODUCT_PRICE_EXTERNAL_DISCOUNT_SET = "ProductPriceExternalDiscountSet";
 
     /**
-     *
+     *  <p>Unique identifier of the Product Variant for which the Discount was set.</p>
      */
     @NotNull
     @JsonProperty("variantId")
     public Integer getVariantId();
 
     /**
-     *
+     *  <p>Key of the Product Variant for which the Discount was set.</p>
      */
 
     @JsonProperty("variantKey")
     public String getVariantKey();
 
     /**
-     *
+     *  <p>SKU of the Product Variant for which Discount was set.</p>
      */
 
     @JsonProperty("sku")
     public String getSku();
 
     /**
-     *
+     *  <p>Unique identifier of the Embedded Price.</p>
      */
     @NotNull
     @JsonProperty("priceId")
     public String getPriceId();
 
     /**
-     *
+     *  <p>Discounted Price for the Product Variant for which Discount was set.</p>
      */
     @Valid
     @JsonProperty("discounted")
     public DiscountedPrice getDiscounted();
 
     /**
-     *
+     *  <p>Whether the update was only applied to the staged Product Projection.</p>
      */
     @NotNull
     @JsonProperty("staged")

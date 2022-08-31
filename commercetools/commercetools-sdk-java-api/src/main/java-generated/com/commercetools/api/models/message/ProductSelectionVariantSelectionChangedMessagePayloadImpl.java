@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * ProductSelectionVariantSelectionChangedMessagePayload
+ *  <p>Generated after a successful Set Variant Selection update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductSelectionVariantSelectionChangedMessagePayloadImpl
@@ -53,7 +53,7 @@ public class ProductSelectionVariantSelectionChangedMessagePayloadImpl
     }
 
     /**
-     *  <p>Reference to a Product.</p>
+     *  <p>Product for which the Product Variant Selection changed.</p>
      */
 
     public com.commercetools.api.models.product.ProductReference getProduct() {
@@ -61,7 +61,7 @@ public class ProductSelectionVariantSelectionChangedMessagePayloadImpl
     }
 
     /**
-     *  <p>The former Product Variant Selection if any.</p>
+     *  <p>Product Variant Selection before the Set Variant Selection update action.</p>
      */
 
     public com.commercetools.api.models.product_selection.ProductVariantSelection getOldVariantSelection() {
@@ -69,7 +69,7 @@ public class ProductSelectionVariantSelectionChangedMessagePayloadImpl
     }
 
     /**
-     *  <p>The updated Product Variant Selection if any.</p>
+     *  <p>Product Variant Selection after the Set Variant Selection update action.</p>
      */
 
     public com.commercetools.api.models.product_selection.ProductVariantSelection getNewVariantSelection() {

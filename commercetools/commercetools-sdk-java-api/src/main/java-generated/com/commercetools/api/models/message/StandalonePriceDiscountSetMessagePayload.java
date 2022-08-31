@@ -14,7 +14,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>Emitted when the affected StandalonePrice is updated based on a Product Discount being applied.</p>
+ *  <p>Generated after a Product Discount is successfully applied to a StandalonePrice.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

@@ -27,7 +27,7 @@ public class ImageDimensionsBuilder implements Builder<ImageDimensions> {
     private Integer h;
 
     /**
-     *
+     *  <p>Width of the image.</p>
      */
 
     public ImageDimensionsBuilder w(final Integer w) {
@@ -36,7 +36,7 @@ public class ImageDimensionsBuilder implements Builder<ImageDimensions> {
     }
 
     /**
-     *
+     *  <p>Height of the image.</p>
      */
 
     public ImageDimensionsBuilder h(final Integer h) {

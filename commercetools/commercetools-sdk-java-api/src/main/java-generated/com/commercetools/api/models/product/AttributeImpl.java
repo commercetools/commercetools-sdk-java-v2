@@ -34,7 +34,7 @@ public class AttributeImpl implements Attribute, ModelBase {
     }
 
     /**
-     *
+     *  <p>Name of the Attribute.</p>
      */
 
     public String getName() {
@@ -42,7 +42,15 @@ public class AttributeImpl implements Attribute, ModelBase {
     }
 
     /**
-     *  <p>A valid JSON value, based on an AttributeDefinition.</p>
+     *  <p>The AttributeType determines the format of the Attribute <code>value</code> to be provided:</p>
+     *  <ul>
+     *   <li>For Enum Type and Localized Enum Type, use the <code>key</code> of the Plain Enum Value or Localized Enum Value objects, or the complete objects as <code>value</code>.</li>
+     *   <li>For Localizable Text Type, use the LocalizedString object as <code>value</code>.</li>
+     *   <li>For Money Type Attributes, use the Money object as <code>value</code>.</li>
+     *   <li>For Set Type Attributes, use the entire <code>set</code> object as <code>value</code>.</li>
+     *   <li>For Nested Type Attributes, use the list of values of all Attributes of the nested Product as <code>value</code>.</li>
+     *   <li>For Reference Type Attributes, use the Reference object as <code>value</code>.</li>
+     *  </ul>
      */
 
     public java.lang.Object getValue() {

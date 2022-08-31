@@ -15,7 +15,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * ProductSelectionProductRemovedMessagePayload
+ *  <p>Generated after a successful Remove Product update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -34,7 +34,7 @@ public interface ProductSelectionProductRemovedMessagePayload extends MessagePay
     String PRODUCT_SELECTION_PRODUCT_REMOVED = "ProductSelectionProductRemoved";
 
     /**
-     *  <p>Reference to a Product.</p>
+     *  <p>Product that was removed from the Product Selection.</p>
      */
     @NotNull
     @Valid

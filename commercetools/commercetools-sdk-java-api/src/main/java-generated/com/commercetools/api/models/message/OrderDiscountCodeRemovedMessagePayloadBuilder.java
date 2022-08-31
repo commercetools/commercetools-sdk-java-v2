@@ -25,7 +25,7 @@ public class OrderDiscountCodeRemovedMessagePayloadBuilder implements Builder<Or
     private com.commercetools.api.models.discount_code.DiscountCodeReference discountCode;
 
     /**
-     *  <p>Reference to a DiscountCode.</p>
+     *  <p>DiscountCode that was removed.</p>
      */
 
     public OrderDiscountCodeRemovedMessagePayloadBuilder discountCode(
@@ -36,7 +36,7 @@ public class OrderDiscountCodeRemovedMessagePayloadBuilder implements Builder<Or
     }
 
     /**
-     *  <p>Reference to a DiscountCode.</p>
+     *  <p>DiscountCode that was removed.</p>
      */
 
     public OrderDiscountCodeRemovedMessagePayloadBuilder discountCode(

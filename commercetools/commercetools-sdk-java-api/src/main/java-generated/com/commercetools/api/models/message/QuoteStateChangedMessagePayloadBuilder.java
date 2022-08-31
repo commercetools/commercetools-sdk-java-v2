@@ -27,7 +27,7 @@ public class QuoteStateChangedMessagePayloadBuilder implements Builder<QuoteStat
     private com.commercetools.api.models.quote.QuoteState oldQuoteState;
 
     /**
-     *  <p>Predefined states tracking the status of the Quote.</p>
+     *  <p>State of the Quote after the Change Quote State update action.</p>
      */
 
     public QuoteStateChangedMessagePayloadBuilder quoteState(
@@ -37,7 +37,7 @@ public class QuoteStateChangedMessagePayloadBuilder implements Builder<QuoteStat
     }
 
     /**
-     *  <p>Predefined states tracking the status of the Quote.</p>
+     *  <p>State of the Quote before the Change Quote State update action.</p>
      */
 
     public QuoteStateChangedMessagePayloadBuilder oldQuoteState(

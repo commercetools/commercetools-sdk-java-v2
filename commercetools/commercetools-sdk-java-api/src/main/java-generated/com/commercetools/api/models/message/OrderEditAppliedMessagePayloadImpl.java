@@ -15,20 +15,20 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * OrderEditAppliedMessagePayload
+ *  <p>Generated after a successfully applying an OrderEdit.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderEditAppliedMessagePayloadImpl implements OrderEditAppliedMessagePayload, ModelBase {
 
     private String type;
 
-    private com.commercetools.api.models.order_edit.OrderEditReference edit;
+    private com.commercetools.api.models.order_edit.OrderEdit edit;
 
     private com.commercetools.api.models.order_edit.OrderEditApplied result;
 
     @JsonCreator
     OrderEditAppliedMessagePayloadImpl(
-            @JsonProperty("edit") final com.commercetools.api.models.order_edit.OrderEditReference edit,
+            @JsonProperty("edit") final com.commercetools.api.models.order_edit.OrderEdit edit,
             @JsonProperty("result") final com.commercetools.api.models.order_edit.OrderEditApplied result) {
         this.edit = edit;
         this.result = result;
@@ -48,22 +48,22 @@ public class OrderEditAppliedMessagePayloadImpl implements OrderEditAppliedMessa
     }
 
     /**
-     *  <p>Reference to an OrderEdit.</p>
+     *  <p>OrderEdit that was applied.</p>
      */
 
-    public com.commercetools.api.models.order_edit.OrderEditReference getEdit() {
+    public com.commercetools.api.models.order_edit.OrderEdit getEdit() {
         return this.edit;
     }
 
     /**
-     *
+     *  <p>Information about a successfully applied OrderEdit.</p>
      */
 
     public com.commercetools.api.models.order_edit.OrderEditApplied getResult() {
         return this.result;
     }
 
-    public void setEdit(final com.commercetools.api.models.order_edit.OrderEditReference edit) {
+    public void setEdit(final com.commercetools.api.models.order_edit.OrderEdit edit) {
         this.edit = edit;
     }
 

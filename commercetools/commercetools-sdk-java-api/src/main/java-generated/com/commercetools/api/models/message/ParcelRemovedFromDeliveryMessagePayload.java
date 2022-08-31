@@ -15,7 +15,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * ParcelRemovedFromDeliveryMessagePayload
+ *  <p>Generated after a successful Remove Parcel From Delivery update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -35,23 +35,32 @@ public interface ParcelRemovedFromDeliveryMessagePayload extends OrderMessagePay
     String PARCEL_REMOVED_FROM_DELIVERY = "ParcelRemovedFromDelivery";
 
     /**
-     *
+     *  <p>Unique identifier of the Delivery.</p>
      */
     @NotNull
     @JsonProperty("deliveryId")
     public String getDeliveryId();
 
     /**
-     *
+     *  <p>Parcel that was removed from the Delivery.</p>
      */
     @NotNull
     @Valid
     @JsonProperty("parcel")
     public Parcel getParcel();
 
+    /**
+     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multi</code> ShippingMode.</p>
+     */
+
+    @JsonProperty("shippingKey")
+    public String getShippingKey();
+
     public void setDeliveryId(final String deliveryId);
 
     public void setParcel(final Parcel parcel);
+
+    public void setShippingKey(final String shippingKey);
 
     public static ParcelRemovedFromDeliveryMessagePayload of() {
         return new ParcelRemovedFromDeliveryMessagePayloadImpl();
@@ -61,6 +70,7 @@ public interface ParcelRemovedFromDeliveryMessagePayload extends OrderMessagePay
         ParcelRemovedFromDeliveryMessagePayloadImpl instance = new ParcelRemovedFromDeliveryMessagePayloadImpl();
         instance.setDeliveryId(template.getDeliveryId());
         instance.setParcel(template.getParcel());
+        instance.setShippingKey(template.getShippingKey());
         return instance;
     }
 

@@ -29,7 +29,7 @@ public class ProductResourceIdentifierBuilder implements Builder<ProductResource
     private String key;
 
     /**
-     *  <p>Unique identifier of the referenced Product. Either <code>id</code> or <code>key</code> is required.</p>
+     *  <p>Unique identifier of the referenced Product.</p>
      */
 
     public ProductResourceIdentifierBuilder id(@Nullable final String id) {
@@ -38,7 +38,7 @@ public class ProductResourceIdentifierBuilder implements Builder<ProductResource
     }
 
     /**
-     *  <p>User-defined unique identifier of the referenced Product. Either <code>id</code> or <code>key</code> is required.</p>
+     *  <p>User-defined unique identifier of the referenced Product.</p>
      */
 
     public ProductResourceIdentifierBuilder key(@Nullable final String key) {

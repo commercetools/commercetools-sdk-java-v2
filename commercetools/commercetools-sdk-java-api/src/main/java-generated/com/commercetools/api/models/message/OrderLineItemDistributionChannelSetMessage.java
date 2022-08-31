@@ -15,7 +15,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * OrderLineItemDistributionChannelSetMessage
+ *  <p>Generated after a successful Set Line Item Distribution Channel update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -41,14 +41,14 @@ public interface OrderLineItemDistributionChannelSetMessage extends OrderMessage
     String ORDER_LINE_ITEM_DISTRIBUTION_CHANNEL_SET = "OrderLineItemDistributionChannelSet";
 
     /**
-     *
+     *  <p>Unique identifier of the Line Item.</p>
      */
     @NotNull
     @JsonProperty("lineItemId")
     public String getLineItemId();
 
     /**
-     *  <p>Reference to a Channel.</p>
+     *  <p>Distribution Channel that was set.</p>
      */
     @Valid
     @JsonProperty("distributionChannel")

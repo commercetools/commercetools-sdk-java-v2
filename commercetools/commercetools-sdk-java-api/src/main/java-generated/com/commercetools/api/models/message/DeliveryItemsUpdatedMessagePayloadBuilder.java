@@ -4,6 +4,8 @@ package com.commercetools.api.models.message;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
+
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -30,8 +32,11 @@ public class DeliveryItemsUpdatedMessagePayloadBuilder implements Builder<Delive
 
     private java.util.List<com.commercetools.api.models.order.DeliveryItem> oldItems;
 
+    @Nullable
+    private String shippingKey;
+
     /**
-     *
+     *  <p>Unique identifier of the Delivery.</p>
      */
 
     public DeliveryItemsUpdatedMessagePayloadBuilder deliveryId(final String deliveryId) {
@@ -40,7 +45,7 @@ public class DeliveryItemsUpdatedMessagePayloadBuilder implements Builder<Delive
     }
 
     /**
-     *
+     *  <p>Delivery Items after the Set Delivery Items update action.</p>
      */
 
     public DeliveryItemsUpdatedMessagePayloadBuilder items(
@@ -50,7 +55,7 @@ public class DeliveryItemsUpdatedMessagePayloadBuilder implements Builder<Delive
     }
 
     /**
-     *
+     *  <p>Delivery Items after the Set Delivery Items update action.</p>
      */
 
     public DeliveryItemsUpdatedMessagePayloadBuilder items(
@@ -60,7 +65,7 @@ public class DeliveryItemsUpdatedMessagePayloadBuilder implements Builder<Delive
     }
 
     /**
-     *
+     *  <p>Delivery Items after the Set Delivery Items update action.</p>
      */
 
     public DeliveryItemsUpdatedMessagePayloadBuilder plusItems(
@@ -73,7 +78,7 @@ public class DeliveryItemsUpdatedMessagePayloadBuilder implements Builder<Delive
     }
 
     /**
-     *
+     *  <p>Delivery Items after the Set Delivery Items update action.</p>
      */
 
     public DeliveryItemsUpdatedMessagePayloadBuilder plusItems(
@@ -86,7 +91,7 @@ public class DeliveryItemsUpdatedMessagePayloadBuilder implements Builder<Delive
     }
 
     /**
-     *
+     *  <p>Delivery Items after the Set Delivery Items update action.</p>
      */
 
     public DeliveryItemsUpdatedMessagePayloadBuilder withItems(
@@ -97,7 +102,7 @@ public class DeliveryItemsUpdatedMessagePayloadBuilder implements Builder<Delive
     }
 
     /**
-     *
+     *  <p>Delivery Items before the Set Delivery Items update action.</p>
      */
 
     public DeliveryItemsUpdatedMessagePayloadBuilder oldItems(
@@ -107,7 +112,7 @@ public class DeliveryItemsUpdatedMessagePayloadBuilder implements Builder<Delive
     }
 
     /**
-     *
+     *  <p>Delivery Items before the Set Delivery Items update action.</p>
      */
 
     public DeliveryItemsUpdatedMessagePayloadBuilder oldItems(
@@ -117,7 +122,7 @@ public class DeliveryItemsUpdatedMessagePayloadBuilder implements Builder<Delive
     }
 
     /**
-     *
+     *  <p>Delivery Items before the Set Delivery Items update action.</p>
      */
 
     public DeliveryItemsUpdatedMessagePayloadBuilder plusOldItems(
@@ -130,7 +135,7 @@ public class DeliveryItemsUpdatedMessagePayloadBuilder implements Builder<Delive
     }
 
     /**
-     *
+     *  <p>Delivery Items before the Set Delivery Items update action.</p>
      */
 
     public DeliveryItemsUpdatedMessagePayloadBuilder plusOldItems(
@@ -143,13 +148,22 @@ public class DeliveryItemsUpdatedMessagePayloadBuilder implements Builder<Delive
     }
 
     /**
-     *
+     *  <p>Delivery Items before the Set Delivery Items update action.</p>
      */
 
     public DeliveryItemsUpdatedMessagePayloadBuilder withOldItems(
             Function<com.commercetools.api.models.order.DeliveryItemBuilder, com.commercetools.api.models.order.DeliveryItemBuilder> builder) {
         this.oldItems = new ArrayList<>();
         this.oldItems.add(builder.apply(com.commercetools.api.models.order.DeliveryItemBuilder.of()).build());
+        return this;
+    }
+
+    /**
+     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multi</code> ShippingMode.</p>
+     */
+
+    public DeliveryItemsUpdatedMessagePayloadBuilder shippingKey(@Nullable final String shippingKey) {
+        this.shippingKey = shippingKey;
         return this;
     }
 
@@ -165,18 +179,23 @@ public class DeliveryItemsUpdatedMessagePayloadBuilder implements Builder<Delive
         return this.oldItems;
     }
 
+    @Nullable
+    public String getShippingKey() {
+        return this.shippingKey;
+    }
+
     public DeliveryItemsUpdatedMessagePayload build() {
         Objects.requireNonNull(deliveryId, DeliveryItemsUpdatedMessagePayload.class + ": deliveryId is missing");
         Objects.requireNonNull(items, DeliveryItemsUpdatedMessagePayload.class + ": items is missing");
         Objects.requireNonNull(oldItems, DeliveryItemsUpdatedMessagePayload.class + ": oldItems is missing");
-        return new DeliveryItemsUpdatedMessagePayloadImpl(deliveryId, items, oldItems);
+        return new DeliveryItemsUpdatedMessagePayloadImpl(deliveryId, items, oldItems, shippingKey);
     }
 
     /**
      * builds DeliveryItemsUpdatedMessagePayload without checking for non null required values
      */
     public DeliveryItemsUpdatedMessagePayload buildUnchecked() {
-        return new DeliveryItemsUpdatedMessagePayloadImpl(deliveryId, items, oldItems);
+        return new DeliveryItemsUpdatedMessagePayloadImpl(deliveryId, items, oldItems, shippingKey);
     }
 
     public static DeliveryItemsUpdatedMessagePayloadBuilder of() {
@@ -188,6 +207,7 @@ public class DeliveryItemsUpdatedMessagePayloadBuilder implements Builder<Delive
         builder.deliveryId = template.getDeliveryId();
         builder.items = template.getItems();
         builder.oldItems = template.getOldItems();
+        builder.shippingKey = template.getShippingKey();
         return builder;
     }
 

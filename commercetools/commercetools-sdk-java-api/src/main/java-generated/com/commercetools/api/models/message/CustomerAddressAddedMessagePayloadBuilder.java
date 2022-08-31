@@ -25,7 +25,7 @@ public class CustomerAddressAddedMessagePayloadBuilder implements Builder<Custom
     private com.commercetools.api.models.common.Address address;
 
     /**
-     *
+     *  <p>Address that was added during the Add Address update action.</p>
      */
 
     public CustomerAddressAddedMessagePayloadBuilder address(
@@ -35,7 +35,7 @@ public class CustomerAddressAddedMessagePayloadBuilder implements Builder<Custom
     }
 
     /**
-     *
+     *  <p>Address that was added during the Add Address update action.</p>
      */
 
     public CustomerAddressAddedMessagePayloadBuilder address(

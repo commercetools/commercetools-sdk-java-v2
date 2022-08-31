@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * OrderLineItemRemovedMessage
+ *  <p>Generated after a successful Remove Line Item update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderLineItemRemovedMessageImpl implements OrderLineItemRemovedMessage, ModelBase {
@@ -50,7 +50,7 @@ public class OrderLineItemRemovedMessageImpl implements OrderLineItemRemovedMess
 
     private java.util.List<com.commercetools.api.models.order.ItemState> newState;
 
-    private com.commercetools.api.models.common.TypedMoney newTotalPrice;
+    private com.commercetools.api.models.common.CentPrecisionMoney newTotalPrice;
 
     private com.commercetools.api.models.cart.TaxedItemPrice newTaxedPrice;
 
@@ -72,7 +72,7 @@ public class OrderLineItemRemovedMessageImpl implements OrderLineItemRemovedMess
             @JsonProperty("removedQuantity") final Long removedQuantity,
             @JsonProperty("newQuantity") final Long newQuantity,
             @JsonProperty("newState") final java.util.List<com.commercetools.api.models.order.ItemState> newState,
-            @JsonProperty("newTotalPrice") final com.commercetools.api.models.common.TypedMoney newTotalPrice,
+            @JsonProperty("newTotalPrice") final com.commercetools.api.models.common.CentPrecisionMoney newTotalPrice,
             @JsonProperty("newTaxedPrice") final com.commercetools.api.models.cart.TaxedItemPrice newTaxedPrice,
             @JsonProperty("newPrice") final com.commercetools.api.models.common.Price newPrice,
             @JsonProperty("newShippingDetail") final com.commercetools.api.models.cart.ItemShippingDetails newShippingDetail) {
@@ -102,7 +102,7 @@ public class OrderLineItemRemovedMessageImpl implements OrderLineItemRemovedMess
     }
 
     /**
-     *  <p>Unique identifier of the Message.</p>
+     *  <p>Unique identifier of the Message. Can be used to track which Messages have been processed.</p>
      */
 
     public String getId() {
@@ -110,7 +110,7 @@ public class OrderLineItemRemovedMessageImpl implements OrderLineItemRemovedMess
     }
 
     /**
-     *
+     *  <p>Version of a resource. In case of Messages, this is always <code>1</code>.</p>
      */
 
     public Long getVersion() {
@@ -118,7 +118,7 @@ public class OrderLineItemRemovedMessageImpl implements OrderLineItemRemovedMess
     }
 
     /**
-     *
+     *  <p>Date and time (UTC) the Message was generated.</p>
      */
 
     public java.time.ZonedDateTime getCreatedAt() {
@@ -126,7 +126,7 @@ public class OrderLineItemRemovedMessageImpl implements OrderLineItemRemovedMess
     }
 
     /**
-     *
+     *  <p>Value of <code>createdAt</code>.</p>
      */
 
     public java.time.ZonedDateTime getLastModifiedAt() {
@@ -134,7 +134,7 @@ public class OrderLineItemRemovedMessageImpl implements OrderLineItemRemovedMess
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>Value of <code>createdBy</code>.</p>
      */
 
     public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy() {
@@ -150,7 +150,7 @@ public class OrderLineItemRemovedMessageImpl implements OrderLineItemRemovedMess
     }
 
     /**
-     *
+     *  <p>Message number in relation to other Messages for a given resource. The <code>sequenceNumber</code> of the next Message for the resource is the successor of the <code>sequenceNumber</code> of the current Message. Meaning, the <code>sequenceNumber</code> of the next Message equals the <code>sequenceNumber</code> of the current Message + 1. <code>sequenceNumber</code> can be used to ensure that Messages are processed in the correct order for a particular resource.</p>
      */
 
     public Long getSequenceNumber() {
@@ -158,7 +158,7 @@ public class OrderLineItemRemovedMessageImpl implements OrderLineItemRemovedMess
     }
 
     /**
-     *  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
+     *  <p>Reference to the resource on which the change or action was performed.</p>
      */
 
     public com.commercetools.api.models.common.Reference getResource() {
@@ -166,7 +166,7 @@ public class OrderLineItemRemovedMessageImpl implements OrderLineItemRemovedMess
     }
 
     /**
-     *
+     *  <p>Version of the resource on which the change or action was performed.</p>
      */
 
     public Long getResourceVersion() {
@@ -174,7 +174,7 @@ public class OrderLineItemRemovedMessageImpl implements OrderLineItemRemovedMess
     }
 
     /**
-     *
+     *  <p>Message Type of the Message.</p>
      */
 
     public String getType() {
@@ -182,7 +182,7 @@ public class OrderLineItemRemovedMessageImpl implements OrderLineItemRemovedMess
     }
 
     /**
-     *
+     *  <p>User-provided identifiers of the resource, such as <code>key</code> or <code>externalId</code>. Only present if the resource has such identifiers.</p>
      */
 
     public com.commercetools.api.models.message.UserProvidedIdentifiers getResourceUserProvidedIdentifiers() {
@@ -190,7 +190,7 @@ public class OrderLineItemRemovedMessageImpl implements OrderLineItemRemovedMess
     }
 
     /**
-     *
+     *  <p>Unique identifier of the Line Item.</p>
      */
 
     public String getLineItemId() {
@@ -198,7 +198,7 @@ public class OrderLineItemRemovedMessageImpl implements OrderLineItemRemovedMess
     }
 
     /**
-     *
+     *  <p>Quantity of Line Items that were removed during the Remove Line Item update action.</p>
      */
 
     public Long getRemovedQuantity() {
@@ -206,7 +206,7 @@ public class OrderLineItemRemovedMessageImpl implements OrderLineItemRemovedMess
     }
 
     /**
-     *
+     *  <p>Line Item quantity after the Remove Line Item update action.</p>
      */
 
     public Long getNewQuantity() {
@@ -214,7 +214,7 @@ public class OrderLineItemRemovedMessageImpl implements OrderLineItemRemovedMess
     }
 
     /**
-     *
+     *  <p>ItemStates after the Remove Line Item update action.</p>
      */
 
     public java.util.List<com.commercetools.api.models.order.ItemState> getNewState() {
@@ -222,15 +222,15 @@ public class OrderLineItemRemovedMessageImpl implements OrderLineItemRemovedMess
     }
 
     /**
-     *  <p>Base polymorphic read-only Money type which is stored in cent precision or high precision. The actual type is determined by the <code>type</code> field.</p>
+     *  <p><code>totalPrice</code> of the Order after the Remove Line Item update action.</p>
      */
 
-    public com.commercetools.api.models.common.TypedMoney getNewTotalPrice() {
+    public com.commercetools.api.models.common.CentPrecisionMoney getNewTotalPrice() {
         return this.newTotalPrice;
     }
 
     /**
-     *
+     *  <p>TaxedItemPrice of the Order after the Remove Line Item update action.</p>
      */
 
     public com.commercetools.api.models.cart.TaxedItemPrice getNewTaxedPrice() {
@@ -238,7 +238,7 @@ public class OrderLineItemRemovedMessageImpl implements OrderLineItemRemovedMess
     }
 
     /**
-     *
+     *  <p>Price of the Order after the Remove Line Item update action.</p>
      */
 
     public com.commercetools.api.models.common.Price getNewPrice() {
@@ -246,7 +246,7 @@ public class OrderLineItemRemovedMessageImpl implements OrderLineItemRemovedMess
     }
 
     /**
-     *
+     *  <p>Shipping Details of the Order after the Remove Line Item update action.</p>
      */
 
     public com.commercetools.api.models.cart.ItemShippingDetails getNewShippingDetail() {
@@ -314,7 +314,7 @@ public class OrderLineItemRemovedMessageImpl implements OrderLineItemRemovedMess
         this.newState = newState;
     }
 
-    public void setNewTotalPrice(final com.commercetools.api.models.common.TypedMoney newTotalPrice) {
+    public void setNewTotalPrice(final com.commercetools.api.models.common.CentPrecisionMoney newTotalPrice) {
         this.newTotalPrice = newTotalPrice;
     }
 

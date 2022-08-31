@@ -45,7 +45,7 @@ public class QuoteRequestChangeQuoteRequestStateActionImpl
     }
 
     /**
-     *  <p>The new state to be set for the Quote Request.</p>
+     *  <p>New state to be set for the Quote Request.</p>
      */
 
     public com.commercetools.api.models.quote_request.QuoteRequestState getQuoteRequestState() {

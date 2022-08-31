@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * ProductStateTransitionMessagePayload
+ *  <p>Generated after a successful Transition State update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductStateTransitionMessagePayloadImpl implements ProductStateTransitionMessagePayload, ModelBase {
@@ -48,7 +48,7 @@ public class ProductStateTransitionMessagePayloadImpl implements ProductStateTra
     }
 
     /**
-     *  <p>Reference to a State.</p>
+     *  <p>Product State after the Transition State update action.</p>
      */
 
     public com.commercetools.api.models.state.StateReference getState() {
@@ -56,7 +56,7 @@ public class ProductStateTransitionMessagePayloadImpl implements ProductStateTra
     }
 
     /**
-     *
+     *  <p>Whether State transition validations were turned off during the Transition State update action.</p>
      */
 
     public Boolean getForce() {

@@ -25,7 +25,7 @@ public class StandalonePriceCreatedMessagePayloadBuilder implements Builder<Stan
     private com.commercetools.api.models.standalone_price.StandalonePrice standalonePrice;
 
     /**
-     *  <p>The Standalone Price as it was created.</p>
+     *  <p>Standalone Price that was created.</p>
      */
 
     public StandalonePriceCreatedMessagePayloadBuilder standalonePrice(
@@ -36,7 +36,7 @@ public class StandalonePriceCreatedMessagePayloadBuilder implements Builder<Stan
     }
 
     /**
-     *  <p>The Standalone Price as it was created.</p>
+     *  <p>Standalone Price that was created.</p>
      */
 
     public StandalonePriceCreatedMessagePayloadBuilder standalonePrice(

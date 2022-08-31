@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * ProductSetAssetDescriptionAction
+ *  <p>Either <code>variantId</code> or <code>sku</code> is required. The Asset to update must be specified using either <code>assetId</code> or <code>assetKey</code>.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductSetAssetDescriptionActionImpl implements ProductSetAssetDescriptionAction, ModelBase {
@@ -61,7 +61,7 @@ public class ProductSetAssetDescriptionActionImpl implements ProductSetAssetDesc
     }
 
     /**
-     *
+     *  <p>The <code>id</code> of the ProductVariant to update.</p>
      */
 
     public Long getVariantId() {
@@ -69,7 +69,7 @@ public class ProductSetAssetDescriptionActionImpl implements ProductSetAssetDesc
     }
 
     /**
-     *
+     *  <p>The <code>sku</code> of the ProductVariant to update.</p>
      */
 
     public String getSku() {
@@ -77,7 +77,7 @@ public class ProductSetAssetDescriptionActionImpl implements ProductSetAssetDesc
     }
 
     /**
-     *
+     *  <p>If <code>true</code>, only the staged Asset is updated. If <code>false</code>, both the current and staged Asset is updated.</p>
      */
 
     public Boolean getStaged() {
@@ -85,7 +85,7 @@ public class ProductSetAssetDescriptionActionImpl implements ProductSetAssetDesc
     }
 
     /**
-     *
+     *  <p>The <code>id</code> of the Asset to update.</p>
      */
 
     public String getAssetId() {
@@ -93,7 +93,7 @@ public class ProductSetAssetDescriptionActionImpl implements ProductSetAssetDesc
     }
 
     /**
-     *
+     *  <p>The <code>key</code> of the Asset to update.</p>
      */
 
     public String getAssetKey() {
@@ -101,7 +101,7 @@ public class ProductSetAssetDescriptionActionImpl implements ProductSetAssetDesc
     }
 
     /**
-     *
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
      */
 
     public com.commercetools.api.models.common.LocalizedString getDescription() {

@@ -22,7 +22,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     Hit hit = Hit.builder()
  *             .id("{id}")
  *             .version(0.3)
- *             .relevance(0.3)
  *             .build()
  * </code></pre>
  * </div>
@@ -48,7 +47,7 @@ public interface Hit {
     /**
      *  <p>The higher the value is, the more relevant the hit is for the search request.</p>
      */
-    @NotNull
+
     @JsonProperty("relevance")
     public Double getRelevance();
 

@@ -15,7 +15,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * ProductAddAssetAction
+ *  <p>Either <code>variantId</code> or <code>sku</code> is required.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -34,28 +34,28 @@ public interface ProductAddAssetAction extends ProductUpdateAction {
     String ADD_ASSET = "addAsset";
 
     /**
-     *
+     *  <p>The <code>id</code> of the ProductVariant to update.</p>
      */
 
     @JsonProperty("variantId")
     public Long getVariantId();
 
     /**
-     *
+     *  <p>The <code>sku</code> of the ProductVariant to update.</p>
      */
 
     @JsonProperty("sku")
     public String getSku();
 
     /**
-     *
+     *  <p>If <code>true</code>, only the staged <code>assets</code> are updated. If <code>false</code>, both the current and staged <code>assets</code> are updated.</p>
      */
 
     @JsonProperty("staged")
     public Boolean getStaged();
 
     /**
-     *
+     *  <p>Value to append.</p>
      */
     @NotNull
     @Valid
@@ -63,7 +63,7 @@ public interface ProductAddAssetAction extends ProductUpdateAction {
     public AssetDraft getAsset();
 
     /**
-     *  <p>Position of the new asset inside the existing list (from <code>0</code> to the size of the list)</p>
+     *  <p>Position in <code>assets</code> where the Asset should be put. When specified, the value must be between <code>0</code> and the total number of Assets minus <code>1</code>.</p>
      */
 
     @JsonProperty("position")

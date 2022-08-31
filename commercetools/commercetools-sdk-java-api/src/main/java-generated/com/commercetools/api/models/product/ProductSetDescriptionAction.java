@@ -32,14 +32,14 @@ public interface ProductSetDescriptionAction extends ProductUpdateAction {
     String SET_DESCRIPTION = "setDescription";
 
     /**
-     *
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
      */
     @Valid
     @JsonProperty("description")
     public LocalizedString getDescription();
 
     /**
-     *
+     *  <p>If <code>true</code>, only the staged <code>description</code> is updated. If <code>false</code>, both the current and staged <code>description</code> are updated.</p>
      */
 
     @JsonProperty("staged")

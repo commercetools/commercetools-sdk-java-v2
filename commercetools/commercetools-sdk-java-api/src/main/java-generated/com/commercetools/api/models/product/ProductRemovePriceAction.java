@@ -32,14 +32,14 @@ public interface ProductRemovePriceAction extends ProductUpdateAction {
     String REMOVE_PRICE = "removePrice";
 
     /**
-     *  <p>ID of the EmbeddedPrice</p>
+     *  <p>The <code>id</code> of the Embedded Price to remove.</p>
      */
     @NotNull
     @JsonProperty("priceId")
     public String getPriceId();
 
     /**
-     *
+     *  <p>If <code>true</code>, only the staged Embedded Price is removed. If <code>false</code>, both the current and staged Embedded Price are removed.</p>
      */
 
     @JsonProperty("staged")

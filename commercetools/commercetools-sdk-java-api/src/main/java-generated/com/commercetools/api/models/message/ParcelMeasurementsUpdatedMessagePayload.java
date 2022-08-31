@@ -15,7 +15,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * ParcelMeasurementsUpdatedMessagePayload
+ *  <p>Generated after a successful Set Parcel Measurements update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -35,31 +35,40 @@ public interface ParcelMeasurementsUpdatedMessagePayload extends OrderMessagePay
     String PARCEL_MEASUREMENTS_UPDATED = "ParcelMeasurementsUpdated";
 
     /**
-     *
+     *  <p>Unique identifier of the Delivery.</p>
      */
     @NotNull
     @JsonProperty("deliveryId")
     public String getDeliveryId();
 
     /**
-     *
+     *  <p>Unique identifier of the Parcel.</p>
      */
     @NotNull
     @JsonProperty("parcelId")
     public String getParcelId();
 
     /**
-     *
+     *  <p>The Parcel Measurements that were set on the Parcel.</p>
      */
     @Valid
     @JsonProperty("measurements")
     public ParcelMeasurements getMeasurements();
+
+    /**
+     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multi</code> ShippingMode.</p>
+     */
+
+    @JsonProperty("shippingKey")
+    public String getShippingKey();
 
     public void setDeliveryId(final String deliveryId);
 
     public void setParcelId(final String parcelId);
 
     public void setMeasurements(final ParcelMeasurements measurements);
+
+    public void setShippingKey(final String shippingKey);
 
     public static ParcelMeasurementsUpdatedMessagePayload of() {
         return new ParcelMeasurementsUpdatedMessagePayloadImpl();
@@ -70,6 +79,7 @@ public interface ParcelMeasurementsUpdatedMessagePayload extends OrderMessagePay
         instance.setDeliveryId(template.getDeliveryId());
         instance.setParcelId(template.getParcelId());
         instance.setMeasurements(template.getMeasurements());
+        instance.setShippingKey(template.getShippingKey());
         return instance;
     }
 

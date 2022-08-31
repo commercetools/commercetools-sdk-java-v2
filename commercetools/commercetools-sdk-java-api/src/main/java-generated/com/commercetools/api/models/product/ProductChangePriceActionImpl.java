@@ -51,7 +51,7 @@ public class ProductChangePriceActionImpl implements ProductChangePriceAction, M
     }
 
     /**
-     *  <p>ID of the EmbeddedPrice</p>
+     *  <p>The <code>id</code> of the Embedded Price to update.</p>
      */
 
     public String getPriceId() {
@@ -59,7 +59,7 @@ public class ProductChangePriceActionImpl implements ProductChangePriceAction, M
     }
 
     /**
-     *
+     *  <p>Value to set.</p>
      */
 
     public com.commercetools.api.models.common.PriceDraft getPrice() {
@@ -67,7 +67,7 @@ public class ProductChangePriceActionImpl implements ProductChangePriceAction, M
     }
 
     /**
-     *
+     *  <p>If <code>true</code>, only the staged Embedded Price is updated. If <code>false</code>, both the current and staged Embedded Price are updated.</p>
      */
 
     public Boolean getStaged() {

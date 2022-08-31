@@ -15,7 +15,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * OrderDeletedMessagePayload
+ *  <p>Generated after a successful Delete Order request.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -34,7 +34,7 @@ public interface OrderDeletedMessagePayload extends OrderMessagePayload {
     String ORDER_DELETED = "OrderDeleted";
 
     /**
-     *
+     *  <p>Order that has been deleted.</p>
      */
     @NotNull
     @Valid

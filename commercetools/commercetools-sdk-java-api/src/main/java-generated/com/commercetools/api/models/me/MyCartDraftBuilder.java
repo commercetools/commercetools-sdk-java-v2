@@ -66,7 +66,7 @@ public class MyCartDraftBuilder implements Builder<MyCartDraft> {
     private com.commercetools.api.models.store.StoreKeyReference store;
 
     @Nullable
-    private java.util.List<com.commercetools.api.models.cart.DiscountCodeInfo> discountCodes;
+    private java.util.List<String> discountCodes;
 
     /**
      *  <p>A three-digit currency code as per ISO 3166-1 alpha-2.</p>
@@ -348,59 +348,32 @@ public class MyCartDraftBuilder implements Builder<MyCartDraft> {
     }
 
     /**
-     *
+     *  <p>The code of existing DiscountCodes.</p>
      */
 
-    public MyCartDraftBuilder discountCodes(
-            @Nullable final com.commercetools.api.models.cart.DiscountCodeInfo... discountCodes) {
+    public MyCartDraftBuilder discountCodes(@Nullable final String... discountCodes) {
         this.discountCodes = new ArrayList<>(Arrays.asList(discountCodes));
         return this;
     }
 
     /**
-     *
+     *  <p>The code of existing DiscountCodes.</p>
      */
 
-    public MyCartDraftBuilder discountCodes(
-            @Nullable final java.util.List<com.commercetools.api.models.cart.DiscountCodeInfo> discountCodes) {
+    public MyCartDraftBuilder discountCodes(@Nullable final java.util.List<String> discountCodes) {
         this.discountCodes = discountCodes;
         return this;
     }
 
     /**
-     *
+     *  <p>The code of existing DiscountCodes.</p>
      */
 
-    public MyCartDraftBuilder plusDiscountCodes(
-            @Nullable final com.commercetools.api.models.cart.DiscountCodeInfo... discountCodes) {
+    public MyCartDraftBuilder plusDiscountCodes(@Nullable final String... discountCodes) {
         if (this.discountCodes == null) {
             this.discountCodes = new ArrayList<>();
         }
         this.discountCodes.addAll(Arrays.asList(discountCodes));
-        return this;
-    }
-
-    /**
-     *
-     */
-
-    public MyCartDraftBuilder plusDiscountCodes(
-            Function<com.commercetools.api.models.cart.DiscountCodeInfoBuilder, com.commercetools.api.models.cart.DiscountCodeInfoBuilder> builder) {
-        if (this.discountCodes == null) {
-            this.discountCodes = new ArrayList<>();
-        }
-        this.discountCodes.add(builder.apply(com.commercetools.api.models.cart.DiscountCodeInfoBuilder.of()).build());
-        return this;
-    }
-
-    /**
-     *
-     */
-
-    public MyCartDraftBuilder withDiscountCodes(
-            Function<com.commercetools.api.models.cart.DiscountCodeInfoBuilder, com.commercetools.api.models.cart.DiscountCodeInfoBuilder> builder) {
-        this.discountCodes = new ArrayList<>();
-        this.discountCodes.add(builder.apply(com.commercetools.api.models.cart.DiscountCodeInfoBuilder.of()).build());
         return this;
     }
 
@@ -474,7 +447,7 @@ public class MyCartDraftBuilder implements Builder<MyCartDraft> {
     }
 
     @Nullable
-    public java.util.List<com.commercetools.api.models.cart.DiscountCodeInfo> getDiscountCodes() {
+    public java.util.List<String> getDiscountCodes() {
         return this.discountCodes;
     }
 

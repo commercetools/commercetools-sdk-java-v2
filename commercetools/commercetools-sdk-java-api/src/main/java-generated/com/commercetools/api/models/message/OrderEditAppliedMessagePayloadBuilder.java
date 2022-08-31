@@ -23,32 +23,31 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderEditAppliedMessagePayloadBuilder implements Builder<OrderEditAppliedMessagePayload> {
 
-    private com.commercetools.api.models.order_edit.OrderEditReference edit;
+    private com.commercetools.api.models.order_edit.OrderEdit edit;
 
     private com.commercetools.api.models.order_edit.OrderEditApplied result;
 
     /**
-     *  <p>Reference to an OrderEdit.</p>
+     *  <p>OrderEdit that was applied.</p>
      */
 
     public OrderEditAppliedMessagePayloadBuilder edit(
-            Function<com.commercetools.api.models.order_edit.OrderEditReferenceBuilder, com.commercetools.api.models.order_edit.OrderEditReferenceBuilder> builder) {
-        this.edit = builder.apply(com.commercetools.api.models.order_edit.OrderEditReferenceBuilder.of()).build();
+            Function<com.commercetools.api.models.order_edit.OrderEditBuilder, com.commercetools.api.models.order_edit.OrderEditBuilder> builder) {
+        this.edit = builder.apply(com.commercetools.api.models.order_edit.OrderEditBuilder.of()).build();
         return this;
     }
 
     /**
-     *  <p>Reference to an OrderEdit.</p>
+     *  <p>OrderEdit that was applied.</p>
      */
 
-    public OrderEditAppliedMessagePayloadBuilder edit(
-            final com.commercetools.api.models.order_edit.OrderEditReference edit) {
+    public OrderEditAppliedMessagePayloadBuilder edit(final com.commercetools.api.models.order_edit.OrderEdit edit) {
         this.edit = edit;
         return this;
     }
 
     /**
-     *
+     *  <p>Information about a successfully applied OrderEdit.</p>
      */
 
     public OrderEditAppliedMessagePayloadBuilder result(
@@ -58,7 +57,7 @@ public class OrderEditAppliedMessagePayloadBuilder implements Builder<OrderEditA
     }
 
     /**
-     *
+     *  <p>Information about a successfully applied OrderEdit.</p>
      */
 
     public OrderEditAppliedMessagePayloadBuilder result(
@@ -67,7 +66,7 @@ public class OrderEditAppliedMessagePayloadBuilder implements Builder<OrderEditA
         return this;
     }
 
-    public com.commercetools.api.models.order_edit.OrderEditReference getEdit() {
+    public com.commercetools.api.models.order_edit.OrderEdit getEdit() {
         return this.edit;
     }
 

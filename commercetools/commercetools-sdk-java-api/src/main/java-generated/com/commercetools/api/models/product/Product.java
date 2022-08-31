@@ -22,7 +22,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * Product
+ *  <p>An abstract sellable good with a set of Attributes defined by a Product Type. Products themselves are not sellable. Instead, they act as a parent structure for Product Variants. Each Product must have at least one Product Variant, which is called the Master Variant. A single Product representation contains the <em>current</em> and the <em>staged</em> representation of its product data.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -52,21 +52,21 @@ public interface Product extends BaseResource, com.commercetools.api.models.Doma
     public String getId();
 
     /**
-     *  <p>The current version of the product.</p>
+     *  <p>Current version of the Product.</p>
      */
     @NotNull
     @JsonProperty("version")
     public Long getVersion();
 
     /**
-     *
+     *  <p>Date and time (UTC) the Product was initially created.</p>
      */
     @NotNull
     @JsonProperty("createdAt")
     public ZonedDateTime getCreatedAt();
 
     /**
-     *
+     *  <p>Date and time (UTC) the Product was last updated.</p>
      */
     @NotNull
     @JsonProperty("lastModifiedAt")
@@ -87,14 +87,15 @@ public interface Product extends BaseResource, com.commercetools.api.models.Doma
     public CreatedBy getCreatedBy();
 
     /**
-     *  <p>User-defined unique identifier of the Product. <em>Product keys are different from ProductVariant keys.</em></p>
+     *  <p>User-defined unique identifier of the Product.</p>
+     *  <p>This is different from the <code>key</code> of a ProductVariant.</p>
      */
 
     @JsonProperty("key")
     public String getKey();
 
     /**
-     *
+     *  <p>The Product Type defining the Attributes of the Product. Cannot be changed.</p>
      */
     @NotNull
     @Valid
@@ -102,7 +103,7 @@ public interface Product extends BaseResource, com.commercetools.api.models.Doma
     public ProductTypeReference getProductType();
 
     /**
-     *  <p>The product data in the master catalog.</p>
+     *  <p>Contains the current and the staged representation of the product information.</p>
      */
     @NotNull
     @Valid
@@ -110,28 +111,28 @@ public interface Product extends BaseResource, com.commercetools.api.models.Doma
     public ProductCatalogData getMasterData();
 
     /**
-     *
+     *  <p>The TaxCategory of the Product.</p>
      */
     @Valid
     @JsonProperty("taxCategory")
     public TaxCategoryReference getTaxCategory();
 
     /**
-     *
+     *  <p>State of the Product.</p>
      */
     @Valid
     @JsonProperty("state")
     public StateReference getState();
 
     /**
-     *  <p>Statistics about the review ratings taken into account for this product.</p>
+     *  <p>Review statistics of the Product.</p>
      */
     @Valid
     @JsonProperty("reviewRatingStatistics")
     public ReviewRatingStatistics getReviewRatingStatistics();
 
     /**
-     *  <p>Specifies which type of prices should be used when looking up a price for this product. If not set, <code>Embedded</code> ProductPriceMode is used.</p>
+     *  <p>Type of Price to be used when looking up a price for the Product.</p>
      */
 
     @JsonProperty("priceMode")

@@ -29,6 +29,7 @@ import com.commercetools.api.models.customer_group.CustomerGroupReference;
 import com.commercetools.api.models.order.PaymentInfo;
 import com.commercetools.api.models.quote_request.QuoteRequestReference;
 import com.commercetools.api.models.staged_quote.StagedQuoteReference;
+import com.commercetools.api.models.state.StateReference;
 import com.commercetools.api.models.store.StoreKeyReference;
 import com.commercetools.api.models.type.CustomFields;
 import com.fasterxml.jackson.annotation.*;
@@ -114,7 +115,7 @@ public interface Quote extends BaseResource {
     public CreatedBy getCreatedBy();
 
     /**
-     *  <p>The Quote Request related to this Quote.</p>
+     *  <p>Quote Request related to the Quote.</p>
      */
     @NotNull
     @Valid
@@ -122,7 +123,7 @@ public interface Quote extends BaseResource {
     public QuoteRequestReference getQuoteRequest();
 
     /**
-     *  <p>The Staged Quote related to this Quote.</p>
+     *  <p>Staged Quote related to the Quote.</p>
      */
     @NotNull
     @Valid
@@ -130,7 +131,7 @@ public interface Quote extends BaseResource {
     public StagedQuoteReference getStagedQuote();
 
     /**
-     *  <p>The Buyer who requested this Quote.</p>
+     *  <p>The Buyer who requested the Quote.</p>
      */
     @Valid
     @JsonProperty("customer")
@@ -151,11 +152,18 @@ public interface Quote extends BaseResource {
     public ZonedDateTime getValidTo();
 
     /**
-     *  <p>The text message included in the offer from the Seller.</p>
+     *  <p>Message from the Seller included in the offer.</p>
      */
 
     @JsonProperty("sellerComment")
     public String getSellerComment();
+
+    /**
+     *  <p>Message from the Buyer included in the renegotiation request.</p>
+     */
+
+    @JsonProperty("buyerComment")
+    public String getBuyerComment();
 
     /**
      *  <p>The Store to which the Buyer belongs.</p>
@@ -181,7 +189,7 @@ public interface Quote extends BaseResource {
     public List<CustomLineItem> getCustomLineItems();
 
     /**
-     *  <p>The sum of all <code>totalPrice</code> fields of the <code>lineItems</code> and <code>customLineItems</code>, as well as the <code>price</code> field of <code>shippingInfo</code> (if it exists). <code>totalPrice</code> may or may not include the taxes: it depends on the taxRate.includedInPrice property of each price.</p>
+     *  <p>Sum of all <code>totalPrice</code> fields of the <code>lineItems</code> and <code>customLineItems</code>, as well as the <code>price</code> field of <code>shippingInfo</code> (if it exists). <code>totalPrice</code> may or may not include the taxes: it depends on the taxRate.includedInPrice property of each price.</p>
      */
     @NotNull
     @Valid
@@ -203,21 +211,21 @@ public interface Quote extends BaseResource {
     public Address getShippingAddress();
 
     /**
-     *  <p>The address used for invoicing.</p>
+     *  <p>Address used for invoicing.</p>
      */
     @Valid
     @JsonProperty("billingAddress")
     public Address getBillingAddress();
 
     /**
-     *  <p>The inventory mode of the Cart referenced in the QuoteRequestDraft.</p>
+     *  <p>Inventory mode of the Cart referenced in the QuoteRequestDraft.</p>
      */
 
     @JsonProperty("inventoryMode")
     public InventoryMode getInventoryMode();
 
     /**
-     *  <p>The tax mode of the Cart referenced in the QuoteRequestDraft.</p>
+     *  <p>Tax mode of the Cart referenced in the QuoteRequestDraft.</p>
      */
     @NotNull
     @JsonProperty("taxMode")
@@ -252,7 +260,7 @@ public interface Quote extends BaseResource {
     public ShippingInfo getShippingInfo();
 
     /**
-     *  <p>Log of payment transactions related to this quote.</p>
+     *  <p>Log of payment transactions related to the Quote.</p>
      */
     @Valid
     @JsonProperty("paymentInfo")
@@ -273,18 +281,25 @@ public interface Quote extends BaseResource {
     public List<Address> getItemShippingAddresses();
 
     /**
-     *  <p>Discounts only valid for this Quote, those cannot be associated to any other Cart or Order.</p>
+     *  <p>Discounts that are only valid for the Quote and cannot be associated to any other Cart or Order.</p>
      */
     @Valid
     @JsonProperty("directDiscounts")
     public List<DirectDiscount> getDirectDiscounts();
 
     /**
-     *  <p>Custom Fields of this Quote.</p>
+     *  <p>Custom Fields on the Quote.</p>
      */
     @Valid
     @JsonProperty("custom")
     public CustomFields getCustom();
+
+    /**
+     *  <p>State of the Quote. This reference can point to a State in a custom workflow.</p>
+     */
+    @Valid
+    @JsonProperty("state")
+    public StateReference getState();
 
     public void setId(final String id);
 
@@ -311,6 +326,8 @@ public interface Quote extends BaseResource {
     public void setValidTo(final ZonedDateTime validTo);
 
     public void setSellerComment(final String sellerComment);
+
+    public void setBuyerComment(final String buyerComment);
 
     public void setStore(final StoreKeyReference store);
 
@@ -360,6 +377,8 @@ public interface Quote extends BaseResource {
 
     public void setCustom(final CustomFields custom);
 
+    public void setState(final StateReference state);
+
     public static Quote of() {
         return new QuoteImpl();
     }
@@ -379,6 +398,7 @@ public interface Quote extends BaseResource {
         instance.setCustomerGroup(template.getCustomerGroup());
         instance.setValidTo(template.getValidTo());
         instance.setSellerComment(template.getSellerComment());
+        instance.setBuyerComment(template.getBuyerComment());
         instance.setStore(template.getStore());
         instance.setLineItems(template.getLineItems());
         instance.setCustomLineItems(template.getCustomLineItems());
@@ -397,6 +417,7 @@ public interface Quote extends BaseResource {
         instance.setItemShippingAddresses(template.getItemShippingAddresses());
         instance.setDirectDiscounts(template.getDirectDiscounts());
         instance.setCustom(template.getCustom());
+        instance.setState(template.getState());
         return instance;
     }
 

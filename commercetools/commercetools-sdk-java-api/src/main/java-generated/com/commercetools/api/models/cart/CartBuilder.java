@@ -24,6 +24,8 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusCustomLineItems(customLineItemsBuilder -> customLineItemsBuilder)
  *             .totalPrice(totalPriceBuilder -> totalPriceBuilder)
  *             .cartState(CartState.ACTIVE)
+ *             .shippingMode(ShippingMode.SINGLE)
+ *             .plusShipping(shippingBuilder -> shippingBuilder)
  *             .taxMode(TaxMode.PLATFORM)
  *             .taxRoundingMode(RoundingMode.HALF_EVEN)
  *             .taxCalculationMode(TaxCalculationMode.LINE_ITEM_LEVEL)
@@ -74,6 +76,9 @@ public class CartBuilder implements Builder<Cart> {
     @Nullable
     private com.commercetools.api.models.cart.TaxedPrice taxedPrice;
 
+    @Nullable
+    private com.commercetools.api.models.cart.TaxedPrice taxedShippingPrice;
+
     private com.commercetools.api.models.cart.CartState cartState;
 
     @Nullable
@@ -81,6 +86,10 @@ public class CartBuilder implements Builder<Cart> {
 
     @Nullable
     private com.commercetools.api.models.common.Address billingAddress;
+
+    private com.commercetools.api.models.cart.ShippingMode shippingMode;
+
+    private java.util.List<com.commercetools.api.models.cart.Shipping> shipping;
 
     @Nullable
     private com.commercetools.api.models.cart.InventoryMode inventoryMode;
@@ -409,6 +418,26 @@ public class CartBuilder implements Builder<Cart> {
     }
 
     /**
+     *  <p>Sum of <code>taxedPrice</code> of ShippingInfo across all Shipping Methods. For <code>Platform</code> TaxMode, it is set automatically only if shipping address is set or Shipping Method is added to the Cart.</p>
+     */
+
+    public CartBuilder taxedShippingPrice(
+            Function<com.commercetools.api.models.cart.TaxedPriceBuilder, com.commercetools.api.models.cart.TaxedPriceBuilder> builder) {
+        this.taxedShippingPrice = builder.apply(com.commercetools.api.models.cart.TaxedPriceBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Sum of <code>taxedPrice</code> of ShippingInfo across all Shipping Methods. For <code>Platform</code> TaxMode, it is set automatically only if shipping address is set or Shipping Method is added to the Cart.</p>
+     */
+
+    public CartBuilder taxedShippingPrice(
+            @Nullable final com.commercetools.api.models.cart.TaxedPrice taxedShippingPrice) {
+        this.taxedShippingPrice = taxedShippingPrice;
+        return this;
+    }
+
+    /**
      *
      */
 
@@ -452,6 +481,74 @@ public class CartBuilder implements Builder<Cart> {
 
     public CartBuilder billingAddress(@Nullable final com.commercetools.api.models.common.Address billingAddress) {
         this.billingAddress = billingAddress;
+        return this;
+    }
+
+    /**
+     *  <p>Indicates whether one or multiple Shipping Methods are added to the Cart.</p>
+     */
+
+    public CartBuilder shippingMode(final com.commercetools.api.models.cart.ShippingMode shippingMode) {
+        this.shippingMode = shippingMode;
+        return this;
+    }
+
+    /**
+     *  <p>Holds all shipping-related information per Shipping Method of a Cart with <code>Multi</code> ShippingMode.</p>
+     *  <p>It is automatically updated after the Shipping Method is added.</p>
+     */
+
+    public CartBuilder shipping(final com.commercetools.api.models.cart.Shipping... shipping) {
+        this.shipping = new ArrayList<>(Arrays.asList(shipping));
+        return this;
+    }
+
+    /**
+     *  <p>Holds all shipping-related information per Shipping Method of a Cart with <code>Multi</code> ShippingMode.</p>
+     *  <p>It is automatically updated after the Shipping Method is added.</p>
+     */
+
+    public CartBuilder shipping(final java.util.List<com.commercetools.api.models.cart.Shipping> shipping) {
+        this.shipping = shipping;
+        return this;
+    }
+
+    /**
+     *  <p>Holds all shipping-related information per Shipping Method of a Cart with <code>Multi</code> ShippingMode.</p>
+     *  <p>It is automatically updated after the Shipping Method is added.</p>
+     */
+
+    public CartBuilder plusShipping(final com.commercetools.api.models.cart.Shipping... shipping) {
+        if (this.shipping == null) {
+            this.shipping = new ArrayList<>();
+        }
+        this.shipping.addAll(Arrays.asList(shipping));
+        return this;
+    }
+
+    /**
+     *  <p>Holds all shipping-related information per Shipping Method of a Cart with <code>Multi</code> ShippingMode.</p>
+     *  <p>It is automatically updated after the Shipping Method is added.</p>
+     */
+
+    public CartBuilder plusShipping(
+            Function<com.commercetools.api.models.cart.ShippingBuilder, com.commercetools.api.models.cart.ShippingBuilder> builder) {
+        if (this.shipping == null) {
+            this.shipping = new ArrayList<>();
+        }
+        this.shipping.add(builder.apply(com.commercetools.api.models.cart.ShippingBuilder.of()).build());
+        return this;
+    }
+
+    /**
+     *  <p>Holds all shipping-related information per Shipping Method of a Cart with <code>Multi</code> ShippingMode.</p>
+     *  <p>It is automatically updated after the Shipping Method is added.</p>
+     */
+
+    public CartBuilder withShipping(
+            Function<com.commercetools.api.models.cart.ShippingBuilder, com.commercetools.api.models.cart.ShippingBuilder> builder) {
+        this.shipping = new ArrayList<>();
+        this.shipping.add(builder.apply(com.commercetools.api.models.cart.ShippingBuilder.of()).build());
         return this;
     }
 
@@ -524,7 +621,7 @@ public class CartBuilder implements Builder<Cart> {
     }
 
     /**
-     *  <p>Set automatically once the ShippingMethod is set.</p>
+     *  <p>Shipping-related information of a Cart with <code>Single</code> ShippingMode. Set automatically once the ShippingMethod is set.</p>
      */
 
     public CartBuilder shippingInfo(
@@ -534,7 +631,7 @@ public class CartBuilder implements Builder<Cart> {
     }
 
     /**
-     *  <p>Set automatically once the ShippingMethod is set.</p>
+     *  <p>Shipping-related information of a Cart with <code>Single</code> ShippingMode. Set automatically once the ShippingMethod is set.</p>
      */
 
     public CartBuilder shippingInfo(@Nullable final com.commercetools.api.models.cart.ShippingInfo shippingInfo) {
@@ -934,6 +1031,11 @@ public class CartBuilder implements Builder<Cart> {
         return this.taxedPrice;
     }
 
+    @Nullable
+    public com.commercetools.api.models.cart.TaxedPrice getTaxedShippingPrice() {
+        return this.taxedShippingPrice;
+    }
+
     public com.commercetools.api.models.cart.CartState getCartState() {
         return this.cartState;
     }
@@ -946,6 +1048,14 @@ public class CartBuilder implements Builder<Cart> {
     @Nullable
     public com.commercetools.api.models.common.Address getBillingAddress() {
         return this.billingAddress;
+    }
+
+    public com.commercetools.api.models.cart.ShippingMode getShippingMode() {
+        return this.shippingMode;
+    }
+
+    public java.util.List<com.commercetools.api.models.cart.Shipping> getShipping() {
+        return this.shipping;
     }
 
     @Nullable
@@ -1042,17 +1152,19 @@ public class CartBuilder implements Builder<Cart> {
         Objects.requireNonNull(customLineItems, Cart.class + ": customLineItems is missing");
         Objects.requireNonNull(totalPrice, Cart.class + ": totalPrice is missing");
         Objects.requireNonNull(cartState, Cart.class + ": cartState is missing");
+        Objects.requireNonNull(shippingMode, Cart.class + ": shippingMode is missing");
+        Objects.requireNonNull(shipping, Cart.class + ": shipping is missing");
         Objects.requireNonNull(taxMode, Cart.class + ": taxMode is missing");
         Objects.requireNonNull(taxRoundingMode, Cart.class + ": taxRoundingMode is missing");
         Objects.requireNonNull(taxCalculationMode, Cart.class + ": taxCalculationMode is missing");
         Objects.requireNonNull(refusedGifts, Cart.class + ": refusedGifts is missing");
         Objects.requireNonNull(origin, Cart.class + ": origin is missing");
         return new CartImpl(id, version, createdAt, lastModifiedAt, key, lastModifiedBy, createdBy, customerId,
-            customerEmail, anonymousId, store, lineItems, customLineItems, totalPrice, taxedPrice, cartState,
-            shippingAddress, billingAddress, inventoryMode, taxMode, taxRoundingMode, taxCalculationMode, customerGroup,
-            country, shippingInfo, discountCodes, directDiscounts, custom, paymentInfo, locale,
-            deleteDaysAfterLastModification, refusedGifts, origin, shippingRateInput, itemShippingAddresses,
-            totalLineItemQuantity);
+            customerEmail, anonymousId, store, lineItems, customLineItems, totalPrice, taxedPrice, taxedShippingPrice,
+            cartState, shippingAddress, billingAddress, shippingMode, shipping, inventoryMode, taxMode, taxRoundingMode,
+            taxCalculationMode, customerGroup, country, shippingInfo, discountCodes, directDiscounts, custom,
+            paymentInfo, locale, deleteDaysAfterLastModification, refusedGifts, origin, shippingRateInput,
+            itemShippingAddresses, totalLineItemQuantity);
     }
 
     /**
@@ -1060,11 +1172,11 @@ public class CartBuilder implements Builder<Cart> {
      */
     public Cart buildUnchecked() {
         return new CartImpl(id, version, createdAt, lastModifiedAt, key, lastModifiedBy, createdBy, customerId,
-            customerEmail, anonymousId, store, lineItems, customLineItems, totalPrice, taxedPrice, cartState,
-            shippingAddress, billingAddress, inventoryMode, taxMode, taxRoundingMode, taxCalculationMode, customerGroup,
-            country, shippingInfo, discountCodes, directDiscounts, custom, paymentInfo, locale,
-            deleteDaysAfterLastModification, refusedGifts, origin, shippingRateInput, itemShippingAddresses,
-            totalLineItemQuantity);
+            customerEmail, anonymousId, store, lineItems, customLineItems, totalPrice, taxedPrice, taxedShippingPrice,
+            cartState, shippingAddress, billingAddress, shippingMode, shipping, inventoryMode, taxMode, taxRoundingMode,
+            taxCalculationMode, customerGroup, country, shippingInfo, discountCodes, directDiscounts, custom,
+            paymentInfo, locale, deleteDaysAfterLastModification, refusedGifts, origin, shippingRateInput,
+            itemShippingAddresses, totalLineItemQuantity);
     }
 
     public static CartBuilder of() {
@@ -1088,9 +1200,12 @@ public class CartBuilder implements Builder<Cart> {
         builder.customLineItems = template.getCustomLineItems();
         builder.totalPrice = template.getTotalPrice();
         builder.taxedPrice = template.getTaxedPrice();
+        builder.taxedShippingPrice = template.getTaxedShippingPrice();
         builder.cartState = template.getCartState();
         builder.shippingAddress = template.getShippingAddress();
         builder.billingAddress = template.getBillingAddress();
+        builder.shippingMode = template.getShippingMode();
+        builder.shipping = template.getShipping();
         builder.inventoryMode = template.getInventoryMode();
         builder.taxMode = template.getTaxMode();
         builder.taxRoundingMode = template.getTaxRoundingMode();

@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * OrderStateChangedMessagePayload
+ *  <p>Generated after a successful Change Order State update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderStateChangedMessagePayloadImpl implements OrderStateChangedMessagePayload, ModelBase {
@@ -48,7 +48,7 @@ public class OrderStateChangedMessagePayloadImpl implements OrderStateChangedMes
     }
 
     /**
-     *
+     *  <p>OrderState after the Change Order State update action.</p>
      */
 
     public com.commercetools.api.models.order.OrderState getOrderState() {
@@ -56,7 +56,7 @@ public class OrderStateChangedMessagePayloadImpl implements OrderStateChangedMes
     }
 
     /**
-     *
+     *  <p>OrderState before the Change Order State update action.</p>
      */
 
     public com.commercetools.api.models.order.OrderState getOldOrderState() {

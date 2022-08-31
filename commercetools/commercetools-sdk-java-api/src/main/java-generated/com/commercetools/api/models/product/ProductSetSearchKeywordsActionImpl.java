@@ -48,7 +48,7 @@ public class ProductSetSearchKeywordsActionImpl implements ProductSetSearchKeywo
     }
 
     /**
-     *
+     *  <p>Value to set.</p>
      */
 
     public com.commercetools.api.models.product.SearchKeywords getSearchKeywords() {
@@ -56,7 +56,7 @@ public class ProductSetSearchKeywordsActionImpl implements ProductSetSearchKeywo
     }
 
     /**
-     *
+     *  <p>If <code>true</code>, only the staged <code>searchKeywords</code> is updated. If <code>false</code>, both the current and staged <code>searchKeywords</code> are updated.</p>
      */
 
     public Boolean getStaged() {

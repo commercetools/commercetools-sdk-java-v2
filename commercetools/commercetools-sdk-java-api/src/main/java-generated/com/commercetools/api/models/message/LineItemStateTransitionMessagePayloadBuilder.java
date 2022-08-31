@@ -37,7 +37,7 @@ public class LineItemStateTransitionMessagePayloadBuilder implements Builder<Lin
     private com.commercetools.api.models.state.StateReference toState;
 
     /**
-     *
+     *  <p>Unique identifier of the Line Item.</p>
      */
 
     public LineItemStateTransitionMessagePayloadBuilder lineItemId(final String lineItemId) {
@@ -46,7 +46,7 @@ public class LineItemStateTransitionMessagePayloadBuilder implements Builder<Lin
     }
 
     /**
-     *
+     *  <p>Date and time (UTC) when the transition of the Line Item State was performed.</p>
      */
 
     public LineItemStateTransitionMessagePayloadBuilder transitionDate(final java.time.ZonedDateTime transitionDate) {
@@ -55,7 +55,7 @@ public class LineItemStateTransitionMessagePayloadBuilder implements Builder<Lin
     }
 
     /**
-     *
+     *  <p>Number of Line Items for which the State was transitioned.</p>
      */
 
     public LineItemStateTransitionMessagePayloadBuilder quantity(final Long quantity) {
@@ -64,7 +64,7 @@ public class LineItemStateTransitionMessagePayloadBuilder implements Builder<Lin
     }
 
     /**
-     *  <p>Reference to a State.</p>
+     *  <p>State the Line Item was transitioned from.</p>
      */
 
     public LineItemStateTransitionMessagePayloadBuilder fromState(
@@ -74,7 +74,7 @@ public class LineItemStateTransitionMessagePayloadBuilder implements Builder<Lin
     }
 
     /**
-     *  <p>Reference to a State.</p>
+     *  <p>State the Line Item was transitioned from.</p>
      */
 
     public LineItemStateTransitionMessagePayloadBuilder fromState(
@@ -84,7 +84,7 @@ public class LineItemStateTransitionMessagePayloadBuilder implements Builder<Lin
     }
 
     /**
-     *  <p>Reference to a State.</p>
+     *  <p>State the Line Item was transitioned to.</p>
      */
 
     public LineItemStateTransitionMessagePayloadBuilder toState(
@@ -94,7 +94,7 @@ public class LineItemStateTransitionMessagePayloadBuilder implements Builder<Lin
     }
 
     /**
-     *  <p>Reference to a State.</p>
+     *  <p>State the Line Item was transitioned to.</p>
      */
 
     public LineItemStateTransitionMessagePayloadBuilder toState(

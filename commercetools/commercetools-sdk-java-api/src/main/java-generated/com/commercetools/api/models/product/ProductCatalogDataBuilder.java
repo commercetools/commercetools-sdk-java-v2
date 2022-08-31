@@ -34,7 +34,7 @@ public class ProductCatalogDataBuilder implements Builder<ProductCatalogData> {
     private Boolean hasStagedChanges;
 
     /**
-     *
+     *  <p><code>true</code> if the Product is published.</p>
      */
 
     public ProductCatalogDataBuilder published(final Boolean published) {
@@ -43,7 +43,7 @@ public class ProductCatalogDataBuilder implements Builder<ProductCatalogData> {
     }
 
     /**
-     *
+     *  <p>Current (published) data of the Product.</p>
      */
 
     public ProductCatalogDataBuilder current(
@@ -53,7 +53,7 @@ public class ProductCatalogDataBuilder implements Builder<ProductCatalogData> {
     }
 
     /**
-     *
+     *  <p>Current (published) data of the Product.</p>
      */
 
     public ProductCatalogDataBuilder current(final com.commercetools.api.models.product.ProductData current) {
@@ -62,7 +62,7 @@ public class ProductCatalogDataBuilder implements Builder<ProductCatalogData> {
     }
 
     /**
-     *
+     *  <p>Staged (unpublished) data of the Product.</p>
      */
 
     public ProductCatalogDataBuilder staged(
@@ -72,7 +72,7 @@ public class ProductCatalogDataBuilder implements Builder<ProductCatalogData> {
     }
 
     /**
-     *
+     *  <p>Staged (unpublished) data of the Product.</p>
      */
 
     public ProductCatalogDataBuilder staged(final com.commercetools.api.models.product.ProductData staged) {
@@ -81,7 +81,7 @@ public class ProductCatalogDataBuilder implements Builder<ProductCatalogData> {
     }
 
     /**
-     *
+     *  <p><code>true</code> if the <code>staged</code> data is different from the <code>current</code> data.</p>
      */
 
     public ProductCatalogDataBuilder hasStagedChanges(final Boolean hasStagedChanges) {

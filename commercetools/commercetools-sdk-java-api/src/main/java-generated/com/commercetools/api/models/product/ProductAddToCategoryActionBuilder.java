@@ -33,7 +33,7 @@ public class ProductAddToCategoryActionBuilder implements Builder<ProductAddToCa
     private Boolean staged;
 
     /**
-     *
+     *  <p>The Category to add.</p>
      */
 
     public ProductAddToCategoryActionBuilder category(
@@ -44,7 +44,7 @@ public class ProductAddToCategoryActionBuilder implements Builder<ProductAddToCa
     }
 
     /**
-     *
+     *  <p>The Category to add.</p>
      */
 
     public ProductAddToCategoryActionBuilder category(
@@ -54,7 +54,7 @@ public class ProductAddToCategoryActionBuilder implements Builder<ProductAddToCa
     }
 
     /**
-     *
+     *  <p>A string representing a number between 0 and 1. Must start with <code>0.</code> and cannot end with <code>0</code>. If empty, any existing value will be removed.</p>
      */
 
     public ProductAddToCategoryActionBuilder orderHint(@Nullable final String orderHint) {
@@ -63,7 +63,7 @@ public class ProductAddToCategoryActionBuilder implements Builder<ProductAddToCa
     }
 
     /**
-     *
+     *  <p>If <code>true</code>, only the staged <code>categories</code> and <code>categoryOrderHints</code> are updated. If <code>false</code>, both the current and staged <code>categories</code> and <code>categoryOrderHints</code> are updated.</p>
      */
 
     public ProductAddToCategoryActionBuilder staged(@Nullable final Boolean staged) {

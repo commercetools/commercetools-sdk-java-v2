@@ -25,7 +25,7 @@ public class QuoteRequestChangeQuoteRequestStateActionBuilder
     private com.commercetools.api.models.quote_request.QuoteRequestState quoteRequestState;
 
     /**
-     *  <p>The new state to be set for the Quote Request.</p>
+     *  <p>New state to be set for the Quote Request.</p>
      */
 
     public QuoteRequestChangeQuoteRequestStateActionBuilder quoteRequestState(

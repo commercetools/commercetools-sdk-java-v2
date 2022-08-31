@@ -13,7 +13,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * ProductVariantAvailability
+ *  <p>The InventoryEntry information of the Product Variant. If there is a supply Channel for the InventoryEntry, then <code>channels</code> is returned. If not, then <code>isOnStock</code>, <code>restockableInDays</code>, and <code>quantityOnStock</code> are returned.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -29,32 +29,34 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ProductVariantAvailability {
 
     /**
-     *
+     *  <p>For each InventoryEntry with a supply Channel, an entry is added to <code>channels</code>.</p>
+     */
+    @Valid
+    @JsonProperty("channels")
+    public ProductVariantChannelAvailabilityMap getChannels();
+
+    /**
+     *  <p>Indicates whether a Product Variant is in stock.</p>
      */
 
     @JsonProperty("isOnStock")
     public Boolean getIsOnStock();
 
     /**
-     *
+     *  <p>Number of days to restock a Product Variant once it is out of stock.</p>
      */
 
     @JsonProperty("restockableInDays")
     public Long getRestockableInDays();
 
     /**
-     *
+     *  <p>Number of items of the Product Variant that are in stock.</p>
      */
 
     @JsonProperty("availableQuantity")
     public Long getAvailableQuantity();
 
-    /**
-     *
-     */
-    @Valid
-    @JsonProperty("channels")
-    public ProductVariantChannelAvailabilityMap getChannels();
+    public void setChannels(final ProductVariantChannelAvailabilityMap channels);
 
     public void setIsOnStock(final Boolean isOnStock);
 
@@ -62,18 +64,16 @@ public interface ProductVariantAvailability {
 
     public void setAvailableQuantity(final Long availableQuantity);
 
-    public void setChannels(final ProductVariantChannelAvailabilityMap channels);
-
     public static ProductVariantAvailability of() {
         return new ProductVariantAvailabilityImpl();
     }
 
     public static ProductVariantAvailability of(final ProductVariantAvailability template) {
         ProductVariantAvailabilityImpl instance = new ProductVariantAvailabilityImpl();
+        instance.setChannels(template.getChannels());
         instance.setIsOnStock(template.getIsOnStock());
         instance.setRestockableInDays(template.getRestockableInDays());
         instance.setAvailableQuantity(template.getAvailableQuantity());
-        instance.setChannels(template.getChannels());
         return instance;
     }
 

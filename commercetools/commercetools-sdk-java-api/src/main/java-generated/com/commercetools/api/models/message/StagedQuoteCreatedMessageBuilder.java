@@ -23,6 +23,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .sequenceNumber(0.3)
  *             .resource(resourceBuilder -> resourceBuilder)
  *             .resourceVersion(0.3)
+ *             .stagedQuote(stagedQuoteBuilder -> stagedQuoteBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -53,8 +54,10 @@ public class StagedQuoteCreatedMessageBuilder implements Builder<StagedQuoteCrea
     @Nullable
     private com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers;
 
+    private com.commercetools.api.models.staged_quote.StagedQuote stagedQuote;
+
     /**
-     *  <p>Unique identifier of the Message.</p>
+     *  <p>Unique identifier of the Message. Can be used to track which Messages have been processed.</p>
      */
 
     public StagedQuoteCreatedMessageBuilder id(final String id) {
@@ -63,7 +66,7 @@ public class StagedQuoteCreatedMessageBuilder implements Builder<StagedQuoteCrea
     }
 
     /**
-     *
+     *  <p>Version of a resource. In case of Messages, this is always <code>1</code>.</p>
      */
 
     public StagedQuoteCreatedMessageBuilder version(final Long version) {
@@ -72,7 +75,7 @@ public class StagedQuoteCreatedMessageBuilder implements Builder<StagedQuoteCrea
     }
 
     /**
-     *
+     *  <p>Date and time (UTC) the Message was generated.</p>
      */
 
     public StagedQuoteCreatedMessageBuilder createdAt(final java.time.ZonedDateTime createdAt) {
@@ -81,7 +84,7 @@ public class StagedQuoteCreatedMessageBuilder implements Builder<StagedQuoteCrea
     }
 
     /**
-     *
+     *  <p>Value of <code>createdAt</code>.</p>
      */
 
     public StagedQuoteCreatedMessageBuilder lastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {
@@ -90,7 +93,7 @@ public class StagedQuoteCreatedMessageBuilder implements Builder<StagedQuoteCrea
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>Value of <code>createdBy</code>.</p>
      */
 
     public StagedQuoteCreatedMessageBuilder lastModifiedBy(
@@ -100,7 +103,7 @@ public class StagedQuoteCreatedMessageBuilder implements Builder<StagedQuoteCrea
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>Value of <code>createdBy</code>.</p>
      */
 
     public StagedQuoteCreatedMessageBuilder lastModifiedBy(
@@ -130,7 +133,7 @@ public class StagedQuoteCreatedMessageBuilder implements Builder<StagedQuoteCrea
     }
 
     /**
-     *
+     *  <p>Message number in relation to other Messages for a given resource. The <code>sequenceNumber</code> of the next Message for the resource is the successor of the <code>sequenceNumber</code> of the current Message. Meaning, the <code>sequenceNumber</code> of the next Message equals the <code>sequenceNumber</code> of the current Message + 1. <code>sequenceNumber</code> can be used to ensure that Messages are processed in the correct order for a particular resource.</p>
      */
 
     public StagedQuoteCreatedMessageBuilder sequenceNumber(final Long sequenceNumber) {
@@ -139,7 +142,7 @@ public class StagedQuoteCreatedMessageBuilder implements Builder<StagedQuoteCrea
     }
 
     /**
-     *  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
+     *  <p>Reference to the resource on which the change or action was performed.</p>
      */
 
     public StagedQuoteCreatedMessageBuilder resource(final com.commercetools.api.models.common.Reference resource) {
@@ -148,7 +151,7 @@ public class StagedQuoteCreatedMessageBuilder implements Builder<StagedQuoteCrea
     }
 
     /**
-     *  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
+     *  <p>Reference to the resource on which the change or action was performed.</p>
      */
 
     public StagedQuoteCreatedMessageBuilder resource(
@@ -158,7 +161,7 @@ public class StagedQuoteCreatedMessageBuilder implements Builder<StagedQuoteCrea
     }
 
     /**
-     *
+     *  <p>Version of the resource on which the change or action was performed.</p>
      */
 
     public StagedQuoteCreatedMessageBuilder resourceVersion(final Long resourceVersion) {
@@ -167,7 +170,7 @@ public class StagedQuoteCreatedMessageBuilder implements Builder<StagedQuoteCrea
     }
 
     /**
-     *
+     *  <p>User-provided identifiers of the resource, such as <code>key</code> or <code>externalId</code>. Only present if the resource has such identifiers.</p>
      */
 
     public StagedQuoteCreatedMessageBuilder resourceUserProvidedIdentifiers(
@@ -179,12 +182,32 @@ public class StagedQuoteCreatedMessageBuilder implements Builder<StagedQuoteCrea
     }
 
     /**
-     *
+     *  <p>User-provided identifiers of the resource, such as <code>key</code> or <code>externalId</code>. Only present if the resource has such identifiers.</p>
      */
 
     public StagedQuoteCreatedMessageBuilder resourceUserProvidedIdentifiers(
             @Nullable final com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers) {
         this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
+        return this;
+    }
+
+    /**
+     *  <p>Staged Quote that was created.</p>
+     */
+
+    public StagedQuoteCreatedMessageBuilder stagedQuote(
+            Function<com.commercetools.api.models.staged_quote.StagedQuoteBuilder, com.commercetools.api.models.staged_quote.StagedQuoteBuilder> builder) {
+        this.stagedQuote = builder.apply(com.commercetools.api.models.staged_quote.StagedQuoteBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Staged Quote that was created.</p>
+     */
+
+    public StagedQuoteCreatedMessageBuilder stagedQuote(
+            final com.commercetools.api.models.staged_quote.StagedQuote stagedQuote) {
+        this.stagedQuote = stagedQuote;
         return this;
     }
 
@@ -231,6 +254,10 @@ public class StagedQuoteCreatedMessageBuilder implements Builder<StagedQuoteCrea
         return this.resourceUserProvidedIdentifiers;
     }
 
+    public com.commercetools.api.models.staged_quote.StagedQuote getStagedQuote() {
+        return this.stagedQuote;
+    }
+
     public StagedQuoteCreatedMessage build() {
         Objects.requireNonNull(id, StagedQuoteCreatedMessage.class + ": id is missing");
         Objects.requireNonNull(version, StagedQuoteCreatedMessage.class + ": version is missing");
@@ -239,8 +266,9 @@ public class StagedQuoteCreatedMessageBuilder implements Builder<StagedQuoteCrea
         Objects.requireNonNull(sequenceNumber, StagedQuoteCreatedMessage.class + ": sequenceNumber is missing");
         Objects.requireNonNull(resource, StagedQuoteCreatedMessage.class + ": resource is missing");
         Objects.requireNonNull(resourceVersion, StagedQuoteCreatedMessage.class + ": resourceVersion is missing");
+        Objects.requireNonNull(stagedQuote, StagedQuoteCreatedMessage.class + ": stagedQuote is missing");
         return new StagedQuoteCreatedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
-            sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers);
+            sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, stagedQuote);
     }
 
     /**
@@ -248,7 +276,7 @@ public class StagedQuoteCreatedMessageBuilder implements Builder<StagedQuoteCrea
      */
     public StagedQuoteCreatedMessage buildUnchecked() {
         return new StagedQuoteCreatedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
-            sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers);
+            sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, stagedQuote);
     }
 
     public static StagedQuoteCreatedMessageBuilder of() {
@@ -267,6 +295,7 @@ public class StagedQuoteCreatedMessageBuilder implements Builder<StagedQuoteCrea
         builder.resource = template.getResource();
         builder.resourceVersion = template.getResourceVersion();
         builder.resourceUserProvidedIdentifiers = template.getResourceUserProvidedIdentifiers();
+        builder.stagedQuote = template.getStagedQuote();
         return builder;
     }
 

@@ -15,7 +15,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * InventoryEntryCreatedMessagePayload
+ *  <p>Generated after a successful Create InventoryEntry request.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -34,7 +34,7 @@ public interface InventoryEntryCreatedMessagePayload extends MessagePayload {
     String INVENTORY_ENTRY_CREATED = "InventoryEntryCreated";
 
     /**
-     *
+     *  <p>InventoryEntry that was created.</p>
      */
     @NotNull
     @Valid

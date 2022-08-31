@@ -9,6 +9,7 @@ import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.cart.CartResourceIdentifier;
+import com.commercetools.api.models.state.StateReference;
 import com.commercetools.api.models.type.CustomFieldsDraft;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
@@ -57,7 +58,7 @@ public interface QuoteRequestDraft {
     public String getKey();
 
     /**
-     *  <p>Text message included in the request.</p>
+     *  <p>Message from the Buyer included in the Quote Request.</p>
      */
     @NotNull
     @JsonProperty("comment")
@@ -70,6 +71,13 @@ public interface QuoteRequestDraft {
     @JsonProperty("custom")
     public CustomFieldsDraft getCustom();
 
+    /**
+     *  <p>State of this Quote Request. This reference can point to a State in a custom workflow.</p>
+     */
+    @Valid
+    @JsonProperty("state")
+    public StateReference getState();
+
     public void setCart(final CartResourceIdentifier cart);
 
     public void setCartVersion(final Long cartVersion);
@@ -79,6 +87,8 @@ public interface QuoteRequestDraft {
     public void setComment(final String comment);
 
     public void setCustom(final CustomFieldsDraft custom);
+
+    public void setState(final StateReference state);
 
     public static QuoteRequestDraft of() {
         return new QuoteRequestDraftImpl();
@@ -91,6 +101,7 @@ public interface QuoteRequestDraft {
         instance.setKey(template.getKey());
         instance.setComment(template.getComment());
         instance.setCustom(template.getCustom());
+        instance.setState(template.getState());
         return instance;
     }
 

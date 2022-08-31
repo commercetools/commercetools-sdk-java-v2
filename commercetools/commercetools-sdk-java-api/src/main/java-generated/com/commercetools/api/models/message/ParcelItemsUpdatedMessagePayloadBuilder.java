@@ -17,6 +17,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     ParcelItemsUpdatedMessagePayload parcelItemsUpdatedMessagePayload = ParcelItemsUpdatedMessagePayload.builder()
  *             .parcelId("{parcelId}")
+ *             .deliveryId("{deliveryId}")
  *             .plusItems(itemsBuilder -> itemsBuilder)
  *             .plusOldItems(oldItemsBuilder -> oldItemsBuilder)
  *             .build()
@@ -28,15 +29,17 @@ public class ParcelItemsUpdatedMessagePayloadBuilder implements Builder<ParcelIt
 
     private String parcelId;
 
-    @Nullable
     private String deliveryId;
 
     private java.util.List<com.commercetools.api.models.order.DeliveryItem> items;
 
     private java.util.List<com.commercetools.api.models.order.DeliveryItem> oldItems;
 
+    @Nullable
+    private String shippingKey;
+
     /**
-     *
+     *  <p>Unique identifier of the Parcel.</p>
      */
 
     public ParcelItemsUpdatedMessagePayloadBuilder parcelId(final String parcelId) {
@@ -45,16 +48,16 @@ public class ParcelItemsUpdatedMessagePayloadBuilder implements Builder<ParcelIt
     }
 
     /**
-     *
+     *  <p>Unique identifier of the Delivery.</p>
      */
 
-    public ParcelItemsUpdatedMessagePayloadBuilder deliveryId(@Nullable final String deliveryId) {
+    public ParcelItemsUpdatedMessagePayloadBuilder deliveryId(final String deliveryId) {
         this.deliveryId = deliveryId;
         return this;
     }
 
     /**
-     *
+     *  <p>Delivery Items after the Set Parcel Items update action.</p>
      */
 
     public ParcelItemsUpdatedMessagePayloadBuilder items(
@@ -64,7 +67,7 @@ public class ParcelItemsUpdatedMessagePayloadBuilder implements Builder<ParcelIt
     }
 
     /**
-     *
+     *  <p>Delivery Items after the Set Parcel Items update action.</p>
      */
 
     public ParcelItemsUpdatedMessagePayloadBuilder items(
@@ -74,7 +77,7 @@ public class ParcelItemsUpdatedMessagePayloadBuilder implements Builder<ParcelIt
     }
 
     /**
-     *
+     *  <p>Delivery Items after the Set Parcel Items update action.</p>
      */
 
     public ParcelItemsUpdatedMessagePayloadBuilder plusItems(
@@ -87,7 +90,7 @@ public class ParcelItemsUpdatedMessagePayloadBuilder implements Builder<ParcelIt
     }
 
     /**
-     *
+     *  <p>Delivery Items after the Set Parcel Items update action.</p>
      */
 
     public ParcelItemsUpdatedMessagePayloadBuilder plusItems(
@@ -100,7 +103,7 @@ public class ParcelItemsUpdatedMessagePayloadBuilder implements Builder<ParcelIt
     }
 
     /**
-     *
+     *  <p>Delivery Items after the Set Parcel Items update action.</p>
      */
 
     public ParcelItemsUpdatedMessagePayloadBuilder withItems(
@@ -111,7 +114,7 @@ public class ParcelItemsUpdatedMessagePayloadBuilder implements Builder<ParcelIt
     }
 
     /**
-     *
+     *  <p>Delivery Items before the Set Parcel Items update action.</p>
      */
 
     public ParcelItemsUpdatedMessagePayloadBuilder oldItems(
@@ -121,7 +124,7 @@ public class ParcelItemsUpdatedMessagePayloadBuilder implements Builder<ParcelIt
     }
 
     /**
-     *
+     *  <p>Delivery Items before the Set Parcel Items update action.</p>
      */
 
     public ParcelItemsUpdatedMessagePayloadBuilder oldItems(
@@ -131,7 +134,7 @@ public class ParcelItemsUpdatedMessagePayloadBuilder implements Builder<ParcelIt
     }
 
     /**
-     *
+     *  <p>Delivery Items before the Set Parcel Items update action.</p>
      */
 
     public ParcelItemsUpdatedMessagePayloadBuilder plusOldItems(
@@ -144,7 +147,7 @@ public class ParcelItemsUpdatedMessagePayloadBuilder implements Builder<ParcelIt
     }
 
     /**
-     *
+     *  <p>Delivery Items before the Set Parcel Items update action.</p>
      */
 
     public ParcelItemsUpdatedMessagePayloadBuilder plusOldItems(
@@ -157,7 +160,7 @@ public class ParcelItemsUpdatedMessagePayloadBuilder implements Builder<ParcelIt
     }
 
     /**
-     *
+     *  <p>Delivery Items before the Set Parcel Items update action.</p>
      */
 
     public ParcelItemsUpdatedMessagePayloadBuilder withOldItems(
@@ -167,11 +170,19 @@ public class ParcelItemsUpdatedMessagePayloadBuilder implements Builder<ParcelIt
         return this;
     }
 
+    /**
+     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multi</code> ShippingMode.</p>
+     */
+
+    public ParcelItemsUpdatedMessagePayloadBuilder shippingKey(@Nullable final String shippingKey) {
+        this.shippingKey = shippingKey;
+        return this;
+    }
+
     public String getParcelId() {
         return this.parcelId;
     }
 
-    @Nullable
     public String getDeliveryId() {
         return this.deliveryId;
     }
@@ -184,18 +195,24 @@ public class ParcelItemsUpdatedMessagePayloadBuilder implements Builder<ParcelIt
         return this.oldItems;
     }
 
+    @Nullable
+    public String getShippingKey() {
+        return this.shippingKey;
+    }
+
     public ParcelItemsUpdatedMessagePayload build() {
         Objects.requireNonNull(parcelId, ParcelItemsUpdatedMessagePayload.class + ": parcelId is missing");
+        Objects.requireNonNull(deliveryId, ParcelItemsUpdatedMessagePayload.class + ": deliveryId is missing");
         Objects.requireNonNull(items, ParcelItemsUpdatedMessagePayload.class + ": items is missing");
         Objects.requireNonNull(oldItems, ParcelItemsUpdatedMessagePayload.class + ": oldItems is missing");
-        return new ParcelItemsUpdatedMessagePayloadImpl(parcelId, deliveryId, items, oldItems);
+        return new ParcelItemsUpdatedMessagePayloadImpl(parcelId, deliveryId, items, oldItems, shippingKey);
     }
 
     /**
      * builds ParcelItemsUpdatedMessagePayload without checking for non null required values
      */
     public ParcelItemsUpdatedMessagePayload buildUnchecked() {
-        return new ParcelItemsUpdatedMessagePayloadImpl(parcelId, deliveryId, items, oldItems);
+        return new ParcelItemsUpdatedMessagePayloadImpl(parcelId, deliveryId, items, oldItems, shippingKey);
     }
 
     public static ParcelItemsUpdatedMessagePayloadBuilder of() {
@@ -208,6 +225,7 @@ public class ParcelItemsUpdatedMessagePayloadBuilder implements Builder<ParcelIt
         builder.deliveryId = template.getDeliveryId();
         builder.items = template.getItems();
         builder.oldItems = template.getOldItems();
+        builder.shippingKey = template.getShippingKey();
         return builder;
     }
 

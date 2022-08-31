@@ -8,15 +8,15 @@ import java.util.function.Function;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
+import com.commercetools.api.models.order_edit.OrderEdit;
 import com.commercetools.api.models.order_edit.OrderEditApplied;
-import com.commercetools.api.models.order_edit.OrderEditReference;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * OrderEditAppliedMessagePayload
+ *  <p>Generated after a successfully applying an OrderEdit.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -36,22 +36,22 @@ public interface OrderEditAppliedMessagePayload extends OrderMessagePayload {
     String ORDER_EDIT_APPLIED = "OrderEditApplied";
 
     /**
-     *  <p>Reference to an OrderEdit.</p>
+     *  <p>OrderEdit that was applied.</p>
      */
     @NotNull
     @Valid
     @JsonProperty("edit")
-    public OrderEditReference getEdit();
+    public OrderEdit getEdit();
 
     /**
-     *
+     *  <p>Information about a successfully applied OrderEdit.</p>
      */
     @NotNull
     @Valid
     @JsonProperty("result")
     public OrderEditApplied getResult();
 
-    public void setEdit(final OrderEditReference edit);
+    public void setEdit(final OrderEdit edit);
 
     public void setResult(final OrderEditApplied result);
 

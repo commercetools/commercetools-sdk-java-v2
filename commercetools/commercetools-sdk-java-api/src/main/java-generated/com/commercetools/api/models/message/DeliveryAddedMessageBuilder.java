@@ -56,8 +56,11 @@ public class DeliveryAddedMessageBuilder implements Builder<DeliveryAddedMessage
 
     private com.commercetools.api.models.order.Delivery delivery;
 
+    @Nullable
+    private String shippingKey;
+
     /**
-     *  <p>Unique identifier of the Message.</p>
+     *  <p>Unique identifier of the Message. Can be used to track which Messages have been processed.</p>
      */
 
     public DeliveryAddedMessageBuilder id(final String id) {
@@ -66,7 +69,7 @@ public class DeliveryAddedMessageBuilder implements Builder<DeliveryAddedMessage
     }
 
     /**
-     *
+     *  <p>Version of a resource. In case of Messages, this is always <code>1</code>.</p>
      */
 
     public DeliveryAddedMessageBuilder version(final Long version) {
@@ -75,7 +78,7 @@ public class DeliveryAddedMessageBuilder implements Builder<DeliveryAddedMessage
     }
 
     /**
-     *
+     *  <p>Date and time (UTC) the Message was generated.</p>
      */
 
     public DeliveryAddedMessageBuilder createdAt(final java.time.ZonedDateTime createdAt) {
@@ -84,7 +87,7 @@ public class DeliveryAddedMessageBuilder implements Builder<DeliveryAddedMessage
     }
 
     /**
-     *
+     *  <p>Value of <code>createdAt</code>.</p>
      */
 
     public DeliveryAddedMessageBuilder lastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {
@@ -93,7 +96,7 @@ public class DeliveryAddedMessageBuilder implements Builder<DeliveryAddedMessage
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>Value of <code>createdBy</code>.</p>
      */
 
     public DeliveryAddedMessageBuilder lastModifiedBy(
@@ -103,7 +106,7 @@ public class DeliveryAddedMessageBuilder implements Builder<DeliveryAddedMessage
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>Value of <code>createdBy</code>.</p>
      */
 
     public DeliveryAddedMessageBuilder lastModifiedBy(
@@ -133,7 +136,7 @@ public class DeliveryAddedMessageBuilder implements Builder<DeliveryAddedMessage
     }
 
     /**
-     *
+     *  <p>Message number in relation to other Messages for a given resource. The <code>sequenceNumber</code> of the next Message for the resource is the successor of the <code>sequenceNumber</code> of the current Message. Meaning, the <code>sequenceNumber</code> of the next Message equals the <code>sequenceNumber</code> of the current Message + 1. <code>sequenceNumber</code> can be used to ensure that Messages are processed in the correct order for a particular resource.</p>
      */
 
     public DeliveryAddedMessageBuilder sequenceNumber(final Long sequenceNumber) {
@@ -142,7 +145,7 @@ public class DeliveryAddedMessageBuilder implements Builder<DeliveryAddedMessage
     }
 
     /**
-     *  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
+     *  <p>Reference to the resource on which the change or action was performed.</p>
      */
 
     public DeliveryAddedMessageBuilder resource(final com.commercetools.api.models.common.Reference resource) {
@@ -151,7 +154,7 @@ public class DeliveryAddedMessageBuilder implements Builder<DeliveryAddedMessage
     }
 
     /**
-     *  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
+     *  <p>Reference to the resource on which the change or action was performed.</p>
      */
 
     public DeliveryAddedMessageBuilder resource(
@@ -161,7 +164,7 @@ public class DeliveryAddedMessageBuilder implements Builder<DeliveryAddedMessage
     }
 
     /**
-     *
+     *  <p>Version of the resource on which the change or action was performed.</p>
      */
 
     public DeliveryAddedMessageBuilder resourceVersion(final Long resourceVersion) {
@@ -170,7 +173,7 @@ public class DeliveryAddedMessageBuilder implements Builder<DeliveryAddedMessage
     }
 
     /**
-     *
+     *  <p>User-provided identifiers of the resource, such as <code>key</code> or <code>externalId</code>. Only present if the resource has such identifiers.</p>
      */
 
     public DeliveryAddedMessageBuilder resourceUserProvidedIdentifiers(
@@ -182,7 +185,7 @@ public class DeliveryAddedMessageBuilder implements Builder<DeliveryAddedMessage
     }
 
     /**
-     *
+     *  <p>User-provided identifiers of the resource, such as <code>key</code> or <code>externalId</code>. Only present if the resource has such identifiers.</p>
      */
 
     public DeliveryAddedMessageBuilder resourceUserProvidedIdentifiers(
@@ -192,7 +195,7 @@ public class DeliveryAddedMessageBuilder implements Builder<DeliveryAddedMessage
     }
 
     /**
-     *
+     *  <p>Delivery that was added to the Order. The Delivery in the Message body does not contain Parcels if those were part of the initial Add Delivery update action. In that case, the update action produces an additional ParcelAddedToDelivery Message containing information about the Parcels.</p>
      */
 
     public DeliveryAddedMessageBuilder delivery(
@@ -202,11 +205,20 @@ public class DeliveryAddedMessageBuilder implements Builder<DeliveryAddedMessage
     }
 
     /**
-     *
+     *  <p>Delivery that was added to the Order. The Delivery in the Message body does not contain Parcels if those were part of the initial Add Delivery update action. In that case, the update action produces an additional ParcelAddedToDelivery Message containing information about the Parcels.</p>
      */
 
     public DeliveryAddedMessageBuilder delivery(final com.commercetools.api.models.order.Delivery delivery) {
         this.delivery = delivery;
+        return this;
+    }
+
+    /**
+     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multi</code> ShippingMode.</p>
+     */
+
+    public DeliveryAddedMessageBuilder shippingKey(@Nullable final String shippingKey) {
+        this.shippingKey = shippingKey;
         return this;
     }
 
@@ -257,6 +269,11 @@ public class DeliveryAddedMessageBuilder implements Builder<DeliveryAddedMessage
         return this.delivery;
     }
 
+    @Nullable
+    public String getShippingKey() {
+        return this.shippingKey;
+    }
+
     public DeliveryAddedMessage build() {
         Objects.requireNonNull(id, DeliveryAddedMessage.class + ": id is missing");
         Objects.requireNonNull(version, DeliveryAddedMessage.class + ": version is missing");
@@ -267,7 +284,7 @@ public class DeliveryAddedMessageBuilder implements Builder<DeliveryAddedMessage
         Objects.requireNonNull(resourceVersion, DeliveryAddedMessage.class + ": resourceVersion is missing");
         Objects.requireNonNull(delivery, DeliveryAddedMessage.class + ": delivery is missing");
         return new DeliveryAddedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
-            sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, delivery);
+            sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, delivery, shippingKey);
     }
 
     /**
@@ -275,7 +292,7 @@ public class DeliveryAddedMessageBuilder implements Builder<DeliveryAddedMessage
      */
     public DeliveryAddedMessage buildUnchecked() {
         return new DeliveryAddedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
-            sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, delivery);
+            sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, delivery, shippingKey);
     }
 
     public static DeliveryAddedMessageBuilder of() {
@@ -295,6 +312,7 @@ public class DeliveryAddedMessageBuilder implements Builder<DeliveryAddedMessage
         builder.resourceVersion = template.getResourceVersion();
         builder.resourceUserProvidedIdentifiers = template.getResourceUserProvidedIdentifiers();
         builder.delivery = template.getDelivery();
+        builder.shippingKey = template.getShippingKey();
         return builder;
     }
 

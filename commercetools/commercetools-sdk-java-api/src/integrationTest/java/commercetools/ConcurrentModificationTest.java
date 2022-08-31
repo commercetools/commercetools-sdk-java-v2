@@ -50,7 +50,6 @@ public class ConcurrentModificationTest {
                         .withClientSecret(CommercetoolsTestUtils.getClientSecret())
                         .build(),
                     authURL, apiUrl)
-                .addConcurrentModificationMiddleware()
                 .withErrorMiddleware(ErrorMiddleware.ExceptionMode.UNWRAP_COMPLETION_EXCEPTION)
                 .build(CommercetoolsTestUtils.getProjectKey());
 

@@ -27,8 +27,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     CartDraft cartDraft = CartDraft.builder()
  *             .currency("{currency}")
- *             .plusCustomShipping(customShippingBuilder -> customShippingBuilder)
- *             .plusShipping(shippingBuilder -> shippingBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -204,7 +202,6 @@ public interface CartDraft extends com.commercetools.api.models.CustomizableDraf
     /**
      *  <p>Custom Shipping Methods for a Cart with <code>Multi</code> ShippingMode.</p>
      */
-    @NotNull
     @Valid
     @JsonProperty("customShipping")
     public List<CustomShippingDraft> getCustomShipping();
@@ -212,7 +209,6 @@ public interface CartDraft extends com.commercetools.api.models.CustomizableDraf
     /**
      *  <p>Shipping Methods for a Cart with <code>Multi</code> ShippingMode.</p>
      */
-    @NotNull
     @Valid
     @JsonProperty("shipping")
     public List<ShippingDraft> getShipping();

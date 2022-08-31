@@ -17,8 +17,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     CartDraft cartDraft = CartDraft.builder()
  *             .currency("{currency}")
- *             .plusCustomShipping(customShippingBuilder -> customShippingBuilder)
- *             .plusShipping(shippingBuilder -> shippingBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -94,8 +92,10 @@ public class CartDraftBuilder implements Builder<CartDraft> {
     @Nullable
     private com.commercetools.api.models.cart.ShippingMode shippingMode;
 
+    @Nullable
     private java.util.List<com.commercetools.api.models.cart.CustomShippingDraft> customShipping;
 
+    @Nullable
     private java.util.List<com.commercetools.api.models.cart.ShippingDraft> shipping;
 
     @Nullable
@@ -503,7 +503,7 @@ public class CartDraftBuilder implements Builder<CartDraft> {
      */
 
     public CartDraftBuilder customShipping(
-            final com.commercetools.api.models.cart.CustomShippingDraft... customShipping) {
+            @Nullable final com.commercetools.api.models.cart.CustomShippingDraft... customShipping) {
         this.customShipping = new ArrayList<>(Arrays.asList(customShipping));
         return this;
     }
@@ -513,7 +513,7 @@ public class CartDraftBuilder implements Builder<CartDraft> {
      */
 
     public CartDraftBuilder customShipping(
-            final java.util.List<com.commercetools.api.models.cart.CustomShippingDraft> customShipping) {
+            @Nullable final java.util.List<com.commercetools.api.models.cart.CustomShippingDraft> customShipping) {
         this.customShipping = customShipping;
         return this;
     }
@@ -523,7 +523,7 @@ public class CartDraftBuilder implements Builder<CartDraft> {
      */
 
     public CartDraftBuilder plusCustomShipping(
-            final com.commercetools.api.models.cart.CustomShippingDraft... customShipping) {
+            @Nullable final com.commercetools.api.models.cart.CustomShippingDraft... customShipping) {
         if (this.customShipping == null) {
             this.customShipping = new ArrayList<>();
         }
@@ -561,7 +561,7 @@ public class CartDraftBuilder implements Builder<CartDraft> {
      *  <p>Shipping Methods for a Cart with <code>Multi</code> ShippingMode.</p>
      */
 
-    public CartDraftBuilder shipping(final com.commercetools.api.models.cart.ShippingDraft... shipping) {
+    public CartDraftBuilder shipping(@Nullable final com.commercetools.api.models.cart.ShippingDraft... shipping) {
         this.shipping = new ArrayList<>(Arrays.asList(shipping));
         return this;
     }
@@ -570,7 +570,8 @@ public class CartDraftBuilder implements Builder<CartDraft> {
      *  <p>Shipping Methods for a Cart with <code>Multi</code> ShippingMode.</p>
      */
 
-    public CartDraftBuilder shipping(final java.util.List<com.commercetools.api.models.cart.ShippingDraft> shipping) {
+    public CartDraftBuilder shipping(
+            @Nullable final java.util.List<com.commercetools.api.models.cart.ShippingDraft> shipping) {
         this.shipping = shipping;
         return this;
     }
@@ -579,7 +580,7 @@ public class CartDraftBuilder implements Builder<CartDraft> {
      *  <p>Shipping Methods for a Cart with <code>Multi</code> ShippingMode.</p>
      */
 
-    public CartDraftBuilder plusShipping(final com.commercetools.api.models.cart.ShippingDraft... shipping) {
+    public CartDraftBuilder plusShipping(@Nullable final com.commercetools.api.models.cart.ShippingDraft... shipping) {
         if (this.shipping == null) {
             this.shipping = new ArrayList<>();
         }
@@ -835,10 +836,12 @@ public class CartDraftBuilder implements Builder<CartDraft> {
         return this.shippingMode;
     }
 
+    @Nullable
     public java.util.List<com.commercetools.api.models.cart.CustomShippingDraft> getCustomShipping() {
         return this.customShipping;
     }
 
+    @Nullable
     public java.util.List<com.commercetools.api.models.cart.ShippingDraft> getShipping() {
         return this.shipping;
     }
@@ -860,8 +863,6 @@ public class CartDraftBuilder implements Builder<CartDraft> {
 
     public CartDraft build() {
         Objects.requireNonNull(currency, CartDraft.class + ": currency is missing");
-        Objects.requireNonNull(customShipping, CartDraft.class + ": customShipping is missing");
-        Objects.requireNonNull(shipping, CartDraft.class + ": shipping is missing");
         return new CartDraftImpl(currency, key, customerId, customerEmail, customerGroup, anonymousId, store, country,
             inventoryMode, taxMode, taxRoundingMode, taxCalculationMode, lineItems, customLineItems, shippingAddress,
             billingAddress, shippingMethod, externalTaxRateForShippingMethod, custom, locale,

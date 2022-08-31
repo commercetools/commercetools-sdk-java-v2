@@ -28,6 +28,7 @@ public class CommercetoolsTestUtils {
                 .defaultClient(
                     ClientCredentials.of().withClientId(getClientId()).withClientSecret(getClientSecret()).build(),
                     authURL, apiUrl)
+                .addConcurrentModificationMiddleware()
                 .withErrorMiddleware(ErrorMiddleware.ExceptionMode.UNWRAP_COMPLETION_EXCEPTION);
         projectApiRoot = builder.build(getProjectKey());
     }

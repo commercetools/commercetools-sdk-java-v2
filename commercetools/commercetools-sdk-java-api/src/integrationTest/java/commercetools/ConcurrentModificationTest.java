@@ -24,6 +24,7 @@ import commercetools.cart.CartsFixtures;
 import commercetools.utils.CommercetoolsTestUtils;
 
 import io.vrap.rmf.base.client.*;
+import io.vrap.rmf.base.client.http.ErrorMiddleware;
 import io.vrap.rmf.base.client.http.InternalLogger;
 import io.vrap.rmf.base.client.http.InternalLoggerMiddleware;
 import io.vrap.rmf.base.client.oauth2.ClientCredentials;
@@ -37,7 +38,21 @@ import org.slf4j.event.Level;
 public class ConcurrentModificationTest {
     @Test
     public void concurrentMod() {
-        final ProjectApiRoot projectApiRoot = CommercetoolsTestUtils.getProjectApiRoot();
+        ServiceRegion region = System.getenv("CTP_REGION") == null ? ServiceRegion.GCP_EUROPE_WEST1
+                : ServiceRegion.valueOf(System.getenv("CTP_REGION"));
+        String authURL = System.getenv("CTP_AUTH_URL") == null ? region.getOAuthTokenUrl()
+                : System.getenv("CTP_AUTH_URL");
+        String apiUrl = System.getenv("CTP_API_URL") == null ? region.getApiUrl() : System.getenv("CTP_API_URL");
+
+        final ProjectApiRoot projectApiRoot = ApiRootBuilder.of()
+                .defaultClient(ClientCredentials.of()
+                        .withClientId(CommercetoolsTestUtils.getClientId())
+                        .withClientSecret(CommercetoolsTestUtils.getClientSecret())
+                        .build(),
+                    authURL, apiUrl)
+                .withErrorMiddleware(ErrorMiddleware.ExceptionMode.UNWRAP_COMPLETION_EXCEPTION)
+                .build(CommercetoolsTestUtils.getProjectKey());
+
         CartsFixtures.withUpdateableCart(cart -> {
 
             final ApiHttpResponse<Cart> deCart = projectApiRoot.carts()

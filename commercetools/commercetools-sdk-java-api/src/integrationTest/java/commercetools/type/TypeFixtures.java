@@ -5,6 +5,7 @@ import java.util.Arrays;
 import java.util.function.Consumer;
 import java.util.function.UnaryOperator;
 
+import com.commercetools.api.models.common.ReferenceTypeId;
 import com.commercetools.api.models.type.*;
 import commercetools.utils.CommercetoolsTestUtils;
 
@@ -36,14 +37,36 @@ public class TypeFixtures {
         TypeDraft typeDraft = TypeDraftBuilder.of()
                 .key(CommercetoolsTestUtils.randomKey())
                 .name(CommercetoolsTestUtils.randomLocalizedString())
-                .resourceTypeIds(Arrays.asList(ResourceTypeId.ASSET))
-                .fieldDefinitions(Arrays.asList(FieldDefinitionBuilder.of()
-                        .type(CustomFieldStringTypeBuilder.of().build())
-                        .name(CommercetoolsTestUtils.randomString())
+                .resourceTypeIds(Arrays.asList(ResourceTypeId.ASSET, ResourceTypeId.CATEGORY))
+                .withFieldDefinitions(
+                    fieldDefinitionBuilder -> fieldDefinitionBuilder.type(CustomFieldStringTypeBuilder.of().build())
+                            .name("string-field")
+                            .label(CommercetoolsTestUtils.randomLocalizedString())
+                            .required(false)
+                            .inputHint(TypeTextInputHint.SINGLE_LINE))
+                .plusFieldDefinitions(fieldDefinitionBuilder -> fieldDefinitionBuilder
+                        .type(CustomFieldLocalizedEnumTypeBuilder.of()
+                                .withValues(valueBuilder -> valueBuilder.key("foo")
+                                        .label(stringBuilder -> stringBuilder.addValue("en", "foo")))
+                                .plusValues(valueBuilder -> valueBuilder.key("bar")
+                                        .label(stringBuilder -> stringBuilder.addValue("en", "bar")))
+                                .build())
+                        .name("enum-field")
                         .label(CommercetoolsTestUtils.randomLocalizedString())
                         .required(false)
-                        .inputHint(TypeTextInputHint.SINGLE_LINE)
-                        .build()))
+                        .inputHint(TypeTextInputHint.SINGLE_LINE))
+                .plusFieldDefinitions(fieldDefinitionBuilder -> fieldDefinitionBuilder
+                        .type(CustomFieldLocalizedStringTypeBuilder.of().build())
+                        .name("localized-field")
+                        .label(CommercetoolsTestUtils.randomLocalizedString())
+                        .required(false)
+                        .inputHint(TypeTextInputHint.SINGLE_LINE))
+                .plusFieldDefinitions(fieldDefinitionBuilder -> fieldDefinitionBuilder
+                        .type(CustomFieldReferenceTypeBuilder.of().referenceTypeId(ReferenceTypeId.CATEGORY).build())
+                        .name("ref-field")
+                        .label(CommercetoolsTestUtils.randomLocalizedString())
+                        .required(false)
+                        .inputHint(TypeTextInputHint.SINGLE_LINE))
                 .build();
 
         Type type = CommercetoolsTestUtils.getProjectApiRoot().types().post(typeDraft).executeBlocking().getBody();

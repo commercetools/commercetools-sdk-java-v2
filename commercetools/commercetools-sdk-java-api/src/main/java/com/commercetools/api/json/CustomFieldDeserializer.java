@@ -93,7 +93,7 @@ public class CustomFieldDeserializer extends JsonDeserializer<FieldContainerImpl
                 return new TypeReference<String>() {
                 };
             case OBJECT:
-                if (valueNode.has("key")) {
+                if (valueNode.has("key") && valueNode.has("label")) {
                     JsonNode label = valueNode.get("label");
                     if (label.getNodeType() == JsonNodeType.OBJECT) {
                         return new TypeReference<CustomFieldLocalizedEnumValue>() {
@@ -168,7 +168,7 @@ public class CustomFieldDeserializer extends JsonDeserializer<FieldContainerImpl
         JsonNodeType valueNodeType = valueNode.getNodeType();
         switch (valueNodeType) {
             case OBJECT:
-                if (valueNode.has("key")) {
+                if (valueNode.has("key") && valueNode.has("label")) {
                     JsonNode label = valueNode.get("label");
                     if (label.getNodeType() == JsonNodeType.OBJECT) {
                         return ElemType.LOCALIZED_ENUM;

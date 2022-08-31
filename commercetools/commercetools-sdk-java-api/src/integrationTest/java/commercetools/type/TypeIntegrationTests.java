@@ -5,9 +5,17 @@ import static commercetools.type.TypeFixtures.*;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 
+import com.commercetools.api.client.ProjectApiRoot;
+import com.commercetools.api.models.category.Category;
+import com.commercetools.api.models.category.CategoryUpdate;
+import com.commercetools.api.models.common.LocalizedString;
 import com.commercetools.api.models.type.*;
+import commercetools.category.CategoryFixtures;
 import commercetools.utils.CommercetoolsTestUtils;
+
+import io.vrap.rmf.base.client.ApiHttpResponse;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
@@ -122,6 +130,37 @@ public class TypeIntegrationTests {
 
         Assertions.assertNotNull(deletedType);
         Assertions.assertEquals(type.getId(), deletedType.getId());
+    }
+
+    @Test
+    public void customLabelDeserializer() {
+        ProjectApiRoot apiRoot = CommercetoolsTestUtils.getProjectApiRoot();
+        withType(type -> {
+            CategoryFixtures.withUpdateableCategory(category -> {
+                final ApiHttpResponse<Category> result = apiRoot.categories()
+                        .withId(category.getId())
+                        .post(
+                            CategoryUpdate.builder()
+                                    .version(category.getVersion())
+                                    .withActions(actionBuilder -> actionBuilder.setCustomTypeBuilder()
+                                            .type(typeBuilder -> typeBuilder.id(type.getId()))
+                                            .fields(fieldContainerBuilder -> fieldContainerBuilder
+                                                    .addValue("enum-field", "foo")
+                                                    .addValue("localized-field",
+                                                        LocalizedString.of(Locale.forLanguageTag("key"), "test"))))
+                                    .build())
+                        .executeBlocking();
+                Category updated = result.getBody();
+                Assertions.assertEquals("foo",
+                    updated.getCustom().withCustomFields(CustomFieldsAccessor::new).asString("enum-field"));
+                Assertions.assertEquals("test",
+                    updated.getCustom()
+                            .withCustomFields(CustomFieldsAccessor::new)
+                            .asLocalizedString("localized-field")
+                            .get("key"));
+                return updated;
+            });
+        });
     }
 
 }

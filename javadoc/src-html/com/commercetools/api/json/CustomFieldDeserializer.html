@@ -106,7 +106,7 @@
 <span class="source-line-no">093</span><span id="line.93">                return new TypeReference&lt;String&gt;() {</span>
 <span class="source-line-no">094</span><span id="line.94">                };</span>
 <span class="source-line-no">095</span><span id="line.95">            case OBJECT:</span>
-<span class="source-line-no">096</span><span id="line.96">                if (valueNode.has("key")) {</span>
+<span class="source-line-no">096</span><span id="line.96">                if (valueNode.has("key") &amp;&amp; valueNode.has("label")) {</span>
 <span class="source-line-no">097</span><span id="line.97">                    JsonNode label = valueNode.get("label");</span>
 <span class="source-line-no">098</span><span id="line.98">                    if (label.getNodeType() == JsonNodeType.OBJECT) {</span>
 <span class="source-line-no">099</span><span id="line.99">                        return new TypeReference&lt;CustomFieldLocalizedEnumValue&gt;() {</span>
@@ -181,7 +181,7 @@
 <span class="source-line-no">168</span><span id="line.168">        JsonNodeType valueNodeType = valueNode.getNodeType();</span>
 <span class="source-line-no">169</span><span id="line.169">        switch (valueNodeType) {</span>
 <span class="source-line-no">170</span><span id="line.170">            case OBJECT:</span>
-<span class="source-line-no">171</span><span id="line.171">                if (valueNode.has("key")) {</span>
+<span class="source-line-no">171</span><span id="line.171">                if (valueNode.has("key") &amp;&amp; valueNode.has("label")) {</span>
 <span class="source-line-no">172</span><span id="line.172">                    JsonNode label = valueNode.get("label");</span>
 <span class="source-line-no">173</span><span id="line.173">                    if (label.getNodeType() == JsonNodeType.OBJECT) {</span>
 <span class="source-line-no">174</span><span id="line.174">                        return ElemType.LOCALIZED_ENUM;</span>

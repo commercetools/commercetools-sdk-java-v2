@@ -201,7 +201,7 @@ public interface Cart extends BaseResource, com.commercetools.api.models.DomainR
     public ShippingMode getShippingMode();
 
     /**
-     *  <p>Holds all shipping-related information per Shipping Method of a Cart with <code>Multi</code> ShippingMode.</p>
+     *  <p>Holds all shipping-related information per Shipping Method of a Cart with <code>Multiple</code> ShippingMode.</p>
      *  <p>It is automatically updated after the Shipping Method is added.</p>
      */
     @NotNull

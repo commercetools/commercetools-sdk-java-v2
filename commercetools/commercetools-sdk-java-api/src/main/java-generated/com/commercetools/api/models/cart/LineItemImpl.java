@@ -246,7 +246,7 @@ public class LineItemImpl implements LineItem, ModelBase {
     }
 
     /**
-     *  <p>Tax Rate per Shipping Method that is automatically set after the Shipping Method is added to a Cart with the <code>Platform</code> TaxMode and <code>Multi</code> ShippingMode.</p>
+     *  <p>Tax Rate per Shipping Method that is automatically set after the Shipping Method is added to a Cart with the <code>Platform</code> TaxMode and <code>Multiple</code> ShippingMode.</p>
      *  <p>For the <code>External</code> TaxMode, the Tax Rate must be set with ExternalTaxRateDraft.</p>
      */
 

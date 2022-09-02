@@ -75,7 +75,7 @@ public class CartAddCustomShippingMethodActionImpl implements CartAddCustomShipp
     }
 
     /**
-     *  <p>User-defined unique identifier of the custom Shipping Method in a Cart with <code>Multi</code> ShippingMode.</p>
+     *  <p>User-defined unique identifier of the custom Shipping Method in a Cart with <code>Multiple</code> ShippingMode.</p>
      */
 
     public String getShippingKey() {

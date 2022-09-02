@@ -30,7 +30,7 @@ public class MethodTaxedPriceBuilder implements Builder<MethodTaxedPrice> {
     private com.commercetools.api.models.cart.TaxedItemPrice taxedPrice;
 
     /**
-     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multi</code> ShippingMode.</p>
+     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multiple</code> ShippingMode.</p>
      */
 
     public MethodTaxedPriceBuilder shippingMethodKey(final String shippingMethodKey) {

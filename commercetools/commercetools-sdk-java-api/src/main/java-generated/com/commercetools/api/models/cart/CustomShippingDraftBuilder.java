@@ -51,7 +51,7 @@ public class CustomShippingDraftBuilder implements Builder<CustomShippingDraft> 
     private String custom;
 
     /**
-     *  <p>User-defined unique identifier of the custom Shipping Method in a Cart with <code>Multi</code> ShippingMode.</p>
+     *  <p>User-defined unique identifier of the custom Shipping Method in a Cart with <code>Multiple</code> ShippingMode.</p>
      */
 
     public CustomShippingDraftBuilder key(final String key) {

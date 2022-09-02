@@ -33,7 +33,7 @@ public class CartSetShippingCustomTypeActionBuilder implements Builder<CartSetSh
     private com.commercetools.api.models.type.FieldContainer fields;
 
     /**
-     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multi</code> ShippingMode.</p>
+     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multiple</code> ShippingMode.</p>
      */
 
     public CartSetShippingCustomTypeActionBuilder shippingKey(@Nullable final String shippingKey) {

@@ -40,7 +40,7 @@ public interface CartAddCustomShippingMethodAction extends CartUpdateAction {
     String ADD_CUSTOM_SHIPPING_METHOD = "addCustomShippingMethod";
 
     /**
-     *  <p>User-defined unique identifier of the custom Shipping Method in a Cart with <code>Multi</code> ShippingMode.</p>
+     *  <p>User-defined unique identifier of the custom Shipping Method in a Cart with <code>Multiple</code> ShippingMode.</p>
      */
     @NotNull
     @JsonProperty("shippingKey")

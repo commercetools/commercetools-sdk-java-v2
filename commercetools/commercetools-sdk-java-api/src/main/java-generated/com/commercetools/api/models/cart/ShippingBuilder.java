@@ -39,7 +39,7 @@ public class ShippingBuilder implements Builder<Shipping> {
     private com.commercetools.api.models.type.CustomFields shippingCustomFields;
 
     /**
-     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multi</code> ShippingMode.</p>
+     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multiple</code> ShippingMode.</p>
      */
 
     public ShippingBuilder shippingKey(final String shippingKey) {

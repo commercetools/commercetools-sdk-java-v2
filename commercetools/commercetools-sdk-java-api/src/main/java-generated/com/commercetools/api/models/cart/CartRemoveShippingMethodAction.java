@@ -32,7 +32,7 @@ public interface CartRemoveShippingMethodAction extends CartUpdateAction {
     String REMOVE_SHIPPING_METHOD = "removeShippingMethod";
 
     /**
-     *  <p>User-defined unique identifier of the Shipping Method to remove in a Cart with <code>Multi</code> ShippingMode.</p>
+     *  <p>User-defined unique identifier of the Shipping Method to remove in a Cart with <code>Multiple</code> ShippingMode.</p>
      */
     @NotNull
     @JsonProperty("shippingKey")

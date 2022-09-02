@@ -30,7 +30,7 @@ public class MethodTaxRateBuilder implements Builder<MethodTaxRate> {
     private com.commercetools.api.models.tax_category.TaxRate taxRate;
 
     /**
-     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multi</code> ShippingMode.</p>
+     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multiple</code> ShippingMode.</p>
      */
 
     public MethodTaxRateBuilder shippingMethodKey(final String shippingMethodKey) {

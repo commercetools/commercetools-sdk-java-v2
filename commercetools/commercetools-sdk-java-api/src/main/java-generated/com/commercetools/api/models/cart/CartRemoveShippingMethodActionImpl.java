@@ -43,7 +43,7 @@ public class CartRemoveShippingMethodActionImpl implements CartRemoveShippingMet
     }
 
     /**
-     *  <p>User-defined unique identifier of the Shipping Method to remove in a Cart with <code>Multi</code> ShippingMode.</p>
+     *  <p>User-defined unique identifier of the Shipping Method to remove in a Cart with <code>Multiple</code> ShippingMode.</p>
      */
 
     public String getShippingKey() {

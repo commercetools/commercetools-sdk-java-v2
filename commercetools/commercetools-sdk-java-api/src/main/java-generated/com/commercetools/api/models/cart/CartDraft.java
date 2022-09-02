@@ -192,7 +192,7 @@ public interface CartDraft extends com.commercetools.api.models.CustomizableDraf
     /**
      *  <ul>
      *   <li>If <code>Single</code>, only a single Shipping Method can be added to the Cart.</li>
-     *   <li>If <code>Multi</code>, multiple Shipping Methods can be added to the Cart.</li>
+     *   <li>If <code>Multiple</code>, multiple Shipping Methods can be added to the Cart.</li>
      *  </ul>
      */
 
@@ -200,14 +200,14 @@ public interface CartDraft extends com.commercetools.api.models.CustomizableDraf
     public ShippingMode getShippingMode();
 
     /**
-     *  <p>Custom Shipping Methods for a Cart with <code>Multi</code> ShippingMode.</p>
+     *  <p>Custom Shipping Methods for a Cart with <code>Multiple</code> ShippingMode.</p>
      */
     @Valid
     @JsonProperty("customShipping")
     public List<CustomShippingDraft> getCustomShipping();
 
     /**
-     *  <p>Shipping Methods for a Cart with <code>Multi</code> ShippingMode.</p>
+     *  <p>Shipping Methods for a Cart with <code>Multiple</code> ShippingMode.</p>
      */
     @Valid
     @JsonProperty("shipping")

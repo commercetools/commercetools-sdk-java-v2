@@ -342,7 +342,7 @@ public class CartImpl implements Cart, ModelBase {
     }
 
     /**
-     *  <p>Holds all shipping-related information per Shipping Method of a Cart with <code>Multi</code> ShippingMode.</p>
+     *  <p>Holds all shipping-related information per Shipping Method of a Cart with <code>Multiple</code> ShippingMode.</p>
      *  <p>It is automatically updated after the Shipping Method is added.</p>
      */
 

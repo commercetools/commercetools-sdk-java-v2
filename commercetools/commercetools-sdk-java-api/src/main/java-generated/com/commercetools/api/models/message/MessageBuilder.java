@@ -463,6 +463,10 @@ public class MessageBuilder {
         return com.commercetools.api.models.message.StoreLanguagesChangedMessageBuilder.of();
     }
 
+    public com.commercetools.api.models.message.StoreNameSetMessageBuilder storeNameSetBuilder() {
+        return com.commercetools.api.models.message.StoreNameSetMessageBuilder.of();
+    }
+
     public com.commercetools.api.models.message.StoreProductSelectionsChangedMessageBuilder storeProductSelectionsChangedBuilder() {
         return com.commercetools.api.models.message.StoreProductSelectionsChangedMessageBuilder.of();
     }

@@ -140,6 +140,7 @@ import io.vrap.rmf.base.client.utils.Generated;
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.StoreDeletedMessagePayloadImpl.class, name = StoreDeletedMessagePayload.STORE_DELETED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.StoreDistributionChannelsChangedMessagePayloadImpl.class, name = StoreDistributionChannelsChangedMessagePayload.STORE_DISTRIBUTION_CHANNELS_CHANGED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.StoreLanguagesChangedMessagePayloadImpl.class, name = StoreLanguagesChangedMessagePayload.STORE_LANGUAGES_CHANGED),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.message.StoreNameSetMessagePayloadImpl.class, name = StoreNameSetMessagePayload.STORE_NAME_SET),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.StoreProductSelectionsChangedMessagePayloadImpl.class, name = StoreProductSelectionsChangedMessagePayload.STORE_PRODUCT_SELECTIONS_CHANGED) })
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "type", defaultImpl = MessagePayloadImpl.class, visible = true)
 @JsonDeserialize(as = MessagePayloadImpl.class)
@@ -607,6 +608,10 @@ public interface MessagePayload {
 
     public static com.commercetools.api.models.message.StoreLanguagesChangedMessagePayloadBuilder storeLanguagesChangedBuilder() {
         return com.commercetools.api.models.message.StoreLanguagesChangedMessagePayloadBuilder.of();
+    }
+
+    public static com.commercetools.api.models.message.StoreNameSetMessagePayloadBuilder storeNameSetBuilder() {
+        return com.commercetools.api.models.message.StoreNameSetMessagePayloadBuilder.of();
     }
 
     public static com.commercetools.api.models.message.StoreProductSelectionsChangedMessagePayloadBuilder storeProductSelectionsChangedBuilder() {

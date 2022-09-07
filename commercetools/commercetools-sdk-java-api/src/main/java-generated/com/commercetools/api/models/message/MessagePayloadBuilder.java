@@ -467,6 +467,10 @@ public class MessagePayloadBuilder {
         return com.commercetools.api.models.message.StoreLanguagesChangedMessagePayloadBuilder.of();
     }
 
+    public com.commercetools.api.models.message.StoreNameSetMessagePayloadBuilder storeNameSetBuilder() {
+        return com.commercetools.api.models.message.StoreNameSetMessagePayloadBuilder.of();
+    }
+
     public com.commercetools.api.models.message.StoreProductSelectionsChangedMessagePayloadBuilder storeProductSelectionsChangedBuilder() {
         return com.commercetools.api.models.message.StoreProductSelectionsChangedMessagePayloadBuilder.of();
     }

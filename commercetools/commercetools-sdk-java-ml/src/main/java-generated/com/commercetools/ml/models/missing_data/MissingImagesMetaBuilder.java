@@ -22,9 +22,14 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Deprecated
 public class MissingImagesMetaBuilder implements Builder<MissingImagesMeta> {
 
+    @Deprecated
+
     private com.commercetools.ml.models.missing_data.MissingImagesProductLevel productLevel;
+
+    @Deprecated
 
     private com.commercetools.ml.models.missing_data.MissingImagesVariantLevel variantLevel;
 
@@ -33,7 +38,7 @@ public class MissingImagesMetaBuilder implements Builder<MissingImagesMeta> {
     /**
      *
      */
-
+    @Deprecated
     public MissingImagesMetaBuilder productLevel(
             Function<com.commercetools.ml.models.missing_data.MissingImagesProductLevelBuilder, com.commercetools.ml.models.missing_data.MissingImagesProductLevelBuilder> builder) {
         this.productLevel = builder
@@ -45,7 +50,7 @@ public class MissingImagesMetaBuilder implements Builder<MissingImagesMeta> {
     /**
      *
      */
-
+    @Deprecated
     public MissingImagesMetaBuilder productLevel(
             final com.commercetools.ml.models.missing_data.MissingImagesProductLevel productLevel) {
         this.productLevel = productLevel;
@@ -55,7 +60,7 @@ public class MissingImagesMetaBuilder implements Builder<MissingImagesMeta> {
     /**
      *
      */
-
+    @Deprecated
     public MissingImagesMetaBuilder variantLevel(
             Function<com.commercetools.ml.models.missing_data.MissingImagesVariantLevelBuilder, com.commercetools.ml.models.missing_data.MissingImagesVariantLevelBuilder> builder) {
         this.variantLevel = builder
@@ -67,7 +72,7 @@ public class MissingImagesMetaBuilder implements Builder<MissingImagesMeta> {
     /**
      *
      */
-
+    @Deprecated
     public MissingImagesMetaBuilder variantLevel(
             final com.commercetools.ml.models.missing_data.MissingImagesVariantLevel variantLevel) {
         this.variantLevel = variantLevel;
@@ -83,9 +88,13 @@ public class MissingImagesMetaBuilder implements Builder<MissingImagesMeta> {
         return this;
     }
 
+    @Deprecated
+
     public com.commercetools.ml.models.missing_data.MissingImagesProductLevel getProductLevel() {
         return this.productLevel;
     }
+
+    @Deprecated
 
     public com.commercetools.ml.models.missing_data.MissingImagesVariantLevel getVariantLevel() {
         return this.variantLevel;

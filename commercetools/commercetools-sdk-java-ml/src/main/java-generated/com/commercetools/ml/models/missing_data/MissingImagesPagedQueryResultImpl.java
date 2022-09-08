@@ -18,6 +18,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
  * MissingImagesPagedQueryResult
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Deprecated
 public class MissingImagesPagedQueryResultImpl implements MissingImagesPagedQueryResult, ModelBase {
 
     private Long count;
@@ -28,6 +29,7 @@ public class MissingImagesPagedQueryResultImpl implements MissingImagesPagedQuer
 
     private java.util.List<com.commercetools.ml.models.missing_data.MissingImages> results;
 
+    @Deprecated
     private com.commercetools.ml.models.missing_data.MissingImagesMeta meta;
 
     @JsonCreator
@@ -80,7 +82,7 @@ public class MissingImagesPagedQueryResultImpl implements MissingImagesPagedQuer
     /**
      *
      */
-
+    @Deprecated
     public com.commercetools.ml.models.missing_data.MissingImagesMeta getMeta() {
         return this.meta;
     }
@@ -105,6 +107,7 @@ public class MissingImagesPagedQueryResultImpl implements MissingImagesPagedQuer
         this.results = results;
     }
 
+    @Deprecated
     public void setMeta(final com.commercetools.ml.models.missing_data.MissingImagesMeta meta) {
         this.meta = meta;
     }

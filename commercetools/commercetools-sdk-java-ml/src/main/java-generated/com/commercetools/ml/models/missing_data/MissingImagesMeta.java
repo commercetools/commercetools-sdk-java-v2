@@ -30,6 +30,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = MissingImagesMetaImpl.class)
+@Deprecated
 public interface MissingImagesMeta {
 
     /**
@@ -37,6 +38,7 @@ public interface MissingImagesMeta {
      */
     @NotNull
     @Valid
+    @Deprecated
     @JsonProperty("productLevel")
     public MissingImagesProductLevel getProductLevel();
 
@@ -45,6 +47,7 @@ public interface MissingImagesMeta {
      */
     @NotNull
     @Valid
+    @Deprecated
     @JsonProperty("variantLevel")
     public MissingImagesVariantLevel getVariantLevel();
 
@@ -55,8 +58,10 @@ public interface MissingImagesMeta {
     @JsonProperty("threshold")
     public Long getThreshold();
 
+    @Deprecated
     public void setProductLevel(final MissingImagesProductLevel productLevel);
 
+    @Deprecated
     public void setVariantLevel(final MissingImagesVariantLevel variantLevel);
 
     public void setThreshold(final Long threshold);

@@ -18,10 +18,13 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
  * MissingImagesMeta
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Deprecated
 public class MissingImagesMetaImpl implements MissingImagesMeta, ModelBase {
 
+    @Deprecated
     private com.commercetools.ml.models.missing_data.MissingImagesProductLevel productLevel;
 
+    @Deprecated
     private com.commercetools.ml.models.missing_data.MissingImagesVariantLevel variantLevel;
 
     private Long threshold;
@@ -42,7 +45,7 @@ public class MissingImagesMetaImpl implements MissingImagesMeta, ModelBase {
     /**
      *
      */
-
+    @Deprecated
     public com.commercetools.ml.models.missing_data.MissingImagesProductLevel getProductLevel() {
         return this.productLevel;
     }
@@ -50,7 +53,7 @@ public class MissingImagesMetaImpl implements MissingImagesMeta, ModelBase {
     /**
      *
      */
-
+    @Deprecated
     public com.commercetools.ml.models.missing_data.MissingImagesVariantLevel getVariantLevel() {
         return this.variantLevel;
     }
@@ -63,10 +66,12 @@ public class MissingImagesMetaImpl implements MissingImagesMeta, ModelBase {
         return this.threshold;
     }
 
+    @Deprecated
     public void setProductLevel(final com.commercetools.ml.models.missing_data.MissingImagesProductLevel productLevel) {
         this.productLevel = productLevel;
     }
 
+    @Deprecated
     public void setVariantLevel(final com.commercetools.ml.models.missing_data.MissingImagesVariantLevel variantLevel) {
         this.variantLevel = variantLevel;
     }

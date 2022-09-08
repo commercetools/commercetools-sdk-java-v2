@@ -23,9 +23,14 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Deprecated
 public class MissingAttributesMetaBuilder implements Builder<MissingAttributesMeta> {
 
+    @Deprecated
+
     private com.commercetools.ml.models.missing_data.MissingAttributesDetails productLevel;
+
+    @Deprecated
 
     private com.commercetools.ml.models.missing_data.MissingAttributesDetails variantLevel;
 
@@ -35,7 +40,7 @@ public class MissingAttributesMetaBuilder implements Builder<MissingAttributesMe
     /**
      *
      */
-
+    @Deprecated
     public MissingAttributesMetaBuilder productLevel(
             Function<com.commercetools.ml.models.missing_data.MissingAttributesDetailsBuilder, com.commercetools.ml.models.missing_data.MissingAttributesDetailsBuilder> builder) {
         this.productLevel = builder.apply(com.commercetools.ml.models.missing_data.MissingAttributesDetailsBuilder.of())
@@ -46,7 +51,7 @@ public class MissingAttributesMetaBuilder implements Builder<MissingAttributesMe
     /**
      *
      */
-
+    @Deprecated
     public MissingAttributesMetaBuilder productLevel(
             final com.commercetools.ml.models.missing_data.MissingAttributesDetails productLevel) {
         this.productLevel = productLevel;
@@ -56,7 +61,7 @@ public class MissingAttributesMetaBuilder implements Builder<MissingAttributesMe
     /**
      *
      */
-
+    @Deprecated
     public MissingAttributesMetaBuilder variantLevel(
             Function<com.commercetools.ml.models.missing_data.MissingAttributesDetailsBuilder, com.commercetools.ml.models.missing_data.MissingAttributesDetailsBuilder> builder) {
         this.variantLevel = builder.apply(com.commercetools.ml.models.missing_data.MissingAttributesDetailsBuilder.of())
@@ -67,7 +72,7 @@ public class MissingAttributesMetaBuilder implements Builder<MissingAttributesMe
     /**
      *
      */
-
+    @Deprecated
     public MissingAttributesMetaBuilder variantLevel(
             final com.commercetools.ml.models.missing_data.MissingAttributesDetails variantLevel) {
         this.variantLevel = variantLevel;
@@ -104,9 +109,13 @@ public class MissingAttributesMetaBuilder implements Builder<MissingAttributesMe
         return this;
     }
 
+    @Deprecated
+
     public com.commercetools.ml.models.missing_data.MissingAttributesDetails getProductLevel() {
         return this.productLevel;
     }
+
+    @Deprecated
 
     public com.commercetools.ml.models.missing_data.MissingAttributesDetails getVariantLevel() {
         return this.variantLevel;

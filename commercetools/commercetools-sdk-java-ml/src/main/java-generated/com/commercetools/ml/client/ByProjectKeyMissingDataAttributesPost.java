@@ -29,6 +29,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
  * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Deprecated
 public class ByProjectKeyMissingDataAttributesPost extends
         BodyApiMethod<ByProjectKeyMissingDataAttributesPost, com.commercetools.ml.models.common.TaskToken, com.commercetools.ml.models.missing_data.MissingAttributesSearchRequest> {
 

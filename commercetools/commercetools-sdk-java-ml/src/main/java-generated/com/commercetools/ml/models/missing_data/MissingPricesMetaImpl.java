@@ -18,10 +18,13 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
  * MissingPricesMeta
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Deprecated
 public class MissingPricesMetaImpl implements MissingPricesMeta, ModelBase {
 
+    @Deprecated
     private com.commercetools.ml.models.missing_data.MissingPricesProductLevel productLevel;
 
+    @Deprecated
     private com.commercetools.ml.models.missing_data.MissingPricesVariantLevel variantLevel;
 
     @JsonCreator
@@ -38,7 +41,7 @@ public class MissingPricesMetaImpl implements MissingPricesMeta, ModelBase {
     /**
      *
      */
-
+    @Deprecated
     public com.commercetools.ml.models.missing_data.MissingPricesProductLevel getProductLevel() {
         return this.productLevel;
     }
@@ -46,15 +49,17 @@ public class MissingPricesMetaImpl implements MissingPricesMeta, ModelBase {
     /**
      *
      */
-
+    @Deprecated
     public com.commercetools.ml.models.missing_data.MissingPricesVariantLevel getVariantLevel() {
         return this.variantLevel;
     }
 
+    @Deprecated
     public void setProductLevel(final com.commercetools.ml.models.missing_data.MissingPricesProductLevel productLevel) {
         this.productLevel = productLevel;
     }
 
+    @Deprecated
     public void setVariantLevel(final com.commercetools.ml.models.missing_data.MissingPricesVariantLevel variantLevel) {
         this.variantLevel = variantLevel;
     }

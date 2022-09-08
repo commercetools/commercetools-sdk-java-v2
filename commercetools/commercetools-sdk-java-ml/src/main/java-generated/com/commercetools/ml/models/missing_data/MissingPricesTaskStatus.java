@@ -32,6 +32,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = MissingPricesTaskStatusImpl.class)
+@Deprecated
 public interface MissingPricesTaskStatus {
 
     /**
@@ -53,6 +54,7 @@ public interface MissingPricesTaskStatus {
      */
     @NotNull
     @Valid
+    @Deprecated
     @JsonProperty("result")
     public MissingPricesPagedQueryResult getResult();
 
@@ -60,6 +62,7 @@ public interface MissingPricesTaskStatus {
 
     public void setExpires(final ZonedDateTime expires);
 
+    @Deprecated
     public void setResult(final MissingPricesPagedQueryResult result);
 
     public static MissingPricesTaskStatus of() {

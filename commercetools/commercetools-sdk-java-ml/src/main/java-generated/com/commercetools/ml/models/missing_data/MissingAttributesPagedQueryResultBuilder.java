@@ -24,6 +24,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Deprecated
 public class MissingAttributesPagedQueryResultBuilder implements Builder<MissingAttributesPagedQueryResult> {
 
     private Long count;
@@ -33,6 +34,8 @@ public class MissingAttributesPagedQueryResultBuilder implements Builder<Missing
     private Long offset;
 
     private java.util.List<com.commercetools.ml.models.missing_data.MissingAttributes> results;
+
+    @Deprecated
 
     private com.commercetools.ml.models.missing_data.MissingAttributesMeta meta;
 
@@ -123,7 +126,7 @@ public class MissingAttributesPagedQueryResultBuilder implements Builder<Missing
     /**
      *
      */
-
+    @Deprecated
     public MissingAttributesPagedQueryResultBuilder meta(
             Function<com.commercetools.ml.models.missing_data.MissingAttributesMetaBuilder, com.commercetools.ml.models.missing_data.MissingAttributesMetaBuilder> builder) {
         this.meta = builder.apply(com.commercetools.ml.models.missing_data.MissingAttributesMetaBuilder.of()).build();
@@ -133,7 +136,7 @@ public class MissingAttributesPagedQueryResultBuilder implements Builder<Missing
     /**
      *
      */
-
+    @Deprecated
     public MissingAttributesPagedQueryResultBuilder meta(
             final com.commercetools.ml.models.missing_data.MissingAttributesMeta meta) {
         this.meta = meta;
@@ -155,6 +158,8 @@ public class MissingAttributesPagedQueryResultBuilder implements Builder<Missing
     public java.util.List<com.commercetools.ml.models.missing_data.MissingAttributes> getResults() {
         return this.results;
     }
+
+    @Deprecated
 
     public com.commercetools.ml.models.missing_data.MissingAttributesMeta getMeta() {
         return this.meta;

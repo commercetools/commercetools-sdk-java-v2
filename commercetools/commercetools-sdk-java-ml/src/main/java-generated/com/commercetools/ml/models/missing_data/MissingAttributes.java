@@ -33,6 +33,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = MissingAttributesImpl.class)
+@Deprecated
 public interface MissingAttributes {
 
     /**
@@ -76,6 +77,7 @@ public interface MissingAttributes {
      *
      */
     @Valid
+    @Deprecated
     @JsonProperty("attributeCount")
     public AttributeCount getAttributeCount();
 
@@ -83,6 +85,7 @@ public interface MissingAttributes {
      *
      */
     @Valid
+    @Deprecated
     @JsonProperty("attributeCoverage")
     public AttributeCoverage getAttributeCoverage();
 
@@ -102,8 +105,10 @@ public interface MissingAttributes {
 
     public void setMissingAttributeNames(final List<String> missingAttributeNames);
 
+    @Deprecated
     public void setAttributeCount(final AttributeCount attributeCount);
 
+    @Deprecated
     public void setAttributeCoverage(final AttributeCoverage attributeCoverage);
 
     public static MissingAttributes of() {

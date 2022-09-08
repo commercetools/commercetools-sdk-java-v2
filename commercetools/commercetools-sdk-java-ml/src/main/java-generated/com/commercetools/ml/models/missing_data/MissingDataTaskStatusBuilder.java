@@ -22,11 +22,14 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Deprecated
 public class MissingDataTaskStatusBuilder implements Builder<MissingDataTaskStatus> {
 
     private com.commercetools.ml.models.common.TaskStatusEnum state;
 
     private java.time.ZonedDateTime expires;
+
+    @Deprecated
 
     private com.commercetools.ml.models.missing_data.MissingAttributesPagedQueryResult result;
 
@@ -51,7 +54,7 @@ public class MissingDataTaskStatusBuilder implements Builder<MissingDataTaskStat
     /**
      *  <p>The response to an asynchronous request. The type depends on the request initiated. Only populated when the status is <code>SUCCESS</code>.</p>
      */
-
+    @Deprecated
     public MissingDataTaskStatusBuilder result(
             Function<com.commercetools.ml.models.missing_data.MissingAttributesPagedQueryResultBuilder, com.commercetools.ml.models.missing_data.MissingAttributesPagedQueryResultBuilder> builder) {
         this.result = builder
@@ -63,7 +66,7 @@ public class MissingDataTaskStatusBuilder implements Builder<MissingDataTaskStat
     /**
      *  <p>The response to an asynchronous request. The type depends on the request initiated. Only populated when the status is <code>SUCCESS</code>.</p>
      */
-
+    @Deprecated
     public MissingDataTaskStatusBuilder result(
             final com.commercetools.ml.models.missing_data.MissingAttributesPagedQueryResult result) {
         this.result = result;
@@ -77,6 +80,8 @@ public class MissingDataTaskStatusBuilder implements Builder<MissingDataTaskStat
     public java.time.ZonedDateTime getExpires() {
         return this.expires;
     }
+
+    @Deprecated
 
     public com.commercetools.ml.models.missing_data.MissingAttributesPagedQueryResult getResult() {
         return this.result;

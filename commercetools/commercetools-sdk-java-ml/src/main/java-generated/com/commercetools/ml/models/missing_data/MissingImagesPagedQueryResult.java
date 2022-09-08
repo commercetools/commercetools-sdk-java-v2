@@ -32,6 +32,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = MissingImagesPagedQueryResultImpl.class)
+@Deprecated
 public interface MissingImagesPagedQueryResult {
 
     /**
@@ -68,6 +69,7 @@ public interface MissingImagesPagedQueryResult {
      */
     @NotNull
     @Valid
+    @Deprecated
     @JsonProperty("meta")
     public MissingImagesMeta getMeta();
 
@@ -82,6 +84,7 @@ public interface MissingImagesPagedQueryResult {
 
     public void setResults(final List<MissingImages> results);
 
+    @Deprecated
     public void setMeta(final MissingImagesMeta meta);
 
     public static MissingImagesPagedQueryResult of() {

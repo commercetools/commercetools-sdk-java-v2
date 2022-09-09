@@ -22,6 +22,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .lastModifiedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
  *             .sku("{sku}")
  *             .value(valueBuilder -> valueBuilder)
+ *             .active(true)
  *             .build()
  * </code></pre>
  * </div>
@@ -76,6 +77,8 @@ public class StandalonePriceBuilder implements Builder<StandalonePrice> {
 
     @Nullable
     private com.commercetools.api.models.standalone_price.StagedStandalonePrice staged;
+
+    private Boolean active;
 
     /**
      *  <p>Unique identifier of the StandalonePrice.</p>
@@ -373,6 +376,15 @@ public class StandalonePriceBuilder implements Builder<StandalonePrice> {
         return this;
     }
 
+    /**
+     *  <p>If set to <code>true</code>, the StandalonePrice is considered during price selection. If set to <code>false</code>, the StandalonePrice is not considered during price selection.</p>
+     */
+
+    public StandalonePriceBuilder active(final Boolean active) {
+        this.active = active;
+        return this;
+    }
+
     public String getId() {
         return this.id;
     }
@@ -457,6 +469,10 @@ public class StandalonePriceBuilder implements Builder<StandalonePrice> {
         return this.staged;
     }
 
+    public Boolean getActive() {
+        return this.active;
+    }
+
     public StandalonePrice build() {
         Objects.requireNonNull(id, StandalonePrice.class + ": id is missing");
         Objects.requireNonNull(version, StandalonePrice.class + ": version is missing");
@@ -464,8 +480,9 @@ public class StandalonePriceBuilder implements Builder<StandalonePrice> {
         Objects.requireNonNull(lastModifiedAt, StandalonePrice.class + ": lastModifiedAt is missing");
         Objects.requireNonNull(sku, StandalonePrice.class + ": sku is missing");
         Objects.requireNonNull(value, StandalonePrice.class + ": value is missing");
+        Objects.requireNonNull(active, StandalonePrice.class + ": active is missing");
         return new StandalonePriceImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, key, sku,
-            value, country, customerGroup, channel, validFrom, validUntil, tiers, discounted, custom, staged);
+            value, country, customerGroup, channel, validFrom, validUntil, tiers, discounted, custom, staged, active);
     }
 
     /**
@@ -473,7 +490,7 @@ public class StandalonePriceBuilder implements Builder<StandalonePrice> {
      */
     public StandalonePrice buildUnchecked() {
         return new StandalonePriceImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, key, sku,
-            value, country, customerGroup, channel, validFrom, validUntil, tiers, discounted, custom, staged);
+            value, country, customerGroup, channel, validFrom, validUntil, tiers, discounted, custom, staged, active);
     }
 
     public static StandalonePriceBuilder of() {
@@ -500,6 +517,7 @@ public class StandalonePriceBuilder implements Builder<StandalonePrice> {
         builder.discounted = template.getDiscounted();
         builder.custom = template.getCustom();
         builder.staged = template.getStaged();
+        builder.active = template.getActive();
         return builder;
     }
 

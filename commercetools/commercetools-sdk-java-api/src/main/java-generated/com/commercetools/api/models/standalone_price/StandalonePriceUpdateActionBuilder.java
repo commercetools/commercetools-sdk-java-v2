@@ -15,6 +15,10 @@ public class StandalonePriceUpdateActionBuilder {
         return com.commercetools.api.models.standalone_price.StandalonePriceApplyStagedChangesActionBuilder.of();
     }
 
+    public com.commercetools.api.models.standalone_price.StandalonePriceChangeActiveActionBuilder changeActiveBuilder() {
+        return com.commercetools.api.models.standalone_price.StandalonePriceChangeActiveActionBuilder.of();
+    }
+
     public com.commercetools.api.models.standalone_price.StandalonePriceChangeValueActionBuilder changeValueBuilder() {
         return com.commercetools.api.models.standalone_price.StandalonePriceChangeValueActionBuilder.of();
     }

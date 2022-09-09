@@ -427,6 +427,10 @@ public class MessagePayloadBuilder {
         return com.commercetools.api.models.message.StagedQuoteValidToSetMessagePayloadBuilder.of();
     }
 
+    public com.commercetools.api.models.message.StandalonePriceActiveChangedMessagePayloadBuilder standalonePriceActiveChangedBuilder() {
+        return com.commercetools.api.models.message.StandalonePriceActiveChangedMessagePayloadBuilder.of();
+    }
+
     public com.commercetools.api.models.message.StandalonePriceCreatedMessagePayloadBuilder standalonePriceCreatedBuilder() {
         return com.commercetools.api.models.message.StandalonePriceCreatedMessagePayloadBuilder.of();
     }

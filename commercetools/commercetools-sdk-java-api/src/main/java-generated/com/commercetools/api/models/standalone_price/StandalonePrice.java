@@ -37,6 +37,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .lastModifiedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
  *             .sku("{sku}")
  *             .value(valueBuilder -> valueBuilder)
+ *             .active(true)
  *             .build()
  * </code></pre>
  * </div>
@@ -172,6 +173,13 @@ public interface StandalonePrice extends BaseResource, com.commercetools.api.mod
     @JsonProperty("staged")
     public StagedStandalonePrice getStaged();
 
+    /**
+     *  <p>If set to <code>true</code>, the StandalonePrice is considered during price selection. If set to <code>false</code>, the StandalonePrice is not considered during price selection.</p>
+     */
+    @NotNull
+    @JsonProperty("active")
+    public Boolean getActive();
+
     public void setId(final String id);
 
     public void setVersion(final Long version);
@@ -211,6 +219,8 @@ public interface StandalonePrice extends BaseResource, com.commercetools.api.mod
 
     public void setStaged(final StagedStandalonePrice staged);
 
+    public void setActive(final Boolean active);
+
     public static StandalonePrice of() {
         return new StandalonePriceImpl();
     }
@@ -235,6 +245,7 @@ public interface StandalonePrice extends BaseResource, com.commercetools.api.mod
         instance.setDiscounted(template.getDiscounted());
         instance.setCustom(template.getCustom());
         instance.setStaged(template.getStaged());
+        instance.setActive(template.getActive());
         return instance;
     }
 

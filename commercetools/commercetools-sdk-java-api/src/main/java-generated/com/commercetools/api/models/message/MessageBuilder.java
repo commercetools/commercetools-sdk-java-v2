@@ -423,6 +423,10 @@ public class MessageBuilder {
         return com.commercetools.api.models.message.StagedQuoteValidToSetMessageBuilder.of();
     }
 
+    public com.commercetools.api.models.message.StandalonePriceActiveChangedMessageBuilder standalonePriceActiveChangedBuilder() {
+        return com.commercetools.api.models.message.StandalonePriceActiveChangedMessageBuilder.of();
+    }
+
     public com.commercetools.api.models.message.StandalonePriceCreatedMessageBuilder standalonePriceCreatedBuilder() {
         return com.commercetools.api.models.message.StandalonePriceCreatedMessageBuilder.of();
     }

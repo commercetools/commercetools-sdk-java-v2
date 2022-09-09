@@ -56,6 +56,8 @@ public class StandalonePriceImpl implements StandalonePrice, ModelBase {
 
     private com.commercetools.api.models.standalone_price.StagedStandalonePrice staged;
 
+    private Boolean active;
+
     @JsonCreator
     StandalonePriceImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version,
             @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt,
@@ -72,7 +74,8 @@ public class StandalonePriceImpl implements StandalonePrice, ModelBase {
             @JsonProperty("tiers") final java.util.List<com.commercetools.api.models.common.PriceTier> tiers,
             @JsonProperty("discounted") final com.commercetools.api.models.common.DiscountedPrice discounted,
             @JsonProperty("custom") final com.commercetools.api.models.type.CustomFields custom,
-            @JsonProperty("staged") final com.commercetools.api.models.standalone_price.StagedStandalonePrice staged) {
+            @JsonProperty("staged") final com.commercetools.api.models.standalone_price.StagedStandalonePrice staged,
+            @JsonProperty("active") final Boolean active) {
         this.id = id;
         this.version = version;
         this.createdAt = createdAt;
@@ -91,6 +94,7 @@ public class StandalonePriceImpl implements StandalonePrice, ModelBase {
         this.discounted = discounted;
         this.custom = custom;
         this.staged = staged;
+        this.active = active;
     }
 
     public StandalonePriceImpl() {
@@ -240,6 +244,14 @@ public class StandalonePriceImpl implements StandalonePrice, ModelBase {
         return this.staged;
     }
 
+    /**
+     *  <p>If set to <code>true</code>, the StandalonePrice is considered during price selection. If set to <code>false</code>, the StandalonePrice is not considered during price selection.</p>
+     */
+
+    public Boolean getActive() {
+        return this.active;
+    }
+
     public void setId(final String id) {
         this.id = id;
     }
@@ -317,6 +329,10 @@ public class StandalonePriceImpl implements StandalonePrice, ModelBase {
         this.staged = staged;
     }
 
+    public void setActive(final Boolean active) {
+        this.active = active;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -345,6 +361,7 @@ public class StandalonePriceImpl implements StandalonePrice, ModelBase {
                 .append(discounted, that.discounted)
                 .append(custom, that.custom)
                 .append(staged, that.staged)
+                .append(active, that.active)
                 .isEquals();
     }
 
@@ -368,6 +385,7 @@ public class StandalonePriceImpl implements StandalonePrice, ModelBase {
                 .append(discounted)
                 .append(custom)
                 .append(staged)
+                .append(active)
                 .toHashCode();
     }
 

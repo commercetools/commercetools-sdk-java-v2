@@ -42,6 +42,8 @@ public class StandalonePriceDraftImpl implements StandalonePriceDraft, ModelBase
 
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
 
+    private Boolean active;
+
     @JsonCreator
     StandalonePriceDraftImpl(@JsonProperty("key") final String key, @JsonProperty("sku") final String sku,
             @JsonProperty("value") final com.commercetools.api.models.common.Money value,
@@ -52,7 +54,8 @@ public class StandalonePriceDraftImpl implements StandalonePriceDraft, ModelBase
             @JsonProperty("validUntil") final java.time.ZonedDateTime validUntil,
             @JsonProperty("tiers") final java.util.List<com.commercetools.api.models.common.PriceTierDraft> tiers,
             @JsonProperty("discounted") final com.commercetools.api.models.common.DiscountedPriceDraft discounted,
-            @JsonProperty("custom") final com.commercetools.api.models.type.CustomFieldsDraft custom) {
+            @JsonProperty("custom") final com.commercetools.api.models.type.CustomFieldsDraft custom,
+            @JsonProperty("active") final Boolean active) {
         this.key = key;
         this.sku = sku;
         this.value = value;
@@ -64,6 +67,7 @@ public class StandalonePriceDraftImpl implements StandalonePriceDraft, ModelBase
         this.tiers = tiers;
         this.discounted = discounted;
         this.custom = custom;
+        this.active = active;
     }
 
     public StandalonePriceDraftImpl() {
@@ -157,6 +161,14 @@ public class StandalonePriceDraftImpl implements StandalonePriceDraft, ModelBase
         return this.custom;
     }
 
+    /**
+     *  <p>If set to <code>true</code>, the StandalonePrice is considered during price selection. If set to <code>false</code>, the StandalonePrice is not considered during price selection.</p>
+     */
+
+    public Boolean getActive() {
+        return this.active;
+    }
+
     public void setKey(final String key) {
         this.key = key;
     }
@@ -206,6 +218,10 @@ public class StandalonePriceDraftImpl implements StandalonePriceDraft, ModelBase
         this.custom = custom;
     }
 
+    public void setActive(final Boolean active) {
+        this.active = active;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -227,6 +243,7 @@ public class StandalonePriceDraftImpl implements StandalonePriceDraft, ModelBase
                 .append(tiers, that.tiers)
                 .append(discounted, that.discounted)
                 .append(custom, that.custom)
+                .append(active, that.active)
                 .isEquals();
     }
 
@@ -243,6 +260,7 @@ public class StandalonePriceDraftImpl implements StandalonePriceDraft, ModelBase
                 .append(tiers)
                 .append(discounted)
                 .append(custom)
+                .append(active)
                 .toHashCode();
     }
 

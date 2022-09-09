@@ -130,6 +130,7 @@ import io.vrap.rmf.base.client.utils.Generated;
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.StagedQuoteStateChangedMessagePayloadImpl.class, name = StagedQuoteStateChangedMessagePayload.STAGED_QUOTE_STATE_CHANGED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.StagedQuoteStateTransitionMessagePayloadImpl.class, name = StagedQuoteStateTransitionMessagePayload.STAGED_QUOTE_STATE_TRANSITION),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.StagedQuoteValidToSetMessagePayloadImpl.class, name = StagedQuoteValidToSetMessagePayload.STAGED_QUOTE_VALID_TO_SET),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.message.StandalonePriceActiveChangedMessagePayloadImpl.class, name = StandalonePriceActiveChangedMessagePayload.STANDALONE_PRICE_ACTIVE_CHANGED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.StandalonePriceCreatedMessagePayloadImpl.class, name = StandalonePriceCreatedMessagePayload.STANDALONE_PRICE_CREATED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.StandalonePriceDeletedMessagePayloadImpl.class, name = StandalonePriceDeletedMessagePayload.STANDALONE_PRICE_DELETED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.StandalonePriceDiscountSetMessagePayloadImpl.class, name = StandalonePriceDiscountSetMessagePayload.STANDALONE_PRICE_DISCOUNT_SET),
@@ -568,6 +569,10 @@ public interface MessagePayload {
 
     public static com.commercetools.api.models.message.StagedQuoteValidToSetMessagePayloadBuilder stagedQuoteValidToSetBuilder() {
         return com.commercetools.api.models.message.StagedQuoteValidToSetMessagePayloadBuilder.of();
+    }
+
+    public static com.commercetools.api.models.message.StandalonePriceActiveChangedMessagePayloadBuilder standalonePriceActiveChangedBuilder() {
+        return com.commercetools.api.models.message.StandalonePriceActiveChangedMessagePayloadBuilder.of();
     }
 
     public static com.commercetools.api.models.message.StandalonePriceCreatedMessagePayloadBuilder standalonePriceCreatedBuilder() {

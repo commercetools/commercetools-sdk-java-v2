@@ -8,7 +8,7 @@ import java.util.function.Function;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
-import com.commercetools.api.models.common.CentPrecisionMoneyDraft;
+import com.commercetools.api.models.common.Money;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -39,12 +39,12 @@ public interface ProductDiscountValueAbsoluteDraft extends ProductDiscountValueD
     @NotNull
     @Valid
     @JsonProperty("money")
-    public List<CentPrecisionMoneyDraft> getMoney();
+    public List<Money> getMoney();
 
     @JsonIgnore
-    public void setMoney(final CentPrecisionMoneyDraft... money);
+    public void setMoney(final Money... money);
 
-    public void setMoney(final List<CentPrecisionMoneyDraft> money);
+    public void setMoney(final List<Money> money);
 
     public static ProductDiscountValueAbsoluteDraft of() {
         return new ProductDiscountValueAbsoluteDraftImpl();

@@ -22,14 +22,13 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductDiscountValueAbsoluteDraftBuilder implements Builder<ProductDiscountValueAbsoluteDraft> {
 
-    private java.util.List<com.commercetools.api.models.common.CentPrecisionMoneyDraft> money;
+    private java.util.List<com.commercetools.api.models.common.Money> money;
 
     /**
      *  <p>Money values in different currencies. An absolute ProductDiscount will only match a price if this array contains a value with the same currency. For example, if it contains 10&euro; and 15$, the matching &euro; price will be decreased by 10&euro; and the matching $ price will be decreased by 15$.</p>
      */
 
-    public ProductDiscountValueAbsoluteDraftBuilder money(
-            final com.commercetools.api.models.common.CentPrecisionMoneyDraft... money) {
+    public ProductDiscountValueAbsoluteDraftBuilder money(final com.commercetools.api.models.common.Money... money) {
         this.money = new ArrayList<>(Arrays.asList(money));
         return this;
     }
@@ -39,7 +38,7 @@ public class ProductDiscountValueAbsoluteDraftBuilder implements Builder<Product
      */
 
     public ProductDiscountValueAbsoluteDraftBuilder money(
-            final java.util.List<com.commercetools.api.models.common.CentPrecisionMoneyDraft> money) {
+            final java.util.List<com.commercetools.api.models.common.Money> money) {
         this.money = money;
         return this;
     }
@@ -49,7 +48,7 @@ public class ProductDiscountValueAbsoluteDraftBuilder implements Builder<Product
      */
 
     public ProductDiscountValueAbsoluteDraftBuilder plusMoney(
-            final com.commercetools.api.models.common.CentPrecisionMoneyDraft... money) {
+            final com.commercetools.api.models.common.Money... money) {
         if (this.money == null) {
             this.money = new ArrayList<>();
         }
@@ -62,11 +61,11 @@ public class ProductDiscountValueAbsoluteDraftBuilder implements Builder<Product
      */
 
     public ProductDiscountValueAbsoluteDraftBuilder plusMoney(
-            Function<com.commercetools.api.models.common.CentPrecisionMoneyDraftBuilder, com.commercetools.api.models.common.CentPrecisionMoneyDraftBuilder> builder) {
+            Function<com.commercetools.api.models.common.MoneyBuilder, com.commercetools.api.models.common.MoneyBuilder> builder) {
         if (this.money == null) {
             this.money = new ArrayList<>();
         }
-        this.money.add(builder.apply(com.commercetools.api.models.common.CentPrecisionMoneyDraftBuilder.of()).build());
+        this.money.add(builder.apply(com.commercetools.api.models.common.MoneyBuilder.of()).build());
         return this;
     }
 
@@ -75,13 +74,13 @@ public class ProductDiscountValueAbsoluteDraftBuilder implements Builder<Product
      */
 
     public ProductDiscountValueAbsoluteDraftBuilder withMoney(
-            Function<com.commercetools.api.models.common.CentPrecisionMoneyDraftBuilder, com.commercetools.api.models.common.CentPrecisionMoneyDraftBuilder> builder) {
+            Function<com.commercetools.api.models.common.MoneyBuilder, com.commercetools.api.models.common.MoneyBuilder> builder) {
         this.money = new ArrayList<>();
-        this.money.add(builder.apply(com.commercetools.api.models.common.CentPrecisionMoneyDraftBuilder.of()).build());
+        this.money.add(builder.apply(com.commercetools.api.models.common.MoneyBuilder.of()).build());
         return this;
     }
 
-    public java.util.List<com.commercetools.api.models.common.CentPrecisionMoneyDraft> getMoney() {
+    public java.util.List<com.commercetools.api.models.common.Money> getMoney() {
         return this.money;
     }
 

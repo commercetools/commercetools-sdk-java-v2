@@ -28,7 +28,7 @@
 <span class="source-line-no">015</span><span id="line.15">import io.vrap.rmf.base.client.utils.Generated;</span>
 <span class="source-line-no">016</span><span id="line.16"></span>
 <span class="source-line-no">017</span><span id="line.17">/**</span>
-<span class="source-line-no">018</span><span id="line.18"> * ReviewRatingSetMessagePayload</span>
+<span class="source-line-no">018</span><span id="line.18"> *  &lt;p&gt;Generated after a successful Set Rating update action.&lt;/p&gt;</span>
 <span class="source-line-no">019</span><span id="line.19"> *</span>
 <span class="source-line-no">020</span><span id="line.20"> * &lt;hr&gt;</span>
 <span class="source-line-no">021</span><span id="line.21"> * Example to create an instance using the builder pattern</span>
@@ -47,28 +47,28 @@
 <span class="source-line-no">034</span><span id="line.34">    String REVIEW_RATING_SET = "ReviewRatingSet";</span>
 <span class="source-line-no">035</span><span id="line.35"></span>
 <span class="source-line-no">036</span><span id="line.36">    /**</span>
-<span class="source-line-no">037</span><span id="line.37">     *</span>
+<span class="source-line-no">037</span><span id="line.37">     *  &lt;p&gt;The &lt;code&gt;rating&lt;/code&gt; of the Review before the Set Rating update action.&lt;/p&gt;</span>
 <span class="source-line-no">038</span><span id="line.38">     */</span>
 <span class="source-line-no">039</span><span id="line.39"></span>
 <span class="source-line-no">040</span><span id="line.40">    @JsonProperty("oldRating")</span>
 <span class="source-line-no">041</span><span id="line.41">    public Double getOldRating();</span>
 <span class="source-line-no">042</span><span id="line.42"></span>
 <span class="source-line-no">043</span><span id="line.43">    /**</span>
-<span class="source-line-no">044</span><span id="line.44">     *</span>
+<span class="source-line-no">044</span><span id="line.44">     *  &lt;p&gt;The &lt;code&gt;rating&lt;/code&gt; of the Review after the Set Rating update action.&lt;/p&gt;</span>
 <span class="source-line-no">045</span><span id="line.45">     */</span>
 <span class="source-line-no">046</span><span id="line.46"></span>
 <span class="source-line-no">047</span><span id="line.47">    @JsonProperty("newRating")</span>
 <span class="source-line-no">048</span><span id="line.48">    public Double getNewRating();</span>
 <span class="source-line-no">049</span><span id="line.49"></span>
 <span class="source-line-no">050</span><span id="line.50">    /**</span>
-<span class="source-line-no">051</span><span id="line.51">     *</span>
+<span class="source-line-no">051</span><span id="line.51">     *  &lt;p&gt;Whether the Review was taken into account in the ratings statistics of the target.&lt;/p&gt;</span>
 <span class="source-line-no">052</span><span id="line.52">     */</span>
 <span class="source-line-no">053</span><span id="line.53">    @NotNull</span>
 <span class="source-line-no">054</span><span id="line.54">    @JsonProperty("includedInStatistics")</span>
 <span class="source-line-no">055</span><span id="line.55">    public Boolean getIncludedInStatistics();</span>
 <span class="source-line-no">056</span><span id="line.56"></span>
 <span class="source-line-no">057</span><span id="line.57">    /**</span>
-<span class="source-line-no">058</span><span id="line.58">     *  &lt;p&gt;A Reference represents a loose reference to another resource in the same Project identified by its &lt;code&gt;id&lt;/code&gt;. The &lt;code&gt;typeId&lt;/code&gt; indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional &lt;code&gt;obj&lt;/code&gt; field then.&lt;/p&gt;</span>
+<span class="source-line-no">058</span><span id="line.58">     *  &lt;p&gt;Reference to the resource that the Review belongs to.&lt;/p&gt;</span>
 <span class="source-line-no">059</span><span id="line.59">     */</span>
 <span class="source-line-no">060</span><span id="line.60">    @Valid</span>
 <span class="source-line-no">061</span><span id="line.61">    @JsonProperty("target")</span>

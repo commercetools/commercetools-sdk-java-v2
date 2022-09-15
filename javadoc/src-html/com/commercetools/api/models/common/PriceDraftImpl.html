@@ -28,7 +28,7 @@
 <span class="source-line-no">015</span><span id="line.15">import org.apache.commons.lang3.builder.HashCodeBuilder;</span>
 <span class="source-line-no">016</span><span id="line.16"></span>
 <span class="source-line-no">017</span><span id="line.17">/**</span>
-<span class="source-line-no">018</span><span id="line.18"> * PriceDraft</span>
+<span class="source-line-no">018</span><span id="line.18"> *  &lt;p&gt;The draft representation for prices to be embedded into ProductVariantDrafts when the ProductPriceMode is &lt;code&gt;Embedded&lt;/code&gt;. For the &lt;code&gt;Standalone&lt;/code&gt; ProductPriceMode use StandalonePriceDraft.&lt;/p&gt;</span>
 <span class="source-line-no">019</span><span id="line.19"> */</span>
 <span class="source-line-no">020</span><span id="line.20">@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")</span>
 <span class="source-line-no">021</span><span id="line.21">public class PriceDraftImpl implements PriceDraft, ModelBase {</span>
@@ -108,7 +108,7 @@
 <span class="source-line-no">095</span><span id="line.95">    }</span>
 <span class="source-line-no">096</span><span id="line.96"></span>
 <span class="source-line-no">097</span><span id="line.97">    /**</span>
-<span class="source-line-no">098</span><span id="line.98">     *  &lt;p&gt;Set this field if this Price is valid only valid from the specified date and time.&lt;/p&gt;</span>
+<span class="source-line-no">098</span><span id="line.98">     *  &lt;p&gt;Set this field if this Price is only valid from the specified date and time. Must be at least 1 ms earlier than &lt;code&gt;validUntil&lt;/code&gt;.&lt;/p&gt;</span>
 <span class="source-line-no">099</span><span id="line.99">     */</span>
 <span class="source-line-no">100</span><span id="line.100"></span>
 <span class="source-line-no">101</span><span id="line.101">    public java.time.ZonedDateTime getValidFrom() {</span>
@@ -116,7 +116,7 @@
 <span class="source-line-no">103</span><span id="line.103">    }</span>
 <span class="source-line-no">104</span><span id="line.104"></span>
 <span class="source-line-no">105</span><span id="line.105">    /**</span>
-<span class="source-line-no">106</span><span id="line.106">     *  &lt;p&gt;Set this field if this Price is valid only valid until the specified date and time.&lt;/p&gt;</span>
+<span class="source-line-no">106</span><span id="line.106">     *  &lt;p&gt;Set this field if this Price is only valid until the specified date and time. Must be at least 1 ms later than &lt;code&gt;validFrom&lt;/code&gt;.&lt;/p&gt;</span>
 <span class="source-line-no">107</span><span id="line.107">     */</span>
 <span class="source-line-no">108</span><span id="line.108"></span>
 <span class="source-line-no">109</span><span id="line.109">    public java.time.ZonedDateTime getValidUntil() {</span>
@@ -124,8 +124,8 @@
 <span class="source-line-no">111</span><span id="line.111">    }</span>
 <span class="source-line-no">112</span><span id="line.112"></span>
 <span class="source-line-no">113</span><span id="line.113">    /**</span>
-<span class="source-line-no">114</span><span id="line.114">     *  &lt;p&gt;Set this field to add a DiscountedPrice from an external service.&lt;/p&gt;</span>
-<span class="source-line-no">115</span><span id="line.115">     *  &lt;p&gt;The API sets this field automatically if at least one ProductDiscount applies. The DiscountedPrice must reference a ProductDiscount with:&lt;/p&gt;</span>
+<span class="source-line-no">114</span><span id="line.114">     *  &lt;p&gt;Set this field to add a DiscountedPrice from an &lt;strong&gt;external service&lt;/strong&gt;.&lt;/p&gt;</span>
+<span class="source-line-no">115</span><span id="line.115">     *  &lt;p&gt;Otherwise, Composable Commerce sets this field automatically if at least one ProductDiscount applies. The DiscountedPrice must reference a ProductDiscount with:&lt;/p&gt;</span>
 <span class="source-line-no">116</span><span id="line.116">     *  &lt;ul&gt;</span>
 <span class="source-line-no">117</span><span id="line.117">     *   &lt;li&gt;The &lt;code&gt;isActive&lt;/code&gt; flag set to &lt;code&gt;true&lt;/code&gt;.&lt;/li&gt;</span>
 <span class="source-line-no">118</span><span id="line.118">     *   &lt;li&gt;A ProductDiscountValue of type &lt;code&gt;external&lt;/code&gt;.&lt;/li&gt;</span>

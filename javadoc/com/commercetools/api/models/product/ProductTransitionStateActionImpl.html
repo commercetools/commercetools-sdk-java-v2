@@ -86,7 +86,7 @@ loadScripts(document, 'script');</script>
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductTransitionStateActionImpl.html#line.20">ProductTransitionStateActionImpl</a></span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
 implements <a href="ProductTransitionStateAction.html" title="interface in com.commercetools.api.models.product">ProductTransitionStateAction</a>, <a href="../../../../../io/vrap/rmf/base/client/ModelBase.html" title="interface in io.vrap.rmf.base.client">ModelBase</a></span></div>
-<div class="block">ProductTransitionStateAction</div>
+<div class="block"><p>If the existing State has set <code>transitions</code>, there must be a direct transition to the new State. If <code>transitions</code> is not set, no validation is performed. Produces the ProductStateTransition Message.</p></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -140,10 +140,14 @@ implements <a href="ProductTransitionStateAction.html" title="interface in com.c
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getForce()">getForce</a></span>()</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">If <code>true</code>, validations are disabled.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="../state/StateResourceIdentifier.html" title="interface in com.commercetools.api.models.state">StateResourceIdentifier</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getState()">getState</a></span>()</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">The State to transition to.</div>
+</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code>int</code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#hashCode()">hashCode</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
@@ -212,6 +216,7 @@ implements <a href="ProductTransitionStateAction.html" title="interface in com.c
 <section class="detail" id="getState()">
 <h3>getState</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../state/StateResourceIdentifier.html" title="interface in com.commercetools.api.models.state">StateResourceIdentifier</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductTransitionStateActionImpl.html#line.54">getState</a></span>()</div>
+<div class="block"><p>The State to transition to. If there is no existing State, this must be an initial State.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="ProductTransitionStateAction.html#getState()">getState</a></code>&nbsp;in interface&nbsp;<code><a href="ProductTransitionStateAction.html" title="interface in com.commercetools.api.models.product">ProductTransitionStateAction</a></code></dd>
@@ -222,6 +227,7 @@ implements <a href="ProductTransitionStateAction.html" title="interface in com.c
 <section class="detail" id="getForce()">
 <h3>getForce</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductTransitionStateActionImpl.html#line.62">getForce</a></span>()</div>
+<div class="block"><p>If <code>true</code>, validations are disabled.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="ProductTransitionStateAction.html#getForce()">getForce</a></code>&nbsp;in interface&nbsp;<code><a href="ProductTransitionStateAction.html" title="interface in com.commercetools.api.models.product">ProductTransitionStateAction</a></code></dd>

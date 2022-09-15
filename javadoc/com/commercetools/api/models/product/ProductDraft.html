@@ -117,14 +117,18 @@ loadScripts(document, 'script');</script>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@Valid <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../category/CategoryResourceIdentifier.html" title="interface in com.commercetools.api.models.category">CategoryResourceIdentifier</a>&gt;</code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getCategories()">getCategories</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
-<div class="block">Categories assigned to the product.</div>
+<div class="block">Categories assigned to the Product.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@Valid <a href="CategoryOrderHints.html" title="interface in com.commercetools.api.models.product">CategoryOrderHints</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getCategoryOrderHints()">getCategoryOrderHints</a></span>()</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
+<div class="block">Numerical values to allow ordering of Products within a specified Category.</div>
+</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@Valid <a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getDescription()">getDescription</a></span>()</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
+<div class="block">Description of the Product.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getKey()">getKey</a></span>()</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
@@ -133,53 +137,67 @@ loadScripts(document, 'script');</script>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@Valid <a href="ProductVariantDraft.html" title="interface in com.commercetools.api.models.product">ProductVariantDraft</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getMasterVariant()">getMasterVariant</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
-<div class="block">The master product variant.</div>
+<div class="block">The Product Variant to be the Master Variant for the Product.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@Valid <a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getMetaDescription()">getMetaDescription</a></span>()</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
+<div class="block">Description of the Product displayed in search results.</div>
+</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@Valid <a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getMetaKeywords()">getMetaKeywords</a></span>()</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
+<div class="block">Keywords that give additional information about the Product to search engines.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@Valid <a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getMetaTitle()">getMetaTitle</a></span>()</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
+<div class="block">Title of the Product displayed in search results.</div>
+</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@NotNull @Valid <a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getName()">getName</a></span>()</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
+<div class="block">Name of the Product.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><a href="ProductPriceModeEnum.html" title="interface in com.commercetools.api.models.product">ProductPriceModeEnum</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getPriceMode()">getPriceMode</a></span>()</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
-<div class="block">Specifies which type of prices should be used when looking up a price for this product.</div>
+<div class="block">Specifies the type of prices used when looking up a price for the Product.</div>
 </div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@NotNull @Valid <a href="../product_type/ProductTypeResourceIdentifier.html" title="interface in com.commercetools.api.models.product_type">ProductTypeResourceIdentifier</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getProductType()">getProductType</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
-<div class="block">A predefined product type assigned to the product.</div>
+<div class="block">The Product Type defining the Attributes for the Product.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getPublish()">getPublish</a></span>()</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
-<div class="block">If <code>true</code>, the product is published immediately.</div>
+<div class="block">If <code>true</code>, the Product is published immediately to the current projection.</div>
 </div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@Valid <a href="SearchKeywords.html" title="interface in com.commercetools.api.models.product">SearchKeywords</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getSearchKeywords()">getSearchKeywords</a></span>()</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
+<div class="block">Used by Product Suggestions, but is also considered for a full text search.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@NotNull @Valid <a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getSlug()">getSlug</a></span>()</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
-<div class="block">Human-readable identifiers usually used as deep-link URLs for the product.</div>
+<div class="block">User-defined identifier used in a deep-link URL for the Product.</div>
 </div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@Valid <a href="../state/StateResourceIdentifier.html" title="interface in com.commercetools.api.models.state">StateResourceIdentifier</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getState()">getState</a></span>()</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
+<div class="block">State to be assigned to the Product.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@Valid <a href="../tax_category/TaxCategoryResourceIdentifier.html" title="interface in com.commercetools.api.models.tax_category">TaxCategoryResourceIdentifier</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getTaxCategory()">getTaxCategory</a></span>()</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
+<div class="block">The Tax Category to be assigned to the Product.</div>
+</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@Valid <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ProductVariantDraft.html" title="interface in com.commercetools.api.models.product">ProductVariantDraft</a>&gt;</code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getVariants()">getVariants</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
-<div class="block">An array of related product variants.</div>
+<div class="block">The additional Product Variants for the Product.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="ProductDraft.html" title="interface in com.commercetools.api.models.product">ProductDraft</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#of()">of</a></span>()</code></div>
@@ -270,7 +288,7 @@ loadScripts(document, 'script');</script>
 <div class="member-signature"><span class="annotations">@NotNull
 @Valid
 </span><span class="return-type">@NotNull @Valid <a href="../product_type/ProductTypeResourceIdentifier.html" title="interface in com.commercetools.api.models.product_type">ProductTypeResourceIdentifier</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductDraft.html#line.43">getProductType</a></span>()</div>
-<div class="block"><p>A predefined product type assigned to the product. All products must have a product type.</p></div>
+<div class="block"><p>The Product Type defining the Attributes for the Product. Cannot be changed later.</p></div>
 </section>
 </li>
 <li>
@@ -279,6 +297,7 @@ loadScripts(document, 'script');</script>
 <div class="member-signature"><span class="annotations">@NotNull
 @Valid
 </span><span class="return-type">@NotNull @Valid <a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductDraft.html#line.51">getName</a></span>()</div>
+<div class="block"><p>Name of the Product.</p></div>
 </section>
 </li>
 <li>
@@ -287,7 +306,7 @@ loadScripts(document, 'script');</script>
 <div class="member-signature"><span class="annotations">@NotNull
 @Valid
 </span><span class="return-type">@NotNull @Valid <a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductDraft.html#line.59">getSlug</a></span>()</div>
-<div class="block"><p>Human-readable identifiers usually used as deep-link URLs for the product. A slug must be unique across a project, but a product can have the same slug for different languages. Slugs have a maximum size of 256. Valid characters are: alphabetic characters (<code>A-Z, a-z</code>), numeric characters (<code>0-9</code>), underscores (<code>_</code>) and hyphens (<code>-</code>).</p></div>
+<div class="block"><p>User-defined identifier used in a deep-link URL for the Product. It must be unique across a Project, but a Product can have the same slug in different Locales. It must match the pattern <code>[a-zA-Z0-9_\\-]{2,256}</code>.</p></div>
 </section>
 </li>
 <li>
@@ -302,6 +321,7 @@ loadScripts(document, 'script');</script>
 <h3>getDescription</h3>
 <div class="member-signature"><span class="annotations">@Valid
 </span><span class="return-type">@Valid <a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductDraft.html#line.74">getDescription</a></span>()</div>
+<div class="block"><p>Description of the Product.</p></div>
 </section>
 </li>
 <li>
@@ -309,7 +329,7 @@ loadScripts(document, 'script');</script>
 <h3>getCategories</h3>
 <div class="member-signature"><span class="annotations">@Valid
 </span><span class="return-type">@Valid <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../category/CategoryResourceIdentifier.html" title="interface in com.commercetools.api.models.category">CategoryResourceIdentifier</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductDraft.html#line.81">getCategories</a></span>()</div>
-<div class="block"><p>Categories assigned to the product.</p></div>
+<div class="block"><p>Categories assigned to the Product.</p></div>
 </section>
 </li>
 <li>
@@ -317,6 +337,7 @@ loadScripts(document, 'script');</script>
 <h3>getCategoryOrderHints</h3>
 <div class="member-signature"><span class="annotations">@Valid
 </span><span class="return-type">@Valid <a href="CategoryOrderHints.html" title="interface in com.commercetools.api.models.product">CategoryOrderHints</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductDraft.html#line.88">getCategoryOrderHints</a></span>()</div>
+<div class="block"><p>Numerical values to allow ordering of Products within a specified Category.</p></div>
 </section>
 </li>
 <li>
@@ -324,6 +345,7 @@ loadScripts(document, 'script');</script>
 <h3>getMetaTitle</h3>
 <div class="member-signature"><span class="annotations">@Valid
 </span><span class="return-type">@Valid <a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductDraft.html#line.95">getMetaTitle</a></span>()</div>
+<div class="block"><p>Title of the Product displayed in search results.</p></div>
 </section>
 </li>
 <li>
@@ -331,6 +353,7 @@ loadScripts(document, 'script');</script>
 <h3>getMetaDescription</h3>
 <div class="member-signature"><span class="annotations">@Valid
 </span><span class="return-type">@Valid <a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductDraft.html#line.102">getMetaDescription</a></span>()</div>
+<div class="block"><p>Description of the Product displayed in search results.</p></div>
 </section>
 </li>
 <li>
@@ -338,6 +361,7 @@ loadScripts(document, 'script');</script>
 <h3>getMetaKeywords</h3>
 <div class="member-signature"><span class="annotations">@Valid
 </span><span class="return-type">@Valid <a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductDraft.html#line.109">getMetaKeywords</a></span>()</div>
+<div class="block"><p>Keywords that give additional information about the Product to search engines.</p></div>
 </section>
 </li>
 <li>
@@ -345,7 +369,7 @@ loadScripts(document, 'script');</script>
 <h3>getMasterVariant</h3>
 <div class="member-signature"><span class="annotations">@Valid
 </span><span class="return-type">@Valid <a href="ProductVariantDraft.html" title="interface in com.commercetools.api.models.product">ProductVariantDraft</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductDraft.html#line.116">getMasterVariant</a></span>()</div>
-<div class="block"><p>The master product variant. Required if the <code>variants</code> array has product variants.</p></div>
+<div class="block"><p>The Product Variant to be the Master Variant for the Product. Required if <code>variants</code> are provided also.</p></div>
 </section>
 </li>
 <li>
@@ -353,7 +377,7 @@ loadScripts(document, 'script');</script>
 <h3>getVariants</h3>
 <div class="member-signature"><span class="annotations">@Valid
 </span><span class="return-type">@Valid <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ProductVariantDraft.html" title="interface in com.commercetools.api.models.product">ProductVariantDraft</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductDraft.html#line.123">getVariants</a></span>()</div>
-<div class="block"><p>An array of related product variants.</p></div>
+<div class="block"><p>The additional Product Variants for the Product.</p></div>
 </section>
 </li>
 <li>
@@ -361,6 +385,7 @@ loadScripts(document, 'script');</script>
 <h3>getTaxCategory</h3>
 <div class="member-signature"><span class="annotations">@Valid
 </span><span class="return-type">@Valid <a href="../tax_category/TaxCategoryResourceIdentifier.html" title="interface in com.commercetools.api.models.tax_category">TaxCategoryResourceIdentifier</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductDraft.html#line.130">getTaxCategory</a></span>()</div>
+<div class="block"><p>The Tax Category to be assigned to the Product.</p></div>
 </section>
 </li>
 <li>
@@ -368,6 +393,7 @@ loadScripts(document, 'script');</script>
 <h3>getSearchKeywords</h3>
 <div class="member-signature"><span class="annotations">@Valid
 </span><span class="return-type">@Valid <a href="SearchKeywords.html" title="interface in com.commercetools.api.models.product">SearchKeywords</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductDraft.html#line.137">getSearchKeywords</a></span>()</div>
+<div class="block"><p>Used by Product Suggestions, but is also considered for a full text search.</p></div>
 </section>
 </li>
 <li>
@@ -375,20 +401,21 @@ loadScripts(document, 'script');</script>
 <h3>getState</h3>
 <div class="member-signature"><span class="annotations">@Valid
 </span><span class="return-type">@Valid <a href="../state/StateResourceIdentifier.html" title="interface in com.commercetools.api.models.state">StateResourceIdentifier</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductDraft.html#line.144">getState</a></span>()</div>
+<div class="block"><p>State to be assigned to the Product.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getPublish()">
 <h3>getPublish</h3>
 <div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductDraft.html#line.152">getPublish</a></span>()</div>
-<div class="block"><p>If <code>true</code>, the product is published immediately.</p></div>
+<div class="block"><p>If <code>true</code>, the Product is published immediately to the current projection.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getPriceMode()">
 <h3>getPriceMode</h3>
 <div class="member-signature"><span class="return-type"><a href="ProductPriceModeEnum.html" title="interface in com.commercetools.api.models.product">ProductPriceModeEnum</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductDraft.html#line.159">getPriceMode</a></span>()</div>
-<div class="block"><p>Specifies which type of prices should be used when looking up a price for this product. If not set, <code>Embedded</code> ProductPriceMode is used.</p></div>
+<div class="block"><p>Specifies the type of prices used when looking up a price for the Product.</p></div>
 </section>
 </li>
 <li>

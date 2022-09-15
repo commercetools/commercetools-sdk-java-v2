@@ -21,15 +21,15 @@
 <span class="source-line-no">008</span><span id="line.8">import javax.validation.Valid;</span>
 <span class="source-line-no">009</span><span id="line.9">import javax.validation.constraints.NotNull;</span>
 <span class="source-line-no">010</span><span id="line.10"></span>
-<span class="source-line-no">011</span><span id="line.11">import com.commercetools.api.models.order_edit.OrderEditApplied;</span>
-<span class="source-line-no">012</span><span id="line.12">import com.commercetools.api.models.order_edit.OrderEditReference;</span>
+<span class="source-line-no">011</span><span id="line.11">import com.commercetools.api.models.order_edit.OrderEdit;</span>
+<span class="source-line-no">012</span><span id="line.12">import com.commercetools.api.models.order_edit.OrderEditApplied;</span>
 <span class="source-line-no">013</span><span id="line.13">import com.fasterxml.jackson.annotation.*;</span>
 <span class="source-line-no">014</span><span id="line.14">import com.fasterxml.jackson.databind.annotation.*;</span>
 <span class="source-line-no">015</span><span id="line.15"></span>
 <span class="source-line-no">016</span><span id="line.16">import io.vrap.rmf.base.client.utils.Generated;</span>
 <span class="source-line-no">017</span><span id="line.17"></span>
 <span class="source-line-no">018</span><span id="line.18">/**</span>
-<span class="source-line-no">019</span><span id="line.19"> * OrderEditAppliedMessage</span>
+<span class="source-line-no">019</span><span id="line.19"> *  &lt;p&gt;Generated after a successfully applying an OrderEdit.&lt;/p&gt;</span>
 <span class="source-line-no">020</span><span id="line.20"> *</span>
 <span class="source-line-no">021</span><span id="line.21"> * &lt;hr&gt;</span>
 <span class="source-line-no">022</span><span id="line.22"> * Example to create an instance using the builder pattern</span>
@@ -56,22 +56,22 @@
 <span class="source-line-no">043</span><span id="line.43">    String ORDER_EDIT_APPLIED = "OrderEditApplied";</span>
 <span class="source-line-no">044</span><span id="line.44"></span>
 <span class="source-line-no">045</span><span id="line.45">    /**</span>
-<span class="source-line-no">046</span><span id="line.46">     *  &lt;p&gt;Reference to an OrderEdit.&lt;/p&gt;</span>
+<span class="source-line-no">046</span><span id="line.46">     *  &lt;p&gt;OrderEdit that was applied.&lt;/p&gt;</span>
 <span class="source-line-no">047</span><span id="line.47">     */</span>
 <span class="source-line-no">048</span><span id="line.48">    @NotNull</span>
 <span class="source-line-no">049</span><span id="line.49">    @Valid</span>
 <span class="source-line-no">050</span><span id="line.50">    @JsonProperty("edit")</span>
-<span class="source-line-no">051</span><span id="line.51">    public OrderEditReference getEdit();</span>
+<span class="source-line-no">051</span><span id="line.51">    public OrderEdit getEdit();</span>
 <span class="source-line-no">052</span><span id="line.52"></span>
 <span class="source-line-no">053</span><span id="line.53">    /**</span>
-<span class="source-line-no">054</span><span id="line.54">     *</span>
+<span class="source-line-no">054</span><span id="line.54">     *  &lt;p&gt;Information about a successfully applied OrderEdit.&lt;/p&gt;</span>
 <span class="source-line-no">055</span><span id="line.55">     */</span>
 <span class="source-line-no">056</span><span id="line.56">    @NotNull</span>
 <span class="source-line-no">057</span><span id="line.57">    @Valid</span>
 <span class="source-line-no">058</span><span id="line.58">    @JsonProperty("result")</span>
 <span class="source-line-no">059</span><span id="line.59">    public OrderEditApplied getResult();</span>
 <span class="source-line-no">060</span><span id="line.60"></span>
-<span class="source-line-no">061</span><span id="line.61">    public void setEdit(final OrderEditReference edit);</span>
+<span class="source-line-no">061</span><span id="line.61">    public void setEdit(final OrderEdit edit);</span>
 <span class="source-line-no">062</span><span id="line.62"></span>
 <span class="source-line-no">063</span><span id="line.63">    public void setResult(final OrderEditApplied result);</span>
 <span class="source-line-no">064</span><span id="line.64"></span>

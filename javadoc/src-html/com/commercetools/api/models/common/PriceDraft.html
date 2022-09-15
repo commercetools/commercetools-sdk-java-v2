@@ -31,7 +31,7 @@
 <span class="source-line-no">018</span><span id="line.18">import io.vrap.rmf.base.client.utils.Generated;</span>
 <span class="source-line-no">019</span><span id="line.19"></span>
 <span class="source-line-no">020</span><span id="line.20">/**</span>
-<span class="source-line-no">021</span><span id="line.21"> * PriceDraft</span>
+<span class="source-line-no">021</span><span id="line.21"> *  &lt;p&gt;The draft representation for prices to be embedded into ProductVariantDrafts when the ProductPriceMode is &lt;code&gt;Embedded&lt;/code&gt;. For the &lt;code&gt;Standalone&lt;/code&gt; ProductPriceMode use StandalonePriceDraft.&lt;/p&gt;</span>
 <span class="source-line-no">022</span><span id="line.22"> *</span>
 <span class="source-line-no">023</span><span id="line.23"> * &lt;hr&gt;</span>
 <span class="source-line-no">024</span><span id="line.24"> * Example to create an instance using the builder pattern</span>
@@ -77,22 +77,22 @@
 <span class="source-line-no">064</span><span id="line.64">    public ChannelResourceIdentifier getChannel();</span>
 <span class="source-line-no">065</span><span id="line.65"></span>
 <span class="source-line-no">066</span><span id="line.66">    /**</span>
-<span class="source-line-no">067</span><span id="line.67">     *  &lt;p&gt;Set this field if this Price is valid only valid from the specified date and time.&lt;/p&gt;</span>
+<span class="source-line-no">067</span><span id="line.67">     *  &lt;p&gt;Set this field if this Price is only valid from the specified date and time. Must be at least 1 ms earlier than &lt;code&gt;validUntil&lt;/code&gt;.&lt;/p&gt;</span>
 <span class="source-line-no">068</span><span id="line.68">     */</span>
 <span class="source-line-no">069</span><span id="line.69"></span>
 <span class="source-line-no">070</span><span id="line.70">    @JsonProperty("validFrom")</span>
 <span class="source-line-no">071</span><span id="line.71">    public ZonedDateTime getValidFrom();</span>
 <span class="source-line-no">072</span><span id="line.72"></span>
 <span class="source-line-no">073</span><span id="line.73">    /**</span>
-<span class="source-line-no">074</span><span id="line.74">     *  &lt;p&gt;Set this field if this Price is valid only valid until the specified date and time.&lt;/p&gt;</span>
+<span class="source-line-no">074</span><span id="line.74">     *  &lt;p&gt;Set this field if this Price is only valid until the specified date and time. Must be at least 1 ms later than &lt;code&gt;validFrom&lt;/code&gt;.&lt;/p&gt;</span>
 <span class="source-line-no">075</span><span id="line.75">     */</span>
 <span class="source-line-no">076</span><span id="line.76"></span>
 <span class="source-line-no">077</span><span id="line.77">    @JsonProperty("validUntil")</span>
 <span class="source-line-no">078</span><span id="line.78">    public ZonedDateTime getValidUntil();</span>
 <span class="source-line-no">079</span><span id="line.79"></span>
 <span class="source-line-no">080</span><span id="line.80">    /**</span>
-<span class="source-line-no">081</span><span id="line.81">     *  &lt;p&gt;Set this field to add a DiscountedPrice from an external service.&lt;/p&gt;</span>
-<span class="source-line-no">082</span><span id="line.82">     *  &lt;p&gt;The API sets this field automatically if at least one ProductDiscount applies. The DiscountedPrice must reference a ProductDiscount with:&lt;/p&gt;</span>
+<span class="source-line-no">081</span><span id="line.81">     *  &lt;p&gt;Set this field to add a DiscountedPrice from an &lt;strong&gt;external service&lt;/strong&gt;.&lt;/p&gt;</span>
+<span class="source-line-no">082</span><span id="line.82">     *  &lt;p&gt;Otherwise, Composable Commerce sets this field automatically if at least one ProductDiscount applies. The DiscountedPrice must reference a ProductDiscount with:&lt;/p&gt;</span>
 <span class="source-line-no">083</span><span id="line.83">     *  &lt;ul&gt;</span>
 <span class="source-line-no">084</span><span id="line.84">     *   &lt;li&gt;The &lt;code&gt;isActive&lt;/code&gt; flag set to &lt;code&gt;true&lt;/code&gt;.&lt;/li&gt;</span>
 <span class="source-line-no">085</span><span id="line.85">     *   &lt;li&gt;A ProductDiscountValue of type &lt;code&gt;external&lt;/code&gt;.&lt;/li&gt;</span>

@@ -83,7 +83,7 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="StandalonePriceValueChangedMessagePayload.html" title="interface in com.commercetools.api.models.message">StandalonePriceValueChangedMessagePayload</a>&gt;</code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/StandalonePriceValueChangedMessagePayloadBuilder.html#line.22">StandalonePriceValueChangedMessagePayloadBuilder</a></span>
+<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/StandalonePriceValueChangedMessagePayloadBuilder.html#line.23">StandalonePriceValueChangedMessagePayloadBuilder</a></span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
 implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="StandalonePriceValueChangedMessagePayload.html" title="interface in com.commercetools.api.models.message">StandalonePriceValueChangedMessagePayload</a>&gt;</span></div>
 <div class="block">StandalonePriceValueChangedMessagePayloadBuilder
@@ -93,6 +93,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
  <pre><code class='java'>
      StandalonePriceValueChangedMessagePayload standalonePriceValueChangedMessagePayload = StandalonePriceValueChangedMessagePayload.builder()
              .value(valueBuilder -> valueBuilder)
+             .staged(true)
              .build()
  </code></pre>
  </div></div>
@@ -131,15 +132,23 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
 <div class="block">builds StandalonePriceValueChangedMessagePayload without checking for non null required values</div>
 </div>
-<div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="../common/Money.html" title="interface in com.commercetools.api.models.common">Money</a></code></div>
-<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getValue()">getValue</a></span>()</code></div>
+<div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a></code></div>
+<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getStaged()">getStaged</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code>static <a href="StandalonePriceValueChangedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">StandalonePriceValueChangedMessagePayloadBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#of()">of</a></span>()</code></div>
-<div class="col-last odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="../common/Money.html" title="interface in com.commercetools.api.models.common">Money</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getValue()">getValue</a></span>()</code></div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code>static <a href="StandalonePriceValueChangedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">StandalonePriceValueChangedMessagePayloadBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#of(com.commercetools.api.models.message.StandalonePriceValueChangedMessagePayload)">of</a></span>&#8203;(<a href="StandalonePriceValueChangedMessagePayload.html" title="interface in com.commercetools.api.models.message">StandalonePriceValueChangedMessagePayload</a>&nbsp;template)</code></div>
+<div class="col-second even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#of()">of</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code>static <a href="StandalonePriceValueChangedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">StandalonePriceValueChangedMessagePayloadBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#of(com.commercetools.api.models.message.StandalonePriceValueChangedMessagePayload)">of</a></span>&#8203;(<a href="StandalonePriceValueChangedMessagePayload.html" title="interface in com.commercetools.api.models.message">StandalonePriceValueChangedMessagePayload</a>&nbsp;template)</code></div>
+<div class="col-last odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="StandalonePriceValueChangedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">StandalonePriceValueChangedMessagePayloadBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#staged(java.lang.Boolean)">staged</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&nbsp;staged)</code></div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">Whether the new value was applied to the current or the staged representation of the StandalonePrice.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="StandalonePriceValueChangedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">StandalonePriceValueChangedMessagePayloadBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#value(com.commercetools.api.models.common.Money)">value</a></span>&#8203;(<a href="../common/Money.html" title="interface in com.commercetools.api.models.common">Money</a>&nbsp;value)</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
@@ -170,7 +179,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="&lt;init&gt;()">
 <h3>StandalonePriceValueChangedMessagePayloadBuilder</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/StandalonePriceValueChangedMessagePayloadBuilder.html#line.23">StandalonePriceValueChangedMessagePayloadBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/StandalonePriceValueChangedMessagePayloadBuilder.html#line.24">StandalonePriceValueChangedMessagePayloadBuilder</a></span>()</div>
 </section>
 </li>
 </ul>
@@ -184,27 +193,40 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="value(java.util.function.Function)">
 <h3>value</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="StandalonePriceValueChangedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">StandalonePriceValueChangedMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/StandalonePriceValueChangedMessagePayloadBuilder.html#line.32">value</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/MoneyBuilder.html" title="class in com.commercetools.api.models.common">MoneyBuilder</a>,&#8203;<a href="../common/MoneyBuilder.html" title="class in com.commercetools.api.models.common">MoneyBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="StandalonePriceValueChangedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">StandalonePriceValueChangedMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/StandalonePriceValueChangedMessagePayloadBuilder.html#line.35">value</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/MoneyBuilder.html" title="class in com.commercetools.api.models.common">MoneyBuilder</a>,&#8203;<a href="../common/MoneyBuilder.html" title="class in com.commercetools.api.models.common">MoneyBuilder</a>&gt;&nbsp;builder)</span></div>
 <div class="block"><p>The new value of the updated StandalonePrice.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="value(com.commercetools.api.models.common.Money)">
 <h3>value</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="StandalonePriceValueChangedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">StandalonePriceValueChangedMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/StandalonePriceValueChangedMessagePayloadBuilder.html#line.42">value</a></span>&#8203;<span class="parameters">(<a href="../common/Money.html" title="interface in com.commercetools.api.models.common">Money</a>&nbsp;value)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="StandalonePriceValueChangedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">StandalonePriceValueChangedMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/StandalonePriceValueChangedMessagePayloadBuilder.html#line.45">value</a></span>&#8203;<span class="parameters">(<a href="../common/Money.html" title="interface in com.commercetools.api.models.common">Money</a>&nbsp;value)</span></div>
 <div class="block"><p>The new value of the updated StandalonePrice.</p></div>
+</section>
+</li>
+<li>
+<section class="detail" id="staged(java.lang.Boolean)">
+<h3>staged</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="StandalonePriceValueChangedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">StandalonePriceValueChangedMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/StandalonePriceValueChangedMessagePayloadBuilder.html#line.55">staged</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&nbsp;staged)</span></div>
+<div class="block"><p>Whether the new value was applied to the current or the staged representation of the StandalonePrice. Staged changes are stored on the StagedStandalonePrice.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getValue()">
 <h3>getValue</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/Money.html" title="interface in com.commercetools.api.models.common">Money</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/StandalonePriceValueChangedMessagePayloadBuilder.html#line.48">getValue</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/Money.html" title="interface in com.commercetools.api.models.common">Money</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/StandalonePriceValueChangedMessagePayloadBuilder.html#line.60">getValue</a></span>()</div>
+</section>
+</li>
+<li>
+<section class="detail" id="getStaged()">
+<h3>getStaged</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/StandalonePriceValueChangedMessagePayloadBuilder.html#line.64">getStaged</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="build()">
 <h3>build</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="StandalonePriceValueChangedMessagePayload.html" title="interface in com.commercetools.api.models.message">StandalonePriceValueChangedMessagePayload</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/StandalonePriceValueChangedMessagePayloadBuilder.html#line.52">build</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="StandalonePriceValueChangedMessagePayload.html" title="interface in com.commercetools.api.models.message">StandalonePriceValueChangedMessagePayload</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/StandalonePriceValueChangedMessagePayloadBuilder.html#line.68">build</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html#build()">build</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="StandalonePriceValueChangedMessagePayload.html" title="interface in com.commercetools.api.models.message">StandalonePriceValueChangedMessagePayload</a>&gt;</code></dd>
@@ -214,20 +236,20 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="buildUnchecked()">
 <h3>buildUnchecked</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="StandalonePriceValueChangedMessagePayload.html" title="interface in com.commercetools.api.models.message">StandalonePriceValueChangedMessagePayload</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/StandalonePriceValueChangedMessagePayloadBuilder.html#line.60">buildUnchecked</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="StandalonePriceValueChangedMessagePayload.html" title="interface in com.commercetools.api.models.message">StandalonePriceValueChangedMessagePayload</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/StandalonePriceValueChangedMessagePayloadBuilder.html#line.77">buildUnchecked</a></span>()</div>
 <div class="block">builds StandalonePriceValueChangedMessagePayload without checking for non null required values</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="StandalonePriceValueChangedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">StandalonePriceValueChangedMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/StandalonePriceValueChangedMessagePayloadBuilder.html#line.64">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="StandalonePriceValueChangedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">StandalonePriceValueChangedMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/StandalonePriceValueChangedMessagePayloadBuilder.html#line.81">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.api.models.message.StandalonePriceValueChangedMessagePayload)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="StandalonePriceValueChangedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">StandalonePriceValueChangedMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/StandalonePriceValueChangedMessagePayloadBuilder.html#line.68">of</a></span>&#8203;<span class="parameters">(<a href="StandalonePriceValueChangedMessagePayload.html" title="interface in com.commercetools.api.models.message">StandalonePriceValueChangedMessagePayload</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="StandalonePriceValueChangedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">StandalonePriceValueChangedMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/StandalonePriceValueChangedMessagePayloadBuilder.html#line.85">of</a></span>&#8203;<span class="parameters">(<a href="StandalonePriceValueChangedMessagePayload.html" title="interface in com.commercetools.api.models.message">StandalonePriceValueChangedMessagePayload</a>&nbsp;template)</span></div>
 </section>
 </li>
 </ul>

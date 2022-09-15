@@ -84,7 +84,7 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="StoreDistributionChannelsChangedMessagePayloadImpl.html" title="class in com.commercetools.api.models.message">StoreDistributionChannelsChangedMessagePayloadImpl</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/StoreDistributionChannelsChangedMessagePayload.html#line.31">StoreDistributionChannelsChangedMessagePayload</a></span><span class="extends-implements">
+<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/StoreDistributionChannelsChangedMessagePayload.html#line.28">StoreDistributionChannelsChangedMessagePayload</a></span><span class="extends-implements">
 extends <a href="MessagePayload.html" title="interface in com.commercetools.api.models.message">MessagePayload</a></span></div>
 <div class="block"><p>Generated after a successful Add Distribution Channel, Remove Distribution Channel, or Set Distribution Channels update action.</p>
 
@@ -93,8 +93,6 @@ extends <a href="MessagePayload.html" title="interface in com.commercetools.api.
  <div class=code-example>
  <pre><code class='java'>
      StoreDistributionChannelsChangedMessagePayload storeDistributionChannelsChangedMessagePayload = StoreDistributionChannelsChangedMessagePayload.builder()
-             .plusAddedDistributionChannels(addedDistributionChannelsBuilder -> addedDistributionChannelsBuilder)
-             .plusRemovedDistributionChannels(removedDistributionChannelsBuilder -> removedDistributionChannelsBuilder)
              .build()
  </code></pre>
  </div></div>
@@ -133,15 +131,15 @@ extends <a href="MessagePayload.html" title="interface in com.commercetools.api.
 <div class="col-first odd-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="StoreDistributionChannelsChangedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">StoreDistributionChannelsChangedMessagePayloadBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#builder(com.commercetools.api.models.message.StoreDistributionChannelsChangedMessagePayload)">builder</a></span>&#8203;(<a href="StoreDistributionChannelsChangedMessagePayload.html" title="interface in com.commercetools.api.models.message">StoreDistributionChannelsChangedMessagePayload</a>&nbsp;template)</code></div>
 <div class="col-last odd-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@NotNull @Valid <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../channel/ChannelReference.html" title="interface in com.commercetools.api.models.channel">ChannelReference</a>&gt;</code></div>
+<div class="col-first even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@Valid <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../channel/ChannelReference.html" title="interface in com.commercetools.api.models.channel">ChannelReference</a>&gt;</code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getAddedDistributionChannels()">getAddedDistributionChannels</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
-<div class="block">The product distribution channels that have been added.</div>
+<div class="block">Product distribution Channels that have been added to the Store.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@NotNull @Valid <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../channel/ChannelReference.html" title="interface in com.commercetools.api.models.channel">ChannelReference</a>&gt;</code></div>
+<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@Valid <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../channel/ChannelReference.html" title="interface in com.commercetools.api.models.channel">ChannelReference</a>&gt;</code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getRemovedDistributionChannels()">getRemovedDistributionChannels</a></span>()</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
-<div class="block">The product distribution channels that have been removed.</div>
+<div class="block">Product distribution Channels that have been removed from the Store.</div>
 </div>
 <div class="col-first even-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="StoreDistributionChannelsChangedMessagePayload.html" title="interface in com.commercetools.api.models.message">StoreDistributionChannelsChangedMessagePayload</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#of()">of</a></span>()</code></div>
@@ -187,7 +185,7 @@ extends <a href="MessagePayload.html" title="interface in com.commercetools.api.
 <li>
 <section class="detail" id="STORE_DISTRIBUTION_CHANNELS_CHANGED">
 <h3>STORE_DISTRIBUTION_CHANNELS_CHANGED</h3>
-<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/StoreDistributionChannelsChangedMessagePayload.html#line.35">STORE_DISTRIBUTION_CHANNELS_CHANGED</a></span></div>
+<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/StoreDistributionChannelsChangedMessagePayload.html#line.32">STORE_DISTRIBUTION_CHANNELS_CHANGED</a></span></div>
 <dl class="notes">
 <dt>See Also:</dt>
 <dd><a href="../../../../../constant-values.html#com.commercetools.api.models.message.StoreDistributionChannelsChangedMessagePayload.STORE_DISTRIBUTION_CHANNELS_CHANGED">Constant Field Values</a></dd>
@@ -205,79 +203,77 @@ extends <a href="MessagePayload.html" title="interface in com.commercetools.api.
 <li>
 <section class="detail" id="getAddedDistributionChannels()">
 <h3>getAddedDistributionChannels</h3>
-<div class="member-signature"><span class="annotations">@NotNull
-@Valid
-</span><span class="return-type">@NotNull @Valid <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../channel/ChannelReference.html" title="interface in com.commercetools.api.models.channel">ChannelReference</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/StoreDistributionChannelsChangedMessagePayload.html#line.40">getAddedDistributionChannels</a></span>()</div>
-<div class="block"><p>The product distribution channels that have been added.</p></div>
+<div class="member-signature"><span class="annotations">@Valid
+</span><span class="return-type">@Valid <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../channel/ChannelReference.html" title="interface in com.commercetools.api.models.channel">ChannelReference</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/StoreDistributionChannelsChangedMessagePayload.html#line.37">getAddedDistributionChannels</a></span>()</div>
+<div class="block"><p>Product distribution Channels that have been added to the Store.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getRemovedDistributionChannels()">
 <h3>getRemovedDistributionChannels</h3>
-<div class="member-signature"><span class="annotations">@NotNull
-@Valid
-</span><span class="return-type">@NotNull @Valid <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../channel/ChannelReference.html" title="interface in com.commercetools.api.models.channel">ChannelReference</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/StoreDistributionChannelsChangedMessagePayload.html#line.48">getRemovedDistributionChannels</a></span>()</div>
-<div class="block"><p>The product distribution channels that have been removed.</p></div>
+<div class="member-signature"><span class="annotations">@Valid
+</span><span class="return-type">@Valid <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../channel/ChannelReference.html" title="interface in com.commercetools.api.models.channel">ChannelReference</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/StoreDistributionChannelsChangedMessagePayload.html#line.44">getRemovedDistributionChannels</a></span>()</div>
+<div class="block"><p>Product distribution Channels that have been removed from the Store.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setAddedDistributionChannels(com.commercetools.api.models.channel.ChannelReference...)">
 <h3>setAddedDistributionChannels</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/StoreDistributionChannelsChangedMessagePayload.html#line.53">setAddedDistributionChannels</a></span>&#8203;<span class="parameters">(<a href="../channel/ChannelReference.html" title="interface in com.commercetools.api.models.channel">ChannelReference</a>...&nbsp;addedDistributionChannels)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/StoreDistributionChannelsChangedMessagePayload.html#line.48">setAddedDistributionChannels</a></span>&#8203;<span class="parameters">(<a href="../channel/ChannelReference.html" title="interface in com.commercetools.api.models.channel">ChannelReference</a>...&nbsp;addedDistributionChannels)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setAddedDistributionChannels(java.util.List)">
 <h3>setAddedDistributionChannels</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/StoreDistributionChannelsChangedMessagePayload.html#line.56">setAddedDistributionChannels</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../channel/ChannelReference.html" title="interface in com.commercetools.api.models.channel">ChannelReference</a>&gt;&nbsp;addedDistributionChannels)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/StoreDistributionChannelsChangedMessagePayload.html#line.51">setAddedDistributionChannels</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../channel/ChannelReference.html" title="interface in com.commercetools.api.models.channel">ChannelReference</a>&gt;&nbsp;addedDistributionChannels)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setRemovedDistributionChannels(com.commercetools.api.models.channel.ChannelReference...)">
 <h3>setRemovedDistributionChannels</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/StoreDistributionChannelsChangedMessagePayload.html#line.58">setRemovedDistributionChannels</a></span>&#8203;<span class="parameters">(<a href="../channel/ChannelReference.html" title="interface in com.commercetools.api.models.channel">ChannelReference</a>...&nbsp;removedDistributionChannels)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/StoreDistributionChannelsChangedMessagePayload.html#line.53">setRemovedDistributionChannels</a></span>&#8203;<span class="parameters">(<a href="../channel/ChannelReference.html" title="interface in com.commercetools.api.models.channel">ChannelReference</a>...&nbsp;removedDistributionChannels)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setRemovedDistributionChannels(java.util.List)">
 <h3>setRemovedDistributionChannels</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/StoreDistributionChannelsChangedMessagePayload.html#line.61">setRemovedDistributionChannels</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../channel/ChannelReference.html" title="interface in com.commercetools.api.models.channel">ChannelReference</a>&gt;&nbsp;removedDistributionChannels)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/StoreDistributionChannelsChangedMessagePayload.html#line.56">setRemovedDistributionChannels</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../channel/ChannelReference.html" title="interface in com.commercetools.api.models.channel">ChannelReference</a>&gt;&nbsp;removedDistributionChannels)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="StoreDistributionChannelsChangedMessagePayload.html" title="interface in com.commercetools.api.models.message">StoreDistributionChannelsChangedMessagePayload</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/StoreDistributionChannelsChangedMessagePayload.html#line.63">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="StoreDistributionChannelsChangedMessagePayload.html" title="interface in com.commercetools.api.models.message">StoreDistributionChannelsChangedMessagePayload</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/StoreDistributionChannelsChangedMessagePayload.html#line.58">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.api.models.message.StoreDistributionChannelsChangedMessagePayload)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="StoreDistributionChannelsChangedMessagePayload.html" title="interface in com.commercetools.api.models.message">StoreDistributionChannelsChangedMessagePayload</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/StoreDistributionChannelsChangedMessagePayload.html#line.67">of</a></span>&#8203;<span class="parameters">(<a href="StoreDistributionChannelsChangedMessagePayload.html" title="interface in com.commercetools.api.models.message">StoreDistributionChannelsChangedMessagePayload</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="StoreDistributionChannelsChangedMessagePayload.html" title="interface in com.commercetools.api.models.message">StoreDistributionChannelsChangedMessagePayload</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/StoreDistributionChannelsChangedMessagePayload.html#line.62">of</a></span>&#8203;<span class="parameters">(<a href="StoreDistributionChannelsChangedMessagePayload.html" title="interface in com.commercetools.api.models.message">StoreDistributionChannelsChangedMessagePayload</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder()">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="StoreDistributionChannelsChangedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">StoreDistributionChannelsChangedMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/StoreDistributionChannelsChangedMessagePayload.html#line.75">builder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="StoreDistributionChannelsChangedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">StoreDistributionChannelsChangedMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/StoreDistributionChannelsChangedMessagePayload.html#line.70">builder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder(com.commercetools.api.models.message.StoreDistributionChannelsChangedMessagePayload)">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="StoreDistributionChannelsChangedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">StoreDistributionChannelsChangedMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/StoreDistributionChannelsChangedMessagePayload.html#line.79">builder</a></span>&#8203;<span class="parameters">(<a href="StoreDistributionChannelsChangedMessagePayload.html" title="interface in com.commercetools.api.models.message">StoreDistributionChannelsChangedMessagePayload</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="StoreDistributionChannelsChangedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">StoreDistributionChannelsChangedMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/StoreDistributionChannelsChangedMessagePayload.html#line.74">builder</a></span>&#8203;<span class="parameters">(<a href="StoreDistributionChannelsChangedMessagePayload.html" title="interface in com.commercetools.api.models.message">StoreDistributionChannelsChangedMessagePayload</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withStoreDistributionChannelsChangedMessagePayload(java.util.function.Function)">
 <h3>withStoreDistributionChannelsChangedMessagePayload</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/StoreDistributionChannelsChangedMessagePayload.html#line.84">withStoreDistributionChannelsChangedMessagePayload</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="StoreDistributionChannelsChangedMessagePayload.html" title="interface in com.commercetools.api.models.message">StoreDistributionChannelsChangedMessagePayload</a>,&#8203;T&gt;&nbsp;helper)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/StoreDistributionChannelsChangedMessagePayload.html#line.79">withStoreDistributionChannelsChangedMessagePayload</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="StoreDistributionChannelsChangedMessagePayload.html" title="interface in com.commercetools.api.models.message">StoreDistributionChannelsChangedMessagePayload</a>,&#8203;T&gt;&nbsp;helper)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="typeReference()">
 <h3>typeReference</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="StoreDistributionChannelsChangedMessagePayload.html" title="interface in com.commercetools.api.models.message">StoreDistributionChannelsChangedMessagePayload</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/StoreDistributionChannelsChangedMessagePayload.html#line.89">typeReference</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="StoreDistributionChannelsChangedMessagePayload.html" title="interface in com.commercetools.api.models.message">StoreDistributionChannelsChangedMessagePayload</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/StoreDistributionChannelsChangedMessagePayload.html#line.84">typeReference</a></span>()</div>
 </section>
 </li>
 </ul>

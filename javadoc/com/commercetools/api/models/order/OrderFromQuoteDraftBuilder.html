@@ -175,12 +175,12 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="OrderFromQuoteDraftBuilder.html" title="class in com.commercetools.api.models.order">OrderFromQuoteDraftBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#quote(com.commercetools.api.models.quote.QuoteResourceIdentifier)">quote</a></span>&#8203;(<a href="../quote/QuoteResourceIdentifier.html" title="interface in com.commercetools.api.models.quote">QuoteResourceIdentifier</a>&nbsp;quote)</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
-<div class="block">ResourceIdentifier to the Quote from which this order is created.</div>
+<div class="block">ResourceIdentifier of the Quote from which this Order is created.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="OrderFromQuoteDraftBuilder.html" title="class in com.commercetools.api.models.order">OrderFromQuoteDraftBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#quote(java.util.function.Function)">quote</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../quote/QuoteResourceIdentifierBuilder.html" title="class in com.commercetools.api.models.quote">QuoteResourceIdentifierBuilder</a>,&#8203;<a href="../quote/QuoteResourceIdentifierBuilder.html" title="class in com.commercetools.api.models.quote">QuoteResourceIdentifierBuilder</a>&gt;&nbsp;builder)</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
-<div class="block">ResourceIdentifier to the Quote from which this order is created.</div>
+<div class="block">ResourceIdentifier of the Quote from which this Order is created.</div>
 </div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="OrderFromQuoteDraftBuilder.html" title="class in com.commercetools.api.models.order">OrderFromQuoteDraftBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#shipmentState(com.commercetools.api.models.order.ShipmentState)">shipmentState</a></span>&#8203;(<a href="ShipmentState.html" title="interface in com.commercetools.api.models.order">ShipmentState</a>&nbsp;shipmentState)</code></div>
@@ -194,7 +194,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="OrderFromQuoteDraftBuilder.html" title="class in com.commercetools.api.models.order">OrderFromQuoteDraftBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#version(java.lang.Long)">version</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;version)</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
-<div class="block">The <code>version</code> of the Quote from which an Order is created.</div>
+<div class="block"><code>version</code> of the Quote from which an Order is created.</div>
 </div>
 </div>
 </div>
@@ -231,21 +231,21 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="quote(java.util.function.Function)">
 <h3>quote</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderFromQuoteDraftBuilder.html" title="class in com.commercetools.api.models.order">OrderFromQuoteDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderFromQuoteDraftBuilder.html#line.51">quote</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../quote/QuoteResourceIdentifierBuilder.html" title="class in com.commercetools.api.models.quote">QuoteResourceIdentifierBuilder</a>,&#8203;<a href="../quote/QuoteResourceIdentifierBuilder.html" title="class in com.commercetools.api.models.quote">QuoteResourceIdentifierBuilder</a>&gt;&nbsp;builder)</span></div>
-<div class="block"><p>ResourceIdentifier to the Quote from which this order is created. If the quote has <code>QuoteState</code> in <code>Accepted</code>, <code>Declined</code> or <code>Withdrawn</code> then the order creation will fail. The creation will also if the <code>Quote</code> has expired (<code>validTo</code> check).</p></div>
+<div class="block"><p>ResourceIdentifier of the Quote from which this Order is created. If the Quote has <code>QuoteState</code> in <code>Accepted</code>, <code>Declined</code> or <code>Withdrawn</code> then the order creation will fail. The creation will also if the <code>Quote</code> has expired (<code>validTo</code> check).</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="quote(com.commercetools.api.models.quote.QuoteResourceIdentifier)">
 <h3>quote</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderFromQuoteDraftBuilder.html" title="class in com.commercetools.api.models.order">OrderFromQuoteDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderFromQuoteDraftBuilder.html#line.61">quote</a></span>&#8203;<span class="parameters">(<a href="../quote/QuoteResourceIdentifier.html" title="interface in com.commercetools.api.models.quote">QuoteResourceIdentifier</a>&nbsp;quote)</span></div>
-<div class="block"><p>ResourceIdentifier to the Quote from which this order is created. If the quote has <code>QuoteState</code> in <code>Accepted</code>, <code>Declined</code> or <code>Withdrawn</code> then the order creation will fail. The creation will also if the <code>Quote</code> has expired (<code>validTo</code> check).</p></div>
+<div class="block"><p>ResourceIdentifier of the Quote from which this Order is created. If the Quote has <code>QuoteState</code> in <code>Accepted</code>, <code>Declined</code> or <code>Withdrawn</code> then the order creation will fail. The creation will also if the <code>Quote</code> has expired (<code>validTo</code> check).</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="version(java.lang.Long)">
 <h3>version</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderFromQuoteDraftBuilder.html" title="class in com.commercetools.api.models.order">OrderFromQuoteDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderFromQuoteDraftBuilder.html#line.70">version</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;version)</span></div>
-<div class="block"><p>The <code>version</code> of the Quote from which an Order is created.</p></div>
+<div class="block"><p><code>version</code> of the Quote from which an Order is created.</p></div>
 </section>
 </li>
 <li>

@@ -89,7 +89,7 @@ loadScripts(document, 'script');</script>
 <hr>
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyProductsByIDImagesPost.html#line.38">ByProjectKeyProductsByIDImagesPost</a></span>
 <span class="extends-implements">extends <a href="../../../../io/vrap/rmf/base/client/BodyApiMethod.html" title="class in io.vrap.rmf.base.client">BodyApiMethod</a>&lt;<a href="ByProjectKeyProductsByIDImagesPost.html" title="class in com.commercetools.api.client">ByProjectKeyProductsByIDImagesPost</a>,&#8203;<a href="../models/product/Product.html" title="interface in com.commercetools.api.models.product">Product</a>,&#8203;<a href="https://docs.oracle.com/javase/8/docs/api/java/io/File.html" title="class or interface in java.io" class="external-link">File</a>&gt;</span></div>
-<div class="block"><p>Uploads a binary image file to a given product variant. The supported image formats are JPEG, PNG and GIF.</p>
+<div class="block"><p>Upload a JPEG, PNG and GIF file to a ProductVariant. The maximum file size of the image is 10MB. <code>variant</code> or <code>sku</code> is required to update a specific ProductVariant. The image is uploaded to the Master Variant if <code>variant</code> or <code>sku</code> are not included. Produces the ProductImageAdded Message when the <code>Small</code> version of the image has been uploaded to the CDN.</p>
 
  <hr>
  <div class=code-example>

@@ -86,7 +86,7 @@ loadScripts(document, 'script');</script>
 <hr>
 <div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderDiscountCodeStateSetMessagePayload.html#line.32">OrderDiscountCodeStateSetMessagePayload</a></span><span class="extends-implements">
 extends <a href="OrderMessagePayload.html" title="interface in com.commercetools.api.models.message">OrderMessagePayload</a></span></div>
-<div class="block">OrderDiscountCodeStateSetMessagePayload
+<div class="block"><p>Generated after the DiscountCodeState changes due to a recalculation.</p>
 
  <hr>
  Example to create an instance using the builder pattern
@@ -136,14 +136,18 @@ extends <a href="OrderMessagePayload.html" title="interface in com.commercetools
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@NotNull @Valid <a href="../discount_code/DiscountCodeReference.html" title="interface in com.commercetools.api.models.discount_code">DiscountCodeReference</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getDiscountCode()">getDiscountCode</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
-<div class="block">Reference to a DiscountCode.</div>
+<div class="block">DiscountCode that changed due to the recalculation.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><a href="../cart/DiscountCodeState.html" title="interface in com.commercetools.api.models.cart">DiscountCodeState</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getOldState()">getOldState</a></span>()</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
+<div class="block">DiscountCodeState before the recalculation.</div>
+</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@NotNull <a href="../cart/DiscountCodeState.html" title="interface in com.commercetools.api.models.cart">DiscountCodeState</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getState()">getState</a></span>()</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
+<div class="block">DiscountCodeState after the recalculation.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="OrderDiscountCodeStateSetMessagePayload.html" title="interface in com.commercetools.api.models.message">OrderDiscountCodeStateSetMessagePayload</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#of()">of</a></span>()</code></div>
 <div class="col-last odd-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
@@ -209,7 +213,7 @@ extends <a href="OrderMessagePayload.html" title="interface in com.commercetools
 <div class="member-signature"><span class="annotations">@NotNull
 @Valid
 </span><span class="return-type">@NotNull @Valid <a href="../discount_code/DiscountCodeReference.html" title="interface in com.commercetools.api.models.discount_code">DiscountCodeReference</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderDiscountCodeStateSetMessagePayload.html#line.41">getDiscountCode</a></span>()</div>
-<div class="block"><p>Reference to a DiscountCode.</p></div>
+<div class="block"><p>DiscountCode that changed due to the recalculation.</p></div>
 </section>
 </li>
 <li>
@@ -217,12 +221,14 @@ extends <a href="OrderMessagePayload.html" title="interface in com.commercetools
 <h3>getState</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 </span><span class="return-type">@NotNull <a href="../cart/DiscountCodeState.html" title="interface in com.commercetools.api.models.cart">DiscountCodeState</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderDiscountCodeStateSetMessagePayload.html#line.49">getState</a></span>()</div>
+<div class="block"><p>DiscountCodeState after the recalculation.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getOldState()">
 <h3>getOldState</h3>
 <div class="member-signature"><span class="return-type"><a href="../cart/DiscountCodeState.html" title="interface in com.commercetools.api.models.cart">DiscountCodeState</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderDiscountCodeStateSetMessagePayload.html#line.57">getOldState</a></span>()</div>
+<div class="block"><p>DiscountCodeState before the recalculation.</p></div>
 </section>
 </li>
 <li>

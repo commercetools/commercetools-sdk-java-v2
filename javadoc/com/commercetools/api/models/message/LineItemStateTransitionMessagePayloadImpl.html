@@ -86,7 +86,7 @@ loadScripts(document, 'script');</script>
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/LineItemStateTransitionMessagePayloadImpl.html#line.20">LineItemStateTransitionMessagePayloadImpl</a></span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
 implements <a href="LineItemStateTransitionMessagePayload.html" title="interface in com.commercetools.api.models.message">LineItemStateTransitionMessagePayload</a>, <a href="../../../../../io/vrap/rmf/base/client/ModelBase.html" title="interface in io.vrap.rmf.base.client">ModelBase</a></span></div>
-<div class="block">LineItemStateTransitionMessagePayload</div>
+<div class="block"><p>Generated after a successful Transition Line Item State update action.</p></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -138,22 +138,28 @@ implements <a href="LineItemStateTransitionMessagePayload.html" title="interface
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="../state/StateReference.html" title="interface in com.commercetools.api.models.state">StateReference</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getFromState()">getFromState</a></span>()</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
-<div class="block">Reference to a State.</div>
+<div class="block">State the Line Item was transitioned from.</div>
 </div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getLineItemId()">getLineItemId</a></span>()</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">Unique identifier of the Line Item.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getQuantity()">getQuantity</a></span>()</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">Number of Line Items for which the State was transitioned.</div>
+</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="../state/StateReference.html" title="interface in com.commercetools.api.models.state">StateReference</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getToState()">getToState</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
-<div class="block">Reference to a State.</div>
+<div class="block">State the Line Item was transitioned to.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getTransitionDate()">getTransitionDate</a></span>()</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">Date and time (UTC) when the transition of the Line Item State was performed.</div>
+</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getType()">getType</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
@@ -232,6 +238,7 @@ implements <a href="LineItemStateTransitionMessagePayload.html" title="interface
 <section class="detail" id="getLineItemId()">
 <h3>getLineItemId</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/LineItemStateTransitionMessagePayloadImpl.html#line.65">getLineItemId</a></span>()</div>
+<div class="block"><p>Unique identifier of the Line Item.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="LineItemStateTransitionMessagePayload.html#getLineItemId()">getLineItemId</a></code>&nbsp;in interface&nbsp;<code><a href="LineItemStateTransitionMessagePayload.html" title="interface in com.commercetools.api.models.message">LineItemStateTransitionMessagePayload</a></code></dd>
@@ -242,6 +249,7 @@ implements <a href="LineItemStateTransitionMessagePayload.html" title="interface
 <section class="detail" id="getTransitionDate()">
 <h3>getTransitionDate</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/LineItemStateTransitionMessagePayloadImpl.html#line.73">getTransitionDate</a></span>()</div>
+<div class="block"><p>Date and time (UTC) when the transition of the Line Item State was performed.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="LineItemStateTransitionMessagePayload.html#getTransitionDate()">getTransitionDate</a></code>&nbsp;in interface&nbsp;<code><a href="LineItemStateTransitionMessagePayload.html" title="interface in com.commercetools.api.models.message">LineItemStateTransitionMessagePayload</a></code></dd>
@@ -252,6 +260,7 @@ implements <a href="LineItemStateTransitionMessagePayload.html" title="interface
 <section class="detail" id="getQuantity()">
 <h3>getQuantity</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/LineItemStateTransitionMessagePayloadImpl.html#line.81">getQuantity</a></span>()</div>
+<div class="block"><p>Number of Line Items for which the State was transitioned.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="LineItemStateTransitionMessagePayload.html#getQuantity()">getQuantity</a></code>&nbsp;in interface&nbsp;<code><a href="LineItemStateTransitionMessagePayload.html" title="interface in com.commercetools.api.models.message">LineItemStateTransitionMessagePayload</a></code></dd>
@@ -262,7 +271,7 @@ implements <a href="LineItemStateTransitionMessagePayload.html" title="interface
 <section class="detail" id="getFromState()">
 <h3>getFromState</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../state/StateReference.html" title="interface in com.commercetools.api.models.state">StateReference</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/LineItemStateTransitionMessagePayloadImpl.html#line.89">getFromState</a></span>()</div>
-<div class="block"><p>Reference to a State.</p></div>
+<div class="block"><p>State the Line Item was transitioned from.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="LineItemStateTransitionMessagePayload.html#getFromState()">getFromState</a></code>&nbsp;in interface&nbsp;<code><a href="LineItemStateTransitionMessagePayload.html" title="interface in com.commercetools.api.models.message">LineItemStateTransitionMessagePayload</a></code></dd>
@@ -273,7 +282,7 @@ implements <a href="LineItemStateTransitionMessagePayload.html" title="interface
 <section class="detail" id="getToState()">
 <h3>getToState</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../state/StateReference.html" title="interface in com.commercetools.api.models.state">StateReference</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/LineItemStateTransitionMessagePayloadImpl.html#line.97">getToState</a></span>()</div>
-<div class="block"><p>Reference to a State.</p></div>
+<div class="block"><p>State the Line Item was transitioned to.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="LineItemStateTransitionMessagePayload.html#getToState()">getToState</a></code>&nbsp;in interface&nbsp;<code><a href="LineItemStateTransitionMessagePayload.html" title="interface in com.commercetools.api.models.message">LineItemStateTransitionMessagePayload</a></code></dd>

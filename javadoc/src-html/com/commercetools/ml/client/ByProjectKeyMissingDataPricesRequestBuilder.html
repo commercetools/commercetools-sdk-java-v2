@@ -18,25 +18,27 @@
 <span class="source-line-no">005</span><span id="line.5">import io.vrap.rmf.base.client.utils.Generated;</span>
 <span class="source-line-no">006</span><span id="line.6"></span>
 <span class="source-line-no">007</span><span id="line.7">@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")</span>
-<span class="source-line-no">008</span><span id="line.8">public class ByProjectKeyMissingDataPricesRequestBuilder {</span>
-<span class="source-line-no">009</span><span id="line.9"></span>
-<span class="source-line-no">010</span><span id="line.10">    private final ApiHttpClient apiHttpClient;</span>
-<span class="source-line-no">011</span><span id="line.11">    private final String projectKey;</span>
-<span class="source-line-no">012</span><span id="line.12"></span>
-<span class="source-line-no">013</span><span id="line.13">    public ByProjectKeyMissingDataPricesRequestBuilder(final ApiHttpClient apiHttpClient, final String projectKey) {</span>
-<span class="source-line-no">014</span><span id="line.14">        this.apiHttpClient = apiHttpClient;</span>
-<span class="source-line-no">015</span><span id="line.15">        this.projectKey = projectKey;</span>
-<span class="source-line-no">016</span><span id="line.16">    }</span>
-<span class="source-line-no">017</span><span id="line.17"></span>
-<span class="source-line-no">018</span><span id="line.18">    public ByProjectKeyMissingDataPricesPost post(</span>
-<span class="source-line-no">019</span><span id="line.19">            com.commercetools.ml.models.missing_data.MissingPricesSearchRequest missingPricesSearchRequest) {</span>
-<span class="source-line-no">020</span><span id="line.20">        return new ByProjectKeyMissingDataPricesPost(apiHttpClient, projectKey, missingPricesSearchRequest);</span>
-<span class="source-line-no">021</span><span id="line.21">    }</span>
-<span class="source-line-no">022</span><span id="line.22"></span>
-<span class="source-line-no">023</span><span id="line.23">    public ByProjectKeyMissingDataPricesStatusRequestBuilder status() {</span>
-<span class="source-line-no">024</span><span id="line.24">        return new ByProjectKeyMissingDataPricesStatusRequestBuilder(apiHttpClient, projectKey);</span>
-<span class="source-line-no">025</span><span id="line.25">    }</span>
-<span class="source-line-no">026</span><span id="line.26">}</span>
+<span class="source-line-no">008</span><span id="line.8">@Deprecated</span>
+<span class="source-line-no">009</span><span id="line.9">public class ByProjectKeyMissingDataPricesRequestBuilder {</span>
+<span class="source-line-no">010</span><span id="line.10"></span>
+<span class="source-line-no">011</span><span id="line.11">    private final ApiHttpClient apiHttpClient;</span>
+<span class="source-line-no">012</span><span id="line.12">    private final String projectKey;</span>
+<span class="source-line-no">013</span><span id="line.13"></span>
+<span class="source-line-no">014</span><span id="line.14">    public ByProjectKeyMissingDataPricesRequestBuilder(final ApiHttpClient apiHttpClient, final String projectKey) {</span>
+<span class="source-line-no">015</span><span id="line.15">        this.apiHttpClient = apiHttpClient;</span>
+<span class="source-line-no">016</span><span id="line.16">        this.projectKey = projectKey;</span>
+<span class="source-line-no">017</span><span id="line.17">    }</span>
+<span class="source-line-no">018</span><span id="line.18"></span>
+<span class="source-line-no">019</span><span id="line.19">    public ByProjectKeyMissingDataPricesPost post(</span>
+<span class="source-line-no">020</span><span id="line.20">            com.commercetools.ml.models.missing_data.MissingPricesSearchRequest missingPricesSearchRequest) {</span>
+<span class="source-line-no">021</span><span id="line.21">        return new ByProjectKeyMissingDataPricesPost(apiHttpClient, projectKey, missingPricesSearchRequest);</span>
+<span class="source-line-no">022</span><span id="line.22">    }</span>
+<span class="source-line-no">023</span><span id="line.23"></span>
+<span class="source-line-no">024</span><span id="line.24">    @Deprecated</span>
+<span class="source-line-no">025</span><span id="line.25">    public ByProjectKeyMissingDataPricesStatusRequestBuilder status() {</span>
+<span class="source-line-no">026</span><span id="line.26">        return new ByProjectKeyMissingDataPricesStatusRequestBuilder(apiHttpClient, projectKey);</span>
+<span class="source-line-no">027</span><span id="line.27">    }</span>
+<span class="source-line-no">028</span><span id="line.28">}</span>
 
 
 

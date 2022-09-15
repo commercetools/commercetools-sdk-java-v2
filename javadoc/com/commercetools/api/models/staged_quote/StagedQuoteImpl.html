@@ -139,12 +139,12 @@ implements <a href="StagedQuote.html" title="interface in com.commercetools.api.
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="../type/CustomFields.html" title="interface in com.commercetools.api.models.type">CustomFields</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getCustom()">getCustom</a></span>()</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
-<div class="block">Custom Fields of this Staged Quote.</div>
+<div class="block">Custom Fields of the Staged Quote.</div>
 </div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="../customer/CustomerReference.html" title="interface in com.commercetools.api.models.customer">CustomerReference</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getCustomer()">getCustomer</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
-<div class="block">The Buyer who requested the quote.</div>
+<div class="block">The Buyer who requested the Quote.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getId()">getId</a></span>()</code></div>
@@ -169,71 +169,79 @@ implements <a href="StagedQuote.html" title="interface in com.commercetools.api.
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="../cart/CartReference.html" title="interface in com.commercetools.api.models.cart">CartReference</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getQuotationCart()">getQuotationCart</a></span>()</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
-<div class="block">The Cart containing the offered items.</div>
+<div class="block">Cart containing the offered items.</div>
 </div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="../quote_request/QuoteRequestReference.html" title="interface in com.commercetools.api.models.quote_request">QuoteRequestReference</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getQuoteRequest()">getQuoteRequest</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
-<div class="block">The Quote Request related to this Staged Quote.</div>
+<div class="block">Quote Request related to the Staged Quote.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getSellerComment()">getSellerComment</a></span>()</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
-<div class="block">The text message included in the offer from the Seller.</div>
+<div class="block">Message from the Seller included in the offer.</div>
 </div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="StagedQuoteState.html" title="interface in com.commercetools.api.models.staged_quote">StagedQuoteState</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getStagedQuoteState()">getStagedQuoteState</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
 <div class="block">Predefined states tracking the status of the Staged Quote.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></code></div>
-<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getValidTo()">getValidTo</a></span>()</code></div>
+<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="../state/StateReference.html" title="interface in com.commercetools.api.models.state">StateReference</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getState()">getState</a></span>()</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
-<div class="block">Expiration date for the quote.</div>
+<div class="block">State of the Staged Quote.</div>
 </div>
-<div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></code></div>
-<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getVersion()">getVersion</a></span>()</code></div>
+<div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></code></div>
+<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getValidTo()">getValidTo</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">Expiration date for the Quote.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getVersion()">getVersion</a></span>()</code></div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
 <div class="block">Current version of the StagedQuote.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code>int</code></div>
-<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#hashCode()">hashCode</a></span>()</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#setCreatedAt(java.time.ZonedDateTime)">setCreatedAt</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a>&nbsp;createdAt)</code></div>
+<div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code>int</code></div>
+<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#hashCode()">hashCode</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#setCreatedBy(com.commercetools.api.models.common.CreatedBy)">setCreatedBy</a></span>&#8203;(<a href="../common/CreatedBy.html" title="interface in com.commercetools.api.models.common">CreatedBy</a>&nbsp;createdBy)</code></div>
+<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#setCreatedAt(java.time.ZonedDateTime)">setCreatedAt</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a>&nbsp;createdAt)</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#setCustom(com.commercetools.api.models.type.CustomFields)">setCustom</a></span>&#8203;(<a href="../type/CustomFields.html" title="interface in com.commercetools.api.models.type">CustomFields</a>&nbsp;custom)</code></div>
+<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#setCreatedBy(com.commercetools.api.models.common.CreatedBy)">setCreatedBy</a></span>&#8203;(<a href="../common/CreatedBy.html" title="interface in com.commercetools.api.models.common">CreatedBy</a>&nbsp;createdBy)</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#setCustomer(com.commercetools.api.models.customer.CustomerReference)">setCustomer</a></span>&#8203;(<a href="../customer/CustomerReference.html" title="interface in com.commercetools.api.models.customer">CustomerReference</a>&nbsp;customer)</code></div>
+<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#setCustom(com.commercetools.api.models.type.CustomFields)">setCustom</a></span>&#8203;(<a href="../type/CustomFields.html" title="interface in com.commercetools.api.models.type">CustomFields</a>&nbsp;custom)</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#setId(java.lang.String)">setId</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;id)</code></div>
+<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#setCustomer(com.commercetools.api.models.customer.CustomerReference)">setCustomer</a></span>&#8203;(<a href="../customer/CustomerReference.html" title="interface in com.commercetools.api.models.customer">CustomerReference</a>&nbsp;customer)</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#setKey(java.lang.String)">setKey</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key)</code></div>
+<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#setId(java.lang.String)">setId</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;id)</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#setLastModifiedAt(java.time.ZonedDateTime)">setLastModifiedAt</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a>&nbsp;lastModifiedAt)</code></div>
+<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#setKey(java.lang.String)">setKey</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key)</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#setLastModifiedBy(com.commercetools.api.models.common.LastModifiedBy)">setLastModifiedBy</a></span>&#8203;(<a href="../common/LastModifiedBy.html" title="interface in com.commercetools.api.models.common">LastModifiedBy</a>&nbsp;lastModifiedBy)</code></div>
+<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#setLastModifiedAt(java.time.ZonedDateTime)">setLastModifiedAt</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a>&nbsp;lastModifiedAt)</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#setQuotationCart(com.commercetools.api.models.cart.CartReference)">setQuotationCart</a></span>&#8203;(<a href="../cart/CartReference.html" title="interface in com.commercetools.api.models.cart">CartReference</a>&nbsp;quotationCart)</code></div>
+<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#setLastModifiedBy(com.commercetools.api.models.common.LastModifiedBy)">setLastModifiedBy</a></span>&#8203;(<a href="../common/LastModifiedBy.html" title="interface in com.commercetools.api.models.common">LastModifiedBy</a>&nbsp;lastModifiedBy)</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#setQuoteRequest(com.commercetools.api.models.quote_request.QuoteRequestReference)">setQuoteRequest</a></span>&#8203;(<a href="../quote_request/QuoteRequestReference.html" title="interface in com.commercetools.api.models.quote_request">QuoteRequestReference</a>&nbsp;quoteRequest)</code></div>
+<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#setQuotationCart(com.commercetools.api.models.cart.CartReference)">setQuotationCart</a></span>&#8203;(<a href="../cart/CartReference.html" title="interface in com.commercetools.api.models.cart">CartReference</a>&nbsp;quotationCart)</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#setSellerComment(java.lang.String)">setSellerComment</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;sellerComment)</code></div>
+<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#setQuoteRequest(com.commercetools.api.models.quote_request.QuoteRequestReference)">setQuoteRequest</a></span>&#8203;(<a href="../quote_request/QuoteRequestReference.html" title="interface in com.commercetools.api.models.quote_request">QuoteRequestReference</a>&nbsp;quoteRequest)</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#setStagedQuoteState(com.commercetools.api.models.staged_quote.StagedQuoteState)">setStagedQuoteState</a></span>&#8203;(<a href="StagedQuoteState.html" title="interface in com.commercetools.api.models.staged_quote">StagedQuoteState</a>&nbsp;stagedQuoteState)</code></div>
+<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#setSellerComment(java.lang.String)">setSellerComment</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;sellerComment)</code></div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#setStagedQuoteState(com.commercetools.api.models.staged_quote.StagedQuoteState)">setStagedQuoteState</a></span>&#8203;(<a href="StagedQuoteState.html" title="interface in com.commercetools.api.models.staged_quote">StagedQuoteState</a>&nbsp;stagedQuoteState)</code></div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#setState(com.commercetools.api.models.state.StateReference)">setState</a></span>&#8203;(<a href="../state/StateReference.html" title="interface in com.commercetools.api.models.state">StateReference</a>&nbsp;state)</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#setValidTo(java.time.ZonedDateTime)">setValidTo</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a>&nbsp;validTo)</code></div>
@@ -270,7 +278,7 @@ implements <a href="StagedQuote.html" title="interface in com.commercetools.api.
 <li>
 <section class="detail" id="&lt;init&gt;()">
 <h3>StagedQuoteImpl</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/staged_quote/StagedQuoteImpl.html#line.81">StagedQuoteImpl</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/staged_quote/StagedQuoteImpl.html#line.85">StagedQuoteImpl</a></span>()</div>
 </section>
 </li>
 </ul>
@@ -284,7 +292,7 @@ implements <a href="StagedQuote.html" title="interface in com.commercetools.api.
 <li>
 <section class="detail" id="getId()">
 <h3>getId</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/staged_quote/StagedQuoteImpl.html#line.88">getId</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/staged_quote/StagedQuoteImpl.html#line.92">getId</a></span>()</div>
 <div class="block"><p>The unique ID of the StagedQuote.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
@@ -297,7 +305,7 @@ implements <a href="StagedQuote.html" title="interface in com.commercetools.api.
 <li>
 <section class="detail" id="getVersion()">
 <h3>getVersion</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/staged_quote/StagedQuoteImpl.html#line.96">getVersion</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/staged_quote/StagedQuoteImpl.html#line.100">getVersion</a></span>()</div>
 <div class="block"><p>Current version of the StagedQuote.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
@@ -310,7 +318,7 @@ implements <a href="StagedQuote.html" title="interface in com.commercetools.api.
 <li>
 <section class="detail" id="getCreatedAt()">
 <h3>getCreatedAt</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/staged_quote/StagedQuoteImpl.html#line.104">getCreatedAt</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/staged_quote/StagedQuoteImpl.html#line.108">getCreatedAt</a></span>()</div>
 <div class="block"><p>Date and time (UTC) the StagedQuote was initially created.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
@@ -323,7 +331,7 @@ implements <a href="StagedQuote.html" title="interface in com.commercetools.api.
 <li>
 <section class="detail" id="getLastModifiedAt()">
 <h3>getLastModifiedAt</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/staged_quote/StagedQuoteImpl.html#line.112">getLastModifiedAt</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/staged_quote/StagedQuoteImpl.html#line.116">getLastModifiedAt</a></span>()</div>
 <div class="block"><p>Date and time (UTC) the StagedQuote was last updated.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
@@ -336,7 +344,7 @@ implements <a href="StagedQuote.html" title="interface in com.commercetools.api.
 <li>
 <section class="detail" id="getKey()">
 <h3>getKey</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/staged_quote/StagedQuoteImpl.html#line.120">getKey</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/staged_quote/StagedQuoteImpl.html#line.124">getKey</a></span>()</div>
 <div class="block"><p>User-specific unique identifier of the staged quote.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
@@ -347,7 +355,7 @@ implements <a href="StagedQuote.html" title="interface in com.commercetools.api.
 <li>
 <section class="detail" id="getLastModifiedBy()">
 <h3>getLastModifiedBy</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/LastModifiedBy.html" title="interface in com.commercetools.api.models.common">LastModifiedBy</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/staged_quote/StagedQuoteImpl.html#line.128">getLastModifiedBy</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/LastModifiedBy.html" title="interface in com.commercetools.api.models.common">LastModifiedBy</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/staged_quote/StagedQuoteImpl.html#line.132">getLastModifiedBy</a></span>()</div>
 <div class="block"><p>Present on resources created after 1 February 2019 except for events not tracked.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
@@ -358,7 +366,7 @@ implements <a href="StagedQuote.html" title="interface in com.commercetools.api.
 <li>
 <section class="detail" id="getCreatedBy()">
 <h3>getCreatedBy</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/CreatedBy.html" title="interface in com.commercetools.api.models.common">CreatedBy</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/staged_quote/StagedQuoteImpl.html#line.136">getCreatedBy</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/CreatedBy.html" title="interface in com.commercetools.api.models.common">CreatedBy</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/staged_quote/StagedQuoteImpl.html#line.140">getCreatedBy</a></span>()</div>
 <div class="block"><p>Present on resources created after 1 February 2019 except for events not tracked.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
@@ -369,7 +377,7 @@ implements <a href="StagedQuote.html" title="interface in com.commercetools.api.
 <li>
 <section class="detail" id="getStagedQuoteState()">
 <h3>getStagedQuoteState</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="StagedQuoteState.html" title="interface in com.commercetools.api.models.staged_quote">StagedQuoteState</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/staged_quote/StagedQuoteImpl.html#line.144">getStagedQuoteState</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="StagedQuoteState.html" title="interface in com.commercetools.api.models.staged_quote">StagedQuoteState</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/staged_quote/StagedQuoteImpl.html#line.148">getStagedQuoteState</a></span>()</div>
 <div class="block"><p>Predefined states tracking the status of the Staged Quote.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
@@ -380,8 +388,8 @@ implements <a href="StagedQuote.html" title="interface in com.commercetools.api.
 <li>
 <section class="detail" id="getCustomer()">
 <h3>getCustomer</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../customer/CustomerReference.html" title="interface in com.commercetools.api.models.customer">CustomerReference</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/staged_quote/StagedQuoteImpl.html#line.152">getCustomer</a></span>()</div>
-<div class="block"><p>The Buyer who requested the quote.</p></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../customer/CustomerReference.html" title="interface in com.commercetools.api.models.customer">CustomerReference</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/staged_quote/StagedQuoteImpl.html#line.156">getCustomer</a></span>()</div>
+<div class="block"><p>The Buyer who requested the Quote.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="StagedQuote.html#getCustomer()">getCustomer</a></code>&nbsp;in interface&nbsp;<code><a href="StagedQuote.html" title="interface in com.commercetools.api.models.staged_quote">StagedQuote</a></code></dd>
@@ -391,8 +399,8 @@ implements <a href="StagedQuote.html" title="interface in com.commercetools.api.
 <li>
 <section class="detail" id="getQuoteRequest()">
 <h3>getQuoteRequest</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../quote_request/QuoteRequestReference.html" title="interface in com.commercetools.api.models.quote_request">QuoteRequestReference</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/staged_quote/StagedQuoteImpl.html#line.160">getQuoteRequest</a></span>()</div>
-<div class="block"><p>The Quote Request related to this Staged Quote.</p></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../quote_request/QuoteRequestReference.html" title="interface in com.commercetools.api.models.quote_request">QuoteRequestReference</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/staged_quote/StagedQuoteImpl.html#line.164">getQuoteRequest</a></span>()</div>
+<div class="block"><p>Quote Request related to the Staged Quote.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="StagedQuote.html#getQuoteRequest()">getQuoteRequest</a></code>&nbsp;in interface&nbsp;<code><a href="StagedQuote.html" title="interface in com.commercetools.api.models.staged_quote">StagedQuote</a></code></dd>
@@ -402,8 +410,8 @@ implements <a href="StagedQuote.html" title="interface in com.commercetools.api.
 <li>
 <section class="detail" id="getQuotationCart()">
 <h3>getQuotationCart</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../cart/CartReference.html" title="interface in com.commercetools.api.models.cart">CartReference</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/staged_quote/StagedQuoteImpl.html#line.168">getQuotationCart</a></span>()</div>
-<div class="block"><p>The Cart containing the offered items.</p></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../cart/CartReference.html" title="interface in com.commercetools.api.models.cart">CartReference</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/staged_quote/StagedQuoteImpl.html#line.172">getQuotationCart</a></span>()</div>
+<div class="block"><p>Cart containing the offered items. May contain either DirectDiscounts or CartDiscounts.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="StagedQuote.html#getQuotationCart()">getQuotationCart</a></code>&nbsp;in interface&nbsp;<code><a href="StagedQuote.html" title="interface in com.commercetools.api.models.staged_quote">StagedQuote</a></code></dd>
@@ -413,8 +421,8 @@ implements <a href="StagedQuote.html" title="interface in com.commercetools.api.
 <li>
 <section class="detail" id="getValidTo()">
 <h3>getValidTo</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/staged_quote/StagedQuoteImpl.html#line.176">getValidTo</a></span>()</div>
-<div class="block"><p>Expiration date for the quote.</p></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/staged_quote/StagedQuoteImpl.html#line.180">getValidTo</a></span>()</div>
+<div class="block"><p>Expiration date for the Quote.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="StagedQuote.html#getValidTo()">getValidTo</a></code>&nbsp;in interface&nbsp;<code><a href="StagedQuote.html" title="interface in com.commercetools.api.models.staged_quote">StagedQuote</a></code></dd>
@@ -424,8 +432,8 @@ implements <a href="StagedQuote.html" title="interface in com.commercetools.api.
 <li>
 <section class="detail" id="getSellerComment()">
 <h3>getSellerComment</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/staged_quote/StagedQuoteImpl.html#line.184">getSellerComment</a></span>()</div>
-<div class="block"><p>The text message included in the offer from the Seller.</p></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/staged_quote/StagedQuoteImpl.html#line.188">getSellerComment</a></span>()</div>
+<div class="block"><p>Message from the Seller included in the offer.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="StagedQuote.html#getSellerComment()">getSellerComment</a></code>&nbsp;in interface&nbsp;<code><a href="StagedQuote.html" title="interface in com.commercetools.api.models.staged_quote">StagedQuote</a></code></dd>
@@ -435,8 +443,8 @@ implements <a href="StagedQuote.html" title="interface in com.commercetools.api.
 <li>
 <section class="detail" id="getCustom()">
 <h3>getCustom</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../type/CustomFields.html" title="interface in com.commercetools.api.models.type">CustomFields</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/staged_quote/StagedQuoteImpl.html#line.192">getCustom</a></span>()</div>
-<div class="block"><p>Custom Fields of this Staged Quote.</p></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../type/CustomFields.html" title="interface in com.commercetools.api.models.type">CustomFields</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/staged_quote/StagedQuoteImpl.html#line.196">getCustom</a></span>()</div>
+<div class="block"><p>Custom Fields of the Staged Quote.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="StagedQuote.html#getCustom()">getCustom</a></code>&nbsp;in interface&nbsp;<code><a href="StagedQuote.html" title="interface in com.commercetools.api.models.staged_quote">StagedQuote</a></code></dd>
@@ -444,9 +452,20 @@ implements <a href="StagedQuote.html" title="interface in com.commercetools.api.
 </section>
 </li>
 <li>
+<section class="detail" id="getState()">
+<h3>getState</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../state/StateReference.html" title="interface in com.commercetools.api.models.state">StateReference</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/staged_quote/StagedQuoteImpl.html#line.204">getState</a></span>()</div>
+<div class="block"><p>State of the Staged Quote. This reference can point to a State in a custom workflow.</p></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="StagedQuote.html#getState()">getState</a></code>&nbsp;in interface&nbsp;<code><a href="StagedQuote.html" title="interface in com.commercetools.api.models.staged_quote">StagedQuote</a></code></dd>
+</dl>
+</section>
+</li>
+<li>
 <section class="detail" id="setId(java.lang.String)">
 <h3>setId</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/staged_quote/StagedQuoteImpl.html#line.196">setId</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;id)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/staged_quote/StagedQuoteImpl.html#line.208">setId</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;id)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../common/BaseResource.html#setId(java.lang.String)">setId</a></code>&nbsp;in interface&nbsp;<code><a href="../common/BaseResource.html" title="interface in com.commercetools.api.models.common">BaseResource</a></code></dd>
@@ -458,7 +477,7 @@ implements <a href="StagedQuote.html" title="interface in com.commercetools.api.
 <li>
 <section class="detail" id="setVersion(java.lang.Long)">
 <h3>setVersion</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/staged_quote/StagedQuoteImpl.html#line.200">setVersion</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;version)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/staged_quote/StagedQuoteImpl.html#line.212">setVersion</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;version)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../common/BaseResource.html#setVersion(java.lang.Long)">setVersion</a></code>&nbsp;in interface&nbsp;<code><a href="../common/BaseResource.html" title="interface in com.commercetools.api.models.common">BaseResource</a></code></dd>
@@ -470,7 +489,7 @@ implements <a href="StagedQuote.html" title="interface in com.commercetools.api.
 <li>
 <section class="detail" id="setCreatedAt(java.time.ZonedDateTime)">
 <h3>setCreatedAt</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/staged_quote/StagedQuoteImpl.html#line.204">setCreatedAt</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a>&nbsp;createdAt)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/staged_quote/StagedQuoteImpl.html#line.216">setCreatedAt</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a>&nbsp;createdAt)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../common/BaseResource.html#setCreatedAt(java.time.ZonedDateTime)">setCreatedAt</a></code>&nbsp;in interface&nbsp;<code><a href="../common/BaseResource.html" title="interface in com.commercetools.api.models.common">BaseResource</a></code></dd>
@@ -482,7 +501,7 @@ implements <a href="StagedQuote.html" title="interface in com.commercetools.api.
 <li>
 <section class="detail" id="setLastModifiedAt(java.time.ZonedDateTime)">
 <h3>setLastModifiedAt</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/staged_quote/StagedQuoteImpl.html#line.208">setLastModifiedAt</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a>&nbsp;lastModifiedAt)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/staged_quote/StagedQuoteImpl.html#line.220">setLastModifiedAt</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a>&nbsp;lastModifiedAt)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../common/BaseResource.html#setLastModifiedAt(java.time.ZonedDateTime)">setLastModifiedAt</a></code>&nbsp;in interface&nbsp;<code><a href="../common/BaseResource.html" title="interface in com.commercetools.api.models.common">BaseResource</a></code></dd>
@@ -494,7 +513,7 @@ implements <a href="StagedQuote.html" title="interface in com.commercetools.api.
 <li>
 <section class="detail" id="setKey(java.lang.String)">
 <h3>setKey</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/staged_quote/StagedQuoteImpl.html#line.212">setKey</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/staged_quote/StagedQuoteImpl.html#line.224">setKey</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="StagedQuote.html#setKey(java.lang.String)">setKey</a></code>&nbsp;in interface&nbsp;<code><a href="StagedQuote.html" title="interface in com.commercetools.api.models.staged_quote">StagedQuote</a></code></dd>
@@ -504,7 +523,7 @@ implements <a href="StagedQuote.html" title="interface in com.commercetools.api.
 <li>
 <section class="detail" id="setLastModifiedBy(com.commercetools.api.models.common.LastModifiedBy)">
 <h3>setLastModifiedBy</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/staged_quote/StagedQuoteImpl.html#line.216">setLastModifiedBy</a></span>&#8203;<span class="parameters">(<a href="../common/LastModifiedBy.html" title="interface in com.commercetools.api.models.common">LastModifiedBy</a>&nbsp;lastModifiedBy)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/staged_quote/StagedQuoteImpl.html#line.228">setLastModifiedBy</a></span>&#8203;<span class="parameters">(<a href="../common/LastModifiedBy.html" title="interface in com.commercetools.api.models.common">LastModifiedBy</a>&nbsp;lastModifiedBy)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="StagedQuote.html#setLastModifiedBy(com.commercetools.api.models.common.LastModifiedBy)">setLastModifiedBy</a></code>&nbsp;in interface&nbsp;<code><a href="StagedQuote.html" title="interface in com.commercetools.api.models.staged_quote">StagedQuote</a></code></dd>
@@ -514,7 +533,7 @@ implements <a href="StagedQuote.html" title="interface in com.commercetools.api.
 <li>
 <section class="detail" id="setCreatedBy(com.commercetools.api.models.common.CreatedBy)">
 <h3>setCreatedBy</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/staged_quote/StagedQuoteImpl.html#line.220">setCreatedBy</a></span>&#8203;<span class="parameters">(<a href="../common/CreatedBy.html" title="interface in com.commercetools.api.models.common">CreatedBy</a>&nbsp;createdBy)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/staged_quote/StagedQuoteImpl.html#line.232">setCreatedBy</a></span>&#8203;<span class="parameters">(<a href="../common/CreatedBy.html" title="interface in com.commercetools.api.models.common">CreatedBy</a>&nbsp;createdBy)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="StagedQuote.html#setCreatedBy(com.commercetools.api.models.common.CreatedBy)">setCreatedBy</a></code>&nbsp;in interface&nbsp;<code><a href="StagedQuote.html" title="interface in com.commercetools.api.models.staged_quote">StagedQuote</a></code></dd>
@@ -524,7 +543,7 @@ implements <a href="StagedQuote.html" title="interface in com.commercetools.api.
 <li>
 <section class="detail" id="setStagedQuoteState(com.commercetools.api.models.staged_quote.StagedQuoteState)">
 <h3>setStagedQuoteState</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/staged_quote/StagedQuoteImpl.html#line.224">setStagedQuoteState</a></span>&#8203;<span class="parameters">(<a href="StagedQuoteState.html" title="interface in com.commercetools.api.models.staged_quote">StagedQuoteState</a>&nbsp;stagedQuoteState)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/staged_quote/StagedQuoteImpl.html#line.236">setStagedQuoteState</a></span>&#8203;<span class="parameters">(<a href="StagedQuoteState.html" title="interface in com.commercetools.api.models.staged_quote">StagedQuoteState</a>&nbsp;stagedQuoteState)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="StagedQuote.html#setStagedQuoteState(com.commercetools.api.models.staged_quote.StagedQuoteState)">setStagedQuoteState</a></code>&nbsp;in interface&nbsp;<code><a href="StagedQuote.html" title="interface in com.commercetools.api.models.staged_quote">StagedQuote</a></code></dd>
@@ -534,7 +553,7 @@ implements <a href="StagedQuote.html" title="interface in com.commercetools.api.
 <li>
 <section class="detail" id="setCustomer(com.commercetools.api.models.customer.CustomerReference)">
 <h3>setCustomer</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/staged_quote/StagedQuoteImpl.html#line.228">setCustomer</a></span>&#8203;<span class="parameters">(<a href="../customer/CustomerReference.html" title="interface in com.commercetools.api.models.customer">CustomerReference</a>&nbsp;customer)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/staged_quote/StagedQuoteImpl.html#line.240">setCustomer</a></span>&#8203;<span class="parameters">(<a href="../customer/CustomerReference.html" title="interface in com.commercetools.api.models.customer">CustomerReference</a>&nbsp;customer)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="StagedQuote.html#setCustomer(com.commercetools.api.models.customer.CustomerReference)">setCustomer</a></code>&nbsp;in interface&nbsp;<code><a href="StagedQuote.html" title="interface in com.commercetools.api.models.staged_quote">StagedQuote</a></code></dd>
@@ -544,7 +563,7 @@ implements <a href="StagedQuote.html" title="interface in com.commercetools.api.
 <li>
 <section class="detail" id="setQuoteRequest(com.commercetools.api.models.quote_request.QuoteRequestReference)">
 <h3>setQuoteRequest</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/staged_quote/StagedQuoteImpl.html#line.232">setQuoteRequest</a></span>&#8203;<span class="parameters">(<a href="../quote_request/QuoteRequestReference.html" title="interface in com.commercetools.api.models.quote_request">QuoteRequestReference</a>&nbsp;quoteRequest)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/staged_quote/StagedQuoteImpl.html#line.244">setQuoteRequest</a></span>&#8203;<span class="parameters">(<a href="../quote_request/QuoteRequestReference.html" title="interface in com.commercetools.api.models.quote_request">QuoteRequestReference</a>&nbsp;quoteRequest)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="StagedQuote.html#setQuoteRequest(com.commercetools.api.models.quote_request.QuoteRequestReference)">setQuoteRequest</a></code>&nbsp;in interface&nbsp;<code><a href="StagedQuote.html" title="interface in com.commercetools.api.models.staged_quote">StagedQuote</a></code></dd>
@@ -554,7 +573,7 @@ implements <a href="StagedQuote.html" title="interface in com.commercetools.api.
 <li>
 <section class="detail" id="setQuotationCart(com.commercetools.api.models.cart.CartReference)">
 <h3>setQuotationCart</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/staged_quote/StagedQuoteImpl.html#line.236">setQuotationCart</a></span>&#8203;<span class="parameters">(<a href="../cart/CartReference.html" title="interface in com.commercetools.api.models.cart">CartReference</a>&nbsp;quotationCart)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/staged_quote/StagedQuoteImpl.html#line.248">setQuotationCart</a></span>&#8203;<span class="parameters">(<a href="../cart/CartReference.html" title="interface in com.commercetools.api.models.cart">CartReference</a>&nbsp;quotationCart)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="StagedQuote.html#setQuotationCart(com.commercetools.api.models.cart.CartReference)">setQuotationCart</a></code>&nbsp;in interface&nbsp;<code><a href="StagedQuote.html" title="interface in com.commercetools.api.models.staged_quote">StagedQuote</a></code></dd>
@@ -564,7 +583,7 @@ implements <a href="StagedQuote.html" title="interface in com.commercetools.api.
 <li>
 <section class="detail" id="setValidTo(java.time.ZonedDateTime)">
 <h3>setValidTo</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/staged_quote/StagedQuoteImpl.html#line.240">setValidTo</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a>&nbsp;validTo)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/staged_quote/StagedQuoteImpl.html#line.252">setValidTo</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a>&nbsp;validTo)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="StagedQuote.html#setValidTo(java.time.ZonedDateTime)">setValidTo</a></code>&nbsp;in interface&nbsp;<code><a href="StagedQuote.html" title="interface in com.commercetools.api.models.staged_quote">StagedQuote</a></code></dd>
@@ -574,7 +593,7 @@ implements <a href="StagedQuote.html" title="interface in com.commercetools.api.
 <li>
 <section class="detail" id="setSellerComment(java.lang.String)">
 <h3>setSellerComment</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/staged_quote/StagedQuoteImpl.html#line.244">setSellerComment</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;sellerComment)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/staged_quote/StagedQuoteImpl.html#line.256">setSellerComment</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;sellerComment)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="StagedQuote.html#setSellerComment(java.lang.String)">setSellerComment</a></code>&nbsp;in interface&nbsp;<code><a href="StagedQuote.html" title="interface in com.commercetools.api.models.staged_quote">StagedQuote</a></code></dd>
@@ -584,7 +603,7 @@ implements <a href="StagedQuote.html" title="interface in com.commercetools.api.
 <li>
 <section class="detail" id="setCustom(com.commercetools.api.models.type.CustomFields)">
 <h3>setCustom</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/staged_quote/StagedQuoteImpl.html#line.248">setCustom</a></span>&#8203;<span class="parameters">(<a href="../type/CustomFields.html" title="interface in com.commercetools.api.models.type">CustomFields</a>&nbsp;custom)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/staged_quote/StagedQuoteImpl.html#line.260">setCustom</a></span>&#8203;<span class="parameters">(<a href="../type/CustomFields.html" title="interface in com.commercetools.api.models.type">CustomFields</a>&nbsp;custom)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="StagedQuote.html#setCustom(com.commercetools.api.models.type.CustomFields)">setCustom</a></code>&nbsp;in interface&nbsp;<code><a href="StagedQuote.html" title="interface in com.commercetools.api.models.staged_quote">StagedQuote</a></code></dd>
@@ -592,9 +611,19 @@ implements <a href="StagedQuote.html" title="interface in com.commercetools.api.
 </section>
 </li>
 <li>
+<section class="detail" id="setState(com.commercetools.api.models.state.StateReference)">
+<h3>setState</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/staged_quote/StagedQuoteImpl.html#line.264">setState</a></span>&#8203;<span class="parameters">(<a href="../state/StateReference.html" title="interface in com.commercetools.api.models.state">StateReference</a>&nbsp;state)</span></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="StagedQuote.html#setState(com.commercetools.api.models.state.StateReference)">setState</a></code>&nbsp;in interface&nbsp;<code><a href="StagedQuote.html" title="interface in com.commercetools.api.models.staged_quote">StagedQuote</a></code></dd>
+</dl>
+</section>
+</li>
+<li>
 <section class="detail" id="equals(java.lang.Object)">
 <h3>equals</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/staged_quote/StagedQuoteImpl.html#line.252">equals</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;o)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/staged_quote/StagedQuoteImpl.html#line.268">equals</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;o)</span></div>
 <dl class="notes">
 <dt>Overrides:</dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#equals(java.lang.Object)" title="class or interface in java.lang" class="external-link">equals</a></code>&nbsp;in class&nbsp;<code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></code></dd>
@@ -604,7 +633,7 @@ implements <a href="StagedQuote.html" title="interface in com.commercetools.api.
 <li>
 <section class="detail" id="hashCode()">
 <h3>hashCode</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/staged_quote/StagedQuoteImpl.html#line.279">hashCode</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/staged_quote/StagedQuoteImpl.html#line.296">hashCode</a></span>()</div>
 <dl class="notes">
 <dt>Overrides:</dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#hashCode()" title="class or interface in java.lang" class="external-link">hashCode</a></code>&nbsp;in class&nbsp;<code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></code></dd>

@@ -86,7 +86,7 @@ loadScripts(document, 'script');</script>
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductAddAssetActionImpl.html#line.20">ProductAddAssetActionImpl</a></span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
 implements <a href="ProductAddAssetAction.html" title="interface in com.commercetools.api.models.product">ProductAddAssetAction</a>, <a href="../../../../../io/vrap/rmf/base/client/ModelBase.html" title="interface in io.vrap.rmf.base.client">ModelBase</a></span></div>
-<div class="block">ProductAddAssetAction</div>
+<div class="block"><p>Either <code>variantId</code> or <code>sku</code> is required.</p></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -140,21 +140,29 @@ implements <a href="ProductAddAssetAction.html" title="interface in com.commerce
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="../common/AssetDraft.html" title="interface in com.commercetools.api.models.common">AssetDraft</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getAsset()">getAsset</a></span>()</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">Value to append.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getPosition()">getPosition</a></span>()</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
-<div class="block">Position of the new asset inside the existing list (from <code>0</code> to the size of the list)</div>
+<div class="block">Position in <code>assets</code> where the Asset should be put.</div>
 </div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getSku()">getSku</a></span>()</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">The <code>sku</code> of the ProductVariant to update.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getStaged()">getStaged</a></span>()</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">If <code>true</code>, only the staged <code>assets</code> are updated.</div>
+</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getVariantId()">getVariantId</a></span>()</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">The <code>id</code> of the ProductVariant to update.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code>int</code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#hashCode()">hashCode</a></span>()</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
@@ -232,6 +240,7 @@ implements <a href="ProductAddAssetAction.html" title="interface in com.commerce
 <section class="detail" id="getVariantId()">
 <h3>getVariantId</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductAddAssetActionImpl.html#line.64">getVariantId</a></span>()</div>
+<div class="block"><p>The <code>id</code> of the ProductVariant to update.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="ProductAddAssetAction.html#getVariantId()">getVariantId</a></code>&nbsp;in interface&nbsp;<code><a href="ProductAddAssetAction.html" title="interface in com.commercetools.api.models.product">ProductAddAssetAction</a></code></dd>
@@ -242,6 +251,7 @@ implements <a href="ProductAddAssetAction.html" title="interface in com.commerce
 <section class="detail" id="getSku()">
 <h3>getSku</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductAddAssetActionImpl.html#line.72">getSku</a></span>()</div>
+<div class="block"><p>The <code>sku</code> of the ProductVariant to update.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="ProductAddAssetAction.html#getSku()">getSku</a></code>&nbsp;in interface&nbsp;<code><a href="ProductAddAssetAction.html" title="interface in com.commercetools.api.models.product">ProductAddAssetAction</a></code></dd>
@@ -252,6 +262,7 @@ implements <a href="ProductAddAssetAction.html" title="interface in com.commerce
 <section class="detail" id="getStaged()">
 <h3>getStaged</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductAddAssetActionImpl.html#line.80">getStaged</a></span>()</div>
+<div class="block"><p>If <code>true</code>, only the staged <code>assets</code> are updated. If <code>false</code>, both the current and staged <code>assets</code> are updated.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="ProductAddAssetAction.html#getStaged()">getStaged</a></code>&nbsp;in interface&nbsp;<code><a href="ProductAddAssetAction.html" title="interface in com.commercetools.api.models.product">ProductAddAssetAction</a></code></dd>
@@ -262,6 +273,7 @@ implements <a href="ProductAddAssetAction.html" title="interface in com.commerce
 <section class="detail" id="getAsset()">
 <h3>getAsset</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/AssetDraft.html" title="interface in com.commercetools.api.models.common">AssetDraft</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductAddAssetActionImpl.html#line.88">getAsset</a></span>()</div>
+<div class="block"><p>Value to append.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="ProductAddAssetAction.html#getAsset()">getAsset</a></code>&nbsp;in interface&nbsp;<code><a href="ProductAddAssetAction.html" title="interface in com.commercetools.api.models.product">ProductAddAssetAction</a></code></dd>
@@ -272,7 +284,7 @@ implements <a href="ProductAddAssetAction.html" title="interface in com.commerce
 <section class="detail" id="getPosition()">
 <h3>getPosition</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductAddAssetActionImpl.html#line.96">getPosition</a></span>()</div>
-<div class="block"><p>Position of the new asset inside the existing list (from <code>0</code> to the size of the list)</p></div>
+<div class="block"><p>Position in <code>assets</code> where the Asset should be put. When specified, the value must be between <code>0</code> and the total number of Assets minus <code>1</code>.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="ProductAddAssetAction.html#getPosition()">getPosition</a></code>&nbsp;in interface&nbsp;<code><a href="ProductAddAssetAction.html" title="interface in com.commercetools.api.models.product">ProductAddAssetAction</a></code></dd>

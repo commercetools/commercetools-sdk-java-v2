@@ -139,7 +139,7 @@ implements <a href="QuoteRequestDraft.html" title="interface in com.commercetool
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getComment()">getComment</a></span>()</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
-<div class="block">Text message included in the request.</div>
+<div class="block">Message from the Buyer included in the Quote Request.</div>
 </div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="../type/CustomFieldsDraft.html" title="interface in com.commercetools.api.models.type">CustomFieldsDraft</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getCustom()">getCustom</a></span>()</code></div>
@@ -151,23 +151,31 @@ implements <a href="QuoteRequestDraft.html" title="interface in com.commercetool
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
 <div class="block">User-defined unique identifier for the QuoteRequest.</div>
 </div>
-<div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code>int</code></div>
-<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#hashCode()">hashCode</a></span>()</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#setCart(com.commercetools.api.models.cart.CartResourceIdentifier)">setCart</a></span>&#8203;(<a href="../cart/CartResourceIdentifier.html" title="interface in com.commercetools.api.models.cart">CartResourceIdentifier</a>&nbsp;cart)</code></div>
+<div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="../state/StateReference.html" title="interface in com.commercetools.api.models.state">StateReference</a></code></div>
+<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getState()">getState</a></span>()</code></div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">State of this Quote Request.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code>int</code></div>
+<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#hashCode()">hashCode</a></span>()</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#setCartVersion(java.lang.Long)">setCartVersion</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;cartVersion)</code></div>
+<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#setCart(com.commercetools.api.models.cart.CartResourceIdentifier)">setCart</a></span>&#8203;(<a href="../cart/CartResourceIdentifier.html" title="interface in com.commercetools.api.models.cart">CartResourceIdentifier</a>&nbsp;cart)</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#setComment(java.lang.String)">setComment</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;comment)</code></div>
+<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#setCartVersion(java.lang.Long)">setCartVersion</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;cartVersion)</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#setCustom(com.commercetools.api.models.type.CustomFieldsDraft)">setCustom</a></span>&#8203;(<a href="../type/CustomFieldsDraft.html" title="interface in com.commercetools.api.models.type">CustomFieldsDraft</a>&nbsp;custom)</code></div>
+<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#setComment(java.lang.String)">setComment</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;comment)</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#setKey(java.lang.String)">setKey</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key)</code></div>
+<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#setCustom(com.commercetools.api.models.type.CustomFieldsDraft)">setCustom</a></span>&#8203;(<a href="../type/CustomFieldsDraft.html" title="interface in com.commercetools.api.models.type">CustomFieldsDraft</a>&nbsp;custom)</code></div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#setKey(java.lang.String)">setKey</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key)</code></div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#setState(com.commercetools.api.models.state.StateReference)">setState</a></span>&#8203;(<a href="../state/StateReference.html" title="interface in com.commercetools.api.models.state">StateReference</a>&nbsp;state)</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
 </div>
 </div>
@@ -195,7 +203,7 @@ implements <a href="QuoteRequestDraft.html" title="interface in com.commercetool
 <li>
 <section class="detail" id="&lt;init&gt;()">
 <h3>QuoteRequestDraftImpl</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/quote_request/QuoteRequestDraftImpl.html#line.45">QuoteRequestDraftImpl</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/quote_request/QuoteRequestDraftImpl.html#line.49">QuoteRequestDraftImpl</a></span>()</div>
 </section>
 </li>
 </ul>
@@ -209,7 +217,7 @@ implements <a href="QuoteRequestDraft.html" title="interface in com.commercetool
 <li>
 <section class="detail" id="getCart()">
 <h3>getCart</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../cart/CartResourceIdentifier.html" title="interface in com.commercetools.api.models.cart">CartResourceIdentifier</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/quote_request/QuoteRequestDraftImpl.html#line.52">getCart</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../cart/CartResourceIdentifier.html" title="interface in com.commercetools.api.models.cart">CartResourceIdentifier</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/quote_request/QuoteRequestDraftImpl.html#line.56">getCart</a></span>()</div>
 <div class="block"><p>Cart for which a Quote is requested. Anonymous Carts as well as Carts with Discount Codes are not supported.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
@@ -220,7 +228,7 @@ implements <a href="QuoteRequestDraft.html" title="interface in com.commercetool
 <li>
 <section class="detail" id="getCartVersion()">
 <h3>getCartVersion</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/quote_request/QuoteRequestDraftImpl.html#line.60">getCartVersion</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/quote_request/QuoteRequestDraftImpl.html#line.64">getCartVersion</a></span>()</div>
 <div class="block"><p>Current version of the referenced Cart.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
@@ -231,7 +239,7 @@ implements <a href="QuoteRequestDraft.html" title="interface in com.commercetool
 <li>
 <section class="detail" id="getKey()">
 <h3>getKey</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/quote_request/QuoteRequestDraftImpl.html#line.68">getKey</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/quote_request/QuoteRequestDraftImpl.html#line.72">getKey</a></span>()</div>
 <div class="block"><p>User-defined unique identifier for the QuoteRequest.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
@@ -242,8 +250,8 @@ implements <a href="QuoteRequestDraft.html" title="interface in com.commercetool
 <li>
 <section class="detail" id="getComment()">
 <h3>getComment</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/quote_request/QuoteRequestDraftImpl.html#line.76">getComment</a></span>()</div>
-<div class="block"><p>Text message included in the request.</p></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/quote_request/QuoteRequestDraftImpl.html#line.80">getComment</a></span>()</div>
+<div class="block"><p>Message from the Buyer included in the Quote Request.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="QuoteRequestDraft.html#getComment()">getComment</a></code>&nbsp;in interface&nbsp;<code><a href="QuoteRequestDraft.html" title="interface in com.commercetools.api.models.quote_request">QuoteRequestDraft</a></code></dd>
@@ -253,7 +261,7 @@ implements <a href="QuoteRequestDraft.html" title="interface in com.commercetool
 <li>
 <section class="detail" id="getCustom()">
 <h3>getCustom</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../type/CustomFieldsDraft.html" title="interface in com.commercetools.api.models.type">CustomFieldsDraft</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/quote_request/QuoteRequestDraftImpl.html#line.84">getCustom</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../type/CustomFieldsDraft.html" title="interface in com.commercetools.api.models.type">CustomFieldsDraft</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/quote_request/QuoteRequestDraftImpl.html#line.88">getCustom</a></span>()</div>
 <div class="block"><p>Custom Fields to be added to the Quote Request.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
@@ -262,9 +270,20 @@ implements <a href="QuoteRequestDraft.html" title="interface in com.commercetool
 </section>
 </li>
 <li>
+<section class="detail" id="getState()">
+<h3>getState</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../state/StateReference.html" title="interface in com.commercetools.api.models.state">StateReference</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/quote_request/QuoteRequestDraftImpl.html#line.96">getState</a></span>()</div>
+<div class="block"><p>State of this Quote Request. This reference can point to a State in a custom workflow.</p></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="QuoteRequestDraft.html#getState()">getState</a></code>&nbsp;in interface&nbsp;<code><a href="QuoteRequestDraft.html" title="interface in com.commercetools.api.models.quote_request">QuoteRequestDraft</a></code></dd>
+</dl>
+</section>
+</li>
+<li>
 <section class="detail" id="setCart(com.commercetools.api.models.cart.CartResourceIdentifier)">
 <h3>setCart</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/quote_request/QuoteRequestDraftImpl.html#line.88">setCart</a></span>&#8203;<span class="parameters">(<a href="../cart/CartResourceIdentifier.html" title="interface in com.commercetools.api.models.cart">CartResourceIdentifier</a>&nbsp;cart)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/quote_request/QuoteRequestDraftImpl.html#line.100">setCart</a></span>&#8203;<span class="parameters">(<a href="../cart/CartResourceIdentifier.html" title="interface in com.commercetools.api.models.cart">CartResourceIdentifier</a>&nbsp;cart)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="QuoteRequestDraft.html#setCart(com.commercetools.api.models.cart.CartResourceIdentifier)">setCart</a></code>&nbsp;in interface&nbsp;<code><a href="QuoteRequestDraft.html" title="interface in com.commercetools.api.models.quote_request">QuoteRequestDraft</a></code></dd>
@@ -274,7 +293,7 @@ implements <a href="QuoteRequestDraft.html" title="interface in com.commercetool
 <li>
 <section class="detail" id="setCartVersion(java.lang.Long)">
 <h3>setCartVersion</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/quote_request/QuoteRequestDraftImpl.html#line.92">setCartVersion</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;cartVersion)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/quote_request/QuoteRequestDraftImpl.html#line.104">setCartVersion</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;cartVersion)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="QuoteRequestDraft.html#setCartVersion(java.lang.Long)">setCartVersion</a></code>&nbsp;in interface&nbsp;<code><a href="QuoteRequestDraft.html" title="interface in com.commercetools.api.models.quote_request">QuoteRequestDraft</a></code></dd>
@@ -284,7 +303,7 @@ implements <a href="QuoteRequestDraft.html" title="interface in com.commercetool
 <li>
 <section class="detail" id="setKey(java.lang.String)">
 <h3>setKey</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/quote_request/QuoteRequestDraftImpl.html#line.96">setKey</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/quote_request/QuoteRequestDraftImpl.html#line.108">setKey</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="QuoteRequestDraft.html#setKey(java.lang.String)">setKey</a></code>&nbsp;in interface&nbsp;<code><a href="QuoteRequestDraft.html" title="interface in com.commercetools.api.models.quote_request">QuoteRequestDraft</a></code></dd>
@@ -294,7 +313,7 @@ implements <a href="QuoteRequestDraft.html" title="interface in com.commercetool
 <li>
 <section class="detail" id="setComment(java.lang.String)">
 <h3>setComment</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/quote_request/QuoteRequestDraftImpl.html#line.100">setComment</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;comment)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/quote_request/QuoteRequestDraftImpl.html#line.112">setComment</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;comment)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="QuoteRequestDraft.html#setComment(java.lang.String)">setComment</a></code>&nbsp;in interface&nbsp;<code><a href="QuoteRequestDraft.html" title="interface in com.commercetools.api.models.quote_request">QuoteRequestDraft</a></code></dd>
@@ -304,7 +323,7 @@ implements <a href="QuoteRequestDraft.html" title="interface in com.commercetool
 <li>
 <section class="detail" id="setCustom(com.commercetools.api.models.type.CustomFieldsDraft)">
 <h3>setCustom</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/quote_request/QuoteRequestDraftImpl.html#line.104">setCustom</a></span>&#8203;<span class="parameters">(<a href="../type/CustomFieldsDraft.html" title="interface in com.commercetools.api.models.type">CustomFieldsDraft</a>&nbsp;custom)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/quote_request/QuoteRequestDraftImpl.html#line.116">setCustom</a></span>&#8203;<span class="parameters">(<a href="../type/CustomFieldsDraft.html" title="interface in com.commercetools.api.models.type">CustomFieldsDraft</a>&nbsp;custom)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="QuoteRequestDraft.html#setCustom(com.commercetools.api.models.type.CustomFieldsDraft)">setCustom</a></code>&nbsp;in interface&nbsp;<code><a href="QuoteRequestDraft.html" title="interface in com.commercetools.api.models.quote_request">QuoteRequestDraft</a></code></dd>
@@ -312,9 +331,19 @@ implements <a href="QuoteRequestDraft.html" title="interface in com.commercetool
 </section>
 </li>
 <li>
+<section class="detail" id="setState(com.commercetools.api.models.state.StateReference)">
+<h3>setState</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/quote_request/QuoteRequestDraftImpl.html#line.120">setState</a></span>&#8203;<span class="parameters">(<a href="../state/StateReference.html" title="interface in com.commercetools.api.models.state">StateReference</a>&nbsp;state)</span></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="QuoteRequestDraft.html#setState(com.commercetools.api.models.state.StateReference)">setState</a></code>&nbsp;in interface&nbsp;<code><a href="QuoteRequestDraft.html" title="interface in com.commercetools.api.models.quote_request">QuoteRequestDraft</a></code></dd>
+</dl>
+</section>
+</li>
+<li>
 <section class="detail" id="equals(java.lang.Object)">
 <h3>equals</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/quote_request/QuoteRequestDraftImpl.html#line.108">equals</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;o)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/quote_request/QuoteRequestDraftImpl.html#line.124">equals</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;o)</span></div>
 <dl class="notes">
 <dt>Overrides:</dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#equals(java.lang.Object)" title="class or interface in java.lang" class="external-link">equals</a></code>&nbsp;in class&nbsp;<code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></code></dd>
@@ -324,7 +353,7 @@ implements <a href="QuoteRequestDraft.html" title="interface in com.commercetool
 <li>
 <section class="detail" id="hashCode()">
 <h3>hashCode</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/quote_request/QuoteRequestDraftImpl.html#line.126">hashCode</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/quote_request/QuoteRequestDraftImpl.html#line.143">hashCode</a></span>()</div>
 <dl class="notes">
 <dt>Overrides:</dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#hashCode()" title="class or interface in java.lang" class="external-link">hashCode</a></code>&nbsp;in class&nbsp;<code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></code></dd>

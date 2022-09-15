@@ -26,14 +26,14 @@
 <span class="source-line-no">013</span><span id="line.13">import io.vrap.rmf.base.client.utils.Generated;</span>
 <span class="source-line-no">014</span><span id="line.14"></span>
 <span class="source-line-no">015</span><span id="line.15">/**</span>
-<span class="source-line-no">016</span><span id="line.16"> * CategoryOrderHints</span>
+<span class="source-line-no">016</span><span id="line.16"> *  &lt;p&gt;JSON object where the key is a Category &lt;code&gt;id&lt;/code&gt; and the value is an order hint. Allows controlling the order of Products and how they appear in Categories. Products with no order hint have an order score below &lt;code&gt;0&lt;/code&gt;. Order hints are non-unique. If a subset of Products have the same value for order hint in a specific category, the behavior is undetermined.&lt;/p&gt;</span>
 <span class="source-line-no">017</span><span id="line.17"> *</span>
 <span class="source-line-no">018</span><span id="line.18"> * &lt;hr&gt;</span>
 <span class="source-line-no">019</span><span id="line.19"> * Example to create an instance using the builder pattern</span>
 <span class="source-line-no">020</span><span id="line.20"> * &lt;div class=code-example&gt;</span>
 <span class="source-line-no">021</span><span id="line.21"> * &lt;pre&gt;&lt;code class='java'&gt;</span>
 <span class="source-line-no">022</span><span id="line.22"> *     CategoryOrderHints categoryOrderHints = CategoryOrderHints.builder()</span>
-<span class="source-line-no">023</span><span id="line.23"> *             ./^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$/("{/^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$/}")</span>
+<span class="source-line-no">023</span><span id="line.23"> *             ./[0-9].[0-9]*[1-9]/("{/[0-9].[0-9]*[1-9]/}")</span>
 <span class="source-line-no">024</span><span id="line.24"> *             .build()</span>
 <span class="source-line-no">025</span><span id="line.25"> * &lt;/code&gt;&lt;/pre&gt;</span>
 <span class="source-line-no">026</span><span id="line.26"> * &lt;/div&gt;</span>
@@ -43,7 +43,7 @@
 <span class="source-line-no">030</span><span id="line.30">public interface CategoryOrderHints {</span>
 <span class="source-line-no">031</span><span id="line.31"></span>
 <span class="source-line-no">032</span><span id="line.32">    /**</span>
-<span class="source-line-no">033</span><span id="line.33">     *</span>
+<span class="source-line-no">033</span><span id="line.33">     *  &lt;p&gt;A string representing a number between 0 and 1 that must start with &lt;code&gt;0.&lt;/code&gt; and cannot end with &lt;code&gt;0&lt;/code&gt;.&lt;/p&gt;</span>
 <span class="source-line-no">034</span><span id="line.34">     */</span>
 <span class="source-line-no">035</span><span id="line.35">    @NotNull</span>
 <span class="source-line-no">036</span><span id="line.36">    @JsonAnyGetter</span>

@@ -27,7 +27,7 @@
 <span class="source-line-no">014</span><span id="line.14">import io.vrap.rmf.base.client.utils.Generated;</span>
 <span class="source-line-no">015</span><span id="line.15"></span>
 <span class="source-line-no">016</span><span id="line.16">/**</span>
-<span class="source-line-no">017</span><span id="line.17"> * ProductPagedQueryResponse</span>
+<span class="source-line-no">017</span><span id="line.17"> *  &lt;p&gt;PagedQueryResult with &lt;code&gt;results&lt;/code&gt; containing an array of Product.&lt;/p&gt;</span>
 <span class="source-line-no">018</span><span id="line.18"> *</span>
 <span class="source-line-no">019</span><span id="line.19"> * &lt;hr&gt;</span>
 <span class="source-line-no">020</span><span id="line.20"> * Example to create an instance using the builder pattern</span>
@@ -35,8 +35,8 @@
 <span class="source-line-no">022</span><span id="line.22"> * &lt;pre&gt;&lt;code class='java'&gt;</span>
 <span class="source-line-no">023</span><span id="line.23"> *     ProductPagedQueryResponse productPagedQueryResponse = ProductPagedQueryResponse.builder()</span>
 <span class="source-line-no">024</span><span id="line.24"> *             .limit(0.3)</span>
-<span class="source-line-no">025</span><span id="line.25"> *             .count(0.3)</span>
-<span class="source-line-no">026</span><span id="line.26"> *             .offset(0.3)</span>
+<span class="source-line-no">025</span><span id="line.25"> *             .offset(0.3)</span>
+<span class="source-line-no">026</span><span id="line.26"> *             .count(0.3)</span>
 <span class="source-line-no">027</span><span id="line.27"> *             .plusResults(resultsBuilder -&gt; resultsBuilder)</span>
 <span class="source-line-no">028</span><span id="line.28"> *             .build()</span>
 <span class="source-line-no">029</span><span id="line.29"> * &lt;/code&gt;&lt;/pre&gt;</span>
@@ -54,28 +54,28 @@
 <span class="source-line-no">041</span><span id="line.41">    public Long getLimit();</span>
 <span class="source-line-no">042</span><span id="line.42"></span>
 <span class="source-line-no">043</span><span id="line.43">    /**</span>
-<span class="source-line-no">044</span><span id="line.44">     *</span>
+<span class="source-line-no">044</span><span id="line.44">     *  &lt;p&gt;Number of elements skipped.&lt;/p&gt;</span>
 <span class="source-line-no">045</span><span id="line.45">     */</span>
 <span class="source-line-no">046</span><span id="line.46">    @NotNull</span>
-<span class="source-line-no">047</span><span id="line.47">    @JsonProperty("count")</span>
-<span class="source-line-no">048</span><span id="line.48">    public Long getCount();</span>
+<span class="source-line-no">047</span><span id="line.47">    @JsonProperty("offset")</span>
+<span class="source-line-no">048</span><span id="line.48">    public Long getOffset();</span>
 <span class="source-line-no">049</span><span id="line.49"></span>
 <span class="source-line-no">050</span><span id="line.50">    /**</span>
-<span class="source-line-no">051</span><span id="line.51">     *</span>
+<span class="source-line-no">051</span><span id="line.51">     *  &lt;p&gt;Actual number of results returned.&lt;/p&gt;</span>
 <span class="source-line-no">052</span><span id="line.52">     */</span>
-<span class="source-line-no">053</span><span id="line.53"></span>
-<span class="source-line-no">054</span><span id="line.54">    @JsonProperty("total")</span>
-<span class="source-line-no">055</span><span id="line.55">    public Long getTotal();</span>
+<span class="source-line-no">053</span><span id="line.53">    @NotNull</span>
+<span class="source-line-no">054</span><span id="line.54">    @JsonProperty("count")</span>
+<span class="source-line-no">055</span><span id="line.55">    public Long getCount();</span>
 <span class="source-line-no">056</span><span id="line.56"></span>
 <span class="source-line-no">057</span><span id="line.57">    /**</span>
-<span class="source-line-no">058</span><span id="line.58">     *  &lt;p&gt;Number of elements skipped.&lt;/p&gt;</span>
+<span class="source-line-no">058</span><span id="line.58">     *  &lt;p&gt;Total number of results matching the query. This number is an estimation that is not strongly consistent. This field is returned by default. For improved performance, calculating this field can be deactivated by using the query parameter &lt;code&gt;withTotal=false&lt;/code&gt;. When the results are filtered with a Query Predicate, &lt;code&gt;total&lt;/code&gt; is subject to a limit.&lt;/p&gt;</span>
 <span class="source-line-no">059</span><span id="line.59">     */</span>
-<span class="source-line-no">060</span><span id="line.60">    @NotNull</span>
-<span class="source-line-no">061</span><span id="line.61">    @JsonProperty("offset")</span>
-<span class="source-line-no">062</span><span id="line.62">    public Long getOffset();</span>
+<span class="source-line-no">060</span><span id="line.60"></span>
+<span class="source-line-no">061</span><span id="line.61">    @JsonProperty("total")</span>
+<span class="source-line-no">062</span><span id="line.62">    public Long getTotal();</span>
 <span class="source-line-no">063</span><span id="line.63"></span>
 <span class="source-line-no">064</span><span id="line.64">    /**</span>
-<span class="source-line-no">065</span><span id="line.65">     *</span>
+<span class="source-line-no">065</span><span id="line.65">     *  &lt;p&gt;Products matching the query.&lt;/p&gt;</span>
 <span class="source-line-no">066</span><span id="line.66">     */</span>
 <span class="source-line-no">067</span><span id="line.67">    @NotNull</span>
 <span class="source-line-no">068</span><span id="line.68">    @Valid</span>
@@ -84,11 +84,11 @@
 <span class="source-line-no">071</span><span id="line.71"></span>
 <span class="source-line-no">072</span><span id="line.72">    public void setLimit(final Long limit);</span>
 <span class="source-line-no">073</span><span id="line.73"></span>
-<span class="source-line-no">074</span><span id="line.74">    public void setCount(final Long count);</span>
+<span class="source-line-no">074</span><span id="line.74">    public void setOffset(final Long offset);</span>
 <span class="source-line-no">075</span><span id="line.75"></span>
-<span class="source-line-no">076</span><span id="line.76">    public void setTotal(final Long total);</span>
+<span class="source-line-no">076</span><span id="line.76">    public void setCount(final Long count);</span>
 <span class="source-line-no">077</span><span id="line.77"></span>
-<span class="source-line-no">078</span><span id="line.78">    public void setOffset(final Long offset);</span>
+<span class="source-line-no">078</span><span id="line.78">    public void setTotal(final Long total);</span>
 <span class="source-line-no">079</span><span id="line.79"></span>
 <span class="source-line-no">080</span><span id="line.80">    @JsonIgnore</span>
 <span class="source-line-no">081</span><span id="line.81">    public void setResults(final Product... results);</span>
@@ -102,9 +102,9 @@
 <span class="source-line-no">089</span><span id="line.89">    public static ProductPagedQueryResponse of(final ProductPagedQueryResponse template) {</span>
 <span class="source-line-no">090</span><span id="line.90">        ProductPagedQueryResponseImpl instance = new ProductPagedQueryResponseImpl();</span>
 <span class="source-line-no">091</span><span id="line.91">        instance.setLimit(template.getLimit());</span>
-<span class="source-line-no">092</span><span id="line.92">        instance.setCount(template.getCount());</span>
-<span class="source-line-no">093</span><span id="line.93">        instance.setTotal(template.getTotal());</span>
-<span class="source-line-no">094</span><span id="line.94">        instance.setOffset(template.getOffset());</span>
+<span class="source-line-no">092</span><span id="line.92">        instance.setOffset(template.getOffset());</span>
+<span class="source-line-no">093</span><span id="line.93">        instance.setCount(template.getCount());</span>
+<span class="source-line-no">094</span><span id="line.94">        instance.setTotal(template.getTotal());</span>
 <span class="source-line-no">095</span><span id="line.95">        instance.setResults(template.getResults());</span>
 <span class="source-line-no">096</span><span id="line.96">        return instance;</span>
 <span class="source-line-no">097</span><span id="line.97">    }</span>

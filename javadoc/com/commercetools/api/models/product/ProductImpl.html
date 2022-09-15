@@ -86,7 +86,7 @@ loadScripts(document, 'script');</script>
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductImpl.html#line.20">ProductImpl</a></span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
 implements <a href="Product.html" title="interface in com.commercetools.api.models.product">Product</a>, <a href="../../../../../io/vrap/rmf/base/client/ModelBase.html" title="interface in io.vrap.rmf.base.client">ModelBase</a></span></div>
-<div class="block">Product</div>
+<div class="block"><p>An abstract sellable good with a set of Attributes defined by a Product Type. Products themselves are not sellable. Instead, they act as a parent structure for Product Variants. Each Product must have at least one Product Variant, which is called the Master Variant. A single Product representation contains the <em>current</em> and the <em>staged</em> representation of its product data.</p></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -128,7 +128,9 @@ implements <a href="Product.html" title="interface in com.commercetools.api.mode
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getCreatedAt()">getCreatedAt</a></span>()</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">Date and time (UTC) the Product was initially created.</div>
+</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="../common/CreatedBy.html" title="interface in com.commercetools.api.models.common">CreatedBy</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getCreatedBy()">getCreatedBy</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
@@ -146,7 +148,9 @@ implements <a href="Product.html" title="interface in com.commercetools.api.mode
 </div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getLastModifiedAt()">getLastModifiedAt</a></span>()</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">Date and time (UTC) the Product was last updated.</div>
+</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="../common/LastModifiedBy.html" title="interface in com.commercetools.api.models.common">LastModifiedBy</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getLastModifiedBy()">getLastModifiedBy</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
@@ -155,31 +159,37 @@ implements <a href="Product.html" title="interface in com.commercetools.api.mode
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ProductCatalogData.html" title="interface in com.commercetools.api.models.product">ProductCatalogData</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getMasterData()">getMasterData</a></span>()</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
-<div class="block">The product data in the master catalog.</div>
+<div class="block">Contains the current and the staged representation of the product information.</div>
 </div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ProductPriceModeEnum.html" title="interface in com.commercetools.api.models.product">ProductPriceModeEnum</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getPriceMode()">getPriceMode</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
-<div class="block">Specifies which type of prices should be used when looking up a price for this product.</div>
+<div class="block">Type of Price to be used when looking up a price for the Product.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="../product_type/ProductTypeReference.html" title="interface in com.commercetools.api.models.product_type">ProductTypeReference</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getProductType()">getProductType</a></span>()</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">The Product Type defining the Attributes of the Product.</div>
+</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="../review/ReviewRatingStatistics.html" title="interface in com.commercetools.api.models.review">ReviewRatingStatistics</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getReviewRatingStatistics()">getReviewRatingStatistics</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
-<div class="block">Statistics about the review ratings taken into account for this product.</div>
+<div class="block">Review statistics of the Product.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="../state/StateReference.html" title="interface in com.commercetools.api.models.state">StateReference</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getState()">getState</a></span>()</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">State of the Product.</div>
+</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="../tax_category/TaxCategoryReference.html" title="interface in com.commercetools.api.models.tax_category">TaxCategoryReference</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getTaxCategory()">getTaxCategory</a></span>()</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">The TaxCategory of the Product.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getVersion()">getVersion</a></span>()</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
-<div class="block">The current version of the product.</div>
+<div class="block">Current version of the Product.</div>
 </div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code>int</code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#hashCode()">hashCode</a></span>()</code></div>
@@ -291,7 +301,7 @@ implements <a href="Product.html" title="interface in com.commercetools.api.mode
 <section class="detail" id="getVersion()">
 <h3>getVersion</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductImpl.html#line.92">getVersion</a></span>()</div>
-<div class="block"><p>The current version of the product.</p></div>
+<div class="block"><p>Current version of the Product.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../common/BaseResource.html#getVersion()">getVersion</a></code>&nbsp;in interface&nbsp;<code><a href="../common/BaseResource.html" title="interface in com.commercetools.api.models.common">BaseResource</a></code></dd>
@@ -308,6 +318,7 @@ implements <a href="Product.html" title="interface in com.commercetools.api.mode
 <section class="detail" id="getCreatedAt()">
 <h3>getCreatedAt</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductImpl.html#line.100">getCreatedAt</a></span>()</div>
+<div class="block"><p>Date and time (UTC) the Product was initially created.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../common/BaseResource.html#getCreatedAt()">getCreatedAt</a></code>&nbsp;in interface&nbsp;<code><a href="../common/BaseResource.html" title="interface in com.commercetools.api.models.common">BaseResource</a></code></dd>
@@ -320,6 +331,7 @@ implements <a href="Product.html" title="interface in com.commercetools.api.mode
 <section class="detail" id="getLastModifiedAt()">
 <h3>getLastModifiedAt</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductImpl.html#line.108">getLastModifiedAt</a></span>()</div>
+<div class="block"><p>Date and time (UTC) the Product was last updated.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../common/BaseResource.html#getLastModifiedAt()">getLastModifiedAt</a></code>&nbsp;in interface&nbsp;<code><a href="../common/BaseResource.html" title="interface in com.commercetools.api.models.common">BaseResource</a></code></dd>
@@ -353,8 +365,9 @@ implements <a href="Product.html" title="interface in com.commercetools.api.mode
 <li>
 <section class="detail" id="getKey()">
 <h3>getKey</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductImpl.html#line.132">getKey</a></span>()</div>
-<div class="block"><p>User-defined unique identifier of the Product. <em>Product keys are different from ProductVariant keys.</em></p></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductImpl.html#line.133">getKey</a></span>()</div>
+<div class="block"><p>User-defined unique identifier of the Product.</p>
+  <p>This is different from the <code>key</code> of a ProductVariant.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="Product.html#getKey()">getKey</a></code>&nbsp;in interface&nbsp;<code><a href="Product.html" title="interface in com.commercetools.api.models.product">Product</a></code></dd>
@@ -364,7 +377,8 @@ implements <a href="Product.html" title="interface in com.commercetools.api.mode
 <li>
 <section class="detail" id="getProductType()">
 <h3>getProductType</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../product_type/ProductTypeReference.html" title="interface in com.commercetools.api.models.product_type">ProductTypeReference</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductImpl.html#line.140">getProductType</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../product_type/ProductTypeReference.html" title="interface in com.commercetools.api.models.product_type">ProductTypeReference</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductImpl.html#line.141">getProductType</a></span>()</div>
+<div class="block"><p>The Product Type defining the Attributes of the Product. Cannot be changed.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="Product.html#getProductType()">getProductType</a></code>&nbsp;in interface&nbsp;<code><a href="Product.html" title="interface in com.commercetools.api.models.product">Product</a></code></dd>
@@ -374,8 +388,8 @@ implements <a href="Product.html" title="interface in com.commercetools.api.mode
 <li>
 <section class="detail" id="getMasterData()">
 <h3>getMasterData</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductCatalogData.html" title="interface in com.commercetools.api.models.product">ProductCatalogData</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductImpl.html#line.148">getMasterData</a></span>()</div>
-<div class="block"><p>The product data in the master catalog.</p></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductCatalogData.html" title="interface in com.commercetools.api.models.product">ProductCatalogData</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductImpl.html#line.149">getMasterData</a></span>()</div>
+<div class="block"><p>Contains the current and the staged representation of the product information.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="Product.html#getMasterData()">getMasterData</a></code>&nbsp;in interface&nbsp;<code><a href="Product.html" title="interface in com.commercetools.api.models.product">Product</a></code></dd>
@@ -385,7 +399,8 @@ implements <a href="Product.html" title="interface in com.commercetools.api.mode
 <li>
 <section class="detail" id="getTaxCategory()">
 <h3>getTaxCategory</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../tax_category/TaxCategoryReference.html" title="interface in com.commercetools.api.models.tax_category">TaxCategoryReference</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductImpl.html#line.156">getTaxCategory</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../tax_category/TaxCategoryReference.html" title="interface in com.commercetools.api.models.tax_category">TaxCategoryReference</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductImpl.html#line.157">getTaxCategory</a></span>()</div>
+<div class="block"><p>The TaxCategory of the Product.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="Product.html#getTaxCategory()">getTaxCategory</a></code>&nbsp;in interface&nbsp;<code><a href="Product.html" title="interface in com.commercetools.api.models.product">Product</a></code></dd>
@@ -395,7 +410,8 @@ implements <a href="Product.html" title="interface in com.commercetools.api.mode
 <li>
 <section class="detail" id="getState()">
 <h3>getState</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../state/StateReference.html" title="interface in com.commercetools.api.models.state">StateReference</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductImpl.html#line.164">getState</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../state/StateReference.html" title="interface in com.commercetools.api.models.state">StateReference</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductImpl.html#line.165">getState</a></span>()</div>
+<div class="block"><p>State of the Product.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="Product.html#getState()">getState</a></code>&nbsp;in interface&nbsp;<code><a href="Product.html" title="interface in com.commercetools.api.models.product">Product</a></code></dd>
@@ -405,8 +421,8 @@ implements <a href="Product.html" title="interface in com.commercetools.api.mode
 <li>
 <section class="detail" id="getReviewRatingStatistics()">
 <h3>getReviewRatingStatistics</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../review/ReviewRatingStatistics.html" title="interface in com.commercetools.api.models.review">ReviewRatingStatistics</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductImpl.html#line.172">getReviewRatingStatistics</a></span>()</div>
-<div class="block"><p>Statistics about the review ratings taken into account for this product.</p></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../review/ReviewRatingStatistics.html" title="interface in com.commercetools.api.models.review">ReviewRatingStatistics</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductImpl.html#line.173">getReviewRatingStatistics</a></span>()</div>
+<div class="block"><p>Review statistics of the Product.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="Product.html#getReviewRatingStatistics()">getReviewRatingStatistics</a></code>&nbsp;in interface&nbsp;<code><a href="Product.html" title="interface in com.commercetools.api.models.product">Product</a></code></dd>
@@ -416,8 +432,8 @@ implements <a href="Product.html" title="interface in com.commercetools.api.mode
 <li>
 <section class="detail" id="getPriceMode()">
 <h3>getPriceMode</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductPriceModeEnum.html" title="interface in com.commercetools.api.models.product">ProductPriceModeEnum</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductImpl.html#line.180">getPriceMode</a></span>()</div>
-<div class="block"><p>Specifies which type of prices should be used when looking up a price for this product. If not set, <code>Embedded</code> ProductPriceMode is used.</p></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductPriceModeEnum.html" title="interface in com.commercetools.api.models.product">ProductPriceModeEnum</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductImpl.html#line.181">getPriceMode</a></span>()</div>
+<div class="block"><p>Type of Price to be used when looking up a price for the Product.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="Product.html#getPriceMode()">getPriceMode</a></code>&nbsp;in interface&nbsp;<code><a href="Product.html" title="interface in com.commercetools.api.models.product">Product</a></code></dd>
@@ -427,7 +443,7 @@ implements <a href="Product.html" title="interface in com.commercetools.api.mode
 <li>
 <section class="detail" id="setId(java.lang.String)">
 <h3>setId</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductImpl.html#line.184">setId</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;id)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductImpl.html#line.185">setId</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;id)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../common/BaseResource.html#setId(java.lang.String)">setId</a></code>&nbsp;in interface&nbsp;<code><a href="../common/BaseResource.html" title="interface in com.commercetools.api.models.common">BaseResource</a></code></dd>
@@ -439,7 +455,7 @@ implements <a href="Product.html" title="interface in com.commercetools.api.mode
 <li>
 <section class="detail" id="setVersion(java.lang.Long)">
 <h3>setVersion</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductImpl.html#line.188">setVersion</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;version)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductImpl.html#line.189">setVersion</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;version)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../common/BaseResource.html#setVersion(java.lang.Long)">setVersion</a></code>&nbsp;in interface&nbsp;<code><a href="../common/BaseResource.html" title="interface in com.commercetools.api.models.common">BaseResource</a></code></dd>
@@ -451,7 +467,7 @@ implements <a href="Product.html" title="interface in com.commercetools.api.mode
 <li>
 <section class="detail" id="setCreatedAt(java.time.ZonedDateTime)">
 <h3>setCreatedAt</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductImpl.html#line.192">setCreatedAt</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a>&nbsp;createdAt)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductImpl.html#line.193">setCreatedAt</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a>&nbsp;createdAt)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../common/BaseResource.html#setCreatedAt(java.time.ZonedDateTime)">setCreatedAt</a></code>&nbsp;in interface&nbsp;<code><a href="../common/BaseResource.html" title="interface in com.commercetools.api.models.common">BaseResource</a></code></dd>
@@ -463,7 +479,7 @@ implements <a href="Product.html" title="interface in com.commercetools.api.mode
 <li>
 <section class="detail" id="setLastModifiedAt(java.time.ZonedDateTime)">
 <h3>setLastModifiedAt</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductImpl.html#line.196">setLastModifiedAt</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a>&nbsp;lastModifiedAt)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductImpl.html#line.197">setLastModifiedAt</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a>&nbsp;lastModifiedAt)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../common/BaseResource.html#setLastModifiedAt(java.time.ZonedDateTime)">setLastModifiedAt</a></code>&nbsp;in interface&nbsp;<code><a href="../common/BaseResource.html" title="interface in com.commercetools.api.models.common">BaseResource</a></code></dd>
@@ -475,7 +491,7 @@ implements <a href="Product.html" title="interface in com.commercetools.api.mode
 <li>
 <section class="detail" id="setLastModifiedBy(com.commercetools.api.models.common.LastModifiedBy)">
 <h3>setLastModifiedBy</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductImpl.html#line.200">setLastModifiedBy</a></span>&#8203;<span class="parameters">(<a href="../common/LastModifiedBy.html" title="interface in com.commercetools.api.models.common">LastModifiedBy</a>&nbsp;lastModifiedBy)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductImpl.html#line.201">setLastModifiedBy</a></span>&#8203;<span class="parameters">(<a href="../common/LastModifiedBy.html" title="interface in com.commercetools.api.models.common">LastModifiedBy</a>&nbsp;lastModifiedBy)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="Product.html#setLastModifiedBy(com.commercetools.api.models.common.LastModifiedBy)">setLastModifiedBy</a></code>&nbsp;in interface&nbsp;<code><a href="Product.html" title="interface in com.commercetools.api.models.product">Product</a></code></dd>
@@ -485,7 +501,7 @@ implements <a href="Product.html" title="interface in com.commercetools.api.mode
 <li>
 <section class="detail" id="setCreatedBy(com.commercetools.api.models.common.CreatedBy)">
 <h3>setCreatedBy</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductImpl.html#line.204">setCreatedBy</a></span>&#8203;<span class="parameters">(<a href="../common/CreatedBy.html" title="interface in com.commercetools.api.models.common">CreatedBy</a>&nbsp;createdBy)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductImpl.html#line.205">setCreatedBy</a></span>&#8203;<span class="parameters">(<a href="../common/CreatedBy.html" title="interface in com.commercetools.api.models.common">CreatedBy</a>&nbsp;createdBy)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="Product.html#setCreatedBy(com.commercetools.api.models.common.CreatedBy)">setCreatedBy</a></code>&nbsp;in interface&nbsp;<code><a href="Product.html" title="interface in com.commercetools.api.models.product">Product</a></code></dd>
@@ -495,7 +511,7 @@ implements <a href="Product.html" title="interface in com.commercetools.api.mode
 <li>
 <section class="detail" id="setKey(java.lang.String)">
 <h3>setKey</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductImpl.html#line.208">setKey</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductImpl.html#line.209">setKey</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="Product.html#setKey(java.lang.String)">setKey</a></code>&nbsp;in interface&nbsp;<code><a href="Product.html" title="interface in com.commercetools.api.models.product">Product</a></code></dd>
@@ -505,7 +521,7 @@ implements <a href="Product.html" title="interface in com.commercetools.api.mode
 <li>
 <section class="detail" id="setProductType(com.commercetools.api.models.product_type.ProductTypeReference)">
 <h3>setProductType</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductImpl.html#line.212">setProductType</a></span>&#8203;<span class="parameters">(<a href="../product_type/ProductTypeReference.html" title="interface in com.commercetools.api.models.product_type">ProductTypeReference</a>&nbsp;productType)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductImpl.html#line.213">setProductType</a></span>&#8203;<span class="parameters">(<a href="../product_type/ProductTypeReference.html" title="interface in com.commercetools.api.models.product_type">ProductTypeReference</a>&nbsp;productType)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="Product.html#setProductType(com.commercetools.api.models.product_type.ProductTypeReference)">setProductType</a></code>&nbsp;in interface&nbsp;<code><a href="Product.html" title="interface in com.commercetools.api.models.product">Product</a></code></dd>
@@ -515,7 +531,7 @@ implements <a href="Product.html" title="interface in com.commercetools.api.mode
 <li>
 <section class="detail" id="setMasterData(com.commercetools.api.models.product.ProductCatalogData)">
 <h3>setMasterData</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductImpl.html#line.216">setMasterData</a></span>&#8203;<span class="parameters">(<a href="ProductCatalogData.html" title="interface in com.commercetools.api.models.product">ProductCatalogData</a>&nbsp;masterData)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductImpl.html#line.217">setMasterData</a></span>&#8203;<span class="parameters">(<a href="ProductCatalogData.html" title="interface in com.commercetools.api.models.product">ProductCatalogData</a>&nbsp;masterData)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="Product.html#setMasterData(com.commercetools.api.models.product.ProductCatalogData)">setMasterData</a></code>&nbsp;in interface&nbsp;<code><a href="Product.html" title="interface in com.commercetools.api.models.product">Product</a></code></dd>
@@ -525,7 +541,7 @@ implements <a href="Product.html" title="interface in com.commercetools.api.mode
 <li>
 <section class="detail" id="setTaxCategory(com.commercetools.api.models.tax_category.TaxCategoryReference)">
 <h3>setTaxCategory</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductImpl.html#line.220">setTaxCategory</a></span>&#8203;<span class="parameters">(<a href="../tax_category/TaxCategoryReference.html" title="interface in com.commercetools.api.models.tax_category">TaxCategoryReference</a>&nbsp;taxCategory)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductImpl.html#line.221">setTaxCategory</a></span>&#8203;<span class="parameters">(<a href="../tax_category/TaxCategoryReference.html" title="interface in com.commercetools.api.models.tax_category">TaxCategoryReference</a>&nbsp;taxCategory)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="Product.html#setTaxCategory(com.commercetools.api.models.tax_category.TaxCategoryReference)">setTaxCategory</a></code>&nbsp;in interface&nbsp;<code><a href="Product.html" title="interface in com.commercetools.api.models.product">Product</a></code></dd>
@@ -535,7 +551,7 @@ implements <a href="Product.html" title="interface in com.commercetools.api.mode
 <li>
 <section class="detail" id="setState(com.commercetools.api.models.state.StateReference)">
 <h3>setState</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductImpl.html#line.224">setState</a></span>&#8203;<span class="parameters">(<a href="../state/StateReference.html" title="interface in com.commercetools.api.models.state">StateReference</a>&nbsp;state)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductImpl.html#line.225">setState</a></span>&#8203;<span class="parameters">(<a href="../state/StateReference.html" title="interface in com.commercetools.api.models.state">StateReference</a>&nbsp;state)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="Product.html#setState(com.commercetools.api.models.state.StateReference)">setState</a></code>&nbsp;in interface&nbsp;<code><a href="Product.html" title="interface in com.commercetools.api.models.product">Product</a></code></dd>
@@ -545,7 +561,7 @@ implements <a href="Product.html" title="interface in com.commercetools.api.mode
 <li>
 <section class="detail" id="setReviewRatingStatistics(com.commercetools.api.models.review.ReviewRatingStatistics)">
 <h3>setReviewRatingStatistics</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductImpl.html#line.228">setReviewRatingStatistics</a></span>&#8203;<span class="parameters">(<a href="../review/ReviewRatingStatistics.html" title="interface in com.commercetools.api.models.review">ReviewRatingStatistics</a>&nbsp;reviewRatingStatistics)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductImpl.html#line.229">setReviewRatingStatistics</a></span>&#8203;<span class="parameters">(<a href="../review/ReviewRatingStatistics.html" title="interface in com.commercetools.api.models.review">ReviewRatingStatistics</a>&nbsp;reviewRatingStatistics)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="Product.html#setReviewRatingStatistics(com.commercetools.api.models.review.ReviewRatingStatistics)">setReviewRatingStatistics</a></code>&nbsp;in interface&nbsp;<code><a href="Product.html" title="interface in com.commercetools.api.models.product">Product</a></code></dd>
@@ -555,7 +571,7 @@ implements <a href="Product.html" title="interface in com.commercetools.api.mode
 <li>
 <section class="detail" id="setPriceMode(com.commercetools.api.models.product.ProductPriceModeEnum)">
 <h3>setPriceMode</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductImpl.html#line.233">setPriceMode</a></span>&#8203;<span class="parameters">(<a href="ProductPriceModeEnum.html" title="interface in com.commercetools.api.models.product">ProductPriceModeEnum</a>&nbsp;priceMode)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductImpl.html#line.234">setPriceMode</a></span>&#8203;<span class="parameters">(<a href="ProductPriceModeEnum.html" title="interface in com.commercetools.api.models.product">ProductPriceModeEnum</a>&nbsp;priceMode)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="Product.html#setPriceMode(com.commercetools.api.models.product.ProductPriceModeEnum)">setPriceMode</a></code>&nbsp;in interface&nbsp;<code><a href="Product.html" title="interface in com.commercetools.api.models.product">Product</a></code></dd>
@@ -565,7 +581,7 @@ implements <a href="Product.html" title="interface in com.commercetools.api.mode
 <li>
 <section class="detail" id="equals(java.lang.Object)">
 <h3>equals</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductImpl.html#line.237">equals</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;o)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductImpl.html#line.238">equals</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;o)</span></div>
 <dl class="notes">
 <dt>Overrides:</dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#equals(java.lang.Object)" title="class or interface in java.lang" class="external-link">equals</a></code>&nbsp;in class&nbsp;<code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></code></dd>
@@ -575,7 +591,7 @@ implements <a href="Product.html" title="interface in com.commercetools.api.mode
 <li>
 <section class="detail" id="hashCode()">
 <h3>hashCode</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductImpl.html#line.263">hashCode</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductImpl.html#line.264">hashCode</a></span>()</div>
 <dl class="notes">
 <dt>Overrides:</dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#hashCode()" title="class or interface in java.lang" class="external-link">hashCode</a></code>&nbsp;in class&nbsp;<code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></code></dd>

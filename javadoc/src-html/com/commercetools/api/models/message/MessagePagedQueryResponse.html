@@ -27,7 +27,7 @@
 <span class="source-line-no">014</span><span id="line.14">import io.vrap.rmf.base.client.utils.Generated;</span>
 <span class="source-line-no">015</span><span id="line.15"></span>
 <span class="source-line-no">016</span><span id="line.16">/**</span>
-<span class="source-line-no">017</span><span id="line.17"> * MessagePagedQueryResponse</span>
+<span class="source-line-no">017</span><span id="line.17"> *  &lt;p&gt;PagedQueryResult with &lt;code&gt;results&lt;/code&gt; containing an array of Message.&lt;/p&gt;</span>
 <span class="source-line-no">018</span><span id="line.18"> *</span>
 <span class="source-line-no">019</span><span id="line.19"> * &lt;hr&gt;</span>
 <span class="source-line-no">020</span><span id="line.20"> * Example to create an instance using the builder pattern</span>
@@ -54,14 +54,14 @@
 <span class="source-line-no">041</span><span id="line.41">    public Long getLimit();</span>
 <span class="source-line-no">042</span><span id="line.42"></span>
 <span class="source-line-no">043</span><span id="line.43">    /**</span>
-<span class="source-line-no">044</span><span id="line.44">     *</span>
+<span class="source-line-no">044</span><span id="line.44">     *  &lt;p&gt;Actual number of results returned.&lt;/p&gt;</span>
 <span class="source-line-no">045</span><span id="line.45">     */</span>
 <span class="source-line-no">046</span><span id="line.46">    @NotNull</span>
 <span class="source-line-no">047</span><span id="line.47">    @JsonProperty("count")</span>
 <span class="source-line-no">048</span><span id="line.48">    public Long getCount();</span>
 <span class="source-line-no">049</span><span id="line.49"></span>
 <span class="source-line-no">050</span><span id="line.50">    /**</span>
-<span class="source-line-no">051</span><span id="line.51">     *</span>
+<span class="source-line-no">051</span><span id="line.51">     *  &lt;p&gt;Total number of results matching the query. This number is an estimation that is not strongly consistent. This field is returned by default. For improved performance, calculating this field can be deactivated by using the query parameter &lt;code&gt;withTotal=false&lt;/code&gt;. When the results are filtered with a Query Predicate, &lt;code&gt;total&lt;/code&gt; is subject to a limit.&lt;/p&gt;</span>
 <span class="source-line-no">052</span><span id="line.52">     */</span>
 <span class="source-line-no">053</span><span id="line.53"></span>
 <span class="source-line-no">054</span><span id="line.54">    @JsonProperty("total")</span>
@@ -75,7 +75,7 @@
 <span class="source-line-no">062</span><span id="line.62">    public Long getOffset();</span>
 <span class="source-line-no">063</span><span id="line.63"></span>
 <span class="source-line-no">064</span><span id="line.64">    /**</span>
-<span class="source-line-no">065</span><span id="line.65">     *</span>
+<span class="source-line-no">065</span><span id="line.65">     *  &lt;p&gt;Messages matching the query.&lt;/p&gt;</span>
 <span class="source-line-no">066</span><span id="line.66">     */</span>
 <span class="source-line-no">067</span><span id="line.67">    @NotNull</span>
 <span class="source-line-no">068</span><span id="line.68">    @Valid</span>

@@ -86,7 +86,7 @@ loadScripts(document, 'script');</script>
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductSetPricesActionImpl.html#line.20">ProductSetPricesActionImpl</a></span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
 implements <a href="ProductSetPricesAction.html" title="interface in com.commercetools.api.models.product">ProductSetPricesAction</a>, <a href="../../../../../io/vrap/rmf/base/client/ModelBase.html" title="interface in io.vrap.rmf.base.client">ModelBase</a></span></div>
-<div class="block">ProductSetPricesAction</div>
+<div class="block"><p>Either <code>variantId</code> or <code>sku</code> is required.</p></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -140,16 +140,24 @@ implements <a href="ProductSetPricesAction.html" title="interface in com.commerc
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/PriceDraft.html" title="interface in com.commercetools.api.models.common">PriceDraft</a>&gt;</code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getPrices()">getPrices</a></span>()</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">The Embedded Prices to set.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getSku()">getSku</a></span>()</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">The <code>sku</code> of the ProductVariant to update.</div>
+</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getStaged()">getStaged</a></span>()</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">If <code>true</code>, only the staged ProductVariant is updated.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getVariantId()">getVariantId</a></span>()</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">The <code>id</code> of the ProductVariant to update.</div>
+</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code>int</code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#hashCode()">hashCode</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
@@ -227,6 +235,7 @@ implements <a href="ProductSetPricesAction.html" title="interface in com.commerc
 <section class="detail" id="getVariantId()">
 <h3>getVariantId</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductSetPricesActionImpl.html#line.60">getVariantId</a></span>()</div>
+<div class="block"><p>The <code>id</code> of the ProductVariant to update.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="ProductSetPricesAction.html#getVariantId()">getVariantId</a></code>&nbsp;in interface&nbsp;<code><a href="ProductSetPricesAction.html" title="interface in com.commercetools.api.models.product">ProductSetPricesAction</a></code></dd>
@@ -237,6 +246,7 @@ implements <a href="ProductSetPricesAction.html" title="interface in com.commerc
 <section class="detail" id="getSku()">
 <h3>getSku</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductSetPricesActionImpl.html#line.68">getSku</a></span>()</div>
+<div class="block"><p>The <code>sku</code> of the ProductVariant to update.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="ProductSetPricesAction.html#getSku()">getSku</a></code>&nbsp;in interface&nbsp;<code><a href="ProductSetPricesAction.html" title="interface in com.commercetools.api.models.product">ProductSetPricesAction</a></code></dd>
@@ -247,6 +257,7 @@ implements <a href="ProductSetPricesAction.html" title="interface in com.commerc
 <section class="detail" id="getPrices()">
 <h3>getPrices</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/PriceDraft.html" title="interface in com.commercetools.api.models.common">PriceDraft</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductSetPricesActionImpl.html#line.76">getPrices</a></span>()</div>
+<div class="block"><p>The Embedded Prices to set. Each Price must have its unique Price scope (with same currency, country, Customer Group, Channel, <code>validFrom</code> and <code>validUntil</code>).</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="ProductSetPricesAction.html#getPrices()">getPrices</a></code>&nbsp;in interface&nbsp;<code><a href="ProductSetPricesAction.html" title="interface in com.commercetools.api.models.product">ProductSetPricesAction</a></code></dd>
@@ -257,6 +268,7 @@ implements <a href="ProductSetPricesAction.html" title="interface in com.commerc
 <section class="detail" id="getStaged()">
 <h3>getStaged</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductSetPricesActionImpl.html#line.84">getStaged</a></span>()</div>
+<div class="block"><p>If <code>true</code>, only the staged ProductVariant is updated. If <code>false</code>, both the current and staged ProductVariant are updated.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="ProductSetPricesAction.html#getStaged()">getStaged</a></code>&nbsp;in interface&nbsp;<code><a href="ProductSetPricesAction.html" title="interface in com.commercetools.api.models.product">ProductSetPricesAction</a></code></dd>

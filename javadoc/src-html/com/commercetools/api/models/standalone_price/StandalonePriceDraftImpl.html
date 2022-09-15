@@ -55,211 +55,229 @@
 <span class="source-line-no">042</span><span id="line.42"></span>
 <span class="source-line-no">043</span><span id="line.43">    private com.commercetools.api.models.type.CustomFieldsDraft custom;</span>
 <span class="source-line-no">044</span><span id="line.44"></span>
-<span class="source-line-no">045</span><span id="line.45">    @JsonCreator</span>
-<span class="source-line-no">046</span><span id="line.46">    StandalonePriceDraftImpl(@JsonProperty("key") final String key, @JsonProperty("sku") final String sku,</span>
-<span class="source-line-no">047</span><span id="line.47">            @JsonProperty("value") final com.commercetools.api.models.common.Money value,</span>
-<span class="source-line-no">048</span><span id="line.48">            @JsonProperty("country") final String country,</span>
-<span class="source-line-no">049</span><span id="line.49">            @JsonProperty("customerGroup") final com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier customerGroup,</span>
-<span class="source-line-no">050</span><span id="line.50">            @JsonProperty("channel") final com.commercetools.api.models.channel.ChannelResourceIdentifier channel,</span>
-<span class="source-line-no">051</span><span id="line.51">            @JsonProperty("validFrom") final java.time.ZonedDateTime validFrom,</span>
-<span class="source-line-no">052</span><span id="line.52">            @JsonProperty("validUntil") final java.time.ZonedDateTime validUntil,</span>
-<span class="source-line-no">053</span><span id="line.53">            @JsonProperty("tiers") final java.util.List&lt;com.commercetools.api.models.common.PriceTierDraft&gt; tiers,</span>
-<span class="source-line-no">054</span><span id="line.54">            @JsonProperty("discounted") final com.commercetools.api.models.common.DiscountedPriceDraft discounted,</span>
-<span class="source-line-no">055</span><span id="line.55">            @JsonProperty("custom") final com.commercetools.api.models.type.CustomFieldsDraft custom) {</span>
-<span class="source-line-no">056</span><span id="line.56">        this.key = key;</span>
-<span class="source-line-no">057</span><span id="line.57">        this.sku = sku;</span>
-<span class="source-line-no">058</span><span id="line.58">        this.value = value;</span>
-<span class="source-line-no">059</span><span id="line.59">        this.country = country;</span>
-<span class="source-line-no">060</span><span id="line.60">        this.customerGroup = customerGroup;</span>
-<span class="source-line-no">061</span><span id="line.61">        this.channel = channel;</span>
-<span class="source-line-no">062</span><span id="line.62">        this.validFrom = validFrom;</span>
-<span class="source-line-no">063</span><span id="line.63">        this.validUntil = validUntil;</span>
-<span class="source-line-no">064</span><span id="line.64">        this.tiers = tiers;</span>
-<span class="source-line-no">065</span><span id="line.65">        this.discounted = discounted;</span>
-<span class="source-line-no">066</span><span id="line.66">        this.custom = custom;</span>
-<span class="source-line-no">067</span><span id="line.67">    }</span>
-<span class="source-line-no">068</span><span id="line.68"></span>
-<span class="source-line-no">069</span><span id="line.69">    public StandalonePriceDraftImpl() {</span>
-<span class="source-line-no">070</span><span id="line.70">    }</span>
-<span class="source-line-no">071</span><span id="line.71"></span>
-<span class="source-line-no">072</span><span id="line.72">    /**</span>
-<span class="source-line-no">073</span><span id="line.73">     *  &lt;p&gt;User-defined unique identifier for the StandalonePrice.&lt;/p&gt;</span>
-<span class="source-line-no">074</span><span id="line.74">     */</span>
+<span class="source-line-no">045</span><span id="line.45">    private Boolean active;</span>
+<span class="source-line-no">046</span><span id="line.46"></span>
+<span class="source-line-no">047</span><span id="line.47">    @JsonCreator</span>
+<span class="source-line-no">048</span><span id="line.48">    StandalonePriceDraftImpl(@JsonProperty("key") final String key, @JsonProperty("sku") final String sku,</span>
+<span class="source-line-no">049</span><span id="line.49">            @JsonProperty("value") final com.commercetools.api.models.common.Money value,</span>
+<span class="source-line-no">050</span><span id="line.50">            @JsonProperty("country") final String country,</span>
+<span class="source-line-no">051</span><span id="line.51">            @JsonProperty("customerGroup") final com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier customerGroup,</span>
+<span class="source-line-no">052</span><span id="line.52">            @JsonProperty("channel") final com.commercetools.api.models.channel.ChannelResourceIdentifier channel,</span>
+<span class="source-line-no">053</span><span id="line.53">            @JsonProperty("validFrom") final java.time.ZonedDateTime validFrom,</span>
+<span class="source-line-no">054</span><span id="line.54">            @JsonProperty("validUntil") final java.time.ZonedDateTime validUntil,</span>
+<span class="source-line-no">055</span><span id="line.55">            @JsonProperty("tiers") final java.util.List&lt;com.commercetools.api.models.common.PriceTierDraft&gt; tiers,</span>
+<span class="source-line-no">056</span><span id="line.56">            @JsonProperty("discounted") final com.commercetools.api.models.common.DiscountedPriceDraft discounted,</span>
+<span class="source-line-no">057</span><span id="line.57">            @JsonProperty("custom") final com.commercetools.api.models.type.CustomFieldsDraft custom,</span>
+<span class="source-line-no">058</span><span id="line.58">            @JsonProperty("active") final Boolean active) {</span>
+<span class="source-line-no">059</span><span id="line.59">        this.key = key;</span>
+<span class="source-line-no">060</span><span id="line.60">        this.sku = sku;</span>
+<span class="source-line-no">061</span><span id="line.61">        this.value = value;</span>
+<span class="source-line-no">062</span><span id="line.62">        this.country = country;</span>
+<span class="source-line-no">063</span><span id="line.63">        this.customerGroup = customerGroup;</span>
+<span class="source-line-no">064</span><span id="line.64">        this.channel = channel;</span>
+<span class="source-line-no">065</span><span id="line.65">        this.validFrom = validFrom;</span>
+<span class="source-line-no">066</span><span id="line.66">        this.validUntil = validUntil;</span>
+<span class="source-line-no">067</span><span id="line.67">        this.tiers = tiers;</span>
+<span class="source-line-no">068</span><span id="line.68">        this.discounted = discounted;</span>
+<span class="source-line-no">069</span><span id="line.69">        this.custom = custom;</span>
+<span class="source-line-no">070</span><span id="line.70">        this.active = active;</span>
+<span class="source-line-no">071</span><span id="line.71">    }</span>
+<span class="source-line-no">072</span><span id="line.72"></span>
+<span class="source-line-no">073</span><span id="line.73">    public StandalonePriceDraftImpl() {</span>
+<span class="source-line-no">074</span><span id="line.74">    }</span>
 <span class="source-line-no">075</span><span id="line.75"></span>
-<span class="source-line-no">076</span><span id="line.76">    public String getKey() {</span>
-<span class="source-line-no">077</span><span id="line.77">        return this.key;</span>
-<span class="source-line-no">078</span><span id="line.78">    }</span>
+<span class="source-line-no">076</span><span id="line.76">    /**</span>
+<span class="source-line-no">077</span><span id="line.77">     *  &lt;p&gt;User-defined unique identifier for the StandalonePrice.&lt;/p&gt;</span>
+<span class="source-line-no">078</span><span id="line.78">     */</span>
 <span class="source-line-no">079</span><span id="line.79"></span>
-<span class="source-line-no">080</span><span id="line.80">    /**</span>
-<span class="source-line-no">081</span><span id="line.81">     *  &lt;p&gt;Specifies to which ProductVariant the API associates this Price. It is not validated to exist in product variants.&lt;/p&gt;</span>
-<span class="source-line-no">082</span><span id="line.82">     */</span>
+<span class="source-line-no">080</span><span id="line.80">    public String getKey() {</span>
+<span class="source-line-no">081</span><span id="line.81">        return this.key;</span>
+<span class="source-line-no">082</span><span id="line.82">    }</span>
 <span class="source-line-no">083</span><span id="line.83"></span>
-<span class="source-line-no">084</span><span id="line.84">    public String getSku() {</span>
-<span class="source-line-no">085</span><span id="line.85">        return this.sku;</span>
-<span class="source-line-no">086</span><span id="line.86">    }</span>
+<span class="source-line-no">084</span><span id="line.84">    /**</span>
+<span class="source-line-no">085</span><span id="line.85">     *  &lt;p&gt;Specifies to which ProductVariant the API associates this Price. It is not validated to exist in product variants.&lt;/p&gt;</span>
+<span class="source-line-no">086</span><span id="line.86">     */</span>
 <span class="source-line-no">087</span><span id="line.87"></span>
-<span class="source-line-no">088</span><span id="line.88">    /**</span>
-<span class="source-line-no">089</span><span id="line.89">     *  &lt;p&gt;Sets the money value of this Price.&lt;/p&gt;</span>
-<span class="source-line-no">090</span><span id="line.90">     */</span>
+<span class="source-line-no">088</span><span id="line.88">    public String getSku() {</span>
+<span class="source-line-no">089</span><span id="line.89">        return this.sku;</span>
+<span class="source-line-no">090</span><span id="line.90">    }</span>
 <span class="source-line-no">091</span><span id="line.91"></span>
-<span class="source-line-no">092</span><span id="line.92">    public com.commercetools.api.models.common.Money getValue() {</span>
-<span class="source-line-no">093</span><span id="line.93">        return this.value;</span>
-<span class="source-line-no">094</span><span id="line.94">    }</span>
+<span class="source-line-no">092</span><span id="line.92">    /**</span>
+<span class="source-line-no">093</span><span id="line.93">     *  &lt;p&gt;Sets the money value of this Price.&lt;/p&gt;</span>
+<span class="source-line-no">094</span><span id="line.94">     */</span>
 <span class="source-line-no">095</span><span id="line.95"></span>
-<span class="source-line-no">096</span><span id="line.96">    /**</span>
-<span class="source-line-no">097</span><span id="line.97">     *  &lt;p&gt;Sets the country for which this Price is valid.&lt;/p&gt;</span>
-<span class="source-line-no">098</span><span id="line.98">     */</span>
+<span class="source-line-no">096</span><span id="line.96">    public com.commercetools.api.models.common.Money getValue() {</span>
+<span class="source-line-no">097</span><span id="line.97">        return this.value;</span>
+<span class="source-line-no">098</span><span id="line.98">    }</span>
 <span class="source-line-no">099</span><span id="line.99"></span>
-<span class="source-line-no">100</span><span id="line.100">    public String getCountry() {</span>
-<span class="source-line-no">101</span><span id="line.101">        return this.country;</span>
-<span class="source-line-no">102</span><span id="line.102">    }</span>
+<span class="source-line-no">100</span><span id="line.100">    /**</span>
+<span class="source-line-no">101</span><span id="line.101">     *  &lt;p&gt;Sets the country for which this Price is valid.&lt;/p&gt;</span>
+<span class="source-line-no">102</span><span id="line.102">     */</span>
 <span class="source-line-no">103</span><span id="line.103"></span>
-<span class="source-line-no">104</span><span id="line.104">    /**</span>
-<span class="source-line-no">105</span><span id="line.105">     *  &lt;p&gt;Sets the CustomerGroup for which this Price is valid.&lt;/p&gt;</span>
-<span class="source-line-no">106</span><span id="line.106">     */</span>
+<span class="source-line-no">104</span><span id="line.104">    public String getCountry() {</span>
+<span class="source-line-no">105</span><span id="line.105">        return this.country;</span>
+<span class="source-line-no">106</span><span id="line.106">    }</span>
 <span class="source-line-no">107</span><span id="line.107"></span>
-<span class="source-line-no">108</span><span id="line.108">    public com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier getCustomerGroup() {</span>
-<span class="source-line-no">109</span><span id="line.109">        return this.customerGroup;</span>
-<span class="source-line-no">110</span><span id="line.110">    }</span>
+<span class="source-line-no">108</span><span id="line.108">    /**</span>
+<span class="source-line-no">109</span><span id="line.109">     *  &lt;p&gt;Sets the CustomerGroup for which this Price is valid.&lt;/p&gt;</span>
+<span class="source-line-no">110</span><span id="line.110">     */</span>
 <span class="source-line-no">111</span><span id="line.111"></span>
-<span class="source-line-no">112</span><span id="line.112">    /**</span>
-<span class="source-line-no">113</span><span id="line.113">     *  &lt;p&gt;Sets the product distribution Channel for which this Price is valid.&lt;/p&gt;</span>
-<span class="source-line-no">114</span><span id="line.114">     */</span>
+<span class="source-line-no">112</span><span id="line.112">    public com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier getCustomerGroup() {</span>
+<span class="source-line-no">113</span><span id="line.113">        return this.customerGroup;</span>
+<span class="source-line-no">114</span><span id="line.114">    }</span>
 <span class="source-line-no">115</span><span id="line.115"></span>
-<span class="source-line-no">116</span><span id="line.116">    public com.commercetools.api.models.channel.ChannelResourceIdentifier getChannel() {</span>
-<span class="source-line-no">117</span><span id="line.117">        return this.channel;</span>
-<span class="source-line-no">118</span><span id="line.118">    }</span>
+<span class="source-line-no">116</span><span id="line.116">    /**</span>
+<span class="source-line-no">117</span><span id="line.117">     *  &lt;p&gt;Sets the product distribution Channel for which this Price is valid.&lt;/p&gt;</span>
+<span class="source-line-no">118</span><span id="line.118">     */</span>
 <span class="source-line-no">119</span><span id="line.119"></span>
-<span class="source-line-no">120</span><span id="line.120">    /**</span>
-<span class="source-line-no">121</span><span id="line.121">     *  &lt;p&gt;Sets the date from which the Price is valid.&lt;/p&gt;</span>
-<span class="source-line-no">122</span><span id="line.122">     */</span>
+<span class="source-line-no">120</span><span id="line.120">    public com.commercetools.api.models.channel.ChannelResourceIdentifier getChannel() {</span>
+<span class="source-line-no">121</span><span id="line.121">        return this.channel;</span>
+<span class="source-line-no">122</span><span id="line.122">    }</span>
 <span class="source-line-no">123</span><span id="line.123"></span>
-<span class="source-line-no">124</span><span id="line.124">    public java.time.ZonedDateTime getValidFrom() {</span>
-<span class="source-line-no">125</span><span id="line.125">        return this.validFrom;</span>
-<span class="source-line-no">126</span><span id="line.126">    }</span>
+<span class="source-line-no">124</span><span id="line.124">    /**</span>
+<span class="source-line-no">125</span><span id="line.125">     *  &lt;p&gt;Sets the date from which the Price is valid. Must be at least 1 ms earlier than &lt;code&gt;validUntil&lt;/code&gt;.&lt;/p&gt;</span>
+<span class="source-line-no">126</span><span id="line.126">     */</span>
 <span class="source-line-no">127</span><span id="line.127"></span>
-<span class="source-line-no">128</span><span id="line.128">    /**</span>
-<span class="source-line-no">129</span><span id="line.129">     *  &lt;p&gt;Sets the date until the Price is valid.&lt;/p&gt;</span>
-<span class="source-line-no">130</span><span id="line.130">     */</span>
+<span class="source-line-no">128</span><span id="line.128">    public java.time.ZonedDateTime getValidFrom() {</span>
+<span class="source-line-no">129</span><span id="line.129">        return this.validFrom;</span>
+<span class="source-line-no">130</span><span id="line.130">    }</span>
 <span class="source-line-no">131</span><span id="line.131"></span>
-<span class="source-line-no">132</span><span id="line.132">    public java.time.ZonedDateTime getValidUntil() {</span>
-<span class="source-line-no">133</span><span id="line.133">        return this.validUntil;</span>
-<span class="source-line-no">134</span><span id="line.134">    }</span>
+<span class="source-line-no">132</span><span id="line.132">    /**</span>
+<span class="source-line-no">133</span><span id="line.133">     *  &lt;p&gt;Sets the date until the Price is valid. Must be at least 1 ms later than &lt;code&gt;validFrom&lt;/code&gt;.&lt;/p&gt;</span>
+<span class="source-line-no">134</span><span id="line.134">     */</span>
 <span class="source-line-no">135</span><span id="line.135"></span>
-<span class="source-line-no">136</span><span id="line.136">    /**</span>
-<span class="source-line-no">137</span><span id="line.137">     *  &lt;p&gt;Sets price tiers.&lt;/p&gt;</span>
-<span class="source-line-no">138</span><span id="line.138">     */</span>
+<span class="source-line-no">136</span><span id="line.136">    public java.time.ZonedDateTime getValidUntil() {</span>
+<span class="source-line-no">137</span><span id="line.137">        return this.validUntil;</span>
+<span class="source-line-no">138</span><span id="line.138">    }</span>
 <span class="source-line-no">139</span><span id="line.139"></span>
-<span class="source-line-no">140</span><span id="line.140">    public java.util.List&lt;com.commercetools.api.models.common.PriceTierDraft&gt; getTiers() {</span>
-<span class="source-line-no">141</span><span id="line.141">        return this.tiers;</span>
-<span class="source-line-no">142</span><span id="line.142">    }</span>
+<span class="source-line-no">140</span><span id="line.140">    /**</span>
+<span class="source-line-no">141</span><span id="line.141">     *  &lt;p&gt;Sets price tiers.&lt;/p&gt;</span>
+<span class="source-line-no">142</span><span id="line.142">     */</span>
 <span class="source-line-no">143</span><span id="line.143"></span>
-<span class="source-line-no">144</span><span id="line.144">    /**</span>
-<span class="source-line-no">145</span><span id="line.145">     *  &lt;p&gt;Sets a discounted price for this Price that is different from the base price with &lt;code&gt;value&lt;/code&gt;.&lt;/p&gt;</span>
-<span class="source-line-no">146</span><span id="line.146">     */</span>
+<span class="source-line-no">144</span><span id="line.144">    public java.util.List&lt;com.commercetools.api.models.common.PriceTierDraft&gt; getTiers() {</span>
+<span class="source-line-no">145</span><span id="line.145">        return this.tiers;</span>
+<span class="source-line-no">146</span><span id="line.146">    }</span>
 <span class="source-line-no">147</span><span id="line.147"></span>
-<span class="source-line-no">148</span><span id="line.148">    public com.commercetools.api.models.common.DiscountedPriceDraft getDiscounted() {</span>
-<span class="source-line-no">149</span><span id="line.149">        return this.discounted;</span>
-<span class="source-line-no">150</span><span id="line.150">    }</span>
+<span class="source-line-no">148</span><span id="line.148">    /**</span>
+<span class="source-line-no">149</span><span id="line.149">     *  &lt;p&gt;Sets a discounted price for this Price that is different from the base price with &lt;code&gt;value&lt;/code&gt;.&lt;/p&gt;</span>
+<span class="source-line-no">150</span><span id="line.150">     */</span>
 <span class="source-line-no">151</span><span id="line.151"></span>
-<span class="source-line-no">152</span><span id="line.152">    /**</span>
-<span class="source-line-no">153</span><span id="line.153">     *  &lt;p&gt;Custom Fields for the StandalonePrice.&lt;/p&gt;</span>
-<span class="source-line-no">154</span><span id="line.154">     */</span>
+<span class="source-line-no">152</span><span id="line.152">    public com.commercetools.api.models.common.DiscountedPriceDraft getDiscounted() {</span>
+<span class="source-line-no">153</span><span id="line.153">        return this.discounted;</span>
+<span class="source-line-no">154</span><span id="line.154">    }</span>
 <span class="source-line-no">155</span><span id="line.155"></span>
-<span class="source-line-no">156</span><span id="line.156">    public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {</span>
-<span class="source-line-no">157</span><span id="line.157">        return this.custom;</span>
-<span class="source-line-no">158</span><span id="line.158">    }</span>
+<span class="source-line-no">156</span><span id="line.156">    /**</span>
+<span class="source-line-no">157</span><span id="line.157">     *  &lt;p&gt;Custom Fields for the StandalonePrice.&lt;/p&gt;</span>
+<span class="source-line-no">158</span><span id="line.158">     */</span>
 <span class="source-line-no">159</span><span id="line.159"></span>
-<span class="source-line-no">160</span><span id="line.160">    public void setKey(final String key) {</span>
-<span class="source-line-no">161</span><span id="line.161">        this.key = key;</span>
+<span class="source-line-no">160</span><span id="line.160">    public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {</span>
+<span class="source-line-no">161</span><span id="line.161">        return this.custom;</span>
 <span class="source-line-no">162</span><span id="line.162">    }</span>
 <span class="source-line-no">163</span><span id="line.163"></span>
-<span class="source-line-no">164</span><span id="line.164">    public void setSku(final String sku) {</span>
-<span class="source-line-no">165</span><span id="line.165">        this.sku = sku;</span>
-<span class="source-line-no">166</span><span id="line.166">    }</span>
+<span class="source-line-no">164</span><span id="line.164">    /**</span>
+<span class="source-line-no">165</span><span id="line.165">     *  &lt;p&gt;If set to &lt;code&gt;true&lt;/code&gt;, the StandalonePrice is considered during price selection. If set to &lt;code&gt;false&lt;/code&gt;, the StandalonePrice is not considered during price selection.&lt;/p&gt;</span>
+<span class="source-line-no">166</span><span id="line.166">     */</span>
 <span class="source-line-no">167</span><span id="line.167"></span>
-<span class="source-line-no">168</span><span id="line.168">    public void setValue(final com.commercetools.api.models.common.Money value) {</span>
-<span class="source-line-no">169</span><span id="line.169">        this.value = value;</span>
+<span class="source-line-no">168</span><span id="line.168">    public Boolean getActive() {</span>
+<span class="source-line-no">169</span><span id="line.169">        return this.active;</span>
 <span class="source-line-no">170</span><span id="line.170">    }</span>
 <span class="source-line-no">171</span><span id="line.171"></span>
-<span class="source-line-no">172</span><span id="line.172">    public void setCountry(final String country) {</span>
-<span class="source-line-no">173</span><span id="line.173">        this.country = country;</span>
+<span class="source-line-no">172</span><span id="line.172">    public void setKey(final String key) {</span>
+<span class="source-line-no">173</span><span id="line.173">        this.key = key;</span>
 <span class="source-line-no">174</span><span id="line.174">    }</span>
 <span class="source-line-no">175</span><span id="line.175"></span>
-<span class="source-line-no">176</span><span id="line.176">    public void setCustomerGroup(</span>
-<span class="source-line-no">177</span><span id="line.177">            final com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier customerGroup) {</span>
-<span class="source-line-no">178</span><span id="line.178">        this.customerGroup = customerGroup;</span>
-<span class="source-line-no">179</span><span id="line.179">    }</span>
-<span class="source-line-no">180</span><span id="line.180"></span>
-<span class="source-line-no">181</span><span id="line.181">    public void setChannel(final com.commercetools.api.models.channel.ChannelResourceIdentifier channel) {</span>
-<span class="source-line-no">182</span><span id="line.182">        this.channel = channel;</span>
-<span class="source-line-no">183</span><span id="line.183">    }</span>
-<span class="source-line-no">184</span><span id="line.184"></span>
-<span class="source-line-no">185</span><span id="line.185">    public void setValidFrom(final java.time.ZonedDateTime validFrom) {</span>
-<span class="source-line-no">186</span><span id="line.186">        this.validFrom = validFrom;</span>
-<span class="source-line-no">187</span><span id="line.187">    }</span>
-<span class="source-line-no">188</span><span id="line.188"></span>
-<span class="source-line-no">189</span><span id="line.189">    public void setValidUntil(final java.time.ZonedDateTime validUntil) {</span>
-<span class="source-line-no">190</span><span id="line.190">        this.validUntil = validUntil;</span>
+<span class="source-line-no">176</span><span id="line.176">    public void setSku(final String sku) {</span>
+<span class="source-line-no">177</span><span id="line.177">        this.sku = sku;</span>
+<span class="source-line-no">178</span><span id="line.178">    }</span>
+<span class="source-line-no">179</span><span id="line.179"></span>
+<span class="source-line-no">180</span><span id="line.180">    public void setValue(final com.commercetools.api.models.common.Money value) {</span>
+<span class="source-line-no">181</span><span id="line.181">        this.value = value;</span>
+<span class="source-line-no">182</span><span id="line.182">    }</span>
+<span class="source-line-no">183</span><span id="line.183"></span>
+<span class="source-line-no">184</span><span id="line.184">    public void setCountry(final String country) {</span>
+<span class="source-line-no">185</span><span id="line.185">        this.country = country;</span>
+<span class="source-line-no">186</span><span id="line.186">    }</span>
+<span class="source-line-no">187</span><span id="line.187"></span>
+<span class="source-line-no">188</span><span id="line.188">    public void setCustomerGroup(</span>
+<span class="source-line-no">189</span><span id="line.189">            final com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier customerGroup) {</span>
+<span class="source-line-no">190</span><span id="line.190">        this.customerGroup = customerGroup;</span>
 <span class="source-line-no">191</span><span id="line.191">    }</span>
 <span class="source-line-no">192</span><span id="line.192"></span>
-<span class="source-line-no">193</span><span id="line.193">    public void setTiers(final com.commercetools.api.models.common.PriceTierDraft... tiers) {</span>
-<span class="source-line-no">194</span><span id="line.194">        this.tiers = new ArrayList&lt;&gt;(Arrays.asList(tiers));</span>
+<span class="source-line-no">193</span><span id="line.193">    public void setChannel(final com.commercetools.api.models.channel.ChannelResourceIdentifier channel) {</span>
+<span class="source-line-no">194</span><span id="line.194">        this.channel = channel;</span>
 <span class="source-line-no">195</span><span id="line.195">    }</span>
 <span class="source-line-no">196</span><span id="line.196"></span>
-<span class="source-line-no">197</span><span id="line.197">    public void setTiers(final java.util.List&lt;com.commercetools.api.models.common.PriceTierDraft&gt; tiers) {</span>
-<span class="source-line-no">198</span><span id="line.198">        this.tiers = tiers;</span>
+<span class="source-line-no">197</span><span id="line.197">    public void setValidFrom(final java.time.ZonedDateTime validFrom) {</span>
+<span class="source-line-no">198</span><span id="line.198">        this.validFrom = validFrom;</span>
 <span class="source-line-no">199</span><span id="line.199">    }</span>
 <span class="source-line-no">200</span><span id="line.200"></span>
-<span class="source-line-no">201</span><span id="line.201">    public void setDiscounted(final com.commercetools.api.models.common.DiscountedPriceDraft discounted) {</span>
-<span class="source-line-no">202</span><span id="line.202">        this.discounted = discounted;</span>
+<span class="source-line-no">201</span><span id="line.201">    public void setValidUntil(final java.time.ZonedDateTime validUntil) {</span>
+<span class="source-line-no">202</span><span id="line.202">        this.validUntil = validUntil;</span>
 <span class="source-line-no">203</span><span id="line.203">    }</span>
 <span class="source-line-no">204</span><span id="line.204"></span>
-<span class="source-line-no">205</span><span id="line.205">    public void setCustom(final com.commercetools.api.models.type.CustomFieldsDraft custom) {</span>
-<span class="source-line-no">206</span><span id="line.206">        this.custom = custom;</span>
+<span class="source-line-no">205</span><span id="line.205">    public void setTiers(final com.commercetools.api.models.common.PriceTierDraft... tiers) {</span>
+<span class="source-line-no">206</span><span id="line.206">        this.tiers = new ArrayList&lt;&gt;(Arrays.asList(tiers));</span>
 <span class="source-line-no">207</span><span id="line.207">    }</span>
 <span class="source-line-no">208</span><span id="line.208"></span>
-<span class="source-line-no">209</span><span id="line.209">    @Override</span>
-<span class="source-line-no">210</span><span id="line.210">    public boolean equals(Object o) {</span>
-<span class="source-line-no">211</span><span id="line.211">        if (this == o)</span>
-<span class="source-line-no">212</span><span id="line.212">            return true;</span>
-<span class="source-line-no">213</span><span id="line.213"></span>
-<span class="source-line-no">214</span><span id="line.214">        if (o == null || getClass() != o.getClass())</span>
-<span class="source-line-no">215</span><span id="line.215">            return false;</span>
+<span class="source-line-no">209</span><span id="line.209">    public void setTiers(final java.util.List&lt;com.commercetools.api.models.common.PriceTierDraft&gt; tiers) {</span>
+<span class="source-line-no">210</span><span id="line.210">        this.tiers = tiers;</span>
+<span class="source-line-no">211</span><span id="line.211">    }</span>
+<span class="source-line-no">212</span><span id="line.212"></span>
+<span class="source-line-no">213</span><span id="line.213">    public void setDiscounted(final com.commercetools.api.models.common.DiscountedPriceDraft discounted) {</span>
+<span class="source-line-no">214</span><span id="line.214">        this.discounted = discounted;</span>
+<span class="source-line-no">215</span><span id="line.215">    }</span>
 <span class="source-line-no">216</span><span id="line.216"></span>
-<span class="source-line-no">217</span><span id="line.217">        StandalonePriceDraftImpl that = (StandalonePriceDraftImpl) o;</span>
-<span class="source-line-no">218</span><span id="line.218"></span>
-<span class="source-line-no">219</span><span id="line.219">        return new EqualsBuilder().append(key, that.key)</span>
-<span class="source-line-no">220</span><span id="line.220">                .append(sku, that.sku)</span>
-<span class="source-line-no">221</span><span id="line.221">                .append(value, that.value)</span>
-<span class="source-line-no">222</span><span id="line.222">                .append(country, that.country)</span>
-<span class="source-line-no">223</span><span id="line.223">                .append(customerGroup, that.customerGroup)</span>
-<span class="source-line-no">224</span><span id="line.224">                .append(channel, that.channel)</span>
-<span class="source-line-no">225</span><span id="line.225">                .append(validFrom, that.validFrom)</span>
-<span class="source-line-no">226</span><span id="line.226">                .append(validUntil, that.validUntil)</span>
-<span class="source-line-no">227</span><span id="line.227">                .append(tiers, that.tiers)</span>
-<span class="source-line-no">228</span><span id="line.228">                .append(discounted, that.discounted)</span>
-<span class="source-line-no">229</span><span id="line.229">                .append(custom, that.custom)</span>
-<span class="source-line-no">230</span><span id="line.230">                .isEquals();</span>
-<span class="source-line-no">231</span><span id="line.231">    }</span>
+<span class="source-line-no">217</span><span id="line.217">    public void setCustom(final com.commercetools.api.models.type.CustomFieldsDraft custom) {</span>
+<span class="source-line-no">218</span><span id="line.218">        this.custom = custom;</span>
+<span class="source-line-no">219</span><span id="line.219">    }</span>
+<span class="source-line-no">220</span><span id="line.220"></span>
+<span class="source-line-no">221</span><span id="line.221">    public void setActive(final Boolean active) {</span>
+<span class="source-line-no">222</span><span id="line.222">        this.active = active;</span>
+<span class="source-line-no">223</span><span id="line.223">    }</span>
+<span class="source-line-no">224</span><span id="line.224"></span>
+<span class="source-line-no">225</span><span id="line.225">    @Override</span>
+<span class="source-line-no">226</span><span id="line.226">    public boolean equals(Object o) {</span>
+<span class="source-line-no">227</span><span id="line.227">        if (this == o)</span>
+<span class="source-line-no">228</span><span id="line.228">            return true;</span>
+<span class="source-line-no">229</span><span id="line.229"></span>
+<span class="source-line-no">230</span><span id="line.230">        if (o == null || getClass() != o.getClass())</span>
+<span class="source-line-no">231</span><span id="line.231">            return false;</span>
 <span class="source-line-no">232</span><span id="line.232"></span>
-<span class="source-line-no">233</span><span id="line.233">    @Override</span>
-<span class="source-line-no">234</span><span id="line.234">    public int hashCode() {</span>
-<span class="source-line-no">235</span><span id="line.235">        return new HashCodeBuilder(17, 37).append(key)</span>
-<span class="source-line-no">236</span><span id="line.236">                .append(sku)</span>
-<span class="source-line-no">237</span><span id="line.237">                .append(value)</span>
-<span class="source-line-no">238</span><span id="line.238">                .append(country)</span>
-<span class="source-line-no">239</span><span id="line.239">                .append(customerGroup)</span>
-<span class="source-line-no">240</span><span id="line.240">                .append(channel)</span>
-<span class="source-line-no">241</span><span id="line.241">                .append(validFrom)</span>
-<span class="source-line-no">242</span><span id="line.242">                .append(validUntil)</span>
-<span class="source-line-no">243</span><span id="line.243">                .append(tiers)</span>
-<span class="source-line-no">244</span><span id="line.244">                .append(discounted)</span>
-<span class="source-line-no">245</span><span id="line.245">                .append(custom)</span>
-<span class="source-line-no">246</span><span id="line.246">                .toHashCode();</span>
-<span class="source-line-no">247</span><span id="line.247">    }</span>
-<span class="source-line-no">248</span><span id="line.248"></span>
-<span class="source-line-no">249</span><span id="line.249">}</span>
+<span class="source-line-no">233</span><span id="line.233">        StandalonePriceDraftImpl that = (StandalonePriceDraftImpl) o;</span>
+<span class="source-line-no">234</span><span id="line.234"></span>
+<span class="source-line-no">235</span><span id="line.235">        return new EqualsBuilder().append(key, that.key)</span>
+<span class="source-line-no">236</span><span id="line.236">                .append(sku, that.sku)</span>
+<span class="source-line-no">237</span><span id="line.237">                .append(value, that.value)</span>
+<span class="source-line-no">238</span><span id="line.238">                .append(country, that.country)</span>
+<span class="source-line-no">239</span><span id="line.239">                .append(customerGroup, that.customerGroup)</span>
+<span class="source-line-no">240</span><span id="line.240">                .append(channel, that.channel)</span>
+<span class="source-line-no">241</span><span id="line.241">                .append(validFrom, that.validFrom)</span>
+<span class="source-line-no">242</span><span id="line.242">                .append(validUntil, that.validUntil)</span>
+<span class="source-line-no">243</span><span id="line.243">                .append(tiers, that.tiers)</span>
+<span class="source-line-no">244</span><span id="line.244">                .append(discounted, that.discounted)</span>
+<span class="source-line-no">245</span><span id="line.245">                .append(custom, that.custom)</span>
+<span class="source-line-no">246</span><span id="line.246">                .append(active, that.active)</span>
+<span class="source-line-no">247</span><span id="line.247">                .isEquals();</span>
+<span class="source-line-no">248</span><span id="line.248">    }</span>
+<span class="source-line-no">249</span><span id="line.249"></span>
+<span class="source-line-no">250</span><span id="line.250">    @Override</span>
+<span class="source-line-no">251</span><span id="line.251">    public int hashCode() {</span>
+<span class="source-line-no">252</span><span id="line.252">        return new HashCodeBuilder(17, 37).append(key)</span>
+<span class="source-line-no">253</span><span id="line.253">                .append(sku)</span>
+<span class="source-line-no">254</span><span id="line.254">                .append(value)</span>
+<span class="source-line-no">255</span><span id="line.255">                .append(country)</span>
+<span class="source-line-no">256</span><span id="line.256">                .append(customerGroup)</span>
+<span class="source-line-no">257</span><span id="line.257">                .append(channel)</span>
+<span class="source-line-no">258</span><span id="line.258">                .append(validFrom)</span>
+<span class="source-line-no">259</span><span id="line.259">                .append(validUntil)</span>
+<span class="source-line-no">260</span><span id="line.260">                .append(tiers)</span>
+<span class="source-line-no">261</span><span id="line.261">                .append(discounted)</span>
+<span class="source-line-no">262</span><span id="line.262">                .append(custom)</span>
+<span class="source-line-no">263</span><span id="line.263">                .append(active)</span>
+<span class="source-line-no">264</span><span id="line.264">                .toHashCode();</span>
+<span class="source-line-no">265</span><span id="line.265">    }</span>
+<span class="source-line-no">266</span><span id="line.266"></span>
+<span class="source-line-no">267</span><span id="line.267">}</span>
 
 
 

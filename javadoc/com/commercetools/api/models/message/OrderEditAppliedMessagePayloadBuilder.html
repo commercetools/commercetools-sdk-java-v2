@@ -133,16 +133,16 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="block">builds OrderEditAppliedMessagePayload without checking for non null required values</div>
 </div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="OrderEditAppliedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">OrderEditAppliedMessagePayloadBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#edit(com.commercetools.api.models.order_edit.OrderEditReference)">edit</a></span>&#8203;(<a href="../order_edit/OrderEditReference.html" title="interface in com.commercetools.api.models.order_edit">OrderEditReference</a>&nbsp;edit)</code></div>
+<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#edit(com.commercetools.api.models.order_edit.OrderEdit)">edit</a></span>&#8203;(<a href="../order_edit/OrderEdit.html" title="interface in com.commercetools.api.models.order_edit">OrderEdit</a>&nbsp;edit)</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
-<div class="block">Reference to an OrderEdit.</div>
+<div class="block">OrderEdit that was applied.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="OrderEditAppliedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">OrderEditAppliedMessagePayloadBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#edit(java.util.function.Function)">edit</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../order_edit/OrderEditReferenceBuilder.html" title="class in com.commercetools.api.models.order_edit">OrderEditReferenceBuilder</a>,&#8203;<a href="../order_edit/OrderEditReferenceBuilder.html" title="class in com.commercetools.api.models.order_edit">OrderEditReferenceBuilder</a>&gt;&nbsp;builder)</code></div>
+<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#edit(java.util.function.Function)">edit</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../order_edit/OrderEditBuilder.html" title="class in com.commercetools.api.models.order_edit">OrderEditBuilder</a>,&#8203;<a href="../order_edit/OrderEditBuilder.html" title="class in com.commercetools.api.models.order_edit">OrderEditBuilder</a>&gt;&nbsp;builder)</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
-<div class="block">Reference to an OrderEdit.</div>
+<div class="block">OrderEdit that was applied.</div>
 </div>
-<div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="../order_edit/OrderEditReference.html" title="interface in com.commercetools.api.models.order_edit">OrderEditReference</a></code></div>
+<div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="../order_edit/OrderEdit.html" title="interface in com.commercetools.api.models.order_edit">OrderEdit</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getEdit()">getEdit</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="../order_edit/OrderEditApplied.html" title="interface in com.commercetools.api.models.order_edit">OrderEditApplied</a></code></div>
@@ -156,10 +156,14 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="col-last odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="OrderEditAppliedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">OrderEditAppliedMessagePayloadBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#result(com.commercetools.api.models.order_edit.OrderEditApplied)">result</a></span>&#8203;(<a href="../order_edit/OrderEditApplied.html" title="interface in com.commercetools.api.models.order_edit">OrderEditApplied</a>&nbsp;result)</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">Information about a successfully applied OrderEdit.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="OrderEditAppliedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">OrderEditAppliedMessagePayloadBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#result(java.util.function.Function)">result</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../order_edit/OrderEditAppliedBuilder.html" title="class in com.commercetools.api.models.order_edit">OrderEditAppliedBuilder</a>,&#8203;<a href="../order_edit/OrderEditAppliedBuilder.html" title="class in com.commercetools.api.models.order_edit">OrderEditAppliedBuilder</a>&gt;&nbsp;builder)</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">Information about a successfully applied OrderEdit.</div>
+</div>
 </div>
 </div>
 </div>
@@ -194,45 +198,47 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="edit(java.util.function.Function)">
 <h3>edit</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderEditAppliedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">OrderEditAppliedMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderEditAppliedMessagePayloadBuilder.html#line.34">edit</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../order_edit/OrderEditReferenceBuilder.html" title="class in com.commercetools.api.models.order_edit">OrderEditReferenceBuilder</a>,&#8203;<a href="../order_edit/OrderEditReferenceBuilder.html" title="class in com.commercetools.api.models.order_edit">OrderEditReferenceBuilder</a>&gt;&nbsp;builder)</span></div>
-<div class="block"><p>Reference to an OrderEdit.</p></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderEditAppliedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">OrderEditAppliedMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderEditAppliedMessagePayloadBuilder.html#line.34">edit</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../order_edit/OrderEditBuilder.html" title="class in com.commercetools.api.models.order_edit">OrderEditBuilder</a>,&#8203;<a href="../order_edit/OrderEditBuilder.html" title="class in com.commercetools.api.models.order_edit">OrderEditBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="block"><p>OrderEdit that was applied.</p></div>
 </section>
 </li>
 <li>
-<section class="detail" id="edit(com.commercetools.api.models.order_edit.OrderEditReference)">
+<section class="detail" id="edit(com.commercetools.api.models.order_edit.OrderEdit)">
 <h3>edit</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderEditAppliedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">OrderEditAppliedMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderEditAppliedMessagePayloadBuilder.html#line.44">edit</a></span>&#8203;<span class="parameters">(<a href="../order_edit/OrderEditReference.html" title="interface in com.commercetools.api.models.order_edit">OrderEditReference</a>&nbsp;edit)</span></div>
-<div class="block"><p>Reference to an OrderEdit.</p></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderEditAppliedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">OrderEditAppliedMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderEditAppliedMessagePayloadBuilder.html#line.44">edit</a></span>&#8203;<span class="parameters">(<a href="../order_edit/OrderEdit.html" title="interface in com.commercetools.api.models.order_edit">OrderEdit</a>&nbsp;edit)</span></div>
+<div class="block"><p>OrderEdit that was applied.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="result(java.util.function.Function)">
 <h3>result</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderEditAppliedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">OrderEditAppliedMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderEditAppliedMessagePayloadBuilder.html#line.54">result</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../order_edit/OrderEditAppliedBuilder.html" title="class in com.commercetools.api.models.order_edit">OrderEditAppliedBuilder</a>,&#8203;<a href="../order_edit/OrderEditAppliedBuilder.html" title="class in com.commercetools.api.models.order_edit">OrderEditAppliedBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderEditAppliedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">OrderEditAppliedMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderEditAppliedMessagePayloadBuilder.html#line.53">result</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../order_edit/OrderEditAppliedBuilder.html" title="class in com.commercetools.api.models.order_edit">OrderEditAppliedBuilder</a>,&#8203;<a href="../order_edit/OrderEditAppliedBuilder.html" title="class in com.commercetools.api.models.order_edit">OrderEditAppliedBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="block"><p>Information about a successfully applied OrderEdit.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="result(com.commercetools.api.models.order_edit.OrderEditApplied)">
 <h3>result</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderEditAppliedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">OrderEditAppliedMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderEditAppliedMessagePayloadBuilder.html#line.64">result</a></span>&#8203;<span class="parameters">(<a href="../order_edit/OrderEditApplied.html" title="interface in com.commercetools.api.models.order_edit">OrderEditApplied</a>&nbsp;result)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderEditAppliedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">OrderEditAppliedMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderEditAppliedMessagePayloadBuilder.html#line.63">result</a></span>&#8203;<span class="parameters">(<a href="../order_edit/OrderEditApplied.html" title="interface in com.commercetools.api.models.order_edit">OrderEditApplied</a>&nbsp;result)</span></div>
+<div class="block"><p>Information about a successfully applied OrderEdit.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getEdit()">
 <h3>getEdit</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../order_edit/OrderEditReference.html" title="interface in com.commercetools.api.models.order_edit">OrderEditReference</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderEditAppliedMessagePayloadBuilder.html#line.70">getEdit</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../order_edit/OrderEdit.html" title="interface in com.commercetools.api.models.order_edit">OrderEdit</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderEditAppliedMessagePayloadBuilder.html#line.69">getEdit</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getResult()">
 <h3>getResult</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../order_edit/OrderEditApplied.html" title="interface in com.commercetools.api.models.order_edit">OrderEditApplied</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderEditAppliedMessagePayloadBuilder.html#line.74">getResult</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../order_edit/OrderEditApplied.html" title="interface in com.commercetools.api.models.order_edit">OrderEditApplied</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderEditAppliedMessagePayloadBuilder.html#line.73">getResult</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="build()">
 <h3>build</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderEditAppliedMessagePayload.html" title="interface in com.commercetools.api.models.message">OrderEditAppliedMessagePayload</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderEditAppliedMessagePayloadBuilder.html#line.78">build</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderEditAppliedMessagePayload.html" title="interface in com.commercetools.api.models.message">OrderEditAppliedMessagePayload</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderEditAppliedMessagePayloadBuilder.html#line.77">build</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html#build()">build</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="OrderEditAppliedMessagePayload.html" title="interface in com.commercetools.api.models.message">OrderEditAppliedMessagePayload</a>&gt;</code></dd>
@@ -242,20 +248,20 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="buildUnchecked()">
 <h3>buildUnchecked</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderEditAppliedMessagePayload.html" title="interface in com.commercetools.api.models.message">OrderEditAppliedMessagePayload</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderEditAppliedMessagePayloadBuilder.html#line.87">buildUnchecked</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderEditAppliedMessagePayload.html" title="interface in com.commercetools.api.models.message">OrderEditAppliedMessagePayload</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderEditAppliedMessagePayloadBuilder.html#line.86">buildUnchecked</a></span>()</div>
 <div class="block">builds OrderEditAppliedMessagePayload without checking for non null required values</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="OrderEditAppliedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">OrderEditAppliedMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderEditAppliedMessagePayloadBuilder.html#line.91">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="OrderEditAppliedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">OrderEditAppliedMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderEditAppliedMessagePayloadBuilder.html#line.90">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.api.models.message.OrderEditAppliedMessagePayload)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="OrderEditAppliedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">OrderEditAppliedMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderEditAppliedMessagePayloadBuilder.html#line.95">of</a></span>&#8203;<span class="parameters">(<a href="OrderEditAppliedMessagePayload.html" title="interface in com.commercetools.api.models.message">OrderEditAppliedMessagePayload</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="OrderEditAppliedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">OrderEditAppliedMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderEditAppliedMessagePayloadBuilder.html#line.94">of</a></span>&#8203;<span class="parameters">(<a href="OrderEditAppliedMessagePayload.html" title="interface in com.commercetools.api.models.message">OrderEditAppliedMessagePayload</a>&nbsp;template)</span></div>
 </section>
 </li>
 </ul>

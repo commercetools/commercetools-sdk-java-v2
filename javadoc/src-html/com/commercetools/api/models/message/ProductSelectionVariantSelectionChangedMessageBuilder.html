@@ -37,47 +37,47 @@
 <span class="source-line-no">024</span><span id="line.24"> *             .resource(resourceBuilder -&gt; resourceBuilder)</span>
 <span class="source-line-no">025</span><span id="line.25"> *             .resourceVersion(0.3)</span>
 <span class="source-line-no">026</span><span id="line.26"> *             .product(productBuilder -&gt; productBuilder)</span>
-<span class="source-line-no">027</span><span id="line.27"> *             .build()</span>
-<span class="source-line-no">028</span><span id="line.28"> * &lt;/code&gt;&lt;/pre&gt;</span>
-<span class="source-line-no">029</span><span id="line.29"> * &lt;/div&gt;</span>
-<span class="source-line-no">030</span><span id="line.30"> */</span>
-<span class="source-line-no">031</span><span id="line.31">@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")</span>
-<span class="source-line-no">032</span><span id="line.32">public class ProductSelectionVariantSelectionChangedMessageBuilder</span>
-<span class="source-line-no">033</span><span id="line.33">        implements Builder&lt;ProductSelectionVariantSelectionChangedMessage&gt; {</span>
-<span class="source-line-no">034</span><span id="line.34"></span>
-<span class="source-line-no">035</span><span id="line.35">    private String id;</span>
+<span class="source-line-no">027</span><span id="line.27"> *             .oldVariantSelection(oldVariantSelectionBuilder -&gt; oldVariantSelectionBuilder)</span>
+<span class="source-line-no">028</span><span id="line.28"> *             .newVariantSelection(newVariantSelectionBuilder -&gt; newVariantSelectionBuilder)</span>
+<span class="source-line-no">029</span><span id="line.29"> *             .build()</span>
+<span class="source-line-no">030</span><span id="line.30"> * &lt;/code&gt;&lt;/pre&gt;</span>
+<span class="source-line-no">031</span><span id="line.31"> * &lt;/div&gt;</span>
+<span class="source-line-no">032</span><span id="line.32"> */</span>
+<span class="source-line-no">033</span><span id="line.33">@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")</span>
+<span class="source-line-no">034</span><span id="line.34">public class ProductSelectionVariantSelectionChangedMessageBuilder</span>
+<span class="source-line-no">035</span><span id="line.35">        implements Builder&lt;ProductSelectionVariantSelectionChangedMessage&gt; {</span>
 <span class="source-line-no">036</span><span id="line.36"></span>
-<span class="source-line-no">037</span><span id="line.37">    private Long version;</span>
+<span class="source-line-no">037</span><span id="line.37">    private String id;</span>
 <span class="source-line-no">038</span><span id="line.38"></span>
-<span class="source-line-no">039</span><span id="line.39">    private java.time.ZonedDateTime createdAt;</span>
+<span class="source-line-no">039</span><span id="line.39">    private Long version;</span>
 <span class="source-line-no">040</span><span id="line.40"></span>
-<span class="source-line-no">041</span><span id="line.41">    private java.time.ZonedDateTime lastModifiedAt;</span>
+<span class="source-line-no">041</span><span id="line.41">    private java.time.ZonedDateTime createdAt;</span>
 <span class="source-line-no">042</span><span id="line.42"></span>
-<span class="source-line-no">043</span><span id="line.43">    @Nullable</span>
-<span class="source-line-no">044</span><span id="line.44">    private com.commercetools.api.models.common.LastModifiedBy lastModifiedBy;</span>
-<span class="source-line-no">045</span><span id="line.45"></span>
-<span class="source-line-no">046</span><span id="line.46">    @Nullable</span>
-<span class="source-line-no">047</span><span id="line.47">    private com.commercetools.api.models.common.CreatedBy createdBy;</span>
-<span class="source-line-no">048</span><span id="line.48"></span>
-<span class="source-line-no">049</span><span id="line.49">    private Long sequenceNumber;</span>
+<span class="source-line-no">043</span><span id="line.43">    private java.time.ZonedDateTime lastModifiedAt;</span>
+<span class="source-line-no">044</span><span id="line.44"></span>
+<span class="source-line-no">045</span><span id="line.45">    @Nullable</span>
+<span class="source-line-no">046</span><span id="line.46">    private com.commercetools.api.models.common.LastModifiedBy lastModifiedBy;</span>
+<span class="source-line-no">047</span><span id="line.47"></span>
+<span class="source-line-no">048</span><span id="line.48">    @Nullable</span>
+<span class="source-line-no">049</span><span id="line.49">    private com.commercetools.api.models.common.CreatedBy createdBy;</span>
 <span class="source-line-no">050</span><span id="line.50"></span>
-<span class="source-line-no">051</span><span id="line.51">    private com.commercetools.api.models.common.Reference resource;</span>
+<span class="source-line-no">051</span><span id="line.51">    private Long sequenceNumber;</span>
 <span class="source-line-no">052</span><span id="line.52"></span>
-<span class="source-line-no">053</span><span id="line.53">    private Long resourceVersion;</span>
+<span class="source-line-no">053</span><span id="line.53">    private com.commercetools.api.models.common.Reference resource;</span>
 <span class="source-line-no">054</span><span id="line.54"></span>
-<span class="source-line-no">055</span><span id="line.55">    @Nullable</span>
-<span class="source-line-no">056</span><span id="line.56">    private com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers;</span>
-<span class="source-line-no">057</span><span id="line.57"></span>
-<span class="source-line-no">058</span><span id="line.58">    private com.commercetools.api.models.product.ProductReference product;</span>
+<span class="source-line-no">055</span><span id="line.55">    private Long resourceVersion;</span>
+<span class="source-line-no">056</span><span id="line.56"></span>
+<span class="source-line-no">057</span><span id="line.57">    @Nullable</span>
+<span class="source-line-no">058</span><span id="line.58">    private com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers;</span>
 <span class="source-line-no">059</span><span id="line.59"></span>
-<span class="source-line-no">060</span><span id="line.60">    @Nullable</span>
-<span class="source-line-no">061</span><span id="line.61">    private com.commercetools.api.models.product_selection.ProductVariantSelection oldVariantSelection;</span>
-<span class="source-line-no">062</span><span id="line.62"></span>
-<span class="source-line-no">063</span><span id="line.63">    @Nullable</span>
+<span class="source-line-no">060</span><span id="line.60">    private com.commercetools.api.models.product.ProductReference product;</span>
+<span class="source-line-no">061</span><span id="line.61"></span>
+<span class="source-line-no">062</span><span id="line.62">    private com.commercetools.api.models.product_selection.ProductVariantSelection oldVariantSelection;</span>
+<span class="source-line-no">063</span><span id="line.63"></span>
 <span class="source-line-no">064</span><span id="line.64">    private com.commercetools.api.models.product_selection.ProductVariantSelection newVariantSelection;</span>
 <span class="source-line-no">065</span><span id="line.65"></span>
 <span class="source-line-no">066</span><span id="line.66">    /**</span>
-<span class="source-line-no">067</span><span id="line.67">     *  &lt;p&gt;Unique identifier of the Message.&lt;/p&gt;</span>
+<span class="source-line-no">067</span><span id="line.67">     *  &lt;p&gt;Unique identifier of the Message. Can be used to track which Messages have been processed.&lt;/p&gt;</span>
 <span class="source-line-no">068</span><span id="line.68">     */</span>
 <span class="source-line-no">069</span><span id="line.69"></span>
 <span class="source-line-no">070</span><span id="line.70">    public ProductSelectionVariantSelectionChangedMessageBuilder id(final String id) {</span>
@@ -86,7 +86,7 @@
 <span class="source-line-no">073</span><span id="line.73">    }</span>
 <span class="source-line-no">074</span><span id="line.74"></span>
 <span class="source-line-no">075</span><span id="line.75">    /**</span>
-<span class="source-line-no">076</span><span id="line.76">     *</span>
+<span class="source-line-no">076</span><span id="line.76">     *  &lt;p&gt;Version of a resource. In case of Messages, this is always &lt;code&gt;1&lt;/code&gt;.&lt;/p&gt;</span>
 <span class="source-line-no">077</span><span id="line.77">     */</span>
 <span class="source-line-no">078</span><span id="line.78"></span>
 <span class="source-line-no">079</span><span id="line.79">    public ProductSelectionVariantSelectionChangedMessageBuilder version(final Long version) {</span>
@@ -95,7 +95,7 @@
 <span class="source-line-no">082</span><span id="line.82">    }</span>
 <span class="source-line-no">083</span><span id="line.83"></span>
 <span class="source-line-no">084</span><span id="line.84">    /**</span>
-<span class="source-line-no">085</span><span id="line.85">     *</span>
+<span class="source-line-no">085</span><span id="line.85">     *  &lt;p&gt;Date and time (UTC) the Message was generated.&lt;/p&gt;</span>
 <span class="source-line-no">086</span><span id="line.86">     */</span>
 <span class="source-line-no">087</span><span id="line.87"></span>
 <span class="source-line-no">088</span><span id="line.88">    public ProductSelectionVariantSelectionChangedMessageBuilder createdAt(final java.time.ZonedDateTime createdAt) {</span>
@@ -104,7 +104,7 @@
 <span class="source-line-no">091</span><span id="line.91">    }</span>
 <span class="source-line-no">092</span><span id="line.92"></span>
 <span class="source-line-no">093</span><span id="line.93">    /**</span>
-<span class="source-line-no">094</span><span id="line.94">     *</span>
+<span class="source-line-no">094</span><span id="line.94">     *  &lt;p&gt;Value of &lt;code&gt;createdAt&lt;/code&gt;.&lt;/p&gt;</span>
 <span class="source-line-no">095</span><span id="line.95">     */</span>
 <span class="source-line-no">096</span><span id="line.96"></span>
 <span class="source-line-no">097</span><span id="line.97">    public ProductSelectionVariantSelectionChangedMessageBuilder lastModifiedAt(</span>
@@ -114,7 +114,7 @@
 <span class="source-line-no">101</span><span id="line.101">    }</span>
 <span class="source-line-no">102</span><span id="line.102"></span>
 <span class="source-line-no">103</span><span id="line.103">    /**</span>
-<span class="source-line-no">104</span><span id="line.104">     *  &lt;p&gt;Present on resources created after 1 February 2019 except for events not tracked.&lt;/p&gt;</span>
+<span class="source-line-no">104</span><span id="line.104">     *  &lt;p&gt;Value of &lt;code&gt;createdBy&lt;/code&gt;.&lt;/p&gt;</span>
 <span class="source-line-no">105</span><span id="line.105">     */</span>
 <span class="source-line-no">106</span><span id="line.106"></span>
 <span class="source-line-no">107</span><span id="line.107">    public ProductSelectionVariantSelectionChangedMessageBuilder lastModifiedBy(</span>
@@ -124,7 +124,7 @@
 <span class="source-line-no">111</span><span id="line.111">    }</span>
 <span class="source-line-no">112</span><span id="line.112"></span>
 <span class="source-line-no">113</span><span id="line.113">    /**</span>
-<span class="source-line-no">114</span><span id="line.114">     *  &lt;p&gt;Present on resources created after 1 February 2019 except for events not tracked.&lt;/p&gt;</span>
+<span class="source-line-no">114</span><span id="line.114">     *  &lt;p&gt;Value of &lt;code&gt;createdBy&lt;/code&gt;.&lt;/p&gt;</span>
 <span class="source-line-no">115</span><span id="line.115">     */</span>
 <span class="source-line-no">116</span><span id="line.116"></span>
 <span class="source-line-no">117</span><span id="line.117">    public ProductSelectionVariantSelectionChangedMessageBuilder lastModifiedBy(</span>
@@ -154,7 +154,7 @@
 <span class="source-line-no">141</span><span id="line.141">    }</span>
 <span class="source-line-no">142</span><span id="line.142"></span>
 <span class="source-line-no">143</span><span id="line.143">    /**</span>
-<span class="source-line-no">144</span><span id="line.144">     *</span>
+<span class="source-line-no">144</span><span id="line.144">     *  &lt;p&gt;Message number in relation to other Messages for a given resource. The &lt;code&gt;sequenceNumber&lt;/code&gt; of the next Message for the resource is the successor of the &lt;code&gt;sequenceNumber&lt;/code&gt; of the current Message. Meaning, the &lt;code&gt;sequenceNumber&lt;/code&gt; of the next Message equals the &lt;code&gt;sequenceNumber&lt;/code&gt; of the current Message + 1. &lt;code&gt;sequenceNumber&lt;/code&gt; can be used to ensure that Messages are processed in the correct order for a particular resource.&lt;/p&gt;</span>
 <span class="source-line-no">145</span><span id="line.145">     */</span>
 <span class="source-line-no">146</span><span id="line.146"></span>
 <span class="source-line-no">147</span><span id="line.147">    public ProductSelectionVariantSelectionChangedMessageBuilder sequenceNumber(final Long sequenceNumber) {</span>
@@ -163,7 +163,7 @@
 <span class="source-line-no">150</span><span id="line.150">    }</span>
 <span class="source-line-no">151</span><span id="line.151"></span>
 <span class="source-line-no">152</span><span id="line.152">    /**</span>
-<span class="source-line-no">153</span><span id="line.153">     *  &lt;p&gt;A Reference represents a loose reference to another resource in the same Project identified by its &lt;code&gt;id&lt;/code&gt;. The &lt;code&gt;typeId&lt;/code&gt; indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional &lt;code&gt;obj&lt;/code&gt; field then.&lt;/p&gt;</span>
+<span class="source-line-no">153</span><span id="line.153">     *  &lt;p&gt;Reference to the resource on which the change or action was performed.&lt;/p&gt;</span>
 <span class="source-line-no">154</span><span id="line.154">     */</span>
 <span class="source-line-no">155</span><span id="line.155"></span>
 <span class="source-line-no">156</span><span id="line.156">    public ProductSelectionVariantSelectionChangedMessageBuilder resource(</span>
@@ -173,7 +173,7 @@
 <span class="source-line-no">160</span><span id="line.160">    }</span>
 <span class="source-line-no">161</span><span id="line.161"></span>
 <span class="source-line-no">162</span><span id="line.162">    /**</span>
-<span class="source-line-no">163</span><span id="line.163">     *  &lt;p&gt;A Reference represents a loose reference to another resource in the same Project identified by its &lt;code&gt;id&lt;/code&gt;. The &lt;code&gt;typeId&lt;/code&gt; indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional &lt;code&gt;obj&lt;/code&gt; field then.&lt;/p&gt;</span>
+<span class="source-line-no">163</span><span id="line.163">     *  &lt;p&gt;Reference to the resource on which the change or action was performed.&lt;/p&gt;</span>
 <span class="source-line-no">164</span><span id="line.164">     */</span>
 <span class="source-line-no">165</span><span id="line.165"></span>
 <span class="source-line-no">166</span><span id="line.166">    public ProductSelectionVariantSelectionChangedMessageBuilder resource(</span>
@@ -183,7 +183,7 @@
 <span class="source-line-no">170</span><span id="line.170">    }</span>
 <span class="source-line-no">171</span><span id="line.171"></span>
 <span class="source-line-no">172</span><span id="line.172">    /**</span>
-<span class="source-line-no">173</span><span id="line.173">     *</span>
+<span class="source-line-no">173</span><span id="line.173">     *  &lt;p&gt;Version of the resource on which the change or action was performed.&lt;/p&gt;</span>
 <span class="source-line-no">174</span><span id="line.174">     */</span>
 <span class="source-line-no">175</span><span id="line.175"></span>
 <span class="source-line-no">176</span><span id="line.176">    public ProductSelectionVariantSelectionChangedMessageBuilder resourceVersion(final Long resourceVersion) {</span>
@@ -192,7 +192,7 @@
 <span class="source-line-no">179</span><span id="line.179">    }</span>
 <span class="source-line-no">180</span><span id="line.180"></span>
 <span class="source-line-no">181</span><span id="line.181">    /**</span>
-<span class="source-line-no">182</span><span id="line.182">     *</span>
+<span class="source-line-no">182</span><span id="line.182">     *  &lt;p&gt;User-provided identifiers of the resource, such as &lt;code&gt;key&lt;/code&gt; or &lt;code&gt;externalId&lt;/code&gt;. Only present if the resource has such identifiers.&lt;/p&gt;</span>
 <span class="source-line-no">183</span><span id="line.183">     */</span>
 <span class="source-line-no">184</span><span id="line.184"></span>
 <span class="source-line-no">185</span><span id="line.185">    public ProductSelectionVariantSelectionChangedMessageBuilder resourceUserProvidedIdentifiers(</span>
@@ -204,7 +204,7 @@
 <span class="source-line-no">191</span><span id="line.191">    }</span>
 <span class="source-line-no">192</span><span id="line.192"></span>
 <span class="source-line-no">193</span><span id="line.193">    /**</span>
-<span class="source-line-no">194</span><span id="line.194">     *</span>
+<span class="source-line-no">194</span><span id="line.194">     *  &lt;p&gt;User-provided identifiers of the resource, such as &lt;code&gt;key&lt;/code&gt; or &lt;code&gt;externalId&lt;/code&gt;. Only present if the resource has such identifiers.&lt;/p&gt;</span>
 <span class="source-line-no">195</span><span id="line.195">     */</span>
 <span class="source-line-no">196</span><span id="line.196"></span>
 <span class="source-line-no">197</span><span id="line.197">    public ProductSelectionVariantSelectionChangedMessageBuilder resourceUserProvidedIdentifiers(</span>
@@ -214,7 +214,7 @@
 <span class="source-line-no">201</span><span id="line.201">    }</span>
 <span class="source-line-no">202</span><span id="line.202"></span>
 <span class="source-line-no">203</span><span id="line.203">    /**</span>
-<span class="source-line-no">204</span><span id="line.204">     *  &lt;p&gt;Reference to a Product.&lt;/p&gt;</span>
+<span class="source-line-no">204</span><span id="line.204">     *  &lt;p&gt;Product for which the Product Variant Selection changed.&lt;/p&gt;</span>
 <span class="source-line-no">205</span><span id="line.205">     */</span>
 <span class="source-line-no">206</span><span id="line.206"></span>
 <span class="source-line-no">207</span><span id="line.207">    public ProductSelectionVariantSelectionChangedMessageBuilder product(</span>
@@ -224,7 +224,7 @@
 <span class="source-line-no">211</span><span id="line.211">    }</span>
 <span class="source-line-no">212</span><span id="line.212"></span>
 <span class="source-line-no">213</span><span id="line.213">    /**</span>
-<span class="source-line-no">214</span><span id="line.214">     *  &lt;p&gt;Reference to a Product.&lt;/p&gt;</span>
+<span class="source-line-no">214</span><span id="line.214">     *  &lt;p&gt;Product for which the Product Variant Selection changed.&lt;/p&gt;</span>
 <span class="source-line-no">215</span><span id="line.215">     */</span>
 <span class="source-line-no">216</span><span id="line.216"></span>
 <span class="source-line-no">217</span><span id="line.217">    public ProductSelectionVariantSelectionChangedMessageBuilder product(</span>
@@ -234,17 +234,17 @@
 <span class="source-line-no">221</span><span id="line.221">    }</span>
 <span class="source-line-no">222</span><span id="line.222"></span>
 <span class="source-line-no">223</span><span id="line.223">    /**</span>
-<span class="source-line-no">224</span><span id="line.224">     *  &lt;p&gt;The former Product Variant Selection if any.&lt;/p&gt;</span>
+<span class="source-line-no">224</span><span id="line.224">     *  &lt;p&gt;Product Variant Selection before the Set Variant Selection update action.&lt;/p&gt;</span>
 <span class="source-line-no">225</span><span id="line.225">     */</span>
 <span class="source-line-no">226</span><span id="line.226"></span>
 <span class="source-line-no">227</span><span id="line.227">    public ProductSelectionVariantSelectionChangedMessageBuilder oldVariantSelection(</span>
-<span class="source-line-no">228</span><span id="line.228">            @Nullable final com.commercetools.api.models.product_selection.ProductVariantSelection oldVariantSelection) {</span>
+<span class="source-line-no">228</span><span id="line.228">            final com.commercetools.api.models.product_selection.ProductVariantSelection oldVariantSelection) {</span>
 <span class="source-line-no">229</span><span id="line.229">        this.oldVariantSelection = oldVariantSelection;</span>
 <span class="source-line-no">230</span><span id="line.230">        return this;</span>
 <span class="source-line-no">231</span><span id="line.231">    }</span>
 <span class="source-line-no">232</span><span id="line.232"></span>
 <span class="source-line-no">233</span><span id="line.233">    /**</span>
-<span class="source-line-no">234</span><span id="line.234">     *  &lt;p&gt;The former Product Variant Selection if any.&lt;/p&gt;</span>
+<span class="source-line-no">234</span><span id="line.234">     *  &lt;p&gt;Product Variant Selection before the Set Variant Selection update action.&lt;/p&gt;</span>
 <span class="source-line-no">235</span><span id="line.235">     */</span>
 <span class="source-line-no">236</span><span id="line.236"></span>
 <span class="source-line-no">237</span><span id="line.237">    public ProductSelectionVariantSelectionChangedMessageBuilder oldVariantSelection(</span>
@@ -256,17 +256,17 @@
 <span class="source-line-no">243</span><span id="line.243">    }</span>
 <span class="source-line-no">244</span><span id="line.244"></span>
 <span class="source-line-no">245</span><span id="line.245">    /**</span>
-<span class="source-line-no">246</span><span id="line.246">     *  &lt;p&gt;The updated Product Variant Selection if any.&lt;/p&gt;</span>
+<span class="source-line-no">246</span><span id="line.246">     *  &lt;p&gt;Product Variant Selection after the Set Variant Selection update action.&lt;/p&gt;</span>
 <span class="source-line-no">247</span><span id="line.247">     */</span>
 <span class="source-line-no">248</span><span id="line.248"></span>
 <span class="source-line-no">249</span><span id="line.249">    public ProductSelectionVariantSelectionChangedMessageBuilder newVariantSelection(</span>
-<span class="source-line-no">250</span><span id="line.250">            @Nullable final com.commercetools.api.models.product_selection.ProductVariantSelection newVariantSelection) {</span>
+<span class="source-line-no">250</span><span id="line.250">            final com.commercetools.api.models.product_selection.ProductVariantSelection newVariantSelection) {</span>
 <span class="source-line-no">251</span><span id="line.251">        this.newVariantSelection = newVariantSelection;</span>
 <span class="source-line-no">252</span><span id="line.252">        return this;</span>
 <span class="source-line-no">253</span><span id="line.253">    }</span>
 <span class="source-line-no">254</span><span id="line.254"></span>
 <span class="source-line-no">255</span><span id="line.255">    /**</span>
-<span class="source-line-no">256</span><span id="line.256">     *  &lt;p&gt;The updated Product Variant Selection if any.&lt;/p&gt;</span>
+<span class="source-line-no">256</span><span id="line.256">     *  &lt;p&gt;Product Variant Selection after the Set Variant Selection update action.&lt;/p&gt;</span>
 <span class="source-line-no">257</span><span id="line.257">     */</span>
 <span class="source-line-no">258</span><span id="line.258"></span>
 <span class="source-line-no">259</span><span id="line.259">    public ProductSelectionVariantSelectionChangedMessageBuilder newVariantSelection(</span>
@@ -324,68 +324,70 @@
 <span class="source-line-no">311</span><span id="line.311">        return this.product;</span>
 <span class="source-line-no">312</span><span id="line.312">    }</span>
 <span class="source-line-no">313</span><span id="line.313"></span>
-<span class="source-line-no">314</span><span id="line.314">    @Nullable</span>
-<span class="source-line-no">315</span><span id="line.315">    public com.commercetools.api.models.product_selection.ProductVariantSelection getOldVariantSelection() {</span>
-<span class="source-line-no">316</span><span id="line.316">        return this.oldVariantSelection;</span>
-<span class="source-line-no">317</span><span id="line.317">    }</span>
-<span class="source-line-no">318</span><span id="line.318"></span>
-<span class="source-line-no">319</span><span id="line.319">    @Nullable</span>
-<span class="source-line-no">320</span><span id="line.320">    public com.commercetools.api.models.product_selection.ProductVariantSelection getNewVariantSelection() {</span>
-<span class="source-line-no">321</span><span id="line.321">        return this.newVariantSelection;</span>
-<span class="source-line-no">322</span><span id="line.322">    }</span>
-<span class="source-line-no">323</span><span id="line.323"></span>
-<span class="source-line-no">324</span><span id="line.324">    public ProductSelectionVariantSelectionChangedMessage build() {</span>
-<span class="source-line-no">325</span><span id="line.325">        Objects.requireNonNull(id, ProductSelectionVariantSelectionChangedMessage.class + ": id is missing");</span>
-<span class="source-line-no">326</span><span id="line.326">        Objects.requireNonNull(version, ProductSelectionVariantSelectionChangedMessage.class + ": version is missing");</span>
-<span class="source-line-no">327</span><span id="line.327">        Objects.requireNonNull(createdAt,</span>
-<span class="source-line-no">328</span><span id="line.328">            ProductSelectionVariantSelectionChangedMessage.class + ": createdAt is missing");</span>
-<span class="source-line-no">329</span><span id="line.329">        Objects.requireNonNull(lastModifiedAt,</span>
-<span class="source-line-no">330</span><span id="line.330">            ProductSelectionVariantSelectionChangedMessage.class + ": lastModifiedAt is missing");</span>
-<span class="source-line-no">331</span><span id="line.331">        Objects.requireNonNull(sequenceNumber,</span>
-<span class="source-line-no">332</span><span id="line.332">            ProductSelectionVariantSelectionChangedMessage.class + ": sequenceNumber is missing");</span>
-<span class="source-line-no">333</span><span id="line.333">        Objects.requireNonNull(resource,</span>
-<span class="source-line-no">334</span><span id="line.334">            ProductSelectionVariantSelectionChangedMessage.class + ": resource is missing");</span>
-<span class="source-line-no">335</span><span id="line.335">        Objects.requireNonNull(resourceVersion,</span>
-<span class="source-line-no">336</span><span id="line.336">            ProductSelectionVariantSelectionChangedMessage.class + ": resourceVersion is missing");</span>
-<span class="source-line-no">337</span><span id="line.337">        Objects.requireNonNull(product, ProductSelectionVariantSelectionChangedMessage.class + ": product is missing");</span>
-<span class="source-line-no">338</span><span id="line.338">        return new ProductSelectionVariantSelectionChangedMessageImpl(id, version, createdAt, lastModifiedAt,</span>
-<span class="source-line-no">339</span><span id="line.339">            lastModifiedBy, createdBy, sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers,</span>
-<span class="source-line-no">340</span><span id="line.340">            product, oldVariantSelection, newVariantSelection);</span>
-<span class="source-line-no">341</span><span id="line.341">    }</span>
-<span class="source-line-no">342</span><span id="line.342"></span>
-<span class="source-line-no">343</span><span id="line.343">    /**</span>
-<span class="source-line-no">344</span><span id="line.344">     * builds ProductSelectionVariantSelectionChangedMessage without checking for non null required values</span>
-<span class="source-line-no">345</span><span id="line.345">     */</span>
-<span class="source-line-no">346</span><span id="line.346">    public ProductSelectionVariantSelectionChangedMessage buildUnchecked() {</span>
-<span class="source-line-no">347</span><span id="line.347">        return new ProductSelectionVariantSelectionChangedMessageImpl(id, version, createdAt, lastModifiedAt,</span>
-<span class="source-line-no">348</span><span id="line.348">            lastModifiedBy, createdBy, sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers,</span>
-<span class="source-line-no">349</span><span id="line.349">            product, oldVariantSelection, newVariantSelection);</span>
-<span class="source-line-no">350</span><span id="line.350">    }</span>
-<span class="source-line-no">351</span><span id="line.351"></span>
-<span class="source-line-no">352</span><span id="line.352">    public static ProductSelectionVariantSelectionChangedMessageBuilder of() {</span>
-<span class="source-line-no">353</span><span id="line.353">        return new ProductSelectionVariantSelectionChangedMessageBuilder();</span>
-<span class="source-line-no">354</span><span id="line.354">    }</span>
-<span class="source-line-no">355</span><span id="line.355"></span>
-<span class="source-line-no">356</span><span id="line.356">    public static ProductSelectionVariantSelectionChangedMessageBuilder of(</span>
-<span class="source-line-no">357</span><span id="line.357">            final ProductSelectionVariantSelectionChangedMessage template) {</span>
-<span class="source-line-no">358</span><span id="line.358">        ProductSelectionVariantSelectionChangedMessageBuilder builder = new ProductSelectionVariantSelectionChangedMessageBuilder();</span>
-<span class="source-line-no">359</span><span id="line.359">        builder.id = template.getId();</span>
-<span class="source-line-no">360</span><span id="line.360">        builder.version = template.getVersion();</span>
-<span class="source-line-no">361</span><span id="line.361">        builder.createdAt = template.getCreatedAt();</span>
-<span class="source-line-no">362</span><span id="line.362">        builder.lastModifiedAt = template.getLastModifiedAt();</span>
-<span class="source-line-no">363</span><span id="line.363">        builder.lastModifiedBy = template.getLastModifiedBy();</span>
-<span class="source-line-no">364</span><span id="line.364">        builder.createdBy = template.getCreatedBy();</span>
-<span class="source-line-no">365</span><span id="line.365">        builder.sequenceNumber = template.getSequenceNumber();</span>
-<span class="source-line-no">366</span><span id="line.366">        builder.resource = template.getResource();</span>
-<span class="source-line-no">367</span><span id="line.367">        builder.resourceVersion = template.getResourceVersion();</span>
-<span class="source-line-no">368</span><span id="line.368">        builder.resourceUserProvidedIdentifiers = template.getResourceUserProvidedIdentifiers();</span>
-<span class="source-line-no">369</span><span id="line.369">        builder.product = template.getProduct();</span>
-<span class="source-line-no">370</span><span id="line.370">        builder.oldVariantSelection = template.getOldVariantSelection();</span>
-<span class="source-line-no">371</span><span id="line.371">        builder.newVariantSelection = template.getNewVariantSelection();</span>
-<span class="source-line-no">372</span><span id="line.372">        return builder;</span>
-<span class="source-line-no">373</span><span id="line.373">    }</span>
-<span class="source-line-no">374</span><span id="line.374"></span>
-<span class="source-line-no">375</span><span id="line.375">}</span>
+<span class="source-line-no">314</span><span id="line.314">    public com.commercetools.api.models.product_selection.ProductVariantSelection getOldVariantSelection() {</span>
+<span class="source-line-no">315</span><span id="line.315">        return this.oldVariantSelection;</span>
+<span class="source-line-no">316</span><span id="line.316">    }</span>
+<span class="source-line-no">317</span><span id="line.317"></span>
+<span class="source-line-no">318</span><span id="line.318">    public com.commercetools.api.models.product_selection.ProductVariantSelection getNewVariantSelection() {</span>
+<span class="source-line-no">319</span><span id="line.319">        return this.newVariantSelection;</span>
+<span class="source-line-no">320</span><span id="line.320">    }</span>
+<span class="source-line-no">321</span><span id="line.321"></span>
+<span class="source-line-no">322</span><span id="line.322">    public ProductSelectionVariantSelectionChangedMessage build() {</span>
+<span class="source-line-no">323</span><span id="line.323">        Objects.requireNonNull(id, ProductSelectionVariantSelectionChangedMessage.class + ": id is missing");</span>
+<span class="source-line-no">324</span><span id="line.324">        Objects.requireNonNull(version, ProductSelectionVariantSelectionChangedMessage.class + ": version is missing");</span>
+<span class="source-line-no">325</span><span id="line.325">        Objects.requireNonNull(createdAt,</span>
+<span class="source-line-no">326</span><span id="line.326">            ProductSelectionVariantSelectionChangedMessage.class + ": createdAt is missing");</span>
+<span class="source-line-no">327</span><span id="line.327">        Objects.requireNonNull(lastModifiedAt,</span>
+<span class="source-line-no">328</span><span id="line.328">            ProductSelectionVariantSelectionChangedMessage.class + ": lastModifiedAt is missing");</span>
+<span class="source-line-no">329</span><span id="line.329">        Objects.requireNonNull(sequenceNumber,</span>
+<span class="source-line-no">330</span><span id="line.330">            ProductSelectionVariantSelectionChangedMessage.class + ": sequenceNumber is missing");</span>
+<span class="source-line-no">331</span><span id="line.331">        Objects.requireNonNull(resource,</span>
+<span class="source-line-no">332</span><span id="line.332">            ProductSelectionVariantSelectionChangedMessage.class + ": resource is missing");</span>
+<span class="source-line-no">333</span><span id="line.333">        Objects.requireNonNull(resourceVersion,</span>
+<span class="source-line-no">334</span><span id="line.334">            ProductSelectionVariantSelectionChangedMessage.class + ": resourceVersion is missing");</span>
+<span class="source-line-no">335</span><span id="line.335">        Objects.requireNonNull(product, ProductSelectionVariantSelectionChangedMessage.class + ": product is missing");</span>
+<span class="source-line-no">336</span><span id="line.336">        Objects.requireNonNull(oldVariantSelection,</span>
+<span class="source-line-no">337</span><span id="line.337">            ProductSelectionVariantSelectionChangedMessage.class + ": oldVariantSelection is missing");</span>
+<span class="source-line-no">338</span><span id="line.338">        Objects.requireNonNull(newVariantSelection,</span>
+<span class="source-line-no">339</span><span id="line.339">            ProductSelectionVariantSelectionChangedMessage.class + ": newVariantSelection is missing");</span>
+<span class="source-line-no">340</span><span id="line.340">        return new ProductSelectionVariantSelectionChangedMessageImpl(id, version, createdAt, lastModifiedAt,</span>
+<span class="source-line-no">341</span><span id="line.341">            lastModifiedBy, createdBy, sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers,</span>
+<span class="source-line-no">342</span><span id="line.342">            product, oldVariantSelection, newVariantSelection);</span>
+<span class="source-line-no">343</span><span id="line.343">    }</span>
+<span class="source-line-no">344</span><span id="line.344"></span>
+<span class="source-line-no">345</span><span id="line.345">    /**</span>
+<span class="source-line-no">346</span><span id="line.346">     * builds ProductSelectionVariantSelectionChangedMessage without checking for non null required values</span>
+<span class="source-line-no">347</span><span id="line.347">     */</span>
+<span class="source-line-no">348</span><span id="line.348">    public ProductSelectionVariantSelectionChangedMessage buildUnchecked() {</span>
+<span class="source-line-no">349</span><span id="line.349">        return new ProductSelectionVariantSelectionChangedMessageImpl(id, version, createdAt, lastModifiedAt,</span>
+<span class="source-line-no">350</span><span id="line.350">            lastModifiedBy, createdBy, sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers,</span>
+<span class="source-line-no">351</span><span id="line.351">            product, oldVariantSelection, newVariantSelection);</span>
+<span class="source-line-no">352</span><span id="line.352">    }</span>
+<span class="source-line-no">353</span><span id="line.353"></span>
+<span class="source-line-no">354</span><span id="line.354">    public static ProductSelectionVariantSelectionChangedMessageBuilder of() {</span>
+<span class="source-line-no">355</span><span id="line.355">        return new ProductSelectionVariantSelectionChangedMessageBuilder();</span>
+<span class="source-line-no">356</span><span id="line.356">    }</span>
+<span class="source-line-no">357</span><span id="line.357"></span>
+<span class="source-line-no">358</span><span id="line.358">    public static ProductSelectionVariantSelectionChangedMessageBuilder of(</span>
+<span class="source-line-no">359</span><span id="line.359">            final ProductSelectionVariantSelectionChangedMessage template) {</span>
+<span class="source-line-no">360</span><span id="line.360">        ProductSelectionVariantSelectionChangedMessageBuilder builder = new ProductSelectionVariantSelectionChangedMessageBuilder();</span>
+<span class="source-line-no">361</span><span id="line.361">        builder.id = template.getId();</span>
+<span class="source-line-no">362</span><span id="line.362">        builder.version = template.getVersion();</span>
+<span class="source-line-no">363</span><span id="line.363">        builder.createdAt = template.getCreatedAt();</span>
+<span class="source-line-no">364</span><span id="line.364">        builder.lastModifiedAt = template.getLastModifiedAt();</span>
+<span class="source-line-no">365</span><span id="line.365">        builder.lastModifiedBy = template.getLastModifiedBy();</span>
+<span class="source-line-no">366</span><span id="line.366">        builder.createdBy = template.getCreatedBy();</span>
+<span class="source-line-no">367</span><span id="line.367">        builder.sequenceNumber = template.getSequenceNumber();</span>
+<span class="source-line-no">368</span><span id="line.368">        builder.resource = template.getResource();</span>
+<span class="source-line-no">369</span><span id="line.369">        builder.resourceVersion = template.getResourceVersion();</span>
+<span class="source-line-no">370</span><span id="line.370">        builder.resourceUserProvidedIdentifiers = template.getResourceUserProvidedIdentifiers();</span>
+<span class="source-line-no">371</span><span id="line.371">        builder.product = template.getProduct();</span>
+<span class="source-line-no">372</span><span id="line.372">        builder.oldVariantSelection = template.getOldVariantSelection();</span>
+<span class="source-line-no">373</span><span id="line.373">        builder.newVariantSelection = template.getNewVariantSelection();</span>
+<span class="source-line-no">374</span><span id="line.374">        return builder;</span>
+<span class="source-line-no">375</span><span id="line.375">    }</span>
+<span class="source-line-no">376</span><span id="line.376"></span>
+<span class="source-line-no">377</span><span id="line.377">}</span>
 
 
 

@@ -24,7 +24,7 @@
 <span class="source-line-no">011</span><span id="line.11">import io.vrap.rmf.base.client.utils.Generated;</span>
 <span class="source-line-no">012</span><span id="line.12"></span>
 <span class="source-line-no">013</span><span id="line.13">/**</span>
-<span class="source-line-no">014</span><span id="line.14"> * ProductRemoveVariantAction</span>
+<span class="source-line-no">014</span><span id="line.14"> *  &lt;p&gt;Either &lt;code&gt;id&lt;/code&gt; or &lt;code&gt;sku&lt;/code&gt; is required. Produces the ProductVariantDeleted Message.&lt;/p&gt;</span>
 <span class="source-line-no">015</span><span id="line.15"> *</span>
 <span class="source-line-no">016</span><span id="line.16"> * &lt;hr&gt;</span>
 <span class="source-line-no">017</span><span id="line.17"> * Example to create an instance using the builder pattern</span>
@@ -42,21 +42,21 @@
 <span class="source-line-no">029</span><span id="line.29">    String REMOVE_VARIANT = "removeVariant";</span>
 <span class="source-line-no">030</span><span id="line.30"></span>
 <span class="source-line-no">031</span><span id="line.31">    /**</span>
-<span class="source-line-no">032</span><span id="line.32">     *</span>
+<span class="source-line-no">032</span><span id="line.32">     *  &lt;p&gt;The &lt;code&gt;id&lt;/code&gt; of the ProductVariant to remove.&lt;/p&gt;</span>
 <span class="source-line-no">033</span><span id="line.33">     */</span>
 <span class="source-line-no">034</span><span id="line.34"></span>
 <span class="source-line-no">035</span><span id="line.35">    @JsonProperty("id")</span>
 <span class="source-line-no">036</span><span id="line.36">    public Long getId();</span>
 <span class="source-line-no">037</span><span id="line.37"></span>
 <span class="source-line-no">038</span><span id="line.38">    /**</span>
-<span class="source-line-no">039</span><span id="line.39">     *</span>
+<span class="source-line-no">039</span><span id="line.39">     *  &lt;p&gt;The &lt;code&gt;sku&lt;/code&gt; of the ProductVariant to remove.&lt;/p&gt;</span>
 <span class="source-line-no">040</span><span id="line.40">     */</span>
 <span class="source-line-no">041</span><span id="line.41"></span>
 <span class="source-line-no">042</span><span id="line.42">    @JsonProperty("sku")</span>
 <span class="source-line-no">043</span><span id="line.43">    public String getSku();</span>
 <span class="source-line-no">044</span><span id="line.44"></span>
 <span class="source-line-no">045</span><span id="line.45">    /**</span>
-<span class="source-line-no">046</span><span id="line.46">     *</span>
+<span class="source-line-no">046</span><span id="line.46">     *  &lt;p&gt;If &lt;code&gt;true&lt;/code&gt;, only the staged ProductVariant is removed. If &lt;code&gt;false&lt;/code&gt;, both the current and staged ProductVariant is removed.&lt;/p&gt;</span>
 <span class="source-line-no">047</span><span id="line.47">     */</span>
 <span class="source-line-no">048</span><span id="line.48"></span>
 <span class="source-line-no">049</span><span id="line.49">    @JsonProperty("staged")</span>

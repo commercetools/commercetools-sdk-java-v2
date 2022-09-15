@@ -28,7 +28,7 @@
 <span class="source-line-no">015</span><span id="line.15">import org.apache.commons.lang3.builder.HashCodeBuilder;</span>
 <span class="source-line-no">016</span><span id="line.16"></span>
 <span class="source-line-no">017</span><span id="line.17">/**</span>
-<span class="source-line-no">018</span><span id="line.18"> * ProductChangeSlugAction</span>
+<span class="source-line-no">018</span><span id="line.18"> *  &lt;p&gt;Produces the ProductSlugChanged Message.&lt;/p&gt;</span>
 <span class="source-line-no">019</span><span id="line.19"> */</span>
 <span class="source-line-no">020</span><span id="line.20">@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")</span>
 <span class="source-line-no">021</span><span id="line.21">public class ProductChangeSlugActionImpl implements ProductChangeSlugAction, ModelBase {</span>
@@ -60,7 +60,7 @@
 <span class="source-line-no">047</span><span id="line.47">    }</span>
 <span class="source-line-no">048</span><span id="line.48"></span>
 <span class="source-line-no">049</span><span id="line.49">    /**</span>
-<span class="source-line-no">050</span><span id="line.50">     *  &lt;p&gt;Every slug must be unique across a project, but a product can have the same slug for different languages. Allowed are alphabetic, numeric, underscore (&lt;code&gt;_&lt;/code&gt;) and hyphen (&lt;code&gt;-&lt;/code&gt;) characters. Maximum size is &lt;code&gt;256&lt;/code&gt;.&lt;/p&gt;</span>
+<span class="source-line-no">050</span><span id="line.50">     *  &lt;p&gt;Value to set. Must not be empty. A Product can have the same slug for different Locales, but it must be unique across the Project. Must match the pattern &lt;code&gt;^[A-Za-z0-9_-]{2,256}+$&lt;/code&gt;.&lt;/p&gt;</span>
 <span class="source-line-no">051</span><span id="line.51">     */</span>
 <span class="source-line-no">052</span><span id="line.52"></span>
 <span class="source-line-no">053</span><span id="line.53">    public com.commercetools.api.models.common.LocalizedString getSlug() {</span>
@@ -68,7 +68,7 @@
 <span class="source-line-no">055</span><span id="line.55">    }</span>
 <span class="source-line-no">056</span><span id="line.56"></span>
 <span class="source-line-no">057</span><span id="line.57">    /**</span>
-<span class="source-line-no">058</span><span id="line.58">     *</span>
+<span class="source-line-no">058</span><span id="line.58">     *  &lt;p&gt;If &lt;code&gt;true&lt;/code&gt;, only the staged &lt;code&gt;slug&lt;/code&gt; is updated. If &lt;code&gt;false&lt;/code&gt;, both the current and staged &lt;code&gt;slug&lt;/code&gt; are updated.&lt;/p&gt;</span>
 <span class="source-line-no">059</span><span id="line.59">     */</span>
 <span class="source-line-no">060</span><span id="line.60"></span>
 <span class="source-line-no">061</span><span id="line.61">    public Boolean getStaged() {</span>

@@ -83,7 +83,7 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="ProductSelectionVariantSelectionChangedMessage.html" title="interface in com.commercetools.api.models.message">ProductSelectionVariantSelectionChangedMessage</a>&gt;</code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ProductSelectionVariantSelectionChangedMessageBuilder.html#line.31">ProductSelectionVariantSelectionChangedMessageBuilder</a></span>
+<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ProductSelectionVariantSelectionChangedMessageBuilder.html#line.33">ProductSelectionVariantSelectionChangedMessageBuilder</a></span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
 implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="ProductSelectionVariantSelectionChangedMessage.html" title="interface in com.commercetools.api.models.message">ProductSelectionVariantSelectionChangedMessage</a>&gt;</span></div>
 <div class="block">ProductSelectionVariantSelectionChangedMessageBuilder
@@ -100,6 +100,8 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
              .resource(resourceBuilder -> resourceBuilder)
              .resourceVersion(0.3)
              .product(productBuilder -> productBuilder)
+             .oldVariantSelection(oldVariantSelectionBuilder -> oldVariantSelectionBuilder)
+             .newVariantSelection(newVariantSelectionBuilder -> newVariantSelectionBuilder)
              .build()
  </code></pre>
  </div></div>
@@ -140,7 +142,9 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 </div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ProductSelectionVariantSelectionChangedMessageBuilder.html" title="class in com.commercetools.api.models.message">ProductSelectionVariantSelectionChangedMessageBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#createdAt(java.time.ZonedDateTime)">createdAt</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a>&nbsp;createdAt)</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">Date and time (UTC) the Message was generated.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ProductSelectionVariantSelectionChangedMessageBuilder.html" title="class in com.commercetools.api.models.message">ProductSelectionVariantSelectionChangedMessageBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#createdBy(com.commercetools.api.models.common.CreatedBy)">createdBy</a></span>&#8203;(<a href="../common/CreatedBy.html" title="interface in com.commercetools.api.models.common">CreatedBy</a>&nbsp;createdBy)</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
@@ -197,26 +201,28 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 </div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ProductSelectionVariantSelectionChangedMessageBuilder.html" title="class in com.commercetools.api.models.message">ProductSelectionVariantSelectionChangedMessageBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#lastModifiedAt(java.time.ZonedDateTime)">lastModifiedAt</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a>&nbsp;lastModifiedAt)</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">Value of <code>createdAt</code>.</div>
+</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ProductSelectionVariantSelectionChangedMessageBuilder.html" title="class in com.commercetools.api.models.message">ProductSelectionVariantSelectionChangedMessageBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#lastModifiedBy(com.commercetools.api.models.common.LastModifiedBy)">lastModifiedBy</a></span>&#8203;(<a href="../common/LastModifiedBy.html" title="interface in com.commercetools.api.models.common">LastModifiedBy</a>&nbsp;lastModifiedBy)</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
-<div class="block">Present on resources created after 1 February 2019 except for events not tracked.</div>
+<div class="block">Value of <code>createdBy</code>.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ProductSelectionVariantSelectionChangedMessageBuilder.html" title="class in com.commercetools.api.models.message">ProductSelectionVariantSelectionChangedMessageBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#lastModifiedBy(java.util.function.Function)">lastModifiedBy</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/LastModifiedByBuilder.html" title="class in com.commercetools.api.models.common">LastModifiedByBuilder</a>,&#8203;<a href="../common/LastModifiedByBuilder.html" title="class in com.commercetools.api.models.common">LastModifiedByBuilder</a>&gt;&nbsp;builder)</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
-<div class="block">Present on resources created after 1 February 2019 except for events not tracked.</div>
+<div class="block">Value of <code>createdBy</code>.</div>
 </div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ProductSelectionVariantSelectionChangedMessageBuilder.html" title="class in com.commercetools.api.models.message">ProductSelectionVariantSelectionChangedMessageBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#newVariantSelection(com.commercetools.api.models.product_selection.ProductVariantSelection)">newVariantSelection</a></span>&#8203;(<a href="../product_selection/ProductVariantSelection.html" title="interface in com.commercetools.api.models.product_selection">ProductVariantSelection</a>&nbsp;newVariantSelection)</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
-<div class="block">The updated Product Variant Selection if any.</div>
+<div class="block">Product Variant Selection after the Set Variant Selection update action.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ProductSelectionVariantSelectionChangedMessageBuilder.html" title="class in com.commercetools.api.models.message">ProductSelectionVariantSelectionChangedMessageBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#newVariantSelection(java.util.function.Function)">newVariantSelection</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../product_selection/ProductVariantSelectionBuilder.html" title="class in com.commercetools.api.models.product_selection">ProductVariantSelectionBuilder</a>,&#8203;<a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;? extends <a href="../product_selection/ProductVariantSelection.html" title="interface in com.commercetools.api.models.product_selection">ProductVariantSelection</a>&gt;&gt;&nbsp;builder)</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
-<div class="block">The updated Product Variant Selection if any.</div>
+<div class="block">Product Variant Selection after the Set Variant Selection update action.</div>
 </div>
 <div class="col-first even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code>static <a href="ProductSelectionVariantSelectionChangedMessageBuilder.html" title="class in com.commercetools.api.models.message">ProductSelectionVariantSelectionChangedMessageBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#of()">of</a></span>()</code></div>
@@ -227,48 +233,58 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ProductSelectionVariantSelectionChangedMessageBuilder.html" title="class in com.commercetools.api.models.message">ProductSelectionVariantSelectionChangedMessageBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#oldVariantSelection(com.commercetools.api.models.product_selection.ProductVariantSelection)">oldVariantSelection</a></span>&#8203;(<a href="../product_selection/ProductVariantSelection.html" title="interface in com.commercetools.api.models.product_selection">ProductVariantSelection</a>&nbsp;oldVariantSelection)</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
-<div class="block">The former Product Variant Selection if any.</div>
+<div class="block">Product Variant Selection before the Set Variant Selection update action.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ProductSelectionVariantSelectionChangedMessageBuilder.html" title="class in com.commercetools.api.models.message">ProductSelectionVariantSelectionChangedMessageBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#oldVariantSelection(java.util.function.Function)">oldVariantSelection</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../product_selection/ProductVariantSelectionBuilder.html" title="class in com.commercetools.api.models.product_selection">ProductVariantSelectionBuilder</a>,&#8203;<a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;? extends <a href="../product_selection/ProductVariantSelection.html" title="interface in com.commercetools.api.models.product_selection">ProductVariantSelection</a>&gt;&gt;&nbsp;builder)</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
-<div class="block">The former Product Variant Selection if any.</div>
+<div class="block">Product Variant Selection before the Set Variant Selection update action.</div>
 </div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ProductSelectionVariantSelectionChangedMessageBuilder.html" title="class in com.commercetools.api.models.message">ProductSelectionVariantSelectionChangedMessageBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#product(com.commercetools.api.models.product.ProductReference)">product</a></span>&#8203;(<a href="../product/ProductReference.html" title="interface in com.commercetools.api.models.product">ProductReference</a>&nbsp;product)</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
-<div class="block">Reference to a Product.</div>
+<div class="block">Product for which the Product Variant Selection changed.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ProductSelectionVariantSelectionChangedMessageBuilder.html" title="class in com.commercetools.api.models.message">ProductSelectionVariantSelectionChangedMessageBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#product(java.util.function.Function)">product</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../product/ProductReferenceBuilder.html" title="class in com.commercetools.api.models.product">ProductReferenceBuilder</a>,&#8203;<a href="../product/ProductReferenceBuilder.html" title="class in com.commercetools.api.models.product">ProductReferenceBuilder</a>&gt;&nbsp;builder)</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
-<div class="block">Reference to a Product.</div>
+<div class="block">Product for which the Product Variant Selection changed.</div>
 </div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ProductSelectionVariantSelectionChangedMessageBuilder.html" title="class in com.commercetools.api.models.message">ProductSelectionVariantSelectionChangedMessageBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#resource(com.commercetools.api.models.common.Reference)">resource</a></span>&#8203;(<a href="../common/Reference.html" title="interface in com.commercetools.api.models.common">Reference</a>&nbsp;resource)</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
-<div class="block">A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>.</div>
+<div class="block">Reference to the resource on which the change or action was performed.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ProductSelectionVariantSelectionChangedMessageBuilder.html" title="class in com.commercetools.api.models.message">ProductSelectionVariantSelectionChangedMessageBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#resource(java.util.function.Function)">resource</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/ReferenceBuilder.html" title="class in com.commercetools.api.models.common">ReferenceBuilder</a>,&#8203;<a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;? extends <a href="../common/Reference.html" title="interface in com.commercetools.api.models.common">Reference</a>&gt;&gt;&nbsp;builder)</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
-<div class="block">A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>.</div>
+<div class="block">Reference to the resource on which the change or action was performed.</div>
 </div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ProductSelectionVariantSelectionChangedMessageBuilder.html" title="class in com.commercetools.api.models.message">ProductSelectionVariantSelectionChangedMessageBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#resourceUserProvidedIdentifiers(com.commercetools.api.models.message.UserProvidedIdentifiers)">resourceUserProvidedIdentifiers</a></span>&#8203;(<a href="UserProvidedIdentifiers.html" title="interface in com.commercetools.api.models.message">UserProvidedIdentifiers</a>&nbsp;resourceUserProvidedIdentifiers)</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">User-provided identifiers of the resource, such as <code>key</code> or <code>externalId</code>.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ProductSelectionVariantSelectionChangedMessageBuilder.html" title="class in com.commercetools.api.models.message">ProductSelectionVariantSelectionChangedMessageBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#resourceUserProvidedIdentifiers(java.util.function.Function)">resourceUserProvidedIdentifiers</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="UserProvidedIdentifiersBuilder.html" title="class in com.commercetools.api.models.message">UserProvidedIdentifiersBuilder</a>,&#8203;<a href="UserProvidedIdentifiersBuilder.html" title="class in com.commercetools.api.models.message">UserProvidedIdentifiersBuilder</a>&gt;&nbsp;builder)</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">User-provided identifiers of the resource, such as <code>key</code> or <code>externalId</code>.</div>
+</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ProductSelectionVariantSelectionChangedMessageBuilder.html" title="class in com.commercetools.api.models.message">ProductSelectionVariantSelectionChangedMessageBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#resourceVersion(java.lang.Long)">resourceVersion</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;resourceVersion)</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">Version of the resource on which the change or action was performed.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ProductSelectionVariantSelectionChangedMessageBuilder.html" title="class in com.commercetools.api.models.message">ProductSelectionVariantSelectionChangedMessageBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#sequenceNumber(java.lang.Long)">sequenceNumber</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;sequenceNumber)</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">Message number in relation to other Messages for a given resource.</div>
+</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ProductSelectionVariantSelectionChangedMessageBuilder.html" title="class in com.commercetools.api.models.message">ProductSelectionVariantSelectionChangedMessageBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#version(java.lang.Long)">version</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;version)</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">Version of a resource.</div>
+</div>
 </div>
 </div>
 </div>
@@ -289,7 +305,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="&lt;init&gt;()">
 <h3>ProductSelectionVariantSelectionChangedMessageBuilder</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ProductSelectionVariantSelectionChangedMessageBuilder.html#line.32">ProductSelectionVariantSelectionChangedMessageBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ProductSelectionVariantSelectionChangedMessageBuilder.html#line.34">ProductSelectionVariantSelectionChangedMessageBuilder</a></span>()</div>
 </section>
 </li>
 </ul>
@@ -304,32 +320,35 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="id(java.lang.String)">
 <h3>id</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductSelectionVariantSelectionChangedMessageBuilder.html" title="class in com.commercetools.api.models.message">ProductSelectionVariantSelectionChangedMessageBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ProductSelectionVariantSelectionChangedMessageBuilder.html#line.70">id</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;id)</span></div>
-<div class="block"><p>Unique identifier of the Message.</p></div>
+<div class="block"><p>Unique identifier of the Message. Can be used to track which Messages have been processed.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="version(java.lang.Long)">
 <h3>version</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductSelectionVariantSelectionChangedMessageBuilder.html" title="class in com.commercetools.api.models.message">ProductSelectionVariantSelectionChangedMessageBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ProductSelectionVariantSelectionChangedMessageBuilder.html#line.79">version</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;version)</span></div>
+<div class="block"><p>Version of a resource. In case of Messages, this is always <code>1</code>.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="createdAt(java.time.ZonedDateTime)">
 <h3>createdAt</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductSelectionVariantSelectionChangedMessageBuilder.html" title="class in com.commercetools.api.models.message">ProductSelectionVariantSelectionChangedMessageBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ProductSelectionVariantSelectionChangedMessageBuilder.html#line.88">createdAt</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a>&nbsp;createdAt)</span></div>
+<div class="block"><p>Date and time (UTC) the Message was generated.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="lastModifiedAt(java.time.ZonedDateTime)">
 <h3>lastModifiedAt</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductSelectionVariantSelectionChangedMessageBuilder.html" title="class in com.commercetools.api.models.message">ProductSelectionVariantSelectionChangedMessageBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ProductSelectionVariantSelectionChangedMessageBuilder.html#line.97">lastModifiedAt</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a>&nbsp;lastModifiedAt)</span></div>
+<div class="block"><p>Value of <code>createdAt</code>.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="lastModifiedBy(java.util.function.Function)">
 <h3>lastModifiedBy</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductSelectionVariantSelectionChangedMessageBuilder.html" title="class in com.commercetools.api.models.message">ProductSelectionVariantSelectionChangedMessageBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ProductSelectionVariantSelectionChangedMessageBuilder.html#line.107">lastModifiedBy</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/LastModifiedByBuilder.html" title="class in com.commercetools.api.models.common">LastModifiedByBuilder</a>,&#8203;<a href="../common/LastModifiedByBuilder.html" title="class in com.commercetools.api.models.common">LastModifiedByBuilder</a>&gt;&nbsp;builder)</span></div>
-<div class="block"><p>Present on resources created after 1 February 2019 except for events not tracked.</p></div>
+<div class="block"><p>Value of <code>createdBy</code>.</p></div>
 </section>
 </li>
 <li>
@@ -337,7 +356,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <h3>lastModifiedBy</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductSelectionVariantSelectionChangedMessageBuilder.html" title="class in com.commercetools.api.models.message">ProductSelectionVariantSelectionChangedMessageBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ProductSelectionVariantSelectionChangedMessageBuilder.html#line.117">lastModifiedBy</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
  <a href="../common/LastModifiedBy.html" title="interface in com.commercetools.api.models.common">LastModifiedBy</a>&nbsp;lastModifiedBy)</span></div>
-<div class="block"><p>Present on resources created after 1 February 2019 except for events not tracked.</p></div>
+<div class="block"><p>Value of <code>createdBy</code>.</p></div>
 </section>
 </li>
 <li>
@@ -359,32 +378,35 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="sequenceNumber(java.lang.Long)">
 <h3>sequenceNumber</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductSelectionVariantSelectionChangedMessageBuilder.html" title="class in com.commercetools.api.models.message">ProductSelectionVariantSelectionChangedMessageBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ProductSelectionVariantSelectionChangedMessageBuilder.html#line.147">sequenceNumber</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;sequenceNumber)</span></div>
+<div class="block"><p>Message number in relation to other Messages for a given resource. The <code>sequenceNumber</code> of the next Message for the resource is the successor of the <code>sequenceNumber</code> of the current Message. Meaning, the <code>sequenceNumber</code> of the next Message equals the <code>sequenceNumber</code> of the current Message + 1. <code>sequenceNumber</code> can be used to ensure that Messages are processed in the correct order for a particular resource.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="resource(com.commercetools.api.models.common.Reference)">
 <h3>resource</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductSelectionVariantSelectionChangedMessageBuilder.html" title="class in com.commercetools.api.models.message">ProductSelectionVariantSelectionChangedMessageBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ProductSelectionVariantSelectionChangedMessageBuilder.html#line.156">resource</a></span>&#8203;<span class="parameters">(<a href="../common/Reference.html" title="interface in com.commercetools.api.models.common">Reference</a>&nbsp;resource)</span></div>
-<div class="block"><p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p></div>
+<div class="block"><p>Reference to the resource on which the change or action was performed.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="resource(java.util.function.Function)">
 <h3>resource</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductSelectionVariantSelectionChangedMessageBuilder.html" title="class in com.commercetools.api.models.message">ProductSelectionVariantSelectionChangedMessageBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ProductSelectionVariantSelectionChangedMessageBuilder.html#line.166">resource</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/ReferenceBuilder.html" title="class in com.commercetools.api.models.common">ReferenceBuilder</a>,&#8203;<a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;? extends <a href="../common/Reference.html" title="interface in com.commercetools.api.models.common">Reference</a>&gt;&gt;&nbsp;builder)</span></div>
-<div class="block"><p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p></div>
+<div class="block"><p>Reference to the resource on which the change or action was performed.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="resourceVersion(java.lang.Long)">
 <h3>resourceVersion</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductSelectionVariantSelectionChangedMessageBuilder.html" title="class in com.commercetools.api.models.message">ProductSelectionVariantSelectionChangedMessageBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ProductSelectionVariantSelectionChangedMessageBuilder.html#line.176">resourceVersion</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;resourceVersion)</span></div>
+<div class="block"><p>Version of the resource on which the change or action was performed.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="resourceUserProvidedIdentifiers(java.util.function.Function)">
 <h3>resourceUserProvidedIdentifiers</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductSelectionVariantSelectionChangedMessageBuilder.html" title="class in com.commercetools.api.models.message">ProductSelectionVariantSelectionChangedMessageBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ProductSelectionVariantSelectionChangedMessageBuilder.html#line.185">resourceUserProvidedIdentifiers</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="UserProvidedIdentifiersBuilder.html" title="class in com.commercetools.api.models.message">UserProvidedIdentifiersBuilder</a>,&#8203;<a href="UserProvidedIdentifiersBuilder.html" title="class in com.commercetools.api.models.message">UserProvidedIdentifiersBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="block"><p>User-provided identifiers of the resource, such as <code>key</code> or <code>externalId</code>. Only present if the resource has such identifiers.</p></div>
 </section>
 </li>
 <li>
@@ -392,50 +414,49 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <h3>resourceUserProvidedIdentifiers</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductSelectionVariantSelectionChangedMessageBuilder.html" title="class in com.commercetools.api.models.message">ProductSelectionVariantSelectionChangedMessageBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ProductSelectionVariantSelectionChangedMessageBuilder.html#line.197">resourceUserProvidedIdentifiers</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
  <a href="UserProvidedIdentifiers.html" title="interface in com.commercetools.api.models.message">UserProvidedIdentifiers</a>&nbsp;resourceUserProvidedIdentifiers)</span></div>
+<div class="block"><p>User-provided identifiers of the resource, such as <code>key</code> or <code>externalId</code>. Only present if the resource has such identifiers.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="product(java.util.function.Function)">
 <h3>product</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductSelectionVariantSelectionChangedMessageBuilder.html" title="class in com.commercetools.api.models.message">ProductSelectionVariantSelectionChangedMessageBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ProductSelectionVariantSelectionChangedMessageBuilder.html#line.207">product</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../product/ProductReferenceBuilder.html" title="class in com.commercetools.api.models.product">ProductReferenceBuilder</a>,&#8203;<a href="../product/ProductReferenceBuilder.html" title="class in com.commercetools.api.models.product">ProductReferenceBuilder</a>&gt;&nbsp;builder)</span></div>
-<div class="block"><p>Reference to a Product.</p></div>
+<div class="block"><p>Product for which the Product Variant Selection changed.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="product(com.commercetools.api.models.product.ProductReference)">
 <h3>product</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductSelectionVariantSelectionChangedMessageBuilder.html" title="class in com.commercetools.api.models.message">ProductSelectionVariantSelectionChangedMessageBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ProductSelectionVariantSelectionChangedMessageBuilder.html#line.217">product</a></span>&#8203;<span class="parameters">(<a href="../product/ProductReference.html" title="interface in com.commercetools.api.models.product">ProductReference</a>&nbsp;product)</span></div>
-<div class="block"><p>Reference to a Product.</p></div>
+<div class="block"><p>Product for which the Product Variant Selection changed.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="oldVariantSelection(com.commercetools.api.models.product_selection.ProductVariantSelection)">
 <h3>oldVariantSelection</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductSelectionVariantSelectionChangedMessageBuilder.html" title="class in com.commercetools.api.models.message">ProductSelectionVariantSelectionChangedMessageBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ProductSelectionVariantSelectionChangedMessageBuilder.html#line.227">oldVariantSelection</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
- <a href="../product_selection/ProductVariantSelection.html" title="interface in com.commercetools.api.models.product_selection">ProductVariantSelection</a>&nbsp;oldVariantSelection)</span></div>
-<div class="block"><p>The former Product Variant Selection if any.</p></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductSelectionVariantSelectionChangedMessageBuilder.html" title="class in com.commercetools.api.models.message">ProductSelectionVariantSelectionChangedMessageBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ProductSelectionVariantSelectionChangedMessageBuilder.html#line.227">oldVariantSelection</a></span>&#8203;<span class="parameters">(<a href="../product_selection/ProductVariantSelection.html" title="interface in com.commercetools.api.models.product_selection">ProductVariantSelection</a>&nbsp;oldVariantSelection)</span></div>
+<div class="block"><p>Product Variant Selection before the Set Variant Selection update action.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="oldVariantSelection(java.util.function.Function)">
 <h3>oldVariantSelection</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductSelectionVariantSelectionChangedMessageBuilder.html" title="class in com.commercetools.api.models.message">ProductSelectionVariantSelectionChangedMessageBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ProductSelectionVariantSelectionChangedMessageBuilder.html#line.237">oldVariantSelection</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../product_selection/ProductVariantSelectionBuilder.html" title="class in com.commercetools.api.models.product_selection">ProductVariantSelectionBuilder</a>,&#8203;<a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;? extends <a href="../product_selection/ProductVariantSelection.html" title="interface in com.commercetools.api.models.product_selection">ProductVariantSelection</a>&gt;&gt;&nbsp;builder)</span></div>
-<div class="block"><p>The former Product Variant Selection if any.</p></div>
+<div class="block"><p>Product Variant Selection before the Set Variant Selection update action.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="newVariantSelection(com.commercetools.api.models.product_selection.ProductVariantSelection)">
 <h3>newVariantSelection</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductSelectionVariantSelectionChangedMessageBuilder.html" title="class in com.commercetools.api.models.message">ProductSelectionVariantSelectionChangedMessageBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ProductSelectionVariantSelectionChangedMessageBuilder.html#line.249">newVariantSelection</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
- <a href="../product_selection/ProductVariantSelection.html" title="interface in com.commercetools.api.models.product_selection">ProductVariantSelection</a>&nbsp;newVariantSelection)</span></div>
-<div class="block"><p>The updated Product Variant Selection if any.</p></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductSelectionVariantSelectionChangedMessageBuilder.html" title="class in com.commercetools.api.models.message">ProductSelectionVariantSelectionChangedMessageBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ProductSelectionVariantSelectionChangedMessageBuilder.html#line.249">newVariantSelection</a></span>&#8203;<span class="parameters">(<a href="../product_selection/ProductVariantSelection.html" title="interface in com.commercetools.api.models.product_selection">ProductVariantSelection</a>&nbsp;newVariantSelection)</span></div>
+<div class="block"><p>Product Variant Selection after the Set Variant Selection update action.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="newVariantSelection(java.util.function.Function)">
 <h3>newVariantSelection</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductSelectionVariantSelectionChangedMessageBuilder.html" title="class in com.commercetools.api.models.message">ProductSelectionVariantSelectionChangedMessageBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ProductSelectionVariantSelectionChangedMessageBuilder.html#line.259">newVariantSelection</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../product_selection/ProductVariantSelectionBuilder.html" title="class in com.commercetools.api.models.product_selection">ProductVariantSelectionBuilder</a>,&#8203;<a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;? extends <a href="../product_selection/ProductVariantSelection.html" title="interface in com.commercetools.api.models.product_selection">ProductVariantSelection</a>&gt;&gt;&nbsp;builder)</span></div>
-<div class="block"><p>The updated Product Variant Selection if any.</p></div>
+<div class="block"><p>Product Variant Selection after the Set Variant Selection update action.</p></div>
 </section>
 </li>
 <li>
@@ -510,21 +531,19 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="getOldVariantSelection()">
 <h3>getOldVariantSelection</h3>
-<div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
-</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../product_selection/ProductVariantSelection.html" title="interface in com.commercetools.api.models.product_selection">ProductVariantSelection</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ProductSelectionVariantSelectionChangedMessageBuilder.html#line.314">getOldVariantSelection</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../product_selection/ProductVariantSelection.html" title="interface in com.commercetools.api.models.product_selection">ProductVariantSelection</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ProductSelectionVariantSelectionChangedMessageBuilder.html#line.314">getOldVariantSelection</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getNewVariantSelection()">
 <h3>getNewVariantSelection</h3>
-<div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
-</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../product_selection/ProductVariantSelection.html" title="interface in com.commercetools.api.models.product_selection">ProductVariantSelection</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ProductSelectionVariantSelectionChangedMessageBuilder.html#line.319">getNewVariantSelection</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../product_selection/ProductVariantSelection.html" title="interface in com.commercetools.api.models.product_selection">ProductVariantSelection</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ProductSelectionVariantSelectionChangedMessageBuilder.html#line.318">getNewVariantSelection</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="build()">
 <h3>build</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductSelectionVariantSelectionChangedMessage.html" title="interface in com.commercetools.api.models.message">ProductSelectionVariantSelectionChangedMessage</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ProductSelectionVariantSelectionChangedMessageBuilder.html#line.324">build</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductSelectionVariantSelectionChangedMessage.html" title="interface in com.commercetools.api.models.message">ProductSelectionVariantSelectionChangedMessage</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ProductSelectionVariantSelectionChangedMessageBuilder.html#line.322">build</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html#build()">build</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="ProductSelectionVariantSelectionChangedMessage.html" title="interface in com.commercetools.api.models.message">ProductSelectionVariantSelectionChangedMessage</a>&gt;</code></dd>
@@ -534,20 +553,20 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="buildUnchecked()">
 <h3>buildUnchecked</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductSelectionVariantSelectionChangedMessage.html" title="interface in com.commercetools.api.models.message">ProductSelectionVariantSelectionChangedMessage</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ProductSelectionVariantSelectionChangedMessageBuilder.html#line.346">buildUnchecked</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductSelectionVariantSelectionChangedMessage.html" title="interface in com.commercetools.api.models.message">ProductSelectionVariantSelectionChangedMessage</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ProductSelectionVariantSelectionChangedMessageBuilder.html#line.348">buildUnchecked</a></span>()</div>
 <div class="block">builds ProductSelectionVariantSelectionChangedMessage without checking for non null required values</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="ProductSelectionVariantSelectionChangedMessageBuilder.html" title="class in com.commercetools.api.models.message">ProductSelectionVariantSelectionChangedMessageBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ProductSelectionVariantSelectionChangedMessageBuilder.html#line.352">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="ProductSelectionVariantSelectionChangedMessageBuilder.html" title="class in com.commercetools.api.models.message">ProductSelectionVariantSelectionChangedMessageBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ProductSelectionVariantSelectionChangedMessageBuilder.html#line.354">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.api.models.message.ProductSelectionVariantSelectionChangedMessage)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="ProductSelectionVariantSelectionChangedMessageBuilder.html" title="class in com.commercetools.api.models.message">ProductSelectionVariantSelectionChangedMessageBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ProductSelectionVariantSelectionChangedMessageBuilder.html#line.356">of</a></span>&#8203;<span class="parameters">(<a href="ProductSelectionVariantSelectionChangedMessage.html" title="interface in com.commercetools.api.models.message">ProductSelectionVariantSelectionChangedMessage</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="ProductSelectionVariantSelectionChangedMessageBuilder.html" title="class in com.commercetools.api.models.message">ProductSelectionVariantSelectionChangedMessageBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ProductSelectionVariantSelectionChangedMessageBuilder.html#line.358">of</a></span>&#8203;<span class="parameters">(<a href="ProductSelectionVariantSelectionChangedMessage.html" title="interface in com.commercetools.api.models.message">ProductSelectionVariantSelectionChangedMessage</a>&nbsp;template)</span></div>
 </section>
 </li>
 </ul>

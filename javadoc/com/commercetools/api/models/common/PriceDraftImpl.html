@@ -86,7 +86,7 @@ loadScripts(document, 'script');</script>
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/PriceDraftImpl.html#line.20">PriceDraftImpl</a></span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
 implements <a href="PriceDraft.html" title="interface in com.commercetools.api.models.common">PriceDraft</a>, <a href="../../../../../io/vrap/rmf/base/client/ModelBase.html" title="interface in io.vrap.rmf.base.client">ModelBase</a></span></div>
-<div class="block">PriceDraft</div>
+<div class="block"><p>The draft representation for prices to be embedded into ProductVariantDrafts when the ProductPriceMode is <code>Embedded</code>. For the <code>Standalone</code> ProductPriceMode use StandalonePriceDraft.</p></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -149,7 +149,7 @@ implements <a href="PriceDraft.html" title="interface in com.commercetools.api.m
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="DiscountedPriceDraft.html" title="interface in com.commercetools.api.models.common">DiscountedPriceDraft</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getDiscounted()">getDiscounted</a></span>()</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
-<div class="block">Set this field to add a DiscountedPrice from an external service.</div>
+<div class="block">Set this field to add a DiscountedPrice from an <strong>external service</strong>.</div>
 </div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="PriceTierDraft.html" title="interface in com.commercetools.api.models.common">PriceTierDraft</a>&gt;</code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getTiers()">getTiers</a></span>()</code></div>
@@ -159,12 +159,12 @@ implements <a href="PriceDraft.html" title="interface in com.commercetools.api.m
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getValidFrom()">getValidFrom</a></span>()</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
-<div class="block">Set this field if this Price is valid only valid from the specified date and time.</div>
+<div class="block">Set this field if this Price is only valid from the specified date and time.</div>
 </div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getValidUntil()">getValidUntil</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
-<div class="block">Set this field if this Price is valid only valid until the specified date and time.</div>
+<div class="block">Set this field if this Price is only valid until the specified date and time.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="Money.html" title="interface in com.commercetools.api.models.common">Money</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getValue()">getValue</a></span>()</code></div>
@@ -292,7 +292,7 @@ implements <a href="PriceDraft.html" title="interface in com.commercetools.api.m
 <section class="detail" id="getValidFrom()">
 <h3>getValidFrom</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/PriceDraftImpl.html#line.101">getValidFrom</a></span>()</div>
-<div class="block"><p>Set this field if this Price is valid only valid from the specified date and time.</p></div>
+<div class="block"><p>Set this field if this Price is only valid from the specified date and time. Must be at least 1 ms earlier than <code>validUntil</code>.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="PriceDraft.html#getValidFrom()">getValidFrom</a></code>&nbsp;in interface&nbsp;<code><a href="PriceDraft.html" title="interface in com.commercetools.api.models.common">PriceDraft</a></code></dd>
@@ -303,7 +303,7 @@ implements <a href="PriceDraft.html" title="interface in com.commercetools.api.m
 <section class="detail" id="getValidUntil()">
 <h3>getValidUntil</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/PriceDraftImpl.html#line.109">getValidUntil</a></span>()</div>
-<div class="block"><p>Set this field if this Price is valid only valid until the specified date and time.</p></div>
+<div class="block"><p>Set this field if this Price is only valid until the specified date and time. Must be at least 1 ms later than <code>validFrom</code>.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="PriceDraft.html#getValidUntil()">getValidUntil</a></code>&nbsp;in interface&nbsp;<code><a href="PriceDraft.html" title="interface in com.commercetools.api.models.common">PriceDraft</a></code></dd>
@@ -314,8 +314,8 @@ implements <a href="PriceDraft.html" title="interface in com.commercetools.api.m
 <section class="detail" id="getDiscounted()">
 <h3>getDiscounted</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DiscountedPriceDraft.html" title="interface in com.commercetools.api.models.common">DiscountedPriceDraft</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/PriceDraftImpl.html#line.123">getDiscounted</a></span>()</div>
-<div class="block"><p>Set this field to add a DiscountedPrice from an external service.</p>
-  <p>The API sets this field automatically if at least one ProductDiscount applies. The DiscountedPrice must reference a ProductDiscount with:</p>
+<div class="block"><p>Set this field to add a DiscountedPrice from an <strong>external service</strong>.</p>
+  <p>Otherwise, Composable Commerce sets this field automatically if at least one ProductDiscount applies. The DiscountedPrice must reference a ProductDiscount with:</p>
   <ul>
    <li>The <code>isActive</code> flag set to <code>true</code>.</li>
    <li>A ProductDiscountValue of type <code>external</code>.</li>

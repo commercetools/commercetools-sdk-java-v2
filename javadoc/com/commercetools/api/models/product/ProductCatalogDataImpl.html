@@ -86,7 +86,7 @@ loadScripts(document, 'script');</script>
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductCatalogDataImpl.html#line.20">ProductCatalogDataImpl</a></span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
 implements <a href="ProductCatalogData.html" title="interface in com.commercetools.api.models.product">ProductCatalogData</a>, <a href="../../../../../io/vrap/rmf/base/client/ModelBase.html" title="interface in io.vrap.rmf.base.client">ModelBase</a></span></div>
-<div class="block">ProductCatalogData</div>
+<div class="block"><p>Contains the <code>current</code> and <code>staged</code> ProductData.</p></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -128,16 +128,24 @@ implements <a href="ProductCatalogData.html" title="interface in com.commercetoo
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ProductData.html" title="interface in com.commercetools.api.models.product">ProductData</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getCurrent()">getCurrent</a></span>()</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">Current (published) data of the Product.</div>
+</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getHasStagedChanges()">getHasStagedChanges</a></span>()</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block"><code>true</code> if the <code>staged</code> data is different from the <code>current</code> data.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getPublished()">getPublished</a></span>()</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block"><code>true</code> if the Product is published.</div>
+</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ProductData.html" title="interface in com.commercetools.api.models.product">ProductData</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getStaged()">getStaged</a></span>()</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">Staged (unpublished) data of the Product.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code>int</code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#hashCode()">hashCode</a></span>()</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
@@ -194,6 +202,7 @@ implements <a href="ProductCatalogData.html" title="interface in com.commercetoo
 <section class="detail" id="getPublished()">
 <h3>getPublished</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductCatalogDataImpl.html#line.49">getPublished</a></span>()</div>
+<div class="block"><p><code>true</code> if the Product is published.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="ProductCatalogData.html#getPublished()">getPublished</a></code>&nbsp;in interface&nbsp;<code><a href="ProductCatalogData.html" title="interface in com.commercetools.api.models.product">ProductCatalogData</a></code></dd>
@@ -204,6 +213,7 @@ implements <a href="ProductCatalogData.html" title="interface in com.commercetoo
 <section class="detail" id="getCurrent()">
 <h3>getCurrent</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductData.html" title="interface in com.commercetools.api.models.product">ProductData</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductCatalogDataImpl.html#line.57">getCurrent</a></span>()</div>
+<div class="block"><p>Current (published) data of the Product.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="ProductCatalogData.html#getCurrent()">getCurrent</a></code>&nbsp;in interface&nbsp;<code><a href="ProductCatalogData.html" title="interface in com.commercetools.api.models.product">ProductCatalogData</a></code></dd>
@@ -214,6 +224,7 @@ implements <a href="ProductCatalogData.html" title="interface in com.commercetoo
 <section class="detail" id="getStaged()">
 <h3>getStaged</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductData.html" title="interface in com.commercetools.api.models.product">ProductData</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductCatalogDataImpl.html#line.65">getStaged</a></span>()</div>
+<div class="block"><p>Staged (unpublished) data of the Product.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="ProductCatalogData.html#getStaged()">getStaged</a></code>&nbsp;in interface&nbsp;<code><a href="ProductCatalogData.html" title="interface in com.commercetools.api.models.product">ProductCatalogData</a></code></dd>
@@ -224,6 +235,7 @@ implements <a href="ProductCatalogData.html" title="interface in com.commercetoo
 <section class="detail" id="getHasStagedChanges()">
 <h3>getHasStagedChanges</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductCatalogDataImpl.html#line.73">getHasStagedChanges</a></span>()</div>
+<div class="block"><p><code>true</code> if the <code>staged</code> data is different from the <code>current</code> data.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="ProductCatalogData.html#getHasStagedChanges()">getHasStagedChanges</a></code>&nbsp;in interface&nbsp;<code><a href="ProductCatalogData.html" title="interface in com.commercetools.api.models.product">ProductCatalogData</a></code></dd>

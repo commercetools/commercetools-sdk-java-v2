@@ -84,15 +84,16 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="StagedQuoteCreatedMessagePayloadImpl.html" title="class in com.commercetools.api.models.message">StagedQuoteCreatedMessagePayloadImpl</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/StagedQuoteCreatedMessagePayload.html#line.25">StagedQuoteCreatedMessagePayload</a></span><span class="extends-implements">
+<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/StagedQuoteCreatedMessagePayload.html#line.30">StagedQuoteCreatedMessagePayload</a></span><span class="extends-implements">
 extends <a href="MessagePayload.html" title="interface in com.commercetools.api.models.message">MessagePayload</a></span></div>
-<div class="block">StagedQuoteCreatedMessagePayload
+<div class="block"><p>Generated after a successful Create Staged Quote request.</p>
 
  <hr>
  Example to create an instance using the builder pattern
  <div class=code-example>
  <pre><code class='java'>
      StagedQuoteCreatedMessagePayload stagedQuoteCreatedMessagePayload = StagedQuoteCreatedMessagePayload.builder()
+             .stagedQuote(stagedQuoteBuilder -> stagedQuoteBuilder)
              .build()
  </code></pre>
  </div></div>
@@ -119,7 +120,7 @@ extends <a href="MessagePayload.html" title="interface in com.commercetools.api.
 <section class="method-summary" id="method.summary">
 <h2>Method Summary</h2>
 <div id="method-summary-table">
-<div class="table-tabs" role="tablist" aria-orientation="horizontal"><button id="method-summary-table-tab0" role="tab" aria-selected="true" aria-controls="method-summary-table.tabpanel" tabindex="0" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table', 3)" class="active-table-tab">All Methods</button><button id="method-summary-table-tab1" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab1', 3)" class="table-tab">Static Methods</button><button id="method-summary-table-tab2" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab2', 3)" class="table-tab">Instance Methods</button><button id="method-summary-table-tab5" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab5', 3)" class="table-tab">Default Methods</button></div>
+<div class="table-tabs" role="tablist" aria-orientation="horizontal"><button id="method-summary-table-tab0" role="tab" aria-selected="true" aria-controls="method-summary-table.tabpanel" tabindex="0" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table', 3)" class="active-table-tab">All Methods</button><button id="method-summary-table-tab1" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab1', 3)" class="table-tab">Static Methods</button><button id="method-summary-table-tab2" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab2', 3)" class="table-tab">Instance Methods</button><button id="method-summary-table-tab3" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab3', 3)" class="table-tab">Abstract Methods</button><button id="method-summary-table-tab5" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab5', 3)" class="table-tab">Default Methods</button></div>
 <div id="method-summary-table.tabpanel" role="tabpanel">
 <div class="summary-table three-column-summary" aria-labelledby="method-summary-table-tab0">
 <div class="table-header col-first">Modifier and Type</div>
@@ -131,12 +132,20 @@ extends <a href="MessagePayload.html" title="interface in com.commercetools.api.
 <div class="col-first odd-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="StagedQuoteCreatedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">StagedQuoteCreatedMessagePayloadBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#builder(com.commercetools.api.models.message.StagedQuoteCreatedMessagePayload)">builder</a></span>&#8203;(<a href="StagedQuoteCreatedMessagePayload.html" title="interface in com.commercetools.api.models.message">StagedQuoteCreatedMessagePayload</a>&nbsp;template)</code></div>
 <div class="col-last odd-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="StagedQuoteCreatedMessagePayload.html" title="interface in com.commercetools.api.models.message">StagedQuoteCreatedMessagePayload</a></code></div>
-<div class="col-second even-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#of()">of</a></span>()</code></div>
-<div class="col-last even-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@NotNull @Valid <a href="../staged_quote/StagedQuote.html" title="interface in com.commercetools.api.models.staged_quote">StagedQuote</a></code></div>
+<div class="col-second even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getStagedQuote()">getStagedQuote</a></span>()</code></div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
+<div class="block">Staged Quote that was created.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="StagedQuoteCreatedMessagePayload.html" title="interface in com.commercetools.api.models.message">StagedQuoteCreatedMessagePayload</a></code></div>
-<div class="col-second odd-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#of(com.commercetools.api.models.message.StagedQuoteCreatedMessagePayload)">of</a></span>&#8203;(<a href="StagedQuoteCreatedMessagePayload.html" title="interface in com.commercetools.api.models.message">StagedQuoteCreatedMessagePayload</a>&nbsp;template)</code></div>
+<div class="col-second odd-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#of()">of</a></span>()</code></div>
 <div class="col-last odd-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="StagedQuoteCreatedMessagePayload.html" title="interface in com.commercetools.api.models.message">StagedQuoteCreatedMessagePayload</a></code></div>
+<div class="col-second even-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#of(com.commercetools.api.models.message.StagedQuoteCreatedMessagePayload)">of</a></span>&#8203;(<a href="StagedQuoteCreatedMessagePayload.html" title="interface in com.commercetools.api.models.message">StagedQuoteCreatedMessagePayload</a>&nbsp;template)</code></div>
+<div class="col-last even-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#setStagedQuote(com.commercetools.api.models.staged_quote.StagedQuote)">setStagedQuote</a></span>&#8203;(<a href="../staged_quote/StagedQuote.html" title="interface in com.commercetools.api.models.staged_quote">StagedQuote</a>&nbsp;stagedQuote)</code></div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table-tab1 method-summary-table"><code>static com.fasterxml.jackson.core.type.TypeReference&lt;<a href="StagedQuoteCreatedMessagePayload.html" title="interface in com.commercetools.api.models.message">StagedQuoteCreatedMessagePayload</a>&gt;</code></div>
 <div class="col-second even-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#typeReference()">typeReference</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
@@ -163,7 +172,7 @@ extends <a href="MessagePayload.html" title="interface in com.commercetools.api.
 <li>
 <section class="detail" id="STAGED_QUOTE_CREATED">
 <h3>STAGED_QUOTE_CREATED</h3>
-<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/StagedQuoteCreatedMessagePayload.html#line.29">STAGED_QUOTE_CREATED</a></span></div>
+<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/StagedQuoteCreatedMessagePayload.html#line.34">STAGED_QUOTE_CREATED</a></span></div>
 <dl class="notes">
 <dt>See Also:</dt>
 <dd><a href="../../../../../constant-values.html#com.commercetools.api.models.message.StagedQuoteCreatedMessagePayload.STAGED_QUOTE_CREATED">Constant Field Values</a></dd>
@@ -179,39 +188,54 @@ extends <a href="MessagePayload.html" title="interface in com.commercetools.api.
 <h2>Method Details</h2>
 <ul class="member-list">
 <li>
+<section class="detail" id="getStagedQuote()">
+<h3>getStagedQuote</h3>
+<div class="member-signature"><span class="annotations">@NotNull
+@Valid
+</span><span class="return-type">@NotNull @Valid <a href="../staged_quote/StagedQuote.html" title="interface in com.commercetools.api.models.staged_quote">StagedQuote</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/StagedQuoteCreatedMessagePayload.html#line.39">getStagedQuote</a></span>()</div>
+<div class="block"><p>Staged Quote that was created.</p></div>
+</section>
+</li>
+<li>
+<section class="detail" id="setStagedQuote(com.commercetools.api.models.staged_quote.StagedQuote)">
+<h3>setStagedQuote</h3>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/StagedQuoteCreatedMessagePayload.html#line.44">setStagedQuote</a></span>&#8203;<span class="parameters">(<a href="../staged_quote/StagedQuote.html" title="interface in com.commercetools.api.models.staged_quote">StagedQuote</a>&nbsp;stagedQuote)</span></div>
+</section>
+</li>
+<li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="StagedQuoteCreatedMessagePayload.html" title="interface in com.commercetools.api.models.message">StagedQuoteCreatedMessagePayload</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/StagedQuoteCreatedMessagePayload.html#line.31">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="StagedQuoteCreatedMessagePayload.html" title="interface in com.commercetools.api.models.message">StagedQuoteCreatedMessagePayload</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/StagedQuoteCreatedMessagePayload.html#line.46">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.api.models.message.StagedQuoteCreatedMessagePayload)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="StagedQuoteCreatedMessagePayload.html" title="interface in com.commercetools.api.models.message">StagedQuoteCreatedMessagePayload</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/StagedQuoteCreatedMessagePayload.html#line.35">of</a></span>&#8203;<span class="parameters">(<a href="StagedQuoteCreatedMessagePayload.html" title="interface in com.commercetools.api.models.message">StagedQuoteCreatedMessagePayload</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="StagedQuoteCreatedMessagePayload.html" title="interface in com.commercetools.api.models.message">StagedQuoteCreatedMessagePayload</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/StagedQuoteCreatedMessagePayload.html#line.50">of</a></span>&#8203;<span class="parameters">(<a href="StagedQuoteCreatedMessagePayload.html" title="interface in com.commercetools.api.models.message">StagedQuoteCreatedMessagePayload</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder()">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="StagedQuoteCreatedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">StagedQuoteCreatedMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/StagedQuoteCreatedMessagePayload.html#line.40">builder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="StagedQuoteCreatedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">StagedQuoteCreatedMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/StagedQuoteCreatedMessagePayload.html#line.56">builder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder(com.commercetools.api.models.message.StagedQuoteCreatedMessagePayload)">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="StagedQuoteCreatedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">StagedQuoteCreatedMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/StagedQuoteCreatedMessagePayload.html#line.44">builder</a></span>&#8203;<span class="parameters">(<a href="StagedQuoteCreatedMessagePayload.html" title="interface in com.commercetools.api.models.message">StagedQuoteCreatedMessagePayload</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="StagedQuoteCreatedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">StagedQuoteCreatedMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/StagedQuoteCreatedMessagePayload.html#line.60">builder</a></span>&#8203;<span class="parameters">(<a href="StagedQuoteCreatedMessagePayload.html" title="interface in com.commercetools.api.models.message">StagedQuoteCreatedMessagePayload</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withStagedQuoteCreatedMessagePayload(java.util.function.Function)">
 <h3>withStagedQuoteCreatedMessagePayload</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/StagedQuoteCreatedMessagePayload.html#line.48">withStagedQuoteCreatedMessagePayload</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="StagedQuoteCreatedMessagePayload.html" title="interface in com.commercetools.api.models.message">StagedQuoteCreatedMessagePayload</a>,&#8203;T&gt;&nbsp;helper)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/StagedQuoteCreatedMessagePayload.html#line.64">withStagedQuoteCreatedMessagePayload</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="StagedQuoteCreatedMessagePayload.html" title="interface in com.commercetools.api.models.message">StagedQuoteCreatedMessagePayload</a>,&#8203;T&gt;&nbsp;helper)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="typeReference()">
 <h3>typeReference</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="StagedQuoteCreatedMessagePayload.html" title="interface in com.commercetools.api.models.message">StagedQuoteCreatedMessagePayload</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/StagedQuoteCreatedMessagePayload.html#line.52">typeReference</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="StagedQuoteCreatedMessagePayload.html" title="interface in com.commercetools.api.models.message">StagedQuoteCreatedMessagePayload</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/StagedQuoteCreatedMessagePayload.html#line.68">typeReference</a></span>()</div>
 </section>
 </li>
 </ul>

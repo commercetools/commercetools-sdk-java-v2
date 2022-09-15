@@ -28,7 +28,7 @@
 <span class="source-line-no">015</span><span id="line.15">import org.apache.commons.lang3.builder.HashCodeBuilder;</span>
 <span class="source-line-no">016</span><span id="line.16"></span>
 <span class="source-line-no">017</span><span id="line.17">/**</span>
-<span class="source-line-no">018</span><span id="line.18"> * Product</span>
+<span class="source-line-no">018</span><span id="line.18"> *  &lt;p&gt;An abstract sellable good with a set of Attributes defined by a Product Type. Products themselves are not sellable. Instead, they act as a parent structure for Product Variants. Each Product must have at least one Product Variant, which is called the Master Variant. A single Product representation contains the &lt;em&gt;current&lt;/em&gt; and the &lt;em&gt;staged&lt;/em&gt; representation of its product data.&lt;/p&gt;</span>
 <span class="source-line-no">019</span><span id="line.19"> */</span>
 <span class="source-line-no">020</span><span id="line.20">@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")</span>
 <span class="source-line-no">021</span><span id="line.21">public class ProductImpl implements Product, ModelBase {</span>
@@ -99,7 +99,7 @@
 <span class="source-line-no">086</span><span id="line.86">    }</span>
 <span class="source-line-no">087</span><span id="line.87"></span>
 <span class="source-line-no">088</span><span id="line.88">    /**</span>
-<span class="source-line-no">089</span><span id="line.89">     *  &lt;p&gt;The current version of the product.&lt;/p&gt;</span>
+<span class="source-line-no">089</span><span id="line.89">     *  &lt;p&gt;Current version of the Product.&lt;/p&gt;</span>
 <span class="source-line-no">090</span><span id="line.90">     */</span>
 <span class="source-line-no">091</span><span id="line.91"></span>
 <span class="source-line-no">092</span><span id="line.92">    public Long getVersion() {</span>
@@ -107,7 +107,7 @@
 <span class="source-line-no">094</span><span id="line.94">    }</span>
 <span class="source-line-no">095</span><span id="line.95"></span>
 <span class="source-line-no">096</span><span id="line.96">    /**</span>
-<span class="source-line-no">097</span><span id="line.97">     *</span>
+<span class="source-line-no">097</span><span id="line.97">     *  &lt;p&gt;Date and time (UTC) the Product was initially created.&lt;/p&gt;</span>
 <span class="source-line-no">098</span><span id="line.98">     */</span>
 <span class="source-line-no">099</span><span id="line.99"></span>
 <span class="source-line-no">100</span><span id="line.100">    public java.time.ZonedDateTime getCreatedAt() {</span>
@@ -115,7 +115,7 @@
 <span class="source-line-no">102</span><span id="line.102">    }</span>
 <span class="source-line-no">103</span><span id="line.103"></span>
 <span class="source-line-no">104</span><span id="line.104">    /**</span>
-<span class="source-line-no">105</span><span id="line.105">     *</span>
+<span class="source-line-no">105</span><span id="line.105">     *  &lt;p&gt;Date and time (UTC) the Product was last updated.&lt;/p&gt;</span>
 <span class="source-line-no">106</span><span id="line.106">     */</span>
 <span class="source-line-no">107</span><span id="line.107"></span>
 <span class="source-line-no">108</span><span id="line.108">    public java.time.ZonedDateTime getLastModifiedAt() {</span>
@@ -139,159 +139,160 @@
 <span class="source-line-no">126</span><span id="line.126">    }</span>
 <span class="source-line-no">127</span><span id="line.127"></span>
 <span class="source-line-no">128</span><span id="line.128">    /**</span>
-<span class="source-line-no">129</span><span id="line.129">     *  &lt;p&gt;User-defined unique identifier of the Product. &lt;em&gt;Product keys are different from ProductVariant keys.&lt;/em&gt;&lt;/p&gt;</span>
-<span class="source-line-no">130</span><span id="line.130">     */</span>
-<span class="source-line-no">131</span><span id="line.131"></span>
-<span class="source-line-no">132</span><span id="line.132">    public String getKey() {</span>
-<span class="source-line-no">133</span><span id="line.133">        return this.key;</span>
-<span class="source-line-no">134</span><span id="line.134">    }</span>
-<span class="source-line-no">135</span><span id="line.135"></span>
-<span class="source-line-no">136</span><span id="line.136">    /**</span>
-<span class="source-line-no">137</span><span id="line.137">     *</span>
-<span class="source-line-no">138</span><span id="line.138">     */</span>
-<span class="source-line-no">139</span><span id="line.139"></span>
-<span class="source-line-no">140</span><span id="line.140">    public com.commercetools.api.models.product_type.ProductTypeReference getProductType() {</span>
-<span class="source-line-no">141</span><span id="line.141">        return this.productType;</span>
-<span class="source-line-no">142</span><span id="line.142">    }</span>
-<span class="source-line-no">143</span><span id="line.143"></span>
-<span class="source-line-no">144</span><span id="line.144">    /**</span>
-<span class="source-line-no">145</span><span id="line.145">     *  &lt;p&gt;The product data in the master catalog.&lt;/p&gt;</span>
-<span class="source-line-no">146</span><span id="line.146">     */</span>
-<span class="source-line-no">147</span><span id="line.147"></span>
-<span class="source-line-no">148</span><span id="line.148">    public com.commercetools.api.models.product.ProductCatalogData getMasterData() {</span>
-<span class="source-line-no">149</span><span id="line.149">        return this.masterData;</span>
-<span class="source-line-no">150</span><span id="line.150">    }</span>
-<span class="source-line-no">151</span><span id="line.151"></span>
-<span class="source-line-no">152</span><span id="line.152">    /**</span>
-<span class="source-line-no">153</span><span id="line.153">     *</span>
-<span class="source-line-no">154</span><span id="line.154">     */</span>
-<span class="source-line-no">155</span><span id="line.155"></span>
-<span class="source-line-no">156</span><span id="line.156">    public com.commercetools.api.models.tax_category.TaxCategoryReference getTaxCategory() {</span>
-<span class="source-line-no">157</span><span id="line.157">        return this.taxCategory;</span>
-<span class="source-line-no">158</span><span id="line.158">    }</span>
-<span class="source-line-no">159</span><span id="line.159"></span>
-<span class="source-line-no">160</span><span id="line.160">    /**</span>
-<span class="source-line-no">161</span><span id="line.161">     *</span>
-<span class="source-line-no">162</span><span id="line.162">     */</span>
-<span class="source-line-no">163</span><span id="line.163"></span>
-<span class="source-line-no">164</span><span id="line.164">    public com.commercetools.api.models.state.StateReference getState() {</span>
-<span class="source-line-no">165</span><span id="line.165">        return this.state;</span>
-<span class="source-line-no">166</span><span id="line.166">    }</span>
-<span class="source-line-no">167</span><span id="line.167"></span>
-<span class="source-line-no">168</span><span id="line.168">    /**</span>
-<span class="source-line-no">169</span><span id="line.169">     *  &lt;p&gt;Statistics about the review ratings taken into account for this product.&lt;/p&gt;</span>
-<span class="source-line-no">170</span><span id="line.170">     */</span>
-<span class="source-line-no">171</span><span id="line.171"></span>
-<span class="source-line-no">172</span><span id="line.172">    public com.commercetools.api.models.review.ReviewRatingStatistics getReviewRatingStatistics() {</span>
-<span class="source-line-no">173</span><span id="line.173">        return this.reviewRatingStatistics;</span>
-<span class="source-line-no">174</span><span id="line.174">    }</span>
-<span class="source-line-no">175</span><span id="line.175"></span>
-<span class="source-line-no">176</span><span id="line.176">    /**</span>
-<span class="source-line-no">177</span><span id="line.177">     *  &lt;p&gt;Specifies which type of prices should be used when looking up a price for this product. If not set, &lt;code&gt;Embedded&lt;/code&gt; ProductPriceMode is used.&lt;/p&gt;</span>
-<span class="source-line-no">178</span><span id="line.178">     */</span>
-<span class="source-line-no">179</span><span id="line.179"></span>
-<span class="source-line-no">180</span><span id="line.180">    public com.commercetools.api.models.product.ProductPriceModeEnum getPriceMode() {</span>
-<span class="source-line-no">181</span><span id="line.181">        return this.priceMode;</span>
-<span class="source-line-no">182</span><span id="line.182">    }</span>
-<span class="source-line-no">183</span><span id="line.183"></span>
-<span class="source-line-no">184</span><span id="line.184">    public void setId(final String id) {</span>
-<span class="source-line-no">185</span><span id="line.185">        this.id = id;</span>
-<span class="source-line-no">186</span><span id="line.186">    }</span>
-<span class="source-line-no">187</span><span id="line.187"></span>
-<span class="source-line-no">188</span><span id="line.188">    public void setVersion(final Long version) {</span>
-<span class="source-line-no">189</span><span id="line.189">        this.version = version;</span>
-<span class="source-line-no">190</span><span id="line.190">    }</span>
-<span class="source-line-no">191</span><span id="line.191"></span>
-<span class="source-line-no">192</span><span id="line.192">    public void setCreatedAt(final java.time.ZonedDateTime createdAt) {</span>
-<span class="source-line-no">193</span><span id="line.193">        this.createdAt = createdAt;</span>
-<span class="source-line-no">194</span><span id="line.194">    }</span>
-<span class="source-line-no">195</span><span id="line.195"></span>
-<span class="source-line-no">196</span><span id="line.196">    public void setLastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {</span>
-<span class="source-line-no">197</span><span id="line.197">        this.lastModifiedAt = lastModifiedAt;</span>
-<span class="source-line-no">198</span><span id="line.198">    }</span>
-<span class="source-line-no">199</span><span id="line.199"></span>
-<span class="source-line-no">200</span><span id="line.200">    public void setLastModifiedBy(final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy) {</span>
-<span class="source-line-no">201</span><span id="line.201">        this.lastModifiedBy = lastModifiedBy;</span>
-<span class="source-line-no">202</span><span id="line.202">    }</span>
-<span class="source-line-no">203</span><span id="line.203"></span>
-<span class="source-line-no">204</span><span id="line.204">    public void setCreatedBy(final com.commercetools.api.models.common.CreatedBy createdBy) {</span>
-<span class="source-line-no">205</span><span id="line.205">        this.createdBy = createdBy;</span>
-<span class="source-line-no">206</span><span id="line.206">    }</span>
-<span class="source-line-no">207</span><span id="line.207"></span>
-<span class="source-line-no">208</span><span id="line.208">    public void setKey(final String key) {</span>
-<span class="source-line-no">209</span><span id="line.209">        this.key = key;</span>
-<span class="source-line-no">210</span><span id="line.210">    }</span>
-<span class="source-line-no">211</span><span id="line.211"></span>
-<span class="source-line-no">212</span><span id="line.212">    public void setProductType(final com.commercetools.api.models.product_type.ProductTypeReference productType) {</span>
-<span class="source-line-no">213</span><span id="line.213">        this.productType = productType;</span>
-<span class="source-line-no">214</span><span id="line.214">    }</span>
-<span class="source-line-no">215</span><span id="line.215"></span>
-<span class="source-line-no">216</span><span id="line.216">    public void setMasterData(final com.commercetools.api.models.product.ProductCatalogData masterData) {</span>
-<span class="source-line-no">217</span><span id="line.217">        this.masterData = masterData;</span>
-<span class="source-line-no">218</span><span id="line.218">    }</span>
-<span class="source-line-no">219</span><span id="line.219"></span>
-<span class="source-line-no">220</span><span id="line.220">    public void setTaxCategory(final com.commercetools.api.models.tax_category.TaxCategoryReference taxCategory) {</span>
-<span class="source-line-no">221</span><span id="line.221">        this.taxCategory = taxCategory;</span>
-<span class="source-line-no">222</span><span id="line.222">    }</span>
-<span class="source-line-no">223</span><span id="line.223"></span>
-<span class="source-line-no">224</span><span id="line.224">    public void setState(final com.commercetools.api.models.state.StateReference state) {</span>
-<span class="source-line-no">225</span><span id="line.225">        this.state = state;</span>
-<span class="source-line-no">226</span><span id="line.226">    }</span>
-<span class="source-line-no">227</span><span id="line.227"></span>
-<span class="source-line-no">228</span><span id="line.228">    public void setReviewRatingStatistics(</span>
-<span class="source-line-no">229</span><span id="line.229">            final com.commercetools.api.models.review.ReviewRatingStatistics reviewRatingStatistics) {</span>
-<span class="source-line-no">230</span><span id="line.230">        this.reviewRatingStatistics = reviewRatingStatistics;</span>
-<span class="source-line-no">231</span><span id="line.231">    }</span>
-<span class="source-line-no">232</span><span id="line.232"></span>
-<span class="source-line-no">233</span><span id="line.233">    public void setPriceMode(final com.commercetools.api.models.product.ProductPriceModeEnum priceMode) {</span>
-<span class="source-line-no">234</span><span id="line.234">        this.priceMode = priceMode;</span>
-<span class="source-line-no">235</span><span id="line.235">    }</span>
-<span class="source-line-no">236</span><span id="line.236"></span>
-<span class="source-line-no">237</span><span id="line.237">    @Override</span>
-<span class="source-line-no">238</span><span id="line.238">    public boolean equals(Object o) {</span>
-<span class="source-line-no">239</span><span id="line.239">        if (this == o)</span>
-<span class="source-line-no">240</span><span id="line.240">            return true;</span>
-<span class="source-line-no">241</span><span id="line.241"></span>
-<span class="source-line-no">242</span><span id="line.242">        if (o == null || getClass() != o.getClass())</span>
-<span class="source-line-no">243</span><span id="line.243">            return false;</span>
-<span class="source-line-no">244</span><span id="line.244"></span>
-<span class="source-line-no">245</span><span id="line.245">        ProductImpl that = (ProductImpl) o;</span>
-<span class="source-line-no">246</span><span id="line.246"></span>
-<span class="source-line-no">247</span><span id="line.247">        return new EqualsBuilder().append(id, that.id)</span>
-<span class="source-line-no">248</span><span id="line.248">                .append(version, that.version)</span>
-<span class="source-line-no">249</span><span id="line.249">                .append(createdAt, that.createdAt)</span>
-<span class="source-line-no">250</span><span id="line.250">                .append(lastModifiedAt, that.lastModifiedAt)</span>
-<span class="source-line-no">251</span><span id="line.251">                .append(lastModifiedBy, that.lastModifiedBy)</span>
-<span class="source-line-no">252</span><span id="line.252">                .append(createdBy, that.createdBy)</span>
-<span class="source-line-no">253</span><span id="line.253">                .append(key, that.key)</span>
-<span class="source-line-no">254</span><span id="line.254">                .append(productType, that.productType)</span>
-<span class="source-line-no">255</span><span id="line.255">                .append(masterData, that.masterData)</span>
-<span class="source-line-no">256</span><span id="line.256">                .append(taxCategory, that.taxCategory)</span>
-<span class="source-line-no">257</span><span id="line.257">                .append(state, that.state)</span>
-<span class="source-line-no">258</span><span id="line.258">                .append(reviewRatingStatistics, that.reviewRatingStatistics)</span>
-<span class="source-line-no">259</span><span id="line.259">                .append(priceMode, that.priceMode)</span>
-<span class="source-line-no">260</span><span id="line.260">                .isEquals();</span>
-<span class="source-line-no">261</span><span id="line.261">    }</span>
-<span class="source-line-no">262</span><span id="line.262"></span>
-<span class="source-line-no">263</span><span id="line.263">    @Override</span>
-<span class="source-line-no">264</span><span id="line.264">    public int hashCode() {</span>
-<span class="source-line-no">265</span><span id="line.265">        return new HashCodeBuilder(17, 37).append(id)</span>
-<span class="source-line-no">266</span><span id="line.266">                .append(version)</span>
-<span class="source-line-no">267</span><span id="line.267">                .append(createdAt)</span>
-<span class="source-line-no">268</span><span id="line.268">                .append(lastModifiedAt)</span>
-<span class="source-line-no">269</span><span id="line.269">                .append(lastModifiedBy)</span>
-<span class="source-line-no">270</span><span id="line.270">                .append(createdBy)</span>
-<span class="source-line-no">271</span><span id="line.271">                .append(key)</span>
-<span class="source-line-no">272</span><span id="line.272">                .append(productType)</span>
-<span class="source-line-no">273</span><span id="line.273">                .append(masterData)</span>
-<span class="source-line-no">274</span><span id="line.274">                .append(taxCategory)</span>
-<span class="source-line-no">275</span><span id="line.275">                .append(state)</span>
-<span class="source-line-no">276</span><span id="line.276">                .append(reviewRatingStatistics)</span>
-<span class="source-line-no">277</span><span id="line.277">                .append(priceMode)</span>
-<span class="source-line-no">278</span><span id="line.278">                .toHashCode();</span>
-<span class="source-line-no">279</span><span id="line.279">    }</span>
-<span class="source-line-no">280</span><span id="line.280"></span>
-<span class="source-line-no">281</span><span id="line.281">}</span>
+<span class="source-line-no">129</span><span id="line.129">     *  &lt;p&gt;User-defined unique identifier of the Product.&lt;/p&gt;</span>
+<span class="source-line-no">130</span><span id="line.130">     *  &lt;p&gt;This is different from the &lt;code&gt;key&lt;/code&gt; of a ProductVariant.&lt;/p&gt;</span>
+<span class="source-line-no">131</span><span id="line.131">     */</span>
+<span class="source-line-no">132</span><span id="line.132"></span>
+<span class="source-line-no">133</span><span id="line.133">    public String getKey() {</span>
+<span class="source-line-no">134</span><span id="line.134">        return this.key;</span>
+<span class="source-line-no">135</span><span id="line.135">    }</span>
+<span class="source-line-no">136</span><span id="line.136"></span>
+<span class="source-line-no">137</span><span id="line.137">    /**</span>
+<span class="source-line-no">138</span><span id="line.138">     *  &lt;p&gt;The Product Type defining the Attributes of the Product. Cannot be changed.&lt;/p&gt;</span>
+<span class="source-line-no">139</span><span id="line.139">     */</span>
+<span class="source-line-no">140</span><span id="line.140"></span>
+<span class="source-line-no">141</span><span id="line.141">    public com.commercetools.api.models.product_type.ProductTypeReference getProductType() {</span>
+<span class="source-line-no">142</span><span id="line.142">        return this.productType;</span>
+<span class="source-line-no">143</span><span id="line.143">    }</span>
+<span class="source-line-no">144</span><span id="line.144"></span>
+<span class="source-line-no">145</span><span id="line.145">    /**</span>
+<span class="source-line-no">146</span><span id="line.146">     *  &lt;p&gt;Contains the current and the staged representation of the product information.&lt;/p&gt;</span>
+<span class="source-line-no">147</span><span id="line.147">     */</span>
+<span class="source-line-no">148</span><span id="line.148"></span>
+<span class="source-line-no">149</span><span id="line.149">    public com.commercetools.api.models.product.ProductCatalogData getMasterData() {</span>
+<span class="source-line-no">150</span><span id="line.150">        return this.masterData;</span>
+<span class="source-line-no">151</span><span id="line.151">    }</span>
+<span class="source-line-no">152</span><span id="line.152"></span>
+<span class="source-line-no">153</span><span id="line.153">    /**</span>
+<span class="source-line-no">154</span><span id="line.154">     *  &lt;p&gt;The TaxCategory of the Product.&lt;/p&gt;</span>
+<span class="source-line-no">155</span><span id="line.155">     */</span>
+<span class="source-line-no">156</span><span id="line.156"></span>
+<span class="source-line-no">157</span><span id="line.157">    public com.commercetools.api.models.tax_category.TaxCategoryReference getTaxCategory() {</span>
+<span class="source-line-no">158</span><span id="line.158">        return this.taxCategory;</span>
+<span class="source-line-no">159</span><span id="line.159">    }</span>
+<span class="source-line-no">160</span><span id="line.160"></span>
+<span class="source-line-no">161</span><span id="line.161">    /**</span>
+<span class="source-line-no">162</span><span id="line.162">     *  &lt;p&gt;State of the Product.&lt;/p&gt;</span>
+<span class="source-line-no">163</span><span id="line.163">     */</span>
+<span class="source-line-no">164</span><span id="line.164"></span>
+<span class="source-line-no">165</span><span id="line.165">    public com.commercetools.api.models.state.StateReference getState() {</span>
+<span class="source-line-no">166</span><span id="line.166">        return this.state;</span>
+<span class="source-line-no">167</span><span id="line.167">    }</span>
+<span class="source-line-no">168</span><span id="line.168"></span>
+<span class="source-line-no">169</span><span id="line.169">    /**</span>
+<span class="source-line-no">170</span><span id="line.170">     *  &lt;p&gt;Review statistics of the Product.&lt;/p&gt;</span>
+<span class="source-line-no">171</span><span id="line.171">     */</span>
+<span class="source-line-no">172</span><span id="line.172"></span>
+<span class="source-line-no">173</span><span id="line.173">    public com.commercetools.api.models.review.ReviewRatingStatistics getReviewRatingStatistics() {</span>
+<span class="source-line-no">174</span><span id="line.174">        return this.reviewRatingStatistics;</span>
+<span class="source-line-no">175</span><span id="line.175">    }</span>
+<span class="source-line-no">176</span><span id="line.176"></span>
+<span class="source-line-no">177</span><span id="line.177">    /**</span>
+<span class="source-line-no">178</span><span id="line.178">     *  &lt;p&gt;Type of Price to be used when looking up a price for the Product.&lt;/p&gt;</span>
+<span class="source-line-no">179</span><span id="line.179">     */</span>
+<span class="source-line-no">180</span><span id="line.180"></span>
+<span class="source-line-no">181</span><span id="line.181">    public com.commercetools.api.models.product.ProductPriceModeEnum getPriceMode() {</span>
+<span class="source-line-no">182</span><span id="line.182">        return this.priceMode;</span>
+<span class="source-line-no">183</span><span id="line.183">    }</span>
+<span class="source-line-no">184</span><span id="line.184"></span>
+<span class="source-line-no">185</span><span id="line.185">    public void setId(final String id) {</span>
+<span class="source-line-no">186</span><span id="line.186">        this.id = id;</span>
+<span class="source-line-no">187</span><span id="line.187">    }</span>
+<span class="source-line-no">188</span><span id="line.188"></span>
+<span class="source-line-no">189</span><span id="line.189">    public void setVersion(final Long version) {</span>
+<span class="source-line-no">190</span><span id="line.190">        this.version = version;</span>
+<span class="source-line-no">191</span><span id="line.191">    }</span>
+<span class="source-line-no">192</span><span id="line.192"></span>
+<span class="source-line-no">193</span><span id="line.193">    public void setCreatedAt(final java.time.ZonedDateTime createdAt) {</span>
+<span class="source-line-no">194</span><span id="line.194">        this.createdAt = createdAt;</span>
+<span class="source-line-no">195</span><span id="line.195">    }</span>
+<span class="source-line-no">196</span><span id="line.196"></span>
+<span class="source-line-no">197</span><span id="line.197">    public void setLastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {</span>
+<span class="source-line-no">198</span><span id="line.198">        this.lastModifiedAt = lastModifiedAt;</span>
+<span class="source-line-no">199</span><span id="line.199">    }</span>
+<span class="source-line-no">200</span><span id="line.200"></span>
+<span class="source-line-no">201</span><span id="line.201">    public void setLastModifiedBy(final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy) {</span>
+<span class="source-line-no">202</span><span id="line.202">        this.lastModifiedBy = lastModifiedBy;</span>
+<span class="source-line-no">203</span><span id="line.203">    }</span>
+<span class="source-line-no">204</span><span id="line.204"></span>
+<span class="source-line-no">205</span><span id="line.205">    public void setCreatedBy(final com.commercetools.api.models.common.CreatedBy createdBy) {</span>
+<span class="source-line-no">206</span><span id="line.206">        this.createdBy = createdBy;</span>
+<span class="source-line-no">207</span><span id="line.207">    }</span>
+<span class="source-line-no">208</span><span id="line.208"></span>
+<span class="source-line-no">209</span><span id="line.209">    public void setKey(final String key) {</span>
+<span class="source-line-no">210</span><span id="line.210">        this.key = key;</span>
+<span class="source-line-no">211</span><span id="line.211">    }</span>
+<span class="source-line-no">212</span><span id="line.212"></span>
+<span class="source-line-no">213</span><span id="line.213">    public void setProductType(final com.commercetools.api.models.product_type.ProductTypeReference productType) {</span>
+<span class="source-line-no">214</span><span id="line.214">        this.productType = productType;</span>
+<span class="source-line-no">215</span><span id="line.215">    }</span>
+<span class="source-line-no">216</span><span id="line.216"></span>
+<span class="source-line-no">217</span><span id="line.217">    public void setMasterData(final com.commercetools.api.models.product.ProductCatalogData masterData) {</span>
+<span class="source-line-no">218</span><span id="line.218">        this.masterData = masterData;</span>
+<span class="source-line-no">219</span><span id="line.219">    }</span>
+<span class="source-line-no">220</span><span id="line.220"></span>
+<span class="source-line-no">221</span><span id="line.221">    public void setTaxCategory(final com.commercetools.api.models.tax_category.TaxCategoryReference taxCategory) {</span>
+<span class="source-line-no">222</span><span id="line.222">        this.taxCategory = taxCategory;</span>
+<span class="source-line-no">223</span><span id="line.223">    }</span>
+<span class="source-line-no">224</span><span id="line.224"></span>
+<span class="source-line-no">225</span><span id="line.225">    public void setState(final com.commercetools.api.models.state.StateReference state) {</span>
+<span class="source-line-no">226</span><span id="line.226">        this.state = state;</span>
+<span class="source-line-no">227</span><span id="line.227">    }</span>
+<span class="source-line-no">228</span><span id="line.228"></span>
+<span class="source-line-no">229</span><span id="line.229">    public void setReviewRatingStatistics(</span>
+<span class="source-line-no">230</span><span id="line.230">            final com.commercetools.api.models.review.ReviewRatingStatistics reviewRatingStatistics) {</span>
+<span class="source-line-no">231</span><span id="line.231">        this.reviewRatingStatistics = reviewRatingStatistics;</span>
+<span class="source-line-no">232</span><span id="line.232">    }</span>
+<span class="source-line-no">233</span><span id="line.233"></span>
+<span class="source-line-no">234</span><span id="line.234">    public void setPriceMode(final com.commercetools.api.models.product.ProductPriceModeEnum priceMode) {</span>
+<span class="source-line-no">235</span><span id="line.235">        this.priceMode = priceMode;</span>
+<span class="source-line-no">236</span><span id="line.236">    }</span>
+<span class="source-line-no">237</span><span id="line.237"></span>
+<span class="source-line-no">238</span><span id="line.238">    @Override</span>
+<span class="source-line-no">239</span><span id="line.239">    public boolean equals(Object o) {</span>
+<span class="source-line-no">240</span><span id="line.240">        if (this == o)</span>
+<span class="source-line-no">241</span><span id="line.241">            return true;</span>
+<span class="source-line-no">242</span><span id="line.242"></span>
+<span class="source-line-no">243</span><span id="line.243">        if (o == null || getClass() != o.getClass())</span>
+<span class="source-line-no">244</span><span id="line.244">            return false;</span>
+<span class="source-line-no">245</span><span id="line.245"></span>
+<span class="source-line-no">246</span><span id="line.246">        ProductImpl that = (ProductImpl) o;</span>
+<span class="source-line-no">247</span><span id="line.247"></span>
+<span class="source-line-no">248</span><span id="line.248">        return new EqualsBuilder().append(id, that.id)</span>
+<span class="source-line-no">249</span><span id="line.249">                .append(version, that.version)</span>
+<span class="source-line-no">250</span><span id="line.250">                .append(createdAt, that.createdAt)</span>
+<span class="source-line-no">251</span><span id="line.251">                .append(lastModifiedAt, that.lastModifiedAt)</span>
+<span class="source-line-no">252</span><span id="line.252">                .append(lastModifiedBy, that.lastModifiedBy)</span>
+<span class="source-line-no">253</span><span id="line.253">                .append(createdBy, that.createdBy)</span>
+<span class="source-line-no">254</span><span id="line.254">                .append(key, that.key)</span>
+<span class="source-line-no">255</span><span id="line.255">                .append(productType, that.productType)</span>
+<span class="source-line-no">256</span><span id="line.256">                .append(masterData, that.masterData)</span>
+<span class="source-line-no">257</span><span id="line.257">                .append(taxCategory, that.taxCategory)</span>
+<span class="source-line-no">258</span><span id="line.258">                .append(state, that.state)</span>
+<span class="source-line-no">259</span><span id="line.259">                .append(reviewRatingStatistics, that.reviewRatingStatistics)</span>
+<span class="source-line-no">260</span><span id="line.260">                .append(priceMode, that.priceMode)</span>
+<span class="source-line-no">261</span><span id="line.261">                .isEquals();</span>
+<span class="source-line-no">262</span><span id="line.262">    }</span>
+<span class="source-line-no">263</span><span id="line.263"></span>
+<span class="source-line-no">264</span><span id="line.264">    @Override</span>
+<span class="source-line-no">265</span><span id="line.265">    public int hashCode() {</span>
+<span class="source-line-no">266</span><span id="line.266">        return new HashCodeBuilder(17, 37).append(id)</span>
+<span class="source-line-no">267</span><span id="line.267">                .append(version)</span>
+<span class="source-line-no">268</span><span id="line.268">                .append(createdAt)</span>
+<span class="source-line-no">269</span><span id="line.269">                .append(lastModifiedAt)</span>
+<span class="source-line-no">270</span><span id="line.270">                .append(lastModifiedBy)</span>
+<span class="source-line-no">271</span><span id="line.271">                .append(createdBy)</span>
+<span class="source-line-no">272</span><span id="line.272">                .append(key)</span>
+<span class="source-line-no">273</span><span id="line.273">                .append(productType)</span>
+<span class="source-line-no">274</span><span id="line.274">                .append(masterData)</span>
+<span class="source-line-no">275</span><span id="line.275">                .append(taxCategory)</span>
+<span class="source-line-no">276</span><span id="line.276">                .append(state)</span>
+<span class="source-line-no">277</span><span id="line.277">                .append(reviewRatingStatistics)</span>
+<span class="source-line-no">278</span><span id="line.278">                .append(priceMode)</span>
+<span class="source-line-no">279</span><span id="line.279">                .toHashCode();</span>
+<span class="source-line-no">280</span><span id="line.280">    }</span>
+<span class="source-line-no">281</span><span id="line.281"></span>
+<span class="source-line-no">282</span><span id="line.282">}</span>
 
 
 

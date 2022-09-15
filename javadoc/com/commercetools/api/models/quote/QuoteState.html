@@ -117,21 +117,26 @@ loadScripts(document, 'script');</script>
 <div class="col-first odd-row-color"><code>static <a href="QuoteState.html" title="interface in com.commercetools.api.models.quote">QuoteState</a></code></div>
 <div class="col-second odd-row-color"><code><span class="member-name-link"><a href="#DECLINED">DECLINED</a></span></code></div>
 <div class="col-last odd-row-color">
-<div class="block">A state indicating the Quote has been declined the <a href="/../api/quotes-overview#buyer">Buyer</a>.</div>
+<div class="block">A state indicating the Quote has been declined by the <a href="/../api/quotes-overview#buyer">Buyer</a>.</div>
 </div>
 <div class="col-first even-row-color"><code>static <a href="QuoteState.html" title="interface in com.commercetools.api.models.quote">QuoteState</a></code></div>
-<div class="col-second even-row-color"><code><span class="member-name-link"><a href="#FAILED">FAILED</a></span></code></div>
+<div class="col-second even-row-color"><code><span class="member-name-link"><a href="#DECLINED_FOR_RENEGOTIATION">DECLINED_FOR_RENEGOTIATION</a></span></code></div>
 <div class="col-last even-row-color">
-<div class="block">A state indicating a circumstance other than declining by the <a href="/../api/quotes-overview#buyer">Buyer</a> that led the quote to fail.</div>
+<div class="block">A state indicating the Quote has been declined by the <a href="/../api/quotes-overview#buyer">Buyer</a> with the request for <a href="ctp:api:type:QuoteRequestQuoteRenegotiationAction">renegotiation</a>.</div>
 </div>
 <div class="col-first odd-row-color"><code>static <a href="QuoteState.html" title="interface in com.commercetools.api.models.quote">QuoteState</a></code></div>
-<div class="col-second odd-row-color"><code><span class="member-name-link"><a href="#PENDING">PENDING</a></span></code></div>
+<div class="col-second odd-row-color"><code><span class="member-name-link"><a href="#FAILED">FAILED</a></span></code></div>
 <div class="col-last odd-row-color">
-<div class="block">A state indicating the Quote has been submitted to the <a href="/../api/quotes-overview#buyer">Buyer</a>, but the <a href="/../api/quotes-overview#buyer">Buyer</a> has not replied yet.</div>
+<div class="block">A state indicating a circumstance - other than the <a href="/../api/quotes-overview#buyer">Buyer</a> declining - that led to the Quote failing.</div>
 </div>
 <div class="col-first even-row-color"><code>static <a href="QuoteState.html" title="interface in com.commercetools.api.models.quote">QuoteState</a></code></div>
-<div class="col-second even-row-color"><code><span class="member-name-link"><a href="#WITHDRAWN">WITHDRAWN</a></span></code></div>
+<div class="col-second even-row-color"><code><span class="member-name-link"><a href="#PENDING">PENDING</a></span></code></div>
 <div class="col-last even-row-color">
+<div class="block">A state indicating the Quote has been submitted to the <a href="/../api/quotes-overview#buyer">Buyer</a>, but the <a href="/../api/quotes-overview#buyer">Buyer</a> has not replied yet.</div>
+</div>
+<div class="col-first odd-row-color"><code>static <a href="QuoteState.html" title="interface in com.commercetools.api.models.quote">QuoteState</a></code></div>
+<div class="col-second odd-row-color"><code><span class="member-name-link"><a href="#WITHDRAWN">WITHDRAWN</a></span></code></div>
+<div class="col-last odd-row-color">
 <div class="block">A state indicating the <a href="/../api/quotes-overview#seller">Seller</a> has withdrawn the Quote before the <a href="/../api/quotes-overview#buyer">Buyer</a> has accepted it.</div>
 </div>
 </div>
@@ -191,27 +196,34 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="DECLINED">
 <h3>DECLINED</h3>
 <div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="QuoteState.html" title="interface in com.commercetools.api.models.quote">QuoteState</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/quote/QuoteState.html#line.27">DECLINED</a></span></div>
-<div class="block"><p>A state indicating the Quote has been declined the <a href="/../api/quotes-overview#buyer">Buyer</a>.</p></div>
+<div class="block"><p>A state indicating the Quote has been declined by the <a href="/../api/quotes-overview#buyer">Buyer</a>.</p></div>
+</section>
+</li>
+<li>
+<section class="detail" id="DECLINED_FOR_RENEGOTIATION">
+<h3>DECLINED_FOR_RENEGOTIATION</h3>
+<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="QuoteState.html" title="interface in com.commercetools.api.models.quote">QuoteState</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/quote/QuoteState.html#line.32">DECLINED_FOR_RENEGOTIATION</a></span></div>
+<div class="block"><p>A state indicating the Quote has been declined by the <a href="/../api/quotes-overview#buyer">Buyer</a> with the request for <a href="ctp:api:type:QuoteRequestQuoteRenegotiationAction">renegotiation</a>.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="ACCEPTED">
 <h3>ACCEPTED</h3>
-<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="QuoteState.html" title="interface in com.commercetools.api.models.quote">QuoteState</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/quote/QuoteState.html#line.32">ACCEPTED</a></span></div>
+<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="QuoteState.html" title="interface in com.commercetools.api.models.quote">QuoteState</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/quote/QuoteState.html#line.37">ACCEPTED</a></span></div>
 <div class="block"><p>A state indicating the <a href="/../api/quotes-overview#buyer">Buyer</a> has accepted the Quote.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="FAILED">
 <h3>FAILED</h3>
-<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="QuoteState.html" title="interface in com.commercetools.api.models.quote">QuoteState</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/quote/QuoteState.html#line.37">FAILED</a></span></div>
-<div class="block"><p>A state indicating a circumstance other than declining by the <a href="/../api/quotes-overview#buyer">Buyer</a> that led the quote to fail.</p></div>
+<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="QuoteState.html" title="interface in com.commercetools.api.models.quote">QuoteState</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/quote/QuoteState.html#line.42">FAILED</a></span></div>
+<div class="block"><p>A state indicating a circumstance - other than the <a href="/../api/quotes-overview#buyer">Buyer</a> declining - that led to the Quote failing.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="WITHDRAWN">
 <h3>WITHDRAWN</h3>
-<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="QuoteState.html" title="interface in com.commercetools.api.models.quote">QuoteState</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/quote/QuoteState.html#line.42">WITHDRAWN</a></span></div>
+<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="QuoteState.html" title="interface in com.commercetools.api.models.quote">QuoteState</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/quote/QuoteState.html#line.47">WITHDRAWN</a></span></div>
 <div class="block"><p>A state indicating the <a href="/../api/quotes-overview#seller">Seller</a> has withdrawn the Quote before the <a href="/../api/quotes-overview#buyer">Buyer</a> has accepted it.</p></div>
 </section>
 </li>
@@ -226,19 +238,19 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="getJsonName()">
 <h3>getJsonName</h3>
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/quote/QuoteState.html#line.69">getJsonName</a></span>()</div>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/quote/QuoteState.html#line.76">getJsonName</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="name()">
 <h3>name</h3>
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/quote/QuoteState.html#line.72">name</a></span>()</div>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/quote/QuoteState.html#line.79">name</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="toString()">
 <h3>toString</h3>
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/quote/QuoteState.html#line.74">toString</a></span>()</div>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/quote/QuoteState.html#line.81">toString</a></span>()</div>
 <dl class="notes">
 <dt>Overrides:</dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#toString()" title="class or interface in java.lang" class="external-link">toString</a></code>&nbsp;in class&nbsp;<code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></code></dd>
@@ -248,19 +260,19 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="findEnum(java.lang.String)">
 <h3>findEnum</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="QuoteState.html" title="interface in com.commercetools.api.models.quote">QuoteState</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/quote/QuoteState.html#line.76">findEnum</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;value)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="QuoteState.html" title="interface in com.commercetools.api.models.quote">QuoteState</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/quote/QuoteState.html#line.83">findEnum</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;value)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="findEnumViaJsonName(java.lang.String)">
 <h3>findEnumViaJsonName</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Optional.html" title="class or interface in java.util" class="external-link">Optional</a>&lt;<a href="QuoteState.html" title="interface in com.commercetools.api.models.quote">QuoteState</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/quote/QuoteState.html#line.95">findEnumViaJsonName</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;jsonName)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Optional.html" title="class or interface in java.util" class="external-link">Optional</a>&lt;<a href="QuoteState.html" title="interface in com.commercetools.api.models.quote">QuoteState</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/quote/QuoteState.html#line.102">findEnumViaJsonName</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;jsonName)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="values()">
 <h3>values</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="QuoteState.html" title="interface in com.commercetools.api.models.quote">QuoteState</a>[]</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/quote/QuoteState.html#line.99">values</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="QuoteState.html" title="interface in com.commercetools.api.models.quote">QuoteState</a>[]</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/quote/QuoteState.html#line.106">values</a></span>()</div>
 </section>
 </li>
 </ul>

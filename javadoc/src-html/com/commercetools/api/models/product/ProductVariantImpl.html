@@ -28,7 +28,7 @@
 <span class="source-line-no">015</span><span id="line.15">import org.apache.commons.lang3.builder.HashCodeBuilder;</span>
 <span class="source-line-no">016</span><span id="line.16"></span>
 <span class="source-line-no">017</span><span id="line.17">/**</span>
-<span class="source-line-no">018</span><span id="line.18"> * ProductVariant</span>
+<span class="source-line-no">018</span><span id="line.18"> *  &lt;p&gt;A concrete sellable good for which inventory can be tracked. Product Variants are generally mapped to specific SKUs.&lt;/p&gt;</span>
 <span class="source-line-no">019</span><span id="line.19"> */</span>
 <span class="source-line-no">020</span><span id="line.20">@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")</span>
 <span class="source-line-no">021</span><span id="line.21">public class ProductVariantImpl implements ProductVariant, ModelBase {</span>
@@ -87,7 +87,7 @@
 <span class="source-line-no">074</span><span id="line.74">    }</span>
 <span class="source-line-no">075</span><span id="line.75"></span>
 <span class="source-line-no">076</span><span id="line.76">    /**</span>
-<span class="source-line-no">077</span><span id="line.77">     *  &lt;p&gt;A unique, sequential identifier of the ProductVariant within the Product.&lt;/p&gt;</span>
+<span class="source-line-no">077</span><span id="line.77">     *  &lt;p&gt;A unique, sequential identifier of the Product Variant within the Product.&lt;/p&gt;</span>
 <span class="source-line-no">078</span><span id="line.78">     */</span>
 <span class="source-line-no">079</span><span id="line.79"></span>
 <span class="source-line-no">080</span><span id="line.80">    public Long getId() {</span>
@@ -95,7 +95,7 @@
 <span class="source-line-no">082</span><span id="line.82">    }</span>
 <span class="source-line-no">083</span><span id="line.83"></span>
 <span class="source-line-no">084</span><span id="line.84">    /**</span>
-<span class="source-line-no">085</span><span id="line.85">     *</span>
+<span class="source-line-no">085</span><span id="line.85">     *  &lt;p&gt;User-defined unique SKU of the Product Variant.&lt;/p&gt;</span>
 <span class="source-line-no">086</span><span id="line.86">     */</span>
 <span class="source-line-no">087</span><span id="line.87"></span>
 <span class="source-line-no">088</span><span id="line.88">    public String getSku() {</span>
@@ -103,192 +103,193 @@
 <span class="source-line-no">090</span><span id="line.90">    }</span>
 <span class="source-line-no">091</span><span id="line.91"></span>
 <span class="source-line-no">092</span><span id="line.92">    /**</span>
-<span class="source-line-no">093</span><span id="line.93">     *  &lt;p&gt;User-defined unique identifier of the ProductVariant. &lt;em&gt;ProductVariant keys are different from Product keys.&lt;/em&gt;&lt;/p&gt;</span>
-<span class="source-line-no">094</span><span id="line.94">     */</span>
-<span class="source-line-no">095</span><span id="line.95"></span>
-<span class="source-line-no">096</span><span id="line.96">    public String getKey() {</span>
-<span class="source-line-no">097</span><span id="line.97">        return this.key;</span>
-<span class="source-line-no">098</span><span id="line.98">    }</span>
-<span class="source-line-no">099</span><span id="line.99"></span>
-<span class="source-line-no">100</span><span id="line.100">    /**</span>
-<span class="source-line-no">101</span><span id="line.101">     *</span>
-<span class="source-line-no">102</span><span id="line.102">     */</span>
-<span class="source-line-no">103</span><span id="line.103"></span>
-<span class="source-line-no">104</span><span id="line.104">    public java.util.List&lt;com.commercetools.api.models.common.Price&gt; getPrices() {</span>
-<span class="source-line-no">105</span><span id="line.105">        return this.prices;</span>
-<span class="source-line-no">106</span><span id="line.106">    }</span>
-<span class="source-line-no">107</span><span id="line.107"></span>
-<span class="source-line-no">108</span><span id="line.108">    /**</span>
-<span class="source-line-no">109</span><span id="line.109">     *</span>
-<span class="source-line-no">110</span><span id="line.110">     */</span>
-<span class="source-line-no">111</span><span id="line.111"></span>
-<span class="source-line-no">112</span><span id="line.112">    public java.util.List&lt;com.commercetools.api.models.product.Attribute&gt; getAttributes() {</span>
-<span class="source-line-no">113</span><span id="line.113">        return this.attributes;</span>
-<span class="source-line-no">114</span><span id="line.114">    }</span>
-<span class="source-line-no">115</span><span id="line.115"></span>
-<span class="source-line-no">116</span><span id="line.116">    /**</span>
-<span class="source-line-no">117</span><span id="line.117">     *</span>
-<span class="source-line-no">118</span><span id="line.118">     */</span>
-<span class="source-line-no">119</span><span id="line.119"></span>
-<span class="source-line-no">120</span><span id="line.120">    public com.commercetools.api.models.common.Price getPrice() {</span>
-<span class="source-line-no">121</span><span id="line.121">        return this.price;</span>
-<span class="source-line-no">122</span><span id="line.122">    }</span>
-<span class="source-line-no">123</span><span id="line.123"></span>
-<span class="source-line-no">124</span><span id="line.124">    /**</span>
-<span class="source-line-no">125</span><span id="line.125">     *</span>
-<span class="source-line-no">126</span><span id="line.126">     */</span>
-<span class="source-line-no">127</span><span id="line.127"></span>
-<span class="source-line-no">128</span><span id="line.128">    public java.util.List&lt;com.commercetools.api.models.common.Image&gt; getImages() {</span>
-<span class="source-line-no">129</span><span id="line.129">        return this.images;</span>
-<span class="source-line-no">130</span><span id="line.130">    }</span>
-<span class="source-line-no">131</span><span id="line.131"></span>
-<span class="source-line-no">132</span><span id="line.132">    /**</span>
-<span class="source-line-no">133</span><span id="line.133">     *</span>
-<span class="source-line-no">134</span><span id="line.134">     */</span>
-<span class="source-line-no">135</span><span id="line.135"></span>
-<span class="source-line-no">136</span><span id="line.136">    public java.util.List&lt;com.commercetools.api.models.common.Asset&gt; getAssets() {</span>
-<span class="source-line-no">137</span><span id="line.137">        return this.assets;</span>
-<span class="source-line-no">138</span><span id="line.138">    }</span>
-<span class="source-line-no">139</span><span id="line.139"></span>
-<span class="source-line-no">140</span><span id="line.140">    /**</span>
-<span class="source-line-no">141</span><span id="line.141">     *</span>
-<span class="source-line-no">142</span><span id="line.142">     */</span>
-<span class="source-line-no">143</span><span id="line.143"></span>
-<span class="source-line-no">144</span><span id="line.144">    public com.commercetools.api.models.product.ProductVariantAvailability getAvailability() {</span>
-<span class="source-line-no">145</span><span id="line.145">        return this.availability;</span>
-<span class="source-line-no">146</span><span id="line.146">    }</span>
-<span class="source-line-no">147</span><span id="line.147"></span>
-<span class="source-line-no">148</span><span id="line.148">    /**</span>
-<span class="source-line-no">149</span><span id="line.149">     *</span>
-<span class="source-line-no">150</span><span id="line.150">     */</span>
-<span class="source-line-no">151</span><span id="line.151"></span>
-<span class="source-line-no">152</span><span id="line.152">    public Boolean getIsMatchingVariant() {</span>
-<span class="source-line-no">153</span><span id="line.153">        return this.isMatchingVariant;</span>
-<span class="source-line-no">154</span><span id="line.154">    }</span>
-<span class="source-line-no">155</span><span id="line.155"></span>
-<span class="source-line-no">156</span><span id="line.156">    /**</span>
-<span class="source-line-no">157</span><span id="line.157">     *</span>
-<span class="source-line-no">158</span><span id="line.158">     */</span>
-<span class="source-line-no">159</span><span id="line.159"></span>
-<span class="source-line-no">160</span><span id="line.160">    public com.commercetools.api.models.common.ScopedPrice getScopedPrice() {</span>
-<span class="source-line-no">161</span><span id="line.161">        return this.scopedPrice;</span>
-<span class="source-line-no">162</span><span id="line.162">    }</span>
-<span class="source-line-no">163</span><span id="line.163"></span>
-<span class="source-line-no">164</span><span id="line.164">    /**</span>
-<span class="source-line-no">165</span><span id="line.165">     *</span>
-<span class="source-line-no">166</span><span id="line.166">     */</span>
-<span class="source-line-no">167</span><span id="line.167"></span>
-<span class="source-line-no">168</span><span id="line.168">    public Boolean getScopedPriceDiscounted() {</span>
-<span class="source-line-no">169</span><span id="line.169">        return this.scopedPriceDiscounted;</span>
-<span class="source-line-no">170</span><span id="line.170">    }</span>
-<span class="source-line-no">171</span><span id="line.171"></span>
-<span class="source-line-no">172</span><span id="line.172">    public void setId(final Long id) {</span>
-<span class="source-line-no">173</span><span id="line.173">        this.id = id;</span>
-<span class="source-line-no">174</span><span id="line.174">    }</span>
-<span class="source-line-no">175</span><span id="line.175"></span>
-<span class="source-line-no">176</span><span id="line.176">    public void setSku(final String sku) {</span>
-<span class="source-line-no">177</span><span id="line.177">        this.sku = sku;</span>
-<span class="source-line-no">178</span><span id="line.178">    }</span>
-<span class="source-line-no">179</span><span id="line.179"></span>
-<span class="source-line-no">180</span><span id="line.180">    public void setKey(final String key) {</span>
-<span class="source-line-no">181</span><span id="line.181">        this.key = key;</span>
-<span class="source-line-no">182</span><span id="line.182">    }</span>
-<span class="source-line-no">183</span><span id="line.183"></span>
-<span class="source-line-no">184</span><span id="line.184">    public void setPrices(final com.commercetools.api.models.common.Price... prices) {</span>
-<span class="source-line-no">185</span><span id="line.185">        this.prices = new ArrayList&lt;&gt;(Arrays.asList(prices));</span>
-<span class="source-line-no">186</span><span id="line.186">    }</span>
-<span class="source-line-no">187</span><span id="line.187"></span>
-<span class="source-line-no">188</span><span id="line.188">    public void setPrices(final java.util.List&lt;com.commercetools.api.models.common.Price&gt; prices) {</span>
-<span class="source-line-no">189</span><span id="line.189">        this.prices = prices;</span>
-<span class="source-line-no">190</span><span id="line.190">    }</span>
-<span class="source-line-no">191</span><span id="line.191"></span>
-<span class="source-line-no">192</span><span id="line.192">    public void setAttributes(final com.commercetools.api.models.product.Attribute... attributes) {</span>
-<span class="source-line-no">193</span><span id="line.193">        this.attributes = new ArrayList&lt;&gt;(Arrays.asList(attributes));</span>
-<span class="source-line-no">194</span><span id="line.194">    }</span>
-<span class="source-line-no">195</span><span id="line.195"></span>
-<span class="source-line-no">196</span><span id="line.196">    public void setAttributes(final java.util.List&lt;com.commercetools.api.models.product.Attribute&gt; attributes) {</span>
-<span class="source-line-no">197</span><span id="line.197">        this.attributes = attributes;</span>
-<span class="source-line-no">198</span><span id="line.198">    }</span>
-<span class="source-line-no">199</span><span id="line.199"></span>
-<span class="source-line-no">200</span><span id="line.200">    public void setPrice(final com.commercetools.api.models.common.Price price) {</span>
-<span class="source-line-no">201</span><span id="line.201">        this.price = price;</span>
-<span class="source-line-no">202</span><span id="line.202">    }</span>
-<span class="source-line-no">203</span><span id="line.203"></span>
-<span class="source-line-no">204</span><span id="line.204">    public void setImages(final com.commercetools.api.models.common.Image... images) {</span>
-<span class="source-line-no">205</span><span id="line.205">        this.images = new ArrayList&lt;&gt;(Arrays.asList(images));</span>
-<span class="source-line-no">206</span><span id="line.206">    }</span>
-<span class="source-line-no">207</span><span id="line.207"></span>
-<span class="source-line-no">208</span><span id="line.208">    public void setImages(final java.util.List&lt;com.commercetools.api.models.common.Image&gt; images) {</span>
-<span class="source-line-no">209</span><span id="line.209">        this.images = images;</span>
-<span class="source-line-no">210</span><span id="line.210">    }</span>
-<span class="source-line-no">211</span><span id="line.211"></span>
-<span class="source-line-no">212</span><span id="line.212">    public void setAssets(final com.commercetools.api.models.common.Asset... assets) {</span>
-<span class="source-line-no">213</span><span id="line.213">        this.assets = new ArrayList&lt;&gt;(Arrays.asList(assets));</span>
-<span class="source-line-no">214</span><span id="line.214">    }</span>
-<span class="source-line-no">215</span><span id="line.215"></span>
-<span class="source-line-no">216</span><span id="line.216">    public void setAssets(final java.util.List&lt;com.commercetools.api.models.common.Asset&gt; assets) {</span>
-<span class="source-line-no">217</span><span id="line.217">        this.assets = assets;</span>
-<span class="source-line-no">218</span><span id="line.218">    }</span>
-<span class="source-line-no">219</span><span id="line.219"></span>
-<span class="source-line-no">220</span><span id="line.220">    public void setAvailability(final com.commercetools.api.models.product.ProductVariantAvailability availability) {</span>
-<span class="source-line-no">221</span><span id="line.221">        this.availability = availability;</span>
-<span class="source-line-no">222</span><span id="line.222">    }</span>
-<span class="source-line-no">223</span><span id="line.223"></span>
-<span class="source-line-no">224</span><span id="line.224">    public void setIsMatchingVariant(final Boolean isMatchingVariant) {</span>
-<span class="source-line-no">225</span><span id="line.225">        this.isMatchingVariant = isMatchingVariant;</span>
-<span class="source-line-no">226</span><span id="line.226">    }</span>
-<span class="source-line-no">227</span><span id="line.227"></span>
-<span class="source-line-no">228</span><span id="line.228">    public void setScopedPrice(final com.commercetools.api.models.common.ScopedPrice scopedPrice) {</span>
-<span class="source-line-no">229</span><span id="line.229">        this.scopedPrice = scopedPrice;</span>
-<span class="source-line-no">230</span><span id="line.230">    }</span>
-<span class="source-line-no">231</span><span id="line.231"></span>
-<span class="source-line-no">232</span><span id="line.232">    public void setScopedPriceDiscounted(final Boolean scopedPriceDiscounted) {</span>
-<span class="source-line-no">233</span><span id="line.233">        this.scopedPriceDiscounted = scopedPriceDiscounted;</span>
-<span class="source-line-no">234</span><span id="line.234">    }</span>
-<span class="source-line-no">235</span><span id="line.235"></span>
-<span class="source-line-no">236</span><span id="line.236">    @Override</span>
-<span class="source-line-no">237</span><span id="line.237">    public boolean equals(Object o) {</span>
-<span class="source-line-no">238</span><span id="line.238">        if (this == o)</span>
-<span class="source-line-no">239</span><span id="line.239">            return true;</span>
-<span class="source-line-no">240</span><span id="line.240"></span>
-<span class="source-line-no">241</span><span id="line.241">        if (o == null || getClass() != o.getClass())</span>
-<span class="source-line-no">242</span><span id="line.242">            return false;</span>
-<span class="source-line-no">243</span><span id="line.243"></span>
-<span class="source-line-no">244</span><span id="line.244">        ProductVariantImpl that = (ProductVariantImpl) o;</span>
-<span class="source-line-no">245</span><span id="line.245"></span>
-<span class="source-line-no">246</span><span id="line.246">        return new EqualsBuilder().append(id, that.id)</span>
-<span class="source-line-no">247</span><span id="line.247">                .append(sku, that.sku)</span>
-<span class="source-line-no">248</span><span id="line.248">                .append(key, that.key)</span>
-<span class="source-line-no">249</span><span id="line.249">                .append(prices, that.prices)</span>
-<span class="source-line-no">250</span><span id="line.250">                .append(attributes, that.attributes)</span>
-<span class="source-line-no">251</span><span id="line.251">                .append(price, that.price)</span>
-<span class="source-line-no">252</span><span id="line.252">                .append(images, that.images)</span>
-<span class="source-line-no">253</span><span id="line.253">                .append(assets, that.assets)</span>
-<span class="source-line-no">254</span><span id="line.254">                .append(availability, that.availability)</span>
-<span class="source-line-no">255</span><span id="line.255">                .append(isMatchingVariant, that.isMatchingVariant)</span>
-<span class="source-line-no">256</span><span id="line.256">                .append(scopedPrice, that.scopedPrice)</span>
-<span class="source-line-no">257</span><span id="line.257">                .append(scopedPriceDiscounted, that.scopedPriceDiscounted)</span>
-<span class="source-line-no">258</span><span id="line.258">                .isEquals();</span>
-<span class="source-line-no">259</span><span id="line.259">    }</span>
-<span class="source-line-no">260</span><span id="line.260"></span>
-<span class="source-line-no">261</span><span id="line.261">    @Override</span>
-<span class="source-line-no">262</span><span id="line.262">    public int hashCode() {</span>
-<span class="source-line-no">263</span><span id="line.263">        return new HashCodeBuilder(17, 37).append(id)</span>
-<span class="source-line-no">264</span><span id="line.264">                .append(sku)</span>
-<span class="source-line-no">265</span><span id="line.265">                .append(key)</span>
-<span class="source-line-no">266</span><span id="line.266">                .append(prices)</span>
-<span class="source-line-no">267</span><span id="line.267">                .append(attributes)</span>
-<span class="source-line-no">268</span><span id="line.268">                .append(price)</span>
-<span class="source-line-no">269</span><span id="line.269">                .append(images)</span>
-<span class="source-line-no">270</span><span id="line.270">                .append(assets)</span>
-<span class="source-line-no">271</span><span id="line.271">                .append(availability)</span>
-<span class="source-line-no">272</span><span id="line.272">                .append(isMatchingVariant)</span>
-<span class="source-line-no">273</span><span id="line.273">                .append(scopedPrice)</span>
-<span class="source-line-no">274</span><span id="line.274">                .append(scopedPriceDiscounted)</span>
-<span class="source-line-no">275</span><span id="line.275">                .toHashCode();</span>
-<span class="source-line-no">276</span><span id="line.276">    }</span>
-<span class="source-line-no">277</span><span id="line.277"></span>
-<span class="source-line-no">278</span><span id="line.278">}</span>
+<span class="source-line-no">093</span><span id="line.93">     *  &lt;p&gt;User-defined unique identifier of the ProductVariant.&lt;/p&gt;</span>
+<span class="source-line-no">094</span><span id="line.94">     *  &lt;p&gt;This is different from Product &lt;code&gt;key&lt;/code&gt;.&lt;/p&gt;</span>
+<span class="source-line-no">095</span><span id="line.95">     */</span>
+<span class="source-line-no">096</span><span id="line.96"></span>
+<span class="source-line-no">097</span><span id="line.97">    public String getKey() {</span>
+<span class="source-line-no">098</span><span id="line.98">        return this.key;</span>
+<span class="source-line-no">099</span><span id="line.99">    }</span>
+<span class="source-line-no">100</span><span id="line.100"></span>
+<span class="source-line-no">101</span><span id="line.101">    /**</span>
+<span class="source-line-no">102</span><span id="line.102">     *  &lt;p&gt;The Embedded Prices of the Product Variant. Cannot contain two Prices of the same Price scope (with same currency, country, Customer Group, Channel, &lt;code&gt;validFrom&lt;/code&gt; and &lt;code&gt;validUntil&lt;/code&gt;).&lt;/p&gt;</span>
+<span class="source-line-no">103</span><span id="line.103">     */</span>
+<span class="source-line-no">104</span><span id="line.104"></span>
+<span class="source-line-no">105</span><span id="line.105">    public java.util.List&lt;com.commercetools.api.models.common.Price&gt; getPrices() {</span>
+<span class="source-line-no">106</span><span id="line.106">        return this.prices;</span>
+<span class="source-line-no">107</span><span id="line.107">    }</span>
+<span class="source-line-no">108</span><span id="line.108"></span>
+<span class="source-line-no">109</span><span id="line.109">    /**</span>
+<span class="source-line-no">110</span><span id="line.110">     *  &lt;p&gt;Attributes of the Product Variant.&lt;/p&gt;</span>
+<span class="source-line-no">111</span><span id="line.111">     */</span>
+<span class="source-line-no">112</span><span id="line.112"></span>
+<span class="source-line-no">113</span><span id="line.113">    public java.util.List&lt;com.commercetools.api.models.product.Attribute&gt; getAttributes() {</span>
+<span class="source-line-no">114</span><span id="line.114">        return this.attributes;</span>
+<span class="source-line-no">115</span><span id="line.115">    }</span>
+<span class="source-line-no">116</span><span id="line.116"></span>
+<span class="source-line-no">117</span><span id="line.117">    /**</span>
+<span class="source-line-no">118</span><span id="line.118">     *  &lt;p&gt;Only available when Price selection is used. Cannot be used in a Query Predicate.&lt;/p&gt;</span>
+<span class="source-line-no">119</span><span id="line.119">     */</span>
+<span class="source-line-no">120</span><span id="line.120"></span>
+<span class="source-line-no">121</span><span id="line.121">    public com.commercetools.api.models.common.Price getPrice() {</span>
+<span class="source-line-no">122</span><span id="line.122">        return this.price;</span>
+<span class="source-line-no">123</span><span id="line.123">    }</span>
+<span class="source-line-no">124</span><span id="line.124"></span>
+<span class="source-line-no">125</span><span id="line.125">    /**</span>
+<span class="source-line-no">126</span><span id="line.126">     *  &lt;p&gt;Images of the Product Variant.&lt;/p&gt;</span>
+<span class="source-line-no">127</span><span id="line.127">     */</span>
+<span class="source-line-no">128</span><span id="line.128"></span>
+<span class="source-line-no">129</span><span id="line.129">    public java.util.List&lt;com.commercetools.api.models.common.Image&gt; getImages() {</span>
+<span class="source-line-no">130</span><span id="line.130">        return this.images;</span>
+<span class="source-line-no">131</span><span id="line.131">    }</span>
+<span class="source-line-no">132</span><span id="line.132"></span>
+<span class="source-line-no">133</span><span id="line.133">    /**</span>
+<span class="source-line-no">134</span><span id="line.134">     *  &lt;p&gt;Media assets of the Product Variant.&lt;/p&gt;</span>
+<span class="source-line-no">135</span><span id="line.135">     */</span>
+<span class="source-line-no">136</span><span id="line.136"></span>
+<span class="source-line-no">137</span><span id="line.137">    public java.util.List&lt;com.commercetools.api.models.common.Asset&gt; getAssets() {</span>
+<span class="source-line-no">138</span><span id="line.138">        return this.assets;</span>
+<span class="source-line-no">139</span><span id="line.139">    }</span>
+<span class="source-line-no">140</span><span id="line.140"></span>
+<span class="source-line-no">141</span><span id="line.141">    /**</span>
+<span class="source-line-no">142</span><span id="line.142">     *  &lt;p&gt;Set if the Product Variant is tracked by Inventory. Can be used as an optimization to reduce calls to the Inventory service. May not contain the latest Inventory State (it is eventually consistent).&lt;/p&gt;</span>
+<span class="source-line-no">143</span><span id="line.143">     */</span>
+<span class="source-line-no">144</span><span id="line.144"></span>
+<span class="source-line-no">145</span><span id="line.145">    public com.commercetools.api.models.product.ProductVariantAvailability getAvailability() {</span>
+<span class="source-line-no">146</span><span id="line.146">        return this.availability;</span>
+<span class="source-line-no">147</span><span id="line.147">    }</span>
+<span class="source-line-no">148</span><span id="line.148"></span>
+<span class="source-line-no">149</span><span id="line.149">    /**</span>
+<span class="source-line-no">150</span><span id="line.150">     *  &lt;p&gt;&lt;code&gt;true&lt;/code&gt; if the Product Variant matches the search query. Only available in response to a Product Projection Search request.&lt;/p&gt;</span>
+<span class="source-line-no">151</span><span id="line.151">     */</span>
+<span class="source-line-no">152</span><span id="line.152"></span>
+<span class="source-line-no">153</span><span id="line.153">    public Boolean getIsMatchingVariant() {</span>
+<span class="source-line-no">154</span><span id="line.154">        return this.isMatchingVariant;</span>
+<span class="source-line-no">155</span><span id="line.155">    }</span>
+<span class="source-line-no">156</span><span id="line.156"></span>
+<span class="source-line-no">157</span><span id="line.157">    /**</span>
+<span class="source-line-no">158</span><span id="line.158">     *  &lt;p&gt;Only available in response to a Product Projection Search request with price selection. Can be used to sort, filter, and facet.&lt;/p&gt;</span>
+<span class="source-line-no">159</span><span id="line.159">     */</span>
+<span class="source-line-no">160</span><span id="line.160"></span>
+<span class="source-line-no">161</span><span id="line.161">    public com.commercetools.api.models.common.ScopedPrice getScopedPrice() {</span>
+<span class="source-line-no">162</span><span id="line.162">        return this.scopedPrice;</span>
+<span class="source-line-no">163</span><span id="line.163">    }</span>
+<span class="source-line-no">164</span><span id="line.164"></span>
+<span class="source-line-no">165</span><span id="line.165">    /**</span>
+<span class="source-line-no">166</span><span id="line.166">     *  &lt;p&gt;Only available in response to a Product Projection Search request with price selection.&lt;/p&gt;</span>
+<span class="source-line-no">167</span><span id="line.167">     */</span>
+<span class="source-line-no">168</span><span id="line.168"></span>
+<span class="source-line-no">169</span><span id="line.169">    public Boolean getScopedPriceDiscounted() {</span>
+<span class="source-line-no">170</span><span id="line.170">        return this.scopedPriceDiscounted;</span>
+<span class="source-line-no">171</span><span id="line.171">    }</span>
+<span class="source-line-no">172</span><span id="line.172"></span>
+<span class="source-line-no">173</span><span id="line.173">    public void setId(final Long id) {</span>
+<span class="source-line-no">174</span><span id="line.174">        this.id = id;</span>
+<span class="source-line-no">175</span><span id="line.175">    }</span>
+<span class="source-line-no">176</span><span id="line.176"></span>
+<span class="source-line-no">177</span><span id="line.177">    public void setSku(final String sku) {</span>
+<span class="source-line-no">178</span><span id="line.178">        this.sku = sku;</span>
+<span class="source-line-no">179</span><span id="line.179">    }</span>
+<span class="source-line-no">180</span><span id="line.180"></span>
+<span class="source-line-no">181</span><span id="line.181">    public void setKey(final String key) {</span>
+<span class="source-line-no">182</span><span id="line.182">        this.key = key;</span>
+<span class="source-line-no">183</span><span id="line.183">    }</span>
+<span class="source-line-no">184</span><span id="line.184"></span>
+<span class="source-line-no">185</span><span id="line.185">    public void setPrices(final com.commercetools.api.models.common.Price... prices) {</span>
+<span class="source-line-no">186</span><span id="line.186">        this.prices = new ArrayList&lt;&gt;(Arrays.asList(prices));</span>
+<span class="source-line-no">187</span><span id="line.187">    }</span>
+<span class="source-line-no">188</span><span id="line.188"></span>
+<span class="source-line-no">189</span><span id="line.189">    public void setPrices(final java.util.List&lt;com.commercetools.api.models.common.Price&gt; prices) {</span>
+<span class="source-line-no">190</span><span id="line.190">        this.prices = prices;</span>
+<span class="source-line-no">191</span><span id="line.191">    }</span>
+<span class="source-line-no">192</span><span id="line.192"></span>
+<span class="source-line-no">193</span><span id="line.193">    public void setAttributes(final com.commercetools.api.models.product.Attribute... attributes) {</span>
+<span class="source-line-no">194</span><span id="line.194">        this.attributes = new ArrayList&lt;&gt;(Arrays.asList(attributes));</span>
+<span class="source-line-no">195</span><span id="line.195">    }</span>
+<span class="source-line-no">196</span><span id="line.196"></span>
+<span class="source-line-no">197</span><span id="line.197">    public void setAttributes(final java.util.List&lt;com.commercetools.api.models.product.Attribute&gt; attributes) {</span>
+<span class="source-line-no">198</span><span id="line.198">        this.attributes = attributes;</span>
+<span class="source-line-no">199</span><span id="line.199">    }</span>
+<span class="source-line-no">200</span><span id="line.200"></span>
+<span class="source-line-no">201</span><span id="line.201">    public void setPrice(final com.commercetools.api.models.common.Price price) {</span>
+<span class="source-line-no">202</span><span id="line.202">        this.price = price;</span>
+<span class="source-line-no">203</span><span id="line.203">    }</span>
+<span class="source-line-no">204</span><span id="line.204"></span>
+<span class="source-line-no">205</span><span id="line.205">    public void setImages(final com.commercetools.api.models.common.Image... images) {</span>
+<span class="source-line-no">206</span><span id="line.206">        this.images = new ArrayList&lt;&gt;(Arrays.asList(images));</span>
+<span class="source-line-no">207</span><span id="line.207">    }</span>
+<span class="source-line-no">208</span><span id="line.208"></span>
+<span class="source-line-no">209</span><span id="line.209">    public void setImages(final java.util.List&lt;com.commercetools.api.models.common.Image&gt; images) {</span>
+<span class="source-line-no">210</span><span id="line.210">        this.images = images;</span>
+<span class="source-line-no">211</span><span id="line.211">    }</span>
+<span class="source-line-no">212</span><span id="line.212"></span>
+<span class="source-line-no">213</span><span id="line.213">    public void setAssets(final com.commercetools.api.models.common.Asset... assets) {</span>
+<span class="source-line-no">214</span><span id="line.214">        this.assets = new ArrayList&lt;&gt;(Arrays.asList(assets));</span>
+<span class="source-line-no">215</span><span id="line.215">    }</span>
+<span class="source-line-no">216</span><span id="line.216"></span>
+<span class="source-line-no">217</span><span id="line.217">    public void setAssets(final java.util.List&lt;com.commercetools.api.models.common.Asset&gt; assets) {</span>
+<span class="source-line-no">218</span><span id="line.218">        this.assets = assets;</span>
+<span class="source-line-no">219</span><span id="line.219">    }</span>
+<span class="source-line-no">220</span><span id="line.220"></span>
+<span class="source-line-no">221</span><span id="line.221">    public void setAvailability(final com.commercetools.api.models.product.ProductVariantAvailability availability) {</span>
+<span class="source-line-no">222</span><span id="line.222">        this.availability = availability;</span>
+<span class="source-line-no">223</span><span id="line.223">    }</span>
+<span class="source-line-no">224</span><span id="line.224"></span>
+<span class="source-line-no">225</span><span id="line.225">    public void setIsMatchingVariant(final Boolean isMatchingVariant) {</span>
+<span class="source-line-no">226</span><span id="line.226">        this.isMatchingVariant = isMatchingVariant;</span>
+<span class="source-line-no">227</span><span id="line.227">    }</span>
+<span class="source-line-no">228</span><span id="line.228"></span>
+<span class="source-line-no">229</span><span id="line.229">    public void setScopedPrice(final com.commercetools.api.models.common.ScopedPrice scopedPrice) {</span>
+<span class="source-line-no">230</span><span id="line.230">        this.scopedPrice = scopedPrice;</span>
+<span class="source-line-no">231</span><span id="line.231">    }</span>
+<span class="source-line-no">232</span><span id="line.232"></span>
+<span class="source-line-no">233</span><span id="line.233">    public void setScopedPriceDiscounted(final Boolean scopedPriceDiscounted) {</span>
+<span class="source-line-no">234</span><span id="line.234">        this.scopedPriceDiscounted = scopedPriceDiscounted;</span>
+<span class="source-line-no">235</span><span id="line.235">    }</span>
+<span class="source-line-no">236</span><span id="line.236"></span>
+<span class="source-line-no">237</span><span id="line.237">    @Override</span>
+<span class="source-line-no">238</span><span id="line.238">    public boolean equals(Object o) {</span>
+<span class="source-line-no">239</span><span id="line.239">        if (this == o)</span>
+<span class="source-line-no">240</span><span id="line.240">            return true;</span>
+<span class="source-line-no">241</span><span id="line.241"></span>
+<span class="source-line-no">242</span><span id="line.242">        if (o == null || getClass() != o.getClass())</span>
+<span class="source-line-no">243</span><span id="line.243">            return false;</span>
+<span class="source-line-no">244</span><span id="line.244"></span>
+<span class="source-line-no">245</span><span id="line.245">        ProductVariantImpl that = (ProductVariantImpl) o;</span>
+<span class="source-line-no">246</span><span id="line.246"></span>
+<span class="source-line-no">247</span><span id="line.247">        return new EqualsBuilder().append(id, that.id)</span>
+<span class="source-line-no">248</span><span id="line.248">                .append(sku, that.sku)</span>
+<span class="source-line-no">249</span><span id="line.249">                .append(key, that.key)</span>
+<span class="source-line-no">250</span><span id="line.250">                .append(prices, that.prices)</span>
+<span class="source-line-no">251</span><span id="line.251">                .append(attributes, that.attributes)</span>
+<span class="source-line-no">252</span><span id="line.252">                .append(price, that.price)</span>
+<span class="source-line-no">253</span><span id="line.253">                .append(images, that.images)</span>
+<span class="source-line-no">254</span><span id="line.254">                .append(assets, that.assets)</span>
+<span class="source-line-no">255</span><span id="line.255">                .append(availability, that.availability)</span>
+<span class="source-line-no">256</span><span id="line.256">                .append(isMatchingVariant, that.isMatchingVariant)</span>
+<span class="source-line-no">257</span><span id="line.257">                .append(scopedPrice, that.scopedPrice)</span>
+<span class="source-line-no">258</span><span id="line.258">                .append(scopedPriceDiscounted, that.scopedPriceDiscounted)</span>
+<span class="source-line-no">259</span><span id="line.259">                .isEquals();</span>
+<span class="source-line-no">260</span><span id="line.260">    }</span>
+<span class="source-line-no">261</span><span id="line.261"></span>
+<span class="source-line-no">262</span><span id="line.262">    @Override</span>
+<span class="source-line-no">263</span><span id="line.263">    public int hashCode() {</span>
+<span class="source-line-no">264</span><span id="line.264">        return new HashCodeBuilder(17, 37).append(id)</span>
+<span class="source-line-no">265</span><span id="line.265">                .append(sku)</span>
+<span class="source-line-no">266</span><span id="line.266">                .append(key)</span>
+<span class="source-line-no">267</span><span id="line.267">                .append(prices)</span>
+<span class="source-line-no">268</span><span id="line.268">                .append(attributes)</span>
+<span class="source-line-no">269</span><span id="line.269">                .append(price)</span>
+<span class="source-line-no">270</span><span id="line.270">                .append(images)</span>
+<span class="source-line-no">271</span><span id="line.271">                .append(assets)</span>
+<span class="source-line-no">272</span><span id="line.272">                .append(availability)</span>
+<span class="source-line-no">273</span><span id="line.273">                .append(isMatchingVariant)</span>
+<span class="source-line-no">274</span><span id="line.274">                .append(scopedPrice)</span>
+<span class="source-line-no">275</span><span id="line.275">                .append(scopedPriceDiscounted)</span>
+<span class="source-line-no">276</span><span id="line.276">                .toHashCode();</span>
+<span class="source-line-no">277</span><span id="line.277">    }</span>
+<span class="source-line-no">278</span><span id="line.278"></span>
+<span class="source-line-no">279</span><span id="line.279">}</span>
 
 
 

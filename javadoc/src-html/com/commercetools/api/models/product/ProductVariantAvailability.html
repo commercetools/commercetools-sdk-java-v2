@@ -26,7 +26,7 @@
 <span class="source-line-no">013</span><span id="line.13">import io.vrap.rmf.base.client.utils.Generated;</span>
 <span class="source-line-no">014</span><span id="line.14"></span>
 <span class="source-line-no">015</span><span id="line.15">/**</span>
-<span class="source-line-no">016</span><span id="line.16"> * ProductVariantAvailability</span>
+<span class="source-line-no">016</span><span id="line.16"> *  &lt;p&gt;The InventoryEntry information of the Product Variant. If there is a supply Channel for the InventoryEntry, then &lt;code&gt;channels&lt;/code&gt; is returned. If not, then &lt;code&gt;isOnStock&lt;/code&gt;, &lt;code&gt;restockableInDays&lt;/code&gt;, and &lt;code&gt;quantityOnStock&lt;/code&gt; are returned.&lt;/p&gt;</span>
 <span class="source-line-no">017</span><span id="line.17"> *</span>
 <span class="source-line-no">018</span><span id="line.18"> * &lt;hr&gt;</span>
 <span class="source-line-no">019</span><span id="line.19"> * Example to create an instance using the builder pattern</span>
@@ -42,40 +42,40 @@
 <span class="source-line-no">029</span><span id="line.29">public interface ProductVariantAvailability {</span>
 <span class="source-line-no">030</span><span id="line.30"></span>
 <span class="source-line-no">031</span><span id="line.31">    /**</span>
-<span class="source-line-no">032</span><span id="line.32">     *</span>
+<span class="source-line-no">032</span><span id="line.32">     *  &lt;p&gt;For each InventoryEntry with a supply Channel, an entry is added to &lt;code&gt;channels&lt;/code&gt;.&lt;/p&gt;</span>
 <span class="source-line-no">033</span><span id="line.33">     */</span>
-<span class="source-line-no">034</span><span id="line.34"></span>
-<span class="source-line-no">035</span><span id="line.35">    @JsonProperty("isOnStock")</span>
-<span class="source-line-no">036</span><span id="line.36">    public Boolean getIsOnStock();</span>
+<span class="source-line-no">034</span><span id="line.34">    @Valid</span>
+<span class="source-line-no">035</span><span id="line.35">    @JsonProperty("channels")</span>
+<span class="source-line-no">036</span><span id="line.36">    public ProductVariantChannelAvailabilityMap getChannels();</span>
 <span class="source-line-no">037</span><span id="line.37"></span>
 <span class="source-line-no">038</span><span id="line.38">    /**</span>
-<span class="source-line-no">039</span><span id="line.39">     *</span>
+<span class="source-line-no">039</span><span id="line.39">     *  &lt;p&gt;Indicates whether a Product Variant is in stock.&lt;/p&gt;</span>
 <span class="source-line-no">040</span><span id="line.40">     */</span>
 <span class="source-line-no">041</span><span id="line.41"></span>
-<span class="source-line-no">042</span><span id="line.42">    @JsonProperty("restockableInDays")</span>
-<span class="source-line-no">043</span><span id="line.43">    public Long getRestockableInDays();</span>
+<span class="source-line-no">042</span><span id="line.42">    @JsonProperty("isOnStock")</span>
+<span class="source-line-no">043</span><span id="line.43">    public Boolean getIsOnStock();</span>
 <span class="source-line-no">044</span><span id="line.44"></span>
 <span class="source-line-no">045</span><span id="line.45">    /**</span>
-<span class="source-line-no">046</span><span id="line.46">     *</span>
+<span class="source-line-no">046</span><span id="line.46">     *  &lt;p&gt;Number of days to restock a Product Variant once it is out of stock.&lt;/p&gt;</span>
 <span class="source-line-no">047</span><span id="line.47">     */</span>
 <span class="source-line-no">048</span><span id="line.48"></span>
-<span class="source-line-no">049</span><span id="line.49">    @JsonProperty("availableQuantity")</span>
-<span class="source-line-no">050</span><span id="line.50">    public Long getAvailableQuantity();</span>
+<span class="source-line-no">049</span><span id="line.49">    @JsonProperty("restockableInDays")</span>
+<span class="source-line-no">050</span><span id="line.50">    public Long getRestockableInDays();</span>
 <span class="source-line-no">051</span><span id="line.51"></span>
 <span class="source-line-no">052</span><span id="line.52">    /**</span>
-<span class="source-line-no">053</span><span id="line.53">     *</span>
+<span class="source-line-no">053</span><span id="line.53">     *  &lt;p&gt;Number of items of the Product Variant that are in stock.&lt;/p&gt;</span>
 <span class="source-line-no">054</span><span id="line.54">     */</span>
-<span class="source-line-no">055</span><span id="line.55">    @Valid</span>
-<span class="source-line-no">056</span><span id="line.56">    @JsonProperty("channels")</span>
-<span class="source-line-no">057</span><span id="line.57">    public ProductVariantChannelAvailabilityMap getChannels();</span>
+<span class="source-line-no">055</span><span id="line.55"></span>
+<span class="source-line-no">056</span><span id="line.56">    @JsonProperty("availableQuantity")</span>
+<span class="source-line-no">057</span><span id="line.57">    public Long getAvailableQuantity();</span>
 <span class="source-line-no">058</span><span id="line.58"></span>
-<span class="source-line-no">059</span><span id="line.59">    public void setIsOnStock(final Boolean isOnStock);</span>
+<span class="source-line-no">059</span><span id="line.59">    public void setChannels(final ProductVariantChannelAvailabilityMap channels);</span>
 <span class="source-line-no">060</span><span id="line.60"></span>
-<span class="source-line-no">061</span><span id="line.61">    public void setRestockableInDays(final Long restockableInDays);</span>
+<span class="source-line-no">061</span><span id="line.61">    public void setIsOnStock(final Boolean isOnStock);</span>
 <span class="source-line-no">062</span><span id="line.62"></span>
-<span class="source-line-no">063</span><span id="line.63">    public void setAvailableQuantity(final Long availableQuantity);</span>
+<span class="source-line-no">063</span><span id="line.63">    public void setRestockableInDays(final Long restockableInDays);</span>
 <span class="source-line-no">064</span><span id="line.64"></span>
-<span class="source-line-no">065</span><span id="line.65">    public void setChannels(final ProductVariantChannelAvailabilityMap channels);</span>
+<span class="source-line-no">065</span><span id="line.65">    public void setAvailableQuantity(final Long availableQuantity);</span>
 <span class="source-line-no">066</span><span id="line.66"></span>
 <span class="source-line-no">067</span><span id="line.67">    public static ProductVariantAvailability of() {</span>
 <span class="source-line-no">068</span><span id="line.68">        return new ProductVariantAvailabilityImpl();</span>
@@ -83,10 +83,10 @@
 <span class="source-line-no">070</span><span id="line.70"></span>
 <span class="source-line-no">071</span><span id="line.71">    public static ProductVariantAvailability of(final ProductVariantAvailability template) {</span>
 <span class="source-line-no">072</span><span id="line.72">        ProductVariantAvailabilityImpl instance = new ProductVariantAvailabilityImpl();</span>
-<span class="source-line-no">073</span><span id="line.73">        instance.setIsOnStock(template.getIsOnStock());</span>
-<span class="source-line-no">074</span><span id="line.74">        instance.setRestockableInDays(template.getRestockableInDays());</span>
-<span class="source-line-no">075</span><span id="line.75">        instance.setAvailableQuantity(template.getAvailableQuantity());</span>
-<span class="source-line-no">076</span><span id="line.76">        instance.setChannels(template.getChannels());</span>
+<span class="source-line-no">073</span><span id="line.73">        instance.setChannels(template.getChannels());</span>
+<span class="source-line-no">074</span><span id="line.74">        instance.setIsOnStock(template.getIsOnStock());</span>
+<span class="source-line-no">075</span><span id="line.75">        instance.setRestockableInDays(template.getRestockableInDays());</span>
+<span class="source-line-no">076</span><span id="line.76">        instance.setAvailableQuantity(template.getAvailableQuantity());</span>
 <span class="source-line-no">077</span><span id="line.77">        return instance;</span>
 <span class="source-line-no">078</span><span id="line.78">    }</span>
 <span class="source-line-no">079</span><span id="line.79"></span>

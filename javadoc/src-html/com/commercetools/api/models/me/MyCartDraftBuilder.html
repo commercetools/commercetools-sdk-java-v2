@@ -79,7 +79,7 @@
 <span class="source-line-no">066</span><span id="line.66">    private com.commercetools.api.models.store.StoreKeyReference store;</span>
 <span class="source-line-no">067</span><span id="line.67"></span>
 <span class="source-line-no">068</span><span id="line.68">    @Nullable</span>
-<span class="source-line-no">069</span><span id="line.69">    private java.util.List&lt;com.commercetools.api.models.cart.DiscountCodeInfo&gt; discountCodes;</span>
+<span class="source-line-no">069</span><span id="line.69">    private java.util.List&lt;String&gt; discountCodes;</span>
 <span class="source-line-no">070</span><span id="line.70"></span>
 <span class="source-line-no">071</span><span id="line.71">    /**</span>
 <span class="source-line-no">072</span><span id="line.72">     *  &lt;p&gt;A three-digit currency code as per ISO 3166-1 alpha-2.&lt;/p&gt;</span>
@@ -361,177 +361,150 @@
 <span class="source-line-no">348</span><span id="line.348">    }</span>
 <span class="source-line-no">349</span><span id="line.349"></span>
 <span class="source-line-no">350</span><span id="line.350">    /**</span>
-<span class="source-line-no">351</span><span id="line.351">     *</span>
+<span class="source-line-no">351</span><span id="line.351">     *  &lt;p&gt;The code of existing DiscountCodes.&lt;/p&gt;</span>
 <span class="source-line-no">352</span><span id="line.352">     */</span>
 <span class="source-line-no">353</span><span id="line.353"></span>
-<span class="source-line-no">354</span><span id="line.354">    public MyCartDraftBuilder discountCodes(</span>
-<span class="source-line-no">355</span><span id="line.355">            @Nullable final com.commercetools.api.models.cart.DiscountCodeInfo... discountCodes) {</span>
-<span class="source-line-no">356</span><span id="line.356">        this.discountCodes = new ArrayList&lt;&gt;(Arrays.asList(discountCodes));</span>
-<span class="source-line-no">357</span><span id="line.357">        return this;</span>
-<span class="source-line-no">358</span><span id="line.358">    }</span>
-<span class="source-line-no">359</span><span id="line.359"></span>
-<span class="source-line-no">360</span><span id="line.360">    /**</span>
-<span class="source-line-no">361</span><span id="line.361">     *</span>
-<span class="source-line-no">362</span><span id="line.362">     */</span>
-<span class="source-line-no">363</span><span id="line.363"></span>
-<span class="source-line-no">364</span><span id="line.364">    public MyCartDraftBuilder discountCodes(</span>
-<span class="source-line-no">365</span><span id="line.365">            @Nullable final java.util.List&lt;com.commercetools.api.models.cart.DiscountCodeInfo&gt; discountCodes) {</span>
-<span class="source-line-no">366</span><span id="line.366">        this.discountCodes = discountCodes;</span>
-<span class="source-line-no">367</span><span id="line.367">        return this;</span>
-<span class="source-line-no">368</span><span id="line.368">    }</span>
-<span class="source-line-no">369</span><span id="line.369"></span>
-<span class="source-line-no">370</span><span id="line.370">    /**</span>
-<span class="source-line-no">371</span><span id="line.371">     *</span>
-<span class="source-line-no">372</span><span id="line.372">     */</span>
-<span class="source-line-no">373</span><span id="line.373"></span>
-<span class="source-line-no">374</span><span id="line.374">    public MyCartDraftBuilder plusDiscountCodes(</span>
-<span class="source-line-no">375</span><span id="line.375">            @Nullable final com.commercetools.api.models.cart.DiscountCodeInfo... discountCodes) {</span>
-<span class="source-line-no">376</span><span id="line.376">        if (this.discountCodes == null) {</span>
-<span class="source-line-no">377</span><span id="line.377">            this.discountCodes = new ArrayList&lt;&gt;();</span>
-<span class="source-line-no">378</span><span id="line.378">        }</span>
-<span class="source-line-no">379</span><span id="line.379">        this.discountCodes.addAll(Arrays.asList(discountCodes));</span>
-<span class="source-line-no">380</span><span id="line.380">        return this;</span>
-<span class="source-line-no">381</span><span id="line.381">    }</span>
-<span class="source-line-no">382</span><span id="line.382"></span>
-<span class="source-line-no">383</span><span id="line.383">    /**</span>
-<span class="source-line-no">384</span><span id="line.384">     *</span>
-<span class="source-line-no">385</span><span id="line.385">     */</span>
-<span class="source-line-no">386</span><span id="line.386"></span>
-<span class="source-line-no">387</span><span id="line.387">    public MyCartDraftBuilder plusDiscountCodes(</span>
-<span class="source-line-no">388</span><span id="line.388">            Function&lt;com.commercetools.api.models.cart.DiscountCodeInfoBuilder, com.commercetools.api.models.cart.DiscountCodeInfoBuilder&gt; builder) {</span>
-<span class="source-line-no">389</span><span id="line.389">        if (this.discountCodes == null) {</span>
-<span class="source-line-no">390</span><span id="line.390">            this.discountCodes = new ArrayList&lt;&gt;();</span>
-<span class="source-line-no">391</span><span id="line.391">        }</span>
-<span class="source-line-no">392</span><span id="line.392">        this.discountCodes.add(builder.apply(com.commercetools.api.models.cart.DiscountCodeInfoBuilder.of()).build());</span>
-<span class="source-line-no">393</span><span id="line.393">        return this;</span>
-<span class="source-line-no">394</span><span id="line.394">    }</span>
-<span class="source-line-no">395</span><span id="line.395"></span>
-<span class="source-line-no">396</span><span id="line.396">    /**</span>
-<span class="source-line-no">397</span><span id="line.397">     *</span>
-<span class="source-line-no">398</span><span id="line.398">     */</span>
-<span class="source-line-no">399</span><span id="line.399"></span>
-<span class="source-line-no">400</span><span id="line.400">    public MyCartDraftBuilder withDiscountCodes(</span>
-<span class="source-line-no">401</span><span id="line.401">            Function&lt;com.commercetools.api.models.cart.DiscountCodeInfoBuilder, com.commercetools.api.models.cart.DiscountCodeInfoBuilder&gt; builder) {</span>
-<span class="source-line-no">402</span><span id="line.402">        this.discountCodes = new ArrayList&lt;&gt;();</span>
-<span class="source-line-no">403</span><span id="line.403">        this.discountCodes.add(builder.apply(com.commercetools.api.models.cart.DiscountCodeInfoBuilder.of()).build());</span>
-<span class="source-line-no">404</span><span id="line.404">        return this;</span>
-<span class="source-line-no">405</span><span id="line.405">    }</span>
-<span class="source-line-no">406</span><span id="line.406"></span>
-<span class="source-line-no">407</span><span id="line.407">    public String getCurrency() {</span>
-<span class="source-line-no">408</span><span id="line.408">        return this.currency;</span>
-<span class="source-line-no">409</span><span id="line.409">    }</span>
-<span class="source-line-no">410</span><span id="line.410"></span>
-<span class="source-line-no">411</span><span id="line.411">    @Nullable</span>
-<span class="source-line-no">412</span><span id="line.412">    public String getCustomerEmail() {</span>
-<span class="source-line-no">413</span><span id="line.413">        return this.customerEmail;</span>
-<span class="source-line-no">414</span><span id="line.414">    }</span>
-<span class="source-line-no">415</span><span id="line.415"></span>
-<span class="source-line-no">416</span><span id="line.416">    @Nullable</span>
-<span class="source-line-no">417</span><span id="line.417">    public String getCountry() {</span>
-<span class="source-line-no">418</span><span id="line.418">        return this.country;</span>
-<span class="source-line-no">419</span><span id="line.419">    }</span>
-<span class="source-line-no">420</span><span id="line.420"></span>
-<span class="source-line-no">421</span><span id="line.421">    @Nullable</span>
-<span class="source-line-no">422</span><span id="line.422">    public com.commercetools.api.models.cart.InventoryMode getInventoryMode() {</span>
-<span class="source-line-no">423</span><span id="line.423">        return this.inventoryMode;</span>
-<span class="source-line-no">424</span><span id="line.424">    }</span>
-<span class="source-line-no">425</span><span id="line.425"></span>
-<span class="source-line-no">426</span><span id="line.426">    @Nullable</span>
-<span class="source-line-no">427</span><span id="line.427">    public java.util.List&lt;com.commercetools.api.models.me.MyLineItemDraft&gt; getLineItems() {</span>
-<span class="source-line-no">428</span><span id="line.428">        return this.lineItems;</span>
-<span class="source-line-no">429</span><span id="line.429">    }</span>
-<span class="source-line-no">430</span><span id="line.430"></span>
-<span class="source-line-no">431</span><span id="line.431">    @Nullable</span>
-<span class="source-line-no">432</span><span id="line.432">    public com.commercetools.api.models.common.BaseAddress getShippingAddress() {</span>
-<span class="source-line-no">433</span><span id="line.433">        return this.shippingAddress;</span>
-<span class="source-line-no">434</span><span id="line.434">    }</span>
-<span class="source-line-no">435</span><span id="line.435"></span>
-<span class="source-line-no">436</span><span id="line.436">    @Nullable</span>
-<span class="source-line-no">437</span><span id="line.437">    public com.commercetools.api.models.common.BaseAddress getBillingAddress() {</span>
-<span class="source-line-no">438</span><span id="line.438">        return this.billingAddress;</span>
-<span class="source-line-no">439</span><span id="line.439">    }</span>
-<span class="source-line-no">440</span><span id="line.440"></span>
-<span class="source-line-no">441</span><span id="line.441">    @Nullable</span>
-<span class="source-line-no">442</span><span id="line.442">    public com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifier getShippingMethod() {</span>
-<span class="source-line-no">443</span><span id="line.443">        return this.shippingMethod;</span>
-<span class="source-line-no">444</span><span id="line.444">    }</span>
-<span class="source-line-no">445</span><span id="line.445"></span>
-<span class="source-line-no">446</span><span id="line.446">    @Nullable</span>
-<span class="source-line-no">447</span><span id="line.447">    public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {</span>
-<span class="source-line-no">448</span><span id="line.448">        return this.custom;</span>
-<span class="source-line-no">449</span><span id="line.449">    }</span>
-<span class="source-line-no">450</span><span id="line.450"></span>
-<span class="source-line-no">451</span><span id="line.451">    @Nullable</span>
-<span class="source-line-no">452</span><span id="line.452">    public String getLocale() {</span>
-<span class="source-line-no">453</span><span id="line.453">        return this.locale;</span>
-<span class="source-line-no">454</span><span id="line.454">    }</span>
-<span class="source-line-no">455</span><span id="line.455"></span>
-<span class="source-line-no">456</span><span id="line.456">    @Nullable</span>
-<span class="source-line-no">457</span><span id="line.457">    public com.commercetools.api.models.cart.TaxMode getTaxMode() {</span>
-<span class="source-line-no">458</span><span id="line.458">        return this.taxMode;</span>
+<span class="source-line-no">354</span><span id="line.354">    public MyCartDraftBuilder discountCodes(@Nullable final String... discountCodes) {</span>
+<span class="source-line-no">355</span><span id="line.355">        this.discountCodes = new ArrayList&lt;&gt;(Arrays.asList(discountCodes));</span>
+<span class="source-line-no">356</span><span id="line.356">        return this;</span>
+<span class="source-line-no">357</span><span id="line.357">    }</span>
+<span class="source-line-no">358</span><span id="line.358"></span>
+<span class="source-line-no">359</span><span id="line.359">    /**</span>
+<span class="source-line-no">360</span><span id="line.360">     *  &lt;p&gt;The code of existing DiscountCodes.&lt;/p&gt;</span>
+<span class="source-line-no">361</span><span id="line.361">     */</span>
+<span class="source-line-no">362</span><span id="line.362"></span>
+<span class="source-line-no">363</span><span id="line.363">    public MyCartDraftBuilder discountCodes(@Nullable final java.util.List&lt;String&gt; discountCodes) {</span>
+<span class="source-line-no">364</span><span id="line.364">        this.discountCodes = discountCodes;</span>
+<span class="source-line-no">365</span><span id="line.365">        return this;</span>
+<span class="source-line-no">366</span><span id="line.366">    }</span>
+<span class="source-line-no">367</span><span id="line.367"></span>
+<span class="source-line-no">368</span><span id="line.368">    /**</span>
+<span class="source-line-no">369</span><span id="line.369">     *  &lt;p&gt;The code of existing DiscountCodes.&lt;/p&gt;</span>
+<span class="source-line-no">370</span><span id="line.370">     */</span>
+<span class="source-line-no">371</span><span id="line.371"></span>
+<span class="source-line-no">372</span><span id="line.372">    public MyCartDraftBuilder plusDiscountCodes(@Nullable final String... discountCodes) {</span>
+<span class="source-line-no">373</span><span id="line.373">        if (this.discountCodes == null) {</span>
+<span class="source-line-no">374</span><span id="line.374">            this.discountCodes = new ArrayList&lt;&gt;();</span>
+<span class="source-line-no">375</span><span id="line.375">        }</span>
+<span class="source-line-no">376</span><span id="line.376">        this.discountCodes.addAll(Arrays.asList(discountCodes));</span>
+<span class="source-line-no">377</span><span id="line.377">        return this;</span>
+<span class="source-line-no">378</span><span id="line.378">    }</span>
+<span class="source-line-no">379</span><span id="line.379"></span>
+<span class="source-line-no">380</span><span id="line.380">    public String getCurrency() {</span>
+<span class="source-line-no">381</span><span id="line.381">        return this.currency;</span>
+<span class="source-line-no">382</span><span id="line.382">    }</span>
+<span class="source-line-no">383</span><span id="line.383"></span>
+<span class="source-line-no">384</span><span id="line.384">    @Nullable</span>
+<span class="source-line-no">385</span><span id="line.385">    public String getCustomerEmail() {</span>
+<span class="source-line-no">386</span><span id="line.386">        return this.customerEmail;</span>
+<span class="source-line-no">387</span><span id="line.387">    }</span>
+<span class="source-line-no">388</span><span id="line.388"></span>
+<span class="source-line-no">389</span><span id="line.389">    @Nullable</span>
+<span class="source-line-no">390</span><span id="line.390">    public String getCountry() {</span>
+<span class="source-line-no">391</span><span id="line.391">        return this.country;</span>
+<span class="source-line-no">392</span><span id="line.392">    }</span>
+<span class="source-line-no">393</span><span id="line.393"></span>
+<span class="source-line-no">394</span><span id="line.394">    @Nullable</span>
+<span class="source-line-no">395</span><span id="line.395">    public com.commercetools.api.models.cart.InventoryMode getInventoryMode() {</span>
+<span class="source-line-no">396</span><span id="line.396">        return this.inventoryMode;</span>
+<span class="source-line-no">397</span><span id="line.397">    }</span>
+<span class="source-line-no">398</span><span id="line.398"></span>
+<span class="source-line-no">399</span><span id="line.399">    @Nullable</span>
+<span class="source-line-no">400</span><span id="line.400">    public java.util.List&lt;com.commercetools.api.models.me.MyLineItemDraft&gt; getLineItems() {</span>
+<span class="source-line-no">401</span><span id="line.401">        return this.lineItems;</span>
+<span class="source-line-no">402</span><span id="line.402">    }</span>
+<span class="source-line-no">403</span><span id="line.403"></span>
+<span class="source-line-no">404</span><span id="line.404">    @Nullable</span>
+<span class="source-line-no">405</span><span id="line.405">    public com.commercetools.api.models.common.BaseAddress getShippingAddress() {</span>
+<span class="source-line-no">406</span><span id="line.406">        return this.shippingAddress;</span>
+<span class="source-line-no">407</span><span id="line.407">    }</span>
+<span class="source-line-no">408</span><span id="line.408"></span>
+<span class="source-line-no">409</span><span id="line.409">    @Nullable</span>
+<span class="source-line-no">410</span><span id="line.410">    public com.commercetools.api.models.common.BaseAddress getBillingAddress() {</span>
+<span class="source-line-no">411</span><span id="line.411">        return this.billingAddress;</span>
+<span class="source-line-no">412</span><span id="line.412">    }</span>
+<span class="source-line-no">413</span><span id="line.413"></span>
+<span class="source-line-no">414</span><span id="line.414">    @Nullable</span>
+<span class="source-line-no">415</span><span id="line.415">    public com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifier getShippingMethod() {</span>
+<span class="source-line-no">416</span><span id="line.416">        return this.shippingMethod;</span>
+<span class="source-line-no">417</span><span id="line.417">    }</span>
+<span class="source-line-no">418</span><span id="line.418"></span>
+<span class="source-line-no">419</span><span id="line.419">    @Nullable</span>
+<span class="source-line-no">420</span><span id="line.420">    public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {</span>
+<span class="source-line-no">421</span><span id="line.421">        return this.custom;</span>
+<span class="source-line-no">422</span><span id="line.422">    }</span>
+<span class="source-line-no">423</span><span id="line.423"></span>
+<span class="source-line-no">424</span><span id="line.424">    @Nullable</span>
+<span class="source-line-no">425</span><span id="line.425">    public String getLocale() {</span>
+<span class="source-line-no">426</span><span id="line.426">        return this.locale;</span>
+<span class="source-line-no">427</span><span id="line.427">    }</span>
+<span class="source-line-no">428</span><span id="line.428"></span>
+<span class="source-line-no">429</span><span id="line.429">    @Nullable</span>
+<span class="source-line-no">430</span><span id="line.430">    public com.commercetools.api.models.cart.TaxMode getTaxMode() {</span>
+<span class="source-line-no">431</span><span id="line.431">        return this.taxMode;</span>
+<span class="source-line-no">432</span><span id="line.432">    }</span>
+<span class="source-line-no">433</span><span id="line.433"></span>
+<span class="source-line-no">434</span><span id="line.434">    @Nullable</span>
+<span class="source-line-no">435</span><span id="line.435">    public Long getDeleteDaysAfterLastModification() {</span>
+<span class="source-line-no">436</span><span id="line.436">        return this.deleteDaysAfterLastModification;</span>
+<span class="source-line-no">437</span><span id="line.437">    }</span>
+<span class="source-line-no">438</span><span id="line.438"></span>
+<span class="source-line-no">439</span><span id="line.439">    @Nullable</span>
+<span class="source-line-no">440</span><span id="line.440">    public java.util.List&lt;com.commercetools.api.models.common.BaseAddress&gt; getItemShippingAddresses() {</span>
+<span class="source-line-no">441</span><span id="line.441">        return this.itemShippingAddresses;</span>
+<span class="source-line-no">442</span><span id="line.442">    }</span>
+<span class="source-line-no">443</span><span id="line.443"></span>
+<span class="source-line-no">444</span><span id="line.444">    @Nullable</span>
+<span class="source-line-no">445</span><span id="line.445">    public com.commercetools.api.models.store.StoreKeyReference getStore() {</span>
+<span class="source-line-no">446</span><span id="line.446">        return this.store;</span>
+<span class="source-line-no">447</span><span id="line.447">    }</span>
+<span class="source-line-no">448</span><span id="line.448"></span>
+<span class="source-line-no">449</span><span id="line.449">    @Nullable</span>
+<span class="source-line-no">450</span><span id="line.450">    public java.util.List&lt;String&gt; getDiscountCodes() {</span>
+<span class="source-line-no">451</span><span id="line.451">        return this.discountCodes;</span>
+<span class="source-line-no">452</span><span id="line.452">    }</span>
+<span class="source-line-no">453</span><span id="line.453"></span>
+<span class="source-line-no">454</span><span id="line.454">    public MyCartDraft build() {</span>
+<span class="source-line-no">455</span><span id="line.455">        Objects.requireNonNull(currency, MyCartDraft.class + ": currency is missing");</span>
+<span class="source-line-no">456</span><span id="line.456">        return new MyCartDraftImpl(currency, customerEmail, country, inventoryMode, lineItems, shippingAddress,</span>
+<span class="source-line-no">457</span><span id="line.457">            billingAddress, shippingMethod, custom, locale, taxMode, deleteDaysAfterLastModification,</span>
+<span class="source-line-no">458</span><span id="line.458">            itemShippingAddresses, store, discountCodes);</span>
 <span class="source-line-no">459</span><span id="line.459">    }</span>
 <span class="source-line-no">460</span><span id="line.460"></span>
-<span class="source-line-no">461</span><span id="line.461">    @Nullable</span>
-<span class="source-line-no">462</span><span id="line.462">    public Long getDeleteDaysAfterLastModification() {</span>
-<span class="source-line-no">463</span><span id="line.463">        return this.deleteDaysAfterLastModification;</span>
-<span class="source-line-no">464</span><span id="line.464">    }</span>
-<span class="source-line-no">465</span><span id="line.465"></span>
-<span class="source-line-no">466</span><span id="line.466">    @Nullable</span>
-<span class="source-line-no">467</span><span id="line.467">    public java.util.List&lt;com.commercetools.api.models.common.BaseAddress&gt; getItemShippingAddresses() {</span>
-<span class="source-line-no">468</span><span id="line.468">        return this.itemShippingAddresses;</span>
-<span class="source-line-no">469</span><span id="line.469">    }</span>
-<span class="source-line-no">470</span><span id="line.470"></span>
-<span class="source-line-no">471</span><span id="line.471">    @Nullable</span>
-<span class="source-line-no">472</span><span id="line.472">    public com.commercetools.api.models.store.StoreKeyReference getStore() {</span>
-<span class="source-line-no">473</span><span id="line.473">        return this.store;</span>
-<span class="source-line-no">474</span><span id="line.474">    }</span>
-<span class="source-line-no">475</span><span id="line.475"></span>
-<span class="source-line-no">476</span><span id="line.476">    @Nullable</span>
-<span class="source-line-no">477</span><span id="line.477">    public java.util.List&lt;com.commercetools.api.models.cart.DiscountCodeInfo&gt; getDiscountCodes() {</span>
-<span class="source-line-no">478</span><span id="line.478">        return this.discountCodes;</span>
-<span class="source-line-no">479</span><span id="line.479">    }</span>
-<span class="source-line-no">480</span><span id="line.480"></span>
-<span class="source-line-no">481</span><span id="line.481">    public MyCartDraft build() {</span>
-<span class="source-line-no">482</span><span id="line.482">        Objects.requireNonNull(currency, MyCartDraft.class + ": currency is missing");</span>
-<span class="source-line-no">483</span><span id="line.483">        return new MyCartDraftImpl(currency, customerEmail, country, inventoryMode, lineItems, shippingAddress,</span>
-<span class="source-line-no">484</span><span id="line.484">            billingAddress, shippingMethod, custom, locale, taxMode, deleteDaysAfterLastModification,</span>
-<span class="source-line-no">485</span><span id="line.485">            itemShippingAddresses, store, discountCodes);</span>
-<span class="source-line-no">486</span><span id="line.486">    }</span>
-<span class="source-line-no">487</span><span id="line.487"></span>
-<span class="source-line-no">488</span><span id="line.488">    /**</span>
-<span class="source-line-no">489</span><span id="line.489">     * builds MyCartDraft without checking for non null required values</span>
-<span class="source-line-no">490</span><span id="line.490">     */</span>
-<span class="source-line-no">491</span><span id="line.491">    public MyCartDraft buildUnchecked() {</span>
-<span class="source-line-no">492</span><span id="line.492">        return new MyCartDraftImpl(currency, customerEmail, country, inventoryMode, lineItems, shippingAddress,</span>
-<span class="source-line-no">493</span><span id="line.493">            billingAddress, shippingMethod, custom, locale, taxMode, deleteDaysAfterLastModification,</span>
-<span class="source-line-no">494</span><span id="line.494">            itemShippingAddresses, store, discountCodes);</span>
-<span class="source-line-no">495</span><span id="line.495">    }</span>
-<span class="source-line-no">496</span><span id="line.496"></span>
-<span class="source-line-no">497</span><span id="line.497">    public static MyCartDraftBuilder of() {</span>
-<span class="source-line-no">498</span><span id="line.498">        return new MyCartDraftBuilder();</span>
-<span class="source-line-no">499</span><span id="line.499">    }</span>
-<span class="source-line-no">500</span><span id="line.500"></span>
-<span class="source-line-no">501</span><span id="line.501">    public static MyCartDraftBuilder of(final MyCartDraft template) {</span>
-<span class="source-line-no">502</span><span id="line.502">        MyCartDraftBuilder builder = new MyCartDraftBuilder();</span>
-<span class="source-line-no">503</span><span id="line.503">        builder.currency = template.getCurrency();</span>
-<span class="source-line-no">504</span><span id="line.504">        builder.customerEmail = template.getCustomerEmail();</span>
-<span class="source-line-no">505</span><span id="line.505">        builder.country = template.getCountry();</span>
-<span class="source-line-no">506</span><span id="line.506">        builder.inventoryMode = template.getInventoryMode();</span>
-<span class="source-line-no">507</span><span id="line.507">        builder.lineItems = template.getLineItems();</span>
-<span class="source-line-no">508</span><span id="line.508">        builder.shippingAddress = template.getShippingAddress();</span>
-<span class="source-line-no">509</span><span id="line.509">        builder.billingAddress = template.getBillingAddress();</span>
-<span class="source-line-no">510</span><span id="line.510">        builder.shippingMethod = template.getShippingMethod();</span>
-<span class="source-line-no">511</span><span id="line.511">        builder.custom = template.getCustom();</span>
-<span class="source-line-no">512</span><span id="line.512">        builder.locale = template.getLocale();</span>
-<span class="source-line-no">513</span><span id="line.513">        builder.taxMode = template.getTaxMode();</span>
-<span class="source-line-no">514</span><span id="line.514">        builder.deleteDaysAfterLastModification = template.getDeleteDaysAfterLastModification();</span>
-<span class="source-line-no">515</span><span id="line.515">        builder.itemShippingAddresses = template.getItemShippingAddresses();</span>
-<span class="source-line-no">516</span><span id="line.516">        builder.store = template.getStore();</span>
-<span class="source-line-no">517</span><span id="line.517">        builder.discountCodes = template.getDiscountCodes();</span>
-<span class="source-line-no">518</span><span id="line.518">        return builder;</span>
-<span class="source-line-no">519</span><span id="line.519">    }</span>
-<span class="source-line-no">520</span><span id="line.520"></span>
-<span class="source-line-no">521</span><span id="line.521">}</span>
+<span class="source-line-no">461</span><span id="line.461">    /**</span>
+<span class="source-line-no">462</span><span id="line.462">     * builds MyCartDraft without checking for non null required values</span>
+<span class="source-line-no">463</span><span id="line.463">     */</span>
+<span class="source-line-no">464</span><span id="line.464">    public MyCartDraft buildUnchecked() {</span>
+<span class="source-line-no">465</span><span id="line.465">        return new MyCartDraftImpl(currency, customerEmail, country, inventoryMode, lineItems, shippingAddress,</span>
+<span class="source-line-no">466</span><span id="line.466">            billingAddress, shippingMethod, custom, locale, taxMode, deleteDaysAfterLastModification,</span>
+<span class="source-line-no">467</span><span id="line.467">            itemShippingAddresses, store, discountCodes);</span>
+<span class="source-line-no">468</span><span id="line.468">    }</span>
+<span class="source-line-no">469</span><span id="line.469"></span>
+<span class="source-line-no">470</span><span id="line.470">    public static MyCartDraftBuilder of() {</span>
+<span class="source-line-no">471</span><span id="line.471">        return new MyCartDraftBuilder();</span>
+<span class="source-line-no">472</span><span id="line.472">    }</span>
+<span class="source-line-no">473</span><span id="line.473"></span>
+<span class="source-line-no">474</span><span id="line.474">    public static MyCartDraftBuilder of(final MyCartDraft template) {</span>
+<span class="source-line-no">475</span><span id="line.475">        MyCartDraftBuilder builder = new MyCartDraftBuilder();</span>
+<span class="source-line-no">476</span><span id="line.476">        builder.currency = template.getCurrency();</span>
+<span class="source-line-no">477</span><span id="line.477">        builder.customerEmail = template.getCustomerEmail();</span>
+<span class="source-line-no">478</span><span id="line.478">        builder.country = template.getCountry();</span>
+<span class="source-line-no">479</span><span id="line.479">        builder.inventoryMode = template.getInventoryMode();</span>
+<span class="source-line-no">480</span><span id="line.480">        builder.lineItems = template.getLineItems();</span>
+<span class="source-line-no">481</span><span id="line.481">        builder.shippingAddress = template.getShippingAddress();</span>
+<span class="source-line-no">482</span><span id="line.482">        builder.billingAddress = template.getBillingAddress();</span>
+<span class="source-line-no">483</span><span id="line.483">        builder.shippingMethod = template.getShippingMethod();</span>
+<span class="source-line-no">484</span><span id="line.484">        builder.custom = template.getCustom();</span>
+<span class="source-line-no">485</span><span id="line.485">        builder.locale = template.getLocale();</span>
+<span class="source-line-no">486</span><span id="line.486">        builder.taxMode = template.getTaxMode();</span>
+<span class="source-line-no">487</span><span id="line.487">        builder.deleteDaysAfterLastModification = template.getDeleteDaysAfterLastModification();</span>
+<span class="source-line-no">488</span><span id="line.488">        builder.itemShippingAddresses = template.getItemShippingAddresses();</span>
+<span class="source-line-no">489</span><span id="line.489">        builder.store = template.getStore();</span>
+<span class="source-line-no">490</span><span id="line.490">        builder.discountCodes = template.getDiscountCodes();</span>
+<span class="source-line-no">491</span><span id="line.491">        return builder;</span>
+<span class="source-line-no">492</span><span id="line.492">    }</span>
+<span class="source-line-no">493</span><span id="line.493"></span>
+<span class="source-line-no">494</span><span id="line.494">}</span>
 
 
 

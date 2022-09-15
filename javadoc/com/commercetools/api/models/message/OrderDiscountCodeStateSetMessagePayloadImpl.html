@@ -86,7 +86,7 @@ loadScripts(document, 'script');</script>
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderDiscountCodeStateSetMessagePayloadImpl.html#line.20">OrderDiscountCodeStateSetMessagePayloadImpl</a></span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
 implements <a href="OrderDiscountCodeStateSetMessagePayload.html" title="interface in com.commercetools.api.models.message">OrderDiscountCodeStateSetMessagePayload</a>, <a href="../../../../../io/vrap/rmf/base/client/ModelBase.html" title="interface in io.vrap.rmf.base.client">ModelBase</a></span></div>
-<div class="block">OrderDiscountCodeStateSetMessagePayload</div>
+<div class="block"><p>Generated after the DiscountCodeState changes due to a recalculation.</p></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -138,14 +138,18 @@ implements <a href="OrderDiscountCodeStateSetMessagePayload.html" title="interfa
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="../discount_code/DiscountCodeReference.html" title="interface in com.commercetools.api.models.discount_code">DiscountCodeReference</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getDiscountCode()">getDiscountCode</a></span>()</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
-<div class="block">Reference to a DiscountCode.</div>
+<div class="block">DiscountCode that changed due to the recalculation.</div>
 </div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="../cart/DiscountCodeState.html" title="interface in com.commercetools.api.models.cart">DiscountCodeState</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getOldState()">getOldState</a></span>()</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">DiscountCodeState before the recalculation.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="../cart/DiscountCodeState.html" title="interface in com.commercetools.api.models.cart">DiscountCodeState</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getState()">getState</a></span>()</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">DiscountCodeState after the recalculation.</div>
+</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getType()">getType</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
@@ -218,7 +222,7 @@ implements <a href="OrderDiscountCodeStateSetMessagePayload.html" title="interfa
 <section class="detail" id="getDiscountCode()">
 <h3>getDiscountCode</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../discount_code/DiscountCodeReference.html" title="interface in com.commercetools.api.models.discount_code">DiscountCodeReference</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderDiscountCodeStateSetMessagePayloadImpl.html#line.58">getDiscountCode</a></span>()</div>
-<div class="block"><p>Reference to a DiscountCode.</p></div>
+<div class="block"><p>DiscountCode that changed due to the recalculation.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="OrderDiscountCodeStateSetMessagePayload.html#getDiscountCode()">getDiscountCode</a></code>&nbsp;in interface&nbsp;<code><a href="OrderDiscountCodeStateSetMessagePayload.html" title="interface in com.commercetools.api.models.message">OrderDiscountCodeStateSetMessagePayload</a></code></dd>
@@ -229,6 +233,7 @@ implements <a href="OrderDiscountCodeStateSetMessagePayload.html" title="interfa
 <section class="detail" id="getState()">
 <h3>getState</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../cart/DiscountCodeState.html" title="interface in com.commercetools.api.models.cart">DiscountCodeState</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderDiscountCodeStateSetMessagePayloadImpl.html#line.66">getState</a></span>()</div>
+<div class="block"><p>DiscountCodeState after the recalculation.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="OrderDiscountCodeStateSetMessagePayload.html#getState()">getState</a></code>&nbsp;in interface&nbsp;<code><a href="OrderDiscountCodeStateSetMessagePayload.html" title="interface in com.commercetools.api.models.message">OrderDiscountCodeStateSetMessagePayload</a></code></dd>
@@ -239,6 +244,7 @@ implements <a href="OrderDiscountCodeStateSetMessagePayload.html" title="interfa
 <section class="detail" id="getOldState()">
 <h3>getOldState</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../cart/DiscountCodeState.html" title="interface in com.commercetools.api.models.cart">DiscountCodeState</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderDiscountCodeStateSetMessagePayloadImpl.html#line.74">getOldState</a></span>()</div>
+<div class="block"><p>DiscountCodeState before the recalculation.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="OrderDiscountCodeStateSetMessagePayload.html#getOldState()">getOldState</a></code>&nbsp;in interface&nbsp;<code><a href="OrderDiscountCodeStateSetMessagePayload.html" title="interface in com.commercetools.api.models.message">OrderDiscountCodeStateSetMessagePayload</a></code></dd>

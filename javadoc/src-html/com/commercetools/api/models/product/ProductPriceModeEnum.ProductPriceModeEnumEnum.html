@@ -23,18 +23,18 @@
 <span class="source-line-no">010</span><span id="line.10">import io.vrap.rmf.base.client.utils.Generated;</span>
 <span class="source-line-no">011</span><span id="line.11"></span>
 <span class="source-line-no">012</span><span id="line.12">/**</span>
-<span class="source-line-no">013</span><span id="line.13"> *  &lt;p&gt;This mode specifies which type of prices should be used when looking up the price of a product.&lt;/p&gt;</span>
+<span class="source-line-no">013</span><span id="line.13"> *  &lt;p&gt;This mode determines the type of Prices used for Product Price Selection as well as for LineItem Price selection.&lt;/p&gt;</span>
 <span class="source-line-no">014</span><span id="line.14"> */</span>
 <span class="source-line-no">015</span><span id="line.15">@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")</span>
 <span class="source-line-no">016</span><span id="line.16">public interface ProductPriceModeEnum {</span>
 <span class="source-line-no">017</span><span id="line.17"></span>
 <span class="source-line-no">018</span><span id="line.18">    /**</span>
-<span class="source-line-no">019</span><span id="line.19">        &lt;p&gt;The API uses the prices located inside the &lt;code&gt;prices&lt;/code&gt; field in &lt;a href="ctp:api:type:ProductVariant"&gt;Product&lt;/a&gt;.&lt;/p&gt;</span>
+<span class="source-line-no">019</span><span id="line.19">        &lt;p&gt;Composable Commerce uses the &lt;a href="ctp:api:type:Price"&gt;Embedded Prices&lt;/a&gt; located inside the &lt;code&gt;prices&lt;/code&gt; field in &lt;a href="ctp:api:type:ProductVariant"&gt;ProductVariant&lt;/a&gt;.&lt;/p&gt;</span>
 <span class="source-line-no">020</span><span id="line.20"></span>
 <span class="source-line-no">021</span><span id="line.21">    */</span>
 <span class="source-line-no">022</span><span id="line.22">    ProductPriceModeEnum EMBEDDED = ProductPriceModeEnumEnum.EMBEDDED;</span>
 <span class="source-line-no">023</span><span id="line.23">    /**</span>
-<span class="source-line-no">024</span><span id="line.24">        &lt;p&gt;The API uses &lt;a href="ctp:api:type:StandalonePrice"&gt;StandalonePrices&lt;/a&gt;, which are associated with the &lt;a href="ctp:api:type:ProductVariant"&gt;ProductVariant&lt;/a&gt; through the &lt;code&gt;sku&lt;/code&gt; field.&lt;/p&gt;</span>
+<span class="source-line-no">024</span><span id="line.24">        &lt;p&gt;Composable Commerce uses &lt;a href="ctp:api:type:StandalonePrice"&gt;StandalonePrices&lt;/a&gt;, which are associated with the &lt;a href="ctp:api:type:ProductVariant"&gt;ProductVariant&lt;/a&gt; through the &lt;code&gt;sku&lt;/code&gt; field.&lt;/p&gt;</span>
 <span class="source-line-no">025</span><span id="line.25"></span>
 <span class="source-line-no">026</span><span id="line.26">    */</span>
 <span class="source-line-no">027</span><span id="line.27">    ProductPriceModeEnum STANDALONE = ProductPriceModeEnumEnum.STANDALONE;</span>

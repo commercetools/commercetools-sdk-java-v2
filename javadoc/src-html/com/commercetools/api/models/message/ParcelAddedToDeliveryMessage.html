@@ -29,7 +29,7 @@
 <span class="source-line-no">016</span><span id="line.16">import io.vrap.rmf.base.client.utils.Generated;</span>
 <span class="source-line-no">017</span><span id="line.17"></span>
 <span class="source-line-no">018</span><span id="line.18">/**</span>
-<span class="source-line-no">019</span><span id="line.19"> * ParcelAddedToDeliveryMessage</span>
+<span class="source-line-no">019</span><span id="line.19"> *  &lt;p&gt;Generated after a successful Add Parcel To Delivery update action.&lt;/p&gt;</span>
 <span class="source-line-no">020</span><span id="line.20"> *</span>
 <span class="source-line-no">021</span><span id="line.21"> * &lt;hr&gt;</span>
 <span class="source-line-no">022</span><span id="line.22"> * Example to create an instance using the builder pattern</span>
@@ -56,7 +56,7 @@
 <span class="source-line-no">043</span><span id="line.43">    String PARCEL_ADDED_TO_DELIVERY = "ParcelAddedToDelivery";</span>
 <span class="source-line-no">044</span><span id="line.44"></span>
 <span class="source-line-no">045</span><span id="line.45">    /**</span>
-<span class="source-line-no">046</span><span id="line.46">     *</span>
+<span class="source-line-no">046</span><span id="line.46">     *  &lt;p&gt;Unique identifier of the Delivery.&lt;/p&gt;</span>
 <span class="source-line-no">047</span><span id="line.47">     */</span>
 <span class="source-line-no">048</span><span id="line.48">    @NotNull</span>
 <span class="source-line-no">049</span><span id="line.49">    @Valid</span>
@@ -64,59 +64,69 @@
 <span class="source-line-no">051</span><span id="line.51">    public Delivery getDelivery();</span>
 <span class="source-line-no">052</span><span id="line.52"></span>
 <span class="source-line-no">053</span><span id="line.53">    /**</span>
-<span class="source-line-no">054</span><span id="line.54">     *</span>
+<span class="source-line-no">054</span><span id="line.54">     *  &lt;p&gt;Parcel that was added to the Delivery.&lt;/p&gt;</span>
 <span class="source-line-no">055</span><span id="line.55">     */</span>
 <span class="source-line-no">056</span><span id="line.56">    @NotNull</span>
 <span class="source-line-no">057</span><span id="line.57">    @Valid</span>
 <span class="source-line-no">058</span><span id="line.58">    @JsonProperty("parcel")</span>
 <span class="source-line-no">059</span><span id="line.59">    public Parcel getParcel();</span>
 <span class="source-line-no">060</span><span id="line.60"></span>
-<span class="source-line-no">061</span><span id="line.61">    public void setDelivery(final Delivery delivery);</span>
-<span class="source-line-no">062</span><span id="line.62"></span>
-<span class="source-line-no">063</span><span id="line.63">    public void setParcel(final Parcel parcel);</span>
+<span class="source-line-no">061</span><span id="line.61">    /**</span>
+<span class="source-line-no">062</span><span id="line.62">     *  &lt;p&gt;User-defined unique identifier of the Shipping Method in a Cart with &lt;code&gt;Multi&lt;/code&gt; ShippingMode.&lt;/p&gt;</span>
+<span class="source-line-no">063</span><span id="line.63">     */</span>
 <span class="source-line-no">064</span><span id="line.64"></span>
-<span class="source-line-no">065</span><span id="line.65">    public static ParcelAddedToDeliveryMessage of() {</span>
-<span class="source-line-no">066</span><span id="line.66">        return new ParcelAddedToDeliveryMessageImpl();</span>
-<span class="source-line-no">067</span><span id="line.67">    }</span>
-<span class="source-line-no">068</span><span id="line.68"></span>
-<span class="source-line-no">069</span><span id="line.69">    public static ParcelAddedToDeliveryMessage of(final ParcelAddedToDeliveryMessage template) {</span>
-<span class="source-line-no">070</span><span id="line.70">        ParcelAddedToDeliveryMessageImpl instance = new ParcelAddedToDeliveryMessageImpl();</span>
-<span class="source-line-no">071</span><span id="line.71">        instance.setId(template.getId());</span>
-<span class="source-line-no">072</span><span id="line.72">        instance.setVersion(template.getVersion());</span>
-<span class="source-line-no">073</span><span id="line.73">        instance.setCreatedAt(template.getCreatedAt());</span>
-<span class="source-line-no">074</span><span id="line.74">        instance.setLastModifiedAt(template.getLastModifiedAt());</span>
-<span class="source-line-no">075</span><span id="line.75">        instance.setLastModifiedBy(template.getLastModifiedBy());</span>
-<span class="source-line-no">076</span><span id="line.76">        instance.setCreatedBy(template.getCreatedBy());</span>
-<span class="source-line-no">077</span><span id="line.77">        instance.setSequenceNumber(template.getSequenceNumber());</span>
-<span class="source-line-no">078</span><span id="line.78">        instance.setResource(template.getResource());</span>
-<span class="source-line-no">079</span><span id="line.79">        instance.setResourceVersion(template.getResourceVersion());</span>
-<span class="source-line-no">080</span><span id="line.80">        instance.setResourceUserProvidedIdentifiers(template.getResourceUserProvidedIdentifiers());</span>
-<span class="source-line-no">081</span><span id="line.81">        instance.setDelivery(template.getDelivery());</span>
-<span class="source-line-no">082</span><span id="line.82">        instance.setParcel(template.getParcel());</span>
-<span class="source-line-no">083</span><span id="line.83">        return instance;</span>
-<span class="source-line-no">084</span><span id="line.84">    }</span>
-<span class="source-line-no">085</span><span id="line.85"></span>
-<span class="source-line-no">086</span><span id="line.86">    public static ParcelAddedToDeliveryMessageBuilder builder() {</span>
-<span class="source-line-no">087</span><span id="line.87">        return ParcelAddedToDeliveryMessageBuilder.of();</span>
-<span class="source-line-no">088</span><span id="line.88">    }</span>
-<span class="source-line-no">089</span><span id="line.89"></span>
-<span class="source-line-no">090</span><span id="line.90">    public static ParcelAddedToDeliveryMessageBuilder builder(final ParcelAddedToDeliveryMessage template) {</span>
-<span class="source-line-no">091</span><span id="line.91">        return ParcelAddedToDeliveryMessageBuilder.of(template);</span>
-<span class="source-line-no">092</span><span id="line.92">    }</span>
-<span class="source-line-no">093</span><span id="line.93"></span>
-<span class="source-line-no">094</span><span id="line.94">    default &lt;T&gt; T withParcelAddedToDeliveryMessage(Function&lt;ParcelAddedToDeliveryMessage, T&gt; helper) {</span>
-<span class="source-line-no">095</span><span id="line.95">        return helper.apply(this);</span>
-<span class="source-line-no">096</span><span id="line.96">    }</span>
-<span class="source-line-no">097</span><span id="line.97"></span>
-<span class="source-line-no">098</span><span id="line.98">    public static com.fasterxml.jackson.core.type.TypeReference&lt;ParcelAddedToDeliveryMessage&gt; typeReference() {</span>
-<span class="source-line-no">099</span><span id="line.99">        return new com.fasterxml.jackson.core.type.TypeReference&lt;ParcelAddedToDeliveryMessage&gt;() {</span>
-<span class="source-line-no">100</span><span id="line.100">            @Override</span>
-<span class="source-line-no">101</span><span id="line.101">            public String toString() {</span>
-<span class="source-line-no">102</span><span id="line.102">                return "TypeReference&lt;ParcelAddedToDeliveryMessage&gt;";</span>
-<span class="source-line-no">103</span><span id="line.103">            }</span>
-<span class="source-line-no">104</span><span id="line.104">        };</span>
-<span class="source-line-no">105</span><span id="line.105">    }</span>
-<span class="source-line-no">106</span><span id="line.106">}</span>
+<span class="source-line-no">065</span><span id="line.65">    @JsonProperty("shippingKey")</span>
+<span class="source-line-no">066</span><span id="line.66">    public String getShippingKey();</span>
+<span class="source-line-no">067</span><span id="line.67"></span>
+<span class="source-line-no">068</span><span id="line.68">    public void setDelivery(final Delivery delivery);</span>
+<span class="source-line-no">069</span><span id="line.69"></span>
+<span class="source-line-no">070</span><span id="line.70">    public void setParcel(final Parcel parcel);</span>
+<span class="source-line-no">071</span><span id="line.71"></span>
+<span class="source-line-no">072</span><span id="line.72">    public void setShippingKey(final String shippingKey);</span>
+<span class="source-line-no">073</span><span id="line.73"></span>
+<span class="source-line-no">074</span><span id="line.74">    public static ParcelAddedToDeliveryMessage of() {</span>
+<span class="source-line-no">075</span><span id="line.75">        return new ParcelAddedToDeliveryMessageImpl();</span>
+<span class="source-line-no">076</span><span id="line.76">    }</span>
+<span class="source-line-no">077</span><span id="line.77"></span>
+<span class="source-line-no">078</span><span id="line.78">    public static ParcelAddedToDeliveryMessage of(final ParcelAddedToDeliveryMessage template) {</span>
+<span class="source-line-no">079</span><span id="line.79">        ParcelAddedToDeliveryMessageImpl instance = new ParcelAddedToDeliveryMessageImpl();</span>
+<span class="source-line-no">080</span><span id="line.80">        instance.setId(template.getId());</span>
+<span class="source-line-no">081</span><span id="line.81">        instance.setVersion(template.getVersion());</span>
+<span class="source-line-no">082</span><span id="line.82">        instance.setCreatedAt(template.getCreatedAt());</span>
+<span class="source-line-no">083</span><span id="line.83">        instance.setLastModifiedAt(template.getLastModifiedAt());</span>
+<span class="source-line-no">084</span><span id="line.84">        instance.setLastModifiedBy(template.getLastModifiedBy());</span>
+<span class="source-line-no">085</span><span id="line.85">        instance.setCreatedBy(template.getCreatedBy());</span>
+<span class="source-line-no">086</span><span id="line.86">        instance.setSequenceNumber(template.getSequenceNumber());</span>
+<span class="source-line-no">087</span><span id="line.87">        instance.setResource(template.getResource());</span>
+<span class="source-line-no">088</span><span id="line.88">        instance.setResourceVersion(template.getResourceVersion());</span>
+<span class="source-line-no">089</span><span id="line.89">        instance.setResourceUserProvidedIdentifiers(template.getResourceUserProvidedIdentifiers());</span>
+<span class="source-line-no">090</span><span id="line.90">        instance.setDelivery(template.getDelivery());</span>
+<span class="source-line-no">091</span><span id="line.91">        instance.setParcel(template.getParcel());</span>
+<span class="source-line-no">092</span><span id="line.92">        instance.setShippingKey(template.getShippingKey());</span>
+<span class="source-line-no">093</span><span id="line.93">        return instance;</span>
+<span class="source-line-no">094</span><span id="line.94">    }</span>
+<span class="source-line-no">095</span><span id="line.95"></span>
+<span class="source-line-no">096</span><span id="line.96">    public static ParcelAddedToDeliveryMessageBuilder builder() {</span>
+<span class="source-line-no">097</span><span id="line.97">        return ParcelAddedToDeliveryMessageBuilder.of();</span>
+<span class="source-line-no">098</span><span id="line.98">    }</span>
+<span class="source-line-no">099</span><span id="line.99"></span>
+<span class="source-line-no">100</span><span id="line.100">    public static ParcelAddedToDeliveryMessageBuilder builder(final ParcelAddedToDeliveryMessage template) {</span>
+<span class="source-line-no">101</span><span id="line.101">        return ParcelAddedToDeliveryMessageBuilder.of(template);</span>
+<span class="source-line-no">102</span><span id="line.102">    }</span>
+<span class="source-line-no">103</span><span id="line.103"></span>
+<span class="source-line-no">104</span><span id="line.104">    default &lt;T&gt; T withParcelAddedToDeliveryMessage(Function&lt;ParcelAddedToDeliveryMessage, T&gt; helper) {</span>
+<span class="source-line-no">105</span><span id="line.105">        return helper.apply(this);</span>
+<span class="source-line-no">106</span><span id="line.106">    }</span>
+<span class="source-line-no">107</span><span id="line.107"></span>
+<span class="source-line-no">108</span><span id="line.108">    public static com.fasterxml.jackson.core.type.TypeReference&lt;ParcelAddedToDeliveryMessage&gt; typeReference() {</span>
+<span class="source-line-no">109</span><span id="line.109">        return new com.fasterxml.jackson.core.type.TypeReference&lt;ParcelAddedToDeliveryMessage&gt;() {</span>
+<span class="source-line-no">110</span><span id="line.110">            @Override</span>
+<span class="source-line-no">111</span><span id="line.111">            public String toString() {</span>
+<span class="source-line-no">112</span><span id="line.112">                return "TypeReference&lt;ParcelAddedToDeliveryMessage&gt;";</span>
+<span class="source-line-no">113</span><span id="line.113">            }</span>
+<span class="source-line-no">114</span><span id="line.114">        };</span>
+<span class="source-line-no">115</span><span id="line.115">    }</span>
+<span class="source-line-no">116</span><span id="line.116">}</span>
 
 
 

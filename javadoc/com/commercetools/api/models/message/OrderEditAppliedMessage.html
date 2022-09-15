@@ -86,7 +86,7 @@ loadScripts(document, 'script');</script>
 <hr>
 <div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderEditAppliedMessage.html#line.39">OrderEditAppliedMessage</a></span><span class="extends-implements">
 extends <a href="OrderMessage.html" title="interface in com.commercetools.api.models.message">OrderMessage</a></span></div>
-<div class="block">OrderEditAppliedMessage
+<div class="block"><p>Generated after a successfully applying an OrderEdit.</p>
 
  <hr>
  Example to create an instance using the builder pattern
@@ -140,14 +140,16 @@ extends <a href="OrderMessage.html" title="interface in com.commercetools.api.mo
 <div class="col-first odd-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="OrderEditAppliedMessageBuilder.html" title="class in com.commercetools.api.models.message">OrderEditAppliedMessageBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#builder(com.commercetools.api.models.message.OrderEditAppliedMessage)">builder</a></span>&#8203;(<a href="OrderEditAppliedMessage.html" title="interface in com.commercetools.api.models.message">OrderEditAppliedMessage</a>&nbsp;template)</code></div>
 <div class="col-last odd-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@NotNull @Valid <a href="../order_edit/OrderEditReference.html" title="interface in com.commercetools.api.models.order_edit">OrderEditReference</a></code></div>
+<div class="col-first even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@NotNull @Valid <a href="../order_edit/OrderEdit.html" title="interface in com.commercetools.api.models.order_edit">OrderEdit</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getEdit()">getEdit</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
-<div class="block">Reference to an OrderEdit.</div>
+<div class="block">OrderEdit that was applied.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@NotNull @Valid <a href="../order_edit/OrderEditApplied.html" title="interface in com.commercetools.api.models.order_edit">OrderEditApplied</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getResult()">getResult</a></span>()</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
+<div class="block">Information about a successfully applied OrderEdit.</div>
+</div>
 <div class="col-first even-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="OrderEditAppliedMessage.html" title="interface in com.commercetools.api.models.message">OrderEditAppliedMessage</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#of()">of</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
@@ -155,7 +157,7 @@ extends <a href="OrderMessage.html" title="interface in com.commercetools.api.mo
 <div class="col-second odd-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#of(com.commercetools.api.models.message.OrderEditAppliedMessage)">of</a></span>&#8203;(<a href="OrderEditAppliedMessage.html" title="interface in com.commercetools.api.models.message">OrderEditAppliedMessage</a>&nbsp;template)</code></div>
 <div class="col-last odd-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#setEdit(com.commercetools.api.models.order_edit.OrderEditReference)">setEdit</a></span>&#8203;(<a href="../order_edit/OrderEditReference.html" title="interface in com.commercetools.api.models.order_edit">OrderEditReference</a>&nbsp;edit)</code></div>
+<div class="col-second even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#setEdit(com.commercetools.api.models.order_edit.OrderEdit)">setEdit</a></span>&#8203;(<a href="../order_edit/OrderEdit.html" title="interface in com.commercetools.api.models.order_edit">OrderEdit</a>&nbsp;edit)</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#setResult(com.commercetools.api.models.order_edit.OrderEditApplied)">setResult</a></span>&#8203;(<a href="../order_edit/OrderEditApplied.html" title="interface in com.commercetools.api.models.order_edit">OrderEditApplied</a>&nbsp;result)</code></div>
@@ -215,8 +217,8 @@ extends <a href="OrderMessage.html" title="interface in com.commercetools.api.mo
 <h3>getEdit</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 @Valid
-</span><span class="return-type">@NotNull @Valid <a href="../order_edit/OrderEditReference.html" title="interface in com.commercetools.api.models.order_edit">OrderEditReference</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderEditAppliedMessage.html#line.48">getEdit</a></span>()</div>
-<div class="block"><p>Reference to an OrderEdit.</p></div>
+</span><span class="return-type">@NotNull @Valid <a href="../order_edit/OrderEdit.html" title="interface in com.commercetools.api.models.order_edit">OrderEdit</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderEditAppliedMessage.html#line.48">getEdit</a></span>()</div>
+<div class="block"><p>OrderEdit that was applied.</p></div>
 </section>
 </li>
 <li>
@@ -225,12 +227,13 @@ extends <a href="OrderMessage.html" title="interface in com.commercetools.api.mo
 <div class="member-signature"><span class="annotations">@NotNull
 @Valid
 </span><span class="return-type">@NotNull @Valid <a href="../order_edit/OrderEditApplied.html" title="interface in com.commercetools.api.models.order_edit">OrderEditApplied</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderEditAppliedMessage.html#line.56">getResult</a></span>()</div>
+<div class="block"><p>Information about a successfully applied OrderEdit.</p></div>
 </section>
 </li>
 <li>
-<section class="detail" id="setEdit(com.commercetools.api.models.order_edit.OrderEditReference)">
+<section class="detail" id="setEdit(com.commercetools.api.models.order_edit.OrderEdit)">
 <h3>setEdit</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderEditAppliedMessage.html#line.61">setEdit</a></span>&#8203;<span class="parameters">(<a href="../order_edit/OrderEditReference.html" title="interface in com.commercetools.api.models.order_edit">OrderEditReference</a>&nbsp;edit)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderEditAppliedMessage.html#line.61">setEdit</a></span>&#8203;<span class="parameters">(<a href="../order_edit/OrderEdit.html" title="interface in com.commercetools.api.models.order_edit">OrderEdit</a>&nbsp;edit)</span></div>
 </section>
 </li>
 <li>

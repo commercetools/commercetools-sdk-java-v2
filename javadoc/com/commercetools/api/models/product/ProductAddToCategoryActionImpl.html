@@ -86,7 +86,7 @@ loadScripts(document, 'script');</script>
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductAddToCategoryActionImpl.html#line.20">ProductAddToCategoryActionImpl</a></span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
 implements <a href="ProductAddToCategoryAction.html" title="interface in com.commercetools.api.models.product">ProductAddToCategoryAction</a>, <a href="../../../../../io/vrap/rmf/base/client/ModelBase.html" title="interface in io.vrap.rmf.base.client">ModelBase</a></span></div>
-<div class="block">ProductAddToCategoryAction</div>
+<div class="block"><p>Produces the ProductAddedToCategory Message.</p></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -140,13 +140,19 @@ implements <a href="ProductAddToCategoryAction.html" title="interface in com.com
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="../category/CategoryResourceIdentifier.html" title="interface in com.commercetools.api.models.category">CategoryResourceIdentifier</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getCategory()">getCategory</a></span>()</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">The Category to add.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getOrderHint()">getOrderHint</a></span>()</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">A string representing a number between 0 and 1.</div>
+</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getStaged()">getStaged</a></span>()</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">If <code>true</code>, only the staged <code>categories</code> and <code>categoryOrderHints</code> are updated.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code>int</code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#hashCode()">hashCode</a></span>()</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
@@ -218,6 +224,7 @@ implements <a href="ProductAddToCategoryAction.html" title="interface in com.com
 <section class="detail" id="getCategory()">
 <h3>getCategory</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../category/CategoryResourceIdentifier.html" title="interface in com.commercetools.api.models.category">CategoryResourceIdentifier</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductAddToCategoryActionImpl.html#line.57">getCategory</a></span>()</div>
+<div class="block"><p>The Category to add.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="ProductAddToCategoryAction.html#getCategory()">getCategory</a></code>&nbsp;in interface&nbsp;<code><a href="ProductAddToCategoryAction.html" title="interface in com.commercetools.api.models.product">ProductAddToCategoryAction</a></code></dd>
@@ -228,6 +235,7 @@ implements <a href="ProductAddToCategoryAction.html" title="interface in com.com
 <section class="detail" id="getOrderHint()">
 <h3>getOrderHint</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductAddToCategoryActionImpl.html#line.65">getOrderHint</a></span>()</div>
+<div class="block"><p>A string representing a number between 0 and 1. Must start with <code>0.</code> and cannot end with <code>0</code>. If empty, any existing value will be removed.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="ProductAddToCategoryAction.html#getOrderHint()">getOrderHint</a></code>&nbsp;in interface&nbsp;<code><a href="ProductAddToCategoryAction.html" title="interface in com.commercetools.api.models.product">ProductAddToCategoryAction</a></code></dd>
@@ -238,6 +246,7 @@ implements <a href="ProductAddToCategoryAction.html" title="interface in com.com
 <section class="detail" id="getStaged()">
 <h3>getStaged</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductAddToCategoryActionImpl.html#line.73">getStaged</a></span>()</div>
+<div class="block"><p>If <code>true</code>, only the staged <code>categories</code> and <code>categoryOrderHints</code> are updated. If <code>false</code>, both the current and staged <code>categories</code> and <code>categoryOrderHints</code> are updated.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="ProductAddToCategoryAction.html#getStaged()">getStaged</a></code>&nbsp;in interface&nbsp;<code><a href="ProductAddToCategoryAction.html" title="interface in com.commercetools.api.models.product">ProductAddToCategoryAction</a></code></dd>

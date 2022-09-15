@@ -86,7 +86,7 @@ loadScripts(document, 'script');</script>
 <hr>
 <div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ProductSelectionCreatedMessage.html#line.37">ProductSelectionCreatedMessage</a></span><span class="extends-implements">
 extends <a href="Message.html" title="interface in com.commercetools.api.models.message">Message</a></span></div>
-<div class="block">ProductSelectionCreatedMessage
+<div class="block"><p>Generated after a successful Create Product Selection request.</p>
 
  <hr>
  Example to create an instance using the builder pattern
@@ -139,9 +139,11 @@ extends <a href="Message.html" title="interface in com.commercetools.api.models.
 <div class="col-first odd-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="ProductSelectionCreatedMessageBuilder.html" title="class in com.commercetools.api.models.message">ProductSelectionCreatedMessageBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#builder(com.commercetools.api.models.message.ProductSelectionCreatedMessage)">builder</a></span>&#8203;(<a href="ProductSelectionCreatedMessage.html" title="interface in com.commercetools.api.models.message">ProductSelectionCreatedMessage</a>&nbsp;template)</code></div>
 <div class="col-last odd-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@NotNull @Valid <a href="../product_selection/ProductSelectionType.html" title="interface in com.commercetools.api.models.product_selection">ProductSelectionType</a></code></div>
+<div class="col-first even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@NotNull @Valid <a href="../product_selection/IndividualProductSelectionType.html" title="interface in com.commercetools.api.models.product_selection">IndividualProductSelectionType</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getProductSelection()">getProductSelection</a></span>()</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
+<div class="block">The <code>type</code> and <code>name</code> of the individual Product Selection.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="ProductSelectionCreatedMessage.html" title="interface in com.commercetools.api.models.message">ProductSelectionCreatedMessage</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#of()">of</a></span>()</code></div>
 <div class="col-last odd-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
@@ -149,7 +151,7 @@ extends <a href="Message.html" title="interface in com.commercetools.api.models.
 <div class="col-second even-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#of(com.commercetools.api.models.message.ProductSelectionCreatedMessage)">of</a></span>&#8203;(<a href="ProductSelectionCreatedMessage.html" title="interface in com.commercetools.api.models.message">ProductSelectionCreatedMessage</a>&nbsp;template)</code></div>
 <div class="col-last even-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#setProductSelection(com.commercetools.api.models.product_selection.ProductSelectionType)">setProductSelection</a></span>&#8203;(<a href="../product_selection/ProductSelectionType.html" title="interface in com.commercetools.api.models.product_selection">ProductSelectionType</a>&nbsp;productSelection)</code></div>
+<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#setProductSelection(com.commercetools.api.models.product_selection.IndividualProductSelectionType)">setProductSelection</a></span>&#8203;(<a href="../product_selection/IndividualProductSelectionType.html" title="interface in com.commercetools.api.models.product_selection">IndividualProductSelectionType</a>&nbsp;productSelection)</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table-tab1 method-summary-table"><code>static com.fasterxml.jackson.core.type.TypeReference&lt;<a href="ProductSelectionCreatedMessage.html" title="interface in com.commercetools.api.models.message">ProductSelectionCreatedMessage</a>&gt;</code></div>
 <div class="col-second even-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#typeReference()">typeReference</a></span>()</code></div>
@@ -203,13 +205,14 @@ extends <a href="Message.html" title="interface in com.commercetools.api.models.
 <h3>getProductSelection</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 @Valid
-</span><span class="return-type">@NotNull @Valid <a href="../product_selection/ProductSelectionType.html" title="interface in com.commercetools.api.models.product_selection">ProductSelectionType</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ProductSelectionCreatedMessage.html#line.46">getProductSelection</a></span>()</div>
+</span><span class="return-type">@NotNull @Valid <a href="../product_selection/IndividualProductSelectionType.html" title="interface in com.commercetools.api.models.product_selection">IndividualProductSelectionType</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ProductSelectionCreatedMessage.html#line.46">getProductSelection</a></span>()</div>
+<div class="block"><p>The <code>type</code> and <code>name</code> of the individual Product Selection.</p></div>
 </section>
 </li>
 <li>
-<section class="detail" id="setProductSelection(com.commercetools.api.models.product_selection.ProductSelectionType)">
+<section class="detail" id="setProductSelection(com.commercetools.api.models.product_selection.IndividualProductSelectionType)">
 <h3>setProductSelection</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ProductSelectionCreatedMessage.html#line.51">setProductSelection</a></span>&#8203;<span class="parameters">(<a href="../product_selection/ProductSelectionType.html" title="interface in com.commercetools.api.models.product_selection">ProductSelectionType</a>&nbsp;productSelection)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ProductSelectionCreatedMessage.html#line.51">setProductSelection</a></span>&#8203;<span class="parameters">(<a href="../product_selection/IndividualProductSelectionType.html" title="interface in com.commercetools.api.models.product_selection">IndividualProductSelectionType</a>&nbsp;productSelection)</span></div>
 </section>
 </li>
 <li>

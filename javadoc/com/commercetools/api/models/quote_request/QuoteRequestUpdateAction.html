@@ -81,11 +81,11 @@ loadScripts(document, 'script');</script>
 </dl>
 <dl class="notes">
 <dt>All Known Subinterfaces:</dt>
-<dd><code><a href="QuoteRequestChangeQuoteRequestStateAction.html" title="interface in com.commercetools.api.models.quote_request">QuoteRequestChangeQuoteRequestStateAction</a></code>, <code><a href="QuoteRequestSetCustomFieldAction.html" title="interface in com.commercetools.api.models.quote_request">QuoteRequestSetCustomFieldAction</a></code>, <code><a href="QuoteRequestSetCustomTypeAction.html" title="interface in com.commercetools.api.models.quote_request">QuoteRequestSetCustomTypeAction</a></code></dd>
+<dd><code><a href="QuoteRequestChangeQuoteRequestStateAction.html" title="interface in com.commercetools.api.models.quote_request">QuoteRequestChangeQuoteRequestStateAction</a></code>, <code><a href="QuoteRequestSetCustomFieldAction.html" title="interface in com.commercetools.api.models.quote_request">QuoteRequestSetCustomFieldAction</a></code>, <code><a href="QuoteRequestSetCustomTypeAction.html" title="interface in com.commercetools.api.models.quote_request">QuoteRequestSetCustomTypeAction</a></code>, <code><a href="QuoteRequestTransitionStateAction.html" title="interface in com.commercetools.api.models.quote_request">QuoteRequestTransitionStateAction</a></code></dd>
 </dl>
 <dl class="notes">
 <dt>All Known Implementing Classes:</dt>
-<dd><code><a href="QuoteRequestChangeQuoteRequestStateActionImpl.html" title="class in com.commercetools.api.models.quote_request">QuoteRequestChangeQuoteRequestStateActionImpl</a></code>, <code><a href="QuoteRequestSetCustomFieldActionImpl.html" title="class in com.commercetools.api.models.quote_request">QuoteRequestSetCustomFieldActionImpl</a></code>, <code><a href="QuoteRequestSetCustomTypeActionImpl.html" title="class in com.commercetools.api.models.quote_request">QuoteRequestSetCustomTypeActionImpl</a></code>, <code><a href="QuoteRequestUpdateActionImpl.html" title="class in com.commercetools.api.models.quote_request">QuoteRequestUpdateActionImpl</a></code></dd>
+<dd><code><a href="QuoteRequestChangeQuoteRequestStateActionImpl.html" title="class in com.commercetools.api.models.quote_request">QuoteRequestChangeQuoteRequestStateActionImpl</a></code>, <code><a href="QuoteRequestSetCustomFieldActionImpl.html" title="class in com.commercetools.api.models.quote_request">QuoteRequestSetCustomFieldActionImpl</a></code>, <code><a href="QuoteRequestSetCustomTypeActionImpl.html" title="class in com.commercetools.api.models.quote_request">QuoteRequestSetCustomTypeActionImpl</a></code>, <code><a href="QuoteRequestTransitionStateActionImpl.html" title="class in com.commercetools.api.models.quote_request">QuoteRequestTransitionStateActionImpl</a></code>, <code><a href="QuoteRequestUpdateActionImpl.html" title="class in com.commercetools.api.models.quote_request">QuoteRequestUpdateActionImpl</a></code></dd>
 </dl>
 <hr>
 <div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/quote_request/QuoteRequestUpdateAction.html#line.28">QuoteRequestUpdateAction</a></span><span class="extends-implements">
@@ -127,12 +127,15 @@ extends <a href="../ResourceUpdateAction.html" title="interface in com.commercet
 <div class="col-first odd-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="QuoteRequestSetCustomTypeActionBuilder.html" title="class in com.commercetools.api.models.quote_request">QuoteRequestSetCustomTypeActionBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#setCustomTypeBuilder()">setCustomTypeBuilder</a></span>()</code></div>
 <div class="col-last odd-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table-tab1 method-summary-table"><code>static com.fasterxml.jackson.core.type.TypeReference&lt;<a href="QuoteRequestUpdateAction.html" title="interface in com.commercetools.api.models.quote_request">QuoteRequestUpdateAction</a>&gt;</code></div>
-<div class="col-second even-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#typeReference()">typeReference</a></span>()</code></div>
+<div class="col-first even-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="QuoteRequestTransitionStateActionBuilder.html" title="class in com.commercetools.api.models.quote_request">QuoteRequestTransitionStateActionBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#transitionStateBuilder()">transitionStateBuilder</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table"><code>default &lt;T&gt;&nbsp;T</code></div>
-<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table"><code><span class="member-name-link"><a href="#withQuoteRequestUpdateAction(java.util.function.Function)">withQuoteRequestUpdateAction</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="QuoteRequestUpdateAction.html" title="interface in com.commercetools.api.models.quote_request">QuoteRequestUpdateAction</a>,&#8203;T&gt;&nbsp;helper)</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab1 method-summary-table"><code>static com.fasterxml.jackson.core.type.TypeReference&lt;<a href="QuoteRequestUpdateAction.html" title="interface in com.commercetools.api.models.quote_request">QuoteRequestUpdateAction</a>&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#typeReference()">typeReference</a></span>()</code></div>
+<div class="col-last odd-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table"><code>default &lt;T&gt;&nbsp;T</code></div>
+<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table"><code><span class="member-name-link"><a href="#withQuoteRequestUpdateAction(java.util.function.Function)">withQuoteRequestUpdateAction</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="QuoteRequestUpdateAction.html" title="interface in com.commercetools.api.models.quote_request">QuoteRequestUpdateAction</a>,&#8203;T&gt;&nbsp;helper)</code></div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table">&nbsp;</div>
 </div>
 </div>
 </div>
@@ -154,7 +157,7 @@ extends <a href="../ResourceUpdateAction.html" title="interface in com.commercet
 <section class="detail" id="getAction()">
 <h3>getAction</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/quote_request/QuoteRequestUpdateAction.html#line.41">getAction</a></span>()</div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/quote_request/QuoteRequestUpdateAction.html#line.42">getAction</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../ResourceUpdateAction.html#getAction()">getAction</a></code>&nbsp;in interface&nbsp;<code><a href="../ResourceUpdateAction.html" title="interface in com.commercetools.api.models">ResourceUpdateAction</a>&lt;<a href="QuoteRequestUpdateAction.html" title="interface in com.commercetools.api.models.quote_request">QuoteRequestUpdateAction</a>&gt;</code></dd>
@@ -164,31 +167,37 @@ extends <a href="../ResourceUpdateAction.html" title="interface in com.commercet
 <li>
 <section class="detail" id="changeQuoteRequestStateBuilder()">
 <h3>changeQuoteRequestStateBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="QuoteRequestChangeQuoteRequestStateActionBuilder.html" title="class in com.commercetools.api.models.quote_request">QuoteRequestChangeQuoteRequestStateActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/quote_request/QuoteRequestUpdateAction.html#line.45">changeQuoteRequestStateBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="QuoteRequestChangeQuoteRequestStateActionBuilder.html" title="class in com.commercetools.api.models.quote_request">QuoteRequestChangeQuoteRequestStateActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/quote_request/QuoteRequestUpdateAction.html#line.46">changeQuoteRequestStateBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="setCustomFieldBuilder()">
 <h3>setCustomFieldBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="QuoteRequestSetCustomFieldActionBuilder.html" title="class in com.commercetools.api.models.quote_request">QuoteRequestSetCustomFieldActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/quote_request/QuoteRequestUpdateAction.html#line.49">setCustomFieldBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="QuoteRequestSetCustomFieldActionBuilder.html" title="class in com.commercetools.api.models.quote_request">QuoteRequestSetCustomFieldActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/quote_request/QuoteRequestUpdateAction.html#line.50">setCustomFieldBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="setCustomTypeBuilder()">
 <h3>setCustomTypeBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="QuoteRequestSetCustomTypeActionBuilder.html" title="class in com.commercetools.api.models.quote_request">QuoteRequestSetCustomTypeActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/quote_request/QuoteRequestUpdateAction.html#line.53">setCustomTypeBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="QuoteRequestSetCustomTypeActionBuilder.html" title="class in com.commercetools.api.models.quote_request">QuoteRequestSetCustomTypeActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/quote_request/QuoteRequestUpdateAction.html#line.54">setCustomTypeBuilder</a></span>()</div>
+</section>
+</li>
+<li>
+<section class="detail" id="transitionStateBuilder()">
+<h3>transitionStateBuilder</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="QuoteRequestTransitionStateActionBuilder.html" title="class in com.commercetools.api.models.quote_request">QuoteRequestTransitionStateActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/quote_request/QuoteRequestUpdateAction.html#line.58">transitionStateBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="withQuoteRequestUpdateAction(java.util.function.Function)">
 <h3>withQuoteRequestUpdateAction</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/quote_request/QuoteRequestUpdateAction.html#line.57">withQuoteRequestUpdateAction</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="QuoteRequestUpdateAction.html" title="interface in com.commercetools.api.models.quote_request">QuoteRequestUpdateAction</a>,&#8203;T&gt;&nbsp;helper)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/quote_request/QuoteRequestUpdateAction.html#line.62">withQuoteRequestUpdateAction</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="QuoteRequestUpdateAction.html" title="interface in com.commercetools.api.models.quote_request">QuoteRequestUpdateAction</a>,&#8203;T&gt;&nbsp;helper)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="typeReference()">
 <h3>typeReference</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="QuoteRequestUpdateAction.html" title="interface in com.commercetools.api.models.quote_request">QuoteRequestUpdateAction</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/quote_request/QuoteRequestUpdateAction.html#line.61">typeReference</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="QuoteRequestUpdateAction.html" title="interface in com.commercetools.api.models.quote_request">QuoteRequestUpdateAction</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/quote_request/QuoteRequestUpdateAction.html#line.66">typeReference</a></span>()</div>
 </section>
 </li>
 </ul>

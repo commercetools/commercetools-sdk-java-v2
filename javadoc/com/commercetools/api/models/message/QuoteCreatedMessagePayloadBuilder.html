@@ -83,7 +83,7 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="QuoteCreatedMessagePayload.html" title="interface in com.commercetools.api.models.message">QuoteCreatedMessagePayload</a>&gt;</code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/QuoteCreatedMessagePayloadBuilder.html#line.20">QuoteCreatedMessagePayloadBuilder</a></span>
+<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/QuoteCreatedMessagePayloadBuilder.html#line.22">QuoteCreatedMessagePayloadBuilder</a></span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
 implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="QuoteCreatedMessagePayload.html" title="interface in com.commercetools.api.models.message">QuoteCreatedMessagePayload</a>&gt;</span></div>
 <div class="block">QuoteCreatedMessagePayloadBuilder
@@ -92,6 +92,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
  <div class=code-example>
  <pre><code class='java'>
      QuoteCreatedMessagePayload quoteCreatedMessagePayload = QuoteCreatedMessagePayload.builder()
+             .quote(quoteBuilder -> quoteBuilder)
              .build()
  </code></pre>
  </div></div>
@@ -130,12 +131,25 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
 <div class="block">builds QuoteCreatedMessagePayload without checking for non null required values</div>
 </div>
-<div class="col-first even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code>static <a href="QuoteCreatedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">QuoteCreatedMessagePayloadBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#of()">of</a></span>()</code></div>
-<div class="col-last even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="../quote/Quote.html" title="interface in com.commercetools.api.models.quote">Quote</a></code></div>
+<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getQuote()">getQuote</a></span>()</code></div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code>static <a href="QuoteCreatedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">QuoteCreatedMessagePayloadBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#of(com.commercetools.api.models.message.QuoteCreatedMessagePayload)">of</a></span>&#8203;(<a href="QuoteCreatedMessagePayload.html" title="interface in com.commercetools.api.models.message">QuoteCreatedMessagePayload</a>&nbsp;template)</code></div>
+<div class="col-second odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#of()">of</a></span>()</code></div>
 <div class="col-last odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code>static <a href="QuoteCreatedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">QuoteCreatedMessagePayloadBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#of(com.commercetools.api.models.message.QuoteCreatedMessagePayload)">of</a></span>&#8203;(<a href="QuoteCreatedMessagePayload.html" title="interface in com.commercetools.api.models.message">QuoteCreatedMessagePayload</a>&nbsp;template)</code></div>
+<div class="col-last even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="QuoteCreatedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">QuoteCreatedMessagePayloadBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#quote(com.commercetools.api.models.quote.Quote)">quote</a></span>&#8203;(<a href="../quote/Quote.html" title="interface in com.commercetools.api.models.quote">Quote</a>&nbsp;quote)</code></div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">Quote that was created.</div>
+</div>
+<div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="QuoteCreatedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">QuoteCreatedMessagePayloadBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#quote(java.util.function.Function)">quote</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../quote/QuoteBuilder.html" title="class in com.commercetools.api.models.quote">QuoteBuilder</a>,&#8203;<a href="../quote/QuoteBuilder.html" title="class in com.commercetools.api.models.quote">QuoteBuilder</a>&gt;&nbsp;builder)</code></div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">Quote that was created.</div>
+</div>
 </div>
 </div>
 </div>
@@ -156,7 +170,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="&lt;init&gt;()">
 <h3>QuoteCreatedMessagePayloadBuilder</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/QuoteCreatedMessagePayloadBuilder.html#line.21">QuoteCreatedMessagePayloadBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/QuoteCreatedMessagePayloadBuilder.html#line.23">QuoteCreatedMessagePayloadBuilder</a></span>()</div>
 </section>
 </li>
 </ul>
@@ -168,9 +182,29 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <h2>Method Details</h2>
 <ul class="member-list">
 <li>
+<section class="detail" id="quote(java.util.function.Function)">
+<h3>quote</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="QuoteCreatedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">QuoteCreatedMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/QuoteCreatedMessagePayloadBuilder.html#line.31">quote</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../quote/QuoteBuilder.html" title="class in com.commercetools.api.models.quote">QuoteBuilder</a>,&#8203;<a href="../quote/QuoteBuilder.html" title="class in com.commercetools.api.models.quote">QuoteBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="block"><p>Quote that was created.</p></div>
+</section>
+</li>
+<li>
+<section class="detail" id="quote(com.commercetools.api.models.quote.Quote)">
+<h3>quote</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="QuoteCreatedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">QuoteCreatedMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/QuoteCreatedMessagePayloadBuilder.html#line.41">quote</a></span>&#8203;<span class="parameters">(<a href="../quote/Quote.html" title="interface in com.commercetools.api.models.quote">Quote</a>&nbsp;quote)</span></div>
+<div class="block"><p>Quote that was created.</p></div>
+</section>
+</li>
+<li>
+<section class="detail" id="getQuote()">
+<h3>getQuote</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../quote/Quote.html" title="interface in com.commercetools.api.models.quote">Quote</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/QuoteCreatedMessagePayloadBuilder.html#line.46">getQuote</a></span>()</div>
+</section>
+</li>
+<li>
 <section class="detail" id="build()">
 <h3>build</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="QuoteCreatedMessagePayload.html" title="interface in com.commercetools.api.models.message">QuoteCreatedMessagePayload</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/QuoteCreatedMessagePayloadBuilder.html#line.23">build</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="QuoteCreatedMessagePayload.html" title="interface in com.commercetools.api.models.message">QuoteCreatedMessagePayload</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/QuoteCreatedMessagePayloadBuilder.html#line.50">build</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html#build()">build</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="QuoteCreatedMessagePayload.html" title="interface in com.commercetools.api.models.message">QuoteCreatedMessagePayload</a>&gt;</code></dd>
@@ -180,20 +214,20 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="buildUnchecked()">
 <h3>buildUnchecked</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="QuoteCreatedMessagePayload.html" title="interface in com.commercetools.api.models.message">QuoteCreatedMessagePayload</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/QuoteCreatedMessagePayloadBuilder.html#line.30">buildUnchecked</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="QuoteCreatedMessagePayload.html" title="interface in com.commercetools.api.models.message">QuoteCreatedMessagePayload</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/QuoteCreatedMessagePayloadBuilder.html#line.58">buildUnchecked</a></span>()</div>
 <div class="block">builds QuoteCreatedMessagePayload without checking for non null required values</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="QuoteCreatedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">QuoteCreatedMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/QuoteCreatedMessagePayloadBuilder.html#line.34">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="QuoteCreatedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">QuoteCreatedMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/QuoteCreatedMessagePayloadBuilder.html#line.62">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.api.models.message.QuoteCreatedMessagePayload)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="QuoteCreatedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">QuoteCreatedMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/QuoteCreatedMessagePayloadBuilder.html#line.38">of</a></span>&#8203;<span class="parameters">(<a href="QuoteCreatedMessagePayload.html" title="interface in com.commercetools.api.models.message">QuoteCreatedMessagePayload</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="QuoteCreatedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">QuoteCreatedMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/QuoteCreatedMessagePayloadBuilder.html#line.66">of</a></span>&#8203;<span class="parameters">(<a href="QuoteCreatedMessagePayload.html" title="interface in com.commercetools.api.models.message">QuoteCreatedMessagePayload</a>&nbsp;template)</span></div>
 </section>
 </li>
 </ul>

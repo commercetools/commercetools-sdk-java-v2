@@ -81,7 +81,7 @@ loadScripts(document, 'script');</script>
 </dl>
 <hr>
 <div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/ProductPublishScope.html#line.15">ProductPublishScope</a></span></div>
-<div class="block">ProductPublishScope</div>
+<div class="block"><p>The scope controls which part of the product information is published.</p></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -111,10 +111,14 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color"><code>static <a href="ProductPublishScope.html" title="interface in com.commercetools.api.models.cart">ProductPublishScope</a></code></div>
 <div class="col-second even-row-color"><code><span class="member-name-link"><a href="#ALL">ALL</a></span></code></div>
-<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-last even-row-color">
+<div class="block">Publishes a Product that causes the <em>staged</em> projection of the Product to override the <em>current</em> projection.</div>
+</div>
 <div class="col-first odd-row-color"><code>static <a href="ProductPublishScope.html" title="interface in com.commercetools.api.models.cart">ProductPublishScope</a></code></div>
 <div class="col-second odd-row-color"><code><span class="member-name-link"><a href="#PRICES">PRICES</a></span></code></div>
-<div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-last odd-row-color">
+<div class="block">Publishes the Prices of the Product (only if the Product is already published).</div>
+</div>
 </div>
 </section>
 </li>
@@ -164,13 +168,15 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="ALL">
 <h3>ALL</h3>
-<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="ProductPublishScope.html" title="interface in com.commercetools.api.models.cart">ProductPublishScope</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/ProductPublishScope.html#line.18">ALL</a></span></div>
+<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="ProductPublishScope.html" title="interface in com.commercetools.api.models.cart">ProductPublishScope</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/ProductPublishScope.html#line.22">ALL</a></span></div>
+<div class="block"><p>Publishes a Product that causes the <em>staged</em> projection of the Product to override the <em>current</em> projection. If the Product is published for the first time, the <em>current</em> projection is created. This is the default scope.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="PRICES">
 <h3>PRICES</h3>
-<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="ProductPublishScope.html" title="interface in com.commercetools.api.models.cart">ProductPublishScope</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/ProductPublishScope.html#line.20">PRICES</a></span></div>
+<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="ProductPublishScope.html" title="interface in com.commercetools.api.models.cart">ProductPublishScope</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/ProductPublishScope.html#line.27">PRICES</a></span></div>
+<div class="block"><p>Publishes the Prices of the Product (only if the Product is already published). All Product Variants' Prices in the <em>staged</em> projection are published into the <em>current</em> projection with the same <code>id</code>. Prices in a <em>staged</em> Product Variant that has no <em>current</em> projection are not published. Prices in a <em>current</em> Product Variant that has no <em>staged</em> projection are unchanged. The <code>hasStagedChanges</code> <a href="ctp:api:type:ProductCatalogData">flag</a> is updated according to whether the <em>staged</em> and <em>current</em> projections still differ after the prices are published.</p></div>
 </section>
 </li>
 </ul>
@@ -184,19 +190,19 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="getJsonName()">
 <h3>getJsonName</h3>
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/ProductPublishScope.html#line.41">getJsonName</a></span>()</div>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/ProductPublishScope.html#line.48">getJsonName</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="name()">
 <h3>name</h3>
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/ProductPublishScope.html#line.44">name</a></span>()</div>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/ProductPublishScope.html#line.51">name</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="toString()">
 <h3>toString</h3>
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/ProductPublishScope.html#line.46">toString</a></span>()</div>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/ProductPublishScope.html#line.53">toString</a></span>()</div>
 <dl class="notes">
 <dt>Overrides:</dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#toString()" title="class or interface in java.lang" class="external-link">toString</a></code>&nbsp;in class&nbsp;<code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></code></dd>
@@ -206,19 +212,19 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="findEnum(java.lang.String)">
 <h3>findEnum</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductPublishScope.html" title="interface in com.commercetools.api.models.cart">ProductPublishScope</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/ProductPublishScope.html#line.48">findEnum</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;value)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductPublishScope.html" title="interface in com.commercetools.api.models.cart">ProductPublishScope</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/ProductPublishScope.html#line.55">findEnum</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;value)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="findEnumViaJsonName(java.lang.String)">
 <h3>findEnumViaJsonName</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Optional.html" title="class or interface in java.util" class="external-link">Optional</a>&lt;<a href="ProductPublishScope.html" title="interface in com.commercetools.api.models.cart">ProductPublishScope</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/ProductPublishScope.html#line.67">findEnumViaJsonName</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;jsonName)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Optional.html" title="class or interface in java.util" class="external-link">Optional</a>&lt;<a href="ProductPublishScope.html" title="interface in com.commercetools.api.models.cart">ProductPublishScope</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/ProductPublishScope.html#line.74">findEnumViaJsonName</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;jsonName)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="values()">
 <h3>values</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductPublishScope.html" title="interface in com.commercetools.api.models.cart">ProductPublishScope</a>[]</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/ProductPublishScope.html#line.71">values</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductPublishScope.html" title="interface in com.commercetools.api.models.cart">ProductPublishScope</a>[]</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/ProductPublishScope.html#line.78">values</a></span>()</div>
 </section>
 </li>
 </ul>

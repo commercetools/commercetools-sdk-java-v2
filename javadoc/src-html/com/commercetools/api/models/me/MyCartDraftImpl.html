@@ -61,7 +61,7 @@
 <span class="source-line-no">048</span><span id="line.48"></span>
 <span class="source-line-no">049</span><span id="line.49">    private com.commercetools.api.models.store.StoreKeyReference store;</span>
 <span class="source-line-no">050</span><span id="line.50"></span>
-<span class="source-line-no">051</span><span id="line.51">    private java.util.List&lt;com.commercetools.api.models.cart.DiscountCodeInfo&gt; discountCodes;</span>
+<span class="source-line-no">051</span><span id="line.51">    private java.util.List&lt;String&gt; discountCodes;</span>
 <span class="source-line-no">052</span><span id="line.52"></span>
 <span class="source-line-no">053</span><span id="line.53">    @JsonCreator</span>
 <span class="source-line-no">054</span><span id="line.54">    MyCartDraftImpl(@JsonProperty("currency") final String currency,</span>
@@ -77,7 +77,7 @@
 <span class="source-line-no">064</span><span id="line.64">            @JsonProperty("deleteDaysAfterLastModification") final Long deleteDaysAfterLastModification,</span>
 <span class="source-line-no">065</span><span id="line.65">            @JsonProperty("itemShippingAddresses") final java.util.List&lt;com.commercetools.api.models.common.BaseAddress&gt; itemShippingAddresses,</span>
 <span class="source-line-no">066</span><span id="line.66">            @JsonProperty("store") final com.commercetools.api.models.store.StoreKeyReference store,</span>
-<span class="source-line-no">067</span><span id="line.67">            @JsonProperty("discountCodes") final java.util.List&lt;com.commercetools.api.models.cart.DiscountCodeInfo&gt; discountCodes) {</span>
+<span class="source-line-no">067</span><span id="line.67">            @JsonProperty("discountCodes") final java.util.List&lt;String&gt; discountCodes) {</span>
 <span class="source-line-no">068</span><span id="line.68">        this.currency = currency;</span>
 <span class="source-line-no">069</span><span id="line.69">        this.customerEmail = customerEmail;</span>
 <span class="source-line-no">070</span><span id="line.70">        this.country = country;</span>
@@ -211,10 +211,10 @@
 <span class="source-line-no">198</span><span id="line.198">    }</span>
 <span class="source-line-no">199</span><span id="line.199"></span>
 <span class="source-line-no">200</span><span id="line.200">    /**</span>
-<span class="source-line-no">201</span><span id="line.201">     *</span>
+<span class="source-line-no">201</span><span id="line.201">     *  &lt;p&gt;The code of existing DiscountCodes.&lt;/p&gt;</span>
 <span class="source-line-no">202</span><span id="line.202">     */</span>
 <span class="source-line-no">203</span><span id="line.203"></span>
-<span class="source-line-no">204</span><span id="line.204">    public java.util.List&lt;com.commercetools.api.models.cart.DiscountCodeInfo&gt; getDiscountCodes() {</span>
+<span class="source-line-no">204</span><span id="line.204">    public java.util.List&lt;String&gt; getDiscountCodes() {</span>
 <span class="source-line-no">205</span><span id="line.205">        return this.discountCodes;</span>
 <span class="source-line-no">206</span><span id="line.206">    }</span>
 <span class="source-line-no">207</span><span id="line.207"></span>
@@ -285,64 +285,63 @@
 <span class="source-line-no">272</span><span id="line.272">        this.store = store;</span>
 <span class="source-line-no">273</span><span id="line.273">    }</span>
 <span class="source-line-no">274</span><span id="line.274"></span>
-<span class="source-line-no">275</span><span id="line.275">    public void setDiscountCodes(final com.commercetools.api.models.cart.DiscountCodeInfo... discountCodes) {</span>
+<span class="source-line-no">275</span><span id="line.275">    public void setDiscountCodes(final String... discountCodes) {</span>
 <span class="source-line-no">276</span><span id="line.276">        this.discountCodes = new ArrayList&lt;&gt;(Arrays.asList(discountCodes));</span>
 <span class="source-line-no">277</span><span id="line.277">    }</span>
 <span class="source-line-no">278</span><span id="line.278"></span>
-<span class="source-line-no">279</span><span id="line.279">    public void setDiscountCodes(</span>
-<span class="source-line-no">280</span><span id="line.280">            final java.util.List&lt;com.commercetools.api.models.cart.DiscountCodeInfo&gt; discountCodes) {</span>
-<span class="source-line-no">281</span><span id="line.281">        this.discountCodes = discountCodes;</span>
-<span class="source-line-no">282</span><span id="line.282">    }</span>
-<span class="source-line-no">283</span><span id="line.283"></span>
-<span class="source-line-no">284</span><span id="line.284">    @Override</span>
-<span class="source-line-no">285</span><span id="line.285">    public boolean equals(Object o) {</span>
-<span class="source-line-no">286</span><span id="line.286">        if (this == o)</span>
-<span class="source-line-no">287</span><span id="line.287">            return true;</span>
-<span class="source-line-no">288</span><span id="line.288"></span>
-<span class="source-line-no">289</span><span id="line.289">        if (o == null || getClass() != o.getClass())</span>
-<span class="source-line-no">290</span><span id="line.290">            return false;</span>
-<span class="source-line-no">291</span><span id="line.291"></span>
-<span class="source-line-no">292</span><span id="line.292">        MyCartDraftImpl that = (MyCartDraftImpl) o;</span>
-<span class="source-line-no">293</span><span id="line.293"></span>
-<span class="source-line-no">294</span><span id="line.294">        return new EqualsBuilder().append(currency, that.currency)</span>
-<span class="source-line-no">295</span><span id="line.295">                .append(customerEmail, that.customerEmail)</span>
-<span class="source-line-no">296</span><span id="line.296">                .append(country, that.country)</span>
-<span class="source-line-no">297</span><span id="line.297">                .append(inventoryMode, that.inventoryMode)</span>
-<span class="source-line-no">298</span><span id="line.298">                .append(lineItems, that.lineItems)</span>
-<span class="source-line-no">299</span><span id="line.299">                .append(shippingAddress, that.shippingAddress)</span>
-<span class="source-line-no">300</span><span id="line.300">                .append(billingAddress, that.billingAddress)</span>
-<span class="source-line-no">301</span><span id="line.301">                .append(shippingMethod, that.shippingMethod)</span>
-<span class="source-line-no">302</span><span id="line.302">                .append(custom, that.custom)</span>
-<span class="source-line-no">303</span><span id="line.303">                .append(locale, that.locale)</span>
-<span class="source-line-no">304</span><span id="line.304">                .append(taxMode, that.taxMode)</span>
-<span class="source-line-no">305</span><span id="line.305">                .append(deleteDaysAfterLastModification, that.deleteDaysAfterLastModification)</span>
-<span class="source-line-no">306</span><span id="line.306">                .append(itemShippingAddresses, that.itemShippingAddresses)</span>
-<span class="source-line-no">307</span><span id="line.307">                .append(store, that.store)</span>
-<span class="source-line-no">308</span><span id="line.308">                .append(discountCodes, that.discountCodes)</span>
-<span class="source-line-no">309</span><span id="line.309">                .isEquals();</span>
-<span class="source-line-no">310</span><span id="line.310">    }</span>
-<span class="source-line-no">311</span><span id="line.311"></span>
-<span class="source-line-no">312</span><span id="line.312">    @Override</span>
-<span class="source-line-no">313</span><span id="line.313">    public int hashCode() {</span>
-<span class="source-line-no">314</span><span id="line.314">        return new HashCodeBuilder(17, 37).append(currency)</span>
-<span class="source-line-no">315</span><span id="line.315">                .append(customerEmail)</span>
-<span class="source-line-no">316</span><span id="line.316">                .append(country)</span>
-<span class="source-line-no">317</span><span id="line.317">                .append(inventoryMode)</span>
-<span class="source-line-no">318</span><span id="line.318">                .append(lineItems)</span>
-<span class="source-line-no">319</span><span id="line.319">                .append(shippingAddress)</span>
-<span class="source-line-no">320</span><span id="line.320">                .append(billingAddress)</span>
-<span class="source-line-no">321</span><span id="line.321">                .append(shippingMethod)</span>
-<span class="source-line-no">322</span><span id="line.322">                .append(custom)</span>
-<span class="source-line-no">323</span><span id="line.323">                .append(locale)</span>
-<span class="source-line-no">324</span><span id="line.324">                .append(taxMode)</span>
-<span class="source-line-no">325</span><span id="line.325">                .append(deleteDaysAfterLastModification)</span>
-<span class="source-line-no">326</span><span id="line.326">                .append(itemShippingAddresses)</span>
-<span class="source-line-no">327</span><span id="line.327">                .append(store)</span>
-<span class="source-line-no">328</span><span id="line.328">                .append(discountCodes)</span>
-<span class="source-line-no">329</span><span id="line.329">                .toHashCode();</span>
-<span class="source-line-no">330</span><span id="line.330">    }</span>
-<span class="source-line-no">331</span><span id="line.331"></span>
-<span class="source-line-no">332</span><span id="line.332">}</span>
+<span class="source-line-no">279</span><span id="line.279">    public void setDiscountCodes(final java.util.List&lt;String&gt; discountCodes) {</span>
+<span class="source-line-no">280</span><span id="line.280">        this.discountCodes = discountCodes;</span>
+<span class="source-line-no">281</span><span id="line.281">    }</span>
+<span class="source-line-no">282</span><span id="line.282"></span>
+<span class="source-line-no">283</span><span id="line.283">    @Override</span>
+<span class="source-line-no">284</span><span id="line.284">    public boolean equals(Object o) {</span>
+<span class="source-line-no">285</span><span id="line.285">        if (this == o)</span>
+<span class="source-line-no">286</span><span id="line.286">            return true;</span>
+<span class="source-line-no">287</span><span id="line.287"></span>
+<span class="source-line-no">288</span><span id="line.288">        if (o == null || getClass() != o.getClass())</span>
+<span class="source-line-no">289</span><span id="line.289">            return false;</span>
+<span class="source-line-no">290</span><span id="line.290"></span>
+<span class="source-line-no">291</span><span id="line.291">        MyCartDraftImpl that = (MyCartDraftImpl) o;</span>
+<span class="source-line-no">292</span><span id="line.292"></span>
+<span class="source-line-no">293</span><span id="line.293">        return new EqualsBuilder().append(currency, that.currency)</span>
+<span class="source-line-no">294</span><span id="line.294">                .append(customerEmail, that.customerEmail)</span>
+<span class="source-line-no">295</span><span id="line.295">                .append(country, that.country)</span>
+<span class="source-line-no">296</span><span id="line.296">                .append(inventoryMode, that.inventoryMode)</span>
+<span class="source-line-no">297</span><span id="line.297">                .append(lineItems, that.lineItems)</span>
+<span class="source-line-no">298</span><span id="line.298">                .append(shippingAddress, that.shippingAddress)</span>
+<span class="source-line-no">299</span><span id="line.299">                .append(billingAddress, that.billingAddress)</span>
+<span class="source-line-no">300</span><span id="line.300">                .append(shippingMethod, that.shippingMethod)</span>
+<span class="source-line-no">301</span><span id="line.301">                .append(custom, that.custom)</span>
+<span class="source-line-no">302</span><span id="line.302">                .append(locale, that.locale)</span>
+<span class="source-line-no">303</span><span id="line.303">                .append(taxMode, that.taxMode)</span>
+<span class="source-line-no">304</span><span id="line.304">                .append(deleteDaysAfterLastModification, that.deleteDaysAfterLastModification)</span>
+<span class="source-line-no">305</span><span id="line.305">                .append(itemShippingAddresses, that.itemShippingAddresses)</span>
+<span class="source-line-no">306</span><span id="line.306">                .append(store, that.store)</span>
+<span class="source-line-no">307</span><span id="line.307">                .append(discountCodes, that.discountCodes)</span>
+<span class="source-line-no">308</span><span id="line.308">                .isEquals();</span>
+<span class="source-line-no">309</span><span id="line.309">    }</span>
+<span class="source-line-no">310</span><span id="line.310"></span>
+<span class="source-line-no">311</span><span id="line.311">    @Override</span>
+<span class="source-line-no">312</span><span id="line.312">    public int hashCode() {</span>
+<span class="source-line-no">313</span><span id="line.313">        return new HashCodeBuilder(17, 37).append(currency)</span>
+<span class="source-line-no">314</span><span id="line.314">                .append(customerEmail)</span>
+<span class="source-line-no">315</span><span id="line.315">                .append(country)</span>
+<span class="source-line-no">316</span><span id="line.316">                .append(inventoryMode)</span>
+<span class="source-line-no">317</span><span id="line.317">                .append(lineItems)</span>
+<span class="source-line-no">318</span><span id="line.318">                .append(shippingAddress)</span>
+<span class="source-line-no">319</span><span id="line.319">                .append(billingAddress)</span>
+<span class="source-line-no">320</span><span id="line.320">                .append(shippingMethod)</span>
+<span class="source-line-no">321</span><span id="line.321">                .append(custom)</span>
+<span class="source-line-no">322</span><span id="line.322">                .append(locale)</span>
+<span class="source-line-no">323</span><span id="line.323">                .append(taxMode)</span>
+<span class="source-line-no">324</span><span id="line.324">                .append(deleteDaysAfterLastModification)</span>
+<span class="source-line-no">325</span><span id="line.325">                .append(itemShippingAddresses)</span>
+<span class="source-line-no">326</span><span id="line.326">                .append(store)</span>
+<span class="source-line-no">327</span><span id="line.327">                .append(discountCodes)</span>
+<span class="source-line-no">328</span><span id="line.328">                .toHashCode();</span>
+<span class="source-line-no">329</span><span id="line.329">    }</span>
+<span class="source-line-no">330</span><span id="line.330"></span>
+<span class="source-line-no">331</span><span id="line.331">}</span>
 
 
 

@@ -18,6 +18,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
  * MissingPricesPagedQueryResult
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Deprecated
 public class MissingPricesPagedQueryResultImpl implements MissingPricesPagedQueryResult, ModelBase {
 
     private Long count;
@@ -28,6 +29,7 @@ public class MissingPricesPagedQueryResultImpl implements MissingPricesPagedQuer
 
     private java.util.List<com.commercetools.ml.models.missing_data.MissingPrices> results;
 
+    @Deprecated
     private com.commercetools.ml.models.missing_data.MissingPricesMeta meta;
 
     @JsonCreator
@@ -80,7 +82,7 @@ public class MissingPricesPagedQueryResultImpl implements MissingPricesPagedQuer
     /**
      *
      */
-
+    @Deprecated
     public com.commercetools.ml.models.missing_data.MissingPricesMeta getMeta() {
         return this.meta;
     }
@@ -105,6 +107,7 @@ public class MissingPricesPagedQueryResultImpl implements MissingPricesPagedQuer
         this.results = results;
     }
 
+    @Deprecated
     public void setMeta(final com.commercetools.ml.models.missing_data.MissingPricesMeta meta) {
         this.meta = meta;
     }

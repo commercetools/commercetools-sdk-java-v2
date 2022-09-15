@@ -32,7 +32,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface MethodTaxRate {
 
     /**
-     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multi</code> ShippingMode.</p>
+     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multiple</code> ShippingMode.</p>
      */
     @NotNull
     @JsonProperty("shippingMethodKey")

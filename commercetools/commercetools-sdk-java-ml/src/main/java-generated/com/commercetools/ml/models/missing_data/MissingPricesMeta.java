@@ -29,6 +29,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = MissingPricesMetaImpl.class)
+@Deprecated
 public interface MissingPricesMeta {
 
     /**
@@ -36,6 +37,7 @@ public interface MissingPricesMeta {
      */
     @NotNull
     @Valid
+    @Deprecated
     @JsonProperty("productLevel")
     public MissingPricesProductLevel getProductLevel();
 
@@ -44,11 +46,14 @@ public interface MissingPricesMeta {
      */
     @NotNull
     @Valid
+    @Deprecated
     @JsonProperty("variantLevel")
     public MissingPricesVariantLevel getVariantLevel();
 
+    @Deprecated
     public void setProductLevel(final MissingPricesProductLevel productLevel);
 
+    @Deprecated
     public void setVariantLevel(final MissingPricesVariantLevel variantLevel);
 
     public static MissingPricesMeta of() {

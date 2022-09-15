@@ -130,6 +130,7 @@ import io.vrap.rmf.base.client.utils.Generated;
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.StagedQuoteStateChangedMessagePayloadImpl.class, name = StagedQuoteStateChangedMessagePayload.STAGED_QUOTE_STATE_CHANGED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.StagedQuoteStateTransitionMessagePayloadImpl.class, name = StagedQuoteStateTransitionMessagePayload.STAGED_QUOTE_STATE_TRANSITION),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.StagedQuoteValidToSetMessagePayloadImpl.class, name = StagedQuoteValidToSetMessagePayload.STAGED_QUOTE_VALID_TO_SET),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.message.StandalonePriceActiveChangedMessagePayloadImpl.class, name = StandalonePriceActiveChangedMessagePayload.STANDALONE_PRICE_ACTIVE_CHANGED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.StandalonePriceCreatedMessagePayloadImpl.class, name = StandalonePriceCreatedMessagePayload.STANDALONE_PRICE_CREATED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.StandalonePriceDeletedMessagePayloadImpl.class, name = StandalonePriceDeletedMessagePayload.STANDALONE_PRICE_DELETED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.StandalonePriceDiscountSetMessagePayloadImpl.class, name = StandalonePriceDiscountSetMessagePayload.STANDALONE_PRICE_DISCOUNT_SET),
@@ -140,6 +141,7 @@ import io.vrap.rmf.base.client.utils.Generated;
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.StoreDeletedMessagePayloadImpl.class, name = StoreDeletedMessagePayload.STORE_DELETED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.StoreDistributionChannelsChangedMessagePayloadImpl.class, name = StoreDistributionChannelsChangedMessagePayload.STORE_DISTRIBUTION_CHANNELS_CHANGED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.StoreLanguagesChangedMessagePayloadImpl.class, name = StoreLanguagesChangedMessagePayload.STORE_LANGUAGES_CHANGED),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.message.StoreNameSetMessagePayloadImpl.class, name = StoreNameSetMessagePayload.STORE_NAME_SET),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.StoreProductSelectionsChangedMessagePayloadImpl.class, name = StoreProductSelectionsChangedMessagePayload.STORE_PRODUCT_SELECTIONS_CHANGED) })
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "type", defaultImpl = MessagePayloadImpl.class, visible = true)
 @JsonDeserialize(as = MessagePayloadImpl.class)
@@ -569,6 +571,10 @@ public interface MessagePayload {
         return com.commercetools.api.models.message.StagedQuoteValidToSetMessagePayloadBuilder.of();
     }
 
+    public static com.commercetools.api.models.message.StandalonePriceActiveChangedMessagePayloadBuilder standalonePriceActiveChangedBuilder() {
+        return com.commercetools.api.models.message.StandalonePriceActiveChangedMessagePayloadBuilder.of();
+    }
+
     public static com.commercetools.api.models.message.StandalonePriceCreatedMessagePayloadBuilder standalonePriceCreatedBuilder() {
         return com.commercetools.api.models.message.StandalonePriceCreatedMessagePayloadBuilder.of();
     }
@@ -607,6 +613,10 @@ public interface MessagePayload {
 
     public static com.commercetools.api.models.message.StoreLanguagesChangedMessagePayloadBuilder storeLanguagesChangedBuilder() {
         return com.commercetools.api.models.message.StoreLanguagesChangedMessagePayloadBuilder.of();
+    }
+
+    public static com.commercetools.api.models.message.StoreNameSetMessagePayloadBuilder storeNameSetBuilder() {
+        return com.commercetools.api.models.message.StoreNameSetMessagePayloadBuilder.of();
     }
 
     public static com.commercetools.api.models.message.StoreProductSelectionsChangedMessagePayloadBuilder storeProductSelectionsChangedBuilder() {

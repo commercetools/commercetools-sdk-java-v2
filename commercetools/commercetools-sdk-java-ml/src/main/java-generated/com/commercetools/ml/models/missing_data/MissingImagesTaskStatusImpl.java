@@ -18,12 +18,14 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
  *  <p>Represents a URL path to poll to get the results of an Asynchronous Request.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Deprecated
 public class MissingImagesTaskStatusImpl implements MissingImagesTaskStatus, ModelBase {
 
     private com.commercetools.ml.models.common.TaskStatusEnum state;
 
     private java.time.ZonedDateTime expires;
 
+    @Deprecated
     private com.commercetools.ml.models.missing_data.MissingImagesPagedQueryResult result;
 
     @JsonCreator
@@ -57,7 +59,7 @@ public class MissingImagesTaskStatusImpl implements MissingImagesTaskStatus, Mod
     /**
      *  <p>The response to an asynchronous request. The type depends on the request initiated. Only populated when the status is <code>SUCCESS</code>.</p>
      */
-
+    @Deprecated
     public com.commercetools.ml.models.missing_data.MissingImagesPagedQueryResult getResult() {
         return this.result;
     }
@@ -70,6 +72,7 @@ public class MissingImagesTaskStatusImpl implements MissingImagesTaskStatus, Mod
         this.expires = expires;
     }
 
+    @Deprecated
     public void setResult(final com.commercetools.ml.models.missing_data.MissingImagesPagedQueryResult result) {
         this.result = result;
     }

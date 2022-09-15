@@ -31,6 +31,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
  * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Deprecated
 public class ByProjectKeyMissingDataAttributesStatusByTaskIdGet extends
         ApiMethod<ByProjectKeyMissingDataAttributesStatusByTaskIdGet, com.commercetools.ml.models.missing_data.MissingDataTaskStatus> {
 

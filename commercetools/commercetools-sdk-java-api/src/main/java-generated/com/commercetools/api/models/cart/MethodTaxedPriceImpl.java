@@ -35,7 +35,7 @@ public class MethodTaxedPriceImpl implements MethodTaxedPrice, ModelBase {
     }
 
     /**
-     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multi</code> ShippingMode.</p>
+     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multiple</code> ShippingMode.</p>
      */
 
     public String getShippingMethodKey() {

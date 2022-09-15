@@ -22,11 +22,11 @@ public class ProductDiscountValueAbsoluteDraftImpl implements ProductDiscountVal
 
     private String type;
 
-    private java.util.List<com.commercetools.api.models.common.CentPrecisionMoneyDraft> money;
+    private java.util.List<com.commercetools.api.models.common.Money> money;
 
     @JsonCreator
     ProductDiscountValueAbsoluteDraftImpl(
-            @JsonProperty("money") final java.util.List<com.commercetools.api.models.common.CentPrecisionMoneyDraft> money) {
+            @JsonProperty("money") final java.util.List<com.commercetools.api.models.common.Money> money) {
         this.money = money;
         this.type = ABSOLUTE;
     }
@@ -47,15 +47,15 @@ public class ProductDiscountValueAbsoluteDraftImpl implements ProductDiscountVal
      *  <p>Money values in different currencies. An absolute ProductDiscount will only match a price if this array contains a value with the same currency. For example, if it contains 10&euro; and 15$, the matching &euro; price will be decreased by 10&euro; and the matching $ price will be decreased by 15$.</p>
      */
 
-    public java.util.List<com.commercetools.api.models.common.CentPrecisionMoneyDraft> getMoney() {
+    public java.util.List<com.commercetools.api.models.common.Money> getMoney() {
         return this.money;
     }
 
-    public void setMoney(final com.commercetools.api.models.common.CentPrecisionMoneyDraft... money) {
+    public void setMoney(final com.commercetools.api.models.common.Money... money) {
         this.money = new ArrayList<>(Arrays.asList(money));
     }
 
-    public void setMoney(final java.util.List<com.commercetools.api.models.common.CentPrecisionMoneyDraft> money) {
+    public void setMoney(final java.util.List<com.commercetools.api.models.common.Money> money) {
         this.money = money;
     }
 

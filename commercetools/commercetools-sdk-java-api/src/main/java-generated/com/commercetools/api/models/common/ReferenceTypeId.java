@@ -136,6 +136,11 @@ public interface ReferenceTypeId {
     */
     ReferenceTypeId STAGED_QUOTE = ReferenceTypeIdEnum.STAGED_QUOTE;
     /**
+    	<p>References a <a href="ctp:api:type:StandalonePrice">StandalonePrice</a>.</p>
+
+    */
+    ReferenceTypeId STANDALONE_PRICE = ReferenceTypeIdEnum.STANDALONE_PRICE;
+    /**
     	<p>References a <a href="ctp:api:type:State">State</a>.</p>
 
     */
@@ -214,6 +219,8 @@ public interface ReferenceTypeId {
         SHOPPING_LIST("shopping-list"),
 
         STAGED_QUOTE("staged-quote"),
+
+        STANDALONE_PRICE("standalone-price"),
 
         STATE("state"),
 

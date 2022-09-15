@@ -18,6 +18,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
  * MissingAttributesPagedQueryResult
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Deprecated
 public class MissingAttributesPagedQueryResultImpl implements MissingAttributesPagedQueryResult, ModelBase {
 
     private Long count;
@@ -28,6 +29,7 @@ public class MissingAttributesPagedQueryResultImpl implements MissingAttributesP
 
     private java.util.List<com.commercetools.ml.models.missing_data.MissingAttributes> results;
 
+    @Deprecated
     private com.commercetools.ml.models.missing_data.MissingAttributesMeta meta;
 
     @JsonCreator
@@ -80,7 +82,7 @@ public class MissingAttributesPagedQueryResultImpl implements MissingAttributesP
     /**
      *
      */
-
+    @Deprecated
     public com.commercetools.ml.models.missing_data.MissingAttributesMeta getMeta() {
         return this.meta;
     }
@@ -105,6 +107,7 @@ public class MissingAttributesPagedQueryResultImpl implements MissingAttributesP
         this.results = results;
     }
 
+    @Deprecated
     public void setMeta(final com.commercetools.ml.models.missing_data.MissingAttributesMeta meta) {
         this.meta = meta;
     }

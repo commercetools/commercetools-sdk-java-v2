@@ -55,7 +55,7 @@ public class ShippingDraftImpl implements ShippingDraft, ModelBase {
     }
 
     /**
-     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multi</code> ShippingMode.</p>
+     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multiple</code> ShippingMode.</p>
      */
 
     public String getKey() {
@@ -63,7 +63,7 @@ public class ShippingDraftImpl implements ShippingDraft, ModelBase {
     }
 
     /**
-     *  <p>Shipping Methods added to the Cart with <code>Multi</code> ShippingMode.</p>
+     *  <p>Shipping Methods added to the Cart with <code>Multiple</code> ShippingMode.</p>
      */
 
     public com.commercetools.api.models.shipping_method.ShippingMethodReference getShippingMethod() {

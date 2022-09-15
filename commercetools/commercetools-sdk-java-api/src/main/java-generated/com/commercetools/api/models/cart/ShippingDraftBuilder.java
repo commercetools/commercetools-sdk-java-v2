@@ -45,7 +45,7 @@ public class ShippingDraftBuilder implements Builder<ShippingDraft> {
     private String custom;
 
     /**
-     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multi</code> ShippingMode.</p>
+     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multiple</code> ShippingMode.</p>
      */
 
     public ShippingDraftBuilder key(final String key) {
@@ -54,7 +54,7 @@ public class ShippingDraftBuilder implements Builder<ShippingDraft> {
     }
 
     /**
-     *  <p>Shipping Methods added to the Cart with <code>Multi</code> ShippingMode.</p>
+     *  <p>Shipping Methods added to the Cart with <code>Multiple</code> ShippingMode.</p>
      */
 
     public ShippingDraftBuilder shippingMethod(
@@ -66,7 +66,7 @@ public class ShippingDraftBuilder implements Builder<ShippingDraft> {
     }
 
     /**
-     *  <p>Shipping Methods added to the Cart with <code>Multi</code> ShippingMode.</p>
+     *  <p>Shipping Methods added to the Cart with <code>Multiple</code> ShippingMode.</p>
      */
 
     public ShippingDraftBuilder shippingMethod(

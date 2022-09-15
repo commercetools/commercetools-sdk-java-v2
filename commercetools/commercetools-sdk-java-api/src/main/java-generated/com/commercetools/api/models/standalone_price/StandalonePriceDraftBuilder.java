@@ -56,6 +56,9 @@ public class StandalonePriceDraftBuilder implements Builder<StandalonePriceDraft
     @Nullable
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
 
+    @Nullable
+    private Boolean active;
+
     /**
      *  <p>User-defined unique identifier for the StandalonePrice.</p>
      */
@@ -260,6 +263,15 @@ public class StandalonePriceDraftBuilder implements Builder<StandalonePriceDraft
         return this;
     }
 
+    /**
+     *  <p>If set to <code>true</code>, the StandalonePrice is considered during price selection. If set to <code>false</code>, the StandalonePrice is not considered during price selection.</p>
+     */
+
+    public StandalonePriceDraftBuilder active(@Nullable final Boolean active) {
+        this.active = active;
+        return this;
+    }
+
     @Nullable
     public String getKey() {
         return this.key;
@@ -313,11 +325,16 @@ public class StandalonePriceDraftBuilder implements Builder<StandalonePriceDraft
         return this.custom;
     }
 
+    @Nullable
+    public Boolean getActive() {
+        return this.active;
+    }
+
     public StandalonePriceDraft build() {
         Objects.requireNonNull(sku, StandalonePriceDraft.class + ": sku is missing");
         Objects.requireNonNull(value, StandalonePriceDraft.class + ": value is missing");
         return new StandalonePriceDraftImpl(key, sku, value, country, customerGroup, channel, validFrom, validUntil,
-            tiers, discounted, custom);
+            tiers, discounted, custom, active);
     }
 
     /**
@@ -325,7 +342,7 @@ public class StandalonePriceDraftBuilder implements Builder<StandalonePriceDraft
      */
     public StandalonePriceDraft buildUnchecked() {
         return new StandalonePriceDraftImpl(key, sku, value, country, customerGroup, channel, validFrom, validUntil,
-            tiers, discounted, custom);
+            tiers, discounted, custom, active);
     }
 
     public static StandalonePriceDraftBuilder of() {
@@ -345,6 +362,7 @@ public class StandalonePriceDraftBuilder implements Builder<StandalonePriceDraft
         builder.tiers = template.getTiers();
         builder.discounted = template.getDiscounted();
         builder.custom = template.getCustom();
+        builder.active = template.getActive();
         return builder;
     }
 

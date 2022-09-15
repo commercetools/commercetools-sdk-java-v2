@@ -18,6 +18,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
  * MissingPrices
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Deprecated
 public class MissingPricesImpl implements MissingPrices, ModelBase {
 
     private com.commercetools.ml.models.common.ProductReference product;

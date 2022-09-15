@@ -18,6 +18,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
  * MissingAttributes
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Deprecated
 public class MissingAttributesImpl implements MissingAttributes, ModelBase {
 
     private com.commercetools.ml.models.common.ProductReference product;
@@ -30,8 +31,10 @@ public class MissingAttributesImpl implements MissingAttributes, ModelBase {
 
     private java.util.List<String> missingAttributeNames;
 
+    @Deprecated
     private com.commercetools.ml.models.missing_data.AttributeCount attributeCount;
 
+    @Deprecated
     private com.commercetools.ml.models.missing_data.AttributeCoverage attributeCoverage;
 
     @JsonCreator
@@ -97,7 +100,7 @@ public class MissingAttributesImpl implements MissingAttributes, ModelBase {
     /**
      *
      */
-
+    @Deprecated
     public com.commercetools.ml.models.missing_data.AttributeCount getAttributeCount() {
         return this.attributeCount;
     }
@@ -105,7 +108,7 @@ public class MissingAttributesImpl implements MissingAttributes, ModelBase {
     /**
      *
      */
-
+    @Deprecated
     public com.commercetools.ml.models.missing_data.AttributeCoverage getAttributeCoverage() {
         return this.attributeCoverage;
     }
@@ -138,10 +141,12 @@ public class MissingAttributesImpl implements MissingAttributes, ModelBase {
         this.missingAttributeNames = missingAttributeNames;
     }
 
+    @Deprecated
     public void setAttributeCount(final com.commercetools.ml.models.missing_data.AttributeCount attributeCount) {
         this.attributeCount = attributeCount;
     }
 
+    @Deprecated
     public void setAttributeCoverage(
             final com.commercetools.ml.models.missing_data.AttributeCoverage attributeCoverage) {
         this.attributeCoverage = attributeCoverage;

@@ -316,7 +316,7 @@ public class CartDraftImpl implements CartDraft, ModelBase {
     /**
      *  <ul>
      *   <li>If <code>Single</code>, only a single Shipping Method can be added to the Cart.</li>
-     *   <li>If <code>Multi</code>, multiple Shipping Methods can be added to the Cart.</li>
+     *   <li>If <code>Multiple</code>, multiple Shipping Methods can be added to the Cart.</li>
      *  </ul>
      */
 
@@ -325,7 +325,7 @@ public class CartDraftImpl implements CartDraft, ModelBase {
     }
 
     /**
-     *  <p>Custom Shipping Methods for a Cart with <code>Multi</code> ShippingMode.</p>
+     *  <p>Custom Shipping Methods for a Cart with <code>Multiple</code> ShippingMode.</p>
      */
 
     public java.util.List<com.commercetools.api.models.cart.CustomShippingDraft> getCustomShipping() {
@@ -333,7 +333,7 @@ public class CartDraftImpl implements CartDraft, ModelBase {
     }
 
     /**
-     *  <p>Shipping Methods for a Cart with <code>Multi</code> ShippingMode.</p>
+     *  <p>Shipping Methods for a Cart with <code>Multiple</code> ShippingMode.</p>
      */
 
     public java.util.List<com.commercetools.api.models.cart.ShippingDraft> getShipping() {

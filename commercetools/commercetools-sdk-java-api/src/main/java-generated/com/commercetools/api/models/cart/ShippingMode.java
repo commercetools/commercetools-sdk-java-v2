@@ -25,12 +25,12 @@ public interface ShippingMode {
     	<p>Cart can contain multiple Shipping Methods.</p>
 
     */
-    ShippingMode MULTI = ShippingModeEnum.MULTI;
+    ShippingMode MULTIPLE = ShippingModeEnum.MULTIPLE;
 
     enum ShippingModeEnum implements ShippingMode {
         SINGLE("Single"),
 
-        MULTI("Multi");
+        MULTIPLE("Multiple");
         private final String jsonName;
 
         private ShippingModeEnum(final String jsonName) {

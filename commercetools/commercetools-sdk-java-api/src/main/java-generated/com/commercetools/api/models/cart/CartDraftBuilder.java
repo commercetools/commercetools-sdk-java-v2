@@ -489,7 +489,7 @@ public class CartDraftBuilder implements Builder<CartDraft> {
     /**
      *  <ul>
      *   <li>If <code>Single</code>, only a single Shipping Method can be added to the Cart.</li>
-     *   <li>If <code>Multi</code>, multiple Shipping Methods can be added to the Cart.</li>
+     *   <li>If <code>Multiple</code>, multiple Shipping Methods can be added to the Cart.</li>
      *  </ul>
      */
 
@@ -499,7 +499,7 @@ public class CartDraftBuilder implements Builder<CartDraft> {
     }
 
     /**
-     *  <p>Custom Shipping Methods for a Cart with <code>Multi</code> ShippingMode.</p>
+     *  <p>Custom Shipping Methods for a Cart with <code>Multiple</code> ShippingMode.</p>
      */
 
     public CartDraftBuilder customShipping(
@@ -509,7 +509,7 @@ public class CartDraftBuilder implements Builder<CartDraft> {
     }
 
     /**
-     *  <p>Custom Shipping Methods for a Cart with <code>Multi</code> ShippingMode.</p>
+     *  <p>Custom Shipping Methods for a Cart with <code>Multiple</code> ShippingMode.</p>
      */
 
     public CartDraftBuilder customShipping(
@@ -519,7 +519,7 @@ public class CartDraftBuilder implements Builder<CartDraft> {
     }
 
     /**
-     *  <p>Custom Shipping Methods for a Cart with <code>Multi</code> ShippingMode.</p>
+     *  <p>Custom Shipping Methods for a Cart with <code>Multiple</code> ShippingMode.</p>
      */
 
     public CartDraftBuilder plusCustomShipping(
@@ -532,7 +532,7 @@ public class CartDraftBuilder implements Builder<CartDraft> {
     }
 
     /**
-     *  <p>Custom Shipping Methods for a Cart with <code>Multi</code> ShippingMode.</p>
+     *  <p>Custom Shipping Methods for a Cart with <code>Multiple</code> ShippingMode.</p>
      */
 
     public CartDraftBuilder plusCustomShipping(
@@ -546,7 +546,7 @@ public class CartDraftBuilder implements Builder<CartDraft> {
     }
 
     /**
-     *  <p>Custom Shipping Methods for a Cart with <code>Multi</code> ShippingMode.</p>
+     *  <p>Custom Shipping Methods for a Cart with <code>Multiple</code> ShippingMode.</p>
      */
 
     public CartDraftBuilder withCustomShipping(
@@ -558,7 +558,7 @@ public class CartDraftBuilder implements Builder<CartDraft> {
     }
 
     /**
-     *  <p>Shipping Methods for a Cart with <code>Multi</code> ShippingMode.</p>
+     *  <p>Shipping Methods for a Cart with <code>Multiple</code> ShippingMode.</p>
      */
 
     public CartDraftBuilder shipping(@Nullable final com.commercetools.api.models.cart.ShippingDraft... shipping) {
@@ -567,7 +567,7 @@ public class CartDraftBuilder implements Builder<CartDraft> {
     }
 
     /**
-     *  <p>Shipping Methods for a Cart with <code>Multi</code> ShippingMode.</p>
+     *  <p>Shipping Methods for a Cart with <code>Multiple</code> ShippingMode.</p>
      */
 
     public CartDraftBuilder shipping(
@@ -577,7 +577,7 @@ public class CartDraftBuilder implements Builder<CartDraft> {
     }
 
     /**
-     *  <p>Shipping Methods for a Cart with <code>Multi</code> ShippingMode.</p>
+     *  <p>Shipping Methods for a Cart with <code>Multiple</code> ShippingMode.</p>
      */
 
     public CartDraftBuilder plusShipping(@Nullable final com.commercetools.api.models.cart.ShippingDraft... shipping) {
@@ -589,7 +589,7 @@ public class CartDraftBuilder implements Builder<CartDraft> {
     }
 
     /**
-     *  <p>Shipping Methods for a Cart with <code>Multi</code> ShippingMode.</p>
+     *  <p>Shipping Methods for a Cart with <code>Multiple</code> ShippingMode.</p>
      */
 
     public CartDraftBuilder plusShipping(
@@ -602,7 +602,7 @@ public class CartDraftBuilder implements Builder<CartDraft> {
     }
 
     /**
-     *  <p>Shipping Methods for a Cart with <code>Multi</code> ShippingMode.</p>
+     *  <p>Shipping Methods for a Cart with <code>Multiple</code> ShippingMode.</p>
      */
 
     public CartDraftBuilder withShipping(

@@ -116,6 +116,13 @@ public interface StandalonePriceDraft {
     @JsonProperty("custom")
     public CustomFieldsDraft getCustom();
 
+    /**
+     *  <p>If set to <code>true</code>, the StandalonePrice is considered during price selection. If set to <code>false</code>, the StandalonePrice is not considered during price selection.</p>
+     */
+
+    @JsonProperty("active")
+    public Boolean getActive();
+
     public void setKey(final String key);
 
     public void setSku(final String sku);
@@ -141,6 +148,8 @@ public interface StandalonePriceDraft {
 
     public void setCustom(final CustomFieldsDraft custom);
 
+    public void setActive(final Boolean active);
+
     public static StandalonePriceDraft of() {
         return new StandalonePriceDraftImpl();
     }
@@ -158,6 +167,7 @@ public interface StandalonePriceDraft {
         instance.setTiers(template.getTiers());
         instance.setDiscounted(template.getDiscounted());
         instance.setCustom(template.getCustom());
+        instance.setActive(template.getActive());
         return instance;
     }
 

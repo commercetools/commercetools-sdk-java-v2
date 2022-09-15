@@ -423,6 +423,10 @@ public class MessageBuilder {
         return com.commercetools.api.models.message.StagedQuoteValidToSetMessageBuilder.of();
     }
 
+    public com.commercetools.api.models.message.StandalonePriceActiveChangedMessageBuilder standalonePriceActiveChangedBuilder() {
+        return com.commercetools.api.models.message.StandalonePriceActiveChangedMessageBuilder.of();
+    }
+
     public com.commercetools.api.models.message.StandalonePriceCreatedMessageBuilder standalonePriceCreatedBuilder() {
         return com.commercetools.api.models.message.StandalonePriceCreatedMessageBuilder.of();
     }
@@ -461,6 +465,10 @@ public class MessageBuilder {
 
     public com.commercetools.api.models.message.StoreLanguagesChangedMessageBuilder storeLanguagesChangedBuilder() {
         return com.commercetools.api.models.message.StoreLanguagesChangedMessageBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.StoreNameSetMessageBuilder storeNameSetBuilder() {
+        return com.commercetools.api.models.message.StoreNameSetMessageBuilder.of();
     }
 
     public com.commercetools.api.models.message.StoreProductSelectionsChangedMessageBuilder storeProductSelectionsChangedBuilder() {

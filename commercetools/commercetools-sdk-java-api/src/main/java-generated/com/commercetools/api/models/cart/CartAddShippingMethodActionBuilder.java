@@ -45,7 +45,7 @@ public class CartAddShippingMethodActionBuilder implements Builder<CartAddShippi
     private String custom;
 
     /**
-     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multi</code> ShippingMode.</p>
+     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multiple</code> ShippingMode.</p>
      */
 
     public CartAddShippingMethodActionBuilder shippingKey(final String shippingKey) {

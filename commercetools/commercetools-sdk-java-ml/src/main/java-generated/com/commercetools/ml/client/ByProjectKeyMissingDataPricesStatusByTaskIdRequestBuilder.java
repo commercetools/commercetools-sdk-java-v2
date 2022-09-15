@@ -5,6 +5,7 @@ import io.vrap.rmf.base.client.ApiHttpClient;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Deprecated
 public class ByProjectKeyMissingDataPricesStatusByTaskIdRequestBuilder {
 
     private final ApiHttpClient apiHttpClient;

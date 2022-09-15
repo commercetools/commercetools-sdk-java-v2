@@ -26,6 +26,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  */
 @JsonSubTypes({
         @JsonSubTypes.Type(value = com.commercetools.api.models.standalone_price.StandalonePriceApplyStagedChangesActionImpl.class, name = StandalonePriceApplyStagedChangesAction.APPLY_STAGED_CHANGES),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.standalone_price.StandalonePriceChangeActiveActionImpl.class, name = StandalonePriceChangeActiveAction.CHANGE_ACTIVE),
         @JsonSubTypes.Type(value = com.commercetools.api.models.standalone_price.StandalonePriceChangeValueActionImpl.class, name = StandalonePriceChangeValueAction.CHANGE_VALUE),
         @JsonSubTypes.Type(value = com.commercetools.api.models.standalone_price.StandalonePriceSetCustomFieldActionImpl.class, name = StandalonePriceSetCustomFieldAction.SET_CUSTOM_FIELD),
         @JsonSubTypes.Type(value = com.commercetools.api.models.standalone_price.StandalonePriceSetCustomTypeActionImpl.class, name = StandalonePriceSetCustomTypeAction.SET_CUSTOM_TYPE),
@@ -45,6 +46,10 @@ public interface StandalonePriceUpdateAction
 
     public static com.commercetools.api.models.standalone_price.StandalonePriceApplyStagedChangesActionBuilder applyStagedChangesBuilder() {
         return com.commercetools.api.models.standalone_price.StandalonePriceApplyStagedChangesActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.standalone_price.StandalonePriceChangeActiveActionBuilder changeActiveBuilder() {
+        return com.commercetools.api.models.standalone_price.StandalonePriceChangeActiveActionBuilder.of();
     }
 
     public static com.commercetools.api.models.standalone_price.StandalonePriceChangeValueActionBuilder changeValueBuilder() {

@@ -33,7 +33,7 @@ public interface CartSetShippingCustomTypeAction extends CartUpdateAction {
     String SET_SHIPPING_CUSTOM_TYPE = "setShippingCustomType";
 
     /**
-     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multi</code> ShippingMode.</p>
+     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multiple</code> ShippingMode.</p>
      */
 
     @JsonProperty("shippingKey")

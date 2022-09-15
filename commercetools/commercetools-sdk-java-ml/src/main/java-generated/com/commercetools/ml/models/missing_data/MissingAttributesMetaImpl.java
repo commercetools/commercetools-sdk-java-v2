@@ -18,10 +18,13 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
  * MissingAttributesMeta
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Deprecated
 public class MissingAttributesMetaImpl implements MissingAttributesMeta, ModelBase {
 
+    @Deprecated
     private com.commercetools.ml.models.missing_data.MissingAttributesDetails productLevel;
 
+    @Deprecated
     private com.commercetools.ml.models.missing_data.MissingAttributesDetails variantLevel;
 
     private java.util.List<String> productTypeIds;
@@ -42,7 +45,7 @@ public class MissingAttributesMetaImpl implements MissingAttributesMeta, ModelBa
     /**
      *
      */
-
+    @Deprecated
     public com.commercetools.ml.models.missing_data.MissingAttributesDetails getProductLevel() {
         return this.productLevel;
     }
@@ -50,7 +53,7 @@ public class MissingAttributesMetaImpl implements MissingAttributesMeta, ModelBa
     /**
      *
      */
-
+    @Deprecated
     public com.commercetools.ml.models.missing_data.MissingAttributesDetails getVariantLevel() {
         return this.variantLevel;
     }
@@ -63,10 +66,12 @@ public class MissingAttributesMetaImpl implements MissingAttributesMeta, ModelBa
         return this.productTypeIds;
     }
 
+    @Deprecated
     public void setProductLevel(final com.commercetools.ml.models.missing_data.MissingAttributesDetails productLevel) {
         this.productLevel = productLevel;
     }
 
+    @Deprecated
     public void setVariantLevel(final com.commercetools.ml.models.missing_data.MissingAttributesDetails variantLevel) {
         this.variantLevel = variantLevel;
     }

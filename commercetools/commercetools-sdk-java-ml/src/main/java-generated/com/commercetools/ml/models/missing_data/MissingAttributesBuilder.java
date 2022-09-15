@@ -25,6 +25,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Deprecated
 public class MissingAttributesBuilder implements Builder<MissingAttributes> {
 
     private com.commercetools.ml.models.common.ProductReference product;
@@ -38,9 +39,11 @@ public class MissingAttributesBuilder implements Builder<MissingAttributes> {
     @Nullable
     private java.util.List<String> missingAttributeNames;
 
+    @Deprecated
     @Nullable
     private com.commercetools.ml.models.missing_data.AttributeCount attributeCount;
 
+    @Deprecated
     @Nullable
     private com.commercetools.ml.models.missing_data.AttributeCoverage attributeCoverage;
 
@@ -156,7 +159,7 @@ public class MissingAttributesBuilder implements Builder<MissingAttributes> {
     /**
      *
      */
-
+    @Deprecated
     public MissingAttributesBuilder attributeCount(
             Function<com.commercetools.ml.models.missing_data.AttributeCountBuilder, com.commercetools.ml.models.missing_data.AttributeCountBuilder> builder) {
         this.attributeCount = builder.apply(com.commercetools.ml.models.missing_data.AttributeCountBuilder.of())
@@ -167,7 +170,7 @@ public class MissingAttributesBuilder implements Builder<MissingAttributes> {
     /**
      *
      */
-
+    @Deprecated
     public MissingAttributesBuilder attributeCount(
             @Nullable final com.commercetools.ml.models.missing_data.AttributeCount attributeCount) {
         this.attributeCount = attributeCount;
@@ -177,7 +180,7 @@ public class MissingAttributesBuilder implements Builder<MissingAttributes> {
     /**
      *
      */
-
+    @Deprecated
     public MissingAttributesBuilder attributeCoverage(
             Function<com.commercetools.ml.models.missing_data.AttributeCoverageBuilder, com.commercetools.ml.models.missing_data.AttributeCoverageBuilder> builder) {
         this.attributeCoverage = builder.apply(com.commercetools.ml.models.missing_data.AttributeCoverageBuilder.of())
@@ -188,7 +191,7 @@ public class MissingAttributesBuilder implements Builder<MissingAttributes> {
     /**
      *
      */
-
+    @Deprecated
     public MissingAttributesBuilder attributeCoverage(
             @Nullable final com.commercetools.ml.models.missing_data.AttributeCoverage attributeCoverage) {
         this.attributeCoverage = attributeCoverage;
@@ -216,11 +219,13 @@ public class MissingAttributesBuilder implements Builder<MissingAttributes> {
         return this.missingAttributeNames;
     }
 
+    @Deprecated
     @Nullable
     public com.commercetools.ml.models.missing_data.AttributeCount getAttributeCount() {
         return this.attributeCount;
     }
 
+    @Deprecated
     @Nullable
     public com.commercetools.ml.models.missing_data.AttributeCoverage getAttributeCoverage() {
         return this.attributeCoverage;

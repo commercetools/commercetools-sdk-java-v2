@@ -32,7 +32,7 @@ public class CartSetShippingCustomFieldActionBuilder implements Builder<CartSetS
     private java.lang.Object value;
 
     /**
-     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multi</code> ShippingMode.</p>
+     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multiple</code> ShippingMode.</p>
      */
 
     public CartSetShippingCustomFieldActionBuilder shippingKey(@Nullable final String shippingKey) {

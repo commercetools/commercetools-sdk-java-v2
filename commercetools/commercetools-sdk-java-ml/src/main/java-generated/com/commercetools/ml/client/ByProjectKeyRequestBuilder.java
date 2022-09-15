@@ -23,6 +23,7 @@ public class ByProjectKeyRequestBuilder {
         return new ByProjectKeyRecommendationsRequestBuilder(apiHttpClient, projectKey);
     }
 
+    @Deprecated
     public ByProjectKeyMissingDataRequestBuilder missingData() {
         return new ByProjectKeyMissingDataRequestBuilder(apiHttpClient, projectKey);
     }

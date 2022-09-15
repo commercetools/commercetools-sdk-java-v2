@@ -142,6 +142,7 @@ import io.vrap.rmf.base.client.utils.Generated;
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.StagedQuoteStateChangedMessageImpl.class, name = StagedQuoteStateChangedMessage.STAGED_QUOTE_STATE_CHANGED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.StagedQuoteStateTransitionMessageImpl.class, name = StagedQuoteStateTransitionMessage.STAGED_QUOTE_STATE_TRANSITION),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.StagedQuoteValidToSetMessageImpl.class, name = StagedQuoteValidToSetMessage.STAGED_QUOTE_VALID_TO_SET),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.message.StandalonePriceActiveChangedMessageImpl.class, name = StandalonePriceActiveChangedMessage.STANDALONE_PRICE_ACTIVE_CHANGED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.StandalonePriceCreatedMessageImpl.class, name = StandalonePriceCreatedMessage.STANDALONE_PRICE_CREATED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.StandalonePriceDeletedMessageImpl.class, name = StandalonePriceDeletedMessage.STANDALONE_PRICE_DELETED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.StandalonePriceDiscountSetMessageImpl.class, name = StandalonePriceDiscountSetMessage.STANDALONE_PRICE_DISCOUNT_SET),
@@ -152,6 +153,7 @@ import io.vrap.rmf.base.client.utils.Generated;
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.StoreDeletedMessageImpl.class, name = StoreDeletedMessage.STORE_DELETED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.StoreDistributionChannelsChangedMessageImpl.class, name = StoreDistributionChannelsChangedMessage.STORE_DISTRIBUTION_CHANNELS_CHANGED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.StoreLanguagesChangedMessageImpl.class, name = StoreLanguagesChangedMessage.STORE_LANGUAGES_CHANGED),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.message.StoreNameSetMessageImpl.class, name = StoreNameSetMessage.STORE_NAME_SET),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.StoreProductSelectionsChangedMessageImpl.class, name = StoreProductSelectionsChangedMessage.STORE_PRODUCT_SELECTIONS_CHANGED) })
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "type", defaultImpl = MessageImpl.class, visible = true)
 @JsonDeserialize(as = MessageImpl.class)
@@ -668,6 +670,10 @@ public interface Message extends BaseResource, com.commercetools.api.models.Doma
         return com.commercetools.api.models.message.StagedQuoteValidToSetMessageBuilder.of();
     }
 
+    public static com.commercetools.api.models.message.StandalonePriceActiveChangedMessageBuilder standalonePriceActiveChangedBuilder() {
+        return com.commercetools.api.models.message.StandalonePriceActiveChangedMessageBuilder.of();
+    }
+
     public static com.commercetools.api.models.message.StandalonePriceCreatedMessageBuilder standalonePriceCreatedBuilder() {
         return com.commercetools.api.models.message.StandalonePriceCreatedMessageBuilder.of();
     }
@@ -706,6 +712,10 @@ public interface Message extends BaseResource, com.commercetools.api.models.Doma
 
     public static com.commercetools.api.models.message.StoreLanguagesChangedMessageBuilder storeLanguagesChangedBuilder() {
         return com.commercetools.api.models.message.StoreLanguagesChangedMessageBuilder.of();
+    }
+
+    public static com.commercetools.api.models.message.StoreNameSetMessageBuilder storeNameSetBuilder() {
+        return com.commercetools.api.models.message.StoreNameSetMessageBuilder.of();
     }
 
     public static com.commercetools.api.models.message.StoreProductSelectionsChangedMessageBuilder storeProductSelectionsChangedBuilder() {

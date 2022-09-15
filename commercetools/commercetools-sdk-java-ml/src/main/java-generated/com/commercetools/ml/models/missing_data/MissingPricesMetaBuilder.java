@@ -21,16 +21,21 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Deprecated
 public class MissingPricesMetaBuilder implements Builder<MissingPricesMeta> {
 
+    @Deprecated
+
     private com.commercetools.ml.models.missing_data.MissingPricesProductLevel productLevel;
+
+    @Deprecated
 
     private com.commercetools.ml.models.missing_data.MissingPricesVariantLevel variantLevel;
 
     /**
      *
      */
-
+    @Deprecated
     public MissingPricesMetaBuilder productLevel(
             Function<com.commercetools.ml.models.missing_data.MissingPricesProductLevelBuilder, com.commercetools.ml.models.missing_data.MissingPricesProductLevelBuilder> builder) {
         this.productLevel = builder
@@ -42,7 +47,7 @@ public class MissingPricesMetaBuilder implements Builder<MissingPricesMeta> {
     /**
      *
      */
-
+    @Deprecated
     public MissingPricesMetaBuilder productLevel(
             final com.commercetools.ml.models.missing_data.MissingPricesProductLevel productLevel) {
         this.productLevel = productLevel;
@@ -52,7 +57,7 @@ public class MissingPricesMetaBuilder implements Builder<MissingPricesMeta> {
     /**
      *
      */
-
+    @Deprecated
     public MissingPricesMetaBuilder variantLevel(
             Function<com.commercetools.ml.models.missing_data.MissingPricesVariantLevelBuilder, com.commercetools.ml.models.missing_data.MissingPricesVariantLevelBuilder> builder) {
         this.variantLevel = builder
@@ -64,16 +69,20 @@ public class MissingPricesMetaBuilder implements Builder<MissingPricesMeta> {
     /**
      *
      */
-
+    @Deprecated
     public MissingPricesMetaBuilder variantLevel(
             final com.commercetools.ml.models.missing_data.MissingPricesVariantLevel variantLevel) {
         this.variantLevel = variantLevel;
         return this;
     }
 
+    @Deprecated
+
     public com.commercetools.ml.models.missing_data.MissingPricesProductLevel getProductLevel() {
         return this.productLevel;
     }
+
+    @Deprecated
 
     public com.commercetools.ml.models.missing_data.MissingPricesVariantLevel getVariantLevel() {
         return this.variantLevel;

@@ -22,11 +22,14 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Deprecated
 public class MissingImagesTaskStatusBuilder implements Builder<MissingImagesTaskStatus> {
 
     private com.commercetools.ml.models.common.TaskStatusEnum state;
 
     private java.time.ZonedDateTime expires;
+
+    @Deprecated
 
     private com.commercetools.ml.models.missing_data.MissingImagesPagedQueryResult result;
 
@@ -51,7 +54,7 @@ public class MissingImagesTaskStatusBuilder implements Builder<MissingImagesTask
     /**
      *  <p>The response to an asynchronous request. The type depends on the request initiated. Only populated when the status is <code>SUCCESS</code>.</p>
      */
-
+    @Deprecated
     public MissingImagesTaskStatusBuilder result(
             Function<com.commercetools.ml.models.missing_data.MissingImagesPagedQueryResultBuilder, com.commercetools.ml.models.missing_data.MissingImagesPagedQueryResultBuilder> builder) {
         this.result = builder.apply(com.commercetools.ml.models.missing_data.MissingImagesPagedQueryResultBuilder.of())
@@ -62,7 +65,7 @@ public class MissingImagesTaskStatusBuilder implements Builder<MissingImagesTask
     /**
      *  <p>The response to an asynchronous request. The type depends on the request initiated. Only populated when the status is <code>SUCCESS</code>.</p>
      */
-
+    @Deprecated
     public MissingImagesTaskStatusBuilder result(
             final com.commercetools.ml.models.missing_data.MissingImagesPagedQueryResult result) {
         this.result = result;
@@ -76,6 +79,8 @@ public class MissingImagesTaskStatusBuilder implements Builder<MissingImagesTask
     public java.time.ZonedDateTime getExpires() {
         return this.expires;
     }
+
+    @Deprecated
 
     public com.commercetools.ml.models.missing_data.MissingImagesPagedQueryResult getResult() {
         return this.result;

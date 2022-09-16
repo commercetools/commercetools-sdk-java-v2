@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>This action has no effect if a given supply channel is already present in a Store.</p>
+ *  <p>This update action produces the StoreSupplyChannelsChanged Message. It has no effect if a given supply channel is already present in a Store.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StoreAddSupplyChannelActionImpl implements StoreAddSupplyChannelAction, ModelBase {

@@ -41,9 +41,24 @@
 <span class="source-line-no">028</span><span id="line.28"> * &lt;p&gt;The {@link com.commercetools.api.defaultconfig.ApiRootBuilder} has create methods which allow to pass a preconfigured HTTP client.&lt;/p&gt;</span>
 <span class="source-line-no">029</span><span id="line.29"> *</span>
 <span class="source-line-no">030</span><span id="line.30"> * {@include.example example.ExamplesTest#proxy()}</span>
-<span class="source-line-no">031</span><span id="line.31"> */</span>
-<span class="source-line-no">032</span><span id="line.32">public class ClientTuning {</span>
-<span class="source-line-no">033</span><span id="line.33">}</span>
+<span class="source-line-no">031</span><span id="line.31"> *</span>
+<span class="source-line-no">032</span><span id="line.32"> * &lt;h3 id=limit-requests&gt;Limit concurrent requests&lt;/h3&gt;</span>
+<span class="source-line-no">033</span><span id="line.33"> *</span>
+<span class="source-line-no">034</span><span id="line.34"> * &lt;p&gt;By default the client is initialized with a ForkJoinPool. The underlying HTTP client may have it's own configuration for</span>
+<span class="source-line-no">035</span><span id="line.35"> * limiting the maximum number of requests. By default the OkHttp and Apache AsyncHTTP client will be configured for 64 maximum</span>
+<span class="source-line-no">036</span><span id="line.36"> * requests.&lt;/p&gt;</span>
+<span class="source-line-no">037</span><span id="line.37"> *</span>
+<span class="source-line-no">038</span><span id="line.38"> * &lt;p&gt;To adjust this instantiate the HTTP client in the client builder&lt;/p&gt;</span>
+<span class="source-line-no">039</span><span id="line.39"> *</span>
+<span class="source-line-no">040</span><span id="line.40"> * {@include.example example.ExamplesTest#httpConcurrentLimitation()}</span>
+<span class="source-line-no">041</span><span id="line.41"> *</span>
+<span class="source-line-no">042</span><span id="line.42"> * &lt;p&gt;Another option is to use a middleware which limits the number of requests. The SDK provides for this use case</span>
+<span class="source-line-no">043</span><span id="line.43"> * the {@link io.vrap.rmf.base.client.http.QueueMiddleware}.&lt;/p&gt;</span>
+<span class="source-line-no">044</span><span id="line.44"> *</span>
+<span class="source-line-no">045</span><span id="line.45"> * {@include.example example.ExamplesTest#queueConcurrentLimitation()}</span>
+<span class="source-line-no">046</span><span id="line.46"> */</span>
+<span class="source-line-no">047</span><span id="line.47">public class ClientTuning {</span>
+<span class="source-line-no">048</span><span id="line.48">}</span>
 
 
 

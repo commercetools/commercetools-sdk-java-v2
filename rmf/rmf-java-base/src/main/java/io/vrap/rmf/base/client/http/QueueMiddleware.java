@@ -15,6 +15,11 @@ import dev.failsafe.spi.Scheduler;
 import io.vrap.rmf.base.client.ApiHttpRequest;
 import io.vrap.rmf.base.client.ApiHttpResponse;
 
+/**
+ * Implementation of a Queue to limit the number of concurrent requests handled by the client
+ *
+ * @include.example io.vrap.rmf.base.client.QueueMiddlewareTest#queueConfiguration()
+ */
 public class QueueMiddleware implements Middleware, AutoCloseable {
 
     private final FailsafeExecutor<ApiHttpResponse<byte[]>> failsafeExecutor;

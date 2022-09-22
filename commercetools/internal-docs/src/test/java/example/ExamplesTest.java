@@ -37,6 +37,7 @@ import io.vrap.rmf.base.client.ApiHttpClient;
 import io.vrap.rmf.base.client.ApiHttpResponse;
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.VrapHttpClient;
+import io.vrap.rmf.base.client.http.QueueMiddleware;
 import io.vrap.rmf.base.client.oauth2.ClientCredentials;
 
 import org.apache.commons.lang3.tuple.Pair;
@@ -440,6 +441,23 @@ public class ExamplesTest {
                 .version(1L)
                 .withActions(builder -> builder.changeNameBuilder().name("foo"))
                 .plusActions(builder -> builder.setKeyBuilder().key("foo"))
+                .build();
+    }
+
+    public void httpConcurrentLimitation() {
+        ApiRootBuilder.of(new CtOkHttp4Client(64, 64))
+                // ...
+                .build();
+
+        ApiRootBuilder.of(new CtApacheHttpClient(64, 64))
+                // ...
+                .build();
+    }
+
+    public void queueConcurrentLimitation() {
+        ApiRootBuilder.of()
+                // ...
+                .addMiddleware(new QueueMiddleware(64, Duration.ofSeconds(10)))
                 .build();
     }
 }

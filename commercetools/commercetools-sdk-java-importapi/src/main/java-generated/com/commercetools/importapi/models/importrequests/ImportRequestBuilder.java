@@ -55,6 +55,10 @@ public class ImportRequestBuilder {
         return com.commercetools.importapi.models.importrequests.ProductVariantPatchRequestBuilder.of();
     }
 
+    public com.commercetools.importapi.models.importrequests.StandalonePriceImportRequestBuilder standalonePriceBuilder() {
+        return com.commercetools.importapi.models.importrequests.StandalonePriceImportRequestBuilder.of();
+    }
+
     public static ImportRequestBuilder of() {
         return new ImportRequestBuilder();
     }

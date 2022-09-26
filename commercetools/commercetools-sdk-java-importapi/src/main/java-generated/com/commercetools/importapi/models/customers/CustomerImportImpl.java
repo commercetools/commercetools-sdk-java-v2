@@ -114,7 +114,7 @@ public class CustomerImportImpl implements CustomerImport, ModelBase {
     }
 
     /**
-     *
+     *  <p>User-defined unique identifier.</p>
      */
 
     public String getKey() {

@@ -67,6 +67,11 @@ public interface ImportResourceType {
 
     */
     ImportResourceType INVENTORY = ImportResourceTypeEnum.INVENTORY;
+    /**
+    	<p>The Standalone Price import resource type.</p>
+
+    */
+    ImportResourceType STANDALONE_PRICE = ImportResourceTypeEnum.STANDALONE_PRICE;
 
     enum ImportResourceTypeEnum implements ImportResourceType {
         CATEGORY("category"),
@@ -89,7 +94,9 @@ public interface ImportResourceType {
 
         CUSTOMER("customer"),
 
-        INVENTORY("inventory");
+        INVENTORY("inventory"),
+
+        STANDALONE_PRICE("standalone-price");
         private final String jsonName;
 
         private ImportResourceTypeEnum(final String jsonName) {

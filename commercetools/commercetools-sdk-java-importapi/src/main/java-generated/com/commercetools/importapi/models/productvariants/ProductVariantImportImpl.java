@@ -58,7 +58,7 @@ public class ProductVariantImportImpl implements ProductVariantImport, ModelBase
     }
 
     /**
-     *
+     *  <p>User-defined unique identifier.</p>
      */
 
     public String getKey() {

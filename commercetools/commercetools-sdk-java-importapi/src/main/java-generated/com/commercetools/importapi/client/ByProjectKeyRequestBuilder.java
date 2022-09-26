@@ -31,6 +31,10 @@ public class ByProjectKeyRequestBuilder {
         return new ByProjectKeyPricesRequestBuilder(apiHttpClient, projectKey);
     }
 
+    public ByProjectKeyStandalonePricesRequestBuilder standalonePrices() {
+        return new ByProjectKeyStandalonePricesRequestBuilder(apiHttpClient, projectKey);
+    }
+
     public ByProjectKeyProductsRequestBuilder products() {
         return new ByProjectKeyProductsRequestBuilder(apiHttpClient, projectKey);
     }

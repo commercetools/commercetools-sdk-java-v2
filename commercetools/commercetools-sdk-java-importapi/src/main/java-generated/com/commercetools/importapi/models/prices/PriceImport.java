@@ -44,6 +44,13 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface PriceImport extends ImportResource {
 
     /**
+     *  <p>User-defined unique identifier for the Embedded Price.</p>
+     */
+    @NotNull
+    @JsonProperty("key")
+    public String getKey();
+
+    /**
      *  <p>Maps to <code>Price.value</code>.</p>
      */
     @NotNull
@@ -129,6 +136,8 @@ public interface PriceImport extends ImportResource {
     @Valid
     @JsonProperty("product")
     public ProductKeyReference getProduct();
+
+    public void setKey(final String key);
 
     public void setValue(final TypedMoney value);
 

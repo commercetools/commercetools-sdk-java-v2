@@ -17,6 +17,8 @@ public interface ShipmentState {
 
     ShipmentState SHIPPED = ShipmentStateEnum.SHIPPED;
 
+    ShipmentState DELIVERED = ShipmentStateEnum.DELIVERED;
+
     ShipmentState READY = ShipmentStateEnum.READY;
 
     ShipmentState PENDING = ShipmentStateEnum.PENDING;
@@ -29,6 +31,8 @@ public interface ShipmentState {
 
     enum ShipmentStateEnum implements ShipmentState {
         SHIPPED("Shipped"),
+
+        DELIVERED("Delivered"),
 
         READY("Ready"),
 

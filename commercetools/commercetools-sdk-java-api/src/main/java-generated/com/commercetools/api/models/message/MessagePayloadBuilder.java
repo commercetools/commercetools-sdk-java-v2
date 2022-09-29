@@ -479,6 +479,10 @@ public class MessagePayloadBuilder {
         return com.commercetools.api.models.message.StoreProductSelectionsChangedMessagePayloadBuilder.of();
     }
 
+    public com.commercetools.api.models.message.StoreSupplyChannelsChangedMessagePayloadBuilder storeSupplyChannelsChangedBuilder() {
+        return com.commercetools.api.models.message.StoreSupplyChannelsChangedMessagePayloadBuilder.of();
+    }
+
     public static MessagePayloadBuilder of() {
         return new MessagePayloadBuilder();
     }

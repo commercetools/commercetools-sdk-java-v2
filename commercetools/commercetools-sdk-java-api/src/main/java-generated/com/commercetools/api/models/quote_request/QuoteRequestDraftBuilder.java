@@ -42,7 +42,7 @@ public class QuoteRequestDraftBuilder implements Builder<QuoteRequestDraft> {
     private com.commercetools.api.models.state.StateReference state;
 
     /**
-     *  <p>Cart for which a Quote is requested. Anonymous Carts as well as Carts with Discount Codes are not supported.</p>
+     *  <p>Cart for which a Quote is requested. Anonymous Carts, Carts with Discount Codes, or Carts with a <code>Multiple</code> ShippingMode are not supported.</p>
      */
 
     public QuoteRequestDraftBuilder cart(
@@ -52,7 +52,7 @@ public class QuoteRequestDraftBuilder implements Builder<QuoteRequestDraft> {
     }
 
     /**
-     *  <p>Cart for which a Quote is requested. Anonymous Carts as well as Carts with Discount Codes are not supported.</p>
+     *  <p>Cart for which a Quote is requested. Anonymous Carts, Carts with Discount Codes, or Carts with a <code>Multiple</code> ShippingMode are not supported.</p>
      */
 
     public QuoteRequestDraftBuilder cart(final com.commercetools.api.models.cart.CartResourceIdentifier cart) {

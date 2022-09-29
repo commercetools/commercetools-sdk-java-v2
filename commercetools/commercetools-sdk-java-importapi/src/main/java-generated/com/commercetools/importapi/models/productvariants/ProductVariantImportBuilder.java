@@ -48,7 +48,7 @@ public class ProductVariantImportBuilder implements Builder<ProductVariantImport
     private com.commercetools.importapi.models.common.ProductKeyReference product;
 
     /**
-     *
+     *  <p>User-defined unique identifier.</p>
      */
 
     public ProductVariantImportBuilder key(final String key) {

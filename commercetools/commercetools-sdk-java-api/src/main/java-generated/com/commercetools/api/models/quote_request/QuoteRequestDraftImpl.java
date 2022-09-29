@@ -50,7 +50,7 @@ public class QuoteRequestDraftImpl implements QuoteRequestDraft, ModelBase {
     }
 
     /**
-     *  <p>Cart for which a Quote is requested. Anonymous Carts as well as Carts with Discount Codes are not supported.</p>
+     *  <p>Cart for which a Quote is requested. Anonymous Carts, Carts with Discount Codes, or Carts with a <code>Multiple</code> ShippingMode are not supported.</p>
      */
 
     public com.commercetools.api.models.cart.CartResourceIdentifier getCart() {

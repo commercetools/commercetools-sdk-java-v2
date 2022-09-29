@@ -60,7 +60,7 @@ public class CategoryImportBuilder implements Builder<CategoryImport> {
     private com.commercetools.importapi.models.customfields.Custom custom;
 
     /**
-     *
+     *  <p>User-defined unique identifier.</p>
      */
 
     public CategoryImportBuilder key(final String key) {

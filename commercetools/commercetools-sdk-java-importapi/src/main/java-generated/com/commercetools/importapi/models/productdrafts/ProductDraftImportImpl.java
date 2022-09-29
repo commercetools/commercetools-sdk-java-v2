@@ -91,7 +91,7 @@ public class ProductDraftImportImpl implements ProductDraftImport, ModelBase {
     }
 
     /**
-     *
+     *  <p>User-defined unique identifier.</p>
      */
 
     public String getKey() {

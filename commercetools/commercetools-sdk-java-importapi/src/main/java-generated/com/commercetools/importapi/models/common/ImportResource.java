@@ -30,7 +30,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ImportResource {
 
     /**
-     *
+     *  <p>User-defined unique identifier.</p>
      */
     @NotNull
     @JsonProperty("key")

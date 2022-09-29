@@ -74,7 +74,7 @@ public class CategoryImportImpl implements CategoryImport, ModelBase {
     }
 
     /**
-     *
+     *  <p>User-defined unique identifier.</p>
      */
 
     public String getKey() {

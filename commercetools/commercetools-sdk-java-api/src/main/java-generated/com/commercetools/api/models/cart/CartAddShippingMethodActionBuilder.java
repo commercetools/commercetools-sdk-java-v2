@@ -17,6 +17,8 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     CartAddShippingMethodAction cartAddShippingMethodAction = CartAddShippingMethodAction.builder()
  *             .shippingKey("{shippingKey}")
+ *             .shippingMethod(shippingMethodBuilder -> shippingMethodBuilder)
+ *             .shippingAddress(shippingAddressBuilder -> shippingAddressBuilder)
  *             .plusDeliveries(deliveriesBuilder -> deliveriesBuilder)
  *             .build()
  * </code></pre>
@@ -27,10 +29,8 @@ public class CartAddShippingMethodActionBuilder implements Builder<CartAddShippi
 
     private String shippingKey;
 
-    @Nullable
     private com.commercetools.api.models.shipping_method.ShippingMethodReference shippingMethod;
 
-    @Nullable
     private com.commercetools.api.models.common.BaseAddress shippingAddress;
 
     @Nullable
@@ -70,7 +70,7 @@ public class CartAddShippingMethodActionBuilder implements Builder<CartAddShippi
      */
 
     public CartAddShippingMethodActionBuilder shippingMethod(
-            @Nullable final com.commercetools.api.models.shipping_method.ShippingMethodReference shippingMethod) {
+            final com.commercetools.api.models.shipping_method.ShippingMethodReference shippingMethod) {
         this.shippingMethod = shippingMethod;
         return this;
     }
@@ -90,7 +90,7 @@ public class CartAddShippingMethodActionBuilder implements Builder<CartAddShippi
      */
 
     public CartAddShippingMethodActionBuilder shippingAddress(
-            @Nullable final com.commercetools.api.models.common.BaseAddress shippingAddress) {
+            final com.commercetools.api.models.common.BaseAddress shippingAddress) {
         this.shippingAddress = shippingAddress;
         return this;
     }
@@ -205,12 +205,10 @@ public class CartAddShippingMethodActionBuilder implements Builder<CartAddShippi
         return this.shippingKey;
     }
 
-    @Nullable
     public com.commercetools.api.models.shipping_method.ShippingMethodReference getShippingMethod() {
         return this.shippingMethod;
     }
 
-    @Nullable
     public com.commercetools.api.models.common.BaseAddress getShippingAddress() {
         return this.shippingAddress;
     }
@@ -236,6 +234,8 @@ public class CartAddShippingMethodActionBuilder implements Builder<CartAddShippi
 
     public CartAddShippingMethodAction build() {
         Objects.requireNonNull(shippingKey, CartAddShippingMethodAction.class + ": shippingKey is missing");
+        Objects.requireNonNull(shippingMethod, CartAddShippingMethodAction.class + ": shippingMethod is missing");
+        Objects.requireNonNull(shippingAddress, CartAddShippingMethodAction.class + ": shippingAddress is missing");
         Objects.requireNonNull(deliveries, CartAddShippingMethodAction.class + ": deliveries is missing");
         return new CartAddShippingMethodActionImpl(shippingKey, shippingMethod, shippingAddress, shippingRateInput,
             externalTaxRate, deliveries, custom);

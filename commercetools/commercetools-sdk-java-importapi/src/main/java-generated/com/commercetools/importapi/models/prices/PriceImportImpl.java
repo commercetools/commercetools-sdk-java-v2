@@ -79,7 +79,7 @@ public class PriceImportImpl implements PriceImport, ModelBase {
     }
 
     /**
-     *
+     *  <p>User-defined unique identifier for the Embedded Price.</p>
      */
 
     public String getKey() {

@@ -93,7 +93,7 @@ public class CustomerImportBuilder implements Builder<CustomerImport> {
     private com.commercetools.importapi.models.customfields.Custom custom;
 
     /**
-     *
+     *  <p>User-defined unique identifier.</p>
      */
 
     public CustomerImportBuilder key(final String key) {

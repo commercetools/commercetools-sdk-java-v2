@@ -25,6 +25,8 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     CartAddShippingMethodAction cartAddShippingMethodAction = CartAddShippingMethodAction.builder()
  *             .shippingKey("{shippingKey}")
+ *             .shippingMethod(shippingMethodBuilder -> shippingMethodBuilder)
+ *             .shippingAddress(shippingAddressBuilder -> shippingAddressBuilder)
  *             .plusDeliveries(deliveriesBuilder -> deliveriesBuilder)
  *             .build()
  * </code></pre>
@@ -46,6 +48,7 @@ public interface CartAddShippingMethodAction extends CartUpdateAction {
     /**
      *  <p>Value to set. If empty, any existing value is removed.</p>
      */
+    @NotNull
     @Valid
     @JsonProperty("shippingMethod")
     public ShippingMethodReference getShippingMethod();
@@ -53,6 +56,7 @@ public interface CartAddShippingMethodAction extends CartUpdateAction {
     /**
      *  <p>Determines the shipping rate and Tax Rate of the Line Items.</p>
      */
+    @NotNull
     @Valid
     @JsonProperty("shippingAddress")
     public BaseAddress getShippingAddress();

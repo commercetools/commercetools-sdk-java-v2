@@ -16,24 +16,24 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>The request body to import Embedded Prices. Contains data for Embedded Prices to be created or updated in a Project.</p>
+ *  <p>The request body to import Standalone Prices. Contains data for Standalone Prices to be created or updated in a Project.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-public class PriceImportRequestImpl implements PriceImportRequest, ModelBase {
+public class StandalonePriceImportRequestImpl implements StandalonePriceImportRequest, ModelBase {
 
     private com.commercetools.importapi.models.common.ImportResourceType type;
 
-    private java.util.List<com.commercetools.importapi.models.prices.PriceImport> resources;
+    private java.util.List<com.commercetools.importapi.models.standalone_prices.StandalonePriceImport> resources;
 
     @JsonCreator
-    PriceImportRequestImpl(
-            @JsonProperty("resources") final java.util.List<com.commercetools.importapi.models.prices.PriceImport> resources) {
+    StandalonePriceImportRequestImpl(
+            @JsonProperty("resources") final java.util.List<com.commercetools.importapi.models.standalone_prices.StandalonePriceImport> resources) {
         this.resources = resources;
-        this.type = ImportResourceType.findEnum("price");
+        this.type = ImportResourceType.findEnum("standalone-price");
     }
 
-    public PriceImportRequestImpl() {
-        this.type = ImportResourceType.findEnum("price");
+    public StandalonePriceImportRequestImpl() {
+        this.type = ImportResourceType.findEnum("standalone-price");
     }
 
     /**
@@ -45,18 +45,20 @@ public class PriceImportRequestImpl implements PriceImportRequest, ModelBase {
     }
 
     /**
-     *  <p>The price import resources of this request.</p>
+     *  <p>The Standalone Price import resources of this request.</p>
      */
 
-    public java.util.List<com.commercetools.importapi.models.prices.PriceImport> getResources() {
+    public java.util.List<com.commercetools.importapi.models.standalone_prices.StandalonePriceImport> getResources() {
         return this.resources;
     }
 
-    public void setResources(final com.commercetools.importapi.models.prices.PriceImport... resources) {
+    public void setResources(
+            final com.commercetools.importapi.models.standalone_prices.StandalonePriceImport... resources) {
         this.resources = new ArrayList<>(Arrays.asList(resources));
     }
 
-    public void setResources(final java.util.List<com.commercetools.importapi.models.prices.PriceImport> resources) {
+    public void setResources(
+            final java.util.List<com.commercetools.importapi.models.standalone_prices.StandalonePriceImport> resources) {
         this.resources = resources;
     }
 
@@ -68,7 +70,7 @@ public class PriceImportRequestImpl implements PriceImportRequest, ModelBase {
         if (o == null || getClass() != o.getClass())
             return false;
 
-        PriceImportRequestImpl that = (PriceImportRequestImpl) o;
+        StandalonePriceImportRequestImpl that = (StandalonePriceImportRequestImpl) o;
 
         return new EqualsBuilder().append(type, that.type).append(resources, that.resources).isEquals();
     }

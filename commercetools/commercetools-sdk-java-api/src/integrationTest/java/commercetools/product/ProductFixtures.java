@@ -114,6 +114,10 @@ public class ProductFixtures {
     }
 
     public static Product createProduct(ProductType productType, Category category, TaxCategory taxCategory) {
+        return createProduct(productType, category, taxCategory, false);
+    }
+
+    public static Product createProduct(ProductType productType, Category category, TaxCategory taxCategory, boolean publish) {
         String randomKey = CommercetoolsTestUtils.randomKey();
 
         Map<String, String> orderHint = new HashMap<>();
@@ -171,7 +175,7 @@ public class ProductFixtures {
                 .metaKeywords(CommercetoolsTestUtils.randomLocalizedString())
                 .masterVariant(productVariantDraft)
                 .taxCategory(TaxCategoryResourceIdentifierBuilder.of().id(taxCategory.getId()).build())
-                .publish(false)
+                .publish(publish)
                 .build();
 
         Product product = CommercetoolsTestUtils.getProjectApiRoot()

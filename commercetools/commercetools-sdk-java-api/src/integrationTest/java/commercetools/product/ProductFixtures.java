@@ -117,7 +117,8 @@ public class ProductFixtures {
         return createProduct(productType, category, taxCategory, false);
     }
 
-    public static Product createProduct(ProductType productType, Category category, TaxCategory taxCategory, boolean publish) {
+    public static Product createProduct(ProductType productType, Category category, TaxCategory taxCategory,
+            boolean publish) {
         String randomKey = CommercetoolsTestUtils.randomKey();
 
         Map<String, String> orderHint = new HashMap<>();

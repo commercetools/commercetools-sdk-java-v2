@@ -3,7 +3,7 @@ ext {
             slf4j: "1.7.32",
             logback: "1.2.8",
             findbugs: "3.0.2",
-            jackson: "2.12.4",
+            jackson: "2.13.4",
             junit: "5.8.2",
             validation: "2.0.1.Final",
             jsonassert: "1.5.0",

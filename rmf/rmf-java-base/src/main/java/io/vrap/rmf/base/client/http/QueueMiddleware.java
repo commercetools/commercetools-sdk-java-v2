@@ -20,7 +20,7 @@ import io.vrap.rmf.base.client.ApiHttpResponse;
  *
  * @include.example io.vrap.rmf.base.client.QueueMiddlewareTest#queueConfiguration()
  */
-public class QueueMiddleware implements Middleware, AutoCloseable {
+public class QueueMiddleware implements QueueRequestMiddleware, AutoCloseable {
 
     private final FailsafeExecutor<ApiHttpResponse<byte[]>> failsafeExecutor;
 

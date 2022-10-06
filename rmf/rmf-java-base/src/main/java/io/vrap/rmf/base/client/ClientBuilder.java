@@ -4,6 +4,7 @@ package io.vrap.rmf.base.client;
 import static java.util.Objects.requireNonNull;
 
 import java.net.URI;
+import java.time.Duration;
 import java.util.*;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.ForkJoinPool;
@@ -40,6 +41,7 @@ public class ClientBuilder implements Builder<ApiHttpClient> {
     private Supplier<ErrorMiddleware> errorMiddleware;
     private Supplier<OAuthMiddleware> oAuthMiddleware;
     private Supplier<RetryRequestMiddleware> retryMiddleware;
+    private Supplier<QueueRequestMiddleware> queueMiddleware;
     private Supplier<Middleware> correlationIdMiddleware;
     private InternalLoggerMiddleware internalLoggerMiddleware;
     private UserAgentMiddleware userAgentMiddleware;
@@ -155,6 +157,7 @@ public class ClientBuilder implements Builder<ApiHttpClient> {
             Optional.ofNullable(userAgentMiddleware).map(middlewareStack::add);
             Optional.ofNullable(oAuthMiddleware).map(m -> middlewareStack.add(m.get()));
             Optional.ofNullable(retryMiddleware).map(m -> middlewareStack.add(m.get()));
+            Optional.ofNullable(queueMiddleware).map(m -> middlewareStack.add(m.get()));
             Optional.ofNullable(correlationIdMiddleware).map(m -> middlewareStack.add(m.get()));
             middlewareStack.addAll(middlewares);
             return HandlerStack.create(HttpHandler.create(requireNonNull(httpClient)), middlewareStack);
@@ -595,6 +598,34 @@ public class ClientBuilder implements Builder<ApiHttpClient> {
     public ClientBuilder withRetryMiddleware(final Scheduler scheduler, final int maxRetries, final long delay,
             final long maxDelay, final FailsafeRetryPolicyBuilderOptions fn) {
         return withRetryMiddleware(RetryRequestMiddleware.of(scheduler, maxRetries, delay, maxDelay, fn));
+    }
+
+    public ClientBuilder withQueueMiddleware(final Supplier<QueueRequestMiddleware> queueMiddleware) {
+        this.queueMiddleware = queueMiddleware;
+        return this;
+    }
+
+    public ClientBuilder withQueueMiddleware(final QueueRequestMiddleware queueMiddleware) {
+        return withQueueMiddleware(() -> queueMiddleware);
+    }
+
+    public ClientBuilder withQueueMiddleware(final int maxRequests, final Duration maxWaitTime) {
+        return withQueueMiddleware(() -> QueueRequestMiddleware.of(maxRequests, maxWaitTime));
+    }
+
+    public ClientBuilder withQueueMiddleware(final Scheduler scheduler, final int maxRequests,
+            final Duration maxWaitTime) {
+        return withQueueMiddleware(() -> QueueRequestMiddleware.of(scheduler, maxRequests, maxWaitTime));
+    }
+
+    public ClientBuilder withQueueMiddleware(final ScheduledExecutorService executorService, final int maxRequests,
+            final Duration maxWaitTime) {
+        return withQueueMiddleware(() -> QueueRequestMiddleware.of(executorService, maxRequests, maxWaitTime));
+    }
+
+    public ClientBuilder withQueueMiddleware(final ExecutorService executorService, final int maxRequests,
+            final Duration maxWaitTime) {
+        return withQueueMiddleware(() -> QueueRequestMiddleware.of(executorService, maxRequests, maxWaitTime));
     }
 
     public ClientBuilder withOAuthMiddleware(final Supplier<OAuthMiddleware> oAuthMiddleware) {

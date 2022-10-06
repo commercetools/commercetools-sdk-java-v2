@@ -90,6 +90,9 @@ public class OrderImportDraftBuilder implements Builder<OrderImportDraft> {
     private java.util.List<com.commercetools.api.models.common.BaseAddress> itemShippingAddresses;
 
     @Nullable
+    private com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifier businessUnit;
+
+    @Nullable
     private com.commercetools.api.models.store.StoreResourceIdentifier store;
 
     @Nullable
@@ -546,6 +549,28 @@ public class OrderImportDraftBuilder implements Builder<OrderImportDraft> {
     }
 
     /**
+     *  <p>The Business Unit the Cart belongs to.</p>
+     */
+
+    public OrderImportDraftBuilder businessUnit(
+            Function<com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifierBuilder, com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifierBuilder> builder) {
+        this.businessUnit = builder
+                .apply(com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifierBuilder.of())
+                .build();
+        return this;
+    }
+
+    /**
+     *  <p>The Business Unit the Cart belongs to.</p>
+     */
+
+    public OrderImportDraftBuilder businessUnit(
+            @Nullable final com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifier businessUnit) {
+        this.businessUnit = businessUnit;
+        return this;
+    }
+
+    /**
      *
      */
 
@@ -684,6 +709,11 @@ public class OrderImportDraftBuilder implements Builder<OrderImportDraft> {
     }
 
     @Nullable
+    public com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifier getBusinessUnit() {
+        return this.businessUnit;
+    }
+
+    @Nullable
     public com.commercetools.api.models.store.StoreResourceIdentifier getStore() {
         return this.store;
     }
@@ -698,7 +728,7 @@ public class OrderImportDraftBuilder implements Builder<OrderImportDraft> {
         return new OrderImportDraftImpl(orderNumber, customerId, customerEmail, lineItems, customLineItems, totalPrice,
             taxedPrice, shippingAddress, billingAddress, customerGroup, country, orderState, state, shipmentState,
             paymentState, shippingInfo, paymentInfo, completedAt, custom, inventoryMode, taxRoundingMode,
-            itemShippingAddresses, store, origin);
+            itemShippingAddresses, businessUnit, store, origin);
     }
 
     /**
@@ -708,7 +738,7 @@ public class OrderImportDraftBuilder implements Builder<OrderImportDraft> {
         return new OrderImportDraftImpl(orderNumber, customerId, customerEmail, lineItems, customLineItems, totalPrice,
             taxedPrice, shippingAddress, billingAddress, customerGroup, country, orderState, state, shipmentState,
             paymentState, shippingInfo, paymentInfo, completedAt, custom, inventoryMode, taxRoundingMode,
-            itemShippingAddresses, store, origin);
+            itemShippingAddresses, businessUnit, store, origin);
     }
 
     public static OrderImportDraftBuilder of() {
@@ -739,6 +769,7 @@ public class OrderImportDraftBuilder implements Builder<OrderImportDraft> {
         builder.inventoryMode = template.getInventoryMode();
         builder.taxRoundingMode = template.getTaxRoundingMode();
         builder.itemShippingAddresses = template.getItemShippingAddresses();
+        builder.businessUnit = template.getBusinessUnit();
         builder.store = template.getStore();
         builder.origin = template.getOrigin();
         return builder;

@@ -48,6 +48,8 @@ public class ProjectImpl implements Project, ModelBase {
 
     private com.commercetools.api.models.project.SearchIndexingConfiguration searchIndexing;
 
+    private com.commercetools.api.models.project.BusinessUnitConfiguration businessUnits;
+
     @JsonCreator
     ProjectImpl(@JsonProperty("version") final Long version, @JsonProperty("key") final String key,
             @JsonProperty("name") final String name, @JsonProperty("countries") final java.util.List<String> countries,
@@ -60,7 +62,8 @@ public class ProjectImpl implements Project, ModelBase {
             @JsonProperty("shoppingLists") final com.commercetools.api.models.project.ShoppingListsConfiguration shoppingLists,
             @JsonProperty("shippingRateInputType") final com.commercetools.api.models.project.ShippingRateInputType shippingRateInputType,
             @JsonProperty("externalOAuth") final com.commercetools.api.models.project.ExternalOAuth externalOAuth,
-            @JsonProperty("searchIndexing") final com.commercetools.api.models.project.SearchIndexingConfiguration searchIndexing) {
+            @JsonProperty("searchIndexing") final com.commercetools.api.models.project.SearchIndexingConfiguration searchIndexing,
+            @JsonProperty("businessUnits") final com.commercetools.api.models.project.BusinessUnitConfiguration businessUnits) {
         this.version = version;
         this.key = key;
         this.name = name;
@@ -75,6 +78,7 @@ public class ProjectImpl implements Project, ModelBase {
         this.shippingRateInputType = shippingRateInputType;
         this.externalOAuth = externalOAuth;
         this.searchIndexing = searchIndexing;
+        this.businessUnits = businessUnits;
     }
 
     public ProjectImpl() {
@@ -192,6 +196,14 @@ public class ProjectImpl implements Project, ModelBase {
         return this.searchIndexing;
     }
 
+    /**
+     *  <p>Holds configuration specific to Business Units.</p>
+     */
+
+    public com.commercetools.api.models.project.BusinessUnitConfiguration getBusinessUnits() {
+        return this.businessUnits;
+    }
+
     public void setVersion(final Long version) {
         this.version = version;
     }
@@ -262,6 +274,10 @@ public class ProjectImpl implements Project, ModelBase {
         this.searchIndexing = searchIndexing;
     }
 
+    public void setBusinessUnits(final com.commercetools.api.models.project.BusinessUnitConfiguration businessUnits) {
+        this.businessUnits = businessUnits;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -286,6 +302,7 @@ public class ProjectImpl implements Project, ModelBase {
                 .append(shippingRateInputType, that.shippingRateInputType)
                 .append(externalOAuth, that.externalOAuth)
                 .append(searchIndexing, that.searchIndexing)
+                .append(businessUnits, that.businessUnits)
                 .isEquals();
     }
 
@@ -305,6 +322,7 @@ public class ProjectImpl implements Project, ModelBase {
                 .append(shippingRateInputType)
                 .append(externalOAuth)
                 .append(searchIndexing)
+                .append(businessUnits)
                 .toHashCode();
     }
 

@@ -47,6 +47,10 @@ public class ByProjectKeyMeRequestBuilder {
         return new ByProjectKeyMeActiveCartRequestBuilder(apiHttpClient, projectKey);
     }
 
+    public ByProjectKeyMeBusinessUnitsRequestBuilder businessUnits() {
+        return new ByProjectKeyMeBusinessUnitsRequestBuilder(apiHttpClient, projectKey);
+    }
+
     public ByProjectKeyMeCartsRequestBuilder carts() {
         return new ByProjectKeyMeCartsRequestBuilder(apiHttpClient, projectKey);
     }

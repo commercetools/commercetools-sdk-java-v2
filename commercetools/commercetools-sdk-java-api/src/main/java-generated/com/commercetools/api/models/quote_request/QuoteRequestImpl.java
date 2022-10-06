@@ -80,6 +80,8 @@ public class QuoteRequestImpl implements QuoteRequest, ModelBase {
 
     private com.commercetools.api.models.state.StateReference state;
 
+    private com.commercetools.api.models.business_unit.BusinessUnitKeyReference businessUnit;
+
     @JsonCreator
     QuoteRequestImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version,
             @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt,
@@ -109,7 +111,8 @@ public class QuoteRequestImpl implements QuoteRequest, ModelBase {
             @JsonProperty("itemShippingAddresses") final java.util.List<com.commercetools.api.models.common.Address> itemShippingAddresses,
             @JsonProperty("directDiscounts") final java.util.List<com.commercetools.api.models.cart.DirectDiscount> directDiscounts,
             @JsonProperty("custom") final com.commercetools.api.models.type.CustomFields custom,
-            @JsonProperty("state") final com.commercetools.api.models.state.StateReference state) {
+            @JsonProperty("state") final com.commercetools.api.models.state.StateReference state,
+            @JsonProperty("businessUnit") final com.commercetools.api.models.business_unit.BusinessUnitKeyReference businessUnit) {
         this.id = id;
         this.version = version;
         this.createdAt = createdAt;
@@ -140,6 +143,7 @@ public class QuoteRequestImpl implements QuoteRequest, ModelBase {
         this.directDiscounts = directDiscounts;
         this.custom = custom;
         this.state = state;
+        this.businessUnit = businessUnit;
     }
 
     public QuoteRequestImpl() {
@@ -385,6 +389,14 @@ public class QuoteRequestImpl implements QuoteRequest, ModelBase {
         return this.state;
     }
 
+    /**
+     *  <p>The BusinessUnit for the Quote Request.</p>
+     */
+
+    public com.commercetools.api.models.business_unit.BusinessUnitKeyReference getBusinessUnit() {
+        return this.businessUnit;
+    }
+
     public void setId(final String id) {
         this.id = id;
     }
@@ -526,6 +538,11 @@ public class QuoteRequestImpl implements QuoteRequest, ModelBase {
         this.state = state;
     }
 
+    public void setBusinessUnit(
+            final com.commercetools.api.models.business_unit.BusinessUnitKeyReference businessUnit) {
+        this.businessUnit = businessUnit;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -566,6 +583,7 @@ public class QuoteRequestImpl implements QuoteRequest, ModelBase {
                 .append(directDiscounts, that.directDiscounts)
                 .append(custom, that.custom)
                 .append(state, that.state)
+                .append(businessUnit, that.businessUnit)
                 .isEquals();
     }
 
@@ -601,6 +619,7 @@ public class QuoteRequestImpl implements QuoteRequest, ModelBase {
                 .append(directDiscounts)
                 .append(custom)
                 .append(state)
+                .append(businessUnit)
                 .toHashCode();
     }
 

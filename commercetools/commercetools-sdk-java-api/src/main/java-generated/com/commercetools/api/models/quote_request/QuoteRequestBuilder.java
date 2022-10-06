@@ -113,6 +113,9 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
     @Nullable
     private com.commercetools.api.models.state.StateReference state;
 
+    @Nullable
+    private com.commercetools.api.models.business_unit.BusinessUnitKeyReference businessUnit;
+
     /**
      *  <p>Unique identifier of the QuoteRequest.</p>
      */
@@ -723,6 +726,28 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
         return this;
     }
 
+    /**
+     *  <p>The BusinessUnit for the Quote Request.</p>
+     */
+
+    public QuoteRequestBuilder businessUnit(
+            Function<com.commercetools.api.models.business_unit.BusinessUnitKeyReferenceBuilder, com.commercetools.api.models.business_unit.BusinessUnitKeyReferenceBuilder> builder) {
+        this.businessUnit = builder
+                .apply(com.commercetools.api.models.business_unit.BusinessUnitKeyReferenceBuilder.of())
+                .build();
+        return this;
+    }
+
+    /**
+     *  <p>The BusinessUnit for the Quote Request.</p>
+     */
+
+    public QuoteRequestBuilder businessUnit(
+            @Nullable final com.commercetools.api.models.business_unit.BusinessUnitKeyReference businessUnit) {
+        this.businessUnit = businessUnit;
+        return this;
+    }
+
     public String getId() {
         return this.id;
     }
@@ -861,6 +886,11 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
         return this.state;
     }
 
+    @Nullable
+    public com.commercetools.api.models.business_unit.BusinessUnitKeyReference getBusinessUnit() {
+        return this.businessUnit;
+    }
+
     public QuoteRequest build() {
         Objects.requireNonNull(id, QuoteRequest.class + ": id is missing");
         Objects.requireNonNull(version, QuoteRequest.class + ": version is missing");
@@ -878,7 +908,7 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
             quoteRequestState, comment, customer, customerGroup, store, lineItems, customLineItems, totalPrice,
             taxedPrice, shippingAddress, billingAddress, inventoryMode, taxMode, taxRoundingMode, taxCalculationMode,
             country, shippingInfo, paymentInfo, shippingRateInput, itemShippingAddresses, directDiscounts, custom,
-            state);
+            state, businessUnit);
     }
 
     /**
@@ -889,7 +919,7 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
             quoteRequestState, comment, customer, customerGroup, store, lineItems, customLineItems, totalPrice,
             taxedPrice, shippingAddress, billingAddress, inventoryMode, taxMode, taxRoundingMode, taxCalculationMode,
             country, shippingInfo, paymentInfo, shippingRateInput, itemShippingAddresses, directDiscounts, custom,
-            state);
+            state, businessUnit);
     }
 
     public static QuoteRequestBuilder of() {
@@ -928,6 +958,7 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
         builder.directDiscounts = template.getDirectDiscounts();
         builder.custom = template.getCustom();
         builder.state = template.getState();
+        builder.businessUnit = template.getBusinessUnit();
         return builder;
     }
 

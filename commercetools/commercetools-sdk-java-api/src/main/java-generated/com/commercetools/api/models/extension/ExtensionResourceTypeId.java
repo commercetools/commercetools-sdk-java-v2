@@ -50,6 +50,11 @@ public interface ExtensionResourceTypeId {
 
     */
     ExtensionResourceTypeId QUOTE = ExtensionResourceTypeIdEnum.QUOTE;
+    /**
+    	<p>Extension triggered for operations on <a href="/../api/projects/business-units">BusinessUnits</a>.</p>
+
+    */
+    ExtensionResourceTypeId BUSINESS_UNIT = ExtensionResourceTypeIdEnum.BUSINESS_UNIT;
 
     enum ExtensionResourceTypeIdEnum implements ExtensionResourceTypeId {
         CART("cart"),
@@ -64,7 +69,9 @@ public interface ExtensionResourceTypeId {
 
         STAGED_QUOTE("staged-quote"),
 
-        QUOTE("quote");
+        QUOTE("quote"),
+
+        BUSINESS_UNIT("business-unit");
         private final String jsonName;
 
         private ExtensionResourceTypeIdEnum(final String jsonName) {

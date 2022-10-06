@@ -65,6 +65,9 @@ public class ProjectBuilder implements Builder<Project> {
     @Nullable
     private com.commercetools.api.models.project.SearchIndexingConfiguration searchIndexing;
 
+    @Nullable
+    private com.commercetools.api.models.project.BusinessUnitConfiguration businessUnits;
+
     /**
      *  <p>Current version of the Project.</p>
      */
@@ -323,6 +326,27 @@ public class ProjectBuilder implements Builder<Project> {
         return this;
     }
 
+    /**
+     *  <p>Holds configuration specific to Business Units.</p>
+     */
+
+    public ProjectBuilder businessUnits(
+            Function<com.commercetools.api.models.project.BusinessUnitConfigurationBuilder, com.commercetools.api.models.project.BusinessUnitConfigurationBuilder> builder) {
+        this.businessUnits = builder.apply(com.commercetools.api.models.project.BusinessUnitConfigurationBuilder.of())
+                .build();
+        return this;
+    }
+
+    /**
+     *  <p>Holds configuration specific to Business Units.</p>
+     */
+
+    public ProjectBuilder businessUnits(
+            @Nullable final com.commercetools.api.models.project.BusinessUnitConfiguration businessUnits) {
+        this.businessUnits = businessUnits;
+        return this;
+    }
+
     public Long getVersion() {
         return this.version;
     }
@@ -384,6 +408,11 @@ public class ProjectBuilder implements Builder<Project> {
         return this.searchIndexing;
     }
 
+    @Nullable
+    public com.commercetools.api.models.project.BusinessUnitConfiguration getBusinessUnits() {
+        return this.businessUnits;
+    }
+
     public Project build() {
         Objects.requireNonNull(version, Project.class + ": version is missing");
         Objects.requireNonNull(key, Project.class + ": key is missing");
@@ -395,7 +424,7 @@ public class ProjectBuilder implements Builder<Project> {
         Objects.requireNonNull(messages, Project.class + ": messages is missing");
         Objects.requireNonNull(carts, Project.class + ": carts is missing");
         return new ProjectImpl(version, key, name, countries, currencies, languages, createdAt, trialUntil, messages,
-            carts, shoppingLists, shippingRateInputType, externalOAuth, searchIndexing);
+            carts, shoppingLists, shippingRateInputType, externalOAuth, searchIndexing, businessUnits);
     }
 
     /**
@@ -403,7 +432,7 @@ public class ProjectBuilder implements Builder<Project> {
      */
     public Project buildUnchecked() {
         return new ProjectImpl(version, key, name, countries, currencies, languages, createdAt, trialUntil, messages,
-            carts, shoppingLists, shippingRateInputType, externalOAuth, searchIndexing);
+            carts, shoppingLists, shippingRateInputType, externalOAuth, searchIndexing, businessUnits);
     }
 
     public static ProjectBuilder of() {
@@ -426,6 +455,7 @@ public class ProjectBuilder implements Builder<Project> {
         builder.shippingRateInputType = template.getShippingRateInputType();
         builder.externalOAuth = template.getExternalOAuth();
         builder.searchIndexing = template.getSearchIndexing();
+        builder.businessUnits = template.getBusinessUnits();
         return builder;
     }
 

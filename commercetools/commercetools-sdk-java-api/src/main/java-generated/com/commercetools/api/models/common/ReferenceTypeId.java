@@ -15,6 +15,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public interface ReferenceTypeId {
 
+    ReferenceTypeId BUSINESS_UNIT = ReferenceTypeIdEnum.BUSINESS_UNIT;
     /**
     	<p>References a <a href="ctp:api:type:Cart">Cart</a>.</p>
 
@@ -172,6 +173,8 @@ public interface ReferenceTypeId {
     ReferenceTypeId ZONE = ReferenceTypeIdEnum.ZONE;
 
     enum ReferenceTypeIdEnum implements ReferenceTypeId {
+        BUSINESS_UNIT("business-unit"),
+
         CART("cart"),
 
         CART_DISCOUNT("cart-discount"),

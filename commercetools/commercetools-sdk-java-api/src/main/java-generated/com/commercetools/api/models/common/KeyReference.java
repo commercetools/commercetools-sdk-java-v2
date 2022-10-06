@@ -7,6 +7,7 @@ import java.util.function.Function;
 
 import javax.validation.constraints.NotNull;
 
+import com.commercetools.api.models.business_unit.BusinessUnitKeyReference;
 import com.commercetools.api.models.store.StoreKeyReference;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
@@ -20,13 +21,14 @@ import io.vrap.rmf.base.client.utils.Generated;
  * Example to create a subtype instance using the builder pattern
  * <div class=code-example>
  * <pre><code class='java'>
- *     KeyReference keyReference = KeyReference.storeBuilder()
+ *     KeyReference keyReference = KeyReference.businessUnitBuilder()
  *             key("{key}")
  *             .build()
  * </code></pre>
  * </div>
  */
 @JsonSubTypes({
+        @JsonSubTypes.Type(value = com.commercetools.api.models.business_unit.BusinessUnitKeyReferenceImpl.class, name = BusinessUnitKeyReference.BUSINESS_UNIT),
         @JsonSubTypes.Type(value = com.commercetools.api.models.store.StoreKeyReferenceImpl.class, name = StoreKeyReference.STORE) })
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "typeId", defaultImpl = KeyReferenceImpl.class, visible = true)
 @JsonDeserialize(as = KeyReferenceImpl.class)
@@ -48,6 +50,10 @@ public interface KeyReference {
     public String getKey();
 
     public void setKey(final String key);
+
+    public static com.commercetools.api.models.business_unit.BusinessUnitKeyReferenceBuilder businessUnitBuilder() {
+        return com.commercetools.api.models.business_unit.BusinessUnitKeyReferenceBuilder.of();
+    }
 
     public static com.commercetools.api.models.store.StoreKeyReferenceBuilder storeBuilder() {
         return com.commercetools.api.models.store.StoreKeyReferenceBuilder.of();

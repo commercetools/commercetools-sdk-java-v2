@@ -57,6 +57,7 @@ public interface StagedOrder extends Order {
         instance.setCustomerId(template.getCustomerId());
         instance.setCustomerEmail(template.getCustomerEmail());
         instance.setAnonymousId(template.getAnonymousId());
+        instance.setBusinessUnit(template.getBusinessUnit());
         instance.setStore(template.getStore());
         instance.setLineItems(template.getLineItems());
         instance.setCustomLineItems(template.getCustomLineItems());

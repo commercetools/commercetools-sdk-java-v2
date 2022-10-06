@@ -46,6 +46,8 @@ public class MyCartDraftImpl implements MyCartDraft, ModelBase {
 
     private java.util.List<com.commercetools.api.models.common.BaseAddress> itemShippingAddresses;
 
+    private com.commercetools.api.models.business_unit.BusinessUnitKeyReference businessUnit;
+
     private com.commercetools.api.models.store.StoreKeyReference store;
 
     private java.util.List<String> discountCodes;
@@ -63,6 +65,7 @@ public class MyCartDraftImpl implements MyCartDraft, ModelBase {
             @JsonProperty("taxMode") final com.commercetools.api.models.cart.TaxMode taxMode,
             @JsonProperty("deleteDaysAfterLastModification") final Long deleteDaysAfterLastModification,
             @JsonProperty("itemShippingAddresses") final java.util.List<com.commercetools.api.models.common.BaseAddress> itemShippingAddresses,
+            @JsonProperty("businessUnit") final com.commercetools.api.models.business_unit.BusinessUnitKeyReference businessUnit,
             @JsonProperty("store") final com.commercetools.api.models.store.StoreKeyReference store,
             @JsonProperty("discountCodes") final java.util.List<String> discountCodes) {
         this.currency = currency;
@@ -78,6 +81,7 @@ public class MyCartDraftImpl implements MyCartDraft, ModelBase {
         this.taxMode = taxMode;
         this.deleteDaysAfterLastModification = deleteDaysAfterLastModification;
         this.itemShippingAddresses = itemShippingAddresses;
+        this.businessUnit = businessUnit;
         this.store = store;
         this.discountCodes = discountCodes;
     }
@@ -190,6 +194,14 @@ public class MyCartDraftImpl implements MyCartDraft, ModelBase {
     }
 
     /**
+     *  <p>The BusinessUnit the cart will belong to.</p>
+     */
+
+    public com.commercetools.api.models.business_unit.BusinessUnitKeyReference getBusinessUnit() {
+        return this.businessUnit;
+    }
+
+    /**
      *  <p>Reference to a Store by its key.</p>
      */
 
@@ -268,6 +280,11 @@ public class MyCartDraftImpl implements MyCartDraft, ModelBase {
         this.itemShippingAddresses = itemShippingAddresses;
     }
 
+    public void setBusinessUnit(
+            final com.commercetools.api.models.business_unit.BusinessUnitKeyReference businessUnit) {
+        this.businessUnit = businessUnit;
+    }
+
     public void setStore(final com.commercetools.api.models.store.StoreKeyReference store) {
         this.store = store;
     }
@@ -303,6 +320,7 @@ public class MyCartDraftImpl implements MyCartDraft, ModelBase {
                 .append(taxMode, that.taxMode)
                 .append(deleteDaysAfterLastModification, that.deleteDaysAfterLastModification)
                 .append(itemShippingAddresses, that.itemShippingAddresses)
+                .append(businessUnit, that.businessUnit)
                 .append(store, that.store)
                 .append(discountCodes, that.discountCodes)
                 .isEquals();
@@ -323,6 +341,7 @@ public class MyCartDraftImpl implements MyCartDraft, ModelBase {
                 .append(taxMode)
                 .append(deleteDaysAfterLastModification)
                 .append(itemShippingAddresses)
+                .append(businessUnit)
                 .append(store)
                 .append(discountCodes)
                 .toHashCode();

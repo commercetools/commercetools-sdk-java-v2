@@ -1,0 +1,334 @@
+
+package com.commercetools.api.models.business_unit;
+
+import java.time.*;
+import java.util.*;
+
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.databind.annotation.*;
+
+import io.vrap.rmf.base.client.ModelBase;
+import io.vrap.rmf.base.client.utils.Generated;
+
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
+
+/**
+ *  <p>Draft type to model divisions that are part of a Company or a higher order Division. Contains the fields and values of the generic BusinessUnitDraft that are used specifically for creating a Division.</p>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+public class DivisionDraftImpl implements DivisionDraft, ModelBase {
+
+    private String key;
+
+    private com.commercetools.api.models.business_unit.BusinessUnitStatus status;
+
+    private java.util.List<com.commercetools.api.models.store.StoreKeyReference> stores;
+
+    private com.commercetools.api.models.business_unit.BusinessUnitStoreMode storeMode;
+
+    private com.commercetools.api.models.business_unit.BusinessUnitType unitType;
+
+    private String name;
+
+    private String contactEmail;
+
+    private java.util.List<com.commercetools.api.models.business_unit.AssociateDraft> associates;
+
+    private java.util.List<com.commercetools.api.models.common.BaseAddress> addresses;
+
+    private java.util.List<Integer> shippingAddresses;
+
+    private Integer defaultShipingAddress;
+
+    private java.util.List<Integer> billingAddresses;
+
+    private Integer defaultBillingAddress;
+
+    private com.commercetools.api.models.type.CustomFieldsDraft custom;
+
+    private com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifier parentUnit;
+
+    @JsonCreator
+    DivisionDraftImpl(@JsonProperty("key") final String key,
+            @JsonProperty("status") final com.commercetools.api.models.business_unit.BusinessUnitStatus status,
+            @JsonProperty("stores") final java.util.List<com.commercetools.api.models.store.StoreKeyReference> stores,
+            @JsonProperty("storeMode") final com.commercetools.api.models.business_unit.BusinessUnitStoreMode storeMode,
+            @JsonProperty("name") final String name, @JsonProperty("contactEmail") final String contactEmail,
+            @JsonProperty("associates") final java.util.List<com.commercetools.api.models.business_unit.AssociateDraft> associates,
+            @JsonProperty("addresses") final java.util.List<com.commercetools.api.models.common.BaseAddress> addresses,
+            @JsonProperty("shippingAddresses") final java.util.List<Integer> shippingAddresses,
+            @JsonProperty("defaultShipingAddress") final Integer defaultShipingAddress,
+            @JsonProperty("billingAddresses") final java.util.List<Integer> billingAddresses,
+            @JsonProperty("defaultBillingAddress") final Integer defaultBillingAddress,
+            @JsonProperty("custom") final com.commercetools.api.models.type.CustomFieldsDraft custom,
+            @JsonProperty("parentUnit") final com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifier parentUnit) {
+        this.key = key;
+        this.status = status;
+        this.stores = stores;
+        this.storeMode = storeMode;
+        this.name = name;
+        this.contactEmail = contactEmail;
+        this.associates = associates;
+        this.addresses = addresses;
+        this.shippingAddresses = shippingAddresses;
+        this.defaultShipingAddress = defaultShipingAddress;
+        this.billingAddresses = billingAddresses;
+        this.defaultBillingAddress = defaultBillingAddress;
+        this.custom = custom;
+        this.parentUnit = parentUnit;
+        this.unitType = BusinessUnitType.findEnum("Division");
+    }
+
+    public DivisionDraftImpl() {
+        this.unitType = BusinessUnitType.findEnum("Division");
+    }
+
+    /**
+     *  <p>User-defined unique identifier for the Business Unit.</p>
+     */
+
+    public String getKey() {
+        return this.key;
+    }
+
+    /**
+     *  <p>Indicates whether the Business Unit can be edited and used in Orders.</p>
+     */
+
+    public com.commercetools.api.models.business_unit.BusinessUnitStatus getStatus() {
+        return this.status;
+    }
+
+    /**
+     *  <p>References to Stores the Business Unit is associated with. Can only be set when <code>storeMode</code> is <code>Explicit</code>. If not empty, the Business Unit can only be linked to Carts and Orders of a referenced Store. If empty, the Business Unit can only create Carts, Orders, or Quotes that have no <code>store</code> value. Defaults to empty for Companies and not set for Divisions.</p>
+     */
+
+    public java.util.List<com.commercetools.api.models.store.StoreKeyReference> getStores() {
+        return this.stores;
+    }
+
+    /**
+     *  <p>If not set, the Division inherits the Stores from its <code>parentUnit</code>. Set this to <code>Explicit</code> if you want to set the Stores explicitly in the <code>stores</code> field instead.</p>
+     */
+
+    public com.commercetools.api.models.business_unit.BusinessUnitStoreMode getStoreMode() {
+        return this.storeMode;
+    }
+
+    /**
+     *  <p>Type of the Business Unit indicating its position in a hierarchy.</p>
+     */
+
+    public com.commercetools.api.models.business_unit.BusinessUnitType getUnitType() {
+        return this.unitType;
+    }
+
+    /**
+     *  <p>Name of the Business Unit.</p>
+     */
+
+    public String getName() {
+        return this.name;
+    }
+
+    /**
+     *  <p>Email address of the Business Unit.</p>
+     */
+
+    public String getContactEmail() {
+        return this.contactEmail;
+    }
+
+    /**
+     *  <p>List of members that are part of the Business Unit in specific roles.</p>
+     */
+
+    public java.util.List<com.commercetools.api.models.business_unit.AssociateDraft> getAssociates() {
+        return this.associates;
+    }
+
+    /**
+     *  <p>Addresses used by the Business Unit.</p>
+     */
+
+    public java.util.List<com.commercetools.api.models.common.BaseAddress> getAddresses() {
+        return this.addresses;
+    }
+
+    /**
+     *  <p>Indexes of entries in <code>addresses</code> to set as shipping addresses. The <code>shippingAddressIds</code> of the Customer will be replaced by these addresses.</p>
+     */
+
+    public java.util.List<Integer> getShippingAddresses() {
+        return this.shippingAddresses;
+    }
+
+    /**
+     *  <p>Index of the entry in <code>addresses</code> to set as the default shipping address.</p>
+     */
+
+    public Integer getDefaultShipingAddress() {
+        return this.defaultShipingAddress;
+    }
+
+    /**
+     *  <p>Indexes of entries in <code>addresses</code> to set as billing addresses. The <code>billingAddressIds</code> of the Customer will be replaced by these addresses.</p>
+     */
+
+    public java.util.List<Integer> getBillingAddresses() {
+        return this.billingAddresses;
+    }
+
+    /**
+     *  <p>Index of the entry in <code>addresses</code> to set as the default billing address.</p>
+     */
+
+    public Integer getDefaultBillingAddress() {
+        return this.defaultBillingAddress;
+    }
+
+    /**
+     *  <p>Custom Fields for the Business Unit.</p>
+     */
+
+    public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
+        return this.custom;
+    }
+
+    /**
+     *  <p>The parent unit of this Division. Can be a Company or a Division.</p>
+     */
+
+    public com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifier getParentUnit() {
+        return this.parentUnit;
+    }
+
+    public void setKey(final String key) {
+        this.key = key;
+    }
+
+    public void setStatus(final com.commercetools.api.models.business_unit.BusinessUnitStatus status) {
+        this.status = status;
+    }
+
+    public void setStores(final com.commercetools.api.models.store.StoreKeyReference... stores) {
+        this.stores = new ArrayList<>(Arrays.asList(stores));
+    }
+
+    public void setStores(final java.util.List<com.commercetools.api.models.store.StoreKeyReference> stores) {
+        this.stores = stores;
+    }
+
+    public void setStoreMode(final com.commercetools.api.models.business_unit.BusinessUnitStoreMode storeMode) {
+        this.storeMode = storeMode;
+    }
+
+    public void setName(final String name) {
+        this.name = name;
+    }
+
+    public void setContactEmail(final String contactEmail) {
+        this.contactEmail = contactEmail;
+    }
+
+    public void setAssociates(final com.commercetools.api.models.business_unit.AssociateDraft... associates) {
+        this.associates = new ArrayList<>(Arrays.asList(associates));
+    }
+
+    public void setAssociates(
+            final java.util.List<com.commercetools.api.models.business_unit.AssociateDraft> associates) {
+        this.associates = associates;
+    }
+
+    public void setAddresses(final com.commercetools.api.models.common.BaseAddress... addresses) {
+        this.addresses = new ArrayList<>(Arrays.asList(addresses));
+    }
+
+    public void setAddresses(final java.util.List<com.commercetools.api.models.common.BaseAddress> addresses) {
+        this.addresses = addresses;
+    }
+
+    public void setShippingAddresses(final Integer... shippingAddresses) {
+        this.shippingAddresses = new ArrayList<>(Arrays.asList(shippingAddresses));
+    }
+
+    public void setShippingAddresses(final java.util.List<Integer> shippingAddresses) {
+        this.shippingAddresses = shippingAddresses;
+    }
+
+    public void setDefaultShipingAddress(final Integer defaultShipingAddress) {
+        this.defaultShipingAddress = defaultShipingAddress;
+    }
+
+    public void setBillingAddresses(final Integer... billingAddresses) {
+        this.billingAddresses = new ArrayList<>(Arrays.asList(billingAddresses));
+    }
+
+    public void setBillingAddresses(final java.util.List<Integer> billingAddresses) {
+        this.billingAddresses = billingAddresses;
+    }
+
+    public void setDefaultBillingAddress(final Integer defaultBillingAddress) {
+        this.defaultBillingAddress = defaultBillingAddress;
+    }
+
+    public void setCustom(final com.commercetools.api.models.type.CustomFieldsDraft custom) {
+        this.custom = custom;
+    }
+
+    public void setParentUnit(
+            final com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifier parentUnit) {
+        this.parentUnit = parentUnit;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o)
+            return true;
+
+        if (o == null || getClass() != o.getClass())
+            return false;
+
+        DivisionDraftImpl that = (DivisionDraftImpl) o;
+
+        return new EqualsBuilder().append(key, that.key)
+                .append(status, that.status)
+                .append(stores, that.stores)
+                .append(storeMode, that.storeMode)
+                .append(unitType, that.unitType)
+                .append(name, that.name)
+                .append(contactEmail, that.contactEmail)
+                .append(associates, that.associates)
+                .append(addresses, that.addresses)
+                .append(shippingAddresses, that.shippingAddresses)
+                .append(defaultShipingAddress, that.defaultShipingAddress)
+                .append(billingAddresses, that.billingAddresses)
+                .append(defaultBillingAddress, that.defaultBillingAddress)
+                .append(custom, that.custom)
+                .append(parentUnit, that.parentUnit)
+                .isEquals();
+    }
+
+    @Override
+    public int hashCode() {
+        return new HashCodeBuilder(17, 37).append(key)
+                .append(status)
+                .append(stores)
+                .append(storeMode)
+                .append(unitType)
+                .append(name)
+                .append(contactEmail)
+                .append(associates)
+                .append(addresses)
+                .append(shippingAddresses)
+                .append(defaultShipingAddress)
+                .append(billingAddresses)
+                .append(defaultBillingAddress)
+                .append(custom)
+                .append(parentUnit)
+                .toHashCode();
+    }
+
+}

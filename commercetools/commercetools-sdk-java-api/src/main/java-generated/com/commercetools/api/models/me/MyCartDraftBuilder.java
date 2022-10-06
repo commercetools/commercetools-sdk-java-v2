@@ -63,6 +63,9 @@ public class MyCartDraftBuilder implements Builder<MyCartDraft> {
     private java.util.List<com.commercetools.api.models.common.BaseAddress> itemShippingAddresses;
 
     @Nullable
+    private com.commercetools.api.models.business_unit.BusinessUnitKeyReference businessUnit;
+
+    @Nullable
     private com.commercetools.api.models.store.StoreKeyReference store;
 
     @Nullable
@@ -329,6 +332,28 @@ public class MyCartDraftBuilder implements Builder<MyCartDraft> {
     }
 
     /**
+     *  <p>The BusinessUnit the cart will belong to.</p>
+     */
+
+    public MyCartDraftBuilder businessUnit(
+            Function<com.commercetools.api.models.business_unit.BusinessUnitKeyReferenceBuilder, com.commercetools.api.models.business_unit.BusinessUnitKeyReferenceBuilder> builder) {
+        this.businessUnit = builder
+                .apply(com.commercetools.api.models.business_unit.BusinessUnitKeyReferenceBuilder.of())
+                .build();
+        return this;
+    }
+
+    /**
+     *  <p>The BusinessUnit the cart will belong to.</p>
+     */
+
+    public MyCartDraftBuilder businessUnit(
+            @Nullable final com.commercetools.api.models.business_unit.BusinessUnitKeyReference businessUnit) {
+        this.businessUnit = businessUnit;
+        return this;
+    }
+
+    /**
      *  <p>Reference to a Store by its key.</p>
      */
 
@@ -442,6 +467,11 @@ public class MyCartDraftBuilder implements Builder<MyCartDraft> {
     }
 
     @Nullable
+    public com.commercetools.api.models.business_unit.BusinessUnitKeyReference getBusinessUnit() {
+        return this.businessUnit;
+    }
+
+    @Nullable
     public com.commercetools.api.models.store.StoreKeyReference getStore() {
         return this.store;
     }
@@ -455,7 +485,7 @@ public class MyCartDraftBuilder implements Builder<MyCartDraft> {
         Objects.requireNonNull(currency, MyCartDraft.class + ": currency is missing");
         return new MyCartDraftImpl(currency, customerEmail, country, inventoryMode, lineItems, shippingAddress,
             billingAddress, shippingMethod, custom, locale, taxMode, deleteDaysAfterLastModification,
-            itemShippingAddresses, store, discountCodes);
+            itemShippingAddresses, businessUnit, store, discountCodes);
     }
 
     /**
@@ -464,7 +494,7 @@ public class MyCartDraftBuilder implements Builder<MyCartDraft> {
     public MyCartDraft buildUnchecked() {
         return new MyCartDraftImpl(currency, customerEmail, country, inventoryMode, lineItems, shippingAddress,
             billingAddress, shippingMethod, custom, locale, taxMode, deleteDaysAfterLastModification,
-            itemShippingAddresses, store, discountCodes);
+            itemShippingAddresses, businessUnit, store, discountCodes);
     }
 
     public static MyCartDraftBuilder of() {
@@ -486,6 +516,7 @@ public class MyCartDraftBuilder implements Builder<MyCartDraft> {
         builder.taxMode = template.getTaxMode();
         builder.deleteDaysAfterLastModification = template.getDeleteDaysAfterLastModification();
         builder.itemShippingAddresses = template.getItemShippingAddresses();
+        builder.businessUnit = template.getBusinessUnit();
         builder.store = template.getStore();
         builder.discountCodes = template.getDiscountCodes();
         return builder;

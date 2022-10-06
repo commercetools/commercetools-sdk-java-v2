@@ -9,6 +9,7 @@ import java.util.function.Function;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
+import com.commercetools.api.models.business_unit.BusinessUnitKeyReference;
 import com.commercetools.api.models.cart.CartReference;
 import com.commercetools.api.models.common.BaseResource;
 import com.commercetools.api.models.common.CreatedBy;
@@ -152,6 +153,13 @@ public interface StagedQuote extends BaseResource {
     @JsonProperty("state")
     public StateReference getState();
 
+    /**
+     *  <p>The BusinessUnit for the Staged Quote.</p>
+     */
+    @Valid
+    @JsonProperty("businessUnit")
+    public BusinessUnitKeyReference getBusinessUnit();
+
     public void setId(final String id);
 
     public void setVersion(final Long version);
@@ -182,6 +190,8 @@ public interface StagedQuote extends BaseResource {
 
     public void setState(final StateReference state);
 
+    public void setBusinessUnit(final BusinessUnitKeyReference businessUnit);
+
     public static StagedQuote of() {
         return new StagedQuoteImpl();
     }
@@ -203,6 +213,7 @@ public interface StagedQuote extends BaseResource {
         instance.setSellerComment(template.getSellerComment());
         instance.setCustom(template.getCustom());
         instance.setState(template.getState());
+        instance.setBusinessUnit(template.getBusinessUnit());
         return instance;
     }
 

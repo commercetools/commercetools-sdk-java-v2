@@ -19,13 +19,14 @@ import io.vrap.rmf.base.client.utils.Generated;
  * Example to create a subtype instance using the builder pattern
  * <div class=code-example>
  * <pre><code class='java'>
- *     ProjectUpdateAction projectUpdateAction = ProjectUpdateAction.changeCartsConfigurationBuilder()
- *             cartsConfiguration(cartsConfigurationBuilder -> cartsConfigurationBuilder)
+ *     ProjectUpdateAction projectUpdateAction = ProjectUpdateAction.changeMyBusinessUnitStatusOnCreationBuilder()
+ *             status(BusinessUnitConfigurationStatus.ACTIVE)
  *             .build()
  * </code></pre>
  * </div>
  */
 @JsonSubTypes({
+        @JsonSubTypes.Type(value = com.commercetools.api.models.project.ProjectChangeBusinessUnitStatusOnCreationActionImpl.class, name = ProjectChangeBusinessUnitStatusOnCreationAction.CHANGE_MY_BUSINESS_UNIT_STATUS_ON_CREATION),
         @JsonSubTypes.Type(value = com.commercetools.api.models.project.ProjectChangeCartsConfigurationActionImpl.class, name = ProjectChangeCartsConfigurationAction.CHANGE_CARTS_CONFIGURATION),
         @JsonSubTypes.Type(value = com.commercetools.api.models.project.ProjectChangeCountriesActionImpl.class, name = ProjectChangeCountriesAction.CHANGE_COUNTRIES),
         @JsonSubTypes.Type(value = com.commercetools.api.models.project.ProjectChangeCountryTaxRateFallbackEnabledActionImpl.class, name = ProjectChangeCountryTaxRateFallbackEnabledAction.CHANGE_COUNTRY_TAX_RATE_FALLBACK_ENABLED),
@@ -49,6 +50,10 @@ public interface ProjectUpdateAction extends com.commercetools.api.models.Resour
     @NotNull
     @JsonProperty("action")
     public String getAction();
+
+    public static com.commercetools.api.models.project.ProjectChangeBusinessUnitStatusOnCreationActionBuilder changeMyBusinessUnitStatusOnCreationBuilder() {
+        return com.commercetools.api.models.project.ProjectChangeBusinessUnitStatusOnCreationActionBuilder.of();
+    }
 
     public static com.commercetools.api.models.project.ProjectChangeCartsConfigurationActionBuilder changeCartsConfigurationBuilder() {
         return com.commercetools.api.models.project.ProjectChangeCartsConfigurationActionBuilder.of();

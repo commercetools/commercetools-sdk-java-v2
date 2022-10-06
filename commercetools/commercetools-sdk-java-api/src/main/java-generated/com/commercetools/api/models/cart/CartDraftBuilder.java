@@ -42,6 +42,9 @@ public class CartDraftBuilder implements Builder<CartDraft> {
     private String anonymousId;
 
     @Nullable
+    private com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifier businessUnit;
+
+    @Nullable
     private com.commercetools.api.models.store.StoreResourceIdentifier store;
 
     @Nullable
@@ -171,6 +174,28 @@ public class CartDraftBuilder implements Builder<CartDraft> {
 
     public CartDraftBuilder anonymousId(@Nullable final String anonymousId) {
         this.anonymousId = anonymousId;
+        return this;
+    }
+
+    /**
+     *  <p>The Business Unit the Cart belongs to.</p>
+     */
+
+    public CartDraftBuilder businessUnit(
+            Function<com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifierBuilder, com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifierBuilder> builder) {
+        this.businessUnit = builder
+                .apply(com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifierBuilder.of())
+                .build();
+        return this;
+    }
+
+    /**
+     *  <p>The Business Unit the Cart belongs to.</p>
+     */
+
+    public CartDraftBuilder businessUnit(
+            @Nullable final com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifier businessUnit) {
+        this.businessUnit = businessUnit;
         return this;
     }
 
@@ -752,6 +777,11 @@ public class CartDraftBuilder implements Builder<CartDraft> {
     }
 
     @Nullable
+    public com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifier getBusinessUnit() {
+        return this.businessUnit;
+    }
+
+    @Nullable
     public com.commercetools.api.models.store.StoreResourceIdentifier getStore() {
         return this.store;
     }
@@ -863,9 +893,9 @@ public class CartDraftBuilder implements Builder<CartDraft> {
 
     public CartDraft build() {
         Objects.requireNonNull(currency, CartDraft.class + ": currency is missing");
-        return new CartDraftImpl(currency, key, customerId, customerEmail, customerGroup, anonymousId, store, country,
-            inventoryMode, taxMode, taxRoundingMode, taxCalculationMode, lineItems, customLineItems, shippingAddress,
-            billingAddress, shippingMethod, externalTaxRateForShippingMethod, custom, locale,
+        return new CartDraftImpl(currency, key, customerId, customerEmail, customerGroup, anonymousId, businessUnit,
+            store, country, inventoryMode, taxMode, taxRoundingMode, taxCalculationMode, lineItems, customLineItems,
+            shippingAddress, billingAddress, shippingMethod, externalTaxRateForShippingMethod, custom, locale,
             deleteDaysAfterLastModification, origin, shippingMode, customShipping, shipping, shippingRateInput,
             itemShippingAddresses, discountCodes);
     }
@@ -874,9 +904,9 @@ public class CartDraftBuilder implements Builder<CartDraft> {
      * builds CartDraft without checking for non null required values
      */
     public CartDraft buildUnchecked() {
-        return new CartDraftImpl(currency, key, customerId, customerEmail, customerGroup, anonymousId, store, country,
-            inventoryMode, taxMode, taxRoundingMode, taxCalculationMode, lineItems, customLineItems, shippingAddress,
-            billingAddress, shippingMethod, externalTaxRateForShippingMethod, custom, locale,
+        return new CartDraftImpl(currency, key, customerId, customerEmail, customerGroup, anonymousId, businessUnit,
+            store, country, inventoryMode, taxMode, taxRoundingMode, taxCalculationMode, lineItems, customLineItems,
+            shippingAddress, billingAddress, shippingMethod, externalTaxRateForShippingMethod, custom, locale,
             deleteDaysAfterLastModification, origin, shippingMode, customShipping, shipping, shippingRateInput,
             itemShippingAddresses, discountCodes);
     }
@@ -893,6 +923,7 @@ public class CartDraftBuilder implements Builder<CartDraft> {
         builder.customerEmail = template.getCustomerEmail();
         builder.customerGroup = template.getCustomerGroup();
         builder.anonymousId = template.getAnonymousId();
+        builder.businessUnit = template.getBusinessUnit();
         builder.store = template.getStore();
         builder.country = template.getCountry();
         builder.inventoryMode = template.getInventoryMode();

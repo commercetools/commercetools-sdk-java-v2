@@ -150,6 +150,11 @@ public interface ResourceTypeId {
     */
     ResourceTypeId SHOPPING_LIST_TEXT_LINE_ITEM = ResourceTypeIdEnum.SHOPPING_LIST_TEXT_LINE_ITEM;
     /**
+    	<p><a href="ctp:api:type:StandalonePrice">StandalonePrice</a></p>
+
+    */
+    ResourceTypeId STANDALONE_PRICE = ResourceTypeIdEnum.STANDALONE_PRICE;
+    /**
     	<p><a href="ctp:api:type:Store">Store</a></p>
 
     */
@@ -212,6 +217,8 @@ public interface ResourceTypeId {
         SHOPPING_LIST("shopping-list"),
 
         SHOPPING_LIST_TEXT_LINE_ITEM("shopping-list-text-line-item"),
+
+        STANDALONE_PRICE("standalone-price"),
 
         STORE("store"),
 

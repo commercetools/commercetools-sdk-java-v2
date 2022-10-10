@@ -15,6 +15,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public interface ReferenceTypeId {
 
+    /**
+    	<p>References a <a href="ctp:api:type:BusinessUnit">BusinessUnit</a>.</p>
+
+    */
     ReferenceTypeId BUSINESS_UNIT = ReferenceTypeIdEnum.BUSINESS_UNIT;
     /**
     	<p>References a <a href="ctp:api:type:Cart">Cart</a>.</p>

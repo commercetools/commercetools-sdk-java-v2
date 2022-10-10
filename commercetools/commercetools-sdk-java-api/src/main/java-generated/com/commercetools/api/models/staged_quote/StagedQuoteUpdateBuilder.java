@@ -28,7 +28,7 @@ public class StagedQuoteUpdateBuilder implements Builder<StagedQuoteUpdate> {
     private java.util.List<com.commercetools.api.models.staged_quote.StagedQuoteUpdateAction> actions;
 
     /**
-     *
+     *  <p>Expected version of the StagedQuote to which the changes should be applied. If the expected version does not match the actual version, a 409 Conflict error will be returned.</p>
      */
 
     public StagedQuoteUpdateBuilder version(final Long version) {
@@ -37,7 +37,7 @@ public class StagedQuoteUpdateBuilder implements Builder<StagedQuoteUpdate> {
     }
 
     /**
-     *
+     *  <p>Update actions to be performed on the StagedQuote.</p>
      */
 
     public StagedQuoteUpdateBuilder actions(
@@ -47,7 +47,7 @@ public class StagedQuoteUpdateBuilder implements Builder<StagedQuoteUpdate> {
     }
 
     /**
-     *
+     *  <p>Update actions to be performed on the StagedQuote.</p>
      */
 
     public StagedQuoteUpdateBuilder actions(
@@ -57,7 +57,7 @@ public class StagedQuoteUpdateBuilder implements Builder<StagedQuoteUpdate> {
     }
 
     /**
-     *
+     *  <p>Update actions to be performed on the StagedQuote.</p>
      */
 
     public StagedQuoteUpdateBuilder plusActions(
@@ -70,7 +70,7 @@ public class StagedQuoteUpdateBuilder implements Builder<StagedQuoteUpdate> {
     }
 
     /**
-     *
+     *  <p>Update actions to be performed on the StagedQuote.</p>
      */
 
     public StagedQuoteUpdateBuilder plusActions(
@@ -84,7 +84,7 @@ public class StagedQuoteUpdateBuilder implements Builder<StagedQuoteUpdate> {
     }
 
     /**
-     *
+     *  <p>Update actions to be performed on the StagedQuote.</p>
      */
 
     public StagedQuoteUpdateBuilder withActions(

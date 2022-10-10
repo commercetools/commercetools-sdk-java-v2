@@ -1,5 +1,5 @@
 
-package com.commercetools.api.models.quote;
+package com.commercetools.api.models.me;
 
 import java.time.*;
 import java.util.*;
@@ -15,23 +15,23 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * QuoteUpdate
+ * MyQuoteUpdate
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-public class QuoteUpdateImpl implements QuoteUpdate, ModelBase {
+public class MyQuoteUpdateImpl implements MyQuoteUpdate, ModelBase {
 
     private Long version;
 
-    private java.util.List<com.commercetools.api.models.quote.QuoteUpdateAction> actions;
+    private java.util.List<com.commercetools.api.models.me.MyQuoteUpdateAction> actions;
 
     @JsonCreator
-    QuoteUpdateImpl(@JsonProperty("version") final Long version,
-            @JsonProperty("actions") final java.util.List<com.commercetools.api.models.quote.QuoteUpdateAction> actions) {
+    MyQuoteUpdateImpl(@JsonProperty("version") final Long version,
+            @JsonProperty("actions") final java.util.List<com.commercetools.api.models.me.MyQuoteUpdateAction> actions) {
         this.version = version;
         this.actions = actions;
     }
 
-    public QuoteUpdateImpl() {
+    public MyQuoteUpdateImpl() {
     }
 
     /**
@@ -46,7 +46,7 @@ public class QuoteUpdateImpl implements QuoteUpdate, ModelBase {
      *  <p>Update actions to be performed on the Quote.</p>
      */
 
-    public java.util.List<com.commercetools.api.models.quote.QuoteUpdateAction> getActions() {
+    public java.util.List<com.commercetools.api.models.me.MyQuoteUpdateAction> getActions() {
         return this.actions;
     }
 
@@ -54,11 +54,11 @@ public class QuoteUpdateImpl implements QuoteUpdate, ModelBase {
         this.version = version;
     }
 
-    public void setActions(final com.commercetools.api.models.quote.QuoteUpdateAction... actions) {
+    public void setActions(final com.commercetools.api.models.me.MyQuoteUpdateAction... actions) {
         this.actions = new ArrayList<>(Arrays.asList(actions));
     }
 
-    public void setActions(final java.util.List<com.commercetools.api.models.quote.QuoteUpdateAction> actions) {
+    public void setActions(final java.util.List<com.commercetools.api.models.me.MyQuoteUpdateAction> actions) {
         this.actions = actions;
     }
 
@@ -70,7 +70,7 @@ public class QuoteUpdateImpl implements QuoteUpdate, ModelBase {
         if (o == null || getClass() != o.getClass())
             return false;
 
-        QuoteUpdateImpl that = (QuoteUpdateImpl) o;
+        MyQuoteUpdateImpl that = (MyQuoteUpdateImpl) o;
 
         return new EqualsBuilder().append(version, that.version).append(actions, that.actions).isEquals();
     }

@@ -16,22 +16,22 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface QuoteState {
 
     /**
-    	<p>A state indicating the Quote has been submitted to the <a href="/../api/quotes-overview#buyer">Buyer</a>, but the <a href="/../api/quotes-overview#buyer">Buyer</a> has not replied yet.</p>
+    	<p>A state indicating that the <a href="/../api/quotes-overview#seller">Seller</a> submitted the Quote to the <a href="/../api/quotes-overview#buyer">Buyer</a>, but the <a href="/../api/quotes-overview#buyer">Buyer</a> has not replied yet.</p>
 
     */
     QuoteState PENDING = QuoteStateEnum.PENDING;
     /**
-    	<p>A state indicating the Quote has been declined by the <a href="/../api/quotes-overview#buyer">Buyer</a>.</p>
+    	<p>A state indicating that the <a href="/../api/quotes-overview#buyer">Buyer</a> has declined the Quote.</p>
 
     */
     QuoteState DECLINED = QuoteStateEnum.DECLINED;
     /**
-    	<p>A state indicating the Quote has been declined by the <a href="/../api/quotes-overview#buyer">Buyer</a> with the request for <a href="ctp:api:type:QuoteRequestQuoteRenegotiationAction">renegotiation</a>.</p>
+    	<p>A state indicating that the <a href="/../api/quotes-overview#buyer">Buyer</a> has declined and requested to <a href="ctp:api:type:QuoteRequestQuoteRenegotiationAction">renegotiate</a> the Quote.</p>
 
     */
     QuoteState DECLINED_FOR_RENEGOTIATION = QuoteStateEnum.DECLINED_FOR_RENEGOTIATION;
     /**
-    	<p>A state indicating the <a href="/../api/quotes-overview#buyer">Buyer</a> has accepted the Quote.</p>
+    	<p>A state indicating that the <a href="/../api/quotes-overview#buyer">Buyer</a> has accepted the Quote.</p>
 
     */
     QuoteState ACCEPTED = QuoteStateEnum.ACCEPTED;
@@ -41,7 +41,7 @@ public interface QuoteState {
     */
     QuoteState FAILED = QuoteStateEnum.FAILED;
     /**
-    	<p>A state indicating the <a href="/../api/quotes-overview#seller">Seller</a> has withdrawn the Quote before the <a href="/../api/quotes-overview#buyer">Buyer</a> has accepted it.</p>
+    	<p>A state indicating that the <a href="/../api/quotes-overview#seller">Seller</a> has withdrawn the Quote before the <a href="/../api/quotes-overview#buyer">Buyer</a> has accepted it.</p>
 
     */
     QuoteState WITHDRAWN = QuoteStateEnum.WITHDRAWN;

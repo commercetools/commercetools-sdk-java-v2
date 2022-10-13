@@ -20,6 +20,8 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class PriceDraftImpl implements PriceDraft, ModelBase {
 
+    private String key;
+
     private com.commercetools.api.models.common.Money value;
 
     private String country;
@@ -39,7 +41,8 @@ public class PriceDraftImpl implements PriceDraft, ModelBase {
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
 
     @JsonCreator
-    PriceDraftImpl(@JsonProperty("value") final com.commercetools.api.models.common.Money value,
+    PriceDraftImpl(@JsonProperty("key") final String key,
+            @JsonProperty("value") final com.commercetools.api.models.common.Money value,
             @JsonProperty("country") final String country,
             @JsonProperty("customerGroup") final com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier customerGroup,
             @JsonProperty("channel") final com.commercetools.api.models.channel.ChannelResourceIdentifier channel,
@@ -48,6 +51,7 @@ public class PriceDraftImpl implements PriceDraft, ModelBase {
             @JsonProperty("discounted") final com.commercetools.api.models.common.DiscountedPriceDraft discounted,
             @JsonProperty("tiers") final java.util.List<com.commercetools.api.models.common.PriceTierDraft> tiers,
             @JsonProperty("custom") final com.commercetools.api.models.type.CustomFieldsDraft custom) {
+        this.key = key;
         this.value = value;
         this.country = country;
         this.customerGroup = customerGroup;
@@ -60,6 +64,14 @@ public class PriceDraftImpl implements PriceDraft, ModelBase {
     }
 
     public PriceDraftImpl() {
+    }
+
+    /**
+     *  <p>User-defined identifier for the Price. It must be unique per ProductVariant.</p>
+     */
+
+    public String getKey() {
+        return this.key;
     }
 
     /**
@@ -140,6 +152,10 @@ public class PriceDraftImpl implements PriceDraft, ModelBase {
         return this.custom;
     }
 
+    public void setKey(final String key) {
+        this.key = key;
+    }
+
     public void setValue(final com.commercetools.api.models.common.Money value) {
         this.value = value;
     }
@@ -191,7 +207,8 @@ public class PriceDraftImpl implements PriceDraft, ModelBase {
 
         PriceDraftImpl that = (PriceDraftImpl) o;
 
-        return new EqualsBuilder().append(value, that.value)
+        return new EqualsBuilder().append(key, that.key)
+                .append(value, that.value)
                 .append(country, that.country)
                 .append(customerGroup, that.customerGroup)
                 .append(channel, that.channel)
@@ -205,7 +222,8 @@ public class PriceDraftImpl implements PriceDraft, ModelBase {
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(value)
+        return new HashCodeBuilder(17, 37).append(key)
+                .append(value)
                 .append(country)
                 .append(customerGroup)
                 .append(channel)

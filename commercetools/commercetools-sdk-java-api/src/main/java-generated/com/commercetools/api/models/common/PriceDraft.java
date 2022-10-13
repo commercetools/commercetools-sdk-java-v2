@@ -35,6 +35,13 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface PriceDraft extends com.commercetools.api.models.CustomizableDraft<PriceDraft> {
 
     /**
+     *  <p>User-defined identifier for the Price. It must be unique per ProductVariant.</p>
+     */
+
+    @JsonProperty("key")
+    public String getKey();
+
+    /**
      *  <p>Money value of this Price.</p>
      */
     @NotNull
@@ -104,6 +111,8 @@ public interface PriceDraft extends com.commercetools.api.models.CustomizableDra
     @JsonProperty("custom")
     public CustomFieldsDraft getCustom();
 
+    public void setKey(final String key);
+
     public void setValue(final Money value);
 
     public void setCountry(final String country);
@@ -131,6 +140,7 @@ public interface PriceDraft extends com.commercetools.api.models.CustomizableDra
 
     public static PriceDraft of(final PriceDraft template) {
         PriceDraftImpl instance = new PriceDraftImpl();
+        instance.setKey(template.getKey());
         instance.setValue(template.getValue());
         instance.setCountry(template.getCountry());
         instance.setCustomerGroup(template.getCustomerGroup());

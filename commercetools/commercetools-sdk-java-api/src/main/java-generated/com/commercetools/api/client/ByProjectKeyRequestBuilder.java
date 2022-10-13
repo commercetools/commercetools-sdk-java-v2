@@ -23,6 +23,10 @@ public class ByProjectKeyRequestBuilder {
         return new ByProjectKeyPost(apiHttpClient, projectKey, projectUpdate);
     }
 
+    public ByProjectKeyBusinessUnitsRequestBuilder businessUnits() {
+        return new ByProjectKeyBusinessUnitsRequestBuilder(apiHttpClient, projectKey);
+    }
+
     public ByProjectKeyCategoriesRequestBuilder categories() {
         return new ByProjectKeyCategoriesRequestBuilder(apiHttpClient, projectKey);
     }
@@ -165,5 +169,11 @@ public class ByProjectKeyRequestBuilder {
 
     public ByProjectKeyStandalonePricesRequestBuilder standalonePrices() {
         return new ByProjectKeyStandalonePricesRequestBuilder(apiHttpClient, projectKey);
+    }
+
+    public ByProjectKeyInBusinessUnitKeyByBusinessUnitKeyRequestBuilder inBusinessUnitKeyWithBusinessUnitKeyValue(
+            String businessUnitKey) {
+        return new ByProjectKeyInBusinessUnitKeyByBusinessUnitKeyRequestBuilder(apiHttpClient, projectKey,
+            businessUnitKey);
     }
 }

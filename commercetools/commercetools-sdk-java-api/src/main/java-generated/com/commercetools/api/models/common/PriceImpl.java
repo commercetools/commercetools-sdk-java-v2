@@ -22,6 +22,8 @@ public class PriceImpl implements Price, ModelBase {
 
     private String id;
 
+    private String key;
+
     private com.commercetools.api.models.common.TypedMoney value;
 
     private String country;
@@ -41,7 +43,7 @@ public class PriceImpl implements Price, ModelBase {
     private com.commercetools.api.models.type.CustomFields custom;
 
     @JsonCreator
-    PriceImpl(@JsonProperty("id") final String id,
+    PriceImpl(@JsonProperty("id") final String id, @JsonProperty("key") final String key,
             @JsonProperty("value") final com.commercetools.api.models.common.TypedMoney value,
             @JsonProperty("country") final String country,
             @JsonProperty("customerGroup") final com.commercetools.api.models.customer_group.CustomerGroupReference customerGroup,
@@ -52,6 +54,7 @@ public class PriceImpl implements Price, ModelBase {
             @JsonProperty("tiers") final java.util.List<com.commercetools.api.models.common.PriceTier> tiers,
             @JsonProperty("custom") final com.commercetools.api.models.type.CustomFields custom) {
         this.id = id;
+        this.key = key;
         this.value = value;
         this.country = country;
         this.customerGroup = customerGroup;
@@ -72,6 +75,14 @@ public class PriceImpl implements Price, ModelBase {
 
     public String getId() {
         return this.id;
+    }
+
+    /**
+     *  <p>User-defined identifier of the Price. It is unique per ProductVariant.</p>
+     */
+
+    public String getKey() {
+        return this.key;
     }
 
     /**
@@ -150,6 +161,10 @@ public class PriceImpl implements Price, ModelBase {
         this.id = id;
     }
 
+    public void setKey(final String key) {
+        this.key = key;
+    }
+
     public void setValue(final com.commercetools.api.models.common.TypedMoney value) {
         this.value = value;
     }
@@ -202,6 +217,7 @@ public class PriceImpl implements Price, ModelBase {
         PriceImpl that = (PriceImpl) o;
 
         return new EqualsBuilder().append(id, that.id)
+                .append(key, that.key)
                 .append(value, that.value)
                 .append(country, that.country)
                 .append(customerGroup, that.customerGroup)
@@ -217,6 +233,7 @@ public class PriceImpl implements Price, ModelBase {
     @Override
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(id)
+                .append(key)
                 .append(value)
                 .append(country)
                 .append(customerGroup)

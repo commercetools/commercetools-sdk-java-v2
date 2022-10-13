@@ -9,6 +9,7 @@ import java.util.function.Function;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
+import com.commercetools.api.models.business_unit.BusinessUnitKeyReference;
 import com.commercetools.api.models.cart.CustomLineItem;
 import com.commercetools.api.models.cart.DirectDiscount;
 import com.commercetools.api.models.cart.InventoryMode;
@@ -277,6 +278,13 @@ public interface QuoteRequest extends BaseResource {
     @JsonProperty("state")
     public StateReference getState();
 
+    /**
+     *  <p>The BusinessUnit for the Quote Request.</p>
+     */
+    @Valid
+    @JsonProperty("businessUnit")
+    public BusinessUnitKeyReference getBusinessUnit();
+
     public void setId(final String id);
 
     public void setVersion(final Long version);
@@ -349,6 +357,8 @@ public interface QuoteRequest extends BaseResource {
 
     public void setState(final StateReference state);
 
+    public void setBusinessUnit(final BusinessUnitKeyReference businessUnit);
+
     public static QuoteRequest of() {
         return new QuoteRequestImpl();
     }
@@ -385,6 +395,7 @@ public interface QuoteRequest extends BaseResource {
         instance.setDirectDiscounts(template.getDirectDiscounts());
         instance.setCustom(template.getCustom());
         instance.setState(template.getState());
+        instance.setBusinessUnit(template.getBusinessUnit());
         return instance;
     }
 

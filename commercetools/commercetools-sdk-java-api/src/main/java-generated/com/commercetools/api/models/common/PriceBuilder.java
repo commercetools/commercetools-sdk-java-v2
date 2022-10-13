@@ -27,6 +27,9 @@ public class PriceBuilder implements Builder<Price> {
 
     private String id;
 
+    @Nullable
+    private String key;
+
     private com.commercetools.api.models.common.TypedMoney value;
 
     @Nullable
@@ -59,6 +62,15 @@ public class PriceBuilder implements Builder<Price> {
 
     public PriceBuilder id(final String id) {
         this.id = id;
+        return this;
+    }
+
+    /**
+     *  <p>User-defined identifier of the Price. It is unique per ProductVariant.</p>
+     */
+
+    public PriceBuilder key(@Nullable final String key) {
+        this.key = key;
         return this;
     }
 
@@ -245,6 +257,11 @@ public class PriceBuilder implements Builder<Price> {
         return this.id;
     }
 
+    @Nullable
+    public String getKey() {
+        return this.key;
+    }
+
     public com.commercetools.api.models.common.TypedMoney getValue() {
         return this.value;
     }
@@ -292,7 +309,7 @@ public class PriceBuilder implements Builder<Price> {
     public Price build() {
         Objects.requireNonNull(id, Price.class + ": id is missing");
         Objects.requireNonNull(value, Price.class + ": value is missing");
-        return new PriceImpl(id, value, country, customerGroup, channel, validFrom, validUntil, discounted, tiers,
+        return new PriceImpl(id, key, value, country, customerGroup, channel, validFrom, validUntil, discounted, tiers,
             custom);
     }
 
@@ -300,7 +317,7 @@ public class PriceBuilder implements Builder<Price> {
      * builds Price without checking for non null required values
      */
     public Price buildUnchecked() {
-        return new PriceImpl(id, value, country, customerGroup, channel, validFrom, validUntil, discounted, tiers,
+        return new PriceImpl(id, key, value, country, customerGroup, channel, validFrom, validUntil, discounted, tiers,
             custom);
     }
 
@@ -311,6 +328,7 @@ public class PriceBuilder implements Builder<Price> {
     public static PriceBuilder of(final Price template) {
         PriceBuilder builder = new PriceBuilder();
         builder.id = template.getId();
+        builder.key = template.getKey();
         builder.value = template.getValue();
         builder.country = template.getCountry();
         builder.customerGroup = template.getCustomerGroup();

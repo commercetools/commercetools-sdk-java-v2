@@ -1,0 +1,34 @@
+
+package com.commercetools.api.client;
+
+import io.vrap.rmf.base.client.ApiHttpClient;
+import io.vrap.rmf.base.client.utils.Generated;
+
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+public class ByProjectKeyMeBusinessUnitsRequestBuilder {
+
+    private final ApiHttpClient apiHttpClient;
+    private final String projectKey;
+
+    public ByProjectKeyMeBusinessUnitsRequestBuilder(final ApiHttpClient apiHttpClient, final String projectKey) {
+        this.apiHttpClient = apiHttpClient;
+        this.projectKey = projectKey;
+    }
+
+    public ByProjectKeyMeBusinessUnitsGet get() {
+        return new ByProjectKeyMeBusinessUnitsGet(apiHttpClient, projectKey);
+    }
+
+    public ByProjectKeyMeBusinessUnitsPost post(
+            com.commercetools.api.models.me.MyBusinessUnitDraft myBusinessUnitDraft) {
+        return new ByProjectKeyMeBusinessUnitsPost(apiHttpClient, projectKey, myBusinessUnitDraft);
+    }
+
+    public ByProjectKeyMeBusinessUnitsByIDRequestBuilder withId(String ID) {
+        return new ByProjectKeyMeBusinessUnitsByIDRequestBuilder(apiHttpClient, projectKey, ID);
+    }
+
+    public ByProjectKeyMeBusinessUnitsKeyByKeyRequestBuilder withKey(String key) {
+        return new ByProjectKeyMeBusinessUnitsKeyByKeyRequestBuilder(apiHttpClient, projectKey, key);
+    }
+}

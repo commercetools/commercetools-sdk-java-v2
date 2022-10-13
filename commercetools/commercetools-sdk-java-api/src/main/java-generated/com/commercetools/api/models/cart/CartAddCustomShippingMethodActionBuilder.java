@@ -18,6 +18,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     CartAddCustomShippingMethodAction cartAddCustomShippingMethodAction = CartAddCustomShippingMethodAction.builder()
  *             .shippingKey("{shippingKey}")
  *             .shippingMethodName("{shippingMethodName}")
+ *             .shippingAddress(shippingAddressBuilder -> shippingAddressBuilder)
  *             .shippingRate(shippingRateBuilder -> shippingRateBuilder)
  *             .plusDeliveries(deliveriesBuilder -> deliveriesBuilder)
  *             .build()
@@ -31,7 +32,6 @@ public class CartAddCustomShippingMethodActionBuilder implements Builder<CartAdd
 
     private String shippingMethodName;
 
-    @Nullable
     private com.commercetools.api.models.common.BaseAddress shippingAddress;
 
     private com.commercetools.api.models.shipping_method.ShippingRateDraft shippingRate;
@@ -83,7 +83,7 @@ public class CartAddCustomShippingMethodActionBuilder implements Builder<CartAdd
      */
 
     public CartAddCustomShippingMethodActionBuilder shippingAddress(
-            @Nullable final com.commercetools.api.models.common.BaseAddress shippingAddress) {
+            final com.commercetools.api.models.common.BaseAddress shippingAddress) {
         this.shippingAddress = shippingAddress;
         return this;
     }
@@ -245,7 +245,6 @@ public class CartAddCustomShippingMethodActionBuilder implements Builder<CartAdd
         return this.shippingMethodName;
     }
 
-    @Nullable
     public com.commercetools.api.models.common.BaseAddress getShippingAddress() {
         return this.shippingAddress;
     }
@@ -282,6 +281,8 @@ public class CartAddCustomShippingMethodActionBuilder implements Builder<CartAdd
         Objects.requireNonNull(shippingKey, CartAddCustomShippingMethodAction.class + ": shippingKey is missing");
         Objects.requireNonNull(shippingMethodName,
             CartAddCustomShippingMethodAction.class + ": shippingMethodName is missing");
+        Objects.requireNonNull(shippingAddress,
+            CartAddCustomShippingMethodAction.class + ": shippingAddress is missing");
         Objects.requireNonNull(shippingRate, CartAddCustomShippingMethodAction.class + ": shippingRate is missing");
         Objects.requireNonNull(deliveries, CartAddCustomShippingMethodAction.class + ": deliveries is missing");
         return new CartAddCustomShippingMethodActionImpl(shippingKey, shippingMethodName, shippingAddress, shippingRate,

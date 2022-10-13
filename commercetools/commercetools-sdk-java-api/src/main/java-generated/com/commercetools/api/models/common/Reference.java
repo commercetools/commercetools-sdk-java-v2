@@ -7,6 +7,7 @@ import java.util.function.Function;
 
 import javax.validation.constraints.NotNull;
 
+import com.commercetools.api.models.business_unit.BusinessUnitReference;
 import com.commercetools.api.models.cart.CartReference;
 import com.commercetools.api.models.cart_discount.CartDiscountReference;
 import com.commercetools.api.models.category.CategoryReference;
@@ -47,13 +48,14 @@ import io.vrap.rmf.base.client.utils.Generated;
  * Example to create a subtype instance using the builder pattern
  * <div class=code-example>
  * <pre><code class='java'>
- *     Reference reference = Reference.cartDiscountBuilder()
+ *     Reference reference = Reference.businessUnitBuilder()
  *             id("{id}")
  *             .build()
  * </code></pre>
  * </div>
  */
 @JsonSubTypes({
+        @JsonSubTypes.Type(value = com.commercetools.api.models.business_unit.BusinessUnitReferenceImpl.class, name = BusinessUnitReference.BUSINESS_UNIT),
         @JsonSubTypes.Type(value = com.commercetools.api.models.cart_discount.CartDiscountReferenceImpl.class, name = CartDiscountReference.CART_DISCOUNT),
         @JsonSubTypes.Type(value = com.commercetools.api.models.cart.CartReferenceImpl.class, name = CartReference.CART),
         @JsonSubTypes.Type(value = com.commercetools.api.models.category.CategoryReferenceImpl.class, name = CategoryReference.CATEGORY),
@@ -102,6 +104,10 @@ public interface Reference {
     public String getId();
 
     public void setId(final String id);
+
+    public static com.commercetools.api.models.business_unit.BusinessUnitReferenceBuilder businessUnitBuilder() {
+        return com.commercetools.api.models.business_unit.BusinessUnitReferenceBuilder.of();
+    }
 
     public static com.commercetools.api.models.cart_discount.CartDiscountReferenceBuilder cartDiscountBuilder() {
         return com.commercetools.api.models.cart_discount.CartDiscountReferenceBuilder.of();

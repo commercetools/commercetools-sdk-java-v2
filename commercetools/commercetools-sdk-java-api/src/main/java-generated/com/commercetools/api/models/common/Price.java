@@ -43,6 +43,13 @@ public interface Price extends com.commercetools.api.models.Customizable<Price> 
     public String getId();
 
     /**
+     *  <p>User-defined identifier of the Price. It is unique per ProductVariant.</p>
+     */
+
+    @JsonProperty("key")
+    public String getKey();
+
+    /**
      *  <p>Money value of this Price.</p>
      */
     @NotNull
@@ -108,6 +115,8 @@ public interface Price extends com.commercetools.api.models.Customizable<Price> 
 
     public void setId(final String id);
 
+    public void setKey(final String key);
+
     public void setValue(final TypedMoney value);
 
     public void setCountry(final String country);
@@ -136,6 +145,7 @@ public interface Price extends com.commercetools.api.models.Customizable<Price> 
     public static Price of(final Price template) {
         PriceImpl instance = new PriceImpl();
         instance.setId(template.getId());
+        instance.setKey(template.getKey());
         instance.setValue(template.getValue());
         instance.setCountry(template.getCountry());
         instance.setCustomerGroup(template.getCustomerGroup());

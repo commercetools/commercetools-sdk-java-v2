@@ -8,6 +8,7 @@ import java.util.function.Function;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
+import com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifier;
 import com.commercetools.api.models.common.BaseAddress;
 import com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier;
 import com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifier;
@@ -76,6 +77,13 @@ public interface CartDraft extends com.commercetools.api.models.CustomizableDraf
 
     @JsonProperty("anonymousId")
     public String getAnonymousId();
+
+    /**
+     *  <p>The Business Unit the Cart belongs to.</p>
+     */
+    @Valid
+    @JsonProperty("businessUnit")
+    public BusinessUnitResourceIdentifier getBusinessUnit();
 
     /**
      *  <p>Assigns the new cart to the store. The store assignment can not be modified.</p>
@@ -246,6 +254,8 @@ public interface CartDraft extends com.commercetools.api.models.CustomizableDraf
 
     public void setAnonymousId(final String anonymousId);
 
+    public void setBusinessUnit(final BusinessUnitResourceIdentifier businessUnit);
+
     public void setStore(final StoreResourceIdentifier store);
 
     public void setCountry(final String country);
@@ -320,6 +330,7 @@ public interface CartDraft extends com.commercetools.api.models.CustomizableDraf
         instance.setCustomerEmail(template.getCustomerEmail());
         instance.setCustomerGroup(template.getCustomerGroup());
         instance.setAnonymousId(template.getAnonymousId());
+        instance.setBusinessUnit(template.getBusinessUnit());
         instance.setStore(template.getStore());
         instance.setCountry(template.getCountry());
         instance.setInventoryMode(template.getInventoryMode());

@@ -45,7 +45,7 @@ public class InventoryImportBuilder implements Builder<InventoryImport> {
     private com.commercetools.importapi.models.customfields.Custom custom;
 
     /**
-     *
+     *  <p>User-defined unique identifier.</p>
      */
 
     public InventoryImportBuilder key(final String key) {

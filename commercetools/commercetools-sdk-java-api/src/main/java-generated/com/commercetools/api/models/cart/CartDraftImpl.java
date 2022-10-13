@@ -32,6 +32,8 @@ public class CartDraftImpl implements CartDraft, ModelBase {
 
     private String anonymousId;
 
+    private com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifier businessUnit;
+
     private com.commercetools.api.models.store.StoreResourceIdentifier store;
 
     private String country;
@@ -82,6 +84,7 @@ public class CartDraftImpl implements CartDraft, ModelBase {
             @JsonProperty("customerEmail") final String customerEmail,
             @JsonProperty("customerGroup") final com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier customerGroup,
             @JsonProperty("anonymousId") final String anonymousId,
+            @JsonProperty("businessUnit") final com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifier businessUnit,
             @JsonProperty("store") final com.commercetools.api.models.store.StoreResourceIdentifier store,
             @JsonProperty("country") final String country,
             @JsonProperty("inventoryMode") final com.commercetools.api.models.cart.InventoryMode inventoryMode,
@@ -110,6 +113,7 @@ public class CartDraftImpl implements CartDraft, ModelBase {
         this.customerEmail = customerEmail;
         this.customerGroup = customerGroup;
         this.anonymousId = anonymousId;
+        this.businessUnit = businessUnit;
         this.store = store;
         this.country = country;
         this.inventoryMode = inventoryMode;
@@ -183,6 +187,14 @@ public class CartDraftImpl implements CartDraft, ModelBase {
 
     public String getAnonymousId() {
         return this.anonymousId;
+    }
+
+    /**
+     *  <p>The Business Unit the Cart belongs to.</p>
+     */
+
+    public com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifier getBusinessUnit() {
+        return this.businessUnit;
     }
 
     /**
@@ -389,6 +401,11 @@ public class CartDraftImpl implements CartDraft, ModelBase {
         this.anonymousId = anonymousId;
     }
 
+    public void setBusinessUnit(
+            final com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifier businessUnit) {
+        this.businessUnit = businessUnit;
+    }
+
     public void setStore(final com.commercetools.api.models.store.StoreResourceIdentifier store) {
         this.store = store;
     }
@@ -523,6 +540,7 @@ public class CartDraftImpl implements CartDraft, ModelBase {
                 .append(customerEmail, that.customerEmail)
                 .append(customerGroup, that.customerGroup)
                 .append(anonymousId, that.anonymousId)
+                .append(businessUnit, that.businessUnit)
                 .append(store, that.store)
                 .append(country, that.country)
                 .append(inventoryMode, that.inventoryMode)
@@ -556,6 +574,7 @@ public class CartDraftImpl implements CartDraft, ModelBase {
                 .append(customerEmail)
                 .append(customerGroup)
                 .append(anonymousId)
+                .append(businessUnit)
                 .append(store)
                 .append(country)
                 .append(inventoryMode)

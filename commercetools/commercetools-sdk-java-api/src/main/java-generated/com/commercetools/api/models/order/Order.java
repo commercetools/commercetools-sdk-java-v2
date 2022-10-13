@@ -9,6 +9,7 @@ import java.util.function.Function;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
+import com.commercetools.api.models.business_unit.BusinessUnitKeyReference;
 import com.commercetools.api.models.cart.CartOrigin;
 import com.commercetools.api.models.cart.CartReference;
 import com.commercetools.api.models.cart.CustomLineItem;
@@ -146,6 +147,13 @@ public interface Order extends BaseResource, com.commercetools.api.models.Domain
 
     @JsonProperty("anonymousId")
     public String getAnonymousId();
+
+    /**
+     *  <p>The Business Unit the Order belongs to.</p>
+     */
+    @Valid
+    @JsonProperty("businessUnit")
+    public BusinessUnitKeyReference getBusinessUnit();
 
     /**
      *
@@ -415,6 +423,8 @@ public interface Order extends BaseResource, com.commercetools.api.models.Domain
 
     public void setAnonymousId(final String anonymousId);
 
+    public void setBusinessUnit(final BusinessUnitKeyReference businessUnit);
+
     public void setStore(final StoreKeyReference store);
 
     @JsonIgnore
@@ -525,6 +535,7 @@ public interface Order extends BaseResource, com.commercetools.api.models.Domain
         instance.setCustomerId(template.getCustomerId());
         instance.setCustomerEmail(template.getCustomerEmail());
         instance.setAnonymousId(template.getAnonymousId());
+        instance.setBusinessUnit(template.getBusinessUnit());
         instance.setStore(template.getStore());
         instance.setLineItems(template.getLineItems());
         instance.setCustomLineItems(template.getCustomLineItems());

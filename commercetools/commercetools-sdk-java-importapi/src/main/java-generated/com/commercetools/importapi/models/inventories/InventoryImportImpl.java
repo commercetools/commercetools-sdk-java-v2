@@ -54,7 +54,7 @@ public class InventoryImportImpl implements InventoryImport, ModelBase {
     }
 
     /**
-     *
+     *  <p>User-defined unique identifier.</p>
      */
 
     public String getKey() {

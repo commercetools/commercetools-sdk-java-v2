@@ -24,6 +24,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class PriceDraftBuilder implements Builder<PriceDraft> {
 
+    @Nullable
+    private String key;
+
     private com.commercetools.api.models.common.Money value;
 
     @Nullable
@@ -49,6 +52,15 @@ public class PriceDraftBuilder implements Builder<PriceDraft> {
 
     @Nullable
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
+
+    /**
+     *  <p>User-defined identifier for the Price. It must be unique per ProductVariant.</p>
+     */
+
+    public PriceDraftBuilder key(@Nullable final String key) {
+        this.key = key;
+        return this;
+    }
 
     /**
      *  <p>Money value of this Price.</p>
@@ -245,6 +257,11 @@ public class PriceDraftBuilder implements Builder<PriceDraft> {
         return this;
     }
 
+    @Nullable
+    public String getKey() {
+        return this.key;
+    }
+
     public com.commercetools.api.models.common.Money getValue() {
         return this.value;
     }
@@ -291,7 +308,7 @@ public class PriceDraftBuilder implements Builder<PriceDraft> {
 
     public PriceDraft build() {
         Objects.requireNonNull(value, PriceDraft.class + ": value is missing");
-        return new PriceDraftImpl(value, country, customerGroup, channel, validFrom, validUntil, discounted, tiers,
+        return new PriceDraftImpl(key, value, country, customerGroup, channel, validFrom, validUntil, discounted, tiers,
             custom);
     }
 
@@ -299,7 +316,7 @@ public class PriceDraftBuilder implements Builder<PriceDraft> {
      * builds PriceDraft without checking for non null required values
      */
     public PriceDraft buildUnchecked() {
-        return new PriceDraftImpl(value, country, customerGroup, channel, validFrom, validUntil, discounted, tiers,
+        return new PriceDraftImpl(key, value, country, customerGroup, channel, validFrom, validUntil, discounted, tiers,
             custom);
     }
 
@@ -309,6 +326,7 @@ public class PriceDraftBuilder implements Builder<PriceDraft> {
 
     public static PriceDraftBuilder of(final PriceDraft template) {
         PriceDraftBuilder builder = new PriceDraftBuilder();
+        builder.key = template.getKey();
         builder.value = template.getValue();
         builder.country = template.getCountry();
         builder.customerGroup = template.getCustomerGroup();

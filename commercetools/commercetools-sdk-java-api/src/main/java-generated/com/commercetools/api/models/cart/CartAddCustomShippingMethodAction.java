@@ -27,6 +27,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     CartAddCustomShippingMethodAction cartAddCustomShippingMethodAction = CartAddCustomShippingMethodAction.builder()
  *             .shippingKey("{shippingKey}")
  *             .shippingMethodName("{shippingMethodName}")
+ *             .shippingAddress(shippingAddressBuilder -> shippingAddressBuilder)
  *             .shippingRate(shippingRateBuilder -> shippingRateBuilder)
  *             .plusDeliveries(deliveriesBuilder -> deliveriesBuilder)
  *             .build()
@@ -56,6 +57,7 @@ public interface CartAddCustomShippingMethodAction extends CartUpdateAction {
     /**
      *  <p>Determines the shipping rate and Tax Rate of the associated Line Items.</p>
      */
+    @NotNull
     @Valid
     @JsonProperty("shippingAddress")
     public BaseAddress getShippingAddress();

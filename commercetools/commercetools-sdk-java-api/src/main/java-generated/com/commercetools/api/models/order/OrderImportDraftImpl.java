@@ -64,6 +64,8 @@ public class OrderImportDraftImpl implements OrderImportDraft, ModelBase {
 
     private java.util.List<com.commercetools.api.models.common.BaseAddress> itemShippingAddresses;
 
+    private com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifier businessUnit;
+
     private com.commercetools.api.models.store.StoreResourceIdentifier store;
 
     private com.commercetools.api.models.cart.CartOrigin origin;
@@ -91,6 +93,7 @@ public class OrderImportDraftImpl implements OrderImportDraft, ModelBase {
             @JsonProperty("inventoryMode") final com.commercetools.api.models.cart.InventoryMode inventoryMode,
             @JsonProperty("taxRoundingMode") final com.commercetools.api.models.cart.RoundingMode taxRoundingMode,
             @JsonProperty("itemShippingAddresses") final java.util.List<com.commercetools.api.models.common.BaseAddress> itemShippingAddresses,
+            @JsonProperty("businessUnit") final com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifier businessUnit,
             @JsonProperty("store") final com.commercetools.api.models.store.StoreResourceIdentifier store,
             @JsonProperty("origin") final com.commercetools.api.models.cart.CartOrigin origin) {
         this.orderNumber = orderNumber;
@@ -115,6 +118,7 @@ public class OrderImportDraftImpl implements OrderImportDraft, ModelBase {
         this.inventoryMode = inventoryMode;
         this.taxRoundingMode = taxRoundingMode;
         this.itemShippingAddresses = itemShippingAddresses;
+        this.businessUnit = businessUnit;
         this.store = store;
         this.origin = origin;
     }
@@ -299,6 +303,14 @@ public class OrderImportDraftImpl implements OrderImportDraft, ModelBase {
     }
 
     /**
+     *  <p>The Business Unit the Cart belongs to.</p>
+     */
+
+    public com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifier getBusinessUnit() {
+        return this.businessUnit;
+    }
+
+    /**
      *
      */
 
@@ -419,6 +431,11 @@ public class OrderImportDraftImpl implements OrderImportDraft, ModelBase {
         this.itemShippingAddresses = itemShippingAddresses;
     }
 
+    public void setBusinessUnit(
+            final com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifier businessUnit) {
+        this.businessUnit = businessUnit;
+    }
+
     public void setStore(final com.commercetools.api.models.store.StoreResourceIdentifier store) {
         this.store = store;
     }
@@ -459,6 +476,7 @@ public class OrderImportDraftImpl implements OrderImportDraft, ModelBase {
                 .append(inventoryMode, that.inventoryMode)
                 .append(taxRoundingMode, that.taxRoundingMode)
                 .append(itemShippingAddresses, that.itemShippingAddresses)
+                .append(businessUnit, that.businessUnit)
                 .append(store, that.store)
                 .append(origin, that.origin)
                 .isEquals();
@@ -488,6 +506,7 @@ public class OrderImportDraftImpl implements OrderImportDraft, ModelBase {
                 .append(inventoryMode)
                 .append(taxRoundingMode)
                 .append(itemShippingAddresses)
+                .append(businessUnit)
                 .append(store)
                 .append(origin)
                 .toHashCode();

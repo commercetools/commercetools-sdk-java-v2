@@ -9,6 +9,7 @@ import java.util.function.Function;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
+import com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifier;
 import com.commercetools.api.models.cart.CartOrigin;
 import com.commercetools.api.models.cart.CustomLineItemImportDraft;
 import com.commercetools.api.models.cart.InventoryMode;
@@ -198,6 +199,13 @@ public interface OrderImportDraft extends com.commercetools.api.models.Customiza
     public List<BaseAddress> getItemShippingAddresses();
 
     /**
+     *  <p>The Business Unit the Cart belongs to.</p>
+     */
+    @Valid
+    @JsonProperty("businessUnit")
+    public BusinessUnitResourceIdentifier getBusinessUnit();
+
+    /**
      *
      */
     @Valid
@@ -264,6 +272,8 @@ public interface OrderImportDraft extends com.commercetools.api.models.Customiza
 
     public void setItemShippingAddresses(final List<BaseAddress> itemShippingAddresses);
 
+    public void setBusinessUnit(final BusinessUnitResourceIdentifier businessUnit);
+
     public void setStore(final StoreResourceIdentifier store);
 
     public void setOrigin(final CartOrigin origin);
@@ -296,6 +306,7 @@ public interface OrderImportDraft extends com.commercetools.api.models.Customiza
         instance.setInventoryMode(template.getInventoryMode());
         instance.setTaxRoundingMode(template.getTaxRoundingMode());
         instance.setItemShippingAddresses(template.getItemShippingAddresses());
+        instance.setBusinessUnit(template.getBusinessUnit());
         instance.setStore(template.getStore());
         instance.setOrigin(template.getOrigin());
         return instance;

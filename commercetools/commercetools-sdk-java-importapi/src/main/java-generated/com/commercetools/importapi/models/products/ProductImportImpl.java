@@ -84,7 +84,7 @@ public class ProductImportImpl implements ProductImport, ModelBase {
     }
 
     /**
-     *
+     *  <p>User-defined unique identifier.</p>
      */
 
     public String getKey() {

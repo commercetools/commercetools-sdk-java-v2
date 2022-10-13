@@ -140,6 +140,13 @@ public interface Project {
     @JsonProperty("searchIndexing")
     public SearchIndexingConfiguration getSearchIndexing();
 
+    /**
+     *  <p>Holds configuration specific to Business Units.</p>
+     */
+    @Valid
+    @JsonProperty("businessUnits")
+    public BusinessUnitConfiguration getBusinessUnits();
+
     public void setVersion(final Long version);
 
     public void setKey(final String key);
@@ -177,6 +184,8 @@ public interface Project {
 
     public void setSearchIndexing(final SearchIndexingConfiguration searchIndexing);
 
+    public void setBusinessUnits(final BusinessUnitConfiguration businessUnits);
+
     public static Project of() {
         return new ProjectImpl();
     }
@@ -197,6 +206,7 @@ public interface Project {
         instance.setShippingRateInputType(template.getShippingRateInputType());
         instance.setExternalOAuth(template.getExternalOAuth());
         instance.setSearchIndexing(template.getSearchIndexing());
+        instance.setBusinessUnits(template.getBusinessUnits());
         return instance;
     }
 

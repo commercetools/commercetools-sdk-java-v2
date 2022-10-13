@@ -8,6 +8,7 @@ import java.util.function.Function;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
+import com.commercetools.api.models.business_unit.BusinessUnitKeyReference;
 import com.commercetools.api.models.cart.InventoryMode;
 import com.commercetools.api.models.cart.TaxMode;
 import com.commercetools.api.models.common.BaseAddress;
@@ -128,6 +129,13 @@ public interface MyCartDraft extends com.commercetools.api.models.CustomizableDr
     public List<BaseAddress> getItemShippingAddresses();
 
     /**
+     *  <p>The BusinessUnit the cart will belong to.</p>
+     */
+    @Valid
+    @JsonProperty("businessUnit")
+    public BusinessUnitKeyReference getBusinessUnit();
+
+    /**
      *  <p>Reference to a Store by its key.</p>
      */
     @Valid
@@ -173,6 +181,8 @@ public interface MyCartDraft extends com.commercetools.api.models.CustomizableDr
 
     public void setItemShippingAddresses(final List<BaseAddress> itemShippingAddresses);
 
+    public void setBusinessUnit(final BusinessUnitKeyReference businessUnit);
+
     public void setStore(final StoreKeyReference store);
 
     @JsonIgnore
@@ -199,6 +209,7 @@ public interface MyCartDraft extends com.commercetools.api.models.CustomizableDr
         instance.setTaxMode(template.getTaxMode());
         instance.setDeleteDaysAfterLastModification(template.getDeleteDaysAfterLastModification());
         instance.setItemShippingAddresses(template.getItemShippingAddresses());
+        instance.setBusinessUnit(template.getBusinessUnit());
         instance.setStore(template.getStore());
         instance.setDiscountCodes(template.getDiscountCodes());
         return instance;

@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifier;
 import com.commercetools.api.models.cart.CartResourceIdentifier;
 import com.commercetools.api.models.cart_discount.CartDiscountResourceIdentifier;
 import com.commercetools.api.models.category.CategoryResourceIdentifier;
@@ -45,12 +46,13 @@ import io.vrap.rmf.base.client.utils.Generated;
  * Example to create a subtype instance using the builder pattern
  * <div class=code-example>
  * <pre><code class='java'>
- *     ResourceIdentifier resourceIdentifier = ResourceIdentifier.cartDiscountBuilder()
+ *     ResourceIdentifier resourceIdentifier = ResourceIdentifier.businessUnitBuilder()
  *             .build()
  * </code></pre>
  * </div>
  */
 @JsonSubTypes({
+        @JsonSubTypes.Type(value = com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifierImpl.class, name = BusinessUnitResourceIdentifier.BUSINESS_UNIT),
         @JsonSubTypes.Type(value = com.commercetools.api.models.cart_discount.CartDiscountResourceIdentifierImpl.class, name = CartDiscountResourceIdentifier.CART_DISCOUNT),
         @JsonSubTypes.Type(value = com.commercetools.api.models.cart.CartResourceIdentifierImpl.class, name = CartResourceIdentifier.CART),
         @JsonSubTypes.Type(value = com.commercetools.api.models.category.CategoryResourceIdentifierImpl.class, name = CategoryResourceIdentifier.CATEGORY),
@@ -107,6 +109,10 @@ public interface ResourceIdentifier {
     public void setId(final String id);
 
     public void setKey(final String key);
+
+    public static com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifierBuilder businessUnitBuilder() {
+        return com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifierBuilder.of();
+    }
 
     public static com.commercetools.api.models.cart_discount.CartDiscountResourceIdentifierBuilder cartDiscountBuilder() {
         return com.commercetools.api.models.cart_discount.CartDiscountResourceIdentifierBuilder.of();

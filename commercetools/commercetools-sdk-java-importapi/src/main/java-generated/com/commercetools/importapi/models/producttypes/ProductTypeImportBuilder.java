@@ -36,7 +36,7 @@ public class ProductTypeImportBuilder implements Builder<ProductTypeImport> {
     private java.util.List<com.commercetools.importapi.models.producttypes.AttributeDefinition> attributes;
 
     /**
-     *
+     *  <p>User-defined unique identifier.</p>
      */
 
     public ProductTypeImportBuilder key(final String key) {

@@ -42,6 +42,8 @@ public class StagedOrderImpl implements StagedOrder, ModelBase {
 
     private String anonymousId;
 
+    private com.commercetools.api.models.business_unit.BusinessUnitKeyReference businessUnit;
+
     private com.commercetools.api.models.store.StoreKeyReference store;
 
     private java.util.List<com.commercetools.api.models.cart.LineItem> lineItems;
@@ -121,6 +123,7 @@ public class StagedOrderImpl implements StagedOrder, ModelBase {
             @JsonProperty("orderNumber") final String orderNumber, @JsonProperty("customerId") final String customerId,
             @JsonProperty("customerEmail") final String customerEmail,
             @JsonProperty("anonymousId") final String anonymousId,
+            @JsonProperty("businessUnit") final com.commercetools.api.models.business_unit.BusinessUnitKeyReference businessUnit,
             @JsonProperty("store") final com.commercetools.api.models.store.StoreKeyReference store,
             @JsonProperty("lineItems") final java.util.List<com.commercetools.api.models.cart.LineItem> lineItems,
             @JsonProperty("customLineItems") final java.util.List<com.commercetools.api.models.cart.CustomLineItem> customLineItems,
@@ -166,6 +169,7 @@ public class StagedOrderImpl implements StagedOrder, ModelBase {
         this.customerId = customerId;
         this.customerEmail = customerEmail;
         this.anonymousId = anonymousId;
+        this.businessUnit = businessUnit;
         this.store = store;
         this.lineItems = lineItems;
         this.customLineItems = customLineItems;
@@ -291,6 +295,14 @@ public class StagedOrderImpl implements StagedOrder, ModelBase {
 
     public String getAnonymousId() {
         return this.anonymousId;
+    }
+
+    /**
+     *  <p>The Business Unit the Order belongs to.</p>
+     */
+
+    public com.commercetools.api.models.business_unit.BusinessUnitKeyReference getBusinessUnit() {
+        return this.businessUnit;
     }
 
     /**
@@ -611,6 +623,11 @@ public class StagedOrderImpl implements StagedOrder, ModelBase {
         this.anonymousId = anonymousId;
     }
 
+    public void setBusinessUnit(
+            final com.commercetools.api.models.business_unit.BusinessUnitKeyReference businessUnit) {
+        this.businessUnit = businessUnit;
+    }
+
     public void setStore(final com.commercetools.api.models.store.StoreKeyReference store) {
         this.store = store;
     }
@@ -807,6 +824,7 @@ public class StagedOrderImpl implements StagedOrder, ModelBase {
                 .append(customerId, that.customerId)
                 .append(customerEmail, that.customerEmail)
                 .append(anonymousId, that.anonymousId)
+                .append(businessUnit, that.businessUnit)
                 .append(store, that.store)
                 .append(lineItems, that.lineItems)
                 .append(customLineItems, that.customLineItems)
@@ -857,6 +875,7 @@ public class StagedOrderImpl implements StagedOrder, ModelBase {
                 .append(customerId)
                 .append(customerEmail)
                 .append(anonymousId)
+                .append(businessUnit)
                 .append(store)
                 .append(lineItems)
                 .append(customLineItems)

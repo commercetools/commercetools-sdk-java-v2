@@ -66,6 +66,9 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
     private String anonymousId;
 
     @Nullable
+    private com.commercetools.api.models.business_unit.BusinessUnitKeyReference businessUnit;
+
+    @Nullable
     private com.commercetools.api.models.store.StoreKeyReference store;
 
     private java.util.List<com.commercetools.api.models.cart.LineItem> lineItems;
@@ -276,6 +279,28 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
 
     public StagedOrderBuilder anonymousId(@Nullable final String anonymousId) {
         this.anonymousId = anonymousId;
+        return this;
+    }
+
+    /**
+     *  <p>The Business Unit the Order belongs to.</p>
+     */
+
+    public StagedOrderBuilder businessUnit(
+            Function<com.commercetools.api.models.business_unit.BusinessUnitKeyReferenceBuilder, com.commercetools.api.models.business_unit.BusinessUnitKeyReferenceBuilder> builder) {
+        this.businessUnit = builder
+                .apply(com.commercetools.api.models.business_unit.BusinessUnitKeyReferenceBuilder.of())
+                .build();
+        return this;
+    }
+
+    /**
+     *  <p>The Business Unit the Order belongs to.</p>
+     */
+
+    public StagedOrderBuilder businessUnit(
+            @Nullable final com.commercetools.api.models.business_unit.BusinessUnitKeyReference businessUnit) {
+        this.businessUnit = businessUnit;
         return this;
     }
 
@@ -1173,6 +1198,11 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
     }
 
     @Nullable
+    public com.commercetools.api.models.business_unit.BusinessUnitKeyReference getBusinessUnit() {
+        return this.businessUnit;
+    }
+
+    @Nullable
     public com.commercetools.api.models.store.StoreKeyReference getStore() {
         return this.store;
     }
@@ -1349,11 +1379,12 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
         Objects.requireNonNull(origin, StagedOrder.class + ": origin is missing");
         Objects.requireNonNull(refusedGifts, StagedOrder.class + ": refusedGifts is missing");
         return new StagedOrderImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, completedAt,
-            orderNumber, customerId, customerEmail, anonymousId, store, lineItems, customLineItems, totalPrice,
-            taxedPrice, taxedShippingPrice, shippingAddress, billingAddress, shippingMode, shipping, taxMode,
-            taxRoundingMode, customerGroup, country, orderState, state, shipmentState, paymentState, shippingInfo,
-            syncInfo, returnInfo, discountCodes, lastMessageSequenceNumber, cart, quote, custom, paymentInfo, locale,
-            inventoryMode, origin, taxCalculationMode, shippingRateInput, itemShippingAddresses, refusedGifts);
+            orderNumber, customerId, customerEmail, anonymousId, businessUnit, store, lineItems, customLineItems,
+            totalPrice, taxedPrice, taxedShippingPrice, shippingAddress, billingAddress, shippingMode, shipping,
+            taxMode, taxRoundingMode, customerGroup, country, orderState, state, shipmentState, paymentState,
+            shippingInfo, syncInfo, returnInfo, discountCodes, lastMessageSequenceNumber, cart, quote, custom,
+            paymentInfo, locale, inventoryMode, origin, taxCalculationMode, shippingRateInput, itemShippingAddresses,
+            refusedGifts);
     }
 
     /**
@@ -1361,11 +1392,12 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
      */
     public StagedOrder buildUnchecked() {
         return new StagedOrderImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, completedAt,
-            orderNumber, customerId, customerEmail, anonymousId, store, lineItems, customLineItems, totalPrice,
-            taxedPrice, taxedShippingPrice, shippingAddress, billingAddress, shippingMode, shipping, taxMode,
-            taxRoundingMode, customerGroup, country, orderState, state, shipmentState, paymentState, shippingInfo,
-            syncInfo, returnInfo, discountCodes, lastMessageSequenceNumber, cart, quote, custom, paymentInfo, locale,
-            inventoryMode, origin, taxCalculationMode, shippingRateInput, itemShippingAddresses, refusedGifts);
+            orderNumber, customerId, customerEmail, anonymousId, businessUnit, store, lineItems, customLineItems,
+            totalPrice, taxedPrice, taxedShippingPrice, shippingAddress, billingAddress, shippingMode, shipping,
+            taxMode, taxRoundingMode, customerGroup, country, orderState, state, shipmentState, paymentState,
+            shippingInfo, syncInfo, returnInfo, discountCodes, lastMessageSequenceNumber, cart, quote, custom,
+            paymentInfo, locale, inventoryMode, origin, taxCalculationMode, shippingRateInput, itemShippingAddresses,
+            refusedGifts);
     }
 
     public static StagedOrderBuilder of() {
@@ -1385,6 +1417,7 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
         builder.customerId = template.getCustomerId();
         builder.customerEmail = template.getCustomerEmail();
         builder.anonymousId = template.getAnonymousId();
+        builder.businessUnit = template.getBusinessUnit();
         builder.store = template.getStore();
         builder.lineItems = template.getLineItems();
         builder.customLineItems = template.getCustomLineItems();

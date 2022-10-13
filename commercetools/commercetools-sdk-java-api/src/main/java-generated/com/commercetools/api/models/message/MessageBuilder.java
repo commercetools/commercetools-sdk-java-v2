@@ -11,6 +11,98 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class MessageBuilder {
 
+    public com.commercetools.api.models.message.BusinessUnitAddressAddedMessageBuilder businessUnitAddressAddedBuilder() {
+        return com.commercetools.api.models.message.BusinessUnitAddressAddedMessageBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.BusinessUnitAddressChangedMessageBuilder businessUnitAddressChangedBuilder() {
+        return com.commercetools.api.models.message.BusinessUnitAddressChangedMessageBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.BusinessUnitAddressRemovedMessageBuilder businessUnitAddressRemovedBuilder() {
+        return com.commercetools.api.models.message.BusinessUnitAddressRemovedMessageBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.BusinessUnitAssociateAddedMessageBuilder businessUnitAssociateAddedBuilder() {
+        return com.commercetools.api.models.message.BusinessUnitAssociateAddedMessageBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.BusinessUnitAssociateChangedMessageBuilder businessUnitAssociateChangedBuilder() {
+        return com.commercetools.api.models.message.BusinessUnitAssociateChangedMessageBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.BusinessUnitAssociateRemovedMessageBuilder businessUnitAssociateRemovedBuilder() {
+        return com.commercetools.api.models.message.BusinessUnitAssociateRemovedMessageBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.BusinessUnitAssociatesSetMessageBuilder businessUnitAssociatesSetBuilder() {
+        return com.commercetools.api.models.message.BusinessUnitAssociatesSetMessageBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.BusinessUnitBillingAddressAddedMessageBuilder businessUnitBillingAddressAddedBuilder() {
+        return com.commercetools.api.models.message.BusinessUnitBillingAddressAddedMessageBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.BusinessUnitBillingAddressRemovedMessageBuilder businessUnitBillingAddressRemovedBuilder() {
+        return com.commercetools.api.models.message.BusinessUnitBillingAddressRemovedMessageBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.BusinessUnitContactEmailSetMessageBuilder businessUnitContactEmailSetBuilder() {
+        return com.commercetools.api.models.message.BusinessUnitContactEmailSetMessageBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.BusinessUnitCreatedMessageBuilder businessUnitCreatedBuilder() {
+        return com.commercetools.api.models.message.BusinessUnitCreatedMessageBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.BusinessUnitDefaultBillingAddressSetMessageBuilder businessUnitDefaultBillingAddressSetBuilder() {
+        return com.commercetools.api.models.message.BusinessUnitDefaultBillingAddressSetMessageBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.BusinessUnitDefaultShippingAddressSetMessageBuilder businessUnitDefaultShippingAddressSetBuilder() {
+        return com.commercetools.api.models.message.BusinessUnitDefaultShippingAddressSetMessageBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.BusinessUnitDeletedMessageBuilder businessUnitDeletedBuilder() {
+        return com.commercetools.api.models.message.BusinessUnitDeletedMessageBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.BusinessUnitNameChangedMessageBuilder businessUnitNameChangedBuilder() {
+        return com.commercetools.api.models.message.BusinessUnitNameChangedMessageBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.BusinessUnitParentUnitChangedMessageBuilder businessUnitParentUnitChangedBuilder() {
+        return com.commercetools.api.models.message.BusinessUnitParentUnitChangedMessageBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.BusinessUnitShippingAddressAddedMessageBuilder businessUnitShippingAddressAddedBuilder() {
+        return com.commercetools.api.models.message.BusinessUnitShippingAddressAddedMessageBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.BusinessUnitShippingAddressRemovedMessageBuilder businessUnitShippingAddressRemovedBuilder() {
+        return com.commercetools.api.models.message.BusinessUnitShippingAddressRemovedMessageBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.BusinessUnitStatusChangedMessageBuilder businessUnitStatusChangedBuilder() {
+        return com.commercetools.api.models.message.BusinessUnitStatusChangedMessageBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.BusinessUnitStoreAddedMessageBuilder businessUnitStoreAddedBuilder() {
+        return com.commercetools.api.models.message.BusinessUnitStoreAddedMessageBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.BusinessUnitStoreModeChangedMessageBuilder businessUnitStoreModeChangedBuilder() {
+        return com.commercetools.api.models.message.BusinessUnitStoreModeChangedMessageBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.BusinessUnitStoreRemovedMessageBuilder businessUnitStoreRemovedBuilder() {
+        return com.commercetools.api.models.message.BusinessUnitStoreRemovedMessageBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.BusinessUnitStoresSetMessageBuilder businessUnitStoresSetBuilder() {
+        return com.commercetools.api.models.message.BusinessUnitStoresSetMessageBuilder.of();
+    }
+
     public com.commercetools.api.models.message.CategoryCreatedMessageBuilder categoryCreatedBuilder() {
         return com.commercetools.api.models.message.CategoryCreatedMessageBuilder.of();
     }
@@ -473,6 +565,10 @@ public class MessageBuilder {
 
     public com.commercetools.api.models.message.StoreProductSelectionsChangedMessageBuilder storeProductSelectionsChangedBuilder() {
         return com.commercetools.api.models.message.StoreProductSelectionsChangedMessageBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.StoreSupplyChannelsChangedMessageBuilder storeSupplyChannelsChangedBuilder() {
+        return com.commercetools.api.models.message.StoreSupplyChannelsChangedMessageBuilder.of();
     }
 
     public static MessageBuilder of() {

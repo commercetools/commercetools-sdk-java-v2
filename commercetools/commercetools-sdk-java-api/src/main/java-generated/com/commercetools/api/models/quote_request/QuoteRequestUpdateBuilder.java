@@ -28,7 +28,7 @@ public class QuoteRequestUpdateBuilder implements Builder<QuoteRequestUpdate> {
     private java.util.List<com.commercetools.api.models.quote_request.QuoteRequestUpdateAction> actions;
 
     /**
-     *
+     *  <p>Expected version of the QuoteRequest to which the changes should be applied. If the expected version does not match the actual version, a 409 Conflict error will be returned.</p>
      */
 
     public QuoteRequestUpdateBuilder version(final Long version) {
@@ -37,7 +37,7 @@ public class QuoteRequestUpdateBuilder implements Builder<QuoteRequestUpdate> {
     }
 
     /**
-     *
+     *  <p>Update actions to be performed on the QuoteRequest.</p>
      */
 
     public QuoteRequestUpdateBuilder actions(
@@ -47,7 +47,7 @@ public class QuoteRequestUpdateBuilder implements Builder<QuoteRequestUpdate> {
     }
 
     /**
-     *
+     *  <p>Update actions to be performed on the QuoteRequest.</p>
      */
 
     public QuoteRequestUpdateBuilder actions(
@@ -57,7 +57,7 @@ public class QuoteRequestUpdateBuilder implements Builder<QuoteRequestUpdate> {
     }
 
     /**
-     *
+     *  <p>Update actions to be performed on the QuoteRequest.</p>
      */
 
     public QuoteRequestUpdateBuilder plusActions(
@@ -70,7 +70,7 @@ public class QuoteRequestUpdateBuilder implements Builder<QuoteRequestUpdate> {
     }
 
     /**
-     *
+     *  <p>Update actions to be performed on the QuoteRequest.</p>
      */
 
     public QuoteRequestUpdateBuilder plusActions(
@@ -84,7 +84,7 @@ public class QuoteRequestUpdateBuilder implements Builder<QuoteRequestUpdate> {
     }
 
     /**
-     *
+     *  <p>Update actions to be performed on the QuoteRequest.</p>
      */
 
     public QuoteRequestUpdateBuilder withActions(

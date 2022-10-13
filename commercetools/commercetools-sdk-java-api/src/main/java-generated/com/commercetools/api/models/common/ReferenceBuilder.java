@@ -11,6 +11,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ReferenceBuilder {
 
+    public com.commercetools.api.models.business_unit.BusinessUnitReferenceBuilder businessUnitBuilder() {
+        return com.commercetools.api.models.business_unit.BusinessUnitReferenceBuilder.of();
+    }
+
     public com.commercetools.api.models.cart_discount.CartDiscountReferenceBuilder cartDiscountBuilder() {
         return com.commercetools.api.models.cart_discount.CartDiscountReferenceBuilder.of();
     }

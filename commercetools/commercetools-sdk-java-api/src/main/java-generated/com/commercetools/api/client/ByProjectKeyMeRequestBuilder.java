@@ -47,6 +47,10 @@ public class ByProjectKeyMeRequestBuilder {
         return new ByProjectKeyMeActiveCartRequestBuilder(apiHttpClient, projectKey);
     }
 
+    public ByProjectKeyMeBusinessUnitsRequestBuilder businessUnits() {
+        return new ByProjectKeyMeBusinessUnitsRequestBuilder(apiHttpClient, projectKey);
+    }
+
     public ByProjectKeyMeCartsRequestBuilder carts() {
         return new ByProjectKeyMeCartsRequestBuilder(apiHttpClient, projectKey);
     }
@@ -61,6 +65,10 @@ public class ByProjectKeyMeRequestBuilder {
 
     public ByProjectKeyMeQuoteRequestsRequestBuilder quoteRequests() {
         return new ByProjectKeyMeQuoteRequestsRequestBuilder(apiHttpClient, projectKey);
+    }
+
+    public ByProjectKeyMeQuotesRequestBuilder quotes() {
+        return new ByProjectKeyMeQuotesRequestBuilder(apiHttpClient, projectKey);
     }
 
     public ByProjectKeyMeShoppingListsRequestBuilder shoppingLists() {

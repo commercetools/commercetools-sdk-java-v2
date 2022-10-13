@@ -50,6 +50,8 @@ public class StagedQuoteImpl implements StagedQuote, ModelBase {
 
     private com.commercetools.api.models.state.StateReference state;
 
+    private com.commercetools.api.models.business_unit.BusinessUnitKeyReference businessUnit;
+
     @JsonCreator
     StagedQuoteImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version,
             @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt,
@@ -64,7 +66,8 @@ public class StagedQuoteImpl implements StagedQuote, ModelBase {
             @JsonProperty("validTo") final java.time.ZonedDateTime validTo,
             @JsonProperty("sellerComment") final String sellerComment,
             @JsonProperty("custom") final com.commercetools.api.models.type.CustomFields custom,
-            @JsonProperty("state") final com.commercetools.api.models.state.StateReference state) {
+            @JsonProperty("state") final com.commercetools.api.models.state.StateReference state,
+            @JsonProperty("businessUnit") final com.commercetools.api.models.business_unit.BusinessUnitKeyReference businessUnit) {
         this.id = id;
         this.version = version;
         this.createdAt = createdAt;
@@ -80,6 +83,7 @@ public class StagedQuoteImpl implements StagedQuote, ModelBase {
         this.sellerComment = sellerComment;
         this.custom = custom;
         this.state = state;
+        this.businessUnit = businessUnit;
     }
 
     public StagedQuoteImpl() {
@@ -205,6 +209,14 @@ public class StagedQuoteImpl implements StagedQuote, ModelBase {
         return this.state;
     }
 
+    /**
+     *  <p>The BusinessUnit for the Staged Quote.</p>
+     */
+
+    public com.commercetools.api.models.business_unit.BusinessUnitKeyReference getBusinessUnit() {
+        return this.businessUnit;
+    }
+
     public void setId(final String id) {
         this.id = id;
     }
@@ -265,6 +277,11 @@ public class StagedQuoteImpl implements StagedQuote, ModelBase {
         this.state = state;
     }
 
+    public void setBusinessUnit(
+            final com.commercetools.api.models.business_unit.BusinessUnitKeyReference businessUnit) {
+        this.businessUnit = businessUnit;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -290,6 +307,7 @@ public class StagedQuoteImpl implements StagedQuote, ModelBase {
                 .append(sellerComment, that.sellerComment)
                 .append(custom, that.custom)
                 .append(state, that.state)
+                .append(businessUnit, that.businessUnit)
                 .isEquals();
     }
 
@@ -310,6 +328,7 @@ public class StagedQuoteImpl implements StagedQuote, ModelBase {
                 .append(sellerComment)
                 .append(custom)
                 .append(state)
+                .append(businessUnit)
                 .toHashCode();
     }
 

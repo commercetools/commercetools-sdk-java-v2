@@ -35,7 +35,7 @@ public class StagedQuoteUpdateImpl implements StagedQuoteUpdate, ModelBase {
     }
 
     /**
-     *
+     *  <p>Expected version of the StagedQuote to which the changes should be applied. If the expected version does not match the actual version, a 409 Conflict error will be returned.</p>
      */
 
     public Long getVersion() {
@@ -43,7 +43,7 @@ public class StagedQuoteUpdateImpl implements StagedQuoteUpdate, ModelBase {
     }
 
     /**
-     *
+     *  <p>Update actions to be performed on the StagedQuote.</p>
      */
 
     public java.util.List<com.commercetools.api.models.staged_quote.StagedQuoteUpdateAction> getActions() {

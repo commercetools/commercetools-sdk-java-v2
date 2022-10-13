@@ -16,7 +16,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     ReferencedResourceNotFoundError referencedResourceNotFoundError = ReferencedResourceNotFoundError.builder()
  *             .message("{message}")
- *             .typeId(ReferenceTypeId.CART)
+ *             .typeId(ReferenceTypeId.BUSINESS_UNIT)
  *             .build()
  * </code></pre>
  * </div>

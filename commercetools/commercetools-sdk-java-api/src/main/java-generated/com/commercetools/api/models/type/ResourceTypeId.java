@@ -16,7 +16,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ResourceTypeId {
 
     /**
-    	<p><a href="ctp:api:type:Address">Address</a> on <a href="ctp:api:type:Cart">Cart</a>, <a href="ctp:api:type:Order">Order</a>, <a href="ctp:api:type:OrderEdit">OrderEdit</a>, <a href="ctp:api:type:Customer">Customer</a>, and <a href="ctp:api:type:Channel">Channel</a></p>
+    	<p><a href="ctp:api:type:Address">Address</a> on <a href="ctp:api:type:BusinessUnit">BusinessUnit</a>, <a href="ctp:api:type:Cart">Cart</a>, <a href="ctp:api:type:Order">Order</a>, <a href="ctp:api:type:OrderEdit">OrderEdit</a>, <a href="ctp:api:type:Customer">Customer</a>, and <a href="ctp:api:type:Channel">Channel</a></p>
 
     */
     ResourceTypeId ADDRESS = ResourceTypeIdEnum.ADDRESS;
@@ -25,6 +25,11 @@ public interface ResourceTypeId {
 
     */
     ResourceTypeId ASSET = ResourceTypeIdEnum.ASSET;
+    /**
+    	<p><a href="ctp:api:type:BusinessUnit">BusinessUnit</a></p>
+
+    */
+    ResourceTypeId BUSINESS_UNIT = ResourceTypeIdEnum.BUSINESS_UNIT;
     /**
     	<p><a href="ctp:api:type:CartDiscount">CartDiscount</a></p>
 
@@ -145,6 +150,11 @@ public interface ResourceTypeId {
     */
     ResourceTypeId SHOPPING_LIST_TEXT_LINE_ITEM = ResourceTypeIdEnum.SHOPPING_LIST_TEXT_LINE_ITEM;
     /**
+    	<p><a href="ctp:api:type:StandalonePrice">StandalonePrice</a></p>
+
+    */
+    ResourceTypeId STANDALONE_PRICE = ResourceTypeIdEnum.STANDALONE_PRICE;
+    /**
     	<p><a href="ctp:api:type:Store">Store</a></p>
 
     */
@@ -159,6 +169,8 @@ public interface ResourceTypeId {
         ADDRESS("address"),
 
         ASSET("asset"),
+
+        BUSINESS_UNIT("business-unit"),
 
         CART_DISCOUNT("cart-discount"),
 
@@ -205,6 +217,8 @@ public interface ResourceTypeId {
         SHOPPING_LIST("shopping-list"),
 
         SHOPPING_LIST_TEXT_LINE_ITEM("shopping-list-text-line-item"),
+
+        STANDALONE_PRICE("standalone-price"),
 
         STORE("store"),
 

@@ -29,22 +29,22 @@
 <span class="source-line-no">016</span><span id="line.16">public interface QuoteState {</span>
 <span class="source-line-no">017</span><span id="line.17"></span>
 <span class="source-line-no">018</span><span id="line.18">    /**</span>
-<span class="source-line-no">019</span><span id="line.19">        &lt;p&gt;A state indicating the Quote has been submitted to the &lt;a href="/../api/quotes-overview#buyer"&gt;Buyer&lt;/a&gt;, but the &lt;a href="/../api/quotes-overview#buyer"&gt;Buyer&lt;/a&gt; has not replied yet.&lt;/p&gt;</span>
+<span class="source-line-no">019</span><span id="line.19">        &lt;p&gt;A state indicating that the &lt;a href="/../api/quotes-overview#seller"&gt;Seller&lt;/a&gt; submitted the Quote to the &lt;a href="/../api/quotes-overview#buyer"&gt;Buyer&lt;/a&gt;, but the &lt;a href="/../api/quotes-overview#buyer"&gt;Buyer&lt;/a&gt; has not replied yet.&lt;/p&gt;</span>
 <span class="source-line-no">020</span><span id="line.20"></span>
 <span class="source-line-no">021</span><span id="line.21">    */</span>
 <span class="source-line-no">022</span><span id="line.22">    QuoteState PENDING = QuoteStateEnum.PENDING;</span>
 <span class="source-line-no">023</span><span id="line.23">    /**</span>
-<span class="source-line-no">024</span><span id="line.24">        &lt;p&gt;A state indicating the Quote has been declined by the &lt;a href="/../api/quotes-overview#buyer"&gt;Buyer&lt;/a&gt;.&lt;/p&gt;</span>
+<span class="source-line-no">024</span><span id="line.24">        &lt;p&gt;A state indicating that the &lt;a href="/../api/quotes-overview#buyer"&gt;Buyer&lt;/a&gt; has declined the Quote.&lt;/p&gt;</span>
 <span class="source-line-no">025</span><span id="line.25"></span>
 <span class="source-line-no">026</span><span id="line.26">    */</span>
 <span class="source-line-no">027</span><span id="line.27">    QuoteState DECLINED = QuoteStateEnum.DECLINED;</span>
 <span class="source-line-no">028</span><span id="line.28">    /**</span>
-<span class="source-line-no">029</span><span id="line.29">        &lt;p&gt;A state indicating the Quote has been declined by the &lt;a href="/../api/quotes-overview#buyer"&gt;Buyer&lt;/a&gt; with the request for &lt;a href="ctp:api:type:QuoteRequestQuoteRenegotiationAction"&gt;renegotiation&lt;/a&gt;.&lt;/p&gt;</span>
+<span class="source-line-no">029</span><span id="line.29">        &lt;p&gt;A state indicating that the &lt;a href="/../api/quotes-overview#buyer"&gt;Buyer&lt;/a&gt; has declined and requested to &lt;a href="ctp:api:type:QuoteRequestQuoteRenegotiationAction"&gt;renegotiate&lt;/a&gt; the Quote.&lt;/p&gt;</span>
 <span class="source-line-no">030</span><span id="line.30"></span>
 <span class="source-line-no">031</span><span id="line.31">    */</span>
 <span class="source-line-no">032</span><span id="line.32">    QuoteState DECLINED_FOR_RENEGOTIATION = QuoteStateEnum.DECLINED_FOR_RENEGOTIATION;</span>
 <span class="source-line-no">033</span><span id="line.33">    /**</span>
-<span class="source-line-no">034</span><span id="line.34">        &lt;p&gt;A state indicating the &lt;a href="/../api/quotes-overview#buyer"&gt;Buyer&lt;/a&gt; has accepted the Quote.&lt;/p&gt;</span>
+<span class="source-line-no">034</span><span id="line.34">        &lt;p&gt;A state indicating that the &lt;a href="/../api/quotes-overview#buyer"&gt;Buyer&lt;/a&gt; has accepted the Quote.&lt;/p&gt;</span>
 <span class="source-line-no">035</span><span id="line.35"></span>
 <span class="source-line-no">036</span><span id="line.36">    */</span>
 <span class="source-line-no">037</span><span id="line.37">    QuoteState ACCEPTED = QuoteStateEnum.ACCEPTED;</span>
@@ -54,7 +54,7 @@
 <span class="source-line-no">041</span><span id="line.41">    */</span>
 <span class="source-line-no">042</span><span id="line.42">    QuoteState FAILED = QuoteStateEnum.FAILED;</span>
 <span class="source-line-no">043</span><span id="line.43">    /**</span>
-<span class="source-line-no">044</span><span id="line.44">        &lt;p&gt;A state indicating the &lt;a href="/../api/quotes-overview#seller"&gt;Seller&lt;/a&gt; has withdrawn the Quote before the &lt;a href="/../api/quotes-overview#buyer"&gt;Buyer&lt;/a&gt; has accepted it.&lt;/p&gt;</span>
+<span class="source-line-no">044</span><span id="line.44">        &lt;p&gt;A state indicating that the &lt;a href="/../api/quotes-overview#seller"&gt;Seller&lt;/a&gt; has withdrawn the Quote before the &lt;a href="/../api/quotes-overview#buyer"&gt;Buyer&lt;/a&gt; has accepted it.&lt;/p&gt;</span>
 <span class="source-line-no">045</span><span id="line.45"></span>
 <span class="source-line-no">046</span><span id="line.46">    */</span>
 <span class="source-line-no">047</span><span id="line.47">    QuoteState WITHDRAWN = QuoteStateEnum.WITHDRAWN;</span>

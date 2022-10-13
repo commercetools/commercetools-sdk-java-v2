@@ -5,6 +5,7 @@ com.commercetools.api.defaultconfig
 com.commercetools.api.json
 com.commercetools.api.models
 com.commercetools.api.models.api_client
+com.commercetools.api.models.business_unit
 com.commercetools.api.models.cart
 com.commercetools.api.models.cart_discount
 com.commercetools.api.models.category
@@ -74,6 +75,7 @@ com.commercetools.importapi.models.productdrafts
 com.commercetools.importapi.models.products
 com.commercetools.importapi.models.producttypes
 com.commercetools.importapi.models.productvariants
+com.commercetools.importapi.models.standalone_prices
 com.commercetools.ml.client
 com.commercetools.ml.defaultconfig
 com.commercetools.ml.models.category_recommendations

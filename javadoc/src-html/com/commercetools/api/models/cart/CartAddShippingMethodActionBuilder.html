@@ -30,20 +30,20 @@
 <span class="source-line-no">017</span><span id="line.17"> * &lt;pre&gt;&lt;code class='java'&gt;</span>
 <span class="source-line-no">018</span><span id="line.18"> *     CartAddShippingMethodAction cartAddShippingMethodAction = CartAddShippingMethodAction.builder()</span>
 <span class="source-line-no">019</span><span id="line.19"> *             .shippingKey("{shippingKey}")</span>
-<span class="source-line-no">020</span><span id="line.20"> *             .plusDeliveries(deliveriesBuilder -&gt; deliveriesBuilder)</span>
-<span class="source-line-no">021</span><span id="line.21"> *             .build()</span>
-<span class="source-line-no">022</span><span id="line.22"> * &lt;/code&gt;&lt;/pre&gt;</span>
-<span class="source-line-no">023</span><span id="line.23"> * &lt;/div&gt;</span>
-<span class="source-line-no">024</span><span id="line.24"> */</span>
-<span class="source-line-no">025</span><span id="line.25">@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")</span>
-<span class="source-line-no">026</span><span id="line.26">public class CartAddShippingMethodActionBuilder implements Builder&lt;CartAddShippingMethodAction&gt; {</span>
-<span class="source-line-no">027</span><span id="line.27"></span>
-<span class="source-line-no">028</span><span id="line.28">    private String shippingKey;</span>
+<span class="source-line-no">020</span><span id="line.20"> *             .shippingMethod(shippingMethodBuilder -&gt; shippingMethodBuilder)</span>
+<span class="source-line-no">021</span><span id="line.21"> *             .shippingAddress(shippingAddressBuilder -&gt; shippingAddressBuilder)</span>
+<span class="source-line-no">022</span><span id="line.22"> *             .plusDeliveries(deliveriesBuilder -&gt; deliveriesBuilder)</span>
+<span class="source-line-no">023</span><span id="line.23"> *             .build()</span>
+<span class="source-line-no">024</span><span id="line.24"> * &lt;/code&gt;&lt;/pre&gt;</span>
+<span class="source-line-no">025</span><span id="line.25"> * &lt;/div&gt;</span>
+<span class="source-line-no">026</span><span id="line.26"> */</span>
+<span class="source-line-no">027</span><span id="line.27">@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")</span>
+<span class="source-line-no">028</span><span id="line.28">public class CartAddShippingMethodActionBuilder implements Builder&lt;CartAddShippingMethodAction&gt; {</span>
 <span class="source-line-no">029</span><span id="line.29"></span>
-<span class="source-line-no">030</span><span id="line.30">    @Nullable</span>
-<span class="source-line-no">031</span><span id="line.31">    private com.commercetools.api.models.shipping_method.ShippingMethodReference shippingMethod;</span>
-<span class="source-line-no">032</span><span id="line.32"></span>
-<span class="source-line-no">033</span><span id="line.33">    @Nullable</span>
+<span class="source-line-no">030</span><span id="line.30">    private String shippingKey;</span>
+<span class="source-line-no">031</span><span id="line.31"></span>
+<span class="source-line-no">032</span><span id="line.32">    private com.commercetools.api.models.shipping_method.ShippingMethodReference shippingMethod;</span>
+<span class="source-line-no">033</span><span id="line.33"></span>
 <span class="source-line-no">034</span><span id="line.34">    private com.commercetools.api.models.common.BaseAddress shippingAddress;</span>
 <span class="source-line-no">035</span><span id="line.35"></span>
 <span class="source-line-no">036</span><span id="line.36">    @Nullable</span>
@@ -83,7 +83,7 @@
 <span class="source-line-no">070</span><span id="line.70">     */</span>
 <span class="source-line-no">071</span><span id="line.71"></span>
 <span class="source-line-no">072</span><span id="line.72">    public CartAddShippingMethodActionBuilder shippingMethod(</span>
-<span class="source-line-no">073</span><span id="line.73">            @Nullable final com.commercetools.api.models.shipping_method.ShippingMethodReference shippingMethod) {</span>
+<span class="source-line-no">073</span><span id="line.73">            final com.commercetools.api.models.shipping_method.ShippingMethodReference shippingMethod) {</span>
 <span class="source-line-no">074</span><span id="line.74">        this.shippingMethod = shippingMethod;</span>
 <span class="source-line-no">075</span><span id="line.75">        return this;</span>
 <span class="source-line-no">076</span><span id="line.76">    }</span>
@@ -103,7 +103,7 @@
 <span class="source-line-no">090</span><span id="line.90">     */</span>
 <span class="source-line-no">091</span><span id="line.91"></span>
 <span class="source-line-no">092</span><span id="line.92">    public CartAddShippingMethodActionBuilder shippingAddress(</span>
-<span class="source-line-no">093</span><span id="line.93">            @Nullable final com.commercetools.api.models.common.BaseAddress shippingAddress) {</span>
+<span class="source-line-no">093</span><span id="line.93">            final com.commercetools.api.models.common.BaseAddress shippingAddress) {</span>
 <span class="source-line-no">094</span><span id="line.94">        this.shippingAddress = shippingAddress;</span>
 <span class="source-line-no">095</span><span id="line.95">        return this;</span>
 <span class="source-line-no">096</span><span id="line.96">    }</span>
@@ -218,37 +218,37 @@
 <span class="source-line-no">205</span><span id="line.205">        return this.shippingKey;</span>
 <span class="source-line-no">206</span><span id="line.206">    }</span>
 <span class="source-line-no">207</span><span id="line.207"></span>
-<span class="source-line-no">208</span><span id="line.208">    @Nullable</span>
-<span class="source-line-no">209</span><span id="line.209">    public com.commercetools.api.models.shipping_method.ShippingMethodReference getShippingMethod() {</span>
-<span class="source-line-no">210</span><span id="line.210">        return this.shippingMethod;</span>
-<span class="source-line-no">211</span><span id="line.211">    }</span>
-<span class="source-line-no">212</span><span id="line.212"></span>
-<span class="source-line-no">213</span><span id="line.213">    @Nullable</span>
-<span class="source-line-no">214</span><span id="line.214">    public com.commercetools.api.models.common.BaseAddress getShippingAddress() {</span>
-<span class="source-line-no">215</span><span id="line.215">        return this.shippingAddress;</span>
-<span class="source-line-no">216</span><span id="line.216">    }</span>
-<span class="source-line-no">217</span><span id="line.217"></span>
-<span class="source-line-no">218</span><span id="line.218">    @Nullable</span>
-<span class="source-line-no">219</span><span id="line.219">    public com.commercetools.api.models.cart.ShippingRateInputDraft getShippingRateInput() {</span>
-<span class="source-line-no">220</span><span id="line.220">        return this.shippingRateInput;</span>
-<span class="source-line-no">221</span><span id="line.221">    }</span>
-<span class="source-line-no">222</span><span id="line.222"></span>
-<span class="source-line-no">223</span><span id="line.223">    @Nullable</span>
-<span class="source-line-no">224</span><span id="line.224">    public String getExternalTaxRate() {</span>
-<span class="source-line-no">225</span><span id="line.225">        return this.externalTaxRate;</span>
-<span class="source-line-no">226</span><span id="line.226">    }</span>
-<span class="source-line-no">227</span><span id="line.227"></span>
-<span class="source-line-no">228</span><span id="line.228">    public java.util.List&lt;com.commercetools.api.models.order.Delivery&gt; getDeliveries() {</span>
-<span class="source-line-no">229</span><span id="line.229">        return this.deliveries;</span>
-<span class="source-line-no">230</span><span id="line.230">    }</span>
-<span class="source-line-no">231</span><span id="line.231"></span>
-<span class="source-line-no">232</span><span id="line.232">    @Nullable</span>
-<span class="source-line-no">233</span><span id="line.233">    public String getCustom() {</span>
-<span class="source-line-no">234</span><span id="line.234">        return this.custom;</span>
-<span class="source-line-no">235</span><span id="line.235">    }</span>
-<span class="source-line-no">236</span><span id="line.236"></span>
-<span class="source-line-no">237</span><span id="line.237">    public CartAddShippingMethodAction build() {</span>
-<span class="source-line-no">238</span><span id="line.238">        Objects.requireNonNull(shippingKey, CartAddShippingMethodAction.class + ": shippingKey is missing");</span>
+<span class="source-line-no">208</span><span id="line.208">    public com.commercetools.api.models.shipping_method.ShippingMethodReference getShippingMethod() {</span>
+<span class="source-line-no">209</span><span id="line.209">        return this.shippingMethod;</span>
+<span class="source-line-no">210</span><span id="line.210">    }</span>
+<span class="source-line-no">211</span><span id="line.211"></span>
+<span class="source-line-no">212</span><span id="line.212">    public com.commercetools.api.models.common.BaseAddress getShippingAddress() {</span>
+<span class="source-line-no">213</span><span id="line.213">        return this.shippingAddress;</span>
+<span class="source-line-no">214</span><span id="line.214">    }</span>
+<span class="source-line-no">215</span><span id="line.215"></span>
+<span class="source-line-no">216</span><span id="line.216">    @Nullable</span>
+<span class="source-line-no">217</span><span id="line.217">    public com.commercetools.api.models.cart.ShippingRateInputDraft getShippingRateInput() {</span>
+<span class="source-line-no">218</span><span id="line.218">        return this.shippingRateInput;</span>
+<span class="source-line-no">219</span><span id="line.219">    }</span>
+<span class="source-line-no">220</span><span id="line.220"></span>
+<span class="source-line-no">221</span><span id="line.221">    @Nullable</span>
+<span class="source-line-no">222</span><span id="line.222">    public String getExternalTaxRate() {</span>
+<span class="source-line-no">223</span><span id="line.223">        return this.externalTaxRate;</span>
+<span class="source-line-no">224</span><span id="line.224">    }</span>
+<span class="source-line-no">225</span><span id="line.225"></span>
+<span class="source-line-no">226</span><span id="line.226">    public java.util.List&lt;com.commercetools.api.models.order.Delivery&gt; getDeliveries() {</span>
+<span class="source-line-no">227</span><span id="line.227">        return this.deliveries;</span>
+<span class="source-line-no">228</span><span id="line.228">    }</span>
+<span class="source-line-no">229</span><span id="line.229"></span>
+<span class="source-line-no">230</span><span id="line.230">    @Nullable</span>
+<span class="source-line-no">231</span><span id="line.231">    public String getCustom() {</span>
+<span class="source-line-no">232</span><span id="line.232">        return this.custom;</span>
+<span class="source-line-no">233</span><span id="line.233">    }</span>
+<span class="source-line-no">234</span><span id="line.234"></span>
+<span class="source-line-no">235</span><span id="line.235">    public CartAddShippingMethodAction build() {</span>
+<span class="source-line-no">236</span><span id="line.236">        Objects.requireNonNull(shippingKey, CartAddShippingMethodAction.class + ": shippingKey is missing");</span>
+<span class="source-line-no">237</span><span id="line.237">        Objects.requireNonNull(shippingMethod, CartAddShippingMethodAction.class + ": shippingMethod is missing");</span>
+<span class="source-line-no">238</span><span id="line.238">        Objects.requireNonNull(shippingAddress, CartAddShippingMethodAction.class + ": shippingAddress is missing");</span>
 <span class="source-line-no">239</span><span id="line.239">        Objects.requireNonNull(deliveries, CartAddShippingMethodAction.class + ": deliveries is missing");</span>
 <span class="source-line-no">240</span><span id="line.240">        return new CartAddShippingMethodActionImpl(shippingKey, shippingMethod, shippingAddress, shippingRateInput,</span>
 <span class="source-line-no">241</span><span id="line.241">            externalTaxRate, deliveries, custom);</span>

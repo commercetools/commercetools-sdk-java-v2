@@ -28,12 +28,16 @@ public class SnsDestinationImpl implements SnsDestination, ModelBase {
 
     private String topicArn;
 
+    private com.commercetools.api.models.subscription.AwsAuthenticationMode authenticationMode;
+
     @JsonCreator
     SnsDestinationImpl(@JsonProperty("accessKey") final String accessKey,
-            @JsonProperty("accessSecret") final String accessSecret, @JsonProperty("topicArn") final String topicArn) {
+            @JsonProperty("accessSecret") final String accessSecret, @JsonProperty("topicArn") final String topicArn,
+            @JsonProperty("authenticationMode") final com.commercetools.api.models.subscription.AwsAuthenticationMode authenticationMode) {
         this.accessKey = accessKey;
         this.accessSecret = accessSecret;
         this.topicArn = topicArn;
+        this.authenticationMode = authenticationMode;
         this.type = SNS;
     }
 
@@ -50,7 +54,7 @@ public class SnsDestinationImpl implements SnsDestination, ModelBase {
     }
 
     /**
-     *
+     *  <p>Only present if <code>authenticationMode</code> is set to <code>Credentials</code>.</p>
      */
 
     public String getAccessKey() {
@@ -58,7 +62,7 @@ public class SnsDestinationImpl implements SnsDestination, ModelBase {
     }
 
     /**
-     *
+     *  <p>Only present if <code>authenticationMode</code> is set to <code>Credentials</code>.</p>
      */
 
     public String getAccessSecret() {
@@ -73,6 +77,14 @@ public class SnsDestinationImpl implements SnsDestination, ModelBase {
         return this.topicArn;
     }
 
+    /**
+     *  <p>Defines the method of authentication for the SNS topic.</p>
+     */
+
+    public com.commercetools.api.models.subscription.AwsAuthenticationMode getAuthenticationMode() {
+        return this.authenticationMode;
+    }
+
     public void setAccessKey(final String accessKey) {
         this.accessKey = accessKey;
     }
@@ -83,6 +95,11 @@ public class SnsDestinationImpl implements SnsDestination, ModelBase {
 
     public void setTopicArn(final String topicArn) {
         this.topicArn = topicArn;
+    }
+
+    public void setAuthenticationMode(
+            final com.commercetools.api.models.subscription.AwsAuthenticationMode authenticationMode) {
+        this.authenticationMode = authenticationMode;
     }
 
     @Override
@@ -99,6 +116,7 @@ public class SnsDestinationImpl implements SnsDestination, ModelBase {
                 .append(accessKey, that.accessKey)
                 .append(accessSecret, that.accessSecret)
                 .append(topicArn, that.topicArn)
+                .append(authenticationMode, that.authenticationMode)
                 .isEquals();
     }
 
@@ -108,6 +126,7 @@ public class SnsDestinationImpl implements SnsDestination, ModelBase {
                 .append(accessKey)
                 .append(accessSecret)
                 .append(topicArn)
+                .append(authenticationMode)
                 .toHashCode();
     }
 

@@ -1,6 +1,7 @@
 
 package com.commercetools.api.models;
 
+import java.util.Collection;
 import java.util.List;
 import java.util.Map;
 
@@ -44,10 +45,10 @@ public interface PagedQueryResourceRequest<T extends PagedQueryResourceRequest<T
     <TValue> PagedQueryResourceRequest<T, TResult> addPredicateVar(final String varName, final TValue predicateVar);
 
     <TValue> PagedQueryResourceRequest<T, TResult> withPredicateVar(final String varName,
-            final List<TValue> predicateVar);
+            final Collection<TValue> predicateVar);
 
     <TValue> PagedQueryResourceRequest<T, TResult> addPredicateVar(final String varName,
-            final List<TValue> predicateVar);
+            final Collection<TValue> predicateVar);
 
     List<ApiMethod.ParamEntry<String, String>> getQueryParams();
 
@@ -70,28 +71,28 @@ public interface PagedQueryResourceRequest<T extends PagedQueryResourceRequest<T
     }
 
     @SuppressWarnings("unchecked")
-    default T withWhere(final String where, final Map<String, List<String>> predicateVar) {
+    default T withWhere(final String where, final Map<String, Collection<String>> predicateVar) {
         PagedQueryResourceRequest<T, TResult> request = withWhere(where);
         predicateVar.forEach(request::withPredicateVar);
         return (T) request;
     }
 
     @SuppressWarnings("unchecked")
-    default T addWhere(final String where, final Map<String, List<String>> predicateVar) {
+    default T addWhere(final String where, final Map<String, Collection<String>> predicateVar) {
         PagedQueryResourceRequest<T, TResult> request = addWhere(where);
         predicateVar.forEach(request::withPredicateVar);
         return (T) request;
     }
 
     @SuppressWarnings("unchecked")
-    default T withWhere(final String where, final List<Map.Entry<String, String>> predicateVar) {
+    default T withWhere(final String where, final Collection<Map.Entry<String, String>> predicateVar) {
         PagedQueryResourceRequest<T, TResult> request = withWhere(where);
         predicateVar.forEach(pair -> request.withPredicateVar(pair.getKey(), pair.getValue()));
         return (T) request;
     }
 
     @SuppressWarnings("unchecked")
-    default T addWhere(final String where, final List<Map.Entry<String, String>> predicateVar) {
+    default T addWhere(final String where, final Collection<Map.Entry<String, String>> predicateVar) {
         PagedQueryResourceRequest<T, TResult> request = addWhere(where);
         predicateVar.forEach(pair -> request.withPredicateVar(pair.getKey(), pair.getValue()));
         return (T) request;

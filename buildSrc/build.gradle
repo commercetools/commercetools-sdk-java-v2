@@ -1,5 +1,5 @@
 plugins {
-    id 'org.jetbrains.kotlin.jvm' version "1.6.10"
+    id 'org.jetbrains.kotlin.jvm' version "1.7.20"
 }
 
 repositories {
@@ -7,6 +7,6 @@ repositories {
 }
 
 dependencies {
-    implementation "com.github.javaparser:javaparser-symbol-solver-core:3.24.0"
-    implementation "com.google.code.gson:gson:2.8.9"
+    implementation "com.github.javaparser:javaparser-symbol-solver-core:3.24.7"
+    implementation "com.google.code.gson:gson:2.9.1"
 }

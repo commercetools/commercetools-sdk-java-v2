@@ -2,6 +2,7 @@
 package com.commercetools.api.defaultconfig;
 
 import java.net.URI;
+import java.time.Duration;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
@@ -404,6 +405,33 @@ public class ApiRootBuilder {
     public ApiRootBuilder withRetryMiddleware(final Scheduler scheduler, final int maxRetries, final long delay,
             final long maxDelay, final FailsafeRetryPolicyBuilderOptions fn) {
         return with(clientBuilder -> clientBuilder.withRetryMiddleware(scheduler, maxRetries, delay, maxDelay, fn));
+    }
+
+    public ApiRootBuilder withQueueMiddleware(final Supplier<QueueRequestMiddleware> queueMiddleware) {
+        return with(clientBuilder -> clientBuilder.withQueueMiddleware(queueMiddleware));
+    }
+
+    public ApiRootBuilder withQueueMiddleware(final QueueRequestMiddleware queueMiddleware) {
+        return with(clientBuilder -> clientBuilder.withQueueMiddleware(queueMiddleware));
+    }
+
+    public ApiRootBuilder withQueueMiddleware(final int maxRequests, final Duration maxWaitTime) {
+        return with(clientBuilder -> clientBuilder.withQueueMiddleware(maxRequests, maxWaitTime));
+    }
+
+    public ApiRootBuilder withQueueMiddleware(final Scheduler scheduler, final int maxRequests,
+            final Duration maxWaitTime) {
+        return with(clientBuilder -> clientBuilder.withQueueMiddleware(scheduler, maxRequests, maxWaitTime));
+    }
+
+    public ApiRootBuilder withQueueMiddleware(final ScheduledExecutorService executorService, final int maxRequests,
+            final Duration maxWaitTime) {
+        return with(clientBuilder -> clientBuilder.withQueueMiddleware(executorService, maxRequests, maxWaitTime));
+    }
+
+    public ApiRootBuilder withQueueMiddleware(final ExecutorService executorService, final int maxRequests,
+            final Duration maxWaitTime) {
+        return with(clientBuilder -> clientBuilder.withQueueMiddleware(executorService, maxRequests, maxWaitTime));
     }
 
     public ApiRootBuilder withOAuthMiddleware(final Supplier<OAuthMiddleware> oAuthMiddleware) {

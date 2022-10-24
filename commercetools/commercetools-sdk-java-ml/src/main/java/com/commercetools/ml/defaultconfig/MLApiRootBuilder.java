@@ -2,10 +2,14 @@
 package com.commercetools.ml.defaultconfig;
 
 import java.net.URI;
+import java.time.Duration;
 import java.util.List;
 import java.util.Map;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.ScheduledExecutorService;
 import java.util.function.Function;
 import java.util.function.Supplier;
+import java.util.function.UnaryOperator;
 
 import javax.annotation.Nullable;
 
@@ -13,6 +17,8 @@ import com.commercetools.ml.client.ApiRoot;
 import com.commercetools.ml.client.ByProjectKeyRequestBuilder;
 import com.commercetools.ml.client.MLCorrelationIdProvider;
 import com.commercetools.ml.client.ProjectApiRoot;
+
+import dev.failsafe.spi.Scheduler;
 
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.error.HttpExceptionFactory;
@@ -244,6 +250,33 @@ public class MLApiRootBuilder {
         return this;
     }
 
+    public MLApiRootBuilder withQueueMiddleware(final Supplier<QueueRequestMiddleware> queueMiddleware) {
+        return with(clientBuilder -> clientBuilder.withQueueMiddleware(queueMiddleware));
+    }
+
+    public MLApiRootBuilder withQueueMiddleware(final QueueRequestMiddleware queueMiddleware) {
+        return with(clientBuilder -> clientBuilder.withQueueMiddleware(queueMiddleware));
+    }
+
+    public MLApiRootBuilder withQueueMiddleware(final int maxRequests, final Duration maxWaitTime) {
+        return with(clientBuilder -> clientBuilder.withQueueMiddleware(maxRequests, maxWaitTime));
+    }
+
+    public MLApiRootBuilder withQueueMiddleware(final Scheduler scheduler, final int maxRequests,
+            final Duration maxWaitTime) {
+        return with(clientBuilder -> clientBuilder.withQueueMiddleware(scheduler, maxRequests, maxWaitTime));
+    }
+
+    public MLApiRootBuilder withQueueMiddleware(final ScheduledExecutorService executorService, final int maxRequests,
+            final Duration maxWaitTime) {
+        return with(clientBuilder -> clientBuilder.withQueueMiddleware(executorService, maxRequests, maxWaitTime));
+    }
+
+    public MLApiRootBuilder withQueueMiddleware(final ExecutorService executorService, final int maxRequests,
+            final Duration maxWaitTime) {
+        return with(clientBuilder -> clientBuilder.withQueueMiddleware(executorService, maxRequests, maxWaitTime));
+    }
+
     public MLApiRootBuilder withOAuthMiddleware(final Supplier<OAuthMiddleware> oAuthMiddleware) {
         builder.withOAuthMiddleware(oAuthMiddleware);
 
@@ -345,6 +378,12 @@ public class MLApiRootBuilder {
 
     public MLApiRootBuilder addMiddlewares(final List<Middleware> middlewares) {
         builder.addMiddlewares(middlewares);
+
+        return this;
+    }
+
+    public MLApiRootBuilder with(UnaryOperator<ClientBuilder> builderUnaryOperator) {
+        builderUnaryOperator.apply(builder);
 
         return this;
     }

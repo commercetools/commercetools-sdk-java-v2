@@ -4,6 +4,7 @@ package com.commercetools.api.client;
 import java.net.URI;
 import java.time.Duration;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
 import java.util.function.Function;
@@ -169,7 +170,7 @@ public class ByProjectKeyInStoreKeyByStoreKeyCartsKeyByKeyDelete
      * set dataErasure with the specified values
      */
     public <TValue> ByProjectKeyInStoreKeyByStoreKeyCartsKeyByKeyDelete withDataErasure(
-            final List<TValue> dataErasure) {
+            final Collection<TValue> dataErasure) {
         return copy().withoutQueryParam("dataErasure")
                 .addQueryParams(dataErasure.stream()
                         .map(s -> new ParamEntry<>("dataErasure", s.toString()))
@@ -179,7 +180,8 @@ public class ByProjectKeyInStoreKeyByStoreKeyCartsKeyByKeyDelete
     /**
      * add additional dataErasure query parameters
      */
-    public <TValue> ByProjectKeyInStoreKeyByStoreKeyCartsKeyByKeyDelete addDataErasure(final List<TValue> dataErasure) {
+    public <TValue> ByProjectKeyInStoreKeyByStoreKeyCartsKeyByKeyDelete addDataErasure(
+            final Collection<TValue> dataErasure) {
         return copy().addQueryParams(
             dataErasure.stream().map(s -> new ParamEntry<>("dataErasure", s.toString())).collect(Collectors.toList()));
     }
@@ -231,7 +233,7 @@ public class ByProjectKeyInStoreKeyByStoreKeyCartsKeyByKeyDelete
     /**
      * set version with the specified values
      */
-    public <TValue> ByProjectKeyInStoreKeyByStoreKeyCartsKeyByKeyDelete withVersion(final List<TValue> version) {
+    public <TValue> ByProjectKeyInStoreKeyByStoreKeyCartsKeyByKeyDelete withVersion(final Collection<TValue> version) {
         return copy().withoutQueryParam("version")
                 .addQueryParams(
                     version.stream().map(s -> new ParamEntry<>("version", s.toString())).collect(Collectors.toList()));
@@ -240,7 +242,7 @@ public class ByProjectKeyInStoreKeyByStoreKeyCartsKeyByKeyDelete
     /**
      * add additional version query parameters
      */
-    public <TValue> ByProjectKeyInStoreKeyByStoreKeyCartsKeyByKeyDelete addVersion(final List<TValue> version) {
+    public <TValue> ByProjectKeyInStoreKeyByStoreKeyCartsKeyByKeyDelete addVersion(final Collection<TValue> version) {
         return copy().addQueryParams(
             version.stream().map(s -> new ParamEntry<>("version", s.toString())).collect(Collectors.toList()));
     }
@@ -292,7 +294,7 @@ public class ByProjectKeyInStoreKeyByStoreKeyCartsKeyByKeyDelete
     /**
      * set expand with the specified values
      */
-    public <TValue> ByProjectKeyInStoreKeyByStoreKeyCartsKeyByKeyDelete withExpand(final List<TValue> expand) {
+    public <TValue> ByProjectKeyInStoreKeyByStoreKeyCartsKeyByKeyDelete withExpand(final Collection<TValue> expand) {
         return copy().withoutQueryParam("expand")
                 .addQueryParams(
                     expand.stream().map(s -> new ParamEntry<>("expand", s.toString())).collect(Collectors.toList()));
@@ -301,7 +303,7 @@ public class ByProjectKeyInStoreKeyByStoreKeyCartsKeyByKeyDelete
     /**
      * add additional expand query parameters
      */
-    public <TValue> ByProjectKeyInStoreKeyByStoreKeyCartsKeyByKeyDelete addExpand(final List<TValue> expand) {
+    public <TValue> ByProjectKeyInStoreKeyByStoreKeyCartsKeyByKeyDelete addExpand(final Collection<TValue> expand) {
         return copy().addQueryParams(
             expand.stream().map(s -> new ParamEntry<>("expand", s.toString())).collect(Collectors.toList()));
     }

@@ -4,6 +4,7 @@ package com.commercetools.api.client;
 import java.net.URI;
 import java.time.Duration;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
 import java.util.function.Function;
@@ -173,7 +174,7 @@ public class ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsByIDDelete extends
      * set dataErasure with the specified values
      */
     public <TValue> ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsByIDDelete withDataErasure(
-            final List<TValue> dataErasure) {
+            final Collection<TValue> dataErasure) {
         return copy().withoutQueryParam("dataErasure")
                 .addQueryParams(dataErasure.stream()
                         .map(s -> new ParamEntry<>("dataErasure", s.toString()))
@@ -184,7 +185,7 @@ public class ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsByIDDelete extends
      * add additional dataErasure query parameters
      */
     public <TValue> ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsByIDDelete addDataErasure(
-            final List<TValue> dataErasure) {
+            final Collection<TValue> dataErasure) {
         return copy().addQueryParams(
             dataErasure.stream().map(s -> new ParamEntry<>("dataErasure", s.toString())).collect(Collectors.toList()));
     }
@@ -236,7 +237,8 @@ public class ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsByIDDelete extends
     /**
      * set version with the specified values
      */
-    public <TValue> ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsByIDDelete withVersion(final List<TValue> version) {
+    public <TValue> ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsByIDDelete withVersion(
+            final Collection<TValue> version) {
         return copy().withoutQueryParam("version")
                 .addQueryParams(
                     version.stream().map(s -> new ParamEntry<>("version", s.toString())).collect(Collectors.toList()));
@@ -245,7 +247,8 @@ public class ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsByIDDelete extends
     /**
      * add additional version query parameters
      */
-    public <TValue> ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsByIDDelete addVersion(final List<TValue> version) {
+    public <TValue> ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsByIDDelete addVersion(
+            final Collection<TValue> version) {
         return copy().addQueryParams(
             version.stream().map(s -> new ParamEntry<>("version", s.toString())).collect(Collectors.toList()));
     }
@@ -297,7 +300,8 @@ public class ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsByIDDelete extends
     /**
      * set expand with the specified values
      */
-    public <TValue> ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsByIDDelete withExpand(final List<TValue> expand) {
+    public <TValue> ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsByIDDelete withExpand(
+            final Collection<TValue> expand) {
         return copy().withoutQueryParam("expand")
                 .addQueryParams(
                     expand.stream().map(s -> new ParamEntry<>("expand", s.toString())).collect(Collectors.toList()));
@@ -306,7 +310,8 @@ public class ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsByIDDelete extends
     /**
      * add additional expand query parameters
      */
-    public <TValue> ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsByIDDelete addExpand(final List<TValue> expand) {
+    public <TValue> ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsByIDDelete addExpand(
+            final Collection<TValue> expand) {
         return copy().addQueryParams(
             expand.stream().map(s -> new ParamEntry<>("expand", s.toString())).collect(Collectors.toList()));
     }

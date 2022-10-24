@@ -4,6 +4,7 @@ package com.commercetools.api.client;
 import java.net.URI;
 import java.time.Duration;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
 import java.util.function.Function;
@@ -164,7 +165,7 @@ public class ByProjectKeyProductsKeyByKeyDelete
     /**
      * set priceCurrency with the specified values
      */
-    public <TValue> ByProjectKeyProductsKeyByKeyDelete withPriceCurrency(final List<TValue> priceCurrency) {
+    public <TValue> ByProjectKeyProductsKeyByKeyDelete withPriceCurrency(final Collection<TValue> priceCurrency) {
         return copy().withoutQueryParam("priceCurrency")
                 .addQueryParams(priceCurrency.stream()
                         .map(s -> new ParamEntry<>("priceCurrency", s.toString()))
@@ -174,7 +175,7 @@ public class ByProjectKeyProductsKeyByKeyDelete
     /**
      * add additional priceCurrency query parameters
      */
-    public <TValue> ByProjectKeyProductsKeyByKeyDelete addPriceCurrency(final List<TValue> priceCurrency) {
+    public <TValue> ByProjectKeyProductsKeyByKeyDelete addPriceCurrency(final Collection<TValue> priceCurrency) {
         return copy().addQueryParams(priceCurrency.stream()
                 .map(s -> new ParamEntry<>("priceCurrency", s.toString()))
                 .collect(Collectors.toList()));
@@ -225,7 +226,7 @@ public class ByProjectKeyProductsKeyByKeyDelete
     /**
      * set priceCountry with the specified values
      */
-    public <TValue> ByProjectKeyProductsKeyByKeyDelete withPriceCountry(final List<TValue> priceCountry) {
+    public <TValue> ByProjectKeyProductsKeyByKeyDelete withPriceCountry(final Collection<TValue> priceCountry) {
         return copy().withoutQueryParam("priceCountry")
                 .addQueryParams(priceCountry.stream()
                         .map(s -> new ParamEntry<>("priceCountry", s.toString()))
@@ -235,7 +236,7 @@ public class ByProjectKeyProductsKeyByKeyDelete
     /**
      * add additional priceCountry query parameters
      */
-    public <TValue> ByProjectKeyProductsKeyByKeyDelete addPriceCountry(final List<TValue> priceCountry) {
+    public <TValue> ByProjectKeyProductsKeyByKeyDelete addPriceCountry(final Collection<TValue> priceCountry) {
         return copy().addQueryParams(priceCountry.stream()
                 .map(s -> new ParamEntry<>("priceCountry", s.toString()))
                 .collect(Collectors.toList()));
@@ -286,7 +287,8 @@ public class ByProjectKeyProductsKeyByKeyDelete
     /**
      * set priceCustomerGroup with the specified values
      */
-    public <TValue> ByProjectKeyProductsKeyByKeyDelete withPriceCustomerGroup(final List<TValue> priceCustomerGroup) {
+    public <TValue> ByProjectKeyProductsKeyByKeyDelete withPriceCustomerGroup(
+            final Collection<TValue> priceCustomerGroup) {
         return copy().withoutQueryParam("priceCustomerGroup")
                 .addQueryParams(priceCustomerGroup.stream()
                         .map(s -> new ParamEntry<>("priceCustomerGroup", s.toString()))
@@ -296,7 +298,8 @@ public class ByProjectKeyProductsKeyByKeyDelete
     /**
      * add additional priceCustomerGroup query parameters
      */
-    public <TValue> ByProjectKeyProductsKeyByKeyDelete addPriceCustomerGroup(final List<TValue> priceCustomerGroup) {
+    public <TValue> ByProjectKeyProductsKeyByKeyDelete addPriceCustomerGroup(
+            final Collection<TValue> priceCustomerGroup) {
         return copy().addQueryParams(priceCustomerGroup.stream()
                 .map(s -> new ParamEntry<>("priceCustomerGroup", s.toString()))
                 .collect(Collectors.toList()));
@@ -347,7 +350,7 @@ public class ByProjectKeyProductsKeyByKeyDelete
     /**
      * set priceChannel with the specified values
      */
-    public <TValue> ByProjectKeyProductsKeyByKeyDelete withPriceChannel(final List<TValue> priceChannel) {
+    public <TValue> ByProjectKeyProductsKeyByKeyDelete withPriceChannel(final Collection<TValue> priceChannel) {
         return copy().withoutQueryParam("priceChannel")
                 .addQueryParams(priceChannel.stream()
                         .map(s -> new ParamEntry<>("priceChannel", s.toString()))
@@ -357,7 +360,7 @@ public class ByProjectKeyProductsKeyByKeyDelete
     /**
      * add additional priceChannel query parameters
      */
-    public <TValue> ByProjectKeyProductsKeyByKeyDelete addPriceChannel(final List<TValue> priceChannel) {
+    public <TValue> ByProjectKeyProductsKeyByKeyDelete addPriceChannel(final Collection<TValue> priceChannel) {
         return copy().addQueryParams(priceChannel.stream()
                 .map(s -> new ParamEntry<>("priceChannel", s.toString()))
                 .collect(Collectors.toList()));
@@ -408,7 +411,7 @@ public class ByProjectKeyProductsKeyByKeyDelete
     /**
      * set version with the specified values
      */
-    public <TValue> ByProjectKeyProductsKeyByKeyDelete withVersion(final List<TValue> version) {
+    public <TValue> ByProjectKeyProductsKeyByKeyDelete withVersion(final Collection<TValue> version) {
         return copy().withoutQueryParam("version")
                 .addQueryParams(
                     version.stream().map(s -> new ParamEntry<>("version", s.toString())).collect(Collectors.toList()));
@@ -417,7 +420,7 @@ public class ByProjectKeyProductsKeyByKeyDelete
     /**
      * add additional version query parameters
      */
-    public <TValue> ByProjectKeyProductsKeyByKeyDelete addVersion(final List<TValue> version) {
+    public <TValue> ByProjectKeyProductsKeyByKeyDelete addVersion(final Collection<TValue> version) {
         return copy().addQueryParams(
             version.stream().map(s -> new ParamEntry<>("version", s.toString())).collect(Collectors.toList()));
     }
@@ -467,7 +470,7 @@ public class ByProjectKeyProductsKeyByKeyDelete
     /**
      * set expand with the specified values
      */
-    public <TValue> ByProjectKeyProductsKeyByKeyDelete withExpand(final List<TValue> expand) {
+    public <TValue> ByProjectKeyProductsKeyByKeyDelete withExpand(final Collection<TValue> expand) {
         return copy().withoutQueryParam("expand")
                 .addQueryParams(
                     expand.stream().map(s -> new ParamEntry<>("expand", s.toString())).collect(Collectors.toList()));
@@ -476,7 +479,7 @@ public class ByProjectKeyProductsKeyByKeyDelete
     /**
      * add additional expand query parameters
      */
-    public <TValue> ByProjectKeyProductsKeyByKeyDelete addExpand(final List<TValue> expand) {
+    public <TValue> ByProjectKeyProductsKeyByKeyDelete addExpand(final Collection<TValue> expand) {
         return copy().addQueryParams(
             expand.stream().map(s -> new ParamEntry<>("expand", s.toString())).collect(Collectors.toList()));
     }

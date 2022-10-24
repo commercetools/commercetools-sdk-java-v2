@@ -4,6 +4,7 @@ package com.commercetools.api.client;
 import java.net.URI;
 import java.time.Duration;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
 import java.util.function.Function;
@@ -168,7 +169,7 @@ public class ByProjectKeyProductsKeyByKeyProductSelectionsGet extends
     /**
      * set expand with the specified values
      */
-    public <TValue> ByProjectKeyProductsKeyByKeyProductSelectionsGet withExpand(final List<TValue> expand) {
+    public <TValue> ByProjectKeyProductsKeyByKeyProductSelectionsGet withExpand(final Collection<TValue> expand) {
         return copy().withoutQueryParam("expand")
                 .addQueryParams(
                     expand.stream().map(s -> new ParamEntry<>("expand", s.toString())).collect(Collectors.toList()));
@@ -177,7 +178,7 @@ public class ByProjectKeyProductsKeyByKeyProductSelectionsGet extends
     /**
      * add additional expand query parameters
      */
-    public <TValue> ByProjectKeyProductsKeyByKeyProductSelectionsGet addExpand(final List<TValue> expand) {
+    public <TValue> ByProjectKeyProductsKeyByKeyProductSelectionsGet addExpand(final Collection<TValue> expand) {
         return copy().addQueryParams(
             expand.stream().map(s -> new ParamEntry<>("expand", s.toString())).collect(Collectors.toList()));
     }
@@ -227,7 +228,7 @@ public class ByProjectKeyProductsKeyByKeyProductSelectionsGet extends
     /**
      * set sort with the specified values
      */
-    public <TValue> ByProjectKeyProductsKeyByKeyProductSelectionsGet withSort(final List<TValue> sort) {
+    public <TValue> ByProjectKeyProductsKeyByKeyProductSelectionsGet withSort(final Collection<TValue> sort) {
         return copy().withoutQueryParam("sort")
                 .addQueryParams(
                     sort.stream().map(s -> new ParamEntry<>("sort", s.toString())).collect(Collectors.toList()));
@@ -236,7 +237,7 @@ public class ByProjectKeyProductsKeyByKeyProductSelectionsGet extends
     /**
      * add additional sort query parameters
      */
-    public <TValue> ByProjectKeyProductsKeyByKeyProductSelectionsGet addSort(final List<TValue> sort) {
+    public <TValue> ByProjectKeyProductsKeyByKeyProductSelectionsGet addSort(final Collection<TValue> sort) {
         return copy().addQueryParams(
             sort.stream().map(s -> new ParamEntry<>("sort", s.toString())).collect(Collectors.toList()));
     }
@@ -286,7 +287,7 @@ public class ByProjectKeyProductsKeyByKeyProductSelectionsGet extends
     /**
      * set limit with the specified values
      */
-    public <TValue> ByProjectKeyProductsKeyByKeyProductSelectionsGet withLimit(final List<TValue> limit) {
+    public <TValue> ByProjectKeyProductsKeyByKeyProductSelectionsGet withLimit(final Collection<TValue> limit) {
         return copy().withoutQueryParam("limit")
                 .addQueryParams(
                     limit.stream().map(s -> new ParamEntry<>("limit", s.toString())).collect(Collectors.toList()));
@@ -295,7 +296,7 @@ public class ByProjectKeyProductsKeyByKeyProductSelectionsGet extends
     /**
      * add additional limit query parameters
      */
-    public <TValue> ByProjectKeyProductsKeyByKeyProductSelectionsGet addLimit(final List<TValue> limit) {
+    public <TValue> ByProjectKeyProductsKeyByKeyProductSelectionsGet addLimit(final Collection<TValue> limit) {
         return copy().addQueryParams(
             limit.stream().map(s -> new ParamEntry<>("limit", s.toString())).collect(Collectors.toList()));
     }
@@ -346,7 +347,7 @@ public class ByProjectKeyProductsKeyByKeyProductSelectionsGet extends
     /**
      * set offset with the specified values
      */
-    public <TValue> ByProjectKeyProductsKeyByKeyProductSelectionsGet withOffset(final List<TValue> offset) {
+    public <TValue> ByProjectKeyProductsKeyByKeyProductSelectionsGet withOffset(final Collection<TValue> offset) {
         return copy().withoutQueryParam("offset")
                 .addQueryParams(
                     offset.stream().map(s -> new ParamEntry<>("offset", s.toString())).collect(Collectors.toList()));
@@ -355,7 +356,7 @@ public class ByProjectKeyProductsKeyByKeyProductSelectionsGet extends
     /**
      * add additional offset query parameters
      */
-    public <TValue> ByProjectKeyProductsKeyByKeyProductSelectionsGet addOffset(final List<TValue> offset) {
+    public <TValue> ByProjectKeyProductsKeyByKeyProductSelectionsGet addOffset(final Collection<TValue> offset) {
         return copy().addQueryParams(
             offset.stream().map(s -> new ParamEntry<>("offset", s.toString())).collect(Collectors.toList()));
     }
@@ -407,7 +408,7 @@ public class ByProjectKeyProductsKeyByKeyProductSelectionsGet extends
     /**
      * set withTotal with the specified values
      */
-    public <TValue> ByProjectKeyProductsKeyByKeyProductSelectionsGet withWithTotal(final List<TValue> withTotal) {
+    public <TValue> ByProjectKeyProductsKeyByKeyProductSelectionsGet withWithTotal(final Collection<TValue> withTotal) {
         return copy().withoutQueryParam("withTotal")
                 .addQueryParams(withTotal.stream()
                         .map(s -> new ParamEntry<>("withTotal", s.toString()))
@@ -417,7 +418,7 @@ public class ByProjectKeyProductsKeyByKeyProductSelectionsGet extends
     /**
      * add additional withTotal query parameters
      */
-    public <TValue> ByProjectKeyProductsKeyByKeyProductSelectionsGet addWithTotal(final List<TValue> withTotal) {
+    public <TValue> ByProjectKeyProductsKeyByKeyProductSelectionsGet addWithTotal(final Collection<TValue> withTotal) {
         return copy().addQueryParams(
             withTotal.stream().map(s -> new ParamEntry<>("withTotal", s.toString())).collect(Collectors.toList()));
     }
@@ -467,7 +468,7 @@ public class ByProjectKeyProductsKeyByKeyProductSelectionsGet extends
     /**
      * set where with the specified values
      */
-    public <TValue> ByProjectKeyProductsKeyByKeyProductSelectionsGet withWhere(final List<TValue> where) {
+    public <TValue> ByProjectKeyProductsKeyByKeyProductSelectionsGet withWhere(final Collection<TValue> where) {
         return copy().withoutQueryParam("where")
                 .addQueryParams(
                     where.stream().map(s -> new ParamEntry<>("where", s.toString())).collect(Collectors.toList()));
@@ -476,7 +477,7 @@ public class ByProjectKeyProductsKeyByKeyProductSelectionsGet extends
     /**
      * add additional where query parameters
      */
-    public <TValue> ByProjectKeyProductsKeyByKeyProductSelectionsGet addWhere(final List<TValue> where) {
+    public <TValue> ByProjectKeyProductsKeyByKeyProductSelectionsGet addWhere(final Collection<TValue> where) {
         return copy().addQueryParams(
             where.stream().map(s -> new ParamEntry<>("where", s.toString())).collect(Collectors.toList()));
     }
@@ -501,7 +502,7 @@ public class ByProjectKeyProductsKeyByKeyProductSelectionsGet extends
      * set predicateVar with the specificied values
      */
     public <TValue> ByProjectKeyProductsKeyByKeyProductSelectionsGet withPredicateVar(final String varName,
-            final List<TValue> predicateVar) {
+            final Collection<TValue> predicateVar) {
         final String placeholderName = String.format("var.%s", varName);
         return copy().withoutQueryParam(placeholderName)
                 .addQueryParams(predicateVar.stream()
@@ -513,7 +514,7 @@ public class ByProjectKeyProductsKeyByKeyProductSelectionsGet extends
      * add additional predicateVar query parameters
      */
     public <TValue> ByProjectKeyProductsKeyByKeyProductSelectionsGet addPredicateVar(final String varName,
-            final List<TValue> predicateVar) {
+            final Collection<TValue> predicateVar) {
         final String placeholderName = String.format("var.%s", varName);
         return copy().addQueryParams(predicateVar.stream()
                 .map(s -> new ParamEntry<>(placeholderName, s.toString()))

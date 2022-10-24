@@ -4,6 +4,7 @@ package com.commercetools.api.client;
 import java.net.URI;
 import java.time.Duration;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
 import java.util.function.Function;
@@ -150,7 +151,7 @@ public class ByProjectKeyMeGet extends ApiMethod<ByProjectKeyMeGet, com.commerce
     /**
      * set sort with the specified values
      */
-    public <TValue> ByProjectKeyMeGet withSort(final List<TValue> sort) {
+    public <TValue> ByProjectKeyMeGet withSort(final Collection<TValue> sort) {
         return copy().withoutQueryParam("sort")
                 .addQueryParams(
                     sort.stream().map(s -> new ParamEntry<>("sort", s.toString())).collect(Collectors.toList()));
@@ -159,7 +160,7 @@ public class ByProjectKeyMeGet extends ApiMethod<ByProjectKeyMeGet, com.commerce
     /**
      * add additional sort query parameters
      */
-    public <TValue> ByProjectKeyMeGet addSort(final List<TValue> sort) {
+    public <TValue> ByProjectKeyMeGet addSort(final Collection<TValue> sort) {
         return copy().addQueryParams(
             sort.stream().map(s -> new ParamEntry<>("sort", s.toString())).collect(Collectors.toList()));
     }
@@ -209,7 +210,7 @@ public class ByProjectKeyMeGet extends ApiMethod<ByProjectKeyMeGet, com.commerce
     /**
      * set limit with the specified values
      */
-    public <TValue> ByProjectKeyMeGet withLimit(final List<TValue> limit) {
+    public <TValue> ByProjectKeyMeGet withLimit(final Collection<TValue> limit) {
         return copy().withoutQueryParam("limit")
                 .addQueryParams(
                     limit.stream().map(s -> new ParamEntry<>("limit", s.toString())).collect(Collectors.toList()));
@@ -218,7 +219,7 @@ public class ByProjectKeyMeGet extends ApiMethod<ByProjectKeyMeGet, com.commerce
     /**
      * add additional limit query parameters
      */
-    public <TValue> ByProjectKeyMeGet addLimit(final List<TValue> limit) {
+    public <TValue> ByProjectKeyMeGet addLimit(final Collection<TValue> limit) {
         return copy().addQueryParams(
             limit.stream().map(s -> new ParamEntry<>("limit", s.toString())).collect(Collectors.toList()));
     }
@@ -268,7 +269,7 @@ public class ByProjectKeyMeGet extends ApiMethod<ByProjectKeyMeGet, com.commerce
     /**
      * set offset with the specified values
      */
-    public <TValue> ByProjectKeyMeGet withOffset(final List<TValue> offset) {
+    public <TValue> ByProjectKeyMeGet withOffset(final Collection<TValue> offset) {
         return copy().withoutQueryParam("offset")
                 .addQueryParams(
                     offset.stream().map(s -> new ParamEntry<>("offset", s.toString())).collect(Collectors.toList()));
@@ -277,7 +278,7 @@ public class ByProjectKeyMeGet extends ApiMethod<ByProjectKeyMeGet, com.commerce
     /**
      * add additional offset query parameters
      */
-    public <TValue> ByProjectKeyMeGet addOffset(final List<TValue> offset) {
+    public <TValue> ByProjectKeyMeGet addOffset(final Collection<TValue> offset) {
         return copy().addQueryParams(
             offset.stream().map(s -> new ParamEntry<>("offset", s.toString())).collect(Collectors.toList()));
     }
@@ -327,7 +328,7 @@ public class ByProjectKeyMeGet extends ApiMethod<ByProjectKeyMeGet, com.commerce
     /**
      * set withTotal with the specified values
      */
-    public <TValue> ByProjectKeyMeGet withWithTotal(final List<TValue> withTotal) {
+    public <TValue> ByProjectKeyMeGet withWithTotal(final Collection<TValue> withTotal) {
         return copy().withoutQueryParam("withTotal")
                 .addQueryParams(withTotal.stream()
                         .map(s -> new ParamEntry<>("withTotal", s.toString()))
@@ -337,7 +338,7 @@ public class ByProjectKeyMeGet extends ApiMethod<ByProjectKeyMeGet, com.commerce
     /**
      * add additional withTotal query parameters
      */
-    public <TValue> ByProjectKeyMeGet addWithTotal(final List<TValue> withTotal) {
+    public <TValue> ByProjectKeyMeGet addWithTotal(final Collection<TValue> withTotal) {
         return copy().addQueryParams(
             withTotal.stream().map(s -> new ParamEntry<>("withTotal", s.toString())).collect(Collectors.toList()));
     }
@@ -387,7 +388,7 @@ public class ByProjectKeyMeGet extends ApiMethod<ByProjectKeyMeGet, com.commerce
     /**
      * set expand with the specified values
      */
-    public <TValue> ByProjectKeyMeGet withExpand(final List<TValue> expand) {
+    public <TValue> ByProjectKeyMeGet withExpand(final Collection<TValue> expand) {
         return copy().withoutQueryParam("expand")
                 .addQueryParams(
                     expand.stream().map(s -> new ParamEntry<>("expand", s.toString())).collect(Collectors.toList()));
@@ -396,7 +397,7 @@ public class ByProjectKeyMeGet extends ApiMethod<ByProjectKeyMeGet, com.commerce
     /**
      * add additional expand query parameters
      */
-    public <TValue> ByProjectKeyMeGet addExpand(final List<TValue> expand) {
+    public <TValue> ByProjectKeyMeGet addExpand(final Collection<TValue> expand) {
         return copy().addQueryParams(
             expand.stream().map(s -> new ParamEntry<>("expand", s.toString())).collect(Collectors.toList()));
     }
@@ -446,7 +447,7 @@ public class ByProjectKeyMeGet extends ApiMethod<ByProjectKeyMeGet, com.commerce
     /**
      * set where with the specified values
      */
-    public <TValue> ByProjectKeyMeGet withWhere(final List<TValue> where) {
+    public <TValue> ByProjectKeyMeGet withWhere(final Collection<TValue> where) {
         return copy().withoutQueryParam("where")
                 .addQueryParams(
                     where.stream().map(s -> new ParamEntry<>("where", s.toString())).collect(Collectors.toList()));
@@ -455,7 +456,7 @@ public class ByProjectKeyMeGet extends ApiMethod<ByProjectKeyMeGet, com.commerce
     /**
      * add additional where query parameters
      */
-    public <TValue> ByProjectKeyMeGet addWhere(final List<TValue> where) {
+    public <TValue> ByProjectKeyMeGet addWhere(final Collection<TValue> where) {
         return copy().addQueryParams(
             where.stream().map(s -> new ParamEntry<>("where", s.toString())).collect(Collectors.toList()));
     }
@@ -477,7 +478,7 @@ public class ByProjectKeyMeGet extends ApiMethod<ByProjectKeyMeGet, com.commerce
     /**
      * set predicateVar with the specificied values
      */
-    public <TValue> ByProjectKeyMeGet withPredicateVar(final String varName, final List<TValue> predicateVar) {
+    public <TValue> ByProjectKeyMeGet withPredicateVar(final String varName, final Collection<TValue> predicateVar) {
         final String placeholderName = String.format("var.%s", varName);
         return copy().withoutQueryParam(placeholderName)
                 .addQueryParams(predicateVar.stream()
@@ -488,7 +489,7 @@ public class ByProjectKeyMeGet extends ApiMethod<ByProjectKeyMeGet, com.commerce
     /**
      * add additional predicateVar query parameters
      */
-    public <TValue> ByProjectKeyMeGet addPredicateVar(final String varName, final List<TValue> predicateVar) {
+    public <TValue> ByProjectKeyMeGet addPredicateVar(final String varName, final Collection<TValue> predicateVar) {
         final String placeholderName = String.format("var.%s", varName);
         return copy().addQueryParams(predicateVar.stream()
                 .map(s -> new ParamEntry<>(placeholderName, s.toString()))

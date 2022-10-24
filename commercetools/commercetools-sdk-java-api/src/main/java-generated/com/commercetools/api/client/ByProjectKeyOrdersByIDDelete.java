@@ -4,6 +4,7 @@ package com.commercetools.api.client;
 import java.net.URI;
 import java.time.Duration;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
 import java.util.function.Function;
@@ -152,7 +153,7 @@ public class ByProjectKeyOrdersByIDDelete
     /**
      * set dataErasure with the specified values
      */
-    public <TValue> ByProjectKeyOrdersByIDDelete withDataErasure(final List<TValue> dataErasure) {
+    public <TValue> ByProjectKeyOrdersByIDDelete withDataErasure(final Collection<TValue> dataErasure) {
         return copy().withoutQueryParam("dataErasure")
                 .addQueryParams(dataErasure.stream()
                         .map(s -> new ParamEntry<>("dataErasure", s.toString()))
@@ -162,7 +163,7 @@ public class ByProjectKeyOrdersByIDDelete
     /**
      * add additional dataErasure query parameters
      */
-    public <TValue> ByProjectKeyOrdersByIDDelete addDataErasure(final List<TValue> dataErasure) {
+    public <TValue> ByProjectKeyOrdersByIDDelete addDataErasure(final Collection<TValue> dataErasure) {
         return copy().addQueryParams(
             dataErasure.stream().map(s -> new ParamEntry<>("dataErasure", s.toString())).collect(Collectors.toList()));
     }
@@ -212,7 +213,7 @@ public class ByProjectKeyOrdersByIDDelete
     /**
      * set version with the specified values
      */
-    public <TValue> ByProjectKeyOrdersByIDDelete withVersion(final List<TValue> version) {
+    public <TValue> ByProjectKeyOrdersByIDDelete withVersion(final Collection<TValue> version) {
         return copy().withoutQueryParam("version")
                 .addQueryParams(
                     version.stream().map(s -> new ParamEntry<>("version", s.toString())).collect(Collectors.toList()));
@@ -221,7 +222,7 @@ public class ByProjectKeyOrdersByIDDelete
     /**
      * add additional version query parameters
      */
-    public <TValue> ByProjectKeyOrdersByIDDelete addVersion(final List<TValue> version) {
+    public <TValue> ByProjectKeyOrdersByIDDelete addVersion(final Collection<TValue> version) {
         return copy().addQueryParams(
             version.stream().map(s -> new ParamEntry<>("version", s.toString())).collect(Collectors.toList()));
     }
@@ -271,7 +272,7 @@ public class ByProjectKeyOrdersByIDDelete
     /**
      * set expand with the specified values
      */
-    public <TValue> ByProjectKeyOrdersByIDDelete withExpand(final List<TValue> expand) {
+    public <TValue> ByProjectKeyOrdersByIDDelete withExpand(final Collection<TValue> expand) {
         return copy().withoutQueryParam("expand")
                 .addQueryParams(
                     expand.stream().map(s -> new ParamEntry<>("expand", s.toString())).collect(Collectors.toList()));
@@ -280,7 +281,7 @@ public class ByProjectKeyOrdersByIDDelete
     /**
      * add additional expand query parameters
      */
-    public <TValue> ByProjectKeyOrdersByIDDelete addExpand(final List<TValue> expand) {
+    public <TValue> ByProjectKeyOrdersByIDDelete addExpand(final Collection<TValue> expand) {
         return copy().addQueryParams(
             expand.stream().map(s -> new ParamEntry<>("expand", s.toString())).collect(Collectors.toList()));
     }

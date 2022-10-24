@@ -6,6 +6,7 @@ import java.net.URLConnection;
 import java.nio.file.Files;
 import java.time.Duration;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 import java.util.Optional;
 import java.util.concurrent.CompletableFuture;
@@ -144,7 +145,7 @@ public class ByProjectKeyImageSearchPost extends
     /**
      * set limit with the specified values
      */
-    public <TValue> ByProjectKeyImageSearchPost withLimit(final List<TValue> limit) {
+    public <TValue> ByProjectKeyImageSearchPost withLimit(final Collection<TValue> limit) {
         return copy().withoutQueryParam("limit")
                 .addQueryParams(
                     limit.stream().map(s -> new ParamEntry<>("limit", s.toString())).collect(Collectors.toList()));
@@ -153,7 +154,7 @@ public class ByProjectKeyImageSearchPost extends
     /**
      * add additional limit query parameters
      */
-    public <TValue> ByProjectKeyImageSearchPost addLimit(final List<TValue> limit) {
+    public <TValue> ByProjectKeyImageSearchPost addLimit(final Collection<TValue> limit) {
         return copy().addQueryParams(
             limit.stream().map(s -> new ParamEntry<>("limit", s.toString())).collect(Collectors.toList()));
     }
@@ -203,7 +204,7 @@ public class ByProjectKeyImageSearchPost extends
     /**
      * set offset with the specified values
      */
-    public <TValue> ByProjectKeyImageSearchPost withOffset(final List<TValue> offset) {
+    public <TValue> ByProjectKeyImageSearchPost withOffset(final Collection<TValue> offset) {
         return copy().withoutQueryParam("offset")
                 .addQueryParams(
                     offset.stream().map(s -> new ParamEntry<>("offset", s.toString())).collect(Collectors.toList()));
@@ -212,7 +213,7 @@ public class ByProjectKeyImageSearchPost extends
     /**
      * add additional offset query parameters
      */
-    public <TValue> ByProjectKeyImageSearchPost addOffset(final List<TValue> offset) {
+    public <TValue> ByProjectKeyImageSearchPost addOffset(final Collection<TValue> offset) {
         return copy().addQueryParams(
             offset.stream().map(s -> new ParamEntry<>("offset", s.toString())).collect(Collectors.toList()));
     }

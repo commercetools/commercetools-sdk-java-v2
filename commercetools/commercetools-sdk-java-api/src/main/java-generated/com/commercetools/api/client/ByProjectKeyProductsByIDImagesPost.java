@@ -6,6 +6,7 @@ import java.net.URLConnection;
 import java.nio.file.Files;
 import java.time.Duration;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 import java.util.Optional;
 import java.util.concurrent.CompletableFuture;
@@ -166,7 +167,7 @@ public class ByProjectKeyProductsByIDImagesPost extends
     /**
      * set filename with the specified values
      */
-    public <TValue> ByProjectKeyProductsByIDImagesPost withFilename(final List<TValue> filename) {
+    public <TValue> ByProjectKeyProductsByIDImagesPost withFilename(final Collection<TValue> filename) {
         return copy().withoutQueryParam("filename")
                 .addQueryParams(filename.stream()
                         .map(s -> new ParamEntry<>("filename", s.toString()))
@@ -176,7 +177,7 @@ public class ByProjectKeyProductsByIDImagesPost extends
     /**
      * add additional filename query parameters
      */
-    public <TValue> ByProjectKeyProductsByIDImagesPost addFilename(final List<TValue> filename) {
+    public <TValue> ByProjectKeyProductsByIDImagesPost addFilename(final Collection<TValue> filename) {
         return copy().addQueryParams(
             filename.stream().map(s -> new ParamEntry<>("filename", s.toString())).collect(Collectors.toList()));
     }
@@ -226,7 +227,7 @@ public class ByProjectKeyProductsByIDImagesPost extends
     /**
      * set variant with the specified values
      */
-    public <TValue> ByProjectKeyProductsByIDImagesPost withVariant(final List<TValue> variant) {
+    public <TValue> ByProjectKeyProductsByIDImagesPost withVariant(final Collection<TValue> variant) {
         return copy().withoutQueryParam("variant")
                 .addQueryParams(
                     variant.stream().map(s -> new ParamEntry<>("variant", s.toString())).collect(Collectors.toList()));
@@ -235,7 +236,7 @@ public class ByProjectKeyProductsByIDImagesPost extends
     /**
      * add additional variant query parameters
      */
-    public <TValue> ByProjectKeyProductsByIDImagesPost addVariant(final List<TValue> variant) {
+    public <TValue> ByProjectKeyProductsByIDImagesPost addVariant(final Collection<TValue> variant) {
         return copy().addQueryParams(
             variant.stream().map(s -> new ParamEntry<>("variant", s.toString())).collect(Collectors.toList()));
     }
@@ -285,7 +286,7 @@ public class ByProjectKeyProductsByIDImagesPost extends
     /**
      * set sku with the specified values
      */
-    public <TValue> ByProjectKeyProductsByIDImagesPost withSku(final List<TValue> sku) {
+    public <TValue> ByProjectKeyProductsByIDImagesPost withSku(final Collection<TValue> sku) {
         return copy().withoutQueryParam("sku")
                 .addQueryParams(
                     sku.stream().map(s -> new ParamEntry<>("sku", s.toString())).collect(Collectors.toList()));
@@ -294,7 +295,7 @@ public class ByProjectKeyProductsByIDImagesPost extends
     /**
      * add additional sku query parameters
      */
-    public <TValue> ByProjectKeyProductsByIDImagesPost addSku(final List<TValue> sku) {
+    public <TValue> ByProjectKeyProductsByIDImagesPost addSku(final Collection<TValue> sku) {
         return copy().addQueryParams(
             sku.stream().map(s -> new ParamEntry<>("sku", s.toString())).collect(Collectors.toList()));
     }
@@ -344,7 +345,7 @@ public class ByProjectKeyProductsByIDImagesPost extends
     /**
      * set staged with the specified values
      */
-    public <TValue> ByProjectKeyProductsByIDImagesPost withStaged(final List<TValue> staged) {
+    public <TValue> ByProjectKeyProductsByIDImagesPost withStaged(final Collection<TValue> staged) {
         return copy().withoutQueryParam("staged")
                 .addQueryParams(
                     staged.stream().map(s -> new ParamEntry<>("staged", s.toString())).collect(Collectors.toList()));
@@ -353,7 +354,7 @@ public class ByProjectKeyProductsByIDImagesPost extends
     /**
      * add additional staged query parameters
      */
-    public <TValue> ByProjectKeyProductsByIDImagesPost addStaged(final List<TValue> staged) {
+    public <TValue> ByProjectKeyProductsByIDImagesPost addStaged(final Collection<TValue> staged) {
         return copy().addQueryParams(
             staged.stream().map(s -> new ParamEntry<>("staged", s.toString())).collect(Collectors.toList()));
     }

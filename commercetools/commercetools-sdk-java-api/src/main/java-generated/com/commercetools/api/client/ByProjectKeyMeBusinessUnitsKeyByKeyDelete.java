@@ -4,6 +4,7 @@ package com.commercetools.api.client;
 import java.net.URI;
 import java.time.Duration;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
 import java.util.function.Function;
@@ -148,7 +149,7 @@ public class ByProjectKeyMeBusinessUnitsKeyByKeyDelete extends
     /**
      * set version with the specified values
      */
-    public <TValue> ByProjectKeyMeBusinessUnitsKeyByKeyDelete withVersion(final List<TValue> version) {
+    public <TValue> ByProjectKeyMeBusinessUnitsKeyByKeyDelete withVersion(final Collection<TValue> version) {
         return copy().withoutQueryParam("version")
                 .addQueryParams(
                     version.stream().map(s -> new ParamEntry<>("version", s.toString())).collect(Collectors.toList()));
@@ -157,7 +158,7 @@ public class ByProjectKeyMeBusinessUnitsKeyByKeyDelete extends
     /**
      * add additional version query parameters
      */
-    public <TValue> ByProjectKeyMeBusinessUnitsKeyByKeyDelete addVersion(final List<TValue> version) {
+    public <TValue> ByProjectKeyMeBusinessUnitsKeyByKeyDelete addVersion(final Collection<TValue> version) {
         return copy().addQueryParams(
             version.stream().map(s -> new ParamEntry<>("version", s.toString())).collect(Collectors.toList()));
     }
@@ -207,7 +208,7 @@ public class ByProjectKeyMeBusinessUnitsKeyByKeyDelete extends
     /**
      * set expand with the specified values
      */
-    public <TValue> ByProjectKeyMeBusinessUnitsKeyByKeyDelete withExpand(final List<TValue> expand) {
+    public <TValue> ByProjectKeyMeBusinessUnitsKeyByKeyDelete withExpand(final Collection<TValue> expand) {
         return copy().withoutQueryParam("expand")
                 .addQueryParams(
                     expand.stream().map(s -> new ParamEntry<>("expand", s.toString())).collect(Collectors.toList()));
@@ -216,7 +217,7 @@ public class ByProjectKeyMeBusinessUnitsKeyByKeyDelete extends
     /**
      * add additional expand query parameters
      */
-    public <TValue> ByProjectKeyMeBusinessUnitsKeyByKeyDelete addExpand(final List<TValue> expand) {
+    public <TValue> ByProjectKeyMeBusinessUnitsKeyByKeyDelete addExpand(final Collection<TValue> expand) {
         return copy().addQueryParams(
             expand.stream().map(s -> new ParamEntry<>("expand", s.toString())).collect(Collectors.toList()));
     }

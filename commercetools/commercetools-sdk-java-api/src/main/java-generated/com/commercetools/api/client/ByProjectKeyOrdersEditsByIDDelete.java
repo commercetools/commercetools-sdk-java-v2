@@ -4,6 +4,7 @@ package com.commercetools.api.client;
 import java.net.URI;
 import java.time.Duration;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
 import java.util.function.Function;
@@ -148,7 +149,7 @@ public class ByProjectKeyOrdersEditsByIDDelete
     /**
      * set version with the specified values
      */
-    public <TValue> ByProjectKeyOrdersEditsByIDDelete withVersion(final List<TValue> version) {
+    public <TValue> ByProjectKeyOrdersEditsByIDDelete withVersion(final Collection<TValue> version) {
         return copy().withoutQueryParam("version")
                 .addQueryParams(
                     version.stream().map(s -> new ParamEntry<>("version", s.toString())).collect(Collectors.toList()));
@@ -157,7 +158,7 @@ public class ByProjectKeyOrdersEditsByIDDelete
     /**
      * add additional version query parameters
      */
-    public <TValue> ByProjectKeyOrdersEditsByIDDelete addVersion(final List<TValue> version) {
+    public <TValue> ByProjectKeyOrdersEditsByIDDelete addVersion(final Collection<TValue> version) {
         return copy().addQueryParams(
             version.stream().map(s -> new ParamEntry<>("version", s.toString())).collect(Collectors.toList()));
     }
@@ -207,7 +208,7 @@ public class ByProjectKeyOrdersEditsByIDDelete
     /**
      * set expand with the specified values
      */
-    public <TValue> ByProjectKeyOrdersEditsByIDDelete withExpand(final List<TValue> expand) {
+    public <TValue> ByProjectKeyOrdersEditsByIDDelete withExpand(final Collection<TValue> expand) {
         return copy().withoutQueryParam("expand")
                 .addQueryParams(
                     expand.stream().map(s -> new ParamEntry<>("expand", s.toString())).collect(Collectors.toList()));
@@ -216,7 +217,7 @@ public class ByProjectKeyOrdersEditsByIDDelete
     /**
      * add additional expand query parameters
      */
-    public <TValue> ByProjectKeyOrdersEditsByIDDelete addExpand(final List<TValue> expand) {
+    public <TValue> ByProjectKeyOrdersEditsByIDDelete addExpand(final Collection<TValue> expand) {
         return copy().addQueryParams(
             expand.stream().map(s -> new ParamEntry<>("expand", s.toString())).collect(Collectors.toList()));
     }

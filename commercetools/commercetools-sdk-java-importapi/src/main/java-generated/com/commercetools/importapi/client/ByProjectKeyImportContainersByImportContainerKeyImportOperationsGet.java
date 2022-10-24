@@ -4,6 +4,7 @@ package com.commercetools.importapi.client;
 import java.net.URI;
 import java.time.Duration;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
 import java.util.function.Function;
@@ -171,7 +172,7 @@ public class ByProjectKeyImportContainersByImportContainerKeyImportOperationsGet
      * set limit with the specified values
      */
     public <TValue> ByProjectKeyImportContainersByImportContainerKeyImportOperationsGet withLimit(
-            final List<TValue> limit) {
+            final Collection<TValue> limit) {
         return copy().withoutQueryParam("limit")
                 .addQueryParams(
                     limit.stream().map(s -> new ParamEntry<>("limit", s.toString())).collect(Collectors.toList()));
@@ -181,7 +182,7 @@ public class ByProjectKeyImportContainersByImportContainerKeyImportOperationsGet
      * add additional limit query parameters
      */
     public <TValue> ByProjectKeyImportContainersByImportContainerKeyImportOperationsGet addLimit(
-            final List<TValue> limit) {
+            final Collection<TValue> limit) {
         return copy().addQueryParams(
             limit.stream().map(s -> new ParamEntry<>("limit", s.toString())).collect(Collectors.toList()));
     }
@@ -237,7 +238,7 @@ public class ByProjectKeyImportContainersByImportContainerKeyImportOperationsGet
      * set offset with the specified values
      */
     public <TValue> ByProjectKeyImportContainersByImportContainerKeyImportOperationsGet withOffset(
-            final List<TValue> offset) {
+            final Collection<TValue> offset) {
         return copy().withoutQueryParam("offset")
                 .addQueryParams(
                     offset.stream().map(s -> new ParamEntry<>("offset", s.toString())).collect(Collectors.toList()));
@@ -247,7 +248,7 @@ public class ByProjectKeyImportContainersByImportContainerKeyImportOperationsGet
      * add additional offset query parameters
      */
     public <TValue> ByProjectKeyImportContainersByImportContainerKeyImportOperationsGet addOffset(
-            final List<TValue> offset) {
+            final Collection<TValue> offset) {
         return copy().addQueryParams(
             offset.stream().map(s -> new ParamEntry<>("offset", s.toString())).collect(Collectors.toList()));
     }
@@ -302,7 +303,7 @@ public class ByProjectKeyImportContainersByImportContainerKeyImportOperationsGet
      * set sort with the specified values
      */
     public <TValue> ByProjectKeyImportContainersByImportContainerKeyImportOperationsGet withSort(
-            final List<TValue> sort) {
+            final Collection<TValue> sort) {
         return copy().withoutQueryParam("sort")
                 .addQueryParams(
                     sort.stream().map(s -> new ParamEntry<>("sort", s.toString())).collect(Collectors.toList()));
@@ -312,7 +313,7 @@ public class ByProjectKeyImportContainersByImportContainerKeyImportOperationsGet
      * add additional sort query parameters
      */
     public <TValue> ByProjectKeyImportContainersByImportContainerKeyImportOperationsGet addSort(
-            final List<TValue> sort) {
+            final Collection<TValue> sort) {
         return copy().addQueryParams(
             sort.stream().map(s -> new ParamEntry<>("sort", s.toString())).collect(Collectors.toList()));
     }
@@ -369,7 +370,7 @@ public class ByProjectKeyImportContainersByImportContainerKeyImportOperationsGet
      * set resourceKey with the specified values
      */
     public <TValue> ByProjectKeyImportContainersByImportContainerKeyImportOperationsGet withResourceKey(
-            final List<TValue> resourceKey) {
+            final Collection<TValue> resourceKey) {
         return copy().withoutQueryParam("resourceKey")
                 .addQueryParams(resourceKey.stream()
                         .map(s -> new ParamEntry<>("resourceKey", s.toString()))
@@ -380,7 +381,7 @@ public class ByProjectKeyImportContainersByImportContainerKeyImportOperationsGet
      * add additional resourceKey query parameters
      */
     public <TValue> ByProjectKeyImportContainersByImportContainerKeyImportOperationsGet addResourceKey(
-            final List<TValue> resourceKey) {
+            final Collection<TValue> resourceKey) {
         return copy().addQueryParams(
             resourceKey.stream().map(s -> new ParamEntry<>("resourceKey", s.toString())).collect(Collectors.toList()));
     }
@@ -435,7 +436,7 @@ public class ByProjectKeyImportContainersByImportContainerKeyImportOperationsGet
      * set state with the specified values
      */
     public <TValue> ByProjectKeyImportContainersByImportContainerKeyImportOperationsGet withState(
-            final List<TValue> state) {
+            final Collection<TValue> state) {
         return copy().withoutQueryParam("state")
                 .addQueryParams(
                     state.stream().map(s -> new ParamEntry<>("state", s.toString())).collect(Collectors.toList()));
@@ -445,7 +446,7 @@ public class ByProjectKeyImportContainersByImportContainerKeyImportOperationsGet
      * add additional state query parameters
      */
     public <TValue> ByProjectKeyImportContainersByImportContainerKeyImportOperationsGet addState(
-            final List<TValue> state) {
+            final Collection<TValue> state) {
         return copy().addQueryParams(
             state.stream().map(s -> new ParamEntry<>("state", s.toString())).collect(Collectors.toList()));
     }
@@ -500,7 +501,7 @@ public class ByProjectKeyImportContainersByImportContainerKeyImportOperationsGet
      * set debug with the specified values
      */
     public <TValue> ByProjectKeyImportContainersByImportContainerKeyImportOperationsGet withDebug(
-            final List<TValue> debug) {
+            final Collection<TValue> debug) {
         return copy().withoutQueryParam("debug")
                 .addQueryParams(
                     debug.stream().map(s -> new ParamEntry<>("debug", s.toString())).collect(Collectors.toList()));
@@ -510,7 +511,7 @@ public class ByProjectKeyImportContainersByImportContainerKeyImportOperationsGet
      * add additional debug query parameters
      */
     public <TValue> ByProjectKeyImportContainersByImportContainerKeyImportOperationsGet addDebug(
-            final List<TValue> debug) {
+            final Collection<TValue> debug) {
         return copy().addQueryParams(
             debug.stream().map(s -> new ParamEntry<>("debug", s.toString())).collect(Collectors.toList()));
     }

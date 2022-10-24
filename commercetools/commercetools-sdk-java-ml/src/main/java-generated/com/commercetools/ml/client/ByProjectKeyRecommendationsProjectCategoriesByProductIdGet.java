@@ -4,6 +4,7 @@ package com.commercetools.ml.client;
 import java.net.URI;
 import java.time.Duration;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
 import java.util.function.Function;
@@ -161,7 +162,8 @@ public class ByProjectKeyRecommendationsProjectCategoriesByProductIdGet extends
     /**
      * set limit with the specified values
      */
-    public <TValue> ByProjectKeyRecommendationsProjectCategoriesByProductIdGet withLimit(final List<TValue> limit) {
+    public <TValue> ByProjectKeyRecommendationsProjectCategoriesByProductIdGet withLimit(
+            final Collection<TValue> limit) {
         return copy().withoutQueryParam("limit")
                 .addQueryParams(
                     limit.stream().map(s -> new ParamEntry<>("limit", s.toString())).collect(Collectors.toList()));
@@ -170,7 +172,8 @@ public class ByProjectKeyRecommendationsProjectCategoriesByProductIdGet extends
     /**
      * add additional limit query parameters
      */
-    public <TValue> ByProjectKeyRecommendationsProjectCategoriesByProductIdGet addLimit(final List<TValue> limit) {
+    public <TValue> ByProjectKeyRecommendationsProjectCategoriesByProductIdGet addLimit(
+            final Collection<TValue> limit) {
         return copy().addQueryParams(
             limit.stream().map(s -> new ParamEntry<>("limit", s.toString())).collect(Collectors.toList()));
     }
@@ -222,7 +225,8 @@ public class ByProjectKeyRecommendationsProjectCategoriesByProductIdGet extends
     /**
      * set offset with the specified values
      */
-    public <TValue> ByProjectKeyRecommendationsProjectCategoriesByProductIdGet withOffset(final List<TValue> offset) {
+    public <TValue> ByProjectKeyRecommendationsProjectCategoriesByProductIdGet withOffset(
+            final Collection<TValue> offset) {
         return copy().withoutQueryParam("offset")
                 .addQueryParams(
                     offset.stream().map(s -> new ParamEntry<>("offset", s.toString())).collect(Collectors.toList()));
@@ -231,7 +235,8 @@ public class ByProjectKeyRecommendationsProjectCategoriesByProductIdGet extends
     /**
      * add additional offset query parameters
      */
-    public <TValue> ByProjectKeyRecommendationsProjectCategoriesByProductIdGet addOffset(final List<TValue> offset) {
+    public <TValue> ByProjectKeyRecommendationsProjectCategoriesByProductIdGet addOffset(
+            final Collection<TValue> offset) {
         return copy().addQueryParams(
             offset.stream().map(s -> new ParamEntry<>("offset", s.toString())).collect(Collectors.toList()));
     }
@@ -283,7 +288,8 @@ public class ByProjectKeyRecommendationsProjectCategoriesByProductIdGet extends
     /**
      * set staged with the specified values
      */
-    public <TValue> ByProjectKeyRecommendationsProjectCategoriesByProductIdGet withStaged(final List<TValue> staged) {
+    public <TValue> ByProjectKeyRecommendationsProjectCategoriesByProductIdGet withStaged(
+            final Collection<TValue> staged) {
         return copy().withoutQueryParam("staged")
                 .addQueryParams(
                     staged.stream().map(s -> new ParamEntry<>("staged", s.toString())).collect(Collectors.toList()));
@@ -292,7 +298,8 @@ public class ByProjectKeyRecommendationsProjectCategoriesByProductIdGet extends
     /**
      * add additional staged query parameters
      */
-    public <TValue> ByProjectKeyRecommendationsProjectCategoriesByProductIdGet addStaged(final List<TValue> staged) {
+    public <TValue> ByProjectKeyRecommendationsProjectCategoriesByProductIdGet addStaged(
+            final Collection<TValue> staged) {
         return copy().addQueryParams(
             staged.stream().map(s -> new ParamEntry<>("staged", s.toString())).collect(Collectors.toList()));
     }
@@ -349,7 +356,7 @@ public class ByProjectKeyRecommendationsProjectCategoriesByProductIdGet extends
      * set confidenceMin with the specified values
      */
     public <TValue> ByProjectKeyRecommendationsProjectCategoriesByProductIdGet withConfidenceMin(
-            final List<TValue> confidenceMin) {
+            final Collection<TValue> confidenceMin) {
         return copy().withoutQueryParam("confidenceMin")
                 .addQueryParams(confidenceMin.stream()
                         .map(s -> new ParamEntry<>("confidenceMin", s.toString()))
@@ -360,7 +367,7 @@ public class ByProjectKeyRecommendationsProjectCategoriesByProductIdGet extends
      * add additional confidenceMin query parameters
      */
     public <TValue> ByProjectKeyRecommendationsProjectCategoriesByProductIdGet addConfidenceMin(
-            final List<TValue> confidenceMin) {
+            final Collection<TValue> confidenceMin) {
         return copy().addQueryParams(confidenceMin.stream()
                 .map(s -> new ParamEntry<>("confidenceMin", s.toString()))
                 .collect(Collectors.toList()));
@@ -418,7 +425,7 @@ public class ByProjectKeyRecommendationsProjectCategoriesByProductIdGet extends
      * set confidenceMax with the specified values
      */
     public <TValue> ByProjectKeyRecommendationsProjectCategoriesByProductIdGet withConfidenceMax(
-            final List<TValue> confidenceMax) {
+            final Collection<TValue> confidenceMax) {
         return copy().withoutQueryParam("confidenceMax")
                 .addQueryParams(confidenceMax.stream()
                         .map(s -> new ParamEntry<>("confidenceMax", s.toString()))
@@ -429,7 +436,7 @@ public class ByProjectKeyRecommendationsProjectCategoriesByProductIdGet extends
      * add additional confidenceMax query parameters
      */
     public <TValue> ByProjectKeyRecommendationsProjectCategoriesByProductIdGet addConfidenceMax(
-            final List<TValue> confidenceMax) {
+            final Collection<TValue> confidenceMax) {
         return copy().addQueryParams(confidenceMax.stream()
                 .map(s -> new ParamEntry<>("confidenceMax", s.toString()))
                 .collect(Collectors.toList()));

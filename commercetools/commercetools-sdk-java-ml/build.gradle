@@ -1,9 +1,9 @@
 dependencies {
     api project(':rmf:rmf-java-base')
-    api "com.fasterxml.jackson.core:jackson-annotations:${versions.jackson}"
-    api "com.fasterxml.jackson.core:jackson-databind:${versions.jackson}"
-    implementation "com.google.code.findbugs:jsr305:${versions.findbugs}"
-    implementation "javax.validation:validation-api:${versions.validation}"
+    api jackson_core.annotations
+    api jackson_core.databind
+    implementation google.findbugs
+    implementation javax.validation
     api commons.lang3
 
     integrationTestImplementation project(':commercetools:commercetools-http-client')

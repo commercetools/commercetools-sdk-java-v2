@@ -28,6 +28,19 @@ ext {
 
     ]
 
+    jackson_core = [
+            annotations: "com.fasterxml.jackson.core:jackson-annotations:${versions.jackson}",
+            databind: "com.fasterxml.jackson.core:jackson-databind:${versions.jackson}",
+    ]
+
+    google = [
+            findbugs: "com.google.code.findbugs:jsr305:${versions.findbugs}"
+    ]
+
+    javax = [
+            validation: "javax.validation:validation-api:${versions.validation}"
+    ]
+
     scmProjectName = rootProject.name
     scmRepo = 'github.com'
     scmProjectPath = "commercetools/commercetools-sdk-java-v2.git"  // github relative path with .git extension

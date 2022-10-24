@@ -9,5 +9,5 @@ dependencies {
     }
     api "commons-io:commons-io" version commons.io
 
-    implementation "javax.validation:validation-api:${versions.validation}"
+    implementation javax.validation
 }

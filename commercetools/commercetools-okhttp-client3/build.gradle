@@ -8,5 +8,5 @@ dependencies {
         }
     }
 
-    implementation "javax.validation:validation-api:${versions.validation}"
+    implementation javax.validation
 }

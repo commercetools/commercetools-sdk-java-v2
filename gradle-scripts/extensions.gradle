@@ -28,17 +28,52 @@ ext {
 
     ]
 
+    slf4j = [
+            api: 'org.slf4j:slf4j-api:1.7.32',
+    ]
+
+    logback = [
+            classic: 'ch.qos.logback:logback-classic:1.2.8',
+    ]
+
     jackson_core = [
-            annotations: "com.fasterxml.jackson.core:jackson-annotations:${versions.jackson}",
-            databind: "com.fasterxml.jackson.core:jackson-databind:${versions.jackson}",
+            annotations: 'com.fasterxml.jackson.core:jackson-annotations:2.13.4',
+            databind: 'com.fasterxml.jackson.core:jackson-databind:2.13.4',
+            core: 'com.fasterxml.jackson.core:jackson-core:2.13.4',
+            datatype: 'com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.13.4',
     ]
 
     google = [
-            findbugs: "com.google.code.findbugs:jsr305:${versions.findbugs}"
+            findbugs: 'com.google.code.findbugs:jsr305:3.0.2',
+            gson: 'com.google.code.gson:gson:2.8.8',
+    ]
+
+    awaitility = [
+            awaitility: 'org.awaitility:awaitility:4.1.0',
     ]
 
     javax = [
-            validation: "javax.validation:validation-api:${versions.validation}"
+            validation: 'javax.validation:validation-api:2.0.1.Final',
+    ]
+
+    junit = [
+            junit: 'org.junit.jupiter:junit-jupiter:5.8.2',
+            dataprovider: 'com.tngtech.junit.dataprovider:junit-jupiter-dataprovider:2.9',
+            jsonassert: 'org.skyscreamer:jsonassert:1.5.0',
+            assertj: 'org.assertj:assertj-core:3.20.2'
+    ]
+
+    mockito = [
+            inline: 'org.mockito:mockito-inline:4.2.0',
+            junit: 'org.mockito:mockito-junit-jupiter:4.2.0',
+    ]
+
+    failsafe = [
+            failsafe: 'dev.failsafe:failsafe:3.2.0',
+    ]
+
+    spotify = [
+            completableFutures: "com.spotify:completable-futures:0.3.5"
     ]
 
     scmProjectName = rootProject.name

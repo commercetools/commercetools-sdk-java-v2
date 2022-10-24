@@ -1,6 +1,6 @@
 dependencies {
     testImplementation "org.junit.jupiter:junit-jupiter:${versions.junit}"
-    testImplementation 'com.tngtech.junit.dataprovider:junit-jupiter-dataprovider:2.8'
+    testImplementation 'com.tngtech.junit.dataprovider:junit-jupiter-dataprovider:2.9'
     testImplementation "org.assertj:assertj-core:${versions.assertJ}"
     testImplementation "org.awaitility:awaitility:${versions.awaitility}"
     testImplementation "ch.qos.logback:logback-classic:${versions.logback}"

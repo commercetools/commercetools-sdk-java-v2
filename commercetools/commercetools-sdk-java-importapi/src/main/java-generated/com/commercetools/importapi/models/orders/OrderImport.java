@@ -12,6 +12,7 @@ import javax.validation.constraints.NotNull;
 import com.commercetools.importapi.models.common.Address;
 import com.commercetools.importapi.models.common.CustomerGroupKeyReference;
 import com.commercetools.importapi.models.common.CustomerKeyReference;
+import com.commercetools.importapi.models.common.StoreKeyReference;
 import com.commercetools.importapi.models.common.TypedMoney;
 import com.commercetools.importapi.models.customfields.Custom;
 import com.fasterxml.jackson.annotation.*;
@@ -194,6 +195,13 @@ public interface OrderImport {
     @JsonProperty("itemShippingAddresses")
     public List<Address> getItemShippingAddresses();
 
+    /**
+     *  <p>Reference to the Store in which the Order is associated. If referenced Store does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Store exists.</p>
+     */
+    @Valid
+    @JsonProperty("store")
+    public StoreKeyReference getStore();
+
     public void setOrderNumber(final String orderNumber);
 
     public void setCustomer(final CustomerKeyReference customer);
@@ -247,6 +255,8 @@ public interface OrderImport {
 
     public void setItemShippingAddresses(final List<Address> itemShippingAddresses);
 
+    public void setStore(final StoreKeyReference store);
+
     public static OrderImport of() {
         return new OrderImportImpl();
     }
@@ -275,6 +285,7 @@ public interface OrderImport {
         instance.setTaxCalculationMode(template.getTaxCalculationMode());
         instance.setOrigin(template.getOrigin());
         instance.setItemShippingAddresses(template.getItemShippingAddresses());
+        instance.setStore(template.getStore());
         return instance;
     }
 

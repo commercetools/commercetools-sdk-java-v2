@@ -20,8 +20,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <div class=code-example>
  * <pre><code class='java'>
  *     SqsDestination sqsDestination = SqsDestination.builder()
- *             .accessKey("{accessKey}")
- *             .accessSecret("{accessSecret}")
  *             .queueUrl("{queueUrl}")
  *             .region("{region}")
  *             .build()
@@ -35,16 +33,16 @@ public interface SqsDestination extends Destination {
     String SQS = "SQS";
 
     /**
-     *
+     *  <p>Only present if <code>authenticationMode</code> is set to <code>Credentials</code>.</p>
      */
-    @NotNull
+
     @JsonProperty("accessKey")
     public String getAccessKey();
 
     /**
-     *
+     *  <p>Only present if <code>authenticationMode</code> is set to <code>Credentials</code>.</p>
      */
-    @NotNull
+
     @JsonProperty("accessSecret")
     public String getAccessSecret();
 
@@ -62,6 +60,13 @@ public interface SqsDestination extends Destination {
     @JsonProperty("region")
     public String getRegion();
 
+    /**
+     *  <p>Defines the method of authentication for the SQS queue.</p>
+     */
+
+    @JsonProperty("authenticationMode")
+    public AwsAuthenticationMode getAuthenticationMode();
+
     public void setAccessKey(final String accessKey);
 
     public void setAccessSecret(final String accessSecret);
@@ -69,6 +74,8 @@ public interface SqsDestination extends Destination {
     public void setQueueUrl(final String queueUrl);
 
     public void setRegion(final String region);
+
+    public void setAuthenticationMode(final AwsAuthenticationMode authenticationMode);
 
     public static SqsDestination of() {
         return new SqsDestinationImpl();
@@ -80,6 +87,7 @@ public interface SqsDestination extends Destination {
         instance.setAccessSecret(template.getAccessSecret());
         instance.setQueueUrl(template.getQueueUrl());
         instance.setRegion(template.getRegion());
+        instance.setAuthenticationMode(template.getAuthenticationMode());
         return instance;
     }
 

@@ -30,14 +30,18 @@ public class SqsDestinationImpl implements SqsDestination, ModelBase {
 
     private String region;
 
+    private com.commercetools.api.models.subscription.AwsAuthenticationMode authenticationMode;
+
     @JsonCreator
     SqsDestinationImpl(@JsonProperty("accessKey") final String accessKey,
             @JsonProperty("accessSecret") final String accessSecret, @JsonProperty("queueUrl") final String queueUrl,
-            @JsonProperty("region") final String region) {
+            @JsonProperty("region") final String region,
+            @JsonProperty("authenticationMode") final com.commercetools.api.models.subscription.AwsAuthenticationMode authenticationMode) {
         this.accessKey = accessKey;
         this.accessSecret = accessSecret;
         this.queueUrl = queueUrl;
         this.region = region;
+        this.authenticationMode = authenticationMode;
         this.type = SQS;
     }
 
@@ -54,7 +58,7 @@ public class SqsDestinationImpl implements SqsDestination, ModelBase {
     }
 
     /**
-     *
+     *  <p>Only present if <code>authenticationMode</code> is set to <code>Credentials</code>.</p>
      */
 
     public String getAccessKey() {
@@ -62,7 +66,7 @@ public class SqsDestinationImpl implements SqsDestination, ModelBase {
     }
 
     /**
-     *
+     *  <p>Only present if <code>authenticationMode</code> is set to <code>Credentials</code>.</p>
      */
 
     public String getAccessSecret() {
@@ -85,6 +89,14 @@ public class SqsDestinationImpl implements SqsDestination, ModelBase {
         return this.region;
     }
 
+    /**
+     *  <p>Defines the method of authentication for the SQS queue.</p>
+     */
+
+    public com.commercetools.api.models.subscription.AwsAuthenticationMode getAuthenticationMode() {
+        return this.authenticationMode;
+    }
+
     public void setAccessKey(final String accessKey) {
         this.accessKey = accessKey;
     }
@@ -99,6 +111,11 @@ public class SqsDestinationImpl implements SqsDestination, ModelBase {
 
     public void setRegion(final String region) {
         this.region = region;
+    }
+
+    public void setAuthenticationMode(
+            final com.commercetools.api.models.subscription.AwsAuthenticationMode authenticationMode) {
+        this.authenticationMode = authenticationMode;
     }
 
     @Override
@@ -116,6 +133,7 @@ public class SqsDestinationImpl implements SqsDestination, ModelBase {
                 .append(accessSecret, that.accessSecret)
                 .append(queueUrl, that.queueUrl)
                 .append(region, that.region)
+                .append(authenticationMode, that.authenticationMode)
                 .isEquals();
     }
 
@@ -126,6 +144,7 @@ public class SqsDestinationImpl implements SqsDestination, ModelBase {
                 .append(accessSecret)
                 .append(queueUrl)
                 .append(region)
+                .append(authenticationMode)
                 .toHashCode();
     }
 

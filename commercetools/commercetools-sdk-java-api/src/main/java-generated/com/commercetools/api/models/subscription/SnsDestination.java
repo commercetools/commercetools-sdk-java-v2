@@ -20,8 +20,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <div class=code-example>
  * <pre><code class='java'>
  *     SnsDestination snsDestination = SnsDestination.builder()
- *             .accessKey("{accessKey}")
- *             .accessSecret("{accessSecret}")
  *             .topicArn("{topicArn}")
  *             .build()
  * </code></pre>
@@ -34,16 +32,16 @@ public interface SnsDestination extends Destination {
     String SNS = "SNS";
 
     /**
-     *
+     *  <p>Only present if <code>authenticationMode</code> is set to <code>Credentials</code>.</p>
      */
-    @NotNull
+
     @JsonProperty("accessKey")
     public String getAccessKey();
 
     /**
-     *
+     *  <p>Only present if <code>authenticationMode</code> is set to <code>Credentials</code>.</p>
      */
-    @NotNull
+
     @JsonProperty("accessSecret")
     public String getAccessSecret();
 
@@ -54,11 +52,20 @@ public interface SnsDestination extends Destination {
     @JsonProperty("topicArn")
     public String getTopicArn();
 
+    /**
+     *  <p>Defines the method of authentication for the SNS topic.</p>
+     */
+
+    @JsonProperty("authenticationMode")
+    public AwsAuthenticationMode getAuthenticationMode();
+
     public void setAccessKey(final String accessKey);
 
     public void setAccessSecret(final String accessSecret);
 
     public void setTopicArn(final String topicArn);
+
+    public void setAuthenticationMode(final AwsAuthenticationMode authenticationMode);
 
     public static SnsDestination of() {
         return new SnsDestinationImpl();
@@ -69,6 +76,7 @@ public interface SnsDestination extends Destination {
         instance.setAccessKey(template.getAccessKey());
         instance.setAccessSecret(template.getAccessSecret());
         instance.setTopicArn(template.getTopicArn());
+        instance.setAuthenticationMode(template.getAuthenticationMode());
         return instance;
     }
 

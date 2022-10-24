@@ -66,6 +66,8 @@ public class OrderImportImpl implements OrderImport, ModelBase {
 
     private java.util.List<com.commercetools.importapi.models.common.Address> itemShippingAddresses;
 
+    private com.commercetools.importapi.models.common.StoreKeyReference store;
+
     @JsonCreator
     OrderImportImpl(@JsonProperty("orderNumber") final String orderNumber,
             @JsonProperty("customer") final com.commercetools.importapi.models.common.CustomerKeyReference customer,
@@ -88,7 +90,8 @@ public class OrderImportImpl implements OrderImport, ModelBase {
             @JsonProperty("taxRoundingMode") final com.commercetools.importapi.models.orders.RoundingMode taxRoundingMode,
             @JsonProperty("taxCalculationMode") final com.commercetools.importapi.models.orders.TaxCalculationMode taxCalculationMode,
             @JsonProperty("origin") final com.commercetools.importapi.models.orders.CartOrigin origin,
-            @JsonProperty("itemShippingAddresses") final java.util.List<com.commercetools.importapi.models.common.Address> itemShippingAddresses) {
+            @JsonProperty("itemShippingAddresses") final java.util.List<com.commercetools.importapi.models.common.Address> itemShippingAddresses,
+            @JsonProperty("store") final com.commercetools.importapi.models.common.StoreKeyReference store) {
         this.orderNumber = orderNumber;
         this.customer = customer;
         this.customerEmail = customerEmail;
@@ -111,6 +114,7 @@ public class OrderImportImpl implements OrderImport, ModelBase {
         this.taxCalculationMode = taxCalculationMode;
         this.origin = origin;
         this.itemShippingAddresses = itemShippingAddresses;
+        this.store = store;
     }
 
     public OrderImportImpl() {
@@ -292,6 +296,14 @@ public class OrderImportImpl implements OrderImport, ModelBase {
         return this.itemShippingAddresses;
     }
 
+    /**
+     *  <p>Reference to the Store in which the Order is associated. If referenced Store does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Store exists.</p>
+     */
+
+    public com.commercetools.importapi.models.common.StoreKeyReference getStore() {
+        return this.store;
+    }
+
     public void setOrderNumber(final String orderNumber) {
         this.orderNumber = orderNumber;
     }
@@ -399,6 +411,10 @@ public class OrderImportImpl implements OrderImport, ModelBase {
         this.itemShippingAddresses = itemShippingAddresses;
     }
 
+    public void setStore(final com.commercetools.importapi.models.common.StoreKeyReference store) {
+        this.store = store;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -431,6 +447,7 @@ public class OrderImportImpl implements OrderImport, ModelBase {
                 .append(taxCalculationMode, that.taxCalculationMode)
                 .append(origin, that.origin)
                 .append(itemShippingAddresses, that.itemShippingAddresses)
+                .append(store, that.store)
                 .isEquals();
     }
 
@@ -458,6 +475,7 @@ public class OrderImportImpl implements OrderImport, ModelBase {
                 .append(taxCalculationMode)
                 .append(origin)
                 .append(itemShippingAddresses)
+                .append(store)
                 .toHashCode();
     }
 

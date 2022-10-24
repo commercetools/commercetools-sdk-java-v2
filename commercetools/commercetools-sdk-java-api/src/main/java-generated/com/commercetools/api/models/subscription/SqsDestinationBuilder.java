@@ -3,6 +3,8 @@ package com.commercetools.api.models.subscription;
 
 import java.util.*;
 
+import javax.annotation.Nullable;
+
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -13,8 +15,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <div class=code-example>
  * <pre><code class='java'>
  *     SqsDestination sqsDestination = SqsDestination.builder()
- *             .accessKey("{accessKey}")
- *             .accessSecret("{accessSecret}")
  *             .queueUrl("{queueUrl}")
  *             .region("{region}")
  *             .build()
@@ -24,28 +24,33 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SqsDestinationBuilder implements Builder<SqsDestination> {
 
+    @Nullable
     private String accessKey;
 
+    @Nullable
     private String accessSecret;
 
     private String queueUrl;
 
     private String region;
 
+    @Nullable
+    private com.commercetools.api.models.subscription.AwsAuthenticationMode authenticationMode;
+
     /**
-     *
+     *  <p>Only present if <code>authenticationMode</code> is set to <code>Credentials</code>.</p>
      */
 
-    public SqsDestinationBuilder accessKey(final String accessKey) {
+    public SqsDestinationBuilder accessKey(@Nullable final String accessKey) {
         this.accessKey = accessKey;
         return this;
     }
 
     /**
-     *
+     *  <p>Only present if <code>authenticationMode</code> is set to <code>Credentials</code>.</p>
      */
 
-    public SqsDestinationBuilder accessSecret(final String accessSecret) {
+    public SqsDestinationBuilder accessSecret(@Nullable final String accessSecret) {
         this.accessSecret = accessSecret;
         return this;
     }
@@ -68,10 +73,22 @@ public class SqsDestinationBuilder implements Builder<SqsDestination> {
         return this;
     }
 
+    /**
+     *  <p>Defines the method of authentication for the SQS queue.</p>
+     */
+
+    public SqsDestinationBuilder authenticationMode(
+            @Nullable final com.commercetools.api.models.subscription.AwsAuthenticationMode authenticationMode) {
+        this.authenticationMode = authenticationMode;
+        return this;
+    }
+
+    @Nullable
     public String getAccessKey() {
         return this.accessKey;
     }
 
+    @Nullable
     public String getAccessSecret() {
         return this.accessSecret;
     }
@@ -84,19 +101,22 @@ public class SqsDestinationBuilder implements Builder<SqsDestination> {
         return this.region;
     }
 
+    @Nullable
+    public com.commercetools.api.models.subscription.AwsAuthenticationMode getAuthenticationMode() {
+        return this.authenticationMode;
+    }
+
     public SqsDestination build() {
-        Objects.requireNonNull(accessKey, SqsDestination.class + ": accessKey is missing");
-        Objects.requireNonNull(accessSecret, SqsDestination.class + ": accessSecret is missing");
         Objects.requireNonNull(queueUrl, SqsDestination.class + ": queueUrl is missing");
         Objects.requireNonNull(region, SqsDestination.class + ": region is missing");
-        return new SqsDestinationImpl(accessKey, accessSecret, queueUrl, region);
+        return new SqsDestinationImpl(accessKey, accessSecret, queueUrl, region, authenticationMode);
     }
 
     /**
      * builds SqsDestination without checking for non null required values
      */
     public SqsDestination buildUnchecked() {
-        return new SqsDestinationImpl(accessKey, accessSecret, queueUrl, region);
+        return new SqsDestinationImpl(accessKey, accessSecret, queueUrl, region, authenticationMode);
     }
 
     public static SqsDestinationBuilder of() {
@@ -109,6 +129,7 @@ public class SqsDestinationBuilder implements Builder<SqsDestination> {
         builder.accessSecret = template.getAccessSecret();
         builder.queueUrl = template.getQueueUrl();
         builder.region = template.getRegion();
+        builder.authenticationMode = template.getAuthenticationMode();
         return builder;
     }
 

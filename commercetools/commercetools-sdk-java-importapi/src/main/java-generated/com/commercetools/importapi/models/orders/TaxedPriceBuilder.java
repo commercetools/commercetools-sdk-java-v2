@@ -4,8 +4,6 @@ package com.commercetools.importapi.models.orders;
 import java.util.*;
 import java.util.function.Function;
 
-import javax.annotation.Nullable;
-
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -31,9 +29,6 @@ public class TaxedPriceBuilder implements Builder<TaxedPrice> {
     private com.commercetools.importapi.models.common.Money totalGross;
 
     private java.util.List<com.commercetools.importapi.models.orders.TaxPortion> taxPortions;
-
-    @Nullable
-    private com.commercetools.importapi.models.common.Money totalTax;
 
     /**
      *  <p>Maps to <code>TaxedPrice.totalNet</code>.</p>
@@ -129,25 +124,6 @@ public class TaxedPriceBuilder implements Builder<TaxedPrice> {
         return this;
     }
 
-    /**
-     *  <p>Maps to <code>TaxedPrice.totalTax</code>.</p>
-     */
-
-    public TaxedPriceBuilder totalTax(
-            Function<com.commercetools.importapi.models.common.MoneyBuilder, com.commercetools.importapi.models.common.MoneyBuilder> builder) {
-        this.totalTax = builder.apply(com.commercetools.importapi.models.common.MoneyBuilder.of()).build();
-        return this;
-    }
-
-    /**
-     *  <p>Maps to <code>TaxedPrice.totalTax</code>.</p>
-     */
-
-    public TaxedPriceBuilder totalTax(@Nullable final com.commercetools.importapi.models.common.Money totalTax) {
-        this.totalTax = totalTax;
-        return this;
-    }
-
     public com.commercetools.importapi.models.common.Money getTotalNet() {
         return this.totalNet;
     }
@@ -160,23 +136,18 @@ public class TaxedPriceBuilder implements Builder<TaxedPrice> {
         return this.taxPortions;
     }
 
-    @Nullable
-    public com.commercetools.importapi.models.common.Money getTotalTax() {
-        return this.totalTax;
-    }
-
     public TaxedPrice build() {
         Objects.requireNonNull(totalNet, TaxedPrice.class + ": totalNet is missing");
         Objects.requireNonNull(totalGross, TaxedPrice.class + ": totalGross is missing");
         Objects.requireNonNull(taxPortions, TaxedPrice.class + ": taxPortions is missing");
-        return new TaxedPriceImpl(totalNet, totalGross, taxPortions, totalTax);
+        return new TaxedPriceImpl(totalNet, totalGross, taxPortions);
     }
 
     /**
      * builds TaxedPrice without checking for non null required values
      */
     public TaxedPrice buildUnchecked() {
-        return new TaxedPriceImpl(totalNet, totalGross, taxPortions, totalTax);
+        return new TaxedPriceImpl(totalNet, totalGross, taxPortions);
     }
 
     public static TaxedPriceBuilder of() {
@@ -188,7 +159,6 @@ public class TaxedPriceBuilder implements Builder<TaxedPrice> {
         builder.totalNet = template.getTotalNet();
         builder.totalGross = template.getTotalGross();
         builder.taxPortions = template.getTaxPortions();
-        builder.totalTax = template.getTotalTax();
         return builder;
     }
 

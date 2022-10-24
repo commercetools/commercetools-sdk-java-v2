@@ -4,6 +4,7 @@ package com.commercetools.importapi.client;
 import java.net.URI;
 import java.time.Duration;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
 import java.util.function.Function;
@@ -136,7 +137,7 @@ public class ByProjectKeyImportContainersGet extends
     /**
      * set limit with the specified values
      */
-    public <TValue> ByProjectKeyImportContainersGet withLimit(final List<TValue> limit) {
+    public <TValue> ByProjectKeyImportContainersGet withLimit(final Collection<TValue> limit) {
         return copy().withoutQueryParam("limit")
                 .addQueryParams(
                     limit.stream().map(s -> new ParamEntry<>("limit", s.toString())).collect(Collectors.toList()));
@@ -145,7 +146,7 @@ public class ByProjectKeyImportContainersGet extends
     /**
      * add additional limit query parameters
      */
-    public <TValue> ByProjectKeyImportContainersGet addLimit(final List<TValue> limit) {
+    public <TValue> ByProjectKeyImportContainersGet addLimit(final Collection<TValue> limit) {
         return copy().addQueryParams(
             limit.stream().map(s -> new ParamEntry<>("limit", s.toString())).collect(Collectors.toList()));
     }
@@ -195,7 +196,7 @@ public class ByProjectKeyImportContainersGet extends
     /**
      * set offset with the specified values
      */
-    public <TValue> ByProjectKeyImportContainersGet withOffset(final List<TValue> offset) {
+    public <TValue> ByProjectKeyImportContainersGet withOffset(final Collection<TValue> offset) {
         return copy().withoutQueryParam("offset")
                 .addQueryParams(
                     offset.stream().map(s -> new ParamEntry<>("offset", s.toString())).collect(Collectors.toList()));
@@ -204,7 +205,7 @@ public class ByProjectKeyImportContainersGet extends
     /**
      * add additional offset query parameters
      */
-    public <TValue> ByProjectKeyImportContainersGet addOffset(final List<TValue> offset) {
+    public <TValue> ByProjectKeyImportContainersGet addOffset(final Collection<TValue> offset) {
         return copy().addQueryParams(
             offset.stream().map(s -> new ParamEntry<>("offset", s.toString())).collect(Collectors.toList()));
     }
@@ -254,7 +255,7 @@ public class ByProjectKeyImportContainersGet extends
     /**
      * set sort with the specified values
      */
-    public <TValue> ByProjectKeyImportContainersGet withSort(final List<TValue> sort) {
+    public <TValue> ByProjectKeyImportContainersGet withSort(final Collection<TValue> sort) {
         return copy().withoutQueryParam("sort")
                 .addQueryParams(
                     sort.stream().map(s -> new ParamEntry<>("sort", s.toString())).collect(Collectors.toList()));
@@ -263,7 +264,7 @@ public class ByProjectKeyImportContainersGet extends
     /**
      * add additional sort query parameters
      */
-    public <TValue> ByProjectKeyImportContainersGet addSort(final List<TValue> sort) {
+    public <TValue> ByProjectKeyImportContainersGet addSort(final Collection<TValue> sort) {
         return copy().addQueryParams(
             sort.stream().map(s -> new ParamEntry<>("sort", s.toString())).collect(Collectors.toList()));
     }

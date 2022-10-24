@@ -4,6 +4,7 @@ package com.commercetools.api.client;
 import java.net.URI;
 import java.time.Duration;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
 import java.util.function.Function;
@@ -147,7 +148,7 @@ public class ByProjectKeyProductTypesKeyByKeyDelete
     /**
      * set version with the specified values
      */
-    public <TValue> ByProjectKeyProductTypesKeyByKeyDelete withVersion(final List<TValue> version) {
+    public <TValue> ByProjectKeyProductTypesKeyByKeyDelete withVersion(final Collection<TValue> version) {
         return copy().withoutQueryParam("version")
                 .addQueryParams(
                     version.stream().map(s -> new ParamEntry<>("version", s.toString())).collect(Collectors.toList()));
@@ -156,7 +157,7 @@ public class ByProjectKeyProductTypesKeyByKeyDelete
     /**
      * add additional version query parameters
      */
-    public <TValue> ByProjectKeyProductTypesKeyByKeyDelete addVersion(final List<TValue> version) {
+    public <TValue> ByProjectKeyProductTypesKeyByKeyDelete addVersion(final Collection<TValue> version) {
         return copy().addQueryParams(
             version.stream().map(s -> new ParamEntry<>("version", s.toString())).collect(Collectors.toList()));
     }
@@ -206,7 +207,7 @@ public class ByProjectKeyProductTypesKeyByKeyDelete
     /**
      * set expand with the specified values
      */
-    public <TValue> ByProjectKeyProductTypesKeyByKeyDelete withExpand(final List<TValue> expand) {
+    public <TValue> ByProjectKeyProductTypesKeyByKeyDelete withExpand(final Collection<TValue> expand) {
         return copy().withoutQueryParam("expand")
                 .addQueryParams(
                     expand.stream().map(s -> new ParamEntry<>("expand", s.toString())).collect(Collectors.toList()));
@@ -215,7 +216,7 @@ public class ByProjectKeyProductTypesKeyByKeyDelete
     /**
      * add additional expand query parameters
      */
-    public <TValue> ByProjectKeyProductTypesKeyByKeyDelete addExpand(final List<TValue> expand) {
+    public <TValue> ByProjectKeyProductTypesKeyByKeyDelete addExpand(final Collection<TValue> expand) {
         return copy().addQueryParams(
             expand.stream().map(s -> new ParamEntry<>("expand", s.toString())).collect(Collectors.toList()));
     }

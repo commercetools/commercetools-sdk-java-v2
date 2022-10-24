@@ -4,6 +4,7 @@ package com.commercetools.api.client;
 import java.net.URI;
 import java.time.Duration;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
 import java.util.function.Function;
@@ -155,7 +156,7 @@ public class ByProjectKeyInStoreKeyByStoreKeyMeOrdersByIDGet
     /**
      * set expand with the specified values
      */
-    public <TValue> ByProjectKeyInStoreKeyByStoreKeyMeOrdersByIDGet withExpand(final List<TValue> expand) {
+    public <TValue> ByProjectKeyInStoreKeyByStoreKeyMeOrdersByIDGet withExpand(final Collection<TValue> expand) {
         return copy().withoutQueryParam("expand")
                 .addQueryParams(
                     expand.stream().map(s -> new ParamEntry<>("expand", s.toString())).collect(Collectors.toList()));
@@ -164,7 +165,7 @@ public class ByProjectKeyInStoreKeyByStoreKeyMeOrdersByIDGet
     /**
      * add additional expand query parameters
      */
-    public <TValue> ByProjectKeyInStoreKeyByStoreKeyMeOrdersByIDGet addExpand(final List<TValue> expand) {
+    public <TValue> ByProjectKeyInStoreKeyByStoreKeyMeOrdersByIDGet addExpand(final Collection<TValue> expand) {
         return copy().addQueryParams(
             expand.stream().map(s -> new ParamEntry<>("expand", s.toString())).collect(Collectors.toList()));
     }

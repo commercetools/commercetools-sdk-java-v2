@@ -4,6 +4,7 @@ package com.commercetools.api.client;
 import java.net.URI;
 import java.time.Duration;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
 import java.util.function.Function;
@@ -127,7 +128,7 @@ public class ByProjectKeyProductTypesHead
     /**
      * set where with the specified values
      */
-    public <TValue> ByProjectKeyProductTypesHead withWhere(final List<TValue> where) {
+    public <TValue> ByProjectKeyProductTypesHead withWhere(final Collection<TValue> where) {
         return copy().withoutQueryParam("where")
                 .addQueryParams(
                     where.stream().map(s -> new ParamEntry<>("where", s.toString())).collect(Collectors.toList()));
@@ -136,7 +137,7 @@ public class ByProjectKeyProductTypesHead
     /**
      * add additional where query parameters
      */
-    public <TValue> ByProjectKeyProductTypesHead addWhere(final List<TValue> where) {
+    public <TValue> ByProjectKeyProductTypesHead addWhere(final Collection<TValue> where) {
         return copy().addQueryParams(
             where.stream().map(s -> new ParamEntry<>("where", s.toString())).collect(Collectors.toList()));
     }

@@ -4,6 +4,7 @@ package com.commercetools.api.client;
 import java.net.URI;
 import java.time.Duration;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
 import java.util.function.Function;
@@ -155,7 +156,8 @@ public class ByProjectKeyOrdersOrderNumberByOrderNumberDelete
     /**
      * set dataErasure with the specified values
      */
-    public <TValue> ByProjectKeyOrdersOrderNumberByOrderNumberDelete withDataErasure(final List<TValue> dataErasure) {
+    public <TValue> ByProjectKeyOrdersOrderNumberByOrderNumberDelete withDataErasure(
+            final Collection<TValue> dataErasure) {
         return copy().withoutQueryParam("dataErasure")
                 .addQueryParams(dataErasure.stream()
                         .map(s -> new ParamEntry<>("dataErasure", s.toString()))
@@ -165,7 +167,8 @@ public class ByProjectKeyOrdersOrderNumberByOrderNumberDelete
     /**
      * add additional dataErasure query parameters
      */
-    public <TValue> ByProjectKeyOrdersOrderNumberByOrderNumberDelete addDataErasure(final List<TValue> dataErasure) {
+    public <TValue> ByProjectKeyOrdersOrderNumberByOrderNumberDelete addDataErasure(
+            final Collection<TValue> dataErasure) {
         return copy().addQueryParams(
             dataErasure.stream().map(s -> new ParamEntry<>("dataErasure", s.toString())).collect(Collectors.toList()));
     }
@@ -217,7 +220,7 @@ public class ByProjectKeyOrdersOrderNumberByOrderNumberDelete
     /**
      * set version with the specified values
      */
-    public <TValue> ByProjectKeyOrdersOrderNumberByOrderNumberDelete withVersion(final List<TValue> version) {
+    public <TValue> ByProjectKeyOrdersOrderNumberByOrderNumberDelete withVersion(final Collection<TValue> version) {
         return copy().withoutQueryParam("version")
                 .addQueryParams(
                     version.stream().map(s -> new ParamEntry<>("version", s.toString())).collect(Collectors.toList()));
@@ -226,7 +229,7 @@ public class ByProjectKeyOrdersOrderNumberByOrderNumberDelete
     /**
      * add additional version query parameters
      */
-    public <TValue> ByProjectKeyOrdersOrderNumberByOrderNumberDelete addVersion(final List<TValue> version) {
+    public <TValue> ByProjectKeyOrdersOrderNumberByOrderNumberDelete addVersion(final Collection<TValue> version) {
         return copy().addQueryParams(
             version.stream().map(s -> new ParamEntry<>("version", s.toString())).collect(Collectors.toList()));
     }
@@ -277,7 +280,7 @@ public class ByProjectKeyOrdersOrderNumberByOrderNumberDelete
     /**
      * set expand with the specified values
      */
-    public <TValue> ByProjectKeyOrdersOrderNumberByOrderNumberDelete withExpand(final List<TValue> expand) {
+    public <TValue> ByProjectKeyOrdersOrderNumberByOrderNumberDelete withExpand(final Collection<TValue> expand) {
         return copy().withoutQueryParam("expand")
                 .addQueryParams(
                     expand.stream().map(s -> new ParamEntry<>("expand", s.toString())).collect(Collectors.toList()));
@@ -286,7 +289,7 @@ public class ByProjectKeyOrdersOrderNumberByOrderNumberDelete
     /**
      * add additional expand query parameters
      */
-    public <TValue> ByProjectKeyOrdersOrderNumberByOrderNumberDelete addExpand(final List<TValue> expand) {
+    public <TValue> ByProjectKeyOrdersOrderNumberByOrderNumberDelete addExpand(final Collection<TValue> expand) {
         return copy().addQueryParams(
             expand.stream().map(s -> new ParamEntry<>("expand", s.toString())).collect(Collectors.toList()));
     }

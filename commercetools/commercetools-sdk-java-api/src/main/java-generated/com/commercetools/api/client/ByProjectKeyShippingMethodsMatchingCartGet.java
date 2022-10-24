@@ -4,6 +4,7 @@ package com.commercetools.api.client;
 import java.net.URI;
 import java.time.Duration;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
 import java.util.function.Function;
@@ -135,7 +136,7 @@ public class ByProjectKeyShippingMethodsMatchingCartGet extends
     /**
      * set cartId with the specified values
      */
-    public <TValue> ByProjectKeyShippingMethodsMatchingCartGet withCartId(final List<TValue> cartId) {
+    public <TValue> ByProjectKeyShippingMethodsMatchingCartGet withCartId(final Collection<TValue> cartId) {
         return copy().withoutQueryParam("cartId")
                 .addQueryParams(
                     cartId.stream().map(s -> new ParamEntry<>("cartId", s.toString())).collect(Collectors.toList()));
@@ -144,7 +145,7 @@ public class ByProjectKeyShippingMethodsMatchingCartGet extends
     /**
      * add additional cartId query parameters
      */
-    public <TValue> ByProjectKeyShippingMethodsMatchingCartGet addCartId(final List<TValue> cartId) {
+    public <TValue> ByProjectKeyShippingMethodsMatchingCartGet addCartId(final Collection<TValue> cartId) {
         return copy().addQueryParams(
             cartId.stream().map(s -> new ParamEntry<>("cartId", s.toString())).collect(Collectors.toList()));
     }
@@ -194,7 +195,7 @@ public class ByProjectKeyShippingMethodsMatchingCartGet extends
     /**
      * set expand with the specified values
      */
-    public <TValue> ByProjectKeyShippingMethodsMatchingCartGet withExpand(final List<TValue> expand) {
+    public <TValue> ByProjectKeyShippingMethodsMatchingCartGet withExpand(final Collection<TValue> expand) {
         return copy().withoutQueryParam("expand")
                 .addQueryParams(
                     expand.stream().map(s -> new ParamEntry<>("expand", s.toString())).collect(Collectors.toList()));
@@ -203,7 +204,7 @@ public class ByProjectKeyShippingMethodsMatchingCartGet extends
     /**
      * add additional expand query parameters
      */
-    public <TValue> ByProjectKeyShippingMethodsMatchingCartGet addExpand(final List<TValue> expand) {
+    public <TValue> ByProjectKeyShippingMethodsMatchingCartGet addExpand(final Collection<TValue> expand) {
         return copy().addQueryParams(
             expand.stream().map(s -> new ParamEntry<>("expand", s.toString())).collect(Collectors.toList()));
     }

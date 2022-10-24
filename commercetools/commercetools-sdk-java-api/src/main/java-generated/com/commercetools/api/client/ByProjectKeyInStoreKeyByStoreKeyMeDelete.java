@@ -4,6 +4,7 @@ package com.commercetools.api.client;
 import java.net.URI;
 import java.time.Duration;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
 import java.util.function.Function;
@@ -141,7 +142,7 @@ public class ByProjectKeyInStoreKeyByStoreKeyMeDelete
     /**
      * set version with the specified values
      */
-    public <TValue> ByProjectKeyInStoreKeyByStoreKeyMeDelete withVersion(final List<TValue> version) {
+    public <TValue> ByProjectKeyInStoreKeyByStoreKeyMeDelete withVersion(final Collection<TValue> version) {
         return copy().withoutQueryParam("version")
                 .addQueryParams(
                     version.stream().map(s -> new ParamEntry<>("version", s.toString())).collect(Collectors.toList()));
@@ -150,7 +151,7 @@ public class ByProjectKeyInStoreKeyByStoreKeyMeDelete
     /**
      * add additional version query parameters
      */
-    public <TValue> ByProjectKeyInStoreKeyByStoreKeyMeDelete addVersion(final List<TValue> version) {
+    public <TValue> ByProjectKeyInStoreKeyByStoreKeyMeDelete addVersion(final Collection<TValue> version) {
         return copy().addQueryParams(
             version.stream().map(s -> new ParamEntry<>("version", s.toString())).collect(Collectors.toList()));
     }

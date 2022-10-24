@@ -4,6 +4,7 @@ package com.commercetools.api.client;
 import java.net.URI;
 import java.time.Duration;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
 import java.util.function.Function;
@@ -160,7 +161,8 @@ public class ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet exte
     /**
      * set limit with the specified values
      */
-    public <TValue> ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet withLimit(final List<TValue> limit) {
+    public <TValue> ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet withLimit(
+            final Collection<TValue> limit) {
         return copy().withoutQueryParam("limit")
                 .addQueryParams(
                     limit.stream().map(s -> new ParamEntry<>("limit", s.toString())).collect(Collectors.toList()));
@@ -169,7 +171,8 @@ public class ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet exte
     /**
      * add additional limit query parameters
      */
-    public <TValue> ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet addLimit(final List<TValue> limit) {
+    public <TValue> ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet addLimit(
+            final Collection<TValue> limit) {
         return copy().addQueryParams(
             limit.stream().map(s -> new ParamEntry<>("limit", s.toString())).collect(Collectors.toList()));
     }
@@ -222,7 +225,7 @@ public class ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet exte
      * set offset with the specified values
      */
     public <TValue> ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet withOffset(
-            final List<TValue> offset) {
+            final Collection<TValue> offset) {
         return copy().withoutQueryParam("offset")
                 .addQueryParams(
                     offset.stream().map(s -> new ParamEntry<>("offset", s.toString())).collect(Collectors.toList()));
@@ -232,7 +235,7 @@ public class ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet exte
      * add additional offset query parameters
      */
     public <TValue> ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet addOffset(
-            final List<TValue> offset) {
+            final Collection<TValue> offset) {
         return copy().addQueryParams(
             offset.stream().map(s -> new ParamEntry<>("offset", s.toString())).collect(Collectors.toList()));
     }
@@ -289,7 +292,7 @@ public class ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet exte
      * set withTotal with the specified values
      */
     public <TValue> ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet withWithTotal(
-            final List<TValue> withTotal) {
+            final Collection<TValue> withTotal) {
         return copy().withoutQueryParam("withTotal")
                 .addQueryParams(withTotal.stream()
                         .map(s -> new ParamEntry<>("withTotal", s.toString()))
@@ -300,7 +303,7 @@ public class ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet exte
      * add additional withTotal query parameters
      */
     public <TValue> ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet addWithTotal(
-            final List<TValue> withTotal) {
+            final Collection<TValue> withTotal) {
         return copy().addQueryParams(
             withTotal.stream().map(s -> new ParamEntry<>("withTotal", s.toString())).collect(Collectors.toList()));
     }
@@ -353,7 +356,7 @@ public class ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet exte
      * set expand with the specified values
      */
     public <TValue> ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet withExpand(
-            final List<TValue> expand) {
+            final Collection<TValue> expand) {
         return copy().withoutQueryParam("expand")
                 .addQueryParams(
                     expand.stream().map(s -> new ParamEntry<>("expand", s.toString())).collect(Collectors.toList()));
@@ -363,7 +366,7 @@ public class ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet exte
      * add additional expand query parameters
      */
     public <TValue> ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet addExpand(
-            final List<TValue> expand) {
+            final Collection<TValue> expand) {
         return copy().addQueryParams(
             expand.stream().map(s -> new ParamEntry<>("expand", s.toString())).collect(Collectors.toList()));
     }

@@ -4,6 +4,7 @@ package com.commercetools.api.client;
 import java.net.URI;
 import java.time.Duration;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
 import java.util.function.Function;
@@ -169,7 +170,7 @@ public class ByProjectKeyProductsGet extends
     /**
      * set where with the specified values
      */
-    public <TValue> ByProjectKeyProductsGet withWhere(final List<TValue> where) {
+    public <TValue> ByProjectKeyProductsGet withWhere(final Collection<TValue> where) {
         return copy().withoutQueryParam("where")
                 .addQueryParams(
                     where.stream().map(s -> new ParamEntry<>("where", s.toString())).collect(Collectors.toList()));
@@ -178,7 +179,7 @@ public class ByProjectKeyProductsGet extends
     /**
      * add additional where query parameters
      */
-    public <TValue> ByProjectKeyProductsGet addWhere(final List<TValue> where) {
+    public <TValue> ByProjectKeyProductsGet addWhere(final Collection<TValue> where) {
         return copy().addQueryParams(
             where.stream().map(s -> new ParamEntry<>("where", s.toString())).collect(Collectors.toList()));
     }
@@ -228,7 +229,7 @@ public class ByProjectKeyProductsGet extends
     /**
      * set priceCurrency with the specified values
      */
-    public <TValue> ByProjectKeyProductsGet withPriceCurrency(final List<TValue> priceCurrency) {
+    public <TValue> ByProjectKeyProductsGet withPriceCurrency(final Collection<TValue> priceCurrency) {
         return copy().withoutQueryParam("priceCurrency")
                 .addQueryParams(priceCurrency.stream()
                         .map(s -> new ParamEntry<>("priceCurrency", s.toString()))
@@ -238,7 +239,7 @@ public class ByProjectKeyProductsGet extends
     /**
      * add additional priceCurrency query parameters
      */
-    public <TValue> ByProjectKeyProductsGet addPriceCurrency(final List<TValue> priceCurrency) {
+    public <TValue> ByProjectKeyProductsGet addPriceCurrency(final Collection<TValue> priceCurrency) {
         return copy().addQueryParams(priceCurrency.stream()
                 .map(s -> new ParamEntry<>("priceCurrency", s.toString()))
                 .collect(Collectors.toList()));
@@ -289,7 +290,7 @@ public class ByProjectKeyProductsGet extends
     /**
      * set priceCountry with the specified values
      */
-    public <TValue> ByProjectKeyProductsGet withPriceCountry(final List<TValue> priceCountry) {
+    public <TValue> ByProjectKeyProductsGet withPriceCountry(final Collection<TValue> priceCountry) {
         return copy().withoutQueryParam("priceCountry")
                 .addQueryParams(priceCountry.stream()
                         .map(s -> new ParamEntry<>("priceCountry", s.toString()))
@@ -299,7 +300,7 @@ public class ByProjectKeyProductsGet extends
     /**
      * add additional priceCountry query parameters
      */
-    public <TValue> ByProjectKeyProductsGet addPriceCountry(final List<TValue> priceCountry) {
+    public <TValue> ByProjectKeyProductsGet addPriceCountry(final Collection<TValue> priceCountry) {
         return copy().addQueryParams(priceCountry.stream()
                 .map(s -> new ParamEntry<>("priceCountry", s.toString()))
                 .collect(Collectors.toList()));
@@ -350,7 +351,7 @@ public class ByProjectKeyProductsGet extends
     /**
      * set priceCustomerGroup with the specified values
      */
-    public <TValue> ByProjectKeyProductsGet withPriceCustomerGroup(final List<TValue> priceCustomerGroup) {
+    public <TValue> ByProjectKeyProductsGet withPriceCustomerGroup(final Collection<TValue> priceCustomerGroup) {
         return copy().withoutQueryParam("priceCustomerGroup")
                 .addQueryParams(priceCustomerGroup.stream()
                         .map(s -> new ParamEntry<>("priceCustomerGroup", s.toString()))
@@ -360,7 +361,7 @@ public class ByProjectKeyProductsGet extends
     /**
      * add additional priceCustomerGroup query parameters
      */
-    public <TValue> ByProjectKeyProductsGet addPriceCustomerGroup(final List<TValue> priceCustomerGroup) {
+    public <TValue> ByProjectKeyProductsGet addPriceCustomerGroup(final Collection<TValue> priceCustomerGroup) {
         return copy().addQueryParams(priceCustomerGroup.stream()
                 .map(s -> new ParamEntry<>("priceCustomerGroup", s.toString()))
                 .collect(Collectors.toList()));
@@ -411,7 +412,7 @@ public class ByProjectKeyProductsGet extends
     /**
      * set priceChannel with the specified values
      */
-    public <TValue> ByProjectKeyProductsGet withPriceChannel(final List<TValue> priceChannel) {
+    public <TValue> ByProjectKeyProductsGet withPriceChannel(final Collection<TValue> priceChannel) {
         return copy().withoutQueryParam("priceChannel")
                 .addQueryParams(priceChannel.stream()
                         .map(s -> new ParamEntry<>("priceChannel", s.toString()))
@@ -421,7 +422,7 @@ public class ByProjectKeyProductsGet extends
     /**
      * add additional priceChannel query parameters
      */
-    public <TValue> ByProjectKeyProductsGet addPriceChannel(final List<TValue> priceChannel) {
+    public <TValue> ByProjectKeyProductsGet addPriceChannel(final Collection<TValue> priceChannel) {
         return copy().addQueryParams(priceChannel.stream()
                 .map(s -> new ParamEntry<>("priceChannel", s.toString()))
                 .collect(Collectors.toList()));
@@ -472,7 +473,7 @@ public class ByProjectKeyProductsGet extends
     /**
      * set expand with the specified values
      */
-    public <TValue> ByProjectKeyProductsGet withExpand(final List<TValue> expand) {
+    public <TValue> ByProjectKeyProductsGet withExpand(final Collection<TValue> expand) {
         return copy().withoutQueryParam("expand")
                 .addQueryParams(
                     expand.stream().map(s -> new ParamEntry<>("expand", s.toString())).collect(Collectors.toList()));
@@ -481,7 +482,7 @@ public class ByProjectKeyProductsGet extends
     /**
      * add additional expand query parameters
      */
-    public <TValue> ByProjectKeyProductsGet addExpand(final List<TValue> expand) {
+    public <TValue> ByProjectKeyProductsGet addExpand(final Collection<TValue> expand) {
         return copy().addQueryParams(
             expand.stream().map(s -> new ParamEntry<>("expand", s.toString())).collect(Collectors.toList()));
     }
@@ -531,7 +532,7 @@ public class ByProjectKeyProductsGet extends
     /**
      * set sort with the specified values
      */
-    public <TValue> ByProjectKeyProductsGet withSort(final List<TValue> sort) {
+    public <TValue> ByProjectKeyProductsGet withSort(final Collection<TValue> sort) {
         return copy().withoutQueryParam("sort")
                 .addQueryParams(
                     sort.stream().map(s -> new ParamEntry<>("sort", s.toString())).collect(Collectors.toList()));
@@ -540,7 +541,7 @@ public class ByProjectKeyProductsGet extends
     /**
      * add additional sort query parameters
      */
-    public <TValue> ByProjectKeyProductsGet addSort(final List<TValue> sort) {
+    public <TValue> ByProjectKeyProductsGet addSort(final Collection<TValue> sort) {
         return copy().addQueryParams(
             sort.stream().map(s -> new ParamEntry<>("sort", s.toString())).collect(Collectors.toList()));
     }
@@ -590,7 +591,7 @@ public class ByProjectKeyProductsGet extends
     /**
      * set limit with the specified values
      */
-    public <TValue> ByProjectKeyProductsGet withLimit(final List<TValue> limit) {
+    public <TValue> ByProjectKeyProductsGet withLimit(final Collection<TValue> limit) {
         return copy().withoutQueryParam("limit")
                 .addQueryParams(
                     limit.stream().map(s -> new ParamEntry<>("limit", s.toString())).collect(Collectors.toList()));
@@ -599,7 +600,7 @@ public class ByProjectKeyProductsGet extends
     /**
      * add additional limit query parameters
      */
-    public <TValue> ByProjectKeyProductsGet addLimit(final List<TValue> limit) {
+    public <TValue> ByProjectKeyProductsGet addLimit(final Collection<TValue> limit) {
         return copy().addQueryParams(
             limit.stream().map(s -> new ParamEntry<>("limit", s.toString())).collect(Collectors.toList()));
     }
@@ -649,7 +650,7 @@ public class ByProjectKeyProductsGet extends
     /**
      * set offset with the specified values
      */
-    public <TValue> ByProjectKeyProductsGet withOffset(final List<TValue> offset) {
+    public <TValue> ByProjectKeyProductsGet withOffset(final Collection<TValue> offset) {
         return copy().withoutQueryParam("offset")
                 .addQueryParams(
                     offset.stream().map(s -> new ParamEntry<>("offset", s.toString())).collect(Collectors.toList()));
@@ -658,7 +659,7 @@ public class ByProjectKeyProductsGet extends
     /**
      * add additional offset query parameters
      */
-    public <TValue> ByProjectKeyProductsGet addOffset(final List<TValue> offset) {
+    public <TValue> ByProjectKeyProductsGet addOffset(final Collection<TValue> offset) {
         return copy().addQueryParams(
             offset.stream().map(s -> new ParamEntry<>("offset", s.toString())).collect(Collectors.toList()));
     }
@@ -708,7 +709,7 @@ public class ByProjectKeyProductsGet extends
     /**
      * set withTotal with the specified values
      */
-    public <TValue> ByProjectKeyProductsGet withWithTotal(final List<TValue> withTotal) {
+    public <TValue> ByProjectKeyProductsGet withWithTotal(final Collection<TValue> withTotal) {
         return copy().withoutQueryParam("withTotal")
                 .addQueryParams(withTotal.stream()
                         .map(s -> new ParamEntry<>("withTotal", s.toString()))
@@ -718,7 +719,7 @@ public class ByProjectKeyProductsGet extends
     /**
      * add additional withTotal query parameters
      */
-    public <TValue> ByProjectKeyProductsGet addWithTotal(final List<TValue> withTotal) {
+    public <TValue> ByProjectKeyProductsGet addWithTotal(final Collection<TValue> withTotal) {
         return copy().addQueryParams(
             withTotal.stream().map(s -> new ParamEntry<>("withTotal", s.toString())).collect(Collectors.toList()));
     }
@@ -740,7 +741,8 @@ public class ByProjectKeyProductsGet extends
     /**
      * set predicateVar with the specificied values
      */
-    public <TValue> ByProjectKeyProductsGet withPredicateVar(final String varName, final List<TValue> predicateVar) {
+    public <TValue> ByProjectKeyProductsGet withPredicateVar(final String varName,
+            final Collection<TValue> predicateVar) {
         final String placeholderName = String.format("var.%s", varName);
         return copy().withoutQueryParam(placeholderName)
                 .addQueryParams(predicateVar.stream()
@@ -751,7 +753,8 @@ public class ByProjectKeyProductsGet extends
     /**
      * add additional predicateVar query parameters
      */
-    public <TValue> ByProjectKeyProductsGet addPredicateVar(final String varName, final List<TValue> predicateVar) {
+    public <TValue> ByProjectKeyProductsGet addPredicateVar(final String varName,
+            final Collection<TValue> predicateVar) {
         final String placeholderName = String.format("var.%s", varName);
         return copy().addQueryParams(predicateVar.stream()
                 .map(s -> new ParamEntry<>(placeholderName, s.toString()))

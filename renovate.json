@@ -7,6 +7,12 @@
   "separateMajorMinor": true,
   "packageRules": [
     {
+      "matchPackageNames": ["net.sourceforge.plantuml:plantuml"],
+      "allowedVersions": "/^[0-9]+\\.[0-9]+\\.[0-9]+(\\.[0-9]+)?$/",
+        "groupName": "all dependencies",
+        "groupSlug": "all"
+    },
+    {
       "matchPackagePatterns": [
         "*"
       ],

@@ -15,7 +15,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * CustomerRemoveStoreAction
+ *  <p>Removes the association to a Store from the Customer. If no more Stores are assigned, the Customer becomes a global Customer.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -34,7 +34,7 @@ public interface CustomerRemoveStoreAction extends CustomerUpdateAction {
     String REMOVE_STORE = "removeStore";
 
     /**
-     *  <p>ResourceIdentifier to a Store.</p>
+     *  <p>ResourceIdentifier of the Store to remove.</p>
      */
     @NotNull
     @Valid

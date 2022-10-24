@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * MyCustomerRemoveBillingAddressIdAction
+ *  <p>Removes an existing billing address from <code>billingAddressesIds</code>. If the billing address is the default billing address, the <code>defaultBillingAddressId</code> is unset. Either <code>addressId</code> or <code>addressKey</code> is required.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class MyCustomerRemoveBillingAddressIdActionImpl implements MyCustomerRemoveBillingAddressIdAction, ModelBase {
@@ -47,7 +47,7 @@ public class MyCustomerRemoveBillingAddressIdActionImpl implements MyCustomerRem
     }
 
     /**
-     *
+     *  <p><code>id</code> of the Address to remove from <code>billingAddressesIds</code>.</p>
      */
 
     public String getAddressId() {
@@ -55,7 +55,7 @@ public class MyCustomerRemoveBillingAddressIdActionImpl implements MyCustomerRem
     }
 
     /**
-     *
+     *  <p><code>key</code> of the Address to remove from <code>billingAddressesIds</code>.</p>
      */
 
     public String getAddressKey() {

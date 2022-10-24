@@ -15,7 +15,8 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * MyCustomerChangeAddressAction
+ *  <p>Changing an address of the Customer produces the CustomerAddressChanged Message.</p>
+ *  <p>Either <code>addressId</code> or <code>addressKey</code> is required.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -34,21 +35,21 @@ public interface MyCustomerChangeAddressAction extends MyCustomerUpdateAction {
     String CHANGE_ADDRESS = "changeAddress";
 
     /**
-     *
+     *  <p><code>id</code> of the Address to change.</p>
      */
 
     @JsonProperty("addressId")
     public String getAddressId();
 
     /**
-     *
+     *  <p><code>key</code> of the Address to change.</p>
      */
 
     @JsonProperty("addressKey")
     public String getAddressKey();
 
     /**
-     *
+     *  <p>Value to set.</p>
      */
     @NotNull
     @Valid

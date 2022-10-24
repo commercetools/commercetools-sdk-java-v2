@@ -26,7 +26,7 @@ public class CustomerSetLastNameActionBuilder implements Builder<CustomerSetLast
     private String lastName;
 
     /**
-     *
+     *  <p>Value to set. If empty, any existing value is removed.</p>
      */
 
     public CustomerSetLastNameActionBuilder lastName(@Nullable final String lastName) {

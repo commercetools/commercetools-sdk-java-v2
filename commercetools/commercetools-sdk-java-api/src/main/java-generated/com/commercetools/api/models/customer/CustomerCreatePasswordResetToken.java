@@ -30,14 +30,14 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface CustomerCreatePasswordResetToken {
 
     /**
-     *
+     *  <p>Email address of the Customer treated as case-insensitive.</p>
      */
     @NotNull
     @JsonProperty("email")
     public String getEmail();
 
     /**
-     *
+     *  <p>Validity period of the generated token in minutes.</p>
      */
 
     @JsonProperty("ttlMinutes")

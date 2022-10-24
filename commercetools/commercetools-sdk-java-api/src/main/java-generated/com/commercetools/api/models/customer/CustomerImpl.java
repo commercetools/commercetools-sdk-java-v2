@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * Customer
+ *  <p>If <code>stores</code> is not empty, the Customer is specific to those Stores.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomerImpl implements Customer, ModelBase {
@@ -28,11 +28,15 @@ public class CustomerImpl implements Customer, ModelBase {
 
     private java.time.ZonedDateTime lastModifiedAt;
 
+    private String key;
+
+    private String customerNumber;
+
+    private String externalId;
+
     private com.commercetools.api.models.common.LastModifiedBy lastModifiedBy;
 
     private com.commercetools.api.models.common.CreatedBy createdBy;
-
-    private String customerNumber;
 
     private String email;
 
@@ -64,8 +68,6 @@ public class CustomerImpl implements Customer, ModelBase {
 
     private Boolean isEmailVerified;
 
-    private String externalId;
-
     private com.commercetools.api.models.customer_group.CustomerGroupReference customerGroup;
 
     private com.commercetools.api.models.type.CustomFields custom;
@@ -73,8 +75,6 @@ public class CustomerImpl implements Customer, ModelBase {
     private String locale;
 
     private String salutation;
-
-    private String key;
 
     private java.util.List<com.commercetools.api.models.store.StoreKeyReference> stores;
 
@@ -84,12 +84,13 @@ public class CustomerImpl implements Customer, ModelBase {
     CustomerImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version,
             @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt,
             @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt,
+            @JsonProperty("key") final String key, @JsonProperty("customerNumber") final String customerNumber,
+            @JsonProperty("externalId") final String externalId,
             @JsonProperty("lastModifiedBy") final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy,
             @JsonProperty("createdBy") final com.commercetools.api.models.common.CreatedBy createdBy,
-            @JsonProperty("customerNumber") final String customerNumber, @JsonProperty("email") final String email,
-            @JsonProperty("password") final String password, @JsonProperty("firstName") final String firstName,
-            @JsonProperty("lastName") final String lastName, @JsonProperty("middleName") final String middleName,
-            @JsonProperty("title") final String title,
+            @JsonProperty("email") final String email, @JsonProperty("password") final String password,
+            @JsonProperty("firstName") final String firstName, @JsonProperty("lastName") final String lastName,
+            @JsonProperty("middleName") final String middleName, @JsonProperty("title") final String title,
             @JsonProperty("dateOfBirth") final java.time.LocalDate dateOfBirth,
             @JsonProperty("companyName") final String companyName, @JsonProperty("vatId") final String vatId,
             @JsonProperty("addresses") final java.util.List<com.commercetools.api.models.common.Address> addresses,
@@ -98,20 +99,20 @@ public class CustomerImpl implements Customer, ModelBase {
             @JsonProperty("defaultBillingAddressId") final String defaultBillingAddressId,
             @JsonProperty("billingAddressIds") final java.util.List<String> billingAddressIds,
             @JsonProperty("isEmailVerified") final Boolean isEmailVerified,
-            @JsonProperty("externalId") final String externalId,
             @JsonProperty("customerGroup") final com.commercetools.api.models.customer_group.CustomerGroupReference customerGroup,
             @JsonProperty("custom") final com.commercetools.api.models.type.CustomFields custom,
             @JsonProperty("locale") final String locale, @JsonProperty("salutation") final String salutation,
-            @JsonProperty("key") final String key,
             @JsonProperty("stores") final java.util.List<com.commercetools.api.models.store.StoreKeyReference> stores,
             @JsonProperty("authenticationMode") final com.commercetools.api.models.customer.AuthenticationMode authenticationMode) {
         this.id = id;
         this.version = version;
         this.createdAt = createdAt;
         this.lastModifiedAt = lastModifiedAt;
+        this.key = key;
+        this.customerNumber = customerNumber;
+        this.externalId = externalId;
         this.lastModifiedBy = lastModifiedBy;
         this.createdBy = createdBy;
-        this.customerNumber = customerNumber;
         this.email = email;
         this.password = password;
         this.firstName = firstName;
@@ -127,12 +128,10 @@ public class CustomerImpl implements Customer, ModelBase {
         this.defaultBillingAddressId = defaultBillingAddressId;
         this.billingAddressIds = billingAddressIds;
         this.isEmailVerified = isEmailVerified;
-        this.externalId = externalId;
         this.customerGroup = customerGroup;
         this.custom = custom;
         this.locale = locale;
         this.salutation = salutation;
-        this.key = key;
         this.stores = stores;
         this.authenticationMode = authenticationMode;
     }
@@ -149,7 +148,7 @@ public class CustomerImpl implements Customer, ModelBase {
     }
 
     /**
-     *  <p>The current version of the customer.</p>
+     *  <p>Current version of the Customer.</p>
      */
 
     public Long getVersion() {
@@ -157,7 +156,7 @@ public class CustomerImpl implements Customer, ModelBase {
     }
 
     /**
-     *
+     *  <p>Date and time (UTC) the Customer was initially created.</p>
      */
 
     public java.time.ZonedDateTime getCreatedAt() {
@@ -165,11 +164,36 @@ public class CustomerImpl implements Customer, ModelBase {
     }
 
     /**
-     *
+     *  <p>Date and time (UTC) the Customer was last updated.</p>
      */
 
     public java.time.ZonedDateTime getLastModifiedAt() {
         return this.lastModifiedAt;
+    }
+
+    /**
+     *  <p>User-defined unique identifier of the Customer.</p>
+     */
+
+    public String getKey() {
+        return this.key;
+    }
+
+    /**
+     *  <p>User-defined unique identifier of the Customer.</p>
+     *  <p>Can be used to refer to a Customer in a human-readable way (in emails, invoices, and other correspondence).</p>
+     */
+
+    public String getCustomerNumber() {
+        return this.customerNumber;
+    }
+
+    /**
+     *  <p>Optional identifier for use in external systems like Customer Relationship Management (CRM) or Enterprise Resource Planning (ERP).</p>
+     */
+
+    public String getExternalId() {
+        return this.externalId;
     }
 
     /**
@@ -189,15 +213,7 @@ public class CustomerImpl implements Customer, ModelBase {
     }
 
     /**
-     *  <p>The customer number can be used to create a more human-readable (in contrast to ID) identifier for the customer. It should be unique across a project. Once the field was set it cannot be changed anymore.</p>
-     */
-
-    public String getCustomerNumber() {
-        return this.customerNumber;
-    }
-
-    /**
-     *  <p>The customer's email address and the main identifier of uniqueness for a customer account. Email addresses are either unique to the store they're specified for, <em>or</em> for the entire project. For more information, see Email uniquenes.</p>
+     *  <p>Email address of the Customer that is unique for an entire Project or to a Store the Customer is assigned to. It is the mandatory unique identifier of a Customer.</p>
      */
 
     public String getEmail() {
@@ -205,7 +221,7 @@ public class CustomerImpl implements Customer, ModelBase {
     }
 
     /**
-     *  <p>Only present with the default <code>authenticationMode</code>, <code>Password</code>.</p>
+     *  <p>Present only when <code>authenticationMode</code> is set to <code>Password</code>.</p>
      */
 
     public String getPassword() {
@@ -213,7 +229,7 @@ public class CustomerImpl implements Customer, ModelBase {
     }
 
     /**
-     *
+     *  <p>Given name (first name) of the Customer.</p>
      */
 
     public String getFirstName() {
@@ -221,7 +237,7 @@ public class CustomerImpl implements Customer, ModelBase {
     }
 
     /**
-     *
+     *  <p>Family name (last name) of the Customer.</p>
      */
 
     public String getLastName() {
@@ -229,7 +245,7 @@ public class CustomerImpl implements Customer, ModelBase {
     }
 
     /**
-     *
+     *  <p>Middle name of the Customer.</p>
      */
 
     public String getMiddleName() {
@@ -237,7 +253,7 @@ public class CustomerImpl implements Customer, ModelBase {
     }
 
     /**
-     *
+     *  <p>Title of the Customer, for example, 'Dr.'.</p>
      */
 
     public String getTitle() {
@@ -245,7 +261,7 @@ public class CustomerImpl implements Customer, ModelBase {
     }
 
     /**
-     *
+     *  <p>Date of birth of the Customer.</p>
      */
 
     public java.time.LocalDate getDateOfBirth() {
@@ -253,7 +269,7 @@ public class CustomerImpl implements Customer, ModelBase {
     }
 
     /**
-     *
+     *  <p>Company name of the Customer.</p>
      */
 
     public String getCompanyName() {
@@ -261,7 +277,7 @@ public class CustomerImpl implements Customer, ModelBase {
     }
 
     /**
-     *
+     *  <p>Unique VAT ID of the Customer.</p>
      */
 
     public String getVatId() {
@@ -269,7 +285,7 @@ public class CustomerImpl implements Customer, ModelBase {
     }
 
     /**
-     *  <p>The addresses have unique IDs in the addresses list</p>
+     *  <p>Addresses used by the Customer.</p>
      */
 
     public java.util.List<com.commercetools.api.models.common.Address> getAddresses() {
@@ -277,7 +293,7 @@ public class CustomerImpl implements Customer, ModelBase {
     }
 
     /**
-     *  <p>The address ID in the addresses list</p>
+     *  <p>ID of the address in <code>addresses</code> used as the default shipping address.</p>
      */
 
     public String getDefaultShippingAddressId() {
@@ -285,7 +301,7 @@ public class CustomerImpl implements Customer, ModelBase {
     }
 
     /**
-     *  <p>The IDs from the addresses list which are used as shipping addresses</p>
+     *  <p>IDs of addresses in <code>addresses</code> used as shipping addresses.</p>
      */
 
     public java.util.List<String> getShippingAddressIds() {
@@ -293,7 +309,7 @@ public class CustomerImpl implements Customer, ModelBase {
     }
 
     /**
-     *  <p>The address ID in the addresses list</p>
+     *  <p>ID of the address in <code>addresses</code> used as the default billing address.</p>
      */
 
     public String getDefaultBillingAddressId() {
@@ -301,7 +317,7 @@ public class CustomerImpl implements Customer, ModelBase {
     }
 
     /**
-     *  <p>The IDs from the addresses list which are used as billing addresses</p>
+     *  <p>IDs of addresses in <code>addresses</code> used as billing addresses.</p>
      */
 
     public java.util.List<String> getBillingAddressIds() {
@@ -309,7 +325,7 @@ public class CustomerImpl implements Customer, ModelBase {
     }
 
     /**
-     *
+     *  <p>Indicates whether the email address of the Customer is verified.</p>
      */
 
     public Boolean getIsEmailVerified() {
@@ -317,15 +333,7 @@ public class CustomerImpl implements Customer, ModelBase {
     }
 
     /**
-     *
-     */
-
-    public String getExternalId() {
-        return this.externalId;
-    }
-
-    /**
-     *
+     *  <p>CustomerGroup to which the Customer belongs.</p>
      */
 
     public com.commercetools.api.models.customer_group.CustomerGroupReference getCustomerGroup() {
@@ -333,7 +341,7 @@ public class CustomerImpl implements Customer, ModelBase {
     }
 
     /**
-     *
+     *  <p>Custom Fields for the Customer.</p>
      */
 
     public com.commercetools.api.models.type.CustomFields getCustom() {
@@ -341,7 +349,7 @@ public class CustomerImpl implements Customer, ModelBase {
     }
 
     /**
-     *
+     *  <p>Preferred language of the Customer.</p>
      */
 
     public String getLocale() {
@@ -349,7 +357,7 @@ public class CustomerImpl implements Customer, ModelBase {
     }
 
     /**
-     *
+     *  <p>Salutation of the Customer, for example, 'Mr.' or 'Mrs.'.</p>
      */
 
     public String getSalutation() {
@@ -357,15 +365,11 @@ public class CustomerImpl implements Customer, ModelBase {
     }
 
     /**
-     *  <p>User-defined unique identifier of the Customer.</p>
-     */
-
-    public String getKey() {
-        return this.key;
-    }
-
-    /**
-     *  <p>References to the stores the customer account is associated with. If no stores are specified, the customer is a global customer, and can log in using the Password Flow for global Customers. If one or more stores are specified, the customer can only log in using the Password Flow for Customers in a Store for those specific stores.</p>
+     *  <p>Stores to which the Customer is assigned to.</p>
+     *  <ul>
+     *   <li>If no Stores are specified, the Customer is a global customer, and can log in using the Password Flow for global Customers.</li>
+     *   <li>If any Stores are specified, the Customer can only log in using the Password Flow for Customers in a Store for those specific Stores.</li>
+     *  </ul>
      */
 
     public java.util.List<com.commercetools.api.models.store.StoreKeyReference> getStores() {
@@ -373,7 +377,7 @@ public class CustomerImpl implements Customer, ModelBase {
     }
 
     /**
-     *  <p>Defines whether a Customer has a password.</p>
+     *  <p>Indicates whether the <code>password</code> is required for the Customer.</p>
      */
 
     public com.commercetools.api.models.customer.AuthenticationMode getAuthenticationMode() {
@@ -396,16 +400,24 @@ public class CustomerImpl implements Customer, ModelBase {
         this.lastModifiedAt = lastModifiedAt;
     }
 
+    public void setKey(final String key) {
+        this.key = key;
+    }
+
+    public void setCustomerNumber(final String customerNumber) {
+        this.customerNumber = customerNumber;
+    }
+
+    public void setExternalId(final String externalId) {
+        this.externalId = externalId;
+    }
+
     public void setLastModifiedBy(final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy) {
         this.lastModifiedBy = lastModifiedBy;
     }
 
     public void setCreatedBy(final com.commercetools.api.models.common.CreatedBy createdBy) {
         this.createdBy = createdBy;
-    }
-
-    public void setCustomerNumber(final String customerNumber) {
-        this.customerNumber = customerNumber;
     }
 
     public void setEmail(final String email) {
@@ -480,10 +492,6 @@ public class CustomerImpl implements Customer, ModelBase {
         this.isEmailVerified = isEmailVerified;
     }
 
-    public void setExternalId(final String externalId) {
-        this.externalId = externalId;
-    }
-
     public void setCustomerGroup(
             final com.commercetools.api.models.customer_group.CustomerGroupReference customerGroup) {
         this.customerGroup = customerGroup;
@@ -499,10 +507,6 @@ public class CustomerImpl implements Customer, ModelBase {
 
     public void setSalutation(final String salutation) {
         this.salutation = salutation;
-    }
-
-    public void setKey(final String key) {
-        this.key = key;
     }
 
     public void setStores(final com.commercetools.api.models.store.StoreKeyReference... stores) {
@@ -532,9 +536,11 @@ public class CustomerImpl implements Customer, ModelBase {
                 .append(version, that.version)
                 .append(createdAt, that.createdAt)
                 .append(lastModifiedAt, that.lastModifiedAt)
+                .append(key, that.key)
+                .append(customerNumber, that.customerNumber)
+                .append(externalId, that.externalId)
                 .append(lastModifiedBy, that.lastModifiedBy)
                 .append(createdBy, that.createdBy)
-                .append(customerNumber, that.customerNumber)
                 .append(email, that.email)
                 .append(password, that.password)
                 .append(firstName, that.firstName)
@@ -550,12 +556,10 @@ public class CustomerImpl implements Customer, ModelBase {
                 .append(defaultBillingAddressId, that.defaultBillingAddressId)
                 .append(billingAddressIds, that.billingAddressIds)
                 .append(isEmailVerified, that.isEmailVerified)
-                .append(externalId, that.externalId)
                 .append(customerGroup, that.customerGroup)
                 .append(custom, that.custom)
                 .append(locale, that.locale)
                 .append(salutation, that.salutation)
-                .append(key, that.key)
                 .append(stores, that.stores)
                 .append(authenticationMode, that.authenticationMode)
                 .isEquals();
@@ -567,9 +571,11 @@ public class CustomerImpl implements Customer, ModelBase {
                 .append(version)
                 .append(createdAt)
                 .append(lastModifiedAt)
+                .append(key)
+                .append(customerNumber)
+                .append(externalId)
                 .append(lastModifiedBy)
                 .append(createdBy)
-                .append(customerNumber)
                 .append(email)
                 .append(password)
                 .append(firstName)
@@ -585,12 +591,10 @@ public class CustomerImpl implements Customer, ModelBase {
                 .append(defaultBillingAddressId)
                 .append(billingAddressIds)
                 .append(isEmailVerified)
-                .append(externalId)
                 .append(customerGroup)
                 .append(custom)
                 .append(locale)
                 .append(salutation)
-                .append(key)
                 .append(stores)
                 .append(authenticationMode)
                 .toHashCode();

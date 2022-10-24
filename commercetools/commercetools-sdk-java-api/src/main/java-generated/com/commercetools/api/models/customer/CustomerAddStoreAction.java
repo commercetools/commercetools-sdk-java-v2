@@ -15,7 +15,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * CustomerAddStoreAction
+ *  <p>Associates the Customer with a Store.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -34,7 +34,7 @@ public interface CustomerAddStoreAction extends CustomerUpdateAction {
     String ADD_STORE = "addStore";
 
     /**
-     *  <p>ResourceIdentifier to a Store.</p>
+     *  <p>ResourceIdentifier of the Store to add.</p>
      */
     @NotNull
     @Valid

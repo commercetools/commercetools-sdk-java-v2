@@ -14,7 +14,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Verifies customer's email using a token.</p>
+ *  <p>Verifying the email of the Customer produces the CustomerEmailVerified Message.</p>
  *
  * <hr>
  * <div class=code-example>

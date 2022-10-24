@@ -11,7 +11,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * CustomerSetCustomerNumberAction
+ *  <p>Sets a new ID that can be used to refer to a Customer in a human-reabable way (for use in emails, invoices, etc).</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -29,7 +29,7 @@ public interface CustomerSetCustomerNumberAction extends CustomerUpdateAction {
     String SET_CUSTOMER_NUMBER = "setCustomerNumber";
 
     /**
-     *  <p>It should be <strong>unique</strong> across a project. Once it's set, it cannot be changed.</p>
+     *  <p>Value to set. Once set, it cannot be changed.</p>
      */
 
     @JsonProperty("customerNumber")

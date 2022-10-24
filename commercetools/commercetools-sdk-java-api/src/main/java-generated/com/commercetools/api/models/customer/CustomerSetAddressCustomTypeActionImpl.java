@@ -22,20 +22,19 @@ public class CustomerSetAddressCustomTypeActionImpl implements CustomerSetAddres
 
     private String action;
 
+    private String addressId;
+
     private com.commercetools.api.models.type.TypeResourceIdentifier type;
 
     private com.commercetools.api.models.type.FieldContainer fields;
 
-    private String addressId;
-
     @JsonCreator
-    CustomerSetAddressCustomTypeActionImpl(
+    CustomerSetAddressCustomTypeActionImpl(@JsonProperty("addressId") final String addressId,
             @JsonProperty("type") final com.commercetools.api.models.type.TypeResourceIdentifier type,
-            @JsonProperty("fields") final com.commercetools.api.models.type.FieldContainer fields,
-            @JsonProperty("addressId") final String addressId) {
+            @JsonProperty("fields") final com.commercetools.api.models.type.FieldContainer fields) {
+        this.addressId = addressId;
         this.type = type;
         this.fields = fields;
-        this.addressId = addressId;
         this.action = SET_ADDRESS_CUSTOM_TYPE;
     }
 
@@ -49,6 +48,14 @@ public class CustomerSetAddressCustomTypeActionImpl implements CustomerSetAddres
 
     public String getAction() {
         return this.action;
+    }
+
+    /**
+     *  <p>User-defined unique identifier of the Address to be updated.</p>
+     */
+
+    public String getAddressId() {
+        return this.addressId;
     }
 
     /**
@@ -67,12 +74,8 @@ public class CustomerSetAddressCustomTypeActionImpl implements CustomerSetAddres
         return this.fields;
     }
 
-    /**
-     *
-     */
-
-    public String getAddressId() {
-        return this.addressId;
+    public void setAddressId(final String addressId) {
+        this.addressId = addressId;
     }
 
     public void setType(final com.commercetools.api.models.type.TypeResourceIdentifier type) {
@@ -81,10 +84,6 @@ public class CustomerSetAddressCustomTypeActionImpl implements CustomerSetAddres
 
     public void setFields(final com.commercetools.api.models.type.FieldContainer fields) {
         this.fields = fields;
-    }
-
-    public void setAddressId(final String addressId) {
-        this.addressId = addressId;
     }
 
     @Override
@@ -98,15 +97,15 @@ public class CustomerSetAddressCustomTypeActionImpl implements CustomerSetAddres
         CustomerSetAddressCustomTypeActionImpl that = (CustomerSetAddressCustomTypeActionImpl) o;
 
         return new EqualsBuilder().append(action, that.action)
+                .append(addressId, that.addressId)
                 .append(type, that.type)
                 .append(fields, that.fields)
-                .append(addressId, that.addressId)
                 .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(action).append(type).append(fields).append(addressId).toHashCode();
+        return new HashCodeBuilder(17, 37).append(action).append(addressId).append(type).append(fields).toHashCode();
     }
 
 }

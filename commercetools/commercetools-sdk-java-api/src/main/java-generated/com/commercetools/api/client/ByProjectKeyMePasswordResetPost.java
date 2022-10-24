@@ -14,7 +14,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *
+ *  <p>This is the last step in the password reset process of a Customer.</p>
+ *  <p>Resetting a password of the Customer produces the CustomerPasswordUpdated Message with <code>reset=true</code>.</p>
  *
  * <hr>
  * <div class=code-example>

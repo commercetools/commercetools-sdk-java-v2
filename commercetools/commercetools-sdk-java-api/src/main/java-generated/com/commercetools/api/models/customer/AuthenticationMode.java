@@ -15,8 +15,15 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public interface AuthenticationMode {
 
-    AuthenticationMode PASSWORD = AuthenticationModeEnum.PASSWORD;
+    /**
+    	<p>This is the default value. If set, the <code>password</code> field is required on <a href="ctp:api:type:CustomerDraft">CustomerDraft</a> and is present on <a href="ctp:api:type:Customer">Customer</a>.</p>
 
+    */
+    AuthenticationMode PASSWORD = AuthenticationModeEnum.PASSWORD;
+    /**
+    	<p>If set, the <code>password</code> field is optional on <a href="ctp:api:type:CustomerDraft">CustomerDraft</a> and is not present on <a href="ctp:api:type:Customer">Customer</a>.</p>
+
+    */
     AuthenticationMode EXTERNAL_AUTH = AuthenticationModeEnum.EXTERNAL_AUTH;
 
     enum AuthenticationModeEnum implements AuthenticationMode {

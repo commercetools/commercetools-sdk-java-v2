@@ -29,7 +29,7 @@ public interface MyCustomerSetMiddleNameAction extends MyCustomerUpdateAction {
     String SET_MIDDLE_NAME = "setMiddleName";
 
     /**
-     *
+     *  <p>Value to set. If empty, any existing value is removed.</p>
      */
 
     @JsonProperty("middleName")

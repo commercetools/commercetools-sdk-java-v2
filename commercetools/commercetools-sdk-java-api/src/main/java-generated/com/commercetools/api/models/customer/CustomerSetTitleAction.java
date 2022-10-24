@@ -11,7 +11,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * CustomerSetTitleAction
+ *  <p>Setting the title of the Customer produces the CustomerTitleSetMessage.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -29,7 +29,7 @@ public interface CustomerSetTitleAction extends CustomerUpdateAction {
     String SET_TITLE = "setTitle";
 
     /**
-     *
+     *  <p>Value to set. If empty, any existing value is removed.</p>
      */
 
     @JsonProperty("title")

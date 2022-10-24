@@ -51,7 +51,7 @@ public class CustomerTokenImpl implements CustomerToken, ModelBase {
     }
 
     /**
-     *  <p>Unique identifier of the CustomerToken.</p>
+     *  <p>Unique identifier of the token.</p>
      */
 
     public String getId() {
@@ -59,7 +59,7 @@ public class CustomerTokenImpl implements CustomerToken, ModelBase {
     }
 
     /**
-     *
+     *  <p>Date and time (UTC) the token was initially created.</p>
      */
 
     public java.time.ZonedDateTime getCreatedAt() {
@@ -67,7 +67,7 @@ public class CustomerTokenImpl implements CustomerToken, ModelBase {
     }
 
     /**
-     *
+     *  <p>When the token is created, <code>lastModifiedAt</code> is set to <code>createdAt</code>.</p>
      */
 
     public java.time.ZonedDateTime getLastModifiedAt() {
@@ -75,7 +75,7 @@ public class CustomerTokenImpl implements CustomerToken, ModelBase {
     }
 
     /**
-     *
+     *  <p>The <code>id</code> of the Customer.</p>
      */
 
     public String getCustomerId() {
@@ -83,7 +83,7 @@ public class CustomerTokenImpl implements CustomerToken, ModelBase {
     }
 
     /**
-     *
+     *  <p>Date and time (UTC) the token expires.</p>
      */
 
     public java.time.ZonedDateTime getExpiresAt() {
@@ -91,7 +91,7 @@ public class CustomerTokenImpl implements CustomerToken, ModelBase {
     }
 
     /**
-     *
+     *  <p>Value of the token.</p>
      */
 
     public String getValue() {

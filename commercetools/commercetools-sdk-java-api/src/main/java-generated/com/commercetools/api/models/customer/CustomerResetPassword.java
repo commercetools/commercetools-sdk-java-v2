@@ -31,21 +31,21 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface CustomerResetPassword {
 
     /**
-     *
+     *  <p>Value of the token to reset the Customer password.</p>
      */
     @NotNull
     @JsonProperty("tokenValue")
     public String getTokenValue();
 
     /**
-     *
+     *  <p>New password to be set.</p>
      */
     @NotNull
     @JsonProperty("newPassword")
     public String getNewPassword();
 
     /**
-     *
+     *  <p>Expected version of the Customer.</p>
      */
 
     @JsonProperty("version")

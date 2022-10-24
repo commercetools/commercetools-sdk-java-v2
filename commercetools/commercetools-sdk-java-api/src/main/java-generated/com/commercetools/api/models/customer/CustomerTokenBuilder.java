@@ -41,7 +41,7 @@ public class CustomerTokenBuilder implements Builder<CustomerToken> {
     private String value;
 
     /**
-     *  <p>Unique identifier of the CustomerToken.</p>
+     *  <p>Unique identifier of the token.</p>
      */
 
     public CustomerTokenBuilder id(final String id) {
@@ -50,7 +50,7 @@ public class CustomerTokenBuilder implements Builder<CustomerToken> {
     }
 
     /**
-     *
+     *  <p>Date and time (UTC) the token was initially created.</p>
      */
 
     public CustomerTokenBuilder createdAt(final java.time.ZonedDateTime createdAt) {
@@ -59,7 +59,7 @@ public class CustomerTokenBuilder implements Builder<CustomerToken> {
     }
 
     /**
-     *
+     *  <p>When the token is created, <code>lastModifiedAt</code> is set to <code>createdAt</code>.</p>
      */
 
     public CustomerTokenBuilder lastModifiedAt(@Nullable final java.time.ZonedDateTime lastModifiedAt) {
@@ -68,7 +68,7 @@ public class CustomerTokenBuilder implements Builder<CustomerToken> {
     }
 
     /**
-     *
+     *  <p>The <code>id</code> of the Customer.</p>
      */
 
     public CustomerTokenBuilder customerId(final String customerId) {
@@ -77,7 +77,7 @@ public class CustomerTokenBuilder implements Builder<CustomerToken> {
     }
 
     /**
-     *
+     *  <p>Date and time (UTC) the token expires.</p>
      */
 
     public CustomerTokenBuilder expiresAt(final java.time.ZonedDateTime expiresAt) {
@@ -86,7 +86,7 @@ public class CustomerTokenBuilder implements Builder<CustomerToken> {
     }
 
     /**
-     *
+     *  <p>Value of the token.</p>
      */
 
     public CustomerTokenBuilder value(final String value) {

@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * CustomerRemoveShippingAddressIdAction
+ *  <p>Removes a shipping address from <code>shippingAddressesIds</code>. If the shipping address is the default shipping address, the <code>defaultShippingAddressId</code> is unset. Either <code>addressId</code> or <code>addressKey</code> is required.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomerRemoveShippingAddressIdActionImpl implements CustomerRemoveShippingAddressIdAction, ModelBase {
@@ -47,7 +47,7 @@ public class CustomerRemoveShippingAddressIdActionImpl implements CustomerRemove
     }
 
     /**
-     *
+     *  <p><code>id</code> of the Address to remove from <code>shippingAddressesIds</code>.</p>
      */
 
     public String getAddressId() {
@@ -55,7 +55,7 @@ public class CustomerRemoveShippingAddressIdActionImpl implements CustomerRemove
     }
 
     /**
-     *
+     *  <p><code>key</code> of the Address to remove from <code>shippingAddressesIds</code>.</p>
      */
 
     public String getAddressKey() {

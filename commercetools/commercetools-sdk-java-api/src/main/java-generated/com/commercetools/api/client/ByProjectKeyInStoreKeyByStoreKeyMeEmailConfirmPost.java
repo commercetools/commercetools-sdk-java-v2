@@ -14,7 +14,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *
+ *  <p>This is the last step in the email verification process of a Customer.</p>
  *
  * <hr>
  * <div class=code-example>
@@ -31,27 +31,27 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ByProjectKeyInStoreKeyByStoreKeyMeEmailConfirmPost extends
-        BodyApiMethod<ByProjectKeyInStoreKeyByStoreKeyMeEmailConfirmPost, com.commercetools.api.models.customer.Customer, com.commercetools.api.models.customer.CustomerEmailVerify>
+        BodyApiMethod<ByProjectKeyInStoreKeyByStoreKeyMeEmailConfirmPost, com.commercetools.api.models.customer.Customer, com.commercetools.api.models.customer.MyCustomerEmailVerify>
         implements com.commercetools.api.client.ErrorableTrait<ByProjectKeyInStoreKeyByStoreKeyMeEmailConfirmPost> {
 
     private String projectKey;
     private String storeKey;
 
-    private com.commercetools.api.models.customer.CustomerEmailVerify customerEmailVerify;
+    private com.commercetools.api.models.customer.MyCustomerEmailVerify myCustomerEmailVerify;
 
     public ByProjectKeyInStoreKeyByStoreKeyMeEmailConfirmPost(final ApiHttpClient apiHttpClient, String projectKey,
-            String storeKey, com.commercetools.api.models.customer.CustomerEmailVerify customerEmailVerify) {
+            String storeKey, com.commercetools.api.models.customer.MyCustomerEmailVerify myCustomerEmailVerify) {
         super(apiHttpClient);
         this.projectKey = projectKey;
         this.storeKey = storeKey;
-        this.customerEmailVerify = customerEmailVerify;
+        this.myCustomerEmailVerify = myCustomerEmailVerify;
     }
 
     public ByProjectKeyInStoreKeyByStoreKeyMeEmailConfirmPost(ByProjectKeyInStoreKeyByStoreKeyMeEmailConfirmPost t) {
         super(t);
         this.projectKey = t.projectKey;
         this.storeKey = t.storeKey;
-        this.customerEmailVerify = t.customerEmailVerify;
+        this.myCustomerEmailVerify = t.myCustomerEmailVerify;
     }
 
     @Override
@@ -63,7 +63,7 @@ public class ByProjectKeyInStoreKeyByStoreKeyMeEmailConfirmPost extends
         }
         return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(),
             io.vrap.rmf.base.client.utils.json.JsonUtils
-                    .executing(() -> apiHttpClient().getSerializerService().toJsonByteArray(customerEmailVerify)));
+                    .executing(() -> apiHttpClient().getSerializerService().toJsonByteArray(myCustomerEmailVerify)));
 
     }
 
@@ -95,14 +95,14 @@ public class ByProjectKeyInStoreKeyByStoreKeyMeEmailConfirmPost extends
         this.storeKey = storeKey;
     }
 
-    public com.commercetools.api.models.customer.CustomerEmailVerify getBody() {
-        return customerEmailVerify;
+    public com.commercetools.api.models.customer.MyCustomerEmailVerify getBody() {
+        return myCustomerEmailVerify;
     }
 
     public ByProjectKeyInStoreKeyByStoreKeyMeEmailConfirmPost withBody(
-            com.commercetools.api.models.customer.CustomerEmailVerify customerEmailVerify) {
+            com.commercetools.api.models.customer.MyCustomerEmailVerify myCustomerEmailVerify) {
         ByProjectKeyInStoreKeyByStoreKeyMeEmailConfirmPost t = copy();
-        t.customerEmailVerify = customerEmailVerify;
+        t.myCustomerEmailVerify = myCustomerEmailVerify;
         return t;
     }
 
@@ -118,13 +118,16 @@ public class ByProjectKeyInStoreKeyByStoreKeyMeEmailConfirmPost extends
 
         return new EqualsBuilder().append(projectKey, that.projectKey)
                 .append(storeKey, that.storeKey)
-                .append(customerEmailVerify, that.customerEmailVerify)
+                .append(myCustomerEmailVerify, that.myCustomerEmailVerify)
                 .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(projectKey).append(storeKey).append(customerEmailVerify).toHashCode();
+        return new HashCodeBuilder(17, 37).append(projectKey)
+                .append(storeKey)
+                .append(myCustomerEmailVerify)
+                .toHashCode();
     }
 
     @Override

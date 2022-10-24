@@ -32,21 +32,22 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface MyCustomerChangePassword {
 
     /**
-     *
+     *  <p>Expected version of the Customer on which the changes should be applied.</p>
      */
     @NotNull
     @JsonProperty("version")
     public Long getVersion();
 
     /**
-     *
+     *  <p>Current password of the Customer.</p>
+     *  <p>If the current password does not match, an InvalidCurrentPassword error is returned.</p>
      */
     @NotNull
     @JsonProperty("currentPassword")
     public String getCurrentPassword();
 
     /**
-     *
+     *  <p>New password to be set.</p>
      */
     @NotNull
     @JsonProperty("newPassword")

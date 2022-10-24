@@ -14,7 +14,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Set a new password using a token.</p>
+ *  <p>Resetting the password of the Customer produces the CustomerPasswordUpdated Message with <code>reset=true</code>.</p>
  *
  * <hr>
  * <div class=code-example>

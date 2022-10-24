@@ -46,7 +46,7 @@ public class CustomerSigninBuilder implements Builder<CustomerSignin> {
     private Boolean updateProductData;
 
     /**
-     *
+     *  <p>Email address of the Customer treated as case-insensitive.</p>
      */
 
     public CustomerSigninBuilder email(final String email) {
@@ -55,7 +55,7 @@ public class CustomerSigninBuilder implements Builder<CustomerSignin> {
     }
 
     /**
-     *
+     *  <p>Password of the Customer.</p>
      */
 
     public CustomerSigninBuilder password(final String password) {
@@ -64,7 +64,7 @@ public class CustomerSigninBuilder implements Builder<CustomerSignin> {
     }
 
     /**
-     *
+     *  <p>Deprecated since it is now possible to identify an anonymous cart by using its <code>id</code> or external <code>key</code>.</p>
      */
     @Deprecated
     public CustomerSigninBuilder anonymousCartId(@Nullable final String anonymousCartId) {
@@ -73,7 +73,7 @@ public class CustomerSigninBuilder implements Builder<CustomerSignin> {
     }
 
     /**
-     *  <p>ResourceIdentifier to a Cart.</p>
+     *  <p>Identifies a Cart that will be assigned to the Customer.</p>
      */
 
     public CustomerSigninBuilder anonymousCart(
@@ -84,7 +84,7 @@ public class CustomerSigninBuilder implements Builder<CustomerSignin> {
     }
 
     /**
-     *  <p>ResourceIdentifier to a Cart.</p>
+     *  <p>Identifies a Cart that will be assigned to the Customer.</p>
      */
 
     public CustomerSigninBuilder anonymousCart(
@@ -94,7 +94,10 @@ public class CustomerSigninBuilder implements Builder<CustomerSignin> {
     }
 
     /**
-     *
+     *  <ul>
+     *   <li>Set to <code>MergeWithExistingCustomerCart</code> if LineItems of the anonymous Cart should be merged with the active Customer Cart that has been modified most recently.</li>
+     *   <li>Set to <code>UseAsNewActiveCustomerCart</code> if the anonymous Cart should be used as the new active Customer Cart and no LineItems are to be merged.</li>
+     *  </ul>
      */
 
     public CustomerSigninBuilder anonymousCartSignInMode(
@@ -104,7 +107,7 @@ public class CustomerSigninBuilder implements Builder<CustomerSignin> {
     }
 
     /**
-     *
+     *  <p>If both <code>anonymousCart</code> and <code>anonymousId</code> are provided, the <code>anonymousId</code> on the CustomerSignin must match that of the anonymous [Cart](ctp:api:type:Cart]. Otherwise a 400 Bad Request <code>Invalid Operation</code> error is returned with the message: "Cart with the ID cart-id does not have the expected anonymousId.".</p>
      */
 
     public CustomerSigninBuilder anonymousId(@Nullable final String anonymousId) {
@@ -113,7 +116,10 @@ public class CustomerSigninBuilder implements Builder<CustomerSignin> {
     }
 
     /**
-     *
+     *  <ul>
+     *   <li>If <code>true</code>, the LineItem Product data (<code>name</code>, <code>variant</code>, and <code>productType</code>) of the returned Cart will be updated.</li>
+     *   <li>If <code>false</code>, only the prices, discounts, and tax rates will be updated.</li>
+     *  </ul>
      */
 
     public CustomerSigninBuilder updateProductData(@Nullable final Boolean updateProductData) {

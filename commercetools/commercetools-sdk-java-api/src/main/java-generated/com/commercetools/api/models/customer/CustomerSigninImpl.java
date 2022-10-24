@@ -55,7 +55,7 @@ public class CustomerSigninImpl implements CustomerSignin, ModelBase {
     }
 
     /**
-     *
+     *  <p>Email address of the Customer treated as case-insensitive.</p>
      */
 
     public String getEmail() {
@@ -63,7 +63,7 @@ public class CustomerSigninImpl implements CustomerSignin, ModelBase {
     }
 
     /**
-     *
+     *  <p>Password of the Customer.</p>
      */
 
     public String getPassword() {
@@ -71,7 +71,7 @@ public class CustomerSigninImpl implements CustomerSignin, ModelBase {
     }
 
     /**
-     *
+     *  <p>Deprecated since it is now possible to identify an anonymous cart by using its <code>id</code> or external <code>key</code>.</p>
      */
     @Deprecated
     public String getAnonymousCartId() {
@@ -79,7 +79,7 @@ public class CustomerSigninImpl implements CustomerSignin, ModelBase {
     }
 
     /**
-     *  <p>ResourceIdentifier to a Cart.</p>
+     *  <p>Identifies a Cart that will be assigned to the Customer.</p>
      */
 
     public com.commercetools.api.models.cart.CartResourceIdentifier getAnonymousCart() {
@@ -87,7 +87,10 @@ public class CustomerSigninImpl implements CustomerSignin, ModelBase {
     }
 
     /**
-     *
+     *  <ul>
+     *   <li>Set to <code>MergeWithExistingCustomerCart</code> if LineItems of the anonymous Cart should be merged with the active Customer Cart that has been modified most recently.</li>
+     *   <li>Set to <code>UseAsNewActiveCustomerCart</code> if the anonymous Cart should be used as the new active Customer Cart and no LineItems are to be merged.</li>
+     *  </ul>
      */
 
     public com.commercetools.api.models.customer.AnonymousCartSignInMode getAnonymousCartSignInMode() {
@@ -95,7 +98,7 @@ public class CustomerSigninImpl implements CustomerSignin, ModelBase {
     }
 
     /**
-     *
+     *  <p>If both <code>anonymousCart</code> and <code>anonymousId</code> are provided, the <code>anonymousId</code> on the CustomerSignin must match that of the anonymous [Cart](ctp:api:type:Cart]. Otherwise a 400 Bad Request <code>Invalid Operation</code> error is returned with the message: "Cart with the ID cart-id does not have the expected anonymousId.".</p>
      */
 
     public String getAnonymousId() {
@@ -103,7 +106,10 @@ public class CustomerSigninImpl implements CustomerSignin, ModelBase {
     }
 
     /**
-     *
+     *  <ul>
+     *   <li>If <code>true</code>, the LineItem Product data (<code>name</code>, <code>variant</code>, and <code>productType</code>) of the returned Cart will be updated.</li>
+     *   <li>If <code>false</code>, only the prices, discounts, and tax rates will be updated.</li>
+     *  </ul>
      */
 
     public Boolean getUpdateProductData() {

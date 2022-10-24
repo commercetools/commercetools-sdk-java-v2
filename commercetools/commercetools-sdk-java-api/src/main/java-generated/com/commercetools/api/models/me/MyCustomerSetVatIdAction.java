@@ -29,7 +29,7 @@ public interface MyCustomerSetVatIdAction extends MyCustomerUpdateAction {
     String SET_VAT_ID = "setVatId";
 
     /**
-     *
+     *  <p>Value to set. If empty, any existing value is removed.</p>
      */
 
     @JsonProperty("vatId")

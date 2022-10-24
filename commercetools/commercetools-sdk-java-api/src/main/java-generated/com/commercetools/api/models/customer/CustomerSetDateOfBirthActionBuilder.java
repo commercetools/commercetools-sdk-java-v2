@@ -26,7 +26,7 @@ public class CustomerSetDateOfBirthActionBuilder implements Builder<CustomerSetD
     private java.time.LocalDate dateOfBirth;
 
     /**
-     *  <p>If not defined, the date of birth is unset.</p>
+     *  <p>Value to set. If empty, any existing value is removed.</p>
      */
 
     public CustomerSetDateOfBirthActionBuilder dateOfBirth(@Nullable final java.time.LocalDate dateOfBirth) {

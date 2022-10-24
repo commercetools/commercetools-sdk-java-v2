@@ -33,14 +33,14 @@ public interface MyCustomerUpdate extends
         com.commercetools.api.models.ResourceUpdate<MyCustomerUpdate, MyCustomerUpdateAction, MyCustomerUpdateBuilder> {
 
     /**
-     *
+     *  <p>Expected version of the Customer on which the changes should be applied. If the expected version does not match the actual version, a 409 Conflict error will be returned.</p>
      */
     @NotNull
     @JsonProperty("version")
     public Long getVersion();
 
     /**
-     *
+     *  <p>Update actions to be performed on the Customer.</p>
      */
     @NotNull
     @Valid

@@ -11,7 +11,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * MyCustomerSetCompanyNameAction
+ *  <p>Setting the <code>companyName</code> field on the Customer produces the CustomerCompanyNameSet Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -29,7 +29,7 @@ public interface MyCustomerSetCompanyNameAction extends MyCustomerUpdateAction {
     String SET_COMPANY_NAME = "setCompanyName";
 
     /**
-     *
+     *  <p>Value to set. If empty, any existing value is removed.</p>
      */
 
     @JsonProperty("companyName")

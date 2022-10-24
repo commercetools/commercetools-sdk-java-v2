@@ -32,6 +32,8 @@ public class MyCustomerDraftImpl implements MyCustomerDraft, ModelBase {
 
     private String title;
 
+    private String salutation;
+
     private java.time.LocalDate dateOfBirth;
 
     private String companyName;
@@ -54,6 +56,7 @@ public class MyCustomerDraftImpl implements MyCustomerDraft, ModelBase {
     MyCustomerDraftImpl(@JsonProperty("email") final String email, @JsonProperty("password") final String password,
             @JsonProperty("firstName") final String firstName, @JsonProperty("lastName") final String lastName,
             @JsonProperty("middleName") final String middleName, @JsonProperty("title") final String title,
+            @JsonProperty("salutation") final String salutation,
             @JsonProperty("dateOfBirth") final java.time.LocalDate dateOfBirth,
             @JsonProperty("companyName") final String companyName, @JsonProperty("vatId") final String vatId,
             @JsonProperty("addresses") final java.util.List<com.commercetools.api.models.common.BaseAddress> addresses,
@@ -68,6 +71,7 @@ public class MyCustomerDraftImpl implements MyCustomerDraft, ModelBase {
         this.lastName = lastName;
         this.middleName = middleName;
         this.title = title;
+        this.salutation = salutation;
         this.dateOfBirth = dateOfBirth;
         this.companyName = companyName;
         this.vatId = vatId;
@@ -83,7 +87,7 @@ public class MyCustomerDraftImpl implements MyCustomerDraft, ModelBase {
     }
 
     /**
-     *
+     *  <p>Email address of the Customer that is unique for an entire Project or Store the Customer is assigned to. It is the mandatory unique identifier of a Customer.</p>
      */
 
     public String getEmail() {
@@ -91,7 +95,7 @@ public class MyCustomerDraftImpl implements MyCustomerDraft, ModelBase {
     }
 
     /**
-     *
+     *  <p>Password of the Customer.</p>
      */
 
     public String getPassword() {
@@ -99,7 +103,7 @@ public class MyCustomerDraftImpl implements MyCustomerDraft, ModelBase {
     }
 
     /**
-     *
+     *  <p>Given name (first name) of the Customer.</p>
      */
 
     public String getFirstName() {
@@ -107,7 +111,7 @@ public class MyCustomerDraftImpl implements MyCustomerDraft, ModelBase {
     }
 
     /**
-     *
+     *  <p>Family name (last name) of the Customer.</p>
      */
 
     public String getLastName() {
@@ -115,7 +119,7 @@ public class MyCustomerDraftImpl implements MyCustomerDraft, ModelBase {
     }
 
     /**
-     *
+     *  <p>Middle name of the Customer.</p>
      */
 
     public String getMiddleName() {
@@ -123,7 +127,7 @@ public class MyCustomerDraftImpl implements MyCustomerDraft, ModelBase {
     }
 
     /**
-     *
+     *  <p>Title of the Customer, for example, 'Dr.'.</p>
      */
 
     public String getTitle() {
@@ -131,7 +135,15 @@ public class MyCustomerDraftImpl implements MyCustomerDraft, ModelBase {
     }
 
     /**
-     *
+     *  <p>Salutation of the Customer, for example, 'Mr.' or 'Mrs.'.</p>
+     */
+
+    public String getSalutation() {
+        return this.salutation;
+    }
+
+    /**
+     *  <p>Date of birth of the Customer.</p>
      */
 
     public java.time.LocalDate getDateOfBirth() {
@@ -139,7 +151,7 @@ public class MyCustomerDraftImpl implements MyCustomerDraft, ModelBase {
     }
 
     /**
-     *
+     *  <p>Company name of the Customer.</p>
      */
 
     public String getCompanyName() {
@@ -147,7 +159,7 @@ public class MyCustomerDraftImpl implements MyCustomerDraft, ModelBase {
     }
 
     /**
-     *
+     *  <p>Unique VAT ID of the Customer.</p>
      */
 
     public String getVatId() {
@@ -155,7 +167,7 @@ public class MyCustomerDraftImpl implements MyCustomerDraft, ModelBase {
     }
 
     /**
-     *  <p>Sets the ID of each address to be unique in the addresses list.</p>
+     *  <p>Addresses of the Customer.</p>
      */
 
     public java.util.List<com.commercetools.api.models.common.BaseAddress> getAddresses() {
@@ -163,7 +175,7 @@ public class MyCustomerDraftImpl implements MyCustomerDraft, ModelBase {
     }
 
     /**
-     *  <p>The index of the address in the addresses array. The <code>defaultShippingAddressId</code> of the customer will be set to the ID of that address.</p>
+     *  <p>Index of the address in the <code>addresses</code> array to use as the default shipping address. The <code>defaultShippingAddressId</code> of the Customer will be set to the <code>id</code> of that address.</p>
      */
 
     public Long getDefaultShippingAddress() {
@@ -171,7 +183,7 @@ public class MyCustomerDraftImpl implements MyCustomerDraft, ModelBase {
     }
 
     /**
-     *  <p>The index of the address in the addresses array. The <code>defaultBillingAddressId</code> of the customer will be set to the ID of that address.</p>
+     *  <p>Index of the address in the <code>addresses</code> array to use as the default billing address. The <code>defaultBillingAddressId</code> of the Customer will be set to the <code>id</code> of that address.</p>
      */
 
     public Long getDefaultBillingAddress() {
@@ -179,7 +191,7 @@ public class MyCustomerDraftImpl implements MyCustomerDraft, ModelBase {
     }
 
     /**
-     *  <p>The custom fields.</p>
+     *  <p>Custom Fields for the Customer.</p>
      */
 
     public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
@@ -187,7 +199,7 @@ public class MyCustomerDraftImpl implements MyCustomerDraft, ModelBase {
     }
 
     /**
-     *
+     *  <p>Preferred language of the Customer. Must be one of the languages supported by the Project.</p>
      */
 
     public String getLocale() {
@@ -195,7 +207,7 @@ public class MyCustomerDraftImpl implements MyCustomerDraft, ModelBase {
     }
 
     /**
-     *
+     *  <p>Sets the Stores for the Customer.</p>
      */
 
     public java.util.List<com.commercetools.api.models.store.StoreResourceIdentifier> getStores() {
@@ -224,6 +236,10 @@ public class MyCustomerDraftImpl implements MyCustomerDraft, ModelBase {
 
     public void setTitle(final String title) {
         this.title = title;
+    }
+
+    public void setSalutation(final String salutation) {
+        this.salutation = salutation;
     }
 
     public void setDateOfBirth(final java.time.LocalDate dateOfBirth) {
@@ -286,6 +302,7 @@ public class MyCustomerDraftImpl implements MyCustomerDraft, ModelBase {
                 .append(lastName, that.lastName)
                 .append(middleName, that.middleName)
                 .append(title, that.title)
+                .append(salutation, that.salutation)
                 .append(dateOfBirth, that.dateOfBirth)
                 .append(companyName, that.companyName)
                 .append(vatId, that.vatId)
@@ -306,6 +323,7 @@ public class MyCustomerDraftImpl implements MyCustomerDraft, ModelBase {
                 .append(lastName)
                 .append(middleName)
                 .append(title)
+                .append(salutation)
                 .append(dateOfBirth)
                 .append(companyName)
                 .append(vatId)

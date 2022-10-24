@@ -28,7 +28,7 @@ public class CustomerUpdateBuilder implements Builder<CustomerUpdate> {
     private java.util.List<com.commercetools.api.models.customer.CustomerUpdateAction> actions;
 
     /**
-     *
+     *  <p>Expected version of the Customer on which the changes should be applied. If the expected version does not match the actual version, a 409 Conflict error will be returned.</p>
      */
 
     public CustomerUpdateBuilder version(final Long version) {
@@ -37,7 +37,7 @@ public class CustomerUpdateBuilder implements Builder<CustomerUpdate> {
     }
 
     /**
-     *
+     *  <p>Update actions to be performed on the Customer.</p>
      */
 
     public CustomerUpdateBuilder actions(final com.commercetools.api.models.customer.CustomerUpdateAction... actions) {
@@ -46,7 +46,7 @@ public class CustomerUpdateBuilder implements Builder<CustomerUpdate> {
     }
 
     /**
-     *
+     *  <p>Update actions to be performed on the Customer.</p>
      */
 
     public CustomerUpdateBuilder actions(
@@ -56,7 +56,7 @@ public class CustomerUpdateBuilder implements Builder<CustomerUpdate> {
     }
 
     /**
-     *
+     *  <p>Update actions to be performed on the Customer.</p>
      */
 
     public CustomerUpdateBuilder plusActions(
@@ -69,7 +69,7 @@ public class CustomerUpdateBuilder implements Builder<CustomerUpdate> {
     }
 
     /**
-     *
+     *  <p>Update actions to be performed on the Customer.</p>
      */
 
     public CustomerUpdateBuilder plusActions(
@@ -82,7 +82,7 @@ public class CustomerUpdateBuilder implements Builder<CustomerUpdate> {
     }
 
     /**
-     *
+     *  <p>Update actions to be performed on the Customer.</p>
      */
 
     public CustomerUpdateBuilder withActions(

@@ -11,7 +11,8 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * CustomerRemoveAddressAction
+ *  <p>Removing an address from the Customer produces the CustomerAddressRemoved Message.</p>
+ *  <p>Either <code>addressId</code> or <code>addressKey</code> is required.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -29,14 +30,14 @@ public interface CustomerRemoveAddressAction extends CustomerUpdateAction {
     String REMOVE_ADDRESS = "removeAddress";
 
     /**
-     *
+     *  <p><code>id</code> of the Address to remove.</p>
      */
 
     @JsonProperty("addressId")
     public String getAddressId();
 
     /**
-     *
+     *  <p><code>key</code> of the Address to remove.</p>
      */
 
     @JsonProperty("addressKey")

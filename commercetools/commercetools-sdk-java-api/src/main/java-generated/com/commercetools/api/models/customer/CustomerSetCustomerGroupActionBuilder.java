@@ -27,7 +27,7 @@ public class CustomerSetCustomerGroupActionBuilder implements Builder<CustomerSe
     private com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier customerGroup;
 
     /**
-     *  <p>If not defined, the customer group is unset.</p>
+     *  <p>Value to set. If empty, any existing value is removed.</p>
      */
 
     public CustomerSetCustomerGroupActionBuilder customerGroup(
@@ -39,7 +39,7 @@ public class CustomerSetCustomerGroupActionBuilder implements Builder<CustomerSe
     }
 
     /**
-     *  <p>If not defined, the customer group is unset.</p>
+     *  <p>Value to set. If empty, any existing value is removed.</p>
      */
 
     public CustomerSetCustomerGroupActionBuilder customerGroup(

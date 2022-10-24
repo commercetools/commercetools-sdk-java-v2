@@ -11,7 +11,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * MyCustomerSetDefaultBillingAddressAction
+ *  <p>Sets the default billing address from <code>addresses</code>. If the address is not currently a billing address, it is added to <code>billingAddressIds</code>. Either <code>addressId</code> or <code>addressKey</code> is required.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -29,14 +29,14 @@ public interface MyCustomerSetDefaultBillingAddressAction extends MyCustomerUpda
     String SET_DEFAULT_BILLING_ADDRESS = "setDefaultBillingAddress";
 
     /**
-     *
+     *  <p><code>id</code> of the Address to become the default billing address.</p>
      */
 
     @JsonProperty("addressId")
     public String getAddressId();
 
     /**
-     *
+     *  <p><code>key</code> of the Address to become the default billing address.</p>
      */
 
     @JsonProperty("addressKey")

@@ -30,7 +30,7 @@ public class MyCustomerRemoveShippingAddressIdActionBuilder
     private String addressKey;
 
     /**
-     *
+     *  <p><code>id</code> of the Address to remove from <code>shippingAddressesIds</code>.</p>
      */
 
     public MyCustomerRemoveShippingAddressIdActionBuilder addressId(@Nullable final String addressId) {
@@ -39,7 +39,7 @@ public class MyCustomerRemoveShippingAddressIdActionBuilder
     }
 
     /**
-     *
+     *  <p><code>key</code> of the Address to remove from <code>shippingAddressesIds</code>.</p>
      */
 
     public MyCustomerRemoveShippingAddressIdActionBuilder addressKey(@Nullable final String addressKey) {

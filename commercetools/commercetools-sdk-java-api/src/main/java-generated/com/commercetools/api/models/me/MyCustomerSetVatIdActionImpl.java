@@ -43,7 +43,7 @@ public class MyCustomerSetVatIdActionImpl implements MyCustomerSetVatIdAction, M
     }
 
     /**
-     *
+     *  <p>Value to set. If empty, any existing value is removed.</p>
      */
 
     public String getVatId() {

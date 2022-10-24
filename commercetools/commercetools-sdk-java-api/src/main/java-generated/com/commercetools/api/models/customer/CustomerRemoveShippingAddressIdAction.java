@@ -11,7 +11,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * CustomerRemoveShippingAddressIdAction
+ *  <p>Removes a shipping address from <code>shippingAddressesIds</code>. If the shipping address is the default shipping address, the <code>defaultShippingAddressId</code> is unset. Either <code>addressId</code> or <code>addressKey</code> is required.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -29,14 +29,14 @@ public interface CustomerRemoveShippingAddressIdAction extends CustomerUpdateAct
     String REMOVE_SHIPPING_ADDRESS_ID = "removeShippingAddressId";
 
     /**
-     *
+     *  <p><code>id</code> of the Address to remove from <code>shippingAddressesIds</code>.</p>
      */
 
     @JsonProperty("addressId")
     public String getAddressId();
 
     /**
-     *
+     *  <p><code>key</code> of the Address to remove from <code>shippingAddressesIds</code>.</p>
      */
 
     @JsonProperty("addressKey")

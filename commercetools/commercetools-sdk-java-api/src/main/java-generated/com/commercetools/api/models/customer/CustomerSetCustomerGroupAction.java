@@ -14,7 +14,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * CustomerSetCustomerGroupAction
+ *  <p>Setting the Customer Group of the Customer produces the CustomerGroupSet Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -32,7 +32,7 @@ public interface CustomerSetCustomerGroupAction extends CustomerUpdateAction {
     String SET_CUSTOMER_GROUP = "setCustomerGroup";
 
     /**
-     *  <p>If not defined, the customer group is unset.</p>
+     *  <p>Value to set. If empty, any existing value is removed.</p>
      */
     @Valid
     @JsonProperty("customerGroup")

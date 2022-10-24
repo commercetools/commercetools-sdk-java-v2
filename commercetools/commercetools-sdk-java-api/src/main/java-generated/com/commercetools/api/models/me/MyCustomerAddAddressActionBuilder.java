@@ -25,7 +25,7 @@ public class MyCustomerAddAddressActionBuilder implements Builder<MyCustomerAddA
     private com.commercetools.api.models.common.BaseAddress address;
 
     /**
-     *
+     *  <p>Value to append to the <code>addresses</code> array.</p>
      */
 
     public MyCustomerAddAddressActionBuilder address(
@@ -35,7 +35,7 @@ public class MyCustomerAddAddressActionBuilder implements Builder<MyCustomerAddA
     }
 
     /**
-     *
+     *  <p>Value to append to the <code>addresses</code> array.</p>
      */
 
     public MyCustomerAddAddressActionBuilder address(final com.commercetools.api.models.common.BaseAddress address) {

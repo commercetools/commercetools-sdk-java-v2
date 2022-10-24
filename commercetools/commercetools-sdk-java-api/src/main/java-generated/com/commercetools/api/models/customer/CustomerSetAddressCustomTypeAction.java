@@ -35,6 +35,13 @@ public interface CustomerSetAddressCustomTypeAction extends CustomerUpdateAction
     String SET_ADDRESS_CUSTOM_TYPE = "setAddressCustomType";
 
     /**
+     *  <p>User-defined unique identifier of the Address to be updated.</p>
+     */
+    @NotNull
+    @JsonProperty("addressId")
+    public String getAddressId();
+
+    /**
      *  <p>Defines the Type that extends the <code>address</code> with Custom Fields. If absent, any existing Type and Custom Fields are removed from the <code>address</code>.</p>
      */
     @Valid
@@ -48,18 +55,11 @@ public interface CustomerSetAddressCustomTypeAction extends CustomerUpdateAction
     @JsonProperty("fields")
     public FieldContainer getFields();
 
-    /**
-     *
-     */
-    @NotNull
-    @JsonProperty("addressId")
-    public String getAddressId();
+    public void setAddressId(final String addressId);
 
     public void setType(final TypeResourceIdentifier type);
 
     public void setFields(final FieldContainer fields);
-
-    public void setAddressId(final String addressId);
 
     public static CustomerSetAddressCustomTypeAction of() {
         return new CustomerSetAddressCustomTypeActionImpl();
@@ -67,9 +67,9 @@ public interface CustomerSetAddressCustomTypeAction extends CustomerUpdateAction
 
     public static CustomerSetAddressCustomTypeAction of(final CustomerSetAddressCustomTypeAction template) {
         CustomerSetAddressCustomTypeActionImpl instance = new CustomerSetAddressCustomTypeActionImpl();
+        instance.setAddressId(template.getAddressId());
         instance.setType(template.getType());
         instance.setFields(template.getFields());
-        instance.setAddressId(template.getAddressId());
         return instance;
     }
 

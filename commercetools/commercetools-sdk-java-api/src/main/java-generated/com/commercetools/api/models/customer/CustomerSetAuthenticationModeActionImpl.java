@@ -48,7 +48,7 @@ public class CustomerSetAuthenticationModeActionImpl implements CustomerSetAuthe
     }
 
     /**
-     *
+     *  <p>Value to set. Changing a Customer's <code>authMode</code> from <code>Password</code> to <code>ExternalAuth</code> deletes the Customer's password.</p>
      */
 
     public com.commercetools.api.models.customer.AuthenticationMode getAuthMode() {
@@ -56,7 +56,7 @@ public class CustomerSetAuthenticationModeActionImpl implements CustomerSetAuthe
     }
 
     /**
-     *  <p>Required when <code>authMode</code> is <code>Password</code></p>
+     *  <p>Required when <code>authMode</code> is <code>Password</code>.</p>
      */
 
     public String getPassword() {

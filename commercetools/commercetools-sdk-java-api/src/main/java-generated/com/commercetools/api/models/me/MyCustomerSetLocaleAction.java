@@ -29,7 +29,7 @@ public interface MyCustomerSetLocaleAction extends MyCustomerUpdateAction {
     String SET_LOCALE = "setLocale";
 
     /**
-     *
+     *  <p>Value to set. Must be one of the languages supported by the Project.</p>
      */
 
     @JsonProperty("locale")

@@ -193,7 +193,7 @@ public class CustomerPasswordUpdatedMessageBuilder implements Builder<CustomerPa
     }
 
     /**
-     *  <p>Whether the Customer's password was updated during the Customer's Password Reset workflow.</p>
+     *  <p>Whether the Customer's password was updated during the Reset password or Change password flow.</p>
      */
 
     public CustomerPasswordUpdatedMessageBuilder reset(final Boolean reset) {

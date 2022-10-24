@@ -14,7 +14,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *
+ *  <p>If omitted in the request body, the Customer <code>stores</code> field is set to the Store specified in the path parameter.</p>
+ *  <p>Creating a Customer produces the CustomerCreated Message.</p>
  *
  * <hr>
  * <div class=code-example>

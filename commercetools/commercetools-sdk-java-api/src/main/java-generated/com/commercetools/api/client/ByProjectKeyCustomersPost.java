@@ -18,7 +18,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Creates a customer. If an anonymous cart is passed in, then the cart is assigned to the created customer and the version number of the Cart will increase. If the ID of an anonymous session is given, all carts and orders will be assigned to the created customer.</p>
+ *  <p>If the <code>anonymousCart</code> field is set on the CustomerDraft, then the newly created Customer will be assigned to that Cart. Similarly, if the <code>anonymousId</code> field is set, the Customer will be set on all Carts, Orders, ShoppingLists and Payments with the same <code>anonymousId</code>. Creating a Customer produces the CustomerCreated Message.</p>
  *
  * <hr>
  * <div class=code-example>

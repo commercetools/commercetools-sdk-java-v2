@@ -19,9 +19,9 @@ public class ByProjectKeyInStoreKeyByStoreKeyCustomersPasswordResetRequestBuilde
     }
 
     public ByProjectKeyInStoreKeyByStoreKeyCustomersPasswordResetPost post(
-            com.commercetools.api.models.customer.MyCustomerResetPassword myCustomerResetPassword) {
+            com.commercetools.api.models.customer.CustomerResetPassword customerResetPassword) {
         return new ByProjectKeyInStoreKeyByStoreKeyCustomersPasswordResetPost(apiHttpClient, projectKey, storeKey,
-            myCustomerResetPassword);
+            customerResetPassword);
     }
 
 }

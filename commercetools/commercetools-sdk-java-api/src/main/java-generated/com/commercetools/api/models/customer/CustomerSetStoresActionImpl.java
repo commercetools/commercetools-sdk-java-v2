@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * CustomerSetStoresAction
+ *  <p>Sets the Stores the Customer account is associated with. If no Stores are specified, the Customer becomes a global Customer.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomerSetStoresActionImpl implements CustomerSetStoresAction, ModelBase {
@@ -44,7 +44,7 @@ public class CustomerSetStoresActionImpl implements CustomerSetStoresAction, Mod
     }
 
     /**
-     *
+     *  <p>ResourceIdentifier of the Stores to set.</p>
      */
 
     public java.util.List<com.commercetools.api.models.store.StoreResourceIdentifier> getStores() {

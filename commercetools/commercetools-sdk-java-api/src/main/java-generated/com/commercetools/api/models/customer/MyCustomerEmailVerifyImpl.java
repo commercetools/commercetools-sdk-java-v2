@@ -15,31 +15,19 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * CustomerEmailVerify
+ * MyCustomerEmailVerify
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-public class CustomerEmailVerifyImpl implements CustomerEmailVerify, ModelBase {
-
-    private Long version;
+public class MyCustomerEmailVerifyImpl implements MyCustomerEmailVerify, ModelBase {
 
     private String tokenValue;
 
     @JsonCreator
-    CustomerEmailVerifyImpl(@JsonProperty("version") final Long version,
-            @JsonProperty("tokenValue") final String tokenValue) {
-        this.version = version;
+    MyCustomerEmailVerifyImpl(@JsonProperty("tokenValue") final String tokenValue) {
         this.tokenValue = tokenValue;
     }
 
-    public CustomerEmailVerifyImpl() {
-    }
-
-    /**
-     *  <p>Expected version of the Customer.</p>
-     */
-
-    public Long getVersion() {
-        return this.version;
+    public MyCustomerEmailVerifyImpl() {
     }
 
     /**
@@ -48,10 +36,6 @@ public class CustomerEmailVerifyImpl implements CustomerEmailVerify, ModelBase {
 
     public String getTokenValue() {
         return this.tokenValue;
-    }
-
-    public void setVersion(final Long version) {
-        this.version = version;
     }
 
     public void setTokenValue(final String tokenValue) {
@@ -66,14 +50,14 @@ public class CustomerEmailVerifyImpl implements CustomerEmailVerify, ModelBase {
         if (o == null || getClass() != o.getClass())
             return false;
 
-        CustomerEmailVerifyImpl that = (CustomerEmailVerifyImpl) o;
+        MyCustomerEmailVerifyImpl that = (MyCustomerEmailVerifyImpl) o;
 
-        return new EqualsBuilder().append(version, that.version).append(tokenValue, that.tokenValue).isEquals();
+        return new EqualsBuilder().append(tokenValue, that.tokenValue).isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(version).append(tokenValue).toHashCode();
+        return new HashCodeBuilder(17, 37).append(tokenValue).toHashCode();
     }
 
 }

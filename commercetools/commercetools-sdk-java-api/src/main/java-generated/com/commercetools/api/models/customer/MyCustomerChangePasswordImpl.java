@@ -39,7 +39,7 @@ public class MyCustomerChangePasswordImpl implements MyCustomerChangePassword, M
     }
 
     /**
-     *
+     *  <p>Expected version of the Customer on which the changes should be applied.</p>
      */
 
     public Long getVersion() {
@@ -47,7 +47,8 @@ public class MyCustomerChangePasswordImpl implements MyCustomerChangePassword, M
     }
 
     /**
-     *
+     *  <p>Current password of the Customer.</p>
+     *  <p>If the current password does not match, an InvalidCurrentPassword error is returned.</p>
      */
 
     public String getCurrentPassword() {
@@ -55,7 +56,7 @@ public class MyCustomerChangePasswordImpl implements MyCustomerChangePassword, M
     }
 
     /**
-     *
+     *  <p>New password to be set.</p>
      */
 
     public String getNewPassword() {

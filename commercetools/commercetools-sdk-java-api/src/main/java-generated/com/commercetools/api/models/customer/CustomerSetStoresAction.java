@@ -14,7 +14,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * CustomerSetStoresAction
+ *  <p>Sets the Stores the Customer account is associated with. If no Stores are specified, the Customer becomes a global Customer.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -32,7 +32,7 @@ public interface CustomerSetStoresAction extends CustomerUpdateAction {
     String SET_STORES = "setStores";
 
     /**
-     *
+     *  <p>ResourceIdentifier of the Stores to set.</p>
      */
     @Valid
     @JsonProperty("stores")

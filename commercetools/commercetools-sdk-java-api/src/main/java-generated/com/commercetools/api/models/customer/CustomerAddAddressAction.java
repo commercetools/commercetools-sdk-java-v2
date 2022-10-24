@@ -15,7 +15,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * CustomerAddAddressAction
+ *  <p>Adding an address to the Customer produces the CustomerAddressAdded Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -34,7 +34,7 @@ public interface CustomerAddAddressAction extends CustomerUpdateAction {
     String ADD_ADDRESS = "addAddress";
 
     /**
-     *
+     *  <p>Value to append to the <code>addresses</code> array.</p>
      */
     @NotNull
     @Valid

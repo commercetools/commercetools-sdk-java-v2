@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * CustomerAddStoreAction
+ *  <p>Associates the Customer with a Store.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomerAddStoreActionImpl implements CustomerAddStoreAction, ModelBase {
@@ -44,7 +44,7 @@ public class CustomerAddStoreActionImpl implements CustomerAddStoreAction, Model
     }
 
     /**
-     *  <p>ResourceIdentifier to a Store.</p>
+     *  <p>ResourceIdentifier of the Store to add.</p>
      */
 
     public com.commercetools.api.models.store.StoreResourceIdentifier getStore() {

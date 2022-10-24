@@ -15,7 +15,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * MyCustomerRemoveAddressAction
+ *  <p>Removing an address of the Customer produces the CustomerAddressRemoved Message.</p>
+ *  <p>Either <code>addressId</code> or <code>addressKey</code> is required.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class MyCustomerRemoveAddressActionImpl implements MyCustomerRemoveAddressAction, ModelBase {
@@ -47,7 +48,7 @@ public class MyCustomerRemoveAddressActionImpl implements MyCustomerRemoveAddres
     }
 
     /**
-     *
+     *  <p><code>id</code> of the Address to remove.</p>
      */
 
     public String getAddressId() {
@@ -55,7 +56,7 @@ public class MyCustomerRemoveAddressActionImpl implements MyCustomerRemoveAddres
     }
 
     /**
-     *
+     *  <p><code>key</code> of the Address to remove.</p>
      */
 
     public String getAddressKey() {

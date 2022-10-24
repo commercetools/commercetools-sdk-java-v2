@@ -38,7 +38,7 @@ public class CustomerCreateEmailTokenImpl implements CustomerCreateEmailToken, M
     }
 
     /**
-     *  <p>Unique identifier of the email token.</p>
+     *  <p>Unique identifier of the Customer.</p>
      */
 
     public String getId() {
@@ -46,7 +46,7 @@ public class CustomerCreateEmailTokenImpl implements CustomerCreateEmailToken, M
     }
 
     /**
-     *
+     *  <p>Expected version of the Customer.</p>
      */
 
     public Long getVersion() {
@@ -54,7 +54,7 @@ public class CustomerCreateEmailTokenImpl implements CustomerCreateEmailToken, M
     }
 
     /**
-     *
+     *  <p>Validity period of the generated token in minutes.</p>
      */
 
     public Long getTtlMinutes() {

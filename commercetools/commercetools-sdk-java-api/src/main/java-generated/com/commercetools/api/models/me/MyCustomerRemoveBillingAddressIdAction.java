@@ -11,7 +11,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * MyCustomerRemoveBillingAddressIdAction
+ *  <p>Removes an existing billing address from <code>billingAddressesIds</code>. If the billing address is the default billing address, the <code>defaultBillingAddressId</code> is unset. Either <code>addressId</code> or <code>addressKey</code> is required.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -29,14 +29,14 @@ public interface MyCustomerRemoveBillingAddressIdAction extends MyCustomerUpdate
     String REMOVE_BILLING_ADDRESS_ID = "removeBillingAddressId";
 
     /**
-     *
+     *  <p><code>id</code> of the Address to remove from <code>billingAddressesIds</code>.</p>
      */
 
     @JsonProperty("addressId")
     public String getAddressId();
 
     /**
-     *
+     *  <p><code>key</code> of the Address to remove from <code>billingAddressesIds</code>.</p>
      */
 
     @JsonProperty("addressKey")

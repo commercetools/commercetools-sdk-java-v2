@@ -35,7 +35,7 @@ public class CustomerCreatePasswordResetTokenImpl implements CustomerCreatePassw
     }
 
     /**
-     *
+     *  <p>Email address of the Customer treated as case-insensitive.</p>
      */
 
     public String getEmail() {
@@ -43,7 +43,7 @@ public class CustomerCreatePasswordResetTokenImpl implements CustomerCreatePassw
     }
 
     /**
-     *
+     *  <p>Validity period of the generated token in minutes.</p>
      */
 
     public Long getTtlMinutes() {

@@ -1,5 +1,5 @@
 
-package com.commercetools.api.models.business_unit;
+package com.commercetools.api.models.me;
 
 import java.time.*;
 import java.util.*;

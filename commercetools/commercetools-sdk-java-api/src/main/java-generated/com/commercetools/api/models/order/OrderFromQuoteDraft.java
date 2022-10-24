@@ -34,7 +34,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface OrderFromQuoteDraft {
 
     /**
-     *  <p>ResourceIdentifier of the Quote from which this Order is created. If the Quote has <code>QuoteState</code> in <code>Accepted</code>, <code>Declined</code> or <code>Withdrawn</code> then the order creation will fail. The creation will also if the <code>Quote</code> has expired (<code>validTo</code> check).</p>
+     *  <p>ResourceIdentifier of the Quote from which this Order is created. If the Quote has <code>QuoteState</code> in <code>Accepted</code>, <code>Declined</code> or <code>Withdrawn</code> then the order creation will fail. The creation will also fail if the <code>Quote</code> has expired (<code>validTo</code> check).</p>
      */
     @NotNull
     @Valid
@@ -47,6 +47,13 @@ public interface OrderFromQuoteDraft {
     @NotNull
     @JsonProperty("version")
     public Long getVersion();
+
+    /**
+     *  <p>If <code>true</code>, the <code>quoteState</code> of the referenced Quote will be set to <code>Accepted</code>.</p>
+     */
+
+    @JsonProperty("quoteStateToAccepted")
+    public Boolean getQuoteStateToAccepted();
 
     /**
      *  <p>String that uniquely identifies an order. It can be used to create more human-readable (in contrast to ID) identifier for the order. It should be unique across a project. Once it's set it cannot be changed. For easier use on Get, Update and Delete actions we suggest assigning order numbers that match the regular expression <code>[a-z0-9_\-]{2,36}</code>.</p>
@@ -87,6 +94,8 @@ public interface OrderFromQuoteDraft {
 
     public void setVersion(final Long version);
 
+    public void setQuoteStateToAccepted(final Boolean quoteStateToAccepted);
+
     public void setOrderNumber(final String orderNumber);
 
     public void setPaymentState(final PaymentState paymentState);
@@ -105,6 +114,7 @@ public interface OrderFromQuoteDraft {
         OrderFromQuoteDraftImpl instance = new OrderFromQuoteDraftImpl();
         instance.setQuote(template.getQuote());
         instance.setVersion(template.getVersion());
+        instance.setQuoteStateToAccepted(template.getQuoteStateToAccepted());
         instance.setOrderNumber(template.getOrderNumber());
         instance.setPaymentState(template.getPaymentState());
         instance.setShipmentState(template.getShipmentState());

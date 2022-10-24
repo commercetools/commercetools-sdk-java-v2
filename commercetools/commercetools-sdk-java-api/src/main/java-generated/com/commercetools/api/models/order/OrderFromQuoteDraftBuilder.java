@@ -30,6 +30,9 @@ public class OrderFromQuoteDraftBuilder implements Builder<OrderFromQuoteDraft> 
     private Long version;
 
     @Nullable
+    private Boolean quoteStateToAccepted;
+
+    @Nullable
     private String orderNumber;
 
     @Nullable
@@ -45,7 +48,7 @@ public class OrderFromQuoteDraftBuilder implements Builder<OrderFromQuoteDraft> 
     private com.commercetools.api.models.state.StateResourceIdentifier state;
 
     /**
-     *  <p>ResourceIdentifier of the Quote from which this Order is created. If the Quote has <code>QuoteState</code> in <code>Accepted</code>, <code>Declined</code> or <code>Withdrawn</code> then the order creation will fail. The creation will also if the <code>Quote</code> has expired (<code>validTo</code> check).</p>
+     *  <p>ResourceIdentifier of the Quote from which this Order is created. If the Quote has <code>QuoteState</code> in <code>Accepted</code>, <code>Declined</code> or <code>Withdrawn</code> then the order creation will fail. The creation will also fail if the <code>Quote</code> has expired (<code>validTo</code> check).</p>
      */
 
     public OrderFromQuoteDraftBuilder quote(
@@ -55,7 +58,7 @@ public class OrderFromQuoteDraftBuilder implements Builder<OrderFromQuoteDraft> 
     }
 
     /**
-     *  <p>ResourceIdentifier of the Quote from which this Order is created. If the Quote has <code>QuoteState</code> in <code>Accepted</code>, <code>Declined</code> or <code>Withdrawn</code> then the order creation will fail. The creation will also if the <code>Quote</code> has expired (<code>validTo</code> check).</p>
+     *  <p>ResourceIdentifier of the Quote from which this Order is created. If the Quote has <code>QuoteState</code> in <code>Accepted</code>, <code>Declined</code> or <code>Withdrawn</code> then the order creation will fail. The creation will also fail if the <code>Quote</code> has expired (<code>validTo</code> check).</p>
      */
 
     public OrderFromQuoteDraftBuilder quote(final com.commercetools.api.models.quote.QuoteResourceIdentifier quote) {
@@ -69,6 +72,15 @@ public class OrderFromQuoteDraftBuilder implements Builder<OrderFromQuoteDraft> 
 
     public OrderFromQuoteDraftBuilder version(final Long version) {
         this.version = version;
+        return this;
+    }
+
+    /**
+     *  <p>If <code>true</code>, the <code>quoteState</code> of the referenced Quote will be set to <code>Accepted</code>.</p>
+     */
+
+    public OrderFromQuoteDraftBuilder quoteStateToAccepted(@Nullable final Boolean quoteStateToAccepted) {
+        this.quoteStateToAccepted = quoteStateToAccepted;
         return this;
     }
 
@@ -140,6 +152,11 @@ public class OrderFromQuoteDraftBuilder implements Builder<OrderFromQuoteDraft> 
     }
 
     @Nullable
+    public Boolean getQuoteStateToAccepted() {
+        return this.quoteStateToAccepted;
+    }
+
+    @Nullable
     public String getOrderNumber() {
         return this.orderNumber;
     }
@@ -167,14 +184,16 @@ public class OrderFromQuoteDraftBuilder implements Builder<OrderFromQuoteDraft> 
     public OrderFromQuoteDraft build() {
         Objects.requireNonNull(quote, OrderFromQuoteDraft.class + ": quote is missing");
         Objects.requireNonNull(version, OrderFromQuoteDraft.class + ": version is missing");
-        return new OrderFromQuoteDraftImpl(quote, version, orderNumber, paymentState, shipmentState, orderState, state);
+        return new OrderFromQuoteDraftImpl(quote, version, quoteStateToAccepted, orderNumber, paymentState,
+            shipmentState, orderState, state);
     }
 
     /**
      * builds OrderFromQuoteDraft without checking for non null required values
      */
     public OrderFromQuoteDraft buildUnchecked() {
-        return new OrderFromQuoteDraftImpl(quote, version, orderNumber, paymentState, shipmentState, orderState, state);
+        return new OrderFromQuoteDraftImpl(quote, version, quoteStateToAccepted, orderNumber, paymentState,
+            shipmentState, orderState, state);
     }
 
     public static OrderFromQuoteDraftBuilder of() {
@@ -185,6 +204,7 @@ public class OrderFromQuoteDraftBuilder implements Builder<OrderFromQuoteDraft> 
         OrderFromQuoteDraftBuilder builder = new OrderFromQuoteDraftBuilder();
         builder.quote = template.getQuote();
         builder.version = template.getVersion();
+        builder.quoteStateToAccepted = template.getQuoteStateToAccepted();
         builder.orderNumber = template.getOrderNumber();
         builder.paymentState = template.getPaymentState();
         builder.shipmentState = template.getShipmentState();

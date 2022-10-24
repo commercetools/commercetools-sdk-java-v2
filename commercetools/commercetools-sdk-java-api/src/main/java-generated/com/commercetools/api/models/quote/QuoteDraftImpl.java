@@ -24,6 +24,8 @@ public class QuoteDraftImpl implements QuoteDraft, ModelBase {
 
     private Long stagedQuoteVersion;
 
+    private Boolean stagedQuoteStateToSent;
+
     private String key;
 
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
@@ -33,11 +35,14 @@ public class QuoteDraftImpl implements QuoteDraft, ModelBase {
     @JsonCreator
     QuoteDraftImpl(
             @JsonProperty("stagedQuote") final com.commercetools.api.models.staged_quote.StagedQuoteResourceIdentifier stagedQuote,
-            @JsonProperty("stagedQuoteVersion") final Long stagedQuoteVersion, @JsonProperty("key") final String key,
+            @JsonProperty("stagedQuoteVersion") final Long stagedQuoteVersion,
+            @JsonProperty("stagedQuoteStateToSent") final Boolean stagedQuoteStateToSent,
+            @JsonProperty("key") final String key,
             @JsonProperty("custom") final com.commercetools.api.models.type.CustomFieldsDraft custom,
             @JsonProperty("state") final com.commercetools.api.models.state.StateReference state) {
         this.stagedQuote = stagedQuote;
         this.stagedQuoteVersion = stagedQuoteVersion;
+        this.stagedQuoteStateToSent = stagedQuoteStateToSent;
         this.key = key;
         this.custom = custom;
         this.state = state;
@@ -60,6 +65,14 @@ public class QuoteDraftImpl implements QuoteDraft, ModelBase {
 
     public Long getStagedQuoteVersion() {
         return this.stagedQuoteVersion;
+    }
+
+    /**
+     *  <p>If <code>true</code>, the <code>stagedQuoteState</code> of the referenced StagedQuote will be set to <code>Sent</code>.</p>
+     */
+
+    public Boolean getStagedQuoteStateToSent() {
+        return this.stagedQuoteStateToSent;
     }
 
     /**
@@ -99,6 +112,10 @@ public class QuoteDraftImpl implements QuoteDraft, ModelBase {
         this.stagedQuoteVersion = stagedQuoteVersion;
     }
 
+    public void setStagedQuoteStateToSent(final Boolean stagedQuoteStateToSent) {
+        this.stagedQuoteStateToSent = stagedQuoteStateToSent;
+    }
+
     public void setKey(final String key) {
         this.key = key;
     }
@@ -123,6 +140,7 @@ public class QuoteDraftImpl implements QuoteDraft, ModelBase {
 
         return new EqualsBuilder().append(stagedQuote, that.stagedQuote)
                 .append(stagedQuoteVersion, that.stagedQuoteVersion)
+                .append(stagedQuoteStateToSent, that.stagedQuoteStateToSent)
                 .append(key, that.key)
                 .append(custom, that.custom)
                 .append(state, that.state)
@@ -133,6 +151,7 @@ public class QuoteDraftImpl implements QuoteDraft, ModelBase {
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(stagedQuote)
                 .append(stagedQuoteVersion)
+                .append(stagedQuoteStateToSent)
                 .append(key)
                 .append(custom)
                 .append(state)

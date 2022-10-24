@@ -24,6 +24,8 @@ public class StagedQuoteDraftImpl implements StagedQuoteDraft, ModelBase {
 
     private Long quoteRequestVersion;
 
+    private Boolean quoteRequestStateToAccepted;
+
     private String key;
 
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
@@ -33,11 +35,14 @@ public class StagedQuoteDraftImpl implements StagedQuoteDraft, ModelBase {
     @JsonCreator
     StagedQuoteDraftImpl(
             @JsonProperty("quoteRequest") final com.commercetools.api.models.quote_request.QuoteRequestResourceIdentifier quoteRequest,
-            @JsonProperty("quoteRequestVersion") final Long quoteRequestVersion, @JsonProperty("key") final String key,
+            @JsonProperty("quoteRequestVersion") final Long quoteRequestVersion,
+            @JsonProperty("quoteRequestStateToAccepted") final Boolean quoteRequestStateToAccepted,
+            @JsonProperty("key") final String key,
             @JsonProperty("custom") final com.commercetools.api.models.type.CustomFieldsDraft custom,
             @JsonProperty("state") final com.commercetools.api.models.state.StateReference state) {
         this.quoteRequest = quoteRequest;
         this.quoteRequestVersion = quoteRequestVersion;
+        this.quoteRequestStateToAccepted = quoteRequestStateToAccepted;
         this.key = key;
         this.custom = custom;
         this.state = state;
@@ -60,6 +65,14 @@ public class StagedQuoteDraftImpl implements StagedQuoteDraft, ModelBase {
 
     public Long getQuoteRequestVersion() {
         return this.quoteRequestVersion;
+    }
+
+    /**
+     *  <p>If <code>true</code>, the <code>quoteRequestState</code> of the referenced QuoteRequest will be set to <code>Accepted</code>.</p>
+     */
+
+    public Boolean getQuoteRequestStateToAccepted() {
+        return this.quoteRequestStateToAccepted;
     }
 
     /**
@@ -99,6 +112,10 @@ public class StagedQuoteDraftImpl implements StagedQuoteDraft, ModelBase {
         this.quoteRequestVersion = quoteRequestVersion;
     }
 
+    public void setQuoteRequestStateToAccepted(final Boolean quoteRequestStateToAccepted) {
+        this.quoteRequestStateToAccepted = quoteRequestStateToAccepted;
+    }
+
     public void setKey(final String key) {
         this.key = key;
     }
@@ -123,6 +140,7 @@ public class StagedQuoteDraftImpl implements StagedQuoteDraft, ModelBase {
 
         return new EqualsBuilder().append(quoteRequest, that.quoteRequest)
                 .append(quoteRequestVersion, that.quoteRequestVersion)
+                .append(quoteRequestStateToAccepted, that.quoteRequestStateToAccepted)
                 .append(key, that.key)
                 .append(custom, that.custom)
                 .append(state, that.state)
@@ -133,6 +151,7 @@ public class StagedQuoteDraftImpl implements StagedQuoteDraft, ModelBase {
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(quoteRequest)
                 .append(quoteRequestVersion)
+                .append(quoteRequestStateToAccepted)
                 .append(key)
                 .append(custom)
                 .append(state)

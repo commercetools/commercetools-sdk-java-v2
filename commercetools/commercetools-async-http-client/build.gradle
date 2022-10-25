@@ -2,7 +2,7 @@
 dependencies {
     api project(":rmf:rmf-java-base")
     api "org.asynchttpclient:async-http-client:2.12.3"
-    api "commons-io:commons-io" version commons.io
+    api commons.io version commons.io_version
 
     implementation javax.validation
 }

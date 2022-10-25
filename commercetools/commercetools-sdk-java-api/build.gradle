@@ -11,7 +11,8 @@ dependencies {
 
     testImplementation project(':commercetools:commercetools-http-client')
     testImplementation project(':commercetools:commercetools-apachehttp-client')
-    testImplementation 'commons-io:commons-io' version commons.io
+    testImplementation commons.io version commons.io_version
+
     testImplementation google.gson
 }
 

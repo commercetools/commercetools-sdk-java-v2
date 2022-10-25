@@ -7,9 +7,10 @@ dependencies {
     implementation project(":commercetools:commercetools-apachehttp-client")
     implementation project(":commercetools:commercetools-sdk-compat-v1")
 
-    testImplementation "com.commercetools.sdk.jvm.core:commercetools-models" version versions.ctpJvmSdk
-    testImplementation "com.commercetools.sdk.jvm.core:commercetools-convenience" version versions.ctpJvmSdk
-    testImplementation "com.commercetools.sdk.jvm.core:commercetools-java-client" version versions.ctpJvmSdk
+    testImplementation ctsdkv1.client version ctsdkv1.version
+    testImplementation ctsdkv1.models version ctsdkv1.version
+    testImplementation ctsdkv1.convenience version ctsdkv1.version
 
-    testImplementation 'commons-io:commons-io' version commons.io
+    testImplementation commons.io version commons.io_version
+
 }

@@ -19,13 +19,23 @@ ext {
             }
     ]
 
+    ctsdkv1 = [
+            client: 'com.commercetools.sdk.jvm.core:commercetools-java-client-core:2.8.0',
+            models: 'com.commercetools.sdk.jvm.core:commercetools-models:2.8.0',
+            convenience: 'com.commercetools.sdk.jvm.core:commercetools-convenience:2.8.0',
+            version: {
+                strictly '[1.62.0,)'
+                prefer '2.8.0'
+            }
+    ]
+
     commons = [
             lang3: 'org.apache.commons:commons-lang3:3.12.0',
-            io: {
-                strictly '[2.8.0,)'
-                prefer '2.11.0'
-            }
-
+            io: 'commons-io:commons-io:2.11.0',
+            io_version: {
+                    strictly '[2.8.0,)'
+                    prefer '2.11.0'
+                }
     ]
 
     slf4j = [

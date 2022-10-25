@@ -63,7 +63,7 @@ ext {
     ]
 
     failsafe = [
-            failsafe: 'dev.failsafe:failsafe:3.3.0',
+            failsafe: 'dev.failsafe:failsafe:3.2.0',
     ]
 
     spotify = [

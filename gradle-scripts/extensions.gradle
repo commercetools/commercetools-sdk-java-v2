@@ -1,22 +1,6 @@
 ext {
     versions = [
-            slf4j: "1.7.32",
-            logback: "1.2.8",
-            findbugs: "3.0.2",
             jackson: "2.13.4",
-            junit: "5.8.2",
-            validation: "2.0.1.Final",
-            jsonassert: "1.5.0",
-            mockito: "4.2.0",
-            assertJ: "3.20.2",
-            gson: "2.8.8",
-            awaitility: "4.1.0",
-            failsafe: "3.2.0",
-            completableFutures: "0.3.5",
-            ctpJvmSdk: {
-                strictly '[1.62.0,)'
-                prefer '2.8.0'
-            }
     ]
 
     ctsdkv1 = [

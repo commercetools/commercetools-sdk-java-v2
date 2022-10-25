@@ -3,7 +3,7 @@ dependencies {
     api project(":rmf:rmf-java-base")
     api "com.squareup.okhttp3:okhttp:4.10.0" version {
         strictly '[4.0,5.0['
-        prefer "4.9.1"
+        prefer "4.10.0"
     }
 
     implementation javax.validation

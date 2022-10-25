@@ -2,7 +2,7 @@
     "dependencies": [
         {
             "moduleName": "com.commercetools.sdk.jvm.core:commercetools-java-client-core",
-            "moduleVersion": "2.8.0",
+            "moduleVersion": "2.9.0",
             "moduleLicenses": [
                 {
                     "moduleLicense": "Apache License, Version 2.0",
@@ -12,7 +12,7 @@
         },
         {
             "moduleName": "com.commercetools.sdk.jvm.core:commercetools-models",
-            "moduleVersion": "2.8.0",
+            "moduleVersion": "2.9.0",
             "moduleLicenses": [
                 {
                     "moduleLicense": "Apache License, Version 2.0",
@@ -22,7 +22,7 @@
         },
         {
             "moduleName": "com.commercetools.sdk.jvm.core:commercetools-sdk-base",
-            "moduleVersion": "2.8.0",
+            "moduleVersion": "2.9.0",
             "moduleLicenses": [
                 {
                     "moduleLicense": "Apache License, Version 2.0",
@@ -32,7 +32,7 @@
         },
         {
             "moduleName": "com.commercetools.sdk.jvm.core:sdk-http",
-            "moduleVersion": "2.8.0",
+            "moduleVersion": "2.9.0",
             "moduleLicenses": [
                 {
                     "moduleLicense": "Apache License, Version 2.0",
@@ -68,7 +68,7 @@
         },
         {
             "moduleName": "com.fasterxml.jackson.core:jackson-databind",
-            "moduleVersion": "2.13.4",
+            "moduleVersion": "2.13.4.2",
             "moduleUrls": [
                 "http://github.com/FasterXML/jackson"
             ],
@@ -331,7 +331,7 @@
         },
         {
             "moduleName": "org.slf4j:slf4j-api",
-            "moduleVersion": "1.7.32",
+            "moduleVersion": "1.7.36",
             "moduleUrls": [
                 "http://www.slf4j.org"
             ],

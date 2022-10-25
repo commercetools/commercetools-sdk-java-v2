@@ -28,7 +28,7 @@
         },
         {
             "moduleName": "com.fasterxml.jackson.core:jackson-databind",
-            "moduleVersion": "2.13.4",
+            "moduleVersion": "2.13.4.2",
             "moduleUrls": [
                 "http://github.com/FasterXML/jackson"
             ],
@@ -149,7 +149,7 @@
         },
         {
             "moduleName": "org.apache.httpcomponents.client5:httpclient5",
-            "moduleVersion": "5.1",
+            "moduleVersion": "5.1.3",
             "moduleLicenses": [
                 {
                     "moduleLicense": "Apache License, Version 2.0",
@@ -159,7 +159,7 @@
         },
         {
             "moduleName": "org.apache.httpcomponents.core5:httpcore5",
-            "moduleVersion": "5.1.1",
+            "moduleVersion": "5.1.3",
             "moduleLicenses": [
                 {
                     "moduleLicense": "Apache License, Version 2.0",
@@ -169,7 +169,7 @@
         },
         {
             "moduleName": "org.apache.httpcomponents.core5:httpcore5-h2",
-            "moduleVersion": "5.1.1",
+            "moduleVersion": "5.1.3",
             "moduleLicenses": [
                 {
                     "moduleLicense": "Apache License, Version 2.0",
@@ -179,7 +179,7 @@
         },
         {
             "moduleName": "org.slf4j:slf4j-api",
-            "moduleVersion": "1.7.32",
+            "moduleVersion": "1.7.36",
             "moduleUrls": [
                 "http://www.slf4j.org"
             ],

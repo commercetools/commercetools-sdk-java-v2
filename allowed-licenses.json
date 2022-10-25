@@ -11,6 +11,10 @@
             "moduleName": "javax.annotation:javax.annotation-api"
         },
         {
+            "moduleLicense": null,
+            "moduleName": "com.squareup.okio:okio"
+        },
+        {
             "moduleLicense": "GNU GENERAL PUBLIC LICENSE, Version 2 + Classpath Exception",
             "moduleName": "javax.annotation:javax.annotation-api"
         },

@@ -179,7 +179,7 @@
         },
         {
             "moduleName": "org.slf4j:slf4j-api",
-            "moduleVersion": "1.7.32",
+            "moduleVersion": "2.0.3",
             "moduleUrls": [
                 "http://www.slf4j.org"
             ],

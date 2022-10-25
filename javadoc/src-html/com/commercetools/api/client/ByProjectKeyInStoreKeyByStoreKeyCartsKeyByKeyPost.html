@@ -17,222 +17,223 @@
 <span class="source-line-no">004</span><span id="line.4">import java.net.URI;</span>
 <span class="source-line-no">005</span><span id="line.5">import java.time.Duration;</span>
 <span class="source-line-no">006</span><span id="line.6">import java.util.ArrayList;</span>
-<span class="source-line-no">007</span><span id="line.7">import java.util.List;</span>
-<span class="source-line-no">008</span><span id="line.8">import java.util.concurrent.CompletableFuture;</span>
-<span class="source-line-no">009</span><span id="line.9">import java.util.function.Function;</span>
-<span class="source-line-no">010</span><span id="line.10">import java.util.function.Supplier;</span>
-<span class="source-line-no">011</span><span id="line.11">import java.util.stream.Collectors;</span>
-<span class="source-line-no">012</span><span id="line.12"></span>
-<span class="source-line-no">013</span><span id="line.13">import io.vrap.rmf.base.client.*;</span>
-<span class="source-line-no">014</span><span id="line.14">import io.vrap.rmf.base.client.utils.Generated;</span>
-<span class="source-line-no">015</span><span id="line.15"></span>
-<span class="source-line-no">016</span><span id="line.16">import org.apache.commons.lang3.builder.EqualsBuilder;</span>
-<span class="source-line-no">017</span><span id="line.17">import org.apache.commons.lang3.builder.HashCodeBuilder;</span>
-<span class="source-line-no">018</span><span id="line.18"></span>
-<span class="source-line-no">019</span><span id="line.19">/**</span>
-<span class="source-line-no">020</span><span id="line.20"> *  &lt;p&gt;Updates a Cart in the Store specified by &lt;code&gt;storeKey&lt;/code&gt;. If the Cart exists in the Project but does not have the store field, or the &lt;code&gt;store&lt;/code&gt; field references a different Store, this method returns a ResourceNotFound error.&lt;/p&gt;</span>
-<span class="source-line-no">021</span><span id="line.21"> *</span>
-<span class="source-line-no">022</span><span id="line.22"> * &lt;hr&gt;</span>
-<span class="source-line-no">023</span><span id="line.23"> * &lt;div class=code-example&gt;</span>
-<span class="source-line-no">024</span><span id="line.24"> * &lt;pre&gt;&lt;code class='java'&gt;{@code</span>
-<span class="source-line-no">025</span><span id="line.25"> *   CompletableFuture&lt;ApiHttpResponse&lt;com.commercetools.api.models.cart.Cart&gt;&gt; result = apiRoot</span>
-<span class="source-line-no">026</span><span id="line.26"> *            .withProjectKey("{projectKey}")</span>
-<span class="source-line-no">027</span><span id="line.27"> *            .inStoreKeyWithStoreKeyValue("{storeKey}")</span>
-<span class="source-line-no">028</span><span id="line.28"> *            .carts()</span>
-<span class="source-line-no">029</span><span id="line.29"> *            .withKey("{key}")</span>
-<span class="source-line-no">030</span><span id="line.30"> *            .post(null)</span>
-<span class="source-line-no">031</span><span id="line.31"> *            .execute()</span>
-<span class="source-line-no">032</span><span id="line.32"> * }&lt;/code&gt;&lt;/pre&gt;</span>
-<span class="source-line-no">033</span><span id="line.33"> * &lt;/div&gt;</span>
-<span class="source-line-no">034</span><span id="line.34"> */</span>
-<span class="source-line-no">035</span><span id="line.35">@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")</span>
-<span class="source-line-no">036</span><span id="line.36">public class ByProjectKeyInStoreKeyByStoreKeyCartsKeyByKeyPost extends</span>
-<span class="source-line-no">037</span><span id="line.37">        BodyApiMethod&lt;ByProjectKeyInStoreKeyByStoreKeyCartsKeyByKeyPost, com.commercetools.api.models.cart.Cart, com.commercetools.api.models.cart.CartUpdate&gt;</span>
-<span class="source-line-no">038</span><span id="line.38">        implements com.commercetools.api.client.ConflictingTrait&lt;ByProjectKeyInStoreKeyByStoreKeyCartsKeyByKeyPost&gt;,</span>
-<span class="source-line-no">039</span><span id="line.39">        com.commercetools.api.client.ExpandableTrait&lt;ByProjectKeyInStoreKeyByStoreKeyCartsKeyByKeyPost&gt;,</span>
-<span class="source-line-no">040</span><span id="line.40">        com.commercetools.api.client.Deprecatable200Trait&lt;ByProjectKeyInStoreKeyByStoreKeyCartsKeyByKeyPost&gt;,</span>
-<span class="source-line-no">041</span><span id="line.41">        com.commercetools.api.client.ErrorableTrait&lt;ByProjectKeyInStoreKeyByStoreKeyCartsKeyByKeyPost&gt; {</span>
-<span class="source-line-no">042</span><span id="line.42"></span>
-<span class="source-line-no">043</span><span id="line.43">    private String projectKey;</span>
-<span class="source-line-no">044</span><span id="line.44">    private String storeKey;</span>
-<span class="source-line-no">045</span><span id="line.45">    private String key;</span>
-<span class="source-line-no">046</span><span id="line.46"></span>
-<span class="source-line-no">047</span><span id="line.47">    private com.commercetools.api.models.cart.CartUpdate cartUpdate;</span>
-<span class="source-line-no">048</span><span id="line.48"></span>
-<span class="source-line-no">049</span><span id="line.49">    public ByProjectKeyInStoreKeyByStoreKeyCartsKeyByKeyPost(final ApiHttpClient apiHttpClient, String projectKey,</span>
-<span class="source-line-no">050</span><span id="line.50">            String storeKey, String key, com.commercetools.api.models.cart.CartUpdate cartUpdate) {</span>
-<span class="source-line-no">051</span><span id="line.51">        super(apiHttpClient);</span>
-<span class="source-line-no">052</span><span id="line.52">        this.projectKey = projectKey;</span>
-<span class="source-line-no">053</span><span id="line.53">        this.storeKey = storeKey;</span>
-<span class="source-line-no">054</span><span id="line.54">        this.key = key;</span>
-<span class="source-line-no">055</span><span id="line.55">        this.cartUpdate = cartUpdate;</span>
-<span class="source-line-no">056</span><span id="line.56">    }</span>
-<span class="source-line-no">057</span><span id="line.57"></span>
-<span class="source-line-no">058</span><span id="line.58">    public ByProjectKeyInStoreKeyByStoreKeyCartsKeyByKeyPost(ByProjectKeyInStoreKeyByStoreKeyCartsKeyByKeyPost t) {</span>
-<span class="source-line-no">059</span><span id="line.59">        super(t);</span>
-<span class="source-line-no">060</span><span id="line.60">        this.projectKey = t.projectKey;</span>
-<span class="source-line-no">061</span><span id="line.61">        this.storeKey = t.storeKey;</span>
-<span class="source-line-no">062</span><span id="line.62">        this.key = t.key;</span>
-<span class="source-line-no">063</span><span id="line.63">        this.cartUpdate = t.cartUpdate;</span>
-<span class="source-line-no">064</span><span id="line.64">    }</span>
-<span class="source-line-no">065</span><span id="line.65"></span>
-<span class="source-line-no">066</span><span id="line.66">    @Override</span>
-<span class="source-line-no">067</span><span id="line.67">    protected ApiHttpRequest buildHttpRequest() {</span>
-<span class="source-line-no">068</span><span id="line.68">        List&lt;String&gt; params = new ArrayList&lt;&gt;(getQueryParamUriStrings());</span>
-<span class="source-line-no">069</span><span id="line.69">        String httpRequestPath = String.format("/%s/in-store/key=%s/carts/key=%s", this.projectKey, this.storeKey,</span>
-<span class="source-line-no">070</span><span id="line.70">            this.key);</span>
-<span class="source-line-no">071</span><span id="line.71">        if (!params.isEmpty()) {</span>
-<span class="source-line-no">072</span><span id="line.72">            httpRequestPath += "?" + String.join("&amp;", params);</span>
-<span class="source-line-no">073</span><span id="line.73">        }</span>
-<span class="source-line-no">074</span><span id="line.74">        return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(),</span>
-<span class="source-line-no">075</span><span id="line.75">            io.vrap.rmf.base.client.utils.json.JsonUtils</span>
-<span class="source-line-no">076</span><span id="line.76">                    .executing(() -&gt; apiHttpClient().getSerializerService().toJsonByteArray(cartUpdate)));</span>
-<span class="source-line-no">077</span><span id="line.77"></span>
-<span class="source-line-no">078</span><span id="line.78">    }</span>
-<span class="source-line-no">079</span><span id="line.79"></span>
-<span class="source-line-no">080</span><span id="line.80">    @Override</span>
-<span class="source-line-no">081</span><span id="line.81">    public ApiHttpResponse&lt;com.commercetools.api.models.cart.Cart&gt; executeBlocking(final ApiHttpClient client,</span>
-<span class="source-line-no">082</span><span id="line.82">            final Duration timeout) {</span>
-<span class="source-line-no">083</span><span id="line.83">        return executeBlocking(client, timeout, com.commercetools.api.models.cart.Cart.class);</span>
-<span class="source-line-no">084</span><span id="line.84">    }</span>
-<span class="source-line-no">085</span><span id="line.85"></span>
-<span class="source-line-no">086</span><span id="line.86">    @Override</span>
-<span class="source-line-no">087</span><span id="line.87">    public CompletableFuture&lt;ApiHttpResponse&lt;com.commercetools.api.models.cart.Cart&gt;&gt; execute(</span>
-<span class="source-line-no">088</span><span id="line.88">            final ApiHttpClient client) {</span>
-<span class="source-line-no">089</span><span id="line.89">        return execute(client, com.commercetools.api.models.cart.Cart.class);</span>
-<span class="source-line-no">090</span><span id="line.90">    }</span>
-<span class="source-line-no">091</span><span id="line.91"></span>
-<span class="source-line-no">092</span><span id="line.92">    public String getProjectKey() {</span>
-<span class="source-line-no">093</span><span id="line.93">        return this.projectKey;</span>
-<span class="source-line-no">094</span><span id="line.94">    }</span>
-<span class="source-line-no">095</span><span id="line.95"></span>
-<span class="source-line-no">096</span><span id="line.96">    public String getStoreKey() {</span>
-<span class="source-line-no">097</span><span id="line.97">        return this.storeKey;</span>
-<span class="source-line-no">098</span><span id="line.98">    }</span>
-<span class="source-line-no">099</span><span id="line.99"></span>
-<span class="source-line-no">100</span><span id="line.100">    public String getKey() {</span>
-<span class="source-line-no">101</span><span id="line.101">        return this.key;</span>
-<span class="source-line-no">102</span><span id="line.102">    }</span>
-<span class="source-line-no">103</span><span id="line.103"></span>
-<span class="source-line-no">104</span><span id="line.104">    public List&lt;String&gt; getExpand() {</span>
-<span class="source-line-no">105</span><span id="line.105">        return this.getQueryParam("expand");</span>
-<span class="source-line-no">106</span><span id="line.106">    }</span>
-<span class="source-line-no">107</span><span id="line.107"></span>
-<span class="source-line-no">108</span><span id="line.108">    public void setProjectKey(final String projectKey) {</span>
-<span class="source-line-no">109</span><span id="line.109">        this.projectKey = projectKey;</span>
-<span class="source-line-no">110</span><span id="line.110">    }</span>
-<span class="source-line-no">111</span><span id="line.111"></span>
-<span class="source-line-no">112</span><span id="line.112">    public void setStoreKey(final String storeKey) {</span>
-<span class="source-line-no">113</span><span id="line.113">        this.storeKey = storeKey;</span>
-<span class="source-line-no">114</span><span id="line.114">    }</span>
-<span class="source-line-no">115</span><span id="line.115"></span>
-<span class="source-line-no">116</span><span id="line.116">    public void setKey(final String key) {</span>
-<span class="source-line-no">117</span><span id="line.117">        this.key = key;</span>
-<span class="source-line-no">118</span><span id="line.118">    }</span>
-<span class="source-line-no">119</span><span id="line.119"></span>
-<span class="source-line-no">120</span><span id="line.120">    /**</span>
-<span class="source-line-no">121</span><span id="line.121">     * set expand with the specified value</span>
-<span class="source-line-no">122</span><span id="line.122">     */</span>
-<span class="source-line-no">123</span><span id="line.123">    public &lt;TValue&gt; ByProjectKeyInStoreKeyByStoreKeyCartsKeyByKeyPost withExpand(final TValue expand) {</span>
-<span class="source-line-no">124</span><span id="line.124">        return copy().withQueryParam("expand", expand);</span>
-<span class="source-line-no">125</span><span id="line.125">    }</span>
-<span class="source-line-no">126</span><span id="line.126"></span>
-<span class="source-line-no">127</span><span id="line.127">    /**</span>
-<span class="source-line-no">128</span><span id="line.128">     * add additional expand query parameter</span>
-<span class="source-line-no">129</span><span id="line.129">     */</span>
-<span class="source-line-no">130</span><span id="line.130">    public &lt;TValue&gt; ByProjectKeyInStoreKeyByStoreKeyCartsKeyByKeyPost addExpand(final TValue expand) {</span>
-<span class="source-line-no">131</span><span id="line.131">        return copy().addQueryParam("expand", expand);</span>
-<span class="source-line-no">132</span><span id="line.132">    }</span>
-<span class="source-line-no">133</span><span id="line.133"></span>
-<span class="source-line-no">134</span><span id="line.134">    /**</span>
-<span class="source-line-no">135</span><span id="line.135">     * set expand with the specified value</span>
-<span class="source-line-no">136</span><span id="line.136">     */</span>
-<span class="source-line-no">137</span><span id="line.137">    public ByProjectKeyInStoreKeyByStoreKeyCartsKeyByKeyPost withExpand(final Supplier&lt;String&gt; supplier) {</span>
-<span class="source-line-no">138</span><span id="line.138">        return copy().withQueryParam("expand", supplier.get());</span>
-<span class="source-line-no">139</span><span id="line.139">    }</span>
-<span class="source-line-no">140</span><span id="line.140"></span>
-<span class="source-line-no">141</span><span id="line.141">    /**</span>
-<span class="source-line-no">142</span><span id="line.142">     * add additional expand query parameter</span>
-<span class="source-line-no">143</span><span id="line.143">     */</span>
-<span class="source-line-no">144</span><span id="line.144">    public ByProjectKeyInStoreKeyByStoreKeyCartsKeyByKeyPost addExpand(final Supplier&lt;String&gt; supplier) {</span>
-<span class="source-line-no">145</span><span id="line.145">        return copy().addQueryParam("expand", supplier.get());</span>
-<span class="source-line-no">146</span><span id="line.146">    }</span>
-<span class="source-line-no">147</span><span id="line.147"></span>
-<span class="source-line-no">148</span><span id="line.148">    /**</span>
-<span class="source-line-no">149</span><span id="line.149">     * set expand with the specified value</span>
-<span class="source-line-no">150</span><span id="line.150">     */</span>
-<span class="source-line-no">151</span><span id="line.151">    public ByProjectKeyInStoreKeyByStoreKeyCartsKeyByKeyPost withExpand(</span>
-<span class="source-line-no">152</span><span id="line.152">            final Function&lt;StringBuilder, StringBuilder&gt; op) {</span>
-<span class="source-line-no">153</span><span id="line.153">        return copy().withQueryParam("expand", op.apply(new StringBuilder()));</span>
-<span class="source-line-no">154</span><span id="line.154">    }</span>
-<span class="source-line-no">155</span><span id="line.155"></span>
-<span class="source-line-no">156</span><span id="line.156">    /**</span>
-<span class="source-line-no">157</span><span id="line.157">     * add additional expand query parameter</span>
-<span class="source-line-no">158</span><span id="line.158">     */</span>
-<span class="source-line-no">159</span><span id="line.159">    public ByProjectKeyInStoreKeyByStoreKeyCartsKeyByKeyPost addExpand(</span>
-<span class="source-line-no">160</span><span id="line.160">            final Function&lt;StringBuilder, StringBuilder&gt; op) {</span>
-<span class="source-line-no">161</span><span id="line.161">        return copy().addQueryParam("expand", op.apply(new StringBuilder()));</span>
-<span class="source-line-no">162</span><span id="line.162">    }</span>
-<span class="source-line-no">163</span><span id="line.163"></span>
-<span class="source-line-no">164</span><span id="line.164">    /**</span>
-<span class="source-line-no">165</span><span id="line.165">     * set expand with the specified values</span>
-<span class="source-line-no">166</span><span id="line.166">     */</span>
-<span class="source-line-no">167</span><span id="line.167">    public &lt;TValue&gt; ByProjectKeyInStoreKeyByStoreKeyCartsKeyByKeyPost withExpand(final List&lt;TValue&gt; expand) {</span>
-<span class="source-line-no">168</span><span id="line.168">        return copy().withoutQueryParam("expand")</span>
-<span class="source-line-no">169</span><span id="line.169">                .addQueryParams(</span>
-<span class="source-line-no">170</span><span id="line.170">                    expand.stream().map(s -&gt; new ParamEntry&lt;&gt;("expand", s.toString())).collect(Collectors.toList()));</span>
-<span class="source-line-no">171</span><span id="line.171">    }</span>
-<span class="source-line-no">172</span><span id="line.172"></span>
-<span class="source-line-no">173</span><span id="line.173">    /**</span>
-<span class="source-line-no">174</span><span id="line.174">     * add additional expand query parameters</span>
-<span class="source-line-no">175</span><span id="line.175">     */</span>
-<span class="source-line-no">176</span><span id="line.176">    public &lt;TValue&gt; ByProjectKeyInStoreKeyByStoreKeyCartsKeyByKeyPost addExpand(final List&lt;TValue&gt; expand) {</span>
-<span class="source-line-no">177</span><span id="line.177">        return copy().addQueryParams(</span>
-<span class="source-line-no">178</span><span id="line.178">            expand.stream().map(s -&gt; new ParamEntry&lt;&gt;("expand", s.toString())).collect(Collectors.toList()));</span>
-<span class="source-line-no">179</span><span id="line.179">    }</span>
-<span class="source-line-no">180</span><span id="line.180"></span>
-<span class="source-line-no">181</span><span id="line.181">    public com.commercetools.api.models.cart.CartUpdate getBody() {</span>
-<span class="source-line-no">182</span><span id="line.182">        return cartUpdate;</span>
-<span class="source-line-no">183</span><span id="line.183">    }</span>
-<span class="source-line-no">184</span><span id="line.184"></span>
-<span class="source-line-no">185</span><span id="line.185">    public ByProjectKeyInStoreKeyByStoreKeyCartsKeyByKeyPost withBody(</span>
-<span class="source-line-no">186</span><span id="line.186">            com.commercetools.api.models.cart.CartUpdate cartUpdate) {</span>
-<span class="source-line-no">187</span><span id="line.187">        ByProjectKeyInStoreKeyByStoreKeyCartsKeyByKeyPost t = copy();</span>
-<span class="source-line-no">188</span><span id="line.188">        t.cartUpdate = cartUpdate;</span>
-<span class="source-line-no">189</span><span id="line.189">        return t;</span>
-<span class="source-line-no">190</span><span id="line.190">    }</span>
-<span class="source-line-no">191</span><span id="line.191"></span>
-<span class="source-line-no">192</span><span id="line.192">    @Override</span>
-<span class="source-line-no">193</span><span id="line.193">    public boolean equals(Object o) {</span>
-<span class="source-line-no">194</span><span id="line.194">        if (this == o)</span>
-<span class="source-line-no">195</span><span id="line.195">            return true;</span>
-<span class="source-line-no">196</span><span id="line.196"></span>
-<span class="source-line-no">197</span><span id="line.197">        if (o == null || getClass() != o.getClass())</span>
-<span class="source-line-no">198</span><span id="line.198">            return false;</span>
-<span class="source-line-no">199</span><span id="line.199"></span>
-<span class="source-line-no">200</span><span id="line.200">        ByProjectKeyInStoreKeyByStoreKeyCartsKeyByKeyPost that = (ByProjectKeyInStoreKeyByStoreKeyCartsKeyByKeyPost) o;</span>
-<span class="source-line-no">201</span><span id="line.201"></span>
-<span class="source-line-no">202</span><span id="line.202">        return new EqualsBuilder().append(projectKey, that.projectKey)</span>
-<span class="source-line-no">203</span><span id="line.203">                .append(storeKey, that.storeKey)</span>
-<span class="source-line-no">204</span><span id="line.204">                .append(key, that.key)</span>
-<span class="source-line-no">205</span><span id="line.205">                .append(cartUpdate, that.cartUpdate)</span>
-<span class="source-line-no">206</span><span id="line.206">                .isEquals();</span>
-<span class="source-line-no">207</span><span id="line.207">    }</span>
-<span class="source-line-no">208</span><span id="line.208"></span>
-<span class="source-line-no">209</span><span id="line.209">    @Override</span>
-<span class="source-line-no">210</span><span id="line.210">    public int hashCode() {</span>
-<span class="source-line-no">211</span><span id="line.211">        return new HashCodeBuilder(17, 37).append(projectKey)</span>
-<span class="source-line-no">212</span><span id="line.212">                .append(storeKey)</span>
-<span class="source-line-no">213</span><span id="line.213">                .append(key)</span>
-<span class="source-line-no">214</span><span id="line.214">                .append(cartUpdate)</span>
-<span class="source-line-no">215</span><span id="line.215">                .toHashCode();</span>
-<span class="source-line-no">216</span><span id="line.216">    }</span>
-<span class="source-line-no">217</span><span id="line.217"></span>
-<span class="source-line-no">218</span><span id="line.218">    @Override</span>
-<span class="source-line-no">219</span><span id="line.219">    protected ByProjectKeyInStoreKeyByStoreKeyCartsKeyByKeyPost copy() {</span>
-<span class="source-line-no">220</span><span id="line.220">        return new ByProjectKeyInStoreKeyByStoreKeyCartsKeyByKeyPost(this);</span>
-<span class="source-line-no">221</span><span id="line.221">    }</span>
-<span class="source-line-no">222</span><span id="line.222">}</span>
+<span class="source-line-no">007</span><span id="line.7">import java.util.Collection;</span>
+<span class="source-line-no">008</span><span id="line.8">import java.util.List;</span>
+<span class="source-line-no">009</span><span id="line.9">import java.util.concurrent.CompletableFuture;</span>
+<span class="source-line-no">010</span><span id="line.10">import java.util.function.Function;</span>
+<span class="source-line-no">011</span><span id="line.11">import java.util.function.Supplier;</span>
+<span class="source-line-no">012</span><span id="line.12">import java.util.stream.Collectors;</span>
+<span class="source-line-no">013</span><span id="line.13"></span>
+<span class="source-line-no">014</span><span id="line.14">import io.vrap.rmf.base.client.*;</span>
+<span class="source-line-no">015</span><span id="line.15">import io.vrap.rmf.base.client.utils.Generated;</span>
+<span class="source-line-no">016</span><span id="line.16"></span>
+<span class="source-line-no">017</span><span id="line.17">import org.apache.commons.lang3.builder.EqualsBuilder;</span>
+<span class="source-line-no">018</span><span id="line.18">import org.apache.commons.lang3.builder.HashCodeBuilder;</span>
+<span class="source-line-no">019</span><span id="line.19"></span>
+<span class="source-line-no">020</span><span id="line.20">/**</span>
+<span class="source-line-no">021</span><span id="line.21"> *  &lt;p&gt;Updates a Cart in the Store specified by &lt;code&gt;storeKey&lt;/code&gt;. If the Cart exists in the Project but does not have the store field, or the &lt;code&gt;store&lt;/code&gt; field references a different Store, this method returns a ResourceNotFound error.&lt;/p&gt;</span>
+<span class="source-line-no">022</span><span id="line.22"> *</span>
+<span class="source-line-no">023</span><span id="line.23"> * &lt;hr&gt;</span>
+<span class="source-line-no">024</span><span id="line.24"> * &lt;div class=code-example&gt;</span>
+<span class="source-line-no">025</span><span id="line.25"> * &lt;pre&gt;&lt;code class='java'&gt;{@code</span>
+<span class="source-line-no">026</span><span id="line.26"> *   CompletableFuture&lt;ApiHttpResponse&lt;com.commercetools.api.models.cart.Cart&gt;&gt; result = apiRoot</span>
+<span class="source-line-no">027</span><span id="line.27"> *            .withProjectKey("{projectKey}")</span>
+<span class="source-line-no">028</span><span id="line.28"> *            .inStoreKeyWithStoreKeyValue("{storeKey}")</span>
+<span class="source-line-no">029</span><span id="line.29"> *            .carts()</span>
+<span class="source-line-no">030</span><span id="line.30"> *            .withKey("{key}")</span>
+<span class="source-line-no">031</span><span id="line.31"> *            .post(null)</span>
+<span class="source-line-no">032</span><span id="line.32"> *            .execute()</span>
+<span class="source-line-no">033</span><span id="line.33"> * }&lt;/code&gt;&lt;/pre&gt;</span>
+<span class="source-line-no">034</span><span id="line.34"> * &lt;/div&gt;</span>
+<span class="source-line-no">035</span><span id="line.35"> */</span>
+<span class="source-line-no">036</span><span id="line.36">@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")</span>
+<span class="source-line-no">037</span><span id="line.37">public class ByProjectKeyInStoreKeyByStoreKeyCartsKeyByKeyPost extends</span>
+<span class="source-line-no">038</span><span id="line.38">        BodyApiMethod&lt;ByProjectKeyInStoreKeyByStoreKeyCartsKeyByKeyPost, com.commercetools.api.models.cart.Cart, com.commercetools.api.models.cart.CartUpdate&gt;</span>
+<span class="source-line-no">039</span><span id="line.39">        implements com.commercetools.api.client.ConflictingTrait&lt;ByProjectKeyInStoreKeyByStoreKeyCartsKeyByKeyPost&gt;,</span>
+<span class="source-line-no">040</span><span id="line.40">        com.commercetools.api.client.ExpandableTrait&lt;ByProjectKeyInStoreKeyByStoreKeyCartsKeyByKeyPost&gt;,</span>
+<span class="source-line-no">041</span><span id="line.41">        com.commercetools.api.client.Deprecatable200Trait&lt;ByProjectKeyInStoreKeyByStoreKeyCartsKeyByKeyPost&gt;,</span>
+<span class="source-line-no">042</span><span id="line.42">        com.commercetools.api.client.ErrorableTrait&lt;ByProjectKeyInStoreKeyByStoreKeyCartsKeyByKeyPost&gt; {</span>
+<span class="source-line-no">043</span><span id="line.43"></span>
+<span class="source-line-no">044</span><span id="line.44">    private String projectKey;</span>
+<span class="source-line-no">045</span><span id="line.45">    private String storeKey;</span>
+<span class="source-line-no">046</span><span id="line.46">    private String key;</span>
+<span class="source-line-no">047</span><span id="line.47"></span>
+<span class="source-line-no">048</span><span id="line.48">    private com.commercetools.api.models.cart.CartUpdate cartUpdate;</span>
+<span class="source-line-no">049</span><span id="line.49"></span>
+<span class="source-line-no">050</span><span id="line.50">    public ByProjectKeyInStoreKeyByStoreKeyCartsKeyByKeyPost(final ApiHttpClient apiHttpClient, String projectKey,</span>
+<span class="source-line-no">051</span><span id="line.51">            String storeKey, String key, com.commercetools.api.models.cart.CartUpdate cartUpdate) {</span>
+<span class="source-line-no">052</span><span id="line.52">        super(apiHttpClient);</span>
+<span class="source-line-no">053</span><span id="line.53">        this.projectKey = projectKey;</span>
+<span class="source-line-no">054</span><span id="line.54">        this.storeKey = storeKey;</span>
+<span class="source-line-no">055</span><span id="line.55">        this.key = key;</span>
+<span class="source-line-no">056</span><span id="line.56">        this.cartUpdate = cartUpdate;</span>
+<span class="source-line-no">057</span><span id="line.57">    }</span>
+<span class="source-line-no">058</span><span id="line.58"></span>
+<span class="source-line-no">059</span><span id="line.59">    public ByProjectKeyInStoreKeyByStoreKeyCartsKeyByKeyPost(ByProjectKeyInStoreKeyByStoreKeyCartsKeyByKeyPost t) {</span>
+<span class="source-line-no">060</span><span id="line.60">        super(t);</span>
+<span class="source-line-no">061</span><span id="line.61">        this.projectKey = t.projectKey;</span>
+<span class="source-line-no">062</span><span id="line.62">        this.storeKey = t.storeKey;</span>
+<span class="source-line-no">063</span><span id="line.63">        this.key = t.key;</span>
+<span class="source-line-no">064</span><span id="line.64">        this.cartUpdate = t.cartUpdate;</span>
+<span class="source-line-no">065</span><span id="line.65">    }</span>
+<span class="source-line-no">066</span><span id="line.66"></span>
+<span class="source-line-no">067</span><span id="line.67">    @Override</span>
+<span class="source-line-no">068</span><span id="line.68">    protected ApiHttpRequest buildHttpRequest() {</span>
+<span class="source-line-no">069</span><span id="line.69">        List&lt;String&gt; params = new ArrayList&lt;&gt;(getQueryParamUriStrings());</span>
+<span class="source-line-no">070</span><span id="line.70">        String httpRequestPath = String.format("/%s/in-store/key=%s/carts/key=%s", this.projectKey, this.storeKey,</span>
+<span class="source-line-no">071</span><span id="line.71">            this.key);</span>
+<span class="source-line-no">072</span><span id="line.72">        if (!params.isEmpty()) {</span>
+<span class="source-line-no">073</span><span id="line.73">            httpRequestPath += "?" + String.join("&amp;", params);</span>
+<span class="source-line-no">074</span><span id="line.74">        }</span>
+<span class="source-line-no">075</span><span id="line.75">        return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(),</span>
+<span class="source-line-no">076</span><span id="line.76">            io.vrap.rmf.base.client.utils.json.JsonUtils</span>
+<span class="source-line-no">077</span><span id="line.77">                    .executing(() -&gt; apiHttpClient().getSerializerService().toJsonByteArray(cartUpdate)));</span>
+<span class="source-line-no">078</span><span id="line.78"></span>
+<span class="source-line-no">079</span><span id="line.79">    }</span>
+<span class="source-line-no">080</span><span id="line.80"></span>
+<span class="source-line-no">081</span><span id="line.81">    @Override</span>
+<span class="source-line-no">082</span><span id="line.82">    public ApiHttpResponse&lt;com.commercetools.api.models.cart.Cart&gt; executeBlocking(final ApiHttpClient client,</span>
+<span class="source-line-no">083</span><span id="line.83">            final Duration timeout) {</span>
+<span class="source-line-no">084</span><span id="line.84">        return executeBlocking(client, timeout, com.commercetools.api.models.cart.Cart.class);</span>
+<span class="source-line-no">085</span><span id="line.85">    }</span>
+<span class="source-line-no">086</span><span id="line.86"></span>
+<span class="source-line-no">087</span><span id="line.87">    @Override</span>
+<span class="source-line-no">088</span><span id="line.88">    public CompletableFuture&lt;ApiHttpResponse&lt;com.commercetools.api.models.cart.Cart&gt;&gt; execute(</span>
+<span class="source-line-no">089</span><span id="line.89">            final ApiHttpClient client) {</span>
+<span class="source-line-no">090</span><span id="line.90">        return execute(client, com.commercetools.api.models.cart.Cart.class);</span>
+<span class="source-line-no">091</span><span id="line.91">    }</span>
+<span class="source-line-no">092</span><span id="line.92"></span>
+<span class="source-line-no">093</span><span id="line.93">    public String getProjectKey() {</span>
+<span class="source-line-no">094</span><span id="line.94">        return this.projectKey;</span>
+<span class="source-line-no">095</span><span id="line.95">    }</span>
+<span class="source-line-no">096</span><span id="line.96"></span>
+<span class="source-line-no">097</span><span id="line.97">    public String getStoreKey() {</span>
+<span class="source-line-no">098</span><span id="line.98">        return this.storeKey;</span>
+<span class="source-line-no">099</span><span id="line.99">    }</span>
+<span class="source-line-no">100</span><span id="line.100"></span>
+<span class="source-line-no">101</span><span id="line.101">    public String getKey() {</span>
+<span class="source-line-no">102</span><span id="line.102">        return this.key;</span>
+<span class="source-line-no">103</span><span id="line.103">    }</span>
+<span class="source-line-no">104</span><span id="line.104"></span>
+<span class="source-line-no">105</span><span id="line.105">    public List&lt;String&gt; getExpand() {</span>
+<span class="source-line-no">106</span><span id="line.106">        return this.getQueryParam("expand");</span>
+<span class="source-line-no">107</span><span id="line.107">    }</span>
+<span class="source-line-no">108</span><span id="line.108"></span>
+<span class="source-line-no">109</span><span id="line.109">    public void setProjectKey(final String projectKey) {</span>
+<span class="source-line-no">110</span><span id="line.110">        this.projectKey = projectKey;</span>
+<span class="source-line-no">111</span><span id="line.111">    }</span>
+<span class="source-line-no">112</span><span id="line.112"></span>
+<span class="source-line-no">113</span><span id="line.113">    public void setStoreKey(final String storeKey) {</span>
+<span class="source-line-no">114</span><span id="line.114">        this.storeKey = storeKey;</span>
+<span class="source-line-no">115</span><span id="line.115">    }</span>
+<span class="source-line-no">116</span><span id="line.116"></span>
+<span class="source-line-no">117</span><span id="line.117">    public void setKey(final String key) {</span>
+<span class="source-line-no">118</span><span id="line.118">        this.key = key;</span>
+<span class="source-line-no">119</span><span id="line.119">    }</span>
+<span class="source-line-no">120</span><span id="line.120"></span>
+<span class="source-line-no">121</span><span id="line.121">    /**</span>
+<span class="source-line-no">122</span><span id="line.122">     * set expand with the specified value</span>
+<span class="source-line-no">123</span><span id="line.123">     */</span>
+<span class="source-line-no">124</span><span id="line.124">    public &lt;TValue&gt; ByProjectKeyInStoreKeyByStoreKeyCartsKeyByKeyPost withExpand(final TValue expand) {</span>
+<span class="source-line-no">125</span><span id="line.125">        return copy().withQueryParam("expand", expand);</span>
+<span class="source-line-no">126</span><span id="line.126">    }</span>
+<span class="source-line-no">127</span><span id="line.127"></span>
+<span class="source-line-no">128</span><span id="line.128">    /**</span>
+<span class="source-line-no">129</span><span id="line.129">     * add additional expand query parameter</span>
+<span class="source-line-no">130</span><span id="line.130">     */</span>
+<span class="source-line-no">131</span><span id="line.131">    public &lt;TValue&gt; ByProjectKeyInStoreKeyByStoreKeyCartsKeyByKeyPost addExpand(final TValue expand) {</span>
+<span class="source-line-no">132</span><span id="line.132">        return copy().addQueryParam("expand", expand);</span>
+<span class="source-line-no">133</span><span id="line.133">    }</span>
+<span class="source-line-no">134</span><span id="line.134"></span>
+<span class="source-line-no">135</span><span id="line.135">    /**</span>
+<span class="source-line-no">136</span><span id="line.136">     * set expand with the specified value</span>
+<span class="source-line-no">137</span><span id="line.137">     */</span>
+<span class="source-line-no">138</span><span id="line.138">    public ByProjectKeyInStoreKeyByStoreKeyCartsKeyByKeyPost withExpand(final Supplier&lt;String&gt; supplier) {</span>
+<span class="source-line-no">139</span><span id="line.139">        return copy().withQueryParam("expand", supplier.get());</span>
+<span class="source-line-no">140</span><span id="line.140">    }</span>
+<span class="source-line-no">141</span><span id="line.141"></span>
+<span class="source-line-no">142</span><span id="line.142">    /**</span>
+<span class="source-line-no">143</span><span id="line.143">     * add additional expand query parameter</span>
+<span class="source-line-no">144</span><span id="line.144">     */</span>
+<span class="source-line-no">145</span><span id="line.145">    public ByProjectKeyInStoreKeyByStoreKeyCartsKeyByKeyPost addExpand(final Supplier&lt;String&gt; supplier) {</span>
+<span class="source-line-no">146</span><span id="line.146">        return copy().addQueryParam("expand", supplier.get());</span>
+<span class="source-line-no">147</span><span id="line.147">    }</span>
+<span class="source-line-no">148</span><span id="line.148"></span>
+<span class="source-line-no">149</span><span id="line.149">    /**</span>
+<span class="source-line-no">150</span><span id="line.150">     * set expand with the specified value</span>
+<span class="source-line-no">151</span><span id="line.151">     */</span>
+<span class="source-line-no">152</span><span id="line.152">    public ByProjectKeyInStoreKeyByStoreKeyCartsKeyByKeyPost withExpand(</span>
+<span class="source-line-no">153</span><span id="line.153">            final Function&lt;StringBuilder, StringBuilder&gt; op) {</span>
+<span class="source-line-no">154</span><span id="line.154">        return copy().withQueryParam("expand", op.apply(new StringBuilder()));</span>
+<span class="source-line-no">155</span><span id="line.155">    }</span>
+<span class="source-line-no">156</span><span id="line.156"></span>
+<span class="source-line-no">157</span><span id="line.157">    /**</span>
+<span class="source-line-no">158</span><span id="line.158">     * add additional expand query parameter</span>
+<span class="source-line-no">159</span><span id="line.159">     */</span>
+<span class="source-line-no">160</span><span id="line.160">    public ByProjectKeyInStoreKeyByStoreKeyCartsKeyByKeyPost addExpand(</span>
+<span class="source-line-no">161</span><span id="line.161">            final Function&lt;StringBuilder, StringBuilder&gt; op) {</span>
+<span class="source-line-no">162</span><span id="line.162">        return copy().addQueryParam("expand", op.apply(new StringBuilder()));</span>
+<span class="source-line-no">163</span><span id="line.163">    }</span>
+<span class="source-line-no">164</span><span id="line.164"></span>
+<span class="source-line-no">165</span><span id="line.165">    /**</span>
+<span class="source-line-no">166</span><span id="line.166">     * set expand with the specified values</span>
+<span class="source-line-no">167</span><span id="line.167">     */</span>
+<span class="source-line-no">168</span><span id="line.168">    public &lt;TValue&gt; ByProjectKeyInStoreKeyByStoreKeyCartsKeyByKeyPost withExpand(final Collection&lt;TValue&gt; expand) {</span>
+<span class="source-line-no">169</span><span id="line.169">        return copy().withoutQueryParam("expand")</span>
+<span class="source-line-no">170</span><span id="line.170">                .addQueryParams(</span>
+<span class="source-line-no">171</span><span id="line.171">                    expand.stream().map(s -&gt; new ParamEntry&lt;&gt;("expand", s.toString())).collect(Collectors.toList()));</span>
+<span class="source-line-no">172</span><span id="line.172">    }</span>
+<span class="source-line-no">173</span><span id="line.173"></span>
+<span class="source-line-no">174</span><span id="line.174">    /**</span>
+<span class="source-line-no">175</span><span id="line.175">     * add additional expand query parameters</span>
+<span class="source-line-no">176</span><span id="line.176">     */</span>
+<span class="source-line-no">177</span><span id="line.177">    public &lt;TValue&gt; ByProjectKeyInStoreKeyByStoreKeyCartsKeyByKeyPost addExpand(final Collection&lt;TValue&gt; expand) {</span>
+<span class="source-line-no">178</span><span id="line.178">        return copy().addQueryParams(</span>
+<span class="source-line-no">179</span><span id="line.179">            expand.stream().map(s -&gt; new ParamEntry&lt;&gt;("expand", s.toString())).collect(Collectors.toList()));</span>
+<span class="source-line-no">180</span><span id="line.180">    }</span>
+<span class="source-line-no">181</span><span id="line.181"></span>
+<span class="source-line-no">182</span><span id="line.182">    public com.commercetools.api.models.cart.CartUpdate getBody() {</span>
+<span class="source-line-no">183</span><span id="line.183">        return cartUpdate;</span>
+<span class="source-line-no">184</span><span id="line.184">    }</span>
+<span class="source-line-no">185</span><span id="line.185"></span>
+<span class="source-line-no">186</span><span id="line.186">    public ByProjectKeyInStoreKeyByStoreKeyCartsKeyByKeyPost withBody(</span>
+<span class="source-line-no">187</span><span id="line.187">            com.commercetools.api.models.cart.CartUpdate cartUpdate) {</span>
+<span class="source-line-no">188</span><span id="line.188">        ByProjectKeyInStoreKeyByStoreKeyCartsKeyByKeyPost t = copy();</span>
+<span class="source-line-no">189</span><span id="line.189">        t.cartUpdate = cartUpdate;</span>
+<span class="source-line-no">190</span><span id="line.190">        return t;</span>
+<span class="source-line-no">191</span><span id="line.191">    }</span>
+<span class="source-line-no">192</span><span id="line.192"></span>
+<span class="source-line-no">193</span><span id="line.193">    @Override</span>
+<span class="source-line-no">194</span><span id="line.194">    public boolean equals(Object o) {</span>
+<span class="source-line-no">195</span><span id="line.195">        if (this == o)</span>
+<span class="source-line-no">196</span><span id="line.196">            return true;</span>
+<span class="source-line-no">197</span><span id="line.197"></span>
+<span class="source-line-no">198</span><span id="line.198">        if (o == null || getClass() != o.getClass())</span>
+<span class="source-line-no">199</span><span id="line.199">            return false;</span>
+<span class="source-line-no">200</span><span id="line.200"></span>
+<span class="source-line-no">201</span><span id="line.201">        ByProjectKeyInStoreKeyByStoreKeyCartsKeyByKeyPost that = (ByProjectKeyInStoreKeyByStoreKeyCartsKeyByKeyPost) o;</span>
+<span class="source-line-no">202</span><span id="line.202"></span>
+<span class="source-line-no">203</span><span id="line.203">        return new EqualsBuilder().append(projectKey, that.projectKey)</span>
+<span class="source-line-no">204</span><span id="line.204">                .append(storeKey, that.storeKey)</span>
+<span class="source-line-no">205</span><span id="line.205">                .append(key, that.key)</span>
+<span class="source-line-no">206</span><span id="line.206">                .append(cartUpdate, that.cartUpdate)</span>
+<span class="source-line-no">207</span><span id="line.207">                .isEquals();</span>
+<span class="source-line-no">208</span><span id="line.208">    }</span>
+<span class="source-line-no">209</span><span id="line.209"></span>
+<span class="source-line-no">210</span><span id="line.210">    @Override</span>
+<span class="source-line-no">211</span><span id="line.211">    public int hashCode() {</span>
+<span class="source-line-no">212</span><span id="line.212">        return new HashCodeBuilder(17, 37).append(projectKey)</span>
+<span class="source-line-no">213</span><span id="line.213">                .append(storeKey)</span>
+<span class="source-line-no">214</span><span id="line.214">                .append(key)</span>
+<span class="source-line-no">215</span><span id="line.215">                .append(cartUpdate)</span>
+<span class="source-line-no">216</span><span id="line.216">                .toHashCode();</span>
+<span class="source-line-no">217</span><span id="line.217">    }</span>
+<span class="source-line-no">218</span><span id="line.218"></span>
+<span class="source-line-no">219</span><span id="line.219">    @Override</span>
+<span class="source-line-no">220</span><span id="line.220">    protected ByProjectKeyInStoreKeyByStoreKeyCartsKeyByKeyPost copy() {</span>
+<span class="source-line-no">221</span><span id="line.221">        return new ByProjectKeyInStoreKeyByStoreKeyCartsKeyByKeyPost(this);</span>
+<span class="source-line-no">222</span><span id="line.222">    }</span>
+<span class="source-line-no">223</span><span id="line.223">}</span>
 
 
 

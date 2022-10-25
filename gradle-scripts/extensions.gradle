@@ -27,7 +27,7 @@ ext {
     ]
 
     logback = [
-            classic: 'ch.qos.logback:logback-classic:1.4.4',
+            classic: 'ch.qos.logback:logback-classic:1.2.10',
     ]
 
     jackson_core = [

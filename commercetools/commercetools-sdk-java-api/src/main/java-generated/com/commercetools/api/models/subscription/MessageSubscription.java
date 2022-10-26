@@ -13,14 +13,15 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * MessageSubscription
+ *  <p>For supported resources and message types, see Message Types. Messages will be delivered even if the Messages Query HTTP API is not enabled.</p>
+ *  <p>For MessageSubscriptions, the format of the payload is MessageDeliveryPayload.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
  * <div class=code-example>
  * <pre><code class='java'>
  *     MessageSubscription messageSubscription = MessageSubscription.builder()
- *             .resourceTypeId("{resourceTypeId}")
+ *             .resourceTypeId(MessageSubscriptionResourceTypeId.BUSINESS_UNIT)
  *             .build()
  * </code></pre>
  * </div>
@@ -30,20 +31,20 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface MessageSubscription {
 
     /**
-     *
+     *  <p>Unique identifier for the type of resource, for example, <code>order</code>.</p>
      */
     @NotNull
     @JsonProperty("resourceTypeId")
-    public String getResourceTypeId();
+    public MessageSubscriptionResourceTypeId getResourceTypeId();
 
     /**
-     *
+     *  <p>Must contain valid message types for the resource. For example, for resource type <code>product</code> the message type <code>ProductPublished</code> is valid. If no <code>types</code> of messages are given, the Subscription will receive all messages for this resource.</p>
      */
 
     @JsonProperty("types")
     public List<String> getTypes();
 
-    public void setResourceTypeId(final String resourceTypeId);
+    public void setResourceTypeId(final MessageSubscriptionResourceTypeId resourceTypeId);
 
     @JsonIgnore
     public void setTypes(final String... types);

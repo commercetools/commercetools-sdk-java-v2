@@ -53,7 +53,7 @@ public class SnsDestinationBuilder implements Builder<SnsDestination> {
     }
 
     /**
-     *
+     *  <p>Amazon Resource Name (ARN) of the topic.</p>
      */
 
     public SnsDestinationBuilder topicArn(final String topicArn) {

@@ -24,7 +24,7 @@ public class AzureServiceBusDestinationBuilder implements Builder<AzureServiceBu
     private String connectionString;
 
     /**
-     *
+     *  <p>SharedAccessKey is partially hidden on retrieval for security reasons.</p>
      */
 
     public AzureServiceBusDestinationBuilder connectionString(final String connectionString) {

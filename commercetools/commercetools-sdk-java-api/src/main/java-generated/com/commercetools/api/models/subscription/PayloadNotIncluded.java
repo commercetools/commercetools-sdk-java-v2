@@ -31,14 +31,14 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface PayloadNotIncluded {
 
     /**
-     *
+     *  <p>Reason the payload is not included. For example, the payload is too large, or its content is not supported by the Subscription destination.</p>
      */
     @NotNull
     @JsonProperty("reason")
     public String getReason();
 
     /**
-     *
+     *  <p>Value of the <code>type</code> field in the original payload.</p>
      */
     @NotNull
     @JsonProperty("payloadType")

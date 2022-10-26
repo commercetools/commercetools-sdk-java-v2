@@ -15,7 +15,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * MessageDeliveryPayload
+ *  <p>This payload is sent for a MessageSubscription.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -30,7 +30,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .lastModifiedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
  *             .sequenceNumber(0.3)
  *             .resourceVersion(0.3)
- *             .payloadNotIncluded(payloadNotIncludedBuilder -> payloadNotIncludedBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -42,51 +41,50 @@ public interface MessageDeliveryPayload extends DeliveryPayload {
     String MESSAGE = "Message";
 
     /**
-     *
+     *  <p>Unique ID of the message.</p>
      */
     @NotNull
     @JsonProperty("id")
     public String getId();
 
     /**
-     *
+     *  <p>Last seen version of the resource.</p>
      */
     @NotNull
     @JsonProperty("version")
     public Long getVersion();
 
     /**
-     *
+     *  <p>Date and time (UTC) the resource was initially created.</p>
      */
     @NotNull
     @JsonProperty("createdAt")
     public ZonedDateTime getCreatedAt();
 
     /**
-     *
+     *  <p>Date and time (UTC) the resource was last modified.</p>
      */
     @NotNull
     @JsonProperty("lastModifiedAt")
     public ZonedDateTime getLastModifiedAt();
 
     /**
-     *
+     *  <p>Used to ensure all messages of the resource are processed in correct order. The <code>sequenceNumber</code> of the next message of the resource is a successor of the <code>sequenceNumber</code> of the current message.</p>
      */
     @NotNull
     @JsonProperty("sequenceNumber")
     public Long getSequenceNumber();
 
     /**
-     *
+     *  <p>Version of the resource on which the change was performed.</p>
      */
     @NotNull
     @JsonProperty("resourceVersion")
     public Long getResourceVersion();
 
     /**
-     *
+     *  <p>If the payload does not fit into the size limit or its format is not accepted by the messaging service, the <code>payloadNotIncluded</code> field is present.</p>
      */
-    @NotNull
     @Valid
     @JsonProperty("payloadNotIncluded")
     public PayloadNotIncluded getPayloadNotIncluded();

@@ -26,7 +26,7 @@ public class SubscriptionSetKeyActionBuilder implements Builder<SubscriptionSetK
     private String key;
 
     /**
-     *  <p>If <code>key</code> is absent or <code>null</code>, this field will be removed if it exists.</p>
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
      */
 
     public SubscriptionSetKeyActionBuilder key(@Nullable final String key) {

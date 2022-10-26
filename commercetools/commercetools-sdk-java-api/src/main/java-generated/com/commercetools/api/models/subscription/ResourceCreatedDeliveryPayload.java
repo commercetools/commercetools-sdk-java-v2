@@ -14,7 +14,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * ResourceCreatedDeliveryPayload
+ *  <p>This payload is sent for a ChangeSubscription when a resource is created.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -36,14 +36,14 @@ public interface ResourceCreatedDeliveryPayload extends DeliveryPayload {
     String RESOURCE_CREATED = "ResourceCreated";
 
     /**
-     *
+     *  <p>Last seen version of the resource.</p>
      */
     @NotNull
     @JsonProperty("version")
     public Long getVersion();
 
     /**
-     *
+     *  <p>Date and time (UTC) the resource was last modified.</p>
      */
     @NotNull
     @JsonProperty("modifiedAt")

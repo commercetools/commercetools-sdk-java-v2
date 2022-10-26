@@ -15,7 +15,9 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * SqsDestination
+ *  <p>AWS SQS is a pull-queue on AWS. The queue must be a Standard queue type with a <code>MaximumMessageSize</code> of <code>256 KB</code>. We recommend setting <code>authenticationMode</code> to <code>IAM</code>, to avoid unnecessary key management. For IAM authentication, give permissions to user <code>arn:aws:iam::362576667341:user/subscriptions</code> to send messages to the queue before creating the Subscription. Otherwise, a test message will not be sent.</p>
+ *  <p>If you prefer to use <code>Credentials</code> for authentication, we recommend creating an IAM user with an <code>accessKey</code> and <code>accessSecret</code> pair specifically for each Subscription.</p>
+ *  <p>The IAM user should only have the <code>sqs:SendMessage</code> permission on this queue.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SqsDestinationImpl implements SqsDestination, ModelBase {
@@ -74,7 +76,7 @@ public class SqsDestinationImpl implements SqsDestination, ModelBase {
     }
 
     /**
-     *
+     *  <p>URL of the Amazon SQS queue.</p>
      */
 
     public String getQueueUrl() {
@@ -82,7 +84,7 @@ public class SqsDestinationImpl implements SqsDestination, ModelBase {
     }
 
     /**
-     *
+     *  <p>AWS Region the message queue is located in.</p>
      */
 
     public String getRegion() {

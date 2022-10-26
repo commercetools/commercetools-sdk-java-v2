@@ -50,42 +50,42 @@ public interface Subscription extends BaseResource, com.commercetools.api.models
     public String getId();
 
     /**
-     *
+     *  <p>Current version of the Subscription.</p>
      */
     @NotNull
     @JsonProperty("version")
     public Long getVersion();
 
     /**
-     *
+     *  <p>Date and time (UTC) the Subscription was initially created.</p>
      */
     @NotNull
     @JsonProperty("createdAt")
     public ZonedDateTime getCreatedAt();
 
     /**
-     *
+     *  <p>Date and time (UTC) the Subscription was last modified.</p>
      */
     @NotNull
     @JsonProperty("lastModifiedAt")
     public ZonedDateTime getLastModifiedAt();
 
     /**
-     *  <p>Present on resources created after 2019-02-01 except for events not tracked.</p>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
     @Valid
     @JsonProperty("lastModifiedBy")
     public LastModifiedBy getLastModifiedBy();
 
     /**
-     *  <p>Present on resources created after 2019-02-01 except for events not tracked.</p>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
     @Valid
     @JsonProperty("createdBy")
     public CreatedBy getCreatedBy();
 
     /**
-     *
+     *  <p>Change notifications subscribed to.</p>
      */
     @NotNull
     @Valid
@@ -93,7 +93,7 @@ public interface Subscription extends BaseResource, com.commercetools.api.models
     public List<ChangeSubscription> getChanges();
 
     /**
-     *
+     *  <p>Messaging service to which the messages are to be sent.</p>
      */
     @NotNull
     @Valid
@@ -108,7 +108,7 @@ public interface Subscription extends BaseResource, com.commercetools.api.models
     public String getKey();
 
     /**
-     *
+     *  <p>Messages subscribed to.</p>
      */
     @NotNull
     @Valid
@@ -116,7 +116,7 @@ public interface Subscription extends BaseResource, com.commercetools.api.models
     public List<MessageSubscription> getMessages();
 
     /**
-     *
+     *  <p>Format in which the payload is delivered.</p>
      */
     @NotNull
     @Valid
@@ -124,7 +124,7 @@ public interface Subscription extends BaseResource, com.commercetools.api.models
     public DeliveryFormat getFormat();
 
     /**
-     *
+     *  <p>Status of the Subscription.</p>
      */
     @NotNull
     @JsonProperty("status")

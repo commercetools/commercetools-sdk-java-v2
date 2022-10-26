@@ -35,7 +35,7 @@ public class PayloadNotIncludedImpl implements PayloadNotIncluded, ModelBase {
     }
 
     /**
-     *
+     *  <p>Reason the payload is not included. For example, the payload is too large, or its content is not supported by the Subscription destination.</p>
      */
 
     public String getReason() {
@@ -43,7 +43,7 @@ public class PayloadNotIncludedImpl implements PayloadNotIncluded, ModelBase {
     }
 
     /**
-     *
+     *  <p>Value of the <code>type</code> field in the original payload.</p>
      */
 
     public String getPayloadType() {

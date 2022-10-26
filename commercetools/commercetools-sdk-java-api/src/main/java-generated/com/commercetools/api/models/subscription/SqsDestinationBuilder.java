@@ -56,7 +56,7 @@ public class SqsDestinationBuilder implements Builder<SqsDestination> {
     }
 
     /**
-     *
+     *  <p>URL of the Amazon SQS queue.</p>
      */
 
     public SqsDestinationBuilder queueUrl(final String queueUrl) {
@@ -65,7 +65,7 @@ public class SqsDestinationBuilder implements Builder<SqsDestination> {
     }
 
     /**
-     *
+     *  <p>AWS Region the message queue is located in.</p>
      */
 
     public SqsDestinationBuilder region(final String region) {

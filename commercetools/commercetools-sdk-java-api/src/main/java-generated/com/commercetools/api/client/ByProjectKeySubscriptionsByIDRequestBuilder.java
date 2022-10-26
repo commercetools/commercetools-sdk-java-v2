@@ -31,4 +31,7 @@ public class ByProjectKeySubscriptionsByIDRequestBuilder {
         return new ByProjectKeySubscriptionsByIDDelete(apiHttpClient, projectKey, ID);
     }
 
+    public ByProjectKeySubscriptionsByIDHealthRequestBuilder withIdHealth() {
+        return new ByProjectKeySubscriptionsByIDHealthRequestBuilder(apiHttpClient, projectKey, ID);
+    }
 }

@@ -14,7 +14,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * ResourceDeletedDeliveryPayload
+ *  <p>This payload is sent for a ChangeSubscription when a resource is deleted.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -36,21 +36,21 @@ public interface ResourceDeletedDeliveryPayload extends DeliveryPayload {
     String RESOURCE_DELETED = "ResourceDeleted";
 
     /**
-     *
+     *  <p>Last seen version of the resource.</p>
      */
     @NotNull
     @JsonProperty("version")
     public Long getVersion();
 
     /**
-     *
+     *  <p>Date and time (UTC) the resource was last deleted.</p>
      */
     @NotNull
     @JsonProperty("modifiedAt")
     public ZonedDateTime getModifiedAt();
 
     /**
-     *
+     *  <p><code>true</code> if the <code>dataErasure</code> parameter on the <code>DELETE</code> request was set to <code>true</code>.</p>
      */
 
     @JsonProperty("dataErasure")

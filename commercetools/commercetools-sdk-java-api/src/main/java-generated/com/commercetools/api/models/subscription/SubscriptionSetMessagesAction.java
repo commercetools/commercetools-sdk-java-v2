@@ -31,7 +31,7 @@ public interface SubscriptionSetMessagesAction extends SubscriptionUpdateAction 
     String SET_MESSAGES = "setMessages";
 
     /**
-     *
+     *  <p>Value to set. Can only be unset if <code>changes</code> is set.</p>
      */
     @Valid
     @JsonProperty("messages")

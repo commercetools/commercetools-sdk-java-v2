@@ -14,7 +14,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * SubscriptionChangeDestinationAction
+ *  <p>A test message is sent to ensure the correct configuration of the Destination. If the message cannot be delivered, the update will fail. The payload of the test message is a notification of type ResourceCreated for the <code>resourceTypeId</code> <code>subscription</code>. The <code>status</code> will change to Healthy, if it isn't already.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -33,7 +33,7 @@ public interface SubscriptionChangeDestinationAction extends SubscriptionUpdateA
     String CHANGE_DESTINATION = "changeDestination";
 
     /**
-     *
+     *  <p>New value to set. Must not be empty.</p>
      */
     @NotNull
     @Valid

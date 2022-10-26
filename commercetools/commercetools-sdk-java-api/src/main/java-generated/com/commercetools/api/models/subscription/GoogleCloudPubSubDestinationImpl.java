@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * GoogleCloudPubSubDestination
+ *  <p>Destination for Google Cloud Pub/Sub that can be used for Pull subscriptions as well as for Push subscriptions. The <code>topic</code> must give the <code>pubsub.topics.publish</code> permission to the service account <code>subscriptions@commercetools-platform.iam.gserviceaccount.com</code>. If used with the CloudEventsFormat, the message conforms to the PubSub Protocol Binding of the Structured Content Mode.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class GoogleCloudPubSubDestinationImpl implements GoogleCloudPubSubDestination, ModelBase {
@@ -47,7 +47,7 @@ public class GoogleCloudPubSubDestinationImpl implements GoogleCloudPubSubDestin
     }
 
     /**
-     *
+     *  <p>ID of the Google Cloud project that contains the Pub/Sub topic.</p>
      */
 
     public String getProjectId() {
@@ -55,7 +55,7 @@ public class GoogleCloudPubSubDestinationImpl implements GoogleCloudPubSubDestin
     }
 
     /**
-     *
+     *  <p>Name of the topic.</p>
      */
 
     public String getTopic() {

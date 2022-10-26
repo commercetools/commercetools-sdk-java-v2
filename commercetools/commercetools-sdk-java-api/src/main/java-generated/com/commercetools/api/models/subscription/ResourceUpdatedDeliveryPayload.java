@@ -14,7 +14,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * ResourceUpdatedDeliveryPayload
+ *  <p>This payload is sent for a ChangeSubscription when a resource is updated. This includes updates by a background process, like a change in product availability.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -37,21 +37,21 @@ public interface ResourceUpdatedDeliveryPayload extends DeliveryPayload {
     String RESOURCE_UPDATED = "ResourceUpdated";
 
     /**
-     *
+     *  <p>Last seen version of the resource.</p>
      */
     @NotNull
     @JsonProperty("version")
     public Long getVersion();
 
     /**
-     *
+     *  <p>Version of the resource before the update.</p>
      */
     @NotNull
     @JsonProperty("oldVersion")
     public Long getOldVersion();
 
     /**
-     *
+     *  <p>Date and time (UTC) the resource was last updated.</p>
      */
     @NotNull
     @JsonProperty("modifiedAt")

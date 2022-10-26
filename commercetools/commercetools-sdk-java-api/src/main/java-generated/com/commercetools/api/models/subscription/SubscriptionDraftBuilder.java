@@ -39,7 +39,7 @@ public class SubscriptionDraftBuilder implements Builder<SubscriptionDraft> {
     private com.commercetools.api.models.subscription.DeliveryFormat format;
 
     /**
-     *
+     *  <p>Change notifications to be subscribed to.</p>
      */
 
     public SubscriptionDraftBuilder changes(
@@ -49,7 +49,7 @@ public class SubscriptionDraftBuilder implements Builder<SubscriptionDraft> {
     }
 
     /**
-     *
+     *  <p>Change notifications to be subscribed to.</p>
      */
 
     public SubscriptionDraftBuilder changes(
@@ -59,7 +59,7 @@ public class SubscriptionDraftBuilder implements Builder<SubscriptionDraft> {
     }
 
     /**
-     *
+     *  <p>Change notifications to be subscribed to.</p>
      */
 
     public SubscriptionDraftBuilder plusChanges(
@@ -72,7 +72,7 @@ public class SubscriptionDraftBuilder implements Builder<SubscriptionDraft> {
     }
 
     /**
-     *
+     *  <p>Change notifications to be subscribed to.</p>
      */
 
     public SubscriptionDraftBuilder plusChanges(
@@ -86,7 +86,7 @@ public class SubscriptionDraftBuilder implements Builder<SubscriptionDraft> {
     }
 
     /**
-     *
+     *  <p>Change notifications to be subscribed to.</p>
      */
 
     public SubscriptionDraftBuilder withChanges(
@@ -98,7 +98,7 @@ public class SubscriptionDraftBuilder implements Builder<SubscriptionDraft> {
     }
 
     /**
-     *
+     *  <p>Messaging service to which the messages are sent.</p>
      */
 
     public SubscriptionDraftBuilder destination(
@@ -108,7 +108,7 @@ public class SubscriptionDraftBuilder implements Builder<SubscriptionDraft> {
     }
 
     /**
-     *
+     *  <p>Messaging service to which the messages are sent.</p>
      */
 
     public SubscriptionDraftBuilder destination(
@@ -127,7 +127,7 @@ public class SubscriptionDraftBuilder implements Builder<SubscriptionDraft> {
     }
 
     /**
-     *
+     *  <p>Messages to be subscribed to.</p>
      */
 
     public SubscriptionDraftBuilder messages(
@@ -137,7 +137,7 @@ public class SubscriptionDraftBuilder implements Builder<SubscriptionDraft> {
     }
 
     /**
-     *
+     *  <p>Messages to be subscribed to.</p>
      */
 
     public SubscriptionDraftBuilder messages(
@@ -147,7 +147,7 @@ public class SubscriptionDraftBuilder implements Builder<SubscriptionDraft> {
     }
 
     /**
-     *
+     *  <p>Messages to be subscribed to.</p>
      */
 
     public SubscriptionDraftBuilder plusMessages(
@@ -160,7 +160,7 @@ public class SubscriptionDraftBuilder implements Builder<SubscriptionDraft> {
     }
 
     /**
-     *
+     *  <p>Messages to be subscribed to.</p>
      */
 
     public SubscriptionDraftBuilder plusMessages(
@@ -174,7 +174,7 @@ public class SubscriptionDraftBuilder implements Builder<SubscriptionDraft> {
     }
 
     /**
-     *
+     *  <p>Messages to be subscribed to.</p>
      */
 
     public SubscriptionDraftBuilder withMessages(
@@ -186,7 +186,7 @@ public class SubscriptionDraftBuilder implements Builder<SubscriptionDraft> {
     }
 
     /**
-     *
+     *  <p>Format in which the payload is delivered. When not provided, the PlatformFormat is selected by default.</p>
      */
 
     public SubscriptionDraftBuilder format(
@@ -196,7 +196,7 @@ public class SubscriptionDraftBuilder implements Builder<SubscriptionDraft> {
     }
 
     /**
-     *
+     *  <p>Format in which the payload is delivered. When not provided, the PlatformFormat is selected by default.</p>
      */
 
     public SubscriptionDraftBuilder format(

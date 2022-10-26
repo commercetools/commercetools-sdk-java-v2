@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * SubscriptionChangeDestinationAction
+ *  <p>A test message is sent to ensure the correct configuration of the Destination. If the message cannot be delivered, the update will fail. The payload of the test message is a notification of type ResourceCreated for the <code>resourceTypeId</code> <code>subscription</code>. The <code>status</code> will change to Healthy, if it isn't already.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SubscriptionChangeDestinationActionImpl implements SubscriptionChangeDestinationAction, ModelBase {
@@ -44,7 +44,7 @@ public class SubscriptionChangeDestinationActionImpl implements SubscriptionChan
     }
 
     /**
-     *
+     *  <p>New value to set. Must not be empty.</p>
      */
 
     public com.commercetools.api.models.subscription.Destination getDestination() {

@@ -24,7 +24,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .lastModifiedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
  *             .sequenceNumber(0.3)
  *             .resourceVersion(0.3)
- *             .payloadNotIncluded(payloadNotIncludedBuilder -> payloadNotIncludedBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -51,10 +50,11 @@ public class MessageDeliveryPayloadBuilder implements Builder<MessageDeliveryPay
 
     private Long resourceVersion;
 
+    @Nullable
     private com.commercetools.api.models.subscription.PayloadNotIncluded payloadNotIncluded;
 
     /**
-     *
+     *  <p><code>key</code> of the Project. Useful in message processing if the Destination receives events from multiple Projects.</p>
      */
 
     public MessageDeliveryPayloadBuilder projectKey(final String projectKey) {
@@ -63,7 +63,7 @@ public class MessageDeliveryPayloadBuilder implements Builder<MessageDeliveryPay
     }
 
     /**
-     *  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
+     *  <p>Reference to the resource that triggered the message.</p>
      */
 
     public MessageDeliveryPayloadBuilder resource(final com.commercetools.api.models.common.Reference resource) {
@@ -72,7 +72,7 @@ public class MessageDeliveryPayloadBuilder implements Builder<MessageDeliveryPay
     }
 
     /**
-     *  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
+     *  <p>Reference to the resource that triggered the message.</p>
      */
 
     public MessageDeliveryPayloadBuilder resource(
@@ -82,7 +82,7 @@ public class MessageDeliveryPayloadBuilder implements Builder<MessageDeliveryPay
     }
 
     /**
-     *  <p>User-provided identifiers present on the resource for which the Message is created. The value of the identifier stored in the Message corresponds to the one that was set on the resource at the version shown in <code>resourceVersion</code>.</p>
+     *  <p>User-defined unique identifiers of the resource.</p>
      */
 
     public MessageDeliveryPayloadBuilder resourceUserProvidedIdentifiers(
@@ -94,7 +94,7 @@ public class MessageDeliveryPayloadBuilder implements Builder<MessageDeliveryPay
     }
 
     /**
-     *  <p>User-provided identifiers present on the resource for which the Message is created. The value of the identifier stored in the Message corresponds to the one that was set on the resource at the version shown in <code>resourceVersion</code>.</p>
+     *  <p>User-defined unique identifiers of the resource.</p>
      */
 
     public MessageDeliveryPayloadBuilder resourceUserProvidedIdentifiers(
@@ -104,7 +104,7 @@ public class MessageDeliveryPayloadBuilder implements Builder<MessageDeliveryPay
     }
 
     /**
-     *
+     *  <p>Unique ID of the message.</p>
      */
 
     public MessageDeliveryPayloadBuilder id(final String id) {
@@ -113,7 +113,7 @@ public class MessageDeliveryPayloadBuilder implements Builder<MessageDeliveryPay
     }
 
     /**
-     *
+     *  <p>Last seen version of the resource.</p>
      */
 
     public MessageDeliveryPayloadBuilder version(final Long version) {
@@ -122,7 +122,7 @@ public class MessageDeliveryPayloadBuilder implements Builder<MessageDeliveryPay
     }
 
     /**
-     *
+     *  <p>Date and time (UTC) the resource was initially created.</p>
      */
 
     public MessageDeliveryPayloadBuilder createdAt(final java.time.ZonedDateTime createdAt) {
@@ -131,7 +131,7 @@ public class MessageDeliveryPayloadBuilder implements Builder<MessageDeliveryPay
     }
 
     /**
-     *
+     *  <p>Date and time (UTC) the resource was last modified.</p>
      */
 
     public MessageDeliveryPayloadBuilder lastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {
@@ -140,7 +140,7 @@ public class MessageDeliveryPayloadBuilder implements Builder<MessageDeliveryPay
     }
 
     /**
-     *
+     *  <p>Used to ensure all messages of the resource are processed in correct order. The <code>sequenceNumber</code> of the next message of the resource is a successor of the <code>sequenceNumber</code> of the current message.</p>
      */
 
     public MessageDeliveryPayloadBuilder sequenceNumber(final Long sequenceNumber) {
@@ -149,7 +149,7 @@ public class MessageDeliveryPayloadBuilder implements Builder<MessageDeliveryPay
     }
 
     /**
-     *
+     *  <p>Version of the resource on which the change was performed.</p>
      */
 
     public MessageDeliveryPayloadBuilder resourceVersion(final Long resourceVersion) {
@@ -158,7 +158,7 @@ public class MessageDeliveryPayloadBuilder implements Builder<MessageDeliveryPay
     }
 
     /**
-     *
+     *  <p>If the payload does not fit into the size limit or its format is not accepted by the messaging service, the <code>payloadNotIncluded</code> field is present.</p>
      */
 
     public MessageDeliveryPayloadBuilder payloadNotIncluded(
@@ -170,11 +170,11 @@ public class MessageDeliveryPayloadBuilder implements Builder<MessageDeliveryPay
     }
 
     /**
-     *
+     *  <p>If the payload does not fit into the size limit or its format is not accepted by the messaging service, the <code>payloadNotIncluded</code> field is present.</p>
      */
 
     public MessageDeliveryPayloadBuilder payloadNotIncluded(
-            final com.commercetools.api.models.subscription.PayloadNotIncluded payloadNotIncluded) {
+            @Nullable final com.commercetools.api.models.subscription.PayloadNotIncluded payloadNotIncluded) {
         this.payloadNotIncluded = payloadNotIncluded;
         return this;
     }
@@ -216,6 +216,7 @@ public class MessageDeliveryPayloadBuilder implements Builder<MessageDeliveryPay
         return this.resourceVersion;
     }
 
+    @Nullable
     public com.commercetools.api.models.subscription.PayloadNotIncluded getPayloadNotIncluded() {
         return this.payloadNotIncluded;
     }
@@ -229,7 +230,6 @@ public class MessageDeliveryPayloadBuilder implements Builder<MessageDeliveryPay
         Objects.requireNonNull(lastModifiedAt, MessageDeliveryPayload.class + ": lastModifiedAt is missing");
         Objects.requireNonNull(sequenceNumber, MessageDeliveryPayload.class + ": sequenceNumber is missing");
         Objects.requireNonNull(resourceVersion, MessageDeliveryPayload.class + ": resourceVersion is missing");
-        Objects.requireNonNull(payloadNotIncluded, MessageDeliveryPayload.class + ": payloadNotIncluded is missing");
         return new MessageDeliveryPayloadImpl(projectKey, resource, resourceUserProvidedIdentifiers, id, version,
             createdAt, lastModifiedAt, sequenceNumber, resourceVersion, payloadNotIncluded);
     }

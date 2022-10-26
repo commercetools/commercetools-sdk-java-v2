@@ -25,7 +25,7 @@ public class SubscriptionChangeDestinationActionBuilder implements Builder<Subsc
     private com.commercetools.api.models.subscription.Destination destination;
 
     /**
-     *
+     *  <p>New value to set. Must not be empty.</p>
      */
 
     public SubscriptionChangeDestinationActionBuilder destination(
@@ -35,7 +35,7 @@ public class SubscriptionChangeDestinationActionBuilder implements Builder<Subsc
     }
 
     /**
-     *
+     *  <p>New value to set. Must not be empty.</p>
      */
 
     public SubscriptionChangeDestinationActionBuilder destination(

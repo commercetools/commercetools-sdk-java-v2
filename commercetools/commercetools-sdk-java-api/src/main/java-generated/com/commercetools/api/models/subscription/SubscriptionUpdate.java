@@ -33,14 +33,14 @@ public interface SubscriptionUpdate extends
         com.commercetools.api.models.ResourceUpdate<SubscriptionUpdate, SubscriptionUpdateAction, SubscriptionUpdateBuilder> {
 
     /**
-     *
+     *  <p>Expected version of the Subscription on which the changes should be applied. If the expected version does not match the actual version, a 409 Conflict will be returned.</p>
      */
     @NotNull
     @JsonProperty("version")
     public Long getVersion();
 
     /**
-     *
+     *  <p>Update actions to be performed on the Subscription.</p>
      */
     @NotNull
     @Valid

@@ -13,7 +13,9 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * SnsDestination
+ *  <p>AWS SNS can be used to push messages to AWS Lambda, HTTP endpoints (webhooks), or fan-out messages to SQS queues. We recommend setting <code>authenticationMode</code> to <code>IAM</code>, to avoid unnecessary key management. For IAM authentication, give permissions to user <code>arn:aws:iam::362576667341:user/subscriptions</code> to publish to the topic before creating the Subscription. Otherwise, a test message will not be sent.</p>
+ *  <p>If you prefer to use <code>Credentials</code> for authentication, we recommend creating an IAM user with an <code>accessKey</code> and <code>accessSecret</code> pair specifically for each Subscription.</p>
+ *  <p>The IAM user should only have the <code>sns:Publish</code> permission on this topic.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -46,7 +48,7 @@ public interface SnsDestination extends Destination {
     public String getAccessSecret();
 
     /**
-     *
+     *  <p>Amazon Resource Name (ARN) of the topic.</p>
      */
     @NotNull
     @JsonProperty("topicArn")

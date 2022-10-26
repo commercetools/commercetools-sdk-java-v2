@@ -17,8 +17,8 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     SubscriptionPagedQueryResponse subscriptionPagedQueryResponse = SubscriptionPagedQueryResponse.builder()
  *             .limit(0.3)
- *             .count(0.3)
  *             .offset(0.3)
+ *             .count(0.3)
  *             .plusResults(resultsBuilder -> resultsBuilder)
  *             .build()
  * </code></pre>
@@ -29,12 +29,12 @@ public class SubscriptionPagedQueryResponseBuilder implements Builder<Subscripti
 
     private Long limit;
 
+    private Long offset;
+
     private Long count;
 
     @Nullable
     private Long total;
-
-    private Long offset;
 
     private java.util.List<com.commercetools.api.models.subscription.Subscription> results;
 
@@ -48,24 +48,6 @@ public class SubscriptionPagedQueryResponseBuilder implements Builder<Subscripti
     }
 
     /**
-     *
-     */
-
-    public SubscriptionPagedQueryResponseBuilder count(final Long count) {
-        this.count = count;
-        return this;
-    }
-
-    /**
-     *
-     */
-
-    public SubscriptionPagedQueryResponseBuilder total(@Nullable final Long total) {
-        this.total = total;
-        return this;
-    }
-
-    /**
      *  <p>Number of elements skipped.</p>
      */
 
@@ -75,7 +57,25 @@ public class SubscriptionPagedQueryResponseBuilder implements Builder<Subscripti
     }
 
     /**
-     *
+     *  <p>Actual number of results returned.</p>
+     */
+
+    public SubscriptionPagedQueryResponseBuilder count(final Long count) {
+        this.count = count;
+        return this;
+    }
+
+    /**
+     *  <p>Total number of results matching the query. This number is an estimation that is not strongly consistent. This field is returned by default. For improved performance, calculating this field can be deactivated by using the query parameter <code>withTotal=false</code>. When the results are filtered with a Query Predicate, <code>total</code> is subject to a limit.</p>
+     */
+
+    public SubscriptionPagedQueryResponseBuilder total(@Nullable final Long total) {
+        this.total = total;
+        return this;
+    }
+
+    /**
+     *  <p>Subscriptions matching the query.</p>
      */
 
     public SubscriptionPagedQueryResponseBuilder results(
@@ -85,7 +85,7 @@ public class SubscriptionPagedQueryResponseBuilder implements Builder<Subscripti
     }
 
     /**
-     *
+     *  <p>Subscriptions matching the query.</p>
      */
 
     public SubscriptionPagedQueryResponseBuilder results(
@@ -95,7 +95,7 @@ public class SubscriptionPagedQueryResponseBuilder implements Builder<Subscripti
     }
 
     /**
-     *
+     *  <p>Subscriptions matching the query.</p>
      */
 
     public SubscriptionPagedQueryResponseBuilder plusResults(
@@ -108,7 +108,7 @@ public class SubscriptionPagedQueryResponseBuilder implements Builder<Subscripti
     }
 
     /**
-     *
+     *  <p>Subscriptions matching the query.</p>
      */
 
     public SubscriptionPagedQueryResponseBuilder plusResults(
@@ -121,7 +121,7 @@ public class SubscriptionPagedQueryResponseBuilder implements Builder<Subscripti
     }
 
     /**
-     *
+     *  <p>Subscriptions matching the query.</p>
      */
 
     public SubscriptionPagedQueryResponseBuilder withResults(
@@ -135,6 +135,10 @@ public class SubscriptionPagedQueryResponseBuilder implements Builder<Subscripti
         return this.limit;
     }
 
+    public Long getOffset() {
+        return this.offset;
+    }
+
     public Long getCount() {
         return this.count;
     }
@@ -144,27 +148,23 @@ public class SubscriptionPagedQueryResponseBuilder implements Builder<Subscripti
         return this.total;
     }
 
-    public Long getOffset() {
-        return this.offset;
-    }
-
     public java.util.List<com.commercetools.api.models.subscription.Subscription> getResults() {
         return this.results;
     }
 
     public SubscriptionPagedQueryResponse build() {
         Objects.requireNonNull(limit, SubscriptionPagedQueryResponse.class + ": limit is missing");
-        Objects.requireNonNull(count, SubscriptionPagedQueryResponse.class + ": count is missing");
         Objects.requireNonNull(offset, SubscriptionPagedQueryResponse.class + ": offset is missing");
+        Objects.requireNonNull(count, SubscriptionPagedQueryResponse.class + ": count is missing");
         Objects.requireNonNull(results, SubscriptionPagedQueryResponse.class + ": results is missing");
-        return new SubscriptionPagedQueryResponseImpl(limit, count, total, offset, results);
+        return new SubscriptionPagedQueryResponseImpl(limit, offset, count, total, results);
     }
 
     /**
      * builds SubscriptionPagedQueryResponse without checking for non null required values
      */
     public SubscriptionPagedQueryResponse buildUnchecked() {
-        return new SubscriptionPagedQueryResponseImpl(limit, count, total, offset, results);
+        return new SubscriptionPagedQueryResponseImpl(limit, offset, count, total, results);
     }
 
     public static SubscriptionPagedQueryResponseBuilder of() {
@@ -174,9 +174,9 @@ public class SubscriptionPagedQueryResponseBuilder implements Builder<Subscripti
     public static SubscriptionPagedQueryResponseBuilder of(final SubscriptionPagedQueryResponse template) {
         SubscriptionPagedQueryResponseBuilder builder = new SubscriptionPagedQueryResponseBuilder();
         builder.limit = template.getLimit();
+        builder.offset = template.getOffset();
         builder.count = template.getCount();
         builder.total = template.getTotal();
-        builder.offset = template.getOffset();
         builder.results = template.getResults();
         return builder;
     }

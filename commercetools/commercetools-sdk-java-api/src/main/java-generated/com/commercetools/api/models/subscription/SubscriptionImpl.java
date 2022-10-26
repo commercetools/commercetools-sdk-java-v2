@@ -82,7 +82,7 @@ public class SubscriptionImpl implements Subscription, ModelBase {
     }
 
     /**
-     *
+     *  <p>Current version of the Subscription.</p>
      */
 
     public Long getVersion() {
@@ -90,7 +90,7 @@ public class SubscriptionImpl implements Subscription, ModelBase {
     }
 
     /**
-     *
+     *  <p>Date and time (UTC) the Subscription was initially created.</p>
      */
 
     public java.time.ZonedDateTime getCreatedAt() {
@@ -98,7 +98,7 @@ public class SubscriptionImpl implements Subscription, ModelBase {
     }
 
     /**
-     *
+     *  <p>Date and time (UTC) the Subscription was last modified.</p>
      */
 
     public java.time.ZonedDateTime getLastModifiedAt() {
@@ -106,7 +106,7 @@ public class SubscriptionImpl implements Subscription, ModelBase {
     }
 
     /**
-     *  <p>Present on resources created after 2019-02-01 except for events not tracked.</p>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
     public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy() {
@@ -114,7 +114,7 @@ public class SubscriptionImpl implements Subscription, ModelBase {
     }
 
     /**
-     *  <p>Present on resources created after 2019-02-01 except for events not tracked.</p>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
     public com.commercetools.api.models.common.CreatedBy getCreatedBy() {
@@ -122,7 +122,7 @@ public class SubscriptionImpl implements Subscription, ModelBase {
     }
 
     /**
-     *
+     *  <p>Change notifications subscribed to.</p>
      */
 
     public java.util.List<com.commercetools.api.models.subscription.ChangeSubscription> getChanges() {
@@ -130,7 +130,7 @@ public class SubscriptionImpl implements Subscription, ModelBase {
     }
 
     /**
-     *
+     *  <p>Messaging service to which the messages are to be sent.</p>
      */
 
     public com.commercetools.api.models.subscription.Destination getDestination() {
@@ -146,7 +146,7 @@ public class SubscriptionImpl implements Subscription, ModelBase {
     }
 
     /**
-     *
+     *  <p>Messages subscribed to.</p>
      */
 
     public java.util.List<com.commercetools.api.models.subscription.MessageSubscription> getMessages() {
@@ -154,7 +154,7 @@ public class SubscriptionImpl implements Subscription, ModelBase {
     }
 
     /**
-     *
+     *  <p>Format in which the payload is delivered.</p>
      */
 
     public com.commercetools.api.models.subscription.DeliveryFormat getFormat() {
@@ -162,7 +162,7 @@ public class SubscriptionImpl implements Subscription, ModelBase {
     }
 
     /**
-     *
+     *  <p>Status of the Subscription.</p>
      */
 
     public com.commercetools.api.models.subscription.SubscriptionHealthStatus getStatus() {

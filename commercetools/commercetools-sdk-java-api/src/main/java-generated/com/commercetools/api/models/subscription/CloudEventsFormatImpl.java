@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * CloudEventsFormat
+ *  <p>The CloudEventsFormat can be used with any Destination, and the payload is delivered in the <code>JSON Event Format</code>. AzureEventGridDestination offers native support to filter and route CloudEvents.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CloudEventsFormatImpl implements CloudEventsFormat, ModelBase {
@@ -43,7 +43,7 @@ public class CloudEventsFormatImpl implements CloudEventsFormat, ModelBase {
     }
 
     /**
-     *
+     *  <p>Supported versions: "1.0".</p>
      */
 
     public String getCloudEventsVersion() {

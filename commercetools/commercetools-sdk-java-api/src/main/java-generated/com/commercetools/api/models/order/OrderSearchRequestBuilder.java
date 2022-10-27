@@ -27,7 +27,7 @@ public class OrderSearchRequestBuilder implements Builder<OrderSearchRequest> {
     private com.commercetools.api.models.order.OrderSearchQuery query;
 
     @Nullable
-    private String sort;
+    private java.util.List<com.commercetools.api.models.order.OrderSearchSorting> sort;
 
     @Nullable
     private Integer limit;
@@ -58,8 +58,56 @@ public class OrderSearchRequestBuilder implements Builder<OrderSearchRequest> {
      *  <p>Controls how results to your query are sorted. If not provided, the results are sorted by relevance in descending order.</p>
      */
 
-    public OrderSearchRequestBuilder sort(@Nullable final String sort) {
+    public OrderSearchRequestBuilder sort(
+            @Nullable final com.commercetools.api.models.order.OrderSearchSorting... sort) {
+        this.sort = new ArrayList<>(Arrays.asList(sort));
+        return this;
+    }
+
+    /**
+     *  <p>Controls how results to your query are sorted. If not provided, the results are sorted by relevance in descending order.</p>
+     */
+
+    public OrderSearchRequestBuilder sort(
+            @Nullable final java.util.List<com.commercetools.api.models.order.OrderSearchSorting> sort) {
         this.sort = sort;
+        return this;
+    }
+
+    /**
+     *  <p>Controls how results to your query are sorted. If not provided, the results are sorted by relevance in descending order.</p>
+     */
+
+    public OrderSearchRequestBuilder plusSort(
+            @Nullable final com.commercetools.api.models.order.OrderSearchSorting... sort) {
+        if (this.sort == null) {
+            this.sort = new ArrayList<>();
+        }
+        this.sort.addAll(Arrays.asList(sort));
+        return this;
+    }
+
+    /**
+     *  <p>Controls how results to your query are sorted. If not provided, the results are sorted by relevance in descending order.</p>
+     */
+
+    public OrderSearchRequestBuilder plusSort(
+            Function<com.commercetools.api.models.order.OrderSearchSortingBuilder, com.commercetools.api.models.order.OrderSearchSortingBuilder> builder) {
+        if (this.sort == null) {
+            this.sort = new ArrayList<>();
+        }
+        this.sort.add(builder.apply(com.commercetools.api.models.order.OrderSearchSortingBuilder.of()).build());
+        return this;
+    }
+
+    /**
+     *  <p>Controls how results to your query are sorted. If not provided, the results are sorted by relevance in descending order.</p>
+     */
+
+    public OrderSearchRequestBuilder withSort(
+            Function<com.commercetools.api.models.order.OrderSearchSortingBuilder, com.commercetools.api.models.order.OrderSearchSortingBuilder> builder) {
+        this.sort = new ArrayList<>();
+        this.sort.add(builder.apply(com.commercetools.api.models.order.OrderSearchSortingBuilder.of()).build());
         return this;
     }
 
@@ -86,7 +134,7 @@ public class OrderSearchRequestBuilder implements Builder<OrderSearchRequest> {
     }
 
     @Nullable
-    public String getSort() {
+    public java.util.List<com.commercetools.api.models.order.OrderSearchSorting> getSort() {
         return this.sort;
     }
 

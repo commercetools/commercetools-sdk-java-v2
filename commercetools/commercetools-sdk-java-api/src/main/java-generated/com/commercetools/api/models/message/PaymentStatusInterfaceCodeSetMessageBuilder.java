@@ -54,6 +54,8 @@ public class PaymentStatusInterfaceCodeSetMessageBuilder implements Builder<Paym
     @Nullable
     private com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers;
 
+    @Deprecated
+
     private String paymentId;
 
     @Nullable
@@ -198,7 +200,7 @@ public class PaymentStatusInterfaceCodeSetMessageBuilder implements Builder<Paym
     /**
      *  <p>Unique identifier for the Payment for which the Set StatusInterfaceCode update action was applied.</p>
      */
-
+    @Deprecated
     public PaymentStatusInterfaceCodeSetMessageBuilder paymentId(final String paymentId) {
         this.paymentId = paymentId;
         return this;
@@ -255,6 +257,8 @@ public class PaymentStatusInterfaceCodeSetMessageBuilder implements Builder<Paym
     public com.commercetools.api.models.message.UserProvidedIdentifiers getResourceUserProvidedIdentifiers() {
         return this.resourceUserProvidedIdentifiers;
     }
+
+    @Deprecated
 
     public String getPaymentId() {
         return this.paymentId;

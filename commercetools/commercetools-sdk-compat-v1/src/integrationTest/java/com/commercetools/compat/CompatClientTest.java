@@ -2,6 +2,8 @@
 package com.commercetools.compat;
 
 import com.commercetools.api.client.ApiRoot;
+import com.commercetools.api.client.ByProjectKeyCartsGet;
+import com.commercetools.api.client.ProjectApiRoot;
 import com.commercetools.api.defaultconfig.ApiRootBuilder;
 import com.commercetools.api.models.cart.Cart;
 import com.commercetools.api.models.category.CategoryPagedQueryResponse;
@@ -93,5 +95,12 @@ public class CompatClientTest {
                 .executeBlocking()
                 .getBody();
         Assertions.assertThat(response).isInstanceOf(CategoryPagedQueryResponse.class);
+    }
+
+    public void compatBuilder() {
+        ProjectApiRoot root = CommercetoolsTestUtils.getProjectRoot();
+        ByProjectKeyCartsGet cartRequest = CompatBuilder.of(root)
+                .query()
+                .cart(cartQuery -> cartQuery.plusPredicates(cartQueryModel -> cartQueryModel.anonymousId().is("42")));
     }
 }

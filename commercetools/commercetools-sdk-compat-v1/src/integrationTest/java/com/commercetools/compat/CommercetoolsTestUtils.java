@@ -4,6 +4,7 @@ package com.commercetools.compat;
 import java.util.UUID;
 
 import com.commercetools.api.client.ByProjectKeyRequestBuilder;
+import com.commercetools.api.client.ProjectApiRoot;
 import com.commercetools.api.defaultconfig.ApiRootBuilder;
 import com.commercetools.api.defaultconfig.ServiceRegion;
 import com.commercetools.api.models.common.LocalizedString;
@@ -15,7 +16,7 @@ import io.vrap.rmf.base.client.oauth2.ClientCredentials;
 public class CommercetoolsTestUtils {
 
     private static final ApiHttpClient client;
-    private static final ByProjectKeyRequestBuilder projectRoot;
+    private static final ProjectApiRoot projectRoot;
 
     static {
         String logLevel = System.getenv("CTP_JVM_SDK_LOG_LEVEL");
@@ -24,7 +25,7 @@ public class CommercetoolsTestUtils {
                     ClientCredentials.of().withClientId(getClientId()).withClientSecret(getClientSecret()).build(),
                     ServiceRegion.GCP_EUROPE_WEST1);
         client = builder.buildClient();
-        projectRoot = ApiRootBuilder.createForProject(getProjectKey(), client);
+        projectRoot = builder.build(getProjectKey());
     }
 
     public static String randomString() {
@@ -57,7 +58,7 @@ public class CommercetoolsTestUtils {
         return System.getenv("CTP_CLIENT_SECRET");
     }
 
-    public static ByProjectKeyRequestBuilder getProjectRoot() {
+    public static ProjectApiRoot getProjectRoot() {
         return projectRoot;
     }
 

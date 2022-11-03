@@ -33,6 +33,15 @@ package com.commercetools.docs.meta;
 
     <p>The retry implementation uses the library <a href="https://failsafe.dev/">failsafe</a></p>
 
+    <h3>ConcurrentModificationMiddleware</h3>
+
+    <p>The {@link com.commercetools.api.client.ConcurrentModificationMiddleware} is used to retry a failed request which returns the
+    status codes <code>409</code> (concurrent modification). For retrying an exponential backoff strategy is used which will increase
+    the wait time before each try to avoid overwhelming the API. A jitter is also added to avoid reduce the possibility that parallel
+    requests will be retried at the same time.</p>
+
+    <p>The retry implementation uses the library <a href="https://failsafe.dev/">failsafe</a></p>
+
     <h3>UserAgentMiddleware</h3>
 
     <p>The {@link io.vrap.rmf.base.client.http.UserAgentMiddleware} adds an user agent header to every request. By default

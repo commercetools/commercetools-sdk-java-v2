@@ -28,7 +28,7 @@
         },
         {
             "moduleName": "com.fasterxml.jackson.core:jackson-databind",
-            "moduleVersion": "2.13.4",
+            "moduleVersion": "2.13.4.2",
             "moduleUrls": [
                 "http://github.com/FasterXML/jackson"
             ],
@@ -80,7 +80,7 @@
         },
         {
             "moduleName": "com.squareup.okhttp3:okhttp",
-            "moduleVersion": "4.9.1",
+            "moduleVersion": "4.10.0",
             "moduleUrls": [
                 "https://square.github.io/okhttp/"
             ],
@@ -93,7 +93,11 @@
         },
         {
             "moduleName": "com.squareup.okio:okio",
-            "moduleVersion": "2.8.0",
+            "moduleVersion": "3.2.0"
+        },
+        {
+            "moduleName": "com.squareup.okio:okio-jvm",
+            "moduleVersion": "3.2.0",
             "moduleUrls": [
                 "https://github.com/square/okio/"
             ],
@@ -149,7 +153,7 @@
         },
         {
             "moduleName": "org.jetbrains.kotlin:kotlin-stdlib",
-            "moduleVersion": "1.4.10",
+            "moduleVersion": "1.6.20",
             "moduleUrls": [
                 "https://kotlinlang.org/"
             ],
@@ -162,7 +166,33 @@
         },
         {
             "moduleName": "org.jetbrains.kotlin:kotlin-stdlib-common",
-            "moduleVersion": "1.4.10",
+            "moduleVersion": "1.6.20",
+            "moduleUrls": [
+                "https://kotlinlang.org/"
+            ],
+            "moduleLicenses": [
+                {
+                    "moduleLicense": "Apache License, Version 2.0",
+                    "moduleLicenseUrl": "https://www.apache.org/licenses/LICENSE-2.0"
+                }
+            ]
+        },
+        {
+            "moduleName": "org.jetbrains.kotlin:kotlin-stdlib-jdk7",
+            "moduleVersion": "1.6.20",
+            "moduleUrls": [
+                "https://kotlinlang.org/"
+            ],
+            "moduleLicenses": [
+                {
+                    "moduleLicense": "Apache License, Version 2.0",
+                    "moduleLicenseUrl": "https://www.apache.org/licenses/LICENSE-2.0"
+                }
+            ]
+        },
+        {
+            "moduleName": "org.jetbrains.kotlin:kotlin-stdlib-jdk8",
+            "moduleVersion": "1.6.20",
             "moduleUrls": [
                 "https://kotlinlang.org/"
             ],
@@ -188,7 +218,7 @@
         },
         {
             "moduleName": "org.slf4j:slf4j-api",
-            "moduleVersion": "1.7.32",
+            "moduleVersion": "1.7.36",
             "moduleUrls": [
                 "http://www.slf4j.org"
             ],

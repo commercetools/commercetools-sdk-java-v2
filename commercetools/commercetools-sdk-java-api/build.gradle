@@ -2,17 +2,18 @@
 dependencies {
     api project(':rmf:rmf-java-base')
     api project(':commercetools:commercetools-money')
-    api "com.fasterxml.jackson.core:jackson-annotations:${versions.jackson}"
-    api "com.fasterxml.jackson.core:jackson-databind:${versions.jackson}"
-    implementation "com.google.code.findbugs:jsr305:${versions.findbugs}"
-    implementation "javax.validation:validation-api:${versions.validation}"
-    api "org.slf4j:slf4j-api:${versions.slf4j}"
+    api jackson_core.annotations
+    api jackson_core.databind
+    implementation google.findbugs
+    implementation javax.validation
+    api slf4j.api
     api commons.lang3
 
     testImplementation project(':commercetools:commercetools-http-client')
     testImplementation project(':commercetools:commercetools-apachehttp-client')
-    testImplementation 'commons-io:commons-io' version commons.io
-    testImplementation "com.google.code.gson:gson:${versions.gson}"
+    testImplementation commons.io version commons.io_version
+
+    testImplementation google.gson
 }
 
 sourceSets.main.java.srcDirs += "src/main/java-generated"

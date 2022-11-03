@@ -1,31 +1,73 @@
 ext {
     versions = [
-            slf4j: "1.7.32",
-            logback: "1.2.8",
-            findbugs: "3.0.2",
             jackson: "2.13.4",
-            junit: "5.8.2",
-            validation: "2.0.1.Final",
-            jsonassert: "1.5.0",
-            mockito: "4.2.0",
-            assertJ: "3.20.2",
-            gson: "2.8.8",
-            awaitility: "4.1.0",
-            failsafe: "3.2.0",
-            completableFutures: "0.3.5",
-            ctpJvmSdk: {
+    ]
+
+    ctsdkv1 = [
+            client: 'com.commercetools.sdk.jvm.core:commercetools-java-client-core:2.9.0',
+            models: 'com.commercetools.sdk.jvm.core:commercetools-models:2.9.0',
+            convenience: 'com.commercetools.sdk.jvm.core:commercetools-convenience:2.9.0',
+            version: {
                 strictly '[1.62.0,)'
-                prefer '2.8.0'
+                prefer '2.9.0'
             }
     ]
 
     commons = [
             lang3: 'org.apache.commons:commons-lang3:3.12.0',
-            io: {
-                strictly '[2.8.0,)'
-                prefer '2.11.0'
-            }
+            io: 'commons-io:commons-io:2.11.0',
+            io_version: {
+                    strictly '[2.8.0,)'
+                    prefer '2.11.0'
+                }
+    ]
 
+    slf4j = [
+            api: 'org.slf4j:slf4j-api:1.7.36',
+    ]
+
+    logback = [
+            classic: 'ch.qos.logback:logback-classic:1.2.10',
+    ]
+
+    jackson_core = [
+            annotations: 'com.fasterxml.jackson.core:jackson-annotations:2.13.4',
+            databind: 'com.fasterxml.jackson.core:jackson-databind:2.13.4.2',
+            core: 'com.fasterxml.jackson.core:jackson-core:2.13.4',
+            datatype: 'com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.13.4',
+    ]
+
+    google = [
+            findbugs: 'com.google.code.findbugs:jsr305:3.0.2',
+            gson: 'com.google.code.gson:gson:2.10',
+    ]
+
+    awaitility = [
+            awaitility: 'org.awaitility:awaitility:4.2.0',
+    ]
+
+    javax = [
+            validation: 'javax.validation:validation-api:2.0.1.Final',
+    ]
+
+    junit = [
+            junit: 'org.junit.jupiter:junit-jupiter:5.8.2',
+            dataprovider: 'com.tngtech.junit.dataprovider:junit-jupiter-dataprovider:2.8',
+            jsonassert: 'org.skyscreamer:jsonassert:1.5.1',
+            assertj: 'org.assertj:assertj-core:3.23.1'
+    ]
+
+    mockito = [
+            inline: 'org.mockito:mockito-inline:4.2.0',
+            junit: 'org.mockito:mockito-junit-jupiter:4.2.0',
+    ]
+
+    failsafe = [
+            failsafe: 'dev.failsafe:failsafe:3.2.0',
+    ]
+
+    spotify = [
+            completableFutures: "com.spotify:completable-futures:0.3.5"
     ]
 
     scmProjectName = rootProject.name

@@ -7,5 +7,5 @@ dependencies {
             prefer '4.9.1'
         }
     }
-    implementation "javax.validation:validation-api:${versions.validation}"
+    implementation javax.validation
 }

@@ -7,7 +7,6 @@ import java.util.function.Supplier;
 import com.commercetools.api.client.*;
 import com.commercetools.api.models.PagedQueryResourceRequest;
 
-import com.commercetools.api.models.cart.CartPagedQueryResponse;
 import io.sphere.sdk.cartdiscounts.queries.CartDiscountQuery;
 import io.sphere.sdk.carts.queries.CartQuery;
 import io.sphere.sdk.categories.queries.CategoryQuery;
@@ -26,7 +25,6 @@ import io.sphere.sdk.productdiscounts.queries.ProductDiscountQuery;
 import io.sphere.sdk.products.ProductProjectionType;
 import io.sphere.sdk.products.queries.ProductProjectionQuery;
 import io.sphere.sdk.products.queries.ProductQuery;
-import io.sphere.sdk.productselections.queries.ProductSelectionQuery;
 import io.sphere.sdk.producttypes.queries.ProductTypeQuery;
 import io.sphere.sdk.queries.MetaModelQueryDsl;
 import io.sphere.sdk.queries.QueryPredicate;
@@ -106,7 +104,8 @@ public class QueryBuilder {
     }
 
     @Deprecated
-    public <T> ByProjectKeyCustomObjectsGet customObject(Class<T> valueClass, final Function<CustomObjectQuery<T>, CustomObjectQuery<T>> queryDsl) {
+    public <T> ByProjectKeyCustomObjectsGet customObject(Class<T> valueClass,
+            final Function<CustomObjectQuery<T>, CustomObjectQuery<T>> queryDsl) {
         return with(queryDsl.apply(CustomObjectQuery.of(valueClass)));
     }
 
@@ -160,8 +159,7 @@ public class QueryBuilder {
         return with(queryDsl.apply(ProductProjectionQuery.ofCurrent()));
     }
 
-    public ByProjectKeyProductProjectionsGet productProjections(
-            final Supplier<ProductProjectionQuery> queryDsl) {
+    public ByProjectKeyProductProjectionsGet productProjections(final Supplier<ProductProjectionQuery> queryDsl) {
         return with(queryDsl.get());
     }
 
@@ -180,8 +178,7 @@ public class QueryBuilder {
         return with(queryDsl.apply(CustomerGroupQuery.of()));
     }
 
-    public ByProjectKeyCustomerGroupsGet customerGroups(
-            final Supplier<CustomerGroupQuery> queryDsl) {
+    public ByProjectKeyCustomerGroupsGet customerGroups(final Supplier<CustomerGroupQuery> queryDsl) {
         return with(queryDsl.get());
     }
 
@@ -230,8 +227,7 @@ public class QueryBuilder {
         return with(queryDsl.apply(ProductDiscountQuery.of()));
     }
 
-    public ByProjectKeyProductDiscountsGet productDiscounts(
-            final Supplier<ProductDiscountQuery> queryDsl) {
+    public ByProjectKeyProductDiscountsGet productDiscounts(final Supplier<ProductDiscountQuery> queryDsl) {
         return with(queryDsl.get());
     }
 
@@ -260,8 +256,7 @@ public class QueryBuilder {
         return with(queryDsl.apply(ShippingMethodQuery.of()));
     }
 
-    public ByProjectKeyShippingMethodsGet shippingMethods(
-            final Supplier<ShippingMethodQuery> queryDsl) {
+    public ByProjectKeyShippingMethodsGet shippingMethods(final Supplier<ShippingMethodQuery> queryDsl) {
         return with(queryDsl.get());
     }
 
@@ -602,9 +597,9 @@ public class QueryBuilder {
         return query(apiRoot.productDiscounts().get(), queryDsl);
     }
 
-//    public ByProjectKeyProductSelectionsGet with(final ProductSelectionQuery queryDsl) {
-//        return query(apiRoot.productSelections().get(), queryDsl);
-//    }
+    //    public ByProjectKeyProductSelectionsGet with(final ProductSelectionQuery queryDsl) {
+    //        return query(apiRoot.productSelections().get(), queryDsl);
+    //    }
 
     public ByProjectKeyProductTypesGet with(final ProductTypeQuery queryDsl) {
         return query(apiRoot.productTypes().get(), queryDsl);

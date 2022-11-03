@@ -48,9 +48,18 @@ public interface StagedOrderSetLineItemTaxRateAction extends StagedOrderUpdateAc
     @JsonProperty("externalTaxRate")
     public ExternalTaxRateDraft getExternalTaxRate();
 
+    /**
+     *  <p><code>key</code> of the ShippingMethod used for this Line Item. This is required for Carts with <code>Multiple</code> ShippingMode.</p>
+     */
+
+    @JsonProperty("shippingKey")
+    public String getShippingKey();
+
     public void setLineItemId(final String lineItemId);
 
     public void setExternalTaxRate(final ExternalTaxRateDraft externalTaxRate);
+
+    public void setShippingKey(final String shippingKey);
 
     public static StagedOrderSetLineItemTaxRateAction of() {
         return new StagedOrderSetLineItemTaxRateActionImpl();
@@ -60,6 +69,7 @@ public interface StagedOrderSetLineItemTaxRateAction extends StagedOrderUpdateAc
         StagedOrderSetLineItemTaxRateActionImpl instance = new StagedOrderSetLineItemTaxRateActionImpl();
         instance.setLineItemId(template.getLineItemId());
         instance.setExternalTaxRate(template.getExternalTaxRate());
+        instance.setShippingKey(template.getShippingKey());
         return instance;
     }
 

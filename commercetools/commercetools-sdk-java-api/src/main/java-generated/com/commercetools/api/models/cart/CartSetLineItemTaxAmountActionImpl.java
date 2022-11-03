@@ -26,11 +26,15 @@ public class CartSetLineItemTaxAmountActionImpl implements CartSetLineItemTaxAmo
 
     private com.commercetools.api.models.cart.ExternalTaxAmountDraft externalTaxAmount;
 
+    private String shippingKey;
+
     @JsonCreator
     CartSetLineItemTaxAmountActionImpl(@JsonProperty("lineItemId") final String lineItemId,
-            @JsonProperty("externalTaxAmount") final com.commercetools.api.models.cart.ExternalTaxAmountDraft externalTaxAmount) {
+            @JsonProperty("externalTaxAmount") final com.commercetools.api.models.cart.ExternalTaxAmountDraft externalTaxAmount,
+            @JsonProperty("shippingKey") final String shippingKey) {
         this.lineItemId = lineItemId;
         this.externalTaxAmount = externalTaxAmount;
+        this.shippingKey = shippingKey;
         this.action = SET_LINE_ITEM_TAX_AMOUNT;
     }
 
@@ -62,12 +66,24 @@ public class CartSetLineItemTaxAmountActionImpl implements CartSetLineItemTaxAmo
         return this.externalTaxAmount;
     }
 
+    /**
+     *  <p><code>key</code> of the ShippingMethod used for this Line Item.``` This is required for Carts with <code>Multiple</code> ShippingMode.</p>
+     */
+
+    public String getShippingKey() {
+        return this.shippingKey;
+    }
+
     public void setLineItemId(final String lineItemId) {
         this.lineItemId = lineItemId;
     }
 
     public void setExternalTaxAmount(final com.commercetools.api.models.cart.ExternalTaxAmountDraft externalTaxAmount) {
         this.externalTaxAmount = externalTaxAmount;
+    }
+
+    public void setShippingKey(final String shippingKey) {
+        this.shippingKey = shippingKey;
     }
 
     @Override
@@ -83,12 +99,17 @@ public class CartSetLineItemTaxAmountActionImpl implements CartSetLineItemTaxAmo
         return new EqualsBuilder().append(action, that.action)
                 .append(lineItemId, that.lineItemId)
                 .append(externalTaxAmount, that.externalTaxAmount)
+                .append(shippingKey, that.shippingKey)
                 .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(action).append(lineItemId).append(externalTaxAmount).toHashCode();
+        return new HashCodeBuilder(17, 37).append(action)
+                .append(lineItemId)
+                .append(externalTaxAmount)
+                .append(shippingKey)
+                .toHashCode();
     }
 
 }

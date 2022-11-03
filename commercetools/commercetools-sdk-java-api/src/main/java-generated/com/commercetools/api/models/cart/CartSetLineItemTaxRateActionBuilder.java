@@ -29,6 +29,9 @@ public class CartSetLineItemTaxRateActionBuilder implements Builder<CartSetLineI
     @Nullable
     private com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate;
 
+    @Nullable
+    private String shippingKey;
+
     /**
      *
      */
@@ -59,6 +62,15 @@ public class CartSetLineItemTaxRateActionBuilder implements Builder<CartSetLineI
         return this;
     }
 
+    /**
+     *  <p><code>key</code> of the ShippingMethod used for this Line Item.``` This is required for Carts with <code>Multiple</code> ShippingMode.</p>
+     */
+
+    public CartSetLineItemTaxRateActionBuilder shippingKey(@Nullable final String shippingKey) {
+        this.shippingKey = shippingKey;
+        return this;
+    }
+
     public String getLineItemId() {
         return this.lineItemId;
     }
@@ -68,16 +80,21 @@ public class CartSetLineItemTaxRateActionBuilder implements Builder<CartSetLineI
         return this.externalTaxRate;
     }
 
+    @Nullable
+    public String getShippingKey() {
+        return this.shippingKey;
+    }
+
     public CartSetLineItemTaxRateAction build() {
         Objects.requireNonNull(lineItemId, CartSetLineItemTaxRateAction.class + ": lineItemId is missing");
-        return new CartSetLineItemTaxRateActionImpl(lineItemId, externalTaxRate);
+        return new CartSetLineItemTaxRateActionImpl(lineItemId, externalTaxRate, shippingKey);
     }
 
     /**
      * builds CartSetLineItemTaxRateAction without checking for non null required values
      */
     public CartSetLineItemTaxRateAction buildUnchecked() {
-        return new CartSetLineItemTaxRateActionImpl(lineItemId, externalTaxRate);
+        return new CartSetLineItemTaxRateActionImpl(lineItemId, externalTaxRate, shippingKey);
     }
 
     public static CartSetLineItemTaxRateActionBuilder of() {
@@ -88,6 +105,7 @@ public class CartSetLineItemTaxRateActionBuilder implements Builder<CartSetLineI
         CartSetLineItemTaxRateActionBuilder builder = new CartSetLineItemTaxRateActionBuilder();
         builder.lineItemId = template.getLineItemId();
         builder.externalTaxRate = template.getExternalTaxRate();
+        builder.shippingKey = template.getShippingKey();
         return builder;
     }
 

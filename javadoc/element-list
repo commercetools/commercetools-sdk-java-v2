@@ -5,6 +5,7 @@ com.commercetools.api.defaultconfig
 com.commercetools.api.json
 com.commercetools.api.models
 com.commercetools.api.models.api_client
+com.commercetools.api.models.attribute_group
 com.commercetools.api.models.business_unit
 com.commercetools.api.models.cart
 com.commercetools.api.models.cart_discount

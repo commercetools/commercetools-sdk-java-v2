@@ -40,7 +40,7 @@
 <span class="source-line-no">027</span><span id="line.27">    private com.commercetools.api.models.order.OrderSearchQuery query;</span>
 <span class="source-line-no">028</span><span id="line.28"></span>
 <span class="source-line-no">029</span><span id="line.29">    @Nullable</span>
-<span class="source-line-no">030</span><span id="line.30">    private String sort;</span>
+<span class="source-line-no">030</span><span id="line.30">    private java.util.List&lt;com.commercetools.api.models.order.OrderSearchSorting&gt; sort;</span>
 <span class="source-line-no">031</span><span id="line.31"></span>
 <span class="source-line-no">032</span><span id="line.32">    @Nullable</span>
 <span class="source-line-no">033</span><span id="line.33">    private Integer limit;</span>
@@ -71,74 +71,122 @@
 <span class="source-line-no">058</span><span id="line.58">     *  &lt;p&gt;Controls how results to your query are sorted. If not provided, the results are sorted by relevance in descending order.&lt;/p&gt;</span>
 <span class="source-line-no">059</span><span id="line.59">     */</span>
 <span class="source-line-no">060</span><span id="line.60"></span>
-<span class="source-line-no">061</span><span id="line.61">    public OrderSearchRequestBuilder sort(@Nullable final String sort) {</span>
-<span class="source-line-no">062</span><span id="line.62">        this.sort = sort;</span>
-<span class="source-line-no">063</span><span id="line.63">        return this;</span>
-<span class="source-line-no">064</span><span id="line.64">    }</span>
-<span class="source-line-no">065</span><span id="line.65"></span>
-<span class="source-line-no">066</span><span id="line.66">    /**</span>
-<span class="source-line-no">067</span><span id="line.67">     *  &lt;p&gt;The maximum number of search results to be returned.&lt;/p&gt;</span>
-<span class="source-line-no">068</span><span id="line.68">     */</span>
-<span class="source-line-no">069</span><span id="line.69"></span>
-<span class="source-line-no">070</span><span id="line.70">    public OrderSearchRequestBuilder limit(@Nullable final Integer limit) {</span>
-<span class="source-line-no">071</span><span id="line.71">        this.limit = limit;</span>
-<span class="source-line-no">072</span><span id="line.72">        return this;</span>
-<span class="source-line-no">073</span><span id="line.73">    }</span>
-<span class="source-line-no">074</span><span id="line.74"></span>
-<span class="source-line-no">075</span><span id="line.75">    /**</span>
-<span class="source-line-no">076</span><span id="line.76">     *  &lt;p&gt;The number of search results to be skipped in the response for pagination.&lt;/p&gt;</span>
-<span class="source-line-no">077</span><span id="line.77">     */</span>
-<span class="source-line-no">078</span><span id="line.78"></span>
-<span class="source-line-no">079</span><span id="line.79">    public OrderSearchRequestBuilder offset(@Nullable final Integer offset) {</span>
-<span class="source-line-no">080</span><span id="line.80">        this.offset = offset;</span>
-<span class="source-line-no">081</span><span id="line.81">        return this;</span>
-<span class="source-line-no">082</span><span id="line.82">    }</span>
-<span class="source-line-no">083</span><span id="line.83"></span>
-<span class="source-line-no">084</span><span id="line.84">    public com.commercetools.api.models.order.OrderSearchQuery getQuery() {</span>
-<span class="source-line-no">085</span><span id="line.85">        return this.query;</span>
-<span class="source-line-no">086</span><span id="line.86">    }</span>
-<span class="source-line-no">087</span><span id="line.87"></span>
-<span class="source-line-no">088</span><span id="line.88">    @Nullable</span>
-<span class="source-line-no">089</span><span id="line.89">    public String getSort() {</span>
-<span class="source-line-no">090</span><span id="line.90">        return this.sort;</span>
-<span class="source-line-no">091</span><span id="line.91">    }</span>
-<span class="source-line-no">092</span><span id="line.92"></span>
-<span class="source-line-no">093</span><span id="line.93">    @Nullable</span>
-<span class="source-line-no">094</span><span id="line.94">    public Integer getLimit() {</span>
-<span class="source-line-no">095</span><span id="line.95">        return this.limit;</span>
-<span class="source-line-no">096</span><span id="line.96">    }</span>
-<span class="source-line-no">097</span><span id="line.97"></span>
-<span class="source-line-no">098</span><span id="line.98">    @Nullable</span>
-<span class="source-line-no">099</span><span id="line.99">    public Integer getOffset() {</span>
-<span class="source-line-no">100</span><span id="line.100">        return this.offset;</span>
+<span class="source-line-no">061</span><span id="line.61">    public OrderSearchRequestBuilder sort(</span>
+<span class="source-line-no">062</span><span id="line.62">            @Nullable final com.commercetools.api.models.order.OrderSearchSorting... sort) {</span>
+<span class="source-line-no">063</span><span id="line.63">        this.sort = new ArrayList&lt;&gt;(Arrays.asList(sort));</span>
+<span class="source-line-no">064</span><span id="line.64">        return this;</span>
+<span class="source-line-no">065</span><span id="line.65">    }</span>
+<span class="source-line-no">066</span><span id="line.66"></span>
+<span class="source-line-no">067</span><span id="line.67">    /**</span>
+<span class="source-line-no">068</span><span id="line.68">     *  &lt;p&gt;Controls how results to your query are sorted. If not provided, the results are sorted by relevance in descending order.&lt;/p&gt;</span>
+<span class="source-line-no">069</span><span id="line.69">     */</span>
+<span class="source-line-no">070</span><span id="line.70"></span>
+<span class="source-line-no">071</span><span id="line.71">    public OrderSearchRequestBuilder sort(</span>
+<span class="source-line-no">072</span><span id="line.72">            @Nullable final java.util.List&lt;com.commercetools.api.models.order.OrderSearchSorting&gt; sort) {</span>
+<span class="source-line-no">073</span><span id="line.73">        this.sort = sort;</span>
+<span class="source-line-no">074</span><span id="line.74">        return this;</span>
+<span class="source-line-no">075</span><span id="line.75">    }</span>
+<span class="source-line-no">076</span><span id="line.76"></span>
+<span class="source-line-no">077</span><span id="line.77">    /**</span>
+<span class="source-line-no">078</span><span id="line.78">     *  &lt;p&gt;Controls how results to your query are sorted. If not provided, the results are sorted by relevance in descending order.&lt;/p&gt;</span>
+<span class="source-line-no">079</span><span id="line.79">     */</span>
+<span class="source-line-no">080</span><span id="line.80"></span>
+<span class="source-line-no">081</span><span id="line.81">    public OrderSearchRequestBuilder plusSort(</span>
+<span class="source-line-no">082</span><span id="line.82">            @Nullable final com.commercetools.api.models.order.OrderSearchSorting... sort) {</span>
+<span class="source-line-no">083</span><span id="line.83">        if (this.sort == null) {</span>
+<span class="source-line-no">084</span><span id="line.84">            this.sort = new ArrayList&lt;&gt;();</span>
+<span class="source-line-no">085</span><span id="line.85">        }</span>
+<span class="source-line-no">086</span><span id="line.86">        this.sort.addAll(Arrays.asList(sort));</span>
+<span class="source-line-no">087</span><span id="line.87">        return this;</span>
+<span class="source-line-no">088</span><span id="line.88">    }</span>
+<span class="source-line-no">089</span><span id="line.89"></span>
+<span class="source-line-no">090</span><span id="line.90">    /**</span>
+<span class="source-line-no">091</span><span id="line.91">     *  &lt;p&gt;Controls how results to your query are sorted. If not provided, the results are sorted by relevance in descending order.&lt;/p&gt;</span>
+<span class="source-line-no">092</span><span id="line.92">     */</span>
+<span class="source-line-no">093</span><span id="line.93"></span>
+<span class="source-line-no">094</span><span id="line.94">    public OrderSearchRequestBuilder plusSort(</span>
+<span class="source-line-no">095</span><span id="line.95">            Function&lt;com.commercetools.api.models.order.OrderSearchSortingBuilder, com.commercetools.api.models.order.OrderSearchSortingBuilder&gt; builder) {</span>
+<span class="source-line-no">096</span><span id="line.96">        if (this.sort == null) {</span>
+<span class="source-line-no">097</span><span id="line.97">            this.sort = new ArrayList&lt;&gt;();</span>
+<span class="source-line-no">098</span><span id="line.98">        }</span>
+<span class="source-line-no">099</span><span id="line.99">        this.sort.add(builder.apply(com.commercetools.api.models.order.OrderSearchSortingBuilder.of()).build());</span>
+<span class="source-line-no">100</span><span id="line.100">        return this;</span>
 <span class="source-line-no">101</span><span id="line.101">    }</span>
 <span class="source-line-no">102</span><span id="line.102"></span>
-<span class="source-line-no">103</span><span id="line.103">    public OrderSearchRequest build() {</span>
-<span class="source-line-no">104</span><span id="line.104">        Objects.requireNonNull(query, OrderSearchRequest.class + ": query is missing");</span>
-<span class="source-line-no">105</span><span id="line.105">        return new OrderSearchRequestImpl(query, sort, limit, offset);</span>
-<span class="source-line-no">106</span><span id="line.106">    }</span>
-<span class="source-line-no">107</span><span id="line.107"></span>
-<span class="source-line-no">108</span><span id="line.108">    /**</span>
-<span class="source-line-no">109</span><span id="line.109">     * builds OrderSearchRequest without checking for non null required values</span>
-<span class="source-line-no">110</span><span id="line.110">     */</span>
-<span class="source-line-no">111</span><span id="line.111">    public OrderSearchRequest buildUnchecked() {</span>
-<span class="source-line-no">112</span><span id="line.112">        return new OrderSearchRequestImpl(query, sort, limit, offset);</span>
-<span class="source-line-no">113</span><span id="line.113">    }</span>
-<span class="source-line-no">114</span><span id="line.114"></span>
-<span class="source-line-no">115</span><span id="line.115">    public static OrderSearchRequestBuilder of() {</span>
-<span class="source-line-no">116</span><span id="line.116">        return new OrderSearchRequestBuilder();</span>
-<span class="source-line-no">117</span><span id="line.117">    }</span>
-<span class="source-line-no">118</span><span id="line.118"></span>
-<span class="source-line-no">119</span><span id="line.119">    public static OrderSearchRequestBuilder of(final OrderSearchRequest template) {</span>
-<span class="source-line-no">120</span><span id="line.120">        OrderSearchRequestBuilder builder = new OrderSearchRequestBuilder();</span>
-<span class="source-line-no">121</span><span id="line.121">        builder.query = template.getQuery();</span>
-<span class="source-line-no">122</span><span id="line.122">        builder.sort = template.getSort();</span>
-<span class="source-line-no">123</span><span id="line.123">        builder.limit = template.getLimit();</span>
-<span class="source-line-no">124</span><span id="line.124">        builder.offset = template.getOffset();</span>
-<span class="source-line-no">125</span><span id="line.125">        return builder;</span>
-<span class="source-line-no">126</span><span id="line.126">    }</span>
-<span class="source-line-no">127</span><span id="line.127"></span>
-<span class="source-line-no">128</span><span id="line.128">}</span>
+<span class="source-line-no">103</span><span id="line.103">    /**</span>
+<span class="source-line-no">104</span><span id="line.104">     *  &lt;p&gt;Controls how results to your query are sorted. If not provided, the results are sorted by relevance in descending order.&lt;/p&gt;</span>
+<span class="source-line-no">105</span><span id="line.105">     */</span>
+<span class="source-line-no">106</span><span id="line.106"></span>
+<span class="source-line-no">107</span><span id="line.107">    public OrderSearchRequestBuilder withSort(</span>
+<span class="source-line-no">108</span><span id="line.108">            Function&lt;com.commercetools.api.models.order.OrderSearchSortingBuilder, com.commercetools.api.models.order.OrderSearchSortingBuilder&gt; builder) {</span>
+<span class="source-line-no">109</span><span id="line.109">        this.sort = new ArrayList&lt;&gt;();</span>
+<span class="source-line-no">110</span><span id="line.110">        this.sort.add(builder.apply(com.commercetools.api.models.order.OrderSearchSortingBuilder.of()).build());</span>
+<span class="source-line-no">111</span><span id="line.111">        return this;</span>
+<span class="source-line-no">112</span><span id="line.112">    }</span>
+<span class="source-line-no">113</span><span id="line.113"></span>
+<span class="source-line-no">114</span><span id="line.114">    /**</span>
+<span class="source-line-no">115</span><span id="line.115">     *  &lt;p&gt;The maximum number of search results to be returned.&lt;/p&gt;</span>
+<span class="source-line-no">116</span><span id="line.116">     */</span>
+<span class="source-line-no">117</span><span id="line.117"></span>
+<span class="source-line-no">118</span><span id="line.118">    public OrderSearchRequestBuilder limit(@Nullable final Integer limit) {</span>
+<span class="source-line-no">119</span><span id="line.119">        this.limit = limit;</span>
+<span class="source-line-no">120</span><span id="line.120">        return this;</span>
+<span class="source-line-no">121</span><span id="line.121">    }</span>
+<span class="source-line-no">122</span><span id="line.122"></span>
+<span class="source-line-no">123</span><span id="line.123">    /**</span>
+<span class="source-line-no">124</span><span id="line.124">     *  &lt;p&gt;The number of search results to be skipped in the response for pagination.&lt;/p&gt;</span>
+<span class="source-line-no">125</span><span id="line.125">     */</span>
+<span class="source-line-no">126</span><span id="line.126"></span>
+<span class="source-line-no">127</span><span id="line.127">    public OrderSearchRequestBuilder offset(@Nullable final Integer offset) {</span>
+<span class="source-line-no">128</span><span id="line.128">        this.offset = offset;</span>
+<span class="source-line-no">129</span><span id="line.129">        return this;</span>
+<span class="source-line-no">130</span><span id="line.130">    }</span>
+<span class="source-line-no">131</span><span id="line.131"></span>
+<span class="source-line-no">132</span><span id="line.132">    public com.commercetools.api.models.order.OrderSearchQuery getQuery() {</span>
+<span class="source-line-no">133</span><span id="line.133">        return this.query;</span>
+<span class="source-line-no">134</span><span id="line.134">    }</span>
+<span class="source-line-no">135</span><span id="line.135"></span>
+<span class="source-line-no">136</span><span id="line.136">    @Nullable</span>
+<span class="source-line-no">137</span><span id="line.137">    public java.util.List&lt;com.commercetools.api.models.order.OrderSearchSorting&gt; getSort() {</span>
+<span class="source-line-no">138</span><span id="line.138">        return this.sort;</span>
+<span class="source-line-no">139</span><span id="line.139">    }</span>
+<span class="source-line-no">140</span><span id="line.140"></span>
+<span class="source-line-no">141</span><span id="line.141">    @Nullable</span>
+<span class="source-line-no">142</span><span id="line.142">    public Integer getLimit() {</span>
+<span class="source-line-no">143</span><span id="line.143">        return this.limit;</span>
+<span class="source-line-no">144</span><span id="line.144">    }</span>
+<span class="source-line-no">145</span><span id="line.145"></span>
+<span class="source-line-no">146</span><span id="line.146">    @Nullable</span>
+<span class="source-line-no">147</span><span id="line.147">    public Integer getOffset() {</span>
+<span class="source-line-no">148</span><span id="line.148">        return this.offset;</span>
+<span class="source-line-no">149</span><span id="line.149">    }</span>
+<span class="source-line-no">150</span><span id="line.150"></span>
+<span class="source-line-no">151</span><span id="line.151">    public OrderSearchRequest build() {</span>
+<span class="source-line-no">152</span><span id="line.152">        Objects.requireNonNull(query, OrderSearchRequest.class + ": query is missing");</span>
+<span class="source-line-no">153</span><span id="line.153">        return new OrderSearchRequestImpl(query, sort, limit, offset);</span>
+<span class="source-line-no">154</span><span id="line.154">    }</span>
+<span class="source-line-no">155</span><span id="line.155"></span>
+<span class="source-line-no">156</span><span id="line.156">    /**</span>
+<span class="source-line-no">157</span><span id="line.157">     * builds OrderSearchRequest without checking for non null required values</span>
+<span class="source-line-no">158</span><span id="line.158">     */</span>
+<span class="source-line-no">159</span><span id="line.159">    public OrderSearchRequest buildUnchecked() {</span>
+<span class="source-line-no">160</span><span id="line.160">        return new OrderSearchRequestImpl(query, sort, limit, offset);</span>
+<span class="source-line-no">161</span><span id="line.161">    }</span>
+<span class="source-line-no">162</span><span id="line.162"></span>
+<span class="source-line-no">163</span><span id="line.163">    public static OrderSearchRequestBuilder of() {</span>
+<span class="source-line-no">164</span><span id="line.164">        return new OrderSearchRequestBuilder();</span>
+<span class="source-line-no">165</span><span id="line.165">    }</span>
+<span class="source-line-no">166</span><span id="line.166"></span>
+<span class="source-line-no">167</span><span id="line.167">    public static OrderSearchRequestBuilder of(final OrderSearchRequest template) {</span>
+<span class="source-line-no">168</span><span id="line.168">        OrderSearchRequestBuilder builder = new OrderSearchRequestBuilder();</span>
+<span class="source-line-no">169</span><span id="line.169">        builder.query = template.getQuery();</span>
+<span class="source-line-no">170</span><span id="line.170">        builder.sort = template.getSort();</span>
+<span class="source-line-no">171</span><span id="line.171">        builder.limit = template.getLimit();</span>
+<span class="source-line-no">172</span><span id="line.172">        builder.offset = template.getOffset();</span>
+<span class="source-line-no">173</span><span id="line.173">        return builder;</span>
+<span class="source-line-no">174</span><span id="line.174">    }</span>
+<span class="source-line-no">175</span><span id="line.175"></span>
+<span class="source-line-no">176</span><span id="line.176">}</span>
 
 
 

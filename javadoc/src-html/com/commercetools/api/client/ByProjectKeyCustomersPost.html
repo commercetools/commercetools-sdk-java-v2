@@ -31,7 +31,7 @@
 <span class="source-line-no">018</span><span id="line.18">import org.apache.commons.lang3.builder.HashCodeBuilder;</span>
 <span class="source-line-no">019</span><span id="line.19"></span>
 <span class="source-line-no">020</span><span id="line.20">/**</span>
-<span class="source-line-no">021</span><span id="line.21"> *  &lt;p&gt;Creates a customer. If an anonymous cart is passed in, then the cart is assigned to the created customer and the version number of the Cart will increase. If the ID of an anonymous session is given, all carts and orders will be assigned to the created customer.&lt;/p&gt;</span>
+<span class="source-line-no">021</span><span id="line.21"> *  &lt;p&gt;If the &lt;code&gt;anonymousCart&lt;/code&gt; field is set on the CustomerDraft, then the newly created Customer will be assigned to that Cart. Similarly, if the &lt;code&gt;anonymousId&lt;/code&gt; field is set, the Customer will be set on all Carts, Orders, ShoppingLists and Payments with the same &lt;code&gt;anonymousId&lt;/code&gt;. Creating a Customer produces the CustomerCreated Message.&lt;/p&gt;</span>
 <span class="source-line-no">022</span><span id="line.22"> *</span>
 <span class="source-line-no">023</span><span id="line.23"> * &lt;hr&gt;</span>
 <span class="source-line-no">024</span><span id="line.24"> * &lt;div class=code-example&gt;</span>

@@ -28,7 +28,7 @@
 <span class="source-line-no">015</span><span id="line.15">import org.apache.commons.lang3.builder.HashCodeBuilder;</span>
 <span class="source-line-no">016</span><span id="line.16"></span>
 <span class="source-line-no">017</span><span id="line.17">/**</span>
-<span class="source-line-no">018</span><span id="line.18"> * ResourceCreatedDeliveryPayload</span>
+<span class="source-line-no">018</span><span id="line.18"> *  &lt;p&gt;This payload is sent for a ChangeSubscription when a resource is created.&lt;/p&gt;</span>
 <span class="source-line-no">019</span><span id="line.19"> */</span>
 <span class="source-line-no">020</span><span id="line.20">@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")</span>
 <span class="source-line-no">021</span><span id="line.21">public class ResourceCreatedDeliveryPayloadImpl implements ResourceCreatedDeliveryPayload, ModelBase {</span>
@@ -64,7 +64,7 @@
 <span class="source-line-no">051</span><span id="line.51">    }</span>
 <span class="source-line-no">052</span><span id="line.52"></span>
 <span class="source-line-no">053</span><span id="line.53">    /**</span>
-<span class="source-line-no">054</span><span id="line.54">     *</span>
+<span class="source-line-no">054</span><span id="line.54">     *  &lt;p&gt;&lt;code&gt;key&lt;/code&gt; of the Project. Useful in message processing if the Destination receives events from multiple Projects.&lt;/p&gt;</span>
 <span class="source-line-no">055</span><span id="line.55">     */</span>
 <span class="source-line-no">056</span><span id="line.56"></span>
 <span class="source-line-no">057</span><span id="line.57">    public String getProjectKey() {</span>
@@ -72,7 +72,7 @@
 <span class="source-line-no">059</span><span id="line.59">    }</span>
 <span class="source-line-no">060</span><span id="line.60"></span>
 <span class="source-line-no">061</span><span id="line.61">    /**</span>
-<span class="source-line-no">062</span><span id="line.62">     *</span>
+<span class="source-line-no">062</span><span id="line.62">     *  &lt;p&gt;Identifies the payload.&lt;/p&gt;</span>
 <span class="source-line-no">063</span><span id="line.63">     */</span>
 <span class="source-line-no">064</span><span id="line.64"></span>
 <span class="source-line-no">065</span><span id="line.65">    public String getNotificationType() {</span>
@@ -80,7 +80,7 @@
 <span class="source-line-no">067</span><span id="line.67">    }</span>
 <span class="source-line-no">068</span><span id="line.68"></span>
 <span class="source-line-no">069</span><span id="line.69">    /**</span>
-<span class="source-line-no">070</span><span id="line.70">     *  &lt;p&gt;A Reference represents a loose reference to another resource in the same Project identified by its &lt;code&gt;id&lt;/code&gt;. The &lt;code&gt;typeId&lt;/code&gt; indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional &lt;code&gt;obj&lt;/code&gt; field then.&lt;/p&gt;</span>
+<span class="source-line-no">070</span><span id="line.70">     *  &lt;p&gt;Reference to the resource that triggered the message.&lt;/p&gt;</span>
 <span class="source-line-no">071</span><span id="line.71">     */</span>
 <span class="source-line-no">072</span><span id="line.72"></span>
 <span class="source-line-no">073</span><span id="line.73">    public com.commercetools.api.models.common.Reference getResource() {</span>
@@ -88,7 +88,7 @@
 <span class="source-line-no">075</span><span id="line.75">    }</span>
 <span class="source-line-no">076</span><span id="line.76"></span>
 <span class="source-line-no">077</span><span id="line.77">    /**</span>
-<span class="source-line-no">078</span><span id="line.78">     *  &lt;p&gt;User-provided identifiers present on the resource for which the Message is created. The value of the identifier stored in the Message corresponds to the one that was set on the resource at the version shown in &lt;code&gt;resourceVersion&lt;/code&gt;.&lt;/p&gt;</span>
+<span class="source-line-no">078</span><span id="line.78">     *  &lt;p&gt;User-defined unique identifiers of the resource.&lt;/p&gt;</span>
 <span class="source-line-no">079</span><span id="line.79">     */</span>
 <span class="source-line-no">080</span><span id="line.80"></span>
 <span class="source-line-no">081</span><span id="line.81">    public com.commercetools.api.models.message.UserProvidedIdentifiers getResourceUserProvidedIdentifiers() {</span>
@@ -96,7 +96,7 @@
 <span class="source-line-no">083</span><span id="line.83">    }</span>
 <span class="source-line-no">084</span><span id="line.84"></span>
 <span class="source-line-no">085</span><span id="line.85">    /**</span>
-<span class="source-line-no">086</span><span id="line.86">     *</span>
+<span class="source-line-no">086</span><span id="line.86">     *  &lt;p&gt;Last seen version of the resource.&lt;/p&gt;</span>
 <span class="source-line-no">087</span><span id="line.87">     */</span>
 <span class="source-line-no">088</span><span id="line.88"></span>
 <span class="source-line-no">089</span><span id="line.89">    public Long getVersion() {</span>
@@ -104,7 +104,7 @@
 <span class="source-line-no">091</span><span id="line.91">    }</span>
 <span class="source-line-no">092</span><span id="line.92"></span>
 <span class="source-line-no">093</span><span id="line.93">    /**</span>
-<span class="source-line-no">094</span><span id="line.94">     *</span>
+<span class="source-line-no">094</span><span id="line.94">     *  &lt;p&gt;Date and time (UTC) the resource was last modified.&lt;/p&gt;</span>
 <span class="source-line-no">095</span><span id="line.95">     */</span>
 <span class="source-line-no">096</span><span id="line.96"></span>
 <span class="source-line-no">097</span><span id="line.97">    public java.time.ZonedDateTime getModifiedAt() {</span>

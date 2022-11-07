@@ -31,7 +31,7 @@
 <span class="source-line-no">018</span><span id="line.18">import org.apache.commons.lang3.builder.HashCodeBuilder;</span>
 <span class="source-line-no">019</span><span id="line.19"></span>
 <span class="source-line-no">020</span><span id="line.20">/**</span>
-<span class="source-line-no">021</span><span id="line.21"> *  &lt;p&gt;The creation of a Subscription is eventually consistent, it may take up to a minute before it becomes fully active. In order to test that the destination is correctly configured, a test message will be put into the queue. If the message could not be delivered, the subscription will not be created. The payload of the test message is a notification of type ResourceCreated for the resourceTypeId subscription. Currently, a maximum of 25 subscriptions can be created per project.&lt;/p&gt;</span>
+<span class="source-line-no">021</span><span id="line.21"> *  &lt;p&gt;A test message is sent to ensure the correct configuration of the Destination. If the message cannot be delivered, the Subscription will not be created. The payload of the test message is a notification of type ResourceCreated for the &lt;code&gt;resourceTypeId&lt;/code&gt; &lt;code&gt;subscription&lt;/code&gt;.&lt;/p&gt;</span>
 <span class="source-line-no">022</span><span id="line.22"> *</span>
 <span class="source-line-no">023</span><span id="line.23"> * &lt;hr&gt;</span>
 <span class="source-line-no">024</span><span id="line.24"> * &lt;div class=code-example&gt;</span>

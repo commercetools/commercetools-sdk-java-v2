@@ -14,7 +14,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     MaxResourceLimitExceededError maxResourceLimitExceededError = MaxResourceLimitExceededError.builder()
  *             .message("{message}")
- *             .exceededResource(ReferenceTypeId.BUSINESS_UNIT)
+ *             .exceededResource(ReferenceTypeId.ATTRIBUTE_GROUP)
  *             .build()
  * </code></pre>
  * </div>

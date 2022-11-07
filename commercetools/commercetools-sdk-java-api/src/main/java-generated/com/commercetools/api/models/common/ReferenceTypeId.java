@@ -16,6 +16,11 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ReferenceTypeId {
 
     /**
+    	<p>References an <a href="ctp:api:type:AttributeGroup">AttributeGroup</a>.</p>
+
+    */
+    ReferenceTypeId ATTRIBUTE_GROUP = ReferenceTypeIdEnum.ATTRIBUTE_GROUP;
+    /**
     	<p>References a <a href="ctp:api:type:BusinessUnit">BusinessUnit</a>.</p>
 
     */
@@ -177,6 +182,8 @@ public interface ReferenceTypeId {
     ReferenceTypeId ZONE = ReferenceTypeIdEnum.ZONE;
 
     enum ReferenceTypeIdEnum implements ReferenceTypeId {
+        ATTRIBUTE_GROUP("attribute-group"),
+
         BUSINESS_UNIT("business-unit"),
 
         CART("cart"),

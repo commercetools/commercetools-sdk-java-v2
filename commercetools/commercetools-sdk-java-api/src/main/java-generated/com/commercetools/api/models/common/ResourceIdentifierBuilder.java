@@ -11,6 +11,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ResourceIdentifierBuilder {
 
+    public com.commercetools.api.models.attribute_group.AttributeGroupResourceIdentifierBuilder attributeGroupBuilder() {
+        return com.commercetools.api.models.attribute_group.AttributeGroupResourceIdentifierBuilder.of();
+    }
+
     public com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifierBuilder businessUnitBuilder() {
         return com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifierBuilder.of();
     }

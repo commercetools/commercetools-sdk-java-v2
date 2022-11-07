@@ -14,7 +14,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * SubscriptionDraft
+ *  <p>Either <code>messages</code> or <code>changes</code> must be set.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -31,14 +31,14 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface SubscriptionDraft {
 
     /**
-     *
+     *  <p>Change notifications to be subscribed to.</p>
      */
     @Valid
     @JsonProperty("changes")
     public List<ChangeSubscription> getChanges();
 
     /**
-     *
+     *  <p>Messaging service to which the messages are sent.</p>
      */
     @NotNull
     @Valid
@@ -53,14 +53,14 @@ public interface SubscriptionDraft {
     public String getKey();
 
     /**
-     *
+     *  <p>Messages to be subscribed to.</p>
      */
     @Valid
     @JsonProperty("messages")
     public List<MessageSubscription> getMessages();
 
     /**
-     *
+     *  <p>Format in which the payload is delivered. When not provided, the PlatformFormat is selected by default.</p>
      */
     @Valid
     @JsonProperty("format")

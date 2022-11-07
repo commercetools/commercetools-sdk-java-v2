@@ -176,4 +176,8 @@ public class ByProjectKeyRequestBuilder {
         return new ByProjectKeyInBusinessUnitKeyByBusinessUnitKeyRequestBuilder(apiHttpClient, projectKey,
             businessUnitKey);
     }
+
+    public ByProjectKeyAttributeGroupsRequestBuilder attributeGroups() {
+        return new ByProjectKeyAttributeGroupsRequestBuilder(apiHttpClient, projectKey);
+    }
 }

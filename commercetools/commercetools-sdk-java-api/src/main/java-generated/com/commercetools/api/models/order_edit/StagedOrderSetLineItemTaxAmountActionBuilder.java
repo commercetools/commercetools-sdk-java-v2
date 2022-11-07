@@ -29,6 +29,9 @@ public class StagedOrderSetLineItemTaxAmountActionBuilder implements Builder<Sta
     @Nullable
     private com.commercetools.api.models.cart.ExternalTaxAmountDraft externalTaxAmount;
 
+    @Nullable
+    private String shippingKey;
+
     /**
      *
      */
@@ -59,6 +62,15 @@ public class StagedOrderSetLineItemTaxAmountActionBuilder implements Builder<Sta
         return this;
     }
 
+    /**
+     *  <p><code>key</code> of the ShippingMethod used for this Line Item.``` This is required for Carts with <code>Multiple</code> ShippingMode.</p>
+     */
+
+    public StagedOrderSetLineItemTaxAmountActionBuilder shippingKey(@Nullable final String shippingKey) {
+        this.shippingKey = shippingKey;
+        return this;
+    }
+
     public String getLineItemId() {
         return this.lineItemId;
     }
@@ -68,16 +80,21 @@ public class StagedOrderSetLineItemTaxAmountActionBuilder implements Builder<Sta
         return this.externalTaxAmount;
     }
 
+    @Nullable
+    public String getShippingKey() {
+        return this.shippingKey;
+    }
+
     public StagedOrderSetLineItemTaxAmountAction build() {
         Objects.requireNonNull(lineItemId, StagedOrderSetLineItemTaxAmountAction.class + ": lineItemId is missing");
-        return new StagedOrderSetLineItemTaxAmountActionImpl(lineItemId, externalTaxAmount);
+        return new StagedOrderSetLineItemTaxAmountActionImpl(lineItemId, externalTaxAmount, shippingKey);
     }
 
     /**
      * builds StagedOrderSetLineItemTaxAmountAction without checking for non null required values
      */
     public StagedOrderSetLineItemTaxAmountAction buildUnchecked() {
-        return new StagedOrderSetLineItemTaxAmountActionImpl(lineItemId, externalTaxAmount);
+        return new StagedOrderSetLineItemTaxAmountActionImpl(lineItemId, externalTaxAmount, shippingKey);
     }
 
     public static StagedOrderSetLineItemTaxAmountActionBuilder of() {
@@ -89,6 +106,7 @@ public class StagedOrderSetLineItemTaxAmountActionBuilder implements Builder<Sta
         StagedOrderSetLineItemTaxAmountActionBuilder builder = new StagedOrderSetLineItemTaxAmountActionBuilder();
         builder.lineItemId = template.getLineItemId();
         builder.externalTaxAmount = template.getExternalTaxAmount();
+        builder.shippingKey = template.getShippingKey();
         return builder;
     }
 

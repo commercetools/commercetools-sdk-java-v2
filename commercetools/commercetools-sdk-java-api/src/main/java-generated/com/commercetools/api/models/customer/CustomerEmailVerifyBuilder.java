@@ -29,7 +29,7 @@ public class CustomerEmailVerifyBuilder implements Builder<CustomerEmailVerify> 
     private String tokenValue;
 
     /**
-     *
+     *  <p>Expected version of the Customer.</p>
      */
 
     public CustomerEmailVerifyBuilder version(@Nullable final Long version) {
@@ -38,7 +38,7 @@ public class CustomerEmailVerifyBuilder implements Builder<CustomerEmailVerify> 
     }
 
     /**
-     *
+     *  <p>Value of the token to verify Customer email.</p>
      */
 
     public CustomerEmailVerifyBuilder tokenValue(final String tokenValue) {

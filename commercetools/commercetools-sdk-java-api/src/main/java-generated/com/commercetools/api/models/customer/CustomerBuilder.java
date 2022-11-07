@@ -23,6 +23,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .email("{email}")
  *             .plusAddresses(addressesBuilder -> addressesBuilder)
  *             .isEmailVerified(true)
+ *             .authenticationMode(AuthenticationMode.PASSWORD)
  *             .build()
  * </code></pre>
  * </div>
@@ -39,13 +40,19 @@ public class CustomerBuilder implements Builder<Customer> {
     private java.time.ZonedDateTime lastModifiedAt;
 
     @Nullable
+    private String key;
+
+    @Nullable
+    private String customerNumber;
+
+    @Nullable
+    private String externalId;
+
+    @Nullable
     private com.commercetools.api.models.common.LastModifiedBy lastModifiedBy;
 
     @Nullable
     private com.commercetools.api.models.common.CreatedBy createdBy;
-
-    @Nullable
-    private String customerNumber;
 
     private String email;
 
@@ -90,9 +97,6 @@ public class CustomerBuilder implements Builder<Customer> {
     private Boolean isEmailVerified;
 
     @Nullable
-    private String externalId;
-
-    @Nullable
     private com.commercetools.api.models.customer_group.CustomerGroupReference customerGroup;
 
     @Nullable
@@ -105,12 +109,8 @@ public class CustomerBuilder implements Builder<Customer> {
     private String salutation;
 
     @Nullable
-    private String key;
-
-    @Nullable
     private java.util.List<com.commercetools.api.models.store.StoreKeyReference> stores;
 
-    @Nullable
     private com.commercetools.api.models.customer.AuthenticationMode authenticationMode;
 
     /**
@@ -123,7 +123,7 @@ public class CustomerBuilder implements Builder<Customer> {
     }
 
     /**
-     *  <p>The current version of the customer.</p>
+     *  <p>Current version of the Customer.</p>
      */
 
     public CustomerBuilder version(final Long version) {
@@ -132,7 +132,7 @@ public class CustomerBuilder implements Builder<Customer> {
     }
 
     /**
-     *
+     *  <p>Date and time (UTC) the Customer was initially created.</p>
      */
 
     public CustomerBuilder createdAt(final java.time.ZonedDateTime createdAt) {
@@ -141,11 +141,39 @@ public class CustomerBuilder implements Builder<Customer> {
     }
 
     /**
-     *
+     *  <p>Date and time (UTC) the Customer was last updated.</p>
      */
 
     public CustomerBuilder lastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {
         this.lastModifiedAt = lastModifiedAt;
+        return this;
+    }
+
+    /**
+     *  <p>User-defined unique identifier of the Customer.</p>
+     */
+
+    public CustomerBuilder key(@Nullable final String key) {
+        this.key = key;
+        return this;
+    }
+
+    /**
+     *  <p>User-defined unique identifier of the Customer.</p>
+     *  <p>Can be used to refer to a Customer in a human-readable way (in emails, invoices, and other correspondence).</p>
+     */
+
+    public CustomerBuilder customerNumber(@Nullable final String customerNumber) {
+        this.customerNumber = customerNumber;
+        return this;
+    }
+
+    /**
+     *  <p>Optional identifier for use in external systems like Customer Relationship Management (CRM) or Enterprise Resource Planning (ERP).</p>
+     */
+
+    public CustomerBuilder externalId(@Nullable final String externalId) {
+        this.externalId = externalId;
         return this;
     }
 
@@ -189,16 +217,7 @@ public class CustomerBuilder implements Builder<Customer> {
     }
 
     /**
-     *  <p>The customer number can be used to create a more human-readable (in contrast to ID) identifier for the customer. It should be unique across a project. Once the field was set it cannot be changed anymore.</p>
-     */
-
-    public CustomerBuilder customerNumber(@Nullable final String customerNumber) {
-        this.customerNumber = customerNumber;
-        return this;
-    }
-
-    /**
-     *  <p>The customer's email address and the main identifier of uniqueness for a customer account. Email addresses are either unique to the store they're specified for, <em>or</em> for the entire project. For more information, see Email uniquenes.</p>
+     *  <p>Email address of the Customer that is unique for an entire Project or to a Store the Customer is assigned to. It is the mandatory unique identifier of a Customer.</p>
      */
 
     public CustomerBuilder email(final String email) {
@@ -207,7 +226,7 @@ public class CustomerBuilder implements Builder<Customer> {
     }
 
     /**
-     *  <p>Only present with the default <code>authenticationMode</code>, <code>Password</code>.</p>
+     *  <p>Present only when <code>authenticationMode</code> is set to <code>Password</code>.</p>
      */
 
     public CustomerBuilder password(@Nullable final String password) {
@@ -216,7 +235,7 @@ public class CustomerBuilder implements Builder<Customer> {
     }
 
     /**
-     *
+     *  <p>Given name (first name) of the Customer.</p>
      */
 
     public CustomerBuilder firstName(@Nullable final String firstName) {
@@ -225,7 +244,7 @@ public class CustomerBuilder implements Builder<Customer> {
     }
 
     /**
-     *
+     *  <p>Family name (last name) of the Customer.</p>
      */
 
     public CustomerBuilder lastName(@Nullable final String lastName) {
@@ -234,7 +253,7 @@ public class CustomerBuilder implements Builder<Customer> {
     }
 
     /**
-     *
+     *  <p>Middle name of the Customer.</p>
      */
 
     public CustomerBuilder middleName(@Nullable final String middleName) {
@@ -243,7 +262,7 @@ public class CustomerBuilder implements Builder<Customer> {
     }
 
     /**
-     *
+     *  <p>Title of the Customer, for example, 'Dr.'.</p>
      */
 
     public CustomerBuilder title(@Nullable final String title) {
@@ -252,7 +271,7 @@ public class CustomerBuilder implements Builder<Customer> {
     }
 
     /**
-     *
+     *  <p>Date of birth of the Customer.</p>
      */
 
     public CustomerBuilder dateOfBirth(@Nullable final java.time.LocalDate dateOfBirth) {
@@ -261,7 +280,7 @@ public class CustomerBuilder implements Builder<Customer> {
     }
 
     /**
-     *
+     *  <p>Company name of the Customer.</p>
      */
 
     public CustomerBuilder companyName(@Nullable final String companyName) {
@@ -270,7 +289,7 @@ public class CustomerBuilder implements Builder<Customer> {
     }
 
     /**
-     *
+     *  <p>Unique VAT ID of the Customer.</p>
      */
 
     public CustomerBuilder vatId(@Nullable final String vatId) {
@@ -279,7 +298,7 @@ public class CustomerBuilder implements Builder<Customer> {
     }
 
     /**
-     *  <p>The addresses have unique IDs in the addresses list</p>
+     *  <p>Addresses used by the Customer.</p>
      */
 
     public CustomerBuilder addresses(final com.commercetools.api.models.common.Address... addresses) {
@@ -288,7 +307,7 @@ public class CustomerBuilder implements Builder<Customer> {
     }
 
     /**
-     *  <p>The addresses have unique IDs in the addresses list</p>
+     *  <p>Addresses used by the Customer.</p>
      */
 
     public CustomerBuilder addresses(final java.util.List<com.commercetools.api.models.common.Address> addresses) {
@@ -297,7 +316,7 @@ public class CustomerBuilder implements Builder<Customer> {
     }
 
     /**
-     *  <p>The addresses have unique IDs in the addresses list</p>
+     *  <p>Addresses used by the Customer.</p>
      */
 
     public CustomerBuilder plusAddresses(final com.commercetools.api.models.common.Address... addresses) {
@@ -309,7 +328,7 @@ public class CustomerBuilder implements Builder<Customer> {
     }
 
     /**
-     *  <p>The addresses have unique IDs in the addresses list</p>
+     *  <p>Addresses used by the Customer.</p>
      */
 
     public CustomerBuilder plusAddresses(
@@ -322,7 +341,7 @@ public class CustomerBuilder implements Builder<Customer> {
     }
 
     /**
-     *  <p>The addresses have unique IDs in the addresses list</p>
+     *  <p>Addresses used by the Customer.</p>
      */
 
     public CustomerBuilder withAddresses(
@@ -333,7 +352,7 @@ public class CustomerBuilder implements Builder<Customer> {
     }
 
     /**
-     *  <p>The address ID in the addresses list</p>
+     *  <p>ID of the address in <code>addresses</code> used as the default shipping address.</p>
      */
 
     public CustomerBuilder defaultShippingAddressId(@Nullable final String defaultShippingAddressId) {
@@ -342,7 +361,7 @@ public class CustomerBuilder implements Builder<Customer> {
     }
 
     /**
-     *  <p>The IDs from the addresses list which are used as shipping addresses</p>
+     *  <p>IDs of addresses in <code>addresses</code> used as shipping addresses.</p>
      */
 
     public CustomerBuilder shippingAddressIds(@Nullable final String... shippingAddressIds) {
@@ -351,7 +370,7 @@ public class CustomerBuilder implements Builder<Customer> {
     }
 
     /**
-     *  <p>The IDs from the addresses list which are used as shipping addresses</p>
+     *  <p>IDs of addresses in <code>addresses</code> used as shipping addresses.</p>
      */
 
     public CustomerBuilder shippingAddressIds(@Nullable final java.util.List<String> shippingAddressIds) {
@@ -360,7 +379,7 @@ public class CustomerBuilder implements Builder<Customer> {
     }
 
     /**
-     *  <p>The IDs from the addresses list which are used as shipping addresses</p>
+     *  <p>IDs of addresses in <code>addresses</code> used as shipping addresses.</p>
      */
 
     public CustomerBuilder plusShippingAddressIds(@Nullable final String... shippingAddressIds) {
@@ -372,7 +391,7 @@ public class CustomerBuilder implements Builder<Customer> {
     }
 
     /**
-     *  <p>The address ID in the addresses list</p>
+     *  <p>ID of the address in <code>addresses</code> used as the default billing address.</p>
      */
 
     public CustomerBuilder defaultBillingAddressId(@Nullable final String defaultBillingAddressId) {
@@ -381,7 +400,7 @@ public class CustomerBuilder implements Builder<Customer> {
     }
 
     /**
-     *  <p>The IDs from the addresses list which are used as billing addresses</p>
+     *  <p>IDs of addresses in <code>addresses</code> used as billing addresses.</p>
      */
 
     public CustomerBuilder billingAddressIds(@Nullable final String... billingAddressIds) {
@@ -390,7 +409,7 @@ public class CustomerBuilder implements Builder<Customer> {
     }
 
     /**
-     *  <p>The IDs from the addresses list which are used as billing addresses</p>
+     *  <p>IDs of addresses in <code>addresses</code> used as billing addresses.</p>
      */
 
     public CustomerBuilder billingAddressIds(@Nullable final java.util.List<String> billingAddressIds) {
@@ -399,7 +418,7 @@ public class CustomerBuilder implements Builder<Customer> {
     }
 
     /**
-     *  <p>The IDs from the addresses list which are used as billing addresses</p>
+     *  <p>IDs of addresses in <code>addresses</code> used as billing addresses.</p>
      */
 
     public CustomerBuilder plusBillingAddressIds(@Nullable final String... billingAddressIds) {
@@ -411,7 +430,7 @@ public class CustomerBuilder implements Builder<Customer> {
     }
 
     /**
-     *
+     *  <p>Indicates whether the email address of the Customer is verified.</p>
      */
 
     public CustomerBuilder isEmailVerified(final Boolean isEmailVerified) {
@@ -420,16 +439,7 @@ public class CustomerBuilder implements Builder<Customer> {
     }
 
     /**
-     *
-     */
-
-    public CustomerBuilder externalId(@Nullable final String externalId) {
-        this.externalId = externalId;
-        return this;
-    }
-
-    /**
-     *
+     *  <p>CustomerGroup to which the Customer belongs.</p>
      */
 
     public CustomerBuilder customerGroup(
@@ -441,7 +451,7 @@ public class CustomerBuilder implements Builder<Customer> {
     }
 
     /**
-     *
+     *  <p>CustomerGroup to which the Customer belongs.</p>
      */
 
     public CustomerBuilder customerGroup(
@@ -451,7 +461,7 @@ public class CustomerBuilder implements Builder<Customer> {
     }
 
     /**
-     *
+     *  <p>Custom Fields for the Customer.</p>
      */
 
     public CustomerBuilder custom(
@@ -461,7 +471,7 @@ public class CustomerBuilder implements Builder<Customer> {
     }
 
     /**
-     *
+     *  <p>Custom Fields for the Customer.</p>
      */
 
     public CustomerBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFields custom) {
@@ -470,7 +480,7 @@ public class CustomerBuilder implements Builder<Customer> {
     }
 
     /**
-     *
+     *  <p>Preferred language of the Customer.</p>
      */
 
     public CustomerBuilder locale(@Nullable final String locale) {
@@ -479,7 +489,7 @@ public class CustomerBuilder implements Builder<Customer> {
     }
 
     /**
-     *
+     *  <p>Salutation of the Customer, for example, 'Mr.' or 'Mrs.'.</p>
      */
 
     public CustomerBuilder salutation(@Nullable final String salutation) {
@@ -488,16 +498,11 @@ public class CustomerBuilder implements Builder<Customer> {
     }
 
     /**
-     *  <p>User-defined unique identifier of the Customer.</p>
-     */
-
-    public CustomerBuilder key(@Nullable final String key) {
-        this.key = key;
-        return this;
-    }
-
-    /**
-     *  <p>References to the stores the customer account is associated with. If no stores are specified, the customer is a global customer, and can log in using the Password Flow for global Customers. If one or more stores are specified, the customer can only log in using the Password Flow for Customers in a Store for those specific stores.</p>
+     *  <p>Stores to which the Customer is assigned to.</p>
+     *  <ul>
+     *   <li>If no Stores are specified, the Customer is a global customer, and can log in using the Password Flow for global Customers.</li>
+     *   <li>If any Stores are specified, the Customer can only log in using the Password Flow for Customers in a Store for those specific Stores.</li>
+     *  </ul>
      */
 
     public CustomerBuilder stores(@Nullable final com.commercetools.api.models.store.StoreKeyReference... stores) {
@@ -506,7 +511,11 @@ public class CustomerBuilder implements Builder<Customer> {
     }
 
     /**
-     *  <p>References to the stores the customer account is associated with. If no stores are specified, the customer is a global customer, and can log in using the Password Flow for global Customers. If one or more stores are specified, the customer can only log in using the Password Flow for Customers in a Store for those specific stores.</p>
+     *  <p>Stores to which the Customer is assigned to.</p>
+     *  <ul>
+     *   <li>If no Stores are specified, the Customer is a global customer, and can log in using the Password Flow for global Customers.</li>
+     *   <li>If any Stores are specified, the Customer can only log in using the Password Flow for Customers in a Store for those specific Stores.</li>
+     *  </ul>
      */
 
     public CustomerBuilder stores(
@@ -516,7 +525,11 @@ public class CustomerBuilder implements Builder<Customer> {
     }
 
     /**
-     *  <p>References to the stores the customer account is associated with. If no stores are specified, the customer is a global customer, and can log in using the Password Flow for global Customers. If one or more stores are specified, the customer can only log in using the Password Flow for Customers in a Store for those specific stores.</p>
+     *  <p>Stores to which the Customer is assigned to.</p>
+     *  <ul>
+     *   <li>If no Stores are specified, the Customer is a global customer, and can log in using the Password Flow for global Customers.</li>
+     *   <li>If any Stores are specified, the Customer can only log in using the Password Flow for Customers in a Store for those specific Stores.</li>
+     *  </ul>
      */
 
     public CustomerBuilder plusStores(@Nullable final com.commercetools.api.models.store.StoreKeyReference... stores) {
@@ -528,7 +541,11 @@ public class CustomerBuilder implements Builder<Customer> {
     }
 
     /**
-     *  <p>References to the stores the customer account is associated with. If no stores are specified, the customer is a global customer, and can log in using the Password Flow for global Customers. If one or more stores are specified, the customer can only log in using the Password Flow for Customers in a Store for those specific stores.</p>
+     *  <p>Stores to which the Customer is assigned to.</p>
+     *  <ul>
+     *   <li>If no Stores are specified, the Customer is a global customer, and can log in using the Password Flow for global Customers.</li>
+     *   <li>If any Stores are specified, the Customer can only log in using the Password Flow for Customers in a Store for those specific Stores.</li>
+     *  </ul>
      */
 
     public CustomerBuilder plusStores(
@@ -541,7 +558,11 @@ public class CustomerBuilder implements Builder<Customer> {
     }
 
     /**
-     *  <p>References to the stores the customer account is associated with. If no stores are specified, the customer is a global customer, and can log in using the Password Flow for global Customers. If one or more stores are specified, the customer can only log in using the Password Flow for Customers in a Store for those specific stores.</p>
+     *  <p>Stores to which the Customer is assigned to.</p>
+     *  <ul>
+     *   <li>If no Stores are specified, the Customer is a global customer, and can log in using the Password Flow for global Customers.</li>
+     *   <li>If any Stores are specified, the Customer can only log in using the Password Flow for Customers in a Store for those specific Stores.</li>
+     *  </ul>
      */
 
     public CustomerBuilder withStores(
@@ -552,11 +573,11 @@ public class CustomerBuilder implements Builder<Customer> {
     }
 
     /**
-     *  <p>Defines whether a Customer has a password.</p>
+     *  <p>Indicates whether the <code>password</code> is required for the Customer.</p>
      */
 
     public CustomerBuilder authenticationMode(
-            @Nullable final com.commercetools.api.models.customer.AuthenticationMode authenticationMode) {
+            final com.commercetools.api.models.customer.AuthenticationMode authenticationMode) {
         this.authenticationMode = authenticationMode;
         return this;
     }
@@ -578,6 +599,21 @@ public class CustomerBuilder implements Builder<Customer> {
     }
 
     @Nullable
+    public String getKey() {
+        return this.key;
+    }
+
+    @Nullable
+    public String getCustomerNumber() {
+        return this.customerNumber;
+    }
+
+    @Nullable
+    public String getExternalId() {
+        return this.externalId;
+    }
+
+    @Nullable
     public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy() {
         return this.lastModifiedBy;
     }
@@ -585,11 +621,6 @@ public class CustomerBuilder implements Builder<Customer> {
     @Nullable
     public com.commercetools.api.models.common.CreatedBy getCreatedBy() {
         return this.createdBy;
-    }
-
-    @Nullable
-    public String getCustomerNumber() {
-        return this.customerNumber;
     }
 
     public String getEmail() {
@@ -665,11 +696,6 @@ public class CustomerBuilder implements Builder<Customer> {
     }
 
     @Nullable
-    public String getExternalId() {
-        return this.externalId;
-    }
-
-    @Nullable
     public com.commercetools.api.models.customer_group.CustomerGroupReference getCustomerGroup() {
         return this.customerGroup;
     }
@@ -690,16 +716,10 @@ public class CustomerBuilder implements Builder<Customer> {
     }
 
     @Nullable
-    public String getKey() {
-        return this.key;
-    }
-
-    @Nullable
     public java.util.List<com.commercetools.api.models.store.StoreKeyReference> getStores() {
         return this.stores;
     }
 
-    @Nullable
     public com.commercetools.api.models.customer.AuthenticationMode getAuthenticationMode() {
         return this.authenticationMode;
     }
@@ -712,20 +732,21 @@ public class CustomerBuilder implements Builder<Customer> {
         Objects.requireNonNull(email, Customer.class + ": email is missing");
         Objects.requireNonNull(addresses, Customer.class + ": addresses is missing");
         Objects.requireNonNull(isEmailVerified, Customer.class + ": isEmailVerified is missing");
-        return new CustomerImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, customerNumber,
-            email, password, firstName, lastName, middleName, title, dateOfBirth, companyName, vatId, addresses,
-            defaultShippingAddressId, shippingAddressIds, defaultBillingAddressId, billingAddressIds, isEmailVerified,
-            externalId, customerGroup, custom, locale, salutation, key, stores, authenticationMode);
+        Objects.requireNonNull(authenticationMode, Customer.class + ": authenticationMode is missing");
+        return new CustomerImpl(id, version, createdAt, lastModifiedAt, key, customerNumber, externalId, lastModifiedBy,
+            createdBy, email, password, firstName, lastName, middleName, title, dateOfBirth, companyName, vatId,
+            addresses, defaultShippingAddressId, shippingAddressIds, defaultBillingAddressId, billingAddressIds,
+            isEmailVerified, customerGroup, custom, locale, salutation, stores, authenticationMode);
     }
 
     /**
      * builds Customer without checking for non null required values
      */
     public Customer buildUnchecked() {
-        return new CustomerImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, customerNumber,
-            email, password, firstName, lastName, middleName, title, dateOfBirth, companyName, vatId, addresses,
-            defaultShippingAddressId, shippingAddressIds, defaultBillingAddressId, billingAddressIds, isEmailVerified,
-            externalId, customerGroup, custom, locale, salutation, key, stores, authenticationMode);
+        return new CustomerImpl(id, version, createdAt, lastModifiedAt, key, customerNumber, externalId, lastModifiedBy,
+            createdBy, email, password, firstName, lastName, middleName, title, dateOfBirth, companyName, vatId,
+            addresses, defaultShippingAddressId, shippingAddressIds, defaultBillingAddressId, billingAddressIds,
+            isEmailVerified, customerGroup, custom, locale, salutation, stores, authenticationMode);
     }
 
     public static CustomerBuilder of() {
@@ -738,9 +759,11 @@ public class CustomerBuilder implements Builder<Customer> {
         builder.version = template.getVersion();
         builder.createdAt = template.getCreatedAt();
         builder.lastModifiedAt = template.getLastModifiedAt();
+        builder.key = template.getKey();
+        builder.customerNumber = template.getCustomerNumber();
+        builder.externalId = template.getExternalId();
         builder.lastModifiedBy = template.getLastModifiedBy();
         builder.createdBy = template.getCreatedBy();
-        builder.customerNumber = template.getCustomerNumber();
         builder.email = template.getEmail();
         builder.password = template.getPassword();
         builder.firstName = template.getFirstName();
@@ -756,12 +779,10 @@ public class CustomerBuilder implements Builder<Customer> {
         builder.defaultBillingAddressId = template.getDefaultBillingAddressId();
         builder.billingAddressIds = template.getBillingAddressIds();
         builder.isEmailVerified = template.getIsEmailVerified();
-        builder.externalId = template.getExternalId();
         builder.customerGroup = template.getCustomerGroup();
         builder.custom = template.getCustom();
         builder.locale = template.getLocale();
         builder.salutation = template.getSalutation();
-        builder.key = template.getKey();
         builder.stores = template.getStores();
         builder.authenticationMode = template.getAuthenticationMode();
         return builder;

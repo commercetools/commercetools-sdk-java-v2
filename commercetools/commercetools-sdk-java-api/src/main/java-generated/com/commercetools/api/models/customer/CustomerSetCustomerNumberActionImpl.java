@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * CustomerSetCustomerNumberAction
+ *  <p>Sets a new ID that can be used to refer to a Customer in a human-reabable way (for use in emails, invoices, etc).</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomerSetCustomerNumberActionImpl implements CustomerSetCustomerNumberAction, ModelBase {
@@ -43,7 +43,7 @@ public class CustomerSetCustomerNumberActionImpl implements CustomerSetCustomerN
     }
 
     /**
-     *  <p>It should be <strong>unique</strong> across a project. Once it's set, it cannot be changed.</p>
+     *  <p>Value to set. Once set, it cannot be changed.</p>
      */
 
     public String getCustomerNumber() {

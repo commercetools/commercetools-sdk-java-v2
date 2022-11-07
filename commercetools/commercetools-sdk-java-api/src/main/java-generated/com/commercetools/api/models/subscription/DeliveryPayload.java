@@ -16,7 +16,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * DeliveryPayload
+ *  <p>All payloads for the PlatformFormat share these common fields.</p>
  *
  * <hr>
  * Example to create a subtype instance using the builder pattern
@@ -31,7 +31,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             lastModifiedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
  *             sequenceNumber(0.3)
  *             resourceVersion(0.3)
- *             payloadNotIncluded(payloadNotIncludedBuilder -> payloadNotIncludedBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -47,21 +46,21 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface DeliveryPayload {
 
     /**
-     *
+     *  <p><code>key</code> of the Project. Useful in message processing if the Destination receives events from multiple Projects.</p>
      */
     @NotNull
     @JsonProperty("projectKey")
     public String getProjectKey();
 
     /**
-     *
+     *  <p>Identifies the payload.</p>
      */
     @NotNull
     @JsonProperty("notificationType")
     public String getNotificationType();
 
     /**
-     *  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
+     *  <p>Reference to the resource that triggered the message.</p>
      */
     @NotNull
     @Valid
@@ -69,7 +68,7 @@ public interface DeliveryPayload {
     public Reference getResource();
 
     /**
-     *  <p>User-provided identifiers present on the resource for which the Message is created. The value of the identifier stored in the Message corresponds to the one that was set on the resource at the version shown in <code>resourceVersion</code>.</p>
+     *  <p>User-defined unique identifiers of the resource.</p>
      */
     @Valid
     @JsonProperty("resourceUserProvidedIdentifiers")

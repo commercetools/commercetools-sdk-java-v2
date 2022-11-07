@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * CustomerSetCompanyNameAction
+ *  <p>Setting a company name produces the CustomerCompanyNameSet Message.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomerSetCompanyNameActionImpl implements CustomerSetCompanyNameAction, ModelBase {
@@ -43,7 +43,7 @@ public class CustomerSetCompanyNameActionImpl implements CustomerSetCompanyNameA
     }
 
     /**
-     *  <p>If not defined, the company name is unset.</p>
+     *  <p>Value to set. If empty, any existing value is removed.</p>
      */
 
     public String getCompanyName() {

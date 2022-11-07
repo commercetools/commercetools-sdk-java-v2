@@ -15,17 +15,19 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * MessageSubscription
+ *  <p>For supported resources and message types, see Message Types. Messages will be delivered even if the Messages Query HTTP API is not enabled.</p>
+ *  <p>For MessageSubscriptions, the format of the payload is MessageDeliveryPayload.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class MessageSubscriptionImpl implements MessageSubscription, ModelBase {
 
-    private String resourceTypeId;
+    private com.commercetools.api.models.subscription.MessageSubscriptionResourceTypeId resourceTypeId;
 
     private java.util.List<String> types;
 
     @JsonCreator
-    MessageSubscriptionImpl(@JsonProperty("resourceTypeId") final String resourceTypeId,
+    MessageSubscriptionImpl(
+            @JsonProperty("resourceTypeId") final com.commercetools.api.models.subscription.MessageSubscriptionResourceTypeId resourceTypeId,
             @JsonProperty("types") final java.util.List<String> types) {
         this.resourceTypeId = resourceTypeId;
         this.types = types;
@@ -35,22 +37,23 @@ public class MessageSubscriptionImpl implements MessageSubscription, ModelBase {
     }
 
     /**
-     *
+     *  <p>Unique identifier for the type of resource, for example, <code>order</code>.</p>
      */
 
-    public String getResourceTypeId() {
+    public com.commercetools.api.models.subscription.MessageSubscriptionResourceTypeId getResourceTypeId() {
         return this.resourceTypeId;
     }
 
     /**
-     *
+     *  <p>Must contain valid message types for the resource. For example, for resource type <code>product</code> the message type <code>ProductPublished</code> is valid. If no <code>types</code> of messages are given, the Subscription will receive all messages for this resource.</p>
      */
 
     public java.util.List<String> getTypes() {
         return this.types;
     }
 
-    public void setResourceTypeId(final String resourceTypeId) {
+    public void setResourceTypeId(
+            final com.commercetools.api.models.subscription.MessageSubscriptionResourceTypeId resourceTypeId) {
         this.resourceTypeId = resourceTypeId;
     }
 

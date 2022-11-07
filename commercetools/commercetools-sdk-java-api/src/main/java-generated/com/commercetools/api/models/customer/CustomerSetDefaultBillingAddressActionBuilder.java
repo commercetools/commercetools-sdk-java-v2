@@ -29,7 +29,7 @@ public class CustomerSetDefaultBillingAddressActionBuilder implements Builder<Cu
     private String addressKey;
 
     /**
-     *  <p>If not defined, the customer's <code>defaultBillingAddress</code> is unset.</p>
+     *  <p><code>id</code> of the Address to become the default billing address.</p>
      */
 
     public CustomerSetDefaultBillingAddressActionBuilder addressId(@Nullable final String addressId) {
@@ -38,7 +38,7 @@ public class CustomerSetDefaultBillingAddressActionBuilder implements Builder<Cu
     }
 
     /**
-     *
+     *  <p><code>key</code> of the Address to become the default billing address.</p>
      */
 
     public CustomerSetDefaultBillingAddressActionBuilder addressKey(@Nullable final String addressKey) {

@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * MyCustomerSetDateOfBirthAction
+ *  <p>Setting the date of birth of the Customer produces the CustomerDateOfBirthSet Message.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class MyCustomerSetDateOfBirthActionImpl implements MyCustomerSetDateOfBirthAction, ModelBase {
@@ -43,7 +43,7 @@ public class MyCustomerSetDateOfBirthActionImpl implements MyCustomerSetDateOfBi
     }
 
     /**
-     *
+     *  <p>Value to set. If empty, any existing value is removed.</p>
      */
 
     public java.time.LocalDate getDateOfBirth() {

@@ -41,9 +41,9 @@ public interface OrderSearchRequest {
     /**
      *  <p>Controls how results to your query are sorted. If not provided, the results are sorted by relevance in descending order.</p>
      */
-
+    @Valid
     @JsonProperty("sort")
-    public String getSort();
+    public List<OrderSearchSorting> getSort();
 
     /**
      *  <p>The maximum number of search results to be returned.</p>
@@ -61,7 +61,10 @@ public interface OrderSearchRequest {
 
     public void setQuery(final OrderSearchQuery query);
 
-    public void setSort(final String sort);
+    @JsonIgnore
+    public void setSort(final OrderSearchSorting... sort);
+
+    public void setSort(final List<OrderSearchSorting> sort);
 
     public void setLimit(final Integer limit);
 

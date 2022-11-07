@@ -29,7 +29,7 @@ public interface CustomerSetFirstNameAction extends CustomerUpdateAction {
     String SET_FIRST_NAME = "setFirstName";
 
     /**
-     *
+     *  <p>Value to set. If empty, any existing value is removed.</p>
      */
 
     @JsonProperty("firstName")

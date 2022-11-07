@@ -7,11 +7,6 @@ import java.util.function.Function;
 
 import javax.validation.constraints.NotNull;
 
-import com.commercetools.api.models.business_unit.MyBusinessUnitChangeAssociateAction;
-import com.commercetools.api.models.business_unit.MyBusinessUnitChangeNameAction;
-import com.commercetools.api.models.business_unit.MyBusinessUnitChangeParentUnitAction;
-import com.commercetools.api.models.business_unit.MyBusinessUnitSetDefaultBillingAddressAction;
-import com.commercetools.api.models.business_unit.MyBusinessUnitSetDefaultShippingAddressAction;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -35,9 +30,9 @@ import io.vrap.rmf.base.client.utils.Generated;
         @JsonSubTypes.Type(value = com.commercetools.api.models.me.MyBusinessUnitAddBillingAddressIdActionImpl.class, name = MyBusinessUnitAddBillingAddressIdAction.ADD_BILLING_ADDRESS_ID),
         @JsonSubTypes.Type(value = com.commercetools.api.models.me.MyBusinessUnitAddShippingAddressIdActionImpl.class, name = MyBusinessUnitAddShippingAddressIdAction.ADD_SHIPPING_ADDRESS_ID),
         @JsonSubTypes.Type(value = com.commercetools.api.models.me.MyBusinessUnitChangeAddressActionImpl.class, name = MyBusinessUnitChangeAddressAction.CHANGE_ADDRESS),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.business_unit.MyBusinessUnitChangeAssociateActionImpl.class, name = MyBusinessUnitChangeAssociateAction.CHANGE_ASSOCIATE),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.business_unit.MyBusinessUnitChangeNameActionImpl.class, name = MyBusinessUnitChangeNameAction.CHANGE_NAME),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.business_unit.MyBusinessUnitChangeParentUnitActionImpl.class, name = MyBusinessUnitChangeParentUnitAction.CHANGE_PARENT_UNIT),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.me.MyBusinessUnitChangeAssociateActionImpl.class, name = MyBusinessUnitChangeAssociateAction.CHANGE_ASSOCIATE),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.me.MyBusinessUnitChangeNameActionImpl.class, name = MyBusinessUnitChangeNameAction.CHANGE_NAME),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.me.MyBusinessUnitChangeParentUnitActionImpl.class, name = MyBusinessUnitChangeParentUnitAction.CHANGE_PARENT_UNIT),
         @JsonSubTypes.Type(value = com.commercetools.api.models.me.MyBusinessUnitRemoveAddressActionImpl.class, name = MyBusinessUnitRemoveAddressAction.REMOVE_ADDRESS),
         @JsonSubTypes.Type(value = com.commercetools.api.models.me.MyBusinessUnitRemoveAssociateActionImpl.class, name = MyBusinessUnitRemoveAssociateAction.REMOVE_ASSOCIATE),
         @JsonSubTypes.Type(value = com.commercetools.api.models.me.MyBusinessUnitRemoveBillingAddressIdActionImpl.class, name = MyBusinessUnitRemoveBillingAddressIdAction.REMOVE_BILLING_ADDRESS_ID),
@@ -47,8 +42,8 @@ import io.vrap.rmf.base.client.utils.Generated;
         @JsonSubTypes.Type(value = com.commercetools.api.models.me.MyBusinessUnitSetContactEmailActionImpl.class, name = MyBusinessUnitSetContactEmailAction.SET_CONTACT_EMAIL),
         @JsonSubTypes.Type(value = com.commercetools.api.models.me.MyBusinessUnitSetCustomFieldActionImpl.class, name = MyBusinessUnitSetCustomFieldAction.SET_CUSTOM_FIELD),
         @JsonSubTypes.Type(value = com.commercetools.api.models.me.MyBusinessUnitSetCustomTypeActionImpl.class, name = MyBusinessUnitSetCustomTypeAction.SET_CUSTOM_TYPE),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.business_unit.MyBusinessUnitSetDefaultBillingAddressActionImpl.class, name = MyBusinessUnitSetDefaultBillingAddressAction.SET_DEFAULT_BILLING_ADDRESS),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.business_unit.MyBusinessUnitSetDefaultShippingAddressActionImpl.class, name = MyBusinessUnitSetDefaultShippingAddressAction.SET_DEFAULT_SHIPPING_ADDRESS) })
+        @JsonSubTypes.Type(value = com.commercetools.api.models.me.MyBusinessUnitSetDefaultBillingAddressActionImpl.class, name = MyBusinessUnitSetDefaultBillingAddressAction.SET_DEFAULT_BILLING_ADDRESS),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.me.MyBusinessUnitSetDefaultShippingAddressActionImpl.class, name = MyBusinessUnitSetDefaultShippingAddressAction.SET_DEFAULT_SHIPPING_ADDRESS) })
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "action", defaultImpl = MyBusinessUnitUpdateActionImpl.class, visible = true)
 @JsonDeserialize(as = MyBusinessUnitUpdateActionImpl.class)
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
@@ -77,16 +72,16 @@ public interface MyBusinessUnitUpdateAction {
         return com.commercetools.api.models.me.MyBusinessUnitChangeAddressActionBuilder.of();
     }
 
-    public static com.commercetools.api.models.business_unit.MyBusinessUnitChangeAssociateActionBuilder changeAssociateBuilder() {
-        return com.commercetools.api.models.business_unit.MyBusinessUnitChangeAssociateActionBuilder.of();
+    public static com.commercetools.api.models.me.MyBusinessUnitChangeAssociateActionBuilder changeAssociateBuilder() {
+        return com.commercetools.api.models.me.MyBusinessUnitChangeAssociateActionBuilder.of();
     }
 
-    public static com.commercetools.api.models.business_unit.MyBusinessUnitChangeNameActionBuilder changeNameBuilder() {
-        return com.commercetools.api.models.business_unit.MyBusinessUnitChangeNameActionBuilder.of();
+    public static com.commercetools.api.models.me.MyBusinessUnitChangeNameActionBuilder changeNameBuilder() {
+        return com.commercetools.api.models.me.MyBusinessUnitChangeNameActionBuilder.of();
     }
 
-    public static com.commercetools.api.models.business_unit.MyBusinessUnitChangeParentUnitActionBuilder changeParentUnitBuilder() {
-        return com.commercetools.api.models.business_unit.MyBusinessUnitChangeParentUnitActionBuilder.of();
+    public static com.commercetools.api.models.me.MyBusinessUnitChangeParentUnitActionBuilder changeParentUnitBuilder() {
+        return com.commercetools.api.models.me.MyBusinessUnitChangeParentUnitActionBuilder.of();
     }
 
     public static com.commercetools.api.models.me.MyBusinessUnitRemoveAddressActionBuilder removeAddressBuilder() {
@@ -125,12 +120,12 @@ public interface MyBusinessUnitUpdateAction {
         return com.commercetools.api.models.me.MyBusinessUnitSetCustomTypeActionBuilder.of();
     }
 
-    public static com.commercetools.api.models.business_unit.MyBusinessUnitSetDefaultBillingAddressActionBuilder setDefaultBillingAddressBuilder() {
-        return com.commercetools.api.models.business_unit.MyBusinessUnitSetDefaultBillingAddressActionBuilder.of();
+    public static com.commercetools.api.models.me.MyBusinessUnitSetDefaultBillingAddressActionBuilder setDefaultBillingAddressBuilder() {
+        return com.commercetools.api.models.me.MyBusinessUnitSetDefaultBillingAddressActionBuilder.of();
     }
 
-    public static com.commercetools.api.models.business_unit.MyBusinessUnitSetDefaultShippingAddressActionBuilder setDefaultShippingAddressBuilder() {
-        return com.commercetools.api.models.business_unit.MyBusinessUnitSetDefaultShippingAddressActionBuilder.of();
+    public static com.commercetools.api.models.me.MyBusinessUnitSetDefaultShippingAddressActionBuilder setDefaultShippingAddressBuilder() {
+        return com.commercetools.api.models.me.MyBusinessUnitSetDefaultShippingAddressActionBuilder.of();
     }
 
     default <T> T withMyBusinessUnitUpdateAction(Function<MyBusinessUnitUpdateAction, T> helper) {

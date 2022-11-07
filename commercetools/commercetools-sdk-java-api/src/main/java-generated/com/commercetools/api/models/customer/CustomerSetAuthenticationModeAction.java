@@ -32,14 +32,14 @@ public interface CustomerSetAuthenticationModeAction extends CustomerUpdateActio
     String SET_AUTHENTICATION_MODE = "setAuthenticationMode";
 
     /**
-     *
+     *  <p>Value to set. Changing a Customer's <code>authMode</code> from <code>Password</code> to <code>ExternalAuth</code> deletes the Customer's password.</p>
      */
     @NotNull
     @JsonProperty("authMode")
     public AuthenticationMode getAuthMode();
 
     /**
-     *  <p>Required when <code>authMode</code> is <code>Password</code></p>
+     *  <p>Required when <code>authMode</code> is <code>Password</code>.</p>
      */
 
     @JsonProperty("password")

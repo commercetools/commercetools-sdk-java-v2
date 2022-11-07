@@ -14,7 +14,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>The token value is used to reset the password of the customer with the given email. The token is valid only for 10 minutes.</p>
+ *
  *
  * <hr>
  * <div class=code-example>

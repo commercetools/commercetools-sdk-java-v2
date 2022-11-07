@@ -35,7 +35,7 @@ public class CustomerSignInResultImpl implements CustomerSignInResult, ModelBase
     }
 
     /**
-     *
+     *  <p>Customer signed up or signed in after authentication.</p>
      */
 
     public com.commercetools.api.models.customer.Customer getCustomer() {
@@ -43,7 +43,7 @@ public class CustomerSignInResultImpl implements CustomerSignInResult, ModelBase
     }
 
     /**
-     *  <p>A cart that is associated to the customer. Empty if the customer does not have a cart yet.</p>
+     *  <p>Cart associated with the Customer. If empty, the Customer does not have a Cart assigned.</p>
      */
 
     public com.commercetools.api.models.cart.Cart getCart() {

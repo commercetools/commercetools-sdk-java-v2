@@ -18,7 +18,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Creates a customer in a specific Store. When using this endpoint, if omitted, the customer's stores field is set to the store specified in the path parameter. If an anonymous cart is passed in as when using this method, then the cart is assigned to the created customer and the version number of the Cart increases. If the ID of an anonymous session is given, all carts and orders will be assigned to the created customer and the store specified. If you pass in a cart with a store field specified, the store field must reference the same store specified in the {storeKey} path parameter.</p>
+ *  <p>When using this endpoint, if omitted, the Customer <code>stores</code> field is set to the Store specified in the path parameter.</p>
+ *  <p>If the <code>anonymousCart</code> field is set on the CustomerDraft, then the newly created Customer will be assigned to that Cart. Similarly, if the <code>anonymousId</code> field is set, the Customer will be set on all Carts, Orders, ShoppingLists and Payments with the same <code>anonymousId</code>. If a Cart with a <code>store</code> field specified, the <code>store</code> field must reference the same Store specified in the <code>{storeKey}</code> path parameter. Creating a Customer produces the CustomerCreated Message.</p>
  *
  * <hr>
  * <div class=code-example>

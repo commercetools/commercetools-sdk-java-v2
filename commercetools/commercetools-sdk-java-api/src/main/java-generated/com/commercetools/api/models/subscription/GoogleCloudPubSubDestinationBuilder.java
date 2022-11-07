@@ -27,7 +27,7 @@ public class GoogleCloudPubSubDestinationBuilder implements Builder<GoogleCloudP
     private String topic;
 
     /**
-     *
+     *  <p>ID of the Google Cloud project that contains the Pub/Sub topic.</p>
      */
 
     public GoogleCloudPubSubDestinationBuilder projectId(final String projectId) {
@@ -36,7 +36,7 @@ public class GoogleCloudPubSubDestinationBuilder implements Builder<GoogleCloudP
     }
 
     /**
-     *
+     *  <p>Name of the topic.</p>
      */
 
     public GoogleCloudPubSubDestinationBuilder topic(final String topic) {

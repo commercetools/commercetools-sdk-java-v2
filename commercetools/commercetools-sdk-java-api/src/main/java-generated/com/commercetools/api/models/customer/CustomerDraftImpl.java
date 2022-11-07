@@ -20,7 +20,11 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomerDraftImpl implements CustomerDraft, ModelBase {
 
+    private String key;
+
     private String customerNumber;
+
+    private String externalId;
 
     private String email;
 
@@ -59,8 +63,6 @@ public class CustomerDraftImpl implements CustomerDraft, ModelBase {
 
     private Boolean isEmailVerified;
 
-    private String externalId;
-
     private com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier customerGroup;
 
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
@@ -69,18 +71,17 @@ public class CustomerDraftImpl implements CustomerDraft, ModelBase {
 
     private String salutation;
 
-    private String key;
-
     private java.util.List<com.commercetools.api.models.store.StoreResourceIdentifier> stores;
 
     private com.commercetools.api.models.customer.AuthenticationMode authenticationMode;
 
     @JsonCreator
-    CustomerDraftImpl(@JsonProperty("customerNumber") final String customerNumber,
-            @JsonProperty("email") final String email, @JsonProperty("password") final String password,
-            @JsonProperty("firstName") final String firstName, @JsonProperty("lastName") final String lastName,
-            @JsonProperty("middleName") final String middleName, @JsonProperty("title") final String title,
-            @JsonProperty("anonymousCartId") final String anonymousCartId,
+    CustomerDraftImpl(@JsonProperty("key") final String key,
+            @JsonProperty("customerNumber") final String customerNumber,
+            @JsonProperty("externalId") final String externalId, @JsonProperty("email") final String email,
+            @JsonProperty("password") final String password, @JsonProperty("firstName") final String firstName,
+            @JsonProperty("lastName") final String lastName, @JsonProperty("middleName") final String middleName,
+            @JsonProperty("title") final String title, @JsonProperty("anonymousCartId") final String anonymousCartId,
             @JsonProperty("anonymousCart") final com.commercetools.api.models.cart.CartResourceIdentifier anonymousCart,
             @JsonProperty("anonymousId") final String anonymousId,
             @JsonProperty("dateOfBirth") final java.time.LocalDate dateOfBirth,
@@ -91,14 +92,14 @@ public class CustomerDraftImpl implements CustomerDraft, ModelBase {
             @JsonProperty("defaultBillingAddress") final Integer defaultBillingAddress,
             @JsonProperty("billingAddresses") final java.util.List<Integer> billingAddresses,
             @JsonProperty("isEmailVerified") final Boolean isEmailVerified,
-            @JsonProperty("externalId") final String externalId,
             @JsonProperty("customerGroup") final com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier customerGroup,
             @JsonProperty("custom") final com.commercetools.api.models.type.CustomFieldsDraft custom,
             @JsonProperty("locale") final String locale, @JsonProperty("salutation") final String salutation,
-            @JsonProperty("key") final String key,
             @JsonProperty("stores") final java.util.List<com.commercetools.api.models.store.StoreResourceIdentifier> stores,
             @JsonProperty("authenticationMode") final com.commercetools.api.models.customer.AuthenticationMode authenticationMode) {
+        this.key = key;
         this.customerNumber = customerNumber;
+        this.externalId = externalId;
         this.email = email;
         this.password = password;
         this.firstName = firstName;
@@ -117,12 +118,10 @@ public class CustomerDraftImpl implements CustomerDraft, ModelBase {
         this.defaultBillingAddress = defaultBillingAddress;
         this.billingAddresses = billingAddresses;
         this.isEmailVerified = isEmailVerified;
-        this.externalId = externalId;
         this.customerGroup = customerGroup;
         this.custom = custom;
         this.locale = locale;
         this.salutation = salutation;
-        this.key = key;
         this.stores = stores;
         this.authenticationMode = authenticationMode;
     }
@@ -131,199 +130,7 @@ public class CustomerDraftImpl implements CustomerDraft, ModelBase {
     }
 
     /**
-     *  <p>String that uniquely identifies a customer. It can be used to create more human-readable (in contrast to ID) identifier for the customer. It should be <strong>unique</strong> across a project. Once it's set it cannot be changed.</p>
-     */
-
-    public String getCustomerNumber() {
-        return this.customerNumber;
-    }
-
-    /**
-     *  <p>The customer's email address and the main identifier of uniqueness for a customer account. Email addresses are either unique to the store they're specified for, <em>or</em> for the entire project, and are case insensitive. For more information, see Email uniquenes.</p>
-     */
-
-    public String getEmail() {
-        return this.email;
-    }
-
-    /**
-     *  <p>Only optional with <code>authenticationMode</code> set to <code>ExternalAuth</code>.</p>
-     */
-
-    public String getPassword() {
-        return this.password;
-    }
-
-    /**
-     *
-     */
-
-    public String getFirstName() {
-        return this.firstName;
-    }
-
-    /**
-     *
-     */
-
-    public String getLastName() {
-        return this.lastName;
-    }
-
-    /**
-     *
-     */
-
-    public String getMiddleName() {
-        return this.middleName;
-    }
-
-    /**
-     *
-     */
-
-    public String getTitle() {
-        return this.title;
-    }
-
-    /**
-     *  <p>Identifies a single cart that will be assigned to the new customer account.</p>
-     */
-    @Deprecated
-    public String getAnonymousCartId() {
-        return this.anonymousCartId;
-    }
-
-    /**
-     *  <p>Identifies a single cart that will be assigned to the new customer account.</p>
-     */
-
-    public com.commercetools.api.models.cart.CartResourceIdentifier getAnonymousCart() {
-        return this.anonymousCart;
-    }
-
-    /**
-     *  <p>Identifies carts and orders belonging to an anonymous session that will be assigned to the new customer account.</p>
-     */
-
-    public String getAnonymousId() {
-        return this.anonymousId;
-    }
-
-    /**
-     *
-     */
-
-    public java.time.LocalDate getDateOfBirth() {
-        return this.dateOfBirth;
-    }
-
-    /**
-     *
-     */
-
-    public String getCompanyName() {
-        return this.companyName;
-    }
-
-    /**
-     *
-     */
-
-    public String getVatId() {
-        return this.vatId;
-    }
-
-    /**
-     *  <p>Sets the ID of each address to be unique in the addresses list.</p>
-     */
-
-    public java.util.List<com.commercetools.api.models.common.BaseAddress> getAddresses() {
-        return this.addresses;
-    }
-
-    /**
-     *  <p>The index of the address in the addresses array. The <code>defaultShippingAddressId</code> of the customer will be set to the ID of that address.</p>
-     */
-
-    public Integer getDefaultShippingAddress() {
-        return this.defaultShippingAddress;
-    }
-
-    /**
-     *  <p>The indices of the shipping addresses in the addresses array. The <code>shippingAddressIds</code> of the Customer will be set to the IDs of that addresses.</p>
-     */
-
-    public java.util.List<Integer> getShippingAddresses() {
-        return this.shippingAddresses;
-    }
-
-    /**
-     *  <p>The index of the address in the addresses array. The <code>defaultBillingAddressId</code> of the customer will be set to the ID of that address.</p>
-     */
-
-    public Integer getDefaultBillingAddress() {
-        return this.defaultBillingAddress;
-    }
-
-    /**
-     *  <p>The indices of the billing addresses in the addresses array. The <code>billingAddressIds</code> of the customer will be set to the IDs of that addresses.</p>
-     */
-
-    public java.util.List<Integer> getBillingAddresses() {
-        return this.billingAddresses;
-    }
-
-    /**
-     *
-     */
-
-    public Boolean getIsEmailVerified() {
-        return this.isEmailVerified;
-    }
-
-    /**
-     *
-     */
-
-    public String getExternalId() {
-        return this.externalId;
-    }
-
-    /**
-     *
-     */
-
-    public com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier getCustomerGroup() {
-        return this.customerGroup;
-    }
-
-    /**
-     *  <p>The custom fields.</p>
-     */
-
-    public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
-        return this.custom;
-    }
-
-    /**
-     *  <p>Must be one of the languages supported for this project</p>
-     */
-
-    public String getLocale() {
-        return this.locale;
-    }
-
-    /**
-     *
-     */
-
-    public String getSalutation() {
-        return this.salutation;
-    }
-
-    /**
-     *  <p>User-defined unique identifier for the Customer.</p>
+     *  <p>User-defined unique identifier for the Customer. The <code>key</code> field is preferred over <code>customerNumber</code> as it is mutable and provides more flexibility.</p>
      */
 
     public String getKey() {
@@ -331,7 +138,204 @@ public class CustomerDraftImpl implements CustomerDraft, ModelBase {
     }
 
     /**
-     *  <p>References to the stores the customer account is associated with. If no stores are specified, the customer is a global customer, and can log in using the Password Flow for global Customers. If one or more stores are specified, the customer can only log in using the Password Flow for Customers in a Store for those specific stores.</p>
+     *  <p>User-defined unique identifier for a Customer. Once set, it cannot be changed.</p>
+     *  <p>Can be used to refer to a Customer in a human-readable way (in emails, invoices, and other correspondence).</p>
+     */
+
+    public String getCustomerNumber() {
+        return this.customerNumber;
+    }
+
+    /**
+     *  <p>Optional identifier for use in external systems like Customer Relationship Management (CRM) or Enterprise Resource Planning (ERP).</p>
+     */
+
+    public String getExternalId() {
+        return this.externalId;
+    }
+
+    /**
+     *  <p>Email address of the Customer that must be unique for an entire Project or to a Store the Customer is assigned to. It is the mandatory unique identifier of a Customer.</p>
+     */
+
+    public String getEmail() {
+        return this.email;
+    }
+
+    /**
+     *  <p>Required when <code>authenticationMode</code> is set to <code>Password</code>. Provide the Customer's password in plain text. The API stores passwords in an encrypted format.</p>
+     */
+
+    public String getPassword() {
+        return this.password;
+    }
+
+    /**
+     *  <p>Given name (first name) of the Customer.</p>
+     */
+
+    public String getFirstName() {
+        return this.firstName;
+    }
+
+    /**
+     *  <p>Family name (last name) of the Customer.</p>
+     */
+
+    public String getLastName() {
+        return this.lastName;
+    }
+
+    /**
+     *  <p>Middle name of the Customer.</p>
+     */
+
+    public String getMiddleName() {
+        return this.middleName;
+    }
+
+    /**
+     *  <p>Title of the Customer, for example, 'Dr.'.</p>
+     */
+
+    public String getTitle() {
+        return this.title;
+    }
+
+    /**
+     *  <p>Deprecated since an anonymous Cart can be identified by its <code>id</code> or external <code>key</code>.</p>
+     */
+    @Deprecated
+    public String getAnonymousCartId() {
+        return this.anonymousCartId;
+    }
+
+    /**
+     *  <p>Identifies a Cart that will be assigned to the new Customer.</p>
+     */
+
+    public com.commercetools.api.models.cart.CartResourceIdentifier getAnonymousCart() {
+        return this.anonymousCart;
+    }
+
+    /**
+     *  <p>Identifies Carts and Orders belonging to an anonymous session that will be assigned to the new Customer.</p>
+     */
+
+    public String getAnonymousId() {
+        return this.anonymousId;
+    }
+
+    /**
+     *  <p>Date of birth of the Customer.</p>
+     */
+
+    public java.time.LocalDate getDateOfBirth() {
+        return this.dateOfBirth;
+    }
+
+    /**
+     *  <p>Company name of the Customer. When representing a company as a Customer, Business Units provide extended funtionality.</p>
+     */
+
+    public String getCompanyName() {
+        return this.companyName;
+    }
+
+    /**
+     *  <p>Unique VAT ID of the Customer.</p>
+     */
+
+    public String getVatId() {
+        return this.vatId;
+    }
+
+    /**
+     *  <p>Addresses of the Customer.</p>
+     */
+
+    public java.util.List<com.commercetools.api.models.common.BaseAddress> getAddresses() {
+        return this.addresses;
+    }
+
+    /**
+     *  <p>Index of the address in the <code>addresses</code> array to use as the default shipping address. The <code>defaultShippingAddressId</code> of the Customer will be set to the <code>id</code> of that address.</p>
+     */
+
+    public Integer getDefaultShippingAddress() {
+        return this.defaultShippingAddress;
+    }
+
+    /**
+     *  <p>Indices of the shipping addresses in the <code>addresses</code> array. The <code>shippingAddressIds</code> of the Customer will be set to the IDs of these addresses.</p>
+     */
+
+    public java.util.List<Integer> getShippingAddresses() {
+        return this.shippingAddresses;
+    }
+
+    /**
+     *  <p>Index of the address in the <code>addresses</code> array to use as the default billing address. The <code>defaultBillingAddressId</code> of the Customer will be set to the <code>id</code> of that address.</p>
+     */
+
+    public Integer getDefaultBillingAddress() {
+        return this.defaultBillingAddress;
+    }
+
+    /**
+     *  <p>Indices of the billing addresses in the <code>addresses</code> array. The <code>billingAddressIds</code> of the Customer will be set to the IDs of these addresses.</p>
+     */
+
+    public java.util.List<Integer> getBillingAddresses() {
+        return this.billingAddresses;
+    }
+
+    /**
+     *  <p>Set to <code>true</code> if the email address of the Customer has been verified already. The intended use is to leave this field unset upon sign-up of the Customer and initiate the email verification afterwards.</p>
+     */
+
+    public Boolean getIsEmailVerified() {
+        return this.isEmailVerified;
+    }
+
+    /**
+     *  <p>Sets the CustomerGroup for the Customer.</p>
+     */
+
+    public com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier getCustomerGroup() {
+        return this.customerGroup;
+    }
+
+    /**
+     *  <p>Custom Fields for the Customer.</p>
+     */
+
+    public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
+        return this.custom;
+    }
+
+    /**
+     *  <p>Preferred language of the Customer. Must be one of the languages supported by the Project.</p>
+     */
+
+    public String getLocale() {
+        return this.locale;
+    }
+
+    /**
+     *  <p>Salutation of the Customer, for example, 'Mr.' or 'Mrs.'.</p>
+     */
+
+    public String getSalutation() {
+        return this.salutation;
+    }
+
+    /**
+     *  <p>Sets the Stores for the Customer.</p>
+     *  <ul>
+     *   <li>If no Stores are specified, the Customer is a global customer, and can log in using the Password Flow for global Customers.</li>
+     *   <li>If any Stores are specified, the Customer can only log in using the Password Flow for Customers in a Store for those specific Stores.</li>
+     *  </ul>
      */
 
     public java.util.List<com.commercetools.api.models.store.StoreResourceIdentifier> getStores() {
@@ -339,15 +343,26 @@ public class CustomerDraftImpl implements CustomerDraft, ModelBase {
     }
 
     /**
-     *  <p>Defines whether a password field is a required field for the Customer.</p>
+     *  <ul>
+     *   <li>Set to <code>Password</code> to make the <code>password</code> field required for the Customer.</li>
+     *   <li>Set to <code>ExternalAuth</code> when the password is not required for the Customer.</li>
+     *  </ul>
      */
 
     public com.commercetools.api.models.customer.AuthenticationMode getAuthenticationMode() {
         return this.authenticationMode;
     }
 
+    public void setKey(final String key) {
+        this.key = key;
+    }
+
     public void setCustomerNumber(final String customerNumber) {
         this.customerNumber = customerNumber;
+    }
+
+    public void setExternalId(final String externalId) {
+        this.externalId = externalId;
     }
 
     public void setEmail(final String email) {
@@ -435,10 +450,6 @@ public class CustomerDraftImpl implements CustomerDraft, ModelBase {
         this.isEmailVerified = isEmailVerified;
     }
 
-    public void setExternalId(final String externalId) {
-        this.externalId = externalId;
-    }
-
     public void setCustomerGroup(
             final com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier customerGroup) {
         this.customerGroup = customerGroup;
@@ -454,10 +465,6 @@ public class CustomerDraftImpl implements CustomerDraft, ModelBase {
 
     public void setSalutation(final String salutation) {
         this.salutation = salutation;
-    }
-
-    public void setKey(final String key) {
-        this.key = key;
     }
 
     public void setStores(final com.commercetools.api.models.store.StoreResourceIdentifier... stores) {
@@ -483,7 +490,9 @@ public class CustomerDraftImpl implements CustomerDraft, ModelBase {
 
         CustomerDraftImpl that = (CustomerDraftImpl) o;
 
-        return new EqualsBuilder().append(customerNumber, that.customerNumber)
+        return new EqualsBuilder().append(key, that.key)
+                .append(customerNumber, that.customerNumber)
+                .append(externalId, that.externalId)
                 .append(email, that.email)
                 .append(password, that.password)
                 .append(firstName, that.firstName)
@@ -502,12 +511,10 @@ public class CustomerDraftImpl implements CustomerDraft, ModelBase {
                 .append(defaultBillingAddress, that.defaultBillingAddress)
                 .append(billingAddresses, that.billingAddresses)
                 .append(isEmailVerified, that.isEmailVerified)
-                .append(externalId, that.externalId)
                 .append(customerGroup, that.customerGroup)
                 .append(custom, that.custom)
                 .append(locale, that.locale)
                 .append(salutation, that.salutation)
-                .append(key, that.key)
                 .append(stores, that.stores)
                 .append(authenticationMode, that.authenticationMode)
                 .isEquals();
@@ -515,7 +522,9 @@ public class CustomerDraftImpl implements CustomerDraft, ModelBase {
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(customerNumber)
+        return new HashCodeBuilder(17, 37).append(key)
+                .append(customerNumber)
+                .append(externalId)
                 .append(email)
                 .append(password)
                 .append(firstName)
@@ -534,12 +543,10 @@ public class CustomerDraftImpl implements CustomerDraft, ModelBase {
                 .append(defaultBillingAddress)
                 .append(billingAddresses)
                 .append(isEmailVerified)
-                .append(externalId)
                 .append(customerGroup)
                 .append(custom)
                 .append(locale)
                 .append(salutation)
-                .append(key)
                 .append(stores)
                 .append(authenticationMode)
                 .toHashCode();

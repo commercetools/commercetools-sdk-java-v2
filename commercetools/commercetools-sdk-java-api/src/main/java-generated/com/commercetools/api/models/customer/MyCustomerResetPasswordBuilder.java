@@ -27,7 +27,7 @@ public class MyCustomerResetPasswordBuilder implements Builder<MyCustomerResetPa
     private String newPassword;
 
     /**
-     *
+     *  <p>Value of the token to reset the Customer password.</p>
      */
 
     public MyCustomerResetPasswordBuilder tokenValue(final String tokenValue) {
@@ -36,7 +36,7 @@ public class MyCustomerResetPasswordBuilder implements Builder<MyCustomerResetPa
     }
 
     /**
-     *
+     *  <p>New password to be set.</p>
      */
 
     public MyCustomerResetPasswordBuilder newPassword(final String newPassword) {

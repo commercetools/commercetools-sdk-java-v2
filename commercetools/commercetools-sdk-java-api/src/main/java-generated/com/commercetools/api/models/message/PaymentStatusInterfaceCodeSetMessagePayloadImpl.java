@@ -23,6 +23,7 @@ public class PaymentStatusInterfaceCodeSetMessagePayloadImpl
 
     private String type;
 
+    @Deprecated
     private String paymentId;
 
     private String interfaceCode;
@@ -50,7 +51,7 @@ public class PaymentStatusInterfaceCodeSetMessagePayloadImpl
     /**
      *  <p>Unique identifier for the Payment for which the Set StatusInterfaceCode update action was applied.</p>
      */
-
+    @Deprecated
     public String getPaymentId() {
         return this.paymentId;
     }
@@ -63,6 +64,7 @@ public class PaymentStatusInterfaceCodeSetMessagePayloadImpl
         return this.interfaceCode;
     }
 
+    @Deprecated
     public void setPaymentId(final String paymentId) {
         this.paymentId = paymentId;
     }

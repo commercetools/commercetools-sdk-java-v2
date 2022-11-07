@@ -46,9 +46,18 @@ public interface CartSetLineItemTaxAmountAction extends CartUpdateAction {
     @JsonProperty("externalTaxAmount")
     public ExternalTaxAmountDraft getExternalTaxAmount();
 
+    /**
+     *  <p><code>key</code> of the ShippingMethod used for this Line Item.``` This is required for Carts with <code>Multiple</code> ShippingMode.</p>
+     */
+
+    @JsonProperty("shippingKey")
+    public String getShippingKey();
+
     public void setLineItemId(final String lineItemId);
 
     public void setExternalTaxAmount(final ExternalTaxAmountDraft externalTaxAmount);
+
+    public void setShippingKey(final String shippingKey);
 
     public static CartSetLineItemTaxAmountAction of() {
         return new CartSetLineItemTaxAmountActionImpl();
@@ -58,6 +67,7 @@ public interface CartSetLineItemTaxAmountAction extends CartUpdateAction {
         CartSetLineItemTaxAmountActionImpl instance = new CartSetLineItemTaxAmountActionImpl();
         instance.setLineItemId(template.getLineItemId());
         instance.setExternalTaxAmount(template.getExternalTaxAmount());
+        instance.setShippingKey(template.getShippingKey());
         return instance;
     }
 

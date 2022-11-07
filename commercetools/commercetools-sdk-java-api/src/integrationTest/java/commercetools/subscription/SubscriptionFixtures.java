@@ -37,7 +37,8 @@ public class SubscriptionFixtures {
                 .key(CommercetoolsTestUtils.randomKey())
                 //TODO connection string
                 .destination(AzureServiceBusDestinationBuilder.of().connectionString("").build())
-                .messages(Arrays.asList(MessageSubscriptionBuilder.of().resourceTypeId("review").build()))
+                .messages(Arrays.asList(
+                    MessageSubscriptionBuilder.of().resourceTypeId(MessageSubscriptionResourceTypeId.REVIEW).build()))
                 .build();
 
         Subscription subscription = CommercetoolsTestUtils.getProjectApiRoot()

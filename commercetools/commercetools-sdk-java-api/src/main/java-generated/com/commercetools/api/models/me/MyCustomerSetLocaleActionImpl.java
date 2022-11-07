@@ -43,7 +43,7 @@ public class MyCustomerSetLocaleActionImpl implements MyCustomerSetLocaleAction,
     }
 
     /**
-     *
+     *  <p>Value to set. Must be one of the languages supported by the Project.</p>
      */
 
     public String getLocale() {

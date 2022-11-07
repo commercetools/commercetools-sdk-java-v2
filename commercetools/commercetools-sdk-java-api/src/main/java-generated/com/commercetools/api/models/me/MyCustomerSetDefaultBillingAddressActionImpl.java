@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * MyCustomerSetDefaultBillingAddressAction
+ *  <p>Sets the default billing address from <code>addresses</code>. If the address is not currently a billing address, it is added to <code>billingAddressIds</code>. Either <code>addressId</code> or <code>addressKey</code> is required.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class MyCustomerSetDefaultBillingAddressActionImpl
@@ -48,7 +48,7 @@ public class MyCustomerSetDefaultBillingAddressActionImpl
     }
 
     /**
-     *
+     *  <p><code>id</code> of the Address to become the default billing address.</p>
      */
 
     public String getAddressId() {
@@ -56,7 +56,7 @@ public class MyCustomerSetDefaultBillingAddressActionImpl
     }
 
     /**
-     *
+     *  <p><code>key</code> of the Address to become the default billing address.</p>
      */
 
     public String getAddressKey() {

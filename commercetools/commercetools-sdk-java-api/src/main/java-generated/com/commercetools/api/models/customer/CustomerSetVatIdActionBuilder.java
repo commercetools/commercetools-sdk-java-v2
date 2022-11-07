@@ -26,7 +26,7 @@ public class CustomerSetVatIdActionBuilder implements Builder<CustomerSetVatIdAc
     private String vatId;
 
     /**
-     *  <p>If not defined, the vat Id is unset.</p>
+     *  <p>Value to set. If empty, any existing value is removed.</p>
      */
 
     public CustomerSetVatIdActionBuilder vatId(@Nullable final String vatId) {

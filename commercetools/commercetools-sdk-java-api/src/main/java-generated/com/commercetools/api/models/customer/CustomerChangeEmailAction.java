@@ -13,7 +13,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * CustomerChangeEmailAction
+ *  <p>Changing the email of the Customer produces the CustomerEmailChanged Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -32,7 +32,7 @@ public interface CustomerChangeEmailAction extends CustomerUpdateAction {
     String CHANGE_EMAIL = "changeEmail";
 
     /**
-     *
+     *  <p>Value to set.</p>
      */
     @NotNull
     @JsonProperty("email")

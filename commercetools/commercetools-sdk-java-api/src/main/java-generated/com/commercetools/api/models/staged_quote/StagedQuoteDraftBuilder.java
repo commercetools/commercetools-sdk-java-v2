@@ -30,6 +30,9 @@ public class StagedQuoteDraftBuilder implements Builder<StagedQuoteDraft> {
     private Long quoteRequestVersion;
 
     @Nullable
+    private Boolean quoteRequestStateToAccepted;
+
+    @Nullable
     private String key;
 
     @Nullable
@@ -66,6 +69,15 @@ public class StagedQuoteDraftBuilder implements Builder<StagedQuoteDraft> {
 
     public StagedQuoteDraftBuilder quoteRequestVersion(final Long quoteRequestVersion) {
         this.quoteRequestVersion = quoteRequestVersion;
+        return this;
+    }
+
+    /**
+     *  <p>If <code>true</code>, the <code>quoteRequestState</code> of the referenced QuoteRequest will be set to <code>Accepted</code>.</p>
+     */
+
+    public StagedQuoteDraftBuilder quoteRequestStateToAccepted(@Nullable final Boolean quoteRequestStateToAccepted) {
+        this.quoteRequestStateToAccepted = quoteRequestStateToAccepted;
         return this;
     }
 
@@ -133,6 +145,11 @@ public class StagedQuoteDraftBuilder implements Builder<StagedQuoteDraft> {
     }
 
     @Nullable
+    public Boolean getQuoteRequestStateToAccepted() {
+        return this.quoteRequestStateToAccepted;
+    }
+
+    @Nullable
     public String getKey() {
         return this.key;
     }
@@ -150,14 +167,16 @@ public class StagedQuoteDraftBuilder implements Builder<StagedQuoteDraft> {
     public StagedQuoteDraft build() {
         Objects.requireNonNull(quoteRequest, StagedQuoteDraft.class + ": quoteRequest is missing");
         Objects.requireNonNull(quoteRequestVersion, StagedQuoteDraft.class + ": quoteRequestVersion is missing");
-        return new StagedQuoteDraftImpl(quoteRequest, quoteRequestVersion, key, custom, state);
+        return new StagedQuoteDraftImpl(quoteRequest, quoteRequestVersion, quoteRequestStateToAccepted, key, custom,
+            state);
     }
 
     /**
      * builds StagedQuoteDraft without checking for non null required values
      */
     public StagedQuoteDraft buildUnchecked() {
-        return new StagedQuoteDraftImpl(quoteRequest, quoteRequestVersion, key, custom, state);
+        return new StagedQuoteDraftImpl(quoteRequest, quoteRequestVersion, quoteRequestStateToAccepted, key, custom,
+            state);
     }
 
     public static StagedQuoteDraftBuilder of() {
@@ -168,6 +187,7 @@ public class StagedQuoteDraftBuilder implements Builder<StagedQuoteDraft> {
         StagedQuoteDraftBuilder builder = new StagedQuoteDraftBuilder();
         builder.quoteRequest = template.getQuoteRequest();
         builder.quoteRequestVersion = template.getQuoteRequestVersion();
+        builder.quoteRequestStateToAccepted = template.getQuoteRequestStateToAccepted();
         builder.key = template.getKey();
         builder.custom = template.getCustom();
         builder.state = template.getState();

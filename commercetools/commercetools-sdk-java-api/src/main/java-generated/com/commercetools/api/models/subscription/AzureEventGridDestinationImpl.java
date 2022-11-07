@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * AzureEventGridDestination
+ *  <p>Azure Event Grid can be used to push messages to Azure Functions, HTTP endpoints (webhooks), and several other Azure tools. Event Grid can only be used with the CloudEventsFormat. To set up a Subscription with Azure Event Grid, first create a topic in the Azure Portal. To allow Composable Commerce to push messages to your topic, provide an access key.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class AzureEventGridDestinationImpl implements AzureEventGridDestination, ModelBase {
@@ -47,7 +47,7 @@ public class AzureEventGridDestinationImpl implements AzureEventGridDestination,
     }
 
     /**
-     *
+     *  <p>URI of the topic.</p>
      */
 
     public String getUri() {
@@ -55,7 +55,7 @@ public class AzureEventGridDestinationImpl implements AzureEventGridDestination,
     }
 
     /**
-     *
+     *  <p>Partially hidden on retrieval for security reasons.</p>
      */
 
     public String getAccessKey() {

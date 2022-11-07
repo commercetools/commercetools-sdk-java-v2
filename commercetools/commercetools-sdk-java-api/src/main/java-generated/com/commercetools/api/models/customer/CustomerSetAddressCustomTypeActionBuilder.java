@@ -24,13 +24,22 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomerSetAddressCustomTypeActionBuilder implements Builder<CustomerSetAddressCustomTypeAction> {
 
+    private String addressId;
+
     @Nullable
     private com.commercetools.api.models.type.TypeResourceIdentifier type;
 
     @Nullable
     private com.commercetools.api.models.type.FieldContainer fields;
 
-    private String addressId;
+    /**
+     *  <p>User-defined unique identifier of the Address to be updated.</p>
+     */
+
+    public CustomerSetAddressCustomTypeActionBuilder addressId(final String addressId) {
+        this.addressId = addressId;
+        return this;
+    }
 
     /**
      *  <p>Defines the Type that extends the <code>address</code> with Custom Fields. If absent, any existing Type and Custom Fields are removed from the <code>address</code>.</p>
@@ -72,13 +81,8 @@ public class CustomerSetAddressCustomTypeActionBuilder implements Builder<Custom
         return this;
     }
 
-    /**
-     *
-     */
-
-    public CustomerSetAddressCustomTypeActionBuilder addressId(final String addressId) {
-        this.addressId = addressId;
-        return this;
+    public String getAddressId() {
+        return this.addressId;
     }
 
     @Nullable
@@ -91,20 +95,16 @@ public class CustomerSetAddressCustomTypeActionBuilder implements Builder<Custom
         return this.fields;
     }
 
-    public String getAddressId() {
-        return this.addressId;
-    }
-
     public CustomerSetAddressCustomTypeAction build() {
         Objects.requireNonNull(addressId, CustomerSetAddressCustomTypeAction.class + ": addressId is missing");
-        return new CustomerSetAddressCustomTypeActionImpl(type, fields, addressId);
+        return new CustomerSetAddressCustomTypeActionImpl(addressId, type, fields);
     }
 
     /**
      * builds CustomerSetAddressCustomTypeAction without checking for non null required values
      */
     public CustomerSetAddressCustomTypeAction buildUnchecked() {
-        return new CustomerSetAddressCustomTypeActionImpl(type, fields, addressId);
+        return new CustomerSetAddressCustomTypeActionImpl(addressId, type, fields);
     }
 
     public static CustomerSetAddressCustomTypeActionBuilder of() {
@@ -113,9 +113,9 @@ public class CustomerSetAddressCustomTypeActionBuilder implements Builder<Custom
 
     public static CustomerSetAddressCustomTypeActionBuilder of(final CustomerSetAddressCustomTypeAction template) {
         CustomerSetAddressCustomTypeActionBuilder builder = new CustomerSetAddressCustomTypeActionBuilder();
+        builder.addressId = template.getAddressId();
         builder.type = template.getType();
         builder.fields = template.getFields();
-        builder.addressId = template.getAddressId();
         return builder;
     }
 

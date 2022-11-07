@@ -14,7 +14,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Verifies customer's email using a token.</p>
+ *  <p>The customer verifies the email using the token value. Verifying the email of the Customer produces the CustomerEmailVerified Message.</p>
+ *  <p>If the Customer exists in the Project but the <code>stores</code> field references a different Store, this method returns a ResourceNotFound error.</p>
  *
  * <hr>
  * <div class=code-example>

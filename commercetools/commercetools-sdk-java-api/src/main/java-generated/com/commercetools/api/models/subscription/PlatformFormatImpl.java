@@ -14,7 +14,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * PlatformFormat
+ *  <p>The PlatformFormat uses constructs that are similar to the ones used in the REST API, for example, on the Messages Query HTTP API.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class PlatformFormatImpl implements PlatformFormat, ModelBase {

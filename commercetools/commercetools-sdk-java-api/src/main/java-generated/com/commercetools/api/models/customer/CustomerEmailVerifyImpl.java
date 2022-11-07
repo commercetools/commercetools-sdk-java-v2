@@ -35,7 +35,7 @@ public class CustomerEmailVerifyImpl implements CustomerEmailVerify, ModelBase {
     }
 
     /**
-     *
+     *  <p>Expected version of the Customer.</p>
      */
 
     public Long getVersion() {
@@ -43,7 +43,7 @@ public class CustomerEmailVerifyImpl implements CustomerEmailVerify, ModelBase {
     }
 
     /**
-     *
+     *  <p>Value of the token to verify Customer email.</p>
      */
 
     public String getTokenValue() {

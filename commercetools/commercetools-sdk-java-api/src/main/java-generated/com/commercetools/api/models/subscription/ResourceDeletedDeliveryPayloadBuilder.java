@@ -42,7 +42,7 @@ public class ResourceDeletedDeliveryPayloadBuilder implements Builder<ResourceDe
     private Boolean dataErasure;
 
     /**
-     *
+     *  <p><code>key</code> of the Project. Useful in message processing if the Destination receives events from multiple Projects.</p>
      */
 
     public ResourceDeletedDeliveryPayloadBuilder projectKey(final String projectKey) {
@@ -51,7 +51,7 @@ public class ResourceDeletedDeliveryPayloadBuilder implements Builder<ResourceDe
     }
 
     /**
-     *  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
+     *  <p>Reference to the resource that triggered the message.</p>
      */
 
     public ResourceDeletedDeliveryPayloadBuilder resource(
@@ -61,7 +61,7 @@ public class ResourceDeletedDeliveryPayloadBuilder implements Builder<ResourceDe
     }
 
     /**
-     *  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
+     *  <p>Reference to the resource that triggered the message.</p>
      */
 
     public ResourceDeletedDeliveryPayloadBuilder resource(
@@ -71,7 +71,7 @@ public class ResourceDeletedDeliveryPayloadBuilder implements Builder<ResourceDe
     }
 
     /**
-     *  <p>User-provided identifiers present on the resource for which the Message is created. The value of the identifier stored in the Message corresponds to the one that was set on the resource at the version shown in <code>resourceVersion</code>.</p>
+     *  <p>User-defined unique identifiers of the resource.</p>
      */
 
     public ResourceDeletedDeliveryPayloadBuilder resourceUserProvidedIdentifiers(
@@ -83,7 +83,7 @@ public class ResourceDeletedDeliveryPayloadBuilder implements Builder<ResourceDe
     }
 
     /**
-     *  <p>User-provided identifiers present on the resource for which the Message is created. The value of the identifier stored in the Message corresponds to the one that was set on the resource at the version shown in <code>resourceVersion</code>.</p>
+     *  <p>User-defined unique identifiers of the resource.</p>
      */
 
     public ResourceDeletedDeliveryPayloadBuilder resourceUserProvidedIdentifiers(
@@ -93,7 +93,7 @@ public class ResourceDeletedDeliveryPayloadBuilder implements Builder<ResourceDe
     }
 
     /**
-     *
+     *  <p>Last seen version of the resource.</p>
      */
 
     public ResourceDeletedDeliveryPayloadBuilder version(final Long version) {
@@ -102,7 +102,7 @@ public class ResourceDeletedDeliveryPayloadBuilder implements Builder<ResourceDe
     }
 
     /**
-     *
+     *  <p>Date and time (UTC) the resource was last deleted.</p>
      */
 
     public ResourceDeletedDeliveryPayloadBuilder modifiedAt(final java.time.ZonedDateTime modifiedAt) {
@@ -111,7 +111,7 @@ public class ResourceDeletedDeliveryPayloadBuilder implements Builder<ResourceDe
     }
 
     /**
-     *
+     *  <p><code>true</code> if the <code>dataErasure</code> parameter on the <code>DELETE</code> request was set to <code>true</code>.</p>
      */
 
     public ResourceDeletedDeliveryPayloadBuilder dataErasure(@Nullable final Boolean dataErasure) {

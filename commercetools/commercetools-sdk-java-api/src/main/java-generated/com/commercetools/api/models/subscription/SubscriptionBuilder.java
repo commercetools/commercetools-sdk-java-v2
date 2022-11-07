@@ -69,7 +69,7 @@ public class SubscriptionBuilder implements Builder<Subscription> {
     }
 
     /**
-     *
+     *  <p>Current version of the Subscription.</p>
      */
 
     public SubscriptionBuilder version(final Long version) {
@@ -78,7 +78,7 @@ public class SubscriptionBuilder implements Builder<Subscription> {
     }
 
     /**
-     *
+     *  <p>Date and time (UTC) the Subscription was initially created.</p>
      */
 
     public SubscriptionBuilder createdAt(final java.time.ZonedDateTime createdAt) {
@@ -87,7 +87,7 @@ public class SubscriptionBuilder implements Builder<Subscription> {
     }
 
     /**
-     *
+     *  <p>Date and time (UTC) the Subscription was last modified.</p>
      */
 
     public SubscriptionBuilder lastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {
@@ -96,7 +96,7 @@ public class SubscriptionBuilder implements Builder<Subscription> {
     }
 
     /**
-     *  <p>Present on resources created after 2019-02-01 except for events not tracked.</p>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
     public SubscriptionBuilder lastModifiedBy(
@@ -106,7 +106,7 @@ public class SubscriptionBuilder implements Builder<Subscription> {
     }
 
     /**
-     *  <p>Present on resources created after 2019-02-01 except for events not tracked.</p>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
     public SubscriptionBuilder lastModifiedBy(
@@ -116,7 +116,7 @@ public class SubscriptionBuilder implements Builder<Subscription> {
     }
 
     /**
-     *  <p>Present on resources created after 2019-02-01 except for events not tracked.</p>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
     public SubscriptionBuilder createdBy(
@@ -126,7 +126,7 @@ public class SubscriptionBuilder implements Builder<Subscription> {
     }
 
     /**
-     *  <p>Present on resources created after 2019-02-01 except for events not tracked.</p>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
     public SubscriptionBuilder createdBy(@Nullable final com.commercetools.api.models.common.CreatedBy createdBy) {
@@ -135,7 +135,7 @@ public class SubscriptionBuilder implements Builder<Subscription> {
     }
 
     /**
-     *
+     *  <p>Change notifications subscribed to.</p>
      */
 
     public SubscriptionBuilder changes(final com.commercetools.api.models.subscription.ChangeSubscription... changes) {
@@ -144,7 +144,7 @@ public class SubscriptionBuilder implements Builder<Subscription> {
     }
 
     /**
-     *
+     *  <p>Change notifications subscribed to.</p>
      */
 
     public SubscriptionBuilder changes(
@@ -154,7 +154,7 @@ public class SubscriptionBuilder implements Builder<Subscription> {
     }
 
     /**
-     *
+     *  <p>Change notifications subscribed to.</p>
      */
 
     public SubscriptionBuilder plusChanges(
@@ -167,7 +167,7 @@ public class SubscriptionBuilder implements Builder<Subscription> {
     }
 
     /**
-     *
+     *  <p>Change notifications subscribed to.</p>
      */
 
     public SubscriptionBuilder plusChanges(
@@ -181,7 +181,7 @@ public class SubscriptionBuilder implements Builder<Subscription> {
     }
 
     /**
-     *
+     *  <p>Change notifications subscribed to.</p>
      */
 
     public SubscriptionBuilder withChanges(
@@ -193,7 +193,7 @@ public class SubscriptionBuilder implements Builder<Subscription> {
     }
 
     /**
-     *
+     *  <p>Messaging service to which the messages are to be sent.</p>
      */
 
     public SubscriptionBuilder destination(final com.commercetools.api.models.subscription.Destination destination) {
@@ -202,7 +202,7 @@ public class SubscriptionBuilder implements Builder<Subscription> {
     }
 
     /**
-     *
+     *  <p>Messaging service to which the messages are to be sent.</p>
      */
 
     public SubscriptionBuilder destination(
@@ -221,7 +221,7 @@ public class SubscriptionBuilder implements Builder<Subscription> {
     }
 
     /**
-     *
+     *  <p>Messages subscribed to.</p>
      */
 
     public SubscriptionBuilder messages(
@@ -231,7 +231,7 @@ public class SubscriptionBuilder implements Builder<Subscription> {
     }
 
     /**
-     *
+     *  <p>Messages subscribed to.</p>
      */
 
     public SubscriptionBuilder messages(
@@ -241,7 +241,7 @@ public class SubscriptionBuilder implements Builder<Subscription> {
     }
 
     /**
-     *
+     *  <p>Messages subscribed to.</p>
      */
 
     public SubscriptionBuilder plusMessages(
@@ -254,7 +254,7 @@ public class SubscriptionBuilder implements Builder<Subscription> {
     }
 
     /**
-     *
+     *  <p>Messages subscribed to.</p>
      */
 
     public SubscriptionBuilder plusMessages(
@@ -268,7 +268,7 @@ public class SubscriptionBuilder implements Builder<Subscription> {
     }
 
     /**
-     *
+     *  <p>Messages subscribed to.</p>
      */
 
     public SubscriptionBuilder withMessages(
@@ -280,7 +280,7 @@ public class SubscriptionBuilder implements Builder<Subscription> {
     }
 
     /**
-     *
+     *  <p>Format in which the payload is delivered.</p>
      */
 
     public SubscriptionBuilder format(final com.commercetools.api.models.subscription.DeliveryFormat format) {
@@ -289,7 +289,7 @@ public class SubscriptionBuilder implements Builder<Subscription> {
     }
 
     /**
-     *
+     *  <p>Format in which the payload is delivered.</p>
      */
 
     public SubscriptionBuilder format(
@@ -299,7 +299,7 @@ public class SubscriptionBuilder implements Builder<Subscription> {
     }
 
     /**
-     *
+     *  <p>Status of the Subscription.</p>
      */
 
     public SubscriptionBuilder status(final com.commercetools.api.models.subscription.SubscriptionHealthStatus status) {

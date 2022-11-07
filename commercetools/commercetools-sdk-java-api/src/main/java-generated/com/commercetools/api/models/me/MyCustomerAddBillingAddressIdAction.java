@@ -11,7 +11,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * MyCustomerAddBillingAddressIdAction
+ *  <p>Adds an address from the <code>addresses</code> array to <code>billingAddressIds</code>. Either <code>addressId</code> or <code>addressKey</code> is required.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -29,14 +29,14 @@ public interface MyCustomerAddBillingAddressIdAction extends MyCustomerUpdateAct
     String ADD_BILLING_ADDRESS_ID = "addBillingAddressId";
 
     /**
-     *
+     *  <p><code>id</code> of the Address to become a billing address.</p>
      */
 
     @JsonProperty("addressId")
     public String getAddressId();
 
     /**
-     *
+     *  <p><code>key</code> of the Address to become a billing address.</p>
      */
 
     @JsonProperty("addressKey")

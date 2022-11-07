@@ -30,7 +30,7 @@ public class CustomerSignInResultBuilder implements Builder<CustomerSignInResult
     private com.commercetools.api.models.cart.Cart cart;
 
     /**
-     *
+     *  <p>Customer signed up or signed in after authentication.</p>
      */
 
     public CustomerSignInResultBuilder customer(
@@ -40,7 +40,7 @@ public class CustomerSignInResultBuilder implements Builder<CustomerSignInResult
     }
 
     /**
-     *
+     *  <p>Customer signed up or signed in after authentication.</p>
      */
 
     public CustomerSignInResultBuilder customer(final com.commercetools.api.models.customer.Customer customer) {
@@ -49,7 +49,7 @@ public class CustomerSignInResultBuilder implements Builder<CustomerSignInResult
     }
 
     /**
-     *  <p>A cart that is associated to the customer. Empty if the customer does not have a cart yet.</p>
+     *  <p>Cart associated with the Customer. If empty, the Customer does not have a Cart assigned.</p>
      */
 
     public CustomerSignInResultBuilder cart(
@@ -59,7 +59,7 @@ public class CustomerSignInResultBuilder implements Builder<CustomerSignInResult
     }
 
     /**
-     *  <p>A cart that is associated to the customer. Empty if the customer does not have a cart yet.</p>
+     *  <p>Cart associated with the Customer. If empty, the Customer does not have a Cart assigned.</p>
      */
 
     public CustomerSignInResultBuilder cart(@Nullable final com.commercetools.api.models.cart.Cart cart) {

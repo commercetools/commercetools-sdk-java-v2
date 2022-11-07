@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * CustomerAddAddressAction
+ *  <p>Adding an address to the Customer produces the CustomerAddressAdded Message.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomerAddAddressActionImpl implements CustomerAddAddressAction, ModelBase {
@@ -44,7 +44,7 @@ public class CustomerAddAddressActionImpl implements CustomerAddAddressAction, M
     }
 
     /**
-     *
+     *  <p>Value to append to the <code>addresses</code> array.</p>
      */
 
     public com.commercetools.api.models.common.BaseAddress getAddress() {

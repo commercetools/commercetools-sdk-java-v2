@@ -39,7 +39,7 @@ public interface CustomerPasswordUpdatedMessage extends Message {
     String CUSTOMER_PASSWORD_UPDATED = "CustomerPasswordUpdated";
 
     /**
-     *  <p>Whether the Customer's password was updated during the Customer's Password Reset workflow.</p>
+     *  <p>Whether the Customer's password was updated during the Reset password or Change password flow.</p>
      */
     @NotNull
     @JsonProperty("reset")

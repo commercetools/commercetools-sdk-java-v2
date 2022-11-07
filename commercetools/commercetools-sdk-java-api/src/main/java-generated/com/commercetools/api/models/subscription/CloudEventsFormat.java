@@ -13,7 +13,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * CloudEventsFormat
+ *  <p>The CloudEventsFormat can be used with any Destination, and the payload is delivered in the <code>JSON Event Format</code>. AzureEventGridDestination offers native support to filter and route CloudEvents.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -32,7 +32,7 @@ public interface CloudEventsFormat extends DeliveryFormat {
     String CLOUD_EVENTS = "CloudEvents";
 
     /**
-     *
+     *  <p>Supported versions: "1.0".</p>
      */
     @NotNull
     @JsonProperty("cloudEventsVersion")

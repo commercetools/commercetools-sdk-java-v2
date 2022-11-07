@@ -36,105 +36,112 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface MyCustomerDraft extends com.commercetools.api.models.CustomizableDraft<MyCustomerDraft> {
 
     /**
-     *
+     *  <p>Email address of the Customer that is unique for an entire Project or Store the Customer is assigned to. It is the mandatory unique identifier of a Customer.</p>
      */
     @NotNull
     @JsonProperty("email")
     public String getEmail();
 
     /**
-     *
+     *  <p>Password of the Customer.</p>
      */
     @NotNull
     @JsonProperty("password")
     public String getPassword();
 
     /**
-     *
+     *  <p>Given name (first name) of the Customer.</p>
      */
 
     @JsonProperty("firstName")
     public String getFirstName();
 
     /**
-     *
+     *  <p>Family name (last name) of the Customer.</p>
      */
 
     @JsonProperty("lastName")
     public String getLastName();
 
     /**
-     *
+     *  <p>Middle name of the Customer.</p>
      */
 
     @JsonProperty("middleName")
     public String getMiddleName();
 
     /**
-     *
+     *  <p>Title of the Customer, for example, 'Dr.'.</p>
      */
 
     @JsonProperty("title")
     public String getTitle();
 
     /**
-     *
+     *  <p>Salutation of the Customer, for example, 'Mr.' or 'Mrs.'.</p>
+     */
+
+    @JsonProperty("salutation")
+    public String getSalutation();
+
+    /**
+     *  <p>Date of birth of the Customer.</p>
      */
 
     @JsonProperty("dateOfBirth")
     public LocalDate getDateOfBirth();
 
     /**
-     *
+     *  <p>Company name of the Customer.</p>
      */
 
     @JsonProperty("companyName")
     public String getCompanyName();
 
     /**
-     *
+     *  <p>Unique VAT ID of the Customer.</p>
      */
 
     @JsonProperty("vatId")
     public String getVatId();
 
     /**
-     *  <p>Sets the ID of each address to be unique in the addresses list.</p>
+     *  <p>Addresses of the Customer.</p>
      */
     @Valid
     @JsonProperty("addresses")
     public List<BaseAddress> getAddresses();
 
     /**
-     *  <p>The index of the address in the addresses array. The <code>defaultShippingAddressId</code> of the customer will be set to the ID of that address.</p>
+     *  <p>Index of the address in the <code>addresses</code> array to use as the default shipping address. The <code>defaultShippingAddressId</code> of the Customer will be set to the <code>id</code> of that address.</p>
      */
 
     @JsonProperty("defaultShippingAddress")
     public Long getDefaultShippingAddress();
 
     /**
-     *  <p>The index of the address in the addresses array. The <code>defaultBillingAddressId</code> of the customer will be set to the ID of that address.</p>
+     *  <p>Index of the address in the <code>addresses</code> array to use as the default billing address. The <code>defaultBillingAddressId</code> of the Customer will be set to the <code>id</code> of that address.</p>
      */
 
     @JsonProperty("defaultBillingAddress")
     public Long getDefaultBillingAddress();
 
     /**
-     *  <p>The custom fields.</p>
+     *  <p>Custom Fields for the Customer.</p>
      */
     @Valid
     @JsonProperty("custom")
     public CustomFieldsDraft getCustom();
 
     /**
-     *
+     *  <p>Preferred language of the Customer. Must be one of the languages supported by the Project.</p>
      */
 
     @JsonProperty("locale")
     public String getLocale();
 
     /**
-     *
+     *  <p>Sets the Stores for the Customer.</p>
      */
     @Valid
     @JsonProperty("stores")
@@ -151,6 +158,8 @@ public interface MyCustomerDraft extends com.commercetools.api.models.Customizab
     public void setMiddleName(final String middleName);
 
     public void setTitle(final String title);
+
+    public void setSalutation(final String salutation);
 
     public void setDateOfBirth(final LocalDate dateOfBirth);
 
@@ -188,6 +197,7 @@ public interface MyCustomerDraft extends com.commercetools.api.models.Customizab
         instance.setLastName(template.getLastName());
         instance.setMiddleName(template.getMiddleName());
         instance.setTitle(template.getTitle());
+        instance.setSalutation(template.getSalutation());
         instance.setDateOfBirth(template.getDateOfBirth());
         instance.setCompanyName(template.getCompanyName());
         instance.setVatId(template.getVatId());

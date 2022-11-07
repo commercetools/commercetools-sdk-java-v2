@@ -29,7 +29,7 @@ public class MyCustomerAddBillingAddressIdActionBuilder implements Builder<MyCus
     private String addressKey;
 
     /**
-     *
+     *  <p><code>id</code> of the Address to become a billing address.</p>
      */
 
     public MyCustomerAddBillingAddressIdActionBuilder addressId(@Nullable final String addressId) {
@@ -38,7 +38,7 @@ public class MyCustomerAddBillingAddressIdActionBuilder implements Builder<MyCus
     }
 
     /**
-     *
+     *  <p><code>key</code> of the Address to become a billing address.</p>
      */
 
     public MyCustomerAddBillingAddressIdActionBuilder addressKey(@Nullable final String addressKey) {

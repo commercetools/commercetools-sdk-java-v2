@@ -15,7 +15,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <div class=code-example>
  * <pre><code class='java'>
  *     MessageSubscription messageSubscription = MessageSubscription.builder()
- *             .resourceTypeId("{resourceTypeId}")
+ *             .resourceTypeId(MessageSubscriptionResourceTypeId.BUSINESS_UNIT)
  *             .build()
  * </code></pre>
  * </div>
@@ -23,22 +23,23 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class MessageSubscriptionBuilder implements Builder<MessageSubscription> {
 
-    private String resourceTypeId;
+    private com.commercetools.api.models.subscription.MessageSubscriptionResourceTypeId resourceTypeId;
 
     @Nullable
     private java.util.List<String> types;
 
     /**
-     *
+     *  <p>Unique identifier for the type of resource, for example, <code>order</code>.</p>
      */
 
-    public MessageSubscriptionBuilder resourceTypeId(final String resourceTypeId) {
+    public MessageSubscriptionBuilder resourceTypeId(
+            final com.commercetools.api.models.subscription.MessageSubscriptionResourceTypeId resourceTypeId) {
         this.resourceTypeId = resourceTypeId;
         return this;
     }
 
     /**
-     *
+     *  <p>Must contain valid message types for the resource. For example, for resource type <code>product</code> the message type <code>ProductPublished</code> is valid. If no <code>types</code> of messages are given, the Subscription will receive all messages for this resource.</p>
      */
 
     public MessageSubscriptionBuilder types(@Nullable final String... types) {
@@ -47,7 +48,7 @@ public class MessageSubscriptionBuilder implements Builder<MessageSubscription> 
     }
 
     /**
-     *
+     *  <p>Must contain valid message types for the resource. For example, for resource type <code>product</code> the message type <code>ProductPublished</code> is valid. If no <code>types</code> of messages are given, the Subscription will receive all messages for this resource.</p>
      */
 
     public MessageSubscriptionBuilder types(@Nullable final java.util.List<String> types) {
@@ -56,7 +57,7 @@ public class MessageSubscriptionBuilder implements Builder<MessageSubscription> 
     }
 
     /**
-     *
+     *  <p>Must contain valid message types for the resource. For example, for resource type <code>product</code> the message type <code>ProductPublished</code> is valid. If no <code>types</code> of messages are given, the Subscription will receive all messages for this resource.</p>
      */
 
     public MessageSubscriptionBuilder plusTypes(@Nullable final String... types) {
@@ -67,7 +68,7 @@ public class MessageSubscriptionBuilder implements Builder<MessageSubscription> 
         return this;
     }
 
-    public String getResourceTypeId() {
+    public com.commercetools.api.models.subscription.MessageSubscriptionResourceTypeId getResourceTypeId() {
         return this.resourceTypeId;
     }
 

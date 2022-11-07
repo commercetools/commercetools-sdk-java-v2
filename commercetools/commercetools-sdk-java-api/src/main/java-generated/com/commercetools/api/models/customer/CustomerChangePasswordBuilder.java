@@ -42,7 +42,7 @@ public class CustomerChangePasswordBuilder implements Builder<CustomerChangePass
     }
 
     /**
-     *
+     *  <p>Expected version of the Customer on which the changes should be applied.</p>
      */
 
     public CustomerChangePasswordBuilder version(final Long version) {
@@ -51,7 +51,8 @@ public class CustomerChangePasswordBuilder implements Builder<CustomerChangePass
     }
 
     /**
-     *
+     *  <p>Current password of the Customer.</p>
+     *  <p>If the current password does not match, an InvalidCurrentPassword error is returned.</p>
      */
 
     public CustomerChangePasswordBuilder currentPassword(final String currentPassword) {
@@ -60,7 +61,7 @@ public class CustomerChangePasswordBuilder implements Builder<CustomerChangePass
     }
 
     /**
-     *
+     *  <p>New password to be set.</p>
      */
 
     public CustomerChangePasswordBuilder newPassword(final String newPassword) {

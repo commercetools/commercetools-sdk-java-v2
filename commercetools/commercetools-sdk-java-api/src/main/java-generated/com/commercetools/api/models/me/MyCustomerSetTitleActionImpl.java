@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * MyCustomerSetTitleAction
+ *  <p>Setting the title of the Customer produces the CustomerTitleSetMessage.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class MyCustomerSetTitleActionImpl implements MyCustomerSetTitleAction, ModelBase {
@@ -43,7 +43,7 @@ public class MyCustomerSetTitleActionImpl implements MyCustomerSetTitleAction, M
     }
 
     /**
-     *
+     *  <p>Value to set. If empty, any existing value is removed.</p>
      */
 
     public String getTitle() {

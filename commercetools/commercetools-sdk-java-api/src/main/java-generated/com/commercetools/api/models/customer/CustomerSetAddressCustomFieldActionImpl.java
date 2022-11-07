@@ -50,7 +50,7 @@ public class CustomerSetAddressCustomFieldActionImpl implements CustomerSetAddre
     }
 
     /**
-     *
+     *  <p>User-defined unique identifier of the Address to be updated.</p>
      */
 
     public String getAddressId() {

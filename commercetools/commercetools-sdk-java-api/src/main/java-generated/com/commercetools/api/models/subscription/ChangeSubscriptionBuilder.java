@@ -13,7 +13,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <div class=code-example>
  * <pre><code class='java'>
  *     ChangeSubscription changeSubscription = ChangeSubscription.builder()
- *             .resourceTypeId("{resourceTypeId}")
+ *             .resourceTypeId(ChangeSubscriptionResourceTypeId.BUSINESS_UNIT)
  *             .build()
  * </code></pre>
  * </div>
@@ -21,18 +21,19 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ChangeSubscriptionBuilder implements Builder<ChangeSubscription> {
 
-    private String resourceTypeId;
+    private com.commercetools.api.models.subscription.ChangeSubscriptionResourceTypeId resourceTypeId;
 
     /**
-     *
+     *  <p>Unique identifier for the type of resource, for example, <code>cart</code>.</p>
      */
 
-    public ChangeSubscriptionBuilder resourceTypeId(final String resourceTypeId) {
+    public ChangeSubscriptionBuilder resourceTypeId(
+            final com.commercetools.api.models.subscription.ChangeSubscriptionResourceTypeId resourceTypeId) {
         this.resourceTypeId = resourceTypeId;
         return this;
     }
 
-    public String getResourceTypeId() {
+    public com.commercetools.api.models.subscription.ChangeSubscriptionResourceTypeId getResourceTypeId() {
         return this.resourceTypeId;
     }
 

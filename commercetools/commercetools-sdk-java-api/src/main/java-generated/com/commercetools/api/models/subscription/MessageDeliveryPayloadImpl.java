@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * MessageDeliveryPayload
+ *  <p>This payload is sent for a MessageSubscription.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class MessageDeliveryPayloadImpl implements MessageDeliveryPayload, ModelBase {
@@ -70,7 +70,7 @@ public class MessageDeliveryPayloadImpl implements MessageDeliveryPayload, Model
     }
 
     /**
-     *
+     *  <p><code>key</code> of the Project. Useful in message processing if the Destination receives events from multiple Projects.</p>
      */
 
     public String getProjectKey() {
@@ -78,7 +78,7 @@ public class MessageDeliveryPayloadImpl implements MessageDeliveryPayload, Model
     }
 
     /**
-     *
+     *  <p>Identifies the payload.</p>
      */
 
     public String getNotificationType() {
@@ -86,7 +86,7 @@ public class MessageDeliveryPayloadImpl implements MessageDeliveryPayload, Model
     }
 
     /**
-     *  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
+     *  <p>Reference to the resource that triggered the message.</p>
      */
 
     public com.commercetools.api.models.common.Reference getResource() {
@@ -94,7 +94,7 @@ public class MessageDeliveryPayloadImpl implements MessageDeliveryPayload, Model
     }
 
     /**
-     *  <p>User-provided identifiers present on the resource for which the Message is created. The value of the identifier stored in the Message corresponds to the one that was set on the resource at the version shown in <code>resourceVersion</code>.</p>
+     *  <p>User-defined unique identifiers of the resource.</p>
      */
 
     public com.commercetools.api.models.message.UserProvidedIdentifiers getResourceUserProvidedIdentifiers() {
@@ -102,7 +102,7 @@ public class MessageDeliveryPayloadImpl implements MessageDeliveryPayload, Model
     }
 
     /**
-     *
+     *  <p>Unique ID of the message.</p>
      */
 
     public String getId() {
@@ -110,7 +110,7 @@ public class MessageDeliveryPayloadImpl implements MessageDeliveryPayload, Model
     }
 
     /**
-     *
+     *  <p>Last seen version of the resource.</p>
      */
 
     public Long getVersion() {
@@ -118,7 +118,7 @@ public class MessageDeliveryPayloadImpl implements MessageDeliveryPayload, Model
     }
 
     /**
-     *
+     *  <p>Date and time (UTC) the resource was initially created.</p>
      */
 
     public java.time.ZonedDateTime getCreatedAt() {
@@ -126,7 +126,7 @@ public class MessageDeliveryPayloadImpl implements MessageDeliveryPayload, Model
     }
 
     /**
-     *
+     *  <p>Date and time (UTC) the resource was last modified.</p>
      */
 
     public java.time.ZonedDateTime getLastModifiedAt() {
@@ -134,7 +134,7 @@ public class MessageDeliveryPayloadImpl implements MessageDeliveryPayload, Model
     }
 
     /**
-     *
+     *  <p>Used to ensure all messages of the resource are processed in correct order. The <code>sequenceNumber</code> of the next message of the resource is a successor of the <code>sequenceNumber</code> of the current message.</p>
      */
 
     public Long getSequenceNumber() {
@@ -142,7 +142,7 @@ public class MessageDeliveryPayloadImpl implements MessageDeliveryPayload, Model
     }
 
     /**
-     *
+     *  <p>Version of the resource on which the change was performed.</p>
      */
 
     public Long getResourceVersion() {
@@ -150,7 +150,7 @@ public class MessageDeliveryPayloadImpl implements MessageDeliveryPayload, Model
     }
 
     /**
-     *
+     *  <p>If the payload does not fit into the size limit or its format is not accepted by the messaging service, the <code>payloadNotIncluded</code> field is present.</p>
      */
 
     public com.commercetools.api.models.subscription.PayloadNotIncluded getPayloadNotIncluded() {

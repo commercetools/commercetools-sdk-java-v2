@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * MyCustomerSetDefaultShippingAddressAction
+ *  <p>Sets the default shipping address from <code>addresses</code>. If the address is not currently a shipping address, it is added to <code>shippingAddressIds</code>. Either <code>addressId</code> or <code>addressKey</code> is required.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class MyCustomerSetDefaultShippingAddressActionImpl
@@ -48,7 +48,7 @@ public class MyCustomerSetDefaultShippingAddressActionImpl
     }
 
     /**
-     *
+     *  <p><code>id</code> of the Address to become the default shipping address.</p>
      */
 
     public String getAddressId() {
@@ -56,7 +56,7 @@ public class MyCustomerSetDefaultShippingAddressActionImpl
     }
 
     /**
-     *
+     *  <p><code>key</code> of the Address to become the default shipping address.</p>
      */
 
     public String getAddressKey() {

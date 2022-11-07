@@ -22,7 +22,7 @@ public class OrderSearchRequestImpl implements OrderSearchRequest, ModelBase {
 
     private com.commercetools.api.models.order.OrderSearchQuery query;
 
-    private String sort;
+    private java.util.List<com.commercetools.api.models.order.OrderSearchSorting> sort;
 
     private Integer limit;
 
@@ -30,8 +30,8 @@ public class OrderSearchRequestImpl implements OrderSearchRequest, ModelBase {
 
     @JsonCreator
     OrderSearchRequestImpl(@JsonProperty("query") final com.commercetools.api.models.order.OrderSearchQuery query,
-            @JsonProperty("sort") final String sort, @JsonProperty("limit") final Integer limit,
-            @JsonProperty("offset") final Integer offset) {
+            @JsonProperty("sort") final java.util.List<com.commercetools.api.models.order.OrderSearchSorting> sort,
+            @JsonProperty("limit") final Integer limit, @JsonProperty("offset") final Integer offset) {
         this.query = query;
         this.sort = sort;
         this.limit = limit;
@@ -53,7 +53,7 @@ public class OrderSearchRequestImpl implements OrderSearchRequest, ModelBase {
      *  <p>Controls how results to your query are sorted. If not provided, the results are sorted by relevance in descending order.</p>
      */
 
-    public String getSort() {
+    public java.util.List<com.commercetools.api.models.order.OrderSearchSorting> getSort() {
         return this.sort;
     }
 
@@ -77,7 +77,11 @@ public class OrderSearchRequestImpl implements OrderSearchRequest, ModelBase {
         this.query = query;
     }
 
-    public void setSort(final String sort) {
+    public void setSort(final com.commercetools.api.models.order.OrderSearchSorting... sort) {
+        this.sort = new ArrayList<>(Arrays.asList(sort));
+    }
+
+    public void setSort(final java.util.List<com.commercetools.api.models.order.OrderSearchSorting> sort) {
         this.sort = sort;
     }
 

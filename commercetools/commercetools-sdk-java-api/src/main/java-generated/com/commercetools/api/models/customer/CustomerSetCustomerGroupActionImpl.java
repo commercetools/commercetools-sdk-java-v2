@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * CustomerSetCustomerGroupAction
+ *  <p>Setting the Customer Group of the Customer produces the CustomerGroupSet Message.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomerSetCustomerGroupActionImpl implements CustomerSetCustomerGroupAction, ModelBase {
@@ -44,7 +44,7 @@ public class CustomerSetCustomerGroupActionImpl implements CustomerSetCustomerGr
     }
 
     /**
-     *  <p>If not defined, the customer group is unset.</p>
+     *  <p>Value to set. If empty, any existing value is removed.</p>
      */
 
     public com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier getCustomerGroup() {

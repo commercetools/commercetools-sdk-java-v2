@@ -30,6 +30,9 @@ public class QuoteDraftBuilder implements Builder<QuoteDraft> {
     private Long stagedQuoteVersion;
 
     @Nullable
+    private Boolean stagedQuoteStateToSent;
+
+    @Nullable
     private String key;
 
     @Nullable
@@ -66,6 +69,15 @@ public class QuoteDraftBuilder implements Builder<QuoteDraft> {
 
     public QuoteDraftBuilder stagedQuoteVersion(final Long stagedQuoteVersion) {
         this.stagedQuoteVersion = stagedQuoteVersion;
+        return this;
+    }
+
+    /**
+     *  <p>If <code>true</code>, the <code>stagedQuoteState</code> of the referenced StagedQuote will be set to <code>Sent</code>.</p>
+     */
+
+    public QuoteDraftBuilder stagedQuoteStateToSent(@Nullable final Boolean stagedQuoteStateToSent) {
+        this.stagedQuoteStateToSent = stagedQuoteStateToSent;
         return this;
     }
 
@@ -133,6 +145,11 @@ public class QuoteDraftBuilder implements Builder<QuoteDraft> {
     }
 
     @Nullable
+    public Boolean getStagedQuoteStateToSent() {
+        return this.stagedQuoteStateToSent;
+    }
+
+    @Nullable
     public String getKey() {
         return this.key;
     }
@@ -150,14 +167,14 @@ public class QuoteDraftBuilder implements Builder<QuoteDraft> {
     public QuoteDraft build() {
         Objects.requireNonNull(stagedQuote, QuoteDraft.class + ": stagedQuote is missing");
         Objects.requireNonNull(stagedQuoteVersion, QuoteDraft.class + ": stagedQuoteVersion is missing");
-        return new QuoteDraftImpl(stagedQuote, stagedQuoteVersion, key, custom, state);
+        return new QuoteDraftImpl(stagedQuote, stagedQuoteVersion, stagedQuoteStateToSent, key, custom, state);
     }
 
     /**
      * builds QuoteDraft without checking for non null required values
      */
     public QuoteDraft buildUnchecked() {
-        return new QuoteDraftImpl(stagedQuote, stagedQuoteVersion, key, custom, state);
+        return new QuoteDraftImpl(stagedQuote, stagedQuoteVersion, stagedQuoteStateToSent, key, custom, state);
     }
 
     public static QuoteDraftBuilder of() {
@@ -168,6 +185,7 @@ public class QuoteDraftBuilder implements Builder<QuoteDraft> {
         QuoteDraftBuilder builder = new QuoteDraftBuilder();
         builder.stagedQuote = template.getStagedQuote();
         builder.stagedQuoteVersion = template.getStagedQuoteVersion();
+        builder.stagedQuoteStateToSent = template.getStagedQuoteStateToSent();
         builder.key = template.getKey();
         builder.custom = template.getCustom();
         builder.state = template.getState();

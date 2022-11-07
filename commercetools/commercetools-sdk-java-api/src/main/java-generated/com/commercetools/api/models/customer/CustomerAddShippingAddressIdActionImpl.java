@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * CustomerAddShippingAddressIdAction
+ *  <p>Adds an Address from the <code>addresses</code> array to <code>shippingAddressIds</code>. Either <code>addressId</code> or <code>addressKey</code> is required.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomerAddShippingAddressIdActionImpl implements CustomerAddShippingAddressIdAction, ModelBase {
@@ -47,7 +47,7 @@ public class CustomerAddShippingAddressIdActionImpl implements CustomerAddShippi
     }
 
     /**
-     *
+     *  <p><code>id</code> of the Address to become a shipping address.</p>
      */
 
     public String getAddressId() {
@@ -55,7 +55,7 @@ public class CustomerAddShippingAddressIdActionImpl implements CustomerAddShippi
     }
 
     /**
-     *
+     *  <p><code>key</code> of the Address to become a shipping address.</p>
      */
 
     public String getAddressKey() {

@@ -29,7 +29,7 @@ public class CustomerCreatePasswordResetTokenBuilder implements Builder<Customer
     private Long ttlMinutes;
 
     /**
-     *
+     *  <p>Email address of the Customer treated as case-insensitive.</p>
      */
 
     public CustomerCreatePasswordResetTokenBuilder email(final String email) {
@@ -38,7 +38,7 @@ public class CustomerCreatePasswordResetTokenBuilder implements Builder<Customer
     }
 
     /**
-     *
+     *  <p>Validity period of the generated token in minutes.</p>
      */
 
     public CustomerCreatePasswordResetTokenBuilder ttlMinutes(@Nullable final Long ttlMinutes) {

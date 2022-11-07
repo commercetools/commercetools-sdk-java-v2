@@ -30,7 +30,7 @@ public class CustomerSetDefaultShippingAddressActionBuilder
     private String addressKey;
 
     /**
-     *  <p>If not defined, the customer's <code>defaultShippingAddress</code> is unset.</p>
+     *  <p><code>id</code> of the Address to become the default shipping address.</p>
      */
 
     public CustomerSetDefaultShippingAddressActionBuilder addressId(@Nullable final String addressId) {
@@ -39,7 +39,7 @@ public class CustomerSetDefaultShippingAddressActionBuilder
     }
 
     /**
-     *
+     *  <p><code>key</code> of the Address to become the default shipping address.</p>
      */
 
     public CustomerSetDefaultShippingAddressActionBuilder addressKey(@Nullable final String addressKey) {

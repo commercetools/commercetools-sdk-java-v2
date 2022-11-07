@@ -50,6 +50,13 @@ public interface QuoteDraft {
     public Long getStagedQuoteVersion();
 
     /**
+     *  <p>If <code>true</code>, the <code>stagedQuoteState</code> of the referenced StagedQuote will be set to <code>Sent</code>.</p>
+     */
+
+    @JsonProperty("stagedQuoteStateToSent")
+    public Boolean getStagedQuoteStateToSent();
+
+    /**
      *  <p>User-defined unique identifier for the Quote.</p>
      */
 
@@ -78,6 +85,8 @@ public interface QuoteDraft {
 
     public void setStagedQuoteVersion(final Long stagedQuoteVersion);
 
+    public void setStagedQuoteStateToSent(final Boolean stagedQuoteStateToSent);
+
     public void setKey(final String key);
 
     public void setCustom(final CustomFieldsDraft custom);
@@ -92,6 +101,7 @@ public interface QuoteDraft {
         QuoteDraftImpl instance = new QuoteDraftImpl();
         instance.setStagedQuote(template.getStagedQuote());
         instance.setStagedQuoteVersion(template.getStagedQuoteVersion());
+        instance.setStagedQuoteStateToSent(template.getStagedQuoteStateToSent());
         instance.setKey(template.getKey());
         instance.setCustom(template.getCustom());
         instance.setState(template.getState());

@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * SubscriptionDraft
+ *  <p>Either <code>messages</code> or <code>changes</code> must be set.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SubscriptionDraftImpl implements SubscriptionDraft, ModelBase {
@@ -48,7 +48,7 @@ public class SubscriptionDraftImpl implements SubscriptionDraft, ModelBase {
     }
 
     /**
-     *
+     *  <p>Change notifications to be subscribed to.</p>
      */
 
     public java.util.List<com.commercetools.api.models.subscription.ChangeSubscription> getChanges() {
@@ -56,7 +56,7 @@ public class SubscriptionDraftImpl implements SubscriptionDraft, ModelBase {
     }
 
     /**
-     *
+     *  <p>Messaging service to which the messages are sent.</p>
      */
 
     public com.commercetools.api.models.subscription.Destination getDestination() {
@@ -72,7 +72,7 @@ public class SubscriptionDraftImpl implements SubscriptionDraft, ModelBase {
     }
 
     /**
-     *
+     *  <p>Messages to be subscribed to.</p>
      */
 
     public java.util.List<com.commercetools.api.models.subscription.MessageSubscription> getMessages() {
@@ -80,7 +80,7 @@ public class SubscriptionDraftImpl implements SubscriptionDraft, ModelBase {
     }
 
     /**
-     *
+     *  <p>Format in which the payload is delivered. When not provided, the PlatformFormat is selected by default.</p>
      */
 
     public com.commercetools.api.models.subscription.DeliveryFormat getFormat() {

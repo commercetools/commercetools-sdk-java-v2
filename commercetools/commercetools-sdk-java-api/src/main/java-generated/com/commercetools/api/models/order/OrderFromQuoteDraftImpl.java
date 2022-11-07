@@ -24,6 +24,8 @@ public class OrderFromQuoteDraftImpl implements OrderFromQuoteDraft, ModelBase {
 
     private Long version;
 
+    private Boolean quoteStateToAccepted;
+
     private String orderNumber;
 
     private com.commercetools.api.models.order.PaymentState paymentState;
@@ -37,13 +39,16 @@ public class OrderFromQuoteDraftImpl implements OrderFromQuoteDraft, ModelBase {
     @JsonCreator
     OrderFromQuoteDraftImpl(
             @JsonProperty("quote") final com.commercetools.api.models.quote.QuoteResourceIdentifier quote,
-            @JsonProperty("version") final Long version, @JsonProperty("orderNumber") final String orderNumber,
+            @JsonProperty("version") final Long version,
+            @JsonProperty("quoteStateToAccepted") final Boolean quoteStateToAccepted,
+            @JsonProperty("orderNumber") final String orderNumber,
             @JsonProperty("paymentState") final com.commercetools.api.models.order.PaymentState paymentState,
             @JsonProperty("shipmentState") final com.commercetools.api.models.order.ShipmentState shipmentState,
             @JsonProperty("orderState") final com.commercetools.api.models.order.OrderState orderState,
             @JsonProperty("state") final com.commercetools.api.models.state.StateResourceIdentifier state) {
         this.quote = quote;
         this.version = version;
+        this.quoteStateToAccepted = quoteStateToAccepted;
         this.orderNumber = orderNumber;
         this.paymentState = paymentState;
         this.shipmentState = shipmentState;
@@ -55,7 +60,7 @@ public class OrderFromQuoteDraftImpl implements OrderFromQuoteDraft, ModelBase {
     }
 
     /**
-     *  <p>ResourceIdentifier of the Quote from which this Order is created. If the Quote has <code>QuoteState</code> in <code>Accepted</code>, <code>Declined</code> or <code>Withdrawn</code> then the order creation will fail. The creation will also if the <code>Quote</code> has expired (<code>validTo</code> check).</p>
+     *  <p>ResourceIdentifier of the Quote from which this Order is created. If the Quote has <code>QuoteState</code> in <code>Accepted</code>, <code>Declined</code> or <code>Withdrawn</code> then the order creation will fail. The creation will also fail if the <code>Quote</code> has expired (<code>validTo</code> check).</p>
      */
 
     public com.commercetools.api.models.quote.QuoteResourceIdentifier getQuote() {
@@ -68,6 +73,14 @@ public class OrderFromQuoteDraftImpl implements OrderFromQuoteDraft, ModelBase {
 
     public Long getVersion() {
         return this.version;
+    }
+
+    /**
+     *  <p>If <code>true</code>, the <code>quoteState</code> of the referenced Quote will be set to <code>Accepted</code>.</p>
+     */
+
+    public Boolean getQuoteStateToAccepted() {
+        return this.quoteStateToAccepted;
     }
 
     /**
@@ -118,6 +131,10 @@ public class OrderFromQuoteDraftImpl implements OrderFromQuoteDraft, ModelBase {
         this.version = version;
     }
 
+    public void setQuoteStateToAccepted(final Boolean quoteStateToAccepted) {
+        this.quoteStateToAccepted = quoteStateToAccepted;
+    }
+
     public void setOrderNumber(final String orderNumber) {
         this.orderNumber = orderNumber;
     }
@@ -150,6 +167,7 @@ public class OrderFromQuoteDraftImpl implements OrderFromQuoteDraft, ModelBase {
 
         return new EqualsBuilder().append(quote, that.quote)
                 .append(version, that.version)
+                .append(quoteStateToAccepted, that.quoteStateToAccepted)
                 .append(orderNumber, that.orderNumber)
                 .append(paymentState, that.paymentState)
                 .append(shipmentState, that.shipmentState)
@@ -162,6 +180,7 @@ public class OrderFromQuoteDraftImpl implements OrderFromQuoteDraft, ModelBase {
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(quote)
                 .append(version)
+                .append(quoteStateToAccepted)
                 .append(orderNumber)
                 .append(paymentState)
                 .append(shipmentState)

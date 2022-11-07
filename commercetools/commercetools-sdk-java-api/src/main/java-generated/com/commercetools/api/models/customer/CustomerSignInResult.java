@@ -32,7 +32,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface CustomerSignInResult {
 
     /**
-     *
+     *  <p>Customer signed up or signed in after authentication.</p>
      */
     @NotNull
     @Valid
@@ -40,7 +40,7 @@ public interface CustomerSignInResult {
     public Customer getCustomer();
 
     /**
-     *  <p>A cart that is associated to the customer. Empty if the customer does not have a cart yet.</p>
+     *  <p>Cart associated with the Customer. If empty, the Customer does not have a Cart assigned.</p>
      */
     @Valid
     @JsonProperty("cart")

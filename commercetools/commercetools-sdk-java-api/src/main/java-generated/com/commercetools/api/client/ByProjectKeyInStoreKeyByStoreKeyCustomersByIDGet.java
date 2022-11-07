@@ -18,7 +18,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Returns a customer by its ID from a specific Store. It also considers customers that do not have the stores field. If the customer exists in the project but the stores field references different stores, this method returns a ResourceNotFound error.</p>
+ *  <p>If the Customer exists in the Project but the <code>stores</code> field references a different Store, this method returns a ResourceNotFound error.</p>
  *
  * <hr>
  * <div class=code-example>

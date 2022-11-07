@@ -27,7 +27,7 @@ public class CustomerSetStoresActionBuilder implements Builder<CustomerSetStores
     private java.util.List<com.commercetools.api.models.store.StoreResourceIdentifier> stores;
 
     /**
-     *
+     *  <p>ResourceIdentifier of the Stores to set.</p>
      */
 
     public CustomerSetStoresActionBuilder stores(
@@ -37,7 +37,7 @@ public class CustomerSetStoresActionBuilder implements Builder<CustomerSetStores
     }
 
     /**
-     *
+     *  <p>ResourceIdentifier of the Stores to set.</p>
      */
 
     public CustomerSetStoresActionBuilder stores(
@@ -47,7 +47,7 @@ public class CustomerSetStoresActionBuilder implements Builder<CustomerSetStores
     }
 
     /**
-     *
+     *  <p>ResourceIdentifier of the Stores to set.</p>
      */
 
     public CustomerSetStoresActionBuilder plusStores(
@@ -60,7 +60,7 @@ public class CustomerSetStoresActionBuilder implements Builder<CustomerSetStores
     }
 
     /**
-     *
+     *  <p>ResourceIdentifier of the Stores to set.</p>
      */
 
     public CustomerSetStoresActionBuilder plusStores(
@@ -73,7 +73,7 @@ public class CustomerSetStoresActionBuilder implements Builder<CustomerSetStores
     }
 
     /**
-     *
+     *  <p>ResourceIdentifier of the Stores to set.</p>
      */
 
     public CustomerSetStoresActionBuilder withStores(

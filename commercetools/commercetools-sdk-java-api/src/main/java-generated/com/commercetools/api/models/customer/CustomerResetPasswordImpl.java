@@ -38,7 +38,7 @@ public class CustomerResetPasswordImpl implements CustomerResetPassword, ModelBa
     }
 
     /**
-     *
+     *  <p>Value of the token to reset the Customer password.</p>
      */
 
     public String getTokenValue() {
@@ -46,7 +46,7 @@ public class CustomerResetPasswordImpl implements CustomerResetPassword, ModelBa
     }
 
     /**
-     *
+     *  <p>New password to be set.</p>
      */
 
     public String getNewPassword() {
@@ -54,7 +54,7 @@ public class CustomerResetPasswordImpl implements CustomerResetPassword, ModelBa
     }
 
     /**
-     *
+     *  <p>Expected version of the Customer.</p>
      */
 
     public Long getVersion() {

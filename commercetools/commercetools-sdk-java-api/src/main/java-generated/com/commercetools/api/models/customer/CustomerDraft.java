@@ -37,195 +37,207 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface CustomerDraft extends com.commercetools.api.models.CustomizableDraft<CustomerDraft> {
 
     /**
-     *  <p>String that uniquely identifies a customer. It can be used to create more human-readable (in contrast to ID) identifier for the customer. It should be <strong>unique</strong> across a project. Once it's set it cannot be changed.</p>
-     */
-
-    @JsonProperty("customerNumber")
-    public String getCustomerNumber();
-
-    /**
-     *  <p>The customer's email address and the main identifier of uniqueness for a customer account. Email addresses are either unique to the store they're specified for, <em>or</em> for the entire project, and are case insensitive. For more information, see Email uniquenes.</p>
-     */
-    @NotNull
-    @JsonProperty("email")
-    public String getEmail();
-
-    /**
-     *  <p>Only optional with <code>authenticationMode</code> set to <code>ExternalAuth</code>.</p>
-     */
-
-    @JsonProperty("password")
-    public String getPassword();
-
-    /**
-     *
-     */
-
-    @JsonProperty("firstName")
-    public String getFirstName();
-
-    /**
-     *
-     */
-
-    @JsonProperty("lastName")
-    public String getLastName();
-
-    /**
-     *
-     */
-
-    @JsonProperty("middleName")
-    public String getMiddleName();
-
-    /**
-     *
-     */
-
-    @JsonProperty("title")
-    public String getTitle();
-
-    /**
-     *  <p>Identifies a single cart that will be assigned to the new customer account.</p>
-     */
-    @Deprecated
-    @JsonProperty("anonymousCartId")
-    public String getAnonymousCartId();
-
-    /**
-     *  <p>Identifies a single cart that will be assigned to the new customer account.</p>
-     */
-    @Valid
-    @JsonProperty("anonymousCart")
-    public CartResourceIdentifier getAnonymousCart();
-
-    /**
-     *  <p>Identifies carts and orders belonging to an anonymous session that will be assigned to the new customer account.</p>
-     */
-
-    @JsonProperty("anonymousId")
-    public String getAnonymousId();
-
-    /**
-     *
-     */
-
-    @JsonProperty("dateOfBirth")
-    public LocalDate getDateOfBirth();
-
-    /**
-     *
-     */
-
-    @JsonProperty("companyName")
-    public String getCompanyName();
-
-    /**
-     *
-     */
-
-    @JsonProperty("vatId")
-    public String getVatId();
-
-    /**
-     *  <p>Sets the ID of each address to be unique in the addresses list.</p>
-     */
-    @Valid
-    @JsonProperty("addresses")
-    public List<BaseAddress> getAddresses();
-
-    /**
-     *  <p>The index of the address in the addresses array. The <code>defaultShippingAddressId</code> of the customer will be set to the ID of that address.</p>
-     */
-
-    @JsonProperty("defaultShippingAddress")
-    public Integer getDefaultShippingAddress();
-
-    /**
-     *  <p>The indices of the shipping addresses in the addresses array. The <code>shippingAddressIds</code> of the Customer will be set to the IDs of that addresses.</p>
-     */
-
-    @JsonProperty("shippingAddresses")
-    public List<Integer> getShippingAddresses();
-
-    /**
-     *  <p>The index of the address in the addresses array. The <code>defaultBillingAddressId</code> of the customer will be set to the ID of that address.</p>
-     */
-
-    @JsonProperty("defaultBillingAddress")
-    public Integer getDefaultBillingAddress();
-
-    /**
-     *  <p>The indices of the billing addresses in the addresses array. The <code>billingAddressIds</code> of the customer will be set to the IDs of that addresses.</p>
-     */
-
-    @JsonProperty("billingAddresses")
-    public List<Integer> getBillingAddresses();
-
-    /**
-     *
-     */
-
-    @JsonProperty("isEmailVerified")
-    public Boolean getIsEmailVerified();
-
-    /**
-     *
-     */
-
-    @JsonProperty("externalId")
-    public String getExternalId();
-
-    /**
-     *
-     */
-    @Valid
-    @JsonProperty("customerGroup")
-    public CustomerGroupResourceIdentifier getCustomerGroup();
-
-    /**
-     *  <p>The custom fields.</p>
-     */
-    @Valid
-    @JsonProperty("custom")
-    public CustomFieldsDraft getCustom();
-
-    /**
-     *  <p>Must be one of the languages supported for this project</p>
-     */
-
-    @JsonProperty("locale")
-    public String getLocale();
-
-    /**
-     *
-     */
-
-    @JsonProperty("salutation")
-    public String getSalutation();
-
-    /**
-     *  <p>User-defined unique identifier for the Customer.</p>
+     *  <p>User-defined unique identifier for the Customer. The <code>key</code> field is preferred over <code>customerNumber</code> as it is mutable and provides more flexibility.</p>
      */
 
     @JsonProperty("key")
     public String getKey();
 
     /**
-     *  <p>References to the stores the customer account is associated with. If no stores are specified, the customer is a global customer, and can log in using the Password Flow for global Customers. If one or more stores are specified, the customer can only log in using the Password Flow for Customers in a Store for those specific stores.</p>
+     *  <p>User-defined unique identifier for a Customer. Once set, it cannot be changed.</p>
+     *  <p>Can be used to refer to a Customer in a human-readable way (in emails, invoices, and other correspondence).</p>
+     */
+
+    @JsonProperty("customerNumber")
+    public String getCustomerNumber();
+
+    /**
+     *  <p>Optional identifier for use in external systems like Customer Relationship Management (CRM) or Enterprise Resource Planning (ERP).</p>
+     */
+
+    @JsonProperty("externalId")
+    public String getExternalId();
+
+    /**
+     *  <p>Email address of the Customer that must be unique for an entire Project or to a Store the Customer is assigned to. It is the mandatory unique identifier of a Customer.</p>
+     */
+    @NotNull
+    @JsonProperty("email")
+    public String getEmail();
+
+    /**
+     *  <p>Required when <code>authenticationMode</code> is set to <code>Password</code>. Provide the Customer's password in plain text. The API stores passwords in an encrypted format.</p>
+     */
+
+    @JsonProperty("password")
+    public String getPassword();
+
+    /**
+     *  <p>Given name (first name) of the Customer.</p>
+     */
+
+    @JsonProperty("firstName")
+    public String getFirstName();
+
+    /**
+     *  <p>Family name (last name) of the Customer.</p>
+     */
+
+    @JsonProperty("lastName")
+    public String getLastName();
+
+    /**
+     *  <p>Middle name of the Customer.</p>
+     */
+
+    @JsonProperty("middleName")
+    public String getMiddleName();
+
+    /**
+     *  <p>Title of the Customer, for example, 'Dr.'.</p>
+     */
+
+    @JsonProperty("title")
+    public String getTitle();
+
+    /**
+     *  <p>Deprecated since an anonymous Cart can be identified by its <code>id</code> or external <code>key</code>.</p>
+     */
+    @Deprecated
+    @JsonProperty("anonymousCartId")
+    public String getAnonymousCartId();
+
+    /**
+     *  <p>Identifies a Cart that will be assigned to the new Customer.</p>
+     */
+    @Valid
+    @JsonProperty("anonymousCart")
+    public CartResourceIdentifier getAnonymousCart();
+
+    /**
+     *  <p>Identifies Carts and Orders belonging to an anonymous session that will be assigned to the new Customer.</p>
+     */
+
+    @JsonProperty("anonymousId")
+    public String getAnonymousId();
+
+    /**
+     *  <p>Date of birth of the Customer.</p>
+     */
+
+    @JsonProperty("dateOfBirth")
+    public LocalDate getDateOfBirth();
+
+    /**
+     *  <p>Company name of the Customer. When representing a company as a Customer, Business Units provide extended funtionality.</p>
+     */
+
+    @JsonProperty("companyName")
+    public String getCompanyName();
+
+    /**
+     *  <p>Unique VAT ID of the Customer.</p>
+     */
+
+    @JsonProperty("vatId")
+    public String getVatId();
+
+    /**
+     *  <p>Addresses of the Customer.</p>
+     */
+    @Valid
+    @JsonProperty("addresses")
+    public List<BaseAddress> getAddresses();
+
+    /**
+     *  <p>Index of the address in the <code>addresses</code> array to use as the default shipping address. The <code>defaultShippingAddressId</code> of the Customer will be set to the <code>id</code> of that address.</p>
+     */
+
+    @JsonProperty("defaultShippingAddress")
+    public Integer getDefaultShippingAddress();
+
+    /**
+     *  <p>Indices of the shipping addresses in the <code>addresses</code> array. The <code>shippingAddressIds</code> of the Customer will be set to the IDs of these addresses.</p>
+     */
+
+    @JsonProperty("shippingAddresses")
+    public List<Integer> getShippingAddresses();
+
+    /**
+     *  <p>Index of the address in the <code>addresses</code> array to use as the default billing address. The <code>defaultBillingAddressId</code> of the Customer will be set to the <code>id</code> of that address.</p>
+     */
+
+    @JsonProperty("defaultBillingAddress")
+    public Integer getDefaultBillingAddress();
+
+    /**
+     *  <p>Indices of the billing addresses in the <code>addresses</code> array. The <code>billingAddressIds</code> of the Customer will be set to the IDs of these addresses.</p>
+     */
+
+    @JsonProperty("billingAddresses")
+    public List<Integer> getBillingAddresses();
+
+    /**
+     *  <p>Set to <code>true</code> if the email address of the Customer has been verified already. The intended use is to leave this field unset upon sign-up of the Customer and initiate the email verification afterwards.</p>
+     */
+
+    @JsonProperty("isEmailVerified")
+    public Boolean getIsEmailVerified();
+
+    /**
+     *  <p>Sets the CustomerGroup for the Customer.</p>
+     */
+    @Valid
+    @JsonProperty("customerGroup")
+    public CustomerGroupResourceIdentifier getCustomerGroup();
+
+    /**
+     *  <p>Custom Fields for the Customer.</p>
+     */
+    @Valid
+    @JsonProperty("custom")
+    public CustomFieldsDraft getCustom();
+
+    /**
+     *  <p>Preferred language of the Customer. Must be one of the languages supported by the Project.</p>
+     */
+
+    @JsonProperty("locale")
+    public String getLocale();
+
+    /**
+     *  <p>Salutation of the Customer, for example, 'Mr.' or 'Mrs.'.</p>
+     */
+
+    @JsonProperty("salutation")
+    public String getSalutation();
+
+    /**
+     *  <p>Sets the Stores for the Customer.</p>
+     *  <ul>
+     *   <li>If no Stores are specified, the Customer is a global customer, and can log in using the Password Flow for global Customers.</li>
+     *   <li>If any Stores are specified, the Customer can only log in using the Password Flow for Customers in a Store for those specific Stores.</li>
+     *  </ul>
      */
     @Valid
     @JsonProperty("stores")
     public List<StoreResourceIdentifier> getStores();
 
     /**
-     *  <p>Defines whether a password field is a required field for the Customer.</p>
+     *  <ul>
+     *   <li>Set to <code>Password</code> to make the <code>password</code> field required for the Customer.</li>
+     *   <li>Set to <code>ExternalAuth</code> when the password is not required for the Customer.</li>
+     *  </ul>
      */
 
     @JsonProperty("authenticationMode")
     public AuthenticationMode getAuthenticationMode();
 
+    public void setKey(final String key);
+
     public void setCustomerNumber(final String customerNumber);
+
+    public void setExternalId(final String externalId);
 
     public void setEmail(final String email);
 
@@ -273,8 +285,6 @@ public interface CustomerDraft extends com.commercetools.api.models.Customizable
 
     public void setIsEmailVerified(final Boolean isEmailVerified);
 
-    public void setExternalId(final String externalId);
-
     public void setCustomerGroup(final CustomerGroupResourceIdentifier customerGroup);
 
     public void setCustom(final CustomFieldsDraft custom);
@@ -282,8 +292,6 @@ public interface CustomerDraft extends com.commercetools.api.models.Customizable
     public void setLocale(final String locale);
 
     public void setSalutation(final String salutation);
-
-    public void setKey(final String key);
 
     @JsonIgnore
     public void setStores(final StoreResourceIdentifier... stores);
@@ -298,7 +306,9 @@ public interface CustomerDraft extends com.commercetools.api.models.Customizable
 
     public static CustomerDraft of(final CustomerDraft template) {
         CustomerDraftImpl instance = new CustomerDraftImpl();
+        instance.setKey(template.getKey());
         instance.setCustomerNumber(template.getCustomerNumber());
+        instance.setExternalId(template.getExternalId());
         instance.setEmail(template.getEmail());
         instance.setPassword(template.getPassword());
         instance.setFirstName(template.getFirstName());
@@ -317,12 +327,10 @@ public interface CustomerDraft extends com.commercetools.api.models.Customizable
         instance.setDefaultBillingAddress(template.getDefaultBillingAddress());
         instance.setBillingAddresses(template.getBillingAddresses());
         instance.setIsEmailVerified(template.getIsEmailVerified());
-        instance.setExternalId(template.getExternalId());
         instance.setCustomerGroup(template.getCustomerGroup());
         instance.setCustom(template.getCustom());
         instance.setLocale(template.getLocale());
         instance.setSalutation(template.getSalutation());
-        instance.setKey(template.getKey());
         instance.setStores(template.getStores());
         instance.setAuthenticationMode(template.getAuthenticationMode());
         return instance;

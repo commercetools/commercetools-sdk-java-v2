@@ -50,6 +50,13 @@ public interface StagedQuoteDraft {
     public Long getQuoteRequestVersion();
 
     /**
+     *  <p>If <code>true</code>, the <code>quoteRequestState</code> of the referenced QuoteRequest will be set to <code>Accepted</code>.</p>
+     */
+
+    @JsonProperty("quoteRequestStateToAccepted")
+    public Boolean getQuoteRequestStateToAccepted();
+
+    /**
      *  <p>User-defined unique identifier for the StagedQuote.</p>
      */
 
@@ -78,6 +85,8 @@ public interface StagedQuoteDraft {
 
     public void setQuoteRequestVersion(final Long quoteRequestVersion);
 
+    public void setQuoteRequestStateToAccepted(final Boolean quoteRequestStateToAccepted);
+
     public void setKey(final String key);
 
     public void setCustom(final CustomFieldsDraft custom);
@@ -92,6 +101,7 @@ public interface StagedQuoteDraft {
         StagedQuoteDraftImpl instance = new StagedQuoteDraftImpl();
         instance.setQuoteRequest(template.getQuoteRequest());
         instance.setQuoteRequestVersion(template.getQuoteRequestVersion());
+        instance.setQuoteRequestStateToAccepted(template.getQuoteRequestStateToAccepted());
         instance.setKey(template.getKey());
         instance.setCustom(template.getCustom());
         instance.setState(template.getState());

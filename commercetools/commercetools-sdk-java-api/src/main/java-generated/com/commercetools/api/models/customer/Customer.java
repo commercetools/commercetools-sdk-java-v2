@@ -23,7 +23,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * Customer
+ *  <p>If <code>stores</code> is not empty, the Customer is specific to those Stores.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -37,6 +37,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .email("{email}")
  *             .plusAddresses(addressesBuilder -> addressesBuilder)
  *             .isEmailVerified(true)
+ *             .authenticationMode(AuthenticationMode.PASSWORD)
  *             .build()
  * </code></pre>
  * </div>
@@ -56,21 +57,43 @@ public interface Customer extends BaseResource, com.commercetools.api.models.Dom
     public String getId();
 
     /**
-     *  <p>The current version of the customer.</p>
+     *  <p>Current version of the Customer.</p>
      */
     @NotNull
     @JsonProperty("version")
     public Long getVersion();
 
     /**
-     *
+     *  <p>User-defined unique identifier of the Customer.</p>
+     */
+
+    @JsonProperty("key")
+    public String getKey();
+
+    /**
+     *  <p>User-defined unique identifier of the Customer.</p>
+     *  <p>Can be used to refer to a Customer in a human-readable way (in emails, invoices, and other correspondence).</p>
+     */
+
+    @JsonProperty("customerNumber")
+    public String getCustomerNumber();
+
+    /**
+     *  <p>Optional identifier for use in external systems like Customer Relationship Management (CRM) or Enterprise Resource Planning (ERP).</p>
+     */
+
+    @JsonProperty("externalId")
+    public String getExternalId();
+
+    /**
+     *  <p>Date and time (UTC) the Customer was initially created.</p>
      */
     @NotNull
     @JsonProperty("createdAt")
     public ZonedDateTime getCreatedAt();
 
     /**
-     *
+     *  <p>Date and time (UTC) the Customer was last updated.</p>
      */
     @NotNull
     @JsonProperty("lastModifiedAt")
@@ -91,77 +114,70 @@ public interface Customer extends BaseResource, com.commercetools.api.models.Dom
     public CreatedBy getCreatedBy();
 
     /**
-     *  <p>The customer number can be used to create a more human-readable (in contrast to ID) identifier for the customer. It should be unique across a project. Once the field was set it cannot be changed anymore.</p>
-     */
-
-    @JsonProperty("customerNumber")
-    public String getCustomerNumber();
-
-    /**
-     *  <p>The customer's email address and the main identifier of uniqueness for a customer account. Email addresses are either unique to the store they're specified for, <em>or</em> for the entire project. For more information, see Email uniquenes.</p>
+     *  <p>Email address of the Customer that is unique for an entire Project or to a Store the Customer is assigned to. It is the mandatory unique identifier of a Customer.</p>
      */
     @NotNull
     @JsonProperty("email")
     public String getEmail();
 
     /**
-     *  <p>Only present with the default <code>authenticationMode</code>, <code>Password</code>.</p>
+     *  <p>Present only when <code>authenticationMode</code> is set to <code>Password</code>.</p>
      */
 
     @JsonProperty("password")
     public String getPassword();
 
     /**
-     *
+     *  <p>Given name (first name) of the Customer.</p>
      */
 
     @JsonProperty("firstName")
     public String getFirstName();
 
     /**
-     *
+     *  <p>Family name (last name) of the Customer.</p>
      */
 
     @JsonProperty("lastName")
     public String getLastName();
 
     /**
-     *
+     *  <p>Middle name of the Customer.</p>
      */
 
     @JsonProperty("middleName")
     public String getMiddleName();
 
     /**
-     *
+     *  <p>Title of the Customer, for example, 'Dr.'.</p>
      */
 
     @JsonProperty("title")
     public String getTitle();
 
     /**
-     *
+     *  <p>Date of birth of the Customer.</p>
      */
 
     @JsonProperty("dateOfBirth")
     public LocalDate getDateOfBirth();
 
     /**
-     *
+     *  <p>Company name of the Customer.</p>
      */
 
     @JsonProperty("companyName")
     public String getCompanyName();
 
     /**
-     *
+     *  <p>Unique VAT ID of the Customer.</p>
      */
 
     @JsonProperty("vatId")
     public String getVatId();
 
     /**
-     *  <p>The addresses have unique IDs in the addresses list</p>
+     *  <p>Addresses used by the Customer.</p>
      */
     @NotNull
     @Valid
@@ -169,99 +185,95 @@ public interface Customer extends BaseResource, com.commercetools.api.models.Dom
     public List<Address> getAddresses();
 
     /**
-     *  <p>The address ID in the addresses list</p>
+     *  <p>ID of the address in <code>addresses</code> used as the default shipping address.</p>
      */
 
     @JsonProperty("defaultShippingAddressId")
     public String getDefaultShippingAddressId();
 
     /**
-     *  <p>The IDs from the addresses list which are used as shipping addresses</p>
+     *  <p>IDs of addresses in <code>addresses</code> used as shipping addresses.</p>
      */
 
     @JsonProperty("shippingAddressIds")
     public List<String> getShippingAddressIds();
 
     /**
-     *  <p>The address ID in the addresses list</p>
+     *  <p>ID of the address in <code>addresses</code> used as the default billing address.</p>
      */
 
     @JsonProperty("defaultBillingAddressId")
     public String getDefaultBillingAddressId();
 
     /**
-     *  <p>The IDs from the addresses list which are used as billing addresses</p>
+     *  <p>IDs of addresses in <code>addresses</code> used as billing addresses.</p>
      */
 
     @JsonProperty("billingAddressIds")
     public List<String> getBillingAddressIds();
 
     /**
-     *
+     *  <p>Indicates whether the email address of the Customer is verified.</p>
      */
     @NotNull
     @JsonProperty("isEmailVerified")
     public Boolean getIsEmailVerified();
 
     /**
-     *
-     */
-
-    @JsonProperty("externalId")
-    public String getExternalId();
-
-    /**
-     *
+     *  <p>CustomerGroup to which the Customer belongs.</p>
      */
     @Valid
     @JsonProperty("customerGroup")
     public CustomerGroupReference getCustomerGroup();
 
     /**
-     *
+     *  <p>Custom Fields for the Customer.</p>
      */
     @Valid
     @JsonProperty("custom")
     public CustomFields getCustom();
 
     /**
-     *
+     *  <p>Preferred language of the Customer.</p>
      */
 
     @JsonProperty("locale")
     public String getLocale();
 
     /**
-     *
+     *  <p>Salutation of the Customer, for example, 'Mr.' or 'Mrs.'.</p>
      */
 
     @JsonProperty("salutation")
     public String getSalutation();
 
     /**
-     *  <p>User-defined unique identifier of the Customer.</p>
-     */
-
-    @JsonProperty("key")
-    public String getKey();
-
-    /**
-     *  <p>References to the stores the customer account is associated with. If no stores are specified, the customer is a global customer, and can log in using the Password Flow for global Customers. If one or more stores are specified, the customer can only log in using the Password Flow for Customers in a Store for those specific stores.</p>
+     *  <p>Stores to which the Customer is assigned to.</p>
+     *  <ul>
+     *   <li>If no Stores are specified, the Customer is a global customer, and can log in using the Password Flow for global Customers.</li>
+     *   <li>If any Stores are specified, the Customer can only log in using the Password Flow for Customers in a Store for those specific Stores.</li>
+     *  </ul>
      */
     @Valid
     @JsonProperty("stores")
     public List<StoreKeyReference> getStores();
 
     /**
-     *  <p>Defines whether a Customer has a password.</p>
+     *  <p>Indicates whether the <code>password</code> is required for the Customer.</p>
      */
-
+    @NotNull
     @JsonProperty("authenticationMode")
     public AuthenticationMode getAuthenticationMode();
 
     public void setId(final String id);
 
     public void setVersion(final Long version);
+
+    public void setKey(final String key);
+
+    public void setCustomerNumber(final String customerNumber);
+
+    public void setExternalId(final String externalId);
 
     public void setCreatedAt(final ZonedDateTime createdAt);
 
@@ -270,8 +282,6 @@ public interface Customer extends BaseResource, com.commercetools.api.models.Dom
     public void setLastModifiedBy(final LastModifiedBy lastModifiedBy);
 
     public void setCreatedBy(final CreatedBy createdBy);
-
-    public void setCustomerNumber(final String customerNumber);
 
     public void setEmail(final String email);
 
@@ -312,8 +322,6 @@ public interface Customer extends BaseResource, com.commercetools.api.models.Dom
 
     public void setIsEmailVerified(final Boolean isEmailVerified);
 
-    public void setExternalId(final String externalId);
-
     public void setCustomerGroup(final CustomerGroupReference customerGroup);
 
     public void setCustom(final CustomFields custom);
@@ -321,8 +329,6 @@ public interface Customer extends BaseResource, com.commercetools.api.models.Dom
     public void setLocale(final String locale);
 
     public void setSalutation(final String salutation);
-
-    public void setKey(final String key);
 
     @JsonIgnore
     public void setStores(final StoreKeyReference... stores);
@@ -341,9 +347,11 @@ public interface Customer extends BaseResource, com.commercetools.api.models.Dom
         instance.setVersion(template.getVersion());
         instance.setCreatedAt(template.getCreatedAt());
         instance.setLastModifiedAt(template.getLastModifiedAt());
+        instance.setKey(template.getKey());
+        instance.setCustomerNumber(template.getCustomerNumber());
+        instance.setExternalId(template.getExternalId());
         instance.setLastModifiedBy(template.getLastModifiedBy());
         instance.setCreatedBy(template.getCreatedBy());
-        instance.setCustomerNumber(template.getCustomerNumber());
         instance.setEmail(template.getEmail());
         instance.setPassword(template.getPassword());
         instance.setFirstName(template.getFirstName());
@@ -359,12 +367,10 @@ public interface Customer extends BaseResource, com.commercetools.api.models.Dom
         instance.setDefaultBillingAddressId(template.getDefaultBillingAddressId());
         instance.setBillingAddressIds(template.getBillingAddressIds());
         instance.setIsEmailVerified(template.getIsEmailVerified());
-        instance.setExternalId(template.getExternalId());
         instance.setCustomerGroup(template.getCustomerGroup());
         instance.setCustom(template.getCustom());
         instance.setLocale(template.getLocale());
         instance.setSalutation(template.getSalutation());
-        instance.setKey(template.getKey());
         instance.setStores(template.getStores());
         instance.setAuthenticationMode(template.getAuthenticationMode());
         return instance;

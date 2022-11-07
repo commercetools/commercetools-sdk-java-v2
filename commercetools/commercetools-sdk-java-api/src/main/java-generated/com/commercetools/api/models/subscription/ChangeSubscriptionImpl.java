@@ -15,15 +15,16 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * ChangeSubscription
+ *  <p>Notification about changes to a resource. The payload format differs for resource creation, update, and deletion.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ChangeSubscriptionImpl implements ChangeSubscription, ModelBase {
 
-    private String resourceTypeId;
+    private com.commercetools.api.models.subscription.ChangeSubscriptionResourceTypeId resourceTypeId;
 
     @JsonCreator
-    ChangeSubscriptionImpl(@JsonProperty("resourceTypeId") final String resourceTypeId) {
+    ChangeSubscriptionImpl(
+            @JsonProperty("resourceTypeId") final com.commercetools.api.models.subscription.ChangeSubscriptionResourceTypeId resourceTypeId) {
         this.resourceTypeId = resourceTypeId;
     }
 
@@ -31,14 +32,15 @@ public class ChangeSubscriptionImpl implements ChangeSubscription, ModelBase {
     }
 
     /**
-     *
+     *  <p>Unique identifier for the type of resource, for example, <code>cart</code>.</p>
      */
 
-    public String getResourceTypeId() {
+    public com.commercetools.api.models.subscription.ChangeSubscriptionResourceTypeId getResourceTypeId() {
         return this.resourceTypeId;
     }
 
-    public void setResourceTypeId(final String resourceTypeId) {
+    public void setResourceTypeId(
+            final com.commercetools.api.models.subscription.ChangeSubscriptionResourceTypeId resourceTypeId) {
         this.resourceTypeId = resourceTypeId;
     }
 

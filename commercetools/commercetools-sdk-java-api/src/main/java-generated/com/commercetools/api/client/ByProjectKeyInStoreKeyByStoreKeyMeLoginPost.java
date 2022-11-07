@@ -14,7 +14,13 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *
+ *  <p>Retrieves the authenticated Customer (that matches the given email/password pair) if they are part of a specific Store.</p>
+ *  <ul>
+ *   <li>If the Customer does not have a Cart, the most recently modified anonymous cart becomes the Customer's Cart.</li>
+ *   <li>If the Customer already has a Cart, the most recently modified anonymous cart is handled according to AnonymousCartSignInMode.</li>
+ *  </ul>
+ *  <p>If a Cart is returned as part of CustomerSignInResult, it has been recalculated with up-to-date prices, taxes, discounts, and invalid line items removed.</p>
+ *  <p>If an account with the given credentials is not found, an InvalidCredentials error is returned.</p>
  *
  * <hr>
  * <div class=code-example>

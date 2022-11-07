@@ -10,13 +10,20 @@ import com.fasterxml.jackson.annotation.JsonValue;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>Defines the method of authentication for AWS SQS and SNS Destinations. Subscriptions with <code>Credentials</code> authentication mode are authenticated using an <code>accessKey</code> and <code>accessSecret</code> pair. Subscriptions with <code>IAM</code> authentication mode are authenticated using Identity and Access Management (IAM). In this case, the user <code>arn:aws:iam::362576667341:user/subscriptions</code> requires permissions to send messages to the queue or publish to the topic. This is the recommended <code>authenticationMode</code>, as it doesn't require additional key management.</p>
+ *  <p>Defines the method of authentication for AWS SQS and SNS Destinations.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public interface AwsAuthenticationMode {
 
-    AwsAuthenticationMode CREDENTIALS = AwsAuthenticationModeEnum.CREDENTIALS;
+    /**
+    	<p>Subscriptions with <code>Credentials</code> authentication mode are authenticated using an <code>accessKey</code> and <code>accessSecret</code> pair. This is the default authentication mode for backwards compatibility.</p>
 
+    */
+    AwsAuthenticationMode CREDENTIALS = AwsAuthenticationModeEnum.CREDENTIALS;
+    /**
+    	<p>Subscriptions with <code>IAM</code> authentication mode are authenticated using Identity and Access Management (IAM). In this case, the user <code>arn:aws:iam::362576667341:user/subscriptions</code> requires permissions to send messages to the queue or publish to the topic. This is the recommended authentication mode, as it doesn't require additional key management.</p>
+
+    */
     AwsAuthenticationMode IAM = AwsAuthenticationModeEnum.IAM;
 
     enum AwsAuthenticationModeEnum implements AwsAuthenticationMode {

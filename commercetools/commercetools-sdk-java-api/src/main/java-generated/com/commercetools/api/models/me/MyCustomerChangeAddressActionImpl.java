@@ -15,7 +15,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * MyCustomerChangeAddressAction
+ *  <p>Changing an address of the Customer produces the CustomerAddressChanged Message.</p>
+ *  <p>Either <code>addressId</code> or <code>addressKey</code> is required.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class MyCustomerChangeAddressActionImpl implements MyCustomerChangeAddressAction, ModelBase {
@@ -51,7 +52,7 @@ public class MyCustomerChangeAddressActionImpl implements MyCustomerChangeAddres
     }
 
     /**
-     *
+     *  <p><code>id</code> of the Address to change.</p>
      */
 
     public String getAddressId() {
@@ -59,7 +60,7 @@ public class MyCustomerChangeAddressActionImpl implements MyCustomerChangeAddres
     }
 
     /**
-     *
+     *  <p><code>key</code> of the Address to change.</p>
      */
 
     public String getAddressKey() {
@@ -67,7 +68,7 @@ public class MyCustomerChangeAddressActionImpl implements MyCustomerChangeAddres
     }
 
     /**
-     *
+     *  <p>Value to set.</p>
      */
 
     public com.commercetools.api.models.common.BaseAddress getAddress() {

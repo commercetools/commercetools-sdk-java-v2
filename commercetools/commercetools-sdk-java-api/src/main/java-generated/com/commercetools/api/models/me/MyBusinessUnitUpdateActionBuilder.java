@@ -27,16 +27,16 @@ public class MyBusinessUnitUpdateActionBuilder {
         return com.commercetools.api.models.me.MyBusinessUnitChangeAddressActionBuilder.of();
     }
 
-    public com.commercetools.api.models.business_unit.MyBusinessUnitChangeAssociateActionBuilder changeAssociateBuilder() {
-        return com.commercetools.api.models.business_unit.MyBusinessUnitChangeAssociateActionBuilder.of();
+    public com.commercetools.api.models.me.MyBusinessUnitChangeAssociateActionBuilder changeAssociateBuilder() {
+        return com.commercetools.api.models.me.MyBusinessUnitChangeAssociateActionBuilder.of();
     }
 
-    public com.commercetools.api.models.business_unit.MyBusinessUnitChangeNameActionBuilder changeNameBuilder() {
-        return com.commercetools.api.models.business_unit.MyBusinessUnitChangeNameActionBuilder.of();
+    public com.commercetools.api.models.me.MyBusinessUnitChangeNameActionBuilder changeNameBuilder() {
+        return com.commercetools.api.models.me.MyBusinessUnitChangeNameActionBuilder.of();
     }
 
-    public com.commercetools.api.models.business_unit.MyBusinessUnitChangeParentUnitActionBuilder changeParentUnitBuilder() {
-        return com.commercetools.api.models.business_unit.MyBusinessUnitChangeParentUnitActionBuilder.of();
+    public com.commercetools.api.models.me.MyBusinessUnitChangeParentUnitActionBuilder changeParentUnitBuilder() {
+        return com.commercetools.api.models.me.MyBusinessUnitChangeParentUnitActionBuilder.of();
     }
 
     public com.commercetools.api.models.me.MyBusinessUnitRemoveAddressActionBuilder removeAddressBuilder() {
@@ -75,12 +75,12 @@ public class MyBusinessUnitUpdateActionBuilder {
         return com.commercetools.api.models.me.MyBusinessUnitSetCustomTypeActionBuilder.of();
     }
 
-    public com.commercetools.api.models.business_unit.MyBusinessUnitSetDefaultBillingAddressActionBuilder setDefaultBillingAddressBuilder() {
-        return com.commercetools.api.models.business_unit.MyBusinessUnitSetDefaultBillingAddressActionBuilder.of();
+    public com.commercetools.api.models.me.MyBusinessUnitSetDefaultBillingAddressActionBuilder setDefaultBillingAddressBuilder() {
+        return com.commercetools.api.models.me.MyBusinessUnitSetDefaultBillingAddressActionBuilder.of();
     }
 
-    public com.commercetools.api.models.business_unit.MyBusinessUnitSetDefaultShippingAddressActionBuilder setDefaultShippingAddressBuilder() {
-        return com.commercetools.api.models.business_unit.MyBusinessUnitSetDefaultShippingAddressActionBuilder.of();
+    public com.commercetools.api.models.me.MyBusinessUnitSetDefaultShippingAddressActionBuilder setDefaultShippingAddressBuilder() {
+        return com.commercetools.api.models.me.MyBusinessUnitSetDefaultShippingAddressActionBuilder.of();
     }
 
     public static MyBusinessUnitUpdateActionBuilder of() {

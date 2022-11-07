@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * ResourceCreatedDeliveryPayload
+ *  <p>This payload is sent for a ChangeSubscription when a resource is created.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ResourceCreatedDeliveryPayloadImpl implements ResourceCreatedDeliveryPayload, ModelBase {
@@ -51,7 +51,7 @@ public class ResourceCreatedDeliveryPayloadImpl implements ResourceCreatedDelive
     }
 
     /**
-     *
+     *  <p><code>key</code> of the Project. Useful in message processing if the Destination receives events from multiple Projects.</p>
      */
 
     public String getProjectKey() {
@@ -59,7 +59,7 @@ public class ResourceCreatedDeliveryPayloadImpl implements ResourceCreatedDelive
     }
 
     /**
-     *
+     *  <p>Identifies the payload.</p>
      */
 
     public String getNotificationType() {
@@ -67,7 +67,7 @@ public class ResourceCreatedDeliveryPayloadImpl implements ResourceCreatedDelive
     }
 
     /**
-     *  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
+     *  <p>Reference to the resource that triggered the message.</p>
      */
 
     public com.commercetools.api.models.common.Reference getResource() {
@@ -75,7 +75,7 @@ public class ResourceCreatedDeliveryPayloadImpl implements ResourceCreatedDelive
     }
 
     /**
-     *  <p>User-provided identifiers present on the resource for which the Message is created. The value of the identifier stored in the Message corresponds to the one that was set on the resource at the version shown in <code>resourceVersion</code>.</p>
+     *  <p>User-defined unique identifiers of the resource.</p>
      */
 
     public com.commercetools.api.models.message.UserProvidedIdentifiers getResourceUserProvidedIdentifiers() {
@@ -83,7 +83,7 @@ public class ResourceCreatedDeliveryPayloadImpl implements ResourceCreatedDelive
     }
 
     /**
-     *
+     *  <p>Last seen version of the resource.</p>
      */
 
     public Long getVersion() {
@@ -91,7 +91,7 @@ public class ResourceCreatedDeliveryPayloadImpl implements ResourceCreatedDelive
     }
 
     /**
-     *
+     *  <p>Date and time (UTC) the resource was last modified.</p>
      */
 
     public java.time.ZonedDateTime getModifiedAt() {

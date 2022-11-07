@@ -26,7 +26,7 @@ public class MyCustomerSetMiddleNameActionBuilder implements Builder<MyCustomerS
     private String middleName;
 
     /**
-     *
+     *  <p>Value to set. If empty, any existing value is removed.</p>
      */
 
     public MyCustomerSetMiddleNameActionBuilder middleName(@Nullable final String middleName) {

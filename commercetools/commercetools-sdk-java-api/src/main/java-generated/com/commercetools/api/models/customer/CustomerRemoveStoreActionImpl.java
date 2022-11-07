@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * CustomerRemoveStoreAction
+ *  <p>Removes the association to a Store from the Customer. If no more Stores are assigned, the Customer becomes a global Customer.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomerRemoveStoreActionImpl implements CustomerRemoveStoreAction, ModelBase {
@@ -44,7 +44,7 @@ public class CustomerRemoveStoreActionImpl implements CustomerRemoveStoreAction,
     }
 
     /**
-     *  <p>ResourceIdentifier to a Store.</p>
+     *  <p>ResourceIdentifier of the Store to remove.</p>
      */
 
     public com.commercetools.api.models.store.StoreResourceIdentifier getStore() {

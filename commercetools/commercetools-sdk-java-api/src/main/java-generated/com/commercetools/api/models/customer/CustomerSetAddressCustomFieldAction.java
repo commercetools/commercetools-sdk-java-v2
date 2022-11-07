@@ -33,7 +33,7 @@ public interface CustomerSetAddressCustomFieldAction extends CustomerUpdateActio
     String SET_ADDRESS_CUSTOM_FIELD = "setAddressCustomField";
 
     /**
-     *
+     *  <p>User-defined unique identifier of the Address to be updated.</p>
      */
     @NotNull
     @JsonProperty("addressId")

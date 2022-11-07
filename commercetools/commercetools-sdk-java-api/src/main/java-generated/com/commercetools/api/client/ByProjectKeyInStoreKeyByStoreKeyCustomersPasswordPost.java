@@ -14,7 +14,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Change a customers password</p>
+ *  <p>Changing the password of the Customer produces the CustomerPasswordUpdated Message with <code>reset=false</code>.</p>
  *
  * <hr>
  * <div class=code-example>

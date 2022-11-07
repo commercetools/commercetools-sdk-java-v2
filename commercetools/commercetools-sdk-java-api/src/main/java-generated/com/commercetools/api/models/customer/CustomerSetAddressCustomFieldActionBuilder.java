@@ -32,7 +32,7 @@ public class CustomerSetAddressCustomFieldActionBuilder implements Builder<Custo
     private java.lang.Object value;
 
     /**
-     *
+     *  <p>User-defined unique identifier of the Address to be updated.</p>
      */
 
     public CustomerSetAddressCustomFieldActionBuilder addressId(final String addressId) {

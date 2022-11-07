@@ -43,7 +43,7 @@ public class MyCustomerSetMiddleNameActionImpl implements MyCustomerSetMiddleNam
     }
 
     /**
-     *
+     *  <p>Value to set. If empty, any existing value is removed.</p>
      */
 
     public String getMiddleName() {

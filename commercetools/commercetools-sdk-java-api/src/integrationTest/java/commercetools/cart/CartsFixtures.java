@@ -13,21 +13,27 @@ import com.commercetools.api.models.cart.CartDraftBuilder;
 import com.commercetools.api.models.customer.Customer;
 import commercetools.utils.CommercetoolsTestUtils;
 
+import io.vrap.rmf.base.client.error.NotFoundException;
+
 import org.junit.jupiter.api.Assertions;
 
 public class CartsFixtures {
     public static Cart deleteCart(final String id, final Long version) {
-        Cart cart = CommercetoolsTestUtils.getProjectApiRoot()
-                .carts()
-                .withId(id)
-                .delete()
-                .withVersion(version)
-                .executeBlocking()
-                .getBody();
+        Cart cart = null;
+        try {
+            cart = CommercetoolsTestUtils.getProjectApiRoot()
+                    .carts()
+                    .withId(id)
+                    .delete()
+                    .withVersion(version)
+                    .executeBlocking()
+                    .getBody();
 
-        Assertions.assertNotNull(cart);
-        Assertions.assertEquals(cart.getId(), id);
-
+            Assertions.assertNotNull(cart);
+            Assertions.assertEquals(cart.getId(), id);
+        }
+        catch (NotFoundException ignored) {
+        }
         return cart;
     }
 

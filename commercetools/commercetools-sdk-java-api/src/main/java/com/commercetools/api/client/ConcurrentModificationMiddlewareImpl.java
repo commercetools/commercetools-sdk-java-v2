@@ -71,7 +71,7 @@ public class ConcurrentModificationMiddlewareImpl implements ConcurrentModificat
             if (throwable instanceof ConcurrentModificationException) {
                 final Long newVersion = ((ConcurrentModificationException) throwable).getCurrentVersion();
                 final JsonNode jsonNode;
-                if (newVersion != null) {
+                if (newVersion != null && request.getMethod() == ApiHttpMethod.POST) {
                     try {
                         jsonNode = mapper.readTree(request.getBody());
                         if (jsonNode instanceof ObjectNode && jsonNode.has(VERSION)) {

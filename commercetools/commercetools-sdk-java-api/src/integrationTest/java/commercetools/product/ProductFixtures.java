@@ -42,6 +42,19 @@ public class ProductFixtures {
             })));
     }
 
+    public static void withPublishedProduct(final Consumer<Product> consumer) {
+        withTaxCategory(
+            taxCategory -> withCategory(category -> withProductType(createProductTypeDraft(), productType -> {
+                Product product = createProduct(productType, category, taxCategory, true);
+                try {
+                    consumer.accept(product);
+                }
+                finally {
+                    deleteProductById(product.getId(), product.getVersion());
+                }
+            })));
+    }
+
     public static void withUpdateableProduct(final UnaryOperator<Product> operator) {
         withTaxCategory(
             taxCategory -> withCategory(category -> withProductType(createProductTypeDraft(), productType -> {

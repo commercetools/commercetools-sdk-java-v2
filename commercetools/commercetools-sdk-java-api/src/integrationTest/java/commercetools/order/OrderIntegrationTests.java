@@ -2,6 +2,7 @@
 package commercetools.order;
 
 import com.commercetools.api.models.order.Order;
+import com.commercetools.api.models.order.OrderState;
 import com.commercetools.api.models.order.OrderUpdate;
 import commercetools.utils.CommercetoolsTestUtils;
 
@@ -23,6 +24,7 @@ public class OrderIntegrationTests {
                             .version(order.getVersion())
                             .plusActions(builder -> builder.setBillingAddressBuilder()
                                     .address(address -> address.country("DE").state("Berlin")))
+                            .plusActions(builder -> builder.changeOrderStateBuilder().orderState(OrderState.CONFIRMED))
                             .build())
                     .executeBlocking()
                     .getBody();

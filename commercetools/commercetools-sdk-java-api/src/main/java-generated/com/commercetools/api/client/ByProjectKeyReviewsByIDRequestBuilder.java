@@ -1,6 +1,8 @@
 
 package com.commercetools.api.client;
 
+import java.util.function.UnaryOperator;
+
 import io.vrap.rmf.base.client.ApiHttpClient;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -26,8 +28,16 @@ public class ByProjectKeyReviewsByIDRequestBuilder {
         return new ByProjectKeyReviewsByIDPost(apiHttpClient, projectKey, ID, reviewUpdate);
     }
 
+    public ByProjectKeyReviewsByIDPost post(UnaryOperator<com.commercetools.api.models.review.ReviewUpdateBuilder> op) {
+        return post(op.apply(com.commercetools.api.models.review.ReviewUpdateBuilder.of()).build());
+    }
+
     public ByProjectKeyReviewsByIDDelete delete() {
         return new ByProjectKeyReviewsByIDDelete(apiHttpClient, projectKey, ID);
+    }
+
+    public <TValue> ByProjectKeyReviewsByIDDelete delete(TValue version) {
+        return delete().withVersion(version);
     }
 
 }

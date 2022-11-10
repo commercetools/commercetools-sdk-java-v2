@@ -105,11 +105,13 @@ public class ByProjectKeyShoppingListsTest {
                         "get", "/test_projectKey/shopping-lists", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .shoppingLists()
-                        .post(null)
+                        .post(com.commercetools.api.models.shopping_list.ShoppingListDraft.of())
                         .withExpand("expand")
                         .createHttpRequest(), "post", "/test_projectKey/shopping-lists?expand=expand", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").shoppingLists().post(null).createHttpRequest(),
-                        "post", "/test_projectKey/shopping-lists", } };
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .shoppingLists()
+                        .post(com.commercetools.api.models.shopping_list.ShoppingListDraft.of())
+                        .createHttpRequest(), "post", "/test_projectKey/shopping-lists", } };
     }
 
     @DataProvider
@@ -126,8 +128,12 @@ public class ByProjectKeyShoppingListsTest {
                         .get()
                         .withPredicateVar("varName", "var.varName"), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey").shoppingLists().get(), },
-                new Object[] {
-                        apiRoot.withProjectKey("test_projectKey").shoppingLists().post(null).withExpand("expand"), },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").shoppingLists().post(null), } };
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .shoppingLists()
+                        .post(com.commercetools.api.models.shopping_list.ShoppingListDraft.of())
+                        .withExpand("expand"), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .shoppingLists()
+                        .post(com.commercetools.api.models.shopping_list.ShoppingListDraft.of()), } };
     }
 }

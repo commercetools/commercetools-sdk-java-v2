@@ -64,9 +64,11 @@ public class ByProjectKeyOrdersSearchTest {
     @DataProvider
     public static Object[][] requestWithMethodParameters() {
         return new Object[][] {
-                new Object[] {
-                        apiRoot.withProjectKey("test_projectKey").orders().search().post(null).createHttpRequest(),
-                        "post", "/test_projectKey/orders/search", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .orders()
+                        .search()
+                        .post(com.commercetools.api.models.order.OrderSearchRequest.of())
+                        .createHttpRequest(), "post", "/test_projectKey/orders/search", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey").orders().search().head().createHttpRequest(),
                         "head", "/test_projectKey/orders/search", } };
     }
@@ -74,7 +76,10 @@ public class ByProjectKeyOrdersSearchTest {
     @DataProvider
     public static Object[][] executeMethodParameters() {
         return new Object[][] {
-                new Object[] { apiRoot.withProjectKey("test_projectKey").orders().search().post(null), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .orders()
+                        .search()
+                        .post(com.commercetools.api.models.order.OrderSearchRequest.of()), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey").orders().search().head(), } };
     }
 }

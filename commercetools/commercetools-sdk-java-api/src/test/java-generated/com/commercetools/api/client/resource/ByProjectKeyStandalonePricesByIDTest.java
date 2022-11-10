@@ -81,14 +81,14 @@ public class ByProjectKeyStandalonePricesByIDTest {
                         apiRoot.withProjectKey("test_projectKey")
                                 .standalonePrices()
                                 .withId("test_ID")
-                                .post(null)
+                                .post(com.commercetools.api.models.standalone_price.StandalonePriceUpdate.of())
                                 .withExpand("expand")
                                 .createHttpRequest(),
                         "post", "/test_projectKey/standalone-prices/test_ID?expand=expand", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .standalonePrices()
                         .withId("test_ID")
-                        .post(null)
+                        .post(com.commercetools.api.models.standalone_price.StandalonePriceUpdate.of())
                         .createHttpRequest(), "post", "/test_projectKey/standalone-prices/test_ID", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
@@ -125,10 +125,12 @@ public class ByProjectKeyStandalonePricesByIDTest {
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .standalonePrices()
                         .withId("test_ID")
-                        .post(null)
+                        .post(com.commercetools.api.models.standalone_price.StandalonePriceUpdate.of())
                         .withExpand("expand"), },
-                new Object[] {
-                        apiRoot.withProjectKey("test_projectKey").standalonePrices().withId("test_ID").post(null), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .standalonePrices()
+                        .withId("test_ID")
+                        .post(com.commercetools.api.models.standalone_price.StandalonePriceUpdate.of()), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .standalonePrices()
                         .withId("test_ID")

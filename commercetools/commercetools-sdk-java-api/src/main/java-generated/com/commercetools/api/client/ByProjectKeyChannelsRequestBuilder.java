@@ -1,6 +1,8 @@
 
 package com.commercetools.api.client;
 
+import java.util.function.UnaryOperator;
+
 import io.vrap.rmf.base.client.ApiHttpClient;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -21,6 +23,10 @@ public class ByProjectKeyChannelsRequestBuilder {
 
     public ByProjectKeyChannelsPost post(com.commercetools.api.models.channel.ChannelDraft channelDraft) {
         return new ByProjectKeyChannelsPost(apiHttpClient, projectKey, channelDraft);
+    }
+
+    public ByProjectKeyChannelsPost post(UnaryOperator<com.commercetools.api.models.channel.ChannelDraftBuilder> op) {
+        return post(op.apply(com.commercetools.api.models.channel.ChannelDraftBuilder.of()).build());
     }
 
     public ByProjectKeyChannelsByIDRequestBuilder withId(String ID) {

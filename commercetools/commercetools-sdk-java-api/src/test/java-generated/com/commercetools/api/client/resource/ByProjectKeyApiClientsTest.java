@@ -96,11 +96,13 @@ public class ByProjectKeyApiClientsTest {
                         "/test_projectKey/api-clients", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .apiClients()
-                        .post(null)
+                        .post(com.commercetools.api.models.api_client.ApiClientDraft.of())
                         .withExpand("expand")
                         .createHttpRequest(), "post", "/test_projectKey/api-clients?expand=expand", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").apiClients().post(null).createHttpRequest(),
-                        "post", "/test_projectKey/api-clients", } };
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .apiClients()
+                        .post(com.commercetools.api.models.api_client.ApiClientDraft.of())
+                        .createHttpRequest(), "post", "/test_projectKey/api-clients", } };
     }
 
     @DataProvider
@@ -117,8 +119,12 @@ public class ByProjectKeyApiClientsTest {
                         .get()
                         .withPredicateVar("varName", "var.varName"), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey").apiClients().get(), },
-                new Object[] {
-                        apiRoot.withProjectKey("test_projectKey").apiClients().post(null).withExpand("expand"), },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").apiClients().post(null), } };
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .apiClients()
+                        .post(com.commercetools.api.models.api_client.ApiClientDraft.of())
+                        .withExpand("expand"), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .apiClients()
+                        .post(com.commercetools.api.models.api_client.ApiClientDraft.of()), } };
     }
 }

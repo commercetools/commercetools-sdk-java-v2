@@ -94,11 +94,13 @@ public class ByProjectKeyReviewsTest {
                         "/test_projectKey/reviews", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .reviews()
-                        .post(null)
+                        .post(com.commercetools.api.models.review.ReviewDraft.of())
                         .withExpand("expand")
                         .createHttpRequest(), "post", "/test_projectKey/reviews?expand=expand", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").reviews().post(null).createHttpRequest(),
-                        "post", "/test_projectKey/reviews", } };
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .reviews()
+                        .post(com.commercetools.api.models.review.ReviewDraft.of())
+                        .createHttpRequest(), "post", "/test_projectKey/reviews", } };
     }
 
     @DataProvider
@@ -115,7 +117,12 @@ public class ByProjectKeyReviewsTest {
                         .get()
                         .withPredicateVar("varName", "var.varName"), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey").reviews().get(), },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").reviews().post(null).withExpand("expand"), },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").reviews().post(null), } };
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .reviews()
+                        .post(com.commercetools.api.models.review.ReviewDraft.of())
+                        .withExpand("expand"), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .reviews()
+                        .post(com.commercetools.api.models.review.ReviewDraft.of()), } };
     }
 }

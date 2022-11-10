@@ -81,14 +81,14 @@ public class ByProjectKeyOrdersEditsByIDTest {
                         .orders()
                         .edits()
                         .withId("test_ID")
-                        .post(null)
+                        .post(com.commercetools.api.models.order_edit.OrderEditUpdate.of())
                         .withExpand("expand")
                         .createHttpRequest(), "post", "/test_projectKey/orders/edits/test_ID?expand=expand", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .orders()
                         .edits()
                         .withId("test_ID")
-                        .post(null)
+                        .post(com.commercetools.api.models.order_edit.OrderEditUpdate.of())
                         .createHttpRequest(), "post", "/test_projectKey/orders/edits/test_ID", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .orders()
@@ -128,10 +128,13 @@ public class ByProjectKeyOrdersEditsByIDTest {
                         .orders()
                         .edits()
                         .withId("test_ID")
-                        .post(null)
+                        .post(com.commercetools.api.models.order_edit.OrderEditUpdate.of())
                         .withExpand("expand"), },
-                new Object[] {
-                        apiRoot.withProjectKey("test_projectKey").orders().edits().withId("test_ID").post(null), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .orders()
+                        .edits()
+                        .withId("test_ID")
+                        .post(com.commercetools.api.models.order_edit.OrderEditUpdate.of()), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .orders()
                         .edits()

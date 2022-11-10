@@ -81,14 +81,14 @@ public class ByProjectKeyCustomerGroupsByIDTest {
                         apiRoot.withProjectKey("test_projectKey")
                                 .customerGroups()
                                 .withId("test_ID")
-                                .post(null)
+                                .post(com.commercetools.api.models.customer_group.CustomerGroupUpdate.of())
                                 .withExpand("expand")
                                 .createHttpRequest(),
                         "post", "/test_projectKey/customer-groups/test_ID?expand=expand", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .customerGroups()
                         .withId("test_ID")
-                        .post(null)
+                        .post(com.commercetools.api.models.customer_group.CustomerGroupUpdate.of())
                         .createHttpRequest(), "post", "/test_projectKey/customer-groups/test_ID", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .customerGroups()
@@ -123,10 +123,12 @@ public class ByProjectKeyCustomerGroupsByIDTest {
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .customerGroups()
                         .withId("test_ID")
-                        .post(null)
+                        .post(com.commercetools.api.models.customer_group.CustomerGroupUpdate.of())
                         .withExpand("expand"), },
-                new Object[] {
-                        apiRoot.withProjectKey("test_projectKey").customerGroups().withId("test_ID").post(null), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .customerGroups()
+                        .withId("test_ID")
+                        .post(com.commercetools.api.models.customer_group.CustomerGroupUpdate.of()), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .customerGroups()
                         .withId("test_ID")

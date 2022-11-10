@@ -102,12 +102,13 @@ public class ByProjectKeyCustomerGroupsTest {
                         "get", "/test_projectKey/customer-groups", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .customerGroups()
-                        .post(null)
+                        .post(com.commercetools.api.models.customer_group.CustomerGroupDraft.of())
                         .withExpand("expand")
                         .createHttpRequest(), "post", "/test_projectKey/customer-groups?expand=expand", },
-                new Object[] {
-                        apiRoot.withProjectKey("test_projectKey").customerGroups().post(null).createHttpRequest(),
-                        "post", "/test_projectKey/customer-groups", } };
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .customerGroups()
+                        .post(com.commercetools.api.models.customer_group.CustomerGroupDraft.of())
+                        .createHttpRequest(), "post", "/test_projectKey/customer-groups", } };
     }
 
     @DataProvider
@@ -124,8 +125,12 @@ public class ByProjectKeyCustomerGroupsTest {
                         .get()
                         .withPredicateVar("varName", "var.varName"), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey").customerGroups().get(), },
-                new Object[] {
-                        apiRoot.withProjectKey("test_projectKey").customerGroups().post(null).withExpand("expand"), },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").customerGroups().post(null), } };
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .customerGroups()
+                        .post(com.commercetools.api.models.customer_group.CustomerGroupDraft.of())
+                        .withExpand("expand"), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .customerGroups()
+                        .post(com.commercetools.api.models.customer_group.CustomerGroupDraft.of()), } };
     }
 }

@@ -76,13 +76,13 @@ public class ByProjectKeyOrdersByIDTest {
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .orders()
                         .withId("test_ID")
-                        .post(null)
+                        .post(com.commercetools.api.models.order.OrderUpdate.of())
                         .withExpand("expand")
                         .createHttpRequest(), "post", "/test_projectKey/orders/test_ID?expand=expand", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .orders()
                         .withId("test_ID")
-                        .post(null)
+                        .post(com.commercetools.api.models.order.OrderUpdate.of())
                         .createHttpRequest(), "post", "/test_projectKey/orders/test_ID", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .orders()
@@ -117,9 +117,12 @@ public class ByProjectKeyOrdersByIDTest {
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .orders()
                         .withId("test_ID")
-                        .post(null)
+                        .post(com.commercetools.api.models.order.OrderUpdate.of())
                         .withExpand("expand"), },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").orders().withId("test_ID").post(null), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .orders()
+                        .withId("test_ID")
+                        .post(com.commercetools.api.models.order.OrderUpdate.of()), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .orders()
                         .withId("test_ID")

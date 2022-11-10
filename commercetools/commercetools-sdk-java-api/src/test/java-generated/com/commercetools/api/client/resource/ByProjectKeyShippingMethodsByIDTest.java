@@ -81,14 +81,14 @@ public class ByProjectKeyShippingMethodsByIDTest {
                         apiRoot.withProjectKey("test_projectKey")
                                 .shippingMethods()
                                 .withId("test_ID")
-                                .post(null)
+                                .post(com.commercetools.api.models.shipping_method.ShippingMethodUpdate.of())
                                 .withExpand("expand")
                                 .createHttpRequest(),
                         "post", "/test_projectKey/shipping-methods/test_ID?expand=expand", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .shippingMethods()
                         .withId("test_ID")
-                        .post(null)
+                        .post(com.commercetools.api.models.shipping_method.ShippingMethodUpdate.of())
                         .createHttpRequest(), "post", "/test_projectKey/shipping-methods/test_ID", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
@@ -125,10 +125,12 @@ public class ByProjectKeyShippingMethodsByIDTest {
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .shippingMethods()
                         .withId("test_ID")
-                        .post(null)
+                        .post(com.commercetools.api.models.shipping_method.ShippingMethodUpdate.of())
                         .withExpand("expand"), },
-                new Object[] {
-                        apiRoot.withProjectKey("test_projectKey").shippingMethods().withId("test_ID").post(null), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .shippingMethods()
+                        .withId("test_ID")
+                        .post(com.commercetools.api.models.shipping_method.ShippingMethodUpdate.of()), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .shippingMethods()
                         .withId("test_ID")

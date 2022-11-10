@@ -1,6 +1,8 @@
 
 package com.commercetools.api.client;
 
+import java.util.function.UnaryOperator;
+
 import io.vrap.rmf.base.client.ApiHttpClient;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -26,8 +28,16 @@ public class ByProjectKeyZonesByIDRequestBuilder {
         return new ByProjectKeyZonesByIDPost(apiHttpClient, projectKey, ID, zoneUpdate);
     }
 
+    public ByProjectKeyZonesByIDPost post(UnaryOperator<com.commercetools.api.models.zone.ZoneUpdateBuilder> op) {
+        return post(op.apply(com.commercetools.api.models.zone.ZoneUpdateBuilder.of()).build());
+    }
+
     public ByProjectKeyZonesByIDDelete delete() {
         return new ByProjectKeyZonesByIDDelete(apiHttpClient, projectKey, ID);
+    }
+
+    public <TValue> ByProjectKeyZonesByIDDelete delete(TValue version) {
+        return delete().withVersion(version);
     }
 
 }

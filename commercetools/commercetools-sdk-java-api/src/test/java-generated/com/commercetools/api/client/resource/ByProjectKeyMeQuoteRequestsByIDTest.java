@@ -84,7 +84,7 @@ public class ByProjectKeyMeQuoteRequestsByIDTest {
                                 .me()
                                 .quoteRequests()
                                 .withId("test_ID")
-                                .post(null)
+                                .post(com.commercetools.api.models.me.MyQuoteRequestUpdate.of())
                                 .withExpand("expand")
                                 .createHttpRequest(),
                         "post", "/test_projectKey/me/quote-requests/test_ID?expand=expand", },
@@ -92,7 +92,7 @@ public class ByProjectKeyMeQuoteRequestsByIDTest {
                         .me()
                         .quoteRequests()
                         .withId("test_ID")
-                        .post(null)
+                        .post(com.commercetools.api.models.me.MyQuoteRequestUpdate.of())
                         .createHttpRequest(), "post", "/test_projectKey/me/quote-requests/test_ID", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
@@ -135,10 +135,13 @@ public class ByProjectKeyMeQuoteRequestsByIDTest {
                         .me()
                         .quoteRequests()
                         .withId("test_ID")
-                        .post(null)
+                        .post(com.commercetools.api.models.me.MyQuoteRequestUpdate.of())
                         .withExpand("expand"), },
-                new Object[] {
-                        apiRoot.withProjectKey("test_projectKey").me().quoteRequests().withId("test_ID").post(null), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .me()
+                        .quoteRequests()
+                        .withId("test_ID")
+                        .post(com.commercetools.api.models.me.MyQuoteRequestUpdate.of()), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .me()
                         .quoteRequests()

@@ -63,14 +63,18 @@ public class ByProjectKeyCustomersEmailTokenTest {
 
     @DataProvider
     public static Object[][] requestWithMethodParameters() {
-        return new Object[][] { new Object[] {
-                apiRoot.withProjectKey("test_projectKey").customers().emailToken().post(null).createHttpRequest(),
-                "post", "/test_projectKey/customers/email-token", } };
+        return new Object[][] { new Object[] { apiRoot.withProjectKey("test_projectKey")
+                .customers()
+                .emailToken()
+                .post(com.commercetools.api.models.customer.CustomerCreateEmailToken.of())
+                .createHttpRequest(), "post", "/test_projectKey/customers/email-token", } };
     }
 
     @DataProvider
     public static Object[][] executeMethodParameters() {
-        return new Object[][] {
-                new Object[] { apiRoot.withProjectKey("test_projectKey").customers().emailToken().post(null), } };
+        return new Object[][] { new Object[] { apiRoot.withProjectKey("test_projectKey")
+                .customers()
+                .emailToken()
+                .post(com.commercetools.api.models.customer.CustomerCreateEmailToken.of()), } };
     }
 }

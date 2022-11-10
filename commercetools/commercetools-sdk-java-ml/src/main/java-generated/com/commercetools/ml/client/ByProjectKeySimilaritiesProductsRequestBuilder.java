@@ -1,6 +1,8 @@
 
 package com.commercetools.ml.client;
 
+import java.util.function.UnaryOperator;
+
 import io.vrap.rmf.base.client.ApiHttpClient;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -18,6 +20,12 @@ public class ByProjectKeySimilaritiesProductsRequestBuilder {
     public ByProjectKeySimilaritiesProductsPost post(
             com.commercetools.ml.models.similar_products.SimilarProductSearchRequest similarProductSearchRequest) {
         return new ByProjectKeySimilaritiesProductsPost(apiHttpClient, projectKey, similarProductSearchRequest);
+    }
+
+    public ByProjectKeySimilaritiesProductsPost post(
+            UnaryOperator<com.commercetools.ml.models.similar_products.SimilarProductSearchRequestBuilder> op) {
+        return post(
+            op.apply(com.commercetools.ml.models.similar_products.SimilarProductSearchRequestBuilder.of()).build());
     }
 
     public ByProjectKeySimilaritiesProductsStatusRequestBuilder status() {

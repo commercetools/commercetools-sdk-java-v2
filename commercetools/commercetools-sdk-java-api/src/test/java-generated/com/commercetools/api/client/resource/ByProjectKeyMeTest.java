@@ -87,8 +87,10 @@ public class ByProjectKeyMeTest {
                         .createHttpRequest(), "get", "/test_projectKey/me?var.varName=var.varName", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey").me().get().createHttpRequest(), "get",
                         "/test_projectKey/me", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").me().post(null).createHttpRequest(), "post",
-                        "/test_projectKey/me", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .me()
+                        .post(com.commercetools.api.models.me.MyCustomerUpdate.of())
+                        .createHttpRequest(), "post", "/test_projectKey/me", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey").me().delete().withVersion(2).createHttpRequest(),
                         "delete", "/test_projectKey/me?version=2", },
@@ -109,7 +111,9 @@ public class ByProjectKeyMeTest {
                         .get()
                         .withPredicateVar("varName", "var.varName"), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey").me().get(), },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").me().post(null), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .me()
+                        .post(com.commercetools.api.models.me.MyCustomerUpdate.of()), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey").me().delete().withVersion(2), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey").me().delete(), } };
     }

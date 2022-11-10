@@ -131,7 +131,7 @@ public class ByProjectKeyInStoreKeyByStoreKeyShoppingListsTest {
                         apiRoot.withProjectKey("test_projectKey")
                                 .inStoreKeyWithStoreKeyValue("test_storeKey")
                                 .shoppingLists()
-                                .post(null)
+                                .post(com.commercetools.api.models.shopping_list.ShoppingListDraft.of())
                                 .withExpand("expand")
                                 .createHttpRequest(),
                         "post", "/test_projectKey/in-store/key=test_storeKey/shopping-lists?expand=expand", },
@@ -139,7 +139,7 @@ public class ByProjectKeyInStoreKeyByStoreKeyShoppingListsTest {
                         apiRoot.withProjectKey("test_projectKey")
                                 .inStoreKeyWithStoreKeyValue("test_storeKey")
                                 .shoppingLists()
-                                .post(null)
+                                .post(com.commercetools.api.models.shopping_list.ShoppingListDraft.of())
                                 .createHttpRequest(),
                         "post", "/test_projectKey/in-store/key=test_storeKey/shopping-lists", } };
     }
@@ -189,11 +189,11 @@ public class ByProjectKeyInStoreKeyByStoreKeyShoppingListsTest {
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .inStoreKeyWithStoreKeyValue("test_storeKey")
                         .shoppingLists()
-                        .post(null)
+                        .post(com.commercetools.api.models.shopping_list.ShoppingListDraft.of())
                         .withExpand("expand"), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .inStoreKeyWithStoreKeyValue("test_storeKey")
                         .shoppingLists()
-                        .post(null), } };
+                        .post(com.commercetools.api.models.shopping_list.ShoppingListDraft.of()), } };
     }
 }

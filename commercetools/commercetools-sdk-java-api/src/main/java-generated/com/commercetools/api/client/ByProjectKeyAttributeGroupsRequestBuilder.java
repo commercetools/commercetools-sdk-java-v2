@@ -1,6 +1,8 @@
 
 package com.commercetools.api.client;
 
+import java.util.function.UnaryOperator;
+
 import io.vrap.rmf.base.client.ApiHttpClient;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -22,6 +24,11 @@ public class ByProjectKeyAttributeGroupsRequestBuilder {
     public ByProjectKeyAttributeGroupsPost post(
             com.commercetools.api.models.attribute_group.AttributeGroupDraft attributeGroupDraft) {
         return new ByProjectKeyAttributeGroupsPost(apiHttpClient, projectKey, attributeGroupDraft);
+    }
+
+    public ByProjectKeyAttributeGroupsPost post(
+            UnaryOperator<com.commercetools.api.models.attribute_group.AttributeGroupDraftBuilder> op) {
+        return post(op.apply(com.commercetools.api.models.attribute_group.AttributeGroupDraftBuilder.of()).build());
     }
 
     public ByProjectKeyAttributeGroupsKeyByKeyRequestBuilder withKey(String key) {

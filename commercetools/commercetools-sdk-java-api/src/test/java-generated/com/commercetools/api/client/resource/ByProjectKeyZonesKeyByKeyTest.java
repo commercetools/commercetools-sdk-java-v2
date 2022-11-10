@@ -76,13 +76,13 @@ public class ByProjectKeyZonesKeyByKeyTest {
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .zones()
                         .withKey("test_key")
-                        .post(null)
+                        .post(com.commercetools.api.models.zone.ZoneUpdate.of())
                         .withExpand("expand")
                         .createHttpRequest(), "post", "/test_projectKey/zones/key=test_key?expand=expand", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .zones()
                         .withKey("test_key")
-                        .post(null)
+                        .post(com.commercetools.api.models.zone.ZoneUpdate.of())
                         .createHttpRequest(), "post", "/test_projectKey/zones/key=test_key", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .zones()
@@ -111,9 +111,12 @@ public class ByProjectKeyZonesKeyByKeyTest {
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .zones()
                         .withKey("test_key")
-                        .post(null)
+                        .post(com.commercetools.api.models.zone.ZoneUpdate.of())
                         .withExpand("expand"), },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").zones().withKey("test_key").post(null), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .zones()
+                        .withKey("test_key")
+                        .post(com.commercetools.api.models.zone.ZoneUpdate.of()), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .zones()
                         .withKey("test_key")

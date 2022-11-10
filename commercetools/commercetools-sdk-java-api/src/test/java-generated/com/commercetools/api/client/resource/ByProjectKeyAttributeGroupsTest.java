@@ -105,12 +105,13 @@ public class ByProjectKeyAttributeGroupsTest {
                         "get", "/test_projectKey/attribute-groups", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .attributeGroups()
-                        .post(null)
+                        .post(com.commercetools.api.models.attribute_group.AttributeGroupDraft.of())
                         .withExpand("expand")
                         .createHttpRequest(), "post", "/test_projectKey/attribute-groups?expand=expand", },
-                new Object[] {
-                        apiRoot.withProjectKey("test_projectKey").attributeGroups().post(null).createHttpRequest(),
-                        "post", "/test_projectKey/attribute-groups", } };
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .attributeGroups()
+                        .post(com.commercetools.api.models.attribute_group.AttributeGroupDraft.of())
+                        .createHttpRequest(), "post", "/test_projectKey/attribute-groups", } };
     }
 
     @DataProvider
@@ -128,8 +129,12 @@ public class ByProjectKeyAttributeGroupsTest {
                         .get()
                         .withPredicateVar("varName", "var.varName"), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey").attributeGroups().get(), },
-                new Object[] {
-                        apiRoot.withProjectKey("test_projectKey").attributeGroups().post(null).withExpand("expand"), },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").attributeGroups().post(null), } };
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .attributeGroups()
+                        .post(com.commercetools.api.models.attribute_group.AttributeGroupDraft.of())
+                        .withExpand("expand"), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .attributeGroups()
+                        .post(com.commercetools.api.models.attribute_group.AttributeGroupDraft.of()), } };
     }
 }

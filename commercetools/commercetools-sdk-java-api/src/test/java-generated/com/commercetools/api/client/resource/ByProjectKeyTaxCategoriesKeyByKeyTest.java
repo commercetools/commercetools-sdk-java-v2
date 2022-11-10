@@ -81,14 +81,14 @@ public class ByProjectKeyTaxCategoriesKeyByKeyTest {
                         apiRoot.withProjectKey("test_projectKey")
                                 .taxCategories()
                                 .withKey("test_key")
-                                .post(null)
+                                .post(com.commercetools.api.models.tax_category.TaxCategoryUpdate.of())
                                 .withExpand("expand")
                                 .createHttpRequest(),
                         "post", "/test_projectKey/tax-categories/key=test_key?expand=expand", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .taxCategories()
                         .withKey("test_key")
-                        .post(null)
+                        .post(com.commercetools.api.models.tax_category.TaxCategoryUpdate.of())
                         .createHttpRequest(), "post", "/test_projectKey/tax-categories/key=test_key", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
@@ -125,10 +125,12 @@ public class ByProjectKeyTaxCategoriesKeyByKeyTest {
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .taxCategories()
                         .withKey("test_key")
-                        .post(null)
+                        .post(com.commercetools.api.models.tax_category.TaxCategoryUpdate.of())
                         .withExpand("expand"), },
-                new Object[] {
-                        apiRoot.withProjectKey("test_projectKey").taxCategories().withKey("test_key").post(null), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .taxCategories()
+                        .withKey("test_key")
+                        .post(com.commercetools.api.models.tax_category.TaxCategoryUpdate.of()), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .taxCategories()
                         .withKey("test_key")

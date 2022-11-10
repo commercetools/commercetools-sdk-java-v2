@@ -89,11 +89,13 @@ public class ByProjectKeyCartsTest {
                         "/test_projectKey/carts", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .carts()
-                        .post(null)
+                        .post(com.commercetools.api.models.cart.CartDraft.of())
                         .withExpand("expand")
                         .createHttpRequest(), "post", "/test_projectKey/carts?expand=expand", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").carts().post(null).createHttpRequest(), "post",
-                        "/test_projectKey/carts", } };
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .carts()
+                        .post(com.commercetools.api.models.cart.CartDraft.of())
+                        .createHttpRequest(), "post", "/test_projectKey/carts", } };
     }
 
     @DataProvider
@@ -110,7 +112,12 @@ public class ByProjectKeyCartsTest {
                         .get()
                         .withPredicateVar("varName", "var.varName"), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey").carts().get(), },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").carts().post(null).withExpand("expand"), },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").carts().post(null), } };
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .carts()
+                        .post(com.commercetools.api.models.cart.CartDraft.of())
+                        .withExpand("expand"), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .carts()
+                        .post(com.commercetools.api.models.cart.CartDraft.of()), } };
     }
 }

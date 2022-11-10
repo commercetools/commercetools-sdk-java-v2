@@ -138,7 +138,7 @@ public class ByProjectKeyInStoreKeyByStoreKeyMeCartsTest {
                                 .inStoreKeyWithStoreKeyValue("test_storeKey")
                                 .me()
                                 .carts()
-                                .post(null)
+                                .post(com.commercetools.api.models.me.MyCartDraft.of())
                                 .withExpand("expand")
                                 .createHttpRequest(),
                         "post", "/test_projectKey/in-store/key=test_storeKey/me/carts?expand=expand", },
@@ -147,7 +147,7 @@ public class ByProjectKeyInStoreKeyByStoreKeyMeCartsTest {
                                 .inStoreKeyWithStoreKeyValue("test_storeKey")
                                 .me()
                                 .carts()
-                                .post(null)
+                                .post(com.commercetools.api.models.me.MyCartDraft.of())
                                 .createHttpRequest(),
                         "post", "/test_projectKey/in-store/key=test_storeKey/me/carts", } };
     }
@@ -206,12 +206,12 @@ public class ByProjectKeyInStoreKeyByStoreKeyMeCartsTest {
                         .inStoreKeyWithStoreKeyValue("test_storeKey")
                         .me()
                         .carts()
-                        .post(null)
+                        .post(com.commercetools.api.models.me.MyCartDraft.of())
                         .withExpand("expand"), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .inStoreKeyWithStoreKeyValue("test_storeKey")
                         .me()
                         .carts()
-                        .post(null), } };
+                        .post(com.commercetools.api.models.me.MyCartDraft.of()), } };
     }
 }

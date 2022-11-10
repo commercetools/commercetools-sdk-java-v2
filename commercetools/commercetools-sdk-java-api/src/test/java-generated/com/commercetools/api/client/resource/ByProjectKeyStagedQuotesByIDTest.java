@@ -78,13 +78,13 @@ public class ByProjectKeyStagedQuotesByIDTest {
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .stagedQuotes()
                         .withId("test_ID")
-                        .post(null)
+                        .post(com.commercetools.api.models.staged_quote.StagedQuoteUpdate.of())
                         .withExpand("expand")
                         .createHttpRequest(), "post", "/test_projectKey/staged-quotes/test_ID?expand=expand", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .stagedQuotes()
                         .withId("test_ID")
-                        .post(null)
+                        .post(com.commercetools.api.models.staged_quote.StagedQuoteUpdate.of())
                         .createHttpRequest(), "post", "/test_projectKey/staged-quotes/test_ID", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
@@ -127,9 +127,12 @@ public class ByProjectKeyStagedQuotesByIDTest {
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .stagedQuotes()
                         .withId("test_ID")
-                        .post(null)
+                        .post(com.commercetools.api.models.staged_quote.StagedQuoteUpdate.of())
                         .withExpand("expand"), },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").stagedQuotes().withId("test_ID").post(null), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .stagedQuotes()
+                        .withId("test_ID")
+                        .post(com.commercetools.api.models.staged_quote.StagedQuoteUpdate.of()), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .stagedQuotes()
                         .withId("test_ID")

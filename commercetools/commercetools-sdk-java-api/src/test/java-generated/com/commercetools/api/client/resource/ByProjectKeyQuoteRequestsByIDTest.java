@@ -79,14 +79,14 @@ public class ByProjectKeyQuoteRequestsByIDTest {
                         apiRoot.withProjectKey("test_projectKey")
                                 .quoteRequests()
                                 .withId("test_ID")
-                                .post(null)
+                                .post(com.commercetools.api.models.quote_request.QuoteRequestUpdate.of())
                                 .withExpand("expand")
                                 .createHttpRequest(),
                         "post", "/test_projectKey/quote-requests/test_ID?expand=expand", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .quoteRequests()
                         .withId("test_ID")
-                        .post(null)
+                        .post(com.commercetools.api.models.quote_request.QuoteRequestUpdate.of())
                         .createHttpRequest(), "post", "/test_projectKey/quote-requests/test_ID", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
@@ -129,10 +129,12 @@ public class ByProjectKeyQuoteRequestsByIDTest {
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .quoteRequests()
                         .withId("test_ID")
-                        .post(null)
+                        .post(com.commercetools.api.models.quote_request.QuoteRequestUpdate.of())
                         .withExpand("expand"), },
-                new Object[] {
-                        apiRoot.withProjectKey("test_projectKey").quoteRequests().withId("test_ID").post(null), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .quoteRequests()
+                        .withId("test_ID")
+                        .post(com.commercetools.api.models.quote_request.QuoteRequestUpdate.of()), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .quoteRequests()
                         .withId("test_ID")

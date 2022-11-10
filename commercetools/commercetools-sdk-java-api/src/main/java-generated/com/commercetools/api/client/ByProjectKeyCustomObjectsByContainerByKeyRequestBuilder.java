@@ -28,4 +28,8 @@ public class ByProjectKeyCustomObjectsByContainerByKeyRequestBuilder {
         return new ByProjectKeyCustomObjectsByContainerByKeyDelete(apiHttpClient, projectKey, container, key);
     }
 
+    public <TValue> ByProjectKeyCustomObjectsByContainerByKeyDelete delete(TValue version) {
+        return delete().withVersion(version);
+    }
+
 }

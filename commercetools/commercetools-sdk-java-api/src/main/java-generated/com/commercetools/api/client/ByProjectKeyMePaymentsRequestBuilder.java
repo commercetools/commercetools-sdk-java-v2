@@ -1,6 +1,8 @@
 
 package com.commercetools.api.client;
 
+import java.util.function.UnaryOperator;
+
 import io.vrap.rmf.base.client.ApiHttpClient;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -21,6 +23,10 @@ public class ByProjectKeyMePaymentsRequestBuilder {
 
     public ByProjectKeyMePaymentsPost post(com.commercetools.api.models.me.MyPaymentDraft myPaymentDraft) {
         return new ByProjectKeyMePaymentsPost(apiHttpClient, projectKey, myPaymentDraft);
+    }
+
+    public ByProjectKeyMePaymentsPost post(UnaryOperator<com.commercetools.api.models.me.MyPaymentDraftBuilder> op) {
+        return post(op.apply(com.commercetools.api.models.me.MyPaymentDraftBuilder.of()).build());
     }
 
     public ByProjectKeyMePaymentsKeyByKeyRequestBuilder withKey(String key) {

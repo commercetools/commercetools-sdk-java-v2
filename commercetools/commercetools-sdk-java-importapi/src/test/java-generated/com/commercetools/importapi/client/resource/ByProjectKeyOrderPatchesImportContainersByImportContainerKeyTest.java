@@ -68,7 +68,7 @@ public class ByProjectKeyOrderPatchesImportContainersByImportContainerKeyTest {
                         .orderPatches()
                         .importContainers()
                         .withImportContainerKeyValue("test_importContainerKey")
-                        .post(null)
+                        .post(com.commercetools.importapi.models.importrequests.OrderPatchImportRequest.of())
                         .createHttpRequest(),
                 "post", "/test_projectKey/order-patches/import-containers/test_importContainerKey", } };
     }
@@ -79,6 +79,6 @@ public class ByProjectKeyOrderPatchesImportContainersByImportContainerKeyTest {
                 .orderPatches()
                 .importContainers()
                 .withImportContainerKeyValue("test_importContainerKey")
-                .post(null), } };
+                .post(com.commercetools.importapi.models.importrequests.OrderPatchImportRequest.of()), } };
     }
 }

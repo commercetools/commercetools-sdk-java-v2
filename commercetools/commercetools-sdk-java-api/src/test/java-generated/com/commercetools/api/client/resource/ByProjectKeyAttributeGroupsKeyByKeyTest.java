@@ -81,14 +81,14 @@ public class ByProjectKeyAttributeGroupsKeyByKeyTest {
                         apiRoot.withProjectKey("test_projectKey")
                                 .attributeGroups()
                                 .withKey("test_key")
-                                .post(null)
+                                .post(com.commercetools.api.models.attribute_group.AttributeGroupUpdate.of())
                                 .withExpand("expand")
                                 .createHttpRequest(),
                         "post", "/test_projectKey/attribute-groups/key=test_key?expand=expand", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .attributeGroups()
                         .withKey("test_key")
-                        .post(null)
+                        .post(com.commercetools.api.models.attribute_group.AttributeGroupUpdate.of())
                         .createHttpRequest(), "post", "/test_projectKey/attribute-groups/key=test_key", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
@@ -125,10 +125,12 @@ public class ByProjectKeyAttributeGroupsKeyByKeyTest {
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .attributeGroups()
                         .withKey("test_key")
-                        .post(null)
+                        .post(com.commercetools.api.models.attribute_group.AttributeGroupUpdate.of())
                         .withExpand("expand"), },
-                new Object[] {
-                        apiRoot.withProjectKey("test_projectKey").attributeGroups().withKey("test_key").post(null), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .attributeGroups()
+                        .withKey("test_key")
+                        .post(com.commercetools.api.models.attribute_group.AttributeGroupUpdate.of()), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .attributeGroups()
                         .withKey("test_key")

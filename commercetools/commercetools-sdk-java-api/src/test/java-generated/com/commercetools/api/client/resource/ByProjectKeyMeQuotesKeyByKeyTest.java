@@ -82,7 +82,7 @@ public class ByProjectKeyMeQuotesKeyByKeyTest {
                                 .me()
                                 .quotes()
                                 .withKey("test_key")
-                                .post(null)
+                                .post(com.commercetools.api.models.me.MyQuoteUpdate.of())
                                 .withExpand("expand")
                                 .createHttpRequest(),
                         "post", "/test_projectKey/me/quotes/key=test_key?expand=expand", },
@@ -90,7 +90,7 @@ public class ByProjectKeyMeQuotesKeyByKeyTest {
                         .me()
                         .quotes()
                         .withKey("test_key")
-                        .post(null)
+                        .post(com.commercetools.api.models.me.MyQuoteUpdate.of())
                         .createHttpRequest(), "post", "/test_projectKey/me/quotes/key=test_key", } };
     }
 
@@ -108,9 +108,12 @@ public class ByProjectKeyMeQuotesKeyByKeyTest {
                         .me()
                         .quotes()
                         .withKey("test_key")
-                        .post(null)
+                        .post(com.commercetools.api.models.me.MyQuoteUpdate.of())
                         .withExpand("expand"), },
-                new Object[] {
-                        apiRoot.withProjectKey("test_projectKey").me().quotes().withKey("test_key").post(null), } };
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .me()
+                        .quotes()
+                        .withKey("test_key")
+                        .post(com.commercetools.api.models.me.MyQuoteUpdate.of()), } };
     }
 }

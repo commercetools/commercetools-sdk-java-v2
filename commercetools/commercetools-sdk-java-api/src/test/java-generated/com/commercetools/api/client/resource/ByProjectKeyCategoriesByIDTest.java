@@ -78,13 +78,13 @@ public class ByProjectKeyCategoriesByIDTest {
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .categories()
                         .withId("test_ID")
-                        .post(null)
+                        .post(com.commercetools.api.models.category.CategoryUpdate.of())
                         .withExpand("expand")
                         .createHttpRequest(), "post", "/test_projectKey/categories/test_ID?expand=expand", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .categories()
                         .withId("test_ID")
-                        .post(null)
+                        .post(com.commercetools.api.models.category.CategoryUpdate.of())
                         .createHttpRequest(), "post", "/test_projectKey/categories/test_ID", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .categories()
@@ -113,9 +113,12 @@ public class ByProjectKeyCategoriesByIDTest {
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .categories()
                         .withId("test_ID")
-                        .post(null)
+                        .post(com.commercetools.api.models.category.CategoryUpdate.of())
                         .withExpand("expand"), },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").categories().withId("test_ID").post(null), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .categories()
+                        .withId("test_ID")
+                        .post(com.commercetools.api.models.category.CategoryUpdate.of()), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .categories()
                         .withId("test_ID")

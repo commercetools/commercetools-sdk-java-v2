@@ -68,7 +68,7 @@ public class ByProjectKeyInStoreKeyByStoreKeyCustomersPasswordTokenTest {
                         .inStoreKeyWithStoreKeyValue("test_storeKey")
                         .customers()
                         .passwordToken()
-                        .post(null)
+                        .post(com.commercetools.api.models.customer.CustomerCreatePasswordResetToken.of())
                         .createHttpRequest(),
                 "post", "/test_projectKey/in-store/key=test_storeKey/customers/password-token", } };
     }
@@ -79,6 +79,6 @@ public class ByProjectKeyInStoreKeyByStoreKeyCustomersPasswordTokenTest {
                 .inStoreKeyWithStoreKeyValue("test_storeKey")
                 .customers()
                 .passwordToken()
-                .post(null), } };
+                .post(com.commercetools.api.models.customer.CustomerCreatePasswordResetToken.of()), } };
     }
 }

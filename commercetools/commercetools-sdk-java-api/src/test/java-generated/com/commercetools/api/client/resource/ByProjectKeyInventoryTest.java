@@ -96,11 +96,13 @@ public class ByProjectKeyInventoryTest {
                         "/test_projectKey/inventory", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .inventory()
-                        .post(null)
+                        .post(com.commercetools.api.models.inventory.InventoryEntryDraft.of())
                         .withExpand("expand")
                         .createHttpRequest(), "post", "/test_projectKey/inventory?expand=expand", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").inventory().post(null).createHttpRequest(),
-                        "post", "/test_projectKey/inventory", } };
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .inventory()
+                        .post(com.commercetools.api.models.inventory.InventoryEntryDraft.of())
+                        .createHttpRequest(), "post", "/test_projectKey/inventory", } };
     }
 
     @DataProvider
@@ -117,7 +119,12 @@ public class ByProjectKeyInventoryTest {
                         .get()
                         .withPredicateVar("varName", "var.varName"), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey").inventory().get(), },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").inventory().post(null).withExpand("expand"), },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").inventory().post(null), } };
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .inventory()
+                        .post(com.commercetools.api.models.inventory.InventoryEntryDraft.of())
+                        .withExpand("expand"), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .inventory()
+                        .post(com.commercetools.api.models.inventory.InventoryEntryDraft.of()), } };
     }
 }

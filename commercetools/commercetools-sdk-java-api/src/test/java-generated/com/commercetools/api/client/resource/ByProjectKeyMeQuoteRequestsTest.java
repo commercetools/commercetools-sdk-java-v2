@@ -113,12 +113,14 @@ public class ByProjectKeyMeQuoteRequestsTest {
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .me()
                         .quoteRequests()
-                        .post(null)
+                        .post(com.commercetools.api.models.me.MyQuoteRequestDraft.of())
                         .withExpand("expand")
                         .createHttpRequest(), "post", "/test_projectKey/me/quote-requests?expand=expand", },
-                new Object[] {
-                        apiRoot.withProjectKey("test_projectKey").me().quoteRequests().post(null).createHttpRequest(),
-                        "post", "/test_projectKey/me/quote-requests", } };
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .me()
+                        .quoteRequests()
+                        .post(com.commercetools.api.models.me.MyQuoteRequestDraft.of())
+                        .createHttpRequest(), "post", "/test_projectKey/me/quote-requests", } };
     }
 
     @DataProvider
@@ -142,8 +144,11 @@ public class ByProjectKeyMeQuoteRequestsTest {
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .me()
                         .quoteRequests()
-                        .post(null)
+                        .post(com.commercetools.api.models.me.MyQuoteRequestDraft.of())
                         .withExpand("expand"), },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").me().quoteRequests().post(null), } };
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .me()
+                        .quoteRequests()
+                        .post(com.commercetools.api.models.me.MyQuoteRequestDraft.of()), } };
     }
 }

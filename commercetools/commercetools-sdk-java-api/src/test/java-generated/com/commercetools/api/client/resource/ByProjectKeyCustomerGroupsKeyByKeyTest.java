@@ -81,14 +81,14 @@ public class ByProjectKeyCustomerGroupsKeyByKeyTest {
                         apiRoot.withProjectKey("test_projectKey")
                                 .customerGroups()
                                 .withKey("test_key")
-                                .post(null)
+                                .post(com.commercetools.api.models.customer_group.CustomerGroupUpdate.of())
                                 .withExpand("expand")
                                 .createHttpRequest(),
                         "post", "/test_projectKey/customer-groups/key=test_key?expand=expand", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .customerGroups()
                         .withKey("test_key")
-                        .post(null)
+                        .post(com.commercetools.api.models.customer_group.CustomerGroupUpdate.of())
                         .createHttpRequest(), "post", "/test_projectKey/customer-groups/key=test_key", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
@@ -125,10 +125,12 @@ public class ByProjectKeyCustomerGroupsKeyByKeyTest {
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .customerGroups()
                         .withKey("test_key")
-                        .post(null)
+                        .post(com.commercetools.api.models.customer_group.CustomerGroupUpdate.of())
                         .withExpand("expand"), },
-                new Object[] {
-                        apiRoot.withProjectKey("test_projectKey").customerGroups().withKey("test_key").post(null), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .customerGroups()
+                        .withKey("test_key")
+                        .post(com.commercetools.api.models.customer_group.CustomerGroupUpdate.of()), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .customerGroups()
                         .withKey("test_key")

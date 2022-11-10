@@ -81,14 +81,14 @@ public class ByProjectKeyProductDiscountsByIDTest {
                         apiRoot.withProjectKey("test_projectKey")
                                 .productDiscounts()
                                 .withId("test_ID")
-                                .post(null)
+                                .post(com.commercetools.api.models.product_discount.ProductDiscountUpdate.of())
                                 .withExpand("expand")
                                 .createHttpRequest(),
                         "post", "/test_projectKey/product-discounts/test_ID?expand=expand", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .productDiscounts()
                         .withId("test_ID")
-                        .post(null)
+                        .post(com.commercetools.api.models.product_discount.ProductDiscountUpdate.of())
                         .createHttpRequest(), "post", "/test_projectKey/product-discounts/test_ID", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
@@ -125,10 +125,12 @@ public class ByProjectKeyProductDiscountsByIDTest {
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .productDiscounts()
                         .withId("test_ID")
-                        .post(null)
+                        .post(com.commercetools.api.models.product_discount.ProductDiscountUpdate.of())
                         .withExpand("expand"), },
-                new Object[] {
-                        apiRoot.withProjectKey("test_projectKey").productDiscounts().withId("test_ID").post(null), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .productDiscounts()
+                        .withId("test_ID")
+                        .post(com.commercetools.api.models.product_discount.ProductDiscountUpdate.of()), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .productDiscounts()
                         .withId("test_ID")

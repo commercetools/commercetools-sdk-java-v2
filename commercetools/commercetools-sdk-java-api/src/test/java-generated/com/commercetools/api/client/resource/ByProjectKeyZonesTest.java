@@ -89,11 +89,13 @@ public class ByProjectKeyZonesTest {
                         "/test_projectKey/zones", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .zones()
-                        .post(null)
+                        .post(com.commercetools.api.models.zone.ZoneDraft.of())
                         .withExpand("expand")
                         .createHttpRequest(), "post", "/test_projectKey/zones?expand=expand", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").zones().post(null).createHttpRequest(), "post",
-                        "/test_projectKey/zones", } };
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .zones()
+                        .post(com.commercetools.api.models.zone.ZoneDraft.of())
+                        .createHttpRequest(), "post", "/test_projectKey/zones", } };
     }
 
     @DataProvider
@@ -110,7 +112,12 @@ public class ByProjectKeyZonesTest {
                         .get()
                         .withPredicateVar("varName", "var.varName"), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey").zones().get(), },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").zones().post(null).withExpand("expand"), },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").zones().post(null), } };
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .zones()
+                        .post(com.commercetools.api.models.zone.ZoneDraft.of())
+                        .withExpand("expand"), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .zones()
+                        .post(com.commercetools.api.models.zone.ZoneDraft.of()), } };
     }
 }

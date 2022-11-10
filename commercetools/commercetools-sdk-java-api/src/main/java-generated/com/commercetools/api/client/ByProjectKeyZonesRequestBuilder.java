@@ -1,6 +1,8 @@
 
 package com.commercetools.api.client;
 
+import java.util.function.UnaryOperator;
+
 import io.vrap.rmf.base.client.ApiHttpClient;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -21,6 +23,10 @@ public class ByProjectKeyZonesRequestBuilder {
 
     public ByProjectKeyZonesPost post(com.commercetools.api.models.zone.ZoneDraft zoneDraft) {
         return new ByProjectKeyZonesPost(apiHttpClient, projectKey, zoneDraft);
+    }
+
+    public ByProjectKeyZonesPost post(UnaryOperator<com.commercetools.api.models.zone.ZoneDraftBuilder> op) {
+        return post(op.apply(com.commercetools.api.models.zone.ZoneDraftBuilder.of()).build());
     }
 
     public ByProjectKeyZonesKeyByKeyRequestBuilder withKey(String key) {

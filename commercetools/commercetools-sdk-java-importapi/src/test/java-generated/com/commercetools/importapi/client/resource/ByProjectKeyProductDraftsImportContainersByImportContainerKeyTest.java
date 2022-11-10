@@ -68,7 +68,7 @@ public class ByProjectKeyProductDraftsImportContainersByImportContainerKeyTest {
                         .productDrafts()
                         .importContainers()
                         .withImportContainerKeyValue("test_importContainerKey")
-                        .post(null)
+                        .post(com.commercetools.importapi.models.importrequests.ProductDraftImportRequest.of())
                         .createHttpRequest(),
                 "post", "/test_projectKey/product-drafts/import-containers/test_importContainerKey", } };
     }
@@ -79,6 +79,6 @@ public class ByProjectKeyProductDraftsImportContainersByImportContainerKeyTest {
                 .productDrafts()
                 .importContainers()
                 .withImportContainerKeyValue("test_importContainerKey")
-                .post(null), } };
+                .post(com.commercetools.importapi.models.importrequests.ProductDraftImportRequest.of()), } };
     }
 }

@@ -124,34 +124,36 @@ public class ByProjectKeyProductsTest {
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .products()
-                                .post(null)
+                                .post(com.commercetools.api.models.product.ProductDraft.of())
                                 .withPriceCurrency("priceCurrency")
                                 .createHttpRequest(),
                         "post", "/test_projectKey/products?priceCurrency=priceCurrency", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .products()
-                        .post(null)
+                        .post(com.commercetools.api.models.product.ProductDraft.of())
                         .withPriceCountry("priceCountry")
                         .createHttpRequest(), "post", "/test_projectKey/products?priceCountry=priceCountry", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .products()
-                                .post(null)
+                                .post(com.commercetools.api.models.product.ProductDraft.of())
                                 .withPriceCustomerGroup("priceCustomerGroup")
                                 .createHttpRequest(),
                         "post", "/test_projectKey/products?priceCustomerGroup=priceCustomerGroup", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .products()
-                        .post(null)
+                        .post(com.commercetools.api.models.product.ProductDraft.of())
                         .withPriceChannel("priceChannel")
                         .createHttpRequest(), "post", "/test_projectKey/products?priceChannel=priceChannel", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .products()
-                        .post(null)
+                        .post(com.commercetools.api.models.product.ProductDraft.of())
                         .withExpand("expand")
                         .createHttpRequest(), "post", "/test_projectKey/products?expand=expand", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").products().post(null).createHttpRequest(),
-                        "post", "/test_projectKey/products", } };
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .products()
+                        .post(com.commercetools.api.models.product.ProductDraft.of())
+                        .createHttpRequest(), "post", "/test_projectKey/products", } };
     }
 
     @DataProvider
@@ -184,21 +186,26 @@ public class ByProjectKeyProductsTest {
                 new Object[] { apiRoot.withProjectKey("test_projectKey").products().head(), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .products()
-                        .post(null)
+                        .post(com.commercetools.api.models.product.ProductDraft.of())
                         .withPriceCurrency("priceCurrency"), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .products()
-                        .post(null)
+                        .post(com.commercetools.api.models.product.ProductDraft.of())
                         .withPriceCountry("priceCountry"), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .products()
-                        .post(null)
+                        .post(com.commercetools.api.models.product.ProductDraft.of())
                         .withPriceCustomerGroup("priceCustomerGroup"), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .products()
-                        .post(null)
+                        .post(com.commercetools.api.models.product.ProductDraft.of())
                         .withPriceChannel("priceChannel"), },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").products().post(null).withExpand("expand"), },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").products().post(null), } };
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .products()
+                        .post(com.commercetools.api.models.product.ProductDraft.of())
+                        .withExpand("expand"), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .products()
+                        .post(com.commercetools.api.models.product.ProductDraft.of()), } };
     }
 }

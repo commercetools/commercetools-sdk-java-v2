@@ -83,13 +83,13 @@ public class ByProjectKeyProductTypesByIDTest {
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .productTypes()
                         .withId("test_ID")
-                        .post(null)
+                        .post(com.commercetools.api.models.product_type.ProductTypeUpdate.of())
                         .withExpand("expand")
                         .createHttpRequest(), "post", "/test_projectKey/product-types/test_ID?expand=expand", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .productTypes()
                         .withId("test_ID")
-                        .post(null)
+                        .post(com.commercetools.api.models.product_type.ProductTypeUpdate.of())
                         .createHttpRequest(), "post", "/test_projectKey/product-types/test_ID", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .productTypes()
@@ -125,9 +125,12 @@ public class ByProjectKeyProductTypesByIDTest {
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .productTypes()
                         .withId("test_ID")
-                        .post(null)
+                        .post(com.commercetools.api.models.product_type.ProductTypeUpdate.of())
                         .withExpand("expand"), },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").productTypes().withId("test_ID").post(null), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .productTypes()
+                        .withId("test_ID")
+                        .post(com.commercetools.api.models.product_type.ProductTypeUpdate.of()), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .productTypes()
                         .withId("test_ID")

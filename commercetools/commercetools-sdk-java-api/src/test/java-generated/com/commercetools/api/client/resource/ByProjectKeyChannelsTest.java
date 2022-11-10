@@ -94,11 +94,13 @@ public class ByProjectKeyChannelsTest {
                         "/test_projectKey/channels", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .channels()
-                        .post(null)
+                        .post(com.commercetools.api.models.channel.ChannelDraft.of())
                         .withExpand("expand")
                         .createHttpRequest(), "post", "/test_projectKey/channels?expand=expand", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").channels().post(null).createHttpRequest(),
-                        "post", "/test_projectKey/channels", } };
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .channels()
+                        .post(com.commercetools.api.models.channel.ChannelDraft.of())
+                        .createHttpRequest(), "post", "/test_projectKey/channels", } };
     }
 
     @DataProvider
@@ -115,7 +117,12 @@ public class ByProjectKeyChannelsTest {
                         .get()
                         .withPredicateVar("varName", "var.varName"), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey").channels().get(), },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").channels().post(null).withExpand("expand"), },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").channels().post(null), } };
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .channels()
+                        .post(com.commercetools.api.models.channel.ChannelDraft.of())
+                        .withExpand("expand"), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .channels()
+                        .post(com.commercetools.api.models.channel.ChannelDraft.of()), } };
     }
 }

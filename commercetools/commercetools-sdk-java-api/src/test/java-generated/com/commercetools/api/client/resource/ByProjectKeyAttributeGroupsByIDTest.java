@@ -81,14 +81,14 @@ public class ByProjectKeyAttributeGroupsByIDTest {
                         apiRoot.withProjectKey("test_projectKey")
                                 .attributeGroups()
                                 .withId("test_ID")
-                                .post(null)
+                                .post(com.commercetools.api.models.attribute_group.AttributeGroupUpdate.of())
                                 .withExpand("expand")
                                 .createHttpRequest(),
                         "post", "/test_projectKey/attribute-groups/test_ID?expand=expand", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .attributeGroups()
                         .withId("test_ID")
-                        .post(null)
+                        .post(com.commercetools.api.models.attribute_group.AttributeGroupUpdate.of())
                         .createHttpRequest(), "post", "/test_projectKey/attribute-groups/test_ID", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
@@ -125,10 +125,12 @@ public class ByProjectKeyAttributeGroupsByIDTest {
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .attributeGroups()
                         .withId("test_ID")
-                        .post(null)
+                        .post(com.commercetools.api.models.attribute_group.AttributeGroupUpdate.of())
                         .withExpand("expand"), },
-                new Object[] {
-                        apiRoot.withProjectKey("test_projectKey").attributeGroups().withId("test_ID").post(null), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .attributeGroups()
+                        .withId("test_ID")
+                        .post(com.commercetools.api.models.attribute_group.AttributeGroupUpdate.of()), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .attributeGroups()
                         .withId("test_ID")

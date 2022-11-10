@@ -1,6 +1,8 @@
 
 package com.commercetools.api.client;
 
+import java.util.function.UnaryOperator;
+
 import io.vrap.rmf.base.client.ApiHttpClient;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -21,6 +23,11 @@ public class ByProjectKeyOrdersEditsByIDApplyRequestBuilder {
     public ByProjectKeyOrdersEditsByIDApplyPost post(
             com.commercetools.api.models.order_edit.OrderEditApply orderEditApply) {
         return new ByProjectKeyOrdersEditsByIDApplyPost(apiHttpClient, projectKey, ID, orderEditApply);
+    }
+
+    public ByProjectKeyOrdersEditsByIDApplyPost post(
+            UnaryOperator<com.commercetools.api.models.order_edit.OrderEditApplyBuilder> op) {
+        return post(op.apply(com.commercetools.api.models.order_edit.OrderEditApplyBuilder.of()).build());
     }
 
 }

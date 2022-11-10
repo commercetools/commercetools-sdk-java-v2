@@ -76,13 +76,13 @@ public class ByProjectKeyZonesByIDTest {
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .zones()
                         .withId("test_ID")
-                        .post(null)
+                        .post(com.commercetools.api.models.zone.ZoneUpdate.of())
                         .withExpand("expand")
                         .createHttpRequest(), "post", "/test_projectKey/zones/test_ID?expand=expand", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .zones()
                         .withId("test_ID")
-                        .post(null)
+                        .post(com.commercetools.api.models.zone.ZoneUpdate.of())
                         .createHttpRequest(), "post", "/test_projectKey/zones/test_ID", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .zones()
@@ -111,9 +111,12 @@ public class ByProjectKeyZonesByIDTest {
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .zones()
                         .withId("test_ID")
-                        .post(null)
+                        .post(com.commercetools.api.models.zone.ZoneUpdate.of())
                         .withExpand("expand"), },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").zones().withId("test_ID").post(null), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .zones()
+                        .withId("test_ID")
+                        .post(com.commercetools.api.models.zone.ZoneUpdate.of()), },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey").zones().withId("test_ID").delete().withVersion(2), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")

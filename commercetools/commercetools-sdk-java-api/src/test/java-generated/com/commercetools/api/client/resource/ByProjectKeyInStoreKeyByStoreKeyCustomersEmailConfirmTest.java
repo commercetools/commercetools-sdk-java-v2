@@ -68,7 +68,7 @@ public class ByProjectKeyInStoreKeyByStoreKeyCustomersEmailConfirmTest {
                         .inStoreKeyWithStoreKeyValue("test_storeKey")
                         .customers()
                         .emailConfirm()
-                        .post(null)
+                        .post(com.commercetools.api.models.customer.CustomerEmailVerify.of())
                         .createHttpRequest(),
                 "post", "/test_projectKey/in-store/key=test_storeKey/customers/email/confirm", } };
     }
@@ -79,6 +79,6 @@ public class ByProjectKeyInStoreKeyByStoreKeyCustomersEmailConfirmTest {
                 .inStoreKeyWithStoreKeyValue("test_storeKey")
                 .customers()
                 .emailConfirm()
-                .post(null), } };
+                .post(com.commercetools.api.models.customer.CustomerEmailVerify.of()), } };
     }
 }

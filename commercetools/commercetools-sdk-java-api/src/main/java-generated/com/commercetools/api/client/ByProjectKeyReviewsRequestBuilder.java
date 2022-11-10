@@ -1,6 +1,8 @@
 
 package com.commercetools.api.client;
 
+import java.util.function.UnaryOperator;
+
 import io.vrap.rmf.base.client.ApiHttpClient;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -21,6 +23,10 @@ public class ByProjectKeyReviewsRequestBuilder {
 
     public ByProjectKeyReviewsPost post(com.commercetools.api.models.review.ReviewDraft reviewDraft) {
         return new ByProjectKeyReviewsPost(apiHttpClient, projectKey, reviewDraft);
+    }
+
+    public ByProjectKeyReviewsPost post(UnaryOperator<com.commercetools.api.models.review.ReviewDraftBuilder> op) {
+        return post(op.apply(com.commercetools.api.models.review.ReviewDraftBuilder.of()).build());
     }
 
     public ByProjectKeyReviewsKeyByKeyRequestBuilder withKey(String key) {

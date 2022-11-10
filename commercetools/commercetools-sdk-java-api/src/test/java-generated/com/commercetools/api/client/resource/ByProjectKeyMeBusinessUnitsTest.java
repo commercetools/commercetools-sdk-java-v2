@@ -113,12 +113,14 @@ public class ByProjectKeyMeBusinessUnitsTest {
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .me()
                         .businessUnits()
-                        .post(null)
+                        .post(com.commercetools.api.models.me.MyCompanyDraft.of())
                         .withExpand("expand")
                         .createHttpRequest(), "post", "/test_projectKey/me/business-units?expand=expand", },
-                new Object[] {
-                        apiRoot.withProjectKey("test_projectKey").me().businessUnits().post(null).createHttpRequest(),
-                        "post", "/test_projectKey/me/business-units", } };
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .me()
+                        .businessUnits()
+                        .post(com.commercetools.api.models.me.MyCompanyDraft.of())
+                        .createHttpRequest(), "post", "/test_projectKey/me/business-units", } };
     }
 
     @DataProvider
@@ -142,8 +144,11 @@ public class ByProjectKeyMeBusinessUnitsTest {
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .me()
                         .businessUnits()
-                        .post(null)
+                        .post(com.commercetools.api.models.me.MyCompanyDraft.of())
                         .withExpand("expand"), },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").me().businessUnits().post(null), } };
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .me()
+                        .businessUnits()
+                        .post(com.commercetools.api.models.me.MyCompanyDraft.of()), } };
     }
 }

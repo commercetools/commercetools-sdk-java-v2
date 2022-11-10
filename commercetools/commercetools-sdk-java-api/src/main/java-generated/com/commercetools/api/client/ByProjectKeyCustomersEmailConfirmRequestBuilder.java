@@ -1,6 +1,8 @@
 
 package com.commercetools.api.client;
 
+import java.util.function.UnaryOperator;
+
 import io.vrap.rmf.base.client.ApiHttpClient;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -18,6 +20,11 @@ public class ByProjectKeyCustomersEmailConfirmRequestBuilder {
     public ByProjectKeyCustomersEmailConfirmPost post(
             com.commercetools.api.models.customer.CustomerEmailVerify customerEmailVerify) {
         return new ByProjectKeyCustomersEmailConfirmPost(apiHttpClient, projectKey, customerEmailVerify);
+    }
+
+    public ByProjectKeyCustomersEmailConfirmPost post(
+            UnaryOperator<com.commercetools.api.models.customer.CustomerEmailVerifyBuilder> op) {
+        return post(op.apply(com.commercetools.api.models.customer.CustomerEmailVerifyBuilder.of()).build());
     }
 
 }

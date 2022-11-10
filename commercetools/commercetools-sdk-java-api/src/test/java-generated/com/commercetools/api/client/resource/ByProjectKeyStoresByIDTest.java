@@ -76,13 +76,13 @@ public class ByProjectKeyStoresByIDTest {
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .stores()
                         .withId("test_ID")
-                        .post(null)
+                        .post(com.commercetools.api.models.store.StoreUpdate.of())
                         .withExpand("expand")
                         .createHttpRequest(), "post", "/test_projectKey/stores/test_ID?expand=expand", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .stores()
                         .withId("test_ID")
-                        .post(null)
+                        .post(com.commercetools.api.models.store.StoreUpdate.of())
                         .createHttpRequest(), "post", "/test_projectKey/stores/test_ID", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .stores()
@@ -111,9 +111,12 @@ public class ByProjectKeyStoresByIDTest {
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .stores()
                         .withId("test_ID")
-                        .post(null)
+                        .post(com.commercetools.api.models.store.StoreUpdate.of())
                         .withExpand("expand"), },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").stores().withId("test_ID").post(null), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .stores()
+                        .withId("test_ID")
+                        .post(com.commercetools.api.models.store.StoreUpdate.of()), },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey").stores().withId("test_ID").delete().withVersion(2), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")

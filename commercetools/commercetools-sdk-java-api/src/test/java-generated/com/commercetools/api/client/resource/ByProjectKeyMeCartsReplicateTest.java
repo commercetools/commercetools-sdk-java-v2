@@ -63,14 +63,20 @@ public class ByProjectKeyMeCartsReplicateTest {
 
     @DataProvider
     public static Object[][] requestWithMethodParameters() {
-        return new Object[][] { new Object[] {
-                apiRoot.withProjectKey("test_projectKey").me().carts().replicate().post(null).createHttpRequest(),
-                "post", "/test_projectKey/me/carts/replicate", } };
+        return new Object[][] { new Object[] { apiRoot.withProjectKey("test_projectKey")
+                .me()
+                .carts()
+                .replicate()
+                .post(com.commercetools.api.models.me.ReplicaMyCartDraft.of())
+                .createHttpRequest(), "post", "/test_projectKey/me/carts/replicate", } };
     }
 
     @DataProvider
     public static Object[][] executeMethodParameters() {
-        return new Object[][] {
-                new Object[] { apiRoot.withProjectKey("test_projectKey").me().carts().replicate().post(null), } };
+        return new Object[][] { new Object[] { apiRoot.withProjectKey("test_projectKey")
+                .me()
+                .carts()
+                .replicate()
+                .post(com.commercetools.api.models.me.ReplicaMyCartDraft.of()), } };
     }
 }

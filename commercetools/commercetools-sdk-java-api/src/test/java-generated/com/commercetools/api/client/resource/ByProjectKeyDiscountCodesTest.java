@@ -105,11 +105,13 @@ public class ByProjectKeyDiscountCodesTest {
                         "get", "/test_projectKey/discount-codes", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .discountCodes()
-                        .post(null)
+                        .post(com.commercetools.api.models.discount_code.DiscountCodeDraft.of())
                         .withExpand("expand")
                         .createHttpRequest(), "post", "/test_projectKey/discount-codes?expand=expand", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").discountCodes().post(null).createHttpRequest(),
-                        "post", "/test_projectKey/discount-codes", } };
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .discountCodes()
+                        .post(com.commercetools.api.models.discount_code.DiscountCodeDraft.of())
+                        .createHttpRequest(), "post", "/test_projectKey/discount-codes", } };
     }
 
     @DataProvider
@@ -126,8 +128,12 @@ public class ByProjectKeyDiscountCodesTest {
                         .get()
                         .withPredicateVar("varName", "var.varName"), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey").discountCodes().get(), },
-                new Object[] {
-                        apiRoot.withProjectKey("test_projectKey").discountCodes().post(null).withExpand("expand"), },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").discountCodes().post(null), } };
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .discountCodes()
+                        .post(com.commercetools.api.models.discount_code.DiscountCodeDraft.of())
+                        .withExpand("expand"), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .discountCodes()
+                        .post(com.commercetools.api.models.discount_code.DiscountCodeDraft.of()), } };
     }
 }

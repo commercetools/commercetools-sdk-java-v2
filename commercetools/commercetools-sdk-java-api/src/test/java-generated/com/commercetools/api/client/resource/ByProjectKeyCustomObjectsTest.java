@@ -105,11 +105,13 @@ public class ByProjectKeyCustomObjectsTest {
                         "get", "/test_projectKey/custom-objects", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .customObjects()
-                        .post(null)
+                        .post(com.commercetools.api.models.custom_object.CustomObjectDraft.of())
                         .withExpand("expand")
                         .createHttpRequest(), "post", "/test_projectKey/custom-objects?expand=expand", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").customObjects().post(null).createHttpRequest(),
-                        "post", "/test_projectKey/custom-objects", } };
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .customObjects()
+                        .post(com.commercetools.api.models.custom_object.CustomObjectDraft.of())
+                        .createHttpRequest(), "post", "/test_projectKey/custom-objects", } };
     }
 
     @DataProvider
@@ -126,8 +128,12 @@ public class ByProjectKeyCustomObjectsTest {
                         .get()
                         .withPredicateVar("varName", "var.varName"), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey").customObjects().get(), },
-                new Object[] {
-                        apiRoot.withProjectKey("test_projectKey").customObjects().post(null).withExpand("expand"), },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").customObjects().post(null), } };
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .customObjects()
+                        .post(com.commercetools.api.models.custom_object.CustomObjectDraft.of())
+                        .withExpand("expand"), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .customObjects()
+                        .post(com.commercetools.api.models.custom_object.CustomObjectDraft.of()), } };
     }
 }

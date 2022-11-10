@@ -68,7 +68,7 @@ public class ByProjectKeyInBusinessUnitKeyByBusinessUnitKeyMeCustomersTest {
                         .inBusinessUnitKeyWithBusinessUnitKeyValue("test_businessUnitKey")
                         .me()
                         .customers()
-                        .post(null)
+                        .post(com.commercetools.api.models.me.MyBusinessUnitAssociateDraft.of())
                         .createHttpRequest(),
                 "post", "/test_projectKey/in-business-unit/key=test_businessUnitKey/me/customers", } };
     }
@@ -79,6 +79,6 @@ public class ByProjectKeyInBusinessUnitKeyByBusinessUnitKeyMeCustomersTest {
                 .inBusinessUnitKeyWithBusinessUnitKeyValue("test_businessUnitKey")
                 .me()
                 .customers()
-                .post(null), } };
+                .post(com.commercetools.api.models.me.MyBusinessUnitAssociateDraft.of()), } };
     }
 }

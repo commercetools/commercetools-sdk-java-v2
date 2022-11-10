@@ -1,6 +1,8 @@
 
 package com.commercetools.api.client;
 
+import java.util.function.UnaryOperator;
+
 import io.vrap.rmf.base.client.ApiHttpClient;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,6 +19,10 @@ public class ByProjectKeyGraphqlRequestBuilder {
 
     public ByProjectKeyGraphqlPost post(com.commercetools.api.models.graph_ql.GraphQLRequest graphQLRequest) {
         return new ByProjectKeyGraphqlPost(apiHttpClient, projectKey, graphQLRequest);
+    }
+
+    public ByProjectKeyGraphqlPost post(UnaryOperator<com.commercetools.api.models.graph_ql.GraphQLRequestBuilder> op) {
+        return post(op.apply(com.commercetools.api.models.graph_ql.GraphQLRequestBuilder.of()).build());
     }
 
 }

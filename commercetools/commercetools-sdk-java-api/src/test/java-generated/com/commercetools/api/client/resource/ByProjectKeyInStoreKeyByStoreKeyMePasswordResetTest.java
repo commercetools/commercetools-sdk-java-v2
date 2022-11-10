@@ -69,7 +69,7 @@ public class ByProjectKeyInStoreKeyByStoreKeyMePasswordResetTest {
                         .me()
                         .password()
                         .reset()
-                        .post(null)
+                        .post(com.commercetools.api.models.customer.MyCustomerResetPassword.of())
                         .createHttpRequest(),
                 "post", "/test_projectKey/in-store/key=test_storeKey/me/password/reset", } };
     }
@@ -81,6 +81,6 @@ public class ByProjectKeyInStoreKeyByStoreKeyMePasswordResetTest {
                 .me()
                 .password()
                 .reset()
-                .post(null), } };
+                .post(com.commercetools.api.models.customer.MyCustomerResetPassword.of()), } };
     }
 }

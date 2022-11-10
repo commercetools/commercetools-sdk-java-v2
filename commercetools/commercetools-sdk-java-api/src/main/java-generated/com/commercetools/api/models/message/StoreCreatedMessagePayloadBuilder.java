@@ -32,6 +32,9 @@ public class StoreCreatedMessagePayloadBuilder implements Builder<StoreCreatedMe
     @Nullable
     private java.util.List<String> languages;
 
+    @Nullable
+    private java.util.List<com.commercetools.api.models.store_country.StoreCountry> countries;
+
     private java.util.List<com.commercetools.api.models.channel.ChannelReference> distributionChannels;
 
     private java.util.List<com.commercetools.api.models.channel.ChannelReference> supplyChannels;
@@ -88,6 +91,63 @@ public class StoreCreatedMessagePayloadBuilder implements Builder<StoreCreatedMe
             this.languages = new ArrayList<>();
         }
         this.languages.addAll(Arrays.asList(languages));
+        return this;
+    }
+
+    /**
+     *  <p>Countries of the Store that was created.</p>
+     */
+
+    public StoreCreatedMessagePayloadBuilder countries(
+            @Nullable final com.commercetools.api.models.store_country.StoreCountry... countries) {
+        this.countries = new ArrayList<>(Arrays.asList(countries));
+        return this;
+    }
+
+    /**
+     *  <p>Countries of the Store that was created.</p>
+     */
+
+    public StoreCreatedMessagePayloadBuilder countries(
+            @Nullable final java.util.List<com.commercetools.api.models.store_country.StoreCountry> countries) {
+        this.countries = countries;
+        return this;
+    }
+
+    /**
+     *  <p>Countries of the Store that was created.</p>
+     */
+
+    public StoreCreatedMessagePayloadBuilder plusCountries(
+            @Nullable final com.commercetools.api.models.store_country.StoreCountry... countries) {
+        if (this.countries == null) {
+            this.countries = new ArrayList<>();
+        }
+        this.countries.addAll(Arrays.asList(countries));
+        return this;
+    }
+
+    /**
+     *  <p>Countries of the Store that was created.</p>
+     */
+
+    public StoreCreatedMessagePayloadBuilder plusCountries(
+            Function<com.commercetools.api.models.store_country.StoreCountryBuilder, com.commercetools.api.models.store_country.StoreCountryBuilder> builder) {
+        if (this.countries == null) {
+            this.countries = new ArrayList<>();
+        }
+        this.countries.add(builder.apply(com.commercetools.api.models.store_country.StoreCountryBuilder.of()).build());
+        return this;
+    }
+
+    /**
+     *  <p>Countries of the Store that was created.</p>
+     */
+
+    public StoreCreatedMessagePayloadBuilder withCountries(
+            Function<com.commercetools.api.models.store_country.StoreCountryBuilder, com.commercetools.api.models.store_country.StoreCountryBuilder> builder) {
+        this.countries = new ArrayList<>();
+        this.countries.add(builder.apply(com.commercetools.api.models.store_country.StoreCountryBuilder.of()).build());
         return this;
     }
 
@@ -298,6 +358,11 @@ public class StoreCreatedMessagePayloadBuilder implements Builder<StoreCreatedMe
         return this.languages;
     }
 
+    @Nullable
+    public java.util.List<com.commercetools.api.models.store_country.StoreCountry> getCountries() {
+        return this.countries;
+    }
+
     public java.util.List<com.commercetools.api.models.channel.ChannelReference> getDistributionChannels() {
         return this.distributionChannels;
     }
@@ -320,7 +385,7 @@ public class StoreCreatedMessagePayloadBuilder implements Builder<StoreCreatedMe
             StoreCreatedMessagePayload.class + ": distributionChannels is missing");
         Objects.requireNonNull(supplyChannels, StoreCreatedMessagePayload.class + ": supplyChannels is missing");
         Objects.requireNonNull(productSelections, StoreCreatedMessagePayload.class + ": productSelections is missing");
-        return new StoreCreatedMessagePayloadImpl(name, languages, distributionChannels, supplyChannels,
+        return new StoreCreatedMessagePayloadImpl(name, languages, countries, distributionChannels, supplyChannels,
             productSelections, custom);
     }
 
@@ -328,7 +393,7 @@ public class StoreCreatedMessagePayloadBuilder implements Builder<StoreCreatedMe
      * builds StoreCreatedMessagePayload without checking for non null required values
      */
     public StoreCreatedMessagePayload buildUnchecked() {
-        return new StoreCreatedMessagePayloadImpl(name, languages, distributionChannels, supplyChannels,
+        return new StoreCreatedMessagePayloadImpl(name, languages, countries, distributionChannels, supplyChannels,
             productSelections, custom);
     }
 
@@ -340,6 +405,7 @@ public class StoreCreatedMessagePayloadBuilder implements Builder<StoreCreatedMe
         StoreCreatedMessagePayloadBuilder builder = new StoreCreatedMessagePayloadBuilder();
         builder.name = template.getName();
         builder.languages = template.getLanguages();
+        builder.countries = template.getCountries();
         builder.distributionChannels = template.getDistributionChannels();
         builder.supplyChannels = template.getSupplyChannels();
         builder.productSelections = template.getProductSelections();

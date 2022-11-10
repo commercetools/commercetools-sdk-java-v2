@@ -15,10 +15,10 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Generated after a successful Create Store request.</p>
+ *  <p>Generated after a successful Add Country, Remove Country, or Set Countries update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-public class StoreCreatedMessageImpl implements StoreCreatedMessage, ModelBase {
+public class StoreCountriesChangedMessageImpl implements StoreCountriesChangedMessage, ModelBase {
 
     private String id;
 
@@ -42,22 +42,12 @@ public class StoreCreatedMessageImpl implements StoreCreatedMessage, ModelBase {
 
     private com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers;
 
-    private com.commercetools.api.models.common.LocalizedString name;
+    private java.util.List<com.commercetools.api.models.store_country.StoreCountry> addedCountries;
 
-    private java.util.List<String> languages;
-
-    private java.util.List<com.commercetools.api.models.store_country.StoreCountry> countries;
-
-    private java.util.List<com.commercetools.api.models.channel.ChannelReference> distributionChannels;
-
-    private java.util.List<com.commercetools.api.models.channel.ChannelReference> supplyChannels;
-
-    private java.util.List<com.commercetools.api.models.store.ProductSelectionSetting> productSelections;
-
-    private com.commercetools.api.models.type.CustomFields custom;
+    private java.util.List<com.commercetools.api.models.store_country.StoreCountry> removedCountries;
 
     @JsonCreator
-    StoreCreatedMessageImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version,
+    StoreCountriesChangedMessageImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version,
             @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt,
             @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt,
             @JsonProperty("lastModifiedBy") final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy,
@@ -66,13 +56,8 @@ public class StoreCreatedMessageImpl implements StoreCreatedMessage, ModelBase {
             @JsonProperty("resource") final com.commercetools.api.models.common.Reference resource,
             @JsonProperty("resourceVersion") final Long resourceVersion,
             @JsonProperty("resourceUserProvidedIdentifiers") final com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers,
-            @JsonProperty("name") final com.commercetools.api.models.common.LocalizedString name,
-            @JsonProperty("languages") final java.util.List<String> languages,
-            @JsonProperty("countries") final java.util.List<com.commercetools.api.models.store_country.StoreCountry> countries,
-            @JsonProperty("distributionChannels") final java.util.List<com.commercetools.api.models.channel.ChannelReference> distributionChannels,
-            @JsonProperty("supplyChannels") final java.util.List<com.commercetools.api.models.channel.ChannelReference> supplyChannels,
-            @JsonProperty("productSelections") final java.util.List<com.commercetools.api.models.store.ProductSelectionSetting> productSelections,
-            @JsonProperty("custom") final com.commercetools.api.models.type.CustomFields custom) {
+            @JsonProperty("addedCountries") final java.util.List<com.commercetools.api.models.store_country.StoreCountry> addedCountries,
+            @JsonProperty("removedCountries") final java.util.List<com.commercetools.api.models.store_country.StoreCountry> removedCountries) {
         this.id = id;
         this.version = version;
         this.createdAt = createdAt;
@@ -83,18 +68,13 @@ public class StoreCreatedMessageImpl implements StoreCreatedMessage, ModelBase {
         this.resource = resource;
         this.resourceVersion = resourceVersion;
         this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
-        this.name = name;
-        this.languages = languages;
-        this.countries = countries;
-        this.distributionChannels = distributionChannels;
-        this.supplyChannels = supplyChannels;
-        this.productSelections = productSelections;
-        this.custom = custom;
-        this.type = STORE_CREATED;
+        this.addedCountries = addedCountries;
+        this.removedCountries = removedCountries;
+        this.type = STORE_COUNTRIES_CHANGED;
     }
 
-    public StoreCreatedMessageImpl() {
-        this.type = STORE_CREATED;
+    public StoreCountriesChangedMessageImpl() {
+        this.type = STORE_COUNTRIES_CHANGED;
     }
 
     /**
@@ -186,59 +166,19 @@ public class StoreCreatedMessageImpl implements StoreCreatedMessage, ModelBase {
     }
 
     /**
-     *  <p>The <code>name</code> of the Store that was created.</p>
+     *  <p>Countries added to the Store.</p>
      */
 
-    public com.commercetools.api.models.common.LocalizedString getName() {
-        return this.name;
+    public java.util.List<com.commercetools.api.models.store_country.StoreCountry> getAddedCountries() {
+        return this.addedCountries;
     }
 
     /**
-     *  <p>Languages of the Store that was created. Languages are represented as IETF language tags.</p>
+     *  <p>Countries removed from the Store.</p>
      */
 
-    public java.util.List<String> getLanguages() {
-        return this.languages;
-    }
-
-    /**
-     *  <p>Countries of the Store that was created.</p>
-     */
-
-    public java.util.List<com.commercetools.api.models.store_country.StoreCountry> getCountries() {
-        return this.countries;
-    }
-
-    /**
-     *  <p>Distribution Channels of the Store that was created.</p>
-     */
-
-    public java.util.List<com.commercetools.api.models.channel.ChannelReference> getDistributionChannels() {
-        return this.distributionChannels;
-    }
-
-    /**
-     *  <p>Supply Channels of the Store that was created.</p>
-     */
-
-    public java.util.List<com.commercetools.api.models.channel.ChannelReference> getSupplyChannels() {
-        return this.supplyChannels;
-    }
-
-    /**
-     *  <p>ProductSelectionSettings of the Store that was created.</p>
-     */
-
-    public java.util.List<com.commercetools.api.models.store.ProductSelectionSetting> getProductSelections() {
-        return this.productSelections;
-    }
-
-    /**
-     *  <p>Custom Fields on the Store that was created.</p>
-     */
-
-    public com.commercetools.api.models.type.CustomFields getCustom() {
-        return this.custom;
+    public java.util.List<com.commercetools.api.models.store_country.StoreCountry> getRemovedCountries() {
+        return this.removedCountries;
     }
 
     public void setId(final String id) {
@@ -282,57 +222,22 @@ public class StoreCreatedMessageImpl implements StoreCreatedMessage, ModelBase {
         this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
     }
 
-    public void setName(final com.commercetools.api.models.common.LocalizedString name) {
-        this.name = name;
+    public void setAddedCountries(final com.commercetools.api.models.store_country.StoreCountry... addedCountries) {
+        this.addedCountries = new ArrayList<>(Arrays.asList(addedCountries));
     }
 
-    public void setLanguages(final String... languages) {
-        this.languages = new ArrayList<>(Arrays.asList(languages));
+    public void setAddedCountries(
+            final java.util.List<com.commercetools.api.models.store_country.StoreCountry> addedCountries) {
+        this.addedCountries = addedCountries;
     }
 
-    public void setLanguages(final java.util.List<String> languages) {
-        this.languages = languages;
+    public void setRemovedCountries(final com.commercetools.api.models.store_country.StoreCountry... removedCountries) {
+        this.removedCountries = new ArrayList<>(Arrays.asList(removedCountries));
     }
 
-    public void setCountries(final com.commercetools.api.models.store_country.StoreCountry... countries) {
-        this.countries = new ArrayList<>(Arrays.asList(countries));
-    }
-
-    public void setCountries(final java.util.List<com.commercetools.api.models.store_country.StoreCountry> countries) {
-        this.countries = countries;
-    }
-
-    public void setDistributionChannels(
-            final com.commercetools.api.models.channel.ChannelReference... distributionChannels) {
-        this.distributionChannels = new ArrayList<>(Arrays.asList(distributionChannels));
-    }
-
-    public void setDistributionChannels(
-            final java.util.List<com.commercetools.api.models.channel.ChannelReference> distributionChannels) {
-        this.distributionChannels = distributionChannels;
-    }
-
-    public void setSupplyChannels(final com.commercetools.api.models.channel.ChannelReference... supplyChannels) {
-        this.supplyChannels = new ArrayList<>(Arrays.asList(supplyChannels));
-    }
-
-    public void setSupplyChannels(
-            final java.util.List<com.commercetools.api.models.channel.ChannelReference> supplyChannels) {
-        this.supplyChannels = supplyChannels;
-    }
-
-    public void setProductSelections(
-            final com.commercetools.api.models.store.ProductSelectionSetting... productSelections) {
-        this.productSelections = new ArrayList<>(Arrays.asList(productSelections));
-    }
-
-    public void setProductSelections(
-            final java.util.List<com.commercetools.api.models.store.ProductSelectionSetting> productSelections) {
-        this.productSelections = productSelections;
-    }
-
-    public void setCustom(final com.commercetools.api.models.type.CustomFields custom) {
-        this.custom = custom;
+    public void setRemovedCountries(
+            final java.util.List<com.commercetools.api.models.store_country.StoreCountry> removedCountries) {
+        this.removedCountries = removedCountries;
     }
 
     @Override
@@ -343,7 +248,7 @@ public class StoreCreatedMessageImpl implements StoreCreatedMessage, ModelBase {
         if (o == null || getClass() != o.getClass())
             return false;
 
-        StoreCreatedMessageImpl that = (StoreCreatedMessageImpl) o;
+        StoreCountriesChangedMessageImpl that = (StoreCountriesChangedMessageImpl) o;
 
         return new EqualsBuilder().append(id, that.id)
                 .append(version, that.version)
@@ -356,13 +261,8 @@ public class StoreCreatedMessageImpl implements StoreCreatedMessage, ModelBase {
                 .append(resourceVersion, that.resourceVersion)
                 .append(type, that.type)
                 .append(resourceUserProvidedIdentifiers, that.resourceUserProvidedIdentifiers)
-                .append(name, that.name)
-                .append(languages, that.languages)
-                .append(countries, that.countries)
-                .append(distributionChannels, that.distributionChannels)
-                .append(supplyChannels, that.supplyChannels)
-                .append(productSelections, that.productSelections)
-                .append(custom, that.custom)
+                .append(addedCountries, that.addedCountries)
+                .append(removedCountries, that.removedCountries)
                 .isEquals();
     }
 
@@ -379,13 +279,8 @@ public class StoreCreatedMessageImpl implements StoreCreatedMessage, ModelBase {
                 .append(resourceVersion)
                 .append(type)
                 .append(resourceUserProvidedIdentifiers)
-                .append(name)
-                .append(languages)
-                .append(countries)
-                .append(distributionChannels)
-                .append(supplyChannels)
-                .append(productSelections)
-                .append(custom)
+                .append(addedCountries)
+                .append(removedCountries)
                 .toHashCode();
     }
 

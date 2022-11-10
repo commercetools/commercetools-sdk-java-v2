@@ -11,6 +11,7 @@ import javax.validation.constraints.NotNull;
 import com.commercetools.api.models.channel.ChannelReference;
 import com.commercetools.api.models.common.LocalizedString;
 import com.commercetools.api.models.store.ProductSelectionSetting;
+import com.commercetools.api.models.store_country.StoreCountry;
 import com.commercetools.api.models.type.CustomFields;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
@@ -60,6 +61,13 @@ public interface StoreCreatedMessage extends Message {
     public List<String> getLanguages();
 
     /**
+     *  <p>Countries of the Store that was created.</p>
+     */
+    @Valid
+    @JsonProperty("countries")
+    public List<StoreCountry> getCountries();
+
+    /**
      *  <p>Distribution Channels of the Store that was created.</p>
      */
     @NotNull
@@ -98,6 +106,11 @@ public interface StoreCreatedMessage extends Message {
     public void setLanguages(final List<String> languages);
 
     @JsonIgnore
+    public void setCountries(final StoreCountry... countries);
+
+    public void setCountries(final List<StoreCountry> countries);
+
+    @JsonIgnore
     public void setDistributionChannels(final ChannelReference... distributionChannels);
 
     public void setDistributionChannels(final List<ChannelReference> distributionChannels);
@@ -132,6 +145,7 @@ public interface StoreCreatedMessage extends Message {
         instance.setResourceUserProvidedIdentifiers(template.getResourceUserProvidedIdentifiers());
         instance.setName(template.getName());
         instance.setLanguages(template.getLanguages());
+        instance.setCountries(template.getCountries());
         instance.setDistributionChannels(template.getDistributionChannels());
         instance.setSupplyChannels(template.getSupplyChannels());
         instance.setProductSelections(template.getProductSelections());

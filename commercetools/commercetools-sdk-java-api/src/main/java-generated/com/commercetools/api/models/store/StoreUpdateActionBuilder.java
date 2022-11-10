@@ -11,6 +11,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StoreUpdateActionBuilder {
 
+    public com.commercetools.api.models.store.StoreAddCountryActionBuilder addCountryBuilder() {
+        return com.commercetools.api.models.store.StoreAddCountryActionBuilder.of();
+    }
+
     public com.commercetools.api.models.store.StoreAddDistributionChannelActionBuilder addDistributionChannelBuilder() {
         return com.commercetools.api.models.store.StoreAddDistributionChannelActionBuilder.of();
     }
@@ -27,6 +31,10 @@ public class StoreUpdateActionBuilder {
         return com.commercetools.api.models.store.StoreChangeProductSelectionActionBuilder.of();
     }
 
+    public com.commercetools.api.models.store.StoreRemoveCountryActionBuilder removeCountryBuilder() {
+        return com.commercetools.api.models.store.StoreRemoveCountryActionBuilder.of();
+    }
+
     public com.commercetools.api.models.store.StoreRemoveDistributionChannelActionBuilder removeDistributionChannelBuilder() {
         return com.commercetools.api.models.store.StoreRemoveDistributionChannelActionBuilder.of();
     }
@@ -37,6 +45,10 @@ public class StoreUpdateActionBuilder {
 
     public com.commercetools.api.models.store.StoreRemoveSupplyChannelActionBuilder removeSupplyChannelBuilder() {
         return com.commercetools.api.models.store.StoreRemoveSupplyChannelActionBuilder.of();
+    }
+
+    public com.commercetools.api.models.store.StoreSetCountriesActionBuilder setCountriesBuilder() {
+        return com.commercetools.api.models.store.StoreSetCountriesActionBuilder.of();
     }
 
     public com.commercetools.api.models.store.StoreSetCustomFieldActionBuilder setCustomFieldBuilder() {

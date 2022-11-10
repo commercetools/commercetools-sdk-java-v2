@@ -547,6 +547,10 @@ public class MessagePayloadBuilder {
         return com.commercetools.api.models.message.StandalonePriceValueChangedMessagePayloadBuilder.of();
     }
 
+    public com.commercetools.api.models.message.StoreCountriesChangedMessagePayloadBuilder storeCountriesChangedBuilder() {
+        return com.commercetools.api.models.message.StoreCountriesChangedMessagePayloadBuilder.of();
+    }
+
     public com.commercetools.api.models.message.StoreCreatedMessagePayloadBuilder storeCreatedBuilder() {
         return com.commercetools.api.models.message.StoreCreatedMessagePayloadBuilder.of();
     }

@@ -14,6 +14,7 @@ import com.commercetools.api.models.common.BaseResource;
 import com.commercetools.api.models.common.CreatedBy;
 import com.commercetools.api.models.common.LastModifiedBy;
 import com.commercetools.api.models.common.LocalizedString;
+import com.commercetools.api.models.store_country.StoreCountry;
 import com.commercetools.api.models.type.CustomFields;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
@@ -34,6 +35,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .lastModifiedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
  *             .key("{key}")
  *             .plusLanguages(languagesBuilder -> languagesBuilder)
+ *             .plusCountries(countriesBuilder -> countriesBuilder)
  *             .plusDistributionChannels(distributionChannelsBuilder -> distributionChannelsBuilder)
  *             .plusSupplyChannels(supplyChannelsBuilder -> supplyChannelsBuilder)
  *             .plusProductSelections(productSelectionsBuilder -> productSelectionsBuilder)
@@ -111,6 +113,14 @@ public interface Store extends BaseResource, com.commercetools.api.models.Domain
     public List<String> getLanguages();
 
     /**
+     *  <p>Countries defined for the Store.</p>
+     */
+    @NotNull
+    @Valid
+    @JsonProperty("countries")
+    public List<StoreCountry> getCountries();
+
+    /**
      *  <p>Product Distribution Channels allowed for the Store.</p>
      */
     @NotNull
@@ -167,6 +177,11 @@ public interface Store extends BaseResource, com.commercetools.api.models.Domain
     public void setLanguages(final List<String> languages);
 
     @JsonIgnore
+    public void setCountries(final StoreCountry... countries);
+
+    public void setCountries(final List<StoreCountry> countries);
+
+    @JsonIgnore
     public void setDistributionChannels(final ChannelReference... distributionChannels);
 
     public void setDistributionChannels(final List<ChannelReference> distributionChannels);
@@ -198,6 +213,7 @@ public interface Store extends BaseResource, com.commercetools.api.models.Domain
         instance.setKey(template.getKey());
         instance.setName(template.getName());
         instance.setLanguages(template.getLanguages());
+        instance.setCountries(template.getCountries());
         instance.setDistributionChannels(template.getDistributionChannels());
         instance.setSupplyChannels(template.getSupplyChannels());
         instance.setProductSelections(template.getProductSelections());

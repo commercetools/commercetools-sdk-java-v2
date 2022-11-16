@@ -75,6 +75,7 @@ dependencies {
 * `commercetools-okhttp-client3`: uses OkHttp client 3.0
 * `commercetools-okhttp-client4`: uses OkHttp client 4.0
 * `commercetools-apachehttp-client`: uses Apache HTTP async client 5.1
+* `commercetools-asynchttp-client`: uses Async HTTP client 2.12
 * `commercetools-sdk-java-api`: models and request builders for the product API
 * `commercetools-sdk-java-importapi`: models and request builders for the import API
 * `commercetools-sdk-java-ml`: models and request builders for the machine learning API

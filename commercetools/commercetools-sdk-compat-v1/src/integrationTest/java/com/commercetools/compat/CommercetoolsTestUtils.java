@@ -8,6 +8,7 @@ import com.commercetools.api.defaultconfig.ApiRootBuilder;
 import com.commercetools.api.defaultconfig.ServiceRegion;
 import com.commercetools.api.models.common.LocalizedString;
 import com.commercetools.api.models.common.LocalizedStringImpl;
+import com.commercetools.http.netty.CtNettyHttpClient;
 
 import io.vrap.rmf.base.client.ApiHttpClient;
 import io.vrap.rmf.base.client.oauth2.ClientCredentials;
@@ -19,7 +20,7 @@ public class CommercetoolsTestUtils {
 
     static {
         String logLevel = System.getenv("CTP_JVM_SDK_LOG_LEVEL");
-        ApiRootBuilder builder = ApiRootBuilder.of()
+        ApiRootBuilder builder = ApiRootBuilder.of(new CtNettyHttpClient())
                 .defaultClient(
                     ClientCredentials.of().withClientId(getClientId()).withClientSecret(getClientSecret()).build(),
                     ServiceRegion.GCP_EUROPE_WEST1);

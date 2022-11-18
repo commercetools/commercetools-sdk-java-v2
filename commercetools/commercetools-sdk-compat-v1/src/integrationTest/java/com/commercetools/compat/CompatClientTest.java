@@ -86,15 +86,13 @@ public class CompatClientTest {
 
     @Test
     public void compatClientWithApiRootCategories() {
-        ApiRoot root = ApiRoot.fromClient(
+        ProjectApiRoot root = ProjectApiRoot.fromClient(CommercetoolsTestUtils.getProjectKey(),
             CompatClient.of(CommercetoolsTestUtils.getClient(), CommercetoolsTestUtils.getProjectKey()));
 
-        CategoryPagedQueryResponse response = root.withProjectKey(CommercetoolsTestUtils.getProjectKey())
-                .categories()
-                .get()
-                .executeBlocking()
-                .getBody();
+        CategoryPagedQueryResponse response = root.categories().get().executeBlocking().getBody();
         Assertions.assertThat(response).isInstanceOf(CategoryPagedQueryResponse.class);
+
+        root.products().head().executeBlocking();
     }
 
     public void compatBuilder() {

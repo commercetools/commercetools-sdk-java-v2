@@ -7,6 +7,9 @@
             "moduleLicense": "MIT License"
         },
         {
+            "moduleLicense": "MIT-0"
+        },
+        {
             "moduleLicense": "CDDL + GPLv2 with classpath exception",
             "moduleName": "javax.annotation:javax.annotation-api"
         },

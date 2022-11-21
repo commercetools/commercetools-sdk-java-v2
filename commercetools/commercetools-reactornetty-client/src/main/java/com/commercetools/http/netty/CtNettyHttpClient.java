@@ -34,17 +34,24 @@ public class CtNettyHttpClient extends HttpClientBase {
     private static final byte[] EMPTY_BYTES = new byte[0];
 
     private final HttpClient nettyClient;
-    private final Supplier<HttpClient> clientSupplier = CtNettyHttpClient::createDefaultClient;
 
     public CtNettyHttpClient() {
+        this(MAX_REQUESTS);
+    }
+
+    public CtNettyHttpClient(int maxConnections) {
         super();
-        this.nettyClient = clientSupplier.get();
+        this.nettyClient = createDefaultClient(maxConnections);
         this.nettyClient.warmup();
     }
 
     public CtNettyHttpClient(final BuilderOptions options) {
+        this(MAX_REQUESTS, options);
+    }
+
+    public CtNettyHttpClient(int maxConnections, final BuilderOptions options) {
         super();
-        this.nettyClient = options.plus(clientSupplier.get());
+        this.nettyClient = options.plus(createDefaultClient(maxConnections));
         this.nettyClient.warmup();
     }
 
@@ -55,14 +62,22 @@ public class CtNettyHttpClient extends HttpClientBase {
     }
 
     public CtNettyHttpClient(final ExecutorService executor) {
+        this(executor, MAX_REQUESTS);
+    }
+
+    public CtNettyHttpClient(final ExecutorService executor, final int maxConnections) {
         super(executor);
-        this.nettyClient = clientSupplier.get();
+        this.nettyClient = createDefaultClient(maxConnections);
         this.nettyClient.warmup();
     }
 
     public CtNettyHttpClient(final ExecutorService executor, final BuilderOptions options) {
+        this(executor, MAX_REQUESTS, options);
+    }
+
+    public CtNettyHttpClient(final ExecutorService executor, final int maxConnections, final BuilderOptions options) {
         super(executor);
-        this.nettyClient = options.plus(clientSupplier.get());
+        this.nettyClient = options.plus(createDefaultClient(maxConnections));
         this.nettyClient.warmup();
     }
 
@@ -72,8 +87,8 @@ public class CtNettyHttpClient extends HttpClientBase {
         this.nettyClient.warmup();
     }
 
-    public static HttpClient createDefaultClient() {
-        return HttpClient.create(ConnectionProvider.create("commercetools", MAX_REQUESTS))
+    public static HttpClient createDefaultClient(final int maxConnections) {
+        return HttpClient.create(ConnectionProvider.create("commercetools", maxConnections))
                 .secure()
                 .compress(true)
                 .resolver(DefaultAddressResolverGroup.INSTANCE)

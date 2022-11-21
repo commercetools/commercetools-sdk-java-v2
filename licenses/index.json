@@ -324,8 +324,47 @@
             ]
         },
         {
+            "moduleName": "io.netty:netty-buffer",
+            "moduleVersion": "4.1.84.Final",
+            "moduleUrls": [
+                "https://netty.io/"
+            ],
+            "moduleLicenses": [
+                {
+                    "moduleLicense": "Apache License, Version 2.0",
+                    "moduleLicenseUrl": "https://www.apache.org/licenses/LICENSE-2.0"
+                }
+            ]
+        },
+        {
             "moduleName": "io.netty:netty-codec",
             "moduleVersion": "4.1.60.Final",
+            "moduleUrls": [
+                "https://netty.io/"
+            ],
+            "moduleLicenses": [
+                {
+                    "moduleLicense": "Apache License, Version 2.0",
+                    "moduleLicenseUrl": "https://www.apache.org/licenses/LICENSE-2.0"
+                }
+            ]
+        },
+        {
+            "moduleName": "io.netty:netty-codec",
+            "moduleVersion": "4.1.84.Final",
+            "moduleUrls": [
+                "https://netty.io/"
+            ],
+            "moduleLicenses": [
+                {
+                    "moduleLicense": "Apache License, Version 2.0",
+                    "moduleLicenseUrl": "https://www.apache.org/licenses/LICENSE-2.0"
+                }
+            ]
+        },
+        {
+            "moduleName": "io.netty:netty-codec-dns",
+            "moduleVersion": "4.1.84.Final",
             "moduleUrls": [
                 "https://netty.io/"
             ],
@@ -350,8 +389,47 @@
             ]
         },
         {
+            "moduleName": "io.netty:netty-codec-http",
+            "moduleVersion": "4.1.84.Final",
+            "moduleUrls": [
+                "https://netty.io/"
+            ],
+            "moduleLicenses": [
+                {
+                    "moduleLicense": "Apache License, Version 2.0",
+                    "moduleLicenseUrl": "https://www.apache.org/licenses/LICENSE-2.0"
+                }
+            ]
+        },
+        {
+            "moduleName": "io.netty:netty-codec-http2",
+            "moduleVersion": "4.1.84.Final",
+            "moduleUrls": [
+                "https://netty.io/"
+            ],
+            "moduleLicenses": [
+                {
+                    "moduleLicense": "Apache License, Version 2.0",
+                    "moduleLicenseUrl": "https://www.apache.org/licenses/LICENSE-2.0"
+                }
+            ]
+        },
+        {
             "moduleName": "io.netty:netty-codec-socks",
             "moduleVersion": "4.1.60.Final",
+            "moduleUrls": [
+                "https://netty.io/"
+            ],
+            "moduleLicenses": [
+                {
+                    "moduleLicense": "Apache License, Version 2.0",
+                    "moduleLicenseUrl": "https://www.apache.org/licenses/LICENSE-2.0"
+                }
+            ]
+        },
+        {
+            "moduleName": "io.netty:netty-codec-socks",
+            "moduleVersion": "4.1.84.Final",
             "moduleUrls": [
                 "https://netty.io/"
             ],
@@ -376,8 +454,34 @@
             ]
         },
         {
+            "moduleName": "io.netty:netty-common",
+            "moduleVersion": "4.1.84.Final",
+            "moduleUrls": [
+                "https://netty.io/"
+            ],
+            "moduleLicenses": [
+                {
+                    "moduleLicense": "Apache License, Version 2.0",
+                    "moduleLicenseUrl": "https://www.apache.org/licenses/LICENSE-2.0"
+                }
+            ]
+        },
+        {
             "moduleName": "io.netty:netty-handler",
             "moduleVersion": "4.1.60.Final",
+            "moduleUrls": [
+                "https://netty.io/"
+            ],
+            "moduleLicenses": [
+                {
+                    "moduleLicense": "Apache License, Version 2.0",
+                    "moduleLicenseUrl": "https://www.apache.org/licenses/LICENSE-2.0"
+                }
+            ]
+        },
+        {
+            "moduleName": "io.netty:netty-handler",
+            "moduleVersion": "4.1.84.Final",
             "moduleUrls": [
                 "https://netty.io/"
             ],
@@ -402,8 +506,73 @@
             ]
         },
         {
+            "moduleName": "io.netty:netty-handler-proxy",
+            "moduleVersion": "4.1.84.Final",
+            "moduleUrls": [
+                "https://netty.io/"
+            ],
+            "moduleLicenses": [
+                {
+                    "moduleLicense": "Apache License, Version 2.0",
+                    "moduleLicenseUrl": "https://www.apache.org/licenses/LICENSE-2.0"
+                }
+            ]
+        },
+        {
             "moduleName": "io.netty:netty-resolver",
             "moduleVersion": "4.1.60.Final",
+            "moduleUrls": [
+                "https://netty.io/"
+            ],
+            "moduleLicenses": [
+                {
+                    "moduleLicense": "Apache License, Version 2.0",
+                    "moduleLicenseUrl": "https://www.apache.org/licenses/LICENSE-2.0"
+                }
+            ]
+        },
+        {
+            "moduleName": "io.netty:netty-resolver",
+            "moduleVersion": "4.1.84.Final",
+            "moduleUrls": [
+                "https://netty.io/"
+            ],
+            "moduleLicenses": [
+                {
+                    "moduleLicense": "Apache License, Version 2.0",
+                    "moduleLicenseUrl": "https://www.apache.org/licenses/LICENSE-2.0"
+                }
+            ]
+        },
+        {
+            "moduleName": "io.netty:netty-resolver-dns",
+            "moduleVersion": "4.1.84.Final",
+            "moduleUrls": [
+                "https://netty.io/"
+            ],
+            "moduleLicenses": [
+                {
+                    "moduleLicense": "Apache License, Version 2.0",
+                    "moduleLicenseUrl": "https://www.apache.org/licenses/LICENSE-2.0"
+                }
+            ]
+        },
+        {
+            "moduleName": "io.netty:netty-resolver-dns-classes-macos",
+            "moduleVersion": "4.1.84.Final",
+            "moduleUrls": [
+                "https://netty.io/"
+            ],
+            "moduleLicenses": [
+                {
+                    "moduleLicense": "Apache License, Version 2.0",
+                    "moduleLicenseUrl": "https://www.apache.org/licenses/LICENSE-2.0"
+                }
+            ]
+        },
+        {
+            "moduleName": "io.netty:netty-resolver-dns-native-macos",
+            "moduleVersion": "4.1.84.Final",
             "moduleUrls": [
                 "https://netty.io/"
             ],
@@ -428,8 +597,47 @@
             ]
         },
         {
+            "moduleName": "io.netty:netty-transport",
+            "moduleVersion": "4.1.84.Final",
+            "moduleUrls": [
+                "https://netty.io/"
+            ],
+            "moduleLicenses": [
+                {
+                    "moduleLicense": "Apache License, Version 2.0",
+                    "moduleLicenseUrl": "https://www.apache.org/licenses/LICENSE-2.0"
+                }
+            ]
+        },
+        {
+            "moduleName": "io.netty:netty-transport-classes-epoll",
+            "moduleVersion": "4.1.84.Final",
+            "moduleUrls": [
+                "https://netty.io/"
+            ],
+            "moduleLicenses": [
+                {
+                    "moduleLicense": "Apache License, Version 2.0",
+                    "moduleLicenseUrl": "https://www.apache.org/licenses/LICENSE-2.0"
+                }
+            ]
+        },
+        {
             "moduleName": "io.netty:netty-transport-native-epoll",
             "moduleVersion": "4.1.60.Final",
+            "moduleUrls": [
+                "https://netty.io/"
+            ],
+            "moduleLicenses": [
+                {
+                    "moduleLicense": "Apache License, Version 2.0",
+                    "moduleLicenseUrl": "https://www.apache.org/licenses/LICENSE-2.0"
+                }
+            ]
+        },
+        {
+            "moduleName": "io.netty:netty-transport-native-epoll",
+            "moduleVersion": "4.1.84.Final",
             "moduleUrls": [
                 "https://netty.io/"
             ],
@@ -458,6 +666,58 @@
             "moduleVersion": "4.1.60.Final",
             "moduleUrls": [
                 "https://netty.io/"
+            ],
+            "moduleLicenses": [
+                {
+                    "moduleLicense": "Apache License, Version 2.0",
+                    "moduleLicenseUrl": "https://www.apache.org/licenses/LICENSE-2.0"
+                }
+            ]
+        },
+        {
+            "moduleName": "io.netty:netty-transport-native-unix-common",
+            "moduleVersion": "4.1.84.Final",
+            "moduleUrls": [
+                "https://netty.io/"
+            ],
+            "moduleLicenses": [
+                {
+                    "moduleLicense": "Apache License, Version 2.0",
+                    "moduleLicenseUrl": "https://www.apache.org/licenses/LICENSE-2.0"
+                }
+            ]
+        },
+        {
+            "moduleName": "io.projectreactor.netty:reactor-netty-core",
+            "moduleVersion": "1.1.0",
+            "moduleUrls": [
+                "https://github.com/reactor/reactor-netty"
+            ],
+            "moduleLicenses": [
+                {
+                    "moduleLicense": "Apache License, Version 2.0",
+                    "moduleLicenseUrl": "https://www.apache.org/licenses/LICENSE-2.0"
+                }
+            ]
+        },
+        {
+            "moduleName": "io.projectreactor.netty:reactor-netty-http",
+            "moduleVersion": "1.1.0",
+            "moduleUrls": [
+                "https://github.com/reactor/reactor-netty"
+            ],
+            "moduleLicenses": [
+                {
+                    "moduleLicense": "Apache License, Version 2.0",
+                    "moduleLicenseUrl": "https://www.apache.org/licenses/LICENSE-2.0"
+                }
+            ]
+        },
+        {
+            "moduleName": "io.projectreactor:reactor-core",
+            "moduleVersion": "3.5.0",
+            "moduleUrls": [
+                "https://github.com/reactor/reactor-core"
             ],
             "moduleLicenses": [
                 {
@@ -773,6 +1033,20 @@
                 {
                     "moduleLicense": "Creative Commons Legal Code",
                     "moduleLicenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/legalcode"
+                }
+            ]
+        },
+        {
+            "moduleName": "org.reactivestreams:reactive-streams",
+            "moduleVersion": "1.0.4",
+            "moduleUrls": [
+                "http://reactive-streams.org",
+                "http://www.reactive-streams.org/"
+            ],
+            "moduleLicenses": [
+                {
+                    "moduleLicense": "MIT-0",
+                    "moduleLicenseUrl": "https://spdx.org/licenses/MIT-0.html"
                 }
             ]
         },

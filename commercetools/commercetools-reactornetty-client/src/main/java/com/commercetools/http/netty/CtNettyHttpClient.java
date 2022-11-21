@@ -26,9 +26,11 @@ import reactor.netty.NettyOutbound;
 import reactor.netty.http.client.HttpClient;
 import reactor.netty.http.client.HttpClientRequest;
 import reactor.netty.http.client.HttpClientResponse;
+import reactor.netty.resources.ConnectionProvider;
 
 public class CtNettyHttpClient extends HttpClientBase {
 
+    public static final int MAX_REQUESTS = 64;
     private static final byte[] EMPTY_BYTES = new byte[0];
 
     private final HttpClient nettyClient;
@@ -71,7 +73,7 @@ public class CtNettyHttpClient extends HttpClientBase {
     }
 
     public static HttpClient createDefaultClient() {
-        return HttpClient.create()
+        return HttpClient.create(ConnectionProvider.create("commercetools", MAX_REQUESTS))
                 .secure()
                 .compress(true)
                 .resolver(DefaultAddressResolverGroup.INSTANCE)

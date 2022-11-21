@@ -91,8 +91,6 @@ public class CompatClientTest {
 
         CategoryPagedQueryResponse response = root.categories().get().executeBlocking().getBody();
         Assertions.assertThat(response).isInstanceOf(CategoryPagedQueryResponse.class);
-
-        root.products().head().executeBlocking();
     }
 
     public void compatBuilder() {

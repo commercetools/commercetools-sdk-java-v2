@@ -15,7 +15,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Adds a Product to the Product Selection. If the given Product is already assigned to the Product Selection with the same Variant Selection nothing happens but if the existing Assignment has a different Variant Selection ProductPresentWithDifferentVariantSelection is raised.'</p>
+ *  <p>Adds a Product to the Product Selection.</p>
+ *  <p>If the specified Product is already assigned to the Product Selection, but the existing Product Selection has a different Product Variant Selection, a ProductPresentWithDifferentVariantSelection error is returned.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductSelectionAddProductActionImpl implements ProductSelectionAddProductAction, ModelBase {

@@ -5,13 +5,15 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.validation.constraints.NotNull;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * NotEnabledError
+ *  <p>Returned when the Project-specific category recommendations feature is not enabled for the Project.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -28,6 +30,22 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface NotEnabledError extends ErrorObject {
 
     String NOT_ENABLED = "NotEnabled";
+
+    /**
+     *
+     */
+    @NotNull
+    @JsonProperty("code")
+    public String getCode();
+
+    /**
+     *  <p><code>"The category recommendations API is not yet enabled for your project."</code></p>
+     */
+    @NotNull
+    @JsonProperty("message")
+    public String getMessage();
+
+    public void setMessage(final String message);
 
     public static NotEnabledError of() {
         return new NotEnabledErrorImpl();

@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * DuplicateFieldWithConflictingResourceError
+ *  <p>Returned when a field value conflicts with an existing value stored in a particular resource causing a duplicate.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class DuplicateFieldWithConflictingResourceErrorImpl
@@ -60,7 +60,7 @@ public class DuplicateFieldWithConflictingResourceErrorImpl
     }
 
     /**
-     *
+     *  <p><code>"A duplicate value $duplicateValue exists for field $field on $conflictingResource."</code></p>
      */
 
     public String getMessage() {
@@ -68,7 +68,7 @@ public class DuplicateFieldWithConflictingResourceErrorImpl
     }
 
     /**
-     *
+     *  <p>Error-specific additional fields.</p>
      */
 
     public Map<String, java.lang.Object> values() {
@@ -76,7 +76,7 @@ public class DuplicateFieldWithConflictingResourceErrorImpl
     }
 
     /**
-     *
+     *  <p>Name of the conflicting field.</p>
      */
 
     public String getField() {
@@ -84,7 +84,7 @@ public class DuplicateFieldWithConflictingResourceErrorImpl
     }
 
     /**
-     *
+     *  <p>Conflicting duplicate value.</p>
      */
 
     public java.lang.Object getDuplicateValue() {
@@ -92,7 +92,7 @@ public class DuplicateFieldWithConflictingResourceErrorImpl
     }
 
     /**
-     *  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
+     *  <p>Reference to the resource that has the conflicting value.</p>
      */
 
     public com.commercetools.api.models.common.Reference getConflictingResource() {

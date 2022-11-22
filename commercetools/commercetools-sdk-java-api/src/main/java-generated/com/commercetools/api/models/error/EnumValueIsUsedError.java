@@ -5,13 +5,16 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.validation.constraints.NotNull;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * EnumValueIsUsedError
+ *  <p>Returned when an enum value cannot be removed from an Attribute as it is being used by a Product.</p>
+ *  <p>The error is returned as a failed response to the Remove EnumValues from AttributeDefinition update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -28,6 +31,22 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface EnumValueIsUsedError extends ErrorObject {
 
     String ENUM_VALUE_IS_USED = "EnumValueIsUsed";
+
+    /**
+     *
+     */
+    @NotNull
+    @JsonProperty("code")
+    public String getCode();
+
+    /**
+     *  <p><code>"$enumKeysTranscript is used by some products and cannot be deleted because the $attributeName attribute is required."</code></p>
+     */
+    @NotNull
+    @JsonProperty("message")
+    public String getMessage();
+
+    public void setMessage(final String message);
 
     public static EnumValueIsUsedError of() {
         return new EnumValueIsUsedErrorImpl();

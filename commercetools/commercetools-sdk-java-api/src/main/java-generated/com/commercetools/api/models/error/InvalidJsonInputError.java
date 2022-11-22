@@ -5,13 +5,16 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.validation.constraints.NotNull;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * InvalidJsonInputError
+ *  <p>Returned when an invalid JSON input has been sent. Either the JSON is syntactically incorrect or does not conform to the expected shape (for example is missing a required field).</p>
+ *  <p>The client application should validate the input according to the constraints described in the error message before sending the request.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -19,6 +22,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     InvalidJsonInputError invalidJsonInputError = InvalidJsonInputError.builder()
  *             .message("{message}")
+ *             .detailedErrorMessage("{detailedErrorMessage}")
  *             .build()
  * </code></pre>
  * </div>
@@ -29,6 +33,31 @@ public interface InvalidJsonInputError extends ErrorObject {
 
     String INVALID_JSON_INPUT = "InvalidJsonInput";
 
+    /**
+     *
+     */
+    @NotNull
+    @JsonProperty("code")
+    public String getCode();
+
+    /**
+     *  <p><code>"Request body does not contain valid JSON."</code></p>
+     */
+    @NotNull
+    @JsonProperty("message")
+    public String getMessage();
+
+    /**
+     *  <p>Further explanation about why the JSON is invalid.</p>
+     */
+    @NotNull
+    @JsonProperty("detailedErrorMessage")
+    public String getDetailedErrorMessage();
+
+    public void setMessage(final String message);
+
+    public void setDetailedErrorMessage(final String detailedErrorMessage);
+
     public static InvalidJsonInputError of() {
         return new InvalidJsonInputErrorImpl();
     }
@@ -37,6 +66,7 @@ public interface InvalidJsonInputError extends ErrorObject {
         InvalidJsonInputErrorImpl instance = new InvalidJsonInputErrorImpl();
         instance.setMessage(template.getMessage());
 
+        instance.setDetailedErrorMessage(template.getDetailedErrorMessage());
         return instance;
     }
 

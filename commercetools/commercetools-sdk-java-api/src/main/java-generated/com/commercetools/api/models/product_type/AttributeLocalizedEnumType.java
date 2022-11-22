@@ -14,7 +14,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * AttributeLocalizedEnumType
+ *  <p>Attribute type for localized enum values. Useful for predefined language-specific values selectable in drop-down menus if only one value can be selected. Use AttributeSetType of AttributeLocalizedEnumValue instead if multiple values can be selected.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

@@ -5,13 +5,15 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.validation.constraints.NotNull;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * SearchFacetPathNotFoundError
+ *  <p>Returned when a search facet path could not be found.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -28,6 +30,22 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface SearchFacetPathNotFoundError extends ErrorObject {
 
     String SEARCH_FACET_PATH_NOT_FOUND = "SearchFacetPathNotFound";
+
+    /**
+     *
+     */
+    @NotNull
+    @JsonProperty("code")
+    public String getCode();
+
+    /**
+     *  <p><code>"Facet path $path not found."</code></p>
+     */
+    @NotNull
+    @JsonProperty("message")
+    public String getMessage();
+
+    public void setMessage(final String message);
 
     public static SearchFacetPathNotFoundError of() {
         return new SearchFacetPathNotFoundErrorImpl();

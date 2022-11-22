@@ -18,7 +18,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>You can use the product projections query endpoint to get the current or staged representations of Products. When used with an API client that has the view_published_products:{projectKey} scope, this endpoint only returns published (current) product projections.</p>
+ *  <p>Use the Product Projections query endpoint to get the current or staged representations of Products. When used with an API Client that has the <code>view_published_products:{projectKey}</code> scope, this endpoint only returns published (current) Product Projections.</p>
  *
  * <hr>
  * <div class=code-example>
@@ -36,6 +36,7 @@ public class ByProjectKeyProductProjectionsGet extends
         ApiMethod<ByProjectKeyProductProjectionsGet, com.commercetools.api.models.product.ProductProjectionPagedQueryResponse>
         implements
         com.commercetools.api.models.PagedQueryResourceRequest<ByProjectKeyProductProjectionsGet, com.commercetools.api.models.product.ProductProjectionPagedQueryResponse>,
+        com.commercetools.api.client.ProjectionselectingTrait<ByProjectKeyProductProjectionsGet>,
         com.commercetools.api.client.PriceselectingTrait<ByProjectKeyProductProjectionsGet>,
         com.commercetools.api.client.LocaleprojectingTrait<ByProjectKeyProductProjectionsGet>,
         com.commercetools.api.client.StoreprojectingTrait<ByProjectKeyProductProjectionsGet>,

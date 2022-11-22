@@ -44,7 +44,7 @@ public class ShoppingListSetCustomerActionImpl implements ShoppingListSetCustome
     }
 
     /**
-     *
+     *  <p>The Customer the ShoppingList should be associated to. If empty, any existing value will be removed.</p>
      */
 
     public com.commercetools.api.models.customer.CustomerResourceIdentifier getCustomer() {

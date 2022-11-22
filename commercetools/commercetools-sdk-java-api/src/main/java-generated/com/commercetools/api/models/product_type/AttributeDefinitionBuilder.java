@@ -145,7 +145,7 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
 
     /**
      *  <p>If <code>true</code>, the Attribute's values are available for the Product Projections Search API for use in full-text search queries, filters, and facets.</p>
-     *  <p>Which exact features are available with this flag depends on the specific AttributeType. The maximum size of a searchable field is <strong>restricted</strong> by the Field content size limit. This constraint is enforced at both Product creation and Product update. If the length of the input exceeds the maximum size, an InvalidFieldError is returned.</p>
+     *  <p>Which exact features are available with this flag depends on the specific AttributeType. The maximum size of a searchable field is <strong>restricted</strong> by the Field content size limit. This constraint is enforced at both Product creation and Product update. If the length of the input exceeds the maximum size, an InvalidField error is returned.</p>
      */
 
     public AttributeDefinitionBuilder isSearchable(final Boolean isSearchable) {

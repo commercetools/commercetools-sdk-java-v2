@@ -26,7 +26,7 @@ public class NoMatchingProductDiscountFoundErrorBuilder implements Builder<NoMat
     private Map<String, java.lang.Object> values = new HashMap<>();
 
     /**
-     *
+     *  <p><code>"Couldn't find a matching product discount for: productId=$productId, variantId=$variantId, price=$price."</code></p>
      */
 
     public NoMatchingProductDiscountFoundErrorBuilder message(final String message) {
@@ -35,7 +35,7 @@ public class NoMatchingProductDiscountFoundErrorBuilder implements Builder<NoMat
     }
 
     /**
-     *
+     *  <p>Error-specific additional fields.</p>
      */
 
     public NoMatchingProductDiscountFoundErrorBuilder values(final Map<String, java.lang.Object> values) {
@@ -44,7 +44,7 @@ public class NoMatchingProductDiscountFoundErrorBuilder implements Builder<NoMat
     }
 
     /**
-     *
+     *  <p>Error-specific additional fields.</p>
      */
 
     public NoMatchingProductDiscountFoundErrorBuilder addValue(final String key, final java.lang.Object value) {

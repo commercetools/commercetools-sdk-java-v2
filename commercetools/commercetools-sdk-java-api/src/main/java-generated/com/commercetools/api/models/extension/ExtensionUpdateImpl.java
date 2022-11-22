@@ -35,7 +35,7 @@ public class ExtensionUpdateImpl implements ExtensionUpdate, ModelBase {
     }
 
     /**
-     *  <p>Expected version of the Extension on which the changes should be applied. If the expected version does not match the actual version, a 409 Conflict will be returned.</p>
+     *  <p>Expected version of the Extension on which the changes should be applied. If the expected version does not match the actual version, a ConcurrentModification error is returned.</p>
      */
 
     public Long getVersion() {

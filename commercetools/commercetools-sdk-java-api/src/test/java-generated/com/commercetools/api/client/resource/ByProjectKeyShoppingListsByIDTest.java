@@ -93,6 +93,14 @@ public class ByProjectKeyShoppingListsByIDTest {
                                 .shoppingLists()
                                 .withId("test_ID")
                                 .delete()
+                                .withExpand("expand")
+                                .createHttpRequest(),
+                        "delete", "/test_projectKey/shopping-lists/test_ID?expand=expand", },
+                new Object[] {
+                        apiRoot.withProjectKey("test_projectKey")
+                                .shoppingLists()
+                                .withId("test_ID")
+                                .delete()
                                 .withDataErasure(true)
                                 .createHttpRequest(),
                         "delete", "/test_projectKey/shopping-lists/test_ID?dataErasure=true", },
@@ -102,14 +110,6 @@ public class ByProjectKeyShoppingListsByIDTest {
                         .delete()
                         .withVersion(2)
                         .createHttpRequest(), "delete", "/test_projectKey/shopping-lists/test_ID?version=2", },
-                new Object[] {
-                        apiRoot.withProjectKey("test_projectKey")
-                                .shoppingLists()
-                                .withId("test_ID")
-                                .delete()
-                                .withExpand("expand")
-                                .createHttpRequest(),
-                        "delete", "/test_projectKey/shopping-lists/test_ID?expand=expand", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .shoppingLists()
                         .withId("test_ID")
@@ -139,17 +139,17 @@ public class ByProjectKeyShoppingListsByIDTest {
                         .shoppingLists()
                         .withId("test_ID")
                         .delete()
+                        .withExpand("expand"), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .shoppingLists()
+                        .withId("test_ID")
+                        .delete()
                         .withDataErasure(true), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .shoppingLists()
                         .withId("test_ID")
                         .delete()
                         .withVersion(2), },
-                new Object[] { apiRoot.withProjectKey("test_projectKey")
-                        .shoppingLists()
-                        .withId("test_ID")
-                        .delete()
-                        .withExpand("expand"), },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey").shoppingLists().withId("test_ID").delete(), } };
     }

@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>If an entry with the same <code>sku</code> and <code>supplyChannel</code> already exists, this action will fail and a 400 Bad Request <code>DuplicateField</code> error will be returned.</p>
+ *  <p>If an entry with the same <code>sku</code> and <code>supplyChannel</code> already exists, an DuplicateField error is returned.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class InventoryEntrySetSupplyChannelActionImpl implements InventoryEntrySetSupplyChannelAction, ModelBase {

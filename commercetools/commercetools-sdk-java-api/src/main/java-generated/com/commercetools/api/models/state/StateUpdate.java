@@ -33,7 +33,7 @@ public interface StateUpdate
         extends com.commercetools.api.models.ResourceUpdate<StateUpdate, StateUpdateAction, StateUpdateBuilder> {
 
     /**
-     *  <p>Expected version of the State on which the changes should be applied. If the expected version does not match the actual version, a 409 Conflict will be returned.</p>
+     *  <p>Expected version of the State on which the changes should be applied. If the expected version does not match the actual version, a ConcurrentModification error is returned.</p>
      */
     @NotNull
     @JsonProperty("version")

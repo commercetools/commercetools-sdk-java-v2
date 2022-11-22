@@ -5,13 +5,16 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.validation.constraints.NotNull;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * EnumValuesMustMatchError
+ *  <p>Returned when during an order update of AttributeEnumType or AttributeLocalizedEnumType the new enum values do not match the existing ones.</p>
+ *  <p>The error is returned as a failed response to the Change the order of EnumValues and Change the order of LocalizedEnumValues update actions.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -28,6 +31,22 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface EnumValuesMustMatchError extends ErrorObject {
 
     String ENUM_VALUES_MUST_MATCH = "EnumValuesMustMatch";
+
+    /**
+     *
+     */
+    @NotNull
+    @JsonProperty("code")
+    public String getCode();
+
+    /**
+     *  <p><code>"The given values must be equal to the existing enum values."</code></p>
+     */
+    @NotNull
+    @JsonProperty("message")
+    public String getMessage();
+
+    public void setMessage(final String message);
 
     public static EnumValuesMustMatchError of() {
         return new EnumValuesMustMatchErrorImpl();

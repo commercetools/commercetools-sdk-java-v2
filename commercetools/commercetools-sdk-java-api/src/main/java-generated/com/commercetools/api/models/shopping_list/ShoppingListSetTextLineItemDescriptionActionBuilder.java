@@ -31,7 +31,7 @@ public class ShoppingListSetTextLineItemDescriptionActionBuilder
     private com.commercetools.api.models.common.LocalizedString description;
 
     /**
-     *
+     *  <p>The <code>id</code> of the TextLineItem to update.</p>
      */
 
     public ShoppingListSetTextLineItemDescriptionActionBuilder textLineItemId(final String textLineItemId) {
@@ -40,7 +40,7 @@ public class ShoppingListSetTextLineItemDescriptionActionBuilder
     }
 
     /**
-     *  <p>JSON object where the keys are of type Locale, and the values are the strings used for the corresponding language.</p>
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
      */
 
     public ShoppingListSetTextLineItemDescriptionActionBuilder description(
@@ -50,7 +50,7 @@ public class ShoppingListSetTextLineItemDescriptionActionBuilder
     }
 
     /**
-     *  <p>JSON object where the keys are of type Locale, and the values are the strings used for the corresponding language.</p>
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
      */
 
     public ShoppingListSetTextLineItemDescriptionActionBuilder description(

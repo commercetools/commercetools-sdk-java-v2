@@ -35,7 +35,7 @@ public class MissingRoleOnChannelErrorBuilder implements Builder<MissingRoleOnCh
     private com.commercetools.api.models.channel.ChannelRoleEnum missingRole;
 
     /**
-     *
+     *  <p><code>"Given channel with $idOrKeyOfChannel does not have the required role $role."</code></p>
      */
 
     public MissingRoleOnChannelErrorBuilder message(final String message) {
@@ -44,7 +44,7 @@ public class MissingRoleOnChannelErrorBuilder implements Builder<MissingRoleOnCh
     }
 
     /**
-     *
+     *  <p>Error-specific additional fields.</p>
      */
 
     public MissingRoleOnChannelErrorBuilder values(final Map<String, java.lang.Object> values) {
@@ -53,7 +53,7 @@ public class MissingRoleOnChannelErrorBuilder implements Builder<MissingRoleOnCh
     }
 
     /**
-     *
+     *  <p>Error-specific additional fields.</p>
      */
 
     public MissingRoleOnChannelErrorBuilder addValue(final String key, final java.lang.Object value) {
@@ -65,7 +65,7 @@ public class MissingRoleOnChannelErrorBuilder implements Builder<MissingRoleOnCh
     }
 
     /**
-     *  <p>ResourceIdentifier to a Channel.</p>
+     *  <p>ResourceIdentifier to a given Channel.</p>
      */
 
     public MissingRoleOnChannelErrorBuilder channel(
@@ -76,7 +76,7 @@ public class MissingRoleOnChannelErrorBuilder implements Builder<MissingRoleOnCh
     }
 
     /**
-     *  <p>ResourceIdentifier to a Channel.</p>
+     *  <p>ResourceIdentifier to a given Channel.</p>
      */
 
     public MissingRoleOnChannelErrorBuilder channel(
@@ -86,7 +86,10 @@ public class MissingRoleOnChannelErrorBuilder implements Builder<MissingRoleOnCh
     }
 
     /**
-     *  <p>Describes the purpose and type of the Channel. A Channel can have one or more roles.</p>
+     *  <ul>
+     *   <li><code>ProductDistribution</code> for Product Distribution Channels allowed for the Store. Also required for Standalone Prices.</li>
+     *   <li><code>InventorySupply</code> for Inventory Supply Channels allowed for the Store.</li>
+     *  </ul>
      */
 
     public MissingRoleOnChannelErrorBuilder missingRole(

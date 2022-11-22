@@ -5,13 +5,15 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.validation.constraints.NotNull;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * InvalidInputError
+ *  <p>Returned when an invalid input has been sent.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -28,6 +30,22 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface InvalidInputError extends ErrorObject {
 
     String INVALID_INPUT = "InvalidInput";
+
+    /**
+     *
+     */
+    @NotNull
+    @JsonProperty("code")
+    public String getCode();
+
+    /**
+     *  <p>Description of the constraints that are not met by the request. For example, <code>"Invalid $propertyName. It may be a non-empty string up to $maxLength"</code>.</p>
+     */
+    @NotNull
+    @JsonProperty("message")
+    public String getMessage();
+
+    public void setMessage(final String message);
 
     public static InvalidInputError of() {
         return new InvalidInputErrorImpl();

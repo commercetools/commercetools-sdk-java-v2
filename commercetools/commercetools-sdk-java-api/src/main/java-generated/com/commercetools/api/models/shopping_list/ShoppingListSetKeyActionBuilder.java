@@ -26,7 +26,7 @@ public class ShoppingListSetKeyActionBuilder implements Builder<ShoppingListSetK
     private String key;
 
     /**
-     *  <p>User-specific unique identifier for the shopping list.</p>
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
      */
 
     public ShoppingListSetKeyActionBuilder key(@Nullable final String key) {

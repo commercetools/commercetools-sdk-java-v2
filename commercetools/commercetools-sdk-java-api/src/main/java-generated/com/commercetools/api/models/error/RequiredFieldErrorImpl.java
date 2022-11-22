@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * RequiredFieldError
+ *  <p>Returned when a value is not defined for a required field.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class RequiredFieldErrorImpl implements RequiredFieldError, ModelBase {
@@ -51,7 +51,7 @@ public class RequiredFieldErrorImpl implements RequiredFieldError, ModelBase {
     }
 
     /**
-     *
+     *  <p><code>"A value is required for field $field."</code></p>
      */
 
     public String getMessage() {
@@ -59,7 +59,7 @@ public class RequiredFieldErrorImpl implements RequiredFieldError, ModelBase {
     }
 
     /**
-     *
+     *  <p>Error-specific additional fields.</p>
      */
 
     public Map<String, java.lang.Object> values() {
@@ -67,7 +67,7 @@ public class RequiredFieldErrorImpl implements RequiredFieldError, ModelBase {
     }
 
     /**
-     *
+     *  <p>Name of the field missing the value.</p>
      */
 
     public String getField() {

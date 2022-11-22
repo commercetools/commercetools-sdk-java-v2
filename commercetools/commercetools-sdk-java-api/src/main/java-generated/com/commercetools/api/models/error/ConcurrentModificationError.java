@@ -5,13 +5,15 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.validation.constraints.NotNull;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * ConcurrentModificationError
+ *  <p>Returned when the request conflicts with the current state of the involved resources. Typically, the request attempts to modify a resource that is out of date (that is modified by another client since it was last retrieved). The client application should resolve the conflict (with or without involving the end-user) before retrying the request.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -32,9 +34,25 @@ public interface ConcurrentModificationError extends ErrorObject {
     /**
      *
      */
+    @NotNull
+    @JsonProperty("code")
+    public String getCode();
+
+    /**
+     *  <p><code>"Object $resourceId has a different version than expected. Expected: $expectedVersion - Actual: $currentVersion."</code></p>
+     */
+    @NotNull
+    @JsonProperty("message")
+    public String getMessage();
+
+    /**
+     *  <p>Current version of the resource.</p>
+     */
 
     @JsonProperty("currentVersion")
     public Long getCurrentVersion();
+
+    public void setMessage(final String message);
 
     public void setCurrentVersion(final Long currentVersion);
 

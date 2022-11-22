@@ -16,6 +16,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
  *  <p>Updates the key of a single enum <code>value</code> in an AttributeEnumType AttributeDefinition, AttributeLocalizedEnumType AttributeDefinition, AttributeSetType of AttributeEnumType AttributeDefinition, or AttributeSetType of AttributeLocalizedEnumType AttributeDefinition.</p>
+ *  <p>If the AttributeDefinition does not contain an enum with the referenced key, a EnumKeyDoesNotExist error is returned.</p>
  *  <p>All Products will be updated to the new key in an eventually consistent way.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")

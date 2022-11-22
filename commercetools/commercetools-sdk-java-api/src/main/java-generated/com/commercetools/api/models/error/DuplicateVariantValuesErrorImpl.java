@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * DuplicateVariantValuesError
+ *  <p>Returned when a Product Variant value conflicts with an existing one during an Update Product request.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class DuplicateVariantValuesErrorImpl implements DuplicateVariantValuesError, ModelBase {
@@ -51,7 +51,7 @@ public class DuplicateVariantValuesErrorImpl implements DuplicateVariantValuesEr
     }
 
     /**
-     *
+     *  <p><code>"A duplicate combination of the variant values (sku, key, images, prices, attributes) exists."</code></p>
      */
 
     public String getMessage() {
@@ -59,7 +59,7 @@ public class DuplicateVariantValuesErrorImpl implements DuplicateVariantValuesEr
     }
 
     /**
-     *
+     *  <p>Error-specific additional fields.</p>
      */
 
     public Map<String, java.lang.Object> values() {
@@ -67,7 +67,7 @@ public class DuplicateVariantValuesErrorImpl implements DuplicateVariantValuesEr
     }
 
     /**
-     *
+     *  <p>Every Product Variant must have a distinct combination of SKU, prices, and custom Attribute values.</p>
      */
 
     public com.commercetools.api.models.error.VariantValues getVariantValues() {

@@ -15,7 +15,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * NoMatchingProductDiscountFoundError
+ *  <p>Returned when a Product Discount could not be found that could be applied to the Price of a Product Variant.</p>
+ *  <p>The error is returned as a failed response to the Get Matching ProductDiscount request.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class NoMatchingProductDiscountFoundErrorImpl implements NoMatchingProductDiscountFoundError, ModelBase {
@@ -47,7 +48,7 @@ public class NoMatchingProductDiscountFoundErrorImpl implements NoMatchingProduc
     }
 
     /**
-     *
+     *  <p><code>"Couldn't find a matching product discount for: productId=$productId, variantId=$variantId, price=$price."</code></p>
      */
 
     public String getMessage() {
@@ -55,7 +56,7 @@ public class NoMatchingProductDiscountFoundErrorImpl implements NoMatchingProduc
     }
 
     /**
-     *
+     *  <p>Error-specific additional fields.</p>
      */
 
     public Map<String, java.lang.Object> values() {

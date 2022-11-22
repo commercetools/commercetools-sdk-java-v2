@@ -47,7 +47,7 @@ public class MyShoppingListRemoveTextLineItemActionImpl implements MyShoppingLis
     }
 
     /**
-     *
+     *  <p>The <code>id</code> of the TextLineItem to update.</p>
      */
 
     public String getTextLineItemId() {
@@ -55,7 +55,7 @@ public class MyShoppingListRemoveTextLineItemActionImpl implements MyShoppingLis
     }
 
     /**
-     *
+     *  <p>Amount to remove from the <code>quantity</code> of the TextLineItem. If not set, the TextLineItem is removed from the ShoppingList. If this value matches or exceeds the current <code>quantity</code> of the TextLineItem, the TextLineItem is removed from the ShoppingList.</p>
      */
 
     public Long getQuantity() {

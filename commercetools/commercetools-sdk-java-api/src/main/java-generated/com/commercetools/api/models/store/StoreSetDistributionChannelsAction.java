@@ -15,6 +15,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 /**
  *  <p>This update action produces the StoreDistributionChannelsChanged Message.</p>
+ *  <p>Setting a Channel without the <code>ProductDistribution</code> ChannelRoleEnum returns a MissingRoleOnChannel error.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -32,7 +33,7 @@ public interface StoreSetDistributionChannelsAction extends StoreUpdateAction {
     String SET_DISTRIBUTION_CHANNELS = "setDistributionChannels";
 
     /**
-     *  <p>Value to set. If not defined, the Store's <code>distributionChannels</code> are unset. Any attempt to use Channel without the <code>ProductDistribution</code> ChannelRoleEnum will fail with a MissingRoleOnChannel error.</p>
+     *  <p>Value to set. If not defined, the Store's <code>distributionChannels</code> are unset.</p>
      */
     @Valid
     @JsonProperty("distributionChannels")

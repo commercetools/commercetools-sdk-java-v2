@@ -21,6 +21,8 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
  *             .lastModifiedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
  *             .name(nameBuilder -> nameBuilder)
+ *             .plusLineItems(lineItemsBuilder -> lineItemsBuilder)
+ *             .plusTextLineItems(textLineItemsBuilder -> textLineItemsBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -36,43 +38,41 @@ public class ShoppingListBuilder implements Builder<ShoppingList> {
 
     private java.time.ZonedDateTime lastModifiedAt;
 
-    @Nullable
-    private com.commercetools.api.models.common.LastModifiedBy lastModifiedBy;
-
-    @Nullable
-    private com.commercetools.api.models.common.CreatedBy createdBy;
-
-    @Nullable
-    private com.commercetools.api.models.type.CustomFields custom;
-
-    @Nullable
-    private com.commercetools.api.models.customer.CustomerReference customer;
-
-    @Nullable
-    private Long deleteDaysAfterLastModification;
-
-    @Nullable
-    private com.commercetools.api.models.common.LocalizedString description;
+    private com.commercetools.api.models.common.LocalizedString name;
 
     @Nullable
     private String key;
 
     @Nullable
-    private java.util.List<com.commercetools.api.models.shopping_list.ShoppingListLineItem> lineItems;
-
-    private com.commercetools.api.models.common.LocalizedString name;
+    private com.commercetools.api.models.customer.CustomerReference customer;
 
     @Nullable
     private com.commercetools.api.models.common.LocalizedString slug;
 
     @Nullable
+    private com.commercetools.api.models.common.LocalizedString description;
+
+    private java.util.List<com.commercetools.api.models.shopping_list.ShoppingListLineItem> lineItems;
+
     private java.util.List<com.commercetools.api.models.shopping_list.TextLineItem> textLineItems;
+
+    @Nullable
+    private Long deleteDaysAfterLastModification;
 
     @Nullable
     private String anonymousId;
 
     @Nullable
     private com.commercetools.api.models.store.StoreKeyReference store;
+
+    @Nullable
+    private com.commercetools.api.models.type.CustomFields custom;
+
+    @Nullable
+    private com.commercetools.api.models.common.LastModifiedBy lastModifiedBy;
+
+    @Nullable
+    private com.commercetools.api.models.common.CreatedBy createdBy;
 
     /**
      *  <p>Unique identifier of the ShoppingList.</p>
@@ -84,7 +84,7 @@ public class ShoppingListBuilder implements Builder<ShoppingList> {
     }
 
     /**
-     *  <p>The current version of the shopping list.</p>
+     *  <p>Current version of the ShoppingList.</p>
      */
 
     public ShoppingListBuilder version(final Long version) {
@@ -93,7 +93,7 @@ public class ShoppingListBuilder implements Builder<ShoppingList> {
     }
 
     /**
-     *
+     *  <p>Date and time (UTC) the ShoppingList was initially created.</p>
      */
 
     public ShoppingListBuilder createdAt(final java.time.ZonedDateTime createdAt) {
@@ -102,11 +102,272 @@ public class ShoppingListBuilder implements Builder<ShoppingList> {
     }
 
     /**
-     *
+     *  <p>Date and time (UTC) the ShoppingList was last updated.</p>
      */
 
     public ShoppingListBuilder lastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {
         this.lastModifiedAt = lastModifiedAt;
+        return this;
+    }
+
+    /**
+     *  <p>Name of the ShoppingList.</p>
+     */
+
+    public ShoppingListBuilder name(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
+        this.name = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Name of the ShoppingList.</p>
+     */
+
+    public ShoppingListBuilder name(final com.commercetools.api.models.common.LocalizedString name) {
+        this.name = name;
+        return this;
+    }
+
+    /**
+     *  <p>User-defined unique identifier of the ShoppingList.</p>
+     */
+
+    public ShoppingListBuilder key(@Nullable final String key) {
+        this.key = key;
+        return this;
+    }
+
+    /**
+     *  <p>Reference to a Customer associated with the ShoppingList.</p>
+     */
+
+    public ShoppingListBuilder customer(
+            Function<com.commercetools.api.models.customer.CustomerReferenceBuilder, com.commercetools.api.models.customer.CustomerReferenceBuilder> builder) {
+        this.customer = builder.apply(com.commercetools.api.models.customer.CustomerReferenceBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Reference to a Customer associated with the ShoppingList.</p>
+     */
+
+    public ShoppingListBuilder customer(
+            @Nullable final com.commercetools.api.models.customer.CustomerReference customer) {
+        this.customer = customer;
+        return this;
+    }
+
+    /**
+     *  <p>Human-readable identifiers usually used as deep-link URL to the related ShoppingList. Each slug is unique across a Project, but a ShoppingList can have the same slug for different languages. The slug must match the pattern <code>[a-zA-Z0-9_-]{2,256}</code>. For good performance, indexes are provided for the first 15 <code>languages</code> set on the Project.</p>
+     */
+
+    public ShoppingListBuilder slug(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
+        this.slug = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Human-readable identifiers usually used as deep-link URL to the related ShoppingList. Each slug is unique across a Project, but a ShoppingList can have the same slug for different languages. The slug must match the pattern <code>[a-zA-Z0-9_-]{2,256}</code>. For good performance, indexes are provided for the first 15 <code>languages</code> set on the Project.</p>
+     */
+
+    public ShoppingListBuilder slug(@Nullable final com.commercetools.api.models.common.LocalizedString slug) {
+        this.slug = slug;
+        return this;
+    }
+
+    /**
+     *  <p>Description of the ShoppingList.</p>
+     */
+
+    public ShoppingListBuilder description(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
+        this.description = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Description of the ShoppingList.</p>
+     */
+
+    public ShoppingListBuilder description(
+            @Nullable final com.commercetools.api.models.common.LocalizedString description) {
+        this.description = description;
+        return this;
+    }
+
+    /**
+     *  <p>Line Items (containing Products) of the ShoppingList.</p>
+     */
+
+    public ShoppingListBuilder lineItems(
+            final com.commercetools.api.models.shopping_list.ShoppingListLineItem... lineItems) {
+        this.lineItems = new ArrayList<>(Arrays.asList(lineItems));
+        return this;
+    }
+
+    /**
+     *  <p>Line Items (containing Products) of the ShoppingList.</p>
+     */
+
+    public ShoppingListBuilder lineItems(
+            final java.util.List<com.commercetools.api.models.shopping_list.ShoppingListLineItem> lineItems) {
+        this.lineItems = lineItems;
+        return this;
+    }
+
+    /**
+     *  <p>Line Items (containing Products) of the ShoppingList.</p>
+     */
+
+    public ShoppingListBuilder plusLineItems(
+            final com.commercetools.api.models.shopping_list.ShoppingListLineItem... lineItems) {
+        if (this.lineItems == null) {
+            this.lineItems = new ArrayList<>();
+        }
+        this.lineItems.addAll(Arrays.asList(lineItems));
+        return this;
+    }
+
+    /**
+     *  <p>Line Items (containing Products) of the ShoppingList.</p>
+     */
+
+    public ShoppingListBuilder plusLineItems(
+            Function<com.commercetools.api.models.shopping_list.ShoppingListLineItemBuilder, com.commercetools.api.models.shopping_list.ShoppingListLineItemBuilder> builder) {
+        if (this.lineItems == null) {
+            this.lineItems = new ArrayList<>();
+        }
+        this.lineItems.add(
+            builder.apply(com.commercetools.api.models.shopping_list.ShoppingListLineItemBuilder.of()).build());
+        return this;
+    }
+
+    /**
+     *  <p>Line Items (containing Products) of the ShoppingList.</p>
+     */
+
+    public ShoppingListBuilder withLineItems(
+            Function<com.commercetools.api.models.shopping_list.ShoppingListLineItemBuilder, com.commercetools.api.models.shopping_list.ShoppingListLineItemBuilder> builder) {
+        this.lineItems = new ArrayList<>();
+        this.lineItems.add(
+            builder.apply(com.commercetools.api.models.shopping_list.ShoppingListLineItemBuilder.of()).build());
+        return this;
+    }
+
+    /**
+     *  <p>Line Items (containing text values) of the ShoppingList.</p>
+     */
+
+    public ShoppingListBuilder textLineItems(
+            final com.commercetools.api.models.shopping_list.TextLineItem... textLineItems) {
+        this.textLineItems = new ArrayList<>(Arrays.asList(textLineItems));
+        return this;
+    }
+
+    /**
+     *  <p>Line Items (containing text values) of the ShoppingList.</p>
+     */
+
+    public ShoppingListBuilder textLineItems(
+            final java.util.List<com.commercetools.api.models.shopping_list.TextLineItem> textLineItems) {
+        this.textLineItems = textLineItems;
+        return this;
+    }
+
+    /**
+     *  <p>Line Items (containing text values) of the ShoppingList.</p>
+     */
+
+    public ShoppingListBuilder plusTextLineItems(
+            final com.commercetools.api.models.shopping_list.TextLineItem... textLineItems) {
+        if (this.textLineItems == null) {
+            this.textLineItems = new ArrayList<>();
+        }
+        this.textLineItems.addAll(Arrays.asList(textLineItems));
+        return this;
+    }
+
+    /**
+     *  <p>Line Items (containing text values) of the ShoppingList.</p>
+     */
+
+    public ShoppingListBuilder plusTextLineItems(
+            Function<com.commercetools.api.models.shopping_list.TextLineItemBuilder, com.commercetools.api.models.shopping_list.TextLineItemBuilder> builder) {
+        if (this.textLineItems == null) {
+            this.textLineItems = new ArrayList<>();
+        }
+        this.textLineItems
+                .add(builder.apply(com.commercetools.api.models.shopping_list.TextLineItemBuilder.of()).build());
+        return this;
+    }
+
+    /**
+     *  <p>Line Items (containing text values) of the ShoppingList.</p>
+     */
+
+    public ShoppingListBuilder withTextLineItems(
+            Function<com.commercetools.api.models.shopping_list.TextLineItemBuilder, com.commercetools.api.models.shopping_list.TextLineItemBuilder> builder) {
+        this.textLineItems = new ArrayList<>();
+        this.textLineItems
+                .add(builder.apply(com.commercetools.api.models.shopping_list.TextLineItemBuilder.of()).build());
+        return this;
+    }
+
+    /**
+     *  <p>Number of days after which the ShoppingList will be automatically deleted if it has not been modified.</p>
+     */
+
+    public ShoppingListBuilder deleteDaysAfterLastModification(@Nullable final Long deleteDaysAfterLastModification) {
+        this.deleteDaysAfterLastModification = deleteDaysAfterLastModification;
+        return this;
+    }
+
+    /**
+     *  <p>Identifies ShoppingLists belonging to an anonymous session.</p>
+     */
+
+    public ShoppingListBuilder anonymousId(@Nullable final String anonymousId) {
+        this.anonymousId = anonymousId;
+        return this;
+    }
+
+    /**
+     *  <p>Store to which the ShoppingList is assigned.</p>
+     */
+
+    public ShoppingListBuilder store(
+            Function<com.commercetools.api.models.store.StoreKeyReferenceBuilder, com.commercetools.api.models.store.StoreKeyReferenceBuilder> builder) {
+        this.store = builder.apply(com.commercetools.api.models.store.StoreKeyReferenceBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Store to which the ShoppingList is assigned.</p>
+     */
+
+    public ShoppingListBuilder store(@Nullable final com.commercetools.api.models.store.StoreKeyReference store) {
+        this.store = store;
+        return this;
+    }
+
+    /**
+     *  <p>Custom Fields defined for the ShoppingList.</p>
+     */
+
+    public ShoppingListBuilder custom(
+            Function<com.commercetools.api.models.type.CustomFieldsBuilder, com.commercetools.api.models.type.CustomFieldsBuilder> builder) {
+        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Custom Fields defined for the ShoppingList.</p>
+     */
+
+    public ShoppingListBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFields custom) {
+        this.custom = custom;
         return this;
     }
 
@@ -149,267 +410,6 @@ public class ShoppingListBuilder implements Builder<ShoppingList> {
         return this;
     }
 
-    /**
-     *
-     */
-
-    public ShoppingListBuilder custom(
-            Function<com.commercetools.api.models.type.CustomFieldsBuilder, com.commercetools.api.models.type.CustomFieldsBuilder> builder) {
-        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsBuilder.of()).build();
-        return this;
-    }
-
-    /**
-     *
-     */
-
-    public ShoppingListBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFields custom) {
-        this.custom = custom;
-        return this;
-    }
-
-    /**
-     *
-     */
-
-    public ShoppingListBuilder customer(
-            Function<com.commercetools.api.models.customer.CustomerReferenceBuilder, com.commercetools.api.models.customer.CustomerReferenceBuilder> builder) {
-        this.customer = builder.apply(com.commercetools.api.models.customer.CustomerReferenceBuilder.of()).build();
-        return this;
-    }
-
-    /**
-     *
-     */
-
-    public ShoppingListBuilder customer(
-            @Nullable final com.commercetools.api.models.customer.CustomerReference customer) {
-        this.customer = customer;
-        return this;
-    }
-
-    /**
-     *  <p>The shopping list will be deleted automatically if it hasn't been modified for the specified amount of days.</p>
-     */
-
-    public ShoppingListBuilder deleteDaysAfterLastModification(@Nullable final Long deleteDaysAfterLastModification) {
-        this.deleteDaysAfterLastModification = deleteDaysAfterLastModification;
-        return this;
-    }
-
-    /**
-     *
-     */
-
-    public ShoppingListBuilder description(
-            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
-        this.description = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
-        return this;
-    }
-
-    /**
-     *
-     */
-
-    public ShoppingListBuilder description(
-            @Nullable final com.commercetools.api.models.common.LocalizedString description) {
-        this.description = description;
-        return this;
-    }
-
-    /**
-     *  <p>User-defined unique identifier of the ShoppingList.</p>
-     */
-
-    public ShoppingListBuilder key(@Nullable final String key) {
-        this.key = key;
-        return this;
-    }
-
-    /**
-     *
-     */
-
-    public ShoppingListBuilder lineItems(
-            @Nullable final com.commercetools.api.models.shopping_list.ShoppingListLineItem... lineItems) {
-        this.lineItems = new ArrayList<>(Arrays.asList(lineItems));
-        return this;
-    }
-
-    /**
-     *
-     */
-
-    public ShoppingListBuilder lineItems(
-            @Nullable final java.util.List<com.commercetools.api.models.shopping_list.ShoppingListLineItem> lineItems) {
-        this.lineItems = lineItems;
-        return this;
-    }
-
-    /**
-     *
-     */
-
-    public ShoppingListBuilder plusLineItems(
-            @Nullable final com.commercetools.api.models.shopping_list.ShoppingListLineItem... lineItems) {
-        if (this.lineItems == null) {
-            this.lineItems = new ArrayList<>();
-        }
-        this.lineItems.addAll(Arrays.asList(lineItems));
-        return this;
-    }
-
-    /**
-     *
-     */
-
-    public ShoppingListBuilder plusLineItems(
-            Function<com.commercetools.api.models.shopping_list.ShoppingListLineItemBuilder, com.commercetools.api.models.shopping_list.ShoppingListLineItemBuilder> builder) {
-        if (this.lineItems == null) {
-            this.lineItems = new ArrayList<>();
-        }
-        this.lineItems.add(
-            builder.apply(com.commercetools.api.models.shopping_list.ShoppingListLineItemBuilder.of()).build());
-        return this;
-    }
-
-    /**
-     *
-     */
-
-    public ShoppingListBuilder withLineItems(
-            Function<com.commercetools.api.models.shopping_list.ShoppingListLineItemBuilder, com.commercetools.api.models.shopping_list.ShoppingListLineItemBuilder> builder) {
-        this.lineItems = new ArrayList<>();
-        this.lineItems.add(
-            builder.apply(com.commercetools.api.models.shopping_list.ShoppingListLineItemBuilder.of()).build());
-        return this;
-    }
-
-    /**
-     *
-     */
-
-    public ShoppingListBuilder name(
-            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
-        this.name = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
-        return this;
-    }
-
-    /**
-     *
-     */
-
-    public ShoppingListBuilder name(final com.commercetools.api.models.common.LocalizedString name) {
-        this.name = name;
-        return this;
-    }
-
-    /**
-     *  <p>Human-readable identifiers usually used as deep-link URL to the related shopping list. Each slug is unique across a project, but a shopping list can have the same slug for different languages. The slug must match the pattern [a-zA-Z0-9_-]{2,256}.</p>
-     */
-
-    public ShoppingListBuilder slug(
-            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
-        this.slug = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
-        return this;
-    }
-
-    /**
-     *  <p>Human-readable identifiers usually used as deep-link URL to the related shopping list. Each slug is unique across a project, but a shopping list can have the same slug for different languages. The slug must match the pattern [a-zA-Z0-9_-]{2,256}.</p>
-     */
-
-    public ShoppingListBuilder slug(@Nullable final com.commercetools.api.models.common.LocalizedString slug) {
-        this.slug = slug;
-        return this;
-    }
-
-    /**
-     *
-     */
-
-    public ShoppingListBuilder textLineItems(
-            @Nullable final com.commercetools.api.models.shopping_list.TextLineItem... textLineItems) {
-        this.textLineItems = new ArrayList<>(Arrays.asList(textLineItems));
-        return this;
-    }
-
-    /**
-     *
-     */
-
-    public ShoppingListBuilder textLineItems(
-            @Nullable final java.util.List<com.commercetools.api.models.shopping_list.TextLineItem> textLineItems) {
-        this.textLineItems = textLineItems;
-        return this;
-    }
-
-    /**
-     *
-     */
-
-    public ShoppingListBuilder plusTextLineItems(
-            @Nullable final com.commercetools.api.models.shopping_list.TextLineItem... textLineItems) {
-        if (this.textLineItems == null) {
-            this.textLineItems = new ArrayList<>();
-        }
-        this.textLineItems.addAll(Arrays.asList(textLineItems));
-        return this;
-    }
-
-    /**
-     *
-     */
-
-    public ShoppingListBuilder plusTextLineItems(
-            Function<com.commercetools.api.models.shopping_list.TextLineItemBuilder, com.commercetools.api.models.shopping_list.TextLineItemBuilder> builder) {
-        if (this.textLineItems == null) {
-            this.textLineItems = new ArrayList<>();
-        }
-        this.textLineItems
-                .add(builder.apply(com.commercetools.api.models.shopping_list.TextLineItemBuilder.of()).build());
-        return this;
-    }
-
-    /**
-     *
-     */
-
-    public ShoppingListBuilder withTextLineItems(
-            Function<com.commercetools.api.models.shopping_list.TextLineItemBuilder, com.commercetools.api.models.shopping_list.TextLineItemBuilder> builder) {
-        this.textLineItems = new ArrayList<>();
-        this.textLineItems
-                .add(builder.apply(com.commercetools.api.models.shopping_list.TextLineItemBuilder.of()).build());
-        return this;
-    }
-
-    /**
-     *  <p>Identifies shopping lists belonging to an anonymous session (the customer has not signed up/in yet).</p>
-     */
-
-    public ShoppingListBuilder anonymousId(@Nullable final String anonymousId) {
-        this.anonymousId = anonymousId;
-        return this;
-    }
-
-    /**
-     *
-     */
-
-    public ShoppingListBuilder store(
-            Function<com.commercetools.api.models.store.StoreKeyReferenceBuilder, com.commercetools.api.models.store.StoreKeyReferenceBuilder> builder) {
-        this.store = builder.apply(com.commercetools.api.models.store.StoreKeyReferenceBuilder.of()).build();
-        return this;
-    }
-
-    /**
-     *
-     */
-
-    public ShoppingListBuilder store(@Nullable final com.commercetools.api.models.store.StoreKeyReference store) {
-        this.store = store;
-        return this;
-    }
-
     public String getId() {
         return this.id;
     }
@@ -426,34 +426,8 @@ public class ShoppingListBuilder implements Builder<ShoppingList> {
         return this.lastModifiedAt;
     }
 
-    @Nullable
-    public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy() {
-        return this.lastModifiedBy;
-    }
-
-    @Nullable
-    public com.commercetools.api.models.common.CreatedBy getCreatedBy() {
-        return this.createdBy;
-    }
-
-    @Nullable
-    public com.commercetools.api.models.type.CustomFields getCustom() {
-        return this.custom;
-    }
-
-    @Nullable
-    public com.commercetools.api.models.customer.CustomerReference getCustomer() {
-        return this.customer;
-    }
-
-    @Nullable
-    public Long getDeleteDaysAfterLastModification() {
-        return this.deleteDaysAfterLastModification;
-    }
-
-    @Nullable
-    public com.commercetools.api.models.common.LocalizedString getDescription() {
-        return this.description;
+    public com.commercetools.api.models.common.LocalizedString getName() {
+        return this.name;
     }
 
     @Nullable
@@ -462,12 +436,8 @@ public class ShoppingListBuilder implements Builder<ShoppingList> {
     }
 
     @Nullable
-    public java.util.List<com.commercetools.api.models.shopping_list.ShoppingListLineItem> getLineItems() {
-        return this.lineItems;
-    }
-
-    public com.commercetools.api.models.common.LocalizedString getName() {
-        return this.name;
+    public com.commercetools.api.models.customer.CustomerReference getCustomer() {
+        return this.customer;
     }
 
     @Nullable
@@ -476,8 +446,21 @@ public class ShoppingListBuilder implements Builder<ShoppingList> {
     }
 
     @Nullable
+    public com.commercetools.api.models.common.LocalizedString getDescription() {
+        return this.description;
+    }
+
+    public java.util.List<com.commercetools.api.models.shopping_list.ShoppingListLineItem> getLineItems() {
+        return this.lineItems;
+    }
+
     public java.util.List<com.commercetools.api.models.shopping_list.TextLineItem> getTextLineItems() {
         return this.textLineItems;
+    }
+
+    @Nullable
+    public Long getDeleteDaysAfterLastModification() {
+        return this.deleteDaysAfterLastModification;
     }
 
     @Nullable
@@ -490,24 +473,41 @@ public class ShoppingListBuilder implements Builder<ShoppingList> {
         return this.store;
     }
 
+    @Nullable
+    public com.commercetools.api.models.type.CustomFields getCustom() {
+        return this.custom;
+    }
+
+    @Nullable
+    public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy() {
+        return this.lastModifiedBy;
+    }
+
+    @Nullable
+    public com.commercetools.api.models.common.CreatedBy getCreatedBy() {
+        return this.createdBy;
+    }
+
     public ShoppingList build() {
         Objects.requireNonNull(id, ShoppingList.class + ": id is missing");
         Objects.requireNonNull(version, ShoppingList.class + ": version is missing");
         Objects.requireNonNull(createdAt, ShoppingList.class + ": createdAt is missing");
         Objects.requireNonNull(lastModifiedAt, ShoppingList.class + ": lastModifiedAt is missing");
         Objects.requireNonNull(name, ShoppingList.class + ": name is missing");
-        return new ShoppingListImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, custom, customer,
-            deleteDaysAfterLastModification, description, key, lineItems, name, slug, textLineItems, anonymousId,
-            store);
+        Objects.requireNonNull(lineItems, ShoppingList.class + ": lineItems is missing");
+        Objects.requireNonNull(textLineItems, ShoppingList.class + ": textLineItems is missing");
+        return new ShoppingListImpl(id, version, createdAt, lastModifiedAt, name, key, customer, slug, description,
+            lineItems, textLineItems, deleteDaysAfterLastModification, anonymousId, store, custom, lastModifiedBy,
+            createdBy);
     }
 
     /**
      * builds ShoppingList without checking for non null required values
      */
     public ShoppingList buildUnchecked() {
-        return new ShoppingListImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, custom, customer,
-            deleteDaysAfterLastModification, description, key, lineItems, name, slug, textLineItems, anonymousId,
-            store);
+        return new ShoppingListImpl(id, version, createdAt, lastModifiedAt, name, key, customer, slug, description,
+            lineItems, textLineItems, deleteDaysAfterLastModification, anonymousId, store, custom, lastModifiedBy,
+            createdBy);
     }
 
     public static ShoppingListBuilder of() {
@@ -520,19 +520,19 @@ public class ShoppingListBuilder implements Builder<ShoppingList> {
         builder.version = template.getVersion();
         builder.createdAt = template.getCreatedAt();
         builder.lastModifiedAt = template.getLastModifiedAt();
-        builder.lastModifiedBy = template.getLastModifiedBy();
-        builder.createdBy = template.getCreatedBy();
-        builder.custom = template.getCustom();
-        builder.customer = template.getCustomer();
-        builder.deleteDaysAfterLastModification = template.getDeleteDaysAfterLastModification();
-        builder.description = template.getDescription();
-        builder.key = template.getKey();
-        builder.lineItems = template.getLineItems();
         builder.name = template.getName();
+        builder.key = template.getKey();
+        builder.customer = template.getCustomer();
         builder.slug = template.getSlug();
+        builder.description = template.getDescription();
+        builder.lineItems = template.getLineItems();
         builder.textLineItems = template.getTextLineItems();
+        builder.deleteDaysAfterLastModification = template.getDeleteDaysAfterLastModification();
         builder.anonymousId = template.getAnonymousId();
         builder.store = template.getStore();
+        builder.custom = template.getCustom();
+        builder.lastModifiedBy = template.getLastModifiedBy();
+        builder.createdBy = template.getCreatedBy();
         return builder;
     }
 

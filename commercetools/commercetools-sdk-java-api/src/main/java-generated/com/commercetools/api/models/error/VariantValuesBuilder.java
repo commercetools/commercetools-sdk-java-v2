@@ -33,7 +33,7 @@ public class VariantValuesBuilder implements Builder<VariantValues> {
     private java.util.List<com.commercetools.api.models.product.Attribute> attributes;
 
     /**
-     *
+     *  <p>SKU of the ProductVariant.</p>
      */
 
     public VariantValuesBuilder sku(@Nullable final String sku) {
@@ -42,7 +42,7 @@ public class VariantValuesBuilder implements Builder<VariantValues> {
     }
 
     /**
-     *
+     *  <p>Embedded Prices of the ProductVariant.</p>
      */
 
     public VariantValuesBuilder prices(final com.commercetools.api.models.common.PriceDraft... prices) {
@@ -51,7 +51,7 @@ public class VariantValuesBuilder implements Builder<VariantValues> {
     }
 
     /**
-     *
+     *  <p>Embedded Prices of the ProductVariant.</p>
      */
 
     public VariantValuesBuilder prices(final java.util.List<com.commercetools.api.models.common.PriceDraft> prices) {
@@ -60,7 +60,7 @@ public class VariantValuesBuilder implements Builder<VariantValues> {
     }
 
     /**
-     *
+     *  <p>Embedded Prices of the ProductVariant.</p>
      */
 
     public VariantValuesBuilder plusPrices(final com.commercetools.api.models.common.PriceDraft... prices) {
@@ -72,7 +72,7 @@ public class VariantValuesBuilder implements Builder<VariantValues> {
     }
 
     /**
-     *
+     *  <p>Embedded Prices of the ProductVariant.</p>
      */
 
     public VariantValuesBuilder plusPrices(
@@ -85,7 +85,7 @@ public class VariantValuesBuilder implements Builder<VariantValues> {
     }
 
     /**
-     *
+     *  <p>Embedded Prices of the ProductVariant.</p>
      */
 
     public VariantValuesBuilder withPrices(
@@ -96,7 +96,7 @@ public class VariantValuesBuilder implements Builder<VariantValues> {
     }
 
     /**
-     *
+     *  <p>Attributes of the ProductVariant.</p>
      */
 
     public VariantValuesBuilder attributes(final com.commercetools.api.models.product.Attribute... attributes) {
@@ -105,7 +105,7 @@ public class VariantValuesBuilder implements Builder<VariantValues> {
     }
 
     /**
-     *
+     *  <p>Attributes of the ProductVariant.</p>
      */
 
     public VariantValuesBuilder attributes(
@@ -115,7 +115,7 @@ public class VariantValuesBuilder implements Builder<VariantValues> {
     }
 
     /**
-     *
+     *  <p>Attributes of the ProductVariant.</p>
      */
 
     public VariantValuesBuilder plusAttributes(final com.commercetools.api.models.product.Attribute... attributes) {
@@ -127,7 +127,7 @@ public class VariantValuesBuilder implements Builder<VariantValues> {
     }
 
     /**
-     *
+     *  <p>Attributes of the ProductVariant.</p>
      */
 
     public VariantValuesBuilder plusAttributes(
@@ -140,7 +140,7 @@ public class VariantValuesBuilder implements Builder<VariantValues> {
     }
 
     /**
-     *
+     *  <p>Attributes of the ProductVariant.</p>
      */
 
     public VariantValuesBuilder withAttributes(

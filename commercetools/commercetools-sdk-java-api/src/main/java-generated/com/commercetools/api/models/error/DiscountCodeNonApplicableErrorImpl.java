@@ -15,7 +15,12 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * DiscountCodeNonApplicableError
+ *  <p>Returned when the Cart contains a Discount Code with a DiscountCodeState other than <code>MatchesCart</code>.</p>
+ *  <p>The error is returned as a failed response to:</p>
+ *  <ul>
+ *   <li>Create Order from Cart and Create Order from Cart in a Store requests on Orders.</li>
+ *   <li>Create Order from Cart and Create Order in a Store from a Cart requests on My Orders.</li>
+ *  </ul>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class DiscountCodeNonApplicableErrorImpl implements DiscountCodeNonApplicableError, ModelBase {
@@ -30,7 +35,7 @@ public class DiscountCodeNonApplicableErrorImpl implements DiscountCodeNonApplic
 
     private String reason;
 
-    private String dicountCodeId;
+    private String discountCodeId;
 
     private java.time.ZonedDateTime validFrom;
 
@@ -42,7 +47,7 @@ public class DiscountCodeNonApplicableErrorImpl implements DiscountCodeNonApplic
     DiscountCodeNonApplicableErrorImpl(@JsonProperty("message") final String message,
             @JsonProperty("values") final Map<String, java.lang.Object> values,
             @JsonProperty("discountCode") final String discountCode, @JsonProperty("reason") final String reason,
-            @JsonProperty("dicountCodeId") final String dicountCodeId,
+            @JsonProperty("discountCodeId") final String discountCodeId,
             @JsonProperty("validFrom") final java.time.ZonedDateTime validFrom,
             @JsonProperty("validUntil") final java.time.ZonedDateTime validUntil,
             @JsonProperty("validityCheckTime") final java.time.ZonedDateTime validityCheckTime) {
@@ -50,7 +55,7 @@ public class DiscountCodeNonApplicableErrorImpl implements DiscountCodeNonApplic
         this.values = values;
         this.discountCode = discountCode;
         this.reason = reason;
-        this.dicountCodeId = dicountCodeId;
+        this.discountCodeId = discountCodeId;
         this.validFrom = validFrom;
         this.validUntil = validUntil;
         this.validityCheckTime = validityCheckTime;
@@ -70,7 +75,7 @@ public class DiscountCodeNonApplicableErrorImpl implements DiscountCodeNonApplic
     }
 
     /**
-     *
+     *  <p><code>"The discountCode $discountCodeId cannot be applied to the cart."</code></p>
      */
 
     public String getMessage() {
@@ -78,7 +83,7 @@ public class DiscountCodeNonApplicableErrorImpl implements DiscountCodeNonApplic
     }
 
     /**
-     *
+     *  <p>Error-specific additional fields.</p>
      */
 
     public Map<String, java.lang.Object> values() {
@@ -86,7 +91,7 @@ public class DiscountCodeNonApplicableErrorImpl implements DiscountCodeNonApplic
     }
 
     /**
-     *
+     *  <p>Discount Code passed to the Cart.</p>
      */
 
     public String getDiscountCode() {
@@ -94,7 +99,7 @@ public class DiscountCodeNonApplicableErrorImpl implements DiscountCodeNonApplic
     }
 
     /**
-     *
+     *  <p><code>"DoesNotExist"</code> or <code>"TimeRangeNonApplicable"</code></p>
      */
 
     public String getReason() {
@@ -102,15 +107,15 @@ public class DiscountCodeNonApplicableErrorImpl implements DiscountCodeNonApplic
     }
 
     /**
-     *
+     *  <p>Unique identifier of the Discount Code.</p>
      */
 
-    public String getDicountCodeId() {
-        return this.dicountCodeId;
+    public String getDiscountCodeId() {
+        return this.discountCodeId;
     }
 
     /**
-     *
+     *  <p>Date and time (UTC) from which the Discount Code is valid.</p>
      */
 
     public java.time.ZonedDateTime getValidFrom() {
@@ -118,7 +123,7 @@ public class DiscountCodeNonApplicableErrorImpl implements DiscountCodeNonApplic
     }
 
     /**
-     *
+     *  <p>Date and time (UTC) until which the Discount Code is valid.</p>
      */
 
     public java.time.ZonedDateTime getValidUntil() {
@@ -126,7 +131,7 @@ public class DiscountCodeNonApplicableErrorImpl implements DiscountCodeNonApplic
     }
 
     /**
-     *
+     *  <p>Date and time (UTC) the Discount Code validity check was last performed.</p>
      */
 
     public java.time.ZonedDateTime getValidityCheckTime() {
@@ -152,8 +157,8 @@ public class DiscountCodeNonApplicableErrorImpl implements DiscountCodeNonApplic
         this.reason = reason;
     }
 
-    public void setDicountCodeId(final String dicountCodeId) {
-        this.dicountCodeId = dicountCodeId;
+    public void setDiscountCodeId(final String discountCodeId) {
+        this.discountCodeId = discountCodeId;
     }
 
     public void setValidFrom(final java.time.ZonedDateTime validFrom) {
@@ -183,7 +188,7 @@ public class DiscountCodeNonApplicableErrorImpl implements DiscountCodeNonApplic
                 .append(values, that.values)
                 .append(discountCode, that.discountCode)
                 .append(reason, that.reason)
-                .append(dicountCodeId, that.dicountCodeId)
+                .append(discountCodeId, that.discountCodeId)
                 .append(validFrom, that.validFrom)
                 .append(validUntil, that.validUntil)
                 .append(validityCheckTime, that.validityCheckTime)
@@ -197,7 +202,7 @@ public class DiscountCodeNonApplicableErrorImpl implements DiscountCodeNonApplic
                 .append(values)
                 .append(discountCode)
                 .append(reason)
-                .append(dicountCodeId)
+                .append(discountCodeId)
                 .append(validFrom)
                 .append(validUntil)
                 .append(validityCheckTime)

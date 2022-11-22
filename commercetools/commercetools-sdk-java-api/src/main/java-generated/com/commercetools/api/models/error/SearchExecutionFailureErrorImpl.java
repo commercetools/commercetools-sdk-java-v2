@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * SearchExecutionFailureError
+ *  <p>Returned when a search query could not be completed due to an unexpected failure.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SearchExecutionFailureErrorImpl implements SearchExecutionFailureError, ModelBase {
@@ -47,7 +47,7 @@ public class SearchExecutionFailureErrorImpl implements SearchExecutionFailureEr
     }
 
     /**
-     *
+     *  <p><code>"Something went wrong during the search query execution. In most case this happens due to usage of non-existing fields and custom product attributes. Please verify all filters and facets in your search query and make sure that all paths are correct."</code></p>
      */
 
     public String getMessage() {
@@ -55,7 +55,7 @@ public class SearchExecutionFailureErrorImpl implements SearchExecutionFailureEr
     }
 
     /**
-     *
+     *  <p>Error-specific additional fields.</p>
      */
 
     public Map<String, java.lang.Object> values() {

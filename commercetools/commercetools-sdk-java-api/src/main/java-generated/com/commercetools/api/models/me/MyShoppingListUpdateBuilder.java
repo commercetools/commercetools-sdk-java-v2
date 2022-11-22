@@ -28,7 +28,7 @@ public class MyShoppingListUpdateBuilder implements Builder<MyShoppingListUpdate
     private java.util.List<com.commercetools.api.models.me.MyShoppingListUpdateAction> actions;
 
     /**
-     *
+     *  <p>Expected version of the ShoppingList on which the changes should be applied. If the expected version does not match the actual version, a 409 Conflict will be returned.</p>
      */
 
     public MyShoppingListUpdateBuilder version(final Long version) {
@@ -37,7 +37,7 @@ public class MyShoppingListUpdateBuilder implements Builder<MyShoppingListUpdate
     }
 
     /**
-     *
+     *  <p>List of update actions to be performed on the ShoppingList.</p>
      */
 
     public MyShoppingListUpdateBuilder actions(
@@ -47,7 +47,7 @@ public class MyShoppingListUpdateBuilder implements Builder<MyShoppingListUpdate
     }
 
     /**
-     *
+     *  <p>List of update actions to be performed on the ShoppingList.</p>
      */
 
     public MyShoppingListUpdateBuilder actions(
@@ -57,7 +57,7 @@ public class MyShoppingListUpdateBuilder implements Builder<MyShoppingListUpdate
     }
 
     /**
-     *
+     *  <p>List of update actions to be performed on the ShoppingList.</p>
      */
 
     public MyShoppingListUpdateBuilder plusActions(
@@ -70,7 +70,7 @@ public class MyShoppingListUpdateBuilder implements Builder<MyShoppingListUpdate
     }
 
     /**
-     *
+     *  <p>List of update actions to be performed on the ShoppingList.</p>
      */
 
     public MyShoppingListUpdateBuilder plusActions(
@@ -83,7 +83,7 @@ public class MyShoppingListUpdateBuilder implements Builder<MyShoppingListUpdate
     }
 
     /**
-     *
+     *  <p>List of update actions to be performed on the ShoppingList.</p>
      */
 
     public MyShoppingListUpdateBuilder withActions(

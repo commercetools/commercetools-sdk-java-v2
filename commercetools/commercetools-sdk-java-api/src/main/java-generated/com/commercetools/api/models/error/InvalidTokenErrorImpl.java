@@ -39,7 +39,7 @@ public class InvalidTokenErrorImpl implements InvalidTokenError, ModelBase {
     }
 
     /**
-     *
+     *  <p>Error identifier.</p>
      */
 
     public String getCode() {
@@ -47,7 +47,7 @@ public class InvalidTokenErrorImpl implements InvalidTokenError, ModelBase {
     }
 
     /**
-     *
+     *  <p>Plain text description of the cause of the error.</p>
      */
 
     public String getMessage() {
@@ -55,7 +55,7 @@ public class InvalidTokenErrorImpl implements InvalidTokenError, ModelBase {
     }
 
     /**
-     *
+     *  <p>Error-specific additional fields.</p>
      */
 
     public Map<String, java.lang.Object> values() {

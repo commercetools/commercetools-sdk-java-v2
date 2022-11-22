@@ -33,14 +33,14 @@ public interface ShoppingListChangeLineItemQuantityAction extends ShoppingListUp
     String CHANGE_LINE_ITEM_QUANTITY = "changeLineItemQuantity";
 
     /**
-     *
+     *  <p>The <code>id</code> of the ShoppingListLineItem to update.</p>
      */
     @NotNull
     @JsonProperty("lineItemId")
     public String getLineItemId();
 
     /**
-     *
+     *  <p>New value to set. If <code>0</code>, the ShoppingListLineItem is removed from the ShoppingList.</p>
      */
     @NotNull
     @JsonProperty("quantity")

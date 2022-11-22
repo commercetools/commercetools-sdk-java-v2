@@ -15,7 +15,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * AttributeDefinitionTypeConflictError
+ *  <p>Returned when the <code>type</code> is different for an AttributeDefinition using the same <code>name</code> in multiple Product Types.</p>
+ *  <p>The error is returned as a failed response to the Create ProductType request.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class AttributeDefinitionTypeConflictErrorImpl implements AttributeDefinitionTypeConflictError, ModelBase {
@@ -59,7 +60,7 @@ public class AttributeDefinitionTypeConflictErrorImpl implements AttributeDefini
     }
 
     /**
-     *
+     *  <p><code>"The attribute with name $attributeName has a different type on product type $productTypeName."</code></p>
      */
 
     public String getMessage() {
@@ -67,7 +68,7 @@ public class AttributeDefinitionTypeConflictErrorImpl implements AttributeDefini
     }
 
     /**
-     *
+     *  <p>Error-specific additional fields.</p>
      */
 
     public Map<String, java.lang.Object> values() {
@@ -75,7 +76,7 @@ public class AttributeDefinitionTypeConflictErrorImpl implements AttributeDefini
     }
 
     /**
-     *
+     *  <p>Unique identifier of the Product Type containing the conflicting name.</p>
      */
 
     public String getConflictingProductTypeId() {
@@ -83,7 +84,7 @@ public class AttributeDefinitionTypeConflictErrorImpl implements AttributeDefini
     }
 
     /**
-     *
+     *  <p>Name of the Product Type containing the conflicting name.</p>
      */
 
     public String getConflictingProductTypeName() {
@@ -91,7 +92,7 @@ public class AttributeDefinitionTypeConflictErrorImpl implements AttributeDefini
     }
 
     /**
-     *
+     *  <p>Name of the conflicting Attribute.</p>
      */
 
     public String getConflictingAttributeName() {

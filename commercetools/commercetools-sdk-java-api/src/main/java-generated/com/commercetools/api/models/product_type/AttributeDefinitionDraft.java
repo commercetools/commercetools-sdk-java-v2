@@ -36,6 +36,7 @@ public interface AttributeDefinitionDraft {
 
     /**
      *  <p>Describes the Type of the Attribute.</p>
+     *  <p>When the <code>type</code> is different for an AttributeDefinition using the same name in multiple ProductTypes, an AttributeDefinitionTypeConflict error is returned.</p>
      */
     @NotNull
     @Valid
@@ -43,7 +44,8 @@ public interface AttributeDefinitionDraft {
     public AttributeType getType();
 
     /**
-     *  <p>User-defined name of the Attribute that is unique with the Project. When using the same <code>name</code> for an Attribute in multiple ProductTypes, all fields of the AttributeDefinition of this Attribute must be the same across the ProductTypes. Otherwise an AttributeDefinitionAlreadyExistsError will be returned. An exception to this are the values of an <code>enum</code> or <code>lenum</code> Type and sets thereof.</p>
+     *  <p>User-defined name of the Attribute that is unique with the Project.</p>
+     *  <p>When using the same <code>name</code> for an Attribute in multiple ProductTypes, all fields of the AttributeDefinition of this Attribute must be the same across the ProductTypes, else an AttributeDefinitionAlreadyExists error is returned. An exception to this are the values of an <code>enum</code> or <code>lenum</code> Type and sets thereof.</p>
      */
     @NotNull
     @JsonProperty("name")

@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * InvalidFieldError
+ *  <p>Returned when a field has an invalid value.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class InvalidFieldErrorImpl implements InvalidFieldError, ModelBase {
@@ -59,7 +59,7 @@ public class InvalidFieldErrorImpl implements InvalidFieldError, ModelBase {
     }
 
     /**
-     *
+     *  <p><code>"The value $invalidValue is not valid for field $field."</code></p>
      */
 
     public String getMessage() {
@@ -67,7 +67,7 @@ public class InvalidFieldErrorImpl implements InvalidFieldError, ModelBase {
     }
 
     /**
-     *
+     *  <p>Error-specific additional fields.</p>
      */
 
     public Map<String, java.lang.Object> values() {
@@ -75,7 +75,7 @@ public class InvalidFieldErrorImpl implements InvalidFieldError, ModelBase {
     }
 
     /**
-     *
+     *  <p>Name of the field with the invalid value.</p>
      */
 
     public String getField() {
@@ -83,7 +83,7 @@ public class InvalidFieldErrorImpl implements InvalidFieldError, ModelBase {
     }
 
     /**
-     *
+     *  <p>Value invalid for the field.</p>
      */
 
     public java.lang.Object getInvalidValue() {
@@ -91,7 +91,7 @@ public class InvalidFieldErrorImpl implements InvalidFieldError, ModelBase {
     }
 
     /**
-     *
+     *  <p>Fixed set of allowed values for the field, if any.</p>
      */
 
     public java.util.List<java.lang.Object> getAllowedValues() {

@@ -5,13 +5,16 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.validation.constraints.NotNull;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * QueryTimedOutError
+ *  <p>Returned when the query times out.</p>
+ *  <p>If a query constantly times out, please check if it follows the performance best practices.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -28,6 +31,22 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface QueryTimedOutError extends ErrorObject {
 
     String QUERY_TIMED_OUT = "QueryTimedOut";
+
+    /**
+     *
+     */
+    @NotNull
+    @JsonProperty("code")
+    public String getCode();
+
+    /**
+     *  <p><code>"The query timed out. If your query constantly times out, please check that it follows the performance best practices (see https://docs.commercetools.com/api/predicates/query#performance-considerations)."</code></p>
+     */
+    @NotNull
+    @JsonProperty("message")
+    public String getMessage();
+
+    public void setMessage(final String message);
 
     public static QueryTimedOutError of() {
         return new QueryTimedOutErrorImpl();

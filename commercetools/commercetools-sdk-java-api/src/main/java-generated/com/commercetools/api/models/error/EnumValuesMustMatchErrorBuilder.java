@@ -26,7 +26,7 @@ public class EnumValuesMustMatchErrorBuilder implements Builder<EnumValuesMustMa
     private Map<String, java.lang.Object> values = new HashMap<>();
 
     /**
-     *
+     *  <p><code>"The given values must be equal to the existing enum values."</code></p>
      */
 
     public EnumValuesMustMatchErrorBuilder message(final String message) {
@@ -35,7 +35,7 @@ public class EnumValuesMustMatchErrorBuilder implements Builder<EnumValuesMustMa
     }
 
     /**
-     *
+     *  <p>Error-specific additional fields.</p>
      */
 
     public EnumValuesMustMatchErrorBuilder values(final Map<String, java.lang.Object> values) {
@@ -44,7 +44,7 @@ public class EnumValuesMustMatchErrorBuilder implements Builder<EnumValuesMustMa
     }
 
     /**
-     *
+     *  <p>Error-specific additional fields.</p>
      */
 
     public EnumValuesMustMatchErrorBuilder addValue(final String key, final java.lang.Object value) {

@@ -26,7 +26,7 @@ public class PendingOperationErrorBuilder implements Builder<PendingOperationErr
     private Map<String, java.lang.Object> values = new HashMap<>();
 
     /**
-     *
+     *  <p>Plain text description of the error.</p>
      */
 
     public PendingOperationErrorBuilder message(final String message) {
@@ -35,7 +35,7 @@ public class PendingOperationErrorBuilder implements Builder<PendingOperationErr
     }
 
     /**
-     *
+     *  <p>Error-specific additional fields.</p>
      */
 
     public PendingOperationErrorBuilder values(final Map<String, java.lang.Object> values) {
@@ -44,7 +44,7 @@ public class PendingOperationErrorBuilder implements Builder<PendingOperationErr
     }
 
     /**
-     *
+     *  <p>Error-specific additional fields.</p>
      */
 
     public PendingOperationErrorBuilder addValue(final String key, final java.lang.Object value) {

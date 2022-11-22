@@ -13,7 +13,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * DuplicateEnumValuesError
+ *  <p>Returned when an AttributeEnumType or AttributeLocalizedEnumType contains duplicate keys.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -36,8 +36,24 @@ public interface DuplicateEnumValuesError extends ErrorObject {
      *
      */
     @NotNull
+    @JsonProperty("code")
+    public String getCode();
+
+    /**
+     *  <p><code>"The enum values contain duplicate keys: $listOfDuplicateKeys."</code></p>
+     */
+    @NotNull
+    @JsonProperty("message")
+    public String getMessage();
+
+    /**
+     *  <p>Duplicate keys.</p>
+     */
+    @NotNull
     @JsonProperty("duplicates")
     public List<String> getDuplicates();
+
+    public void setMessage(final String message);
 
     @JsonIgnore
     public void setDuplicates(final String... duplicates);

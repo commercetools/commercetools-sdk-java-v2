@@ -15,7 +15,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * AttributeNameDoesNotExistError
+ *  <p>Returned when an AttributeDefinition does not exist for an Attribute <code>name</code>.</p>
+ *  <p>The error is returned as a failed response to the Change AttributeDefinition Name update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class AttributeNameDoesNotExistErrorImpl implements AttributeNameDoesNotExistError, ModelBase {
@@ -51,7 +52,7 @@ public class AttributeNameDoesNotExistErrorImpl implements AttributeNameDoesNotE
     }
 
     /**
-     *
+     *  <p><code>"Attribute definition for $attributeName does not exist on type $typeName."</code></p>
      */
 
     public String getMessage() {
@@ -59,7 +60,7 @@ public class AttributeNameDoesNotExistErrorImpl implements AttributeNameDoesNotE
     }
 
     /**
-     *
+     *  <p>Error-specific additional fields.</p>
      */
 
     public Map<String, java.lang.Object> values() {
@@ -67,7 +68,7 @@ public class AttributeNameDoesNotExistErrorImpl implements AttributeNameDoesNotE
     }
 
     /**
-     *
+     *  <p>Non-existent Attribute name.</p>
      */
 
     public String getInvalidAttributeName() {

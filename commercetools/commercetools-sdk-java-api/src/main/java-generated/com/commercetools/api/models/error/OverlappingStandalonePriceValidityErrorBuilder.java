@@ -60,7 +60,7 @@ public class OverlappingStandalonePriceValidityErrorBuilder
     private java.time.ZonedDateTime conflictingValidUntil;
 
     /**
-     *
+     *  <p><code>Two standalone prices have overlapping validity periods."</code></p>
      */
 
     public OverlappingStandalonePriceValidityErrorBuilder message(final String message) {
@@ -69,7 +69,7 @@ public class OverlappingStandalonePriceValidityErrorBuilder
     }
 
     /**
-     *
+     *  <p>Error-specific additional fields.</p>
      */
 
     public OverlappingStandalonePriceValidityErrorBuilder values(final Map<String, java.lang.Object> values) {
@@ -78,7 +78,7 @@ public class OverlappingStandalonePriceValidityErrorBuilder
     }
 
     /**
-     *
+     *  <p>Error-specific additional fields.</p>
      */
 
     public OverlappingStandalonePriceValidityErrorBuilder addValue(final String key, final java.lang.Object value) {
@@ -90,7 +90,7 @@ public class OverlappingStandalonePriceValidityErrorBuilder
     }
 
     /**
-     *  <p>Reference to a StandalonePrice.</p>
+     *  <p>Reference to the conflicting Standalone Price.</p>
      */
 
     public OverlappingStandalonePriceValidityErrorBuilder conflictingStandalonePrice(
@@ -102,7 +102,7 @@ public class OverlappingStandalonePriceValidityErrorBuilder
     }
 
     /**
-     *  <p>Reference to a StandalonePrice.</p>
+     *  <p>Reference to the conflicting Standalone Price.</p>
      */
 
     public OverlappingStandalonePriceValidityErrorBuilder conflictingStandalonePrice(
@@ -112,7 +112,7 @@ public class OverlappingStandalonePriceValidityErrorBuilder
     }
 
     /**
-     *
+     *  <p>SKU of the ProductVariant to which the conflicting Standalone Price is associated.</p>
      */
 
     public OverlappingStandalonePriceValidityErrorBuilder sku(final String sku) {
@@ -121,7 +121,7 @@ public class OverlappingStandalonePriceValidityErrorBuilder
     }
 
     /**
-     *
+     *  <p>Currency code of the country.</p>
      */
 
     public OverlappingStandalonePriceValidityErrorBuilder currency(final String currency) {
@@ -130,7 +130,7 @@ public class OverlappingStandalonePriceValidityErrorBuilder
     }
 
     /**
-     *
+     *  <p>Country code of the geographic location.</p>
      */
 
     public OverlappingStandalonePriceValidityErrorBuilder country(@Nullable final String country) {
@@ -139,7 +139,7 @@ public class OverlappingStandalonePriceValidityErrorBuilder
     }
 
     /**
-     *  <p>ResourceIdentifier to a CustomerGroup.</p>
+     *  <p>CustomerGroup for which the Standalone Price is valid.</p>
      */
 
     public OverlappingStandalonePriceValidityErrorBuilder customerGroup(
@@ -151,7 +151,7 @@ public class OverlappingStandalonePriceValidityErrorBuilder
     }
 
     /**
-     *  <p>ResourceIdentifier to a CustomerGroup.</p>
+     *  <p>CustomerGroup for which the Standalone Price is valid.</p>
      */
 
     public OverlappingStandalonePriceValidityErrorBuilder customerGroup(
@@ -161,7 +161,7 @@ public class OverlappingStandalonePriceValidityErrorBuilder
     }
 
     /**
-     *  <p>ResourceIdentifier to a Channel.</p>
+     *  <p>Channel for which the Standalone Price is valid.</p>
      */
 
     public OverlappingStandalonePriceValidityErrorBuilder channel(
@@ -172,7 +172,7 @@ public class OverlappingStandalonePriceValidityErrorBuilder
     }
 
     /**
-     *  <p>ResourceIdentifier to a Channel.</p>
+     *  <p>Channel for which the Standalone Price is valid.</p>
      */
 
     public OverlappingStandalonePriceValidityErrorBuilder channel(
@@ -182,7 +182,7 @@ public class OverlappingStandalonePriceValidityErrorBuilder
     }
 
     /**
-     *
+     *  <p>Date and time (UTC) from which the Standalone Price is valid.</p>
      */
 
     public OverlappingStandalonePriceValidityErrorBuilder validFrom(@Nullable final java.time.ZonedDateTime validFrom) {
@@ -191,7 +191,7 @@ public class OverlappingStandalonePriceValidityErrorBuilder
     }
 
     /**
-     *
+     *  <p>Date and time (UTC) until which the Standalone Price is valid.</p>
      */
 
     public OverlappingStandalonePriceValidityErrorBuilder validUntil(
@@ -201,7 +201,7 @@ public class OverlappingStandalonePriceValidityErrorBuilder
     }
 
     /**
-     *
+     *  <p>Date and time (UTC) from which the conflicting Standalone Price is valid.</p>
      */
 
     public OverlappingStandalonePriceValidityErrorBuilder conflictingValidFrom(
@@ -211,7 +211,7 @@ public class OverlappingStandalonePriceValidityErrorBuilder
     }
 
     /**
-     *
+     *  <p>Date and time (UTC) until which the conflicting Standalone Price is valid.</p>
      */
 
     public OverlappingStandalonePriceValidityErrorBuilder conflictingValidUntil(

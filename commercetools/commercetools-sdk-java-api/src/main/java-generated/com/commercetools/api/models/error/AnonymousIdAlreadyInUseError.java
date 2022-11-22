@@ -5,13 +5,16 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.validation.constraints.NotNull;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * AnonymousIdAlreadyInUseError
+ *  <p>Returned when the anonymous ID is being used by another resource.</p>
+ *  <p>The client application should choose another anonymous ID or retrieve an automatically generated one.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -28,6 +31,22 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface AnonymousIdAlreadyInUseError extends ErrorObject {
 
     String ANONYMOUS_ID_ALREADY_IN_USE = "AnonymousIdAlreadyInUse";
+
+    /**
+     *
+     */
+    @NotNull
+    @JsonProperty("code")
+    public String getCode();
+
+    /**
+     *  <p><code>"The given anonymous ID is already in use."</code></p>
+     */
+    @NotNull
+    @JsonProperty("message")
+    public String getMessage();
+
+    public void setMessage(final String message);
 
     public static AnonymousIdAlreadyInUseError of() {
         return new AnonymousIdAlreadyInUseErrorImpl();

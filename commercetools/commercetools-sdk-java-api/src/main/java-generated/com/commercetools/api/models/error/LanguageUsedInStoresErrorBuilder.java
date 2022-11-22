@@ -26,7 +26,7 @@ public class LanguageUsedInStoresErrorBuilder implements Builder<LanguageUsedInS
     private Map<String, java.lang.Object> values = new HashMap<>();
 
     /**
-     *
+     *  <p><code>"Language(s) in use by a store cannot be deleted. Remove them in all the stores of this project first."</code></p>
      */
 
     public LanguageUsedInStoresErrorBuilder message(final String message) {
@@ -35,7 +35,7 @@ public class LanguageUsedInStoresErrorBuilder implements Builder<LanguageUsedInS
     }
 
     /**
-     *
+     *  <p>Error-specific additional fields.</p>
      */
 
     public LanguageUsedInStoresErrorBuilder values(final Map<String, java.lang.Object> values) {
@@ -44,7 +44,7 @@ public class LanguageUsedInStoresErrorBuilder implements Builder<LanguageUsedInS
     }
 
     /**
-     *
+     *  <p>Error-specific additional fields.</p>
      */
 
     public LanguageUsedInStoresErrorBuilder addValue(final String key, final java.lang.Object value) {

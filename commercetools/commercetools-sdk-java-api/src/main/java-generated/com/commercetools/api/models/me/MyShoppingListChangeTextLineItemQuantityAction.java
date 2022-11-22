@@ -33,14 +33,14 @@ public interface MyShoppingListChangeTextLineItemQuantityAction extends MyShoppi
     String CHANGE_TEXT_LINE_ITEM_QUANTITY = "changeTextLineItemQuantity";
 
     /**
-     *
+     *  <p>The <code>id</code> of the TextLineItem to update.</p>
      */
     @NotNull
     @JsonProperty("textLineItemId")
     public String getTextLineItemId();
 
     /**
-     *
+     *  <p>New value to set. If <code>0</code>, the TextLineItem is removed from the ShoppingList.</p>
      */
     @NotNull
     @JsonProperty("quantity")

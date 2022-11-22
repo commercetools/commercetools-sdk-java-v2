@@ -15,7 +15,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * EditPreviewFailedError
+ *  <p>Returned when a preview to find an appropriate Shipping Method for an OrderEdit could not be generated.</p>
+ *  <p>The error is returned as a failed response to the Get Shipping Methods for an OrderEdit request.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class EditPreviewFailedErrorImpl implements EditPreviewFailedError, ModelBase {
@@ -51,7 +52,7 @@ public class EditPreviewFailedErrorImpl implements EditPreviewFailedError, Model
     }
 
     /**
-     *
+     *  <p><code>"Error while applying staged actions. ShippingMethods could not be determined."</code></p>
      */
 
     public String getMessage() {
@@ -59,7 +60,7 @@ public class EditPreviewFailedErrorImpl implements EditPreviewFailedError, Model
     }
 
     /**
-     *
+     *  <p>Error-specific additional fields.</p>
      */
 
     public Map<String, java.lang.Object> values() {
@@ -67,7 +68,7 @@ public class EditPreviewFailedErrorImpl implements EditPreviewFailedError, Model
     }
 
     /**
-     *
+     *  <p>State of the OrderEdit where the <code>stagedActions</code> cannot be applied to the Order.</p>
      */
 
     public com.commercetools.api.models.order_edit.OrderEditPreviewFailure getResult() {

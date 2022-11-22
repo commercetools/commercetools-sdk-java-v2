@@ -14,6 +14,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     InvalidJsonInputError invalidJsonInputError = InvalidJsonInputError.builder()
  *             .message("{message}")
+ *             .detailedErrorMessage("{detailedErrorMessage}")
  *             .build()
  * </code></pre>
  * </div>
@@ -25,8 +26,10 @@ public class InvalidJsonInputErrorBuilder implements Builder<InvalidJsonInputErr
 
     private Map<String, java.lang.Object> values = new HashMap<>();
 
+    private String detailedErrorMessage;
+
     /**
-     *
+     *  <p><code>"Request body does not contain valid JSON."</code></p>
      */
 
     public InvalidJsonInputErrorBuilder message(final String message) {
@@ -35,7 +38,7 @@ public class InvalidJsonInputErrorBuilder implements Builder<InvalidJsonInputErr
     }
 
     /**
-     *
+     *  <p>Error-specific additional fields.</p>
      */
 
     public InvalidJsonInputErrorBuilder values(final Map<String, java.lang.Object> values) {
@@ -44,7 +47,7 @@ public class InvalidJsonInputErrorBuilder implements Builder<InvalidJsonInputErr
     }
 
     /**
-     *
+     *  <p>Error-specific additional fields.</p>
      */
 
     public InvalidJsonInputErrorBuilder addValue(final String key, final java.lang.Object value) {
@@ -52,6 +55,15 @@ public class InvalidJsonInputErrorBuilder implements Builder<InvalidJsonInputErr
             values = new HashMap<>();
         }
         values.put(key, value);
+        return this;
+    }
+
+    /**
+     *  <p>Further explanation about why the JSON is invalid.</p>
+     */
+
+    public InvalidJsonInputErrorBuilder detailedErrorMessage(final String detailedErrorMessage) {
+        this.detailedErrorMessage = detailedErrorMessage;
         return this;
     }
 
@@ -63,17 +75,22 @@ public class InvalidJsonInputErrorBuilder implements Builder<InvalidJsonInputErr
         return this.values;
     }
 
+    public String getDetailedErrorMessage() {
+        return this.detailedErrorMessage;
+    }
+
     public InvalidJsonInputError build() {
         Objects.requireNonNull(message, InvalidJsonInputError.class + ": message is missing");
         Objects.requireNonNull(values, InvalidJsonInputError.class + ": values are missing");
-        return new InvalidJsonInputErrorImpl(message, values);
+        Objects.requireNonNull(detailedErrorMessage, InvalidJsonInputError.class + ": detailedErrorMessage is missing");
+        return new InvalidJsonInputErrorImpl(message, values, detailedErrorMessage);
     }
 
     /**
      * builds InvalidJsonInputError without checking for non null required values
      */
     public InvalidJsonInputError buildUnchecked() {
-        return new InvalidJsonInputErrorImpl(message, values);
+        return new InvalidJsonInputErrorImpl(message, values, detailedErrorMessage);
     }
 
     public static InvalidJsonInputErrorBuilder of() {
@@ -84,6 +101,7 @@ public class InvalidJsonInputErrorBuilder implements Builder<InvalidJsonInputErr
         InvalidJsonInputErrorBuilder builder = new InvalidJsonInputErrorBuilder();
         builder.message = template.getMessage();
         builder.values = template.values();
+        builder.detailedErrorMessage = template.getDetailedErrorMessage();
         return builder;
     }
 

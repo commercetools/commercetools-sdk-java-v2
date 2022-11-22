@@ -26,7 +26,7 @@ public class SearchIndexingInProgressErrorBuilder implements Builder<SearchIndex
     private Map<String, java.lang.Object> values = new HashMap<>();
 
     /**
-     *
+     *  <p><code>"The indexing is currently in progress. Please wait until the status is "Activated" to execute search requests."</code></p>
      */
 
     public SearchIndexingInProgressErrorBuilder message(final String message) {
@@ -35,7 +35,7 @@ public class SearchIndexingInProgressErrorBuilder implements Builder<SearchIndex
     }
 
     /**
-     *
+     *  <p>Error-specific additional fields.</p>
      */
 
     public SearchIndexingInProgressErrorBuilder values(final Map<String, java.lang.Object> values) {
@@ -44,7 +44,7 @@ public class SearchIndexingInProgressErrorBuilder implements Builder<SearchIndex
     }
 
     /**
-     *
+     *  <p>Error-specific additional fields.</p>
      */
 
     public SearchIndexingInProgressErrorBuilder addValue(final String key, final java.lang.Object value) {

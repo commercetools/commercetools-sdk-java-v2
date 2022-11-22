@@ -15,7 +15,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>This update action produces the StoreSupplyChannelsChanged Message.</p>
+ *  <p>Setting a supply channel produces the StoreSupplyChannelsChanged Message.</p>
+ *  <p>Setting a Channel without the <code>InventorySupply</code> ChannelRoleEnum returns a MissingRoleOnChannel error.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StoreSetSupplyChannelsActionImpl implements StoreSetSupplyChannelsAction, ModelBase {
@@ -44,7 +45,7 @@ public class StoreSetSupplyChannelsActionImpl implements StoreSetSupplyChannelsA
     }
 
     /**
-     *  <p>Value to set. If not defined, the Store's <code>supplyChannels</code> are unset. Any attempt to use Channel without the <code>InventorySupply</code> ChannelRoleEnum will fail with a MissingRoleOnChannel error.</p>
+     *  <p>Value to set. If not defined, the Store's <code>supplyChannels</code> are unset.</p>
      */
 
     public java.util.List<com.commercetools.api.models.channel.ChannelResourceIdentifier> getSupplyChannels() {

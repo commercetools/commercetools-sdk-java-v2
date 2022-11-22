@@ -26,7 +26,7 @@ public class InvalidInputErrorBuilder implements Builder<InvalidInputError> {
     private Map<String, java.lang.Object> values = new HashMap<>();
 
     /**
-     *
+     *  <p>Description of the constraints that are not met by the request. For example, <code>"Invalid $propertyName. It may be a non-empty string up to $maxLength"</code>.</p>
      */
 
     public InvalidInputErrorBuilder message(final String message) {
@@ -35,7 +35,7 @@ public class InvalidInputErrorBuilder implements Builder<InvalidInputError> {
     }
 
     /**
-     *
+     *  <p>Error-specific additional fields.</p>
      */
 
     public InvalidInputErrorBuilder values(final Map<String, java.lang.Object> values) {
@@ -44,7 +44,7 @@ public class InvalidInputErrorBuilder implements Builder<InvalidInputError> {
     }
 
     /**
-     *
+     *  <p>Error-specific additional fields.</p>
      */
 
     public InvalidInputErrorBuilder addValue(final String key, final java.lang.Object value) {

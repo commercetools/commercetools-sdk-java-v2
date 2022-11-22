@@ -48,7 +48,7 @@ public class ProductProjectionPagedQueryResponseBuilder implements Builder<Produ
     }
 
     /**
-     *
+     *  <p>Actual number of results returned.</p>
      */
 
     public ProductProjectionPagedQueryResponseBuilder count(final Long count) {
@@ -57,7 +57,7 @@ public class ProductProjectionPagedQueryResponseBuilder implements Builder<Produ
     }
 
     /**
-     *
+     *  <p>Total number of results matching the query. This number is an estimation that is not strongly consistent. This field is returned by default. For improved performance, calculating this field can be deactivated by using the query parameter <code>withTotal=false</code>. When the results are filtered with a Query Predicate, <code>total</code> is subject to a limit.</p>
      */
 
     public ProductProjectionPagedQueryResponseBuilder total(@Nullable final Long total) {
@@ -75,7 +75,7 @@ public class ProductProjectionPagedQueryResponseBuilder implements Builder<Produ
     }
 
     /**
-     *
+     *  <p>ProductProjections matching the query.</p>
      */
 
     public ProductProjectionPagedQueryResponseBuilder results(
@@ -85,7 +85,7 @@ public class ProductProjectionPagedQueryResponseBuilder implements Builder<Produ
     }
 
     /**
-     *
+     *  <p>ProductProjections matching the query.</p>
      */
 
     public ProductProjectionPagedQueryResponseBuilder results(
@@ -95,7 +95,7 @@ public class ProductProjectionPagedQueryResponseBuilder implements Builder<Produ
     }
 
     /**
-     *
+     *  <p>ProductProjections matching the query.</p>
      */
 
     public ProductProjectionPagedQueryResponseBuilder plusResults(
@@ -108,7 +108,7 @@ public class ProductProjectionPagedQueryResponseBuilder implements Builder<Produ
     }
 
     /**
-     *
+     *  <p>ProductProjections matching the query.</p>
      */
 
     public ProductProjectionPagedQueryResponseBuilder plusResults(
@@ -121,7 +121,7 @@ public class ProductProjectionPagedQueryResponseBuilder implements Builder<Produ
     }
 
     /**
-     *
+     *  <p>ProductProjections matching the query.</p>
      */
 
     public ProductProjectionPagedQueryResponseBuilder withResults(

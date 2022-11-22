@@ -16,7 +16,14 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * MatchingPriceNotFoundError
+ *  <p>Returned when the Product Variant does not have a Price according to the Product <code>priceMode</code> value for a selected currency, country, Customer Group, or Channel.</p>
+ *  <p>The error is returned as a failed response to:</p>
+ *  <ul>
+ *   <li>Add LineItem, Add CustomLineItem, and Add DiscountCode update actions on Carts.</li>
+ *   <li>Add LineItem, Add CustomLineItem, and Add DiscountCode update actions on Order Edits.</li>
+ *   <li>Create Order from Cart and Create Order from Cart in a Store requests on Orders.</li>
+ *   <li>Create Order from a Cart and Create Order in a Store from a Cart requests on My Orders.</li>
+ *  </ul>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -40,43 +47,59 @@ public interface MatchingPriceNotFoundError extends ErrorObject {
      *
      */
     @NotNull
+    @JsonProperty("code")
+    public String getCode();
+
+    /**
+     *  <p><code>"The variant $variantId of product $productId does not contain a price for currency $currencyCode, $country, $customerGroup, $channel."</code></p>
+     */
+    @NotNull
+    @JsonProperty("message")
+    public String getMessage();
+
+    /**
+     *  <p>Unique identifier of a Product.</p>
+     */
+    @NotNull
     @JsonProperty("productId")
     public String getProductId();
 
     /**
-     *
+     *  <p>Unique identifier of a ProductVariant in the Product.</p>
      */
     @NotNull
     @JsonProperty("variantId")
     public Integer getVariantId();
 
     /**
-     *
+     *  <p>Currency code of the country.</p>
      */
 
     @JsonProperty("currency")
     public String getCurrency();
 
     /**
-     *
+     *  <p>Country code of the geographic location.</p>
      */
 
     @JsonProperty("country")
     public String getCountry();
 
     /**
-     *  <p>Reference to a CustomerGroup.</p>
+     *  <p>Customer Group associated with the Price.</p>
      */
     @Valid
     @JsonProperty("customerGroup")
     public CustomerGroupReference getCustomerGroup();
 
     /**
-     *  <p>Reference to a Channel.</p>
+     *  <p>Channel associated with the Price.</p>
      */
     @Valid
     @JsonProperty("channel")
     public ChannelReference getChannel();
+
+    public void setMessage(final String message);
 
     public void setProductId(final String productId);
 

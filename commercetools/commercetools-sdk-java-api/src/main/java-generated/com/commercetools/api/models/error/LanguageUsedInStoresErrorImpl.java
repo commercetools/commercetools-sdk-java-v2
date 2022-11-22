@@ -15,7 +15,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * LanguageUsedInStoresError
+ *  <p>Returned when a language cannot be removed from a Project as it is being used by a Store.</p>
+ *  <p>The error is returned as a failed response to the Change Languages update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class LanguageUsedInStoresErrorImpl implements LanguageUsedInStoresError, ModelBase {
@@ -47,7 +48,7 @@ public class LanguageUsedInStoresErrorImpl implements LanguageUsedInStoresError,
     }
 
     /**
-     *
+     *  <p><code>"Language(s) in use by a store cannot be deleted. Remove them in all the stores of this project first."</code></p>
      */
 
     public String getMessage() {
@@ -55,7 +56,7 @@ public class LanguageUsedInStoresErrorImpl implements LanguageUsedInStoresError,
     }
 
     /**
-     *
+     *  <p>Error-specific additional fields.</p>
      */
 
     public Map<String, java.lang.Object> values() {

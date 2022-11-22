@@ -15,7 +15,12 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * PriceChangedError
+ *  <p>Returned when the Price, Tax Rate, or Shipping Rate of some Line Items changed since they were last added to the Cart.</p>
+ *  <p>The error is returned as a failed response to:</p>
+ *  <ul>
+ *   <li>Create Order from Cart and Create Order from Cart in a Store requests on Orders.</li>
+ *   <li>Create Order from a Cart and Create Order in a Store from a Cart requests on My Orders.</li>
+ *  </ul>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class PriceChangedErrorImpl implements PriceChangedError, ModelBase {
@@ -55,7 +60,7 @@ public class PriceChangedErrorImpl implements PriceChangedError, ModelBase {
     }
 
     /**
-     *
+     *  <p>Plain text description of the reason for the Price change. For example, <code>"The price or tax of some line items changed at the time of placing the order: $lineItems."</code>.</p>
      */
 
     public String getMessage() {
@@ -63,7 +68,7 @@ public class PriceChangedErrorImpl implements PriceChangedError, ModelBase {
     }
 
     /**
-     *
+     *  <p>Error-specific additional fields.</p>
      */
 
     public Map<String, java.lang.Object> values() {
@@ -71,7 +76,7 @@ public class PriceChangedErrorImpl implements PriceChangedError, ModelBase {
     }
 
     /**
-     *
+     *  <p>Unique identifiers of the Line Items for which the Price or TaxRate has changed.</p>
      */
 
     public java.util.List<String> getLineItems() {
@@ -79,7 +84,7 @@ public class PriceChangedErrorImpl implements PriceChangedError, ModelBase {
     }
 
     /**
-     *
+     *  <p><code>true</code> if the ShippingRate has changed.</p>
      */
 
     public Boolean getShipping() {

@@ -34,14 +34,14 @@ public interface MyShoppingListSetTextLineItemDescriptionAction extends MyShoppi
     String SET_TEXT_LINE_ITEM_DESCRIPTION = "setTextLineItemDescription";
 
     /**
-     *
+     *  <p>The <code>id</code> of the TextLineItem to update.</p>
      */
     @NotNull
     @JsonProperty("textLineItemId")
     public String getTextLineItemId();
 
     /**
-     *  <p>JSON object where the keys are of type Locale, and the values are the strings used for the corresponding language.</p>
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
      */
     @Valid
     @JsonProperty("description")

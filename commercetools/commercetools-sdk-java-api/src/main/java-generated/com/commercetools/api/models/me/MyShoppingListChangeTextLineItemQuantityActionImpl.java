@@ -48,7 +48,7 @@ public class MyShoppingListChangeTextLineItemQuantityActionImpl
     }
 
     /**
-     *
+     *  <p>The <code>id</code> of the TextLineItem to update.</p>
      */
 
     public String getTextLineItemId() {
@@ -56,7 +56,7 @@ public class MyShoppingListChangeTextLineItemQuantityActionImpl
     }
 
     /**
-     *
+     *  <p>New value to set. If <code>0</code>, the TextLineItem is removed from the ShoppingList.</p>
      */
 
     public Long getQuantity() {

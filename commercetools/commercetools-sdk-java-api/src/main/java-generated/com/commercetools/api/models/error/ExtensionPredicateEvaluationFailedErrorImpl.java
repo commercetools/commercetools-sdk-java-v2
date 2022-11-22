@@ -15,10 +15,10 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * AccessDeniedError
+ *  <p>Returned when the predicate defined in the ExtensionTrigger could not be evaluated due to a missing field.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-public class AccessDeniedErrorImpl implements AccessDeniedError, ModelBase {
+public class ExtensionPredicateEvaluationFailedErrorImpl implements ExtensionPredicateEvaluationFailedError, ModelBase {
 
     private String code;
 
@@ -26,16 +26,20 @@ public class AccessDeniedErrorImpl implements AccessDeniedError, ModelBase {
 
     private Map<String, java.lang.Object> values;
 
+    private com.commercetools.api.models.error.ErrorByExtension errorByExtension;
+
     @JsonCreator
-    AccessDeniedErrorImpl(@JsonProperty("message") final String message,
-            @JsonProperty("values") final Map<String, java.lang.Object> values) {
+    ExtensionPredicateEvaluationFailedErrorImpl(@JsonProperty("message") final String message,
+            @JsonProperty("values") final Map<String, java.lang.Object> values,
+            @JsonProperty("errorByExtension") final com.commercetools.api.models.error.ErrorByExtension errorByExtension) {
         this.message = message;
         this.values = values;
-        this.code = ACCESS_DENIED;
+        this.errorByExtension = errorByExtension;
+        this.code = EXTENSION_PREDICATE_EVALUATION_FAILED;
     }
 
-    public AccessDeniedErrorImpl() {
-        this.code = ACCESS_DENIED;
+    public ExtensionPredicateEvaluationFailedErrorImpl() {
+        this.code = EXTENSION_PREDICATE_EVALUATION_FAILED;
     }
 
     /**
@@ -47,7 +51,7 @@ public class AccessDeniedErrorImpl implements AccessDeniedError, ModelBase {
     }
 
     /**
-     *
+     *  <p><code>"The compared field $fieldName is not present."</code></p>
      */
 
     public String getMessage() {
@@ -55,11 +59,19 @@ public class AccessDeniedErrorImpl implements AccessDeniedError, ModelBase {
     }
 
     /**
-     *
+     *  <p>Error-specific additional fields.</p>
      */
 
     public Map<String, java.lang.Object> values() {
         return values;
+    }
+
+    /**
+     *  <p>Details about the API Extension that was involved in the error.</p>
+     */
+
+    public com.commercetools.api.models.error.ErrorByExtension getErrorByExtension() {
+        return this.errorByExtension;
     }
 
     public void setMessage(final String message) {
@@ -73,6 +85,10 @@ public class AccessDeniedErrorImpl implements AccessDeniedError, ModelBase {
         values.put(key, value);
     }
 
+    public void setErrorByExtension(final com.commercetools.api.models.error.ErrorByExtension errorByExtension) {
+        this.errorByExtension = errorByExtension;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -81,17 +97,22 @@ public class AccessDeniedErrorImpl implements AccessDeniedError, ModelBase {
         if (o == null || getClass() != o.getClass())
             return false;
 
-        AccessDeniedErrorImpl that = (AccessDeniedErrorImpl) o;
+        ExtensionPredicateEvaluationFailedErrorImpl that = (ExtensionPredicateEvaluationFailedErrorImpl) o;
 
         return new EqualsBuilder().append(code, that.code)
                 .append(message, that.message)
                 .append(values, that.values)
+                .append(errorByExtension, that.errorByExtension)
                 .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(code).append(message).append(values).toHashCode();
+        return new HashCodeBuilder(17, 37).append(code)
+                .append(message)
+                .append(values)
+                .append(errorByExtension)
+                .toHashCode();
     }
 
 }

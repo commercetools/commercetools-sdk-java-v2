@@ -15,7 +15,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * AttributeDefinitionAlreadyExistsError
+ *  <p>Returned when the <code>name</code> of the AttributeDefinition conflicts with an existing Attribute.</p>
+ *  <p>The error is returned as a failed response to the Create ProductType request or Change AttributeDefinition Name update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class AttributeDefinitionAlreadyExistsErrorImpl implements AttributeDefinitionAlreadyExistsError, ModelBase {
@@ -59,7 +60,7 @@ public class AttributeDefinitionAlreadyExistsErrorImpl implements AttributeDefin
     }
 
     /**
-     *
+     *  <p><code>"An attribute definition with name $attributeName already exists on product type $productTypeName."</code></p>
      */
 
     public String getMessage() {
@@ -67,7 +68,7 @@ public class AttributeDefinitionAlreadyExistsErrorImpl implements AttributeDefin
     }
 
     /**
-     *
+     *  <p>Error-specific additional fields.</p>
      */
 
     public Map<String, java.lang.Object> values() {
@@ -75,7 +76,7 @@ public class AttributeDefinitionAlreadyExistsErrorImpl implements AttributeDefin
     }
 
     /**
-     *
+     *  <p>Unique identifier of the Product Type containing the conflicting name.</p>
      */
 
     public String getConflictingProductTypeId() {
@@ -83,7 +84,7 @@ public class AttributeDefinitionAlreadyExistsErrorImpl implements AttributeDefin
     }
 
     /**
-     *
+     *  <p>Name of the Product Type containing the conflicting name.</p>
      */
 
     public String getConflictingProductTypeName() {
@@ -91,7 +92,7 @@ public class AttributeDefinitionAlreadyExistsErrorImpl implements AttributeDefin
     }
 
     /**
-     *
+     *  <p>Name of the conflicting Attribute.</p>
      */
 
     public String getConflictingAttributeName() {

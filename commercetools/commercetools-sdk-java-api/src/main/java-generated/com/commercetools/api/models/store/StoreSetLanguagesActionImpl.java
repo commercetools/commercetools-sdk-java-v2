@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>This update action produces the StoreLanguagesChanged Message.</p>
+ *  <p>This update action produces the StoreLanguagesChanged Message. Adding a language other than the ones defined in the Project returns a ProjectNotConfiguredForLanguages error.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StoreSetLanguagesActionImpl implements StoreSetLanguagesAction, ModelBase {
@@ -43,7 +43,7 @@ public class StoreSetLanguagesActionImpl implements StoreSetLanguagesAction, Mod
     }
 
     /**
-     *  <p>Value to set. Any attempt to use languages other than the ones defined in the Project will fail with a ProjectNotConfiguredForLanguages error.</p>
+     *  <p>Value to set.</p>
      */
 
     public java.util.List<String> getLanguages() {

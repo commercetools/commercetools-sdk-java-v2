@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * DuplicateEnumValuesError
+ *  <p>Returned when an AttributeEnumType or AttributeLocalizedEnumType contains duplicate keys.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class DuplicateEnumValuesErrorImpl implements DuplicateEnumValuesError, ModelBase {
@@ -51,7 +51,7 @@ public class DuplicateEnumValuesErrorImpl implements DuplicateEnumValuesError, M
     }
 
     /**
-     *
+     *  <p><code>"The enum values contain duplicate keys: $listOfDuplicateKeys."</code></p>
      */
 
     public String getMessage() {
@@ -59,7 +59,7 @@ public class DuplicateEnumValuesErrorImpl implements DuplicateEnumValuesError, M
     }
 
     /**
-     *
+     *  <p>Error-specific additional fields.</p>
      */
 
     public Map<String, java.lang.Object> values() {
@@ -67,7 +67,7 @@ public class DuplicateEnumValuesErrorImpl implements DuplicateEnumValuesError, M
     }
 
     /**
-     *
+     *  <p>Duplicate keys.</p>
      */
 
     public java.util.List<String> getDuplicates() {

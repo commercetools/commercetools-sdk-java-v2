@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>If a language is used by a Store, it cannot be deleted. Attempts to delete such language will lead to LanguageUsedInStores errors.</p>
+ *  <p>Removing a language used by a Store returns a LanguageUsedInStores error.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProjectChangeLanguagesActionImpl implements ProjectChangeLanguagesAction, ModelBase {

@@ -43,21 +43,21 @@ public class ShoppingListLineItemBuilder implements Builder<ShoppingListLineItem
 
     private String productId;
 
-    @Nullable
-    private com.commercetools.api.models.common.LocalizedString productSlug;
-
     private com.commercetools.api.models.product_type.ProductTypeReference productType;
 
-    private Integer quantity;
+    private Long quantity;
+
+    @Nullable
+    private Long variantId;
 
     @Nullable
     private com.commercetools.api.models.product.ProductVariant variant;
 
     @Nullable
-    private Long variantId;
+    private com.commercetools.api.models.common.LocalizedString productSlug;
 
     /**
-     *
+     *  <p>Date and time (UTC) the ShoppingListLineItem was added to the ShoppingList.</p>
      */
 
     public ShoppingListLineItemBuilder addedAt(final java.time.ZonedDateTime addedAt) {
@@ -66,7 +66,7 @@ public class ShoppingListLineItemBuilder implements Builder<ShoppingListLineItem
     }
 
     /**
-     *  <p>Serves as value of the <code>custom</code> field on a resource or data type customized with a Type.</p>
+     *  <p>Custom Fields of the ShoppingListLineItem.</p>
      */
 
     public ShoppingListLineItemBuilder custom(
@@ -76,7 +76,7 @@ public class ShoppingListLineItemBuilder implements Builder<ShoppingListLineItem
     }
 
     /**
-     *  <p>Serves as value of the <code>custom</code> field on a resource or data type customized with a Type.</p>
+     *  <p>Custom Fields of the ShoppingListLineItem.</p>
      */
 
     public ShoppingListLineItemBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFields custom) {
@@ -85,7 +85,8 @@ public class ShoppingListLineItemBuilder implements Builder<ShoppingListLineItem
     }
 
     /**
-     *
+     *  <p>If the Product or Product Variant is deleted, <code>deactivatedAt</code> is the date and time (UTC) of deletion.</p>
+     *  <p>This data is updated in an eventual consistent manner when the Product Variant cannot be ordered anymore.</p>
      */
 
     public ShoppingListLineItemBuilder deactivatedAt(@Nullable final java.time.ZonedDateTime deactivatedAt) {
@@ -103,7 +104,8 @@ public class ShoppingListLineItemBuilder implements Builder<ShoppingListLineItem
     }
 
     /**
-     *  <p>JSON object where the keys are of type Locale, and the values are the strings used for the corresponding language.</p>
+     *  <p>Name of the Product.</p>
+     *  <p>This data is updated in an eventual consistent manner when the Product's name changes.</p>
      */
 
     public ShoppingListLineItemBuilder name(
@@ -113,7 +115,8 @@ public class ShoppingListLineItemBuilder implements Builder<ShoppingListLineItem
     }
 
     /**
-     *  <p>JSON object where the keys are of type Locale, and the values are the strings used for the corresponding language.</p>
+     *  <p>Name of the Product.</p>
+     *  <p>This data is updated in an eventual consistent manner when the Product's name changes.</p>
      */
 
     public ShoppingListLineItemBuilder name(final com.commercetools.api.models.common.LocalizedString name) {
@@ -122,7 +125,7 @@ public class ShoppingListLineItemBuilder implements Builder<ShoppingListLineItem
     }
 
     /**
-     *
+     *  <p>Unique identifier of a Product.</p>
      */
 
     public ShoppingListLineItemBuilder productId(final String productId) {
@@ -131,27 +134,7 @@ public class ShoppingListLineItemBuilder implements Builder<ShoppingListLineItem
     }
 
     /**
-     *  <p>JSON object where the keys are of type Locale, and the values are the strings used for the corresponding language.</p>
-     */
-
-    public ShoppingListLineItemBuilder productSlug(
-            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
-        this.productSlug = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
-        return this;
-    }
-
-    /**
-     *  <p>JSON object where the keys are of type Locale, and the values are the strings used for the corresponding language.</p>
-     */
-
-    public ShoppingListLineItemBuilder productSlug(
-            @Nullable final com.commercetools.api.models.common.LocalizedString productSlug) {
-        this.productSlug = productSlug;
-        return this;
-    }
-
-    /**
-     *  <p>Reference to a ProductType.</p>
+     *  <p>The Product Type defining the Attributes of the Product.</p>
      */
 
     public ShoppingListLineItemBuilder productType(
@@ -162,7 +145,7 @@ public class ShoppingListLineItemBuilder implements Builder<ShoppingListLineItem
     }
 
     /**
-     *  <p>Reference to a ProductType.</p>
+     *  <p>The Product Type defining the Attributes of the Product.</p>
      */
 
     public ShoppingListLineItemBuilder productType(
@@ -172,16 +155,26 @@ public class ShoppingListLineItemBuilder implements Builder<ShoppingListLineItem
     }
 
     /**
-     *
+     *  <p>Number of Products in the ShoppingListLineItem.</p>
      */
 
-    public ShoppingListLineItemBuilder quantity(final Integer quantity) {
+    public ShoppingListLineItemBuilder quantity(final Long quantity) {
         this.quantity = quantity;
         return this;
     }
 
     /**
-     *  <p>A concrete sellable good for which inventory can be tracked. Product Variants are generally mapped to specific SKUs.</p>
+     *  <p><code>id</code> of the ProductVariant the ShoppingListLineItem refers to. If not set, the ShoppingListLineItem refers to the Master Variant.</p>
+     */
+
+    public ShoppingListLineItemBuilder variantId(@Nullable final Long variantId) {
+        this.variantId = variantId;
+        return this;
+    }
+
+    /**
+     *  <p>Data of the ProductVariant. Returned when expanded using <code>expand=lineItems[*].variant</code>.</p>
+     *  <p><em>Limitation: <code>expand=lineItems[0].variant</code> is not supported.</em></p>
      */
 
     public ShoppingListLineItemBuilder variant(
@@ -191,7 +184,8 @@ public class ShoppingListLineItemBuilder implements Builder<ShoppingListLineItem
     }
 
     /**
-     *  <p>A concrete sellable good for which inventory can be tracked. Product Variants are generally mapped to specific SKUs.</p>
+     *  <p>Data of the ProductVariant. Returned when expanded using <code>expand=lineItems[*].variant</code>.</p>
+     *  <p><em>Limitation: <code>expand=lineItems[0].variant</code> is not supported.</em></p>
      */
 
     public ShoppingListLineItemBuilder variant(
@@ -201,11 +195,24 @@ public class ShoppingListLineItemBuilder implements Builder<ShoppingListLineItem
     }
 
     /**
-     *
+     *  <p>Slug of the current ProductData. Only returned when expanded using <code>expand=lineItems[*].productSlug</code>.</p>
+     *  <p><em>Limitation: <code>expand=lineItems[0].productSlug</code> is not supported.</em></p>
      */
 
-    public ShoppingListLineItemBuilder variantId(@Nullable final Long variantId) {
-        this.variantId = variantId;
+    public ShoppingListLineItemBuilder productSlug(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
+        this.productSlug = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Slug of the current ProductData. Only returned when expanded using <code>expand=lineItems[*].productSlug</code>.</p>
+     *  <p><em>Limitation: <code>expand=lineItems[0].productSlug</code> is not supported.</em></p>
+     */
+
+    public ShoppingListLineItemBuilder productSlug(
+            @Nullable final com.commercetools.api.models.common.LocalizedString productSlug) {
+        this.productSlug = productSlug;
         return this;
     }
 
@@ -235,17 +242,17 @@ public class ShoppingListLineItemBuilder implements Builder<ShoppingListLineItem
         return this.productId;
     }
 
-    @Nullable
-    public com.commercetools.api.models.common.LocalizedString getProductSlug() {
-        return this.productSlug;
-    }
-
     public com.commercetools.api.models.product_type.ProductTypeReference getProductType() {
         return this.productType;
     }
 
-    public Integer getQuantity() {
+    public Long getQuantity() {
         return this.quantity;
+    }
+
+    @Nullable
+    public Long getVariantId() {
+        return this.variantId;
     }
 
     @Nullable
@@ -254,8 +261,8 @@ public class ShoppingListLineItemBuilder implements Builder<ShoppingListLineItem
     }
 
     @Nullable
-    public Long getVariantId() {
-        return this.variantId;
+    public com.commercetools.api.models.common.LocalizedString getProductSlug() {
+        return this.productSlug;
     }
 
     public ShoppingListLineItem build() {
@@ -265,16 +272,16 @@ public class ShoppingListLineItemBuilder implements Builder<ShoppingListLineItem
         Objects.requireNonNull(productId, ShoppingListLineItem.class + ": productId is missing");
         Objects.requireNonNull(productType, ShoppingListLineItem.class + ": productType is missing");
         Objects.requireNonNull(quantity, ShoppingListLineItem.class + ": quantity is missing");
-        return new ShoppingListLineItemImpl(addedAt, custom, deactivatedAt, id, name, productId, productSlug,
-            productType, quantity, variant, variantId);
+        return new ShoppingListLineItemImpl(addedAt, custom, deactivatedAt, id, name, productId, productType, quantity,
+            variantId, variant, productSlug);
     }
 
     /**
      * builds ShoppingListLineItem without checking for non null required values
      */
     public ShoppingListLineItem buildUnchecked() {
-        return new ShoppingListLineItemImpl(addedAt, custom, deactivatedAt, id, name, productId, productSlug,
-            productType, quantity, variant, variantId);
+        return new ShoppingListLineItemImpl(addedAt, custom, deactivatedAt, id, name, productId, productType, quantity,
+            variantId, variant, productSlug);
     }
 
     public static ShoppingListLineItemBuilder of() {
@@ -289,11 +296,11 @@ public class ShoppingListLineItemBuilder implements Builder<ShoppingListLineItem
         builder.id = template.getId();
         builder.name = template.getName();
         builder.productId = template.getProductId();
-        builder.productSlug = template.getProductSlug();
         builder.productType = template.getProductType();
         builder.quantity = template.getQuantity();
-        builder.variant = template.getVariant();
         builder.variantId = template.getVariantId();
+        builder.variant = template.getVariant();
+        builder.productSlug = template.getProductSlug();
         return builder;
     }
 

@@ -15,7 +15,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * GeneralError
+ *  <p>Returned when a server-side problem occurs.</p>
+ *  <p>If you encounter this error, report it using the Support Portal.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class GeneralErrorImpl implements GeneralError, ModelBase {
@@ -47,7 +48,7 @@ public class GeneralErrorImpl implements GeneralError, ModelBase {
     }
 
     /**
-     *
+     *  <p>Description about any known details of the problem, for example, <code>"Write operations are temporarily unavailable"</code>.</p>
      */
 
     public String getMessage() {
@@ -55,7 +56,7 @@ public class GeneralErrorImpl implements GeneralError, ModelBase {
     }
 
     /**
-     *
+     *  <p>Error-specific additional fields.</p>
      */
 
     public Map<String, java.lang.Object> values() {

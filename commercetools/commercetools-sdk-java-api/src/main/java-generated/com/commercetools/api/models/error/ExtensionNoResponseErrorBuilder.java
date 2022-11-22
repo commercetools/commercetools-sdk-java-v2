@@ -34,7 +34,7 @@ public class ExtensionNoResponseErrorBuilder implements Builder<ExtensionNoRespo
     private String extensionKey;
 
     /**
-     *
+     *  <p><code>"Extension did not respond in time."</code></p>
      */
 
     public ExtensionNoResponseErrorBuilder message(final String message) {
@@ -43,7 +43,7 @@ public class ExtensionNoResponseErrorBuilder implements Builder<ExtensionNoRespo
     }
 
     /**
-     *
+     *  <p>Error-specific additional fields.</p>
      */
 
     public ExtensionNoResponseErrorBuilder values(final Map<String, java.lang.Object> values) {
@@ -52,7 +52,7 @@ public class ExtensionNoResponseErrorBuilder implements Builder<ExtensionNoRespo
     }
 
     /**
-     *
+     *  <p>Error-specific additional fields.</p>
      */
 
     public ExtensionNoResponseErrorBuilder addValue(final String key, final java.lang.Object value) {
@@ -64,7 +64,7 @@ public class ExtensionNoResponseErrorBuilder implements Builder<ExtensionNoRespo
     }
 
     /**
-     *
+     *  <p>Unique identifier of the API Extension.</p>
      */
 
     public ExtensionNoResponseErrorBuilder extensionId(final String extensionId) {
@@ -73,7 +73,7 @@ public class ExtensionNoResponseErrorBuilder implements Builder<ExtensionNoRespo
     }
 
     /**
-     *
+     *  <p>User-defined unique identifier of the API Extension, if available.</p>
      */
 
     public ExtensionNoResponseErrorBuilder extensionKey(@Nullable final String extensionKey) {

@@ -30,7 +30,7 @@ public class DuplicateAttributeValuesErrorBuilder implements Builder<DuplicateAt
     private java.util.List<com.commercetools.api.models.product.Attribute> attributes;
 
     /**
-     *
+     *  <p><code>"The set of attributes must be unique across all variants."</code></p>
      */
 
     public DuplicateAttributeValuesErrorBuilder message(final String message) {
@@ -39,7 +39,7 @@ public class DuplicateAttributeValuesErrorBuilder implements Builder<DuplicateAt
     }
 
     /**
-     *
+     *  <p>Error-specific additional fields.</p>
      */
 
     public DuplicateAttributeValuesErrorBuilder values(final Map<String, java.lang.Object> values) {
@@ -48,7 +48,7 @@ public class DuplicateAttributeValuesErrorBuilder implements Builder<DuplicateAt
     }
 
     /**
-     *
+     *  <p>Error-specific additional fields.</p>
      */
 
     public DuplicateAttributeValuesErrorBuilder addValue(final String key, final java.lang.Object value) {
@@ -60,7 +60,7 @@ public class DuplicateAttributeValuesErrorBuilder implements Builder<DuplicateAt
     }
 
     /**
-     *
+     *  <p>Conflicting Attributes.</p>
      */
 
     public DuplicateAttributeValuesErrorBuilder attributes(
@@ -70,7 +70,7 @@ public class DuplicateAttributeValuesErrorBuilder implements Builder<DuplicateAt
     }
 
     /**
-     *
+     *  <p>Conflicting Attributes.</p>
      */
 
     public DuplicateAttributeValuesErrorBuilder attributes(
@@ -80,7 +80,7 @@ public class DuplicateAttributeValuesErrorBuilder implements Builder<DuplicateAt
     }
 
     /**
-     *
+     *  <p>Conflicting Attributes.</p>
      */
 
     public DuplicateAttributeValuesErrorBuilder plusAttributes(
@@ -93,7 +93,7 @@ public class DuplicateAttributeValuesErrorBuilder implements Builder<DuplicateAt
     }
 
     /**
-     *
+     *  <p>Conflicting Attributes.</p>
      */
 
     public DuplicateAttributeValuesErrorBuilder plusAttributes(
@@ -106,7 +106,7 @@ public class DuplicateAttributeValuesErrorBuilder implements Builder<DuplicateAt
     }
 
     /**
-     *
+     *  <p>Conflicting Attributes.</p>
      */
 
     public DuplicateAttributeValuesErrorBuilder withAttributes(

@@ -13,7 +13,8 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * AttributeNameDoesNotExistError
+ *  <p>Returned when an AttributeDefinition does not exist for an Attribute <code>name</code>.</p>
+ *  <p>The error is returned as a failed response to the Change AttributeDefinition Name update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -36,8 +37,24 @@ public interface AttributeNameDoesNotExistError extends ErrorObject {
      *
      */
     @NotNull
+    @JsonProperty("code")
+    public String getCode();
+
+    /**
+     *  <p><code>"Attribute definition for $attributeName does not exist on type $typeName."</code></p>
+     */
+    @NotNull
+    @JsonProperty("message")
+    public String getMessage();
+
+    /**
+     *  <p>Non-existent Attribute name.</p>
+     */
+    @NotNull
     @JsonProperty("invalidAttributeName")
     public String getInvalidAttributeName();
+
+    public void setMessage(final String message);
 
     public void setInvalidAttributeName(final String invalidAttributeName);
 

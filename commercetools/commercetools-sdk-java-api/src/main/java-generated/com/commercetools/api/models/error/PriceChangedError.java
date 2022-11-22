@@ -13,7 +13,12 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * PriceChangedError
+ *  <p>Returned when the Price, Tax Rate, or Shipping Rate of some Line Items changed since they were last added to the Cart.</p>
+ *  <p>The error is returned as a failed response to:</p>
+ *  <ul>
+ *   <li>Create Order from Cart and Create Order from Cart in a Store requests on Orders.</li>
+ *   <li>Create Order from a Cart and Create Order in a Store from a Cart requests on My Orders.</li>
+ *  </ul>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -37,15 +42,31 @@ public interface PriceChangedError extends ErrorObject {
      *
      */
     @NotNull
+    @JsonProperty("code")
+    public String getCode();
+
+    /**
+     *  <p>Plain text description of the reason for the Price change. For example, <code>"The price or tax of some line items changed at the time of placing the order: $lineItems."</code>.</p>
+     */
+    @NotNull
+    @JsonProperty("message")
+    public String getMessage();
+
+    /**
+     *  <p>Unique identifiers of the Line Items for which the Price or TaxRate has changed.</p>
+     */
+    @NotNull
     @JsonProperty("lineItems")
     public List<String> getLineItems();
 
     /**
-     *
+     *  <p><code>true</code> if the ShippingRate has changed.</p>
      */
     @NotNull
     @JsonProperty("shipping")
     public Boolean getShipping();
+
+    public void setMessage(final String message);
 
     @JsonIgnore
     public void setLineItems(final String... lineItems);

@@ -31,7 +31,7 @@ public class ConcurrentModificationErrorBuilder implements Builder<ConcurrentMod
     private Long currentVersion;
 
     /**
-     *
+     *  <p><code>"Object $resourceId has a different version than expected. Expected: $expectedVersion - Actual: $currentVersion."</code></p>
      */
 
     public ConcurrentModificationErrorBuilder message(final String message) {
@@ -40,7 +40,7 @@ public class ConcurrentModificationErrorBuilder implements Builder<ConcurrentMod
     }
 
     /**
-     *
+     *  <p>Error-specific additional fields.</p>
      */
 
     public ConcurrentModificationErrorBuilder values(final Map<String, java.lang.Object> values) {
@@ -49,7 +49,7 @@ public class ConcurrentModificationErrorBuilder implements Builder<ConcurrentMod
     }
 
     /**
-     *
+     *  <p>Error-specific additional fields.</p>
      */
 
     public ConcurrentModificationErrorBuilder addValue(final String key, final java.lang.Object value) {
@@ -61,7 +61,7 @@ public class ConcurrentModificationErrorBuilder implements Builder<ConcurrentMod
     }
 
     /**
-     *
+     *  <p>Current version of the resource.</p>
      */
 
     public ConcurrentModificationErrorBuilder currentVersion(@Nullable final Long currentVersion) {

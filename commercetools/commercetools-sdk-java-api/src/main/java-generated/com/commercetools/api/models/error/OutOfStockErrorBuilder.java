@@ -32,7 +32,7 @@ public class OutOfStockErrorBuilder implements Builder<OutOfStockError> {
     private java.util.List<String> skus;
 
     /**
-     *
+     *  <p><code>"Some line items are out of stock at the time of placing the order: $itemSku."</code></p>
      */
 
     public OutOfStockErrorBuilder message(final String message) {
@@ -41,7 +41,7 @@ public class OutOfStockErrorBuilder implements Builder<OutOfStockError> {
     }
 
     /**
-     *
+     *  <p>Error-specific additional fields.</p>
      */
 
     public OutOfStockErrorBuilder values(final Map<String, java.lang.Object> values) {
@@ -50,7 +50,7 @@ public class OutOfStockErrorBuilder implements Builder<OutOfStockError> {
     }
 
     /**
-     *
+     *  <p>Error-specific additional fields.</p>
      */
 
     public OutOfStockErrorBuilder addValue(final String key, final java.lang.Object value) {
@@ -62,7 +62,7 @@ public class OutOfStockErrorBuilder implements Builder<OutOfStockError> {
     }
 
     /**
-     *
+     *  <p>Unique identifiers of the Line Items that are out of stock.</p>
      */
 
     public OutOfStockErrorBuilder lineItems(final String... lineItems) {
@@ -71,7 +71,7 @@ public class OutOfStockErrorBuilder implements Builder<OutOfStockError> {
     }
 
     /**
-     *
+     *  <p>Unique identifiers of the Line Items that are out of stock.</p>
      */
 
     public OutOfStockErrorBuilder lineItems(final java.util.List<String> lineItems) {
@@ -80,7 +80,7 @@ public class OutOfStockErrorBuilder implements Builder<OutOfStockError> {
     }
 
     /**
-     *
+     *  <p>Unique identifiers of the Line Items that are out of stock.</p>
      */
 
     public OutOfStockErrorBuilder plusLineItems(final String... lineItems) {
@@ -92,7 +92,7 @@ public class OutOfStockErrorBuilder implements Builder<OutOfStockError> {
     }
 
     /**
-     *
+     *  <p>SKUs of the Line Items that are out of stock.</p>
      */
 
     public OutOfStockErrorBuilder skus(final String... skus) {
@@ -101,7 +101,7 @@ public class OutOfStockErrorBuilder implements Builder<OutOfStockError> {
     }
 
     /**
-     *
+     *  <p>SKUs of the Line Items that are out of stock.</p>
      */
 
     public OutOfStockErrorBuilder skus(final java.util.List<String> skus) {
@@ -110,7 +110,7 @@ public class OutOfStockErrorBuilder implements Builder<OutOfStockError> {
     }
 
     /**
-     *
+     *  <p>SKUs of the Line Items that are out of stock.</p>
      */
 
     public OutOfStockErrorBuilder plusSkus(final String... skus) {

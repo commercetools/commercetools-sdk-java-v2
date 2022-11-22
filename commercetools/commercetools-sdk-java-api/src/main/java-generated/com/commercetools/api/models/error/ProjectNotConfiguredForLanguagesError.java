@@ -5,13 +5,16 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.validation.constraints.NotNull;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * ProjectNotConfiguredForLanguagesError
+ *  <p>Returned when the languages set for a Store are not supported by the Project.</p>
+ *  <p>The error is returned as a failed response to the Set Languages update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -32,9 +35,25 @@ public interface ProjectNotConfiguredForLanguagesError extends ErrorObject {
     /**
      *
      */
+    @NotNull
+    @JsonProperty("code")
+    public String getCode();
+
+    /**
+     *  <p><code>"The project is not configured for given languages."</code></p>
+     */
+    @NotNull
+    @JsonProperty("message")
+    public String getMessage();
+
+    /**
+     *  <p>Languages configured for the Store.</p>
+     */
 
     @JsonProperty("languages")
     public List<String> getLanguages();
+
+    public void setMessage(final String message);
 
     @JsonIgnore
     public void setLanguages(final String... languages);

@@ -19,6 +19,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
  *  <p>If Price selection query parameters are provided, the selected Prices are added to the response.</p>
+ *  <p>A failed response can return a DuplicatePriceScope, DuplicateVariantValues, DuplicateAttributeValue, or DuplicateAttributeValues error.</p>
  *
  * <hr>
  * <div class=code-example>
@@ -108,6 +109,10 @@ public class ByProjectKeyProductsByIDPost extends
 
     public List<String> getPriceChannel() {
         return this.getQueryParam("priceChannel");
+    }
+
+    public List<String> getLocaleProjection() {
+        return this.getQueryParam("localeProjection");
     }
 
     public List<String> getExpand() {
@@ -363,6 +368,67 @@ public class ByProjectKeyProductsByIDPost extends
     public <TValue> ByProjectKeyProductsByIDPost addPriceChannel(final Collection<TValue> priceChannel) {
         return copy().addQueryParams(priceChannel.stream()
                 .map(s -> new ParamEntry<>("priceChannel", s.toString()))
+                .collect(Collectors.toList()));
+    }
+
+    /**
+     * set localeProjection with the specified value
+     */
+    public <TValue> ByProjectKeyProductsByIDPost withLocaleProjection(final TValue localeProjection) {
+        return copy().withQueryParam("localeProjection", localeProjection);
+    }
+
+    /**
+     * add additional localeProjection query parameter
+     */
+    public <TValue> ByProjectKeyProductsByIDPost addLocaleProjection(final TValue localeProjection) {
+        return copy().addQueryParam("localeProjection", localeProjection);
+    }
+
+    /**
+     * set localeProjection with the specified value
+     */
+    public ByProjectKeyProductsByIDPost withLocaleProjection(final Supplier<String> supplier) {
+        return copy().withQueryParam("localeProjection", supplier.get());
+    }
+
+    /**
+     * add additional localeProjection query parameter
+     */
+    public ByProjectKeyProductsByIDPost addLocaleProjection(final Supplier<String> supplier) {
+        return copy().addQueryParam("localeProjection", supplier.get());
+    }
+
+    /**
+     * set localeProjection with the specified value
+     */
+    public ByProjectKeyProductsByIDPost withLocaleProjection(final Function<StringBuilder, StringBuilder> op) {
+        return copy().withQueryParam("localeProjection", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * add additional localeProjection query parameter
+     */
+    public ByProjectKeyProductsByIDPost addLocaleProjection(final Function<StringBuilder, StringBuilder> op) {
+        return copy().addQueryParam("localeProjection", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * set localeProjection with the specified values
+     */
+    public <TValue> ByProjectKeyProductsByIDPost withLocaleProjection(final Collection<TValue> localeProjection) {
+        return copy().withoutQueryParam("localeProjection")
+                .addQueryParams(localeProjection.stream()
+                        .map(s -> new ParamEntry<>("localeProjection", s.toString()))
+                        .collect(Collectors.toList()));
+    }
+
+    /**
+     * add additional localeProjection query parameters
+     */
+    public <TValue> ByProjectKeyProductsByIDPost addLocaleProjection(final Collection<TValue> localeProjection) {
+        return copy().addQueryParams(localeProjection.stream()
+                .map(s -> new ParamEntry<>("localeProjection", s.toString()))
                 .collect(Collectors.toList()));
     }
 

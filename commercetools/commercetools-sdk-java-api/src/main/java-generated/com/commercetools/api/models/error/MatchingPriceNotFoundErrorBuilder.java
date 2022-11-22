@@ -47,7 +47,7 @@ public class MatchingPriceNotFoundErrorBuilder implements Builder<MatchingPriceN
     private com.commercetools.api.models.channel.ChannelReference channel;
 
     /**
-     *
+     *  <p><code>"The variant $variantId of product $productId does not contain a price for currency $currencyCode, $country, $customerGroup, $channel."</code></p>
      */
 
     public MatchingPriceNotFoundErrorBuilder message(final String message) {
@@ -56,7 +56,7 @@ public class MatchingPriceNotFoundErrorBuilder implements Builder<MatchingPriceN
     }
 
     /**
-     *
+     *  <p>Error-specific additional fields.</p>
      */
 
     public MatchingPriceNotFoundErrorBuilder values(final Map<String, java.lang.Object> values) {
@@ -65,7 +65,7 @@ public class MatchingPriceNotFoundErrorBuilder implements Builder<MatchingPriceN
     }
 
     /**
-     *
+     *  <p>Error-specific additional fields.</p>
      */
 
     public MatchingPriceNotFoundErrorBuilder addValue(final String key, final java.lang.Object value) {
@@ -77,7 +77,7 @@ public class MatchingPriceNotFoundErrorBuilder implements Builder<MatchingPriceN
     }
 
     /**
-     *
+     *  <p>Unique identifier of a Product.</p>
      */
 
     public MatchingPriceNotFoundErrorBuilder productId(final String productId) {
@@ -86,7 +86,7 @@ public class MatchingPriceNotFoundErrorBuilder implements Builder<MatchingPriceN
     }
 
     /**
-     *
+     *  <p>Unique identifier of a ProductVariant in the Product.</p>
      */
 
     public MatchingPriceNotFoundErrorBuilder variantId(final Integer variantId) {
@@ -95,7 +95,7 @@ public class MatchingPriceNotFoundErrorBuilder implements Builder<MatchingPriceN
     }
 
     /**
-     *
+     *  <p>Currency code of the country.</p>
      */
 
     public MatchingPriceNotFoundErrorBuilder currency(@Nullable final String currency) {
@@ -104,7 +104,7 @@ public class MatchingPriceNotFoundErrorBuilder implements Builder<MatchingPriceN
     }
 
     /**
-     *
+     *  <p>Country code of the geographic location.</p>
      */
 
     public MatchingPriceNotFoundErrorBuilder country(@Nullable final String country) {
@@ -113,7 +113,7 @@ public class MatchingPriceNotFoundErrorBuilder implements Builder<MatchingPriceN
     }
 
     /**
-     *  <p>Reference to a CustomerGroup.</p>
+     *  <p>Customer Group associated with the Price.</p>
      */
 
     public MatchingPriceNotFoundErrorBuilder customerGroup(
@@ -125,7 +125,7 @@ public class MatchingPriceNotFoundErrorBuilder implements Builder<MatchingPriceN
     }
 
     /**
-     *  <p>Reference to a CustomerGroup.</p>
+     *  <p>Customer Group associated with the Price.</p>
      */
 
     public MatchingPriceNotFoundErrorBuilder customerGroup(
@@ -135,7 +135,7 @@ public class MatchingPriceNotFoundErrorBuilder implements Builder<MatchingPriceN
     }
 
     /**
-     *  <p>Reference to a Channel.</p>
+     *  <p>Channel associated with the Price.</p>
      */
 
     public MatchingPriceNotFoundErrorBuilder channel(
@@ -145,7 +145,7 @@ public class MatchingPriceNotFoundErrorBuilder implements Builder<MatchingPriceN
     }
 
     /**
-     *  <p>Reference to a Channel.</p>
+     *  <p>Channel associated with the Price.</p>
      */
 
     public MatchingPriceNotFoundErrorBuilder channel(

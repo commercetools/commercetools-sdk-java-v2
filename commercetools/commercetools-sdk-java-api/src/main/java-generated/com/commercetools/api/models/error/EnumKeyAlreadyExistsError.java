@@ -13,7 +13,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * EnumKeyAlreadyExistsError
+ *  <p>Returned when an AttributeEnumType or AttributeLocalizedEnumType contains a key that already exists.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -37,15 +37,31 @@ public interface EnumKeyAlreadyExistsError extends ErrorObject {
      *
      */
     @NotNull
+    @JsonProperty("code")
+    public String getCode();
+
+    /**
+     *  <p><code>"The $attributeName attribute definition already contains an enum value with the key $enumKey."</code></p>
+     */
+    @NotNull
+    @JsonProperty("message")
+    public String getMessage();
+
+    /**
+     *  <p>Conflicting enum key.</p>
+     */
+    @NotNull
     @JsonProperty("conflictingEnumKey")
     public String getConflictingEnumKey();
 
     /**
-     *
+     *  <p>Name of the conflicting Attribute.</p>
      */
     @NotNull
     @JsonProperty("conflictingAttributeName")
     public String getConflictingAttributeName();
+
+    public void setMessage(final String message);
 
     public void setConflictingEnumKey(final String conflictingEnumKey);
 

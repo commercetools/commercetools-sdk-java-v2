@@ -33,7 +33,7 @@ public interface InventoryEntryUpdate extends
         com.commercetools.api.models.ResourceUpdate<InventoryEntryUpdate, InventoryEntryUpdateAction, InventoryEntryUpdateBuilder> {
 
     /**
-     *  <p>Expected version of the InventoryEntry on which the changes should be applied. If the expected version does not match the actual version, a 409 Conflict error will be returned.</p>
+     *  <p>Expected version of the InventoryEntry on which the changes should be applied. If the expected version does not match the actual version, a ConcurrentModification error is returned.</p>
      */
     @NotNull
     @JsonProperty("version")

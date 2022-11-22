@@ -28,7 +28,7 @@ public class ProductDiscountUpdateBuilder implements Builder<ProductDiscountUpda
     private java.util.List<com.commercetools.api.models.product_discount.ProductDiscountUpdateAction> actions;
 
     /**
-     *  <p>Expected version of the ProductDiscount on which the changes should be applied. If the expected version does not match the actual version, a 409 Conflict will be returned.</p>
+     *  <p>Expected version of the ProductDiscount on which the changes should be applied. If the expected version does not match the actual version, a ConcurrentModification error is returned.</p>
      */
 
     public ProductDiscountUpdateBuilder version(final Long version) {

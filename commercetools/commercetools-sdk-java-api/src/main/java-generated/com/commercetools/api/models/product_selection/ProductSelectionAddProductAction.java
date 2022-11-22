@@ -15,7 +15,8 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>Adds a Product to the Product Selection. If the given Product is already assigned to the Product Selection with the same Variant Selection nothing happens but if the existing Assignment has a different Variant Selection ProductPresentWithDifferentVariantSelection is raised.'</p>
+ *  <p>Adds a Product to the Product Selection.</p>
+ *  <p>If the specified Product is already assigned to the Product Selection, but the existing Product Selection has a different Product Variant Selection, a ProductPresentWithDifferentVariantSelection error is returned.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * ResourceSizeLimitExceededError
+ *  <p>Returned when the resource exceeds the maximum allowed size of 16 MB.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ResourceSizeLimitExceededErrorImpl implements ResourceSizeLimitExceededError, ModelBase {
@@ -47,7 +47,7 @@ public class ResourceSizeLimitExceededErrorImpl implements ResourceSizeLimitExce
     }
 
     /**
-     *
+     *  <p><code>"The resource size exceeds the maximal allowed size of 16 MB."</code></p>
      */
 
     public String getMessage() {
@@ -55,7 +55,7 @@ public class ResourceSizeLimitExceededErrorImpl implements ResourceSizeLimitExce
     }
 
     /**
-     *
+     *  <p>Error-specific additional fields.</p>
      */
 
     public Map<String, java.lang.Object> values() {

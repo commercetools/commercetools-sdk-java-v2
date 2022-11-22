@@ -28,7 +28,7 @@ public class CategoryUpdateBuilder implements Builder<CategoryUpdate> {
     private java.util.List<com.commercetools.api.models.category.CategoryUpdateAction> actions;
 
     /**
-     *  <p>Expected version of the Category on which the changes should be applied. If the expected version does not match the actual version, a 409 Conflict will be returned.</p>
+     *  <p>Expected version of the Category on which the changes should be applied. If the expected version does not match the actual version, a ConcurrentModification error is returned.</p>
      */
 
     public CategoryUpdateBuilder version(final Long version) {

@@ -32,7 +32,7 @@ public class PriceChangedErrorBuilder implements Builder<PriceChangedError> {
     private Boolean shipping;
 
     /**
-     *
+     *  <p>Plain text description of the reason for the Price change. For example, <code>"The price or tax of some line items changed at the time of placing the order: $lineItems."</code>.</p>
      */
 
     public PriceChangedErrorBuilder message(final String message) {
@@ -41,7 +41,7 @@ public class PriceChangedErrorBuilder implements Builder<PriceChangedError> {
     }
 
     /**
-     *
+     *  <p>Error-specific additional fields.</p>
      */
 
     public PriceChangedErrorBuilder values(final Map<String, java.lang.Object> values) {
@@ -50,7 +50,7 @@ public class PriceChangedErrorBuilder implements Builder<PriceChangedError> {
     }
 
     /**
-     *
+     *  <p>Error-specific additional fields.</p>
      */
 
     public PriceChangedErrorBuilder addValue(final String key, final java.lang.Object value) {
@@ -62,7 +62,7 @@ public class PriceChangedErrorBuilder implements Builder<PriceChangedError> {
     }
 
     /**
-     *
+     *  <p>Unique identifiers of the Line Items for which the Price or TaxRate has changed.</p>
      */
 
     public PriceChangedErrorBuilder lineItems(final String... lineItems) {
@@ -71,7 +71,7 @@ public class PriceChangedErrorBuilder implements Builder<PriceChangedError> {
     }
 
     /**
-     *
+     *  <p>Unique identifiers of the Line Items for which the Price or TaxRate has changed.</p>
      */
 
     public PriceChangedErrorBuilder lineItems(final java.util.List<String> lineItems) {
@@ -80,7 +80,7 @@ public class PriceChangedErrorBuilder implements Builder<PriceChangedError> {
     }
 
     /**
-     *
+     *  <p>Unique identifiers of the Line Items for which the Price or TaxRate has changed.</p>
      */
 
     public PriceChangedErrorBuilder plusLineItems(final String... lineItems) {
@@ -92,7 +92,7 @@ public class PriceChangedErrorBuilder implements Builder<PriceChangedError> {
     }
 
     /**
-     *
+     *  <p><code>true</code> if the ShippingRate has changed.</p>
      */
 
     public PriceChangedErrorBuilder shipping(final Boolean shipping) {

@@ -101,6 +101,10 @@ public class ByProjectKeyProductsKeyByKeyGet
         return this.getQueryParam("priceChannel");
     }
 
+    public List<String> getLocaleProjection() {
+        return this.getQueryParam("localeProjection");
+    }
+
     public List<String> getExpand() {
         return this.getQueryParam("expand");
     }
@@ -355,6 +359,67 @@ public class ByProjectKeyProductsKeyByKeyGet
     public <TValue> ByProjectKeyProductsKeyByKeyGet addPriceChannel(final Collection<TValue> priceChannel) {
         return copy().addQueryParams(priceChannel.stream()
                 .map(s -> new ParamEntry<>("priceChannel", s.toString()))
+                .collect(Collectors.toList()));
+    }
+
+    /**
+     * set localeProjection with the specified value
+     */
+    public <TValue> ByProjectKeyProductsKeyByKeyGet withLocaleProjection(final TValue localeProjection) {
+        return copy().withQueryParam("localeProjection", localeProjection);
+    }
+
+    /**
+     * add additional localeProjection query parameter
+     */
+    public <TValue> ByProjectKeyProductsKeyByKeyGet addLocaleProjection(final TValue localeProjection) {
+        return copy().addQueryParam("localeProjection", localeProjection);
+    }
+
+    /**
+     * set localeProjection with the specified value
+     */
+    public ByProjectKeyProductsKeyByKeyGet withLocaleProjection(final Supplier<String> supplier) {
+        return copy().withQueryParam("localeProjection", supplier.get());
+    }
+
+    /**
+     * add additional localeProjection query parameter
+     */
+    public ByProjectKeyProductsKeyByKeyGet addLocaleProjection(final Supplier<String> supplier) {
+        return copy().addQueryParam("localeProjection", supplier.get());
+    }
+
+    /**
+     * set localeProjection with the specified value
+     */
+    public ByProjectKeyProductsKeyByKeyGet withLocaleProjection(final Function<StringBuilder, StringBuilder> op) {
+        return copy().withQueryParam("localeProjection", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * add additional localeProjection query parameter
+     */
+    public ByProjectKeyProductsKeyByKeyGet addLocaleProjection(final Function<StringBuilder, StringBuilder> op) {
+        return copy().addQueryParam("localeProjection", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * set localeProjection with the specified values
+     */
+    public <TValue> ByProjectKeyProductsKeyByKeyGet withLocaleProjection(final Collection<TValue> localeProjection) {
+        return copy().withoutQueryParam("localeProjection")
+                .addQueryParams(localeProjection.stream()
+                        .map(s -> new ParamEntry<>("localeProjection", s.toString()))
+                        .collect(Collectors.toList()));
+    }
+
+    /**
+     * add additional localeProjection query parameters
+     */
+    public <TValue> ByProjectKeyProductsKeyByKeyGet addLocaleProjection(final Collection<TValue> localeProjection) {
+        return copy().addQueryParams(localeProjection.stream()
+                .map(s -> new ParamEntry<>("localeProjection", s.toString()))
                 .collect(Collectors.toList()));
     }
 

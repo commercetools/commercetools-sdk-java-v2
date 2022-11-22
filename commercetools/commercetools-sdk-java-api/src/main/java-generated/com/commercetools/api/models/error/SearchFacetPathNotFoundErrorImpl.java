@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * SearchFacetPathNotFoundError
+ *  <p>Returned when a search facet path could not be found.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SearchFacetPathNotFoundErrorImpl implements SearchFacetPathNotFoundError, ModelBase {
@@ -47,7 +47,7 @@ public class SearchFacetPathNotFoundErrorImpl implements SearchFacetPathNotFound
     }
 
     /**
-     *
+     *  <p><code>"Facet path $path not found."</code></p>
      */
 
     public String getMessage() {
@@ -55,7 +55,7 @@ public class SearchFacetPathNotFoundErrorImpl implements SearchFacetPathNotFound
     }
 
     /**
-     *
+     *  <p>Error-specific additional fields.</p>
      */
 
     public Map<String, java.lang.Object> values() {

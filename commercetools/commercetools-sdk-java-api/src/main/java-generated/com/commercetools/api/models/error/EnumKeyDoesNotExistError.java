@@ -13,7 +13,8 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * EnumKeyDoesNotExistError
+ *  <p>Returned when an AttributeEnumType or AttributeLocalizedEnumType already contains a value with the given key.</p>
+ *  <p>The error is returned as a failed response to the Change the key of an EnumValue update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -37,15 +38,31 @@ public interface EnumKeyDoesNotExistError extends ErrorObject {
      *
      */
     @NotNull
+    @JsonProperty("code")
+    public String getCode();
+
+    /**
+     *  <p><code>"The $fieldName field definition does not contain an enum value with the key $enumKey."</code></p>
+     */
+    @NotNull
+    @JsonProperty("message")
+    public String getMessage();
+
+    /**
+     *  <p>Conflicting enum key.</p>
+     */
+    @NotNull
     @JsonProperty("conflictingEnumKey")
     public String getConflictingEnumKey();
 
     /**
-     *
+     *  <p>Name of the conflicting Attribute.</p>
      */
     @NotNull
     @JsonProperty("conflictingAttributeName")
     public String getConflictingAttributeName();
+
+    public void setMessage(final String message);
 
     public void setConflictingEnumKey(final String conflictingEnumKey);
 

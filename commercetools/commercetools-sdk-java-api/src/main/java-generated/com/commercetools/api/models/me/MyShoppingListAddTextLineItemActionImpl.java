@@ -60,7 +60,7 @@ public class MyShoppingListAddTextLineItemActionImpl implements MyShoppingListAd
     }
 
     /**
-     *  <p>JSON object where the keys are of type Locale, and the values are the strings used for the corresponding language.</p>
+     *  <p>Name of the TextLineItem.</p>
      */
 
     public com.commercetools.api.models.common.LocalizedString getName() {
@@ -68,7 +68,7 @@ public class MyShoppingListAddTextLineItemActionImpl implements MyShoppingListAd
     }
 
     /**
-     *  <p>JSON object where the keys are of type Locale, and the values are the strings used for the corresponding language.</p>
+     *  <p>Description of the TextLineItem.</p>
      */
 
     public com.commercetools.api.models.common.LocalizedString getDescription() {
@@ -76,7 +76,7 @@ public class MyShoppingListAddTextLineItemActionImpl implements MyShoppingListAd
     }
 
     /**
-     *
+     *  <p>Number of entries in the TextLineItem.</p>
      */
 
     public Long getQuantity() {
@@ -84,7 +84,7 @@ public class MyShoppingListAddTextLineItemActionImpl implements MyShoppingListAd
     }
 
     /**
-     *
+     *  <p>Date and time the TextLineItem is added to the ShoppingList. If not set, the current date and time (UTC) is used.</p>
      */
 
     public java.time.ZonedDateTime getAddedAt() {
@@ -92,7 +92,7 @@ public class MyShoppingListAddTextLineItemActionImpl implements MyShoppingListAd
     }
 
     /**
-     *  <p>The representation used when creating or updating a customizable data type with Custom Fields.</p>
+     *  <p>Custom Fields defined for the TextLineItem.</p>
      */
 
     public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {

@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * EnumKeyAlreadyExistsError
+ *  <p>Returned when an AttributeEnumType or AttributeLocalizedEnumType contains a key that already exists.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class EnumKeyAlreadyExistsErrorImpl implements EnumKeyAlreadyExistsError, ModelBase {
@@ -55,7 +55,7 @@ public class EnumKeyAlreadyExistsErrorImpl implements EnumKeyAlreadyExistsError,
     }
 
     /**
-     *
+     *  <p><code>"The $attributeName attribute definition already contains an enum value with the key $enumKey."</code></p>
      */
 
     public String getMessage() {
@@ -63,7 +63,7 @@ public class EnumKeyAlreadyExistsErrorImpl implements EnumKeyAlreadyExistsError,
     }
 
     /**
-     *
+     *  <p>Error-specific additional fields.</p>
      */
 
     public Map<String, java.lang.Object> values() {
@@ -71,7 +71,7 @@ public class EnumKeyAlreadyExistsErrorImpl implements EnumKeyAlreadyExistsError,
     }
 
     /**
-     *
+     *  <p>Conflicting enum key.</p>
      */
 
     public String getConflictingEnumKey() {
@@ -79,7 +79,7 @@ public class EnumKeyAlreadyExistsErrorImpl implements EnumKeyAlreadyExistsError,
     }
 
     /**
-     *
+     *  <p>Name of the conflicting Attribute.</p>
      */
 
     public String getConflictingAttributeName() {

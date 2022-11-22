@@ -39,7 +39,7 @@ public class MyShoppingListAddTextLineItemActionBuilder implements Builder<MySho
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
 
     /**
-     *  <p>JSON object where the keys are of type Locale, and the values are the strings used for the corresponding language.</p>
+     *  <p>Name of the TextLineItem.</p>
      */
 
     public MyShoppingListAddTextLineItemActionBuilder name(
@@ -49,7 +49,7 @@ public class MyShoppingListAddTextLineItemActionBuilder implements Builder<MySho
     }
 
     /**
-     *  <p>JSON object where the keys are of type Locale, and the values are the strings used for the corresponding language.</p>
+     *  <p>Name of the TextLineItem.</p>
      */
 
     public MyShoppingListAddTextLineItemActionBuilder name(
@@ -59,7 +59,7 @@ public class MyShoppingListAddTextLineItemActionBuilder implements Builder<MySho
     }
 
     /**
-     *  <p>JSON object where the keys are of type Locale, and the values are the strings used for the corresponding language.</p>
+     *  <p>Description of the TextLineItem.</p>
      */
 
     public MyShoppingListAddTextLineItemActionBuilder description(
@@ -69,7 +69,7 @@ public class MyShoppingListAddTextLineItemActionBuilder implements Builder<MySho
     }
 
     /**
-     *  <p>JSON object where the keys are of type Locale, and the values are the strings used for the corresponding language.</p>
+     *  <p>Description of the TextLineItem.</p>
      */
 
     public MyShoppingListAddTextLineItemActionBuilder description(
@@ -79,7 +79,7 @@ public class MyShoppingListAddTextLineItemActionBuilder implements Builder<MySho
     }
 
     /**
-     *
+     *  <p>Number of entries in the TextLineItem.</p>
      */
 
     public MyShoppingListAddTextLineItemActionBuilder quantity(@Nullable final Long quantity) {
@@ -88,7 +88,7 @@ public class MyShoppingListAddTextLineItemActionBuilder implements Builder<MySho
     }
 
     /**
-     *
+     *  <p>Date and time the TextLineItem is added to the ShoppingList. If not set, the current date and time (UTC) is used.</p>
      */
 
     public MyShoppingListAddTextLineItemActionBuilder addedAt(@Nullable final java.time.ZonedDateTime addedAt) {
@@ -97,7 +97,7 @@ public class MyShoppingListAddTextLineItemActionBuilder implements Builder<MySho
     }
 
     /**
-     *  <p>The representation used when creating or updating a customizable data type with Custom Fields.</p>
+     *  <p>Custom Fields defined for the TextLineItem.</p>
      */
 
     public MyShoppingListAddTextLineItemActionBuilder custom(
@@ -107,7 +107,7 @@ public class MyShoppingListAddTextLineItemActionBuilder implements Builder<MySho
     }
 
     /**
-     *  <p>The representation used when creating or updating a customizable data type with Custom Fields.</p>
+     *  <p>Custom Fields defined for the TextLineItem.</p>
      */
 
     public MyShoppingListAddTextLineItemActionBuilder custom(

@@ -26,7 +26,7 @@ public class InvalidCredentialsErrorBuilder implements Builder<InvalidCredential
     private Map<String, java.lang.Object> values = new HashMap<>();
 
     /**
-     *
+     *  <p><code>"Account with the given credentials not found."</code></p>
      */
 
     public InvalidCredentialsErrorBuilder message(final String message) {
@@ -35,7 +35,7 @@ public class InvalidCredentialsErrorBuilder implements Builder<InvalidCredential
     }
 
     /**
-     *
+     *  <p>Error-specific additional fields.</p>
      */
 
     public InvalidCredentialsErrorBuilder values(final Map<String, java.lang.Object> values) {
@@ -44,7 +44,7 @@ public class InvalidCredentialsErrorBuilder implements Builder<InvalidCredential
     }
 
     /**
-     *
+     *  <p>Error-specific additional fields.</p>
      */
 
     public InvalidCredentialsErrorBuilder addValue(final String key, final java.lang.Object value) {

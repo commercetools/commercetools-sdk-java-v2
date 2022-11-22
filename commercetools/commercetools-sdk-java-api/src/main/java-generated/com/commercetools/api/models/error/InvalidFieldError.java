@@ -13,7 +13,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * InvalidFieldError
+ *  <p>Returned when a field has an invalid value.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -36,22 +36,38 @@ public interface InvalidFieldError extends ErrorObject {
      *
      */
     @NotNull
+    @JsonProperty("code")
+    public String getCode();
+
+    /**
+     *  <p><code>"The value $invalidValue is not valid for field $field."</code></p>
+     */
+    @NotNull
+    @JsonProperty("message")
+    public String getMessage();
+
+    /**
+     *  <p>Name of the field with the invalid value.</p>
+     */
+    @NotNull
     @JsonProperty("field")
     public String getField();
 
     /**
-     *
+     *  <p>Value invalid for the field.</p>
      */
     @NotNull
     @JsonProperty("invalidValue")
     public Object getInvalidValue();
 
     /**
-     *
+     *  <p>Fixed set of allowed values for the field, if any.</p>
      */
 
     @JsonProperty("allowedValues")
     public List<Object> getAllowedValues();
+
+    public void setMessage(final String message);
 
     public void setField(final String field);
 

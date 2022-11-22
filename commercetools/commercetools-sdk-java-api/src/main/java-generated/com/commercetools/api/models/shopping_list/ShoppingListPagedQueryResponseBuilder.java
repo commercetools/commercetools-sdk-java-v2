@@ -48,7 +48,7 @@ public class ShoppingListPagedQueryResponseBuilder implements Builder<ShoppingLi
     }
 
     /**
-     *
+     *  <p>Actual number of results returned.</p>
      */
 
     public ShoppingListPagedQueryResponseBuilder count(final Long count) {
@@ -57,7 +57,7 @@ public class ShoppingListPagedQueryResponseBuilder implements Builder<ShoppingLi
     }
 
     /**
-     *
+     *  <p>Total number of results matching the query. This number is an estimation that is not strongly consistent. This field is returned by default. For improved performance, calculating this field can be deactivated by using the query parameter <code>withTotal=false</code>. When the results are filtered with a Query Predicate, <code>total</code> is subject to a limit.</p>
      */
 
     public ShoppingListPagedQueryResponseBuilder total(@Nullable final Long total) {
@@ -75,7 +75,7 @@ public class ShoppingListPagedQueryResponseBuilder implements Builder<ShoppingLi
     }
 
     /**
-     *
+     *  <p>ShoppingLists matching the query.</p>
      */
 
     public ShoppingListPagedQueryResponseBuilder results(
@@ -85,7 +85,7 @@ public class ShoppingListPagedQueryResponseBuilder implements Builder<ShoppingLi
     }
 
     /**
-     *
+     *  <p>ShoppingLists matching the query.</p>
      */
 
     public ShoppingListPagedQueryResponseBuilder results(
@@ -95,7 +95,7 @@ public class ShoppingListPagedQueryResponseBuilder implements Builder<ShoppingLi
     }
 
     /**
-     *
+     *  <p>ShoppingLists matching the query.</p>
      */
 
     public ShoppingListPagedQueryResponseBuilder plusResults(
@@ -108,7 +108,7 @@ public class ShoppingListPagedQueryResponseBuilder implements Builder<ShoppingLi
     }
 
     /**
-     *
+     *  <p>ShoppingLists matching the query.</p>
      */
 
     public ShoppingListPagedQueryResponseBuilder plusResults(
@@ -121,7 +121,7 @@ public class ShoppingListPagedQueryResponseBuilder implements Builder<ShoppingLi
     }
 
     /**
-     *
+     *  <p>ShoppingLists matching the query.</p>
      */
 
     public ShoppingListPagedQueryResponseBuilder withResults(

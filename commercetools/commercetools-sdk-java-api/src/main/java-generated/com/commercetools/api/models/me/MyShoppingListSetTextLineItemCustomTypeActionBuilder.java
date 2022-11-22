@@ -34,7 +34,7 @@ public class MyShoppingListSetTextLineItemCustomTypeActionBuilder
     private com.commercetools.api.models.type.FieldContainer fields;
 
     /**
-     *
+     *  <p>The <code>id</code> of the TextLineItem to update.</p>
      */
 
     public MyShoppingListSetTextLineItemCustomTypeActionBuilder textLineItemId(final String textLineItemId) {

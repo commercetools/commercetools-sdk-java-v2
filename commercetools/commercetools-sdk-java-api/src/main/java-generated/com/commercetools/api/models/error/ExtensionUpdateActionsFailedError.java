@@ -15,7 +15,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * ExtensionUpdateActionsFailedError
+ *  <p>Returned when update actions could not be applied to the resource (for example, because a referenced resource does not exist). This would result in a 400 Bad Request response if the same update action was sent from a regular client.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -23,7 +23,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     ExtensionUpdateActionsFailedError extensionUpdateActionsFailedError = ExtensionUpdateActionsFailedError.builder()
  *             .message("{message}")
- *             .errorByExtension(errorByExtensionBuilder -> errorByExtensionBuilder)
+ *             .plusExtensionErrors(extensionErrorsBuilder -> extensionErrorsBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -35,32 +35,51 @@ public interface ExtensionUpdateActionsFailedError extends ErrorObject {
     String EXTENSION_UPDATE_ACTIONS_FAILED = "ExtensionUpdateActionsFailed";
 
     /**
-     *  <p>JSON object where the keys are of type Locale, and the values are the strings used for the corresponding language.</p>
+     *
+     */
+    @NotNull
+    @JsonProperty("code")
+    public String getCode();
+
+    /**
+     *  <p><code>"The extension returned update actions that could not be executed."</code></p>
+     */
+    @NotNull
+    @JsonProperty("message")
+    public String getMessage();
+
+    /**
+     *  <p>User-defined localized description of the error.</p>
      */
     @Valid
     @JsonProperty("localizedMessage")
     public LocalizedString getLocalizedMessage();
 
     /**
-     *
+     *  <p>Any information that should be returned to the API caller.</p>
      */
     @Valid
     @JsonProperty("extensionExtraInfo")
     public Object getExtensionExtraInfo();
 
     /**
-     *
+     *  <p>Additional errors related to the API Extension.</p>
      */
     @NotNull
     @Valid
-    @JsonProperty("errorByExtension")
-    public ErrorByExtension getErrorByExtension();
+    @JsonProperty("extensionErrors")
+    public List<ExtensionError> getExtensionErrors();
+
+    public void setMessage(final String message);
 
     public void setLocalizedMessage(final LocalizedString localizedMessage);
 
     public void setExtensionExtraInfo(final Object extensionExtraInfo);
 
-    public void setErrorByExtension(final ErrorByExtension errorByExtension);
+    @JsonIgnore
+    public void setExtensionErrors(final ExtensionError... extensionErrors);
+
+    public void setExtensionErrors(final List<ExtensionError> extensionErrors);
 
     public static ExtensionUpdateActionsFailedError of() {
         return new ExtensionUpdateActionsFailedErrorImpl();
@@ -72,7 +91,7 @@ public interface ExtensionUpdateActionsFailedError extends ErrorObject {
 
         instance.setLocalizedMessage(template.getLocalizedMessage());
         instance.setExtensionExtraInfo(template.getExtensionExtraInfo());
-        instance.setErrorByExtension(template.getErrorByExtension());
+        instance.setExtensionErrors(template.getExtensionErrors());
         return instance;
     }
 

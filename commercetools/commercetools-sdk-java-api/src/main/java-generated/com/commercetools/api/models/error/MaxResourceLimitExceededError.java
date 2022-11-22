@@ -14,7 +14,8 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * MaxResourceLimitExceededError
+ *  <p>Returned when a resource type cannot be created as it has reached its limits.</p>
+ *  <p>The limits must be adjusted for this resource before sending the request again.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -34,11 +35,27 @@ public interface MaxResourceLimitExceededError extends ErrorObject {
     String MAX_RESOURCE_LIMIT_EXCEEDED = "MaxResourceLimitExceeded";
 
     /**
-     *  <p>Type of resource the value should reference. Supported resource type identifiers are:</p>
+     *
+     */
+    @NotNull
+    @JsonProperty("code")
+    public String getCode();
+
+    /**
+     *  <p><code>"You have exceeded the limit of $limit resources of type $resourceTypeId."</code></p>
+     */
+    @NotNull
+    @JsonProperty("message")
+    public String getMessage();
+
+    /**
+     *  <p>Resource type that reached its maximum limit of configured elements (for example, 100 Zones per Project).</p>
      */
     @NotNull
     @JsonProperty("exceededResource")
     public ReferenceTypeId getExceededResource();
+
+    public void setMessage(final String message);
 
     public void setExceededResource(final ReferenceTypeId exceededResource);
 

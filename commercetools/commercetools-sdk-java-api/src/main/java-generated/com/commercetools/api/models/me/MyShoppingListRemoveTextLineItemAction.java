@@ -32,14 +32,14 @@ public interface MyShoppingListRemoveTextLineItemAction extends MyShoppingListUp
     String REMOVE_TEXT_LINE_ITEM = "removeTextLineItem";
 
     /**
-     *
+     *  <p>The <code>id</code> of the TextLineItem to update.</p>
      */
     @NotNull
     @JsonProperty("textLineItemId")
     public String getTextLineItemId();
 
     /**
-     *
+     *  <p>Amount to remove from the <code>quantity</code> of the TextLineItem. If not set, the TextLineItem is removed from the ShoppingList. If this value matches or exceeds the current <code>quantity</code> of the TextLineItem, the TextLineItem is removed from the ShoppingList.</p>
      */
 
     @JsonProperty("quantity")

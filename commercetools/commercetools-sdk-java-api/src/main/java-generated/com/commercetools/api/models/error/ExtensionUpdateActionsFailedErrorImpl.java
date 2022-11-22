@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * ExtensionUpdateActionsFailedError
+ *  <p>Returned when update actions could not be applied to the resource (for example, because a referenced resource does not exist). This would result in a 400 Bad Request response if the same update action was sent from a regular client.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ExtensionUpdateActionsFailedErrorImpl implements ExtensionUpdateActionsFailedError, ModelBase {
@@ -30,19 +30,19 @@ public class ExtensionUpdateActionsFailedErrorImpl implements ExtensionUpdateAct
 
     private java.lang.Object extensionExtraInfo;
 
-    private com.commercetools.api.models.error.ErrorByExtension errorByExtension;
+    private java.util.List<com.commercetools.api.models.error.ExtensionError> extensionErrors;
 
     @JsonCreator
     ExtensionUpdateActionsFailedErrorImpl(@JsonProperty("message") final String message,
             @JsonProperty("values") final Map<String, java.lang.Object> values,
             @JsonProperty("localizedMessage") final com.commercetools.api.models.common.LocalizedString localizedMessage,
             @JsonProperty("extensionExtraInfo") final java.lang.Object extensionExtraInfo,
-            @JsonProperty("errorByExtension") final com.commercetools.api.models.error.ErrorByExtension errorByExtension) {
+            @JsonProperty("extensionErrors") final java.util.List<com.commercetools.api.models.error.ExtensionError> extensionErrors) {
         this.message = message;
         this.values = values;
         this.localizedMessage = localizedMessage;
         this.extensionExtraInfo = extensionExtraInfo;
-        this.errorByExtension = errorByExtension;
+        this.extensionErrors = extensionErrors;
         this.code = EXTENSION_UPDATE_ACTIONS_FAILED;
     }
 
@@ -59,7 +59,7 @@ public class ExtensionUpdateActionsFailedErrorImpl implements ExtensionUpdateAct
     }
 
     /**
-     *
+     *  <p><code>"The extension returned update actions that could not be executed."</code></p>
      */
 
     public String getMessage() {
@@ -67,7 +67,7 @@ public class ExtensionUpdateActionsFailedErrorImpl implements ExtensionUpdateAct
     }
 
     /**
-     *
+     *  <p>Error-specific additional fields.</p>
      */
 
     public Map<String, java.lang.Object> values() {
@@ -75,7 +75,7 @@ public class ExtensionUpdateActionsFailedErrorImpl implements ExtensionUpdateAct
     }
 
     /**
-     *  <p>JSON object where the keys are of type Locale, and the values are the strings used for the corresponding language.</p>
+     *  <p>User-defined localized description of the error.</p>
      */
 
     public com.commercetools.api.models.common.LocalizedString getLocalizedMessage() {
@@ -83,7 +83,7 @@ public class ExtensionUpdateActionsFailedErrorImpl implements ExtensionUpdateAct
     }
 
     /**
-     *
+     *  <p>Any information that should be returned to the API caller.</p>
      */
 
     public java.lang.Object getExtensionExtraInfo() {
@@ -91,11 +91,11 @@ public class ExtensionUpdateActionsFailedErrorImpl implements ExtensionUpdateAct
     }
 
     /**
-     *
+     *  <p>Additional errors related to the API Extension.</p>
      */
 
-    public com.commercetools.api.models.error.ErrorByExtension getErrorByExtension() {
-        return this.errorByExtension;
+    public java.util.List<com.commercetools.api.models.error.ExtensionError> getExtensionErrors() {
+        return this.extensionErrors;
     }
 
     public void setMessage(final String message) {
@@ -117,8 +117,13 @@ public class ExtensionUpdateActionsFailedErrorImpl implements ExtensionUpdateAct
         this.extensionExtraInfo = extensionExtraInfo;
     }
 
-    public void setErrorByExtension(final com.commercetools.api.models.error.ErrorByExtension errorByExtension) {
-        this.errorByExtension = errorByExtension;
+    public void setExtensionErrors(final com.commercetools.api.models.error.ExtensionError... extensionErrors) {
+        this.extensionErrors = new ArrayList<>(Arrays.asList(extensionErrors));
+    }
+
+    public void setExtensionErrors(
+            final java.util.List<com.commercetools.api.models.error.ExtensionError> extensionErrors) {
+        this.extensionErrors = extensionErrors;
     }
 
     @Override
@@ -136,7 +141,7 @@ public class ExtensionUpdateActionsFailedErrorImpl implements ExtensionUpdateAct
                 .append(values, that.values)
                 .append(localizedMessage, that.localizedMessage)
                 .append(extensionExtraInfo, that.extensionExtraInfo)
-                .append(errorByExtension, that.errorByExtension)
+                .append(extensionErrors, that.extensionErrors)
                 .isEquals();
     }
 
@@ -147,7 +152,7 @@ public class ExtensionUpdateActionsFailedErrorImpl implements ExtensionUpdateAct
                 .append(values)
                 .append(localizedMessage)
                 .append(extensionExtraInfo)
-                .append(errorByExtension)
+                .append(extensionErrors)
                 .toHashCode();
     }
 

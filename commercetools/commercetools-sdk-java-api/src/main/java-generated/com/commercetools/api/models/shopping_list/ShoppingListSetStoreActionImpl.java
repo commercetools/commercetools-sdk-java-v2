@@ -44,7 +44,7 @@ public class ShoppingListSetStoreActionImpl implements ShoppingListSetStoreActio
     }
 
     /**
-     *
+     *  <p>The Store the ShoppingList should be assigned to. If empty, any existing value will be removed.</p>
      */
 
     public com.commercetools.api.models.store.StoreResourceIdentifier getStore() {

@@ -15,7 +15,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * OverlappingStandalonePriceValidityError
+ *  <p>Returned when a given Price validity period conflicts with an existing one. Every Standalone Price associated with the same SKU and with the same combination of currency, country, Customer Group, and Channel, must have non-overlapping validity periods (<code>validFrom</code> and <code>validUntil</code>).</p>
+ *  <p>The error is returned as a failed response to the Create StandalonePrice request.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OverlappingStandalonePriceValidityErrorImpl implements OverlappingStandalonePriceValidityError, ModelBase {
@@ -86,7 +87,7 @@ public class OverlappingStandalonePriceValidityErrorImpl implements OverlappingS
     }
 
     /**
-     *
+     *  <p><code>Two standalone prices have overlapping validity periods."</code></p>
      */
 
     public String getMessage() {
@@ -94,7 +95,7 @@ public class OverlappingStandalonePriceValidityErrorImpl implements OverlappingS
     }
 
     /**
-     *
+     *  <p>Error-specific additional fields.</p>
      */
 
     public Map<String, java.lang.Object> values() {
@@ -102,7 +103,7 @@ public class OverlappingStandalonePriceValidityErrorImpl implements OverlappingS
     }
 
     /**
-     *  <p>Reference to a StandalonePrice.</p>
+     *  <p>Reference to the conflicting Standalone Price.</p>
      */
 
     public com.commercetools.api.models.standalone_price.StandalonePriceReference getConflictingStandalonePrice() {
@@ -110,7 +111,7 @@ public class OverlappingStandalonePriceValidityErrorImpl implements OverlappingS
     }
 
     /**
-     *
+     *  <p>SKU of the ProductVariant to which the conflicting Standalone Price is associated.</p>
      */
 
     public String getSku() {
@@ -118,7 +119,7 @@ public class OverlappingStandalonePriceValidityErrorImpl implements OverlappingS
     }
 
     /**
-     *
+     *  <p>Currency code of the country.</p>
      */
 
     public String getCurrency() {
@@ -126,7 +127,7 @@ public class OverlappingStandalonePriceValidityErrorImpl implements OverlappingS
     }
 
     /**
-     *
+     *  <p>Country code of the geographic location.</p>
      */
 
     public String getCountry() {
@@ -134,7 +135,7 @@ public class OverlappingStandalonePriceValidityErrorImpl implements OverlappingS
     }
 
     /**
-     *  <p>ResourceIdentifier to a CustomerGroup.</p>
+     *  <p>CustomerGroup for which the Standalone Price is valid.</p>
      */
 
     public com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier getCustomerGroup() {
@@ -142,7 +143,7 @@ public class OverlappingStandalonePriceValidityErrorImpl implements OverlappingS
     }
 
     /**
-     *  <p>ResourceIdentifier to a Channel.</p>
+     *  <p>Channel for which the Standalone Price is valid.</p>
      */
 
     public com.commercetools.api.models.channel.ChannelResourceIdentifier getChannel() {
@@ -150,7 +151,7 @@ public class OverlappingStandalonePriceValidityErrorImpl implements OverlappingS
     }
 
     /**
-     *
+     *  <p>Date and time (UTC) from which the Standalone Price is valid.</p>
      */
 
     public java.time.ZonedDateTime getValidFrom() {
@@ -158,7 +159,7 @@ public class OverlappingStandalonePriceValidityErrorImpl implements OverlappingS
     }
 
     /**
-     *
+     *  <p>Date and time (UTC) until which the Standalone Price is valid.</p>
      */
 
     public java.time.ZonedDateTime getValidUntil() {
@@ -166,7 +167,7 @@ public class OverlappingStandalonePriceValidityErrorImpl implements OverlappingS
     }
 
     /**
-     *
+     *  <p>Date and time (UTC) from which the conflicting Standalone Price is valid.</p>
      */
 
     public java.time.ZonedDateTime getConflictingValidFrom() {
@@ -174,7 +175,7 @@ public class OverlappingStandalonePriceValidityErrorImpl implements OverlappingS
     }
 
     /**
-     *
+     *  <p>Date and time (UTC) until which the conflicting Standalone Price is valid.</p>
      */
 
     public java.time.ZonedDateTime getConflictingValidUntil() {

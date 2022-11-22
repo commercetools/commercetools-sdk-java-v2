@@ -36,10 +36,10 @@ public class TextLineItemDraftBuilder implements Builder<TextLineItemDraft> {
     private com.commercetools.api.models.common.LocalizedString name;
 
     @Nullable
-    private Integer quantity;
+    private Long quantity;
 
     /**
-     *  <p>Defaults to the current date and time.</p>
+     *  <p>Date and time the TextLineItem is added to the ShoppingList. If not set, the current date and time (UTC) is used.</p>
      */
 
     public TextLineItemDraftBuilder addedAt(@Nullable final java.time.ZonedDateTime addedAt) {
@@ -48,7 +48,7 @@ public class TextLineItemDraftBuilder implements Builder<TextLineItemDraft> {
     }
 
     /**
-     *  <p>The custom fields.</p>
+     *  <p>Custom Fields for the TextLineItem.</p>
      */
 
     public TextLineItemDraftBuilder custom(
@@ -58,7 +58,7 @@ public class TextLineItemDraftBuilder implements Builder<TextLineItemDraft> {
     }
 
     /**
-     *  <p>The custom fields.</p>
+     *  <p>Custom Fields for the TextLineItem.</p>
      */
 
     public TextLineItemDraftBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFieldsDraft custom) {
@@ -67,7 +67,7 @@ public class TextLineItemDraftBuilder implements Builder<TextLineItemDraft> {
     }
 
     /**
-     *
+     *  <p>Description of the TextLineItem.</p>
      */
 
     public TextLineItemDraftBuilder description(
@@ -77,7 +77,7 @@ public class TextLineItemDraftBuilder implements Builder<TextLineItemDraft> {
     }
 
     /**
-     *
+     *  <p>Description of the TextLineItem.</p>
      */
 
     public TextLineItemDraftBuilder description(
@@ -87,7 +87,7 @@ public class TextLineItemDraftBuilder implements Builder<TextLineItemDraft> {
     }
 
     /**
-     *
+     *  <p>Name of the TextLineItem.</p>
      */
 
     public TextLineItemDraftBuilder name(
@@ -97,7 +97,7 @@ public class TextLineItemDraftBuilder implements Builder<TextLineItemDraft> {
     }
 
     /**
-     *
+     *  <p>Name of the TextLineItem.</p>
      */
 
     public TextLineItemDraftBuilder name(final com.commercetools.api.models.common.LocalizedString name) {
@@ -106,10 +106,10 @@ public class TextLineItemDraftBuilder implements Builder<TextLineItemDraft> {
     }
 
     /**
-     *  <p>Defaults to <code>1</code>.</p>
+     *  <p>Number of entries in the TextLineItem.</p>
      */
 
-    public TextLineItemDraftBuilder quantity(@Nullable final Integer quantity) {
+    public TextLineItemDraftBuilder quantity(@Nullable final Long quantity) {
         this.quantity = quantity;
         return this;
     }
@@ -134,7 +134,7 @@ public class TextLineItemDraftBuilder implements Builder<TextLineItemDraft> {
     }
 
     @Nullable
-    public Integer getQuantity() {
+    public Long getQuantity() {
         return this.quantity;
     }
 

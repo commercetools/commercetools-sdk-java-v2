@@ -5,13 +5,15 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.validation.constraints.NotNull;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * InternalConstraintViolatedError
+ *  <p>Returned when certain API-specific constraints were not met. For example, the specified Discount Code was never applied and cannot be updated.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -28,6 +30,22 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface InternalConstraintViolatedError extends ErrorObject {
 
     String INTERNAL_CONSTRAINT_VIOLATED = "InternalConstraintViolated";
+
+    /**
+     *
+     */
+    @NotNull
+    @JsonProperty("code")
+    public String getCode();
+
+    /**
+     *  <p>Plain text description of the constraints that were violated.</p>
+     */
+    @NotNull
+    @JsonProperty("message")
+    public String getMessage();
+
+    public void setMessage(final String message);
 
     public static InternalConstraintViolatedError of() {
         return new InternalConstraintViolatedErrorImpl();

@@ -16,6 +16,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
  *  <p>This update action produces the StoreDistributionChannelsChanged Message. It has no effect if a given distribution channel is already present in a Store.</p>
+ *  <p>Adding a Channel without the <code>ProductDistribution</code> ChannelRoleEnum returns a MissingRoleOnChannel error.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StoreAddDistributionChannelActionImpl implements StoreAddDistributionChannelAction, ModelBase {
@@ -44,7 +45,7 @@ public class StoreAddDistributionChannelActionImpl implements StoreAddDistributi
     }
 
     /**
-     *  <p>Value to append. Any attempt to use Channel without the <code>ProductDistribution</code> ChannelRoleEnum will fail with a MissingRoleOnChannelError error.</p>
+     *  <p>Value to append.</p>
      */
 
     public com.commercetools.api.models.channel.ChannelResourceIdentifier getDistributionChannel() {

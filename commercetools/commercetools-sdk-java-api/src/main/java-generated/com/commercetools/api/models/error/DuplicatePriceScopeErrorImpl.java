@@ -15,7 +15,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * DuplicatePriceScopeError
+ *  <p>Returned when a Price scope conflicts with an existing one during an Update Product request.</p>
+ *  <p>Every Price of a Product Variant must have a distinct combination of currency, Customer Group, country, and Channel that constitute the scope of a Price.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class DuplicatePriceScopeErrorImpl implements DuplicatePriceScopeError, ModelBase {
@@ -51,7 +52,7 @@ public class DuplicatePriceScopeErrorImpl implements DuplicatePriceScopeError, M
     }
 
     /**
-     *
+     *  <p><code>"Duplicate price scope: $priceScope. The combination of currency, country, customerGroup and channel must be unique for each price of a product variant."</code></p>
      */
 
     public String getMessage() {
@@ -59,7 +60,7 @@ public class DuplicatePriceScopeErrorImpl implements DuplicatePriceScopeError, M
     }
 
     /**
-     *
+     *  <p>Error-specific additional fields.</p>
      */
 
     public Map<String, java.lang.Object> values() {
@@ -67,7 +68,7 @@ public class DuplicatePriceScopeErrorImpl implements DuplicatePriceScopeError, M
     }
 
     /**
-     *
+     *  <p>Conflicting Embedded Prices.</p>
      */
 
     public java.util.List<com.commercetools.api.models.common.Price> getConflictingPrices() {

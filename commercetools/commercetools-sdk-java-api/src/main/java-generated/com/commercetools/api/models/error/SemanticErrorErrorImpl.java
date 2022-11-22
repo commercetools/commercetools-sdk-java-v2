@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * SemanticErrorError
+ *  <p>Returned when a Discount predicate or API Extension predicate is not semantically correct.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SemanticErrorErrorImpl implements SemanticErrorError, ModelBase {
@@ -47,7 +47,7 @@ public class SemanticErrorErrorImpl implements SemanticErrorError, ModelBase {
     }
 
     /**
-     *
+     *  <p>Plain text description of the error concerning the predicate. For example, <code>"Invalid country code $countryCode provided for the field $fieldDefinition."</code>.</p>
      */
 
     public String getMessage() {
@@ -55,7 +55,7 @@ public class SemanticErrorErrorImpl implements SemanticErrorError, ModelBase {
     }
 
     /**
-     *
+     *  <p>Error-specific additional fields.</p>
      */
 
     public Map<String, java.lang.Object> values() {

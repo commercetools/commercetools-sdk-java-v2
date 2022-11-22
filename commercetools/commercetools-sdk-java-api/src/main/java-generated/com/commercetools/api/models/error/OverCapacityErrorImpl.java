@@ -15,7 +15,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * OverCapacityError
+ *  <p>Returned when the service is having trouble handling the load.</p>
+ *  <p>The client application should retry the request with exponential backoff up to a point where further delay is unacceptable.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OverCapacityErrorImpl implements OverCapacityError, ModelBase {
@@ -47,7 +48,7 @@ public class OverCapacityErrorImpl implements OverCapacityError, ModelBase {
     }
 
     /**
-     *
+     *  <p>Plain text description of the error.</p>
      */
 
     public String getMessage() {
@@ -55,7 +56,7 @@ public class OverCapacityErrorImpl implements OverCapacityError, ModelBase {
     }
 
     /**
-     *
+     *  <p>Error-specific additional fields.</p>
      */
 
     public Map<String, java.lang.Object> values() {

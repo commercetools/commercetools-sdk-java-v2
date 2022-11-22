@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * ExternalOAuthFailedError
+ *  <p>Returned when an external OAuth Introspection endpoint does not return a response within the time limit, or the response isn't compliant with RFC 7662 (for example, an HTTP status code like <code>500</code>).</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ExternalOAuthFailedErrorImpl implements ExternalOAuthFailedError, ModelBase {
@@ -47,7 +47,7 @@ public class ExternalOAuthFailedErrorImpl implements ExternalOAuthFailedError, M
     }
 
     /**
-     *
+     *  <p>Plain text description detailing the external OAuth error. For example, <code>"External OAuth did not respond in time."</code>.</p>
      */
 
     public String getMessage() {
@@ -55,7 +55,7 @@ public class ExternalOAuthFailedErrorImpl implements ExternalOAuthFailedError, M
     }
 
     /**
-     *
+     *  <p>Error-specific additional fields.</p>
      */
 
     public Map<String, java.lang.Object> values() {

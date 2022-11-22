@@ -26,7 +26,7 @@ public class GeneralErrorBuilder implements Builder<GeneralError> {
     private Map<String, java.lang.Object> values = new HashMap<>();
 
     /**
-     *
+     *  <p>Description about any known details of the problem, for example, <code>"Write operations are temporarily unavailable"</code>.</p>
      */
 
     public GeneralErrorBuilder message(final String message) {
@@ -35,7 +35,7 @@ public class GeneralErrorBuilder implements Builder<GeneralError> {
     }
 
     /**
-     *
+     *  <p>Error-specific additional fields.</p>
      */
 
     public GeneralErrorBuilder values(final Map<String, java.lang.Object> values) {
@@ -44,7 +44,7 @@ public class GeneralErrorBuilder implements Builder<GeneralError> {
     }
 
     /**
-     *
+     *  <p>Error-specific additional fields.</p>
      */
 
     public GeneralErrorBuilder addValue(final String key, final java.lang.Object value) {

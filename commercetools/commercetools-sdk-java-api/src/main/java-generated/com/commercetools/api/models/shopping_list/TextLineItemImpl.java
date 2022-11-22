@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * TextLineItem
+ *  <p>TextLineItems are Line Items that use text values instead of references to Products.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class TextLineItemImpl implements TextLineItem, ModelBase {
@@ -30,7 +30,7 @@ public class TextLineItemImpl implements TextLineItem, ModelBase {
 
     private com.commercetools.api.models.common.LocalizedString name;
 
-    private Integer quantity;
+    private Long quantity;
 
     @JsonCreator
     TextLineItemImpl(@JsonProperty("addedAt") final java.time.ZonedDateTime addedAt,
@@ -38,7 +38,7 @@ public class TextLineItemImpl implements TextLineItem, ModelBase {
             @JsonProperty("description") final com.commercetools.api.models.common.LocalizedString description,
             @JsonProperty("id") final String id,
             @JsonProperty("name") final com.commercetools.api.models.common.LocalizedString name,
-            @JsonProperty("quantity") final Integer quantity) {
+            @JsonProperty("quantity") final Long quantity) {
         this.addedAt = addedAt;
         this.custom = custom;
         this.description = description;
@@ -51,7 +51,7 @@ public class TextLineItemImpl implements TextLineItem, ModelBase {
     }
 
     /**
-     *  <p>When the text line item was added to the shopping list.</p>
+     *  <p>Date and time (UTC) the TextLineItem was added to the ShoppingList.</p>
      */
 
     public java.time.ZonedDateTime getAddedAt() {
@@ -59,7 +59,7 @@ public class TextLineItemImpl implements TextLineItem, ModelBase {
     }
 
     /**
-     *
+     *  <p>Custom Fields of the TextLineItem.</p>
      */
 
     public com.commercetools.api.models.type.CustomFields getCustom() {
@@ -67,7 +67,7 @@ public class TextLineItemImpl implements TextLineItem, ModelBase {
     }
 
     /**
-     *
+     *  <p>Description of the TextLineItem.</p>
      */
 
     public com.commercetools.api.models.common.LocalizedString getDescription() {
@@ -83,7 +83,7 @@ public class TextLineItemImpl implements TextLineItem, ModelBase {
     }
 
     /**
-     *
+     *  <p>Name of the TextLineItem.</p>
      */
 
     public com.commercetools.api.models.common.LocalizedString getName() {
@@ -91,10 +91,10 @@ public class TextLineItemImpl implements TextLineItem, ModelBase {
     }
 
     /**
-     *
+     *  <p>Number of entries in the TextLineItem.</p>
      */
 
-    public Integer getQuantity() {
+    public Long getQuantity() {
         return this.quantity;
     }
 
@@ -118,7 +118,7 @@ public class TextLineItemImpl implements TextLineItem, ModelBase {
         this.name = name;
     }
 
-    public void setQuantity(final Integer quantity) {
+    public void setQuantity(final Long quantity) {
         this.quantity = quantity;
     }
 

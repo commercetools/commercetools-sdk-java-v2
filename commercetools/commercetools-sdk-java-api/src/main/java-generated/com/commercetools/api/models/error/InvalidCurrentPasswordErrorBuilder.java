@@ -26,7 +26,7 @@ public class InvalidCurrentPasswordErrorBuilder implements Builder<InvalidCurren
     private Map<String, java.lang.Object> values = new HashMap<>();
 
     /**
-     *
+     *  <p><code>"The given current password does not match."</code></p>
      */
 
     public InvalidCurrentPasswordErrorBuilder message(final String message) {
@@ -35,7 +35,7 @@ public class InvalidCurrentPasswordErrorBuilder implements Builder<InvalidCurren
     }
 
     /**
-     *
+     *  <p>Error-specific additional fields.</p>
      */
 
     public InvalidCurrentPasswordErrorBuilder values(final Map<String, java.lang.Object> values) {
@@ -44,7 +44,7 @@ public class InvalidCurrentPasswordErrorBuilder implements Builder<InvalidCurren
     }
 
     /**
-     *
+     *  <p>Error-specific additional fields.</p>
      */
 
     public InvalidCurrentPasswordErrorBuilder addValue(final String key, final java.lang.Object value) {

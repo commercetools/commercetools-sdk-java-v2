@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * ExtensionBadResponseError
+ *  <p>Returned when the response from the API Extension could not be parsed successfully (such as a <code>500</code> HTTP status code, or an invalid JSON response).</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ExtensionBadResponseErrorImpl implements ExtensionBadResponseError, ModelBase {
@@ -30,19 +30,35 @@ public class ExtensionBadResponseErrorImpl implements ExtensionBadResponseError,
 
     private java.lang.Object extensionExtraInfo;
 
-    private com.commercetools.api.models.error.ErrorByExtension errorByExtension;
+    private java.util.List<com.commercetools.api.models.error.ExtensionError> extensionErrors;
+
+    private String extensionBody;
+
+    private Integer extensionStatusCode;
+
+    private String extensionId;
+
+    private String extensionKey;
 
     @JsonCreator
     ExtensionBadResponseErrorImpl(@JsonProperty("message") final String message,
             @JsonProperty("values") final Map<String, java.lang.Object> values,
             @JsonProperty("localizedMessage") final com.commercetools.api.models.common.LocalizedString localizedMessage,
             @JsonProperty("extensionExtraInfo") final java.lang.Object extensionExtraInfo,
-            @JsonProperty("errorByExtension") final com.commercetools.api.models.error.ErrorByExtension errorByExtension) {
+            @JsonProperty("extensionErrors") final java.util.List<com.commercetools.api.models.error.ExtensionError> extensionErrors,
+            @JsonProperty("extensionBody") final String extensionBody,
+            @JsonProperty("extensionStatusCode") final Integer extensionStatusCode,
+            @JsonProperty("extensionId") final String extensionId,
+            @JsonProperty("extensionKey") final String extensionKey) {
         this.message = message;
         this.values = values;
         this.localizedMessage = localizedMessage;
         this.extensionExtraInfo = extensionExtraInfo;
-        this.errorByExtension = errorByExtension;
+        this.extensionErrors = extensionErrors;
+        this.extensionBody = extensionBody;
+        this.extensionStatusCode = extensionStatusCode;
+        this.extensionId = extensionId;
+        this.extensionKey = extensionKey;
         this.code = EXTENSION_BAD_RESPONSE;
     }
 
@@ -59,7 +75,7 @@ public class ExtensionBadResponseErrorImpl implements ExtensionBadResponseError,
     }
 
     /**
-     *
+     *  <p>Description of the invalid Extension response. For example, <code>"The extension did not return the expected JSON."</code>.</p>
      */
 
     public String getMessage() {
@@ -67,7 +83,7 @@ public class ExtensionBadResponseErrorImpl implements ExtensionBadResponseError,
     }
 
     /**
-     *
+     *  <p>Error-specific additional fields.</p>
      */
 
     public Map<String, java.lang.Object> values() {
@@ -75,7 +91,7 @@ public class ExtensionBadResponseErrorImpl implements ExtensionBadResponseError,
     }
 
     /**
-     *  <p>JSON object where the keys are of type Locale, and the values are the strings used for the corresponding language.</p>
+     *  <p>User-defined localized description of the error.</p>
      */
 
     public com.commercetools.api.models.common.LocalizedString getLocalizedMessage() {
@@ -83,7 +99,7 @@ public class ExtensionBadResponseErrorImpl implements ExtensionBadResponseError,
     }
 
     /**
-     *
+     *  <p>Any information that should be returned to the API caller.</p>
      */
 
     public java.lang.Object getExtensionExtraInfo() {
@@ -91,11 +107,43 @@ public class ExtensionBadResponseErrorImpl implements ExtensionBadResponseError,
     }
 
     /**
-     *
+     *  <p>Additional errors related to the API Extension.</p>
      */
 
-    public com.commercetools.api.models.error.ErrorByExtension getErrorByExtension() {
-        return this.errorByExtension;
+    public java.util.List<com.commercetools.api.models.error.ExtensionError> getExtensionErrors() {
+        return this.extensionErrors;
+    }
+
+    /**
+     *  <p>The response body returned by the Extension.</p>
+     */
+
+    public String getExtensionBody() {
+        return this.extensionBody;
+    }
+
+    /**
+     *  <p>Http status code returned by the Extension.</p>
+     */
+
+    public Integer getExtensionStatusCode() {
+        return this.extensionStatusCode;
+    }
+
+    /**
+     *  <p>Unique identifier of the Extension.</p>
+     */
+
+    public String getExtensionId() {
+        return this.extensionId;
+    }
+
+    /**
+     *  <p>User-defined unique identifier of the Extension.</p>
+     */
+
+    public String getExtensionKey() {
+        return this.extensionKey;
     }
 
     public void setMessage(final String message) {
@@ -117,8 +165,29 @@ public class ExtensionBadResponseErrorImpl implements ExtensionBadResponseError,
         this.extensionExtraInfo = extensionExtraInfo;
     }
 
-    public void setErrorByExtension(final com.commercetools.api.models.error.ErrorByExtension errorByExtension) {
-        this.errorByExtension = errorByExtension;
+    public void setExtensionErrors(final com.commercetools.api.models.error.ExtensionError... extensionErrors) {
+        this.extensionErrors = new ArrayList<>(Arrays.asList(extensionErrors));
+    }
+
+    public void setExtensionErrors(
+            final java.util.List<com.commercetools.api.models.error.ExtensionError> extensionErrors) {
+        this.extensionErrors = extensionErrors;
+    }
+
+    public void setExtensionBody(final String extensionBody) {
+        this.extensionBody = extensionBody;
+    }
+
+    public void setExtensionStatusCode(final Integer extensionStatusCode) {
+        this.extensionStatusCode = extensionStatusCode;
+    }
+
+    public void setExtensionId(final String extensionId) {
+        this.extensionId = extensionId;
+    }
+
+    public void setExtensionKey(final String extensionKey) {
+        this.extensionKey = extensionKey;
     }
 
     @Override
@@ -136,7 +205,11 @@ public class ExtensionBadResponseErrorImpl implements ExtensionBadResponseError,
                 .append(values, that.values)
                 .append(localizedMessage, that.localizedMessage)
                 .append(extensionExtraInfo, that.extensionExtraInfo)
-                .append(errorByExtension, that.errorByExtension)
+                .append(extensionErrors, that.extensionErrors)
+                .append(extensionBody, that.extensionBody)
+                .append(extensionStatusCode, that.extensionStatusCode)
+                .append(extensionId, that.extensionId)
+                .append(extensionKey, that.extensionKey)
                 .isEquals();
     }
 
@@ -147,7 +220,11 @@ public class ExtensionBadResponseErrorImpl implements ExtensionBadResponseError,
                 .append(values)
                 .append(localizedMessage)
                 .append(extensionExtraInfo)
-                .append(errorByExtension)
+                .append(extensionErrors)
+                .append(extensionBody)
+                .append(extensionStatusCode)
+                .append(extensionId)
+                .append(extensionKey)
                 .toHashCode();
     }
 

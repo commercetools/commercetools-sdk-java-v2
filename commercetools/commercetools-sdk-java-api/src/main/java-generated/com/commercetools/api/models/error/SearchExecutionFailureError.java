@@ -5,13 +5,15 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.validation.constraints.NotNull;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * SearchExecutionFailureError
+ *  <p>Returned when a search query could not be completed due to an unexpected failure.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -28,6 +30,22 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface SearchExecutionFailureError extends ErrorObject {
 
     String SEARCH_EXECUTION_FAILURE = "SearchExecutionFailure";
+
+    /**
+     *
+     */
+    @NotNull
+    @JsonProperty("code")
+    public String getCode();
+
+    /**
+     *  <p><code>"Something went wrong during the search query execution. In most case this happens due to usage of non-existing fields and custom product attributes. Please verify all filters and facets in your search query and make sure that all paths are correct."</code></p>
+     */
+    @NotNull
+    @JsonProperty("message")
+    public String getMessage();
+
+    public void setMessage(final String message);
 
     public static SearchExecutionFailureError of() {
         return new SearchExecutionFailureErrorImpl();

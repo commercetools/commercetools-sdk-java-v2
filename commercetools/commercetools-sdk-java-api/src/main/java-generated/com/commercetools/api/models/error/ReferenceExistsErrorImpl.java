@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * ReferenceExistsError
+ *  <p>Returned when a resource cannot be deleted because it is being referenced by another resource.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ReferenceExistsErrorImpl implements ReferenceExistsError, ModelBase {
@@ -51,7 +51,7 @@ public class ReferenceExistsErrorImpl implements ReferenceExistsError, ModelBase
     }
 
     /**
-     *
+     *  <p><code>"Can not delete a $resource while it is referenced by at least one $referencedBy."</code></p>
      */
 
     public String getMessage() {
@@ -59,7 +59,7 @@ public class ReferenceExistsErrorImpl implements ReferenceExistsError, ModelBase
     }
 
     /**
-     *
+     *  <p>Error-specific additional fields.</p>
      */
 
     public Map<String, java.lang.Object> values() {
@@ -67,7 +67,7 @@ public class ReferenceExistsErrorImpl implements ReferenceExistsError, ModelBase
     }
 
     /**
-     *  <p>Type of resource the value should reference. Supported resource type identifiers are:</p>
+     *  <p>Type of referenced resource.</p>
      */
 
     public com.commercetools.api.models.common.ReferenceTypeId getReferencedBy() {

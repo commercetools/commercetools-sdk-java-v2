@@ -28,7 +28,7 @@ public class StoreUpdateBuilder implements Builder<StoreUpdate> {
     private java.util.List<com.commercetools.api.models.store.StoreUpdateAction> actions;
 
     /**
-     *  <p>Expected version of the Store on which the changes should be applied. If the expected version does not match the actual version, a 409 Conflict will be returned.</p>
+     *  <p>Expected version of the Store on which the changes should be applied. If the expected version does not match the actual version, a ConcurrentModification error is returned.</p>
      */
 
     public StoreUpdateBuilder version(final Long version) {

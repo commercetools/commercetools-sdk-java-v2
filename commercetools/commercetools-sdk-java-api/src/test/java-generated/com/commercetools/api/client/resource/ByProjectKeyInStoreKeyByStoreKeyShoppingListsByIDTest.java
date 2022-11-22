@@ -104,6 +104,15 @@ public class ByProjectKeyInStoreKeyByStoreKeyShoppingListsByIDTest {
                                 .shoppingLists()
                                 .withId("test_ID")
                                 .delete()
+                                .withExpand("expand")
+                                .createHttpRequest(),
+                        "delete", "/test_projectKey/in-store/key=test_storeKey/shopping-lists/test_ID?expand=expand", },
+                new Object[] {
+                        apiRoot.withProjectKey("test_projectKey")
+                                .inStoreKeyWithStoreKeyValue("test_storeKey")
+                                .shoppingLists()
+                                .withId("test_ID")
+                                .delete()
                                 .withDataErasure(true)
                                 .createHttpRequest(),
                         "delete",
@@ -117,15 +126,6 @@ public class ByProjectKeyInStoreKeyByStoreKeyShoppingListsByIDTest {
                                 .withVersion(2)
                                 .createHttpRequest(),
                         "delete", "/test_projectKey/in-store/key=test_storeKey/shopping-lists/test_ID?version=2", },
-                new Object[] {
-                        apiRoot.withProjectKey("test_projectKey")
-                                .inStoreKeyWithStoreKeyValue("test_storeKey")
-                                .shoppingLists()
-                                .withId("test_ID")
-                                .delete()
-                                .withExpand("expand")
-                                .createHttpRequest(),
-                        "delete", "/test_projectKey/in-store/key=test_storeKey/shopping-lists/test_ID?expand=expand", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .inStoreKeyWithStoreKeyValue("test_storeKey")
@@ -166,6 +166,12 @@ public class ByProjectKeyInStoreKeyByStoreKeyShoppingListsByIDTest {
                         .shoppingLists()
                         .withId("test_ID")
                         .delete()
+                        .withExpand("expand"), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .inStoreKeyWithStoreKeyValue("test_storeKey")
+                        .shoppingLists()
+                        .withId("test_ID")
+                        .delete()
                         .withDataErasure(true), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .inStoreKeyWithStoreKeyValue("test_storeKey")
@@ -173,12 +179,6 @@ public class ByProjectKeyInStoreKeyByStoreKeyShoppingListsByIDTest {
                         .withId("test_ID")
                         .delete()
                         .withVersion(2), },
-                new Object[] { apiRoot.withProjectKey("test_projectKey")
-                        .inStoreKeyWithStoreKeyValue("test_storeKey")
-                        .shoppingLists()
-                        .withId("test_ID")
-                        .delete()
-                        .withExpand("expand"), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .inStoreKeyWithStoreKeyValue("test_storeKey")
                         .shoppingLists()

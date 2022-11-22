@@ -37,7 +37,7 @@ public class MissingTaxRateForCountryErrorBuilder implements Builder<MissingTaxR
     private String state;
 
     /**
-     *
+     *  <p><code>"Tax category $taxCategoryId is missing a tax rate for country $countriesAndStates."</code></p>
      */
 
     public MissingTaxRateForCountryErrorBuilder message(final String message) {
@@ -46,7 +46,7 @@ public class MissingTaxRateForCountryErrorBuilder implements Builder<MissingTaxR
     }
 
     /**
-     *
+     *  <p>Error-specific additional fields.</p>
      */
 
     public MissingTaxRateForCountryErrorBuilder values(final Map<String, java.lang.Object> values) {
@@ -55,7 +55,7 @@ public class MissingTaxRateForCountryErrorBuilder implements Builder<MissingTaxR
     }
 
     /**
-     *
+     *  <p>Error-specific additional fields.</p>
      */
 
     public MissingTaxRateForCountryErrorBuilder addValue(final String key, final java.lang.Object value) {
@@ -67,7 +67,7 @@ public class MissingTaxRateForCountryErrorBuilder implements Builder<MissingTaxR
     }
 
     /**
-     *
+     *  <p>Unique identifier of the TaxCategory.</p>
      */
 
     public MissingTaxRateForCountryErrorBuilder taxCategoryId(final String taxCategoryId) {
@@ -76,7 +76,7 @@ public class MissingTaxRateForCountryErrorBuilder implements Builder<MissingTaxR
     }
 
     /**
-     *
+     *  <p>Country code of the geographic location.</p>
      */
 
     public MissingTaxRateForCountryErrorBuilder country(@Nullable final String country) {
@@ -85,7 +85,7 @@ public class MissingTaxRateForCountryErrorBuilder implements Builder<MissingTaxR
     }
 
     /**
-     *
+     *  <p>State within the country, such as Texas in the United States.</p>
      */
 
     public MissingTaxRateForCountryErrorBuilder state(@Nullable final String state) {

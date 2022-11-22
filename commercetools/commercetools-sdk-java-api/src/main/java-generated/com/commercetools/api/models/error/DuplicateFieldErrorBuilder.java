@@ -2,9 +2,6 @@
 package com.commercetools.api.models.error;
 
 import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
 
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -17,6 +14,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     DuplicateFieldError duplicateFieldError = DuplicateFieldError.builder()
  *             .message("{message}")
+ *             .field("{field}")
  *             .build()
  * </code></pre>
  * </div>
@@ -28,17 +26,12 @@ public class DuplicateFieldErrorBuilder implements Builder<DuplicateFieldError> 
 
     private Map<String, java.lang.Object> values = new HashMap<>();
 
-    @Nullable
     private String field;
 
-    @Nullable
     private java.lang.Object duplicateValue;
 
-    @Nullable
-    private com.commercetools.api.models.common.Reference conflictingResource;
-
     /**
-     *
+     *  <p><code>"A duplicate value $duplicateValue exists for field $field."</code></p>
      */
 
     public DuplicateFieldErrorBuilder message(final String message) {
@@ -47,7 +40,7 @@ public class DuplicateFieldErrorBuilder implements Builder<DuplicateFieldError> 
     }
 
     /**
-     *
+     *  <p>Error-specific additional fields.</p>
      */
 
     public DuplicateFieldErrorBuilder values(final Map<String, java.lang.Object> values) {
@@ -56,7 +49,7 @@ public class DuplicateFieldErrorBuilder implements Builder<DuplicateFieldError> 
     }
 
     /**
-     *
+     *  <p>Error-specific additional fields.</p>
      */
 
     public DuplicateFieldErrorBuilder addValue(final String key, final java.lang.Object value) {
@@ -68,40 +61,20 @@ public class DuplicateFieldErrorBuilder implements Builder<DuplicateFieldError> 
     }
 
     /**
-     *
+     *  <p>Name of the conflicting field.</p>
      */
 
-    public DuplicateFieldErrorBuilder field(@Nullable final String field) {
+    public DuplicateFieldErrorBuilder field(final String field) {
         this.field = field;
         return this;
     }
 
     /**
-     *
+     *  <p>Conflicting duplicate value.</p>
      */
 
-    public DuplicateFieldErrorBuilder duplicateValue(@Nullable final java.lang.Object duplicateValue) {
+    public DuplicateFieldErrorBuilder duplicateValue(final java.lang.Object duplicateValue) {
         this.duplicateValue = duplicateValue;
-        return this;
-    }
-
-    /**
-     *  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
-     */
-
-    public DuplicateFieldErrorBuilder conflictingResource(
-            @Nullable final com.commercetools.api.models.common.Reference conflictingResource) {
-        this.conflictingResource = conflictingResource;
-        return this;
-    }
-
-    /**
-     *  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
-     */
-
-    public DuplicateFieldErrorBuilder conflictingResource(
-            Function<com.commercetools.api.models.common.ReferenceBuilder, Builder<? extends com.commercetools.api.models.common.Reference>> builder) {
-        this.conflictingResource = builder.apply(com.commercetools.api.models.common.ReferenceBuilder.of()).build();
         return this;
     }
 
@@ -113,32 +86,27 @@ public class DuplicateFieldErrorBuilder implements Builder<DuplicateFieldError> 
         return this.values;
     }
 
-    @Nullable
     public String getField() {
         return this.field;
     }
 
-    @Nullable
     public java.lang.Object getDuplicateValue() {
         return this.duplicateValue;
-    }
-
-    @Nullable
-    public com.commercetools.api.models.common.Reference getConflictingResource() {
-        return this.conflictingResource;
     }
 
     public DuplicateFieldError build() {
         Objects.requireNonNull(message, DuplicateFieldError.class + ": message is missing");
         Objects.requireNonNull(values, DuplicateFieldError.class + ": values are missing");
-        return new DuplicateFieldErrorImpl(message, values, field, duplicateValue, conflictingResource);
+        Objects.requireNonNull(field, DuplicateFieldError.class + ": field is missing");
+        Objects.requireNonNull(duplicateValue, DuplicateFieldError.class + ": duplicateValue is missing");
+        return new DuplicateFieldErrorImpl(message, values, field, duplicateValue);
     }
 
     /**
      * builds DuplicateFieldError without checking for non null required values
      */
     public DuplicateFieldError buildUnchecked() {
-        return new DuplicateFieldErrorImpl(message, values, field, duplicateValue, conflictingResource);
+        return new DuplicateFieldErrorImpl(message, values, field, duplicateValue);
     }
 
     public static DuplicateFieldErrorBuilder of() {
@@ -151,7 +119,6 @@ public class DuplicateFieldErrorBuilder implements Builder<DuplicateFieldError> 
         builder.values = template.values();
         builder.field = template.getField();
         builder.duplicateValue = template.getDuplicateValue();
-        builder.conflictingResource = template.getConflictingResource();
         return builder;
     }
 

@@ -34,28 +34,28 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface TextLineItemDraft extends com.commercetools.api.models.CustomizableDraft<TextLineItemDraft> {
 
     /**
-     *  <p>Defaults to the current date and time.</p>
+     *  <p>Date and time the TextLineItem is added to the ShoppingList. If not set, the current date and time (UTC) is used.</p>
      */
 
     @JsonProperty("addedAt")
     public ZonedDateTime getAddedAt();
 
     /**
-     *  <p>The custom fields.</p>
+     *  <p>Custom Fields for the TextLineItem.</p>
      */
     @Valid
     @JsonProperty("custom")
     public CustomFieldsDraft getCustom();
 
     /**
-     *
+     *  <p>Description of the TextLineItem.</p>
      */
     @Valid
     @JsonProperty("description")
     public LocalizedString getDescription();
 
     /**
-     *
+     *  <p>Name of the TextLineItem.</p>
      */
     @NotNull
     @Valid
@@ -63,11 +63,11 @@ public interface TextLineItemDraft extends com.commercetools.api.models.Customiz
     public LocalizedString getName();
 
     /**
-     *  <p>Defaults to <code>1</code>.</p>
+     *  <p>Number of entries in the TextLineItem.</p>
      */
 
     @JsonProperty("quantity")
-    public Integer getQuantity();
+    public Long getQuantity();
 
     public void setAddedAt(final ZonedDateTime addedAt);
 
@@ -77,7 +77,7 @@ public interface TextLineItemDraft extends com.commercetools.api.models.Customiz
 
     public void setName(final LocalizedString name);
 
-    public void setQuantity(final Integer quantity);
+    public void setQuantity(final Long quantity);
 
     public static TextLineItemDraft of() {
         return new TextLineItemDraftImpl();

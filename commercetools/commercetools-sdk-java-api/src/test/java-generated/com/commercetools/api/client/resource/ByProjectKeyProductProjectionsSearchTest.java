@@ -95,14 +95,6 @@ public class ByProjectKeyProductProjectionsSearchTest {
                                 .productProjections()
                                 .search()
                                 .get()
-                                .withStaged(true)
-                                .createHttpRequest(),
-                        "get", "/test_projectKey/product-projections/search?staged=true", },
-                new Object[] {
-                        apiRoot.withProjectKey("test_projectKey")
-                                .productProjections()
-                                .search()
-                                .get()
                                 .withFilter("filter")
                                 .createHttpRequest(),
                         "get", "/test_projectKey/product-projections/search?filter=filter", },
@@ -164,6 +156,14 @@ public class ByProjectKeyProductProjectionsSearchTest {
                                 .withWithTotal(true)
                                 .createHttpRequest(),
                         "get", "/test_projectKey/product-projections/search?withTotal=true", },
+                new Object[] {
+                        apiRoot.withProjectKey("test_projectKey")
+                                .productProjections()
+                                .search()
+                                .get()
+                                .withStaged(true)
+                                .createHttpRequest(),
+                        "get", "/test_projectKey/product-projections/search?staged=true", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .productProjections()
@@ -250,11 +250,6 @@ public class ByProjectKeyProductProjectionsSearchTest {
                         .productProjections()
                         .search()
                         .get()
-                        .withStaged(true), },
-                new Object[] { apiRoot.withProjectKey("test_projectKey")
-                        .productProjections()
-                        .search()
-                        .get()
                         .withFilter("filter"), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .productProjections()
@@ -290,6 +285,11 @@ public class ByProjectKeyProductProjectionsSearchTest {
                         .search()
                         .get()
                         .withWithTotal(true), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .productProjections()
+                        .search()
+                        .get()
+                        .withStaged(true), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .productProjections()
                         .search()

@@ -15,7 +15,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * EnumValueIsUsedError
+ *  <p>Returned when an enum value cannot be removed from an Attribute as it is being used by a Product.</p>
+ *  <p>The error is returned as a failed response to the Remove EnumValues from AttributeDefinition update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class EnumValueIsUsedErrorImpl implements EnumValueIsUsedError, ModelBase {
@@ -47,7 +48,7 @@ public class EnumValueIsUsedErrorImpl implements EnumValueIsUsedError, ModelBase
     }
 
     /**
-     *
+     *  <p><code>"$enumKeysTranscript is used by some products and cannot be deleted because the $attributeName attribute is required."</code></p>
      */
 
     public String getMessage() {
@@ -55,7 +56,7 @@ public class EnumValueIsUsedErrorImpl implements EnumValueIsUsedError, ModelBase
     }
 
     /**
-     *
+     *  <p>Error-specific additional fields.</p>
      */
 
     public Map<String, java.lang.Object> values() {

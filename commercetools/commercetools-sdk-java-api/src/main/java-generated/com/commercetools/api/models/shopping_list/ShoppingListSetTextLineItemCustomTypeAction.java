@@ -35,7 +35,7 @@ public interface ShoppingListSetTextLineItemCustomTypeAction extends ShoppingLis
     String SET_TEXT_LINE_ITEM_CUSTOM_TYPE = "setTextLineItemCustomType";
 
     /**
-     *
+     *  <p>The <code>id</code> of the TextLineItem to update.</p>
      */
     @NotNull
     @JsonProperty("textLineItemId")

@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * SearchIndexingInProgressError
+ *  <p>Returned when the indexing of Product information is still in progress for Projects that have indexing activated.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SearchIndexingInProgressErrorImpl implements SearchIndexingInProgressError, ModelBase {
@@ -47,7 +47,7 @@ public class SearchIndexingInProgressErrorImpl implements SearchIndexingInProgre
     }
 
     /**
-     *
+     *  <p><code>"The indexing is currently in progress. Please wait until the status is "Activated" to execute search requests."</code></p>
      */
 
     public String getMessage() {
@@ -55,7 +55,7 @@ public class SearchIndexingInProgressErrorImpl implements SearchIndexingInProgre
     }
 
     /**
-     *
+     *  <p>Error-specific additional fields.</p>
      */
 
     public Map<String, java.lang.Object> values() {

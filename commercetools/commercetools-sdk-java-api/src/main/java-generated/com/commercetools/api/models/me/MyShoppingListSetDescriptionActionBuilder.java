@@ -27,7 +27,7 @@ public class MyShoppingListSetDescriptionActionBuilder implements Builder<MyShop
     private com.commercetools.api.models.common.LocalizedString description;
 
     /**
-     *  <p>JSON object where the keys are of type Locale, and the values are the strings used for the corresponding language.</p>
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
      */
 
     public MyShoppingListSetDescriptionActionBuilder description(
@@ -37,7 +37,7 @@ public class MyShoppingListSetDescriptionActionBuilder implements Builder<MyShop
     }
 
     /**
-     *  <p>JSON object where the keys are of type Locale, and the values are the strings used for the corresponding language.</p>
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
      */
 
     public MyShoppingListSetDescriptionActionBuilder description(

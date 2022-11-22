@@ -15,7 +15,9 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>This update action produces the StoreSupplyChannelsChanged Message. It has no effect if a given supply channel is already present in a Store.</p>
+ *  <p>This action has no effect if a given supply channel is already present in a Store.</p>
+ *  <p>Adding a supply channel produces the StoreSupplyChannelsChanged Message.</p>
+ *  <p>Adding a Channel without the <code>InventorySupply</code> ChannelRoleEnum returns a MissingRoleOnChannel error.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -34,7 +36,7 @@ public interface StoreAddSupplyChannelAction extends StoreUpdateAction {
     String ADD_SUPPLY_CHANNEL = "addSupplyChannel";
 
     /**
-     *  <p>Any attempt to use Channel without the <code>InventorySupply</code> ChannelRoleEnum will fail with a MissingRoleOnChannel error.</p>
+     *  <p>Value to append.</p>
      */
     @NotNull
     @Valid

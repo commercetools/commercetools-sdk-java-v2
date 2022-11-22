@@ -29,7 +29,7 @@ public class DuplicateEnumValuesErrorBuilder implements Builder<DuplicateEnumVal
     private java.util.List<String> duplicates;
 
     /**
-     *
+     *  <p><code>"The enum values contain duplicate keys: $listOfDuplicateKeys."</code></p>
      */
 
     public DuplicateEnumValuesErrorBuilder message(final String message) {
@@ -38,7 +38,7 @@ public class DuplicateEnumValuesErrorBuilder implements Builder<DuplicateEnumVal
     }
 
     /**
-     *
+     *  <p>Error-specific additional fields.</p>
      */
 
     public DuplicateEnumValuesErrorBuilder values(final Map<String, java.lang.Object> values) {
@@ -47,7 +47,7 @@ public class DuplicateEnumValuesErrorBuilder implements Builder<DuplicateEnumVal
     }
 
     /**
-     *
+     *  <p>Error-specific additional fields.</p>
      */
 
     public DuplicateEnumValuesErrorBuilder addValue(final String key, final java.lang.Object value) {
@@ -59,7 +59,7 @@ public class DuplicateEnumValuesErrorBuilder implements Builder<DuplicateEnumVal
     }
 
     /**
-     *
+     *  <p>Duplicate keys.</p>
      */
 
     public DuplicateEnumValuesErrorBuilder duplicates(final String... duplicates) {
@@ -68,7 +68,7 @@ public class DuplicateEnumValuesErrorBuilder implements Builder<DuplicateEnumVal
     }
 
     /**
-     *
+     *  <p>Duplicate keys.</p>
      */
 
     public DuplicateEnumValuesErrorBuilder duplicates(final java.util.List<String> duplicates) {
@@ -77,7 +77,7 @@ public class DuplicateEnumValuesErrorBuilder implements Builder<DuplicateEnumVal
     }
 
     /**
-     *
+     *  <p>Duplicate keys.</p>
      */
 
     public DuplicateEnumValuesErrorBuilder plusDuplicates(final String... duplicates) {

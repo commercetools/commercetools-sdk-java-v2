@@ -27,7 +27,7 @@ public class ShoppingListSetStoreActionBuilder implements Builder<ShoppingListSe
     private com.commercetools.api.models.store.StoreResourceIdentifier store;
 
     /**
-     *
+     *  <p>The Store the ShoppingList should be assigned to. If empty, any existing value will be removed.</p>
      */
 
     public ShoppingListSetStoreActionBuilder store(
@@ -37,7 +37,7 @@ public class ShoppingListSetStoreActionBuilder implements Builder<ShoppingListSe
     }
 
     /**
-     *
+     *  <p>The Store the ShoppingList should be assigned to. If empty, any existing value will be removed.</p>
      */
 
     public ShoppingListSetStoreActionBuilder store(

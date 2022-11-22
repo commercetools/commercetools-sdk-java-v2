@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * SyntaxErrorError
+ *  <p>Returned when a Discount predicate, API Extension predicate, or search query does not have the correct syntax.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SyntaxErrorErrorImpl implements SyntaxErrorError, ModelBase {
@@ -47,7 +47,7 @@ public class SyntaxErrorErrorImpl implements SyntaxErrorError, ModelBase {
     }
 
     /**
-     *
+     *  <p><code>"Syntax error while parsing $fieldDefinition."</code></p>
      */
 
     public String getMessage() {
@@ -55,7 +55,7 @@ public class SyntaxErrorErrorImpl implements SyntaxErrorError, ModelBase {
     }
 
     /**
-     *
+     *  <p>Error-specific additional fields.</p>
      */
 
     public Map<String, java.lang.Object> values() {

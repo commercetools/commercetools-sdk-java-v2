@@ -15,7 +15,14 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * MatchingPriceNotFoundError
+ *  <p>Returned when the Product Variant does not have a Price according to the Product <code>priceMode</code> value for a selected currency, country, Customer Group, or Channel.</p>
+ *  <p>The error is returned as a failed response to:</p>
+ *  <ul>
+ *   <li>Add LineItem, Add CustomLineItem, and Add DiscountCode update actions on Carts.</li>
+ *   <li>Add LineItem, Add CustomLineItem, and Add DiscountCode update actions on Order Edits.</li>
+ *   <li>Create Order from Cart and Create Order from Cart in a Store requests on Orders.</li>
+ *   <li>Create Order from a Cart and Create Order in a Store from a Cart requests on My Orders.</li>
+ *  </ul>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class MatchingPriceNotFoundErrorImpl implements MatchingPriceNotFoundError, ModelBase {
@@ -69,7 +76,7 @@ public class MatchingPriceNotFoundErrorImpl implements MatchingPriceNotFoundErro
     }
 
     /**
-     *
+     *  <p><code>"The variant $variantId of product $productId does not contain a price for currency $currencyCode, $country, $customerGroup, $channel."</code></p>
      */
 
     public String getMessage() {
@@ -77,7 +84,7 @@ public class MatchingPriceNotFoundErrorImpl implements MatchingPriceNotFoundErro
     }
 
     /**
-     *
+     *  <p>Error-specific additional fields.</p>
      */
 
     public Map<String, java.lang.Object> values() {
@@ -85,7 +92,7 @@ public class MatchingPriceNotFoundErrorImpl implements MatchingPriceNotFoundErro
     }
 
     /**
-     *
+     *  <p>Unique identifier of a Product.</p>
      */
 
     public String getProductId() {
@@ -93,7 +100,7 @@ public class MatchingPriceNotFoundErrorImpl implements MatchingPriceNotFoundErro
     }
 
     /**
-     *
+     *  <p>Unique identifier of a ProductVariant in the Product.</p>
      */
 
     public Integer getVariantId() {
@@ -101,7 +108,7 @@ public class MatchingPriceNotFoundErrorImpl implements MatchingPriceNotFoundErro
     }
 
     /**
-     *
+     *  <p>Currency code of the country.</p>
      */
 
     public String getCurrency() {
@@ -109,7 +116,7 @@ public class MatchingPriceNotFoundErrorImpl implements MatchingPriceNotFoundErro
     }
 
     /**
-     *
+     *  <p>Country code of the geographic location.</p>
      */
 
     public String getCountry() {
@@ -117,7 +124,7 @@ public class MatchingPriceNotFoundErrorImpl implements MatchingPriceNotFoundErro
     }
 
     /**
-     *  <p>Reference to a CustomerGroup.</p>
+     *  <p>Customer Group associated with the Price.</p>
      */
 
     public com.commercetools.api.models.customer_group.CustomerGroupReference getCustomerGroup() {
@@ -125,7 +132,7 @@ public class MatchingPriceNotFoundErrorImpl implements MatchingPriceNotFoundErro
     }
 
     /**
-     *  <p>Reference to a Channel.</p>
+     *  <p>Channel associated with the Price.</p>
      */
 
     public com.commercetools.api.models.channel.ChannelReference getChannel() {

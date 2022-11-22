@@ -13,7 +13,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * RequiredFieldError
+ *  <p>Returned when a value is not defined for a required field.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -36,8 +36,24 @@ public interface RequiredFieldError extends ErrorObject {
      *
      */
     @NotNull
+    @JsonProperty("code")
+    public String getCode();
+
+    /**
+     *  <p><code>"A value is required for field $field."</code></p>
+     */
+    @NotNull
+    @JsonProperty("message")
+    public String getMessage();
+
+    /**
+     *  <p>Name of the field missing the value.</p>
+     */
+    @NotNull
     @JsonProperty("field")
     public String getField();
+
+    public void setMessage(final String message);
 
     public void setField(final String field);
 

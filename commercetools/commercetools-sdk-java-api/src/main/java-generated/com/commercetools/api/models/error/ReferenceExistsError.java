@@ -5,6 +5,8 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.validation.constraints.NotNull;
+
 import com.commercetools.api.models.common.ReferenceTypeId;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
@@ -12,7 +14,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * ReferenceExistsError
+ *  <p>Returned when a resource cannot be deleted because it is being referenced by another resource.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -31,11 +33,27 @@ public interface ReferenceExistsError extends ErrorObject {
     String REFERENCE_EXISTS = "ReferenceExists";
 
     /**
-     *  <p>Type of resource the value should reference. Supported resource type identifiers are:</p>
+     *
+     */
+    @NotNull
+    @JsonProperty("code")
+    public String getCode();
+
+    /**
+     *  <p><code>"Can not delete a $resource while it is referenced by at least one $referencedBy."</code></p>
+     */
+    @NotNull
+    @JsonProperty("message")
+    public String getMessage();
+
+    /**
+     *  <p>Type of referenced resource.</p>
      */
 
     @JsonProperty("referencedBy")
     public ReferenceTypeId getReferencedBy();
+
+    public void setMessage(final String message);
 
     public void setReferencedBy(final ReferenceTypeId referencedBy);
 

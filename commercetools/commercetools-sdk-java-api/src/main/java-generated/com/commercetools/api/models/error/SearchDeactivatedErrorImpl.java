@@ -15,7 +15,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * SearchDeactivatedError
+ *  <p>Returned when the indexing of Product information is deactivated in a Project.</p>
+ *  <p>To activate indexing, call Change Product Search Indexing Enabled and set <code>enabled</code> to <code>true</code>.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SearchDeactivatedErrorImpl implements SearchDeactivatedError, ModelBase {
@@ -47,7 +48,7 @@ public class SearchDeactivatedErrorImpl implements SearchDeactivatedError, Model
     }
 
     /**
-     *
+     *  <p><code>"The endpoint is deactivated for this project. Please enable it via the Project endpoint, via the Merchant Center in the Project settings, or reach out to Support to enable it."</code></p>
      */
 
     public String getMessage() {
@@ -55,7 +56,7 @@ public class SearchDeactivatedErrorImpl implements SearchDeactivatedError, Model
     }
 
     /**
-     *
+     *  <p>Error-specific additional fields.</p>
      */
 
     public Map<String, java.lang.Object> values() {

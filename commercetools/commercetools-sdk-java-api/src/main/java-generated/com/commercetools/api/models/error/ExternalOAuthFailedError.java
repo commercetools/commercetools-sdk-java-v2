@@ -5,13 +5,15 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.validation.constraints.NotNull;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * ExternalOAuthFailedError
+ *  <p>Returned when an external OAuth Introspection endpoint does not return a response within the time limit, or the response isn't compliant with RFC 7662 (for example, an HTTP status code like <code>500</code>).</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -28,6 +30,22 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ExternalOAuthFailedError extends ErrorObject {
 
     String EXTERNAL_O_AUTH_FAILED = "ExternalOAuthFailed";
+
+    /**
+     *
+     */
+    @NotNull
+    @JsonProperty("code")
+    public String getCode();
+
+    /**
+     *  <p>Plain text description detailing the external OAuth error. For example, <code>"External OAuth did not respond in time."</code>.</p>
+     */
+    @NotNull
+    @JsonProperty("message")
+    public String getMessage();
+
+    public void setMessage(final String message);
 
     public static ExternalOAuthFailedError of() {
         return new ExternalOAuthFailedErrorImpl();

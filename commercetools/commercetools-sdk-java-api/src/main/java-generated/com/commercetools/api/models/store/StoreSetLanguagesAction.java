@@ -11,7 +11,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>This update action produces the StoreLanguagesChanged Message.</p>
+ *  <p>This update action produces the StoreLanguagesChanged Message. Adding a language other than the ones defined in the Project returns a ProjectNotConfiguredForLanguages error.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -29,7 +29,7 @@ public interface StoreSetLanguagesAction extends StoreUpdateAction {
     String SET_LANGUAGES = "setLanguages";
 
     /**
-     *  <p>Value to set. Any attempt to use languages other than the ones defined in the Project will fail with a ProjectNotConfiguredForLanguages error.</p>
+     *  <p>Value to set.</p>
      */
 
     @JsonProperty("languages")

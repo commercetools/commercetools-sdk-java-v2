@@ -26,7 +26,7 @@ public class BadGatewayErrorBuilder implements Builder<BadGatewayError> {
     private Map<String, java.lang.Object> values = new HashMap<>();
 
     /**
-     *
+     *  <p>Plain text description of the error.</p>
      */
 
     public BadGatewayErrorBuilder message(final String message) {
@@ -35,7 +35,7 @@ public class BadGatewayErrorBuilder implements Builder<BadGatewayError> {
     }
 
     /**
-     *
+     *  <p>Error-specific additional fields.</p>
      */
 
     public BadGatewayErrorBuilder values(final Map<String, java.lang.Object> values) {
@@ -44,7 +44,7 @@ public class BadGatewayErrorBuilder implements Builder<BadGatewayError> {
     }
 
     /**
-     *
+     *  <p>Error-specific additional fields.</p>
      */
 
     public BadGatewayErrorBuilder addValue(final String key, final java.lang.Object value) {

@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * MyShoppingListDraft
+ *  <p>A MyShoppingListDraft is the object submitted as payload to the Create MyShoppingList request. The <code>customer</code> field of ShoppingList is automatically set with a password flow token. The <code>anonymousId</code> is automatically set with a token for an anonymous session. The <code>key</code> and <code>slug</code> fields can not be set.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class MyShoppingListDraftImpl implements MyShoppingListDraft, ModelBase {
@@ -55,7 +55,7 @@ public class MyShoppingListDraftImpl implements MyShoppingListDraft, ModelBase {
     }
 
     /**
-     *
+     *  <p>Name of the ShoppingList.</p>
      */
 
     public com.commercetools.api.models.common.LocalizedString getName() {
@@ -63,7 +63,7 @@ public class MyShoppingListDraftImpl implements MyShoppingListDraft, ModelBase {
     }
 
     /**
-     *
+     *  <p>Description of the ShoppingList.</p>
      */
 
     public com.commercetools.api.models.common.LocalizedString getDescription() {
@@ -71,7 +71,7 @@ public class MyShoppingListDraftImpl implements MyShoppingListDraft, ModelBase {
     }
 
     /**
-     *
+     *  <p>Line Items (containing Products) to add to the ShoppingList.</p>
      */
 
     public java.util.List<com.commercetools.api.models.shopping_list.ShoppingListLineItemDraft> getLineItems() {
@@ -79,7 +79,7 @@ public class MyShoppingListDraftImpl implements MyShoppingListDraft, ModelBase {
     }
 
     /**
-     *
+     *  <p>Line Items (containing text values) to add to the ShoppingList.</p>
      */
 
     public java.util.List<com.commercetools.api.models.shopping_list.TextLineItemDraft> getTextLineItems() {
@@ -87,7 +87,7 @@ public class MyShoppingListDraftImpl implements MyShoppingListDraft, ModelBase {
     }
 
     /**
-     *  <p>The custom fields.</p>
+     *  <p>Custom Fields defined for the ShoppingList.</p>
      */
 
     public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
@@ -95,7 +95,7 @@ public class MyShoppingListDraftImpl implements MyShoppingListDraft, ModelBase {
     }
 
     /**
-     *  <p>The shopping list will be deleted automatically if it hasn't been modified for the specified amount of days.</p>
+     *  <p>Number of days after which the ShoppingList will be automatically deleted if it has not been modified. If not set, the default value configured in the Project is used.</p>
      */
 
     public Long getDeleteDaysAfterLastModification() {
@@ -103,7 +103,7 @@ public class MyShoppingListDraftImpl implements MyShoppingListDraft, ModelBase {
     }
 
     /**
-     *
+     *  <p>Assigns the new ShoppingList to the Store. The Store assignment can not be modified.</p>
      */
 
     public com.commercetools.api.models.store.StoreResourceIdentifier getStore() {

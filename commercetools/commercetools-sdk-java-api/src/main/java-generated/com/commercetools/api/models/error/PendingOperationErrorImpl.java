@@ -15,7 +15,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * PendingOperationError
+ *  <p>Returned when a previous conflicting operation is still pending and needs to finish before the request can succeed.</p>
+ *  <p>The client application should retry the request with exponential backoff up to a point where further delay is unacceptable. If the error persists, report it using the Support Portal.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class PendingOperationErrorImpl implements PendingOperationError, ModelBase {
@@ -47,7 +48,7 @@ public class PendingOperationErrorImpl implements PendingOperationError, ModelBa
     }
 
     /**
-     *
+     *  <p>Plain text description of the error.</p>
      */
 
     public String getMessage() {
@@ -55,7 +56,7 @@ public class PendingOperationErrorImpl implements PendingOperationError, ModelBa
     }
 
     /**
-     *
+     *  <p>Error-specific additional fields.</p>
      */
 
     public Map<String, java.lang.Object> values() {

@@ -26,7 +26,7 @@ public class QueryTimedOutErrorBuilder implements Builder<QueryTimedOutError> {
     private Map<String, java.lang.Object> values = new HashMap<>();
 
     /**
-     *
+     *  <p><code>"The query timed out. If your query constantly times out, please check that it follows the performance best practices (see https://docs.commercetools.com/api/predicates/query#performance-considerations)."</code></p>
      */
 
     public QueryTimedOutErrorBuilder message(final String message) {
@@ -35,7 +35,7 @@ public class QueryTimedOutErrorBuilder implements Builder<QueryTimedOutError> {
     }
 
     /**
-     *
+     *  <p>Error-specific additional fields.</p>
      */
 
     public QueryTimedOutErrorBuilder values(final Map<String, java.lang.Object> values) {
@@ -44,7 +44,7 @@ public class QueryTimedOutErrorBuilder implements Builder<QueryTimedOutError> {
     }
 
     /**
-     *
+     *  <p>Error-specific additional fields.</p>
      */
 
     public QueryTimedOutErrorBuilder addValue(final String key, final java.lang.Object value) {

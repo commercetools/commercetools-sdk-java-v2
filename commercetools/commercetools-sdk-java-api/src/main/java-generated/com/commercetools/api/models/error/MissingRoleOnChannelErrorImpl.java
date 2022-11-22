@@ -15,7 +15,16 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * MissingRoleOnChannelError
+ *  <p>Returned when one of the following states occur:</p>
+ *  <ul>
+ *   <li>Channel is added or set on a Store with missing Channel <code>roles</code>.</li>
+ *   <li>Standalone Price references a Channel that does not contain the <code>ProductDistribution</code> role.</li>
+ *  </ul>
+ *  <p>The error is returned as a failed response to:</p>
+ *  <ul>
+ *   <li>Add Distribution Channel, Set Distribution Channel, Add Supply Channel, and Set Supply Channel update actions.</li>
+ *   <li>Create a Standalone Price request.</li>
+ *  </ul>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class MissingRoleOnChannelErrorImpl implements MissingRoleOnChannelError, ModelBase {
@@ -55,7 +64,7 @@ public class MissingRoleOnChannelErrorImpl implements MissingRoleOnChannelError,
     }
 
     /**
-     *
+     *  <p><code>"Given channel with $idOrKeyOfChannel does not have the required role $role."</code></p>
      */
 
     public String getMessage() {
@@ -63,7 +72,7 @@ public class MissingRoleOnChannelErrorImpl implements MissingRoleOnChannelError,
     }
 
     /**
-     *
+     *  <p>Error-specific additional fields.</p>
      */
 
     public Map<String, java.lang.Object> values() {
@@ -71,7 +80,7 @@ public class MissingRoleOnChannelErrorImpl implements MissingRoleOnChannelError,
     }
 
     /**
-     *  <p>ResourceIdentifier to a Channel.</p>
+     *  <p>ResourceIdentifier to a given Channel.</p>
      */
 
     public com.commercetools.api.models.channel.ChannelResourceIdentifier getChannel() {
@@ -79,7 +88,10 @@ public class MissingRoleOnChannelErrorImpl implements MissingRoleOnChannelError,
     }
 
     /**
-     *  <p>Describes the purpose and type of the Channel. A Channel can have one or more roles.</p>
+     *  <ul>
+     *   <li><code>ProductDistribution</code> for Product Distribution Channels allowed for the Store. Also required for Standalone Prices.</li>
+     *   <li><code>InventorySupply</code> for Inventory Supply Channels allowed for the Store.</li>
+     *  </ul>
      */
 
     public com.commercetools.api.models.channel.ChannelRoleEnum getMissingRole() {

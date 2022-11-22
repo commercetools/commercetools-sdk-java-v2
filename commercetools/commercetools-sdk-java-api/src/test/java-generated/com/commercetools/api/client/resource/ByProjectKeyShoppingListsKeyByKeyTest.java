@@ -95,6 +95,14 @@ public class ByProjectKeyShoppingListsKeyByKeyTest {
                                 .shoppingLists()
                                 .withKey("test_key")
                                 .delete()
+                                .withExpand("expand")
+                                .createHttpRequest(),
+                        "delete", "/test_projectKey/shopping-lists/key=test_key?expand=expand", },
+                new Object[] {
+                        apiRoot.withProjectKey("test_projectKey")
+                                .shoppingLists()
+                                .withKey("test_key")
+                                .delete()
                                 .withDataErasure(true)
                                 .createHttpRequest(),
                         "delete", "/test_projectKey/shopping-lists/key=test_key?dataErasure=true", },
@@ -106,14 +114,6 @@ public class ByProjectKeyShoppingListsKeyByKeyTest {
                                 .withVersion(2)
                                 .createHttpRequest(),
                         "delete", "/test_projectKey/shopping-lists/key=test_key?version=2", },
-                new Object[] {
-                        apiRoot.withProjectKey("test_projectKey")
-                                .shoppingLists()
-                                .withKey("test_key")
-                                .delete()
-                                .withExpand("expand")
-                                .createHttpRequest(),
-                        "delete", "/test_projectKey/shopping-lists/key=test_key?expand=expand", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .shoppingLists()
                         .withKey("test_key")
@@ -143,17 +143,17 @@ public class ByProjectKeyShoppingListsKeyByKeyTest {
                         .shoppingLists()
                         .withKey("test_key")
                         .delete()
+                        .withExpand("expand"), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .shoppingLists()
+                        .withKey("test_key")
+                        .delete()
                         .withDataErasure(true), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .shoppingLists()
                         .withKey("test_key")
                         .delete()
                         .withVersion(2), },
-                new Object[] { apiRoot.withProjectKey("test_projectKey")
-                        .shoppingLists()
-                        .withKey("test_key")
-                        .delete()
-                        .withExpand("expand"), },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey").shoppingLists().withKey("test_key").delete(), } };
     }

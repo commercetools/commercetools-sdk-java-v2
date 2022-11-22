@@ -32,7 +32,7 @@ public interface ShoppingListChangeTextLineItemsOrderAction extends ShoppingList
     String CHANGE_TEXT_LINE_ITEMS_ORDER = "changeTextLineItemsOrder";
 
     /**
-     *
+     *  <p>Must contain all existing TextLineItem <code>id</code>s in the desired new order.</p>
      */
     @NotNull
     @JsonProperty("textLineItemOrder")

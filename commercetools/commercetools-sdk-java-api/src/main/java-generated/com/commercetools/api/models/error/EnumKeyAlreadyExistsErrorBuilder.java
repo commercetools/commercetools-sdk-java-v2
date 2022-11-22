@@ -32,7 +32,7 @@ public class EnumKeyAlreadyExistsErrorBuilder implements Builder<EnumKeyAlreadyE
     private String conflictingAttributeName;
 
     /**
-     *
+     *  <p><code>"The $attributeName attribute definition already contains an enum value with the key $enumKey."</code></p>
      */
 
     public EnumKeyAlreadyExistsErrorBuilder message(final String message) {
@@ -41,7 +41,7 @@ public class EnumKeyAlreadyExistsErrorBuilder implements Builder<EnumKeyAlreadyE
     }
 
     /**
-     *
+     *  <p>Error-specific additional fields.</p>
      */
 
     public EnumKeyAlreadyExistsErrorBuilder values(final Map<String, java.lang.Object> values) {
@@ -50,7 +50,7 @@ public class EnumKeyAlreadyExistsErrorBuilder implements Builder<EnumKeyAlreadyE
     }
 
     /**
-     *
+     *  <p>Error-specific additional fields.</p>
      */
 
     public EnumKeyAlreadyExistsErrorBuilder addValue(final String key, final java.lang.Object value) {
@@ -62,7 +62,7 @@ public class EnumKeyAlreadyExistsErrorBuilder implements Builder<EnumKeyAlreadyE
     }
 
     /**
-     *
+     *  <p>Conflicting enum key.</p>
      */
 
     public EnumKeyAlreadyExistsErrorBuilder conflictingEnumKey(final String conflictingEnumKey) {
@@ -71,7 +71,7 @@ public class EnumKeyAlreadyExistsErrorBuilder implements Builder<EnumKeyAlreadyE
     }
 
     /**
-     *
+     *  <p>Name of the conflicting Attribute.</p>
      */
 
     public EnumKeyAlreadyExistsErrorBuilder conflictingAttributeName(final String conflictingAttributeName) {

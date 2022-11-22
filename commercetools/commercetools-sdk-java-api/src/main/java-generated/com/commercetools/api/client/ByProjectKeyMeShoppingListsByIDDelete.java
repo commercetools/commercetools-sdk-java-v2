@@ -88,12 +88,12 @@ public class ByProjectKeyMeShoppingListsByIDDelete extends
         return this.ID;
     }
 
-    public List<String> getVersion() {
-        return this.getQueryParam("version");
-    }
-
     public List<String> getExpand() {
         return this.getQueryParam("expand");
+    }
+
+    public List<String> getVersion() {
+        return this.getQueryParam("version");
     }
 
     public void setProjectKey(final String projectKey) {
@@ -102,65 +102,6 @@ public class ByProjectKeyMeShoppingListsByIDDelete extends
 
     public void setID(final String ID) {
         this.ID = ID;
-    }
-
-    /**
-     * set version with the specified value
-     */
-    public <TValue> ByProjectKeyMeShoppingListsByIDDelete withVersion(final TValue version) {
-        return copy().withQueryParam("version", version);
-    }
-
-    /**
-     * add additional version query parameter
-     */
-    public <TValue> ByProjectKeyMeShoppingListsByIDDelete addVersion(final TValue version) {
-        return copy().addQueryParam("version", version);
-    }
-
-    /**
-     * set version with the specified value
-     */
-    public ByProjectKeyMeShoppingListsByIDDelete withVersion(final Supplier<Long> supplier) {
-        return copy().withQueryParam("version", supplier.get());
-    }
-
-    /**
-     * add additional version query parameter
-     */
-    public ByProjectKeyMeShoppingListsByIDDelete addVersion(final Supplier<Long> supplier) {
-        return copy().addQueryParam("version", supplier.get());
-    }
-
-    /**
-     * set version with the specified value
-     */
-    public ByProjectKeyMeShoppingListsByIDDelete withVersion(final Function<StringBuilder, StringBuilder> op) {
-        return copy().withQueryParam("version", op.apply(new StringBuilder()));
-    }
-
-    /**
-     * add additional version query parameter
-     */
-    public ByProjectKeyMeShoppingListsByIDDelete addVersion(final Function<StringBuilder, StringBuilder> op) {
-        return copy().addQueryParam("version", op.apply(new StringBuilder()));
-    }
-
-    /**
-     * set version with the specified values
-     */
-    public <TValue> ByProjectKeyMeShoppingListsByIDDelete withVersion(final Collection<TValue> version) {
-        return copy().withoutQueryParam("version")
-                .addQueryParams(
-                    version.stream().map(s -> new ParamEntry<>("version", s.toString())).collect(Collectors.toList()));
-    }
-
-    /**
-     * add additional version query parameters
-     */
-    public <TValue> ByProjectKeyMeShoppingListsByIDDelete addVersion(final Collection<TValue> version) {
-        return copy().addQueryParams(
-            version.stream().map(s -> new ParamEntry<>("version", s.toString())).collect(Collectors.toList()));
     }
 
     /**
@@ -220,6 +161,65 @@ public class ByProjectKeyMeShoppingListsByIDDelete extends
     public <TValue> ByProjectKeyMeShoppingListsByIDDelete addExpand(final Collection<TValue> expand) {
         return copy().addQueryParams(
             expand.stream().map(s -> new ParamEntry<>("expand", s.toString())).collect(Collectors.toList()));
+    }
+
+    /**
+     * set version with the specified value
+     */
+    public <TValue> ByProjectKeyMeShoppingListsByIDDelete withVersion(final TValue version) {
+        return copy().withQueryParam("version", version);
+    }
+
+    /**
+     * add additional version query parameter
+     */
+    public <TValue> ByProjectKeyMeShoppingListsByIDDelete addVersion(final TValue version) {
+        return copy().addQueryParam("version", version);
+    }
+
+    /**
+     * set version with the specified value
+     */
+    public ByProjectKeyMeShoppingListsByIDDelete withVersion(final Supplier<Long> supplier) {
+        return copy().withQueryParam("version", supplier.get());
+    }
+
+    /**
+     * add additional version query parameter
+     */
+    public ByProjectKeyMeShoppingListsByIDDelete addVersion(final Supplier<Long> supplier) {
+        return copy().addQueryParam("version", supplier.get());
+    }
+
+    /**
+     * set version with the specified value
+     */
+    public ByProjectKeyMeShoppingListsByIDDelete withVersion(final Function<StringBuilder, StringBuilder> op) {
+        return copy().withQueryParam("version", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * add additional version query parameter
+     */
+    public ByProjectKeyMeShoppingListsByIDDelete addVersion(final Function<StringBuilder, StringBuilder> op) {
+        return copy().addQueryParam("version", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * set version with the specified values
+     */
+    public <TValue> ByProjectKeyMeShoppingListsByIDDelete withVersion(final Collection<TValue> version) {
+        return copy().withoutQueryParam("version")
+                .addQueryParams(
+                    version.stream().map(s -> new ParamEntry<>("version", s.toString())).collect(Collectors.toList()));
+    }
+
+    /**
+     * add additional version query parameters
+     */
+    public <TValue> ByProjectKeyMeShoppingListsByIDDelete addVersion(final Collection<TValue> version) {
+        return copy().addQueryParams(
+            version.stream().map(s -> new ParamEntry<>("version", s.toString())).collect(Collectors.toList()));
     }
 
     @Override

@@ -24,25 +24,52 @@ import io.vrap.rmf.base.client.utils.Generated;
 public class ShoppingListLineItemDraftBuilder implements Builder<ShoppingListLineItemDraft> {
 
     @Nullable
+    private String productId;
+
+    @Nullable
+    private Long variantId;
+
+    @Nullable
+    private String sku;
+
+    @Nullable
     private java.time.ZonedDateTime addedAt;
 
     @Nullable
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
 
     @Nullable
-    private String sku;
-
-    @Nullable
-    private String productId;
-
-    @Nullable
-    private Integer quantity;
-
-    @Nullable
-    private Long variantId;
+    private Long quantity;
 
     /**
-     *
+     *  <p>Unique identifier of a Product.</p>
+     */
+
+    public ShoppingListLineItemDraftBuilder productId(@Nullable final String productId) {
+        this.productId = productId;
+        return this;
+    }
+
+    /**
+     *  <p><code>id</code> of the ProductVariant. If not set, the ShoppingListLineItem refers to the Master Variant.</p>
+     */
+
+    public ShoppingListLineItemDraftBuilder variantId(@Nullable final Long variantId) {
+        this.variantId = variantId;
+        return this;
+    }
+
+    /**
+     *  <p><code>sku</code> of the ProductVariant.</p>
+     */
+
+    public ShoppingListLineItemDraftBuilder sku(@Nullable final String sku) {
+        this.sku = sku;
+        return this;
+    }
+
+    /**
+     *  <p>Date and time the ShoppingListLineItem is added to the ShoppingList. If not set, the current date and time (UTC) is used.</p>
      */
 
     public ShoppingListLineItemDraftBuilder addedAt(@Nullable final java.time.ZonedDateTime addedAt) {
@@ -51,7 +78,7 @@ public class ShoppingListLineItemDraftBuilder implements Builder<ShoppingListLin
     }
 
     /**
-     *  <p>The representation used when creating or updating a customizable data type with Custom Fields.</p>
+     *  <p>Custom Fields of the ShoppingListLineItem.</p>
      */
 
     public ShoppingListLineItemDraftBuilder custom(
@@ -61,7 +88,7 @@ public class ShoppingListLineItemDraftBuilder implements Builder<ShoppingListLin
     }
 
     /**
-     *  <p>The representation used when creating or updating a customizable data type with Custom Fields.</p>
+     *  <p>Custom Fields of the ShoppingListLineItem.</p>
      */
 
     public ShoppingListLineItemDraftBuilder custom(
@@ -71,39 +98,27 @@ public class ShoppingListLineItemDraftBuilder implements Builder<ShoppingListLin
     }
 
     /**
-     *
+     *  <p>Number of Products in the ShoppingListLineItem.</p>
      */
 
-    public ShoppingListLineItemDraftBuilder sku(@Nullable final String sku) {
-        this.sku = sku;
-        return this;
-    }
-
-    /**
-     *
-     */
-
-    public ShoppingListLineItemDraftBuilder productId(@Nullable final String productId) {
-        this.productId = productId;
-        return this;
-    }
-
-    /**
-     *
-     */
-
-    public ShoppingListLineItemDraftBuilder quantity(@Nullable final Integer quantity) {
+    public ShoppingListLineItemDraftBuilder quantity(@Nullable final Long quantity) {
         this.quantity = quantity;
         return this;
     }
 
-    /**
-     *
-     */
+    @Nullable
+    public String getProductId() {
+        return this.productId;
+    }
 
-    public ShoppingListLineItemDraftBuilder variantId(@Nullable final Long variantId) {
-        this.variantId = variantId;
-        return this;
+    @Nullable
+    public Long getVariantId() {
+        return this.variantId;
+    }
+
+    @Nullable
+    public String getSku() {
+        return this.sku;
     }
 
     @Nullable
@@ -117,34 +132,19 @@ public class ShoppingListLineItemDraftBuilder implements Builder<ShoppingListLin
     }
 
     @Nullable
-    public String getSku() {
-        return this.sku;
-    }
-
-    @Nullable
-    public String getProductId() {
-        return this.productId;
-    }
-
-    @Nullable
-    public Integer getQuantity() {
+    public Long getQuantity() {
         return this.quantity;
     }
 
-    @Nullable
-    public Long getVariantId() {
-        return this.variantId;
-    }
-
     public ShoppingListLineItemDraft build() {
-        return new ShoppingListLineItemDraftImpl(addedAt, custom, sku, productId, quantity, variantId);
+        return new ShoppingListLineItemDraftImpl(productId, variantId, sku, addedAt, custom, quantity);
     }
 
     /**
      * builds ShoppingListLineItemDraft without checking for non null required values
      */
     public ShoppingListLineItemDraft buildUnchecked() {
-        return new ShoppingListLineItemDraftImpl(addedAt, custom, sku, productId, quantity, variantId);
+        return new ShoppingListLineItemDraftImpl(productId, variantId, sku, addedAt, custom, quantity);
     }
 
     public static ShoppingListLineItemDraftBuilder of() {
@@ -153,12 +153,12 @@ public class ShoppingListLineItemDraftBuilder implements Builder<ShoppingListLin
 
     public static ShoppingListLineItemDraftBuilder of(final ShoppingListLineItemDraft template) {
         ShoppingListLineItemDraftBuilder builder = new ShoppingListLineItemDraftBuilder();
+        builder.productId = template.getProductId();
+        builder.variantId = template.getVariantId();
+        builder.sku = template.getSku();
         builder.addedAt = template.getAddedAt();
         builder.custom = template.getCustom();
-        builder.sku = template.getSku();
-        builder.productId = template.getProductId();
         builder.quantity = template.getQuantity();
-        builder.variantId = template.getVariantId();
         return builder;
     }
 

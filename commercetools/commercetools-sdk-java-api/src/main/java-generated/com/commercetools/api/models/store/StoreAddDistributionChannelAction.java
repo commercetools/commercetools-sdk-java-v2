@@ -16,6 +16,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 /**
  *  <p>This update action produces the StoreDistributionChannelsChanged Message. It has no effect if a given distribution channel is already present in a Store.</p>
+ *  <p>Adding a Channel without the <code>ProductDistribution</code> ChannelRoleEnum returns a MissingRoleOnChannel error.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -34,7 +35,7 @@ public interface StoreAddDistributionChannelAction extends StoreUpdateAction {
     String ADD_DISTRIBUTION_CHANNEL = "addDistributionChannel";
 
     /**
-     *  <p>Value to append. Any attempt to use Channel without the <code>ProductDistribution</code> ChannelRoleEnum will fail with a MissingRoleOnChannelError error.</p>
+     *  <p>Value to append.</p>
      */
     @NotNull
     @Valid

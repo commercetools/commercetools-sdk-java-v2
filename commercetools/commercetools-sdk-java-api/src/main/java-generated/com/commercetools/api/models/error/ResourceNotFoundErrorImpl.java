@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * ResourceNotFoundError
+ *  <p>Returned when the resource addressed by the request URL does not exist.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ResourceNotFoundErrorImpl implements ResourceNotFoundError, ModelBase {
@@ -47,7 +47,7 @@ public class ResourceNotFoundErrorImpl implements ResourceNotFoundError, ModelBa
     }
 
     /**
-     *
+     *  <p><code>"The Resource with ID $resourceId was not found."</code></p>
      */
 
     public String getMessage() {
@@ -55,7 +55,7 @@ public class ResourceNotFoundErrorImpl implements ResourceNotFoundError, ModelBa
     }
 
     /**
-     *
+     *  <p>Error-specific additional fields.</p>
      */
 
     public Map<String, java.lang.Object> values() {

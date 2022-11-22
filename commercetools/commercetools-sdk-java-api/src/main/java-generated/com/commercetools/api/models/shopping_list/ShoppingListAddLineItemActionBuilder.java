@@ -42,7 +42,7 @@ public class ShoppingListAddLineItemActionBuilder implements Builder<ShoppingLis
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
 
     /**
-     *
+     *  <p><code>sku</code> of the ProductVariant.</p>
      */
 
     public ShoppingListAddLineItemActionBuilder sku(@Nullable final String sku) {
@@ -51,7 +51,7 @@ public class ShoppingListAddLineItemActionBuilder implements Builder<ShoppingLis
     }
 
     /**
-     *
+     *  <p>Unique identifier of a Product.</p>
      */
 
     public ShoppingListAddLineItemActionBuilder productId(@Nullable final String productId) {
@@ -60,7 +60,7 @@ public class ShoppingListAddLineItemActionBuilder implements Builder<ShoppingLis
     }
 
     /**
-     *
+     *  <p><code>id</code> of the ProductVariant. If not set, the ShoppingListLineItem refers to the Master Variant.</p>
      */
 
     public ShoppingListAddLineItemActionBuilder variantId(@Nullable final Long variantId) {
@@ -69,7 +69,7 @@ public class ShoppingListAddLineItemActionBuilder implements Builder<ShoppingLis
     }
 
     /**
-     *
+     *  <p>Number of Products in the ShoppingListLineItem.</p>
      */
 
     public ShoppingListAddLineItemActionBuilder quantity(@Nullable final Long quantity) {
@@ -78,7 +78,7 @@ public class ShoppingListAddLineItemActionBuilder implements Builder<ShoppingLis
     }
 
     /**
-     *
+     *  <p>Date and time the TextLineItem is added to the ShoppingList. If not set, the current date and time (UTC) is used.</p>
      */
 
     public ShoppingListAddLineItemActionBuilder addedAt(@Nullable final java.time.ZonedDateTime addedAt) {
@@ -87,7 +87,7 @@ public class ShoppingListAddLineItemActionBuilder implements Builder<ShoppingLis
     }
 
     /**
-     *  <p>The representation used when creating or updating a customizable data type with Custom Fields.</p>
+     *  <p>Custom Fields defined for the ShoppingListLineItem.</p>
      */
 
     public ShoppingListAddLineItemActionBuilder custom(
@@ -97,7 +97,7 @@ public class ShoppingListAddLineItemActionBuilder implements Builder<ShoppingLis
     }
 
     /**
-     *  <p>The representation used when creating or updating a customizable data type with Custom Fields.</p>
+     *  <p>Custom Fields defined for the ShoppingListLineItem.</p>
      */
 
     public ShoppingListAddLineItemActionBuilder custom(

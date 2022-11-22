@@ -62,7 +62,7 @@ public class MyShoppingListAddLineItemActionImpl implements MyShoppingListAddLin
     }
 
     /**
-     *
+     *  <p><code>sku</code> of the ProductVariant.</p>
      */
 
     public String getSku() {
@@ -70,7 +70,7 @@ public class MyShoppingListAddLineItemActionImpl implements MyShoppingListAddLin
     }
 
     /**
-     *
+     *  <p>Unique identifier of a Product.</p>
      */
 
     public String getProductId() {
@@ -78,7 +78,7 @@ public class MyShoppingListAddLineItemActionImpl implements MyShoppingListAddLin
     }
 
     /**
-     *
+     *  <p><code>id</code> of the ProductVariant. If not set, the ShoppingListLineItem refers to the Master Variant.</p>
      */
 
     public Long getVariantId() {
@@ -86,7 +86,7 @@ public class MyShoppingListAddLineItemActionImpl implements MyShoppingListAddLin
     }
 
     /**
-     *
+     *  <p>Number of Products in the ShoppingListLineItem.</p>
      */
 
     public Long getQuantity() {
@@ -94,7 +94,7 @@ public class MyShoppingListAddLineItemActionImpl implements MyShoppingListAddLin
     }
 
     /**
-     *
+     *  <p>Date and time the TextLineItem is added to the ShoppingList. If not set, the current date and time (UTC) is used.</p>
      */
 
     public java.time.ZonedDateTime getAddedAt() {
@@ -102,7 +102,7 @@ public class MyShoppingListAddLineItemActionImpl implements MyShoppingListAddLin
     }
 
     /**
-     *  <p>The representation used when creating or updating a customizable data type with Custom Fields.</p>
+     *  <p>Custom Fields defined for the ShoppingListLineItem.</p>
      */
 
     public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {

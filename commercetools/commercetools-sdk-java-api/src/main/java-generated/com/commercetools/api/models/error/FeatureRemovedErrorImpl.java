@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * FeatureRemovedError
+ *  <p>Returned when the requested feature was removed.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class FeatureRemovedErrorImpl implements FeatureRemovedError, ModelBase {
@@ -47,7 +47,7 @@ public class FeatureRemovedErrorImpl implements FeatureRemovedError, ModelBase {
     }
 
     /**
-     *
+     *  <p>Description of the feature that is removed.</p>
      */
 
     public String getMessage() {
@@ -55,7 +55,7 @@ public class FeatureRemovedErrorImpl implements FeatureRemovedError, ModelBase {
     }
 
     /**
-     *
+     *  <p>Error-specific additional fields.</p>
      */
 
     public Map<String, java.lang.Object> values() {

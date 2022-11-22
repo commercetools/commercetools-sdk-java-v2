@@ -44,7 +44,7 @@ public class ShoppingListChangeLineItemsOrderActionImpl implements ShoppingListC
     }
 
     /**
-     *
+     *  <p>All existing ShoppingListLineItem <code>id</code>s in the desired new order.</p>
      */
 
     public java.util.List<String> getLineItemOrder() {

@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * InvalidInputError
+ *  <p>Returned when an invalid input has been sent.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class InvalidInputErrorImpl implements InvalidInputError, ModelBase {
@@ -47,7 +47,7 @@ public class InvalidInputErrorImpl implements InvalidInputError, ModelBase {
     }
 
     /**
-     *
+     *  <p>Description of the constraints that are not met by the request. For example, <code>"Invalid $propertyName. It may be a non-empty string up to $maxLength"</code>.</p>
      */
 
     public String getMessage() {
@@ -55,7 +55,7 @@ public class InvalidInputErrorImpl implements InvalidInputError, ModelBase {
     }
 
     /**
-     *
+     *  <p>Error-specific additional fields.</p>
      */
 
     public Map<String, java.lang.Object> values() {

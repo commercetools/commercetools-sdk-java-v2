@@ -33,14 +33,14 @@ public interface MyShoppingListUpdate extends
         com.commercetools.api.models.ResourceUpdate<MyShoppingListUpdate, MyShoppingListUpdateAction, MyShoppingListUpdateBuilder> {
 
     /**
-     *
+     *  <p>Expected version of the ShoppingList on which the changes should be applied. If the expected version does not match the actual version, a 409 Conflict will be returned.</p>
      */
     @NotNull
     @JsonProperty("version")
     public Long getVersion();
 
     /**
-     *
+     *  <p>List of update actions to be performed on the ShoppingList.</p>
      */
     @NotNull
     @Valid

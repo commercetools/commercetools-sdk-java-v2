@@ -29,7 +29,7 @@ public class MaxResourceLimitExceededErrorBuilder implements Builder<MaxResource
     private com.commercetools.api.models.common.ReferenceTypeId exceededResource;
 
     /**
-     *
+     *  <p><code>"You have exceeded the limit of $limit resources of type $resourceTypeId."</code></p>
      */
 
     public MaxResourceLimitExceededErrorBuilder message(final String message) {
@@ -38,7 +38,7 @@ public class MaxResourceLimitExceededErrorBuilder implements Builder<MaxResource
     }
 
     /**
-     *
+     *  <p>Error-specific additional fields.</p>
      */
 
     public MaxResourceLimitExceededErrorBuilder values(final Map<String, java.lang.Object> values) {
@@ -47,7 +47,7 @@ public class MaxResourceLimitExceededErrorBuilder implements Builder<MaxResource
     }
 
     /**
-     *
+     *  <p>Error-specific additional fields.</p>
      */
 
     public MaxResourceLimitExceededErrorBuilder addValue(final String key, final java.lang.Object value) {
@@ -59,7 +59,7 @@ public class MaxResourceLimitExceededErrorBuilder implements Builder<MaxResource
     }
 
     /**
-     *  <p>Type of resource the value should reference. Supported resource type identifiers are:</p>
+     *  <p>Resource type that reached its maximum limit of configured elements (for example, 100 Zones per Project).</p>
      */
 
     public MaxResourceLimitExceededErrorBuilder exceededResource(

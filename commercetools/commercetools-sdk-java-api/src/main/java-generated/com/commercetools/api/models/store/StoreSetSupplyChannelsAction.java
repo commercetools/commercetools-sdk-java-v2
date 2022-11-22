@@ -14,7 +14,8 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>This update action produces the StoreSupplyChannelsChanged Message.</p>
+ *  <p>Setting a supply channel produces the StoreSupplyChannelsChanged Message.</p>
+ *  <p>Setting a Channel without the <code>InventorySupply</code> ChannelRoleEnum returns a MissingRoleOnChannel error.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -32,7 +33,7 @@ public interface StoreSetSupplyChannelsAction extends StoreUpdateAction {
     String SET_SUPPLY_CHANNELS = "setSupplyChannels";
 
     /**
-     *  <p>Value to set. If not defined, the Store's <code>supplyChannels</code> are unset. Any attempt to use Channel without the <code>InventorySupply</code> ChannelRoleEnum will fail with a MissingRoleOnChannel error.</p>
+     *  <p>Value to set. If not defined, the Store's <code>supplyChannels</code> are unset.</p>
      */
     @Valid
     @JsonProperty("supplyChannels")

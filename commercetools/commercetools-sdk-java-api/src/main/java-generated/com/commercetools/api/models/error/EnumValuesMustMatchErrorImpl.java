@@ -15,7 +15,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * EnumValuesMustMatchError
+ *  <p>Returned when during an order update of AttributeEnumType or AttributeLocalizedEnumType the new enum values do not match the existing ones.</p>
+ *  <p>The error is returned as a failed response to the Change the order of EnumValues and Change the order of LocalizedEnumValues update actions.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class EnumValuesMustMatchErrorImpl implements EnumValuesMustMatchError, ModelBase {
@@ -47,7 +48,7 @@ public class EnumValuesMustMatchErrorImpl implements EnumValuesMustMatchError, M
     }
 
     /**
-     *
+     *  <p><code>"The given values must be equal to the existing enum values."</code></p>
      */
 
     public String getMessage() {
@@ -55,7 +56,7 @@ public class EnumValuesMustMatchErrorImpl implements EnumValuesMustMatchError, M
     }
 
     /**
-     *
+     *  <p>Error-specific additional fields.</p>
      */
 
     public Map<String, java.lang.Object> values() {

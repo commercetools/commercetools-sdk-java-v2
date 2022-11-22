@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * ReferencedResourceNotFoundError
+ *  <p>Returned when a resource referenced by a Reference or a ResourceIdentifier could not be found.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ReferencedResourceNotFoundErrorImpl implements ReferencedResourceNotFoundError, ModelBase {
@@ -58,7 +58,7 @@ public class ReferencedResourceNotFoundErrorImpl implements ReferencedResourceNo
     }
 
     /**
-     *
+     *  <p><code>"The referenced object of type $typeId $predicate was not found. It either doesn't exist, or it can't be accessed from this endpoint (e.g., if the endpoint filters by store or customer account)."</code></p>
      */
 
     public String getMessage() {
@@ -66,7 +66,7 @@ public class ReferencedResourceNotFoundErrorImpl implements ReferencedResourceNo
     }
 
     /**
-     *
+     *  <p>Error-specific additional fields.</p>
      */
 
     public Map<String, java.lang.Object> values() {
@@ -74,7 +74,7 @@ public class ReferencedResourceNotFoundErrorImpl implements ReferencedResourceNo
     }
 
     /**
-     *  <p>Type of resource the value should reference. Supported resource type identifiers are:</p>
+     *  <p>Type of referenced resource.</p>
      */
 
     public com.commercetools.api.models.common.ReferenceTypeId getTypeId() {
@@ -82,7 +82,7 @@ public class ReferencedResourceNotFoundErrorImpl implements ReferencedResourceNo
     }
 
     /**
-     *
+     *  <p>Unique identifier of the referenced resource, if known.</p>
      */
 
     public String getId() {
@@ -90,7 +90,7 @@ public class ReferencedResourceNotFoundErrorImpl implements ReferencedResourceNo
     }
 
     /**
-     *
+     *  <p>User-defined unique identifier of the referenced resource, if known.</p>
      */
 
     public String getKey() {

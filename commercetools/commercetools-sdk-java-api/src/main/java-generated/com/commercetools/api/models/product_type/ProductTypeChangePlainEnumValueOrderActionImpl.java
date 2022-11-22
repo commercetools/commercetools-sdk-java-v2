@@ -56,7 +56,7 @@ public class ProductTypeChangePlainEnumValueOrderActionImpl
     }
 
     /**
-     *  <p>Values must be equal to the values of the Attribute enum values (except for the order). If not, an EnumValuesMustMatch error code will be returned.</p>
+     *  <p>Values must be equal to the values of the Attribute enum values (except for the order). If not, an EnumValuesMustMatch error is returned.</p>
      */
 
     public java.util.List<com.commercetools.api.models.product_type.AttributePlainEnumValue> getValues() {

@@ -27,7 +27,7 @@ public class ShoppingListSetDescriptionActionBuilder implements Builder<Shopping
     private com.commercetools.api.models.common.LocalizedString description;
 
     /**
-     *
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
      */
 
     public ShoppingListSetDescriptionActionBuilder description(
@@ -37,7 +37,7 @@ public class ShoppingListSetDescriptionActionBuilder implements Builder<Shopping
     }
 
     /**
-     *
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
      */
 
     public ShoppingListSetDescriptionActionBuilder description(

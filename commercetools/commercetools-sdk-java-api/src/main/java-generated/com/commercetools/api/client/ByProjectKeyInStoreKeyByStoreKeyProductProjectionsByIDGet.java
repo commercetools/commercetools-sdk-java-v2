@@ -18,7 +18,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Gets the current or staged representation of a Product by its ID from the specified Store.</p>
+ *  <p>Gets the current or staged representation of a Product by its ID from the specified Store. If the Store has defined some languages, countries, distribution or supply Channels, they are used for projections based on locale, price and inventory.</p>
+ *  <p>When used with an API Client that has the <code>view_published_products:{projectKey}</code> scope, this endpoint only returns published (current) Product Projections.</p>
  *
  * <hr>
  * <div class=code-example>
@@ -37,6 +38,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 public class ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet extends
         ApiMethod<ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet, com.commercetools.api.models.product.ProductProjection>
         implements
+        com.commercetools.api.client.ProjectionselectingTrait<ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet>,
         com.commercetools.api.client.PriceselectingTrait<ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet>,
         com.commercetools.api.client.LocaleprojectingTrait<ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet>,
         com.commercetools.api.client.ExpandableTrait<ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet>,
@@ -98,6 +100,10 @@ public class ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet extends
         return this.ID;
     }
 
+    public List<String> getStaged() {
+        return this.getQueryParam("staged");
+    }
+
     public List<String> getPriceCurrency() {
         return this.getQueryParam("priceCurrency");
     }
@@ -132,6 +138,69 @@ public class ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet extends
 
     public void setID(final String ID) {
         this.ID = ID;
+    }
+
+    /**
+     * set staged with the specified value
+     */
+    public <TValue> ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet withStaged(final TValue staged) {
+        return copy().withQueryParam("staged", staged);
+    }
+
+    /**
+     * add additional staged query parameter
+     */
+    public <TValue> ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet addStaged(final TValue staged) {
+        return copy().addQueryParam("staged", staged);
+    }
+
+    /**
+     * set staged with the specified value
+     */
+    public ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet withStaged(final Supplier<Boolean> supplier) {
+        return copy().withQueryParam("staged", supplier.get());
+    }
+
+    /**
+     * add additional staged query parameter
+     */
+    public ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet addStaged(final Supplier<Boolean> supplier) {
+        return copy().addQueryParam("staged", supplier.get());
+    }
+
+    /**
+     * set staged with the specified value
+     */
+    public ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet withStaged(
+            final Function<StringBuilder, StringBuilder> op) {
+        return copy().withQueryParam("staged", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * add additional staged query parameter
+     */
+    public ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet addStaged(
+            final Function<StringBuilder, StringBuilder> op) {
+        return copy().addQueryParam("staged", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * set staged with the specified values
+     */
+    public <TValue> ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet withStaged(
+            final Collection<TValue> staged) {
+        return copy().withoutQueryParam("staged")
+                .addQueryParams(
+                    staged.stream().map(s -> new ParamEntry<>("staged", s.toString())).collect(Collectors.toList()));
+    }
+
+    /**
+     * add additional staged query parameters
+     */
+    public <TValue> ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet addStaged(
+            final Collection<TValue> staged) {
+        return copy().addQueryParams(
+            staged.stream().map(s -> new ParamEntry<>("staged", s.toString())).collect(Collectors.toList()));
     }
 
     /**

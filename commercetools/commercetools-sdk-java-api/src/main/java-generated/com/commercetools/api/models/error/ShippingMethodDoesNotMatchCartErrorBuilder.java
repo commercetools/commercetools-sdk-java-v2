@@ -26,7 +26,7 @@ public class ShippingMethodDoesNotMatchCartErrorBuilder implements Builder<Shipp
     private Map<String, java.lang.Object> values = new HashMap<>();
 
     /**
-     *
+     *  <p><code>"The predicate does not match the cart."</code></p>
      */
 
     public ShippingMethodDoesNotMatchCartErrorBuilder message(final String message) {
@@ -35,7 +35,7 @@ public class ShippingMethodDoesNotMatchCartErrorBuilder implements Builder<Shipp
     }
 
     /**
-     *
+     *  <p>Error-specific additional fields.</p>
      */
 
     public ShippingMethodDoesNotMatchCartErrorBuilder values(final Map<String, java.lang.Object> values) {
@@ -44,7 +44,7 @@ public class ShippingMethodDoesNotMatchCartErrorBuilder implements Builder<Shipp
     }
 
     /**
-     *
+     *  <p>Error-specific additional fields.</p>
      */
 
     public ShippingMethodDoesNotMatchCartErrorBuilder addValue(final String key, final java.lang.Object value) {

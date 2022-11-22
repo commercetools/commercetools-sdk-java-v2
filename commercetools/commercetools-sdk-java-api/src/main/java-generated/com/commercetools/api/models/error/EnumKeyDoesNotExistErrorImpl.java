@@ -15,7 +15,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * EnumKeyDoesNotExistError
+ *  <p>Returned when an AttributeEnumType or AttributeLocalizedEnumType already contains a value with the given key.</p>
+ *  <p>The error is returned as a failed response to the Change the key of an EnumValue update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class EnumKeyDoesNotExistErrorImpl implements EnumKeyDoesNotExistError, ModelBase {
@@ -55,7 +56,7 @@ public class EnumKeyDoesNotExistErrorImpl implements EnumKeyDoesNotExistError, M
     }
 
     /**
-     *
+     *  <p><code>"The $fieldName field definition does not contain an enum value with the key $enumKey."</code></p>
      */
 
     public String getMessage() {
@@ -63,7 +64,7 @@ public class EnumKeyDoesNotExistErrorImpl implements EnumKeyDoesNotExistError, M
     }
 
     /**
-     *
+     *  <p>Error-specific additional fields.</p>
      */
 
     public Map<String, java.lang.Object> values() {
@@ -71,7 +72,7 @@ public class EnumKeyDoesNotExistErrorImpl implements EnumKeyDoesNotExistError, M
     }
 
     /**
-     *
+     *  <p>Conflicting enum key.</p>
      */
 
     public String getConflictingEnumKey() {
@@ -79,7 +80,7 @@ public class EnumKeyDoesNotExistErrorImpl implements EnumKeyDoesNotExistError, M
     }
 
     /**
-     *
+     *  <p>Name of the conflicting Attribute.</p>
      */
 
     public String getConflictingAttributeName() {

@@ -15,7 +15,8 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * EditPreviewFailedError
+ *  <p>Returned when a preview to find an appropriate Shipping Method for an OrderEdit could not be generated.</p>
+ *  <p>The error is returned as a failed response to the Get Shipping Methods for an OrderEdit request.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -38,9 +39,25 @@ public interface EditPreviewFailedError extends ErrorObject {
      *
      */
     @NotNull
+    @JsonProperty("code")
+    public String getCode();
+
+    /**
+     *  <p><code>"Error while applying staged actions. ShippingMethods could not be determined."</code></p>
+     */
+    @NotNull
+    @JsonProperty("message")
+    public String getMessage();
+
+    /**
+     *  <p>State of the OrderEdit where the <code>stagedActions</code> cannot be applied to the Order.</p>
+     */
+    @NotNull
     @Valid
     @JsonProperty("result")
     public OrderEditPreviewFailure getResult();
+
+    public void setMessage(final String message);
 
     public void setResult(final OrderEditPreviewFailure result);
 

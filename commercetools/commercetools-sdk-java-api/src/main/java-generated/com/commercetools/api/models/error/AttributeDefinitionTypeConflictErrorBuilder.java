@@ -35,7 +35,7 @@ public class AttributeDefinitionTypeConflictErrorBuilder implements Builder<Attr
     private String conflictingAttributeName;
 
     /**
-     *
+     *  <p><code>"The attribute with name $attributeName has a different type on product type $productTypeName."</code></p>
      */
 
     public AttributeDefinitionTypeConflictErrorBuilder message(final String message) {
@@ -44,7 +44,7 @@ public class AttributeDefinitionTypeConflictErrorBuilder implements Builder<Attr
     }
 
     /**
-     *
+     *  <p>Error-specific additional fields.</p>
      */
 
     public AttributeDefinitionTypeConflictErrorBuilder values(final Map<String, java.lang.Object> values) {
@@ -53,7 +53,7 @@ public class AttributeDefinitionTypeConflictErrorBuilder implements Builder<Attr
     }
 
     /**
-     *
+     *  <p>Error-specific additional fields.</p>
      */
 
     public AttributeDefinitionTypeConflictErrorBuilder addValue(final String key, final java.lang.Object value) {
@@ -65,7 +65,7 @@ public class AttributeDefinitionTypeConflictErrorBuilder implements Builder<Attr
     }
 
     /**
-     *
+     *  <p>Unique identifier of the Product Type containing the conflicting name.</p>
      */
 
     public AttributeDefinitionTypeConflictErrorBuilder conflictingProductTypeId(final String conflictingProductTypeId) {
@@ -74,7 +74,7 @@ public class AttributeDefinitionTypeConflictErrorBuilder implements Builder<Attr
     }
 
     /**
-     *
+     *  <p>Name of the Product Type containing the conflicting name.</p>
      */
 
     public AttributeDefinitionTypeConflictErrorBuilder conflictingProductTypeName(
@@ -84,7 +84,7 @@ public class AttributeDefinitionTypeConflictErrorBuilder implements Builder<Attr
     }
 
     /**
-     *
+     *  <p>Name of the conflicting Attribute.</p>
      */
 
     public AttributeDefinitionTypeConflictErrorBuilder conflictingAttributeName(final String conflictingAttributeName) {

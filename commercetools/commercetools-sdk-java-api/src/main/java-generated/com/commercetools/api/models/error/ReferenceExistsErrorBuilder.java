@@ -31,7 +31,7 @@ public class ReferenceExistsErrorBuilder implements Builder<ReferenceExistsError
     private com.commercetools.api.models.common.ReferenceTypeId referencedBy;
 
     /**
-     *
+     *  <p><code>"Can not delete a $resource while it is referenced by at least one $referencedBy."</code></p>
      */
 
     public ReferenceExistsErrorBuilder message(final String message) {
@@ -40,7 +40,7 @@ public class ReferenceExistsErrorBuilder implements Builder<ReferenceExistsError
     }
 
     /**
-     *
+     *  <p>Error-specific additional fields.</p>
      */
 
     public ReferenceExistsErrorBuilder values(final Map<String, java.lang.Object> values) {
@@ -49,7 +49,7 @@ public class ReferenceExistsErrorBuilder implements Builder<ReferenceExistsError
     }
 
     /**
-     *
+     *  <p>Error-specific additional fields.</p>
      */
 
     public ReferenceExistsErrorBuilder addValue(final String key, final java.lang.Object value) {
@@ -61,7 +61,7 @@ public class ReferenceExistsErrorBuilder implements Builder<ReferenceExistsError
     }
 
     /**
-     *  <p>Type of resource the value should reference. Supported resource type identifiers are:</p>
+     *  <p>Type of referenced resource.</p>
      */
 
     public ReferenceExistsErrorBuilder referencedBy(

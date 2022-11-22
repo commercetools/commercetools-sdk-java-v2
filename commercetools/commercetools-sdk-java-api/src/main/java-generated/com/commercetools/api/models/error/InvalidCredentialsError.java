@@ -5,13 +5,20 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.validation.constraints.NotNull;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * InvalidCredentialsError
+ *  <p>Returned when a Customer with the given credentials (matching the given email/password pair) is not found and authentication fails.</p>
+ *  <p>The error is returned as a failed response to:</p>
+ *  <ul>
+ *   <li>Authenticate a global Customer (Sign-in) and Authenticate Customer (Sign-in) in a Store requests on Customers.</li>
+ *   <li>Authenticating Customer (Sign-in) and Authenticate Customer (Sign-in) in a Store requests on My Customer Profile.</li>
+ *  </ul>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -28,6 +35,22 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface InvalidCredentialsError extends ErrorObject {
 
     String INVALID_CREDENTIALS = "InvalidCredentials";
+
+    /**
+     *
+     */
+    @NotNull
+    @JsonProperty("code")
+    public String getCode();
+
+    /**
+     *  <p><code>"Account with the given credentials not found."</code></p>
+     */
+    @NotNull
+    @JsonProperty("message")
+    public String getMessage();
+
+    public void setMessage(final String message);
 
     public static InvalidCredentialsError of() {
         return new InvalidCredentialsErrorImpl();

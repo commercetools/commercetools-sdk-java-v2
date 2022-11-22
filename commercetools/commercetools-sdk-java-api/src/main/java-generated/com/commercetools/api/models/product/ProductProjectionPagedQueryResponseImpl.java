@@ -54,7 +54,7 @@ public class ProductProjectionPagedQueryResponseImpl implements ProductProjectio
     }
 
     /**
-     *
+     *  <p>Actual number of results returned.</p>
      */
 
     public Long getCount() {
@@ -62,7 +62,7 @@ public class ProductProjectionPagedQueryResponseImpl implements ProductProjectio
     }
 
     /**
-     *
+     *  <p>Total number of results matching the query. This number is an estimation that is not strongly consistent. This field is returned by default. For improved performance, calculating this field can be deactivated by using the query parameter <code>withTotal=false</code>. When the results are filtered with a Query Predicate, <code>total</code> is subject to a limit.</p>
      */
 
     public Long getTotal() {
@@ -78,7 +78,7 @@ public class ProductProjectionPagedQueryResponseImpl implements ProductProjectio
     }
 
     /**
-     *
+     *  <p>ProductProjections matching the query.</p>
      */
 
     public java.util.List<com.commercetools.api.models.product.ProductProjection> getResults() {

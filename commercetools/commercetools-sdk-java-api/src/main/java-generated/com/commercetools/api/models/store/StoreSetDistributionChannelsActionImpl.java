@@ -16,6 +16,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
  *  <p>This update action produces the StoreDistributionChannelsChanged Message.</p>
+ *  <p>Setting a Channel without the <code>ProductDistribution</code> ChannelRoleEnum returns a MissingRoleOnChannel error.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StoreSetDistributionChannelsActionImpl implements StoreSetDistributionChannelsAction, ModelBase {
@@ -44,7 +45,7 @@ public class StoreSetDistributionChannelsActionImpl implements StoreSetDistribut
     }
 
     /**
-     *  <p>Value to set. If not defined, the Store's <code>distributionChannels</code> are unset. Any attempt to use Channel without the <code>ProductDistribution</code> ChannelRoleEnum will fail with a MissingRoleOnChannel error.</p>
+     *  <p>Value to set. If not defined, the Store's <code>distributionChannels</code> are unset.</p>
      */
 
     public java.util.List<com.commercetools.api.models.channel.ChannelResourceIdentifier> getDistributionChannels() {

@@ -35,7 +35,7 @@ public class AttributeDefinitionAlreadyExistsErrorBuilder implements Builder<Att
     private String conflictingAttributeName;
 
     /**
-     *
+     *  <p><code>"An attribute definition with name $attributeName already exists on product type $productTypeName."</code></p>
      */
 
     public AttributeDefinitionAlreadyExistsErrorBuilder message(final String message) {
@@ -44,7 +44,7 @@ public class AttributeDefinitionAlreadyExistsErrorBuilder implements Builder<Att
     }
 
     /**
-     *
+     *  <p>Error-specific additional fields.</p>
      */
 
     public AttributeDefinitionAlreadyExistsErrorBuilder values(final Map<String, java.lang.Object> values) {
@@ -53,7 +53,7 @@ public class AttributeDefinitionAlreadyExistsErrorBuilder implements Builder<Att
     }
 
     /**
-     *
+     *  <p>Error-specific additional fields.</p>
      */
 
     public AttributeDefinitionAlreadyExistsErrorBuilder addValue(final String key, final java.lang.Object value) {
@@ -65,7 +65,7 @@ public class AttributeDefinitionAlreadyExistsErrorBuilder implements Builder<Att
     }
 
     /**
-     *
+     *  <p>Unique identifier of the Product Type containing the conflicting name.</p>
      */
 
     public AttributeDefinitionAlreadyExistsErrorBuilder conflictingProductTypeId(
@@ -75,7 +75,7 @@ public class AttributeDefinitionAlreadyExistsErrorBuilder implements Builder<Att
     }
 
     /**
-     *
+     *  <p>Name of the Product Type containing the conflicting name.</p>
      */
 
     public AttributeDefinitionAlreadyExistsErrorBuilder conflictingProductTypeName(
@@ -85,7 +85,7 @@ public class AttributeDefinitionAlreadyExistsErrorBuilder implements Builder<Att
     }
 
     /**
-     *
+     *  <p>Name of the conflicting Attribute.</p>
      */
 
     public AttributeDefinitionAlreadyExistsErrorBuilder conflictingAttributeName(

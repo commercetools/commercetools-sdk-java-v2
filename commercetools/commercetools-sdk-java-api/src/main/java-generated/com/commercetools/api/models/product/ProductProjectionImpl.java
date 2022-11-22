@@ -64,6 +64,8 @@ public class ProductProjectionImpl implements ProductProjection, ModelBase {
 
     private com.commercetools.api.models.review.ReviewRatingStatistics reviewRatingStatistics;
 
+    private com.commercetools.api.models.product.ProductPriceModeEnum priceMode;
+
     @JsonCreator
     ProductProjectionImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version,
             @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt,
@@ -85,7 +87,8 @@ public class ProductProjectionImpl implements ProductProjection, ModelBase {
             @JsonProperty("variants") final java.util.List<com.commercetools.api.models.product.ProductVariant> variants,
             @JsonProperty("taxCategory") final com.commercetools.api.models.tax_category.TaxCategoryReference taxCategory,
             @JsonProperty("state") final com.commercetools.api.models.state.StateReference state,
-            @JsonProperty("reviewRatingStatistics") final com.commercetools.api.models.review.ReviewRatingStatistics reviewRatingStatistics) {
+            @JsonProperty("reviewRatingStatistics") final com.commercetools.api.models.review.ReviewRatingStatistics reviewRatingStatistics,
+            @JsonProperty("priceMode") final com.commercetools.api.models.product.ProductPriceModeEnum priceMode) {
         this.id = id;
         this.version = version;
         this.createdAt = createdAt;
@@ -108,13 +111,14 @@ public class ProductProjectionImpl implements ProductProjection, ModelBase {
         this.taxCategory = taxCategory;
         this.state = state;
         this.reviewRatingStatistics = reviewRatingStatistics;
+        this.priceMode = priceMode;
     }
 
     public ProductProjectionImpl() {
     }
 
     /**
-     *  <p>The unique ID of the Product.</p>
+     *  <p>Unique identifier of the Product.</p>
      */
 
     public String getId() {
@@ -122,7 +126,7 @@ public class ProductProjectionImpl implements ProductProjection, ModelBase {
     }
 
     /**
-     *  <p>The current version of the Product.</p>
+     *  <p>Current version of the Product.</p>
      */
 
     public Long getVersion() {
@@ -130,7 +134,7 @@ public class ProductProjectionImpl implements ProductProjection, ModelBase {
     }
 
     /**
-     *
+     *  <p>Date and time (UTC) the ProductProjection was initially created.</p>
      */
 
     public java.time.ZonedDateTime getCreatedAt() {
@@ -138,7 +142,7 @@ public class ProductProjectionImpl implements ProductProjection, ModelBase {
     }
 
     /**
-     *
+     *  <p>Date and time (UTC) the ProductProjection was last updated.</p>
      */
 
     public java.time.ZonedDateTime getLastModifiedAt() {
@@ -146,7 +150,7 @@ public class ProductProjectionImpl implements ProductProjection, ModelBase {
     }
 
     /**
-     *  <p>User-specific unique identifier of the Product.</p>
+     *  <p>User-defined unique identifier of the Product.</p>
      */
 
     public String getKey() {
@@ -154,7 +158,7 @@ public class ProductProjectionImpl implements ProductProjection, ModelBase {
     }
 
     /**
-     *
+     *  <p>The ProductType defining the Attributes of the Product.</p>
      */
 
     public com.commercetools.api.models.product_type.ProductTypeReference getProductType() {
@@ -162,7 +166,7 @@ public class ProductProjectionImpl implements ProductProjection, ModelBase {
     }
 
     /**
-     *
+     *  <p>Name of the Product.</p>
      */
 
     public com.commercetools.api.models.common.LocalizedString getName() {
@@ -170,7 +174,7 @@ public class ProductProjectionImpl implements ProductProjection, ModelBase {
     }
 
     /**
-     *
+     *  <p>Description of the Product.</p>
      */
 
     public com.commercetools.api.models.common.LocalizedString getDescription() {
@@ -178,7 +182,7 @@ public class ProductProjectionImpl implements ProductProjection, ModelBase {
     }
 
     /**
-     *
+     *  <p>User-defined identifier used in a deep-link URL for the Product. Must be unique across a Project, but can be the same for Products in different locales. Matches the pattern <code>[a-zA-Z0-9_\-]{2,256}</code>. For good performance, indexes are provided for the first 15 <code>languages</code> set in the Project.</p>
      */
 
     public com.commercetools.api.models.common.LocalizedString getSlug() {
@@ -186,7 +190,7 @@ public class ProductProjectionImpl implements ProductProjection, ModelBase {
     }
 
     /**
-     *  <p>References to categories the product is in.</p>
+     *  <p>Categories assigned to the Product.</p>
      */
 
     public java.util.List<com.commercetools.api.models.category.CategoryReference> getCategories() {
@@ -194,7 +198,7 @@ public class ProductProjectionImpl implements ProductProjection, ModelBase {
     }
 
     /**
-     *
+     *  <p>Order of Product in Categories.</p>
      */
 
     public com.commercetools.api.models.product.CategoryOrderHints getCategoryOrderHints() {
@@ -202,7 +206,7 @@ public class ProductProjectionImpl implements ProductProjection, ModelBase {
     }
 
     /**
-     *
+     *  <p>Title of the Product displayed in search results.</p>
      */
 
     public com.commercetools.api.models.common.LocalizedString getMetaTitle() {
@@ -210,7 +214,7 @@ public class ProductProjectionImpl implements ProductProjection, ModelBase {
     }
 
     /**
-     *
+     *  <p>Description of the Product displayed in search results below the meta title.</p>
      */
 
     public com.commercetools.api.models.common.LocalizedString getMetaDescription() {
@@ -218,7 +222,7 @@ public class ProductProjectionImpl implements ProductProjection, ModelBase {
     }
 
     /**
-     *
+     *  <p>Keywords that give additional information about the Product to search engines.</p>
      */
 
     public com.commercetools.api.models.common.LocalizedString getMetaKeywords() {
@@ -226,7 +230,7 @@ public class ProductProjectionImpl implements ProductProjection, ModelBase {
     }
 
     /**
-     *
+     *  <p>Used by Product Suggestions, but is also considered for a full text search.</p>
      */
 
     public com.commercetools.api.models.product.SearchKeywords getSearchKeywords() {
@@ -234,7 +238,7 @@ public class ProductProjectionImpl implements ProductProjection, ModelBase {
     }
 
     /**
-     *
+     *  <p><code>true</code> if the staged data is different from the current data.</p>
      */
 
     public Boolean getHasStagedChanges() {
@@ -242,7 +246,7 @@ public class ProductProjectionImpl implements ProductProjection, ModelBase {
     }
 
     /**
-     *
+     *  <p><code>true</code> if the Product is published.</p>
      */
 
     public Boolean getPublished() {
@@ -250,7 +254,7 @@ public class ProductProjectionImpl implements ProductProjection, ModelBase {
     }
 
     /**
-     *
+     *  <p>The Master Variant of the Product.</p>
      */
 
     public com.commercetools.api.models.product.ProductVariant getMasterVariant() {
@@ -258,7 +262,7 @@ public class ProductProjectionImpl implements ProductProjection, ModelBase {
     }
 
     /**
-     *
+     *  <p>Additional Product Variants.</p>
      */
 
     public java.util.List<com.commercetools.api.models.product.ProductVariant> getVariants() {
@@ -266,7 +270,7 @@ public class ProductProjectionImpl implements ProductProjection, ModelBase {
     }
 
     /**
-     *
+     *  <p>The TaxCategory of the Product.</p>
      */
 
     public com.commercetools.api.models.tax_category.TaxCategoryReference getTaxCategory() {
@@ -274,7 +278,7 @@ public class ProductProjectionImpl implements ProductProjection, ModelBase {
     }
 
     /**
-     *
+     *  <p>State of the Product.</p>
      */
 
     public com.commercetools.api.models.state.StateReference getState() {
@@ -282,11 +286,19 @@ public class ProductProjectionImpl implements ProductProjection, ModelBase {
     }
 
     /**
-     *  <p>Statistics about the review ratings taken into account for this product.</p>
+     *  <p>Review statistics of the Product.</p>
      */
 
     public com.commercetools.api.models.review.ReviewRatingStatistics getReviewRatingStatistics() {
         return this.reviewRatingStatistics;
+    }
+
+    /**
+     *  <p>Indicates whether the Prices of the Product Projection are embedded or standalone. Projecting Prices only works with <code>Embedded</code>, there is currently no support for <code>Standalone</code>.</p>
+     */
+
+    public com.commercetools.api.models.product.ProductPriceModeEnum getPriceMode() {
+        return this.priceMode;
     }
 
     public void setId(final String id) {
@@ -388,6 +400,10 @@ public class ProductProjectionImpl implements ProductProjection, ModelBase {
         this.reviewRatingStatistics = reviewRatingStatistics;
     }
 
+    public void setPriceMode(final com.commercetools.api.models.product.ProductPriceModeEnum priceMode) {
+        this.priceMode = priceMode;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -420,6 +436,7 @@ public class ProductProjectionImpl implements ProductProjection, ModelBase {
                 .append(taxCategory, that.taxCategory)
                 .append(state, that.state)
                 .append(reviewRatingStatistics, that.reviewRatingStatistics)
+                .append(priceMode, that.priceMode)
                 .isEquals();
     }
 
@@ -447,6 +464,7 @@ public class ProductProjectionImpl implements ProductProjection, ModelBase {
                 .append(taxCategory)
                 .append(state)
                 .append(reviewRatingStatistics)
+                .append(priceMode)
                 .toHashCode();
     }
 

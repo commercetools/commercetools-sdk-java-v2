@@ -15,7 +15,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * MaxResourceLimitExceededError
+ *  <p>Returned when a resource type cannot be created as it has reached its limits.</p>
+ *  <p>The limits must be adjusted for this resource before sending the request again.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class MaxResourceLimitExceededErrorImpl implements MaxResourceLimitExceededError, ModelBase {
@@ -51,7 +52,7 @@ public class MaxResourceLimitExceededErrorImpl implements MaxResourceLimitExceed
     }
 
     /**
-     *
+     *  <p><code>"You have exceeded the limit of $limit resources of type $resourceTypeId."</code></p>
      */
 
     public String getMessage() {
@@ -59,7 +60,7 @@ public class MaxResourceLimitExceededErrorImpl implements MaxResourceLimitExceed
     }
 
     /**
-     *
+     *  <p>Error-specific additional fields.</p>
      */
 
     public Map<String, java.lang.Object> values() {
@@ -67,7 +68,7 @@ public class MaxResourceLimitExceededErrorImpl implements MaxResourceLimitExceed
     }
 
     /**
-     *  <p>Type of resource the value should reference. Supported resource type identifiers are:</p>
+     *  <p>Resource type that reached its maximum limit of configured elements (for example, 100 Zones per Project).</p>
      */
 
     public com.commercetools.api.models.common.ReferenceTypeId getExceededResource() {

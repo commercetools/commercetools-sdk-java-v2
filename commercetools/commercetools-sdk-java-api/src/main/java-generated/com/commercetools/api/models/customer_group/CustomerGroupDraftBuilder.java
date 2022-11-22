@@ -42,7 +42,7 @@ public class CustomerGroupDraftBuilder implements Builder<CustomerGroupDraft> {
     }
 
     /**
-     *  <p>Unique value which must be different from any value used for <code>name</code> in CustomerGroup in the Project. If not, a <code>DuplicateField</code> error is thrown.</p>
+     *  <p>Unique value which must be different from any value used for <code>name</code> in CustomerGroup in the Project. If not, a DuplicateField error is returned.</p>
      */
 
     public CustomerGroupDraftBuilder groupName(final String groupName) {

@@ -26,7 +26,7 @@ public class SearchDeactivatedErrorBuilder implements Builder<SearchDeactivatedE
     private Map<String, java.lang.Object> values = new HashMap<>();
 
     /**
-     *
+     *  <p><code>"The endpoint is deactivated for this project. Please enable it via the Project endpoint, via the Merchant Center in the Project settings, or reach out to Support to enable it."</code></p>
      */
 
     public SearchDeactivatedErrorBuilder message(final String message) {
@@ -35,7 +35,7 @@ public class SearchDeactivatedErrorBuilder implements Builder<SearchDeactivatedE
     }
 
     /**
-     *
+     *  <p>Error-specific additional fields.</p>
      */
 
     public SearchDeactivatedErrorBuilder values(final Map<String, java.lang.Object> values) {
@@ -44,7 +44,7 @@ public class SearchDeactivatedErrorBuilder implements Builder<SearchDeactivatedE
     }
 
     /**
-     *
+     *  <p>Error-specific additional fields.</p>
      */
 
     public SearchDeactivatedErrorBuilder addValue(final String key, final java.lang.Object value) {

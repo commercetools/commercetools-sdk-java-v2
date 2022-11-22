@@ -42,7 +42,7 @@ public class MyShoppingListAddLineItemActionBuilder implements Builder<MyShoppin
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
 
     /**
-     *
+     *  <p><code>sku</code> of the ProductVariant.</p>
      */
 
     public MyShoppingListAddLineItemActionBuilder sku(@Nullable final String sku) {
@@ -51,7 +51,7 @@ public class MyShoppingListAddLineItemActionBuilder implements Builder<MyShoppin
     }
 
     /**
-     *
+     *  <p>Unique identifier of a Product.</p>
      */
 
     public MyShoppingListAddLineItemActionBuilder productId(@Nullable final String productId) {
@@ -60,7 +60,7 @@ public class MyShoppingListAddLineItemActionBuilder implements Builder<MyShoppin
     }
 
     /**
-     *
+     *  <p><code>id</code> of the ProductVariant. If not set, the ShoppingListLineItem refers to the Master Variant.</p>
      */
 
     public MyShoppingListAddLineItemActionBuilder variantId(@Nullable final Long variantId) {
@@ -69,7 +69,7 @@ public class MyShoppingListAddLineItemActionBuilder implements Builder<MyShoppin
     }
 
     /**
-     *
+     *  <p>Number of Products in the ShoppingListLineItem.</p>
      */
 
     public MyShoppingListAddLineItemActionBuilder quantity(@Nullable final Long quantity) {
@@ -78,7 +78,7 @@ public class MyShoppingListAddLineItemActionBuilder implements Builder<MyShoppin
     }
 
     /**
-     *
+     *  <p>Date and time the TextLineItem is added to the ShoppingList. If not set, the current date and time (UTC) is used.</p>
      */
 
     public MyShoppingListAddLineItemActionBuilder addedAt(@Nullable final java.time.ZonedDateTime addedAt) {
@@ -87,7 +87,7 @@ public class MyShoppingListAddLineItemActionBuilder implements Builder<MyShoppin
     }
 
     /**
-     *  <p>The representation used when creating or updating a customizable data type with Custom Fields.</p>
+     *  <p>Custom Fields defined for the ShoppingListLineItem.</p>
      */
 
     public MyShoppingListAddLineItemActionBuilder custom(
@@ -97,7 +97,7 @@ public class MyShoppingListAddLineItemActionBuilder implements Builder<MyShoppin
     }
 
     /**
-     *  <p>The representation used when creating or updating a customizable data type with Custom Fields.</p>
+     *  <p>Custom Fields defined for the ShoppingListLineItem.</p>
      */
 
     public MyShoppingListAddLineItemActionBuilder custom(

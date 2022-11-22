@@ -13,7 +13,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>If a language is used by a Store, it cannot be deleted. Attempts to delete such language will lead to LanguageUsedInStores errors.</p>
+ *  <p>Removing a language used by a Store returns a LanguageUsedInStores error.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

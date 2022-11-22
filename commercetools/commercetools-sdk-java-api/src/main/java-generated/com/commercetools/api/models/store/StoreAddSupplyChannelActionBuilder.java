@@ -25,7 +25,7 @@ public class StoreAddSupplyChannelActionBuilder implements Builder<StoreAddSuppl
     private com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel;
 
     /**
-     *  <p>Any attempt to use Channel without the <code>InventorySupply</code> ChannelRoleEnum will fail with a MissingRoleOnChannel error.</p>
+     *  <p>Value to append.</p>
      */
 
     public StoreAddSupplyChannelActionBuilder supplyChannel(
@@ -36,7 +36,7 @@ public class StoreAddSupplyChannelActionBuilder implements Builder<StoreAddSuppl
     }
 
     /**
-     *  <p>Any attempt to use Channel without the <code>InventorySupply</code> ChannelRoleEnum will fail with a MissingRoleOnChannel error.</p>
+     *  <p>Value to append.</p>
      */
 
     public StoreAddSupplyChannelActionBuilder supplyChannel(

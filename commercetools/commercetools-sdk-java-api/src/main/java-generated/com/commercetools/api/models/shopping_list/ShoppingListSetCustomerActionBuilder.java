@@ -27,7 +27,7 @@ public class ShoppingListSetCustomerActionBuilder implements Builder<ShoppingLis
     private com.commercetools.api.models.customer.CustomerResourceIdentifier customer;
 
     /**
-     *
+     *  <p>The Customer the ShoppingList should be associated to. If empty, any existing value will be removed.</p>
      */
 
     public ShoppingListSetCustomerActionBuilder customer(
@@ -38,7 +38,7 @@ public class ShoppingListSetCustomerActionBuilder implements Builder<ShoppingLis
     }
 
     /**
-     *
+     *  <p>The Customer the ShoppingList should be associated to. If empty, any existing value will be removed.</p>
      */
 
     public ShoppingListSetCustomerActionBuilder customer(

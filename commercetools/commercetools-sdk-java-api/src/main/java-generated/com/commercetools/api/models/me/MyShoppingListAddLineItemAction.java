@@ -34,42 +34,42 @@ public interface MyShoppingListAddLineItemAction extends MyShoppingListUpdateAct
     String ADD_LINE_ITEM = "addLineItem";
 
     /**
-     *
+     *  <p><code>sku</code> of the ProductVariant.</p>
      */
 
     @JsonProperty("sku")
     public String getSku();
 
     /**
-     *
+     *  <p>Unique identifier of a Product.</p>
      */
 
     @JsonProperty("productId")
     public String getProductId();
 
     /**
-     *
+     *  <p><code>id</code> of the ProductVariant. If not set, the ShoppingListLineItem refers to the Master Variant.</p>
      */
 
     @JsonProperty("variantId")
     public Long getVariantId();
 
     /**
-     *
+     *  <p>Number of Products in the ShoppingListLineItem.</p>
      */
 
     @JsonProperty("quantity")
     public Long getQuantity();
 
     /**
-     *
+     *  <p>Date and time the TextLineItem is added to the ShoppingList. If not set, the current date and time (UTC) is used.</p>
      */
 
     @JsonProperty("addedAt")
     public ZonedDateTime getAddedAt();
 
     /**
-     *  <p>The representation used when creating or updating a customizable data type with Custom Fields.</p>
+     *  <p>Custom Fields defined for the ShoppingListLineItem.</p>
      */
     @Valid
     @JsonProperty("custom")

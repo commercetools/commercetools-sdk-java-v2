@@ -45,7 +45,7 @@ public class ShoppingListSetDeleteDaysAfterLastModificationActionImpl
     }
 
     /**
-     *
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
      */
 
     public Long getDeleteDaysAfterLastModification() {

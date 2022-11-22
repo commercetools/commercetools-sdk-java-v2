@@ -37,7 +37,7 @@ public class ReferencedResourceNotFoundErrorBuilder implements Builder<Reference
     private String key;
 
     /**
-     *
+     *  <p><code>"The referenced object of type $typeId $predicate was not found. It either doesn't exist, or it can't be accessed from this endpoint (e.g., if the endpoint filters by store or customer account)."</code></p>
      */
 
     public ReferencedResourceNotFoundErrorBuilder message(final String message) {
@@ -46,7 +46,7 @@ public class ReferencedResourceNotFoundErrorBuilder implements Builder<Reference
     }
 
     /**
-     *
+     *  <p>Error-specific additional fields.</p>
      */
 
     public ReferencedResourceNotFoundErrorBuilder values(final Map<String, java.lang.Object> values) {
@@ -55,7 +55,7 @@ public class ReferencedResourceNotFoundErrorBuilder implements Builder<Reference
     }
 
     /**
-     *
+     *  <p>Error-specific additional fields.</p>
      */
 
     public ReferencedResourceNotFoundErrorBuilder addValue(final String key, final java.lang.Object value) {
@@ -67,7 +67,7 @@ public class ReferencedResourceNotFoundErrorBuilder implements Builder<Reference
     }
 
     /**
-     *  <p>Type of resource the value should reference. Supported resource type identifiers are:</p>
+     *  <p>Type of referenced resource.</p>
      */
 
     public ReferencedResourceNotFoundErrorBuilder typeId(
@@ -77,7 +77,7 @@ public class ReferencedResourceNotFoundErrorBuilder implements Builder<Reference
     }
 
     /**
-     *
+     *  <p>Unique identifier of the referenced resource, if known.</p>
      */
 
     public ReferencedResourceNotFoundErrorBuilder id(@Nullable final String id) {
@@ -86,7 +86,7 @@ public class ReferencedResourceNotFoundErrorBuilder implements Builder<Reference
     }
 
     /**
-     *
+     *  <p>User-defined unique identifier of the referenced resource, if known.</p>
      */
 
     public ReferencedResourceNotFoundErrorBuilder key(@Nullable final String key) {

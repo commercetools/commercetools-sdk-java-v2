@@ -35,21 +35,21 @@ public interface ShoppingListSetLineItemCustomTypeAction extends ShoppingListUpd
     String SET_LINE_ITEM_CUSTOM_TYPE = "setLineItemCustomType";
 
     /**
-     *
+     *  <p>The <code>id</code> of the ShoppingListLineItem to update.</p>
      */
     @NotNull
     @JsonProperty("lineItemId")
     public String getLineItemId();
 
     /**
-     *  <p>Defines the Type that extends the LineItem with Custom Fields. If absent, any existing Type and Custom Fields are removed from the LineItem.</p>
+     *  <p>Defines the Type that extends the ShoppingListLineItem with Custom Fields. If absent, any existing Type and Custom Fields are removed from the ShoppingListLineItem.</p>
      */
     @Valid
     @JsonProperty("type")
     public TypeResourceIdentifier getType();
 
     /**
-     *  <p>Sets the Custom Fields fields for the LineItem.</p>
+     *  <p>Sets the Custom Fields fields for the ShoppingListLineItem.</p>
      */
     @Valid
     @JsonProperty("fields")

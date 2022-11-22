@@ -18,7 +18,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Update a shopping list found by its Key.</p>
+ *
  *
  * <hr>
  * <div class=code-example>

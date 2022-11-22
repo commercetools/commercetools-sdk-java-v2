@@ -26,7 +26,7 @@ public class InternalConstraintViolatedErrorBuilder implements Builder<InternalC
     private Map<String, java.lang.Object> values = new HashMap<>();
 
     /**
-     *
+     *  <p>Plain text description of the constraints that were violated.</p>
      */
 
     public InternalConstraintViolatedErrorBuilder message(final String message) {
@@ -35,7 +35,7 @@ public class InternalConstraintViolatedErrorBuilder implements Builder<InternalC
     }
 
     /**
-     *
+     *  <p>Error-specific additional fields.</p>
      */
 
     public InternalConstraintViolatedErrorBuilder values(final Map<String, java.lang.Object> values) {
@@ -44,7 +44,7 @@ public class InternalConstraintViolatedErrorBuilder implements Builder<InternalC
     }
 
     /**
-     *
+     *  <p>Error-specific additional fields.</p>
      */
 
     public InternalConstraintViolatedErrorBuilder addValue(final String key, final java.lang.Object value) {

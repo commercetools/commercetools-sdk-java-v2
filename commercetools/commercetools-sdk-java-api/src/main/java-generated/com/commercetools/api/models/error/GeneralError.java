@@ -5,13 +5,16 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.validation.constraints.NotNull;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * GeneralError
+ *  <p>Returned when a server-side problem occurs.</p>
+ *  <p>If you encounter this error, report it using the Support Portal.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -28,6 +31,22 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface GeneralError extends ErrorObject {
 
     String GENERAL = "General";
+
+    /**
+     *
+     */
+    @NotNull
+    @JsonProperty("code")
+    public String getCode();
+
+    /**
+     *  <p>Description about any known details of the problem, for example, <code>"Write operations are temporarily unavailable"</code>.</p>
+     */
+    @NotNull
+    @JsonProperty("message")
+    public String getMessage();
+
+    public void setMessage(final String message);
 
     public static GeneralError of() {
         return new GeneralErrorImpl();

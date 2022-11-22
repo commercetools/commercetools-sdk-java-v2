@@ -26,7 +26,7 @@ public class NotEnabledErrorBuilder implements Builder<NotEnabledError> {
     private Map<String, java.lang.Object> values = new HashMap<>();
 
     /**
-     *
+     *  <p><code>"The category recommendations API is not yet enabled for your project."</code></p>
      */
 
     public NotEnabledErrorBuilder message(final String message) {
@@ -35,7 +35,7 @@ public class NotEnabledErrorBuilder implements Builder<NotEnabledError> {
     }
 
     /**
-     *
+     *  <p>Error-specific additional fields.</p>
      */
 
     public NotEnabledErrorBuilder values(final Map<String, java.lang.Object> values) {
@@ -44,7 +44,7 @@ public class NotEnabledErrorBuilder implements Builder<NotEnabledError> {
     }
 
     /**
-     *
+     *  <p>Error-specific additional fields.</p>
      */
 
     public NotEnabledErrorBuilder addValue(final String key, final java.lang.Object value) {

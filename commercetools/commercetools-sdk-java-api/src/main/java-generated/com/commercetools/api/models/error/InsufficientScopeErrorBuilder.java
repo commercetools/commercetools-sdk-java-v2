@@ -26,7 +26,7 @@ public class InsufficientScopeErrorBuilder implements Builder<InsufficientScopeE
     private Map<String, java.lang.Object> values = new HashMap<>();
 
     /**
-     *
+     *  <p>Plain text description of the cause of the error.</p>
      */
 
     public InsufficientScopeErrorBuilder message(final String message) {
@@ -35,7 +35,7 @@ public class InsufficientScopeErrorBuilder implements Builder<InsufficientScopeE
     }
 
     /**
-     *
+     *  <p>Error-specific additional fields.</p>
      */
 
     public InsufficientScopeErrorBuilder values(final Map<String, java.lang.Object> values) {
@@ -44,7 +44,7 @@ public class InsufficientScopeErrorBuilder implements Builder<InsufficientScopeE
     }
 
     /**
-     *
+     *  <p>Error-specific additional fields.</p>
      */
 
     public InsufficientScopeErrorBuilder addValue(final String key, final java.lang.Object value) {

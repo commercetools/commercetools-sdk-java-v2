@@ -30,7 +30,7 @@ public class DuplicatePriceScopeErrorBuilder implements Builder<DuplicatePriceSc
     private java.util.List<com.commercetools.api.models.common.Price> conflictingPrices;
 
     /**
-     *
+     *  <p><code>"Duplicate price scope: $priceScope. The combination of currency, country, customerGroup and channel must be unique for each price of a product variant."</code></p>
      */
 
     public DuplicatePriceScopeErrorBuilder message(final String message) {
@@ -39,7 +39,7 @@ public class DuplicatePriceScopeErrorBuilder implements Builder<DuplicatePriceSc
     }
 
     /**
-     *
+     *  <p>Error-specific additional fields.</p>
      */
 
     public DuplicatePriceScopeErrorBuilder values(final Map<String, java.lang.Object> values) {
@@ -48,7 +48,7 @@ public class DuplicatePriceScopeErrorBuilder implements Builder<DuplicatePriceSc
     }
 
     /**
-     *
+     *  <p>Error-specific additional fields.</p>
      */
 
     public DuplicatePriceScopeErrorBuilder addValue(final String key, final java.lang.Object value) {
@@ -60,7 +60,7 @@ public class DuplicatePriceScopeErrorBuilder implements Builder<DuplicatePriceSc
     }
 
     /**
-     *
+     *  <p>Conflicting Embedded Prices.</p>
      */
 
     public DuplicatePriceScopeErrorBuilder conflictingPrices(
@@ -70,7 +70,7 @@ public class DuplicatePriceScopeErrorBuilder implements Builder<DuplicatePriceSc
     }
 
     /**
-     *
+     *  <p>Conflicting Embedded Prices.</p>
      */
 
     public DuplicatePriceScopeErrorBuilder conflictingPrices(
@@ -80,7 +80,7 @@ public class DuplicatePriceScopeErrorBuilder implements Builder<DuplicatePriceSc
     }
 
     /**
-     *
+     *  <p>Conflicting Embedded Prices.</p>
      */
 
     public DuplicatePriceScopeErrorBuilder plusConflictingPrices(
@@ -93,7 +93,7 @@ public class DuplicatePriceScopeErrorBuilder implements Builder<DuplicatePriceSc
     }
 
     /**
-     *
+     *  <p>Conflicting Embedded Prices.</p>
      */
 
     public DuplicatePriceScopeErrorBuilder plusConflictingPrices(
@@ -106,7 +106,7 @@ public class DuplicatePriceScopeErrorBuilder implements Builder<DuplicatePriceSc
     }
 
     /**
-     *
+     *  <p>Conflicting Embedded Prices.</p>
      */
 
     public DuplicatePriceScopeErrorBuilder withConflictingPrices(

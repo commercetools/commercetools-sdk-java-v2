@@ -15,7 +15,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * BadGatewayError
+ *  <p>Returned when a server-side problem is caused by scaling infrastructure resources.</p>
+ *  <p>The client application should retry the request with exponential backoff up to a point where further delay is unacceptable.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class BadGatewayErrorImpl implements BadGatewayError, ModelBase {
@@ -47,7 +48,7 @@ public class BadGatewayErrorImpl implements BadGatewayError, ModelBase {
     }
 
     /**
-     *
+     *  <p>Plain text description of the error.</p>
      */
 
     public String getMessage() {
@@ -55,7 +56,7 @@ public class BadGatewayErrorImpl implements BadGatewayError, ModelBase {
     }
 
     /**
-     *
+     *  <p>Error-specific additional fields.</p>
      */
 
     public Map<String, java.lang.Object> values() {

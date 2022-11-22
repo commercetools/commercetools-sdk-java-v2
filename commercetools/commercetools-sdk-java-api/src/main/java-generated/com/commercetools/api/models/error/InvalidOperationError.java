@@ -5,13 +5,16 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.validation.constraints.NotNull;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * InvalidOperationError
+ *  <p>Returned when the resources involved in the request are not in a valid state for the operation.</p>
+ *  <p>The client application should validate the constraints described in the error message before sending the request.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -28,6 +31,22 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface InvalidOperationError extends ErrorObject {
 
     String INVALID_OPERATION = "InvalidOperation";
+
+    /**
+     *
+     */
+    @NotNull
+    @JsonProperty("code")
+    public String getCode();
+
+    /**
+     *  <p>Plain text description of the error.</p>
+     */
+    @NotNull
+    @JsonProperty("message")
+    public String getMessage();
+
+    public void setMessage(final String message);
 
     public static InvalidOperationError of() {
         return new InvalidOperationErrorImpl();

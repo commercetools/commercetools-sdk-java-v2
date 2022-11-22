@@ -14,7 +14,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>If an entry with the same <code>sku</code> and <code>supplyChannel</code> already exists, this action will fail and a 400 Bad Request <code>DuplicateField</code> error will be returned.</p>
+ *  <p>If an entry with the same <code>sku</code> and <code>supplyChannel</code> already exists, an DuplicateField error is returned.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

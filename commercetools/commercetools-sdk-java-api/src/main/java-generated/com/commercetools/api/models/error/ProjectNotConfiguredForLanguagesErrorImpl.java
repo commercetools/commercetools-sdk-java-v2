@@ -15,7 +15,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * ProjectNotConfiguredForLanguagesError
+ *  <p>Returned when the languages set for a Store are not supported by the Project.</p>
+ *  <p>The error is returned as a failed response to the Set Languages update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProjectNotConfiguredForLanguagesErrorImpl implements ProjectNotConfiguredForLanguagesError, ModelBase {
@@ -51,7 +52,7 @@ public class ProjectNotConfiguredForLanguagesErrorImpl implements ProjectNotConf
     }
 
     /**
-     *
+     *  <p><code>"The project is not configured for given languages."</code></p>
      */
 
     public String getMessage() {
@@ -59,7 +60,7 @@ public class ProjectNotConfiguredForLanguagesErrorImpl implements ProjectNotConf
     }
 
     /**
-     *
+     *  <p>Error-specific additional fields.</p>
      */
 
     public Map<String, java.lang.Object> values() {
@@ -67,7 +68,7 @@ public class ProjectNotConfiguredForLanguagesErrorImpl implements ProjectNotConf
     }
 
     /**
-     *
+     *  <p>Languages configured for the Store.</p>
      */
 
     public java.util.List<String> getLanguages() {

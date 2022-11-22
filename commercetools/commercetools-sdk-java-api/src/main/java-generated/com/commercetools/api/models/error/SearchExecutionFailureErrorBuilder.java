@@ -26,7 +26,7 @@ public class SearchExecutionFailureErrorBuilder implements Builder<SearchExecuti
     private Map<String, java.lang.Object> values = new HashMap<>();
 
     /**
-     *
+     *  <p><code>"Something went wrong during the search query execution. In most case this happens due to usage of non-existing fields and custom product attributes. Please verify all filters and facets in your search query and make sure that all paths are correct."</code></p>
      */
 
     public SearchExecutionFailureErrorBuilder message(final String message) {
@@ -35,7 +35,7 @@ public class SearchExecutionFailureErrorBuilder implements Builder<SearchExecuti
     }
 
     /**
-     *
+     *  <p>Error-specific additional fields.</p>
      */
 
     public SearchExecutionFailureErrorBuilder values(final Map<String, java.lang.Object> values) {
@@ -44,7 +44,7 @@ public class SearchExecutionFailureErrorBuilder implements Builder<SearchExecuti
     }
 
     /**
-     *
+     *  <p>Error-specific additional fields.</p>
      */
 
     public SearchExecutionFailureErrorBuilder addValue(final String key, final java.lang.Object value) {

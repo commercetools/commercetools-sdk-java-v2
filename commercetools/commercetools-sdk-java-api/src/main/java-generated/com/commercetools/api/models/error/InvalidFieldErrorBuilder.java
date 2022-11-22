@@ -36,7 +36,7 @@ public class InvalidFieldErrorBuilder implements Builder<InvalidFieldError> {
     private java.util.List<java.lang.Object> allowedValues;
 
     /**
-     *
+     *  <p><code>"The value $invalidValue is not valid for field $field."</code></p>
      */
 
     public InvalidFieldErrorBuilder message(final String message) {
@@ -45,7 +45,7 @@ public class InvalidFieldErrorBuilder implements Builder<InvalidFieldError> {
     }
 
     /**
-     *
+     *  <p>Error-specific additional fields.</p>
      */
 
     public InvalidFieldErrorBuilder values(final Map<String, java.lang.Object> values) {
@@ -54,7 +54,7 @@ public class InvalidFieldErrorBuilder implements Builder<InvalidFieldError> {
     }
 
     /**
-     *
+     *  <p>Error-specific additional fields.</p>
      */
 
     public InvalidFieldErrorBuilder addValue(final String key, final java.lang.Object value) {
@@ -66,7 +66,7 @@ public class InvalidFieldErrorBuilder implements Builder<InvalidFieldError> {
     }
 
     /**
-     *
+     *  <p>Name of the field with the invalid value.</p>
      */
 
     public InvalidFieldErrorBuilder field(final String field) {
@@ -75,7 +75,7 @@ public class InvalidFieldErrorBuilder implements Builder<InvalidFieldError> {
     }
 
     /**
-     *
+     *  <p>Value invalid for the field.</p>
      */
 
     public InvalidFieldErrorBuilder invalidValue(final java.lang.Object invalidValue) {
@@ -84,7 +84,7 @@ public class InvalidFieldErrorBuilder implements Builder<InvalidFieldError> {
     }
 
     /**
-     *
+     *  <p>Fixed set of allowed values for the field, if any.</p>
      */
 
     public InvalidFieldErrorBuilder allowedValues(@Nullable final java.lang.Object... allowedValues) {
@@ -93,7 +93,7 @@ public class InvalidFieldErrorBuilder implements Builder<InvalidFieldError> {
     }
 
     /**
-     *
+     *  <p>Fixed set of allowed values for the field, if any.</p>
      */
 
     public InvalidFieldErrorBuilder allowedValues(@Nullable final java.util.List<java.lang.Object> allowedValues) {
@@ -102,7 +102,7 @@ public class InvalidFieldErrorBuilder implements Builder<InvalidFieldError> {
     }
 
     /**
-     *
+     *  <p>Fixed set of allowed values for the field, if any.</p>
      */
 
     public InvalidFieldErrorBuilder plusAllowedValues(@Nullable final java.lang.Object... allowedValues) {

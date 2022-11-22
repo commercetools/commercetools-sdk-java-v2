@@ -29,7 +29,7 @@ public class ShoppingListRemoveLineItemActionBuilder implements Builder<Shopping
     private Long quantity;
 
     /**
-     *
+     *  <p>The <code>id</code> of the ShoppingListLineItem to update.</p>
      */
 
     public ShoppingListRemoveLineItemActionBuilder lineItemId(final String lineItemId) {
@@ -38,7 +38,7 @@ public class ShoppingListRemoveLineItemActionBuilder implements Builder<Shopping
     }
 
     /**
-     *
+     *  <p>Amount to remove from the <code>quantity</code> of the ShoppingListLineItem. If not set, the ShoppingListLineItem is removed from the ShoppingList. If this value matches or exceeds the current <code>quantity</code> of the ShoppingListLineItem, the ShoppingListLineItem is removed from the ShoppingList.</p>
      */
 
     public ShoppingListRemoveLineItemActionBuilder quantity(@Nullable final Long quantity) {

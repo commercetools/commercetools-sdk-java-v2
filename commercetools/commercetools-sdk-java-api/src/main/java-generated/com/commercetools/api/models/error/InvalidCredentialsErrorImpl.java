@@ -15,7 +15,12 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * InvalidCredentialsError
+ *  <p>Returned when a Customer with the given credentials (matching the given email/password pair) is not found and authentication fails.</p>
+ *  <p>The error is returned as a failed response to:</p>
+ *  <ul>
+ *   <li>Authenticate a global Customer (Sign-in) and Authenticate Customer (Sign-in) in a Store requests on Customers.</li>
+ *   <li>Authenticating Customer (Sign-in) and Authenticate Customer (Sign-in) in a Store requests on My Customer Profile.</li>
+ *  </ul>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class InvalidCredentialsErrorImpl implements InvalidCredentialsError, ModelBase {
@@ -47,7 +52,7 @@ public class InvalidCredentialsErrorImpl implements InvalidCredentialsError, Mod
     }
 
     /**
-     *
+     *  <p><code>"Account with the given credentials not found."</code></p>
      */
 
     public String getMessage() {
@@ -55,7 +60,7 @@ public class InvalidCredentialsErrorImpl implements InvalidCredentialsError, Mod
     }
 
     /**
-     *
+     *  <p>Error-specific additional fields.</p>
      */
 
     public Map<String, java.lang.Object> values() {

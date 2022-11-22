@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * ErrorObject
+ *  <p>Represents a single error. Multiple errors may be included in an ErrorResponse.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ErrorObjectImpl implements ErrorObject, ModelBase {
@@ -38,7 +38,7 @@ public class ErrorObjectImpl implements ErrorObject, ModelBase {
     }
 
     /**
-     *
+     *  <p>Error identifier.</p>
      */
 
     public String getCode() {
@@ -46,7 +46,7 @@ public class ErrorObjectImpl implements ErrorObject, ModelBase {
     }
 
     /**
-     *
+     *  <p>Plain text description of the cause of the error.</p>
      */
 
     public String getMessage() {
@@ -54,7 +54,7 @@ public class ErrorObjectImpl implements ErrorObject, ModelBase {
     }
 
     /**
-     *
+     *  <p>Error-specific additional fields.</p>
      */
 
     public Map<String, java.lang.Object> values() {

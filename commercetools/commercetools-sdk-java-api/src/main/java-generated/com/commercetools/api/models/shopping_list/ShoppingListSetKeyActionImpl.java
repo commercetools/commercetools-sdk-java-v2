@@ -43,7 +43,7 @@ public class ShoppingListSetKeyActionImpl implements ShoppingListSetKeyAction, M
     }
 
     /**
-     *  <p>User-specific unique identifier for the shopping list.</p>
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
      */
 
     public String getKey() {

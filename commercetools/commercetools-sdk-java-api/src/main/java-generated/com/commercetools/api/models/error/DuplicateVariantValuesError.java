@@ -14,7 +14,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * DuplicateVariantValuesError
+ *  <p>Returned when a Product Variant value conflicts with an existing one during an Update Product request.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -37,9 +37,25 @@ public interface DuplicateVariantValuesError extends ErrorObject {
      *
      */
     @NotNull
+    @JsonProperty("code")
+    public String getCode();
+
+    /**
+     *  <p><code>"A duplicate combination of the variant values (sku, key, images, prices, attributes) exists."</code></p>
+     */
+    @NotNull
+    @JsonProperty("message")
+    public String getMessage();
+
+    /**
+     *  <p>Every Product Variant must have a distinct combination of SKU, prices, and custom Attribute values.</p>
+     */
+    @NotNull
     @Valid
     @JsonProperty("variantValues")
     public VariantValues getVariantValues();
+
+    public void setMessage(final String message);
 
     public void setVariantValues(final VariantValues variantValues);
 

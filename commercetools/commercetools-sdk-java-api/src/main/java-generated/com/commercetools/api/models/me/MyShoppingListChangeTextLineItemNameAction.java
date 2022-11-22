@@ -35,14 +35,14 @@ public interface MyShoppingListChangeTextLineItemNameAction extends MyShoppingLi
     String CHANGE_TEXT_LINE_ITEM_NAME = "changeTextLineItemName";
 
     /**
-     *
+     *  <p>The <code>id</code> of the TextLineItem to update.</p>
      */
     @NotNull
     @JsonProperty("textLineItemId")
     public String getTextLineItemId();
 
     /**
-     *  <p>JSON object where the keys are of type Locale, and the values are the strings used for the corresponding language.</p>
+     *  <p>New value to set. Must not be empty.</p>
      */
     @NotNull
     @Valid

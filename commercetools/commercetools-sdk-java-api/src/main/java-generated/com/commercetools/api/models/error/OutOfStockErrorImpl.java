@@ -15,7 +15,12 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * OutOfStockError
+ *  <p>Returned when some of the Line Items are out of stock at the time of placing an Order.</p>
+ *  <p>The error is returned as a failed response to:</p>
+ *  <ul>
+ *   <li>Create Order from Cart, Create Order from Cart in a Store, and Create Order by Import requests on Orders.</li>
+ *   <li>Create Order from a Cart and Create Order in a Store from Cart requests on My Orders.</li>
+ *  </ul>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OutOfStockErrorImpl implements OutOfStockError, ModelBase {
@@ -55,7 +60,7 @@ public class OutOfStockErrorImpl implements OutOfStockError, ModelBase {
     }
 
     /**
-     *
+     *  <p><code>"Some line items are out of stock at the time of placing the order: $itemSku."</code></p>
      */
 
     public String getMessage() {
@@ -63,7 +68,7 @@ public class OutOfStockErrorImpl implements OutOfStockError, ModelBase {
     }
 
     /**
-     *
+     *  <p>Error-specific additional fields.</p>
      */
 
     public Map<String, java.lang.Object> values() {
@@ -71,7 +76,7 @@ public class OutOfStockErrorImpl implements OutOfStockError, ModelBase {
     }
 
     /**
-     *
+     *  <p>Unique identifiers of the Line Items that are out of stock.</p>
      */
 
     public java.util.List<String> getLineItems() {
@@ -79,7 +84,7 @@ public class OutOfStockErrorImpl implements OutOfStockError, ModelBase {
     }
 
     /**
-     *
+     *  <p>SKUs of the Line Items that are out of stock.</p>
      */
 
     public java.util.List<String> getSkus() {

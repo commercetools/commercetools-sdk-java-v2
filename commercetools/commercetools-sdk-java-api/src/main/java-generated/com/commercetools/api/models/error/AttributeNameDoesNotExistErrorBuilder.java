@@ -29,7 +29,7 @@ public class AttributeNameDoesNotExistErrorBuilder implements Builder<AttributeN
     private String invalidAttributeName;
 
     /**
-     *
+     *  <p><code>"Attribute definition for $attributeName does not exist on type $typeName."</code></p>
      */
 
     public AttributeNameDoesNotExistErrorBuilder message(final String message) {
@@ -38,7 +38,7 @@ public class AttributeNameDoesNotExistErrorBuilder implements Builder<AttributeN
     }
 
     /**
-     *
+     *  <p>Error-specific additional fields.</p>
      */
 
     public AttributeNameDoesNotExistErrorBuilder values(final Map<String, java.lang.Object> values) {
@@ -47,7 +47,7 @@ public class AttributeNameDoesNotExistErrorBuilder implements Builder<AttributeN
     }
 
     /**
-     *
+     *  <p>Error-specific additional fields.</p>
      */
 
     public AttributeNameDoesNotExistErrorBuilder addValue(final String key, final java.lang.Object value) {
@@ -59,7 +59,7 @@ public class AttributeNameDoesNotExistErrorBuilder implements Builder<AttributeN
     }
 
     /**
-     *
+     *  <p>Non-existent Attribute name.</p>
      */
 
     public AttributeNameDoesNotExistErrorBuilder invalidAttributeName(final String invalidAttributeName) {

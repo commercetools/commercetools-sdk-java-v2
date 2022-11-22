@@ -15,7 +15,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * ShoppingListAddLineItemAction
+ *  <p>The ProductVariant to be included in the ShoppingListLineItem must be specified using the <code>productID</code> and <code>variantID</code>, or by the <code>sku</code>. If the ShoppingList already contains a ShoppingListLineItem for the same Product Variant with the same Custom Fields, then only the quantity of the existing ShoppingListLineItem is increased. A ShoppingListLineItem with an empty <code>variantId</code> is not considered the same as a ShoppingListLineItem with a <code>variantId</code> currently referring to the Master Variant.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -34,42 +34,42 @@ public interface ShoppingListAddLineItemAction extends ShoppingListUpdateAction,
     String ADD_LINE_ITEM = "addLineItem";
 
     /**
-     *
+     *  <p><code>sku</code> of the ProductVariant.</p>
      */
 
     @JsonProperty("sku")
     public String getSku();
 
     /**
-     *
+     *  <p>Unique identifier of a Product.</p>
      */
 
     @JsonProperty("productId")
     public String getProductId();
 
     /**
-     *
+     *  <p><code>id</code> of the ProductVariant. If not set, the ShoppingListLineItem refers to the Master Variant.</p>
      */
 
     @JsonProperty("variantId")
     public Long getVariantId();
 
     /**
-     *
+     *  <p>Number of Products in the ShoppingListLineItem.</p>
      */
 
     @JsonProperty("quantity")
     public Long getQuantity();
 
     /**
-     *
+     *  <p>Date and time the TextLineItem is added to the ShoppingList. If not set, the current date and time (UTC) is used.</p>
      */
 
     @JsonProperty("addedAt")
     public ZonedDateTime getAddedAt();
 
     /**
-     *  <p>The representation used when creating or updating a customizable data type with Custom Fields.</p>
+     *  <p>Custom Fields defined for the ShoppingListLineItem.</p>
      */
     @Valid
     @JsonProperty("custom")

@@ -34,14 +34,14 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface VariantValues {
 
     /**
-     *
+     *  <p>SKU of the ProductVariant.</p>
      */
 
     @JsonProperty("sku")
     public String getSku();
 
     /**
-     *
+     *  <p>Embedded Prices of the ProductVariant.</p>
      */
     @NotNull
     @Valid
@@ -49,7 +49,7 @@ public interface VariantValues {
     public List<PriceDraft> getPrices();
 
     /**
-     *
+     *  <p>Attributes of the ProductVariant.</p>
      */
     @NotNull
     @Valid

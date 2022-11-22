@@ -30,7 +30,7 @@ public class DuplicateVariantValuesErrorBuilder implements Builder<DuplicateVari
     private com.commercetools.api.models.error.VariantValues variantValues;
 
     /**
-     *
+     *  <p><code>"A duplicate combination of the variant values (sku, key, images, prices, attributes) exists."</code></p>
      */
 
     public DuplicateVariantValuesErrorBuilder message(final String message) {
@@ -39,7 +39,7 @@ public class DuplicateVariantValuesErrorBuilder implements Builder<DuplicateVari
     }
 
     /**
-     *
+     *  <p>Error-specific additional fields.</p>
      */
 
     public DuplicateVariantValuesErrorBuilder values(final Map<String, java.lang.Object> values) {
@@ -48,7 +48,7 @@ public class DuplicateVariantValuesErrorBuilder implements Builder<DuplicateVari
     }
 
     /**
-     *
+     *  <p>Error-specific additional fields.</p>
      */
 
     public DuplicateVariantValuesErrorBuilder addValue(final String key, final java.lang.Object value) {
@@ -60,7 +60,7 @@ public class DuplicateVariantValuesErrorBuilder implements Builder<DuplicateVari
     }
 
     /**
-     *
+     *  <p>Every Product Variant must have a distinct combination of SKU, prices, and custom Attribute values.</p>
      */
 
     public DuplicateVariantValuesErrorBuilder variantValues(
@@ -70,7 +70,7 @@ public class DuplicateVariantValuesErrorBuilder implements Builder<DuplicateVari
     }
 
     /**
-     *
+     *  <p>Every Product Variant must have a distinct combination of SKU, prices, and custom Attribute values.</p>
      */
 
     public DuplicateVariantValuesErrorBuilder variantValues(

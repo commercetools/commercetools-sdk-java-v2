@@ -26,7 +26,7 @@ public class SemanticErrorErrorBuilder implements Builder<SemanticErrorError> {
     private Map<String, java.lang.Object> values = new HashMap<>();
 
     /**
-     *
+     *  <p>Plain text description of the error concerning the predicate. For example, <code>"Invalid country code $countryCode provided for the field $fieldDefinition."</code>.</p>
      */
 
     public SemanticErrorErrorBuilder message(final String message) {
@@ -35,7 +35,7 @@ public class SemanticErrorErrorBuilder implements Builder<SemanticErrorError> {
     }
 
     /**
-     *
+     *  <p>Error-specific additional fields.</p>
      */
 
     public SemanticErrorErrorBuilder values(final Map<String, java.lang.Object> values) {
@@ -44,7 +44,7 @@ public class SemanticErrorErrorBuilder implements Builder<SemanticErrorError> {
     }
 
     /**
-     *
+     *  <p>Error-specific additional fields.</p>
      */
 
     public SemanticErrorErrorBuilder addValue(final String key, final java.lang.Object value) {

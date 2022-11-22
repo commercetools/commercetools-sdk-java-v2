@@ -18,7 +18,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Creates a Cart in the Store specified by <code>storeKey</code>. When using this endpoint the Cart's <code>store</code> field is always set to the store specified in the path parameter. Creating a Cart can fail with an InvalidOperationError if the referenced ShippingMethod in the CartDraft has a predicate which does not match the Cart.</p>
+ *  <p>Creates a Cart in the Store specified by <code>storeKey</code>. When using this endpoint the Cart's <code>store</code> field is always set to the store specified in the path parameter. If the referenced ShippingMethod in the CartDraft has a predicate that does not match, an InvalidOperation error is returned.</p>
  *
  * <hr>
  * <div class=code-example>

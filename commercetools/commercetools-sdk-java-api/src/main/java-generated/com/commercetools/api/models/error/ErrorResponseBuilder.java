@@ -30,16 +30,10 @@ public class ErrorResponseBuilder implements Builder<ErrorResponse> {
     private String message;
 
     @Nullable
-    private String error;
-
-    @Nullable
-    private String error_description;
-
-    @Nullable
     private java.util.List<com.commercetools.api.models.error.ErrorObject> errors;
 
     /**
-     *
+     *  <p>HTTP status code corresponding to the error.</p>
      */
 
     public ErrorResponseBuilder statusCode(final Integer statusCode) {
@@ -48,7 +42,7 @@ public class ErrorResponseBuilder implements Builder<ErrorResponse> {
     }
 
     /**
-     *
+     *  <p>First error message in the <code>errors</code> array.</p>
      */
 
     public ErrorResponseBuilder message(final String message) {
@@ -57,25 +51,8 @@ public class ErrorResponseBuilder implements Builder<ErrorResponse> {
     }
 
     /**
-     *
-     */
-
-    public ErrorResponseBuilder error(@Nullable final String error) {
-        this.error = error;
-        return this;
-    }
-
-    /**
-     *
-     */
-
-    public ErrorResponseBuilder error_description(@Nullable final String error_description) {
-        this.error_description = error_description;
-        return this;
-    }
-
-    /**
-     *
+     *  <p>Errors returned for a request.</p>
+     *  <p>A single error response can contain multiple errors if the errors are related to the same HTTP status code such as <code>400</code>.</p>
      */
 
     public ErrorResponseBuilder errors(@Nullable final com.commercetools.api.models.error.ErrorObject... errors) {
@@ -84,7 +61,8 @@ public class ErrorResponseBuilder implements Builder<ErrorResponse> {
     }
 
     /**
-     *
+     *  <p>Errors returned for a request.</p>
+     *  <p>A single error response can contain multiple errors if the errors are related to the same HTTP status code such as <code>400</code>.</p>
      */
 
     public ErrorResponseBuilder errors(
@@ -94,7 +72,8 @@ public class ErrorResponseBuilder implements Builder<ErrorResponse> {
     }
 
     /**
-     *
+     *  <p>Errors returned for a request.</p>
+     *  <p>A single error response can contain multiple errors if the errors are related to the same HTTP status code such as <code>400</code>.</p>
      */
 
     public ErrorResponseBuilder plusErrors(@Nullable final com.commercetools.api.models.error.ErrorObject... errors) {
@@ -106,7 +85,8 @@ public class ErrorResponseBuilder implements Builder<ErrorResponse> {
     }
 
     /**
-     *
+     *  <p>Errors returned for a request.</p>
+     *  <p>A single error response can contain multiple errors if the errors are related to the same HTTP status code such as <code>400</code>.</p>
      */
 
     public ErrorResponseBuilder plusErrors(
@@ -119,7 +99,8 @@ public class ErrorResponseBuilder implements Builder<ErrorResponse> {
     }
 
     /**
-     *
+     *  <p>Errors returned for a request.</p>
+     *  <p>A single error response can contain multiple errors if the errors are related to the same HTTP status code such as <code>400</code>.</p>
      */
 
     public ErrorResponseBuilder withErrors(
@@ -138,16 +119,6 @@ public class ErrorResponseBuilder implements Builder<ErrorResponse> {
     }
 
     @Nullable
-    public String getError() {
-        return this.error;
-    }
-
-    @Nullable
-    public String getError_description() {
-        return this.error_description;
-    }
-
-    @Nullable
     public java.util.List<com.commercetools.api.models.error.ErrorObject> getErrors() {
         return this.errors;
     }
@@ -155,14 +126,14 @@ public class ErrorResponseBuilder implements Builder<ErrorResponse> {
     public ErrorResponse build() {
         Objects.requireNonNull(statusCode, ErrorResponse.class + ": statusCode is missing");
         Objects.requireNonNull(message, ErrorResponse.class + ": message is missing");
-        return new ErrorResponseImpl(statusCode, message, error, error_description, errors);
+        return new ErrorResponseImpl(statusCode, message, errors);
     }
 
     /**
      * builds ErrorResponse without checking for non null required values
      */
     public ErrorResponse buildUnchecked() {
-        return new ErrorResponseImpl(statusCode, message, error, error_description, errors);
+        return new ErrorResponseImpl(statusCode, message, errors);
     }
 
     public static ErrorResponseBuilder of() {
@@ -173,8 +144,6 @@ public class ErrorResponseBuilder implements Builder<ErrorResponse> {
         ErrorResponseBuilder builder = new ErrorResponseBuilder();
         builder.statusCode = template.getStatusCode();
         builder.message = template.getMessage();
-        builder.error = template.getError();
-        builder.error_description = template.getErrorDescription();
         builder.errors = template.getErrors();
         return builder;
     }

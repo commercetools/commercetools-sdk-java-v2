@@ -15,7 +15,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * DuplicateFieldWithConflictingResourceError
+ *  <p>Returned when a field value conflicts with an existing value stored in a particular resource causing a duplicate.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -39,23 +39,39 @@ public interface DuplicateFieldWithConflictingResourceError extends ErrorObject 
      *
      */
     @NotNull
+    @JsonProperty("code")
+    public String getCode();
+
+    /**
+     *  <p><code>"A duplicate value $duplicateValue exists for field $field on $conflictingResource."</code></p>
+     */
+    @NotNull
+    @JsonProperty("message")
+    public String getMessage();
+
+    /**
+     *  <p>Name of the conflicting field.</p>
+     */
+    @NotNull
     @JsonProperty("field")
     public String getField();
 
     /**
-     *
+     *  <p>Conflicting duplicate value.</p>
      */
     @NotNull
     @JsonProperty("duplicateValue")
     public Object getDuplicateValue();
 
     /**
-     *  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
+     *  <p>Reference to the resource that has the conflicting value.</p>
      */
     @NotNull
     @Valid
     @JsonProperty("conflictingResource")
     public Reference getConflictingResource();
+
+    public void setMessage(final String message);
 
     public void setField(final String field);
 

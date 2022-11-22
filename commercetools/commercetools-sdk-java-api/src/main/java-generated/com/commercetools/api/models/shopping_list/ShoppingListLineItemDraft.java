@@ -15,7 +15,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * ShoppingListLineItemDraft
+ *  <p>The ProductVariant to be included in the ShoppingListLineItem must be specified using the <code>productID</code> and <code>variantID</code>, or by the <code>sku</code>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -32,58 +32,58 @@ public interface ShoppingListLineItemDraft
         extends com.commercetools.api.models.CustomizableDraft<ShoppingListLineItemDraft> {
 
     /**
-     *
-     */
-
-    @JsonProperty("addedAt")
-    public ZonedDateTime getAddedAt();
-
-    /**
-     *  <p>The representation used when creating or updating a customizable data type with Custom Fields.</p>
-     */
-    @Valid
-    @JsonProperty("custom")
-    public CustomFieldsDraft getCustom();
-
-    /**
-     *
-     */
-
-    @JsonProperty("sku")
-    public String getSku();
-
-    /**
-     *
+     *  <p>Unique identifier of a Product.</p>
      */
 
     @JsonProperty("productId")
     public String getProductId();
 
     /**
-     *
-     */
-
-    @JsonProperty("quantity")
-    public Integer getQuantity();
-
-    /**
-     *
+     *  <p><code>id</code> of the ProductVariant. If not set, the ShoppingListLineItem refers to the Master Variant.</p>
      */
 
     @JsonProperty("variantId")
     public Long getVariantId();
 
+    /**
+     *  <p><code>sku</code> of the ProductVariant.</p>
+     */
+
+    @JsonProperty("sku")
+    public String getSku();
+
+    /**
+     *  <p>Date and time the ShoppingListLineItem is added to the ShoppingList. If not set, the current date and time (UTC) is used.</p>
+     */
+
+    @JsonProperty("addedAt")
+    public ZonedDateTime getAddedAt();
+
+    /**
+     *  <p>Custom Fields of the ShoppingListLineItem.</p>
+     */
+    @Valid
+    @JsonProperty("custom")
+    public CustomFieldsDraft getCustom();
+
+    /**
+     *  <p>Number of Products in the ShoppingListLineItem.</p>
+     */
+
+    @JsonProperty("quantity")
+    public Long getQuantity();
+
+    public void setProductId(final String productId);
+
+    public void setVariantId(final Long variantId);
+
+    public void setSku(final String sku);
+
     public void setAddedAt(final ZonedDateTime addedAt);
 
     public void setCustom(final CustomFieldsDraft custom);
 
-    public void setSku(final String sku);
-
-    public void setProductId(final String productId);
-
-    public void setQuantity(final Integer quantity);
-
-    public void setVariantId(final Long variantId);
+    public void setQuantity(final Long quantity);
 
     public static ShoppingListLineItemDraft of() {
         return new ShoppingListLineItemDraftImpl();
@@ -91,12 +91,12 @@ public interface ShoppingListLineItemDraft
 
     public static ShoppingListLineItemDraft of(final ShoppingListLineItemDraft template) {
         ShoppingListLineItemDraftImpl instance = new ShoppingListLineItemDraftImpl();
+        instance.setProductId(template.getProductId());
+        instance.setVariantId(template.getVariantId());
+        instance.setSku(template.getSku());
         instance.setAddedAt(template.getAddedAt());
         instance.setCustom(template.getCustom());
-        instance.setSku(template.getSku());
-        instance.setProductId(template.getProductId());
         instance.setQuantity(template.getQuantity());
-        instance.setVariantId(template.getVariantId());
         return instance;
     }
 

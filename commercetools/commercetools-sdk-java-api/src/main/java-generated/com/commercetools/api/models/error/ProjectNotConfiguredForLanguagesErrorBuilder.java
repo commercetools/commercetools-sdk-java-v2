@@ -31,7 +31,7 @@ public class ProjectNotConfiguredForLanguagesErrorBuilder implements Builder<Pro
     private java.util.List<String> languages;
 
     /**
-     *
+     *  <p><code>"The project is not configured for given languages."</code></p>
      */
 
     public ProjectNotConfiguredForLanguagesErrorBuilder message(final String message) {
@@ -40,7 +40,7 @@ public class ProjectNotConfiguredForLanguagesErrorBuilder implements Builder<Pro
     }
 
     /**
-     *
+     *  <p>Error-specific additional fields.</p>
      */
 
     public ProjectNotConfiguredForLanguagesErrorBuilder values(final Map<String, java.lang.Object> values) {
@@ -49,7 +49,7 @@ public class ProjectNotConfiguredForLanguagesErrorBuilder implements Builder<Pro
     }
 
     /**
-     *
+     *  <p>Error-specific additional fields.</p>
      */
 
     public ProjectNotConfiguredForLanguagesErrorBuilder addValue(final String key, final java.lang.Object value) {
@@ -61,7 +61,7 @@ public class ProjectNotConfiguredForLanguagesErrorBuilder implements Builder<Pro
     }
 
     /**
-     *
+     *  <p>Languages configured for the Store.</p>
      */
 
     public ProjectNotConfiguredForLanguagesErrorBuilder languages(@Nullable final String... languages) {
@@ -70,7 +70,7 @@ public class ProjectNotConfiguredForLanguagesErrorBuilder implements Builder<Pro
     }
 
     /**
-     *
+     *  <p>Languages configured for the Store.</p>
      */
 
     public ProjectNotConfiguredForLanguagesErrorBuilder languages(@Nullable final java.util.List<String> languages) {
@@ -79,7 +79,7 @@ public class ProjectNotConfiguredForLanguagesErrorBuilder implements Builder<Pro
     }
 
     /**
-     *
+     *  <p>Languages configured for the Store.</p>
      */
 
     public ProjectNotConfiguredForLanguagesErrorBuilder plusLanguages(@Nullable final String... languages) {

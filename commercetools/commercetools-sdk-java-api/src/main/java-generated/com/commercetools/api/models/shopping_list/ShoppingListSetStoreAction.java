@@ -32,7 +32,7 @@ public interface ShoppingListSetStoreAction extends ShoppingListUpdateAction {
     String SET_STORE = "setStore";
 
     /**
-     *
+     *  <p>The Store the ShoppingList should be assigned to. If empty, any existing value will be removed.</p>
      */
     @Valid
     @JsonProperty("store")

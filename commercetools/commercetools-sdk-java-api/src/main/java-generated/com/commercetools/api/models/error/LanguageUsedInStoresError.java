@@ -5,13 +5,16 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.validation.constraints.NotNull;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * LanguageUsedInStoresError
+ *  <p>Returned when a language cannot be removed from a Project as it is being used by a Store.</p>
+ *  <p>The error is returned as a failed response to the Change Languages update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -28,6 +31,22 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface LanguageUsedInStoresError extends ErrorObject {
 
     String LANGUAGE_USED_IN_STORES = "LanguageUsedInStores";
+
+    /**
+     *
+     */
+    @NotNull
+    @JsonProperty("code")
+    public String getCode();
+
+    /**
+     *  <p><code>"Language(s) in use by a store cannot be deleted. Remove them in all the stores of this project first."</code></p>
+     */
+    @NotNull
+    @JsonProperty("message")
+    public String getMessage();
+
+    public void setMessage(final String message);
 
     public static LanguageUsedInStoresError of() {
         return new LanguageUsedInStoresErrorImpl();

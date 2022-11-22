@@ -19,7 +19,8 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * ShoppingListLineItem
+ *  <p>ShoppingListLineItems are Line Items that contain references to ProductVariants in a Product.</p>
+ *  <p>In addition to standard Reference Expansion, a ShoppingListLineItem offers expansion on <code>productSlug</code> and <code>variant</code>, defined with the query parameter <code>expand</code>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -41,21 +42,22 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ShoppingListLineItem extends com.commercetools.api.models.Customizable<ShoppingListLineItem> {
 
     /**
-     *
+     *  <p>Date and time (UTC) the ShoppingListLineItem was added to the ShoppingList.</p>
      */
     @NotNull
     @JsonProperty("addedAt")
     public ZonedDateTime getAddedAt();
 
     /**
-     *  <p>Serves as value of the <code>custom</code> field on a resource or data type customized with a Type.</p>
+     *  <p>Custom Fields of the ShoppingListLineItem.</p>
      */
     @Valid
     @JsonProperty("custom")
     public CustomFields getCustom();
 
     /**
-     *
+     *  <p>If the Product or Product Variant is deleted, <code>deactivatedAt</code> is the date and time (UTC) of deletion.</p>
+     *  <p>This data is updated in an eventual consistent manner when the Product Variant cannot be ordered anymore.</p>
      */
 
     @JsonProperty("deactivatedAt")
@@ -69,7 +71,8 @@ public interface ShoppingListLineItem extends com.commercetools.api.models.Custo
     public String getId();
 
     /**
-     *  <p>JSON object where the keys are of type Locale, and the values are the strings used for the corresponding language.</p>
+     *  <p>Name of the Product.</p>
+     *  <p>This data is updated in an eventual consistent manner when the Product's name changes.</p>
      */
     @NotNull
     @Valid
@@ -77,21 +80,14 @@ public interface ShoppingListLineItem extends com.commercetools.api.models.Custo
     public LocalizedString getName();
 
     /**
-     *
+     *  <p>Unique identifier of a Product.</p>
      */
     @NotNull
     @JsonProperty("productId")
     public String getProductId();
 
     /**
-     *  <p>JSON object where the keys are of type Locale, and the values are the strings used for the corresponding language.</p>
-     */
-    @Valid
-    @JsonProperty("productSlug")
-    public LocalizedString getProductSlug();
-
-    /**
-     *  <p>Reference to a ProductType.</p>
+     *  <p>The Product Type defining the Attributes of the Product.</p>
      */
     @NotNull
     @Valid
@@ -99,25 +95,34 @@ public interface ShoppingListLineItem extends com.commercetools.api.models.Custo
     public ProductTypeReference getProductType();
 
     /**
-     *
+     *  <p>Number of Products in the ShoppingListLineItem.</p>
      */
     @NotNull
     @JsonProperty("quantity")
-    public Integer getQuantity();
+    public Long getQuantity();
 
     /**
-     *  <p>A concrete sellable good for which inventory can be tracked. Product Variants are generally mapped to specific SKUs.</p>
+     *  <p><code>id</code> of the ProductVariant the ShoppingListLineItem refers to. If not set, the ShoppingListLineItem refers to the Master Variant.</p>
+     */
+
+    @JsonProperty("variantId")
+    public Long getVariantId();
+
+    /**
+     *  <p>Data of the ProductVariant. Returned when expanded using <code>expand=lineItems[*].variant</code>.</p>
+     *  <p><em>Limitation: <code>expand=lineItems[0].variant</code> is not supported.</em></p>
      */
     @Valid
     @JsonProperty("variant")
     public ProductVariant getVariant();
 
     /**
-     *
+     *  <p>Slug of the current ProductData. Only returned when expanded using <code>expand=lineItems[*].productSlug</code>.</p>
+     *  <p><em>Limitation: <code>expand=lineItems[0].productSlug</code> is not supported.</em></p>
      */
-
-    @JsonProperty("variantId")
-    public Long getVariantId();
+    @Valid
+    @JsonProperty("productSlug")
+    public LocalizedString getProductSlug();
 
     public void setAddedAt(final ZonedDateTime addedAt);
 
@@ -131,15 +136,15 @@ public interface ShoppingListLineItem extends com.commercetools.api.models.Custo
 
     public void setProductId(final String productId);
 
-    public void setProductSlug(final LocalizedString productSlug);
-
     public void setProductType(final ProductTypeReference productType);
 
-    public void setQuantity(final Integer quantity);
+    public void setQuantity(final Long quantity);
+
+    public void setVariantId(final Long variantId);
 
     public void setVariant(final ProductVariant variant);
 
-    public void setVariantId(final Long variantId);
+    public void setProductSlug(final LocalizedString productSlug);
 
     public static ShoppingListLineItem of() {
         return new ShoppingListLineItemImpl();
@@ -153,11 +158,11 @@ public interface ShoppingListLineItem extends com.commercetools.api.models.Custo
         instance.setId(template.getId());
         instance.setName(template.getName());
         instance.setProductId(template.getProductId());
-        instance.setProductSlug(template.getProductSlug());
         instance.setProductType(template.getProductType());
         instance.setQuantity(template.getQuantity());
-        instance.setVariant(template.getVariant());
         instance.setVariantId(template.getVariantId());
+        instance.setVariant(template.getVariant());
+        instance.setProductSlug(template.getProductSlug());
         return instance;
     }
 

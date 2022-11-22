@@ -15,10 +15,11 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * WeakPasswordError
+ *  <p>Returned when a Product is not assigned to the Product Selection.</p>
+ *  <p>The error is returned as a failed response to the Set Variant Selection update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-public class WeakPasswordErrorImpl implements WeakPasswordError, ModelBase {
+public class ProductAssignmentMissingErrorImpl implements ProductAssignmentMissingError, ModelBase {
 
     private String code;
 
@@ -26,16 +27,20 @@ public class WeakPasswordErrorImpl implements WeakPasswordError, ModelBase {
 
     private Map<String, java.lang.Object> values;
 
+    private com.commercetools.api.models.product.ProductReference product;
+
     @JsonCreator
-    WeakPasswordErrorImpl(@JsonProperty("message") final String message,
-            @JsonProperty("values") final Map<String, java.lang.Object> values) {
+    ProductAssignmentMissingErrorImpl(@JsonProperty("message") final String message,
+            @JsonProperty("values") final Map<String, java.lang.Object> values,
+            @JsonProperty("product") final com.commercetools.api.models.product.ProductReference product) {
         this.message = message;
         this.values = values;
-        this.code = WEAK_PASSWORD;
+        this.product = product;
+        this.code = PRODUCT_ASSIGNMENT_MISSING;
     }
 
-    public WeakPasswordErrorImpl() {
-        this.code = WEAK_PASSWORD;
+    public ProductAssignmentMissingErrorImpl() {
+        this.code = PRODUCT_ASSIGNMENT_MISSING;
     }
 
     /**
@@ -47,7 +52,7 @@ public class WeakPasswordErrorImpl implements WeakPasswordError, ModelBase {
     }
 
     /**
-     *
+     *  <p><code>"A Product Variant Selection can only be set for a Product previously added to the Product Selection."</code></p>
      */
 
     public String getMessage() {
@@ -55,11 +60,19 @@ public class WeakPasswordErrorImpl implements WeakPasswordError, ModelBase {
     }
 
     /**
-     *
+     *  <p>Error-specific additional fields.</p>
      */
 
     public Map<String, java.lang.Object> values() {
         return values;
+    }
+
+    /**
+     *  <p>Reference to the Product for which the error was returned.</p>
+     */
+
+    public com.commercetools.api.models.product.ProductReference getProduct() {
+        return this.product;
     }
 
     public void setMessage(final String message) {
@@ -73,6 +86,10 @@ public class WeakPasswordErrorImpl implements WeakPasswordError, ModelBase {
         values.put(key, value);
     }
 
+    public void setProduct(final com.commercetools.api.models.product.ProductReference product) {
+        this.product = product;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -81,17 +98,18 @@ public class WeakPasswordErrorImpl implements WeakPasswordError, ModelBase {
         if (o == null || getClass() != o.getClass())
             return false;
 
-        WeakPasswordErrorImpl that = (WeakPasswordErrorImpl) o;
+        ProductAssignmentMissingErrorImpl that = (ProductAssignmentMissingErrorImpl) o;
 
         return new EqualsBuilder().append(code, that.code)
                 .append(message, that.message)
                 .append(values, that.values)
+                .append(product, that.product)
                 .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(code).append(message).append(values).toHashCode();
+        return new HashCodeBuilder(17, 37).append(code).append(message).append(values).append(product).toHashCode();
     }
 
 }

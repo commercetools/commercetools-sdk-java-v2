@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * DuplicateFieldError
+ *  <p>Returned when a field value conflicts with an existing value causing a duplicate.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class DuplicateFieldErrorImpl implements DuplicateFieldError, ModelBase {
@@ -30,19 +30,15 @@ public class DuplicateFieldErrorImpl implements DuplicateFieldError, ModelBase {
 
     private java.lang.Object duplicateValue;
 
-    private com.commercetools.api.models.common.Reference conflictingResource;
-
     @JsonCreator
     DuplicateFieldErrorImpl(@JsonProperty("message") final String message,
             @JsonProperty("values") final Map<String, java.lang.Object> values,
             @JsonProperty("field") final String field,
-            @JsonProperty("duplicateValue") final java.lang.Object duplicateValue,
-            @JsonProperty("conflictingResource") final com.commercetools.api.models.common.Reference conflictingResource) {
+            @JsonProperty("duplicateValue") final java.lang.Object duplicateValue) {
         this.message = message;
         this.values = values;
         this.field = field;
         this.duplicateValue = duplicateValue;
-        this.conflictingResource = conflictingResource;
         this.code = DUPLICATE_FIELD;
     }
 
@@ -59,7 +55,7 @@ public class DuplicateFieldErrorImpl implements DuplicateFieldError, ModelBase {
     }
 
     /**
-     *
+     *  <p><code>"A duplicate value $duplicateValue exists for field $field."</code></p>
      */
 
     public String getMessage() {
@@ -67,7 +63,7 @@ public class DuplicateFieldErrorImpl implements DuplicateFieldError, ModelBase {
     }
 
     /**
-     *
+     *  <p>Error-specific additional fields.</p>
      */
 
     public Map<String, java.lang.Object> values() {
@@ -75,7 +71,7 @@ public class DuplicateFieldErrorImpl implements DuplicateFieldError, ModelBase {
     }
 
     /**
-     *
+     *  <p>Name of the conflicting field.</p>
      */
 
     public String getField() {
@@ -83,19 +79,11 @@ public class DuplicateFieldErrorImpl implements DuplicateFieldError, ModelBase {
     }
 
     /**
-     *
+     *  <p>Conflicting duplicate value.</p>
      */
 
     public java.lang.Object getDuplicateValue() {
         return this.duplicateValue;
-    }
-
-    /**
-     *  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
-     */
-
-    public com.commercetools.api.models.common.Reference getConflictingResource() {
-        return this.conflictingResource;
     }
 
     public void setMessage(final String message) {
@@ -117,10 +105,6 @@ public class DuplicateFieldErrorImpl implements DuplicateFieldError, ModelBase {
         this.duplicateValue = duplicateValue;
     }
 
-    public void setConflictingResource(final com.commercetools.api.models.common.Reference conflictingResource) {
-        this.conflictingResource = conflictingResource;
-    }
-
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -136,7 +120,6 @@ public class DuplicateFieldErrorImpl implements DuplicateFieldError, ModelBase {
                 .append(values, that.values)
                 .append(field, that.field)
                 .append(duplicateValue, that.duplicateValue)
-                .append(conflictingResource, that.conflictingResource)
                 .isEquals();
     }
 
@@ -147,7 +130,6 @@ public class DuplicateFieldErrorImpl implements DuplicateFieldError, ModelBase {
                 .append(values)
                 .append(field)
                 .append(duplicateValue)
-                .append(conflictingResource)
                 .toHashCode();
     }
 

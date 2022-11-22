@@ -33,7 +33,7 @@ public interface DiscountCodeUpdate extends
         com.commercetools.api.models.ResourceUpdate<DiscountCodeUpdate, DiscountCodeUpdateAction, DiscountCodeUpdateBuilder> {
 
     /**
-     *  <p>Expected version of the DiscountCode on which the changes should be applied. If the expected version does not match the actual version, a 409 Conflict will be returned.</p>
+     *  <p>Expected version of the DiscountCode on which the changes should be applied. If the expected version does not match the actual version, a ConcurrentModification error is returned.</p>
      */
     @NotNull
     @JsonProperty("version")

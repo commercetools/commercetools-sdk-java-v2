@@ -5,13 +5,20 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.validation.constraints.NotNull;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * InvalidCurrentPasswordError
+ *  <p>Returned when the current password of the Customer does not match.</p>
+ *  <p>The error is returned as a failed response to:</p>
+ *  <ul>
+ *   <li>Change Customer Password and Change Customer Password in a Store requests on Customers.</li>
+ *   <li>Change Customer Password and Change Customer Password in a Store requests on My Customer Profile.</li>
+ *  </ul>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -28,6 +35,22 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface InvalidCurrentPasswordError extends ErrorObject {
 
     String INVALID_CURRENT_PASSWORD = "InvalidCurrentPassword";
+
+    /**
+     *
+     */
+    @NotNull
+    @JsonProperty("code")
+    public String getCode();
+
+    /**
+     *  <p><code>"The given current password does not match."</code></p>
+     */
+    @NotNull
+    @JsonProperty("message")
+    public String getMessage();
+
+    public void setMessage(final String message);
 
     public static InvalidCurrentPasswordError of() {
         return new InvalidCurrentPasswordErrorImpl();

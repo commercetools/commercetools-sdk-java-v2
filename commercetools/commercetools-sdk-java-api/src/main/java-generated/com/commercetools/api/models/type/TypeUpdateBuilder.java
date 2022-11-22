@@ -28,7 +28,7 @@ public class TypeUpdateBuilder implements Builder<TypeUpdate> {
     private java.util.List<com.commercetools.api.models.type.TypeUpdateAction> actions;
 
     /**
-     *  <p>Expected version of the type on which the changes should be applied. If the expected version does not match the actual version, a 409 Conflict will be returned.</p>
+     *  <p>Expected version of the type on which the changes should be applied. If the expected version does not match the actual version, a ConcurrentModification error is returned.</p>
      */
 
     public TypeUpdateBuilder version(final Long version) {

@@ -13,7 +13,8 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * InvalidItemShippingDetailsError
+ *  <p>Returned when Line Item or Custom Line Item quantities set under ItemShippingDetails do not match the sum of the quantities in their respective shipping details.</p>
+ *  <p>The error is returned as a failed response to the Create Order from Cart and Create Order from Cart in a Store requests.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -37,15 +38,31 @@ public interface InvalidItemShippingDetailsError extends ErrorObject {
      *
      */
     @NotNull
+    @JsonProperty("code")
+    public String getCode();
+
+    /**
+     *  <p><code>"Inconsistent shipping details for $subject with ID $itemId. $subject quantity is $itemQuantity and shippingTargets quantity sum is $quantitySum."</code></p>
+     */
+    @NotNull
+    @JsonProperty("message")
+    public String getMessage();
+
+    /**
+     *  <p><code>"LineItem"</code> or <code>"CustomLineItem"</code></p>
+     */
+    @NotNull
     @JsonProperty("subject")
     public String getSubject();
 
     /**
-     *
+     *  <p>Unique identifier of the Line Item or Custom Line Item.</p>
      */
     @NotNull
     @JsonProperty("itemId")
     public String getItemId();
+
+    public void setMessage(final String message);
 
     public void setSubject(final String subject);
 

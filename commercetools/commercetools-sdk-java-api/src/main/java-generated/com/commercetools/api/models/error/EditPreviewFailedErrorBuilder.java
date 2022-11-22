@@ -30,7 +30,7 @@ public class EditPreviewFailedErrorBuilder implements Builder<EditPreviewFailedE
     private com.commercetools.api.models.order_edit.OrderEditPreviewFailure result;
 
     /**
-     *
+     *  <p><code>"Error while applying staged actions. ShippingMethods could not be determined."</code></p>
      */
 
     public EditPreviewFailedErrorBuilder message(final String message) {
@@ -39,7 +39,7 @@ public class EditPreviewFailedErrorBuilder implements Builder<EditPreviewFailedE
     }
 
     /**
-     *
+     *  <p>Error-specific additional fields.</p>
      */
 
     public EditPreviewFailedErrorBuilder values(final Map<String, java.lang.Object> values) {
@@ -48,7 +48,7 @@ public class EditPreviewFailedErrorBuilder implements Builder<EditPreviewFailedE
     }
 
     /**
-     *
+     *  <p>Error-specific additional fields.</p>
      */
 
     public EditPreviewFailedErrorBuilder addValue(final String key, final java.lang.Object value) {
@@ -60,7 +60,7 @@ public class EditPreviewFailedErrorBuilder implements Builder<EditPreviewFailedE
     }
 
     /**
-     *
+     *  <p>State of the OrderEdit where the <code>stagedActions</code> cannot be applied to the Order.</p>
      */
 
     public EditPreviewFailedErrorBuilder result(
@@ -71,7 +71,7 @@ public class EditPreviewFailedErrorBuilder implements Builder<EditPreviewFailedE
     }
 
     /**
-     *
+     *  <p>State of the OrderEdit where the <code>stagedActions</code> cannot be applied to the Order.</p>
      */
 
     public EditPreviewFailedErrorBuilder result(

@@ -17,7 +17,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     ExtensionUpdateActionsFailedError extensionUpdateActionsFailedError = ExtensionUpdateActionsFailedError.builder()
  *             .message("{message}")
- *             .errorByExtension(errorByExtensionBuilder -> errorByExtensionBuilder)
+ *             .plusExtensionErrors(extensionErrorsBuilder -> extensionErrorsBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -35,10 +35,10 @@ public class ExtensionUpdateActionsFailedErrorBuilder implements Builder<Extensi
     @Nullable
     private java.lang.Object extensionExtraInfo;
 
-    private com.commercetools.api.models.error.ErrorByExtension errorByExtension;
+    private java.util.List<com.commercetools.api.models.error.ExtensionError> extensionErrors;
 
     /**
-     *
+     *  <p><code>"The extension returned update actions that could not be executed."</code></p>
      */
 
     public ExtensionUpdateActionsFailedErrorBuilder message(final String message) {
@@ -47,7 +47,7 @@ public class ExtensionUpdateActionsFailedErrorBuilder implements Builder<Extensi
     }
 
     /**
-     *
+     *  <p>Error-specific additional fields.</p>
      */
 
     public ExtensionUpdateActionsFailedErrorBuilder values(final Map<String, java.lang.Object> values) {
@@ -56,7 +56,7 @@ public class ExtensionUpdateActionsFailedErrorBuilder implements Builder<Extensi
     }
 
     /**
-     *
+     *  <p>Error-specific additional fields.</p>
      */
 
     public ExtensionUpdateActionsFailedErrorBuilder addValue(final String key, final java.lang.Object value) {
@@ -68,7 +68,7 @@ public class ExtensionUpdateActionsFailedErrorBuilder implements Builder<Extensi
     }
 
     /**
-     *  <p>JSON object where the keys are of type Locale, and the values are the strings used for the corresponding language.</p>
+     *  <p>User-defined localized description of the error.</p>
      */
 
     public ExtensionUpdateActionsFailedErrorBuilder localizedMessage(
@@ -78,7 +78,7 @@ public class ExtensionUpdateActionsFailedErrorBuilder implements Builder<Extensi
     }
 
     /**
-     *  <p>JSON object where the keys are of type Locale, and the values are the strings used for the corresponding language.</p>
+     *  <p>User-defined localized description of the error.</p>
      */
 
     public ExtensionUpdateActionsFailedErrorBuilder localizedMessage(
@@ -88,7 +88,7 @@ public class ExtensionUpdateActionsFailedErrorBuilder implements Builder<Extensi
     }
 
     /**
-     *
+     *  <p>Any information that should be returned to the API caller.</p>
      */
 
     public ExtensionUpdateActionsFailedErrorBuilder extensionExtraInfo(
@@ -98,22 +98,59 @@ public class ExtensionUpdateActionsFailedErrorBuilder implements Builder<Extensi
     }
 
     /**
-     *
+     *  <p>Additional errors related to the API Extension.</p>
      */
 
-    public ExtensionUpdateActionsFailedErrorBuilder errorByExtension(
-            Function<com.commercetools.api.models.error.ErrorByExtensionBuilder, com.commercetools.api.models.error.ErrorByExtensionBuilder> builder) {
-        this.errorByExtension = builder.apply(com.commercetools.api.models.error.ErrorByExtensionBuilder.of()).build();
+    public ExtensionUpdateActionsFailedErrorBuilder extensionErrors(
+            final com.commercetools.api.models.error.ExtensionError... extensionErrors) {
+        this.extensionErrors = new ArrayList<>(Arrays.asList(extensionErrors));
         return this;
     }
 
     /**
-     *
+     *  <p>Additional errors related to the API Extension.</p>
      */
 
-    public ExtensionUpdateActionsFailedErrorBuilder errorByExtension(
-            final com.commercetools.api.models.error.ErrorByExtension errorByExtension) {
-        this.errorByExtension = errorByExtension;
+    public ExtensionUpdateActionsFailedErrorBuilder extensionErrors(
+            final java.util.List<com.commercetools.api.models.error.ExtensionError> extensionErrors) {
+        this.extensionErrors = extensionErrors;
+        return this;
+    }
+
+    /**
+     *  <p>Additional errors related to the API Extension.</p>
+     */
+
+    public ExtensionUpdateActionsFailedErrorBuilder plusExtensionErrors(
+            final com.commercetools.api.models.error.ExtensionError... extensionErrors) {
+        if (this.extensionErrors == null) {
+            this.extensionErrors = new ArrayList<>();
+        }
+        this.extensionErrors.addAll(Arrays.asList(extensionErrors));
+        return this;
+    }
+
+    /**
+     *  <p>Additional errors related to the API Extension.</p>
+     */
+
+    public ExtensionUpdateActionsFailedErrorBuilder plusExtensionErrors(
+            Function<com.commercetools.api.models.error.ExtensionErrorBuilder, com.commercetools.api.models.error.ExtensionErrorBuilder> builder) {
+        if (this.extensionErrors == null) {
+            this.extensionErrors = new ArrayList<>();
+        }
+        this.extensionErrors.add(builder.apply(com.commercetools.api.models.error.ExtensionErrorBuilder.of()).build());
+        return this;
+    }
+
+    /**
+     *  <p>Additional errors related to the API Extension.</p>
+     */
+
+    public ExtensionUpdateActionsFailedErrorBuilder withExtensionErrors(
+            Function<com.commercetools.api.models.error.ExtensionErrorBuilder, com.commercetools.api.models.error.ExtensionErrorBuilder> builder) {
+        this.extensionErrors = new ArrayList<>();
+        this.extensionErrors.add(builder.apply(com.commercetools.api.models.error.ExtensionErrorBuilder.of()).build());
         return this;
     }
 
@@ -135,17 +172,17 @@ public class ExtensionUpdateActionsFailedErrorBuilder implements Builder<Extensi
         return this.extensionExtraInfo;
     }
 
-    public com.commercetools.api.models.error.ErrorByExtension getErrorByExtension() {
-        return this.errorByExtension;
+    public java.util.List<com.commercetools.api.models.error.ExtensionError> getExtensionErrors() {
+        return this.extensionErrors;
     }
 
     public ExtensionUpdateActionsFailedError build() {
         Objects.requireNonNull(message, ExtensionUpdateActionsFailedError.class + ": message is missing");
         Objects.requireNonNull(values, ExtensionUpdateActionsFailedError.class + ": values are missing");
-        Objects.requireNonNull(errorByExtension,
-            ExtensionUpdateActionsFailedError.class + ": errorByExtension is missing");
+        Objects.requireNonNull(extensionErrors,
+            ExtensionUpdateActionsFailedError.class + ": extensionErrors is missing");
         return new ExtensionUpdateActionsFailedErrorImpl(message, values, localizedMessage, extensionExtraInfo,
-            errorByExtension);
+            extensionErrors);
     }
 
     /**
@@ -153,7 +190,7 @@ public class ExtensionUpdateActionsFailedErrorBuilder implements Builder<Extensi
      */
     public ExtensionUpdateActionsFailedError buildUnchecked() {
         return new ExtensionUpdateActionsFailedErrorImpl(message, values, localizedMessage, extensionExtraInfo,
-            errorByExtension);
+            extensionErrors);
     }
 
     public static ExtensionUpdateActionsFailedErrorBuilder of() {
@@ -166,7 +203,7 @@ public class ExtensionUpdateActionsFailedErrorBuilder implements Builder<Extensi
         builder.values = template.values();
         builder.localizedMessage = template.getLocalizedMessage();
         builder.extensionExtraInfo = template.getExtensionExtraInfo();
-        builder.errorByExtension = template.getErrorByExtension();
+        builder.extensionErrors = template.getExtensionErrors();
         return builder;
     }
 

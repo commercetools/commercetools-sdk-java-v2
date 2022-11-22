@@ -15,7 +15,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * ShoppingListLineItem
+ *  <p>ShoppingListLineItems are Line Items that contain references to ProductVariants in a Product.</p>
+ *  <p>In addition to standard Reference Expansion, a ShoppingListLineItem offers expansion on <code>productSlug</code> and <code>variant</code>, defined with the query parameter <code>expand</code>.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ShoppingListLineItemImpl implements ShoppingListLineItem, ModelBase {
@@ -32,15 +33,15 @@ public class ShoppingListLineItemImpl implements ShoppingListLineItem, ModelBase
 
     private String productId;
 
-    private com.commercetools.api.models.common.LocalizedString productSlug;
-
     private com.commercetools.api.models.product_type.ProductTypeReference productType;
 
-    private Integer quantity;
+    private Long quantity;
+
+    private Long variantId;
 
     private com.commercetools.api.models.product.ProductVariant variant;
 
-    private Long variantId;
+    private com.commercetools.api.models.common.LocalizedString productSlug;
 
     @JsonCreator
     ShoppingListLineItemImpl(@JsonProperty("addedAt") final java.time.ZonedDateTime addedAt,
@@ -49,29 +50,28 @@ public class ShoppingListLineItemImpl implements ShoppingListLineItem, ModelBase
             @JsonProperty("id") final String id,
             @JsonProperty("name") final com.commercetools.api.models.common.LocalizedString name,
             @JsonProperty("productId") final String productId,
-            @JsonProperty("productSlug") final com.commercetools.api.models.common.LocalizedString productSlug,
             @JsonProperty("productType") final com.commercetools.api.models.product_type.ProductTypeReference productType,
-            @JsonProperty("quantity") final Integer quantity,
+            @JsonProperty("quantity") final Long quantity, @JsonProperty("variantId") final Long variantId,
             @JsonProperty("variant") final com.commercetools.api.models.product.ProductVariant variant,
-            @JsonProperty("variantId") final Long variantId) {
+            @JsonProperty("productSlug") final com.commercetools.api.models.common.LocalizedString productSlug) {
         this.addedAt = addedAt;
         this.custom = custom;
         this.deactivatedAt = deactivatedAt;
         this.id = id;
         this.name = name;
         this.productId = productId;
-        this.productSlug = productSlug;
         this.productType = productType;
         this.quantity = quantity;
-        this.variant = variant;
         this.variantId = variantId;
+        this.variant = variant;
+        this.productSlug = productSlug;
     }
 
     public ShoppingListLineItemImpl() {
     }
 
     /**
-     *
+     *  <p>Date and time (UTC) the ShoppingListLineItem was added to the ShoppingList.</p>
      */
 
     public java.time.ZonedDateTime getAddedAt() {
@@ -79,7 +79,7 @@ public class ShoppingListLineItemImpl implements ShoppingListLineItem, ModelBase
     }
 
     /**
-     *  <p>Serves as value of the <code>custom</code> field on a resource or data type customized with a Type.</p>
+     *  <p>Custom Fields of the ShoppingListLineItem.</p>
      */
 
     public com.commercetools.api.models.type.CustomFields getCustom() {
@@ -87,7 +87,8 @@ public class ShoppingListLineItemImpl implements ShoppingListLineItem, ModelBase
     }
 
     /**
-     *
+     *  <p>If the Product or Product Variant is deleted, <code>deactivatedAt</code> is the date and time (UTC) of deletion.</p>
+     *  <p>This data is updated in an eventual consistent manner when the Product Variant cannot be ordered anymore.</p>
      */
 
     public java.time.ZonedDateTime getDeactivatedAt() {
@@ -103,7 +104,8 @@ public class ShoppingListLineItemImpl implements ShoppingListLineItem, ModelBase
     }
 
     /**
-     *  <p>JSON object where the keys are of type Locale, and the values are the strings used for the corresponding language.</p>
+     *  <p>Name of the Product.</p>
+     *  <p>This data is updated in an eventual consistent manner when the Product's name changes.</p>
      */
 
     public com.commercetools.api.models.common.LocalizedString getName() {
@@ -111,7 +113,7 @@ public class ShoppingListLineItemImpl implements ShoppingListLineItem, ModelBase
     }
 
     /**
-     *
+     *  <p>Unique identifier of a Product.</p>
      */
 
     public String getProductId() {
@@ -119,15 +121,7 @@ public class ShoppingListLineItemImpl implements ShoppingListLineItem, ModelBase
     }
 
     /**
-     *  <p>JSON object where the keys are of type Locale, and the values are the strings used for the corresponding language.</p>
-     */
-
-    public com.commercetools.api.models.common.LocalizedString getProductSlug() {
-        return this.productSlug;
-    }
-
-    /**
-     *  <p>Reference to a ProductType.</p>
+     *  <p>The Product Type defining the Attributes of the Product.</p>
      */
 
     public com.commercetools.api.models.product_type.ProductTypeReference getProductType() {
@@ -135,15 +129,24 @@ public class ShoppingListLineItemImpl implements ShoppingListLineItem, ModelBase
     }
 
     /**
-     *
+     *  <p>Number of Products in the ShoppingListLineItem.</p>
      */
 
-    public Integer getQuantity() {
+    public Long getQuantity() {
         return this.quantity;
     }
 
     /**
-     *  <p>A concrete sellable good for which inventory can be tracked. Product Variants are generally mapped to specific SKUs.</p>
+     *  <p><code>id</code> of the ProductVariant the ShoppingListLineItem refers to. If not set, the ShoppingListLineItem refers to the Master Variant.</p>
+     */
+
+    public Long getVariantId() {
+        return this.variantId;
+    }
+
+    /**
+     *  <p>Data of the ProductVariant. Returned when expanded using <code>expand=lineItems[*].variant</code>.</p>
+     *  <p><em>Limitation: <code>expand=lineItems[0].variant</code> is not supported.</em></p>
      */
 
     public com.commercetools.api.models.product.ProductVariant getVariant() {
@@ -151,11 +154,12 @@ public class ShoppingListLineItemImpl implements ShoppingListLineItem, ModelBase
     }
 
     /**
-     *
+     *  <p>Slug of the current ProductData. Only returned when expanded using <code>expand=lineItems[*].productSlug</code>.</p>
+     *  <p><em>Limitation: <code>expand=lineItems[0].productSlug</code> is not supported.</em></p>
      */
 
-    public Long getVariantId() {
-        return this.variantId;
+    public com.commercetools.api.models.common.LocalizedString getProductSlug() {
+        return this.productSlug;
     }
 
     public void setAddedAt(final java.time.ZonedDateTime addedAt) {
@@ -182,24 +186,24 @@ public class ShoppingListLineItemImpl implements ShoppingListLineItem, ModelBase
         this.productId = productId;
     }
 
-    public void setProductSlug(final com.commercetools.api.models.common.LocalizedString productSlug) {
-        this.productSlug = productSlug;
-    }
-
     public void setProductType(final com.commercetools.api.models.product_type.ProductTypeReference productType) {
         this.productType = productType;
     }
 
-    public void setQuantity(final Integer quantity) {
+    public void setQuantity(final Long quantity) {
         this.quantity = quantity;
+    }
+
+    public void setVariantId(final Long variantId) {
+        this.variantId = variantId;
     }
 
     public void setVariant(final com.commercetools.api.models.product.ProductVariant variant) {
         this.variant = variant;
     }
 
-    public void setVariantId(final Long variantId) {
-        this.variantId = variantId;
+    public void setProductSlug(final com.commercetools.api.models.common.LocalizedString productSlug) {
+        this.productSlug = productSlug;
     }
 
     @Override
@@ -218,11 +222,11 @@ public class ShoppingListLineItemImpl implements ShoppingListLineItem, ModelBase
                 .append(id, that.id)
                 .append(name, that.name)
                 .append(productId, that.productId)
-                .append(productSlug, that.productSlug)
                 .append(productType, that.productType)
                 .append(quantity, that.quantity)
-                .append(variant, that.variant)
                 .append(variantId, that.variantId)
+                .append(variant, that.variant)
+                .append(productSlug, that.productSlug)
                 .isEquals();
     }
 
@@ -234,11 +238,11 @@ public class ShoppingListLineItemImpl implements ShoppingListLineItem, ModelBase
                 .append(id)
                 .append(name)
                 .append(productId)
-                .append(productSlug)
                 .append(productType)
                 .append(quantity)
-                .append(variant)
                 .append(variantId)
+                .append(variant)
+                .append(productSlug)
                 .toHashCode();
     }
 

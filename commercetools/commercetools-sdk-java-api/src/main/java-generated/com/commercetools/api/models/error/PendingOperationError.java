@@ -5,13 +5,16 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.validation.constraints.NotNull;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * PendingOperationError
+ *  <p>Returned when a previous conflicting operation is still pending and needs to finish before the request can succeed.</p>
+ *  <p>The client application should retry the request with exponential backoff up to a point where further delay is unacceptable. If the error persists, report it using the Support Portal.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -28,6 +31,22 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface PendingOperationError extends ErrorObject {
 
     String PENDING_OPERATION = "PendingOperation";
+
+    /**
+     *
+     */
+    @NotNull
+    @JsonProperty("code")
+    public String getCode();
+
+    /**
+     *  <p>Plain text description of the error.</p>
+     */
+    @NotNull
+    @JsonProperty("message")
+    public String getMessage();
+
+    public void setMessage(final String message);
 
     public static PendingOperationError of() {
         return new PendingOperationErrorImpl();

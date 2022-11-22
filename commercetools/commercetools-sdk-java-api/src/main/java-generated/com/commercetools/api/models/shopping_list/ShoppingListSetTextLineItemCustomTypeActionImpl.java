@@ -52,7 +52,7 @@ public class ShoppingListSetTextLineItemCustomTypeActionImpl
     }
 
     /**
-     *
+     *  <p>The <code>id</code> of the TextLineItem to update.</p>
      */
 
     public String getTextLineItemId() {

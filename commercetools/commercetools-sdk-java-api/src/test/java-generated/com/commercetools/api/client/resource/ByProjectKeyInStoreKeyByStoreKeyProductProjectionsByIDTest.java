@@ -63,16 +63,26 @@ public class ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDTest {
 
     @DataProvider
     public static Object[][] requestWithMethodParameters() {
-        return new Object[][] { new Object[] {
-                apiRoot.withProjectKey("test_projectKey")
-                        .inStoreKeyWithStoreKeyValue("test_storeKey")
-                        .productProjections()
-                        .withId("test_ID")
-                        .get()
-                        .withPriceCurrency("priceCurrency")
-                        .createHttpRequest(),
-                "get",
-                "/test_projectKey/in-store/key=test_storeKey/product-projections/test_ID?priceCurrency=priceCurrency", },
+        return new Object[][] {
+                new Object[] {
+                        apiRoot.withProjectKey("test_projectKey")
+                                .inStoreKeyWithStoreKeyValue("test_storeKey")
+                                .productProjections()
+                                .withId("test_ID")
+                                .get()
+                                .withStaged(true)
+                                .createHttpRequest(),
+                        "get", "/test_projectKey/in-store/key=test_storeKey/product-projections/test_ID?staged=true", },
+                new Object[] {
+                        apiRoot.withProjectKey("test_projectKey")
+                                .inStoreKeyWithStoreKeyValue("test_storeKey")
+                                .productProjections()
+                                .withId("test_ID")
+                                .get()
+                                .withPriceCurrency("priceCurrency")
+                                .createHttpRequest(),
+                        "get",
+                        "/test_projectKey/in-store/key=test_storeKey/product-projections/test_ID?priceCurrency=priceCurrency", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .inStoreKeyWithStoreKeyValue("test_storeKey")
@@ -136,6 +146,12 @@ public class ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDTest {
     @DataProvider
     public static Object[][] executeMethodParameters() {
         return new Object[][] {
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .inStoreKeyWithStoreKeyValue("test_storeKey")
+                        .productProjections()
+                        .withId("test_ID")
+                        .get()
+                        .withStaged(true), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .inStoreKeyWithStoreKeyValue("test_storeKey")
                         .productProjections()

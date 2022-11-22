@@ -15,7 +15,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * ShippingMethodDoesNotMatchCartError
+ *  <p>Returned when the Cart contains a ShippingMethod that is not allowed for the Cart. In this case, the ShippingMethodState value is <code>DoesNotMatchCart</code>.</p>
+ *  <p>The error is returned as a failed response to the Create Order from Cart or Create Order from Cart in a Store requests.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ShippingMethodDoesNotMatchCartErrorImpl implements ShippingMethodDoesNotMatchCartError, ModelBase {
@@ -47,7 +48,7 @@ public class ShippingMethodDoesNotMatchCartErrorImpl implements ShippingMethodDo
     }
 
     /**
-     *
+     *  <p><code>"The predicate does not match the cart."</code></p>
      */
 
     public String getMessage() {
@@ -55,7 +56,7 @@ public class ShippingMethodDoesNotMatchCartErrorImpl implements ShippingMethodDo
     }
 
     /**
-     *
+     *  <p>Error-specific additional fields.</p>
      */
 
     public Map<String, java.lang.Object> values() {

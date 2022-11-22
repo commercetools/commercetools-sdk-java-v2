@@ -33,7 +33,7 @@ public interface ProductDiscountUpdate extends
         com.commercetools.api.models.ResourceUpdate<ProductDiscountUpdate, ProductDiscountUpdateAction, ProductDiscountUpdateBuilder> {
 
     /**
-     *  <p>Expected version of the ProductDiscount on which the changes should be applied. If the expected version does not match the actual version, a 409 Conflict will be returned.</p>
+     *  <p>Expected version of the ProductDiscount on which the changes should be applied. If the expected version does not match the actual version, a ConcurrentModification error is returned.</p>
      */
     @NotNull
     @JsonProperty("version")

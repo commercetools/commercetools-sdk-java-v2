@@ -37,6 +37,7 @@ public class ByProjectKeyProductProjectionsSuggestGet extends
         ApiMethod<ByProjectKeyProductProjectionsSuggestGet, com.commercetools.api.models.product.SuggestionResult>
         implements com.commercetools.api.client.SortableTrait<ByProjectKeyProductProjectionsSuggestGet>,
         com.commercetools.api.client.PagingTrait<ByProjectKeyProductProjectionsSuggestGet>,
+        com.commercetools.api.client.ProjectionselectingTrait<ByProjectKeyProductProjectionsSuggestGet>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyProductProjectionsSuggestGet>,
         com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyProductProjectionsSuggestGet> {
 
@@ -82,10 +83,6 @@ public class ByProjectKeyProductProjectionsSuggestGet extends
         return this.getQueryParam("fuzzy");
     }
 
-    public List<String> getStaged() {
-        return this.getQueryParam("staged");
-    }
-
     public List<String> getSort() {
         return this.getQueryParam("sort");
     }
@@ -100,6 +97,10 @@ public class ByProjectKeyProductProjectionsSuggestGet extends
 
     public List<String> getWithTotal() {
         return this.getQueryParam("withTotal");
+    }
+
+    public List<String> getStaged() {
+        return this.getQueryParam("staged");
     }
 
     public void setProjectKey(final String projectKey) {
@@ -163,65 +164,6 @@ public class ByProjectKeyProductProjectionsSuggestGet extends
     public <TValue> ByProjectKeyProductProjectionsSuggestGet addFuzzy(final Collection<TValue> fuzzy) {
         return copy().addQueryParams(
             fuzzy.stream().map(s -> new ParamEntry<>("fuzzy", s.toString())).collect(Collectors.toList()));
-    }
-
-    /**
-     * set staged with the specified value
-     */
-    public <TValue> ByProjectKeyProductProjectionsSuggestGet withStaged(final TValue staged) {
-        return copy().withQueryParam("staged", staged);
-    }
-
-    /**
-     * add additional staged query parameter
-     */
-    public <TValue> ByProjectKeyProductProjectionsSuggestGet addStaged(final TValue staged) {
-        return copy().addQueryParam("staged", staged);
-    }
-
-    /**
-     * set staged with the specified value
-     */
-    public ByProjectKeyProductProjectionsSuggestGet withStaged(final Supplier<Boolean> supplier) {
-        return copy().withQueryParam("staged", supplier.get());
-    }
-
-    /**
-     * add additional staged query parameter
-     */
-    public ByProjectKeyProductProjectionsSuggestGet addStaged(final Supplier<Boolean> supplier) {
-        return copy().addQueryParam("staged", supplier.get());
-    }
-
-    /**
-     * set staged with the specified value
-     */
-    public ByProjectKeyProductProjectionsSuggestGet withStaged(final Function<StringBuilder, StringBuilder> op) {
-        return copy().withQueryParam("staged", op.apply(new StringBuilder()));
-    }
-
-    /**
-     * add additional staged query parameter
-     */
-    public ByProjectKeyProductProjectionsSuggestGet addStaged(final Function<StringBuilder, StringBuilder> op) {
-        return copy().addQueryParam("staged", op.apply(new StringBuilder()));
-    }
-
-    /**
-     * set staged with the specified values
-     */
-    public <TValue> ByProjectKeyProductProjectionsSuggestGet withStaged(final Collection<TValue> staged) {
-        return copy().withoutQueryParam("staged")
-                .addQueryParams(
-                    staged.stream().map(s -> new ParamEntry<>("staged", s.toString())).collect(Collectors.toList()));
-    }
-
-    /**
-     * add additional staged query parameters
-     */
-    public <TValue> ByProjectKeyProductProjectionsSuggestGet addStaged(final Collection<TValue> staged) {
-        return copy().addQueryParams(
-            staged.stream().map(s -> new ParamEntry<>("staged", s.toString())).collect(Collectors.toList()));
     }
 
     /**
@@ -459,6 +401,65 @@ public class ByProjectKeyProductProjectionsSuggestGet extends
     public <TValue> ByProjectKeyProductProjectionsSuggestGet addWithTotal(final Collection<TValue> withTotal) {
         return copy().addQueryParams(
             withTotal.stream().map(s -> new ParamEntry<>("withTotal", s.toString())).collect(Collectors.toList()));
+    }
+
+    /**
+     * set staged with the specified value
+     */
+    public <TValue> ByProjectKeyProductProjectionsSuggestGet withStaged(final TValue staged) {
+        return copy().withQueryParam("staged", staged);
+    }
+
+    /**
+     * add additional staged query parameter
+     */
+    public <TValue> ByProjectKeyProductProjectionsSuggestGet addStaged(final TValue staged) {
+        return copy().addQueryParam("staged", staged);
+    }
+
+    /**
+     * set staged with the specified value
+     */
+    public ByProjectKeyProductProjectionsSuggestGet withStaged(final Supplier<Boolean> supplier) {
+        return copy().withQueryParam("staged", supplier.get());
+    }
+
+    /**
+     * add additional staged query parameter
+     */
+    public ByProjectKeyProductProjectionsSuggestGet addStaged(final Supplier<Boolean> supplier) {
+        return copy().addQueryParam("staged", supplier.get());
+    }
+
+    /**
+     * set staged with the specified value
+     */
+    public ByProjectKeyProductProjectionsSuggestGet withStaged(final Function<StringBuilder, StringBuilder> op) {
+        return copy().withQueryParam("staged", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * add additional staged query parameter
+     */
+    public ByProjectKeyProductProjectionsSuggestGet addStaged(final Function<StringBuilder, StringBuilder> op) {
+        return copy().addQueryParam("staged", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * set staged with the specified values
+     */
+    public <TValue> ByProjectKeyProductProjectionsSuggestGet withStaged(final Collection<TValue> staged) {
+        return copy().withoutQueryParam("staged")
+                .addQueryParams(
+                    staged.stream().map(s -> new ParamEntry<>("staged", s.toString())).collect(Collectors.toList()));
+    }
+
+    /**
+     * add additional staged query parameters
+     */
+    public <TValue> ByProjectKeyProductProjectionsSuggestGet addStaged(final Collection<TValue> staged) {
+        return copy().addQueryParams(
+            staged.stream().map(s -> new ParamEntry<>("staged", s.toString())).collect(Collectors.toList()));
     }
 
     /**

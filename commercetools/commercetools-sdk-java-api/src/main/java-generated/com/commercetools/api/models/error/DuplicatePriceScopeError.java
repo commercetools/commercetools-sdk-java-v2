@@ -15,7 +15,8 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * DuplicatePriceScopeError
+ *  <p>Returned when a Price scope conflicts with an existing one during an Update Product request.</p>
+ *  <p>Every Price of a Product Variant must have a distinct combination of currency, Customer Group, country, and Channel that constitute the scope of a Price.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -38,9 +39,25 @@ public interface DuplicatePriceScopeError extends ErrorObject {
      *
      */
     @NotNull
+    @JsonProperty("code")
+    public String getCode();
+
+    /**
+     *  <p><code>"Duplicate price scope: $priceScope. The combination of currency, country, customerGroup and channel must be unique for each price of a product variant."</code></p>
+     */
+    @NotNull
+    @JsonProperty("message")
+    public String getMessage();
+
+    /**
+     *  <p>Conflicting Embedded Prices.</p>
+     */
+    @NotNull
     @Valid
     @JsonProperty("conflictingPrices")
     public List<Price> getConflictingPrices();
+
+    public void setMessage(final String message);
 
     @JsonIgnore
     public void setConflictingPrices(final Price... conflictingPrices);

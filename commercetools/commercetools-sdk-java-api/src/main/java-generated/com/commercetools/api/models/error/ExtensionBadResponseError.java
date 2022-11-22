@@ -15,7 +15,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * ExtensionBadResponseError
+ *  <p>Returned when the response from the API Extension could not be parsed successfully (such as a <code>500</code> HTTP status code, or an invalid JSON response).</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -23,7 +23,8 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     ExtensionBadResponseError extensionBadResponseError = ExtensionBadResponseError.builder()
  *             .message("{message}")
- *             .errorByExtension(errorByExtensionBuilder -> errorByExtensionBuilder)
+ *             .plusExtensionErrors(extensionErrorsBuilder -> extensionErrorsBuilder)
+ *             .extensionId("{extensionId}")
  *             .build()
  * </code></pre>
  * </div>
@@ -35,32 +36,87 @@ public interface ExtensionBadResponseError extends ErrorObject {
     String EXTENSION_BAD_RESPONSE = "ExtensionBadResponse";
 
     /**
-     *  <p>JSON object where the keys are of type Locale, and the values are the strings used for the corresponding language.</p>
+     *
+     */
+    @NotNull
+    @JsonProperty("code")
+    public String getCode();
+
+    /**
+     *  <p>Description of the invalid Extension response. For example, <code>"The extension did not return the expected JSON."</code>.</p>
+     */
+    @NotNull
+    @JsonProperty("message")
+    public String getMessage();
+
+    /**
+     *  <p>User-defined localized description of the error.</p>
      */
     @Valid
     @JsonProperty("localizedMessage")
     public LocalizedString getLocalizedMessage();
 
     /**
-     *
+     *  <p>Any information that should be returned to the API caller.</p>
      */
     @Valid
     @JsonProperty("extensionExtraInfo")
     public Object getExtensionExtraInfo();
 
     /**
-     *
+     *  <p>Additional errors related to the API Extension.</p>
      */
     @NotNull
     @Valid
-    @JsonProperty("errorByExtension")
-    public ErrorByExtension getErrorByExtension();
+    @JsonProperty("extensionErrors")
+    public List<ExtensionError> getExtensionErrors();
+
+    /**
+     *  <p>The response body returned by the Extension.</p>
+     */
+
+    @JsonProperty("extensionBody")
+    public String getExtensionBody();
+
+    /**
+     *  <p>Http status code returned by the Extension.</p>
+     */
+
+    @JsonProperty("extensionStatusCode")
+    public Integer getExtensionStatusCode();
+
+    /**
+     *  <p>Unique identifier of the Extension.</p>
+     */
+    @NotNull
+    @JsonProperty("extensionId")
+    public String getExtensionId();
+
+    /**
+     *  <p>User-defined unique identifier of the Extension.</p>
+     */
+
+    @JsonProperty("extensionKey")
+    public String getExtensionKey();
+
+    public void setMessage(final String message);
 
     public void setLocalizedMessage(final LocalizedString localizedMessage);
 
     public void setExtensionExtraInfo(final Object extensionExtraInfo);
 
-    public void setErrorByExtension(final ErrorByExtension errorByExtension);
+    @JsonIgnore
+    public void setExtensionErrors(final ExtensionError... extensionErrors);
+
+    public void setExtensionErrors(final List<ExtensionError> extensionErrors);
+
+    public void setExtensionBody(final String extensionBody);
+
+    public void setExtensionStatusCode(final Integer extensionStatusCode);
+
+    public void setExtensionId(final String extensionId);
+
+    public void setExtensionKey(final String extensionKey);
 
     public static ExtensionBadResponseError of() {
         return new ExtensionBadResponseErrorImpl();
@@ -72,7 +128,11 @@ public interface ExtensionBadResponseError extends ErrorObject {
 
         instance.setLocalizedMessage(template.getLocalizedMessage());
         instance.setExtensionExtraInfo(template.getExtensionExtraInfo());
-        instance.setErrorByExtension(template.getErrorByExtension());
+        instance.setExtensionErrors(template.getExtensionErrors());
+        instance.setExtensionBody(template.getExtensionBody());
+        instance.setExtensionStatusCode(template.getExtensionStatusCode());
+        instance.setExtensionId(template.getExtensionId());
+        instance.setExtensionKey(template.getExtensionKey());
         return instance;
     }
 

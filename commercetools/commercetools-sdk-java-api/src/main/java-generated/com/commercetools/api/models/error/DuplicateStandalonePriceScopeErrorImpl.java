@@ -15,7 +15,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * DuplicateStandalonePriceScopeError
+ *  <p>Returned when the given Price scope conflicts with the Price scope of an existing Standalone Price. Every Standalone Price associated with the same SKU must have a distinct combination of currency, country, Customer Group, Channel, and validity periods (<code>validFrom</code> and <code>validUntil</code>).</p>
+ *  <p>The error is returned as a failed response to the Create StandalonePrice request.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class DuplicateStandalonePriceScopeErrorImpl implements DuplicateStandalonePriceScopeError, ModelBase {
@@ -78,7 +79,7 @@ public class DuplicateStandalonePriceScopeErrorImpl implements DuplicateStandalo
     }
 
     /**
-     *
+     *  <p><code>"Duplicate standalone price scope for SKU: $sku. The combination of SKU, currency, country, customerGroup, channel, validFrom and validUntil must be unique for each standalone price."</code></p>
      */
 
     public String getMessage() {
@@ -86,7 +87,7 @@ public class DuplicateStandalonePriceScopeErrorImpl implements DuplicateStandalo
     }
 
     /**
-     *
+     *  <p>Error-specific additional fields.</p>
      */
 
     public Map<String, java.lang.Object> values() {
@@ -94,7 +95,7 @@ public class DuplicateStandalonePriceScopeErrorImpl implements DuplicateStandalo
     }
 
     /**
-     *  <p>Reference to a StandalonePrice.</p>
+     *  <p>Reference to the conflicting Standalone Price.</p>
      */
 
     public com.commercetools.api.models.standalone_price.StandalonePriceReference getConflictingStandalonePrice() {
@@ -102,7 +103,7 @@ public class DuplicateStandalonePriceScopeErrorImpl implements DuplicateStandalo
     }
 
     /**
-     *
+     *  <p>SKU of the ProductVariant to which the conflicting Standalone Price is associated.</p>
      */
 
     public String getSku() {
@@ -110,7 +111,7 @@ public class DuplicateStandalonePriceScopeErrorImpl implements DuplicateStandalo
     }
 
     /**
-     *
+     *  <p>Currency code of the country.</p>
      */
 
     public String getCurrency() {
@@ -118,7 +119,7 @@ public class DuplicateStandalonePriceScopeErrorImpl implements DuplicateStandalo
     }
 
     /**
-     *
+     *  <p>Country code of the geographic location.</p>
      */
 
     public String getCountry() {
@@ -126,7 +127,7 @@ public class DuplicateStandalonePriceScopeErrorImpl implements DuplicateStandalo
     }
 
     /**
-     *  <p>ResourceIdentifier to a CustomerGroup.</p>
+     *  <p>CustomerGroup for which the Standalone Price is valid.</p>
      */
 
     public com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier getCustomerGroup() {
@@ -134,7 +135,7 @@ public class DuplicateStandalonePriceScopeErrorImpl implements DuplicateStandalo
     }
 
     /**
-     *  <p>ResourceIdentifier to a Channel.</p>
+     *  <p>Channel for which the Standalone Price is valid.</p>
      */
 
     public com.commercetools.api.models.channel.ChannelResourceIdentifier getChannel() {
@@ -142,7 +143,7 @@ public class DuplicateStandalonePriceScopeErrorImpl implements DuplicateStandalo
     }
 
     /**
-     *
+     *  <p>Date and time (UTC) from which the Standalone Price is valid.</p>
      */
 
     public java.time.ZonedDateTime getValidFrom() {
@@ -150,7 +151,7 @@ public class DuplicateStandalonePriceScopeErrorImpl implements DuplicateStandalo
     }
 
     /**
-     *
+     *  <p>Date and time (UTC) until which the Standalone Price is valid.</p>
      */
 
     public java.time.ZonedDateTime getValidUntil() {

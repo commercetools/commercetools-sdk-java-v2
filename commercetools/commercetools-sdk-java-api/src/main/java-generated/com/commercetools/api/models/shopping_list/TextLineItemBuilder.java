@@ -39,10 +39,10 @@ public class TextLineItemBuilder implements Builder<TextLineItem> {
 
     private com.commercetools.api.models.common.LocalizedString name;
 
-    private Integer quantity;
+    private Long quantity;
 
     /**
-     *  <p>When the text line item was added to the shopping list.</p>
+     *  <p>Date and time (UTC) the TextLineItem was added to the ShoppingList.</p>
      */
 
     public TextLineItemBuilder addedAt(final java.time.ZonedDateTime addedAt) {
@@ -51,7 +51,7 @@ public class TextLineItemBuilder implements Builder<TextLineItem> {
     }
 
     /**
-     *
+     *  <p>Custom Fields of the TextLineItem.</p>
      */
 
     public TextLineItemBuilder custom(
@@ -61,7 +61,7 @@ public class TextLineItemBuilder implements Builder<TextLineItem> {
     }
 
     /**
-     *
+     *  <p>Custom Fields of the TextLineItem.</p>
      */
 
     public TextLineItemBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFields custom) {
@@ -70,7 +70,7 @@ public class TextLineItemBuilder implements Builder<TextLineItem> {
     }
 
     /**
-     *
+     *  <p>Description of the TextLineItem.</p>
      */
 
     public TextLineItemBuilder description(
@@ -80,7 +80,7 @@ public class TextLineItemBuilder implements Builder<TextLineItem> {
     }
 
     /**
-     *
+     *  <p>Description of the TextLineItem.</p>
      */
 
     public TextLineItemBuilder description(
@@ -99,7 +99,7 @@ public class TextLineItemBuilder implements Builder<TextLineItem> {
     }
 
     /**
-     *
+     *  <p>Name of the TextLineItem.</p>
      */
 
     public TextLineItemBuilder name(
@@ -109,7 +109,7 @@ public class TextLineItemBuilder implements Builder<TextLineItem> {
     }
 
     /**
-     *
+     *  <p>Name of the TextLineItem.</p>
      */
 
     public TextLineItemBuilder name(final com.commercetools.api.models.common.LocalizedString name) {
@@ -118,10 +118,10 @@ public class TextLineItemBuilder implements Builder<TextLineItem> {
     }
 
     /**
-     *
+     *  <p>Number of entries in the TextLineItem.</p>
      */
 
-    public TextLineItemBuilder quantity(final Integer quantity) {
+    public TextLineItemBuilder quantity(final Long quantity) {
         this.quantity = quantity;
         return this;
     }
@@ -148,7 +148,7 @@ public class TextLineItemBuilder implements Builder<TextLineItem> {
         return this.name;
     }
 
-    public Integer getQuantity() {
+    public Long getQuantity() {
         return this.quantity;
     }
 

@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * ShoppingListAddLineItemAction
+ *  <p>The ProductVariant to be included in the ShoppingListLineItem must be specified using the <code>productID</code> and <code>variantID</code>, or by the <code>sku</code>. If the ShoppingList already contains a ShoppingListLineItem for the same Product Variant with the same Custom Fields, then only the quantity of the existing ShoppingListLineItem is increased. A ShoppingListLineItem with an empty <code>variantId</code> is not considered the same as a ShoppingListLineItem with a <code>variantId</code> currently referring to the Master Variant.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ShoppingListAddLineItemActionImpl implements ShoppingListAddLineItemAction, ModelBase {
@@ -62,7 +62,7 @@ public class ShoppingListAddLineItemActionImpl implements ShoppingListAddLineIte
     }
 
     /**
-     *
+     *  <p><code>sku</code> of the ProductVariant.</p>
      */
 
     public String getSku() {
@@ -70,7 +70,7 @@ public class ShoppingListAddLineItemActionImpl implements ShoppingListAddLineIte
     }
 
     /**
-     *
+     *  <p>Unique identifier of a Product.</p>
      */
 
     public String getProductId() {
@@ -78,7 +78,7 @@ public class ShoppingListAddLineItemActionImpl implements ShoppingListAddLineIte
     }
 
     /**
-     *
+     *  <p><code>id</code> of the ProductVariant. If not set, the ShoppingListLineItem refers to the Master Variant.</p>
      */
 
     public Long getVariantId() {
@@ -86,7 +86,7 @@ public class ShoppingListAddLineItemActionImpl implements ShoppingListAddLineIte
     }
 
     /**
-     *
+     *  <p>Number of Products in the ShoppingListLineItem.</p>
      */
 
     public Long getQuantity() {
@@ -94,7 +94,7 @@ public class ShoppingListAddLineItemActionImpl implements ShoppingListAddLineIte
     }
 
     /**
-     *
+     *  <p>Date and time the TextLineItem is added to the ShoppingList. If not set, the current date and time (UTC) is used.</p>
      */
 
     public java.time.ZonedDateTime getAddedAt() {
@@ -102,7 +102,7 @@ public class ShoppingListAddLineItemActionImpl implements ShoppingListAddLineIte
     }
 
     /**
-     *  <p>The representation used when creating or updating a customizable data type with Custom Fields.</p>
+     *  <p>Custom Fields defined for the ShoppingListLineItem.</p>
      */
 
     public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {

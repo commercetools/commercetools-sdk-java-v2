@@ -14,6 +14,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 /**
  *  <p>Renames an AttributeDefinition and also renames all corresponding Attributes on all Products with this ProductType. The renaming of the Attributes is eventually consistent.</p>
+ *  <p>If the AttributeDefinition name to be changed does not exist, a AttributeNameDoesNotExist error is returned.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -40,7 +41,8 @@ public interface ProductTypeChangeAttributeNameAction extends ProductTypeUpdateA
     public String getAttributeName();
 
     /**
-     *  <p>New user-defined name of the Attribute that is unique with the Project. When using the same <code>name</code> for an Attribute in two or more ProductTypes all fields of the AttributeDefinition of this Attribute need to be the same across the ProductTypes, otherwise an AttributeDefinitionAlreadyExistsError will be returned. An exception to this are the values of an <code>enum</code> or <code>lenum</code> type and sets thereof.</p>
+     *  <p>New user-defined name of the Attribute that is unique with the Project.</p>
+     *  <p>When using the same <code>name</code> for an Attribute in two or more ProductTypes, all fields of the AttributeDefinition of this Attribute must be the same across the ProductTypes. If not, an AttributeDefinitionAlreadyExists error is returned. An exception to this are the values of an <code>enum</code> or <code>lenum</code> type and sets thereof.</p>
      */
     @NotNull
     @JsonProperty("newAttributeName")

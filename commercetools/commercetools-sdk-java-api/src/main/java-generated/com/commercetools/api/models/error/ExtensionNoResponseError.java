@@ -13,7 +13,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * ExtensionNoResponseError
+ *  <p>Returned when the API Extension does not respond within the time limit, or could not be reached.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -36,15 +36,31 @@ public interface ExtensionNoResponseError extends ErrorObject {
      *
      */
     @NotNull
+    @JsonProperty("code")
+    public String getCode();
+
+    /**
+     *  <p><code>"Extension did not respond in time."</code></p>
+     */
+    @NotNull
+    @JsonProperty("message")
+    public String getMessage();
+
+    /**
+     *  <p>Unique identifier of the API Extension.</p>
+     */
+    @NotNull
     @JsonProperty("extensionId")
     public String getExtensionId();
 
     /**
-     *
+     *  <p>User-defined unique identifier of the API Extension, if available.</p>
      */
 
     @JsonProperty("extensionKey")
     public String getExtensionKey();
+
+    public void setMessage(final String message);
 
     public void setExtensionId(final String extensionId);
 

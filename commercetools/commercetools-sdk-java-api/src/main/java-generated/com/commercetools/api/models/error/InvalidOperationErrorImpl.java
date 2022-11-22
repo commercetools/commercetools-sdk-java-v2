@@ -15,7 +15,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * InvalidOperationError
+ *  <p>Returned when the resources involved in the request are not in a valid state for the operation.</p>
+ *  <p>The client application should validate the constraints described in the error message before sending the request.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class InvalidOperationErrorImpl implements InvalidOperationError, ModelBase {
@@ -47,7 +48,7 @@ public class InvalidOperationErrorImpl implements InvalidOperationError, ModelBa
     }
 
     /**
-     *
+     *  <p>Plain text description of the error.</p>
      */
 
     public String getMessage() {
@@ -55,7 +56,7 @@ public class InvalidOperationErrorImpl implements InvalidOperationError, ModelBa
     }
 
     /**
-     *
+     *  <p>Error-specific additional fields.</p>
      */
 
     public Map<String, java.lang.Object> values() {

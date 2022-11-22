@@ -33,7 +33,7 @@ public class ShoppingListSetLineItemCustomFieldActionBuilder
     private java.lang.Object value;
 
     /**
-     *
+     *  <p>The <code>id</code> of the ShoppingListLineItem to update.</p>
      */
 
     public ShoppingListSetLineItemCustomFieldActionBuilder lineItemId(final String lineItemId) {
@@ -51,7 +51,7 @@ public class ShoppingListSetLineItemCustomFieldActionBuilder
     }
 
     /**
-     *  <p>If <code>value</code> is absent or <code>null</code>, this field will be removed if it exists. Trying to remove a field that does not exist will fail with an InvalidOperation error. If <code>value</code> is provided, it is set for the field defined by <code>name</code>.</p>
+     *  <p>If <code>value</code> is absent or <code>null</code>, this field will be removed if it exists. Removing a field that does not exist returns an InvalidOperation error. If <code>value</code> is provided, it is set for the field defined by <code>name</code>.</p>
      */
 
     public ShoppingListSetLineItemCustomFieldActionBuilder value(@Nullable final java.lang.Object value) {

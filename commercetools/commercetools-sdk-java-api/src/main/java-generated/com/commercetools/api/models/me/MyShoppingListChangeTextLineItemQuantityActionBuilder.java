@@ -28,7 +28,7 @@ public class MyShoppingListChangeTextLineItemQuantityActionBuilder
     private Long quantity;
 
     /**
-     *
+     *  <p>The <code>id</code> of the TextLineItem to update.</p>
      */
 
     public MyShoppingListChangeTextLineItemQuantityActionBuilder textLineItemId(final String textLineItemId) {
@@ -37,7 +37,7 @@ public class MyShoppingListChangeTextLineItemQuantityActionBuilder
     }
 
     /**
-     *
+     *  <p>New value to set. If <code>0</code>, the TextLineItem is removed from the ShoppingList.</p>
      */
 
     public MyShoppingListChangeTextLineItemQuantityActionBuilder quantity(final Long quantity) {

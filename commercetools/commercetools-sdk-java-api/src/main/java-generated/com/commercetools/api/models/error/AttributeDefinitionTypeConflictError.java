@@ -13,7 +13,8 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * AttributeDefinitionTypeConflictError
+ *  <p>Returned when the <code>type</code> is different for an AttributeDefinition using the same <code>name</code> in multiple Product Types.</p>
+ *  <p>The error is returned as a failed response to the Create ProductType request.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -38,22 +39,38 @@ public interface AttributeDefinitionTypeConflictError extends ErrorObject {
      *
      */
     @NotNull
+    @JsonProperty("code")
+    public String getCode();
+
+    /**
+     *  <p><code>"The attribute with name $attributeName has a different type on product type $productTypeName."</code></p>
+     */
+    @NotNull
+    @JsonProperty("message")
+    public String getMessage();
+
+    /**
+     *  <p>Unique identifier of the Product Type containing the conflicting name.</p>
+     */
+    @NotNull
     @JsonProperty("conflictingProductTypeId")
     public String getConflictingProductTypeId();
 
     /**
-     *
+     *  <p>Name of the Product Type containing the conflicting name.</p>
      */
     @NotNull
     @JsonProperty("conflictingProductTypeName")
     public String getConflictingProductTypeName();
 
     /**
-     *
+     *  <p>Name of the conflicting Attribute.</p>
      */
     @NotNull
     @JsonProperty("conflictingAttributeName")
     public String getConflictingAttributeName();
+
+    public void setMessage(final String message);
 
     public void setConflictingProductTypeId(final String conflictingProductTypeId);
 

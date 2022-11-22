@@ -14,7 +14,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * ReferencedResourceNotFoundError
+ *  <p>Returned when a resource referenced by a Reference or a ResourceIdentifier could not be found.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -34,25 +34,41 @@ public interface ReferencedResourceNotFoundError extends ErrorObject {
     String REFERENCED_RESOURCE_NOT_FOUND = "ReferencedResourceNotFound";
 
     /**
-     *  <p>Type of resource the value should reference. Supported resource type identifiers are:</p>
+     *
+     */
+    @NotNull
+    @JsonProperty("code")
+    public String getCode();
+
+    /**
+     *  <p><code>"The referenced object of type $typeId $predicate was not found. It either doesn't exist, or it can't be accessed from this endpoint (e.g., if the endpoint filters by store or customer account)."</code></p>
+     */
+    @NotNull
+    @JsonProperty("message")
+    public String getMessage();
+
+    /**
+     *  <p>Type of referenced resource.</p>
      */
     @NotNull
     @JsonProperty("typeId")
     public ReferenceTypeId getTypeId();
 
     /**
-     *
+     *  <p>Unique identifier of the referenced resource, if known.</p>
      */
 
     @JsonProperty("id")
     public String getId();
 
     /**
-     *
+     *  <p>User-defined unique identifier of the referenced resource, if known.</p>
      */
 
     @JsonProperty("key")
     public String getKey();
+
+    public void setMessage(final String message);
 
     public void setTypeId(final ReferenceTypeId typeId);
 

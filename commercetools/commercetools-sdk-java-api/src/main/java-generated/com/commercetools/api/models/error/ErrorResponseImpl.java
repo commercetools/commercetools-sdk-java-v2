@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * ErrorResponse
+ *  <p>Base representation of an error response containing common fields to all errors.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ErrorResponseImpl implements ErrorResponse, ModelBase {
@@ -24,21 +24,14 @@ public class ErrorResponseImpl implements ErrorResponse, ModelBase {
 
     private String message;
 
-    private String error;
-
-    private String errorDescription;
-
     private java.util.List<com.commercetools.api.models.error.ErrorObject> errors;
 
     @JsonCreator
     ErrorResponseImpl(@JsonProperty("statusCode") final Integer statusCode,
-            @JsonProperty("message") final String message, @JsonProperty("error") final String error,
-            @JsonProperty("error_description") final String errorDescription,
+            @JsonProperty("message") final String message,
             @JsonProperty("errors") final java.util.List<com.commercetools.api.models.error.ErrorObject> errors) {
         this.statusCode = statusCode;
         this.message = message;
-        this.error = error;
-        this.errorDescription = errorDescription;
         this.errors = errors;
     }
 
@@ -46,7 +39,7 @@ public class ErrorResponseImpl implements ErrorResponse, ModelBase {
     }
 
     /**
-     *
+     *  <p>HTTP status code corresponding to the error.</p>
      */
 
     public Integer getStatusCode() {
@@ -54,7 +47,7 @@ public class ErrorResponseImpl implements ErrorResponse, ModelBase {
     }
 
     /**
-     *
+     *  <p>First error message in the <code>errors</code> array.</p>
      */
 
     public String getMessage() {
@@ -62,23 +55,8 @@ public class ErrorResponseImpl implements ErrorResponse, ModelBase {
     }
 
     /**
-     *
-     */
-
-    public String getError() {
-        return this.error;
-    }
-
-    /**
-     *
-     */
-
-    public String getErrorDescription() {
-        return this.errorDescription;
-    }
-
-    /**
-     *
+     *  <p>Errors returned for a request.</p>
+     *  <p>A single error response can contain multiple errors if the errors are related to the same HTTP status code such as <code>400</code>.</p>
      */
 
     public java.util.List<com.commercetools.api.models.error.ErrorObject> getErrors() {
@@ -91,14 +69,6 @@ public class ErrorResponseImpl implements ErrorResponse, ModelBase {
 
     public void setMessage(final String message) {
         this.message = message;
-    }
-
-    public void setError(final String error) {
-        this.error = error;
-    }
-
-    public void setErrorDescription(final String errorDescription) {
-        this.errorDescription = errorDescription;
     }
 
     public void setErrors(final com.commercetools.api.models.error.ErrorObject... errors) {
@@ -121,20 +91,13 @@ public class ErrorResponseImpl implements ErrorResponse, ModelBase {
 
         return new EqualsBuilder().append(statusCode, that.statusCode)
                 .append(message, that.message)
-                .append(error, that.error)
-                .append(errorDescription, that.errorDescription)
                 .append(errors, that.errors)
                 .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(statusCode)
-                .append(message)
-                .append(error)
-                .append(errorDescription)
-                .append(errors)
-                .toHashCode();
+        return new HashCodeBuilder(17, 37).append(statusCode).append(message).append(errors).toHashCode();
     }
 
 }

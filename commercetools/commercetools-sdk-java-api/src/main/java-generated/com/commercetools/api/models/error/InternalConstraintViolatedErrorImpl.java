@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * InternalConstraintViolatedError
+ *  <p>Returned when certain API-specific constraints were not met. For example, the specified Discount Code was never applied and cannot be updated.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class InternalConstraintViolatedErrorImpl implements InternalConstraintViolatedError, ModelBase {
@@ -47,7 +47,7 @@ public class InternalConstraintViolatedErrorImpl implements InternalConstraintVi
     }
 
     /**
-     *
+     *  <p>Plain text description of the constraints that were violated.</p>
      */
 
     public String getMessage() {
@@ -55,7 +55,7 @@ public class InternalConstraintViolatedErrorImpl implements InternalConstraintVi
     }
 
     /**
-     *
+     *  <p>Error-specific additional fields.</p>
      */
 
     public Map<String, java.lang.Object> values() {

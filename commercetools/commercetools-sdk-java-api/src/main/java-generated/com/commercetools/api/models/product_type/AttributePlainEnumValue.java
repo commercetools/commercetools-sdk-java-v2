@@ -13,7 +13,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>A plain enum value must be unique within the enum, otherwise a DuplicateEnumValues error will be returned.</p>
+ *  <p>A plain enum value must be unique within the enum, else a DuplicateEnumValues error is returned.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

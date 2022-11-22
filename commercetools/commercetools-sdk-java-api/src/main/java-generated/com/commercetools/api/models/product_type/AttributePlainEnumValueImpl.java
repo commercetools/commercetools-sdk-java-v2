@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>A plain enum value must be unique within the enum, otherwise a DuplicateEnumValues error will be returned.</p>
+ *  <p>A plain enum value must be unique within the enum, else a DuplicateEnumValues error is returned.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class AttributePlainEnumValueImpl implements AttributePlainEnumValue, ModelBase {

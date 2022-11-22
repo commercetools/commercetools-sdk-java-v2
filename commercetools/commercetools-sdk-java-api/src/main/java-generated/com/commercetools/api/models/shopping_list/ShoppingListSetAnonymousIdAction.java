@@ -11,7 +11,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * ShoppingListSetAnonymousIdAction
+ *  <p>Sets an anonymous ID that corresponds to a Customer who has authenticated with an anonymous session.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -29,7 +29,7 @@ public interface ShoppingListSetAnonymousIdAction extends ShoppingListUpdateActi
     String SET_ANONYMOUS_ID = "setAnonymousId";
 
     /**
-     *  <p>Anonymous ID of the anonymous customer that this shopping list belongs to. If this field is not set any existing <code>anonymousId</code> is removed.</p>
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
      */
 
     @JsonProperty("anonymousId")

@@ -6,13 +6,20 @@ import java.time.ZonedDateTime;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.validation.constraints.NotNull;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * DiscountCodeNonApplicableError
+ *  <p>Returned when the Cart contains a Discount Code with a DiscountCodeState other than <code>MatchesCart</code>.</p>
+ *  <p>The error is returned as a failed response to:</p>
+ *  <ul>
+ *   <li>Create Order from Cart and Create Order from Cart in a Store requests on Orders.</li>
+ *   <li>Create Order from Cart and Create Order in a Store from a Cart requests on My Orders.</li>
+ *  </ul>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -33,50 +40,66 @@ public interface DiscountCodeNonApplicableError extends ErrorObject {
     /**
      *
      */
+    @NotNull
+    @JsonProperty("code")
+    public String getCode();
+
+    /**
+     *  <p><code>"The discountCode $discountCodeId cannot be applied to the cart."</code></p>
+     */
+    @NotNull
+    @JsonProperty("message")
+    public String getMessage();
+
+    /**
+     *  <p>Discount Code passed to the Cart.</p>
+     */
 
     @JsonProperty("discountCode")
     public String getDiscountCode();
 
     /**
-     *
+     *  <p><code>"DoesNotExist"</code> or <code>"TimeRangeNonApplicable"</code></p>
      */
 
     @JsonProperty("reason")
     public String getReason();
 
     /**
-     *
+     *  <p>Unique identifier of the Discount Code.</p>
      */
 
-    @JsonProperty("dicountCodeId")
-    public String getDicountCodeId();
+    @JsonProperty("discountCodeId")
+    public String getDiscountCodeId();
 
     /**
-     *
+     *  <p>Date and time (UTC) from which the Discount Code is valid.</p>
      */
 
     @JsonProperty("validFrom")
     public ZonedDateTime getValidFrom();
 
     /**
-     *
+     *  <p>Date and time (UTC) until which the Discount Code is valid.</p>
      */
 
     @JsonProperty("validUntil")
     public ZonedDateTime getValidUntil();
 
     /**
-     *
+     *  <p>Date and time (UTC) the Discount Code validity check was last performed.</p>
      */
 
     @JsonProperty("validityCheckTime")
     public ZonedDateTime getValidityCheckTime();
 
+    public void setMessage(final String message);
+
     public void setDiscountCode(final String discountCode);
 
     public void setReason(final String reason);
 
-    public void setDicountCodeId(final String dicountCodeId);
+    public void setDiscountCodeId(final String discountCodeId);
 
     public void setValidFrom(final ZonedDateTime validFrom);
 
@@ -94,7 +117,7 @@ public interface DiscountCodeNonApplicableError extends ErrorObject {
 
         instance.setDiscountCode(template.getDiscountCode());
         instance.setReason(template.getReason());
-        instance.setDicountCodeId(template.getDicountCodeId());
+        instance.setDiscountCodeId(template.getDiscountCodeId());
         instance.setValidFrom(template.getValidFrom());
         instance.setValidUntil(template.getValidUntil());
         instance.setValidityCheckTime(template.getValidityCheckTime());

@@ -28,7 +28,7 @@ public class ProductTypeUpdateBuilder implements Builder<ProductTypeUpdate> {
     private java.util.List<com.commercetools.api.models.product_type.ProductTypeUpdateAction> actions;
 
     /**
-     *  <p>Expected version of the ProductType on which the changes should be applied. If the expected version does not match the actual version, a 409 Conflict will be returned.</p>
+     *  <p>Expected version of the ProductType on which the changes should be applied. If the expected version does not match the actual version, a ConcurrentModification error is returned.</p>
      */
 
     public ProductTypeUpdateBuilder version(final Long version) {

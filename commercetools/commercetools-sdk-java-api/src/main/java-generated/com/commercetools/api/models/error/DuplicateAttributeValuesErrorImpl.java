@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * DuplicateAttributeValuesError
+ *  <p>Returned when the <code>CombinationUnique</code> AttributeConstraint criteria are not met during an Update Product request.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class DuplicateAttributeValuesErrorImpl implements DuplicateAttributeValuesError, ModelBase {
@@ -51,7 +51,7 @@ public class DuplicateAttributeValuesErrorImpl implements DuplicateAttributeValu
     }
 
     /**
-     *
+     *  <p><code>"The set of attributes must be unique across all variants."</code></p>
      */
 
     public String getMessage() {
@@ -59,7 +59,7 @@ public class DuplicateAttributeValuesErrorImpl implements DuplicateAttributeValu
     }
 
     /**
-     *
+     *  <p>Error-specific additional fields.</p>
      */
 
     public Map<String, java.lang.Object> values() {
@@ -67,7 +67,7 @@ public class DuplicateAttributeValuesErrorImpl implements DuplicateAttributeValu
     }
 
     /**
-     *
+     *  <p>Conflicting Attributes.</p>
      */
 
     public java.util.List<com.commercetools.api.models.product.Attribute> getAttributes() {

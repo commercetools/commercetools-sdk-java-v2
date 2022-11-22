@@ -13,13 +13,13 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * ErrorObject
+ *  <p>Represents a single error. Multiple errors may be included in an ErrorResponse.</p>
  *
  * <hr>
  * Example to create a subtype instance using the builder pattern
  * <div class=code-example>
  * <pre><code class='java'>
- *     ErrorObject errorObject = ErrorObject.accessDeniedBuilder()
+ *     ErrorObject errorObject = ErrorObject.anonymousIdAlreadyInUseBuilder()
  *             message("{message}")
  *
  *             .build()
@@ -27,13 +27,13 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </div>
  */
 @JsonSubTypes({
-        @JsonSubTypes.Type(value = com.commercetools.api.models.error.AccessDeniedErrorImpl.class, name = AccessDeniedError.ACCESS_DENIED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.error.AnonymousIdAlreadyInUseErrorImpl.class, name = AnonymousIdAlreadyInUseError.ANONYMOUS_ID_ALREADY_IN_USE),
         @JsonSubTypes.Type(value = com.commercetools.api.models.error.AttributeDefinitionAlreadyExistsErrorImpl.class, name = AttributeDefinitionAlreadyExistsError.ATTRIBUTE_DEFINITION_ALREADY_EXISTS),
         @JsonSubTypes.Type(value = com.commercetools.api.models.error.AttributeDefinitionTypeConflictErrorImpl.class, name = AttributeDefinitionTypeConflictError.ATTRIBUTE_DEFINITION_TYPE_CONFLICT),
         @JsonSubTypes.Type(value = com.commercetools.api.models.error.AttributeNameDoesNotExistErrorImpl.class, name = AttributeNameDoesNotExistError.ATTRIBUTE_NAME_DOES_NOT_EXIST),
         @JsonSubTypes.Type(value = com.commercetools.api.models.error.BadGatewayErrorImpl.class, name = BadGatewayError.BAD_GATEWAY),
         @JsonSubTypes.Type(value = com.commercetools.api.models.error.ConcurrentModificationErrorImpl.class, name = ConcurrentModificationError.CONCURRENT_MODIFICATION),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.error.CountryNotConfiguredInStoreImpl.class, name = CountryNotConfiguredInStore.COUNTRY_NOT_CONFIGURED_IN_STORE),
         @JsonSubTypes.Type(value = com.commercetools.api.models.error.DiscountCodeNonApplicableErrorImpl.class, name = DiscountCodeNonApplicableError.DISCOUNT_CODE_NON_APPLICABLE),
         @JsonSubTypes.Type(value = com.commercetools.api.models.error.DuplicateAttributeValueErrorImpl.class, name = DuplicateAttributeValueError.DUPLICATE_ATTRIBUTE_VALUE),
         @JsonSubTypes.Type(value = com.commercetools.api.models.error.DuplicateAttributeValuesErrorImpl.class, name = DuplicateAttributeValuesError.DUPLICATE_ATTRIBUTE_VALUES),
@@ -50,6 +50,7 @@ import io.vrap.rmf.base.client.utils.Generated;
         @JsonSubTypes.Type(value = com.commercetools.api.models.error.EnumValuesMustMatchErrorImpl.class, name = EnumValuesMustMatchError.ENUM_VALUES_MUST_MATCH),
         @JsonSubTypes.Type(value = com.commercetools.api.models.error.ExtensionBadResponseErrorImpl.class, name = ExtensionBadResponseError.EXTENSION_BAD_RESPONSE),
         @JsonSubTypes.Type(value = com.commercetools.api.models.error.ExtensionNoResponseErrorImpl.class, name = ExtensionNoResponseError.EXTENSION_NO_RESPONSE),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.error.ExtensionPredicateEvaluationFailedErrorImpl.class, name = ExtensionPredicateEvaluationFailedError.EXTENSION_PREDICATE_EVALUATION_FAILED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.error.ExtensionUpdateActionsFailedErrorImpl.class, name = ExtensionUpdateActionsFailedError.EXTENSION_UPDATE_ACTIONS_FAILED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.error.ExternalOAuthFailedErrorImpl.class, name = ExternalOAuthFailedError.EXTERNAL_O_AUTH_FAILED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.error.FeatureRemovedErrorImpl.class, name = FeatureRemovedError.FEATURE_REMOVED),
@@ -78,6 +79,8 @@ import io.vrap.rmf.base.client.utils.Generated;
         @JsonSubTypes.Type(value = com.commercetools.api.models.error.OverlappingStandalonePriceValidityErrorImpl.class, name = OverlappingStandalonePriceValidityError.OVERLAPPING_STANDALONE_PRICE_VALIDITY),
         @JsonSubTypes.Type(value = com.commercetools.api.models.error.PendingOperationErrorImpl.class, name = PendingOperationError.PENDING_OPERATION),
         @JsonSubTypes.Type(value = com.commercetools.api.models.error.PriceChangedErrorImpl.class, name = PriceChangedError.PRICE_CHANGED),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.error.ProductAssignmentMissingErrorImpl.class, name = ProductAssignmentMissingError.PRODUCT_ASSIGNMENT_MISSING),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.error.ProductPresentWithDifferentVariantSelectionErrorImpl.class, name = ProductPresentWithDifferentVariantSelectionError.PRODUCT_PRESENT_WITH_DIFFERENT_VARIANT_SELECTION),
         @JsonSubTypes.Type(value = com.commercetools.api.models.error.ProjectNotConfiguredForLanguagesErrorImpl.class, name = ProjectNotConfiguredForLanguagesError.PROJECT_NOT_CONFIGURED_FOR_LANGUAGES),
         @JsonSubTypes.Type(value = com.commercetools.api.models.error.QueryComplexityLimitExceededErrorImpl.class, name = QueryComplexityLimitExceededError.QUERY_COMPLEXITY_LIMIT_EXCEEDED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.error.QueryTimedOutErrorImpl.class, name = QueryTimedOutError.QUERY_TIMED_OUT),
@@ -92,29 +95,28 @@ import io.vrap.rmf.base.client.utils.Generated;
         @JsonSubTypes.Type(value = com.commercetools.api.models.error.SearchIndexingInProgressErrorImpl.class, name = SearchIndexingInProgressError.SEARCH_INDEXING_IN_PROGRESS),
         @JsonSubTypes.Type(value = com.commercetools.api.models.error.SemanticErrorErrorImpl.class, name = SemanticErrorError.SEMANTIC_ERROR),
         @JsonSubTypes.Type(value = com.commercetools.api.models.error.ShippingMethodDoesNotMatchCartErrorImpl.class, name = ShippingMethodDoesNotMatchCartError.SHIPPING_METHOD_DOES_NOT_MATCH_CART),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.error.SyntaxErrorErrorImpl.class, name = SyntaxErrorError.SYNTAX_ERROR),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.error.WeakPasswordErrorImpl.class, name = WeakPasswordError.WEAK_PASSWORD) })
+        @JsonSubTypes.Type(value = com.commercetools.api.models.error.SyntaxErrorErrorImpl.class, name = SyntaxErrorError.SYNTAX_ERROR) })
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "code", defaultImpl = ErrorObjectImpl.class, visible = true)
 @JsonDeserialize(as = ErrorObjectImpl.class)
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public interface ErrorObject {
 
     /**
-     *
+     *  <p>Error identifier.</p>
      */
     @NotNull
     @JsonProperty("code")
     public String getCode();
 
     /**
-     *
+     *  <p>Plain text description of the cause of the error.</p>
      */
     @NotNull
     @JsonProperty("message")
     public String getMessage();
 
     /**
-     *
+     *  <p>Error-specific additional fields.</p>
      */
     @NotNull
     @JsonAnyGetter
@@ -124,10 +126,6 @@ public interface ErrorObject {
 
     @JsonAnySetter
     public void setValue(String key, Object value);
-
-    public static com.commercetools.api.models.error.AccessDeniedErrorBuilder accessDeniedBuilder() {
-        return com.commercetools.api.models.error.AccessDeniedErrorBuilder.of();
-    }
 
     public static com.commercetools.api.models.error.AnonymousIdAlreadyInUseErrorBuilder anonymousIdAlreadyInUseBuilder() {
         return com.commercetools.api.models.error.AnonymousIdAlreadyInUseErrorBuilder.of();
@@ -151,6 +149,10 @@ public interface ErrorObject {
 
     public static com.commercetools.api.models.error.ConcurrentModificationErrorBuilder concurrentModificationBuilder() {
         return com.commercetools.api.models.error.ConcurrentModificationErrorBuilder.of();
+    }
+
+    public static com.commercetools.api.models.error.CountryNotConfiguredInStoreBuilder countryNotConfiguredInStoreBuilder() {
+        return com.commercetools.api.models.error.CountryNotConfiguredInStoreBuilder.of();
     }
 
     public static com.commercetools.api.models.error.DiscountCodeNonApplicableErrorBuilder discountCodeNonApplicableBuilder() {
@@ -215,6 +217,10 @@ public interface ErrorObject {
 
     public static com.commercetools.api.models.error.ExtensionNoResponseErrorBuilder extensionNoResponseBuilder() {
         return com.commercetools.api.models.error.ExtensionNoResponseErrorBuilder.of();
+    }
+
+    public static com.commercetools.api.models.error.ExtensionPredicateEvaluationFailedErrorBuilder extensionPredicateEvaluationFailedBuilder() {
+        return com.commercetools.api.models.error.ExtensionPredicateEvaluationFailedErrorBuilder.of();
     }
 
     public static com.commercetools.api.models.error.ExtensionUpdateActionsFailedErrorBuilder extensionUpdateActionsFailedBuilder() {
@@ -329,6 +335,14 @@ public interface ErrorObject {
         return com.commercetools.api.models.error.PriceChangedErrorBuilder.of();
     }
 
+    public static com.commercetools.api.models.error.ProductAssignmentMissingErrorBuilder productAssignmentMissingBuilder() {
+        return com.commercetools.api.models.error.ProductAssignmentMissingErrorBuilder.of();
+    }
+
+    public static com.commercetools.api.models.error.ProductPresentWithDifferentVariantSelectionErrorBuilder productPresentWithDifferentVariantSelectionBuilder() {
+        return com.commercetools.api.models.error.ProductPresentWithDifferentVariantSelectionErrorBuilder.of();
+    }
+
     public static com.commercetools.api.models.error.ProjectNotConfiguredForLanguagesErrorBuilder projectNotConfiguredForLanguagesBuilder() {
         return com.commercetools.api.models.error.ProjectNotConfiguredForLanguagesErrorBuilder.of();
     }
@@ -387,10 +401,6 @@ public interface ErrorObject {
 
     public static com.commercetools.api.models.error.SyntaxErrorErrorBuilder syntaxErrorBuilder() {
         return com.commercetools.api.models.error.SyntaxErrorErrorBuilder.of();
-    }
-
-    public static com.commercetools.api.models.error.WeakPasswordErrorBuilder weakPasswordBuilder() {
-        return com.commercetools.api.models.error.WeakPasswordErrorBuilder.of();
     }
 
     default <T> T withErrorObject(Function<ErrorObject, T> helper) {

@@ -32,7 +32,7 @@ public class EnumKeyDoesNotExistErrorBuilder implements Builder<EnumKeyDoesNotEx
     private String conflictingAttributeName;
 
     /**
-     *
+     *  <p><code>"The $fieldName field definition does not contain an enum value with the key $enumKey."</code></p>
      */
 
     public EnumKeyDoesNotExistErrorBuilder message(final String message) {
@@ -41,7 +41,7 @@ public class EnumKeyDoesNotExistErrorBuilder implements Builder<EnumKeyDoesNotEx
     }
 
     /**
-     *
+     *  <p>Error-specific additional fields.</p>
      */
 
     public EnumKeyDoesNotExistErrorBuilder values(final Map<String, java.lang.Object> values) {
@@ -50,7 +50,7 @@ public class EnumKeyDoesNotExistErrorBuilder implements Builder<EnumKeyDoesNotEx
     }
 
     /**
-     *
+     *  <p>Error-specific additional fields.</p>
      */
 
     public EnumKeyDoesNotExistErrorBuilder addValue(final String key, final java.lang.Object value) {
@@ -62,7 +62,7 @@ public class EnumKeyDoesNotExistErrorBuilder implements Builder<EnumKeyDoesNotEx
     }
 
     /**
-     *
+     *  <p>Conflicting enum key.</p>
      */
 
     public EnumKeyDoesNotExistErrorBuilder conflictingEnumKey(final String conflictingEnumKey) {
@@ -71,7 +71,7 @@ public class EnumKeyDoesNotExistErrorBuilder implements Builder<EnumKeyDoesNotEx
     }
 
     /**
-     *
+     *  <p>Name of the conflicting Attribute.</p>
      */
 
     public EnumKeyDoesNotExistErrorBuilder conflictingAttributeName(final String conflictingAttributeName) {

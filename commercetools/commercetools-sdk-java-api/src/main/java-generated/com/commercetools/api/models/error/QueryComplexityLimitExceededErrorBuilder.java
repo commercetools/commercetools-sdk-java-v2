@@ -35,7 +35,7 @@ public class QueryComplexityLimitExceededErrorBuilder implements Builder<QueryCo
     }
 
     /**
-     *
+     *  <p>Error-specific additional fields.</p>
      */
 
     public QueryComplexityLimitExceededErrorBuilder values(final Map<String, java.lang.Object> values) {
@@ -44,7 +44,7 @@ public class QueryComplexityLimitExceededErrorBuilder implements Builder<QueryCo
     }
 
     /**
-     *
+     *  <p>Error-specific additional fields.</p>
      */
 
     public QueryComplexityLimitExceededErrorBuilder addValue(final String key, final java.lang.Object value) {

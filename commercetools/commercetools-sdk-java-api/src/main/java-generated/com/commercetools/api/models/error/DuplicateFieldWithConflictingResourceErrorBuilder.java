@@ -36,7 +36,7 @@ public class DuplicateFieldWithConflictingResourceErrorBuilder
     private com.commercetools.api.models.common.Reference conflictingResource;
 
     /**
-     *
+     *  <p><code>"A duplicate value $duplicateValue exists for field $field on $conflictingResource."</code></p>
      */
 
     public DuplicateFieldWithConflictingResourceErrorBuilder message(final String message) {
@@ -45,7 +45,7 @@ public class DuplicateFieldWithConflictingResourceErrorBuilder
     }
 
     /**
-     *
+     *  <p>Error-specific additional fields.</p>
      */
 
     public DuplicateFieldWithConflictingResourceErrorBuilder values(final Map<String, java.lang.Object> values) {
@@ -54,7 +54,7 @@ public class DuplicateFieldWithConflictingResourceErrorBuilder
     }
 
     /**
-     *
+     *  <p>Error-specific additional fields.</p>
      */
 
     public DuplicateFieldWithConflictingResourceErrorBuilder addValue(final String key, final java.lang.Object value) {
@@ -66,7 +66,7 @@ public class DuplicateFieldWithConflictingResourceErrorBuilder
     }
 
     /**
-     *
+     *  <p>Name of the conflicting field.</p>
      */
 
     public DuplicateFieldWithConflictingResourceErrorBuilder field(final String field) {
@@ -75,7 +75,7 @@ public class DuplicateFieldWithConflictingResourceErrorBuilder
     }
 
     /**
-     *
+     *  <p>Conflicting duplicate value.</p>
      */
 
     public DuplicateFieldWithConflictingResourceErrorBuilder duplicateValue(final java.lang.Object duplicateValue) {
@@ -84,7 +84,7 @@ public class DuplicateFieldWithConflictingResourceErrorBuilder
     }
 
     /**
-     *  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
+     *  <p>Reference to the resource that has the conflicting value.</p>
      */
 
     public DuplicateFieldWithConflictingResourceErrorBuilder conflictingResource(
@@ -94,7 +94,7 @@ public class DuplicateFieldWithConflictingResourceErrorBuilder
     }
 
     /**
-     *  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
+     *  <p>Reference to the resource that has the conflicting value.</p>
      */
 
     public DuplicateFieldWithConflictingResourceErrorBuilder conflictingResource(

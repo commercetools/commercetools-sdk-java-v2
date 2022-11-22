@@ -11,10 +11,6 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ErrorObjectBuilder {
 
-    public com.commercetools.api.models.error.AccessDeniedErrorBuilder accessDeniedBuilder() {
-        return com.commercetools.api.models.error.AccessDeniedErrorBuilder.of();
-    }
-
     public com.commercetools.api.models.error.AnonymousIdAlreadyInUseErrorBuilder anonymousIdAlreadyInUseBuilder() {
         return com.commercetools.api.models.error.AnonymousIdAlreadyInUseErrorBuilder.of();
     }
@@ -37,6 +33,10 @@ public class ErrorObjectBuilder {
 
     public com.commercetools.api.models.error.ConcurrentModificationErrorBuilder concurrentModificationBuilder() {
         return com.commercetools.api.models.error.ConcurrentModificationErrorBuilder.of();
+    }
+
+    public com.commercetools.api.models.error.CountryNotConfiguredInStoreBuilder countryNotConfiguredInStoreBuilder() {
+        return com.commercetools.api.models.error.CountryNotConfiguredInStoreBuilder.of();
     }
 
     public com.commercetools.api.models.error.DiscountCodeNonApplicableErrorBuilder discountCodeNonApplicableBuilder() {
@@ -101,6 +101,10 @@ public class ErrorObjectBuilder {
 
     public com.commercetools.api.models.error.ExtensionNoResponseErrorBuilder extensionNoResponseBuilder() {
         return com.commercetools.api.models.error.ExtensionNoResponseErrorBuilder.of();
+    }
+
+    public com.commercetools.api.models.error.ExtensionPredicateEvaluationFailedErrorBuilder extensionPredicateEvaluationFailedBuilder() {
+        return com.commercetools.api.models.error.ExtensionPredicateEvaluationFailedErrorBuilder.of();
     }
 
     public com.commercetools.api.models.error.ExtensionUpdateActionsFailedErrorBuilder extensionUpdateActionsFailedBuilder() {
@@ -215,6 +219,14 @@ public class ErrorObjectBuilder {
         return com.commercetools.api.models.error.PriceChangedErrorBuilder.of();
     }
 
+    public com.commercetools.api.models.error.ProductAssignmentMissingErrorBuilder productAssignmentMissingBuilder() {
+        return com.commercetools.api.models.error.ProductAssignmentMissingErrorBuilder.of();
+    }
+
+    public com.commercetools.api.models.error.ProductPresentWithDifferentVariantSelectionErrorBuilder productPresentWithDifferentVariantSelectionBuilder() {
+        return com.commercetools.api.models.error.ProductPresentWithDifferentVariantSelectionErrorBuilder.of();
+    }
+
     public com.commercetools.api.models.error.ProjectNotConfiguredForLanguagesErrorBuilder projectNotConfiguredForLanguagesBuilder() {
         return com.commercetools.api.models.error.ProjectNotConfiguredForLanguagesErrorBuilder.of();
     }
@@ -273,10 +285,6 @@ public class ErrorObjectBuilder {
 
     public com.commercetools.api.models.error.SyntaxErrorErrorBuilder syntaxErrorBuilder() {
         return com.commercetools.api.models.error.SyntaxErrorErrorBuilder.of();
-    }
-
-    public com.commercetools.api.models.error.WeakPasswordErrorBuilder weakPasswordBuilder() {
-        return com.commercetools.api.models.error.WeakPasswordErrorBuilder.of();
     }
 
     public static ErrorObjectBuilder of() {

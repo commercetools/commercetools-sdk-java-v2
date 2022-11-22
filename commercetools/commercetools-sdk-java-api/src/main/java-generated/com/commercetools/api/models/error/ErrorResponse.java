@@ -14,7 +14,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * ErrorResponse
+ *  <p>Base representation of an error response containing common fields to all errors.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -32,35 +32,22 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ErrorResponse {
 
     /**
-     *
+     *  <p>HTTP status code corresponding to the error.</p>
      */
     @NotNull
     @JsonProperty("statusCode")
     public Integer getStatusCode();
 
     /**
-     *
+     *  <p>First error message in the <code>errors</code> array.</p>
      */
     @NotNull
     @JsonProperty("message")
     public String getMessage();
 
     /**
-     *
-     */
-
-    @JsonProperty("error")
-    public String getError();
-
-    /**
-     *
-     */
-
-    @JsonProperty("error_description")
-    public String getErrorDescription();
-
-    /**
-     *
+     *  <p>Errors returned for a request.</p>
+     *  <p>A single error response can contain multiple errors if the errors are related to the same HTTP status code such as <code>400</code>.</p>
      */
     @Valid
     @JsonProperty("errors")
@@ -69,10 +56,6 @@ public interface ErrorResponse {
     public void setStatusCode(final Integer statusCode);
 
     public void setMessage(final String message);
-
-    public void setError(final String error);
-
-    public void setErrorDescription(final String errorDescription);
 
     @JsonIgnore
     public void setErrors(final ErrorObject... errors);
@@ -87,8 +70,6 @@ public interface ErrorResponse {
         ErrorResponseImpl instance = new ErrorResponseImpl();
         instance.setStatusCode(template.getStatusCode());
         instance.setMessage(template.getMessage());
-        instance.setError(template.getError());
-        instance.setErrorDescription(template.getErrorDescription());
         instance.setErrors(template.getErrors());
         return instance;
     }

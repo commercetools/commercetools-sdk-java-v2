@@ -18,7 +18,8 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * DuplicateStandalonePriceScopeError
+ *  <p>Returned when the given Price scope conflicts with the Price scope of an existing Standalone Price. Every Standalone Price associated with the same SKU must have a distinct combination of currency, country, Customer Group, Channel, and validity periods (<code>validFrom</code> and <code>validUntil</code>).</p>
+ *  <p>The error is returned as a failed response to the Create StandalonePrice request.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -40,7 +41,21 @@ public interface DuplicateStandalonePriceScopeError extends ErrorObject {
     String DUPLICATE_STANDALONE_PRICE_SCOPE = "DuplicateStandalonePriceScope";
 
     /**
-     *  <p>Reference to a StandalonePrice.</p>
+     *
+     */
+    @NotNull
+    @JsonProperty("code")
+    public String getCode();
+
+    /**
+     *  <p><code>"Duplicate standalone price scope for SKU: $sku. The combination of SKU, currency, country, customerGroup, channel, validFrom and validUntil must be unique for each standalone price."</code></p>
+     */
+    @NotNull
+    @JsonProperty("message")
+    public String getMessage();
+
+    /**
+     *  <p>Reference to the conflicting Standalone Price.</p>
      */
     @NotNull
     @Valid
@@ -48,53 +63,55 @@ public interface DuplicateStandalonePriceScopeError extends ErrorObject {
     public StandalonePriceReference getConflictingStandalonePrice();
 
     /**
-     *
+     *  <p>SKU of the ProductVariant to which the conflicting Standalone Price is associated.</p>
      */
     @NotNull
     @JsonProperty("sku")
     public String getSku();
 
     /**
-     *
+     *  <p>Currency code of the country.</p>
      */
     @NotNull
     @JsonProperty("currency")
     public String getCurrency();
 
     /**
-     *
+     *  <p>Country code of the geographic location.</p>
      */
 
     @JsonProperty("country")
     public String getCountry();
 
     /**
-     *  <p>ResourceIdentifier to a CustomerGroup.</p>
+     *  <p>CustomerGroup for which the Standalone Price is valid.</p>
      */
     @Valid
     @JsonProperty("customerGroup")
     public CustomerGroupResourceIdentifier getCustomerGroup();
 
     /**
-     *  <p>ResourceIdentifier to a Channel.</p>
+     *  <p>Channel for which the Standalone Price is valid.</p>
      */
     @Valid
     @JsonProperty("channel")
     public ChannelResourceIdentifier getChannel();
 
     /**
-     *
+     *  <p>Date and time (UTC) from which the Standalone Price is valid.</p>
      */
 
     @JsonProperty("validFrom")
     public ZonedDateTime getValidFrom();
 
     /**
-     *
+     *  <p>Date and time (UTC) until which the Standalone Price is valid.</p>
      */
 
     @JsonProperty("validUntil")
     public ZonedDateTime getValidUntil();
+
+    public void setMessage(final String message);
 
     public void setConflictingStandalonePrice(final StandalonePriceReference conflictingStandalonePrice);
 

@@ -15,7 +15,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * InvalidItemShippingDetailsError
+ *  <p>Returned when Line Item or Custom Line Item quantities set under ItemShippingDetails do not match the sum of the quantities in their respective shipping details.</p>
+ *  <p>The error is returned as a failed response to the Create Order from Cart and Create Order from Cart in a Store requests.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class InvalidItemShippingDetailsErrorImpl implements InvalidItemShippingDetailsError, ModelBase {
@@ -54,7 +55,7 @@ public class InvalidItemShippingDetailsErrorImpl implements InvalidItemShippingD
     }
 
     /**
-     *
+     *  <p><code>"Inconsistent shipping details for $subject with ID $itemId. $subject quantity is $itemQuantity and shippingTargets quantity sum is $quantitySum."</code></p>
      */
 
     public String getMessage() {
@@ -62,7 +63,7 @@ public class InvalidItemShippingDetailsErrorImpl implements InvalidItemShippingD
     }
 
     /**
-     *
+     *  <p>Error-specific additional fields.</p>
      */
 
     public Map<String, java.lang.Object> values() {
@@ -70,7 +71,7 @@ public class InvalidItemShippingDetailsErrorImpl implements InvalidItemShippingD
     }
 
     /**
-     *
+     *  <p><code>"LineItem"</code> or <code>"CustomLineItem"</code></p>
      */
 
     public String getSubject() {
@@ -78,7 +79,7 @@ public class InvalidItemShippingDetailsErrorImpl implements InvalidItemShippingD
     }
 
     /**
-     *
+     *  <p>Unique identifier of the Line Item or Custom Line Item.</p>
      */
 
     public String getItemId() {

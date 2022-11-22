@@ -19,7 +19,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * MyShoppingListDraft
+ *  <p>A MyShoppingListDraft is the object submitted as payload to the Create MyShoppingList request. The <code>customer</code> field of ShoppingList is automatically set with a password flow token. The <code>anonymousId</code> is automatically set with a token for an anonymous session. The <code>key</code> and <code>slug</code> fields can not be set.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -36,7 +36,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface MyShoppingListDraft extends com.commercetools.api.models.CustomizableDraft<MyShoppingListDraft> {
 
     /**
-     *
+     *  <p>Name of the ShoppingList.</p>
      */
     @NotNull
     @Valid
@@ -44,42 +44,42 @@ public interface MyShoppingListDraft extends com.commercetools.api.models.Custom
     public LocalizedString getName();
 
     /**
-     *
+     *  <p>Description of the ShoppingList.</p>
      */
     @Valid
     @JsonProperty("description")
     public LocalizedString getDescription();
 
     /**
-     *
+     *  <p>Line Items (containing Products) to add to the ShoppingList.</p>
      */
     @Valid
     @JsonProperty("lineItems")
     public List<ShoppingListLineItemDraft> getLineItems();
 
     /**
-     *
+     *  <p>Line Items (containing text values) to add to the ShoppingList.</p>
      */
     @Valid
     @JsonProperty("textLineItems")
     public List<TextLineItemDraft> getTextLineItems();
 
     /**
-     *  <p>The custom fields.</p>
+     *  <p>Custom Fields defined for the ShoppingList.</p>
      */
     @Valid
     @JsonProperty("custom")
     public CustomFieldsDraft getCustom();
 
     /**
-     *  <p>The shopping list will be deleted automatically if it hasn't been modified for the specified amount of days.</p>
+     *  <p>Number of days after which the ShoppingList will be automatically deleted if it has not been modified. If not set, the default value configured in the Project is used.</p>
      */
 
     @JsonProperty("deleteDaysAfterLastModification")
     public Long getDeleteDaysAfterLastModification();
 
     /**
-     *
+     *  <p>Assigns the new ShoppingList to the Store. The Store assignment can not be modified.</p>
      */
     @Valid
     @JsonProperty("store")

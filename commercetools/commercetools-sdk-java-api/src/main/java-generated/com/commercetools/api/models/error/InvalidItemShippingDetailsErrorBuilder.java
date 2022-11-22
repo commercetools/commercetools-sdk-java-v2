@@ -32,7 +32,7 @@ public class InvalidItemShippingDetailsErrorBuilder implements Builder<InvalidIt
     private String itemId;
 
     /**
-     *
+     *  <p><code>"Inconsistent shipping details for $subject with ID $itemId. $subject quantity is $itemQuantity and shippingTargets quantity sum is $quantitySum."</code></p>
      */
 
     public InvalidItemShippingDetailsErrorBuilder message(final String message) {
@@ -41,7 +41,7 @@ public class InvalidItemShippingDetailsErrorBuilder implements Builder<InvalidIt
     }
 
     /**
-     *
+     *  <p>Error-specific additional fields.</p>
      */
 
     public InvalidItemShippingDetailsErrorBuilder values(final Map<String, java.lang.Object> values) {
@@ -50,7 +50,7 @@ public class InvalidItemShippingDetailsErrorBuilder implements Builder<InvalidIt
     }
 
     /**
-     *
+     *  <p>Error-specific additional fields.</p>
      */
 
     public InvalidItemShippingDetailsErrorBuilder addValue(final String key, final java.lang.Object value) {
@@ -62,7 +62,7 @@ public class InvalidItemShippingDetailsErrorBuilder implements Builder<InvalidIt
     }
 
     /**
-     *
+     *  <p><code>"LineItem"</code> or <code>"CustomLineItem"</code></p>
      */
 
     public InvalidItemShippingDetailsErrorBuilder subject(final String subject) {
@@ -71,7 +71,7 @@ public class InvalidItemShippingDetailsErrorBuilder implements Builder<InvalidIt
     }
 
     /**
-     *
+     *  <p>Unique identifier of the Line Item or Custom Line Item.</p>
      */
 
     public InvalidItemShippingDetailsErrorBuilder itemId(final String itemId) {

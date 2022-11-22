@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * ObjectNotFoundError
+ *  <p>Returned when the requested resource was not found.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ObjectNotFoundErrorImpl implements ObjectNotFoundError, ModelBase {
@@ -47,7 +47,7 @@ public class ObjectNotFoundErrorImpl implements ObjectNotFoundError, ModelBase {
     }
 
     /**
-     *
+     *  <p><code>"A $resourceType with identifier $id was unexpectedly not found."</code></p>
      */
 
     public String getMessage() {
@@ -55,7 +55,7 @@ public class ObjectNotFoundErrorImpl implements ObjectNotFoundError, ModelBase {
     }
 
     /**
-     *
+     *  <p>Error-specific additional fields.</p>
      */
 
     public Map<String, java.lang.Object> values() {

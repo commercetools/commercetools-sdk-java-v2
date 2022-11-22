@@ -38,7 +38,7 @@ public class ProductTypeChangeLocalizedEnumValueOrderActionBuilder
     }
 
     /**
-     *  <p>Values must be equal to the values of the Attribute enum values (except for the order). If not, an EnumValuesMustMatch error code will be returned.</p>
+     *  <p>Values must be equal to the values of the Attribute enum values (except for the order). If not, an EnumValuesMustMatch error is returned.</p>
      */
 
     public ProductTypeChangeLocalizedEnumValueOrderActionBuilder values(
@@ -48,7 +48,7 @@ public class ProductTypeChangeLocalizedEnumValueOrderActionBuilder
     }
 
     /**
-     *  <p>Values must be equal to the values of the Attribute enum values (except for the order). If not, an EnumValuesMustMatch error code will be returned.</p>
+     *  <p>Values must be equal to the values of the Attribute enum values (except for the order). If not, an EnumValuesMustMatch error is returned.</p>
      */
 
     public ProductTypeChangeLocalizedEnumValueOrderActionBuilder values(
@@ -58,7 +58,7 @@ public class ProductTypeChangeLocalizedEnumValueOrderActionBuilder
     }
 
     /**
-     *  <p>Values must be equal to the values of the Attribute enum values (except for the order). If not, an EnumValuesMustMatch error code will be returned.</p>
+     *  <p>Values must be equal to the values of the Attribute enum values (except for the order). If not, an EnumValuesMustMatch error is returned.</p>
      */
 
     public ProductTypeChangeLocalizedEnumValueOrderActionBuilder plusValues(
@@ -71,7 +71,7 @@ public class ProductTypeChangeLocalizedEnumValueOrderActionBuilder
     }
 
     /**
-     *  <p>Values must be equal to the values of the Attribute enum values (except for the order). If not, an EnumValuesMustMatch error code will be returned.</p>
+     *  <p>Values must be equal to the values of the Attribute enum values (except for the order). If not, an EnumValuesMustMatch error is returned.</p>
      */
 
     public ProductTypeChangeLocalizedEnumValueOrderActionBuilder plusValues(
@@ -85,7 +85,7 @@ public class ProductTypeChangeLocalizedEnumValueOrderActionBuilder
     }
 
     /**
-     *  <p>Values must be equal to the values of the Attribute enum values (except for the order). If not, an EnumValuesMustMatch error code will be returned.</p>
+     *  <p>Values must be equal to the values of the Attribute enum values (except for the order). If not, an EnumValuesMustMatch error is returned.</p>
      */
 
     public ProductTypeChangeLocalizedEnumValueOrderActionBuilder withValues(

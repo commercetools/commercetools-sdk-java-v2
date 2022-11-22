@@ -26,7 +26,7 @@ public class ResourceNotFoundErrorBuilder implements Builder<ResourceNotFoundErr
     private Map<String, java.lang.Object> values = new HashMap<>();
 
     /**
-     *
+     *  <p><code>"The Resource with ID $resourceId was not found."</code></p>
      */
 
     public ResourceNotFoundErrorBuilder message(final String message) {
@@ -35,7 +35,7 @@ public class ResourceNotFoundErrorBuilder implements Builder<ResourceNotFoundErr
     }
 
     /**
-     *
+     *  <p>Error-specific additional fields.</p>
      */
 
     public ResourceNotFoundErrorBuilder values(final Map<String, java.lang.Object> values) {
@@ -44,7 +44,7 @@ public class ResourceNotFoundErrorBuilder implements Builder<ResourceNotFoundErr
     }
 
     /**
-     *
+     *  <p>Error-specific additional fields.</p>
      */
 
     public ResourceNotFoundErrorBuilder addValue(final String key, final java.lang.Object value) {

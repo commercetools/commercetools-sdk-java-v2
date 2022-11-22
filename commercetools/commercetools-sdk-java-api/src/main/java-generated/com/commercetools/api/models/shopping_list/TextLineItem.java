@@ -17,7 +17,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * TextLineItem
+ *  <p>TextLineItems are Line Items that use text values instead of references to Products.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -37,21 +37,21 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface TextLineItem extends com.commercetools.api.models.Customizable<TextLineItem> {
 
     /**
-     *  <p>When the text line item was added to the shopping list.</p>
+     *  <p>Date and time (UTC) the TextLineItem was added to the ShoppingList.</p>
      */
     @NotNull
     @JsonProperty("addedAt")
     public ZonedDateTime getAddedAt();
 
     /**
-     *
+     *  <p>Custom Fields of the TextLineItem.</p>
      */
     @Valid
     @JsonProperty("custom")
     public CustomFields getCustom();
 
     /**
-     *
+     *  <p>Description of the TextLineItem.</p>
      */
     @Valid
     @JsonProperty("description")
@@ -65,7 +65,7 @@ public interface TextLineItem extends com.commercetools.api.models.Customizable<
     public String getId();
 
     /**
-     *
+     *  <p>Name of the TextLineItem.</p>
      */
     @NotNull
     @Valid
@@ -73,11 +73,11 @@ public interface TextLineItem extends com.commercetools.api.models.Customizable<
     public LocalizedString getName();
 
     /**
-     *
+     *  <p>Number of entries in the TextLineItem.</p>
      */
     @NotNull
     @JsonProperty("quantity")
-    public Integer getQuantity();
+    public Long getQuantity();
 
     public void setAddedAt(final ZonedDateTime addedAt);
 
@@ -89,7 +89,7 @@ public interface TextLineItem extends com.commercetools.api.models.Customizable<
 
     public void setName(final LocalizedString name);
 
-    public void setQuantity(final Integer quantity);
+    public void setQuantity(final Long quantity);
 
     public static TextLineItem of() {
         return new TextLineItemImpl();

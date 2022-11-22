@@ -26,7 +26,7 @@ public class EnumValueIsUsedErrorBuilder implements Builder<EnumValueIsUsedError
     private Map<String, java.lang.Object> values = new HashMap<>();
 
     /**
-     *
+     *  <p><code>"$enumKeysTranscript is used by some products and cannot be deleted because the $attributeName attribute is required."</code></p>
      */
 
     public EnumValueIsUsedErrorBuilder message(final String message) {
@@ -35,7 +35,7 @@ public class EnumValueIsUsedErrorBuilder implements Builder<EnumValueIsUsedError
     }
 
     /**
-     *
+     *  <p>Error-specific additional fields.</p>
      */
 
     public EnumValueIsUsedErrorBuilder values(final Map<String, java.lang.Object> values) {
@@ -44,7 +44,7 @@ public class EnumValueIsUsedErrorBuilder implements Builder<EnumValueIsUsedError
     }
 
     /**
-     *
+     *  <p>Error-specific additional fields.</p>
      */
 
     public EnumValueIsUsedErrorBuilder addValue(final String key, final java.lang.Object value) {

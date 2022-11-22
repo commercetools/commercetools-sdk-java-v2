@@ -28,14 +28,14 @@ public class TextLineItemDraftImpl implements TextLineItemDraft, ModelBase {
 
     private com.commercetools.api.models.common.LocalizedString name;
 
-    private Integer quantity;
+    private Long quantity;
 
     @JsonCreator
     TextLineItemDraftImpl(@JsonProperty("addedAt") final java.time.ZonedDateTime addedAt,
             @JsonProperty("custom") final com.commercetools.api.models.type.CustomFieldsDraft custom,
             @JsonProperty("description") final com.commercetools.api.models.common.LocalizedString description,
             @JsonProperty("name") final com.commercetools.api.models.common.LocalizedString name,
-            @JsonProperty("quantity") final Integer quantity) {
+            @JsonProperty("quantity") final Long quantity) {
         this.addedAt = addedAt;
         this.custom = custom;
         this.description = description;
@@ -47,7 +47,7 @@ public class TextLineItemDraftImpl implements TextLineItemDraft, ModelBase {
     }
 
     /**
-     *  <p>Defaults to the current date and time.</p>
+     *  <p>Date and time the TextLineItem is added to the ShoppingList. If not set, the current date and time (UTC) is used.</p>
      */
 
     public java.time.ZonedDateTime getAddedAt() {
@@ -55,7 +55,7 @@ public class TextLineItemDraftImpl implements TextLineItemDraft, ModelBase {
     }
 
     /**
-     *  <p>The custom fields.</p>
+     *  <p>Custom Fields for the TextLineItem.</p>
      */
 
     public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
@@ -63,7 +63,7 @@ public class TextLineItemDraftImpl implements TextLineItemDraft, ModelBase {
     }
 
     /**
-     *
+     *  <p>Description of the TextLineItem.</p>
      */
 
     public com.commercetools.api.models.common.LocalizedString getDescription() {
@@ -71,7 +71,7 @@ public class TextLineItemDraftImpl implements TextLineItemDraft, ModelBase {
     }
 
     /**
-     *
+     *  <p>Name of the TextLineItem.</p>
      */
 
     public com.commercetools.api.models.common.LocalizedString getName() {
@@ -79,10 +79,10 @@ public class TextLineItemDraftImpl implements TextLineItemDraft, ModelBase {
     }
 
     /**
-     *  <p>Defaults to <code>1</code>.</p>
+     *  <p>Number of entries in the TextLineItem.</p>
      */
 
-    public Integer getQuantity() {
+    public Long getQuantity() {
         return this.quantity;
     }
 
@@ -102,7 +102,7 @@ public class TextLineItemDraftImpl implements TextLineItemDraft, ModelBase {
         this.name = name;
     }
 
-    public void setQuantity(final Integer quantity) {
+    public void setQuantity(final Long quantity) {
         this.quantity = quantity;
     }
 

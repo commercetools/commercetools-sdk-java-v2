@@ -55,7 +55,7 @@ public class QueryComplexityLimitExceededErrorImpl implements QueryComplexityLim
     }
 
     /**
-     *
+     *  <p>Error-specific additional fields.</p>
      */
 
     public Map<String, java.lang.Object> values() {

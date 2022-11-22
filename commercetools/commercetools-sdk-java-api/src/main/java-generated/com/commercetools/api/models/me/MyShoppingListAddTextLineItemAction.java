@@ -37,7 +37,7 @@ public interface MyShoppingListAddTextLineItemAction extends MyShoppingListUpdat
     String ADD_TEXT_LINE_ITEM = "addTextLineItem";
 
     /**
-     *  <p>JSON object where the keys are of type Locale, and the values are the strings used for the corresponding language.</p>
+     *  <p>Name of the TextLineItem.</p>
      */
     @NotNull
     @Valid
@@ -45,28 +45,28 @@ public interface MyShoppingListAddTextLineItemAction extends MyShoppingListUpdat
     public LocalizedString getName();
 
     /**
-     *  <p>JSON object where the keys are of type Locale, and the values are the strings used for the corresponding language.</p>
+     *  <p>Description of the TextLineItem.</p>
      */
     @Valid
     @JsonProperty("description")
     public LocalizedString getDescription();
 
     /**
-     *
+     *  <p>Number of entries in the TextLineItem.</p>
      */
 
     @JsonProperty("quantity")
     public Long getQuantity();
 
     /**
-     *
+     *  <p>Date and time the TextLineItem is added to the ShoppingList. If not set, the current date and time (UTC) is used.</p>
      */
 
     @JsonProperty("addedAt")
     public ZonedDateTime getAddedAt();
 
     /**
-     *  <p>The representation used when creating or updating a customizable data type with Custom Fields.</p>
+     *  <p>Custom Fields defined for the TextLineItem.</p>
      */
     @Valid
     @JsonProperty("custom")

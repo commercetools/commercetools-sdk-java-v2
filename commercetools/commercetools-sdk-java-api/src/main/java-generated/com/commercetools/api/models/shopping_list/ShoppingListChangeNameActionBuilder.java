@@ -25,7 +25,7 @@ public class ShoppingListChangeNameActionBuilder implements Builder<ShoppingList
     private com.commercetools.api.models.common.LocalizedString name;
 
     /**
-     *
+     *  <p>New value to set. Must not be empty.</p>
      */
 
     public ShoppingListChangeNameActionBuilder name(
@@ -35,7 +35,7 @@ public class ShoppingListChangeNameActionBuilder implements Builder<ShoppingList
     }
 
     /**
-     *
+     *  <p>New value to set. Must not be empty.</p>
      */
 
     public ShoppingListChangeNameActionBuilder name(final com.commercetools.api.models.common.LocalizedString name) {

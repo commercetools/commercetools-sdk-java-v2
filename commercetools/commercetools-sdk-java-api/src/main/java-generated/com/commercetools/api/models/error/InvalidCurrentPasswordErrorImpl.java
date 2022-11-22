@@ -15,7 +15,12 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * InvalidCurrentPasswordError
+ *  <p>Returned when the current password of the Customer does not match.</p>
+ *  <p>The error is returned as a failed response to:</p>
+ *  <ul>
+ *   <li>Change Customer Password and Change Customer Password in a Store requests on Customers.</li>
+ *   <li>Change Customer Password and Change Customer Password in a Store requests on My Customer Profile.</li>
+ *  </ul>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class InvalidCurrentPasswordErrorImpl implements InvalidCurrentPasswordError, ModelBase {
@@ -47,7 +52,7 @@ public class InvalidCurrentPasswordErrorImpl implements InvalidCurrentPasswordEr
     }
 
     /**
-     *
+     *  <p><code>"The given current password does not match."</code></p>
      */
 
     public String getMessage() {
@@ -55,7 +60,7 @@ public class InvalidCurrentPasswordErrorImpl implements InvalidCurrentPasswordEr
     }
 
     /**
-     *
+     *  <p>Error-specific additional fields.</p>
      */
 
     public Map<String, java.lang.Object> values() {

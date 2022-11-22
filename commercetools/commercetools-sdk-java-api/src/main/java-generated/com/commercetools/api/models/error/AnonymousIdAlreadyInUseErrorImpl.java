@@ -15,7 +15,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * AnonymousIdAlreadyInUseError
+ *  <p>Returned when the anonymous ID is being used by another resource.</p>
+ *  <p>The client application should choose another anonymous ID or retrieve an automatically generated one.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class AnonymousIdAlreadyInUseErrorImpl implements AnonymousIdAlreadyInUseError, ModelBase {
@@ -47,7 +48,7 @@ public class AnonymousIdAlreadyInUseErrorImpl implements AnonymousIdAlreadyInUse
     }
 
     /**
-     *
+     *  <p><code>"The given anonymous ID is already in use."</code></p>
      */
 
     public String getMessage() {
@@ -55,7 +56,7 @@ public class AnonymousIdAlreadyInUseErrorImpl implements AnonymousIdAlreadyInUse
     }
 
     /**
-     *
+     *  <p>Error-specific additional fields.</p>
      */
 
     public Map<String, java.lang.Object> values() {

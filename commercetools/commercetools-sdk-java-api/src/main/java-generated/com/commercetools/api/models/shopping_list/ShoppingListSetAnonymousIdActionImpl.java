@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * ShoppingListSetAnonymousIdAction
+ *  <p>Sets an anonymous ID that corresponds to a Customer who has authenticated with an anonymous session.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ShoppingListSetAnonymousIdActionImpl implements ShoppingListSetAnonymousIdAction, ModelBase {
@@ -43,7 +43,7 @@ public class ShoppingListSetAnonymousIdActionImpl implements ShoppingListSetAnon
     }
 
     /**
-     *  <p>Anonymous ID of the anonymous customer that this shopping list belongs to. If this field is not set any existing <code>anonymousId</code> is removed.</p>
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
      */
 
     public String getAnonymousId() {

@@ -13,7 +13,12 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * OutOfStockError
+ *  <p>Returned when some of the Line Items are out of stock at the time of placing an Order.</p>
+ *  <p>The error is returned as a failed response to:</p>
+ *  <ul>
+ *   <li>Create Order from Cart, Create Order from Cart in a Store, and Create Order by Import requests on Orders.</li>
+ *   <li>Create Order from a Cart and Create Order in a Store from Cart requests on My Orders.</li>
+ *  </ul>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -37,15 +42,31 @@ public interface OutOfStockError extends ErrorObject {
      *
      */
     @NotNull
+    @JsonProperty("code")
+    public String getCode();
+
+    /**
+     *  <p><code>"Some line items are out of stock at the time of placing the order: $itemSku."</code></p>
+     */
+    @NotNull
+    @JsonProperty("message")
+    public String getMessage();
+
+    /**
+     *  <p>Unique identifiers of the Line Items that are out of stock.</p>
+     */
+    @NotNull
     @JsonProperty("lineItems")
     public List<String> getLineItems();
 
     /**
-     *
+     *  <p>SKUs of the Line Items that are out of stock.</p>
      */
     @NotNull
     @JsonProperty("skus")
     public List<String> getSkus();
+
+    public void setMessage(final String message);
 
     @JsonIgnore
     public void setLineItems(final String... lineItems);

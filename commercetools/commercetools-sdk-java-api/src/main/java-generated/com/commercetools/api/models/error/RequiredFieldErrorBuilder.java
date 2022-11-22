@@ -29,7 +29,7 @@ public class RequiredFieldErrorBuilder implements Builder<RequiredFieldError> {
     private String field;
 
     /**
-     *
+     *  <p><code>"A value is required for field $field."</code></p>
      */
 
     public RequiredFieldErrorBuilder message(final String message) {
@@ -38,7 +38,7 @@ public class RequiredFieldErrorBuilder implements Builder<RequiredFieldError> {
     }
 
     /**
-     *
+     *  <p>Error-specific additional fields.</p>
      */
 
     public RequiredFieldErrorBuilder values(final Map<String, java.lang.Object> values) {
@@ -47,7 +47,7 @@ public class RequiredFieldErrorBuilder implements Builder<RequiredFieldError> {
     }
 
     /**
-     *
+     *  <p>Error-specific additional fields.</p>
      */
 
     public RequiredFieldErrorBuilder addValue(final String key, final java.lang.Object value) {
@@ -59,7 +59,7 @@ public class RequiredFieldErrorBuilder implements Builder<RequiredFieldError> {
     }
 
     /**
-     *
+     *  <p>Name of the field missing the value.</p>
      */
 
     public RequiredFieldErrorBuilder field(final String field) {

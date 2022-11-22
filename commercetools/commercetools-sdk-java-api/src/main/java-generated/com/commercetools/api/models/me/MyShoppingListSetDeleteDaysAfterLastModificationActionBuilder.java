@@ -27,7 +27,7 @@ public class MyShoppingListSetDeleteDaysAfterLastModificationActionBuilder
     private Long deleteDaysAfterLastModification;
 
     /**
-     *
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
      */
 
     public MyShoppingListSetDeleteDaysAfterLastModificationActionBuilder deleteDaysAfterLastModification(

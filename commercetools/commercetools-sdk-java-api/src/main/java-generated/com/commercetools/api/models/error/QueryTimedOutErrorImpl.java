@@ -15,7 +15,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * QueryTimedOutError
+ *  <p>Returned when the query times out.</p>
+ *  <p>If a query constantly times out, please check if it follows the performance best practices.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class QueryTimedOutErrorImpl implements QueryTimedOutError, ModelBase {
@@ -47,7 +48,7 @@ public class QueryTimedOutErrorImpl implements QueryTimedOutError, ModelBase {
     }
 
     /**
-     *
+     *  <p><code>"The query timed out. If your query constantly times out, please check that it follows the performance best practices (see https://docs.commercetools.com/api/predicates/query#performance-considerations)."</code></p>
      */
 
     public String getMessage() {
@@ -55,7 +56,7 @@ public class QueryTimedOutErrorImpl implements QueryTimedOutError, ModelBase {
     }
 
     /**
-     *
+     *  <p>Error-specific additional fields.</p>
      */
 
     public Map<String, java.lang.Object> values() {

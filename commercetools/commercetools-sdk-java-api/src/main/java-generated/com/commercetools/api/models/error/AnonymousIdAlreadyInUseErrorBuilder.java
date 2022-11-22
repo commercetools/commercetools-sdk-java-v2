@@ -26,7 +26,7 @@ public class AnonymousIdAlreadyInUseErrorBuilder implements Builder<AnonymousIdA
     private Map<String, java.lang.Object> values = new HashMap<>();
 
     /**
-     *
+     *  <p><code>"The given anonymous ID is already in use."</code></p>
      */
 
     public AnonymousIdAlreadyInUseErrorBuilder message(final String message) {
@@ -35,7 +35,7 @@ public class AnonymousIdAlreadyInUseErrorBuilder implements Builder<AnonymousIdA
     }
 
     /**
-     *
+     *  <p>Error-specific additional fields.</p>
      */
 
     public AnonymousIdAlreadyInUseErrorBuilder values(final Map<String, java.lang.Object> values) {
@@ -44,7 +44,7 @@ public class AnonymousIdAlreadyInUseErrorBuilder implements Builder<AnonymousIdA
     }
 
     /**
-     *
+     *  <p>Error-specific additional fields.</p>
      */
 
     public AnonymousIdAlreadyInUseErrorBuilder addValue(final String key, final java.lang.Object value) {

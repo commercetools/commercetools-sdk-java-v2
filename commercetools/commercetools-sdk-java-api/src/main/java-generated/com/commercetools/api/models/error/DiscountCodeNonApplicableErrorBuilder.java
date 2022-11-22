@@ -34,7 +34,7 @@ public class DiscountCodeNonApplicableErrorBuilder implements Builder<DiscountCo
     private String reason;
 
     @Nullable
-    private String dicountCodeId;
+    private String discountCodeId;
 
     @Nullable
     private java.time.ZonedDateTime validFrom;
@@ -46,7 +46,7 @@ public class DiscountCodeNonApplicableErrorBuilder implements Builder<DiscountCo
     private java.time.ZonedDateTime validityCheckTime;
 
     /**
-     *
+     *  <p><code>"The discountCode $discountCodeId cannot be applied to the cart."</code></p>
      */
 
     public DiscountCodeNonApplicableErrorBuilder message(final String message) {
@@ -55,7 +55,7 @@ public class DiscountCodeNonApplicableErrorBuilder implements Builder<DiscountCo
     }
 
     /**
-     *
+     *  <p>Error-specific additional fields.</p>
      */
 
     public DiscountCodeNonApplicableErrorBuilder values(final Map<String, java.lang.Object> values) {
@@ -64,7 +64,7 @@ public class DiscountCodeNonApplicableErrorBuilder implements Builder<DiscountCo
     }
 
     /**
-     *
+     *  <p>Error-specific additional fields.</p>
      */
 
     public DiscountCodeNonApplicableErrorBuilder addValue(final String key, final java.lang.Object value) {
@@ -76,7 +76,7 @@ public class DiscountCodeNonApplicableErrorBuilder implements Builder<DiscountCo
     }
 
     /**
-     *
+     *  <p>Discount Code passed to the Cart.</p>
      */
 
     public DiscountCodeNonApplicableErrorBuilder discountCode(@Nullable final String discountCode) {
@@ -85,7 +85,7 @@ public class DiscountCodeNonApplicableErrorBuilder implements Builder<DiscountCo
     }
 
     /**
-     *
+     *  <p><code>"DoesNotExist"</code> or <code>"TimeRangeNonApplicable"</code></p>
      */
 
     public DiscountCodeNonApplicableErrorBuilder reason(@Nullable final String reason) {
@@ -94,16 +94,16 @@ public class DiscountCodeNonApplicableErrorBuilder implements Builder<DiscountCo
     }
 
     /**
-     *
+     *  <p>Unique identifier of the Discount Code.</p>
      */
 
-    public DiscountCodeNonApplicableErrorBuilder dicountCodeId(@Nullable final String dicountCodeId) {
-        this.dicountCodeId = dicountCodeId;
+    public DiscountCodeNonApplicableErrorBuilder discountCodeId(@Nullable final String discountCodeId) {
+        this.discountCodeId = discountCodeId;
         return this;
     }
 
     /**
-     *
+     *  <p>Date and time (UTC) from which the Discount Code is valid.</p>
      */
 
     public DiscountCodeNonApplicableErrorBuilder validFrom(@Nullable final java.time.ZonedDateTime validFrom) {
@@ -112,7 +112,7 @@ public class DiscountCodeNonApplicableErrorBuilder implements Builder<DiscountCo
     }
 
     /**
-     *
+     *  <p>Date and time (UTC) until which the Discount Code is valid.</p>
      */
 
     public DiscountCodeNonApplicableErrorBuilder validUntil(@Nullable final java.time.ZonedDateTime validUntil) {
@@ -121,7 +121,7 @@ public class DiscountCodeNonApplicableErrorBuilder implements Builder<DiscountCo
     }
 
     /**
-     *
+     *  <p>Date and time (UTC) the Discount Code validity check was last performed.</p>
      */
 
     public DiscountCodeNonApplicableErrorBuilder validityCheckTime(
@@ -149,8 +149,8 @@ public class DiscountCodeNonApplicableErrorBuilder implements Builder<DiscountCo
     }
 
     @Nullable
-    public String getDicountCodeId() {
-        return this.dicountCodeId;
+    public String getDiscountCodeId() {
+        return this.discountCodeId;
     }
 
     @Nullable
@@ -171,7 +171,7 @@ public class DiscountCodeNonApplicableErrorBuilder implements Builder<DiscountCo
     public DiscountCodeNonApplicableError build() {
         Objects.requireNonNull(message, DiscountCodeNonApplicableError.class + ": message is missing");
         Objects.requireNonNull(values, DiscountCodeNonApplicableError.class + ": values are missing");
-        return new DiscountCodeNonApplicableErrorImpl(message, values, discountCode, reason, dicountCodeId, validFrom,
+        return new DiscountCodeNonApplicableErrorImpl(message, values, discountCode, reason, discountCodeId, validFrom,
             validUntil, validityCheckTime);
     }
 
@@ -179,7 +179,7 @@ public class DiscountCodeNonApplicableErrorBuilder implements Builder<DiscountCo
      * builds DiscountCodeNonApplicableError without checking for non null required values
      */
     public DiscountCodeNonApplicableError buildUnchecked() {
-        return new DiscountCodeNonApplicableErrorImpl(message, values, discountCode, reason, dicountCodeId, validFrom,
+        return new DiscountCodeNonApplicableErrorImpl(message, values, discountCode, reason, discountCodeId, validFrom,
             validUntil, validityCheckTime);
     }
 
@@ -193,7 +193,7 @@ public class DiscountCodeNonApplicableErrorBuilder implements Builder<DiscountCo
         builder.values = template.values();
         builder.discountCode = template.getDiscountCode();
         builder.reason = template.getReason();
-        builder.dicountCodeId = template.getDicountCodeId();
+        builder.discountCodeId = template.getDiscountCodeId();
         builder.validFrom = template.getValidFrom();
         builder.validUntil = template.getValidUntil();
         builder.validityCheckTime = template.getValidityCheckTime();

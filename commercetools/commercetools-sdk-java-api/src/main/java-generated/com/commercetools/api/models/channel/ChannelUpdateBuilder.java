@@ -28,7 +28,7 @@ public class ChannelUpdateBuilder implements Builder<ChannelUpdate> {
     private java.util.List<com.commercetools.api.models.channel.ChannelUpdateAction> actions;
 
     /**
-     *  <p>Expected version of the Channel on which the changes should be applied. If the expected version does not match the actual version, a 409 Conflict error will be returned.</p>
+     *  <p>Expected version of the Channel on which the changes should be applied. If the expected version does not match the actual version, a ConcurrentModification error is returned.</p>
      */
 
     public ChannelUpdateBuilder version(final Long version) {

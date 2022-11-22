@@ -15,7 +15,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * DuplicateAttributeValueError
+ *  <p>Returned when the <code>Unique</code> AttributeConstraint criteria are not met during an Update Product request.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -38,9 +38,25 @@ public interface DuplicateAttributeValueError extends ErrorObject {
      *
      */
     @NotNull
+    @JsonProperty("code")
+    public String getCode();
+
+    /**
+     *  <p><code>"Attribute can't have the same value in a different variant."</code></p>
+     */
+    @NotNull
+    @JsonProperty("message")
+    public String getMessage();
+
+    /**
+     *  <p>Conflicting Attributes.</p>
+     */
+    @NotNull
     @Valid
     @JsonProperty("attribute")
     public Attribute getAttribute();
+
+    public void setMessage(final String message);
 
     public void setAttribute(final Attribute attribute);
 

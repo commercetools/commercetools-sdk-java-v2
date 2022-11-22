@@ -52,7 +52,7 @@ public class MyShoppingListSetLineItemCustomTypeActionImpl
     }
 
     /**
-     *
+     *  <p>Unique identifier of an existing ShoppingListLineItem in the ShoppingList.</p>
      */
 
     public String getLineItemId() {
@@ -60,7 +60,7 @@ public class MyShoppingListSetLineItemCustomTypeActionImpl
     }
 
     /**
-     *  <p>Defines the Type that extends the LineItem with Custom Fields. If absent, any existing Type and Custom Fields are removed from the LineItem.</p>
+     *  <p>Defines the Type that extends the ShoppingListLineItem with Custom Fields. If absent, any existing Type and Custom Fields are removed from the ShoppingListLineItem.</p>
      */
 
     public com.commercetools.api.models.type.TypeResourceIdentifier getType() {
@@ -68,7 +68,7 @@ public class MyShoppingListSetLineItemCustomTypeActionImpl
     }
 
     /**
-     *  <p>Sets the Custom Fields fields for the LineItem.</p>
+     *  <p>Sets the Custom Fields fields for the ShoppingListLineItem.</p>
      */
 
     public com.commercetools.api.models.type.FieldContainer getFields() {

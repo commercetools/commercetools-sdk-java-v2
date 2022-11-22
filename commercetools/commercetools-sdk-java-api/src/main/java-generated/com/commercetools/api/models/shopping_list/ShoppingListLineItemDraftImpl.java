@@ -15,65 +15,42 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * ShoppingListLineItemDraft
+ *  <p>The ProductVariant to be included in the ShoppingListLineItem must be specified using the <code>productID</code> and <code>variantID</code>, or by the <code>sku</code>.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ShoppingListLineItemDraftImpl implements ShoppingListLineItemDraft, ModelBase {
+
+    private String productId;
+
+    private Long variantId;
+
+    private String sku;
 
     private java.time.ZonedDateTime addedAt;
 
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
 
-    private String sku;
-
-    private String productId;
-
-    private Integer quantity;
-
-    private Long variantId;
+    private Long quantity;
 
     @JsonCreator
-    ShoppingListLineItemDraftImpl(@JsonProperty("addedAt") final java.time.ZonedDateTime addedAt,
+    ShoppingListLineItemDraftImpl(@JsonProperty("productId") final String productId,
+            @JsonProperty("variantId") final Long variantId, @JsonProperty("sku") final String sku,
+            @JsonProperty("addedAt") final java.time.ZonedDateTime addedAt,
             @JsonProperty("custom") final com.commercetools.api.models.type.CustomFieldsDraft custom,
-            @JsonProperty("sku") final String sku, @JsonProperty("productId") final String productId,
-            @JsonProperty("quantity") final Integer quantity, @JsonProperty("variantId") final Long variantId) {
+            @JsonProperty("quantity") final Long quantity) {
+        this.productId = productId;
+        this.variantId = variantId;
+        this.sku = sku;
         this.addedAt = addedAt;
         this.custom = custom;
-        this.sku = sku;
-        this.productId = productId;
         this.quantity = quantity;
-        this.variantId = variantId;
     }
 
     public ShoppingListLineItemDraftImpl() {
     }
 
     /**
-     *
-     */
-
-    public java.time.ZonedDateTime getAddedAt() {
-        return this.addedAt;
-    }
-
-    /**
-     *  <p>The representation used when creating or updating a customizable data type with Custom Fields.</p>
-     */
-
-    public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
-        return this.custom;
-    }
-
-    /**
-     *
-     */
-
-    public String getSku() {
-        return this.sku;
-    }
-
-    /**
-     *
+     *  <p>Unique identifier of a Product.</p>
      */
 
     public String getProductId() {
@@ -81,19 +58,55 @@ public class ShoppingListLineItemDraftImpl implements ShoppingListLineItemDraft,
     }
 
     /**
-     *
-     */
-
-    public Integer getQuantity() {
-        return this.quantity;
-    }
-
-    /**
-     *
+     *  <p><code>id</code> of the ProductVariant. If not set, the ShoppingListLineItem refers to the Master Variant.</p>
      */
 
     public Long getVariantId() {
         return this.variantId;
+    }
+
+    /**
+     *  <p><code>sku</code> of the ProductVariant.</p>
+     */
+
+    public String getSku() {
+        return this.sku;
+    }
+
+    /**
+     *  <p>Date and time the ShoppingListLineItem is added to the ShoppingList. If not set, the current date and time (UTC) is used.</p>
+     */
+
+    public java.time.ZonedDateTime getAddedAt() {
+        return this.addedAt;
+    }
+
+    /**
+     *  <p>Custom Fields of the ShoppingListLineItem.</p>
+     */
+
+    public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
+        return this.custom;
+    }
+
+    /**
+     *  <p>Number of Products in the ShoppingListLineItem.</p>
+     */
+
+    public Long getQuantity() {
+        return this.quantity;
+    }
+
+    public void setProductId(final String productId) {
+        this.productId = productId;
+    }
+
+    public void setVariantId(final Long variantId) {
+        this.variantId = variantId;
+    }
+
+    public void setSku(final String sku) {
+        this.sku = sku;
     }
 
     public void setAddedAt(final java.time.ZonedDateTime addedAt) {
@@ -104,20 +117,8 @@ public class ShoppingListLineItemDraftImpl implements ShoppingListLineItemDraft,
         this.custom = custom;
     }
 
-    public void setSku(final String sku) {
-        this.sku = sku;
-    }
-
-    public void setProductId(final String productId) {
-        this.productId = productId;
-    }
-
-    public void setQuantity(final Integer quantity) {
+    public void setQuantity(final Long quantity) {
         this.quantity = quantity;
-    }
-
-    public void setVariantId(final Long variantId) {
-        this.variantId = variantId;
     }
 
     @Override
@@ -130,23 +131,23 @@ public class ShoppingListLineItemDraftImpl implements ShoppingListLineItemDraft,
 
         ShoppingListLineItemDraftImpl that = (ShoppingListLineItemDraftImpl) o;
 
-        return new EqualsBuilder().append(addedAt, that.addedAt)
-                .append(custom, that.custom)
-                .append(sku, that.sku)
-                .append(productId, that.productId)
-                .append(quantity, that.quantity)
+        return new EqualsBuilder().append(productId, that.productId)
                 .append(variantId, that.variantId)
+                .append(sku, that.sku)
+                .append(addedAt, that.addedAt)
+                .append(custom, that.custom)
+                .append(quantity, that.quantity)
                 .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(addedAt)
-                .append(custom)
-                .append(sku)
-                .append(productId)
-                .append(quantity)
+        return new HashCodeBuilder(17, 37).append(productId)
                 .append(variantId)
+                .append(sku)
+                .append(addedAt)
+                .append(custom)
+                .append(quantity)
                 .toHashCode();
     }
 

@@ -18,7 +18,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Gets the current or staged representation of a product in a catalog by ID. When used with an API client that has the view_published_products:{projectKey} scope, this endpoint only returns published (current) product projections.</p>
+ *  <p>Gets the current or staged representation of a Product by its ID. When used with an API Client that has the <code>view_published_products:{projectKey}</code> scope, this endpoint only returns published (current) Product Projections.</p>
  *
  * <hr>
  * <div class=code-example>
@@ -35,7 +35,8 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ByProjectKeyProductProjectionsByIDGet
         extends ApiMethod<ByProjectKeyProductProjectionsByIDGet, com.commercetools.api.models.product.ProductProjection>
-        implements com.commercetools.api.client.PriceselectingTrait<ByProjectKeyProductProjectionsByIDGet>,
+        implements com.commercetools.api.client.ProjectionselectingTrait<ByProjectKeyProductProjectionsByIDGet>,
+        com.commercetools.api.client.PriceselectingTrait<ByProjectKeyProductProjectionsByIDGet>,
         com.commercetools.api.client.LocaleprojectingTrait<ByProjectKeyProductProjectionsByIDGet>,
         com.commercetools.api.client.StoreprojectingTrait<ByProjectKeyProductProjectionsByIDGet>,
         com.commercetools.api.client.ExpandableTrait<ByProjectKeyProductProjectionsByIDGet>,

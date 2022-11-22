@@ -45,7 +45,7 @@ public class ShoppingListChangeTextLineItemsOrderActionImpl
     }
 
     /**
-     *
+     *  <p>Must contain all existing TextLineItem <code>id</code>s in the desired new order.</p>
      */
 
     public java.util.List<String> getTextLineItemOrder() {

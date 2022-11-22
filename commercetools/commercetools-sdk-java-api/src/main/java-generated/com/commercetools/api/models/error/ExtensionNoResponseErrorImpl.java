@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * ExtensionNoResponseError
+ *  <p>Returned when the API Extension does not respond within the time limit, or could not be reached.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ExtensionNoResponseErrorImpl implements ExtensionNoResponseError, ModelBase {
@@ -55,7 +55,7 @@ public class ExtensionNoResponseErrorImpl implements ExtensionNoResponseError, M
     }
 
     /**
-     *
+     *  <p><code>"Extension did not respond in time."</code></p>
      */
 
     public String getMessage() {
@@ -63,7 +63,7 @@ public class ExtensionNoResponseErrorImpl implements ExtensionNoResponseError, M
     }
 
     /**
-     *
+     *  <p>Error-specific additional fields.</p>
      */
 
     public Map<String, java.lang.Object> values() {
@@ -71,7 +71,7 @@ public class ExtensionNoResponseErrorImpl implements ExtensionNoResponseError, M
     }
 
     /**
-     *
+     *  <p>Unique identifier of the API Extension.</p>
      */
 
     public String getExtensionId() {
@@ -79,7 +79,7 @@ public class ExtensionNoResponseErrorImpl implements ExtensionNoResponseError, M
     }
 
     /**
-     *
+     *  <p>User-defined unique identifier of the API Extension, if available.</p>
      */
 
     public String getExtensionKey() {

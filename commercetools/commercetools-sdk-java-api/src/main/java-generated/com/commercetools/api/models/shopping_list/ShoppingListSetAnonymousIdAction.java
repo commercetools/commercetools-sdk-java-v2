@@ -11,7 +11,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>Sets an anonymous ID that corresponds to a Customer who has authenticated with an anonymous session.</p>
+ * ShoppingListSetAnonymousIdAction
  *
  * <hr>
  * Example to create an instance using the builder pattern

@@ -24,8 +24,6 @@ import io.vrap.rmf.base.client.utils.Generated;
 public class PaymentStatusInterfaceCodeSetMessagePayloadBuilder
         implements Builder<PaymentStatusInterfaceCodeSetMessagePayload> {
 
-    @Deprecated
-
     private String paymentId;
 
     @Nullable
@@ -34,7 +32,7 @@ public class PaymentStatusInterfaceCodeSetMessagePayloadBuilder
     /**
      *  <p>Unique identifier for the Payment for which the Set StatusInterfaceCode update action was applied.</p>
      */
-    @Deprecated
+
     public PaymentStatusInterfaceCodeSetMessagePayloadBuilder paymentId(final String paymentId) {
         this.paymentId = paymentId;
         return this;
@@ -48,8 +46,6 @@ public class PaymentStatusInterfaceCodeSetMessagePayloadBuilder
         this.interfaceCode = interfaceCode;
         return this;
     }
-
-    @Deprecated
 
     public String getPaymentId() {
         return this.paymentId;

@@ -24,7 +24,6 @@ public class PaymentDraftImpl implements PaymentDraft, ModelBase {
 
     private String anonymousId;
 
-    @Deprecated
     private String externalId;
 
     private String interfaceId;
@@ -88,7 +87,7 @@ public class PaymentDraftImpl implements PaymentDraft, ModelBase {
     }
 
     /**
-     *  <p>A reference to the customer this payment belongs to.</p>
+     *  <p>Reference to a Customer associated with the Payment.</p>
      */
 
     public com.commercetools.api.models.customer.CustomerResourceIdentifier getCustomer() {
@@ -96,7 +95,7 @@ public class PaymentDraftImpl implements PaymentDraft, ModelBase {
     }
 
     /**
-     *  <p>Identifies payments belonging to an anonymous session (the customer has not signed up/in yet).</p>
+     *  <p>Anonymous session associated with the Payment.</p>
      */
 
     public String getAnonymousId() {
@@ -104,15 +103,15 @@ public class PaymentDraftImpl implements PaymentDraft, ModelBase {
     }
 
     /**
-     *
+     *  <p>Additional identifier for external systems like Customer Relationship Management (CRM) or Enterprise Resource Planning (ERP).</p>
      */
-    @Deprecated
+
     public String getExternalId() {
         return this.externalId;
     }
 
     /**
-     *  <p>The identifier that is used by the interface that manages the payment (usually the PSP). Cannot be changed once it has been set. The combination of this ID and the PaymentMethodInfo <code>paymentInterface</code> must be unique.</p>
+     *  <p>Identifier used by the payment service that processes the Payment (for example, a PSP). The combination of <code>interfaceId</code> and the <code>paymentInterface</code> field on PaymentMethodInfo must be unique. Once set, it cannot be changed.</p>
      */
 
     public String getInterfaceId() {
@@ -120,7 +119,7 @@ public class PaymentDraftImpl implements PaymentDraft, ModelBase {
     }
 
     /**
-     *  <p>How much money this payment intends to receive from the customer. The value usually matches the cart or order gross total.</p>
+     *  <p>Money value the Payment intends to receive from the customer. The value typically matches the Cart or Order gross total.</p>
      */
 
     public com.commercetools.api.models.common.Money getAmountPlanned() {
@@ -128,8 +127,7 @@ public class PaymentDraftImpl implements PaymentDraft, ModelBase {
     }
 
     /**
-     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
-     *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
+     *  <p>Deprecated because the value can be calculated from the total amounts saved in the Transactions.</p>
      */
 
     public com.commercetools.api.models.common.Money getAmountAuthorized() {
@@ -137,7 +135,7 @@ public class PaymentDraftImpl implements PaymentDraft, ModelBase {
     }
 
     /**
-     *
+     *  <p>Deprecated because this field is of little practical value, as it is either not reliably known, or the authorization time is fixed for a PSP.</p>
      */
 
     public String getAuthorizedUntil() {
@@ -145,8 +143,7 @@ public class PaymentDraftImpl implements PaymentDraft, ModelBase {
     }
 
     /**
-     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
-     *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
+     *  <p>Deprecated because the value can be calculated from the total amounts saved in the Transactions.</p>
      */
 
     public com.commercetools.api.models.common.Money getAmountPaid() {
@@ -154,8 +151,7 @@ public class PaymentDraftImpl implements PaymentDraft, ModelBase {
     }
 
     /**
-     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
-     *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
+     *  <p>Deprecated because the value can be calculated from the total amounts saved in the Transactions.</p>
      */
 
     public com.commercetools.api.models.common.Money getAmountRefunded() {
@@ -163,7 +159,7 @@ public class PaymentDraftImpl implements PaymentDraft, ModelBase {
     }
 
     /**
-     *
+     *  <p>Information regarding the payment interface (for example, a PSP), and the specific payment method used.</p>
      */
 
     public com.commercetools.api.models.payment.PaymentMethodInfo getPaymentMethodInfo() {
@@ -171,7 +167,7 @@ public class PaymentDraftImpl implements PaymentDraft, ModelBase {
     }
 
     /**
-     *
+     *  <p>Current status of the Payment.</p>
      */
 
     public com.commercetools.api.models.payment.PaymentStatusDraft getPaymentStatus() {
@@ -179,7 +175,7 @@ public class PaymentDraftImpl implements PaymentDraft, ModelBase {
     }
 
     /**
-     *  <p>A list of financial transactions of different TransactionTypes with different TransactionStates.</p>
+     *  <p>Financial transactions of the Payment. Each Transaction has a TransactionType and a TransactionState.</p>
      */
 
     public java.util.List<com.commercetools.api.models.payment.TransactionDraft> getTransactions() {
@@ -187,7 +183,7 @@ public class PaymentDraftImpl implements PaymentDraft, ModelBase {
     }
 
     /**
-     *  <p>Interface interactions can be requests send to the PSP, responses received from the PSP or notifications received from the PSP. Some interactions may result in a transaction. If so, the <code>interactionId</code> in the Transaction should be set to match the ID of the PSP for the interaction. Interactions are managed by the PSP integration and are usually neither written nor read by the user facing frontends or other services.</p>
+     *  <p>Represents information exchange with the payment service, for example, a PSP. An interaction may be a request sent, or a response or notification received from the payment service.</p>
      */
 
     public java.util.List<com.commercetools.api.models.type.CustomFieldsDraft> getInterfaceInteractions() {
@@ -195,7 +191,7 @@ public class PaymentDraftImpl implements PaymentDraft, ModelBase {
     }
 
     /**
-     *
+     *  <p>Custom Fields for the Payment.</p>
      */
 
     public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
@@ -218,7 +214,6 @@ public class PaymentDraftImpl implements PaymentDraft, ModelBase {
         this.anonymousId = anonymousId;
     }
 
-    @Deprecated
     public void setExternalId(final String externalId) {
         this.externalId = externalId;
     }

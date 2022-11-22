@@ -39,7 +39,7 @@ public class PaymentStatusDraftImpl implements PaymentStatusDraft, ModelBase {
     }
 
     /**
-     *
+     *  <p>External reference that identifies the current status of the Payment.</p>
      */
 
     public String getInterfaceCode() {
@@ -47,7 +47,7 @@ public class PaymentStatusDraftImpl implements PaymentStatusDraft, ModelBase {
     }
 
     /**
-     *
+     *  <p>Text describing the current status of the Payment.</p>
      */
 
     public String getInterfaceText() {
@@ -55,7 +55,7 @@ public class PaymentStatusDraftImpl implements PaymentStatusDraft, ModelBase {
     }
 
     /**
-     *  <p>ResourceIdentifier to a State.</p>
+     *  <p>Reference to a State.</p>
      */
 
     public com.commercetools.api.models.state.StateResourceIdentifier getState() {

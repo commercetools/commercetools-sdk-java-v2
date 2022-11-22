@@ -50,7 +50,7 @@ public class PaymentSetTransactionCustomFieldActionImpl implements PaymentSetTra
     }
 
     /**
-     *
+     *  <p>Unique identifier of the Transaction.</p>
      */
 
     public String getTransactionId() {
@@ -58,7 +58,7 @@ public class PaymentSetTransactionCustomFieldActionImpl implements PaymentSetTra
     }
 
     /**
-     *  <p>description: | Name of the Custom Field.</p>
+     *  <p>Name of the Custom Field.</p>
      */
 
     public String getName() {

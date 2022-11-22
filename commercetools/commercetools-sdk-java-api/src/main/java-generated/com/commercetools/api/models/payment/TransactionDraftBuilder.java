@@ -42,7 +42,7 @@ public class TransactionDraftBuilder implements Builder<TransactionDraft> {
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
 
     /**
-     *  <p>The time at which the transaction took place.</p>
+     *  <p>Date and time (UTC) the Transaction took place.</p>
      */
 
     public TransactionDraftBuilder timestamp(@Nullable final java.time.ZonedDateTime timestamp) {
@@ -51,7 +51,7 @@ public class TransactionDraftBuilder implements Builder<TransactionDraft> {
     }
 
     /**
-     *  <p>The type of this transaction.</p>
+     *  <p>Type of the Transaction.</p>
      */
 
     public TransactionDraftBuilder type(final com.commercetools.api.models.payment.TransactionType type) {
@@ -60,7 +60,7 @@ public class TransactionDraftBuilder implements Builder<TransactionDraft> {
     }
 
     /**
-     *
+     *  <p>Money value for the Transaction.</p>
      */
 
     public TransactionDraftBuilder amount(
@@ -70,7 +70,7 @@ public class TransactionDraftBuilder implements Builder<TransactionDraft> {
     }
 
     /**
-     *
+     *  <p>Money value for the Transaction.</p>
      */
 
     public TransactionDraftBuilder amount(final com.commercetools.api.models.common.Money amount) {
@@ -79,7 +79,7 @@ public class TransactionDraftBuilder implements Builder<TransactionDraft> {
     }
 
     /**
-     *  <p>The identifier that is used by the interface that managed the transaction (usually the PSP). If a matching interaction was logged in the <code>interfaceInteractions</code> array, the corresponding interaction should be findable with this ID.</p>
+     *  <p>Identifier used by the payment service that manages the Transaction. Can be used to correlate the Transaction to an interface interaction.</p>
      */
 
     public TransactionDraftBuilder interactionId(@Nullable final String interactionId) {
@@ -88,7 +88,7 @@ public class TransactionDraftBuilder implements Builder<TransactionDraft> {
     }
 
     /**
-     *  <p>The state of this transaction. If not set, defaults to <code>Initial</code>.</p>
+     *  <p>State of the Transaction.</p>
      */
 
     public TransactionDraftBuilder state(@Nullable final com.commercetools.api.models.payment.TransactionState state) {
@@ -97,7 +97,7 @@ public class TransactionDraftBuilder implements Builder<TransactionDraft> {
     }
 
     /**
-     *  <p>Custom Fields for the Transaction.</p>
+     *  <p>Custom Fields of the Transaction.</p>
      */
 
     public TransactionDraftBuilder custom(
@@ -107,7 +107,7 @@ public class TransactionDraftBuilder implements Builder<TransactionDraft> {
     }
 
     /**
-     *  <p>Custom Fields for the Transaction.</p>
+     *  <p>Custom Fields of the Transaction.</p>
      */
 
     public TransactionDraftBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFieldsDraft custom) {

@@ -43,7 +43,7 @@ public class MyPaymentDraftImpl implements MyPaymentDraft, ModelBase {
     }
 
     /**
-     *  <p>How much money this payment intends to receive from the customer. The value usually matches the cart or order gross total.</p>
+     *  <p>Money value the Payment intends to receive from the customer. The value usually matches the Cart or Order gross total.</p>
      */
 
     public com.commercetools.api.models.common.Money getAmountPlanned() {
@@ -51,7 +51,7 @@ public class MyPaymentDraftImpl implements MyPaymentDraft, ModelBase {
     }
 
     /**
-     *
+     *  <p>Information regarding the payment interface (for example, a PSP), and the specific payment method used.</p>
      */
 
     public com.commercetools.api.models.payment.PaymentMethodInfo getPaymentMethodInfo() {
@@ -59,7 +59,7 @@ public class MyPaymentDraftImpl implements MyPaymentDraft, ModelBase {
     }
 
     /**
-     *
+     *  <p>Custom Fields for the Payment.</p>
      */
 
     public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
@@ -67,7 +67,7 @@ public class MyPaymentDraftImpl implements MyPaymentDraft, ModelBase {
     }
 
     /**
-     *  <p>A list of financial transactions of the <code>Authorization</code> or <code>Charge</code> TransactionTypes.</p>
+     *  <p>Financial transactions of the TransactionTypes <code>Authorization</code> or <code>Charge</code>.</p>
      */
 
     public com.commercetools.api.models.me.MyTransactionDraft getTransaction() {

@@ -43,7 +43,7 @@ public class PaymentSetInterfaceIdActionImpl implements PaymentSetInterfaceIdAct
     }
 
     /**
-     *
+     *  <p>Value to set. Once set, the <code>interfaceId</code> cannot be changed.</p>
      */
 
     public String getInterfaceId() {

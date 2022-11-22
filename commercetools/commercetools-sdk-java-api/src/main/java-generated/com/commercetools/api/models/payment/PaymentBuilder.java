@@ -53,9 +53,24 @@ public class PaymentBuilder implements Builder<Payment> {
     private String anonymousId;
 
     @Nullable
+    private String externalId;
+
+    @Nullable
     private String interfaceId;
 
-    private com.commercetools.api.models.common.TypedMoney amountPlanned;
+    private com.commercetools.api.models.common.CentPrecisionMoney amountPlanned;
+
+    @Nullable
+    private com.commercetools.api.models.common.TypedMoney amountAuthorized;
+
+    @Nullable
+    private String authorizedUntil;
+
+    @Nullable
+    private com.commercetools.api.models.common.TypedMoney amountPaid;
+
+    @Nullable
+    private com.commercetools.api.models.common.TypedMoney amountRefunded;
 
     private com.commercetools.api.models.payment.PaymentMethodInfo paymentMethodInfo;
 
@@ -81,7 +96,7 @@ public class PaymentBuilder implements Builder<Payment> {
     }
 
     /**
-     *
+     *  <p>Current version of the Payment.</p>
      */
 
     public PaymentBuilder version(final Long version) {
@@ -90,7 +105,7 @@ public class PaymentBuilder implements Builder<Payment> {
     }
 
     /**
-     *
+     *  <p>Date and time (UTC) the Payment was initially created.</p>
      */
 
     public PaymentBuilder createdAt(final java.time.ZonedDateTime createdAt) {
@@ -99,7 +114,7 @@ public class PaymentBuilder implements Builder<Payment> {
     }
 
     /**
-     *
+     *  <p>Date and time (UTC) the Payment was last updated.</p>
      */
 
     public PaymentBuilder lastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {
@@ -147,7 +162,7 @@ public class PaymentBuilder implements Builder<Payment> {
     }
 
     /**
-     *  <p>A reference to the customer this payment belongs to.</p>
+     *  <p>Reference to a Customer associated with the Payment.</p>
      */
 
     public PaymentBuilder customer(
@@ -157,7 +172,7 @@ public class PaymentBuilder implements Builder<Payment> {
     }
 
     /**
-     *  <p>A reference to the customer this payment belongs to.</p>
+     *  <p>Reference to a Customer associated with the Payment.</p>
      */
 
     public PaymentBuilder customer(@Nullable final com.commercetools.api.models.customer.CustomerReference customer) {
@@ -166,7 +181,7 @@ public class PaymentBuilder implements Builder<Payment> {
     }
 
     /**
-     *  <p>Identifies payments belonging to an anonymous session (the customer has not signed up/in yet).</p>
+     *  <p>Anonymous session associated with the Payment.</p>
      */
 
     public PaymentBuilder anonymousId(@Nullable final String anonymousId) {
@@ -175,7 +190,16 @@ public class PaymentBuilder implements Builder<Payment> {
     }
 
     /**
-     *  <p>The identifier that is used by the interface that manages the payment (usually the PSP). Cannot be changed once it has been set. The combination of this ID and the PaymentMethodInfo <code>paymentInterface</code> must be unique.</p>
+     *  <p>Additional identifier for external systems like Customer Relationship Management (CRM) or Enterprise Resource Planning (ERP).</p>
+     */
+
+    public PaymentBuilder externalId(@Nullable final String externalId) {
+        this.externalId = externalId;
+        return this;
+    }
+
+    /**
+     *  <p>Identifier used by the payment service that processes the Payment (for example, a PSP). The combination of <code>interfaceId</code> and the <code>paymentInterface</code> field on PaymentMethodInfo must be unique.</p>
      */
 
     public PaymentBuilder interfaceId(@Nullable final String interfaceId) {
@@ -184,26 +208,94 @@ public class PaymentBuilder implements Builder<Payment> {
     }
 
     /**
-     *  <p>How much money this payment intends to receive from the customer. The value usually matches the cart or order gross total.</p>
+     *  <p>Money value the Payment intends to receive from the customer. The value typically matches the Cart or Order gross total.</p>
      */
 
-    public PaymentBuilder amountPlanned(final com.commercetools.api.models.common.TypedMoney amountPlanned) {
+    public PaymentBuilder amountPlanned(
+            Function<com.commercetools.api.models.common.CentPrecisionMoneyBuilder, com.commercetools.api.models.common.CentPrecisionMoneyBuilder> builder) {
+        this.amountPlanned = builder.apply(com.commercetools.api.models.common.CentPrecisionMoneyBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Money value the Payment intends to receive from the customer. The value typically matches the Cart or Order gross total.</p>
+     */
+
+    public PaymentBuilder amountPlanned(final com.commercetools.api.models.common.CentPrecisionMoney amountPlanned) {
         this.amountPlanned = amountPlanned;
         return this;
     }
 
     /**
-     *  <p>How much money this payment intends to receive from the customer. The value usually matches the cart or order gross total.</p>
+     *  <p>Deprecated because its value can be calculated from the total amounts saved in the Transactions.</p>
      */
 
-    public PaymentBuilder amountPlanned(
-            Function<com.commercetools.api.models.common.TypedMoneyBuilder, Builder<? extends com.commercetools.api.models.common.TypedMoney>> builder) {
-        this.amountPlanned = builder.apply(com.commercetools.api.models.common.TypedMoneyBuilder.of()).build();
+    public PaymentBuilder amountAuthorized(
+            @Nullable final com.commercetools.api.models.common.TypedMoney amountAuthorized) {
+        this.amountAuthorized = amountAuthorized;
         return this;
     }
 
     /**
-     *
+     *  <p>Deprecated because its value can be calculated from the total amounts saved in the Transactions.</p>
+     */
+
+    public PaymentBuilder amountAuthorized(
+            Function<com.commercetools.api.models.common.TypedMoneyBuilder, Builder<? extends com.commercetools.api.models.common.TypedMoney>> builder) {
+        this.amountAuthorized = builder.apply(com.commercetools.api.models.common.TypedMoneyBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Deprecated because this field is of little practical value, as it is either not reliably known, or the authorization time is fixed for a PSP.</p>
+     */
+
+    public PaymentBuilder authorizedUntil(@Nullable final String authorizedUntil) {
+        this.authorizedUntil = authorizedUntil;
+        return this;
+    }
+
+    /**
+     *  <p>Deprecated because its value can be calculated from the total amounts saved in the Transactions.</p>
+     */
+
+    public PaymentBuilder amountPaid(@Nullable final com.commercetools.api.models.common.TypedMoney amountPaid) {
+        this.amountPaid = amountPaid;
+        return this;
+    }
+
+    /**
+     *  <p>Deprecated because its value can be calculated from the total amounts saved in the Transactions.</p>
+     */
+
+    public PaymentBuilder amountPaid(
+            Function<com.commercetools.api.models.common.TypedMoneyBuilder, Builder<? extends com.commercetools.api.models.common.TypedMoney>> builder) {
+        this.amountPaid = builder.apply(com.commercetools.api.models.common.TypedMoneyBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Deprecated because its value can be calculated from the total amounts saved in the Transactions.</p>
+     */
+
+    public PaymentBuilder amountRefunded(
+            @Nullable final com.commercetools.api.models.common.TypedMoney amountRefunded) {
+        this.amountRefunded = amountRefunded;
+        return this;
+    }
+
+    /**
+     *  <p>Deprecated because its value can be calculated from the total amounts saved in the Transactions.</p>
+     */
+
+    public PaymentBuilder amountRefunded(
+            Function<com.commercetools.api.models.common.TypedMoneyBuilder, Builder<? extends com.commercetools.api.models.common.TypedMoney>> builder) {
+        this.amountRefunded = builder.apply(com.commercetools.api.models.common.TypedMoneyBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Information regarding the payment interface (for example, a PSP), and the specific payment method used.</p>
      */
 
     public PaymentBuilder paymentMethodInfo(
@@ -214,7 +306,7 @@ public class PaymentBuilder implements Builder<Payment> {
     }
 
     /**
-     *
+     *  <p>Information regarding the payment interface (for example, a PSP), and the specific payment method used.</p>
      */
 
     public PaymentBuilder paymentMethodInfo(
@@ -224,7 +316,7 @@ public class PaymentBuilder implements Builder<Payment> {
     }
 
     /**
-     *
+     *  <p>Current status of the Payment.</p>
      */
 
     public PaymentBuilder paymentStatus(
@@ -234,7 +326,7 @@ public class PaymentBuilder implements Builder<Payment> {
     }
 
     /**
-     *
+     *  <p>Current status of the Payment.</p>
      */
 
     public PaymentBuilder paymentStatus(final com.commercetools.api.models.payment.PaymentStatus paymentStatus) {
@@ -243,7 +335,7 @@ public class PaymentBuilder implements Builder<Payment> {
     }
 
     /**
-     *  <p>A list of financial transactions of different TransactionTypes with different TransactionStates.</p>
+     *  <p>Financial transactions of the Payment. Each Transaction has a TransactionType and a TransactionState.</p>
      */
 
     public PaymentBuilder transactions(final com.commercetools.api.models.payment.Transaction... transactions) {
@@ -252,7 +344,7 @@ public class PaymentBuilder implements Builder<Payment> {
     }
 
     /**
-     *  <p>A list of financial transactions of different TransactionTypes with different TransactionStates.</p>
+     *  <p>Financial transactions of the Payment. Each Transaction has a TransactionType and a TransactionState.</p>
      */
 
     public PaymentBuilder transactions(
@@ -262,7 +354,7 @@ public class PaymentBuilder implements Builder<Payment> {
     }
 
     /**
-     *  <p>A list of financial transactions of different TransactionTypes with different TransactionStates.</p>
+     *  <p>Financial transactions of the Payment. Each Transaction has a TransactionType and a TransactionState.</p>
      */
 
     public PaymentBuilder plusTransactions(final com.commercetools.api.models.payment.Transaction... transactions) {
@@ -274,7 +366,7 @@ public class PaymentBuilder implements Builder<Payment> {
     }
 
     /**
-     *  <p>A list of financial transactions of different TransactionTypes with different TransactionStates.</p>
+     *  <p>Financial transactions of the Payment. Each Transaction has a TransactionType and a TransactionState.</p>
      */
 
     public PaymentBuilder plusTransactions(
@@ -287,7 +379,7 @@ public class PaymentBuilder implements Builder<Payment> {
     }
 
     /**
-     *  <p>A list of financial transactions of different TransactionTypes with different TransactionStates.</p>
+     *  <p>Financial transactions of the Payment. Each Transaction has a TransactionType and a TransactionState.</p>
      */
 
     public PaymentBuilder withTransactions(
@@ -298,7 +390,7 @@ public class PaymentBuilder implements Builder<Payment> {
     }
 
     /**
-     *  <p>Interface interactions can be requests sent to the PSP, responses received from the PSP or notifications received from the PSP. Some interactions may result in a transaction. If so, the <code>interactionId</code> in the Transaction should be set to match the ID of the PSP for the interaction. Interactions are managed by the PSP integration and are usually neither written nor read by the user facing frontends or other services.</p>
+     *  <p>Represents information exchange with the payment service, for example, a PSP. An interaction may be a request sent, or a response or notification received from the payment service.</p>
      */
 
     public PaymentBuilder interfaceInteractions(
@@ -308,7 +400,7 @@ public class PaymentBuilder implements Builder<Payment> {
     }
 
     /**
-     *  <p>Interface interactions can be requests sent to the PSP, responses received from the PSP or notifications received from the PSP. Some interactions may result in a transaction. If so, the <code>interactionId</code> in the Transaction should be set to match the ID of the PSP for the interaction. Interactions are managed by the PSP integration and are usually neither written nor read by the user facing frontends or other services.</p>
+     *  <p>Represents information exchange with the payment service, for example, a PSP. An interaction may be a request sent, or a response or notification received from the payment service.</p>
      */
 
     public PaymentBuilder interfaceInteractions(
@@ -318,7 +410,7 @@ public class PaymentBuilder implements Builder<Payment> {
     }
 
     /**
-     *  <p>Interface interactions can be requests sent to the PSP, responses received from the PSP or notifications received from the PSP. Some interactions may result in a transaction. If so, the <code>interactionId</code> in the Transaction should be set to match the ID of the PSP for the interaction. Interactions are managed by the PSP integration and are usually neither written nor read by the user facing frontends or other services.</p>
+     *  <p>Represents information exchange with the payment service, for example, a PSP. An interaction may be a request sent, or a response or notification received from the payment service.</p>
      */
 
     public PaymentBuilder plusInterfaceInteractions(
@@ -331,7 +423,7 @@ public class PaymentBuilder implements Builder<Payment> {
     }
 
     /**
-     *  <p>Interface interactions can be requests sent to the PSP, responses received from the PSP or notifications received from the PSP. Some interactions may result in a transaction. If so, the <code>interactionId</code> in the Transaction should be set to match the ID of the PSP for the interaction. Interactions are managed by the PSP integration and are usually neither written nor read by the user facing frontends or other services.</p>
+     *  <p>Represents information exchange with the payment service, for example, a PSP. An interaction may be a request sent, or a response or notification received from the payment service.</p>
      */
 
     public PaymentBuilder plusInterfaceInteractions(
@@ -345,7 +437,7 @@ public class PaymentBuilder implements Builder<Payment> {
     }
 
     /**
-     *  <p>Interface interactions can be requests sent to the PSP, responses received from the PSP or notifications received from the PSP. Some interactions may result in a transaction. If so, the <code>interactionId</code> in the Transaction should be set to match the ID of the PSP for the interaction. Interactions are managed by the PSP integration and are usually neither written nor read by the user facing frontends or other services.</p>
+     *  <p>Represents information exchange with the payment service, for example, a PSP. An interaction may be a request sent, or a response or notification received from the payment service.</p>
      */
 
     public PaymentBuilder withInterfaceInteractions(
@@ -357,7 +449,7 @@ public class PaymentBuilder implements Builder<Payment> {
     }
 
     /**
-     *
+     *  <p>Custom Fields for the Payment.</p>
      */
 
     public PaymentBuilder custom(
@@ -367,7 +459,7 @@ public class PaymentBuilder implements Builder<Payment> {
     }
 
     /**
-     *
+     *  <p>Custom Fields for the Payment.</p>
      */
 
     public PaymentBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFields custom) {
@@ -421,12 +513,37 @@ public class PaymentBuilder implements Builder<Payment> {
     }
 
     @Nullable
+    public String getExternalId() {
+        return this.externalId;
+    }
+
+    @Nullable
     public String getInterfaceId() {
         return this.interfaceId;
     }
 
-    public com.commercetools.api.models.common.TypedMoney getAmountPlanned() {
+    public com.commercetools.api.models.common.CentPrecisionMoney getAmountPlanned() {
         return this.amountPlanned;
+    }
+
+    @Nullable
+    public com.commercetools.api.models.common.TypedMoney getAmountAuthorized() {
+        return this.amountAuthorized;
+    }
+
+    @Nullable
+    public String getAuthorizedUntil() {
+        return this.authorizedUntil;
+    }
+
+    @Nullable
+    public com.commercetools.api.models.common.TypedMoney getAmountPaid() {
+        return this.amountPaid;
+    }
+
+    @Nullable
+    public com.commercetools.api.models.common.TypedMoney getAmountRefunded() {
+        return this.amountRefunded;
     }
 
     public com.commercetools.api.models.payment.PaymentMethodInfo getPaymentMethodInfo() {
@@ -466,8 +583,8 @@ public class PaymentBuilder implements Builder<Payment> {
         Objects.requireNonNull(transactions, Payment.class + ": transactions is missing");
         Objects.requireNonNull(interfaceInteractions, Payment.class + ": interfaceInteractions is missing");
         return new PaymentImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, customer, anonymousId,
-            interfaceId, amountPlanned, paymentMethodInfo, paymentStatus, transactions, interfaceInteractions, custom,
-            key);
+            externalId, interfaceId, amountPlanned, amountAuthorized, authorizedUntil, amountPaid, amountRefunded,
+            paymentMethodInfo, paymentStatus, transactions, interfaceInteractions, custom, key);
     }
 
     /**
@@ -475,8 +592,8 @@ public class PaymentBuilder implements Builder<Payment> {
      */
     public Payment buildUnchecked() {
         return new PaymentImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, customer, anonymousId,
-            interfaceId, amountPlanned, paymentMethodInfo, paymentStatus, transactions, interfaceInteractions, custom,
-            key);
+            externalId, interfaceId, amountPlanned, amountAuthorized, authorizedUntil, amountPaid, amountRefunded,
+            paymentMethodInfo, paymentStatus, transactions, interfaceInteractions, custom, key);
     }
 
     public static PaymentBuilder of() {
@@ -493,8 +610,13 @@ public class PaymentBuilder implements Builder<Payment> {
         builder.createdBy = template.getCreatedBy();
         builder.customer = template.getCustomer();
         builder.anonymousId = template.getAnonymousId();
+        builder.externalId = template.getExternalId();
         builder.interfaceId = template.getInterfaceId();
         builder.amountPlanned = template.getAmountPlanned();
+        builder.amountAuthorized = template.getAmountAuthorized();
+        builder.authorizedUntil = template.getAuthorizedUntil();
+        builder.amountPaid = template.getAmountPaid();
+        builder.amountRefunded = template.getAmountRefunded();
         builder.paymentMethodInfo = template.getPaymentMethodInfo();
         builder.paymentStatus = template.getPaymentStatus();
         builder.transactions = template.getTransactions();

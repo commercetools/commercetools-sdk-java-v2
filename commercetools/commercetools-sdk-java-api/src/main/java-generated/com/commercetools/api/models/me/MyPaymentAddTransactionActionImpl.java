@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * MyPaymentAddTransactionAction
+ *  <p>Adding a Transaction to a Payment generates the PaymentTransactionAdded Message. Once a Transaction is added to the Payment, it can no longer be updated or deleted using the My Payments API.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class MyPaymentAddTransactionActionImpl implements MyPaymentAddTransactionAction, ModelBase {
@@ -44,7 +44,7 @@ public class MyPaymentAddTransactionActionImpl implements MyPaymentAddTransactio
     }
 
     /**
-     *
+     *  <p>Transaction to add to the Payment.</p>
      */
 
     public com.commercetools.api.models.payment.TransactionDraft getTransaction() {

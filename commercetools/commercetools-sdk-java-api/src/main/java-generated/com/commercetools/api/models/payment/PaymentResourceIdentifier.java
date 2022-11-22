@@ -12,7 +12,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>ResourceIdentifier to a Payment.</p>
+ *  <p>ResourceIdentifier of a Payment.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

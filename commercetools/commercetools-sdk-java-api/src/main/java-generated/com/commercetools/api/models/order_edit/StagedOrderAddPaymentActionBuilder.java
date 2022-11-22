@@ -25,7 +25,7 @@ public class StagedOrderAddPaymentActionBuilder implements Builder<StagedOrderAd
     private com.commercetools.api.models.payment.PaymentResourceIdentifier payment;
 
     /**
-     *  <p>ResourceIdentifier to a Payment.</p>
+     *  <p>ResourceIdentifier of a Payment.</p>
      */
 
     public StagedOrderAddPaymentActionBuilder payment(
@@ -36,7 +36,7 @@ public class StagedOrderAddPaymentActionBuilder implements Builder<StagedOrderAd
     }
 
     /**
-     *  <p>ResourceIdentifier to a Payment.</p>
+     *  <p>ResourceIdentifier of a Payment.</p>
      */
 
     public StagedOrderAddPaymentActionBuilder payment(

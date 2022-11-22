@@ -27,7 +27,7 @@ public class MyPaymentSetMethodInfoNameActionBuilder implements Builder<MyPaymen
     private com.commercetools.api.models.common.LocalizedString name;
 
     /**
-     *  <p>JSON object where the keys are of type Locale, and the values are the strings used for the corresponding language.</p>
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
      */
 
     public MyPaymentSetMethodInfoNameActionBuilder name(
@@ -37,7 +37,7 @@ public class MyPaymentSetMethodInfoNameActionBuilder implements Builder<MyPaymen
     }
 
     /**
-     *  <p>JSON object where the keys are of type Locale, and the values are the strings used for the corresponding language.</p>
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
      */
 
     public MyPaymentSetMethodInfoNameActionBuilder name(

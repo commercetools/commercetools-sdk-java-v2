@@ -32,7 +32,7 @@ public interface PaymentSetInterfaceIdAction extends PaymentUpdateAction {
     String SET_INTERFACE_ID = "setInterfaceId";
 
     /**
-     *
+     *  <p>Value to set. Once set, the <code>interfaceId</code> cannot be changed.</p>
      */
     @NotNull
     @JsonProperty("interfaceId")

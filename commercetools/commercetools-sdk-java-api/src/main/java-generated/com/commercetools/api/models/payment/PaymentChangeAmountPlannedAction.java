@@ -15,7 +15,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * PaymentChangeAmountPlannedAction
+ *  <p>Can be used to update the Payment if a customer changes the Cart, or adds or removes a CartDiscount during checkout.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -34,7 +34,7 @@ public interface PaymentChangeAmountPlannedAction extends PaymentUpdateAction {
     String CHANGE_AMOUNT_PLANNED = "changeAmountPlanned";
 
     /**
-     *
+     *  <p>New value to set.</p>
      */
     @NotNull
     @Valid

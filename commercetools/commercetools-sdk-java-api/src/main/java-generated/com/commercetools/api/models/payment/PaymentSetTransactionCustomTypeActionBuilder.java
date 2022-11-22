@@ -33,7 +33,7 @@ public class PaymentSetTransactionCustomTypeActionBuilder implements Builder<Pay
     private com.commercetools.api.models.type.FieldContainer fields;
 
     /**
-     *
+     *  <p>Unique identifier of the Transaction. If the specified <code>transactionId</code> does not exist, the request will fail with an InvalidOperation error.</p>
      */
 
     public PaymentSetTransactionCustomTypeActionBuilder transactionId(final String transactionId) {

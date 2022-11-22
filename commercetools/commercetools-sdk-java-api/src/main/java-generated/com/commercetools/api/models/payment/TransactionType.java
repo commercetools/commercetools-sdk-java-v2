@@ -15,14 +15,30 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public interface TransactionType {
 
+    /**
+    	<p>Financially reliable reservation of an amount. Typically does not indicate an actual transfer of money.</p>
+
+    */
     TransactionType AUTHORIZATION = TransactionTypeEnum.AUTHORIZATION;
+    /**
+    	<p>Explicit cancellation of an authorized amount before its expiry.</p>
 
+    */
     TransactionType CANCEL_AUTHORIZATION = TransactionTypeEnum.CANCEL_AUTHORIZATION;
+    /**
+    	<p>Collection of money from the customer. Can use an authorized amount or be directly executed.</p>
 
+    */
     TransactionType CHARGE = TransactionTypeEnum.CHARGE;
+    /**
+    	<p>Explicit transfer of money back to the customer.</p>
 
+    */
     TransactionType REFUND = TransactionTypeEnum.REFUND;
+    /**
+    	<p>Customer-initiated transfer of money back to the customer.</p>
 
+    */
     TransactionType CHARGEBACK = TransactionTypeEnum.CHARGEBACK;
 
     enum TransactionTypeEnum implements TransactionType {

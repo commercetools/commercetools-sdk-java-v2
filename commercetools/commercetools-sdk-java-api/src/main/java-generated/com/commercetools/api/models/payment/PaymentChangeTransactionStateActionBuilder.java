@@ -27,7 +27,7 @@ public class PaymentChangeTransactionStateActionBuilder implements Builder<Payme
     private com.commercetools.api.models.payment.TransactionState state;
 
     /**
-     *
+     *  <p>Unique identifier of the Transaction.</p>
      */
 
     public PaymentChangeTransactionStateActionBuilder transactionId(final String transactionId) {
@@ -36,7 +36,7 @@ public class PaymentChangeTransactionStateActionBuilder implements Builder<Payme
     }
 
     /**
-     *
+     *  <p>New TransactionState.</p>
      */
 
     public PaymentChangeTransactionStateActionBuilder state(

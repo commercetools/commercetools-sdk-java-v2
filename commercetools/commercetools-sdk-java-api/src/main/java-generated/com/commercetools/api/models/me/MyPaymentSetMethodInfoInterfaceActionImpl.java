@@ -43,7 +43,7 @@ public class MyPaymentSetMethodInfoInterfaceActionImpl implements MyPaymentSetMe
     }
 
     /**
-     *
+     *  <p>Value to set. Once set, the <code>paymentInterface</code> of the <code>paymentMethodInfo</code> cannot be changed.</p>
      */
 
     public String getInterface() {

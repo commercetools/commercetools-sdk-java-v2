@@ -33,14 +33,14 @@ public interface PaymentSetTransactionCustomFieldAction extends PaymentUpdateAct
     String SET_TRANSACTION_CUSTOM_FIELD = "setTransactionCustomField";
 
     /**
-     *
+     *  <p>Unique identifier of the Transaction.</p>
      */
     @NotNull
     @JsonProperty("transactionId")
     public String getTransactionId();
 
     /**
-     *  <p>description: | Name of the Custom Field.</p>
+     *  <p>Name of the Custom Field.</p>
      */
     @NotNull
     @JsonProperty("name")

@@ -26,7 +26,7 @@ public class PaymentSetStatusInterfaceCodeActionBuilder implements Builder<Payme
     private String interfaceCode;
 
     /**
-     *
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
      */
 
     public PaymentSetStatusInterfaceCodeActionBuilder interfaceCode(@Nullable final String interfaceCode) {

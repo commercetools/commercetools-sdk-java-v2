@@ -35,7 +35,7 @@ public interface StagedOrderAddPaymentAction extends StagedOrderUpdateAction {
     String ADD_PAYMENT = "addPayment";
 
     /**
-     *  <p>ResourceIdentifier to a Payment.</p>
+     *  <p>ResourceIdentifier of a Payment.</p>
      */
     @NotNull
     @Valid

@@ -36,7 +36,7 @@ public class MyPaymentDraftBuilder implements Builder<MyPaymentDraft> {
     private com.commercetools.api.models.me.MyTransactionDraft transaction;
 
     /**
-     *  <p>How much money this payment intends to receive from the customer. The value usually matches the cart or order gross total.</p>
+     *  <p>Money value the Payment intends to receive from the customer. The value usually matches the Cart or Order gross total.</p>
      */
 
     public MyPaymentDraftBuilder amountPlanned(
@@ -46,7 +46,7 @@ public class MyPaymentDraftBuilder implements Builder<MyPaymentDraft> {
     }
 
     /**
-     *  <p>How much money this payment intends to receive from the customer. The value usually matches the cart or order gross total.</p>
+     *  <p>Money value the Payment intends to receive from the customer. The value usually matches the Cart or Order gross total.</p>
      */
 
     public MyPaymentDraftBuilder amountPlanned(final com.commercetools.api.models.common.Money amountPlanned) {
@@ -55,7 +55,7 @@ public class MyPaymentDraftBuilder implements Builder<MyPaymentDraft> {
     }
 
     /**
-     *
+     *  <p>Information regarding the payment interface (for example, a PSP), and the specific payment method used.</p>
      */
 
     public MyPaymentDraftBuilder paymentMethodInfo(
@@ -66,7 +66,7 @@ public class MyPaymentDraftBuilder implements Builder<MyPaymentDraft> {
     }
 
     /**
-     *
+     *  <p>Information regarding the payment interface (for example, a PSP), and the specific payment method used.</p>
      */
 
     public MyPaymentDraftBuilder paymentMethodInfo(
@@ -76,7 +76,7 @@ public class MyPaymentDraftBuilder implements Builder<MyPaymentDraft> {
     }
 
     /**
-     *
+     *  <p>Custom Fields for the Payment.</p>
      */
 
     public MyPaymentDraftBuilder custom(
@@ -86,7 +86,7 @@ public class MyPaymentDraftBuilder implements Builder<MyPaymentDraft> {
     }
 
     /**
-     *
+     *  <p>Custom Fields for the Payment.</p>
      */
 
     public MyPaymentDraftBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFieldsDraft custom) {
@@ -95,7 +95,7 @@ public class MyPaymentDraftBuilder implements Builder<MyPaymentDraft> {
     }
 
     /**
-     *  <p>A list of financial transactions of the <code>Authorization</code> or <code>Charge</code> TransactionTypes.</p>
+     *  <p>Financial transactions of the TransactionTypes <code>Authorization</code> or <code>Charge</code>.</p>
      */
 
     public MyPaymentDraftBuilder transaction(
@@ -105,7 +105,7 @@ public class MyPaymentDraftBuilder implements Builder<MyPaymentDraft> {
     }
 
     /**
-     *  <p>A list of financial transactions of the <code>Authorization</code> or <code>Charge</code> TransactionTypes.</p>
+     *  <p>Financial transactions of the TransactionTypes <code>Authorization</code> or <code>Charge</code>.</p>
      */
 
     public MyPaymentDraftBuilder transaction(

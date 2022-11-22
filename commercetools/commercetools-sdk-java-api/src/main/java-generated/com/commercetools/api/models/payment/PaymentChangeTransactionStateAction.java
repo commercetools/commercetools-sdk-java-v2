@@ -13,7 +13,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * PaymentChangeTransactionStateAction
+ *  <p>Changing the TransactionState generates the PaymentTransactionStateChanged Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -33,14 +33,14 @@ public interface PaymentChangeTransactionStateAction extends PaymentUpdateAction
     String CHANGE_TRANSACTION_STATE = "changeTransactionState";
 
     /**
-     *
+     *  <p>Unique identifier of the Transaction.</p>
      */
     @NotNull
     @JsonProperty("transactionId")
     public String getTransactionId();
 
     /**
-     *
+     *  <p>New TransactionState.</p>
      */
     @NotNull
     @JsonProperty("state")

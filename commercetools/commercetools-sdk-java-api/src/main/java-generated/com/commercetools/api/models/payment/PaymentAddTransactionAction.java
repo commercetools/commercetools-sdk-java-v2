@@ -14,7 +14,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * PaymentAddTransactionAction
+ *  <p>Adding a Transaction to a Payment generates the PaymentTransactionAdded Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -33,7 +33,7 @@ public interface PaymentAddTransactionAction extends PaymentUpdateAction {
     String ADD_TRANSACTION = "addTransaction";
 
     /**
-     *
+     *  <p>Value to append to the <code>transactions</code> array.</p>
      */
     @NotNull
     @Valid

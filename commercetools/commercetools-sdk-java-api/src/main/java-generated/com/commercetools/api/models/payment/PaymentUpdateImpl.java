@@ -35,7 +35,7 @@ public class PaymentUpdateImpl implements PaymentUpdate, ModelBase {
     }
 
     /**
-     *
+     *  <p>Expected version of the Payment on which the changes should be applied. If the expected version does not match the actual version, a 409 Conflict error will be returned.</p>
      */
 
     public Long getVersion() {
@@ -43,7 +43,7 @@ public class PaymentUpdateImpl implements PaymentUpdate, ModelBase {
     }
 
     /**
-     *
+     *  <p>Update actions to be performed on the Payment.</p>
      */
 
     public java.util.List<com.commercetools.api.models.payment.PaymentUpdateAction> getActions() {

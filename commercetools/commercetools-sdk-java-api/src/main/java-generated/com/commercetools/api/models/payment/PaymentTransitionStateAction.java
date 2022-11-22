@@ -15,7 +15,8 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * PaymentTransitionStateAction
+ *  <p>If the Payment has no current State, <code>initial</code> must be <code>true</code> for the new State. If the existing State has transitions set, the new State must be a valid transition. If the existing State has no transitions set, no validations are performed when transitioning to the new State.</p>
+ *  <p>Transitioning the State of a Payment produces the PaymentStatusStateTransition Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -34,7 +35,7 @@ public interface PaymentTransitionStateAction extends PaymentUpdateAction {
     String TRANSITION_STATE = "transitionState";
 
     /**
-     *
+     *  <p>Reference to a State.</p>
      */
     @NotNull
     @Valid
@@ -42,7 +43,7 @@ public interface PaymentTransitionStateAction extends PaymentUpdateAction {
     public StateResourceIdentifier getState();
 
     /**
-     *
+     *  <p>Set to <code>true</code> to skip validations when transitioning to the new State.</p>
      */
 
     @JsonProperty("force")

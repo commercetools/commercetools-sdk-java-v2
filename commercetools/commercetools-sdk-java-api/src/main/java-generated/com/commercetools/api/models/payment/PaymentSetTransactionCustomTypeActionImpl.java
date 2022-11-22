@@ -51,7 +51,7 @@ public class PaymentSetTransactionCustomTypeActionImpl implements PaymentSetTran
     }
 
     /**
-     *
+     *  <p>Unique identifier of the Transaction. If the specified <code>transactionId</code> does not exist, the request will fail with an InvalidOperation error.</p>
      */
 
     public String getTransactionId() {

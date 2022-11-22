@@ -33,7 +33,7 @@ public class PaymentStatusBuilder implements Builder<PaymentStatus> {
     private com.commercetools.api.models.state.StateReference state;
 
     /**
-     *  <p>A code describing the current status returned by the interface that processes the payment.</p>
+     *  <p>External reference that identifies the current status of the Payment.</p>
      */
 
     public PaymentStatusBuilder interfaceCode(@Nullable final String interfaceCode) {
@@ -42,7 +42,7 @@ public class PaymentStatusBuilder implements Builder<PaymentStatus> {
     }
 
     /**
-     *  <p>A text describing the current status returned by the interface that processes the payment.</p>
+     *  <p>Text describing the current status of the Payment.</p>
      */
 
     public PaymentStatusBuilder interfaceText(@Nullable final String interfaceText) {
@@ -51,7 +51,7 @@ public class PaymentStatusBuilder implements Builder<PaymentStatus> {
     }
 
     /**
-     *
+     *  <p>Reference to a State.</p>
      */
 
     public PaymentStatusBuilder state(
@@ -61,7 +61,7 @@ public class PaymentStatusBuilder implements Builder<PaymentStatus> {
     }
 
     /**
-     *
+     *  <p>Reference to a State.</p>
      */
 
     public PaymentStatusBuilder state(@Nullable final com.commercetools.api.models.state.StateReference state) {

@@ -33,14 +33,14 @@ public interface MyPaymentUpdate extends
         com.commercetools.api.models.ResourceUpdate<MyPaymentUpdate, MyPaymentUpdateAction, MyPaymentUpdateBuilder> {
 
     /**
-     *
+     *  <p>Expected version of the Payment on which the changes should be applied. If the expected version does not match the actual version, a 409 Conflict will be returned.</p>
      */
     @NotNull
     @JsonProperty("version")
     public Long getVersion();
 
     /**
-     *
+     *  <p>Update actions to be performed on the Payment.</p>
      */
     @NotNull
     @Valid

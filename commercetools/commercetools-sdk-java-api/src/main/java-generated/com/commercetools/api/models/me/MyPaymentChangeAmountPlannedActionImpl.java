@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * MyPaymentChangeAmountPlannedAction
+ *  <p>Can be used to update the Payment if a customer changes the Cart, or adds or removes a CartDiscount during checkout.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class MyPaymentChangeAmountPlannedActionImpl implements MyPaymentChangeAmountPlannedAction, ModelBase {
@@ -44,8 +44,7 @@ public class MyPaymentChangeAmountPlannedActionImpl implements MyPaymentChangeAm
     }
 
     /**
-     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
-     *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
+     *  <p>New value to set.</p>
      */
 
     public com.commercetools.api.models.common.Money getAmount() {

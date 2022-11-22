@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * PaymentChangeAmountPlannedAction
+ *  <p>Can be used to update the Payment if a customer changes the Cart, or adds or removes a CartDiscount during checkout.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class PaymentChangeAmountPlannedActionImpl implements PaymentChangeAmountPlannedAction, ModelBase {
@@ -44,7 +44,7 @@ public class PaymentChangeAmountPlannedActionImpl implements PaymentChangeAmount
     }
 
     /**
-     *
+     *  <p>New value to set.</p>
      */
 
     public com.commercetools.api.models.common.Money getAmount() {

@@ -34,7 +34,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface MyPaymentDraft extends com.commercetools.api.models.CustomizableDraft<MyPaymentDraft> {
 
     /**
-     *  <p>How much money this payment intends to receive from the customer. The value usually matches the cart or order gross total.</p>
+     *  <p>Money value the Payment intends to receive from the customer. The value usually matches the Cart or Order gross total.</p>
      */
     @NotNull
     @Valid
@@ -42,21 +42,21 @@ public interface MyPaymentDraft extends com.commercetools.api.models.Customizabl
     public Money getAmountPlanned();
 
     /**
-     *
+     *  <p>Information regarding the payment interface (for example, a PSP), and the specific payment method used.</p>
      */
     @Valid
     @JsonProperty("paymentMethodInfo")
     public PaymentMethodInfo getPaymentMethodInfo();
 
     /**
-     *
+     *  <p>Custom Fields for the Payment.</p>
      */
     @Valid
     @JsonProperty("custom")
     public CustomFieldsDraft getCustom();
 
     /**
-     *  <p>A list of financial transactions of the <code>Authorization</code> or <code>Charge</code> TransactionTypes.</p>
+     *  <p>Financial transactions of the TransactionTypes <code>Authorization</code> or <code>Charge</code>.</p>
      */
     @Valid
     @JsonProperty("transaction")

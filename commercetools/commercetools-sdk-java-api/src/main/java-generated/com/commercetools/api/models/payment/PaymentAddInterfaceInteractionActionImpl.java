@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * PaymentAddInterfaceInteractionAction
+ *  <p>Adding a Payment interaction generates the PaymentInteractionAdded Message.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class PaymentAddInterfaceInteractionActionImpl implements PaymentAddInterfaceInteractionAction, ModelBase {
@@ -48,7 +48,7 @@ public class PaymentAddInterfaceInteractionActionImpl implements PaymentAddInter
     }
 
     /**
-     *
+     *  <p>ResourceIdentifier of a Type.</p>
      */
 
     public com.commercetools.api.models.type.TypeResourceIdentifier getType() {
@@ -56,7 +56,7 @@ public class PaymentAddInterfaceInteractionActionImpl implements PaymentAddInter
     }
 
     /**
-     *
+     *  <p>Custom Fields as per FieldDefinitions of the Type.</p>
      */
 
     public com.commercetools.api.models.type.FieldContainer getFields() {

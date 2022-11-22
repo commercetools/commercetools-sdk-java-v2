@@ -16,7 +16,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * PaymentAddInterfaceInteractionAction
+ *  <p>Adding a Payment interaction generates the PaymentInteractionAdded Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -35,7 +35,7 @@ public interface PaymentAddInterfaceInteractionAction extends PaymentUpdateActio
     String ADD_INTERFACE_INTERACTION = "addInterfaceInteraction";
 
     /**
-     *
+     *  <p>ResourceIdentifier of a Type.</p>
      */
     @NotNull
     @Valid
@@ -43,7 +43,7 @@ public interface PaymentAddInterfaceInteractionAction extends PaymentUpdateActio
     public TypeResourceIdentifier getType();
 
     /**
-     *
+     *  <p>Custom Fields as per FieldDefinitions of the Type.</p>
      */
     @Valid
     @JsonProperty("fields")

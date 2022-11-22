@@ -28,7 +28,7 @@ public class PaymentChangeTransactionInteractionIdActionBuilder
     private String interactionId;
 
     /**
-     *
+     *  <p>Unique identifier of the Transaction.</p>
      */
 
     public PaymentChangeTransactionInteractionIdActionBuilder transactionId(final String transactionId) {
@@ -37,7 +37,7 @@ public class PaymentChangeTransactionInteractionIdActionBuilder
     }
 
     /**
-     *
+     *  <p>New value to set.</p>
      */
 
     public PaymentChangeTransactionInteractionIdActionBuilder interactionId(final String interactionId) {

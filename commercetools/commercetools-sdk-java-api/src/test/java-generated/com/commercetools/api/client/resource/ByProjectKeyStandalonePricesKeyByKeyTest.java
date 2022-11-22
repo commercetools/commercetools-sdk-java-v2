@@ -81,14 +81,14 @@ public class ByProjectKeyStandalonePricesKeyByKeyTest {
                         apiRoot.withProjectKey("test_projectKey")
                                 .standalonePrices()
                                 .withKey("test_key")
-                                .post(null)
+                                .post(com.commercetools.api.models.standalone_price.StandalonePriceUpdate.of())
                                 .withExpand("expand")
                                 .createHttpRequest(),
                         "post", "/test_projectKey/standalone-prices/key=test_key?expand=expand", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .standalonePrices()
                         .withKey("test_key")
-                        .post(null)
+                        .post(com.commercetools.api.models.standalone_price.StandalonePriceUpdate.of())
                         .createHttpRequest(), "post", "/test_projectKey/standalone-prices/key=test_key", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
@@ -126,10 +126,12 @@ public class ByProjectKeyStandalonePricesKeyByKeyTest {
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .standalonePrices()
                         .withKey("test_key")
-                        .post(null)
+                        .post(com.commercetools.api.models.standalone_price.StandalonePriceUpdate.of())
                         .withExpand("expand"), },
-                new Object[] {
-                        apiRoot.withProjectKey("test_projectKey").standalonePrices().withKey("test_key").post(null), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .standalonePrices()
+                        .withKey("test_key")
+                        .post(com.commercetools.api.models.standalone_price.StandalonePriceUpdate.of()), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .standalonePrices()
                         .withKey("test_key")

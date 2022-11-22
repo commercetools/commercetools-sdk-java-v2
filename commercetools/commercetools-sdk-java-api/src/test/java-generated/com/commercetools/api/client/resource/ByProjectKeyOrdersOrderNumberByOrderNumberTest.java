@@ -81,7 +81,7 @@ public class ByProjectKeyOrdersOrderNumberByOrderNumberTest {
                         apiRoot.withProjectKey("test_projectKey")
                                 .orders()
                                 .withOrderNumber("test_orderNumber")
-                                .post(null)
+                                .post(com.commercetools.api.models.order.OrderUpdate.of())
                                 .withExpand("expand")
                                 .createHttpRequest(),
                         "post", "/test_projectKey/orders/order-number=test_orderNumber?expand=expand", },
@@ -89,7 +89,7 @@ public class ByProjectKeyOrdersOrderNumberByOrderNumberTest {
                         apiRoot.withProjectKey("test_projectKey")
                                 .orders()
                                 .withOrderNumber("test_orderNumber")
-                                .post(null)
+                                .post(com.commercetools.api.models.order.OrderUpdate.of())
                                 .createHttpRequest(),
                         "post", "/test_projectKey/orders/order-number=test_orderNumber", },
                 new Object[] {
@@ -138,12 +138,12 @@ public class ByProjectKeyOrdersOrderNumberByOrderNumberTest {
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .orders()
                         .withOrderNumber("test_orderNumber")
-                        .post(null)
+                        .post(com.commercetools.api.models.order.OrderUpdate.of())
                         .withExpand("expand"), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .orders()
                         .withOrderNumber("test_orderNumber")
-                        .post(null), },
+                        .post(com.commercetools.api.models.order.OrderUpdate.of()), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .orders()
                         .withOrderNumber("test_orderNumber")

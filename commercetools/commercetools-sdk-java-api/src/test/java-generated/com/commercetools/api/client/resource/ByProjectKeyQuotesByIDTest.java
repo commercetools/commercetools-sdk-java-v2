@@ -76,13 +76,13 @@ public class ByProjectKeyQuotesByIDTest {
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .quotes()
                         .withId("test_ID")
-                        .post(null)
+                        .post(com.commercetools.api.models.quote.QuoteUpdate.of())
                         .withExpand("expand")
                         .createHttpRequest(), "post", "/test_projectKey/quotes/test_ID?expand=expand", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .quotes()
                         .withId("test_ID")
-                        .post(null)
+                        .post(com.commercetools.api.models.quote.QuoteUpdate.of())
                         .createHttpRequest(), "post", "/test_projectKey/quotes/test_ID", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .quotes()
@@ -117,9 +117,12 @@ public class ByProjectKeyQuotesByIDTest {
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .quotes()
                         .withId("test_ID")
-                        .post(null)
+                        .post(com.commercetools.api.models.quote.QuoteUpdate.of())
                         .withExpand("expand"), },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").quotes().withId("test_ID").post(null), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .quotes()
+                        .withId("test_ID")
+                        .post(com.commercetools.api.models.quote.QuoteUpdate.of()), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .quotes()
                         .withId("test_ID")

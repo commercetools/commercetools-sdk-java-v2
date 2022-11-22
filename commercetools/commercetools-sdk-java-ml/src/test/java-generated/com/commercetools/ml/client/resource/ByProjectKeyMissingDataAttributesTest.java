@@ -63,14 +63,18 @@ public class ByProjectKeyMissingDataAttributesTest {
 
     @DataProvider
     public static Object[][] requestWithMethodParameters() {
-        return new Object[][] { new Object[] {
-                apiRoot.withProjectKey("test_projectKey").missingData().attributes().post(null).createHttpRequest(),
-                "post", "/test_projectKey/missing-data/attributes", } };
+        return new Object[][] { new Object[] { apiRoot.withProjectKey("test_projectKey")
+                .missingData()
+                .attributes()
+                .post(com.commercetools.ml.models.missing_data.MissingAttributesSearchRequest.of())
+                .createHttpRequest(), "post", "/test_projectKey/missing-data/attributes", } };
     }
 
     @DataProvider
     public static Object[][] executeMethodParameters() {
-        return new Object[][] {
-                new Object[] { apiRoot.withProjectKey("test_projectKey").missingData().attributes().post(null), } };
+        return new Object[][] { new Object[] { apiRoot.withProjectKey("test_projectKey")
+                .missingData()
+                .attributes()
+                .post(com.commercetools.ml.models.missing_data.MissingAttributesSearchRequest.of()), } };
     }
 }

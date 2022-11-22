@@ -1,6 +1,8 @@
 
 package com.commercetools.ml.client;
 
+import java.util.function.UnaryOperator;
+
 import io.vrap.rmf.base.client.ApiHttpClient;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -19,6 +21,11 @@ public class ByProjectKeyMissingDataPricesRequestBuilder {
     public ByProjectKeyMissingDataPricesPost post(
             com.commercetools.ml.models.missing_data.MissingPricesSearchRequest missingPricesSearchRequest) {
         return new ByProjectKeyMissingDataPricesPost(apiHttpClient, projectKey, missingPricesSearchRequest);
+    }
+
+    public ByProjectKeyMissingDataPricesPost post(
+            UnaryOperator<com.commercetools.ml.models.missing_data.MissingPricesSearchRequestBuilder> op) {
+        return post(op.apply(com.commercetools.ml.models.missing_data.MissingPricesSearchRequestBuilder.of()).build());
     }
 
     @Deprecated

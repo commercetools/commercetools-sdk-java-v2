@@ -81,14 +81,14 @@ public class ByProjectKeyShoppingListsKeyByKeyTest {
                         apiRoot.withProjectKey("test_projectKey")
                                 .shoppingLists()
                                 .withKey("test_key")
-                                .post(null)
+                                .post(com.commercetools.api.models.shopping_list.ShoppingListUpdate.of())
                                 .withExpand("expand")
                                 .createHttpRequest(),
                         "post", "/test_projectKey/shopping-lists/key=test_key?expand=expand", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .shoppingLists()
                         .withKey("test_key")
-                        .post(null)
+                        .post(com.commercetools.api.models.shopping_list.ShoppingListUpdate.of())
                         .createHttpRequest(), "post", "/test_projectKey/shopping-lists/key=test_key", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
@@ -133,10 +133,12 @@ public class ByProjectKeyShoppingListsKeyByKeyTest {
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .shoppingLists()
                         .withKey("test_key")
-                        .post(null)
+                        .post(com.commercetools.api.models.shopping_list.ShoppingListUpdate.of())
                         .withExpand("expand"), },
-                new Object[] {
-                        apiRoot.withProjectKey("test_projectKey").shoppingLists().withKey("test_key").post(null), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .shoppingLists()
+                        .withKey("test_key")
+                        .post(com.commercetools.api.models.shopping_list.ShoppingListUpdate.of()), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .shoppingLists()
                         .withKey("test_key")

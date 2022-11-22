@@ -87,7 +87,7 @@ public class ByProjectKeyInStoreKeyByStoreKeyShoppingListsKeyByKeyTest {
                                 .inStoreKeyWithStoreKeyValue("test_storeKey")
                                 .shoppingLists()
                                 .withKey("test_key")
-                                .post(null)
+                                .post(com.commercetools.api.models.shopping_list.ShoppingListUpdate.of())
                                 .withExpand("expand")
                                 .createHttpRequest(),
                         "post",
@@ -97,7 +97,7 @@ public class ByProjectKeyInStoreKeyByStoreKeyShoppingListsKeyByKeyTest {
                                 .inStoreKeyWithStoreKeyValue("test_storeKey")
                                 .shoppingLists()
                                 .withKey("test_key")
-                                .post(null)
+                                .post(com.commercetools.api.models.shopping_list.ShoppingListUpdate.of())
                                 .createHttpRequest(),
                         "post", "/test_projectKey/in-store/key=test_storeKey/shopping-lists/key=test_key", },
                 new Object[] {
@@ -158,13 +158,13 @@ public class ByProjectKeyInStoreKeyByStoreKeyShoppingListsKeyByKeyTest {
                         .inStoreKeyWithStoreKeyValue("test_storeKey")
                         .shoppingLists()
                         .withKey("test_key")
-                        .post(null)
+                        .post(com.commercetools.api.models.shopping_list.ShoppingListUpdate.of())
                         .withExpand("expand"), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .inStoreKeyWithStoreKeyValue("test_storeKey")
                         .shoppingLists()
                         .withKey("test_key")
-                        .post(null), },
+                        .post(com.commercetools.api.models.shopping_list.ShoppingListUpdate.of()), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .inStoreKeyWithStoreKeyValue("test_storeKey")
                         .shoppingLists()

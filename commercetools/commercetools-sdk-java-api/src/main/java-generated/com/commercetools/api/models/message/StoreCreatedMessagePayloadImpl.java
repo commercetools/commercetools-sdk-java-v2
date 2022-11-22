@@ -26,6 +26,8 @@ public class StoreCreatedMessagePayloadImpl implements StoreCreatedMessagePayloa
 
     private java.util.List<String> languages;
 
+    private java.util.List<com.commercetools.api.models.store_country.StoreCountry> countries;
+
     private java.util.List<com.commercetools.api.models.channel.ChannelReference> distributionChannels;
 
     private java.util.List<com.commercetools.api.models.channel.ChannelReference> supplyChannels;
@@ -37,12 +39,14 @@ public class StoreCreatedMessagePayloadImpl implements StoreCreatedMessagePayloa
     @JsonCreator
     StoreCreatedMessagePayloadImpl(@JsonProperty("name") final com.commercetools.api.models.common.LocalizedString name,
             @JsonProperty("languages") final java.util.List<String> languages,
+            @JsonProperty("countries") final java.util.List<com.commercetools.api.models.store_country.StoreCountry> countries,
             @JsonProperty("distributionChannels") final java.util.List<com.commercetools.api.models.channel.ChannelReference> distributionChannels,
             @JsonProperty("supplyChannels") final java.util.List<com.commercetools.api.models.channel.ChannelReference> supplyChannels,
             @JsonProperty("productSelections") final java.util.List<com.commercetools.api.models.store.ProductSelectionSetting> productSelections,
             @JsonProperty("custom") final com.commercetools.api.models.type.CustomFields custom) {
         this.name = name;
         this.languages = languages;
+        this.countries = countries;
         this.distributionChannels = distributionChannels;
         this.supplyChannels = supplyChannels;
         this.productSelections = productSelections;
@@ -76,6 +80,14 @@ public class StoreCreatedMessagePayloadImpl implements StoreCreatedMessagePayloa
 
     public java.util.List<String> getLanguages() {
         return this.languages;
+    }
+
+    /**
+     *  <p>Countries of the Store that was created.</p>
+     */
+
+    public java.util.List<com.commercetools.api.models.store_country.StoreCountry> getCountries() {
+        return this.countries;
     }
 
     /**
@@ -120,6 +132,14 @@ public class StoreCreatedMessagePayloadImpl implements StoreCreatedMessagePayloa
 
     public void setLanguages(final java.util.List<String> languages) {
         this.languages = languages;
+    }
+
+    public void setCountries(final com.commercetools.api.models.store_country.StoreCountry... countries) {
+        this.countries = new ArrayList<>(Arrays.asList(countries));
+    }
+
+    public void setCountries(final java.util.List<com.commercetools.api.models.store_country.StoreCountry> countries) {
+        this.countries = countries;
     }
 
     public void setDistributionChannels(
@@ -168,6 +188,7 @@ public class StoreCreatedMessagePayloadImpl implements StoreCreatedMessagePayloa
         return new EqualsBuilder().append(type, that.type)
                 .append(name, that.name)
                 .append(languages, that.languages)
+                .append(countries, that.countries)
                 .append(distributionChannels, that.distributionChannels)
                 .append(supplyChannels, that.supplyChannels)
                 .append(productSelections, that.productSelections)
@@ -180,6 +201,7 @@ public class StoreCreatedMessagePayloadImpl implements StoreCreatedMessagePayloa
         return new HashCodeBuilder(17, 37).append(type)
                 .append(name)
                 .append(languages)
+                .append(countries)
                 .append(distributionChannels)
                 .append(supplyChannels)
                 .append(productSelections)

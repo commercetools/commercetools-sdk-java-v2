@@ -1,6 +1,8 @@
 
 package com.commercetools.api.client;
 
+import java.util.function.UnaryOperator;
+
 import io.vrap.rmf.base.client.ApiHttpClient;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -27,8 +29,17 @@ public class ByProjectKeyStagedQuotesByIDRequestBuilder {
         return new ByProjectKeyStagedQuotesByIDPost(apiHttpClient, projectKey, ID, stagedQuoteUpdate);
     }
 
+    public ByProjectKeyStagedQuotesByIDPost post(
+            UnaryOperator<com.commercetools.api.models.staged_quote.StagedQuoteUpdateBuilder> op) {
+        return post(op.apply(com.commercetools.api.models.staged_quote.StagedQuoteUpdateBuilder.of()).build());
+    }
+
     public ByProjectKeyStagedQuotesByIDDelete delete() {
         return new ByProjectKeyStagedQuotesByIDDelete(apiHttpClient, projectKey, ID);
+    }
+
+    public <TValue> ByProjectKeyStagedQuotesByIDDelete delete(TValue version) {
+        return delete().withVersion(version);
     }
 
 }

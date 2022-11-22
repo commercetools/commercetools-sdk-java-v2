@@ -68,7 +68,7 @@ public class ByProjectKeyInventoriesImportContainersByImportContainerKeyTest {
                         .inventories()
                         .importContainers()
                         .withImportContainerKeyValue("test_importContainerKey")
-                        .post(null)
+                        .post(com.commercetools.importapi.models.importrequests.InventoryImportRequest.of())
                         .createHttpRequest(),
                 "post", "/test_projectKey/inventories/import-containers/test_importContainerKey", } };
     }
@@ -79,6 +79,6 @@ public class ByProjectKeyInventoriesImportContainersByImportContainerKeyTest {
                 .inventories()
                 .importContainers()
                 .withImportContainerKeyValue("test_importContainerKey")
-                .post(null), } };
+                .post(com.commercetools.importapi.models.importrequests.InventoryImportRequest.of()), } };
     }
 }

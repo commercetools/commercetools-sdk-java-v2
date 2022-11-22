@@ -105,11 +105,13 @@ public class ByProjectKeyBusinessUnitsTest {
                         "get", "/test_projectKey/business-units", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .businessUnits()
-                        .post(null)
+                        .post(com.commercetools.api.models.business_unit.CompanyDraft.of())
                         .withExpand("expand")
                         .createHttpRequest(), "post", "/test_projectKey/business-units?expand=expand", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").businessUnits().post(null).createHttpRequest(),
-                        "post", "/test_projectKey/business-units", } };
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .businessUnits()
+                        .post(com.commercetools.api.models.business_unit.CompanyDraft.of())
+                        .createHttpRequest(), "post", "/test_projectKey/business-units", } };
     }
 
     @DataProvider
@@ -126,8 +128,12 @@ public class ByProjectKeyBusinessUnitsTest {
                         .get()
                         .withPredicateVar("varName", "var.varName"), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey").businessUnits().get(), },
-                new Object[] {
-                        apiRoot.withProjectKey("test_projectKey").businessUnits().post(null).withExpand("expand"), },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").businessUnits().post(null), } };
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .businessUnits()
+                        .post(com.commercetools.api.models.business_unit.CompanyDraft.of())
+                        .withExpand("expand"), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .businessUnits()
+                        .post(com.commercetools.api.models.business_unit.CompanyDraft.of()), } };
     }
 }

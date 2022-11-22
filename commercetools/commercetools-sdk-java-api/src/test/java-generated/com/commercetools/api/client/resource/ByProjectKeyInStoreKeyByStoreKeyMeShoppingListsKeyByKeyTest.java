@@ -90,7 +90,7 @@ public class ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsKeyByKeyTest {
                                 .me()
                                 .shoppingLists()
                                 .withKey("test_key")
-                                .post(null)
+                                .post(com.commercetools.api.models.me.MyShoppingListUpdate.of())
                                 .withExpand("expand")
                                 .createHttpRequest(),
                         "post",
@@ -101,7 +101,7 @@ public class ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsKeyByKeyTest {
                                 .me()
                                 .shoppingLists()
                                 .withKey("test_key")
-                                .post(null)
+                                .post(com.commercetools.api.models.me.MyShoppingListUpdate.of())
                                 .createHttpRequest(),
                         "post", "/test_projectKey/in-store/key=test_storeKey/me/shopping-lists/key=test_key", },
                 new Object[] {
@@ -169,14 +169,14 @@ public class ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsKeyByKeyTest {
                         .me()
                         .shoppingLists()
                         .withKey("test_key")
-                        .post(null)
+                        .post(com.commercetools.api.models.me.MyShoppingListUpdate.of())
                         .withExpand("expand"), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .inStoreKeyWithStoreKeyValue("test_storeKey")
                         .me()
                         .shoppingLists()
                         .withKey("test_key")
-                        .post(null), },
+                        .post(com.commercetools.api.models.me.MyShoppingListUpdate.of()), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .inStoreKeyWithStoreKeyValue("test_storeKey")
                         .me()

@@ -63,14 +63,18 @@ public class ByProjectKeyProductDiscountsMatchingTest {
 
     @DataProvider
     public static Object[][] requestWithMethodParameters() {
-        return new Object[][] { new Object[] {
-                apiRoot.withProjectKey("test_projectKey").productDiscounts().matching().post(null).createHttpRequest(),
-                "post", "/test_projectKey/product-discounts/matching", } };
+        return new Object[][] { new Object[] { apiRoot.withProjectKey("test_projectKey")
+                .productDiscounts()
+                .matching()
+                .post(com.commercetools.api.models.product_discount.ProductDiscountMatchQuery.of())
+                .createHttpRequest(), "post", "/test_projectKey/product-discounts/matching", } };
     }
 
     @DataProvider
     public static Object[][] executeMethodParameters() {
-        return new Object[][] {
-                new Object[] { apiRoot.withProjectKey("test_projectKey").productDiscounts().matching().post(null), } };
+        return new Object[][] { new Object[] { apiRoot.withProjectKey("test_projectKey")
+                .productDiscounts()
+                .matching()
+                .post(com.commercetools.api.models.product_discount.ProductDiscountMatchQuery.of()), } };
     }
 }

@@ -128,7 +128,7 @@ public class ByProjectKeyInStoreKeyByStoreKeyMeTest {
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .inStoreKeyWithStoreKeyValue("test_storeKey")
                         .me()
-                        .post(null)
+                        .post(com.commercetools.api.models.me.MyCustomerUpdate.of())
                         .createHttpRequest(), "post", "/test_projectKey/in-store/key=test_storeKey/me", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
@@ -190,7 +190,7 @@ public class ByProjectKeyInStoreKeyByStoreKeyMeTest {
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .inStoreKeyWithStoreKeyValue("test_storeKey")
                         .me()
-                        .post(null), },
+                        .post(com.commercetools.api.models.me.MyCustomerUpdate.of()), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .inStoreKeyWithStoreKeyValue("test_storeKey")
                         .me()

@@ -22,6 +22,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .lastModifiedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
  *             .key("{key}")
  *             .plusLanguages(languagesBuilder -> languagesBuilder)
+ *             .plusCountries(countriesBuilder -> countriesBuilder)
  *             .plusDistributionChannels(distributionChannelsBuilder -> distributionChannelsBuilder)
  *             .plusSupplyChannels(supplyChannelsBuilder -> supplyChannelsBuilder)
  *             .plusProductSelections(productSelectionsBuilder -> productSelectionsBuilder)
@@ -52,6 +53,8 @@ public class StoreBuilder implements Builder<Store> {
     private com.commercetools.api.models.common.LocalizedString name;
 
     private java.util.List<String> languages;
+
+    private java.util.List<com.commercetools.api.models.store_country.StoreCountry> countries;
 
     private java.util.List<com.commercetools.api.models.channel.ChannelReference> distributionChannels;
 
@@ -192,6 +195,61 @@ public class StoreBuilder implements Builder<Store> {
             this.languages = new ArrayList<>();
         }
         this.languages.addAll(Arrays.asList(languages));
+        return this;
+    }
+
+    /**
+     *  <p>Countries defined for the Store.</p>
+     */
+
+    public StoreBuilder countries(final com.commercetools.api.models.store_country.StoreCountry... countries) {
+        this.countries = new ArrayList<>(Arrays.asList(countries));
+        return this;
+    }
+
+    /**
+     *  <p>Countries defined for the Store.</p>
+     */
+
+    public StoreBuilder countries(
+            final java.util.List<com.commercetools.api.models.store_country.StoreCountry> countries) {
+        this.countries = countries;
+        return this;
+    }
+
+    /**
+     *  <p>Countries defined for the Store.</p>
+     */
+
+    public StoreBuilder plusCountries(final com.commercetools.api.models.store_country.StoreCountry... countries) {
+        if (this.countries == null) {
+            this.countries = new ArrayList<>();
+        }
+        this.countries.addAll(Arrays.asList(countries));
+        return this;
+    }
+
+    /**
+     *  <p>Countries defined for the Store.</p>
+     */
+
+    public StoreBuilder plusCountries(
+            Function<com.commercetools.api.models.store_country.StoreCountryBuilder, com.commercetools.api.models.store_country.StoreCountryBuilder> builder) {
+        if (this.countries == null) {
+            this.countries = new ArrayList<>();
+        }
+        this.countries.add(builder.apply(com.commercetools.api.models.store_country.StoreCountryBuilder.of()).build());
+        return this;
+    }
+
+    /**
+     *  <p>Countries defined for the Store.</p>
+     */
+
+    public StoreBuilder withCountries(
+            Function<com.commercetools.api.models.store_country.StoreCountryBuilder, com.commercetools.api.models.store_country.StoreCountryBuilder> builder) {
+        this.countries = new ArrayList<>();
+        this.countries.add(builder.apply(com.commercetools.api.models.store_country.StoreCountryBuilder.of()).build());
         return this;
     }
 
@@ -449,6 +507,10 @@ public class StoreBuilder implements Builder<Store> {
         return this.languages;
     }
 
+    public java.util.List<com.commercetools.api.models.store_country.StoreCountry> getCountries() {
+        return this.countries;
+    }
+
     public java.util.List<com.commercetools.api.models.channel.ChannelReference> getDistributionChannels() {
         return this.distributionChannels;
     }
@@ -473,11 +535,12 @@ public class StoreBuilder implements Builder<Store> {
         Objects.requireNonNull(lastModifiedAt, Store.class + ": lastModifiedAt is missing");
         Objects.requireNonNull(key, Store.class + ": key is missing");
         Objects.requireNonNull(languages, Store.class + ": languages is missing");
+        Objects.requireNonNull(countries, Store.class + ": countries is missing");
         Objects.requireNonNull(distributionChannels, Store.class + ": distributionChannels is missing");
         Objects.requireNonNull(supplyChannels, Store.class + ": supplyChannels is missing");
         Objects.requireNonNull(productSelections, Store.class + ": productSelections is missing");
         return new StoreImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, key, name, languages,
-            distributionChannels, supplyChannels, productSelections, custom);
+            countries, distributionChannels, supplyChannels, productSelections, custom);
     }
 
     /**
@@ -485,7 +548,7 @@ public class StoreBuilder implements Builder<Store> {
      */
     public Store buildUnchecked() {
         return new StoreImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, key, name, languages,
-            distributionChannels, supplyChannels, productSelections, custom);
+            countries, distributionChannels, supplyChannels, productSelections, custom);
     }
 
     public static StoreBuilder of() {
@@ -503,6 +566,7 @@ public class StoreBuilder implements Builder<Store> {
         builder.key = template.getKey();
         builder.name = template.getName();
         builder.languages = template.getLanguages();
+        builder.countries = template.getCountries();
         builder.distributionChannels = template.getDistributionChannels();
         builder.supplyChannels = template.getSupplyChannels();
         builder.productSelections = template.getProductSelections();

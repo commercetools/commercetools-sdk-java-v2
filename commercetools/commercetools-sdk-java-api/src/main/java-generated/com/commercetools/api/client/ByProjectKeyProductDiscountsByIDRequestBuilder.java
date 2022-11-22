@@ -1,6 +1,8 @@
 
 package com.commercetools.api.client;
 
+import java.util.function.UnaryOperator;
+
 import io.vrap.rmf.base.client.ApiHttpClient;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -27,8 +29,17 @@ public class ByProjectKeyProductDiscountsByIDRequestBuilder {
         return new ByProjectKeyProductDiscountsByIDPost(apiHttpClient, projectKey, ID, productDiscountUpdate);
     }
 
+    public ByProjectKeyProductDiscountsByIDPost post(
+            UnaryOperator<com.commercetools.api.models.product_discount.ProductDiscountUpdateBuilder> op) {
+        return post(op.apply(com.commercetools.api.models.product_discount.ProductDiscountUpdateBuilder.of()).build());
+    }
+
     public ByProjectKeyProductDiscountsByIDDelete delete() {
         return new ByProjectKeyProductDiscountsByIDDelete(apiHttpClient, projectKey, ID);
+    }
+
+    public <TValue> ByProjectKeyProductDiscountsByIDDelete delete(TValue version) {
+        return delete().withVersion(version);
     }
 
 }

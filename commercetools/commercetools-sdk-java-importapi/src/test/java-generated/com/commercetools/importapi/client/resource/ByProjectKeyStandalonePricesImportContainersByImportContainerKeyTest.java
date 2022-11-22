@@ -63,14 +63,16 @@ public class ByProjectKeyStandalonePricesImportContainersByImportContainerKeyTes
 
     @DataProvider
     public static Object[][] requestWithMethodParameters() {
-        return new Object[][] { new Object[] {
-                apiRoot.withProjectKeyValue("test_projectKey")
-                        .standalonePrices()
-                        .importContainers()
-                        .withImportContainerKeyValue("test_importContainerKey")
-                        .post(null)
-                        .createHttpRequest(),
-                "post", "/test_projectKey/standalone-prices/import-containers/test_importContainerKey", } };
+        return new Object[][] {
+                new Object[] {
+                        apiRoot.withProjectKeyValue("test_projectKey")
+                                .standalonePrices()
+                                .importContainers()
+                                .withImportContainerKeyValue("test_importContainerKey")
+                                .post(
+                                    com.commercetools.importapi.models.importrequests.StandalonePriceImportRequest.of())
+                                .createHttpRequest(),
+                        "post", "/test_projectKey/standalone-prices/import-containers/test_importContainerKey", } };
     }
 
     @DataProvider
@@ -79,6 +81,6 @@ public class ByProjectKeyStandalonePricesImportContainersByImportContainerKeyTes
                 .standalonePrices()
                 .importContainers()
                 .withImportContainerKeyValue("test_importContainerKey")
-                .post(null), } };
+                .post(com.commercetools.importapi.models.importrequests.StandalonePriceImportRequest.of()), } };
     }
 }

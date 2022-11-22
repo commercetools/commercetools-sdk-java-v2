@@ -63,13 +63,16 @@ public class ByProjectKeyGraphqlTest {
 
     @DataProvider
     public static Object[][] requestWithMethodParameters() {
-        return new Object[][] {
-                new Object[] { apiRoot.withProjectKey("test_projectKey").graphql().post(null).createHttpRequest(),
-                        "post", "/test_projectKey/graphql", } };
+        return new Object[][] { new Object[] { apiRoot.withProjectKey("test_projectKey")
+                .graphql()
+                .post(com.commercetools.api.models.graph_ql.GraphQLRequest.of())
+                .createHttpRequest(), "post", "/test_projectKey/graphql", } };
     }
 
     @DataProvider
     public static Object[][] executeMethodParameters() {
-        return new Object[][] { new Object[] { apiRoot.withProjectKey("test_projectKey").graphql().post(null), } };
+        return new Object[][] { new Object[] { apiRoot.withProjectKey("test_projectKey")
+                .graphql()
+                .post(com.commercetools.api.models.graph_ql.GraphQLRequest.of()), } };
     }
 }

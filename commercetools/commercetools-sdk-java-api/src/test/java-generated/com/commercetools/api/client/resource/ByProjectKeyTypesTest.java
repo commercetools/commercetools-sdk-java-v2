@@ -89,11 +89,13 @@ public class ByProjectKeyTypesTest {
                         "/test_projectKey/types", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .types()
-                        .post(null)
+                        .post(com.commercetools.api.models.type.TypeDraft.of())
                         .withExpand("expand")
                         .createHttpRequest(), "post", "/test_projectKey/types?expand=expand", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").types().post(null).createHttpRequest(), "post",
-                        "/test_projectKey/types", } };
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .types()
+                        .post(com.commercetools.api.models.type.TypeDraft.of())
+                        .createHttpRequest(), "post", "/test_projectKey/types", } };
     }
 
     @DataProvider
@@ -110,7 +112,12 @@ public class ByProjectKeyTypesTest {
                         .get()
                         .withPredicateVar("varName", "var.varName"), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey").types().get(), },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").types().post(null).withExpand("expand"), },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").types().post(null), } };
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .types()
+                        .post(com.commercetools.api.models.type.TypeDraft.of())
+                        .withExpand("expand"), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .types()
+                        .post(com.commercetools.api.models.type.TypeDraft.of()), } };
     }
 }

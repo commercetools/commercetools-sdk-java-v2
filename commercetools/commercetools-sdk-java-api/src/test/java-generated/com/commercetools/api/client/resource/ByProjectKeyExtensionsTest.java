@@ -96,11 +96,13 @@ public class ByProjectKeyExtensionsTest {
                         "/test_projectKey/extensions", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .extensions()
-                        .post(null)
+                        .post(com.commercetools.api.models.extension.ExtensionDraft.of())
                         .withExpand("expand")
                         .createHttpRequest(), "post", "/test_projectKey/extensions?expand=expand", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").extensions().post(null).createHttpRequest(),
-                        "post", "/test_projectKey/extensions", } };
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .extensions()
+                        .post(com.commercetools.api.models.extension.ExtensionDraft.of())
+                        .createHttpRequest(), "post", "/test_projectKey/extensions", } };
     }
 
     @DataProvider
@@ -117,8 +119,12 @@ public class ByProjectKeyExtensionsTest {
                         .get()
                         .withPredicateVar("varName", "var.varName"), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey").extensions().get(), },
-                new Object[] {
-                        apiRoot.withProjectKey("test_projectKey").extensions().post(null).withExpand("expand"), },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").extensions().post(null), } };
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .extensions()
+                        .post(com.commercetools.api.models.extension.ExtensionDraft.of())
+                        .withExpand("expand"), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .extensions()
+                        .post(com.commercetools.api.models.extension.ExtensionDraft.of()), } };
     }
 }

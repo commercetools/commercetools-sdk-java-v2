@@ -86,7 +86,7 @@ public class ByProjectKeyInStoreKeyByStoreKeyCartsKeyByKeyTest {
                                 .inStoreKeyWithStoreKeyValue("test_storeKey")
                                 .carts()
                                 .withKey("test_key")
-                                .post(null)
+                                .post(com.commercetools.api.models.cart.CartUpdate.of())
                                 .withExpand("expand")
                                 .createHttpRequest(),
                         "post", "/test_projectKey/in-store/key=test_storeKey/carts/key=test_key?expand=expand", },
@@ -95,7 +95,7 @@ public class ByProjectKeyInStoreKeyByStoreKeyCartsKeyByKeyTest {
                                 .inStoreKeyWithStoreKeyValue("test_storeKey")
                                 .carts()
                                 .withKey("test_key")
-                                .post(null)
+                                .post(com.commercetools.api.models.cart.CartUpdate.of())
                                 .createHttpRequest(),
                         "post", "/test_projectKey/in-store/key=test_storeKey/carts/key=test_key", },
                 new Object[] {
@@ -153,13 +153,13 @@ public class ByProjectKeyInStoreKeyByStoreKeyCartsKeyByKeyTest {
                         .inStoreKeyWithStoreKeyValue("test_storeKey")
                         .carts()
                         .withKey("test_key")
-                        .post(null)
+                        .post(com.commercetools.api.models.cart.CartUpdate.of())
                         .withExpand("expand"), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .inStoreKeyWithStoreKeyValue("test_storeKey")
                         .carts()
                         .withKey("test_key")
-                        .post(null), },
+                        .post(com.commercetools.api.models.cart.CartUpdate.of()), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .inStoreKeyWithStoreKeyValue("test_storeKey")
                         .carts()

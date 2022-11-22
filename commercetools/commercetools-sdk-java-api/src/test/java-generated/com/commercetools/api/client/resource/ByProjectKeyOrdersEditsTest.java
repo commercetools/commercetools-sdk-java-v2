@@ -111,12 +111,14 @@ public class ByProjectKeyOrdersEditsTest {
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .orders()
                         .edits()
-                        .post(null)
+                        .post(com.commercetools.api.models.order_edit.OrderEditDraft.of())
                         .withExpand("expand")
                         .createHttpRequest(), "post", "/test_projectKey/orders/edits?expand=expand", },
-                new Object[] {
-                        apiRoot.withProjectKey("test_projectKey").orders().edits().post(null).createHttpRequest(),
-                        "post", "/test_projectKey/orders/edits", } };
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .orders()
+                        .edits()
+                        .post(com.commercetools.api.models.order_edit.OrderEditDraft.of())
+                        .createHttpRequest(), "post", "/test_projectKey/orders/edits", } };
     }
 
     @DataProvider
@@ -134,8 +136,14 @@ public class ByProjectKeyOrdersEditsTest {
                         .get()
                         .withPredicateVar("varName", "var.varName"), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey").orders().edits().get(), },
-                new Object[] {
-                        apiRoot.withProjectKey("test_projectKey").orders().edits().post(null).withExpand("expand"), },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").orders().edits().post(null), } };
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .orders()
+                        .edits()
+                        .post(com.commercetools.api.models.order_edit.OrderEditDraft.of())
+                        .withExpand("expand"), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .orders()
+                        .edits()
+                        .post(com.commercetools.api.models.order_edit.OrderEditDraft.of()), } };
     }
 }

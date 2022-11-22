@@ -1,6 +1,8 @@
 
 package com.commercetools.api.client;
 
+import java.util.function.UnaryOperator;
+
 import io.vrap.rmf.base.client.ApiHttpClient;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -27,8 +29,17 @@ public class ByProjectKeyTaxCategoriesKeyByKeyRequestBuilder {
         return new ByProjectKeyTaxCategoriesKeyByKeyPost(apiHttpClient, projectKey, key, taxCategoryUpdate);
     }
 
+    public ByProjectKeyTaxCategoriesKeyByKeyPost post(
+            UnaryOperator<com.commercetools.api.models.tax_category.TaxCategoryUpdateBuilder> op) {
+        return post(op.apply(com.commercetools.api.models.tax_category.TaxCategoryUpdateBuilder.of()).build());
+    }
+
     public ByProjectKeyTaxCategoriesKeyByKeyDelete delete() {
         return new ByProjectKeyTaxCategoriesKeyByKeyDelete(apiHttpClient, projectKey, key);
+    }
+
+    public <TValue> ByProjectKeyTaxCategoriesKeyByKeyDelete delete(TValue version) {
+        return delete().withVersion(version);
     }
 
 }

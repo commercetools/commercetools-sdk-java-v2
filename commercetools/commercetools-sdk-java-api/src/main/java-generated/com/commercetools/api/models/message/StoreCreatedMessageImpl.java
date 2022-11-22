@@ -46,6 +46,8 @@ public class StoreCreatedMessageImpl implements StoreCreatedMessage, ModelBase {
 
     private java.util.List<String> languages;
 
+    private java.util.List<com.commercetools.api.models.store_country.StoreCountry> countries;
+
     private java.util.List<com.commercetools.api.models.channel.ChannelReference> distributionChannels;
 
     private java.util.List<com.commercetools.api.models.channel.ChannelReference> supplyChannels;
@@ -66,6 +68,7 @@ public class StoreCreatedMessageImpl implements StoreCreatedMessage, ModelBase {
             @JsonProperty("resourceUserProvidedIdentifiers") final com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers,
             @JsonProperty("name") final com.commercetools.api.models.common.LocalizedString name,
             @JsonProperty("languages") final java.util.List<String> languages,
+            @JsonProperty("countries") final java.util.List<com.commercetools.api.models.store_country.StoreCountry> countries,
             @JsonProperty("distributionChannels") final java.util.List<com.commercetools.api.models.channel.ChannelReference> distributionChannels,
             @JsonProperty("supplyChannels") final java.util.List<com.commercetools.api.models.channel.ChannelReference> supplyChannels,
             @JsonProperty("productSelections") final java.util.List<com.commercetools.api.models.store.ProductSelectionSetting> productSelections,
@@ -82,6 +85,7 @@ public class StoreCreatedMessageImpl implements StoreCreatedMessage, ModelBase {
         this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
         this.name = name;
         this.languages = languages;
+        this.countries = countries;
         this.distributionChannels = distributionChannels;
         this.supplyChannels = supplyChannels;
         this.productSelections = productSelections;
@@ -198,6 +202,14 @@ public class StoreCreatedMessageImpl implements StoreCreatedMessage, ModelBase {
     }
 
     /**
+     *  <p>Countries of the Store that was created.</p>
+     */
+
+    public java.util.List<com.commercetools.api.models.store_country.StoreCountry> getCountries() {
+        return this.countries;
+    }
+
+    /**
      *  <p>Distribution Channels of the Store that was created.</p>
      */
 
@@ -282,6 +294,14 @@ public class StoreCreatedMessageImpl implements StoreCreatedMessage, ModelBase {
         this.languages = languages;
     }
 
+    public void setCountries(final com.commercetools.api.models.store_country.StoreCountry... countries) {
+        this.countries = new ArrayList<>(Arrays.asList(countries));
+    }
+
+    public void setCountries(final java.util.List<com.commercetools.api.models.store_country.StoreCountry> countries) {
+        this.countries = countries;
+    }
+
     public void setDistributionChannels(
             final com.commercetools.api.models.channel.ChannelReference... distributionChannels) {
         this.distributionChannels = new ArrayList<>(Arrays.asList(distributionChannels));
@@ -338,6 +358,7 @@ public class StoreCreatedMessageImpl implements StoreCreatedMessage, ModelBase {
                 .append(resourceUserProvidedIdentifiers, that.resourceUserProvidedIdentifiers)
                 .append(name, that.name)
                 .append(languages, that.languages)
+                .append(countries, that.countries)
                 .append(distributionChannels, that.distributionChannels)
                 .append(supplyChannels, that.supplyChannels)
                 .append(productSelections, that.productSelections)
@@ -360,6 +381,7 @@ public class StoreCreatedMessageImpl implements StoreCreatedMessage, ModelBase {
                 .append(resourceUserProvidedIdentifiers)
                 .append(name)
                 .append(languages)
+                .append(countries)
                 .append(distributionChannels)
                 .append(supplyChannels)
                 .append(productSelections)

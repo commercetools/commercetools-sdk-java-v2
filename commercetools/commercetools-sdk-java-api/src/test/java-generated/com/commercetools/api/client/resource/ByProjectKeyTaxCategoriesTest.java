@@ -105,11 +105,13 @@ public class ByProjectKeyTaxCategoriesTest {
                         "get", "/test_projectKey/tax-categories", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .taxCategories()
-                        .post(null)
+                        .post(com.commercetools.api.models.tax_category.TaxCategoryDraft.of())
                         .withExpand("expand")
                         .createHttpRequest(), "post", "/test_projectKey/tax-categories?expand=expand", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").taxCategories().post(null).createHttpRequest(),
-                        "post", "/test_projectKey/tax-categories", } };
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .taxCategories()
+                        .post(com.commercetools.api.models.tax_category.TaxCategoryDraft.of())
+                        .createHttpRequest(), "post", "/test_projectKey/tax-categories", } };
     }
 
     @DataProvider
@@ -126,8 +128,12 @@ public class ByProjectKeyTaxCategoriesTest {
                         .get()
                         .withPredicateVar("varName", "var.varName"), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey").taxCategories().get(), },
-                new Object[] {
-                        apiRoot.withProjectKey("test_projectKey").taxCategories().post(null).withExpand("expand"), },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").taxCategories().post(null), } };
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .taxCategories()
+                        .post(com.commercetools.api.models.tax_category.TaxCategoryDraft.of())
+                        .withExpand("expand"), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .taxCategories()
+                        .post(com.commercetools.api.models.tax_category.TaxCategoryDraft.of()), } };
     }
 }

@@ -78,13 +78,13 @@ public class ByProjectKeySubscriptionsByIDTest {
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .subscriptions()
                         .withId("test_ID")
-                        .post(null)
+                        .post(com.commercetools.api.models.subscription.SubscriptionUpdate.of())
                         .withExpand("expand")
                         .createHttpRequest(), "post", "/test_projectKey/subscriptions/test_ID?expand=expand", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .subscriptions()
                         .withId("test_ID")
-                        .post(null)
+                        .post(com.commercetools.api.models.subscription.SubscriptionUpdate.of())
                         .createHttpRequest(), "post", "/test_projectKey/subscriptions/test_ID", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .subscriptions()
@@ -119,10 +119,12 @@ public class ByProjectKeySubscriptionsByIDTest {
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .subscriptions()
                         .withId("test_ID")
-                        .post(null)
+                        .post(com.commercetools.api.models.subscription.SubscriptionUpdate.of())
                         .withExpand("expand"), },
-                new Object[] {
-                        apiRoot.withProjectKey("test_projectKey").subscriptions().withId("test_ID").post(null), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .subscriptions()
+                        .withId("test_ID")
+                        .post(com.commercetools.api.models.subscription.SubscriptionUpdate.of()), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .subscriptions()
                         .withId("test_ID")

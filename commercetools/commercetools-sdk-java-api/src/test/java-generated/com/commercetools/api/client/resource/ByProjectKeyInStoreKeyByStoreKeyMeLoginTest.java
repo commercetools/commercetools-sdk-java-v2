@@ -69,7 +69,7 @@ public class ByProjectKeyInStoreKeyByStoreKeyMeLoginTest {
                                 .inStoreKeyWithStoreKeyValue("test_storeKey")
                                 .me()
                                 .login()
-                                .post(null)
+                                .post(com.commercetools.api.models.customer.MyCustomerSignin.of())
                                 .createHttpRequest(),
                         "post", "/test_projectKey/in-store/key=test_storeKey/me/login", } };
     }
@@ -80,6 +80,6 @@ public class ByProjectKeyInStoreKeyByStoreKeyMeLoginTest {
                 .inStoreKeyWithStoreKeyValue("test_storeKey")
                 .me()
                 .login()
-                .post(null), } };
+                .post(com.commercetools.api.models.customer.MyCustomerSignin.of()), } };
     }
 }

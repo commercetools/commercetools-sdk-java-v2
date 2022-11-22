@@ -79,14 +79,14 @@ public class ByProjectKeyCustomersKeyByKeyTest {
                         apiRoot.withProjectKey("test_projectKey")
                                 .customers()
                                 .withKey("test_key")
-                                .post(null)
+                                .post(com.commercetools.api.models.customer.CustomerUpdate.of())
                                 .withExpand("expand")
                                 .createHttpRequest(),
                         "post", "/test_projectKey/customers/key=test_key?expand=expand", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .customers()
                         .withKey("test_key")
-                        .post(null)
+                        .post(com.commercetools.api.models.customer.CustomerUpdate.of())
                         .createHttpRequest(), "post", "/test_projectKey/customers/key=test_key", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
@@ -125,9 +125,12 @@ public class ByProjectKeyCustomersKeyByKeyTest {
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .customers()
                         .withKey("test_key")
-                        .post(null)
+                        .post(com.commercetools.api.models.customer.CustomerUpdate.of())
                         .withExpand("expand"), },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").customers().withKey("test_key").post(null), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .customers()
+                        .withKey("test_key")
+                        .post(com.commercetools.api.models.customer.CustomerUpdate.of()), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .customers()
                         .withKey("test_key")

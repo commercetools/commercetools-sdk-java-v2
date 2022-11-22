@@ -89,7 +89,7 @@ public class ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsByIDTest {
                                 .me()
                                 .shoppingLists()
                                 .withId("test_ID")
-                                .post(null)
+                                .post(com.commercetools.api.models.me.MyShoppingListUpdate.of())
                                 .withExpand("expand")
                                 .createHttpRequest(),
                         "post",
@@ -100,7 +100,7 @@ public class ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsByIDTest {
                                 .me()
                                 .shoppingLists()
                                 .withId("test_ID")
-                                .post(null)
+                                .post(com.commercetools.api.models.me.MyShoppingListUpdate.of())
                                 .createHttpRequest(),
                         "post", "/test_projectKey/in-store/key=test_storeKey/me/shopping-lists/test_ID", },
                 new Object[] {
@@ -167,14 +167,14 @@ public class ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsByIDTest {
                         .me()
                         .shoppingLists()
                         .withId("test_ID")
-                        .post(null)
+                        .post(com.commercetools.api.models.me.MyShoppingListUpdate.of())
                         .withExpand("expand"), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .inStoreKeyWithStoreKeyValue("test_storeKey")
                         .me()
                         .shoppingLists()
                         .withId("test_ID")
-                        .post(null), },
+                        .post(com.commercetools.api.models.me.MyShoppingListUpdate.of()), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .inStoreKeyWithStoreKeyValue("test_storeKey")
                         .me()

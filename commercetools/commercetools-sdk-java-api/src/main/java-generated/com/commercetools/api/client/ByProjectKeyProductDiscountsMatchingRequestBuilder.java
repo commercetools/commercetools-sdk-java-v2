@@ -1,6 +1,8 @@
 
 package com.commercetools.api.client;
 
+import java.util.function.UnaryOperator;
+
 import io.vrap.rmf.base.client.ApiHttpClient;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -19,6 +21,12 @@ public class ByProjectKeyProductDiscountsMatchingRequestBuilder {
     public ByProjectKeyProductDiscountsMatchingPost post(
             com.commercetools.api.models.product_discount.ProductDiscountMatchQuery productDiscountMatchQuery) {
         return new ByProjectKeyProductDiscountsMatchingPost(apiHttpClient, projectKey, productDiscountMatchQuery);
+    }
+
+    public ByProjectKeyProductDiscountsMatchingPost post(
+            UnaryOperator<com.commercetools.api.models.product_discount.ProductDiscountMatchQueryBuilder> op) {
+        return post(
+            op.apply(com.commercetools.api.models.product_discount.ProductDiscountMatchQueryBuilder.of()).build());
     }
 
 }

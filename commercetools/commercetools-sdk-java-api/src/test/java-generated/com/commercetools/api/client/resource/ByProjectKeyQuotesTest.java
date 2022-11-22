@@ -92,11 +92,13 @@ public class ByProjectKeyQuotesTest {
                         "/test_projectKey/quotes", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .quotes()
-                        .post(null)
+                        .post(com.commercetools.api.models.quote.QuoteDraft.of())
                         .withExpand("expand")
                         .createHttpRequest(), "post", "/test_projectKey/quotes?expand=expand", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").quotes().post(null).createHttpRequest(),
-                        "post", "/test_projectKey/quotes", } };
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .quotes()
+                        .post(com.commercetools.api.models.quote.QuoteDraft.of())
+                        .createHttpRequest(), "post", "/test_projectKey/quotes", } };
     }
 
     @DataProvider
@@ -113,7 +115,12 @@ public class ByProjectKeyQuotesTest {
                         .get()
                         .withPredicateVar("varName", "var.varName"), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey").quotes().get(), },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").quotes().post(null).withExpand("expand"), },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").quotes().post(null), } };
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .quotes()
+                        .post(com.commercetools.api.models.quote.QuoteDraft.of())
+                        .withExpand("expand"), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .quotes()
+                        .post(com.commercetools.api.models.quote.QuoteDraft.of()), } };
     }
 }

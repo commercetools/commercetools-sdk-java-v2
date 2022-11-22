@@ -63,14 +63,18 @@ public class ByProjectKeyMePasswordTest {
 
     @DataProvider
     public static Object[][] requestWithMethodParameters() {
-        return new Object[][] {
-                new Object[] { apiRoot.withProjectKey("test_projectKey").me().password().post(null).createHttpRequest(),
-                        "post", "/test_projectKey/me/password", } };
+        return new Object[][] { new Object[] { apiRoot.withProjectKey("test_projectKey")
+                .me()
+                .password()
+                .post(com.commercetools.api.models.customer.MyCustomerChangePassword.of())
+                .createHttpRequest(), "post", "/test_projectKey/me/password", } };
     }
 
     @DataProvider
     public static Object[][] executeMethodParameters() {
-        return new Object[][] {
-                new Object[] { apiRoot.withProjectKey("test_projectKey").me().password().post(null), } };
+        return new Object[][] { new Object[] { apiRoot.withProjectKey("test_projectKey")
+                .me()
+                .password()
+                .post(com.commercetools.api.models.customer.MyCustomerChangePassword.of()), } };
     }
 }

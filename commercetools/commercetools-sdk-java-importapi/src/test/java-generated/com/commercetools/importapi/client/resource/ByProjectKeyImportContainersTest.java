@@ -63,9 +63,11 @@ public class ByProjectKeyImportContainersTest {
 
     @DataProvider
     public static Object[][] requestWithMethodParameters() {
-        return new Object[][] { new Object[] {
-                apiRoot.withProjectKeyValue("test_projectKey").importContainers().post(null).createHttpRequest(),
-                "post", "/test_projectKey/import-containers", },
+        return new Object[][] {
+                new Object[] { apiRoot.withProjectKeyValue("test_projectKey")
+                        .importContainers()
+                        .post(com.commercetools.importapi.models.importcontainers.ImportContainerDraft.of())
+                        .createHttpRequest(), "post", "/test_projectKey/import-containers", },
                 new Object[] { apiRoot.withProjectKeyValue("test_projectKey")
                         .importContainers()
                         .get()
@@ -89,7 +91,9 @@ public class ByProjectKeyImportContainersTest {
     @DataProvider
     public static Object[][] executeMethodParameters() {
         return new Object[][] {
-                new Object[] { apiRoot.withProjectKeyValue("test_projectKey").importContainers().post(null), },
+                new Object[] { apiRoot.withProjectKeyValue("test_projectKey")
+                        .importContainers()
+                        .post(com.commercetools.importapi.models.importcontainers.ImportContainerDraft.of()), },
                 new Object[] { apiRoot.withProjectKeyValue("test_projectKey")
                         .importContainers()
                         .get()

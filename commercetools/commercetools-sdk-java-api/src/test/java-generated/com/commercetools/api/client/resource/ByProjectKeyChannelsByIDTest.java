@@ -78,13 +78,13 @@ public class ByProjectKeyChannelsByIDTest {
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .channels()
                         .withId("test_ID")
-                        .post(null)
+                        .post(com.commercetools.api.models.channel.ChannelUpdate.of())
                         .withExpand("expand")
                         .createHttpRequest(), "post", "/test_projectKey/channels/test_ID?expand=expand", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .channels()
                         .withId("test_ID")
-                        .post(null)
+                        .post(com.commercetools.api.models.channel.ChannelUpdate.of())
                         .createHttpRequest(), "post", "/test_projectKey/channels/test_ID", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .channels()
@@ -113,9 +113,12 @@ public class ByProjectKeyChannelsByIDTest {
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .channels()
                         .withId("test_ID")
-                        .post(null)
+                        .post(com.commercetools.api.models.channel.ChannelUpdate.of())
                         .withExpand("expand"), },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").channels().withId("test_ID").post(null), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .channels()
+                        .withId("test_ID")
+                        .post(com.commercetools.api.models.channel.ChannelUpdate.of()), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .channels()
                         .withId("test_ID")

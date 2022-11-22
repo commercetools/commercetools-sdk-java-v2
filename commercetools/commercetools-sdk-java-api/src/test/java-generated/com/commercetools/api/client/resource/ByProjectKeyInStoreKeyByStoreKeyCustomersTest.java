@@ -129,7 +129,7 @@ public class ByProjectKeyInStoreKeyByStoreKeyCustomersTest {
                         apiRoot.withProjectKey("test_projectKey")
                                 .inStoreKeyWithStoreKeyValue("test_storeKey")
                                 .customers()
-                                .post(null)
+                                .post(com.commercetools.api.models.customer.CustomerDraft.of())
                                 .withExpand("expand")
                                 .createHttpRequest(),
                         "post", "/test_projectKey/in-store/key=test_storeKey/customers?expand=expand", },
@@ -137,7 +137,7 @@ public class ByProjectKeyInStoreKeyByStoreKeyCustomersTest {
                         apiRoot.withProjectKey("test_projectKey")
                                 .inStoreKeyWithStoreKeyValue("test_storeKey")
                                 .customers()
-                                .post(null)
+                                .post(com.commercetools.api.models.customer.CustomerDraft.of())
                                 .createHttpRequest(),
                         "post", "/test_projectKey/in-store/key=test_storeKey/customers", } };
     }
@@ -187,11 +187,11 @@ public class ByProjectKeyInStoreKeyByStoreKeyCustomersTest {
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .inStoreKeyWithStoreKeyValue("test_storeKey")
                         .customers()
-                        .post(null)
+                        .post(com.commercetools.api.models.customer.CustomerDraft.of())
                         .withExpand("expand"), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .inStoreKeyWithStoreKeyValue("test_storeKey")
                         .customers()
-                        .post(null), } };
+                        .post(com.commercetools.api.models.customer.CustomerDraft.of()), } };
     }
 }

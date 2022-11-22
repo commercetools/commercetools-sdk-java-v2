@@ -66,13 +66,15 @@ public class ByProjectKeyTest {
         return new Object[][] {
                 new Object[] { apiRoot.withProjectKey("test_projectKey").get().createHttpRequest(), "get",
                         "/test_projectKey", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").post(null).createHttpRequest(), "post",
-                        "/test_projectKey", } };
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .post(com.commercetools.api.models.project.ProjectUpdate.of())
+                        .createHttpRequest(), "post", "/test_projectKey", } };
     }
 
     @DataProvider
     public static Object[][] executeMethodParameters() {
         return new Object[][] { new Object[] { apiRoot.withProjectKey("test_projectKey").get(), },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").post(null), } };
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .post(com.commercetools.api.models.project.ProjectUpdate.of()), } };
     }
 }

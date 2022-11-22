@@ -76,13 +76,13 @@ public class ByProjectKeyStatesByIDTest {
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .states()
                         .withId("test_ID")
-                        .post(null)
+                        .post(com.commercetools.api.models.state.StateUpdate.of())
                         .withExpand("expand")
                         .createHttpRequest(), "post", "/test_projectKey/states/test_ID?expand=expand", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .states()
                         .withId("test_ID")
-                        .post(null)
+                        .post(com.commercetools.api.models.state.StateUpdate.of())
                         .createHttpRequest(), "post", "/test_projectKey/states/test_ID", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .states()
@@ -111,9 +111,12 @@ public class ByProjectKeyStatesByIDTest {
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .states()
                         .withId("test_ID")
-                        .post(null)
+                        .post(com.commercetools.api.models.state.StateUpdate.of())
                         .withExpand("expand"), },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").states().withId("test_ID").post(null), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .states()
+                        .withId("test_ID")
+                        .post(com.commercetools.api.models.state.StateUpdate.of()), },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey").states().withId("test_ID").delete().withVersion(2), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")

@@ -68,7 +68,7 @@ public class ByProjectKeyInStoreKeyByStoreKeyCartsReplicateTest {
                         .inStoreKeyWithStoreKeyValue("test_storeKey")
                         .carts()
                         .replicate()
-                        .post(null)
+                        .post(com.commercetools.api.models.cart.ReplicaCartDraft.of())
                         .createHttpRequest(),
                 "post", "/test_projectKey/in-store/key=test_storeKey/carts/replicate", } };
     }
@@ -79,6 +79,6 @@ public class ByProjectKeyInStoreKeyByStoreKeyCartsReplicateTest {
                 .inStoreKeyWithStoreKeyValue("test_storeKey")
                 .carts()
                 .replicate()
-                .post(null), } };
+                .post(com.commercetools.api.models.cart.ReplicaCartDraft.of()), } };
     }
 }

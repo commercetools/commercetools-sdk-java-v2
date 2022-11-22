@@ -105,11 +105,13 @@ public class ByProjectKeyCartDiscountsTest {
                         "get", "/test_projectKey/cart-discounts", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .cartDiscounts()
-                        .post(null)
+                        .post(com.commercetools.api.models.cart_discount.CartDiscountDraft.of())
                         .withExpand("expand")
                         .createHttpRequest(), "post", "/test_projectKey/cart-discounts?expand=expand", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").cartDiscounts().post(null).createHttpRequest(),
-                        "post", "/test_projectKey/cart-discounts", } };
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .cartDiscounts()
+                        .post(com.commercetools.api.models.cart_discount.CartDiscountDraft.of())
+                        .createHttpRequest(), "post", "/test_projectKey/cart-discounts", } };
     }
 
     @DataProvider
@@ -126,8 +128,12 @@ public class ByProjectKeyCartDiscountsTest {
                         .get()
                         .withPredicateVar("varName", "var.varName"), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey").cartDiscounts().get(), },
-                new Object[] {
-                        apiRoot.withProjectKey("test_projectKey").cartDiscounts().post(null).withExpand("expand"), },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").cartDiscounts().post(null), } };
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .cartDiscounts()
+                        .post(com.commercetools.api.models.cart_discount.CartDiscountDraft.of())
+                        .withExpand("expand"), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .cartDiscounts()
+                        .post(com.commercetools.api.models.cart_discount.CartDiscountDraft.of()), } };
     }
 }

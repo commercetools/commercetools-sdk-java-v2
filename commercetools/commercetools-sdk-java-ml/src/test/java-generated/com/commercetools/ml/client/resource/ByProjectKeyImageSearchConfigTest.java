@@ -67,15 +67,20 @@ public class ByProjectKeyImageSearchConfigTest {
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey").imageSearch().config().get().createHttpRequest(),
                         "get", "/test_projectKey/image-search/config", },
-                new Object[] {
-                        apiRoot.withProjectKey("test_projectKey").imageSearch().config().post(null).createHttpRequest(),
-                        "post", "/test_projectKey/image-search/config", } };
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .imageSearch()
+                        .config()
+                        .post(com.commercetools.ml.models.image_search_config.ImageSearchConfigRequest.of())
+                        .createHttpRequest(), "post", "/test_projectKey/image-search/config", } };
     }
 
     @DataProvider
     public static Object[][] executeMethodParameters() {
         return new Object[][] {
                 new Object[] { apiRoot.withProjectKey("test_projectKey").imageSearch().config().get(), },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").imageSearch().config().post(null), } };
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .imageSearch()
+                        .config()
+                        .post(com.commercetools.ml.models.image_search_config.ImageSearchConfigRequest.of()), } };
     }
 }

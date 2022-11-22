@@ -1,6 +1,8 @@
 
 package com.commercetools.api.client;
 
+import java.util.function.UnaryOperator;
+
 import io.vrap.rmf.base.client.ApiHttpClient;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,6 +19,11 @@ public class ByProjectKeyOrdersSearchRequestBuilder {
 
     public ByProjectKeyOrdersSearchPost post(com.commercetools.api.models.order.OrderSearchRequest orderSearchRequest) {
         return new ByProjectKeyOrdersSearchPost(apiHttpClient, projectKey, orderSearchRequest);
+    }
+
+    public ByProjectKeyOrdersSearchPost post(
+            UnaryOperator<com.commercetools.api.models.order.OrderSearchRequestBuilder> op) {
+        return post(op.apply(com.commercetools.api.models.order.OrderSearchRequestBuilder.of()).build());
     }
 
     public ByProjectKeyOrdersSearchHead head() {

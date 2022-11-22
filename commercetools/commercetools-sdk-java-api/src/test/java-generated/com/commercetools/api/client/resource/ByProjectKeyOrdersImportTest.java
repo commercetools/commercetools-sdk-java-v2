@@ -63,14 +63,18 @@ public class ByProjectKeyOrdersImportTest {
 
     @DataProvider
     public static Object[][] requestWithMethodParameters() {
-        return new Object[][] { new Object[] {
-                apiRoot.withProjectKey("test_projectKey").orders().importOrder().post(null).createHttpRequest(), "post",
-                "/test_projectKey/orders/import", } };
+        return new Object[][] { new Object[] { apiRoot.withProjectKey("test_projectKey")
+                .orders()
+                .importOrder()
+                .post(com.commercetools.api.models.order.OrderImportDraft.of())
+                .createHttpRequest(), "post", "/test_projectKey/orders/import", } };
     }
 
     @DataProvider
     public static Object[][] executeMethodParameters() {
-        return new Object[][] {
-                new Object[] { apiRoot.withProjectKey("test_projectKey").orders().importOrder().post(null), } };
+        return new Object[][] { new Object[] { apiRoot.withProjectKey("test_projectKey")
+                .orders()
+                .importOrder()
+                .post(com.commercetools.api.models.order.OrderImportDraft.of()), } };
     }
 }

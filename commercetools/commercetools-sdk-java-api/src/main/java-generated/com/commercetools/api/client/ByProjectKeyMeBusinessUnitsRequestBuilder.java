@@ -1,7 +1,10 @@
 
 package com.commercetools.api.client;
 
+import java.util.function.Function;
+
 import io.vrap.rmf.base.client.ApiHttpClient;
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
@@ -22,6 +25,11 @@ public class ByProjectKeyMeBusinessUnitsRequestBuilder {
     public ByProjectKeyMeBusinessUnitsPost post(
             com.commercetools.api.models.me.MyBusinessUnitDraft myBusinessUnitDraft) {
         return new ByProjectKeyMeBusinessUnitsPost(apiHttpClient, projectKey, myBusinessUnitDraft);
+    }
+
+    public ByProjectKeyMeBusinessUnitsPost post(
+            Function<com.commercetools.api.models.me.MyBusinessUnitDraftBuilder, Builder<? extends com.commercetools.api.models.me.MyBusinessUnitDraft>> op) {
+        return post(op.apply(com.commercetools.api.models.me.MyBusinessUnitDraftBuilder.of()).build());
     }
 
     public ByProjectKeyMeBusinessUnitsByIDRequestBuilder withId(String ID) {

@@ -68,13 +68,17 @@ public class ByProjectKeyOrdersEditsByIDApplyTest {
                 .edits()
                 .withId("test_ID")
                 .apply()
-                .post(null)
+                .post(com.commercetools.api.models.order_edit.OrderEditApply.of())
                 .createHttpRequest(), "post", "/test_projectKey/orders/edits/test_ID/apply", } };
     }
 
     @DataProvider
     public static Object[][] executeMethodParameters() {
-        return new Object[][] { new Object[] {
-                apiRoot.withProjectKey("test_projectKey").orders().edits().withId("test_ID").apply().post(null), } };
+        return new Object[][] { new Object[] { apiRoot.withProjectKey("test_projectKey")
+                .orders()
+                .edits()
+                .withId("test_ID")
+                .apply()
+                .post(com.commercetools.api.models.order_edit.OrderEditApply.of()), } };
     }
 }

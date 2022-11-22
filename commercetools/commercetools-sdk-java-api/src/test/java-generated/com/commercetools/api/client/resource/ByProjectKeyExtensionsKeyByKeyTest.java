@@ -81,14 +81,14 @@ public class ByProjectKeyExtensionsKeyByKeyTest {
                         apiRoot.withProjectKey("test_projectKey")
                                 .extensions()
                                 .withKey("test_key")
-                                .post(null)
+                                .post(com.commercetools.api.models.extension.ExtensionUpdate.of())
                                 .withExpand("expand")
                                 .createHttpRequest(),
                         "post", "/test_projectKey/extensions/key=test_key?expand=expand", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .extensions()
                         .withKey("test_key")
-                        .post(null)
+                        .post(com.commercetools.api.models.extension.ExtensionUpdate.of())
                         .createHttpRequest(), "post", "/test_projectKey/extensions/key=test_key", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .extensions()
@@ -123,9 +123,12 @@ public class ByProjectKeyExtensionsKeyByKeyTest {
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .extensions()
                         .withKey("test_key")
-                        .post(null)
+                        .post(com.commercetools.api.models.extension.ExtensionUpdate.of())
                         .withExpand("expand"), },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").extensions().withKey("test_key").post(null), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .extensions()
+                        .withKey("test_key")
+                        .post(com.commercetools.api.models.extension.ExtensionUpdate.of()), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .extensions()
                         .withKey("test_key")

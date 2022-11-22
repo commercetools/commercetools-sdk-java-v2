@@ -105,11 +105,13 @@ public class ByProjectKeyQuoteRequestsTest {
                         "get", "/test_projectKey/quote-requests", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .quoteRequests()
-                        .post(null)
+                        .post(com.commercetools.api.models.quote_request.QuoteRequestDraft.of())
                         .withExpand("expand")
                         .createHttpRequest(), "post", "/test_projectKey/quote-requests?expand=expand", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").quoteRequests().post(null).createHttpRequest(),
-                        "post", "/test_projectKey/quote-requests", } };
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .quoteRequests()
+                        .post(com.commercetools.api.models.quote_request.QuoteRequestDraft.of())
+                        .createHttpRequest(), "post", "/test_projectKey/quote-requests", } };
     }
 
     @DataProvider
@@ -126,8 +128,12 @@ public class ByProjectKeyQuoteRequestsTest {
                         .get()
                         .withPredicateVar("varName", "var.varName"), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey").quoteRequests().get(), },
-                new Object[] {
-                        apiRoot.withProjectKey("test_projectKey").quoteRequests().post(null).withExpand("expand"), },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").quoteRequests().post(null), } };
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .quoteRequests()
+                        .post(com.commercetools.api.models.quote_request.QuoteRequestDraft.of())
+                        .withExpand("expand"), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .quoteRequests()
+                        .post(com.commercetools.api.models.quote_request.QuoteRequestDraft.of()), } };
     }
 }

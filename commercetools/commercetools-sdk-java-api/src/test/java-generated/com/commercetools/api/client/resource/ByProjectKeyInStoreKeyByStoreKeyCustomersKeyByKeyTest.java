@@ -86,7 +86,7 @@ public class ByProjectKeyInStoreKeyByStoreKeyCustomersKeyByKeyTest {
                                 .inStoreKeyWithStoreKeyValue("test_storeKey")
                                 .customers()
                                 .withKey("test_key")
-                                .post(null)
+                                .post(com.commercetools.api.models.customer.CustomerUpdate.of())
                                 .withExpand("expand")
                                 .createHttpRequest(),
                         "post", "/test_projectKey/in-store/key=test_storeKey/customers/key=test_key?expand=expand", },
@@ -95,7 +95,7 @@ public class ByProjectKeyInStoreKeyByStoreKeyCustomersKeyByKeyTest {
                                 .inStoreKeyWithStoreKeyValue("test_storeKey")
                                 .customers()
                                 .withKey("test_key")
-                                .post(null)
+                                .post(com.commercetools.api.models.customer.CustomerUpdate.of())
                                 .createHttpRequest(),
                         "post", "/test_projectKey/in-store/key=test_storeKey/customers/key=test_key", },
                 new Object[] {
@@ -154,13 +154,13 @@ public class ByProjectKeyInStoreKeyByStoreKeyCustomersKeyByKeyTest {
                         .inStoreKeyWithStoreKeyValue("test_storeKey")
                         .customers()
                         .withKey("test_key")
-                        .post(null)
+                        .post(com.commercetools.api.models.customer.CustomerUpdate.of())
                         .withExpand("expand"), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .inStoreKeyWithStoreKeyValue("test_storeKey")
                         .customers()
                         .withKey("test_key")
-                        .post(null), },
+                        .post(com.commercetools.api.models.customer.CustomerUpdate.of()), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .inStoreKeyWithStoreKeyValue("test_storeKey")
                         .customers()

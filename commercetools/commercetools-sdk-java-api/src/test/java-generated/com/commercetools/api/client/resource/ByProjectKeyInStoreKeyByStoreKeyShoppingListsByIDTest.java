@@ -86,7 +86,7 @@ public class ByProjectKeyInStoreKeyByStoreKeyShoppingListsByIDTest {
                                 .inStoreKeyWithStoreKeyValue("test_storeKey")
                                 .shoppingLists()
                                 .withId("test_ID")
-                                .post(null)
+                                .post(com.commercetools.api.models.shopping_list.ShoppingListUpdate.of())
                                 .withExpand("expand")
                                 .createHttpRequest(),
                         "post", "/test_projectKey/in-store/key=test_storeKey/shopping-lists/test_ID?expand=expand", },
@@ -95,7 +95,7 @@ public class ByProjectKeyInStoreKeyByStoreKeyShoppingListsByIDTest {
                                 .inStoreKeyWithStoreKeyValue("test_storeKey")
                                 .shoppingLists()
                                 .withId("test_ID")
-                                .post(null)
+                                .post(com.commercetools.api.models.shopping_list.ShoppingListUpdate.of())
                                 .createHttpRequest(),
                         "post", "/test_projectKey/in-store/key=test_storeKey/shopping-lists/test_ID", },
                 new Object[] {
@@ -154,13 +154,13 @@ public class ByProjectKeyInStoreKeyByStoreKeyShoppingListsByIDTest {
                         .inStoreKeyWithStoreKeyValue("test_storeKey")
                         .shoppingLists()
                         .withId("test_ID")
-                        .post(null)
+                        .post(com.commercetools.api.models.shopping_list.ShoppingListUpdate.of())
                         .withExpand("expand"), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .inStoreKeyWithStoreKeyValue("test_storeKey")
                         .shoppingLists()
                         .withId("test_ID")
-                        .post(null), },
+                        .post(com.commercetools.api.models.shopping_list.ShoppingListUpdate.of()), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .inStoreKeyWithStoreKeyValue("test_storeKey")
                         .shoppingLists()

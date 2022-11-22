@@ -84,7 +84,7 @@ public class ByProjectKeyMeBusinessUnitsKeyByKeyTest {
                                 .me()
                                 .businessUnits()
                                 .withKey("test_key")
-                                .post(null)
+                                .post(com.commercetools.api.models.me.MyBusinessUnitUpdate.of())
                                 .withExpand("expand")
                                 .createHttpRequest(),
                         "post", "/test_projectKey/me/business-units/key=test_key?expand=expand", },
@@ -92,7 +92,7 @@ public class ByProjectKeyMeBusinessUnitsKeyByKeyTest {
                         .me()
                         .businessUnits()
                         .withKey("test_key")
-                        .post(null)
+                        .post(com.commercetools.api.models.me.MyBusinessUnitUpdate.of())
                         .createHttpRequest(), "post", "/test_projectKey/me/business-units/key=test_key", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
@@ -135,13 +135,13 @@ public class ByProjectKeyMeBusinessUnitsKeyByKeyTest {
                         .me()
                         .businessUnits()
                         .withKey("test_key")
-                        .post(null)
+                        .post(com.commercetools.api.models.me.MyBusinessUnitUpdate.of())
                         .withExpand("expand"), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .me()
                         .businessUnits()
                         .withKey("test_key")
-                        .post(null), },
+                        .post(com.commercetools.api.models.me.MyBusinessUnitUpdate.of()), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .me()
                         .businessUnits()

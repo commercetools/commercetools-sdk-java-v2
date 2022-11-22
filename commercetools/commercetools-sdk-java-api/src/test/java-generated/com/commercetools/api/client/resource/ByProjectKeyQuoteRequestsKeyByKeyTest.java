@@ -81,14 +81,14 @@ public class ByProjectKeyQuoteRequestsKeyByKeyTest {
                         apiRoot.withProjectKey("test_projectKey")
                                 .quoteRequests()
                                 .withKey("test_key")
-                                .post(null)
+                                .post(com.commercetools.api.models.quote_request.QuoteRequestUpdate.of())
                                 .withExpand("expand")
                                 .createHttpRequest(),
                         "post", "/test_projectKey/quote-requests/key=test_key?expand=expand", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .quoteRequests()
                         .withKey("test_key")
-                        .post(null)
+                        .post(com.commercetools.api.models.quote_request.QuoteRequestUpdate.of())
                         .createHttpRequest(), "post", "/test_projectKey/quote-requests/key=test_key", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
@@ -133,10 +133,12 @@ public class ByProjectKeyQuoteRequestsKeyByKeyTest {
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .quoteRequests()
                         .withKey("test_key")
-                        .post(null)
+                        .post(com.commercetools.api.models.quote_request.QuoteRequestUpdate.of())
                         .withExpand("expand"), },
-                new Object[] {
-                        apiRoot.withProjectKey("test_projectKey").quoteRequests().withKey("test_key").post(null), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .quoteRequests()
+                        .withKey("test_key")
+                        .post(com.commercetools.api.models.quote_request.QuoteRequestUpdate.of()), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .quoteRequests()
                         .withKey("test_key")

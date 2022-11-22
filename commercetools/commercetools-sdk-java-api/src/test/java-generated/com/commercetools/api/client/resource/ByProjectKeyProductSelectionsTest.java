@@ -105,12 +105,13 @@ public class ByProjectKeyProductSelectionsTest {
                         "get", "/test_projectKey/product-selections", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .productSelections()
-                        .post(null)
+                        .post(com.commercetools.api.models.product_selection.ProductSelectionDraft.of())
                         .withExpand("expand")
                         .createHttpRequest(), "post", "/test_projectKey/product-selections?expand=expand", },
-                new Object[] {
-                        apiRoot.withProjectKey("test_projectKey").productSelections().post(null).createHttpRequest(),
-                        "post", "/test_projectKey/product-selections", } };
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .productSelections()
+                        .post(com.commercetools.api.models.product_selection.ProductSelectionDraft.of())
+                        .createHttpRequest(), "post", "/test_projectKey/product-selections", } };
     }
 
     @DataProvider
@@ -132,8 +133,10 @@ public class ByProjectKeyProductSelectionsTest {
                 new Object[] { apiRoot.withProjectKey("test_projectKey").productSelections().get(), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .productSelections()
-                        .post(null)
+                        .post(com.commercetools.api.models.product_selection.ProductSelectionDraft.of())
                         .withExpand("expand"), },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").productSelections().post(null), } };
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .productSelections()
+                        .post(com.commercetools.api.models.product_selection.ProductSelectionDraft.of()), } };
     }
 }

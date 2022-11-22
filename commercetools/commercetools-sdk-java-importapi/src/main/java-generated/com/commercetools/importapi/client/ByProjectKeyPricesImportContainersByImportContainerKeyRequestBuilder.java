@@ -1,6 +1,8 @@
 
 package com.commercetools.importapi.client;
 
+import java.util.function.UnaryOperator;
+
 import io.vrap.rmf.base.client.ApiHttpClient;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -22,6 +24,11 @@ public class ByProjectKeyPricesImportContainersByImportContainerKeyRequestBuilde
             com.commercetools.importapi.models.importrequests.PriceImportRequest priceImportRequest) {
         return new ByProjectKeyPricesImportContainersByImportContainerKeyPost(apiHttpClient, projectKey,
             importContainerKey, priceImportRequest);
+    }
+
+    public ByProjectKeyPricesImportContainersByImportContainerKeyPost post(
+            UnaryOperator<com.commercetools.importapi.models.importrequests.PriceImportRequestBuilder> op) {
+        return post(op.apply(com.commercetools.importapi.models.importrequests.PriceImportRequestBuilder.of()).build());
     }
 
 }

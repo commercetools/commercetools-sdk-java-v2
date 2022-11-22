@@ -81,14 +81,14 @@ public class ByProjectKeyBusinessUnitsKeyByKeyTest {
                         apiRoot.withProjectKey("test_projectKey")
                                 .businessUnits()
                                 .withKey("test_key")
-                                .post(null)
+                                .post(com.commercetools.api.models.business_unit.BusinessUnitUpdate.of())
                                 .withExpand("expand")
                                 .createHttpRequest(),
                         "post", "/test_projectKey/business-units/key=test_key?expand=expand", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .businessUnits()
                         .withKey("test_key")
-                        .post(null)
+                        .post(com.commercetools.api.models.business_unit.BusinessUnitUpdate.of())
                         .createHttpRequest(), "post", "/test_projectKey/business-units/key=test_key", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
@@ -125,10 +125,12 @@ public class ByProjectKeyBusinessUnitsKeyByKeyTest {
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .businessUnits()
                         .withKey("test_key")
-                        .post(null)
+                        .post(com.commercetools.api.models.business_unit.BusinessUnitUpdate.of())
                         .withExpand("expand"), },
-                new Object[] {
-                        apiRoot.withProjectKey("test_projectKey").businessUnits().withKey("test_key").post(null), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .businessUnits()
+                        .withKey("test_key")
+                        .post(com.commercetools.api.models.business_unit.BusinessUnitUpdate.of()), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .businessUnits()
                         .withKey("test_key")

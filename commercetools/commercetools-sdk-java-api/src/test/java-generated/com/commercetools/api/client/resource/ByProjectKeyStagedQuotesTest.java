@@ -100,11 +100,13 @@ public class ByProjectKeyStagedQuotesTest {
                         "get", "/test_projectKey/staged-quotes", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .stagedQuotes()
-                        .post(null)
+                        .post(com.commercetools.api.models.staged_quote.StagedQuoteDraft.of())
                         .withExpand("expand")
                         .createHttpRequest(), "post", "/test_projectKey/staged-quotes?expand=expand", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").stagedQuotes().post(null).createHttpRequest(),
-                        "post", "/test_projectKey/staged-quotes", } };
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .stagedQuotes()
+                        .post(com.commercetools.api.models.staged_quote.StagedQuoteDraft.of())
+                        .createHttpRequest(), "post", "/test_projectKey/staged-quotes", } };
     }
 
     @DataProvider
@@ -121,8 +123,12 @@ public class ByProjectKeyStagedQuotesTest {
                         .get()
                         .withPredicateVar("varName", "var.varName"), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey").stagedQuotes().get(), },
-                new Object[] {
-                        apiRoot.withProjectKey("test_projectKey").stagedQuotes().post(null).withExpand("expand"), },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").stagedQuotes().post(null), } };
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .stagedQuotes()
+                        .post(com.commercetools.api.models.staged_quote.StagedQuoteDraft.of())
+                        .withExpand("expand"), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .stagedQuotes()
+                        .post(com.commercetools.api.models.staged_quote.StagedQuoteDraft.of()), } };
     }
 }

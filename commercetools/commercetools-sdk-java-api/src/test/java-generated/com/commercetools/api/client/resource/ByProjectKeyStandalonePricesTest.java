@@ -105,12 +105,13 @@ public class ByProjectKeyStandalonePricesTest {
                         "get", "/test_projectKey/standalone-prices", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .standalonePrices()
-                        .post(null)
+                        .post(com.commercetools.api.models.standalone_price.StandalonePriceDraft.of())
                         .withExpand("expand")
                         .createHttpRequest(), "post", "/test_projectKey/standalone-prices?expand=expand", },
-                new Object[] {
-                        apiRoot.withProjectKey("test_projectKey").standalonePrices().post(null).createHttpRequest(),
-                        "post", "/test_projectKey/standalone-prices", } };
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .standalonePrices()
+                        .post(com.commercetools.api.models.standalone_price.StandalonePriceDraft.of())
+                        .createHttpRequest(), "post", "/test_projectKey/standalone-prices", } };
     }
 
     @DataProvider
@@ -129,8 +130,12 @@ public class ByProjectKeyStandalonePricesTest {
                         .get()
                         .withPredicateVar("varName", "var.varName"), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey").standalonePrices().get(), },
-                new Object[] {
-                        apiRoot.withProjectKey("test_projectKey").standalonePrices().post(null).withExpand("expand"), },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").standalonePrices().post(null), } };
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .standalonePrices()
+                        .post(com.commercetools.api.models.standalone_price.StandalonePriceDraft.of())
+                        .withExpand("expand"), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .standalonePrices()
+                        .post(com.commercetools.api.models.standalone_price.StandalonePriceDraft.of()), } };
     }
 }

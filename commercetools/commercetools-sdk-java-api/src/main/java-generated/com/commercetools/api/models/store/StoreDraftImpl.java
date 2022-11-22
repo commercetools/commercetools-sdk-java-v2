@@ -26,6 +26,8 @@ public class StoreDraftImpl implements StoreDraft, ModelBase {
 
     private java.util.List<String> languages;
 
+    private java.util.List<com.commercetools.api.models.store_country.StoreCountry> countries;
+
     private java.util.List<com.commercetools.api.models.channel.ChannelResourceIdentifier> distributionChannels;
 
     private java.util.List<com.commercetools.api.models.channel.ChannelResourceIdentifier> supplyChannels;
@@ -38,6 +40,7 @@ public class StoreDraftImpl implements StoreDraft, ModelBase {
     StoreDraftImpl(@JsonProperty("key") final String key,
             @JsonProperty("name") final com.commercetools.api.models.common.LocalizedString name,
             @JsonProperty("languages") final java.util.List<String> languages,
+            @JsonProperty("countries") final java.util.List<com.commercetools.api.models.store_country.StoreCountry> countries,
             @JsonProperty("distributionChannels") final java.util.List<com.commercetools.api.models.channel.ChannelResourceIdentifier> distributionChannels,
             @JsonProperty("supplyChannels") final java.util.List<com.commercetools.api.models.channel.ChannelResourceIdentifier> supplyChannels,
             @JsonProperty("productSelections") final java.util.List<com.commercetools.api.models.store.ProductSelectionSettingDraft> productSelections,
@@ -45,6 +48,7 @@ public class StoreDraftImpl implements StoreDraft, ModelBase {
         this.key = key;
         this.name = name;
         this.languages = languages;
+        this.countries = countries;
         this.distributionChannels = distributionChannels;
         this.supplyChannels = supplyChannels;
         this.productSelections = productSelections;
@@ -76,6 +80,14 @@ public class StoreDraftImpl implements StoreDraft, ModelBase {
 
     public java.util.List<String> getLanguages() {
         return this.languages;
+    }
+
+    /**
+     *  <p>Countries defined for the Store.</p>
+     */
+
+    public java.util.List<com.commercetools.api.models.store_country.StoreCountry> getCountries() {
+        return this.countries;
     }
 
     /**
@@ -130,6 +142,14 @@ public class StoreDraftImpl implements StoreDraft, ModelBase {
         this.languages = languages;
     }
 
+    public void setCountries(final com.commercetools.api.models.store_country.StoreCountry... countries) {
+        this.countries = new ArrayList<>(Arrays.asList(countries));
+    }
+
+    public void setCountries(final java.util.List<com.commercetools.api.models.store_country.StoreCountry> countries) {
+        this.countries = countries;
+    }
+
     public void setDistributionChannels(
             final com.commercetools.api.models.channel.ChannelResourceIdentifier... distributionChannels) {
         this.distributionChannels = new ArrayList<>(Arrays.asList(distributionChannels));
@@ -177,6 +197,7 @@ public class StoreDraftImpl implements StoreDraft, ModelBase {
         return new EqualsBuilder().append(key, that.key)
                 .append(name, that.name)
                 .append(languages, that.languages)
+                .append(countries, that.countries)
                 .append(distributionChannels, that.distributionChannels)
                 .append(supplyChannels, that.supplyChannels)
                 .append(productSelections, that.productSelections)
@@ -189,6 +210,7 @@ public class StoreDraftImpl implements StoreDraft, ModelBase {
         return new HashCodeBuilder(17, 37).append(key)
                 .append(name)
                 .append(languages)
+                .append(countries)
                 .append(distributionChannels)
                 .append(supplyChannels)
                 .append(productSelections)

@@ -66,7 +66,7 @@ public class ByProjectKeyInStoreKeyByStoreKeyLoginTest {
         return new Object[][] { new Object[] { apiRoot.withProjectKey("test_projectKey")
                 .inStoreKeyWithStoreKeyValue("test_storeKey")
                 .login()
-                .post(null)
+                .post(com.commercetools.api.models.customer.CustomerSignin.of())
                 .createHttpRequest(), "post", "/test_projectKey/in-store/key=test_storeKey/login", } };
     }
 
@@ -75,6 +75,6 @@ public class ByProjectKeyInStoreKeyByStoreKeyLoginTest {
         return new Object[][] { new Object[] { apiRoot.withProjectKey("test_projectKey")
                 .inStoreKeyWithStoreKeyValue("test_storeKey")
                 .login()
-                .post(null), } };
+                .post(com.commercetools.api.models.customer.CustomerSignin.of()), } };
     }
 }

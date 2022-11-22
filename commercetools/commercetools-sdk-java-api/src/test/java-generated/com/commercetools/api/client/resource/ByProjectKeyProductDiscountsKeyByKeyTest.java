@@ -81,14 +81,14 @@ public class ByProjectKeyProductDiscountsKeyByKeyTest {
                         apiRoot.withProjectKey("test_projectKey")
                                 .productDiscounts()
                                 .withKey("test_key")
-                                .post(null)
+                                .post(com.commercetools.api.models.product_discount.ProductDiscountUpdate.of())
                                 .withExpand("expand")
                                 .createHttpRequest(),
                         "post", "/test_projectKey/product-discounts/key=test_key?expand=expand", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .productDiscounts()
                         .withKey("test_key")
-                        .post(null)
+                        .post(com.commercetools.api.models.product_discount.ProductDiscountUpdate.of())
                         .createHttpRequest(), "post", "/test_projectKey/product-discounts/key=test_key", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
@@ -126,10 +126,12 @@ public class ByProjectKeyProductDiscountsKeyByKeyTest {
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .productDiscounts()
                         .withKey("test_key")
-                        .post(null)
+                        .post(com.commercetools.api.models.product_discount.ProductDiscountUpdate.of())
                         .withExpand("expand"), },
-                new Object[] {
-                        apiRoot.withProjectKey("test_projectKey").productDiscounts().withKey("test_key").post(null), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .productDiscounts()
+                        .withKey("test_key")
+                        .post(com.commercetools.api.models.product_discount.ProductDiscountUpdate.of()), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .productDiscounts()
                         .withKey("test_key")

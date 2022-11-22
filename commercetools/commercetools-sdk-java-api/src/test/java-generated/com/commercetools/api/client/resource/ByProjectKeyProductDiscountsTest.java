@@ -105,12 +105,13 @@ public class ByProjectKeyProductDiscountsTest {
                         "get", "/test_projectKey/product-discounts", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .productDiscounts()
-                        .post(null)
+                        .post(com.commercetools.api.models.product_discount.ProductDiscountDraft.of())
                         .withExpand("expand")
                         .createHttpRequest(), "post", "/test_projectKey/product-discounts?expand=expand", },
-                new Object[] {
-                        apiRoot.withProjectKey("test_projectKey").productDiscounts().post(null).createHttpRequest(),
-                        "post", "/test_projectKey/product-discounts", } };
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .productDiscounts()
+                        .post(com.commercetools.api.models.product_discount.ProductDiscountDraft.of())
+                        .createHttpRequest(), "post", "/test_projectKey/product-discounts", } };
     }
 
     @DataProvider
@@ -129,8 +130,12 @@ public class ByProjectKeyProductDiscountsTest {
                         .get()
                         .withPredicateVar("varName", "var.varName"), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey").productDiscounts().get(), },
-                new Object[] {
-                        apiRoot.withProjectKey("test_projectKey").productDiscounts().post(null).withExpand("expand"), },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").productDiscounts().post(null), } };
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .productDiscounts()
+                        .post(com.commercetools.api.models.product_discount.ProductDiscountDraft.of())
+                        .withExpand("expand"), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .productDiscounts()
+                        .post(com.commercetools.api.models.product_discount.ProductDiscountDraft.of()), } };
     }
 }

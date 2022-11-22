@@ -68,7 +68,8 @@ public class ByProjectKeyImportContainersByImportContainerKeyTest {
                         apiRoot.withProjectKeyValue("test_projectKey")
                                 .importContainers()
                                 .withImportContainerKeyValue("test_importContainerKey")
-                                .put(null)
+                                .put(
+                                    com.commercetools.importapi.models.importcontainers.ImportContainerUpdateDraft.of())
                                 .createHttpRequest(),
                         "put", "/test_projectKey/import-containers/test_importContainerKey", },
                 new Object[] {
@@ -93,7 +94,7 @@ public class ByProjectKeyImportContainersByImportContainerKeyTest {
                 new Object[] { apiRoot.withProjectKeyValue("test_projectKey")
                         .importContainers()
                         .withImportContainerKeyValue("test_importContainerKey")
-                        .put(null), },
+                        .put(com.commercetools.importapi.models.importcontainers.ImportContainerUpdateDraft.of()), },
                 new Object[] { apiRoot.withProjectKeyValue("test_projectKey")
                         .importContainers()
                         .withImportContainerKeyValue("test_importContainerKey")

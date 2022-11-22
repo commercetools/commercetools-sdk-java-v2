@@ -543,6 +543,10 @@ public class MessageBuilder {
         return com.commercetools.api.models.message.StandalonePriceValueChangedMessageBuilder.of();
     }
 
+    public com.commercetools.api.models.message.StoreCountriesChangedMessageBuilder storeCountriesChangedBuilder() {
+        return com.commercetools.api.models.message.StoreCountriesChangedMessageBuilder.of();
+    }
+
     public com.commercetools.api.models.message.StoreCreatedMessageBuilder storeCreatedBuilder() {
         return com.commercetools.api.models.message.StoreCreatedMessageBuilder.of();
     }

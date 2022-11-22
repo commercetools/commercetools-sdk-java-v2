@@ -101,11 +101,14 @@ public class ByProjectKeyMeOrdersTest {
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .me()
                         .orders()
-                        .post(null)
+                        .post(com.commercetools.api.models.me.MyOrderFromCartDraft.of())
                         .withExpand("expand")
                         .createHttpRequest(), "post", "/test_projectKey/me/orders?expand=expand", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").me().orders().post(null).createHttpRequest(),
-                        "post", "/test_projectKey/me/orders", } };
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .me()
+                        .orders()
+                        .post(com.commercetools.api.models.me.MyOrderFromCartDraft.of())
+                        .createHttpRequest(), "post", "/test_projectKey/me/orders", } };
     }
 
     @DataProvider
@@ -123,8 +126,14 @@ public class ByProjectKeyMeOrdersTest {
                         .get()
                         .withPredicateVar("varName", "var.varName"), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey").me().orders().get(), },
-                new Object[] {
-                        apiRoot.withProjectKey("test_projectKey").me().orders().post(null).withExpand("expand"), },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").me().orders().post(null), } };
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .me()
+                        .orders()
+                        .post(com.commercetools.api.models.me.MyOrderFromCartDraft.of())
+                        .withExpand("expand"), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .me()
+                        .orders()
+                        .post(com.commercetools.api.models.me.MyOrderFromCartDraft.of()), } };
     }
 }

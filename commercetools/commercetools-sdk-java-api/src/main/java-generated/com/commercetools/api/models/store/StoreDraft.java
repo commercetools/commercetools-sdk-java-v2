@@ -10,6 +10,7 @@ import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.channel.ChannelResourceIdentifier;
 import com.commercetools.api.models.common.LocalizedString;
+import com.commercetools.api.models.store_country.StoreCountry;
 import com.commercetools.api.models.type.CustomFieldsDraft;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
@@ -55,6 +56,13 @@ public interface StoreDraft extends com.commercetools.api.models.CustomizableDra
     public List<String> getLanguages();
 
     /**
+     *  <p>Countries defined for the Store.</p>
+     */
+    @Valid
+    @JsonProperty("countries")
+    public List<StoreCountry> getCountries();
+
+    /**
      *  <p>ResourceIdentifier of a Channel with <code>ProductDistribution</code> ChannelRoleEnum.</p>
      */
     @Valid
@@ -96,6 +104,11 @@ public interface StoreDraft extends com.commercetools.api.models.CustomizableDra
     public void setLanguages(final List<String> languages);
 
     @JsonIgnore
+    public void setCountries(final StoreCountry... countries);
+
+    public void setCountries(final List<StoreCountry> countries);
+
+    @JsonIgnore
     public void setDistributionChannels(final ChannelResourceIdentifier... distributionChannels);
 
     public void setDistributionChannels(final List<ChannelResourceIdentifier> distributionChannels);
@@ -121,6 +134,7 @@ public interface StoreDraft extends com.commercetools.api.models.CustomizableDra
         instance.setKey(template.getKey());
         instance.setName(template.getName());
         instance.setLanguages(template.getLanguages());
+        instance.setCountries(template.getCountries());
         instance.setDistributionChannels(template.getDistributionChannels());
         instance.setSupplyChannels(template.getSupplyChannels());
         instance.setProductSelections(template.getProductSelections());

@@ -68,7 +68,7 @@ public class ByProjectKeyProductTypesImportContainersByImportContainerKeyTest {
                         .productTypes()
                         .importContainers()
                         .withImportContainerKeyValue("test_importContainerKey")
-                        .post(null)
+                        .post(com.commercetools.importapi.models.importrequests.ProductTypeImportRequest.of())
                         .createHttpRequest(),
                 "post", "/test_projectKey/product-types/import-containers/test_importContainerKey", } };
     }
@@ -79,6 +79,6 @@ public class ByProjectKeyProductTypesImportContainersByImportContainerKeyTest {
                 .productTypes()
                 .importContainers()
                 .withImportContainerKeyValue("test_importContainerKey")
-                .post(null), } };
+                .post(com.commercetools.importapi.models.importrequests.ProductTypeImportRequest.of()), } };
     }
 }

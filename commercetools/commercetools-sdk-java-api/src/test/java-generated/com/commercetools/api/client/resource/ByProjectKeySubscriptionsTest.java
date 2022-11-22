@@ -105,11 +105,13 @@ public class ByProjectKeySubscriptionsTest {
                         "get", "/test_projectKey/subscriptions", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .subscriptions()
-                        .post(null)
+                        .post(com.commercetools.api.models.subscription.SubscriptionDraft.of())
                         .withExpand("expand")
                         .createHttpRequest(), "post", "/test_projectKey/subscriptions?expand=expand", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").subscriptions().post(null).createHttpRequest(),
-                        "post", "/test_projectKey/subscriptions", } };
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .subscriptions()
+                        .post(com.commercetools.api.models.subscription.SubscriptionDraft.of())
+                        .createHttpRequest(), "post", "/test_projectKey/subscriptions", } };
     }
 
     @DataProvider
@@ -126,8 +128,12 @@ public class ByProjectKeySubscriptionsTest {
                         .get()
                         .withPredicateVar("varName", "var.varName"), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey").subscriptions().get(), },
-                new Object[] {
-                        apiRoot.withProjectKey("test_projectKey").subscriptions().post(null).withExpand("expand"), },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").subscriptions().post(null), } };
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .subscriptions()
+                        .post(com.commercetools.api.models.subscription.SubscriptionDraft.of())
+                        .withExpand("expand"), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .subscriptions()
+                        .post(com.commercetools.api.models.subscription.SubscriptionDraft.of()), } };
     }
 }

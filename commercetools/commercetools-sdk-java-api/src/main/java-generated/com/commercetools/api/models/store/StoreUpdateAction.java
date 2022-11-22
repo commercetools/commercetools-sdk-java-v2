@@ -19,20 +19,23 @@ import io.vrap.rmf.base.client.utils.Generated;
  * Example to create a subtype instance using the builder pattern
  * <div class=code-example>
  * <pre><code class='java'>
- *     StoreUpdateAction storeUpdateAction = StoreUpdateAction.addDistributionChannelBuilder()
- *             distributionChannel(distributionChannelBuilder -> distributionChannelBuilder)
+ *     StoreUpdateAction storeUpdateAction = StoreUpdateAction.addCountryBuilder()
+ *             country(countryBuilder -> countryBuilder)
  *             .build()
  * </code></pre>
  * </div>
  */
 @JsonSubTypes({
+        @JsonSubTypes.Type(value = com.commercetools.api.models.store.StoreAddCountryActionImpl.class, name = StoreAddCountryAction.ADD_COUNTRY),
         @JsonSubTypes.Type(value = com.commercetools.api.models.store.StoreAddDistributionChannelActionImpl.class, name = StoreAddDistributionChannelAction.ADD_DISTRIBUTION_CHANNEL),
         @JsonSubTypes.Type(value = com.commercetools.api.models.store.StoreAddProductSelectionActionImpl.class, name = StoreAddProductSelectionAction.ADD_PRODUCT_SELECTION),
         @JsonSubTypes.Type(value = com.commercetools.api.models.store.StoreAddSupplyChannelActionImpl.class, name = StoreAddSupplyChannelAction.ADD_SUPPLY_CHANNEL),
         @JsonSubTypes.Type(value = com.commercetools.api.models.store.StoreChangeProductSelectionActionImpl.class, name = StoreChangeProductSelectionAction.CHANGE_PRODUCT_SELECTION_ACTIVE),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.store.StoreRemoveCountryActionImpl.class, name = StoreRemoveCountryAction.REMOVE_COUNTRY),
         @JsonSubTypes.Type(value = com.commercetools.api.models.store.StoreRemoveDistributionChannelActionImpl.class, name = StoreRemoveDistributionChannelAction.REMOVE_DISTRIBUTION_CHANNEL),
         @JsonSubTypes.Type(value = com.commercetools.api.models.store.StoreRemoveProductSelectionActionImpl.class, name = StoreRemoveProductSelectionAction.REMOVE_PRODUCT_SELECTION),
         @JsonSubTypes.Type(value = com.commercetools.api.models.store.StoreRemoveSupplyChannelActionImpl.class, name = StoreRemoveSupplyChannelAction.REMOVE_SUPPLY_CHANNEL),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.store.StoreSetCountriesActionImpl.class, name = StoreSetCountriesAction.SET_COUNTRIES),
         @JsonSubTypes.Type(value = com.commercetools.api.models.store.StoreSetCustomFieldActionImpl.class, name = StoreSetCustomFieldAction.SET_CUSTOM_FIELD),
         @JsonSubTypes.Type(value = com.commercetools.api.models.store.StoreSetCustomTypeActionImpl.class, name = StoreSetCustomTypeAction.SET_CUSTOM_TYPE),
         @JsonSubTypes.Type(value = com.commercetools.api.models.store.StoreSetDistributionChannelsActionImpl.class, name = StoreSetDistributionChannelsAction.SET_DISTRIBUTION_CHANNELS),
@@ -52,6 +55,10 @@ public interface StoreUpdateAction extends com.commercetools.api.models.Resource
     @JsonProperty("action")
     public String getAction();
 
+    public static com.commercetools.api.models.store.StoreAddCountryActionBuilder addCountryBuilder() {
+        return com.commercetools.api.models.store.StoreAddCountryActionBuilder.of();
+    }
+
     public static com.commercetools.api.models.store.StoreAddDistributionChannelActionBuilder addDistributionChannelBuilder() {
         return com.commercetools.api.models.store.StoreAddDistributionChannelActionBuilder.of();
     }
@@ -68,6 +75,10 @@ public interface StoreUpdateAction extends com.commercetools.api.models.Resource
         return com.commercetools.api.models.store.StoreChangeProductSelectionActionBuilder.of();
     }
 
+    public static com.commercetools.api.models.store.StoreRemoveCountryActionBuilder removeCountryBuilder() {
+        return com.commercetools.api.models.store.StoreRemoveCountryActionBuilder.of();
+    }
+
     public static com.commercetools.api.models.store.StoreRemoveDistributionChannelActionBuilder removeDistributionChannelBuilder() {
         return com.commercetools.api.models.store.StoreRemoveDistributionChannelActionBuilder.of();
     }
@@ -78,6 +89,10 @@ public interface StoreUpdateAction extends com.commercetools.api.models.Resource
 
     public static com.commercetools.api.models.store.StoreRemoveSupplyChannelActionBuilder removeSupplyChannelBuilder() {
         return com.commercetools.api.models.store.StoreRemoveSupplyChannelActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.store.StoreSetCountriesActionBuilder setCountriesBuilder() {
+        return com.commercetools.api.models.store.StoreSetCountriesActionBuilder.of();
     }
 
     public static com.commercetools.api.models.store.StoreSetCustomFieldActionBuilder setCustomFieldBuilder() {

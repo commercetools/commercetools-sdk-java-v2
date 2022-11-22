@@ -33,6 +33,9 @@ public class StoreDraftBuilder implements Builder<StoreDraft> {
     private java.util.List<String> languages;
 
     @Nullable
+    private java.util.List<com.commercetools.api.models.store_country.StoreCountry> countries;
+
+    @Nullable
     private java.util.List<com.commercetools.api.models.channel.ChannelResourceIdentifier> distributionChannels;
 
     @Nullable
@@ -99,6 +102,63 @@ public class StoreDraftBuilder implements Builder<StoreDraft> {
             this.languages = new ArrayList<>();
         }
         this.languages.addAll(Arrays.asList(languages));
+        return this;
+    }
+
+    /**
+     *  <p>Countries defined for the Store.</p>
+     */
+
+    public StoreDraftBuilder countries(
+            @Nullable final com.commercetools.api.models.store_country.StoreCountry... countries) {
+        this.countries = new ArrayList<>(Arrays.asList(countries));
+        return this;
+    }
+
+    /**
+     *  <p>Countries defined for the Store.</p>
+     */
+
+    public StoreDraftBuilder countries(
+            @Nullable final java.util.List<com.commercetools.api.models.store_country.StoreCountry> countries) {
+        this.countries = countries;
+        return this;
+    }
+
+    /**
+     *  <p>Countries defined for the Store.</p>
+     */
+
+    public StoreDraftBuilder plusCountries(
+            @Nullable final com.commercetools.api.models.store_country.StoreCountry... countries) {
+        if (this.countries == null) {
+            this.countries = new ArrayList<>();
+        }
+        this.countries.addAll(Arrays.asList(countries));
+        return this;
+    }
+
+    /**
+     *  <p>Countries defined for the Store.</p>
+     */
+
+    public StoreDraftBuilder plusCountries(
+            Function<com.commercetools.api.models.store_country.StoreCountryBuilder, com.commercetools.api.models.store_country.StoreCountryBuilder> builder) {
+        if (this.countries == null) {
+            this.countries = new ArrayList<>();
+        }
+        this.countries.add(builder.apply(com.commercetools.api.models.store_country.StoreCountryBuilder.of()).build());
+        return this;
+    }
+
+    /**
+     *  <p>Countries defined for the Store.</p>
+     */
+
+    public StoreDraftBuilder withCountries(
+            Function<com.commercetools.api.models.store_country.StoreCountryBuilder, com.commercetools.api.models.store_country.StoreCountryBuilder> builder) {
+        this.countries = new ArrayList<>();
+        this.countries.add(builder.apply(com.commercetools.api.models.store_country.StoreCountryBuilder.of()).build());
         return this;
     }
 
@@ -333,6 +393,11 @@ public class StoreDraftBuilder implements Builder<StoreDraft> {
     }
 
     @Nullable
+    public java.util.List<com.commercetools.api.models.store_country.StoreCountry> getCountries() {
+        return this.countries;
+    }
+
+    @Nullable
     public java.util.List<com.commercetools.api.models.channel.ChannelResourceIdentifier> getDistributionChannels() {
         return this.distributionChannels;
     }
@@ -354,16 +419,16 @@ public class StoreDraftBuilder implements Builder<StoreDraft> {
 
     public StoreDraft build() {
         Objects.requireNonNull(key, StoreDraft.class + ": key is missing");
-        return new StoreDraftImpl(key, name, languages, distributionChannels, supplyChannels, productSelections,
-            custom);
+        return new StoreDraftImpl(key, name, languages, countries, distributionChannels, supplyChannels,
+            productSelections, custom);
     }
 
     /**
      * builds StoreDraft without checking for non null required values
      */
     public StoreDraft buildUnchecked() {
-        return new StoreDraftImpl(key, name, languages, distributionChannels, supplyChannels, productSelections,
-            custom);
+        return new StoreDraftImpl(key, name, languages, countries, distributionChannels, supplyChannels,
+            productSelections, custom);
     }
 
     public static StoreDraftBuilder of() {
@@ -375,6 +440,7 @@ public class StoreDraftBuilder implements Builder<StoreDraft> {
         builder.key = template.getKey();
         builder.name = template.getName();
         builder.languages = template.getLanguages();
+        builder.countries = template.getCountries();
         builder.distributionChannels = template.getDistributionChannels();
         builder.supplyChannels = template.getSupplyChannels();
         builder.productSelections = template.getProductSelections();

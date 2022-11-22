@@ -1,6 +1,8 @@
 
 package com.commercetools.api.client;
 
+import java.util.function.UnaryOperator;
+
 import io.vrap.rmf.base.client.ApiHttpClient;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -19,6 +21,11 @@ public class ByProjectKeyCustomersPasswordResetRequestBuilder {
     public ByProjectKeyCustomersPasswordResetPost post(
             com.commercetools.api.models.customer.CustomerResetPassword customerResetPassword) {
         return new ByProjectKeyCustomersPasswordResetPost(apiHttpClient, projectKey, customerResetPassword);
+    }
+
+    public ByProjectKeyCustomersPasswordResetPost post(
+            UnaryOperator<com.commercetools.api.models.customer.CustomerResetPasswordBuilder> op) {
+        return post(op.apply(com.commercetools.api.models.customer.CustomerResetPasswordBuilder.of()).build());
     }
 
 }

@@ -1,6 +1,8 @@
 
 package com.commercetools.api.client;
 
+import java.util.function.UnaryOperator;
+
 import io.vrap.rmf.base.client.ApiHttpClient;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,6 +19,11 @@ public class ByProjectKeyCartsReplicateRequestBuilder {
 
     public ByProjectKeyCartsReplicatePost post(com.commercetools.api.models.cart.ReplicaCartDraft replicaCartDraft) {
         return new ByProjectKeyCartsReplicatePost(apiHttpClient, projectKey, replicaCartDraft);
+    }
+
+    public ByProjectKeyCartsReplicatePost post(
+            UnaryOperator<com.commercetools.api.models.cart.ReplicaCartDraftBuilder> op) {
+        return post(op.apply(com.commercetools.api.models.cart.ReplicaCartDraftBuilder.of()).build());
     }
 
 }

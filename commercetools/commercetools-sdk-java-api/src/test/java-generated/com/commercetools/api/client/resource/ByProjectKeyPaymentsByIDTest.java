@@ -78,13 +78,13 @@ public class ByProjectKeyPaymentsByIDTest {
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .payments()
                         .withId("test_ID")
-                        .post(null)
+                        .post(com.commercetools.api.models.payment.PaymentUpdate.of())
                         .withExpand("expand")
                         .createHttpRequest(), "post", "/test_projectKey/payments/test_ID?expand=expand", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .payments()
                         .withId("test_ID")
-                        .post(null)
+                        .post(com.commercetools.api.models.payment.PaymentUpdate.of())
                         .createHttpRequest(), "post", "/test_projectKey/payments/test_ID", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .payments()
@@ -119,9 +119,12 @@ public class ByProjectKeyPaymentsByIDTest {
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .payments()
                         .withId("test_ID")
-                        .post(null)
+                        .post(com.commercetools.api.models.payment.PaymentUpdate.of())
                         .withExpand("expand"), },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").payments().withId("test_ID").post(null), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .payments()
+                        .withId("test_ID")
+                        .post(com.commercetools.api.models.payment.PaymentUpdate.of()), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .payments()
                         .withId("test_ID")

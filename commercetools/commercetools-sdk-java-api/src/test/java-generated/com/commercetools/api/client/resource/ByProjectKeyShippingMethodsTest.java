@@ -105,12 +105,13 @@ public class ByProjectKeyShippingMethodsTest {
                         "get", "/test_projectKey/shipping-methods", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .shippingMethods()
-                        .post(null)
+                        .post(com.commercetools.api.models.shipping_method.ShippingMethodDraft.of())
                         .withExpand("expand")
                         .createHttpRequest(), "post", "/test_projectKey/shipping-methods?expand=expand", },
-                new Object[] {
-                        apiRoot.withProjectKey("test_projectKey").shippingMethods().post(null).createHttpRequest(),
-                        "post", "/test_projectKey/shipping-methods", } };
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .shippingMethods()
+                        .post(com.commercetools.api.models.shipping_method.ShippingMethodDraft.of())
+                        .createHttpRequest(), "post", "/test_projectKey/shipping-methods", } };
     }
 
     @DataProvider
@@ -128,8 +129,12 @@ public class ByProjectKeyShippingMethodsTest {
                         .get()
                         .withPredicateVar("varName", "var.varName"), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey").shippingMethods().get(), },
-                new Object[] {
-                        apiRoot.withProjectKey("test_projectKey").shippingMethods().post(null).withExpand("expand"), },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").shippingMethods().post(null), } };
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .shippingMethods()
+                        .post(com.commercetools.api.models.shipping_method.ShippingMethodDraft.of())
+                        .withExpand("expand"), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .shippingMethods()
+                        .post(com.commercetools.api.models.shipping_method.ShippingMethodDraft.of()), } };
     }
 }

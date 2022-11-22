@@ -86,14 +86,14 @@ public class ByProjectKeyProductTypesKeyByKeyTest {
                         apiRoot.withProjectKey("test_projectKey")
                                 .productTypes()
                                 .withKey("test_key")
-                                .post(null)
+                                .post(com.commercetools.api.models.product_type.ProductTypeUpdate.of())
                                 .withExpand("expand")
                                 .createHttpRequest(),
                         "post", "/test_projectKey/product-types/key=test_key?expand=expand", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .productTypes()
                         .withKey("test_key")
-                        .post(null)
+                        .post(com.commercetools.api.models.product_type.ProductTypeUpdate.of())
                         .createHttpRequest(), "post", "/test_projectKey/product-types/key=test_key", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
@@ -131,10 +131,12 @@ public class ByProjectKeyProductTypesKeyByKeyTest {
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .productTypes()
                         .withKey("test_key")
-                        .post(null)
+                        .post(com.commercetools.api.models.product_type.ProductTypeUpdate.of())
                         .withExpand("expand"), },
-                new Object[] {
-                        apiRoot.withProjectKey("test_projectKey").productTypes().withKey("test_key").post(null), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .productTypes()
+                        .withKey("test_key")
+                        .post(com.commercetools.api.models.product_type.ProductTypeUpdate.of()), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .productTypes()
                         .withKey("test_key")

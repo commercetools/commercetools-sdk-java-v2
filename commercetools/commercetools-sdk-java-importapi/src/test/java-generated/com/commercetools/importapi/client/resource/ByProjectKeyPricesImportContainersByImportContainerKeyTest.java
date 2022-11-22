@@ -68,7 +68,7 @@ public class ByProjectKeyPricesImportContainersByImportContainerKeyTest {
                         .prices()
                         .importContainers()
                         .withImportContainerKeyValue("test_importContainerKey")
-                        .post(null)
+                        .post(com.commercetools.importapi.models.importrequests.PriceImportRequest.of())
                         .createHttpRequest(),
                 "post", "/test_projectKey/prices/import-containers/test_importContainerKey", } };
     }
@@ -79,6 +79,6 @@ public class ByProjectKeyPricesImportContainersByImportContainerKeyTest {
                 .prices()
                 .importContainers()
                 .withImportContainerKeyValue("test_importContainerKey")
-                .post(null), } };
+                .post(com.commercetools.importapi.models.importrequests.PriceImportRequest.of()), } };
     }
 }

@@ -92,11 +92,13 @@ public class ByProjectKeyStatesTest {
                         "/test_projectKey/states", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .states()
-                        .post(null)
+                        .post(com.commercetools.api.models.state.StateDraft.of())
                         .withExpand("expand")
                         .createHttpRequest(), "post", "/test_projectKey/states?expand=expand", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").states().post(null).createHttpRequest(),
-                        "post", "/test_projectKey/states", } };
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .states()
+                        .post(com.commercetools.api.models.state.StateDraft.of())
+                        .createHttpRequest(), "post", "/test_projectKey/states", } };
     }
 
     @DataProvider
@@ -113,7 +115,12 @@ public class ByProjectKeyStatesTest {
                         .get()
                         .withPredicateVar("varName", "var.varName"), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey").states().get(), },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").states().post(null).withExpand("expand"), },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").states().post(null), } };
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .states()
+                        .post(com.commercetools.api.models.state.StateDraft.of())
+                        .withExpand("expand"), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .states()
+                        .post(com.commercetools.api.models.state.StateDraft.of()), } };
     }
 }

@@ -68,7 +68,7 @@ public class ByProjectKeyInStoreKeyByStoreKeyCustomersEmailTokenTest {
                         .inStoreKeyWithStoreKeyValue("test_storeKey")
                         .customers()
                         .emailToken()
-                        .post(null)
+                        .post(com.commercetools.api.models.customer.CustomerCreateEmailToken.of())
                         .createHttpRequest(),
                 "post", "/test_projectKey/in-store/key=test_storeKey/customers/email-token", } };
     }
@@ -79,6 +79,6 @@ public class ByProjectKeyInStoreKeyByStoreKeyCustomersEmailTokenTest {
                 .inStoreKeyWithStoreKeyValue("test_storeKey")
                 .customers()
                 .emailToken()
-                .post(null), } };
+                .post(com.commercetools.api.models.customer.CustomerCreateEmailToken.of()), } };
     }
 }

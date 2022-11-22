@@ -86,7 +86,7 @@ public class ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberTest 
                                 .inStoreKeyWithStoreKeyValue("test_storeKey")
                                 .orders()
                                 .withOrderNumber("test_orderNumber")
-                                .post(null)
+                                .post(com.commercetools.api.models.order.OrderUpdate.of())
                                 .withExpand("expand")
                                 .createHttpRequest(),
                         "post",
@@ -96,7 +96,7 @@ public class ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberTest 
                                 .inStoreKeyWithStoreKeyValue("test_storeKey")
                                 .orders()
                                 .withOrderNumber("test_orderNumber")
-                                .post(null)
+                                .post(com.commercetools.api.models.order.OrderUpdate.of())
                                 .createHttpRequest(),
                         "post", "/test_projectKey/in-store/key=test_storeKey/orders/order-number=test_orderNumber", },
                 new Object[] {
@@ -158,13 +158,13 @@ public class ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberTest 
                         .inStoreKeyWithStoreKeyValue("test_storeKey")
                         .orders()
                         .withOrderNumber("test_orderNumber")
-                        .post(null)
+                        .post(com.commercetools.api.models.order.OrderUpdate.of())
                         .withExpand("expand"), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .inStoreKeyWithStoreKeyValue("test_storeKey")
                         .orders()
                         .withOrderNumber("test_orderNumber")
-                        .post(null), },
+                        .post(com.commercetools.api.models.order.OrderUpdate.of()), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .inStoreKeyWithStoreKeyValue("test_storeKey")
                         .orders()

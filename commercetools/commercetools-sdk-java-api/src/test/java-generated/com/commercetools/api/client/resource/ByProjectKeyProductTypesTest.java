@@ -107,11 +107,13 @@ public class ByProjectKeyProductTypesTest {
                         "head", "/test_projectKey/product-types", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .productTypes()
-                        .post(null)
+                        .post(com.commercetools.api.models.product_type.ProductTypeDraft.of())
                         .withExpand("expand")
                         .createHttpRequest(), "post", "/test_projectKey/product-types?expand=expand", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").productTypes().post(null).createHttpRequest(),
-                        "post", "/test_projectKey/product-types", } };
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .productTypes()
+                        .post(com.commercetools.api.models.product_type.ProductTypeDraft.of())
+                        .createHttpRequest(), "post", "/test_projectKey/product-types", } };
     }
 
     @DataProvider
@@ -130,8 +132,12 @@ public class ByProjectKeyProductTypesTest {
                 new Object[] { apiRoot.withProjectKey("test_projectKey").productTypes().get(), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey").productTypes().head().withWhere("where"), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey").productTypes().head(), },
-                new Object[] {
-                        apiRoot.withProjectKey("test_projectKey").productTypes().post(null).withExpand("expand"), },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").productTypes().post(null), } };
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .productTypes()
+                        .post(com.commercetools.api.models.product_type.ProductTypeDraft.of())
+                        .withExpand("expand"), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .productTypes()
+                        .post(com.commercetools.api.models.product_type.ProductTypeDraft.of()), } };
     }
 }

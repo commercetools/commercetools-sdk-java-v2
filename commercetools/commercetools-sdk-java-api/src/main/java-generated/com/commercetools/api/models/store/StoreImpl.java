@@ -38,6 +38,8 @@ public class StoreImpl implements Store, ModelBase {
 
     private java.util.List<String> languages;
 
+    private java.util.List<com.commercetools.api.models.store_country.StoreCountry> countries;
+
     private java.util.List<com.commercetools.api.models.channel.ChannelReference> distributionChannels;
 
     private java.util.List<com.commercetools.api.models.channel.ChannelReference> supplyChannels;
@@ -55,6 +57,7 @@ public class StoreImpl implements Store, ModelBase {
             @JsonProperty("key") final String key,
             @JsonProperty("name") final com.commercetools.api.models.common.LocalizedString name,
             @JsonProperty("languages") final java.util.List<String> languages,
+            @JsonProperty("countries") final java.util.List<com.commercetools.api.models.store_country.StoreCountry> countries,
             @JsonProperty("distributionChannels") final java.util.List<com.commercetools.api.models.channel.ChannelReference> distributionChannels,
             @JsonProperty("supplyChannels") final java.util.List<com.commercetools.api.models.channel.ChannelReference> supplyChannels,
             @JsonProperty("productSelections") final java.util.List<com.commercetools.api.models.store.ProductSelectionSetting> productSelections,
@@ -68,6 +71,7 @@ public class StoreImpl implements Store, ModelBase {
         this.key = key;
         this.name = name;
         this.languages = languages;
+        this.countries = countries;
         this.distributionChannels = distributionChannels;
         this.supplyChannels = supplyChannels;
         this.productSelections = productSelections;
@@ -150,6 +154,14 @@ public class StoreImpl implements Store, ModelBase {
     }
 
     /**
+     *  <p>Countries defined for the Store.</p>
+     */
+
+    public java.util.List<com.commercetools.api.models.store_country.StoreCountry> getCountries() {
+        return this.countries;
+    }
+
+    /**
      *  <p>Product Distribution Channels allowed for the Store.</p>
      */
 
@@ -225,6 +237,14 @@ public class StoreImpl implements Store, ModelBase {
         this.languages = languages;
     }
 
+    public void setCountries(final com.commercetools.api.models.store_country.StoreCountry... countries) {
+        this.countries = new ArrayList<>(Arrays.asList(countries));
+    }
+
+    public void setCountries(final java.util.List<com.commercetools.api.models.store_country.StoreCountry> countries) {
+        this.countries = countries;
+    }
+
     public void setDistributionChannels(
             final com.commercetools.api.models.channel.ChannelReference... distributionChannels) {
         this.distributionChannels = new ArrayList<>(Arrays.asList(distributionChannels));
@@ -277,6 +297,7 @@ public class StoreImpl implements Store, ModelBase {
                 .append(key, that.key)
                 .append(name, that.name)
                 .append(languages, that.languages)
+                .append(countries, that.countries)
                 .append(distributionChannels, that.distributionChannels)
                 .append(supplyChannels, that.supplyChannels)
                 .append(productSelections, that.productSelections)
@@ -295,6 +316,7 @@ public class StoreImpl implements Store, ModelBase {
                 .append(key)
                 .append(name)
                 .append(languages)
+                .append(countries)
                 .append(distributionChannels)
                 .append(supplyChannels)
                 .append(productSelections)

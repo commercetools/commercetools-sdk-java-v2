@@ -94,11 +94,13 @@ public class ByProjectKeyPaymentsTest {
                         "/test_projectKey/payments", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .payments()
-                        .post(null)
+                        .post(com.commercetools.api.models.payment.PaymentDraft.of())
                         .withExpand("expand")
                         .createHttpRequest(), "post", "/test_projectKey/payments?expand=expand", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").payments().post(null).createHttpRequest(),
-                        "post", "/test_projectKey/payments", } };
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .payments()
+                        .post(com.commercetools.api.models.payment.PaymentDraft.of())
+                        .createHttpRequest(), "post", "/test_projectKey/payments", } };
     }
 
     @DataProvider
@@ -115,7 +117,12 @@ public class ByProjectKeyPaymentsTest {
                         .get()
                         .withPredicateVar("varName", "var.varName"), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey").payments().get(), },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").payments().post(null).withExpand("expand"), },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").payments().post(null), } };
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .payments()
+                        .post(com.commercetools.api.models.payment.PaymentDraft.of())
+                        .withExpand("expand"), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .payments()
+                        .post(com.commercetools.api.models.payment.PaymentDraft.of()), } };
     }
 }

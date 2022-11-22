@@ -23,6 +23,6 @@ public class ErrorTest {
         assertThat(errorObject).isInstanceOf(InvalidJsonInputError.class);
 
         final InvalidJsonInputError error = (InvalidJsonInputError) errorObject;
-        assertThat(error.values().get("detailedErrorMessage")).isEqualTo("actions -> name: Missing required value");
+        assertThat(error.getDetailedErrorMessage()).isEqualTo("actions -> name: Missing required value");
     }
 }

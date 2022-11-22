@@ -56,7 +56,7 @@ public class ShoppingListFixtures {
                         .addedAt(ZonedDateTime.now().plus(1, ChronoUnit.HOURS))
                         .description(CommercetoolsTestUtils.randomLocalizedString())
                         .name(CommercetoolsTestUtils.randomLocalizedString())
-                        .quantity(10)
+                        .quantity(10L)
                         .build()))
                 .deleteDaysAfterLastModification(2L)
                 .build();

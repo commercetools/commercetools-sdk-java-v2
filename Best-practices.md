@@ -26,8 +26,6 @@
     - [How to create a product with 2 variants](#how-to-create-a-product-with-2-variants)
     - [Does the new SDK version have a builder for the predicates?](#does-the-new-sdk-version-have-a-builder-for-the-predicates)
     - [Why ApiHttpResponse does not return any messages for getMessage method?](#why-apihttpresponse-does-not-return-any-messages-for-getmessage-method)
-    - [SDK Anonymous token](#sdk-anonymous-token)
-    - [Retry with a new version handling](#retry-with-a-new-version-handling)
 
 ## General
 

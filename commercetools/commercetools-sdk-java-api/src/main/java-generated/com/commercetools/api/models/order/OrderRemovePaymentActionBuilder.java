@@ -25,7 +25,7 @@ public class OrderRemovePaymentActionBuilder implements Builder<OrderRemovePayme
     private com.commercetools.api.models.payment.PaymentResourceIdentifier payment;
 
     /**
-     *  <p>ResourceIdentifier to a Payment.</p>
+     *  <p>ResourceIdentifier of a Payment.</p>
      */
 
     public OrderRemovePaymentActionBuilder payment(
@@ -36,7 +36,7 @@ public class OrderRemovePaymentActionBuilder implements Builder<OrderRemovePayme
     }
 
     /**
-     *  <p>ResourceIdentifier to a Payment.</p>
+     *  <p>ResourceIdentifier of a Payment.</p>
      */
 
     public OrderRemovePaymentActionBuilder payment(

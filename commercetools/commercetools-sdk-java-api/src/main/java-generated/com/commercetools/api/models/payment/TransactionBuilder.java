@@ -19,6 +19,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .id("{id}")
  *             .type(TransactionType.AUTHORIZATION)
  *             .amount(amountBuilder -> amountBuilder)
+ *             .state(TransactionState.INITIAL)
  *             .build()
  * </code></pre>
  * </div>
@@ -38,7 +39,6 @@ public class TransactionBuilder implements Builder<Transaction> {
     @Nullable
     private String interactionId;
 
-    @Nullable
     private com.commercetools.api.models.payment.TransactionState state;
 
     @Nullable
@@ -54,7 +54,7 @@ public class TransactionBuilder implements Builder<Transaction> {
     }
 
     /**
-     *  <p>The time at which the transaction took place.</p>
+     *  <p>Date and time (UTC) the Transaction took place.</p>
      */
 
     public TransactionBuilder timestamp(@Nullable final java.time.ZonedDateTime timestamp) {
@@ -63,7 +63,7 @@ public class TransactionBuilder implements Builder<Transaction> {
     }
 
     /**
-     *  <p>The type of this transaction.</p>
+     *  <p>Type of the Transaction. For example, <code>Authorization</code>.</p>
      */
 
     public TransactionBuilder type(final com.commercetools.api.models.payment.TransactionType type) {
@@ -72,7 +72,7 @@ public class TransactionBuilder implements Builder<Transaction> {
     }
 
     /**
-     *
+     *  <p>Money value of the Transaction.</p>
      */
 
     public TransactionBuilder amount(final com.commercetools.api.models.common.TypedMoney amount) {
@@ -81,7 +81,7 @@ public class TransactionBuilder implements Builder<Transaction> {
     }
 
     /**
-     *
+     *  <p>Money value of the Transaction.</p>
      */
 
     public TransactionBuilder amount(
@@ -91,7 +91,7 @@ public class TransactionBuilder implements Builder<Transaction> {
     }
 
     /**
-     *  <p>The identifier that is used by the interface that managed the transaction (usually the PSP). If a matching interaction was logged in the <code>interfaceInteractions</code> array, the corresponding interaction should be findable with this ID.</p>
+     *  <p>Identifier used by the interface that manages the Transaction (usually the PSP). If a matching interaction was logged in the <code>interfaceInteractions</code> array, the corresponding interaction can be found with this ID.</p>
      */
 
     public TransactionBuilder interactionId(@Nullable final String interactionId) {
@@ -100,16 +100,16 @@ public class TransactionBuilder implements Builder<Transaction> {
     }
 
     /**
-     *  <p>The state of this transaction.</p>
+     *  <p>State of the Transaction.</p>
      */
 
-    public TransactionBuilder state(@Nullable final com.commercetools.api.models.payment.TransactionState state) {
+    public TransactionBuilder state(final com.commercetools.api.models.payment.TransactionState state) {
         this.state = state;
         return this;
     }
 
     /**
-     *  <p>Custom Fields for the Transaction.</p>
+     *  <p>Custom Fields defined for the Transaction.</p>
      */
 
     public TransactionBuilder custom(
@@ -119,7 +119,7 @@ public class TransactionBuilder implements Builder<Transaction> {
     }
 
     /**
-     *  <p>Custom Fields for the Transaction.</p>
+     *  <p>Custom Fields defined for the Transaction.</p>
      */
 
     public TransactionBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFields custom) {
@@ -149,7 +149,6 @@ public class TransactionBuilder implements Builder<Transaction> {
         return this.interactionId;
     }
 
-    @Nullable
     public com.commercetools.api.models.payment.TransactionState getState() {
         return this.state;
     }
@@ -163,6 +162,7 @@ public class TransactionBuilder implements Builder<Transaction> {
         Objects.requireNonNull(id, Transaction.class + ": id is missing");
         Objects.requireNonNull(type, Transaction.class + ": type is missing");
         Objects.requireNonNull(amount, Transaction.class + ": amount is missing");
+        Objects.requireNonNull(state, Transaction.class + ": state is missing");
         return new TransactionImpl(id, timestamp, type, amount, interactionId, state, custom);
     }
 

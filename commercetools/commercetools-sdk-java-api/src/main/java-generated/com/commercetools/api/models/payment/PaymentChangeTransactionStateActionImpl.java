@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * PaymentChangeTransactionStateAction
+ *  <p>Changing the TransactionState generates the PaymentTransactionStateChanged Message.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class PaymentChangeTransactionStateActionImpl implements PaymentChangeTransactionStateAction, ModelBase {
@@ -47,7 +47,7 @@ public class PaymentChangeTransactionStateActionImpl implements PaymentChangeTra
     }
 
     /**
-     *
+     *  <p>Unique identifier of the Transaction.</p>
      */
 
     public String getTransactionId() {
@@ -55,7 +55,7 @@ public class PaymentChangeTransactionStateActionImpl implements PaymentChangeTra
     }
 
     /**
-     *
+     *  <p>New TransactionState.</p>
      */
 
     public com.commercetools.api.models.payment.TransactionState getState() {

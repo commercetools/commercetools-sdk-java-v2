@@ -39,7 +39,7 @@ public class PaymentStatusImpl implements PaymentStatus, ModelBase {
     }
 
     /**
-     *  <p>A code describing the current status returned by the interface that processes the payment.</p>
+     *  <p>External reference that identifies the current status of the Payment.</p>
      */
 
     public String getInterfaceCode() {
@@ -47,7 +47,7 @@ public class PaymentStatusImpl implements PaymentStatus, ModelBase {
     }
 
     /**
-     *  <p>A text describing the current status returned by the interface that processes the payment.</p>
+     *  <p>Text describing the current status of the Payment.</p>
      */
 
     public String getInterfaceText() {
@@ -55,7 +55,7 @@ public class PaymentStatusImpl implements PaymentStatus, ModelBase {
     }
 
     /**
-     *
+     *  <p>Reference to a State.</p>
      */
 
     public com.commercetools.api.models.state.StateReference getState() {

@@ -18,7 +18,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>To create a payment object a payment draft object has to be given with the request.</p>
+ *  <p>Creating a Payment produces the PaymentCreated Message.</p>
  *
  * <hr>
  * <div class=code-example>

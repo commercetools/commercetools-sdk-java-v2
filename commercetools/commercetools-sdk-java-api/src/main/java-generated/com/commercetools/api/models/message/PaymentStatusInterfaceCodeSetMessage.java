@@ -42,7 +42,6 @@ public interface PaymentStatusInterfaceCodeSetMessage extends Message {
      *  <p>Unique identifier for the Payment for which the Set StatusInterfaceCode update action was applied.</p>
      */
     @NotNull
-    @Deprecated
     @JsonProperty("paymentId")
     public String getPaymentId();
 
@@ -53,7 +52,6 @@ public interface PaymentStatusInterfaceCodeSetMessage extends Message {
     @JsonProperty("interfaceCode")
     public String getInterfaceCode();
 
-    @Deprecated
     public void setPaymentId(final String paymentId);
 
     public void setInterfaceCode(final String interfaceCode);

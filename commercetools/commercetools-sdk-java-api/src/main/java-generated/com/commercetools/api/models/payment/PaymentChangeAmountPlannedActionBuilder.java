@@ -25,7 +25,7 @@ public class PaymentChangeAmountPlannedActionBuilder implements Builder<PaymentC
     private com.commercetools.api.models.common.Money amount;
 
     /**
-     *
+     *  <p>New value to set.</p>
      */
 
     public PaymentChangeAmountPlannedActionBuilder amount(
@@ -35,7 +35,7 @@ public class PaymentChangeAmountPlannedActionBuilder implements Builder<PaymentC
     }
 
     /**
-     *
+     *  <p>New value to set.</p>
      */
 
     public PaymentChangeAmountPlannedActionBuilder amount(final com.commercetools.api.models.common.Money amount) {

@@ -8,7 +8,7 @@ import java.util.function.Function;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
-import com.commercetools.api.models.common.TypedMoney;
+import com.commercetools.api.models.common.CentPrecisionMoney;
 import com.commercetools.api.models.customer.CustomerReference;
 import com.commercetools.api.models.payment.PaymentMethodInfo;
 import com.commercetools.api.models.payment.Transaction;
@@ -41,43 +41,43 @@ public interface MyPayment extends com.commercetools.api.models.DomainResource<M
         com.commercetools.api.models.Customizable<MyPayment> {
 
     /**
-     *  <p>Unique identifier of the MyPayment.</p>
+     *  <p>Unique identifier of the Payment.</p>
      */
     @NotNull
     @JsonProperty("id")
     public String getId();
 
     /**
-     *
+     *  <p>Current version of the Payment.</p>
      */
     @NotNull
     @JsonProperty("version")
     public Long getVersion();
 
     /**
-     *  <p>A reference to the customer this payment belongs to.</p>
+     *  <p>Reference to a Customer associated with the Payment. Set automatically with a password flow token. Either <code>customer</code> or <code>anonymousId</code> is present.</p>
      */
     @Valid
     @JsonProperty("customer")
     public CustomerReference getCustomer();
 
     /**
-     *  <p>Identifies payments belonging to an anonymous session (the customer has not signed up/in yet).</p>
+     *  <p>Anonymous session associated with the Payment. Set automatically with a token for an anonymous session. Either <code>customer</code> or <code>anonymousId</code> is present.</p>
      */
 
     @JsonProperty("anonymousId")
     public String getAnonymousId();
 
     /**
-     *  <p>How much money this payment intends to receive from the customer. The value usually matches the cart or order gross total.</p>
+     *  <p>Money value the Payment intends to receive from the customer. The value typically matches the Cart or Order gross total.</p>
      */
     @NotNull
     @Valid
     @JsonProperty("amountPlanned")
-    public TypedMoney getAmountPlanned();
+    public CentPrecisionMoney getAmountPlanned();
 
     /**
-     *
+     *  <p>Information regarding the payment interface (for example, a PSP), and the specific payment method used.</p>
      */
     @NotNull
     @Valid
@@ -85,7 +85,7 @@ public interface MyPayment extends com.commercetools.api.models.DomainResource<M
     public PaymentMethodInfo getPaymentMethodInfo();
 
     /**
-     *  <p>A list of financial transactions of different TransactionTypes with different TransactionStates.</p>
+     *  <p>Financial transactions of the Payment. Each Transaction has a TransactionType and a TransactionState.</p>
      */
     @NotNull
     @Valid
@@ -93,7 +93,7 @@ public interface MyPayment extends com.commercetools.api.models.DomainResource<M
     public List<Transaction> getTransactions();
 
     /**
-     *
+     *  <p>Custom Fields defined for the Payment.</p>
      */
     @Valid
     @JsonProperty("custom")
@@ -107,7 +107,7 @@ public interface MyPayment extends com.commercetools.api.models.DomainResource<M
 
     public void setAnonymousId(final String anonymousId);
 
-    public void setAmountPlanned(final TypedMoney amountPlanned);
+    public void setAmountPlanned(final CentPrecisionMoney amountPlanned);
 
     public void setPaymentMethodInfo(final PaymentMethodInfo paymentMethodInfo);
 

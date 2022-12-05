@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * PaymentAddTransactionAction
+ *  <p>Adding a Transaction to a Payment generates the PaymentTransactionAdded Message.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class PaymentAddTransactionActionImpl implements PaymentAddTransactionAction, ModelBase {
@@ -44,7 +44,7 @@ public class PaymentAddTransactionActionImpl implements PaymentAddTransactionAct
     }
 
     /**
-     *
+     *  <p>Value to append to the <code>transactions</code> array.</p>
      */
 
     public com.commercetools.api.models.payment.TransactionDraft getTransaction() {

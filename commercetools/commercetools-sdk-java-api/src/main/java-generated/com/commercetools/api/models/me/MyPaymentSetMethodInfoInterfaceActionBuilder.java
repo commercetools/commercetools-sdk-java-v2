@@ -24,7 +24,7 @@ public class MyPaymentSetMethodInfoInterfaceActionBuilder implements Builder<MyP
     private String _interface;
 
     /**
-     *
+     *  <p>Value to set. Once set, the <code>paymentInterface</code> of the <code>paymentMethodInfo</code> cannot be changed.</p>
      */
 
     public MyPaymentSetMethodInfoInterfaceActionBuilder _interface(final String _interface) {

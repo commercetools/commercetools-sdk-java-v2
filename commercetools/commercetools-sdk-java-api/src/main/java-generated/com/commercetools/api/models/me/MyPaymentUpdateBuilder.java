@@ -28,7 +28,7 @@ public class MyPaymentUpdateBuilder implements Builder<MyPaymentUpdate> {
     private java.util.List<com.commercetools.api.models.me.MyPaymentUpdateAction> actions;
 
     /**
-     *
+     *  <p>Expected version of the Payment on which the changes should be applied. If the expected version does not match the actual version, a 409 Conflict will be returned.</p>
      */
 
     public MyPaymentUpdateBuilder version(final Long version) {
@@ -37,7 +37,7 @@ public class MyPaymentUpdateBuilder implements Builder<MyPaymentUpdate> {
     }
 
     /**
-     *
+     *  <p>Update actions to be performed on the Payment.</p>
      */
 
     public MyPaymentUpdateBuilder actions(final com.commercetools.api.models.me.MyPaymentUpdateAction... actions) {
@@ -46,7 +46,7 @@ public class MyPaymentUpdateBuilder implements Builder<MyPaymentUpdate> {
     }
 
     /**
-     *
+     *  <p>Update actions to be performed on the Payment.</p>
      */
 
     public MyPaymentUpdateBuilder actions(
@@ -56,7 +56,7 @@ public class MyPaymentUpdateBuilder implements Builder<MyPaymentUpdate> {
     }
 
     /**
-     *
+     *  <p>Update actions to be performed on the Payment.</p>
      */
 
     public MyPaymentUpdateBuilder plusActions(final com.commercetools.api.models.me.MyPaymentUpdateAction... actions) {
@@ -68,7 +68,7 @@ public class MyPaymentUpdateBuilder implements Builder<MyPaymentUpdate> {
     }
 
     /**
-     *
+     *  <p>Update actions to be performed on the Payment.</p>
      */
 
     public MyPaymentUpdateBuilder plusActions(
@@ -81,7 +81,7 @@ public class MyPaymentUpdateBuilder implements Builder<MyPaymentUpdate> {
     }
 
     /**
-     *
+     *  <p>Update actions to be performed on the Payment.</p>
      */
 
     public MyPaymentUpdateBuilder withActions(

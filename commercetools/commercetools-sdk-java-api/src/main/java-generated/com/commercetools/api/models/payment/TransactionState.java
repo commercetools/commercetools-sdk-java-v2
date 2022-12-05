@@ -10,17 +10,30 @@ import com.fasterxml.jackson.annotation.JsonValue;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * TransactionState
+ *  <p>Transactions can be in one of the following States:</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public interface TransactionState {
 
+    /**
+    	<p>Initial State. The payment service has not accepted the Transaction yet.</p>
+
+    */
     TransactionState INITIAL = TransactionStateEnum.INITIAL;
+    /**
+    	<p>The payment service has accepted the Transaction, but it is not completed yet.</p>
 
+    */
     TransactionState PENDING = TransactionStateEnum.PENDING;
+    /**
+    	<p>The payment service has confirmed the successful completion of the Transation.</p>
 
+    */
     TransactionState SUCCESS = TransactionStateEnum.SUCCESS;
+    /**
+    	<p>Transaction has unrecoverably failed.</p>
 
+    */
     TransactionState FAILURE = TransactionStateEnum.FAILURE;
 
     enum TransactionStateEnum implements TransactionState {

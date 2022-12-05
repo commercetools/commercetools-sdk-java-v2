@@ -43,7 +43,7 @@ public class MyPaymentSetMethodInfoMethodActionImpl implements MyPaymentSetMetho
     }
 
     /**
-     *
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
      */
 
     public String getMethod() {

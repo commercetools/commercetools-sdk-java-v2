@@ -44,7 +44,7 @@ public class OrderAddPaymentActionImpl implements OrderAddPaymentAction, ModelBa
     }
 
     /**
-     *  <p>ResourceIdentifier to a Payment.</p>
+     *  <p>ResourceIdentifier of a Payment.</p>
      */
 
     public com.commercetools.api.models.payment.PaymentResourceIdentifier getPayment() {

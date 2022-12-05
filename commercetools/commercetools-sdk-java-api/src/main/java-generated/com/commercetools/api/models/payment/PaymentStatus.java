@@ -30,21 +30,21 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface PaymentStatus {
 
     /**
-     *  <p>A code describing the current status returned by the interface that processes the payment.</p>
+     *  <p>External reference that identifies the current status of the Payment.</p>
      */
 
     @JsonProperty("interfaceCode")
     public String getInterfaceCode();
 
     /**
-     *  <p>A text describing the current status returned by the interface that processes the payment.</p>
+     *  <p>Text describing the current status of the Payment.</p>
      */
 
     @JsonProperty("interfaceText")
     public String getInterfaceText();
 
     /**
-     *
+     *  <p>Reference to a State.</p>
      */
     @Valid
     @JsonProperty("state")

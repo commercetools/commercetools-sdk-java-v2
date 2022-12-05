@@ -32,7 +32,7 @@ public interface PaymentSetMethodInfoNameAction extends PaymentUpdateAction {
     String SET_METHOD_INFO_NAME = "setMethodInfoName";
 
     /**
-     *  <p>If not provided, the name is unset.</p>
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
      */
     @Valid
     @JsonProperty("name")

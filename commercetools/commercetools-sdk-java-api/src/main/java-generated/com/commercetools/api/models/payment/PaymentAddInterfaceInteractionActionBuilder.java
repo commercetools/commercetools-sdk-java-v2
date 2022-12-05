@@ -30,7 +30,7 @@ public class PaymentAddInterfaceInteractionActionBuilder implements Builder<Paym
     private com.commercetools.api.models.type.FieldContainer fields;
 
     /**
-     *
+     *  <p>ResourceIdentifier of a Type.</p>
      */
 
     public PaymentAddInterfaceInteractionActionBuilder type(
@@ -40,7 +40,7 @@ public class PaymentAddInterfaceInteractionActionBuilder implements Builder<Paym
     }
 
     /**
-     *
+     *  <p>ResourceIdentifier of a Type.</p>
      */
 
     public PaymentAddInterfaceInteractionActionBuilder type(
@@ -50,7 +50,7 @@ public class PaymentAddInterfaceInteractionActionBuilder implements Builder<Paym
     }
 
     /**
-     *
+     *  <p>Custom Fields as per FieldDefinitions of the Type.</p>
      */
 
     public PaymentAddInterfaceInteractionActionBuilder fields(
@@ -60,7 +60,7 @@ public class PaymentAddInterfaceInteractionActionBuilder implements Builder<Paym
     }
 
     /**
-     *
+     *  <p>Custom Fields as per FieldDefinitions of the Type.</p>
      */
 
     public PaymentAddInterfaceInteractionActionBuilder fields(

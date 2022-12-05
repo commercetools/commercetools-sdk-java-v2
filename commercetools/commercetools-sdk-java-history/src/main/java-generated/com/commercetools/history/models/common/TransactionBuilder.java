@@ -40,7 +40,7 @@ public class TransactionBuilder implements Builder<Transaction> {
     private com.commercetools.history.models.common.TransactionState state;
 
     /**
-     *  <p>The unique ID of this object.</p>
+     *  <p>Unique identifier of the Transaction.</p>
      */
 
     public TransactionBuilder id(final String id) {
@@ -49,7 +49,7 @@ public class TransactionBuilder implements Builder<Transaction> {
     }
 
     /**
-     *  <p>The time at which the transaction took place.</p>
+     *  <p>Time at which the transaction took place.</p>
      */
 
     public TransactionBuilder timestamp(final String timestamp) {
@@ -86,7 +86,7 @@ public class TransactionBuilder implements Builder<Transaction> {
     }
 
     /**
-     *  <p>The identifier that is used by the interface that managed the transaction (usually the PSP). If a matching interaction was logged in the <code>interfaceInteractions</code> array, the corresponding interaction should be findable with this ID.</p>
+     *  <p>Identifier used by the interface that manages the transaction (usually the PSP). If a matching interaction was logged in the <code>interfaceInteractions</code> array, the corresponding interaction should be findable with this ID.</p>
      */
 
     public TransactionBuilder interactionId(final String interactionId) {

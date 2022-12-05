@@ -24,7 +24,7 @@ public class PaymentSetInterfaceIdActionBuilder implements Builder<PaymentSetInt
     private String interfaceId;
 
     /**
-     *
+     *  <p>Value to set. Once set, the <code>interfaceId</code> cannot be changed.</p>
      */
 
     public PaymentSetInterfaceIdActionBuilder interfaceId(final String interfaceId) {

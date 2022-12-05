@@ -33,7 +33,7 @@ public class PaymentMethodInfoBuilder implements Builder<PaymentMethodInfo> {
     private com.commercetools.api.models.common.LocalizedString name;
 
     /**
-     *  <p>The interface that handles the payment (usually a PSP). Cannot be changed once it has been set. The combination of Payment<code>interfaceId</code> and this field must be unique.</p>
+     *  <p>Payment service that processes the Payment (for example, a PSP). Once set, it cannot be changed. The combination of <code>paymentInterface</code> and the <code>interfaceId</code> of a Payment must be unique.</p>
      */
 
     public PaymentMethodInfoBuilder paymentInterface(@Nullable final String paymentInterface) {
@@ -42,7 +42,7 @@ public class PaymentMethodInfoBuilder implements Builder<PaymentMethodInfo> {
     }
 
     /**
-     *  <p>The payment method that is used, e.g. e.g. a conventional string representing Credit Card, Cash Advance etc.</p>
+     *  <p>Payment method used, for example, credit card, or cash advance.</p>
      */
 
     public PaymentMethodInfoBuilder method(@Nullable final String method) {
@@ -51,7 +51,7 @@ public class PaymentMethodInfoBuilder implements Builder<PaymentMethodInfo> {
     }
 
     /**
-     *  <p>A human-readable, localized name for the payment method, e.g. 'Credit Card'.</p>
+     *  <p>Localizable name of the payment method.</p>
      */
 
     public PaymentMethodInfoBuilder name(
@@ -61,7 +61,7 @@ public class PaymentMethodInfoBuilder implements Builder<PaymentMethodInfo> {
     }
 
     /**
-     *  <p>A human-readable, localized name for the payment method, e.g. 'Credit Card'.</p>
+     *  <p>Localizable name of the payment method.</p>
      */
 
     public PaymentMethodInfoBuilder name(@Nullable final com.commercetools.api.models.common.LocalizedString name) {

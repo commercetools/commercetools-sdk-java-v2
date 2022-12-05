@@ -28,7 +28,7 @@ public class MyPaymentImpl implements MyPayment, ModelBase {
 
     private String anonymousId;
 
-    private com.commercetools.api.models.common.TypedMoney amountPlanned;
+    private com.commercetools.api.models.common.CentPrecisionMoney amountPlanned;
 
     private com.commercetools.api.models.payment.PaymentMethodInfo paymentMethodInfo;
 
@@ -40,7 +40,7 @@ public class MyPaymentImpl implements MyPayment, ModelBase {
     MyPaymentImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version,
             @JsonProperty("customer") final com.commercetools.api.models.customer.CustomerReference customer,
             @JsonProperty("anonymousId") final String anonymousId,
-            @JsonProperty("amountPlanned") final com.commercetools.api.models.common.TypedMoney amountPlanned,
+            @JsonProperty("amountPlanned") final com.commercetools.api.models.common.CentPrecisionMoney amountPlanned,
             @JsonProperty("paymentMethodInfo") final com.commercetools.api.models.payment.PaymentMethodInfo paymentMethodInfo,
             @JsonProperty("transactions") final java.util.List<com.commercetools.api.models.payment.Transaction> transactions,
             @JsonProperty("custom") final com.commercetools.api.models.type.CustomFields custom) {
@@ -58,7 +58,7 @@ public class MyPaymentImpl implements MyPayment, ModelBase {
     }
 
     /**
-     *  <p>Unique identifier of the MyPayment.</p>
+     *  <p>Unique identifier of the Payment.</p>
      */
 
     public String getId() {
@@ -66,7 +66,7 @@ public class MyPaymentImpl implements MyPayment, ModelBase {
     }
 
     /**
-     *
+     *  <p>Current version of the Payment.</p>
      */
 
     public Long getVersion() {
@@ -74,7 +74,7 @@ public class MyPaymentImpl implements MyPayment, ModelBase {
     }
 
     /**
-     *  <p>A reference to the customer this payment belongs to.</p>
+     *  <p>Reference to a Customer associated with the Payment. Set automatically with a password flow token. Either <code>customer</code> or <code>anonymousId</code> is present.</p>
      */
 
     public com.commercetools.api.models.customer.CustomerReference getCustomer() {
@@ -82,7 +82,7 @@ public class MyPaymentImpl implements MyPayment, ModelBase {
     }
 
     /**
-     *  <p>Identifies payments belonging to an anonymous session (the customer has not signed up/in yet).</p>
+     *  <p>Anonymous session associated with the Payment. Set automatically with a token for an anonymous session. Either <code>customer</code> or <code>anonymousId</code> is present.</p>
      */
 
     public String getAnonymousId() {
@@ -90,15 +90,15 @@ public class MyPaymentImpl implements MyPayment, ModelBase {
     }
 
     /**
-     *  <p>How much money this payment intends to receive from the customer. The value usually matches the cart or order gross total.</p>
+     *  <p>Money value the Payment intends to receive from the customer. The value typically matches the Cart or Order gross total.</p>
      */
 
-    public com.commercetools.api.models.common.TypedMoney getAmountPlanned() {
+    public com.commercetools.api.models.common.CentPrecisionMoney getAmountPlanned() {
         return this.amountPlanned;
     }
 
     /**
-     *
+     *  <p>Information regarding the payment interface (for example, a PSP), and the specific payment method used.</p>
      */
 
     public com.commercetools.api.models.payment.PaymentMethodInfo getPaymentMethodInfo() {
@@ -106,7 +106,7 @@ public class MyPaymentImpl implements MyPayment, ModelBase {
     }
 
     /**
-     *  <p>A list of financial transactions of different TransactionTypes with different TransactionStates.</p>
+     *  <p>Financial transactions of the Payment. Each Transaction has a TransactionType and a TransactionState.</p>
      */
 
     public java.util.List<com.commercetools.api.models.payment.Transaction> getTransactions() {
@@ -114,7 +114,7 @@ public class MyPaymentImpl implements MyPayment, ModelBase {
     }
 
     /**
-     *
+     *  <p>Custom Fields defined for the Payment.</p>
      */
 
     public com.commercetools.api.models.type.CustomFields getCustom() {
@@ -137,7 +137,7 @@ public class MyPaymentImpl implements MyPayment, ModelBase {
         this.anonymousId = anonymousId;
     }
 
-    public void setAmountPlanned(final com.commercetools.api.models.common.TypedMoney amountPlanned) {
+    public void setAmountPlanned(final com.commercetools.api.models.common.CentPrecisionMoney amountPlanned) {
         this.amountPlanned = amountPlanned;
     }
 

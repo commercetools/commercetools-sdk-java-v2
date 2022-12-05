@@ -17,7 +17,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * Transaction
+ *  <p>Represents a financial transaction typically created as a result of a notification from the payment service.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -27,6 +27,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .id("{id}")
  *             .type(TransactionType.AUTHORIZATION)
  *             .amount(amountBuilder -> amountBuilder)
+ *             .state(TransactionState.INITIAL)
  *             .build()
  * </code></pre>
  * </div>
@@ -43,21 +44,21 @@ public interface Transaction extends com.commercetools.api.models.Customizable<T
     public String getId();
 
     /**
-     *  <p>The time at which the transaction took place.</p>
+     *  <p>Date and time (UTC) the Transaction took place.</p>
      */
 
     @JsonProperty("timestamp")
     public ZonedDateTime getTimestamp();
 
     /**
-     *  <p>The type of this transaction.</p>
+     *  <p>Type of the Transaction. For example, <code>Authorization</code>.</p>
      */
     @NotNull
     @JsonProperty("type")
     public TransactionType getType();
 
     /**
-     *
+     *  <p>Money value of the Transaction.</p>
      */
     @NotNull
     @Valid
@@ -65,21 +66,21 @@ public interface Transaction extends com.commercetools.api.models.Customizable<T
     public TypedMoney getAmount();
 
     /**
-     *  <p>The identifier that is used by the interface that managed the transaction (usually the PSP). If a matching interaction was logged in the <code>interfaceInteractions</code> array, the corresponding interaction should be findable with this ID.</p>
+     *  <p>Identifier used by the interface that manages the Transaction (usually the PSP). If a matching interaction was logged in the <code>interfaceInteractions</code> array, the corresponding interaction can be found with this ID.</p>
      */
 
     @JsonProperty("interactionId")
     public String getInteractionId();
 
     /**
-     *  <p>The state of this transaction.</p>
+     *  <p>State of the Transaction.</p>
      */
-
+    @NotNull
     @JsonProperty("state")
     public TransactionState getState();
 
     /**
-     *  <p>Custom Fields for the Transaction.</p>
+     *  <p>Custom Fields defined for the Transaction.</p>
      */
     @Valid
     @JsonProperty("custom")

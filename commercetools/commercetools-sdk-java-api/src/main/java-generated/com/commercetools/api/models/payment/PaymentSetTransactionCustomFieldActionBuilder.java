@@ -32,7 +32,7 @@ public class PaymentSetTransactionCustomFieldActionBuilder implements Builder<Pa
     private java.lang.Object value;
 
     /**
-     *
+     *  <p>Unique identifier of the Transaction.</p>
      */
 
     public PaymentSetTransactionCustomFieldActionBuilder transactionId(final String transactionId) {
@@ -41,7 +41,7 @@ public class PaymentSetTransactionCustomFieldActionBuilder implements Builder<Pa
     }
 
     /**
-     *  <p>description: | Name of the Custom Field.</p>
+     *  <p>Name of the Custom Field.</p>
      */
 
     public PaymentSetTransactionCustomFieldActionBuilder name(final String name) {

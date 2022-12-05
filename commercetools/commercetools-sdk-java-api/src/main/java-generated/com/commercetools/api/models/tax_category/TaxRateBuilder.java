@@ -72,7 +72,7 @@ public class TaxRateBuilder implements Builder<TaxRate> {
     }
 
     /**
-     *  <p>If <code>true</code>, tax is included in Embedded Prices and the <code>taxedPrice</code> is present on LineItems. In this case, the <code>totalNet</code> price on TaxedPrice includes the TaxRate.</p>
+     *  <p>If <code>true</code>, tax is included in Embedded Prices or Standalone Prices, and the <code>taxedPrice</code> is present on LineItems. In this case, the <code>totalNet</code> price on TaxedPrice includes the TaxRate.</p>
      */
 
     public TaxRateBuilder includedInPrice(final Boolean includedInPrice) {

@@ -15,7 +15,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * PaymentTransitionStateAction
+ *  <p>If the Payment has no current State, <code>initial</code> must be <code>true</code> for the new State. If the existing State has transitions set, the new State must be a valid transition. If the existing State has no transitions set, no validations are performed when transitioning to the new State.</p>
+ *  <p>Transitioning the State of a Payment produces the PaymentStatusStateTransition Message.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class PaymentTransitionStateActionImpl implements PaymentTransitionStateAction, ModelBase {
@@ -48,7 +49,7 @@ public class PaymentTransitionStateActionImpl implements PaymentTransitionStateA
     }
 
     /**
-     *
+     *  <p>Reference to a State.</p>
      */
 
     public com.commercetools.api.models.state.StateResourceIdentifier getState() {
@@ -56,7 +57,7 @@ public class PaymentTransitionStateActionImpl implements PaymentTransitionStateA
     }
 
     /**
-     *
+     *  <p>Set to <code>true</code> to skip validations when transitioning to the new State.</p>
      */
 
     public Boolean getForce() {

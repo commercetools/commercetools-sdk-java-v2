@@ -36,9 +36,19 @@ public class PaymentImpl implements Payment, ModelBase {
 
     private String anonymousId;
 
+    private String externalId;
+
     private String interfaceId;
 
-    private com.commercetools.api.models.common.TypedMoney amountPlanned;
+    private com.commercetools.api.models.common.CentPrecisionMoney amountPlanned;
+
+    private com.commercetools.api.models.common.TypedMoney amountAuthorized;
+
+    private String authorizedUntil;
+
+    private com.commercetools.api.models.common.TypedMoney amountPaid;
+
+    private com.commercetools.api.models.common.TypedMoney amountRefunded;
 
     private com.commercetools.api.models.payment.PaymentMethodInfo paymentMethodInfo;
 
@@ -59,9 +69,13 @@ public class PaymentImpl implements Payment, ModelBase {
             @JsonProperty("lastModifiedBy") final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy,
             @JsonProperty("createdBy") final com.commercetools.api.models.common.CreatedBy createdBy,
             @JsonProperty("customer") final com.commercetools.api.models.customer.CustomerReference customer,
-            @JsonProperty("anonymousId") final String anonymousId,
+            @JsonProperty("anonymousId") final String anonymousId, @JsonProperty("externalId") final String externalId,
             @JsonProperty("interfaceId") final String interfaceId,
-            @JsonProperty("amountPlanned") final com.commercetools.api.models.common.TypedMoney amountPlanned,
+            @JsonProperty("amountPlanned") final com.commercetools.api.models.common.CentPrecisionMoney amountPlanned,
+            @JsonProperty("amountAuthorized") final com.commercetools.api.models.common.TypedMoney amountAuthorized,
+            @JsonProperty("authorizedUntil") final String authorizedUntil,
+            @JsonProperty("amountPaid") final com.commercetools.api.models.common.TypedMoney amountPaid,
+            @JsonProperty("amountRefunded") final com.commercetools.api.models.common.TypedMoney amountRefunded,
             @JsonProperty("paymentMethodInfo") final com.commercetools.api.models.payment.PaymentMethodInfo paymentMethodInfo,
             @JsonProperty("paymentStatus") final com.commercetools.api.models.payment.PaymentStatus paymentStatus,
             @JsonProperty("transactions") final java.util.List<com.commercetools.api.models.payment.Transaction> transactions,
@@ -76,8 +90,13 @@ public class PaymentImpl implements Payment, ModelBase {
         this.createdBy = createdBy;
         this.customer = customer;
         this.anonymousId = anonymousId;
+        this.externalId = externalId;
         this.interfaceId = interfaceId;
         this.amountPlanned = amountPlanned;
+        this.amountAuthorized = amountAuthorized;
+        this.authorizedUntil = authorizedUntil;
+        this.amountPaid = amountPaid;
+        this.amountRefunded = amountRefunded;
         this.paymentMethodInfo = paymentMethodInfo;
         this.paymentStatus = paymentStatus;
         this.transactions = transactions;
@@ -98,7 +117,7 @@ public class PaymentImpl implements Payment, ModelBase {
     }
 
     /**
-     *
+     *  <p>Current version of the Payment.</p>
      */
 
     public Long getVersion() {
@@ -106,7 +125,7 @@ public class PaymentImpl implements Payment, ModelBase {
     }
 
     /**
-     *
+     *  <p>Date and time (UTC) the Payment was initially created.</p>
      */
 
     public java.time.ZonedDateTime getCreatedAt() {
@@ -114,7 +133,7 @@ public class PaymentImpl implements Payment, ModelBase {
     }
 
     /**
-     *
+     *  <p>Date and time (UTC) the Payment was last updated.</p>
      */
 
     public java.time.ZonedDateTime getLastModifiedAt() {
@@ -138,7 +157,7 @@ public class PaymentImpl implements Payment, ModelBase {
     }
 
     /**
-     *  <p>A reference to the customer this payment belongs to.</p>
+     *  <p>Reference to a Customer associated with the Payment.</p>
      */
 
     public com.commercetools.api.models.customer.CustomerReference getCustomer() {
@@ -146,7 +165,7 @@ public class PaymentImpl implements Payment, ModelBase {
     }
 
     /**
-     *  <p>Identifies payments belonging to an anonymous session (the customer has not signed up/in yet).</p>
+     *  <p>Anonymous session associated with the Payment.</p>
      */
 
     public String getAnonymousId() {
@@ -154,7 +173,15 @@ public class PaymentImpl implements Payment, ModelBase {
     }
 
     /**
-     *  <p>The identifier that is used by the interface that manages the payment (usually the PSP). Cannot be changed once it has been set. The combination of this ID and the PaymentMethodInfo <code>paymentInterface</code> must be unique.</p>
+     *  <p>Additional identifier for external systems like Customer Relationship Management (CRM) or Enterprise Resource Planning (ERP).</p>
+     */
+
+    public String getExternalId() {
+        return this.externalId;
+    }
+
+    /**
+     *  <p>Identifier used by the payment service that processes the Payment (for example, a PSP). The combination of <code>interfaceId</code> and the <code>paymentInterface</code> field on PaymentMethodInfo must be unique.</p>
      */
 
     public String getInterfaceId() {
@@ -162,15 +189,47 @@ public class PaymentImpl implements Payment, ModelBase {
     }
 
     /**
-     *  <p>How much money this payment intends to receive from the customer. The value usually matches the cart or order gross total.</p>
+     *  <p>Money value the Payment intends to receive from the customer. The value typically matches the Cart or Order gross total.</p>
      */
 
-    public com.commercetools.api.models.common.TypedMoney getAmountPlanned() {
+    public com.commercetools.api.models.common.CentPrecisionMoney getAmountPlanned() {
         return this.amountPlanned;
     }
 
     /**
-     *
+     *  <p>Deprecated because its value can be calculated from the total amounts saved in the Transactions.</p>
+     */
+
+    public com.commercetools.api.models.common.TypedMoney getAmountAuthorized() {
+        return this.amountAuthorized;
+    }
+
+    /**
+     *  <p>Deprecated because this field is of little practical value, as it is either not reliably known, or the authorization time is fixed for a PSP.</p>
+     */
+
+    public String getAuthorizedUntil() {
+        return this.authorizedUntil;
+    }
+
+    /**
+     *  <p>Deprecated because its value can be calculated from the total amounts saved in the Transactions.</p>
+     */
+
+    public com.commercetools.api.models.common.TypedMoney getAmountPaid() {
+        return this.amountPaid;
+    }
+
+    /**
+     *  <p>Deprecated because its value can be calculated from the total amounts saved in the Transactions.</p>
+     */
+
+    public com.commercetools.api.models.common.TypedMoney getAmountRefunded() {
+        return this.amountRefunded;
+    }
+
+    /**
+     *  <p>Information regarding the payment interface (for example, a PSP), and the specific payment method used.</p>
      */
 
     public com.commercetools.api.models.payment.PaymentMethodInfo getPaymentMethodInfo() {
@@ -178,7 +237,7 @@ public class PaymentImpl implements Payment, ModelBase {
     }
 
     /**
-     *
+     *  <p>Current status of the Payment.</p>
      */
 
     public com.commercetools.api.models.payment.PaymentStatus getPaymentStatus() {
@@ -186,7 +245,7 @@ public class PaymentImpl implements Payment, ModelBase {
     }
 
     /**
-     *  <p>A list of financial transactions of different TransactionTypes with different TransactionStates.</p>
+     *  <p>Financial transactions of the Payment. Each Transaction has a TransactionType and a TransactionState.</p>
      */
 
     public java.util.List<com.commercetools.api.models.payment.Transaction> getTransactions() {
@@ -194,7 +253,7 @@ public class PaymentImpl implements Payment, ModelBase {
     }
 
     /**
-     *  <p>Interface interactions can be requests sent to the PSP, responses received from the PSP or notifications received from the PSP. Some interactions may result in a transaction. If so, the <code>interactionId</code> in the Transaction should be set to match the ID of the PSP for the interaction. Interactions are managed by the PSP integration and are usually neither written nor read by the user facing frontends or other services.</p>
+     *  <p>Represents information exchange with the payment service, for example, a PSP. An interaction may be a request sent, or a response or notification received from the payment service.</p>
      */
 
     public java.util.List<com.commercetools.api.models.type.CustomFields> getInterfaceInteractions() {
@@ -202,7 +261,7 @@ public class PaymentImpl implements Payment, ModelBase {
     }
 
     /**
-     *
+     *  <p>Custom Fields for the Payment.</p>
      */
 
     public com.commercetools.api.models.type.CustomFields getCustom() {
@@ -249,12 +308,32 @@ public class PaymentImpl implements Payment, ModelBase {
         this.anonymousId = anonymousId;
     }
 
+    public void setExternalId(final String externalId) {
+        this.externalId = externalId;
+    }
+
     public void setInterfaceId(final String interfaceId) {
         this.interfaceId = interfaceId;
     }
 
-    public void setAmountPlanned(final com.commercetools.api.models.common.TypedMoney amountPlanned) {
+    public void setAmountPlanned(final com.commercetools.api.models.common.CentPrecisionMoney amountPlanned) {
         this.amountPlanned = amountPlanned;
+    }
+
+    public void setAmountAuthorized(final com.commercetools.api.models.common.TypedMoney amountAuthorized) {
+        this.amountAuthorized = amountAuthorized;
+    }
+
+    public void setAuthorizedUntil(final String authorizedUntil) {
+        this.authorizedUntil = authorizedUntil;
+    }
+
+    public void setAmountPaid(final com.commercetools.api.models.common.TypedMoney amountPaid) {
+        this.amountPaid = amountPaid;
+    }
+
+    public void setAmountRefunded(final com.commercetools.api.models.common.TypedMoney amountRefunded) {
+        this.amountRefunded = amountRefunded;
     }
 
     public void setPaymentMethodInfo(final com.commercetools.api.models.payment.PaymentMethodInfo paymentMethodInfo) {
@@ -309,8 +388,13 @@ public class PaymentImpl implements Payment, ModelBase {
                 .append(createdBy, that.createdBy)
                 .append(customer, that.customer)
                 .append(anonymousId, that.anonymousId)
+                .append(externalId, that.externalId)
                 .append(interfaceId, that.interfaceId)
                 .append(amountPlanned, that.amountPlanned)
+                .append(amountAuthorized, that.amountAuthorized)
+                .append(authorizedUntil, that.authorizedUntil)
+                .append(amountPaid, that.amountPaid)
+                .append(amountRefunded, that.amountRefunded)
                 .append(paymentMethodInfo, that.paymentMethodInfo)
                 .append(paymentStatus, that.paymentStatus)
                 .append(transactions, that.transactions)
@@ -330,8 +414,13 @@ public class PaymentImpl implements Payment, ModelBase {
                 .append(createdBy)
                 .append(customer)
                 .append(anonymousId)
+                .append(externalId)
                 .append(interfaceId)
                 .append(amountPlanned)
+                .append(amountAuthorized)
+                .append(authorizedUntil)
+                .append(amountPaid)
+                .append(amountRefunded)
                 .append(paymentMethodInfo)
                 .append(paymentStatus)
                 .append(transactions)

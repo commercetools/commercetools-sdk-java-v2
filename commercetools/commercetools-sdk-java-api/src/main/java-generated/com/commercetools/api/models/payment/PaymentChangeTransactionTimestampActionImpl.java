@@ -47,7 +47,7 @@ public class PaymentChangeTransactionTimestampActionImpl implements PaymentChang
     }
 
     /**
-     *
+     *  <p>Unique identifier of the Transaction.</p>
      */
 
     public String getTransactionId() {
@@ -55,7 +55,7 @@ public class PaymentChangeTransactionTimestampActionImpl implements PaymentChang
     }
 
     /**
-     *
+     *  <p>Timestamp of the Transaction as reported by the payment service.</p>
      */
 
     public java.time.ZonedDateTime getTimestamp() {

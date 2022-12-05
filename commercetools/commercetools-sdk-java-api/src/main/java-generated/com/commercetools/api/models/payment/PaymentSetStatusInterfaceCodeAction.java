@@ -11,7 +11,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * PaymentSetStatusInterfaceCodeAction
+ *  <p>Produces the PaymentStatusInterfaceCodeSet Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -29,7 +29,7 @@ public interface PaymentSetStatusInterfaceCodeAction extends PaymentUpdateAction
     String SET_STATUS_INTERFACE_CODE = "setStatusInterfaceCode";
 
     /**
-     *
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
      */
 
     @JsonProperty("interfaceCode")

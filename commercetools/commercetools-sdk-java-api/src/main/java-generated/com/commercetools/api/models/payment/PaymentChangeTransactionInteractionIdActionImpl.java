@@ -48,7 +48,7 @@ public class PaymentChangeTransactionInteractionIdActionImpl
     }
 
     /**
-     *
+     *  <p>Unique identifier of the Transaction.</p>
      */
 
     public String getTransactionId() {
@@ -56,7 +56,7 @@ public class PaymentChangeTransactionInteractionIdActionImpl
     }
 
     /**
-     *
+     *  <p>New value to set.</p>
      */
 
     public String getInteractionId() {

@@ -35,7 +35,7 @@ public interface PaymentSetTransactionCustomTypeAction extends PaymentUpdateActi
     String SET_TRANSACTION_CUSTOM_TYPE = "setTransactionCustomType";
 
     /**
-     *
+     *  <p>Unique identifier of the Transaction. If the specified <code>transactionId</code> does not exist, the request will fail with an InvalidOperation error.</p>
      */
     @NotNull
     @JsonProperty("transactionId")

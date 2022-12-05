@@ -43,7 +43,7 @@ public class PaymentSetStatusInterfaceTextActionImpl implements PaymentSetStatus
     }
 
     /**
-     *
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
      */
 
     public String getInterfaceText() {

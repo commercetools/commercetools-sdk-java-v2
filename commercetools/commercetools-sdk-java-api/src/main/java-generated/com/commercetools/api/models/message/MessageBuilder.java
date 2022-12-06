@@ -379,12 +379,32 @@ public class MessageBuilder {
         return com.commercetools.api.models.message.ProductImageAddedMessageBuilder.of();
     }
 
+    public com.commercetools.api.models.message.ProductPriceAddedMessageBuilder productPriceAddedBuilder() {
+        return com.commercetools.api.models.message.ProductPriceAddedMessageBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.ProductPriceChangedMessageBuilder productPriceChangedBuilder() {
+        return com.commercetools.api.models.message.ProductPriceChangedMessageBuilder.of();
+    }
+
     public com.commercetools.api.models.message.ProductPriceDiscountsSetMessageBuilder productPriceDiscountsSetBuilder() {
         return com.commercetools.api.models.message.ProductPriceDiscountsSetMessageBuilder.of();
     }
 
     public com.commercetools.api.models.message.ProductPriceExternalDiscountSetMessageBuilder productPriceExternalDiscountSetBuilder() {
         return com.commercetools.api.models.message.ProductPriceExternalDiscountSetMessageBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.ProductPriceModeSetMessageBuilder productPriceModeSetBuilder() {
+        return com.commercetools.api.models.message.ProductPriceModeSetMessageBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.ProductPriceRemovedMessageBuilder productPriceRemovedBuilder() {
+        return com.commercetools.api.models.message.ProductPriceRemovedMessageBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.ProductPriceSetMessageBuilder productPriceSetBuilder() {
+        return com.commercetools.api.models.message.ProductPriceSetMessageBuilder.of();
     }
 
     public com.commercetools.api.models.message.ProductPublishedMessageBuilder productPublishedBuilder() {

@@ -127,6 +127,13 @@ public interface Address extends BaseAddress, com.commercetools.api.models.Custo
         return toDraftBuilder().build();
     }
 
+    public default boolean equalsIgnoreId(final Address address) {
+        return address != null && Address.builder(address)
+                .id(null)
+                .buildUnchecked()
+                .equals(Address.builder(this).id(null).buildUnchecked());
+    }
+
     public static com.fasterxml.jackson.core.type.TypeReference<Address> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<Address>() {
             @Override

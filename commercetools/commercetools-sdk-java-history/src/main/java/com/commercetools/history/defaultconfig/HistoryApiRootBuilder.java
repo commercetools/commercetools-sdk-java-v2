@@ -18,8 +18,6 @@ import com.commercetools.history.client.ByProjectKeyRequestBuilder;
 import com.commercetools.history.client.HistoryCorrelationIdProvider;
 import com.commercetools.history.client.ProjectApiRoot;
 
-import dev.failsafe.spi.Scheduler;
-
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.error.HttpExceptionFactory;
 import io.vrap.rmf.base.client.http.*;
@@ -27,6 +25,8 @@ import io.vrap.rmf.base.client.oauth2.ClientCredentials;
 import io.vrap.rmf.base.client.oauth2.TokenSupplier;
 
 import org.slf4j.event.Level;
+
+import dev.failsafe.spi.Scheduler;
 
 public class HistoryApiRootBuilder {
     private final ClientBuilder builder;

@@ -3,9 +3,9 @@ package io.vrap.rmf.base.client.http;
 
 import java.util.Objects;
 
-import dev.failsafe.RetryPolicyBuilder;
-
 import io.vrap.rmf.base.client.ApiHttpResponse;
+
+import dev.failsafe.RetryPolicyBuilder;
 
 @FunctionalInterface
 public interface FailsafeRetryPolicyBuilderOptions {

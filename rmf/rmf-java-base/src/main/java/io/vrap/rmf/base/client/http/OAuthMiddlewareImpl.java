@@ -5,14 +5,14 @@ import java.time.Duration;
 import java.util.concurrent.*;
 import java.util.function.Function;
 
-import dev.failsafe.*;
-import dev.failsafe.event.ExecutionAttemptedEvent;
-import dev.failsafe.spi.Scheduler;
-
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.error.UnauthorizedException;
 import io.vrap.rmf.base.client.oauth2.AuthException;
 import io.vrap.rmf.base.client.oauth2.TokenSupplier;
+
+import dev.failsafe.*;
+import dev.failsafe.event.ExecutionAttemptedEvent;
+import dev.failsafe.spi.Scheduler;
 
 /**
  * Default implementation for the {@link OAuthMiddleware} with automatic retry upon expired access
@@ -61,8 +61,9 @@ public class OAuthMiddlewareImpl implements AutoCloseable, OAuthMiddleware {
             final Fallback<ApiHttpResponse<byte[]>> fallback = Fallback
                     .builderOfException((ExecutionAttemptedEvent<? extends ApiHttpResponse<byte[]>> event) -> {
                         logger.debug(() -> "Convert CircuitBreakerOpenException to AuthException");
-                        logger.trace(event::getLastFailure);
-                        return new AuthException(400, "", null, "Authentication failed", null, event.getLastFailure());
+                        logger.trace(event::getLastException);
+                        return new AuthException(400, "", null, "Authentication failed", null,
+                            event.getLastException());
                     })
                     .handleIf(throwable -> throwable instanceof CircuitBreakerOpenException)
                     .build();
@@ -83,7 +84,7 @@ public class OAuthMiddlewareImpl implements AutoCloseable, OAuthMiddleware {
                     .onClose(event -> logger.debug(() -> "The authentication circuit breaker was closed"))
                     .onOpen(event -> logger.debug(() -> "The authentication circuit breaker was opened"))
                     .onHalfOpen(event -> logger.debug(() -> "The authentication circuit breaker was half-opened"))
-                    .onFailure(event -> logger.trace(() -> "Authentication failed", event.getFailure()))
+                    .onFailure(event -> logger.trace(() -> "Authentication failed", event.getException()))
                     .build();
             this.failsafeExecutor = Failsafe.with(fallback, retry, circuitBreaker).with(scheduler);
         }

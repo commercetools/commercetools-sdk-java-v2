@@ -13,11 +13,6 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.LongNode;
 import com.fasterxml.jackson.databind.node.ObjectNode;
 
-import dev.failsafe.Failsafe;
-import dev.failsafe.FailsafeExecutor;
-import dev.failsafe.RetryPolicy;
-import dev.failsafe.event.ExecutionAttemptedEvent;
-
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.http.InternalLogger;
 import io.vrap.rmf.base.client.utils.json.JsonException;
@@ -25,6 +20,11 @@ import io.vrap.rmf.base.client.utils.json.JsonUtils;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import dev.failsafe.Failsafe;
+import dev.failsafe.FailsafeExecutor;
+import dev.failsafe.RetryPolicy;
+import dev.failsafe.event.ExecutionAttemptedEvent;
 
 public class ConcurrentModificationMiddlewareImpl implements ConcurrentModificationMiddleware {
     static final String loggerName = ClientBuilder.COMMERCETOOLS + ".retry.concurrent_modification";
@@ -93,7 +93,7 @@ public class ConcurrentModificationMiddlewareImpl implements ConcurrentModificat
             if (context.isFirstAttempt()) {
                 return next.apply(request);
             }
-            return fn.apply(context.getLastFailure());
+            return fn.apply(context.getLastException());
         });
     }
 
@@ -102,7 +102,7 @@ public class ConcurrentModificationMiddlewareImpl implements ConcurrentModificat
 
         logger.info(() -> "ConcurrentModification Retry #" + attempt);
         logger.trace(() -> {
-            final Throwable failure = event.getLastFailure();
+            final Throwable failure = event.getLastException();
             if (failure instanceof ApiHttpException) {
                 final ApiHttpException httpException = (ApiHttpException) failure;
                 final ApiHttpRequest request = httpException.getRequest();

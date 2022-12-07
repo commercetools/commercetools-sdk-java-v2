@@ -9,9 +9,9 @@ import java.util.List;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.ScheduledExecutorService;
 
-import dev.failsafe.spi.Scheduler;
-
 import io.vrap.rmf.base.client.ApiHttpException;
+
+import dev.failsafe.spi.Scheduler;
 
 public interface RetryRequestMiddleware extends Middleware {
     int DEFAULT_MAX_DELAY = 60000;

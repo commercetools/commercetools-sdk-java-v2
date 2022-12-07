@@ -6,13 +6,13 @@ import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.ScheduledExecutorService;
 
+import io.vrap.rmf.base.client.AuthenticationToken;
+import io.vrap.rmf.base.client.AutoCloseableService;
+
 import dev.failsafe.Failsafe;
 import dev.failsafe.FailsafeExecutor;
 import dev.failsafe.Timeout;
 import dev.failsafe.spi.Scheduler;
-
-import io.vrap.rmf.base.client.AuthenticationToken;
-import io.vrap.rmf.base.client.AutoCloseableService;
 
 public class InMemoryTokenSupplier extends AutoCloseableService implements RefreshableTokenSupplier {
     private final TokenSupplier supplier;

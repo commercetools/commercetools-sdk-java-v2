@@ -8,8 +8,6 @@ import java.time.Duration;
 import java.util.*;
 import java.util.concurrent.*;
 
-import okhttp3.*;
-
 import com.commercetools.api.client.ApiRoot;
 import com.commercetools.api.defaultconfig.ApiRootBuilder;
 import com.commercetools.api.defaultconfig.ServiceRegion;
@@ -25,6 +23,8 @@ import io.vrap.rmf.base.client.oauth2.TokenSupplier;
 
 import org.apache.commons.lang3.tuple.ImmutablePair;
 import org.apache.commons.lang3.tuple.Pair;
+
+import okhttp3.*;
 
 public class LongRunningTimeoutTest {
 

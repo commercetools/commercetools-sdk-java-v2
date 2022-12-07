@@ -40,6 +40,10 @@ types:
       public default AddressDraft toDraft() {
           return toDraftBuilder().build();
       }
+
+      public default boolean equalsIgnoreId(final Address address) {
+          return address != null && Address.builder(address).id(null).buildUnchecked().equals(Address.builder(this).id(null).buildUnchecked());
+      }
     properties:
       id:
         required: false

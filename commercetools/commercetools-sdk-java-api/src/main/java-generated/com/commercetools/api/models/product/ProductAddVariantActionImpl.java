@@ -34,7 +34,7 @@ public class ProductAddVariantActionImpl implements ProductAddVariantAction, Mod
 
     private Boolean staged;
 
-    private java.util.List<com.commercetools.api.models.common.Asset> assets;
+    private java.util.List<com.commercetools.api.models.common.AssetDraft> assets;
 
     @JsonCreator
     ProductAddVariantActionImpl(@JsonProperty("sku") final String sku, @JsonProperty("key") final String key,
@@ -42,7 +42,7 @@ public class ProductAddVariantActionImpl implements ProductAddVariantAction, Mod
             @JsonProperty("images") final java.util.List<com.commercetools.api.models.common.Image> images,
             @JsonProperty("attributes") final java.util.List<com.commercetools.api.models.product.Attribute> attributes,
             @JsonProperty("staged") final Boolean staged,
-            @JsonProperty("assets") final java.util.List<com.commercetools.api.models.common.Asset> assets) {
+            @JsonProperty("assets") final java.util.List<com.commercetools.api.models.common.AssetDraft> assets) {
         this.sku = sku;
         this.key = key;
         this.prices = prices;
@@ -117,7 +117,7 @@ public class ProductAddVariantActionImpl implements ProductAddVariantAction, Mod
      *  <p>Media assets for the Product Variant.</p>
      */
 
-    public java.util.List<com.commercetools.api.models.common.Asset> getAssets() {
+    public java.util.List<com.commercetools.api.models.common.AssetDraft> getAssets() {
         return this.assets;
     }
 
@@ -157,11 +157,11 @@ public class ProductAddVariantActionImpl implements ProductAddVariantAction, Mod
         this.staged = staged;
     }
 
-    public void setAssets(final com.commercetools.api.models.common.Asset... assets) {
+    public void setAssets(final com.commercetools.api.models.common.AssetDraft... assets) {
         this.assets = new ArrayList<>(Arrays.asList(assets));
     }
 
-    public void setAssets(final java.util.List<com.commercetools.api.models.common.Asset> assets) {
+    public void setAssets(final java.util.List<com.commercetools.api.models.common.AssetDraft> assets) {
         this.assets = assets;
     }
 

@@ -7,7 +7,7 @@ import java.util.function.Function;
 
 import javax.validation.Valid;
 
-import com.commercetools.api.models.common.Asset;
+import com.commercetools.api.models.common.AssetDraft;
 import com.commercetools.api.models.common.Image;
 import com.commercetools.api.models.common.PriceDraft;
 import com.fasterxml.jackson.annotation.*;
@@ -80,7 +80,7 @@ public interface ProductAddVariantAction extends ProductUpdateAction {
      */
     @Valid
     @JsonProperty("assets")
-    public List<Asset> getAssets();
+    public List<AssetDraft> getAssets();
 
     public void setSku(final String sku);
 
@@ -104,9 +104,9 @@ public interface ProductAddVariantAction extends ProductUpdateAction {
     public void setStaged(final Boolean staged);
 
     @JsonIgnore
-    public void setAssets(final Asset... assets);
+    public void setAssets(final AssetDraft... assets);
 
-    public void setAssets(final List<Asset> assets);
+    public void setAssets(final List<AssetDraft> assets);
 
     public static ProductAddVariantAction of() {
         return new ProductAddVariantActionImpl();

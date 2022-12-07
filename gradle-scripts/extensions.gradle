@@ -58,8 +58,8 @@ ext {
     ]
 
     mockito = [
-            inline: 'org.mockito:mockito-inline:4.9.0',
-            junit: 'org.mockito:mockito-junit-jupiter:4.9.0',
+            inline: 'org.mockito:mockito-inline:4.6.1',
+            junit: 'org.mockito:mockito-junit-jupiter:4.6.1',
     ]
 
     failsafe = [

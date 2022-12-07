@@ -44,7 +44,7 @@ public class ReviewIntegrationTests {
 
     @Test
     public void getById() {
-        withReview(review -> {
+        withChannelReview(review -> {
             Review queriedReview = CommercetoolsTestUtils.getProjectApiRoot()
                     .reviews()
                     .withId(review.getId())

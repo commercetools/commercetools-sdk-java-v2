@@ -11,8 +11,6 @@ import com.commercetools.api.defaultconfig.ApiRootBuilder;
 import com.commercetools.api.defaultconfig.ServiceRegion;
 import com.commercetools.api.models.project.Project;
 
-import dev.failsafe.CircuitBreakerOpenException;
-
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.error.UnauthorizedException;
 import io.vrap.rmf.base.client.oauth2.AuthException;
@@ -23,6 +21,8 @@ import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import dev.failsafe.CircuitBreakerOpenException;
 
 public class SuspendTest {
     private static Logger LOGGER = LoggerFactory.getLogger(SuspendTest.class);

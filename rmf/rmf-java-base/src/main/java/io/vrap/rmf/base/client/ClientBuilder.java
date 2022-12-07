@@ -15,14 +15,14 @@ import java.util.function.Supplier;
 
 import javax.annotation.Nullable;
 
-import dev.failsafe.spi.Scheduler;
-
 import io.vrap.rmf.base.client.error.HttpExceptionFactory;
 import io.vrap.rmf.base.client.http.*;
 import io.vrap.rmf.base.client.oauth2.*;
 
 import org.apache.commons.lang3.SystemUtils;
 import org.slf4j.event.Level;
+
+import dev.failsafe.spi.Scheduler;
 
 /**
     <p>The ClientBuilder is used to configure and create an {@link ApiHttpClient}. As the ApiHttpClient uses a {@link HandlerStack stack}

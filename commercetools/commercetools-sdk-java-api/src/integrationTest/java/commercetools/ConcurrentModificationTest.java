@@ -8,9 +8,6 @@ import java.util.Collections;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.CompletionException;
 
-import ch.qos.logback.classic.spi.ILoggingEvent;
-import ch.qos.logback.core.AppenderBase;
-
 import com.commercetools.api.client.ProjectApiRoot;
 import com.commercetools.api.client.RetryHandler;
 import com.commercetools.api.client.error.ConcurrentModificationException;
@@ -34,6 +31,9 @@ import org.junit.jupiter.api.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.slf4j.event.Level;
+
+import ch.qos.logback.classic.spi.ILoggingEvent;
+import ch.qos.logback.core.AppenderBase;
 
 public class ConcurrentModificationTest {
     @Test

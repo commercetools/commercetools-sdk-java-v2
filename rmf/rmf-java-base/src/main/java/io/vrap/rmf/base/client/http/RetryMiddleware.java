@@ -9,18 +9,18 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.function.Function;
 
-import dev.failsafe.Failsafe;
-import dev.failsafe.FailsafeExecutor;
-import dev.failsafe.RetryPolicy;
-import dev.failsafe.event.ExecutionAttemptedEvent;
-import dev.failsafe.spi.Scheduler;
-
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.json.JsonException;
 import io.vrap.rmf.base.client.utils.json.JsonUtils;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import dev.failsafe.Failsafe;
+import dev.failsafe.FailsafeExecutor;
+import dev.failsafe.RetryPolicy;
+import dev.failsafe.event.ExecutionAttemptedEvent;
+import dev.failsafe.spi.Scheduler;
 
 /**
  * Implementation for a retry of a requests upon configured response status codes
@@ -145,7 +145,7 @@ public class RetryMiddleware implements RetryRequestMiddleware, AutoCloseable {
 
         logger.info(() -> "Retry #" + attempt);
         logger.trace(() -> {
-            final Throwable failure = event.getLastFailure();
+            final Throwable failure = event.getLastException();
             if (failure instanceof ApiHttpException) {
                 final ApiHttpException httpException = (ApiHttpException) failure;
                 final ApiHttpRequest request = httpException.getRequest();

@@ -42,7 +42,7 @@ public class ProductAddVariantActionBuilder implements Builder<ProductAddVariant
     private Boolean staged;
 
     @Nullable
-    private java.util.List<com.commercetools.api.models.common.Asset> assets;
+    private java.util.List<com.commercetools.api.models.common.AssetDraft> assets;
 
     /**
      *  <p>Value to set. Must be unique.</p>
@@ -245,7 +245,8 @@ public class ProductAddVariantActionBuilder implements Builder<ProductAddVariant
      *  <p>Media assets for the Product Variant.</p>
      */
 
-    public ProductAddVariantActionBuilder assets(@Nullable final com.commercetools.api.models.common.Asset... assets) {
+    public ProductAddVariantActionBuilder assets(
+            @Nullable final com.commercetools.api.models.common.AssetDraft... assets) {
         this.assets = new ArrayList<>(Arrays.asList(assets));
         return this;
     }
@@ -255,7 +256,7 @@ public class ProductAddVariantActionBuilder implements Builder<ProductAddVariant
      */
 
     public ProductAddVariantActionBuilder assets(
-            @Nullable final java.util.List<com.commercetools.api.models.common.Asset> assets) {
+            @Nullable final java.util.List<com.commercetools.api.models.common.AssetDraft> assets) {
         this.assets = assets;
         return this;
     }
@@ -265,7 +266,7 @@ public class ProductAddVariantActionBuilder implements Builder<ProductAddVariant
      */
 
     public ProductAddVariantActionBuilder plusAssets(
-            @Nullable final com.commercetools.api.models.common.Asset... assets) {
+            @Nullable final com.commercetools.api.models.common.AssetDraft... assets) {
         if (this.assets == null) {
             this.assets = new ArrayList<>();
         }
@@ -278,11 +279,11 @@ public class ProductAddVariantActionBuilder implements Builder<ProductAddVariant
      */
 
     public ProductAddVariantActionBuilder plusAssets(
-            Function<com.commercetools.api.models.common.AssetBuilder, com.commercetools.api.models.common.AssetBuilder> builder) {
+            Function<com.commercetools.api.models.common.AssetDraftBuilder, com.commercetools.api.models.common.AssetDraftBuilder> builder) {
         if (this.assets == null) {
             this.assets = new ArrayList<>();
         }
-        this.assets.add(builder.apply(com.commercetools.api.models.common.AssetBuilder.of()).build());
+        this.assets.add(builder.apply(com.commercetools.api.models.common.AssetDraftBuilder.of()).build());
         return this;
     }
 
@@ -291,9 +292,9 @@ public class ProductAddVariantActionBuilder implements Builder<ProductAddVariant
      */
 
     public ProductAddVariantActionBuilder withAssets(
-            Function<com.commercetools.api.models.common.AssetBuilder, com.commercetools.api.models.common.AssetBuilder> builder) {
+            Function<com.commercetools.api.models.common.AssetDraftBuilder, com.commercetools.api.models.common.AssetDraftBuilder> builder) {
         this.assets = new ArrayList<>();
-        this.assets.add(builder.apply(com.commercetools.api.models.common.AssetBuilder.of()).build());
+        this.assets.add(builder.apply(com.commercetools.api.models.common.AssetDraftBuilder.of()).build());
         return this;
     }
 
@@ -328,7 +329,7 @@ public class ProductAddVariantActionBuilder implements Builder<ProductAddVariant
     }
 
     @Nullable
-    public java.util.List<com.commercetools.api.models.common.Asset> getAssets() {
+    public java.util.List<com.commercetools.api.models.common.AssetDraft> getAssets() {
         return this.assets;
     }
 

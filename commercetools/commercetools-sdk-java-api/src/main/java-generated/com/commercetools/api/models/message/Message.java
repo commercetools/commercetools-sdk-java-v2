@@ -131,8 +131,13 @@ import io.vrap.rmf.base.client.utils.Generated;
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.ProductCreatedMessageImpl.class, name = ProductCreatedMessage.PRODUCT_CREATED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.ProductDeletedMessageImpl.class, name = ProductDeletedMessage.PRODUCT_DELETED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.ProductImageAddedMessageImpl.class, name = ProductImageAddedMessage.PRODUCT_IMAGE_ADDED),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.message.ProductPriceAddedMessageImpl.class, name = ProductPriceAddedMessage.PRODUCT_PRICE_ADDED),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.message.ProductPriceChangedMessageImpl.class, name = ProductPriceChangedMessage.PRODUCT_PRICE_CHANGED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.ProductPriceDiscountsSetMessageImpl.class, name = ProductPriceDiscountsSetMessage.PRODUCT_PRICE_DISCOUNTS_SET),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.ProductPriceExternalDiscountSetMessageImpl.class, name = ProductPriceExternalDiscountSetMessage.PRODUCT_PRICE_EXTERNAL_DISCOUNT_SET),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.message.ProductPriceModeSetMessageImpl.class, name = ProductPriceModeSetMessage.PRODUCT_PRICE_MODE_SET),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.message.ProductPriceRemovedMessageImpl.class, name = ProductPriceRemovedMessage.PRODUCT_PRICE_REMOVED),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.message.ProductPriceSetMessageImpl.class, name = ProductPriceSetMessage.PRODUCT_PRICE_SET),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.ProductPublishedMessageImpl.class, name = ProductPublishedMessage.PRODUCT_PUBLISHED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.ProductRemovedFromCategoryMessageImpl.class, name = ProductRemovedFromCategoryMessage.PRODUCT_REMOVED_FROM_CATEGORY),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.ProductRevertedStagedChangesMessageImpl.class, name = ProductRevertedStagedChangesMessage.PRODUCT_REVERTED_STAGED_CHANGES),
@@ -651,12 +656,32 @@ public interface Message extends BaseResource, com.commercetools.api.models.Doma
         return com.commercetools.api.models.message.ProductImageAddedMessageBuilder.of();
     }
 
+    public static com.commercetools.api.models.message.ProductPriceAddedMessageBuilder productPriceAddedBuilder() {
+        return com.commercetools.api.models.message.ProductPriceAddedMessageBuilder.of();
+    }
+
+    public static com.commercetools.api.models.message.ProductPriceChangedMessageBuilder productPriceChangedBuilder() {
+        return com.commercetools.api.models.message.ProductPriceChangedMessageBuilder.of();
+    }
+
     public static com.commercetools.api.models.message.ProductPriceDiscountsSetMessageBuilder productPriceDiscountsSetBuilder() {
         return com.commercetools.api.models.message.ProductPriceDiscountsSetMessageBuilder.of();
     }
 
     public static com.commercetools.api.models.message.ProductPriceExternalDiscountSetMessageBuilder productPriceExternalDiscountSetBuilder() {
         return com.commercetools.api.models.message.ProductPriceExternalDiscountSetMessageBuilder.of();
+    }
+
+    public static com.commercetools.api.models.message.ProductPriceModeSetMessageBuilder productPriceModeSetBuilder() {
+        return com.commercetools.api.models.message.ProductPriceModeSetMessageBuilder.of();
+    }
+
+    public static com.commercetools.api.models.message.ProductPriceRemovedMessageBuilder productPriceRemovedBuilder() {
+        return com.commercetools.api.models.message.ProductPriceRemovedMessageBuilder.of();
+    }
+
+    public static com.commercetools.api.models.message.ProductPriceSetMessageBuilder productPriceSetBuilder() {
+        return com.commercetools.api.models.message.ProductPriceSetMessageBuilder.of();
     }
 
     public static com.commercetools.api.models.message.ProductPublishedMessageBuilder productPublishedBuilder() {

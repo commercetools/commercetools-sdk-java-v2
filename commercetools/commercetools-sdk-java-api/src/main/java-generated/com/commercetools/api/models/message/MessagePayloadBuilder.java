@@ -379,12 +379,32 @@ public class MessagePayloadBuilder {
         return com.commercetools.api.models.message.ProductImageAddedMessagePayloadBuilder.of();
     }
 
+    public com.commercetools.api.models.message.ProductPriceAddedMessagePayloadBuilder productPriceAddedBuilder() {
+        return com.commercetools.api.models.message.ProductPriceAddedMessagePayloadBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.ProductPriceChangedMessagePayloadBuilder productPriceChangedBuilder() {
+        return com.commercetools.api.models.message.ProductPriceChangedMessagePayloadBuilder.of();
+    }
+
     public com.commercetools.api.models.message.ProductPriceDiscountsSetMessagePayloadBuilder productPriceDiscountsSetBuilder() {
         return com.commercetools.api.models.message.ProductPriceDiscountsSetMessagePayloadBuilder.of();
     }
 
     public com.commercetools.api.models.message.ProductPriceExternalDiscountSetMessagePayloadBuilder productPriceExternalDiscountSetBuilder() {
         return com.commercetools.api.models.message.ProductPriceExternalDiscountSetMessagePayloadBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.ProductPriceModeSetMessagePayloadBuilder productPriceModeSetBuilder() {
+        return com.commercetools.api.models.message.ProductPriceModeSetMessagePayloadBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.ProductPriceRemovedMessagePayloadBuilder productPriceRemovedBuilder() {
+        return com.commercetools.api.models.message.ProductPriceRemovedMessagePayloadBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.ProductPriceSetMessagePayloadBuilder productPriceSetBuilder() {
+        return com.commercetools.api.models.message.ProductPriceSetMessagePayloadBuilder.of();
     }
 
     public com.commercetools.api.models.message.ProductPublishedMessagePayloadBuilder productPublishedBuilder() {

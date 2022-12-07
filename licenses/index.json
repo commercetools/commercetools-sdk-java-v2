@@ -42,9 +42,9 @@
         },
         {
             "moduleName": "com.fasterxml.jackson.core:jackson-annotations",
-            "moduleVersion": "2.13.4",
+            "moduleVersion": "2.14.1",
             "moduleUrls": [
-                "http://github.com/FasterXML/jackson"
+                "https://github.com/FasterXML/jackson"
             ],
             "moduleLicenses": [
                 {
@@ -55,7 +55,7 @@
         },
         {
             "moduleName": "com.fasterxml.jackson.core:jackson-core",
-            "moduleVersion": "2.13.4",
+            "moduleVersion": "2.14.1",
             "moduleUrls": [
                 "https://github.com/FasterXML/jackson-core"
             ],
@@ -68,9 +68,9 @@
         },
         {
             "moduleName": "com.fasterxml.jackson.core:jackson-databind",
-            "moduleVersion": "2.13.4.2",
+            "moduleVersion": "2.14.1",
             "moduleUrls": [
-                "http://github.com/FasterXML/jackson"
+                "https://github.com/FasterXML/jackson"
             ],
             "moduleLicenses": [
                 {
@@ -81,9 +81,9 @@
         },
         {
             "moduleName": "com.fasterxml.jackson.dataformat:jackson-dataformat-cbor",
-            "moduleVersion": "2.13.4",
+            "moduleVersion": "2.14.1",
             "moduleUrls": [
-                "http://github.com/FasterXML/jackson-dataformats-binary"
+                "https://github.com/FasterXML/jackson-dataformats-binary"
             ],
             "moduleLicenses": [
                 {
@@ -94,7 +94,7 @@
         },
         {
             "moduleName": "com.fasterxml.jackson.datatype:jackson-datatype-jsr310",
-            "moduleVersion": "2.13.4",
+            "moduleVersion": "2.14.1",
             "moduleUrls": [
                 "https://github.com/FasterXML/jackson-modules-java8/jackson-datatype-jsr310"
             ],
@@ -107,7 +107,7 @@
         },
         {
             "moduleName": "com.fasterxml.jackson.module:jackson-module-parameter-names",
-            "moduleVersion": "2.13.4",
+            "moduleVersion": "2.14.1",
             "moduleUrls": [
                 "https://github.com/FasterXML/jackson-modules-java8/jackson-module-parameter-names"
             ],
@@ -295,10 +295,7 @@
         },
         {
             "moduleName": "dev.failsafe:failsafe",
-            "moduleVersion": "3.2.0",
-            "moduleUrls": [
-                "https://failsafe.dev"
-            ],
+            "moduleVersion": "3.2.4",
             "moduleLicenses": [
                 {
                     "moduleLicense": null,

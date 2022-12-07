@@ -19,122 +19,145 @@
 <span class="source-line-no">006</span><span id="line.6">import java.util.*;</span>
 <span class="source-line-no">007</span><span id="line.7">import java.util.function.Function;</span>
 <span class="source-line-no">008</span><span id="line.8"></span>
-<span class="source-line-no">009</span><span id="line.9">import com.fasterxml.jackson.annotation.*;</span>
-<span class="source-line-no">010</span><span id="line.10">import com.fasterxml.jackson.databind.annotation.*;</span>
-<span class="source-line-no">011</span><span id="line.11"></span>
-<span class="source-line-no">012</span><span id="line.12">import io.vrap.rmf.base.client.utils.Generated;</span>
+<span class="source-line-no">009</span><span id="line.9">import javax.validation.constraints.NotNull;</span>
+<span class="source-line-no">010</span><span id="line.10"></span>
+<span class="source-line-no">011</span><span id="line.11">import com.fasterxml.jackson.annotation.*;</span>
+<span class="source-line-no">012</span><span id="line.12">import com.fasterxml.jackson.databind.annotation.*;</span>
 <span class="source-line-no">013</span><span id="line.13"></span>
-<span class="source-line-no">014</span><span id="line.14">/**</span>
-<span class="source-line-no">015</span><span id="line.15"> * DiscountCodeNonApplicableError</span>
-<span class="source-line-no">016</span><span id="line.16"> *</span>
-<span class="source-line-no">017</span><span id="line.17"> * &lt;hr&gt;</span>
-<span class="source-line-no">018</span><span id="line.18"> * Example to create an instance using the builder pattern</span>
-<span class="source-line-no">019</span><span id="line.19"> * &lt;div class=code-example&gt;</span>
-<span class="source-line-no">020</span><span id="line.20"> * &lt;pre&gt;&lt;code class='java'&gt;</span>
-<span class="source-line-no">021</span><span id="line.21"> *     DiscountCodeNonApplicableError discountCodeNonApplicableError = DiscountCodeNonApplicableError.builder()</span>
-<span class="source-line-no">022</span><span id="line.22"> *             .message("{message}")</span>
-<span class="source-line-no">023</span><span id="line.23"> *             .build()</span>
-<span class="source-line-no">024</span><span id="line.24"> * &lt;/code&gt;&lt;/pre&gt;</span>
-<span class="source-line-no">025</span><span id="line.25"> * &lt;/div&gt;</span>
-<span class="source-line-no">026</span><span id="line.26"> */</span>
-<span class="source-line-no">027</span><span id="line.27">@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")</span>
-<span class="source-line-no">028</span><span id="line.28">@JsonDeserialize(as = DiscountCodeNonApplicableErrorImpl.class)</span>
-<span class="source-line-no">029</span><span id="line.29">public interface DiscountCodeNonApplicableError extends ErrorObject {</span>
-<span class="source-line-no">030</span><span id="line.30"></span>
-<span class="source-line-no">031</span><span id="line.31">    String DISCOUNT_CODE_NON_APPLICABLE = "DiscountCodeNonApplicable";</span>
-<span class="source-line-no">032</span><span id="line.32"></span>
-<span class="source-line-no">033</span><span id="line.33">    /**</span>
-<span class="source-line-no">034</span><span id="line.34">     *</span>
-<span class="source-line-no">035</span><span id="line.35">     */</span>
-<span class="source-line-no">036</span><span id="line.36"></span>
-<span class="source-line-no">037</span><span id="line.37">    @JsonProperty("discountCode")</span>
-<span class="source-line-no">038</span><span id="line.38">    public String getDiscountCode();</span>
+<span class="source-line-no">014</span><span id="line.14">import io.vrap.rmf.base.client.utils.Generated;</span>
+<span class="source-line-no">015</span><span id="line.15"></span>
+<span class="source-line-no">016</span><span id="line.16">/**</span>
+<span class="source-line-no">017</span><span id="line.17"> *  &lt;p&gt;Returned when the Cart contains a Discount Code with a DiscountCodeState other than &lt;code&gt;MatchesCart&lt;/code&gt;.&lt;/p&gt;</span>
+<span class="source-line-no">018</span><span id="line.18"> *  &lt;p&gt;The error is returned as a failed response to:&lt;/p&gt;</span>
+<span class="source-line-no">019</span><span id="line.19"> *  &lt;ul&gt;</span>
+<span class="source-line-no">020</span><span id="line.20"> *   &lt;li&gt;Create Order from Cart and Create Order from Cart in a Store requests on Orders.&lt;/li&gt;</span>
+<span class="source-line-no">021</span><span id="line.21"> *   &lt;li&gt;Create Order from Cart and Create Order in a Store from a Cart requests on My Orders.&lt;/li&gt;</span>
+<span class="source-line-no">022</span><span id="line.22"> *  &lt;/ul&gt;</span>
+<span class="source-line-no">023</span><span id="line.23"> *</span>
+<span class="source-line-no">024</span><span id="line.24"> * &lt;hr&gt;</span>
+<span class="source-line-no">025</span><span id="line.25"> * Example to create an instance using the builder pattern</span>
+<span class="source-line-no">026</span><span id="line.26"> * &lt;div class=code-example&gt;</span>
+<span class="source-line-no">027</span><span id="line.27"> * &lt;pre&gt;&lt;code class='java'&gt;</span>
+<span class="source-line-no">028</span><span id="line.28"> *     DiscountCodeNonApplicableError discountCodeNonApplicableError = DiscountCodeNonApplicableError.builder()</span>
+<span class="source-line-no">029</span><span id="line.29"> *             .message("{message}")</span>
+<span class="source-line-no">030</span><span id="line.30"> *             .build()</span>
+<span class="source-line-no">031</span><span id="line.31"> * &lt;/code&gt;&lt;/pre&gt;</span>
+<span class="source-line-no">032</span><span id="line.32"> * &lt;/div&gt;</span>
+<span class="source-line-no">033</span><span id="line.33"> */</span>
+<span class="source-line-no">034</span><span id="line.34">@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")</span>
+<span class="source-line-no">035</span><span id="line.35">@JsonDeserialize(as = DiscountCodeNonApplicableErrorImpl.class)</span>
+<span class="source-line-no">036</span><span id="line.36">public interface DiscountCodeNonApplicableError extends ErrorObject {</span>
+<span class="source-line-no">037</span><span id="line.37"></span>
+<span class="source-line-no">038</span><span id="line.38">    String DISCOUNT_CODE_NON_APPLICABLE = "DiscountCodeNonApplicable";</span>
 <span class="source-line-no">039</span><span id="line.39"></span>
 <span class="source-line-no">040</span><span id="line.40">    /**</span>
 <span class="source-line-no">041</span><span id="line.41">     *</span>
 <span class="source-line-no">042</span><span id="line.42">     */</span>
-<span class="source-line-no">043</span><span id="line.43"></span>
-<span class="source-line-no">044</span><span id="line.44">    @JsonProperty("reason")</span>
-<span class="source-line-no">045</span><span id="line.45">    public String getReason();</span>
+<span class="source-line-no">043</span><span id="line.43">    @NotNull</span>
+<span class="source-line-no">044</span><span id="line.44">    @JsonProperty("code")</span>
+<span class="source-line-no">045</span><span id="line.45">    public String getCode();</span>
 <span class="source-line-no">046</span><span id="line.46"></span>
 <span class="source-line-no">047</span><span id="line.47">    /**</span>
-<span class="source-line-no">048</span><span id="line.48">     *</span>
+<span class="source-line-no">048</span><span id="line.48">     *  &lt;p&gt;&lt;code&gt;"The discountCode $discountCodeId cannot be applied to the cart."&lt;/code&gt;&lt;/p&gt;</span>
 <span class="source-line-no">049</span><span id="line.49">     */</span>
-<span class="source-line-no">050</span><span id="line.50"></span>
-<span class="source-line-no">051</span><span id="line.51">    @JsonProperty("dicountCodeId")</span>
-<span class="source-line-no">052</span><span id="line.52">    public String getDicountCodeId();</span>
+<span class="source-line-no">050</span><span id="line.50">    @NotNull</span>
+<span class="source-line-no">051</span><span id="line.51">    @JsonProperty("message")</span>
+<span class="source-line-no">052</span><span id="line.52">    public String getMessage();</span>
 <span class="source-line-no">053</span><span id="line.53"></span>
 <span class="source-line-no">054</span><span id="line.54">    /**</span>
-<span class="source-line-no">055</span><span id="line.55">     *</span>
+<span class="source-line-no">055</span><span id="line.55">     *  &lt;p&gt;Discount Code passed to the Cart.&lt;/p&gt;</span>
 <span class="source-line-no">056</span><span id="line.56">     */</span>
 <span class="source-line-no">057</span><span id="line.57"></span>
-<span class="source-line-no">058</span><span id="line.58">    @JsonProperty("validFrom")</span>
-<span class="source-line-no">059</span><span id="line.59">    public ZonedDateTime getValidFrom();</span>
+<span class="source-line-no">058</span><span id="line.58">    @JsonProperty("discountCode")</span>
+<span class="source-line-no">059</span><span id="line.59">    public String getDiscountCode();</span>
 <span class="source-line-no">060</span><span id="line.60"></span>
 <span class="source-line-no">061</span><span id="line.61">    /**</span>
-<span class="source-line-no">062</span><span id="line.62">     *</span>
+<span class="source-line-no">062</span><span id="line.62">     *  &lt;p&gt;&lt;code&gt;"DoesNotExist"&lt;/code&gt; or &lt;code&gt;"TimeRangeNonApplicable"&lt;/code&gt;&lt;/p&gt;</span>
 <span class="source-line-no">063</span><span id="line.63">     */</span>
 <span class="source-line-no">064</span><span id="line.64"></span>
-<span class="source-line-no">065</span><span id="line.65">    @JsonProperty("validUntil")</span>
-<span class="source-line-no">066</span><span id="line.66">    public ZonedDateTime getValidUntil();</span>
+<span class="source-line-no">065</span><span id="line.65">    @JsonProperty("reason")</span>
+<span class="source-line-no">066</span><span id="line.66">    public String getReason();</span>
 <span class="source-line-no">067</span><span id="line.67"></span>
 <span class="source-line-no">068</span><span id="line.68">    /**</span>
-<span class="source-line-no">069</span><span id="line.69">     *</span>
+<span class="source-line-no">069</span><span id="line.69">     *  &lt;p&gt;Unique identifier of the Discount Code.&lt;/p&gt;</span>
 <span class="source-line-no">070</span><span id="line.70">     */</span>
 <span class="source-line-no">071</span><span id="line.71"></span>
-<span class="source-line-no">072</span><span id="line.72">    @JsonProperty("validityCheckTime")</span>
-<span class="source-line-no">073</span><span id="line.73">    public ZonedDateTime getValidityCheckTime();</span>
+<span class="source-line-no">072</span><span id="line.72">    @JsonProperty("discountCodeId")</span>
+<span class="source-line-no">073</span><span id="line.73">    public String getDiscountCodeId();</span>
 <span class="source-line-no">074</span><span id="line.74"></span>
-<span class="source-line-no">075</span><span id="line.75">    public void setDiscountCode(final String discountCode);</span>
-<span class="source-line-no">076</span><span id="line.76"></span>
-<span class="source-line-no">077</span><span id="line.77">    public void setReason(final String reason);</span>
+<span class="source-line-no">075</span><span id="line.75">    /**</span>
+<span class="source-line-no">076</span><span id="line.76">     *  &lt;p&gt;Date and time (UTC) from which the Discount Code is valid.&lt;/p&gt;</span>
+<span class="source-line-no">077</span><span id="line.77">     */</span>
 <span class="source-line-no">078</span><span id="line.78"></span>
-<span class="source-line-no">079</span><span id="line.79">    public void setDicountCodeId(final String dicountCodeId);</span>
-<span class="source-line-no">080</span><span id="line.80"></span>
-<span class="source-line-no">081</span><span id="line.81">    public void setValidFrom(final ZonedDateTime validFrom);</span>
-<span class="source-line-no">082</span><span id="line.82"></span>
-<span class="source-line-no">083</span><span id="line.83">    public void setValidUntil(final ZonedDateTime validUntil);</span>
-<span class="source-line-no">084</span><span id="line.84"></span>
-<span class="source-line-no">085</span><span id="line.85">    public void setValidityCheckTime(final ZonedDateTime validityCheckTime);</span>
-<span class="source-line-no">086</span><span id="line.86"></span>
-<span class="source-line-no">087</span><span id="line.87">    public static DiscountCodeNonApplicableError of() {</span>
-<span class="source-line-no">088</span><span id="line.88">        return new DiscountCodeNonApplicableErrorImpl();</span>
-<span class="source-line-no">089</span><span id="line.89">    }</span>
-<span class="source-line-no">090</span><span id="line.90"></span>
-<span class="source-line-no">091</span><span id="line.91">    public static DiscountCodeNonApplicableError of(final DiscountCodeNonApplicableError template) {</span>
-<span class="source-line-no">092</span><span id="line.92">        DiscountCodeNonApplicableErrorImpl instance = new DiscountCodeNonApplicableErrorImpl();</span>
-<span class="source-line-no">093</span><span id="line.93">        instance.setMessage(template.getMessage());</span>
-<span class="source-line-no">094</span><span id="line.94"></span>
-<span class="source-line-no">095</span><span id="line.95">        instance.setDiscountCode(template.getDiscountCode());</span>
-<span class="source-line-no">096</span><span id="line.96">        instance.setReason(template.getReason());</span>
-<span class="source-line-no">097</span><span id="line.97">        instance.setDicountCodeId(template.getDicountCodeId());</span>
-<span class="source-line-no">098</span><span id="line.98">        instance.setValidFrom(template.getValidFrom());</span>
-<span class="source-line-no">099</span><span id="line.99">        instance.setValidUntil(template.getValidUntil());</span>
-<span class="source-line-no">100</span><span id="line.100">        instance.setValidityCheckTime(template.getValidityCheckTime());</span>
-<span class="source-line-no">101</span><span id="line.101">        return instance;</span>
-<span class="source-line-no">102</span><span id="line.102">    }</span>
+<span class="source-line-no">079</span><span id="line.79">    @JsonProperty("validFrom")</span>
+<span class="source-line-no">080</span><span id="line.80">    public ZonedDateTime getValidFrom();</span>
+<span class="source-line-no">081</span><span id="line.81"></span>
+<span class="source-line-no">082</span><span id="line.82">    /**</span>
+<span class="source-line-no">083</span><span id="line.83">     *  &lt;p&gt;Date and time (UTC) until which the Discount Code is valid.&lt;/p&gt;</span>
+<span class="source-line-no">084</span><span id="line.84">     */</span>
+<span class="source-line-no">085</span><span id="line.85"></span>
+<span class="source-line-no">086</span><span id="line.86">    @JsonProperty("validUntil")</span>
+<span class="source-line-no">087</span><span id="line.87">    public ZonedDateTime getValidUntil();</span>
+<span class="source-line-no">088</span><span id="line.88"></span>
+<span class="source-line-no">089</span><span id="line.89">    /**</span>
+<span class="source-line-no">090</span><span id="line.90">     *  &lt;p&gt;Date and time (UTC) the Discount Code validity check was last performed.&lt;/p&gt;</span>
+<span class="source-line-no">091</span><span id="line.91">     */</span>
+<span class="source-line-no">092</span><span id="line.92"></span>
+<span class="source-line-no">093</span><span id="line.93">    @JsonProperty("validityCheckTime")</span>
+<span class="source-line-no">094</span><span id="line.94">    public ZonedDateTime getValidityCheckTime();</span>
+<span class="source-line-no">095</span><span id="line.95"></span>
+<span class="source-line-no">096</span><span id="line.96">    public void setMessage(final String message);</span>
+<span class="source-line-no">097</span><span id="line.97"></span>
+<span class="source-line-no">098</span><span id="line.98">    public void setDiscountCode(final String discountCode);</span>
+<span class="source-line-no">099</span><span id="line.99"></span>
+<span class="source-line-no">100</span><span id="line.100">    public void setReason(final String reason);</span>
+<span class="source-line-no">101</span><span id="line.101"></span>
+<span class="source-line-no">102</span><span id="line.102">    public void setDiscountCodeId(final String discountCodeId);</span>
 <span class="source-line-no">103</span><span id="line.103"></span>
-<span class="source-line-no">104</span><span id="line.104">    public static DiscountCodeNonApplicableErrorBuilder builder() {</span>
-<span class="source-line-no">105</span><span id="line.105">        return DiscountCodeNonApplicableErrorBuilder.of();</span>
-<span class="source-line-no">106</span><span id="line.106">    }</span>
+<span class="source-line-no">104</span><span id="line.104">    public void setValidFrom(final ZonedDateTime validFrom);</span>
+<span class="source-line-no">105</span><span id="line.105"></span>
+<span class="source-line-no">106</span><span id="line.106">    public void setValidUntil(final ZonedDateTime validUntil);</span>
 <span class="source-line-no">107</span><span id="line.107"></span>
-<span class="source-line-no">108</span><span id="line.108">    public static DiscountCodeNonApplicableErrorBuilder builder(final DiscountCodeNonApplicableError template) {</span>
-<span class="source-line-no">109</span><span id="line.109">        return DiscountCodeNonApplicableErrorBuilder.of(template);</span>
-<span class="source-line-no">110</span><span id="line.110">    }</span>
-<span class="source-line-no">111</span><span id="line.111"></span>
-<span class="source-line-no">112</span><span id="line.112">    default &lt;T&gt; T withDiscountCodeNonApplicableError(Function&lt;DiscountCodeNonApplicableError, T&gt; helper) {</span>
-<span class="source-line-no">113</span><span id="line.113">        return helper.apply(this);</span>
-<span class="source-line-no">114</span><span id="line.114">    }</span>
-<span class="source-line-no">115</span><span id="line.115"></span>
-<span class="source-line-no">116</span><span id="line.116">    public static com.fasterxml.jackson.core.type.TypeReference&lt;DiscountCodeNonApplicableError&gt; typeReference() {</span>
-<span class="source-line-no">117</span><span id="line.117">        return new com.fasterxml.jackson.core.type.TypeReference&lt;DiscountCodeNonApplicableError&gt;() {</span>
-<span class="source-line-no">118</span><span id="line.118">            @Override</span>
-<span class="source-line-no">119</span><span id="line.119">            public String toString() {</span>
-<span class="source-line-no">120</span><span id="line.120">                return "TypeReference&lt;DiscountCodeNonApplicableError&gt;";</span>
-<span class="source-line-no">121</span><span id="line.121">            }</span>
-<span class="source-line-no">122</span><span id="line.122">        };</span>
-<span class="source-line-no">123</span><span id="line.123">    }</span>
-<span class="source-line-no">124</span><span id="line.124">}</span>
+<span class="source-line-no">108</span><span id="line.108">    public void setValidityCheckTime(final ZonedDateTime validityCheckTime);</span>
+<span class="source-line-no">109</span><span id="line.109"></span>
+<span class="source-line-no">110</span><span id="line.110">    public static DiscountCodeNonApplicableError of() {</span>
+<span class="source-line-no">111</span><span id="line.111">        return new DiscountCodeNonApplicableErrorImpl();</span>
+<span class="source-line-no">112</span><span id="line.112">    }</span>
+<span class="source-line-no">113</span><span id="line.113"></span>
+<span class="source-line-no">114</span><span id="line.114">    public static DiscountCodeNonApplicableError of(final DiscountCodeNonApplicableError template) {</span>
+<span class="source-line-no">115</span><span id="line.115">        DiscountCodeNonApplicableErrorImpl instance = new DiscountCodeNonApplicableErrorImpl();</span>
+<span class="source-line-no">116</span><span id="line.116">        instance.setMessage(template.getMessage());</span>
+<span class="source-line-no">117</span><span id="line.117"></span>
+<span class="source-line-no">118</span><span id="line.118">        instance.setDiscountCode(template.getDiscountCode());</span>
+<span class="source-line-no">119</span><span id="line.119">        instance.setReason(template.getReason());</span>
+<span class="source-line-no">120</span><span id="line.120">        instance.setDiscountCodeId(template.getDiscountCodeId());</span>
+<span class="source-line-no">121</span><span id="line.121">        instance.setValidFrom(template.getValidFrom());</span>
+<span class="source-line-no">122</span><span id="line.122">        instance.setValidUntil(template.getValidUntil());</span>
+<span class="source-line-no">123</span><span id="line.123">        instance.setValidityCheckTime(template.getValidityCheckTime());</span>
+<span class="source-line-no">124</span><span id="line.124">        return instance;</span>
+<span class="source-line-no">125</span><span id="line.125">    }</span>
+<span class="source-line-no">126</span><span id="line.126"></span>
+<span class="source-line-no">127</span><span id="line.127">    public static DiscountCodeNonApplicableErrorBuilder builder() {</span>
+<span class="source-line-no">128</span><span id="line.128">        return DiscountCodeNonApplicableErrorBuilder.of();</span>
+<span class="source-line-no">129</span><span id="line.129">    }</span>
+<span class="source-line-no">130</span><span id="line.130"></span>
+<span class="source-line-no">131</span><span id="line.131">    public static DiscountCodeNonApplicableErrorBuilder builder(final DiscountCodeNonApplicableError template) {</span>
+<span class="source-line-no">132</span><span id="line.132">        return DiscountCodeNonApplicableErrorBuilder.of(template);</span>
+<span class="source-line-no">133</span><span id="line.133">    }</span>
+<span class="source-line-no">134</span><span id="line.134"></span>
+<span class="source-line-no">135</span><span id="line.135">    default &lt;T&gt; T withDiscountCodeNonApplicableError(Function&lt;DiscountCodeNonApplicableError, T&gt; helper) {</span>
+<span class="source-line-no">136</span><span id="line.136">        return helper.apply(this);</span>
+<span class="source-line-no">137</span><span id="line.137">    }</span>
+<span class="source-line-no">138</span><span id="line.138"></span>
+<span class="source-line-no">139</span><span id="line.139">    public static com.fasterxml.jackson.core.type.TypeReference&lt;DiscountCodeNonApplicableError&gt; typeReference() {</span>
+<span class="source-line-no">140</span><span id="line.140">        return new com.fasterxml.jackson.core.type.TypeReference&lt;DiscountCodeNonApplicableError&gt;() {</span>
+<span class="source-line-no">141</span><span id="line.141">            @Override</span>
+<span class="source-line-no">142</span><span id="line.142">            public String toString() {</span>
+<span class="source-line-no">143</span><span id="line.143">                return "TypeReference&lt;DiscountCodeNonApplicableError&gt;";</span>
+<span class="source-line-no">144</span><span id="line.144">            }</span>
+<span class="source-line-no">145</span><span id="line.145">        };</span>
+<span class="source-line-no">146</span><span id="line.146">    }</span>
+<span class="source-line-no">147</span><span id="line.147">}</span>
 
 
 

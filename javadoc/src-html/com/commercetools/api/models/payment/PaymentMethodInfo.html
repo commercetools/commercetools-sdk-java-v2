@@ -43,21 +43,21 @@
 <span class="source-line-no">030</span><span id="line.30">public interface PaymentMethodInfo {</span>
 <span class="source-line-no">031</span><span id="line.31"></span>
 <span class="source-line-no">032</span><span id="line.32">    /**</span>
-<span class="source-line-no">033</span><span id="line.33">     *  &lt;p&gt;The interface that handles the payment (usually a PSP). Cannot be changed once it has been set. The combination of Payment&lt;code&gt;interfaceId&lt;/code&gt; and this field must be unique.&lt;/p&gt;</span>
+<span class="source-line-no">033</span><span id="line.33">     *  &lt;p&gt;Payment service that processes the Payment (for example, a PSP). Once set, it cannot be changed. The combination of &lt;code&gt;paymentInterface&lt;/code&gt; and the &lt;code&gt;interfaceId&lt;/code&gt; of a Payment must be unique.&lt;/p&gt;</span>
 <span class="source-line-no">034</span><span id="line.34">     */</span>
 <span class="source-line-no">035</span><span id="line.35"></span>
 <span class="source-line-no">036</span><span id="line.36">    @JsonProperty("paymentInterface")</span>
 <span class="source-line-no">037</span><span id="line.37">    public String getPaymentInterface();</span>
 <span class="source-line-no">038</span><span id="line.38"></span>
 <span class="source-line-no">039</span><span id="line.39">    /**</span>
-<span class="source-line-no">040</span><span id="line.40">     *  &lt;p&gt;The payment method that is used, e.g. e.g. a conventional string representing Credit Card, Cash Advance etc.&lt;/p&gt;</span>
+<span class="source-line-no">040</span><span id="line.40">     *  &lt;p&gt;Payment method used, for example, credit card, or cash advance.&lt;/p&gt;</span>
 <span class="source-line-no">041</span><span id="line.41">     */</span>
 <span class="source-line-no">042</span><span id="line.42"></span>
 <span class="source-line-no">043</span><span id="line.43">    @JsonProperty("method")</span>
 <span class="source-line-no">044</span><span id="line.44">    public String getMethod();</span>
 <span class="source-line-no">045</span><span id="line.45"></span>
 <span class="source-line-no">046</span><span id="line.46">    /**</span>
-<span class="source-line-no">047</span><span id="line.47">     *  &lt;p&gt;A human-readable, localized name for the payment method, e.g. 'Credit Card'.&lt;/p&gt;</span>
+<span class="source-line-no">047</span><span id="line.47">     *  &lt;p&gt;Localizable name of the payment method.&lt;/p&gt;</span>
 <span class="source-line-no">048</span><span id="line.48">     */</span>
 <span class="source-line-no">049</span><span id="line.49">    @Valid</span>
 <span class="source-line-no">050</span><span id="line.50">    @JsonProperty("name")</span>

@@ -24,7 +24,7 @@
 <span class="source-line-no">011</span><span id="line.11">import io.vrap.rmf.base.client.utils.Generated;</span>
 <span class="source-line-no">012</span><span id="line.12"></span>
 <span class="source-line-no">013</span><span id="line.13">/**</span>
-<span class="source-line-no">014</span><span id="line.14"> *  &lt;p&gt;This update action produces the StoreLanguagesChanged Message.&lt;/p&gt;</span>
+<span class="source-line-no">014</span><span id="line.14"> *  &lt;p&gt;This update action produces the StoreLanguagesChanged Message. Adding a language other than the ones defined in the Project returns a ProjectNotConfiguredForLanguages error.&lt;/p&gt;</span>
 <span class="source-line-no">015</span><span id="line.15"> *</span>
 <span class="source-line-no">016</span><span id="line.16"> * &lt;hr&gt;</span>
 <span class="source-line-no">017</span><span id="line.17"> * Example to create an instance using the builder pattern</span>
@@ -42,7 +42,7 @@
 <span class="source-line-no">029</span><span id="line.29">    String SET_LANGUAGES = "setLanguages";</span>
 <span class="source-line-no">030</span><span id="line.30"></span>
 <span class="source-line-no">031</span><span id="line.31">    /**</span>
-<span class="source-line-no">032</span><span id="line.32">     *  &lt;p&gt;Value to set. Any attempt to use languages other than the ones defined in the Project will fail with a ProjectNotConfiguredForLanguages error.&lt;/p&gt;</span>
+<span class="source-line-no">032</span><span id="line.32">     *  &lt;p&gt;Value to set.&lt;/p&gt;</span>
 <span class="source-line-no">033</span><span id="line.33">     */</span>
 <span class="source-line-no">034</span><span id="line.34"></span>
 <span class="source-line-no">035</span><span id="line.35">    @JsonProperty("languages")</span>

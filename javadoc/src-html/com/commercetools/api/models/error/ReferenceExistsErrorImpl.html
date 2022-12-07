@@ -28,7 +28,7 @@
 <span class="source-line-no">015</span><span id="line.15">import org.apache.commons.lang3.builder.HashCodeBuilder;</span>
 <span class="source-line-no">016</span><span id="line.16"></span>
 <span class="source-line-no">017</span><span id="line.17">/**</span>
-<span class="source-line-no">018</span><span id="line.18"> * ReferenceExistsError</span>
+<span class="source-line-no">018</span><span id="line.18"> *  &lt;p&gt;Returned when a resource cannot be deleted because it is being referenced by another resource.&lt;/p&gt;</span>
 <span class="source-line-no">019</span><span id="line.19"> */</span>
 <span class="source-line-no">020</span><span id="line.20">@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")</span>
 <span class="source-line-no">021</span><span id="line.21">public class ReferenceExistsErrorImpl implements ReferenceExistsError, ModelBase {</span>
@@ -64,7 +64,7 @@
 <span class="source-line-no">051</span><span id="line.51">    }</span>
 <span class="source-line-no">052</span><span id="line.52"></span>
 <span class="source-line-no">053</span><span id="line.53">    /**</span>
-<span class="source-line-no">054</span><span id="line.54">     *</span>
+<span class="source-line-no">054</span><span id="line.54">     *  &lt;p&gt;&lt;code&gt;"Can not delete a $resource while it is referenced by at least one $referencedBy."&lt;/code&gt;&lt;/p&gt;</span>
 <span class="source-line-no">055</span><span id="line.55">     */</span>
 <span class="source-line-no">056</span><span id="line.56"></span>
 <span class="source-line-no">057</span><span id="line.57">    public String getMessage() {</span>
@@ -72,7 +72,7 @@
 <span class="source-line-no">059</span><span id="line.59">    }</span>
 <span class="source-line-no">060</span><span id="line.60"></span>
 <span class="source-line-no">061</span><span id="line.61">    /**</span>
-<span class="source-line-no">062</span><span id="line.62">     *</span>
+<span class="source-line-no">062</span><span id="line.62">     *  &lt;p&gt;Error-specific additional fields.&lt;/p&gt;</span>
 <span class="source-line-no">063</span><span id="line.63">     */</span>
 <span class="source-line-no">064</span><span id="line.64"></span>
 <span class="source-line-no">065</span><span id="line.65">    public Map&lt;String, java.lang.Object&gt; values() {</span>
@@ -80,7 +80,7 @@
 <span class="source-line-no">067</span><span id="line.67">    }</span>
 <span class="source-line-no">068</span><span id="line.68"></span>
 <span class="source-line-no">069</span><span id="line.69">    /**</span>
-<span class="source-line-no">070</span><span id="line.70">     *  &lt;p&gt;Type of resource the value should reference. Supported resource type identifiers are:&lt;/p&gt;</span>
+<span class="source-line-no">070</span><span id="line.70">     *  &lt;p&gt;Type of referenced resource.&lt;/p&gt;</span>
 <span class="source-line-no">071</span><span id="line.71">     */</span>
 <span class="source-line-no">072</span><span id="line.72"></span>
 <span class="source-line-no">073</span><span id="line.73">    public com.commercetools.api.models.common.ReferenceTypeId getReferencedBy() {</span>

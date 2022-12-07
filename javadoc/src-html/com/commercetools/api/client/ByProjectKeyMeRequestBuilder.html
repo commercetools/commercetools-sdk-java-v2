@@ -14,80 +14,90 @@
 <pre><span class="source-line-no">001</span><span id="line.1"></span>
 <span class="source-line-no">002</span><span id="line.2">package com.commercetools.api.client;</span>
 <span class="source-line-no">003</span><span id="line.3"></span>
-<span class="source-line-no">004</span><span id="line.4">import io.vrap.rmf.base.client.ApiHttpClient;</span>
-<span class="source-line-no">005</span><span id="line.5">import io.vrap.rmf.base.client.utils.Generated;</span>
-<span class="source-line-no">006</span><span id="line.6"></span>
-<span class="source-line-no">007</span><span id="line.7">@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")</span>
-<span class="source-line-no">008</span><span id="line.8">public class ByProjectKeyMeRequestBuilder {</span>
-<span class="source-line-no">009</span><span id="line.9"></span>
-<span class="source-line-no">010</span><span id="line.10">    private final ApiHttpClient apiHttpClient;</span>
-<span class="source-line-no">011</span><span id="line.11">    private final String projectKey;</span>
-<span class="source-line-no">012</span><span id="line.12"></span>
-<span class="source-line-no">013</span><span id="line.13">    public ByProjectKeyMeRequestBuilder(final ApiHttpClient apiHttpClient, final String projectKey) {</span>
-<span class="source-line-no">014</span><span id="line.14">        this.apiHttpClient = apiHttpClient;</span>
-<span class="source-line-no">015</span><span id="line.15">        this.projectKey = projectKey;</span>
-<span class="source-line-no">016</span><span id="line.16">    }</span>
-<span class="source-line-no">017</span><span id="line.17"></span>
-<span class="source-line-no">018</span><span id="line.18">    public ByProjectKeyMeGet get() {</span>
-<span class="source-line-no">019</span><span id="line.19">        return new ByProjectKeyMeGet(apiHttpClient, projectKey);</span>
-<span class="source-line-no">020</span><span id="line.20">    }</span>
-<span class="source-line-no">021</span><span id="line.21"></span>
-<span class="source-line-no">022</span><span id="line.22">    public ByProjectKeyMePost post(com.commercetools.api.models.me.MyCustomerUpdate myCustomerUpdate) {</span>
-<span class="source-line-no">023</span><span id="line.23">        return new ByProjectKeyMePost(apiHttpClient, projectKey, myCustomerUpdate);</span>
-<span class="source-line-no">024</span><span id="line.24">    }</span>
-<span class="source-line-no">025</span><span id="line.25"></span>
-<span class="source-line-no">026</span><span id="line.26">    public ByProjectKeyMeDelete delete() {</span>
-<span class="source-line-no">027</span><span id="line.27">        return new ByProjectKeyMeDelete(apiHttpClient, projectKey);</span>
-<span class="source-line-no">028</span><span id="line.28">    }</span>
-<span class="source-line-no">029</span><span id="line.29"></span>
-<span class="source-line-no">030</span><span id="line.30">    public ByProjectKeyMeEmailConfirmRequestBuilder emailConfirm() {</span>
-<span class="source-line-no">031</span><span id="line.31">        return new ByProjectKeyMeEmailConfirmRequestBuilder(apiHttpClient, projectKey);</span>
-<span class="source-line-no">032</span><span id="line.32">    }</span>
-<span class="source-line-no">033</span><span id="line.33"></span>
-<span class="source-line-no">034</span><span id="line.34">    public ByProjectKeyMePasswordRequestBuilder password() {</span>
-<span class="source-line-no">035</span><span id="line.35">        return new ByProjectKeyMePasswordRequestBuilder(apiHttpClient, projectKey);</span>
-<span class="source-line-no">036</span><span id="line.36">    }</span>
-<span class="source-line-no">037</span><span id="line.37"></span>
-<span class="source-line-no">038</span><span id="line.38">    public ByProjectKeyMeSignupRequestBuilder signup() {</span>
-<span class="source-line-no">039</span><span id="line.39">        return new ByProjectKeyMeSignupRequestBuilder(apiHttpClient, projectKey);</span>
-<span class="source-line-no">040</span><span id="line.40">    }</span>
-<span class="source-line-no">041</span><span id="line.41"></span>
-<span class="source-line-no">042</span><span id="line.42">    public ByProjectKeyMeLoginRequestBuilder login() {</span>
-<span class="source-line-no">043</span><span id="line.43">        return new ByProjectKeyMeLoginRequestBuilder(apiHttpClient, projectKey);</span>
-<span class="source-line-no">044</span><span id="line.44">    }</span>
-<span class="source-line-no">045</span><span id="line.45"></span>
-<span class="source-line-no">046</span><span id="line.46">    public ByProjectKeyMeActiveCartRequestBuilder activeCart() {</span>
-<span class="source-line-no">047</span><span id="line.47">        return new ByProjectKeyMeActiveCartRequestBuilder(apiHttpClient, projectKey);</span>
-<span class="source-line-no">048</span><span id="line.48">    }</span>
-<span class="source-line-no">049</span><span id="line.49"></span>
-<span class="source-line-no">050</span><span id="line.50">    public ByProjectKeyMeBusinessUnitsRequestBuilder businessUnits() {</span>
-<span class="source-line-no">051</span><span id="line.51">        return new ByProjectKeyMeBusinessUnitsRequestBuilder(apiHttpClient, projectKey);</span>
-<span class="source-line-no">052</span><span id="line.52">    }</span>
-<span class="source-line-no">053</span><span id="line.53"></span>
-<span class="source-line-no">054</span><span id="line.54">    public ByProjectKeyMeCartsRequestBuilder carts() {</span>
-<span class="source-line-no">055</span><span id="line.55">        return new ByProjectKeyMeCartsRequestBuilder(apiHttpClient, projectKey);</span>
-<span class="source-line-no">056</span><span id="line.56">    }</span>
-<span class="source-line-no">057</span><span id="line.57"></span>
-<span class="source-line-no">058</span><span id="line.58">    public ByProjectKeyMeOrdersRequestBuilder orders() {</span>
-<span class="source-line-no">059</span><span id="line.59">        return new ByProjectKeyMeOrdersRequestBuilder(apiHttpClient, projectKey);</span>
-<span class="source-line-no">060</span><span id="line.60">    }</span>
-<span class="source-line-no">061</span><span id="line.61"></span>
-<span class="source-line-no">062</span><span id="line.62">    public ByProjectKeyMePaymentsRequestBuilder payments() {</span>
-<span class="source-line-no">063</span><span id="line.63">        return new ByProjectKeyMePaymentsRequestBuilder(apiHttpClient, projectKey);</span>
-<span class="source-line-no">064</span><span id="line.64">    }</span>
-<span class="source-line-no">065</span><span id="line.65"></span>
-<span class="source-line-no">066</span><span id="line.66">    public ByProjectKeyMeQuoteRequestsRequestBuilder quoteRequests() {</span>
-<span class="source-line-no">067</span><span id="line.67">        return new ByProjectKeyMeQuoteRequestsRequestBuilder(apiHttpClient, projectKey);</span>
-<span class="source-line-no">068</span><span id="line.68">    }</span>
-<span class="source-line-no">069</span><span id="line.69"></span>
-<span class="source-line-no">070</span><span id="line.70">    public ByProjectKeyMeQuotesRequestBuilder quotes() {</span>
-<span class="source-line-no">071</span><span id="line.71">        return new ByProjectKeyMeQuotesRequestBuilder(apiHttpClient, projectKey);</span>
-<span class="source-line-no">072</span><span id="line.72">    }</span>
-<span class="source-line-no">073</span><span id="line.73"></span>
-<span class="source-line-no">074</span><span id="line.74">    public ByProjectKeyMeShoppingListsRequestBuilder shoppingLists() {</span>
-<span class="source-line-no">075</span><span id="line.75">        return new ByProjectKeyMeShoppingListsRequestBuilder(apiHttpClient, projectKey);</span>
-<span class="source-line-no">076</span><span id="line.76">    }</span>
-<span class="source-line-no">077</span><span id="line.77">}</span>
+<span class="source-line-no">004</span><span id="line.4">import java.util.function.UnaryOperator;</span>
+<span class="source-line-no">005</span><span id="line.5"></span>
+<span class="source-line-no">006</span><span id="line.6">import io.vrap.rmf.base.client.ApiHttpClient;</span>
+<span class="source-line-no">007</span><span id="line.7">import io.vrap.rmf.base.client.utils.Generated;</span>
+<span class="source-line-no">008</span><span id="line.8"></span>
+<span class="source-line-no">009</span><span id="line.9">@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")</span>
+<span class="source-line-no">010</span><span id="line.10">public class ByProjectKeyMeRequestBuilder {</span>
+<span class="source-line-no">011</span><span id="line.11"></span>
+<span class="source-line-no">012</span><span id="line.12">    private final ApiHttpClient apiHttpClient;</span>
+<span class="source-line-no">013</span><span id="line.13">    private final String projectKey;</span>
+<span class="source-line-no">014</span><span id="line.14"></span>
+<span class="source-line-no">015</span><span id="line.15">    public ByProjectKeyMeRequestBuilder(final ApiHttpClient apiHttpClient, final String projectKey) {</span>
+<span class="source-line-no">016</span><span id="line.16">        this.apiHttpClient = apiHttpClient;</span>
+<span class="source-line-no">017</span><span id="line.17">        this.projectKey = projectKey;</span>
+<span class="source-line-no">018</span><span id="line.18">    }</span>
+<span class="source-line-no">019</span><span id="line.19"></span>
+<span class="source-line-no">020</span><span id="line.20">    public ByProjectKeyMeGet get() {</span>
+<span class="source-line-no">021</span><span id="line.21">        return new ByProjectKeyMeGet(apiHttpClient, projectKey);</span>
+<span class="source-line-no">022</span><span id="line.22">    }</span>
+<span class="source-line-no">023</span><span id="line.23"></span>
+<span class="source-line-no">024</span><span id="line.24">    public ByProjectKeyMePost post(com.commercetools.api.models.me.MyCustomerUpdate myCustomerUpdate) {</span>
+<span class="source-line-no">025</span><span id="line.25">        return new ByProjectKeyMePost(apiHttpClient, projectKey, myCustomerUpdate);</span>
+<span class="source-line-no">026</span><span id="line.26">    }</span>
+<span class="source-line-no">027</span><span id="line.27"></span>
+<span class="source-line-no">028</span><span id="line.28">    public ByProjectKeyMePost post(UnaryOperator&lt;com.commercetools.api.models.me.MyCustomerUpdateBuilder&gt; op) {</span>
+<span class="source-line-no">029</span><span id="line.29">        return post(op.apply(com.commercetools.api.models.me.MyCustomerUpdateBuilder.of()).build());</span>
+<span class="source-line-no">030</span><span id="line.30">    }</span>
+<span class="source-line-no">031</span><span id="line.31"></span>
+<span class="source-line-no">032</span><span id="line.32">    public ByProjectKeyMeDelete delete() {</span>
+<span class="source-line-no">033</span><span id="line.33">        return new ByProjectKeyMeDelete(apiHttpClient, projectKey);</span>
+<span class="source-line-no">034</span><span id="line.34">    }</span>
+<span class="source-line-no">035</span><span id="line.35"></span>
+<span class="source-line-no">036</span><span id="line.36">    public &lt;TValue&gt; ByProjectKeyMeDelete delete(TValue version) {</span>
+<span class="source-line-no">037</span><span id="line.37">        return delete().withVersion(version);</span>
+<span class="source-line-no">038</span><span id="line.38">    }</span>
+<span class="source-line-no">039</span><span id="line.39"></span>
+<span class="source-line-no">040</span><span id="line.40">    public ByProjectKeyMeEmailConfirmRequestBuilder emailConfirm() {</span>
+<span class="source-line-no">041</span><span id="line.41">        return new ByProjectKeyMeEmailConfirmRequestBuilder(apiHttpClient, projectKey);</span>
+<span class="source-line-no">042</span><span id="line.42">    }</span>
+<span class="source-line-no">043</span><span id="line.43"></span>
+<span class="source-line-no">044</span><span id="line.44">    public ByProjectKeyMePasswordRequestBuilder password() {</span>
+<span class="source-line-no">045</span><span id="line.45">        return new ByProjectKeyMePasswordRequestBuilder(apiHttpClient, projectKey);</span>
+<span class="source-line-no">046</span><span id="line.46">    }</span>
+<span class="source-line-no">047</span><span id="line.47"></span>
+<span class="source-line-no">048</span><span id="line.48">    public ByProjectKeyMeSignupRequestBuilder signup() {</span>
+<span class="source-line-no">049</span><span id="line.49">        return new ByProjectKeyMeSignupRequestBuilder(apiHttpClient, projectKey);</span>
+<span class="source-line-no">050</span><span id="line.50">    }</span>
+<span class="source-line-no">051</span><span id="line.51"></span>
+<span class="source-line-no">052</span><span id="line.52">    public ByProjectKeyMeLoginRequestBuilder login() {</span>
+<span class="source-line-no">053</span><span id="line.53">        return new ByProjectKeyMeLoginRequestBuilder(apiHttpClient, projectKey);</span>
+<span class="source-line-no">054</span><span id="line.54">    }</span>
+<span class="source-line-no">055</span><span id="line.55"></span>
+<span class="source-line-no">056</span><span id="line.56">    public ByProjectKeyMeActiveCartRequestBuilder activeCart() {</span>
+<span class="source-line-no">057</span><span id="line.57">        return new ByProjectKeyMeActiveCartRequestBuilder(apiHttpClient, projectKey);</span>
+<span class="source-line-no">058</span><span id="line.58">    }</span>
+<span class="source-line-no">059</span><span id="line.59"></span>
+<span class="source-line-no">060</span><span id="line.60">    public ByProjectKeyMeBusinessUnitsRequestBuilder businessUnits() {</span>
+<span class="source-line-no">061</span><span id="line.61">        return new ByProjectKeyMeBusinessUnitsRequestBuilder(apiHttpClient, projectKey);</span>
+<span class="source-line-no">062</span><span id="line.62">    }</span>
+<span class="source-line-no">063</span><span id="line.63"></span>
+<span class="source-line-no">064</span><span id="line.64">    public ByProjectKeyMeCartsRequestBuilder carts() {</span>
+<span class="source-line-no">065</span><span id="line.65">        return new ByProjectKeyMeCartsRequestBuilder(apiHttpClient, projectKey);</span>
+<span class="source-line-no">066</span><span id="line.66">    }</span>
+<span class="source-line-no">067</span><span id="line.67"></span>
+<span class="source-line-no">068</span><span id="line.68">    public ByProjectKeyMeOrdersRequestBuilder orders() {</span>
+<span class="source-line-no">069</span><span id="line.69">        return new ByProjectKeyMeOrdersRequestBuilder(apiHttpClient, projectKey);</span>
+<span class="source-line-no">070</span><span id="line.70">    }</span>
+<span class="source-line-no">071</span><span id="line.71"></span>
+<span class="source-line-no">072</span><span id="line.72">    public ByProjectKeyMePaymentsRequestBuilder payments() {</span>
+<span class="source-line-no">073</span><span id="line.73">        return new ByProjectKeyMePaymentsRequestBuilder(apiHttpClient, projectKey);</span>
+<span class="source-line-no">074</span><span id="line.74">    }</span>
+<span class="source-line-no">075</span><span id="line.75"></span>
+<span class="source-line-no">076</span><span id="line.76">    public ByProjectKeyMeQuoteRequestsRequestBuilder quoteRequests() {</span>
+<span class="source-line-no">077</span><span id="line.77">        return new ByProjectKeyMeQuoteRequestsRequestBuilder(apiHttpClient, projectKey);</span>
+<span class="source-line-no">078</span><span id="line.78">    }</span>
+<span class="source-line-no">079</span><span id="line.79"></span>
+<span class="source-line-no">080</span><span id="line.80">    public ByProjectKeyMeQuotesRequestBuilder quotes() {</span>
+<span class="source-line-no">081</span><span id="line.81">        return new ByProjectKeyMeQuotesRequestBuilder(apiHttpClient, projectKey);</span>
+<span class="source-line-no">082</span><span id="line.82">    }</span>
+<span class="source-line-no">083</span><span id="line.83"></span>
+<span class="source-line-no">084</span><span id="line.84">    public ByProjectKeyMeShoppingListsRequestBuilder shoppingLists() {</span>
+<span class="source-line-no">085</span><span id="line.85">        return new ByProjectKeyMeShoppingListsRequestBuilder(apiHttpClient, projectKey);</span>
+<span class="source-line-no">086</span><span id="line.86">    }</span>
+<span class="source-line-no">087</span><span id="line.87">}</span>
 
 
 

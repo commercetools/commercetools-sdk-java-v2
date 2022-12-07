@@ -20,7 +20,7 @@
 <span class="source-line-no">007</span><span id="line.7"></span>
 <span class="source-line-no">008</span><span id="line.8">import javax.validation.Valid;</span>
 <span class="source-line-no">009</span><span id="line.9"></span>
-<span class="source-line-no">010</span><span id="line.10">import com.commercetools.api.models.common.Asset;</span>
+<span class="source-line-no">010</span><span id="line.10">import com.commercetools.api.models.common.AssetDraft;</span>
 <span class="source-line-no">011</span><span id="line.11">import com.commercetools.api.models.common.Image;</span>
 <span class="source-line-no">012</span><span id="line.12">import com.commercetools.api.models.common.PriceDraft;</span>
 <span class="source-line-no">013</span><span id="line.13">import com.fasterxml.jackson.annotation.*;</span>
@@ -93,7 +93,7 @@
 <span class="source-line-no">080</span><span id="line.80">     */</span>
 <span class="source-line-no">081</span><span id="line.81">    @Valid</span>
 <span class="source-line-no">082</span><span id="line.82">    @JsonProperty("assets")</span>
-<span class="source-line-no">083</span><span id="line.83">    public List&lt;Asset&gt; getAssets();</span>
+<span class="source-line-no">083</span><span id="line.83">    public List&lt;AssetDraft&gt; getAssets();</span>
 <span class="source-line-no">084</span><span id="line.84"></span>
 <span class="source-line-no">085</span><span id="line.85">    public void setSku(final String sku);</span>
 <span class="source-line-no">086</span><span id="line.86"></span>
@@ -117,9 +117,9 @@
 <span class="source-line-no">104</span><span id="line.104">    public void setStaged(final Boolean staged);</span>
 <span class="source-line-no">105</span><span id="line.105"></span>
 <span class="source-line-no">106</span><span id="line.106">    @JsonIgnore</span>
-<span class="source-line-no">107</span><span id="line.107">    public void setAssets(final Asset... assets);</span>
+<span class="source-line-no">107</span><span id="line.107">    public void setAssets(final AssetDraft... assets);</span>
 <span class="source-line-no">108</span><span id="line.108"></span>
-<span class="source-line-no">109</span><span id="line.109">    public void setAssets(final List&lt;Asset&gt; assets);</span>
+<span class="source-line-no">109</span><span id="line.109">    public void setAssets(final List&lt;AssetDraft&gt; assets);</span>
 <span class="source-line-no">110</span><span id="line.110"></span>
 <span class="source-line-no">111</span><span id="line.111">    public static ProductAddVariantAction of() {</span>
 <span class="source-line-no">112</span><span id="line.112">        return new ProductAddVariantActionImpl();</span>

@@ -26,18 +26,18 @@
 <span class="source-line-no">013</span><span id="line.13">import com.fasterxml.jackson.databind.node.LongNode;</span>
 <span class="source-line-no">014</span><span id="line.14">import com.fasterxml.jackson.databind.node.ObjectNode;</span>
 <span class="source-line-no">015</span><span id="line.15"></span>
-<span class="source-line-no">016</span><span id="line.16">import dev.failsafe.Failsafe;</span>
-<span class="source-line-no">017</span><span id="line.17">import dev.failsafe.FailsafeExecutor;</span>
-<span class="source-line-no">018</span><span id="line.18">import dev.failsafe.RetryPolicy;</span>
-<span class="source-line-no">019</span><span id="line.19">import dev.failsafe.event.ExecutionAttemptedEvent;</span>
+<span class="source-line-no">016</span><span id="line.16">import io.vrap.rmf.base.client.*;</span>
+<span class="source-line-no">017</span><span id="line.17">import io.vrap.rmf.base.client.http.InternalLogger;</span>
+<span class="source-line-no">018</span><span id="line.18">import io.vrap.rmf.base.client.utils.json.JsonException;</span>
+<span class="source-line-no">019</span><span id="line.19">import io.vrap.rmf.base.client.utils.json.JsonUtils;</span>
 <span class="source-line-no">020</span><span id="line.20"></span>
-<span class="source-line-no">021</span><span id="line.21">import io.vrap.rmf.base.client.*;</span>
-<span class="source-line-no">022</span><span id="line.22">import io.vrap.rmf.base.client.http.InternalLogger;</span>
-<span class="source-line-no">023</span><span id="line.23">import io.vrap.rmf.base.client.utils.json.JsonException;</span>
-<span class="source-line-no">024</span><span id="line.24">import io.vrap.rmf.base.client.utils.json.JsonUtils;</span>
-<span class="source-line-no">025</span><span id="line.25"></span>
-<span class="source-line-no">026</span><span id="line.26">import org.slf4j.Logger;</span>
-<span class="source-line-no">027</span><span id="line.27">import org.slf4j.LoggerFactory;</span>
+<span class="source-line-no">021</span><span id="line.21">import org.slf4j.Logger;</span>
+<span class="source-line-no">022</span><span id="line.22">import org.slf4j.LoggerFactory;</span>
+<span class="source-line-no">023</span><span id="line.23"></span>
+<span class="source-line-no">024</span><span id="line.24">import dev.failsafe.Failsafe;</span>
+<span class="source-line-no">025</span><span id="line.25">import dev.failsafe.FailsafeExecutor;</span>
+<span class="source-line-no">026</span><span id="line.26">import dev.failsafe.RetryPolicy;</span>
+<span class="source-line-no">027</span><span id="line.27">import dev.failsafe.event.ExecutionAttemptedEvent;</span>
 <span class="source-line-no">028</span><span id="line.28"></span>
 <span class="source-line-no">029</span><span id="line.29">public class ConcurrentModificationMiddlewareImpl implements ConcurrentModificationMiddleware {</span>
 <span class="source-line-no">030</span><span id="line.30">    static final String loggerName = ClientBuilder.COMMERCETOOLS + ".retry.concurrent_modification";</span>
@@ -84,7 +84,7 @@
 <span class="source-line-no">071</span><span id="line.71">            if (throwable instanceof ConcurrentModificationException) {</span>
 <span class="source-line-no">072</span><span id="line.72">                final Long newVersion = ((ConcurrentModificationException) throwable).getCurrentVersion();</span>
 <span class="source-line-no">073</span><span id="line.73">                final JsonNode jsonNode;</span>
-<span class="source-line-no">074</span><span id="line.74">                if (newVersion != null) {</span>
+<span class="source-line-no">074</span><span id="line.74">                if (newVersion != null &amp;&amp; request.getMethod() == ApiHttpMethod.POST) {</span>
 <span class="source-line-no">075</span><span id="line.75">                    try {</span>
 <span class="source-line-no">076</span><span id="line.76">                        jsonNode = mapper.readTree(request.getBody());</span>
 <span class="source-line-no">077</span><span id="line.77">                        if (jsonNode instanceof ObjectNode &amp;&amp; jsonNode.has(VERSION)) {</span>
@@ -106,7 +106,7 @@
 <span class="source-line-no">093</span><span id="line.93">            if (context.isFirstAttempt()) {</span>
 <span class="source-line-no">094</span><span id="line.94">                return next.apply(request);</span>
 <span class="source-line-no">095</span><span id="line.95">            }</span>
-<span class="source-line-no">096</span><span id="line.96">            return fn.apply(context.getLastFailure());</span>
+<span class="source-line-no">096</span><span id="line.96">            return fn.apply(context.getLastException());</span>
 <span class="source-line-no">097</span><span id="line.97">        });</span>
 <span class="source-line-no">098</span><span id="line.98">    }</span>
 <span class="source-line-no">099</span><span id="line.99"></span>
@@ -115,7 +115,7 @@
 <span class="source-line-no">102</span><span id="line.102"></span>
 <span class="source-line-no">103</span><span id="line.103">        logger.info(() -&gt; "ConcurrentModification Retry #" + attempt);</span>
 <span class="source-line-no">104</span><span id="line.104">        logger.trace(() -&gt; {</span>
-<span class="source-line-no">105</span><span id="line.105">            final Throwable failure = event.getLastFailure();</span>
+<span class="source-line-no">105</span><span id="line.105">            final Throwable failure = event.getLastException();</span>
 <span class="source-line-no">106</span><span id="line.106">            if (failure instanceof ApiHttpException) {</span>
 <span class="source-line-no">107</span><span id="line.107">                final ApiHttpException httpException = (ApiHttpException) failure;</span>
 <span class="source-line-no">108</span><span id="line.108">                final ApiHttpRequest request = httpException.getRequest();</span>

@@ -19,13 +19,13 @@
 <span class="source-line-no">006</span><span id="line.6">import java.util.concurrent.ExecutorService;</span>
 <span class="source-line-no">007</span><span id="line.7">import java.util.concurrent.ScheduledExecutorService;</span>
 <span class="source-line-no">008</span><span id="line.8"></span>
-<span class="source-line-no">009</span><span id="line.9">import dev.failsafe.Failsafe;</span>
-<span class="source-line-no">010</span><span id="line.10">import dev.failsafe.FailsafeExecutor;</span>
-<span class="source-line-no">011</span><span id="line.11">import dev.failsafe.Timeout;</span>
-<span class="source-line-no">012</span><span id="line.12">import dev.failsafe.spi.Scheduler;</span>
-<span class="source-line-no">013</span><span id="line.13"></span>
-<span class="source-line-no">014</span><span id="line.14">import io.vrap.rmf.base.client.AuthenticationToken;</span>
-<span class="source-line-no">015</span><span id="line.15">import io.vrap.rmf.base.client.AutoCloseableService;</span>
+<span class="source-line-no">009</span><span id="line.9">import io.vrap.rmf.base.client.AuthenticationToken;</span>
+<span class="source-line-no">010</span><span id="line.10">import io.vrap.rmf.base.client.AutoCloseableService;</span>
+<span class="source-line-no">011</span><span id="line.11"></span>
+<span class="source-line-no">012</span><span id="line.12">import dev.failsafe.Failsafe;</span>
+<span class="source-line-no">013</span><span id="line.13">import dev.failsafe.FailsafeExecutor;</span>
+<span class="source-line-no">014</span><span id="line.14">import dev.failsafe.Timeout;</span>
+<span class="source-line-no">015</span><span id="line.15">import dev.failsafe.spi.Scheduler;</span>
 <span class="source-line-no">016</span><span id="line.16"></span>
 <span class="source-line-no">017</span><span id="line.17">public class InMemoryTokenSupplier extends AutoCloseableService implements RefreshableTokenSupplier {</span>
 <span class="source-line-no">018</span><span id="line.18">    private final TokenSupplier supplier;</span>

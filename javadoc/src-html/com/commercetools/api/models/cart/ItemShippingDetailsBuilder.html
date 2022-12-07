@@ -97,7 +97,7 @@
 <span class="source-line-no">084</span><span id="line.84">    }</span>
 <span class="source-line-no">085</span><span id="line.85"></span>
 <span class="source-line-no">086</span><span id="line.86">    /**</span>
-<span class="source-line-no">087</span><span id="line.87">     *  &lt;p&gt;&lt;code&gt;true&lt;/code&gt; if the quantity of the (custom) line item is equal to the sum of the sub-quantities in &lt;code&gt;targets&lt;/code&gt;, &lt;code&gt;false&lt;/code&gt; otherwise. A cart cannot be ordered when the value is &lt;code&gt;false&lt;/code&gt;. The error InvalidItemShippingDetails will be triggered.&lt;/p&gt;</span>
+<span class="source-line-no">087</span><span id="line.87">     *  &lt;p&gt;&lt;code&gt;true&lt;/code&gt; if the quantity of the Line Item or Custom Line Item is equal to the sum of the sub-quantities in &lt;code&gt;targets&lt;/code&gt;, else it is &lt;code&gt;false&lt;/code&gt;. Ordering a Cart with value as &lt;code&gt;false&lt;/code&gt; returns an InvalidItemShippingDetails error.&lt;/p&gt;</span>
 <span class="source-line-no">088</span><span id="line.88">     */</span>
 <span class="source-line-no">089</span><span id="line.89"></span>
 <span class="source-line-no">090</span><span id="line.90">    public ItemShippingDetailsBuilder valid(final Boolean valid) {</span>

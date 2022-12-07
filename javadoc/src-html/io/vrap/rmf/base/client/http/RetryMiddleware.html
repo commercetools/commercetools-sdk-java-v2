@@ -22,18 +22,18 @@
 <span class="source-line-no">009</span><span id="line.9">import java.util.concurrent.ScheduledExecutorService;</span>
 <span class="source-line-no">010</span><span id="line.10">import java.util.function.Function;</span>
 <span class="source-line-no">011</span><span id="line.11"></span>
-<span class="source-line-no">012</span><span id="line.12">import dev.failsafe.Failsafe;</span>
-<span class="source-line-no">013</span><span id="line.13">import dev.failsafe.FailsafeExecutor;</span>
-<span class="source-line-no">014</span><span id="line.14">import dev.failsafe.RetryPolicy;</span>
-<span class="source-line-no">015</span><span id="line.15">import dev.failsafe.event.ExecutionAttemptedEvent;</span>
-<span class="source-line-no">016</span><span id="line.16">import dev.failsafe.spi.Scheduler;</span>
-<span class="source-line-no">017</span><span id="line.17"></span>
-<span class="source-line-no">018</span><span id="line.18">import io.vrap.rmf.base.client.*;</span>
-<span class="source-line-no">019</span><span id="line.19">import io.vrap.rmf.base.client.utils.json.JsonException;</span>
-<span class="source-line-no">020</span><span id="line.20">import io.vrap.rmf.base.client.utils.json.JsonUtils;</span>
-<span class="source-line-no">021</span><span id="line.21"></span>
-<span class="source-line-no">022</span><span id="line.22">import org.slf4j.Logger;</span>
-<span class="source-line-no">023</span><span id="line.23">import org.slf4j.LoggerFactory;</span>
+<span class="source-line-no">012</span><span id="line.12">import io.vrap.rmf.base.client.*;</span>
+<span class="source-line-no">013</span><span id="line.13">import io.vrap.rmf.base.client.utils.json.JsonException;</span>
+<span class="source-line-no">014</span><span id="line.14">import io.vrap.rmf.base.client.utils.json.JsonUtils;</span>
+<span class="source-line-no">015</span><span id="line.15"></span>
+<span class="source-line-no">016</span><span id="line.16">import org.slf4j.Logger;</span>
+<span class="source-line-no">017</span><span id="line.17">import org.slf4j.LoggerFactory;</span>
+<span class="source-line-no">018</span><span id="line.18"></span>
+<span class="source-line-no">019</span><span id="line.19">import dev.failsafe.Failsafe;</span>
+<span class="source-line-no">020</span><span id="line.20">import dev.failsafe.FailsafeExecutor;</span>
+<span class="source-line-no">021</span><span id="line.21">import dev.failsafe.RetryPolicy;</span>
+<span class="source-line-no">022</span><span id="line.22">import dev.failsafe.event.ExecutionAttemptedEvent;</span>
+<span class="source-line-no">023</span><span id="line.23">import dev.failsafe.spi.Scheduler;</span>
 <span class="source-line-no">024</span><span id="line.24"></span>
 <span class="source-line-no">025</span><span id="line.25">/**</span>
 <span class="source-line-no">026</span><span id="line.26"> * Implementation for a retry of a requests upon configured response status codes</span>
@@ -158,7 +158,7 @@
 <span class="source-line-no">145</span><span id="line.145"></span>
 <span class="source-line-no">146</span><span id="line.146">        logger.info(() -&gt; "Retry #" + attempt);</span>
 <span class="source-line-no">147</span><span id="line.147">        logger.trace(() -&gt; {</span>
-<span class="source-line-no">148</span><span id="line.148">            final Throwable failure = event.getLastFailure();</span>
+<span class="source-line-no">148</span><span id="line.148">            final Throwable failure = event.getLastException();</span>
 <span class="source-line-no">149</span><span id="line.149">            if (failure instanceof ApiHttpException) {</span>
 <span class="source-line-no">150</span><span id="line.150">                final ApiHttpException httpException = (ApiHttpException) failure;</span>
 <span class="source-line-no">151</span><span id="line.151">                final ApiHttpRequest request = httpException.getRequest();</span>

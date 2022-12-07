@@ -41,7 +41,7 @@
 <span class="source-line-no">028</span><span id="line.28">    private java.util.List&lt;com.commercetools.api.models.project.ProjectUpdateAction&gt; actions;</span>
 <span class="source-line-no">029</span><span id="line.29"></span>
 <span class="source-line-no">030</span><span id="line.30">    /**</span>
-<span class="source-line-no">031</span><span id="line.31">     *  &lt;p&gt;Expected version of the Project on which the changes should be applied. If the expected version does not match the actual version, a 409 Conflict will be returned.&lt;/p&gt;</span>
+<span class="source-line-no">031</span><span id="line.31">     *  &lt;p&gt;Expected version of the Project on which the changes should be applied. If the expected version does not match the actual version, a ConcurrentModification error is returned.&lt;/p&gt;</span>
 <span class="source-line-no">032</span><span id="line.32">     */</span>
 <span class="source-line-no">033</span><span id="line.33"></span>
 <span class="source-line-no">034</span><span id="line.34">    public ProjectUpdateBuilder version(final Long version) {</span>

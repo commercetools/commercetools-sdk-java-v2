@@ -18,14 +18,14 @@
 <span class="source-line-no">005</span><span id="line.5">import java.util.concurrent.*;</span>
 <span class="source-line-no">006</span><span id="line.6">import java.util.function.Function;</span>
 <span class="source-line-no">007</span><span id="line.7"></span>
-<span class="source-line-no">008</span><span id="line.8">import dev.failsafe.*;</span>
-<span class="source-line-no">009</span><span id="line.9">import dev.failsafe.event.ExecutionAttemptedEvent;</span>
-<span class="source-line-no">010</span><span id="line.10">import dev.failsafe.spi.Scheduler;</span>
-<span class="source-line-no">011</span><span id="line.11"></span>
-<span class="source-line-no">012</span><span id="line.12">import io.vrap.rmf.base.client.*;</span>
-<span class="source-line-no">013</span><span id="line.13">import io.vrap.rmf.base.client.error.UnauthorizedException;</span>
-<span class="source-line-no">014</span><span id="line.14">import io.vrap.rmf.base.client.oauth2.AuthException;</span>
-<span class="source-line-no">015</span><span id="line.15">import io.vrap.rmf.base.client.oauth2.TokenSupplier;</span>
+<span class="source-line-no">008</span><span id="line.8">import io.vrap.rmf.base.client.*;</span>
+<span class="source-line-no">009</span><span id="line.9">import io.vrap.rmf.base.client.error.UnauthorizedException;</span>
+<span class="source-line-no">010</span><span id="line.10">import io.vrap.rmf.base.client.oauth2.AuthException;</span>
+<span class="source-line-no">011</span><span id="line.11">import io.vrap.rmf.base.client.oauth2.TokenSupplier;</span>
+<span class="source-line-no">012</span><span id="line.12"></span>
+<span class="source-line-no">013</span><span id="line.13">import dev.failsafe.*;</span>
+<span class="source-line-no">014</span><span id="line.14">import dev.failsafe.event.ExecutionAttemptedEvent;</span>
+<span class="source-line-no">015</span><span id="line.15">import dev.failsafe.spi.Scheduler;</span>
 <span class="source-line-no">016</span><span id="line.16"></span>
 <span class="source-line-no">017</span><span id="line.17">/**</span>
 <span class="source-line-no">018</span><span id="line.18"> * Default implementation for the {@link OAuthMiddleware} with automatic retry upon expired access</span>
@@ -74,54 +74,55 @@
 <span class="source-line-no">061</span><span id="line.61">            final Fallback&lt;ApiHttpResponse&lt;byte[]&gt;&gt; fallback = Fallback</span>
 <span class="source-line-no">062</span><span id="line.62">                    .builderOfException((ExecutionAttemptedEvent&lt;? extends ApiHttpResponse&lt;byte[]&gt;&gt; event) -&gt; {</span>
 <span class="source-line-no">063</span><span id="line.63">                        logger.debug(() -&gt; "Convert CircuitBreakerOpenException to AuthException");</span>
-<span class="source-line-no">064</span><span id="line.64">                        logger.trace(event::getLastFailure);</span>
-<span class="source-line-no">065</span><span id="line.65">                        return new AuthException(400, "", null, "Authentication failed", null, event.getLastFailure());</span>
-<span class="source-line-no">066</span><span id="line.66">                    })</span>
-<span class="source-line-no">067</span><span id="line.67">                    .handleIf(throwable -&gt; throwable instanceof CircuitBreakerOpenException)</span>
-<span class="source-line-no">068</span><span id="line.68">                    .build();</span>
-<span class="source-line-no">069</span><span id="line.69"></span>
-<span class="source-line-no">070</span><span id="line.70">            final CircuitBreaker&lt;ApiHttpResponse&lt;byte[]&gt;&gt; circuitBreaker = CircuitBreaker</span>
-<span class="source-line-no">071</span><span id="line.71">                    .&lt;ApiHttpResponse&lt;byte[]&gt;&gt; builder()</span>
-<span class="source-line-no">072</span><span id="line.72">                    .handleIf((response, throwable) -&gt; {</span>
-<span class="source-line-no">073</span><span id="line.73">                        Throwable cause = throwable instanceof CompletionException ? throwable.getCause() : throwable;</span>
-<span class="source-line-no">074</span><span id="line.74">                        if (cause instanceof AuthException) {</span>
-<span class="source-line-no">075</span><span id="line.75">                            return ((AuthException) throwable.getCause()).getResponse().getStatusCode() == 400;</span>
-<span class="source-line-no">076</span><span id="line.76">                        }</span>
-<span class="source-line-no">077</span><span id="line.77">                        return response.getStatusCode() == 400;</span>
-<span class="source-line-no">078</span><span id="line.78">                    })</span>
-<span class="source-line-no">079</span><span id="line.79">                    .withDelayFn(context -&gt; Duration</span>
-<span class="source-line-no">080</span><span id="line.80">                            .ofMillis(Math.min(100 * context.getAttemptCount() * context.getAttemptCount(), 15000)))</span>
-<span class="source-line-no">081</span><span id="line.81">                    .withFailureThreshold(5, Duration.ofMinutes(1))</span>
-<span class="source-line-no">082</span><span id="line.82">                    .withSuccessThreshold(2)</span>
-<span class="source-line-no">083</span><span id="line.83">                    .onClose(event -&gt; logger.debug(() -&gt; "The authentication circuit breaker was closed"))</span>
-<span class="source-line-no">084</span><span id="line.84">                    .onOpen(event -&gt; logger.debug(() -&gt; "The authentication circuit breaker was opened"))</span>
-<span class="source-line-no">085</span><span id="line.85">                    .onHalfOpen(event -&gt; logger.debug(() -&gt; "The authentication circuit breaker was half-opened"))</span>
-<span class="source-line-no">086</span><span id="line.86">                    .onFailure(event -&gt; logger.trace(() -&gt; "Authentication failed", event.getFailure()))</span>
-<span class="source-line-no">087</span><span id="line.87">                    .build();</span>
-<span class="source-line-no">088</span><span id="line.88">            this.failsafeExecutor = Failsafe.with(fallback, retry, circuitBreaker).with(scheduler);</span>
-<span class="source-line-no">089</span><span id="line.89">        }</span>
-<span class="source-line-no">090</span><span id="line.90">        else {</span>
-<span class="source-line-no">091</span><span id="line.91">            this.failsafeExecutor = Failsafe.with(retry).with(scheduler);</span>
-<span class="source-line-no">092</span><span id="line.92">        }</span>
-<span class="source-line-no">093</span><span id="line.93">    }</span>
-<span class="source-line-no">094</span><span id="line.94"></span>
-<span class="source-line-no">095</span><span id="line.95">    @Override</span>
-<span class="source-line-no">096</span><span id="line.96">    public CompletableFuture&lt;ApiHttpResponse&lt;byte[]&gt;&gt; invoke(final ApiHttpRequest request,</span>
-<span class="source-line-no">097</span><span id="line.97">            final Function&lt;ApiHttpRequest, CompletableFuture&lt;ApiHttpResponse&lt;byte[]&gt;&gt;&gt; next) {</span>
-<span class="source-line-no">098</span><span id="line.98">        return failsafeExecutor.getStageAsync(() -&gt; {</span>
-<span class="source-line-no">099</span><span id="line.99">            if (request.getHeaders().getFirst(ApiHttpHeaders.AUTHORIZATION) != null) {</span>
-<span class="source-line-no">100</span><span id="line.100">                return next.apply(request);</span>
-<span class="source-line-no">101</span><span id="line.101">            }</span>
-<span class="source-line-no">102</span><span id="line.102">            AuthenticationToken token = authHandler.getToken();</span>
-<span class="source-line-no">103</span><span id="line.103">            return next.apply(request.addHeader(ApiHttpHeaders.AUTHORIZATION, OAuthHandler.authHeader(token)));</span>
-<span class="source-line-no">104</span><span id="line.104">        });</span>
-<span class="source-line-no">105</span><span id="line.105">    }</span>
-<span class="source-line-no">106</span><span id="line.106"></span>
-<span class="source-line-no">107</span><span id="line.107">    @Override</span>
-<span class="source-line-no">108</span><span id="line.108">    public void close() {</span>
-<span class="source-line-no">109</span><span id="line.109">        authHandler.close();</span>
-<span class="source-line-no">110</span><span id="line.110">    }</span>
-<span class="source-line-no">111</span><span id="line.111">}</span>
+<span class="source-line-no">064</span><span id="line.64">                        logger.trace(event::getLastException);</span>
+<span class="source-line-no">065</span><span id="line.65">                        return new AuthException(400, "", null, "Authentication failed", null,</span>
+<span class="source-line-no">066</span><span id="line.66">                            event.getLastException());</span>
+<span class="source-line-no">067</span><span id="line.67">                    })</span>
+<span class="source-line-no">068</span><span id="line.68">                    .handleIf(throwable -&gt; throwable instanceof CircuitBreakerOpenException)</span>
+<span class="source-line-no">069</span><span id="line.69">                    .build();</span>
+<span class="source-line-no">070</span><span id="line.70"></span>
+<span class="source-line-no">071</span><span id="line.71">            final CircuitBreaker&lt;ApiHttpResponse&lt;byte[]&gt;&gt; circuitBreaker = CircuitBreaker</span>
+<span class="source-line-no">072</span><span id="line.72">                    .&lt;ApiHttpResponse&lt;byte[]&gt;&gt; builder()</span>
+<span class="source-line-no">073</span><span id="line.73">                    .handleIf((response, throwable) -&gt; {</span>
+<span class="source-line-no">074</span><span id="line.74">                        Throwable cause = throwable instanceof CompletionException ? throwable.getCause() : throwable;</span>
+<span class="source-line-no">075</span><span id="line.75">                        if (cause instanceof AuthException) {</span>
+<span class="source-line-no">076</span><span id="line.76">                            return ((AuthException) throwable.getCause()).getResponse().getStatusCode() == 400;</span>
+<span class="source-line-no">077</span><span id="line.77">                        }</span>
+<span class="source-line-no">078</span><span id="line.78">                        return response.getStatusCode() == 400;</span>
+<span class="source-line-no">079</span><span id="line.79">                    })</span>
+<span class="source-line-no">080</span><span id="line.80">                    .withDelayFn(context -&gt; Duration</span>
+<span class="source-line-no">081</span><span id="line.81">                            .ofMillis(Math.min(100 * context.getAttemptCount() * context.getAttemptCount(), 15000)))</span>
+<span class="source-line-no">082</span><span id="line.82">                    .withFailureThreshold(5, Duration.ofMinutes(1))</span>
+<span class="source-line-no">083</span><span id="line.83">                    .withSuccessThreshold(2)</span>
+<span class="source-line-no">084</span><span id="line.84">                    .onClose(event -&gt; logger.debug(() -&gt; "The authentication circuit breaker was closed"))</span>
+<span class="source-line-no">085</span><span id="line.85">                    .onOpen(event -&gt; logger.debug(() -&gt; "The authentication circuit breaker was opened"))</span>
+<span class="source-line-no">086</span><span id="line.86">                    .onHalfOpen(event -&gt; logger.debug(() -&gt; "The authentication circuit breaker was half-opened"))</span>
+<span class="source-line-no">087</span><span id="line.87">                    .onFailure(event -&gt; logger.trace(() -&gt; "Authentication failed", event.getException()))</span>
+<span class="source-line-no">088</span><span id="line.88">                    .build();</span>
+<span class="source-line-no">089</span><span id="line.89">            this.failsafeExecutor = Failsafe.with(fallback, retry, circuitBreaker).with(scheduler);</span>
+<span class="source-line-no">090</span><span id="line.90">        }</span>
+<span class="source-line-no">091</span><span id="line.91">        else {</span>
+<span class="source-line-no">092</span><span id="line.92">            this.failsafeExecutor = Failsafe.with(retry).with(scheduler);</span>
+<span class="source-line-no">093</span><span id="line.93">        }</span>
+<span class="source-line-no">094</span><span id="line.94">    }</span>
+<span class="source-line-no">095</span><span id="line.95"></span>
+<span class="source-line-no">096</span><span id="line.96">    @Override</span>
+<span class="source-line-no">097</span><span id="line.97">    public CompletableFuture&lt;ApiHttpResponse&lt;byte[]&gt;&gt; invoke(final ApiHttpRequest request,</span>
+<span class="source-line-no">098</span><span id="line.98">            final Function&lt;ApiHttpRequest, CompletableFuture&lt;ApiHttpResponse&lt;byte[]&gt;&gt;&gt; next) {</span>
+<span class="source-line-no">099</span><span id="line.99">        return failsafeExecutor.getStageAsync(() -&gt; {</span>
+<span class="source-line-no">100</span><span id="line.100">            if (request.getHeaders().getFirst(ApiHttpHeaders.AUTHORIZATION) != null) {</span>
+<span class="source-line-no">101</span><span id="line.101">                return next.apply(request);</span>
+<span class="source-line-no">102</span><span id="line.102">            }</span>
+<span class="source-line-no">103</span><span id="line.103">            AuthenticationToken token = authHandler.getToken();</span>
+<span class="source-line-no">104</span><span id="line.104">            return next.apply(request.addHeader(ApiHttpHeaders.AUTHORIZATION, OAuthHandler.authHeader(token)));</span>
+<span class="source-line-no">105</span><span id="line.105">        });</span>
+<span class="source-line-no">106</span><span id="line.106">    }</span>
+<span class="source-line-no">107</span><span id="line.107"></span>
+<span class="source-line-no">108</span><span id="line.108">    @Override</span>
+<span class="source-line-no">109</span><span id="line.109">    public void close() {</span>
+<span class="source-line-no">110</span><span id="line.110">        authHandler.close();</span>
+<span class="source-line-no">111</span><span id="line.111">    }</span>
+<span class="source-line-no">112</span><span id="line.112">}</span>
 
 
 

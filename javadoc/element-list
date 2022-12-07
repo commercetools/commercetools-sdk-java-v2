@@ -39,6 +39,7 @@ com.commercetools.api.models.staged_quote
 com.commercetools.api.models.standalone_price
 com.commercetools.api.models.state
 com.commercetools.api.models.store
+com.commercetools.api.models.store_country
 com.commercetools.api.models.subscription
 com.commercetools.api.models.tax_category
 com.commercetools.api.models.type

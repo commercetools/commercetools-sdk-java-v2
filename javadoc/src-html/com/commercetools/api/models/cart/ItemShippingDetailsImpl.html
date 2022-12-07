@@ -57,7 +57,7 @@
 <span class="source-line-no">044</span><span id="line.44">    }</span>
 <span class="source-line-no">045</span><span id="line.45"></span>
 <span class="source-line-no">046</span><span id="line.46">    /**</span>
-<span class="source-line-no">047</span><span id="line.47">     *  &lt;p&gt;&lt;code&gt;true&lt;/code&gt; if the quantity of the (custom) line item is equal to the sum of the sub-quantities in &lt;code&gt;targets&lt;/code&gt;, &lt;code&gt;false&lt;/code&gt; otherwise. A cart cannot be ordered when the value is &lt;code&gt;false&lt;/code&gt;. The error InvalidItemShippingDetails will be triggered.&lt;/p&gt;</span>
+<span class="source-line-no">047</span><span id="line.47">     *  &lt;p&gt;&lt;code&gt;true&lt;/code&gt; if the quantity of the Line Item or Custom Line Item is equal to the sum of the sub-quantities in &lt;code&gt;targets&lt;/code&gt;, else it is &lt;code&gt;false&lt;/code&gt;. Ordering a Cart with value as &lt;code&gt;false&lt;/code&gt; returns an InvalidItemShippingDetails error.&lt;/p&gt;</span>
 <span class="source-line-no">048</span><span id="line.48">     */</span>
 <span class="source-line-no">049</span><span id="line.49"></span>
 <span class="source-line-no">050</span><span id="line.50">    public Boolean getValid() {</span>

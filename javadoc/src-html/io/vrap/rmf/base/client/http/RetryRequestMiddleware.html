@@ -22,9 +22,9 @@
 <span class="source-line-no">009</span><span id="line.9">import java.util.concurrent.ExecutorService;</span>
 <span class="source-line-no">010</span><span id="line.10">import java.util.concurrent.ScheduledExecutorService;</span>
 <span class="source-line-no">011</span><span id="line.11"></span>
-<span class="source-line-no">012</span><span id="line.12">import dev.failsafe.spi.Scheduler;</span>
+<span class="source-line-no">012</span><span id="line.12">import io.vrap.rmf.base.client.ApiHttpException;</span>
 <span class="source-line-no">013</span><span id="line.13"></span>
-<span class="source-line-no">014</span><span id="line.14">import io.vrap.rmf.base.client.ApiHttpException;</span>
+<span class="source-line-no">014</span><span id="line.14">import dev.failsafe.spi.Scheduler;</span>
 <span class="source-line-no">015</span><span id="line.15"></span>
 <span class="source-line-no">016</span><span id="line.16">public interface RetryRequestMiddleware extends Middleware {</span>
 <span class="source-line-no">017</span><span id="line.17">    int DEFAULT_MAX_DELAY = 60000;</span>

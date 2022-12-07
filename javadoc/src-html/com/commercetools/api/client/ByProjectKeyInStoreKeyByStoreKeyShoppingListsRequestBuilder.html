@@ -14,43 +14,50 @@
 <pre><span class="source-line-no">001</span><span id="line.1"></span>
 <span class="source-line-no">002</span><span id="line.2">package com.commercetools.api.client;</span>
 <span class="source-line-no">003</span><span id="line.3"></span>
-<span class="source-line-no">004</span><span id="line.4">import io.vrap.rmf.base.client.ApiHttpClient;</span>
-<span class="source-line-no">005</span><span id="line.5">import io.vrap.rmf.base.client.utils.Generated;</span>
-<span class="source-line-no">006</span><span id="line.6"></span>
-<span class="source-line-no">007</span><span id="line.7">@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")</span>
-<span class="source-line-no">008</span><span id="line.8">public class ByProjectKeyInStoreKeyByStoreKeyShoppingListsRequestBuilder {</span>
-<span class="source-line-no">009</span><span id="line.9"></span>
-<span class="source-line-no">010</span><span id="line.10">    private final ApiHttpClient apiHttpClient;</span>
-<span class="source-line-no">011</span><span id="line.11">    private final String projectKey;</span>
-<span class="source-line-no">012</span><span id="line.12">    private final String storeKey;</span>
-<span class="source-line-no">013</span><span id="line.13"></span>
-<span class="source-line-no">014</span><span id="line.14">    public ByProjectKeyInStoreKeyByStoreKeyShoppingListsRequestBuilder(final ApiHttpClient apiHttpClient,</span>
-<span class="source-line-no">015</span><span id="line.15">            final String projectKey, final String storeKey) {</span>
-<span class="source-line-no">016</span><span id="line.16">        this.apiHttpClient = apiHttpClient;</span>
-<span class="source-line-no">017</span><span id="line.17">        this.projectKey = projectKey;</span>
-<span class="source-line-no">018</span><span id="line.18">        this.storeKey = storeKey;</span>
-<span class="source-line-no">019</span><span id="line.19">    }</span>
-<span class="source-line-no">020</span><span id="line.20"></span>
-<span class="source-line-no">021</span><span id="line.21">    public ByProjectKeyInStoreKeyByStoreKeyShoppingListsGet get() {</span>
-<span class="source-line-no">022</span><span id="line.22">        return new ByProjectKeyInStoreKeyByStoreKeyShoppingListsGet(apiHttpClient, projectKey, storeKey);</span>
-<span class="source-line-no">023</span><span id="line.23">    }</span>
-<span class="source-line-no">024</span><span id="line.24"></span>
-<span class="source-line-no">025</span><span id="line.25">    public ByProjectKeyInStoreKeyByStoreKeyShoppingListsPost post(</span>
-<span class="source-line-no">026</span><span id="line.26">            com.commercetools.api.models.shopping_list.ShoppingListDraft shoppingListDraft) {</span>
-<span class="source-line-no">027</span><span id="line.27">        return new ByProjectKeyInStoreKeyByStoreKeyShoppingListsPost(apiHttpClient, projectKey, storeKey,</span>
-<span class="source-line-no">028</span><span id="line.28">            shoppingListDraft);</span>
-<span class="source-line-no">029</span><span id="line.29">    }</span>
-<span class="source-line-no">030</span><span id="line.30"></span>
-<span class="source-line-no">031</span><span id="line.31">    public ByProjectKeyInStoreKeyByStoreKeyShoppingListsKeyByKeyRequestBuilder withKey(String key) {</span>
-<span class="source-line-no">032</span><span id="line.32">        return new ByProjectKeyInStoreKeyByStoreKeyShoppingListsKeyByKeyRequestBuilder(apiHttpClient, projectKey,</span>
-<span class="source-line-no">033</span><span id="line.33">            storeKey, key);</span>
-<span class="source-line-no">034</span><span id="line.34">    }</span>
-<span class="source-line-no">035</span><span id="line.35"></span>
-<span class="source-line-no">036</span><span id="line.36">    public ByProjectKeyInStoreKeyByStoreKeyShoppingListsByIDRequestBuilder withId(String ID) {</span>
-<span class="source-line-no">037</span><span id="line.37">        return new ByProjectKeyInStoreKeyByStoreKeyShoppingListsByIDRequestBuilder(apiHttpClient, projectKey, storeKey,</span>
-<span class="source-line-no">038</span><span id="line.38">            ID);</span>
-<span class="source-line-no">039</span><span id="line.39">    }</span>
-<span class="source-line-no">040</span><span id="line.40">}</span>
+<span class="source-line-no">004</span><span id="line.4">import java.util.function.UnaryOperator;</span>
+<span class="source-line-no">005</span><span id="line.5"></span>
+<span class="source-line-no">006</span><span id="line.6">import io.vrap.rmf.base.client.ApiHttpClient;</span>
+<span class="source-line-no">007</span><span id="line.7">import io.vrap.rmf.base.client.utils.Generated;</span>
+<span class="source-line-no">008</span><span id="line.8"></span>
+<span class="source-line-no">009</span><span id="line.9">@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")</span>
+<span class="source-line-no">010</span><span id="line.10">public class ByProjectKeyInStoreKeyByStoreKeyShoppingListsRequestBuilder {</span>
+<span class="source-line-no">011</span><span id="line.11"></span>
+<span class="source-line-no">012</span><span id="line.12">    private final ApiHttpClient apiHttpClient;</span>
+<span class="source-line-no">013</span><span id="line.13">    private final String projectKey;</span>
+<span class="source-line-no">014</span><span id="line.14">    private final String storeKey;</span>
+<span class="source-line-no">015</span><span id="line.15"></span>
+<span class="source-line-no">016</span><span id="line.16">    public ByProjectKeyInStoreKeyByStoreKeyShoppingListsRequestBuilder(final ApiHttpClient apiHttpClient,</span>
+<span class="source-line-no">017</span><span id="line.17">            final String projectKey, final String storeKey) {</span>
+<span class="source-line-no">018</span><span id="line.18">        this.apiHttpClient = apiHttpClient;</span>
+<span class="source-line-no">019</span><span id="line.19">        this.projectKey = projectKey;</span>
+<span class="source-line-no">020</span><span id="line.20">        this.storeKey = storeKey;</span>
+<span class="source-line-no">021</span><span id="line.21">    }</span>
+<span class="source-line-no">022</span><span id="line.22"></span>
+<span class="source-line-no">023</span><span id="line.23">    public ByProjectKeyInStoreKeyByStoreKeyShoppingListsGet get() {</span>
+<span class="source-line-no">024</span><span id="line.24">        return new ByProjectKeyInStoreKeyByStoreKeyShoppingListsGet(apiHttpClient, projectKey, storeKey);</span>
+<span class="source-line-no">025</span><span id="line.25">    }</span>
+<span class="source-line-no">026</span><span id="line.26"></span>
+<span class="source-line-no">027</span><span id="line.27">    public ByProjectKeyInStoreKeyByStoreKeyShoppingListsPost post(</span>
+<span class="source-line-no">028</span><span id="line.28">            com.commercetools.api.models.shopping_list.ShoppingListDraft shoppingListDraft) {</span>
+<span class="source-line-no">029</span><span id="line.29">        return new ByProjectKeyInStoreKeyByStoreKeyShoppingListsPost(apiHttpClient, projectKey, storeKey,</span>
+<span class="source-line-no">030</span><span id="line.30">            shoppingListDraft);</span>
+<span class="source-line-no">031</span><span id="line.31">    }</span>
+<span class="source-line-no">032</span><span id="line.32"></span>
+<span class="source-line-no">033</span><span id="line.33">    public ByProjectKeyInStoreKeyByStoreKeyShoppingListsPost post(</span>
+<span class="source-line-no">034</span><span id="line.34">            UnaryOperator&lt;com.commercetools.api.models.shopping_list.ShoppingListDraftBuilder&gt; op) {</span>
+<span class="source-line-no">035</span><span id="line.35">        return post(op.apply(com.commercetools.api.models.shopping_list.ShoppingListDraftBuilder.of()).build());</span>
+<span class="source-line-no">036</span><span id="line.36">    }</span>
+<span class="source-line-no">037</span><span id="line.37"></span>
+<span class="source-line-no">038</span><span id="line.38">    public ByProjectKeyInStoreKeyByStoreKeyShoppingListsKeyByKeyRequestBuilder withKey(String key) {</span>
+<span class="source-line-no">039</span><span id="line.39">        return new ByProjectKeyInStoreKeyByStoreKeyShoppingListsKeyByKeyRequestBuilder(apiHttpClient, projectKey,</span>
+<span class="source-line-no">040</span><span id="line.40">            storeKey, key);</span>
+<span class="source-line-no">041</span><span id="line.41">    }</span>
+<span class="source-line-no">042</span><span id="line.42"></span>
+<span class="source-line-no">043</span><span id="line.43">    public ByProjectKeyInStoreKeyByStoreKeyShoppingListsByIDRequestBuilder withId(String ID) {</span>
+<span class="source-line-no">044</span><span id="line.44">        return new ByProjectKeyInStoreKeyByStoreKeyShoppingListsByIDRequestBuilder(apiHttpClient, projectKey, storeKey,</span>
+<span class="source-line-no">045</span><span id="line.45">            ID);</span>
+<span class="source-line-no">046</span><span id="line.46">    }</span>
+<span class="source-line-no">047</span><span id="line.47">}</span>
 
 
 

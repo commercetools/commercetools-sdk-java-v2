@@ -55,7 +55,7 @@
 <span class="source-line-no">042</span><span id="line.42">    private Boolean staged;</span>
 <span class="source-line-no">043</span><span id="line.43"></span>
 <span class="source-line-no">044</span><span id="line.44">    @Nullable</span>
-<span class="source-line-no">045</span><span id="line.45">    private java.util.List&lt;com.commercetools.api.models.common.Asset&gt; assets;</span>
+<span class="source-line-no">045</span><span id="line.45">    private java.util.List&lt;com.commercetools.api.models.common.AssetDraft&gt; assets;</span>
 <span class="source-line-no">046</span><span id="line.46"></span>
 <span class="source-line-no">047</span><span id="line.47">    /**</span>
 <span class="source-line-no">048</span><span id="line.48">     *  &lt;p&gt;Value to set. Must be unique.&lt;/p&gt;</span>
@@ -258,121 +258,122 @@
 <span class="source-line-no">245</span><span id="line.245">     *  &lt;p&gt;Media assets for the Product Variant.&lt;/p&gt;</span>
 <span class="source-line-no">246</span><span id="line.246">     */</span>
 <span class="source-line-no">247</span><span id="line.247"></span>
-<span class="source-line-no">248</span><span id="line.248">    public ProductAddVariantActionBuilder assets(@Nullable final com.commercetools.api.models.common.Asset... assets) {</span>
-<span class="source-line-no">249</span><span id="line.249">        this.assets = new ArrayList&lt;&gt;(Arrays.asList(assets));</span>
-<span class="source-line-no">250</span><span id="line.250">        return this;</span>
-<span class="source-line-no">251</span><span id="line.251">    }</span>
-<span class="source-line-no">252</span><span id="line.252"></span>
-<span class="source-line-no">253</span><span id="line.253">    /**</span>
-<span class="source-line-no">254</span><span id="line.254">     *  &lt;p&gt;Media assets for the Product Variant.&lt;/p&gt;</span>
-<span class="source-line-no">255</span><span id="line.255">     */</span>
-<span class="source-line-no">256</span><span id="line.256"></span>
-<span class="source-line-no">257</span><span id="line.257">    public ProductAddVariantActionBuilder assets(</span>
-<span class="source-line-no">258</span><span id="line.258">            @Nullable final java.util.List&lt;com.commercetools.api.models.common.Asset&gt; assets) {</span>
-<span class="source-line-no">259</span><span id="line.259">        this.assets = assets;</span>
-<span class="source-line-no">260</span><span id="line.260">        return this;</span>
-<span class="source-line-no">261</span><span id="line.261">    }</span>
-<span class="source-line-no">262</span><span id="line.262"></span>
-<span class="source-line-no">263</span><span id="line.263">    /**</span>
-<span class="source-line-no">264</span><span id="line.264">     *  &lt;p&gt;Media assets for the Product Variant.&lt;/p&gt;</span>
-<span class="source-line-no">265</span><span id="line.265">     */</span>
-<span class="source-line-no">266</span><span id="line.266"></span>
-<span class="source-line-no">267</span><span id="line.267">    public ProductAddVariantActionBuilder plusAssets(</span>
-<span class="source-line-no">268</span><span id="line.268">            @Nullable final com.commercetools.api.models.common.Asset... assets) {</span>
-<span class="source-line-no">269</span><span id="line.269">        if (this.assets == null) {</span>
-<span class="source-line-no">270</span><span id="line.270">            this.assets = new ArrayList&lt;&gt;();</span>
-<span class="source-line-no">271</span><span id="line.271">        }</span>
-<span class="source-line-no">272</span><span id="line.272">        this.assets.addAll(Arrays.asList(assets));</span>
-<span class="source-line-no">273</span><span id="line.273">        return this;</span>
-<span class="source-line-no">274</span><span id="line.274">    }</span>
-<span class="source-line-no">275</span><span id="line.275"></span>
-<span class="source-line-no">276</span><span id="line.276">    /**</span>
-<span class="source-line-no">277</span><span id="line.277">     *  &lt;p&gt;Media assets for the Product Variant.&lt;/p&gt;</span>
-<span class="source-line-no">278</span><span id="line.278">     */</span>
-<span class="source-line-no">279</span><span id="line.279"></span>
-<span class="source-line-no">280</span><span id="line.280">    public ProductAddVariantActionBuilder plusAssets(</span>
-<span class="source-line-no">281</span><span id="line.281">            Function&lt;com.commercetools.api.models.common.AssetBuilder, com.commercetools.api.models.common.AssetBuilder&gt; builder) {</span>
-<span class="source-line-no">282</span><span id="line.282">        if (this.assets == null) {</span>
-<span class="source-line-no">283</span><span id="line.283">            this.assets = new ArrayList&lt;&gt;();</span>
-<span class="source-line-no">284</span><span id="line.284">        }</span>
-<span class="source-line-no">285</span><span id="line.285">        this.assets.add(builder.apply(com.commercetools.api.models.common.AssetBuilder.of()).build());</span>
-<span class="source-line-no">286</span><span id="line.286">        return this;</span>
-<span class="source-line-no">287</span><span id="line.287">    }</span>
-<span class="source-line-no">288</span><span id="line.288"></span>
-<span class="source-line-no">289</span><span id="line.289">    /**</span>
-<span class="source-line-no">290</span><span id="line.290">     *  &lt;p&gt;Media assets for the Product Variant.&lt;/p&gt;</span>
-<span class="source-line-no">291</span><span id="line.291">     */</span>
-<span class="source-line-no">292</span><span id="line.292"></span>
-<span class="source-line-no">293</span><span id="line.293">    public ProductAddVariantActionBuilder withAssets(</span>
-<span class="source-line-no">294</span><span id="line.294">            Function&lt;com.commercetools.api.models.common.AssetBuilder, com.commercetools.api.models.common.AssetBuilder&gt; builder) {</span>
-<span class="source-line-no">295</span><span id="line.295">        this.assets = new ArrayList&lt;&gt;();</span>
-<span class="source-line-no">296</span><span id="line.296">        this.assets.add(builder.apply(com.commercetools.api.models.common.AssetBuilder.of()).build());</span>
-<span class="source-line-no">297</span><span id="line.297">        return this;</span>
-<span class="source-line-no">298</span><span id="line.298">    }</span>
-<span class="source-line-no">299</span><span id="line.299"></span>
-<span class="source-line-no">300</span><span id="line.300">    @Nullable</span>
-<span class="source-line-no">301</span><span id="line.301">    public String getSku() {</span>
-<span class="source-line-no">302</span><span id="line.302">        return this.sku;</span>
-<span class="source-line-no">303</span><span id="line.303">    }</span>
-<span class="source-line-no">304</span><span id="line.304"></span>
-<span class="source-line-no">305</span><span id="line.305">    @Nullable</span>
-<span class="source-line-no">306</span><span id="line.306">    public String getKey() {</span>
-<span class="source-line-no">307</span><span id="line.307">        return this.key;</span>
-<span class="source-line-no">308</span><span id="line.308">    }</span>
-<span class="source-line-no">309</span><span id="line.309"></span>
-<span class="source-line-no">310</span><span id="line.310">    @Nullable</span>
-<span class="source-line-no">311</span><span id="line.311">    public java.util.List&lt;com.commercetools.api.models.common.PriceDraft&gt; getPrices() {</span>
-<span class="source-line-no">312</span><span id="line.312">        return this.prices;</span>
-<span class="source-line-no">313</span><span id="line.313">    }</span>
-<span class="source-line-no">314</span><span id="line.314"></span>
-<span class="source-line-no">315</span><span id="line.315">    @Nullable</span>
-<span class="source-line-no">316</span><span id="line.316">    public java.util.List&lt;com.commercetools.api.models.common.Image&gt; getImages() {</span>
-<span class="source-line-no">317</span><span id="line.317">        return this.images;</span>
-<span class="source-line-no">318</span><span id="line.318">    }</span>
-<span class="source-line-no">319</span><span id="line.319"></span>
-<span class="source-line-no">320</span><span id="line.320">    @Nullable</span>
-<span class="source-line-no">321</span><span id="line.321">    public java.util.List&lt;com.commercetools.api.models.product.Attribute&gt; getAttributes() {</span>
-<span class="source-line-no">322</span><span id="line.322">        return this.attributes;</span>
-<span class="source-line-no">323</span><span id="line.323">    }</span>
-<span class="source-line-no">324</span><span id="line.324"></span>
-<span class="source-line-no">325</span><span id="line.325">    @Nullable</span>
-<span class="source-line-no">326</span><span id="line.326">    public Boolean getStaged() {</span>
-<span class="source-line-no">327</span><span id="line.327">        return this.staged;</span>
-<span class="source-line-no">328</span><span id="line.328">    }</span>
-<span class="source-line-no">329</span><span id="line.329"></span>
-<span class="source-line-no">330</span><span id="line.330">    @Nullable</span>
-<span class="source-line-no">331</span><span id="line.331">    public java.util.List&lt;com.commercetools.api.models.common.Asset&gt; getAssets() {</span>
-<span class="source-line-no">332</span><span id="line.332">        return this.assets;</span>
-<span class="source-line-no">333</span><span id="line.333">    }</span>
-<span class="source-line-no">334</span><span id="line.334"></span>
-<span class="source-line-no">335</span><span id="line.335">    public ProductAddVariantAction build() {</span>
-<span class="source-line-no">336</span><span id="line.336">        return new ProductAddVariantActionImpl(sku, key, prices, images, attributes, staged, assets);</span>
-<span class="source-line-no">337</span><span id="line.337">    }</span>
-<span class="source-line-no">338</span><span id="line.338"></span>
-<span class="source-line-no">339</span><span id="line.339">    /**</span>
-<span class="source-line-no">340</span><span id="line.340">     * builds ProductAddVariantAction without checking for non null required values</span>
-<span class="source-line-no">341</span><span id="line.341">     */</span>
-<span class="source-line-no">342</span><span id="line.342">    public ProductAddVariantAction buildUnchecked() {</span>
-<span class="source-line-no">343</span><span id="line.343">        return new ProductAddVariantActionImpl(sku, key, prices, images, attributes, staged, assets);</span>
-<span class="source-line-no">344</span><span id="line.344">    }</span>
-<span class="source-line-no">345</span><span id="line.345"></span>
-<span class="source-line-no">346</span><span id="line.346">    public static ProductAddVariantActionBuilder of() {</span>
-<span class="source-line-no">347</span><span id="line.347">        return new ProductAddVariantActionBuilder();</span>
-<span class="source-line-no">348</span><span id="line.348">    }</span>
-<span class="source-line-no">349</span><span id="line.349"></span>
-<span class="source-line-no">350</span><span id="line.350">    public static ProductAddVariantActionBuilder of(final ProductAddVariantAction template) {</span>
-<span class="source-line-no">351</span><span id="line.351">        ProductAddVariantActionBuilder builder = new ProductAddVariantActionBuilder();</span>
-<span class="source-line-no">352</span><span id="line.352">        builder.sku = template.getSku();</span>
-<span class="source-line-no">353</span><span id="line.353">        builder.key = template.getKey();</span>
-<span class="source-line-no">354</span><span id="line.354">        builder.prices = template.getPrices();</span>
-<span class="source-line-no">355</span><span id="line.355">        builder.images = template.getImages();</span>
-<span class="source-line-no">356</span><span id="line.356">        builder.attributes = template.getAttributes();</span>
-<span class="source-line-no">357</span><span id="line.357">        builder.staged = template.getStaged();</span>
-<span class="source-line-no">358</span><span id="line.358">        builder.assets = template.getAssets();</span>
-<span class="source-line-no">359</span><span id="line.359">        return builder;</span>
-<span class="source-line-no">360</span><span id="line.360">    }</span>
-<span class="source-line-no">361</span><span id="line.361"></span>
-<span class="source-line-no">362</span><span id="line.362">}</span>
+<span class="source-line-no">248</span><span id="line.248">    public ProductAddVariantActionBuilder assets(</span>
+<span class="source-line-no">249</span><span id="line.249">            @Nullable final com.commercetools.api.models.common.AssetDraft... assets) {</span>
+<span class="source-line-no">250</span><span id="line.250">        this.assets = new ArrayList&lt;&gt;(Arrays.asList(assets));</span>
+<span class="source-line-no">251</span><span id="line.251">        return this;</span>
+<span class="source-line-no">252</span><span id="line.252">    }</span>
+<span class="source-line-no">253</span><span id="line.253"></span>
+<span class="source-line-no">254</span><span id="line.254">    /**</span>
+<span class="source-line-no">255</span><span id="line.255">     *  &lt;p&gt;Media assets for the Product Variant.&lt;/p&gt;</span>
+<span class="source-line-no">256</span><span id="line.256">     */</span>
+<span class="source-line-no">257</span><span id="line.257"></span>
+<span class="source-line-no">258</span><span id="line.258">    public ProductAddVariantActionBuilder assets(</span>
+<span class="source-line-no">259</span><span id="line.259">            @Nullable final java.util.List&lt;com.commercetools.api.models.common.AssetDraft&gt; assets) {</span>
+<span class="source-line-no">260</span><span id="line.260">        this.assets = assets;</span>
+<span class="source-line-no">261</span><span id="line.261">        return this;</span>
+<span class="source-line-no">262</span><span id="line.262">    }</span>
+<span class="source-line-no">263</span><span id="line.263"></span>
+<span class="source-line-no">264</span><span id="line.264">    /**</span>
+<span class="source-line-no">265</span><span id="line.265">     *  &lt;p&gt;Media assets for the Product Variant.&lt;/p&gt;</span>
+<span class="source-line-no">266</span><span id="line.266">     */</span>
+<span class="source-line-no">267</span><span id="line.267"></span>
+<span class="source-line-no">268</span><span id="line.268">    public ProductAddVariantActionBuilder plusAssets(</span>
+<span class="source-line-no">269</span><span id="line.269">            @Nullable final com.commercetools.api.models.common.AssetDraft... assets) {</span>
+<span class="source-line-no">270</span><span id="line.270">        if (this.assets == null) {</span>
+<span class="source-line-no">271</span><span id="line.271">            this.assets = new ArrayList&lt;&gt;();</span>
+<span class="source-line-no">272</span><span id="line.272">        }</span>
+<span class="source-line-no">273</span><span id="line.273">        this.assets.addAll(Arrays.asList(assets));</span>
+<span class="source-line-no">274</span><span id="line.274">        return this;</span>
+<span class="source-line-no">275</span><span id="line.275">    }</span>
+<span class="source-line-no">276</span><span id="line.276"></span>
+<span class="source-line-no">277</span><span id="line.277">    /**</span>
+<span class="source-line-no">278</span><span id="line.278">     *  &lt;p&gt;Media assets for the Product Variant.&lt;/p&gt;</span>
+<span class="source-line-no">279</span><span id="line.279">     */</span>
+<span class="source-line-no">280</span><span id="line.280"></span>
+<span class="source-line-no">281</span><span id="line.281">    public ProductAddVariantActionBuilder plusAssets(</span>
+<span class="source-line-no">282</span><span id="line.282">            Function&lt;com.commercetools.api.models.common.AssetDraftBuilder, com.commercetools.api.models.common.AssetDraftBuilder&gt; builder) {</span>
+<span class="source-line-no">283</span><span id="line.283">        if (this.assets == null) {</span>
+<span class="source-line-no">284</span><span id="line.284">            this.assets = new ArrayList&lt;&gt;();</span>
+<span class="source-line-no">285</span><span id="line.285">        }</span>
+<span class="source-line-no">286</span><span id="line.286">        this.assets.add(builder.apply(com.commercetools.api.models.common.AssetDraftBuilder.of()).build());</span>
+<span class="source-line-no">287</span><span id="line.287">        return this;</span>
+<span class="source-line-no">288</span><span id="line.288">    }</span>
+<span class="source-line-no">289</span><span id="line.289"></span>
+<span class="source-line-no">290</span><span id="line.290">    /**</span>
+<span class="source-line-no">291</span><span id="line.291">     *  &lt;p&gt;Media assets for the Product Variant.&lt;/p&gt;</span>
+<span class="source-line-no">292</span><span id="line.292">     */</span>
+<span class="source-line-no">293</span><span id="line.293"></span>
+<span class="source-line-no">294</span><span id="line.294">    public ProductAddVariantActionBuilder withAssets(</span>
+<span class="source-line-no">295</span><span id="line.295">            Function&lt;com.commercetools.api.models.common.AssetDraftBuilder, com.commercetools.api.models.common.AssetDraftBuilder&gt; builder) {</span>
+<span class="source-line-no">296</span><span id="line.296">        this.assets = new ArrayList&lt;&gt;();</span>
+<span class="source-line-no">297</span><span id="line.297">        this.assets.add(builder.apply(com.commercetools.api.models.common.AssetDraftBuilder.of()).build());</span>
+<span class="source-line-no">298</span><span id="line.298">        return this;</span>
+<span class="source-line-no">299</span><span id="line.299">    }</span>
+<span class="source-line-no">300</span><span id="line.300"></span>
+<span class="source-line-no">301</span><span id="line.301">    @Nullable</span>
+<span class="source-line-no">302</span><span id="line.302">    public String getSku() {</span>
+<span class="source-line-no">303</span><span id="line.303">        return this.sku;</span>
+<span class="source-line-no">304</span><span id="line.304">    }</span>
+<span class="source-line-no">305</span><span id="line.305"></span>
+<span class="source-line-no">306</span><span id="line.306">    @Nullable</span>
+<span class="source-line-no">307</span><span id="line.307">    public String getKey() {</span>
+<span class="source-line-no">308</span><span id="line.308">        return this.key;</span>
+<span class="source-line-no">309</span><span id="line.309">    }</span>
+<span class="source-line-no">310</span><span id="line.310"></span>
+<span class="source-line-no">311</span><span id="line.311">    @Nullable</span>
+<span class="source-line-no">312</span><span id="line.312">    public java.util.List&lt;com.commercetools.api.models.common.PriceDraft&gt; getPrices() {</span>
+<span class="source-line-no">313</span><span id="line.313">        return this.prices;</span>
+<span class="source-line-no">314</span><span id="line.314">    }</span>
+<span class="source-line-no">315</span><span id="line.315"></span>
+<span class="source-line-no">316</span><span id="line.316">    @Nullable</span>
+<span class="source-line-no">317</span><span id="line.317">    public java.util.List&lt;com.commercetools.api.models.common.Image&gt; getImages() {</span>
+<span class="source-line-no">318</span><span id="line.318">        return this.images;</span>
+<span class="source-line-no">319</span><span id="line.319">    }</span>
+<span class="source-line-no">320</span><span id="line.320"></span>
+<span class="source-line-no">321</span><span id="line.321">    @Nullable</span>
+<span class="source-line-no">322</span><span id="line.322">    public java.util.List&lt;com.commercetools.api.models.product.Attribute&gt; getAttributes() {</span>
+<span class="source-line-no">323</span><span id="line.323">        return this.attributes;</span>
+<span class="source-line-no">324</span><span id="line.324">    }</span>
+<span class="source-line-no">325</span><span id="line.325"></span>
+<span class="source-line-no">326</span><span id="line.326">    @Nullable</span>
+<span class="source-line-no">327</span><span id="line.327">    public Boolean getStaged() {</span>
+<span class="source-line-no">328</span><span id="line.328">        return this.staged;</span>
+<span class="source-line-no">329</span><span id="line.329">    }</span>
+<span class="source-line-no">330</span><span id="line.330"></span>
+<span class="source-line-no">331</span><span id="line.331">    @Nullable</span>
+<span class="source-line-no">332</span><span id="line.332">    public java.util.List&lt;com.commercetools.api.models.common.AssetDraft&gt; getAssets() {</span>
+<span class="source-line-no">333</span><span id="line.333">        return this.assets;</span>
+<span class="source-line-no">334</span><span id="line.334">    }</span>
+<span class="source-line-no">335</span><span id="line.335"></span>
+<span class="source-line-no">336</span><span id="line.336">    public ProductAddVariantAction build() {</span>
+<span class="source-line-no">337</span><span id="line.337">        return new ProductAddVariantActionImpl(sku, key, prices, images, attributes, staged, assets);</span>
+<span class="source-line-no">338</span><span id="line.338">    }</span>
+<span class="source-line-no">339</span><span id="line.339"></span>
+<span class="source-line-no">340</span><span id="line.340">    /**</span>
+<span class="source-line-no">341</span><span id="line.341">     * builds ProductAddVariantAction without checking for non null required values</span>
+<span class="source-line-no">342</span><span id="line.342">     */</span>
+<span class="source-line-no">343</span><span id="line.343">    public ProductAddVariantAction buildUnchecked() {</span>
+<span class="source-line-no">344</span><span id="line.344">        return new ProductAddVariantActionImpl(sku, key, prices, images, attributes, staged, assets);</span>
+<span class="source-line-no">345</span><span id="line.345">    }</span>
+<span class="source-line-no">346</span><span id="line.346"></span>
+<span class="source-line-no">347</span><span id="line.347">    public static ProductAddVariantActionBuilder of() {</span>
+<span class="source-line-no">348</span><span id="line.348">        return new ProductAddVariantActionBuilder();</span>
+<span class="source-line-no">349</span><span id="line.349">    }</span>
+<span class="source-line-no">350</span><span id="line.350"></span>
+<span class="source-line-no">351</span><span id="line.351">    public static ProductAddVariantActionBuilder of(final ProductAddVariantAction template) {</span>
+<span class="source-line-no">352</span><span id="line.352">        ProductAddVariantActionBuilder builder = new ProductAddVariantActionBuilder();</span>
+<span class="source-line-no">353</span><span id="line.353">        builder.sku = template.getSku();</span>
+<span class="source-line-no">354</span><span id="line.354">        builder.key = template.getKey();</span>
+<span class="source-line-no">355</span><span id="line.355">        builder.prices = template.getPrices();</span>
+<span class="source-line-no">356</span><span id="line.356">        builder.images = template.getImages();</span>
+<span class="source-line-no">357</span><span id="line.357">        builder.attributes = template.getAttributes();</span>
+<span class="source-line-no">358</span><span id="line.358">        builder.staged = template.getStaged();</span>
+<span class="source-line-no">359</span><span id="line.359">        builder.assets = template.getAssets();</span>
+<span class="source-line-no">360</span><span id="line.360">        return builder;</span>
+<span class="source-line-no">361</span><span id="line.361">    }</span>
+<span class="source-line-no">362</span><span id="line.362"></span>
+<span class="source-line-no">363</span><span id="line.363">}</span>
 
 
 

@@ -26,6 +26,11 @@ import dev.failsafe.FailsafeExecutor;
 import dev.failsafe.RetryPolicy;
 import dev.failsafe.event.ExecutionAttemptedEvent;
 
+/**
+ * Implementation of the {@link ConcurrentModificationMiddleware}. Uses {@link RetryPolicy} to retry upon {@link ConcurrentModificationException}.
+ * In case of a retry the request will an update request will be modified to include the
+ * {@link ConcurrentModificationException#getCurrentVersion() current version} reported by the error response.
+ */
 public class ConcurrentModificationMiddlewareImpl implements ConcurrentModificationMiddleware {
     static final String loggerName = ClientBuilder.COMMERCETOOLS + ".retry.concurrent_modification";
     private static final InternalLogger logger = InternalLogger.getLogger(loggerName);

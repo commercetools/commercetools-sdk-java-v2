@@ -7,6 +7,10 @@ import io.vrap.rmf.base.client.ApiHttpResponse;
 import io.vrap.rmf.base.client.ResponseSerializer;
 import io.vrap.rmf.base.client.error.*;
 
+/**
+ * Creates an exception bases on the status code of the {@link ApiHttpResponse} with module specific exception for
+ * {@link BadRequestException} and {@link ConcurrentModificationException}
+ */
 public class ApiHttpExceptionFactory implements HttpExceptionFactory {
     private final ResponseSerializer responseSerializer;
 

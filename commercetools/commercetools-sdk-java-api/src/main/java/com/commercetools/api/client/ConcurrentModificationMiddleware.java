@@ -3,6 +3,11 @@ package com.commercetools.api.client;
 
 import io.vrap.rmf.base.client.http.Middleware;
 
+/**
+ * Middleware to retry a request upon {@link com.commercetools.api.client.error.ConcurrentModificationException}
+ *
+ * {@include.example commercetools.ConcurrentModificationTest#concurrentModMiddleware()}
+ */
 public interface ConcurrentModificationMiddleware extends Middleware {
     public static ConcurrentModificationMiddleware of() {
         return new ConcurrentModificationMiddlewareImpl();

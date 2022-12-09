@@ -9,6 +9,10 @@ import io.vrap.rmf.base.client.ApiHttpRequest;
 import io.vrap.rmf.base.client.ApiHttpResponse;
 import io.vrap.rmf.base.client.ResponseSerializer;
 
+/**
+ * Deserializes the response payload as {@link ErrorResponse} and extracts the currentVersion of the modified resource
+ * if included
+ */
 public class ConcurrentModificationException extends io.vrap.rmf.base.client.error.ConcurrentModificationException
         implements ErrorResponseException {
     private final ErrorResponse errorResponse;

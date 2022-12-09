@@ -9,6 +9,10 @@ import com.commercetools.api.models.ResourceUpdate;
 
 import io.vrap.rmf.base.client.*;
 
+/**
+ * Handler functions to retry single requests.
+ * {@include.example commercetools.ConcurrentModificationTest#concurrentMod()}
+ */
 public interface RetryHandler<TResult> {
     CompletableFuture<ApiHttpResponse<TResult>> execute();
 

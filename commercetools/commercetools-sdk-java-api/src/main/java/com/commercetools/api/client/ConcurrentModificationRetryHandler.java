@@ -17,6 +17,9 @@ import io.vrap.rmf.base.client.BodyApiMethod;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.RequestCommand;
 
+/**
+ * This handler can be used to retry a single request in case of a {@link ConcurrentModificationException concurrent modification}.
+ */
 final class ConcurrentModificationRetryHandler<T extends BodyApiMethod<T, TResult, TBody>, TResult, TBody extends ResourceUpdate<TBody, ?, TBuilder>, TBuilder extends Builder<TBody>>
         implements RequestCommand<TResult> {
     private final T request;

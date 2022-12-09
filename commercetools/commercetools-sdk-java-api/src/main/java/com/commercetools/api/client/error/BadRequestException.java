@@ -8,6 +8,9 @@ import io.vrap.rmf.base.client.ApiHttpRequest;
 import io.vrap.rmf.base.client.ApiHttpResponse;
 import io.vrap.rmf.base.client.ResponseSerializer;
 
+/**
+ * Deserializes the response payload as {@link ErrorResponse}
+ */
 public class BadRequestException extends io.vrap.rmf.base.client.error.BadRequestException
         implements ErrorResponseException {
     private final ErrorResponse errorResponse;

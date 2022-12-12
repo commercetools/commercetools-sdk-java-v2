@@ -63,6 +63,10 @@ public class ErrorObjectBuilder {
         return com.commercetools.api.models.error.DuplicateFieldWithConflictingResourceErrorBuilder.of();
     }
 
+    public com.commercetools.api.models.error.DuplicatePriceKeyErrorBuilder duplicatePriceKeyBuilder() {
+        return com.commercetools.api.models.error.DuplicatePriceKeyErrorBuilder.of();
+    }
+
     public com.commercetools.api.models.error.DuplicatePriceScopeErrorBuilder duplicatePriceScopeBuilder() {
         return com.commercetools.api.models.error.DuplicatePriceScopeErrorBuilder.of();
     }

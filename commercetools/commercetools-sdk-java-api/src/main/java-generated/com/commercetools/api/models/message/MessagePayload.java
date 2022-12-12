@@ -122,6 +122,7 @@ import io.vrap.rmf.base.client.utils.Generated;
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.ProductPriceChangedMessagePayloadImpl.class, name = ProductPriceChangedMessagePayload.PRODUCT_PRICE_CHANGED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.ProductPriceDiscountsSetMessagePayloadImpl.class, name = ProductPriceDiscountsSetMessagePayload.PRODUCT_PRICE_DISCOUNTS_SET),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.ProductPriceExternalDiscountSetMessagePayloadImpl.class, name = ProductPriceExternalDiscountSetMessagePayload.PRODUCT_PRICE_EXTERNAL_DISCOUNT_SET),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.message.ProductPriceKeySetMessagePayloadImpl.class, name = ProductPriceKeySetMessagePayload.PRODUCT_PRICE_KEY_SET),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.ProductPriceModeSetMessagePayloadImpl.class, name = ProductPriceModeSetMessagePayload.PRODUCT_PRICE_MODE_SET),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.ProductPriceRemovedMessagePayloadImpl.class, name = ProductPriceRemovedMessagePayload.PRODUCT_PRICE_REMOVED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.ProductPriceSetMessagePayloadImpl.class, name = ProductPriceSetMessagePayload.PRODUCT_PRICE_SET),
@@ -163,6 +164,7 @@ import io.vrap.rmf.base.client.utils.Generated;
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.StandalonePriceDeletedMessagePayloadImpl.class, name = StandalonePriceDeletedMessagePayload.STANDALONE_PRICE_DELETED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.StandalonePriceDiscountSetMessagePayloadImpl.class, name = StandalonePriceDiscountSetMessagePayload.STANDALONE_PRICE_DISCOUNT_SET),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.StandalonePriceExternalDiscountSetMessagePayloadImpl.class, name = StandalonePriceExternalDiscountSetMessagePayload.STANDALONE_PRICE_EXTERNAL_DISCOUNT_SET),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.message.StandalonePriceKeySetMessagePayloadImpl.class, name = StandalonePriceKeySetMessagePayload.STANDALONE_PRICE_KEY_SET),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.StandalonePriceStagedChangesAppliedMessagePayloadImpl.class, name = StandalonePriceStagedChangesAppliedMessagePayload.STANDALONE_PRICE_STAGED_CHANGES_APPLIED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.StandalonePriceValueChangedMessagePayloadImpl.class, name = StandalonePriceValueChangedMessagePayload.STANDALONE_PRICE_VALUE_CHANGED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.StoreCountriesChangedMessagePayloadImpl.class, name = StoreCountriesChangedMessagePayload.STORE_COUNTRIES_CHANGED),
@@ -569,6 +571,10 @@ public interface MessagePayload {
         return com.commercetools.api.models.message.ProductPriceExternalDiscountSetMessagePayloadBuilder.of();
     }
 
+    public static com.commercetools.api.models.message.ProductPriceKeySetMessagePayloadBuilder productPriceKeySetBuilder() {
+        return com.commercetools.api.models.message.ProductPriceKeySetMessagePayloadBuilder.of();
+    }
+
     public static com.commercetools.api.models.message.ProductPriceModeSetMessagePayloadBuilder productPriceModeSetBuilder() {
         return com.commercetools.api.models.message.ProductPriceModeSetMessagePayloadBuilder.of();
     }
@@ -731,6 +737,10 @@ public interface MessagePayload {
 
     public static com.commercetools.api.models.message.StandalonePriceExternalDiscountSetMessagePayloadBuilder standalonePriceExternalDiscountSetBuilder() {
         return com.commercetools.api.models.message.StandalonePriceExternalDiscountSetMessagePayloadBuilder.of();
+    }
+
+    public static com.commercetools.api.models.message.StandalonePriceKeySetMessagePayloadBuilder standalonePriceKeySetBuilder() {
+        return com.commercetools.api.models.message.StandalonePriceKeySetMessagePayloadBuilder.of();
     }
 
     public static com.commercetools.api.models.message.StandalonePriceStagedChangesAppliedMessagePayloadBuilder standalonePriceStagedChangesAppliedBuilder() {

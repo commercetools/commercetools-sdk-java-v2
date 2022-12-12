@@ -15,11 +15,11 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Returned when a Price scope conflicts with an existing one during an Update Product request.</p>
- *  <p>Every Price of a Product Variant must have a distinct combination of currency, Customer Group, country, and Channel that constitute the scope of a Price.</p>
+ *  <p>Returned when a Price key conflicts with an existing key.</p>
+ *  <p>Keys of Embedded Prices must be unique per ProductVariant.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-public class DuplicatePriceScopeErrorImpl implements DuplicatePriceScopeError, ModelBase {
+public class DuplicatePriceKeyErrorImpl implements DuplicatePriceKeyError, ModelBase {
 
     private String code;
 
@@ -30,17 +30,17 @@ public class DuplicatePriceScopeErrorImpl implements DuplicatePriceScopeError, M
     private com.commercetools.api.models.common.Price conflictingPrice;
 
     @JsonCreator
-    DuplicatePriceScopeErrorImpl(@JsonProperty("message") final String message,
+    DuplicatePriceKeyErrorImpl(@JsonProperty("message") final String message,
             @JsonProperty("values") final Map<String, java.lang.Object> values,
             @JsonProperty("conflictingPrice") final com.commercetools.api.models.common.Price conflictingPrice) {
         this.message = message;
         this.values = values;
         this.conflictingPrice = conflictingPrice;
-        this.code = DUPLICATE_PRICE_SCOPE;
+        this.code = DUPLICATE_PRICE_KEY;
     }
 
-    public DuplicatePriceScopeErrorImpl() {
-        this.code = DUPLICATE_PRICE_SCOPE;
+    public DuplicatePriceKeyErrorImpl() {
+        this.code = DUPLICATE_PRICE_KEY;
     }
 
     /**
@@ -52,7 +52,7 @@ public class DuplicatePriceScopeErrorImpl implements DuplicatePriceScopeError, M
     }
 
     /**
-     *  <p><code>"Duplicate price scope: $priceScope. The combination of currency, country, customerGroup and channel must be unique for each price of a product variant."</code></p>
+     *  <p><code>"Duplicate price key: $priceKey. The price key must be unique per variant."</code></p>
      */
 
     public String getMessage() {
@@ -98,7 +98,7 @@ public class DuplicatePriceScopeErrorImpl implements DuplicatePriceScopeError, M
         if (o == null || getClass() != o.getClass())
             return false;
 
-        DuplicatePriceScopeErrorImpl that = (DuplicatePriceScopeErrorImpl) o;
+        DuplicatePriceKeyErrorImpl that = (DuplicatePriceKeyErrorImpl) o;
 
         return new EqualsBuilder().append(code, that.code)
                 .append(message, that.message)

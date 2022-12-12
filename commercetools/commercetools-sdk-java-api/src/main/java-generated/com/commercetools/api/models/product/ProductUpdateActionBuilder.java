@@ -159,6 +159,10 @@ public class ProductUpdateActionBuilder {
         return com.commercetools.api.models.product.ProductSetMetaTitleActionBuilder.of();
     }
 
+    public com.commercetools.api.models.product.ProductSetPriceKeyActionBuilder setPriceKeyBuilder() {
+        return com.commercetools.api.models.product.ProductSetPriceKeyActionBuilder.of();
+    }
+
     public com.commercetools.api.models.product.ProductSetPriceModeActionBuilder setPriceModeBuilder() {
         return com.commercetools.api.models.product.ProductSetPriceModeActionBuilder.of();
     }

@@ -24,7 +24,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     DuplicatePriceScopeError duplicatePriceScopeError = DuplicatePriceScopeError.builder()
  *             .message("{message}")
- *             .plusConflictingPrices(conflictingPricesBuilder -> conflictingPricesBuilder)
+ *             .conflictingPrice(conflictingPriceBuilder -> conflictingPriceBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -50,19 +50,16 @@ public interface DuplicatePriceScopeError extends ErrorObject {
     public String getMessage();
 
     /**
-     *  <p>Conflicting Embedded Prices.</p>
+     *  <p>Conflicting Embedded Price.</p>
      */
     @NotNull
     @Valid
-    @JsonProperty("conflictingPrices")
-    public List<Price> getConflictingPrices();
+    @JsonProperty("conflictingPrice")
+    public Price getConflictingPrice();
 
     public void setMessage(final String message);
 
-    @JsonIgnore
-    public void setConflictingPrices(final Price... conflictingPrices);
-
-    public void setConflictingPrices(final List<Price> conflictingPrices);
+    public void setConflictingPrice(final Price conflictingPrice);
 
     public static DuplicatePriceScopeError of() {
         return new DuplicatePriceScopeErrorImpl();
@@ -72,7 +69,7 @@ public interface DuplicatePriceScopeError extends ErrorObject {
         DuplicatePriceScopeErrorImpl instance = new DuplicatePriceScopeErrorImpl();
         instance.setMessage(template.getMessage());
 
-        instance.setConflictingPrices(template.getConflictingPrices());
+        instance.setConflictingPrice(template.getConflictingPrice());
         return instance;
     }
 

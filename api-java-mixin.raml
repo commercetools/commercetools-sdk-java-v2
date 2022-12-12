@@ -414,3 +414,1167 @@ types:
       public default DeliveryDraft toDraft() {
           return toDraftBuilder().build();
       }
+/{projectKey}:
+  /categories:
+    (java-mixin): |
+        public ByProjectKeyCategoriesByIDPost update(
+                com.commercetools.api.models.Versioned<com.commercetools.api.models.category.Category> category,
+                java.util.List<com.commercetools.api.models.category.CategoryUpdateAction> actions) {
+            return withId(category.getId()).post(builder -> com.commercetools.api.models.category.CategoryUpdate.builder()
+                    .version(category.getVersion())
+                    .actions(actions));
+        }
+
+        public ByProjectKeyCategoriesByIDPost update(
+                com.commercetools.api.models.Versioned<com.commercetools.api.models.category.Category> category,
+                UnaryOperator<UpdateActionBuilder<com.commercetools.api.models.category.CategoryUpdateAction, com.commercetools.api.models.category.CategoryUpdateActionBuilder>> op) {
+            return withId(category.getId()).post(builder -> com.commercetools.api.models.category.CategoryUpdate.builder()
+                    .version(category.getVersion())
+                    .actions(op.apply(UpdateActionBuilder
+                            .of(com.commercetools.api.models.category.CategoryUpdateActionBuilder::of)).actions));
+        }
+
+        public WithUpdateActionBuilder<com.commercetools.api.models.category.CategoryUpdateAction, com.commercetools.api.models.category.CategoryUpdateActionBuilder, ByProjectKeyCategoriesByIDPost> update(
+                com.commercetools.api.models.Versioned<com.commercetools.api.models.category.Category> category) {
+            return builder -> withId(category.getId())
+                    .post(b -> com.commercetools.api.models.category.CategoryUpdate.builder()
+                            .version(category.getVersion())
+                            .actions(builder.apply(UpdateActionBuilder
+                                    .of(com.commercetools.api.models.category.CategoryUpdateActionBuilder::of)).actions));
+        }
+
+        public ByProjectKeyCategoriesByIDDelete delete(
+                com.commercetools.api.models.Versioned<com.commercetools.api.models.category.Category> category) {
+            return withId(category.getId()).delete().withVersion(category.getVersion());
+        }
+
+        public ByProjectKeyCategoriesPost create(com.commercetools.api.models.category.CategoryDraft categoryDraft) {
+            return post(categoryDraft);
+        }
+
+        public ByProjectKeyCategoriesPost create(
+                UnaryOperator<com.commercetools.api.models.category.CategoryDraftBuilder> op) {
+            return post(op.apply(com.commercetools.api.models.category.CategoryDraftBuilder.of()).build());
+        }
+  /carts:
+    (java-mixin): |
+        public ByProjectKeyCartsByIDPost update(
+                com.commercetools.api.models.Versioned<com.commercetools.api.models.cart.Cart> cart,
+                java.util.List<com.commercetools.api.models.cart.CartUpdateAction> actions) {
+            return withId(cart.getId()).post(builder -> com.commercetools.api.models.cart.CartUpdate.builder()
+                    .version(cart.getVersion())
+                    .actions(actions));
+        }
+
+        public ByProjectKeyCartsByIDPost update(
+                com.commercetools.api.models.Versioned<com.commercetools.api.models.cart.Cart> cart,
+                UnaryOperator<UpdateActionBuilder<com.commercetools.api.models.cart.CartUpdateAction, com.commercetools.api.models.cart.CartUpdateActionBuilder>> op) {
+            return withId(cart.getId()).post(builder -> com.commercetools.api.models.cart.CartUpdate.builder()
+                    .version(cart.getVersion())
+                    .actions(op.apply(UpdateActionBuilder
+                            .of(com.commercetools.api.models.cart.CartUpdateActionBuilder::of)).actions));
+        }
+
+        public WithUpdateActionBuilder<com.commercetools.api.models.cart.CartUpdateAction, com.commercetools.api.models.cart.CartUpdateActionBuilder, ByProjectKeyCartsByIDPost> update(
+                com.commercetools.api.models.Versioned<com.commercetools.api.models.cart.Cart> cart) {
+            return builder -> withId(cart.getId())
+                    .post(b -> com.commercetools.api.models.cart.CartUpdate.builder()
+                            .version(cart.getVersion())
+                            .actions(builder.apply(UpdateActionBuilder
+                                    .of(com.commercetools.api.models.cart.CartUpdateActionBuilder::of)).actions));
+        }
+
+        public ByProjectKeyCartsByIDDelete delete(
+                com.commercetools.api.models.Versioned<com.commercetools.api.models.cart.Cart> cart) {
+            return withId(cart.getId()).delete().withVersion(cart.getVersion());
+        }
+
+        public ByProjectKeyCartsPost create(com.commercetools.api.models.cart.CartDraft cartDraft) {
+            return post(cartDraft);
+        }
+
+        public ByProjectKeyCartsPost create(
+                UnaryOperator<com.commercetools.api.models.cart.CartDraftBuilder> op) {
+            return post(op.apply(com.commercetools.api.models.cart.CartDraftBuilder.of()).build());
+        }
+  /cart-discounts:
+    (java-mixin): |
+        public ByProjectKeyCartDiscountsByIDPost update(
+                com.commercetools.api.models.Versioned<com.commercetools.api.models.cart_discount.CartDiscount> cartDiscount,
+                java.util.List<com.commercetools.api.models.cart_discount.CartDiscountUpdateAction> actions) {
+            return withId(cartDiscount.getId()).post(builder -> com.commercetools.api.models.cart_discount.CartDiscountUpdate.builder()
+                    .version(cartDiscount.getVersion())
+                    .actions(actions));
+        }
+
+        public ByProjectKeyCartDiscountsByIDPost update(
+                com.commercetools.api.models.Versioned<com.commercetools.api.models.cart_discount.CartDiscount> cartDiscount,
+                UnaryOperator<UpdateActionBuilder<com.commercetools.api.models.cart_discount.CartDiscountUpdateAction, com.commercetools.api.models.cart_discount.CartDiscountUpdateActionBuilder>> op) {
+            return withId(cartDiscount.getId()).post(builder -> com.commercetools.api.models.cart_discount.CartDiscountUpdate.builder()
+                    .version(cartDiscount.getVersion())
+                    .actions(op.apply(UpdateActionBuilder
+                            .of(com.commercetools.api.models.cart_discount.CartDiscountUpdateActionBuilder::of)).actions));
+        }
+
+        public WithUpdateActionBuilder<com.commercetools.api.models.cart_discount.CartDiscountUpdateAction, com.commercetools.api.models.cart_discount.CartDiscountUpdateActionBuilder, ByProjectKeyCartDiscountsByIDPost> update(
+                com.commercetools.api.models.Versioned<com.commercetools.api.models.cart_discount.CartDiscount> cartDiscount) {
+            return builder -> withId(cartDiscount.getId())
+                    .post(b -> com.commercetools.api.models.cart_discount.CartDiscountUpdate.builder()
+                            .version(cartDiscount.getVersion())
+                            .actions(builder.apply(UpdateActionBuilder
+                                    .of(com.commercetools.api.models.cart_discount.CartDiscountUpdateActionBuilder::of)).actions));
+        }
+
+        public ByProjectKeyCartDiscountsByIDDelete delete(
+                com.commercetools.api.models.Versioned<com.commercetools.api.models.cart_discount.CartDiscount> cartDiscount) {
+            return withId(cartDiscount.getId()).delete().withVersion(cartDiscount.getVersion());
+        }
+
+        public ByProjectKeyCartDiscountsPost create(com.commercetools.api.models.cart_discount.CartDiscountDraft cartDiscountDraft) {
+            return post(cartDiscountDraft);
+        }
+
+        public ByProjectKeyCartDiscountsPost create(
+                UnaryOperator<com.commercetools.api.models.cart_discount.CartDiscountDraftBuilder> op) {
+            return post(op.apply(com.commercetools.api.models.cart_discount.CartDiscountDraftBuilder.of()).build());
+        }
+  /channels:
+    (java-mixin): |
+        public ByProjectKeyChannelsByIDPost update(
+                com.commercetools.api.models.Versioned<com.commercetools.api.models.channel.Channel> channel,
+                java.util.List<com.commercetools.api.models.channel.ChannelUpdateAction> actions) {
+            return withId(channel.getId()).post(builder -> com.commercetools.api.models.channel.ChannelUpdate.builder()
+                    .version(channel.getVersion())
+                    .actions(actions));
+        }
+
+        public ByProjectKeyChannelsByIDPost update(
+                com.commercetools.api.models.Versioned<com.commercetools.api.models.channel.Channel> channel,
+                UnaryOperator<UpdateActionBuilder<com.commercetools.api.models.channel.ChannelUpdateAction, com.commercetools.api.models.channel.ChannelUpdateActionBuilder>> op) {
+            return withId(channel.getId()).post(builder -> com.commercetools.api.models.channel.ChannelUpdate.builder()
+                    .version(channel.getVersion())
+                    .actions(op.apply(UpdateActionBuilder
+                            .of(com.commercetools.api.models.channel.ChannelUpdateActionBuilder::of)).actions));
+        }
+
+        public WithUpdateActionBuilder<com.commercetools.api.models.channel.ChannelUpdateAction, com.commercetools.api.models.channel.ChannelUpdateActionBuilder, ByProjectKeyChannelsByIDPost> update(
+                com.commercetools.api.models.Versioned<com.commercetools.api.models.channel.Channel> channel) {
+            return builder -> withId(channel.getId())
+                    .post(b -> com.commercetools.api.models.channel.ChannelUpdate.builder()
+                            .version(channel.getVersion())
+                            .actions(builder.apply(UpdateActionBuilder
+                                    .of(com.commercetools.api.models.channel.ChannelUpdateActionBuilder::of)).actions));
+        }
+
+        public ByProjectKeyChannelsByIDDelete delete(
+                com.commercetools.api.models.Versioned<com.commercetools.api.models.channel.Channel> channel) {
+            return withId(channel.getId()).delete().withVersion(channel.getVersion());
+        }
+
+        public ByProjectKeyChannelsPost create(com.commercetools.api.models.channel.ChannelDraft channelDraft) {
+            return post(channelDraft);
+        }
+
+        public ByProjectKeyChannelsPost create(
+                UnaryOperator<com.commercetools.api.models.channel.ChannelDraftBuilder> op) {
+            return post(op.apply(com.commercetools.api.models.channel.ChannelDraftBuilder.of()).build());
+        }
+  /customers:
+    (java-mixin): |
+        public ByProjectKeyCustomersByIDPost update(
+                com.commercetools.api.models.Versioned<com.commercetools.api.models.customer.Customer> customer,
+                java.util.List<com.commercetools.api.models.customer.CustomerUpdateAction> actions) {
+            return withId(customer.getId()).post(builder -> com.commercetools.api.models.customer.CustomerUpdate.builder()
+                    .version(customer.getVersion())
+                    .actions(actions));
+        }
+
+        public ByProjectKeyCustomersByIDPost update(
+                com.commercetools.api.models.Versioned<com.commercetools.api.models.customer.Customer> customer,
+                UnaryOperator<UpdateActionBuilder<com.commercetools.api.models.customer.CustomerUpdateAction, com.commercetools.api.models.customer.CustomerUpdateActionBuilder>> op) {
+            return withId(customer.getId()).post(builder -> com.commercetools.api.models.customer.CustomerUpdate.builder()
+                    .version(customer.getVersion())
+                    .actions(op.apply(UpdateActionBuilder
+                            .of(com.commercetools.api.models.customer.CustomerUpdateActionBuilder::of)).actions));
+        }
+
+        public WithUpdateActionBuilder<com.commercetools.api.models.customer.CustomerUpdateAction, com.commercetools.api.models.customer.CustomerUpdateActionBuilder, ByProjectKeyCustomersByIDPost> update(
+                com.commercetools.api.models.Versioned<com.commercetools.api.models.customer.Customer> customer) {
+            return builder -> withId(customer.getId())
+                    .post(b -> com.commercetools.api.models.customer.CustomerUpdate.builder()
+                            .version(customer.getVersion())
+                            .actions(builder.apply(UpdateActionBuilder
+                                    .of(com.commercetools.api.models.customer.CustomerUpdateActionBuilder::of)).actions));
+        }
+
+        public ByProjectKeyCustomersByIDDelete delete(
+                com.commercetools.api.models.Versioned<com.commercetools.api.models.customer.Customer> customer) {
+            return withId(customer.getId()).delete().withVersion(customer.getVersion());
+        }
+
+        public ByProjectKeyCustomersPost create(com.commercetools.api.models.customer.CustomerDraft customerDraft) {
+            return post(customerDraft);
+        }
+
+        public ByProjectKeyCustomersPost create(
+                UnaryOperator<com.commercetools.api.models.customer.CustomerDraftBuilder> op) {
+            return post(op.apply(com.commercetools.api.models.customer.CustomerDraftBuilder.of()).build());
+        }
+  /customer-groups:
+    (java-mixin): |
+        public ByProjectKeyCustomerGroupsByIDPost update(
+                com.commercetools.api.models.Versioned<com.commercetools.api.models.customer_group.CustomerGroup> customerGroup,
+                java.util.List<com.commercetools.api.models.customer_group.CustomerGroupUpdateAction> actions) {
+            return withId(customerGroup.getId()).post(builder -> com.commercetools.api.models.customer_group.CustomerGroupUpdate.builder()
+                    .version(customerGroup.getVersion())
+                    .actions(actions));
+        }
+
+        public ByProjectKeyCustomerGroupsByIDPost update(
+                com.commercetools.api.models.Versioned<com.commercetools.api.models.customer_group.CustomerGroup> customerGroup,
+                UnaryOperator<UpdateActionBuilder<com.commercetools.api.models.customer_group.CustomerGroupUpdateAction, com.commercetools.api.models.customer_group.CustomerGroupUpdateActionBuilder>> op) {
+            return withId(customerGroup.getId()).post(builder -> com.commercetools.api.models.customer_group.CustomerGroupUpdate.builder()
+                    .version(customerGroup.getVersion())
+                    .actions(op.apply(UpdateActionBuilder
+                            .of(com.commercetools.api.models.customer_group.CustomerGroupUpdateActionBuilder::of)).actions));
+        }
+
+        public WithUpdateActionBuilder<com.commercetools.api.models.customer_group.CustomerGroupUpdateAction, com.commercetools.api.models.customer_group.CustomerGroupUpdateActionBuilder, ByProjectKeyCustomerGroupsByIDPost> update(
+                com.commercetools.api.models.Versioned<com.commercetools.api.models.customer_group.CustomerGroup> customerGroup) {
+            return builder -> withId(customerGroup.getId())
+                    .post(b -> com.commercetools.api.models.customer_group.CustomerGroupUpdate.builder()
+                            .version(customerGroup.getVersion())
+                            .actions(builder.apply(UpdateActionBuilder
+                                    .of(com.commercetools.api.models.customer_group.CustomerGroupUpdateActionBuilder::of)).actions));
+        }
+
+        public ByProjectKeyCustomerGroupsByIDDelete delete(
+                com.commercetools.api.models.Versioned<com.commercetools.api.models.customer_group.CustomerGroup> customerGroup) {
+            return withId(customerGroup.getId()).delete().withVersion(customerGroup.getVersion());
+        }
+
+        public ByProjectKeyCustomerGroupsPost create(com.commercetools.api.models.customer_group.CustomerGroupDraft customerGroupDraft) {
+            return post(customerGroupDraft);
+        }
+
+        public ByProjectKeyCustomerGroupsPost create(
+                UnaryOperator<com.commercetools.api.models.customer_group.CustomerGroupDraftBuilder> op) {
+            return post(op.apply(com.commercetools.api.models.customer_group.CustomerGroupDraftBuilder.of()).build());
+        }
+  /discount-codes:
+    (java-mixin): |
+        public ByProjectKeyDiscountCodesByIDPost update(
+                com.commercetools.api.models.Versioned<com.commercetools.api.models.discount_code.DiscountCode> discountCode,
+                java.util.List<com.commercetools.api.models.discount_code.DiscountCodeUpdateAction> actions) {
+            return withId(discountCode.getId()).post(builder -> com.commercetools.api.models.discount_code.DiscountCodeUpdate.builder()
+                    .version(discountCode.getVersion())
+                    .actions(actions));
+        }
+
+        public ByProjectKeyDiscountCodesByIDPost update(
+                com.commercetools.api.models.Versioned<com.commercetools.api.models.discount_code.DiscountCode> discountCode,
+                UnaryOperator<UpdateActionBuilder<com.commercetools.api.models.discount_code.DiscountCodeUpdateAction, com.commercetools.api.models.discount_code.DiscountCodeUpdateActionBuilder>> op) {
+            return withId(discountCode.getId()).post(builder -> com.commercetools.api.models.discount_code.DiscountCodeUpdate.builder()
+                    .version(discountCode.getVersion())
+                    .actions(op.apply(UpdateActionBuilder
+                            .of(com.commercetools.api.models.discount_code.DiscountCodeUpdateActionBuilder::of)).actions));
+        }
+
+        public WithUpdateActionBuilder<com.commercetools.api.models.discount_code.DiscountCodeUpdateAction, com.commercetools.api.models.discount_code.DiscountCodeUpdateActionBuilder, ByProjectKeyDiscountCodesByIDPost> update(
+                com.commercetools.api.models.Versioned<com.commercetools.api.models.discount_code.DiscountCode> discountCode) {
+            return builder -> withId(discountCode.getId())
+                    .post(b -> com.commercetools.api.models.discount_code.DiscountCodeUpdate.builder()
+                            .version(discountCode.getVersion())
+                            .actions(builder.apply(UpdateActionBuilder
+                                    .of(com.commercetools.api.models.discount_code.DiscountCodeUpdateActionBuilder::of)).actions));
+        }
+
+        public ByProjectKeyDiscountCodesByIDDelete delete(
+                com.commercetools.api.models.Versioned<com.commercetools.api.models.discount_code.DiscountCode> discountCode) {
+            return withId(discountCode.getId()).delete().withVersion(discountCode.getVersion());
+        }
+
+        public ByProjectKeyDiscountCodesPost create(com.commercetools.api.models.discount_code.DiscountCodeDraft discountCodeDraft) {
+            return post(discountCodeDraft);
+        }
+
+        public ByProjectKeyDiscountCodesPost create(
+                UnaryOperator<com.commercetools.api.models.discount_code.DiscountCodeDraftBuilder> op) {
+            return post(op.apply(com.commercetools.api.models.discount_code.DiscountCodeDraftBuilder.of()).build());
+        }
+  /inventory:
+    (java-mixin): |
+        public ByProjectKeyInventoryByIDPost update(
+                com.commercetools.api.models.Versioned<com.commercetools.api.models.inventory.InventoryEntry> inventoryEntry,
+                java.util.List<com.commercetools.api.models.inventory.InventoryEntryUpdateAction> actions) {
+            return withId(inventoryEntry.getId()).post(builder -> com.commercetools.api.models.inventory.InventoryEntryUpdate.builder()
+                    .version(inventoryEntry.getVersion())
+                    .actions(actions));
+        }
+
+        public ByProjectKeyInventoryByIDPost update(
+                com.commercetools.api.models.Versioned<com.commercetools.api.models.inventory.InventoryEntry> inventoryEntry,
+                UnaryOperator<UpdateActionBuilder<com.commercetools.api.models.inventory.InventoryEntryUpdateAction, com.commercetools.api.models.inventory.InventoryEntryUpdateActionBuilder>> op) {
+            return withId(inventoryEntry.getId()).post(builder -> com.commercetools.api.models.inventory.InventoryEntryUpdate.builder()
+                    .version(inventoryEntry.getVersion())
+                    .actions(op.apply(UpdateActionBuilder
+                            .of(com.commercetools.api.models.inventory.InventoryEntryUpdateActionBuilder::of)).actions));
+        }
+
+        public WithUpdateActionBuilder<com.commercetools.api.models.inventory.InventoryEntryUpdateAction, com.commercetools.api.models.inventory.InventoryEntryUpdateActionBuilder, ByProjectKeyInventoryByIDPost> update(
+                com.commercetools.api.models.Versioned<com.commercetools.api.models.inventory.InventoryEntry> inventoryEntry) {
+            return builder -> withId(inventoryEntry.getId())
+                    .post(b -> com.commercetools.api.models.inventory.InventoryEntryUpdate.builder()
+                            .version(inventoryEntry.getVersion())
+                            .actions(builder.apply(UpdateActionBuilder
+                                    .of(com.commercetools.api.models.inventory.InventoryEntryUpdateActionBuilder::of)).actions));
+        }
+
+        public ByProjectKeyInventoryByIDDelete delete(
+                com.commercetools.api.models.Versioned<com.commercetools.api.models.inventory.InventoryEntry> inventoryEntry) {
+            return withId(inventoryEntry.getId()).delete().withVersion(inventoryEntry.getVersion());
+        }
+
+        public ByProjectKeyInventoryPost create(com.commercetools.api.models.inventory.InventoryEntryDraft inventoryEntryDraft) {
+            return post(inventoryEntryDraft);
+        }
+
+        public ByProjectKeyInventoryPost create(
+                UnaryOperator<com.commercetools.api.models.inventory.InventoryEntryDraftBuilder> op) {
+            return post(op.apply(com.commercetools.api.models.inventory.InventoryEntryDraftBuilder.of()).build());
+        }
+  /orders:
+    (java-mixin): |
+        public ByProjectKeyOrdersByIDPost update(
+                com.commercetools.api.models.Versioned<com.commercetools.api.models.order.Order> order,
+                java.util.List<com.commercetools.api.models.order.OrderUpdateAction> actions) {
+            return withId(order.getId()).post(builder -> com.commercetools.api.models.order.OrderUpdate.builder()
+                    .version(order.getVersion())
+                    .actions(actions));
+        }
+
+        public ByProjectKeyOrdersByIDPost update(
+                com.commercetools.api.models.Versioned<com.commercetools.api.models.order.Order> order,
+                UnaryOperator<UpdateActionBuilder<com.commercetools.api.models.order.OrderUpdateAction, com.commercetools.api.models.order.OrderUpdateActionBuilder>> op) {
+            return withId(order.getId()).post(builder -> com.commercetools.api.models.order.OrderUpdate.builder()
+                    .version(order.getVersion())
+                    .actions(op.apply(UpdateActionBuilder
+                            .of(com.commercetools.api.models.order.OrderUpdateActionBuilder::of)).actions));
+        }
+
+        public WithUpdateActionBuilder<com.commercetools.api.models.order.OrderUpdateAction, com.commercetools.api.models.order.OrderUpdateActionBuilder, ByProjectKeyOrdersByIDPost> update(
+                com.commercetools.api.models.Versioned<com.commercetools.api.models.order.Order> order) {
+            return builder -> withId(order.getId())
+                    .post(b -> com.commercetools.api.models.order.OrderUpdate.builder()
+                            .version(order.getVersion())
+                            .actions(builder.apply(UpdateActionBuilder
+                                    .of(com.commercetools.api.models.order.OrderUpdateActionBuilder::of)).actions));
+        }
+
+        public ByProjectKeyOrdersByIDDelete delete(
+                com.commercetools.api.models.Versioned<com.commercetools.api.models.order.Order> order) {
+            return withId(order.getId()).delete().withVersion(order.getVersion());
+        }
+
+        public ByProjectKeyOrdersPost create(com.commercetools.api.models.order.OrderFromCartDraft orderFromCartDraft) {
+            return post(orderFromCartDraft);
+        }
+
+        public ByProjectKeyOrdersPost create(
+                UnaryOperator<com.commercetools.api.models.order.OrderFromCartDraftBuilder> op) {
+            return post(op.apply(com.commercetools.api.models.order.OrderFromCartDraftBuilder.of()).build());
+        }
+  /payments:
+    (java-mixin): |
+        public ByProjectKeyPaymentsByIDPost update(
+                com.commercetools.api.models.Versioned<com.commercetools.api.models.payment.Payment> payment,
+                java.util.List<com.commercetools.api.models.payment.PaymentUpdateAction> actions) {
+            return withId(payment.getId()).post(builder -> com.commercetools.api.models.payment.PaymentUpdate.builder()
+                    .version(payment.getVersion())
+                    .actions(actions));
+        }
+
+        public ByProjectKeyPaymentsByIDPost update(
+                com.commercetools.api.models.Versioned<com.commercetools.api.models.payment.Payment> payment,
+                UnaryOperator<UpdateActionBuilder<com.commercetools.api.models.payment.PaymentUpdateAction, com.commercetools.api.models.payment.PaymentUpdateActionBuilder>> op) {
+            return withId(payment.getId()).post(builder -> com.commercetools.api.models.payment.PaymentUpdate.builder()
+                    .version(payment.getVersion())
+                    .actions(op.apply(UpdateActionBuilder
+                            .of(com.commercetools.api.models.payment.PaymentUpdateActionBuilder::of)).actions));
+        }
+
+        public WithUpdateActionBuilder<com.commercetools.api.models.payment.PaymentUpdateAction, com.commercetools.api.models.payment.PaymentUpdateActionBuilder, ByProjectKeyPaymentsByIDPost> update(
+                com.commercetools.api.models.Versioned<com.commercetools.api.models.payment.Payment> payment) {
+            return builder -> withId(payment.getId())
+                    .post(b -> com.commercetools.api.models.payment.PaymentUpdate.builder()
+                            .version(payment.getVersion())
+                            .actions(builder.apply(UpdateActionBuilder
+                                    .of(com.commercetools.api.models.payment.PaymentUpdateActionBuilder::of)).actions));
+        }
+
+        public ByProjectKeyPaymentsByIDDelete delete(
+                com.commercetools.api.models.Versioned<com.commercetools.api.models.payment.Payment> payment) {
+            return withId(payment.getId()).delete().withVersion(payment.getVersion());
+        }
+
+        public ByProjectKeyPaymentsPost create(com.commercetools.api.models.payment.PaymentDraft paymentDraft) {
+            return post(paymentDraft);
+        }
+
+        public ByProjectKeyPaymentsPost create(
+                UnaryOperator<com.commercetools.api.models.payment.PaymentDraftBuilder> op) {
+            return post(op.apply(com.commercetools.api.models.payment.PaymentDraftBuilder.of()).build());
+        }
+  /products:
+    (java-mixin): |
+        public ByProjectKeyProductsByIDPost update(
+                com.commercetools.api.models.Versioned<com.commercetools.api.models.product.Product> product,
+                java.util.List<com.commercetools.api.models.product.ProductUpdateAction> actions) {
+            return withId(product.getId()).post(builder -> com.commercetools.api.models.product.ProductUpdate.builder()
+                    .version(product.getVersion())
+                    .actions(actions));
+        }
+
+        public ByProjectKeyProductsByIDPost update(
+                com.commercetools.api.models.Versioned<com.commercetools.api.models.product.Product> product,
+                UnaryOperator<UpdateActionBuilder<com.commercetools.api.models.product.ProductUpdateAction, com.commercetools.api.models.product.ProductUpdateActionBuilder>> op) {
+            return withId(product.getId()).post(builder -> com.commercetools.api.models.product.ProductUpdate.builder()
+                    .version(product.getVersion())
+                    .actions(op.apply(UpdateActionBuilder
+                            .of(com.commercetools.api.models.product.ProductUpdateActionBuilder::of)).actions));
+        }
+
+        public WithUpdateActionBuilder<com.commercetools.api.models.product.ProductUpdateAction, com.commercetools.api.models.product.ProductUpdateActionBuilder, ByProjectKeyProductsByIDPost> update(
+                com.commercetools.api.models.Versioned<com.commercetools.api.models.product.Product> product) {
+            return builder -> withId(product.getId())
+                    .post(b -> com.commercetools.api.models.product.ProductUpdate.builder()
+                            .version(product.getVersion())
+                            .actions(builder.apply(UpdateActionBuilder
+                                    .of(com.commercetools.api.models.product.ProductUpdateActionBuilder::of)).actions));
+        }
+
+        public ByProjectKeyProductsByIDDelete delete(
+                com.commercetools.api.models.Versioned<com.commercetools.api.models.product.Product> product) {
+            return withId(product.getId()).delete().withVersion(product.getVersion());
+        }
+
+        public ByProjectKeyProductsPost create(com.commercetools.api.models.product.ProductDraft productDraft) {
+            return post(productDraft);
+        }
+
+        public ByProjectKeyProductsPost create(
+                UnaryOperator<com.commercetools.api.models.product.ProductDraftBuilder> op) {
+            return post(op.apply(com.commercetools.api.models.product.ProductDraftBuilder.of()).build());
+        }
+  /product-discounts:
+    (java-mixin): |
+        public ByProjectKeyProductDiscountsByIDPost update(
+                com.commercetools.api.models.Versioned<com.commercetools.api.models.product_discount.ProductDiscount> productDiscount,
+                java.util.List<com.commercetools.api.models.product_discount.ProductDiscountUpdateAction> actions) {
+            return withId(productDiscount.getId()).post(builder -> com.commercetools.api.models.product_discount.ProductDiscountUpdate.builder()
+                    .version(productDiscount.getVersion())
+                    .actions(actions));
+        }
+
+        public ByProjectKeyProductDiscountsByIDPost update(
+                com.commercetools.api.models.Versioned<com.commercetools.api.models.product_discount.ProductDiscount> productDiscount,
+                UnaryOperator<UpdateActionBuilder<com.commercetools.api.models.product_discount.ProductDiscountUpdateAction, com.commercetools.api.models.product_discount.ProductDiscountUpdateActionBuilder>> op) {
+            return withId(productDiscount.getId()).post(builder -> com.commercetools.api.models.product_discount.ProductDiscountUpdate.builder()
+                    .version(productDiscount.getVersion())
+                    .actions(op.apply(UpdateActionBuilder
+                            .of(com.commercetools.api.models.product_discount.ProductDiscountUpdateActionBuilder::of)).actions));
+        }
+
+        public WithUpdateActionBuilder<com.commercetools.api.models.product_discount.ProductDiscountUpdateAction, com.commercetools.api.models.product_discount.ProductDiscountUpdateActionBuilder, ByProjectKeyProductDiscountsByIDPost> update(
+                com.commercetools.api.models.Versioned<com.commercetools.api.models.product_discount.ProductDiscount> productDiscount) {
+            return builder -> withId(productDiscount.getId())
+                    .post(b -> com.commercetools.api.models.product_discount.ProductDiscountUpdate.builder()
+                            .version(productDiscount.getVersion())
+                            .actions(builder.apply(UpdateActionBuilder
+                                    .of(com.commercetools.api.models.product_discount.ProductDiscountUpdateActionBuilder::of)).actions));
+        }
+
+        public ByProjectKeyProductDiscountsByIDDelete delete(
+                com.commercetools.api.models.Versioned<com.commercetools.api.models.product_discount.ProductDiscount> productDiscount) {
+            return withId(productDiscount.getId()).delete().withVersion(productDiscount.getVersion());
+        }
+
+        public ByProjectKeyProductDiscountsPost create(com.commercetools.api.models.product_discount.ProductDiscountDraft productDiscountDraft) {
+            return post(productDiscountDraft);
+        }
+
+        public ByProjectKeyProductDiscountsPost create(
+                UnaryOperator<com.commercetools.api.models.product_discount.ProductDiscountDraftBuilder> op) {
+            return post(op.apply(com.commercetools.api.models.product_discount.ProductDiscountDraftBuilder.of()).build());
+        }
+  /product-types:
+    (java-mixin): |
+        public ByProjectKeyProductTypesByIDPost update(
+                com.commercetools.api.models.Versioned<com.commercetools.api.models.product_type.ProductType> productType,
+                java.util.List<com.commercetools.api.models.product_type.ProductTypeUpdateAction> actions) {
+            return withId(productType.getId()).post(builder -> com.commercetools.api.models.product_type.ProductTypeUpdate.builder()
+                    .version(productType.getVersion())
+                    .actions(actions));
+        }
+
+        public ByProjectKeyProductTypesByIDPost update(
+                com.commercetools.api.models.Versioned<com.commercetools.api.models.product_type.ProductType> productType,
+                UnaryOperator<UpdateActionBuilder<com.commercetools.api.models.product_type.ProductTypeUpdateAction, com.commercetools.api.models.product_type.ProductTypeUpdateActionBuilder>> op) {
+            return withId(productType.getId()).post(builder -> com.commercetools.api.models.product_type.ProductTypeUpdate.builder()
+                    .version(productType.getVersion())
+                    .actions(op.apply(UpdateActionBuilder
+                            .of(com.commercetools.api.models.product_type.ProductTypeUpdateActionBuilder::of)).actions));
+        }
+
+        public WithUpdateActionBuilder<com.commercetools.api.models.product_type.ProductTypeUpdateAction, com.commercetools.api.models.product_type.ProductTypeUpdateActionBuilder, ByProjectKeyProductTypesByIDPost> update(
+                com.commercetools.api.models.Versioned<com.commercetools.api.models.product_type.ProductType> productType) {
+            return builder -> withId(productType.getId())
+                    .post(b -> com.commercetools.api.models.product_type.ProductTypeUpdate.builder()
+                            .version(productType.getVersion())
+                            .actions(builder.apply(UpdateActionBuilder
+                                    .of(com.commercetools.api.models.product_type.ProductTypeUpdateActionBuilder::of)).actions));
+        }
+
+        public ByProjectKeyProductTypesByIDDelete delete(
+                com.commercetools.api.models.Versioned<com.commercetools.api.models.product_type.ProductType> productType) {
+            return withId(productType.getId()).delete().withVersion(productType.getVersion());
+        }
+
+        public ByProjectKeyProductTypesPost create(com.commercetools.api.models.product_type.ProductTypeDraft productTypeDraft) {
+            return post(productTypeDraft);
+        }
+
+        public ByProjectKeyProductTypesPost create(
+                UnaryOperator<com.commercetools.api.models.product_type.ProductTypeDraftBuilder> op) {
+            return post(op.apply(com.commercetools.api.models.product_type.ProductTypeDraftBuilder.of()).build());
+        }
+  /quotes:
+    (java-mixin): |
+        public ByProjectKeyQuotesByIDPost update(
+                com.commercetools.api.models.Versioned<com.commercetools.api.models.quote.Quote> quote,
+                java.util.List<com.commercetools.api.models.quote.QuoteUpdateAction> actions) {
+            return withId(quote.getId()).post(builder -> com.commercetools.api.models.quote.QuoteUpdate.builder()
+                    .version(quote.getVersion())
+                    .actions(actions));
+        }
+
+        public ByProjectKeyQuotesByIDPost update(
+                com.commercetools.api.models.Versioned<com.commercetools.api.models.quote.Quote> quote,
+                UnaryOperator<UpdateActionBuilder<com.commercetools.api.models.quote.QuoteUpdateAction, com.commercetools.api.models.quote.QuoteUpdateActionBuilder>> op) {
+            return withId(quote.getId()).post(builder -> com.commercetools.api.models.quote.QuoteUpdate.builder()
+                    .version(quote.getVersion())
+                    .actions(op.apply(UpdateActionBuilder
+                            .of(com.commercetools.api.models.quote.QuoteUpdateActionBuilder::of)).actions));
+        }
+
+        public WithUpdateActionBuilder<com.commercetools.api.models.quote.QuoteUpdateAction, com.commercetools.api.models.quote.QuoteUpdateActionBuilder, ByProjectKeyQuotesByIDPost> update(
+                com.commercetools.api.models.Versioned<com.commercetools.api.models.quote.Quote> quote) {
+            return builder -> withId(quote.getId())
+                    .post(b -> com.commercetools.api.models.quote.QuoteUpdate.builder()
+                            .version(quote.getVersion())
+                            .actions(builder.apply(UpdateActionBuilder
+                                    .of(com.commercetools.api.models.quote.QuoteUpdateActionBuilder::of)).actions));
+        }
+
+        public ByProjectKeyQuotesByIDDelete delete(
+                com.commercetools.api.models.Versioned<com.commercetools.api.models.quote.Quote> quote) {
+            return withId(quote.getId()).delete().withVersion(quote.getVersion());
+        }
+
+        public ByProjectKeyQuotesPost create(com.commercetools.api.models.quote.QuoteDraft quoteDraft) {
+            return post(quoteDraft);
+        }
+
+        public ByProjectKeyQuotesPost create(
+                UnaryOperator<com.commercetools.api.models.quote.QuoteDraftBuilder> op) {
+            return post(op.apply(com.commercetools.api.models.quote.QuoteDraftBuilder.of()).build());
+        }
+  /quote-requests:
+    (java-mixin): |
+        public ByProjectKeyQuoteRequestsByIDPost update(
+                com.commercetools.api.models.Versioned<com.commercetools.api.models.quote_request.QuoteRequest> quoteRequest,
+                java.util.List<com.commercetools.api.models.quote_request.QuoteRequestUpdateAction> actions) {
+            return withId(quoteRequest.getId()).post(builder -> com.commercetools.api.models.quote_request.QuoteRequestUpdate.builder()
+                    .version(quoteRequest.getVersion())
+                    .actions(actions));
+        }
+
+        public ByProjectKeyQuoteRequestsByIDPost update(
+                com.commercetools.api.models.Versioned<com.commercetools.api.models.quote_request.QuoteRequest> quoteRequest,
+                UnaryOperator<UpdateActionBuilder<com.commercetools.api.models.quote_request.QuoteRequestUpdateAction, com.commercetools.api.models.quote_request.QuoteRequestUpdateActionBuilder>> op) {
+            return withId(quoteRequest.getId()).post(builder -> com.commercetools.api.models.quote_request.QuoteRequestUpdate.builder()
+                    .version(quoteRequest.getVersion())
+                    .actions(op.apply(UpdateActionBuilder
+                            .of(com.commercetools.api.models.quote_request.QuoteRequestUpdateActionBuilder::of)).actions));
+        }
+
+        public WithUpdateActionBuilder<com.commercetools.api.models.quote_request.QuoteRequestUpdateAction, com.commercetools.api.models.quote_request.QuoteRequestUpdateActionBuilder, ByProjectKeyQuoteRequestsByIDPost> update(
+                com.commercetools.api.models.Versioned<com.commercetools.api.models.quote_request.QuoteRequest> quoteRequest) {
+            return builder -> withId(quoteRequest.getId())
+                    .post(b -> com.commercetools.api.models.quote_request.QuoteRequestUpdate.builder()
+                            .version(quoteRequest.getVersion())
+                            .actions(builder.apply(UpdateActionBuilder
+                                    .of(com.commercetools.api.models.quote_request.QuoteRequestUpdateActionBuilder::of)).actions));
+        }
+
+        public ByProjectKeyQuoteRequestsByIDDelete delete(
+                com.commercetools.api.models.Versioned<com.commercetools.api.models.quote_request.QuoteRequest> quoteRequest) {
+            return withId(quoteRequest.getId()).delete().withVersion(quoteRequest.getVersion());
+        }
+
+        public ByProjectKeyQuoteRequestsPost create(com.commercetools.api.models.quote_request.QuoteRequestDraft quoteRequestDraft) {
+            return post(quoteRequestDraft);
+        }
+
+        public ByProjectKeyQuoteRequestsPost create(
+                UnaryOperator<com.commercetools.api.models.quote_request.QuoteRequestDraftBuilder> op) {
+            return post(op.apply(com.commercetools.api.models.quote_request.QuoteRequestDraftBuilder.of()).build());
+        }
+  /staged-quotes:
+    (java-mixin): |
+        public ByProjectKeyStagedQuotesByIDPost update(
+                com.commercetools.api.models.Versioned<com.commercetools.api.models.staged_quote.StagedQuote> stagedQuote,
+                java.util.List<com.commercetools.api.models.staged_quote.StagedQuoteUpdateAction> actions) {
+            return withId(stagedQuote.getId()).post(builder -> com.commercetools.api.models.staged_quote.StagedQuoteUpdate.builder()
+                    .version(stagedQuote.getVersion())
+                    .actions(actions));
+        }
+
+        public ByProjectKeyStagedQuotesByIDPost update(
+                com.commercetools.api.models.Versioned<com.commercetools.api.models.staged_quote.StagedQuote> stagedQuote,
+                UnaryOperator<UpdateActionBuilder<com.commercetools.api.models.staged_quote.StagedQuoteUpdateAction, com.commercetools.api.models.staged_quote.StagedQuoteUpdateActionBuilder>> op) {
+            return withId(stagedQuote.getId()).post(builder -> com.commercetools.api.models.staged_quote.StagedQuoteUpdate.builder()
+                    .version(stagedQuote.getVersion())
+                    .actions(op.apply(UpdateActionBuilder
+                            .of(com.commercetools.api.models.staged_quote.StagedQuoteUpdateActionBuilder::of)).actions));
+        }
+
+        public WithUpdateActionBuilder<com.commercetools.api.models.staged_quote.StagedQuoteUpdateAction, com.commercetools.api.models.staged_quote.StagedQuoteUpdateActionBuilder, ByProjectKeyStagedQuotesByIDPost> update(
+                com.commercetools.api.models.Versioned<com.commercetools.api.models.staged_quote.StagedQuote> stagedQuote) {
+            return builder -> withId(stagedQuote.getId())
+                    .post(b -> com.commercetools.api.models.staged_quote.StagedQuoteUpdate.builder()
+                            .version(stagedQuote.getVersion())
+                            .actions(builder.apply(UpdateActionBuilder
+                                    .of(com.commercetools.api.models.staged_quote.StagedQuoteUpdateActionBuilder::of)).actions));
+        }
+
+        public ByProjectKeyStagedQuotesByIDDelete delete(
+                com.commercetools.api.models.Versioned<com.commercetools.api.models.staged_quote.StagedQuote> stagedQuote) {
+            return withId(stagedQuote.getId()).delete().withVersion(stagedQuote.getVersion());
+        }
+
+        public ByProjectKeyStagedQuotesPost create(com.commercetools.api.models.staged_quote.StagedQuoteDraft stagedQuoteDraft) {
+            return post(stagedQuoteDraft);
+        }
+
+        public ByProjectKeyStagedQuotesPost create(
+                UnaryOperator<com.commercetools.api.models.staged_quote.StagedQuoteDraftBuilder> op) {
+            return post(op.apply(com.commercetools.api.models.staged_quote.StagedQuoteDraftBuilder.of()).build());
+        }
+  /reviews:
+    (java-mixin): |
+        public ByProjectKeyReviewsByIDPost update(
+                com.commercetools.api.models.Versioned<com.commercetools.api.models.review.Review> review,
+                java.util.List<com.commercetools.api.models.review.ReviewUpdateAction> actions) {
+            return withId(review.getId()).post(builder -> com.commercetools.api.models.review.ReviewUpdate.builder()
+                    .version(review.getVersion())
+                    .actions(actions));
+        }
+
+        public ByProjectKeyReviewsByIDPost update(
+                com.commercetools.api.models.Versioned<com.commercetools.api.models.review.Review> review,
+                UnaryOperator<UpdateActionBuilder<com.commercetools.api.models.review.ReviewUpdateAction, com.commercetools.api.models.review.ReviewUpdateActionBuilder>> op) {
+            return withId(review.getId()).post(builder -> com.commercetools.api.models.review.ReviewUpdate.builder()
+                    .version(review.getVersion())
+                    .actions(op.apply(UpdateActionBuilder
+                            .of(com.commercetools.api.models.review.ReviewUpdateActionBuilder::of)).actions));
+        }
+
+        public WithUpdateActionBuilder<com.commercetools.api.models.review.ReviewUpdateAction, com.commercetools.api.models.review.ReviewUpdateActionBuilder, ByProjectKeyReviewsByIDPost> update(
+                com.commercetools.api.models.Versioned<com.commercetools.api.models.review.Review> review) {
+            return builder -> withId(review.getId())
+                    .post(b -> com.commercetools.api.models.review.ReviewUpdate.builder()
+                            .version(review.getVersion())
+                            .actions(builder.apply(UpdateActionBuilder
+                                    .of(com.commercetools.api.models.review.ReviewUpdateActionBuilder::of)).actions));
+        }
+
+        public ByProjectKeyReviewsByIDDelete delete(
+                com.commercetools.api.models.Versioned<com.commercetools.api.models.review.Review> review) {
+            return withId(review.getId()).delete().withVersion(review.getVersion());
+        }
+
+        public ByProjectKeyReviewsPost create(com.commercetools.api.models.review.ReviewDraft reviewDraft) {
+            return post(reviewDraft);
+        }
+
+        public ByProjectKeyReviewsPost create(
+                UnaryOperator<com.commercetools.api.models.review.ReviewDraftBuilder> op) {
+            return post(op.apply(com.commercetools.api.models.review.ReviewDraftBuilder.of()).build());
+        }
+  /shipping-methods:
+    (java-mixin): |
+        public ByProjectKeyShippingMethodsByIDPost update(
+                com.commercetools.api.models.Versioned<com.commercetools.api.models.shipping_method.ShippingMethod> shippingMethod,
+                java.util.List<com.commercetools.api.models.shipping_method.ShippingMethodUpdateAction> actions) {
+            return withId(shippingMethod.getId()).post(builder -> com.commercetools.api.models.shipping_method.ShippingMethodUpdate.builder()
+                    .version(shippingMethod.getVersion())
+                    .actions(actions));
+        }
+
+        public ByProjectKeyShippingMethodsByIDPost update(
+                com.commercetools.api.models.Versioned<com.commercetools.api.models.shipping_method.ShippingMethod> shippingMethod,
+                UnaryOperator<UpdateActionBuilder<com.commercetools.api.models.shipping_method.ShippingMethodUpdateAction, com.commercetools.api.models.shipping_method.ShippingMethodUpdateActionBuilder>> op) {
+            return withId(shippingMethod.getId()).post(builder -> com.commercetools.api.models.shipping_method.ShippingMethodUpdate.builder()
+                    .version(shippingMethod.getVersion())
+                    .actions(op.apply(UpdateActionBuilder
+                            .of(com.commercetools.api.models.shipping_method.ShippingMethodUpdateActionBuilder::of)).actions));
+        }
+
+        public WithUpdateActionBuilder<com.commercetools.api.models.shipping_method.ShippingMethodUpdateAction, com.commercetools.api.models.shipping_method.ShippingMethodUpdateActionBuilder, ByProjectKeyShippingMethodsByIDPost> update(
+                com.commercetools.api.models.Versioned<com.commercetools.api.models.shipping_method.ShippingMethod> shippingMethod) {
+            return builder -> withId(shippingMethod.getId())
+                    .post(b -> com.commercetools.api.models.shipping_method.ShippingMethodUpdate.builder()
+                            .version(shippingMethod.getVersion())
+                            .actions(builder.apply(UpdateActionBuilder
+                                    .of(com.commercetools.api.models.shipping_method.ShippingMethodUpdateActionBuilder::of)).actions));
+        }
+
+        public ByProjectKeyShippingMethodsByIDDelete delete(
+                com.commercetools.api.models.Versioned<com.commercetools.api.models.shipping_method.ShippingMethod> shippingMethod) {
+            return withId(shippingMethod.getId()).delete().withVersion(shippingMethod.getVersion());
+        }
+
+        public ByProjectKeyShippingMethodsPost create(com.commercetools.api.models.shipping_method.ShippingMethodDraft shippingMethodDraft) {
+            return post(shippingMethodDraft);
+        }
+
+        public ByProjectKeyShippingMethodsPost create(
+                UnaryOperator<com.commercetools.api.models.shipping_method.ShippingMethodDraftBuilder> op) {
+            return post(op.apply(com.commercetools.api.models.shipping_method.ShippingMethodDraftBuilder.of()).build());
+        }
+  /shopping-lists:
+    (java-mixin): |
+        public ByProjectKeyShoppingListsByIDPost update(
+                com.commercetools.api.models.Versioned<com.commercetools.api.models.shopping_list.ShoppingList> shoppingList,
+                java.util.List<com.commercetools.api.models.shopping_list.ShoppingListUpdateAction> actions) {
+            return withId(shoppingList.getId()).post(builder -> com.commercetools.api.models.shopping_list.ShoppingListUpdate.builder()
+                    .version(shoppingList.getVersion())
+                    .actions(actions));
+        }
+
+        public ByProjectKeyShoppingListsByIDPost update(
+                com.commercetools.api.models.Versioned<com.commercetools.api.models.shopping_list.ShoppingList> shoppingList,
+                UnaryOperator<UpdateActionBuilder<com.commercetools.api.models.shopping_list.ShoppingListUpdateAction, com.commercetools.api.models.shopping_list.ShoppingListUpdateActionBuilder>> op) {
+            return withId(shoppingList.getId()).post(builder -> com.commercetools.api.models.shopping_list.ShoppingListUpdate.builder()
+                    .version(shoppingList.getVersion())
+                    .actions(op.apply(UpdateActionBuilder
+                            .of(com.commercetools.api.models.shopping_list.ShoppingListUpdateActionBuilder::of)).actions));
+        }
+
+        public WithUpdateActionBuilder<com.commercetools.api.models.shopping_list.ShoppingListUpdateAction, com.commercetools.api.models.shopping_list.ShoppingListUpdateActionBuilder, ByProjectKeyShoppingListsByIDPost> update(
+                com.commercetools.api.models.Versioned<com.commercetools.api.models.shopping_list.ShoppingList> shoppingList) {
+            return builder -> withId(shoppingList.getId())
+                    .post(b -> com.commercetools.api.models.shopping_list.ShoppingListUpdate.builder()
+                            .version(shoppingList.getVersion())
+                            .actions(builder.apply(UpdateActionBuilder
+                                    .of(com.commercetools.api.models.shopping_list.ShoppingListUpdateActionBuilder::of)).actions));
+        }
+
+        public ByProjectKeyShoppingListsByIDDelete delete(
+                com.commercetools.api.models.Versioned<com.commercetools.api.models.shopping_list.ShoppingList> shoppingList) {
+            return withId(shoppingList.getId()).delete().withVersion(shoppingList.getVersion());
+        }
+
+        public ByProjectKeyShoppingListsPost create(com.commercetools.api.models.shopping_list.ShoppingListDraft shoppingListDraft) {
+            return post(shoppingListDraft);
+        }
+
+        public ByProjectKeyShoppingListsPost create(
+                UnaryOperator<com.commercetools.api.models.shopping_list.ShoppingListDraftBuilder> op) {
+            return post(op.apply(com.commercetools.api.models.shopping_list.ShoppingListDraftBuilder.of()).build());
+        }
+  /states:
+    (java-mixin): |
+        public ByProjectKeyStatesByIDPost update(
+                com.commercetools.api.models.Versioned<com.commercetools.api.models.state.State> state,
+                java.util.List<com.commercetools.api.models.state.StateUpdateAction> actions) {
+            return withId(state.getId()).post(builder -> com.commercetools.api.models.state.StateUpdate.builder()
+                    .version(state.getVersion())
+                    .actions(actions));
+        }
+
+        public ByProjectKeyStatesByIDPost update(
+                com.commercetools.api.models.Versioned<com.commercetools.api.models.state.State> state,
+                UnaryOperator<UpdateActionBuilder<com.commercetools.api.models.state.StateUpdateAction, com.commercetools.api.models.state.StateUpdateActionBuilder>> op) {
+            return withId(state.getId()).post(builder -> com.commercetools.api.models.state.StateUpdate.builder()
+                    .version(state.getVersion())
+                    .actions(op.apply(UpdateActionBuilder
+                            .of(com.commercetools.api.models.state.StateUpdateActionBuilder::of)).actions));
+        }
+
+        public WithUpdateActionBuilder<com.commercetools.api.models.state.StateUpdateAction, com.commercetools.api.models.state.StateUpdateActionBuilder, ByProjectKeyStatesByIDPost> update(
+                com.commercetools.api.models.Versioned<com.commercetools.api.models.state.State> state) {
+            return builder -> withId(state.getId())
+                    .post(b -> com.commercetools.api.models.state.StateUpdate.builder()
+                            .version(state.getVersion())
+                            .actions(builder.apply(UpdateActionBuilder
+                                    .of(com.commercetools.api.models.state.StateUpdateActionBuilder::of)).actions));
+        }
+
+        public ByProjectKeyStatesByIDDelete delete(
+                com.commercetools.api.models.Versioned<com.commercetools.api.models.state.State> state) {
+            return withId(state.getId()).delete().withVersion(state.getVersion());
+        }
+
+        public ByProjectKeyStatesPost create(com.commercetools.api.models.state.StateDraft stateDraft) {
+            return post(stateDraft);
+        }
+
+        public ByProjectKeyStatesPost create(
+                UnaryOperator<com.commercetools.api.models.state.StateDraftBuilder> op) {
+            return post(op.apply(com.commercetools.api.models.state.StateDraftBuilder.of()).build());
+        }
+  /subscriptions:
+    (java-mixin): |
+        public ByProjectKeySubscriptionsByIDPost update(
+                com.commercetools.api.models.Versioned<com.commercetools.api.models.subscription.Subscription> subscription,
+                java.util.List<com.commercetools.api.models.subscription.SubscriptionUpdateAction> actions) {
+            return withId(subscription.getId()).post(builder -> com.commercetools.api.models.subscription.SubscriptionUpdate.builder()
+                    .version(subscription.getVersion())
+                    .actions(actions));
+        }
+
+        public ByProjectKeySubscriptionsByIDPost update(
+                com.commercetools.api.models.Versioned<com.commercetools.api.models.subscription.Subscription> subscription,
+                UnaryOperator<UpdateActionBuilder<com.commercetools.api.models.subscription.SubscriptionUpdateAction, com.commercetools.api.models.subscription.SubscriptionUpdateActionBuilder>> op) {
+            return withId(subscription.getId()).post(builder -> com.commercetools.api.models.subscription.SubscriptionUpdate.builder()
+                    .version(subscription.getVersion())
+                    .actions(op.apply(UpdateActionBuilder
+                            .of(com.commercetools.api.models.subscription.SubscriptionUpdateActionBuilder::of)).actions));
+        }
+
+        public WithUpdateActionBuilder<com.commercetools.api.models.subscription.SubscriptionUpdateAction, com.commercetools.api.models.subscription.SubscriptionUpdateActionBuilder, ByProjectKeySubscriptionsByIDPost> update(
+                com.commercetools.api.models.Versioned<com.commercetools.api.models.subscription.Subscription> subscription) {
+            return builder -> withId(subscription.getId())
+                    .post(b -> com.commercetools.api.models.subscription.SubscriptionUpdate.builder()
+                            .version(subscription.getVersion())
+                            .actions(builder.apply(UpdateActionBuilder
+                                    .of(com.commercetools.api.models.subscription.SubscriptionUpdateActionBuilder::of)).actions));
+        }
+
+        public ByProjectKeySubscriptionsByIDDelete delete(
+                com.commercetools.api.models.Versioned<com.commercetools.api.models.subscription.Subscription> subscription) {
+            return withId(subscription.getId()).delete().withVersion(subscription.getVersion());
+        }
+
+        public ByProjectKeySubscriptionsPost create(com.commercetools.api.models.subscription.SubscriptionDraft subscriptionDraft) {
+            return post(subscriptionDraft);
+        }
+
+        public ByProjectKeySubscriptionsPost create(
+                UnaryOperator<com.commercetools.api.models.subscription.SubscriptionDraftBuilder> op) {
+            return post(op.apply(com.commercetools.api.models.subscription.SubscriptionDraftBuilder.of()).build());
+        }
+  /tax-categories:
+    (java-mixin): |
+        public ByProjectKeyTaxCategoriesByIDPost update(
+                com.commercetools.api.models.Versioned<com.commercetools.api.models.tax_category.TaxCategory> taxCategory,
+                java.util.List<com.commercetools.api.models.tax_category.TaxCategoryUpdateAction> actions) {
+            return withId(taxCategory.getId()).post(builder -> com.commercetools.api.models.tax_category.TaxCategoryUpdate.builder()
+                    .version(taxCategory.getVersion())
+                    .actions(actions));
+        }
+
+        public ByProjectKeyTaxCategoriesByIDPost update(
+                com.commercetools.api.models.Versioned<com.commercetools.api.models.tax_category.TaxCategory> taxCategory,
+                UnaryOperator<UpdateActionBuilder<com.commercetools.api.models.tax_category.TaxCategoryUpdateAction, com.commercetools.api.models.tax_category.TaxCategoryUpdateActionBuilder>> op) {
+            return withId(taxCategory.getId()).post(builder -> com.commercetools.api.models.tax_category.TaxCategoryUpdate.builder()
+                    .version(taxCategory.getVersion())
+                    .actions(op.apply(UpdateActionBuilder
+                            .of(com.commercetools.api.models.tax_category.TaxCategoryUpdateActionBuilder::of)).actions));
+        }
+
+        public WithUpdateActionBuilder<com.commercetools.api.models.tax_category.TaxCategoryUpdateAction, com.commercetools.api.models.tax_category.TaxCategoryUpdateActionBuilder, ByProjectKeyTaxCategoriesByIDPost> update(
+                com.commercetools.api.models.Versioned<com.commercetools.api.models.tax_category.TaxCategory> taxCategory) {
+            return builder -> withId(taxCategory.getId())
+                    .post(b -> com.commercetools.api.models.tax_category.TaxCategoryUpdate.builder()
+                            .version(taxCategory.getVersion())
+                            .actions(builder.apply(UpdateActionBuilder
+                                    .of(com.commercetools.api.models.tax_category.TaxCategoryUpdateActionBuilder::of)).actions));
+        }
+
+        public ByProjectKeyTaxCategoriesByIDDelete delete(
+                com.commercetools.api.models.Versioned<com.commercetools.api.models.tax_category.TaxCategory> taxCategory) {
+            return withId(taxCategory.getId()).delete().withVersion(taxCategory.getVersion());
+        }
+
+        public ByProjectKeyTaxCategoriesPost create(com.commercetools.api.models.tax_category.TaxCategoryDraft taxCategoryDraft) {
+            return post(taxCategoryDraft);
+        }
+
+        public ByProjectKeyTaxCategoriesPost create(
+                UnaryOperator<com.commercetools.api.models.tax_category.TaxCategoryDraftBuilder> op) {
+            return post(op.apply(com.commercetools.api.models.tax_category.TaxCategoryDraftBuilder.of()).build());
+        }
+  /types:
+    (java-mixin): |
+        public ByProjectKeyTypesByIDPost update(
+                com.commercetools.api.models.Versioned<com.commercetools.api.models.type.Type> type,
+                java.util.List<com.commercetools.api.models.type.TypeUpdateAction> actions) {
+            return withId(type.getId()).post(builder -> com.commercetools.api.models.type.TypeUpdate.builder()
+                    .version(type.getVersion())
+                    .actions(actions));
+        }
+
+        public ByProjectKeyTypesByIDPost update(
+                com.commercetools.api.models.Versioned<com.commercetools.api.models.type.Type> type,
+                UnaryOperator<UpdateActionBuilder<com.commercetools.api.models.type.TypeUpdateAction, com.commercetools.api.models.type.TypeUpdateActionBuilder>> op) {
+            return withId(type.getId()).post(builder -> com.commercetools.api.models.type.TypeUpdate.builder()
+                    .version(type.getVersion())
+                    .actions(op.apply(UpdateActionBuilder
+                            .of(com.commercetools.api.models.type.TypeUpdateActionBuilder::of)).actions));
+        }
+
+        public WithUpdateActionBuilder<com.commercetools.api.models.type.TypeUpdateAction, com.commercetools.api.models.type.TypeUpdateActionBuilder, ByProjectKeyTypesByIDPost> update(
+                com.commercetools.api.models.Versioned<com.commercetools.api.models.type.Type> type) {
+            return builder -> withId(type.getId())
+                    .post(b -> com.commercetools.api.models.type.TypeUpdate.builder()
+                            .version(type.getVersion())
+                            .actions(builder.apply(UpdateActionBuilder
+                                    .of(com.commercetools.api.models.type.TypeUpdateActionBuilder::of)).actions));
+        }
+
+        public ByProjectKeyTypesByIDDelete delete(
+                com.commercetools.api.models.Versioned<com.commercetools.api.models.type.Type> type) {
+            return withId(type.getId()).delete().withVersion(type.getVersion());
+        }
+
+        public ByProjectKeyTypesPost create(com.commercetools.api.models.type.TypeDraft typeDraft) {
+            return post(typeDraft);
+        }
+
+        public ByProjectKeyTypesPost create(
+                UnaryOperator<com.commercetools.api.models.type.TypeDraftBuilder> op) {
+            return post(op.apply(com.commercetools.api.models.type.TypeDraftBuilder.of()).build());
+        }
+  /zones:
+    (java-mixin): |
+        public ByProjectKeyZonesByIDPost update(
+                com.commercetools.api.models.Versioned<com.commercetools.api.models.zone.Zone> zone,
+                java.util.List<com.commercetools.api.models.zone.ZoneUpdateAction> actions) {
+            return withId(zone.getId()).post(builder -> com.commercetools.api.models.zone.ZoneUpdate.builder()
+                    .version(zone.getVersion())
+                    .actions(actions));
+        }
+
+        public ByProjectKeyZonesByIDPost update(
+                com.commercetools.api.models.Versioned<com.commercetools.api.models.zone.Zone> zone,
+                UnaryOperator<UpdateActionBuilder<com.commercetools.api.models.zone.ZoneUpdateAction, com.commercetools.api.models.zone.ZoneUpdateActionBuilder>> op) {
+            return withId(zone.getId()).post(builder -> com.commercetools.api.models.zone.ZoneUpdate.builder()
+                    .version(zone.getVersion())
+                    .actions(op.apply(UpdateActionBuilder
+                            .of(com.commercetools.api.models.zone.ZoneUpdateActionBuilder::of)).actions));
+        }
+
+        public WithUpdateActionBuilder<com.commercetools.api.models.zone.ZoneUpdateAction, com.commercetools.api.models.zone.ZoneUpdateActionBuilder, ByProjectKeyZonesByIDPost> update(
+                com.commercetools.api.models.Versioned<com.commercetools.api.models.zone.Zone> zone) {
+            return builder -> withId(zone.getId())
+                    .post(b -> com.commercetools.api.models.zone.ZoneUpdate.builder()
+                            .version(zone.getVersion())
+                            .actions(builder.apply(UpdateActionBuilder
+                                    .of(com.commercetools.api.models.zone.ZoneUpdateActionBuilder::of)).actions));
+        }
+
+        public ByProjectKeyZonesByIDDelete delete(
+                com.commercetools.api.models.Versioned<com.commercetools.api.models.zone.Zone> zone) {
+            return withId(zone.getId()).delete().withVersion(zone.getVersion());
+        }
+
+        public ByProjectKeyZonesPost create(com.commercetools.api.models.zone.ZoneDraft zoneDraft) {
+            return post(zoneDraft);
+        }
+
+        public ByProjectKeyZonesPost create(
+                UnaryOperator<com.commercetools.api.models.zone.ZoneDraftBuilder> op) {
+            return post(op.apply(com.commercetools.api.models.zone.ZoneDraftBuilder.of()).build());
+        }
+  /extensions:
+    (java-mixin): |
+        public ByProjectKeyExtensionsByIDPost update(
+                com.commercetools.api.models.Versioned<com.commercetools.api.models.extension.Extension> extension,
+                java.util.List<com.commercetools.api.models.extension.ExtensionUpdateAction> actions) {
+            return withId(extension.getId()).post(builder -> com.commercetools.api.models.extension.ExtensionUpdate.builder()
+                    .version(extension.getVersion())
+                    .actions(actions));
+        }
+
+        public ByProjectKeyExtensionsByIDPost update(
+                com.commercetools.api.models.Versioned<com.commercetools.api.models.extension.Extension> extension,
+                UnaryOperator<UpdateActionBuilder<com.commercetools.api.models.extension.ExtensionUpdateAction, com.commercetools.api.models.extension.ExtensionUpdateActionBuilder>> op) {
+            return withId(extension.getId()).post(builder -> com.commercetools.api.models.extension.ExtensionUpdate.builder()
+                    .version(extension.getVersion())
+                    .actions(op.apply(UpdateActionBuilder
+                            .of(com.commercetools.api.models.extension.ExtensionUpdateActionBuilder::of)).actions));
+        }
+
+        public WithUpdateActionBuilder<com.commercetools.api.models.extension.ExtensionUpdateAction, com.commercetools.api.models.extension.ExtensionUpdateActionBuilder, ByProjectKeyExtensionsByIDPost> update(
+                com.commercetools.api.models.Versioned<com.commercetools.api.models.extension.Extension> extension) {
+            return builder -> withId(extension.getId())
+                    .post(b -> com.commercetools.api.models.extension.ExtensionUpdate.builder()
+                            .version(extension.getVersion())
+                            .actions(builder.apply(UpdateActionBuilder
+                                    .of(com.commercetools.api.models.extension.ExtensionUpdateActionBuilder::of)).actions));
+        }
+
+        public ByProjectKeyExtensionsByIDDelete delete(
+                com.commercetools.api.models.Versioned<com.commercetools.api.models.extension.Extension> extension) {
+            return withId(extension.getId()).delete().withVersion(extension.getVersion());
+        }
+
+        public ByProjectKeyExtensionsPost create(com.commercetools.api.models.extension.ExtensionDraft extensionDraft) {
+            return post(extensionDraft);
+        }
+
+        public ByProjectKeyExtensionsPost create(
+                UnaryOperator<com.commercetools.api.models.extension.ExtensionDraftBuilder> op) {
+            return post(op.apply(com.commercetools.api.models.extension.ExtensionDraftBuilder.of()).build());
+        }
+  /stores:
+    (java-mixin): |
+        public ByProjectKeyStoresByIDPost update(
+                com.commercetools.api.models.Versioned<com.commercetools.api.models.store.Store> store,
+                java.util.List<com.commercetools.api.models.store.StoreUpdateAction> actions) {
+            return withId(store.getId()).post(builder -> com.commercetools.api.models.store.StoreUpdate.builder()
+                    .version(store.getVersion())
+                    .actions(actions));
+        }
+
+        public ByProjectKeyStoresByIDPost update(
+                com.commercetools.api.models.Versioned<com.commercetools.api.models.store.Store> store,
+                UnaryOperator<UpdateActionBuilder<com.commercetools.api.models.store.StoreUpdateAction, com.commercetools.api.models.store.StoreUpdateActionBuilder>> op) {
+            return withId(store.getId()).post(builder -> com.commercetools.api.models.store.StoreUpdate.builder()
+                    .version(store.getVersion())
+                    .actions(op.apply(UpdateActionBuilder
+                            .of(com.commercetools.api.models.store.StoreUpdateActionBuilder::of)).actions));
+        }
+
+        public WithUpdateActionBuilder<com.commercetools.api.models.store.StoreUpdateAction, com.commercetools.api.models.store.StoreUpdateActionBuilder, ByProjectKeyStoresByIDPost> update(
+                com.commercetools.api.models.Versioned<com.commercetools.api.models.store.Store> store) {
+            return builder -> withId(store.getId())
+                    .post(b -> com.commercetools.api.models.store.StoreUpdate.builder()
+                            .version(store.getVersion())
+                            .actions(builder.apply(UpdateActionBuilder
+                                    .of(com.commercetools.api.models.store.StoreUpdateActionBuilder::of)).actions));
+        }
+
+        public ByProjectKeyStoresByIDDelete delete(
+                com.commercetools.api.models.Versioned<com.commercetools.api.models.store.Store> store) {
+            return withId(store.getId()).delete().withVersion(store.getVersion());
+        }
+
+        public ByProjectKeyStoresPost create(com.commercetools.api.models.store.StoreDraft storeDraft) {
+            return post(storeDraft);
+        }
+
+        public ByProjectKeyStoresPost create(
+                UnaryOperator<com.commercetools.api.models.store.StoreDraftBuilder> op) {
+            return post(op.apply(com.commercetools.api.models.store.StoreDraftBuilder.of()).build());
+        }
+  /standalone-prices:
+    (java-mixin): |
+        public ByProjectKeyStandalonePricesByIDPost update(
+                com.commercetools.api.models.Versioned<com.commercetools.api.models.standalone_price.StandalonePrice> standalonePrice,
+                java.util.List<com.commercetools.api.models.standalone_price.StandalonePriceUpdateAction> actions) {
+            return withId(standalonePrice.getId()).post(builder -> com.commercetools.api.models.standalone_price.StandalonePriceUpdate.builder()
+                    .version(standalonePrice.getVersion())
+                    .actions(actions));
+        }
+
+        public ByProjectKeyStandalonePricesByIDPost update(
+                com.commercetools.api.models.Versioned<com.commercetools.api.models.standalone_price.StandalonePrice> standalonePrice,
+                UnaryOperator<UpdateActionBuilder<com.commercetools.api.models.standalone_price.StandalonePriceUpdateAction, com.commercetools.api.models.standalone_price.StandalonePriceUpdateActionBuilder>> op) {
+            return withId(standalonePrice.getId()).post(builder -> com.commercetools.api.models.standalone_price.StandalonePriceUpdate.builder()
+                    .version(standalonePrice.getVersion())
+                    .actions(op.apply(UpdateActionBuilder
+                            .of(com.commercetools.api.models.standalone_price.StandalonePriceUpdateActionBuilder::of)).actions));
+        }
+
+        public WithUpdateActionBuilder<com.commercetools.api.models.standalone_price.StandalonePriceUpdateAction, com.commercetools.api.models.standalone_price.StandalonePriceUpdateActionBuilder, ByProjectKeyStandalonePricesByIDPost> update(
+                com.commercetools.api.models.Versioned<com.commercetools.api.models.standalone_price.StandalonePrice> standalonePrice) {
+            return builder -> withId(standalonePrice.getId())
+                    .post(b -> com.commercetools.api.models.standalone_price.StandalonePriceUpdate.builder()
+                            .version(standalonePrice.getVersion())
+                            .actions(builder.apply(UpdateActionBuilder
+                                    .of(com.commercetools.api.models.standalone_price.StandalonePriceUpdateActionBuilder::of)).actions));
+        }
+
+        public ByProjectKeyStandalonePricesByIDDelete delete(
+                com.commercetools.api.models.Versioned<com.commercetools.api.models.standalone_price.StandalonePrice> standalonePrice) {
+            return withId(standalonePrice.getId()).delete().withVersion(standalonePrice.getVersion());
+        }
+
+        public ByProjectKeyStandalonePricesPost create(com.commercetools.api.models.standalone_price.StandalonePriceDraft standalonePriceDraft) {
+            return post(standalonePriceDraft);
+        }
+
+        public ByProjectKeyStandalonePricesPost create(
+                UnaryOperator<com.commercetools.api.models.standalone_price.StandalonePriceDraftBuilder> op) {
+            return post(op.apply(com.commercetools.api.models.standalone_price.StandalonePriceDraftBuilder.of()).build());
+        }
+  /attribute-groups:
+    (java-mixin): |
+        public ByProjectKeyAttributeGroupsByIDPost update(
+                com.commercetools.api.models.Versioned<com.commercetools.api.models.attribute_group.AttributeGroup> attributeGroup,
+                java.util.List<com.commercetools.api.models.attribute_group.AttributeGroupUpdateAction> actions) {
+            return withId(attributeGroup.getId()).post(builder -> com.commercetools.api.models.attribute_group.AttributeGroupUpdate.builder()
+                    .version(attributeGroup.getVersion())
+                    .actions(actions));
+        }
+
+        public ByProjectKeyAttributeGroupsByIDPost update(
+                com.commercetools.api.models.Versioned<com.commercetools.api.models.attribute_group.AttributeGroup> attributeGroup,
+                UnaryOperator<UpdateActionBuilder<com.commercetools.api.models.attribute_group.AttributeGroupUpdateAction, com.commercetools.api.models.attribute_group.AttributeGroupUpdateActionBuilder>> op) {
+            return withId(attributeGroup.getId()).post(builder -> com.commercetools.api.models.attribute_group.AttributeGroupUpdate.builder()
+                    .version(attributeGroup.getVersion())
+                    .actions(op.apply(UpdateActionBuilder
+                            .of(com.commercetools.api.models.attribute_group.AttributeGroupUpdateActionBuilder::of)).actions));
+        }
+
+        public WithUpdateActionBuilder<com.commercetools.api.models.attribute_group.AttributeGroupUpdateAction, com.commercetools.api.models.attribute_group.AttributeGroupUpdateActionBuilder, ByProjectKeyAttributeGroupsByIDPost> update(
+                com.commercetools.api.models.Versioned<com.commercetools.api.models.attribute_group.AttributeGroup> attributeGroup) {
+            return builder -> withId(attributeGroup.getId())
+                    .post(b -> com.commercetools.api.models.attribute_group.AttributeGroupUpdate.builder()
+                            .version(attributeGroup.getVersion())
+                            .actions(builder.apply(UpdateActionBuilder
+                                    .of(com.commercetools.api.models.attribute_group.AttributeGroupUpdateActionBuilder::of)).actions));
+        }
+
+        public ByProjectKeyAttributeGroupsByIDDelete delete(
+                com.commercetools.api.models.Versioned<com.commercetools.api.models.attribute_group.AttributeGroup> attributeGroup) {
+            return withId(attributeGroup.getId()).delete().withVersion(attributeGroup.getVersion());
+        }
+
+        public ByProjectKeyAttributeGroupsPost create(com.commercetools.api.models.attribute_group.AttributeGroupDraft attributeGroupDraft) {
+            return post(attributeGroupDraft);
+        }
+
+        public ByProjectKeyAttributeGroupsPost create(
+                UnaryOperator<com.commercetools.api.models.attribute_group.AttributeGroupDraftBuilder> op) {
+            return post(op.apply(com.commercetools.api.models.attribute_group.AttributeGroupDraftBuilder.of()).build());
+        }
+  /api-clients:
+    (java-mixin): |
+        public ByProjectKeyApiClientsByIDDelete delete(
+                com.commercetools.api.models.Versioned<com.commercetools.api.models.api_client.ApiClient> apiClient) {
+            return withId(apiClient.getId()).delete().withVersion(apiClient.getVersion());
+        }
+
+        public ByProjectKeyApiClientsPost create(com.commercetools.api.models.api_client.ApiClientDraft apiClientDraft) {
+            return post(apiClientDraft);
+        }
+
+        public ByProjectKeyApiClientsPost create(
+                UnaryOperator<com.commercetools.api.models.api_client.ApiClientDraftBuilder> op) {
+            return post(op.apply(com.commercetools.api.models.api_client.ApiClientDraftBuilder.of()).build());
+        }

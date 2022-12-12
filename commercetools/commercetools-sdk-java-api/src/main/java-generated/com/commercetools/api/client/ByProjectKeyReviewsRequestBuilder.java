@@ -36,4 +36,43 @@ public class ByProjectKeyReviewsRequestBuilder {
     public ByProjectKeyReviewsByIDRequestBuilder withId(String ID) {
         return new ByProjectKeyReviewsByIDRequestBuilder(apiHttpClient, projectKey, ID);
     }
+
+    public ByProjectKeyReviewsByIDPost update(
+            com.commercetools.api.models.Versioned<com.commercetools.api.models.review.Review> review,
+            java.util.List<com.commercetools.api.models.review.ReviewUpdateAction> actions) {
+        return withId(review.getId()).post(builder -> com.commercetools.api.models.review.ReviewUpdate.builder()
+                .version(review.getVersion())
+                .actions(actions));
+    }
+
+    public ByProjectKeyReviewsByIDPost update(
+            com.commercetools.api.models.Versioned<com.commercetools.api.models.review.Review> review,
+            UnaryOperator<UpdateActionBuilder<com.commercetools.api.models.review.ReviewUpdateAction, com.commercetools.api.models.review.ReviewUpdateActionBuilder>> op) {
+        return withId(review.getId()).post(builder -> com.commercetools.api.models.review.ReviewUpdate.builder()
+                .version(review.getVersion())
+                .actions(op.apply(UpdateActionBuilder
+                        .of(com.commercetools.api.models.review.ReviewUpdateActionBuilder::of)).actions));
+    }
+
+    public WithUpdateActionBuilder<com.commercetools.api.models.review.ReviewUpdateAction, com.commercetools.api.models.review.ReviewUpdateActionBuilder, ByProjectKeyReviewsByIDPost> update(
+            com.commercetools.api.models.Versioned<com.commercetools.api.models.review.Review> review) {
+        return builder -> withId(review.getId()).post(b -> com.commercetools.api.models.review.ReviewUpdate.builder()
+                .version(review.getVersion())
+                .actions(builder.apply(UpdateActionBuilder
+                        .of(com.commercetools.api.models.review.ReviewUpdateActionBuilder::of)).actions));
+    }
+
+    public ByProjectKeyReviewsByIDDelete delete(
+            com.commercetools.api.models.Versioned<com.commercetools.api.models.review.Review> review) {
+        return withId(review.getId()).delete().withVersion(review.getVersion());
+    }
+
+    public ByProjectKeyReviewsPost create(com.commercetools.api.models.review.ReviewDraft reviewDraft) {
+        return post(reviewDraft);
+    }
+
+    public ByProjectKeyReviewsPost create(UnaryOperator<com.commercetools.api.models.review.ReviewDraftBuilder> op) {
+        return post(op.apply(com.commercetools.api.models.review.ReviewDraftBuilder.of()).build());
+    }
+
 }

@@ -21,4 +21,5 @@ public class ByProjectKeyStandalonePricesImportContainersRequestBuilder {
         return new ByProjectKeyStandalonePricesImportContainersByImportContainerKeyRequestBuilder(apiHttpClient,
             projectKey, importContainerKey);
     }
+
 }

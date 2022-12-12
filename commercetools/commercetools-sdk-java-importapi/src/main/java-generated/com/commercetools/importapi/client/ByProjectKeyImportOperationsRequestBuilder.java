@@ -18,4 +18,5 @@ public class ByProjectKeyImportOperationsRequestBuilder {
     public ByProjectKeyImportOperationsByIdRequestBuilder withIdValue(String id) {
         return new ByProjectKeyImportOperationsByIdRequestBuilder(apiHttpClient, projectKey, id);
     }
+
 }

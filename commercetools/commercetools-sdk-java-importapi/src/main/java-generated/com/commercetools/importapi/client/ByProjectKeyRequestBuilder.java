@@ -70,4 +70,5 @@ public class ByProjectKeyRequestBuilder {
     public ByProjectKeyInventoriesRequestBuilder inventories() {
         return new ByProjectKeyInventoriesRequestBuilder(apiHttpClient, projectKey);
     }
+
 }

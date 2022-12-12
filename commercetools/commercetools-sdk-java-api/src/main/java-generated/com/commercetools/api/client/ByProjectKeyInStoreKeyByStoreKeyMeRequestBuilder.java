@@ -73,4 +73,5 @@ public class ByProjectKeyInStoreKeyByStoreKeyMeRequestBuilder {
     public ByProjectKeyInStoreKeyByStoreKeyMeLoginRequestBuilder login() {
         return new ByProjectKeyInStoreKeyByStoreKeyMeLoginRequestBuilder(apiHttpClient, projectKey, storeKey);
     }
+
 }

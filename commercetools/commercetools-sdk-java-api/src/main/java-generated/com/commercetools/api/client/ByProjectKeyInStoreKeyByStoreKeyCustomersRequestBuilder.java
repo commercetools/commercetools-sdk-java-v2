@@ -78,4 +78,5 @@ public class ByProjectKeyInStoreKeyByStoreKeyCustomersRequestBuilder {
     public ByProjectKeyInStoreKeyByStoreKeyCustomersByIDRequestBuilder withId(String ID) {
         return new ByProjectKeyInStoreKeyByStoreKeyCustomersByIDRequestBuilder(apiHttpClient, projectKey, storeKey, ID);
     }
+
 }

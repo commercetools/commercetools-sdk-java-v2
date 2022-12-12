@@ -18,4 +18,5 @@ public class ByProjectKeyProductVariantsRequestBuilder {
     public ByProjectKeyProductVariantsImportContainersRequestBuilder importContainers() {
         return new ByProjectKeyProductVariantsImportContainersRequestBuilder(apiHttpClient, projectKey);
     }
+
 }

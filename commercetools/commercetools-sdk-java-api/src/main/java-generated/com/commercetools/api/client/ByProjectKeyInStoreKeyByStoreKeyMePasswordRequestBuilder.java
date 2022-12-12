@@ -34,4 +34,5 @@ public class ByProjectKeyInStoreKeyByStoreKeyMePasswordRequestBuilder {
     public ByProjectKeyInStoreKeyByStoreKeyMePasswordResetRequestBuilder reset() {
         return new ByProjectKeyInStoreKeyByStoreKeyMePasswordResetRequestBuilder(apiHttpClient, projectKey, storeKey);
     }
+
 }

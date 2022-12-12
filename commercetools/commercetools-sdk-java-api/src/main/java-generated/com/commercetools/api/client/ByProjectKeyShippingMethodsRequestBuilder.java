@@ -50,4 +50,48 @@ public class ByProjectKeyShippingMethodsRequestBuilder {
     public ByProjectKeyShippingMethodsByIDRequestBuilder withId(String ID) {
         return new ByProjectKeyShippingMethodsByIDRequestBuilder(apiHttpClient, projectKey, ID);
     }
+
+    public ByProjectKeyShippingMethodsByIDPost update(
+            com.commercetools.api.models.Versioned<com.commercetools.api.models.shipping_method.ShippingMethod> shippingMethod,
+            java.util.List<com.commercetools.api.models.shipping_method.ShippingMethodUpdateAction> actions) {
+        return withId(shippingMethod.getId())
+                .post(builder -> com.commercetools.api.models.shipping_method.ShippingMethodUpdate.builder()
+                        .version(shippingMethod.getVersion())
+                        .actions(actions));
+    }
+
+    public ByProjectKeyShippingMethodsByIDPost update(
+            com.commercetools.api.models.Versioned<com.commercetools.api.models.shipping_method.ShippingMethod> shippingMethod,
+            UnaryOperator<UpdateActionBuilder<com.commercetools.api.models.shipping_method.ShippingMethodUpdateAction, com.commercetools.api.models.shipping_method.ShippingMethodUpdateActionBuilder>> op) {
+        return withId(shippingMethod.getId()).post(
+            builder -> com.commercetools.api.models.shipping_method.ShippingMethodUpdate.builder()
+                    .version(shippingMethod.getVersion())
+                    .actions(op.apply(UpdateActionBuilder.of(
+                        com.commercetools.api.models.shipping_method.ShippingMethodUpdateActionBuilder::of)).actions));
+    }
+
+    public WithUpdateActionBuilder<com.commercetools.api.models.shipping_method.ShippingMethodUpdateAction, com.commercetools.api.models.shipping_method.ShippingMethodUpdateActionBuilder, ByProjectKeyShippingMethodsByIDPost> update(
+            com.commercetools.api.models.Versioned<com.commercetools.api.models.shipping_method.ShippingMethod> shippingMethod) {
+        return builder -> withId(shippingMethod.getId()).post(
+            b -> com.commercetools.api.models.shipping_method.ShippingMethodUpdate.builder()
+                    .version(shippingMethod.getVersion())
+                    .actions(builder.apply(UpdateActionBuilder.of(
+                        com.commercetools.api.models.shipping_method.ShippingMethodUpdateActionBuilder::of)).actions));
+    }
+
+    public ByProjectKeyShippingMethodsByIDDelete delete(
+            com.commercetools.api.models.Versioned<com.commercetools.api.models.shipping_method.ShippingMethod> shippingMethod) {
+        return withId(shippingMethod.getId()).delete().withVersion(shippingMethod.getVersion());
+    }
+
+    public ByProjectKeyShippingMethodsPost create(
+            com.commercetools.api.models.shipping_method.ShippingMethodDraft shippingMethodDraft) {
+        return post(shippingMethodDraft);
+    }
+
+    public ByProjectKeyShippingMethodsPost create(
+            UnaryOperator<com.commercetools.api.models.shipping_method.ShippingMethodDraftBuilder> op) {
+        return post(op.apply(com.commercetools.api.models.shipping_method.ShippingMethodDraftBuilder.of()).build());
+    }
+
 }

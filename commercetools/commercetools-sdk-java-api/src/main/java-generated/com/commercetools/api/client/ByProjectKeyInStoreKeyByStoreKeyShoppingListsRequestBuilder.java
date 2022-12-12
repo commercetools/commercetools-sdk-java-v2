@@ -44,4 +44,5 @@ public class ByProjectKeyInStoreKeyByStoreKeyShoppingListsRequestBuilder {
         return new ByProjectKeyInStoreKeyByStoreKeyShoppingListsByIDRequestBuilder(apiHttpClient, projectKey, storeKey,
             ID);
     }
+
 }

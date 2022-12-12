@@ -20,4 +20,5 @@ public class ByProjectKeyRecommendationsProjectCategoriesRequestBuilder {
         return new ByProjectKeyRecommendationsProjectCategoriesByProductIdRequestBuilder(apiHttpClient, projectKey,
             productId);
     }
+
 }

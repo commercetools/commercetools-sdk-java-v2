@@ -66,4 +66,45 @@ public class ByProjectKeyCustomersRequestBuilder {
     public ByProjectKeyCustomersByIDRequestBuilder withId(String ID) {
         return new ByProjectKeyCustomersByIDRequestBuilder(apiHttpClient, projectKey, ID);
     }
+
+    public ByProjectKeyCustomersByIDPost update(
+            com.commercetools.api.models.Versioned<com.commercetools.api.models.customer.Customer> customer,
+            java.util.List<com.commercetools.api.models.customer.CustomerUpdateAction> actions) {
+        return withId(customer.getId()).post(builder -> com.commercetools.api.models.customer.CustomerUpdate.builder()
+                .version(customer.getVersion())
+                .actions(actions));
+    }
+
+    public ByProjectKeyCustomersByIDPost update(
+            com.commercetools.api.models.Versioned<com.commercetools.api.models.customer.Customer> customer,
+            UnaryOperator<UpdateActionBuilder<com.commercetools.api.models.customer.CustomerUpdateAction, com.commercetools.api.models.customer.CustomerUpdateActionBuilder>> op) {
+        return withId(customer.getId()).post(builder -> com.commercetools.api.models.customer.CustomerUpdate.builder()
+                .version(customer.getVersion())
+                .actions(op.apply(UpdateActionBuilder
+                        .of(com.commercetools.api.models.customer.CustomerUpdateActionBuilder::of)).actions));
+    }
+
+    public WithUpdateActionBuilder<com.commercetools.api.models.customer.CustomerUpdateAction, com.commercetools.api.models.customer.CustomerUpdateActionBuilder, ByProjectKeyCustomersByIDPost> update(
+            com.commercetools.api.models.Versioned<com.commercetools.api.models.customer.Customer> customer) {
+        return builder -> withId(customer.getId())
+                .post(b -> com.commercetools.api.models.customer.CustomerUpdate.builder()
+                        .version(customer.getVersion())
+                        .actions(builder.apply(UpdateActionBuilder
+                                .of(com.commercetools.api.models.customer.CustomerUpdateActionBuilder::of)).actions));
+    }
+
+    public ByProjectKeyCustomersByIDDelete delete(
+            com.commercetools.api.models.Versioned<com.commercetools.api.models.customer.Customer> customer) {
+        return withId(customer.getId()).delete().withVersion(customer.getVersion());
+    }
+
+    public ByProjectKeyCustomersPost create(com.commercetools.api.models.customer.CustomerDraft customerDraft) {
+        return post(customerDraft);
+    }
+
+    public ByProjectKeyCustomersPost create(
+            UnaryOperator<com.commercetools.api.models.customer.CustomerDraftBuilder> op) {
+        return post(op.apply(com.commercetools.api.models.customer.CustomerDraftBuilder.of()).build());
+    }
+
 }

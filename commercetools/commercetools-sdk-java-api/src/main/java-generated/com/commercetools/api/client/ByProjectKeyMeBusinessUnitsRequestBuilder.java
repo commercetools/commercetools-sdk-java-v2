@@ -39,4 +39,5 @@ public class ByProjectKeyMeBusinessUnitsRequestBuilder {
     public ByProjectKeyMeBusinessUnitsKeyByKeyRequestBuilder withKey(String key) {
         return new ByProjectKeyMeBusinessUnitsKeyByKeyRequestBuilder(apiHttpClient, projectKey, key);
     }
+
 }

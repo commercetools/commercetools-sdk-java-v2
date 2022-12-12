@@ -32,4 +32,43 @@ public class ByProjectKeyChannelsRequestBuilder {
     public ByProjectKeyChannelsByIDRequestBuilder withId(String ID) {
         return new ByProjectKeyChannelsByIDRequestBuilder(apiHttpClient, projectKey, ID);
     }
+
+    public ByProjectKeyChannelsByIDPost update(
+            com.commercetools.api.models.Versioned<com.commercetools.api.models.channel.Channel> channel,
+            java.util.List<com.commercetools.api.models.channel.ChannelUpdateAction> actions) {
+        return withId(channel.getId()).post(builder -> com.commercetools.api.models.channel.ChannelUpdate.builder()
+                .version(channel.getVersion())
+                .actions(actions));
+    }
+
+    public ByProjectKeyChannelsByIDPost update(
+            com.commercetools.api.models.Versioned<com.commercetools.api.models.channel.Channel> channel,
+            UnaryOperator<UpdateActionBuilder<com.commercetools.api.models.channel.ChannelUpdateAction, com.commercetools.api.models.channel.ChannelUpdateActionBuilder>> op) {
+        return withId(channel.getId()).post(builder -> com.commercetools.api.models.channel.ChannelUpdate.builder()
+                .version(channel.getVersion())
+                .actions(op.apply(UpdateActionBuilder
+                        .of(com.commercetools.api.models.channel.ChannelUpdateActionBuilder::of)).actions));
+    }
+
+    public WithUpdateActionBuilder<com.commercetools.api.models.channel.ChannelUpdateAction, com.commercetools.api.models.channel.ChannelUpdateActionBuilder, ByProjectKeyChannelsByIDPost> update(
+            com.commercetools.api.models.Versioned<com.commercetools.api.models.channel.Channel> channel) {
+        return builder -> withId(channel.getId()).post(b -> com.commercetools.api.models.channel.ChannelUpdate.builder()
+                .version(channel.getVersion())
+                .actions(builder.apply(UpdateActionBuilder
+                        .of(com.commercetools.api.models.channel.ChannelUpdateActionBuilder::of)).actions));
+    }
+
+    public ByProjectKeyChannelsByIDDelete delete(
+            com.commercetools.api.models.Versioned<com.commercetools.api.models.channel.Channel> channel) {
+        return withId(channel.getId()).delete().withVersion(channel.getVersion());
+    }
+
+    public ByProjectKeyChannelsPost create(com.commercetools.api.models.channel.ChannelDraft channelDraft) {
+        return post(channelDraft);
+    }
+
+    public ByProjectKeyChannelsPost create(UnaryOperator<com.commercetools.api.models.channel.ChannelDraftBuilder> op) {
+        return post(op.apply(com.commercetools.api.models.channel.ChannelDraftBuilder.of()).build());
+    }
+
 }

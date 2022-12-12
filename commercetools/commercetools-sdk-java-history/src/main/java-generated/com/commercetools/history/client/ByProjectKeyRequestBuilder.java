@@ -22,4 +22,5 @@ public class ByProjectKeyRequestBuilder {
     public ByProjectKeyByResourceTypeRequestBuilder withResourceTypeValue(String resourceType) {
         return new ByProjectKeyByResourceTypeRequestBuilder(apiHttpClient, projectKey, resourceType);
     }
+
 }

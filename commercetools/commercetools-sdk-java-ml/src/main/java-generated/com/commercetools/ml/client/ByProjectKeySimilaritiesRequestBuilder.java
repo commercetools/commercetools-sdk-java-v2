@@ -18,4 +18,5 @@ public class ByProjectKeySimilaritiesRequestBuilder {
     public ByProjectKeySimilaritiesProductsRequestBuilder products() {
         return new ByProjectKeySimilaritiesProductsRequestBuilder(apiHttpClient, projectKey);
     }
+
 }

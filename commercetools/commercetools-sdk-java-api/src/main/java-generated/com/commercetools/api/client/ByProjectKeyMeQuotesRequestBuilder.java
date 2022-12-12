@@ -26,4 +26,5 @@ public class ByProjectKeyMeQuotesRequestBuilder {
     public ByProjectKeyMeQuotesKeyByKeyRequestBuilder withKey(String key) {
         return new ByProjectKeyMeQuotesKeyByKeyRequestBuilder(apiHttpClient, projectKey, key);
     }
+
 }

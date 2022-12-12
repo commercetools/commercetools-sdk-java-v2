@@ -45,4 +45,5 @@ public class ByProjectKeySubscriptionsByIDRequestBuilder {
     public ByProjectKeySubscriptionsByIDHealthRequestBuilder withIdHealth() {
         return new ByProjectKeySubscriptionsByIDHealthRequestBuilder(apiHttpClient, projectKey, ID);
     }
+
 }

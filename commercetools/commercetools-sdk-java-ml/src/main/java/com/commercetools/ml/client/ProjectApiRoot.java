@@ -39,10 +39,6 @@ public class ProjectApiRoot implements Closeable {
         return with().recommendations();
     }
 
-    public ByProjectKeyMissingDataRequestBuilder missingData() {
-        return with().missingData();
-    }
-
     public ByProjectKeySimilaritiesRequestBuilder similarities() {
         return with().similarities();
     }

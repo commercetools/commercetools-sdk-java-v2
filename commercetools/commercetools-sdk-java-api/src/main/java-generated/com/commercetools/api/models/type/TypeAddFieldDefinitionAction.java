@@ -14,7 +14,8 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * TypeAddFieldDefinitionAction
+ *  <p>Defines a new field for a Type. Adding new required fields to a Type that is already referenced by existing entities can put those entities in a temporarily inconsistent state.</p>
+ *  <p>If a Type that is already in use requires new fields, we recommend making them optional (<code>required</code> set to <code>false</code>) whenever possible. Alternatively, any new required fields should be added one at a time followed by an update to all the resources using the Type. This prevents validation errors caused by an entity missing more than one required custom field.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

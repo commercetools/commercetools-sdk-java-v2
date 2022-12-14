@@ -66,7 +66,7 @@ public class StandalonePriceImportBuilder implements Builder<StandalonePriceImpo
     }
 
     /**
-     *  <p>Specifies to which ProductVariant the API associates this Price. It is not validated to exist in product variants.</p>
+     *  <p>Identifies the ProductVariant to which this Standalone Price is associated. This value is not validated to exist in Product Variants.</p>
      */
 
     public StandalonePriceImportBuilder sku(final String sku) {

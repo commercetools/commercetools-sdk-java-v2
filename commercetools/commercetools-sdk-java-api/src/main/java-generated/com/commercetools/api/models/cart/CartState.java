@@ -21,12 +21,16 @@ public interface CartState {
 
     CartState ORDERED = CartStateEnum.ORDERED;
 
+    CartState FROZEN = CartStateEnum.FROZEN;
+
     enum CartStateEnum implements CartState {
         ACTIVE("Active"),
 
         MERGED("Merged"),
 
-        ORDERED("Ordered");
+        ORDERED("Ordered"),
+
+        FROZEN("Frozen");
         private final String jsonName;
 
         private CartStateEnum(final String jsonName) {

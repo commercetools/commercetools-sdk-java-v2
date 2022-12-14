@@ -46,6 +46,7 @@ import io.vrap.rmf.base.client.utils.Generated;
         @JsonSubTypes.Type(value = com.commercetools.api.models.cart.CartChangeTaxCalculationModeActionImpl.class, name = CartChangeTaxCalculationModeAction.CHANGE_TAX_CALCULATION_MODE),
         @JsonSubTypes.Type(value = com.commercetools.api.models.cart.CartChangeTaxModeActionImpl.class, name = CartChangeTaxModeAction.CHANGE_TAX_MODE),
         @JsonSubTypes.Type(value = com.commercetools.api.models.cart.CartChangeTaxRoundingModeActionImpl.class, name = CartChangeTaxRoundingModeAction.CHANGE_TAX_ROUNDING_MODE),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.cart.CartFreezeCartActionImpl.class, name = CartFreezeCartAction.FREEZE_CART),
         @JsonSubTypes.Type(value = com.commercetools.api.models.cart.CartRecalculateActionImpl.class, name = CartRecalculateAction.RECALCULATE),
         @JsonSubTypes.Type(value = com.commercetools.api.models.cart.CartRemoveCustomLineItemActionImpl.class, name = CartRemoveCustomLineItemAction.REMOVE_CUSTOM_LINE_ITEM),
         @JsonSubTypes.Type(value = com.commercetools.api.models.cart.CartRemoveDiscountCodeActionImpl.class, name = CartRemoveDiscountCodeAction.REMOVE_DISCOUNT_CODE),
@@ -96,6 +97,7 @@ import io.vrap.rmf.base.client.utils.Generated;
         @JsonSubTypes.Type(value = com.commercetools.api.models.cart.CartSetShippingMethodTaxAmountActionImpl.class, name = CartSetShippingMethodTaxAmountAction.SET_SHIPPING_METHOD_TAX_AMOUNT),
         @JsonSubTypes.Type(value = com.commercetools.api.models.cart.CartSetShippingMethodTaxRateActionImpl.class, name = CartSetShippingMethodTaxRateAction.SET_SHIPPING_METHOD_TAX_RATE),
         @JsonSubTypes.Type(value = com.commercetools.api.models.cart.CartSetShippingRateInputActionImpl.class, name = CartSetShippingRateInputAction.SET_SHIPPING_RATE_INPUT),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.cart.CartUnfreezeCartActionImpl.class, name = CartUnfreezeCartAction.UNFREEZE_CART),
         @JsonSubTypes.Type(value = com.commercetools.api.models.cart.CartUpdateItemShippingAddressActionImpl.class, name = CartUpdateItemShippingAddressAction.UPDATE_ITEM_SHIPPING_ADDRESS) })
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "action", defaultImpl = CartUpdateActionImpl.class, visible = true)
 @JsonDeserialize(as = CartUpdateActionImpl.class)
@@ -175,6 +177,10 @@ public interface CartUpdateAction extends com.commercetools.api.models.ResourceU
 
     public static com.commercetools.api.models.cart.CartChangeTaxRoundingModeActionBuilder changeTaxRoundingModeBuilder() {
         return com.commercetools.api.models.cart.CartChangeTaxRoundingModeActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.cart.CartFreezeCartActionBuilder freezeCartBuilder() {
+        return com.commercetools.api.models.cart.CartFreezeCartActionBuilder.of();
     }
 
     public static com.commercetools.api.models.cart.CartRecalculateActionBuilder recalculateBuilder() {
@@ -375,6 +381,10 @@ public interface CartUpdateAction extends com.commercetools.api.models.ResourceU
 
     public static com.commercetools.api.models.cart.CartSetShippingRateInputActionBuilder setShippingRateInputBuilder() {
         return com.commercetools.api.models.cart.CartSetShippingRateInputActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.cart.CartUnfreezeCartActionBuilder unfreezeCartBuilder() {
+        return com.commercetools.api.models.cart.CartUnfreezeCartActionBuilder.of();
     }
 
     public static com.commercetools.api.models.cart.CartUpdateItemShippingAddressActionBuilder updateItemShippingAddressBuilder() {

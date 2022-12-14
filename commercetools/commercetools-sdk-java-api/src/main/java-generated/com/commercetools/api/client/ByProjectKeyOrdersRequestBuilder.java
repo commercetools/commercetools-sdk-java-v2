@@ -52,4 +52,44 @@ public class ByProjectKeyOrdersRequestBuilder {
     public ByProjectKeyOrdersSearchRequestBuilder search() {
         return new ByProjectKeyOrdersSearchRequestBuilder(apiHttpClient, projectKey);
     }
+
+    public ByProjectKeyOrdersByIDPost update(
+            com.commercetools.api.models.Versioned<com.commercetools.api.models.order.Order> order,
+            java.util.List<com.commercetools.api.models.order.OrderUpdateAction> actions) {
+        return withId(order.getId()).post(builder -> com.commercetools.api.models.order.OrderUpdate.builder()
+                .version(order.getVersion())
+                .actions(actions));
+    }
+
+    public ByProjectKeyOrdersByIDPost update(
+            com.commercetools.api.models.Versioned<com.commercetools.api.models.order.Order> order,
+            UnaryOperator<UpdateActionBuilder<com.commercetools.api.models.order.OrderUpdateAction, com.commercetools.api.models.order.OrderUpdateActionBuilder>> op) {
+        return withId(order.getId()).post(builder -> com.commercetools.api.models.order.OrderUpdate.builder()
+                .version(order.getVersion())
+                .actions(op.apply(
+                    UpdateActionBuilder.of(com.commercetools.api.models.order.OrderUpdateActionBuilder::of)).actions));
+    }
+
+    public WithUpdateActionBuilder<com.commercetools.api.models.order.OrderUpdateAction, com.commercetools.api.models.order.OrderUpdateActionBuilder, ByProjectKeyOrdersByIDPost> update(
+            com.commercetools.api.models.Versioned<com.commercetools.api.models.order.Order> order) {
+        return builder -> withId(order.getId()).post(b -> com.commercetools.api.models.order.OrderUpdate.builder()
+                .version(order.getVersion())
+                .actions(builder.apply(
+                    UpdateActionBuilder.of(com.commercetools.api.models.order.OrderUpdateActionBuilder::of)).actions));
+    }
+
+    public ByProjectKeyOrdersByIDDelete delete(
+            com.commercetools.api.models.Versioned<com.commercetools.api.models.order.Order> order) {
+        return withId(order.getId()).delete().withVersion(order.getVersion());
+    }
+
+    public ByProjectKeyOrdersPost create(com.commercetools.api.models.order.OrderFromCartDraft orderFromCartDraft) {
+        return post(orderFromCartDraft);
+    }
+
+    public ByProjectKeyOrdersPost create(
+            UnaryOperator<com.commercetools.api.models.order.OrderFromCartDraftBuilder> op) {
+        return post(op.apply(com.commercetools.api.models.order.OrderFromCartDraftBuilder.of()).build());
+    }
+
 }

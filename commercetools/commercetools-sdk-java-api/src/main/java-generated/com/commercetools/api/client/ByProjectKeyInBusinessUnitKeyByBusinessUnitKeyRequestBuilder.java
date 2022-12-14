@@ -22,4 +22,5 @@ public class ByProjectKeyInBusinessUnitKeyByBusinessUnitKeyRequestBuilder {
         return new ByProjectKeyInBusinessUnitKeyByBusinessUnitKeyMeRequestBuilder(apiHttpClient, projectKey,
             businessUnitKey);
     }
+
 }

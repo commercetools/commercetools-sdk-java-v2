@@ -55,4 +55,5 @@ public class ByProjectKeyInStoreKeyByStoreKeyRequestBuilder {
         return new ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsRequestBuilder(apiHttpClient, projectKey,
             storeKey);
     }
+
 }

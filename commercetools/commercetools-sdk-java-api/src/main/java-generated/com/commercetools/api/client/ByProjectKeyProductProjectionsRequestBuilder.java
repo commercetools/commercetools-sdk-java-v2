@@ -34,4 +34,5 @@ public class ByProjectKeyProductProjectionsRequestBuilder {
     public ByProjectKeyProductProjectionsByIDRequestBuilder withId(String ID) {
         return new ByProjectKeyProductProjectionsByIDRequestBuilder(apiHttpClient, projectKey, ID);
     }
+
 }

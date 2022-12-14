@@ -40,4 +40,5 @@ public class ByProjectKeyMeCartsRequestBuilder {
     public ByProjectKeyMeCartsReplicateRequestBuilder replicate() {
         return new ByProjectKeyMeCartsReplicateRequestBuilder(apiHttpClient, projectKey);
     }
+
 }

@@ -22,4 +22,5 @@ public class ByProjectKeyInStoreKeyByStoreKeyShippingMethodsRequestBuilder {
         return new ByProjectKeyInStoreKeyByStoreKeyShippingMethodsMatchingCartRequestBuilder(apiHttpClient, projectKey,
             storeKey);
     }
+
 }

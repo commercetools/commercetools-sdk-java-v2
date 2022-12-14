@@ -21,4 +21,5 @@ public class ByProjectKeyProductVariantsImportContainersRequestBuilder {
         return new ByProjectKeyProductVariantsImportContainersByImportContainerKeyRequestBuilder(apiHttpClient,
             projectKey, importContainerKey);
     }
+
 }

@@ -18,4 +18,5 @@ public class ByProjectKeyInventoriesRequestBuilder {
     public ByProjectKeyInventoriesImportContainersRequestBuilder importContainers() {
         return new ByProjectKeyInventoriesImportContainersRequestBuilder(apiHttpClient, projectKey);
     }
+
 }

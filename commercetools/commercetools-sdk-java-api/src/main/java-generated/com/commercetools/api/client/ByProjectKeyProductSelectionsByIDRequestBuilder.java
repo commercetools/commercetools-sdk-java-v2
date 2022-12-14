@@ -46,4 +46,5 @@ public class ByProjectKeyProductSelectionsByIDRequestBuilder {
     public ByProjectKeyProductSelectionsByIDProductsRequestBuilder products() {
         return new ByProjectKeyProductSelectionsByIDProductsRequestBuilder(apiHttpClient, projectKey, ID);
     }
+
 }

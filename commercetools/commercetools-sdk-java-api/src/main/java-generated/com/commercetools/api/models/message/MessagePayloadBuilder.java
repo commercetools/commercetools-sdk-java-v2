@@ -395,6 +395,10 @@ public class MessagePayloadBuilder {
         return com.commercetools.api.models.message.ProductPriceExternalDiscountSetMessagePayloadBuilder.of();
     }
 
+    public com.commercetools.api.models.message.ProductPriceKeySetMessagePayloadBuilder productPriceKeySetBuilder() {
+        return com.commercetools.api.models.message.ProductPriceKeySetMessagePayloadBuilder.of();
+    }
+
     public com.commercetools.api.models.message.ProductPriceModeSetMessagePayloadBuilder productPriceModeSetBuilder() {
         return com.commercetools.api.models.message.ProductPriceModeSetMessagePayloadBuilder.of();
     }
@@ -557,6 +561,10 @@ public class MessagePayloadBuilder {
 
     public com.commercetools.api.models.message.StandalonePriceExternalDiscountSetMessagePayloadBuilder standalonePriceExternalDiscountSetBuilder() {
         return com.commercetools.api.models.message.StandalonePriceExternalDiscountSetMessagePayloadBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.StandalonePriceKeySetMessagePayloadBuilder standalonePriceKeySetBuilder() {
+        return com.commercetools.api.models.message.StandalonePriceKeySetMessagePayloadBuilder.of();
     }
 
     public com.commercetools.api.models.message.StandalonePriceStagedChangesAppliedMessagePayloadBuilder standalonePriceStagedChangesAppliedBuilder() {

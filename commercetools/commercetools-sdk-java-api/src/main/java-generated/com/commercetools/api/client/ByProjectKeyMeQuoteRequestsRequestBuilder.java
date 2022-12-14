@@ -38,4 +38,5 @@ public class ByProjectKeyMeQuoteRequestsRequestBuilder {
     public ByProjectKeyMeQuoteRequestsKeyByKeyRequestBuilder withKey(String key) {
         return new ByProjectKeyMeQuoteRequestsKeyByKeyRequestBuilder(apiHttpClient, projectKey, key);
     }
+
 }

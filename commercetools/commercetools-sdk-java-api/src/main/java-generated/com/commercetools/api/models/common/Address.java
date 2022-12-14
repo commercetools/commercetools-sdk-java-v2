@@ -95,45 +95,6 @@ public interface Address extends BaseAddress, com.commercetools.api.models.Custo
         return helper.apply(this);
     }
 
-    public default AddressDraftBuilder toDraftBuilder() {
-        return AddressDraft.builder()
-                .key(this.getKey())
-                .country(this.getCountry())
-                .title(this.getTitle())
-                .salutation(this.getSalutation())
-                .firstName(this.getFirstName())
-                .lastName(this.getLastName())
-                .streetName(this.getStreetName())
-                .streetNumber(this.getStreetNumber())
-                .additionalStreetInfo(this.getAdditionalStreetInfo())
-                .postalCode(this.getPostalCode())
-                .city(this.getCity())
-                .region(this.getRegion())
-                .state(this.getState())
-                .company(this.getCompany())
-                .department(this.getDepartment())
-                .building(this.getBuilding())
-                .apartment(this.getApartment())
-                .pOBox(this.getPOBox())
-                .phone(this.getPhone())
-                .mobile(this.getMobile())
-                .email(this.getEmail())
-                .fax(this.getFax())
-                .additionalAddressInfo(this.getAdditionalAddressInfo())
-                .externalId(this.getExternalId());
-    }
-
-    public default AddressDraft toDraft() {
-        return toDraftBuilder().build();
-    }
-
-    public default boolean equalsIgnoreId(final Address address) {
-        return address != null && Address.builder(address)
-                .id(null)
-                .buildUnchecked()
-                .equals(Address.builder(this).id(null).buildUnchecked());
-    }
-
     public static com.fasterxml.jackson.core.type.TypeReference<Address> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<Address>() {
             @Override

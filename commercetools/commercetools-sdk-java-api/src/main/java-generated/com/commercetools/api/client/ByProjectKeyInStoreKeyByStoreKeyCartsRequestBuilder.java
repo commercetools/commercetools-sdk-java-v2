@@ -50,4 +50,5 @@ public class ByProjectKeyInStoreKeyByStoreKeyCartsRequestBuilder {
     public ByProjectKeyInStoreKeyByStoreKeyCartsByIDRequestBuilder withId(String ID) {
         return new ByProjectKeyInStoreKeyByStoreKeyCartsByIDRequestBuilder(apiHttpClient, projectKey, storeKey, ID);
     }
+
 }

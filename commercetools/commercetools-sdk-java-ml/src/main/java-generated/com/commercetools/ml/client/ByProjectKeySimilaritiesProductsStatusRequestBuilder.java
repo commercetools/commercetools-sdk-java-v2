@@ -19,4 +19,5 @@ public class ByProjectKeySimilaritiesProductsStatusRequestBuilder {
     public ByProjectKeySimilaritiesProductsStatusByTaskIdRequestBuilder withTaskId(String taskId) {
         return new ByProjectKeySimilaritiesProductsStatusByTaskIdRequestBuilder(apiHttpClient, projectKey, taskId);
     }
+
 }

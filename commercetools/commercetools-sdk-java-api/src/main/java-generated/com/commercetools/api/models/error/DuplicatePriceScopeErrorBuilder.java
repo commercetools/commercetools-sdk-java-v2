@@ -15,7 +15,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     DuplicatePriceScopeError duplicatePriceScopeError = DuplicatePriceScopeError.builder()
  *             .message("{message}")
- *             .plusConflictingPrices(conflictingPricesBuilder -> conflictingPricesBuilder)
+ *             .conflictingPrice(conflictingPriceBuilder -> conflictingPriceBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -27,7 +27,7 @@ public class DuplicatePriceScopeErrorBuilder implements Builder<DuplicatePriceSc
 
     private Map<String, java.lang.Object> values = new HashMap<>();
 
-    private java.util.List<com.commercetools.api.models.common.Price> conflictingPrices;
+    private com.commercetools.api.models.common.Price conflictingPrice;
 
     /**
      *  <p><code>"Duplicate price scope: $priceScope. The combination of currency, country, customerGroup and channel must be unique for each price of a product variant."</code></p>
@@ -60,59 +60,22 @@ public class DuplicatePriceScopeErrorBuilder implements Builder<DuplicatePriceSc
     }
 
     /**
-     *  <p>Conflicting Embedded Prices.</p>
+     *  <p>Conflicting Embedded Price.</p>
      */
 
-    public DuplicatePriceScopeErrorBuilder conflictingPrices(
-            final com.commercetools.api.models.common.Price... conflictingPrices) {
-        this.conflictingPrices = new ArrayList<>(Arrays.asList(conflictingPrices));
-        return this;
-    }
-
-    /**
-     *  <p>Conflicting Embedded Prices.</p>
-     */
-
-    public DuplicatePriceScopeErrorBuilder conflictingPrices(
-            final java.util.List<com.commercetools.api.models.common.Price> conflictingPrices) {
-        this.conflictingPrices = conflictingPrices;
-        return this;
-    }
-
-    /**
-     *  <p>Conflicting Embedded Prices.</p>
-     */
-
-    public DuplicatePriceScopeErrorBuilder plusConflictingPrices(
-            final com.commercetools.api.models.common.Price... conflictingPrices) {
-        if (this.conflictingPrices == null) {
-            this.conflictingPrices = new ArrayList<>();
-        }
-        this.conflictingPrices.addAll(Arrays.asList(conflictingPrices));
-        return this;
-    }
-
-    /**
-     *  <p>Conflicting Embedded Prices.</p>
-     */
-
-    public DuplicatePriceScopeErrorBuilder plusConflictingPrices(
+    public DuplicatePriceScopeErrorBuilder conflictingPrice(
             Function<com.commercetools.api.models.common.PriceBuilder, com.commercetools.api.models.common.PriceBuilder> builder) {
-        if (this.conflictingPrices == null) {
-            this.conflictingPrices = new ArrayList<>();
-        }
-        this.conflictingPrices.add(builder.apply(com.commercetools.api.models.common.PriceBuilder.of()).build());
+        this.conflictingPrice = builder.apply(com.commercetools.api.models.common.PriceBuilder.of()).build();
         return this;
     }
 
     /**
-     *  <p>Conflicting Embedded Prices.</p>
+     *  <p>Conflicting Embedded Price.</p>
      */
 
-    public DuplicatePriceScopeErrorBuilder withConflictingPrices(
-            Function<com.commercetools.api.models.common.PriceBuilder, com.commercetools.api.models.common.PriceBuilder> builder) {
-        this.conflictingPrices = new ArrayList<>();
-        this.conflictingPrices.add(builder.apply(com.commercetools.api.models.common.PriceBuilder.of()).build());
+    public DuplicatePriceScopeErrorBuilder conflictingPrice(
+            final com.commercetools.api.models.common.Price conflictingPrice) {
+        this.conflictingPrice = conflictingPrice;
         return this;
     }
 
@@ -124,22 +87,22 @@ public class DuplicatePriceScopeErrorBuilder implements Builder<DuplicatePriceSc
         return this.values;
     }
 
-    public java.util.List<com.commercetools.api.models.common.Price> getConflictingPrices() {
-        return this.conflictingPrices;
+    public com.commercetools.api.models.common.Price getConflictingPrice() {
+        return this.conflictingPrice;
     }
 
     public DuplicatePriceScopeError build() {
         Objects.requireNonNull(message, DuplicatePriceScopeError.class + ": message is missing");
         Objects.requireNonNull(values, DuplicatePriceScopeError.class + ": values are missing");
-        Objects.requireNonNull(conflictingPrices, DuplicatePriceScopeError.class + ": conflictingPrices is missing");
-        return new DuplicatePriceScopeErrorImpl(message, values, conflictingPrices);
+        Objects.requireNonNull(conflictingPrice, DuplicatePriceScopeError.class + ": conflictingPrice is missing");
+        return new DuplicatePriceScopeErrorImpl(message, values, conflictingPrice);
     }
 
     /**
      * builds DuplicatePriceScopeError without checking for non null required values
      */
     public DuplicatePriceScopeError buildUnchecked() {
-        return new DuplicatePriceScopeErrorImpl(message, values, conflictingPrices);
+        return new DuplicatePriceScopeErrorImpl(message, values, conflictingPrice);
     }
 
     public static DuplicatePriceScopeErrorBuilder of() {
@@ -150,7 +113,7 @@ public class DuplicatePriceScopeErrorBuilder implements Builder<DuplicatePriceSc
         DuplicatePriceScopeErrorBuilder builder = new DuplicatePriceScopeErrorBuilder();
         builder.message = template.getMessage();
         builder.values = template.values();
-        builder.conflictingPrices = template.getConflictingPrices();
+        builder.conflictingPrice = template.getConflictingPrice();
         return builder;
     }
 

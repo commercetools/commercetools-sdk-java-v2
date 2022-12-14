@@ -27,15 +27,15 @@ public class DuplicatePriceScopeErrorImpl implements DuplicatePriceScopeError, M
 
     private Map<String, java.lang.Object> values;
 
-    private java.util.List<com.commercetools.api.models.common.Price> conflictingPrices;
+    private com.commercetools.api.models.common.Price conflictingPrice;
 
     @JsonCreator
     DuplicatePriceScopeErrorImpl(@JsonProperty("message") final String message,
             @JsonProperty("values") final Map<String, java.lang.Object> values,
-            @JsonProperty("conflictingPrices") final java.util.List<com.commercetools.api.models.common.Price> conflictingPrices) {
+            @JsonProperty("conflictingPrice") final com.commercetools.api.models.common.Price conflictingPrice) {
         this.message = message;
         this.values = values;
-        this.conflictingPrices = conflictingPrices;
+        this.conflictingPrice = conflictingPrice;
         this.code = DUPLICATE_PRICE_SCOPE;
     }
 
@@ -68,11 +68,11 @@ public class DuplicatePriceScopeErrorImpl implements DuplicatePriceScopeError, M
     }
 
     /**
-     *  <p>Conflicting Embedded Prices.</p>
+     *  <p>Conflicting Embedded Price.</p>
      */
 
-    public java.util.List<com.commercetools.api.models.common.Price> getConflictingPrices() {
-        return this.conflictingPrices;
+    public com.commercetools.api.models.common.Price getConflictingPrice() {
+        return this.conflictingPrice;
     }
 
     public void setMessage(final String message) {
@@ -86,13 +86,8 @@ public class DuplicatePriceScopeErrorImpl implements DuplicatePriceScopeError, M
         values.put(key, value);
     }
 
-    public void setConflictingPrices(final com.commercetools.api.models.common.Price... conflictingPrices) {
-        this.conflictingPrices = new ArrayList<>(Arrays.asList(conflictingPrices));
-    }
-
-    public void setConflictingPrices(
-            final java.util.List<com.commercetools.api.models.common.Price> conflictingPrices) {
-        this.conflictingPrices = conflictingPrices;
+    public void setConflictingPrice(final com.commercetools.api.models.common.Price conflictingPrice) {
+        this.conflictingPrice = conflictingPrice;
     }
 
     @Override
@@ -108,7 +103,7 @@ public class DuplicatePriceScopeErrorImpl implements DuplicatePriceScopeError, M
         return new EqualsBuilder().append(code, that.code)
                 .append(message, that.message)
                 .append(values, that.values)
-                .append(conflictingPrices, that.conflictingPrices)
+                .append(conflictingPrice, that.conflictingPrice)
                 .isEquals();
     }
 
@@ -117,7 +112,7 @@ public class DuplicatePriceScopeErrorImpl implements DuplicatePriceScopeError, M
         return new HashCodeBuilder(17, 37).append(code)
                 .append(message)
                 .append(values)
-                .append(conflictingPrices)
+                .append(conflictingPrice)
                 .toHashCode();
     }
 

@@ -44,4 +44,43 @@ public class ByProjectKeyCartsRequestBuilder {
     public ByProjectKeyCartsByIDRequestBuilder withId(String ID) {
         return new ByProjectKeyCartsByIDRequestBuilder(apiHttpClient, projectKey, ID);
     }
+
+    public ByProjectKeyCartsByIDPost update(
+            com.commercetools.api.models.Versioned<com.commercetools.api.models.cart.Cart> cart,
+            java.util.List<com.commercetools.api.models.cart.CartUpdateAction> actions) {
+        return withId(cart.getId()).post(builder -> com.commercetools.api.models.cart.CartUpdate.builder()
+                .version(cart.getVersion())
+                .actions(actions));
+    }
+
+    public ByProjectKeyCartsByIDPost update(
+            com.commercetools.api.models.Versioned<com.commercetools.api.models.cart.Cart> cart,
+            UnaryOperator<UpdateActionBuilder<com.commercetools.api.models.cart.CartUpdateAction, com.commercetools.api.models.cart.CartUpdateActionBuilder>> op) {
+        return withId(cart.getId()).post(builder -> com.commercetools.api.models.cart.CartUpdate.builder()
+                .version(cart.getVersion())
+                .actions(op.apply(
+                    UpdateActionBuilder.of(com.commercetools.api.models.cart.CartUpdateActionBuilder::of)).actions));
+    }
+
+    public WithUpdateActionBuilder<com.commercetools.api.models.cart.CartUpdateAction, com.commercetools.api.models.cart.CartUpdateActionBuilder, ByProjectKeyCartsByIDPost> update(
+            com.commercetools.api.models.Versioned<com.commercetools.api.models.cart.Cart> cart) {
+        return builder -> withId(cart.getId()).post(b -> com.commercetools.api.models.cart.CartUpdate.builder()
+                .version(cart.getVersion())
+                .actions(builder.apply(
+                    UpdateActionBuilder.of(com.commercetools.api.models.cart.CartUpdateActionBuilder::of)).actions));
+    }
+
+    public ByProjectKeyCartsByIDDelete delete(
+            com.commercetools.api.models.Versioned<com.commercetools.api.models.cart.Cart> cart) {
+        return withId(cart.getId()).delete().withVersion(cart.getVersion());
+    }
+
+    public ByProjectKeyCartsPost create(com.commercetools.api.models.cart.CartDraft cartDraft) {
+        return post(cartDraft);
+    }
+
+    public ByProjectKeyCartsPost create(UnaryOperator<com.commercetools.api.models.cart.CartDraftBuilder> op) {
+        return post(op.apply(com.commercetools.api.models.cart.CartDraftBuilder.of()).build());
+    }
+
 }

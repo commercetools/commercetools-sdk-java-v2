@@ -22,4 +22,5 @@ public class ByProjectKeyImageSearchRequestBuilder {
     public ByProjectKeyImageSearchConfigRequestBuilder config() {
         return new ByProjectKeyImageSearchConfigRequestBuilder(apiHttpClient, projectKey);
     }
+
 }

@@ -30,4 +30,5 @@ public class ByProjectKeyMePasswordRequestBuilder {
     public ByProjectKeyMePasswordResetRequestBuilder reset() {
         return new ByProjectKeyMePasswordResetRequestBuilder(apiHttpClient, projectKey);
     }
+
 }

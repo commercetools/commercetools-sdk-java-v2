@@ -45,4 +45,5 @@ public class ByProjectKeyOrdersEditsByIDRequestBuilder {
     public ByProjectKeyOrdersEditsByIDApplyRequestBuilder apply() {
         return new ByProjectKeyOrdersEditsByIDApplyRequestBuilder(apiHttpClient, projectKey, ID);
     }
+
 }

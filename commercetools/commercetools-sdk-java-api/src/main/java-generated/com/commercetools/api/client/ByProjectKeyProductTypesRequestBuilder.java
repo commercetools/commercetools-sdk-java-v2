@@ -42,4 +42,48 @@ public class ByProjectKeyProductTypesRequestBuilder {
     public ByProjectKeyProductTypesByIDRequestBuilder withId(String ID) {
         return new ByProjectKeyProductTypesByIDRequestBuilder(apiHttpClient, projectKey, ID);
     }
+
+    public ByProjectKeyProductTypesByIDPost update(
+            com.commercetools.api.models.Versioned<com.commercetools.api.models.product_type.ProductType> productType,
+            java.util.List<com.commercetools.api.models.product_type.ProductTypeUpdateAction> actions) {
+        return withId(productType.getId())
+                .post(builder -> com.commercetools.api.models.product_type.ProductTypeUpdate.builder()
+                        .version(productType.getVersion())
+                        .actions(actions));
+    }
+
+    public ByProjectKeyProductTypesByIDPost update(
+            com.commercetools.api.models.Versioned<com.commercetools.api.models.product_type.ProductType> productType,
+            UnaryOperator<UpdateActionBuilder<com.commercetools.api.models.product_type.ProductTypeUpdateAction, com.commercetools.api.models.product_type.ProductTypeUpdateActionBuilder>> op) {
+        return withId(productType.getId()).post(builder -> com.commercetools.api.models.product_type.ProductTypeUpdate
+                .builder()
+                .version(productType.getVersion())
+                .actions(op.apply(UpdateActionBuilder
+                        .of(com.commercetools.api.models.product_type.ProductTypeUpdateActionBuilder::of)).actions));
+    }
+
+    public WithUpdateActionBuilder<com.commercetools.api.models.product_type.ProductTypeUpdateAction, com.commercetools.api.models.product_type.ProductTypeUpdateActionBuilder, ByProjectKeyProductTypesByIDPost> update(
+            com.commercetools.api.models.Versioned<com.commercetools.api.models.product_type.ProductType> productType) {
+        return builder -> withId(productType.getId())
+                .post(b -> com.commercetools.api.models.product_type.ProductTypeUpdate.builder()
+                        .version(productType.getVersion())
+                        .actions(builder.apply(UpdateActionBuilder.of(
+                            com.commercetools.api.models.product_type.ProductTypeUpdateActionBuilder::of)).actions));
+    }
+
+    public ByProjectKeyProductTypesByIDDelete delete(
+            com.commercetools.api.models.Versioned<com.commercetools.api.models.product_type.ProductType> productType) {
+        return withId(productType.getId()).delete().withVersion(productType.getVersion());
+    }
+
+    public ByProjectKeyProductTypesPost create(
+            com.commercetools.api.models.product_type.ProductTypeDraft productTypeDraft) {
+        return post(productTypeDraft);
+    }
+
+    public ByProjectKeyProductTypesPost create(
+            UnaryOperator<com.commercetools.api.models.product_type.ProductTypeDraftBuilder> op) {
+        return post(op.apply(com.commercetools.api.models.product_type.ProductTypeDraftBuilder.of()).build());
+    }
+
 }

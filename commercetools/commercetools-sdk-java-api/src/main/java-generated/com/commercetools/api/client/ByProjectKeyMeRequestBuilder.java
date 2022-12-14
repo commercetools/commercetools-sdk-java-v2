@@ -84,4 +84,5 @@ public class ByProjectKeyMeRequestBuilder {
     public ByProjectKeyMeShoppingListsRequestBuilder shoppingLists() {
         return new ByProjectKeyMeShoppingListsRequestBuilder(apiHttpClient, projectKey);
     }
+
 }

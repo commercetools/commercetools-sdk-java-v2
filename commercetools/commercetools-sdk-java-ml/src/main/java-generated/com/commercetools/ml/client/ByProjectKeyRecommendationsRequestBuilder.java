@@ -22,4 +22,5 @@ public class ByProjectKeyRecommendationsRequestBuilder {
     public ByProjectKeyRecommendationsGeneralCategoriesRequestBuilder generalCategories() {
         return new ByProjectKeyRecommendationsGeneralCategoriesRequestBuilder(apiHttpClient, projectKey);
     }
+
 }

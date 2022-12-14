@@ -35,6 +35,10 @@ public class StandalonePriceUpdateActionBuilder {
         return com.commercetools.api.models.standalone_price.StandalonePriceSetDiscountedPriceActionBuilder.of();
     }
 
+    public com.commercetools.api.models.standalone_price.StandalonePriceSetKeyActionBuilder setKeyBuilder() {
+        return com.commercetools.api.models.standalone_price.StandalonePriceSetKeyActionBuilder.of();
+    }
+
     public static StandalonePriceUpdateActionBuilder of() {
         return new StandalonePriceUpdateActionBuilder();
     }

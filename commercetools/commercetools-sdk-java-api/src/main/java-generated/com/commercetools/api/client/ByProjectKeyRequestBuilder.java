@@ -186,4 +186,5 @@ public class ByProjectKeyRequestBuilder {
     public ByProjectKeyAttributeGroupsRequestBuilder attributeGroups() {
         return new ByProjectKeyAttributeGroupsRequestBuilder(apiHttpClient, projectKey);
     }
+
 }

@@ -7,7 +7,6 @@ import java.util.function.Function;
 
 import javax.validation.constraints.NotNull;
 
-import com.commercetools.api.models.type.CustomFields;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -338,7 +337,9 @@ public interface BaseAddress {
                 .additionalAddressInfo(this.getAdditionalAddressInfo())
                 .externalId(this.getExternalId());
         if (this instanceof Address) {
-            builder.custom(Optional.ofNullable(((Address) this).getCustom()).map(CustomFields::toDraft).orElse(null));
+            builder.custom(Optional.ofNullable(((Address) this).getCustom())
+                    .map(com.commercetools.api.models.type.CustomFields::toDraft)
+                    .orElse(null));
         }
 
         return builder;

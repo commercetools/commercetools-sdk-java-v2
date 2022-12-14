@@ -85,7 +85,6 @@ com.commercetools.ml.models.common
 com.commercetools.ml.models.general_category_recommendations
 com.commercetools.ml.models.image_search
 com.commercetools.ml.models.image_search_config
-com.commercetools.ml.models.missing_data
 com.commercetools.ml.models.similar_products
 com.commercetools.money
 io.sphere.sdk.client

@@ -108,47 +108,15 @@
 <span class="source-line-no">095</span><span id="line.95">        return helper.apply(this);</span>
 <span class="source-line-no">096</span><span id="line.96">    }</span>
 <span class="source-line-no">097</span><span id="line.97"></span>
-<span class="source-line-no">098</span><span id="line.98">    public default AddressDraftBuilder toDraftBuilder() {</span>
-<span class="source-line-no">099</span><span id="line.99">        return AddressDraft.builder()</span>
-<span class="source-line-no">100</span><span id="line.100">                .key(this.getKey())</span>
-<span class="source-line-no">101</span><span id="line.101">                .country(this.getCountry())</span>
-<span class="source-line-no">102</span><span id="line.102">                .title(this.getTitle())</span>
-<span class="source-line-no">103</span><span id="line.103">                .salutation(this.getSalutation())</span>
-<span class="source-line-no">104</span><span id="line.104">                .firstName(this.getFirstName())</span>
-<span class="source-line-no">105</span><span id="line.105">                .lastName(this.getLastName())</span>
-<span class="source-line-no">106</span><span id="line.106">                .streetName(this.getStreetName())</span>
-<span class="source-line-no">107</span><span id="line.107">                .streetNumber(this.getStreetNumber())</span>
-<span class="source-line-no">108</span><span id="line.108">                .additionalStreetInfo(this.getAdditionalStreetInfo())</span>
-<span class="source-line-no">109</span><span id="line.109">                .postalCode(this.getPostalCode())</span>
-<span class="source-line-no">110</span><span id="line.110">                .city(this.getCity())</span>
-<span class="source-line-no">111</span><span id="line.111">                .region(this.getRegion())</span>
-<span class="source-line-no">112</span><span id="line.112">                .state(this.getState())</span>
-<span class="source-line-no">113</span><span id="line.113">                .company(this.getCompany())</span>
-<span class="source-line-no">114</span><span id="line.114">                .department(this.getDepartment())</span>
-<span class="source-line-no">115</span><span id="line.115">                .building(this.getBuilding())</span>
-<span class="source-line-no">116</span><span id="line.116">                .apartment(this.getApartment())</span>
-<span class="source-line-no">117</span><span id="line.117">                .pOBox(this.getPOBox())</span>
-<span class="source-line-no">118</span><span id="line.118">                .phone(this.getPhone())</span>
-<span class="source-line-no">119</span><span id="line.119">                .mobile(this.getMobile())</span>
-<span class="source-line-no">120</span><span id="line.120">                .email(this.getEmail())</span>
-<span class="source-line-no">121</span><span id="line.121">                .fax(this.getFax())</span>
-<span class="source-line-no">122</span><span id="line.122">                .additionalAddressInfo(this.getAdditionalAddressInfo())</span>
-<span class="source-line-no">123</span><span id="line.123">                .externalId(this.getExternalId());</span>
-<span class="source-line-no">124</span><span id="line.124">    }</span>
-<span class="source-line-no">125</span><span id="line.125"></span>
-<span class="source-line-no">126</span><span id="line.126">    public default AddressDraft toDraft() {</span>
-<span class="source-line-no">127</span><span id="line.127">        return toDraftBuilder().build();</span>
-<span class="source-line-no">128</span><span id="line.128">    }</span>
-<span class="source-line-no">129</span><span id="line.129"></span>
-<span class="source-line-no">130</span><span id="line.130">    public static com.fasterxml.jackson.core.type.TypeReference&lt;Address&gt; typeReference() {</span>
-<span class="source-line-no">131</span><span id="line.131">        return new com.fasterxml.jackson.core.type.TypeReference&lt;Address&gt;() {</span>
-<span class="source-line-no">132</span><span id="line.132">            @Override</span>
-<span class="source-line-no">133</span><span id="line.133">            public String toString() {</span>
-<span class="source-line-no">134</span><span id="line.134">                return "TypeReference&lt;Address&gt;";</span>
-<span class="source-line-no">135</span><span id="line.135">            }</span>
-<span class="source-line-no">136</span><span id="line.136">        };</span>
-<span class="source-line-no">137</span><span id="line.137">    }</span>
-<span class="source-line-no">138</span><span id="line.138">}</span>
+<span class="source-line-no">098</span><span id="line.98">    public static com.fasterxml.jackson.core.type.TypeReference&lt;Address&gt; typeReference() {</span>
+<span class="source-line-no">099</span><span id="line.99">        return new com.fasterxml.jackson.core.type.TypeReference&lt;Address&gt;() {</span>
+<span class="source-line-no">100</span><span id="line.100">            @Override</span>
+<span class="source-line-no">101</span><span id="line.101">            public String toString() {</span>
+<span class="source-line-no">102</span><span id="line.102">                return "TypeReference&lt;Address&gt;";</span>
+<span class="source-line-no">103</span><span id="line.103">            }</span>
+<span class="source-line-no">104</span><span id="line.104">        };</span>
+<span class="source-line-no">105</span><span id="line.105">    }</span>
+<span class="source-line-no">106</span><span id="line.106">}</span>
 
 
 

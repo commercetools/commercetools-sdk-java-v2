@@ -53,58 +53,64 @@
 <span class="source-line-no">040</span><span id="line.40">    public ProductVariantKeyReference getProductVariant();</span>
 <span class="source-line-no">041</span><span id="line.41"></span>
 <span class="source-line-no">042</span><span id="line.42">    /**</span>
-<span class="source-line-no">043</span><span id="line.43">     *  &lt;p&gt;Maps to &lt;code&gt;ProductVariant.attributes&lt;/code&gt;. The referenced attribute must be defined in an already existing ProductType in the Project, or the &lt;code&gt;state&lt;/code&gt; of the ImportOperation will be &lt;code&gt;unresolved&lt;/code&gt;.&lt;/p&gt;</span>
-<span class="source-line-no">044</span><span id="line.44">     */</span>
-<span class="source-line-no">045</span><span id="line.45">    @Valid</span>
-<span class="source-line-no">046</span><span id="line.46">    @JsonProperty("attributes")</span>
-<span class="source-line-no">047</span><span id="line.47">    public Attributes getAttributes();</span>
-<span class="source-line-no">048</span><span id="line.48"></span>
-<span class="source-line-no">049</span><span id="line.49">    /**</span>
-<span class="source-line-no">050</span><span id="line.50">     *  &lt;p&gt;If &lt;code&gt;false&lt;/code&gt;, the attribute changes are applied to both current and staged projected representations of the Product.&lt;/p&gt;</span>
-<span class="source-line-no">051</span><span id="line.51">     */</span>
-<span class="source-line-no">052</span><span id="line.52"></span>
-<span class="source-line-no">053</span><span id="line.53">    @JsonProperty("staged")</span>
-<span class="source-line-no">054</span><span id="line.54">    public Boolean getStaged();</span>
-<span class="source-line-no">055</span><span id="line.55"></span>
-<span class="source-line-no">056</span><span id="line.56">    public void setProductVariant(final ProductVariantKeyReference productVariant);</span>
-<span class="source-line-no">057</span><span id="line.57"></span>
-<span class="source-line-no">058</span><span id="line.58">    public void setAttributes(final Attributes attributes);</span>
-<span class="source-line-no">059</span><span id="line.59"></span>
-<span class="source-line-no">060</span><span id="line.60">    public void setStaged(final Boolean staged);</span>
+<span class="source-line-no">043</span><span id="line.43">     *  &lt;p&gt;Maps to &lt;code&gt;ProductVariant.attributes&lt;/code&gt;.&lt;/p&gt;</span>
+<span class="source-line-no">044</span><span id="line.44">     *  &lt;ul&gt;</span>
+<span class="source-line-no">045</span><span id="line.45">     *   &lt;li&gt;The referenced Attribute must be defined in an existing ProductType, or the &lt;code&gt;state&lt;/code&gt; of the ImportOperation will be &lt;code&gt;validationFailed&lt;/code&gt;.&lt;/li&gt;</span>
+<span class="source-line-no">046</span><span id="line.46">     *   &lt;li&gt;Setting the value of a non-required Attribute to &lt;code&gt;null&lt;/code&gt; will remove the Attribute.&lt;/li&gt;</span>
+<span class="source-line-no">047</span><span id="line.47">     *   &lt;li&gt;Attempting to set a &lt;code&gt;null&lt;/code&gt; value to a required Attribute will make the import operation fail with an InvalidOperation error.&lt;/li&gt;</span>
+<span class="source-line-no">048</span><span id="line.48">     *   &lt;li&gt;Importing LocalizableTextAttributes or LocalizableTextSetAttributes follows an override pattern, meaning that omitted localized fields will be deleted, new fields will be created, and existing fields will be updated. You can also delete localized fields by setting their value to &lt;code&gt;null&lt;/code&gt;.&lt;/li&gt;</span>
+<span class="source-line-no">049</span><span id="line.49">     *  &lt;/ul&gt;</span>
+<span class="source-line-no">050</span><span id="line.50">     */</span>
+<span class="source-line-no">051</span><span id="line.51">    @Valid</span>
+<span class="source-line-no">052</span><span id="line.52">    @JsonProperty("attributes")</span>
+<span class="source-line-no">053</span><span id="line.53">    public Attributes getAttributes();</span>
+<span class="source-line-no">054</span><span id="line.54"></span>
+<span class="source-line-no">055</span><span id="line.55">    /**</span>
+<span class="source-line-no">056</span><span id="line.56">     *  &lt;p&gt;If &lt;code&gt;false&lt;/code&gt;, the attribute changes are applied to both current and staged projected representations of the Product.&lt;/p&gt;</span>
+<span class="source-line-no">057</span><span id="line.57">     */</span>
+<span class="source-line-no">058</span><span id="line.58"></span>
+<span class="source-line-no">059</span><span id="line.59">    @JsonProperty("staged")</span>
+<span class="source-line-no">060</span><span id="line.60">    public Boolean getStaged();</span>
 <span class="source-line-no">061</span><span id="line.61"></span>
-<span class="source-line-no">062</span><span id="line.62">    public static ProductVariantPatch of() {</span>
-<span class="source-line-no">063</span><span id="line.63">        return new ProductVariantPatchImpl();</span>
-<span class="source-line-no">064</span><span id="line.64">    }</span>
+<span class="source-line-no">062</span><span id="line.62">    public void setProductVariant(final ProductVariantKeyReference productVariant);</span>
+<span class="source-line-no">063</span><span id="line.63"></span>
+<span class="source-line-no">064</span><span id="line.64">    public void setAttributes(final Attributes attributes);</span>
 <span class="source-line-no">065</span><span id="line.65"></span>
-<span class="source-line-no">066</span><span id="line.66">    public static ProductVariantPatch of(final ProductVariantPatch template) {</span>
-<span class="source-line-no">067</span><span id="line.67">        ProductVariantPatchImpl instance = new ProductVariantPatchImpl();</span>
-<span class="source-line-no">068</span><span id="line.68">        instance.setProductVariant(template.getProductVariant());</span>
-<span class="source-line-no">069</span><span id="line.69">        instance.setAttributes(template.getAttributes());</span>
-<span class="source-line-no">070</span><span id="line.70">        instance.setStaged(template.getStaged());</span>
-<span class="source-line-no">071</span><span id="line.71">        return instance;</span>
-<span class="source-line-no">072</span><span id="line.72">    }</span>
-<span class="source-line-no">073</span><span id="line.73"></span>
-<span class="source-line-no">074</span><span id="line.74">    public static ProductVariantPatchBuilder builder() {</span>
-<span class="source-line-no">075</span><span id="line.75">        return ProductVariantPatchBuilder.of();</span>
-<span class="source-line-no">076</span><span id="line.76">    }</span>
-<span class="source-line-no">077</span><span id="line.77"></span>
-<span class="source-line-no">078</span><span id="line.78">    public static ProductVariantPatchBuilder builder(final ProductVariantPatch template) {</span>
-<span class="source-line-no">079</span><span id="line.79">        return ProductVariantPatchBuilder.of(template);</span>
-<span class="source-line-no">080</span><span id="line.80">    }</span>
-<span class="source-line-no">081</span><span id="line.81"></span>
-<span class="source-line-no">082</span><span id="line.82">    default &lt;T&gt; T withProductVariantPatch(Function&lt;ProductVariantPatch, T&gt; helper) {</span>
-<span class="source-line-no">083</span><span id="line.83">        return helper.apply(this);</span>
-<span class="source-line-no">084</span><span id="line.84">    }</span>
-<span class="source-line-no">085</span><span id="line.85"></span>
-<span class="source-line-no">086</span><span id="line.86">    public static com.fasterxml.jackson.core.type.TypeReference&lt;ProductVariantPatch&gt; typeReference() {</span>
-<span class="source-line-no">087</span><span id="line.87">        return new com.fasterxml.jackson.core.type.TypeReference&lt;ProductVariantPatch&gt;() {</span>
-<span class="source-line-no">088</span><span id="line.88">            @Override</span>
-<span class="source-line-no">089</span><span id="line.89">            public String toString() {</span>
-<span class="source-line-no">090</span><span id="line.90">                return "TypeReference&lt;ProductVariantPatch&gt;";</span>
-<span class="source-line-no">091</span><span id="line.91">            }</span>
-<span class="source-line-no">092</span><span id="line.92">        };</span>
-<span class="source-line-no">093</span><span id="line.93">    }</span>
-<span class="source-line-no">094</span><span id="line.94">}</span>
+<span class="source-line-no">066</span><span id="line.66">    public void setStaged(final Boolean staged);</span>
+<span class="source-line-no">067</span><span id="line.67"></span>
+<span class="source-line-no">068</span><span id="line.68">    public static ProductVariantPatch of() {</span>
+<span class="source-line-no">069</span><span id="line.69">        return new ProductVariantPatchImpl();</span>
+<span class="source-line-no">070</span><span id="line.70">    }</span>
+<span class="source-line-no">071</span><span id="line.71"></span>
+<span class="source-line-no">072</span><span id="line.72">    public static ProductVariantPatch of(final ProductVariantPatch template) {</span>
+<span class="source-line-no">073</span><span id="line.73">        ProductVariantPatchImpl instance = new ProductVariantPatchImpl();</span>
+<span class="source-line-no">074</span><span id="line.74">        instance.setProductVariant(template.getProductVariant());</span>
+<span class="source-line-no">075</span><span id="line.75">        instance.setAttributes(template.getAttributes());</span>
+<span class="source-line-no">076</span><span id="line.76">        instance.setStaged(template.getStaged());</span>
+<span class="source-line-no">077</span><span id="line.77">        return instance;</span>
+<span class="source-line-no">078</span><span id="line.78">    }</span>
+<span class="source-line-no">079</span><span id="line.79"></span>
+<span class="source-line-no">080</span><span id="line.80">    public static ProductVariantPatchBuilder builder() {</span>
+<span class="source-line-no">081</span><span id="line.81">        return ProductVariantPatchBuilder.of();</span>
+<span class="source-line-no">082</span><span id="line.82">    }</span>
+<span class="source-line-no">083</span><span id="line.83"></span>
+<span class="source-line-no">084</span><span id="line.84">    public static ProductVariantPatchBuilder builder(final ProductVariantPatch template) {</span>
+<span class="source-line-no">085</span><span id="line.85">        return ProductVariantPatchBuilder.of(template);</span>
+<span class="source-line-no">086</span><span id="line.86">    }</span>
+<span class="source-line-no">087</span><span id="line.87"></span>
+<span class="source-line-no">088</span><span id="line.88">    default &lt;T&gt; T withProductVariantPatch(Function&lt;ProductVariantPatch, T&gt; helper) {</span>
+<span class="source-line-no">089</span><span id="line.89">        return helper.apply(this);</span>
+<span class="source-line-no">090</span><span id="line.90">    }</span>
+<span class="source-line-no">091</span><span id="line.91"></span>
+<span class="source-line-no">092</span><span id="line.92">    public static com.fasterxml.jackson.core.type.TypeReference&lt;ProductVariantPatch&gt; typeReference() {</span>
+<span class="source-line-no">093</span><span id="line.93">        return new com.fasterxml.jackson.core.type.TypeReference&lt;ProductVariantPatch&gt;() {</span>
+<span class="source-line-no">094</span><span id="line.94">            @Override</span>
+<span class="source-line-no">095</span><span id="line.95">            public String toString() {</span>
+<span class="source-line-no">096</span><span id="line.96">                return "TypeReference&lt;ProductVariantPatch&gt;";</span>
+<span class="source-line-no">097</span><span id="line.97">            }</span>
+<span class="source-line-no">098</span><span id="line.98">        };</span>
+<span class="source-line-no">099</span><span id="line.99">    }</span>
+<span class="source-line-no">100</span><span id="line.100">}</span>
 
 
 

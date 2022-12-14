@@ -18,18 +18,21 @@
 <span class="source-line-no">005</span><span id="line.5"></span>
 <span class="source-line-no">006</span><span id="line.6">import io.vrap.rmf.base.client.http.CorrelationIdProvider;</span>
 <span class="source-line-no">007</span><span id="line.7"></span>
-<span class="source-line-no">008</span><span id="line.8">public class ApiCorrelationIdProvider implements CorrelationIdProvider {</span>
-<span class="source-line-no">009</span><span id="line.9">    private final String projectKey;</span>
-<span class="source-line-no">010</span><span id="line.10"></span>
-<span class="source-line-no">011</span><span id="line.11">    public ApiCorrelationIdProvider(String projectKey) {</span>
-<span class="source-line-no">012</span><span id="line.12">        this.projectKey = projectKey;</span>
-<span class="source-line-no">013</span><span id="line.13">    }</span>
-<span class="source-line-no">014</span><span id="line.14"></span>
-<span class="source-line-no">015</span><span id="line.15">    @Override</span>
-<span class="source-line-no">016</span><span id="line.16">    public String getCorrelationId() {</span>
-<span class="source-line-no">017</span><span id="line.17">        return projectKey + "/" + UUID.randomUUID();</span>
-<span class="source-line-no">018</span><span id="line.18">    }</span>
-<span class="source-line-no">019</span><span id="line.19">}</span>
+<span class="source-line-no">008</span><span id="line.8">/**</span>
+<span class="source-line-no">009</span><span id="line.9"> * {@link CorrelationIdProvider} which adds the project key as prefix</span>
+<span class="source-line-no">010</span><span id="line.10"> */</span>
+<span class="source-line-no">011</span><span id="line.11">public class ApiCorrelationIdProvider implements CorrelationIdProvider {</span>
+<span class="source-line-no">012</span><span id="line.12">    private final String projectKey;</span>
+<span class="source-line-no">013</span><span id="line.13"></span>
+<span class="source-line-no">014</span><span id="line.14">    public ApiCorrelationIdProvider(String projectKey) {</span>
+<span class="source-line-no">015</span><span id="line.15">        this.projectKey = projectKey;</span>
+<span class="source-line-no">016</span><span id="line.16">    }</span>
+<span class="source-line-no">017</span><span id="line.17"></span>
+<span class="source-line-no">018</span><span id="line.18">    @Override</span>
+<span class="source-line-no">019</span><span id="line.19">    public String getCorrelationId() {</span>
+<span class="source-line-no">020</span><span id="line.20">        return projectKey + "/" + UUID.randomUUID();</span>
+<span class="source-line-no">021</span><span id="line.21">    }</span>
+<span class="source-line-no">022</span><span id="line.22">}</span>
 
 
 

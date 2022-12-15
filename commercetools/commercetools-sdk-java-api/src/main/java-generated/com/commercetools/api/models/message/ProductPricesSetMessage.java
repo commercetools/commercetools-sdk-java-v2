@@ -15,13 +15,13 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>Generated after a successful Set Embedded Price update action.</p>
+ *  <p>Generated after a successful Set Embedded Prices update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
  * <div class=code-example>
  * <pre><code class='java'>
- *     ProductPriceSetMessage productPriceSetMessage = ProductPriceSetMessage.builder()
+ *     ProductPricesSetMessage productPricesSetMessage = ProductPricesSetMessage.builder()
  *             .id("{id}")
  *             .version(0.3)
  *             .createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
@@ -37,10 +37,10 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-@JsonDeserialize(as = ProductPriceSetMessageImpl.class)
-public interface ProductPriceSetMessage extends Message {
+@JsonDeserialize(as = ProductPricesSetMessageImpl.class)
+public interface ProductPricesSetMessage extends Message {
 
-    String PRODUCT_PRICE_SET = "ProductPriceSet";
+    String PRODUCT_PRICES_SET = "ProductPricesSet";
 
     /**
      *  <p>Unique identifier of the ProductVariant for which the Price was set.</p>
@@ -73,12 +73,12 @@ public interface ProductPriceSetMessage extends Message {
 
     public void setStaged(final Boolean staged);
 
-    public static ProductPriceSetMessage of() {
-        return new ProductPriceSetMessageImpl();
+    public static ProductPricesSetMessage of() {
+        return new ProductPricesSetMessageImpl();
     }
 
-    public static ProductPriceSetMessage of(final ProductPriceSetMessage template) {
-        ProductPriceSetMessageImpl instance = new ProductPriceSetMessageImpl();
+    public static ProductPricesSetMessage of(final ProductPricesSetMessage template) {
+        ProductPricesSetMessageImpl instance = new ProductPricesSetMessageImpl();
         instance.setId(template.getId());
         instance.setVersion(template.getVersion());
         instance.setCreatedAt(template.getCreatedAt());
@@ -95,23 +95,23 @@ public interface ProductPriceSetMessage extends Message {
         return instance;
     }
 
-    public static ProductPriceSetMessageBuilder builder() {
-        return ProductPriceSetMessageBuilder.of();
+    public static ProductPricesSetMessageBuilder builder() {
+        return ProductPricesSetMessageBuilder.of();
     }
 
-    public static ProductPriceSetMessageBuilder builder(final ProductPriceSetMessage template) {
-        return ProductPriceSetMessageBuilder.of(template);
+    public static ProductPricesSetMessageBuilder builder(final ProductPricesSetMessage template) {
+        return ProductPricesSetMessageBuilder.of(template);
     }
 
-    default <T> T withProductPriceSetMessage(Function<ProductPriceSetMessage, T> helper) {
+    default <T> T withProductPricesSetMessage(Function<ProductPricesSetMessage, T> helper) {
         return helper.apply(this);
     }
 
-    public static com.fasterxml.jackson.core.type.TypeReference<ProductPriceSetMessage> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ProductPriceSetMessage>() {
+    public static com.fasterxml.jackson.core.type.TypeReference<ProductPricesSetMessage> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ProductPricesSetMessage>() {
             @Override
             public String toString() {
-                return "TypeReference<ProductPriceSetMessage>";
+                return "TypeReference<ProductPricesSetMessage>";
             }
         };
     }

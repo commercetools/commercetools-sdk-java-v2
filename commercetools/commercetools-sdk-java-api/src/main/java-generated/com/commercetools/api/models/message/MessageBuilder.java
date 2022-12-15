@@ -407,8 +407,8 @@ public class MessageBuilder {
         return com.commercetools.api.models.message.ProductPriceRemovedMessageBuilder.of();
     }
 
-    public com.commercetools.api.models.message.ProductPriceSetMessageBuilder productPriceSetBuilder() {
-        return com.commercetools.api.models.message.ProductPriceSetMessageBuilder.of();
+    public com.commercetools.api.models.message.ProductPricesSetMessageBuilder productPricesSetBuilder() {
+        return com.commercetools.api.models.message.ProductPricesSetMessageBuilder.of();
     }
 
     public com.commercetools.api.models.message.ProductPublishedMessageBuilder productPublishedBuilder() {

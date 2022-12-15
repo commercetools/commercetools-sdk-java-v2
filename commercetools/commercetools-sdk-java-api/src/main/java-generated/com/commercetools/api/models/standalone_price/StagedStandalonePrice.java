@@ -24,7 +24,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     StagedStandalonePrice stagedStandalonePrice = StagedStandalonePrice.builder()
  *             .value(valueBuilder -> valueBuilder)
- *             .discounted(discountedBuilder -> discountedBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -44,7 +43,6 @@ public interface StagedStandalonePrice {
     /**
      *  <p>Discounted price for the StagedStandalonePrice.</p>
      */
-    @NotNull
     @Valid
     @JsonProperty("discounted")
     public DiscountedPrice getDiscounted();

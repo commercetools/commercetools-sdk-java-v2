@@ -10,12 +10,12 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * ProductPriceSetMessageBuilder
+ * ProductPricesSetMessageBuilder
  * <hr>
  * Example to create an instance using the builder pattern
  * <div class=code-example>
  * <pre><code class='java'>
- *     ProductPriceSetMessage productPriceSetMessage = ProductPriceSetMessage.builder()
+ *     ProductPricesSetMessage productPricesSetMessage = ProductPricesSetMessage.builder()
  *             .id("{id}")
  *             .version(0.3)
  *             .createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
@@ -31,7 +31,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-public class ProductPriceSetMessageBuilder implements Builder<ProductPriceSetMessage> {
+public class ProductPricesSetMessageBuilder implements Builder<ProductPricesSetMessage> {
 
     private String id;
 
@@ -66,7 +66,7 @@ public class ProductPriceSetMessageBuilder implements Builder<ProductPriceSetMes
      *  <p>Unique identifier of the Message. Can be used to track which Messages have been processed.</p>
      */
 
-    public ProductPriceSetMessageBuilder id(final String id) {
+    public ProductPricesSetMessageBuilder id(final String id) {
         this.id = id;
         return this;
     }
@@ -75,7 +75,7 @@ public class ProductPriceSetMessageBuilder implements Builder<ProductPriceSetMes
      *  <p>Version of a resource. In case of Messages, this is always <code>1</code>.</p>
      */
 
-    public ProductPriceSetMessageBuilder version(final Long version) {
+    public ProductPricesSetMessageBuilder version(final Long version) {
         this.version = version;
         return this;
     }
@@ -84,7 +84,7 @@ public class ProductPriceSetMessageBuilder implements Builder<ProductPriceSetMes
      *  <p>Date and time (UTC) the Message was generated.</p>
      */
 
-    public ProductPriceSetMessageBuilder createdAt(final java.time.ZonedDateTime createdAt) {
+    public ProductPricesSetMessageBuilder createdAt(final java.time.ZonedDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
     }
@@ -93,7 +93,7 @@ public class ProductPriceSetMessageBuilder implements Builder<ProductPriceSetMes
      *  <p>Value of <code>createdAt</code>.</p>
      */
 
-    public ProductPriceSetMessageBuilder lastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {
+    public ProductPricesSetMessageBuilder lastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {
         this.lastModifiedAt = lastModifiedAt;
         return this;
     }
@@ -102,7 +102,7 @@ public class ProductPriceSetMessageBuilder implements Builder<ProductPriceSetMes
      *  <p>Value of <code>createdBy</code>.</p>
      */
 
-    public ProductPriceSetMessageBuilder lastModifiedBy(
+    public ProductPricesSetMessageBuilder lastModifiedBy(
             Function<com.commercetools.api.models.common.LastModifiedByBuilder, com.commercetools.api.models.common.LastModifiedByBuilder> builder) {
         this.lastModifiedBy = builder.apply(com.commercetools.api.models.common.LastModifiedByBuilder.of()).build();
         return this;
@@ -112,7 +112,7 @@ public class ProductPriceSetMessageBuilder implements Builder<ProductPriceSetMes
      *  <p>Value of <code>createdBy</code>.</p>
      */
 
-    public ProductPriceSetMessageBuilder lastModifiedBy(
+    public ProductPricesSetMessageBuilder lastModifiedBy(
             @Nullable final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy) {
         this.lastModifiedBy = lastModifiedBy;
         return this;
@@ -122,7 +122,7 @@ public class ProductPriceSetMessageBuilder implements Builder<ProductPriceSetMes
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
-    public ProductPriceSetMessageBuilder createdBy(
+    public ProductPricesSetMessageBuilder createdBy(
             Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedByBuilder> builder) {
         this.createdBy = builder.apply(com.commercetools.api.models.common.CreatedByBuilder.of()).build();
         return this;
@@ -132,7 +132,7 @@ public class ProductPriceSetMessageBuilder implements Builder<ProductPriceSetMes
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
-    public ProductPriceSetMessageBuilder createdBy(
+    public ProductPricesSetMessageBuilder createdBy(
             @Nullable final com.commercetools.api.models.common.CreatedBy createdBy) {
         this.createdBy = createdBy;
         return this;
@@ -142,7 +142,7 @@ public class ProductPriceSetMessageBuilder implements Builder<ProductPriceSetMes
      *  <p>Message number in relation to other Messages for a given resource. The <code>sequenceNumber</code> of the next Message for the resource is the successor of the <code>sequenceNumber</code> of the current Message. Meaning, the <code>sequenceNumber</code> of the next Message equals the <code>sequenceNumber</code> of the current Message + 1. <code>sequenceNumber</code> can be used to ensure that Messages are processed in the correct order for a particular resource.</p>
      */
 
-    public ProductPriceSetMessageBuilder sequenceNumber(final Long sequenceNumber) {
+    public ProductPricesSetMessageBuilder sequenceNumber(final Long sequenceNumber) {
         this.sequenceNumber = sequenceNumber;
         return this;
     }
@@ -151,7 +151,7 @@ public class ProductPriceSetMessageBuilder implements Builder<ProductPriceSetMes
      *  <p>Reference to the resource on which the change or action was performed.</p>
      */
 
-    public ProductPriceSetMessageBuilder resource(final com.commercetools.api.models.common.Reference resource) {
+    public ProductPricesSetMessageBuilder resource(final com.commercetools.api.models.common.Reference resource) {
         this.resource = resource;
         return this;
     }
@@ -160,7 +160,7 @@ public class ProductPriceSetMessageBuilder implements Builder<ProductPriceSetMes
      *  <p>Reference to the resource on which the change or action was performed.</p>
      */
 
-    public ProductPriceSetMessageBuilder resource(
+    public ProductPricesSetMessageBuilder resource(
             Function<com.commercetools.api.models.common.ReferenceBuilder, Builder<? extends com.commercetools.api.models.common.Reference>> builder) {
         this.resource = builder.apply(com.commercetools.api.models.common.ReferenceBuilder.of()).build();
         return this;
@@ -170,7 +170,7 @@ public class ProductPriceSetMessageBuilder implements Builder<ProductPriceSetMes
      *  <p>Version of the resource on which the change or action was performed.</p>
      */
 
-    public ProductPriceSetMessageBuilder resourceVersion(final Long resourceVersion) {
+    public ProductPricesSetMessageBuilder resourceVersion(final Long resourceVersion) {
         this.resourceVersion = resourceVersion;
         return this;
     }
@@ -179,7 +179,7 @@ public class ProductPriceSetMessageBuilder implements Builder<ProductPriceSetMes
      *  <p>User-provided identifiers of the resource, such as <code>key</code> or <code>externalId</code>. Only present if the resource has such identifiers.</p>
      */
 
-    public ProductPriceSetMessageBuilder resourceUserProvidedIdentifiers(
+    public ProductPricesSetMessageBuilder resourceUserProvidedIdentifiers(
             Function<com.commercetools.api.models.message.UserProvidedIdentifiersBuilder, com.commercetools.api.models.message.UserProvidedIdentifiersBuilder> builder) {
         this.resourceUserProvidedIdentifiers = builder
                 .apply(com.commercetools.api.models.message.UserProvidedIdentifiersBuilder.of())
@@ -191,7 +191,7 @@ public class ProductPriceSetMessageBuilder implements Builder<ProductPriceSetMes
      *  <p>User-provided identifiers of the resource, such as <code>key</code> or <code>externalId</code>. Only present if the resource has such identifiers.</p>
      */
 
-    public ProductPriceSetMessageBuilder resourceUserProvidedIdentifiers(
+    public ProductPricesSetMessageBuilder resourceUserProvidedIdentifiers(
             @Nullable final com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers) {
         this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
         return this;
@@ -201,7 +201,7 @@ public class ProductPriceSetMessageBuilder implements Builder<ProductPriceSetMes
      *  <p>Unique identifier of the ProductVariant for which the Price was set.</p>
      */
 
-    public ProductPriceSetMessageBuilder variantId(final Long variantId) {
+    public ProductPricesSetMessageBuilder variantId(final Long variantId) {
         this.variantId = variantId;
         return this;
     }
@@ -210,7 +210,7 @@ public class ProductPriceSetMessageBuilder implements Builder<ProductPriceSetMes
      *  <p>The Embedded Prices that were set on the ProductVariant.</p>
      */
 
-    public ProductPriceSetMessageBuilder prices(final com.commercetools.api.models.common.Price... prices) {
+    public ProductPricesSetMessageBuilder prices(final com.commercetools.api.models.common.Price... prices) {
         this.prices = new ArrayList<>(Arrays.asList(prices));
         return this;
     }
@@ -219,7 +219,7 @@ public class ProductPriceSetMessageBuilder implements Builder<ProductPriceSetMes
      *  <p>The Embedded Prices that were set on the ProductVariant.</p>
      */
 
-    public ProductPriceSetMessageBuilder prices(
+    public ProductPricesSetMessageBuilder prices(
             final java.util.List<com.commercetools.api.models.common.Price> prices) {
         this.prices = prices;
         return this;
@@ -229,7 +229,7 @@ public class ProductPriceSetMessageBuilder implements Builder<ProductPriceSetMes
      *  <p>The Embedded Prices that were set on the ProductVariant.</p>
      */
 
-    public ProductPriceSetMessageBuilder plusPrices(final com.commercetools.api.models.common.Price... prices) {
+    public ProductPricesSetMessageBuilder plusPrices(final com.commercetools.api.models.common.Price... prices) {
         if (this.prices == null) {
             this.prices = new ArrayList<>();
         }
@@ -241,7 +241,7 @@ public class ProductPriceSetMessageBuilder implements Builder<ProductPriceSetMes
      *  <p>The Embedded Prices that were set on the ProductVariant.</p>
      */
 
-    public ProductPriceSetMessageBuilder plusPrices(
+    public ProductPricesSetMessageBuilder plusPrices(
             Function<com.commercetools.api.models.common.PriceBuilder, com.commercetools.api.models.common.PriceBuilder> builder) {
         if (this.prices == null) {
             this.prices = new ArrayList<>();
@@ -254,7 +254,7 @@ public class ProductPriceSetMessageBuilder implements Builder<ProductPriceSetMes
      *  <p>The Embedded Prices that were set on the ProductVariant.</p>
      */
 
-    public ProductPriceSetMessageBuilder withPrices(
+    public ProductPricesSetMessageBuilder withPrices(
             Function<com.commercetools.api.models.common.PriceBuilder, com.commercetools.api.models.common.PriceBuilder> builder) {
         this.prices = new ArrayList<>();
         this.prices.add(builder.apply(com.commercetools.api.models.common.PriceBuilder.of()).build());
@@ -265,7 +265,7 @@ public class ProductPriceSetMessageBuilder implements Builder<ProductPriceSetMes
      *  <p>Whether the update was only applied to the staged Product Projection.</p>
      */
 
-    public ProductPriceSetMessageBuilder staged(final Boolean staged) {
+    public ProductPricesSetMessageBuilder staged(final Boolean staged) {
         this.staged = staged;
         return this;
     }
@@ -325,35 +325,35 @@ public class ProductPriceSetMessageBuilder implements Builder<ProductPriceSetMes
         return this.staged;
     }
 
-    public ProductPriceSetMessage build() {
-        Objects.requireNonNull(id, ProductPriceSetMessage.class + ": id is missing");
-        Objects.requireNonNull(version, ProductPriceSetMessage.class + ": version is missing");
-        Objects.requireNonNull(createdAt, ProductPriceSetMessage.class + ": createdAt is missing");
-        Objects.requireNonNull(lastModifiedAt, ProductPriceSetMessage.class + ": lastModifiedAt is missing");
-        Objects.requireNonNull(sequenceNumber, ProductPriceSetMessage.class + ": sequenceNumber is missing");
-        Objects.requireNonNull(resource, ProductPriceSetMessage.class + ": resource is missing");
-        Objects.requireNonNull(resourceVersion, ProductPriceSetMessage.class + ": resourceVersion is missing");
-        Objects.requireNonNull(variantId, ProductPriceSetMessage.class + ": variantId is missing");
-        Objects.requireNonNull(prices, ProductPriceSetMessage.class + ": prices is missing");
-        Objects.requireNonNull(staged, ProductPriceSetMessage.class + ": staged is missing");
-        return new ProductPriceSetMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
+    public ProductPricesSetMessage build() {
+        Objects.requireNonNull(id, ProductPricesSetMessage.class + ": id is missing");
+        Objects.requireNonNull(version, ProductPricesSetMessage.class + ": version is missing");
+        Objects.requireNonNull(createdAt, ProductPricesSetMessage.class + ": createdAt is missing");
+        Objects.requireNonNull(lastModifiedAt, ProductPricesSetMessage.class + ": lastModifiedAt is missing");
+        Objects.requireNonNull(sequenceNumber, ProductPricesSetMessage.class + ": sequenceNumber is missing");
+        Objects.requireNonNull(resource, ProductPricesSetMessage.class + ": resource is missing");
+        Objects.requireNonNull(resourceVersion, ProductPricesSetMessage.class + ": resourceVersion is missing");
+        Objects.requireNonNull(variantId, ProductPricesSetMessage.class + ": variantId is missing");
+        Objects.requireNonNull(prices, ProductPricesSetMessage.class + ": prices is missing");
+        Objects.requireNonNull(staged, ProductPricesSetMessage.class + ": staged is missing");
+        return new ProductPricesSetMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
             sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, variantId, prices, staged);
     }
 
     /**
-     * builds ProductPriceSetMessage without checking for non null required values
+     * builds ProductPricesSetMessage without checking for non null required values
      */
-    public ProductPriceSetMessage buildUnchecked() {
-        return new ProductPriceSetMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
+    public ProductPricesSetMessage buildUnchecked() {
+        return new ProductPricesSetMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
             sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, variantId, prices, staged);
     }
 
-    public static ProductPriceSetMessageBuilder of() {
-        return new ProductPriceSetMessageBuilder();
+    public static ProductPricesSetMessageBuilder of() {
+        return new ProductPricesSetMessageBuilder();
     }
 
-    public static ProductPriceSetMessageBuilder of(final ProductPriceSetMessage template) {
-        ProductPriceSetMessageBuilder builder = new ProductPriceSetMessageBuilder();
+    public static ProductPricesSetMessageBuilder of(final ProductPricesSetMessage template) {
+        ProductPricesSetMessageBuilder builder = new ProductPricesSetMessageBuilder();
         builder.id = template.getId();
         builder.version = template.getVersion();
         builder.createdAt = template.getCreatedAt();

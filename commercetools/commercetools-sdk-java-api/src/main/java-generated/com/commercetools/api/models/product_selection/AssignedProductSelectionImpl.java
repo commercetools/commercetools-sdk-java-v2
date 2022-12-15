@@ -24,12 +24,16 @@ public class AssignedProductSelectionImpl implements AssignedProductSelection, M
 
     private com.commercetools.api.models.product_selection.ProductVariantSelection variantSelection;
 
+    private java.time.ZonedDateTime createdAt;
+
     @JsonCreator
     AssignedProductSelectionImpl(
             @JsonProperty("productSelection") final com.commercetools.api.models.product_selection.ProductSelectionReference productSelection,
-            @JsonProperty("variantSelection") final com.commercetools.api.models.product_selection.ProductVariantSelection variantSelection) {
+            @JsonProperty("variantSelection") final com.commercetools.api.models.product_selection.ProductVariantSelection variantSelection,
+            @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt) {
         this.productSelection = productSelection;
         this.variantSelection = variantSelection;
+        this.createdAt = createdAt;
     }
 
     public AssignedProductSelectionImpl() {
@@ -51,6 +55,14 @@ public class AssignedProductSelectionImpl implements AssignedProductSelection, M
         return this.variantSelection;
     }
 
+    /**
+     *  <p>Date and time (UTC) this assignment was initially created.</p>
+     */
+
+    public java.time.ZonedDateTime getCreatedAt() {
+        return this.createdAt;
+    }
+
     public void setProductSelection(
             final com.commercetools.api.models.product_selection.ProductSelectionReference productSelection) {
         this.productSelection = productSelection;
@@ -59,6 +71,10 @@ public class AssignedProductSelectionImpl implements AssignedProductSelection, M
     public void setVariantSelection(
             final com.commercetools.api.models.product_selection.ProductVariantSelection variantSelection) {
         this.variantSelection = variantSelection;
+    }
+
+    public void setCreatedAt(final java.time.ZonedDateTime createdAt) {
+        this.createdAt = createdAt;
     }
 
     @Override
@@ -73,12 +89,16 @@ public class AssignedProductSelectionImpl implements AssignedProductSelection, M
 
         return new EqualsBuilder().append(productSelection, that.productSelection)
                 .append(variantSelection, that.variantSelection)
+                .append(createdAt, that.createdAt)
                 .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(productSelection).append(variantSelection).toHashCode();
+        return new HashCodeBuilder(17, 37).append(productSelection)
+                .append(variantSelection)
+                .append(createdAt)
+                .toHashCode();
     }
 
 }

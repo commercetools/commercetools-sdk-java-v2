@@ -17,6 +17,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     AssignedProductSelection assignedProductSelection = AssignedProductSelection.builder()
  *             .productSelection(productSelectionBuilder -> productSelectionBuilder)
+ *             .createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
  *             .build()
  * </code></pre>
  * </div>
@@ -28,6 +29,8 @@ public class AssignedProductSelectionBuilder implements Builder<AssignedProductS
 
     @Nullable
     private com.commercetools.api.models.product_selection.ProductVariantSelection variantSelection;
+
+    private java.time.ZonedDateTime createdAt;
 
     /**
      *  <p>Reference to the Product Selection that this assignment is part of.</p>
@@ -73,6 +76,15 @@ public class AssignedProductSelectionBuilder implements Builder<AssignedProductS
         return this;
     }
 
+    /**
+     *  <p>Date and time (UTC) this assignment was initially created.</p>
+     */
+
+    public AssignedProductSelectionBuilder createdAt(final java.time.ZonedDateTime createdAt) {
+        this.createdAt = createdAt;
+        return this;
+    }
+
     public com.commercetools.api.models.product_selection.ProductSelectionReference getProductSelection() {
         return this.productSelection;
     }
@@ -82,16 +94,21 @@ public class AssignedProductSelectionBuilder implements Builder<AssignedProductS
         return this.variantSelection;
     }
 
+    public java.time.ZonedDateTime getCreatedAt() {
+        return this.createdAt;
+    }
+
     public AssignedProductSelection build() {
         Objects.requireNonNull(productSelection, AssignedProductSelection.class + ": productSelection is missing");
-        return new AssignedProductSelectionImpl(productSelection, variantSelection);
+        Objects.requireNonNull(createdAt, AssignedProductSelection.class + ": createdAt is missing");
+        return new AssignedProductSelectionImpl(productSelection, variantSelection, createdAt);
     }
 
     /**
      * builds AssignedProductSelection without checking for non null required values
      */
     public AssignedProductSelection buildUnchecked() {
-        return new AssignedProductSelectionImpl(productSelection, variantSelection);
+        return new AssignedProductSelectionImpl(productSelection, variantSelection, createdAt);
     }
 
     public static AssignedProductSelectionBuilder of() {
@@ -102,6 +119,7 @@ public class AssignedProductSelectionBuilder implements Builder<AssignedProductS
         AssignedProductSelectionBuilder builder = new AssignedProductSelectionBuilder();
         builder.productSelection = template.getProductSelection();
         builder.variantSelection = template.getVariantSelection();
+        builder.createdAt = template.getCreatedAt();
         return builder;
     }
 

@@ -300,6 +300,10 @@ public interface Payment extends BaseResource, com.commercetools.api.models.Doma
         return com.commercetools.api.models.payment.PaymentReference.builder().id(getId()).build();
     }
 
+    public static com.commercetools.api.models.common.ReferenceTypeId referenceTypeId() {
+        return com.commercetools.api.models.common.ReferenceTypeId.PAYMENT;
+    }
+
     public static com.fasterxml.jackson.core.type.TypeReference<Payment> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<Payment>() {
             @Override

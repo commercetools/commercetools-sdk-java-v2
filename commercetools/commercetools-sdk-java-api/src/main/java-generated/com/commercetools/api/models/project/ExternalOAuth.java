@@ -39,7 +39,7 @@ public interface ExternalOAuth {
     public String getUrl();
 
     /**
-     *  <p>Partially hidden on retrieval.</p>
+     *  <p>Must not contain any leading or trailing whitespaces. Partially hidden on retrieval.</p>
      */
     @NotNull
     @JsonProperty("authorizationHeader")

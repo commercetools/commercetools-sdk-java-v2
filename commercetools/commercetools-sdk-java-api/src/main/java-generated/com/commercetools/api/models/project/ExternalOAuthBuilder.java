@@ -36,7 +36,7 @@ public class ExternalOAuthBuilder implements Builder<ExternalOAuth> {
     }
 
     /**
-     *  <p>Partially hidden on retrieval.</p>
+     *  <p>Must not contain any leading or trailing whitespaces. Partially hidden on retrieval.</p>
      */
 
     public ExternalOAuthBuilder authorizationHeader(final String authorizationHeader) {

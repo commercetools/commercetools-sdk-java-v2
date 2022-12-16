@@ -44,7 +44,7 @@ public class ExternalOAuthImpl implements ExternalOAuth, ModelBase {
     }
 
     /**
-     *  <p>Partially hidden on retrieval.</p>
+     *  <p>Must not contain any leading or trailing whitespaces. Partially hidden on retrieval.</p>
      */
 
     public String getAuthorizationHeader() {

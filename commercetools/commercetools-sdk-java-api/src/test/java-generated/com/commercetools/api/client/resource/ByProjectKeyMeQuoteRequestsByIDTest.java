@@ -69,21 +69,6 @@ public class ByProjectKeyMeQuoteRequestsByIDTest {
                                 .me()
                                 .quoteRequests()
                                 .withId("test_ID")
-                                .get()
-                                .withExpand("expand")
-                                .createHttpRequest(),
-                        "get", "/test_projectKey/me/quote-requests/test_ID?expand=expand", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey")
-                        .me()
-                        .quoteRequests()
-                        .withId("test_ID")
-                        .get()
-                        .createHttpRequest(), "get", "/test_projectKey/me/quote-requests/test_ID", },
-                new Object[] {
-                        apiRoot.withProjectKey("test_projectKey")
-                                .me()
-                                .quoteRequests()
-                                .withId("test_ID")
                                 .post(com.commercetools.api.models.me.MyQuoteRequestUpdate.of())
                                 .withExpand("expand")
                                 .createHttpRequest(),
@@ -117,20 +102,27 @@ public class ByProjectKeyMeQuoteRequestsByIDTest {
                         .quoteRequests()
                         .withId("test_ID")
                         .delete()
-                        .createHttpRequest(), "delete", "/test_projectKey/me/quote-requests/test_ID", } };
-    }
-
-    @DataProvider
-    public static Object[][] executeMethodParameters() {
-        return new Object[][] {
+                        .createHttpRequest(), "delete", "/test_projectKey/me/quote-requests/test_ID", },
+                new Object[] {
+                        apiRoot.withProjectKey("test_projectKey")
+                                .me()
+                                .quoteRequests()
+                                .withId("test_ID")
+                                .get()
+                                .withExpand("expand")
+                                .createHttpRequest(),
+                        "get", "/test_projectKey/me/quote-requests/test_ID?expand=expand", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .me()
                         .quoteRequests()
                         .withId("test_ID")
                         .get()
-                        .withExpand("expand"), },
-                new Object[] {
-                        apiRoot.withProjectKey("test_projectKey").me().quoteRequests().withId("test_ID").get(), },
+                        .createHttpRequest(), "get", "/test_projectKey/me/quote-requests/test_ID", } };
+    }
+
+    @DataProvider
+    public static Object[][] executeMethodParameters() {
+        return new Object[][] {
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .me()
                         .quoteRequests()
@@ -155,6 +147,14 @@ public class ByProjectKeyMeQuoteRequestsByIDTest {
                         .delete()
                         .withExpand("expand"), },
                 new Object[] {
-                        apiRoot.withProjectKey("test_projectKey").me().quoteRequests().withId("test_ID").delete(), } };
+                        apiRoot.withProjectKey("test_projectKey").me().quoteRequests().withId("test_ID").delete(), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .me()
+                        .quoteRequests()
+                        .withId("test_ID")
+                        .get()
+                        .withExpand("expand"), },
+                new Object[] {
+                        apiRoot.withProjectKey("test_projectKey").me().quoteRequests().withId("test_ID").get(), } };
     }
 }

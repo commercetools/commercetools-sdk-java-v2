@@ -26,7 +26,7 @@ public class TransactionImpl implements Transaction, ModelBase {
 
     private com.commercetools.api.models.payment.TransactionType type;
 
-    private com.commercetools.api.models.common.TypedMoney amount;
+    private com.commercetools.api.models.common.CentPrecisionMoney amount;
 
     private String interactionId;
 
@@ -38,7 +38,7 @@ public class TransactionImpl implements Transaction, ModelBase {
     TransactionImpl(@JsonProperty("id") final String id,
             @JsonProperty("timestamp") final java.time.ZonedDateTime timestamp,
             @JsonProperty("type") final com.commercetools.api.models.payment.TransactionType type,
-            @JsonProperty("amount") final com.commercetools.api.models.common.TypedMoney amount,
+            @JsonProperty("amount") final com.commercetools.api.models.common.CentPrecisionMoney amount,
             @JsonProperty("interactionId") final String interactionId,
             @JsonProperty("state") final com.commercetools.api.models.payment.TransactionState state,
             @JsonProperty("custom") final com.commercetools.api.models.type.CustomFields custom) {
@@ -82,7 +82,7 @@ public class TransactionImpl implements Transaction, ModelBase {
      *  <p>Money value of the Transaction.</p>
      */
 
-    public com.commercetools.api.models.common.TypedMoney getAmount() {
+    public com.commercetools.api.models.common.CentPrecisionMoney getAmount() {
         return this.amount;
     }
 
@@ -122,7 +122,7 @@ public class TransactionImpl implements Transaction, ModelBase {
         this.type = type;
     }
 
-    public void setAmount(final com.commercetools.api.models.common.TypedMoney amount) {
+    public void setAmount(final com.commercetools.api.models.common.CentPrecisionMoney amount) {
         this.amount = amount;
     }
 

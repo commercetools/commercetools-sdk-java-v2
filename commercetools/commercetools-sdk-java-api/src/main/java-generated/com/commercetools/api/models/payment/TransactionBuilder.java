@@ -34,7 +34,7 @@ public class TransactionBuilder implements Builder<Transaction> {
 
     private com.commercetools.api.models.payment.TransactionType type;
 
-    private com.commercetools.api.models.common.TypedMoney amount;
+    private com.commercetools.api.models.common.CentPrecisionMoney amount;
 
     @Nullable
     private String interactionId;
@@ -75,8 +75,9 @@ public class TransactionBuilder implements Builder<Transaction> {
      *  <p>Money value of the Transaction.</p>
      */
 
-    public TransactionBuilder amount(final com.commercetools.api.models.common.TypedMoney amount) {
-        this.amount = amount;
+    public TransactionBuilder amount(
+            Function<com.commercetools.api.models.common.CentPrecisionMoneyBuilder, com.commercetools.api.models.common.CentPrecisionMoneyBuilder> builder) {
+        this.amount = builder.apply(com.commercetools.api.models.common.CentPrecisionMoneyBuilder.of()).build();
         return this;
     }
 
@@ -84,9 +85,8 @@ public class TransactionBuilder implements Builder<Transaction> {
      *  <p>Money value of the Transaction.</p>
      */
 
-    public TransactionBuilder amount(
-            Function<com.commercetools.api.models.common.TypedMoneyBuilder, Builder<? extends com.commercetools.api.models.common.TypedMoney>> builder) {
-        this.amount = builder.apply(com.commercetools.api.models.common.TypedMoneyBuilder.of()).build();
+    public TransactionBuilder amount(final com.commercetools.api.models.common.CentPrecisionMoney amount) {
+        this.amount = amount;
         return this;
     }
 
@@ -140,7 +140,7 @@ public class TransactionBuilder implements Builder<Transaction> {
         return this.type;
     }
 
-    public com.commercetools.api.models.common.TypedMoney getAmount() {
+    public com.commercetools.api.models.common.CentPrecisionMoney getAmount() {
         return this.amount;
     }
 

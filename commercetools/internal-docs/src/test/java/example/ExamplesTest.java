@@ -8,14 +8,12 @@ import java.net.Proxy;
 import java.time.Duration;
 import java.util.Arrays;
 import java.util.Collections;
+import java.util.ConcurrentModificationException;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
 import java.util.stream.Collectors;
 
-import com.commercetools.api.client.ApiRoot;
-import com.commercetools.api.client.ByProjectKeyTaxCategoriesGet;
-import com.commercetools.api.client.ProjectApiRoot;
-import com.commercetools.api.client.QueryUtils;
+import com.commercetools.api.client.*;
 import com.commercetools.api.defaultconfig.ApiRootBuilder;
 import com.commercetools.api.defaultconfig.ServiceRegion;
 import com.commercetools.api.models.category.*;
@@ -45,6 +43,7 @@ import org.apache.hc.client5.http.config.RequestConfig;
 import org.apache.hc.core5.util.Timeout;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
+import org.slf4j.event.Level;
 
 public class ExamplesTest {
 
@@ -458,6 +457,18 @@ public class ExamplesTest {
         ApiRootBuilder.of()
                 // ...
                 .addMiddleware(new QueueMiddleware(64, Duration.ofSeconds(10)))
+                .build();
+    }
+
+    public void loggingConfiguration() {
+        ApiRootBuilder.of()
+                .defaultClient(ServiceRegion.GCP_EUROPE_WEST1.getApiUrl())
+                .withInternalLoggerFactory(ApiInternalLoggerFactory::get, Level.INFO, // log level for API responses
+                    Level.INFO, // log level deprecation notices
+                    Level.ERROR, // default log level for exceptions
+                    Collections.singletonMap(ConcurrentModificationException.class, Level.DEBUG) // custom log level for specific exceptions
+                )
+                // ...
                 .build();
     }
 }

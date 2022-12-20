@@ -1,10 +1,25 @@
 
 package com.commercetools.docs.meta;
 
+import java.util.Map;
+
+import io.vrap.rmf.base.client.http.InternalLoggerFactory;
+
+import org.slf4j.event.Level;
+
 /**
  * <h2 id=logging>Logging</h2>
  *
  * <p>Internal logging used by the commercetools Composable Commerce client itself. Uses slf4j logger named {@code commercetools}.</p>
+ *
+ * <h2 id=logger-configuration>Logger configuration</h2>
+ *
+ * <p>The {@link io.vrap.rmf.base.client.ClientBuilder} allows the customization of the log levels used for different events. By default responses
+ * will be logged with {@link org.slf4j.event.Level#INFO} and errors with {@link org.slf4j.event.Level#ERROR}. The
+ * {@link io.vrap.rmf.base.client.ClientBuilder#withInternalLoggerFactory(InternalLoggerFactory, Level, Level, Level, Map)} method can be used
+ * to change these defaults. Please see also {@link io.vrap.rmf.base.client.http.InternalLoggerMiddleware} for further details</p>
+ *
+ * {@include.example example.ExamplesTest#loggingConfiguration}
  *
  * <h2 id=log-information>Log Information</h2>
  *
@@ -17,20 +32,20 @@ package com.commercetools.docs.meta;
  *
  * <h3>Info</h3>
  *
- * By default any response by the API will be logged with the requests HTTP method name, URI and response status code.
- * In case a deprecation header was submitted in the response an info entry with the deprecation notice will be logged.
+ * <p>By default any response by the API will be logged with the requests HTTP method name, URI and response status code.
+ * In case a deprecation header was submitted in the response an info entry with the deprecation notice will be logged.</p>
  *
- * The used log level for these events can be configured while instantiating the InternalLoggerMiddleware.
+ * <p>The used log level for these events can be configured while instantiating the InternalLoggerMiddleware.</p>
  *
  * <h3>Debug</h3>
  *
- * The request and the response object will be logged as a string representation including headers and body. Sensitive
- * data like auth token and passwords will be redacted.
+ * <p>The request and the response object will be logged as a string representation including headers and body. Sensitive
+ * data like auth token and passwords will be redacted.</p>
  *
  * <h3>Trace</h3>
  *
- * The request and response will be logged with a pretty printed output.  Sensitive data like auth token and passwords
- * will be redacted.
+ * </p>The request and response will be logged with a pretty printed output.  Sensitive data like auth token and passwords
+ * will be redacted.</p>
  *
  * <h2 id=logger-hierarchy>Logger hierarchy</h2>
  *

@@ -35,6 +35,13 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface QuoteDraft {
 
     /**
+     *  <p>User-defined unique identifier for the Quote.</p>
+     */
+
+    @JsonProperty("key")
+    public String getKey();
+
+    /**
      *  <p>StagedQuote from which the Quote is created.</p>
      */
     @NotNull
@@ -57,11 +64,11 @@ public interface QuoteDraft {
     public Boolean getStagedQuoteStateToSent();
 
     /**
-     *  <p>User-defined unique identifier for the Quote.</p>
+     *  <p>State of the Quote. This reference can point to a State in a custom workflow.</p>
      */
-
-    @JsonProperty("key")
-    public String getKey();
+    @Valid
+    @JsonProperty("state")
+    public StateReference getState();
 
     /**
      *  <p>Custom Fields to be added to the Quote.</p>
@@ -74,12 +81,7 @@ public interface QuoteDraft {
     @JsonProperty("custom")
     public CustomFieldsDraft getCustom();
 
-    /**
-     *  <p>State of the Quote. This reference can point to a State in a custom workflow.</p>
-     */
-    @Valid
-    @JsonProperty("state")
-    public StateReference getState();
+    public void setKey(final String key);
 
     public void setStagedQuote(final StagedQuoteResourceIdentifier stagedQuote);
 
@@ -87,11 +89,9 @@ public interface QuoteDraft {
 
     public void setStagedQuoteStateToSent(final Boolean stagedQuoteStateToSent);
 
-    public void setKey(final String key);
+    public void setState(final StateReference state);
 
     public void setCustom(final CustomFieldsDraft custom);
-
-    public void setState(final StateReference state);
 
     public static QuoteDraft of() {
         return new QuoteDraftImpl();
@@ -99,12 +99,12 @@ public interface QuoteDraft {
 
     public static QuoteDraft of(final QuoteDraft template) {
         QuoteDraftImpl instance = new QuoteDraftImpl();
+        instance.setKey(template.getKey());
         instance.setStagedQuote(template.getStagedQuote());
         instance.setStagedQuoteVersion(template.getStagedQuoteVersion());
         instance.setStagedQuoteStateToSent(template.getStagedQuoteStateToSent());
-        instance.setKey(template.getKey());
-        instance.setCustom(template.getCustom());
         instance.setState(template.getState());
+        instance.setCustom(template.getCustom());
         return instance;
     }
 

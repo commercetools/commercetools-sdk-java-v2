@@ -28,6 +28,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .taxMode(TaxMode.PLATFORM)
  *             .taxRoundingMode(RoundingMode.HALF_EVEN)
  *             .taxCalculationMode(TaxCalculationMode.LINE_ITEM_LEVEL)
+ *             .quoteState(QuoteState.PENDING)
  *             .build()
  * </code></pre>
  * </div>
@@ -118,6 +119,8 @@ public class QuoteBuilder implements Builder<Quote> {
 
     @Nullable
     private com.commercetools.api.models.type.CustomFields custom;
+
+    private com.commercetools.api.models.quote.QuoteState quoteState;
 
     @Nullable
     private com.commercetools.api.models.state.StateReference state;
@@ -760,6 +763,15 @@ public class QuoteBuilder implements Builder<Quote> {
     }
 
     /**
+     *  <p>Predefined states tracking the status of the Quote.</p>
+     */
+
+    public QuoteBuilder quoteState(final com.commercetools.api.models.quote.QuoteState quoteState) {
+        this.quoteState = quoteState;
+        return this;
+    }
+
+    /**
      *  <p>State of the Quote. This reference can point to a State in a custom workflow.</p>
      */
 
@@ -948,6 +960,10 @@ public class QuoteBuilder implements Builder<Quote> {
         return this.custom;
     }
 
+    public com.commercetools.api.models.quote.QuoteState getQuoteState() {
+        return this.quoteState;
+    }
+
     @Nullable
     public com.commercetools.api.models.state.StateReference getState() {
         return this.state;
@@ -971,11 +987,12 @@ public class QuoteBuilder implements Builder<Quote> {
         Objects.requireNonNull(taxMode, Quote.class + ": taxMode is missing");
         Objects.requireNonNull(taxRoundingMode, Quote.class + ": taxRoundingMode is missing");
         Objects.requireNonNull(taxCalculationMode, Quote.class + ": taxCalculationMode is missing");
+        Objects.requireNonNull(quoteState, Quote.class + ": quoteState is missing");
         return new QuoteImpl(id, version, createdAt, lastModifiedAt, key, lastModifiedBy, createdBy, quoteRequest,
             stagedQuote, customer, customerGroup, validTo, sellerComment, buyerComment, store, lineItems,
             customLineItems, totalPrice, taxedPrice, shippingAddress, billingAddress, inventoryMode, taxMode,
             taxRoundingMode, taxCalculationMode, country, shippingInfo, paymentInfo, shippingRateInput,
-            itemShippingAddresses, directDiscounts, custom, state, businessUnit);
+            itemShippingAddresses, directDiscounts, custom, quoteState, state, businessUnit);
     }
 
     /**
@@ -986,7 +1003,7 @@ public class QuoteBuilder implements Builder<Quote> {
             stagedQuote, customer, customerGroup, validTo, sellerComment, buyerComment, store, lineItems,
             customLineItems, totalPrice, taxedPrice, shippingAddress, billingAddress, inventoryMode, taxMode,
             taxRoundingMode, taxCalculationMode, country, shippingInfo, paymentInfo, shippingRateInput,
-            itemShippingAddresses, directDiscounts, custom, state, businessUnit);
+            itemShippingAddresses, directDiscounts, custom, quoteState, state, businessUnit);
     }
 
     public static QuoteBuilder of() {
@@ -1027,6 +1044,7 @@ public class QuoteBuilder implements Builder<Quote> {
         builder.itemShippingAddresses = template.getItemShippingAddresses();
         builder.directDiscounts = template.getDirectDiscounts();
         builder.custom = template.getCustom();
+        builder.quoteState = template.getQuoteState();
         builder.state = template.getState();
         builder.businessUnit = template.getBusinessUnit();
         return builder;

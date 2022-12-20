@@ -25,6 +25,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class QuoteDraftBuilder implements Builder<QuoteDraft> {
 
+    @Nullable
+    private String key;
+
     private com.commercetools.api.models.staged_quote.StagedQuoteResourceIdentifier stagedQuote;
 
     private Long stagedQuoteVersion;
@@ -33,13 +36,19 @@ public class QuoteDraftBuilder implements Builder<QuoteDraft> {
     private Boolean stagedQuoteStateToSent;
 
     @Nullable
-    private String key;
+    private com.commercetools.api.models.state.StateReference state;
 
     @Nullable
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
 
-    @Nullable
-    private com.commercetools.api.models.state.StateReference state;
+    /**
+     *  <p>User-defined unique identifier for the Quote.</p>
+     */
+
+    public QuoteDraftBuilder key(@Nullable final String key) {
+        this.key = key;
+        return this;
+    }
 
     /**
      *  <p>StagedQuote from which the Quote is created.</p>
@@ -82,11 +91,21 @@ public class QuoteDraftBuilder implements Builder<QuoteDraft> {
     }
 
     /**
-     *  <p>User-defined unique identifier for the Quote.</p>
+     *  <p>State of the Quote. This reference can point to a State in a custom workflow.</p>
      */
 
-    public QuoteDraftBuilder key(@Nullable final String key) {
-        this.key = key;
+    public QuoteDraftBuilder state(
+            Function<com.commercetools.api.models.state.StateReferenceBuilder, com.commercetools.api.models.state.StateReferenceBuilder> builder) {
+        this.state = builder.apply(com.commercetools.api.models.state.StateReferenceBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>State of the Quote. This reference can point to a State in a custom workflow.</p>
+     */
+
+    public QuoteDraftBuilder state(@Nullable final com.commercetools.api.models.state.StateReference state) {
+        this.state = state;
         return this;
     }
 
@@ -117,23 +136,9 @@ public class QuoteDraftBuilder implements Builder<QuoteDraft> {
         return this;
     }
 
-    /**
-     *  <p>State of the Quote. This reference can point to a State in a custom workflow.</p>
-     */
-
-    public QuoteDraftBuilder state(
-            Function<com.commercetools.api.models.state.StateReferenceBuilder, com.commercetools.api.models.state.StateReferenceBuilder> builder) {
-        this.state = builder.apply(com.commercetools.api.models.state.StateReferenceBuilder.of()).build();
-        return this;
-    }
-
-    /**
-     *  <p>State of the Quote. This reference can point to a State in a custom workflow.</p>
-     */
-
-    public QuoteDraftBuilder state(@Nullable final com.commercetools.api.models.state.StateReference state) {
-        this.state = state;
-        return this;
+    @Nullable
+    public String getKey() {
+        return this.key;
     }
 
     public com.commercetools.api.models.staged_quote.StagedQuoteResourceIdentifier getStagedQuote() {
@@ -150,8 +155,8 @@ public class QuoteDraftBuilder implements Builder<QuoteDraft> {
     }
 
     @Nullable
-    public String getKey() {
-        return this.key;
+    public com.commercetools.api.models.state.StateReference getState() {
+        return this.state;
     }
 
     @Nullable
@@ -159,22 +164,17 @@ public class QuoteDraftBuilder implements Builder<QuoteDraft> {
         return this.custom;
     }
 
-    @Nullable
-    public com.commercetools.api.models.state.StateReference getState() {
-        return this.state;
-    }
-
     public QuoteDraft build() {
         Objects.requireNonNull(stagedQuote, QuoteDraft.class + ": stagedQuote is missing");
         Objects.requireNonNull(stagedQuoteVersion, QuoteDraft.class + ": stagedQuoteVersion is missing");
-        return new QuoteDraftImpl(stagedQuote, stagedQuoteVersion, stagedQuoteStateToSent, key, custom, state);
+        return new QuoteDraftImpl(key, stagedQuote, stagedQuoteVersion, stagedQuoteStateToSent, state, custom);
     }
 
     /**
      * builds QuoteDraft without checking for non null required values
      */
     public QuoteDraft buildUnchecked() {
-        return new QuoteDraftImpl(stagedQuote, stagedQuoteVersion, stagedQuoteStateToSent, key, custom, state);
+        return new QuoteDraftImpl(key, stagedQuote, stagedQuoteVersion, stagedQuoteStateToSent, state, custom);
     }
 
     public static QuoteDraftBuilder of() {
@@ -183,12 +183,12 @@ public class QuoteDraftBuilder implements Builder<QuoteDraft> {
 
     public static QuoteDraftBuilder of(final QuoteDraft template) {
         QuoteDraftBuilder builder = new QuoteDraftBuilder();
+        builder.key = template.getKey();
         builder.stagedQuote = template.getStagedQuote();
         builder.stagedQuoteVersion = template.getStagedQuoteVersion();
         builder.stagedQuoteStateToSent = template.getStagedQuoteStateToSent();
-        builder.key = template.getKey();
-        builder.custom = template.getCustom();
         builder.state = template.getState();
+        builder.custom = template.getCustom();
         return builder;
     }
 

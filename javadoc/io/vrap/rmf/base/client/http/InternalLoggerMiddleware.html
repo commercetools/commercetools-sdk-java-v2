@@ -76,9 +76,21 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="Middleware.html" title="interface in io.vrap.rmf.base.client.http">Middleware</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../../src-html/io/vrap/rmf/base/client/http/InternalLoggerMiddleware.html#line.11">InternalLoggerMiddleware</a></span><span class="extends-implements">
+<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../../src-html/io/vrap/rmf/base/client/http/InternalLoggerMiddleware.html#line.25">InternalLoggerMiddleware</a></span><span class="extends-implements">
 extends <a href="Middleware.html" title="interface in io.vrap.rmf.base.client.http">Middleware</a></span></div>
-<div class="block">Middleware instrumenting the <a href="InternalLogger.html" title="class in io.vrap.rmf.base.client.http"><code>InternalLogger</code></a></div>
+<div class="block">Middleware instrumenting the <a href="InternalLogger.html" title="class in io.vrap.rmf.base.client.http"><code>InternalLogger</code></a>
+
+ <p>Responses are logged by default with <code>Level.INFO</code>.
+ In case of an <a href="../ApiHttpHeaders.html#X_DEPRECATION_NOTICE"><code>deprecation</code></a> header the notice will be logged with <code>Level.INFO</code>
+ Any exception will be logged with <code>Level.ERROR</code></p>
+
+ <p>The response, deprecation and error logger levels are configurable. Additionally, a map can be provided with the key a throwable type class
+ and the value of the log level the exception should be logged with</p>
+
+ <p>The middleware logs with debug also the request and the whole response including headers. With trace level the request and response will
+ be logged pretty printed.</p>
+
+ <p>All log events are written as lambda function to avoid rendering the message if the respective level is not enabled.</p></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -126,13 +138,13 @@ extends <a href="Middleware.html" title="interface in io.vrap.rmf.base.client.ht
 <li>
 <section class="detail" id="of(io.vrap.rmf.base.client.http.InternalLoggerFactory)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="InternalLoggerMiddleware.html" title="interface in io.vrap.rmf.base.client.http">InternalLoggerMiddleware</a></span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/io/vrap/rmf/base/client/http/InternalLoggerMiddleware.html#line.13">of</a></span>&#8203;<span class="parameters">(<a href="InternalLoggerFactory.html" title="interface in io.vrap.rmf.base.client.http">InternalLoggerFactory</a>&nbsp;internalLoggerFactory)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="InternalLoggerMiddleware.html" title="interface in io.vrap.rmf.base.client.http">InternalLoggerMiddleware</a></span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/io/vrap/rmf/base/client/http/InternalLoggerMiddleware.html#line.27">of</a></span>&#8203;<span class="parameters">(<a href="InternalLoggerFactory.html" title="interface in io.vrap.rmf.base.client.http">InternalLoggerFactory</a>&nbsp;internalLoggerFactory)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(io.vrap.rmf.base.client.http.InternalLoggerFactory,org.slf4j.event.Level,org.slf4j.event.Level)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="InternalLoggerMiddleware.html" title="interface in io.vrap.rmf.base.client.http">InternalLoggerMiddleware</a></span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/io/vrap/rmf/base/client/http/InternalLoggerMiddleware.html#line.17">of</a></span>&#8203;<span class="parameters">(<a href="InternalLoggerFactory.html" title="interface in io.vrap.rmf.base.client.http">InternalLoggerFactory</a>&nbsp;internalLoggerFactory,
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="InternalLoggerMiddleware.html" title="interface in io.vrap.rmf.base.client.http">InternalLoggerMiddleware</a></span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/io/vrap/rmf/base/client/http/InternalLoggerMiddleware.html#line.31">of</a></span>&#8203;<span class="parameters">(<a href="InternalLoggerFactory.html" title="interface in io.vrap.rmf.base.client.http">InternalLoggerFactory</a>&nbsp;internalLoggerFactory,
  org.slf4j.event.Level&nbsp;responseLogEvent,
  org.slf4j.event.Level&nbsp;deprecationLogEvent)</span></div>
 </section>
@@ -140,7 +152,7 @@ extends <a href="Middleware.html" title="interface in io.vrap.rmf.base.client.ht
 <li>
 <section class="detail" id="of(io.vrap.rmf.base.client.http.InternalLoggerFactory,org.slf4j.event.Level,org.slf4j.event.Level,org.slf4j.event.Level,java.util.Map)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="InternalLoggerMiddleware.html" title="interface in io.vrap.rmf.base.client.http">InternalLoggerMiddleware</a></span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/io/vrap/rmf/base/client/http/InternalLoggerMiddleware.html#line.22">of</a></span>&#8203;<span class="parameters">(<a href="InternalLoggerFactory.html" title="interface in io.vrap.rmf.base.client.http">InternalLoggerFactory</a>&nbsp;internalLoggerFactory,
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="InternalLoggerMiddleware.html" title="interface in io.vrap.rmf.base.client.http">InternalLoggerMiddleware</a></span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/io/vrap/rmf/base/client/http/InternalLoggerMiddleware.html#line.36">of</a></span>&#8203;<span class="parameters">(<a href="InternalLoggerFactory.html" title="interface in io.vrap.rmf.base.client.http">InternalLoggerFactory</a>&nbsp;internalLoggerFactory,
  org.slf4j.event.Level&nbsp;responseLogEvent,
  org.slf4j.event.Level&nbsp;deprecationLogEvent,
  org.slf4j.event.Level&nbsp;defaultExceptionLogEvent,

@@ -175,6 +175,10 @@ public interface ProductType extends BaseResource, com.commercetools.api.models.
         return com.commercetools.api.models.product_type.ProductTypeReference.builder().id(getId()).build();
     }
 
+    public static com.commercetools.api.models.common.ReferenceTypeId referenceTypeId() {
+        return com.commercetools.api.models.common.ReferenceTypeId.PRODUCT_TYPE;
+    }
+
     public static com.fasterxml.jackson.core.type.TypeReference<ProductType> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ProductType>() {
             @Override

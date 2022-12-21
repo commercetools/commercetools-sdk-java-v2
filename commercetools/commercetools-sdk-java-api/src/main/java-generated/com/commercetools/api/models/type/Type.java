@@ -192,6 +192,10 @@ public interface Type extends BaseResource, com.commercetools.api.models.DomainR
         return com.commercetools.api.models.type.TypeReference.builder().id(getId()).build();
     }
 
+    public static com.commercetools.api.models.common.ReferenceTypeId referenceTypeId() {
+        return com.commercetools.api.models.common.ReferenceTypeId.TYPE;
+    }
+
     public static com.fasterxml.jackson.core.type.TypeReference<Type> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<Type>() {
             @Override

@@ -2,7 +2,6 @@
 package com.commercetools.api.models.me;
 
 import java.util.*;
-import java.util.function.Function;
 
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -14,8 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <div class=code-example>
  * <pre><code class='java'>
  *     MyQuoteRequestDraft myQuoteRequestDraft = MyQuoteRequestDraft.builder()
- *             .cart(cartBuilder -> cartBuilder)
- *             .version(0.3)
+ *             .cartId("{cartId}")
+ *             .cartVersion(0.3)
  *             .comment("{comment}")
  *             .build()
  * </code></pre>
@@ -24,28 +23,18 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class MyQuoteRequestDraftBuilder implements Builder<MyQuoteRequestDraft> {
 
-    private com.commercetools.api.models.cart.CartResourceIdentifier cart;
+    private String cartId;
 
-    private Long version;
+    private Long cartVersion;
 
     private String comment;
 
     /**
-     *  <p>ResourceIdentifier of the Cart from which the Quote Request is created.</p>
+     *  <p><code>id</code> of the Cart from which the Quote Request is created.</p>
      */
 
-    public MyQuoteRequestDraftBuilder cart(
-            Function<com.commercetools.api.models.cart.CartResourceIdentifierBuilder, com.commercetools.api.models.cart.CartResourceIdentifierBuilder> builder) {
-        this.cart = builder.apply(com.commercetools.api.models.cart.CartResourceIdentifierBuilder.of()).build();
-        return this;
-    }
-
-    /**
-     *  <p>ResourceIdentifier of the Cart from which the Quote Request is created.</p>
-     */
-
-    public MyQuoteRequestDraftBuilder cart(final com.commercetools.api.models.cart.CartResourceIdentifier cart) {
-        this.cart = cart;
+    public MyQuoteRequestDraftBuilder cartId(final String cartId) {
+        this.cartId = cartId;
         return this;
     }
 
@@ -53,8 +42,8 @@ public class MyQuoteRequestDraftBuilder implements Builder<MyQuoteRequestDraft> 
      *  <p>Current version of the Cart.</p>
      */
 
-    public MyQuoteRequestDraftBuilder version(final Long version) {
-        this.version = version;
+    public MyQuoteRequestDraftBuilder cartVersion(final Long cartVersion) {
+        this.cartVersion = cartVersion;
         return this;
     }
 
@@ -67,12 +56,12 @@ public class MyQuoteRequestDraftBuilder implements Builder<MyQuoteRequestDraft> 
         return this;
     }
 
-    public com.commercetools.api.models.cart.CartResourceIdentifier getCart() {
-        return this.cart;
+    public String getCartId() {
+        return this.cartId;
     }
 
-    public Long getVersion() {
-        return this.version;
+    public Long getCartVersion() {
+        return this.cartVersion;
     }
 
     public String getComment() {
@@ -80,17 +69,17 @@ public class MyQuoteRequestDraftBuilder implements Builder<MyQuoteRequestDraft> 
     }
 
     public MyQuoteRequestDraft build() {
-        Objects.requireNonNull(cart, MyQuoteRequestDraft.class + ": cart is missing");
-        Objects.requireNonNull(version, MyQuoteRequestDraft.class + ": version is missing");
+        Objects.requireNonNull(cartId, MyQuoteRequestDraft.class + ": cartId is missing");
+        Objects.requireNonNull(cartVersion, MyQuoteRequestDraft.class + ": cartVersion is missing");
         Objects.requireNonNull(comment, MyQuoteRequestDraft.class + ": comment is missing");
-        return new MyQuoteRequestDraftImpl(cart, version, comment);
+        return new MyQuoteRequestDraftImpl(cartId, cartVersion, comment);
     }
 
     /**
      * builds MyQuoteRequestDraft without checking for non null required values
      */
     public MyQuoteRequestDraft buildUnchecked() {
-        return new MyQuoteRequestDraftImpl(cart, version, comment);
+        return new MyQuoteRequestDraftImpl(cartId, cartVersion, comment);
     }
 
     public static MyQuoteRequestDraftBuilder of() {
@@ -99,8 +88,8 @@ public class MyQuoteRequestDraftBuilder implements Builder<MyQuoteRequestDraft> 
 
     public static MyQuoteRequestDraftBuilder of(final MyQuoteRequestDraft template) {
         MyQuoteRequestDraftBuilder builder = new MyQuoteRequestDraftBuilder();
-        builder.cart = template.getCart();
-        builder.version = template.getVersion();
+        builder.cartId = template.getCartId();
+        builder.cartVersion = template.getCartVersion();
         builder.comment = template.getComment();
         return builder;
     }

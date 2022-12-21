@@ -203,6 +203,10 @@ public interface OrderEdit extends BaseResource, com.commercetools.api.models.Do
         return com.commercetools.api.models.order_edit.OrderEditReference.builder().id(getId()).build();
     }
 
+    public static com.commercetools.api.models.common.ReferenceTypeId referenceTypeId() {
+        return com.commercetools.api.models.common.ReferenceTypeId.ORDER_EDIT;
+    }
+
     public static com.fasterxml.jackson.core.type.TypeReference<OrderEdit> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<OrderEdit>() {
             @Override

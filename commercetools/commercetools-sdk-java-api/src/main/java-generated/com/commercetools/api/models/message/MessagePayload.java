@@ -125,7 +125,7 @@ import io.vrap.rmf.base.client.utils.Generated;
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.ProductPriceKeySetMessagePayloadImpl.class, name = ProductPriceKeySetMessagePayload.PRODUCT_PRICE_KEY_SET),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.ProductPriceModeSetMessagePayloadImpl.class, name = ProductPriceModeSetMessagePayload.PRODUCT_PRICE_MODE_SET),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.ProductPriceRemovedMessagePayloadImpl.class, name = ProductPriceRemovedMessagePayload.PRODUCT_PRICE_REMOVED),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.ProductPriceSetMessagePayloadImpl.class, name = ProductPriceSetMessagePayload.PRODUCT_PRICE_SET),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.message.ProductPricesSetMessagePayloadImpl.class, name = ProductPricesSetMessagePayload.PRODUCT_PRICES_SET),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.ProductPublishedMessagePayloadImpl.class, name = ProductPublishedMessagePayload.PRODUCT_PUBLISHED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.ProductRemovedFromCategoryMessagePayloadImpl.class, name = ProductRemovedFromCategoryMessagePayload.PRODUCT_REMOVED_FROM_CATEGORY),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.ProductRevertedStagedChangesMessagePayloadImpl.class, name = ProductRevertedStagedChangesMessagePayload.PRODUCT_REVERTED_STAGED_CHANGES),
@@ -583,8 +583,8 @@ public interface MessagePayload {
         return com.commercetools.api.models.message.ProductPriceRemovedMessagePayloadBuilder.of();
     }
 
-    public static com.commercetools.api.models.message.ProductPriceSetMessagePayloadBuilder productPriceSetBuilder() {
-        return com.commercetools.api.models.message.ProductPriceSetMessagePayloadBuilder.of();
+    public static com.commercetools.api.models.message.ProductPricesSetMessagePayloadBuilder productPricesSetBuilder() {
+        return com.commercetools.api.models.message.ProductPricesSetMessagePayloadBuilder.of();
     }
 
     public static com.commercetools.api.models.message.ProductPublishedMessagePayloadBuilder productPublishedBuilder() {

@@ -20,10 +20,6 @@ public class ByProjectKeyMeQuoteRequestsByIDRequestBuilder {
         this.ID = ID;
     }
 
-    public ByProjectKeyMeQuoteRequestsByIDGet get() {
-        return new ByProjectKeyMeQuoteRequestsByIDGet(apiHttpClient, projectKey, ID);
-    }
-
     public ByProjectKeyMeQuoteRequestsByIDPost post(
             com.commercetools.api.models.me.MyQuoteRequestUpdate myQuoteRequestUpdate) {
         return new ByProjectKeyMeQuoteRequestsByIDPost(apiHttpClient, projectKey, ID, myQuoteRequestUpdate);
@@ -40,6 +36,10 @@ public class ByProjectKeyMeQuoteRequestsByIDRequestBuilder {
 
     public <TValue> ByProjectKeyMeQuoteRequestsByIDDelete delete(TValue version) {
         return delete().withVersion(version);
+    }
+
+    public ByProjectKeyMeQuoteRequestsByIDGet get() {
+        return new ByProjectKeyMeQuoteRequestsByIDGet(apiHttpClient, projectKey, ID);
     }
 
 }

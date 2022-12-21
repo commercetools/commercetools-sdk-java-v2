@@ -58,6 +58,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .taxMode(TaxMode.PLATFORM)
  *             .taxRoundingMode(RoundingMode.HALF_EVEN)
  *             .taxCalculationMode(TaxCalculationMode.LINE_ITEM_LEVEL)
+ *             .quoteState(QuoteState.PENDING)
  *             .build()
  * </code></pre>
  * </div>
@@ -296,6 +297,13 @@ public interface Quote extends BaseResource {
     public CustomFields getCustom();
 
     /**
+     *  <p>Predefined states tracking the status of the Quote.</p>
+     */
+    @NotNull
+    @JsonProperty("quoteState")
+    public QuoteState getQuoteState();
+
+    /**
      *  <p>State of the Quote. This reference can point to a State in a custom workflow.</p>
      */
     @Valid
@@ -385,6 +393,8 @@ public interface Quote extends BaseResource {
 
     public void setCustom(final CustomFields custom);
 
+    public void setQuoteState(final QuoteState quoteState);
+
     public void setState(final StateReference state);
 
     public void setBusinessUnit(final BusinessUnitKeyReference businessUnit);
@@ -427,6 +437,7 @@ public interface Quote extends BaseResource {
         instance.setItemShippingAddresses(template.getItemShippingAddresses());
         instance.setDirectDiscounts(template.getDirectDiscounts());
         instance.setCustom(template.getCustom());
+        instance.setQuoteState(template.getQuoteState());
         instance.setState(template.getState());
         instance.setBusinessUnit(template.getBusinessUnit());
         return instance;

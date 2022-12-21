@@ -17,6 +17,7 @@ public interface QuoteState {
 
     /**
     	<p>A state indicating that the <a href="/../api/quotes-overview#seller">Seller</a> submitted the Quote to the <a href="/../api/quotes-overview#buyer">Buyer</a>, but the <a href="/../api/quotes-overview#buyer">Buyer</a> has not replied yet.</p>
+    	<p>This is the default state.</p>
 
     */
     QuoteState PENDING = QuoteStateEnum.PENDING;

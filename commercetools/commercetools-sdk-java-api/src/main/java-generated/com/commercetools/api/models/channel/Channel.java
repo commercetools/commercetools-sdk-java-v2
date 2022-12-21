@@ -220,6 +220,10 @@ public interface Channel extends BaseResource, com.commercetools.api.models.Doma
         return com.commercetools.api.models.channel.ChannelReference.builder().id(getId()).build();
     }
 
+    public static com.commercetools.api.models.common.ReferenceTypeId referenceTypeId() {
+        return com.commercetools.api.models.common.ReferenceTypeId.CHANNEL;
+    }
+
     public static com.fasterxml.jackson.core.type.TypeReference<Channel> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<Channel>() {
             @Override

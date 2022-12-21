@@ -102,7 +102,7 @@ public interface PriceDraftImport {
     public List<PriceTier> getTiers();
 
     /**
-     *
+     *  <p>User-defined unique identifier for the Embedded Price.</p>
      */
 
     @JsonProperty("key")

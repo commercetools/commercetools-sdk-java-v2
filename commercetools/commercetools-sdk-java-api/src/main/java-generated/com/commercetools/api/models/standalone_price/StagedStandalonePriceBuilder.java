@@ -4,6 +4,8 @@ package com.commercetools.api.models.standalone_price;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
+
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -15,7 +17,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     StagedStandalonePrice stagedStandalonePrice = StagedStandalonePrice.builder()
  *             .value(valueBuilder -> valueBuilder)
- *             .discounted(discountedBuilder -> discountedBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -25,6 +26,7 @@ public class StagedStandalonePriceBuilder implements Builder<StagedStandalonePri
 
     private com.commercetools.api.models.common.TypedMoney value;
 
+    @Nullable
     private com.commercetools.api.models.common.DiscountedPrice discounted;
 
     /**
@@ -61,7 +63,7 @@ public class StagedStandalonePriceBuilder implements Builder<StagedStandalonePri
      */
 
     public StagedStandalonePriceBuilder discounted(
-            final com.commercetools.api.models.common.DiscountedPrice discounted) {
+            @Nullable final com.commercetools.api.models.common.DiscountedPrice discounted) {
         this.discounted = discounted;
         return this;
     }
@@ -70,13 +72,13 @@ public class StagedStandalonePriceBuilder implements Builder<StagedStandalonePri
         return this.value;
     }
 
+    @Nullable
     public com.commercetools.api.models.common.DiscountedPrice getDiscounted() {
         return this.discounted;
     }
 
     public StagedStandalonePrice build() {
         Objects.requireNonNull(value, StagedStandalonePrice.class + ": value is missing");
-        Objects.requireNonNull(discounted, StagedStandalonePrice.class + ": discounted is missing");
         return new StagedStandalonePriceImpl(value, discounted);
     }
 

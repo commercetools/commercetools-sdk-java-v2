@@ -260,6 +260,10 @@ public interface Review extends BaseResource, com.commercetools.api.models.Domai
         return com.commercetools.api.models.review.ReviewReference.builder().id(getId()).build();
     }
 
+    public static com.commercetools.api.models.common.ReferenceTypeId referenceTypeId() {
+        return com.commercetools.api.models.common.ReferenceTypeId.REVIEW;
+    }
+
     public static com.fasterxml.jackson.core.type.TypeReference<Review> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<Review>() {
             @Override

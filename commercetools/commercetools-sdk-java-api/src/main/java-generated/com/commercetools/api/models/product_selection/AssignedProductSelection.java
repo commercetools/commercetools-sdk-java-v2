@@ -2,6 +2,7 @@
 package com.commercetools.api.models.product_selection;
 
 import java.time.*;
+import java.time.ZonedDateTime;
 import java.util.*;
 import java.util.function.Function;
 
@@ -22,6 +23,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     AssignedProductSelection assignedProductSelection = AssignedProductSelection.builder()
  *             .productSelection(productSelectionBuilder -> productSelectionBuilder)
+ *             .createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
  *             .build()
  * </code></pre>
  * </div>
@@ -45,9 +47,18 @@ public interface AssignedProductSelection {
     @JsonProperty("variantSelection")
     public ProductVariantSelection getVariantSelection();
 
+    /**
+     *  <p>Date and time (UTC) this assignment was initially created.</p>
+     */
+    @NotNull
+    @JsonProperty("createdAt")
+    public ZonedDateTime getCreatedAt();
+
     public void setProductSelection(final ProductSelectionReference productSelection);
 
     public void setVariantSelection(final ProductVariantSelection variantSelection);
+
+    public void setCreatedAt(final ZonedDateTime createdAt);
 
     public static AssignedProductSelection of() {
         return new AssignedProductSelectionImpl();
@@ -57,6 +68,7 @@ public interface AssignedProductSelection {
         AssignedProductSelectionImpl instance = new AssignedProductSelectionImpl();
         instance.setProductSelection(template.getProductSelection());
         instance.setVariantSelection(template.getVariantSelection());
+        instance.setCreatedAt(template.getCreatedAt());
         return instance;
     }
 

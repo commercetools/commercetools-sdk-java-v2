@@ -15,10 +15,10 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Generated after a successful Set Embedded Price update action.</p>
+ *  <p>Generated after a successful Set Embedded Prices update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-public class ProductPriceSetMessageImpl implements ProductPriceSetMessage, ModelBase {
+public class ProductPricesSetMessageImpl implements ProductPricesSetMessage, ModelBase {
 
     private String id;
 
@@ -49,7 +49,7 @@ public class ProductPriceSetMessageImpl implements ProductPriceSetMessage, Model
     private Boolean staged;
 
     @JsonCreator
-    ProductPriceSetMessageImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version,
+    ProductPricesSetMessageImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version,
             @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt,
             @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt,
             @JsonProperty("lastModifiedBy") final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy,
@@ -74,11 +74,11 @@ public class ProductPriceSetMessageImpl implements ProductPriceSetMessage, Model
         this.variantId = variantId;
         this.prices = prices;
         this.staged = staged;
-        this.type = PRODUCT_PRICE_SET;
+        this.type = PRODUCT_PRICES_SET;
     }
 
-    public ProductPriceSetMessageImpl() {
-        this.type = PRODUCT_PRICE_SET;
+    public ProductPricesSetMessageImpl() {
+        this.type = PRODUCT_PRICES_SET;
     }
 
     /**
@@ -258,7 +258,7 @@ public class ProductPriceSetMessageImpl implements ProductPriceSetMessage, Model
         if (o == null || getClass() != o.getClass())
             return false;
 
-        ProductPriceSetMessageImpl that = (ProductPriceSetMessageImpl) o;
+        ProductPricesSetMessageImpl that = (ProductPricesSetMessageImpl) o;
 
         return new EqualsBuilder().append(id, that.id)
                 .append(version, that.version)

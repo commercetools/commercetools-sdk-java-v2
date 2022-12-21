@@ -9,7 +9,7 @@ import java.util.function.Function;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
-import com.commercetools.api.models.common.TypedMoney;
+import com.commercetools.api.models.common.CentPrecisionMoney;
 import com.commercetools.api.models.type.CustomFields;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
@@ -63,7 +63,7 @@ public interface Transaction extends com.commercetools.api.models.Customizable<T
     @NotNull
     @Valid
     @JsonProperty("amount")
-    public TypedMoney getAmount();
+    public CentPrecisionMoney getAmount();
 
     /**
      *  <p>Identifier used by the interface that manages the Transaction (usually the PSP). If a matching interaction was logged in the <code>interfaceInteractions</code> array, the corresponding interaction can be found with this ID.</p>
@@ -92,7 +92,7 @@ public interface Transaction extends com.commercetools.api.models.Customizable<T
 
     public void setType(final TransactionType type);
 
-    public void setAmount(final TypedMoney amount);
+    public void setAmount(final CentPrecisionMoney amount);
 
     public void setInteractionId(final String interactionId);
 

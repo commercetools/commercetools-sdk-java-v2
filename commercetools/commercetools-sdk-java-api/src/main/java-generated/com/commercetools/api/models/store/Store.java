@@ -243,6 +243,10 @@ public interface Store extends BaseResource, com.commercetools.api.models.Domain
         return com.commercetools.api.models.store.StoreReference.builder().id(getId()).build();
     }
 
+    public static com.commercetools.api.models.common.ReferenceTypeId referenceTypeId() {
+        return com.commercetools.api.models.common.ReferenceTypeId.STORE;
+    }
+
     public static com.fasterxml.jackson.core.type.TypeReference<Store> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<Store>() {
             @Override

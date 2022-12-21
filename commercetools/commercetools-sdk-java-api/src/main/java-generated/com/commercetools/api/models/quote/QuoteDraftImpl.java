@@ -20,35 +20,42 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class QuoteDraftImpl implements QuoteDraft, ModelBase {
 
+    private String key;
+
     private com.commercetools.api.models.staged_quote.StagedQuoteResourceIdentifier stagedQuote;
 
     private Long stagedQuoteVersion;
 
     private Boolean stagedQuoteStateToSent;
 
-    private String key;
+    private com.commercetools.api.models.state.StateReference state;
 
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
 
-    private com.commercetools.api.models.state.StateReference state;
-
     @JsonCreator
-    QuoteDraftImpl(
+    QuoteDraftImpl(@JsonProperty("key") final String key,
             @JsonProperty("stagedQuote") final com.commercetools.api.models.staged_quote.StagedQuoteResourceIdentifier stagedQuote,
             @JsonProperty("stagedQuoteVersion") final Long stagedQuoteVersion,
             @JsonProperty("stagedQuoteStateToSent") final Boolean stagedQuoteStateToSent,
-            @JsonProperty("key") final String key,
-            @JsonProperty("custom") final com.commercetools.api.models.type.CustomFieldsDraft custom,
-            @JsonProperty("state") final com.commercetools.api.models.state.StateReference state) {
+            @JsonProperty("state") final com.commercetools.api.models.state.StateReference state,
+            @JsonProperty("custom") final com.commercetools.api.models.type.CustomFieldsDraft custom) {
+        this.key = key;
         this.stagedQuote = stagedQuote;
         this.stagedQuoteVersion = stagedQuoteVersion;
         this.stagedQuoteStateToSent = stagedQuoteStateToSent;
-        this.key = key;
-        this.custom = custom;
         this.state = state;
+        this.custom = custom;
     }
 
     public QuoteDraftImpl() {
+    }
+
+    /**
+     *  <p>User-defined unique identifier for the Quote.</p>
+     */
+
+    public String getKey() {
+        return this.key;
     }
 
     /**
@@ -76,11 +83,11 @@ public class QuoteDraftImpl implements QuoteDraft, ModelBase {
     }
 
     /**
-     *  <p>User-defined unique identifier for the Quote.</p>
+     *  <p>State of the Quote. This reference can point to a State in a custom workflow.</p>
      */
 
-    public String getKey() {
-        return this.key;
+    public com.commercetools.api.models.state.StateReference getState() {
+        return this.state;
     }
 
     /**
@@ -95,12 +102,8 @@ public class QuoteDraftImpl implements QuoteDraft, ModelBase {
         return this.custom;
     }
 
-    /**
-     *  <p>State of the Quote. This reference can point to a State in a custom workflow.</p>
-     */
-
-    public com.commercetools.api.models.state.StateReference getState() {
-        return this.state;
+    public void setKey(final String key) {
+        this.key = key;
     }
 
     public void setStagedQuote(
@@ -116,16 +119,12 @@ public class QuoteDraftImpl implements QuoteDraft, ModelBase {
         this.stagedQuoteStateToSent = stagedQuoteStateToSent;
     }
 
-    public void setKey(final String key) {
-        this.key = key;
+    public void setState(final com.commercetools.api.models.state.StateReference state) {
+        this.state = state;
     }
 
     public void setCustom(final com.commercetools.api.models.type.CustomFieldsDraft custom) {
         this.custom = custom;
-    }
-
-    public void setState(final com.commercetools.api.models.state.StateReference state) {
-        this.state = state;
     }
 
     @Override
@@ -138,23 +137,23 @@ public class QuoteDraftImpl implements QuoteDraft, ModelBase {
 
         QuoteDraftImpl that = (QuoteDraftImpl) o;
 
-        return new EqualsBuilder().append(stagedQuote, that.stagedQuote)
+        return new EqualsBuilder().append(key, that.key)
+                .append(stagedQuote, that.stagedQuote)
                 .append(stagedQuoteVersion, that.stagedQuoteVersion)
                 .append(stagedQuoteStateToSent, that.stagedQuoteStateToSent)
-                .append(key, that.key)
-                .append(custom, that.custom)
                 .append(state, that.state)
+                .append(custom, that.custom)
                 .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(stagedQuote)
+        return new HashCodeBuilder(17, 37).append(key)
+                .append(stagedQuote)
                 .append(stagedQuoteVersion)
                 .append(stagedQuoteStateToSent)
-                .append(key)
-                .append(custom)
                 .append(state)
+                .append(custom)
                 .toHashCode();
     }
 

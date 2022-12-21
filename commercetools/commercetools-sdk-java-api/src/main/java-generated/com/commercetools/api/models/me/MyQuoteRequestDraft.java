@@ -5,10 +5,8 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
-import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
-import com.commercetools.api.models.cart.CartResourceIdentifier;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -22,8 +20,8 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <div class=code-example>
  * <pre><code class='java'>
  *     MyQuoteRequestDraft myQuoteRequestDraft = MyQuoteRequestDraft.builder()
- *             .cart(cartBuilder -> cartBuilder)
- *             .version(0.3)
+ *             .cartId("{cartId}")
+ *             .cartVersion(0.3)
  *             .comment("{comment}")
  *             .build()
  * </code></pre>
@@ -34,19 +32,18 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface MyQuoteRequestDraft {
 
     /**
-     *  <p>ResourceIdentifier of the Cart from which the Quote Request is created.</p>
+     *  <p><code>id</code> of the Cart from which the Quote Request is created.</p>
      */
     @NotNull
-    @Valid
-    @JsonProperty("cart")
-    public CartResourceIdentifier getCart();
+    @JsonProperty("cartId")
+    public String getCartId();
 
     /**
      *  <p>Current version of the Cart.</p>
      */
     @NotNull
-    @JsonProperty("version")
-    public Long getVersion();
+    @JsonProperty("cartVersion")
+    public Long getCartVersion();
 
     /**
      *  <p>Message from the Buyer included in the Quote Request.</p>
@@ -55,9 +52,9 @@ public interface MyQuoteRequestDraft {
     @JsonProperty("comment")
     public String getComment();
 
-    public void setCart(final CartResourceIdentifier cart);
+    public void setCartId(final String cartId);
 
-    public void setVersion(final Long version);
+    public void setCartVersion(final Long cartVersion);
 
     public void setComment(final String comment);
 
@@ -67,8 +64,8 @@ public interface MyQuoteRequestDraft {
 
     public static MyQuoteRequestDraft of(final MyQuoteRequestDraft template) {
         MyQuoteRequestDraftImpl instance = new MyQuoteRequestDraftImpl();
-        instance.setCart(template.getCart());
-        instance.setVersion(template.getVersion());
+        instance.setCartId(template.getCartId());
+        instance.setCartVersion(template.getCartVersion());
         instance.setComment(template.getComment());
         return instance;
     }

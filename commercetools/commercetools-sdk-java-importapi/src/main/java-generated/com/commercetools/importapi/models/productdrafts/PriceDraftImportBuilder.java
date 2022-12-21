@@ -238,7 +238,7 @@ public class PriceDraftImportBuilder implements Builder<PriceDraftImport> {
     }
 
     /**
-     *
+     *  <p>User-defined unique identifier for the Embedded Price.</p>
      */
 
     public PriceDraftImportBuilder key(@Nullable final String key) {

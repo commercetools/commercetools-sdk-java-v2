@@ -156,6 +156,10 @@ public interface CustomObject extends BaseResource, com.commercetools.api.models
         return com.commercetools.api.models.custom_object.CustomObjectReference.builder().id(getId()).build();
     }
 
+    public static com.commercetools.api.models.common.ReferenceTypeId referenceTypeId() {
+        return com.commercetools.api.models.common.ReferenceTypeId.KEY_VALUE_DOCUMENT;
+    }
+
     public static com.fasterxml.jackson.core.type.TypeReference<CustomObject> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<CustomObject>() {
             @Override

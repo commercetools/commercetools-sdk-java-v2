@@ -176,6 +176,10 @@ public interface TaxCategory extends BaseResource, com.commercetools.api.models.
         return com.commercetools.api.models.tax_category.TaxCategoryReference.builder().id(getId()).build();
     }
 
+    public static com.commercetools.api.models.common.ReferenceTypeId referenceTypeId() {
+        return com.commercetools.api.models.common.ReferenceTypeId.TAX_CATEGORY;
+    }
+
     public static com.fasterxml.jackson.core.type.TypeReference<TaxCategory> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<TaxCategory>() {
             @Override

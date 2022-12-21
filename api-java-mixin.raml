@@ -73,6 +73,9 @@ types:
       public default com.commercetools.api.models.common.Reference toReference() {
           return com.commercetools.api.models.cart.CartReference.builder().id(getId()).build();
       }
+      public static com.commercetools.api.models.common.ReferenceTypeId referenceTypeId() {
+          return com.commercetools.api.models.common.ReferenceTypeId.CART;
+      }
   CartDiscount:
     (java-extends): 'com.commercetools.api.models.DomainResource<CartDiscount>, com.commercetools.api.models.Referencable<CartDiscount>, com.commercetools.api.models.ResourceIdentifiable<CartDiscount>, com.commercetools.api.models.Customizable<CartDiscount>'
     (java-mixin): |
@@ -83,6 +86,9 @@ types:
       @Override
       public default com.commercetools.api.models.common.Reference toReference() {
           return com.commercetools.api.models.cart_discount.CartDiscountReference.builder().id(getId()).build();
+      }
+      public static com.commercetools.api.models.common.ReferenceTypeId referenceTypeId() {
+          return com.commercetools.api.models.common.ReferenceTypeId.CART_DISCOUNT;
       }
   Category:
     (java-extends): 'com.commercetools.api.models.DomainResource<Category>, com.commercetools.api.models.Referencable<Category>, com.commercetools.api.models.ResourceIdentifiable<Category>, com.commercetools.api.models.Customizable<Category>'
@@ -95,6 +101,9 @@ types:
       public default com.commercetools.api.models.common.Reference toReference() {
           return com.commercetools.api.models.category.CategoryReference.builder().id(getId()).build();
       }
+      public static com.commercetools.api.models.common.ReferenceTypeId referenceTypeId() {
+          return com.commercetools.api.models.common.ReferenceTypeId.CATEGORY;
+      }
   Channel:
     (java-extends): 'com.commercetools.api.models.DomainResource<Channel>, com.commercetools.api.models.Referencable<Channel>, com.commercetools.api.models.ResourceIdentifiable<Channel>, com.commercetools.api.models.Customizable<Channel>'
     (java-mixin): |
@@ -106,12 +115,18 @@ types:
       public default com.commercetools.api.models.common.Reference toReference() {
           return com.commercetools.api.models.channel.ChannelReference.builder().id(getId()).build();
       }
+      public static com.commercetools.api.models.common.ReferenceTypeId referenceTypeId() {
+          return com.commercetools.api.models.common.ReferenceTypeId.CHANNEL;
+      }
   CustomObject:
     (java-extends): 'com.commercetools.api.models.DomainResource<CustomObject>, com.commercetools.api.models.Referencable<CustomObject>'
     (java-mixin): |
       @Override
       public default com.commercetools.api.models.common.Reference toReference() {
           return com.commercetools.api.models.custom_object.CustomObjectReference.builder().id(getId()).build();
+      }
+      public static com.commercetools.api.models.common.ReferenceTypeId referenceTypeId() {
+          return com.commercetools.api.models.common.ReferenceTypeId.KEY_VALUE_DOCUMENT;
       }
   Customer:
     (java-extends): 'com.commercetools.api.models.DomainResource<Customer>, com.commercetools.api.models.Referencable<Customer>, com.commercetools.api.models.ResourceIdentifiable<Customer>, com.commercetools.api.models.Customizable<Customer>'
@@ -124,6 +139,9 @@ types:
       public default com.commercetools.api.models.common.Reference toReference() {
           return com.commercetools.api.models.customer.CustomerReference.builder().id(getId()).build();
       }
+      public static com.commercetools.api.models.common.ReferenceTypeId referenceTypeId() {
+          return com.commercetools.api.models.common.ReferenceTypeId.CUSTOMER;
+      }
   CustomerGroup:
     (java-extends): 'com.commercetools.api.models.DomainResource<CustomerGroup>, com.commercetools.api.models.Referencable<CustomerGroup>, com.commercetools.api.models.ResourceIdentifiable<CustomerGroup>, com.commercetools.api.models.Customizable<CustomerGroup>'
     (java-mixin): |
@@ -134,6 +152,9 @@ types:
       @Override
       public default com.commercetools.api.models.common.Reference toReference() {
           return com.commercetools.api.models.customer_group.CustomerGroupReference.builder().id(getId()).build();
+      }
+      public static com.commercetools.api.models.common.ReferenceTypeId referenceTypeId() {
+          return com.commercetools.api.models.common.ReferenceTypeId.CUSTOMER_GROUP;
       }
   DiscountCode:
     (java-extends): 'com.commercetools.api.models.DomainResource<DiscountCode>, com.commercetools.api.models.Referencable<DiscountCode>, com.commercetools.api.models.ResourceIdentifiable<DiscountCode>, com.commercetools.api.models.Customizable<DiscountCode>'
@@ -146,6 +167,9 @@ types:
       public default com.commercetools.api.models.common.Reference toReference() {
           return com.commercetools.api.models.discount_code.DiscountCodeReference.builder().id(getId()).build();
       }
+      public static com.commercetools.api.models.common.ReferenceTypeId referenceTypeId() {
+          return com.commercetools.api.models.common.ReferenceTypeId.DISCOUNT_CODE;
+      }
   Order:
     (java-extends): 'com.commercetools.api.models.DomainResource<Order>, com.commercetools.api.models.Referencable<Order>, com.commercetools.api.models.ResourceIdentifiable<Order>, com.commercetools.api.models.Customizable<Order>, com.commercetools.api.models.order.OrderLike<Order>'
     (java-mixin): |
@@ -156,6 +180,9 @@ types:
       @Override
       public default com.commercetools.api.models.common.Reference toReference() {
           return com.commercetools.api.models.order.OrderReference.builder().id(getId()).build();
+      }
+      public static com.commercetools.api.models.common.ReferenceTypeId referenceTypeId() {
+          return com.commercetools.api.models.common.ReferenceTypeId.ORDER;
       }
   OrderEdit:
     (java-extends): 'com.commercetools.api.models.DomainResource<OrderEdit>, com.commercetools.api.models.Referencable<OrderEdit>, com.commercetools.api.models.ResourceIdentifiable<OrderEdit>, com.commercetools.api.models.Customizable<OrderEdit>'
@@ -168,6 +195,9 @@ types:
       public default com.commercetools.api.models.common.Reference toReference() {
           return com.commercetools.api.models.order_edit.OrderEditReference.builder().id(getId()).build();
       }
+      public static com.commercetools.api.models.common.ReferenceTypeId referenceTypeId() {
+          return com.commercetools.api.models.common.ReferenceTypeId.ORDER_EDIT;
+      }
   Payment:
     (java-extends): 'com.commercetools.api.models.DomainResource<Payment>, com.commercetools.api.models.Referencable<Payment>, com.commercetools.api.models.ResourceIdentifiable<Payment>, com.commercetools.api.models.Customizable<Payment>'
     (java-mixin): |
@@ -178,6 +208,9 @@ types:
       @Override
       public default com.commercetools.api.models.common.Reference toReference() {
           return com.commercetools.api.models.payment.PaymentReference.builder().id(getId()).build();
+      }
+      public static com.commercetools.api.models.common.ReferenceTypeId referenceTypeId() {
+          return com.commercetools.api.models.common.ReferenceTypeId.PAYMENT;
       }
   Product:
     (java-extends): 'com.commercetools.api.models.DomainResource<Product>, com.commercetools.api.models.Referencable<Product>, com.commercetools.api.models.ResourceIdentifiable<Product>'
@@ -190,6 +223,9 @@ types:
       public default com.commercetools.api.models.common.Reference toReference() {
           return com.commercetools.api.models.product.ProductReference.builder().id(getId()).build();
       }
+      public static com.commercetools.api.models.common.ReferenceTypeId referenceTypeId() {
+          return com.commercetools.api.models.common.ReferenceTypeId.PRODUCT;
+      }
   ProductDiscount:
     (java-extends): 'com.commercetools.api.models.DomainResource<ProductDiscount>, com.commercetools.api.models.Referencable<ProductDiscount>, com.commercetools.api.models.ResourceIdentifiable<ProductDiscount>'
     (java-mixin): |
@@ -200,6 +236,9 @@ types:
       @Override
       public default com.commercetools.api.models.common.Reference toReference() {
           return com.commercetools.api.models.product_discount.ProductDiscountReference.builder().id(getId()).build();
+      }
+      public static com.commercetools.api.models.common.ReferenceTypeId referenceTypeId() {
+          return com.commercetools.api.models.common.ReferenceTypeId.PRODUCT_DISCOUNT;
       }
   ProductType:
     (java-extends): 'com.commercetools.api.models.DomainResource<ProductType>, com.commercetools.api.models.Referencable<ProductType>, com.commercetools.api.models.ResourceIdentifiable<ProductType>'
@@ -212,6 +251,9 @@ types:
       public default com.commercetools.api.models.common.Reference toReference() {
           return com.commercetools.api.models.product_type.ProductTypeReference.builder().id(getId()).build();
       }
+      public static com.commercetools.api.models.common.ReferenceTypeId referenceTypeId() {
+          return com.commercetools.api.models.common.ReferenceTypeId.PRODUCT_TYPE;
+      }
   Review:
     (java-extends): 'com.commercetools.api.models.DomainResource<Review>, com.commercetools.api.models.Referencable<Review>, com.commercetools.api.models.ResourceIdentifiable<Review>, com.commercetools.api.models.Customizable<Review>'
     (java-mixin): |
@@ -222,6 +264,9 @@ types:
       @Override
       public default com.commercetools.api.models.common.Reference toReference() {
           return com.commercetools.api.models.review.ReviewReference.builder().id(getId()).build();
+      }
+      public static com.commercetools.api.models.common.ReferenceTypeId referenceTypeId() {
+          return com.commercetools.api.models.common.ReferenceTypeId.REVIEW;
       }
   ShippingMethod:
     (java-extends): 'com.commercetools.api.models.DomainResource<ShippingMethod>, com.commercetools.api.models.Referencable<ShippingMethod>, com.commercetools.api.models.ResourceIdentifiable<ShippingMethod>, com.commercetools.api.models.Customizable<ShippingMethod>'
@@ -234,6 +279,9 @@ types:
       public default com.commercetools.api.models.common.Reference toReference() {
           return com.commercetools.api.models.shipping_method.ShippingMethodReference.builder().id(getId()).build();
       }
+      public static com.commercetools.api.models.common.ReferenceTypeId referenceTypeId() {
+          return com.commercetools.api.models.common.ReferenceTypeId.SHIPPING_METHOD;
+      }
   ShoppingList:
     (java-extends): 'com.commercetools.api.models.DomainResource<ShoppingList>, com.commercetools.api.models.Referencable<ShoppingList>, com.commercetools.api.models.ResourceIdentifiable<ShoppingList>, com.commercetools.api.models.Customizable<ShoppingList>'
     (java-mixin): |
@@ -244,6 +292,9 @@ types:
       @Override
       public default com.commercetools.api.models.common.Reference toReference() {
           return com.commercetools.api.models.shopping_list.ShoppingListReference.builder().id(getId()).build();
+      }
+      public static com.commercetools.api.models.common.ReferenceTypeId referenceTypeId() {
+          return com.commercetools.api.models.common.ReferenceTypeId.SHOPPING_LIST;
       }
   State:
     (java-extends): 'com.commercetools.api.models.DomainResource<State>, com.commercetools.api.models.Referencable<State>, com.commercetools.api.models.ResourceIdentifiable<State>'
@@ -256,6 +307,9 @@ types:
       public default com.commercetools.api.models.common.Reference toReference() {
           return com.commercetools.api.models.state.StateReference.builder().id(getId()).build();
       }
+      public static com.commercetools.api.models.common.ReferenceTypeId referenceTypeId() {
+          return com.commercetools.api.models.common.ReferenceTypeId.STATE;
+      }
   Store:
     (java-extends): 'com.commercetools.api.models.DomainResource<Store>, com.commercetools.api.models.Referencable<Store>, com.commercetools.api.models.ResourceIdentifiable<Store>, com.commercetools.api.models.Customizable<Store>'
     (java-mixin): |
@@ -266,6 +320,9 @@ types:
       @Override
       public default com.commercetools.api.models.common.Reference toReference() {
           return com.commercetools.api.models.store.StoreReference.builder().id(getId()).build();
+      }
+      public static com.commercetools.api.models.common.ReferenceTypeId referenceTypeId() {
+          return com.commercetools.api.models.common.ReferenceTypeId.STORE;
       }
   TaxCategory:
     (java-extends): 'com.commercetools.api.models.DomainResource<TaxCategory>, com.commercetools.api.models.Referencable<TaxCategory>, com.commercetools.api.models.ResourceIdentifiable<TaxCategory>'
@@ -278,6 +335,9 @@ types:
       public default com.commercetools.api.models.common.Reference toReference() {
           return com.commercetools.api.models.tax_category.TaxCategoryReference.builder().id(getId()).build();
       }
+      public static com.commercetools.api.models.common.ReferenceTypeId referenceTypeId() {
+          return com.commercetools.api.models.common.ReferenceTypeId.TAX_CATEGORY;
+      }
   Type:
     (java-extends): 'com.commercetools.api.models.DomainResource<Type>, com.commercetools.api.models.Referencable<Type>, com.commercetools.api.models.ResourceIdentifiable<Type>'
     (java-mixin): |
@@ -289,6 +349,9 @@ types:
       public default com.commercetools.api.models.common.Reference toReference() {
           return com.commercetools.api.models.type.TypeReference.builder().id(getId()).build();
       }
+      public static com.commercetools.api.models.common.ReferenceTypeId referenceTypeId() {
+          return com.commercetools.api.models.common.ReferenceTypeId.TYPE;
+      }
   Zone:
     (java-extends): 'com.commercetools.api.models.DomainResource<Zone>, com.commercetools.api.models.Referencable<Zone>, com.commercetools.api.models.ResourceIdentifiable<Zone>'
     (java-mixin): |
@@ -299,6 +362,9 @@ types:
       @Override
       public default com.commercetools.api.models.common.Reference toReference() {
           return com.commercetools.api.models.zone.ZoneReference.builder().id(getId()).build();
+      }
+      public static com.commercetools.api.models.common.ReferenceTypeId referenceTypeId() {
+          return com.commercetools.api.models.common.ReferenceTypeId.ZONE;
       }
   CentPrecisionMoney:
     (java-mixin): |

@@ -39,6 +39,10 @@ public class ByProjectKeyShippingMethodsRequestBuilder {
         return new ByProjectKeyShippingMethodsMatchingCartRequestBuilder(apiHttpClient, projectKey);
     }
 
+    public ByProjectKeyShippingMethodsMatchingCartLocationRequestBuilder matchingCartLocation() {
+        return new ByProjectKeyShippingMethodsMatchingCartLocationRequestBuilder(apiHttpClient, projectKey);
+    }
+
     public ByProjectKeyShippingMethodsMatchingOrdereditRequestBuilder matchingOrderedit() {
         return new ByProjectKeyShippingMethodsMatchingOrdereditRequestBuilder(apiHttpClient, projectKey);
     }

@@ -139,7 +139,7 @@ public class PriceDraftImportImpl implements PriceDraftImport, ModelBase {
     }
 
     /**
-     *
+     *  <p>User-defined unique identifier for the Embedded Price.</p>
      */
 
     public String getKey() {

@@ -20,17 +20,17 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class MyQuoteRequestDraftImpl implements MyQuoteRequestDraft, ModelBase {
 
-    private com.commercetools.api.models.cart.CartResourceIdentifier cart;
+    private String cartId;
 
-    private Long version;
+    private Long cartVersion;
 
     private String comment;
 
     @JsonCreator
-    MyQuoteRequestDraftImpl(@JsonProperty("cart") final com.commercetools.api.models.cart.CartResourceIdentifier cart,
-            @JsonProperty("version") final Long version, @JsonProperty("comment") final String comment) {
-        this.cart = cart;
-        this.version = version;
+    MyQuoteRequestDraftImpl(@JsonProperty("cartId") final String cartId,
+            @JsonProperty("cartVersion") final Long cartVersion, @JsonProperty("comment") final String comment) {
+        this.cartId = cartId;
+        this.cartVersion = cartVersion;
         this.comment = comment;
     }
 
@@ -38,19 +38,19 @@ public class MyQuoteRequestDraftImpl implements MyQuoteRequestDraft, ModelBase {
     }
 
     /**
-     *  <p>ResourceIdentifier of the Cart from which the Quote Request is created.</p>
+     *  <p><code>id</code> of the Cart from which the Quote Request is created.</p>
      */
 
-    public com.commercetools.api.models.cart.CartResourceIdentifier getCart() {
-        return this.cart;
+    public String getCartId() {
+        return this.cartId;
     }
 
     /**
      *  <p>Current version of the Cart.</p>
      */
 
-    public Long getVersion() {
-        return this.version;
+    public Long getCartVersion() {
+        return this.cartVersion;
     }
 
     /**
@@ -61,12 +61,12 @@ public class MyQuoteRequestDraftImpl implements MyQuoteRequestDraft, ModelBase {
         return this.comment;
     }
 
-    public void setCart(final com.commercetools.api.models.cart.CartResourceIdentifier cart) {
-        this.cart = cart;
+    public void setCartId(final String cartId) {
+        this.cartId = cartId;
     }
 
-    public void setVersion(final Long version) {
-        this.version = version;
+    public void setCartVersion(final Long cartVersion) {
+        this.cartVersion = cartVersion;
     }
 
     public void setComment(final String comment) {
@@ -83,15 +83,15 @@ public class MyQuoteRequestDraftImpl implements MyQuoteRequestDraft, ModelBase {
 
         MyQuoteRequestDraftImpl that = (MyQuoteRequestDraftImpl) o;
 
-        return new EqualsBuilder().append(cart, that.cart)
-                .append(version, that.version)
+        return new EqualsBuilder().append(cartId, that.cartId)
+                .append(cartVersion, that.cartVersion)
                 .append(comment, that.comment)
                 .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(cart).append(version).append(comment).toHashCode();
+        return new HashCodeBuilder(17, 37).append(cartId).append(cartVersion).append(comment).toHashCode();
     }
 
 }

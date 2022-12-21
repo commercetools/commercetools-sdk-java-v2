@@ -15,13 +15,13 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>Generated after a successful Set Embedded Price update action.</p>
+ *  <p>Generated after a successful Set Embedded Prices update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
  * <div class=code-example>
  * <pre><code class='java'>
- *     ProductPriceSetMessagePayload productPriceSetMessagePayload = ProductPriceSetMessagePayload.builder()
+ *     ProductPricesSetMessagePayload productPricesSetMessagePayload = ProductPricesSetMessagePayload.builder()
  *             .variantId(0.3)
  *             .plusPrices(pricesBuilder -> pricesBuilder)
  *             .staged(true)
@@ -30,10 +30,10 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-@JsonDeserialize(as = ProductPriceSetMessagePayloadImpl.class)
-public interface ProductPriceSetMessagePayload extends MessagePayload {
+@JsonDeserialize(as = ProductPricesSetMessagePayloadImpl.class)
+public interface ProductPricesSetMessagePayload extends MessagePayload {
 
-    String PRODUCT_PRICE_SET = "ProductPriceSet";
+    String PRODUCT_PRICES_SET = "ProductPricesSet";
 
     /**
      *  <p>Unique identifier of the ProductVariant for which the Price was set.</p>
@@ -66,35 +66,35 @@ public interface ProductPriceSetMessagePayload extends MessagePayload {
 
     public void setStaged(final Boolean staged);
 
-    public static ProductPriceSetMessagePayload of() {
-        return new ProductPriceSetMessagePayloadImpl();
+    public static ProductPricesSetMessagePayload of() {
+        return new ProductPricesSetMessagePayloadImpl();
     }
 
-    public static ProductPriceSetMessagePayload of(final ProductPriceSetMessagePayload template) {
-        ProductPriceSetMessagePayloadImpl instance = new ProductPriceSetMessagePayloadImpl();
+    public static ProductPricesSetMessagePayload of(final ProductPricesSetMessagePayload template) {
+        ProductPricesSetMessagePayloadImpl instance = new ProductPricesSetMessagePayloadImpl();
         instance.setVariantId(template.getVariantId());
         instance.setPrices(template.getPrices());
         instance.setStaged(template.getStaged());
         return instance;
     }
 
-    public static ProductPriceSetMessagePayloadBuilder builder() {
-        return ProductPriceSetMessagePayloadBuilder.of();
+    public static ProductPricesSetMessagePayloadBuilder builder() {
+        return ProductPricesSetMessagePayloadBuilder.of();
     }
 
-    public static ProductPriceSetMessagePayloadBuilder builder(final ProductPriceSetMessagePayload template) {
-        return ProductPriceSetMessagePayloadBuilder.of(template);
+    public static ProductPricesSetMessagePayloadBuilder builder(final ProductPricesSetMessagePayload template) {
+        return ProductPricesSetMessagePayloadBuilder.of(template);
     }
 
-    default <T> T withProductPriceSetMessagePayload(Function<ProductPriceSetMessagePayload, T> helper) {
+    default <T> T withProductPricesSetMessagePayload(Function<ProductPricesSetMessagePayload, T> helper) {
         return helper.apply(this);
     }
 
-    public static com.fasterxml.jackson.core.type.TypeReference<ProductPriceSetMessagePayload> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ProductPriceSetMessagePayload>() {
+    public static com.fasterxml.jackson.core.type.TypeReference<ProductPricesSetMessagePayload> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ProductPricesSetMessagePayload>() {
             @Override
             public String toString() {
-                return "TypeReference<ProductPriceSetMessagePayload>";
+                return "TypeReference<ProductPricesSetMessagePayload>";
             }
         };
     }

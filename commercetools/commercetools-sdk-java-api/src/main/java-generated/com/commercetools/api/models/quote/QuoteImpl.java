@@ -84,6 +84,8 @@ public class QuoteImpl implements Quote, ModelBase {
 
     private com.commercetools.api.models.type.CustomFields custom;
 
+    private com.commercetools.api.models.quote.QuoteState quoteState;
+
     private com.commercetools.api.models.state.StateReference state;
 
     private com.commercetools.api.models.business_unit.BusinessUnitKeyReference businessUnit;
@@ -120,6 +122,7 @@ public class QuoteImpl implements Quote, ModelBase {
             @JsonProperty("itemShippingAddresses") final java.util.List<com.commercetools.api.models.common.Address> itemShippingAddresses,
             @JsonProperty("directDiscounts") final java.util.List<com.commercetools.api.models.cart.DirectDiscount> directDiscounts,
             @JsonProperty("custom") final com.commercetools.api.models.type.CustomFields custom,
+            @JsonProperty("quoteState") final com.commercetools.api.models.quote.QuoteState quoteState,
             @JsonProperty("state") final com.commercetools.api.models.state.StateReference state,
             @JsonProperty("businessUnit") final com.commercetools.api.models.business_unit.BusinessUnitKeyReference businessUnit) {
         this.id = id;
@@ -154,6 +157,7 @@ public class QuoteImpl implements Quote, ModelBase {
         this.itemShippingAddresses = itemShippingAddresses;
         this.directDiscounts = directDiscounts;
         this.custom = custom;
+        this.quoteState = quoteState;
         this.state = state;
         this.businessUnit = businessUnit;
     }
@@ -418,6 +422,14 @@ public class QuoteImpl implements Quote, ModelBase {
     }
 
     /**
+     *  <p>Predefined states tracking the status of the Quote.</p>
+     */
+
+    public com.commercetools.api.models.quote.QuoteState getQuoteState() {
+        return this.quoteState;
+    }
+
+    /**
      *  <p>State of the Quote. This reference can point to a State in a custom workflow.</p>
      */
 
@@ -581,6 +593,10 @@ public class QuoteImpl implements Quote, ModelBase {
         this.custom = custom;
     }
 
+    public void setQuoteState(final com.commercetools.api.models.quote.QuoteState quoteState) {
+        this.quoteState = quoteState;
+    }
+
     public void setState(final com.commercetools.api.models.state.StateReference state) {
         this.state = state;
     }
@@ -632,6 +648,7 @@ public class QuoteImpl implements Quote, ModelBase {
                 .append(itemShippingAddresses, that.itemShippingAddresses)
                 .append(directDiscounts, that.directDiscounts)
                 .append(custom, that.custom)
+                .append(quoteState, that.quoteState)
                 .append(state, that.state)
                 .append(businessUnit, that.businessUnit)
                 .isEquals();
@@ -671,6 +688,7 @@ public class QuoteImpl implements Quote, ModelBase {
                 .append(itemShippingAddresses)
                 .append(directDiscounts)
                 .append(custom)
+                .append(quoteState)
                 .append(state)
                 .append(businessUnit)
                 .toHashCode();

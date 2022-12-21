@@ -15,10 +15,10 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Generated after a successful Set Embedded Price update action.</p>
+ *  <p>Generated after a successful Set Embedded Prices update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-public class ProductPriceSetMessagePayloadImpl implements ProductPriceSetMessagePayload, ModelBase {
+public class ProductPricesSetMessagePayloadImpl implements ProductPricesSetMessagePayload, ModelBase {
 
     private String type;
 
@@ -29,17 +29,17 @@ public class ProductPriceSetMessagePayloadImpl implements ProductPriceSetMessage
     private Boolean staged;
 
     @JsonCreator
-    ProductPriceSetMessagePayloadImpl(@JsonProperty("variantId") final Long variantId,
+    ProductPricesSetMessagePayloadImpl(@JsonProperty("variantId") final Long variantId,
             @JsonProperty("prices") final java.util.List<com.commercetools.api.models.common.Price> prices,
             @JsonProperty("staged") final Boolean staged) {
         this.variantId = variantId;
         this.prices = prices;
         this.staged = staged;
-        this.type = PRODUCT_PRICE_SET;
+        this.type = PRODUCT_PRICES_SET;
     }
 
-    public ProductPriceSetMessagePayloadImpl() {
-        this.type = PRODUCT_PRICE_SET;
+    public ProductPricesSetMessagePayloadImpl() {
+        this.type = PRODUCT_PRICES_SET;
     }
 
     /**
@@ -98,7 +98,7 @@ public class ProductPriceSetMessagePayloadImpl implements ProductPriceSetMessage
         if (o == null || getClass() != o.getClass())
             return false;
 
-        ProductPriceSetMessagePayloadImpl that = (ProductPriceSetMessagePayloadImpl) o;
+        ProductPricesSetMessagePayloadImpl that = (ProductPricesSetMessagePayloadImpl) o;
 
         return new EqualsBuilder().append(type, that.type)
                 .append(variantId, that.variantId)

@@ -257,6 +257,10 @@ public interface ShoppingList extends BaseResource, com.commercetools.api.models
         return com.commercetools.api.models.shopping_list.ShoppingListReference.builder().id(getId()).build();
     }
 
+    public static com.commercetools.api.models.common.ReferenceTypeId referenceTypeId() {
+        return com.commercetools.api.models.common.ReferenceTypeId.SHOPPING_LIST;
+    }
+
     public static com.fasterxml.jackson.core.type.TypeReference<ShoppingList> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ShoppingList>() {
             @Override

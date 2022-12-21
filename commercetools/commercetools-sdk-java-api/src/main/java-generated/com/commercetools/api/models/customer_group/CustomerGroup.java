@@ -165,6 +165,10 @@ public interface CustomerGroup extends BaseResource, com.commercetools.api.model
         return com.commercetools.api.models.customer_group.CustomerGroupReference.builder().id(getId()).build();
     }
 
+    public static com.commercetools.api.models.common.ReferenceTypeId referenceTypeId() {
+        return com.commercetools.api.models.common.ReferenceTypeId.CUSTOMER_GROUP;
+    }
+
     public static com.fasterxml.jackson.core.type.TypeReference<CustomerGroup> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<CustomerGroup>() {
             @Override

@@ -26,7 +26,7 @@ import org.mockito.Mockito;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @ExtendWith(UseDataProviderExtension.class)
 @ExtendWith(DataProviderExtension.class)
-public class ByProjectKeyMeQuoteRequestsKeyByKeyTest {
+public class ByProjectKeyShippingMethodsMatchingCartLocationTest {
     private final VrapHttpClient httpClientMock = Mockito.mock(VrapHttpClient.class);
     private final String projectKey = "test_projectKey";
     private final static ApiRoot apiRoot = ApiRoot.of();
@@ -66,95 +66,69 @@ public class ByProjectKeyMeQuoteRequestsKeyByKeyTest {
         return new Object[][] {
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
-                                .me()
-                                .quoteRequests()
-                                .withKey("test_key")
-                                .post(com.commercetools.api.models.me.MyQuoteRequestUpdate.of())
-                                .withExpand("expand")
+                                .shippingMethods()
+                                .matchingCartLocation()
+                                .get()
+                                .withCountry("country")
                                 .createHttpRequest(),
-                        "post", "/test_projectKey/me/quote-requests/key=test_key?expand=expand", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey")
-                        .me()
-                        .quoteRequests()
-                        .withKey("test_key")
-                        .post(com.commercetools.api.models.me.MyQuoteRequestUpdate.of())
-                        .createHttpRequest(), "post", "/test_projectKey/me/quote-requests/key=test_key", },
+                        "get", "/test_projectKey/shipping-methods/matching-cart-location?country=country", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
-                                .me()
-                                .quoteRequests()
-                                .withKey("test_key")
-                                .delete()
-                                .withVersion(2)
+                                .shippingMethods()
+                                .matchingCartLocation()
+                                .get()
+                                .withState("state")
                                 .createHttpRequest(),
-                        "delete", "/test_projectKey/me/quote-requests/key=test_key?version=2", },
+                        "get", "/test_projectKey/shipping-methods/matching-cart-location?state=state", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
-                                .me()
-                                .quoteRequests()
-                                .withKey("test_key")
-                                .delete()
-                                .withExpand("expand")
+                                .shippingMethods()
+                                .matchingCartLocation()
+                                .get()
+                                .withCartId("cartId")
                                 .createHttpRequest(),
-                        "delete", "/test_projectKey/me/quote-requests/key=test_key?expand=expand", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey")
-                        .me()
-                        .quoteRequests()
-                        .withKey("test_key")
-                        .delete()
-                        .createHttpRequest(), "delete", "/test_projectKey/me/quote-requests/key=test_key", },
+                        "get", "/test_projectKey/shipping-methods/matching-cart-location?cartId=cartId", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
-                                .me()
-                                .quoteRequests()
-                                .withKey("test_key")
+                                .shippingMethods()
+                                .matchingCartLocation()
                                 .get()
                                 .withExpand("expand")
                                 .createHttpRequest(),
-                        "get", "/test_projectKey/me/quote-requests/key=test_key?expand=expand", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey")
-                        .me()
-                        .quoteRequests()
-                        .withKey("test_key")
-                        .get()
-                        .createHttpRequest(), "get", "/test_projectKey/me/quote-requests/key=test_key", } };
+                        "get", "/test_projectKey/shipping-methods/matching-cart-location?expand=expand", },
+                new Object[] {
+                        apiRoot.withProjectKey("test_projectKey")
+                                .shippingMethods()
+                                .matchingCartLocation()
+                                .get()
+                                .createHttpRequest(),
+                        "get", "/test_projectKey/shipping-methods/matching-cart-location", } };
     }
 
     @DataProvider
     public static Object[][] executeMethodParameters() {
         return new Object[][] {
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
-                        .me()
-                        .quoteRequests()
-                        .withKey("test_key")
-                        .post(com.commercetools.api.models.me.MyQuoteRequestUpdate.of())
-                        .withExpand("expand"), },
+                        .shippingMethods()
+                        .matchingCartLocation()
+                        .get()
+                        .withCountry("country"), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
-                        .me()
-                        .quoteRequests()
-                        .withKey("test_key")
-                        .post(com.commercetools.api.models.me.MyQuoteRequestUpdate.of()), },
+                        .shippingMethods()
+                        .matchingCartLocation()
+                        .get()
+                        .withState("state"), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
-                        .me()
-                        .quoteRequests()
-                        .withKey("test_key")
-                        .delete()
-                        .withVersion(2), },
+                        .shippingMethods()
+                        .matchingCartLocation()
+                        .get()
+                        .withCartId("cartId"), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
-                        .me()
-                        .quoteRequests()
-                        .withKey("test_key")
-                        .delete()
-                        .withExpand("expand"), },
-                new Object[] {
-                        apiRoot.withProjectKey("test_projectKey").me().quoteRequests().withKey("test_key").delete(), },
-                new Object[] { apiRoot.withProjectKey("test_projectKey")
-                        .me()
-                        .quoteRequests()
-                        .withKey("test_key")
+                        .shippingMethods()
+                        .matchingCartLocation()
                         .get()
                         .withExpand("expand"), },
                 new Object[] {
-                        apiRoot.withProjectKey("test_projectKey").me().quoteRequests().withKey("test_key").get(), } };
+                        apiRoot.withProjectKey("test_projectKey").shippingMethods().matchingCartLocation().get(), } };
     }
 }

@@ -246,6 +246,10 @@ public interface ProductDiscount extends BaseResource, com.commercetools.api.mod
         return com.commercetools.api.models.product_discount.ProductDiscountReference.builder().id(getId()).build();
     }
 
+    public static com.commercetools.api.models.common.ReferenceTypeId referenceTypeId() {
+        return com.commercetools.api.models.common.ReferenceTypeId.PRODUCT_DISCOUNT;
+    }
+
     public static com.fasterxml.jackson.core.type.TypeReference<ProductDiscount> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ProductDiscount>() {
             @Override

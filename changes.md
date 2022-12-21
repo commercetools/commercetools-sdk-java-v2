@@ -1,28 +1,63 @@
 **Api changes**
 
 <details>
-<summary>Added Type(s)</summary>
+<summary>Added Resource(s)</summary>
 
-- added type `DuplicatePriceKeyError` (file:/home/runner/work/commercetools-api-reference/commercetools-api-reference/commercetools-api-reference/api-specs/api/types/types.raml:422:0)
-- added type `ProductPriceKeySetMessage` (file:/home/runner/work/commercetools-api-reference/commercetools-api-reference/commercetools-api-reference/api-specs/api/types/types.raml:753:0)
-- added type `StandalonePriceKeySetMessage` (file:/home/runner/work/commercetools-api-reference/commercetools-api-reference/commercetools-api-reference/api-specs/api/types/types.raml:794:0)
-- added type `ProductPriceKeySetMessagePayload` (file:/home/runner/work/commercetools-api-reference/commercetools-api-reference/commercetools-api-reference/api-specs/api/types/types.raml:914:0)
-- added type `StandalonePriceKeySetMessagePayload` (file:/home/runner/work/commercetools-api-reference/commercetools-api-reference/commercetools-api-reference/api-specs/api/types/types.raml:958:0)
-- added type `ProductSetPriceKeyAction` (file:/home/runner/work/commercetools-api-reference/commercetools-api-reference/commercetools-api-reference/api-specs/api/types/types.raml:1419:0)
-- added type `StandalonePriceSetKeyAction` (file:/home/runner/work/commercetools-api-reference/commercetools-api-reference/commercetools-api-reference/api-specs/api/types/types.raml:1609:0)
+- added resource `/{projectKey}/shipping-methods/matching-cart-location`
 </details>
 
 
 <details>
-<summary>Removed Property(s)</summary>
+<summary>Changed Property(s)</summary>
 
-- :warning: removed property `conflictingPrices` from type `DuplicatePriceScopeError` (file:/home/runner/work/commercetools-api-reference/commercetools-api-reference/commercetools-api-reference-previous/api-specs/api/types/error/DuplicatePriceScopeError.raml:16:2)
+- :warning: changed property `amount` of type `Transaction` from type `TypedMoney` to `CentPrecisionMoney`
 </details>
 
 
 <details>
 <summary>Added Property(s)</summary>
 
-- added property `conflictingPrice` to type `DuplicatePriceScopeError` (file:/home/runner/work/commercetools-api-reference/commercetools-api-reference/commercetools-api-reference/api-specs/api/types/error/DuplicatePriceScopeError.raml:16:2)
+- added property `cartId` to type `MyQuoteRequestDraft`
+- added property `cartVersion` to type `MyQuoteRequestDraft`
+- added property `createdAt` to type `AssignedProductSelection`
+- added property `quoteState` to type `Quote`
+</details>
+
+
+<details>
+<summary>Required Property(s)</summary>
+
+- changed property `discounted` of type `StagedStandalonePrice` to be optional
+</details>
+
+
+<details>
+<summary>Removed Property(s)</summary>
+
+- :warning: removed property `cart` from type `MyQuoteRequestDraft`
+- :warning: removed property `version` from type `MyQuoteRequestDraft`
+</details>
+
+
+<details>
+<summary>Added Type(s)</summary>
+
+- added type `ProductPricesSetMessage`
+- added type `ProductPricesSetMessagePayload`
+</details>
+
+
+<details>
+<summary>Removed Type(s)</summary>
+
+- :warning: removed type `ProductPriceSetMessage`
+- :warning: removed type `ProductPriceSetMessagePayload`
+</details>
+
+
+<details>
+<summary>Added Method(s)</summary>
+
+- added method `apiRoot.withProjectKey().shippingMethods().matchingCartLocation().get()`
 </details>
 

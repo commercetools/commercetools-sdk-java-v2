@@ -22,21 +22,24 @@
 <span class="source-line-no">009</span><span id="line.9">import com.fasterxml.jackson.databind.SerializerProvider;</span>
 <span class="source-line-no">010</span><span id="line.10">import com.fasterxml.jackson.databind.ser.std.StdScalarSerializer;</span>
 <span class="source-line-no">011</span><span id="line.11"></span>
-<span class="source-line-no">012</span><span id="line.12">public final class LocalTimeSerializer extends StdScalarSerializer&lt;LocalTime&gt; {</span>
-<span class="source-line-no">013</span><span id="line.13"></span>
-<span class="source-line-no">014</span><span id="line.14">    static final long serialVersionUID = 0L;</span>
-<span class="source-line-no">015</span><span id="line.15"></span>
-<span class="source-line-no">016</span><span id="line.16">    public LocalTimeSerializer() {</span>
-<span class="source-line-no">017</span><span id="line.17">        super(LocalTime.class);</span>
-<span class="source-line-no">018</span><span id="line.18">    }</span>
-<span class="source-line-no">019</span><span id="line.19"></span>
-<span class="source-line-no">020</span><span id="line.20">    @Override</span>
-<span class="source-line-no">021</span><span id="line.21">    public void serialize(final LocalTime value, final JsonGenerator gen, final SerializerProvider arg2)</span>
-<span class="source-line-no">022</span><span id="line.22">            throws IOException {</span>
-<span class="source-line-no">023</span><span id="line.23">        gen.writeString(DateTimeFormatter.ISO_TIME.format(value));</span>
-<span class="source-line-no">024</span><span id="line.24">    }</span>
-<span class="source-line-no">025</span><span id="line.25"></span>
-<span class="source-line-no">026</span><span id="line.26">}</span>
+<span class="source-line-no">012</span><span id="line.12">/**</span>
+<span class="source-line-no">013</span><span id="line.13"> * serializes a {@link LocalTime} to {@link DateTimeFormatter#ISO_TIME} format</span>
+<span class="source-line-no">014</span><span id="line.14"> */</span>
+<span class="source-line-no">015</span><span id="line.15">public final class LocalTimeSerializer extends StdScalarSerializer&lt;LocalTime&gt; {</span>
+<span class="source-line-no">016</span><span id="line.16"></span>
+<span class="source-line-no">017</span><span id="line.17">    static final long serialVersionUID = 0L;</span>
+<span class="source-line-no">018</span><span id="line.18"></span>
+<span class="source-line-no">019</span><span id="line.19">    public LocalTimeSerializer() {</span>
+<span class="source-line-no">020</span><span id="line.20">        super(LocalTime.class);</span>
+<span class="source-line-no">021</span><span id="line.21">    }</span>
+<span class="source-line-no">022</span><span id="line.22"></span>
+<span class="source-line-no">023</span><span id="line.23">    @Override</span>
+<span class="source-line-no">024</span><span id="line.24">    public void serialize(final LocalTime value, final JsonGenerator gen, final SerializerProvider arg2)</span>
+<span class="source-line-no">025</span><span id="line.25">            throws IOException {</span>
+<span class="source-line-no">026</span><span id="line.26">        gen.writeString(DateTimeFormatter.ISO_TIME.format(value));</span>
+<span class="source-line-no">027</span><span id="line.27">    }</span>
+<span class="source-line-no">028</span><span id="line.28"></span>
+<span class="source-line-no">029</span><span id="line.29">}</span>
 
 
 

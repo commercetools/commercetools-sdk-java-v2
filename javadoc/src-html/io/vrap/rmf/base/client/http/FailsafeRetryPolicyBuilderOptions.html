@@ -20,15 +20,18 @@
 <span class="source-line-no">007</span><span id="line.7"></span>
 <span class="source-line-no">008</span><span id="line.8">import dev.failsafe.RetryPolicyBuilder;</span>
 <span class="source-line-no">009</span><span id="line.9"></span>
-<span class="source-line-no">010</span><span id="line.10">@FunctionalInterface</span>
-<span class="source-line-no">011</span><span id="line.11">public interface FailsafeRetryPolicyBuilderOptions {</span>
-<span class="source-line-no">012</span><span id="line.12">    RetryPolicyBuilder&lt;ApiHttpResponse&lt;byte[]&gt;&gt; apply(RetryPolicyBuilder&lt;ApiHttpResponse&lt;byte[]&gt;&gt; options);</span>
-<span class="source-line-no">013</span><span id="line.13"></span>
-<span class="source-line-no">014</span><span id="line.14">    default FailsafeRetryPolicyBuilderOptions andThen(FailsafeRetryPolicyBuilderOptions after) {</span>
-<span class="source-line-no">015</span><span id="line.15">        Objects.requireNonNull(after);</span>
-<span class="source-line-no">016</span><span id="line.16">        return (t) -&gt; after.apply(apply(t));</span>
-<span class="source-line-no">017</span><span id="line.17">    }</span>
-<span class="source-line-no">018</span><span id="line.18">}</span>
+<span class="source-line-no">010</span><span id="line.10">/**</span>
+<span class="source-line-no">011</span><span id="line.11"> * Interface to enable the configuration of Failsafe instances</span>
+<span class="source-line-no">012</span><span id="line.12"> */</span>
+<span class="source-line-no">013</span><span id="line.13">@FunctionalInterface</span>
+<span class="source-line-no">014</span><span id="line.14">public interface FailsafeRetryPolicyBuilderOptions {</span>
+<span class="source-line-no">015</span><span id="line.15">    RetryPolicyBuilder&lt;ApiHttpResponse&lt;byte[]&gt;&gt; apply(RetryPolicyBuilder&lt;ApiHttpResponse&lt;byte[]&gt;&gt; options);</span>
+<span class="source-line-no">016</span><span id="line.16"></span>
+<span class="source-line-no">017</span><span id="line.17">    default FailsafeRetryPolicyBuilderOptions andThen(FailsafeRetryPolicyBuilderOptions after) {</span>
+<span class="source-line-no">018</span><span id="line.18">        Objects.requireNonNull(after);</span>
+<span class="source-line-no">019</span><span id="line.19">        return (t) -&gt; after.apply(apply(t));</span>
+<span class="source-line-no">020</span><span id="line.20">    }</span>
+<span class="source-line-no">021</span><span id="line.21">}</span>
 
 
 

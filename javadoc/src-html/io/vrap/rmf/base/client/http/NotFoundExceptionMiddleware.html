@@ -20,20 +20,23 @@
 <span class="source-line-no">007</span><span id="line.7">import io.vrap.rmf.base.client.ApiHttpMethod;</span>
 <span class="source-line-no">008</span><span id="line.8">import io.vrap.rmf.base.client.ApiHttpRequest;</span>
 <span class="source-line-no">009</span><span id="line.9"></span>
-<span class="source-line-no">010</span><span id="line.10">public interface NotFoundExceptionMiddleware extends Middleware {</span>
-<span class="source-line-no">011</span><span id="line.11"></span>
-<span class="source-line-no">012</span><span id="line.12">    static NotFoundExceptionMiddleware of() {</span>
-<span class="source-line-no">013</span><span id="line.13">        return new NotFoundExceptionMiddlewareImpl();</span>
-<span class="source-line-no">014</span><span id="line.14">    }</span>
-<span class="source-line-no">015</span><span id="line.15"></span>
-<span class="source-line-no">016</span><span id="line.16">    static NotFoundExceptionMiddleware of(final Set&lt;ApiHttpMethod&gt; methods) {</span>
-<span class="source-line-no">017</span><span id="line.17">        return new NotFoundExceptionMiddlewareImpl(apiHttpRequest -&gt; methods.contains(apiHttpRequest.getMethod()));</span>
-<span class="source-line-no">018</span><span id="line.18">    }</span>
-<span class="source-line-no">019</span><span id="line.19"></span>
-<span class="source-line-no">020</span><span id="line.20">    static NotFoundExceptionMiddleware of(final Predicate&lt;ApiHttpRequest&gt; requestPredicate) {</span>
-<span class="source-line-no">021</span><span id="line.21">        return new NotFoundExceptionMiddlewareImpl(requestPredicate);</span>
-<span class="source-line-no">022</span><span id="line.22">    }</span>
-<span class="source-line-no">023</span><span id="line.23">}</span>
+<span class="source-line-no">010</span><span id="line.10">/**</span>
+<span class="source-line-no">011</span><span id="line.11"> * Middleware to convert a {@link io.vrap.rmf.base.client.error.NotFoundException} to a response with a null body value</span>
+<span class="source-line-no">012</span><span id="line.12"> */</span>
+<span class="source-line-no">013</span><span id="line.13">public interface NotFoundExceptionMiddleware extends Middleware {</span>
+<span class="source-line-no">014</span><span id="line.14"></span>
+<span class="source-line-no">015</span><span id="line.15">    static NotFoundExceptionMiddleware of() {</span>
+<span class="source-line-no">016</span><span id="line.16">        return new NotFoundExceptionMiddlewareImpl();</span>
+<span class="source-line-no">017</span><span id="line.17">    }</span>
+<span class="source-line-no">018</span><span id="line.18"></span>
+<span class="source-line-no">019</span><span id="line.19">    static NotFoundExceptionMiddleware of(final Set&lt;ApiHttpMethod&gt; methods) {</span>
+<span class="source-line-no">020</span><span id="line.20">        return new NotFoundExceptionMiddlewareImpl(apiHttpRequest -&gt; methods.contains(apiHttpRequest.getMethod()));</span>
+<span class="source-line-no">021</span><span id="line.21">    }</span>
+<span class="source-line-no">022</span><span id="line.22"></span>
+<span class="source-line-no">023</span><span id="line.23">    static NotFoundExceptionMiddleware of(final Predicate&lt;ApiHttpRequest&gt; requestPredicate) {</span>
+<span class="source-line-no">024</span><span id="line.24">        return new NotFoundExceptionMiddlewareImpl(requestPredicate);</span>
+<span class="source-line-no">025</span><span id="line.25">    }</span>
+<span class="source-line-no">026</span><span id="line.26">}</span>
 
 
 

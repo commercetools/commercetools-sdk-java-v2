@@ -68,10 +68,12 @@ loadScripts(document, 'script');</script>
 </div>
 <div class="col-first odd-row-color"><a href="ErrorMiddleware.html" title="interface in io.vrap.rmf.base.client.http">ErrorMiddleware</a></div>
 <div class="col-last odd-row-color">
-<div class="block">Used to convert API errors to Exceptions</div>
+<div class="block">Used to convert API errors to Exceptions.</div>
 </div>
 <div class="col-first even-row-color"><a href="FailsafeRetryPolicyBuilderOptions.html" title="interface in io.vrap.rmf.base.client.http">FailsafeRetryPolicyBuilderOptions</a></div>
-<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-last even-row-color">
+<div class="block">Interface to enable the configuration of Failsafe instances</div>
+</div>
 <div class="col-first odd-row-color"><a href="InternalLoggerFactory.html" title="interface in io.vrap.rmf.base.client.http">InternalLoggerFactory</a></div>
 <div class="col-last odd-row-color">
 <div class="block">Creates the <a href="InternalLogger.html" title="class in io.vrap.rmf.base.client.http"><code>InternalLogger</code></a> instances for the specified request</div>
@@ -85,15 +87,21 @@ loadScripts(document, 'script');</script>
 <div class="block">Interface for a HTTP middleware used to modify a request and the response</div>
 </div>
 <div class="col-first even-row-color"><a href="NotFoundExceptionMiddleware.html" title="interface in io.vrap.rmf.base.client.http">NotFoundExceptionMiddleware</a></div>
-<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-last even-row-color">
+<div class="block">Middleware to convert a <a href="../error/NotFoundException.html" title="class in io.vrap.rmf.base.client.error"><code>NotFoundException</code></a> to a response with a null body value</div>
+</div>
 <div class="col-first odd-row-color"><a href="OAuthMiddleware.html" title="interface in io.vrap.rmf.base.client.http">OAuthMiddleware</a></div>
 <div class="col-last odd-row-color">
 <div class="block">Middleware to add an oauth authentication header to requests</div>
 </div>
 <div class="col-first even-row-color"><a href="QueueRequestMiddleware.html" title="interface in io.vrap.rmf.base.client.http">QueueRequestMiddleware</a></div>
-<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-last even-row-color">
+<div class="block">Middleware to limit the number of concurrent request using a Queue</div>
+</div>
 <div class="col-first odd-row-color"><a href="RetryRequestMiddleware.html" title="interface in io.vrap.rmf.base.client.http">RetryRequestMiddleware</a></div>
-<div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-last odd-row-color">
+<div class="block">Middleware for retrying of a requests upon configured response status codes and/or exceptions</div>
+</div>
 </div>
 </li>
 <li>

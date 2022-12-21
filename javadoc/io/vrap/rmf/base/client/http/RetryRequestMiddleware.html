@@ -80,8 +80,9 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="RetryMiddleware.html" title="class in io.vrap.rmf.base.client.http">RetryMiddleware</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../../src-html/io/vrap/rmf/base/client/http/RetryRequestMiddleware.html#line.16">RetryRequestMiddleware</a></span><span class="extends-implements">
+<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../../src-html/io/vrap/rmf/base/client/http/RetryRequestMiddleware.html#line.19">RetryRequestMiddleware</a></span><span class="extends-implements">
 extends <a href="Middleware.html" title="interface in io.vrap.rmf.base.client.http">Middleware</a></span></div>
+<div class="block">Middleware for retrying of a requests upon configured response status codes and/or exceptions</div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -306,7 +307,7 @@ extends <a href="Middleware.html" title="interface in io.vrap.rmf.base.client.ht
 <li>
 <section class="detail" id="DEFAULT_MAX_DELAY">
 <h3>DEFAULT_MAX_DELAY</h3>
-<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/io/vrap/rmf/base/client/http/RetryRequestMiddleware.html#line.17">DEFAULT_MAX_DELAY</a></span></div>
+<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/io/vrap/rmf/base/client/http/RetryRequestMiddleware.html#line.20">DEFAULT_MAX_DELAY</a></span></div>
 <dl class="notes">
 <dt>See Also:</dt>
 <dd><a href="../../../../../../constant-values.html#io.vrap.rmf.base.client.http.RetryRequestMiddleware.DEFAULT_MAX_DELAY">Constant Field Values</a></dd>
@@ -316,7 +317,7 @@ extends <a href="Middleware.html" title="interface in io.vrap.rmf.base.client.ht
 <li>
 <section class="detail" id="DEFAULT_INITIAL_DELAY">
 <h3>DEFAULT_INITIAL_DELAY</h3>
-<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/io/vrap/rmf/base/client/http/RetryRequestMiddleware.html#line.18">DEFAULT_INITIAL_DELAY</a></span></div>
+<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/io/vrap/rmf/base/client/http/RetryRequestMiddleware.html#line.21">DEFAULT_INITIAL_DELAY</a></span></div>
 <dl class="notes">
 <dt>See Also:</dt>
 <dd><a href="../../../../../../constant-values.html#io.vrap.rmf.base.client.http.RetryRequestMiddleware.DEFAULT_INITIAL_DELAY">Constant Field Values</a></dd>
@@ -326,7 +327,7 @@ extends <a href="Middleware.html" title="interface in io.vrap.rmf.base.client.ht
 <li>
 <section class="detail" id="DEFAULT_RETRY_STATUS_CODES">
 <h3>DEFAULT_RETRY_STATUS_CODES</h3>
-<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/io/vrap/rmf/base/client/http/RetryRequestMiddleware.html#line.19">DEFAULT_RETRY_STATUS_CODES</a></span></div>
+<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/io/vrap/rmf/base/client/http/RetryRequestMiddleware.html#line.22">DEFAULT_RETRY_STATUS_CODES</a></span></div>
 </section>
 </li>
 </ul>
@@ -340,20 +341,20 @@ extends <a href="Middleware.html" title="interface in io.vrap.rmf.base.client.ht
 <li>
 <section class="detail" id="of(int)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="RetryRequestMiddleware.html" title="interface in io.vrap.rmf.base.client.http">RetryRequestMiddleware</a></span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/io/vrap/rmf/base/client/http/RetryRequestMiddleware.html#line.21">of</a></span>&#8203;<span class="parameters">(int&nbsp;maxRetries)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="RetryRequestMiddleware.html" title="interface in io.vrap.rmf.base.client.http">RetryRequestMiddleware</a></span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/io/vrap/rmf/base/client/http/RetryRequestMiddleware.html#line.24">of</a></span>&#8203;<span class="parameters">(int&nbsp;maxRetries)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(int,java.util.List)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="RetryRequestMiddleware.html" title="interface in io.vrap.rmf.base.client.http">RetryRequestMiddleware</a></span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/io/vrap/rmf/base/client/http/RetryRequestMiddleware.html#line.26">of</a></span>&#8203;<span class="parameters">(int&nbsp;maxRetries,
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="RetryRequestMiddleware.html" title="interface in io.vrap.rmf.base.client.http">RetryRequestMiddleware</a></span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/io/vrap/rmf/base/client/http/RetryRequestMiddleware.html#line.29">of</a></span>&#8203;<span class="parameters">(int&nbsp;maxRetries,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;&nbsp;statusCodes)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(int,java.util.List,java.util.List)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="RetryRequestMiddleware.html" title="interface in io.vrap.rmf.base.client.http">RetryRequestMiddleware</a></span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/io/vrap/rmf/base/client/http/RetryRequestMiddleware.html#line.30">of</a></span>&#8203;<span class="parameters">(int&nbsp;maxRetries,
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="RetryRequestMiddleware.html" title="interface in io.vrap.rmf.base.client.http">RetryRequestMiddleware</a></span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/io/vrap/rmf/base/client/http/RetryRequestMiddleware.html#line.33">of</a></span>&#8203;<span class="parameters">(int&nbsp;maxRetries,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;&nbsp;statusCodes,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;? extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Throwable.html" title="class or interface in java.lang" class="external-link">Throwable</a>&gt;&gt;&nbsp;failures)</span></div>
 </section>
@@ -361,7 +362,7 @@ extends <a href="Middleware.html" title="interface in io.vrap.rmf.base.client.ht
 <li>
 <section class="detail" id="of(int,long,long)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="RetryRequestMiddleware.html" title="interface in io.vrap.rmf.base.client.http">RetryRequestMiddleware</a></span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/io/vrap/rmf/base/client/http/RetryRequestMiddleware.html#line.35">of</a></span>&#8203;<span class="parameters">(int&nbsp;maxRetries,
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="RetryRequestMiddleware.html" title="interface in io.vrap.rmf.base.client.http">RetryRequestMiddleware</a></span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/io/vrap/rmf/base/client/http/RetryRequestMiddleware.html#line.38">of</a></span>&#8203;<span class="parameters">(int&nbsp;maxRetries,
  long&nbsp;delay,
  long&nbsp;maxDelay)</span></div>
 </section>
@@ -369,7 +370,7 @@ extends <a href="Middleware.html" title="interface in io.vrap.rmf.base.client.ht
 <li>
 <section class="detail" id="of(int,long,long,java.util.List)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="RetryRequestMiddleware.html" title="interface in io.vrap.rmf.base.client.http">RetryRequestMiddleware</a></span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/io/vrap/rmf/base/client/http/RetryRequestMiddleware.html#line.39">of</a></span>&#8203;<span class="parameters">(int&nbsp;maxRetries,
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="RetryRequestMiddleware.html" title="interface in io.vrap.rmf.base.client.http">RetryRequestMiddleware</a></span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/io/vrap/rmf/base/client/http/RetryRequestMiddleware.html#line.42">of</a></span>&#8203;<span class="parameters">(int&nbsp;maxRetries,
  long&nbsp;delay,
  long&nbsp;maxDelay,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;&nbsp;statusCodes)</span></div>
@@ -378,7 +379,7 @@ extends <a href="Middleware.html" title="interface in io.vrap.rmf.base.client.ht
 <li>
 <section class="detail" id="of(int,long,long,java.util.List,java.util.List)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="RetryRequestMiddleware.html" title="interface in io.vrap.rmf.base.client.http">RetryRequestMiddleware</a></span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/io/vrap/rmf/base/client/http/RetryRequestMiddleware.html#line.44">of</a></span>&#8203;<span class="parameters">(int&nbsp;maxRetries,
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="RetryRequestMiddleware.html" title="interface in io.vrap.rmf.base.client.http">RetryRequestMiddleware</a></span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/io/vrap/rmf/base/client/http/RetryRequestMiddleware.html#line.47">of</a></span>&#8203;<span class="parameters">(int&nbsp;maxRetries,
  long&nbsp;delay,
  long&nbsp;maxDelay,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;&nbsp;statusCodes,
@@ -388,7 +389,7 @@ extends <a href="Middleware.html" title="interface in io.vrap.rmf.base.client.ht
 <li>
 <section class="detail" id="of(int,long,long,io.vrap.rmf.base.client.http.FailsafeRetryPolicyBuilderOptions)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="RetryRequestMiddleware.html" title="interface in io.vrap.rmf.base.client.http">RetryRequestMiddleware</a></span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/io/vrap/rmf/base/client/http/RetryRequestMiddleware.html#line.50">of</a></span>&#8203;<span class="parameters">(int&nbsp;maxRetries,
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="RetryRequestMiddleware.html" title="interface in io.vrap.rmf.base.client.http">RetryRequestMiddleware</a></span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/io/vrap/rmf/base/client/http/RetryRequestMiddleware.html#line.53">of</a></span>&#8203;<span class="parameters">(int&nbsp;maxRetries,
  long&nbsp;delay,
  long&nbsp;maxDelay,
  <a href="FailsafeRetryPolicyBuilderOptions.html" title="interface in io.vrap.rmf.base.client.http">FailsafeRetryPolicyBuilderOptions</a>&nbsp;fn)</span></div>
@@ -397,14 +398,14 @@ extends <a href="Middleware.html" title="interface in io.vrap.rmf.base.client.ht
 <li>
 <section class="detail" id="of(dev.failsafe.spi.Scheduler,int)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="RetryRequestMiddleware.html" title="interface in io.vrap.rmf.base.client.http">RetryRequestMiddleware</a></span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/io/vrap/rmf/base/client/http/RetryRequestMiddleware.html#line.55">of</a></span>&#8203;<span class="parameters">(dev.failsafe.spi.Scheduler&nbsp;scheduler,
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="RetryRequestMiddleware.html" title="interface in io.vrap.rmf.base.client.http">RetryRequestMiddleware</a></span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/io/vrap/rmf/base/client/http/RetryRequestMiddleware.html#line.58">of</a></span>&#8203;<span class="parameters">(dev.failsafe.spi.Scheduler&nbsp;scheduler,
  int&nbsp;maxRetries)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(dev.failsafe.spi.Scheduler,int,java.util.List)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="RetryRequestMiddleware.html" title="interface in io.vrap.rmf.base.client.http">RetryRequestMiddleware</a></span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/io/vrap/rmf/base/client/http/RetryRequestMiddleware.html#line.60">of</a></span>&#8203;<span class="parameters">(dev.failsafe.spi.Scheduler&nbsp;scheduler,
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="RetryRequestMiddleware.html" title="interface in io.vrap.rmf.base.client.http">RetryRequestMiddleware</a></span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/io/vrap/rmf/base/client/http/RetryRequestMiddleware.html#line.63">of</a></span>&#8203;<span class="parameters">(dev.failsafe.spi.Scheduler&nbsp;scheduler,
  int&nbsp;maxRetries,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;&nbsp;statusCodes)</span></div>
 </section>
@@ -412,7 +413,7 @@ extends <a href="Middleware.html" title="interface in io.vrap.rmf.base.client.ht
 <li>
 <section class="detail" id="of(dev.failsafe.spi.Scheduler,int,java.util.List,java.util.List)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="RetryRequestMiddleware.html" title="interface in io.vrap.rmf.base.client.http">RetryRequestMiddleware</a></span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/io/vrap/rmf/base/client/http/RetryRequestMiddleware.html#line.65">of</a></span>&#8203;<span class="parameters">(dev.failsafe.spi.Scheduler&nbsp;scheduler,
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="RetryRequestMiddleware.html" title="interface in io.vrap.rmf.base.client.http">RetryRequestMiddleware</a></span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/io/vrap/rmf/base/client/http/RetryRequestMiddleware.html#line.68">of</a></span>&#8203;<span class="parameters">(dev.failsafe.spi.Scheduler&nbsp;scheduler,
  int&nbsp;maxRetries,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;&nbsp;statusCodes,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;? extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Throwable.html" title="class or interface in java.lang" class="external-link">Throwable</a>&gt;&gt;&nbsp;failures)</span></div>
@@ -421,7 +422,7 @@ extends <a href="Middleware.html" title="interface in io.vrap.rmf.base.client.ht
 <li>
 <section class="detail" id="of(dev.failsafe.spi.Scheduler,int,long,long)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="RetryRequestMiddleware.html" title="interface in io.vrap.rmf.base.client.http">RetryRequestMiddleware</a></span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/io/vrap/rmf/base/client/http/RetryRequestMiddleware.html#line.71">of</a></span>&#8203;<span class="parameters">(dev.failsafe.spi.Scheduler&nbsp;scheduler,
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="RetryRequestMiddleware.html" title="interface in io.vrap.rmf.base.client.http">RetryRequestMiddleware</a></span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/io/vrap/rmf/base/client/http/RetryRequestMiddleware.html#line.74">of</a></span>&#8203;<span class="parameters">(dev.failsafe.spi.Scheduler&nbsp;scheduler,
  int&nbsp;maxRetries,
  long&nbsp;delay,
  long&nbsp;maxDelay)</span></div>
@@ -430,7 +431,7 @@ extends <a href="Middleware.html" title="interface in io.vrap.rmf.base.client.ht
 <li>
 <section class="detail" id="of(dev.failsafe.spi.Scheduler,int,long,long,java.util.List)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="RetryRequestMiddleware.html" title="interface in io.vrap.rmf.base.client.http">RetryRequestMiddleware</a></span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/io/vrap/rmf/base/client/http/RetryRequestMiddleware.html#line.76">of</a></span>&#8203;<span class="parameters">(dev.failsafe.spi.Scheduler&nbsp;scheduler,
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="RetryRequestMiddleware.html" title="interface in io.vrap.rmf.base.client.http">RetryRequestMiddleware</a></span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/io/vrap/rmf/base/client/http/RetryRequestMiddleware.html#line.79">of</a></span>&#8203;<span class="parameters">(dev.failsafe.spi.Scheduler&nbsp;scheduler,
  int&nbsp;maxRetries,
  long&nbsp;delay,
  long&nbsp;maxDelay,
@@ -440,7 +441,7 @@ extends <a href="Middleware.html" title="interface in io.vrap.rmf.base.client.ht
 <li>
 <section class="detail" id="of(dev.failsafe.spi.Scheduler,int,long,long,java.util.List,java.util.List)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="RetryRequestMiddleware.html" title="interface in io.vrap.rmf.base.client.http">RetryRequestMiddleware</a></span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/io/vrap/rmf/base/client/http/RetryRequestMiddleware.html#line.81">of</a></span>&#8203;<span class="parameters">(dev.failsafe.spi.Scheduler&nbsp;scheduler,
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="RetryRequestMiddleware.html" title="interface in io.vrap.rmf.base.client.http">RetryRequestMiddleware</a></span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/io/vrap/rmf/base/client/http/RetryRequestMiddleware.html#line.84">of</a></span>&#8203;<span class="parameters">(dev.failsafe.spi.Scheduler&nbsp;scheduler,
  int&nbsp;maxRetries,
  long&nbsp;delay,
  long&nbsp;maxDelay,
@@ -451,7 +452,7 @@ extends <a href="Middleware.html" title="interface in io.vrap.rmf.base.client.ht
 <li>
 <section class="detail" id="of(dev.failsafe.spi.Scheduler,int,long,long,io.vrap.rmf.base.client.http.FailsafeRetryPolicyBuilderOptions)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="RetryRequestMiddleware.html" title="interface in io.vrap.rmf.base.client.http">RetryRequestMiddleware</a></span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/io/vrap/rmf/base/client/http/RetryRequestMiddleware.html#line.87">of</a></span>&#8203;<span class="parameters">(dev.failsafe.spi.Scheduler&nbsp;scheduler,
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="RetryRequestMiddleware.html" title="interface in io.vrap.rmf.base.client.http">RetryRequestMiddleware</a></span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/io/vrap/rmf/base/client/http/RetryRequestMiddleware.html#line.90">of</a></span>&#8203;<span class="parameters">(dev.failsafe.spi.Scheduler&nbsp;scheduler,
  int&nbsp;maxRetries,
  long&nbsp;delay,
  long&nbsp;maxDelay,
@@ -461,14 +462,14 @@ extends <a href="Middleware.html" title="interface in io.vrap.rmf.base.client.ht
 <li>
 <section class="detail" id="of(java.util.concurrent.ScheduledExecutorService,int)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="RetryRequestMiddleware.html" title="interface in io.vrap.rmf.base.client.http">RetryRequestMiddleware</a></span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/io/vrap/rmf/base/client/http/RetryRequestMiddleware.html#line.92">of</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ScheduledExecutorService.html" title="class or interface in java.util.concurrent" class="external-link">ScheduledExecutorService</a>&nbsp;executorService,
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="RetryRequestMiddleware.html" title="interface in io.vrap.rmf.base.client.http">RetryRequestMiddleware</a></span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/io/vrap/rmf/base/client/http/RetryRequestMiddleware.html#line.95">of</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ScheduledExecutorService.html" title="class or interface in java.util.concurrent" class="external-link">ScheduledExecutorService</a>&nbsp;executorService,
  int&nbsp;maxRetries)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(java.util.concurrent.ScheduledExecutorService,int,java.util.List)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="RetryRequestMiddleware.html" title="interface in io.vrap.rmf.base.client.http">RetryRequestMiddleware</a></span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/io/vrap/rmf/base/client/http/RetryRequestMiddleware.html#line.97">of</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ScheduledExecutorService.html" title="class or interface in java.util.concurrent" class="external-link">ScheduledExecutorService</a>&nbsp;executorService,
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="RetryRequestMiddleware.html" title="interface in io.vrap.rmf.base.client.http">RetryRequestMiddleware</a></span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/io/vrap/rmf/base/client/http/RetryRequestMiddleware.html#line.100">of</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ScheduledExecutorService.html" title="class or interface in java.util.concurrent" class="external-link">ScheduledExecutorService</a>&nbsp;executorService,
  int&nbsp;maxRetries,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;&nbsp;statusCodes)</span></div>
 </section>
@@ -476,7 +477,7 @@ extends <a href="Middleware.html" title="interface in io.vrap.rmf.base.client.ht
 <li>
 <section class="detail" id="of(java.util.concurrent.ScheduledExecutorService,int,java.util.List,java.util.List)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="RetryRequestMiddleware.html" title="interface in io.vrap.rmf.base.client.http">RetryRequestMiddleware</a></span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/io/vrap/rmf/base/client/http/RetryRequestMiddleware.html#line.103">of</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ScheduledExecutorService.html" title="class or interface in java.util.concurrent" class="external-link">ScheduledExecutorService</a>&nbsp;executorService,
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="RetryRequestMiddleware.html" title="interface in io.vrap.rmf.base.client.http">RetryRequestMiddleware</a></span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/io/vrap/rmf/base/client/http/RetryRequestMiddleware.html#line.106">of</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ScheduledExecutorService.html" title="class or interface in java.util.concurrent" class="external-link">ScheduledExecutorService</a>&nbsp;executorService,
  int&nbsp;maxRetries,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;&nbsp;statusCodes,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;? extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Throwable.html" title="class or interface in java.lang" class="external-link">Throwable</a>&gt;&gt;&nbsp;failures)</span></div>
@@ -485,7 +486,7 @@ extends <a href="Middleware.html" title="interface in io.vrap.rmf.base.client.ht
 <li>
 <section class="detail" id="of(java.util.concurrent.ScheduledExecutorService,int,long,long)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="RetryRequestMiddleware.html" title="interface in io.vrap.rmf.base.client.http">RetryRequestMiddleware</a></span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/io/vrap/rmf/base/client/http/RetryRequestMiddleware.html#line.109">of</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ScheduledExecutorService.html" title="class or interface in java.util.concurrent" class="external-link">ScheduledExecutorService</a>&nbsp;executorService,
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="RetryRequestMiddleware.html" title="interface in io.vrap.rmf.base.client.http">RetryRequestMiddleware</a></span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/io/vrap/rmf/base/client/http/RetryRequestMiddleware.html#line.112">of</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ScheduledExecutorService.html" title="class or interface in java.util.concurrent" class="external-link">ScheduledExecutorService</a>&nbsp;executorService,
  int&nbsp;maxRetries,
  long&nbsp;delay,
  long&nbsp;maxDelay)</span></div>
@@ -494,7 +495,7 @@ extends <a href="Middleware.html" title="interface in io.vrap.rmf.base.client.ht
 <li>
 <section class="detail" id="of(java.util.concurrent.ScheduledExecutorService,int,long,long,java.util.List)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="RetryRequestMiddleware.html" title="interface in io.vrap.rmf.base.client.http">RetryRequestMiddleware</a></span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/io/vrap/rmf/base/client/http/RetryRequestMiddleware.html#line.114">of</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ScheduledExecutorService.html" title="class or interface in java.util.concurrent" class="external-link">ScheduledExecutorService</a>&nbsp;executorService,
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="RetryRequestMiddleware.html" title="interface in io.vrap.rmf.base.client.http">RetryRequestMiddleware</a></span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/io/vrap/rmf/base/client/http/RetryRequestMiddleware.html#line.117">of</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ScheduledExecutorService.html" title="class or interface in java.util.concurrent" class="external-link">ScheduledExecutorService</a>&nbsp;executorService,
  int&nbsp;maxRetries,
  long&nbsp;delay,
  long&nbsp;maxDelay,
@@ -504,7 +505,7 @@ extends <a href="Middleware.html" title="interface in io.vrap.rmf.base.client.ht
 <li>
 <section class="detail" id="of(java.util.concurrent.ScheduledExecutorService,int,long,long,java.util.List,java.util.List)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="RetryRequestMiddleware.html" title="interface in io.vrap.rmf.base.client.http">RetryRequestMiddleware</a></span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/io/vrap/rmf/base/client/http/RetryRequestMiddleware.html#line.119">of</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ScheduledExecutorService.html" title="class or interface in java.util.concurrent" class="external-link">ScheduledExecutorService</a>&nbsp;executorService,
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="RetryRequestMiddleware.html" title="interface in io.vrap.rmf.base.client.http">RetryRequestMiddleware</a></span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/io/vrap/rmf/base/client/http/RetryRequestMiddleware.html#line.122">of</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ScheduledExecutorService.html" title="class or interface in java.util.concurrent" class="external-link">ScheduledExecutorService</a>&nbsp;executorService,
  int&nbsp;maxRetries,
  long&nbsp;delay,
  long&nbsp;maxDelay,
@@ -515,7 +516,7 @@ extends <a href="Middleware.html" title="interface in io.vrap.rmf.base.client.ht
 <li>
 <section class="detail" id="of(java.util.concurrent.ScheduledExecutorService,int,long,long,io.vrap.rmf.base.client.http.FailsafeRetryPolicyBuilderOptions)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="RetryRequestMiddleware.html" title="interface in io.vrap.rmf.base.client.http">RetryRequestMiddleware</a></span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/io/vrap/rmf/base/client/http/RetryRequestMiddleware.html#line.126">of</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ScheduledExecutorService.html" title="class or interface in java.util.concurrent" class="external-link">ScheduledExecutorService</a>&nbsp;executorService,
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="RetryRequestMiddleware.html" title="interface in io.vrap.rmf.base.client.http">RetryRequestMiddleware</a></span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/io/vrap/rmf/base/client/http/RetryRequestMiddleware.html#line.129">of</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ScheduledExecutorService.html" title="class or interface in java.util.concurrent" class="external-link">ScheduledExecutorService</a>&nbsp;executorService,
  int&nbsp;maxRetries,
  long&nbsp;delay,
  long&nbsp;maxDelay,
@@ -525,14 +526,14 @@ extends <a href="Middleware.html" title="interface in io.vrap.rmf.base.client.ht
 <li>
 <section class="detail" id="of(java.util.concurrent.ExecutorService,int)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="RetryRequestMiddleware.html" title="interface in io.vrap.rmf.base.client.http">RetryRequestMiddleware</a></span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/io/vrap/rmf/base/client/http/RetryRequestMiddleware.html#line.131">of</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ExecutorService.html" title="class or interface in java.util.concurrent" class="external-link">ExecutorService</a>&nbsp;executorService,
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="RetryRequestMiddleware.html" title="interface in io.vrap.rmf.base.client.http">RetryRequestMiddleware</a></span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/io/vrap/rmf/base/client/http/RetryRequestMiddleware.html#line.134">of</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ExecutorService.html" title="class or interface in java.util.concurrent" class="external-link">ExecutorService</a>&nbsp;executorService,
  int&nbsp;maxRetries)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(java.util.concurrent.ExecutorService,int,java.util.List)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="RetryRequestMiddleware.html" title="interface in io.vrap.rmf.base.client.http">RetryRequestMiddleware</a></span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/io/vrap/rmf/base/client/http/RetryRequestMiddleware.html#line.136">of</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ExecutorService.html" title="class or interface in java.util.concurrent" class="external-link">ExecutorService</a>&nbsp;executorService,
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="RetryRequestMiddleware.html" title="interface in io.vrap.rmf.base.client.http">RetryRequestMiddleware</a></span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/io/vrap/rmf/base/client/http/RetryRequestMiddleware.html#line.139">of</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ExecutorService.html" title="class or interface in java.util.concurrent" class="external-link">ExecutorService</a>&nbsp;executorService,
  int&nbsp;maxRetries,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;&nbsp;statusCodes)</span></div>
 </section>
@@ -540,7 +541,7 @@ extends <a href="Middleware.html" title="interface in io.vrap.rmf.base.client.ht
 <li>
 <section class="detail" id="of(java.util.concurrent.ExecutorService,int,java.util.List,java.util.List)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="RetryRequestMiddleware.html" title="interface in io.vrap.rmf.base.client.http">RetryRequestMiddleware</a></span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/io/vrap/rmf/base/client/http/RetryRequestMiddleware.html#line.142">of</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ExecutorService.html" title="class or interface in java.util.concurrent" class="external-link">ExecutorService</a>&nbsp;executorService,
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="RetryRequestMiddleware.html" title="interface in io.vrap.rmf.base.client.http">RetryRequestMiddleware</a></span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/io/vrap/rmf/base/client/http/RetryRequestMiddleware.html#line.145">of</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ExecutorService.html" title="class or interface in java.util.concurrent" class="external-link">ExecutorService</a>&nbsp;executorService,
  int&nbsp;maxRetries,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;&nbsp;statusCodes,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;? extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Throwable.html" title="class or interface in java.lang" class="external-link">Throwable</a>&gt;&gt;&nbsp;failures)</span></div>
@@ -549,7 +550,7 @@ extends <a href="Middleware.html" title="interface in io.vrap.rmf.base.client.ht
 <li>
 <section class="detail" id="of(java.util.concurrent.ExecutorService,int,long,long)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="RetryRequestMiddleware.html" title="interface in io.vrap.rmf.base.client.http">RetryRequestMiddleware</a></span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/io/vrap/rmf/base/client/http/RetryRequestMiddleware.html#line.148">of</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ExecutorService.html" title="class or interface in java.util.concurrent" class="external-link">ExecutorService</a>&nbsp;executorService,
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="RetryRequestMiddleware.html" title="interface in io.vrap.rmf.base.client.http">RetryRequestMiddleware</a></span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/io/vrap/rmf/base/client/http/RetryRequestMiddleware.html#line.151">of</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ExecutorService.html" title="class or interface in java.util.concurrent" class="external-link">ExecutorService</a>&nbsp;executorService,
  int&nbsp;maxRetries,
  long&nbsp;delay,
  long&nbsp;maxDelay)</span></div>
@@ -558,7 +559,7 @@ extends <a href="Middleware.html" title="interface in io.vrap.rmf.base.client.ht
 <li>
 <section class="detail" id="of(java.util.concurrent.ExecutorService,int,long,long,java.util.List)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="RetryRequestMiddleware.html" title="interface in io.vrap.rmf.base.client.http">RetryRequestMiddleware</a></span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/io/vrap/rmf/base/client/http/RetryRequestMiddleware.html#line.153">of</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ExecutorService.html" title="class or interface in java.util.concurrent" class="external-link">ExecutorService</a>&nbsp;executorService,
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="RetryRequestMiddleware.html" title="interface in io.vrap.rmf.base.client.http">RetryRequestMiddleware</a></span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/io/vrap/rmf/base/client/http/RetryRequestMiddleware.html#line.156">of</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ExecutorService.html" title="class or interface in java.util.concurrent" class="external-link">ExecutorService</a>&nbsp;executorService,
  int&nbsp;maxRetries,
  long&nbsp;delay,
  long&nbsp;maxDelay,
@@ -568,7 +569,7 @@ extends <a href="Middleware.html" title="interface in io.vrap.rmf.base.client.ht
 <li>
 <section class="detail" id="of(java.util.concurrent.ExecutorService,int,long,long,java.util.List,java.util.List)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="RetryRequestMiddleware.html" title="interface in io.vrap.rmf.base.client.http">RetryRequestMiddleware</a></span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/io/vrap/rmf/base/client/http/RetryRequestMiddleware.html#line.158">of</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ExecutorService.html" title="class or interface in java.util.concurrent" class="external-link">ExecutorService</a>&nbsp;executorService,
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="RetryRequestMiddleware.html" title="interface in io.vrap.rmf.base.client.http">RetryRequestMiddleware</a></span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/io/vrap/rmf/base/client/http/RetryRequestMiddleware.html#line.161">of</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ExecutorService.html" title="class or interface in java.util.concurrent" class="external-link">ExecutorService</a>&nbsp;executorService,
  int&nbsp;maxRetries,
  long&nbsp;delay,
  long&nbsp;maxDelay,
@@ -579,7 +580,7 @@ extends <a href="Middleware.html" title="interface in io.vrap.rmf.base.client.ht
 <li>
 <section class="detail" id="of(java.util.concurrent.ExecutorService,int,long,long,io.vrap.rmf.base.client.http.FailsafeRetryPolicyBuilderOptions)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="RetryRequestMiddleware.html" title="interface in io.vrap.rmf.base.client.http">RetryRequestMiddleware</a></span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/io/vrap/rmf/base/client/http/RetryRequestMiddleware.html#line.165">of</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ExecutorService.html" title="class or interface in java.util.concurrent" class="external-link">ExecutorService</a>&nbsp;executorService,
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="RetryRequestMiddleware.html" title="interface in io.vrap.rmf.base.client.http">RetryRequestMiddleware</a></span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/io/vrap/rmf/base/client/http/RetryRequestMiddleware.html#line.168">of</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ExecutorService.html" title="class or interface in java.util.concurrent" class="external-link">ExecutorService</a>&nbsp;executorService,
  int&nbsp;maxRetries,
  long&nbsp;delay,
  long&nbsp;maxDelay,
@@ -589,13 +590,13 @@ extends <a href="Middleware.html" title="interface in io.vrap.rmf.base.client.ht
 <li>
 <section class="detail" id="handleFailures(java.util.List)">
 <h3>handleFailures</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="FailsafeRetryPolicyBuilderOptions.html" title="interface in io.vrap.rmf.base.client.http">FailsafeRetryPolicyBuilderOptions</a></span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/io/vrap/rmf/base/client/http/RetryRequestMiddleware.html#line.170">handleFailures</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;? extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Throwable.html" title="class or interface in java.lang" class="external-link">Throwable</a>&gt;&gt;&nbsp;failures)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="FailsafeRetryPolicyBuilderOptions.html" title="interface in io.vrap.rmf.base.client.http">FailsafeRetryPolicyBuilderOptions</a></span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/io/vrap/rmf/base/client/http/RetryRequestMiddleware.html#line.173">handleFailures</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;? extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Throwable.html" title="class or interface in java.lang" class="external-link">Throwable</a>&gt;&gt;&nbsp;failures)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="handleStatusCodes(java.util.List)">
 <h3>handleStatusCodes</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="FailsafeRetryPolicyBuilderOptions.html" title="interface in io.vrap.rmf.base.client.http">FailsafeRetryPolicyBuilderOptions</a></span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/io/vrap/rmf/base/client/http/RetryRequestMiddleware.html#line.179">handleStatusCodes</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;&nbsp;statusCodes)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="FailsafeRetryPolicyBuilderOptions.html" title="interface in io.vrap.rmf.base.client.http">FailsafeRetryPolicyBuilderOptions</a></span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/io/vrap/rmf/base/client/http/RetryRequestMiddleware.html#line.182">handleStatusCodes</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;&nbsp;statusCodes)</span></div>
 </section>
 </li>
 </ul>

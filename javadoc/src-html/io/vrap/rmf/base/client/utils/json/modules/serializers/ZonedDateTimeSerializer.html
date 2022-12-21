@@ -24,21 +24,24 @@
 <span class="source-line-no">011</span><span id="line.11">import com.fasterxml.jackson.databind.SerializerProvider;</span>
 <span class="source-line-no">012</span><span id="line.12">import com.fasterxml.jackson.databind.ser.std.StdScalarSerializer;</span>
 <span class="source-line-no">013</span><span id="line.13"></span>
-<span class="source-line-no">014</span><span id="line.14">public final class ZonedDateTimeSerializer extends StdScalarSerializer&lt;ZonedDateTime&gt; {</span>
-<span class="source-line-no">015</span><span id="line.15"></span>
-<span class="source-line-no">016</span><span id="line.16">    static final long serialVersionUID = 0L;</span>
-<span class="source-line-no">017</span><span id="line.17">    private static final DateTimeFormatter FORMATTER = new DateTimeFormatterBuilder().appendInstant(3).toFormatter();</span>
+<span class="source-line-no">014</span><span id="line.14">/**</span>
+<span class="source-line-no">015</span><span id="line.15"> * serializes a {@link ZonedDateTime} to {@link DateTimeFormatter#ISO_DATE} format</span>
+<span class="source-line-no">016</span><span id="line.16"> */</span>
+<span class="source-line-no">017</span><span id="line.17">public final class ZonedDateTimeSerializer extends StdScalarSerializer&lt;ZonedDateTime&gt; {</span>
 <span class="source-line-no">018</span><span id="line.18"></span>
-<span class="source-line-no">019</span><span id="line.19">    public ZonedDateTimeSerializer() {</span>
-<span class="source-line-no">020</span><span id="line.20">        super(ZonedDateTime.class);</span>
-<span class="source-line-no">021</span><span id="line.21">    }</span>
-<span class="source-line-no">022</span><span id="line.22"></span>
-<span class="source-line-no">023</span><span id="line.23">    @Override</span>
-<span class="source-line-no">024</span><span id="line.24">    public void serialize(final ZonedDateTime value, final JsonGenerator gen, final SerializerProvider arg2)</span>
-<span class="source-line-no">025</span><span id="line.25">            throws IOException {</span>
-<span class="source-line-no">026</span><span id="line.26">        gen.writeString(FORMATTER.format(value.withZoneSameInstant(ZoneOffset.UTC)));</span>
-<span class="source-line-no">027</span><span id="line.27">    }</span>
-<span class="source-line-no">028</span><span id="line.28">}</span>
+<span class="source-line-no">019</span><span id="line.19">    static final long serialVersionUID = 0L;</span>
+<span class="source-line-no">020</span><span id="line.20">    private static final DateTimeFormatter FORMATTER = new DateTimeFormatterBuilder().appendInstant(3).toFormatter();</span>
+<span class="source-line-no">021</span><span id="line.21"></span>
+<span class="source-line-no">022</span><span id="line.22">    public ZonedDateTimeSerializer() {</span>
+<span class="source-line-no">023</span><span id="line.23">        super(ZonedDateTime.class);</span>
+<span class="source-line-no">024</span><span id="line.24">    }</span>
+<span class="source-line-no">025</span><span id="line.25"></span>
+<span class="source-line-no">026</span><span id="line.26">    @Override</span>
+<span class="source-line-no">027</span><span id="line.27">    public void serialize(final ZonedDateTime value, final JsonGenerator gen, final SerializerProvider arg2)</span>
+<span class="source-line-no">028</span><span id="line.28">            throws IOException {</span>
+<span class="source-line-no">029</span><span id="line.29">        gen.writeString(FORMATTER.format(value.withZoneSameInstant(ZoneOffset.UTC)));</span>
+<span class="source-line-no">030</span><span id="line.30">    }</span>
+<span class="source-line-no">031</span><span id="line.31">}</span>
 
 
 

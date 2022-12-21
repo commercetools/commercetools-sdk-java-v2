@@ -76,8 +76,9 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="Middleware.html" title="interface in io.vrap.rmf.base.client.http">Middleware</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../../src-html/io/vrap/rmf/base/client/http/NotFoundExceptionMiddleware.html#line.10">NotFoundExceptionMiddleware</a></span><span class="extends-implements">
+<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../../src-html/io/vrap/rmf/base/client/http/NotFoundExceptionMiddleware.html#line.13">NotFoundExceptionMiddleware</a></span><span class="extends-implements">
 extends <a href="Middleware.html" title="interface in io.vrap.rmf.base.client.http">Middleware</a></span></div>
+<div class="block">Middleware to convert a <a href="../error/NotFoundException.html" title="class in io.vrap.rmf.base.client.error"><code>NotFoundException</code></a> to a response with a null body value</div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -119,19 +120,19 @@ extends <a href="Middleware.html" title="interface in io.vrap.rmf.base.client.ht
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="NotFoundExceptionMiddleware.html" title="interface in io.vrap.rmf.base.client.http">NotFoundExceptionMiddleware</a></span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/io/vrap/rmf/base/client/http/NotFoundExceptionMiddleware.html#line.12">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="NotFoundExceptionMiddleware.html" title="interface in io.vrap.rmf.base.client.http">NotFoundExceptionMiddleware</a></span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/io/vrap/rmf/base/client/http/NotFoundExceptionMiddleware.html#line.15">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(java.util.Set)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="NotFoundExceptionMiddleware.html" title="interface in io.vrap.rmf.base.client.http">NotFoundExceptionMiddleware</a></span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/io/vrap/rmf/base/client/http/NotFoundExceptionMiddleware.html#line.16">of</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Set.html" title="class or interface in java.util" class="external-link">Set</a>&lt;<a href="../ApiHttpMethod.html" title="enum in io.vrap.rmf.base.client">ApiHttpMethod</a>&gt;&nbsp;methods)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="NotFoundExceptionMiddleware.html" title="interface in io.vrap.rmf.base.client.http">NotFoundExceptionMiddleware</a></span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/io/vrap/rmf/base/client/http/NotFoundExceptionMiddleware.html#line.19">of</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Set.html" title="class or interface in java.util" class="external-link">Set</a>&lt;<a href="../ApiHttpMethod.html" title="enum in io.vrap.rmf.base.client">ApiHttpMethod</a>&gt;&nbsp;methods)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(java.util.function.Predicate)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="NotFoundExceptionMiddleware.html" title="interface in io.vrap.rmf.base.client.http">NotFoundExceptionMiddleware</a></span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/io/vrap/rmf/base/client/http/NotFoundExceptionMiddleware.html#line.20">of</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Predicate.html" title="class or interface in java.util.function" class="external-link">Predicate</a>&lt;<a href="../ApiHttpRequest.html" title="class in io.vrap.rmf.base.client">ApiHttpRequest</a>&gt;&nbsp;requestPredicate)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="NotFoundExceptionMiddleware.html" title="interface in io.vrap.rmf.base.client.http">NotFoundExceptionMiddleware</a></span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/io/vrap/rmf/base/client/http/NotFoundExceptionMiddleware.html#line.23">of</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Predicate.html" title="class or interface in java.util.function" class="external-link">Predicate</a>&lt;<a href="../ApiHttpRequest.html" title="class in io.vrap.rmf.base.client">ApiHttpRequest</a>&gt;&nbsp;requestPredicate)</span></div>
 </section>
 </li>
 </ul>

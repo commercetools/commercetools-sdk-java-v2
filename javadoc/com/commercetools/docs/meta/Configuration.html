@@ -75,7 +75,7 @@ loadScripts(document, 'script');</script>
 </div>
 <section class="description">
 <hr>
-<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../src-html/com/commercetools/docs/meta/Configuration.html#line.33">Configuration</a></span>
+<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../src-html/com/commercetools/docs/meta/Configuration.html#line.57">Configuration</a></span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></span></div>
 <div class="block"><h2 id=configuration>Configuration</h2>
 
@@ -150,6 +150,39 @@ ProjectApiRoot projectApiRoot = ApiRootBuilder.of(client)
             return next.apply(request.addHeader("x-custom-header", "custom-header-value"));
         })
         .build("my-project-key");
+</code><p>See the <a href="https://github.com/commercetools/commercetools-sdk-java-v2/blob/master/commercetools/internal-docs/src/test/java/example/ExamplesTest.java" target="_blank">test code</a>.</pre></div>
+
+ <h3>Error handling</h3>
+
+ <p>The client builder adds methods to allow the customization of the error handling</p>
+
+ <h4>Unwrap exceptions</h4>
+
+ <p>By default the <a href="../../../../io/vrap/rmf/base/client/http/ErrorMiddleware.html" title="interface in io.vrap.rmf.base.client.http"><code>ErrorMiddleware</code></a> is configured to throw a CompletionException. The
+ <a href="../../../../io/vrap/rmf/base/client/ClientBuilder.html#withErrorMiddleware(io.vrap.rmf.base.client.http.ErrorMiddleware.ExceptionMode)"><code>ClientBuilder.withErrorMiddleware(ErrorMiddleware.ExceptionMode)</code></a> method allows to configure
+ the middleware to unwrap the causing exception.</p>
+
+ <div id="example-ExamplesTest-exceptionMode--%s" class=code-example><pre><code class='java'>ApiRootBuilder.of()
+        .defaultClient(ServiceRegion.GCP_EUROPE_WEST1.getApiUrl())
+        .withErrorMiddleware(ErrorMiddleware.ExceptionMode.UNWRAP_COMPLETION_EXCEPTION)
+        // ...
+        .build();
+</code><p>See the <a href="https://github.com/commercetools/commercetools-sdk-java-v2/blob/master/commercetools/internal-docs/src/test/java/example/ExamplesTest.java" target="_blank">test code</a>.</pre></div>
+
+ <h4>Not found</h4>
+
+ <p>The <a href="../../../../io/vrap/rmf/base/client/http/ErrorMiddleware.html" title="interface in io.vrap.rmf.base.client.http"><code>ErrorMiddleware</code></a> throws for every response with a status code 400 or higher an exception. This can be unwanted
+ behaviour for a <a href="../../../../io/vrap/rmf/base/client/error/NotFoundException.html" title="class in io.vrap.rmf.base.client.error"><code>NotFoundException</code></a>. The method <a href="../../../../io/vrap/rmf/base/client/ClientBuilder.html#addNotFoundExceptionMiddleware()"><code>ClientBuilder.addNotFoundExceptionMiddleware()</code></a>
+ configures the client to return a body with a NULL value instead. The method also allows the filtering of specific request to be
+ captured.</p>
+
+ <div id="example-ExamplesTest-notFoundMiddleware--%s" class=code-example><pre><code class='java'>ApiRootBuilder.of()
+        .defaultClient(ServiceRegion.GCP_EUROPE_WEST1.getApiUrl())
+        .addNotFoundExceptionMiddleware(Collections.singleton(ApiHttpMethod.GET))
+        .addNotFoundExceptionMiddleware(apiHttpRequest -&gt; apiHttpRequest.getMethod() == ApiHttpMethod.GET
+                || apiHttpRequest.getMethod() == ApiHttpMethod.DELETE)
+        // ...
+        .build();
 </code><p>See the <a href="https://github.com/commercetools/commercetools-sdk-java-v2/blob/master/commercetools/internal-docs/src/test/java/example/ExamplesTest.java" target="_blank">test code</a>.</pre></div></div>
 </section>
 <section class="summary">
@@ -188,7 +221,7 @@ ProjectApiRoot projectApiRoot = ApiRootBuilder.of(client)
 <li>
 <section class="detail" id="&lt;init&gt;()">
 <h3>Configuration</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/docs/meta/Configuration.html#line.33">Configuration</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/docs/meta/Configuration.html#line.57">Configuration</a></span>()</div>
 </section>
 </li>
 </ul>

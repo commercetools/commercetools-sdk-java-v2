@@ -1,49 +1,63 @@
 **Api changes**
 
 <details>
+<summary>Added Resource(s)</summary>
+
+- added resource `/{projectKey}/shipping-methods/matching-cart-location`
+</details>
+
+
+<details>
 <summary>Changed Property(s)</summary>
 
-- :warning: changed property `amount` of type `Transaction` from type `TypedMoney` to `CentPrecisionMoney` (file:/home/runner/work/commercetools-api-reference/commercetools-api-reference/commercetools-api-reference/api-specs/api/types/payment/Transaction.raml:18:2)
+- :warning: changed property `amount` of type `Transaction` from type `TypedMoney` to `CentPrecisionMoney`
 </details>
 
 
 <details>
 <summary>Added Property(s)</summary>
 
-- added property `cartId` to type `MyQuoteRequestDraft` (file:/home/runner/work/commercetools-api-reference/commercetools-api-reference/commercetools-api-reference/api-specs/api/types/me/MyQuoteRequestDraft.raml:6:2)
-- added property `cartVersion` to type `MyQuoteRequestDraft` (file:/home/runner/work/commercetools-api-reference/commercetools-api-reference/commercetools-api-reference/api-specs/api/types/me/MyQuoteRequestDraft.raml:10:2)
-- added property `createdAt` to type `AssignedProductSelection` (file:/home/runner/work/commercetools-api-reference/commercetools-api-reference/commercetools-api-reference/api-specs/api/types/product-selection/AssignedProductSelection.raml:12:2)
-- added property `quoteState` to type `Quote` (file:/home/runner/work/commercetools-api-reference/commercetools-api-reference/commercetools-api-reference/api-specs/api/types/quote/Quote.raml:152:2)
+- added property `cartId` to type `MyQuoteRequestDraft`
+- added property `cartVersion` to type `MyQuoteRequestDraft`
+- added property `createdAt` to type `AssignedProductSelection`
+- added property `quoteState` to type `Quote`
 </details>
 
 
 <details>
 <summary>Required Property(s)</summary>
 
-- changed property `discounted` of type `StagedStandalonePrice` to be optional (file:/home/runner/work/commercetools-api-reference/commercetools-api-reference/commercetools-api-reference/api-specs/api/types/standalone-price/StagedStandalonePrice.raml:12:2)
+- changed property `discounted` of type `StagedStandalonePrice` to be optional
 </details>
 
 
 <details>
 <summary>Removed Property(s)</summary>
 
-- :warning: removed property `cart` from type `MyQuoteRequestDraft` (file:/home/runner/work/commercetools-api-reference/commercetools-api-reference/commercetools-api-reference-previous/api-specs/api/types/me/MyQuoteRequestDraft.raml:6:2)
-- :warning: removed property `version` from type `MyQuoteRequestDraft` (file:/home/runner/work/commercetools-api-reference/commercetools-api-reference/commercetools-api-reference-previous/api-specs/api/types/me/MyQuoteRequestDraft.raml:9:2)
+- :warning: removed property `cart` from type `MyQuoteRequestDraft`
+- :warning: removed property `version` from type `MyQuoteRequestDraft`
 </details>
 
 
 <details>
 <summary>Added Type(s)</summary>
 
-- added type `ProductPricesSetMessage` (file:/home/runner/work/commercetools-api-reference/commercetools-api-reference/commercetools-api-reference/api-specs/api/types/types.raml:758:0)
-- added type `ProductPricesSetMessagePayload` (file:/home/runner/work/commercetools-api-reference/commercetools-api-reference/commercetools-api-reference/api-specs/api/types/types.raml:919:0)
+- added type `ProductPricesSetMessage`
+- added type `ProductPricesSetMessagePayload`
 </details>
 
 
 <details>
 <summary>Removed Type(s)</summary>
 
-- :warning: removed type `ProductPriceSetMessage` (file:/home/runner/work/commercetools-api-reference/commercetools-api-reference/commercetools-api-reference-previous/api-specs/api/types/types.raml:758:0)
-- :warning: removed type `ProductPriceSetMessagePayload` (file:/home/runner/work/commercetools-api-reference/commercetools-api-reference/commercetools-api-reference-previous/api-specs/api/types/types.raml:919:0)
+- :warning: removed type `ProductPriceSetMessage`
+- :warning: removed type `ProductPriceSetMessagePayload`
+</details>
+
+
+<details>
+<summary>Added Method(s)</summary>
+
+- added method `apiRoot.withProjectKey().shippingMethods().matchingCartLocation().get()`
 </details>
 

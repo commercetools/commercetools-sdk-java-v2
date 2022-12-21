@@ -1,6 +1,9 @@
 
 package com.commercetools.docs.meta;
 
+import io.vrap.rmf.base.client.ClientBuilder;
+import io.vrap.rmf.base.client.http.ErrorMiddleware;
+
 /**
  * <h2 id=configuration>Configuration</h2>
  *
@@ -29,6 +32,27 @@ package com.commercetools.docs.meta;
  * <p>This can also be useful to wrap preconfigured clients e.g. with additional middlewares</p>
  *
  * {@include.example example.ExamplesTest#wrappedClient()}
+ *
+ * <h3>Error handling</h3>
+ *
+ * <p>The client builder adds methods to allow the customization of the error handling</p>
+ *
+ * <h4>Unwrap exceptions</h4>
+ *
+ * <p>By default the {@link io.vrap.rmf.base.client.http.ErrorMiddleware} is configured to throw a CompletionException. The
+ * {@link io.vrap.rmf.base.client.ClientBuilder#withErrorMiddleware(ErrorMiddleware.ExceptionMode)} method allows to configure
+ * the middleware to unwrap the causing exception.</p>
+ *
+ * {@include.example example.ExamplesTest#exceptionMode()}
+ *
+ * <h4>Not found</h4>
+ *
+ * <p>The {@link ErrorMiddleware} throws for every response with a status code 400 or higher an exception. This can be unwanted
+ * behaviour for a {@link io.vrap.rmf.base.client.error.NotFoundException}. The method {@link ClientBuilder#addNotFoundExceptionMiddleware()}
+ * configures the client to return a body with a NULL value instead. The method also allows the filtering of specific request to be
+ * captured.</p>
+ *
+ * {@include.example example.ExamplesTest#notFoundMiddleware()}
  */
 public class Configuration {
 }

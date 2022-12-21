@@ -11,6 +11,9 @@ import com.fasterxml.jackson.core.JsonGenerator;
 import com.fasterxml.jackson.databind.SerializerProvider;
 import com.fasterxml.jackson.databind.ser.std.StdScalarSerializer;
 
+/**
+ * serializes a {@link ZonedDateTime} to {@link DateTimeFormatter#ISO_DATE} format
+ */
 public final class ZonedDateTimeSerializer extends StdScalarSerializer<ZonedDateTime> {
 
     static final long serialVersionUID = 0L;

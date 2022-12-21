@@ -9,6 +9,9 @@ import com.fasterxml.jackson.core.JsonGenerator;
 import com.fasterxml.jackson.databind.SerializerProvider;
 import com.fasterxml.jackson.databind.ser.std.StdScalarSerializer;
 
+/**
+ * serializes a {@link LocalTime} to {@link DateTimeFormatter#ISO_TIME} format
+ */
 public final class LocalTimeSerializer extends StdScalarSerializer<LocalTime> {
 
     static final long serialVersionUID = 0L;

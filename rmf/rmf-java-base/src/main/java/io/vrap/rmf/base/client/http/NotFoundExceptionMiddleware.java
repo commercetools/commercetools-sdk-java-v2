@@ -7,6 +7,9 @@ import java.util.function.Predicate;
 import io.vrap.rmf.base.client.ApiHttpMethod;
 import io.vrap.rmf.base.client.ApiHttpRequest;
 
+/**
+ * Middleware to convert a {@link io.vrap.rmf.base.client.error.NotFoundException} to a response with a null body value
+ */
 public interface NotFoundExceptionMiddleware extends Middleware {
 
     static NotFoundExceptionMiddleware of() {

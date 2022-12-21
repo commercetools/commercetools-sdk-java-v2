@@ -8,6 +8,9 @@ import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.databind.DeserializationContext;
 import com.fasterxml.jackson.databind.deser.std.StdScalarDeserializer;
 
+/**
+ * Deserializer converting string to {@link ZonedDateTime}
+ */
 public class ZonedDateTimeDeserializer extends StdScalarDeserializer<ZonedDateTime> {
 
     private static final long serialVersionUID = 0L;

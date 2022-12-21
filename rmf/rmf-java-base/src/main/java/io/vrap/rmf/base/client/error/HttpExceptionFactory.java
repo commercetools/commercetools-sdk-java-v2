@@ -7,6 +7,10 @@ import io.vrap.rmf.base.client.ApiHttpResponse;
 import io.vrap.rmf.base.client.ResponseSerializer;
 import io.vrap.rmf.base.client.http.HttpStatusCode;
 
+/**
+ * The HttpExceptionFactory creates exceptions based on the HTTP status code returned by the {@link ApiHttpResponse}.
+ * It differentiates between client side exceptions (status code 400 to 499) and server side exceptions (status code 500+).
+ */
 public interface HttpExceptionFactory {
 
     ResponseSerializer getResponseSerializer();

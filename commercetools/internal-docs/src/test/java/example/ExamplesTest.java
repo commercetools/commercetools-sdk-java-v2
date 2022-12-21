@@ -31,10 +31,8 @@ import com.commercetools.api.models.tax_category.TaxCategoryPagedQueryResponse;
 import com.commercetools.http.apachehttp.CtApacheHttpClient;
 import com.commercetools.http.okhttp4.CtOkHttp4Client;
 
-import io.vrap.rmf.base.client.ApiHttpClient;
-import io.vrap.rmf.base.client.ApiHttpResponse;
-import io.vrap.rmf.base.client.ModelBase;
-import io.vrap.rmf.base.client.VrapHttpClient;
+import io.vrap.rmf.base.client.*;
+import io.vrap.rmf.base.client.http.ErrorMiddleware;
 import io.vrap.rmf.base.client.http.QueueMiddleware;
 import io.vrap.rmf.base.client.oauth2.ClientCredentials;
 
@@ -468,6 +466,24 @@ public class ExamplesTest {
                     Level.ERROR, // default log level for exceptions
                     Collections.singletonMap(ConcurrentModificationException.class, Level.DEBUG) // custom log level for specific exceptions
                 )
+                // ...
+                .build();
+    }
+
+    public void exceptionMode() {
+        ApiRootBuilder.of()
+                .defaultClient(ServiceRegion.GCP_EUROPE_WEST1.getApiUrl())
+                .withErrorMiddleware(ErrorMiddleware.ExceptionMode.UNWRAP_COMPLETION_EXCEPTION)
+                // ...
+                .build();
+    }
+
+    public void notFoundMiddleware() {
+        ApiRootBuilder.of()
+                .defaultClient(ServiceRegion.GCP_EUROPE_WEST1.getApiUrl())
+                .addNotFoundExceptionMiddleware(Collections.singleton(ApiHttpMethod.GET))
+                .addNotFoundExceptionMiddleware(apiHttpRequest -> apiHttpRequest.getMethod() == ApiHttpMethod.GET
+                        || apiHttpRequest.getMethod() == ApiHttpMethod.DELETE)
                 // ...
                 .build();
     }

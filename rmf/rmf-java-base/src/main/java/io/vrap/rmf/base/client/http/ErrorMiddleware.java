@@ -8,7 +8,7 @@ import io.vrap.rmf.base.client.ResponseSerializer;
 import io.vrap.rmf.base.client.error.HttpExceptionFactory;
 
 /**
- * Used to convert API errors to Exceptions
+ * Used to convert API errors to Exceptions. Uses the {@link HttpExceptionFactory} to convert responses to Exceptions
  */
 public interface ErrorMiddleware extends Middleware {
 

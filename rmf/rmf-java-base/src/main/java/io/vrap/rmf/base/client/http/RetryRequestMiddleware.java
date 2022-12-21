@@ -13,6 +13,9 @@ import io.vrap.rmf.base.client.ApiHttpException;
 
 import dev.failsafe.spi.Scheduler;
 
+/**
+ * Middleware for retrying of a requests upon configured response status codes and/or exceptions
+ */
 public interface RetryRequestMiddleware extends Middleware {
     int DEFAULT_MAX_DELAY = 60000;
     int DEFAULT_INITIAL_DELAY = 200;

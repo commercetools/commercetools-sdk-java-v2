@@ -7,6 +7,9 @@ import io.vrap.rmf.base.client.ApiHttpResponse;
 
 import dev.failsafe.RetryPolicyBuilder;
 
+/**
+ * Interface to enable the configuration of Failsafe instances
+ */
 @FunctionalInterface
 public interface FailsafeRetryPolicyBuilderOptions {
     RetryPolicyBuilder<ApiHttpResponse<byte[]>> apply(RetryPolicyBuilder<ApiHttpResponse<byte[]>> options);

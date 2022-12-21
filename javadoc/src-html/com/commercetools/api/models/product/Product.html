@@ -221,15 +221,19 @@
 <span class="source-line-no">208</span><span id="line.208">        return com.commercetools.api.models.product.ProductReference.builder().id(getId()).build();</span>
 <span class="source-line-no">209</span><span id="line.209">    }</span>
 <span class="source-line-no">210</span><span id="line.210"></span>
-<span class="source-line-no">211</span><span id="line.211">    public static com.fasterxml.jackson.core.type.TypeReference&lt;Product&gt; typeReference() {</span>
-<span class="source-line-no">212</span><span id="line.212">        return new com.fasterxml.jackson.core.type.TypeReference&lt;Product&gt;() {</span>
-<span class="source-line-no">213</span><span id="line.213">            @Override</span>
-<span class="source-line-no">214</span><span id="line.214">            public String toString() {</span>
-<span class="source-line-no">215</span><span id="line.215">                return "TypeReference&lt;Product&gt;";</span>
-<span class="source-line-no">216</span><span id="line.216">            }</span>
-<span class="source-line-no">217</span><span id="line.217">        };</span>
-<span class="source-line-no">218</span><span id="line.218">    }</span>
-<span class="source-line-no">219</span><span id="line.219">}</span>
+<span class="source-line-no">211</span><span id="line.211">    public static com.commercetools.api.models.common.ReferenceTypeId referenceTypeId() {</span>
+<span class="source-line-no">212</span><span id="line.212">        return com.commercetools.api.models.common.ReferenceTypeId.PRODUCT;</span>
+<span class="source-line-no">213</span><span id="line.213">    }</span>
+<span class="source-line-no">214</span><span id="line.214"></span>
+<span class="source-line-no">215</span><span id="line.215">    public static com.fasterxml.jackson.core.type.TypeReference&lt;Product&gt; typeReference() {</span>
+<span class="source-line-no">216</span><span id="line.216">        return new com.fasterxml.jackson.core.type.TypeReference&lt;Product&gt;() {</span>
+<span class="source-line-no">217</span><span id="line.217">            @Override</span>
+<span class="source-line-no">218</span><span id="line.218">            public String toString() {</span>
+<span class="source-line-no">219</span><span id="line.219">                return "TypeReference&lt;Product&gt;";</span>
+<span class="source-line-no">220</span><span id="line.220">            }</span>
+<span class="source-line-no">221</span><span id="line.221">        };</span>
+<span class="source-line-no">222</span><span id="line.222">    }</span>
+<span class="source-line-no">223</span><span id="line.223">}</span>
 
 
 

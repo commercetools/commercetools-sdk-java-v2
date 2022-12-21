@@ -31,7 +31,7 @@
 <span class="source-line-no">018</span><span id="line.18">import org.apache.commons.lang3.builder.HashCodeBuilder;</span>
 <span class="source-line-no">019</span><span id="line.19"></span>
 <span class="source-line-no">020</span><span id="line.20">/**</span>
-<span class="source-line-no">021</span><span id="line.21"> *  &lt;p&gt;Retrieves all the ShippingMethods that can ship to the given Location. If the &lt;code&gt;currency&lt;/code&gt; parameter is given, then the ShippingMethods must also have a rate defined in the specified currency. Each ShippingMethod contains at least one ShippingRate with the flag &lt;code&gt;isMatching&lt;/code&gt; set to &lt;code&gt;true&lt;/code&gt;. If the &lt;code&gt;currency&lt;/code&gt; parameter is given, exactly one ShippingRate will contain it.&lt;/p&gt;</span>
+<span class="source-line-no">021</span><span id="line.21"> *  &lt;p&gt;Retrieves all the ShippingMethods that can ship to the given Location. ShippingMethods that have a &lt;code&gt;predicate&lt;/code&gt; defined are automatically disqualified. If the &lt;code&gt;currency&lt;/code&gt; parameter is given, then the ShippingMethods must also have a rate defined in the specified currency. Each ShippingMethod contains at least one ShippingRate with the flag &lt;code&gt;isMatching&lt;/code&gt; set to &lt;code&gt;true&lt;/code&gt;. If the &lt;code&gt;currency&lt;/code&gt; parameter is given, exactly one ShippingRate will contain it.&lt;/p&gt;</span>
 <span class="source-line-no">022</span><span id="line.22"> *</span>
 <span class="source-line-no">023</span><span id="line.23"> * &lt;hr&gt;</span>
 <span class="source-line-no">024</span><span id="line.24"> * &lt;div class=code-example&gt;</span>

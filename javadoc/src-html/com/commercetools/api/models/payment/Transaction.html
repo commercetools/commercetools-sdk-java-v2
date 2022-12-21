@@ -22,7 +22,7 @@
 <span class="source-line-no">009</span><span id="line.9">import javax.validation.Valid;</span>
 <span class="source-line-no">010</span><span id="line.10">import javax.validation.constraints.NotNull;</span>
 <span class="source-line-no">011</span><span id="line.11"></span>
-<span class="source-line-no">012</span><span id="line.12">import com.commercetools.api.models.common.TypedMoney;</span>
+<span class="source-line-no">012</span><span id="line.12">import com.commercetools.api.models.common.CentPrecisionMoney;</span>
 <span class="source-line-no">013</span><span id="line.13">import com.commercetools.api.models.type.CustomFields;</span>
 <span class="source-line-no">014</span><span id="line.14">import com.fasterxml.jackson.annotation.*;</span>
 <span class="source-line-no">015</span><span id="line.15">import com.fasterxml.jackson.databind.annotation.*;</span>
@@ -76,7 +76,7 @@
 <span class="source-line-no">063</span><span id="line.63">    @NotNull</span>
 <span class="source-line-no">064</span><span id="line.64">    @Valid</span>
 <span class="source-line-no">065</span><span id="line.65">    @JsonProperty("amount")</span>
-<span class="source-line-no">066</span><span id="line.66">    public TypedMoney getAmount();</span>
+<span class="source-line-no">066</span><span id="line.66">    public CentPrecisionMoney getAmount();</span>
 <span class="source-line-no">067</span><span id="line.67"></span>
 <span class="source-line-no">068</span><span id="line.68">    /**</span>
 <span class="source-line-no">069</span><span id="line.69">     *  &lt;p&gt;Identifier used by the interface that manages the Transaction (usually the PSP). If a matching interaction was logged in the &lt;code&gt;interfaceInteractions&lt;/code&gt; array, the corresponding interaction can be found with this ID.&lt;/p&gt;</span>
@@ -105,7 +105,7 @@
 <span class="source-line-no">092</span><span id="line.92"></span>
 <span class="source-line-no">093</span><span id="line.93">    public void setType(final TransactionType type);</span>
 <span class="source-line-no">094</span><span id="line.94"></span>
-<span class="source-line-no">095</span><span id="line.95">    public void setAmount(final TypedMoney amount);</span>
+<span class="source-line-no">095</span><span id="line.95">    public void setAmount(final CentPrecisionMoney amount);</span>
 <span class="source-line-no">096</span><span id="line.96"></span>
 <span class="source-line-no">097</span><span id="line.97">    public void setInteractionId(final String interactionId);</span>
 <span class="source-line-no">098</span><span id="line.98"></span>

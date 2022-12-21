@@ -608,15 +608,19 @@
 <span class="source-line-no">595</span><span id="line.595">        return com.commercetools.api.models.order.OrderReference.builder().id(getId()).build();</span>
 <span class="source-line-no">596</span><span id="line.596">    }</span>
 <span class="source-line-no">597</span><span id="line.597"></span>
-<span class="source-line-no">598</span><span id="line.598">    public static com.fasterxml.jackson.core.type.TypeReference&lt;Order&gt; typeReference() {</span>
-<span class="source-line-no">599</span><span id="line.599">        return new com.fasterxml.jackson.core.type.TypeReference&lt;Order&gt;() {</span>
-<span class="source-line-no">600</span><span id="line.600">            @Override</span>
-<span class="source-line-no">601</span><span id="line.601">            public String toString() {</span>
-<span class="source-line-no">602</span><span id="line.602">                return "TypeReference&lt;Order&gt;";</span>
-<span class="source-line-no">603</span><span id="line.603">            }</span>
-<span class="source-line-no">604</span><span id="line.604">        };</span>
-<span class="source-line-no">605</span><span id="line.605">    }</span>
-<span class="source-line-no">606</span><span id="line.606">}</span>
+<span class="source-line-no">598</span><span id="line.598">    public static com.commercetools.api.models.common.ReferenceTypeId referenceTypeId() {</span>
+<span class="source-line-no">599</span><span id="line.599">        return com.commercetools.api.models.common.ReferenceTypeId.ORDER;</span>
+<span class="source-line-no">600</span><span id="line.600">    }</span>
+<span class="source-line-no">601</span><span id="line.601"></span>
+<span class="source-line-no">602</span><span id="line.602">    public static com.fasterxml.jackson.core.type.TypeReference&lt;Order&gt; typeReference() {</span>
+<span class="source-line-no">603</span><span id="line.603">        return new com.fasterxml.jackson.core.type.TypeReference&lt;Order&gt;() {</span>
+<span class="source-line-no">604</span><span id="line.604">            @Override</span>
+<span class="source-line-no">605</span><span id="line.605">            public String toString() {</span>
+<span class="source-line-no">606</span><span id="line.606">                return "TypeReference&lt;Order&gt;";</span>
+<span class="source-line-no">607</span><span id="line.607">            }</span>
+<span class="source-line-no">608</span><span id="line.608">        };</span>
+<span class="source-line-no">609</span><span id="line.609">    }</span>
+<span class="source-line-no">610</span><span id="line.610">}</span>
 
 
 

@@ -178,15 +178,19 @@
 <span class="source-line-no">165</span><span id="line.165">        return com.commercetools.api.models.customer_group.CustomerGroupReference.builder().id(getId()).build();</span>
 <span class="source-line-no">166</span><span id="line.166">    }</span>
 <span class="source-line-no">167</span><span id="line.167"></span>
-<span class="source-line-no">168</span><span id="line.168">    public static com.fasterxml.jackson.core.type.TypeReference&lt;CustomerGroup&gt; typeReference() {</span>
-<span class="source-line-no">169</span><span id="line.169">        return new com.fasterxml.jackson.core.type.TypeReference&lt;CustomerGroup&gt;() {</span>
-<span class="source-line-no">170</span><span id="line.170">            @Override</span>
-<span class="source-line-no">171</span><span id="line.171">            public String toString() {</span>
-<span class="source-line-no">172</span><span id="line.172">                return "TypeReference&lt;CustomerGroup&gt;";</span>
-<span class="source-line-no">173</span><span id="line.173">            }</span>
-<span class="source-line-no">174</span><span id="line.174">        };</span>
-<span class="source-line-no">175</span><span id="line.175">    }</span>
-<span class="source-line-no">176</span><span id="line.176">}</span>
+<span class="source-line-no">168</span><span id="line.168">    public static com.commercetools.api.models.common.ReferenceTypeId referenceTypeId() {</span>
+<span class="source-line-no">169</span><span id="line.169">        return com.commercetools.api.models.common.ReferenceTypeId.CUSTOMER_GROUP;</span>
+<span class="source-line-no">170</span><span id="line.170">    }</span>
+<span class="source-line-no">171</span><span id="line.171"></span>
+<span class="source-line-no">172</span><span id="line.172">    public static com.fasterxml.jackson.core.type.TypeReference&lt;CustomerGroup&gt; typeReference() {</span>
+<span class="source-line-no">173</span><span id="line.173">        return new com.fasterxml.jackson.core.type.TypeReference&lt;CustomerGroup&gt;() {</span>
+<span class="source-line-no">174</span><span id="line.174">            @Override</span>
+<span class="source-line-no">175</span><span id="line.175">            public String toString() {</span>
+<span class="source-line-no">176</span><span id="line.176">                return "TypeReference&lt;CustomerGroup&gt;";</span>
+<span class="source-line-no">177</span><span id="line.177">            }</span>
+<span class="source-line-no">178</span><span id="line.178">        };</span>
+<span class="source-line-no">179</span><span id="line.179">    }</span>
+<span class="source-line-no">180</span><span id="line.180">}</span>
 
 
 

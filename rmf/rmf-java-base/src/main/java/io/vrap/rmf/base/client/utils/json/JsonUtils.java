@@ -87,6 +87,7 @@ public class JsonUtils {
      * deserializes the given json string to the given class
      * @param clazz class to serialize to
      * @param content json as string
+     * @param <T> type of the result
      * @return deserialized object
      */
     public static <T> T fromJsonString(final String content, final Class<T> clazz) {
@@ -147,6 +148,7 @@ public class JsonUtils {
      * @param content json as byte array
      * @return deserialized object
      * @throws JsonException deserialization errors
+     * @param <T> type of the result
      */
     public static <T> T fromJsonByteArray(final byte[] content, final Class<T> clazz) {
         return executing(() -> OBJECT_MAPPER.readValue(content, clazz));
@@ -158,6 +160,7 @@ public class JsonUtils {
      * @param content json as inputstream
      * @return deserialized object
      * @throws JsonException deserialization errors
+     * @param <T> type of the result
      */
     public static <T> T fromInputStream(final InputStream content, final Class<T> clazz) {
         return executing(() -> OBJECT_MAPPER.readValue(content, clazz));

@@ -94,6 +94,7 @@ public class CompatSphereClient extends AutoCloseableService implements SphereCl
     /**
      * Wraps an ApiHttpClient in a SDK v1 compatible SphereClient. SDKv1 Exceptions are thrown
      * @param apiHttpClient the underlying ApiHttpClient to be used
+     * @param projectKey the key of the used project
      * @return SphereClient using a SDK v2 ApiHttpClient as HTTP client
      */
     public static CompatSphereClient of(final ApiHttpClient apiHttpClient, final String projectKey) {

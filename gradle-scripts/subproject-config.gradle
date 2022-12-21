@@ -30,9 +30,12 @@ javadoc {
         setAuthor false
         noTimestamp = true
 
-        links "https://docs.oracle.com/javase/8/docs/api/"
-        addStringOption('Xdoclint:none', '-quiet')
+        links 'https://docs.oracle.com/javase/8/docs/api/', "https://www.javadoc.io/doc/com.fasterxml.jackson.core/jackson-databind/${versions.jackson}/", 'https://commercetools.github.io/commercetools-jvm-sdk/apidocs/'
+        addStringOption('Xdoclint:missing,accessibility', '-quiet')
+        addBooleanOption('-allow-script-in-comments', true)
+        addBooleanOption('linksource', true)
         addStringOption('source', '8')
+        maxMemory = '2g'
     }
 }
 
@@ -73,6 +76,7 @@ task sourcesJar(type: Jar) {
 }
 
 task javadocJar(type: Jar) {
+    dependsOn "javadoc"
     archiveClassifier = 'javadoc'
     from javadoc.destinationDir
 }

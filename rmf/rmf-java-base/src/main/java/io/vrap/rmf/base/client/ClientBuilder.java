@@ -1240,6 +1240,7 @@ public class ClientBuilder implements Builder<ApiHttpClient> {
 
     /**
      * sets the middlewares to be configured for the client.
+     * @param middleware {@link Middleware} instance
      * @param middlewares {@link Middleware} instances
      * @return ClientBuilder instance
      */
@@ -1263,6 +1264,7 @@ public class ClientBuilder implements Builder<ApiHttpClient> {
 
     /**
      * adds the middlewares to be configured for the client.
+     * @param middleware {@link Middleware} instance
      * @param middlewares {@link Middleware} instances
      * @return ClientBuilder instance
      */

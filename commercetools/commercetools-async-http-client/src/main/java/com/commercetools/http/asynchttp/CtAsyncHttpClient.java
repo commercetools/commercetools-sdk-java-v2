@@ -38,6 +38,8 @@ public class CtAsyncHttpClient extends HttpClientBase implements VrapHttpClient,
 
     /**
      * @deprecated usage of maxConnTotal and maxConnPerRoute not advised as there is no pooling done by AHC. Use {@link CtAsyncHttpClient#CtAsyncHttpClient(int)} instead.
+     * @param maxConnPerRoute maximum number of parallel connections to one host
+     * @param maxConnTotal maximum number of parallel connections
      */
     @Deprecated
     public CtAsyncHttpClient(final int maxConnTotal, final int maxConnPerRoute) {
@@ -48,6 +50,7 @@ public class CtAsyncHttpClient extends HttpClientBase implements VrapHttpClient,
 
     /**
      * Uses a {@link ThrottleRequestFilter} to limit the number of concurrent requests
+     * @param maxConnections maximum number of parallel connections
      */
     public CtAsyncHttpClient(final int maxConnections) {
         super();
@@ -55,6 +58,10 @@ public class CtAsyncHttpClient extends HttpClientBase implements VrapHttpClient,
             clientBuilder.get().addRequestFilter(new ThrottleRequestFilter(maxConnections)).build());
     }
 
+    /**
+     * creates a default instance of the AsyncHttpClient
+     * @param options options to build the underlying HTTP client
+     */
     public CtAsyncHttpClient(final BuilderOptions options) {
         super();
         asyncHttpClient = new DefaultAsyncHttpClient(options.plus(clientBuilder.get()).build());
@@ -62,6 +69,9 @@ public class CtAsyncHttpClient extends HttpClientBase implements VrapHttpClient,
 
     /**
      * @deprecated usage of maxConnTotal and maxConnPerRoute not advised as there is no pooling done by AHC. Use {@link CtAsyncHttpClient#CtAsyncHttpClient(int, BuilderOptions)} instead.
+     * @param maxConnPerRoute maximum number of parallel connections to one host
+     * @param maxConnTotal maximum number of parallel connections
+     * @param options options to build the underlying HTTP client
      */
     @Deprecated
     public CtAsyncHttpClient(final int maxConnTotal, final int maxConnPerRoute, final BuilderOptions options) {
@@ -73,6 +83,8 @@ public class CtAsyncHttpClient extends HttpClientBase implements VrapHttpClient,
 
     /**
      * Uses a {@link ThrottleRequestFilter} to limit the number of concurrent requests
+     * @param maxConnections maximum number of parallel connections
+     * @param options options to build the underlying HTTP client
      */
     public CtAsyncHttpClient(final int maxConnections, final BuilderOptions options) {
         super();
@@ -80,11 +92,19 @@ public class CtAsyncHttpClient extends HttpClientBase implements VrapHttpClient,
             options.plus(clientBuilder.get().addRequestFilter(new ThrottleRequestFilter(maxConnections))).build());
     }
 
+    /**
+     * creates a instance of the AsyncHttpClient using the provided builder
+     * @param builderSupplier builder with the configuration of the underlying HTTP client
+     */
     public CtAsyncHttpClient(final Supplier<DefaultAsyncHttpClientConfig.Builder> builderSupplier) {
         super();
         asyncHttpClient = new DefaultAsyncHttpClient(builderSupplier.get().build());
     }
 
+    /**
+     * creates a default instance of the AsyncHttpClient
+     * @param executor ExecutorService to be used for the client
+     */
     public CtAsyncHttpClient(final ExecutorService executor) {
         super(executor);
         asyncHttpClient = new DefaultAsyncHttpClient(clientBuilder.get().build());
@@ -92,6 +112,9 @@ public class CtAsyncHttpClient extends HttpClientBase implements VrapHttpClient,
 
     /**
      * @deprecated usage of maxConnTotal and maxConnPerRoute not advised as there is no pooling done by AHC. Use {@link CtAsyncHttpClient#CtAsyncHttpClient(ExecutorService, int)} instead.
+     * @param maxConnPerRoute maximum number of parallel connections to one host
+     * @param maxConnTotal maximum number of parallel connections
+     * @param executor ExecutorService to be used
      */
     @Deprecated
     public CtAsyncHttpClient(final ExecutorService executor, final int maxConnTotal, final int maxConnPerRoute) {
@@ -102,6 +125,8 @@ public class CtAsyncHttpClient extends HttpClientBase implements VrapHttpClient,
 
     /**
      * Uses a {@link ThrottleRequestFilter} to limit the number of concurrent requests
+     * @param maxConnections maximum number of parallel connections
+     * @param executor ExecutorService to be used
      */
     public CtAsyncHttpClient(final ExecutorService executor, final int maxConnections) {
         super(executor);
@@ -109,6 +134,11 @@ public class CtAsyncHttpClient extends HttpClientBase implements VrapHttpClient,
             clientBuilder.get().addRequestFilter(new ThrottleRequestFilter(maxConnections)).build());
     }
 
+    /**
+     * creates a default instance of the AsyncHttpClient
+     * @param executor ExecutorService to be used for the client
+     * @param options options to build the underlying HTTP client
+     */
     public CtAsyncHttpClient(final ExecutorService executor, final BuilderOptions options) {
         super(executor);
         asyncHttpClient = new DefaultAsyncHttpClient(options.plus(clientBuilder.get()).build());
@@ -116,6 +146,10 @@ public class CtAsyncHttpClient extends HttpClientBase implements VrapHttpClient,
 
     /**
      * @deprecated usage of maxConnTotal and maxConnPerRoute not advised as there is no pooling done by AHC. Use {@link CtAsyncHttpClient#CtAsyncHttpClient(ExecutorService, int, BuilderOptions)} instead.
+     * @param maxConnPerRoute maximum number of parallel connections to one host
+     * @param maxConnTotal maximum number of parallel connections
+     * @param executor ExecutorService to be used
+     * @param options options to build the underlying HTTP client
      */
     @Deprecated
     public CtAsyncHttpClient(final ExecutorService executor, final int maxConnTotal, final int maxConnPerRoute,
@@ -128,6 +162,9 @@ public class CtAsyncHttpClient extends HttpClientBase implements VrapHttpClient,
 
     /**
      * Uses a {@link ThrottleRequestFilter} to limit the number of concurrent requests
+     * @param maxConnections maximum number of parallel connections
+     * @param executor ExecutorService to be used
+     * @param options options to build the underlying HTTP client
      */
     public CtAsyncHttpClient(final ExecutorService executor, final int maxConnections, final BuilderOptions options) {
         super(executor);
@@ -135,12 +172,22 @@ public class CtAsyncHttpClient extends HttpClientBase implements VrapHttpClient,
             options.plus(clientBuilder.get().addRequestFilter(new ThrottleRequestFilter(maxConnections))).build());
     }
 
+    /**
+     * creates a instance of the AsyncHttpClient using the provided builder
+     * @param executor ExecutorService to be used
+     * @param builderSupplier builder with the configuration of the underlying HTTP client
+     */
     public CtAsyncHttpClient(final ExecutorService executor,
             final Supplier<DefaultAsyncHttpClientConfig.Builder> builderSupplier) {
         super(executor);
         asyncHttpClient = new DefaultAsyncHttpClient(builderSupplier.get().build());
     }
 
+    /**
+     * executes a request
+     * @param httpRequest request to be executed
+     * @return response future
+     */
     @Override
     public CompletableFuture<ApiHttpResponse<byte[]>> execute(final ApiHttpRequest httpRequest) {
         final Request request = asAhcRequest(httpRequest);
@@ -181,6 +228,10 @@ public class CtAsyncHttpClient extends HttpClientBase implements VrapHttpClient,
         return builder.build();
     }
 
+    /**
+     * closes the underlying HTTP client
+     * @throws Exception in case of failure closing the client
+     */
     @Override
     public void closeDelegate() throws Exception {
         asyncHttpClient.close();

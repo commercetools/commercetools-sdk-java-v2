@@ -322,6 +322,8 @@ public class QueryBuilder {
 
     /**
      * @deprecated use with(queryDsl)
+     * @param queryDsl query
+     * @return query request
      */
     @Deprecated
     public ByProjectKeyCartsGet cart(final CartQuery queryDsl) {
@@ -330,6 +332,8 @@ public class QueryBuilder {
 
     /**
      * @deprecated use with(queryDsl)
+     * @param queryDsl query
+     * @return query request
      */
     @Deprecated
     public ByProjectKeyCartDiscountsGet cartDiscount(final CartDiscountQuery queryDsl) {
@@ -338,6 +342,8 @@ public class QueryBuilder {
 
     /**
      * @deprecated use with(queryDsl)
+     * @param queryDsl query
+     * @return query request
      */
     @Deprecated
     public ByProjectKeyCustomObjectsGet customObject(final CustomObjectQuery<?> queryDsl) {
@@ -346,6 +352,8 @@ public class QueryBuilder {
 
     /**
      * @deprecated use with(queryDsl)
+     * @param queryDsl query
+     * @return query request
      */
     @Deprecated
     public ByProjectKeyCustomersGet customer(final CustomerQuery queryDsl) {
@@ -354,6 +362,8 @@ public class QueryBuilder {
 
     /**
      * @deprecated use with(queryDsl)
+     * @param queryDsl query
+     * @return query request
      */
     @Deprecated
     public ByProjectKeyDiscountCodesGet discountCode(final DiscountCodeQuery queryDsl) {
@@ -362,6 +372,8 @@ public class QueryBuilder {
 
     /**
      * @deprecated use with(queryDsl)
+     * @param queryDsl query
+     * @return query request
      */
     @Deprecated
     public ByProjectKeyCategoriesGet category(final CategoryQuery queryDsl) {
@@ -370,6 +382,8 @@ public class QueryBuilder {
 
     /**
      * @deprecated use with(queryDsl)
+     * @param queryDsl query
+     * @return query request
      */
     @Deprecated
     public ByProjectKeyChannelsGet channel(final ChannelQuery queryDsl) {
@@ -378,6 +392,8 @@ public class QueryBuilder {
 
     /**
      * @deprecated use with(queryDsl)
+     * @param queryDsl query
+     * @return query request
      */
     @Deprecated
     public ByProjectKeyProductsGet products(final ProductQuery queryDsl) {
@@ -386,6 +402,8 @@ public class QueryBuilder {
 
     /**
      * @deprecated use with(queryDsl)
+     * @param queryDsl query
+     * @return query request
      */
     @Deprecated
     public ByProjectKeyProductProjectionsGet productProjections(final ProductProjectionQuery queryDsl) {
@@ -394,6 +412,8 @@ public class QueryBuilder {
 
     /**
      * @deprecated use with(queryDsl)
+     * @param queryDsl query
+     * @return query request
      */
     @Deprecated
     public ByProjectKeyCustomerGroupsGet customerGroups(final CustomerGroupQuery queryDsl) {
@@ -402,6 +422,8 @@ public class QueryBuilder {
 
     /**
      * @deprecated use with(queryDsl)
+     * @param queryDsl query
+     * @return query request
      */
     @Deprecated
     public ByProjectKeyExtensionsGet extensions(final ExtensionQuery queryDsl) {
@@ -410,6 +432,8 @@ public class QueryBuilder {
 
     /**
      * @deprecated use with(queryDsl)
+     * @param queryDsl query
+     * @return query request
      */
     @Deprecated
     public ByProjectKeyInventoryGet inventory(final InventoryEntryQuery queryDsl) {
@@ -418,6 +442,8 @@ public class QueryBuilder {
 
     /**
      * @deprecated use with(queryDsl)
+     * @param queryDsl query
+     * @return query request
      */
     @Deprecated
     public ByProjectKeyMessagesGet messages(final MessageQuery queryDsl) {
@@ -426,6 +452,8 @@ public class QueryBuilder {
 
     /**
      * @deprecated use with(queryDsl)
+     * @param queryDsl query
+     * @return query request
      */
     @Deprecated
     public ByProjectKeyOrdersGet orders(final OrderQuery queryDsl) {
@@ -434,6 +462,8 @@ public class QueryBuilder {
 
     /**
      * @deprecated use with(queryDsl)
+     * @param queryDsl query
+     * @return query request
      */
     @Deprecated
     public ByProjectKeyPaymentsGet payments(final PaymentQuery queryDsl) {
@@ -442,6 +472,8 @@ public class QueryBuilder {
 
     /**
      * @deprecated use with(queryDsl)
+     * @param queryDsl query
+     * @return query request
      */
     @Deprecated
     public ByProjectKeyProductDiscountsGet productDiscounts(final ProductDiscountQuery queryDsl) {
@@ -454,6 +486,8 @@ public class QueryBuilder {
 
     /**
      * @deprecated use with(queryDsl)
+     * @param queryDsl query
+     * @return query request
      */
     @Deprecated
     public ByProjectKeyProductTypesGet productTypes(final ProductTypeQuery queryDsl) {
@@ -462,6 +496,8 @@ public class QueryBuilder {
 
     /**
      * @deprecated use with(queryDsl)
+     * @param queryDsl query
+     * @return query request
      */
     @Deprecated
     public ByProjectKeyReviewsGet review(final ReviewQuery queryDsl) {
@@ -470,6 +506,8 @@ public class QueryBuilder {
 
     /**
      * @deprecated use with(queryDsl)
+     * @param queryDsl query
+     * @return query request
      */
     @Deprecated
     public ByProjectKeyShippingMethodsGet shippingMethods(final ShippingMethodQuery queryDsl) {
@@ -478,6 +516,8 @@ public class QueryBuilder {
 
     /**
      * @deprecated use with(queryDsl)
+     * @param queryDsl query
+     * @return query request
      */
     @Deprecated
     public ByProjectKeyShoppingListsGet shoppingLists(final ShoppingListQuery queryDsl) {
@@ -486,6 +526,8 @@ public class QueryBuilder {
 
     /**
      * @deprecated use with(queryDsl)
+     * @param queryDsl query
+     * @return query request
      */
     @Deprecated
     public ByProjectKeyStatesGet states(final StateQuery queryDsl) {
@@ -494,6 +536,8 @@ public class QueryBuilder {
 
     /**
      * @deprecated use with(queryDsl)
+     * @param queryDsl query
+     * @return query request
      */
     @Deprecated
     public ByProjectKeyStoresGet stores(final StoreQuery queryDsl) {
@@ -502,6 +546,8 @@ public class QueryBuilder {
 
     /**
      * @deprecated use with(queryDsl)
+     * @param queryDsl query
+     * @return query request
      */
     @Deprecated
     public ByProjectKeySubscriptionsGet subscriptions(final SubscriptionQuery queryDsl) {
@@ -510,6 +556,8 @@ public class QueryBuilder {
 
     /**
      * @deprecated use with(queryDsl)
+     * @param queryDsl query
+     * @return query request
      */
     @Deprecated
     public ByProjectKeyTaxCategoriesGet taxCategories(final TaxCategoryQuery queryDsl) {
@@ -518,6 +566,8 @@ public class QueryBuilder {
 
     /**
      * @deprecated use with(queryDsl)
+     * @param queryDsl query
+     * @return query request
      */
     @Deprecated
     public ByProjectKeyZonesGet zones(final ZoneQuery queryDsl) {
@@ -526,6 +576,8 @@ public class QueryBuilder {
 
     /**
      * @deprecated use with(queryDsl)
+     * @param queryDsl query
+     * @return query request
      */
     @Deprecated
     public ByProjectKeyTypesGet types(final TypeQuery queryDsl) {

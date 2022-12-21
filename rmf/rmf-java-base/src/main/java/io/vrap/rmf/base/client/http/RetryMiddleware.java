@@ -50,6 +50,7 @@ public class RetryMiddleware implements RetryRequestMiddleware, AutoCloseable {
 
     /**
      * @deprecated use {@link RetryRequestMiddleware#of(int)} instead
+     * @param maxRetries number of retries before giving up
      */
     @Deprecated
     public RetryMiddleware(final int maxRetries) {
@@ -59,6 +60,8 @@ public class RetryMiddleware implements RetryRequestMiddleware, AutoCloseable {
 
     /**
      * @deprecated use {@link RetryRequestMiddleware#of(int, List)} instead
+     * @param maxRetries number of retries before giving up
+     * @param statusCodes response status codes to be retried
      */
     @Deprecated
     public RetryMiddleware(final int maxRetries, final List<Integer> statusCodes) {
@@ -74,6 +77,9 @@ public class RetryMiddleware implements RetryRequestMiddleware, AutoCloseable {
 
     /**
      * @deprecated use {@link RetryRequestMiddleware#of(int, long, long)} instead
+     * @param maxRetries number of retries before giving up
+     * @param delay initial delay before retry
+     * @param maxDelay maximum delay before retry
      */
     @Deprecated
     public RetryMiddleware(final int maxRetries, final long delay, final long maxDelay) {
@@ -82,6 +88,10 @@ public class RetryMiddleware implements RetryRequestMiddleware, AutoCloseable {
 
     /**
      * @deprecated use {@link RetryRequestMiddleware#of(int, long, long, List)} instead
+     * @param maxRetries number of retries before giving up
+     * @param delay initial delay before retry
+     * @param maxDelay maximum delay before retry
+     * @param statusCodes response status codes to be retried
      */
     @Deprecated
     public RetryMiddleware(final int maxRetries, final long delay, final long maxDelay,
@@ -199,6 +209,8 @@ public class RetryMiddleware implements RetryRequestMiddleware, AutoCloseable {
 
     /**
      * @deprecated max parallel requests are limited by underlying HTTP client
+     * @param maxRetries number of retries before giving up
+     * @param maxParallelRequests maximum number of parallel retry requests
      */
     @Deprecated
     public RetryMiddleware(final int maxParallelRequests, final int maxRetries) {
@@ -208,6 +220,9 @@ public class RetryMiddleware implements RetryRequestMiddleware, AutoCloseable {
 
     /**
      * @deprecated max parallel requests are limited by underlying HTTP client
+     * @param maxRetries number of retries before giving up
+     * @param maxParallelRequests maximum number of parallel retry requests
+     * @param statusCodes response status codes to be retried
      */
     @Deprecated
     public RetryMiddleware(final int maxParallelRequests, final int maxRetries, final List<Integer> statusCodes) {
@@ -217,6 +232,10 @@ public class RetryMiddleware implements RetryRequestMiddleware, AutoCloseable {
 
     /**
      * @deprecated max parallel requests are limited by underlying HTTP client
+     * @param maxRetries number of retries before giving up
+     * @param maxParallelRequests maximum number of parallel retry requests
+     * @param delay initial delay before retry
+     * @param maxDelay maximum delay before retry
      */
     @Deprecated
     public RetryMiddleware(final int maxParallelRequests, final int maxRetries, final long delay, final long maxDelay) {
@@ -225,6 +244,11 @@ public class RetryMiddleware implements RetryRequestMiddleware, AutoCloseable {
 
     /**
      * @deprecated max parallel requests are limited by underlying HTTP client
+     * @param maxRetries number of retries before giving up
+     * @param maxParallelRequests maximum number of parallel retry requests
+     * @param delay initial delay before retry
+     * @param maxDelay maximum delay before retry
+     * @param statusCodes response status codes to be retried
      */
     @Deprecated
     public RetryMiddleware(final int maxParallelRequests, final int maxRetries, final long delay, final long maxDelay,

@@ -8,7 +8,7 @@ dependencies {
     implementation project(":commercetools:commercetools-sdk-compat-v1")
 
     testImplementation ctsdkv1.client version ctsdkv1.version
-    testImplementation ctsdkv1.models version ctsdkv1.version
+    implementation ctsdkv1.models version ctsdkv1.version
     testImplementation ctsdkv1.convenience version ctsdkv1.version
 
     testImplementation commons.io version commons.io_version

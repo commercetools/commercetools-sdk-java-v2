@@ -275,6 +275,7 @@ public abstract class ApiMethod<T extends ApiMethod<T, TResult>, TResult> extend
     /**
      * allows to modify the HTTP request before it will be executed
      * @param op decorator function
+     * @return the method itself
      */
     public T withHttpRequest(Function<ApiHttpRequest, ApiHttpRequest> op) {
         final T c = copy();
@@ -285,6 +286,7 @@ public abstract class ApiMethod<T extends ApiMethod<T, TResult>, TResult> extend
     /**
      * allows to provide a function to modify the ApiMethod itself
      * @param op decorator function
+     * @return the method itself
      */
     public T with(Function<T, T> op) {
         final T c = copy();
@@ -295,6 +297,8 @@ public abstract class ApiMethod<T extends ApiMethod<T, TResult>, TResult> extend
      * allows to provide a function to modify the ApiMethod itself
      * @param op decorator function
      * @param arg decorator function argument
+     * @param <U> the method type itself
+     * @return the method itself
      */
     public <U> T with(BiFunction<T, U, T> op, U arg) {
         final T c = copy();

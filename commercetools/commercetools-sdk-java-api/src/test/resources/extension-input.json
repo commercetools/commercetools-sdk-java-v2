@@ -1,0 +1,38 @@
+{
+    "action": "Create",
+    "resource": {
+        "typeId": "cart",
+        "id": "449cf0cd-cd9f-4c7b-9efa-8bbe0185c899",
+        "obj": {
+            "id": "449cf0cd-cd9f-4c7b-9efa-8bbe0185c899",
+            "version": 1,
+            "createdAt": "2018-01-17T14:24:37.584Z",
+            "lastModifiedAt": "2018-01-17T14:24:37.584Z",
+            "lineItems": [],
+            "cartState": "Active",
+            "totalPrice": {
+                "currencyCode": "USD",
+                "centAmount": 0
+            },
+            "taxedPrice": {
+                "totalNet": {
+                    "currencyCode": "USD",
+                    "centAmount": 0
+                },
+                "totalGross": {
+                    "currencyCode": "USD",
+                    "centAmount": 0
+                },
+                "taxPortions": []
+            },
+            "customLineItems": [],
+            "discountCodes": [],
+            "inventoryMode": "None",
+            "taxMode": "Platform",
+            "taxRoundingMode": "HalfEven",
+            "taxCalculationMode": "LineItemLevel",
+            "refusedGifts": [],
+            "origin": "Customer"
+        }
+    }
+}

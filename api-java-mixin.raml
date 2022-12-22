@@ -365,6 +365,25 @@ types:
       public static com.commercetools.api.models.common.ReferenceTypeId referenceTypeId() {
           return com.commercetools.api.models.common.ReferenceTypeId.PRODUCT;
       }
+  ProductData:
+    (java-extends): 'ProductDataLike'
+  ProductPagedQueryResponse:
+    (java-extends): 'com.commercetools.api.models.ResourcePagedQueryResponse<Product>'
+  ProductProjection:
+    (java-extends): 'ProductDataLike, com.commercetools.api.models.DomainResource<ProductProjection>'
+  ProductProjectionPagedQueryResponse:
+    (java-extends): 'com.commercetools.api.models.ResourcePagedQueryResponse<ProductProjection>'
+  ProductProjectionPagedSearchResponse:
+    (java-extends): 'com.commercetools.api.models.ResourcePagedQueryResponse<ProductProjection>'
+  ProductReference:
+    (java-extends): 'com.commercetools.api.models.Identifiable<Product>'
+  ProductResourceIdentifier:
+    (java-extends): 'com.commercetools.api.models.Identifiable<Product>'
+  ProductUpdate:
+    (java-extends): 'com.commercetools.api.models.ResourceUpdate<ProductUpdate,
+      ProductUpdateAction, ProductUpdateBuilder>'
+  ProductUpdateAction:
+    (java-extends): 'com.commercetools.api.models.ResourceUpdateAction<ProductUpdateAction>'
   ProductDiscount:
     (java-extends): 'com.commercetools.api.models.DomainResource<ProductDiscount>, com.commercetools.api.models.Referencable<ProductDiscount>, com.commercetools.api.models.ResourceIdentifiable<ProductDiscount>'
     (java-mixin): |
@@ -1114,6 +1133,10 @@ types:
                 UnaryOperator<com.commercetools.api.models.category.CategoryDraftBuilder> op) {
             return post(op.apply(com.commercetools.api.models.category.CategoryDraftBuilder.of()).build());
         }
+    get:
+      (java-implements):
+        'com.commercetools.api.models.PagedQueryResourceRequest<ByProjectKeyCategoriesGet,
+        com.commercetools.api.models.category.CategoryPagedQueryResponse>'
   /carts:
     (java-mixin): |
         public ByProjectKeyCartsByIDPost update(
@@ -1155,6 +1178,11 @@ types:
                 UnaryOperator<com.commercetools.api.models.cart.CartDraftBuilder> op) {
             return post(op.apply(com.commercetools.api.models.cart.CartDraftBuilder.of()).build());
         }
+    get:
+      (java-implements):
+        'com.commercetools.api.models.PagedQueryResourceRequest<ByProjectKeyCartsGet,
+        com.commercetools.api.models.cart.CartPagedQueryResponse>'
+
   /cart-discounts:
     (java-mixin): |
         public ByProjectKeyCartDiscountsByIDPost update(
@@ -1196,6 +1224,10 @@ types:
                 UnaryOperator<com.commercetools.api.models.cart_discount.CartDiscountDraftBuilder> op) {
             return post(op.apply(com.commercetools.api.models.cart_discount.CartDiscountDraftBuilder.of()).build());
         }
+    get:
+      (java-implements):
+        'com.commercetools.api.models.PagedQueryResourceRequest<ByProjectKeyCartDiscountsGet,
+        com.commercetools.api.models.cart_discount.CartDiscountPagedQueryResponse>'
   /channels:
     (java-mixin): |
         public ByProjectKeyChannelsByIDPost update(
@@ -1237,6 +1269,10 @@ types:
                 UnaryOperator<com.commercetools.api.models.channel.ChannelDraftBuilder> op) {
             return post(op.apply(com.commercetools.api.models.channel.ChannelDraftBuilder.of()).build());
         }
+    get:
+      (java-implements):
+        'com.commercetools.api.models.PagedQueryResourceRequest<ByProjectKeyChannelsGet,
+        com.commercetools.api.models.channel.ChannelPagedQueryResponse>'
   /customers:
     (java-mixin): |
         public ByProjectKeyCustomersByIDPost update(
@@ -1278,6 +1314,15 @@ types:
                 UnaryOperator<com.commercetools.api.models.customer.CustomerDraftBuilder> op) {
             return post(op.apply(com.commercetools.api.models.customer.CustomerDraftBuilder.of()).build());
         }
+    get:
+      (java-implements):
+        'com.commercetools.api.models.PagedQueryResourceRequest<ByProjectKeyCustomersGet,
+        com.commercetools.api.models.customer.CustomerPagedQueryResponse>'
+  /custom-objects:
+    get:
+      (java-implements):
+        'com.commercetools.api.models.PagedQueryResourceRequest<ByProjectKeyCustomObjectsGet,
+        com.commercetools.api.models.custom_object.CustomObjectPagedQueryResponse>'
   /customer-groups:
     (java-mixin): |
         public ByProjectKeyCustomerGroupsByIDPost update(
@@ -1319,6 +1364,10 @@ types:
                 UnaryOperator<com.commercetools.api.models.customer_group.CustomerGroupDraftBuilder> op) {
             return post(op.apply(com.commercetools.api.models.customer_group.CustomerGroupDraftBuilder.of()).build());
         }
+    get:
+      (java-implements):
+        'com.commercetools.api.models.PagedQueryResourceRequest<ByProjectKeyCustomerGroupsGet,
+        com.commercetools.api.models.customer_group.CustomerGroupPagedQueryResponse>'
   /discount-codes:
     (java-mixin): |
         public ByProjectKeyDiscountCodesByIDPost update(
@@ -1360,6 +1409,22 @@ types:
                 UnaryOperator<com.commercetools.api.models.discount_code.DiscountCodeDraftBuilder> op) {
             return post(op.apply(com.commercetools.api.models.discount_code.DiscountCodeDraftBuilder.of()).build());
         }
+    get:
+      (java-implements):
+        'com.commercetools.api.models.PagedQueryResourceRequest<ByProjectKeyDiscountCodesGet,
+        com.commercetools.api.models.discount_code.DiscountCodePagedQueryResponse>'
+  /in-store/key={storeKey}:
+    /me:
+      /shopping-lists:
+        get:
+          (java-implements):
+            'com.commercetools.api.models.PagedQueryResourceRequest<ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsGet,
+            com.commercetools.api.models.shopping_list.ShoppingListPagedQueryResponse>'
+    /shopping-lists:
+      get:
+        (java-implements):
+          'com.commercetools.api.models.PagedQueryResourceRequest<ByProjectKeyInStoreKeyByStoreKeyShoppingListsGet,
+          com.commercetools.api.models.shopping_list.ShoppingListPagedQueryResponse>'
   /inventory:
     (java-mixin): |
         public ByProjectKeyInventoryByIDPost update(
@@ -1401,6 +1466,15 @@ types:
                 UnaryOperator<com.commercetools.api.models.inventory.InventoryEntryDraftBuilder> op) {
             return post(op.apply(com.commercetools.api.models.inventory.InventoryEntryDraftBuilder.of()).build());
         }
+    get:
+      (java-implements):
+        'com.commercetools.api.models.PagedQueryResourceRequest<ByProjectKeyInventoryGet,
+        com.commercetools.api.models.inventory.InventoryPagedQueryResponse>'
+  /messages:
+    get:
+      (java-implements):
+        'com.commercetools.api.models.PagedQueryResourceRequest<ByProjectKeyMessagesGet,
+        com.commercetools.api.models.message.MessagePagedQueryResponse>'
   /orders:
     (java-mixin): |
         public ByProjectKeyOrdersByIDPost update(
@@ -1442,6 +1516,15 @@ types:
                 UnaryOperator<com.commercetools.api.models.order.OrderFromCartDraftBuilder> op) {
             return post(op.apply(com.commercetools.api.models.order.OrderFromCartDraftBuilder.of()).build());
         }
+    /edits:
+      get:
+        (java-implements):
+          'com.commercetools.api.models.PagedQueryResourceRequest<ByProjectKeyOrdersEditsGet,
+          com.commercetools.api.models.order_edit.OrderEditPagedQueryResponse>'
+    get:
+      (java-implements):
+        'com.commercetools.api.models.PagedQueryResourceRequest<ByProjectKeyOrdersGet,
+        com.commercetools.api.models.order.OrderPagedQueryResponse>'
   /payments:
     (java-mixin): |
         public ByProjectKeyPaymentsByIDPost update(
@@ -1483,6 +1566,10 @@ types:
                 UnaryOperator<com.commercetools.api.models.payment.PaymentDraftBuilder> op) {
             return post(op.apply(com.commercetools.api.models.payment.PaymentDraftBuilder.of()).build());
         }
+    get:
+      (java-implements):
+        'com.commercetools.api.models.PagedQueryResourceRequest<ByProjectKeyPaymentsGet,
+        com.commercetools.api.models.payment.PaymentPagedQueryResponse>'
   /products:
     (java-mixin): |
         public ByProjectKeyProductsByIDPost update(
@@ -1524,6 +1611,10 @@ types:
                 UnaryOperator<com.commercetools.api.models.product.ProductDraftBuilder> op) {
             return post(op.apply(com.commercetools.api.models.product.ProductDraftBuilder.of()).build());
         }
+    get:
+      (java-implements):
+        'com.commercetools.api.models.PagedQueryResourceRequest<ByProjectKeyProductsGet,
+        com.commercetools.api.models.product.ProductPagedQueryResponse>'
   /product-discounts:
     (java-mixin): |
         public ByProjectKeyProductDiscountsByIDPost update(
@@ -1565,6 +1656,15 @@ types:
                 UnaryOperator<com.commercetools.api.models.product_discount.ProductDiscountDraftBuilder> op) {
             return post(op.apply(com.commercetools.api.models.product_discount.ProductDiscountDraftBuilder.of()).build());
         }
+    get:
+      (java-implements):
+        'com.commercetools.api.models.PagedQueryResourceRequest<ByProjectKeyProductDiscountsGet,
+        com.commercetools.api.models.product_discount.ProductDiscountPagedQueryResponse>'
+  /product-projections:
+    get:
+      (java-implements):
+        'com.commercetools.api.models.PagedQueryResourceRequest<ByProjectKeyProductProjectionsGet,
+        com.commercetools.api.models.product.ProductProjectionPagedQueryResponse>'
   /product-types:
     (java-mixin): |
         public ByProjectKeyProductTypesByIDPost update(
@@ -1606,6 +1706,10 @@ types:
                 UnaryOperator<com.commercetools.api.models.product_type.ProductTypeDraftBuilder> op) {
             return post(op.apply(com.commercetools.api.models.product_type.ProductTypeDraftBuilder.of()).build());
         }
+    get:
+      (java-implements):
+        'com.commercetools.api.models.PagedQueryResourceRequest<ByProjectKeyProductTypesGet,
+        com.commercetools.api.models.product_type.ProductTypePagedQueryResponse>'
   /quotes:
     (java-mixin): |
         public ByProjectKeyQuotesByIDPost update(
@@ -1770,6 +1874,10 @@ types:
                 UnaryOperator<com.commercetools.api.models.review.ReviewDraftBuilder> op) {
             return post(op.apply(com.commercetools.api.models.review.ReviewDraftBuilder.of()).build());
         }
+    get:
+      (java-implements):
+        'com.commercetools.api.models.PagedQueryResourceRequest<ByProjectKeyReviewsGet,
+        com.commercetools.api.models.review.ReviewPagedQueryResponse>'
   /shipping-methods:
     (java-mixin): |
         public ByProjectKeyShippingMethodsByIDPost update(
@@ -1811,6 +1919,10 @@ types:
                 UnaryOperator<com.commercetools.api.models.shipping_method.ShippingMethodDraftBuilder> op) {
             return post(op.apply(com.commercetools.api.models.shipping_method.ShippingMethodDraftBuilder.of()).build());
         }
+    get:
+      (java-implements):
+        'com.commercetools.api.models.PagedQueryResourceRequest<ByProjectKeyShippingMethodsGet,
+        com.commercetools.api.models.shipping_method.ShippingMethodPagedQueryResponse>'
   /shopping-lists:
     (java-mixin): |
         public ByProjectKeyShoppingListsByIDPost update(
@@ -1852,6 +1964,10 @@ types:
                 UnaryOperator<com.commercetools.api.models.shopping_list.ShoppingListDraftBuilder> op) {
             return post(op.apply(com.commercetools.api.models.shopping_list.ShoppingListDraftBuilder.of()).build());
         }
+    get:
+      (java-implements):
+        'com.commercetools.api.models.PagedQueryResourceRequest<ByProjectKeyShoppingListsGet,
+        com.commercetools.api.models.shopping_list.ShoppingListPagedQueryResponse>'
   /states:
     (java-mixin): |
         public ByProjectKeyStatesByIDPost update(
@@ -1893,6 +2009,10 @@ types:
                 UnaryOperator<com.commercetools.api.models.state.StateDraftBuilder> op) {
             return post(op.apply(com.commercetools.api.models.state.StateDraftBuilder.of()).build());
         }
+    get:
+      (java-implements):
+        'com.commercetools.api.models.PagedQueryResourceRequest<ByProjectKeyStatesGet,
+        com.commercetools.api.models.state.StatePagedQueryResponse>'
   /subscriptions:
     (java-mixin): |
         public ByProjectKeySubscriptionsByIDPost update(
@@ -1934,6 +2054,10 @@ types:
                 UnaryOperator<com.commercetools.api.models.subscription.SubscriptionDraftBuilder> op) {
             return post(op.apply(com.commercetools.api.models.subscription.SubscriptionDraftBuilder.of()).build());
         }
+    get:
+      (java-implements):
+        'com.commercetools.api.models.PagedQueryResourceRequest<ByProjectKeySubscriptionsGet,
+        com.commercetools.api.models.subscription.SubscriptionPagedQueryResponse>'
   /tax-categories:
     (java-mixin): |
         public ByProjectKeyTaxCategoriesByIDPost update(
@@ -1975,6 +2099,10 @@ types:
                 UnaryOperator<com.commercetools.api.models.tax_category.TaxCategoryDraftBuilder> op) {
             return post(op.apply(com.commercetools.api.models.tax_category.TaxCategoryDraftBuilder.of()).build());
         }
+    get:
+      (java-implements):
+        'com.commercetools.api.models.PagedQueryResourceRequest<ByProjectKeyTaxCategoriesGet,
+        com.commercetools.api.models.tax_category.TaxCategoryPagedQueryResponse>'
   /types:
     (java-mixin): |
         public ByProjectKeyTypesByIDPost update(
@@ -2016,6 +2144,10 @@ types:
                 UnaryOperator<com.commercetools.api.models.type.TypeDraftBuilder> op) {
             return post(op.apply(com.commercetools.api.models.type.TypeDraftBuilder.of()).build());
         }
+    get:
+      (java-implements):
+        'com.commercetools.api.models.PagedQueryResourceRequest<ByProjectKeyTypesGet,
+        com.commercetools.api.models.type.TypePagedQueryResponse>'
   /zones:
     (java-mixin): |
         public ByProjectKeyZonesByIDPost update(
@@ -2057,6 +2189,10 @@ types:
                 UnaryOperator<com.commercetools.api.models.zone.ZoneDraftBuilder> op) {
             return post(op.apply(com.commercetools.api.models.zone.ZoneDraftBuilder.of()).build());
         }
+    get:
+      (java-implements):
+        'com.commercetools.api.models.PagedQueryResourceRequest<ByProjectKeyZonesGet,
+        com.commercetools.api.models.zone.ZonePagedQueryResponse>'
   /extensions:
     (java-mixin): |
         public ByProjectKeyExtensionsByIDPost update(
@@ -2098,6 +2234,10 @@ types:
                 UnaryOperator<com.commercetools.api.models.extension.ExtensionDraftBuilder> op) {
             return post(op.apply(com.commercetools.api.models.extension.ExtensionDraftBuilder.of()).build());
         }
+    get:
+      (java-implements):
+        'com.commercetools.api.models.PagedQueryResourceRequest<ByProjectKeyExtensionsGet,
+        com.commercetools.api.models.extension.ExtensionPagedQueryResponse>'
   /stores:
     (java-mixin): |
         public ByProjectKeyStoresByIDPost update(
@@ -2139,6 +2279,10 @@ types:
                 UnaryOperator<com.commercetools.api.models.store.StoreDraftBuilder> op) {
             return post(op.apply(com.commercetools.api.models.store.StoreDraftBuilder.of()).build());
         }
+    get:
+      (java-implements):
+        'com.commercetools.api.models.PagedQueryResourceRequest<ByProjectKeyStoresGet,
+        com.commercetools.api.models.store.StorePagedQueryResponse>'
   /standalone-prices:
     (java-mixin): |
         public ByProjectKeyStandalonePricesByIDPost update(
@@ -2180,6 +2324,10 @@ types:
                 UnaryOperator<com.commercetools.api.models.standalone_price.StandalonePriceDraftBuilder> op) {
             return post(op.apply(com.commercetools.api.models.standalone_price.StandalonePriceDraftBuilder.of()).build());
         }
+    get:
+      (java-implements):
+        'com.commercetools.api.models.PagedQueryResourceRequest<ByProjectKeyStandalonePricesGet,
+        com.commercetools.api.models.standalone_price.StandalonePricePagedQueryResponse>'
   /attribute-groups:
     (java-mixin): |
         public ByProjectKeyAttributeGroupsByIDPost update(

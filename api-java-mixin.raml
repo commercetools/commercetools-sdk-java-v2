@@ -350,8 +350,7 @@ types:
   Transaction:
     (java-extends): 'com.commercetools.api.models.Customizable<Transaction>'
   TransactionDraft:
-    (java-extends): 'com.commercetools.api.models.Customizable<TransactionDraft>'
-
+    (java-extends): 'com.commercetools.api.models.CustomizableDraft<TransactionDraft>'
   Product:
     (java-extends): 'com.commercetools.api.models.DomainResource<Product>, com.commercetools.api.models.Referencable<Product>, com.commercetools.api.models.ResourceIdentifiable<Product>'
     (java-mixin): |
@@ -380,8 +379,6 @@ types:
       public static com.commercetools.api.models.common.ReferenceTypeId referenceTypeId() {
           return com.commercetools.api.models.common.ReferenceTypeId.PRODUCT_DISCOUNT;
       }
-  ProductDiscountDraft:
-    (java-extends): 'com.commercetools.api.models.CustomizableDraft<ProductDiscountDraft>'
   ProductDiscountPagedQueryResponse:
     (java-extends): 'com.commercetools.api.models.ResourcePagedQueryResponse<ProductDiscount>'
   ProductDiscountReference:
@@ -407,8 +404,6 @@ types:
       public static com.commercetools.api.models.common.ReferenceTypeId referenceTypeId() {
           return com.commercetools.api.models.common.ReferenceTypeId.PRODUCT_TYPE;
       }
-  ProductTypeDraft:
-    (java-extends): 'com.commercetools.api.models.CustomizableDraft<ProductTypeDraft>'
   ProductTypePagedQueryResponse:
     (java-extends): 'com.commercetools.api.models.ResourcePagedQueryResponse<ProductType>'
   ProductTypeReference:
@@ -422,7 +417,7 @@ types:
     (java-extends): 'com.commercetools.api.models.ResourceUpdateAction<ProductTypeUpdateAction>'
 
   Quote:
-    (java-extends): 'com.commercetools.api.models.DomainResource<Quote>, com.commercetools.api.models.Referencable<Quote>, com.commercetools.api.models.ResourceIdentifiable<Quote>, com.commercetools.api.models.Customizable<QuoteDraft>'
+    (java-extends): 'com.commercetools.api.models.DomainResource<Quote>, com.commercetools.api.models.Referencable<Quote>, com.commercetools.api.models.ResourceIdentifiable<Quote>, com.commercetools.api.models.Customizable<Quote>'
     (java-mixin): |
       @Override
       public default com.commercetools.api.models.common.ResourceIdentifier toResourceIdentifier() {

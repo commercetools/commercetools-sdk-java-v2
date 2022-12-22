@@ -247,7 +247,7 @@ types:
       }
   InventoryEntryDraft:
     (java-extends): 'com.commercetools.api.models.CustomizableDraft<InventoryEntryDraft>'
-  InventoryEntryPagedQueryResponse:
+  InventoryPagedQueryResponse:
     (java-extends): 'com.commercetools.api.models.ResourcePagedQueryResponse<InventoryEntry>'
   InventoryEntryReference:
     (java-extends): 'com.commercetools.api.models.Identifiable<InventoryEntry>'
@@ -443,6 +443,18 @@ types:
       QuoteUpdateAction, QuoteUpdateBuilder>'
   QuoteUpdateAction:
     (java-extends): 'com.commercetools.api.models.ResourceUpdateAction<QuoteUpdateAction>'
+  QuoteRequestPagedQueryResponse:
+    (java-extends): 'com.commercetools.api.models.ResourcePagedQueryResponse<QuoteRequest>'
+  QuoteRequestReference:
+    (java-extends): 'com.commercetools.api.models.Identifiable<QuoteRequest>'
+  QuoteRequestResourceIdentifier:
+    (java-extends): 'com.commercetools.api.models.Identifiable<QuoteRequest>'
+  QuoteRequestUpdate:
+    (java-extends): 'com.commercetools.api.models.ResourceUpdate<QuoteRequestUpdate,
+      QuoteRequestUpdateAction, QuoteRequestUpdateBuilder>'
+  QuoteRequestUpdateAction:
+    (java-extends): 'com.commercetools.api.models.ResourceUpdateAction<QuoteRequestUpdateAction>'
+
   Review:
     (java-extends): 'com.commercetools.api.models.DomainResource<Review>, com.commercetools.api.models.Referencable<Review>, com.commercetools.api.models.ResourceIdentifiable<Review>, com.commercetools.api.models.Customizable<Review>'
     (java-mixin): |
@@ -457,6 +469,20 @@ types:
       public static com.commercetools.api.models.common.ReferenceTypeId referenceTypeId() {
           return com.commercetools.api.models.common.ReferenceTypeId.REVIEW;
       }
+  ReviewDraft:
+    (java-extends): 'com.commercetools.api.models.CustomizableDraft<ReviewDraft>'
+  ReviewPagedQueryResponse:
+    (java-extends): 'com.commercetools.api.models.ResourcePagedQueryResponse<Review>'
+  ReviewReference:
+    (java-extends): 'com.commercetools.api.models.Identifiable<Review>'
+  ReviewResourceIdentifier:
+    (java-extends): 'com.commercetools.api.models.Identifiable<Review>'
+  ReviewUpdate:
+    (java-extends): 'com.commercetools.api.models.ResourceUpdate<ReviewUpdate,
+      ReviewUpdateAction, ReviewUpdateBuilder>'
+  ReviewUpdateAction:
+    (java-extends): 'com.commercetools.api.models.ResourceUpdateAction<ReviewUpdateAction>'
+
   ShippingMethod:
     (java-extends): 'com.commercetools.api.models.DomainResource<ShippingMethod>, com.commercetools.api.models.Referencable<ShippingMethod>, com.commercetools.api.models.ResourceIdentifiable<ShippingMethod>, com.commercetools.api.models.Customizable<ShippingMethod>'
     (java-mixin): |
@@ -471,6 +497,20 @@ types:
       public static com.commercetools.api.models.common.ReferenceTypeId referenceTypeId() {
           return com.commercetools.api.models.common.ReferenceTypeId.SHIPPING_METHOD;
       }
+  ShippingMethodDraft:
+    (java-extends): 'com.commercetools.api.models.CustomizableDraft<ShippingMethodDraft>'
+  ShippingMethodPagedQueryResponse:
+    (java-extends): 'com.commercetools.api.models.ResourcePagedQueryResponse<ShippingMethod>'
+  ShippingMethodReference:
+    (java-extends): 'com.commercetools.api.models.Identifiable<ShippingMethod>'
+  ShippingMethodResourceIdentifier:
+    (java-extends): 'com.commercetools.api.models.Identifiable<ShippingMethod>'
+  ShippingMethodUpdate:
+    (java-extends): 'com.commercetools.api.models.ResourceUpdate<ShippingMethodUpdate,
+      ShippingMethodUpdateAction, ShippingMethodUpdateBuilder>'
+  ShippingMethodUpdateAction:
+    (java-extends): 'com.commercetools.api.models.ResourceUpdateAction<ShippingMethodUpdateAction>'
+
   ShoppingList:
     (java-extends): 'com.commercetools.api.models.DomainResource<ShoppingList>, com.commercetools.api.models.Referencable<ShoppingList>, com.commercetools.api.models.ResourceIdentifiable<ShoppingList>, com.commercetools.api.models.Customizable<ShoppingList>'
     (java-mixin): |
@@ -485,6 +525,44 @@ types:
       public static com.commercetools.api.models.common.ReferenceTypeId referenceTypeId() {
           return com.commercetools.api.models.common.ReferenceTypeId.SHOPPING_LIST;
       }
+  ShoppingListDraft:
+    (java-extends): 'com.commercetools.api.models.CustomizableDraft<ShoppingListDraft>'
+  ShoppingListPagedQueryResponse:
+    (java-extends): 'com.commercetools.api.models.ResourcePagedQueryResponse<ShoppingList>'
+  ShoppingListReference:
+    (java-extends): 'com.commercetools.api.models.Identifiable<ShoppingList>'
+  ShoppingListResourceIdentifier:
+    (java-extends): 'com.commercetools.api.models.Identifiable<ShoppingList>'
+  ShoppingListUpdate:
+    (java-extends): 'com.commercetools.api.models.ResourceUpdate<ShoppingListUpdate,
+      ShoppingListUpdateAction, ShoppingListUpdateBuilder>'
+  ShoppingListUpdateAction:
+    (java-extends): 'com.commercetools.api.models.ResourceUpdateAction<ShoppingListUpdateAction>'
+
+  StagedQuotePagedQueryResponse:
+    (java-extends): 'com.commercetools.api.models.ResourcePagedQueryResponse<StagedQuote>'
+  StagedQuoteReference:
+    (java-extends): 'com.commercetools.api.models.Identifiable<StagedQuote>'
+  StagedQuoteResourceIdentifier:
+    (java-extends): 'com.commercetools.api.models.Identifiable<StagedQuote>'
+  StagedQuoteUpdate:
+    (java-extends): 'com.commercetools.api.models.ResourceUpdate<StagedQuoteUpdate,
+      StagedQuoteUpdateAction, StagedQuoteUpdateBuilder>'
+  StagedQuoteUpdateAction:
+    (java-extends): 'com.commercetools.api.models.ResourceUpdateAction<StagedQuoteUpdateAction>'
+
+  StandalonePrice:
+    (java-extends): 'com.commercetools.api.models.DomainResource<StandalonePrice>, com.commercetools.api.models.Referencable<StandalonePrice>, com.commercetools.api.models.ResourceIdentifiable<StandalonePrice>, com.commercetools.api.models.Customizable<StandalonePrice>'
+  StandalonePriceDraft:
+    (java-extends): 'com.commercetools.api.models.CustomizableDraft<StandalonePriceDraft>'
+  StandalonePricePagedQueryResponse:
+    (java-extends): 'com.commercetools.api.models.ResourcePagedQueryResponse<StandalonePrice>'
+  StandalonePriceUpdate:
+    (java-extends): 'com.commercetools.api.models.ResourceUpdate<StandalonePriceUpdate,
+      StandalonePriceUpdateAction, StandalonePriceUpdateBuilder>'
+  StandalonePriceUpdateAction:
+    (java-extends): 'com.commercetools.api.models.ResourceUpdateAction<StandalonePriceUpdateAction>'
+
   State:
     (java-extends): 'com.commercetools.api.models.DomainResource<State>, com.commercetools.api.models.Referencable<State>, com.commercetools.api.models.ResourceIdentifiable<State>'
     (java-mixin): |
@@ -499,6 +577,20 @@ types:
       public static com.commercetools.api.models.common.ReferenceTypeId referenceTypeId() {
           return com.commercetools.api.models.common.ReferenceTypeId.STATE;
       }
+  StateDraft:
+    (java-extends): 'com.commercetools.api.models.CustomizableDraft<StateDraft>'
+  StatePagedQueryResponse:
+    (java-extends): 'com.commercetools.api.models.ResourcePagedQueryResponse<State>'
+  StateReference:
+    (java-extends): 'com.commercetools.api.models.Identifiable<State>'
+  StateResourceIdentifier:
+    (java-extends): 'com.commercetools.api.models.Identifiable<State>'
+  StateUpdate:
+    (java-extends): 'com.commercetools.api.models.ResourceUpdate<StateUpdate,
+      StateUpdateAction, StateUpdateBuilder>'
+  StateUpdateAction:
+    (java-extends): 'com.commercetools.api.models.ResourceUpdateAction<StateUpdateAction>'
+
   Store:
     (java-extends): 'com.commercetools.api.models.DomainResource<Store>, com.commercetools.api.models.Referencable<Store>, com.commercetools.api.models.ResourceIdentifiable<Store>, com.commercetools.api.models.Customizable<Store>'
     (java-mixin): |
@@ -513,6 +605,30 @@ types:
       public static com.commercetools.api.models.common.ReferenceTypeId referenceTypeId() {
           return com.commercetools.api.models.common.ReferenceTypeId.STORE;
       }
+  StoreDraft:
+    (java-extends): 'com.commercetools.api.models.CustomizableDraft<StoreDraft>'
+  StorePagedQueryResponse:
+    (java-extends): 'com.commercetools.api.models.ResourcePagedQueryResponse<Store>'
+  StoreReference:
+    (java-extends): 'com.commercetools.api.models.Identifiable<Store>'
+  StoreResourceIdentifier:
+    (java-extends): 'com.commercetools.api.models.Identifiable<Store>'
+  StoreUpdate:
+    (java-extends): 'com.commercetools.api.models.ResourceUpdate<StoreUpdate,
+      StoreUpdateAction, StoreUpdateBuilder>'
+  StoreUpdateAction:
+    (java-extends): 'com.commercetools.api.models.ResourceUpdateAction<StoreUpdateAction>'
+
+  Subscription:
+    (java-extends): 'com.commercetools.api.models.DomainResource<Store>'
+  SubscriptionPagedQueryResponse:
+    (java-extends): 'com.commercetools.api.models.ResourcePagedQueryResponse<Subscription>'
+  SubscriptionUpdate:
+    (java-extends): 'com.commercetools.api.models.ResourceUpdate<SubscriptionUpdate,
+      SubscriptionUpdateAction, SubscriptionUpdateBuilder>'
+  SubscriptionUpdateAction:
+    (java-extends): 'com.commercetools.api.models.ResourceUpdateAction<SubscriptionUpdateAction>'
+
   TaxCategory:
     (java-extends): 'com.commercetools.api.models.DomainResource<TaxCategory>, com.commercetools.api.models.Referencable<TaxCategory>, com.commercetools.api.models.ResourceIdentifiable<TaxCategory>'
     (java-mixin): |
@@ -527,6 +643,20 @@ types:
       public static com.commercetools.api.models.common.ReferenceTypeId referenceTypeId() {
           return com.commercetools.api.models.common.ReferenceTypeId.TAX_CATEGORY;
       }
+  TaxCategoryDraft:
+    (java-extends): 'com.commercetools.api.models.CustomizableDraft<TaxCategoryDraft>'
+  TaxCategoryPagedQueryResponse:
+    (java-extends): 'com.commercetools.api.models.ResourcePagedQueryResponse<TaxCategory>'
+  TaxCategoryReference:
+    (java-extends): 'com.commercetools.api.models.Identifiable<TaxCategory>'
+  TaxCategoryResourceIdentifier:
+    (java-extends): 'com.commercetools.api.models.Identifiable<TaxCategory>'
+  TaxCategoryUpdate:
+    (java-extends): 'com.commercetools.api.models.ResourceUpdate<TaxCategoryUpdate,
+      TaxCategoryUpdateAction, TaxCategoryUpdateBuilder>'
+  TaxCategoryUpdateAction:
+    (java-extends): 'com.commercetools.api.models.ResourceUpdateAction<TaxCategoryUpdateAction>'
+
   Type:
     (java-extends): 'com.commercetools.api.models.DomainResource<Type>, com.commercetools.api.models.Referencable<Type>, com.commercetools.api.models.ResourceIdentifiable<Type>'
     (java-mixin): |
@@ -541,6 +671,16 @@ types:
       public static com.commercetools.api.models.common.ReferenceTypeId referenceTypeId() {
           return com.commercetools.api.models.common.ReferenceTypeId.TYPE;
       }
+  TypePagedQueryResponse:
+    (java-extends): 'com.commercetools.api.models.ResourcePagedQueryResponse<Type>'
+  TypeResourceIdentifier:
+    (java-extends): 'com.commercetools.api.models.Identifiable<Type>'
+  TypeUpdate:
+    (java-extends): 'com.commercetools.api.models.ResourceUpdate<TypeUpdate,
+      TypeUpdateAction, TypeUpdateBuilder>'
+  TypeUpdateAction:
+    (java-extends): 'com.commercetools.api.models.ResourceUpdateAction<TypeUpdateAction>'
+
   Zone:
     (java-extends): 'com.commercetools.api.models.DomainResource<Zone>, com.commercetools.api.models.Referencable<Zone>, com.commercetools.api.models.ResourceIdentifiable<Zone>'
     (java-mixin): |
@@ -555,6 +695,17 @@ types:
       public static com.commercetools.api.models.common.ReferenceTypeId referenceTypeId() {
           return com.commercetools.api.models.common.ReferenceTypeId.ZONE;
       }
+  ZonePagedQueryResponse:
+    (java-extends): 'com.commercetools.api.models.ResourcePagedQueryResponse<Zone>'
+  ZoneReference:
+    (java-extends): 'com.commercetools.api.models.Identifiable<Zone>'
+  ZoneResourceIdentifier:
+    (java-extends): 'com.commercetools.api.models.Identifiable<Zone>'
+  ZoneUpdate:
+    (java-extends): 'com.commercetools.api.models.ResourceUpdate<ZoneUpdate,
+      ZoneUpdateAction, ZoneUpdateBuilder>'
+  ZoneUpdateAction:
+    (java-extends): 'com.commercetools.api.models.ResourceUpdateAction<ZoneUpdateAction>'
   CentPrecisionMoney:
     (java-mixin): |
       public static CentPrecisionMoney of(final javax.money.MonetaryAmount monetaryAmount) {
@@ -634,6 +785,7 @@ types:
           return new ResourceIdentifierImpl(this.getTypeId(), this.getId(), null);
       }
   TypeReference:
+    (java-extends): com.commercetools.api.models.Identifiable<Type>
     (java-mixin): |
       @Override
       public default TypeResourceIdentifier toResourceIdentifier() {

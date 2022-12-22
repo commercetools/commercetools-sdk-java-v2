@@ -416,6 +416,45 @@ types:
   ProductTypeUpdateAction:
     (java-extends): 'com.commercetools.api.models.ResourceUpdateAction<ProductTypeUpdateAction>'
 
+  ProjectUpdate:
+    (java-extends): 'com.commercetools.api.models.ResourceUpdate<ProjectUpdate,
+      ProjectUpdateAction, ProjectUpdateBuilder>'
+  ProjectUpdateAction:
+    (java-extends): 'com.commercetools.api.models.ResourceUpdateAction<ProjectUpdateAction>'
+
+  AssignedProductSelectionPagedQueryResponse:
+    (java-extends): 'com.commercetools.api.models.ResourcePagedQueryResponse<AssignedProductSelection>'
+
+  ProductSelection:
+    (java-extends): 'com.commercetools.api.models.DomainResource<ProductSelection>, com.commercetools.api.models.Referencable<ProductSelection>, com.commercetools.api.models.ResourceIdentifiable<ProductSelection>, com.commercetools.api.models.Customizable<ProductSelection>'
+    (java-mixin): |
+      @Override
+      public default com.commercetools.api.models.common.ResourceIdentifier toResourceIdentifier() {
+          return com.commercetools.api.models.product_selection.ProductSelectionResourceIdentifier.builder().id(getId()).build();
+      }
+      @Override
+      public default com.commercetools.api.models.common.Reference toReference() {
+          return com.commercetools.api.models.product_selection.ProductSelectionReference.builder().id(getId()).build();
+      }
+      public static com.commercetools.api.models.common.ReferenceTypeId referenceTypeId() {
+          return com.commercetools.api.models.common.ReferenceTypeId.PRODUCT_SELECTION;
+      }
+  ProductSelectionDraft:
+    (java-extends): 'com.commercetools.api.models.CustomizableDraft<ProductSelectionDraft>'
+  ProductSelectionPagedQueryResponse:
+    (java-extends): 'com.commercetools.api.models.ResourcePagedQueryResponse<ProductSelection>'
+  ProductSelectionReference:
+    (java-extends): 'com.commercetools.api.models.Identifiable<ProductSelection>'
+  ProductSelectionResourceIdentifier:
+    (java-extends): 'com.commercetools.api.models.Identifiable<ProductSelection>'
+  ProductSelectionUpdate:
+    (java-extends): 'com.commercetools.api.models.ResourceUpdate<ProductSelectionUpdate,
+      ProductSelectionUpdateAction, ProductSelectionUpdateBuilder>'
+  ProductSelectionUpdateAction:
+    (java-extends): 'com.commercetools.api.models.ResourceUpdateAction<ProductSelectionUpdateAction>'
+  ProductsInStorePagedQueryResponse:
+    (java-extends): 'com.commercetools.api.models.ResourcePagedQueryResponse<ProductSelectionAssignment>'
+
   Quote:
     (java-extends): 'com.commercetools.api.models.DomainResource<Quote>, com.commercetools.api.models.Referencable<Quote>, com.commercetools.api.models.ResourceIdentifiable<Quote>, com.commercetools.api.models.Customizable<Quote>'
     (java-mixin): |
@@ -538,6 +577,18 @@ types:
       ShoppingListUpdateAction, ShoppingListUpdateBuilder>'
   ShoppingListUpdateAction:
     (java-extends): 'com.commercetools.api.models.ResourceUpdateAction<ShoppingListUpdateAction>'
+  ShoppingListLineItem:
+    (java-extends): 'com.commercetools.api.models.Customizable<ShoppingListLineItem>'
+  ShoppingListLineItemDraft:
+    (java-extends): 'com.commercetools.api.models.CustomizableDraft<ShoppingListLineItemDraft>'
+  ShoppingListAddLineItemAction:
+    (java-extends): 'com.commercetools.api.models.CustomizableDraft<ShoppingListAddLineItemAction>'
+  ShoppingListAddTextLineItemAction:
+    (java-extends): 'com.commercetools.api.models.CustomizableDraft<ShoppingListAddTextLineItemAction>'
+  TextLineItem:
+    (java-extends): 'com.commercetools.api.models.Customizable<TextLineItem>'
+  TextLineItemDraft:
+    (java-extends): 'com.commercetools.api.models.CustomizableDraft<TextLineItemDraft>'
 
   StagedQuotePagedQueryResponse:
     (java-extends): 'com.commercetools.api.models.ResourcePagedQueryResponse<StagedQuote>'
@@ -563,7 +614,7 @@ types:
           return com.commercetools.api.models.standalone_price.StandalonePriceReference.builder().id(getId()).build();
       }
       public static com.commercetools.api.models.common.ReferenceTypeId referenceTypeId() {
-          return com.commercetools.api.models.common.ReferenceTypeId.StandalonePrice;
+          return com.commercetools.api.models.common.ReferenceTypeId.STANDALONE_PRICE;
       }
   StandalonePriceDraft:
     (java-extends): 'com.commercetools.api.models.CustomizableDraft<StandalonePriceDraft>'

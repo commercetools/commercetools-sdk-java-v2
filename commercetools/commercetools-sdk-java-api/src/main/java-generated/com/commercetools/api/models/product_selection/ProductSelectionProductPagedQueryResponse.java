@@ -31,8 +31,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProductSelectionProductPagedQueryResponseImpl.class)
-public interface ProductSelectionProductPagedQueryResponse
-        extends com.commercetools.api.models.ResourcePagedQueryResponse<AssignedProductReference> {
+public interface ProductSelectionProductPagedQueryResponse {
 
     /**
      *  <p>Number of results requested.</p>

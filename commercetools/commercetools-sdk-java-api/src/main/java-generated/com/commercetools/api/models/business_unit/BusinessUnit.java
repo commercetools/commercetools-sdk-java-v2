@@ -168,8 +168,8 @@ public interface BusinessUnit extends BaseResource {
      *  <p>Unique identifier of the address used as the default shipping address.</p>
      */
 
-    @JsonProperty("defaultShipingAddressId")
-    public String getDefaultShipingAddressId();
+    @JsonProperty("defaultShippingAddressId")
+    public String getDefaultShippingAddressId();
 
     /**
      *  <p>Unique identifiers of addresses used as billing addresses.</p>
@@ -247,7 +247,7 @@ public interface BusinessUnit extends BaseResource {
 
     public void setShippingAddressIds(final List<String> shippingAddressIds);
 
-    public void setDefaultShipingAddressId(final String defaultShipingAddressId);
+    public void setDefaultShippingAddressId(final String defaultShippingAddressId);
 
     @JsonIgnore
     public void setBillingAddressIds(final String... billingAddressIds);

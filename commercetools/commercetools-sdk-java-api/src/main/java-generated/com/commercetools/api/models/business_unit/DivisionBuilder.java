@@ -72,7 +72,7 @@ public class DivisionBuilder implements Builder<Division> {
     private java.util.List<String> shippingAddressIds;
 
     @Nullable
-    private String defaultShipingAddressId;
+    private String defaultShippingAddressId;
 
     @Nullable
     private java.util.List<String> billingAddressIds;
@@ -368,8 +368,8 @@ public class DivisionBuilder implements Builder<Division> {
      *  <p>Unique identifier of the address used as the default shipping address.</p>
      */
 
-    public DivisionBuilder defaultShipingAddressId(@Nullable final String defaultShipingAddressId) {
-        this.defaultShipingAddressId = defaultShipingAddressId;
+    public DivisionBuilder defaultShippingAddressId(@Nullable final String defaultShippingAddressId) {
+        this.defaultShippingAddressId = defaultShippingAddressId;
         return this;
     }
 
@@ -577,8 +577,8 @@ public class DivisionBuilder implements Builder<Division> {
     }
 
     @Nullable
-    public String getDefaultShipingAddressId() {
-        return this.defaultShipingAddressId;
+    public String getDefaultShippingAddressId() {
+        return this.defaultShippingAddressId;
     }
 
     @Nullable
@@ -617,7 +617,7 @@ public class DivisionBuilder implements Builder<Division> {
         Objects.requireNonNull(parentUnit, Division.class + ": parentUnit is missing");
         Objects.requireNonNull(topLevelUnit, Division.class + ": topLevelUnit is missing");
         return new DivisionImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, key, status, stores,
-            storeMode, name, contactEmail, custom, addresses, shippingAddressIds, defaultShipingAddressId,
+            storeMode, name, contactEmail, custom, addresses, shippingAddressIds, defaultShippingAddressId,
             billingAddressIds, defaultBillingAddressId, associates, parentUnit, topLevelUnit);
     }
 
@@ -626,7 +626,7 @@ public class DivisionBuilder implements Builder<Division> {
      */
     public Division buildUnchecked() {
         return new DivisionImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, key, status, stores,
-            storeMode, name, contactEmail, custom, addresses, shippingAddressIds, defaultShipingAddressId,
+            storeMode, name, contactEmail, custom, addresses, shippingAddressIds, defaultShippingAddressId,
             billingAddressIds, defaultBillingAddressId, associates, parentUnit, topLevelUnit);
     }
 
@@ -651,7 +651,7 @@ public class DivisionBuilder implements Builder<Division> {
         builder.custom = template.getCustom();
         builder.addresses = template.getAddresses();
         builder.shippingAddressIds = template.getShippingAddressIds();
-        builder.defaultShipingAddressId = template.getDefaultShipingAddressId();
+        builder.defaultShippingAddressId = template.getDefaultShippingAddressId();
         builder.billingAddressIds = template.getBillingAddressIds();
         builder.defaultBillingAddressId = template.getDefaultBillingAddressId();
         builder.associates = template.getAssociates();

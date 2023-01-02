@@ -40,7 +40,7 @@ public class DivisionDraftImpl implements DivisionDraft, ModelBase {
 
     private java.util.List<Integer> shippingAddresses;
 
-    private Integer defaultShipingAddress;
+    private Integer defaultShippingAddress;
 
     private java.util.List<Integer> billingAddresses;
 
@@ -59,7 +59,7 @@ public class DivisionDraftImpl implements DivisionDraft, ModelBase {
             @JsonProperty("associates") final java.util.List<com.commercetools.api.models.business_unit.AssociateDraft> associates,
             @JsonProperty("addresses") final java.util.List<com.commercetools.api.models.common.BaseAddress> addresses,
             @JsonProperty("shippingAddresses") final java.util.List<Integer> shippingAddresses,
-            @JsonProperty("defaultShipingAddress") final Integer defaultShipingAddress,
+            @JsonProperty("defaultShippingAddress") final Integer defaultShippingAddress,
             @JsonProperty("billingAddresses") final java.util.List<Integer> billingAddresses,
             @JsonProperty("defaultBillingAddress") final Integer defaultBillingAddress,
             @JsonProperty("custom") final com.commercetools.api.models.type.CustomFieldsDraft custom,
@@ -73,7 +73,7 @@ public class DivisionDraftImpl implements DivisionDraft, ModelBase {
         this.associates = associates;
         this.addresses = addresses;
         this.shippingAddresses = shippingAddresses;
-        this.defaultShipingAddress = defaultShipingAddress;
+        this.defaultShippingAddress = defaultShippingAddress;
         this.billingAddresses = billingAddresses;
         this.defaultBillingAddress = defaultBillingAddress;
         this.custom = custom;
@@ -169,8 +169,8 @@ public class DivisionDraftImpl implements DivisionDraft, ModelBase {
      *  <p>Index of the entry in <code>addresses</code> to set as the default shipping address.</p>
      */
 
-    public Integer getDefaultShipingAddress() {
-        return this.defaultShipingAddress;
+    public Integer getDefaultShippingAddress() {
+        return this.defaultShippingAddress;
     }
 
     /**
@@ -258,8 +258,8 @@ public class DivisionDraftImpl implements DivisionDraft, ModelBase {
         this.shippingAddresses = shippingAddresses;
     }
 
-    public void setDefaultShipingAddress(final Integer defaultShipingAddress) {
-        this.defaultShipingAddress = defaultShipingAddress;
+    public void setDefaultShippingAddress(final Integer defaultShippingAddress) {
+        this.defaultShippingAddress = defaultShippingAddress;
     }
 
     public void setBillingAddresses(final Integer... billingAddresses) {
@@ -303,7 +303,7 @@ public class DivisionDraftImpl implements DivisionDraft, ModelBase {
                 .append(associates, that.associates)
                 .append(addresses, that.addresses)
                 .append(shippingAddresses, that.shippingAddresses)
-                .append(defaultShipingAddress, that.defaultShipingAddress)
+                .append(defaultShippingAddress, that.defaultShippingAddress)
                 .append(billingAddresses, that.billingAddresses)
                 .append(defaultBillingAddress, that.defaultBillingAddress)
                 .append(custom, that.custom)
@@ -323,7 +323,7 @@ public class DivisionDraftImpl implements DivisionDraft, ModelBase {
                 .append(associates)
                 .append(addresses)
                 .append(shippingAddresses)
-                .append(defaultShipingAddress)
+                .append(defaultShippingAddress)
                 .append(billingAddresses)
                 .append(defaultBillingAddress)
                 .append(custom)

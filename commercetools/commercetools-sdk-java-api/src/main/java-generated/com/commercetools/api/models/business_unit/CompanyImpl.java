@@ -52,7 +52,7 @@ public class CompanyImpl implements Company, ModelBase {
 
     private java.util.List<String> shippingAddressIds;
 
-    private String defaultShipingAddressId;
+    private String defaultShippingAddressId;
 
     private java.util.List<String> billingAddressIds;
 
@@ -78,7 +78,7 @@ public class CompanyImpl implements Company, ModelBase {
             @JsonProperty("custom") final com.commercetools.api.models.type.CustomFields custom,
             @JsonProperty("addresses") final java.util.List<com.commercetools.api.models.common.Address> addresses,
             @JsonProperty("shippingAddressIds") final java.util.List<String> shippingAddressIds,
-            @JsonProperty("defaultShipingAddressId") final String defaultShipingAddressId,
+            @JsonProperty("defaultShippingAddressId") final String defaultShippingAddressId,
             @JsonProperty("billingAddressIds") final java.util.List<String> billingAddressIds,
             @JsonProperty("defaultBillingAddressId") final String defaultBillingAddressId,
             @JsonProperty("associates") final java.util.List<com.commercetools.api.models.business_unit.Associate> associates,
@@ -99,7 +99,7 @@ public class CompanyImpl implements Company, ModelBase {
         this.custom = custom;
         this.addresses = addresses;
         this.shippingAddressIds = shippingAddressIds;
-        this.defaultShipingAddressId = defaultShipingAddressId;
+        this.defaultShippingAddressId = defaultShippingAddressId;
         this.billingAddressIds = billingAddressIds;
         this.defaultBillingAddressId = defaultBillingAddressId;
         this.associates = associates;
@@ -244,8 +244,8 @@ public class CompanyImpl implements Company, ModelBase {
      *  <p>Unique identifier of the address used as the default shipping address.</p>
      */
 
-    public String getDefaultShipingAddressId() {
-        return this.defaultShipingAddressId;
+    public String getDefaultShippingAddressId() {
+        return this.defaultShippingAddressId;
     }
 
     /**
@@ -360,8 +360,8 @@ public class CompanyImpl implements Company, ModelBase {
         this.shippingAddressIds = shippingAddressIds;
     }
 
-    public void setDefaultShipingAddressId(final String defaultShipingAddressId) {
-        this.defaultShipingAddressId = defaultShipingAddressId;
+    public void setDefaultShippingAddressId(final String defaultShippingAddressId) {
+        this.defaultShippingAddressId = defaultShippingAddressId;
     }
 
     public void setBillingAddressIds(final String... billingAddressIds) {
@@ -419,7 +419,7 @@ public class CompanyImpl implements Company, ModelBase {
                 .append(custom, that.custom)
                 .append(addresses, that.addresses)
                 .append(shippingAddressIds, that.shippingAddressIds)
-                .append(defaultShipingAddressId, that.defaultShipingAddressId)
+                .append(defaultShippingAddressId, that.defaultShippingAddressId)
                 .append(billingAddressIds, that.billingAddressIds)
                 .append(defaultBillingAddressId, that.defaultBillingAddressId)
                 .append(associates, that.associates)
@@ -446,7 +446,7 @@ public class CompanyImpl implements Company, ModelBase {
                 .append(custom)
                 .append(addresses)
                 .append(shippingAddressIds)
-                .append(defaultShipingAddressId)
+                .append(defaultShippingAddressId)
                 .append(billingAddressIds)
                 .append(defaultBillingAddressId)
                 .append(associates)

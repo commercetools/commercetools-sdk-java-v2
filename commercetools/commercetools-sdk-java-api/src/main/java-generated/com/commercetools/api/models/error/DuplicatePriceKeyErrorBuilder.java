@@ -93,7 +93,6 @@ public class DuplicatePriceKeyErrorBuilder implements Builder<DuplicatePriceKeyE
 
     public DuplicatePriceKeyError build() {
         Objects.requireNonNull(message, DuplicatePriceKeyError.class + ": message is missing");
-        Objects.requireNonNull(values, DuplicatePriceKeyError.class + ": values are missing");
         Objects.requireNonNull(conflictingPrice, DuplicatePriceKeyError.class + ": conflictingPrice is missing");
         return new DuplicatePriceKeyErrorImpl(message, values, conflictingPrice);
     }

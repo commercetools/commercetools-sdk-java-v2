@@ -65,7 +65,6 @@ public class QueryTimedOutErrorBuilder implements Builder<QueryTimedOutError> {
 
     public QueryTimedOutError build() {
         Objects.requireNonNull(message, QueryTimedOutError.class + ": message is missing");
-        Objects.requireNonNull(values, QueryTimedOutError.class + ": values are missing");
         return new QueryTimedOutErrorImpl(message, values);
     }
 

@@ -65,7 +65,6 @@ public class NotEnabledErrorBuilder implements Builder<NotEnabledError> {
 
     public NotEnabledError build() {
         Objects.requireNonNull(message, NotEnabledError.class + ": message is missing");
-        Objects.requireNonNull(values, NotEnabledError.class + ": values are missing");
         return new NotEnabledErrorImpl(message, values);
     }
 

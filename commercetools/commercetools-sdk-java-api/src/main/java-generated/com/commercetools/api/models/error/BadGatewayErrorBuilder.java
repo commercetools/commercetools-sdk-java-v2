@@ -65,7 +65,6 @@ public class BadGatewayErrorBuilder implements Builder<BadGatewayError> {
 
     public BadGatewayError build() {
         Objects.requireNonNull(message, BadGatewayError.class + ": message is missing");
-        Objects.requireNonNull(values, BadGatewayError.class + ": values are missing");
         return new BadGatewayErrorImpl(message, values);
     }
 

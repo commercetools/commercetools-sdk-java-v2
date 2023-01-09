@@ -65,7 +65,6 @@ public class InternalConstraintViolatedErrorBuilder implements Builder<InternalC
 
     public InternalConstraintViolatedError build() {
         Objects.requireNonNull(message, InternalConstraintViolatedError.class + ": message is missing");
-        Objects.requireNonNull(values, InternalConstraintViolatedError.class + ": values are missing");
         return new InternalConstraintViolatedErrorImpl(message, values);
     }
 

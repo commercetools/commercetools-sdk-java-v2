@@ -97,7 +97,6 @@ public class InvalidItemShippingDetailsErrorBuilder implements Builder<InvalidIt
 
     public InvalidItemShippingDetailsError build() {
         Objects.requireNonNull(message, InvalidItemShippingDetailsError.class + ": message is missing");
-        Objects.requireNonNull(values, InvalidItemShippingDetailsError.class + ": values are missing");
         Objects.requireNonNull(subject, InvalidItemShippingDetailsError.class + ": subject is missing");
         Objects.requireNonNull(itemId, InvalidItemShippingDetailsError.class + ": itemId is missing");
         return new InvalidItemShippingDetailsErrorImpl(message, values, subject, itemId);

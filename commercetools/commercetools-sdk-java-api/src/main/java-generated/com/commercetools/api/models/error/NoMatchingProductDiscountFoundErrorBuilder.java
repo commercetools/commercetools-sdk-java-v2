@@ -65,7 +65,6 @@ public class NoMatchingProductDiscountFoundErrorBuilder implements Builder<NoMat
 
     public NoMatchingProductDiscountFoundError build() {
         Objects.requireNonNull(message, NoMatchingProductDiscountFoundError.class + ": message is missing");
-        Objects.requireNonNull(values, NoMatchingProductDiscountFoundError.class + ": values are missing");
         return new NoMatchingProductDiscountFoundErrorImpl(message, values);
     }
 

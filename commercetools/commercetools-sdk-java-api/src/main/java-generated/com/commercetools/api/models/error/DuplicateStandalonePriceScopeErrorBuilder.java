@@ -239,7 +239,6 @@ public class DuplicateStandalonePriceScopeErrorBuilder implements Builder<Duplic
 
     public DuplicateStandalonePriceScopeError build() {
         Objects.requireNonNull(message, DuplicateStandalonePriceScopeError.class + ": message is missing");
-        Objects.requireNonNull(values, DuplicateStandalonePriceScopeError.class + ": values are missing");
         Objects.requireNonNull(conflictingStandalonePrice,
             DuplicateStandalonePriceScopeError.class + ": conflictingStandalonePrice is missing");
         Objects.requireNonNull(sku, DuplicateStandalonePriceScopeError.class + ": sku is missing");

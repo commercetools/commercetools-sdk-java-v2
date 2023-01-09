@@ -105,7 +105,6 @@ public class ProjectNotConfiguredForLanguagesErrorBuilder implements Builder<Pro
 
     public ProjectNotConfiguredForLanguagesError build() {
         Objects.requireNonNull(message, ProjectNotConfiguredForLanguagesError.class + ": message is missing");
-        Objects.requireNonNull(values, ProjectNotConfiguredForLanguagesError.class + ": values are missing");
         return new ProjectNotConfiguredForLanguagesErrorImpl(message, values, languages);
     }
 

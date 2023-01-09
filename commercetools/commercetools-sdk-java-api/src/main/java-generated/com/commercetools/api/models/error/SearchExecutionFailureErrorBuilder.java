@@ -65,7 +65,6 @@ public class SearchExecutionFailureErrorBuilder implements Builder<SearchExecuti
 
     public SearchExecutionFailureError build() {
         Objects.requireNonNull(message, SearchExecutionFailureError.class + ": message is missing");
-        Objects.requireNonNull(values, SearchExecutionFailureError.class + ": values are missing");
         return new SearchExecutionFailureErrorImpl(message, values);
     }
 

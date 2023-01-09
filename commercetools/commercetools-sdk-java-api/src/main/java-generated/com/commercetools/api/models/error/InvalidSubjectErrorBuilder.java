@@ -65,7 +65,6 @@ public class InvalidSubjectErrorBuilder implements Builder<InvalidSubjectError> 
 
     public InvalidSubjectError build() {
         Objects.requireNonNull(message, InvalidSubjectError.class + ": message is missing");
-        Objects.requireNonNull(values, InvalidSubjectError.class + ": values are missing");
         return new InvalidSubjectErrorImpl(message, values);
     }
 

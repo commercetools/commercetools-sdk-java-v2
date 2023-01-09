@@ -51,7 +51,6 @@ public class ProductVariantChannelAvailabilityMapBuilder implements Builder<Prod
     }
 
     public ProductVariantChannelAvailabilityMap build() {
-        Objects.requireNonNull(values, ProductVariantChannelAvailabilityMap.class + ": values are missing");
         return new ProductVariantChannelAvailabilityMapImpl(values);
     }
 

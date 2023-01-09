@@ -94,7 +94,6 @@ public class EditPreviewFailedErrorBuilder implements Builder<EditPreviewFailedE
 
     public EditPreviewFailedError build() {
         Objects.requireNonNull(message, EditPreviewFailedError.class + ": message is missing");
-        Objects.requireNonNull(values, EditPreviewFailedError.class + ": values are missing");
         Objects.requireNonNull(result, EditPreviewFailedError.class + ": result is missing");
         return new EditPreviewFailedErrorImpl(message, values, result);
     }

@@ -117,7 +117,6 @@ public class MissingTaxRateForCountryErrorBuilder implements Builder<MissingTaxR
 
     public MissingTaxRateForCountryError build() {
         Objects.requireNonNull(message, MissingTaxRateForCountryError.class + ": message is missing");
-        Objects.requireNonNull(values, MissingTaxRateForCountryError.class + ": values are missing");
         Objects.requireNonNull(taxCategoryId, MissingTaxRateForCountryError.class + ": taxCategoryId is missing");
         return new MissingTaxRateForCountryErrorImpl(message, values, taxCategoryId, country, state);
     }

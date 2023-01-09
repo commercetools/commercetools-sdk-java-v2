@@ -65,7 +65,6 @@ public class SyntaxErrorErrorBuilder implements Builder<SyntaxErrorError> {
 
     public SyntaxErrorError build() {
         Objects.requireNonNull(message, SyntaxErrorError.class + ": message is missing");
-        Objects.requireNonNull(values, SyntaxErrorError.class + ": values are missing");
         return new SyntaxErrorErrorImpl(message, values);
     }
 

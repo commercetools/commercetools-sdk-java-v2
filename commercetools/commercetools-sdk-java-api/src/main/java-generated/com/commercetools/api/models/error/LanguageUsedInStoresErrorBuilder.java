@@ -65,7 +65,6 @@ public class LanguageUsedInStoresErrorBuilder implements Builder<LanguageUsedInS
 
     public LanguageUsedInStoresError build() {
         Objects.requireNonNull(message, LanguageUsedInStoresError.class + ": message is missing");
-        Objects.requireNonNull(values, LanguageUsedInStoresError.class + ": values are missing");
         return new LanguageUsedInStoresErrorImpl(message, values);
     }
 

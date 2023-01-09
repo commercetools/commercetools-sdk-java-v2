@@ -65,7 +65,6 @@ public class InvalidTokenErrorBuilder implements Builder<InvalidTokenError> {
 
     public InvalidTokenError build() {
         Objects.requireNonNull(message, InvalidTokenError.class + ": message is missing");
-        Objects.requireNonNull(values, InvalidTokenError.class + ": values are missing");
         return new InvalidTokenErrorImpl(message, values);
     }
 

@@ -118,7 +118,6 @@ public class PriceChangedErrorBuilder implements Builder<PriceChangedError> {
 
     public PriceChangedError build() {
         Objects.requireNonNull(message, PriceChangedError.class + ": message is missing");
-        Objects.requireNonNull(values, PriceChangedError.class + ": values are missing");
         Objects.requireNonNull(lineItems, PriceChangedError.class + ": lineItems is missing");
         Objects.requireNonNull(shipping, PriceChangedError.class + ": shipping is missing");
         return new PriceChangedErrorImpl(message, values, lineItems, shipping);

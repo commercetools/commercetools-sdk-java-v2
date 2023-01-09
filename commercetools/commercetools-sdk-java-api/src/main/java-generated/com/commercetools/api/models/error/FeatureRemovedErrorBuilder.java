@@ -65,7 +65,6 @@ public class FeatureRemovedErrorBuilder implements Builder<FeatureRemovedError> 
 
     public FeatureRemovedError build() {
         Objects.requireNonNull(message, FeatureRemovedError.class + ": message is missing");
-        Objects.requireNonNull(values, FeatureRemovedError.class + ": values are missing");
         return new FeatureRemovedErrorImpl(message, values);
     }
 

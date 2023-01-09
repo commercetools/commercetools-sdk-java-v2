@@ -170,7 +170,6 @@ public class DiscountCodeNonApplicableErrorBuilder implements Builder<DiscountCo
 
     public DiscountCodeNonApplicableError build() {
         Objects.requireNonNull(message, DiscountCodeNonApplicableError.class + ": message is missing");
-        Objects.requireNonNull(values, DiscountCodeNonApplicableError.class + ": values are missing");
         return new DiscountCodeNonApplicableErrorImpl(message, values, discountCode, reason, discountCodeId, validFrom,
             validUntil, validityCheckTime);
     }

@@ -130,7 +130,6 @@ public class DuplicateAttributeValuesErrorBuilder implements Builder<DuplicateAt
 
     public DuplicateAttributeValuesError build() {
         Objects.requireNonNull(message, DuplicateAttributeValuesError.class + ": message is missing");
-        Objects.requireNonNull(values, DuplicateAttributeValuesError.class + ": values are missing");
         Objects.requireNonNull(attributes, DuplicateAttributeValuesError.class + ": attributes is missing");
         return new DuplicateAttributeValuesErrorImpl(message, values, attributes);
     }

@@ -93,7 +93,6 @@ public class DuplicatePriceScopeErrorBuilder implements Builder<DuplicatePriceSc
 
     public DuplicatePriceScopeError build() {
         Objects.requireNonNull(message, DuplicatePriceScopeError.class + ": message is missing");
-        Objects.requireNonNull(values, DuplicatePriceScopeError.class + ": values are missing");
         Objects.requireNonNull(conflictingPrice, DuplicatePriceScopeError.class + ": conflictingPrice is missing");
         return new DuplicatePriceScopeErrorImpl(message, values, conflictingPrice);
     }

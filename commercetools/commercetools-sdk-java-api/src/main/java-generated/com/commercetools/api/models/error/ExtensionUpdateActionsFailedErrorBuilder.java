@@ -178,7 +178,6 @@ public class ExtensionUpdateActionsFailedErrorBuilder implements Builder<Extensi
 
     public ExtensionUpdateActionsFailedError build() {
         Objects.requireNonNull(message, ExtensionUpdateActionsFailedError.class + ": message is missing");
-        Objects.requireNonNull(values, ExtensionUpdateActionsFailedError.class + ": values are missing");
         Objects.requireNonNull(extensionErrors,
             ExtensionUpdateActionsFailedError.class + ": extensionErrors is missing");
         return new ExtensionUpdateActionsFailedErrorImpl(message, values, localizedMessage, extensionExtraInfo,

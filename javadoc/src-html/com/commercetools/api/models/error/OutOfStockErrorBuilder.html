@@ -152,33 +152,32 @@
 <span class="source-line-no">139</span><span id="line.139"></span>
 <span class="source-line-no">140</span><span id="line.140">    public OutOfStockError build() {</span>
 <span class="source-line-no">141</span><span id="line.141">        Objects.requireNonNull(message, OutOfStockError.class + ": message is missing");</span>
-<span class="source-line-no">142</span><span id="line.142">        Objects.requireNonNull(values, OutOfStockError.class + ": values are missing");</span>
-<span class="source-line-no">143</span><span id="line.143">        Objects.requireNonNull(lineItems, OutOfStockError.class + ": lineItems is missing");</span>
-<span class="source-line-no">144</span><span id="line.144">        Objects.requireNonNull(skus, OutOfStockError.class + ": skus is missing");</span>
-<span class="source-line-no">145</span><span id="line.145">        return new OutOfStockErrorImpl(message, values, lineItems, skus);</span>
-<span class="source-line-no">146</span><span id="line.146">    }</span>
-<span class="source-line-no">147</span><span id="line.147"></span>
-<span class="source-line-no">148</span><span id="line.148">    /**</span>
-<span class="source-line-no">149</span><span id="line.149">     * builds OutOfStockError without checking for non null required values</span>
-<span class="source-line-no">150</span><span id="line.150">     */</span>
-<span class="source-line-no">151</span><span id="line.151">    public OutOfStockError buildUnchecked() {</span>
-<span class="source-line-no">152</span><span id="line.152">        return new OutOfStockErrorImpl(message, values, lineItems, skus);</span>
-<span class="source-line-no">153</span><span id="line.153">    }</span>
-<span class="source-line-no">154</span><span id="line.154"></span>
-<span class="source-line-no">155</span><span id="line.155">    public static OutOfStockErrorBuilder of() {</span>
-<span class="source-line-no">156</span><span id="line.156">        return new OutOfStockErrorBuilder();</span>
-<span class="source-line-no">157</span><span id="line.157">    }</span>
-<span class="source-line-no">158</span><span id="line.158"></span>
-<span class="source-line-no">159</span><span id="line.159">    public static OutOfStockErrorBuilder of(final OutOfStockError template) {</span>
-<span class="source-line-no">160</span><span id="line.160">        OutOfStockErrorBuilder builder = new OutOfStockErrorBuilder();</span>
-<span class="source-line-no">161</span><span id="line.161">        builder.message = template.getMessage();</span>
-<span class="source-line-no">162</span><span id="line.162">        builder.values = template.values();</span>
-<span class="source-line-no">163</span><span id="line.163">        builder.lineItems = template.getLineItems();</span>
-<span class="source-line-no">164</span><span id="line.164">        builder.skus = template.getSkus();</span>
-<span class="source-line-no">165</span><span id="line.165">        return builder;</span>
-<span class="source-line-no">166</span><span id="line.166">    }</span>
-<span class="source-line-no">167</span><span id="line.167"></span>
-<span class="source-line-no">168</span><span id="line.168">}</span>
+<span class="source-line-no">142</span><span id="line.142">        Objects.requireNonNull(lineItems, OutOfStockError.class + ": lineItems is missing");</span>
+<span class="source-line-no">143</span><span id="line.143">        Objects.requireNonNull(skus, OutOfStockError.class + ": skus is missing");</span>
+<span class="source-line-no">144</span><span id="line.144">        return new OutOfStockErrorImpl(message, values, lineItems, skus);</span>
+<span class="source-line-no">145</span><span id="line.145">    }</span>
+<span class="source-line-no">146</span><span id="line.146"></span>
+<span class="source-line-no">147</span><span id="line.147">    /**</span>
+<span class="source-line-no">148</span><span id="line.148">     * builds OutOfStockError without checking for non null required values</span>
+<span class="source-line-no">149</span><span id="line.149">     */</span>
+<span class="source-line-no">150</span><span id="line.150">    public OutOfStockError buildUnchecked() {</span>
+<span class="source-line-no">151</span><span id="line.151">        return new OutOfStockErrorImpl(message, values, lineItems, skus);</span>
+<span class="source-line-no">152</span><span id="line.152">    }</span>
+<span class="source-line-no">153</span><span id="line.153"></span>
+<span class="source-line-no">154</span><span id="line.154">    public static OutOfStockErrorBuilder of() {</span>
+<span class="source-line-no">155</span><span id="line.155">        return new OutOfStockErrorBuilder();</span>
+<span class="source-line-no">156</span><span id="line.156">    }</span>
+<span class="source-line-no">157</span><span id="line.157"></span>
+<span class="source-line-no">158</span><span id="line.158">    public static OutOfStockErrorBuilder of(final OutOfStockError template) {</span>
+<span class="source-line-no">159</span><span id="line.159">        OutOfStockErrorBuilder builder = new OutOfStockErrorBuilder();</span>
+<span class="source-line-no">160</span><span id="line.160">        builder.message = template.getMessage();</span>
+<span class="source-line-no">161</span><span id="line.161">        builder.values = template.values();</span>
+<span class="source-line-no">162</span><span id="line.162">        builder.lineItems = template.getLineItems();</span>
+<span class="source-line-no">163</span><span id="line.163">        builder.skus = template.getSkus();</span>
+<span class="source-line-no">164</span><span id="line.164">        return builder;</span>
+<span class="source-line-no">165</span><span id="line.165">    }</span>
+<span class="source-line-no">166</span><span id="line.166"></span>
+<span class="source-line-no">167</span><span id="line.167">}</span>
 
 
 

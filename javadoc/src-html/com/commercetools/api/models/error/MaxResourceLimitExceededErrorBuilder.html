@@ -95,31 +95,30 @@
 <span class="source-line-no">082</span><span id="line.82"></span>
 <span class="source-line-no">083</span><span id="line.83">    public MaxResourceLimitExceededError build() {</span>
 <span class="source-line-no">084</span><span id="line.84">        Objects.requireNonNull(message, MaxResourceLimitExceededError.class + ": message is missing");</span>
-<span class="source-line-no">085</span><span id="line.85">        Objects.requireNonNull(values, MaxResourceLimitExceededError.class + ": values are missing");</span>
-<span class="source-line-no">086</span><span id="line.86">        Objects.requireNonNull(exceededResource, MaxResourceLimitExceededError.class + ": exceededResource is missing");</span>
-<span class="source-line-no">087</span><span id="line.87">        return new MaxResourceLimitExceededErrorImpl(message, values, exceededResource);</span>
-<span class="source-line-no">088</span><span id="line.88">    }</span>
-<span class="source-line-no">089</span><span id="line.89"></span>
-<span class="source-line-no">090</span><span id="line.90">    /**</span>
-<span class="source-line-no">091</span><span id="line.91">     * builds MaxResourceLimitExceededError without checking for non null required values</span>
-<span class="source-line-no">092</span><span id="line.92">     */</span>
-<span class="source-line-no">093</span><span id="line.93">    public MaxResourceLimitExceededError buildUnchecked() {</span>
-<span class="source-line-no">094</span><span id="line.94">        return new MaxResourceLimitExceededErrorImpl(message, values, exceededResource);</span>
-<span class="source-line-no">095</span><span id="line.95">    }</span>
-<span class="source-line-no">096</span><span id="line.96"></span>
-<span class="source-line-no">097</span><span id="line.97">    public static MaxResourceLimitExceededErrorBuilder of() {</span>
-<span class="source-line-no">098</span><span id="line.98">        return new MaxResourceLimitExceededErrorBuilder();</span>
-<span class="source-line-no">099</span><span id="line.99">    }</span>
-<span class="source-line-no">100</span><span id="line.100"></span>
-<span class="source-line-no">101</span><span id="line.101">    public static MaxResourceLimitExceededErrorBuilder of(final MaxResourceLimitExceededError template) {</span>
-<span class="source-line-no">102</span><span id="line.102">        MaxResourceLimitExceededErrorBuilder builder = new MaxResourceLimitExceededErrorBuilder();</span>
-<span class="source-line-no">103</span><span id="line.103">        builder.message = template.getMessage();</span>
-<span class="source-line-no">104</span><span id="line.104">        builder.values = template.values();</span>
-<span class="source-line-no">105</span><span id="line.105">        builder.exceededResource = template.getExceededResource();</span>
-<span class="source-line-no">106</span><span id="line.106">        return builder;</span>
-<span class="source-line-no">107</span><span id="line.107">    }</span>
-<span class="source-line-no">108</span><span id="line.108"></span>
-<span class="source-line-no">109</span><span id="line.109">}</span>
+<span class="source-line-no">085</span><span id="line.85">        Objects.requireNonNull(exceededResource, MaxResourceLimitExceededError.class + ": exceededResource is missing");</span>
+<span class="source-line-no">086</span><span id="line.86">        return new MaxResourceLimitExceededErrorImpl(message, values, exceededResource);</span>
+<span class="source-line-no">087</span><span id="line.87">    }</span>
+<span class="source-line-no">088</span><span id="line.88"></span>
+<span class="source-line-no">089</span><span id="line.89">    /**</span>
+<span class="source-line-no">090</span><span id="line.90">     * builds MaxResourceLimitExceededError without checking for non null required values</span>
+<span class="source-line-no">091</span><span id="line.91">     */</span>
+<span class="source-line-no">092</span><span id="line.92">    public MaxResourceLimitExceededError buildUnchecked() {</span>
+<span class="source-line-no">093</span><span id="line.93">        return new MaxResourceLimitExceededErrorImpl(message, values, exceededResource);</span>
+<span class="source-line-no">094</span><span id="line.94">    }</span>
+<span class="source-line-no">095</span><span id="line.95"></span>
+<span class="source-line-no">096</span><span id="line.96">    public static MaxResourceLimitExceededErrorBuilder of() {</span>
+<span class="source-line-no">097</span><span id="line.97">        return new MaxResourceLimitExceededErrorBuilder();</span>
+<span class="source-line-no">098</span><span id="line.98">    }</span>
+<span class="source-line-no">099</span><span id="line.99"></span>
+<span class="source-line-no">100</span><span id="line.100">    public static MaxResourceLimitExceededErrorBuilder of(final MaxResourceLimitExceededError template) {</span>
+<span class="source-line-no">101</span><span id="line.101">        MaxResourceLimitExceededErrorBuilder builder = new MaxResourceLimitExceededErrorBuilder();</span>
+<span class="source-line-no">102</span><span id="line.102">        builder.message = template.getMessage();</span>
+<span class="source-line-no">103</span><span id="line.103">        builder.values = template.values();</span>
+<span class="source-line-no">104</span><span id="line.104">        builder.exceededResource = template.getExceededResource();</span>
+<span class="source-line-no">105</span><span id="line.105">        return builder;</span>
+<span class="source-line-no">106</span><span id="line.106">    }</span>
+<span class="source-line-no">107</span><span id="line.107"></span>
+<span class="source-line-no">108</span><span id="line.108">}</span>
 
 
 

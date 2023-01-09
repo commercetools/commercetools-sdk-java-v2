@@ -48,7 +48,7 @@
 <span class="source-line-no">035</span><span id="line.35"></span>
 <span class="source-line-no">036</span><span id="line.36">    private java.util.List&lt;Integer&gt; shippingAddresses;</span>
 <span class="source-line-no">037</span><span id="line.37"></span>
-<span class="source-line-no">038</span><span id="line.38">    private Integer defaultShipingAddress;</span>
+<span class="source-line-no">038</span><span id="line.38">    private Integer defaultShippingAddress;</span>
 <span class="source-line-no">039</span><span id="line.39"></span>
 <span class="source-line-no">040</span><span id="line.40">    private java.util.List&lt;Integer&gt; billingAddresses;</span>
 <span class="source-line-no">041</span><span id="line.41"></span>
@@ -62,7 +62,7 @@
 <span class="source-line-no">049</span><span id="line.49">            @JsonProperty("custom") final com.commercetools.api.models.type.CustomFields custom,</span>
 <span class="source-line-no">050</span><span id="line.50">            @JsonProperty("addresses") final java.util.List&lt;com.commercetools.api.models.common.BaseAddress&gt; addresses,</span>
 <span class="source-line-no">051</span><span id="line.51">            @JsonProperty("shippingAddresses") final java.util.List&lt;Integer&gt; shippingAddresses,</span>
-<span class="source-line-no">052</span><span id="line.52">            @JsonProperty("defaultShipingAddress") final Integer defaultShipingAddress,</span>
+<span class="source-line-no">052</span><span id="line.52">            @JsonProperty("defaultShippingAddress") final Integer defaultShippingAddress,</span>
 <span class="source-line-no">053</span><span id="line.53">            @JsonProperty("billingAddresses") final java.util.List&lt;Integer&gt; billingAddresses,</span>
 <span class="source-line-no">054</span><span id="line.54">            @JsonProperty("defaultBillingAddress") final Integer defaultBillingAddress,</span>
 <span class="source-line-no">055</span><span id="line.55">            @JsonProperty("parentUnit") final com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifier parentUnit) {</span>
@@ -72,7 +72,7 @@
 <span class="source-line-no">059</span><span id="line.59">        this.custom = custom;</span>
 <span class="source-line-no">060</span><span id="line.60">        this.addresses = addresses;</span>
 <span class="source-line-no">061</span><span id="line.61">        this.shippingAddresses = shippingAddresses;</span>
-<span class="source-line-no">062</span><span id="line.62">        this.defaultShipingAddress = defaultShipingAddress;</span>
+<span class="source-line-no">062</span><span id="line.62">        this.defaultShippingAddress = defaultShippingAddress;</span>
 <span class="source-line-no">063</span><span id="line.63">        this.billingAddresses = billingAddresses;</span>
 <span class="source-line-no">064</span><span id="line.64">        this.defaultBillingAddress = defaultBillingAddress;</span>
 <span class="source-line-no">065</span><span id="line.65">        this.parentUnit = parentUnit;</span>
@@ -143,8 +143,8 @@
 <span class="source-line-no">130</span><span id="line.130">     *  &lt;p&gt;Index of the entry in &lt;code&gt;addresses&lt;/code&gt; to set as the default shipping address.&lt;/p&gt;</span>
 <span class="source-line-no">131</span><span id="line.131">     */</span>
 <span class="source-line-no">132</span><span id="line.132"></span>
-<span class="source-line-no">133</span><span id="line.133">    public Integer getDefaultShipingAddress() {</span>
-<span class="source-line-no">134</span><span id="line.134">        return this.defaultShipingAddress;</span>
+<span class="source-line-no">133</span><span id="line.133">    public Integer getDefaultShippingAddress() {</span>
+<span class="source-line-no">134</span><span id="line.134">        return this.defaultShippingAddress;</span>
 <span class="source-line-no">135</span><span id="line.135">    }</span>
 <span class="source-line-no">136</span><span id="line.136"></span>
 <span class="source-line-no">137</span><span id="line.137">    /**</span>
@@ -203,8 +203,8 @@
 <span class="source-line-no">190</span><span id="line.190">        this.shippingAddresses = shippingAddresses;</span>
 <span class="source-line-no">191</span><span id="line.191">    }</span>
 <span class="source-line-no">192</span><span id="line.192"></span>
-<span class="source-line-no">193</span><span id="line.193">    public void setDefaultShipingAddress(final Integer defaultShipingAddress) {</span>
-<span class="source-line-no">194</span><span id="line.194">        this.defaultShipingAddress = defaultShipingAddress;</span>
+<span class="source-line-no">193</span><span id="line.193">    public void setDefaultShippingAddress(final Integer defaultShippingAddress) {</span>
+<span class="source-line-no">194</span><span id="line.194">        this.defaultShippingAddress = defaultShippingAddress;</span>
 <span class="source-line-no">195</span><span id="line.195">    }</span>
 <span class="source-line-no">196</span><span id="line.196"></span>
 <span class="source-line-no">197</span><span id="line.197">    public void setBillingAddresses(final Integer... billingAddresses) {</span>
@@ -241,7 +241,7 @@
 <span class="source-line-no">228</span><span id="line.228">                .append(custom, that.custom)</span>
 <span class="source-line-no">229</span><span id="line.229">                .append(addresses, that.addresses)</span>
 <span class="source-line-no">230</span><span id="line.230">                .append(shippingAddresses, that.shippingAddresses)</span>
-<span class="source-line-no">231</span><span id="line.231">                .append(defaultShipingAddress, that.defaultShipingAddress)</span>
+<span class="source-line-no">231</span><span id="line.231">                .append(defaultShippingAddress, that.defaultShippingAddress)</span>
 <span class="source-line-no">232</span><span id="line.232">                .append(billingAddresses, that.billingAddresses)</span>
 <span class="source-line-no">233</span><span id="line.233">                .append(defaultBillingAddress, that.defaultBillingAddress)</span>
 <span class="source-line-no">234</span><span id="line.234">                .append(parentUnit, that.parentUnit)</span>
@@ -257,7 +257,7 @@
 <span class="source-line-no">244</span><span id="line.244">                .append(custom)</span>
 <span class="source-line-no">245</span><span id="line.245">                .append(addresses)</span>
 <span class="source-line-no">246</span><span id="line.246">                .append(shippingAddresses)</span>
-<span class="source-line-no">247</span><span id="line.247">                .append(defaultShipingAddress)</span>
+<span class="source-line-no">247</span><span id="line.247">                .append(defaultShippingAddress)</span>
 <span class="source-line-no">248</span><span id="line.248">                .append(billingAddresses)</span>
 <span class="source-line-no">249</span><span id="line.249">                .append(defaultBillingAddress)</span>
 <span class="source-line-no">250</span><span id="line.250">                .append(parentUnit)</span>

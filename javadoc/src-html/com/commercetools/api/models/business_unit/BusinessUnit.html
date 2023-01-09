@@ -62,7 +62,7 @@
 <span class="source-line-no">049</span><span id="line.49">@JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "unitType", defaultImpl = BusinessUnitImpl.class, visible = true)</span>
 <span class="source-line-no">050</span><span id="line.50">@JsonDeserialize(as = BusinessUnitImpl.class)</span>
 <span class="source-line-no">051</span><span id="line.51">@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")</span>
-<span class="source-line-no">052</span><span id="line.52">public interface BusinessUnit extends BaseResource {</span>
+<span class="source-line-no">052</span><span id="line.52">public interface BusinessUnit extends BaseResource, com.commercetools.api.models.WithKey {</span>
 <span class="source-line-no">053</span><span id="line.53"></span>
 <span class="source-line-no">054</span><span id="line.54">    /**</span>
 <span class="source-line-no">055</span><span id="line.55">     *  &lt;p&gt;Unique identifier of the Business Unit.&lt;/p&gt;</span>
@@ -181,8 +181,8 @@
 <span class="source-line-no">168</span><span id="line.168">     *  &lt;p&gt;Unique identifier of the address used as the default shipping address.&lt;/p&gt;</span>
 <span class="source-line-no">169</span><span id="line.169">     */</span>
 <span class="source-line-no">170</span><span id="line.170"></span>
-<span class="source-line-no">171</span><span id="line.171">    @JsonProperty("defaultShipingAddressId")</span>
-<span class="source-line-no">172</span><span id="line.172">    public String getDefaultShipingAddressId();</span>
+<span class="source-line-no">171</span><span id="line.171">    @JsonProperty("defaultShippingAddressId")</span>
+<span class="source-line-no">172</span><span id="line.172">    public String getDefaultShippingAddressId();</span>
 <span class="source-line-no">173</span><span id="line.173"></span>
 <span class="source-line-no">174</span><span id="line.174">    /**</span>
 <span class="source-line-no">175</span><span id="line.175">     *  &lt;p&gt;Unique identifiers of addresses used as billing addresses.&lt;/p&gt;</span>
@@ -260,7 +260,7 @@
 <span class="source-line-no">247</span><span id="line.247"></span>
 <span class="source-line-no">248</span><span id="line.248">    public void setShippingAddressIds(final List&lt;String&gt; shippingAddressIds);</span>
 <span class="source-line-no">249</span><span id="line.249"></span>
-<span class="source-line-no">250</span><span id="line.250">    public void setDefaultShipingAddressId(final String defaultShipingAddressId);</span>
+<span class="source-line-no">250</span><span id="line.250">    public void setDefaultShippingAddressId(final String defaultShippingAddressId);</span>
 <span class="source-line-no">251</span><span id="line.251"></span>
 <span class="source-line-no">252</span><span id="line.252">    @JsonIgnore</span>
 <span class="source-line-no">253</span><span id="line.253">    public void setBillingAddressIds(final String... billingAddressIds);</span>

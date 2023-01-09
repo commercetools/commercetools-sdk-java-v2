@@ -43,7 +43,7 @@
 <span class="source-line-no">030</span><span id="line.30"> */</span>
 <span class="source-line-no">031</span><span id="line.31">@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")</span>
 <span class="source-line-no">032</span><span id="line.32">@JsonDeserialize(as = DivisionDraftImpl.class)</span>
-<span class="source-line-no">033</span><span id="line.33">public interface DivisionDraft extends BusinessUnitDraft {</span>
+<span class="source-line-no">033</span><span id="line.33">public interface DivisionDraft extends BusinessUnitDraft, io.vrap.rmf.base.client.Draft&lt;DivisionDraft&gt; {</span>
 <span class="source-line-no">034</span><span id="line.34"></span>
 <span class="source-line-no">035</span><span id="line.35">    String DIVISION = "Division";</span>
 <span class="source-line-no">036</span><span id="line.36"></span>
@@ -81,7 +81,7 @@
 <span class="source-line-no">068</span><span id="line.68">        instance.setAssociates(template.getAssociates());</span>
 <span class="source-line-no">069</span><span id="line.69">        instance.setAddresses(template.getAddresses());</span>
 <span class="source-line-no">070</span><span id="line.70">        instance.setShippingAddresses(template.getShippingAddresses());</span>
-<span class="source-line-no">071</span><span id="line.71">        instance.setDefaultShipingAddress(template.getDefaultShipingAddress());</span>
+<span class="source-line-no">071</span><span id="line.71">        instance.setDefaultShippingAddress(template.getDefaultShippingAddress());</span>
 <span class="source-line-no">072</span><span id="line.72">        instance.setBillingAddresses(template.getBillingAddresses());</span>
 <span class="source-line-no">073</span><span id="line.73">        instance.setDefaultBillingAddress(template.getDefaultBillingAddress());</span>
 <span class="source-line-no">074</span><span id="line.74">        instance.setCustom(template.getCustom());</span>

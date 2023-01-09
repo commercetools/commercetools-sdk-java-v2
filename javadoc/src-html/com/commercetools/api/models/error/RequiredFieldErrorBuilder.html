@@ -94,31 +94,30 @@
 <span class="source-line-no">081</span><span id="line.81"></span>
 <span class="source-line-no">082</span><span id="line.82">    public RequiredFieldError build() {</span>
 <span class="source-line-no">083</span><span id="line.83">        Objects.requireNonNull(message, RequiredFieldError.class + ": message is missing");</span>
-<span class="source-line-no">084</span><span id="line.84">        Objects.requireNonNull(values, RequiredFieldError.class + ": values are missing");</span>
-<span class="source-line-no">085</span><span id="line.85">        Objects.requireNonNull(field, RequiredFieldError.class + ": field is missing");</span>
-<span class="source-line-no">086</span><span id="line.86">        return new RequiredFieldErrorImpl(message, values, field);</span>
-<span class="source-line-no">087</span><span id="line.87">    }</span>
-<span class="source-line-no">088</span><span id="line.88"></span>
-<span class="source-line-no">089</span><span id="line.89">    /**</span>
-<span class="source-line-no">090</span><span id="line.90">     * builds RequiredFieldError without checking for non null required values</span>
-<span class="source-line-no">091</span><span id="line.91">     */</span>
-<span class="source-line-no">092</span><span id="line.92">    public RequiredFieldError buildUnchecked() {</span>
-<span class="source-line-no">093</span><span id="line.93">        return new RequiredFieldErrorImpl(message, values, field);</span>
-<span class="source-line-no">094</span><span id="line.94">    }</span>
-<span class="source-line-no">095</span><span id="line.95"></span>
-<span class="source-line-no">096</span><span id="line.96">    public static RequiredFieldErrorBuilder of() {</span>
-<span class="source-line-no">097</span><span id="line.97">        return new RequiredFieldErrorBuilder();</span>
-<span class="source-line-no">098</span><span id="line.98">    }</span>
-<span class="source-line-no">099</span><span id="line.99"></span>
-<span class="source-line-no">100</span><span id="line.100">    public static RequiredFieldErrorBuilder of(final RequiredFieldError template) {</span>
-<span class="source-line-no">101</span><span id="line.101">        RequiredFieldErrorBuilder builder = new RequiredFieldErrorBuilder();</span>
-<span class="source-line-no">102</span><span id="line.102">        builder.message = template.getMessage();</span>
-<span class="source-line-no">103</span><span id="line.103">        builder.values = template.values();</span>
-<span class="source-line-no">104</span><span id="line.104">        builder.field = template.getField();</span>
-<span class="source-line-no">105</span><span id="line.105">        return builder;</span>
-<span class="source-line-no">106</span><span id="line.106">    }</span>
-<span class="source-line-no">107</span><span id="line.107"></span>
-<span class="source-line-no">108</span><span id="line.108">}</span>
+<span class="source-line-no">084</span><span id="line.84">        Objects.requireNonNull(field, RequiredFieldError.class + ": field is missing");</span>
+<span class="source-line-no">085</span><span id="line.85">        return new RequiredFieldErrorImpl(message, values, field);</span>
+<span class="source-line-no">086</span><span id="line.86">    }</span>
+<span class="source-line-no">087</span><span id="line.87"></span>
+<span class="source-line-no">088</span><span id="line.88">    /**</span>
+<span class="source-line-no">089</span><span id="line.89">     * builds RequiredFieldError without checking for non null required values</span>
+<span class="source-line-no">090</span><span id="line.90">     */</span>
+<span class="source-line-no">091</span><span id="line.91">    public RequiredFieldError buildUnchecked() {</span>
+<span class="source-line-no">092</span><span id="line.92">        return new RequiredFieldErrorImpl(message, values, field);</span>
+<span class="source-line-no">093</span><span id="line.93">    }</span>
+<span class="source-line-no">094</span><span id="line.94"></span>
+<span class="source-line-no">095</span><span id="line.95">    public static RequiredFieldErrorBuilder of() {</span>
+<span class="source-line-no">096</span><span id="line.96">        return new RequiredFieldErrorBuilder();</span>
+<span class="source-line-no">097</span><span id="line.97">    }</span>
+<span class="source-line-no">098</span><span id="line.98"></span>
+<span class="source-line-no">099</span><span id="line.99">    public static RequiredFieldErrorBuilder of(final RequiredFieldError template) {</span>
+<span class="source-line-no">100</span><span id="line.100">        RequiredFieldErrorBuilder builder = new RequiredFieldErrorBuilder();</span>
+<span class="source-line-no">101</span><span id="line.101">        builder.message = template.getMessage();</span>
+<span class="source-line-no">102</span><span id="line.102">        builder.values = template.values();</span>
+<span class="source-line-no">103</span><span id="line.103">        builder.field = template.getField();</span>
+<span class="source-line-no">104</span><span id="line.104">        return builder;</span>
+<span class="source-line-no">105</span><span id="line.105">    }</span>
+<span class="source-line-no">106</span><span id="line.106"></span>
+<span class="source-line-no">107</span><span id="line.107">}</span>
 
 
 

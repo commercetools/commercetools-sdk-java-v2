@@ -78,29 +78,28 @@
 <span class="source-line-no">065</span><span id="line.65"></span>
 <span class="source-line-no">066</span><span id="line.66">    public InternalConstraintViolatedError build() {</span>
 <span class="source-line-no">067</span><span id="line.67">        Objects.requireNonNull(message, InternalConstraintViolatedError.class + ": message is missing");</span>
-<span class="source-line-no">068</span><span id="line.68">        Objects.requireNonNull(values, InternalConstraintViolatedError.class + ": values are missing");</span>
-<span class="source-line-no">069</span><span id="line.69">        return new InternalConstraintViolatedErrorImpl(message, values);</span>
-<span class="source-line-no">070</span><span id="line.70">    }</span>
-<span class="source-line-no">071</span><span id="line.71"></span>
-<span class="source-line-no">072</span><span id="line.72">    /**</span>
-<span class="source-line-no">073</span><span id="line.73">     * builds InternalConstraintViolatedError without checking for non null required values</span>
-<span class="source-line-no">074</span><span id="line.74">     */</span>
-<span class="source-line-no">075</span><span id="line.75">    public InternalConstraintViolatedError buildUnchecked() {</span>
-<span class="source-line-no">076</span><span id="line.76">        return new InternalConstraintViolatedErrorImpl(message, values);</span>
-<span class="source-line-no">077</span><span id="line.77">    }</span>
-<span class="source-line-no">078</span><span id="line.78"></span>
-<span class="source-line-no">079</span><span id="line.79">    public static InternalConstraintViolatedErrorBuilder of() {</span>
-<span class="source-line-no">080</span><span id="line.80">        return new InternalConstraintViolatedErrorBuilder();</span>
-<span class="source-line-no">081</span><span id="line.81">    }</span>
-<span class="source-line-no">082</span><span id="line.82"></span>
-<span class="source-line-no">083</span><span id="line.83">    public static InternalConstraintViolatedErrorBuilder of(final InternalConstraintViolatedError template) {</span>
-<span class="source-line-no">084</span><span id="line.84">        InternalConstraintViolatedErrorBuilder builder = new InternalConstraintViolatedErrorBuilder();</span>
-<span class="source-line-no">085</span><span id="line.85">        builder.message = template.getMessage();</span>
-<span class="source-line-no">086</span><span id="line.86">        builder.values = template.values();</span>
-<span class="source-line-no">087</span><span id="line.87">        return builder;</span>
-<span class="source-line-no">088</span><span id="line.88">    }</span>
-<span class="source-line-no">089</span><span id="line.89"></span>
-<span class="source-line-no">090</span><span id="line.90">}</span>
+<span class="source-line-no">068</span><span id="line.68">        return new InternalConstraintViolatedErrorImpl(message, values);</span>
+<span class="source-line-no">069</span><span id="line.69">    }</span>
+<span class="source-line-no">070</span><span id="line.70"></span>
+<span class="source-line-no">071</span><span id="line.71">    /**</span>
+<span class="source-line-no">072</span><span id="line.72">     * builds InternalConstraintViolatedError without checking for non null required values</span>
+<span class="source-line-no">073</span><span id="line.73">     */</span>
+<span class="source-line-no">074</span><span id="line.74">    public InternalConstraintViolatedError buildUnchecked() {</span>
+<span class="source-line-no">075</span><span id="line.75">        return new InternalConstraintViolatedErrorImpl(message, values);</span>
+<span class="source-line-no">076</span><span id="line.76">    }</span>
+<span class="source-line-no">077</span><span id="line.77"></span>
+<span class="source-line-no">078</span><span id="line.78">    public static InternalConstraintViolatedErrorBuilder of() {</span>
+<span class="source-line-no">079</span><span id="line.79">        return new InternalConstraintViolatedErrorBuilder();</span>
+<span class="source-line-no">080</span><span id="line.80">    }</span>
+<span class="source-line-no">081</span><span id="line.81"></span>
+<span class="source-line-no">082</span><span id="line.82">    public static InternalConstraintViolatedErrorBuilder of(final InternalConstraintViolatedError template) {</span>
+<span class="source-line-no">083</span><span id="line.83">        InternalConstraintViolatedErrorBuilder builder = new InternalConstraintViolatedErrorBuilder();</span>
+<span class="source-line-no">084</span><span id="line.84">        builder.message = template.getMessage();</span>
+<span class="source-line-no">085</span><span id="line.85">        builder.values = template.values();</span>
+<span class="source-line-no">086</span><span id="line.86">        return builder;</span>
+<span class="source-line-no">087</span><span id="line.87">    }</span>
+<span class="source-line-no">088</span><span id="line.88"></span>
+<span class="source-line-no">089</span><span id="line.89">}</span>
 
 
 

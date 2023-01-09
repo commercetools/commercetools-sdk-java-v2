@@ -64,7 +64,7 @@
 <span class="source-line-no">051</span><span id="line.51">    private java.util.List&lt;Integer&gt; shippingAddresses;</span>
 <span class="source-line-no">052</span><span id="line.52"></span>
 <span class="source-line-no">053</span><span id="line.53">    @Nullable</span>
-<span class="source-line-no">054</span><span id="line.54">    private Integer defaultShipingAddress;</span>
+<span class="source-line-no">054</span><span id="line.54">    private Integer defaultShippingAddress;</span>
 <span class="source-line-no">055</span><span id="line.55"></span>
 <span class="source-line-no">056</span><span id="line.56">    @Nullable</span>
 <span class="source-line-no">057</span><span id="line.57">    private java.util.List&lt;Integer&gt; billingAddresses;</span>
@@ -327,8 +327,8 @@
 <span class="source-line-no">314</span><span id="line.314">     *  &lt;p&gt;Index of the entry in &lt;code&gt;addresses&lt;/code&gt; to set as the default shipping address.&lt;/p&gt;</span>
 <span class="source-line-no">315</span><span id="line.315">     */</span>
 <span class="source-line-no">316</span><span id="line.316"></span>
-<span class="source-line-no">317</span><span id="line.317">    public CompanyDraftBuilder defaultShipingAddress(@Nullable final Integer defaultShipingAddress) {</span>
-<span class="source-line-no">318</span><span id="line.318">        this.defaultShipingAddress = defaultShipingAddress;</span>
+<span class="source-line-no">317</span><span id="line.317">    public CompanyDraftBuilder defaultShippingAddress(@Nullable final Integer defaultShippingAddress) {</span>
+<span class="source-line-no">318</span><span id="line.318">        this.defaultShippingAddress = defaultShippingAddress;</span>
 <span class="source-line-no">319</span><span id="line.319">        return this;</span>
 <span class="source-line-no">320</span><span id="line.320">    }</span>
 <span class="source-line-no">321</span><span id="line.321"></span>
@@ -434,8 +434,8 @@
 <span class="source-line-no">421</span><span id="line.421">    }</span>
 <span class="source-line-no">422</span><span id="line.422"></span>
 <span class="source-line-no">423</span><span id="line.423">    @Nullable</span>
-<span class="source-line-no">424</span><span id="line.424">    public Integer getDefaultShipingAddress() {</span>
-<span class="source-line-no">425</span><span id="line.425">        return this.defaultShipingAddress;</span>
+<span class="source-line-no">424</span><span id="line.424">    public Integer getDefaultShippingAddress() {</span>
+<span class="source-line-no">425</span><span id="line.425">        return this.defaultShippingAddress;</span>
 <span class="source-line-no">426</span><span id="line.426">    }</span>
 <span class="source-line-no">427</span><span id="line.427"></span>
 <span class="source-line-no">428</span><span id="line.428">    @Nullable</span>
@@ -457,7 +457,7 @@
 <span class="source-line-no">444</span><span id="line.444">        Objects.requireNonNull(key, CompanyDraft.class + ": key is missing");</span>
 <span class="source-line-no">445</span><span id="line.445">        Objects.requireNonNull(name, CompanyDraft.class + ": name is missing");</span>
 <span class="source-line-no">446</span><span id="line.446">        return new CompanyDraftImpl(key, status, stores, storeMode, name, contactEmail, associates, addresses,</span>
-<span class="source-line-no">447</span><span id="line.447">            shippingAddresses, defaultShipingAddress, billingAddresses, defaultBillingAddress, custom);</span>
+<span class="source-line-no">447</span><span id="line.447">            shippingAddresses, defaultShippingAddress, billingAddresses, defaultBillingAddress, custom);</span>
 <span class="source-line-no">448</span><span id="line.448">    }</span>
 <span class="source-line-no">449</span><span id="line.449"></span>
 <span class="source-line-no">450</span><span id="line.450">    /**</span>
@@ -465,7 +465,7 @@
 <span class="source-line-no">452</span><span id="line.452">     */</span>
 <span class="source-line-no">453</span><span id="line.453">    public CompanyDraft buildUnchecked() {</span>
 <span class="source-line-no">454</span><span id="line.454">        return new CompanyDraftImpl(key, status, stores, storeMode, name, contactEmail, associates, addresses,</span>
-<span class="source-line-no">455</span><span id="line.455">            shippingAddresses, defaultShipingAddress, billingAddresses, defaultBillingAddress, custom);</span>
+<span class="source-line-no">455</span><span id="line.455">            shippingAddresses, defaultShippingAddress, billingAddresses, defaultBillingAddress, custom);</span>
 <span class="source-line-no">456</span><span id="line.456">    }</span>
 <span class="source-line-no">457</span><span id="line.457"></span>
 <span class="source-line-no">458</span><span id="line.458">    public static CompanyDraftBuilder of() {</span>
@@ -483,7 +483,7 @@
 <span class="source-line-no">470</span><span id="line.470">        builder.associates = template.getAssociates();</span>
 <span class="source-line-no">471</span><span id="line.471">        builder.addresses = template.getAddresses();</span>
 <span class="source-line-no">472</span><span id="line.472">        builder.shippingAddresses = template.getShippingAddresses();</span>
-<span class="source-line-no">473</span><span id="line.473">        builder.defaultShipingAddress = template.getDefaultShipingAddress();</span>
+<span class="source-line-no">473</span><span id="line.473">        builder.defaultShippingAddress = template.getDefaultShippingAddress();</span>
 <span class="source-line-no">474</span><span id="line.474">        builder.billingAddresses = template.getBillingAddresses();</span>
 <span class="source-line-no">475</span><span id="line.475">        builder.defaultBillingAddress = template.getDefaultBillingAddress();</span>
 <span class="source-line-no">476</span><span id="line.476">        builder.custom = template.getCustom();</span>

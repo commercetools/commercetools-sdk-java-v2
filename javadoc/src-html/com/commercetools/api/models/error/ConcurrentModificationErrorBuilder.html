@@ -97,30 +97,29 @@
 <span class="source-line-no">084</span><span id="line.84"></span>
 <span class="source-line-no">085</span><span id="line.85">    public ConcurrentModificationError build() {</span>
 <span class="source-line-no">086</span><span id="line.86">        Objects.requireNonNull(message, ConcurrentModificationError.class + ": message is missing");</span>
-<span class="source-line-no">087</span><span id="line.87">        Objects.requireNonNull(values, ConcurrentModificationError.class + ": values are missing");</span>
-<span class="source-line-no">088</span><span id="line.88">        return new ConcurrentModificationErrorImpl(message, values, currentVersion);</span>
-<span class="source-line-no">089</span><span id="line.89">    }</span>
-<span class="source-line-no">090</span><span id="line.90"></span>
-<span class="source-line-no">091</span><span id="line.91">    /**</span>
-<span class="source-line-no">092</span><span id="line.92">     * builds ConcurrentModificationError without checking for non null required values</span>
-<span class="source-line-no">093</span><span id="line.93">     */</span>
-<span class="source-line-no">094</span><span id="line.94">    public ConcurrentModificationError buildUnchecked() {</span>
-<span class="source-line-no">095</span><span id="line.95">        return new ConcurrentModificationErrorImpl(message, values, currentVersion);</span>
-<span class="source-line-no">096</span><span id="line.96">    }</span>
-<span class="source-line-no">097</span><span id="line.97"></span>
-<span class="source-line-no">098</span><span id="line.98">    public static ConcurrentModificationErrorBuilder of() {</span>
-<span class="source-line-no">099</span><span id="line.99">        return new ConcurrentModificationErrorBuilder();</span>
-<span class="source-line-no">100</span><span id="line.100">    }</span>
-<span class="source-line-no">101</span><span id="line.101"></span>
-<span class="source-line-no">102</span><span id="line.102">    public static ConcurrentModificationErrorBuilder of(final ConcurrentModificationError template) {</span>
-<span class="source-line-no">103</span><span id="line.103">        ConcurrentModificationErrorBuilder builder = new ConcurrentModificationErrorBuilder();</span>
-<span class="source-line-no">104</span><span id="line.104">        builder.message = template.getMessage();</span>
-<span class="source-line-no">105</span><span id="line.105">        builder.values = template.values();</span>
-<span class="source-line-no">106</span><span id="line.106">        builder.currentVersion = template.getCurrentVersion();</span>
-<span class="source-line-no">107</span><span id="line.107">        return builder;</span>
-<span class="source-line-no">108</span><span id="line.108">    }</span>
-<span class="source-line-no">109</span><span id="line.109"></span>
-<span class="source-line-no">110</span><span id="line.110">}</span>
+<span class="source-line-no">087</span><span id="line.87">        return new ConcurrentModificationErrorImpl(message, values, currentVersion);</span>
+<span class="source-line-no">088</span><span id="line.88">    }</span>
+<span class="source-line-no">089</span><span id="line.89"></span>
+<span class="source-line-no">090</span><span id="line.90">    /**</span>
+<span class="source-line-no">091</span><span id="line.91">     * builds ConcurrentModificationError without checking for non null required values</span>
+<span class="source-line-no">092</span><span id="line.92">     */</span>
+<span class="source-line-no">093</span><span id="line.93">    public ConcurrentModificationError buildUnchecked() {</span>
+<span class="source-line-no">094</span><span id="line.94">        return new ConcurrentModificationErrorImpl(message, values, currentVersion);</span>
+<span class="source-line-no">095</span><span id="line.95">    }</span>
+<span class="source-line-no">096</span><span id="line.96"></span>
+<span class="source-line-no">097</span><span id="line.97">    public static ConcurrentModificationErrorBuilder of() {</span>
+<span class="source-line-no">098</span><span id="line.98">        return new ConcurrentModificationErrorBuilder();</span>
+<span class="source-line-no">099</span><span id="line.99">    }</span>
+<span class="source-line-no">100</span><span id="line.100"></span>
+<span class="source-line-no">101</span><span id="line.101">    public static ConcurrentModificationErrorBuilder of(final ConcurrentModificationError template) {</span>
+<span class="source-line-no">102</span><span id="line.102">        ConcurrentModificationErrorBuilder builder = new ConcurrentModificationErrorBuilder();</span>
+<span class="source-line-no">103</span><span id="line.103">        builder.message = template.getMessage();</span>
+<span class="source-line-no">104</span><span id="line.104">        builder.values = template.values();</span>
+<span class="source-line-no">105</span><span id="line.105">        builder.currentVersion = template.getCurrentVersion();</span>
+<span class="source-line-no">106</span><span id="line.106">        return builder;</span>
+<span class="source-line-no">107</span><span id="line.107">    }</span>
+<span class="source-line-no">108</span><span id="line.108"></span>
+<span class="source-line-no">109</span><span id="line.109">}</span>
 
 
 

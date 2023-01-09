@@ -143,31 +143,30 @@
 <span class="source-line-no">130</span><span id="line.130"></span>
 <span class="source-line-no">131</span><span id="line.131">    public DuplicateAttributeValuesError build() {</span>
 <span class="source-line-no">132</span><span id="line.132">        Objects.requireNonNull(message, DuplicateAttributeValuesError.class + ": message is missing");</span>
-<span class="source-line-no">133</span><span id="line.133">        Objects.requireNonNull(values, DuplicateAttributeValuesError.class + ": values are missing");</span>
-<span class="source-line-no">134</span><span id="line.134">        Objects.requireNonNull(attributes, DuplicateAttributeValuesError.class + ": attributes is missing");</span>
-<span class="source-line-no">135</span><span id="line.135">        return new DuplicateAttributeValuesErrorImpl(message, values, attributes);</span>
-<span class="source-line-no">136</span><span id="line.136">    }</span>
-<span class="source-line-no">137</span><span id="line.137"></span>
-<span class="source-line-no">138</span><span id="line.138">    /**</span>
-<span class="source-line-no">139</span><span id="line.139">     * builds DuplicateAttributeValuesError without checking for non null required values</span>
-<span class="source-line-no">140</span><span id="line.140">     */</span>
-<span class="source-line-no">141</span><span id="line.141">    public DuplicateAttributeValuesError buildUnchecked() {</span>
-<span class="source-line-no">142</span><span id="line.142">        return new DuplicateAttributeValuesErrorImpl(message, values, attributes);</span>
-<span class="source-line-no">143</span><span id="line.143">    }</span>
-<span class="source-line-no">144</span><span id="line.144"></span>
-<span class="source-line-no">145</span><span id="line.145">    public static DuplicateAttributeValuesErrorBuilder of() {</span>
-<span class="source-line-no">146</span><span id="line.146">        return new DuplicateAttributeValuesErrorBuilder();</span>
-<span class="source-line-no">147</span><span id="line.147">    }</span>
-<span class="source-line-no">148</span><span id="line.148"></span>
-<span class="source-line-no">149</span><span id="line.149">    public static DuplicateAttributeValuesErrorBuilder of(final DuplicateAttributeValuesError template) {</span>
-<span class="source-line-no">150</span><span id="line.150">        DuplicateAttributeValuesErrorBuilder builder = new DuplicateAttributeValuesErrorBuilder();</span>
-<span class="source-line-no">151</span><span id="line.151">        builder.message = template.getMessage();</span>
-<span class="source-line-no">152</span><span id="line.152">        builder.values = template.values();</span>
-<span class="source-line-no">153</span><span id="line.153">        builder.attributes = template.getAttributes();</span>
-<span class="source-line-no">154</span><span id="line.154">        return builder;</span>
-<span class="source-line-no">155</span><span id="line.155">    }</span>
-<span class="source-line-no">156</span><span id="line.156"></span>
-<span class="source-line-no">157</span><span id="line.157">}</span>
+<span class="source-line-no">133</span><span id="line.133">        Objects.requireNonNull(attributes, DuplicateAttributeValuesError.class + ": attributes is missing");</span>
+<span class="source-line-no">134</span><span id="line.134">        return new DuplicateAttributeValuesErrorImpl(message, values, attributes);</span>
+<span class="source-line-no">135</span><span id="line.135">    }</span>
+<span class="source-line-no">136</span><span id="line.136"></span>
+<span class="source-line-no">137</span><span id="line.137">    /**</span>
+<span class="source-line-no">138</span><span id="line.138">     * builds DuplicateAttributeValuesError without checking for non null required values</span>
+<span class="source-line-no">139</span><span id="line.139">     */</span>
+<span class="source-line-no">140</span><span id="line.140">    public DuplicateAttributeValuesError buildUnchecked() {</span>
+<span class="source-line-no">141</span><span id="line.141">        return new DuplicateAttributeValuesErrorImpl(message, values, attributes);</span>
+<span class="source-line-no">142</span><span id="line.142">    }</span>
+<span class="source-line-no">143</span><span id="line.143"></span>
+<span class="source-line-no">144</span><span id="line.144">    public static DuplicateAttributeValuesErrorBuilder of() {</span>
+<span class="source-line-no">145</span><span id="line.145">        return new DuplicateAttributeValuesErrorBuilder();</span>
+<span class="source-line-no">146</span><span id="line.146">    }</span>
+<span class="source-line-no">147</span><span id="line.147"></span>
+<span class="source-line-no">148</span><span id="line.148">    public static DuplicateAttributeValuesErrorBuilder of(final DuplicateAttributeValuesError template) {</span>
+<span class="source-line-no">149</span><span id="line.149">        DuplicateAttributeValuesErrorBuilder builder = new DuplicateAttributeValuesErrorBuilder();</span>
+<span class="source-line-no">150</span><span id="line.150">        builder.message = template.getMessage();</span>
+<span class="source-line-no">151</span><span id="line.151">        builder.values = template.values();</span>
+<span class="source-line-no">152</span><span id="line.152">        builder.attributes = template.getAttributes();</span>
+<span class="source-line-no">153</span><span id="line.153">        return builder;</span>
+<span class="source-line-no">154</span><span id="line.154">    }</span>
+<span class="source-line-no">155</span><span id="line.155"></span>
+<span class="source-line-no">156</span><span id="line.156">}</span>
 
 
 

@@ -205,39 +205,38 @@
 <span class="source-line-no">192</span><span id="line.192"></span>
 <span class="source-line-no">193</span><span id="line.193">    public MatchingPriceNotFoundError build() {</span>
 <span class="source-line-no">194</span><span id="line.194">        Objects.requireNonNull(message, MatchingPriceNotFoundError.class + ": message is missing");</span>
-<span class="source-line-no">195</span><span id="line.195">        Objects.requireNonNull(values, MatchingPriceNotFoundError.class + ": values are missing");</span>
-<span class="source-line-no">196</span><span id="line.196">        Objects.requireNonNull(productId, MatchingPriceNotFoundError.class + ": productId is missing");</span>
-<span class="source-line-no">197</span><span id="line.197">        Objects.requireNonNull(variantId, MatchingPriceNotFoundError.class + ": variantId is missing");</span>
-<span class="source-line-no">198</span><span id="line.198">        return new MatchingPriceNotFoundErrorImpl(message, values, productId, variantId, currency, country,</span>
-<span class="source-line-no">199</span><span id="line.199">            customerGroup, channel);</span>
-<span class="source-line-no">200</span><span id="line.200">    }</span>
-<span class="source-line-no">201</span><span id="line.201"></span>
-<span class="source-line-no">202</span><span id="line.202">    /**</span>
-<span class="source-line-no">203</span><span id="line.203">     * builds MatchingPriceNotFoundError without checking for non null required values</span>
-<span class="source-line-no">204</span><span id="line.204">     */</span>
-<span class="source-line-no">205</span><span id="line.205">    public MatchingPriceNotFoundError buildUnchecked() {</span>
-<span class="source-line-no">206</span><span id="line.206">        return new MatchingPriceNotFoundErrorImpl(message, values, productId, variantId, currency, country,</span>
-<span class="source-line-no">207</span><span id="line.207">            customerGroup, channel);</span>
-<span class="source-line-no">208</span><span id="line.208">    }</span>
-<span class="source-line-no">209</span><span id="line.209"></span>
-<span class="source-line-no">210</span><span id="line.210">    public static MatchingPriceNotFoundErrorBuilder of() {</span>
-<span class="source-line-no">211</span><span id="line.211">        return new MatchingPriceNotFoundErrorBuilder();</span>
-<span class="source-line-no">212</span><span id="line.212">    }</span>
-<span class="source-line-no">213</span><span id="line.213"></span>
-<span class="source-line-no">214</span><span id="line.214">    public static MatchingPriceNotFoundErrorBuilder of(final MatchingPriceNotFoundError template) {</span>
-<span class="source-line-no">215</span><span id="line.215">        MatchingPriceNotFoundErrorBuilder builder = new MatchingPriceNotFoundErrorBuilder();</span>
-<span class="source-line-no">216</span><span id="line.216">        builder.message = template.getMessage();</span>
-<span class="source-line-no">217</span><span id="line.217">        builder.values = template.values();</span>
-<span class="source-line-no">218</span><span id="line.218">        builder.productId = template.getProductId();</span>
-<span class="source-line-no">219</span><span id="line.219">        builder.variantId = template.getVariantId();</span>
-<span class="source-line-no">220</span><span id="line.220">        builder.currency = template.getCurrency();</span>
-<span class="source-line-no">221</span><span id="line.221">        builder.country = template.getCountry();</span>
-<span class="source-line-no">222</span><span id="line.222">        builder.customerGroup = template.getCustomerGroup();</span>
-<span class="source-line-no">223</span><span id="line.223">        builder.channel = template.getChannel();</span>
-<span class="source-line-no">224</span><span id="line.224">        return builder;</span>
-<span class="source-line-no">225</span><span id="line.225">    }</span>
-<span class="source-line-no">226</span><span id="line.226"></span>
-<span class="source-line-no">227</span><span id="line.227">}</span>
+<span class="source-line-no">195</span><span id="line.195">        Objects.requireNonNull(productId, MatchingPriceNotFoundError.class + ": productId is missing");</span>
+<span class="source-line-no">196</span><span id="line.196">        Objects.requireNonNull(variantId, MatchingPriceNotFoundError.class + ": variantId is missing");</span>
+<span class="source-line-no">197</span><span id="line.197">        return new MatchingPriceNotFoundErrorImpl(message, values, productId, variantId, currency, country,</span>
+<span class="source-line-no">198</span><span id="line.198">            customerGroup, channel);</span>
+<span class="source-line-no">199</span><span id="line.199">    }</span>
+<span class="source-line-no">200</span><span id="line.200"></span>
+<span class="source-line-no">201</span><span id="line.201">    /**</span>
+<span class="source-line-no">202</span><span id="line.202">     * builds MatchingPriceNotFoundError without checking for non null required values</span>
+<span class="source-line-no">203</span><span id="line.203">     */</span>
+<span class="source-line-no">204</span><span id="line.204">    public MatchingPriceNotFoundError buildUnchecked() {</span>
+<span class="source-line-no">205</span><span id="line.205">        return new MatchingPriceNotFoundErrorImpl(message, values, productId, variantId, currency, country,</span>
+<span class="source-line-no">206</span><span id="line.206">            customerGroup, channel);</span>
+<span class="source-line-no">207</span><span id="line.207">    }</span>
+<span class="source-line-no">208</span><span id="line.208"></span>
+<span class="source-line-no">209</span><span id="line.209">    public static MatchingPriceNotFoundErrorBuilder of() {</span>
+<span class="source-line-no">210</span><span id="line.210">        return new MatchingPriceNotFoundErrorBuilder();</span>
+<span class="source-line-no">211</span><span id="line.211">    }</span>
+<span class="source-line-no">212</span><span id="line.212"></span>
+<span class="source-line-no">213</span><span id="line.213">    public static MatchingPriceNotFoundErrorBuilder of(final MatchingPriceNotFoundError template) {</span>
+<span class="source-line-no">214</span><span id="line.214">        MatchingPriceNotFoundErrorBuilder builder = new MatchingPriceNotFoundErrorBuilder();</span>
+<span class="source-line-no">215</span><span id="line.215">        builder.message = template.getMessage();</span>
+<span class="source-line-no">216</span><span id="line.216">        builder.values = template.values();</span>
+<span class="source-line-no">217</span><span id="line.217">        builder.productId = template.getProductId();</span>
+<span class="source-line-no">218</span><span id="line.218">        builder.variantId = template.getVariantId();</span>
+<span class="source-line-no">219</span><span id="line.219">        builder.currency = template.getCurrency();</span>
+<span class="source-line-no">220</span><span id="line.220">        builder.country = template.getCountry();</span>
+<span class="source-line-no">221</span><span id="line.221">        builder.customerGroup = template.getCustomerGroup();</span>
+<span class="source-line-no">222</span><span id="line.222">        builder.channel = template.getChannel();</span>
+<span class="source-line-no">223</span><span id="line.223">        return builder;</span>
+<span class="source-line-no">224</span><span id="line.224">    }</span>
+<span class="source-line-no">225</span><span id="line.225"></span>
+<span class="source-line-no">226</span><span id="line.226">}</span>
 
 
 

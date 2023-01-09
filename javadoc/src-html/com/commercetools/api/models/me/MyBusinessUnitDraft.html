@@ -104,8 +104,8 @@
 <span class="source-line-no">091</span><span id="line.91">     *  &lt;p&gt;Index of the entry in &lt;code&gt;addresses&lt;/code&gt; to set as the default shipping address.&lt;/p&gt;</span>
 <span class="source-line-no">092</span><span id="line.92">     */</span>
 <span class="source-line-no">093</span><span id="line.93"></span>
-<span class="source-line-no">094</span><span id="line.94">    @JsonProperty("defaultShipingAddress")</span>
-<span class="source-line-no">095</span><span id="line.95">    public Integer getDefaultShipingAddress();</span>
+<span class="source-line-no">094</span><span id="line.94">    @JsonProperty("defaultShippingAddress")</span>
+<span class="source-line-no">095</span><span id="line.95">    public Integer getDefaultShippingAddress();</span>
 <span class="source-line-no">096</span><span id="line.96"></span>
 <span class="source-line-no">097</span><span id="line.97">    /**</span>
 <span class="source-line-no">098</span><span id="line.98">     *  &lt;p&gt;Indexes of entries in &lt;code&gt;addresses&lt;/code&gt; to set as billing addresses. The &lt;code&gt;billingAddressIds&lt;/code&gt; of the Customer will be replaced by these addresses.&lt;/p&gt;</span>
@@ -139,7 +139,7 @@
 <span class="source-line-no">126</span><span id="line.126"></span>
 <span class="source-line-no">127</span><span id="line.127">    public void setShippingAddresses(final List&lt;Integer&gt; shippingAddresses);</span>
 <span class="source-line-no">128</span><span id="line.128"></span>
-<span class="source-line-no">129</span><span id="line.129">    public void setDefaultShipingAddress(final Integer defaultShipingAddress);</span>
+<span class="source-line-no">129</span><span id="line.129">    public void setDefaultShippingAddress(final Integer defaultShippingAddress);</span>
 <span class="source-line-no">130</span><span id="line.130"></span>
 <span class="source-line-no">131</span><span id="line.131">    @JsonIgnore</span>
 <span class="source-line-no">132</span><span id="line.132">    public void setBillingAddresses(final Integer... billingAddresses);</span>

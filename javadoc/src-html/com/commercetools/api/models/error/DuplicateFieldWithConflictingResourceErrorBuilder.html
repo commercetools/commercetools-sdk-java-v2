@@ -138,40 +138,39 @@
 <span class="source-line-no">125</span><span id="line.125"></span>
 <span class="source-line-no">126</span><span id="line.126">    public DuplicateFieldWithConflictingResourceError build() {</span>
 <span class="source-line-no">127</span><span id="line.127">        Objects.requireNonNull(message, DuplicateFieldWithConflictingResourceError.class + ": message is missing");</span>
-<span class="source-line-no">128</span><span id="line.128">        Objects.requireNonNull(values, DuplicateFieldWithConflictingResourceError.class + ": values are missing");</span>
-<span class="source-line-no">129</span><span id="line.129">        Objects.requireNonNull(field, DuplicateFieldWithConflictingResourceError.class + ": field is missing");</span>
-<span class="source-line-no">130</span><span id="line.130">        Objects.requireNonNull(duplicateValue,</span>
-<span class="source-line-no">131</span><span id="line.131">            DuplicateFieldWithConflictingResourceError.class + ": duplicateValue is missing");</span>
-<span class="source-line-no">132</span><span id="line.132">        Objects.requireNonNull(conflictingResource,</span>
-<span class="source-line-no">133</span><span id="line.133">            DuplicateFieldWithConflictingResourceError.class + ": conflictingResource is missing");</span>
-<span class="source-line-no">134</span><span id="line.134">        return new DuplicateFieldWithConflictingResourceErrorImpl(message, values, field, duplicateValue,</span>
-<span class="source-line-no">135</span><span id="line.135">            conflictingResource);</span>
-<span class="source-line-no">136</span><span id="line.136">    }</span>
-<span class="source-line-no">137</span><span id="line.137"></span>
-<span class="source-line-no">138</span><span id="line.138">    /**</span>
-<span class="source-line-no">139</span><span id="line.139">     * builds DuplicateFieldWithConflictingResourceError without checking for non null required values</span>
-<span class="source-line-no">140</span><span id="line.140">     */</span>
-<span class="source-line-no">141</span><span id="line.141">    public DuplicateFieldWithConflictingResourceError buildUnchecked() {</span>
-<span class="source-line-no">142</span><span id="line.142">        return new DuplicateFieldWithConflictingResourceErrorImpl(message, values, field, duplicateValue,</span>
-<span class="source-line-no">143</span><span id="line.143">            conflictingResource);</span>
-<span class="source-line-no">144</span><span id="line.144">    }</span>
-<span class="source-line-no">145</span><span id="line.145"></span>
-<span class="source-line-no">146</span><span id="line.146">    public static DuplicateFieldWithConflictingResourceErrorBuilder of() {</span>
-<span class="source-line-no">147</span><span id="line.147">        return new DuplicateFieldWithConflictingResourceErrorBuilder();</span>
-<span class="source-line-no">148</span><span id="line.148">    }</span>
-<span class="source-line-no">149</span><span id="line.149"></span>
-<span class="source-line-no">150</span><span id="line.150">    public static DuplicateFieldWithConflictingResourceErrorBuilder of(</span>
-<span class="source-line-no">151</span><span id="line.151">            final DuplicateFieldWithConflictingResourceError template) {</span>
-<span class="source-line-no">152</span><span id="line.152">        DuplicateFieldWithConflictingResourceErrorBuilder builder = new DuplicateFieldWithConflictingResourceErrorBuilder();</span>
-<span class="source-line-no">153</span><span id="line.153">        builder.message = template.getMessage();</span>
-<span class="source-line-no">154</span><span id="line.154">        builder.values = template.values();</span>
-<span class="source-line-no">155</span><span id="line.155">        builder.field = template.getField();</span>
-<span class="source-line-no">156</span><span id="line.156">        builder.duplicateValue = template.getDuplicateValue();</span>
-<span class="source-line-no">157</span><span id="line.157">        builder.conflictingResource = template.getConflictingResource();</span>
-<span class="source-line-no">158</span><span id="line.158">        return builder;</span>
-<span class="source-line-no">159</span><span id="line.159">    }</span>
-<span class="source-line-no">160</span><span id="line.160"></span>
-<span class="source-line-no">161</span><span id="line.161">}</span>
+<span class="source-line-no">128</span><span id="line.128">        Objects.requireNonNull(field, DuplicateFieldWithConflictingResourceError.class + ": field is missing");</span>
+<span class="source-line-no">129</span><span id="line.129">        Objects.requireNonNull(duplicateValue,</span>
+<span class="source-line-no">130</span><span id="line.130">            DuplicateFieldWithConflictingResourceError.class + ": duplicateValue is missing");</span>
+<span class="source-line-no">131</span><span id="line.131">        Objects.requireNonNull(conflictingResource,</span>
+<span class="source-line-no">132</span><span id="line.132">            DuplicateFieldWithConflictingResourceError.class + ": conflictingResource is missing");</span>
+<span class="source-line-no">133</span><span id="line.133">        return new DuplicateFieldWithConflictingResourceErrorImpl(message, values, field, duplicateValue,</span>
+<span class="source-line-no">134</span><span id="line.134">            conflictingResource);</span>
+<span class="source-line-no">135</span><span id="line.135">    }</span>
+<span class="source-line-no">136</span><span id="line.136"></span>
+<span class="source-line-no">137</span><span id="line.137">    /**</span>
+<span class="source-line-no">138</span><span id="line.138">     * builds DuplicateFieldWithConflictingResourceError without checking for non null required values</span>
+<span class="source-line-no">139</span><span id="line.139">     */</span>
+<span class="source-line-no">140</span><span id="line.140">    public DuplicateFieldWithConflictingResourceError buildUnchecked() {</span>
+<span class="source-line-no">141</span><span id="line.141">        return new DuplicateFieldWithConflictingResourceErrorImpl(message, values, field, duplicateValue,</span>
+<span class="source-line-no">142</span><span id="line.142">            conflictingResource);</span>
+<span class="source-line-no">143</span><span id="line.143">    }</span>
+<span class="source-line-no">144</span><span id="line.144"></span>
+<span class="source-line-no">145</span><span id="line.145">    public static DuplicateFieldWithConflictingResourceErrorBuilder of() {</span>
+<span class="source-line-no">146</span><span id="line.146">        return new DuplicateFieldWithConflictingResourceErrorBuilder();</span>
+<span class="source-line-no">147</span><span id="line.147">    }</span>
+<span class="source-line-no">148</span><span id="line.148"></span>
+<span class="source-line-no">149</span><span id="line.149">    public static DuplicateFieldWithConflictingResourceErrorBuilder of(</span>
+<span class="source-line-no">150</span><span id="line.150">            final DuplicateFieldWithConflictingResourceError template) {</span>
+<span class="source-line-no">151</span><span id="line.151">        DuplicateFieldWithConflictingResourceErrorBuilder builder = new DuplicateFieldWithConflictingResourceErrorBuilder();</span>
+<span class="source-line-no">152</span><span id="line.152">        builder.message = template.getMessage();</span>
+<span class="source-line-no">153</span><span id="line.153">        builder.values = template.values();</span>
+<span class="source-line-no">154</span><span id="line.154">        builder.field = template.getField();</span>
+<span class="source-line-no">155</span><span id="line.155">        builder.duplicateValue = template.getDuplicateValue();</span>
+<span class="source-line-no">156</span><span id="line.156">        builder.conflictingResource = template.getConflictingResource();</span>
+<span class="source-line-no">157</span><span id="line.157">        return builder;</span>
+<span class="source-line-no">158</span><span id="line.158">    }</span>
+<span class="source-line-no">159</span><span id="line.159"></span>
+<span class="source-line-no">160</span><span id="line.160">}</span>
 
 
 

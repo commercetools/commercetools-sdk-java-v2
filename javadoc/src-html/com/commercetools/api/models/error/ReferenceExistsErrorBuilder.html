@@ -98,30 +98,29 @@
 <span class="source-line-no">085</span><span id="line.85"></span>
 <span class="source-line-no">086</span><span id="line.86">    public ReferenceExistsError build() {</span>
 <span class="source-line-no">087</span><span id="line.87">        Objects.requireNonNull(message, ReferenceExistsError.class + ": message is missing");</span>
-<span class="source-line-no">088</span><span id="line.88">        Objects.requireNonNull(values, ReferenceExistsError.class + ": values are missing");</span>
-<span class="source-line-no">089</span><span id="line.89">        return new ReferenceExistsErrorImpl(message, values, referencedBy);</span>
-<span class="source-line-no">090</span><span id="line.90">    }</span>
-<span class="source-line-no">091</span><span id="line.91"></span>
-<span class="source-line-no">092</span><span id="line.92">    /**</span>
-<span class="source-line-no">093</span><span id="line.93">     * builds ReferenceExistsError without checking for non null required values</span>
-<span class="source-line-no">094</span><span id="line.94">     */</span>
-<span class="source-line-no">095</span><span id="line.95">    public ReferenceExistsError buildUnchecked() {</span>
-<span class="source-line-no">096</span><span id="line.96">        return new ReferenceExistsErrorImpl(message, values, referencedBy);</span>
-<span class="source-line-no">097</span><span id="line.97">    }</span>
-<span class="source-line-no">098</span><span id="line.98"></span>
-<span class="source-line-no">099</span><span id="line.99">    public static ReferenceExistsErrorBuilder of() {</span>
-<span class="source-line-no">100</span><span id="line.100">        return new ReferenceExistsErrorBuilder();</span>
-<span class="source-line-no">101</span><span id="line.101">    }</span>
-<span class="source-line-no">102</span><span id="line.102"></span>
-<span class="source-line-no">103</span><span id="line.103">    public static ReferenceExistsErrorBuilder of(final ReferenceExistsError template) {</span>
-<span class="source-line-no">104</span><span id="line.104">        ReferenceExistsErrorBuilder builder = new ReferenceExistsErrorBuilder();</span>
-<span class="source-line-no">105</span><span id="line.105">        builder.message = template.getMessage();</span>
-<span class="source-line-no">106</span><span id="line.106">        builder.values = template.values();</span>
-<span class="source-line-no">107</span><span id="line.107">        builder.referencedBy = template.getReferencedBy();</span>
-<span class="source-line-no">108</span><span id="line.108">        return builder;</span>
-<span class="source-line-no">109</span><span id="line.109">    }</span>
-<span class="source-line-no">110</span><span id="line.110"></span>
-<span class="source-line-no">111</span><span id="line.111">}</span>
+<span class="source-line-no">088</span><span id="line.88">        return new ReferenceExistsErrorImpl(message, values, referencedBy);</span>
+<span class="source-line-no">089</span><span id="line.89">    }</span>
+<span class="source-line-no">090</span><span id="line.90"></span>
+<span class="source-line-no">091</span><span id="line.91">    /**</span>
+<span class="source-line-no">092</span><span id="line.92">     * builds ReferenceExistsError without checking for non null required values</span>
+<span class="source-line-no">093</span><span id="line.93">     */</span>
+<span class="source-line-no">094</span><span id="line.94">    public ReferenceExistsError buildUnchecked() {</span>
+<span class="source-line-no">095</span><span id="line.95">        return new ReferenceExistsErrorImpl(message, values, referencedBy);</span>
+<span class="source-line-no">096</span><span id="line.96">    }</span>
+<span class="source-line-no">097</span><span id="line.97"></span>
+<span class="source-line-no">098</span><span id="line.98">    public static ReferenceExistsErrorBuilder of() {</span>
+<span class="source-line-no">099</span><span id="line.99">        return new ReferenceExistsErrorBuilder();</span>
+<span class="source-line-no">100</span><span id="line.100">    }</span>
+<span class="source-line-no">101</span><span id="line.101"></span>
+<span class="source-line-no">102</span><span id="line.102">    public static ReferenceExistsErrorBuilder of(final ReferenceExistsError template) {</span>
+<span class="source-line-no">103</span><span id="line.103">        ReferenceExistsErrorBuilder builder = new ReferenceExistsErrorBuilder();</span>
+<span class="source-line-no">104</span><span id="line.104">        builder.message = template.getMessage();</span>
+<span class="source-line-no">105</span><span id="line.105">        builder.values = template.values();</span>
+<span class="source-line-no">106</span><span id="line.106">        builder.referencedBy = template.getReferencedBy();</span>
+<span class="source-line-no">107</span><span id="line.107">        return builder;</span>
+<span class="source-line-no">108</span><span id="line.108">    }</span>
+<span class="source-line-no">109</span><span id="line.109"></span>
+<span class="source-line-no">110</span><span id="line.110">}</span>
 
 
 

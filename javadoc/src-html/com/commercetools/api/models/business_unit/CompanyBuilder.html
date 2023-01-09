@@ -84,7 +84,7 @@
 <span class="source-line-no">071</span><span id="line.71">    private java.util.List&lt;String&gt; shippingAddressIds;</span>
 <span class="source-line-no">072</span><span id="line.72"></span>
 <span class="source-line-no">073</span><span id="line.73">    @Nullable</span>
-<span class="source-line-no">074</span><span id="line.74">    private String defaultShipingAddressId;</span>
+<span class="source-line-no">074</span><span id="line.74">    private String defaultShippingAddressId;</span>
 <span class="source-line-no">075</span><span id="line.75"></span>
 <span class="source-line-no">076</span><span id="line.76">    @Nullable</span>
 <span class="source-line-no">077</span><span id="line.77">    private java.util.List&lt;String&gt; billingAddressIds;</span>
@@ -381,8 +381,8 @@
 <span class="source-line-no">368</span><span id="line.368">     *  &lt;p&gt;Unique identifier of the address used as the default shipping address.&lt;/p&gt;</span>
 <span class="source-line-no">369</span><span id="line.369">     */</span>
 <span class="source-line-no">370</span><span id="line.370"></span>
-<span class="source-line-no">371</span><span id="line.371">    public CompanyBuilder defaultShipingAddressId(@Nullable final String defaultShipingAddressId) {</span>
-<span class="source-line-no">372</span><span id="line.372">        this.defaultShipingAddressId = defaultShipingAddressId;</span>
+<span class="source-line-no">371</span><span id="line.371">    public CompanyBuilder defaultShippingAddressId(@Nullable final String defaultShippingAddressId) {</span>
+<span class="source-line-no">372</span><span id="line.372">        this.defaultShippingAddressId = defaultShippingAddressId;</span>
 <span class="source-line-no">373</span><span id="line.373">        return this;</span>
 <span class="source-line-no">374</span><span id="line.374">    }</span>
 <span class="source-line-no">375</span><span id="line.375"></span>
@@ -590,8 +590,8 @@
 <span class="source-line-no">577</span><span id="line.577">    }</span>
 <span class="source-line-no">578</span><span id="line.578"></span>
 <span class="source-line-no">579</span><span id="line.579">    @Nullable</span>
-<span class="source-line-no">580</span><span id="line.580">    public String getDefaultShipingAddressId() {</span>
-<span class="source-line-no">581</span><span id="line.581">        return this.defaultShipingAddressId;</span>
+<span class="source-line-no">580</span><span id="line.580">    public String getDefaultShippingAddressId() {</span>
+<span class="source-line-no">581</span><span id="line.581">        return this.defaultShippingAddressId;</span>
 <span class="source-line-no">582</span><span id="line.582">    }</span>
 <span class="source-line-no">583</span><span id="line.583"></span>
 <span class="source-line-no">584</span><span id="line.584">    @Nullable</span>
@@ -630,7 +630,7 @@
 <span class="source-line-no">617</span><span id="line.617">        Objects.requireNonNull(associates, Company.class + ": associates is missing");</span>
 <span class="source-line-no">618</span><span id="line.618">        Objects.requireNonNull(topLevelUnit, Company.class + ": topLevelUnit is missing");</span>
 <span class="source-line-no">619</span><span id="line.619">        return new CompanyImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, key, status, stores,</span>
-<span class="source-line-no">620</span><span id="line.620">            storeMode, name, contactEmail, custom, addresses, shippingAddressIds, defaultShipingAddressId,</span>
+<span class="source-line-no">620</span><span id="line.620">            storeMode, name, contactEmail, custom, addresses, shippingAddressIds, defaultShippingAddressId,</span>
 <span class="source-line-no">621</span><span id="line.621">            billingAddressIds, defaultBillingAddressId, associates, parentUnit, topLevelUnit);</span>
 <span class="source-line-no">622</span><span id="line.622">    }</span>
 <span class="source-line-no">623</span><span id="line.623"></span>
@@ -639,7 +639,7 @@
 <span class="source-line-no">626</span><span id="line.626">     */</span>
 <span class="source-line-no">627</span><span id="line.627">    public Company buildUnchecked() {</span>
 <span class="source-line-no">628</span><span id="line.628">        return new CompanyImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, key, status, stores,</span>
-<span class="source-line-no">629</span><span id="line.629">            storeMode, name, contactEmail, custom, addresses, shippingAddressIds, defaultShipingAddressId,</span>
+<span class="source-line-no">629</span><span id="line.629">            storeMode, name, contactEmail, custom, addresses, shippingAddressIds, defaultShippingAddressId,</span>
 <span class="source-line-no">630</span><span id="line.630">            billingAddressIds, defaultBillingAddressId, associates, parentUnit, topLevelUnit);</span>
 <span class="source-line-no">631</span><span id="line.631">    }</span>
 <span class="source-line-no">632</span><span id="line.632"></span>
@@ -664,7 +664,7 @@
 <span class="source-line-no">651</span><span id="line.651">        builder.custom = template.getCustom();</span>
 <span class="source-line-no">652</span><span id="line.652">        builder.addresses = template.getAddresses();</span>
 <span class="source-line-no">653</span><span id="line.653">        builder.shippingAddressIds = template.getShippingAddressIds();</span>
-<span class="source-line-no">654</span><span id="line.654">        builder.defaultShipingAddressId = template.getDefaultShipingAddressId();</span>
+<span class="source-line-no">654</span><span id="line.654">        builder.defaultShippingAddressId = template.getDefaultShippingAddressId();</span>
 <span class="source-line-no">655</span><span id="line.655">        builder.billingAddressIds = template.getBillingAddressIds();</span>
 <span class="source-line-no">656</span><span id="line.656">        builder.defaultBillingAddressId = template.getDefaultBillingAddressId();</span>
 <span class="source-line-no">657</span><span id="line.657">        builder.associates = template.getAssociates();</span>

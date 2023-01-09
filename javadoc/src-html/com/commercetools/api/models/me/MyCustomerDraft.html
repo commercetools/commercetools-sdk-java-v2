@@ -46,204 +46,205 @@
 <span class="source-line-no">033</span><span id="line.33"> */</span>
 <span class="source-line-no">034</span><span id="line.34">@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")</span>
 <span class="source-line-no">035</span><span id="line.35">@JsonDeserialize(as = MyCustomerDraftImpl.class)</span>
-<span class="source-line-no">036</span><span id="line.36">public interface MyCustomerDraft extends com.commercetools.api.models.CustomizableDraft&lt;MyCustomerDraft&gt; {</span>
-<span class="source-line-no">037</span><span id="line.37"></span>
-<span class="source-line-no">038</span><span id="line.38">    /**</span>
-<span class="source-line-no">039</span><span id="line.39">     *  &lt;p&gt;Email address of the Customer that is unique for an entire Project or Store the Customer is assigned to. It is the mandatory unique identifier of a Customer.&lt;/p&gt;</span>
-<span class="source-line-no">040</span><span id="line.40">     */</span>
-<span class="source-line-no">041</span><span id="line.41">    @NotNull</span>
-<span class="source-line-no">042</span><span id="line.42">    @JsonProperty("email")</span>
-<span class="source-line-no">043</span><span id="line.43">    public String getEmail();</span>
-<span class="source-line-no">044</span><span id="line.44"></span>
-<span class="source-line-no">045</span><span id="line.45">    /**</span>
-<span class="source-line-no">046</span><span id="line.46">     *  &lt;p&gt;Password of the Customer.&lt;/p&gt;</span>
-<span class="source-line-no">047</span><span id="line.47">     */</span>
-<span class="source-line-no">048</span><span id="line.48">    @NotNull</span>
-<span class="source-line-no">049</span><span id="line.49">    @JsonProperty("password")</span>
-<span class="source-line-no">050</span><span id="line.50">    public String getPassword();</span>
-<span class="source-line-no">051</span><span id="line.51"></span>
-<span class="source-line-no">052</span><span id="line.52">    /**</span>
-<span class="source-line-no">053</span><span id="line.53">     *  &lt;p&gt;Given name (first name) of the Customer.&lt;/p&gt;</span>
-<span class="source-line-no">054</span><span id="line.54">     */</span>
-<span class="source-line-no">055</span><span id="line.55"></span>
-<span class="source-line-no">056</span><span id="line.56">    @JsonProperty("firstName")</span>
-<span class="source-line-no">057</span><span id="line.57">    public String getFirstName();</span>
-<span class="source-line-no">058</span><span id="line.58"></span>
-<span class="source-line-no">059</span><span id="line.59">    /**</span>
-<span class="source-line-no">060</span><span id="line.60">     *  &lt;p&gt;Family name (last name) of the Customer.&lt;/p&gt;</span>
-<span class="source-line-no">061</span><span id="line.61">     */</span>
-<span class="source-line-no">062</span><span id="line.62"></span>
-<span class="source-line-no">063</span><span id="line.63">    @JsonProperty("lastName")</span>
-<span class="source-line-no">064</span><span id="line.64">    public String getLastName();</span>
-<span class="source-line-no">065</span><span id="line.65"></span>
-<span class="source-line-no">066</span><span id="line.66">    /**</span>
-<span class="source-line-no">067</span><span id="line.67">     *  &lt;p&gt;Middle name of the Customer.&lt;/p&gt;</span>
-<span class="source-line-no">068</span><span id="line.68">     */</span>
-<span class="source-line-no">069</span><span id="line.69"></span>
-<span class="source-line-no">070</span><span id="line.70">    @JsonProperty("middleName")</span>
-<span class="source-line-no">071</span><span id="line.71">    public String getMiddleName();</span>
-<span class="source-line-no">072</span><span id="line.72"></span>
-<span class="source-line-no">073</span><span id="line.73">    /**</span>
-<span class="source-line-no">074</span><span id="line.74">     *  &lt;p&gt;Title of the Customer, for example, 'Dr.'.&lt;/p&gt;</span>
-<span class="source-line-no">075</span><span id="line.75">     */</span>
-<span class="source-line-no">076</span><span id="line.76"></span>
-<span class="source-line-no">077</span><span id="line.77">    @JsonProperty("title")</span>
-<span class="source-line-no">078</span><span id="line.78">    public String getTitle();</span>
-<span class="source-line-no">079</span><span id="line.79"></span>
-<span class="source-line-no">080</span><span id="line.80">    /**</span>
-<span class="source-line-no">081</span><span id="line.81">     *  &lt;p&gt;Salutation of the Customer, for example, 'Mr.' or 'Mrs.'.&lt;/p&gt;</span>
-<span class="source-line-no">082</span><span id="line.82">     */</span>
-<span class="source-line-no">083</span><span id="line.83"></span>
-<span class="source-line-no">084</span><span id="line.84">    @JsonProperty("salutation")</span>
-<span class="source-line-no">085</span><span id="line.85">    public String getSalutation();</span>
-<span class="source-line-no">086</span><span id="line.86"></span>
-<span class="source-line-no">087</span><span id="line.87">    /**</span>
-<span class="source-line-no">088</span><span id="line.88">     *  &lt;p&gt;Date of birth of the Customer.&lt;/p&gt;</span>
-<span class="source-line-no">089</span><span id="line.89">     */</span>
-<span class="source-line-no">090</span><span id="line.90"></span>
-<span class="source-line-no">091</span><span id="line.91">    @JsonProperty("dateOfBirth")</span>
-<span class="source-line-no">092</span><span id="line.92">    public LocalDate getDateOfBirth();</span>
-<span class="source-line-no">093</span><span id="line.93"></span>
-<span class="source-line-no">094</span><span id="line.94">    /**</span>
-<span class="source-line-no">095</span><span id="line.95">     *  &lt;p&gt;Company name of the Customer.&lt;/p&gt;</span>
-<span class="source-line-no">096</span><span id="line.96">     */</span>
-<span class="source-line-no">097</span><span id="line.97"></span>
-<span class="source-line-no">098</span><span id="line.98">    @JsonProperty("companyName")</span>
-<span class="source-line-no">099</span><span id="line.99">    public String getCompanyName();</span>
-<span class="source-line-no">100</span><span id="line.100"></span>
-<span class="source-line-no">101</span><span id="line.101">    /**</span>
-<span class="source-line-no">102</span><span id="line.102">     *  &lt;p&gt;Unique VAT ID of the Customer.&lt;/p&gt;</span>
-<span class="source-line-no">103</span><span id="line.103">     */</span>
-<span class="source-line-no">104</span><span id="line.104"></span>
-<span class="source-line-no">105</span><span id="line.105">    @JsonProperty("vatId")</span>
-<span class="source-line-no">106</span><span id="line.106">    public String getVatId();</span>
-<span class="source-line-no">107</span><span id="line.107"></span>
-<span class="source-line-no">108</span><span id="line.108">    /**</span>
-<span class="source-line-no">109</span><span id="line.109">     *  &lt;p&gt;Addresses of the Customer.&lt;/p&gt;</span>
-<span class="source-line-no">110</span><span id="line.110">     */</span>
-<span class="source-line-no">111</span><span id="line.111">    @Valid</span>
-<span class="source-line-no">112</span><span id="line.112">    @JsonProperty("addresses")</span>
-<span class="source-line-no">113</span><span id="line.113">    public List&lt;BaseAddress&gt; getAddresses();</span>
-<span class="source-line-no">114</span><span id="line.114"></span>
-<span class="source-line-no">115</span><span id="line.115">    /**</span>
-<span class="source-line-no">116</span><span id="line.116">     *  &lt;p&gt;Index of the address in the &lt;code&gt;addresses&lt;/code&gt; array to use as the default shipping address. The &lt;code&gt;defaultShippingAddressId&lt;/code&gt; of the Customer will be set to the &lt;code&gt;id&lt;/code&gt; of that address.&lt;/p&gt;</span>
-<span class="source-line-no">117</span><span id="line.117">     */</span>
-<span class="source-line-no">118</span><span id="line.118"></span>
-<span class="source-line-no">119</span><span id="line.119">    @JsonProperty("defaultShippingAddress")</span>
-<span class="source-line-no">120</span><span id="line.120">    public Long getDefaultShippingAddress();</span>
-<span class="source-line-no">121</span><span id="line.121"></span>
-<span class="source-line-no">122</span><span id="line.122">    /**</span>
-<span class="source-line-no">123</span><span id="line.123">     *  &lt;p&gt;Index of the address in the &lt;code&gt;addresses&lt;/code&gt; array to use as the default billing address. The &lt;code&gt;defaultBillingAddressId&lt;/code&gt; of the Customer will be set to the &lt;code&gt;id&lt;/code&gt; of that address.&lt;/p&gt;</span>
-<span class="source-line-no">124</span><span id="line.124">     */</span>
-<span class="source-line-no">125</span><span id="line.125"></span>
-<span class="source-line-no">126</span><span id="line.126">    @JsonProperty("defaultBillingAddress")</span>
-<span class="source-line-no">127</span><span id="line.127">    public Long getDefaultBillingAddress();</span>
-<span class="source-line-no">128</span><span id="line.128"></span>
-<span class="source-line-no">129</span><span id="line.129">    /**</span>
-<span class="source-line-no">130</span><span id="line.130">     *  &lt;p&gt;Custom Fields for the Customer.&lt;/p&gt;</span>
-<span class="source-line-no">131</span><span id="line.131">     */</span>
-<span class="source-line-no">132</span><span id="line.132">    @Valid</span>
-<span class="source-line-no">133</span><span id="line.133">    @JsonProperty("custom")</span>
-<span class="source-line-no">134</span><span id="line.134">    public CustomFieldsDraft getCustom();</span>
-<span class="source-line-no">135</span><span id="line.135"></span>
-<span class="source-line-no">136</span><span id="line.136">    /**</span>
-<span class="source-line-no">137</span><span id="line.137">     *  &lt;p&gt;Preferred language of the Customer. Must be one of the languages supported by the Project.&lt;/p&gt;</span>
-<span class="source-line-no">138</span><span id="line.138">     */</span>
-<span class="source-line-no">139</span><span id="line.139"></span>
-<span class="source-line-no">140</span><span id="line.140">    @JsonProperty("locale")</span>
-<span class="source-line-no">141</span><span id="line.141">    public String getLocale();</span>
-<span class="source-line-no">142</span><span id="line.142"></span>
-<span class="source-line-no">143</span><span id="line.143">    /**</span>
-<span class="source-line-no">144</span><span id="line.144">     *  &lt;p&gt;Sets the Stores for the Customer.&lt;/p&gt;</span>
-<span class="source-line-no">145</span><span id="line.145">     */</span>
-<span class="source-line-no">146</span><span id="line.146">    @Valid</span>
-<span class="source-line-no">147</span><span id="line.147">    @JsonProperty("stores")</span>
-<span class="source-line-no">148</span><span id="line.148">    public List&lt;StoreResourceIdentifier&gt; getStores();</span>
-<span class="source-line-no">149</span><span id="line.149"></span>
-<span class="source-line-no">150</span><span id="line.150">    public void setEmail(final String email);</span>
-<span class="source-line-no">151</span><span id="line.151"></span>
-<span class="source-line-no">152</span><span id="line.152">    public void setPassword(final String password);</span>
-<span class="source-line-no">153</span><span id="line.153"></span>
-<span class="source-line-no">154</span><span id="line.154">    public void setFirstName(final String firstName);</span>
-<span class="source-line-no">155</span><span id="line.155"></span>
-<span class="source-line-no">156</span><span id="line.156">    public void setLastName(final String lastName);</span>
-<span class="source-line-no">157</span><span id="line.157"></span>
-<span class="source-line-no">158</span><span id="line.158">    public void setMiddleName(final String middleName);</span>
-<span class="source-line-no">159</span><span id="line.159"></span>
-<span class="source-line-no">160</span><span id="line.160">    public void setTitle(final String title);</span>
-<span class="source-line-no">161</span><span id="line.161"></span>
-<span class="source-line-no">162</span><span id="line.162">    public void setSalutation(final String salutation);</span>
-<span class="source-line-no">163</span><span id="line.163"></span>
-<span class="source-line-no">164</span><span id="line.164">    public void setDateOfBirth(final LocalDate dateOfBirth);</span>
-<span class="source-line-no">165</span><span id="line.165"></span>
-<span class="source-line-no">166</span><span id="line.166">    public void setCompanyName(final String companyName);</span>
-<span class="source-line-no">167</span><span id="line.167"></span>
-<span class="source-line-no">168</span><span id="line.168">    public void setVatId(final String vatId);</span>
-<span class="source-line-no">169</span><span id="line.169"></span>
-<span class="source-line-no">170</span><span id="line.170">    @JsonIgnore</span>
-<span class="source-line-no">171</span><span id="line.171">    public void setAddresses(final BaseAddress... addresses);</span>
-<span class="source-line-no">172</span><span id="line.172"></span>
-<span class="source-line-no">173</span><span id="line.173">    public void setAddresses(final List&lt;BaseAddress&gt; addresses);</span>
-<span class="source-line-no">174</span><span id="line.174"></span>
-<span class="source-line-no">175</span><span id="line.175">    public void setDefaultShippingAddress(final Long defaultShippingAddress);</span>
-<span class="source-line-no">176</span><span id="line.176"></span>
-<span class="source-line-no">177</span><span id="line.177">    public void setDefaultBillingAddress(final Long defaultBillingAddress);</span>
-<span class="source-line-no">178</span><span id="line.178"></span>
-<span class="source-line-no">179</span><span id="line.179">    public void setCustom(final CustomFieldsDraft custom);</span>
-<span class="source-line-no">180</span><span id="line.180"></span>
-<span class="source-line-no">181</span><span id="line.181">    public void setLocale(final String locale);</span>
-<span class="source-line-no">182</span><span id="line.182"></span>
-<span class="source-line-no">183</span><span id="line.183">    @JsonIgnore</span>
-<span class="source-line-no">184</span><span id="line.184">    public void setStores(final StoreResourceIdentifier... stores);</span>
-<span class="source-line-no">185</span><span id="line.185"></span>
-<span class="source-line-no">186</span><span id="line.186">    public void setStores(final List&lt;StoreResourceIdentifier&gt; stores);</span>
-<span class="source-line-no">187</span><span id="line.187"></span>
-<span class="source-line-no">188</span><span id="line.188">    public static MyCustomerDraft of() {</span>
-<span class="source-line-no">189</span><span id="line.189">        return new MyCustomerDraftImpl();</span>
-<span class="source-line-no">190</span><span id="line.190">    }</span>
-<span class="source-line-no">191</span><span id="line.191"></span>
-<span class="source-line-no">192</span><span id="line.192">    public static MyCustomerDraft of(final MyCustomerDraft template) {</span>
-<span class="source-line-no">193</span><span id="line.193">        MyCustomerDraftImpl instance = new MyCustomerDraftImpl();</span>
-<span class="source-line-no">194</span><span id="line.194">        instance.setEmail(template.getEmail());</span>
-<span class="source-line-no">195</span><span id="line.195">        instance.setPassword(template.getPassword());</span>
-<span class="source-line-no">196</span><span id="line.196">        instance.setFirstName(template.getFirstName());</span>
-<span class="source-line-no">197</span><span id="line.197">        instance.setLastName(template.getLastName());</span>
-<span class="source-line-no">198</span><span id="line.198">        instance.setMiddleName(template.getMiddleName());</span>
-<span class="source-line-no">199</span><span id="line.199">        instance.setTitle(template.getTitle());</span>
-<span class="source-line-no">200</span><span id="line.200">        instance.setSalutation(template.getSalutation());</span>
-<span class="source-line-no">201</span><span id="line.201">        instance.setDateOfBirth(template.getDateOfBirth());</span>
-<span class="source-line-no">202</span><span id="line.202">        instance.setCompanyName(template.getCompanyName());</span>
-<span class="source-line-no">203</span><span id="line.203">        instance.setVatId(template.getVatId());</span>
-<span class="source-line-no">204</span><span id="line.204">        instance.setAddresses(template.getAddresses());</span>
-<span class="source-line-no">205</span><span id="line.205">        instance.setDefaultShippingAddress(template.getDefaultShippingAddress());</span>
-<span class="source-line-no">206</span><span id="line.206">        instance.setDefaultBillingAddress(template.getDefaultBillingAddress());</span>
-<span class="source-line-no">207</span><span id="line.207">        instance.setCustom(template.getCustom());</span>
-<span class="source-line-no">208</span><span id="line.208">        instance.setLocale(template.getLocale());</span>
-<span class="source-line-no">209</span><span id="line.209">        instance.setStores(template.getStores());</span>
-<span class="source-line-no">210</span><span id="line.210">        return instance;</span>
-<span class="source-line-no">211</span><span id="line.211">    }</span>
-<span class="source-line-no">212</span><span id="line.212"></span>
-<span class="source-line-no">213</span><span id="line.213">    public static MyCustomerDraftBuilder builder() {</span>
-<span class="source-line-no">214</span><span id="line.214">        return MyCustomerDraftBuilder.of();</span>
-<span class="source-line-no">215</span><span id="line.215">    }</span>
-<span class="source-line-no">216</span><span id="line.216"></span>
-<span class="source-line-no">217</span><span id="line.217">    public static MyCustomerDraftBuilder builder(final MyCustomerDraft template) {</span>
-<span class="source-line-no">218</span><span id="line.218">        return MyCustomerDraftBuilder.of(template);</span>
-<span class="source-line-no">219</span><span id="line.219">    }</span>
-<span class="source-line-no">220</span><span id="line.220"></span>
-<span class="source-line-no">221</span><span id="line.221">    default &lt;T&gt; T withMyCustomerDraft(Function&lt;MyCustomerDraft, T&gt; helper) {</span>
-<span class="source-line-no">222</span><span id="line.222">        return helper.apply(this);</span>
-<span class="source-line-no">223</span><span id="line.223">    }</span>
-<span class="source-line-no">224</span><span id="line.224"></span>
-<span class="source-line-no">225</span><span id="line.225">    public static com.fasterxml.jackson.core.type.TypeReference&lt;MyCustomerDraft&gt; typeReference() {</span>
-<span class="source-line-no">226</span><span id="line.226">        return new com.fasterxml.jackson.core.type.TypeReference&lt;MyCustomerDraft&gt;() {</span>
-<span class="source-line-no">227</span><span id="line.227">            @Override</span>
-<span class="source-line-no">228</span><span id="line.228">            public String toString() {</span>
-<span class="source-line-no">229</span><span id="line.229">                return "TypeReference&lt;MyCustomerDraft&gt;";</span>
-<span class="source-line-no">230</span><span id="line.230">            }</span>
-<span class="source-line-no">231</span><span id="line.231">        };</span>
-<span class="source-line-no">232</span><span id="line.232">    }</span>
-<span class="source-line-no">233</span><span id="line.233">}</span>
+<span class="source-line-no">036</span><span id="line.36">public interface MyCustomerDraft extends com.commercetools.api.models.CustomizableDraft&lt;MyCustomerDraft&gt;,</span>
+<span class="source-line-no">037</span><span id="line.37">        io.vrap.rmf.base.client.Draft&lt;MyCustomerDraft&gt; {</span>
+<span class="source-line-no">038</span><span id="line.38"></span>
+<span class="source-line-no">039</span><span id="line.39">    /**</span>
+<span class="source-line-no">040</span><span id="line.40">     *  &lt;p&gt;Email address of the Customer that is unique for an entire Project or Store the Customer is assigned to. It is the mandatory unique identifier of a Customer.&lt;/p&gt;</span>
+<span class="source-line-no">041</span><span id="line.41">     */</span>
+<span class="source-line-no">042</span><span id="line.42">    @NotNull</span>
+<span class="source-line-no">043</span><span id="line.43">    @JsonProperty("email")</span>
+<span class="source-line-no">044</span><span id="line.44">    public String getEmail();</span>
+<span class="source-line-no">045</span><span id="line.45"></span>
+<span class="source-line-no">046</span><span id="line.46">    /**</span>
+<span class="source-line-no">047</span><span id="line.47">     *  &lt;p&gt;Password of the Customer.&lt;/p&gt;</span>
+<span class="source-line-no">048</span><span id="line.48">     */</span>
+<span class="source-line-no">049</span><span id="line.49">    @NotNull</span>
+<span class="source-line-no">050</span><span id="line.50">    @JsonProperty("password")</span>
+<span class="source-line-no">051</span><span id="line.51">    public String getPassword();</span>
+<span class="source-line-no">052</span><span id="line.52"></span>
+<span class="source-line-no">053</span><span id="line.53">    /**</span>
+<span class="source-line-no">054</span><span id="line.54">     *  &lt;p&gt;Given name (first name) of the Customer.&lt;/p&gt;</span>
+<span class="source-line-no">055</span><span id="line.55">     */</span>
+<span class="source-line-no">056</span><span id="line.56"></span>
+<span class="source-line-no">057</span><span id="line.57">    @JsonProperty("firstName")</span>
+<span class="source-line-no">058</span><span id="line.58">    public String getFirstName();</span>
+<span class="source-line-no">059</span><span id="line.59"></span>
+<span class="source-line-no">060</span><span id="line.60">    /**</span>
+<span class="source-line-no">061</span><span id="line.61">     *  &lt;p&gt;Family name (last name) of the Customer.&lt;/p&gt;</span>
+<span class="source-line-no">062</span><span id="line.62">     */</span>
+<span class="source-line-no">063</span><span id="line.63"></span>
+<span class="source-line-no">064</span><span id="line.64">    @JsonProperty("lastName")</span>
+<span class="source-line-no">065</span><span id="line.65">    public String getLastName();</span>
+<span class="source-line-no">066</span><span id="line.66"></span>
+<span class="source-line-no">067</span><span id="line.67">    /**</span>
+<span class="source-line-no">068</span><span id="line.68">     *  &lt;p&gt;Middle name of the Customer.&lt;/p&gt;</span>
+<span class="source-line-no">069</span><span id="line.69">     */</span>
+<span class="source-line-no">070</span><span id="line.70"></span>
+<span class="source-line-no">071</span><span id="line.71">    @JsonProperty("middleName")</span>
+<span class="source-line-no">072</span><span id="line.72">    public String getMiddleName();</span>
+<span class="source-line-no">073</span><span id="line.73"></span>
+<span class="source-line-no">074</span><span id="line.74">    /**</span>
+<span class="source-line-no">075</span><span id="line.75">     *  &lt;p&gt;Title of the Customer, for example, 'Dr.'.&lt;/p&gt;</span>
+<span class="source-line-no">076</span><span id="line.76">     */</span>
+<span class="source-line-no">077</span><span id="line.77"></span>
+<span class="source-line-no">078</span><span id="line.78">    @JsonProperty("title")</span>
+<span class="source-line-no">079</span><span id="line.79">    public String getTitle();</span>
+<span class="source-line-no">080</span><span id="line.80"></span>
+<span class="source-line-no">081</span><span id="line.81">    /**</span>
+<span class="source-line-no">082</span><span id="line.82">     *  &lt;p&gt;Salutation of the Customer, for example, 'Mr.' or 'Mrs.'.&lt;/p&gt;</span>
+<span class="source-line-no">083</span><span id="line.83">     */</span>
+<span class="source-line-no">084</span><span id="line.84"></span>
+<span class="source-line-no">085</span><span id="line.85">    @JsonProperty("salutation")</span>
+<span class="source-line-no">086</span><span id="line.86">    public String getSalutation();</span>
+<span class="source-line-no">087</span><span id="line.87"></span>
+<span class="source-line-no">088</span><span id="line.88">    /**</span>
+<span class="source-line-no">089</span><span id="line.89">     *  &lt;p&gt;Date of birth of the Customer.&lt;/p&gt;</span>
+<span class="source-line-no">090</span><span id="line.90">     */</span>
+<span class="source-line-no">091</span><span id="line.91"></span>
+<span class="source-line-no">092</span><span id="line.92">    @JsonProperty("dateOfBirth")</span>
+<span class="source-line-no">093</span><span id="line.93">    public LocalDate getDateOfBirth();</span>
+<span class="source-line-no">094</span><span id="line.94"></span>
+<span class="source-line-no">095</span><span id="line.95">    /**</span>
+<span class="source-line-no">096</span><span id="line.96">     *  &lt;p&gt;Company name of the Customer.&lt;/p&gt;</span>
+<span class="source-line-no">097</span><span id="line.97">     */</span>
+<span class="source-line-no">098</span><span id="line.98"></span>
+<span class="source-line-no">099</span><span id="line.99">    @JsonProperty("companyName")</span>
+<span class="source-line-no">100</span><span id="line.100">    public String getCompanyName();</span>
+<span class="source-line-no">101</span><span id="line.101"></span>
+<span class="source-line-no">102</span><span id="line.102">    /**</span>
+<span class="source-line-no">103</span><span id="line.103">     *  &lt;p&gt;Unique VAT ID of the Customer.&lt;/p&gt;</span>
+<span class="source-line-no">104</span><span id="line.104">     */</span>
+<span class="source-line-no">105</span><span id="line.105"></span>
+<span class="source-line-no">106</span><span id="line.106">    @JsonProperty("vatId")</span>
+<span class="source-line-no">107</span><span id="line.107">    public String getVatId();</span>
+<span class="source-line-no">108</span><span id="line.108"></span>
+<span class="source-line-no">109</span><span id="line.109">    /**</span>
+<span class="source-line-no">110</span><span id="line.110">     *  &lt;p&gt;Addresses of the Customer.&lt;/p&gt;</span>
+<span class="source-line-no">111</span><span id="line.111">     */</span>
+<span class="source-line-no">112</span><span id="line.112">    @Valid</span>
+<span class="source-line-no">113</span><span id="line.113">    @JsonProperty("addresses")</span>
+<span class="source-line-no">114</span><span id="line.114">    public List&lt;BaseAddress&gt; getAddresses();</span>
+<span class="source-line-no">115</span><span id="line.115"></span>
+<span class="source-line-no">116</span><span id="line.116">    /**</span>
+<span class="source-line-no">117</span><span id="line.117">     *  &lt;p&gt;Index of the address in the &lt;code&gt;addresses&lt;/code&gt; array to use as the default shipping address. The &lt;code&gt;defaultShippingAddressId&lt;/code&gt; of the Customer will be set to the &lt;code&gt;id&lt;/code&gt; of that address.&lt;/p&gt;</span>
+<span class="source-line-no">118</span><span id="line.118">     */</span>
+<span class="source-line-no">119</span><span id="line.119"></span>
+<span class="source-line-no">120</span><span id="line.120">    @JsonProperty("defaultShippingAddress")</span>
+<span class="source-line-no">121</span><span id="line.121">    public Long getDefaultShippingAddress();</span>
+<span class="source-line-no">122</span><span id="line.122"></span>
+<span class="source-line-no">123</span><span id="line.123">    /**</span>
+<span class="source-line-no">124</span><span id="line.124">     *  &lt;p&gt;Index of the address in the &lt;code&gt;addresses&lt;/code&gt; array to use as the default billing address. The &lt;code&gt;defaultBillingAddressId&lt;/code&gt; of the Customer will be set to the &lt;code&gt;id&lt;/code&gt; of that address.&lt;/p&gt;</span>
+<span class="source-line-no">125</span><span id="line.125">     */</span>
+<span class="source-line-no">126</span><span id="line.126"></span>
+<span class="source-line-no">127</span><span id="line.127">    @JsonProperty("defaultBillingAddress")</span>
+<span class="source-line-no">128</span><span id="line.128">    public Long getDefaultBillingAddress();</span>
+<span class="source-line-no">129</span><span id="line.129"></span>
+<span class="source-line-no">130</span><span id="line.130">    /**</span>
+<span class="source-line-no">131</span><span id="line.131">     *  &lt;p&gt;Custom Fields for the Customer.&lt;/p&gt;</span>
+<span class="source-line-no">132</span><span id="line.132">     */</span>
+<span class="source-line-no">133</span><span id="line.133">    @Valid</span>
+<span class="source-line-no">134</span><span id="line.134">    @JsonProperty("custom")</span>
+<span class="source-line-no">135</span><span id="line.135">    public CustomFieldsDraft getCustom();</span>
+<span class="source-line-no">136</span><span id="line.136"></span>
+<span class="source-line-no">137</span><span id="line.137">    /**</span>
+<span class="source-line-no">138</span><span id="line.138">     *  &lt;p&gt;Preferred language of the Customer. Must be one of the languages supported by the Project.&lt;/p&gt;</span>
+<span class="source-line-no">139</span><span id="line.139">     */</span>
+<span class="source-line-no">140</span><span id="line.140"></span>
+<span class="source-line-no">141</span><span id="line.141">    @JsonProperty("locale")</span>
+<span class="source-line-no">142</span><span id="line.142">    public String getLocale();</span>
+<span class="source-line-no">143</span><span id="line.143"></span>
+<span class="source-line-no">144</span><span id="line.144">    /**</span>
+<span class="source-line-no">145</span><span id="line.145">     *  &lt;p&gt;Sets the Stores for the Customer.&lt;/p&gt;</span>
+<span class="source-line-no">146</span><span id="line.146">     */</span>
+<span class="source-line-no">147</span><span id="line.147">    @Valid</span>
+<span class="source-line-no">148</span><span id="line.148">    @JsonProperty("stores")</span>
+<span class="source-line-no">149</span><span id="line.149">    public List&lt;StoreResourceIdentifier&gt; getStores();</span>
+<span class="source-line-no">150</span><span id="line.150"></span>
+<span class="source-line-no">151</span><span id="line.151">    public void setEmail(final String email);</span>
+<span class="source-line-no">152</span><span id="line.152"></span>
+<span class="source-line-no">153</span><span id="line.153">    public void setPassword(final String password);</span>
+<span class="source-line-no">154</span><span id="line.154"></span>
+<span class="source-line-no">155</span><span id="line.155">    public void setFirstName(final String firstName);</span>
+<span class="source-line-no">156</span><span id="line.156"></span>
+<span class="source-line-no">157</span><span id="line.157">    public void setLastName(final String lastName);</span>
+<span class="source-line-no">158</span><span id="line.158"></span>
+<span class="source-line-no">159</span><span id="line.159">    public void setMiddleName(final String middleName);</span>
+<span class="source-line-no">160</span><span id="line.160"></span>
+<span class="source-line-no">161</span><span id="line.161">    public void setTitle(final String title);</span>
+<span class="source-line-no">162</span><span id="line.162"></span>
+<span class="source-line-no">163</span><span id="line.163">    public void setSalutation(final String salutation);</span>
+<span class="source-line-no">164</span><span id="line.164"></span>
+<span class="source-line-no">165</span><span id="line.165">    public void setDateOfBirth(final LocalDate dateOfBirth);</span>
+<span class="source-line-no">166</span><span id="line.166"></span>
+<span class="source-line-no">167</span><span id="line.167">    public void setCompanyName(final String companyName);</span>
+<span class="source-line-no">168</span><span id="line.168"></span>
+<span class="source-line-no">169</span><span id="line.169">    public void setVatId(final String vatId);</span>
+<span class="source-line-no">170</span><span id="line.170"></span>
+<span class="source-line-no">171</span><span id="line.171">    @JsonIgnore</span>
+<span class="source-line-no">172</span><span id="line.172">    public void setAddresses(final BaseAddress... addresses);</span>
+<span class="source-line-no">173</span><span id="line.173"></span>
+<span class="source-line-no">174</span><span id="line.174">    public void setAddresses(final List&lt;BaseAddress&gt; addresses);</span>
+<span class="source-line-no">175</span><span id="line.175"></span>
+<span class="source-line-no">176</span><span id="line.176">    public void setDefaultShippingAddress(final Long defaultShippingAddress);</span>
+<span class="source-line-no">177</span><span id="line.177"></span>
+<span class="source-line-no">178</span><span id="line.178">    public void setDefaultBillingAddress(final Long defaultBillingAddress);</span>
+<span class="source-line-no">179</span><span id="line.179"></span>
+<span class="source-line-no">180</span><span id="line.180">    public void setCustom(final CustomFieldsDraft custom);</span>
+<span class="source-line-no">181</span><span id="line.181"></span>
+<span class="source-line-no">182</span><span id="line.182">    public void setLocale(final String locale);</span>
+<span class="source-line-no">183</span><span id="line.183"></span>
+<span class="source-line-no">184</span><span id="line.184">    @JsonIgnore</span>
+<span class="source-line-no">185</span><span id="line.185">    public void setStores(final StoreResourceIdentifier... stores);</span>
+<span class="source-line-no">186</span><span id="line.186"></span>
+<span class="source-line-no">187</span><span id="line.187">    public void setStores(final List&lt;StoreResourceIdentifier&gt; stores);</span>
+<span class="source-line-no">188</span><span id="line.188"></span>
+<span class="source-line-no">189</span><span id="line.189">    public static MyCustomerDraft of() {</span>
+<span class="source-line-no">190</span><span id="line.190">        return new MyCustomerDraftImpl();</span>
+<span class="source-line-no">191</span><span id="line.191">    }</span>
+<span class="source-line-no">192</span><span id="line.192"></span>
+<span class="source-line-no">193</span><span id="line.193">    public static MyCustomerDraft of(final MyCustomerDraft template) {</span>
+<span class="source-line-no">194</span><span id="line.194">        MyCustomerDraftImpl instance = new MyCustomerDraftImpl();</span>
+<span class="source-line-no">195</span><span id="line.195">        instance.setEmail(template.getEmail());</span>
+<span class="source-line-no">196</span><span id="line.196">        instance.setPassword(template.getPassword());</span>
+<span class="source-line-no">197</span><span id="line.197">        instance.setFirstName(template.getFirstName());</span>
+<span class="source-line-no">198</span><span id="line.198">        instance.setLastName(template.getLastName());</span>
+<span class="source-line-no">199</span><span id="line.199">        instance.setMiddleName(template.getMiddleName());</span>
+<span class="source-line-no">200</span><span id="line.200">        instance.setTitle(template.getTitle());</span>
+<span class="source-line-no">201</span><span id="line.201">        instance.setSalutation(template.getSalutation());</span>
+<span class="source-line-no">202</span><span id="line.202">        instance.setDateOfBirth(template.getDateOfBirth());</span>
+<span class="source-line-no">203</span><span id="line.203">        instance.setCompanyName(template.getCompanyName());</span>
+<span class="source-line-no">204</span><span id="line.204">        instance.setVatId(template.getVatId());</span>
+<span class="source-line-no">205</span><span id="line.205">        instance.setAddresses(template.getAddresses());</span>
+<span class="source-line-no">206</span><span id="line.206">        instance.setDefaultShippingAddress(template.getDefaultShippingAddress());</span>
+<span class="source-line-no">207</span><span id="line.207">        instance.setDefaultBillingAddress(template.getDefaultBillingAddress());</span>
+<span class="source-line-no">208</span><span id="line.208">        instance.setCustom(template.getCustom());</span>
+<span class="source-line-no">209</span><span id="line.209">        instance.setLocale(template.getLocale());</span>
+<span class="source-line-no">210</span><span id="line.210">        instance.setStores(template.getStores());</span>
+<span class="source-line-no">211</span><span id="line.211">        return instance;</span>
+<span class="source-line-no">212</span><span id="line.212">    }</span>
+<span class="source-line-no">213</span><span id="line.213"></span>
+<span class="source-line-no">214</span><span id="line.214">    public static MyCustomerDraftBuilder builder() {</span>
+<span class="source-line-no">215</span><span id="line.215">        return MyCustomerDraftBuilder.of();</span>
+<span class="source-line-no">216</span><span id="line.216">    }</span>
+<span class="source-line-no">217</span><span id="line.217"></span>
+<span class="source-line-no">218</span><span id="line.218">    public static MyCustomerDraftBuilder builder(final MyCustomerDraft template) {</span>
+<span class="source-line-no">219</span><span id="line.219">        return MyCustomerDraftBuilder.of(template);</span>
+<span class="source-line-no">220</span><span id="line.220">    }</span>
+<span class="source-line-no">221</span><span id="line.221"></span>
+<span class="source-line-no">222</span><span id="line.222">    default &lt;T&gt; T withMyCustomerDraft(Function&lt;MyCustomerDraft, T&gt; helper) {</span>
+<span class="source-line-no">223</span><span id="line.223">        return helper.apply(this);</span>
+<span class="source-line-no">224</span><span id="line.224">    }</span>
+<span class="source-line-no">225</span><span id="line.225"></span>
+<span class="source-line-no">226</span><span id="line.226">    public static com.fasterxml.jackson.core.type.TypeReference&lt;MyCustomerDraft&gt; typeReference() {</span>
+<span class="source-line-no">227</span><span id="line.227">        return new com.fasterxml.jackson.core.type.TypeReference&lt;MyCustomerDraft&gt;() {</span>
+<span class="source-line-no">228</span><span id="line.228">            @Override</span>
+<span class="source-line-no">229</span><span id="line.229">            public String toString() {</span>
+<span class="source-line-no">230</span><span id="line.230">                return "TypeReference&lt;MyCustomerDraft&gt;";</span>
+<span class="source-line-no">231</span><span id="line.231">            }</span>
+<span class="source-line-no">232</span><span id="line.232">        };</span>
+<span class="source-line-no">233</span><span id="line.233">    }</span>
+<span class="source-line-no">234</span><span id="line.234">}</span>
 
 
 

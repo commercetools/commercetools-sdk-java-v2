@@ -149,34 +149,33 @@
 <span class="source-line-no">136</span><span id="line.136"></span>
 <span class="source-line-no">137</span><span id="line.137">    public InvalidFieldError build() {</span>
 <span class="source-line-no">138</span><span id="line.138">        Objects.requireNonNull(message, InvalidFieldError.class + ": message is missing");</span>
-<span class="source-line-no">139</span><span id="line.139">        Objects.requireNonNull(values, InvalidFieldError.class + ": values are missing");</span>
-<span class="source-line-no">140</span><span id="line.140">        Objects.requireNonNull(field, InvalidFieldError.class + ": field is missing");</span>
-<span class="source-line-no">141</span><span id="line.141">        Objects.requireNonNull(invalidValue, InvalidFieldError.class + ": invalidValue is missing");</span>
-<span class="source-line-no">142</span><span id="line.142">        return new InvalidFieldErrorImpl(message, values, field, invalidValue, allowedValues);</span>
-<span class="source-line-no">143</span><span id="line.143">    }</span>
-<span class="source-line-no">144</span><span id="line.144"></span>
-<span class="source-line-no">145</span><span id="line.145">    /**</span>
-<span class="source-line-no">146</span><span id="line.146">     * builds InvalidFieldError without checking for non null required values</span>
-<span class="source-line-no">147</span><span id="line.147">     */</span>
-<span class="source-line-no">148</span><span id="line.148">    public InvalidFieldError buildUnchecked() {</span>
-<span class="source-line-no">149</span><span id="line.149">        return new InvalidFieldErrorImpl(message, values, field, invalidValue, allowedValues);</span>
-<span class="source-line-no">150</span><span id="line.150">    }</span>
-<span class="source-line-no">151</span><span id="line.151"></span>
-<span class="source-line-no">152</span><span id="line.152">    public static InvalidFieldErrorBuilder of() {</span>
-<span class="source-line-no">153</span><span id="line.153">        return new InvalidFieldErrorBuilder();</span>
-<span class="source-line-no">154</span><span id="line.154">    }</span>
-<span class="source-line-no">155</span><span id="line.155"></span>
-<span class="source-line-no">156</span><span id="line.156">    public static InvalidFieldErrorBuilder of(final InvalidFieldError template) {</span>
-<span class="source-line-no">157</span><span id="line.157">        InvalidFieldErrorBuilder builder = new InvalidFieldErrorBuilder();</span>
-<span class="source-line-no">158</span><span id="line.158">        builder.message = template.getMessage();</span>
-<span class="source-line-no">159</span><span id="line.159">        builder.values = template.values();</span>
-<span class="source-line-no">160</span><span id="line.160">        builder.field = template.getField();</span>
-<span class="source-line-no">161</span><span id="line.161">        builder.invalidValue = template.getInvalidValue();</span>
-<span class="source-line-no">162</span><span id="line.162">        builder.allowedValues = template.getAllowedValues();</span>
-<span class="source-line-no">163</span><span id="line.163">        return builder;</span>
-<span class="source-line-no">164</span><span id="line.164">    }</span>
-<span class="source-line-no">165</span><span id="line.165"></span>
-<span class="source-line-no">166</span><span id="line.166">}</span>
+<span class="source-line-no">139</span><span id="line.139">        Objects.requireNonNull(field, InvalidFieldError.class + ": field is missing");</span>
+<span class="source-line-no">140</span><span id="line.140">        Objects.requireNonNull(invalidValue, InvalidFieldError.class + ": invalidValue is missing");</span>
+<span class="source-line-no">141</span><span id="line.141">        return new InvalidFieldErrorImpl(message, values, field, invalidValue, allowedValues);</span>
+<span class="source-line-no">142</span><span id="line.142">    }</span>
+<span class="source-line-no">143</span><span id="line.143"></span>
+<span class="source-line-no">144</span><span id="line.144">    /**</span>
+<span class="source-line-no">145</span><span id="line.145">     * builds InvalidFieldError without checking for non null required values</span>
+<span class="source-line-no">146</span><span id="line.146">     */</span>
+<span class="source-line-no">147</span><span id="line.147">    public InvalidFieldError buildUnchecked() {</span>
+<span class="source-line-no">148</span><span id="line.148">        return new InvalidFieldErrorImpl(message, values, field, invalidValue, allowedValues);</span>
+<span class="source-line-no">149</span><span id="line.149">    }</span>
+<span class="source-line-no">150</span><span id="line.150"></span>
+<span class="source-line-no">151</span><span id="line.151">    public static InvalidFieldErrorBuilder of() {</span>
+<span class="source-line-no">152</span><span id="line.152">        return new InvalidFieldErrorBuilder();</span>
+<span class="source-line-no">153</span><span id="line.153">    }</span>
+<span class="source-line-no">154</span><span id="line.154"></span>
+<span class="source-line-no">155</span><span id="line.155">    public static InvalidFieldErrorBuilder of(final InvalidFieldError template) {</span>
+<span class="source-line-no">156</span><span id="line.156">        InvalidFieldErrorBuilder builder = new InvalidFieldErrorBuilder();</span>
+<span class="source-line-no">157</span><span id="line.157">        builder.message = template.getMessage();</span>
+<span class="source-line-no">158</span><span id="line.158">        builder.values = template.values();</span>
+<span class="source-line-no">159</span><span id="line.159">        builder.field = template.getField();</span>
+<span class="source-line-no">160</span><span id="line.160">        builder.invalidValue = template.getInvalidValue();</span>
+<span class="source-line-no">161</span><span id="line.161">        builder.allowedValues = template.getAllowedValues();</span>
+<span class="source-line-no">162</span><span id="line.162">        return builder;</span>
+<span class="source-line-no">163</span><span id="line.163">    }</span>
+<span class="source-line-no">164</span><span id="line.164"></span>
+<span class="source-line-no">165</span><span id="line.165">}</span>
 
 
 

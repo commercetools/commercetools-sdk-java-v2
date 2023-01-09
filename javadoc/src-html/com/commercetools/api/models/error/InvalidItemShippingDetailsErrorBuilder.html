@@ -110,33 +110,32 @@
 <span class="source-line-no">097</span><span id="line.97"></span>
 <span class="source-line-no">098</span><span id="line.98">    public InvalidItemShippingDetailsError build() {</span>
 <span class="source-line-no">099</span><span id="line.99">        Objects.requireNonNull(message, InvalidItemShippingDetailsError.class + ": message is missing");</span>
-<span class="source-line-no">100</span><span id="line.100">        Objects.requireNonNull(values, InvalidItemShippingDetailsError.class + ": values are missing");</span>
-<span class="source-line-no">101</span><span id="line.101">        Objects.requireNonNull(subject, InvalidItemShippingDetailsError.class + ": subject is missing");</span>
-<span class="source-line-no">102</span><span id="line.102">        Objects.requireNonNull(itemId, InvalidItemShippingDetailsError.class + ": itemId is missing");</span>
-<span class="source-line-no">103</span><span id="line.103">        return new InvalidItemShippingDetailsErrorImpl(message, values, subject, itemId);</span>
-<span class="source-line-no">104</span><span id="line.104">    }</span>
-<span class="source-line-no">105</span><span id="line.105"></span>
-<span class="source-line-no">106</span><span id="line.106">    /**</span>
-<span class="source-line-no">107</span><span id="line.107">     * builds InvalidItemShippingDetailsError without checking for non null required values</span>
-<span class="source-line-no">108</span><span id="line.108">     */</span>
-<span class="source-line-no">109</span><span id="line.109">    public InvalidItemShippingDetailsError buildUnchecked() {</span>
-<span class="source-line-no">110</span><span id="line.110">        return new InvalidItemShippingDetailsErrorImpl(message, values, subject, itemId);</span>
-<span class="source-line-no">111</span><span id="line.111">    }</span>
-<span class="source-line-no">112</span><span id="line.112"></span>
-<span class="source-line-no">113</span><span id="line.113">    public static InvalidItemShippingDetailsErrorBuilder of() {</span>
-<span class="source-line-no">114</span><span id="line.114">        return new InvalidItemShippingDetailsErrorBuilder();</span>
-<span class="source-line-no">115</span><span id="line.115">    }</span>
-<span class="source-line-no">116</span><span id="line.116"></span>
-<span class="source-line-no">117</span><span id="line.117">    public static InvalidItemShippingDetailsErrorBuilder of(final InvalidItemShippingDetailsError template) {</span>
-<span class="source-line-no">118</span><span id="line.118">        InvalidItemShippingDetailsErrorBuilder builder = new InvalidItemShippingDetailsErrorBuilder();</span>
-<span class="source-line-no">119</span><span id="line.119">        builder.message = template.getMessage();</span>
-<span class="source-line-no">120</span><span id="line.120">        builder.values = template.values();</span>
-<span class="source-line-no">121</span><span id="line.121">        builder.subject = template.getSubject();</span>
-<span class="source-line-no">122</span><span id="line.122">        builder.itemId = template.getItemId();</span>
-<span class="source-line-no">123</span><span id="line.123">        return builder;</span>
-<span class="source-line-no">124</span><span id="line.124">    }</span>
-<span class="source-line-no">125</span><span id="line.125"></span>
-<span class="source-line-no">126</span><span id="line.126">}</span>
+<span class="source-line-no">100</span><span id="line.100">        Objects.requireNonNull(subject, InvalidItemShippingDetailsError.class + ": subject is missing");</span>
+<span class="source-line-no">101</span><span id="line.101">        Objects.requireNonNull(itemId, InvalidItemShippingDetailsError.class + ": itemId is missing");</span>
+<span class="source-line-no">102</span><span id="line.102">        return new InvalidItemShippingDetailsErrorImpl(message, values, subject, itemId);</span>
+<span class="source-line-no">103</span><span id="line.103">    }</span>
+<span class="source-line-no">104</span><span id="line.104"></span>
+<span class="source-line-no">105</span><span id="line.105">    /**</span>
+<span class="source-line-no">106</span><span id="line.106">     * builds InvalidItemShippingDetailsError without checking for non null required values</span>
+<span class="source-line-no">107</span><span id="line.107">     */</span>
+<span class="source-line-no">108</span><span id="line.108">    public InvalidItemShippingDetailsError buildUnchecked() {</span>
+<span class="source-line-no">109</span><span id="line.109">        return new InvalidItemShippingDetailsErrorImpl(message, values, subject, itemId);</span>
+<span class="source-line-no">110</span><span id="line.110">    }</span>
+<span class="source-line-no">111</span><span id="line.111"></span>
+<span class="source-line-no">112</span><span id="line.112">    public static InvalidItemShippingDetailsErrorBuilder of() {</span>
+<span class="source-line-no">113</span><span id="line.113">        return new InvalidItemShippingDetailsErrorBuilder();</span>
+<span class="source-line-no">114</span><span id="line.114">    }</span>
+<span class="source-line-no">115</span><span id="line.115"></span>
+<span class="source-line-no">116</span><span id="line.116">    public static InvalidItemShippingDetailsErrorBuilder of(final InvalidItemShippingDetailsError template) {</span>
+<span class="source-line-no">117</span><span id="line.117">        InvalidItemShippingDetailsErrorBuilder builder = new InvalidItemShippingDetailsErrorBuilder();</span>
+<span class="source-line-no">118</span><span id="line.118">        builder.message = template.getMessage();</span>
+<span class="source-line-no">119</span><span id="line.119">        builder.values = template.values();</span>
+<span class="source-line-no">120</span><span id="line.120">        builder.subject = template.getSubject();</span>
+<span class="source-line-no">121</span><span id="line.121">        builder.itemId = template.getItemId();</span>
+<span class="source-line-no">122</span><span id="line.122">        return builder;</span>
+<span class="source-line-no">123</span><span id="line.123">    }</span>
+<span class="source-line-no">124</span><span id="line.124"></span>
+<span class="source-line-no">125</span><span id="line.125">}</span>
 
 
 

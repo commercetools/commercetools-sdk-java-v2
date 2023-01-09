@@ -138,38 +138,37 @@
 <span class="source-line-no">125</span><span id="line.125">    public ProductPresentWithDifferentVariantSelectionError build() {</span>
 <span class="source-line-no">126</span><span id="line.126">        Objects.requireNonNull(message,</span>
 <span class="source-line-no">127</span><span id="line.127">            ProductPresentWithDifferentVariantSelectionError.class + ": message is missing");</span>
-<span class="source-line-no">128</span><span id="line.128">        Objects.requireNonNull(values, ProductPresentWithDifferentVariantSelectionError.class + ": values are missing");</span>
-<span class="source-line-no">129</span><span id="line.129">        Objects.requireNonNull(product,</span>
-<span class="source-line-no">130</span><span id="line.130">            ProductPresentWithDifferentVariantSelectionError.class + ": product is missing");</span>
-<span class="source-line-no">131</span><span id="line.131">        Objects.requireNonNull(existingVariantSelection,</span>
-<span class="source-line-no">132</span><span id="line.132">            ProductPresentWithDifferentVariantSelectionError.class + ": existingVariantSelection is missing");</span>
-<span class="source-line-no">133</span><span id="line.133">        return new ProductPresentWithDifferentVariantSelectionErrorImpl(message, values, product,</span>
-<span class="source-line-no">134</span><span id="line.134">            existingVariantSelection);</span>
-<span class="source-line-no">135</span><span id="line.135">    }</span>
-<span class="source-line-no">136</span><span id="line.136"></span>
-<span class="source-line-no">137</span><span id="line.137">    /**</span>
-<span class="source-line-no">138</span><span id="line.138">     * builds ProductPresentWithDifferentVariantSelectionError without checking for non null required values</span>
-<span class="source-line-no">139</span><span id="line.139">     */</span>
-<span class="source-line-no">140</span><span id="line.140">    public ProductPresentWithDifferentVariantSelectionError buildUnchecked() {</span>
-<span class="source-line-no">141</span><span id="line.141">        return new ProductPresentWithDifferentVariantSelectionErrorImpl(message, values, product,</span>
-<span class="source-line-no">142</span><span id="line.142">            existingVariantSelection);</span>
-<span class="source-line-no">143</span><span id="line.143">    }</span>
-<span class="source-line-no">144</span><span id="line.144"></span>
-<span class="source-line-no">145</span><span id="line.145">    public static ProductPresentWithDifferentVariantSelectionErrorBuilder of() {</span>
-<span class="source-line-no">146</span><span id="line.146">        return new ProductPresentWithDifferentVariantSelectionErrorBuilder();</span>
-<span class="source-line-no">147</span><span id="line.147">    }</span>
-<span class="source-line-no">148</span><span id="line.148"></span>
-<span class="source-line-no">149</span><span id="line.149">    public static ProductPresentWithDifferentVariantSelectionErrorBuilder of(</span>
-<span class="source-line-no">150</span><span id="line.150">            final ProductPresentWithDifferentVariantSelectionError template) {</span>
-<span class="source-line-no">151</span><span id="line.151">        ProductPresentWithDifferentVariantSelectionErrorBuilder builder = new ProductPresentWithDifferentVariantSelectionErrorBuilder();</span>
-<span class="source-line-no">152</span><span id="line.152">        builder.message = template.getMessage();</span>
-<span class="source-line-no">153</span><span id="line.153">        builder.values = template.values();</span>
-<span class="source-line-no">154</span><span id="line.154">        builder.product = template.getProduct();</span>
-<span class="source-line-no">155</span><span id="line.155">        builder.existingVariantSelection = template.getExistingVariantSelection();</span>
-<span class="source-line-no">156</span><span id="line.156">        return builder;</span>
-<span class="source-line-no">157</span><span id="line.157">    }</span>
-<span class="source-line-no">158</span><span id="line.158"></span>
-<span class="source-line-no">159</span><span id="line.159">}</span>
+<span class="source-line-no">128</span><span id="line.128">        Objects.requireNonNull(product,</span>
+<span class="source-line-no">129</span><span id="line.129">            ProductPresentWithDifferentVariantSelectionError.class + ": product is missing");</span>
+<span class="source-line-no">130</span><span id="line.130">        Objects.requireNonNull(existingVariantSelection,</span>
+<span class="source-line-no">131</span><span id="line.131">            ProductPresentWithDifferentVariantSelectionError.class + ": existingVariantSelection is missing");</span>
+<span class="source-line-no">132</span><span id="line.132">        return new ProductPresentWithDifferentVariantSelectionErrorImpl(message, values, product,</span>
+<span class="source-line-no">133</span><span id="line.133">            existingVariantSelection);</span>
+<span class="source-line-no">134</span><span id="line.134">    }</span>
+<span class="source-line-no">135</span><span id="line.135"></span>
+<span class="source-line-no">136</span><span id="line.136">    /**</span>
+<span class="source-line-no">137</span><span id="line.137">     * builds ProductPresentWithDifferentVariantSelectionError without checking for non null required values</span>
+<span class="source-line-no">138</span><span id="line.138">     */</span>
+<span class="source-line-no">139</span><span id="line.139">    public ProductPresentWithDifferentVariantSelectionError buildUnchecked() {</span>
+<span class="source-line-no">140</span><span id="line.140">        return new ProductPresentWithDifferentVariantSelectionErrorImpl(message, values, product,</span>
+<span class="source-line-no">141</span><span id="line.141">            existingVariantSelection);</span>
+<span class="source-line-no">142</span><span id="line.142">    }</span>
+<span class="source-line-no">143</span><span id="line.143"></span>
+<span class="source-line-no">144</span><span id="line.144">    public static ProductPresentWithDifferentVariantSelectionErrorBuilder of() {</span>
+<span class="source-line-no">145</span><span id="line.145">        return new ProductPresentWithDifferentVariantSelectionErrorBuilder();</span>
+<span class="source-line-no">146</span><span id="line.146">    }</span>
+<span class="source-line-no">147</span><span id="line.147"></span>
+<span class="source-line-no">148</span><span id="line.148">    public static ProductPresentWithDifferentVariantSelectionErrorBuilder of(</span>
+<span class="source-line-no">149</span><span id="line.149">            final ProductPresentWithDifferentVariantSelectionError template) {</span>
+<span class="source-line-no">150</span><span id="line.150">        ProductPresentWithDifferentVariantSelectionErrorBuilder builder = new ProductPresentWithDifferentVariantSelectionErrorBuilder();</span>
+<span class="source-line-no">151</span><span id="line.151">        builder.message = template.getMessage();</span>
+<span class="source-line-no">152</span><span id="line.152">        builder.values = template.values();</span>
+<span class="source-line-no">153</span><span id="line.153">        builder.product = template.getProduct();</span>
+<span class="source-line-no">154</span><span id="line.154">        builder.existingVariantSelection = template.getExistingVariantSelection();</span>
+<span class="source-line-no">155</span><span id="line.155">        return builder;</span>
+<span class="source-line-no">156</span><span id="line.156">    }</span>
+<span class="source-line-no">157</span><span id="line.157"></span>
+<span class="source-line-no">158</span><span id="line.158">}</span>
 
 
 

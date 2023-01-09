@@ -71,7 +71,7 @@ public class CompanyBuilder implements Builder<Company> {
     private java.util.List<String> shippingAddressIds;
 
     @Nullable
-    private String defaultShipingAddressId;
+    private String defaultShippingAddressId;
 
     @Nullable
     private java.util.List<String> billingAddressIds;
@@ -368,8 +368,8 @@ public class CompanyBuilder implements Builder<Company> {
      *  <p>Unique identifier of the address used as the default shipping address.</p>
      */
 
-    public CompanyBuilder defaultShipingAddressId(@Nullable final String defaultShipingAddressId) {
-        this.defaultShipingAddressId = defaultShipingAddressId;
+    public CompanyBuilder defaultShippingAddressId(@Nullable final String defaultShippingAddressId) {
+        this.defaultShippingAddressId = defaultShippingAddressId;
         return this;
     }
 
@@ -577,8 +577,8 @@ public class CompanyBuilder implements Builder<Company> {
     }
 
     @Nullable
-    public String getDefaultShipingAddressId() {
-        return this.defaultShipingAddressId;
+    public String getDefaultShippingAddressId() {
+        return this.defaultShippingAddressId;
     }
 
     @Nullable
@@ -617,7 +617,7 @@ public class CompanyBuilder implements Builder<Company> {
         Objects.requireNonNull(associates, Company.class + ": associates is missing");
         Objects.requireNonNull(topLevelUnit, Company.class + ": topLevelUnit is missing");
         return new CompanyImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, key, status, stores,
-            storeMode, name, contactEmail, custom, addresses, shippingAddressIds, defaultShipingAddressId,
+            storeMode, name, contactEmail, custom, addresses, shippingAddressIds, defaultShippingAddressId,
             billingAddressIds, defaultBillingAddressId, associates, parentUnit, topLevelUnit);
     }
 
@@ -626,7 +626,7 @@ public class CompanyBuilder implements Builder<Company> {
      */
     public Company buildUnchecked() {
         return new CompanyImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, key, status, stores,
-            storeMode, name, contactEmail, custom, addresses, shippingAddressIds, defaultShipingAddressId,
+            storeMode, name, contactEmail, custom, addresses, shippingAddressIds, defaultShippingAddressId,
             billingAddressIds, defaultBillingAddressId, associates, parentUnit, topLevelUnit);
     }
 
@@ -651,7 +651,7 @@ public class CompanyBuilder implements Builder<Company> {
         builder.custom = template.getCustom();
         builder.addresses = template.getAddresses();
         builder.shippingAddressIds = template.getShippingAddressIds();
-        builder.defaultShipingAddressId = template.getDefaultShipingAddressId();
+        builder.defaultShippingAddressId = template.getDefaultShippingAddressId();
         builder.billingAddressIds = template.getBillingAddressIds();
         builder.defaultBillingAddressId = template.getDefaultBillingAddressId();
         builder.associates = template.getAssociates();

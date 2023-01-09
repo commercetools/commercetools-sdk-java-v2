@@ -45,7 +45,7 @@ public interface CompanyDraft extends BusinessUnitDraft {
         instance.setAssociates(template.getAssociates());
         instance.setAddresses(template.getAddresses());
         instance.setShippingAddresses(template.getShippingAddresses());
-        instance.setDefaultShipingAddress(template.getDefaultShipingAddress());
+        instance.setDefaultShippingAddress(template.getDefaultShippingAddress());
         instance.setBillingAddresses(template.getBillingAddresses());
         instance.setDefaultBillingAddress(template.getDefaultBillingAddress());
         instance.setCustom(template.getCustom());

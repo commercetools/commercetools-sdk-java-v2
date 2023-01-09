@@ -42,7 +42,7 @@ public class MyCompanyDraftBuilder implements Builder<MyCompanyDraft> {
     private java.util.List<Integer> shippingAddresses;
 
     @Nullable
-    private Integer defaultShipingAddress;
+    private Integer defaultShippingAddress;
 
     @Nullable
     private java.util.List<Integer> billingAddresses;
@@ -187,8 +187,8 @@ public class MyCompanyDraftBuilder implements Builder<MyCompanyDraft> {
      *  <p>Index of the entry in <code>addresses</code> to set as the default shipping address.</p>
      */
 
-    public MyCompanyDraftBuilder defaultShipingAddress(@Nullable final Integer defaultShipingAddress) {
-        this.defaultShipingAddress = defaultShipingAddress;
+    public MyCompanyDraftBuilder defaultShippingAddress(@Nullable final Integer defaultShippingAddress) {
+        this.defaultShippingAddress = defaultShippingAddress;
         return this;
     }
 
@@ -260,8 +260,8 @@ public class MyCompanyDraftBuilder implements Builder<MyCompanyDraft> {
     }
 
     @Nullable
-    public Integer getDefaultShipingAddress() {
-        return this.defaultShipingAddress;
+    public Integer getDefaultShippingAddress() {
+        return this.defaultShippingAddress;
     }
 
     @Nullable
@@ -278,7 +278,7 @@ public class MyCompanyDraftBuilder implements Builder<MyCompanyDraft> {
         Objects.requireNonNull(key, MyCompanyDraft.class + ": key is missing");
         Objects.requireNonNull(name, MyCompanyDraft.class + ": name is missing");
         return new MyCompanyDraftImpl(key, name, contactEmail, custom, addresses, shippingAddresses,
-            defaultShipingAddress, billingAddresses, defaultBillingAddress);
+            defaultShippingAddress, billingAddresses, defaultBillingAddress);
     }
 
     /**
@@ -286,7 +286,7 @@ public class MyCompanyDraftBuilder implements Builder<MyCompanyDraft> {
      */
     public MyCompanyDraft buildUnchecked() {
         return new MyCompanyDraftImpl(key, name, contactEmail, custom, addresses, shippingAddresses,
-            defaultShipingAddress, billingAddresses, defaultBillingAddress);
+            defaultShippingAddress, billingAddresses, defaultBillingAddress);
     }
 
     public static MyCompanyDraftBuilder of() {
@@ -301,7 +301,7 @@ public class MyCompanyDraftBuilder implements Builder<MyCompanyDraft> {
         builder.custom = template.getCustom();
         builder.addresses = template.getAddresses();
         builder.shippingAddresses = template.getShippingAddresses();
-        builder.defaultShipingAddress = template.getDefaultShipingAddress();
+        builder.defaultShippingAddress = template.getDefaultShippingAddress();
         builder.billingAddresses = template.getBillingAddresses();
         builder.defaultBillingAddress = template.getDefaultBillingAddress();
         return builder;

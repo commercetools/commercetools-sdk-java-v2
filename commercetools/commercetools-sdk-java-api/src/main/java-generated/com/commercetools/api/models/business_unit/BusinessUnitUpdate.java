@@ -29,7 +29,8 @@ import io.vrap.rmf.base.client.utils.Generated;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = BusinessUnitUpdateImpl.class)
-public interface BusinessUnitUpdate {
+public interface BusinessUnitUpdate extends
+        com.commercetools.api.models.ResourceUpdate<BusinessUnitUpdate, BusinessUnitUpdateAction, BusinessUnitUpdateBuilder> {
 
     /**
      *  <p>Expected version of the BusinessUnit on which the changes should be applied. If the expected version does not match the actual version, a 409 Conflict error will be returned.</p>

@@ -71,7 +71,7 @@ public interface Company extends BusinessUnit {
         instance.setCustom(template.getCustom());
         instance.setAddresses(template.getAddresses());
         instance.setShippingAddressIds(template.getShippingAddressIds());
-        instance.setDefaultShipingAddressId(template.getDefaultShipingAddressId());
+        instance.setDefaultShippingAddressId(template.getDefaultShippingAddressId());
         instance.setBillingAddressIds(template.getBillingAddressIds());
         instance.setDefaultBillingAddressId(template.getDefaultBillingAddressId());
         instance.setAssociates(template.getAssociates());

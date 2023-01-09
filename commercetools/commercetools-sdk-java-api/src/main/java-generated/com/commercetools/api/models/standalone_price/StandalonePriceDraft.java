@@ -37,7 +37,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = StandalonePriceDraftImpl.class)
-public interface StandalonePriceDraft {
+public interface StandalonePriceDraft extends com.commercetools.api.models.CustomizableDraft<StandalonePriceDraft> {
 
     /**
      *  <p>User-defined unique identifier for the StandalonePrice.</p>

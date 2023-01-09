@@ -112,8 +112,8 @@ public interface BusinessUnitDraft {
      *  <p>Index of the entry in <code>addresses</code> to set as the default shipping address.</p>
      */
 
-    @JsonProperty("defaultShipingAddress")
-    public Integer getDefaultShipingAddress();
+    @JsonProperty("defaultShippingAddress")
+    public Integer getDefaultShippingAddress();
 
     /**
      *  <p>Indexes of entries in <code>addresses</code> to set as billing addresses. The <code>billingAddressIds</code> of the Customer will be replaced by these addresses.</p>
@@ -166,7 +166,7 @@ public interface BusinessUnitDraft {
 
     public void setShippingAddresses(final List<Integer> shippingAddresses);
 
-    public void setDefaultShipingAddress(final Integer defaultShipingAddress);
+    public void setDefaultShippingAddress(final Integer defaultShippingAddress);
 
     @JsonIgnore
     public void setBillingAddresses(final Integer... billingAddresses);

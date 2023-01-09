@@ -42,7 +42,7 @@ public interface MyCompanyDraft extends MyBusinessUnitDraft {
         instance.setCustom(template.getCustom());
         instance.setAddresses(template.getAddresses());
         instance.setShippingAddresses(template.getShippingAddresses());
-        instance.setDefaultShipingAddress(template.getDefaultShipingAddress());
+        instance.setDefaultShippingAddress(template.getDefaultShippingAddress());
         instance.setBillingAddresses(template.getBillingAddresses());
         instance.setDefaultBillingAddress(template.getDefaultBillingAddress());
         return instance;

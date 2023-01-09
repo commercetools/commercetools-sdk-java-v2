@@ -35,7 +35,7 @@ public class MyCompanyDraftImpl implements MyCompanyDraft, ModelBase {
 
     private java.util.List<Integer> shippingAddresses;
 
-    private Integer defaultShipingAddress;
+    private Integer defaultShippingAddress;
 
     private java.util.List<Integer> billingAddresses;
 
@@ -47,7 +47,7 @@ public class MyCompanyDraftImpl implements MyCompanyDraft, ModelBase {
             @JsonProperty("custom") final com.commercetools.api.models.type.CustomFields custom,
             @JsonProperty("addresses") final java.util.List<com.commercetools.api.models.common.BaseAddress> addresses,
             @JsonProperty("shippingAddresses") final java.util.List<Integer> shippingAddresses,
-            @JsonProperty("defaultShipingAddress") final Integer defaultShipingAddress,
+            @JsonProperty("defaultShippingAddress") final Integer defaultShippingAddress,
             @JsonProperty("billingAddresses") final java.util.List<Integer> billingAddresses,
             @JsonProperty("defaultBillingAddress") final Integer defaultBillingAddress) {
         this.key = key;
@@ -56,7 +56,7 @@ public class MyCompanyDraftImpl implements MyCompanyDraft, ModelBase {
         this.custom = custom;
         this.addresses = addresses;
         this.shippingAddresses = shippingAddresses;
-        this.defaultShipingAddress = defaultShipingAddress;
+        this.defaultShippingAddress = defaultShippingAddress;
         this.billingAddresses = billingAddresses;
         this.defaultBillingAddress = defaultBillingAddress;
         this.unitType = BusinessUnitType.findEnum("Company");
@@ -126,8 +126,8 @@ public class MyCompanyDraftImpl implements MyCompanyDraft, ModelBase {
      *  <p>Index of the entry in <code>addresses</code> to set as the default shipping address.</p>
      */
 
-    public Integer getDefaultShipingAddress() {
-        return this.defaultShipingAddress;
+    public Integer getDefaultShippingAddress() {
+        return this.defaultShippingAddress;
     }
 
     /**
@@ -178,8 +178,8 @@ public class MyCompanyDraftImpl implements MyCompanyDraft, ModelBase {
         this.shippingAddresses = shippingAddresses;
     }
 
-    public void setDefaultShipingAddress(final Integer defaultShipingAddress) {
-        this.defaultShipingAddress = defaultShipingAddress;
+    public void setDefaultShippingAddress(final Integer defaultShippingAddress) {
+        this.defaultShippingAddress = defaultShippingAddress;
     }
 
     public void setBillingAddresses(final Integer... billingAddresses) {
@@ -211,7 +211,7 @@ public class MyCompanyDraftImpl implements MyCompanyDraft, ModelBase {
                 .append(custom, that.custom)
                 .append(addresses, that.addresses)
                 .append(shippingAddresses, that.shippingAddresses)
-                .append(defaultShipingAddress, that.defaultShipingAddress)
+                .append(defaultShippingAddress, that.defaultShippingAddress)
                 .append(billingAddresses, that.billingAddresses)
                 .append(defaultBillingAddress, that.defaultBillingAddress)
                 .isEquals();
@@ -226,7 +226,7 @@ public class MyCompanyDraftImpl implements MyCompanyDraft, ModelBase {
                 .append(custom)
                 .append(addresses)
                 .append(shippingAddresses)
-                .append(defaultShipingAddress)
+                .append(defaultShippingAddress)
                 .append(billingAddresses)
                 .append(defaultBillingAddress)
                 .toHashCode();

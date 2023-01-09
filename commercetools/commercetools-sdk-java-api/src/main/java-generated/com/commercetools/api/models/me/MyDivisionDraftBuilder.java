@@ -43,7 +43,7 @@ public class MyDivisionDraftBuilder implements Builder<MyDivisionDraft> {
     private java.util.List<Integer> shippingAddresses;
 
     @Nullable
-    private Integer defaultShipingAddress;
+    private Integer defaultShippingAddress;
 
     @Nullable
     private java.util.List<Integer> billingAddresses;
@@ -190,8 +190,8 @@ public class MyDivisionDraftBuilder implements Builder<MyDivisionDraft> {
      *  <p>Index of the entry in <code>addresses</code> to set as the default shipping address.</p>
      */
 
-    public MyDivisionDraftBuilder defaultShipingAddress(@Nullable final Integer defaultShipingAddress) {
-        this.defaultShipingAddress = defaultShipingAddress;
+    public MyDivisionDraftBuilder defaultShippingAddress(@Nullable final Integer defaultShippingAddress) {
+        this.defaultShippingAddress = defaultShippingAddress;
         return this;
     }
 
@@ -285,8 +285,8 @@ public class MyDivisionDraftBuilder implements Builder<MyDivisionDraft> {
     }
 
     @Nullable
-    public Integer getDefaultShipingAddress() {
-        return this.defaultShipingAddress;
+    public Integer getDefaultShippingAddress() {
+        return this.defaultShippingAddress;
     }
 
     @Nullable
@@ -308,7 +308,7 @@ public class MyDivisionDraftBuilder implements Builder<MyDivisionDraft> {
         Objects.requireNonNull(name, MyDivisionDraft.class + ": name is missing");
         Objects.requireNonNull(parentUnit, MyDivisionDraft.class + ": parentUnit is missing");
         return new MyDivisionDraftImpl(key, name, contactEmail, custom, addresses, shippingAddresses,
-            defaultShipingAddress, billingAddresses, defaultBillingAddress, parentUnit);
+            defaultShippingAddress, billingAddresses, defaultBillingAddress, parentUnit);
     }
 
     /**
@@ -316,7 +316,7 @@ public class MyDivisionDraftBuilder implements Builder<MyDivisionDraft> {
      */
     public MyDivisionDraft buildUnchecked() {
         return new MyDivisionDraftImpl(key, name, contactEmail, custom, addresses, shippingAddresses,
-            defaultShipingAddress, billingAddresses, defaultBillingAddress, parentUnit);
+            defaultShippingAddress, billingAddresses, defaultBillingAddress, parentUnit);
     }
 
     public static MyDivisionDraftBuilder of() {
@@ -331,7 +331,7 @@ public class MyDivisionDraftBuilder implements Builder<MyDivisionDraft> {
         builder.custom = template.getCustom();
         builder.addresses = template.getAddresses();
         builder.shippingAddresses = template.getShippingAddresses();
-        builder.defaultShipingAddress = template.getDefaultShipingAddress();
+        builder.defaultShippingAddress = template.getDefaultShippingAddress();
         builder.billingAddresses = template.getBillingAddresses();
         builder.defaultBillingAddress = template.getDefaultBillingAddress();
         builder.parentUnit = template.getParentUnit();

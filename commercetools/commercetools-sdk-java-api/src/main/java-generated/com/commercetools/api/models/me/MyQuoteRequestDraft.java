@@ -29,7 +29,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = MyQuoteRequestDraftImpl.class)
-public interface MyQuoteRequestDraft {
+public interface MyQuoteRequestDraft extends io.vrap.rmf.base.client.Draft<MyQuoteRequestDraft> {
 
     /**
      *  <p><code>id</code> of the Cart from which the Quote Request is created.</p>

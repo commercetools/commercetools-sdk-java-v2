@@ -26,7 +26,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = MyCompanyDraftImpl.class)
-public interface MyCompanyDraft extends MyBusinessUnitDraft {
+public interface MyCompanyDraft extends MyBusinessUnitDraft, io.vrap.rmf.base.client.Draft<MyCompanyDraft> {
 
     String COMPANY = "Company";
 

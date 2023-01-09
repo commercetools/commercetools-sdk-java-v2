@@ -29,7 +29,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ShoppingListLineItemDraftImpl.class)
 public interface ShoppingListLineItemDraft
-        extends com.commercetools.api.models.CustomizableDraft<ShoppingListLineItemDraft> {
+        extends com.commercetools.api.models.CustomizableDraft<ShoppingListLineItemDraft>,
+        io.vrap.rmf.base.client.Draft<ShoppingListLineItemDraft> {
 
     /**
      *  <p>Unique identifier of a Product.</p>

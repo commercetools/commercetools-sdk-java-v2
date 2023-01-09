@@ -30,7 +30,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = TaxedItemPriceDraftImpl.class)
-public interface TaxedItemPriceDraft {
+public interface TaxedItemPriceDraft extends io.vrap.rmf.base.client.Draft<TaxedItemPriceDraft> {
 
     /**
      *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>

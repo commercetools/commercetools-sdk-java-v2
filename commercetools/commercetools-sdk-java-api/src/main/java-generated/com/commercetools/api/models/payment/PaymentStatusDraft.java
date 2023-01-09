@@ -27,7 +27,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = PaymentStatusDraftImpl.class)
-public interface PaymentStatusDraft {
+public interface PaymentStatusDraft extends io.vrap.rmf.base.client.Draft<PaymentStatusDraft> {
 
     /**
      *  <p>External reference that identifies the current status of the Payment.</p>

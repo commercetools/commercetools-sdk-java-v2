@@ -28,7 +28,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CustomObjectDraftImpl.class)
-public interface CustomObjectDraft {
+public interface CustomObjectDraft extends io.vrap.rmf.base.client.Draft<CustomObjectDraft> {
 
     /**
      *  <p>Namespace to group CustomObjects.</p>

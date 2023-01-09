@@ -31,7 +31,8 @@ import io.vrap.rmf.base.client.utils.Generated;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = TextLineItemDraftImpl.class)
-public interface TextLineItemDraft extends com.commercetools.api.models.CustomizableDraft<TextLineItemDraft> {
+public interface TextLineItemDraft extends com.commercetools.api.models.CustomizableDraft<TextLineItemDraft>,
+        io.vrap.rmf.base.client.Draft<TextLineItemDraft> {
 
     /**
      *  <p>Date and time the TextLineItem is added to the ShoppingList. If not set, the current date and time (UTC) is used.</p>

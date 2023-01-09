@@ -36,7 +36,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CustomLineItemDraftImpl.class)
-public interface CustomLineItemDraft {
+public interface CustomLineItemDraft extends io.vrap.rmf.base.client.Draft<CustomLineItemDraft> {
 
     /**
      *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>

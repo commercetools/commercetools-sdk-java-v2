@@ -27,7 +27,8 @@ import io.vrap.rmf.base.client.utils.Generated;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProductDiscountValueRelativeDraftImpl.class)
-public interface ProductDiscountValueRelativeDraft extends ProductDiscountValueDraft {
+public interface ProductDiscountValueRelativeDraft
+        extends ProductDiscountValueDraft, io.vrap.rmf.base.client.Draft<ProductDiscountValueRelativeDraft> {
 
     String RELATIVE = "relative";
 

@@ -29,7 +29,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProductVariantDraftImpl.class)
-public interface ProductVariantDraft {
+public interface ProductVariantDraft extends io.vrap.rmf.base.client.Draft<ProductVariantDraft> {
 
     /**
      *  <p>User-defined unique SKU of the Product Variant.</p>

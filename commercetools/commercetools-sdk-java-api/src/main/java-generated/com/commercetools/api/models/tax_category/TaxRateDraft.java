@@ -30,7 +30,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = TaxRateDraftImpl.class)
-public interface TaxRateDraft {
+public interface TaxRateDraft extends io.vrap.rmf.base.client.Draft<TaxRateDraft> {
 
     /**
      *  <p>Name of the TaxRate.</p>

@@ -28,7 +28,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = MyOrderFromCartDraftImpl.class)
-public interface MyOrderFromCartDraft {
+public interface MyOrderFromCartDraft extends io.vrap.rmf.base.client.Draft<MyOrderFromCartDraft> {
 
     /**
      *  <p>Unique identifier of the Cart that initiates an Order creation.</p>

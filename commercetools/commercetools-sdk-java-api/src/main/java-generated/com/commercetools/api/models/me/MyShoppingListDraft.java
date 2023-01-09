@@ -33,7 +33,8 @@ import io.vrap.rmf.base.client.utils.Generated;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = MyShoppingListDraftImpl.class)
-public interface MyShoppingListDraft extends com.commercetools.api.models.CustomizableDraft<MyShoppingListDraft> {
+public interface MyShoppingListDraft extends com.commercetools.api.models.CustomizableDraft<MyShoppingListDraft>,
+        io.vrap.rmf.base.client.Draft<MyShoppingListDraft> {
 
     /**
      *  <p>Name of the ShoppingList.</p>

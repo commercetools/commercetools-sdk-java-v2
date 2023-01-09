@@ -33,7 +33,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = QuoteRequestDraftImpl.class)
-public interface QuoteRequestDraft {
+public interface QuoteRequestDraft extends io.vrap.rmf.base.client.Draft<QuoteRequestDraft> {
 
     /**
      *  <p>Cart for which a Quote is requested. Anonymous Carts, Carts with Discount Codes, or Carts with a <code>Multiple</code> ShippingMode are not supported.</p>

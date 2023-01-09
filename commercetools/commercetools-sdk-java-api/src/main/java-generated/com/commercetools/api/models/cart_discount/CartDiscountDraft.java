@@ -35,7 +35,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CartDiscountDraftImpl.class)
 public interface CartDiscountDraft extends com.commercetools.api.models.CustomizableDraft<CartDiscountDraft>,
-        com.commercetools.api.models.WithKey {
+        com.commercetools.api.models.WithKey, io.vrap.rmf.base.client.Draft<CartDiscountDraft> {
 
     /**
      *  <p>Name of the CartDiscount.</p>

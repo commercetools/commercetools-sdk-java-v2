@@ -31,7 +31,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProductSelectionDraftImpl.class)
 public interface ProductSelectionDraft extends com.commercetools.api.models.CustomizableDraft<ProductSelectionDraft>,
-        com.commercetools.api.models.WithKey {
+        com.commercetools.api.models.WithKey, io.vrap.rmf.base.client.Draft<ProductSelectionDraft> {
 
     /**
      *  <p>User-defined unique identifier for the ProductSelection.</p>

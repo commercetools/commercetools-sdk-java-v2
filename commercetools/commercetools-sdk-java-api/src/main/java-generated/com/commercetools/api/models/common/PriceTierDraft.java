@@ -29,7 +29,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = PriceTierDraftImpl.class)
-public interface PriceTierDraft {
+public interface PriceTierDraft extends io.vrap.rmf.base.client.Draft<PriceTierDraft> {
 
     /**
      *  <p>Minimum quantity this Price tier is valid for.</p>

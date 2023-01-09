@@ -31,7 +31,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = DiscountedLineItemPriceDraftImpl.class)
-public interface DiscountedLineItemPriceDraft {
+public interface DiscountedLineItemPriceDraft extends io.vrap.rmf.base.client.Draft<DiscountedLineItemPriceDraft> {
 
     /**
      *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>

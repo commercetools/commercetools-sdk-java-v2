@@ -35,7 +35,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ShippingMethodDraftImpl.class)
 public interface ShippingMethodDraft extends com.commercetools.api.models.CustomizableDraft<ShippingMethodDraft>,
-        com.commercetools.api.models.WithKey {
+        com.commercetools.api.models.WithKey, io.vrap.rmf.base.client.Draft<ShippingMethodDraft> {
 
     /**
      *  <p>User-defined unique identifier for the ShippingMethod.</p>

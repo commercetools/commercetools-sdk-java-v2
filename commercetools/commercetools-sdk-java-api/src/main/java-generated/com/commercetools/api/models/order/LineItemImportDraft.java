@@ -38,7 +38,8 @@ import io.vrap.rmf.base.client.utils.Generated;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = LineItemImportDraftImpl.class)
-public interface LineItemImportDraft extends com.commercetools.api.models.CustomizableDraft<LineItemImportDraft> {
+public interface LineItemImportDraft extends com.commercetools.api.models.CustomizableDraft<LineItemImportDraft>,
+        io.vrap.rmf.base.client.Draft<LineItemImportDraft> {
 
     /**
      *  <p>ID of the existing product. You also need to specify the ID of the variant if this property is set or alternatively you can just specify SKU of the product variant.</p>

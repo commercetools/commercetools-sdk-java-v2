@@ -31,7 +31,8 @@ import io.vrap.rmf.base.client.utils.Generated;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = MyPaymentDraftImpl.class)
-public interface MyPaymentDraft extends com.commercetools.api.models.CustomizableDraft<MyPaymentDraft> {
+public interface MyPaymentDraft extends com.commercetools.api.models.CustomizableDraft<MyPaymentDraft>,
+        io.vrap.rmf.base.client.Draft<MyPaymentDraft> {
 
     /**
      *  <p>Money value the Payment intends to receive from the customer. The value usually matches the Cart or Order gross total.</p>

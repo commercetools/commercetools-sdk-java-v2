@@ -28,7 +28,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ApiClientDraftImpl.class)
-public interface ApiClientDraft {
+public interface ApiClientDraft extends io.vrap.rmf.base.client.Draft<ApiClientDraft> {
 
     /**
      *  <p>Name of the APIClient.</p>

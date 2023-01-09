@@ -32,7 +32,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = AttributeDefinitionDraftImpl.class)
-public interface AttributeDefinitionDraft {
+public interface AttributeDefinitionDraft extends io.vrap.rmf.base.client.Draft<AttributeDefinitionDraft> {
 
     /**
      *  <p>Describes the Type of the Attribute.</p>

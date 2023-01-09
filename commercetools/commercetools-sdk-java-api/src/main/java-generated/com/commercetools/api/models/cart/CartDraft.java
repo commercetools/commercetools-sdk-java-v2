@@ -34,8 +34,8 @@ import io.vrap.rmf.base.client.utils.Generated;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CartDraftImpl.class)
-public interface CartDraft
-        extends com.commercetools.api.models.CustomizableDraft<CartDraft>, com.commercetools.api.models.WithKey {
+public interface CartDraft extends com.commercetools.api.models.CustomizableDraft<CartDraft>,
+        com.commercetools.api.models.WithKey, io.vrap.rmf.base.client.Draft<CartDraft> {
 
     /**
      *  <p>A three-digit currency code as per ISO 4217.</p>

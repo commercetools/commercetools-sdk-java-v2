@@ -29,7 +29,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ExtensionDraftImpl.class)
-public interface ExtensionDraft {
+public interface ExtensionDraft extends com.commercetools.api.models.WithKey {
 
     /**
      *  <p>User-defined unique identifier for the Extension.</p>

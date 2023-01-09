@@ -65,7 +65,6 @@ public class GeneralErrorBuilder implements Builder<GeneralError> {
 
     public GeneralError build() {
         Objects.requireNonNull(message, GeneralError.class + ": message is missing");
-        Objects.requireNonNull(values, GeneralError.class + ": values are missing");
         return new GeneralErrorImpl(message, values);
     }
 

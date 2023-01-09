@@ -65,7 +65,6 @@ public class InvalidOperationErrorBuilder implements Builder<InvalidOperationErr
 
     public InvalidOperationError build() {
         Objects.requireNonNull(message, InvalidOperationError.class + ": message is missing");
-        Objects.requireNonNull(values, InvalidOperationError.class + ": values are missing");
         return new InvalidOperationErrorImpl(message, values);
     }
 

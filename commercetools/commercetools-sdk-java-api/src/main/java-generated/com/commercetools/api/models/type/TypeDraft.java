@@ -31,7 +31,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = TypeDraftImpl.class)
-public interface TypeDraft {
+public interface TypeDraft extends com.commercetools.api.models.WithKey {
 
     /**
      *  <p>User-defined unique identifier for the Type.</p>

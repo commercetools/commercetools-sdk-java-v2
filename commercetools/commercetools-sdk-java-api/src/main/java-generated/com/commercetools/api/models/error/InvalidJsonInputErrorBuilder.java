@@ -81,7 +81,6 @@ public class InvalidJsonInputErrorBuilder implements Builder<InvalidJsonInputErr
 
     public InvalidJsonInputError build() {
         Objects.requireNonNull(message, InvalidJsonInputError.class + ": message is missing");
-        Objects.requireNonNull(values, InvalidJsonInputError.class + ": values are missing");
         Objects.requireNonNull(detailedErrorMessage, InvalidJsonInputError.class + ": detailedErrorMessage is missing");
         return new InvalidJsonInputErrorImpl(message, values, detailedErrorMessage);
     }

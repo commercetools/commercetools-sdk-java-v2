@@ -125,7 +125,6 @@ public class DuplicateFieldWithConflictingResourceErrorBuilder
 
     public DuplicateFieldWithConflictingResourceError build() {
         Objects.requireNonNull(message, DuplicateFieldWithConflictingResourceError.class + ": message is missing");
-        Objects.requireNonNull(values, DuplicateFieldWithConflictingResourceError.class + ": values are missing");
         Objects.requireNonNull(field, DuplicateFieldWithConflictingResourceError.class + ": field is missing");
         Objects.requireNonNull(duplicateValue,
             DuplicateFieldWithConflictingResourceError.class + ": duplicateValue is missing");

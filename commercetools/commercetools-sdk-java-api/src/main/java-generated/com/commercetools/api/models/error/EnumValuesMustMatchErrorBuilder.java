@@ -65,7 +65,6 @@ public class EnumValuesMustMatchErrorBuilder implements Builder<EnumValuesMustMa
 
     public EnumValuesMustMatchError build() {
         Objects.requireNonNull(message, EnumValuesMustMatchError.class + ": message is missing");
-        Objects.requireNonNull(values, EnumValuesMustMatchError.class + ": values are missing");
         return new EnumValuesMustMatchErrorImpl(message, values);
     }
 

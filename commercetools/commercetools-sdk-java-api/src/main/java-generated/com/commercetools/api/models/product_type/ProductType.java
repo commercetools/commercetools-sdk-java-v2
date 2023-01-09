@@ -39,7 +39,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ProductTypeImpl.class)
 public interface ProductType extends BaseResource, com.commercetools.api.models.DomainResource<ProductType>,
         com.commercetools.api.models.Referencable<ProductType>,
-        com.commercetools.api.models.ResourceIdentifiable<ProductType> {
+        com.commercetools.api.models.ResourceIdentifiable<ProductType>, com.commercetools.api.models.WithKey {
 
     /**
      *  <p>Unique identifier of the ProductType.</p>

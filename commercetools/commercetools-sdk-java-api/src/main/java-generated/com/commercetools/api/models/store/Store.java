@@ -47,7 +47,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = StoreImpl.class)
 public interface Store extends BaseResource, com.commercetools.api.models.DomainResource<Store>,
         com.commercetools.api.models.Referencable<Store>, com.commercetools.api.models.ResourceIdentifiable<Store>,
-        com.commercetools.api.models.Customizable<Store> {
+        com.commercetools.api.models.Customizable<Store>, com.commercetools.api.models.WithKey {
 
     /**
      *  <p>Unique ID of the Store.</p>

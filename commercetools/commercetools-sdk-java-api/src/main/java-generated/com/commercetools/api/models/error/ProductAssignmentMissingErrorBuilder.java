@@ -93,7 +93,6 @@ public class ProductAssignmentMissingErrorBuilder implements Builder<ProductAssi
 
     public ProductAssignmentMissingError build() {
         Objects.requireNonNull(message, ProductAssignmentMissingError.class + ": message is missing");
-        Objects.requireNonNull(values, ProductAssignmentMissingError.class + ": values are missing");
         Objects.requireNonNull(product, ProductAssignmentMissingError.class + ": product is missing");
         return new ProductAssignmentMissingErrorImpl(message, values, product);
     }

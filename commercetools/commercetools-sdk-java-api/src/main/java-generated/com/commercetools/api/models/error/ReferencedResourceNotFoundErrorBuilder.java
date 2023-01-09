@@ -118,7 +118,6 @@ public class ReferencedResourceNotFoundErrorBuilder implements Builder<Reference
 
     public ReferencedResourceNotFoundError build() {
         Objects.requireNonNull(message, ReferencedResourceNotFoundError.class + ": message is missing");
-        Objects.requireNonNull(values, ReferencedResourceNotFoundError.class + ": values are missing");
         Objects.requireNonNull(typeId, ReferencedResourceNotFoundError.class + ": typeId is missing");
         return new ReferencedResourceNotFoundErrorImpl(message, values, typeId, id, key);
     }

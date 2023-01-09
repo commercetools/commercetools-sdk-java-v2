@@ -67,7 +67,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = QuoteImpl.class)
 public interface Quote extends BaseResource, com.commercetools.api.models.DomainResource<Quote>,
         com.commercetools.api.models.Referencable<Quote>, com.commercetools.api.models.ResourceIdentifiable<Quote>,
-        com.commercetools.api.models.Customizable<Quote> {
+        com.commercetools.api.models.Customizable<Quote>, com.commercetools.api.models.WithKey {
 
     /**
      *  <p>Unique identifier of the Quote.</p>

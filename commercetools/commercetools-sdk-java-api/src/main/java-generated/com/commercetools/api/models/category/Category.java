@@ -45,7 +45,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface Category extends BaseResource, com.commercetools.api.models.DomainResource<Category>,
         com.commercetools.api.models.Referencable<Category>,
         com.commercetools.api.models.ResourceIdentifiable<Category>,
-        com.commercetools.api.models.Customizable<Category> {
+        com.commercetools.api.models.Customizable<Category>, com.commercetools.api.models.WithKey {
 
     /**
      *  <p>Unique identifier of the Category.</p>

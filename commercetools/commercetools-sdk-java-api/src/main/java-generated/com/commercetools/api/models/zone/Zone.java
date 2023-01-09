@@ -38,7 +38,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ZoneImpl.class)
 public interface Zone extends BaseResource, com.commercetools.api.models.DomainResource<Zone>,
-        com.commercetools.api.models.Referencable<Zone>, com.commercetools.api.models.ResourceIdentifiable<Zone> {
+        com.commercetools.api.models.Referencable<Zone>, com.commercetools.api.models.ResourceIdentifiable<Zone>,
+        com.commercetools.api.models.WithKey {
 
     /**
      *  <p>Unique identifier of the Zone.</p>

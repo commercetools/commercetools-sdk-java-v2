@@ -65,7 +65,6 @@ public class SearchDeactivatedErrorBuilder implements Builder<SearchDeactivatedE
 
     public SearchDeactivatedError build() {
         Objects.requireNonNull(message, SearchDeactivatedError.class + ": message is missing");
-        Objects.requireNonNull(values, SearchDeactivatedError.class + ": values are missing");
         return new SearchDeactivatedErrorImpl(message, values);
     }
 

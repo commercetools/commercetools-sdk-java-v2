@@ -94,7 +94,6 @@ public class ExtensionPredicateEvaluationFailedErrorBuilder
 
     public ExtensionPredicateEvaluationFailedError build() {
         Objects.requireNonNull(message, ExtensionPredicateEvaluationFailedError.class + ": message is missing");
-        Objects.requireNonNull(values, ExtensionPredicateEvaluationFailedError.class + ": values are missing");
         Objects.requireNonNull(errorByExtension,
             ExtensionPredicateEvaluationFailedError.class + ": errorByExtension is missing");
         return new ExtensionPredicateEvaluationFailedErrorImpl(message, values, errorByExtension);

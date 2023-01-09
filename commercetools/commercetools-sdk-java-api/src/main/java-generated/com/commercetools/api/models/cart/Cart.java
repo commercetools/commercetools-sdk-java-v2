@@ -56,7 +56,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = CartImpl.class)
 public interface Cart extends BaseResource, com.commercetools.api.models.DomainResource<Cart>,
         com.commercetools.api.models.Referencable<Cart>, com.commercetools.api.models.ResourceIdentifiable<Cart>,
-        com.commercetools.api.models.Customizable<Cart>, com.commercetools.api.models.order.OrderLike<Cart> {
+        com.commercetools.api.models.Customizable<Cart>, com.commercetools.api.models.order.OrderLike<Cart>,
+        com.commercetools.api.models.WithKey {
 
     /**
      *  <p>Unique identifier of the Cart.</p>

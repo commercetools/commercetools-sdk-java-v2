@@ -84,7 +84,6 @@ public class ConcurrentModificationErrorBuilder implements Builder<ConcurrentMod
 
     public ConcurrentModificationError build() {
         Objects.requireNonNull(message, ConcurrentModificationError.class + ": message is missing");
-        Objects.requireNonNull(values, ConcurrentModificationError.class + ": values are missing");
         return new ConcurrentModificationErrorImpl(message, values, currentVersion);
     }
 

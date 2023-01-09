@@ -114,7 +114,6 @@ public class AttributeDefinitionTypeConflictErrorBuilder implements Builder<Attr
 
     public AttributeDefinitionTypeConflictError build() {
         Objects.requireNonNull(message, AttributeDefinitionTypeConflictError.class + ": message is missing");
-        Objects.requireNonNull(values, AttributeDefinitionTypeConflictError.class + ": values are missing");
         Objects.requireNonNull(conflictingProductTypeId,
             AttributeDefinitionTypeConflictError.class + ": conflictingProductTypeId is missing");
         Objects.requireNonNull(conflictingProductTypeName,

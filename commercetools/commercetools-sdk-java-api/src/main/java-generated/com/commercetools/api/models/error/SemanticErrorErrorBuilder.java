@@ -65,7 +65,6 @@ public class SemanticErrorErrorBuilder implements Builder<SemanticErrorError> {
 
     public SemanticErrorError build() {
         Objects.requireNonNull(message, SemanticErrorError.class + ": message is missing");
-        Objects.requireNonNull(values, SemanticErrorError.class + ": values are missing");
         return new SemanticErrorErrorImpl(message, values);
     }
 

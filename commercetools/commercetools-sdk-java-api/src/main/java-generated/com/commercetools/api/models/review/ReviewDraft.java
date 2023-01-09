@@ -31,7 +31,8 @@ import io.vrap.rmf.base.client.utils.Generated;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ReviewDraftImpl.class)
-public interface ReviewDraft extends com.commercetools.api.models.CustomizableDraft<ReviewDraft> {
+public interface ReviewDraft
+        extends com.commercetools.api.models.CustomizableDraft<ReviewDraft>, com.commercetools.api.models.WithKey {
 
     /**
      *  <p>User-defined unique identifier for the Review.</p>

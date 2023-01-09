@@ -45,7 +45,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ShoppingList extends BaseResource, com.commercetools.api.models.DomainResource<ShoppingList>,
         com.commercetools.api.models.Referencable<ShoppingList>,
         com.commercetools.api.models.ResourceIdentifiable<ShoppingList>,
-        com.commercetools.api.models.Customizable<ShoppingList> {
+        com.commercetools.api.models.Customizable<ShoppingList>, com.commercetools.api.models.WithKey {
 
     /**
      *  <p>Unique identifier of the ShoppingList.</p>

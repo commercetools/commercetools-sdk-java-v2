@@ -49,7 +49,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface CartDiscount extends BaseResource, com.commercetools.api.models.DomainResource<CartDiscount>,
         com.commercetools.api.models.Referencable<CartDiscount>,
         com.commercetools.api.models.ResourceIdentifiable<CartDiscount>,
-        com.commercetools.api.models.Customizable<CartDiscount> {
+        com.commercetools.api.models.Customizable<CartDiscount>, com.commercetools.api.models.WithKey {
 
     /**
      *  <p>Unique identifier of the CartDiscount.</p>

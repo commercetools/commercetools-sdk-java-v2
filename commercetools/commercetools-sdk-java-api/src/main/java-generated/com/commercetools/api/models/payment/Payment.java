@@ -46,7 +46,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = PaymentImpl.class)
 public interface Payment extends BaseResource, com.commercetools.api.models.DomainResource<Payment>,
         com.commercetools.api.models.Referencable<Payment>, com.commercetools.api.models.ResourceIdentifiable<Payment>,
-        com.commercetools.api.models.Customizable<Payment> {
+        com.commercetools.api.models.Customizable<Payment>, com.commercetools.api.models.WithKey {
 
     /**
      *  <p>Unique identifier of the Payment.</p>

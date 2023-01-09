@@ -28,7 +28,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = TaxCategoryDraftImpl.class)
-public interface TaxCategoryDraft {
+public interface TaxCategoryDraft extends com.commercetools.api.models.WithKey {
 
     /**
      *  <p>Name of the TaxCategory.</p>

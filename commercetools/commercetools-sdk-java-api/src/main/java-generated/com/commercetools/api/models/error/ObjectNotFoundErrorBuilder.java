@@ -65,7 +65,6 @@ public class ObjectNotFoundErrorBuilder implements Builder<ObjectNotFoundError> 
 
     public ObjectNotFoundError build() {
         Objects.requireNonNull(message, ObjectNotFoundError.class + ": message is missing");
-        Objects.requireNonNull(values, ObjectNotFoundError.class + ": values are missing");
         return new ObjectNotFoundErrorImpl(message, values);
     }
 

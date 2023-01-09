@@ -31,7 +31,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = AssetImpl.class)
-public interface Asset extends com.commercetools.api.models.Customizable<Asset> {
+public interface Asset extends com.commercetools.api.models.Customizable<Asset>, com.commercetools.api.models.WithKey {
 
     /**
      *  <p>Unique identifier of the Asset.</p>

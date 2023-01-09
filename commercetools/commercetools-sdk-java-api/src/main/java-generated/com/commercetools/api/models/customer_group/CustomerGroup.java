@@ -40,7 +40,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface CustomerGroup extends BaseResource, com.commercetools.api.models.DomainResource<CustomerGroup>,
         com.commercetools.api.models.Referencable<CustomerGroup>,
         com.commercetools.api.models.ResourceIdentifiable<CustomerGroup>,
-        com.commercetools.api.models.Customizable<CustomerGroup> {
+        com.commercetools.api.models.Customizable<CustomerGroup>, com.commercetools.api.models.WithKey {
 
     /**
      *  <p>Unique identifier of the CustomerGroup.</p>

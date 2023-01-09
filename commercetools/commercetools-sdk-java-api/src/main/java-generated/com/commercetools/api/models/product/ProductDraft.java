@@ -35,7 +35,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProductDraftImpl.class)
-public interface ProductDraft {
+public interface ProductDraft extends com.commercetools.api.models.WithKey {
 
     /**
      *  <p>The Product Type defining the Attributes for the Product. Cannot be changed later.</p>

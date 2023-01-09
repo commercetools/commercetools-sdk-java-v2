@@ -50,7 +50,6 @@ public class AttributesBuilder implements Builder<Attributes> {
     }
 
     public Attributes build() {
-        Objects.requireNonNull(values, Attributes.class + ": values are missing");
         return new AttributesImpl(values);
     }
 

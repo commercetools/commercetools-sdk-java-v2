@@ -44,7 +44,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface OrderEdit extends BaseResource, com.commercetools.api.models.DomainResource<OrderEdit>,
         com.commercetools.api.models.Referencable<OrderEdit>,
         com.commercetools.api.models.ResourceIdentifiable<OrderEdit>,
-        com.commercetools.api.models.Customizable<OrderEdit> {
+        com.commercetools.api.models.Customizable<OrderEdit>, com.commercetools.api.models.WithKey {
 
     /**
      *  <p>Unique identifier of the OrderEdit.</p>

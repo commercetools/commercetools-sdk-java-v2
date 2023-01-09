@@ -65,7 +65,6 @@ public class EnumValueIsUsedErrorBuilder implements Builder<EnumValueIsUsedError
 
     public EnumValueIsUsedError build() {
         Objects.requireNonNull(message, EnumValueIsUsedError.class + ": message is missing");
-        Objects.requireNonNull(values, EnumValueIsUsedError.class + ": values are missing");
         return new EnumValueIsUsedErrorImpl(message, values);
     }
 

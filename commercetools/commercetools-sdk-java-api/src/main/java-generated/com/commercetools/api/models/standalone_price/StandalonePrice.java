@@ -47,7 +47,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface StandalonePrice extends BaseResource, com.commercetools.api.models.DomainResource<StandalonePrice>,
         com.commercetools.api.models.Referencable<StandalonePrice>,
         com.commercetools.api.models.ResourceIdentifiable<StandalonePrice>,
-        com.commercetools.api.models.Customizable<StandalonePrice> {
+        com.commercetools.api.models.Customizable<StandalonePrice>, com.commercetools.api.models.WithKey {
 
     /**
      *  <p>Unique identifier of the StandalonePrice.</p>

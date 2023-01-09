@@ -102,7 +102,6 @@ public class DuplicateEnumValuesErrorBuilder implements Builder<DuplicateEnumVal
 
     public DuplicateEnumValuesError build() {
         Objects.requireNonNull(message, DuplicateEnumValuesError.class + ": message is missing");
-        Objects.requireNonNull(values, DuplicateEnumValuesError.class + ": values are missing");
         Objects.requireNonNull(duplicates, DuplicateEnumValuesError.class + ": duplicates is missing");
         return new DuplicateEnumValuesErrorImpl(message, values, duplicates);
     }

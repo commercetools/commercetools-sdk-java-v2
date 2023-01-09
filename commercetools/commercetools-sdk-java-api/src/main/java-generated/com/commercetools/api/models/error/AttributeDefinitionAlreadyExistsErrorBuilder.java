@@ -116,7 +116,6 @@ public class AttributeDefinitionAlreadyExistsErrorBuilder implements Builder<Att
 
     public AttributeDefinitionAlreadyExistsError build() {
         Objects.requireNonNull(message, AttributeDefinitionAlreadyExistsError.class + ": message is missing");
-        Objects.requireNonNull(values, AttributeDefinitionAlreadyExistsError.class + ": values are missing");
         Objects.requireNonNull(conflictingProductTypeId,
             AttributeDefinitionAlreadyExistsError.class + ": conflictingProductTypeId is missing");
         Objects.requireNonNull(conflictingProductTypeName,

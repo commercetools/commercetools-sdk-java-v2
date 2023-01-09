@@ -244,7 +244,6 @@ public class ExtensionBadResponseErrorBuilder implements Builder<ExtensionBadRes
 
     public ExtensionBadResponseError build() {
         Objects.requireNonNull(message, ExtensionBadResponseError.class + ": message is missing");
-        Objects.requireNonNull(values, ExtensionBadResponseError.class + ": values are missing");
         Objects.requireNonNull(extensionErrors, ExtensionBadResponseError.class + ": extensionErrors is missing");
         Objects.requireNonNull(extensionId, ExtensionBadResponseError.class + ": extensionId is missing");
         return new ExtensionBadResponseErrorImpl(message, values, localizedMessage, extensionExtraInfo, extensionErrors,

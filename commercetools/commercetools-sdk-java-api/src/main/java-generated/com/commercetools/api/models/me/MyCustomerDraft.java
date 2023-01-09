@@ -33,7 +33,8 @@ import io.vrap.rmf.base.client.utils.Generated;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = MyCustomerDraftImpl.class)
-public interface MyCustomerDraft extends com.commercetools.api.models.CustomizableDraft<MyCustomerDraft> {
+public interface MyCustomerDraft extends com.commercetools.api.models.CustomizableDraft<MyCustomerDraft>,
+        io.vrap.rmf.base.client.Draft<MyCustomerDraft> {
 
     /**
      *  <p>Email address of the Customer that is unique for an entire Project or Store the Customer is assigned to. It is the mandatory unique identifier of a Customer.</p>

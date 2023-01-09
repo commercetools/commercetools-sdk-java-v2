@@ -28,7 +28,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CustomFieldsDraftImpl.class)
-public interface CustomFieldsDraft {
+public interface CustomFieldsDraft extends io.vrap.rmf.base.client.Draft<CustomFieldsDraft> {
 
     /**
      *  <p><code>id</code> or <code>key</code> of the Type.</p>

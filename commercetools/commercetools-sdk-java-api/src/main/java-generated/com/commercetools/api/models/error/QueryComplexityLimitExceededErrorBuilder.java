@@ -65,7 +65,6 @@ public class QueryComplexityLimitExceededErrorBuilder implements Builder<QueryCo
 
     public QueryComplexityLimitExceededError build() {
         Objects.requireNonNull(message, QueryComplexityLimitExceededError.class + ": message is missing");
-        Objects.requireNonNull(values, QueryComplexityLimitExceededError.class + ": values are missing");
         return new QueryComplexityLimitExceededErrorImpl(message, values);
     }
 

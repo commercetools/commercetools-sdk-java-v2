@@ -45,7 +45,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ProductDiscountImpl.class)
 public interface ProductDiscount extends BaseResource, com.commercetools.api.models.DomainResource<ProductDiscount>,
         com.commercetools.api.models.Referencable<ProductDiscount>,
-        com.commercetools.api.models.ResourceIdentifiable<ProductDiscount> {
+        com.commercetools.api.models.ResourceIdentifiable<ProductDiscount>, com.commercetools.api.models.WithKey {
 
     /**
      *  <p>Unique identifier of the ProductDiscount.</p>

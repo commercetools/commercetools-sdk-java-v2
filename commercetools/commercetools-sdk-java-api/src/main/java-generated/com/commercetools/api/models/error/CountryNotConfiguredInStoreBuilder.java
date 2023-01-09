@@ -118,7 +118,6 @@ public class CountryNotConfiguredInStoreBuilder implements Builder<CountryNotCon
 
     public CountryNotConfiguredInStore build() {
         Objects.requireNonNull(message, CountryNotConfiguredInStore.class + ": message is missing");
-        Objects.requireNonNull(values, CountryNotConfiguredInStore.class + ": values are missing");
         Objects.requireNonNull(storeCountries, CountryNotConfiguredInStore.class + ": storeCountries is missing");
         Objects.requireNonNull(country, CountryNotConfiguredInStore.class + ": country is missing");
         return new CountryNotConfiguredInStoreImpl(message, values, storeCountries, country);

@@ -36,7 +36,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "unitType", defaultImpl = BusinessUnitDraftImpl.class, visible = true)
 @JsonDeserialize(as = BusinessUnitDraftImpl.class)
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-public interface BusinessUnitDraft {
+public interface BusinessUnitDraft extends com.commercetools.api.models.WithKey {
 
     /**
      *  <p>User-defined unique identifier for the Business Unit.</p>

@@ -277,7 +277,6 @@ public class OverlappingStandalonePriceValidityErrorBuilder
 
     public OverlappingStandalonePriceValidityError build() {
         Objects.requireNonNull(message, OverlappingStandalonePriceValidityError.class + ": message is missing");
-        Objects.requireNonNull(values, OverlappingStandalonePriceValidityError.class + ": values are missing");
         Objects.requireNonNull(conflictingStandalonePrice,
             OverlappingStandalonePriceValidityError.class + ": conflictingStandalonePrice is missing");
         Objects.requireNonNull(sku, OverlappingStandalonePriceValidityError.class + ": sku is missing");

@@ -38,7 +38,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProjectImpl.class)
-public interface Project {
+public interface Project extends com.commercetools.api.models.WithKey {
 
     /**
      *  <p>Current version of the Project.</p>

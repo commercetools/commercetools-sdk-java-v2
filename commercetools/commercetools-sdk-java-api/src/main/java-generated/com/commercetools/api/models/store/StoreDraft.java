@@ -32,7 +32,8 @@ import io.vrap.rmf.base.client.utils.Generated;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = StoreDraftImpl.class)
-public interface StoreDraft extends com.commercetools.api.models.CustomizableDraft<StoreDraft> {
+public interface StoreDraft extends com.commercetools.api.models.CustomizableDraft<StoreDraft>,
+        com.commercetools.api.models.WithKey, io.vrap.rmf.base.client.Draft<StoreDraft> {
 
     /**
      *  <p>User-defined unique and immutable identifier for the Store. Keys can only contain alphanumeric characters, underscores, and hyphens.</p>

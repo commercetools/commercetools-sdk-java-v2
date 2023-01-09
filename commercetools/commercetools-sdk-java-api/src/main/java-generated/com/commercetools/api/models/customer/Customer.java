@@ -47,7 +47,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface Customer extends BaseResource, com.commercetools.api.models.DomainResource<Customer>,
         com.commercetools.api.models.Referencable<Customer>,
         com.commercetools.api.models.ResourceIdentifiable<Customer>,
-        com.commercetools.api.models.Customizable<Customer> {
+        com.commercetools.api.models.Customizable<Customer>, com.commercetools.api.models.WithKey {
 
     /**
      *  <p>Unique identifier of the Customer.</p>

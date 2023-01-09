@@ -30,7 +30,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = DirectDiscountDraftImpl.class)
-public interface DirectDiscountDraft {
+public interface DirectDiscountDraft extends io.vrap.rmf.base.client.Draft<DirectDiscountDraft> {
 
     /**
      *

@@ -65,7 +65,6 @@ public class SearchFacetPathNotFoundErrorBuilder implements Builder<SearchFacetP
 
     public SearchFacetPathNotFoundError build() {
         Objects.requireNonNull(message, SearchFacetPathNotFoundError.class + ": message is missing");
-        Objects.requireNonNull(values, SearchFacetPathNotFoundError.class + ": values are missing");
         return new SearchFacetPathNotFoundErrorImpl(message, values);
     }
 

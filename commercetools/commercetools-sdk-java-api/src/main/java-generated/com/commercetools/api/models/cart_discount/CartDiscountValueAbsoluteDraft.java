@@ -29,7 +29,8 @@ import io.vrap.rmf.base.client.utils.Generated;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CartDiscountValueAbsoluteDraftImpl.class)
-public interface CartDiscountValueAbsoluteDraft extends CartDiscountValueDraft {
+public interface CartDiscountValueAbsoluteDraft
+        extends CartDiscountValueDraft, io.vrap.rmf.base.client.Draft<CartDiscountValueAbsoluteDraft> {
 
     String ABSOLUTE = "absolute";
 

@@ -30,7 +30,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ExternalTaxAmountDraftImpl.class)
-public interface ExternalTaxAmountDraft {
+public interface ExternalTaxAmountDraft extends io.vrap.rmf.base.client.Draft<ExternalTaxAmountDraft> {
 
     /**
      *  <p>The total gross amount of the item (totalNet + taxes).</p>

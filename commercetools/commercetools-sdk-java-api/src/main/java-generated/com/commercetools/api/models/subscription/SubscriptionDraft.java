@@ -28,7 +28,8 @@ import io.vrap.rmf.base.client.utils.Generated;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = SubscriptionDraftImpl.class)
-public interface SubscriptionDraft {
+public interface SubscriptionDraft
+        extends com.commercetools.api.models.WithKey, io.vrap.rmf.base.client.Draft<SubscriptionDraft> {
 
     /**
      *  <p>Change notifications to be subscribed to.</p>

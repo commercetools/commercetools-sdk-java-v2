@@ -44,7 +44,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ChannelImpl.class)
 public interface Channel extends BaseResource, com.commercetools.api.models.DomainResource<Channel>,
         com.commercetools.api.models.Referencable<Channel>, com.commercetools.api.models.ResourceIdentifiable<Channel>,
-        com.commercetools.api.models.Customizable<Channel> {
+        com.commercetools.api.models.Customizable<Channel>, com.commercetools.api.models.WithKey {
 
     /**
      *  <p>Unique identifier of the Channel.</p>

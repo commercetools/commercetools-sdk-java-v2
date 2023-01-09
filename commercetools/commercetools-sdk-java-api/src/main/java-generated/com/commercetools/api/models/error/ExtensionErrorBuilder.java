@@ -118,7 +118,6 @@ public class ExtensionErrorBuilder implements Builder<ExtensionError> {
         Objects.requireNonNull(code, ExtensionError.class + ": code is missing");
         Objects.requireNonNull(message, ExtensionError.class + ": message is missing");
         Objects.requireNonNull(extensionId, ExtensionError.class + ": extensionId is missing");
-        Objects.requireNonNull(values, ExtensionError.class + ": values are missing");
         return new ExtensionErrorImpl(code, message, extensionId, extensionKey, values);
     }
 

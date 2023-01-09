@@ -39,7 +39,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = TaxCategoryImpl.class)
 public interface TaxCategory extends BaseResource, com.commercetools.api.models.DomainResource<TaxCategory>,
         com.commercetools.api.models.Referencable<TaxCategory>,
-        com.commercetools.api.models.ResourceIdentifiable<TaxCategory> {
+        com.commercetools.api.models.ResourceIdentifiable<TaxCategory>, com.commercetools.api.models.WithKey {
 
     /**
      *  <p>Unique identifier of the TaxCategory.</p>

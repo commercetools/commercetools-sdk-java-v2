@@ -29,7 +29,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = DeliveryParcelDraftImpl.class)
-public interface DeliveryParcelDraft {
+public interface DeliveryParcelDraft extends io.vrap.rmf.base.client.Draft<DeliveryParcelDraft> {
 
     /**
      *

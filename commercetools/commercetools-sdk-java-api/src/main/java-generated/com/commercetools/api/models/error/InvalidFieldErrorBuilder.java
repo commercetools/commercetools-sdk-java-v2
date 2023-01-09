@@ -136,7 +136,6 @@ public class InvalidFieldErrorBuilder implements Builder<InvalidFieldError> {
 
     public InvalidFieldError build() {
         Objects.requireNonNull(message, InvalidFieldError.class + ": message is missing");
-        Objects.requireNonNull(values, InvalidFieldError.class + ": values are missing");
         Objects.requireNonNull(field, InvalidFieldError.class + ": field is missing");
         Objects.requireNonNull(invalidValue, InvalidFieldError.class + ": invalidValue is missing");
         return new InvalidFieldErrorImpl(message, values, field, invalidValue, allowedValues);

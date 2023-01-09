@@ -37,7 +37,8 @@ import io.vrap.rmf.base.client.utils.Generated;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ExtensionImpl.class)
-public interface Extension extends BaseResource, com.commercetools.api.models.DomainResource<Extension> {
+public interface Extension extends BaseResource, com.commercetools.api.models.DomainResource<Extension>,
+        com.commercetools.api.models.WithKey {
 
     /**
      *  <p>Unique identifier of the Extension.</p>

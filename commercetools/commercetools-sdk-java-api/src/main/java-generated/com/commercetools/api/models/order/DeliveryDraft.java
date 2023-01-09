@@ -28,7 +28,8 @@ import io.vrap.rmf.base.client.utils.Generated;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = DeliveryDraftImpl.class)
-public interface DeliveryDraft extends com.commercetools.api.models.CustomizableDraft<DeliveryDraft> {
+public interface DeliveryDraft extends com.commercetools.api.models.CustomizableDraft<DeliveryDraft>,
+        io.vrap.rmf.base.client.Draft<DeliveryDraft> {
 
     /**
      *  <p>Items which are shipped in this delivery regardless their distribution over several parcels. Can also be specified individually for each Parcel.</p>

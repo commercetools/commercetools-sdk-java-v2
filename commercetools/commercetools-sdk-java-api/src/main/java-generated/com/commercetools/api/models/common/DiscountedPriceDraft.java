@@ -30,7 +30,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = DiscountedPriceDraftImpl.class)
-public interface DiscountedPriceDraft {
+public interface DiscountedPriceDraft extends io.vrap.rmf.base.client.Draft<DiscountedPriceDraft> {
 
     /**
      *  <p>Sets the money value for the discounted price.</p>

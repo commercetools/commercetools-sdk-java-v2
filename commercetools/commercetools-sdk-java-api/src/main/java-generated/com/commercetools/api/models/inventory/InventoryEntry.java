@@ -43,7 +43,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface InventoryEntry extends BaseResource, com.commercetools.api.models.DomainResource<InventoryEntry>,
         com.commercetools.api.models.Referencable<InventoryEntry>,
         com.commercetools.api.models.ResourceIdentifiable<InventoryEntry>,
-        com.commercetools.api.models.Customizable<InventoryEntry> {
+        com.commercetools.api.models.Customizable<InventoryEntry>, com.commercetools.api.models.WithKey {
 
     /**
      *  <p>Unique identifier of the InventoryEntry.</p>

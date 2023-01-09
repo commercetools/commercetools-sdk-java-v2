@@ -29,7 +29,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProductSelectionSettingDraftImpl.class)
-public interface ProductSelectionSettingDraft {
+public interface ProductSelectionSettingDraft extends io.vrap.rmf.base.client.Draft<ProductSelectionSettingDraft> {
 
     /**
      *  <p>Resource Identifier of a ProductSelection.</p>

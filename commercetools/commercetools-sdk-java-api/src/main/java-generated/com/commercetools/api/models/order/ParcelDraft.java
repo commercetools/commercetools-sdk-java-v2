@@ -27,7 +27,8 @@ import io.vrap.rmf.base.client.utils.Generated;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ParcelDraftImpl.class)
-public interface ParcelDraft extends com.commercetools.api.models.CustomizableDraft<ParcelDraft> {
+public interface ParcelDraft extends com.commercetools.api.models.CustomizableDraft<ParcelDraft>,
+        io.vrap.rmf.base.client.Draft<ParcelDraft> {
 
     /**
      *

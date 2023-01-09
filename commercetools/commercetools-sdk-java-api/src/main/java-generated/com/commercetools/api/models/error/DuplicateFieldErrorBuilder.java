@@ -96,7 +96,6 @@ public class DuplicateFieldErrorBuilder implements Builder<DuplicateFieldError> 
 
     public DuplicateFieldError build() {
         Objects.requireNonNull(message, DuplicateFieldError.class + ": message is missing");
-        Objects.requireNonNull(values, DuplicateFieldError.class + ": values are missing");
         Objects.requireNonNull(field, DuplicateFieldError.class + ": field is missing");
         Objects.requireNonNull(duplicateValue, DuplicateFieldError.class + ": duplicateValue is missing");
         return new DuplicateFieldErrorImpl(message, values, field, duplicateValue);

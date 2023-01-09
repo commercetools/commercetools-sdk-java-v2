@@ -34,7 +34,8 @@ import io.vrap.rmf.base.client.utils.Generated;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CustomerDraftImpl.class)
-public interface CustomerDraft extends com.commercetools.api.models.CustomizableDraft<CustomerDraft> {
+public interface CustomerDraft extends com.commercetools.api.models.CustomizableDraft<CustomerDraft>,
+        com.commercetools.api.models.WithKey, io.vrap.rmf.base.client.Draft<CustomerDraft> {
 
     /**
      *  <p>User-defined unique identifier for the Customer. The <code>key</code> field is preferred over <code>customerNumber</code> as it is mutable and provides more flexibility.</p>

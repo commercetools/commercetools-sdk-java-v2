@@ -192,7 +192,6 @@ public class MatchingPriceNotFoundErrorBuilder implements Builder<MatchingPriceN
 
     public MatchingPriceNotFoundError build() {
         Objects.requireNonNull(message, MatchingPriceNotFoundError.class + ": message is missing");
-        Objects.requireNonNull(values, MatchingPriceNotFoundError.class + ": values are missing");
         Objects.requireNonNull(productId, MatchingPriceNotFoundError.class + ": productId is missing");
         Objects.requireNonNull(variantId, MatchingPriceNotFoundError.class + ": variantId is missing");
         return new MatchingPriceNotFoundErrorImpl(message, values, productId, variantId, currency, country,

@@ -27,7 +27,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ReplicaCartDraftImpl.class)
-public interface ReplicaCartDraft {
+public interface ReplicaCartDraft extends io.vrap.rmf.base.client.Draft<ReplicaCartDraft> {
 
     /**
      *

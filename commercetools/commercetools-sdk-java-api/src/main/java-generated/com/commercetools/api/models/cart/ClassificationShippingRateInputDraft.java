@@ -27,7 +27,8 @@ import io.vrap.rmf.base.client.utils.Generated;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ClassificationShippingRateInputDraftImpl.class)
-public interface ClassificationShippingRateInputDraft extends ShippingRateInputDraft {
+public interface ClassificationShippingRateInputDraft
+        extends ShippingRateInputDraft, io.vrap.rmf.base.client.Draft<ClassificationShippingRateInputDraft> {
 
     String CLASSIFICATION = "Classification";
 

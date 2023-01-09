@@ -28,7 +28,8 @@ import io.vrap.rmf.base.client.utils.Generated;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = AddressDraftImpl.class)
-public interface AddressDraft extends BaseAddress, com.commercetools.api.models.CustomizableDraft<AddressDraft> {
+public interface AddressDraft extends BaseAddress, com.commercetools.api.models.CustomizableDraft<AddressDraft>,
+        io.vrap.rmf.base.client.Draft<AddressDraft> {
 
     /**
      *  <p>Custom Fields defined for the Address.</p>

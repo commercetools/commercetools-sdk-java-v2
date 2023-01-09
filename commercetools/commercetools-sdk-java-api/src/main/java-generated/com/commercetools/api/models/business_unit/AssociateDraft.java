@@ -30,7 +30,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = AssociateDraftImpl.class)
-public interface AssociateDraft {
+public interface AssociateDraft extends io.vrap.rmf.base.client.Draft<AssociateDraft> {
 
     /**
      *  <p>Roles the Associate should hold within the Business Unit.</p>

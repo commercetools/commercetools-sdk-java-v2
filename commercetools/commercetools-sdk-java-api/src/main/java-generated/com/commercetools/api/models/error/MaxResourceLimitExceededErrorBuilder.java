@@ -82,7 +82,6 @@ public class MaxResourceLimitExceededErrorBuilder implements Builder<MaxResource
 
     public MaxResourceLimitExceededError build() {
         Objects.requireNonNull(message, MaxResourceLimitExceededError.class + ": message is missing");
-        Objects.requireNonNull(values, MaxResourceLimitExceededError.class + ": values are missing");
         Objects.requireNonNull(exceededResource, MaxResourceLimitExceededError.class + ": exceededResource is missing");
         return new MaxResourceLimitExceededErrorImpl(message, values, exceededResource);
     }

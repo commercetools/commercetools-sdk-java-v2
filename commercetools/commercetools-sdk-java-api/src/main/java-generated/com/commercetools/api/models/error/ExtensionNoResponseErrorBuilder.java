@@ -100,7 +100,6 @@ public class ExtensionNoResponseErrorBuilder implements Builder<ExtensionNoRespo
 
     public ExtensionNoResponseError build() {
         Objects.requireNonNull(message, ExtensionNoResponseError.class + ": message is missing");
-        Objects.requireNonNull(values, ExtensionNoResponseError.class + ": values are missing");
         Objects.requireNonNull(extensionId, ExtensionNoResponseError.class + ": extensionId is missing");
         return new ExtensionNoResponseErrorImpl(message, values, extensionId, extensionKey);
     }

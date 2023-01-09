@@ -125,7 +125,6 @@ public class ProductPresentWithDifferentVariantSelectionErrorBuilder
     public ProductPresentWithDifferentVariantSelectionError build() {
         Objects.requireNonNull(message,
             ProductPresentWithDifferentVariantSelectionError.class + ": message is missing");
-        Objects.requireNonNull(values, ProductPresentWithDifferentVariantSelectionError.class + ": values are missing");
         Objects.requireNonNull(product,
             ProductPresentWithDifferentVariantSelectionError.class + ": product is missing");
         Objects.requireNonNull(existingVariantSelection,

@@ -31,7 +31,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = OrderFromQuoteDraftImpl.class)
-public interface OrderFromQuoteDraft {
+public interface OrderFromQuoteDraft extends io.vrap.rmf.base.client.Draft<OrderFromQuoteDraft> {
 
     /**
      *  <p>ResourceIdentifier of the Quote from which this Order is created. If the Quote has <code>QuoteState</code> in <code>Accepted</code>, <code>Declined</code> or <code>Withdrawn</code> then the order creation will fail. The creation will also fail if the <code>Quote</code> has expired (<code>validTo</code> check).</p>

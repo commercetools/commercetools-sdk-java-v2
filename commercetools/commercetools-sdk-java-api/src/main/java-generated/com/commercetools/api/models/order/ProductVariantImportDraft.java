@@ -29,7 +29,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProductVariantImportDraftImpl.class)
-public interface ProductVariantImportDraft {
+public interface ProductVariantImportDraft extends io.vrap.rmf.base.client.Draft<ProductVariantImportDraft> {
 
     /**
      *  <p>The sequential ID of the variant within the product. The variant with provided ID should exist in some existing product, so you also need to specify the productId if this property is set, or alternatively you can just specify SKU of the product variant.</p>

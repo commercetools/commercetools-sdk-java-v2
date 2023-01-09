@@ -65,7 +65,6 @@ public class ShippingMethodDoesNotMatchCartErrorBuilder implements Builder<Shipp
 
     public ShippingMethodDoesNotMatchCartError build() {
         Objects.requireNonNull(message, ShippingMethodDoesNotMatchCartError.class + ": message is missing");
-        Objects.requireNonNull(values, ShippingMethodDoesNotMatchCartError.class + ": values are missing");
         return new ShippingMethodDoesNotMatchCartErrorImpl(message, values);
     }
 

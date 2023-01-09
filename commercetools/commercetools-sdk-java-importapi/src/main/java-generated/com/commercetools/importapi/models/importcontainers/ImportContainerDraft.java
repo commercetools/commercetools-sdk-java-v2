@@ -28,7 +28,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ImportContainerDraftImpl.class)
-public interface ImportContainerDraft {
+public interface ImportContainerDraft extends io.vrap.rmf.base.client.Draft<ImportContainerDraft> {
 
     /**
      *  <p>User-defined unique identifier of the ImportContainer. Keys can only contain alphanumeric characters (a-Z, 0-9), underscores and hyphens (_, -).</p>

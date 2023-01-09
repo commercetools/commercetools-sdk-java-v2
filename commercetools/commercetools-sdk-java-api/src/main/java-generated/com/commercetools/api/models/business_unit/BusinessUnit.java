@@ -49,7 +49,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "unitType", defaultImpl = BusinessUnitImpl.class, visible = true)
 @JsonDeserialize(as = BusinessUnitImpl.class)
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-public interface BusinessUnit extends BaseResource {
+public interface BusinessUnit extends BaseResource, com.commercetools.api.models.WithKey {
 
     /**
      *  <p>Unique identifier of the Business Unit.</p>

@@ -26,7 +26,8 @@ import io.vrap.rmf.base.client.utils.Generated;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CentPrecisionMoneyDraftImpl.class)
-public interface CentPrecisionMoneyDraft extends TypedMoneyDraft {
+public interface CentPrecisionMoneyDraft
+        extends TypedMoneyDraft, io.vrap.rmf.base.client.Draft<CentPrecisionMoneyDraft> {
 
     String CENT_PRECISION = "centPrecision";
 

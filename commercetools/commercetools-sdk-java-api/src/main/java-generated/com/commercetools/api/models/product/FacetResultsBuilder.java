@@ -50,7 +50,6 @@ public class FacetResultsBuilder implements Builder<FacetResults> {
     }
 
     public FacetResults build() {
-        Objects.requireNonNull(values, FacetResults.class + ": values are missing");
         return new FacetResultsImpl(values);
     }
 

@@ -65,7 +65,6 @@ public class SearchIndexingInProgressErrorBuilder implements Builder<SearchIndex
 
     public SearchIndexingInProgressError build() {
         Objects.requireNonNull(message, SearchIndexingInProgressError.class + ": message is missing");
-        Objects.requireNonNull(values, SearchIndexingInProgressError.class + ": values are missing");
         return new SearchIndexingInProgressErrorImpl(message, values);
     }
 

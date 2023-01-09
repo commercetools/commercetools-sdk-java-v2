@@ -30,7 +30,8 @@ import io.vrap.rmf.base.client.utils.Generated;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = LineItemDraftImpl.class)
-public interface LineItemDraft extends com.commercetools.api.models.CustomizableDraft<LineItemDraft> {
+public interface LineItemDraft extends com.commercetools.api.models.CustomizableDraft<LineItemDraft>,
+        io.vrap.rmf.base.client.Draft<LineItemDraft> {
 
     /**
      *

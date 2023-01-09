@@ -32,7 +32,8 @@ import io.vrap.rmf.base.client.utils.Generated;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = InventoryEntryDraftImpl.class)
-public interface InventoryEntryDraft extends com.commercetools.api.models.CustomizableDraft<InventoryEntryDraft> {
+public interface InventoryEntryDraft extends com.commercetools.api.models.CustomizableDraft<InventoryEntryDraft>,
+        com.commercetools.api.models.WithKey, io.vrap.rmf.base.client.Draft<InventoryEntryDraft> {
 
     /**
      *  <p>ProductVariant <code>sku</code> of the InventoryEntry.</p>

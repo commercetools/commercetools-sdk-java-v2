@@ -30,7 +30,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ZoneRateDraftImpl.class)
-public interface ZoneRateDraft {
+public interface ZoneRateDraft extends io.vrap.rmf.base.client.Draft<ZoneRateDraft> {
 
     /**
      *  <p>Sets the Zone for which the shippng rates are valid.</p>

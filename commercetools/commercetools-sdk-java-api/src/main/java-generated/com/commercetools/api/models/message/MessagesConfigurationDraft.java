@@ -28,7 +28,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = MessagesConfigurationDraftImpl.class)
-public interface MessagesConfigurationDraft {
+public interface MessagesConfigurationDraft extends io.vrap.rmf.base.client.Draft<MessagesConfigurationDraft> {
 
     /**
      *  <p>Setting to <code>true</code> activates the Messages Query feature.</p>

@@ -32,7 +32,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ShippingDraftImpl.class)
-public interface ShippingDraft {
+public interface ShippingDraft extends io.vrap.rmf.base.client.Draft<ShippingDraft> {
 
     /**
      *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multiple</code> ShippingMode.</p>

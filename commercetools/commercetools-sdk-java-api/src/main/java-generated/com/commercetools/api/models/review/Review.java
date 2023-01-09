@@ -43,7 +43,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ReviewImpl.class)
 public interface Review extends BaseResource, com.commercetools.api.models.DomainResource<Review>,
         com.commercetools.api.models.Referencable<Review>, com.commercetools.api.models.ResourceIdentifiable<Review>,
-        com.commercetools.api.models.Customizable<Review> {
+        com.commercetools.api.models.Customizable<Review>, com.commercetools.api.models.WithKey {
 
     /**
      *  <p>Unique identifier of the Review.</p>

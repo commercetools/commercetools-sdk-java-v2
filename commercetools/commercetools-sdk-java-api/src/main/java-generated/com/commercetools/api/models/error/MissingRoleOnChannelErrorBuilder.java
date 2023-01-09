@@ -117,7 +117,6 @@ public class MissingRoleOnChannelErrorBuilder implements Builder<MissingRoleOnCh
 
     public MissingRoleOnChannelError build() {
         Objects.requireNonNull(message, MissingRoleOnChannelError.class + ": message is missing");
-        Objects.requireNonNull(values, MissingRoleOnChannelError.class + ": values are missing");
         Objects.requireNonNull(missingRole, MissingRoleOnChannelError.class + ": missingRole is missing");
         return new MissingRoleOnChannelErrorImpl(message, values, channel, missingRole);
     }

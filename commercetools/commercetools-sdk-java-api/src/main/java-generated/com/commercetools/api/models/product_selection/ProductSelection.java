@@ -43,7 +43,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ProductSelection extends BaseResource, com.commercetools.api.models.DomainResource<ProductSelection>,
         com.commercetools.api.models.Referencable<ProductSelection>,
         com.commercetools.api.models.ResourceIdentifiable<ProductSelection>,
-        com.commercetools.api.models.Customizable<ProductSelection> {
+        com.commercetools.api.models.Customizable<ProductSelection>, com.commercetools.api.models.WithKey {
 
     /**
      *  <p>Unique identifier of the ProductSelection.</p>

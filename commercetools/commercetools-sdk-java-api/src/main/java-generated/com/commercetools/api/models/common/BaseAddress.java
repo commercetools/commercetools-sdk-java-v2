@@ -27,7 +27,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = BaseAddressImpl.class)
-public interface BaseAddress {
+public interface BaseAddress extends com.commercetools.api.models.WithKey {
 
     /**
      *  <p>Unique identifier of the Address.</p>

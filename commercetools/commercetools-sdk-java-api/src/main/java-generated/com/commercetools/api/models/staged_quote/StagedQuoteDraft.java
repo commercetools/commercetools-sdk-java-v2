@@ -32,7 +32,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = StagedQuoteDraftImpl.class)
-public interface StagedQuoteDraft {
+public interface StagedQuoteDraft extends io.vrap.rmf.base.client.Draft<StagedQuoteDraft> {
 
     /**
      *  <p>QuoteRequest from which the StagedQuote is created.</p>

@@ -41,7 +41,8 @@ import io.vrap.rmf.base.client.utils.Generated;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = OrderImportDraftImpl.class)
-public interface OrderImportDraft extends com.commercetools.api.models.CustomizableDraft<OrderImportDraft> {
+public interface OrderImportDraft extends com.commercetools.api.models.CustomizableDraft<OrderImportDraft>,
+        io.vrap.rmf.base.client.Draft<OrderImportDraft> {
 
     /**
      *  <p>String that unique identifies an order. It can be used to create more human-readable (in contrast to ID) identifier for the order. It should be unique within a project.</p>

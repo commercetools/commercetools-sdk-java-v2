@@ -97,7 +97,6 @@ public class EnumKeyAlreadyExistsErrorBuilder implements Builder<EnumKeyAlreadyE
 
     public EnumKeyAlreadyExistsError build() {
         Objects.requireNonNull(message, EnumKeyAlreadyExistsError.class + ": message is missing");
-        Objects.requireNonNull(values, EnumKeyAlreadyExistsError.class + ": values are missing");
         Objects.requireNonNull(conflictingEnumKey, EnumKeyAlreadyExistsError.class + ": conflictingEnumKey is missing");
         Objects.requireNonNull(conflictingAttributeName,
             EnumKeyAlreadyExistsError.class + ": conflictingAttributeName is missing");

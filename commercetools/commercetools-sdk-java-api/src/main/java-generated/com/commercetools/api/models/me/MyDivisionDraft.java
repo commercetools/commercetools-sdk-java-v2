@@ -31,7 +31,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = MyDivisionDraftImpl.class)
-public interface MyDivisionDraft extends MyBusinessUnitDraft {
+public interface MyDivisionDraft extends MyBusinessUnitDraft, io.vrap.rmf.base.client.Draft<MyDivisionDraft> {
 
     String DIVISION = "Division";
 

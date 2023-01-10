@@ -3,10 +3,8 @@ package com.commercetools.api.json;
 
 import java.util.Optional;
 
-import com.commercetools.api.models.cart.ReplicaCartDraft;
 import com.commercetools.api.models.common.*;
 import com.commercetools.api.models.product.AttributeImpl;
-import com.commercetools.api.models.review.Review;
 import com.commercetools.api.models.type.FieldContainerImpl;
 import com.fasterxml.jackson.databind.module.SimpleModule;
 
@@ -27,7 +25,5 @@ public class ApiModule extends SimpleModule {
                         .orElse(System.getProperty(ApiModuleOptions.DESERIALIZE_DATE_FIELD_AS_STRING)));
         addDeserializer(AttributeImpl.class, new AtrributeDeserializer(attributeAsDateString));
         addDeserializer(FieldContainerImpl.class, new CustomFieldDeserializer(customFieldAsDateString));
-        setMixInAnnotation(Review.class, ReviewMixin.class);
-        setMixInAnnotation(ReplicaCartDraft.class, ReplicaCartDraftMixin.class);
     }
 }

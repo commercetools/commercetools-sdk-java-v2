@@ -4,10 +4,7 @@ package com.commercetools.api.models.review;
 import java.time.*;
 import java.util.*;
 
-import com.commercetools.api.models.channel.ChannelReference;
-import com.commercetools.api.models.product.ProductReference;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -47,7 +44,7 @@ public class ReviewImpl implements Review, ModelBase {
 
     private String text;
 
-    private java.lang.Object target;
+    private com.commercetools.api.models.common.Reference target;
 
     private Boolean includedInStatistics;
 
@@ -68,7 +65,7 @@ public class ReviewImpl implements Review, ModelBase {
             @JsonProperty("key") final String key, @JsonProperty("uniquenessValue") final String uniquenessValue,
             @JsonProperty("locale") final String locale, @JsonProperty("authorName") final String authorName,
             @JsonProperty("title") final String title, @JsonProperty("text") final String text,
-            @JsonProperty("target") final java.lang.Object target,
+            @JsonProperty("target") final com.commercetools.api.models.common.Reference target,
             @JsonProperty("includedInStatistics") final Boolean includedInStatistics,
             @JsonProperty("rating") final Integer rating,
             @JsonProperty("state") final com.commercetools.api.models.state.StateReference state,
@@ -194,10 +191,10 @@ public class ReviewImpl implements Review, ModelBase {
     }
 
     /**
-     *  <p>Identifies the target of the Review. Can be a Product or a Channel, specified as ProductReference or ChannelReference, respectively.</p>
+     *  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
      */
 
-    public java.lang.Object getTarget() {
+    public com.commercetools.api.models.common.Reference getTarget() {
         return this.target;
     }
 
@@ -289,17 +286,7 @@ public class ReviewImpl implements Review, ModelBase {
         this.text = text;
     }
 
-    @JsonIgnore
-    public void setTarget(final ProductReference target) {
-        this.target = target;
-    }
-
-    @JsonIgnore
-    public void setTarget(final ChannelReference target) {
-        this.target = target;
-    }
-
-    public void setTarget(final java.lang.Object target) {
+    public void setTarget(final com.commercetools.api.models.common.Reference target) {
         this.target = target;
     }
 

@@ -7,9 +7,8 @@ import java.util.function.Function;
 
 import javax.validation.Valid;
 
-import com.commercetools.api.models.channel.ChannelResourceIdentifier;
+import com.commercetools.api.models.common.ResourceIdentifier;
 import com.commercetools.api.models.customer.CustomerResourceIdentifier;
-import com.commercetools.api.models.product.ProductResourceIdentifier;
 import com.commercetools.api.models.state.StateResourceIdentifier;
 import com.commercetools.api.models.type.CustomFieldsDraft;
 import com.fasterxml.jackson.annotation.*;
@@ -77,11 +76,12 @@ public interface ReviewDraft extends com.commercetools.api.models.CustomizableDr
     public String getText();
 
     /**
-     *  <p>Identifies the target of the Review. Can be a Product or a Channel, specified as ProductResourceIdentifier or ChannelResourceIdentifier, respectively.</p>
+     *  <p>Draft type to create a Reference or a KeyReference to a resource. Provide either the <code>id</code> or (wherever supported) the <code>key</code> of the resource to reference, but depending on the API endpoint the response returns either a Reference or a KeyReference. For example, the field <code>parent</code> of a CategoryDraft takes a ResourceIdentifier for its value while the value of the corresponding field of a Category is a Reference.</p>
+     *  <p>Each resource type has its corresponding ResourceIdentifier, like ChannelResourceIdentifier.</p>
      */
-
+    @Valid
     @JsonProperty("target")
-    public Object getTarget();
+    public ResourceIdentifier getTarget();
 
     /**
      *  <p>State of the Review. Used for approval processes, see Review approval process for details.</p>
@@ -123,11 +123,7 @@ public interface ReviewDraft extends com.commercetools.api.models.CustomizableDr
 
     public void setText(final String text);
 
-    public void setTarget(final ProductResourceIdentifier target);
-
-    public void setTarget(final ChannelResourceIdentifier target);
-
-    public void setTarget(final Object target);
+    public void setTarget(final ResourceIdentifier target);
 
     public void setState(final StateResourceIdentifier state);
 
@@ -168,6 +164,12 @@ public interface ReviewDraft extends com.commercetools.api.models.CustomizableDr
     default <T> T withReviewDraft(Function<ReviewDraft, T> helper) {
         return helper.apply(this);
     }
+
+    @Deprecated
+    @JsonIgnore
+    public default void setTarget(final Object target) {
+        setTarget((ResourceIdentifier) target);
+    };
 
     public static com.fasterxml.jackson.core.type.TypeReference<ReviewDraft> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ReviewDraft>() {

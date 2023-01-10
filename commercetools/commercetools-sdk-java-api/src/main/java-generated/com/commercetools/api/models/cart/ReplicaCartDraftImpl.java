@@ -4,9 +4,7 @@ package com.commercetools.api.models.cart;
 import java.time.*;
 import java.util.*;
 
-import com.commercetools.api.models.order.OrderReference;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -22,12 +20,12 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ReplicaCartDraftImpl implements ReplicaCartDraft, ModelBase {
 
-    private java.lang.Object reference;
+    private com.commercetools.api.models.common.Reference reference;
 
     private String key;
 
     @JsonCreator
-    ReplicaCartDraftImpl(@JsonProperty("reference") final java.lang.Object reference,
+    ReplicaCartDraftImpl(@JsonProperty("reference") final com.commercetools.api.models.common.Reference reference,
             @JsonProperty("key") final String key) {
         this.reference = reference;
         this.key = key;
@@ -37,10 +35,10 @@ public class ReplicaCartDraftImpl implements ReplicaCartDraft, ModelBase {
     }
 
     /**
-     *
+     *  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
      */
 
-    public java.lang.Object getReference() {
+    public com.commercetools.api.models.common.Reference getReference() {
         return this.reference;
     }
 
@@ -52,17 +50,7 @@ public class ReplicaCartDraftImpl implements ReplicaCartDraft, ModelBase {
         return this.key;
     }
 
-    @JsonIgnore
-    public void setReference(final CartReference reference) {
-        this.reference = reference;
-    }
-
-    @JsonIgnore
-    public void setReference(final OrderReference reference) {
-        this.reference = reference;
-    }
-
-    public void setReference(final java.lang.Object reference) {
+    public void setReference(final com.commercetools.api.models.common.Reference reference) {
         this.reference = reference;
     }
 

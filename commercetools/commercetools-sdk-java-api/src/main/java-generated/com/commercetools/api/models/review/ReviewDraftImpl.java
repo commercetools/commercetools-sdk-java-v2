@@ -4,10 +4,7 @@ package com.commercetools.api.models.review;
 import java.time.*;
 import java.util.*;
 
-import com.commercetools.api.models.channel.ChannelResourceIdentifier;
-import com.commercetools.api.models.product.ProductResourceIdentifier;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -35,7 +32,7 @@ public class ReviewDraftImpl implements ReviewDraft, ModelBase {
 
     private String text;
 
-    private java.lang.Object target;
+    private com.commercetools.api.models.common.ResourceIdentifier target;
 
     private com.commercetools.api.models.state.StateResourceIdentifier state;
 
@@ -49,7 +46,8 @@ public class ReviewDraftImpl implements ReviewDraft, ModelBase {
     ReviewDraftImpl(@JsonProperty("key") final String key,
             @JsonProperty("uniquenessValue") final String uniquenessValue, @JsonProperty("locale") final String locale,
             @JsonProperty("authorName") final String authorName, @JsonProperty("title") final String title,
-            @JsonProperty("text") final String text, @JsonProperty("target") final java.lang.Object target,
+            @JsonProperty("text") final String text,
+            @JsonProperty("target") final com.commercetools.api.models.common.ResourceIdentifier target,
             @JsonProperty("state") final com.commercetools.api.models.state.StateResourceIdentifier state,
             @JsonProperty("rating") final Integer rating,
             @JsonProperty("customer") final com.commercetools.api.models.customer.CustomerResourceIdentifier customer,
@@ -119,10 +117,11 @@ public class ReviewDraftImpl implements ReviewDraft, ModelBase {
     }
 
     /**
-     *  <p>Identifies the target of the Review. Can be a Product or a Channel, specified as ProductResourceIdentifier or ChannelResourceIdentifier, respectively.</p>
+     *  <p>Draft type to create a Reference or a KeyReference to a resource. Provide either the <code>id</code> or (wherever supported) the <code>key</code> of the resource to reference, but depending on the API endpoint the response returns either a Reference or a KeyReference. For example, the field <code>parent</code> of a CategoryDraft takes a ResourceIdentifier for its value while the value of the corresponding field of a Category is a Reference.</p>
+     *  <p>Each resource type has its corresponding ResourceIdentifier, like ChannelResourceIdentifier.</p>
      */
 
-    public java.lang.Object getTarget() {
+    public com.commercetools.api.models.common.ResourceIdentifier getTarget() {
         return this.target;
     }
 
@@ -182,17 +181,7 @@ public class ReviewDraftImpl implements ReviewDraft, ModelBase {
         this.text = text;
     }
 
-    @JsonIgnore
-    public void setTarget(final ProductResourceIdentifier target) {
-        this.target = target;
-    }
-
-    @JsonIgnore
-    public void setTarget(final ChannelResourceIdentifier target) {
-        this.target = target;
-    }
-
-    public void setTarget(final java.lang.Object target) {
+    public void setTarget(final com.commercetools.api.models.common.ResourceIdentifier target) {
         this.target = target;
     }
 

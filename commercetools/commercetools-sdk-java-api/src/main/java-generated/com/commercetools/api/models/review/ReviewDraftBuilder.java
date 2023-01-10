@@ -42,7 +42,7 @@ public class ReviewDraftBuilder implements Builder<ReviewDraft> {
     private String text;
 
     @Nullable
-    private java.lang.Object target;
+    private com.commercetools.api.models.common.ResourceIdentifier target;
 
     @Nullable
     private com.commercetools.api.models.state.StateResourceIdentifier state;
@@ -111,11 +111,23 @@ public class ReviewDraftBuilder implements Builder<ReviewDraft> {
     }
 
     /**
-     *  <p>Identifies the target of the Review. Can be a Product or a Channel, specified as ProductResourceIdentifier or ChannelResourceIdentifier, respectively.</p>
+     *  <p>Draft type to create a Reference or a KeyReference to a resource. Provide either the <code>id</code> or (wherever supported) the <code>key</code> of the resource to reference, but depending on the API endpoint the response returns either a Reference or a KeyReference. For example, the field <code>parent</code> of a CategoryDraft takes a ResourceIdentifier for its value while the value of the corresponding field of a Category is a Reference.</p>
+     *  <p>Each resource type has its corresponding ResourceIdentifier, like ChannelResourceIdentifier.</p>
      */
 
-    public ReviewDraftBuilder target(@Nullable final java.lang.Object target) {
+    public ReviewDraftBuilder target(@Nullable final com.commercetools.api.models.common.ResourceIdentifier target) {
         this.target = target;
+        return this;
+    }
+
+    /**
+     *  <p>Draft type to create a Reference or a KeyReference to a resource. Provide either the <code>id</code> or (wherever supported) the <code>key</code> of the resource to reference, but depending on the API endpoint the response returns either a Reference or a KeyReference. For example, the field <code>parent</code> of a CategoryDraft takes a ResourceIdentifier for its value while the value of the corresponding field of a Category is a Reference.</p>
+     *  <p>Each resource type has its corresponding ResourceIdentifier, like ChannelResourceIdentifier.</p>
+     */
+
+    public ReviewDraftBuilder target(
+            Function<com.commercetools.api.models.common.ResourceIdentifierBuilder, Builder<? extends com.commercetools.api.models.common.ResourceIdentifier>> builder) {
+        this.target = builder.apply(com.commercetools.api.models.common.ResourceIdentifierBuilder.of()).build();
         return this;
     }
 
@@ -218,7 +230,7 @@ public class ReviewDraftBuilder implements Builder<ReviewDraft> {
     }
 
     @Nullable
-    public java.lang.Object getTarget() {
+    public com.commercetools.api.models.common.ResourceIdentifier getTarget() {
         return this.target;
     }
 

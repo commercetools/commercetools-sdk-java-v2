@@ -61,7 +61,7 @@ public class ReviewBuilder implements Builder<Review> {
     private String text;
 
     @Nullable
-    private java.lang.Object target;
+    private com.commercetools.api.models.common.Reference target;
 
     private Boolean includedInStatistics;
 
@@ -207,11 +207,21 @@ public class ReviewBuilder implements Builder<Review> {
     }
 
     /**
-     *  <p>Identifies the target of the Review. Can be a Product or a Channel, specified as ProductReference or ChannelReference, respectively.</p>
+     *  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
      */
 
-    public ReviewBuilder target(@Nullable final java.lang.Object target) {
+    public ReviewBuilder target(@Nullable final com.commercetools.api.models.common.Reference target) {
         this.target = target;
+        return this;
+    }
+
+    /**
+     *  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
+     */
+
+    public ReviewBuilder target(
+            Function<com.commercetools.api.models.common.ReferenceBuilder, Builder<? extends com.commercetools.api.models.common.Reference>> builder) {
+        this.target = builder.apply(com.commercetools.api.models.common.ReferenceBuilder.of()).build();
         return this;
     }
 
@@ -347,7 +357,7 @@ public class ReviewBuilder implements Builder<Review> {
     }
 
     @Nullable
-    public java.lang.Object getTarget() {
+    public com.commercetools.api.models.common.Reference getTarget() {
         return this.target;
     }
 

@@ -2,6 +2,7 @@
 package com.commercetools.api.models.cart;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -15,6 +16,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <div class=code-example>
  * <pre><code class='java'>
  *     ReplicaCartDraft replicaCartDraft = ReplicaCartDraft.builder()
+ *             .reference(referenceBuilder -> referenceBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -22,17 +24,27 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ReplicaCartDraftBuilder implements Builder<ReplicaCartDraft> {
 
-    private java.lang.Object reference;
+    private com.commercetools.api.models.common.Reference reference;
 
     @Nullable
     private String key;
 
     /**
-     *
+     *  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
      */
 
-    public ReplicaCartDraftBuilder reference(final java.lang.Object reference) {
+    public ReplicaCartDraftBuilder reference(final com.commercetools.api.models.common.Reference reference) {
         this.reference = reference;
+        return this;
+    }
+
+    /**
+     *  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
+     */
+
+    public ReplicaCartDraftBuilder reference(
+            Function<com.commercetools.api.models.common.ReferenceBuilder, Builder<? extends com.commercetools.api.models.common.Reference>> builder) {
+        this.reference = builder.apply(com.commercetools.api.models.common.ReferenceBuilder.of()).build();
         return this;
     }
 
@@ -45,7 +57,7 @@ public class ReplicaCartDraftBuilder implements Builder<ReplicaCartDraft> {
         return this;
     }
 
-    public java.lang.Object getReference() {
+    public com.commercetools.api.models.common.Reference getReference() {
         return this.reference;
     }
 

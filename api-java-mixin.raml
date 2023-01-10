@@ -72,6 +72,16 @@ types:
     (java-extends): 'com.commercetools.api.models.CustomizableDraft<AssetDraft>, com.commercetools.api.models.WithKey'
   LocalizedString:
     (java-extends): 'com.commercetools.api.models.common.LocalizedStringUtil'
+  ReplicaCartDraft:
+    (java-mixin): |
+      @JsonIgnore
+      @Deprecated
+      public default void setReference(final Object reference) {
+          setReference((Reference)reference);
+      };
+    properties:
+      reference:
+        type: Reference
   Cart:
     (java-extends): 'com.commercetools.api.models.DomainResource<Cart>, com.commercetools.api.models.Referencable<Cart>, com.commercetools.api.models.ResourceIdentifiable<Cart>, com.commercetools.api.models.Customizable<Cart>, com.commercetools.api.models.order.OrderLike<Cart>, com.commercetools.api.models.WithKey'
     (java-mixin): |
@@ -537,8 +547,25 @@ types:
       public static com.commercetools.api.models.common.ReferenceTypeId referenceTypeId() {
           return com.commercetools.api.models.common.ReferenceTypeId.REVIEW;
       }
+      @Deprecated
+      @JsonIgnore
+      public default void setTarget(final Object target) {
+          setTarget((Reference)target);
+      };
+    properties:
+      target?:
+        type: Reference
   ReviewDraft:
     (java-extends): 'com.commercetools.api.models.CustomizableDraft<ReviewDraft>, com.commercetools.api.models.WithKey'
+    (java-mixin): |
+      @Deprecated
+      @JsonIgnore
+      public default void setTarget(final Object target) {
+          setTarget((ResourceIdentifier)target);
+      };
+    properties:
+      target?:
+        type: ResourceIdentifier
   ReviewPagedQueryResponse:
     (java-extends): 'com.commercetools.api.models.ResourcePagedQueryResponse<Review>'
   ReviewReference:

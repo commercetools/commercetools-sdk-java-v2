@@ -9,12 +9,11 @@ import java.util.function.Function;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
-import com.commercetools.api.models.channel.ChannelReference;
 import com.commercetools.api.models.common.BaseResource;
 import com.commercetools.api.models.common.CreatedBy;
 import com.commercetools.api.models.common.LastModifiedBy;
+import com.commercetools.api.models.common.Reference;
 import com.commercetools.api.models.customer.CustomerReference;
-import com.commercetools.api.models.product.ProductReference;
 import com.commercetools.api.models.state.StateReference;
 import com.commercetools.api.models.type.CustomFields;
 import com.fasterxml.jackson.annotation.*;
@@ -130,11 +129,11 @@ public interface Review extends BaseResource, com.commercetools.api.models.Domai
     public String getText();
 
     /**
-     *  <p>Identifies the target of the Review. Can be a Product or a Channel, specified as ProductReference or ChannelReference, respectively.</p>
+     *  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
      */
-
+    @Valid
     @JsonProperty("target")
-    public Object getTarget();
+    public Reference getTarget();
 
     /**
      *  <p>Indicates if this Review is taken into account in the ratings statistics of the target. A Review is per default used in the statistics, unless the Review is in a state that does not have the role <code>ReviewIncludedInStatistics</code>. If the role of a State is modified after the calculation of this field, the calculation is not updated.</p>
@@ -195,11 +194,7 @@ public interface Review extends BaseResource, com.commercetools.api.models.Domai
 
     public void setText(final String text);
 
-    public void setTarget(final ProductReference target);
-
-    public void setTarget(final ChannelReference target);
-
-    public void setTarget(final Object target);
+    public void setTarget(final Reference target);
 
     public void setIncludedInStatistics(final Boolean includedInStatistics);
 
@@ -263,6 +258,12 @@ public interface Review extends BaseResource, com.commercetools.api.models.Domai
     public static com.commercetools.api.models.common.ReferenceTypeId referenceTypeId() {
         return com.commercetools.api.models.common.ReferenceTypeId.REVIEW;
     }
+
+    @Deprecated
+    @JsonIgnore
+    public default void setTarget(final Object target) {
+        setTarget((Reference) target);
+    };
 
     public static com.fasterxml.jackson.core.type.TypeReference<Review> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<Review>() {

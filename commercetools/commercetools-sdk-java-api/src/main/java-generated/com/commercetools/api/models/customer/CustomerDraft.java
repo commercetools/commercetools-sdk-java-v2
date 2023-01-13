@@ -1,11 +1,9 @@
 
 package com.commercetools.api.models.customer;
 
-import java.time.*;
 import java.time.LocalDate;
 import java.util.*;
 import java.util.function.Function;
-import java.util.stream.Collectors;
 
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -14,7 +12,6 @@ import com.commercetools.api.models.cart.CartResourceIdentifier;
 import com.commercetools.api.models.common.BaseAddress;
 import com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier;
 import com.commercetools.api.models.store.StoreResourceIdentifier;
-import com.commercetools.api.models.type.CustomFields;
 import com.commercetools.api.models.type.CustomFieldsDraft;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
@@ -343,7 +340,8 @@ public interface CustomerDraft extends com.commercetools.api.models.Customizable
         List<BaseAddress> addresses = new ArrayList<>(customer.getAddresses());
         Map<String, Integer> addressIds = java.util.stream.IntStream.range(0, addresses.size())
                 .boxed()
-                .collect(Collectors.toMap(integer -> addresses.get(integer).getId(), Function.identity()));
+                .collect(
+                    java.util.stream.Collectors.toMap(integer -> addresses.get(integer).getId(), Function.identity()));
         return CustomerDraft.builder()
                 .key(customer.getKey())
                 .customerNumber(customer.getCustomerNumber())
@@ -367,12 +365,12 @@ public interface CustomerDraft extends com.commercetools.api.models.Customizable
                         .stream()
                         .filter(entry -> customer.getBillingAddressIds().contains(entry.getKey()))
                         .map(Map.Entry::getValue)
-                        .collect(Collectors.toList()) : null)
+                        .collect(java.util.stream.Collectors.toList()) : null)
                 .shippingAddresses(customer.getShippingAddressIds().size() > 0 ? addressIds.entrySet()
                         .stream()
                         .filter(entry -> customer.getShippingAddressIds().contains(entry.getKey()))
                         .map(Map.Entry::getValue)
-                        .collect(Collectors.toList()) : null)
+                        .collect(java.util.stream.Collectors.toList()) : null)
                 .isEmailVerified(customer.getIsEmailVerified())
                 .customerGroup(Optional.ofNullable(customer.getCustomerGroup())
                         .map(reference -> CustomerGroupResourceIdentifier.builder().id(reference.getId()).build())
@@ -382,10 +380,12 @@ public interface CustomerDraft extends com.commercetools.api.models.Customizable
                 .stores(Optional.ofNullable(customer.getStores())
                         .map(stores -> stores.stream()
                                 .map(store -> StoreResourceIdentifier.builder().key(store.getKey()).build())
-                                .collect(Collectors.toList()))
+                                .collect(java.util.stream.Collectors.toList()))
                         .orElse(null))
                 .authenticationMode(customer.getAuthenticationMode())
-                .custom(Optional.ofNullable(customer.getCustom()).map(CustomFields::toDraft).orElse(null));
+                .custom(Optional.ofNullable(customer.getCustom())
+                        .map(com.commercetools.api.models.type.CustomFields::toDraft)
+                        .orElse(null));
     }
 
     public static CustomerDraftBuilder builder() {

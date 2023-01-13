@@ -5,16 +5,10 @@ import static commercetools.customer.CustomerFixtures.*;
 import static commercetools.customer_group.CustomerGroupFixtures.*;
 
 import java.util.*;
-import java.util.function.Function;
 import java.util.stream.Collectors;
-import java.util.stream.IntStream;
 
 import com.commercetools.api.models.common.Address;
-import com.commercetools.api.models.common.BaseAddress;
 import com.commercetools.api.models.customer.*;
-import com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier;
-import com.commercetools.api.models.store.StoreResourceIdentifier;
-import com.commercetools.api.models.type.CustomFields;
 import commercetools.utils.CommercetoolsTestUtils;
 import commercetools.utils.TestUtils;
 
@@ -142,59 +136,13 @@ public class CustomerIntegrationTests {
     public void customerClone() {
         Customer customer = JsonUtils.fromJsonString(TestUtils.stringFromResource("customer.json"), Customer.class);
 
-        List<BaseAddress> addresses = new ArrayList<>(customer.getAddresses());
-        Map<String, Integer> addressIds = IntStream.range(0, addresses.size())
-                .boxed()
-                .collect(Collectors.toMap(integer -> addresses.get(integer).getId(), Function.identity()));
-        CustomerDraft draft = CustomerDraft.builder()
-                .key(customer.getKey())
-                .customerNumber(customer.getCustomerNumber())
-                .externalId(customer.getExternalId())
+        CustomerDraft draft = CustomerDraft.builder(customer)
                 .email(CommercetoolsTestUtils.randomKey() + "+" + customer.getEmail())
                 .password("weak-new-password")
-                .firstName(customer.getFirstName())
-                .lastName(customer.getLastName())
-                .middleName(customer.getMiddleName())
-                .title(customer.getTitle())
-                .dateOfBirth(customer.getDateOfBirth())
-                .companyName(customer.getCompanyName())
-                .vatId(customer.getVatId())
-                .addresses(addresses.size() > 0 ? addresses : null)
-                .defaultBillingAddress(customer.getDefaultBillingAddressId() != null
-                        ? addressIds.get(customer.getDefaultBillingAddressId())
-                        : null)
-                .defaultShippingAddress(customer.getDefaultShippingAddressId() != null
-                        ? addressIds.get(customer.getDefaultShippingAddressId())
-                        : null)
-                .billingAddresses(customer.getBillingAddressIds().size() > 0 ? addressIds.entrySet()
-                        .stream()
-                        .filter(entry -> customer.getBillingAddressIds().contains(entry.getKey()))
-                        .map(Map.Entry::getValue)
-                        .collect(Collectors.toList()) : null)
-                .shippingAddresses(customer.getShippingAddressIds().size() > 0 ? addressIds.entrySet()
-                        .stream()
-                        .filter(entry -> customer.getShippingAddressIds().contains(entry.getKey()))
-                        .map(Map.Entry::getValue)
-                        .collect(Collectors.toList()) : null)
-                .isEmailVerified(customer.getIsEmailVerified())
-                .customerGroup(Optional.ofNullable(customer.getCustomerGroup())
-                        .map(reference -> CustomerGroupResourceIdentifier.builder().id(reference.getId()).build())
-                        .orElse(null))
-                .locale(customer.getLocale())
-                .salutation(customer.getSalutation())
-                .stores(Optional.ofNullable(customer.getStores())
-                        .map(stores -> stores.stream()
-                                .map(store -> StoreResourceIdentifier.builder().key(store.getKey()).build())
-                                .collect(Collectors.toList()))
-                        .orElse(null))
-                .authenticationMode(customer.getAuthenticationMode())
-                .custom(Optional.ofNullable(customer.getCustom()).map(CustomFields::toDraft).orElse(null))
                 .build();
 
-        Assertions.assertEquals(addressIds.get(customer.getDefaultBillingAddressId()),
-            draft.getDefaultBillingAddress());
-        Assertions.assertEquals(addressIds.get(customer.getDefaultShippingAddressId()),
-            draft.getDefaultShippingAddress());
+        Assertions.assertEquals(4, draft.getDefaultBillingAddress());
+        Assertions.assertEquals(3, draft.getDefaultShippingAddress());
 
         Customer newCustomer = CommercetoolsTestUtils.getProjectApiRoot()
                 .customers()

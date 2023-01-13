@@ -5,6 +5,7 @@ import java.time.*;
 import java.time.LocalDate;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -13,6 +14,7 @@ import com.commercetools.api.models.cart.CartResourceIdentifier;
 import com.commercetools.api.models.common.BaseAddress;
 import com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier;
 import com.commercetools.api.models.store.StoreResourceIdentifier;
+import com.commercetools.api.models.type.CustomFields;
 import com.commercetools.api.models.type.CustomFieldsDraft;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
@@ -335,6 +337,55 @@ public interface CustomerDraft extends com.commercetools.api.models.Customizable
         instance.setStores(template.getStores());
         instance.setAuthenticationMode(template.getAuthenticationMode());
         return instance;
+    }
+
+    public static CustomerDraftBuilder builder(Customer customer) {
+        List<BaseAddress> addresses = new ArrayList<>(customer.getAddresses());
+        Map<String, Integer> addressIds = java.util.stream.IntStream.range(0, addresses.size())
+                .boxed()
+                .collect(Collectors.toMap(integer -> addresses.get(integer).getId(), Function.identity()));
+        return CustomerDraft.builder()
+                .key(customer.getKey())
+                .customerNumber(customer.getCustomerNumber())
+                .externalId(customer.getExternalId())
+                .email(customer.getEmail())
+                .firstName(customer.getFirstName())
+                .lastName(customer.getLastName())
+                .middleName(customer.getMiddleName())
+                .title(customer.getTitle())
+                .dateOfBirth(customer.getDateOfBirth())
+                .companyName(customer.getCompanyName())
+                .vatId(customer.getVatId())
+                .addresses(addresses.size() > 0 ? addresses : null)
+                .defaultBillingAddress(customer.getDefaultBillingAddressId() != null
+                        ? addressIds.get(customer.getDefaultBillingAddressId())
+                        : null)
+                .defaultShippingAddress(customer.getDefaultShippingAddressId() != null
+                        ? addressIds.get(customer.getDefaultShippingAddressId())
+                        : null)
+                .billingAddresses(customer.getBillingAddressIds().size() > 0 ? addressIds.entrySet()
+                        .stream()
+                        .filter(entry -> customer.getBillingAddressIds().contains(entry.getKey()))
+                        .map(Map.Entry::getValue)
+                        .collect(Collectors.toList()) : null)
+                .shippingAddresses(customer.getShippingAddressIds().size() > 0 ? addressIds.entrySet()
+                        .stream()
+                        .filter(entry -> customer.getShippingAddressIds().contains(entry.getKey()))
+                        .map(Map.Entry::getValue)
+                        .collect(Collectors.toList()) : null)
+                .isEmailVerified(customer.getIsEmailVerified())
+                .customerGroup(Optional.ofNullable(customer.getCustomerGroup())
+                        .map(reference -> CustomerGroupResourceIdentifier.builder().id(reference.getId()).build())
+                        .orElse(null))
+                .locale(customer.getLocale())
+                .salutation(customer.getSalutation())
+                .stores(Optional.ofNullable(customer.getStores())
+                        .map(stores -> stores.stream()
+                                .map(store -> StoreResourceIdentifier.builder().key(store.getKey()).build())
+                                .collect(Collectors.toList()))
+                        .orElse(null))
+                .authenticationMode(customer.getAuthenticationMode())
+                .custom(Optional.ofNullable(customer.getCustom()).map(CustomFields::toDraft).orElse(null));
     }
 
     public static CustomerDraftBuilder builder() {

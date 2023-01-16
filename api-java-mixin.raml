@@ -1810,9 +1810,14 @@ types:
       (java-implements):
         'com.commercetools.api.models.PagedQueryResourceRequest<ByProjectKeyProductTypesGet,
         com.commercetools.api.models.product_type.ProductTypePagedQueryResponse>'
-    delete:
-      (java-implements):
-        'com.commercetools.api.client.ApiDeleteMethod<ByProjectKeyProductTypesDelete, com.commercetools.api.models.product_type.ProductType>'
+    /key={key}:
+      delete:
+        (java-implements):
+          'com.commercetools.api.client.ApiDeleteMethod<ByProjectKeyProductsKeyByKeyDelete, com.commercetools.api.models.product_type.ProductType>'
+    /{ID}:
+      delete:
+        (java-implements):
+          'com.commercetools.api.client.ApiDeleteMethod<ByProjectKeyProductTypesByIDDelete, com.commercetools.api.models.product_type.ProductType>'
   /quotes:
     (java-mixin): |
         public ByProjectKeyQuotesByIDPost update(

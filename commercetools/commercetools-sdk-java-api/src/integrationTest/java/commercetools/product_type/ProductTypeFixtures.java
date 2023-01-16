@@ -8,6 +8,8 @@ import java.util.function.UnaryOperator;
 import com.commercetools.api.models.product_type.*;
 import commercetools.utils.CommercetoolsTestUtils;
 
+import io.vrap.rmf.base.client.error.NotFoundException;
+
 import org.junit.jupiter.api.Assertions;
 
 public class ProductTypeFixtures {
@@ -80,16 +82,21 @@ public class ProductTypeFixtures {
     }
 
     public static ProductType deleteProductType(final String id, final Long version) {
-        ProductType deletedProductType = CommercetoolsTestUtils.getProjectApiRoot()
-                .productTypes()
-                .withId(id)
-                .delete()
-                .withVersion(version)
-                .executeBlocking()
-                .getBody();
+        ProductType deletedProductType = null;
+        try {
+            deletedProductType = CommercetoolsTestUtils.getProjectApiRoot()
+                    .productTypes()
+                    .withId(id)
+                    .delete()
+                    .withVersion(version)
+                    .executeBlocking()
+                    .getBody();
 
-        Assertions.assertNotNull(deletedProductType);
-        Assertions.assertEquals(deletedProductType.getId(), id);
+            Assertions.assertNotNull(deletedProductType);
+            Assertions.assertEquals(deletedProductType.getId(), id);
+        }
+        catch (NotFoundException ignored) {
+        }
         return deletedProductType;
     }
 

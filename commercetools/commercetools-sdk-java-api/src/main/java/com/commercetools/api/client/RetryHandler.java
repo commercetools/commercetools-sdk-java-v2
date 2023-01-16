@@ -20,4 +20,9 @@ public interface RetryHandler<TResult> {
             T request, Function<TBody, TBuilder> builderCopyFn, BiFunction<TBuilder, Long, TBuilder> updateFn) {
         return new ConcurrentModificationRetryHandler<>(request, builderCopyFn, updateFn);
     }
+
+    static <T extends DeleteApiMethod<T, TResult>, TResult> RequestCommand<TResult> concurrentModification(T request) {
+        return new ConcurrentModificationDeleteRetryHandler<>(request,
+            (apiRequest, newVersion) -> request.withVersion(newVersion).asBaseType());
+    }
 }

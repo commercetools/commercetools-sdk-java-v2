@@ -16,7 +16,7 @@ import io.vrap.rmf.base.client.*;
 /**
  * This handler can be used to retry a single request in case of a {@link ConcurrentModificationException concurrent modification} for delete requests.
  */
-final class ConcurrentModificationDeleteRetryHandler<T extends DeleteApiMethod<T, TResult>, TResult>
+final class ConcurrentModificationDeleteRetryHandler<T extends ApiDeleteMethod<T, TResult>, TResult>
         implements RequestCommand<TResult> {
     private final T request;
     private final BiFunction<T, Long, T> updateFn;

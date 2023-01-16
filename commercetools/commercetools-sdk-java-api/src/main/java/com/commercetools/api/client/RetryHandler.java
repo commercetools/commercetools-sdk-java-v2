@@ -21,7 +21,7 @@ public interface RetryHandler<TResult> {
         return new ConcurrentModificationRetryHandler<>(request, builderCopyFn, updateFn);
     }
 
-    static <T extends DeleteApiMethod<T, TResult>, TResult> RequestCommand<TResult> concurrentModification(T request) {
+    static <T extends ApiDeleteMethod<T, TResult>, TResult> RequestCommand<TResult> concurrentModification(T request) {
         return new ConcurrentModificationDeleteRetryHandler<>(request,
             (apiRequest, newVersion) -> request.withVersion(newVersion).asBaseType());
     }

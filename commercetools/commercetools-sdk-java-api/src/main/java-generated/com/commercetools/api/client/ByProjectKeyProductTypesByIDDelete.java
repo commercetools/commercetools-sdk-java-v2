@@ -11,6 +11,8 @@ import java.util.function.Function;
 import java.util.function.Supplier;
 import java.util.stream.Collectors;
 
+import com.commercetools.api.models.product_type.ProductType;
+
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -41,7 +43,7 @@ public class ByProjectKeyProductTypesByIDDelete
         com.commercetools.api.client.ExpandableTrait<ByProjectKeyProductTypesByIDDelete>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyProductTypesByIDDelete>,
         com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyProductTypesByIDDelete>,
-        DeleteApiMethod<ByProjectKeyProductTypesByIDDelete, com.commercetools.api.models.product_type.ProductType> {
+        ApiDeleteMethod<ByProjectKeyProductTypesByIDDelete, ProductType> {
 
     private String projectKey;
     private String ID;

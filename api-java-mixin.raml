@@ -1237,6 +1237,14 @@ types:
       (java-implements):
         'com.commercetools.api.models.PagedQueryResourceRequest<ByProjectKeyCategoriesGet,
         com.commercetools.api.models.category.CategoryPagedQueryResponse>'
+    /key={key}:
+      delete:
+        (java-implements):
+          'com.commercetools.api.client.ApiDeleteMethod<ByProjectKeyCategoriesKeyByKeyDelete, com.commercetools.api.models.category.Category>'
+    /{ID}:
+      delete:
+        (java-implements):
+          'com.commercetools.api.client.ApiDeleteMethod<ByProjectKeyCategoriesByIDDelete, com.commercetools.api.models.category.Category>'
   /carts:
     (java-mixin): |
         public ByProjectKeyCartsByIDPost update(
@@ -1282,6 +1290,14 @@ types:
       (java-implements):
         'com.commercetools.api.models.PagedQueryResourceRequest<ByProjectKeyCartsGet,
         com.commercetools.api.models.cart.CartPagedQueryResponse>'
+    /key={key}:
+      delete:
+        (java-implements):
+          'com.commercetools.api.client.ApiDeleteMethod<ByProjectKeyCartsKeyByKeyDelete, com.commercetools.api.models.cart.Cart>'
+    /{ID}:
+      delete:
+        (java-implements):
+          'com.commercetools.api.client.ApiDeleteMethod<ByProjectKeyCartsByIDDelete, com.commercetools.api.models.cart.Cart>'
 
   /cart-discounts:
     (java-mixin): |
@@ -1328,6 +1344,15 @@ types:
       (java-implements):
         'com.commercetools.api.models.PagedQueryResourceRequest<ByProjectKeyCartDiscountsGet,
         com.commercetools.api.models.cart_discount.CartDiscountPagedQueryResponse>'
+    /key={key}:
+      delete:
+        (java-implements):
+          'com.commercetools.api.client.ApiDeleteMethod<ByProjectKeyCartDiscountsKeyByKeyDelete, com.commercetools.api.models.cart_discount.CartDiscount>'
+    /{ID}:
+      delete:
+        (java-implements):
+          'com.commercetools.api.client.ApiDeleteMethod<ByProjectKeyCartDiscountsByIDDelete, com.commercetools.api.models.cart_discount.CartDiscount>'
+
   /channels:
     (java-mixin): |
         public ByProjectKeyChannelsByIDPost update(
@@ -1373,6 +1398,11 @@ types:
       (java-implements):
         'com.commercetools.api.models.PagedQueryResourceRequest<ByProjectKeyChannelsGet,
         com.commercetools.api.models.channel.ChannelPagedQueryResponse>'
+    /{ID}:
+      delete:
+        (java-implements):
+          'com.commercetools.api.client.ApiDeleteMethod<ByProjectKeyChannelsByIDDelete, com.commercetools.api.models.channel.Channel>'
+
   /customers:
     (java-mixin): |
         public ByProjectKeyCustomersByIDPost update(
@@ -1418,6 +1448,15 @@ types:
       (java-implements):
         'com.commercetools.api.models.PagedQueryResourceRequest<ByProjectKeyCustomersGet,
         com.commercetools.api.models.customer.CustomerPagedQueryResponse>'
+    /key={key}:
+      delete:
+        (java-implements):
+          'com.commercetools.api.client.ApiDeleteMethod<ByProjectKeyCustomersKeyByKeyDelete, com.commercetools.api.models.customer.Customer>'
+    /{ID}:
+      delete:
+        (java-implements):
+          'com.commercetools.api.client.ApiDeleteMethod<ByProjectKeyCustomersByIDDelete, com.commercetools.api.models.customer.Customer>'
+
   /custom-objects:
     get:
       (java-implements):
@@ -1468,6 +1507,15 @@ types:
       (java-implements):
         'com.commercetools.api.models.PagedQueryResourceRequest<ByProjectKeyCustomerGroupsGet,
         com.commercetools.api.models.customer_group.CustomerGroupPagedQueryResponse>'
+    /key={key}:
+      delete:
+        (java-implements):
+          'com.commercetools.api.client.ApiDeleteMethod<ByProjectKeyCustomerGroupsKeyByKeyDelete, com.commercetools.api.models.customer_group.CustomerGroup>'
+    /{ID}:
+      delete:
+        (java-implements):
+          'com.commercetools.api.client.ApiDeleteMethod<ByProjectKeyCustomerGroupsByIDDelete, com.commercetools.api.models.customer_group.CustomerGroup>'
+
   /discount-codes:
     (java-mixin): |
         public ByProjectKeyDiscountCodesByIDPost update(
@@ -1513,6 +1561,11 @@ types:
       (java-implements):
         'com.commercetools.api.models.PagedQueryResourceRequest<ByProjectKeyDiscountCodesGet,
         com.commercetools.api.models.discount_code.DiscountCodePagedQueryResponse>'
+    /{ID}:
+      delete:
+        (java-implements):
+          'com.commercetools.api.client.ApiDeleteMethod<ByProjectKeyDiscountCodesByIDDelete, com.commercetools.api.models.discount_code.DiscountCode>'
+
   /in-store/key={storeKey}:
     /me:
       /shopping-lists:
@@ -1570,6 +1623,15 @@ types:
       (java-implements):
         'com.commercetools.api.models.PagedQueryResourceRequest<ByProjectKeyInventoryGet,
         com.commercetools.api.models.inventory.InventoryPagedQueryResponse>'
+    /key={key}:
+      delete:
+        (java-implements):
+          'com.commercetools.api.client.ApiDeleteMethod<ByProjectKeyInventoryKeyByKeyDelete, com.commercetools.api.models.inventory.Inventory>'
+    /{ID}:
+      delete:
+        (java-implements):
+          'com.commercetools.api.client.ApiDeleteMethod<ByProjectKeyInventoryByIDDelete, com.commercetools.api.models.inventory.Inventory>'
+
   /messages:
     get:
       (java-implements):
@@ -1625,6 +1687,11 @@ types:
       (java-implements):
         'com.commercetools.api.models.PagedQueryResourceRequest<ByProjectKeyOrdersGet,
         com.commercetools.api.models.order.OrderPagedQueryResponse>'
+    /{ID}:
+      delete:
+        (java-implements):
+          'com.commercetools.api.client.ApiDeleteMethod<ByProjectKeyOrdersByIDDelete, com.commercetools.api.models.order.Order>'
+
   /payments:
     (java-mixin): |
         public ByProjectKeyPaymentsByIDPost update(
@@ -1670,6 +1737,15 @@ types:
       (java-implements):
         'com.commercetools.api.models.PagedQueryResourceRequest<ByProjectKeyPaymentsGet,
         com.commercetools.api.models.payment.PaymentPagedQueryResponse>'
+    /key={key}:
+      delete:
+        (java-implements):
+          'com.commercetools.api.client.ApiDeleteMethod<ByProjectKeyPaymentsKeyByKeyDelete, com.commercetools.api.models.payment.Payment>'
+    /{ID}:
+      delete:
+        (java-implements):
+          'com.commercetools.api.client.ApiDeleteMethod<ByProjectKeyPaymentsByIDDelete, com.commercetools.api.models.payment.Payment>'
+
   /products:
     (java-mixin): |
         public ByProjectKeyProductsByIDPost update(
@@ -1715,6 +1791,15 @@ types:
       (java-implements):
         'com.commercetools.api.models.PagedQueryResourceRequest<ByProjectKeyProductsGet,
         com.commercetools.api.models.product.ProductPagedQueryResponse>'
+    /key={key}:
+      delete:
+        (java-implements):
+          'com.commercetools.api.client.ApiDeleteMethod<ByProjectKeyProductsKeyByKeyDelete, com.commercetools.api.models.product.Product>'
+    /{ID}:
+      delete:
+        (java-implements):
+          'com.commercetools.api.client.ApiDeleteMethod<ByProjectKeyProductsByIDDelete, com.commercetools.api.models.product.Product>'
+
   /product-discounts:
     (java-mixin): |
         public ByProjectKeyProductDiscountsByIDPost update(
@@ -1760,6 +1845,15 @@ types:
       (java-implements):
         'com.commercetools.api.models.PagedQueryResourceRequest<ByProjectKeyProductDiscountsGet,
         com.commercetools.api.models.product_discount.ProductDiscountPagedQueryResponse>'
+    /key={key}:
+      delete:
+        (java-implements):
+          'com.commercetools.api.client.ApiDeleteMethod<ByProjectKeyProductDiscountsKeyByKeyDelete, com.commercetools.api.models.product_discount.ProductDiscount>'
+    /{ID}:
+      delete:
+        (java-implements):
+          'com.commercetools.api.client.ApiDeleteMethod<ByProjectKeyProductDiscountsByIDDelete, com.commercetools.api.models.product_discount.ProductDiscount>'
+
   /product-projections:
     get:
       (java-implements):
@@ -1859,6 +1953,15 @@ types:
                 UnaryOperator<com.commercetools.api.models.quote.QuoteDraftBuilder> op) {
             return post(op.apply(com.commercetools.api.models.quote.QuoteDraftBuilder.of()).build());
         }
+    /key={key}:
+      delete:
+        (java-implements):
+          'com.commercetools.api.client.ApiDeleteMethod<ByProjectKeyQuotesKeyByKeyDelete, com.commercetools.api.models.quote.Quote>'
+    /{ID}:
+      delete:
+        (java-implements):
+          'com.commercetools.api.client.ApiDeleteMethod<ByProjectKeyQuotesByIDDelete, com.commercetools.api.models.quote.Quote>'
+
   /quote-requests:
     (java-mixin): |
         public ByProjectKeyQuoteRequestsByIDPost update(
@@ -1900,6 +2003,15 @@ types:
                 UnaryOperator<com.commercetools.api.models.quote_request.QuoteRequestDraftBuilder> op) {
             return post(op.apply(com.commercetools.api.models.quote_request.QuoteRequestDraftBuilder.of()).build());
         }
+    /key={key}:
+      delete:
+        (java-implements):
+          'com.commercetools.api.client.ApiDeleteMethod<ByProjectKeyQuoteRequestsKeyByKeyDelete, com.commercetools.api.models.quote_request.QuoteRequest>'
+    /{ID}:
+      delete:
+        (java-implements):
+          'com.commercetools.api.client.ApiDeleteMethod<ByProjectKeyQuoteRequestsByIDDelete, com.commercetools.api.models.quote_request.QuoteRequest>'
+
   /staged-quotes:
     (java-mixin): |
         public ByProjectKeyStagedQuotesByIDPost update(
@@ -1941,6 +2053,15 @@ types:
                 UnaryOperator<com.commercetools.api.models.staged_quote.StagedQuoteDraftBuilder> op) {
             return post(op.apply(com.commercetools.api.models.staged_quote.StagedQuoteDraftBuilder.of()).build());
         }
+    /key={key}:
+      delete:
+        (java-implements):
+          'com.commercetools.api.client.ApiDeleteMethod<ByProjectKeyStagedQuotesKeyByKeyDelete, com.commercetools.api.models.staged_quote.StagedQuote>'
+    /{ID}:
+      delete:
+        (java-implements):
+          'com.commercetools.api.client.ApiDeleteMethod<ByProjectKeyStagedQuotesByIDDelete, com.commercetools.api.models.staged_quote.StagedQuote>'
+
   /reviews:
     (java-mixin): |
         public ByProjectKeyReviewsByIDPost update(
@@ -1986,6 +2107,15 @@ types:
       (java-implements):
         'com.commercetools.api.models.PagedQueryResourceRequest<ByProjectKeyReviewsGet,
         com.commercetools.api.models.review.ReviewPagedQueryResponse>'
+    /key={key}:
+      delete:
+        (java-implements):
+          'com.commercetools.api.client.ApiDeleteMethod<ByProjectKeyReviewsKeyByKeyDelete, com.commercetools.api.models.review.Review>'
+    /{ID}:
+      delete:
+        (java-implements):
+          'com.commercetools.api.client.ApiDeleteMethod<ByProjectKeyReviewsByIDDelete, com.commercetools.api.models.review.Review>'
+
   /shipping-methods:
     (java-mixin): |
         public ByProjectKeyShippingMethodsByIDPost update(
@@ -2031,6 +2161,15 @@ types:
       (java-implements):
         'com.commercetools.api.models.PagedQueryResourceRequest<ByProjectKeyShippingMethodsGet,
         com.commercetools.api.models.shipping_method.ShippingMethodPagedQueryResponse>'
+    /key={key}:
+      delete:
+        (java-implements):
+          'com.commercetools.api.client.ApiDeleteMethod<ByProjectKeyShippingMethodsKeyByKeyDelete, com.commercetools.api.models.shipping_method.ShippingMethod>'
+    /{ID}:
+      delete:
+        (java-implements):
+          'com.commercetools.api.client.ApiDeleteMethod<ByProjectKeyShippingMethodsByIDDelete, com.commercetools.api.models.shipping_method.ShippingMethod>'
+
   /shopping-lists:
     (java-mixin): |
         public ByProjectKeyShoppingListsByIDPost update(
@@ -2076,6 +2215,15 @@ types:
       (java-implements):
         'com.commercetools.api.models.PagedQueryResourceRequest<ByProjectKeyShoppingListsGet,
         com.commercetools.api.models.shopping_list.ShoppingListPagedQueryResponse>'
+    /key={key}:
+      delete:
+        (java-implements):
+          'com.commercetools.api.client.ApiDeleteMethod<ByProjectKeyShoppingListsKeyByKeyDelete, com.commercetools.api.models.shopping_list.ShoppingList>'
+    /{ID}:
+      delete:
+        (java-implements):
+          'com.commercetools.api.client.ApiDeleteMethod<ByProjectKeyShoppingListsByIDDelete, com.commercetools.api.models.shopping_list.ShoppingList>'
+
   /states:
     (java-mixin): |
         public ByProjectKeyStatesByIDPost update(
@@ -2121,6 +2269,15 @@ types:
       (java-implements):
         'com.commercetools.api.models.PagedQueryResourceRequest<ByProjectKeyStatesGet,
         com.commercetools.api.models.state.StatePagedQueryResponse>'
+    /key={key}:
+      delete:
+        (java-implements):
+          'com.commercetools.api.client.ApiDeleteMethod<ByProjectKeyStatesKeyByKeyDelete, com.commercetools.api.models.state.State>'
+    /{ID}:
+      delete:
+        (java-implements):
+          'com.commercetools.api.client.ApiDeleteMethod<ByProjectKeyStatesByIDDelete, com.commercetools.api.models.state.State>'
+
   /subscriptions:
     (java-mixin): |
         public ByProjectKeySubscriptionsByIDPost update(
@@ -2166,6 +2323,15 @@ types:
       (java-implements):
         'com.commercetools.api.models.PagedQueryResourceRequest<ByProjectKeySubscriptionsGet,
         com.commercetools.api.models.subscription.SubscriptionPagedQueryResponse>'
+    /key={key}:
+      delete:
+        (java-implements):
+          'com.commercetools.api.client.ApiDeleteMethod<ByProjectKeySubscriptionsKeyByKeyDelete, com.commercetools.api.models.subscription.Subscription>'
+    /{ID}:
+      delete:
+        (java-implements):
+          'com.commercetools.api.client.ApiDeleteMethod<ByProjectKeySubscriptionsByIDDelete, com.commercetools.api.models.subscription.Subscription>'
+
   /tax-categories:
     (java-mixin): |
         public ByProjectKeyTaxCategoriesByIDPost update(
@@ -2211,6 +2377,15 @@ types:
       (java-implements):
         'com.commercetools.api.models.PagedQueryResourceRequest<ByProjectKeyTaxCategoriesGet,
         com.commercetools.api.models.tax_category.TaxCategoryPagedQueryResponse>'
+    /key={key}:
+      delete:
+        (java-implements):
+          'com.commercetools.api.client.ApiDeleteMethod<ByProjectKeyTaxCategoriesKeyByKeyDelete, com.commercetools.api.models.tax_category.TaxCategory>'
+    /{ID}:
+      delete:
+        (java-implements):
+          'com.commercetools.api.client.ApiDeleteMethod<ByProjectKeyTaxCategoriesByIDDelete, com.commercetools.api.models.tax_category.TaxCategory>'
+
   /types:
     (java-mixin): |
         public ByProjectKeyTypesByIDPost update(
@@ -2256,6 +2431,15 @@ types:
       (java-implements):
         'com.commercetools.api.models.PagedQueryResourceRequest<ByProjectKeyTypesGet,
         com.commercetools.api.models.type.TypePagedQueryResponse>'
+    /key={key}:
+      delete:
+        (java-implements):
+          'com.commercetools.api.client.ApiDeleteMethod<ByProjectKeyTypesKeyByKeyDelete, com.commercetools.api.models.type.Type>'
+    /{ID}:
+      delete:
+        (java-implements):
+          'com.commercetools.api.client.ApiDeleteMethod<ByProjectKeyTypesByIDDelete, com.commercetools.api.models.type.Type>'
+
   /zones:
     (java-mixin): |
         public ByProjectKeyZonesByIDPost update(
@@ -2301,6 +2485,15 @@ types:
       (java-implements):
         'com.commercetools.api.models.PagedQueryResourceRequest<ByProjectKeyZonesGet,
         com.commercetools.api.models.zone.ZonePagedQueryResponse>'
+    /key={key}:
+      delete:
+        (java-implements):
+          'com.commercetools.api.client.ApiDeleteMethod<ByProjectKeyZonesKeyByKeyDelete, com.commercetools.api.models.zone.Zone>'
+    /{ID}:
+      delete:
+        (java-implements):
+          'com.commercetools.api.client.ApiDeleteMethod<ByProjectKeyZonesByIDDelete, com.commercetools.api.models.zone.Zone>'
+
   /extensions:
     (java-mixin): |
         public ByProjectKeyExtensionsByIDPost update(
@@ -2346,6 +2539,15 @@ types:
       (java-implements):
         'com.commercetools.api.models.PagedQueryResourceRequest<ByProjectKeyExtensionsGet,
         com.commercetools.api.models.extension.ExtensionPagedQueryResponse>'
+    /key={key}:
+      delete:
+        (java-implements):
+          'com.commercetools.api.client.ApiDeleteMethod<ByProjectKeyExtensionsKeyByKeyDelete, com.commercetools.api.models.extension.Extension>'
+    /{ID}:
+      delete:
+        (java-implements):
+          'com.commercetools.api.client.ApiDeleteMethod<ByProjectKeyExtensionsByIDDelete, com.commercetools.api.models.extension.Extension>'
+
   /stores:
     (java-mixin): |
         public ByProjectKeyStoresByIDPost update(
@@ -2391,6 +2593,15 @@ types:
       (java-implements):
         'com.commercetools.api.models.PagedQueryResourceRequest<ByProjectKeyStoresGet,
         com.commercetools.api.models.store.StorePagedQueryResponse>'
+    /key={key}:
+      delete:
+        (java-implements):
+          'com.commercetools.api.client.ApiDeleteMethod<ByProjectKeyStoresKeyByKeyDelete, com.commercetools.api.models.store.Store>'
+    /{ID}:
+      delete:
+        (java-implements):
+          'com.commercetools.api.client.ApiDeleteMethod<ByProjectKeyStoresByIDDelete, com.commercetools.api.models.store.Store>'
+
   /standalone-prices:
     (java-mixin): |
         public ByProjectKeyStandalonePricesByIDPost update(
@@ -2436,6 +2647,15 @@ types:
       (java-implements):
         'com.commercetools.api.models.PagedQueryResourceRequest<ByProjectKeyStandalonePricesGet,
         com.commercetools.api.models.standalone_price.StandalonePricePagedQueryResponse>'
+    /key={key}:
+      delete:
+        (java-implements):
+          'com.commercetools.api.client.ApiDeleteMethod<ByProjectKeyStandalonePricesKeyByKeyDelete, com.commercetools.api.models.standalone_price.StandalonePrice>'
+    /{ID}:
+      delete:
+        (java-implements):
+          'com.commercetools.api.client.ApiDeleteMethod<ByProjectKeyStandalonePricesByIDDelete, com.commercetools.api.models.standalone_price.StandalonePrice>'
+
   /attribute-groups:
     (java-mixin): |
         public ByProjectKeyAttributeGroupsByIDPost update(
@@ -2477,6 +2697,15 @@ types:
                 UnaryOperator<com.commercetools.api.models.attribute_group.AttributeGroupDraftBuilder> op) {
             return post(op.apply(com.commercetools.api.models.attribute_group.AttributeGroupDraftBuilder.of()).build());
         }
+    /key={key}:
+      delete:
+        (java-implements):
+          'com.commercetools.api.client.ApiDeleteMethod<ByProjectKeyAttributeGroupsKeyByKeyDelete, com.commercetools.api.models.attribute_group.AttributeGroup>'
+    /{ID}:
+      delete:
+        (java-implements):
+          'com.commercetools.api.client.ApiDeleteMethod<ByProjectKeyAttributeGroupsByIDDelete, com.commercetools.api.models.attribute_group.AttributeGroup>'
+
   /api-clients:
     (java-mixin): |
         public ByProjectKeyApiClientsByIDDelete delete(
@@ -2492,3 +2721,7 @@ types:
                 UnaryOperator<com.commercetools.api.models.api_client.ApiClientDraftBuilder> op) {
             return post(op.apply(com.commercetools.api.models.api_client.ApiClientDraftBuilder.of()).build());
         }
+    /{ID}:
+      delete:
+        (java-implements):
+          'com.commercetools.api.client.ApiDeleteMethod<ByProjectKeyApiClientsByIDDelete, com.commercetools.api.models.api_client.ApiClient>'

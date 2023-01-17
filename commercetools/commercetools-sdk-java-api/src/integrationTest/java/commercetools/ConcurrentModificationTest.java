@@ -17,7 +17,9 @@ import com.commercetools.api.models.cart.Cart;
 import com.commercetools.api.models.cart.CartSetCountryActionBuilder;
 import com.commercetools.api.models.cart.CartUpdate;
 import com.commercetools.api.models.cart.CartUpdateBuilder;
+import com.commercetools.api.models.product_type.ProductType;
 import commercetools.cart.CartsFixtures;
+import commercetools.product_type.ProductTypeFixtures;
 import commercetools.utils.CommercetoolsTestUtils;
 
 import io.vrap.rmf.base.client.*;
@@ -74,6 +76,39 @@ public class ConcurrentModificationTest {
                     .executeBlocking()
                     .getBody();
             return modCart;
+        });
+    }
+
+    @Test
+    public void concurrentModDelete() {
+        ServiceRegion region = System.getenv("CTP_REGION") == null ? ServiceRegion.GCP_EUROPE_WEST1
+                : ServiceRegion.valueOf(System.getenv("CTP_REGION"));
+        String authURL = System.getenv("CTP_AUTH_URL") == null ? region.getOAuthTokenUrl()
+                : System.getenv("CTP_AUTH_URL");
+        String apiUrl = System.getenv("CTP_API_URL") == null ? region.getApiUrl() : System.getenv("CTP_API_URL");
+
+        final ProjectApiRoot projectApiRoot = ApiRootBuilder.of()
+                .defaultClient(ClientCredentials.of()
+                        .withClientId(CommercetoolsTestUtils.getClientId())
+                        .withClientSecret(CommercetoolsTestUtils.getClientSecret())
+                        .build(),
+                    authURL, apiUrl)
+                .withErrorMiddleware(ErrorMiddleware.ExceptionMode.UNWRAP_COMPLETION_EXCEPTION)
+                .build(CommercetoolsTestUtils.getProjectKey());
+
+        ProductTypeFixtures.withUpdateableProductType(productType -> {
+
+            final ApiHttpResponse<ProductType> response = projectApiRoot.productTypes()
+                    .update(productType,
+                        builder -> builder.plus(
+                            actionBuilder -> actionBuilder.changeDescriptionBuilder().description("new description")))
+                    .executeBlocking();
+
+            final ProductType deletedProductType = RetryHandler
+                    .concurrentModification(projectApiRoot.productTypes().delete(productType))
+                    .executeBlocking()
+                    .getBody();
+            return deletedProductType;
         });
     }
 

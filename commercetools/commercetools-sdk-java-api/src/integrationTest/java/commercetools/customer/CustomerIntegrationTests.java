@@ -4,11 +4,15 @@ package commercetools.customer;
 import static commercetools.customer.CustomerFixtures.*;
 import static commercetools.customer_group.CustomerGroupFixtures.*;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
+import java.util.stream.Collectors;
 
+import com.commercetools.api.models.common.Address;
 import com.commercetools.api.models.customer.*;
 import commercetools.utils.CommercetoolsTestUtils;
+import commercetools.utils.TestUtils;
+
+import io.vrap.rmf.base.client.utils.json.JsonUtils;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
@@ -126,5 +130,57 @@ public class CustomerIntegrationTests {
             Assertions.assertNotNull(deletedCustomer);
             Assertions.assertEquals(customer.getId(), deletedCustomer.getId());
         });
+    }
+
+    @Test
+    public void customerClone() {
+        Customer customer = JsonUtils.fromJsonString(TestUtils.stringFromResource("customer.json"), Customer.class);
+
+        CustomerDraft draft = CustomerDraft.builder(customer)
+                .email(CommercetoolsTestUtils.randomKey() + "+" + customer.getEmail())
+                .password("weak-new-password")
+                .build();
+
+        Assertions.assertEquals(4, draft.getDefaultBillingAddress());
+        Assertions.assertEquals(3, draft.getDefaultShippingAddress());
+
+        Customer newCustomer = CommercetoolsTestUtils.getProjectApiRoot()
+                .customers()
+                .post(draft)
+                .executeBlocking()
+                .getBody()
+                .getCustomer();
+
+        try {
+            Assertions.assertEquals("FR",
+                newCustomer.getAddresses()
+                        .stream()
+                        .filter(address -> address.getId().equals(newCustomer.getDefaultBillingAddressId()))
+                        .findFirst()
+                        .get()
+                        .getCountry());
+            Assertions.assertEquals("JP",
+                newCustomer.getAddresses()
+                        .stream()
+                        .filter(address -> address.getId().equals(newCustomer.getDefaultShippingAddressId()))
+                        .findFirst()
+                        .get()
+                        .getCountry());
+            Assertions.assertEquals(Arrays.asList("UK", "JP"),
+                newCustomer.getAddresses()
+                        .stream()
+                        .filter(address -> newCustomer.getShippingAddressIds().contains(address.getId()))
+                        .map(Address::getCountry)
+                        .collect(Collectors.toList()));
+            Assertions.assertEquals(Arrays.asList("US", "FR"),
+                newCustomer.getAddresses()
+                        .stream()
+                        .filter(address -> newCustomer.getBillingAddressIds().contains(address.getId()))
+                        .map(Address::getCountry)
+                        .collect(Collectors.toList()));
+        }
+        finally {
+            CommercetoolsTestUtils.getProjectApiRoot().customers().delete(newCustomer).executeBlocking();
+        }
     }
 }

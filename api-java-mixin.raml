@@ -1626,11 +1626,11 @@ types:
     /key={key}:
       delete:
         (java-implements):
-          'com.commercetools.api.client.ApiDeleteMethod<ByProjectKeyInventoryKeyByKeyDelete, com.commercetools.api.models.inventory.Inventory>'
+          'com.commercetools.api.client.ApiDeleteMethod<ByProjectKeyInventoryKeyByKeyDelete, com.commercetools.api.models.inventory.InventoryEntry>'
     /{ID}:
       delete:
         (java-implements):
-          'com.commercetools.api.client.ApiDeleteMethod<ByProjectKeyInventoryByIDDelete, com.commercetools.api.models.inventory.Inventory>'
+          'com.commercetools.api.client.ApiDeleteMethod<ByProjectKeyInventoryByIDDelete, com.commercetools.api.models.inventory.InventoryEntry>'
 
   /messages:
     get:
@@ -1907,7 +1907,7 @@ types:
     /key={key}:
       delete:
         (java-implements):
-          'com.commercetools.api.client.ApiDeleteMethod<ByProjectKeyProductsKeyByKeyDelete, com.commercetools.api.models.product_type.ProductType>'
+          'com.commercetools.api.client.ApiDeleteMethod<ByProjectKeyProductTypesKeyByKeyDelete, com.commercetools.api.models.product_type.ProductType>'
     /{ID}:
       delete:
         (java-implements):
@@ -2721,7 +2721,3 @@ types:
                 UnaryOperator<com.commercetools.api.models.api_client.ApiClientDraftBuilder> op) {
             return post(op.apply(com.commercetools.api.models.api_client.ApiClientDraftBuilder.of()).build());
         }
-    /{ID}:
-      delete:
-        (java-implements):
-          'com.commercetools.api.client.ApiDeleteMethod<ByProjectKeyApiClientsByIDDelete, com.commercetools.api.models.api_client.ApiClient>'

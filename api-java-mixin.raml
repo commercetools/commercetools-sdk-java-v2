@@ -151,7 +151,7 @@ types:
   CustomObjectPagedQueryResponse:
     (java-extends): 'com.commercetools.api.models.ResourcePagedQueryResponse<CustomObject>'
   CustomObjectReference:
-    (java-extends): com.commercetools.api.models.Identifiable<CustomObject>
+    (java-extends): 'com.commercetools.api.models.Identifiable<CustomObject>'
   Customer:
     (java-extends): 'com.commercetools.api.models.DomainResource<Customer>, com.commercetools.api.models.Referencable<Customer>, com.commercetools.api.models.ResourceIdentifiable<Customer>, com.commercetools.api.models.Customizable<Customer>, com.commercetools.api.models.WithKey'
     (java-mixin): |
@@ -216,7 +216,7 @@ types:
                         .orElse(null))
                 .authenticationMode(customer.getAuthenticationMode())
                 .custom(Optional.ofNullable(customer.getCustom()).map(com.commercetools.api.models.type.CustomFields::toDraft).orElse(null));
-     }
+      }
   CustomerPagedQueryResponse:
     (java-extends): 'com.commercetools.api.models.ResourcePagedQueryResponse<Customer>'
   CustomerReference:

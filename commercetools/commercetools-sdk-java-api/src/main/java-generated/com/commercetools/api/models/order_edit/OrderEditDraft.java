@@ -32,7 +32,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = OrderEditDraftImpl.class)
 public interface OrderEditDraft extends com.commercetools.api.models.CustomizableDraft<OrderEditDraft>,
-        io.vrap.rmf.base.client.Draft<OrderEditDraft> {
+        com.commercetools.api.models.WithKey, io.vrap.rmf.base.client.Draft<OrderEditDraft> {
 
     /**
      *  <p>User-defined unique identifier for the OrderEdit.</p>

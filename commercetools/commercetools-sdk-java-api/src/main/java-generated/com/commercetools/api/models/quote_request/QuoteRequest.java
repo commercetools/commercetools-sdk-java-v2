@@ -62,7 +62,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = QuoteRequestImpl.class)
-public interface QuoteRequest extends BaseResource {
+public interface QuoteRequest extends BaseResource, com.commercetools.api.models.WithKey {
 
     /**
      *  <p>Unique identifier of the QuoteRequest.</p>

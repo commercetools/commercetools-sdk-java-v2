@@ -29,7 +29,8 @@ import io.vrap.rmf.base.client.utils.Generated;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ReplicaCartDraftImpl.class)
-public interface ReplicaCartDraft extends io.vrap.rmf.base.client.Draft<ReplicaCartDraft> {
+public interface ReplicaCartDraft
+        extends com.commercetools.api.models.WithKey, io.vrap.rmf.base.client.Draft<ReplicaCartDraft> {
 
     /**
      *  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>

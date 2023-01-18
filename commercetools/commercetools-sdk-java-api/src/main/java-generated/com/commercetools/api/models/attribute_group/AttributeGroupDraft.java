@@ -30,7 +30,8 @@ import io.vrap.rmf.base.client.utils.Generated;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = AttributeGroupDraftImpl.class)
-public interface AttributeGroupDraft extends io.vrap.rmf.base.client.Draft<AttributeGroupDraft> {
+public interface AttributeGroupDraft
+        extends com.commercetools.api.models.WithKey, io.vrap.rmf.base.client.Draft<AttributeGroupDraft> {
 
     /**
      *  <p>Name of the AttributeGroup.</p>

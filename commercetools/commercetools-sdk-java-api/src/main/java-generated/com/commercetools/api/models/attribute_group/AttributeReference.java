@@ -27,7 +27,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = AttributeReferenceImpl.class)
-public interface AttributeReference {
+public interface AttributeReference extends com.commercetools.api.models.WithKey {
 
     /**
      *  <p>Key of the attribute.</p>

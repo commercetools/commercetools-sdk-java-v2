@@ -44,7 +44,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = StagedQuoteImpl.class)
-public interface StagedQuote extends BaseResource {
+public interface StagedQuote extends BaseResource, com.commercetools.api.models.WithKey {
 
     /**
      *  <p>The unique ID of the StagedQuote.</p>

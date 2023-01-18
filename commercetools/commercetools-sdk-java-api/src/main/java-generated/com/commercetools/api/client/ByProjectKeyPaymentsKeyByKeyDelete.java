@@ -35,8 +35,9 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ByProjectKeyPaymentsKeyByKeyDelete
-        extends ApiMethod<ByProjectKeyPaymentsKeyByKeyDelete, com.commercetools.api.models.payment.Payment>
-        implements com.commercetools.api.client.DataerasureTrait<ByProjectKeyPaymentsKeyByKeyDelete>,
+        extends ApiMethod<ByProjectKeyPaymentsKeyByKeyDelete, com.commercetools.api.models.payment.Payment> implements
+        com.commercetools.api.client.ApiDeleteMethod<ByProjectKeyPaymentsKeyByKeyDelete, com.commercetools.api.models.payment.Payment>,
+        com.commercetools.api.client.DataerasureTrait<ByProjectKeyPaymentsKeyByKeyDelete>,
         com.commercetools.api.client.VersionedTrait<ByProjectKeyPaymentsKeyByKeyDelete>,
         com.commercetools.api.client.ConflictingTrait<ByProjectKeyPaymentsKeyByKeyDelete>,
         com.commercetools.api.client.ExpandableTrait<ByProjectKeyPaymentsKeyByKeyDelete>,

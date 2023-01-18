@@ -36,7 +36,9 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ByProjectKeyStagedQuotesKeyByKeyDelete
         extends ApiMethod<ByProjectKeyStagedQuotesKeyByKeyDelete, com.commercetools.api.models.staged_quote.StagedQuote>
-        implements com.commercetools.api.client.DataerasureTrait<ByProjectKeyStagedQuotesKeyByKeyDelete>,
+        implements
+        com.commercetools.api.client.ApiDeleteMethod<ByProjectKeyStagedQuotesKeyByKeyDelete, com.commercetools.api.models.staged_quote.StagedQuote>,
+        com.commercetools.api.client.DataerasureTrait<ByProjectKeyStagedQuotesKeyByKeyDelete>,
         com.commercetools.api.client.VersionedTrait<ByProjectKeyStagedQuotesKeyByKeyDelete>,
         com.commercetools.api.client.ConflictingTrait<ByProjectKeyStagedQuotesKeyByKeyDelete>,
         com.commercetools.api.client.ExpandableTrait<ByProjectKeyStagedQuotesKeyByKeyDelete>,

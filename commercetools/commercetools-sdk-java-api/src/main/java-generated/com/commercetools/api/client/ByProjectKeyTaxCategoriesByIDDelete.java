@@ -34,9 +34,10 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
  * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-public class ByProjectKeyTaxCategoriesByIDDelete
-        extends ApiMethod<ByProjectKeyTaxCategoriesByIDDelete, com.commercetools.api.models.tax_category.TaxCategory>
-        implements com.commercetools.api.client.VersionedTrait<ByProjectKeyTaxCategoriesByIDDelete>,
+public class ByProjectKeyTaxCategoriesByIDDelete extends
+        ApiMethod<ByProjectKeyTaxCategoriesByIDDelete, com.commercetools.api.models.tax_category.TaxCategory> implements
+        com.commercetools.api.client.ApiDeleteMethod<ByProjectKeyTaxCategoriesByIDDelete, com.commercetools.api.models.tax_category.TaxCategory>,
+        com.commercetools.api.client.VersionedTrait<ByProjectKeyTaxCategoriesByIDDelete>,
         com.commercetools.api.client.ConflictingTrait<ByProjectKeyTaxCategoriesByIDDelete>,
         com.commercetools.api.client.ExpandableTrait<ByProjectKeyTaxCategoriesByIDDelete>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyTaxCategoriesByIDDelete>,

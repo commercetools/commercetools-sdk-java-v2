@@ -74,7 +74,7 @@ public class ProductPriceDiscountsSetUpdatedPriceImpl implements ProductPriceDis
     }
 
     /**
-     *  <p>Unique identifier of the Embedded Price.</p>
+     *  <p>Unique identifier of the Price.</p>
      */
 
     public String getPriceId() {

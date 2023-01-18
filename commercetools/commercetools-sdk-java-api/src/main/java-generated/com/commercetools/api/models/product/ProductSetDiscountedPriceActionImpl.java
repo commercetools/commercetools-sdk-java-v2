@@ -51,7 +51,7 @@ public class ProductSetDiscountedPriceActionImpl implements ProductSetDiscounted
     }
 
     /**
-     *  <p>The <code>id</code> of the Embedded Price to set the Discount.</p>
+     *  <p>The <code>id</code> of the Price to set the Discount.</p>
      */
 
     public String getPriceId() {

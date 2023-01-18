@@ -32,7 +32,7 @@ public interface ProductSetPriceKeyAction extends ProductUpdateAction {
     String SET_PRICE_KEY = "setPriceKey";
 
     /**
-     *  <p>The <code>id</code> of the Embedded Price to set the key.</p>
+     *  <p>The <code>id</code> of the Price to set the key.</p>
      */
     @NotNull
     @JsonProperty("priceId")

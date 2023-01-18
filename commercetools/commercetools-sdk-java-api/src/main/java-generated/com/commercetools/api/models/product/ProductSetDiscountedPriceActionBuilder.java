@@ -33,7 +33,7 @@ public class ProductSetDiscountedPriceActionBuilder implements Builder<ProductSe
     private com.commercetools.api.models.common.DiscountedPriceDraft discounted;
 
     /**
-     *  <p>The <code>id</code> of the Embedded Price to set the Discount.</p>
+     *  <p>The <code>id</code> of the Price to set the Discount.</p>
      */
 
     public ProductSetDiscountedPriceActionBuilder priceId(final String priceId) {

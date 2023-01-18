@@ -65,7 +65,7 @@ public class ProductPriceKeySetMessagePayloadImpl implements ProductPriceKeySetM
     }
 
     /**
-     *  <p>Unique identifier of the Embedded Price.</p>
+     *  <p>Unique identifier of the Price.</p>
      */
 
     public String getPriceId() {
@@ -73,7 +73,7 @@ public class ProductPriceKeySetMessagePayloadImpl implements ProductPriceKeySetM
     }
 
     /**
-     *  <p><code>key</code> value of the Embedded Price before the Set Price Key update action.</p>
+     *  <p><code>key</code> value of the Price before the Set Price Key update action.</p>
      */
 
     public String getOldKey() {
@@ -81,7 +81,7 @@ public class ProductPriceKeySetMessagePayloadImpl implements ProductPriceKeySetM
     }
 
     /**
-     *  <p><code>key</code> value of the Embedded Price after the Set Price Key update action.</p>
+     *  <p><code>key</code> value of the Price after the Set Price Key update action.</p>
      */
 
     public String getKey() {

@@ -32,7 +32,7 @@ public class ProductSetPriceKeyActionBuilder implements Builder<ProductSetPriceK
     private String key;
 
     /**
-     *  <p>The <code>id</code> of the Embedded Price to set the key.</p>
+     *  <p>The <code>id</code> of the Price to set the key.</p>
      */
 
     public ProductSetPriceKeyActionBuilder priceId(final String priceId) {

@@ -47,21 +47,21 @@ public interface ProductPriceKeySetMessage extends Message {
     public Long getVariantId();
 
     /**
-     *  <p>Unique identifier of the Embedded Price.</p>
+     *  <p>Unique identifier of the Price.</p>
      */
 
     @JsonProperty("priceId")
     public String getPriceId();
 
     /**
-     *  <p><code>key</code> value of the Embedded Price before the Set Price Key update action.</p>
+     *  <p><code>key</code> value of the Price before the Set Price Key update action.</p>
      */
 
     @JsonProperty("oldKey")
     public String getOldKey();
 
     /**
-     *  <p><code>key</code> value of the Embedded Price after the Set Price Key update action.</p>
+     *  <p><code>key</code> value of the Price after the Set Price Key update action.</p>
      */
 
     @JsonProperty("key")

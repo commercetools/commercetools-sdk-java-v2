@@ -27,10 +27,6 @@ public class DestinationBuilder {
         return com.commercetools.api.models.subscription.GoogleCloudPubSubDestinationBuilder.of();
     }
 
-    public com.commercetools.api.models.subscription.IronMqDestinationBuilder ironMqBuilder() {
-        return com.commercetools.api.models.subscription.IronMqDestinationBuilder.of();
-    }
-
     public com.commercetools.api.models.subscription.SnsDestinationBuilder snsBuilder() {
         return com.commercetools.api.models.subscription.SnsDestinationBuilder.of();
     }

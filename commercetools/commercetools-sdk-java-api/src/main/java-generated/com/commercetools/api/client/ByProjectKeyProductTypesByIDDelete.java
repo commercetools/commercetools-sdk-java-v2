@@ -11,8 +11,6 @@ import java.util.function.Function;
 import java.util.function.Supplier;
 import java.util.stream.Collectors;
 
-import com.commercetools.api.models.product_type.ProductType;
-
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -36,14 +34,14 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
  * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-public class ByProjectKeyProductTypesByIDDelete
-        extends ApiMethod<ByProjectKeyProductTypesByIDDelete, com.commercetools.api.models.product_type.ProductType>
-        implements com.commercetools.api.client.VersionedTrait<ByProjectKeyProductTypesByIDDelete>,
+public class ByProjectKeyProductTypesByIDDelete extends
+        ApiMethod<ByProjectKeyProductTypesByIDDelete, com.commercetools.api.models.product_type.ProductType> implements
+        com.commercetools.api.client.ApiDeleteMethod<ByProjectKeyProductTypesByIDDelete, com.commercetools.api.models.product_type.ProductType>,
+        com.commercetools.api.client.VersionedTrait<ByProjectKeyProductTypesByIDDelete>,
         com.commercetools.api.client.ConflictingTrait<ByProjectKeyProductTypesByIDDelete>,
         com.commercetools.api.client.ExpandableTrait<ByProjectKeyProductTypesByIDDelete>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyProductTypesByIDDelete>,
-        com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyProductTypesByIDDelete>,
-        ApiDeleteMethod<ByProjectKeyProductTypesByIDDelete, ProductType> {
+        com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyProductTypesByIDDelete> {
 
     private String projectKey;
     private String ID;

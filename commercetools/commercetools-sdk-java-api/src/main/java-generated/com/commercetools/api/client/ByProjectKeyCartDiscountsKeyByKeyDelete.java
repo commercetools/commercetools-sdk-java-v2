@@ -36,7 +36,9 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ByProjectKeyCartDiscountsKeyByKeyDelete extends
         ApiMethod<ByProjectKeyCartDiscountsKeyByKeyDelete, com.commercetools.api.models.cart_discount.CartDiscount>
-        implements com.commercetools.api.client.VersionedTrait<ByProjectKeyCartDiscountsKeyByKeyDelete>,
+        implements
+        com.commercetools.api.client.ApiDeleteMethod<ByProjectKeyCartDiscountsKeyByKeyDelete, com.commercetools.api.models.cart_discount.CartDiscount>,
+        com.commercetools.api.client.VersionedTrait<ByProjectKeyCartDiscountsKeyByKeyDelete>,
         com.commercetools.api.client.ConflictingTrait<ByProjectKeyCartDiscountsKeyByKeyDelete>,
         com.commercetools.api.client.ExpandableTrait<ByProjectKeyCartDiscountsKeyByKeyDelete>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyCartDiscountsKeyByKeyDelete>,

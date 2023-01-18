@@ -28,7 +28,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = AssetSourceImpl.class)
-public interface AssetSource {
+public interface AssetSource extends com.commercetools.api.models.WithKey {
 
     /**
      *  <p>URI of the AssetSource.</p>

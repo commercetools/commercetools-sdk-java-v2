@@ -36,7 +36,9 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ByProjectKeyStandalonePricesKeyByKeyDelete extends
         ApiMethod<ByProjectKeyStandalonePricesKeyByKeyDelete, com.commercetools.api.models.standalone_price.StandalonePrice>
-        implements com.commercetools.api.client.VersionedTrait<ByProjectKeyStandalonePricesKeyByKeyDelete>,
+        implements
+        com.commercetools.api.client.ApiDeleteMethod<ByProjectKeyStandalonePricesKeyByKeyDelete, com.commercetools.api.models.standalone_price.StandalonePrice>,
+        com.commercetools.api.client.VersionedTrait<ByProjectKeyStandalonePricesKeyByKeyDelete>,
         com.commercetools.api.client.ConflictingTrait<ByProjectKeyStandalonePricesKeyByKeyDelete>,
         com.commercetools.api.client.ExpandableTrait<ByProjectKeyStandalonePricesKeyByKeyDelete>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyStandalonePricesKeyByKeyDelete>,

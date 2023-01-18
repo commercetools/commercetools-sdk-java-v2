@@ -1,6 +1,7 @@
 
 package com.commercetools.api.models.customer;
 
+import java.time.*;
 import java.time.LocalDate;
 import java.util.*;
 import java.util.function.Function;
@@ -336,6 +337,18 @@ public interface CustomerDraft extends com.commercetools.api.models.Customizable
         return instance;
     }
 
+    public static CustomerDraftBuilder builder() {
+        return CustomerDraftBuilder.of();
+    }
+
+    public static CustomerDraftBuilder builder(final CustomerDraft template) {
+        return CustomerDraftBuilder.of(template);
+    }
+
+    default <T> T withCustomerDraft(Function<CustomerDraft, T> helper) {
+        return helper.apply(this);
+    }
+
     public static CustomerDraftBuilder builder(Customer customer) {
         List<BaseAddress> addresses = new ArrayList<>(customer.getAddresses());
         Map<String, Integer> addressIds = java.util.stream.IntStream.range(0, addresses.size())
@@ -386,18 +399,6 @@ public interface CustomerDraft extends com.commercetools.api.models.Customizable
                 .custom(Optional.ofNullable(customer.getCustom())
                         .map(com.commercetools.api.models.type.CustomFields::toDraft)
                         .orElse(null));
-    }
-
-    public static CustomerDraftBuilder builder() {
-        return CustomerDraftBuilder.of();
-    }
-
-    public static CustomerDraftBuilder builder(final CustomerDraft template) {
-        return CustomerDraftBuilder.of(template);
-    }
-
-    default <T> T withCustomerDraft(Function<CustomerDraft, T> helper) {
-        return helper.apply(this);
     }
 
     public static com.fasterxml.jackson.core.type.TypeReference<CustomerDraft> typeReference() {

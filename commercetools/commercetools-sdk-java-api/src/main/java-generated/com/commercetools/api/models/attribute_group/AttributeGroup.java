@@ -38,7 +38,8 @@ import io.vrap.rmf.base.client.utils.Generated;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = AttributeGroupImpl.class)
-public interface AttributeGroup extends BaseResource, com.commercetools.api.models.DomainResource<AttributeGroup> {
+public interface AttributeGroup extends BaseResource, com.commercetools.api.models.DomainResource<AttributeGroup>,
+        com.commercetools.api.models.WithKey {
 
     /**
      *  <p>Platform-generated unique identifier of the AttributeGroup.</p>

@@ -33,7 +33,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = PriceImpl.class)
-public interface Price extends com.commercetools.api.models.Customizable<Price> {
+public interface Price extends com.commercetools.api.models.Customizable<Price>, com.commercetools.api.models.WithKey {
 
     /**
      *  <p>Unique identifier of this Price.</p>

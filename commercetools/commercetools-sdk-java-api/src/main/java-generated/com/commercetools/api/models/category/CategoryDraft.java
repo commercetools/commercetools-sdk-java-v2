@@ -33,7 +33,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CategoryDraftImpl.class)
 public interface CategoryDraft extends com.commercetools.api.models.CustomizableDraft<CategoryDraft>,
-        io.vrap.rmf.base.client.Draft<CategoryDraft> {
+        com.commercetools.api.models.WithKey, io.vrap.rmf.base.client.Draft<CategoryDraft> {
 
     /**
      *  <p>Name of the Category.</p>

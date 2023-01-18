@@ -85,7 +85,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "typeId", defaultImpl = ResourceIdentifierImpl.class, visible = true)
 @JsonDeserialize(as = ResourceIdentifierImpl.class)
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-public interface ResourceIdentifier {
+public interface ResourceIdentifier extends com.commercetools.api.models.WithKey {
 
     /**
      *  <p>Type of referenced resource. If given, it must match the expected ReferenceTypeId of the referenced resource.</p>

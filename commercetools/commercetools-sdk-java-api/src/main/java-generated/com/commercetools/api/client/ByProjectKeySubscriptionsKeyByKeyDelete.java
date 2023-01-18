@@ -36,7 +36,9 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ByProjectKeySubscriptionsKeyByKeyDelete extends
         ApiMethod<ByProjectKeySubscriptionsKeyByKeyDelete, com.commercetools.api.models.subscription.Subscription>
-        implements com.commercetools.api.client.VersionedTrait<ByProjectKeySubscriptionsKeyByKeyDelete>,
+        implements
+        com.commercetools.api.client.ApiDeleteMethod<ByProjectKeySubscriptionsKeyByKeyDelete, com.commercetools.api.models.subscription.Subscription>,
+        com.commercetools.api.client.VersionedTrait<ByProjectKeySubscriptionsKeyByKeyDelete>,
         com.commercetools.api.client.ConflictingTrait<ByProjectKeySubscriptionsKeyByKeyDelete>,
         com.commercetools.api.client.ExpandableTrait<ByProjectKeySubscriptionsKeyByKeyDelete>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeySubscriptionsKeyByKeyDelete>,

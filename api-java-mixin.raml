@@ -68,11 +68,14 @@ types:
     (java-extends): 'com.commercetools.api.models.CustomizableDraft<AddressDraft>'
   Asset:
     (java-extends): 'com.commercetools.api.models.Customizable<Asset>, com.commercetools.api.models.WithKey'
+  AssetSource:
+    (java-extends): 'com.commercetools.api.models.WithKey'
   AssetDraft:
     (java-extends): 'com.commercetools.api.models.CustomizableDraft<AssetDraft>, com.commercetools.api.models.WithKey'
   LocalizedString:
     (java-extends): 'com.commercetools.api.models.common.LocalizedStringUtil'
   ReplicaCartDraft:
+    (java-extends): 'com.commercetools.api.models.WithKey'
     (java-mixin): |
       @JsonIgnore
       @Deprecated
@@ -82,6 +85,10 @@ types:
     properties:
       reference:
         type: Reference
+  CustomShippingDraft:
+    (java-extends): 'com.commercetools.api.models.WithKey'
+  ShippingDraft:
+    (java-extends): 'com.commercetools.api.models.WithKey'
   Cart:
     (java-extends): 'com.commercetools.api.models.DomainResource<Cart>, com.commercetools.api.models.Referencable<Cart>, com.commercetools.api.models.ResourceIdentifiable<Cart>, com.commercetools.api.models.Customizable<Cart>, com.commercetools.api.models.order.OrderLike<Cart>, com.commercetools.api.models.WithKey'
     (java-mixin): |
@@ -151,7 +158,7 @@ types:
   CustomObjectPagedQueryResponse:
     (java-extends): 'com.commercetools.api.models.ResourcePagedQueryResponse<CustomObject>'
   CustomObjectReference:
-    (java-extends): com.commercetools.api.models.Identifiable<CustomObject>
+    (java-extends): 'com.commercetools.api.models.Identifiable<CustomObject>'
   Customer:
     (java-extends): 'com.commercetools.api.models.DomainResource<Customer>, com.commercetools.api.models.Referencable<Customer>, com.commercetools.api.models.ResourceIdentifiable<Customer>, com.commercetools.api.models.Customizable<Customer>, com.commercetools.api.models.WithKey'
     (java-mixin): |
@@ -216,7 +223,7 @@ types:
                         .orElse(null))
                 .authenticationMode(customer.getAuthenticationMode())
                 .custom(Optional.ofNullable(customer.getCustom()).map(com.commercetools.api.models.type.CustomFields::toDraft).orElse(null));
-     }
+      }
   CustomerPagedQueryResponse:
     (java-extends): 'com.commercetools.api.models.ResourcePagedQueryResponse<Customer>'
   CustomerReference:
@@ -434,7 +441,11 @@ types:
   ProductPagedQueryResponse:
     (java-extends): 'com.commercetools.api.models.ResourcePagedQueryResponse<Product>'
   ProductProjection:
-    (java-extends): 'ProductDataLike, com.commercetools.api.models.DomainResource<ProductProjection>'
+    (java-extends): 'ProductDataLike, com.commercetools.api.models.DomainResource<ProductProjection>, com.commercetools.api.models.WithKey'
+  ProductVariant:
+    (java-extends): 'com.commercetools.api.models.WithKey'
+  ProductVariantDraft:
+    (java-extends): 'com.commercetools.api.models.WithKey'
   ProductProjectionPagedQueryResponse:
     (java-extends): 'com.commercetools.api.models.ResourcePagedQueryResponse<ProductProjection>'
   ProductProjectionPagedSearchResponse:
@@ -462,6 +473,8 @@ types:
       public static com.commercetools.api.models.common.ReferenceTypeId referenceTypeId() {
           return com.commercetools.api.models.common.ReferenceTypeId.PRODUCT_DISCOUNT;
       }
+  ProductDiscountDraft:
+    (java-extends): 'com.commercetools.api.models.WithKey'
   ProductDiscountPagedQueryResponse:
     (java-extends): 'com.commercetools.api.models.ResourcePagedQueryResponse<ProductDiscount>'
   ProductDiscountReference:
@@ -581,6 +594,14 @@ types:
       QuoteRequestUpdateAction, QuoteRequestUpdateBuilder>'
   QuoteRequestUpdateAction:
     (java-extends): 'com.commercetools.api.models.ResourceUpdateAction<QuoteRequestUpdateAction>'
+  QuoteRequest:
+    (java-extends): 'com.commercetools.api.models.WithKey'
+  QuoteRequestDraft:
+    (java-extends): 'com.commercetools.api.models.WithKey'
+  StagedQuote:
+    (java-extends): 'com.commercetools.api.models.WithKey'
+  StagedQuoteDraft:
+    (java-extends): 'com.commercetools.api.models.WithKey'
 
   Review:
     (java-extends): 'com.commercetools.api.models.DomainResource<Review>, com.commercetools.api.models.Referencable<Review>, com.commercetools.api.models.ResourceIdentifiable<Review>, com.commercetools.api.models.Customizable<Review>, com.commercetools.api.models.WithKey'
@@ -958,6 +979,10 @@ types:
       public default ResourceIdentifier toResourceIdentifier() {
           return new ResourceIdentifierImpl(this.getTypeId(), this.getId(), null);
       }
+  KeyReference:
+    (java-extends): 'com.commercetools.api.models.WithKey'
+  ResourceIdentifier:
+    (java-extends): 'com.commercetools.api.models.WithKey'
   TypeReference:
     (java-extends): com.commercetools.api.models.Identifiable<Type>
     (java-mixin): |
@@ -1024,7 +1049,11 @@ types:
   ApiClientPagedQueryResponse:
     (java-extends): 'com.commercetools.api.models.ResourcePagedQueryResponse<ApiClient>'
   AttributeGroup:
-    (java-extends): 'com.commercetools.api.models.DomainResource<AttributeGroup>'
+    (java-extends): 'com.commercetools.api.models.DomainResource<AttributeGroup>, com.commercetools.api.models.WithKey'
+  AttributeGroupDraft:
+    (java-extends): 'com.commercetools.api.models.WithKey'
+  AttributeReference:
+    (java-extends): 'com.commercetools.api.models.WithKey'
   AttributeGroupReference:
     (java-extends): 'com.commercetools.api.models.Identifiable<AttributeGroup>'
   AttributeGroupResourceIdentifier:
@@ -1064,7 +1093,7 @@ types:
   CartUpdateAction:
     (java-extends): 'com.commercetools.api.models.ResourceUpdateAction<CartUpdateAction>'
   CategoryDraft:
-    (java-extends): 'com.commercetools.api.models.CustomizableDraft<CategoryDraft>'
+    (java-extends): 'com.commercetools.api.models.CustomizableDraft<CategoryDraft>, com.commercetools.api.models.WithKey'
   CategoryPagedQueryResponse:
     (java-extends): 'com.commercetools.api.models.ResourcePagedQueryResponse<Category>'
   CategoryReference:
@@ -1119,7 +1148,7 @@ types:
   UpdateAction:
     (java-extends): 'com.commercetools.api.models.ResourceUpdateAction<UpdateAction>'
   OrderEditDraft:
-    (java-extends): 'com.commercetools.api.models.CustomizableDraft<OrderEditDraft>'
+    (java-extends): 'com.commercetools.api.models.CustomizableDraft<OrderEditDraft>, com.commercetools.api.models.WithKey'
   PagedQueryResponse:
     (java-extends): 'com.commercetools.api.models.ResourcePagedQueryResponse<BaseResource>'
   LineItem:
@@ -1184,13 +1213,15 @@ types:
   MyLineItemDraft:
     (java-extends): 'com.commercetools.api.models.CustomizableDraft<MyLineItemDraft>'
   Price:
-    (java-extends): 'com.commercetools.api.models.Customizable<Price>'
+    (java-extends): 'com.commercetools.api.models.Customizable<Price>, com.commercetools.api.models.WithKey'
   PriceDraft:
-    (java-extends): 'com.commercetools.api.models.CustomizableDraft<PriceDraft>'
+    (java-extends): 'com.commercetools.api.models.CustomizableDraft<PriceDraft>, com.commercetools.api.models.WithKey'
   QueryPrice:
     (java-extends): 'com.commercetools.api.models.Customizable<QueryPrice>'
   ScopedPrice:
     (java-extends): 'com.commercetools.api.models.Customizable<ScopedPrice>'
+  MyBusinessUnitDraft:
+    (java-extends): 'com.commercetools.api.models.Customizable<MyBusinessUnitDraft>, com.commercetools.api.models.WithKey'
 /{projectKey}:
   /categories:
     (java-mixin): |
@@ -1626,11 +1657,11 @@ types:
     /key={key}:
       delete:
         (java-implements):
-          'com.commercetools.api.client.ApiDeleteMethod<ByProjectKeyInventoryKeyByKeyDelete, com.commercetools.api.models.inventory.Inventory>'
+          'com.commercetools.api.client.ApiDeleteMethod<ByProjectKeyInventoryKeyByKeyDelete, com.commercetools.api.models.inventory.InventoryEntry>'
     /{ID}:
       delete:
         (java-implements):
-          'com.commercetools.api.client.ApiDeleteMethod<ByProjectKeyInventoryByIDDelete, com.commercetools.api.models.inventory.Inventory>'
+          'com.commercetools.api.client.ApiDeleteMethod<ByProjectKeyInventoryByIDDelete, com.commercetools.api.models.inventory.InventoryEntry>'
 
   /messages:
     get:
@@ -1907,7 +1938,7 @@ types:
     /key={key}:
       delete:
         (java-implements):
-          'com.commercetools.api.client.ApiDeleteMethod<ByProjectKeyProductsKeyByKeyDelete, com.commercetools.api.models.product_type.ProductType>'
+          'com.commercetools.api.client.ApiDeleteMethod<ByProjectKeyProductTypesKeyByKeyDelete, com.commercetools.api.models.product_type.ProductType>'
     /{ID}:
       delete:
         (java-implements):
@@ -2721,7 +2752,3 @@ types:
                 UnaryOperator<com.commercetools.api.models.api_client.ApiClientDraftBuilder> op) {
             return post(op.apply(com.commercetools.api.models.api_client.ApiClientDraftBuilder.of()).build());
         }
-    /{ID}:
-      delete:
-        (java-implements):
-          'com.commercetools.api.client.ApiDeleteMethod<ByProjectKeyApiClientsByIDDelete, com.commercetools.api.models.api_client.ApiClient>'

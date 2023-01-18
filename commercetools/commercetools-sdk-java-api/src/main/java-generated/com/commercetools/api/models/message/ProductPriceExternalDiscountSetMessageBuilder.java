@@ -235,7 +235,7 @@ public class ProductPriceExternalDiscountSetMessageBuilder implements Builder<Pr
     }
 
     /**
-     *  <p>Unique identifier of the Embedded Price.</p>
+     *  <p>Unique identifier of the Price.</p>
      */
 
     public ProductPriceExternalDiscountSetMessageBuilder priceId(final String priceId) {

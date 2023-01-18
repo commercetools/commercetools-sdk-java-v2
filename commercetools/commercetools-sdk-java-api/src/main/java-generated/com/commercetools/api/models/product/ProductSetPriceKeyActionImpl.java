@@ -50,7 +50,7 @@ public class ProductSetPriceKeyActionImpl implements ProductSetPriceKeyAction, M
     }
 
     /**
-     *  <p>The <code>id</code> of the Embedded Price to set the key.</p>
+     *  <p>The <code>id</code> of the Price to set the key.</p>
      */
 
     public String getPriceId() {

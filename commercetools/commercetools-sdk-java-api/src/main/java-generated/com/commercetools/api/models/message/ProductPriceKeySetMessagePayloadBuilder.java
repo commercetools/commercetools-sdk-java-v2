@@ -47,7 +47,7 @@ public class ProductPriceKeySetMessagePayloadBuilder implements Builder<ProductP
     }
 
     /**
-     *  <p>Unique identifier of the Embedded Price.</p>
+     *  <p>Unique identifier of the Price.</p>
      */
 
     public ProductPriceKeySetMessagePayloadBuilder priceId(@Nullable final String priceId) {
@@ -56,7 +56,7 @@ public class ProductPriceKeySetMessagePayloadBuilder implements Builder<ProductP
     }
 
     /**
-     *  <p><code>key</code> value of the Embedded Price before the Set Price Key update action.</p>
+     *  <p><code>key</code> value of the Price before the Set Price Key update action.</p>
      */
 
     public ProductPriceKeySetMessagePayloadBuilder oldKey(@Nullable final String oldKey) {
@@ -65,7 +65,7 @@ public class ProductPriceKeySetMessagePayloadBuilder implements Builder<ProductP
     }
 
     /**
-     *  <p><code>key</code> value of the Embedded Price after the Set Price Key update action.</p>
+     *  <p><code>key</code> value of the Price after the Set Price Key update action.</p>
      */
 
     public ProductPriceKeySetMessagePayloadBuilder key(@Nullable final String key) {

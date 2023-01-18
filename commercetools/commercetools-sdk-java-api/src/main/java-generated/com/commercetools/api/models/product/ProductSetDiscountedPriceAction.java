@@ -34,7 +34,7 @@ public interface ProductSetDiscountedPriceAction extends ProductUpdateAction {
     String SET_DISCOUNTED_PRICE = "setDiscountedPrice";
 
     /**
-     *  <p>The <code>id</code> of the Embedded Price to set the Discount.</p>
+     *  <p>The <code>id</code> of the Price to set the Discount.</p>
      */
     @NotNull
     @JsonProperty("priceId")

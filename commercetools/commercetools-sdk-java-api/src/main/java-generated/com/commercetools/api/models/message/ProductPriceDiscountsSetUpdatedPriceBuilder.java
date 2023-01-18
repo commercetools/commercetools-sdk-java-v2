@@ -69,7 +69,7 @@ public class ProductPriceDiscountsSetUpdatedPriceBuilder implements Builder<Prod
     }
 
     /**
-     *  <p>Unique identifier of the Embedded Price.</p>
+     *  <p>Unique identifier of the Price.</p>
      */
 
     public ProductPriceDiscountsSetUpdatedPriceBuilder priceId(final String priceId) {

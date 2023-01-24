@@ -20,6 +20,7 @@ import io.vrap.rmf.base.client.utils.json.JsonUtils;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.slf4j.MDC;
 
 import dev.failsafe.Failsafe;
 import dev.failsafe.FailsafeExecutor;
@@ -105,9 +106,16 @@ public class ConcurrentModificationMiddlewareImpl implements ConcurrentModificat
     private void logEventFailure(ExecutionAttemptedEvent<ApiHttpResponse<byte[]>> event) {
         final int attempt = event.getAttemptCount();
 
+        final Throwable failure = event.getLastException();
+        if (failure instanceof ApiHttpException) {
+            final ApiHttpException httpException = (ApiHttpException) failure;
+            final ApiHttpRequest request = httpException.getRequest();
+            Optional.ofNullable(request)
+                    .map(r -> r.getContext(MDCContext.class))
+                    .ifPresent(mdcContext -> MDC.setContextMap(mdcContext.getValue()));
+        }
         logger.info(() -> "ConcurrentModification Retry #" + attempt);
         logger.trace(() -> {
-            final Throwable failure = event.getLastException();
             if (failure instanceof ApiHttpException) {
                 final ApiHttpException httpException = (ApiHttpException) failure;
                 final ApiHttpRequest request = httpException.getRequest();
@@ -118,6 +126,7 @@ public class ConcurrentModificationMiddlewareImpl implements ConcurrentModificat
             }
             return event.toString();
         });
+        MDC.clear();
     }
 
     private String requestLog(final int attempt, ApiHttpRequest request, ApiHttpResponse<?> response) {

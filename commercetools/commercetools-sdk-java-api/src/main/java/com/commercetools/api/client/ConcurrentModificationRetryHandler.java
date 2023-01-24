@@ -4,6 +4,7 @@ package com.commercetools.api.client;
 import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;
 
 import java.time.Duration;
+import java.util.Optional;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.CompletionException;
 import java.util.function.BiFunction;
@@ -12,10 +13,9 @@ import java.util.function.Function;
 import com.commercetools.api.client.error.ConcurrentModificationException;
 import com.commercetools.api.models.ResourceUpdate;
 
-import io.vrap.rmf.base.client.ApiHttpResponse;
-import io.vrap.rmf.base.client.BodyApiMethod;
-import io.vrap.rmf.base.client.Builder;
-import io.vrap.rmf.base.client.RequestCommand;
+import io.vrap.rmf.base.client.*;
+
+import org.slf4j.MDC;
 
 /**
  * This handler can be used to retry a single request in case of a {@link ConcurrentModificationException concurrent modification}.
@@ -38,9 +38,13 @@ final class ConcurrentModificationRetryHandler<T extends BodyApiMethod<T, TResul
         Function<Throwable, CompletableFuture<ApiHttpResponse<TResult>>> fn = (throwable) -> {
             Throwable cause = throwable instanceof CompletionException ? throwable.getCause() : throwable;
             if (cause instanceof ConcurrentModificationException) {
+                Optional.ofNullable(((ConcurrentModificationException) cause).getRequest().getContext(MDCContext.class))
+                        .ifPresent(mdcContext -> MDC.setContextMap(mdcContext.getValue()));
                 final TBuilder body1 = updateFn.apply(builderCopyFn.apply(request.getBody()),
-                    ((ConcurrentModificationException) throwable.getCause()).getCurrentVersion());
-                return request.withBody(body1.build()).execute();
+                    ((ConcurrentModificationException) cause).getCurrentVersion());
+                return request.withBody(body1.build())
+                        .execute()
+                        .whenComplete((tResultApiHttpResponse, throwable1) -> MDC.clear());
             }
 
             CompletableFuture<ApiHttpResponse<TResult>> f = new CompletableFuture<>();

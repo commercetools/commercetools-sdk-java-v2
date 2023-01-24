@@ -13,6 +13,7 @@ import io.vrap.rmf.base.client.utils.json.JsonUtils;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.slf4j.MDC;
 import org.slf4j.event.Level;
 
 /**
@@ -50,6 +51,8 @@ class InternalLoggerMiddlewareImpl implements InternalLoggerMiddleware {
     public CompletableFuture<ApiHttpResponse<byte[]>> invoke(final ApiHttpRequest request,
             final Function<ApiHttpRequest, CompletableFuture<ApiHttpResponse<byte[]>>> next) {
         InternalLogger logger = factory.createFor(request, InternalLogger.TOPIC_REQUEST);
+        Optional.ofNullable(request.getContext(MDCContext.class))
+                .ifPresent(mdcContext -> MDC.setContextMap(mdcContext.getValue()));
         logger.debug(() -> request);
         logger.trace(() -> {
             final String output;
@@ -87,6 +90,9 @@ class InternalLoggerMiddlewareImpl implements InternalLoggerMiddleware {
         return next.apply(request).whenComplete((response, throwable) -> {
             final long executionTime = System.currentTimeMillis() - startTime;
             InternalLogger responseLogger = factory.createFor(request, InternalLogger.TOPIC_RESPONSE);
+            Optional.ofNullable(request.getContext(MDCContext.class))
+                    .ifPresent(mdcContext -> MDC.setContextMap(mdcContext.getValue()));
+
             if (throwable != null) {
                 Throwable cause = throwable instanceof CompletionException ? throwable.getCause() : throwable;
                 if (cause instanceof ApiHttpException) {
@@ -132,6 +138,9 @@ class InternalLoggerMiddlewareImpl implements InternalLoggerMiddleware {
                 }
             }
             else {
+                Optional.ofNullable(response.getContext(MDCContext.class))
+                        .ifPresent(mdcContext -> MDC.setContextMap(mdcContext.getValue()));
+
                 responseLogger.log(responseLogEvent, () -> String.format("%s %s %s %s %s %s",
                     request.getMethod().name(), request.getUrl(), response.getStatusCode(), executionTime,
                     Optional.ofNullable(response.getHeaders().getFirst(ApiHttpHeaders.SERVER_TIMING)).orElse("-"),
@@ -149,6 +158,7 @@ class InternalLoggerMiddlewareImpl implements InternalLoggerMiddleware {
                                 .map(body -> JsonUtils.prettyPrint(response.getBodyAsString().orElse("")))
                                 .orElse("<no body>"));
             }
+            MDC.clear();
         });
     }
 }

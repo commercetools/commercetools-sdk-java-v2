@@ -20,7 +20,8 @@ public class HttpHandler extends AutoCloseableService implements VrapHttpClient 
     }
 
     public CompletableFuture<ApiHttpResponse<byte[]>> execute(final ApiHttpRequest apiHttpRequest) {
-        return httpClient.execute(apiHttpRequest);
+        return httpClient.execute(apiHttpRequest)
+                .thenApply(response -> response.withContextMap(apiHttpRequest.getContextMap()));
     }
 
     @Override

@@ -11,7 +11,7 @@
 
     <logger name="commercetools" level="ERROR"/>
 
-    <root level="INFO">
+    <root level="ERROR">
         <appender-ref ref="STDOUT" />
     </root>
 </configuration>

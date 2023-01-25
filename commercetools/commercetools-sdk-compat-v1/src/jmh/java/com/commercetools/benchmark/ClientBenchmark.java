@@ -22,6 +22,7 @@ import com.commercetools.http.asynchttp.CtAsyncHttpClient;
 import com.commercetools.http.okhttp4.CtOkHttp4Client;
 
 import io.sphere.sdk.client.BlockingSphereClient;
+import io.sphere.sdk.client.SphereAsyncHttpClientFactory;
 import io.sphere.sdk.client.SphereClient;
 import io.sphere.sdk.client.SphereClientFactory;
 import io.sphere.sdk.products.ProductProjection;
@@ -81,7 +82,7 @@ public class ClientBenchmark {
                         org.slf4j.event.Level.DEBUG)
                     .build(getProjectKey());
 
-            final SphereClientFactory factory = SphereClientFactory.of();
+            final SphereClientFactory factory = SphereClientFactory.of(SphereAsyncHttpClientFactory::create);
             final SphereClient client = factory.createClient(getProjectKey(), //replace with your project key
                 getClientId(), //replace with your client id
                 getClientSecret()); //replace with your client secret

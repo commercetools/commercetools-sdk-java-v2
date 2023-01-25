@@ -4,7 +4,7 @@ jmh {
     iterations = 10
     benchmarkMode = ['thrpt', 'avgt']
     threads = 25
-    fork = 3
+    fork = 1
     timeOnIteration = '1s'
     excludes = ['^retrieveProject.*']
 }

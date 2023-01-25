@@ -100,6 +100,7 @@ public class ClientBenchmark {
             deleteTaxCategory(taxCategory);
             ahcApiRoot.close();
             compatClient.close();
+            compatOkHttpClient.close();
             apacheApiRoot.close();
             okhttpApiRoot.close();
             sphereClient.close();

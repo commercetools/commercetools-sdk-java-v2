@@ -233,13 +233,13 @@ public class ClientBenchmark {
         final PagedQueryResult<ProductProjection> response = state.sphereClient
                 .executeBlocking(ProductProjectionQuery.ofStaged().withLimit(100));
         Assertions.assertThat(response.getCount()).isEqualTo(100);
-
     }
 
     @Benchmark
     public void retrieveProductsV2_AHC(ClientState state) {
         final ApiHttpResponse<ProductProjectionPagedQueryResponse> response = state.ahcApiRoot.productProjections()
                 .get()
+                .withStaged(true)
                 .withLimit(100)
                 .executeBlocking();
         Assertions.assertThat(response.getBody().getCount()).isEqualTo(100);
@@ -250,6 +250,7 @@ public class ClientBenchmark {
     public void retrieveProductsV2_OkHtp(ClientState state) {
         final ApiHttpResponse<ProductProjectionPagedQueryResponse> response = state.okhttpApiRoot.productProjections()
                 .get()
+                .withStaged(true)
                 .withLimit(100)
                 .executeBlocking();
 

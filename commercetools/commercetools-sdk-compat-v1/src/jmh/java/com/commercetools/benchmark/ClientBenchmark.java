@@ -114,6 +114,7 @@ public class ClientBenchmark {
             compatClient.close();
             compatOkHttpClient.close();
             apacheApiRoot.close();
+            sphereApacheClient.close();
             okhttpApiRoot.close();
             sphereClient.close();
         }

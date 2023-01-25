@@ -21,10 +21,7 @@ import com.commercetools.http.apachehttp.CtApacheHttpClient;
 import com.commercetools.http.asynchttp.CtAsyncHttpClient;
 import com.commercetools.http.okhttp4.CtOkHttp4Client;
 
-import io.sphere.sdk.client.BlockingSphereClient;
-import io.sphere.sdk.client.SphereAsyncHttpClientFactory;
-import io.sphere.sdk.client.SphereClient;
-import io.sphere.sdk.client.SphereClientFactory;
+import io.sphere.sdk.client.*;
 import io.sphere.sdk.products.ProductProjection;
 import io.sphere.sdk.products.queries.ProductProjectionQuery;
 import io.sphere.sdk.projects.queries.ProjectGet;
@@ -45,6 +42,8 @@ public class ClientBenchmark {
         private ProjectApiRoot okhttpApiRoot;
 
         private BlockingSphereClient sphereClient;
+
+        private BlockingSphereClient sphereApacheClient;
 
         private BlockingSphereClient compatClient;
 
@@ -88,6 +87,13 @@ public class ClientBenchmark {
                 getClientSecret()); //replace with your client secret
 
             sphereClient = BlockingSphereClient.of(client, Duration.ofSeconds(10));
+
+            final SphereClientFactory apacheFactory = SphereClientFactory.of(SphereApacheHttpClientFactory::create);
+            final SphereClient apacheClient = apacheFactory.createClient(getProjectKey(), //replace with your project key
+                getClientId(), //replace with your client id
+                getClientSecret()); //replace with your client secret
+
+            sphereApacheClient = BlockingSphereClient.of(apacheClient, Duration.ofSeconds(10));
 
             compatClient = BlockingSphereClient.of(CompatSphereClient.of(ahcApiRoot), Duration.ofSeconds(10));
 
@@ -206,6 +212,11 @@ public class ClientBenchmark {
     }
 
     @Benchmark
+    public void retrieveProjectV1_Apache(ClientState state) {
+        state.sphereApacheClient.executeBlocking(ProjectGet.of());
+    }
+
+    @Benchmark
     public void retrieveProjectV2_Compat(ClientState state) {
         state.compatClient.executeBlocking(ProjectGet.of());
     }
@@ -232,6 +243,13 @@ public class ClientBenchmark {
     @Benchmark
     public void retrieveProductsV1_AHC(ClientState state) {
         final PagedQueryResult<ProductProjection> response = state.sphereClient
+                .executeBlocking(ProductProjectionQuery.ofStaged().withLimit(100));
+        Assertions.assertThat(response.getCount()).isEqualTo(100);
+    }
+
+    @Benchmark
+    public void retrieveProductsV1_Apache(ClientState state) {
+        final PagedQueryResult<ProductProjection> response = state.sphereApacheClient
                 .executeBlocking(ProductProjectionQuery.ofStaged().withLimit(100));
         Assertions.assertThat(response.getCount()).isEqualTo(100);
     }

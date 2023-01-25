@@ -86,14 +86,15 @@ class InternalLoggerMiddlewareImpl implements InternalLoggerMiddleware {
             }
             return output;
         });
+        MDC.clear();
         final long startTime = System.currentTimeMillis();
         return next.apply(request).whenComplete((response, throwable) -> {
             final long executionTime = System.currentTimeMillis() - startTime;
             InternalLogger responseLogger = factory.createFor(request, InternalLogger.TOPIC_RESPONSE);
-            Optional.ofNullable(request.getContext(MDCContext.class))
-                    .ifPresent(mdcContext -> MDC.setContextMap(mdcContext.getValue()));
 
             if (throwable != null) {
+                Optional.ofNullable(request.getContext(MDCContext.class))
+                        .ifPresent(mdcContext -> MDC.setContextMap(mdcContext.getValue()));
                 Throwable cause = throwable instanceof CompletionException ? throwable.getCause() : throwable;
                 if (cause instanceof ApiHttpException) {
                     final ApiHttpResponse<byte[]> errorResponse = ((ApiHttpException) throwable.getCause())
@@ -105,7 +106,6 @@ class InternalLoggerMiddlewareImpl implements InternalLoggerMiddleware {
                             .findFirst()
                             .map(Map.Entry::getValue)
                             .orElse(defaultExceptionLogEvent);
-                    ;
                     responseLogger.log(level, () -> String
                             .format("%s %s %s %s %s %s", request.getMethod().name(), request.getUrl(),
                                 errorResponse.getStatusCode(), executionTime,

@@ -42,6 +42,8 @@ public class ClientBenchmark {
 
         private BlockingSphereClient compatClient;
 
+        private BlockingSphereClient compatOkHttpClient;
+
         private List<Product> productsList;
 
         private TaxCategory taxCategory;
@@ -82,6 +84,8 @@ public class ClientBenchmark {
             sphereClient = BlockingSphereClient.of(client, Duration.ofSeconds(10));
 
             compatClient = BlockingSphereClient.of(CompatSphereClient.of(ahcApiRoot), Duration.ofSeconds(10));
+
+            compatOkHttpClient = BlockingSphereClient.of(CompatSphereClient.of(okhttpApiRoot), Duration.ofSeconds(10));
 
             productType = createProductType();
 
@@ -200,13 +204,27 @@ public class ClientBenchmark {
     }
 
     @Benchmark
+    public void retrieveProjectV2_CompatOkHttp(ClientState state) {
+        state.compatOkHttpClient.executeBlocking(ProjectGet.of());
+    }
+
+    @Benchmark
     public void retrieveProductsV2_Compat(ClientState state) {
         state.compatClient.executeBlocking(ProductProjectionQuery.ofStaged().withLimit(100));
+    }
+
+    public void retrieveProductsV2_CompatOkHttp(ClientState state) {
+        state.compatOkHttpClient.executeBlocking(ProductProjectionQuery.ofStaged().withLimit(100));
     }
 
     @Benchmark
     public void retrieveProductsV1_AHC(ClientState state) {
         state.sphereClient.executeBlocking(ProductProjectionQuery.ofStaged().withLimit(100));
+    }
+
+    @Benchmark
+    public void retrieveProductsV2_OkHtp(ClientState state) {
+        state.okhttpApiRoot.productProjections().get().withLimit(100).executeBlocking();
     }
 
     public static String getProjectKey() {

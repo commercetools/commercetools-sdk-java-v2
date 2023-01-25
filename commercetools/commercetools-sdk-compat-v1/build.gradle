@@ -6,6 +6,7 @@ jmh {
     threads = 25
     fork = 3
     timeOnIteration = '1s'
+    excludes = ['^retrieveProject.*']
 }
 dependencies {
 

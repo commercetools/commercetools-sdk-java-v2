@@ -49,6 +49,8 @@ public class ClientBenchmark {
 
         private BlockingSphereClient compatOkHttpClient;
 
+        private BlockingSphereClient compatApacheClient;
+
         private List<Product> productsList;
 
         private TaxCategory taxCategory;
@@ -99,6 +101,8 @@ public class ClientBenchmark {
 
             compatOkHttpClient = BlockingSphereClient.of(CompatSphereClient.of(okhttpApiRoot), Duration.ofSeconds(10));
 
+            compatApacheClient = BlockingSphereClient.of(CompatSphereClient.of(apacheApiRoot), Duration.ofSeconds(10));
+
             productType = createProductType();
 
             taxCategory = createTaxCategory();
@@ -113,6 +117,7 @@ public class ClientBenchmark {
             ahcApiRoot.close();
             compatClient.close();
             compatOkHttpClient.close();
+            compatApacheClient.close();
             apacheApiRoot.close();
             sphereApacheClient.close();
             okhttpApiRoot.close();
@@ -228,20 +233,6 @@ public class ClientBenchmark {
     }
 
     @Benchmark
-    public void retrieveProductsV2_CompatAHC(ClientState state) {
-        final PagedQueryResult<ProductProjection> response = state.compatClient
-                .executeBlocking(ProductProjectionQuery.ofStaged().withLimit(100));
-        Assertions.assertThat(response.getCount()).isEqualTo(100);
-    }
-
-    @Benchmark
-    public void retrieveProductsV2_CompatOkHttp(ClientState state) {
-        final PagedQueryResult<ProductProjection> response = state.compatOkHttpClient
-                .executeBlocking(ProductProjectionQuery.ofStaged().withLimit(100));
-        Assertions.assertThat(response.getCount()).isEqualTo(100);
-    }
-
-    @Benchmark
     public void retrieveProductsV1_AHC(ClientState state) {
         final PagedQueryResult<ProductProjection> response = state.sphereClient
                 .executeBlocking(ProductProjectionQuery.ofStaged().withLimit(100));
@@ -249,8 +240,8 @@ public class ClientBenchmark {
     }
 
     @Benchmark
-    public void retrieveProductsV1_Apache(ClientState state) {
-        final PagedQueryResult<ProductProjection> response = state.sphereApacheClient
+    public void retrieveProductsV2_CompatAHC(ClientState state) {
+        final PagedQueryResult<ProductProjection> response = state.compatClient
                 .executeBlocking(ProductProjectionQuery.ofStaged().withLimit(100));
         Assertions.assertThat(response.getCount()).isEqualTo(100);
     }
@@ -264,6 +255,38 @@ public class ClientBenchmark {
                 .executeBlocking();
         Assertions.assertThat(response.getBody().getCount()).isEqualTo(100);
 
+    }
+
+    @Benchmark
+    public void retrieveProductsV1_Apache(ClientState state) {
+        final PagedQueryResult<ProductProjection> response = state.sphereApacheClient
+                .executeBlocking(ProductProjectionQuery.ofStaged().withLimit(100));
+        Assertions.assertThat(response.getCount()).isEqualTo(100);
+    }
+
+    @Benchmark
+    public void retrieveProductsV2_CompatApache(ClientState state) {
+        final PagedQueryResult<ProductProjection> response = state.compatApacheClient
+                .executeBlocking(ProductProjectionQuery.ofStaged().withLimit(100));
+        Assertions.assertThat(response.getCount()).isEqualTo(100);
+    }
+
+    @Benchmark
+    public void retrieveProductsV2_Apache(ClientState state) {
+        final ApiHttpResponse<ProductProjectionPagedQueryResponse> response = state.apacheApiRoot.productProjections()
+                .get()
+                .withStaged(true)
+                .withLimit(100)
+                .executeBlocking();
+
+        Assertions.assertThat(response.getBody().getCount()).isEqualTo(100);
+    }
+
+    @Benchmark
+    public void retrieveProductsV2_CompatOkHttp(ClientState state) {
+        final PagedQueryResult<ProductProjection> response = state.compatOkHttpClient
+                .executeBlocking(ProductProjectionQuery.ofStaged().withLimit(100));
+        Assertions.assertThat(response.getCount()).isEqualTo(100);
     }
 
     @Benchmark

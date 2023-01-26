@@ -37,6 +37,9 @@ public class OrderFromCartDraftBuilder implements Builder<OrderFromCartDraft> {
     private String orderNumber;
 
     @Nullable
+    private String purchaseOrderNumber;
+
+    @Nullable
     private com.commercetools.api.models.order.PaymentState paymentState;
 
     @Nullable
@@ -95,6 +98,15 @@ public class OrderFromCartDraftBuilder implements Builder<OrderFromCartDraft> {
 
     public OrderFromCartDraftBuilder orderNumber(@Nullable final String orderNumber) {
         this.orderNumber = orderNumber;
+        return this;
+    }
+
+    /**
+     *  <p>Identifier for a purchase order, usually in a B2B context. The Purchase Order Number is typically entered by the Buyer and can also be used with Quotes.</p>
+     */
+
+    public OrderFromCartDraftBuilder purchaseOrderNumber(@Nullable final String purchaseOrderNumber) {
+        this.purchaseOrderNumber = purchaseOrderNumber;
         return this;
     }
 
@@ -189,6 +201,11 @@ public class OrderFromCartDraftBuilder implements Builder<OrderFromCartDraft> {
     }
 
     @Nullable
+    public String getPurchaseOrderNumber() {
+        return this.purchaseOrderNumber;
+    }
+
+    @Nullable
     public com.commercetools.api.models.order.PaymentState getPaymentState() {
         return this.paymentState;
     }
@@ -215,16 +232,16 @@ public class OrderFromCartDraftBuilder implements Builder<OrderFromCartDraft> {
 
     public OrderFromCartDraft build() {
         Objects.requireNonNull(version, OrderFromCartDraft.class + ": version is missing");
-        return new OrderFromCartDraftImpl(id, cart, version, orderNumber, paymentState, shipmentState, orderState,
-            state, custom);
+        return new OrderFromCartDraftImpl(id, cart, version, orderNumber, purchaseOrderNumber, paymentState,
+            shipmentState, orderState, state, custom);
     }
 
     /**
      * builds OrderFromCartDraft without checking for non null required values
      */
     public OrderFromCartDraft buildUnchecked() {
-        return new OrderFromCartDraftImpl(id, cart, version, orderNumber, paymentState, shipmentState, orderState,
-            state, custom);
+        return new OrderFromCartDraftImpl(id, cart, version, orderNumber, purchaseOrderNumber, paymentState,
+            shipmentState, orderState, state, custom);
     }
 
     public static OrderFromCartDraftBuilder of() {
@@ -237,6 +254,7 @@ public class OrderFromCartDraftBuilder implements Builder<OrderFromCartDraft> {
         builder.cart = template.getCart();
         builder.version = template.getVersion();
         builder.orderNumber = template.getOrderNumber();
+        builder.purchaseOrderNumber = template.getPurchaseOrderNumber();
         builder.paymentState = template.getPaymentState();
         builder.shipmentState = template.getShipmentState();
         builder.orderState = template.getOrderState();

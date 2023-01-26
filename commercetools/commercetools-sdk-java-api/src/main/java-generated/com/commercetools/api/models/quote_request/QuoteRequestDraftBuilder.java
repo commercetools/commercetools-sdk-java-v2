@@ -41,6 +41,9 @@ public class QuoteRequestDraftBuilder implements Builder<QuoteRequestDraft> {
     @Nullable
     private com.commercetools.api.models.state.StateReference state;
 
+    @Nullable
+    private String purchaseOrderNumber;
+
     /**
      *  <p>Cart for which a Quote is requested. Anonymous Carts, Carts with Discount Codes, or Carts with a <code>Multiple</code> ShippingMode are not supported.</p>
      */
@@ -125,6 +128,15 @@ public class QuoteRequestDraftBuilder implements Builder<QuoteRequestDraft> {
         return this;
     }
 
+    /**
+     *  <p>Identifier for a purchase order, usually in a B2B context. The Purchase Order Number is typically entered by the Buyer.</p>
+     */
+
+    public QuoteRequestDraftBuilder purchaseOrderNumber(@Nullable final String purchaseOrderNumber) {
+        this.purchaseOrderNumber = purchaseOrderNumber;
+        return this;
+    }
+
     public com.commercetools.api.models.cart.CartResourceIdentifier getCart() {
         return this.cart;
     }
@@ -152,18 +164,23 @@ public class QuoteRequestDraftBuilder implements Builder<QuoteRequestDraft> {
         return this.state;
     }
 
+    @Nullable
+    public String getPurchaseOrderNumber() {
+        return this.purchaseOrderNumber;
+    }
+
     public QuoteRequestDraft build() {
         Objects.requireNonNull(cart, QuoteRequestDraft.class + ": cart is missing");
         Objects.requireNonNull(cartVersion, QuoteRequestDraft.class + ": cartVersion is missing");
         Objects.requireNonNull(comment, QuoteRequestDraft.class + ": comment is missing");
-        return new QuoteRequestDraftImpl(cart, cartVersion, key, comment, custom, state);
+        return new QuoteRequestDraftImpl(cart, cartVersion, key, comment, custom, state, purchaseOrderNumber);
     }
 
     /**
      * builds QuoteRequestDraft without checking for non null required values
      */
     public QuoteRequestDraft buildUnchecked() {
-        return new QuoteRequestDraftImpl(cart, cartVersion, key, comment, custom, state);
+        return new QuoteRequestDraftImpl(cart, cartVersion, key, comment, custom, state, purchaseOrderNumber);
     }
 
     public static QuoteRequestDraftBuilder of() {
@@ -178,6 +195,7 @@ public class QuoteRequestDraftBuilder implements Builder<QuoteRequestDraft> {
         builder.comment = template.getComment();
         builder.custom = template.getCustom();
         builder.state = template.getState();
+        builder.purchaseOrderNumber = template.getPurchaseOrderNumber();
         return builder;
     }
 

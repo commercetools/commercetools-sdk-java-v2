@@ -13,7 +13,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>SKU cannot be changed or removed if it is associated with an InventoryEntry.</p>
+ *  <p>SKU cannot be changed or removed if it is associated with an InventoryEntry. If the SKU to set or unset is part of a ProductSelectionAssignment it will be automatically added or removed from the respective ProductVariantSelection.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

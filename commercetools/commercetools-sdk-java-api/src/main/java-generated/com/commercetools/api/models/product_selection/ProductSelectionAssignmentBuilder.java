@@ -75,7 +75,7 @@ public class ProductSelectionAssignmentBuilder implements Builder<ProductSelecti
     }
 
     /**
-     *  <p>Selects which Variants of the newly added Product will be included, or excluded, from the Product Selection. The list of SKUs will be updated automatically on any change of those performed on the respective Product itself.</p>
+     *  <p>Selects which Variants of the newly added Product will be included, or excluded, from the Product Selection.</p>
      */
 
     public ProductSelectionAssignmentBuilder variantSelection(
@@ -85,7 +85,7 @@ public class ProductSelectionAssignmentBuilder implements Builder<ProductSelecti
     }
 
     /**
-     *  <p>Selects which Variants of the newly added Product will be included, or excluded, from the Product Selection. The list of SKUs will be updated automatically on any change of those performed on the respective Product itself.</p>
+     *  <p>Selects which Variants of the newly added Product will be included, or excluded, from the Product Selection.</p>
      */
 
     public ProductSelectionAssignmentBuilder variantSelection(

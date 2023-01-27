@@ -40,7 +40,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = StateImpl.class)
-public interface State extends BaseResource, com.commercetools.api.models.DomainResource<State>,
+public interface State extends BaseResource, StateMixin, com.commercetools.api.models.DomainResource<State>,
         com.commercetools.api.models.Referencable<State>, com.commercetools.api.models.ResourceIdentifiable<State>,
         com.commercetools.api.models.WithKey {
 
@@ -213,20 +213,6 @@ public interface State extends BaseResource, com.commercetools.api.models.Domain
 
     default <T> T withState(Function<State, T> helper) {
         return helper.apply(this);
-    }
-
-    @Override
-    public default com.commercetools.api.models.common.ResourceIdentifier toResourceIdentifier() {
-        return com.commercetools.api.models.state.StateResourceIdentifier.builder().id(getId()).build();
-    }
-
-    @Override
-    public default com.commercetools.api.models.common.Reference toReference() {
-        return com.commercetools.api.models.state.StateReference.builder().id(getId()).build();
-    }
-
-    public static com.commercetools.api.models.common.ReferenceTypeId referenceTypeId() {
-        return com.commercetools.api.models.common.ReferenceTypeId.STATE;
     }
 
     public static com.fasterxml.jackson.core.type.TypeReference<State> typeReference() {

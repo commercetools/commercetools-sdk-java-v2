@@ -114,9 +114,6 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
     private com.commercetools.api.models.state.StateReference state;
 
     @Nullable
-    private String purchaseOrderNumber;
-
-    @Nullable
     private com.commercetools.api.models.business_unit.BusinessUnitKeyReference businessUnit;
 
     /**
@@ -730,15 +727,6 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
     }
 
     /**
-     *  <p>Identifier for a purchase order, usually in a B2B context. The Purchase Order Number is typically entered by the Buyer.</p>
-     */
-
-    public QuoteRequestBuilder purchaseOrderNumber(@Nullable final String purchaseOrderNumber) {
-        this.purchaseOrderNumber = purchaseOrderNumber;
-        return this;
-    }
-
-    /**
      *  <p>The BusinessUnit for the Quote Request.</p>
      */
 
@@ -899,11 +887,6 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
     }
 
     @Nullable
-    public String getPurchaseOrderNumber() {
-        return this.purchaseOrderNumber;
-    }
-
-    @Nullable
     public com.commercetools.api.models.business_unit.BusinessUnitKeyReference getBusinessUnit() {
         return this.businessUnit;
     }
@@ -925,7 +908,7 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
             quoteRequestState, comment, customer, customerGroup, store, lineItems, customLineItems, totalPrice,
             taxedPrice, shippingAddress, billingAddress, inventoryMode, taxMode, taxRoundingMode, taxCalculationMode,
             country, shippingInfo, paymentInfo, shippingRateInput, itemShippingAddresses, directDiscounts, custom,
-            state, purchaseOrderNumber, businessUnit);
+            state, businessUnit);
     }
 
     /**
@@ -936,7 +919,7 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
             quoteRequestState, comment, customer, customerGroup, store, lineItems, customLineItems, totalPrice,
             taxedPrice, shippingAddress, billingAddress, inventoryMode, taxMode, taxRoundingMode, taxCalculationMode,
             country, shippingInfo, paymentInfo, shippingRateInput, itemShippingAddresses, directDiscounts, custom,
-            state, purchaseOrderNumber, businessUnit);
+            state, businessUnit);
     }
 
     public static QuoteRequestBuilder of() {
@@ -975,7 +958,6 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
         builder.directDiscounts = template.getDirectDiscounts();
         builder.custom = template.getCustom();
         builder.state = template.getState();
-        builder.purchaseOrderNumber = template.getPurchaseOrderNumber();
         builder.businessUnit = template.getBusinessUnit();
         return builder;
     }

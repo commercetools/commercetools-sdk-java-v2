@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * ProductSelectionAssignment
+ *  <p>Specifies which Product is assigned to which ProductSelection.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductSelectionAssignmentImpl implements ProductSelectionAssignment, ModelBase {
@@ -56,7 +56,7 @@ public class ProductSelectionAssignmentImpl implements ProductSelectionAssignmen
     }
 
     /**
-     *  <p>Selects which Variants of the newly added Product will be included, or excluded, from the Product Selection. The list of SKUs will be updated automatically on any change of those performed on the respective Product itself.</p>
+     *  <p>Selects which Variants of the newly added Product will be included, or excluded, from the Product Selection.</p>
      */
 
     public com.commercetools.api.models.product_selection.ProductVariantSelection getVariantSelection() {

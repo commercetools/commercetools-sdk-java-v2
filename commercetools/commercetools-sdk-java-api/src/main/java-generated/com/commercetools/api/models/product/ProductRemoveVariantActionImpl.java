@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Either <code>id</code> or <code>sku</code> is required. Produces the ProductVariantDeleted Message. If the Product Variant to remove is part of a ProductSelectionAssignment its SKU will be automatically removed from the respective ProductVariantSelection.</p>
+ *  <p>Either <code>id</code> or <code>sku</code> is required. Produces the ProductVariantDeleted Message.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductRemoveVariantActionImpl implements ProductRemoveVariantAction, ModelBase {

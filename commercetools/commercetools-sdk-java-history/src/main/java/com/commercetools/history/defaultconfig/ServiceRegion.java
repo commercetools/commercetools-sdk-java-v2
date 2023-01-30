@@ -5,9 +5,9 @@ import io.vrap.rmf.base.client.ServiceRegionConfig;
 
 public enum ServiceRegion implements ServiceRegionConfig {
 
-    GCP_EUROPE_WEST1(new RegionHosts("https://history.europe-west1.gcp.commercetools.com",
+    GCP_EUROPE_WEST1(new RegionHosts("https://history.europe-west1.gcp.commercetools.com/",
         "https://auth.europe-west1.gcp.commercetools.com")),
-    GCP_US_CENTRAL1(new RegionHosts("https://history.us-central1.gcp.commercetools.com",
+    GCP_US_CENTRAL1(new RegionHosts("https://history.us-central1.gcp.commercetools.com/",
         "https://auth.us-central1.gcp.commercetools.com")),;
 
     public static class RegionHosts {

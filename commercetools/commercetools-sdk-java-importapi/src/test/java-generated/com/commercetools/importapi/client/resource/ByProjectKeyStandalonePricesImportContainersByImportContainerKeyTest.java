@@ -72,7 +72,7 @@ public class ByProjectKeyStandalonePricesImportContainersByImportContainerKeyTes
                                 .post(
                                     com.commercetools.importapi.models.importrequests.StandalonePriceImportRequest.of())
                                 .createHttpRequest(),
-                        "post", "/test_projectKey/standalone-prices/import-containers/test_importContainerKey", } };
+                        "post", "test_projectKey/standalone-prices/import-containers/test_importContainerKey", } };
     }
 
     @DataProvider

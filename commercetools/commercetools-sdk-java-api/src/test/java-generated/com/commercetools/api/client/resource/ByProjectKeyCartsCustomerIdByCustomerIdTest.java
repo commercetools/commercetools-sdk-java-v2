@@ -71,12 +71,12 @@ public class ByProjectKeyCartsCustomerIdByCustomerIdTest {
                                 .get()
                                 .withExpand("expand")
                                 .createHttpRequest(),
-                        "get", "/test_projectKey/carts/customer-id=test_customerId?expand=expand", },
+                        "get", "test_projectKey/carts/customer-id=test_customerId?expand=expand", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .carts()
                         .withCustomerId("test_customerId")
                         .get()
-                        .createHttpRequest(), "get", "/test_projectKey/carts/customer-id=test_customerId", } };
+                        .createHttpRequest(), "get", "test_projectKey/carts/customer-id=test_customerId", } };
     }
 
     @DataProvider

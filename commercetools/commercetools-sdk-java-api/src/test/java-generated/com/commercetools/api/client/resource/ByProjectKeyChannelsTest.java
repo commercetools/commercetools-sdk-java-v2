@@ -65,42 +65,42 @@ public class ByProjectKeyChannelsTest {
     public static Object[][] requestWithMethodParameters() {
         return new Object[][] { new Object[] {
                 apiRoot.withProjectKey("test_projectKey").channels().get().withExpand("expand").createHttpRequest(),
-                "get", "/test_projectKey/channels?expand=expand", },
+                "get", "test_projectKey/channels?expand=expand", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey").channels().get().withSort("sort").createHttpRequest(),
-                        "get", "/test_projectKey/channels?sort=sort", },
+                        "get", "test_projectKey/channels?sort=sort", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey").channels().get().withLimit(7).createHttpRequest(),
-                        "get", "/test_projectKey/channels?limit=7", },
+                        "get", "test_projectKey/channels?limit=7", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey").channels().get().withOffset(3).createHttpRequest(),
-                        "get", "/test_projectKey/channels?offset=3", },
+                        "get", "test_projectKey/channels?offset=3", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .channels()
                         .get()
                         .withWithTotal(true)
-                        .createHttpRequest(), "get", "/test_projectKey/channels?withTotal=true", },
+                        .createHttpRequest(), "get", "test_projectKey/channels?withTotal=true", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .channels()
                         .get()
                         .withWhere("where")
-                        .createHttpRequest(), "get", "/test_projectKey/channels?where=where", },
+                        .createHttpRequest(), "get", "test_projectKey/channels?where=where", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .channels()
                         .get()
                         .withPredicateVar("varName", "var.varName")
-                        .createHttpRequest(), "get", "/test_projectKey/channels?var.varName=var.varName", },
+                        .createHttpRequest(), "get", "test_projectKey/channels?var.varName=var.varName", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey").channels().get().createHttpRequest(), "get",
-                        "/test_projectKey/channels", },
+                        "test_projectKey/channels", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .channels()
                         .post(com.commercetools.api.models.channel.ChannelDraft.of())
                         .withExpand("expand")
-                        .createHttpRequest(), "post", "/test_projectKey/channels?expand=expand", },
+                        .createHttpRequest(), "post", "test_projectKey/channels?expand=expand", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .channels()
                         .post(com.commercetools.api.models.channel.ChannelDraft.of())
-                        .createHttpRequest(), "post", "/test_projectKey/channels", } };
+                        .createHttpRequest(), "post", "test_projectKey/channels", } };
     }
 
     @DataProvider

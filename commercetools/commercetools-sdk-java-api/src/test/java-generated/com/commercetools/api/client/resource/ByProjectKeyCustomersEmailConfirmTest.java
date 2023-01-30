@@ -67,7 +67,7 @@ public class ByProjectKeyCustomersEmailConfirmTest {
                 .customers()
                 .emailConfirm()
                 .post(com.commercetools.api.models.customer.CustomerEmailVerify.of())
-                .createHttpRequest(), "post", "/test_projectKey/customers/email/confirm", } };
+                .createHttpRequest(), "post", "test_projectKey/customers/email/confirm", } };
     }
 
     @DataProvider

@@ -71,7 +71,7 @@ public class ByProjectKeyInStoreKeyByStoreKeyMeLoginTest {
                                 .login()
                                 .post(com.commercetools.api.models.customer.MyCustomerSignin.of())
                                 .createHttpRequest(),
-                        "post", "/test_projectKey/in-store/key=test_storeKey/me/login", } };
+                        "post", "test_projectKey/in-store/key=test_storeKey/me/login", } };
     }
 
     @DataProvider

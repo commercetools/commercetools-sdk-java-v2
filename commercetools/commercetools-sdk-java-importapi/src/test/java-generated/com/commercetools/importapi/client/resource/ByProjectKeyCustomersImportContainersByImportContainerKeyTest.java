@@ -70,7 +70,7 @@ public class ByProjectKeyCustomersImportContainersByImportContainerKeyTest {
                         .withImportContainerKeyValue("test_importContainerKey")
                         .post(com.commercetools.importapi.models.importrequests.CustomerImportRequest.of())
                         .createHttpRequest(),
-                "post", "/test_projectKey/customers/import-containers/test_importContainerKey", } };
+                "post", "test_projectKey/customers/import-containers/test_importContainerKey", } };
     }
 
     @DataProvider

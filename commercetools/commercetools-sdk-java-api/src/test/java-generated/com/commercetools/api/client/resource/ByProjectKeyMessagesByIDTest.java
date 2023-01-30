@@ -69,12 +69,12 @@ public class ByProjectKeyMessagesByIDTest {
                         .withId("test_ID")
                         .get()
                         .withExpand("expand")
-                        .createHttpRequest(), "get", "/test_projectKey/messages/test_ID?expand=expand", },
+                        .createHttpRequest(), "get", "test_projectKey/messages/test_ID?expand=expand", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .messages()
                         .withId("test_ID")
                         .get()
-                        .createHttpRequest(), "get", "/test_projectKey/messages/test_ID", } };
+                        .createHttpRequest(), "get", "test_projectKey/messages/test_ID", } };
     }
 
     @DataProvider

@@ -68,50 +68,50 @@ public class ByProjectKeyBusinessUnitsTest {
                         .businessUnits()
                         .get()
                         .withExpand("expand")
-                        .createHttpRequest(), "get", "/test_projectKey/business-units?expand=expand", },
+                        .createHttpRequest(), "get", "test_projectKey/business-units?expand=expand", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .businessUnits()
                         .get()
                         .withSort("sort")
-                        .createHttpRequest(), "get", "/test_projectKey/business-units?sort=sort", },
+                        .createHttpRequest(), "get", "test_projectKey/business-units?sort=sort", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .businessUnits()
                         .get()
                         .withLimit(7)
-                        .createHttpRequest(), "get", "/test_projectKey/business-units?limit=7", },
+                        .createHttpRequest(), "get", "test_projectKey/business-units?limit=7", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .businessUnits()
                         .get()
                         .withOffset(3)
-                        .createHttpRequest(), "get", "/test_projectKey/business-units?offset=3", },
+                        .createHttpRequest(), "get", "test_projectKey/business-units?offset=3", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .businessUnits()
                         .get()
                         .withWithTotal(true)
-                        .createHttpRequest(), "get", "/test_projectKey/business-units?withTotal=true", },
+                        .createHttpRequest(), "get", "test_projectKey/business-units?withTotal=true", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .businessUnits()
                         .get()
                         .withWhere("where")
-                        .createHttpRequest(), "get", "/test_projectKey/business-units?where=where", },
+                        .createHttpRequest(), "get", "test_projectKey/business-units?where=where", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .businessUnits()
                                 .get()
                                 .withPredicateVar("varName", "var.varName")
                                 .createHttpRequest(),
-                        "get", "/test_projectKey/business-units?var.varName=var.varName", },
+                        "get", "test_projectKey/business-units?var.varName=var.varName", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey").businessUnits().get().createHttpRequest(),
-                        "get", "/test_projectKey/business-units", },
+                        "get", "test_projectKey/business-units", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .businessUnits()
                         .post(com.commercetools.api.models.business_unit.CompanyDraft.of())
                         .withExpand("expand")
-                        .createHttpRequest(), "post", "/test_projectKey/business-units?expand=expand", },
+                        .createHttpRequest(), "post", "test_projectKey/business-units?expand=expand", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .businessUnits()
                         .post(com.commercetools.api.models.business_unit.CompanyDraft.of())
-                        .createHttpRequest(), "post", "/test_projectKey/business-units", } };
+                        .createHttpRequest(), "post", "test_projectKey/business-units", } };
     }
 
     @DataProvider

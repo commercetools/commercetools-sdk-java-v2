@@ -63,14 +63,15 @@ public class ByProjectKeyInStoreKeyByStoreKeyCartsReplicateTest {
 
     @DataProvider
     public static Object[][] requestWithMethodParameters() {
-        return new Object[][] { new Object[] {
-                apiRoot.withProjectKey("test_projectKey")
-                        .inStoreKeyWithStoreKeyValue("test_storeKey")
-                        .carts()
-                        .replicate()
-                        .post(com.commercetools.api.models.cart.ReplicaCartDraft.of())
-                        .createHttpRequest(),
-                "post", "/test_projectKey/in-store/key=test_storeKey/carts/replicate", } };
+        return new Object[][] {
+                new Object[] {
+                        apiRoot.withProjectKey("test_projectKey")
+                                .inStoreKeyWithStoreKeyValue("test_storeKey")
+                                .carts()
+                                .replicate()
+                                .post(com.commercetools.api.models.cart.ReplicaCartDraft.of())
+                                .createHttpRequest(),
+                        "post", "test_projectKey/in-store/key=test_storeKey/carts/replicate", } };
     }
 
     @DataProvider

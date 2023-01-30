@@ -71,12 +71,12 @@ public class ByProjectKeyStagedQuotesKeyByKeyTest {
                                 .get()
                                 .withExpand("expand")
                                 .createHttpRequest(),
-                        "get", "/test_projectKey/staged-quotes/key=test_key?expand=expand", },
+                        "get", "test_projectKey/staged-quotes/key=test_key?expand=expand", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .stagedQuotes()
                         .withKey("test_key")
                         .get()
-                        .createHttpRequest(), "get", "/test_projectKey/staged-quotes/key=test_key", },
+                        .createHttpRequest(), "get", "test_projectKey/staged-quotes/key=test_key", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .stagedQuotes()
@@ -84,12 +84,12 @@ public class ByProjectKeyStagedQuotesKeyByKeyTest {
                                 .post(com.commercetools.api.models.staged_quote.StagedQuoteUpdate.of())
                                 .withExpand("expand")
                                 .createHttpRequest(),
-                        "post", "/test_projectKey/staged-quotes/key=test_key?expand=expand", },
+                        "post", "test_projectKey/staged-quotes/key=test_key?expand=expand", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .stagedQuotes()
                         .withKey("test_key")
                         .post(com.commercetools.api.models.staged_quote.StagedQuoteUpdate.of())
-                        .createHttpRequest(), "post", "/test_projectKey/staged-quotes/key=test_key", },
+                        .createHttpRequest(), "post", "test_projectKey/staged-quotes/key=test_key", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .stagedQuotes()
@@ -97,7 +97,7 @@ public class ByProjectKeyStagedQuotesKeyByKeyTest {
                                 .delete()
                                 .withDataErasure(true)
                                 .createHttpRequest(),
-                        "delete", "/test_projectKey/staged-quotes/key=test_key?dataErasure=true", },
+                        "delete", "test_projectKey/staged-quotes/key=test_key?dataErasure=true", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .stagedQuotes()
@@ -105,7 +105,7 @@ public class ByProjectKeyStagedQuotesKeyByKeyTest {
                                 .delete()
                                 .withVersion(2)
                                 .createHttpRequest(),
-                        "delete", "/test_projectKey/staged-quotes/key=test_key?version=2", },
+                        "delete", "test_projectKey/staged-quotes/key=test_key?version=2", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .stagedQuotes()
@@ -113,12 +113,12 @@ public class ByProjectKeyStagedQuotesKeyByKeyTest {
                                 .delete()
                                 .withExpand("expand")
                                 .createHttpRequest(),
-                        "delete", "/test_projectKey/staged-quotes/key=test_key?expand=expand", },
+                        "delete", "test_projectKey/staged-quotes/key=test_key?expand=expand", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .stagedQuotes()
                         .withKey("test_key")
                         .delete()
-                        .createHttpRequest(), "delete", "/test_projectKey/staged-quotes/key=test_key", } };
+                        .createHttpRequest(), "delete", "test_projectKey/staged-quotes/key=test_key", } };
     }
 
     @DataProvider

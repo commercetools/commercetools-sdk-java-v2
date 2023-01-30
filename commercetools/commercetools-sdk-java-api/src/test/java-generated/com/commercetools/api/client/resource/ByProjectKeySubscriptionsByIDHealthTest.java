@@ -68,7 +68,7 @@ public class ByProjectKeySubscriptionsByIDHealthTest {
                 .withId("test_ID")
                 .withIdHealth()
                 .get()
-                .createHttpRequest(), "get", "/test_projectKey/subscriptions/test_ID/health", } };
+                .createHttpRequest(), "get", "test_projectKey/subscriptions/test_ID/health", } };
     }
 
     @DataProvider

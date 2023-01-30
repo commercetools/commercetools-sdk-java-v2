@@ -65,40 +65,40 @@ public class ByProjectKeyQuotesTest {
     public static Object[][] requestWithMethodParameters() {
         return new Object[][] { new Object[] {
                 apiRoot.withProjectKey("test_projectKey").quotes().get().withExpand("expand").createHttpRequest(),
-                "get", "/test_projectKey/quotes?expand=expand", },
+                "get", "test_projectKey/quotes?expand=expand", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey").quotes().get().withSort("sort").createHttpRequest(),
-                        "get", "/test_projectKey/quotes?sort=sort", },
+                        "get", "test_projectKey/quotes?sort=sort", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey").quotes().get().withLimit(7).createHttpRequest(),
-                        "get", "/test_projectKey/quotes?limit=7", },
+                        "get", "test_projectKey/quotes?limit=7", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey").quotes().get().withOffset(3).createHttpRequest(),
-                        "get", "/test_projectKey/quotes?offset=3", },
+                        "get", "test_projectKey/quotes?offset=3", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .quotes()
                         .get()
                         .withWithTotal(true)
-                        .createHttpRequest(), "get", "/test_projectKey/quotes?withTotal=true", },
+                        .createHttpRequest(), "get", "test_projectKey/quotes?withTotal=true", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey").quotes().get().withWhere("where").createHttpRequest(),
-                        "get", "/test_projectKey/quotes?where=where", },
+                        "get", "test_projectKey/quotes?where=where", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .quotes()
                         .get()
                         .withPredicateVar("varName", "var.varName")
-                        .createHttpRequest(), "get", "/test_projectKey/quotes?var.varName=var.varName", },
+                        .createHttpRequest(), "get", "test_projectKey/quotes?var.varName=var.varName", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey").quotes().get().createHttpRequest(), "get",
-                        "/test_projectKey/quotes", },
+                        "test_projectKey/quotes", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .quotes()
                         .post(com.commercetools.api.models.quote.QuoteDraft.of())
                         .withExpand("expand")
-                        .createHttpRequest(), "post", "/test_projectKey/quotes?expand=expand", },
+                        .createHttpRequest(), "post", "test_projectKey/quotes?expand=expand", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .quotes()
                         .post(com.commercetools.api.models.quote.QuoteDraft.of())
-                        .createHttpRequest(), "post", "/test_projectKey/quotes", } };
+                        .createHttpRequest(), "post", "test_projectKey/quotes", } };
     }
 
     @DataProvider

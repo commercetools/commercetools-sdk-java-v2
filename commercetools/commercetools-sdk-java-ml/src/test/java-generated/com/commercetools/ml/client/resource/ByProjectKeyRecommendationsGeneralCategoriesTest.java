@@ -71,7 +71,7 @@ public class ByProjectKeyRecommendationsGeneralCategoriesTest {
                                 .get()
                                 .withProductImageUrl("productImageUrl")
                                 .createHttpRequest(),
-                        "get", "/test_projectKey/recommendations/general-categories?productImageUrl=productImageUrl", },
+                        "get", "test_projectKey/recommendations/general-categories?productImageUrl=productImageUrl", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .recommendations()
@@ -79,7 +79,7 @@ public class ByProjectKeyRecommendationsGeneralCategoriesTest {
                                 .get()
                                 .withProductName("productName")
                                 .createHttpRequest(),
-                        "get", "/test_projectKey/recommendations/general-categories?productName=productName", },
+                        "get", "test_projectKey/recommendations/general-categories?productName=productName", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .recommendations()
@@ -87,7 +87,7 @@ public class ByProjectKeyRecommendationsGeneralCategoriesTest {
                                 .get()
                                 .withLimit(7)
                                 .createHttpRequest(),
-                        "get", "/test_projectKey/recommendations/general-categories?limit=7", },
+                        "get", "test_projectKey/recommendations/general-categories?limit=7", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .recommendations()
@@ -95,7 +95,7 @@ public class ByProjectKeyRecommendationsGeneralCategoriesTest {
                                 .get()
                                 .withOffset(3)
                                 .createHttpRequest(),
-                        "get", "/test_projectKey/recommendations/general-categories?offset=3", },
+                        "get", "test_projectKey/recommendations/general-categories?offset=3", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .recommendations()
@@ -103,7 +103,7 @@ public class ByProjectKeyRecommendationsGeneralCategoriesTest {
                                 .get()
                                 .withConfidenceMin(0.7340351)
                                 .createHttpRequest(),
-                        "get", "/test_projectKey/recommendations/general-categories?confidenceMin=0.7340351", },
+                        "get", "test_projectKey/recommendations/general-categories?confidenceMin=0.7340351", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .recommendations()
@@ -111,12 +111,12 @@ public class ByProjectKeyRecommendationsGeneralCategoriesTest {
                                 .get()
                                 .withConfidenceMax(0.30089796)
                                 .createHttpRequest(),
-                        "get", "/test_projectKey/recommendations/general-categories?confidenceMax=0.30089796", },
+                        "get", "test_projectKey/recommendations/general-categories?confidenceMax=0.30089796", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .recommendations()
                         .generalCategories()
                         .get()
-                        .createHttpRequest(), "get", "/test_projectKey/recommendations/general-categories", } };
+                        .createHttpRequest(), "get", "test_projectKey/recommendations/general-categories", } };
     }
 
     @DataProvider

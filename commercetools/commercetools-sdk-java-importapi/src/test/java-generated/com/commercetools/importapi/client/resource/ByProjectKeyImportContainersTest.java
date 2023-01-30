@@ -67,25 +67,25 @@ public class ByProjectKeyImportContainersTest {
                 new Object[] { apiRoot.withProjectKeyValue("test_projectKey")
                         .importContainers()
                         .post(com.commercetools.importapi.models.importcontainers.ImportContainerDraft.of())
-                        .createHttpRequest(), "post", "/test_projectKey/import-containers", },
+                        .createHttpRequest(), "post", "test_projectKey/import-containers", },
                 new Object[] { apiRoot.withProjectKeyValue("test_projectKey")
                         .importContainers()
                         .get()
                         .withLimit(0.26748633)
-                        .createHttpRequest(), "get", "/test_projectKey/import-containers?limit=0.26748633", },
+                        .createHttpRequest(), "get", "test_projectKey/import-containers?limit=0.26748633", },
                 new Object[] { apiRoot.withProjectKeyValue("test_projectKey")
                         .importContainers()
                         .get()
                         .withOffset(0.7475848)
-                        .createHttpRequest(), "get", "/test_projectKey/import-containers?offset=0.7475848", },
+                        .createHttpRequest(), "get", "test_projectKey/import-containers?offset=0.7475848", },
                 new Object[] { apiRoot.withProjectKeyValue("test_projectKey")
                         .importContainers()
                         .get()
                         .withSort("sort")
-                        .createHttpRequest(), "get", "/test_projectKey/import-containers?sort=sort", },
+                        .createHttpRequest(), "get", "test_projectKey/import-containers?sort=sort", },
                 new Object[] {
                         apiRoot.withProjectKeyValue("test_projectKey").importContainers().get().createHttpRequest(),
-                        "get", "/test_projectKey/import-containers", } };
+                        "get", "test_projectKey/import-containers", } };
     }
 
     @DataProvider

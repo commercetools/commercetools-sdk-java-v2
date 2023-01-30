@@ -71,17 +71,17 @@ public class ByProjectKeyProductTypesKeyByKeyTest {
                                 .get()
                                 .withExpand("expand")
                                 .createHttpRequest(),
-                        "get", "/test_projectKey/product-types/key=test_key?expand=expand", },
+                        "get", "test_projectKey/product-types/key=test_key?expand=expand", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .productTypes()
                         .withKey("test_key")
                         .get()
-                        .createHttpRequest(), "get", "/test_projectKey/product-types/key=test_key", },
+                        .createHttpRequest(), "get", "test_projectKey/product-types/key=test_key", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .productTypes()
                         .withKey("test_key")
                         .head()
-                        .createHttpRequest(), "head", "/test_projectKey/product-types/key=test_key", },
+                        .createHttpRequest(), "head", "test_projectKey/product-types/key=test_key", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .productTypes()
@@ -89,12 +89,12 @@ public class ByProjectKeyProductTypesKeyByKeyTest {
                                 .post(com.commercetools.api.models.product_type.ProductTypeUpdate.of())
                                 .withExpand("expand")
                                 .createHttpRequest(),
-                        "post", "/test_projectKey/product-types/key=test_key?expand=expand", },
+                        "post", "test_projectKey/product-types/key=test_key?expand=expand", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .productTypes()
                         .withKey("test_key")
                         .post(com.commercetools.api.models.product_type.ProductTypeUpdate.of())
-                        .createHttpRequest(), "post", "/test_projectKey/product-types/key=test_key", },
+                        .createHttpRequest(), "post", "test_projectKey/product-types/key=test_key", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .productTypes()
@@ -102,7 +102,7 @@ public class ByProjectKeyProductTypesKeyByKeyTest {
                                 .delete()
                                 .withVersion(2)
                                 .createHttpRequest(),
-                        "delete", "/test_projectKey/product-types/key=test_key?version=2", },
+                        "delete", "test_projectKey/product-types/key=test_key?version=2", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .productTypes()
@@ -110,12 +110,12 @@ public class ByProjectKeyProductTypesKeyByKeyTest {
                                 .delete()
                                 .withExpand("expand")
                                 .createHttpRequest(),
-                        "delete", "/test_projectKey/product-types/key=test_key?expand=expand", },
+                        "delete", "test_projectKey/product-types/key=test_key?expand=expand", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .productTypes()
                         .withKey("test_key")
                         .delete()
-                        .createHttpRequest(), "delete", "/test_projectKey/product-types/key=test_key", } };
+                        .createHttpRequest(), "delete", "test_projectKey/product-types/key=test_key", } };
     }
 
     @DataProvider

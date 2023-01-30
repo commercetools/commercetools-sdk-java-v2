@@ -68,50 +68,50 @@ public class ByProjectKeyQuoteRequestsTest {
                         .quoteRequests()
                         .get()
                         .withExpand("expand")
-                        .createHttpRequest(), "get", "/test_projectKey/quote-requests?expand=expand", },
+                        .createHttpRequest(), "get", "test_projectKey/quote-requests?expand=expand", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .quoteRequests()
                         .get()
                         .withSort("sort")
-                        .createHttpRequest(), "get", "/test_projectKey/quote-requests?sort=sort", },
+                        .createHttpRequest(), "get", "test_projectKey/quote-requests?sort=sort", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .quoteRequests()
                         .get()
                         .withLimit(7)
-                        .createHttpRequest(), "get", "/test_projectKey/quote-requests?limit=7", },
+                        .createHttpRequest(), "get", "test_projectKey/quote-requests?limit=7", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .quoteRequests()
                         .get()
                         .withOffset(3)
-                        .createHttpRequest(), "get", "/test_projectKey/quote-requests?offset=3", },
+                        .createHttpRequest(), "get", "test_projectKey/quote-requests?offset=3", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .quoteRequests()
                         .get()
                         .withWithTotal(true)
-                        .createHttpRequest(), "get", "/test_projectKey/quote-requests?withTotal=true", },
+                        .createHttpRequest(), "get", "test_projectKey/quote-requests?withTotal=true", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .quoteRequests()
                         .get()
                         .withWhere("where")
-                        .createHttpRequest(), "get", "/test_projectKey/quote-requests?where=where", },
+                        .createHttpRequest(), "get", "test_projectKey/quote-requests?where=where", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .quoteRequests()
                                 .get()
                                 .withPredicateVar("varName", "var.varName")
                                 .createHttpRequest(),
-                        "get", "/test_projectKey/quote-requests?var.varName=var.varName", },
+                        "get", "test_projectKey/quote-requests?var.varName=var.varName", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey").quoteRequests().get().createHttpRequest(),
-                        "get", "/test_projectKey/quote-requests", },
+                        "get", "test_projectKey/quote-requests", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .quoteRequests()
                         .post(com.commercetools.api.models.quote_request.QuoteRequestDraft.of())
                         .withExpand("expand")
-                        .createHttpRequest(), "post", "/test_projectKey/quote-requests?expand=expand", },
+                        .createHttpRequest(), "post", "test_projectKey/quote-requests?expand=expand", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .quoteRequests()
                         .post(com.commercetools.api.models.quote_request.QuoteRequestDraft.of())
-                        .createHttpRequest(), "post", "/test_projectKey/quote-requests", } };
+                        .createHttpRequest(), "post", "test_projectKey/quote-requests", } };
     }
 
     @DataProvider

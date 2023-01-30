@@ -71,12 +71,12 @@ public class ByProjectKeyStandalonePricesKeyByKeyTest {
                                 .get()
                                 .withExpand("expand")
                                 .createHttpRequest(),
-                        "get", "/test_projectKey/standalone-prices/key=test_key?expand=expand", },
+                        "get", "test_projectKey/standalone-prices/key=test_key?expand=expand", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .standalonePrices()
                         .withKey("test_key")
                         .get()
-                        .createHttpRequest(), "get", "/test_projectKey/standalone-prices/key=test_key", },
+                        .createHttpRequest(), "get", "test_projectKey/standalone-prices/key=test_key", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .standalonePrices()
@@ -84,12 +84,12 @@ public class ByProjectKeyStandalonePricesKeyByKeyTest {
                                 .post(com.commercetools.api.models.standalone_price.StandalonePriceUpdate.of())
                                 .withExpand("expand")
                                 .createHttpRequest(),
-                        "post", "/test_projectKey/standalone-prices/key=test_key?expand=expand", },
+                        "post", "test_projectKey/standalone-prices/key=test_key?expand=expand", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .standalonePrices()
                         .withKey("test_key")
                         .post(com.commercetools.api.models.standalone_price.StandalonePriceUpdate.of())
-                        .createHttpRequest(), "post", "/test_projectKey/standalone-prices/key=test_key", },
+                        .createHttpRequest(), "post", "test_projectKey/standalone-prices/key=test_key", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .standalonePrices()
@@ -97,7 +97,7 @@ public class ByProjectKeyStandalonePricesKeyByKeyTest {
                                 .delete()
                                 .withVersion(2)
                                 .createHttpRequest(),
-                        "delete", "/test_projectKey/standalone-prices/key=test_key?version=2", },
+                        "delete", "test_projectKey/standalone-prices/key=test_key?version=2", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .standalonePrices()
@@ -105,12 +105,12 @@ public class ByProjectKeyStandalonePricesKeyByKeyTest {
                                 .delete()
                                 .withExpand("expand")
                                 .createHttpRequest(),
-                        "delete", "/test_projectKey/standalone-prices/key=test_key?expand=expand", },
+                        "delete", "test_projectKey/standalone-prices/key=test_key?expand=expand", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .standalonePrices()
                         .withKey("test_key")
                         .delete()
-                        .createHttpRequest(), "delete", "/test_projectKey/standalone-prices/key=test_key", } };
+                        .createHttpRequest(), "delete", "test_projectKey/standalone-prices/key=test_key", } };
     }
 
     @DataProvider

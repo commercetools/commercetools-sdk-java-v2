@@ -64,7 +64,7 @@ public class ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsByIDGet extends
     @Override
     protected ApiHttpRequest buildHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
-        String httpRequestPath = String.format("/%s/in-store/key=%s/me/shopping-lists/%s", this.projectKey,
+        String httpRequestPath = String.format("%s/in-store/key=%s/me/shopping-lists/%s", this.projectKey,
             this.storeKey, this.ID);
         if (!params.isEmpty()) {
             httpRequestPath += "?" + String.join("&", params);

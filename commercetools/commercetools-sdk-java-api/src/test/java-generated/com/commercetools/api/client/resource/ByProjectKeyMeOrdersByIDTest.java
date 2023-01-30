@@ -70,13 +70,13 @@ public class ByProjectKeyMeOrdersByIDTest {
                         .withId("test_ID")
                         .get()
                         .withExpand("expand")
-                        .createHttpRequest(), "get", "/test_projectKey/me/orders/test_ID?expand=expand", },
+                        .createHttpRequest(), "get", "test_projectKey/me/orders/test_ID?expand=expand", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .me()
                         .orders()
                         .withId("test_ID")
                         .get()
-                        .createHttpRequest(), "get", "/test_projectKey/me/orders/test_ID", } };
+                        .createHttpRequest(), "get", "test_projectKey/me/orders/test_ID", } };
     }
 
     @DataProvider

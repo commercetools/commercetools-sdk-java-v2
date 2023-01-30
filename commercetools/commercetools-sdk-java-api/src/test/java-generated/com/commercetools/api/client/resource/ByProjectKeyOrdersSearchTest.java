@@ -68,9 +68,9 @@ public class ByProjectKeyOrdersSearchTest {
                         .orders()
                         .search()
                         .post(com.commercetools.api.models.order.OrderSearchRequest.of())
-                        .createHttpRequest(), "post", "/test_projectKey/orders/search", },
+                        .createHttpRequest(), "post", "test_projectKey/orders/search", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey").orders().search().head().createHttpRequest(),
-                        "head", "/test_projectKey/orders/search", } };
+                        "head", "test_projectKey/orders/search", } };
     }
 
     @DataProvider

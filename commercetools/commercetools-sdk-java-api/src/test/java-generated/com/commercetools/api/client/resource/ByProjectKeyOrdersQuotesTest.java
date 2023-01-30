@@ -67,7 +67,7 @@ public class ByProjectKeyOrdersQuotesTest {
                 .orders()
                 .orderQuote()
                 .post(com.commercetools.api.models.order.OrderFromQuoteDraft.of())
-                .createHttpRequest(), "post", "/test_projectKey/orders/quotes", } };
+                .createHttpRequest(), "post", "test_projectKey/orders/quotes", } };
     }
 
     @DataProvider

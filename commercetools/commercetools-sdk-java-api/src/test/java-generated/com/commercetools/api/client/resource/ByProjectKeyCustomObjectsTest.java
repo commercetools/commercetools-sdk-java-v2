@@ -68,50 +68,50 @@ public class ByProjectKeyCustomObjectsTest {
                         .customObjects()
                         .get()
                         .withExpand("expand")
-                        .createHttpRequest(), "get", "/test_projectKey/custom-objects?expand=expand", },
+                        .createHttpRequest(), "get", "test_projectKey/custom-objects?expand=expand", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .customObjects()
                         .get()
                         .withSort("sort")
-                        .createHttpRequest(), "get", "/test_projectKey/custom-objects?sort=sort", },
+                        .createHttpRequest(), "get", "test_projectKey/custom-objects?sort=sort", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .customObjects()
                         .get()
                         .withLimit(7)
-                        .createHttpRequest(), "get", "/test_projectKey/custom-objects?limit=7", },
+                        .createHttpRequest(), "get", "test_projectKey/custom-objects?limit=7", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .customObjects()
                         .get()
                         .withOffset(3)
-                        .createHttpRequest(), "get", "/test_projectKey/custom-objects?offset=3", },
+                        .createHttpRequest(), "get", "test_projectKey/custom-objects?offset=3", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .customObjects()
                         .get()
                         .withWithTotal(true)
-                        .createHttpRequest(), "get", "/test_projectKey/custom-objects?withTotal=true", },
+                        .createHttpRequest(), "get", "test_projectKey/custom-objects?withTotal=true", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .customObjects()
                         .get()
                         .withWhere("where")
-                        .createHttpRequest(), "get", "/test_projectKey/custom-objects?where=where", },
+                        .createHttpRequest(), "get", "test_projectKey/custom-objects?where=where", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .customObjects()
                                 .get()
                                 .withPredicateVar("varName", "var.varName")
                                 .createHttpRequest(),
-                        "get", "/test_projectKey/custom-objects?var.varName=var.varName", },
+                        "get", "test_projectKey/custom-objects?var.varName=var.varName", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey").customObjects().get().createHttpRequest(),
-                        "get", "/test_projectKey/custom-objects", },
+                        "get", "test_projectKey/custom-objects", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .customObjects()
                         .post(com.commercetools.api.models.custom_object.CustomObjectDraft.of())
                         .withExpand("expand")
-                        .createHttpRequest(), "post", "/test_projectKey/custom-objects?expand=expand", },
+                        .createHttpRequest(), "post", "test_projectKey/custom-objects?expand=expand", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .customObjects()
                         .post(com.commercetools.api.models.custom_object.CustomObjectDraft.of())
-                        .createHttpRequest(), "post", "/test_projectKey/custom-objects", } };
+                        .createHttpRequest(), "post", "test_projectKey/custom-objects", } };
     }
 
     @DataProvider

@@ -65,50 +65,50 @@ public class ByProjectKeyCustomerGroupsTest {
     public static Object[][] requestWithMethodParameters() {
         return new Object[][] { new Object[] {
                 apiRoot.withProjectKey("test_projectKey").customerGroups().get().withWhere("where").createHttpRequest(),
-                "get", "/test_projectKey/customer-groups?where=where", },
+                "get", "test_projectKey/customer-groups?where=where", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .customerGroups()
                         .get()
                         .withExpand("expand")
-                        .createHttpRequest(), "get", "/test_projectKey/customer-groups?expand=expand", },
+                        .createHttpRequest(), "get", "test_projectKey/customer-groups?expand=expand", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .customerGroups()
                         .get()
                         .withSort("sort")
-                        .createHttpRequest(), "get", "/test_projectKey/customer-groups?sort=sort", },
+                        .createHttpRequest(), "get", "test_projectKey/customer-groups?sort=sort", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .customerGroups()
                         .get()
                         .withLimit(7)
-                        .createHttpRequest(), "get", "/test_projectKey/customer-groups?limit=7", },
+                        .createHttpRequest(), "get", "test_projectKey/customer-groups?limit=7", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .customerGroups()
                         .get()
                         .withOffset(3)
-                        .createHttpRequest(), "get", "/test_projectKey/customer-groups?offset=3", },
+                        .createHttpRequest(), "get", "test_projectKey/customer-groups?offset=3", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .customerGroups()
                         .get()
                         .withWithTotal(true)
-                        .createHttpRequest(), "get", "/test_projectKey/customer-groups?withTotal=true", },
+                        .createHttpRequest(), "get", "test_projectKey/customer-groups?withTotal=true", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .customerGroups()
                                 .get()
                                 .withPredicateVar("varName", "var.varName")
                                 .createHttpRequest(),
-                        "get", "/test_projectKey/customer-groups?var.varName=var.varName", },
+                        "get", "test_projectKey/customer-groups?var.varName=var.varName", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey").customerGroups().get().createHttpRequest(),
-                        "get", "/test_projectKey/customer-groups", },
+                        "get", "test_projectKey/customer-groups", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .customerGroups()
                         .post(com.commercetools.api.models.customer_group.CustomerGroupDraft.of())
                         .withExpand("expand")
-                        .createHttpRequest(), "post", "/test_projectKey/customer-groups?expand=expand", },
+                        .createHttpRequest(), "post", "test_projectKey/customer-groups?expand=expand", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .customerGroups()
                         .post(com.commercetools.api.models.customer_group.CustomerGroupDraft.of())
-                        .createHttpRequest(), "post", "/test_projectKey/customer-groups", } };
+                        .createHttpRequest(), "post", "test_projectKey/customer-groups", } };
     }
 
     @DataProvider

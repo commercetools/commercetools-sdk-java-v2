@@ -69,25 +69,23 @@ public class ByProjectKeyDiscountCodesByIDTest {
                         .withId("test_ID")
                         .get()
                         .withExpand("expand")
-                        .createHttpRequest(), "get", "/test_projectKey/discount-codes/test_ID?expand=expand", },
+                        .createHttpRequest(), "get", "test_projectKey/discount-codes/test_ID?expand=expand", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .discountCodes()
                         .withId("test_ID")
                         .get()
-                        .createHttpRequest(), "get", "/test_projectKey/discount-codes/test_ID", },
-                new Object[] {
-                        apiRoot.withProjectKey("test_projectKey")
-                                .discountCodes()
-                                .withId("test_ID")
-                                .post(com.commercetools.api.models.discount_code.DiscountCodeUpdate.of())
-                                .withExpand("expand")
-                                .createHttpRequest(),
-                        "post", "/test_projectKey/discount-codes/test_ID?expand=expand", },
+                        .createHttpRequest(), "get", "test_projectKey/discount-codes/test_ID", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .discountCodes()
                         .withId("test_ID")
                         .post(com.commercetools.api.models.discount_code.DiscountCodeUpdate.of())
-                        .createHttpRequest(), "post", "/test_projectKey/discount-codes/test_ID", },
+                        .withExpand("expand")
+                        .createHttpRequest(), "post", "test_projectKey/discount-codes/test_ID?expand=expand", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .discountCodes()
+                        .withId("test_ID")
+                        .post(com.commercetools.api.models.discount_code.DiscountCodeUpdate.of())
+                        .createHttpRequest(), "post", "test_projectKey/discount-codes/test_ID", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .discountCodes()
@@ -95,13 +93,13 @@ public class ByProjectKeyDiscountCodesByIDTest {
                                 .delete()
                                 .withDataErasure(true)
                                 .createHttpRequest(),
-                        "delete", "/test_projectKey/discount-codes/test_ID?dataErasure=true", },
+                        "delete", "test_projectKey/discount-codes/test_ID?dataErasure=true", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .discountCodes()
                         .withId("test_ID")
                         .delete()
                         .withVersion(2)
-                        .createHttpRequest(), "delete", "/test_projectKey/discount-codes/test_ID?version=2", },
+                        .createHttpRequest(), "delete", "test_projectKey/discount-codes/test_ID?version=2", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .discountCodes()
@@ -109,12 +107,12 @@ public class ByProjectKeyDiscountCodesByIDTest {
                                 .delete()
                                 .withExpand("expand")
                                 .createHttpRequest(),
-                        "delete", "/test_projectKey/discount-codes/test_ID?expand=expand", },
+                        "delete", "test_projectKey/discount-codes/test_ID?expand=expand", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .discountCodes()
                         .withId("test_ID")
                         .delete()
-                        .createHttpRequest(), "delete", "/test_projectKey/discount-codes/test_ID", } };
+                        .createHttpRequest(), "delete", "test_projectKey/discount-codes/test_ID", } };
     }
 
     @DataProvider

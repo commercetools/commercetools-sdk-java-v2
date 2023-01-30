@@ -70,26 +70,26 @@ public class ByProjectKeyMeQuotesByIDTest {
                         .withId("test_ID")
                         .get()
                         .withExpand("expand")
-                        .createHttpRequest(), "get", "/test_projectKey/me/quotes/test_ID?expand=expand", },
+                        .createHttpRequest(), "get", "test_projectKey/me/quotes/test_ID?expand=expand", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .me()
                         .quotes()
                         .withId("test_ID")
                         .get()
-                        .createHttpRequest(), "get", "/test_projectKey/me/quotes/test_ID", },
+                        .createHttpRequest(), "get", "test_projectKey/me/quotes/test_ID", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .me()
                         .quotes()
                         .withId("test_ID")
                         .post(com.commercetools.api.models.me.MyQuoteUpdate.of())
                         .withExpand("expand")
-                        .createHttpRequest(), "post", "/test_projectKey/me/quotes/test_ID?expand=expand", },
+                        .createHttpRequest(), "post", "test_projectKey/me/quotes/test_ID?expand=expand", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .me()
                         .quotes()
                         .withId("test_ID")
                         .post(com.commercetools.api.models.me.MyQuoteUpdate.of())
-                        .createHttpRequest(), "post", "/test_projectKey/me/quotes/test_ID", } };
+                        .createHttpRequest(), "post", "test_projectKey/me/quotes/test_ID", } };
     }
 
     @DataProvider

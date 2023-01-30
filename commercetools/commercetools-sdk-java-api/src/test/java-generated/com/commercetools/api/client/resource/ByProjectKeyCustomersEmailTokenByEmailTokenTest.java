@@ -71,14 +71,14 @@ public class ByProjectKeyCustomersEmailTokenByEmailTokenTest {
                                 .get()
                                 .withExpand("expand")
                                 .createHttpRequest(),
-                        "get", "/test_projectKey/customers/email-token=test_emailToken?expand=expand", },
+                        "get", "test_projectKey/customers/email-token=test_emailToken?expand=expand", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .customers()
                                 .withEmailToken("test_emailToken")
                                 .get()
                                 .createHttpRequest(),
-                        "get", "/test_projectKey/customers/email-token=test_emailToken", } };
+                        "get", "test_projectKey/customers/email-token=test_emailToken", } };
     }
 
     @DataProvider

@@ -60,7 +60,7 @@ public class ByProjectKeyProductProjectionsSearchGet extends
     @Override
     protected ApiHttpRequest buildHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
-        String httpRequestPath = String.format("/%s/product-projections/search", this.projectKey);
+        String httpRequestPath = String.format("%s/product-projections/search", this.projectKey);
         if (!params.isEmpty()) {
             httpRequestPath += "?" + String.join("&", params);
         }

@@ -70,7 +70,7 @@ public class ByProjectKeyInStoreKeyByStoreKeyCustomersPasswordTokenTest {
                         .passwordToken()
                         .post(com.commercetools.api.models.customer.CustomerCreatePasswordResetToken.of())
                         .createHttpRequest(),
-                "post", "/test_projectKey/in-store/key=test_storeKey/customers/password-token", } };
+                "post", "test_projectKey/in-store/key=test_storeKey/customers/password-token", } };
     }
 
     @DataProvider

@@ -69,56 +69,56 @@ public class ByProjectKeyMePaymentsTest {
                         .payments()
                         .get()
                         .withExpand("expand")
-                        .createHttpRequest(), "get", "/test_projectKey/me/payments?expand=expand", },
+                        .createHttpRequest(), "get", "test_projectKey/me/payments?expand=expand", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .me()
                         .payments()
                         .get()
                         .withSort("sort")
-                        .createHttpRequest(), "get", "/test_projectKey/me/payments?sort=sort", },
+                        .createHttpRequest(), "get", "test_projectKey/me/payments?sort=sort", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .me()
                         .payments()
                         .get()
                         .withLimit(7)
-                        .createHttpRequest(), "get", "/test_projectKey/me/payments?limit=7", },
+                        .createHttpRequest(), "get", "test_projectKey/me/payments?limit=7", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .me()
                         .payments()
                         .get()
                         .withOffset(3)
-                        .createHttpRequest(), "get", "/test_projectKey/me/payments?offset=3", },
+                        .createHttpRequest(), "get", "test_projectKey/me/payments?offset=3", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .me()
                         .payments()
                         .get()
                         .withWithTotal(true)
-                        .createHttpRequest(), "get", "/test_projectKey/me/payments?withTotal=true", },
+                        .createHttpRequest(), "get", "test_projectKey/me/payments?withTotal=true", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .me()
                         .payments()
                         .get()
                         .withWhere("where")
-                        .createHttpRequest(), "get", "/test_projectKey/me/payments?where=where", },
+                        .createHttpRequest(), "get", "test_projectKey/me/payments?where=where", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .me()
                         .payments()
                         .get()
                         .withPredicateVar("varName", "var.varName")
-                        .createHttpRequest(), "get", "/test_projectKey/me/payments?var.varName=var.varName", },
+                        .createHttpRequest(), "get", "test_projectKey/me/payments?var.varName=var.varName", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey").me().payments().get().createHttpRequest(),
-                        "get", "/test_projectKey/me/payments", },
+                        "get", "test_projectKey/me/payments", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .me()
                         .payments()
                         .post(com.commercetools.api.models.me.MyPaymentDraft.of())
                         .withExpand("expand")
-                        .createHttpRequest(), "post", "/test_projectKey/me/payments?expand=expand", },
+                        .createHttpRequest(), "post", "test_projectKey/me/payments?expand=expand", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .me()
                         .payments()
                         .post(com.commercetools.api.models.me.MyPaymentDraft.of())
-                        .createHttpRequest(), "post", "/test_projectKey/me/payments", } };
+                        .createHttpRequest(), "post", "test_projectKey/me/payments", } };
     }
 
     @DataProvider

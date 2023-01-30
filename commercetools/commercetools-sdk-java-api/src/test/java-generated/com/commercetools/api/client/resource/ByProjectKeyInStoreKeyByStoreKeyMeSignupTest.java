@@ -71,7 +71,7 @@ public class ByProjectKeyInStoreKeyByStoreKeyMeSignupTest {
                                 .signup()
                                 .post(com.commercetools.api.models.me.MyCustomerDraft.of())
                                 .createHttpRequest(),
-                        "post", "/test_projectKey/in-store/key=test_storeKey/me/signup", } };
+                        "post", "test_projectKey/in-store/key=test_storeKey/me/signup", } };
     }
 
     @DataProvider

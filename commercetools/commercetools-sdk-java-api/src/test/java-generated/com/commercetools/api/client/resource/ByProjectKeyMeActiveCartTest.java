@@ -69,9 +69,9 @@ public class ByProjectKeyMeActiveCartTest {
                         .activeCart()
                         .get()
                         .withExpand("expand")
-                        .createHttpRequest(), "get", "/test_projectKey/me/active-cart?expand=expand", },
+                        .createHttpRequest(), "get", "test_projectKey/me/active-cart?expand=expand", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey").me().activeCart().get().createHttpRequest(),
-                        "get", "/test_projectKey/me/active-cart", } };
+                        "get", "test_projectKey/me/active-cart", } };
     }
 
     @DataProvider

@@ -72,7 +72,7 @@ public class ByProjectKeySimilaritiesProductsStatusByTaskIdTest {
                                 .withTaskId("test_taskId")
                                 .get()
                                 .createHttpRequest(),
-                        "get", "/test_projectKey/similarities/products/status/test_taskId", } };
+                        "get", "test_projectKey/similarities/products/status/test_taskId", } };
     }
 
     @DataProvider

@@ -73,7 +73,7 @@ public class ByProjectKeyInStoreKeyByStoreKeyMeOrdersByIDTest {
                                 .get()
                                 .withExpand("expand")
                                 .createHttpRequest(),
-                        "get", "/test_projectKey/in-store/key=test_storeKey/me/orders/test_ID?expand=expand", },
+                        "get", "test_projectKey/in-store/key=test_storeKey/me/orders/test_ID?expand=expand", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .inStoreKeyWithStoreKeyValue("test_storeKey")
@@ -82,7 +82,7 @@ public class ByProjectKeyInStoreKeyByStoreKeyMeOrdersByIDTest {
                                 .withId("test_ID")
                                 .get()
                                 .createHttpRequest(),
-                        "get", "/test_projectKey/in-store/key=test_storeKey/me/orders/test_ID", } };
+                        "get", "test_projectKey/in-store/key=test_storeKey/me/orders/test_ID", } };
     }
 
     @DataProvider

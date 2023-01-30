@@ -69,40 +69,40 @@ public class ByProjectKeyStoresKeyByKeyTest {
                         .withKey("test_key")
                         .get()
                         .withExpand("expand")
-                        .createHttpRequest(), "get", "/test_projectKey/stores/key=test_key?expand=expand", },
+                        .createHttpRequest(), "get", "test_projectKey/stores/key=test_key?expand=expand", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .stores()
                         .withKey("test_key")
                         .get()
-                        .createHttpRequest(), "get", "/test_projectKey/stores/key=test_key", },
+                        .createHttpRequest(), "get", "test_projectKey/stores/key=test_key", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .stores()
                         .withKey("test_key")
                         .post(com.commercetools.api.models.store.StoreUpdate.of())
                         .withExpand("expand")
-                        .createHttpRequest(), "post", "/test_projectKey/stores/key=test_key?expand=expand", },
+                        .createHttpRequest(), "post", "test_projectKey/stores/key=test_key?expand=expand", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .stores()
                         .withKey("test_key")
                         .post(com.commercetools.api.models.store.StoreUpdate.of())
-                        .createHttpRequest(), "post", "/test_projectKey/stores/key=test_key", },
+                        .createHttpRequest(), "post", "test_projectKey/stores/key=test_key", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .stores()
                         .withKey("test_key")
                         .delete()
                         .withVersion(2)
-                        .createHttpRequest(), "delete", "/test_projectKey/stores/key=test_key?version=2", },
+                        .createHttpRequest(), "delete", "test_projectKey/stores/key=test_key?version=2", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .stores()
                         .withKey("test_key")
                         .delete()
                         .withExpand("expand")
-                        .createHttpRequest(), "delete", "/test_projectKey/stores/key=test_key?expand=expand", },
+                        .createHttpRequest(), "delete", "test_projectKey/stores/key=test_key?expand=expand", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .stores()
                         .withKey("test_key")
                         .delete()
-                        .createHttpRequest(), "delete", "/test_projectKey/stores/key=test_key", } };
+                        .createHttpRequest(), "delete", "test_projectKey/stores/key=test_key", } };
     }
 
     @DataProvider

@@ -71,7 +71,7 @@ public class ByProjectKeyInStoreKeyByStoreKeyMePasswordResetTest {
                         .reset()
                         .post(com.commercetools.api.models.customer.MyCustomerResetPassword.of())
                         .createHttpRequest(),
-                "post", "/test_projectKey/in-store/key=test_storeKey/me/password/reset", } };
+                "post", "test_projectKey/in-store/key=test_storeKey/me/password/reset", } };
     }
 
     @DataProvider

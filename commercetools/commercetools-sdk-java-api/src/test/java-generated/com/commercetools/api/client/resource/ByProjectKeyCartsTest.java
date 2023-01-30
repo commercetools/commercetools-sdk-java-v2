@@ -65,37 +65,37 @@ public class ByProjectKeyCartsTest {
     public static Object[][] requestWithMethodParameters() {
         return new Object[][] { new Object[] {
                 apiRoot.withProjectKey("test_projectKey").carts().get().withExpand("expand").createHttpRequest(), "get",
-                "/test_projectKey/carts?expand=expand", },
+                "test_projectKey/carts?expand=expand", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey").carts().get().withSort("sort").createHttpRequest(),
-                        "get", "/test_projectKey/carts?sort=sort", },
+                        "get", "test_projectKey/carts?sort=sort", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey").carts().get().withLimit(7).createHttpRequest(),
-                        "get", "/test_projectKey/carts?limit=7", },
+                        "get", "test_projectKey/carts?limit=7", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey").carts().get().withOffset(3).createHttpRequest(),
-                        "get", "/test_projectKey/carts?offset=3", },
+                        "get", "test_projectKey/carts?offset=3", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey").carts().get().withWithTotal(true).createHttpRequest(),
-                        "get", "/test_projectKey/carts?withTotal=true", },
+                        "get", "test_projectKey/carts?withTotal=true", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey").carts().get().withWhere("where").createHttpRequest(),
-                        "get", "/test_projectKey/carts?where=where", },
+                        "get", "test_projectKey/carts?where=where", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .carts()
                         .get()
                         .withPredicateVar("varName", "var.varName")
-                        .createHttpRequest(), "get", "/test_projectKey/carts?var.varName=var.varName", },
+                        .createHttpRequest(), "get", "test_projectKey/carts?var.varName=var.varName", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey").carts().get().createHttpRequest(), "get",
-                        "/test_projectKey/carts", },
+                        "test_projectKey/carts", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .carts()
                         .post(com.commercetools.api.models.cart.CartDraft.of())
                         .withExpand("expand")
-                        .createHttpRequest(), "post", "/test_projectKey/carts?expand=expand", },
+                        .createHttpRequest(), "post", "test_projectKey/carts?expand=expand", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .carts()
                         .post(com.commercetools.api.models.cart.CartDraft.of())
-                        .createHttpRequest(), "post", "/test_projectKey/carts", } };
+                        .createHttpRequest(), "post", "test_projectKey/carts", } };
     }
 
     @DataProvider

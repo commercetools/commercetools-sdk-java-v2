@@ -69,56 +69,56 @@ public class ByProjectKeyOrdersEditsTest {
                         .edits()
                         .get()
                         .withExpand("expand")
-                        .createHttpRequest(), "get", "/test_projectKey/orders/edits?expand=expand", },
+                        .createHttpRequest(), "get", "test_projectKey/orders/edits?expand=expand", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .orders()
                         .edits()
                         .get()
                         .withSort("sort")
-                        .createHttpRequest(), "get", "/test_projectKey/orders/edits?sort=sort", },
+                        .createHttpRequest(), "get", "test_projectKey/orders/edits?sort=sort", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .orders()
                         .edits()
                         .get()
                         .withLimit(7)
-                        .createHttpRequest(), "get", "/test_projectKey/orders/edits?limit=7", },
+                        .createHttpRequest(), "get", "test_projectKey/orders/edits?limit=7", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .orders()
                         .edits()
                         .get()
                         .withOffset(3)
-                        .createHttpRequest(), "get", "/test_projectKey/orders/edits?offset=3", },
+                        .createHttpRequest(), "get", "test_projectKey/orders/edits?offset=3", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .orders()
                         .edits()
                         .get()
                         .withWithTotal(true)
-                        .createHttpRequest(), "get", "/test_projectKey/orders/edits?withTotal=true", },
+                        .createHttpRequest(), "get", "test_projectKey/orders/edits?withTotal=true", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .orders()
                         .edits()
                         .get()
                         .withWhere("where")
-                        .createHttpRequest(), "get", "/test_projectKey/orders/edits?where=where", },
+                        .createHttpRequest(), "get", "test_projectKey/orders/edits?where=where", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .orders()
                         .edits()
                         .get()
                         .withPredicateVar("varName", "var.varName")
-                        .createHttpRequest(), "get", "/test_projectKey/orders/edits?var.varName=var.varName", },
+                        .createHttpRequest(), "get", "test_projectKey/orders/edits?var.varName=var.varName", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey").orders().edits().get().createHttpRequest(),
-                        "get", "/test_projectKey/orders/edits", },
+                        "get", "test_projectKey/orders/edits", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .orders()
                         .edits()
                         .post(com.commercetools.api.models.order_edit.OrderEditDraft.of())
                         .withExpand("expand")
-                        .createHttpRequest(), "post", "/test_projectKey/orders/edits?expand=expand", },
+                        .createHttpRequest(), "post", "test_projectKey/orders/edits?expand=expand", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .orders()
                         .edits()
                         .post(com.commercetools.api.models.order_edit.OrderEditDraft.of())
-                        .createHttpRequest(), "post", "/test_projectKey/orders/edits", } };
+                        .createHttpRequest(), "post", "test_projectKey/orders/edits", } };
     }
 
     @DataProvider

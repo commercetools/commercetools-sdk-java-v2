@@ -72,7 +72,7 @@ public class ByProjectKeyInStoreKeyByStoreKeyOrdersByIDTest {
                                 .get()
                                 .withExpand("expand")
                                 .createHttpRequest(),
-                        "get", "/test_projectKey/in-store/key=test_storeKey/orders/test_ID?expand=expand", },
+                        "get", "test_projectKey/in-store/key=test_storeKey/orders/test_ID?expand=expand", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .inStoreKeyWithStoreKeyValue("test_storeKey")
@@ -80,7 +80,7 @@ public class ByProjectKeyInStoreKeyByStoreKeyOrdersByIDTest {
                                 .withId("test_ID")
                                 .get()
                                 .createHttpRequest(),
-                        "get", "/test_projectKey/in-store/key=test_storeKey/orders/test_ID", },
+                        "get", "test_projectKey/in-store/key=test_storeKey/orders/test_ID", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .inStoreKeyWithStoreKeyValue("test_storeKey")
@@ -89,7 +89,7 @@ public class ByProjectKeyInStoreKeyByStoreKeyOrdersByIDTest {
                                 .post(com.commercetools.api.models.order.OrderUpdate.of())
                                 .withExpand("expand")
                                 .createHttpRequest(),
-                        "post", "/test_projectKey/in-store/key=test_storeKey/orders/test_ID?expand=expand", },
+                        "post", "test_projectKey/in-store/key=test_storeKey/orders/test_ID?expand=expand", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .inStoreKeyWithStoreKeyValue("test_storeKey")
@@ -97,7 +97,7 @@ public class ByProjectKeyInStoreKeyByStoreKeyOrdersByIDTest {
                                 .withId("test_ID")
                                 .post(com.commercetools.api.models.order.OrderUpdate.of())
                                 .createHttpRequest(),
-                        "post", "/test_projectKey/in-store/key=test_storeKey/orders/test_ID", },
+                        "post", "test_projectKey/in-store/key=test_storeKey/orders/test_ID", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .inStoreKeyWithStoreKeyValue("test_storeKey")
@@ -106,7 +106,7 @@ public class ByProjectKeyInStoreKeyByStoreKeyOrdersByIDTest {
                                 .delete()
                                 .withDataErasure(true)
                                 .createHttpRequest(),
-                        "delete", "/test_projectKey/in-store/key=test_storeKey/orders/test_ID?dataErasure=true", },
+                        "delete", "test_projectKey/in-store/key=test_storeKey/orders/test_ID?dataErasure=true", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .inStoreKeyWithStoreKeyValue("test_storeKey")
@@ -115,7 +115,7 @@ public class ByProjectKeyInStoreKeyByStoreKeyOrdersByIDTest {
                                 .delete()
                                 .withVersion(2)
                                 .createHttpRequest(),
-                        "delete", "/test_projectKey/in-store/key=test_storeKey/orders/test_ID?version=2", },
+                        "delete", "test_projectKey/in-store/key=test_storeKey/orders/test_ID?version=2", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .inStoreKeyWithStoreKeyValue("test_storeKey")
@@ -124,7 +124,7 @@ public class ByProjectKeyInStoreKeyByStoreKeyOrdersByIDTest {
                                 .delete()
                                 .withExpand("expand")
                                 .createHttpRequest(),
-                        "delete", "/test_projectKey/in-store/key=test_storeKey/orders/test_ID?expand=expand", },
+                        "delete", "test_projectKey/in-store/key=test_storeKey/orders/test_ID?expand=expand", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .inStoreKeyWithStoreKeyValue("test_storeKey")
@@ -132,7 +132,7 @@ public class ByProjectKeyInStoreKeyByStoreKeyOrdersByIDTest {
                                 .withId("test_ID")
                                 .delete()
                                 .createHttpRequest(),
-                        "delete", "/test_projectKey/in-store/key=test_storeKey/orders/test_ID", } };
+                        "delete", "test_projectKey/in-store/key=test_storeKey/orders/test_ID", } };
     }
 
     @DataProvider

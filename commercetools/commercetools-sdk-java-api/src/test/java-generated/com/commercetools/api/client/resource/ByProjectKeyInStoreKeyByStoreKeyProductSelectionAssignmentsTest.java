@@ -71,7 +71,7 @@ public class ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsTest {
                                 .get()
                                 .withLimit(7)
                                 .createHttpRequest(),
-                        "get", "/test_projectKey/in-store/key=test_storeKey/product-selection-assignments?limit=7", },
+                        "get", "test_projectKey/in-store/key=test_storeKey/product-selection-assignments?limit=7", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .inStoreKeyWithStoreKeyValue("test_storeKey")
@@ -79,7 +79,7 @@ public class ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsTest {
                                 .get()
                                 .withOffset(3)
                                 .createHttpRequest(),
-                        "get", "/test_projectKey/in-store/key=test_storeKey/product-selection-assignments?offset=3", },
+                        "get", "test_projectKey/in-store/key=test_storeKey/product-selection-assignments?offset=3", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .inStoreKeyWithStoreKeyValue("test_storeKey")
@@ -88,7 +88,7 @@ public class ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsTest {
                                 .withWithTotal(true)
                                 .createHttpRequest(),
                         "get",
-                        "/test_projectKey/in-store/key=test_storeKey/product-selection-assignments?withTotal=true", },
+                        "test_projectKey/in-store/key=test_storeKey/product-selection-assignments?withTotal=true", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .inStoreKeyWithStoreKeyValue("test_storeKey")
@@ -97,14 +97,14 @@ public class ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsTest {
                                 .withExpand("expand")
                                 .createHttpRequest(),
                         "get",
-                        "/test_projectKey/in-store/key=test_storeKey/product-selection-assignments?expand=expand", },
+                        "test_projectKey/in-store/key=test_storeKey/product-selection-assignments?expand=expand", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .inStoreKeyWithStoreKeyValue("test_storeKey")
                                 .productSelectionAssignments()
                                 .get()
                                 .createHttpRequest(),
-                        "get", "/test_projectKey/in-store/key=test_storeKey/product-selection-assignments", } };
+                        "get", "test_projectKey/in-store/key=test_storeKey/product-selection-assignments", } };
     }
 
     @DataProvider

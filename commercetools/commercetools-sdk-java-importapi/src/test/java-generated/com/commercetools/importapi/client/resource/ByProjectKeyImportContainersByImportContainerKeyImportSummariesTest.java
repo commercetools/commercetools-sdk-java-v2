@@ -70,7 +70,7 @@ public class ByProjectKeyImportContainersByImportContainerKeyImportSummariesTest
                         .importSummaries()
                         .get()
                         .createHttpRequest(),
-                "get", "/test_projectKey/import-containers/test_importContainerKey/import-summaries", } };
+                "get", "test_projectKey/import-containers/test_importContainerKey/import-summaries", } };
     }
 
     @DataProvider

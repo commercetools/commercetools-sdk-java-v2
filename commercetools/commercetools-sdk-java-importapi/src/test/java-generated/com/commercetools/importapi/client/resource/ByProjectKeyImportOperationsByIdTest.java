@@ -67,7 +67,7 @@ public class ByProjectKeyImportOperationsByIdTest {
                 .importOperations()
                 .withIdValue("test_id")
                 .get()
-                .createHttpRequest(), "get", "/test_projectKey/import-operations/test_id", } };
+                .createHttpRequest(), "get", "test_projectKey/import-operations/test_id", } };
     }
 
     @DataProvider

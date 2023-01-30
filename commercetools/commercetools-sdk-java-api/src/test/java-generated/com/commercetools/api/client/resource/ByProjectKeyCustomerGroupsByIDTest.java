@@ -64,19 +64,17 @@ public class ByProjectKeyCustomerGroupsByIDTest {
     @DataProvider
     public static Object[][] requestWithMethodParameters() {
         return new Object[][] {
-                new Object[] {
-                        apiRoot.withProjectKey("test_projectKey")
-                                .customerGroups()
-                                .withId("test_ID")
-                                .get()
-                                .withExpand("expand")
-                                .createHttpRequest(),
-                        "get", "/test_projectKey/customer-groups/test_ID?expand=expand", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .customerGroups()
                         .withId("test_ID")
                         .get()
-                        .createHttpRequest(), "get", "/test_projectKey/customer-groups/test_ID", },
+                        .withExpand("expand")
+                        .createHttpRequest(), "get", "test_projectKey/customer-groups/test_ID?expand=expand", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .customerGroups()
+                        .withId("test_ID")
+                        .get()
+                        .createHttpRequest(), "get", "test_projectKey/customer-groups/test_ID", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .customerGroups()
@@ -84,18 +82,18 @@ public class ByProjectKeyCustomerGroupsByIDTest {
                                 .post(com.commercetools.api.models.customer_group.CustomerGroupUpdate.of())
                                 .withExpand("expand")
                                 .createHttpRequest(),
-                        "post", "/test_projectKey/customer-groups/test_ID?expand=expand", },
+                        "post", "test_projectKey/customer-groups/test_ID?expand=expand", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .customerGroups()
                         .withId("test_ID")
                         .post(com.commercetools.api.models.customer_group.CustomerGroupUpdate.of())
-                        .createHttpRequest(), "post", "/test_projectKey/customer-groups/test_ID", },
+                        .createHttpRequest(), "post", "test_projectKey/customer-groups/test_ID", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .customerGroups()
                         .withId("test_ID")
                         .delete()
                         .withVersion(2)
-                        .createHttpRequest(), "delete", "/test_projectKey/customer-groups/test_ID?version=2", },
+                        .createHttpRequest(), "delete", "test_projectKey/customer-groups/test_ID?version=2", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .customerGroups()
@@ -103,12 +101,12 @@ public class ByProjectKeyCustomerGroupsByIDTest {
                                 .delete()
                                 .withExpand("expand")
                                 .createHttpRequest(),
-                        "delete", "/test_projectKey/customer-groups/test_ID?expand=expand", },
+                        "delete", "test_projectKey/customer-groups/test_ID?expand=expand", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .customerGroups()
                         .withId("test_ID")
                         .delete()
-                        .createHttpRequest(), "delete", "/test_projectKey/customer-groups/test_ID", } };
+                        .createHttpRequest(), "delete", "test_projectKey/customer-groups/test_ID", } };
     }
 
     @DataProvider

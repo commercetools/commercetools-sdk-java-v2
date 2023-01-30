@@ -68,50 +68,50 @@ public class ByProjectKeyCartDiscountsTest {
                         .cartDiscounts()
                         .get()
                         .withExpand("expand")
-                        .createHttpRequest(), "get", "/test_projectKey/cart-discounts?expand=expand", },
+                        .createHttpRequest(), "get", "test_projectKey/cart-discounts?expand=expand", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .cartDiscounts()
                         .get()
                         .withSort("sort")
-                        .createHttpRequest(), "get", "/test_projectKey/cart-discounts?sort=sort", },
+                        .createHttpRequest(), "get", "test_projectKey/cart-discounts?sort=sort", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .cartDiscounts()
                         .get()
                         .withLimit(7)
-                        .createHttpRequest(), "get", "/test_projectKey/cart-discounts?limit=7", },
+                        .createHttpRequest(), "get", "test_projectKey/cart-discounts?limit=7", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .cartDiscounts()
                         .get()
                         .withOffset(3)
-                        .createHttpRequest(), "get", "/test_projectKey/cart-discounts?offset=3", },
+                        .createHttpRequest(), "get", "test_projectKey/cart-discounts?offset=3", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .cartDiscounts()
                         .get()
                         .withWithTotal(true)
-                        .createHttpRequest(), "get", "/test_projectKey/cart-discounts?withTotal=true", },
+                        .createHttpRequest(), "get", "test_projectKey/cart-discounts?withTotal=true", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .cartDiscounts()
                         .get()
                         .withWhere("where")
-                        .createHttpRequest(), "get", "/test_projectKey/cart-discounts?where=where", },
+                        .createHttpRequest(), "get", "test_projectKey/cart-discounts?where=where", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .cartDiscounts()
                                 .get()
                                 .withPredicateVar("varName", "var.varName")
                                 .createHttpRequest(),
-                        "get", "/test_projectKey/cart-discounts?var.varName=var.varName", },
+                        "get", "test_projectKey/cart-discounts?var.varName=var.varName", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey").cartDiscounts().get().createHttpRequest(),
-                        "get", "/test_projectKey/cart-discounts", },
+                        "get", "test_projectKey/cart-discounts", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .cartDiscounts()
                         .post(com.commercetools.api.models.cart_discount.CartDiscountDraft.of())
                         .withExpand("expand")
-                        .createHttpRequest(), "post", "/test_projectKey/cart-discounts?expand=expand", },
+                        .createHttpRequest(), "post", "test_projectKey/cart-discounts?expand=expand", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .cartDiscounts()
                         .post(com.commercetools.api.models.cart_discount.CartDiscountDraft.of())
-                        .createHttpRequest(), "post", "/test_projectKey/cart-discounts", } };
+                        .createHttpRequest(), "post", "test_projectKey/cart-discounts", } };
     }
 
     @DataProvider

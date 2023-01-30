@@ -57,7 +57,7 @@ public class ByProjectKeySubscriptionsByIDGet
     @Override
     protected ApiHttpRequest buildHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
-        String httpRequestPath = String.format("/%s/subscriptions/%s", this.projectKey, this.ID);
+        String httpRequestPath = String.format("%s/subscriptions/%s", this.projectKey, this.ID);
         if (!params.isEmpty()) {
             httpRequestPath += "?" + String.join("&", params);
         }

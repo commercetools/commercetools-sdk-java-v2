@@ -69,34 +69,34 @@ public class ByProjectKeyProductTypesByIDTest {
                         .withId("test_ID")
                         .get()
                         .withExpand("expand")
-                        .createHttpRequest(), "get", "/test_projectKey/product-types/test_ID?expand=expand", },
+                        .createHttpRequest(), "get", "test_projectKey/product-types/test_ID?expand=expand", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .productTypes()
                         .withId("test_ID")
                         .get()
-                        .createHttpRequest(), "get", "/test_projectKey/product-types/test_ID", },
+                        .createHttpRequest(), "get", "test_projectKey/product-types/test_ID", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .productTypes()
                         .withId("test_ID")
                         .head()
-                        .createHttpRequest(), "head", "/test_projectKey/product-types/test_ID", },
+                        .createHttpRequest(), "head", "test_projectKey/product-types/test_ID", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .productTypes()
                         .withId("test_ID")
                         .post(com.commercetools.api.models.product_type.ProductTypeUpdate.of())
                         .withExpand("expand")
-                        .createHttpRequest(), "post", "/test_projectKey/product-types/test_ID?expand=expand", },
+                        .createHttpRequest(), "post", "test_projectKey/product-types/test_ID?expand=expand", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .productTypes()
                         .withId("test_ID")
                         .post(com.commercetools.api.models.product_type.ProductTypeUpdate.of())
-                        .createHttpRequest(), "post", "/test_projectKey/product-types/test_ID", },
+                        .createHttpRequest(), "post", "test_projectKey/product-types/test_ID", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .productTypes()
                         .withId("test_ID")
                         .delete()
                         .withVersion(2)
-                        .createHttpRequest(), "delete", "/test_projectKey/product-types/test_ID?version=2", },
+                        .createHttpRequest(), "delete", "test_projectKey/product-types/test_ID?version=2", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .productTypes()
@@ -104,12 +104,12 @@ public class ByProjectKeyProductTypesByIDTest {
                                 .delete()
                                 .withExpand("expand")
                                 .createHttpRequest(),
-                        "delete", "/test_projectKey/product-types/test_ID?expand=expand", },
+                        "delete", "test_projectKey/product-types/test_ID?expand=expand", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .productTypes()
                         .withId("test_ID")
                         .delete()
-                        .createHttpRequest(), "delete", "/test_projectKey/product-types/test_ID", } };
+                        .createHttpRequest(), "delete", "test_projectKey/product-types/test_ID", } };
     }
 
     @DataProvider

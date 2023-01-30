@@ -71,7 +71,7 @@ public class ByProjectKeyCustomObjectsByContainerTest {
                                 .get()
                                 .withSort("sort")
                                 .createHttpRequest(),
-                        "get", "/test_projectKey/custom-objects/test_container?sort=sort", },
+                        "get", "test_projectKey/custom-objects/test_container?sort=sort", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .customObjects()
@@ -79,7 +79,7 @@ public class ByProjectKeyCustomObjectsByContainerTest {
                                 .get()
                                 .withWhere("where")
                                 .createHttpRequest(),
-                        "get", "/test_projectKey/custom-objects/test_container?where=where", },
+                        "get", "test_projectKey/custom-objects/test_container?where=where", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .customObjects()
@@ -87,7 +87,7 @@ public class ByProjectKeyCustomObjectsByContainerTest {
                                 .get()
                                 .withExpand("expand")
                                 .createHttpRequest(),
-                        "get", "/test_projectKey/custom-objects/test_container?expand=expand", },
+                        "get", "test_projectKey/custom-objects/test_container?expand=expand", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .customObjects()
@@ -95,15 +95,13 @@ public class ByProjectKeyCustomObjectsByContainerTest {
                                 .get()
                                 .withPredicateVar("varName", "var.varName")
                                 .createHttpRequest(),
-                        "get", "/test_projectKey/custom-objects/test_container?var.varName=var.varName", },
-                new Object[] {
-                        apiRoot.withProjectKey("test_projectKey")
-                                .customObjects()
-                                .withContainer("test_container")
-                                .get()
-                                .withLimit(7)
-                                .createHttpRequest(),
-                        "get", "/test_projectKey/custom-objects/test_container?limit=7", },
+                        "get", "test_projectKey/custom-objects/test_container?var.varName=var.varName", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .customObjects()
+                        .withContainer("test_container")
+                        .get()
+                        .withLimit(7)
+                        .createHttpRequest(), "get", "test_projectKey/custom-objects/test_container?limit=7", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .customObjects()
@@ -111,7 +109,7 @@ public class ByProjectKeyCustomObjectsByContainerTest {
                                 .get()
                                 .withOffset(3)
                                 .createHttpRequest(),
-                        "get", "/test_projectKey/custom-objects/test_container?offset=3", },
+                        "get", "test_projectKey/custom-objects/test_container?offset=3", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .customObjects()
@@ -119,12 +117,12 @@ public class ByProjectKeyCustomObjectsByContainerTest {
                                 .get()
                                 .withWithTotal(true)
                                 .createHttpRequest(),
-                        "get", "/test_projectKey/custom-objects/test_container?withTotal=true", },
+                        "get", "test_projectKey/custom-objects/test_container?withTotal=true", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .customObjects()
                         .withContainer("test_container")
                         .get()
-                        .createHttpRequest(), "get", "/test_projectKey/custom-objects/test_container", } };
+                        .createHttpRequest(), "get", "test_projectKey/custom-objects/test_container", } };
     }
 
     @DataProvider

@@ -59,7 +59,7 @@ public class ByProjectKeyCustomersPasswordTokenByPasswordTokenGet extends
     @Override
     protected ApiHttpRequest buildHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
-        String httpRequestPath = String.format("/%s/customers/password-token=%s", this.projectKey, this.passwordToken);
+        String httpRequestPath = String.format("%s/customers/password-token=%s", this.projectKey, this.passwordToken);
         if (!params.isEmpty()) {
             httpRequestPath += "?" + String.join("&", params);
         }

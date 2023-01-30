@@ -71,12 +71,12 @@ public class ByProjectKeyStandalonePricesByIDTest {
                                 .get()
                                 .withExpand("expand")
                                 .createHttpRequest(),
-                        "get", "/test_projectKey/standalone-prices/test_ID?expand=expand", },
+                        "get", "test_projectKey/standalone-prices/test_ID?expand=expand", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .standalonePrices()
                         .withId("test_ID")
                         .get()
-                        .createHttpRequest(), "get", "/test_projectKey/standalone-prices/test_ID", },
+                        .createHttpRequest(), "get", "test_projectKey/standalone-prices/test_ID", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .standalonePrices()
@@ -84,12 +84,12 @@ public class ByProjectKeyStandalonePricesByIDTest {
                                 .post(com.commercetools.api.models.standalone_price.StandalonePriceUpdate.of())
                                 .withExpand("expand")
                                 .createHttpRequest(),
-                        "post", "/test_projectKey/standalone-prices/test_ID?expand=expand", },
+                        "post", "test_projectKey/standalone-prices/test_ID?expand=expand", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .standalonePrices()
                         .withId("test_ID")
                         .post(com.commercetools.api.models.standalone_price.StandalonePriceUpdate.of())
-                        .createHttpRequest(), "post", "/test_projectKey/standalone-prices/test_ID", },
+                        .createHttpRequest(), "post", "test_projectKey/standalone-prices/test_ID", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .standalonePrices()
@@ -97,7 +97,7 @@ public class ByProjectKeyStandalonePricesByIDTest {
                                 .delete()
                                 .withVersion(2)
                                 .createHttpRequest(),
-                        "delete", "/test_projectKey/standalone-prices/test_ID?version=2", },
+                        "delete", "test_projectKey/standalone-prices/test_ID?version=2", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .standalonePrices()
@@ -105,12 +105,12 @@ public class ByProjectKeyStandalonePricesByIDTest {
                                 .delete()
                                 .withExpand("expand")
                                 .createHttpRequest(),
-                        "delete", "/test_projectKey/standalone-prices/test_ID?expand=expand", },
+                        "delete", "test_projectKey/standalone-prices/test_ID?expand=expand", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .standalonePrices()
                         .withId("test_ID")
                         .delete()
-                        .createHttpRequest(), "delete", "/test_projectKey/standalone-prices/test_ID", } };
+                        .createHttpRequest(), "delete", "test_projectKey/standalone-prices/test_ID", } };
     }
 
     @DataProvider

@@ -70,7 +70,7 @@ public class ByProjectKeyInStoreKeyByStoreKeyCustomersEmailTokenTest {
                         .emailToken()
                         .post(com.commercetools.api.models.customer.CustomerCreateEmailToken.of())
                         .createHttpRequest(),
-                "post", "/test_projectKey/in-store/key=test_storeKey/customers/email-token", } };
+                "post", "test_projectKey/in-store/key=test_storeKey/customers/email-token", } };
     }
 
     @DataProvider

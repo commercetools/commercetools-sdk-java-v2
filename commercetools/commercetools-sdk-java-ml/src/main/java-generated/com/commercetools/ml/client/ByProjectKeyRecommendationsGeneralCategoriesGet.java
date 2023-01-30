@@ -52,7 +52,7 @@ public class ByProjectKeyRecommendationsGeneralCategoriesGet extends
     @Override
     protected ApiHttpRequest buildHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
-        String httpRequestPath = String.format("/%s/recommendations/general-categories", this.projectKey);
+        String httpRequestPath = String.format("%s/recommendations/general-categories", this.projectKey);
         if (!params.isEmpty()) {
             httpRequestPath += "?" + String.join("&", params);
         }

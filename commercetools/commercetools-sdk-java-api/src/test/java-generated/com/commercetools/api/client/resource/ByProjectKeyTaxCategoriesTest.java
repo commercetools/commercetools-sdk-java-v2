@@ -68,50 +68,50 @@ public class ByProjectKeyTaxCategoriesTest {
                         .taxCategories()
                         .get()
                         .withExpand("expand")
-                        .createHttpRequest(), "get", "/test_projectKey/tax-categories?expand=expand", },
+                        .createHttpRequest(), "get", "test_projectKey/tax-categories?expand=expand", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .taxCategories()
                         .get()
                         .withSort("sort")
-                        .createHttpRequest(), "get", "/test_projectKey/tax-categories?sort=sort", },
+                        .createHttpRequest(), "get", "test_projectKey/tax-categories?sort=sort", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .taxCategories()
                         .get()
                         .withLimit(7)
-                        .createHttpRequest(), "get", "/test_projectKey/tax-categories?limit=7", },
+                        .createHttpRequest(), "get", "test_projectKey/tax-categories?limit=7", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .taxCategories()
                         .get()
                         .withOffset(3)
-                        .createHttpRequest(), "get", "/test_projectKey/tax-categories?offset=3", },
+                        .createHttpRequest(), "get", "test_projectKey/tax-categories?offset=3", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .taxCategories()
                         .get()
                         .withWithTotal(true)
-                        .createHttpRequest(), "get", "/test_projectKey/tax-categories?withTotal=true", },
+                        .createHttpRequest(), "get", "test_projectKey/tax-categories?withTotal=true", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .taxCategories()
                         .get()
                         .withWhere("where")
-                        .createHttpRequest(), "get", "/test_projectKey/tax-categories?where=where", },
+                        .createHttpRequest(), "get", "test_projectKey/tax-categories?where=where", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .taxCategories()
                                 .get()
                                 .withPredicateVar("varName", "var.varName")
                                 .createHttpRequest(),
-                        "get", "/test_projectKey/tax-categories?var.varName=var.varName", },
+                        "get", "test_projectKey/tax-categories?var.varName=var.varName", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey").taxCategories().get().createHttpRequest(),
-                        "get", "/test_projectKey/tax-categories", },
+                        "get", "test_projectKey/tax-categories", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .taxCategories()
                         .post(com.commercetools.api.models.tax_category.TaxCategoryDraft.of())
                         .withExpand("expand")
-                        .createHttpRequest(), "post", "/test_projectKey/tax-categories?expand=expand", },
+                        .createHttpRequest(), "post", "test_projectKey/tax-categories?expand=expand", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .taxCategories()
                         .post(com.commercetools.api.models.tax_category.TaxCategoryDraft.of())
-                        .createHttpRequest(), "post", "/test_projectKey/tax-categories", } };
+                        .createHttpRequest(), "post", "test_projectKey/tax-categories", } };
     }
 
     @DataProvider

@@ -71,12 +71,12 @@ public class ByProjectKeyProductDiscountsKeyByKeyTest {
                                 .get()
                                 .withExpand("expand")
                                 .createHttpRequest(),
-                        "get", "/test_projectKey/product-discounts/key=test_key?expand=expand", },
+                        "get", "test_projectKey/product-discounts/key=test_key?expand=expand", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .productDiscounts()
                         .withKey("test_key")
                         .get()
-                        .createHttpRequest(), "get", "/test_projectKey/product-discounts/key=test_key", },
+                        .createHttpRequest(), "get", "test_projectKey/product-discounts/key=test_key", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .productDiscounts()
@@ -84,12 +84,12 @@ public class ByProjectKeyProductDiscountsKeyByKeyTest {
                                 .post(com.commercetools.api.models.product_discount.ProductDiscountUpdate.of())
                                 .withExpand("expand")
                                 .createHttpRequest(),
-                        "post", "/test_projectKey/product-discounts/key=test_key?expand=expand", },
+                        "post", "test_projectKey/product-discounts/key=test_key?expand=expand", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .productDiscounts()
                         .withKey("test_key")
                         .post(com.commercetools.api.models.product_discount.ProductDiscountUpdate.of())
-                        .createHttpRequest(), "post", "/test_projectKey/product-discounts/key=test_key", },
+                        .createHttpRequest(), "post", "test_projectKey/product-discounts/key=test_key", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .productDiscounts()
@@ -97,7 +97,7 @@ public class ByProjectKeyProductDiscountsKeyByKeyTest {
                                 .delete()
                                 .withVersion(2)
                                 .createHttpRequest(),
-                        "delete", "/test_projectKey/product-discounts/key=test_key?version=2", },
+                        "delete", "test_projectKey/product-discounts/key=test_key?version=2", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .productDiscounts()
@@ -105,12 +105,12 @@ public class ByProjectKeyProductDiscountsKeyByKeyTest {
                                 .delete()
                                 .withExpand("expand")
                                 .createHttpRequest(),
-                        "delete", "/test_projectKey/product-discounts/key=test_key?expand=expand", },
+                        "delete", "test_projectKey/product-discounts/key=test_key?expand=expand", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .productDiscounts()
                         .withKey("test_key")
                         .delete()
-                        .createHttpRequest(), "delete", "/test_projectKey/product-discounts/key=test_key", } };
+                        .createHttpRequest(), "delete", "test_projectKey/product-discounts/key=test_key", } };
     }
 
     @DataProvider

@@ -69,44 +69,44 @@ public class ByProjectKeyQuotesByIDTest {
                         .withId("test_ID")
                         .get()
                         .withExpand("expand")
-                        .createHttpRequest(), "get", "/test_projectKey/quotes/test_ID?expand=expand", },
+                        .createHttpRequest(), "get", "test_projectKey/quotes/test_ID?expand=expand", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey").quotes().withId("test_ID").get().createHttpRequest(),
-                        "get", "/test_projectKey/quotes/test_ID", },
+                        "get", "test_projectKey/quotes/test_ID", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .quotes()
                         .withId("test_ID")
                         .post(com.commercetools.api.models.quote.QuoteUpdate.of())
                         .withExpand("expand")
-                        .createHttpRequest(), "post", "/test_projectKey/quotes/test_ID?expand=expand", },
+                        .createHttpRequest(), "post", "test_projectKey/quotes/test_ID?expand=expand", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .quotes()
                         .withId("test_ID")
                         .post(com.commercetools.api.models.quote.QuoteUpdate.of())
-                        .createHttpRequest(), "post", "/test_projectKey/quotes/test_ID", },
+                        .createHttpRequest(), "post", "test_projectKey/quotes/test_ID", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .quotes()
                         .withId("test_ID")
                         .delete()
                         .withDataErasure(true)
-                        .createHttpRequest(), "delete", "/test_projectKey/quotes/test_ID?dataErasure=true", },
+                        .createHttpRequest(), "delete", "test_projectKey/quotes/test_ID?dataErasure=true", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .quotes()
                         .withId("test_ID")
                         .delete()
                         .withVersion(2)
-                        .createHttpRequest(), "delete", "/test_projectKey/quotes/test_ID?version=2", },
+                        .createHttpRequest(), "delete", "test_projectKey/quotes/test_ID?version=2", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .quotes()
                         .withId("test_ID")
                         .delete()
                         .withExpand("expand")
-                        .createHttpRequest(), "delete", "/test_projectKey/quotes/test_ID?expand=expand", },
+                        .createHttpRequest(), "delete", "test_projectKey/quotes/test_ID?expand=expand", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .quotes()
                         .withId("test_ID")
                         .delete()
-                        .createHttpRequest(), "delete", "/test_projectKey/quotes/test_ID", } };
+                        .createHttpRequest(), "delete", "test_projectKey/quotes/test_ID", } };
     }
 
     @DataProvider

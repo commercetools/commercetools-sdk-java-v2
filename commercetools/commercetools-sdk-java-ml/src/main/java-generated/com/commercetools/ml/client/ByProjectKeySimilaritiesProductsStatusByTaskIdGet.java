@@ -53,7 +53,7 @@ public class ByProjectKeySimilaritiesProductsStatusByTaskIdGet extends
     @Override
     protected ApiHttpRequest buildHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
-        String httpRequestPath = String.format("/%s/similarities/products/status/%s", this.projectKey, this.taskId);
+        String httpRequestPath = String.format("%s/similarities/products/status/%s", this.projectKey, this.taskId);
         if (!params.isEmpty()) {
             httpRequestPath += "?" + String.join("&", params);
         }

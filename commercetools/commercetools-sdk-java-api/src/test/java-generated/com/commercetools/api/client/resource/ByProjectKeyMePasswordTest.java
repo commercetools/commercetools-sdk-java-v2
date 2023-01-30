@@ -67,7 +67,7 @@ public class ByProjectKeyMePasswordTest {
                 .me()
                 .password()
                 .post(com.commercetools.api.models.customer.MyCustomerChangePassword.of())
-                .createHttpRequest(), "post", "/test_projectKey/me/password", } };
+                .createHttpRequest(), "post", "test_projectKey/me/password", } };
     }
 
     @DataProvider

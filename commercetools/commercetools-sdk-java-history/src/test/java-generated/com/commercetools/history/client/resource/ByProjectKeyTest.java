@@ -68,45 +68,45 @@ public class ByProjectKeyTest {
                         .get()
                         .withResourceType(com.commercetools.history.models.change_history.ChangeHistoryResourceType
                                 .findEnum("resourceType"))
-                        .createHttpRequest(), "get", "/test_projectKey?resourceType=resourceType", },
+                        .createHttpRequest(), "get", "test_projectKey?resourceType=resourceType", },
                 new Object[] { apiRoot.withProjectKeyValue("test_projectKey")
                         .get()
                         .withDateFrom("date.from")
-                        .createHttpRequest(), "get", "/test_projectKey?date.from=date.from", },
+                        .createHttpRequest(), "get", "test_projectKey?date.from=date.from", },
                 new Object[] {
                         apiRoot.withProjectKeyValue("test_projectKey").get().withDateTo("date.to").createHttpRequest(),
-                        "get", "/test_projectKey?date.to=date.to", },
+                        "get", "test_projectKey?date.to=date.to", },
                 new Object[] { apiRoot.withProjectKeyValue("test_projectKey").get().withLimit(7).createHttpRequest(),
-                        "get", "/test_projectKey?limit=7", },
+                        "get", "test_projectKey?limit=7", },
                 new Object[] { apiRoot.withProjectKeyValue("test_projectKey").get().withOffset(3).createHttpRequest(),
-                        "get", "/test_projectKey?offset=3", },
+                        "get", "test_projectKey?offset=3", },
                 new Object[] {
                         apiRoot.withProjectKeyValue("test_projectKey").get().withUserId("userId").createHttpRequest(),
-                        "get", "/test_projectKey?userId=userId", },
+                        "get", "test_projectKey?userId=userId", },
                 new Object[] {
                         apiRoot.withProjectKeyValue("test_projectKey").get().withType("type").createHttpRequest(),
-                        "get", "/test_projectKey?type=type", },
+                        "get", "test_projectKey?type=type", },
                 new Object[] { apiRoot.withProjectKeyValue("test_projectKey")
                         .get()
                         .withClientId("clientId")
-                        .createHttpRequest(), "get", "/test_projectKey?clientId=clientId", },
+                        .createHttpRequest(), "get", "test_projectKey?clientId=clientId", },
                 new Object[] { apiRoot.withProjectKeyValue("test_projectKey")
                         .get()
                         .withResourceId("resourceId")
-                        .createHttpRequest(), "get", "/test_projectKey?resourceId=resourceId", },
+                        .createHttpRequest(), "get", "test_projectKey?resourceId=resourceId", },
                 new Object[] {
                         apiRoot.withProjectKeyValue("test_projectKey").get().withSource("source").createHttpRequest(),
-                        "get", "/test_projectKey?source=source", },
+                        "get", "test_projectKey?source=source", },
                 new Object[] {
                         apiRoot.withProjectKeyValue("test_projectKey").get().withChanges("changes").createHttpRequest(),
-                        "get", "/test_projectKey?changes=changes", },
+                        "get", "test_projectKey?changes=changes", },
                 new Object[] {
                         apiRoot.withProjectKeyValue("test_projectKey").get().withStores("stores").createHttpRequest(),
-                        "get", "/test_projectKey?stores=stores", },
+                        "get", "test_projectKey?stores=stores", },
                 new Object[] { apiRoot.withProjectKeyValue("test_projectKey")
                         .get()
                         .withCustomerId("customerId")
-                        .createHttpRequest(), "get", "/test_projectKey?customerId=customerId", },
+                        .createHttpRequest(), "get", "test_projectKey?customerId=customerId", },
                 new Object[] {
                         apiRoot.withProjectKeyValue("test_projectKey")
                                 .get()
@@ -114,12 +114,12 @@ public class ByProjectKeyTest {
                                     com.commercetools.history.models.change_history.PlatformInitiatedChange
                                             .findEnum("excludePlatformInitiatedChanges"))
                                 .createHttpRequest(),
-                        "get", "/test_projectKey?excludePlatformInitiatedChanges=excludePlatformInitiatedChanges", },
+                        "get", "test_projectKey?excludePlatformInitiatedChanges=excludePlatformInitiatedChanges", },
                 new Object[] {
                         apiRoot.withProjectKeyValue("test_projectKey").get().withExpand(true).createHttpRequest(),
-                        "get", "/test_projectKey?expand=true", },
+                        "get", "test_projectKey?expand=true", },
                 new Object[] { apiRoot.withProjectKeyValue("test_projectKey").get().createHttpRequest(), "get",
-                        "/test_projectKey", } };
+                        "test_projectKey", } };
     }
 
     @DataProvider

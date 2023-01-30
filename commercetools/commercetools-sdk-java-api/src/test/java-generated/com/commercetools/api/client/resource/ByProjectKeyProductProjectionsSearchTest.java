@@ -65,15 +65,13 @@ public class ByProjectKeyProductProjectionsSearchTest {
     public static Object[][] requestWithMethodParameters() {
         return new Object[][] { new Object[] {
                 apiRoot.withProjectKey("test_projectKey").productProjections().search().post(null).createHttpRequest(),
-                "post", "/test_projectKey/product-projections/search", },
-                new Object[] {
-                        apiRoot.withProjectKey("test_projectKey")
-                                .productProjections()
-                                .search()
-                                .get()
-                                .withFuzzy(true)
-                                .createHttpRequest(),
-                        "get", "/test_projectKey/product-projections/search?fuzzy=true", },
+                "post", "test_projectKey/product-projections/search", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .productProjections()
+                        .search()
+                        .get()
+                        .withFuzzy(true)
+                        .createHttpRequest(), "get", "test_projectKey/product-projections/search?fuzzy=true", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .productProjections()
@@ -81,7 +79,7 @@ public class ByProjectKeyProductProjectionsSearchTest {
                                 .get()
                                 .withFuzzyLevel(0.110830665)
                                 .createHttpRequest(),
-                        "get", "/test_projectKey/product-projections/search?fuzzyLevel=0.110830665", },
+                        "get", "test_projectKey/product-projections/search?fuzzyLevel=0.110830665", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .productProjections()
@@ -89,7 +87,7 @@ public class ByProjectKeyProductProjectionsSearchTest {
                                 .get()
                                 .withMarkMatchingVariants(true)
                                 .createHttpRequest(),
-                        "get", "/test_projectKey/product-projections/search?markMatchingVariants=true", },
+                        "get", "test_projectKey/product-projections/search?markMatchingVariants=true", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .productProjections()
@@ -97,7 +95,7 @@ public class ByProjectKeyProductProjectionsSearchTest {
                                 .get()
                                 .withFilter("filter")
                                 .createHttpRequest(),
-                        "get", "/test_projectKey/product-projections/search?filter=filter", },
+                        "get", "test_projectKey/product-projections/search?filter=filter", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .productProjections()
@@ -105,7 +103,7 @@ public class ByProjectKeyProductProjectionsSearchTest {
                                 .get()
                                 .withFilterFacets("filter.facets")
                                 .createHttpRequest(),
-                        "get", "/test_projectKey/product-projections/search?filter.facets=filter.facets", },
+                        "get", "test_projectKey/product-projections/search?filter.facets=filter.facets", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .productProjections()
@@ -113,7 +111,7 @@ public class ByProjectKeyProductProjectionsSearchTest {
                                 .get()
                                 .withFilterQuery("filter.query")
                                 .createHttpRequest(),
-                        "get", "/test_projectKey/product-projections/search?filter.query=filter.query", },
+                        "get", "test_projectKey/product-projections/search?filter.query=filter.query", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .productProjections()
@@ -121,7 +119,7 @@ public class ByProjectKeyProductProjectionsSearchTest {
                                 .get()
                                 .withFacet("facet")
                                 .createHttpRequest(),
-                        "get", "/test_projectKey/product-projections/search?facet=facet", },
+                        "get", "test_projectKey/product-projections/search?facet=facet", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .productProjections()
@@ -129,25 +127,25 @@ public class ByProjectKeyProductProjectionsSearchTest {
                                 .get()
                                 .withText("locale", "text.locale")
                                 .createHttpRequest(),
-                        "get", "/test_projectKey/product-projections/search?text.locale=text.locale", },
+                        "get", "test_projectKey/product-projections/search?text.locale=text.locale", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .productProjections()
                         .search()
                         .get()
                         .withSort("sort")
-                        .createHttpRequest(), "get", "/test_projectKey/product-projections/search?sort=sort", },
+                        .createHttpRequest(), "get", "test_projectKey/product-projections/search?sort=sort", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .productProjections()
                         .search()
                         .get()
                         .withLimit(7)
-                        .createHttpRequest(), "get", "/test_projectKey/product-projections/search?limit=7", },
+                        .createHttpRequest(), "get", "test_projectKey/product-projections/search?limit=7", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .productProjections()
                         .search()
                         .get()
                         .withOffset(3)
-                        .createHttpRequest(), "get", "/test_projectKey/product-projections/search?offset=3", },
+                        .createHttpRequest(), "get", "test_projectKey/product-projections/search?offset=3", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .productProjections()
@@ -155,7 +153,7 @@ public class ByProjectKeyProductProjectionsSearchTest {
                                 .get()
                                 .withWithTotal(true)
                                 .createHttpRequest(),
-                        "get", "/test_projectKey/product-projections/search?withTotal=true", },
+                        "get", "test_projectKey/product-projections/search?withTotal=true", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .productProjections()
@@ -163,7 +161,7 @@ public class ByProjectKeyProductProjectionsSearchTest {
                                 .get()
                                 .withStaged(true)
                                 .createHttpRequest(),
-                        "get", "/test_projectKey/product-projections/search?staged=true", },
+                        "get", "test_projectKey/product-projections/search?staged=true", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .productProjections()
@@ -171,7 +169,7 @@ public class ByProjectKeyProductProjectionsSearchTest {
                                 .get()
                                 .withPriceCurrency("priceCurrency")
                                 .createHttpRequest(),
-                        "get", "/test_projectKey/product-projections/search?priceCurrency=priceCurrency", },
+                        "get", "test_projectKey/product-projections/search?priceCurrency=priceCurrency", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .productProjections()
@@ -179,7 +177,7 @@ public class ByProjectKeyProductProjectionsSearchTest {
                                 .get()
                                 .withPriceCountry("priceCountry")
                                 .createHttpRequest(),
-                        "get", "/test_projectKey/product-projections/search?priceCountry=priceCountry", },
+                        "get", "test_projectKey/product-projections/search?priceCountry=priceCountry", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .productProjections()
@@ -187,7 +185,7 @@ public class ByProjectKeyProductProjectionsSearchTest {
                                 .get()
                                 .withPriceCustomerGroup("priceCustomerGroup")
                                 .createHttpRequest(),
-                        "get", "/test_projectKey/product-projections/search?priceCustomerGroup=priceCustomerGroup", },
+                        "get", "test_projectKey/product-projections/search?priceCustomerGroup=priceCustomerGroup", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .productProjections()
@@ -195,7 +193,7 @@ public class ByProjectKeyProductProjectionsSearchTest {
                                 .get()
                                 .withPriceChannel("priceChannel")
                                 .createHttpRequest(),
-                        "get", "/test_projectKey/product-projections/search?priceChannel=priceChannel", },
+                        "get", "test_projectKey/product-projections/search?priceChannel=priceChannel", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .productProjections()
@@ -203,7 +201,7 @@ public class ByProjectKeyProductProjectionsSearchTest {
                                 .get()
                                 .withLocaleProjection("localeProjection")
                                 .createHttpRequest(),
-                        "get", "/test_projectKey/product-projections/search?localeProjection=localeProjection", },
+                        "get", "test_projectKey/product-projections/search?localeProjection=localeProjection", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .productProjections()
@@ -211,7 +209,7 @@ public class ByProjectKeyProductProjectionsSearchTest {
                                 .get()
                                 .withStoreProjection("storeProjection")
                                 .createHttpRequest(),
-                        "get", "/test_projectKey/product-projections/search?storeProjection=storeProjection", },
+                        "get", "test_projectKey/product-projections/search?storeProjection=storeProjection", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .productProjections()
@@ -219,12 +217,12 @@ public class ByProjectKeyProductProjectionsSearchTest {
                                 .get()
                                 .withExpand("expand")
                                 .createHttpRequest(),
-                        "get", "/test_projectKey/product-projections/search?expand=expand", },
+                        "get", "test_projectKey/product-projections/search?expand=expand", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .productProjections()
                         .search()
                         .get()
-                        .createHttpRequest(), "get", "/test_projectKey/product-projections/search", } };
+                        .createHttpRequest(), "get", "test_projectKey/product-projections/search", } };
     }
 
     @DataProvider

@@ -89,7 +89,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "typeId", defaultImpl = ReferenceImpl.class, visible = true)
 @JsonDeserialize(as = ReferenceImpl.class)
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-public interface Reference {
+public interface Reference extends ReferenceMixin {
 
     /**
      *  <p>Type of referenced resource.</p>
@@ -229,10 +229,6 @@ public interface Reference {
 
     default <T> T withReference(Function<Reference, T> helper) {
         return helper.apply(this);
-    }
-
-    public default ResourceIdentifier toResourceIdentifier() {
-        return new ResourceIdentifierImpl(this.getTypeId(), this.getId(), null);
     }
 
     public static com.fasterxml.jackson.core.type.TypeReference<Reference> typeReference() {

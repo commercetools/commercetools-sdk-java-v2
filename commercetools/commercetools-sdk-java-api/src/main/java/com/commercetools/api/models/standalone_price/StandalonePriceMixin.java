@@ -3,7 +3,6 @@ package com.commercetools.api.models.standalone_price;
 
 import com.commercetools.api.models.Referencable;
 import com.commercetools.api.models.ResourceIdentifiable;
-import com.commercetools.api.models.common.ReferenceTypeId;
 
 public interface StandalonePriceMixin extends Referencable<StandalonePrice>, ResourceIdentifiable<StandalonePrice> {
     @Override
@@ -14,9 +13,5 @@ public interface StandalonePriceMixin extends Referencable<StandalonePrice>, Res
     @Override
     public default StandalonePriceReference toReference() {
         return StandalonePriceReference.builder().id(getId()).build();
-    }
-
-    public static ReferenceTypeId referenceTypeId() {
-        return ReferenceTypeId.STANDALONE_PRICE;
     }
 }

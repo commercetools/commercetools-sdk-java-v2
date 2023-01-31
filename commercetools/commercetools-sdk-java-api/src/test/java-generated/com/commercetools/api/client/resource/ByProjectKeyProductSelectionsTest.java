@@ -68,50 +68,50 @@ public class ByProjectKeyProductSelectionsTest {
                         .productSelections()
                         .get()
                         .withExpand("expand")
-                        .createHttpRequest(), "get", "/test_projectKey/product-selections?expand=expand", },
+                        .createHttpRequest(), "get", "test_projectKey/product-selections?expand=expand", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .productSelections()
                         .get()
                         .withSort("sort")
-                        .createHttpRequest(), "get", "/test_projectKey/product-selections?sort=sort", },
+                        .createHttpRequest(), "get", "test_projectKey/product-selections?sort=sort", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .productSelections()
                         .get()
                         .withLimit(7)
-                        .createHttpRequest(), "get", "/test_projectKey/product-selections?limit=7", },
+                        .createHttpRequest(), "get", "test_projectKey/product-selections?limit=7", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .productSelections()
                         .get()
                         .withOffset(3)
-                        .createHttpRequest(), "get", "/test_projectKey/product-selections?offset=3", },
+                        .createHttpRequest(), "get", "test_projectKey/product-selections?offset=3", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .productSelections()
                         .get()
                         .withWithTotal(true)
-                        .createHttpRequest(), "get", "/test_projectKey/product-selections?withTotal=true", },
+                        .createHttpRequest(), "get", "test_projectKey/product-selections?withTotal=true", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .productSelections()
                         .get()
                         .withWhere("where")
-                        .createHttpRequest(), "get", "/test_projectKey/product-selections?where=where", },
+                        .createHttpRequest(), "get", "test_projectKey/product-selections?where=where", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .productSelections()
                                 .get()
                                 .withPredicateVar("varName", "var.varName")
                                 .createHttpRequest(),
-                        "get", "/test_projectKey/product-selections?var.varName=var.varName", },
+                        "get", "test_projectKey/product-selections?var.varName=var.varName", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey").productSelections().get().createHttpRequest(),
-                        "get", "/test_projectKey/product-selections", },
+                        "get", "test_projectKey/product-selections", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .productSelections()
                         .post(com.commercetools.api.models.product_selection.ProductSelectionDraft.of())
                         .withExpand("expand")
-                        .createHttpRequest(), "post", "/test_projectKey/product-selections?expand=expand", },
+                        .createHttpRequest(), "post", "test_projectKey/product-selections?expand=expand", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .productSelections()
                         .post(com.commercetools.api.models.product_selection.ProductSelectionDraft.of())
-                        .createHttpRequest(), "post", "/test_projectKey/product-selections", } };
+                        .createHttpRequest(), "post", "test_projectKey/product-selections", } };
     }
 
     @DataProvider

@@ -57,7 +57,7 @@ public class ByProjectKeyRecommendationsProjectCategoriesByProductIdGet extends
     @Override
     protected ApiHttpRequest buildHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
-        String httpRequestPath = String.format("/%s/recommendations/project-categories/%s", this.projectKey,
+        String httpRequestPath = String.format("%s/recommendations/project-categories/%s", this.projectKey,
             this.productId);
         if (!params.isEmpty()) {
             httpRequestPath += "?" + String.join("&", params);

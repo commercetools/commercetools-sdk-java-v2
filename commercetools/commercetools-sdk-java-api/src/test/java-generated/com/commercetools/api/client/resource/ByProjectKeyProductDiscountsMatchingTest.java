@@ -67,7 +67,7 @@ public class ByProjectKeyProductDiscountsMatchingTest {
                 .productDiscounts()
                 .matching()
                 .post(com.commercetools.api.models.product_discount.ProductDiscountMatchQuery.of())
-                .createHttpRequest(), "post", "/test_projectKey/product-discounts/matching", } };
+                .createHttpRequest(), "post", "test_projectKey/product-discounts/matching", } };
     }
 
     @DataProvider

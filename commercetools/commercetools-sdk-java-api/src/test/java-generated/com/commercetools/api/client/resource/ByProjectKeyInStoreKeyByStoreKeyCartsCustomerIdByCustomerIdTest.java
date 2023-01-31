@@ -63,15 +63,17 @@ public class ByProjectKeyInStoreKeyByStoreKeyCartsCustomerIdByCustomerIdTest {
 
     @DataProvider
     public static Object[][] requestWithMethodParameters() {
-        return new Object[][] { new Object[] {
-                apiRoot.withProjectKey("test_projectKey")
-                        .inStoreKeyWithStoreKeyValue("test_storeKey")
-                        .carts()
-                        .withCustomerId("test_customerId")
-                        .get()
-                        .withExpand("expand")
-                        .createHttpRequest(),
-                "get", "/test_projectKey/in-store/key=test_storeKey/carts/customer-id=test_customerId?expand=expand", },
+        return new Object[][] {
+                new Object[] {
+                        apiRoot.withProjectKey("test_projectKey")
+                                .inStoreKeyWithStoreKeyValue("test_storeKey")
+                                .carts()
+                                .withCustomerId("test_customerId")
+                                .get()
+                                .withExpand("expand")
+                                .createHttpRequest(),
+                        "get",
+                        "test_projectKey/in-store/key=test_storeKey/carts/customer-id=test_customerId?expand=expand", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .inStoreKeyWithStoreKeyValue("test_storeKey")
@@ -79,7 +81,7 @@ public class ByProjectKeyInStoreKeyByStoreKeyCartsCustomerIdByCustomerIdTest {
                                 .withCustomerId("test_customerId")
                                 .get()
                                 .createHttpRequest(),
-                        "get", "/test_projectKey/in-store/key=test_storeKey/carts/customer-id=test_customerId", } };
+                        "get", "test_projectKey/in-store/key=test_storeKey/carts/customer-id=test_customerId", } };
     }
 
     @DataProvider

@@ -49,7 +49,7 @@ public class ByProjectKeyOrdersSearchHead
     @Override
     protected ApiHttpRequest buildHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
-        String httpRequestPath = String.format("/%s/orders/search", this.projectKey);
+        String httpRequestPath = String.format("%s/orders/search", this.projectKey);
         if (!params.isEmpty()) {
             httpRequestPath += "?" + String.join("&", params);
         }

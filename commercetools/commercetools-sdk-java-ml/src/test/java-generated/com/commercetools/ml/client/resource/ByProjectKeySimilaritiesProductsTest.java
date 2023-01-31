@@ -67,7 +67,7 @@ public class ByProjectKeySimilaritiesProductsTest {
                 .similarities()
                 .products()
                 .post(com.commercetools.ml.models.similar_products.SimilarProductSearchRequest.of())
-                .createHttpRequest(), "post", "/test_projectKey/similarities/products", } };
+                .createHttpRequest(), "post", "test_projectKey/similarities/products", } };
     }
 
     @DataProvider

@@ -69,38 +69,38 @@ public class ByProjectKeyZonesKeyByKeyTest {
                         .withKey("test_key")
                         .get()
                         .withExpand("expand")
-                        .createHttpRequest(), "get", "/test_projectKey/zones/key=test_key?expand=expand", },
+                        .createHttpRequest(), "get", "test_projectKey/zones/key=test_key?expand=expand", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey").zones().withKey("test_key").get().createHttpRequest(),
-                        "get", "/test_projectKey/zones/key=test_key", },
+                        "get", "test_projectKey/zones/key=test_key", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .zones()
                         .withKey("test_key")
                         .post(com.commercetools.api.models.zone.ZoneUpdate.of())
                         .withExpand("expand")
-                        .createHttpRequest(), "post", "/test_projectKey/zones/key=test_key?expand=expand", },
+                        .createHttpRequest(), "post", "test_projectKey/zones/key=test_key?expand=expand", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .zones()
                         .withKey("test_key")
                         .post(com.commercetools.api.models.zone.ZoneUpdate.of())
-                        .createHttpRequest(), "post", "/test_projectKey/zones/key=test_key", },
+                        .createHttpRequest(), "post", "test_projectKey/zones/key=test_key", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .zones()
                         .withKey("test_key")
                         .delete()
                         .withVersion(2)
-                        .createHttpRequest(), "delete", "/test_projectKey/zones/key=test_key?version=2", },
+                        .createHttpRequest(), "delete", "test_projectKey/zones/key=test_key?version=2", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .zones()
                         .withKey("test_key")
                         .delete()
                         .withExpand("expand")
-                        .createHttpRequest(), "delete", "/test_projectKey/zones/key=test_key?expand=expand", },
+                        .createHttpRequest(), "delete", "test_projectKey/zones/key=test_key?expand=expand", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .zones()
                         .withKey("test_key")
                         .delete()
-                        .createHttpRequest(), "delete", "/test_projectKey/zones/key=test_key", } };
+                        .createHttpRequest(), "delete", "test_projectKey/zones/key=test_key", } };
     }
 
     @DataProvider

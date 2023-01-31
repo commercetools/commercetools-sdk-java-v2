@@ -71,7 +71,7 @@ public class ByProjectKeyProductsByIDTest {
                                 .get()
                                 .withPriceCurrency("priceCurrency")
                                 .createHttpRequest(),
-                        "get", "/test_projectKey/products/test_ID?priceCurrency=priceCurrency", },
+                        "get", "test_projectKey/products/test_ID?priceCurrency=priceCurrency", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .products()
@@ -79,7 +79,7 @@ public class ByProjectKeyProductsByIDTest {
                                 .get()
                                 .withPriceCountry("priceCountry")
                                 .createHttpRequest(),
-                        "get", "/test_projectKey/products/test_ID?priceCountry=priceCountry", },
+                        "get", "test_projectKey/products/test_ID?priceCountry=priceCountry", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .products()
@@ -87,7 +87,7 @@ public class ByProjectKeyProductsByIDTest {
                                 .get()
                                 .withPriceCustomerGroup("priceCustomerGroup")
                                 .createHttpRequest(),
-                        "get", "/test_projectKey/products/test_ID?priceCustomerGroup=priceCustomerGroup", },
+                        "get", "test_projectKey/products/test_ID?priceCustomerGroup=priceCustomerGroup", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .products()
@@ -95,7 +95,7 @@ public class ByProjectKeyProductsByIDTest {
                                 .get()
                                 .withPriceChannel("priceChannel")
                                 .createHttpRequest(),
-                        "get", "/test_projectKey/products/test_ID?priceChannel=priceChannel", },
+                        "get", "test_projectKey/products/test_ID?priceChannel=priceChannel", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .products()
@@ -103,23 +103,23 @@ public class ByProjectKeyProductsByIDTest {
                                 .get()
                                 .withLocaleProjection("localeProjection")
                                 .createHttpRequest(),
-                        "get", "/test_projectKey/products/test_ID?localeProjection=localeProjection", },
+                        "get", "test_projectKey/products/test_ID?localeProjection=localeProjection", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .products()
                         .withId("test_ID")
                         .get()
                         .withExpand("expand")
-                        .createHttpRequest(), "get", "/test_projectKey/products/test_ID?expand=expand", },
+                        .createHttpRequest(), "get", "test_projectKey/products/test_ID?expand=expand", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .products()
                         .withId("test_ID")
                         .get()
-                        .createHttpRequest(), "get", "/test_projectKey/products/test_ID", },
+                        .createHttpRequest(), "get", "test_projectKey/products/test_ID", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .products()
                         .withId("test_ID")
                         .head()
-                        .createHttpRequest(), "head", "/test_projectKey/products/test_ID", },
+                        .createHttpRequest(), "head", "test_projectKey/products/test_ID", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .products()
@@ -127,7 +127,7 @@ public class ByProjectKeyProductsByIDTest {
                                 .post(com.commercetools.api.models.product.ProductUpdate.of())
                                 .withPriceCurrency("priceCurrency")
                                 .createHttpRequest(),
-                        "post", "/test_projectKey/products/test_ID?priceCurrency=priceCurrency", },
+                        "post", "test_projectKey/products/test_ID?priceCurrency=priceCurrency", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .products()
@@ -135,7 +135,7 @@ public class ByProjectKeyProductsByIDTest {
                                 .post(com.commercetools.api.models.product.ProductUpdate.of())
                                 .withPriceCountry("priceCountry")
                                 .createHttpRequest(),
-                        "post", "/test_projectKey/products/test_ID?priceCountry=priceCountry", },
+                        "post", "test_projectKey/products/test_ID?priceCountry=priceCountry", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .products()
@@ -143,7 +143,7 @@ public class ByProjectKeyProductsByIDTest {
                                 .post(com.commercetools.api.models.product.ProductUpdate.of())
                                 .withPriceCustomerGroup("priceCustomerGroup")
                                 .createHttpRequest(),
-                        "post", "/test_projectKey/products/test_ID?priceCustomerGroup=priceCustomerGroup", },
+                        "post", "test_projectKey/products/test_ID?priceCustomerGroup=priceCustomerGroup", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .products()
@@ -151,7 +151,7 @@ public class ByProjectKeyProductsByIDTest {
                                 .post(com.commercetools.api.models.product.ProductUpdate.of())
                                 .withPriceChannel("priceChannel")
                                 .createHttpRequest(),
-                        "post", "/test_projectKey/products/test_ID?priceChannel=priceChannel", },
+                        "post", "test_projectKey/products/test_ID?priceChannel=priceChannel", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .products()
@@ -159,18 +159,18 @@ public class ByProjectKeyProductsByIDTest {
                                 .post(com.commercetools.api.models.product.ProductUpdate.of())
                                 .withLocaleProjection("localeProjection")
                                 .createHttpRequest(),
-                        "post", "/test_projectKey/products/test_ID?localeProjection=localeProjection", },
+                        "post", "test_projectKey/products/test_ID?localeProjection=localeProjection", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .products()
                         .withId("test_ID")
                         .post(com.commercetools.api.models.product.ProductUpdate.of())
                         .withExpand("expand")
-                        .createHttpRequest(), "post", "/test_projectKey/products/test_ID?expand=expand", },
+                        .createHttpRequest(), "post", "test_projectKey/products/test_ID?expand=expand", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .products()
                         .withId("test_ID")
                         .post(com.commercetools.api.models.product.ProductUpdate.of())
-                        .createHttpRequest(), "post", "/test_projectKey/products/test_ID", },
+                        .createHttpRequest(), "post", "test_projectKey/products/test_ID", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .products()
@@ -178,7 +178,7 @@ public class ByProjectKeyProductsByIDTest {
                                 .delete()
                                 .withPriceCurrency("priceCurrency")
                                 .createHttpRequest(),
-                        "delete", "/test_projectKey/products/test_ID?priceCurrency=priceCurrency", },
+                        "delete", "test_projectKey/products/test_ID?priceCurrency=priceCurrency", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .products()
@@ -186,7 +186,7 @@ public class ByProjectKeyProductsByIDTest {
                                 .delete()
                                 .withPriceCountry("priceCountry")
                                 .createHttpRequest(),
-                        "delete", "/test_projectKey/products/test_ID?priceCountry=priceCountry", },
+                        "delete", "test_projectKey/products/test_ID?priceCountry=priceCountry", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .products()
@@ -194,7 +194,7 @@ public class ByProjectKeyProductsByIDTest {
                                 .delete()
                                 .withPriceCustomerGroup("priceCustomerGroup")
                                 .createHttpRequest(),
-                        "delete", "/test_projectKey/products/test_ID?priceCustomerGroup=priceCustomerGroup", },
+                        "delete", "test_projectKey/products/test_ID?priceCustomerGroup=priceCustomerGroup", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .products()
@@ -202,7 +202,7 @@ public class ByProjectKeyProductsByIDTest {
                                 .delete()
                                 .withPriceChannel("priceChannel")
                                 .createHttpRequest(),
-                        "delete", "/test_projectKey/products/test_ID?priceChannel=priceChannel", },
+                        "delete", "test_projectKey/products/test_ID?priceChannel=priceChannel", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .products()
@@ -210,24 +210,24 @@ public class ByProjectKeyProductsByIDTest {
                                 .delete()
                                 .withLocaleProjection("localeProjection")
                                 .createHttpRequest(),
-                        "delete", "/test_projectKey/products/test_ID?localeProjection=localeProjection", },
+                        "delete", "test_projectKey/products/test_ID?localeProjection=localeProjection", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .products()
                         .withId("test_ID")
                         .delete()
                         .withVersion(2)
-                        .createHttpRequest(), "delete", "/test_projectKey/products/test_ID?version=2", },
+                        .createHttpRequest(), "delete", "test_projectKey/products/test_ID?version=2", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .products()
                         .withId("test_ID")
                         .delete()
                         .withExpand("expand")
-                        .createHttpRequest(), "delete", "/test_projectKey/products/test_ID?expand=expand", },
+                        .createHttpRequest(), "delete", "test_projectKey/products/test_ID?expand=expand", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .products()
                         .withId("test_ID")
                         .delete()
-                        .createHttpRequest(), "delete", "/test_projectKey/products/test_ID", } };
+                        .createHttpRequest(), "delete", "test_projectKey/products/test_ID", } };
     }
 
     @DataProvider

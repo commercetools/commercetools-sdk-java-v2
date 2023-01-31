@@ -79,7 +79,7 @@ public class CompatibilityTest {
                     customerByIdGet -> customerByIdGet.withExpansionPaths(CustomerExpansionModel::customerGroup));
 
         String query = request.createHttpRequest().getUri().getQuery();
-        Assertions.assertThat(request.createHttpRequest().getUri().getPath()).isEqualTo("/test/customers/abc");
+        Assertions.assertThat(request.createHttpRequest().getUri().getPath()).isEqualTo("test/customers/abc");
         Assertions.assertThat(query).isEqualTo("expand=customerGroup");
     }
 
@@ -92,7 +92,7 @@ public class CompatibilityTest {
                     customerByIdGet -> customerByIdGet.withExpansionPaths(CustomerExpansionModel::customerGroup));
 
         String query = request.createHttpRequest().getUri().getQuery();
-        Assertions.assertThat(request.createHttpRequest().getUri().getPath()).isEqualTo("/test/customers/key=abc");
+        Assertions.assertThat(request.createHttpRequest().getUri().getPath()).isEqualTo("test/customers/key=abc");
         Assertions.assertThat(query).isEqualTo("expand=customerGroup");
     }
 
@@ -105,7 +105,7 @@ public class CompatibilityTest {
                     customerByIdGet -> customerByIdGet.withExpansionPaths(CustomerExpansionModel::customerGroup));
 
         String query = request.createHttpRequest().getUri().getQuery();
-        Assertions.assertThat(request.createHttpRequest().getUri().getPath()).isEqualTo("/test/customers/abc");
+        Assertions.assertThat(request.createHttpRequest().getUri().getPath()).isEqualTo("test/customers/abc");
         Assertions.assertThat(query).isEqualTo("expand=customerGroup");
     }
 }

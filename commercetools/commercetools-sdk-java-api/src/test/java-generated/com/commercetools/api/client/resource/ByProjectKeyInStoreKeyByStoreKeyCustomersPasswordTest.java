@@ -70,7 +70,7 @@ public class ByProjectKeyInStoreKeyByStoreKeyCustomersPasswordTest {
                         .password()
                         .post(com.commercetools.api.models.customer.CustomerChangePassword.of())
                         .createHttpRequest(),
-                "post", "/test_projectKey/in-store/key=test_storeKey/customers/password", } };
+                "post", "test_projectKey/in-store/key=test_storeKey/customers/password", } };
     }
 
     @DataProvider

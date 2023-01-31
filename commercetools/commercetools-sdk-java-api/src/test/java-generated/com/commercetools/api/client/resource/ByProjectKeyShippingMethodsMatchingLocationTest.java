@@ -71,7 +71,7 @@ public class ByProjectKeyShippingMethodsMatchingLocationTest {
                                 .get()
                                 .withCountry("country")
                                 .createHttpRequest(),
-                        "get", "/test_projectKey/shipping-methods/matching-location?country=country", },
+                        "get", "test_projectKey/shipping-methods/matching-location?country=country", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .shippingMethods()
@@ -79,7 +79,7 @@ public class ByProjectKeyShippingMethodsMatchingLocationTest {
                                 .get()
                                 .withState("state")
                                 .createHttpRequest(),
-                        "get", "/test_projectKey/shipping-methods/matching-location?state=state", },
+                        "get", "test_projectKey/shipping-methods/matching-location?state=state", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .shippingMethods()
@@ -87,7 +87,7 @@ public class ByProjectKeyShippingMethodsMatchingLocationTest {
                                 .get()
                                 .withCurrency("currency")
                                 .createHttpRequest(),
-                        "get", "/test_projectKey/shipping-methods/matching-location?currency=currency", },
+                        "get", "test_projectKey/shipping-methods/matching-location?currency=currency", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .shippingMethods()
@@ -95,7 +95,7 @@ public class ByProjectKeyShippingMethodsMatchingLocationTest {
                                 .get()
                                 .withExpand("expand")
                                 .createHttpRequest(),
-                        "get", "/test_projectKey/shipping-methods/matching-location?expand=expand", },
+                        "get", "test_projectKey/shipping-methods/matching-location?expand=expand", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .shippingMethods()
@@ -103,12 +103,12 @@ public class ByProjectKeyShippingMethodsMatchingLocationTest {
                                 .get()
                                 .withSort("sort")
                                 .createHttpRequest(),
-                        "get", "/test_projectKey/shipping-methods/matching-location?sort=sort", },
+                        "get", "test_projectKey/shipping-methods/matching-location?sort=sort", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .shippingMethods()
                         .matchingLocation()
                         .get()
-                        .createHttpRequest(), "get", "/test_projectKey/shipping-methods/matching-location", } };
+                        .createHttpRequest(), "get", "test_projectKey/shipping-methods/matching-location", } };
     }
 
     @DataProvider

@@ -69,38 +69,38 @@ public class ByProjectKeyStoresByIDTest {
                         .withId("test_ID")
                         .get()
                         .withExpand("expand")
-                        .createHttpRequest(), "get", "/test_projectKey/stores/test_ID?expand=expand", },
+                        .createHttpRequest(), "get", "test_projectKey/stores/test_ID?expand=expand", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey").stores().withId("test_ID").get().createHttpRequest(),
-                        "get", "/test_projectKey/stores/test_ID", },
+                        "get", "test_projectKey/stores/test_ID", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .stores()
                         .withId("test_ID")
                         .post(com.commercetools.api.models.store.StoreUpdate.of())
                         .withExpand("expand")
-                        .createHttpRequest(), "post", "/test_projectKey/stores/test_ID?expand=expand", },
+                        .createHttpRequest(), "post", "test_projectKey/stores/test_ID?expand=expand", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .stores()
                         .withId("test_ID")
                         .post(com.commercetools.api.models.store.StoreUpdate.of())
-                        .createHttpRequest(), "post", "/test_projectKey/stores/test_ID", },
+                        .createHttpRequest(), "post", "test_projectKey/stores/test_ID", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .stores()
                         .withId("test_ID")
                         .delete()
                         .withVersion(2)
-                        .createHttpRequest(), "delete", "/test_projectKey/stores/test_ID?version=2", },
+                        .createHttpRequest(), "delete", "test_projectKey/stores/test_ID?version=2", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .stores()
                         .withId("test_ID")
                         .delete()
                         .withExpand("expand")
-                        .createHttpRequest(), "delete", "/test_projectKey/stores/test_ID?expand=expand", },
+                        .createHttpRequest(), "delete", "test_projectKey/stores/test_ID?expand=expand", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .stores()
                         .withId("test_ID")
                         .delete()
-                        .createHttpRequest(), "delete", "/test_projectKey/stores/test_ID", } };
+                        .createHttpRequest(), "delete", "test_projectKey/stores/test_ID", } };
     }
 
     @DataProvider

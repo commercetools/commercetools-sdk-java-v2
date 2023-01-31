@@ -70,7 +70,7 @@ public class ByProjectKeyInStoreKeyByStoreKeyMeEmailConfirmTest {
                         .emailConfirm()
                         .post(com.commercetools.api.models.customer.MyCustomerEmailVerify.of())
                         .createHttpRequest(),
-                "post", "/test_projectKey/in-store/key=test_storeKey/me/email/confirm", } };
+                "post", "test_projectKey/in-store/key=test_storeKey/me/email/confirm", } };
     }
 
     @DataProvider

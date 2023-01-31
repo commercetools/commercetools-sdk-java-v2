@@ -65,44 +65,44 @@ public class ByProjectKeyInventoryTest {
     public static Object[][] requestWithMethodParameters() {
         return new Object[][] { new Object[] {
                 apiRoot.withProjectKey("test_projectKey").inventory().get().withExpand("expand").createHttpRequest(),
-                "get", "/test_projectKey/inventory?expand=expand", },
+                "get", "test_projectKey/inventory?expand=expand", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .inventory()
                         .get()
                         .withSort("sort")
-                        .createHttpRequest(), "get", "/test_projectKey/inventory?sort=sort", },
+                        .createHttpRequest(), "get", "test_projectKey/inventory?sort=sort", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey").inventory().get().withLimit(7).createHttpRequest(),
-                        "get", "/test_projectKey/inventory?limit=7", },
+                        "get", "test_projectKey/inventory?limit=7", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey").inventory().get().withOffset(3).createHttpRequest(),
-                        "get", "/test_projectKey/inventory?offset=3", },
+                        "get", "test_projectKey/inventory?offset=3", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .inventory()
                         .get()
                         .withWithTotal(true)
-                        .createHttpRequest(), "get", "/test_projectKey/inventory?withTotal=true", },
+                        .createHttpRequest(), "get", "test_projectKey/inventory?withTotal=true", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .inventory()
                         .get()
                         .withWhere("where")
-                        .createHttpRequest(), "get", "/test_projectKey/inventory?where=where", },
+                        .createHttpRequest(), "get", "test_projectKey/inventory?where=where", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .inventory()
                         .get()
                         .withPredicateVar("varName", "var.varName")
-                        .createHttpRequest(), "get", "/test_projectKey/inventory?var.varName=var.varName", },
+                        .createHttpRequest(), "get", "test_projectKey/inventory?var.varName=var.varName", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey").inventory().get().createHttpRequest(), "get",
-                        "/test_projectKey/inventory", },
+                        "test_projectKey/inventory", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .inventory()
                         .post(com.commercetools.api.models.inventory.InventoryEntryDraft.of())
                         .withExpand("expand")
-                        .createHttpRequest(), "post", "/test_projectKey/inventory?expand=expand", },
+                        .createHttpRequest(), "post", "test_projectKey/inventory?expand=expand", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .inventory()
                         .post(com.commercetools.api.models.inventory.InventoryEntryDraft.of())
-                        .createHttpRequest(), "post", "/test_projectKey/inventory", } };
+                        .createHttpRequest(), "post", "test_projectKey/inventory", } };
     }
 
     @DataProvider

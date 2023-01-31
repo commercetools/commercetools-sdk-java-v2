@@ -72,7 +72,7 @@ public class ByProjectKeyProductVariantsImportContainersByImportContainerKeyTest
                                 .post(
                                     com.commercetools.importapi.models.importrequests.ProductVariantImportRequest.of())
                                 .createHttpRequest(),
-                        "post", "/test_projectKey/product-variants/import-containers/test_importContainerKey", } };
+                        "post", "test_projectKey/product-variants/import-containers/test_importContainerKey", } };
     }
 
     @DataProvider

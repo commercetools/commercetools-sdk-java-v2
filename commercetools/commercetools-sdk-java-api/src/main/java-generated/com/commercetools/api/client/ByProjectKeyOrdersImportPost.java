@@ -53,7 +53,7 @@ public class ByProjectKeyOrdersImportPost extends
     @Override
     protected ApiHttpRequest buildHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
-        String httpRequestPath = String.format("/%s/orders/import", this.projectKey);
+        String httpRequestPath = String.format("%s/orders/import", this.projectKey);
         if (!params.isEmpty()) {
             httpRequestPath += "?" + String.join("&", params);
         }

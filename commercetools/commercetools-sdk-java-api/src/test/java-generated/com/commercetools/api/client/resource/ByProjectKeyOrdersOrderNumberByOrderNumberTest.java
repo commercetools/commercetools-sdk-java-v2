@@ -71,12 +71,12 @@ public class ByProjectKeyOrdersOrderNumberByOrderNumberTest {
                                 .get()
                                 .withExpand("expand")
                                 .createHttpRequest(),
-                        "get", "/test_projectKey/orders/order-number=test_orderNumber?expand=expand", },
+                        "get", "test_projectKey/orders/order-number=test_orderNumber?expand=expand", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .orders()
                         .withOrderNumber("test_orderNumber")
                         .get()
-                        .createHttpRequest(), "get", "/test_projectKey/orders/order-number=test_orderNumber", },
+                        .createHttpRequest(), "get", "test_projectKey/orders/order-number=test_orderNumber", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .orders()
@@ -84,14 +84,12 @@ public class ByProjectKeyOrdersOrderNumberByOrderNumberTest {
                                 .post(com.commercetools.api.models.order.OrderUpdate.of())
                                 .withExpand("expand")
                                 .createHttpRequest(),
-                        "post", "/test_projectKey/orders/order-number=test_orderNumber?expand=expand", },
-                new Object[] {
-                        apiRoot.withProjectKey("test_projectKey")
-                                .orders()
-                                .withOrderNumber("test_orderNumber")
-                                .post(com.commercetools.api.models.order.OrderUpdate.of())
-                                .createHttpRequest(),
-                        "post", "/test_projectKey/orders/order-number=test_orderNumber", },
+                        "post", "test_projectKey/orders/order-number=test_orderNumber?expand=expand", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .orders()
+                        .withOrderNumber("test_orderNumber")
+                        .post(com.commercetools.api.models.order.OrderUpdate.of())
+                        .createHttpRequest(), "post", "test_projectKey/orders/order-number=test_orderNumber", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .orders()
@@ -99,7 +97,7 @@ public class ByProjectKeyOrdersOrderNumberByOrderNumberTest {
                                 .delete()
                                 .withDataErasure(true)
                                 .createHttpRequest(),
-                        "delete", "/test_projectKey/orders/order-number=test_orderNumber?dataErasure=true", },
+                        "delete", "test_projectKey/orders/order-number=test_orderNumber?dataErasure=true", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .orders()
@@ -107,7 +105,7 @@ public class ByProjectKeyOrdersOrderNumberByOrderNumberTest {
                                 .delete()
                                 .withVersion(2)
                                 .createHttpRequest(),
-                        "delete", "/test_projectKey/orders/order-number=test_orderNumber?version=2", },
+                        "delete", "test_projectKey/orders/order-number=test_orderNumber?version=2", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .orders()
@@ -115,14 +113,14 @@ public class ByProjectKeyOrdersOrderNumberByOrderNumberTest {
                                 .delete()
                                 .withExpand("expand")
                                 .createHttpRequest(),
-                        "delete", "/test_projectKey/orders/order-number=test_orderNumber?expand=expand", },
+                        "delete", "test_projectKey/orders/order-number=test_orderNumber?expand=expand", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .orders()
                                 .withOrderNumber("test_orderNumber")
                                 .delete()
                                 .createHttpRequest(),
-                        "delete", "/test_projectKey/orders/order-number=test_orderNumber", } };
+                        "delete", "test_projectKey/orders/order-number=test_orderNumber", } };
     }
 
     @DataProvider

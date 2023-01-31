@@ -71,12 +71,12 @@ public class ByProjectKeyShoppingListsKeyByKeyTest {
                                 .get()
                                 .withExpand("expand")
                                 .createHttpRequest(),
-                        "get", "/test_projectKey/shopping-lists/key=test_key?expand=expand", },
+                        "get", "test_projectKey/shopping-lists/key=test_key?expand=expand", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .shoppingLists()
                         .withKey("test_key")
                         .get()
-                        .createHttpRequest(), "get", "/test_projectKey/shopping-lists/key=test_key", },
+                        .createHttpRequest(), "get", "test_projectKey/shopping-lists/key=test_key", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .shoppingLists()
@@ -84,12 +84,12 @@ public class ByProjectKeyShoppingListsKeyByKeyTest {
                                 .post(com.commercetools.api.models.shopping_list.ShoppingListUpdate.of())
                                 .withExpand("expand")
                                 .createHttpRequest(),
-                        "post", "/test_projectKey/shopping-lists/key=test_key?expand=expand", },
+                        "post", "test_projectKey/shopping-lists/key=test_key?expand=expand", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .shoppingLists()
                         .withKey("test_key")
                         .post(com.commercetools.api.models.shopping_list.ShoppingListUpdate.of())
-                        .createHttpRequest(), "post", "/test_projectKey/shopping-lists/key=test_key", },
+                        .createHttpRequest(), "post", "test_projectKey/shopping-lists/key=test_key", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .shoppingLists()
@@ -97,7 +97,7 @@ public class ByProjectKeyShoppingListsKeyByKeyTest {
                                 .delete()
                                 .withExpand("expand")
                                 .createHttpRequest(),
-                        "delete", "/test_projectKey/shopping-lists/key=test_key?expand=expand", },
+                        "delete", "test_projectKey/shopping-lists/key=test_key?expand=expand", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .shoppingLists()
@@ -105,7 +105,7 @@ public class ByProjectKeyShoppingListsKeyByKeyTest {
                                 .delete()
                                 .withDataErasure(true)
                                 .createHttpRequest(),
-                        "delete", "/test_projectKey/shopping-lists/key=test_key?dataErasure=true", },
+                        "delete", "test_projectKey/shopping-lists/key=test_key?dataErasure=true", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .shoppingLists()
@@ -113,12 +113,12 @@ public class ByProjectKeyShoppingListsKeyByKeyTest {
                                 .delete()
                                 .withVersion(2)
                                 .createHttpRequest(),
-                        "delete", "/test_projectKey/shopping-lists/key=test_key?version=2", },
+                        "delete", "test_projectKey/shopping-lists/key=test_key?version=2", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .shoppingLists()
                         .withKey("test_key")
                         .delete()
-                        .createHttpRequest(), "delete", "/test_projectKey/shopping-lists/key=test_key", } };
+                        .createHttpRequest(), "delete", "test_projectKey/shopping-lists/key=test_key", } };
     }
 
     @DataProvider

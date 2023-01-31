@@ -65,39 +65,39 @@ public class ByProjectKeyMeQuotesTest {
     public static Object[][] requestWithMethodParameters() {
         return new Object[][] { new Object[] {
                 apiRoot.withProjectKey("test_projectKey").me().quotes().get().withExpand("expand").createHttpRequest(),
-                "get", "/test_projectKey/me/quotes?expand=expand", },
+                "get", "test_projectKey/me/quotes?expand=expand", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .me()
                         .quotes()
                         .get()
                         .withSort("sort")
-                        .createHttpRequest(), "get", "/test_projectKey/me/quotes?sort=sort", },
+                        .createHttpRequest(), "get", "test_projectKey/me/quotes?sort=sort", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey").me().quotes().get().withLimit(7).createHttpRequest(),
-                        "get", "/test_projectKey/me/quotes?limit=7", },
+                        "get", "test_projectKey/me/quotes?limit=7", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey").me().quotes().get().withOffset(3).createHttpRequest(),
-                        "get", "/test_projectKey/me/quotes?offset=3", },
+                        "get", "test_projectKey/me/quotes?offset=3", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .me()
                         .quotes()
                         .get()
                         .withWithTotal(true)
-                        .createHttpRequest(), "get", "/test_projectKey/me/quotes?withTotal=true", },
+                        .createHttpRequest(), "get", "test_projectKey/me/quotes?withTotal=true", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .me()
                         .quotes()
                         .get()
                         .withWhere("where")
-                        .createHttpRequest(), "get", "/test_projectKey/me/quotes?where=where", },
+                        .createHttpRequest(), "get", "test_projectKey/me/quotes?where=where", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .me()
                         .quotes()
                         .get()
                         .withPredicateVar("varName", "var.varName")
-                        .createHttpRequest(), "get", "/test_projectKey/me/quotes?var.varName=var.varName", },
+                        .createHttpRequest(), "get", "test_projectKey/me/quotes?var.varName=var.varName", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey").me().quotes().get().createHttpRequest(), "get",
-                        "/test_projectKey/me/quotes", } };
+                        "test_projectKey/me/quotes", } };
     }
 
     @DataProvider

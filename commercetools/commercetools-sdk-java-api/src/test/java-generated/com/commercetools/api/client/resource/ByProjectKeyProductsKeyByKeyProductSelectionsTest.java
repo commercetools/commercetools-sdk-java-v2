@@ -72,7 +72,7 @@ public class ByProjectKeyProductsKeyByKeyProductSelectionsTest {
                                 .get()
                                 .withExpand("expand")
                                 .createHttpRequest(),
-                        "get", "/test_projectKey/products/key=test_key/product-selections?expand=expand", },
+                        "get", "test_projectKey/products/key=test_key/product-selections?expand=expand", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .products()
@@ -81,7 +81,7 @@ public class ByProjectKeyProductsKeyByKeyProductSelectionsTest {
                                 .get()
                                 .withSort("sort")
                                 .createHttpRequest(),
-                        "get", "/test_projectKey/products/key=test_key/product-selections?sort=sort", },
+                        "get", "test_projectKey/products/key=test_key/product-selections?sort=sort", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .products()
@@ -90,7 +90,7 @@ public class ByProjectKeyProductsKeyByKeyProductSelectionsTest {
                                 .get()
                                 .withLimit(7)
                                 .createHttpRequest(),
-                        "get", "/test_projectKey/products/key=test_key/product-selections?limit=7", },
+                        "get", "test_projectKey/products/key=test_key/product-selections?limit=7", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .products()
@@ -99,7 +99,7 @@ public class ByProjectKeyProductsKeyByKeyProductSelectionsTest {
                                 .get()
                                 .withOffset(3)
                                 .createHttpRequest(),
-                        "get", "/test_projectKey/products/key=test_key/product-selections?offset=3", },
+                        "get", "test_projectKey/products/key=test_key/product-selections?offset=3", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .products()
@@ -108,7 +108,7 @@ public class ByProjectKeyProductsKeyByKeyProductSelectionsTest {
                                 .get()
                                 .withWithTotal(true)
                                 .createHttpRequest(),
-                        "get", "/test_projectKey/products/key=test_key/product-selections?withTotal=true", },
+                        "get", "test_projectKey/products/key=test_key/product-selections?withTotal=true", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .products()
@@ -117,7 +117,7 @@ public class ByProjectKeyProductsKeyByKeyProductSelectionsTest {
                                 .get()
                                 .withWhere("where")
                                 .createHttpRequest(),
-                        "get", "/test_projectKey/products/key=test_key/product-selections?where=where", },
+                        "get", "test_projectKey/products/key=test_key/product-selections?where=where", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .products()
@@ -126,7 +126,7 @@ public class ByProjectKeyProductsKeyByKeyProductSelectionsTest {
                                 .get()
                                 .withPredicateVar("varName", "var.varName")
                                 .createHttpRequest(),
-                        "get", "/test_projectKey/products/key=test_key/product-selections?var.varName=var.varName", },
+                        "get", "test_projectKey/products/key=test_key/product-selections?var.varName=var.varName", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .products()
@@ -134,7 +134,7 @@ public class ByProjectKeyProductsKeyByKeyProductSelectionsTest {
                                 .productSelections()
                                 .get()
                                 .createHttpRequest(),
-                        "get", "/test_projectKey/products/key=test_key/product-selections", } };
+                        "get", "test_projectKey/products/key=test_key/product-selections", } };
     }
 
     @DataProvider

@@ -72,7 +72,7 @@ public class ByProjectKeyRecommendationsProjectCategoriesByProductIdTest {
                                 .get()
                                 .withLimit(7)
                                 .createHttpRequest(),
-                        "get", "/test_projectKey/recommendations/project-categories/test_productId?limit=7", },
+                        "get", "test_projectKey/recommendations/project-categories/test_productId?limit=7", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .recommendations()
@@ -81,7 +81,7 @@ public class ByProjectKeyRecommendationsProjectCategoriesByProductIdTest {
                                 .get()
                                 .withOffset(3)
                                 .createHttpRequest(),
-                        "get", "/test_projectKey/recommendations/project-categories/test_productId?offset=3", },
+                        "get", "test_projectKey/recommendations/project-categories/test_productId?offset=3", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .recommendations()
@@ -90,7 +90,7 @@ public class ByProjectKeyRecommendationsProjectCategoriesByProductIdTest {
                                 .get()
                                 .withStaged(true)
                                 .createHttpRequest(),
-                        "get", "/test_projectKey/recommendations/project-categories/test_productId?staged=true", },
+                        "get", "test_projectKey/recommendations/project-categories/test_productId?staged=true", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .recommendations()
@@ -100,7 +100,7 @@ public class ByProjectKeyRecommendationsProjectCategoriesByProductIdTest {
                                 .withConfidenceMin(0.7340351)
                                 .createHttpRequest(),
                         "get",
-                        "/test_projectKey/recommendations/project-categories/test_productId?confidenceMin=0.7340351", },
+                        "test_projectKey/recommendations/project-categories/test_productId?confidenceMin=0.7340351", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .recommendations()
@@ -110,7 +110,7 @@ public class ByProjectKeyRecommendationsProjectCategoriesByProductIdTest {
                                 .withConfidenceMax(0.30089796)
                                 .createHttpRequest(),
                         "get",
-                        "/test_projectKey/recommendations/project-categories/test_productId?confidenceMax=0.30089796", },
+                        "test_projectKey/recommendations/project-categories/test_productId?confidenceMax=0.30089796", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .recommendations()
@@ -118,7 +118,7 @@ public class ByProjectKeyRecommendationsProjectCategoriesByProductIdTest {
                                 .withProductId("test_productId")
                                 .get()
                                 .createHttpRequest(),
-                        "get", "/test_projectKey/recommendations/project-categories/test_productId", } };
+                        "get", "test_projectKey/recommendations/project-categories/test_productId", } };
     }
 
     @DataProvider

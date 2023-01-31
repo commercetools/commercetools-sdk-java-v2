@@ -68,50 +68,50 @@ public class ByProjectKeyStandalonePricesTest {
                         .standalonePrices()
                         .get()
                         .withExpand("expand")
-                        .createHttpRequest(), "get", "/test_projectKey/standalone-prices?expand=expand", },
+                        .createHttpRequest(), "get", "test_projectKey/standalone-prices?expand=expand", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .standalonePrices()
                         .get()
                         .withSort("sort")
-                        .createHttpRequest(), "get", "/test_projectKey/standalone-prices?sort=sort", },
+                        .createHttpRequest(), "get", "test_projectKey/standalone-prices?sort=sort", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .standalonePrices()
                         .get()
                         .withLimit(7)
-                        .createHttpRequest(), "get", "/test_projectKey/standalone-prices?limit=7", },
+                        .createHttpRequest(), "get", "test_projectKey/standalone-prices?limit=7", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .standalonePrices()
                         .get()
                         .withOffset(3)
-                        .createHttpRequest(), "get", "/test_projectKey/standalone-prices?offset=3", },
+                        .createHttpRequest(), "get", "test_projectKey/standalone-prices?offset=3", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .standalonePrices()
                         .get()
                         .withWithTotal(true)
-                        .createHttpRequest(), "get", "/test_projectKey/standalone-prices?withTotal=true", },
+                        .createHttpRequest(), "get", "test_projectKey/standalone-prices?withTotal=true", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .standalonePrices()
                         .get()
                         .withWhere("where")
-                        .createHttpRequest(), "get", "/test_projectKey/standalone-prices?where=where", },
+                        .createHttpRequest(), "get", "test_projectKey/standalone-prices?where=where", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .standalonePrices()
                                 .get()
                                 .withPredicateVar("varName", "var.varName")
                                 .createHttpRequest(),
-                        "get", "/test_projectKey/standalone-prices?var.varName=var.varName", },
+                        "get", "test_projectKey/standalone-prices?var.varName=var.varName", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey").standalonePrices().get().createHttpRequest(),
-                        "get", "/test_projectKey/standalone-prices", },
+                        "get", "test_projectKey/standalone-prices", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .standalonePrices()
                         .post(com.commercetools.api.models.standalone_price.StandalonePriceDraft.of())
                         .withExpand("expand")
-                        .createHttpRequest(), "post", "/test_projectKey/standalone-prices?expand=expand", },
+                        .createHttpRequest(), "post", "test_projectKey/standalone-prices?expand=expand", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .standalonePrices()
                         .post(com.commercetools.api.models.standalone_price.StandalonePriceDraft.of())
-                        .createHttpRequest(), "post", "/test_projectKey/standalone-prices", } };
+                        .createHttpRequest(), "post", "test_projectKey/standalone-prices", } };
     }
 
     @DataProvider

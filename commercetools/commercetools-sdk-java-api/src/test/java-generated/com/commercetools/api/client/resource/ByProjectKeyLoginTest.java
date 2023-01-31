@@ -66,7 +66,7 @@ public class ByProjectKeyLoginTest {
         return new Object[][] { new Object[] { apiRoot.withProjectKey("test_projectKey")
                 .login()
                 .post(com.commercetools.api.models.customer.CustomerSignin.of())
-                .createHttpRequest(), "post", "/test_projectKey/login", } };
+                .createHttpRequest(), "post", "test_projectKey/login", } };
     }
 
     @DataProvider

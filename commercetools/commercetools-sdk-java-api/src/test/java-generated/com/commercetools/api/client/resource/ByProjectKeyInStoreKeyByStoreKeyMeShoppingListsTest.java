@@ -72,7 +72,7 @@ public class ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsTest {
                                 .get()
                                 .withExpand("expand")
                                 .createHttpRequest(),
-                        "get", "/test_projectKey/in-store/key=test_storeKey/me/shopping-lists?expand=expand", },
+                        "get", "test_projectKey/in-store/key=test_storeKey/me/shopping-lists?expand=expand", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .inStoreKeyWithStoreKeyValue("test_storeKey")
@@ -81,7 +81,7 @@ public class ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsTest {
                                 .get()
                                 .withSort("sort")
                                 .createHttpRequest(),
-                        "get", "/test_projectKey/in-store/key=test_storeKey/me/shopping-lists?sort=sort", },
+                        "get", "test_projectKey/in-store/key=test_storeKey/me/shopping-lists?sort=sort", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .inStoreKeyWithStoreKeyValue("test_storeKey")
@@ -90,7 +90,7 @@ public class ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsTest {
                                 .get()
                                 .withLimit(7)
                                 .createHttpRequest(),
-                        "get", "/test_projectKey/in-store/key=test_storeKey/me/shopping-lists?limit=7", },
+                        "get", "test_projectKey/in-store/key=test_storeKey/me/shopping-lists?limit=7", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .inStoreKeyWithStoreKeyValue("test_storeKey")
@@ -99,7 +99,7 @@ public class ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsTest {
                                 .get()
                                 .withOffset(3)
                                 .createHttpRequest(),
-                        "get", "/test_projectKey/in-store/key=test_storeKey/me/shopping-lists?offset=3", },
+                        "get", "test_projectKey/in-store/key=test_storeKey/me/shopping-lists?offset=3", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .inStoreKeyWithStoreKeyValue("test_storeKey")
@@ -108,7 +108,7 @@ public class ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsTest {
                                 .get()
                                 .withWithTotal(true)
                                 .createHttpRequest(),
-                        "get", "/test_projectKey/in-store/key=test_storeKey/me/shopping-lists?withTotal=true", },
+                        "get", "test_projectKey/in-store/key=test_storeKey/me/shopping-lists?withTotal=true", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .inStoreKeyWithStoreKeyValue("test_storeKey")
@@ -117,7 +117,7 @@ public class ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsTest {
                                 .get()
                                 .withWhere("where")
                                 .createHttpRequest(),
-                        "get", "/test_projectKey/in-store/key=test_storeKey/me/shopping-lists?where=where", },
+                        "get", "test_projectKey/in-store/key=test_storeKey/me/shopping-lists?where=where", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .inStoreKeyWithStoreKeyValue("test_storeKey")
@@ -127,7 +127,7 @@ public class ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsTest {
                                 .withPredicateVar("varName", "var.varName")
                                 .createHttpRequest(),
                         "get",
-                        "/test_projectKey/in-store/key=test_storeKey/me/shopping-lists?var.varName=var.varName", },
+                        "test_projectKey/in-store/key=test_storeKey/me/shopping-lists?var.varName=var.varName", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .inStoreKeyWithStoreKeyValue("test_storeKey")
@@ -135,7 +135,7 @@ public class ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsTest {
                                 .shoppingLists()
                                 .get()
                                 .createHttpRequest(),
-                        "get", "/test_projectKey/in-store/key=test_storeKey/me/shopping-lists", },
+                        "get", "test_projectKey/in-store/key=test_storeKey/me/shopping-lists", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .inStoreKeyWithStoreKeyValue("test_storeKey")
@@ -144,7 +144,7 @@ public class ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsTest {
                                 .post(com.commercetools.api.models.me.MyShoppingListDraft.of())
                                 .withExpand("expand")
                                 .createHttpRequest(),
-                        "post", "/test_projectKey/in-store/key=test_storeKey/me/shopping-lists?expand=expand", },
+                        "post", "test_projectKey/in-store/key=test_storeKey/me/shopping-lists?expand=expand", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .inStoreKeyWithStoreKeyValue("test_storeKey")
@@ -152,7 +152,7 @@ public class ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsTest {
                                 .shoppingLists()
                                 .post(com.commercetools.api.models.me.MyShoppingListDraft.of())
                                 .createHttpRequest(),
-                        "post", "/test_projectKey/in-store/key=test_storeKey/me/shopping-lists", } };
+                        "post", "test_projectKey/in-store/key=test_storeKey/me/shopping-lists", } };
     }
 
     @DataProvider

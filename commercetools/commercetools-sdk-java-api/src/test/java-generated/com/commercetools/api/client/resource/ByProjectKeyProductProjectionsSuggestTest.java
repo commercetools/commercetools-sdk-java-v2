@@ -71,7 +71,7 @@ public class ByProjectKeyProductProjectionsSuggestTest {
                                 .get()
                                 .withFuzzy(true)
                                 .createHttpRequest(),
-                        "get", "/test_projectKey/product-projections/suggest?fuzzy=true", },
+                        "get", "test_projectKey/product-projections/suggest?fuzzy=true", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .productProjections()
@@ -80,27 +80,25 @@ public class ByProjectKeyProductProjectionsSuggestTest {
                                 .withSearchKeywords("locale", "searchKeywords.locale")
                                 .createHttpRequest(),
                         "get",
-                        "/test_projectKey/product-projections/suggest?searchKeywords.locale=searchKeywords.locale", },
-                new Object[] {
-                        apiRoot.withProjectKey("test_projectKey")
-                                .productProjections()
-                                .suggest()
-                                .get()
-                                .withSort("sort")
-                                .createHttpRequest(),
-                        "get", "/test_projectKey/product-projections/suggest?sort=sort", },
+                        "test_projectKey/product-projections/suggest?searchKeywords.locale=searchKeywords.locale", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .productProjections()
+                        .suggest()
+                        .get()
+                        .withSort("sort")
+                        .createHttpRequest(), "get", "test_projectKey/product-projections/suggest?sort=sort", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .productProjections()
                         .suggest()
                         .get()
                         .withLimit(7)
-                        .createHttpRequest(), "get", "/test_projectKey/product-projections/suggest?limit=7", },
+                        .createHttpRequest(), "get", "test_projectKey/product-projections/suggest?limit=7", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .productProjections()
                         .suggest()
                         .get()
                         .withOffset(3)
-                        .createHttpRequest(), "get", "/test_projectKey/product-projections/suggest?offset=3", },
+                        .createHttpRequest(), "get", "test_projectKey/product-projections/suggest?offset=3", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .productProjections()
@@ -108,7 +106,7 @@ public class ByProjectKeyProductProjectionsSuggestTest {
                                 .get()
                                 .withWithTotal(true)
                                 .createHttpRequest(),
-                        "get", "/test_projectKey/product-projections/suggest?withTotal=true", },
+                        "get", "test_projectKey/product-projections/suggest?withTotal=true", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .productProjections()
@@ -116,12 +114,12 @@ public class ByProjectKeyProductProjectionsSuggestTest {
                                 .get()
                                 .withStaged(true)
                                 .createHttpRequest(),
-                        "get", "/test_projectKey/product-projections/suggest?staged=true", },
+                        "get", "test_projectKey/product-projections/suggest?staged=true", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .productProjections()
                         .suggest()
                         .get()
-                        .createHttpRequest(), "get", "/test_projectKey/product-projections/suggest", } };
+                        .createHttpRequest(), "get", "test_projectKey/product-projections/suggest", } };
     }
 
     @DataProvider

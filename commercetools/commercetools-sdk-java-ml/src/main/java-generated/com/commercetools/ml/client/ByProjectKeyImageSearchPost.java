@@ -57,7 +57,7 @@ public class ByProjectKeyImageSearchPost extends
     @Override
     protected ApiHttpRequest buildHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
-        String httpRequestPath = String.format("/%s/image-search", this.projectKey);
+        String httpRequestPath = String.format("%s/image-search", this.projectKey);
         if (!params.isEmpty()) {
             httpRequestPath += "?" + String.join("&", params);
         }

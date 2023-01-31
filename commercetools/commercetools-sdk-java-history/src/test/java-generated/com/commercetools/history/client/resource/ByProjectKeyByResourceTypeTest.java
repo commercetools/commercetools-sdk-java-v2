@@ -64,72 +64,70 @@ public class ByProjectKeyByResourceTypeTest {
     @DataProvider
     public static Object[][] requestWithMethodParameters() {
         return new Object[][] {
-                new Object[] {
-                        apiRoot.withProjectKeyValue("test_projectKey")
-                                .withResourceTypeValue("test_resourceType")
-                                .get()
-                                .withDateFrom("date.from")
-                                .createHttpRequest(),
-                        "get", "/test_projectKey/test_resourceType?date.from=date.from", },
+                new Object[] { apiRoot.withProjectKeyValue("test_projectKey")
+                        .withResourceTypeValue("test_resourceType")
+                        .get()
+                        .withDateFrom("date.from")
+                        .createHttpRequest(), "get", "test_projectKey/test_resourceType?date.from=date.from", },
                 new Object[] { apiRoot.withProjectKeyValue("test_projectKey")
                         .withResourceTypeValue("test_resourceType")
                         .get()
                         .withDateTo("date.to")
-                        .createHttpRequest(), "get", "/test_projectKey/test_resourceType?date.to=date.to", },
+                        .createHttpRequest(), "get", "test_projectKey/test_resourceType?date.to=date.to", },
                 new Object[] { apiRoot.withProjectKeyValue("test_projectKey")
                         .withResourceTypeValue("test_resourceType")
                         .get()
                         .withLimit(7)
-                        .createHttpRequest(), "get", "/test_projectKey/test_resourceType?limit=7", },
+                        .createHttpRequest(), "get", "test_projectKey/test_resourceType?limit=7", },
                 new Object[] { apiRoot.withProjectKeyValue("test_projectKey")
                         .withResourceTypeValue("test_resourceType")
                         .get()
                         .withOffset(3)
-                        .createHttpRequest(), "get", "/test_projectKey/test_resourceType?offset=3", },
+                        .createHttpRequest(), "get", "test_projectKey/test_resourceType?offset=3", },
                 new Object[] { apiRoot.withProjectKeyValue("test_projectKey")
                         .withResourceTypeValue("test_resourceType")
                         .get()
                         .withUserId("userId")
-                        .createHttpRequest(), "get", "/test_projectKey/test_resourceType?userId=userId", },
+                        .createHttpRequest(), "get", "test_projectKey/test_resourceType?userId=userId", },
                 new Object[] { apiRoot.withProjectKeyValue("test_projectKey")
                         .withResourceTypeValue("test_resourceType")
                         .get()
                         .withType("type")
-                        .createHttpRequest(), "get", "/test_projectKey/test_resourceType?type=type", },
+                        .createHttpRequest(), "get", "test_projectKey/test_resourceType?type=type", },
                 new Object[] { apiRoot.withProjectKeyValue("test_projectKey")
                         .withResourceTypeValue("test_resourceType")
                         .get()
                         .withClientId("clientId")
-                        .createHttpRequest(), "get", "/test_projectKey/test_resourceType?clientId=clientId", },
+                        .createHttpRequest(), "get", "test_projectKey/test_resourceType?clientId=clientId", },
                 new Object[] {
                         apiRoot.withProjectKeyValue("test_projectKey")
                                 .withResourceTypeValue("test_resourceType")
                                 .get()
                                 .withResourceId("resourceId")
                                 .createHttpRequest(),
-                        "get", "/test_projectKey/test_resourceType?resourceId=resourceId", },
+                        "get", "test_projectKey/test_resourceType?resourceId=resourceId", },
                 new Object[] { apiRoot.withProjectKeyValue("test_projectKey")
                         .withResourceTypeValue("test_resourceType")
                         .get()
                         .withSource("source")
-                        .createHttpRequest(), "get", "/test_projectKey/test_resourceType?source=source", },
+                        .createHttpRequest(), "get", "test_projectKey/test_resourceType?source=source", },
                 new Object[] { apiRoot.withProjectKeyValue("test_projectKey")
                         .withResourceTypeValue("test_resourceType")
                         .get()
                         .withChanges("changes")
-                        .createHttpRequest(), "get", "/test_projectKey/test_resourceType?changes=changes", },
+                        .createHttpRequest(), "get", "test_projectKey/test_resourceType?changes=changes", },
                 new Object[] { apiRoot.withProjectKeyValue("test_projectKey")
                         .withResourceTypeValue("test_resourceType")
                         .get()
                         .withStores("stores")
-                        .createHttpRequest(), "get", "/test_projectKey/test_resourceType?stores=stores", },
+                        .createHttpRequest(), "get", "test_projectKey/test_resourceType?stores=stores", },
                 new Object[] {
                         apiRoot.withProjectKeyValue("test_projectKey")
                                 .withResourceTypeValue("test_resourceType")
                                 .get()
                                 .withCustomerId("customerId")
                                 .createHttpRequest(),
-                        "get", "/test_projectKey/test_resourceType?customerId=customerId", },
+                        "get", "test_projectKey/test_resourceType?customerId=customerId", },
                 new Object[] {
                         apiRoot.withProjectKeyValue("test_projectKey")
                                 .withResourceTypeValue("test_resourceType")
@@ -139,16 +137,16 @@ public class ByProjectKeyByResourceTypeTest {
                                             .findEnum("excludePlatformInitiatedChanges"))
                                 .createHttpRequest(),
                         "get",
-                        "/test_projectKey/test_resourceType?excludePlatformInitiatedChanges=excludePlatformInitiatedChanges", },
+                        "test_projectKey/test_resourceType?excludePlatformInitiatedChanges=excludePlatformInitiatedChanges", },
                 new Object[] { apiRoot.withProjectKeyValue("test_projectKey")
                         .withResourceTypeValue("test_resourceType")
                         .get()
                         .withExpand(true)
-                        .createHttpRequest(), "get", "/test_projectKey/test_resourceType?expand=true", },
+                        .createHttpRequest(), "get", "test_projectKey/test_resourceType?expand=true", },
                 new Object[] { apiRoot.withProjectKeyValue("test_projectKey")
                         .withResourceTypeValue("test_resourceType")
                         .get()
-                        .createHttpRequest(), "get", "/test_projectKey/test_resourceType", } };
+                        .createHttpRequest(), "get", "test_projectKey/test_resourceType", } };
     }
 
     @DataProvider

@@ -72,7 +72,7 @@ public class ByProjectKeyImportContainersByImportContainerKeyImportOperationsTes
                         .withLimit(0.26748633)
                         .createHttpRequest(),
                 "get",
-                "/test_projectKey/import-containers/test_importContainerKey/import-operations?limit=0.26748633", },
+                "test_projectKey/import-containers/test_importContainerKey/import-operations?limit=0.26748633", },
                 new Object[] {
                         apiRoot.withProjectKeyValue("test_projectKey")
                                 .importContainers()
@@ -82,7 +82,7 @@ public class ByProjectKeyImportContainersByImportContainerKeyImportOperationsTes
                                 .withOffset(0.7475848)
                                 .createHttpRequest(),
                         "get",
-                        "/test_projectKey/import-containers/test_importContainerKey/import-operations?offset=0.7475848", },
+                        "test_projectKey/import-containers/test_importContainerKey/import-operations?offset=0.7475848", },
                 new Object[] {
                         apiRoot.withProjectKeyValue("test_projectKey")
                                 .importContainers()
@@ -92,7 +92,7 @@ public class ByProjectKeyImportContainersByImportContainerKeyImportOperationsTes
                                 .withSort("sort")
                                 .createHttpRequest(),
                         "get",
-                        "/test_projectKey/import-containers/test_importContainerKey/import-operations?sort=sort", },
+                        "test_projectKey/import-containers/test_importContainerKey/import-operations?sort=sort", },
                 new Object[] {
                         apiRoot.withProjectKeyValue("test_projectKey")
                                 .importContainers()
@@ -102,7 +102,7 @@ public class ByProjectKeyImportContainersByImportContainerKeyImportOperationsTes
                                 .withResourceKey("resourceKey")
                                 .createHttpRequest(),
                         "get",
-                        "/test_projectKey/import-containers/test_importContainerKey/import-operations?resourceKey=resourceKey", },
+                        "test_projectKey/import-containers/test_importContainerKey/import-operations?resourceKey=resourceKey", },
                 new Object[] {
                         apiRoot.withProjectKeyValue("test_projectKey")
                                 .importContainers()
@@ -112,7 +112,7 @@ public class ByProjectKeyImportContainersByImportContainerKeyImportOperationsTes
                                 .withState(com.commercetools.importapi.models.common.ProcessingState.findEnum("state"))
                                 .createHttpRequest(),
                         "get",
-                        "/test_projectKey/import-containers/test_importContainerKey/import-operations?state=state", },
+                        "test_projectKey/import-containers/test_importContainerKey/import-operations?state=state", },
                 new Object[] {
                         apiRoot.withProjectKeyValue("test_projectKey")
                                 .importContainers()
@@ -122,7 +122,7 @@ public class ByProjectKeyImportContainersByImportContainerKeyImportOperationsTes
                                 .withDebug(true)
                                 .createHttpRequest(),
                         "get",
-                        "/test_projectKey/import-containers/test_importContainerKey/import-operations?debug=true", },
+                        "test_projectKey/import-containers/test_importContainerKey/import-operations?debug=true", },
                 new Object[] {
                         apiRoot.withProjectKeyValue("test_projectKey")
                                 .importContainers()
@@ -130,7 +130,7 @@ public class ByProjectKeyImportContainersByImportContainerKeyImportOperationsTes
                                 .importOperations()
                                 .get()
                                 .createHttpRequest(),
-                        "get", "/test_projectKey/import-containers/test_importContainerKey/import-operations", } };
+                        "get", "test_projectKey/import-containers/test_importContainerKey/import-operations", } };
     }
 
     @DataProvider

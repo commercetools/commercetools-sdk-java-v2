@@ -70,7 +70,7 @@ public class ByProjectKeyProductVariantPatchesImportContainersByImportContainerK
                         .withImportContainerKeyValue("test_importContainerKey")
                         .post(com.commercetools.importapi.models.importrequests.ProductVariantPatchRequest.of())
                         .createHttpRequest(),
-                "post", "/test_projectKey/product-variant-patches/import-containers/test_importContainerKey", } };
+                "post", "test_projectKey/product-variant-patches/import-containers/test_importContainerKey", } };
     }
 
     @DataProvider

@@ -71,7 +71,7 @@ public class ByProjectKeyShippingMethodsMatchingOrdereditTest {
                                 .get()
                                 .withOrderEditId("orderEditId")
                                 .createHttpRequest(),
-                        "get", "/test_projectKey/shipping-methods/matching-orderedit?orderEditId=orderEditId", },
+                        "get", "test_projectKey/shipping-methods/matching-orderedit?orderEditId=orderEditId", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .shippingMethods()
@@ -79,7 +79,7 @@ public class ByProjectKeyShippingMethodsMatchingOrdereditTest {
                                 .get()
                                 .withCountry("country")
                                 .createHttpRequest(),
-                        "get", "/test_projectKey/shipping-methods/matching-orderedit?country=country", },
+                        "get", "test_projectKey/shipping-methods/matching-orderedit?country=country", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .shippingMethods()
@@ -87,14 +87,12 @@ public class ByProjectKeyShippingMethodsMatchingOrdereditTest {
                                 .get()
                                 .withState("state")
                                 .createHttpRequest(),
-                        "get", "/test_projectKey/shipping-methods/matching-orderedit?state=state", },
-                new Object[] {
-                        apiRoot.withProjectKey("test_projectKey")
-                                .shippingMethods()
-                                .matchingOrderedit()
-                                .get()
-                                .createHttpRequest(),
-                        "get", "/test_projectKey/shipping-methods/matching-orderedit", } };
+                        "get", "test_projectKey/shipping-methods/matching-orderedit?state=state", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .shippingMethods()
+                        .matchingOrderedit()
+                        .get()
+                        .createHttpRequest(), "get", "test_projectKey/shipping-methods/matching-orderedit", } };
     }
 
     @DataProvider

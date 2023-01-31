@@ -69,37 +69,37 @@ public class ByProjectKeyMeBusinessUnitsTest {
                         .businessUnits()
                         .get()
                         .withExpand("expand")
-                        .createHttpRequest(), "get", "/test_projectKey/me/business-units?expand=expand", },
+                        .createHttpRequest(), "get", "test_projectKey/me/business-units?expand=expand", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .me()
                         .businessUnits()
                         .get()
                         .withSort("sort")
-                        .createHttpRequest(), "get", "/test_projectKey/me/business-units?sort=sort", },
+                        .createHttpRequest(), "get", "test_projectKey/me/business-units?sort=sort", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .me()
                         .businessUnits()
                         .get()
                         .withLimit(7)
-                        .createHttpRequest(), "get", "/test_projectKey/me/business-units?limit=7", },
+                        .createHttpRequest(), "get", "test_projectKey/me/business-units?limit=7", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .me()
                         .businessUnits()
                         .get()
                         .withOffset(3)
-                        .createHttpRequest(), "get", "/test_projectKey/me/business-units?offset=3", },
+                        .createHttpRequest(), "get", "test_projectKey/me/business-units?offset=3", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .me()
                         .businessUnits()
                         .get()
                         .withWithTotal(true)
-                        .createHttpRequest(), "get", "/test_projectKey/me/business-units?withTotal=true", },
+                        .createHttpRequest(), "get", "test_projectKey/me/business-units?withTotal=true", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .me()
                         .businessUnits()
                         .get()
                         .withWhere("where")
-                        .createHttpRequest(), "get", "/test_projectKey/me/business-units?where=where", },
+                        .createHttpRequest(), "get", "test_projectKey/me/business-units?where=where", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .me()
@@ -107,20 +107,20 @@ public class ByProjectKeyMeBusinessUnitsTest {
                                 .get()
                                 .withPredicateVar("varName", "var.varName")
                                 .createHttpRequest(),
-                        "get", "/test_projectKey/me/business-units?var.varName=var.varName", },
+                        "get", "test_projectKey/me/business-units?var.varName=var.varName", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey").me().businessUnits().get().createHttpRequest(),
-                        "get", "/test_projectKey/me/business-units", },
+                        "get", "test_projectKey/me/business-units", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .me()
                         .businessUnits()
                         .post(com.commercetools.api.models.me.MyCompanyDraft.of())
                         .withExpand("expand")
-                        .createHttpRequest(), "post", "/test_projectKey/me/business-units?expand=expand", },
+                        .createHttpRequest(), "post", "test_projectKey/me/business-units?expand=expand", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .me()
                         .businessUnits()
                         .post(com.commercetools.api.models.me.MyCompanyDraft.of())
-                        .createHttpRequest(), "post", "/test_projectKey/me/business-units", } };
+                        .createHttpRequest(), "post", "test_projectKey/me/business-units", } };
     }
 
     @DataProvider

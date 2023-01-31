@@ -67,7 +67,7 @@ public class ByProjectKeyOrdersImportTest {
                 .orders()
                 .importOrder()
                 .post(com.commercetools.api.models.order.OrderImportDraft.of())
-                .createHttpRequest(), "post", "/test_projectKey/orders/import", } };
+                .createHttpRequest(), "post", "test_projectKey/orders/import", } };
     }
 
     @DataProvider

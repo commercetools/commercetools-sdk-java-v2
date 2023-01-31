@@ -68,7 +68,7 @@ public class ByProjectKeyMeCartsReplicateTest {
                 .carts()
                 .replicate()
                 .post(com.commercetools.api.models.me.ReplicaMyCartDraft.of())
-                .createHttpRequest(), "post", "/test_projectKey/me/carts/replicate", } };
+                .createHttpRequest(), "post", "test_projectKey/me/carts/replicate", } };
     }
 
     @DataProvider

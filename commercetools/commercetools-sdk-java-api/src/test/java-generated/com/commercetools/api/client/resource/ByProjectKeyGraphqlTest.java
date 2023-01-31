@@ -66,7 +66,7 @@ public class ByProjectKeyGraphqlTest {
         return new Object[][] { new Object[] { apiRoot.withProjectKey("test_projectKey")
                 .graphql()
                 .post(com.commercetools.api.models.graph_ql.GraphQLRequest.of())
-                .createHttpRequest(), "post", "/test_projectKey/graphql", } };
+                .createHttpRequest(), "post", "test_projectKey/graphql", } };
     }
 
     @DataProvider

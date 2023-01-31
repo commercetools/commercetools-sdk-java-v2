@@ -69,31 +69,29 @@ public class ByProjectKeyTaxCategoriesByIDTest {
                         .withId("test_ID")
                         .get()
                         .withExpand("expand")
-                        .createHttpRequest(), "get", "/test_projectKey/tax-categories/test_ID?expand=expand", },
+                        .createHttpRequest(), "get", "test_projectKey/tax-categories/test_ID?expand=expand", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .taxCategories()
                         .withId("test_ID")
                         .get()
-                        .createHttpRequest(), "get", "/test_projectKey/tax-categories/test_ID", },
-                new Object[] {
-                        apiRoot.withProjectKey("test_projectKey")
-                                .taxCategories()
-                                .withId("test_ID")
-                                .post(com.commercetools.api.models.tax_category.TaxCategoryUpdate.of())
-                                .withExpand("expand")
-                                .createHttpRequest(),
-                        "post", "/test_projectKey/tax-categories/test_ID?expand=expand", },
+                        .createHttpRequest(), "get", "test_projectKey/tax-categories/test_ID", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .taxCategories()
                         .withId("test_ID")
                         .post(com.commercetools.api.models.tax_category.TaxCategoryUpdate.of())
-                        .createHttpRequest(), "post", "/test_projectKey/tax-categories/test_ID", },
+                        .withExpand("expand")
+                        .createHttpRequest(), "post", "test_projectKey/tax-categories/test_ID?expand=expand", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .taxCategories()
+                        .withId("test_ID")
+                        .post(com.commercetools.api.models.tax_category.TaxCategoryUpdate.of())
+                        .createHttpRequest(), "post", "test_projectKey/tax-categories/test_ID", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .taxCategories()
                         .withId("test_ID")
                         .delete()
                         .withVersion(2)
-                        .createHttpRequest(), "delete", "/test_projectKey/tax-categories/test_ID?version=2", },
+                        .createHttpRequest(), "delete", "test_projectKey/tax-categories/test_ID?version=2", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .taxCategories()
@@ -101,12 +99,12 @@ public class ByProjectKeyTaxCategoriesByIDTest {
                                 .delete()
                                 .withExpand("expand")
                                 .createHttpRequest(),
-                        "delete", "/test_projectKey/tax-categories/test_ID?expand=expand", },
+                        "delete", "test_projectKey/tax-categories/test_ID?expand=expand", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .taxCategories()
                         .withId("test_ID")
                         .delete()
-                        .createHttpRequest(), "delete", "/test_projectKey/tax-categories/test_ID", } };
+                        .createHttpRequest(), "delete", "test_projectKey/tax-categories/test_ID", } };
     }
 
     @DataProvider

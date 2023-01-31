@@ -1103,46 +1103,7 @@ types:
         (java-implements):
           'com.commercetools.api.client.ApiDeleteMethod<ByProjectKeyProductTypesByIDDelete, com.commercetools.api.models.product_type.ProductType>'
   /quotes:
-    (java-mixin): |
-        public ByProjectKeyQuotesByIDPost update(
-                com.commercetools.api.models.Versioned<com.commercetools.api.models.quote.Quote> quote,
-                java.util.List<com.commercetools.api.models.quote.QuoteUpdateAction> actions) {
-            return withId(quote.getId()).post(builder -> com.commercetools.api.models.quote.QuoteUpdate.builder()
-                    .version(quote.getVersion())
-                    .actions(actions));
-        }
-
-        public ByProjectKeyQuotesByIDPost update(
-                com.commercetools.api.models.Versioned<com.commercetools.api.models.quote.Quote> quote,
-                UnaryOperator<UpdateActionBuilder<com.commercetools.api.models.quote.QuoteUpdateAction, com.commercetools.api.models.quote.QuoteUpdateActionBuilder>> op) {
-            return withId(quote.getId()).post(builder -> com.commercetools.api.models.quote.QuoteUpdate.builder()
-                    .version(quote.getVersion())
-                    .actions(op.apply(UpdateActionBuilder
-                            .of(com.commercetools.api.models.quote.QuoteUpdateActionBuilder::of)).actions));
-        }
-
-        public WithUpdateActionBuilder<com.commercetools.api.models.quote.QuoteUpdateAction, com.commercetools.api.models.quote.QuoteUpdateActionBuilder, ByProjectKeyQuotesByIDPost> update(
-                com.commercetools.api.models.Versioned<com.commercetools.api.models.quote.Quote> quote) {
-            return builder -> withId(quote.getId())
-                    .post(b -> com.commercetools.api.models.quote.QuoteUpdate.builder()
-                            .version(quote.getVersion())
-                            .actions(builder.apply(UpdateActionBuilder
-                                    .of(com.commercetools.api.models.quote.QuoteUpdateActionBuilder::of)).actions));
-        }
-
-        public ByProjectKeyQuotesByIDDelete delete(
-                com.commercetools.api.models.Versioned<com.commercetools.api.models.quote.Quote> quote) {
-            return withId(quote.getId()).delete().withVersion(quote.getVersion());
-        }
-
-        public ByProjectKeyQuotesPost create(com.commercetools.api.models.quote.QuoteDraft quoteDraft) {
-            return post(quoteDraft);
-        }
-
-        public ByProjectKeyQuotesPost create(
-                UnaryOperator<com.commercetools.api.models.quote.QuoteDraftBuilder> op) {
-            return post(op.apply(com.commercetools.api.models.quote.QuoteDraftBuilder.of()).build());
-        }
+    (java-implements): 'ByProjectKeyQuotesRequestBuilderMixin'
     /key={key}:
       delete:
         (java-implements):
@@ -1153,46 +1114,7 @@ types:
           'com.commercetools.api.client.ApiDeleteMethod<ByProjectKeyQuotesByIDDelete, com.commercetools.api.models.quote.Quote>'
 
   /quote-requests:
-    (java-mixin): |
-        public ByProjectKeyQuoteRequestsByIDPost update(
-                com.commercetools.api.models.Versioned<com.commercetools.api.models.quote_request.QuoteRequest> quoteRequest,
-                java.util.List<com.commercetools.api.models.quote_request.QuoteRequestUpdateAction> actions) {
-            return withId(quoteRequest.getId()).post(builder -> com.commercetools.api.models.quote_request.QuoteRequestUpdate.builder()
-                    .version(quoteRequest.getVersion())
-                    .actions(actions));
-        }
-
-        public ByProjectKeyQuoteRequestsByIDPost update(
-                com.commercetools.api.models.Versioned<com.commercetools.api.models.quote_request.QuoteRequest> quoteRequest,
-                UnaryOperator<UpdateActionBuilder<com.commercetools.api.models.quote_request.QuoteRequestUpdateAction, com.commercetools.api.models.quote_request.QuoteRequestUpdateActionBuilder>> op) {
-            return withId(quoteRequest.getId()).post(builder -> com.commercetools.api.models.quote_request.QuoteRequestUpdate.builder()
-                    .version(quoteRequest.getVersion())
-                    .actions(op.apply(UpdateActionBuilder
-                            .of(com.commercetools.api.models.quote_request.QuoteRequestUpdateActionBuilder::of)).actions));
-        }
-
-        public WithUpdateActionBuilder<com.commercetools.api.models.quote_request.QuoteRequestUpdateAction, com.commercetools.api.models.quote_request.QuoteRequestUpdateActionBuilder, ByProjectKeyQuoteRequestsByIDPost> update(
-                com.commercetools.api.models.Versioned<com.commercetools.api.models.quote_request.QuoteRequest> quoteRequest) {
-            return builder -> withId(quoteRequest.getId())
-                    .post(b -> com.commercetools.api.models.quote_request.QuoteRequestUpdate.builder()
-                            .version(quoteRequest.getVersion())
-                            .actions(builder.apply(UpdateActionBuilder
-                                    .of(com.commercetools.api.models.quote_request.QuoteRequestUpdateActionBuilder::of)).actions));
-        }
-
-        public ByProjectKeyQuoteRequestsByIDDelete delete(
-                com.commercetools.api.models.Versioned<com.commercetools.api.models.quote_request.QuoteRequest> quoteRequest) {
-            return withId(quoteRequest.getId()).delete().withVersion(quoteRequest.getVersion());
-        }
-
-        public ByProjectKeyQuoteRequestsPost create(com.commercetools.api.models.quote_request.QuoteRequestDraft quoteRequestDraft) {
-            return post(quoteRequestDraft);
-        }
-
-        public ByProjectKeyQuoteRequestsPost create(
-                UnaryOperator<com.commercetools.api.models.quote_request.QuoteRequestDraftBuilder> op) {
-            return post(op.apply(com.commercetools.api.models.quote_request.QuoteRequestDraftBuilder.of()).build());
-        }
+    (java-implements): 'ByProjectKeyQuoteRequestsRequestBuilderMixin'
     /key={key}:
       delete:
         (java-implements):
@@ -1203,46 +1125,7 @@ types:
           'com.commercetools.api.client.ApiDeleteMethod<ByProjectKeyQuoteRequestsByIDDelete, com.commercetools.api.models.quote_request.QuoteRequest>'
 
   /staged-quotes:
-    (java-mixin): |
-        public ByProjectKeyStagedQuotesByIDPost update(
-                com.commercetools.api.models.Versioned<com.commercetools.api.models.staged_quote.StagedQuote> stagedQuote,
-                java.util.List<com.commercetools.api.models.staged_quote.StagedQuoteUpdateAction> actions) {
-            return withId(stagedQuote.getId()).post(builder -> com.commercetools.api.models.staged_quote.StagedQuoteUpdate.builder()
-                    .version(stagedQuote.getVersion())
-                    .actions(actions));
-        }
-
-        public ByProjectKeyStagedQuotesByIDPost update(
-                com.commercetools.api.models.Versioned<com.commercetools.api.models.staged_quote.StagedQuote> stagedQuote,
-                UnaryOperator<UpdateActionBuilder<com.commercetools.api.models.staged_quote.StagedQuoteUpdateAction, com.commercetools.api.models.staged_quote.StagedQuoteUpdateActionBuilder>> op) {
-            return withId(stagedQuote.getId()).post(builder -> com.commercetools.api.models.staged_quote.StagedQuoteUpdate.builder()
-                    .version(stagedQuote.getVersion())
-                    .actions(op.apply(UpdateActionBuilder
-                            .of(com.commercetools.api.models.staged_quote.StagedQuoteUpdateActionBuilder::of)).actions));
-        }
-
-        public WithUpdateActionBuilder<com.commercetools.api.models.staged_quote.StagedQuoteUpdateAction, com.commercetools.api.models.staged_quote.StagedQuoteUpdateActionBuilder, ByProjectKeyStagedQuotesByIDPost> update(
-                com.commercetools.api.models.Versioned<com.commercetools.api.models.staged_quote.StagedQuote> stagedQuote) {
-            return builder -> withId(stagedQuote.getId())
-                    .post(b -> com.commercetools.api.models.staged_quote.StagedQuoteUpdate.builder()
-                            .version(stagedQuote.getVersion())
-                            .actions(builder.apply(UpdateActionBuilder
-                                    .of(com.commercetools.api.models.staged_quote.StagedQuoteUpdateActionBuilder::of)).actions));
-        }
-
-        public ByProjectKeyStagedQuotesByIDDelete delete(
-                com.commercetools.api.models.Versioned<com.commercetools.api.models.staged_quote.StagedQuote> stagedQuote) {
-            return withId(stagedQuote.getId()).delete().withVersion(stagedQuote.getVersion());
-        }
-
-        public ByProjectKeyStagedQuotesPost create(com.commercetools.api.models.staged_quote.StagedQuoteDraft stagedQuoteDraft) {
-            return post(stagedQuoteDraft);
-        }
-
-        public ByProjectKeyStagedQuotesPost create(
-                UnaryOperator<com.commercetools.api.models.staged_quote.StagedQuoteDraftBuilder> op) {
-            return post(op.apply(com.commercetools.api.models.staged_quote.StagedQuoteDraftBuilder.of()).build());
-        }
+    (java-implements): 'ByProjectKeyStagedQuotesRequestBuilderMixin'
     /key={key}:
       delete:
         (java-implements):
@@ -1253,46 +1136,7 @@ types:
           'com.commercetools.api.client.ApiDeleteMethod<ByProjectKeyStagedQuotesByIDDelete, com.commercetools.api.models.staged_quote.StagedQuote>'
 
   /reviews:
-    (java-mixin): |
-        public ByProjectKeyReviewsByIDPost update(
-                com.commercetools.api.models.Versioned<com.commercetools.api.models.review.Review> review,
-                java.util.List<com.commercetools.api.models.review.ReviewUpdateAction> actions) {
-            return withId(review.getId()).post(builder -> com.commercetools.api.models.review.ReviewUpdate.builder()
-                    .version(review.getVersion())
-                    .actions(actions));
-        }
-
-        public ByProjectKeyReviewsByIDPost update(
-                com.commercetools.api.models.Versioned<com.commercetools.api.models.review.Review> review,
-                UnaryOperator<UpdateActionBuilder<com.commercetools.api.models.review.ReviewUpdateAction, com.commercetools.api.models.review.ReviewUpdateActionBuilder>> op) {
-            return withId(review.getId()).post(builder -> com.commercetools.api.models.review.ReviewUpdate.builder()
-                    .version(review.getVersion())
-                    .actions(op.apply(UpdateActionBuilder
-                            .of(com.commercetools.api.models.review.ReviewUpdateActionBuilder::of)).actions));
-        }
-
-        public WithUpdateActionBuilder<com.commercetools.api.models.review.ReviewUpdateAction, com.commercetools.api.models.review.ReviewUpdateActionBuilder, ByProjectKeyReviewsByIDPost> update(
-                com.commercetools.api.models.Versioned<com.commercetools.api.models.review.Review> review) {
-            return builder -> withId(review.getId())
-                    .post(b -> com.commercetools.api.models.review.ReviewUpdate.builder()
-                            .version(review.getVersion())
-                            .actions(builder.apply(UpdateActionBuilder
-                                    .of(com.commercetools.api.models.review.ReviewUpdateActionBuilder::of)).actions));
-        }
-
-        public ByProjectKeyReviewsByIDDelete delete(
-                com.commercetools.api.models.Versioned<com.commercetools.api.models.review.Review> review) {
-            return withId(review.getId()).delete().withVersion(review.getVersion());
-        }
-
-        public ByProjectKeyReviewsPost create(com.commercetools.api.models.review.ReviewDraft reviewDraft) {
-            return post(reviewDraft);
-        }
-
-        public ByProjectKeyReviewsPost create(
-                UnaryOperator<com.commercetools.api.models.review.ReviewDraftBuilder> op) {
-            return post(op.apply(com.commercetools.api.models.review.ReviewDraftBuilder.of()).build());
-        }
+    (java-implements): 'ByProjectKeyReviewsRequestBuilderMixin'
     get:
       (java-implements):
         'com.commercetools.api.models.PagedQueryResourceRequest<ByProjectKeyReviewsGet,

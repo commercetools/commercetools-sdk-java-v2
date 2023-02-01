@@ -92,7 +92,7 @@ jobs:
           uses: actions/setup-java@v3
           with:
               distribution: 'temurin'
-              java-version: '8'
+              java-version: '16'
 
       -   name: build javadoc
           if: github.event_name == 'push' && github.ref == 'refs/heads/main'

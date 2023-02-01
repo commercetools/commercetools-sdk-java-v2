@@ -79,6 +79,7 @@ public interface StagedOrder extends Order {
         instance.setShippingInfo(template.getShippingInfo());
         instance.setSyncInfo(template.getSyncInfo());
         instance.setReturnInfo(template.getReturnInfo());
+        instance.setPurchaseOrderNumber(template.getPurchaseOrderNumber());
         instance.setDiscountCodes(template.getDiscountCodes());
         instance.setLastMessageSequenceNumber(template.getLastMessageSequenceNumber());
         instance.setCart(template.getCart());

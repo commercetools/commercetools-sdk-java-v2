@@ -245,6 +245,10 @@ public interface Review extends BaseResource, ReviewMixin, com.commercetools.api
         return helper.apply(this);
     }
 
+    public static com.commercetools.api.models.common.ReferenceTypeId referenceTypeId() {
+        return com.commercetools.api.models.common.ReferenceTypeId.REVIEW;
+    }
+
     @Deprecated
     @JsonIgnore
     public default void setTarget(final Object target) {

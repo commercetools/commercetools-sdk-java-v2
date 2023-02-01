@@ -52,4 +52,5 @@ public class ByProjectKeyOrdersRequestBuilder implements ByProjectKeyOrdersReque
     public ByProjectKeyOrdersSearchRequestBuilder search() {
         return new ByProjectKeyOrdersSearchRequestBuilder(apiHttpClient, projectKey);
     }
+
 }

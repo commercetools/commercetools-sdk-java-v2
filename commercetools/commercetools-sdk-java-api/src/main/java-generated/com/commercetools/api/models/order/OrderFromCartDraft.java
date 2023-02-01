@@ -62,6 +62,13 @@ public interface OrderFromCartDraft extends io.vrap.rmf.base.client.Draft<OrderF
     public String getOrderNumber();
 
     /**
+     *  <p>Identifier for a purchase order, usually in a B2B context. The Purchase Order Number is typically entered by the Buyer and can also be used with Quotes.</p>
+     */
+
+    @JsonProperty("purchaseOrderNumber")
+    public String getPurchaseOrderNumber();
+
+    /**
      *
      */
 
@@ -105,6 +112,8 @@ public interface OrderFromCartDraft extends io.vrap.rmf.base.client.Draft<OrderF
 
     public void setOrderNumber(final String orderNumber);
 
+    public void setPurchaseOrderNumber(final String purchaseOrderNumber);
+
     public void setPaymentState(final PaymentState paymentState);
 
     public void setShipmentState(final ShipmentState shipmentState);
@@ -125,6 +134,7 @@ public interface OrderFromCartDraft extends io.vrap.rmf.base.client.Draft<OrderF
         instance.setCart(template.getCart());
         instance.setVersion(template.getVersion());
         instance.setOrderNumber(template.getOrderNumber());
+        instance.setPurchaseOrderNumber(template.getPurchaseOrderNumber());
         instance.setPaymentState(template.getPaymentState());
         instance.setShipmentState(template.getShipmentState());
         instance.setOrderState(template.getOrderState());

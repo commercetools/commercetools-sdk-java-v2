@@ -36,4 +36,5 @@ public class ByProjectKeyPaymentsRequestBuilder implements ByProjectKeyPaymentsR
     public ByProjectKeyPaymentsByIDRequestBuilder withId(String ID) {
         return new ByProjectKeyPaymentsByIDRequestBuilder(apiHttpClient, projectKey, ID);
     }
+
 }

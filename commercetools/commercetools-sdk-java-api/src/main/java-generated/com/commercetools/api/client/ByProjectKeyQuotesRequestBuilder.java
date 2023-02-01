@@ -36,4 +36,5 @@ public class ByProjectKeyQuotesRequestBuilder implements ByProjectKeyQuotesReque
     public ByProjectKeyQuotesByIDRequestBuilder withId(String ID) {
         return new ByProjectKeyQuotesByIDRequestBuilder(apiHttpClient, projectKey, ID);
     }
+
 }

@@ -29,6 +29,8 @@ public class OrderFromCartDraftImpl implements OrderFromCartDraft, ModelBase {
 
     private String orderNumber;
 
+    private String purchaseOrderNumber;
+
     private com.commercetools.api.models.order.PaymentState paymentState;
 
     private com.commercetools.api.models.order.ShipmentState shipmentState;
@@ -43,6 +45,7 @@ public class OrderFromCartDraftImpl implements OrderFromCartDraft, ModelBase {
     OrderFromCartDraftImpl(@JsonProperty("id") final String id,
             @JsonProperty("cart") final com.commercetools.api.models.cart.CartResourceIdentifier cart,
             @JsonProperty("version") final Long version, @JsonProperty("orderNumber") final String orderNumber,
+            @JsonProperty("purchaseOrderNumber") final String purchaseOrderNumber,
             @JsonProperty("paymentState") final com.commercetools.api.models.order.PaymentState paymentState,
             @JsonProperty("shipmentState") final com.commercetools.api.models.order.ShipmentState shipmentState,
             @JsonProperty("orderState") final com.commercetools.api.models.order.OrderState orderState,
@@ -52,6 +55,7 @@ public class OrderFromCartDraftImpl implements OrderFromCartDraft, ModelBase {
         this.cart = cart;
         this.version = version;
         this.orderNumber = orderNumber;
+        this.purchaseOrderNumber = purchaseOrderNumber;
         this.paymentState = paymentState;
         this.shipmentState = shipmentState;
         this.orderState = orderState;
@@ -92,6 +96,14 @@ public class OrderFromCartDraftImpl implements OrderFromCartDraft, ModelBase {
 
     public String getOrderNumber() {
         return this.orderNumber;
+    }
+
+    /**
+     *  <p>Identifier for a purchase order, usually in a B2B context. The Purchase Order Number is typically entered by the Buyer and can also be used with Quotes.</p>
+     */
+
+    public String getPurchaseOrderNumber() {
+        return this.purchaseOrderNumber;
     }
 
     /**
@@ -151,6 +163,10 @@ public class OrderFromCartDraftImpl implements OrderFromCartDraft, ModelBase {
         this.orderNumber = orderNumber;
     }
 
+    public void setPurchaseOrderNumber(final String purchaseOrderNumber) {
+        this.purchaseOrderNumber = purchaseOrderNumber;
+    }
+
     public void setPaymentState(final com.commercetools.api.models.order.PaymentState paymentState) {
         this.paymentState = paymentState;
     }
@@ -185,6 +201,7 @@ public class OrderFromCartDraftImpl implements OrderFromCartDraft, ModelBase {
                 .append(cart, that.cart)
                 .append(version, that.version)
                 .append(orderNumber, that.orderNumber)
+                .append(purchaseOrderNumber, that.purchaseOrderNumber)
                 .append(paymentState, that.paymentState)
                 .append(shipmentState, that.shipmentState)
                 .append(orderState, that.orderState)
@@ -199,6 +216,7 @@ public class OrderFromCartDraftImpl implements OrderFromCartDraft, ModelBase {
                 .append(cart)
                 .append(version)
                 .append(orderNumber)
+                .append(purchaseOrderNumber)
                 .append(paymentState)
                 .append(shipmentState)
                 .append(orderState)

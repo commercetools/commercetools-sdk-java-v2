@@ -86,6 +86,8 @@ public class OrderImpl implements Order, ModelBase {
 
     private java.util.List<com.commercetools.api.models.order.ReturnInfo> returnInfo;
 
+    private String purchaseOrderNumber;
+
     private java.util.List<com.commercetools.api.models.cart.DiscountCodeInfo> discountCodes;
 
     @Deprecated
@@ -145,6 +147,7 @@ public class OrderImpl implements Order, ModelBase {
             @JsonProperty("shippingInfo") final com.commercetools.api.models.cart.ShippingInfo shippingInfo,
             @JsonProperty("syncInfo") final java.util.List<com.commercetools.api.models.order.SyncInfo> syncInfo,
             @JsonProperty("returnInfo") final java.util.List<com.commercetools.api.models.order.ReturnInfo> returnInfo,
+            @JsonProperty("purchaseOrderNumber") final String purchaseOrderNumber,
             @JsonProperty("discountCodes") final java.util.List<com.commercetools.api.models.cart.DiscountCodeInfo> discountCodes,
             @JsonProperty("lastMessageSequenceNumber") final Long lastMessageSequenceNumber,
             @JsonProperty("cart") final com.commercetools.api.models.cart.CartReference cart,
@@ -191,6 +194,7 @@ public class OrderImpl implements Order, ModelBase {
         this.shippingInfo = shippingInfo;
         this.syncInfo = syncInfo;
         this.returnInfo = returnInfo;
+        this.purchaseOrderNumber = purchaseOrderNumber;
         this.discountCodes = discountCodes;
         this.lastMessageSequenceNumber = lastMessageSequenceNumber;
         this.cart = cart;
@@ -476,6 +480,14 @@ public class OrderImpl implements Order, ModelBase {
     }
 
     /**
+     *  <p>The Purchase Order Number is typically set by the Buyer on a QuoteRequest to track the purchase order during the quote and order flow.</p>
+     */
+
+    public String getPurchaseOrderNumber() {
+        return this.purchaseOrderNumber;
+    }
+
+    /**
      *
      */
 
@@ -734,6 +746,10 @@ public class OrderImpl implements Order, ModelBase {
         this.returnInfo = returnInfo;
     }
 
+    public void setPurchaseOrderNumber(final String purchaseOrderNumber) {
+        this.purchaseOrderNumber = purchaseOrderNumber;
+    }
+
     public void setDiscountCodes(final com.commercetools.api.models.cart.DiscountCodeInfo... discountCodes) {
         this.discountCodes = new ArrayList<>(Arrays.asList(discountCodes));
     }
@@ -846,6 +862,7 @@ public class OrderImpl implements Order, ModelBase {
                 .append(shippingInfo, that.shippingInfo)
                 .append(syncInfo, that.syncInfo)
                 .append(returnInfo, that.returnInfo)
+                .append(purchaseOrderNumber, that.purchaseOrderNumber)
                 .append(discountCodes, that.discountCodes)
                 .append(lastMessageSequenceNumber, that.lastMessageSequenceNumber)
                 .append(cart, that.cart)
@@ -897,6 +914,7 @@ public class OrderImpl implements Order, ModelBase {
                 .append(shippingInfo)
                 .append(syncInfo)
                 .append(returnInfo)
+                .append(purchaseOrderNumber)
                 .append(discountCodes)
                 .append(lastMessageSequenceNumber)
                 .append(cart)

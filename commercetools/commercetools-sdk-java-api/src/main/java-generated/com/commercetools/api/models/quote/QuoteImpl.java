@@ -88,6 +88,8 @@ public class QuoteImpl implements Quote, ModelBase {
 
     private com.commercetools.api.models.state.StateReference state;
 
+    private String purchaseOrderNumber;
+
     private com.commercetools.api.models.business_unit.BusinessUnitKeyReference businessUnit;
 
     @JsonCreator
@@ -124,6 +126,7 @@ public class QuoteImpl implements Quote, ModelBase {
             @JsonProperty("custom") final com.commercetools.api.models.type.CustomFields custom,
             @JsonProperty("quoteState") final com.commercetools.api.models.quote.QuoteState quoteState,
             @JsonProperty("state") final com.commercetools.api.models.state.StateReference state,
+            @JsonProperty("purchaseOrderNumber") final String purchaseOrderNumber,
             @JsonProperty("businessUnit") final com.commercetools.api.models.business_unit.BusinessUnitKeyReference businessUnit) {
         this.id = id;
         this.version = version;
@@ -159,6 +162,7 @@ public class QuoteImpl implements Quote, ModelBase {
         this.custom = custom;
         this.quoteState = quoteState;
         this.state = state;
+        this.purchaseOrderNumber = purchaseOrderNumber;
         this.businessUnit = businessUnit;
     }
 
@@ -438,6 +442,14 @@ public class QuoteImpl implements Quote, ModelBase {
     }
 
     /**
+     *  <p>The Purchase Order Number is typically set by the Buyer on a QuoteRequest to track the purchase order during the quote and order flow.</p>
+     */
+
+    public String getPurchaseOrderNumber() {
+        return this.purchaseOrderNumber;
+    }
+
+    /**
      *  <p>The BusinessUnit for the Quote.</p>
      */
 
@@ -601,6 +613,10 @@ public class QuoteImpl implements Quote, ModelBase {
         this.state = state;
     }
 
+    public void setPurchaseOrderNumber(final String purchaseOrderNumber) {
+        this.purchaseOrderNumber = purchaseOrderNumber;
+    }
+
     public void setBusinessUnit(
             final com.commercetools.api.models.business_unit.BusinessUnitKeyReference businessUnit) {
         this.businessUnit = businessUnit;
@@ -650,6 +666,7 @@ public class QuoteImpl implements Quote, ModelBase {
                 .append(custom, that.custom)
                 .append(quoteState, that.quoteState)
                 .append(state, that.state)
+                .append(purchaseOrderNumber, that.purchaseOrderNumber)
                 .append(businessUnit, that.businessUnit)
                 .isEquals();
     }
@@ -690,6 +707,7 @@ public class QuoteImpl implements Quote, ModelBase {
                 .append(custom)
                 .append(quoteState)
                 .append(state)
+                .append(purchaseOrderNumber)
                 .append(businessUnit)
                 .toHashCode();
     }

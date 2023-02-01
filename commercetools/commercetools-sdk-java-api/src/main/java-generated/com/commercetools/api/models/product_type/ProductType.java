@@ -166,6 +166,10 @@ public interface ProductType
         return helper.apply(this);
     }
 
+    public static com.commercetools.api.models.common.ReferenceTypeId referenceTypeId() {
+        return com.commercetools.api.models.common.ReferenceTypeId.PRODUCT_TYPE;
+    }
+
     public static com.fasterxml.jackson.core.type.TypeReference<ProductType> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ProductType>() {
             @Override

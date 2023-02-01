@@ -279,6 +279,13 @@ public interface QuoteRequest extends BaseResource, com.commercetools.api.models
     public StateReference getState();
 
     /**
+     *  <p>Identifier for a purchase order, usually in a B2B context. The Purchase Order Number is typically entered by the Buyer.</p>
+     */
+
+    @JsonProperty("purchaseOrderNumber")
+    public String getPurchaseOrderNumber();
+
+    /**
      *  <p>The BusinessUnit for the Quote Request.</p>
      */
     @Valid
@@ -357,6 +364,8 @@ public interface QuoteRequest extends BaseResource, com.commercetools.api.models
 
     public void setState(final StateReference state);
 
+    public void setPurchaseOrderNumber(final String purchaseOrderNumber);
+
     public void setBusinessUnit(final BusinessUnitKeyReference businessUnit);
 
     public static QuoteRequest of() {
@@ -395,6 +404,7 @@ public interface QuoteRequest extends BaseResource, com.commercetools.api.models
         instance.setDirectDiscounts(template.getDirectDiscounts());
         instance.setCustom(template.getCustom());
         instance.setState(template.getState());
+        instance.setPurchaseOrderNumber(template.getPurchaseOrderNumber());
         instance.setBusinessUnit(template.getBusinessUnit());
         return instance;
     }

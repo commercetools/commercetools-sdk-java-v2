@@ -33,4 +33,5 @@ public class ByProjectKeyApiClientsRequestBuilder implements ByProjectKeyApiClie
     public ByProjectKeyApiClientsByIDRequestBuilder withId(String ID) {
         return new ByProjectKeyApiClientsByIDRequestBuilder(apiHttpClient, projectKey, ID);
     }
+
 }

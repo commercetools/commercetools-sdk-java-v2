@@ -1151,46 +1151,7 @@ types:
           'com.commercetools.api.client.ApiDeleteMethod<ByProjectKeyReviewsByIDDelete, com.commercetools.api.models.review.Review>'
 
   /shipping-methods:
-    (java-mixin): |
-        public ByProjectKeyShippingMethodsByIDPost update(
-                com.commercetools.api.models.Versioned<com.commercetools.api.models.shipping_method.ShippingMethod> shippingMethod,
-                java.util.List<com.commercetools.api.models.shipping_method.ShippingMethodUpdateAction> actions) {
-            return withId(shippingMethod.getId()).post(builder -> com.commercetools.api.models.shipping_method.ShippingMethodUpdate.builder()
-                    .version(shippingMethod.getVersion())
-                    .actions(actions));
-        }
-
-        public ByProjectKeyShippingMethodsByIDPost update(
-                com.commercetools.api.models.Versioned<com.commercetools.api.models.shipping_method.ShippingMethod> shippingMethod,
-                UnaryOperator<UpdateActionBuilder<com.commercetools.api.models.shipping_method.ShippingMethodUpdateAction, com.commercetools.api.models.shipping_method.ShippingMethodUpdateActionBuilder>> op) {
-            return withId(shippingMethod.getId()).post(builder -> com.commercetools.api.models.shipping_method.ShippingMethodUpdate.builder()
-                    .version(shippingMethod.getVersion())
-                    .actions(op.apply(UpdateActionBuilder
-                            .of(com.commercetools.api.models.shipping_method.ShippingMethodUpdateActionBuilder::of)).actions));
-        }
-
-        public WithUpdateActionBuilder<com.commercetools.api.models.shipping_method.ShippingMethodUpdateAction, com.commercetools.api.models.shipping_method.ShippingMethodUpdateActionBuilder, ByProjectKeyShippingMethodsByIDPost> update(
-                com.commercetools.api.models.Versioned<com.commercetools.api.models.shipping_method.ShippingMethod> shippingMethod) {
-            return builder -> withId(shippingMethod.getId())
-                    .post(b -> com.commercetools.api.models.shipping_method.ShippingMethodUpdate.builder()
-                            .version(shippingMethod.getVersion())
-                            .actions(builder.apply(UpdateActionBuilder
-                                    .of(com.commercetools.api.models.shipping_method.ShippingMethodUpdateActionBuilder::of)).actions));
-        }
-
-        public ByProjectKeyShippingMethodsByIDDelete delete(
-                com.commercetools.api.models.Versioned<com.commercetools.api.models.shipping_method.ShippingMethod> shippingMethod) {
-            return withId(shippingMethod.getId()).delete().withVersion(shippingMethod.getVersion());
-        }
-
-        public ByProjectKeyShippingMethodsPost create(com.commercetools.api.models.shipping_method.ShippingMethodDraft shippingMethodDraft) {
-            return post(shippingMethodDraft);
-        }
-
-        public ByProjectKeyShippingMethodsPost create(
-                UnaryOperator<com.commercetools.api.models.shipping_method.ShippingMethodDraftBuilder> op) {
-            return post(op.apply(com.commercetools.api.models.shipping_method.ShippingMethodDraftBuilder.of()).build());
-        }
+    (java-implements): 'ByProjectKeyShippingMethodsRequestBuilderMixin'
     get:
       (java-implements):
         'com.commercetools.api.models.PagedQueryResourceRequest<ByProjectKeyShippingMethodsGet,
@@ -1205,46 +1166,7 @@ types:
           'com.commercetools.api.client.ApiDeleteMethod<ByProjectKeyShippingMethodsByIDDelete, com.commercetools.api.models.shipping_method.ShippingMethod>'
 
   /shopping-lists:
-    (java-mixin): |
-        public ByProjectKeyShoppingListsByIDPost update(
-                com.commercetools.api.models.Versioned<com.commercetools.api.models.shopping_list.ShoppingList> shoppingList,
-                java.util.List<com.commercetools.api.models.shopping_list.ShoppingListUpdateAction> actions) {
-            return withId(shoppingList.getId()).post(builder -> com.commercetools.api.models.shopping_list.ShoppingListUpdate.builder()
-                    .version(shoppingList.getVersion())
-                    .actions(actions));
-        }
-
-        public ByProjectKeyShoppingListsByIDPost update(
-                com.commercetools.api.models.Versioned<com.commercetools.api.models.shopping_list.ShoppingList> shoppingList,
-                UnaryOperator<UpdateActionBuilder<com.commercetools.api.models.shopping_list.ShoppingListUpdateAction, com.commercetools.api.models.shopping_list.ShoppingListUpdateActionBuilder>> op) {
-            return withId(shoppingList.getId()).post(builder -> com.commercetools.api.models.shopping_list.ShoppingListUpdate.builder()
-                    .version(shoppingList.getVersion())
-                    .actions(op.apply(UpdateActionBuilder
-                            .of(com.commercetools.api.models.shopping_list.ShoppingListUpdateActionBuilder::of)).actions));
-        }
-
-        public WithUpdateActionBuilder<com.commercetools.api.models.shopping_list.ShoppingListUpdateAction, com.commercetools.api.models.shopping_list.ShoppingListUpdateActionBuilder, ByProjectKeyShoppingListsByIDPost> update(
-                com.commercetools.api.models.Versioned<com.commercetools.api.models.shopping_list.ShoppingList> shoppingList) {
-            return builder -> withId(shoppingList.getId())
-                    .post(b -> com.commercetools.api.models.shopping_list.ShoppingListUpdate.builder()
-                            .version(shoppingList.getVersion())
-                            .actions(builder.apply(UpdateActionBuilder
-                                    .of(com.commercetools.api.models.shopping_list.ShoppingListUpdateActionBuilder::of)).actions));
-        }
-
-        public ByProjectKeyShoppingListsByIDDelete delete(
-                com.commercetools.api.models.Versioned<com.commercetools.api.models.shopping_list.ShoppingList> shoppingList) {
-            return withId(shoppingList.getId()).delete().withVersion(shoppingList.getVersion());
-        }
-
-        public ByProjectKeyShoppingListsPost create(com.commercetools.api.models.shopping_list.ShoppingListDraft shoppingListDraft) {
-            return post(shoppingListDraft);
-        }
-
-        public ByProjectKeyShoppingListsPost create(
-                UnaryOperator<com.commercetools.api.models.shopping_list.ShoppingListDraftBuilder> op) {
-            return post(op.apply(com.commercetools.api.models.shopping_list.ShoppingListDraftBuilder.of()).build());
-        }
+    (java-implements): 'ByProjectKeyShoppingListsRequestBuilderMixin'
     get:
       (java-implements):
         'com.commercetools.api.models.PagedQueryResourceRequest<ByProjectKeyShoppingListsGet,
@@ -1259,46 +1181,7 @@ types:
           'com.commercetools.api.client.ApiDeleteMethod<ByProjectKeyShoppingListsByIDDelete, com.commercetools.api.models.shopping_list.ShoppingList>'
 
   /states:
-    (java-mixin): |
-        public ByProjectKeyStatesByIDPost update(
-                com.commercetools.api.models.Versioned<com.commercetools.api.models.state.State> state,
-                java.util.List<com.commercetools.api.models.state.StateUpdateAction> actions) {
-            return withId(state.getId()).post(builder -> com.commercetools.api.models.state.StateUpdate.builder()
-                    .version(state.getVersion())
-                    .actions(actions));
-        }
-
-        public ByProjectKeyStatesByIDPost update(
-                com.commercetools.api.models.Versioned<com.commercetools.api.models.state.State> state,
-                UnaryOperator<UpdateActionBuilder<com.commercetools.api.models.state.StateUpdateAction, com.commercetools.api.models.state.StateUpdateActionBuilder>> op) {
-            return withId(state.getId()).post(builder -> com.commercetools.api.models.state.StateUpdate.builder()
-                    .version(state.getVersion())
-                    .actions(op.apply(UpdateActionBuilder
-                            .of(com.commercetools.api.models.state.StateUpdateActionBuilder::of)).actions));
-        }
-
-        public WithUpdateActionBuilder<com.commercetools.api.models.state.StateUpdateAction, com.commercetools.api.models.state.StateUpdateActionBuilder, ByProjectKeyStatesByIDPost> update(
-                com.commercetools.api.models.Versioned<com.commercetools.api.models.state.State> state) {
-            return builder -> withId(state.getId())
-                    .post(b -> com.commercetools.api.models.state.StateUpdate.builder()
-                            .version(state.getVersion())
-                            .actions(builder.apply(UpdateActionBuilder
-                                    .of(com.commercetools.api.models.state.StateUpdateActionBuilder::of)).actions));
-        }
-
-        public ByProjectKeyStatesByIDDelete delete(
-                com.commercetools.api.models.Versioned<com.commercetools.api.models.state.State> state) {
-            return withId(state.getId()).delete().withVersion(state.getVersion());
-        }
-
-        public ByProjectKeyStatesPost create(com.commercetools.api.models.state.StateDraft stateDraft) {
-            return post(stateDraft);
-        }
-
-        public ByProjectKeyStatesPost create(
-                UnaryOperator<com.commercetools.api.models.state.StateDraftBuilder> op) {
-            return post(op.apply(com.commercetools.api.models.state.StateDraftBuilder.of()).build());
-        }
+    (java-implements): 'ByProjectKeyStatesRequestBuilderMixin'
     get:
       (java-implements):
         'com.commercetools.api.models.PagedQueryResourceRequest<ByProjectKeyStatesGet,
@@ -1313,46 +1196,7 @@ types:
           'com.commercetools.api.client.ApiDeleteMethod<ByProjectKeyStatesByIDDelete, com.commercetools.api.models.state.State>'
 
   /subscriptions:
-    (java-mixin): |
-        public ByProjectKeySubscriptionsByIDPost update(
-                com.commercetools.api.models.Versioned<com.commercetools.api.models.subscription.Subscription> subscription,
-                java.util.List<com.commercetools.api.models.subscription.SubscriptionUpdateAction> actions) {
-            return withId(subscription.getId()).post(builder -> com.commercetools.api.models.subscription.SubscriptionUpdate.builder()
-                    .version(subscription.getVersion())
-                    .actions(actions));
-        }
-
-        public ByProjectKeySubscriptionsByIDPost update(
-                com.commercetools.api.models.Versioned<com.commercetools.api.models.subscription.Subscription> subscription,
-                UnaryOperator<UpdateActionBuilder<com.commercetools.api.models.subscription.SubscriptionUpdateAction, com.commercetools.api.models.subscription.SubscriptionUpdateActionBuilder>> op) {
-            return withId(subscription.getId()).post(builder -> com.commercetools.api.models.subscription.SubscriptionUpdate.builder()
-                    .version(subscription.getVersion())
-                    .actions(op.apply(UpdateActionBuilder
-                            .of(com.commercetools.api.models.subscription.SubscriptionUpdateActionBuilder::of)).actions));
-        }
-
-        public WithUpdateActionBuilder<com.commercetools.api.models.subscription.SubscriptionUpdateAction, com.commercetools.api.models.subscription.SubscriptionUpdateActionBuilder, ByProjectKeySubscriptionsByIDPost> update(
-                com.commercetools.api.models.Versioned<com.commercetools.api.models.subscription.Subscription> subscription) {
-            return builder -> withId(subscription.getId())
-                    .post(b -> com.commercetools.api.models.subscription.SubscriptionUpdate.builder()
-                            .version(subscription.getVersion())
-                            .actions(builder.apply(UpdateActionBuilder
-                                    .of(com.commercetools.api.models.subscription.SubscriptionUpdateActionBuilder::of)).actions));
-        }
-
-        public ByProjectKeySubscriptionsByIDDelete delete(
-                com.commercetools.api.models.Versioned<com.commercetools.api.models.subscription.Subscription> subscription) {
-            return withId(subscription.getId()).delete().withVersion(subscription.getVersion());
-        }
-
-        public ByProjectKeySubscriptionsPost create(com.commercetools.api.models.subscription.SubscriptionDraft subscriptionDraft) {
-            return post(subscriptionDraft);
-        }
-
-        public ByProjectKeySubscriptionsPost create(
-                UnaryOperator<com.commercetools.api.models.subscription.SubscriptionDraftBuilder> op) {
-            return post(op.apply(com.commercetools.api.models.subscription.SubscriptionDraftBuilder.of()).build());
-        }
+    (java-implements): 'ByProjectKeySubscriptionsRequestBuilderMixin'
     get:
       (java-implements):
         'com.commercetools.api.models.PagedQueryResourceRequest<ByProjectKeySubscriptionsGet,
@@ -1367,46 +1211,7 @@ types:
           'com.commercetools.api.client.ApiDeleteMethod<ByProjectKeySubscriptionsByIDDelete, com.commercetools.api.models.subscription.Subscription>'
 
   /tax-categories:
-    (java-mixin): |
-        public ByProjectKeyTaxCategoriesByIDPost update(
-                com.commercetools.api.models.Versioned<com.commercetools.api.models.tax_category.TaxCategory> taxCategory,
-                java.util.List<com.commercetools.api.models.tax_category.TaxCategoryUpdateAction> actions) {
-            return withId(taxCategory.getId()).post(builder -> com.commercetools.api.models.tax_category.TaxCategoryUpdate.builder()
-                    .version(taxCategory.getVersion())
-                    .actions(actions));
-        }
-
-        public ByProjectKeyTaxCategoriesByIDPost update(
-                com.commercetools.api.models.Versioned<com.commercetools.api.models.tax_category.TaxCategory> taxCategory,
-                UnaryOperator<UpdateActionBuilder<com.commercetools.api.models.tax_category.TaxCategoryUpdateAction, com.commercetools.api.models.tax_category.TaxCategoryUpdateActionBuilder>> op) {
-            return withId(taxCategory.getId()).post(builder -> com.commercetools.api.models.tax_category.TaxCategoryUpdate.builder()
-                    .version(taxCategory.getVersion())
-                    .actions(op.apply(UpdateActionBuilder
-                            .of(com.commercetools.api.models.tax_category.TaxCategoryUpdateActionBuilder::of)).actions));
-        }
-
-        public WithUpdateActionBuilder<com.commercetools.api.models.tax_category.TaxCategoryUpdateAction, com.commercetools.api.models.tax_category.TaxCategoryUpdateActionBuilder, ByProjectKeyTaxCategoriesByIDPost> update(
-                com.commercetools.api.models.Versioned<com.commercetools.api.models.tax_category.TaxCategory> taxCategory) {
-            return builder -> withId(taxCategory.getId())
-                    .post(b -> com.commercetools.api.models.tax_category.TaxCategoryUpdate.builder()
-                            .version(taxCategory.getVersion())
-                            .actions(builder.apply(UpdateActionBuilder
-                                    .of(com.commercetools.api.models.tax_category.TaxCategoryUpdateActionBuilder::of)).actions));
-        }
-
-        public ByProjectKeyTaxCategoriesByIDDelete delete(
-                com.commercetools.api.models.Versioned<com.commercetools.api.models.tax_category.TaxCategory> taxCategory) {
-            return withId(taxCategory.getId()).delete().withVersion(taxCategory.getVersion());
-        }
-
-        public ByProjectKeyTaxCategoriesPost create(com.commercetools.api.models.tax_category.TaxCategoryDraft taxCategoryDraft) {
-            return post(taxCategoryDraft);
-        }
-
-        public ByProjectKeyTaxCategoriesPost create(
-                UnaryOperator<com.commercetools.api.models.tax_category.TaxCategoryDraftBuilder> op) {
-            return post(op.apply(com.commercetools.api.models.tax_category.TaxCategoryDraftBuilder.of()).build());
-        }
+    (java-implements): 'ByProjectKeyTaxCategoriesRequestBuilderMixin'
     get:
       (java-implements):
         'com.commercetools.api.models.PagedQueryResourceRequest<ByProjectKeyTaxCategoriesGet,
@@ -1421,46 +1226,7 @@ types:
           'com.commercetools.api.client.ApiDeleteMethod<ByProjectKeyTaxCategoriesByIDDelete, com.commercetools.api.models.tax_category.TaxCategory>'
 
   /types:
-    (java-mixin): |
-        public ByProjectKeyTypesByIDPost update(
-                com.commercetools.api.models.Versioned<com.commercetools.api.models.type.Type> type,
-                java.util.List<com.commercetools.api.models.type.TypeUpdateAction> actions) {
-            return withId(type.getId()).post(builder -> com.commercetools.api.models.type.TypeUpdate.builder()
-                    .version(type.getVersion())
-                    .actions(actions));
-        }
-
-        public ByProjectKeyTypesByIDPost update(
-                com.commercetools.api.models.Versioned<com.commercetools.api.models.type.Type> type,
-                UnaryOperator<UpdateActionBuilder<com.commercetools.api.models.type.TypeUpdateAction, com.commercetools.api.models.type.TypeUpdateActionBuilder>> op) {
-            return withId(type.getId()).post(builder -> com.commercetools.api.models.type.TypeUpdate.builder()
-                    .version(type.getVersion())
-                    .actions(op.apply(UpdateActionBuilder
-                            .of(com.commercetools.api.models.type.TypeUpdateActionBuilder::of)).actions));
-        }
-
-        public WithUpdateActionBuilder<com.commercetools.api.models.type.TypeUpdateAction, com.commercetools.api.models.type.TypeUpdateActionBuilder, ByProjectKeyTypesByIDPost> update(
-                com.commercetools.api.models.Versioned<com.commercetools.api.models.type.Type> type) {
-            return builder -> withId(type.getId())
-                    .post(b -> com.commercetools.api.models.type.TypeUpdate.builder()
-                            .version(type.getVersion())
-                            .actions(builder.apply(UpdateActionBuilder
-                                    .of(com.commercetools.api.models.type.TypeUpdateActionBuilder::of)).actions));
-        }
-
-        public ByProjectKeyTypesByIDDelete delete(
-                com.commercetools.api.models.Versioned<com.commercetools.api.models.type.Type> type) {
-            return withId(type.getId()).delete().withVersion(type.getVersion());
-        }
-
-        public ByProjectKeyTypesPost create(com.commercetools.api.models.type.TypeDraft typeDraft) {
-            return post(typeDraft);
-        }
-
-        public ByProjectKeyTypesPost create(
-                UnaryOperator<com.commercetools.api.models.type.TypeDraftBuilder> op) {
-            return post(op.apply(com.commercetools.api.models.type.TypeDraftBuilder.of()).build());
-        }
+    (java-implements): 'ByProjectKeyTypesRequestBuilderMixin'
     get:
       (java-implements):
         'com.commercetools.api.models.PagedQueryResourceRequest<ByProjectKeyTypesGet,
@@ -1475,46 +1241,7 @@ types:
           'com.commercetools.api.client.ApiDeleteMethod<ByProjectKeyTypesByIDDelete, com.commercetools.api.models.type.Type>'
 
   /zones:
-    (java-mixin): |
-        public ByProjectKeyZonesByIDPost update(
-                com.commercetools.api.models.Versioned<com.commercetools.api.models.zone.Zone> zone,
-                java.util.List<com.commercetools.api.models.zone.ZoneUpdateAction> actions) {
-            return withId(zone.getId()).post(builder -> com.commercetools.api.models.zone.ZoneUpdate.builder()
-                    .version(zone.getVersion())
-                    .actions(actions));
-        }
-
-        public ByProjectKeyZonesByIDPost update(
-                com.commercetools.api.models.Versioned<com.commercetools.api.models.zone.Zone> zone,
-                UnaryOperator<UpdateActionBuilder<com.commercetools.api.models.zone.ZoneUpdateAction, com.commercetools.api.models.zone.ZoneUpdateActionBuilder>> op) {
-            return withId(zone.getId()).post(builder -> com.commercetools.api.models.zone.ZoneUpdate.builder()
-                    .version(zone.getVersion())
-                    .actions(op.apply(UpdateActionBuilder
-                            .of(com.commercetools.api.models.zone.ZoneUpdateActionBuilder::of)).actions));
-        }
-
-        public WithUpdateActionBuilder<com.commercetools.api.models.zone.ZoneUpdateAction, com.commercetools.api.models.zone.ZoneUpdateActionBuilder, ByProjectKeyZonesByIDPost> update(
-                com.commercetools.api.models.Versioned<com.commercetools.api.models.zone.Zone> zone) {
-            return builder -> withId(zone.getId())
-                    .post(b -> com.commercetools.api.models.zone.ZoneUpdate.builder()
-                            .version(zone.getVersion())
-                            .actions(builder.apply(UpdateActionBuilder
-                                    .of(com.commercetools.api.models.zone.ZoneUpdateActionBuilder::of)).actions));
-        }
-
-        public ByProjectKeyZonesByIDDelete delete(
-                com.commercetools.api.models.Versioned<com.commercetools.api.models.zone.Zone> zone) {
-            return withId(zone.getId()).delete().withVersion(zone.getVersion());
-        }
-
-        public ByProjectKeyZonesPost create(com.commercetools.api.models.zone.ZoneDraft zoneDraft) {
-            return post(zoneDraft);
-        }
-
-        public ByProjectKeyZonesPost create(
-                UnaryOperator<com.commercetools.api.models.zone.ZoneDraftBuilder> op) {
-            return post(op.apply(com.commercetools.api.models.zone.ZoneDraftBuilder.of()).build());
-        }
+    (java-implements): 'ByProjectKeyZonesRequestBuilderMixin'
     get:
       (java-implements):
         'com.commercetools.api.models.PagedQueryResourceRequest<ByProjectKeyZonesGet,
@@ -1529,46 +1256,7 @@ types:
           'com.commercetools.api.client.ApiDeleteMethod<ByProjectKeyZonesByIDDelete, com.commercetools.api.models.zone.Zone>'
 
   /extensions:
-    (java-mixin): |
-        public ByProjectKeyExtensionsByIDPost update(
-                com.commercetools.api.models.Versioned<com.commercetools.api.models.extension.Extension> extension,
-                java.util.List<com.commercetools.api.models.extension.ExtensionUpdateAction> actions) {
-            return withId(extension.getId()).post(builder -> com.commercetools.api.models.extension.ExtensionUpdate.builder()
-                    .version(extension.getVersion())
-                    .actions(actions));
-        }
-
-        public ByProjectKeyExtensionsByIDPost update(
-                com.commercetools.api.models.Versioned<com.commercetools.api.models.extension.Extension> extension,
-                UnaryOperator<UpdateActionBuilder<com.commercetools.api.models.extension.ExtensionUpdateAction, com.commercetools.api.models.extension.ExtensionUpdateActionBuilder>> op) {
-            return withId(extension.getId()).post(builder -> com.commercetools.api.models.extension.ExtensionUpdate.builder()
-                    .version(extension.getVersion())
-                    .actions(op.apply(UpdateActionBuilder
-                            .of(com.commercetools.api.models.extension.ExtensionUpdateActionBuilder::of)).actions));
-        }
-
-        public WithUpdateActionBuilder<com.commercetools.api.models.extension.ExtensionUpdateAction, com.commercetools.api.models.extension.ExtensionUpdateActionBuilder, ByProjectKeyExtensionsByIDPost> update(
-                com.commercetools.api.models.Versioned<com.commercetools.api.models.extension.Extension> extension) {
-            return builder -> withId(extension.getId())
-                    .post(b -> com.commercetools.api.models.extension.ExtensionUpdate.builder()
-                            .version(extension.getVersion())
-                            .actions(builder.apply(UpdateActionBuilder
-                                    .of(com.commercetools.api.models.extension.ExtensionUpdateActionBuilder::of)).actions));
-        }
-
-        public ByProjectKeyExtensionsByIDDelete delete(
-                com.commercetools.api.models.Versioned<com.commercetools.api.models.extension.Extension> extension) {
-            return withId(extension.getId()).delete().withVersion(extension.getVersion());
-        }
-
-        public ByProjectKeyExtensionsPost create(com.commercetools.api.models.extension.ExtensionDraft extensionDraft) {
-            return post(extensionDraft);
-        }
-
-        public ByProjectKeyExtensionsPost create(
-                UnaryOperator<com.commercetools.api.models.extension.ExtensionDraftBuilder> op) {
-            return post(op.apply(com.commercetools.api.models.extension.ExtensionDraftBuilder.of()).build());
-        }
+    (java-implements): 'ByProjectKeyExtensionsRequestBuilderMixin'
     get:
       (java-implements):
         'com.commercetools.api.models.PagedQueryResourceRequest<ByProjectKeyExtensionsGet,
@@ -1583,46 +1271,7 @@ types:
           'com.commercetools.api.client.ApiDeleteMethod<ByProjectKeyExtensionsByIDDelete, com.commercetools.api.models.extension.Extension>'
 
   /stores:
-    (java-mixin): |
-        public ByProjectKeyStoresByIDPost update(
-                com.commercetools.api.models.Versioned<com.commercetools.api.models.store.Store> store,
-                java.util.List<com.commercetools.api.models.store.StoreUpdateAction> actions) {
-            return withId(store.getId()).post(builder -> com.commercetools.api.models.store.StoreUpdate.builder()
-                    .version(store.getVersion())
-                    .actions(actions));
-        }
-
-        public ByProjectKeyStoresByIDPost update(
-                com.commercetools.api.models.Versioned<com.commercetools.api.models.store.Store> store,
-                UnaryOperator<UpdateActionBuilder<com.commercetools.api.models.store.StoreUpdateAction, com.commercetools.api.models.store.StoreUpdateActionBuilder>> op) {
-            return withId(store.getId()).post(builder -> com.commercetools.api.models.store.StoreUpdate.builder()
-                    .version(store.getVersion())
-                    .actions(op.apply(UpdateActionBuilder
-                            .of(com.commercetools.api.models.store.StoreUpdateActionBuilder::of)).actions));
-        }
-
-        public WithUpdateActionBuilder<com.commercetools.api.models.store.StoreUpdateAction, com.commercetools.api.models.store.StoreUpdateActionBuilder, ByProjectKeyStoresByIDPost> update(
-                com.commercetools.api.models.Versioned<com.commercetools.api.models.store.Store> store) {
-            return builder -> withId(store.getId())
-                    .post(b -> com.commercetools.api.models.store.StoreUpdate.builder()
-                            .version(store.getVersion())
-                            .actions(builder.apply(UpdateActionBuilder
-                                    .of(com.commercetools.api.models.store.StoreUpdateActionBuilder::of)).actions));
-        }
-
-        public ByProjectKeyStoresByIDDelete delete(
-                com.commercetools.api.models.Versioned<com.commercetools.api.models.store.Store> store) {
-            return withId(store.getId()).delete().withVersion(store.getVersion());
-        }
-
-        public ByProjectKeyStoresPost create(com.commercetools.api.models.store.StoreDraft storeDraft) {
-            return post(storeDraft);
-        }
-
-        public ByProjectKeyStoresPost create(
-                UnaryOperator<com.commercetools.api.models.store.StoreDraftBuilder> op) {
-            return post(op.apply(com.commercetools.api.models.store.StoreDraftBuilder.of()).build());
-        }
+    (java-implements): 'ByProjectKeyStoresRequestBuilderMixin'
     get:
       (java-implements):
         'com.commercetools.api.models.PagedQueryResourceRequest<ByProjectKeyStoresGet,
@@ -1637,46 +1286,7 @@ types:
           'com.commercetools.api.client.ApiDeleteMethod<ByProjectKeyStoresByIDDelete, com.commercetools.api.models.store.Store>'
 
   /standalone-prices:
-    (java-mixin): |
-        public ByProjectKeyStandalonePricesByIDPost update(
-                com.commercetools.api.models.Versioned<com.commercetools.api.models.standalone_price.StandalonePrice> standalonePrice,
-                java.util.List<com.commercetools.api.models.standalone_price.StandalonePriceUpdateAction> actions) {
-            return withId(standalonePrice.getId()).post(builder -> com.commercetools.api.models.standalone_price.StandalonePriceUpdate.builder()
-                    .version(standalonePrice.getVersion())
-                    .actions(actions));
-        }
-
-        public ByProjectKeyStandalonePricesByIDPost update(
-                com.commercetools.api.models.Versioned<com.commercetools.api.models.standalone_price.StandalonePrice> standalonePrice,
-                UnaryOperator<UpdateActionBuilder<com.commercetools.api.models.standalone_price.StandalonePriceUpdateAction, com.commercetools.api.models.standalone_price.StandalonePriceUpdateActionBuilder>> op) {
-            return withId(standalonePrice.getId()).post(builder -> com.commercetools.api.models.standalone_price.StandalonePriceUpdate.builder()
-                    .version(standalonePrice.getVersion())
-                    .actions(op.apply(UpdateActionBuilder
-                            .of(com.commercetools.api.models.standalone_price.StandalonePriceUpdateActionBuilder::of)).actions));
-        }
-
-        public WithUpdateActionBuilder<com.commercetools.api.models.standalone_price.StandalonePriceUpdateAction, com.commercetools.api.models.standalone_price.StandalonePriceUpdateActionBuilder, ByProjectKeyStandalonePricesByIDPost> update(
-                com.commercetools.api.models.Versioned<com.commercetools.api.models.standalone_price.StandalonePrice> standalonePrice) {
-            return builder -> withId(standalonePrice.getId())
-                    .post(b -> com.commercetools.api.models.standalone_price.StandalonePriceUpdate.builder()
-                            .version(standalonePrice.getVersion())
-                            .actions(builder.apply(UpdateActionBuilder
-                                    .of(com.commercetools.api.models.standalone_price.StandalonePriceUpdateActionBuilder::of)).actions));
-        }
-
-        public ByProjectKeyStandalonePricesByIDDelete delete(
-                com.commercetools.api.models.Versioned<com.commercetools.api.models.standalone_price.StandalonePrice> standalonePrice) {
-            return withId(standalonePrice.getId()).delete().withVersion(standalonePrice.getVersion());
-        }
-
-        public ByProjectKeyStandalonePricesPost create(com.commercetools.api.models.standalone_price.StandalonePriceDraft standalonePriceDraft) {
-            return post(standalonePriceDraft);
-        }
-
-        public ByProjectKeyStandalonePricesPost create(
-                UnaryOperator<com.commercetools.api.models.standalone_price.StandalonePriceDraftBuilder> op) {
-            return post(op.apply(com.commercetools.api.models.standalone_price.StandalonePriceDraftBuilder.of()).build());
-        }
+    (java-implements): 'ByProjectKeyStandalonePricesRequestBuilderMixin'
     get:
       (java-implements):
         'com.commercetools.api.models.PagedQueryResourceRequest<ByProjectKeyStandalonePricesGet,
@@ -1691,46 +1301,7 @@ types:
           'com.commercetools.api.client.ApiDeleteMethod<ByProjectKeyStandalonePricesByIDDelete, com.commercetools.api.models.standalone_price.StandalonePrice>'
 
   /attribute-groups:
-    (java-mixin): |
-        public ByProjectKeyAttributeGroupsByIDPost update(
-                com.commercetools.api.models.Versioned<com.commercetools.api.models.attribute_group.AttributeGroup> attributeGroup,
-                java.util.List<com.commercetools.api.models.attribute_group.AttributeGroupUpdateAction> actions) {
-            return withId(attributeGroup.getId()).post(builder -> com.commercetools.api.models.attribute_group.AttributeGroupUpdate.builder()
-                    .version(attributeGroup.getVersion())
-                    .actions(actions));
-        }
-
-        public ByProjectKeyAttributeGroupsByIDPost update(
-                com.commercetools.api.models.Versioned<com.commercetools.api.models.attribute_group.AttributeGroup> attributeGroup,
-                UnaryOperator<UpdateActionBuilder<com.commercetools.api.models.attribute_group.AttributeGroupUpdateAction, com.commercetools.api.models.attribute_group.AttributeGroupUpdateActionBuilder>> op) {
-            return withId(attributeGroup.getId()).post(builder -> com.commercetools.api.models.attribute_group.AttributeGroupUpdate.builder()
-                    .version(attributeGroup.getVersion())
-                    .actions(op.apply(UpdateActionBuilder
-                            .of(com.commercetools.api.models.attribute_group.AttributeGroupUpdateActionBuilder::of)).actions));
-        }
-
-        public WithUpdateActionBuilder<com.commercetools.api.models.attribute_group.AttributeGroupUpdateAction, com.commercetools.api.models.attribute_group.AttributeGroupUpdateActionBuilder, ByProjectKeyAttributeGroupsByIDPost> update(
-                com.commercetools.api.models.Versioned<com.commercetools.api.models.attribute_group.AttributeGroup> attributeGroup) {
-            return builder -> withId(attributeGroup.getId())
-                    .post(b -> com.commercetools.api.models.attribute_group.AttributeGroupUpdate.builder()
-                            .version(attributeGroup.getVersion())
-                            .actions(builder.apply(UpdateActionBuilder
-                                    .of(com.commercetools.api.models.attribute_group.AttributeGroupUpdateActionBuilder::of)).actions));
-        }
-
-        public ByProjectKeyAttributeGroupsByIDDelete delete(
-                com.commercetools.api.models.Versioned<com.commercetools.api.models.attribute_group.AttributeGroup> attributeGroup) {
-            return withId(attributeGroup.getId()).delete().withVersion(attributeGroup.getVersion());
-        }
-
-        public ByProjectKeyAttributeGroupsPost create(com.commercetools.api.models.attribute_group.AttributeGroupDraft attributeGroupDraft) {
-            return post(attributeGroupDraft);
-        }
-
-        public ByProjectKeyAttributeGroupsPost create(
-                UnaryOperator<com.commercetools.api.models.attribute_group.AttributeGroupDraftBuilder> op) {
-            return post(op.apply(com.commercetools.api.models.attribute_group.AttributeGroupDraftBuilder.of()).build());
-        }
+    (java-implements): 'ByProjectKeyAttributeGroupsRequestBuilderMixin'
     /key={key}:
       delete:
         (java-implements):
@@ -1741,17 +1312,4 @@ types:
           'com.commercetools.api.client.ApiDeleteMethod<ByProjectKeyAttributeGroupsByIDDelete, com.commercetools.api.models.attribute_group.AttributeGroup>'
 
   /api-clients:
-    (java-mixin): |
-        public ByProjectKeyApiClientsByIDDelete delete(
-                com.commercetools.api.models.Identifiable<com.commercetools.api.models.api_client.ApiClient> apiClient) {
-            return withId(apiClient.getId()).delete();
-        }
-
-        public ByProjectKeyApiClientsPost create(com.commercetools.api.models.api_client.ApiClientDraft apiClientDraft) {
-            return post(apiClientDraft);
-        }
-
-        public ByProjectKeyApiClientsPost create(
-                UnaryOperator<com.commercetools.api.models.api_client.ApiClientDraftBuilder> op) {
-            return post(op.apply(com.commercetools.api.models.api_client.ApiClientDraftBuilder.of()).build());
-        }
+    (java-implements): 'ByProjectKeyApiClientsRequestBuilderMixin'

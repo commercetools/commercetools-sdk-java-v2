@@ -2402,7 +2402,7 @@ package com.commercetools.docs.meta;
  * </tr>
  * <tr>
  *   <td>{@link io.sphere.sdk.subscriptions.IronMqDestination}</td>
- *   <td>{@link com.commercetools.api.models.subscription.IronMqDestination}</td>
+ *   <td>removed</td>
  * </tr>
  * <tr>
  *   <td>{@link io.sphere.sdk.subscriptions.MessageSubscription}</td>

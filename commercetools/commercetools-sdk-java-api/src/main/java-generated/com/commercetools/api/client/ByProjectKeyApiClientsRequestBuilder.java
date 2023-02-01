@@ -7,7 +7,7 @@ import io.vrap.rmf.base.client.ApiHttpClient;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-public class ByProjectKeyApiClientsRequestBuilder {
+public class ByProjectKeyApiClientsRequestBuilder implements ByProjectKeyApiClientsRequestBuilderMixin {
 
     private final ApiHttpClient apiHttpClient;
     private final String projectKey;
@@ -33,19 +33,4 @@ public class ByProjectKeyApiClientsRequestBuilder {
     public ByProjectKeyApiClientsByIDRequestBuilder withId(String ID) {
         return new ByProjectKeyApiClientsByIDRequestBuilder(apiHttpClient, projectKey, ID);
     }
-
-    public ByProjectKeyApiClientsByIDDelete delete(
-            com.commercetools.api.models.Identifiable<com.commercetools.api.models.api_client.ApiClient> apiClient) {
-        return withId(apiClient.getId()).delete();
-    }
-
-    public ByProjectKeyApiClientsPost create(com.commercetools.api.models.api_client.ApiClientDraft apiClientDraft) {
-        return post(apiClientDraft);
-    }
-
-    public ByProjectKeyApiClientsPost create(
-            UnaryOperator<com.commercetools.api.models.api_client.ApiClientDraftBuilder> op) {
-        return post(op.apply(com.commercetools.api.models.api_client.ApiClientDraftBuilder.of()).build());
-    }
-
 }

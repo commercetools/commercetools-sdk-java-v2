@@ -80,8 +80,6 @@ public class QuoteRequestImpl implements QuoteRequest, ModelBase {
 
     private com.commercetools.api.models.state.StateReference state;
 
-    private String purchaseOrderNumber;
-
     private com.commercetools.api.models.business_unit.BusinessUnitKeyReference businessUnit;
 
     @JsonCreator
@@ -114,7 +112,6 @@ public class QuoteRequestImpl implements QuoteRequest, ModelBase {
             @JsonProperty("directDiscounts") final java.util.List<com.commercetools.api.models.cart.DirectDiscount> directDiscounts,
             @JsonProperty("custom") final com.commercetools.api.models.type.CustomFields custom,
             @JsonProperty("state") final com.commercetools.api.models.state.StateReference state,
-            @JsonProperty("purchaseOrderNumber") final String purchaseOrderNumber,
             @JsonProperty("businessUnit") final com.commercetools.api.models.business_unit.BusinessUnitKeyReference businessUnit) {
         this.id = id;
         this.version = version;
@@ -146,7 +143,6 @@ public class QuoteRequestImpl implements QuoteRequest, ModelBase {
         this.directDiscounts = directDiscounts;
         this.custom = custom;
         this.state = state;
-        this.purchaseOrderNumber = purchaseOrderNumber;
         this.businessUnit = businessUnit;
     }
 
@@ -394,14 +390,6 @@ public class QuoteRequestImpl implements QuoteRequest, ModelBase {
     }
 
     /**
-     *  <p>Identifier for a purchase order, usually in a B2B context. The Purchase Order Number is typically entered by the Buyer.</p>
-     */
-
-    public String getPurchaseOrderNumber() {
-        return this.purchaseOrderNumber;
-    }
-
-    /**
      *  <p>The BusinessUnit for the Quote Request.</p>
      */
 
@@ -550,10 +538,6 @@ public class QuoteRequestImpl implements QuoteRequest, ModelBase {
         this.state = state;
     }
 
-    public void setPurchaseOrderNumber(final String purchaseOrderNumber) {
-        this.purchaseOrderNumber = purchaseOrderNumber;
-    }
-
     public void setBusinessUnit(
             final com.commercetools.api.models.business_unit.BusinessUnitKeyReference businessUnit) {
         this.businessUnit = businessUnit;
@@ -599,7 +583,6 @@ public class QuoteRequestImpl implements QuoteRequest, ModelBase {
                 .append(directDiscounts, that.directDiscounts)
                 .append(custom, that.custom)
                 .append(state, that.state)
-                .append(purchaseOrderNumber, that.purchaseOrderNumber)
                 .append(businessUnit, that.businessUnit)
                 .isEquals();
     }
@@ -636,7 +619,6 @@ public class QuoteRequestImpl implements QuoteRequest, ModelBase {
                 .append(directDiscounts)
                 .append(custom)
                 .append(state)
-                .append(purchaseOrderNumber)
                 .append(businessUnit)
                 .toHashCode();
     }

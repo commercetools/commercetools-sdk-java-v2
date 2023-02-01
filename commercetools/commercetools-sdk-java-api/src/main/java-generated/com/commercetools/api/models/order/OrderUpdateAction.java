@@ -67,7 +67,6 @@ import io.vrap.rmf.base.client.utils.Generated;
         @JsonSubTypes.Type(value = com.commercetools.api.models.order.OrderSetParcelItemsActionImpl.class, name = OrderSetParcelItemsAction.SET_PARCEL_ITEMS),
         @JsonSubTypes.Type(value = com.commercetools.api.models.order.OrderSetParcelMeasurementsActionImpl.class, name = OrderSetParcelMeasurementsAction.SET_PARCEL_MEASUREMENTS),
         @JsonSubTypes.Type(value = com.commercetools.api.models.order.OrderSetParcelTrackingDataActionImpl.class, name = OrderSetParcelTrackingDataAction.SET_PARCEL_TRACKING_DATA),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.order.OrderSetPurchaseOrderNumberActionImpl.class, name = OrderSetPurchaseOrderNumberAction.SET_PURCHASE_ORDER_NUMBER),
         @JsonSubTypes.Type(value = com.commercetools.api.models.order.OrderSetReturnInfoActionImpl.class, name = OrderSetReturnInfoAction.SET_RETURN_INFO),
         @JsonSubTypes.Type(value = com.commercetools.api.models.order.OrderSetReturnItemCustomFieldActionImpl.class, name = OrderSetReturnItemCustomFieldAction.SET_RETURN_ITEM_CUSTOM_FIELD),
         @JsonSubTypes.Type(value = com.commercetools.api.models.order.OrderSetReturnItemCustomTypeActionImpl.class, name = OrderSetReturnItemCustomTypeAction.SET_RETURN_ITEM_CUSTOM_TYPE),
@@ -260,10 +259,6 @@ public interface OrderUpdateAction extends com.commercetools.api.models.Resource
 
     public static com.commercetools.api.models.order.OrderSetParcelTrackingDataActionBuilder setParcelTrackingDataBuilder() {
         return com.commercetools.api.models.order.OrderSetParcelTrackingDataActionBuilder.of();
-    }
-
-    public static com.commercetools.api.models.order.OrderSetPurchaseOrderNumberActionBuilder setPurchaseOrderNumberBuilder() {
-        return com.commercetools.api.models.order.OrderSetPurchaseOrderNumberActionBuilder.of();
     }
 
     public static com.commercetools.api.models.order.OrderSetReturnInfoActionBuilder setReturnInfoBuilder() {

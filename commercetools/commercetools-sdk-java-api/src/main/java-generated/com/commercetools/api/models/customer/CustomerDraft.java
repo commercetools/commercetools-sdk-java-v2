@@ -350,55 +350,7 @@ public interface CustomerDraft extends com.commercetools.api.models.Customizable
     }
 
     public static CustomerDraftBuilder builder(Customer customer) {
-        List<BaseAddress> addresses = new ArrayList<>(customer.getAddresses());
-        Map<String, Integer> addressIds = java.util.stream.IntStream.range(0, addresses.size())
-                .boxed()
-                .collect(
-                    java.util.stream.Collectors.toMap(integer -> addresses.get(integer).getId(), Function.identity()));
-        return CustomerDraft.builder()
-                .key(customer.getKey())
-                .customerNumber(customer.getCustomerNumber())
-                .externalId(customer.getExternalId())
-                .email(customer.getEmail())
-                .firstName(customer.getFirstName())
-                .lastName(customer.getLastName())
-                .middleName(customer.getMiddleName())
-                .title(customer.getTitle())
-                .dateOfBirth(customer.getDateOfBirth())
-                .companyName(customer.getCompanyName())
-                .vatId(customer.getVatId())
-                .addresses(addresses.size() > 0 ? addresses : null)
-                .defaultBillingAddress(customer.getDefaultBillingAddressId() != null
-                        ? addressIds.get(customer.getDefaultBillingAddressId())
-                        : null)
-                .defaultShippingAddress(customer.getDefaultShippingAddressId() != null
-                        ? addressIds.get(customer.getDefaultShippingAddressId())
-                        : null)
-                .billingAddresses(customer.getBillingAddressIds().size() > 0 ? addressIds.entrySet()
-                        .stream()
-                        .filter(entry -> customer.getBillingAddressIds().contains(entry.getKey()))
-                        .map(Map.Entry::getValue)
-                        .collect(java.util.stream.Collectors.toList()) : null)
-                .shippingAddresses(customer.getShippingAddressIds().size() > 0 ? addressIds.entrySet()
-                        .stream()
-                        .filter(entry -> customer.getShippingAddressIds().contains(entry.getKey()))
-                        .map(Map.Entry::getValue)
-                        .collect(java.util.stream.Collectors.toList()) : null)
-                .isEmailVerified(customer.getIsEmailVerified())
-                .customerGroup(Optional.ofNullable(customer.getCustomerGroup())
-                        .map(reference -> CustomerGroupResourceIdentifier.builder().id(reference.getId()).build())
-                        .orElse(null))
-                .locale(customer.getLocale())
-                .salutation(customer.getSalutation())
-                .stores(Optional.ofNullable(customer.getStores())
-                        .map(stores -> stores.stream()
-                                .map(store -> StoreResourceIdentifier.builder().key(store.getKey()).build())
-                                .collect(java.util.stream.Collectors.toList()))
-                        .orElse(null))
-                .authenticationMode(customer.getAuthenticationMode())
-                .custom(Optional.ofNullable(customer.getCustom())
-                        .map(com.commercetools.api.models.type.CustomFields::toDraft)
-                        .orElse(null));
+        return CustomerDraftMixin.builder(customer);
     }
 
     public static com.fasterxml.jackson.core.type.TypeReference<CustomerDraft> typeReference() {

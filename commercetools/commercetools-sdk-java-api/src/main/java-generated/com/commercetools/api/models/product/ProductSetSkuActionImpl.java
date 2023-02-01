@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>SKU cannot be changed or removed if it is associated with an InventoryEntry. If the SKU to set or unset is part of a ProductSelectionAssignment it will be automatically added or removed from the respective ProductVariantSelection.</p>
+ *  <p>SKU cannot be changed or removed if it is associated with an InventoryEntry.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductSetSkuActionImpl implements ProductSetSkuAction, ModelBase {

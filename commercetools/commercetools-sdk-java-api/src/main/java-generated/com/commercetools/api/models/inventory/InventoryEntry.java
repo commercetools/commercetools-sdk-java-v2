@@ -40,7 +40,8 @@ import io.vrap.rmf.base.client.utils.Generated;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = InventoryEntryImpl.class)
-public interface InventoryEntry extends BaseResource, com.commercetools.api.models.DomainResource<InventoryEntry>,
+public interface InventoryEntry
+        extends BaseResource, InventoryEntryMixin, com.commercetools.api.models.DomainResource<InventoryEntry>,
         com.commercetools.api.models.Referencable<InventoryEntry>,
         com.commercetools.api.models.ResourceIdentifiable<InventoryEntry>,
         com.commercetools.api.models.Customizable<InventoryEntry>, com.commercetools.api.models.WithKey {
@@ -204,20 +205,6 @@ public interface InventoryEntry extends BaseResource, com.commercetools.api.mode
 
     default <T> T withInventoryEntry(Function<InventoryEntry, T> helper) {
         return helper.apply(this);
-    }
-
-    @Override
-    public default com.commercetools.api.models.common.ResourceIdentifier toResourceIdentifier() {
-        return com.commercetools.api.models.inventory.InventoryEntryResourceIdentifier.builder().id(getId()).build();
-    }
-
-    @Override
-    public default com.commercetools.api.models.common.Reference toReference() {
-        return com.commercetools.api.models.inventory.InventoryEntryReference.builder().id(getId()).build();
-    }
-
-    public static com.commercetools.api.models.common.ReferenceTypeId referenceTypeId() {
-        return com.commercetools.api.models.common.ReferenceTypeId.INVENTORY_ENTRY;
     }
 
     public static com.fasterxml.jackson.core.type.TypeReference<InventoryEntry> typeReference() {

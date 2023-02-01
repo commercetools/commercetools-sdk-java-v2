@@ -7,7 +7,7 @@ import io.vrap.rmf.base.client.ApiHttpClient;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-public class ByProjectKeyStandalonePricesRequestBuilder {
+public class ByProjectKeyStandalonePricesRequestBuilder implements ByProjectKeyStandalonePricesRequestBuilderMixin {
 
     private final ApiHttpClient apiHttpClient;
     private final String projectKey;

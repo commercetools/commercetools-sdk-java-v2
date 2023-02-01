@@ -79,13 +79,6 @@ public interface QuoteRequestDraft
     @JsonProperty("state")
     public StateReference getState();
 
-    /**
-     *  <p>Identifier for a purchase order, usually in a B2B context. The Purchase Order Number is typically entered by the Buyer.</p>
-     */
-
-    @JsonProperty("purchaseOrderNumber")
-    public String getPurchaseOrderNumber();
-
     public void setCart(final CartResourceIdentifier cart);
 
     public void setCartVersion(final Long cartVersion);
@@ -97,8 +90,6 @@ public interface QuoteRequestDraft
     public void setCustom(final CustomFieldsDraft custom);
 
     public void setState(final StateReference state);
-
-    public void setPurchaseOrderNumber(final String purchaseOrderNumber);
 
     public static QuoteRequestDraft of() {
         return new QuoteRequestDraftImpl();
@@ -112,7 +103,6 @@ public interface QuoteRequestDraft
         instance.setComment(template.getComment());
         instance.setCustom(template.getCustom());
         instance.setState(template.getState());
-        instance.setPurchaseOrderNumber(template.getPurchaseOrderNumber());
         return instance;
     }
 

@@ -32,22 +32,18 @@ public class QuoteRequestDraftImpl implements QuoteRequestDraft, ModelBase {
 
     private com.commercetools.api.models.state.StateReference state;
 
-    private String purchaseOrderNumber;
-
     @JsonCreator
     QuoteRequestDraftImpl(@JsonProperty("cart") final com.commercetools.api.models.cart.CartResourceIdentifier cart,
             @JsonProperty("cartVersion") final Long cartVersion, @JsonProperty("key") final String key,
             @JsonProperty("comment") final String comment,
             @JsonProperty("custom") final com.commercetools.api.models.type.CustomFieldsDraft custom,
-            @JsonProperty("state") final com.commercetools.api.models.state.StateReference state,
-            @JsonProperty("purchaseOrderNumber") final String purchaseOrderNumber) {
+            @JsonProperty("state") final com.commercetools.api.models.state.StateReference state) {
         this.cart = cart;
         this.cartVersion = cartVersion;
         this.key = key;
         this.comment = comment;
         this.custom = custom;
         this.state = state;
-        this.purchaseOrderNumber = purchaseOrderNumber;
     }
 
     public QuoteRequestDraftImpl() {
@@ -101,14 +97,6 @@ public class QuoteRequestDraftImpl implements QuoteRequestDraft, ModelBase {
         return this.state;
     }
 
-    /**
-     *  <p>Identifier for a purchase order, usually in a B2B context. The Purchase Order Number is typically entered by the Buyer.</p>
-     */
-
-    public String getPurchaseOrderNumber() {
-        return this.purchaseOrderNumber;
-    }
-
     public void setCart(final com.commercetools.api.models.cart.CartResourceIdentifier cart) {
         this.cart = cart;
     }
@@ -133,10 +121,6 @@ public class QuoteRequestDraftImpl implements QuoteRequestDraft, ModelBase {
         this.state = state;
     }
 
-    public void setPurchaseOrderNumber(final String purchaseOrderNumber) {
-        this.purchaseOrderNumber = purchaseOrderNumber;
-    }
-
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -153,7 +137,6 @@ public class QuoteRequestDraftImpl implements QuoteRequestDraft, ModelBase {
                 .append(comment, that.comment)
                 .append(custom, that.custom)
                 .append(state, that.state)
-                .append(purchaseOrderNumber, that.purchaseOrderNumber)
                 .isEquals();
     }
 
@@ -165,7 +148,6 @@ public class QuoteRequestDraftImpl implements QuoteRequestDraft, ModelBase {
                 .append(comment)
                 .append(custom)
                 .append(state)
-                .append(purchaseOrderNumber)
                 .toHashCode();
     }
 

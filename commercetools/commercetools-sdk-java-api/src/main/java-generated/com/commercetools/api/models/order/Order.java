@@ -67,7 +67,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = OrderImpl.class)
-public interface Order extends BaseResource, com.commercetools.api.models.DomainResource<Order>,
+public interface Order extends BaseResource, OrderMixin, com.commercetools.api.models.DomainResource<Order>,
         com.commercetools.api.models.Referencable<Order>, com.commercetools.api.models.ResourceIdentifiable<Order>,
         com.commercetools.api.models.Customizable<Order>, com.commercetools.api.models.order.OrderLike<Order> {
 
@@ -310,13 +310,6 @@ public interface Order extends BaseResource, com.commercetools.api.models.Domain
     public List<ReturnInfo> getReturnInfo();
 
     /**
-     *  <p>The Purchase Order Number is typically set by the Buyer on a QuoteRequest to track the purchase order during the quote and order flow.</p>
-     */
-
-    @JsonProperty("purchaseOrderNumber")
-    public String getPurchaseOrderNumber();
-
-    /**
      *
      */
     @Valid
@@ -489,8 +482,6 @@ public interface Order extends BaseResource, com.commercetools.api.models.Domain
 
     public void setReturnInfo(final List<ReturnInfo> returnInfo);
 
-    public void setPurchaseOrderNumber(final String purchaseOrderNumber);
-
     @JsonIgnore
     public void setDiscountCodes(final DiscountCodeInfo... discountCodes);
 
@@ -566,7 +557,6 @@ public interface Order extends BaseResource, com.commercetools.api.models.Domain
         instance.setShippingInfo(template.getShippingInfo());
         instance.setSyncInfo(template.getSyncInfo());
         instance.setReturnInfo(template.getReturnInfo());
-        instance.setPurchaseOrderNumber(template.getPurchaseOrderNumber());
         instance.setDiscountCodes(template.getDiscountCodes());
         instance.setLastMessageSequenceNumber(template.getLastMessageSequenceNumber());
         instance.setCart(template.getCart());
@@ -593,20 +583,6 @@ public interface Order extends BaseResource, com.commercetools.api.models.Domain
 
     default <T> T withOrder(Function<Order, T> helper) {
         return helper.apply(this);
-    }
-
-    @Override
-    public default com.commercetools.api.models.common.ResourceIdentifier toResourceIdentifier() {
-        return com.commercetools.api.models.order.OrderResourceIdentifier.builder().id(getId()).build();
-    }
-
-    @Override
-    public default com.commercetools.api.models.common.Reference toReference() {
-        return com.commercetools.api.models.order.OrderReference.builder().id(getId()).build();
-    }
-
-    public static com.commercetools.api.models.common.ReferenceTypeId referenceTypeId() {
-        return com.commercetools.api.models.common.ReferenceTypeId.ORDER;
     }
 
     public static com.fasterxml.jackson.core.type.TypeReference<Order> typeReference() {

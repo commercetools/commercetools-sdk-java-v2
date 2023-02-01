@@ -279,6 +279,10 @@ public interface CartDiscount
         return helper.apply(this);
     }
 
+    public static com.commercetools.api.models.common.ReferenceTypeId referenceTypeId() {
+        return com.commercetools.api.models.common.ReferenceTypeId.CART_DISCOUNT;
+    }
+
     public static com.fasterxml.jackson.core.type.TypeReference<CartDiscount> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<CartDiscount>() {
             @Override

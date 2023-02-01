@@ -154,6 +154,13 @@ public interface StagedQuote extends BaseResource, com.commercetools.api.models.
     public StateReference getState();
 
     /**
+     *  <p>The Purchase Order Number is typically set by the Buyer on a QuoteRequest to track the purchase order during the quote and order flow.</p>
+     */
+
+    @JsonProperty("purchaseOrderNumber")
+    public String getPurchaseOrderNumber();
+
+    /**
      *  <p>The BusinessUnit for the Staged Quote.</p>
      */
     @Valid
@@ -190,6 +197,8 @@ public interface StagedQuote extends BaseResource, com.commercetools.api.models.
 
     public void setState(final StateReference state);
 
+    public void setPurchaseOrderNumber(final String purchaseOrderNumber);
+
     public void setBusinessUnit(final BusinessUnitKeyReference businessUnit);
 
     public static StagedQuote of() {
@@ -213,6 +222,7 @@ public interface StagedQuote extends BaseResource, com.commercetools.api.models.
         instance.setSellerComment(template.getSellerComment());
         instance.setCustom(template.getCustom());
         instance.setState(template.getState());
+        instance.setPurchaseOrderNumber(template.getPurchaseOrderNumber());
         instance.setBusinessUnit(template.getBusinessUnit());
         return instance;
     }

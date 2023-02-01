@@ -38,4 +38,5 @@ public class ByProjectKeyShoppingListsRequestBuilder implements ByProjectKeyShop
     public ByProjectKeyShoppingListsByIDRequestBuilder withId(String ID) {
         return new ByProjectKeyShoppingListsByIDRequestBuilder(apiHttpClient, projectKey, ID);
     }
+
 }

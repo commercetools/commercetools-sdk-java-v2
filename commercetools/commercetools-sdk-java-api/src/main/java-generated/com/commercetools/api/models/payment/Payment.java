@@ -290,6 +290,10 @@ public interface Payment extends BaseResource, PaymentMixin, com.commercetools.a
         return helper.apply(this);
     }
 
+    public static com.commercetools.api.models.common.ReferenceTypeId referenceTypeId() {
+        return com.commercetools.api.models.common.ReferenceTypeId.PAYMENT;
+    }
+
     public static com.fasterxml.jackson.core.type.TypeReference<Payment> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<Payment>() {
             @Override

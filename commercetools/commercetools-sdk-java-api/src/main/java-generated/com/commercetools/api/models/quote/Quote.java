@@ -313,6 +313,13 @@ public interface Quote extends BaseResource, QuoteMixin, com.commercetools.api.m
     public StateReference getState();
 
     /**
+     *  <p>The Purchase Order Number is typically set by the Buyer on a QuoteRequest to track the purchase order during the quote and order flow.</p>
+     */
+
+    @JsonProperty("purchaseOrderNumber")
+    public String getPurchaseOrderNumber();
+
+    /**
      *  <p>The BusinessUnit for the Quote.</p>
      */
     @Valid
@@ -399,6 +406,8 @@ public interface Quote extends BaseResource, QuoteMixin, com.commercetools.api.m
 
     public void setState(final StateReference state);
 
+    public void setPurchaseOrderNumber(final String purchaseOrderNumber);
+
     public void setBusinessUnit(final BusinessUnitKeyReference businessUnit);
 
     public static Quote of() {
@@ -441,6 +450,7 @@ public interface Quote extends BaseResource, QuoteMixin, com.commercetools.api.m
         instance.setCustom(template.getCustom());
         instance.setQuoteState(template.getQuoteState());
         instance.setState(template.getState());
+        instance.setPurchaseOrderNumber(template.getPurchaseOrderNumber());
         instance.setBusinessUnit(template.getBusinessUnit());
         return instance;
     }
@@ -455,6 +465,10 @@ public interface Quote extends BaseResource, QuoteMixin, com.commercetools.api.m
 
     default <T> T withQuote(Function<Quote, T> helper) {
         return helper.apply(this);
+    }
+
+    public static com.commercetools.api.models.common.ReferenceTypeId referenceTypeId() {
+        return com.commercetools.api.models.common.ReferenceTypeId.QUOTE;
     }
 
     public static com.fasterxml.jackson.core.type.TypeReference<Quote> typeReference() {

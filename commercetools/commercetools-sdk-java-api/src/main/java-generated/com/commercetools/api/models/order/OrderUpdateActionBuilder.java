@@ -179,6 +179,10 @@ public class OrderUpdateActionBuilder {
         return com.commercetools.api.models.order.OrderSetParcelTrackingDataActionBuilder.of();
     }
 
+    public com.commercetools.api.models.order.OrderSetPurchaseOrderNumberActionBuilder setPurchaseOrderNumberBuilder() {
+        return com.commercetools.api.models.order.OrderSetPurchaseOrderNumberActionBuilder.of();
+    }
+
     public com.commercetools.api.models.order.OrderSetReturnInfoActionBuilder setReturnInfoBuilder() {
         return com.commercetools.api.models.order.OrderSetReturnInfoActionBuilder.of();
     }

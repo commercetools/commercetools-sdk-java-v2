@@ -38,4 +38,5 @@ public class ByProjectKeyCartDiscountsRequestBuilder implements ByProjectKeyCart
     public ByProjectKeyCartDiscountsByIDRequestBuilder withId(String ID) {
         return new ByProjectKeyCartDiscountsByIDRequestBuilder(apiHttpClient, projectKey, ID);
     }
+
 }

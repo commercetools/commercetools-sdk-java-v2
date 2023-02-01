@@ -42,4 +42,5 @@ public class ByProjectKeyProductDiscountsRequestBuilder implements ByProjectKeyP
     public ByProjectKeyProductDiscountsByIDRequestBuilder withId(String ID) {
         return new ByProjectKeyProductDiscountsByIDRequestBuilder(apiHttpClient, projectKey, ID);
     }
+
 }

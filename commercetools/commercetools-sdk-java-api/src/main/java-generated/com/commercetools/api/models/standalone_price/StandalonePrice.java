@@ -265,6 +265,10 @@ public interface StandalonePrice
         return helper.apply(this);
     }
 
+    public static com.commercetools.api.models.common.ReferenceTypeId referenceTypeId() {
+        return com.commercetools.api.models.common.ReferenceTypeId.STANDALONE_PRICE;
+    }
+
     public static com.fasterxml.jackson.core.type.TypeReference<StandalonePrice> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<StandalonePrice>() {
             @Override

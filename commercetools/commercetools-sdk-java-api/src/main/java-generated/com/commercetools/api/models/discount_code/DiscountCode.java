@@ -282,6 +282,10 @@ public interface DiscountCode
         return helper.apply(this);
     }
 
+    public static com.commercetools.api.models.common.ReferenceTypeId referenceTypeId() {
+        return com.commercetools.api.models.common.ReferenceTypeId.DISCOUNT_CODE;
+    }
+
     public static com.fasterxml.jackson.core.type.TypeReference<DiscountCode> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<DiscountCode>() {
             @Override

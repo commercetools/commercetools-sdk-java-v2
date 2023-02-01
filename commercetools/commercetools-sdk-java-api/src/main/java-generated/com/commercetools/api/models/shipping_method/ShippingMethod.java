@@ -235,6 +235,10 @@ public interface ShippingMethod
         return helper.apply(this);
     }
 
+    public static com.commercetools.api.models.common.ReferenceTypeId referenceTypeId() {
+        return com.commercetools.api.models.common.ReferenceTypeId.SHIPPING_METHOD;
+    }
+
     public static com.fasterxml.jackson.core.type.TypeReference<ShippingMethod> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ShippingMethod>() {
             @Override

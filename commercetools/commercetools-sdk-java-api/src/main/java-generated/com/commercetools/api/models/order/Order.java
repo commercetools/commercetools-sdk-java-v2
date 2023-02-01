@@ -310,6 +310,13 @@ public interface Order extends BaseResource, OrderMixin, com.commercetools.api.m
     public List<ReturnInfo> getReturnInfo();
 
     /**
+     *  <p>The Purchase Order Number is typically set by the Buyer on a QuoteRequest to track the purchase order during the quote and order flow.</p>
+     */
+
+    @JsonProperty("purchaseOrderNumber")
+    public String getPurchaseOrderNumber();
+
+    /**
      *
      */
     @Valid
@@ -482,6 +489,8 @@ public interface Order extends BaseResource, OrderMixin, com.commercetools.api.m
 
     public void setReturnInfo(final List<ReturnInfo> returnInfo);
 
+    public void setPurchaseOrderNumber(final String purchaseOrderNumber);
+
     @JsonIgnore
     public void setDiscountCodes(final DiscountCodeInfo... discountCodes);
 
@@ -557,6 +566,7 @@ public interface Order extends BaseResource, OrderMixin, com.commercetools.api.m
         instance.setShippingInfo(template.getShippingInfo());
         instance.setSyncInfo(template.getSyncInfo());
         instance.setReturnInfo(template.getReturnInfo());
+        instance.setPurchaseOrderNumber(template.getPurchaseOrderNumber());
         instance.setDiscountCodes(template.getDiscountCodes());
         instance.setLastMessageSequenceNumber(template.getLastMessageSequenceNumber());
         instance.setCart(template.getCart());
@@ -583,6 +593,10 @@ public interface Order extends BaseResource, OrderMixin, com.commercetools.api.m
 
     default <T> T withOrder(Function<Order, T> helper) {
         return helper.apply(this);
+    }
+
+    public static com.commercetools.api.models.common.ReferenceTypeId referenceTypeId() {
+        return com.commercetools.api.models.common.ReferenceTypeId.ORDER;
     }
 
     public static com.fasterxml.jackson.core.type.TypeReference<Order> typeReference() {

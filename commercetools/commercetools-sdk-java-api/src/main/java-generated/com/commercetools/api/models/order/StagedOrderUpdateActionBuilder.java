@@ -275,6 +275,10 @@ public class StagedOrderUpdateActionBuilder {
         return com.commercetools.api.models.order_edit.StagedOrderSetParcelTrackingDataActionBuilder.of();
     }
 
+    public com.commercetools.api.models.order_edit.StagedOrderSetPurchaseOrderNumberActionBuilder setPurchaseOrderNumberBuilder() {
+        return com.commercetools.api.models.order_edit.StagedOrderSetPurchaseOrderNumberActionBuilder.of();
+    }
+
     public com.commercetools.api.models.order_edit.StagedOrderSetReturnInfoActionBuilder setReturnInfoBuilder() {
         return com.commercetools.api.models.order_edit.StagedOrderSetReturnInfoActionBuilder.of();
     }

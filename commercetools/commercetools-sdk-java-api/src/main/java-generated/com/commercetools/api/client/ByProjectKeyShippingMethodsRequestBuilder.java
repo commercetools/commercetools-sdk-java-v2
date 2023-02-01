@@ -54,4 +54,5 @@ public class ByProjectKeyShippingMethodsRequestBuilder implements ByProjectKeySh
     public ByProjectKeyShippingMethodsByIDRequestBuilder withId(String ID) {
         return new ByProjectKeyShippingMethodsByIDRequestBuilder(apiHttpClient, projectKey, ID);
     }
+
 }

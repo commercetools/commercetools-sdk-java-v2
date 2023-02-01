@@ -199,6 +199,10 @@ public interface Product extends BaseResource, ProductMixin, com.commercetools.a
         return helper.apply(this);
     }
 
+    public static com.commercetools.api.models.common.ReferenceTypeId referenceTypeId() {
+        return com.commercetools.api.models.common.ReferenceTypeId.PRODUCT;
+    }
+
     public static com.fasterxml.jackson.core.type.TypeReference<Product> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<Product>() {
             @Override

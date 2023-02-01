@@ -42,4 +42,5 @@ public class ByProjectKeyProductTypesRequestBuilder implements ByProjectKeyProdu
     public ByProjectKeyProductTypesByIDRequestBuilder withId(String ID) {
         return new ByProjectKeyProductTypesByIDRequestBuilder(apiHttpClient, projectKey, ID);
     }
+
 }

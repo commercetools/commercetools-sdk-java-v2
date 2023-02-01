@@ -50,6 +50,8 @@ public class StagedQuoteImpl implements StagedQuote, ModelBase {
 
     private com.commercetools.api.models.state.StateReference state;
 
+    private String purchaseOrderNumber;
+
     private com.commercetools.api.models.business_unit.BusinessUnitKeyReference businessUnit;
 
     @JsonCreator
@@ -67,6 +69,7 @@ public class StagedQuoteImpl implements StagedQuote, ModelBase {
             @JsonProperty("sellerComment") final String sellerComment,
             @JsonProperty("custom") final com.commercetools.api.models.type.CustomFields custom,
             @JsonProperty("state") final com.commercetools.api.models.state.StateReference state,
+            @JsonProperty("purchaseOrderNumber") final String purchaseOrderNumber,
             @JsonProperty("businessUnit") final com.commercetools.api.models.business_unit.BusinessUnitKeyReference businessUnit) {
         this.id = id;
         this.version = version;
@@ -83,6 +86,7 @@ public class StagedQuoteImpl implements StagedQuote, ModelBase {
         this.sellerComment = sellerComment;
         this.custom = custom;
         this.state = state;
+        this.purchaseOrderNumber = purchaseOrderNumber;
         this.businessUnit = businessUnit;
     }
 
@@ -210,6 +214,14 @@ public class StagedQuoteImpl implements StagedQuote, ModelBase {
     }
 
     /**
+     *  <p>The Purchase Order Number is typically set by the Buyer on a QuoteRequest to track the purchase order during the quote and order flow.</p>
+     */
+
+    public String getPurchaseOrderNumber() {
+        return this.purchaseOrderNumber;
+    }
+
+    /**
      *  <p>The BusinessUnit for the Staged Quote.</p>
      */
 
@@ -277,6 +289,10 @@ public class StagedQuoteImpl implements StagedQuote, ModelBase {
         this.state = state;
     }
 
+    public void setPurchaseOrderNumber(final String purchaseOrderNumber) {
+        this.purchaseOrderNumber = purchaseOrderNumber;
+    }
+
     public void setBusinessUnit(
             final com.commercetools.api.models.business_unit.BusinessUnitKeyReference businessUnit) {
         this.businessUnit = businessUnit;
@@ -307,6 +323,7 @@ public class StagedQuoteImpl implements StagedQuote, ModelBase {
                 .append(sellerComment, that.sellerComment)
                 .append(custom, that.custom)
                 .append(state, that.state)
+                .append(purchaseOrderNumber, that.purchaseOrderNumber)
                 .append(businessUnit, that.businessUnit)
                 .isEquals();
     }
@@ -328,6 +345,7 @@ public class StagedQuoteImpl implements StagedQuote, ModelBase {
                 .append(sellerComment)
                 .append(custom)
                 .append(state)
+                .append(purchaseOrderNumber)
                 .append(businessUnit)
                 .toHashCode();
     }

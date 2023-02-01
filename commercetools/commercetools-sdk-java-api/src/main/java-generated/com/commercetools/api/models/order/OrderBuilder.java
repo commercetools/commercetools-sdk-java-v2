@@ -125,6 +125,9 @@ public class OrderBuilder implements Builder<Order> {
     private java.util.List<com.commercetools.api.models.order.ReturnInfo> returnInfo;
 
     @Nullable
+    private String purchaseOrderNumber;
+
+    @Nullable
     private java.util.List<com.commercetools.api.models.cart.DiscountCodeInfo> discountCodes;
 
     @Deprecated
@@ -823,6 +826,15 @@ public class OrderBuilder implements Builder<Order> {
     }
 
     /**
+     *  <p>The Purchase Order Number is typically set by the Buyer on a QuoteRequest to track the purchase order during the quote and order flow.</p>
+     */
+
+    public OrderBuilder purchaseOrderNumber(@Nullable final String purchaseOrderNumber) {
+        this.purchaseOrderNumber = purchaseOrderNumber;
+        return this;
+    }
+
+    /**
      *
      */
 
@@ -1292,6 +1304,11 @@ public class OrderBuilder implements Builder<Order> {
     }
 
     @Nullable
+    public String getPurchaseOrderNumber() {
+        return this.purchaseOrderNumber;
+    }
+
+    @Nullable
     public java.util.List<com.commercetools.api.models.cart.DiscountCodeInfo> getDiscountCodes() {
         return this.discountCodes;
     }
@@ -1373,9 +1390,9 @@ public class OrderBuilder implements Builder<Order> {
             orderNumber, customerId, customerEmail, anonymousId, businessUnit, store, lineItems, customLineItems,
             totalPrice, taxedPrice, taxedShippingPrice, shippingAddress, billingAddress, shippingMode, shipping,
             taxMode, taxRoundingMode, customerGroup, country, orderState, state, shipmentState, paymentState,
-            shippingInfo, syncInfo, returnInfo, discountCodes, lastMessageSequenceNumber, cart, quote, custom,
-            paymentInfo, locale, inventoryMode, origin, taxCalculationMode, shippingRateInput, itemShippingAddresses,
-            refusedGifts);
+            shippingInfo, syncInfo, returnInfo, purchaseOrderNumber, discountCodes, lastMessageSequenceNumber, cart,
+            quote, custom, paymentInfo, locale, inventoryMode, origin, taxCalculationMode, shippingRateInput,
+            itemShippingAddresses, refusedGifts);
     }
 
     /**
@@ -1386,9 +1403,9 @@ public class OrderBuilder implements Builder<Order> {
             orderNumber, customerId, customerEmail, anonymousId, businessUnit, store, lineItems, customLineItems,
             totalPrice, taxedPrice, taxedShippingPrice, shippingAddress, billingAddress, shippingMode, shipping,
             taxMode, taxRoundingMode, customerGroup, country, orderState, state, shipmentState, paymentState,
-            shippingInfo, syncInfo, returnInfo, discountCodes, lastMessageSequenceNumber, cart, quote, custom,
-            paymentInfo, locale, inventoryMode, origin, taxCalculationMode, shippingRateInput, itemShippingAddresses,
-            refusedGifts);
+            shippingInfo, syncInfo, returnInfo, purchaseOrderNumber, discountCodes, lastMessageSequenceNumber, cart,
+            quote, custom, paymentInfo, locale, inventoryMode, origin, taxCalculationMode, shippingRateInput,
+            itemShippingAddresses, refusedGifts);
     }
 
     public static OrderBuilder of() {
@@ -1430,6 +1447,7 @@ public class OrderBuilder implements Builder<Order> {
         builder.shippingInfo = template.getShippingInfo();
         builder.syncInfo = template.getSyncInfo();
         builder.returnInfo = template.getReturnInfo();
+        builder.purchaseOrderNumber = template.getPurchaseOrderNumber();
         builder.discountCodes = template.getDiscountCodes();
         builder.lastMessageSequenceNumber = template.getLastMessageSequenceNumber();
         builder.cart = template.getCart();

@@ -38,4 +38,5 @@ public class ByProjectKeyInventoryRequestBuilder implements ByProjectKeyInventor
     public ByProjectKeyInventoryKeyByKeyRequestBuilder withKey(String key) {
         return new ByProjectKeyInventoryKeyByKeyRequestBuilder(apiHttpClient, projectKey, key);
     }
+
 }

@@ -492,6 +492,10 @@ types:
 
   State:
     (java-extends): 'StateMixin, com.commercetools.api.models.DomainResource<State>, com.commercetools.api.models.Referencable<State>, com.commercetools.api.models.ResourceIdentifiable<State>, com.commercetools.api.models.WithKey'
+    (java-mixin): |
+      public static com.commercetools.api.models.common.ReferenceTypeId referenceTypeId() {
+          return com.commercetools.api.models.common.ReferenceTypeId.STATE;
+      }
   StateDraft:
     (java-extends): 'com.commercetools.api.models.WithKey'
   StatePagedQueryResponse:
@@ -508,6 +512,10 @@ types:
 
   Store:
     (java-extends): 'StoreMixin, com.commercetools.api.models.DomainResource<Store>, com.commercetools.api.models.Referencable<Store>, com.commercetools.api.models.ResourceIdentifiable<Store>, com.commercetools.api.models.Customizable<Store>, com.commercetools.api.models.WithKey'
+    (java-mixin): |
+      public static com.commercetools.api.models.common.ReferenceTypeId referenceTypeId() {
+          return com.commercetools.api.models.common.ReferenceTypeId.STORE;
+      }
   StoreDraft:
     (java-extends): 'com.commercetools.api.models.CustomizableDraft<StoreDraft>, com.commercetools.api.models.WithKey'
   StorePagedQueryResponse:
@@ -536,6 +544,10 @@ types:
 
   TaxCategory:
     (java-extends): 'TaxCategoryMixin, com.commercetools.api.models.DomainResource<TaxCategory>, com.commercetools.api.models.Referencable<TaxCategory>, com.commercetools.api.models.ResourceIdentifiable<TaxCategory>, com.commercetools.api.models.WithKey'
+    (java-mixin): |
+      public static com.commercetools.api.models.common.ReferenceTypeId referenceTypeId() {
+          return com.commercetools.api.models.common.ReferenceTypeId.TAX_CATEGORY;
+      }
   TaxCategoryDraft:
     (java-extends): 'com.commercetools.api.models.WithKey'
   TaxCategoryPagedQueryResponse:
@@ -552,6 +564,10 @@ types:
 
   Type:
     (java-extends): 'TypeMixin, com.commercetools.api.models.DomainResource<Type>, com.commercetools.api.models.Referencable<Type>, com.commercetools.api.models.ResourceIdentifiable<Type>, com.commercetools.api.models.WithKey'
+    (java-mixin): |
+      public static com.commercetools.api.models.common.ReferenceTypeId referenceTypeId() {
+          return com.commercetools.api.models.common.ReferenceTypeId.TYPE;
+      }
   TypeDraft:
     (java-extends): 'com.commercetools.api.models.WithKey'
   TypePagedQueryResponse:
@@ -566,6 +582,10 @@ types:
 
   Zone:
     (java-extends): 'ZoneMixin, com.commercetools.api.models.DomainResource<Zone>, com.commercetools.api.models.Referencable<Zone>, com.commercetools.api.models.ResourceIdentifiable<Zone>, com.commercetools.api.models.WithKey'
+    (java-mixin): |
+      public static com.commercetools.api.models.common.ReferenceTypeId referenceTypeId() {
+          return com.commercetools.api.models.common.ReferenceTypeId.ZONE;
+      }
   ZoneDraft:
     (java-extends): 'com.commercetools.api.models.WithKey'
   ZonePagedQueryResponse:

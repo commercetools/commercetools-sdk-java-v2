@@ -167,6 +167,10 @@ public interface TaxCategory
         return helper.apply(this);
     }
 
+    public static com.commercetools.api.models.common.ReferenceTypeId referenceTypeId() {
+        return com.commercetools.api.models.common.ReferenceTypeId.TAX_CATEGORY;
+    }
+
     public static com.fasterxml.jackson.core.type.TypeReference<TaxCategory> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<TaxCategory>() {
             @Override

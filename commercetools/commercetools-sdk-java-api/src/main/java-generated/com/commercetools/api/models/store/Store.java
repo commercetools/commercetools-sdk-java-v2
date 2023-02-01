@@ -233,6 +233,10 @@ public interface Store extends BaseResource, StoreMixin, com.commercetools.api.m
         return helper.apply(this);
     }
 
+    public static com.commercetools.api.models.common.ReferenceTypeId referenceTypeId() {
+        return com.commercetools.api.models.common.ReferenceTypeId.STORE;
+    }
+
     public static com.fasterxml.jackson.core.type.TypeReference<Store> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<Store>() {
             @Override

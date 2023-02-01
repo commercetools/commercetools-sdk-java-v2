@@ -15,7 +15,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * ProductSelectionAssignment
+ *  <p>Specifies which Product is assigned to which ProductSelection.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -49,7 +49,7 @@ public interface ProductSelectionAssignment {
     public ProductSelectionReference getProductSelection();
 
     /**
-     *  <p>Selects which Variants of the newly added Product will be included, or excluded, from the Product Selection. The list of SKUs will be updated automatically on any change of those performed on the respective Product itself.</p>
+     *  <p>Selects which Variants of the newly added Product will be included, or excluded, from the Product Selection.</p>
      */
     @Valid
     @JsonProperty("variantSelection")

@@ -73,7 +73,6 @@ import com.commercetools.api.models.order_edit.StagedOrderSetParcelCustomTypeAct
 import com.commercetools.api.models.order_edit.StagedOrderSetParcelItemsAction;
 import com.commercetools.api.models.order_edit.StagedOrderSetParcelMeasurementsAction;
 import com.commercetools.api.models.order_edit.StagedOrderSetParcelTrackingDataAction;
-import com.commercetools.api.models.order_edit.StagedOrderSetPurchaseOrderNumberAction;
 import com.commercetools.api.models.order_edit.StagedOrderSetReturnInfoAction;
 import com.commercetools.api.models.order_edit.StagedOrderSetReturnItemCustomFieldAction;
 import com.commercetools.api.models.order_edit.StagedOrderSetReturnItemCustomTypeAction;
@@ -180,7 +179,6 @@ import io.vrap.rmf.base.client.utils.Generated;
         @JsonSubTypes.Type(value = com.commercetools.api.models.order_edit.StagedOrderSetParcelItemsActionImpl.class, name = StagedOrderSetParcelItemsAction.SET_PARCEL_ITEMS),
         @JsonSubTypes.Type(value = com.commercetools.api.models.order_edit.StagedOrderSetParcelMeasurementsActionImpl.class, name = StagedOrderSetParcelMeasurementsAction.SET_PARCEL_MEASUREMENTS),
         @JsonSubTypes.Type(value = com.commercetools.api.models.order_edit.StagedOrderSetParcelTrackingDataActionImpl.class, name = StagedOrderSetParcelTrackingDataAction.SET_PARCEL_TRACKING_DATA),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.order_edit.StagedOrderSetPurchaseOrderNumberActionImpl.class, name = StagedOrderSetPurchaseOrderNumberAction.SET_PURCHASE_ORDER_NUMBER),
         @JsonSubTypes.Type(value = com.commercetools.api.models.order_edit.StagedOrderSetReturnInfoActionImpl.class, name = StagedOrderSetReturnInfoAction.SET_RETURN_INFO),
         @JsonSubTypes.Type(value = com.commercetools.api.models.order_edit.StagedOrderSetReturnItemCustomFieldActionImpl.class, name = StagedOrderSetReturnItemCustomFieldAction.SET_RETURN_ITEM_CUSTOM_FIELD),
         @JsonSubTypes.Type(value = com.commercetools.api.models.order_edit.StagedOrderSetReturnItemCustomTypeActionImpl.class, name = StagedOrderSetReturnItemCustomTypeAction.SET_RETURN_ITEM_CUSTOM_TYPE),
@@ -475,10 +473,6 @@ public interface StagedOrderUpdateAction
 
     public static com.commercetools.api.models.order_edit.StagedOrderSetParcelTrackingDataActionBuilder setParcelTrackingDataBuilder() {
         return com.commercetools.api.models.order_edit.StagedOrderSetParcelTrackingDataActionBuilder.of();
-    }
-
-    public static com.commercetools.api.models.order_edit.StagedOrderSetPurchaseOrderNumberActionBuilder setPurchaseOrderNumberBuilder() {
-        return com.commercetools.api.models.order_edit.StagedOrderSetPurchaseOrderNumberActionBuilder.of();
     }
 
     public static com.commercetools.api.models.order_edit.StagedOrderSetReturnInfoActionBuilder setReturnInfoBuilder() {

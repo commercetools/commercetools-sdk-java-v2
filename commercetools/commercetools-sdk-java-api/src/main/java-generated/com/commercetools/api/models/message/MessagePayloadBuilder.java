@@ -287,10 +287,6 @@ public class MessagePayloadBuilder {
         return com.commercetools.api.models.message.OrderPaymentStateChangedMessagePayloadBuilder.of();
     }
 
-    public com.commercetools.api.models.message.OrderPurchaseOrderNumberSetMessagePayloadBuilder orderPurchaseOrderNumberSetBuilder() {
-        return com.commercetools.api.models.message.OrderPurchaseOrderNumberSetMessagePayloadBuilder.of();
-    }
-
     public com.commercetools.api.models.message.OrderReturnShipmentStateChangedMessagePayloadBuilder orderReturnShipmentStateChangedBuilder() {
         return com.commercetools.api.models.message.OrderReturnShipmentStateChangedMessagePayloadBuilder.of();
     }

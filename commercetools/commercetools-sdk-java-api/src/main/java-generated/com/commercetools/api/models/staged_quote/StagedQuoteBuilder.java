@@ -69,9 +69,6 @@ public class StagedQuoteBuilder implements Builder<StagedQuote> {
     private com.commercetools.api.models.state.StateReference state;
 
     @Nullable
-    private String purchaseOrderNumber;
-
-    @Nullable
     private com.commercetools.api.models.business_unit.BusinessUnitKeyReference businessUnit;
 
     /**
@@ -285,15 +282,6 @@ public class StagedQuoteBuilder implements Builder<StagedQuote> {
     }
 
     /**
-     *  <p>The Purchase Order Number is typically set by the Buyer on a QuoteRequest to track the purchase order during the quote and order flow.</p>
-     */
-
-    public StagedQuoteBuilder purchaseOrderNumber(@Nullable final String purchaseOrderNumber) {
-        this.purchaseOrderNumber = purchaseOrderNumber;
-        return this;
-    }
-
-    /**
      *  <p>The BusinessUnit for the Staged Quote.</p>
      */
 
@@ -384,11 +372,6 @@ public class StagedQuoteBuilder implements Builder<StagedQuote> {
     }
 
     @Nullable
-    public String getPurchaseOrderNumber() {
-        return this.purchaseOrderNumber;
-    }
-
-    @Nullable
     public com.commercetools.api.models.business_unit.BusinessUnitKeyReference getBusinessUnit() {
         return this.businessUnit;
     }
@@ -403,7 +386,7 @@ public class StagedQuoteBuilder implements Builder<StagedQuote> {
         Objects.requireNonNull(quotationCart, StagedQuote.class + ": quotationCart is missing");
         return new StagedQuoteImpl(id, version, createdAt, lastModifiedAt, key, lastModifiedBy, createdBy,
             stagedQuoteState, customer, quoteRequest, quotationCart, validTo, sellerComment, custom, state,
-            purchaseOrderNumber, businessUnit);
+            businessUnit);
     }
 
     /**
@@ -412,7 +395,7 @@ public class StagedQuoteBuilder implements Builder<StagedQuote> {
     public StagedQuote buildUnchecked() {
         return new StagedQuoteImpl(id, version, createdAt, lastModifiedAt, key, lastModifiedBy, createdBy,
             stagedQuoteState, customer, quoteRequest, quotationCart, validTo, sellerComment, custom, state,
-            purchaseOrderNumber, businessUnit);
+            businessUnit);
     }
 
     public static StagedQuoteBuilder of() {
@@ -436,7 +419,6 @@ public class StagedQuoteBuilder implements Builder<StagedQuote> {
         builder.sellerComment = template.getSellerComment();
         builder.custom = template.getCustom();
         builder.state = template.getState();
-        builder.purchaseOrderNumber = template.getPurchaseOrderNumber();
         builder.businessUnit = template.getBusinessUnit();
         return builder;
     }

@@ -17,7 +17,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>Generic draft type to model those fields all Business Units have in common.</p>
+ *  <p>Generic draft type to model those fields all Business Units have in common. The additional fields required for creating a Company or Division are represented on CompanyDraft and DivisionDraft.</p>
  *
  * <hr>
  * Example to create a subtype instance using the builder pattern

@@ -11,7 +11,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>Draft type to represent the top level of a business. Contains the fields and values of the generic [BusinessUnitDraft](ctp:api:type:BusinessUnitDraft] that are used specifically for creating a Company.</p>
+ *  <p>Draft type to represent the top level of a business. Contains the fields and values of the generic BusinessUnitDraft that are used specifically for creating a Company.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

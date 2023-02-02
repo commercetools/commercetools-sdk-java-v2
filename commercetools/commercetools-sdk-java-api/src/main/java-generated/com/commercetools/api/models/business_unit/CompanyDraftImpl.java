@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Draft type to represent the top level of a business. Contains the fields and values of the generic [BusinessUnitDraft](ctp:api:type:BusinessUnitDraft] that are used specifically for creating a Company.</p>
+ *  <p>Draft type to represent the top level of a business. Contains the fields and values of the generic BusinessUnitDraft that are used specifically for creating a Company.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CompanyDraftImpl implements CompanyDraft, ModelBase {

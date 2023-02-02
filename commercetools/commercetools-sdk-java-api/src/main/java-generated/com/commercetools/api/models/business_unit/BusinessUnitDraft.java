@@ -9,7 +9,7 @@ import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.common.BaseAddress;
-import com.commercetools.api.models.store.StoreKeyReference;
+import com.commercetools.api.models.store.StoreResourceIdentifier;
 import com.commercetools.api.models.type.CustomFieldsDraft;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
@@ -53,11 +53,11 @@ public interface BusinessUnitDraft extends com.commercetools.api.models.WithKey 
     public BusinessUnitStatus getStatus();
 
     /**
-     *  <p>References to Stores the Business Unit is associated with. Can only be set when <code>storeMode</code> is <code>Explicit</code>. If not empty, the Business Unit can only be linked to Carts and Orders of a referenced Store. If empty, the Business Unit can only create Carts, Orders, or Quotes that have no <code>store</code> value. Defaults to empty for Companies and not set for Divisions.</p>
+     *  <p>Sets the Stores the Business Unit is associated with. Can only be set when <code>storeMode</code> is <code>Explicit</code>. If not empty, the Business Unit can only be linked to Carts and Orders of a referenced Store. If empty, the Business Unit can only create Carts, Orders, or Quotes that have no <code>store</code> value. Defaults to empty for Companies and not set for Divisions.</p>
      */
     @Valid
     @JsonProperty("stores")
-    public List<StoreKeyReference> getStores();
+    public List<StoreResourceIdentifier> getStores();
 
     /**
      *  <p>Defines whether the Stores of the Business Unit are set on the Business Unit or are inherited from a parent. Defaults to <code>Explicit</code> for Companies and to <code>FromParent</code> for Divisions.</p>
@@ -141,9 +141,9 @@ public interface BusinessUnitDraft extends com.commercetools.api.models.WithKey 
     public void setStatus(final BusinessUnitStatus status);
 
     @JsonIgnore
-    public void setStores(final StoreKeyReference... stores);
+    public void setStores(final StoreResourceIdentifier... stores);
 
-    public void setStores(final List<StoreKeyReference> stores);
+    public void setStores(final List<StoreResourceIdentifier> stores);
 
     public void setStoreMode(final BusinessUnitStoreMode storeMode);
 

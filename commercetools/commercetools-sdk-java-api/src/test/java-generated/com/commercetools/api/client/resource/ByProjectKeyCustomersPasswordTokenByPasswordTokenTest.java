@@ -71,14 +71,14 @@ public class ByProjectKeyCustomersPasswordTokenByPasswordTokenTest {
                                 .get()
                                 .withExpand("expand")
                                 .createHttpRequest(),
-                        "get", "/test_projectKey/customers/password-token=test_passwordToken?expand=expand", },
+                        "get", "test_projectKey/customers/password-token=test_passwordToken?expand=expand", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .customers()
                                 .withPasswordToken("test_passwordToken")
                                 .get()
                                 .createHttpRequest(),
-                        "get", "/test_projectKey/customers/password-token=test_passwordToken", } };
+                        "get", "test_projectKey/customers/password-token=test_passwordToken", } };
     }
 
     @DataProvider

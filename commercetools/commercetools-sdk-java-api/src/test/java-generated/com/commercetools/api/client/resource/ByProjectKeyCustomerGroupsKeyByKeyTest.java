@@ -71,12 +71,12 @@ public class ByProjectKeyCustomerGroupsKeyByKeyTest {
                                 .get()
                                 .withExpand("expand")
                                 .createHttpRequest(),
-                        "get", "/test_projectKey/customer-groups/key=test_key?expand=expand", },
+                        "get", "test_projectKey/customer-groups/key=test_key?expand=expand", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .customerGroups()
                         .withKey("test_key")
                         .get()
-                        .createHttpRequest(), "get", "/test_projectKey/customer-groups/key=test_key", },
+                        .createHttpRequest(), "get", "test_projectKey/customer-groups/key=test_key", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .customerGroups()
@@ -84,12 +84,12 @@ public class ByProjectKeyCustomerGroupsKeyByKeyTest {
                                 .post(com.commercetools.api.models.customer_group.CustomerGroupUpdate.of())
                                 .withExpand("expand")
                                 .createHttpRequest(),
-                        "post", "/test_projectKey/customer-groups/key=test_key?expand=expand", },
+                        "post", "test_projectKey/customer-groups/key=test_key?expand=expand", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .customerGroups()
                         .withKey("test_key")
                         .post(com.commercetools.api.models.customer_group.CustomerGroupUpdate.of())
-                        .createHttpRequest(), "post", "/test_projectKey/customer-groups/key=test_key", },
+                        .createHttpRequest(), "post", "test_projectKey/customer-groups/key=test_key", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .customerGroups()
@@ -97,7 +97,7 @@ public class ByProjectKeyCustomerGroupsKeyByKeyTest {
                                 .delete()
                                 .withVersion(2)
                                 .createHttpRequest(),
-                        "delete", "/test_projectKey/customer-groups/key=test_key?version=2", },
+                        "delete", "test_projectKey/customer-groups/key=test_key?version=2", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .customerGroups()
@@ -105,12 +105,12 @@ public class ByProjectKeyCustomerGroupsKeyByKeyTest {
                                 .delete()
                                 .withExpand("expand")
                                 .createHttpRequest(),
-                        "delete", "/test_projectKey/customer-groups/key=test_key?expand=expand", },
+                        "delete", "test_projectKey/customer-groups/key=test_key?expand=expand", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .customerGroups()
                         .withKey("test_key")
                         .delete()
-                        .createHttpRequest(), "delete", "/test_projectKey/customer-groups/key=test_key", } };
+                        .createHttpRequest(), "delete", "test_projectKey/customer-groups/key=test_key", } };
     }
 
     @DataProvider

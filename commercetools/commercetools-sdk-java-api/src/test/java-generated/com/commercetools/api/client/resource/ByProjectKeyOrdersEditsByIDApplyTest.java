@@ -69,7 +69,7 @@ public class ByProjectKeyOrdersEditsByIDApplyTest {
                 .withId("test_ID")
                 .apply()
                 .post(com.commercetools.api.models.order_edit.OrderEditApply.of())
-                .createHttpRequest(), "post", "/test_projectKey/orders/edits/test_ID/apply", } };
+                .createHttpRequest(), "post", "test_projectKey/orders/edits/test_ID/apply", } };
     }
 
     @DataProvider

@@ -71,7 +71,7 @@ public class ByProjectKeyShippingMethodsMatchingCartTest {
                                 .get()
                                 .withCartId("cartId")
                                 .createHttpRequest(),
-                        "get", "/test_projectKey/shipping-methods/matching-cart?cartId=cartId", },
+                        "get", "test_projectKey/shipping-methods/matching-cart?cartId=cartId", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .shippingMethods()
@@ -79,12 +79,12 @@ public class ByProjectKeyShippingMethodsMatchingCartTest {
                                 .get()
                                 .withExpand("expand")
                                 .createHttpRequest(),
-                        "get", "/test_projectKey/shipping-methods/matching-cart?expand=expand", },
+                        "get", "test_projectKey/shipping-methods/matching-cart?expand=expand", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .shippingMethods()
                         .matchingCart()
                         .get()
-                        .createHttpRequest(), "get", "/test_projectKey/shipping-methods/matching-cart", } };
+                        .createHttpRequest(), "get", "test_projectKey/shipping-methods/matching-cart", } };
     }
 
     @DataProvider

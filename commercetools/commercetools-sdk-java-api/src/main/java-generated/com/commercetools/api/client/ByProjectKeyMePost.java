@@ -52,7 +52,7 @@ public class ByProjectKeyMePost extends
     @Override
     protected ApiHttpRequest buildHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
-        String httpRequestPath = String.format("/%s/me", this.projectKey);
+        String httpRequestPath = String.format("%s/me", this.projectKey);
         if (!params.isEmpty()) {
             httpRequestPath += "?" + String.join("&", params);
         }

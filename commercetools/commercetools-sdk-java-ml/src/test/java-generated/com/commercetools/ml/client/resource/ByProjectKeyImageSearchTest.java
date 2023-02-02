@@ -68,16 +68,16 @@ public class ByProjectKeyImageSearchTest {
                         .imageSearch()
                         .post(FileTestUtils.testFileFor(ByProjectKeyImageSearchTest.class))
                         .withLimit(7)
-                        .createHttpRequest(), "post", "/test_projectKey/image-search?limit=7", },
+                        .createHttpRequest(), "post", "test_projectKey/image-search?limit=7", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .imageSearch()
                         .post(FileTestUtils.testFileFor(ByProjectKeyImageSearchTest.class))
                         .withOffset(3)
-                        .createHttpRequest(), "post", "/test_projectKey/image-search?offset=3", },
+                        .createHttpRequest(), "post", "test_projectKey/image-search?offset=3", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .imageSearch()
                         .post(FileTestUtils.testFileFor(ByProjectKeyImageSearchTest.class))
-                        .createHttpRequest(), "post", "/test_projectKey/image-search", } };
+                        .createHttpRequest(), "post", "test_projectKey/image-search", } };
     }
 
     @DataProvider

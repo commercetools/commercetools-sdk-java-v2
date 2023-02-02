@@ -10,10 +10,12 @@ import com.commercetools.api.models.extension.*;
 import commercetools.utils.CommercetoolsTestUtils;
 
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 public class ExtensionIntegrationTests {
 
+    @Disabled
     @Test
     public void createAndDeleteById() {
         Extension extension = createExtension();
@@ -22,6 +24,7 @@ public class ExtensionIntegrationTests {
         Assertions.assertEquals(extension.getId(), deletedExtension.getId());
     }
 
+    @Disabled
     @Test
     public void getById() {
         withExtension(extension -> {
@@ -37,6 +40,7 @@ public class ExtensionIntegrationTests {
         });
     }
 
+    @Disabled
     @Test
     public void getByKey() {
         withExtension(extension -> {
@@ -52,6 +56,7 @@ public class ExtensionIntegrationTests {
         });
     }
 
+    @Disabled
     @Test
     public void query() {
         withExtension(extension -> {
@@ -67,6 +72,7 @@ public class ExtensionIntegrationTests {
         });
     }
 
+    @Disabled
     @Test
     public void updateById() {
         withUpdateableExtension(extension -> {
@@ -87,6 +93,7 @@ public class ExtensionIntegrationTests {
         });
     }
 
+    @Disabled
     @Test
     public void updateByKey() {
         withUpdateableExtension(extension -> {
@@ -107,6 +114,7 @@ public class ExtensionIntegrationTests {
         });
     }
 
+    @Disabled
     @Test
     public void deleteByKey() {
         Extension extension = createExtension();

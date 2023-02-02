@@ -69,25 +69,23 @@ public class ByProjectKeyShoppingListsByIDTest {
                         .withId("test_ID")
                         .get()
                         .withExpand("expand")
-                        .createHttpRequest(), "get", "/test_projectKey/shopping-lists/test_ID?expand=expand", },
+                        .createHttpRequest(), "get", "test_projectKey/shopping-lists/test_ID?expand=expand", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .shoppingLists()
                         .withId("test_ID")
                         .get()
-                        .createHttpRequest(), "get", "/test_projectKey/shopping-lists/test_ID", },
-                new Object[] {
-                        apiRoot.withProjectKey("test_projectKey")
-                                .shoppingLists()
-                                .withId("test_ID")
-                                .post(com.commercetools.api.models.shopping_list.ShoppingListUpdate.of())
-                                .withExpand("expand")
-                                .createHttpRequest(),
-                        "post", "/test_projectKey/shopping-lists/test_ID?expand=expand", },
+                        .createHttpRequest(), "get", "test_projectKey/shopping-lists/test_ID", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .shoppingLists()
                         .withId("test_ID")
                         .post(com.commercetools.api.models.shopping_list.ShoppingListUpdate.of())
-                        .createHttpRequest(), "post", "/test_projectKey/shopping-lists/test_ID", },
+                        .withExpand("expand")
+                        .createHttpRequest(), "post", "test_projectKey/shopping-lists/test_ID?expand=expand", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .shoppingLists()
+                        .withId("test_ID")
+                        .post(com.commercetools.api.models.shopping_list.ShoppingListUpdate.of())
+                        .createHttpRequest(), "post", "test_projectKey/shopping-lists/test_ID", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .shoppingLists()
@@ -95,7 +93,7 @@ public class ByProjectKeyShoppingListsByIDTest {
                                 .delete()
                                 .withExpand("expand")
                                 .createHttpRequest(),
-                        "delete", "/test_projectKey/shopping-lists/test_ID?expand=expand", },
+                        "delete", "test_projectKey/shopping-lists/test_ID?expand=expand", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .shoppingLists()
@@ -103,18 +101,18 @@ public class ByProjectKeyShoppingListsByIDTest {
                                 .delete()
                                 .withDataErasure(true)
                                 .createHttpRequest(),
-                        "delete", "/test_projectKey/shopping-lists/test_ID?dataErasure=true", },
+                        "delete", "test_projectKey/shopping-lists/test_ID?dataErasure=true", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .shoppingLists()
                         .withId("test_ID")
                         .delete()
                         .withVersion(2)
-                        .createHttpRequest(), "delete", "/test_projectKey/shopping-lists/test_ID?version=2", },
+                        .createHttpRequest(), "delete", "test_projectKey/shopping-lists/test_ID?version=2", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .shoppingLists()
                         .withId("test_ID")
                         .delete()
-                        .createHttpRequest(), "delete", "/test_projectKey/shopping-lists/test_ID", } };
+                        .createHttpRequest(), "delete", "test_projectKey/shopping-lists/test_ID", } };
     }
 
     @DataProvider

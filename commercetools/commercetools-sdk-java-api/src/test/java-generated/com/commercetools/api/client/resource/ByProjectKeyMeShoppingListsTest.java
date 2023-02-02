@@ -69,37 +69,37 @@ public class ByProjectKeyMeShoppingListsTest {
                         .shoppingLists()
                         .get()
                         .withExpand("expand")
-                        .createHttpRequest(), "get", "/test_projectKey/me/shopping-lists?expand=expand", },
+                        .createHttpRequest(), "get", "test_projectKey/me/shopping-lists?expand=expand", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .me()
                         .shoppingLists()
                         .get()
                         .withSort("sort")
-                        .createHttpRequest(), "get", "/test_projectKey/me/shopping-lists?sort=sort", },
+                        .createHttpRequest(), "get", "test_projectKey/me/shopping-lists?sort=sort", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .me()
                         .shoppingLists()
                         .get()
                         .withLimit(7)
-                        .createHttpRequest(), "get", "/test_projectKey/me/shopping-lists?limit=7", },
+                        .createHttpRequest(), "get", "test_projectKey/me/shopping-lists?limit=7", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .me()
                         .shoppingLists()
                         .get()
                         .withOffset(3)
-                        .createHttpRequest(), "get", "/test_projectKey/me/shopping-lists?offset=3", },
+                        .createHttpRequest(), "get", "test_projectKey/me/shopping-lists?offset=3", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .me()
                         .shoppingLists()
                         .get()
                         .withWithTotal(true)
-                        .createHttpRequest(), "get", "/test_projectKey/me/shopping-lists?withTotal=true", },
+                        .createHttpRequest(), "get", "test_projectKey/me/shopping-lists?withTotal=true", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .me()
                         .shoppingLists()
                         .get()
                         .withWhere("where")
-                        .createHttpRequest(), "get", "/test_projectKey/me/shopping-lists?where=where", },
+                        .createHttpRequest(), "get", "test_projectKey/me/shopping-lists?where=where", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .me()
@@ -107,20 +107,20 @@ public class ByProjectKeyMeShoppingListsTest {
                                 .get()
                                 .withPredicateVar("varName", "var.varName")
                                 .createHttpRequest(),
-                        "get", "/test_projectKey/me/shopping-lists?var.varName=var.varName", },
+                        "get", "test_projectKey/me/shopping-lists?var.varName=var.varName", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey").me().shoppingLists().get().createHttpRequest(),
-                        "get", "/test_projectKey/me/shopping-lists", },
+                        "get", "test_projectKey/me/shopping-lists", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .me()
                         .shoppingLists()
                         .post(com.commercetools.api.models.me.MyShoppingListDraft.of())
                         .withExpand("expand")
-                        .createHttpRequest(), "post", "/test_projectKey/me/shopping-lists?expand=expand", },
+                        .createHttpRequest(), "post", "test_projectKey/me/shopping-lists?expand=expand", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .me()
                         .shoppingLists()
                         .post(com.commercetools.api.models.me.MyShoppingListDraft.of())
-                        .createHttpRequest(), "post", "/test_projectKey/me/shopping-lists", } };
+                        .createHttpRequest(), "post", "test_projectKey/me/shopping-lists", } };
     }
 
     @DataProvider

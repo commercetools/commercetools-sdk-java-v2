@@ -68,50 +68,50 @@ public class ByProjectKeyShippingMethodsTest {
                         .shippingMethods()
                         .get()
                         .withExpand("expand")
-                        .createHttpRequest(), "get", "/test_projectKey/shipping-methods?expand=expand", },
+                        .createHttpRequest(), "get", "test_projectKey/shipping-methods?expand=expand", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .shippingMethods()
                         .get()
                         .withSort("sort")
-                        .createHttpRequest(), "get", "/test_projectKey/shipping-methods?sort=sort", },
+                        .createHttpRequest(), "get", "test_projectKey/shipping-methods?sort=sort", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .shippingMethods()
                         .get()
                         .withLimit(7)
-                        .createHttpRequest(), "get", "/test_projectKey/shipping-methods?limit=7", },
+                        .createHttpRequest(), "get", "test_projectKey/shipping-methods?limit=7", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .shippingMethods()
                         .get()
                         .withOffset(3)
-                        .createHttpRequest(), "get", "/test_projectKey/shipping-methods?offset=3", },
+                        .createHttpRequest(), "get", "test_projectKey/shipping-methods?offset=3", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .shippingMethods()
                         .get()
                         .withWithTotal(true)
-                        .createHttpRequest(), "get", "/test_projectKey/shipping-methods?withTotal=true", },
+                        .createHttpRequest(), "get", "test_projectKey/shipping-methods?withTotal=true", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .shippingMethods()
                         .get()
                         .withWhere("where")
-                        .createHttpRequest(), "get", "/test_projectKey/shipping-methods?where=where", },
+                        .createHttpRequest(), "get", "test_projectKey/shipping-methods?where=where", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .shippingMethods()
                                 .get()
                                 .withPredicateVar("varName", "var.varName")
                                 .createHttpRequest(),
-                        "get", "/test_projectKey/shipping-methods?var.varName=var.varName", },
+                        "get", "test_projectKey/shipping-methods?var.varName=var.varName", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey").shippingMethods().get().createHttpRequest(),
-                        "get", "/test_projectKey/shipping-methods", },
+                        "get", "test_projectKey/shipping-methods", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .shippingMethods()
                         .post(com.commercetools.api.models.shipping_method.ShippingMethodDraft.of())
                         .withExpand("expand")
-                        .createHttpRequest(), "post", "/test_projectKey/shipping-methods?expand=expand", },
+                        .createHttpRequest(), "post", "test_projectKey/shipping-methods?expand=expand", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .shippingMethods()
                         .post(com.commercetools.api.models.shipping_method.ShippingMethodDraft.of())
-                        .createHttpRequest(), "post", "/test_projectKey/shipping-methods", } };
+                        .createHttpRequest(), "post", "test_projectKey/shipping-methods", } };
     }
 
     @DataProvider

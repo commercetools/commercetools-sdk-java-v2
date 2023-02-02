@@ -1181,6 +1181,10 @@ public class ClientBuilder implements Builder<ApiHttpClient> {
      * @return ClientBuilder instance
      */
     public ClientBuilder withApiBaseUrl(final URI apiBaseUrl) {
+        if (!apiBaseUrl.getPath().endsWith("/")) {
+            this.apiBaseUrl = URI.create(apiBaseUrl + "/");
+            return this;
+        }
         this.apiBaseUrl = apiBaseUrl;
         return this;
     }

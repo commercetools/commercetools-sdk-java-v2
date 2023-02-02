@@ -72,7 +72,7 @@ public class ByProjectKeyInStoreKeyByStoreKeyMeOrdersTest {
                                 .get()
                                 .withExpand("expand")
                                 .createHttpRequest(),
-                        "get", "/test_projectKey/in-store/key=test_storeKey/me/orders?expand=expand", },
+                        "get", "test_projectKey/in-store/key=test_storeKey/me/orders?expand=expand", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .inStoreKeyWithStoreKeyValue("test_storeKey")
@@ -81,7 +81,7 @@ public class ByProjectKeyInStoreKeyByStoreKeyMeOrdersTest {
                                 .get()
                                 .withSort("sort")
                                 .createHttpRequest(),
-                        "get", "/test_projectKey/in-store/key=test_storeKey/me/orders?sort=sort", },
+                        "get", "test_projectKey/in-store/key=test_storeKey/me/orders?sort=sort", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .inStoreKeyWithStoreKeyValue("test_storeKey")
@@ -90,7 +90,7 @@ public class ByProjectKeyInStoreKeyByStoreKeyMeOrdersTest {
                                 .get()
                                 .withLimit(7)
                                 .createHttpRequest(),
-                        "get", "/test_projectKey/in-store/key=test_storeKey/me/orders?limit=7", },
+                        "get", "test_projectKey/in-store/key=test_storeKey/me/orders?limit=7", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .inStoreKeyWithStoreKeyValue("test_storeKey")
@@ -99,7 +99,7 @@ public class ByProjectKeyInStoreKeyByStoreKeyMeOrdersTest {
                                 .get()
                                 .withOffset(3)
                                 .createHttpRequest(),
-                        "get", "/test_projectKey/in-store/key=test_storeKey/me/orders?offset=3", },
+                        "get", "test_projectKey/in-store/key=test_storeKey/me/orders?offset=3", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .inStoreKeyWithStoreKeyValue("test_storeKey")
@@ -108,7 +108,7 @@ public class ByProjectKeyInStoreKeyByStoreKeyMeOrdersTest {
                                 .get()
                                 .withWithTotal(true)
                                 .createHttpRequest(),
-                        "get", "/test_projectKey/in-store/key=test_storeKey/me/orders?withTotal=true", },
+                        "get", "test_projectKey/in-store/key=test_storeKey/me/orders?withTotal=true", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .inStoreKeyWithStoreKeyValue("test_storeKey")
@@ -117,7 +117,7 @@ public class ByProjectKeyInStoreKeyByStoreKeyMeOrdersTest {
                                 .get()
                                 .withWhere("where")
                                 .createHttpRequest(),
-                        "get", "/test_projectKey/in-store/key=test_storeKey/me/orders?where=where", },
+                        "get", "test_projectKey/in-store/key=test_storeKey/me/orders?where=where", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .inStoreKeyWithStoreKeyValue("test_storeKey")
@@ -126,13 +126,13 @@ public class ByProjectKeyInStoreKeyByStoreKeyMeOrdersTest {
                                 .get()
                                 .withPredicateVar("varName", "var.varName")
                                 .createHttpRequest(),
-                        "get", "/test_projectKey/in-store/key=test_storeKey/me/orders?var.varName=var.varName", },
+                        "get", "test_projectKey/in-store/key=test_storeKey/me/orders?var.varName=var.varName", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .inStoreKeyWithStoreKeyValue("test_storeKey")
                         .me()
                         .orders()
                         .get()
-                        .createHttpRequest(), "get", "/test_projectKey/in-store/key=test_storeKey/me/orders", },
+                        .createHttpRequest(), "get", "test_projectKey/in-store/key=test_storeKey/me/orders", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .inStoreKeyWithStoreKeyValue("test_storeKey")
@@ -141,7 +141,7 @@ public class ByProjectKeyInStoreKeyByStoreKeyMeOrdersTest {
                                 .post(com.commercetools.api.models.me.MyOrderFromCartDraft.of())
                                 .withExpand("expand")
                                 .createHttpRequest(),
-                        "post", "/test_projectKey/in-store/key=test_storeKey/me/orders?expand=expand", },
+                        "post", "test_projectKey/in-store/key=test_storeKey/me/orders?expand=expand", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .inStoreKeyWithStoreKeyValue("test_storeKey")
@@ -149,7 +149,7 @@ public class ByProjectKeyInStoreKeyByStoreKeyMeOrdersTest {
                                 .orders()
                                 .post(com.commercetools.api.models.me.MyOrderFromCartDraft.of())
                                 .createHttpRequest(),
-                        "post", "/test_projectKey/in-store/key=test_storeKey/me/orders", } };
+                        "post", "test_projectKey/in-store/key=test_storeKey/me/orders", } };
     }
 
     @DataProvider

@@ -72,7 +72,7 @@ public class ByProjectKeyInStoreKeyByStoreKeyCustomersEmailTokenByEmailTokenTest
                         .withExpand("expand")
                         .createHttpRequest(),
                 "get",
-                "/test_projectKey/in-store/key=test_storeKey/customers/email-token=test_emailToken?expand=expand", },
+                "test_projectKey/in-store/key=test_storeKey/customers/email-token=test_emailToken?expand=expand", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .inStoreKeyWithStoreKeyValue("test_storeKey")
@@ -80,7 +80,7 @@ public class ByProjectKeyInStoreKeyByStoreKeyCustomersEmailTokenByEmailTokenTest
                                 .withEmailToken("test_emailToken")
                                 .get()
                                 .createHttpRequest(),
-                        "get", "/test_projectKey/in-store/key=test_storeKey/customers/email-token=test_emailToken", } };
+                        "get", "test_projectKey/in-store/key=test_storeKey/customers/email-token=test_emailToken", } };
     }
 
     @DataProvider

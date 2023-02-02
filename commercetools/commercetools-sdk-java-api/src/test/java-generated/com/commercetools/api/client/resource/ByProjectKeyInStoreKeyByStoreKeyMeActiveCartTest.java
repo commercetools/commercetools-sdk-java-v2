@@ -71,7 +71,7 @@ public class ByProjectKeyInStoreKeyByStoreKeyMeActiveCartTest {
                                 .activeCart()
                                 .get()
                                 .createHttpRequest(),
-                        "get", "/test_projectKey/in-store/key=test_storeKey/me/active-cart", } };
+                        "get", "test_projectKey/in-store/key=test_storeKey/me/active-cart", } };
     }
 
     @DataProvider

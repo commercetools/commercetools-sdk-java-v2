@@ -29,7 +29,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CustomFieldsImpl.class)
-public interface CustomFields {
+public interface CustomFields extends CustomFieldsMixin {
 
     /**
      *  <p>Reference to the Type that holds the FieldDefinitions for the Custom Fields.</p>
@@ -72,14 +72,6 @@ public interface CustomFields {
 
     default <T> T withCustomFields(Function<CustomFields, T> helper) {
         return helper.apply(this);
-    }
-
-    public default CustomFieldsDraft toDraft() {
-        return toDraftBuilder().build();
-    }
-
-    public default CustomFieldsDraftBuilder toDraftBuilder() {
-        return CustomFieldsDraft.builder().type(getType().toResourceIdentifier()).fields(getFields());
     }
 
     public static com.fasterxml.jackson.core.type.TypeReference<CustomFields> typeReference() {

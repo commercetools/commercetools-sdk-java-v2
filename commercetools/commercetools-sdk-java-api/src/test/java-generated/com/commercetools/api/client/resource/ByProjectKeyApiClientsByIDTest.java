@@ -65,12 +65,12 @@ public class ByProjectKeyApiClientsByIDTest {
     public static Object[][] requestWithMethodParameters() {
         return new Object[][] { new Object[] {
                 apiRoot.withProjectKey("test_projectKey").apiClients().withId("test_ID").get().createHttpRequest(),
-                "get", "/test_projectKey/api-clients/test_ID", },
+                "get", "test_projectKey/api-clients/test_ID", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .apiClients()
                         .withId("test_ID")
                         .delete()
-                        .createHttpRequest(), "delete", "/test_projectKey/api-clients/test_ID", } };
+                        .createHttpRequest(), "delete", "test_projectKey/api-clients/test_ID", } };
     }
 
     @DataProvider

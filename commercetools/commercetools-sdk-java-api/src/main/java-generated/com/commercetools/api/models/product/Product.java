@@ -41,7 +41,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProductImpl.class)
-public interface Product extends BaseResource, com.commercetools.api.models.DomainResource<Product>,
+public interface Product extends BaseResource, ProductMixin, com.commercetools.api.models.DomainResource<Product>,
         com.commercetools.api.models.Referencable<Product>, com.commercetools.api.models.ResourceIdentifiable<Product>,
         com.commercetools.api.models.WithKey {
 
@@ -197,16 +197,6 @@ public interface Product extends BaseResource, com.commercetools.api.models.Doma
 
     default <T> T withProduct(Function<Product, T> helper) {
         return helper.apply(this);
-    }
-
-    @Override
-    public default com.commercetools.api.models.common.ResourceIdentifier toResourceIdentifier() {
-        return com.commercetools.api.models.product.ProductResourceIdentifier.builder().id(getId()).build();
-    }
-
-    @Override
-    public default com.commercetools.api.models.common.Reference toReference() {
-        return com.commercetools.api.models.product.ProductReference.builder().id(getId()).build();
     }
 
     public static com.commercetools.api.models.common.ReferenceTypeId referenceTypeId() {

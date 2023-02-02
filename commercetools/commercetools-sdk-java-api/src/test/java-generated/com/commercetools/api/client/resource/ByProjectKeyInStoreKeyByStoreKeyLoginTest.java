@@ -67,7 +67,7 @@ public class ByProjectKeyInStoreKeyByStoreKeyLoginTest {
                 .inStoreKeyWithStoreKeyValue("test_storeKey")
                 .login()
                 .post(com.commercetools.api.models.customer.CustomerSignin.of())
-                .createHttpRequest(), "post", "/test_projectKey/in-store/key=test_storeKey/login", } };
+                .createHttpRequest(), "post", "test_projectKey/in-store/key=test_storeKey/login", } };
     }
 
     @DataProvider

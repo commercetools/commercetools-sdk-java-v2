@@ -65,44 +65,44 @@ public class ByProjectKeyCategoriesTest {
     public static Object[][] requestWithMethodParameters() {
         return new Object[][] { new Object[] {
                 apiRoot.withProjectKey("test_projectKey").categories().get().withExpand("expand").createHttpRequest(),
-                "get", "/test_projectKey/categories?expand=expand", },
+                "get", "test_projectKey/categories?expand=expand", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .categories()
                         .get()
                         .withSort("sort")
-                        .createHttpRequest(), "get", "/test_projectKey/categories?sort=sort", },
+                        .createHttpRequest(), "get", "test_projectKey/categories?sort=sort", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey").categories().get().withLimit(7).createHttpRequest(),
-                        "get", "/test_projectKey/categories?limit=7", },
+                        "get", "test_projectKey/categories?limit=7", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey").categories().get().withOffset(3).createHttpRequest(),
-                        "get", "/test_projectKey/categories?offset=3", },
+                        "get", "test_projectKey/categories?offset=3", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .categories()
                         .get()
                         .withWithTotal(true)
-                        .createHttpRequest(), "get", "/test_projectKey/categories?withTotal=true", },
+                        .createHttpRequest(), "get", "test_projectKey/categories?withTotal=true", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .categories()
                         .get()
                         .withWhere("where")
-                        .createHttpRequest(), "get", "/test_projectKey/categories?where=where", },
+                        .createHttpRequest(), "get", "test_projectKey/categories?where=where", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .categories()
                         .get()
                         .withPredicateVar("varName", "var.varName")
-                        .createHttpRequest(), "get", "/test_projectKey/categories?var.varName=var.varName", },
+                        .createHttpRequest(), "get", "test_projectKey/categories?var.varName=var.varName", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey").categories().get().createHttpRequest(), "get",
-                        "/test_projectKey/categories", },
+                        "test_projectKey/categories", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .categories()
                         .post(com.commercetools.api.models.category.CategoryDraft.of())
                         .withExpand("expand")
-                        .createHttpRequest(), "post", "/test_projectKey/categories?expand=expand", },
+                        .createHttpRequest(), "post", "test_projectKey/categories?expand=expand", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .categories()
                         .post(com.commercetools.api.models.category.CategoryDraft.of())
-                        .createHttpRequest(), "post", "/test_projectKey/categories", } };
+                        .createHttpRequest(), "post", "test_projectKey/categories", } };
     }
 
     @DataProvider

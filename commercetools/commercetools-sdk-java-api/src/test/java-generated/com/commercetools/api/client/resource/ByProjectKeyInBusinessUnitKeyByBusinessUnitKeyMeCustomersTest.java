@@ -70,7 +70,7 @@ public class ByProjectKeyInBusinessUnitKeyByBusinessUnitKeyMeCustomersTest {
                         .customers()
                         .post(com.commercetools.api.models.me.MyBusinessUnitAssociateDraft.of())
                         .createHttpRequest(),
-                "post", "/test_projectKey/in-business-unit/key=test_businessUnitKey/me/customers", } };
+                "post", "test_projectKey/in-business-unit/key=test_businessUnitKey/me/customers", } };
     }
 
     @DataProvider

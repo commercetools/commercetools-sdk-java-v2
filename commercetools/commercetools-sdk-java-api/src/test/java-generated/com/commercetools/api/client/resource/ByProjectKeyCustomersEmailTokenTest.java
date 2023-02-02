@@ -67,7 +67,7 @@ public class ByProjectKeyCustomersEmailTokenTest {
                 .customers()
                 .emailToken()
                 .post(com.commercetools.api.models.customer.CustomerCreateEmailToken.of())
-                .createHttpRequest(), "post", "/test_projectKey/customers/email-token", } };
+                .createHttpRequest(), "post", "test_projectKey/customers/email-token", } };
     }
 
     @DataProvider

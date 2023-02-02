@@ -65,44 +65,44 @@ public class ByProjectKeyApiClientsTest {
     public static Object[][] requestWithMethodParameters() {
         return new Object[][] { new Object[] {
                 apiRoot.withProjectKey("test_projectKey").apiClients().get().withExpand("expand").createHttpRequest(),
-                "get", "/test_projectKey/api-clients?expand=expand", },
+                "get", "test_projectKey/api-clients?expand=expand", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .apiClients()
                         .get()
                         .withSort("sort")
-                        .createHttpRequest(), "get", "/test_projectKey/api-clients?sort=sort", },
+                        .createHttpRequest(), "get", "test_projectKey/api-clients?sort=sort", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey").apiClients().get().withLimit(7).createHttpRequest(),
-                        "get", "/test_projectKey/api-clients?limit=7", },
+                        "get", "test_projectKey/api-clients?limit=7", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey").apiClients().get().withOffset(3).createHttpRequest(),
-                        "get", "/test_projectKey/api-clients?offset=3", },
+                        "get", "test_projectKey/api-clients?offset=3", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .apiClients()
                         .get()
                         .withWithTotal(true)
-                        .createHttpRequest(), "get", "/test_projectKey/api-clients?withTotal=true", },
+                        .createHttpRequest(), "get", "test_projectKey/api-clients?withTotal=true", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .apiClients()
                         .get()
                         .withWhere("where")
-                        .createHttpRequest(), "get", "/test_projectKey/api-clients?where=where", },
+                        .createHttpRequest(), "get", "test_projectKey/api-clients?where=where", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .apiClients()
                         .get()
                         .withPredicateVar("varName", "var.varName")
-                        .createHttpRequest(), "get", "/test_projectKey/api-clients?var.varName=var.varName", },
+                        .createHttpRequest(), "get", "test_projectKey/api-clients?var.varName=var.varName", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey").apiClients().get().createHttpRequest(), "get",
-                        "/test_projectKey/api-clients", },
+                        "test_projectKey/api-clients", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .apiClients()
                         .post(com.commercetools.api.models.api_client.ApiClientDraft.of())
                         .withExpand("expand")
-                        .createHttpRequest(), "post", "/test_projectKey/api-clients?expand=expand", },
+                        .createHttpRequest(), "post", "test_projectKey/api-clients?expand=expand", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .apiClients()
                         .post(com.commercetools.api.models.api_client.ApiClientDraft.of())
-                        .createHttpRequest(), "post", "/test_projectKey/api-clients", } };
+                        .createHttpRequest(), "post", "test_projectKey/api-clients", } };
     }
 
     @DataProvider

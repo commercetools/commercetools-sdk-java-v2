@@ -65,50 +65,50 @@ public class ByProjectKeyMeOrdersTest {
     public static Object[][] requestWithMethodParameters() {
         return new Object[][] { new Object[] {
                 apiRoot.withProjectKey("test_projectKey").me().orders().get().withExpand("expand").createHttpRequest(),
-                "get", "/test_projectKey/me/orders?expand=expand", },
+                "get", "test_projectKey/me/orders?expand=expand", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .me()
                         .orders()
                         .get()
                         .withSort("sort")
-                        .createHttpRequest(), "get", "/test_projectKey/me/orders?sort=sort", },
+                        .createHttpRequest(), "get", "test_projectKey/me/orders?sort=sort", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey").me().orders().get().withLimit(7).createHttpRequest(),
-                        "get", "/test_projectKey/me/orders?limit=7", },
+                        "get", "test_projectKey/me/orders?limit=7", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey").me().orders().get().withOffset(3).createHttpRequest(),
-                        "get", "/test_projectKey/me/orders?offset=3", },
+                        "get", "test_projectKey/me/orders?offset=3", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .me()
                         .orders()
                         .get()
                         .withWithTotal(true)
-                        .createHttpRequest(), "get", "/test_projectKey/me/orders?withTotal=true", },
+                        .createHttpRequest(), "get", "test_projectKey/me/orders?withTotal=true", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .me()
                         .orders()
                         .get()
                         .withWhere("where")
-                        .createHttpRequest(), "get", "/test_projectKey/me/orders?where=where", },
+                        .createHttpRequest(), "get", "test_projectKey/me/orders?where=where", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .me()
                         .orders()
                         .get()
                         .withPredicateVar("varName", "var.varName")
-                        .createHttpRequest(), "get", "/test_projectKey/me/orders?var.varName=var.varName", },
+                        .createHttpRequest(), "get", "test_projectKey/me/orders?var.varName=var.varName", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey").me().orders().get().createHttpRequest(), "get",
-                        "/test_projectKey/me/orders", },
+                        "test_projectKey/me/orders", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .me()
                         .orders()
                         .post(com.commercetools.api.models.me.MyOrderFromCartDraft.of())
                         .withExpand("expand")
-                        .createHttpRequest(), "post", "/test_projectKey/me/orders?expand=expand", },
+                        .createHttpRequest(), "post", "test_projectKey/me/orders?expand=expand", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .me()
                         .orders()
                         .post(com.commercetools.api.models.me.MyOrderFromCartDraft.of())
-                        .createHttpRequest(), "post", "/test_projectKey/me/orders", } };
+                        .createHttpRequest(), "post", "test_projectKey/me/orders", } };
     }
 
     @DataProvider

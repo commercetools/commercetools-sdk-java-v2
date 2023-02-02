@@ -65,55 +65,53 @@ public class ByProjectKeyProductTypesTest {
     public static Object[][] requestWithMethodParameters() {
         return new Object[][] { new Object[] {
                 apiRoot.withProjectKey("test_projectKey").productTypes().get().withExpand("expand").createHttpRequest(),
-                "get", "/test_projectKey/product-types?expand=expand", },
+                "get", "test_projectKey/product-types?expand=expand", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .productTypes()
                         .get()
                         .withSort("sort")
-                        .createHttpRequest(), "get", "/test_projectKey/product-types?sort=sort", },
+                        .createHttpRequest(), "get", "test_projectKey/product-types?sort=sort", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey").productTypes().get().withLimit(7).createHttpRequest(),
-                        "get", "/test_projectKey/product-types?limit=7", },
+                        "get", "test_projectKey/product-types?limit=7", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .productTypes()
                         .get()
                         .withOffset(3)
-                        .createHttpRequest(), "get", "/test_projectKey/product-types?offset=3", },
+                        .createHttpRequest(), "get", "test_projectKey/product-types?offset=3", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .productTypes()
                         .get()
                         .withWithTotal(true)
-                        .createHttpRequest(), "get", "/test_projectKey/product-types?withTotal=true", },
+                        .createHttpRequest(), "get", "test_projectKey/product-types?withTotal=true", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .productTypes()
                         .get()
                         .withWhere("where")
-                        .createHttpRequest(), "get", "/test_projectKey/product-types?where=where", },
-                new Object[] {
-                        apiRoot.withProjectKey("test_projectKey")
-                                .productTypes()
-                                .get()
-                                .withPredicateVar("varName", "var.varName")
-                                .createHttpRequest(),
-                        "get", "/test_projectKey/product-types?var.varName=var.varName", },
+                        .createHttpRequest(), "get", "test_projectKey/product-types?where=where", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .productTypes()
+                        .get()
+                        .withPredicateVar("varName", "var.varName")
+                        .createHttpRequest(), "get", "test_projectKey/product-types?var.varName=var.varName", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey").productTypes().get().createHttpRequest(),
-                        "get", "/test_projectKey/product-types", },
+                        "get", "test_projectKey/product-types", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .productTypes()
                         .head()
                         .withWhere("where")
-                        .createHttpRequest(), "head", "/test_projectKey/product-types?where=where", },
+                        .createHttpRequest(), "head", "test_projectKey/product-types?where=where", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey").productTypes().head().createHttpRequest(),
-                        "head", "/test_projectKey/product-types", },
+                        "head", "test_projectKey/product-types", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .productTypes()
                         .post(com.commercetools.api.models.product_type.ProductTypeDraft.of())
                         .withExpand("expand")
-                        .createHttpRequest(), "post", "/test_projectKey/product-types?expand=expand", },
+                        .createHttpRequest(), "post", "test_projectKey/product-types?expand=expand", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .productTypes()
                         .post(com.commercetools.api.models.product_type.ProductTypeDraft.of())
-                        .createHttpRequest(), "post", "/test_projectKey/product-types", } };
+                        .createHttpRequest(), "post", "test_projectKey/product-types", } };
     }
 
     @DataProvider

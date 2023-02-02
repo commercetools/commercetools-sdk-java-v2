@@ -71,14 +71,14 @@ public class ByProjectKeyCustomObjectsByContainerByKeyTest {
                                 .get()
                                 .withExpand("expand")
                                 .createHttpRequest(),
-                        "get", "/test_projectKey/custom-objects/test_container/test_key?expand=expand", },
+                        "get", "test_projectKey/custom-objects/test_container/test_key?expand=expand", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .customObjects()
                                 .withContainerAndKey("test_container", "test_key")
                                 .get()
                                 .createHttpRequest(),
-                        "get", "/test_projectKey/custom-objects/test_container/test_key", },
+                        "get", "test_projectKey/custom-objects/test_container/test_key", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .customObjects()
@@ -86,7 +86,7 @@ public class ByProjectKeyCustomObjectsByContainerByKeyTest {
                                 .delete()
                                 .withVersion(2)
                                 .createHttpRequest(),
-                        "delete", "/test_projectKey/custom-objects/test_container/test_key?version=2", },
+                        "delete", "test_projectKey/custom-objects/test_container/test_key?version=2", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .customObjects()
@@ -94,7 +94,7 @@ public class ByProjectKeyCustomObjectsByContainerByKeyTest {
                                 .delete()
                                 .withExpand("expand")
                                 .createHttpRequest(),
-                        "delete", "/test_projectKey/custom-objects/test_container/test_key?expand=expand", },
+                        "delete", "test_projectKey/custom-objects/test_container/test_key?expand=expand", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .customObjects()
@@ -102,14 +102,14 @@ public class ByProjectKeyCustomObjectsByContainerByKeyTest {
                                 .delete()
                                 .withDataErasure(true)
                                 .createHttpRequest(),
-                        "delete", "/test_projectKey/custom-objects/test_container/test_key?dataErasure=true", },
+                        "delete", "test_projectKey/custom-objects/test_container/test_key?dataErasure=true", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .customObjects()
                                 .withContainerAndKey("test_container", "test_key")
                                 .delete()
                                 .createHttpRequest(),
-                        "delete", "/test_projectKey/custom-objects/test_container/test_key", } };
+                        "delete", "test_projectKey/custom-objects/test_container/test_key", } };
     }
 
     @DataProvider

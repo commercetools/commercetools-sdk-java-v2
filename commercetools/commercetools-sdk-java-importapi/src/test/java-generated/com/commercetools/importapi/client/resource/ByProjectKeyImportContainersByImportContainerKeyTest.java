@@ -71,21 +71,21 @@ public class ByProjectKeyImportContainersByImportContainerKeyTest {
                                 .put(
                                     com.commercetools.importapi.models.importcontainers.ImportContainerUpdateDraft.of())
                                 .createHttpRequest(),
-                        "put", "/test_projectKey/import-containers/test_importContainerKey", },
+                        "put", "test_projectKey/import-containers/test_importContainerKey", },
                 new Object[] {
                         apiRoot.withProjectKeyValue("test_projectKey")
                                 .importContainers()
                                 .withImportContainerKeyValue("test_importContainerKey")
                                 .get()
                                 .createHttpRequest(),
-                        "get", "/test_projectKey/import-containers/test_importContainerKey", },
+                        "get", "test_projectKey/import-containers/test_importContainerKey", },
                 new Object[] {
                         apiRoot.withProjectKeyValue("test_projectKey")
                                 .importContainers()
                                 .withImportContainerKeyValue("test_importContainerKey")
                                 .delete()
                                 .createHttpRequest(),
-                        "delete", "/test_projectKey/import-containers/test_importContainerKey", } };
+                        "delete", "test_projectKey/import-containers/test_importContainerKey", } };
     }
 
     @DataProvider

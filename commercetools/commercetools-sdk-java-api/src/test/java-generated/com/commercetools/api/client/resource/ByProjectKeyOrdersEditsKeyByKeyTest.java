@@ -72,13 +72,13 @@ public class ByProjectKeyOrdersEditsKeyByKeyTest {
                                 .get()
                                 .withExpand("expand")
                                 .createHttpRequest(),
-                        "get", "/test_projectKey/orders/edits/key=test_key?expand=expand", },
+                        "get", "test_projectKey/orders/edits/key=test_key?expand=expand", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .orders()
                         .edits()
                         .withKey("test_key")
                         .get()
-                        .createHttpRequest(), "get", "/test_projectKey/orders/edits/key=test_key", },
+                        .createHttpRequest(), "get", "test_projectKey/orders/edits/key=test_key", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .orders()
@@ -87,13 +87,13 @@ public class ByProjectKeyOrdersEditsKeyByKeyTest {
                                 .post(com.commercetools.api.models.order_edit.OrderEditUpdate.of())
                                 .withExpand("expand")
                                 .createHttpRequest(),
-                        "post", "/test_projectKey/orders/edits/key=test_key?expand=expand", },
+                        "post", "test_projectKey/orders/edits/key=test_key?expand=expand", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .orders()
                         .edits()
                         .withKey("test_key")
                         .post(com.commercetools.api.models.order_edit.OrderEditUpdate.of())
-                        .createHttpRequest(), "post", "/test_projectKey/orders/edits/key=test_key", },
+                        .createHttpRequest(), "post", "test_projectKey/orders/edits/key=test_key", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .orders()
@@ -102,7 +102,7 @@ public class ByProjectKeyOrdersEditsKeyByKeyTest {
                                 .delete()
                                 .withVersion(2)
                                 .createHttpRequest(),
-                        "delete", "/test_projectKey/orders/edits/key=test_key?version=2", },
+                        "delete", "test_projectKey/orders/edits/key=test_key?version=2", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .orders()
@@ -111,13 +111,13 @@ public class ByProjectKeyOrdersEditsKeyByKeyTest {
                                 .delete()
                                 .withExpand("expand")
                                 .createHttpRequest(),
-                        "delete", "/test_projectKey/orders/edits/key=test_key?expand=expand", },
+                        "delete", "test_projectKey/orders/edits/key=test_key?expand=expand", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .orders()
                         .edits()
                         .withKey("test_key")
                         .delete()
-                        .createHttpRequest(), "delete", "/test_projectKey/orders/edits/key=test_key", } };
+                        .createHttpRequest(), "delete", "test_projectKey/orders/edits/key=test_key", } };
     }
 
     @DataProvider

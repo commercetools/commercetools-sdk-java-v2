@@ -72,7 +72,7 @@ public class ByProjectKeyProductSelectionsByIDProductsTest {
                                 .get()
                                 .withExpand("expand")
                                 .createHttpRequest(),
-                        "get", "/test_projectKey/product-selections/test_ID/products?expand=expand", },
+                        "get", "test_projectKey/product-selections/test_ID/products?expand=expand", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .productSelections()
@@ -81,7 +81,7 @@ public class ByProjectKeyProductSelectionsByIDProductsTest {
                                 .get()
                                 .withLimit(7)
                                 .createHttpRequest(),
-                        "get", "/test_projectKey/product-selections/test_ID/products?limit=7", },
+                        "get", "test_projectKey/product-selections/test_ID/products?limit=7", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .productSelections()
@@ -90,7 +90,7 @@ public class ByProjectKeyProductSelectionsByIDProductsTest {
                                 .get()
                                 .withOffset(3)
                                 .createHttpRequest(),
-                        "get", "/test_projectKey/product-selections/test_ID/products?offset=3", },
+                        "get", "test_projectKey/product-selections/test_ID/products?offset=3", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .productSelections()
@@ -99,15 +99,13 @@ public class ByProjectKeyProductSelectionsByIDProductsTest {
                                 .get()
                                 .withWithTotal(true)
                                 .createHttpRequest(),
-                        "get", "/test_projectKey/product-selections/test_ID/products?withTotal=true", },
-                new Object[] {
-                        apiRoot.withProjectKey("test_projectKey")
-                                .productSelections()
-                                .withId("test_ID")
-                                .products()
-                                .get()
-                                .createHttpRequest(),
-                        "get", "/test_projectKey/product-selections/test_ID/products", } };
+                        "get", "test_projectKey/product-selections/test_ID/products?withTotal=true", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .productSelections()
+                        .withId("test_ID")
+                        .products()
+                        .get()
+                        .createHttpRequest(), "get", "test_projectKey/product-selections/test_ID/products", } };
     }
 
     @DataProvider

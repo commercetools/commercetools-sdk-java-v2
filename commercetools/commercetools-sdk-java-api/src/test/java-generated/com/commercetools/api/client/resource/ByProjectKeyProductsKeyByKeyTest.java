@@ -71,7 +71,7 @@ public class ByProjectKeyProductsKeyByKeyTest {
                                 .get()
                                 .withPriceCurrency("priceCurrency")
                                 .createHttpRequest(),
-                        "get", "/test_projectKey/products/key=test_key?priceCurrency=priceCurrency", },
+                        "get", "test_projectKey/products/key=test_key?priceCurrency=priceCurrency", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .products()
@@ -79,7 +79,7 @@ public class ByProjectKeyProductsKeyByKeyTest {
                                 .get()
                                 .withPriceCountry("priceCountry")
                                 .createHttpRequest(),
-                        "get", "/test_projectKey/products/key=test_key?priceCountry=priceCountry", },
+                        "get", "test_projectKey/products/key=test_key?priceCountry=priceCountry", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .products()
@@ -87,7 +87,7 @@ public class ByProjectKeyProductsKeyByKeyTest {
                                 .get()
                                 .withPriceCustomerGroup("priceCustomerGroup")
                                 .createHttpRequest(),
-                        "get", "/test_projectKey/products/key=test_key?priceCustomerGroup=priceCustomerGroup", },
+                        "get", "test_projectKey/products/key=test_key?priceCustomerGroup=priceCustomerGroup", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .products()
@@ -95,7 +95,7 @@ public class ByProjectKeyProductsKeyByKeyTest {
                                 .get()
                                 .withPriceChannel("priceChannel")
                                 .createHttpRequest(),
-                        "get", "/test_projectKey/products/key=test_key?priceChannel=priceChannel", },
+                        "get", "test_projectKey/products/key=test_key?priceChannel=priceChannel", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .products()
@@ -103,23 +103,23 @@ public class ByProjectKeyProductsKeyByKeyTest {
                                 .get()
                                 .withLocaleProjection("localeProjection")
                                 .createHttpRequest(),
-                        "get", "/test_projectKey/products/key=test_key?localeProjection=localeProjection", },
+                        "get", "test_projectKey/products/key=test_key?localeProjection=localeProjection", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .products()
                         .withKey("test_key")
                         .get()
                         .withExpand("expand")
-                        .createHttpRequest(), "get", "/test_projectKey/products/key=test_key?expand=expand", },
+                        .createHttpRequest(), "get", "test_projectKey/products/key=test_key?expand=expand", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .products()
                         .withKey("test_key")
                         .get()
-                        .createHttpRequest(), "get", "/test_projectKey/products/key=test_key", },
+                        .createHttpRequest(), "get", "test_projectKey/products/key=test_key", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .products()
                         .withKey("test_key")
                         .head()
-                        .createHttpRequest(), "head", "/test_projectKey/products/key=test_key", },
+                        .createHttpRequest(), "head", "test_projectKey/products/key=test_key", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .products()
@@ -127,7 +127,7 @@ public class ByProjectKeyProductsKeyByKeyTest {
                                 .post(com.commercetools.api.models.product.ProductUpdate.of())
                                 .withPriceCurrency("priceCurrency")
                                 .createHttpRequest(),
-                        "post", "/test_projectKey/products/key=test_key?priceCurrency=priceCurrency", },
+                        "post", "test_projectKey/products/key=test_key?priceCurrency=priceCurrency", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .products()
@@ -135,7 +135,7 @@ public class ByProjectKeyProductsKeyByKeyTest {
                                 .post(com.commercetools.api.models.product.ProductUpdate.of())
                                 .withPriceCountry("priceCountry")
                                 .createHttpRequest(),
-                        "post", "/test_projectKey/products/key=test_key?priceCountry=priceCountry", },
+                        "post", "test_projectKey/products/key=test_key?priceCountry=priceCountry", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .products()
@@ -143,7 +143,7 @@ public class ByProjectKeyProductsKeyByKeyTest {
                                 .post(com.commercetools.api.models.product.ProductUpdate.of())
                                 .withPriceCustomerGroup("priceCustomerGroup")
                                 .createHttpRequest(),
-                        "post", "/test_projectKey/products/key=test_key?priceCustomerGroup=priceCustomerGroup", },
+                        "post", "test_projectKey/products/key=test_key?priceCustomerGroup=priceCustomerGroup", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .products()
@@ -151,7 +151,7 @@ public class ByProjectKeyProductsKeyByKeyTest {
                                 .post(com.commercetools.api.models.product.ProductUpdate.of())
                                 .withPriceChannel("priceChannel")
                                 .createHttpRequest(),
-                        "post", "/test_projectKey/products/key=test_key?priceChannel=priceChannel", },
+                        "post", "test_projectKey/products/key=test_key?priceChannel=priceChannel", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .products()
@@ -159,18 +159,18 @@ public class ByProjectKeyProductsKeyByKeyTest {
                                 .post(com.commercetools.api.models.product.ProductUpdate.of())
                                 .withLocaleProjection("localeProjection")
                                 .createHttpRequest(),
-                        "post", "/test_projectKey/products/key=test_key?localeProjection=localeProjection", },
+                        "post", "test_projectKey/products/key=test_key?localeProjection=localeProjection", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .products()
                         .withKey("test_key")
                         .post(com.commercetools.api.models.product.ProductUpdate.of())
                         .withExpand("expand")
-                        .createHttpRequest(), "post", "/test_projectKey/products/key=test_key?expand=expand", },
+                        .createHttpRequest(), "post", "test_projectKey/products/key=test_key?expand=expand", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .products()
                         .withKey("test_key")
                         .post(com.commercetools.api.models.product.ProductUpdate.of())
-                        .createHttpRequest(), "post", "/test_projectKey/products/key=test_key", },
+                        .createHttpRequest(), "post", "test_projectKey/products/key=test_key", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .products()
@@ -178,7 +178,7 @@ public class ByProjectKeyProductsKeyByKeyTest {
                                 .delete()
                                 .withPriceCurrency("priceCurrency")
                                 .createHttpRequest(),
-                        "delete", "/test_projectKey/products/key=test_key?priceCurrency=priceCurrency", },
+                        "delete", "test_projectKey/products/key=test_key?priceCurrency=priceCurrency", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .products()
@@ -186,7 +186,7 @@ public class ByProjectKeyProductsKeyByKeyTest {
                                 .delete()
                                 .withPriceCountry("priceCountry")
                                 .createHttpRequest(),
-                        "delete", "/test_projectKey/products/key=test_key?priceCountry=priceCountry", },
+                        "delete", "test_projectKey/products/key=test_key?priceCountry=priceCountry", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .products()
@@ -194,7 +194,7 @@ public class ByProjectKeyProductsKeyByKeyTest {
                                 .delete()
                                 .withPriceCustomerGroup("priceCustomerGroup")
                                 .createHttpRequest(),
-                        "delete", "/test_projectKey/products/key=test_key?priceCustomerGroup=priceCustomerGroup", },
+                        "delete", "test_projectKey/products/key=test_key?priceCustomerGroup=priceCustomerGroup", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .products()
@@ -202,7 +202,7 @@ public class ByProjectKeyProductsKeyByKeyTest {
                                 .delete()
                                 .withPriceChannel("priceChannel")
                                 .createHttpRequest(),
-                        "delete", "/test_projectKey/products/key=test_key?priceChannel=priceChannel", },
+                        "delete", "test_projectKey/products/key=test_key?priceChannel=priceChannel", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .products()
@@ -210,13 +210,13 @@ public class ByProjectKeyProductsKeyByKeyTest {
                                 .delete()
                                 .withLocaleProjection("localeProjection")
                                 .createHttpRequest(),
-                        "delete", "/test_projectKey/products/key=test_key?localeProjection=localeProjection", },
+                        "delete", "test_projectKey/products/key=test_key?localeProjection=localeProjection", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .products()
                         .withKey("test_key")
                         .delete()
                         .withVersion(2)
-                        .createHttpRequest(), "delete", "/test_projectKey/products/key=test_key?version=2", },
+                        .createHttpRequest(), "delete", "test_projectKey/products/key=test_key?version=2", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .products()
@@ -224,12 +224,12 @@ public class ByProjectKeyProductsKeyByKeyTest {
                                 .delete()
                                 .withExpand("expand")
                                 .createHttpRequest(),
-                        "delete", "/test_projectKey/products/key=test_key?expand=expand", },
+                        "delete", "test_projectKey/products/key=test_key?expand=expand", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .products()
                         .withKey("test_key")
                         .delete()
-                        .createHttpRequest(), "delete", "/test_projectKey/products/key=test_key", } };
+                        .createHttpRequest(), "delete", "test_projectKey/products/key=test_key", } };
     }
 
     @DataProvider

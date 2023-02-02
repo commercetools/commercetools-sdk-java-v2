@@ -7,7 +7,7 @@ import io.vrap.rmf.base.client.ApiHttpClient;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-public class ByProjectKeyQuoteRequestsRequestBuilder {
+public class ByProjectKeyQuoteRequestsRequestBuilder implements ByProjectKeyQuoteRequestsRequestBuilderMixin {
 
     private final ApiHttpClient apiHttpClient;
     private final String projectKey;
@@ -37,49 +37,6 @@ public class ByProjectKeyQuoteRequestsRequestBuilder {
 
     public ByProjectKeyQuoteRequestsByIDRequestBuilder withId(String ID) {
         return new ByProjectKeyQuoteRequestsByIDRequestBuilder(apiHttpClient, projectKey, ID);
-    }
-
-    public ByProjectKeyQuoteRequestsByIDPost update(
-            com.commercetools.api.models.Versioned<com.commercetools.api.models.quote_request.QuoteRequest> quoteRequest,
-            java.util.List<com.commercetools.api.models.quote_request.QuoteRequestUpdateAction> actions) {
-        return withId(quoteRequest.getId())
-                .post(builder -> com.commercetools.api.models.quote_request.QuoteRequestUpdate.builder()
-                        .version(quoteRequest.getVersion())
-                        .actions(actions));
-    }
-
-    public ByProjectKeyQuoteRequestsByIDPost update(
-            com.commercetools.api.models.Versioned<com.commercetools.api.models.quote_request.QuoteRequest> quoteRequest,
-            UnaryOperator<UpdateActionBuilder<com.commercetools.api.models.quote_request.QuoteRequestUpdateAction, com.commercetools.api.models.quote_request.QuoteRequestUpdateActionBuilder>> op) {
-        return withId(quoteRequest.getId())
-                .post(builder -> com.commercetools.api.models.quote_request.QuoteRequestUpdate.builder()
-                        .version(quoteRequest.getVersion())
-                        .actions(op.apply(UpdateActionBuilder.of(
-                            com.commercetools.api.models.quote_request.QuoteRequestUpdateActionBuilder::of)).actions));
-    }
-
-    public WithUpdateActionBuilder<com.commercetools.api.models.quote_request.QuoteRequestUpdateAction, com.commercetools.api.models.quote_request.QuoteRequestUpdateActionBuilder, ByProjectKeyQuoteRequestsByIDPost> update(
-            com.commercetools.api.models.Versioned<com.commercetools.api.models.quote_request.QuoteRequest> quoteRequest) {
-        return builder -> withId(quoteRequest.getId())
-                .post(b -> com.commercetools.api.models.quote_request.QuoteRequestUpdate.builder()
-                        .version(quoteRequest.getVersion())
-                        .actions(builder.apply(UpdateActionBuilder.of(
-                            com.commercetools.api.models.quote_request.QuoteRequestUpdateActionBuilder::of)).actions));
-    }
-
-    public ByProjectKeyQuoteRequestsByIDDelete delete(
-            com.commercetools.api.models.Versioned<com.commercetools.api.models.quote_request.QuoteRequest> quoteRequest) {
-        return withId(quoteRequest.getId()).delete().withVersion(quoteRequest.getVersion());
-    }
-
-    public ByProjectKeyQuoteRequestsPost create(
-            com.commercetools.api.models.quote_request.QuoteRequestDraft quoteRequestDraft) {
-        return post(quoteRequestDraft);
-    }
-
-    public ByProjectKeyQuoteRequestsPost create(
-            UnaryOperator<com.commercetools.api.models.quote_request.QuoteRequestDraftBuilder> op) {
-        return post(op.apply(com.commercetools.api.models.quote_request.QuoteRequestDraftBuilder.of()).build());
     }
 
 }

@@ -54,7 +54,7 @@ public class ByProjectKeyMeCartsReplicatePost extends
     @Override
     protected ApiHttpRequest buildHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
-        String httpRequestPath = String.format("/%s/me/carts/replicate", this.projectKey);
+        String httpRequestPath = String.format("%s/me/carts/replicate", this.projectKey);
         if (!params.isEmpty()) {
             httpRequestPath += "?" + String.join("&", params);
         }

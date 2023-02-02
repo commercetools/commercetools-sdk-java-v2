@@ -65,44 +65,44 @@ public class ByProjectKeyExtensionsTest {
     public static Object[][] requestWithMethodParameters() {
         return new Object[][] { new Object[] {
                 apiRoot.withProjectKey("test_projectKey").extensions().get().withExpand("expand").createHttpRequest(),
-                "get", "/test_projectKey/extensions?expand=expand", },
+                "get", "test_projectKey/extensions?expand=expand", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .extensions()
                         .get()
                         .withSort("sort")
-                        .createHttpRequest(), "get", "/test_projectKey/extensions?sort=sort", },
+                        .createHttpRequest(), "get", "test_projectKey/extensions?sort=sort", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey").extensions().get().withLimit(7).createHttpRequest(),
-                        "get", "/test_projectKey/extensions?limit=7", },
+                        "get", "test_projectKey/extensions?limit=7", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey").extensions().get().withOffset(3).createHttpRequest(),
-                        "get", "/test_projectKey/extensions?offset=3", },
+                        "get", "test_projectKey/extensions?offset=3", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .extensions()
                         .get()
                         .withWithTotal(true)
-                        .createHttpRequest(), "get", "/test_projectKey/extensions?withTotal=true", },
+                        .createHttpRequest(), "get", "test_projectKey/extensions?withTotal=true", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .extensions()
                         .get()
                         .withWhere("where")
-                        .createHttpRequest(), "get", "/test_projectKey/extensions?where=where", },
+                        .createHttpRequest(), "get", "test_projectKey/extensions?where=where", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .extensions()
                         .get()
                         .withPredicateVar("varName", "var.varName")
-                        .createHttpRequest(), "get", "/test_projectKey/extensions?var.varName=var.varName", },
+                        .createHttpRequest(), "get", "test_projectKey/extensions?var.varName=var.varName", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey").extensions().get().createHttpRequest(), "get",
-                        "/test_projectKey/extensions", },
+                        "test_projectKey/extensions", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .extensions()
                         .post(com.commercetools.api.models.extension.ExtensionDraft.of())
                         .withExpand("expand")
-                        .createHttpRequest(), "post", "/test_projectKey/extensions?expand=expand", },
+                        .createHttpRequest(), "post", "test_projectKey/extensions?expand=expand", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .extensions()
                         .post(com.commercetools.api.models.extension.ExtensionDraft.of())
-                        .createHttpRequest(), "post", "/test_projectKey/extensions", } };
+                        .createHttpRequest(), "post", "test_projectKey/extensions", } };
     }
 
     @DataProvider

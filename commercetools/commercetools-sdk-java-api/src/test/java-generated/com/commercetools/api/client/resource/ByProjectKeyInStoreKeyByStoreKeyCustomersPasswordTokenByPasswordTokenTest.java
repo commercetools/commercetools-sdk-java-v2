@@ -72,7 +72,7 @@ public class ByProjectKeyInStoreKeyByStoreKeyCustomersPasswordTokenByPasswordTok
                         .withExpand("expand")
                         .createHttpRequest(),
                 "get",
-                "/test_projectKey/in-store/key=test_storeKey/customers/password-token=test_passwordToken?expand=expand", },
+                "test_projectKey/in-store/key=test_storeKey/customers/password-token=test_passwordToken?expand=expand", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .inStoreKeyWithStoreKeyValue("test_storeKey")
@@ -81,7 +81,7 @@ public class ByProjectKeyInStoreKeyByStoreKeyCustomersPasswordTokenByPasswordTok
                                 .get()
                                 .createHttpRequest(),
                         "get",
-                        "/test_projectKey/in-store/key=test_storeKey/customers/password-token=test_passwordToken", } };
+                        "test_projectKey/in-store/key=test_storeKey/customers/password-token=test_passwordToken", } };
     }
 
     @DataProvider

@@ -65,48 +65,46 @@ public class ByProjectKeyStagedQuotesTest {
     public static Object[][] requestWithMethodParameters() {
         return new Object[][] { new Object[] {
                 apiRoot.withProjectKey("test_projectKey").stagedQuotes().get().withExpand("expand").createHttpRequest(),
-                "get", "/test_projectKey/staged-quotes?expand=expand", },
+                "get", "test_projectKey/staged-quotes?expand=expand", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .stagedQuotes()
                         .get()
                         .withSort("sort")
-                        .createHttpRequest(), "get", "/test_projectKey/staged-quotes?sort=sort", },
+                        .createHttpRequest(), "get", "test_projectKey/staged-quotes?sort=sort", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey").stagedQuotes().get().withLimit(7).createHttpRequest(),
-                        "get", "/test_projectKey/staged-quotes?limit=7", },
+                        "get", "test_projectKey/staged-quotes?limit=7", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .stagedQuotes()
                         .get()
                         .withOffset(3)
-                        .createHttpRequest(), "get", "/test_projectKey/staged-quotes?offset=3", },
+                        .createHttpRequest(), "get", "test_projectKey/staged-quotes?offset=3", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .stagedQuotes()
                         .get()
                         .withWithTotal(true)
-                        .createHttpRequest(), "get", "/test_projectKey/staged-quotes?withTotal=true", },
+                        .createHttpRequest(), "get", "test_projectKey/staged-quotes?withTotal=true", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .stagedQuotes()
                         .get()
                         .withWhere("where")
-                        .createHttpRequest(), "get", "/test_projectKey/staged-quotes?where=where", },
-                new Object[] {
-                        apiRoot.withProjectKey("test_projectKey")
-                                .stagedQuotes()
-                                .get()
-                                .withPredicateVar("varName", "var.varName")
-                                .createHttpRequest(),
-                        "get", "/test_projectKey/staged-quotes?var.varName=var.varName", },
+                        .createHttpRequest(), "get", "test_projectKey/staged-quotes?where=where", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .stagedQuotes()
+                        .get()
+                        .withPredicateVar("varName", "var.varName")
+                        .createHttpRequest(), "get", "test_projectKey/staged-quotes?var.varName=var.varName", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey").stagedQuotes().get().createHttpRequest(),
-                        "get", "/test_projectKey/staged-quotes", },
+                        "get", "test_projectKey/staged-quotes", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .stagedQuotes()
                         .post(com.commercetools.api.models.staged_quote.StagedQuoteDraft.of())
                         .withExpand("expand")
-                        .createHttpRequest(), "post", "/test_projectKey/staged-quotes?expand=expand", },
+                        .createHttpRequest(), "post", "test_projectKey/staged-quotes?expand=expand", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .stagedQuotes()
                         .post(com.commercetools.api.models.staged_quote.StagedQuoteDraft.of())
-                        .createHttpRequest(), "post", "/test_projectKey/staged-quotes", } };
+                        .createHttpRequest(), "post", "test_projectKey/staged-quotes", } };
     }
 
     @DataProvider

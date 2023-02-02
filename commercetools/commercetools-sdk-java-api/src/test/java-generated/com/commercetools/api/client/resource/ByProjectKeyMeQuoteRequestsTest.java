@@ -69,37 +69,37 @@ public class ByProjectKeyMeQuoteRequestsTest {
                         .quoteRequests()
                         .get()
                         .withExpand("expand")
-                        .createHttpRequest(), "get", "/test_projectKey/me/quote-requests?expand=expand", },
+                        .createHttpRequest(), "get", "test_projectKey/me/quote-requests?expand=expand", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .me()
                         .quoteRequests()
                         .get()
                         .withSort("sort")
-                        .createHttpRequest(), "get", "/test_projectKey/me/quote-requests?sort=sort", },
+                        .createHttpRequest(), "get", "test_projectKey/me/quote-requests?sort=sort", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .me()
                         .quoteRequests()
                         .get()
                         .withLimit(7)
-                        .createHttpRequest(), "get", "/test_projectKey/me/quote-requests?limit=7", },
+                        .createHttpRequest(), "get", "test_projectKey/me/quote-requests?limit=7", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .me()
                         .quoteRequests()
                         .get()
                         .withOffset(3)
-                        .createHttpRequest(), "get", "/test_projectKey/me/quote-requests?offset=3", },
+                        .createHttpRequest(), "get", "test_projectKey/me/quote-requests?offset=3", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .me()
                         .quoteRequests()
                         .get()
                         .withWithTotal(true)
-                        .createHttpRequest(), "get", "/test_projectKey/me/quote-requests?withTotal=true", },
+                        .createHttpRequest(), "get", "test_projectKey/me/quote-requests?withTotal=true", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .me()
                         .quoteRequests()
                         .get()
                         .withWhere("where")
-                        .createHttpRequest(), "get", "/test_projectKey/me/quote-requests?where=where", },
+                        .createHttpRequest(), "get", "test_projectKey/me/quote-requests?where=where", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .me()
@@ -107,20 +107,20 @@ public class ByProjectKeyMeQuoteRequestsTest {
                                 .get()
                                 .withPredicateVar("varName", "var.varName")
                                 .createHttpRequest(),
-                        "get", "/test_projectKey/me/quote-requests?var.varName=var.varName", },
+                        "get", "test_projectKey/me/quote-requests?var.varName=var.varName", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey").me().quoteRequests().get().createHttpRequest(),
-                        "get", "/test_projectKey/me/quote-requests", },
+                        "get", "test_projectKey/me/quote-requests", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .me()
                         .quoteRequests()
                         .post(com.commercetools.api.models.me.MyQuoteRequestDraft.of())
                         .withExpand("expand")
-                        .createHttpRequest(), "post", "/test_projectKey/me/quote-requests?expand=expand", },
+                        .createHttpRequest(), "post", "test_projectKey/me/quote-requests?expand=expand", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .me()
                         .quoteRequests()
                         .post(com.commercetools.api.models.me.MyQuoteRequestDraft.of())
-                        .createHttpRequest(), "post", "/test_projectKey/me/quote-requests", } };
+                        .createHttpRequest(), "post", "test_projectKey/me/quote-requests", } };
     }
 
     @DataProvider

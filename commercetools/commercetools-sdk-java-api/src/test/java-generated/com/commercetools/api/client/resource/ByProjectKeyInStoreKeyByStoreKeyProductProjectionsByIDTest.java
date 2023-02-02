@@ -72,7 +72,7 @@ public class ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDTest {
                                 .get()
                                 .withStaged(true)
                                 .createHttpRequest(),
-                        "get", "/test_projectKey/in-store/key=test_storeKey/product-projections/test_ID?staged=true", },
+                        "get", "test_projectKey/in-store/key=test_storeKey/product-projections/test_ID?staged=true", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .inStoreKeyWithStoreKeyValue("test_storeKey")
@@ -82,7 +82,7 @@ public class ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDTest {
                                 .withPriceCurrency("priceCurrency")
                                 .createHttpRequest(),
                         "get",
-                        "/test_projectKey/in-store/key=test_storeKey/product-projections/test_ID?priceCurrency=priceCurrency", },
+                        "test_projectKey/in-store/key=test_storeKey/product-projections/test_ID?priceCurrency=priceCurrency", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .inStoreKeyWithStoreKeyValue("test_storeKey")
@@ -92,7 +92,7 @@ public class ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDTest {
                                 .withPriceCountry("priceCountry")
                                 .createHttpRequest(),
                         "get",
-                        "/test_projectKey/in-store/key=test_storeKey/product-projections/test_ID?priceCountry=priceCountry", },
+                        "test_projectKey/in-store/key=test_storeKey/product-projections/test_ID?priceCountry=priceCountry", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .inStoreKeyWithStoreKeyValue("test_storeKey")
@@ -102,7 +102,7 @@ public class ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDTest {
                                 .withPriceCustomerGroup("priceCustomerGroup")
                                 .createHttpRequest(),
                         "get",
-                        "/test_projectKey/in-store/key=test_storeKey/product-projections/test_ID?priceCustomerGroup=priceCustomerGroup", },
+                        "test_projectKey/in-store/key=test_storeKey/product-projections/test_ID?priceCustomerGroup=priceCustomerGroup", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .inStoreKeyWithStoreKeyValue("test_storeKey")
@@ -112,7 +112,7 @@ public class ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDTest {
                                 .withPriceChannel("priceChannel")
                                 .createHttpRequest(),
                         "get",
-                        "/test_projectKey/in-store/key=test_storeKey/product-projections/test_ID?priceChannel=priceChannel", },
+                        "test_projectKey/in-store/key=test_storeKey/product-projections/test_ID?priceChannel=priceChannel", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .inStoreKeyWithStoreKeyValue("test_storeKey")
@@ -122,7 +122,7 @@ public class ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDTest {
                                 .withLocaleProjection("localeProjection")
                                 .createHttpRequest(),
                         "get",
-                        "/test_projectKey/in-store/key=test_storeKey/product-projections/test_ID?localeProjection=localeProjection", },
+                        "test_projectKey/in-store/key=test_storeKey/product-projections/test_ID?localeProjection=localeProjection", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .inStoreKeyWithStoreKeyValue("test_storeKey")
@@ -132,7 +132,7 @@ public class ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDTest {
                                 .withExpand("expand")
                                 .createHttpRequest(),
                         "get",
-                        "/test_projectKey/in-store/key=test_storeKey/product-projections/test_ID?expand=expand", },
+                        "test_projectKey/in-store/key=test_storeKey/product-projections/test_ID?expand=expand", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .inStoreKeyWithStoreKeyValue("test_storeKey")
@@ -140,7 +140,7 @@ public class ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDTest {
                                 .withId("test_ID")
                                 .get()
                                 .createHttpRequest(),
-                        "get", "/test_projectKey/in-store/key=test_storeKey/product-projections/test_ID", } };
+                        "get", "test_projectKey/in-store/key=test_storeKey/product-projections/test_ID", } };
     }
 
     @DataProvider

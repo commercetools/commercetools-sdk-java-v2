@@ -64,19 +64,17 @@ public class ByProjectKeyExtensionsKeyByKeyTest {
     @DataProvider
     public static Object[][] requestWithMethodParameters() {
         return new Object[][] {
-                new Object[] {
-                        apiRoot.withProjectKey("test_projectKey")
-                                .extensions()
-                                .withKey("test_key")
-                                .get()
-                                .withExpand("expand")
-                                .createHttpRequest(),
-                        "get", "/test_projectKey/extensions/key=test_key?expand=expand", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .extensions()
                         .withKey("test_key")
                         .get()
-                        .createHttpRequest(), "get", "/test_projectKey/extensions/key=test_key", },
+                        .withExpand("expand")
+                        .createHttpRequest(), "get", "test_projectKey/extensions/key=test_key?expand=expand", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .extensions()
+                        .withKey("test_key")
+                        .get()
+                        .createHttpRequest(), "get", "test_projectKey/extensions/key=test_key", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .extensions()
@@ -84,18 +82,18 @@ public class ByProjectKeyExtensionsKeyByKeyTest {
                                 .post(com.commercetools.api.models.extension.ExtensionUpdate.of())
                                 .withExpand("expand")
                                 .createHttpRequest(),
-                        "post", "/test_projectKey/extensions/key=test_key?expand=expand", },
+                        "post", "test_projectKey/extensions/key=test_key?expand=expand", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .extensions()
                         .withKey("test_key")
                         .post(com.commercetools.api.models.extension.ExtensionUpdate.of())
-                        .createHttpRequest(), "post", "/test_projectKey/extensions/key=test_key", },
+                        .createHttpRequest(), "post", "test_projectKey/extensions/key=test_key", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .extensions()
                         .withKey("test_key")
                         .delete()
                         .withVersion(2)
-                        .createHttpRequest(), "delete", "/test_projectKey/extensions/key=test_key?version=2", },
+                        .createHttpRequest(), "delete", "test_projectKey/extensions/key=test_key?version=2", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .extensions()
@@ -103,12 +101,12 @@ public class ByProjectKeyExtensionsKeyByKeyTest {
                                 .delete()
                                 .withExpand("expand")
                                 .createHttpRequest(),
-                        "delete", "/test_projectKey/extensions/key=test_key?expand=expand", },
+                        "delete", "test_projectKey/extensions/key=test_key?expand=expand", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .extensions()
                         .withKey("test_key")
                         .delete()
-                        .createHttpRequest(), "delete", "/test_projectKey/extensions/key=test_key", } };
+                        .createHttpRequest(), "delete", "test_projectKey/extensions/key=test_key", } };
     }
 
     @DataProvider

@@ -68,50 +68,48 @@ public class ByProjectKeySubscriptionsTest {
                         .subscriptions()
                         .get()
                         .withExpand("expand")
-                        .createHttpRequest(), "get", "/test_projectKey/subscriptions?expand=expand", },
+                        .createHttpRequest(), "get", "test_projectKey/subscriptions?expand=expand", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .subscriptions()
                         .get()
                         .withSort("sort")
-                        .createHttpRequest(), "get", "/test_projectKey/subscriptions?sort=sort", },
+                        .createHttpRequest(), "get", "test_projectKey/subscriptions?sort=sort", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .subscriptions()
                         .get()
                         .withLimit(7)
-                        .createHttpRequest(), "get", "/test_projectKey/subscriptions?limit=7", },
+                        .createHttpRequest(), "get", "test_projectKey/subscriptions?limit=7", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .subscriptions()
                         .get()
                         .withOffset(3)
-                        .createHttpRequest(), "get", "/test_projectKey/subscriptions?offset=3", },
+                        .createHttpRequest(), "get", "test_projectKey/subscriptions?offset=3", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .subscriptions()
                         .get()
                         .withWithTotal(true)
-                        .createHttpRequest(), "get", "/test_projectKey/subscriptions?withTotal=true", },
+                        .createHttpRequest(), "get", "test_projectKey/subscriptions?withTotal=true", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .subscriptions()
                         .get()
                         .withWhere("where")
-                        .createHttpRequest(), "get", "/test_projectKey/subscriptions?where=where", },
-                new Object[] {
-                        apiRoot.withProjectKey("test_projectKey")
-                                .subscriptions()
-                                .get()
-                                .withPredicateVar("varName", "var.varName")
-                                .createHttpRequest(),
-                        "get", "/test_projectKey/subscriptions?var.varName=var.varName", },
+                        .createHttpRequest(), "get", "test_projectKey/subscriptions?where=where", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .subscriptions()
+                        .get()
+                        .withPredicateVar("varName", "var.varName")
+                        .createHttpRequest(), "get", "test_projectKey/subscriptions?var.varName=var.varName", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey").subscriptions().get().createHttpRequest(),
-                        "get", "/test_projectKey/subscriptions", },
+                        "get", "test_projectKey/subscriptions", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .subscriptions()
                         .post(com.commercetools.api.models.subscription.SubscriptionDraft.of())
                         .withExpand("expand")
-                        .createHttpRequest(), "post", "/test_projectKey/subscriptions?expand=expand", },
+                        .createHttpRequest(), "post", "test_projectKey/subscriptions?expand=expand", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .subscriptions()
                         .post(com.commercetools.api.models.subscription.SubscriptionDraft.of())
-                        .createHttpRequest(), "post", "/test_projectKey/subscriptions", } };
+                        .createHttpRequest(), "post", "test_projectKey/subscriptions", } };
     }
 
     @DataProvider

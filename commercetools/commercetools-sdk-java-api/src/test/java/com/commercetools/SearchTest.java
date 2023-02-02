@@ -38,7 +38,7 @@ public class SearchTest {
                 .addFormParam("filter", "variants.attributes.name:\"foo\"")
                 .createHttpRequest();
 
-        Assertions.assertThat(request.getUri().toString()).isEqualTo("/test/product-projections/search?param=true");
+        Assertions.assertThat(request.getUri().toString()).isEqualTo("test/product-projections/search?param=true");
         Assertions.assertThat(request.getSecuredBody())
                 .isEqualTo("filter.query=categories.id%3A%22abc123%22&filter=variants.attributes.name%3A%22foo%22");
         Assertions.assertThat(request.getHeaders().getFirst(ApiHttpHeaders.CONTENT_TYPE))

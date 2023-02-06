@@ -56,9 +56,18 @@ public interface StandalonePriceValueChangedMessage extends Message {
     @JsonProperty("staged")
     public Boolean getStaged();
 
+    /**
+     *  <p>The old value of the updated StandalonePrice. Present on Messages created after 3 February 2023. Optional for backwards compatibility.</p>
+     */
+    @Valid
+    @JsonProperty("oldValue")
+    public Money getOldValue();
+
     public void setValue(final Money value);
 
     public void setStaged(final Boolean staged);
+
+    public void setOldValue(final Money oldValue);
 
     public static StandalonePriceValueChangedMessage of() {
         return new StandalonePriceValueChangedMessageImpl();
@@ -78,6 +87,7 @@ public interface StandalonePriceValueChangedMessage extends Message {
         instance.setResourceUserProvidedIdentifiers(template.getResourceUserProvidedIdentifiers());
         instance.setValue(template.getValue());
         instance.setStaged(template.getStaged());
+        instance.setOldValue(template.getOldValue());
         return instance;
     }
 

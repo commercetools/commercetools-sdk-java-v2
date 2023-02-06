@@ -4,6 +4,8 @@ package com.commercetools.api.models.message;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
+
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -27,6 +29,9 @@ public class StandalonePriceValueChangedMessagePayloadBuilder
     private com.commercetools.api.models.common.Money value;
 
     private Boolean staged;
+
+    @Nullable
+    private com.commercetools.api.models.common.Money oldValue;
 
     /**
      *  <p>The new value of the updated StandalonePrice.</p>
@@ -57,6 +62,26 @@ public class StandalonePriceValueChangedMessagePayloadBuilder
         return this;
     }
 
+    /**
+     *  <p>The old value of the updated StandalonePrice. Present on Messages created after 3 February 2023. Optional for backwards compatibility.</p>
+     */
+
+    public StandalonePriceValueChangedMessagePayloadBuilder oldValue(
+            Function<com.commercetools.api.models.common.MoneyBuilder, com.commercetools.api.models.common.MoneyBuilder> builder) {
+        this.oldValue = builder.apply(com.commercetools.api.models.common.MoneyBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>The old value of the updated StandalonePrice. Present on Messages created after 3 February 2023. Optional for backwards compatibility.</p>
+     */
+
+    public StandalonePriceValueChangedMessagePayloadBuilder oldValue(
+            @Nullable final com.commercetools.api.models.common.Money oldValue) {
+        this.oldValue = oldValue;
+        return this;
+    }
+
     public com.commercetools.api.models.common.Money getValue() {
         return this.value;
     }
@@ -65,17 +90,22 @@ public class StandalonePriceValueChangedMessagePayloadBuilder
         return this.staged;
     }
 
+    @Nullable
+    public com.commercetools.api.models.common.Money getOldValue() {
+        return this.oldValue;
+    }
+
     public StandalonePriceValueChangedMessagePayload build() {
         Objects.requireNonNull(value, StandalonePriceValueChangedMessagePayload.class + ": value is missing");
         Objects.requireNonNull(staged, StandalonePriceValueChangedMessagePayload.class + ": staged is missing");
-        return new StandalonePriceValueChangedMessagePayloadImpl(value, staged);
+        return new StandalonePriceValueChangedMessagePayloadImpl(value, staged, oldValue);
     }
 
     /**
      * builds StandalonePriceValueChangedMessagePayload without checking for non null required values
      */
     public StandalonePriceValueChangedMessagePayload buildUnchecked() {
-        return new StandalonePriceValueChangedMessagePayloadImpl(value, staged);
+        return new StandalonePriceValueChangedMessagePayloadImpl(value, staged, oldValue);
     }
 
     public static StandalonePriceValueChangedMessagePayloadBuilder of() {
@@ -87,6 +117,7 @@ public class StandalonePriceValueChangedMessagePayloadBuilder
         StandalonePriceValueChangedMessagePayloadBuilder builder = new StandalonePriceValueChangedMessagePayloadBuilder();
         builder.value = template.getValue();
         builder.staged = template.getStaged();
+        builder.oldValue = template.getOldValue();
         return builder;
     }
 

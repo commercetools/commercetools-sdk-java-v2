@@ -8,3 +8,11 @@
 - :warning: changed property `stores` of type `DivisionDraft` from type `StoreKeyReference[]` to `StoreResourceIdentifier[]`
 </details>
 
+
+<details>
+<summary>Added Property(s)</summary>
+
+- added property `oldValue` to type `StandalonePriceValueChangedMessage`
+- added property `oldValue` to type `StandalonePriceValueChangedMessagePayload`
+</details>
+

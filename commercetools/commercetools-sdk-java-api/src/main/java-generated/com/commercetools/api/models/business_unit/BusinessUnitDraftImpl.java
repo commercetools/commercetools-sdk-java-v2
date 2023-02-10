@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Generic draft type to model those fields all Business Units have in common.</p>
+ *  <p>Generic draft type to model those fields all Business Units have in common. The additional fields required for creating a Company or Division are represented on CompanyDraft and DivisionDraft.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class BusinessUnitDraftImpl implements BusinessUnitDraft, ModelBase {
@@ -24,7 +24,7 @@ public class BusinessUnitDraftImpl implements BusinessUnitDraft, ModelBase {
 
     private com.commercetools.api.models.business_unit.BusinessUnitStatus status;
 
-    private java.util.List<com.commercetools.api.models.store.StoreKeyReference> stores;
+    private java.util.List<com.commercetools.api.models.store.StoreResourceIdentifier> stores;
 
     private com.commercetools.api.models.business_unit.BusinessUnitStoreMode storeMode;
 
@@ -51,7 +51,7 @@ public class BusinessUnitDraftImpl implements BusinessUnitDraft, ModelBase {
     @JsonCreator
     BusinessUnitDraftImpl(@JsonProperty("key") final String key,
             @JsonProperty("status") final com.commercetools.api.models.business_unit.BusinessUnitStatus status,
-            @JsonProperty("stores") final java.util.List<com.commercetools.api.models.store.StoreKeyReference> stores,
+            @JsonProperty("stores") final java.util.List<com.commercetools.api.models.store.StoreResourceIdentifier> stores,
             @JsonProperty("storeMode") final com.commercetools.api.models.business_unit.BusinessUnitStoreMode storeMode,
             @JsonProperty("unitType") final com.commercetools.api.models.business_unit.BusinessUnitType unitType,
             @JsonProperty("name") final String name, @JsonProperty("contactEmail") final String contactEmail,
@@ -98,10 +98,10 @@ public class BusinessUnitDraftImpl implements BusinessUnitDraft, ModelBase {
     }
 
     /**
-     *  <p>References to Stores the Business Unit is associated with. Can only be set when <code>storeMode</code> is <code>Explicit</code>. If not empty, the Business Unit can only be linked to Carts and Orders of a referenced Store. If empty, the Business Unit can only create Carts, Orders, or Quotes that have no <code>store</code> value. Defaults to empty for Companies and not set for Divisions.</p>
+     *  <p>Sets the Stores the Business Unit is associated with. Can only be set when <code>storeMode</code> is <code>Explicit</code>. If not empty, the Business Unit can only be linked to Carts and Orders of a referenced Store. If empty, the Business Unit can only create Carts, Orders, or Quotes that have no <code>store</code> value. Defaults to empty for Companies and not set for Divisions.</p>
      */
 
-    public java.util.List<com.commercetools.api.models.store.StoreKeyReference> getStores() {
+    public java.util.List<com.commercetools.api.models.store.StoreResourceIdentifier> getStores() {
         return this.stores;
     }
 
@@ -201,11 +201,11 @@ public class BusinessUnitDraftImpl implements BusinessUnitDraft, ModelBase {
         this.status = status;
     }
 
-    public void setStores(final com.commercetools.api.models.store.StoreKeyReference... stores) {
+    public void setStores(final com.commercetools.api.models.store.StoreResourceIdentifier... stores) {
         this.stores = new ArrayList<>(Arrays.asList(stores));
     }
 
-    public void setStores(final java.util.List<com.commercetools.api.models.store.StoreKeyReference> stores) {
+    public void setStores(final java.util.List<com.commercetools.api.models.store.StoreResourceIdentifier> stores) {
         this.stores = stores;
     }
 

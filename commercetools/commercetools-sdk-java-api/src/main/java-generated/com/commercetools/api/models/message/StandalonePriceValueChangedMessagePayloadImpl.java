@@ -27,12 +27,16 @@ public class StandalonePriceValueChangedMessagePayloadImpl
 
     private Boolean staged;
 
+    private com.commercetools.api.models.common.Money oldValue;
+
     @JsonCreator
     StandalonePriceValueChangedMessagePayloadImpl(
             @JsonProperty("value") final com.commercetools.api.models.common.Money value,
-            @JsonProperty("staged") final Boolean staged) {
+            @JsonProperty("staged") final Boolean staged,
+            @JsonProperty("oldValue") final com.commercetools.api.models.common.Money oldValue) {
         this.value = value;
         this.staged = staged;
+        this.oldValue = oldValue;
         this.type = STANDALONE_PRICE_VALUE_CHANGED;
     }
 
@@ -64,12 +68,24 @@ public class StandalonePriceValueChangedMessagePayloadImpl
         return this.staged;
     }
 
+    /**
+     *  <p>The old value of the updated StandalonePrice. Present on Messages created after 3 February 2023. Optional for backwards compatibility.</p>
+     */
+
+    public com.commercetools.api.models.common.Money getOldValue() {
+        return this.oldValue;
+    }
+
     public void setValue(final com.commercetools.api.models.common.Money value) {
         this.value = value;
     }
 
     public void setStaged(final Boolean staged) {
         this.staged = staged;
+    }
+
+    public void setOldValue(final com.commercetools.api.models.common.Money oldValue) {
+        this.oldValue = oldValue;
     }
 
     @Override
@@ -85,12 +101,13 @@ public class StandalonePriceValueChangedMessagePayloadImpl
         return new EqualsBuilder().append(type, that.type)
                 .append(value, that.value)
                 .append(staged, that.staged)
+                .append(oldValue, that.oldValue)
                 .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(type).append(value).append(staged).toHashCode();
+        return new HashCodeBuilder(17, 37).append(type).append(value).append(staged).append(oldValue).toHashCode();
     }
 
 }

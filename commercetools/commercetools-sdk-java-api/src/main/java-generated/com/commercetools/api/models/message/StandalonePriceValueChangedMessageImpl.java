@@ -46,6 +46,8 @@ public class StandalonePriceValueChangedMessageImpl implements StandalonePriceVa
 
     private Boolean staged;
 
+    private com.commercetools.api.models.common.Money oldValue;
+
     @JsonCreator
     StandalonePriceValueChangedMessageImpl(@JsonProperty("id") final String id,
             @JsonProperty("version") final Long version,
@@ -58,7 +60,8 @@ public class StandalonePriceValueChangedMessageImpl implements StandalonePriceVa
             @JsonProperty("resourceVersion") final Long resourceVersion,
             @JsonProperty("resourceUserProvidedIdentifiers") final com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers,
             @JsonProperty("value") final com.commercetools.api.models.common.Money value,
-            @JsonProperty("staged") final Boolean staged) {
+            @JsonProperty("staged") final Boolean staged,
+            @JsonProperty("oldValue") final com.commercetools.api.models.common.Money oldValue) {
         this.id = id;
         this.version = version;
         this.createdAt = createdAt;
@@ -71,6 +74,7 @@ public class StandalonePriceValueChangedMessageImpl implements StandalonePriceVa
         this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
         this.value = value;
         this.staged = staged;
+        this.oldValue = oldValue;
         this.type = STANDALONE_PRICE_VALUE_CHANGED;
     }
 
@@ -182,6 +186,14 @@ public class StandalonePriceValueChangedMessageImpl implements StandalonePriceVa
         return this.staged;
     }
 
+    /**
+     *  <p>The old value of the updated StandalonePrice. Present on Messages created after 3 February 2023. Optional for backwards compatibility.</p>
+     */
+
+    public com.commercetools.api.models.common.Money getOldValue() {
+        return this.oldValue;
+    }
+
     public void setId(final String id) {
         this.id = id;
     }
@@ -231,6 +243,10 @@ public class StandalonePriceValueChangedMessageImpl implements StandalonePriceVa
         this.staged = staged;
     }
 
+    public void setOldValue(final com.commercetools.api.models.common.Money oldValue) {
+        this.oldValue = oldValue;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -254,6 +270,7 @@ public class StandalonePriceValueChangedMessageImpl implements StandalonePriceVa
                 .append(resourceUserProvidedIdentifiers, that.resourceUserProvidedIdentifiers)
                 .append(value, that.value)
                 .append(staged, that.staged)
+                .append(oldValue, that.oldValue)
                 .isEquals();
     }
 
@@ -272,6 +289,7 @@ public class StandalonePriceValueChangedMessageImpl implements StandalonePriceVa
                 .append(resourceUserProvidedIdentifiers)
                 .append(value)
                 .append(staged)
+                .append(oldValue)
                 .toHashCode();
     }
 

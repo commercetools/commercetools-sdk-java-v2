@@ -66,7 +66,7 @@
 <span class="source-line-no">053</span><span id="line.53">    @Override</span>
 <span class="source-line-no">054</span><span id="line.54">    protected ApiHttpRequest buildHttpRequest() {</span>
 <span class="source-line-no">055</span><span id="line.55">        List&lt;String&gt; params = new ArrayList&lt;&gt;(getQueryParamUriStrings());</span>
-<span class="source-line-no">056</span><span id="line.56">        String httpRequestPath = String.format("/%s/orders/import", this.projectKey);</span>
+<span class="source-line-no">056</span><span id="line.56">        String httpRequestPath = String.format("%s/orders/import", this.projectKey);</span>
 <span class="source-line-no">057</span><span id="line.57">        if (!params.isEmpty()) {</span>
 <span class="source-line-no">058</span><span id="line.58">            httpRequestPath += "?" + String.join("&amp;", params);</span>
 <span class="source-line-no">059</span><span id="line.59">        }</span>

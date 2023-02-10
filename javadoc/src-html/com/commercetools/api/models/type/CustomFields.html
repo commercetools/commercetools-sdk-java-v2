@@ -42,7 +42,7 @@
 <span class="source-line-no">029</span><span id="line.29"> */</span>
 <span class="source-line-no">030</span><span id="line.30">@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")</span>
 <span class="source-line-no">031</span><span id="line.31">@JsonDeserialize(as = CustomFieldsImpl.class)</span>
-<span class="source-line-no">032</span><span id="line.32">public interface CustomFields {</span>
+<span class="source-line-no">032</span><span id="line.32">public interface CustomFields extends CustomFieldsMixin {</span>
 <span class="source-line-no">033</span><span id="line.33"></span>
 <span class="source-line-no">034</span><span id="line.34">    /**</span>
 <span class="source-line-no">035</span><span id="line.35">     *  &lt;p&gt;Reference to the Type that holds the FieldDefinitions for the Custom Fields.&lt;/p&gt;</span>
@@ -87,23 +87,15 @@
 <span class="source-line-no">074</span><span id="line.74">        return helper.apply(this);</span>
 <span class="source-line-no">075</span><span id="line.75">    }</span>
 <span class="source-line-no">076</span><span id="line.76"></span>
-<span class="source-line-no">077</span><span id="line.77">    public default CustomFieldsDraft toDraft() {</span>
-<span class="source-line-no">078</span><span id="line.78">        return toDraftBuilder().build();</span>
-<span class="source-line-no">079</span><span id="line.79">    }</span>
-<span class="source-line-no">080</span><span id="line.80"></span>
-<span class="source-line-no">081</span><span id="line.81">    public default CustomFieldsDraftBuilder toDraftBuilder() {</span>
-<span class="source-line-no">082</span><span id="line.82">        return CustomFieldsDraft.builder().type(getType().toResourceIdentifier()).fields(getFields());</span>
-<span class="source-line-no">083</span><span id="line.83">    }</span>
-<span class="source-line-no">084</span><span id="line.84"></span>
-<span class="source-line-no">085</span><span id="line.85">    public static com.fasterxml.jackson.core.type.TypeReference&lt;CustomFields&gt; typeReference() {</span>
-<span class="source-line-no">086</span><span id="line.86">        return new com.fasterxml.jackson.core.type.TypeReference&lt;CustomFields&gt;() {</span>
-<span class="source-line-no">087</span><span id="line.87">            @Override</span>
-<span class="source-line-no">088</span><span id="line.88">            public String toString() {</span>
-<span class="source-line-no">089</span><span id="line.89">                return "TypeReference&lt;CustomFields&gt;";</span>
-<span class="source-line-no">090</span><span id="line.90">            }</span>
-<span class="source-line-no">091</span><span id="line.91">        };</span>
-<span class="source-line-no">092</span><span id="line.92">    }</span>
-<span class="source-line-no">093</span><span id="line.93">}</span>
+<span class="source-line-no">077</span><span id="line.77">    public static com.fasterxml.jackson.core.type.TypeReference&lt;CustomFields&gt; typeReference() {</span>
+<span class="source-line-no">078</span><span id="line.78">        return new com.fasterxml.jackson.core.type.TypeReference&lt;CustomFields&gt;() {</span>
+<span class="source-line-no">079</span><span id="line.79">            @Override</span>
+<span class="source-line-no">080</span><span id="line.80">            public String toString() {</span>
+<span class="source-line-no">081</span><span id="line.81">                return "TypeReference&lt;CustomFields&gt;";</span>
+<span class="source-line-no">082</span><span id="line.82">            }</span>
+<span class="source-line-no">083</span><span id="line.83">        };</span>
+<span class="source-line-no">084</span><span id="line.84">    }</span>
+<span class="source-line-no">085</span><span id="line.85">}</span>
 
 
 

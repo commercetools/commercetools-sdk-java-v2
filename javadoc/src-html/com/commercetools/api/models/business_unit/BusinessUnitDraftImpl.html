@@ -28,7 +28,7 @@
 <span class="source-line-no">015</span><span id="line.15">import org.apache.commons.lang3.builder.HashCodeBuilder;</span>
 <span class="source-line-no">016</span><span id="line.16"></span>
 <span class="source-line-no">017</span><span id="line.17">/**</span>
-<span class="source-line-no">018</span><span id="line.18"> *  &lt;p&gt;Generic draft type to model those fields all Business Units have in common.&lt;/p&gt;</span>
+<span class="source-line-no">018</span><span id="line.18"> *  &lt;p&gt;Generic draft type to model those fields all Business Units have in common. The additional fields required for creating a Company or Division are represented on CompanyDraft and DivisionDraft.&lt;/p&gt;</span>
 <span class="source-line-no">019</span><span id="line.19"> */</span>
 <span class="source-line-no">020</span><span id="line.20">@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")</span>
 <span class="source-line-no">021</span><span id="line.21">public class BusinessUnitDraftImpl implements BusinessUnitDraft, ModelBase {</span>
@@ -37,7 +37,7 @@
 <span class="source-line-no">024</span><span id="line.24"></span>
 <span class="source-line-no">025</span><span id="line.25">    private com.commercetools.api.models.business_unit.BusinessUnitStatus status;</span>
 <span class="source-line-no">026</span><span id="line.26"></span>
-<span class="source-line-no">027</span><span id="line.27">    private java.util.List&lt;com.commercetools.api.models.store.StoreKeyReference&gt; stores;</span>
+<span class="source-line-no">027</span><span id="line.27">    private java.util.List&lt;com.commercetools.api.models.store.StoreResourceIdentifier&gt; stores;</span>
 <span class="source-line-no">028</span><span id="line.28"></span>
 <span class="source-line-no">029</span><span id="line.29">    private com.commercetools.api.models.business_unit.BusinessUnitStoreMode storeMode;</span>
 <span class="source-line-no">030</span><span id="line.30"></span>
@@ -64,7 +64,7 @@
 <span class="source-line-no">051</span><span id="line.51">    @JsonCreator</span>
 <span class="source-line-no">052</span><span id="line.52">    BusinessUnitDraftImpl(@JsonProperty("key") final String key,</span>
 <span class="source-line-no">053</span><span id="line.53">            @JsonProperty("status") final com.commercetools.api.models.business_unit.BusinessUnitStatus status,</span>
-<span class="source-line-no">054</span><span id="line.54">            @JsonProperty("stores") final java.util.List&lt;com.commercetools.api.models.store.StoreKeyReference&gt; stores,</span>
+<span class="source-line-no">054</span><span id="line.54">            @JsonProperty("stores") final java.util.List&lt;com.commercetools.api.models.store.StoreResourceIdentifier&gt; stores,</span>
 <span class="source-line-no">055</span><span id="line.55">            @JsonProperty("storeMode") final com.commercetools.api.models.business_unit.BusinessUnitStoreMode storeMode,</span>
 <span class="source-line-no">056</span><span id="line.56">            @JsonProperty("unitType") final com.commercetools.api.models.business_unit.BusinessUnitType unitType,</span>
 <span class="source-line-no">057</span><span id="line.57">            @JsonProperty("name") final String name, @JsonProperty("contactEmail") final String contactEmail,</span>
@@ -111,10 +111,10 @@
 <span class="source-line-no">098</span><span id="line.98">    }</span>
 <span class="source-line-no">099</span><span id="line.99"></span>
 <span class="source-line-no">100</span><span id="line.100">    /**</span>
-<span class="source-line-no">101</span><span id="line.101">     *  &lt;p&gt;References to Stores the Business Unit is associated with. Can only be set when &lt;code&gt;storeMode&lt;/code&gt; is &lt;code&gt;Explicit&lt;/code&gt;. If not empty, the Business Unit can only be linked to Carts and Orders of a referenced Store. If empty, the Business Unit can only create Carts, Orders, or Quotes that have no &lt;code&gt;store&lt;/code&gt; value. Defaults to empty for Companies and not set for Divisions.&lt;/p&gt;</span>
+<span class="source-line-no">101</span><span id="line.101">     *  &lt;p&gt;Sets the Stores the Business Unit is associated with. Can only be set when &lt;code&gt;storeMode&lt;/code&gt; is &lt;code&gt;Explicit&lt;/code&gt;. If not empty, the Business Unit can only be linked to Carts and Orders of a referenced Store. If empty, the Business Unit can only create Carts, Orders, or Quotes that have no &lt;code&gt;store&lt;/code&gt; value. Defaults to empty for Companies and not set for Divisions.&lt;/p&gt;</span>
 <span class="source-line-no">102</span><span id="line.102">     */</span>
 <span class="source-line-no">103</span><span id="line.103"></span>
-<span class="source-line-no">104</span><span id="line.104">    public java.util.List&lt;com.commercetools.api.models.store.StoreKeyReference&gt; getStores() {</span>
+<span class="source-line-no">104</span><span id="line.104">    public java.util.List&lt;com.commercetools.api.models.store.StoreResourceIdentifier&gt; getStores() {</span>
 <span class="source-line-no">105</span><span id="line.105">        return this.stores;</span>
 <span class="source-line-no">106</span><span id="line.106">    }</span>
 <span class="source-line-no">107</span><span id="line.107"></span>
@@ -214,11 +214,11 @@
 <span class="source-line-no">201</span><span id="line.201">        this.status = status;</span>
 <span class="source-line-no">202</span><span id="line.202">    }</span>
 <span class="source-line-no">203</span><span id="line.203"></span>
-<span class="source-line-no">204</span><span id="line.204">    public void setStores(final com.commercetools.api.models.store.StoreKeyReference... stores) {</span>
+<span class="source-line-no">204</span><span id="line.204">    public void setStores(final com.commercetools.api.models.store.StoreResourceIdentifier... stores) {</span>
 <span class="source-line-no">205</span><span id="line.205">        this.stores = new ArrayList&lt;&gt;(Arrays.asList(stores));</span>
 <span class="source-line-no">206</span><span id="line.206">    }</span>
 <span class="source-line-no">207</span><span id="line.207"></span>
-<span class="source-line-no">208</span><span id="line.208">    public void setStores(final java.util.List&lt;com.commercetools.api.models.store.StoreKeyReference&gt; stores) {</span>
+<span class="source-line-no">208</span><span id="line.208">    public void setStores(final java.util.List&lt;com.commercetools.api.models.store.StoreResourceIdentifier&gt; stores) {</span>
 <span class="source-line-no">209</span><span id="line.209">        this.stores = stores;</span>
 <span class="source-line-no">210</span><span id="line.210">    }</span>
 <span class="source-line-no">211</span><span id="line.211"></span>

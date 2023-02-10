@@ -78,7 +78,7 @@
 <span class="source-line-no">065</span><span id="line.65"> */</span>
 <span class="source-line-no">066</span><span id="line.66">@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")</span>
 <span class="source-line-no">067</span><span id="line.67">@JsonDeserialize(as = QuoteImpl.class)</span>
-<span class="source-line-no">068</span><span id="line.68">public interface Quote extends BaseResource, com.commercetools.api.models.DomainResource&lt;Quote&gt;,</span>
+<span class="source-line-no">068</span><span id="line.68">public interface Quote extends BaseResource, QuoteMixin, com.commercetools.api.models.DomainResource&lt;Quote&gt;,</span>
 <span class="source-line-no">069</span><span id="line.69">        com.commercetools.api.models.Referencable&lt;Quote&gt;, com.commercetools.api.models.ResourceIdentifiable&lt;Quote&gt;,</span>
 <span class="source-line-no">070</span><span id="line.70">        com.commercetools.api.models.Customizable&lt;Quote&gt;, com.commercetools.api.models.WithKey {</span>
 <span class="source-line-no">071</span><span id="line.71"></span>
@@ -326,158 +326,158 @@
 <span class="source-line-no">313</span><span id="line.313">    public StateReference getState();</span>
 <span class="source-line-no">314</span><span id="line.314"></span>
 <span class="source-line-no">315</span><span id="line.315">    /**</span>
-<span class="source-line-no">316</span><span id="line.316">     *  &lt;p&gt;The BusinessUnit for the Quote.&lt;/p&gt;</span>
+<span class="source-line-no">316</span><span id="line.316">     *  &lt;p&gt;The Purchase Order Number is typically set by the Buyer on a QuoteRequest to track the purchase order during the quote and order flow.&lt;/p&gt;</span>
 <span class="source-line-no">317</span><span id="line.317">     */</span>
-<span class="source-line-no">318</span><span id="line.318">    @Valid</span>
-<span class="source-line-no">319</span><span id="line.319">    @JsonProperty("businessUnit")</span>
-<span class="source-line-no">320</span><span id="line.320">    public BusinessUnitKeyReference getBusinessUnit();</span>
+<span class="source-line-no">318</span><span id="line.318"></span>
+<span class="source-line-no">319</span><span id="line.319">    @JsonProperty("purchaseOrderNumber")</span>
+<span class="source-line-no">320</span><span id="line.320">    public String getPurchaseOrderNumber();</span>
 <span class="source-line-no">321</span><span id="line.321"></span>
-<span class="source-line-no">322</span><span id="line.322">    public void setId(final String id);</span>
-<span class="source-line-no">323</span><span id="line.323"></span>
-<span class="source-line-no">324</span><span id="line.324">    public void setVersion(final Long version);</span>
-<span class="source-line-no">325</span><span id="line.325"></span>
-<span class="source-line-no">326</span><span id="line.326">    public void setKey(final String key);</span>
-<span class="source-line-no">327</span><span id="line.327"></span>
-<span class="source-line-no">328</span><span id="line.328">    public void setCreatedAt(final ZonedDateTime createdAt);</span>
-<span class="source-line-no">329</span><span id="line.329"></span>
-<span class="source-line-no">330</span><span id="line.330">    public void setLastModifiedAt(final ZonedDateTime lastModifiedAt);</span>
-<span class="source-line-no">331</span><span id="line.331"></span>
-<span class="source-line-no">332</span><span id="line.332">    public void setLastModifiedBy(final LastModifiedBy lastModifiedBy);</span>
-<span class="source-line-no">333</span><span id="line.333"></span>
-<span class="source-line-no">334</span><span id="line.334">    public void setCreatedBy(final CreatedBy createdBy);</span>
-<span class="source-line-no">335</span><span id="line.335"></span>
-<span class="source-line-no">336</span><span id="line.336">    public void setQuoteRequest(final QuoteRequestReference quoteRequest);</span>
-<span class="source-line-no">337</span><span id="line.337"></span>
-<span class="source-line-no">338</span><span id="line.338">    public void setStagedQuote(final StagedQuoteReference stagedQuote);</span>
-<span class="source-line-no">339</span><span id="line.339"></span>
-<span class="source-line-no">340</span><span id="line.340">    public void setCustomer(final CustomerReference customer);</span>
-<span class="source-line-no">341</span><span id="line.341"></span>
-<span class="source-line-no">342</span><span id="line.342">    public void setCustomerGroup(final CustomerGroupReference customerGroup);</span>
-<span class="source-line-no">343</span><span id="line.343"></span>
-<span class="source-line-no">344</span><span id="line.344">    public void setValidTo(final ZonedDateTime validTo);</span>
-<span class="source-line-no">345</span><span id="line.345"></span>
-<span class="source-line-no">346</span><span id="line.346">    public void setSellerComment(final String sellerComment);</span>
-<span class="source-line-no">347</span><span id="line.347"></span>
-<span class="source-line-no">348</span><span id="line.348">    public void setBuyerComment(final String buyerComment);</span>
-<span class="source-line-no">349</span><span id="line.349"></span>
-<span class="source-line-no">350</span><span id="line.350">    public void setStore(final StoreKeyReference store);</span>
-<span class="source-line-no">351</span><span id="line.351"></span>
-<span class="source-line-no">352</span><span id="line.352">    @JsonIgnore</span>
-<span class="source-line-no">353</span><span id="line.353">    public void setLineItems(final LineItem... lineItems);</span>
+<span class="source-line-no">322</span><span id="line.322">    /**</span>
+<span class="source-line-no">323</span><span id="line.323">     *  &lt;p&gt;The BusinessUnit for the Quote.&lt;/p&gt;</span>
+<span class="source-line-no">324</span><span id="line.324">     */</span>
+<span class="source-line-no">325</span><span id="line.325">    @Valid</span>
+<span class="source-line-no">326</span><span id="line.326">    @JsonProperty("businessUnit")</span>
+<span class="source-line-no">327</span><span id="line.327">    public BusinessUnitKeyReference getBusinessUnit();</span>
+<span class="source-line-no">328</span><span id="line.328"></span>
+<span class="source-line-no">329</span><span id="line.329">    public void setId(final String id);</span>
+<span class="source-line-no">330</span><span id="line.330"></span>
+<span class="source-line-no">331</span><span id="line.331">    public void setVersion(final Long version);</span>
+<span class="source-line-no">332</span><span id="line.332"></span>
+<span class="source-line-no">333</span><span id="line.333">    public void setKey(final String key);</span>
+<span class="source-line-no">334</span><span id="line.334"></span>
+<span class="source-line-no">335</span><span id="line.335">    public void setCreatedAt(final ZonedDateTime createdAt);</span>
+<span class="source-line-no">336</span><span id="line.336"></span>
+<span class="source-line-no">337</span><span id="line.337">    public void setLastModifiedAt(final ZonedDateTime lastModifiedAt);</span>
+<span class="source-line-no">338</span><span id="line.338"></span>
+<span class="source-line-no">339</span><span id="line.339">    public void setLastModifiedBy(final LastModifiedBy lastModifiedBy);</span>
+<span class="source-line-no">340</span><span id="line.340"></span>
+<span class="source-line-no">341</span><span id="line.341">    public void setCreatedBy(final CreatedBy createdBy);</span>
+<span class="source-line-no">342</span><span id="line.342"></span>
+<span class="source-line-no">343</span><span id="line.343">    public void setQuoteRequest(final QuoteRequestReference quoteRequest);</span>
+<span class="source-line-no">344</span><span id="line.344"></span>
+<span class="source-line-no">345</span><span id="line.345">    public void setStagedQuote(final StagedQuoteReference stagedQuote);</span>
+<span class="source-line-no">346</span><span id="line.346"></span>
+<span class="source-line-no">347</span><span id="line.347">    public void setCustomer(final CustomerReference customer);</span>
+<span class="source-line-no">348</span><span id="line.348"></span>
+<span class="source-line-no">349</span><span id="line.349">    public void setCustomerGroup(final CustomerGroupReference customerGroup);</span>
+<span class="source-line-no">350</span><span id="line.350"></span>
+<span class="source-line-no">351</span><span id="line.351">    public void setValidTo(final ZonedDateTime validTo);</span>
+<span class="source-line-no">352</span><span id="line.352"></span>
+<span class="source-line-no">353</span><span id="line.353">    public void setSellerComment(final String sellerComment);</span>
 <span class="source-line-no">354</span><span id="line.354"></span>
-<span class="source-line-no">355</span><span id="line.355">    public void setLineItems(final List&lt;LineItem&gt; lineItems);</span>
+<span class="source-line-no">355</span><span id="line.355">    public void setBuyerComment(final String buyerComment);</span>
 <span class="source-line-no">356</span><span id="line.356"></span>
-<span class="source-line-no">357</span><span id="line.357">    @JsonIgnore</span>
-<span class="source-line-no">358</span><span id="line.358">    public void setCustomLineItems(final CustomLineItem... customLineItems);</span>
-<span class="source-line-no">359</span><span id="line.359"></span>
-<span class="source-line-no">360</span><span id="line.360">    public void setCustomLineItems(final List&lt;CustomLineItem&gt; customLineItems);</span>
+<span class="source-line-no">357</span><span id="line.357">    public void setStore(final StoreKeyReference store);</span>
+<span class="source-line-no">358</span><span id="line.358"></span>
+<span class="source-line-no">359</span><span id="line.359">    @JsonIgnore</span>
+<span class="source-line-no">360</span><span id="line.360">    public void setLineItems(final LineItem... lineItems);</span>
 <span class="source-line-no">361</span><span id="line.361"></span>
-<span class="source-line-no">362</span><span id="line.362">    public void setTotalPrice(final TypedMoney totalPrice);</span>
+<span class="source-line-no">362</span><span id="line.362">    public void setLineItems(final List&lt;LineItem&gt; lineItems);</span>
 <span class="source-line-no">363</span><span id="line.363"></span>
-<span class="source-line-no">364</span><span id="line.364">    public void setTaxedPrice(final TaxedPrice taxedPrice);</span>
-<span class="source-line-no">365</span><span id="line.365"></span>
-<span class="source-line-no">366</span><span id="line.366">    public void setShippingAddress(final Address shippingAddress);</span>
-<span class="source-line-no">367</span><span id="line.367"></span>
-<span class="source-line-no">368</span><span id="line.368">    public void setBillingAddress(final Address billingAddress);</span>
-<span class="source-line-no">369</span><span id="line.369"></span>
-<span class="source-line-no">370</span><span id="line.370">    public void setInventoryMode(final InventoryMode inventoryMode);</span>
-<span class="source-line-no">371</span><span id="line.371"></span>
-<span class="source-line-no">372</span><span id="line.372">    public void setTaxMode(final TaxMode taxMode);</span>
-<span class="source-line-no">373</span><span id="line.373"></span>
-<span class="source-line-no">374</span><span id="line.374">    public void setTaxRoundingMode(final RoundingMode taxRoundingMode);</span>
-<span class="source-line-no">375</span><span id="line.375"></span>
-<span class="source-line-no">376</span><span id="line.376">    public void setTaxCalculationMode(final TaxCalculationMode taxCalculationMode);</span>
-<span class="source-line-no">377</span><span id="line.377"></span>
-<span class="source-line-no">378</span><span id="line.378">    public void setCountry(final String country);</span>
-<span class="source-line-no">379</span><span id="line.379"></span>
-<span class="source-line-no">380</span><span id="line.380">    public void setShippingInfo(final ShippingInfo shippingInfo);</span>
-<span class="source-line-no">381</span><span id="line.381"></span>
-<span class="source-line-no">382</span><span id="line.382">    public void setPaymentInfo(final PaymentInfo paymentInfo);</span>
-<span class="source-line-no">383</span><span id="line.383"></span>
-<span class="source-line-no">384</span><span id="line.384">    public void setShippingRateInput(final ShippingRateInput shippingRateInput);</span>
-<span class="source-line-no">385</span><span id="line.385"></span>
-<span class="source-line-no">386</span><span id="line.386">    @JsonIgnore</span>
-<span class="source-line-no">387</span><span id="line.387">    public void setItemShippingAddresses(final Address... itemShippingAddresses);</span>
+<span class="source-line-no">364</span><span id="line.364">    @JsonIgnore</span>
+<span class="source-line-no">365</span><span id="line.365">    public void setCustomLineItems(final CustomLineItem... customLineItems);</span>
+<span class="source-line-no">366</span><span id="line.366"></span>
+<span class="source-line-no">367</span><span id="line.367">    public void setCustomLineItems(final List&lt;CustomLineItem&gt; customLineItems);</span>
+<span class="source-line-no">368</span><span id="line.368"></span>
+<span class="source-line-no">369</span><span id="line.369">    public void setTotalPrice(final TypedMoney totalPrice);</span>
+<span class="source-line-no">370</span><span id="line.370"></span>
+<span class="source-line-no">371</span><span id="line.371">    public void setTaxedPrice(final TaxedPrice taxedPrice);</span>
+<span class="source-line-no">372</span><span id="line.372"></span>
+<span class="source-line-no">373</span><span id="line.373">    public void setShippingAddress(final Address shippingAddress);</span>
+<span class="source-line-no">374</span><span id="line.374"></span>
+<span class="source-line-no">375</span><span id="line.375">    public void setBillingAddress(final Address billingAddress);</span>
+<span class="source-line-no">376</span><span id="line.376"></span>
+<span class="source-line-no">377</span><span id="line.377">    public void setInventoryMode(final InventoryMode inventoryMode);</span>
+<span class="source-line-no">378</span><span id="line.378"></span>
+<span class="source-line-no">379</span><span id="line.379">    public void setTaxMode(final TaxMode taxMode);</span>
+<span class="source-line-no">380</span><span id="line.380"></span>
+<span class="source-line-no">381</span><span id="line.381">    public void setTaxRoundingMode(final RoundingMode taxRoundingMode);</span>
+<span class="source-line-no">382</span><span id="line.382"></span>
+<span class="source-line-no">383</span><span id="line.383">    public void setTaxCalculationMode(final TaxCalculationMode taxCalculationMode);</span>
+<span class="source-line-no">384</span><span id="line.384"></span>
+<span class="source-line-no">385</span><span id="line.385">    public void setCountry(final String country);</span>
+<span class="source-line-no">386</span><span id="line.386"></span>
+<span class="source-line-no">387</span><span id="line.387">    public void setShippingInfo(final ShippingInfo shippingInfo);</span>
 <span class="source-line-no">388</span><span id="line.388"></span>
-<span class="source-line-no">389</span><span id="line.389">    public void setItemShippingAddresses(final List&lt;Address&gt; itemShippingAddresses);</span>
+<span class="source-line-no">389</span><span id="line.389">    public void setPaymentInfo(final PaymentInfo paymentInfo);</span>
 <span class="source-line-no">390</span><span id="line.390"></span>
-<span class="source-line-no">391</span><span id="line.391">    @JsonIgnore</span>
-<span class="source-line-no">392</span><span id="line.392">    public void setDirectDiscounts(final DirectDiscount... directDiscounts);</span>
-<span class="source-line-no">393</span><span id="line.393"></span>
-<span class="source-line-no">394</span><span id="line.394">    public void setDirectDiscounts(final List&lt;DirectDiscount&gt; directDiscounts);</span>
+<span class="source-line-no">391</span><span id="line.391">    public void setShippingRateInput(final ShippingRateInput shippingRateInput);</span>
+<span class="source-line-no">392</span><span id="line.392"></span>
+<span class="source-line-no">393</span><span id="line.393">    @JsonIgnore</span>
+<span class="source-line-no">394</span><span id="line.394">    public void setItemShippingAddresses(final Address... itemShippingAddresses);</span>
 <span class="source-line-no">395</span><span id="line.395"></span>
-<span class="source-line-no">396</span><span id="line.396">    public void setCustom(final CustomFields custom);</span>
+<span class="source-line-no">396</span><span id="line.396">    public void setItemShippingAddresses(final List&lt;Address&gt; itemShippingAddresses);</span>
 <span class="source-line-no">397</span><span id="line.397"></span>
-<span class="source-line-no">398</span><span id="line.398">    public void setQuoteState(final QuoteState quoteState);</span>
-<span class="source-line-no">399</span><span id="line.399"></span>
-<span class="source-line-no">400</span><span id="line.400">    public void setState(final StateReference state);</span>
-<span class="source-line-no">401</span><span id="line.401"></span>
-<span class="source-line-no">402</span><span id="line.402">    public void setBusinessUnit(final BusinessUnitKeyReference businessUnit);</span>
-<span class="source-line-no">403</span><span id="line.403"></span>
-<span class="source-line-no">404</span><span id="line.404">    public static Quote of() {</span>
-<span class="source-line-no">405</span><span id="line.405">        return new QuoteImpl();</span>
-<span class="source-line-no">406</span><span id="line.406">    }</span>
-<span class="source-line-no">407</span><span id="line.407"></span>
-<span class="source-line-no">408</span><span id="line.408">    public static Quote of(final Quote template) {</span>
-<span class="source-line-no">409</span><span id="line.409">        QuoteImpl instance = new QuoteImpl();</span>
-<span class="source-line-no">410</span><span id="line.410">        instance.setId(template.getId());</span>
-<span class="source-line-no">411</span><span id="line.411">        instance.setVersion(template.getVersion());</span>
-<span class="source-line-no">412</span><span id="line.412">        instance.setCreatedAt(template.getCreatedAt());</span>
-<span class="source-line-no">413</span><span id="line.413">        instance.setLastModifiedAt(template.getLastModifiedAt());</span>
-<span class="source-line-no">414</span><span id="line.414">        instance.setKey(template.getKey());</span>
-<span class="source-line-no">415</span><span id="line.415">        instance.setLastModifiedBy(template.getLastModifiedBy());</span>
-<span class="source-line-no">416</span><span id="line.416">        instance.setCreatedBy(template.getCreatedBy());</span>
-<span class="source-line-no">417</span><span id="line.417">        instance.setQuoteRequest(template.getQuoteRequest());</span>
-<span class="source-line-no">418</span><span id="line.418">        instance.setStagedQuote(template.getStagedQuote());</span>
-<span class="source-line-no">419</span><span id="line.419">        instance.setCustomer(template.getCustomer());</span>
-<span class="source-line-no">420</span><span id="line.420">        instance.setCustomerGroup(template.getCustomerGroup());</span>
-<span class="source-line-no">421</span><span id="line.421">        instance.setValidTo(template.getValidTo());</span>
-<span class="source-line-no">422</span><span id="line.422">        instance.setSellerComment(template.getSellerComment());</span>
-<span class="source-line-no">423</span><span id="line.423">        instance.setBuyerComment(template.getBuyerComment());</span>
-<span class="source-line-no">424</span><span id="line.424">        instance.setStore(template.getStore());</span>
-<span class="source-line-no">425</span><span id="line.425">        instance.setLineItems(template.getLineItems());</span>
-<span class="source-line-no">426</span><span id="line.426">        instance.setCustomLineItems(template.getCustomLineItems());</span>
-<span class="source-line-no">427</span><span id="line.427">        instance.setTotalPrice(template.getTotalPrice());</span>
-<span class="source-line-no">428</span><span id="line.428">        instance.setTaxedPrice(template.getTaxedPrice());</span>
-<span class="source-line-no">429</span><span id="line.429">        instance.setShippingAddress(template.getShippingAddress());</span>
-<span class="source-line-no">430</span><span id="line.430">        instance.setBillingAddress(template.getBillingAddress());</span>
-<span class="source-line-no">431</span><span id="line.431">        instance.setInventoryMode(template.getInventoryMode());</span>
-<span class="source-line-no">432</span><span id="line.432">        instance.setTaxMode(template.getTaxMode());</span>
-<span class="source-line-no">433</span><span id="line.433">        instance.setTaxRoundingMode(template.getTaxRoundingMode());</span>
-<span class="source-line-no">434</span><span id="line.434">        instance.setTaxCalculationMode(template.getTaxCalculationMode());</span>
-<span class="source-line-no">435</span><span id="line.435">        instance.setCountry(template.getCountry());</span>
-<span class="source-line-no">436</span><span id="line.436">        instance.setShippingInfo(template.getShippingInfo());</span>
-<span class="source-line-no">437</span><span id="line.437">        instance.setPaymentInfo(template.getPaymentInfo());</span>
-<span class="source-line-no">438</span><span id="line.438">        instance.setShippingRateInput(template.getShippingRateInput());</span>
-<span class="source-line-no">439</span><span id="line.439">        instance.setItemShippingAddresses(template.getItemShippingAddresses());</span>
-<span class="source-line-no">440</span><span id="line.440">        instance.setDirectDiscounts(template.getDirectDiscounts());</span>
-<span class="source-line-no">441</span><span id="line.441">        instance.setCustom(template.getCustom());</span>
-<span class="source-line-no">442</span><span id="line.442">        instance.setQuoteState(template.getQuoteState());</span>
-<span class="source-line-no">443</span><span id="line.443">        instance.setState(template.getState());</span>
-<span class="source-line-no">444</span><span id="line.444">        instance.setBusinessUnit(template.getBusinessUnit());</span>
-<span class="source-line-no">445</span><span id="line.445">        return instance;</span>
-<span class="source-line-no">446</span><span id="line.446">    }</span>
-<span class="source-line-no">447</span><span id="line.447"></span>
-<span class="source-line-no">448</span><span id="line.448">    public static QuoteBuilder builder() {</span>
-<span class="source-line-no">449</span><span id="line.449">        return QuoteBuilder.of();</span>
-<span class="source-line-no">450</span><span id="line.450">    }</span>
-<span class="source-line-no">451</span><span id="line.451"></span>
-<span class="source-line-no">452</span><span id="line.452">    public static QuoteBuilder builder(final Quote template) {</span>
-<span class="source-line-no">453</span><span id="line.453">        return QuoteBuilder.of(template);</span>
-<span class="source-line-no">454</span><span id="line.454">    }</span>
-<span class="source-line-no">455</span><span id="line.455"></span>
-<span class="source-line-no">456</span><span id="line.456">    default &lt;T&gt; T withQuote(Function&lt;Quote, T&gt; helper) {</span>
-<span class="source-line-no">457</span><span id="line.457">        return helper.apply(this);</span>
-<span class="source-line-no">458</span><span id="line.458">    }</span>
-<span class="source-line-no">459</span><span id="line.459"></span>
-<span class="source-line-no">460</span><span id="line.460">    @Override</span>
-<span class="source-line-no">461</span><span id="line.461">    public default com.commercetools.api.models.common.ResourceIdentifier toResourceIdentifier() {</span>
-<span class="source-line-no">462</span><span id="line.462">        return com.commercetools.api.models.quote.QuoteResourceIdentifier.builder().id(getId()).build();</span>
-<span class="source-line-no">463</span><span id="line.463">    }</span>
-<span class="source-line-no">464</span><span id="line.464"></span>
-<span class="source-line-no">465</span><span id="line.465">    @Override</span>
-<span class="source-line-no">466</span><span id="line.466">    public default com.commercetools.api.models.common.Reference toReference() {</span>
-<span class="source-line-no">467</span><span id="line.467">        return com.commercetools.api.models.quote.QuoteReference.builder().id(getId()).build();</span>
+<span class="source-line-no">398</span><span id="line.398">    @JsonIgnore</span>
+<span class="source-line-no">399</span><span id="line.399">    public void setDirectDiscounts(final DirectDiscount... directDiscounts);</span>
+<span class="source-line-no">400</span><span id="line.400"></span>
+<span class="source-line-no">401</span><span id="line.401">    public void setDirectDiscounts(final List&lt;DirectDiscount&gt; directDiscounts);</span>
+<span class="source-line-no">402</span><span id="line.402"></span>
+<span class="source-line-no">403</span><span id="line.403">    public void setCustom(final CustomFields custom);</span>
+<span class="source-line-no">404</span><span id="line.404"></span>
+<span class="source-line-no">405</span><span id="line.405">    public void setQuoteState(final QuoteState quoteState);</span>
+<span class="source-line-no">406</span><span id="line.406"></span>
+<span class="source-line-no">407</span><span id="line.407">    public void setState(final StateReference state);</span>
+<span class="source-line-no">408</span><span id="line.408"></span>
+<span class="source-line-no">409</span><span id="line.409">    public void setPurchaseOrderNumber(final String purchaseOrderNumber);</span>
+<span class="source-line-no">410</span><span id="line.410"></span>
+<span class="source-line-no">411</span><span id="line.411">    public void setBusinessUnit(final BusinessUnitKeyReference businessUnit);</span>
+<span class="source-line-no">412</span><span id="line.412"></span>
+<span class="source-line-no">413</span><span id="line.413">    public static Quote of() {</span>
+<span class="source-line-no">414</span><span id="line.414">        return new QuoteImpl();</span>
+<span class="source-line-no">415</span><span id="line.415">    }</span>
+<span class="source-line-no">416</span><span id="line.416"></span>
+<span class="source-line-no">417</span><span id="line.417">    public static Quote of(final Quote template) {</span>
+<span class="source-line-no">418</span><span id="line.418">        QuoteImpl instance = new QuoteImpl();</span>
+<span class="source-line-no">419</span><span id="line.419">        instance.setId(template.getId());</span>
+<span class="source-line-no">420</span><span id="line.420">        instance.setVersion(template.getVersion());</span>
+<span class="source-line-no">421</span><span id="line.421">        instance.setCreatedAt(template.getCreatedAt());</span>
+<span class="source-line-no">422</span><span id="line.422">        instance.setLastModifiedAt(template.getLastModifiedAt());</span>
+<span class="source-line-no">423</span><span id="line.423">        instance.setKey(template.getKey());</span>
+<span class="source-line-no">424</span><span id="line.424">        instance.setLastModifiedBy(template.getLastModifiedBy());</span>
+<span class="source-line-no">425</span><span id="line.425">        instance.setCreatedBy(template.getCreatedBy());</span>
+<span class="source-line-no">426</span><span id="line.426">        instance.setQuoteRequest(template.getQuoteRequest());</span>
+<span class="source-line-no">427</span><span id="line.427">        instance.setStagedQuote(template.getStagedQuote());</span>
+<span class="source-line-no">428</span><span id="line.428">        instance.setCustomer(template.getCustomer());</span>
+<span class="source-line-no">429</span><span id="line.429">        instance.setCustomerGroup(template.getCustomerGroup());</span>
+<span class="source-line-no">430</span><span id="line.430">        instance.setValidTo(template.getValidTo());</span>
+<span class="source-line-no">431</span><span id="line.431">        instance.setSellerComment(template.getSellerComment());</span>
+<span class="source-line-no">432</span><span id="line.432">        instance.setBuyerComment(template.getBuyerComment());</span>
+<span class="source-line-no">433</span><span id="line.433">        instance.setStore(template.getStore());</span>
+<span class="source-line-no">434</span><span id="line.434">        instance.setLineItems(template.getLineItems());</span>
+<span class="source-line-no">435</span><span id="line.435">        instance.setCustomLineItems(template.getCustomLineItems());</span>
+<span class="source-line-no">436</span><span id="line.436">        instance.setTotalPrice(template.getTotalPrice());</span>
+<span class="source-line-no">437</span><span id="line.437">        instance.setTaxedPrice(template.getTaxedPrice());</span>
+<span class="source-line-no">438</span><span id="line.438">        instance.setShippingAddress(template.getShippingAddress());</span>
+<span class="source-line-no">439</span><span id="line.439">        instance.setBillingAddress(template.getBillingAddress());</span>
+<span class="source-line-no">440</span><span id="line.440">        instance.setInventoryMode(template.getInventoryMode());</span>
+<span class="source-line-no">441</span><span id="line.441">        instance.setTaxMode(template.getTaxMode());</span>
+<span class="source-line-no">442</span><span id="line.442">        instance.setTaxRoundingMode(template.getTaxRoundingMode());</span>
+<span class="source-line-no">443</span><span id="line.443">        instance.setTaxCalculationMode(template.getTaxCalculationMode());</span>
+<span class="source-line-no">444</span><span id="line.444">        instance.setCountry(template.getCountry());</span>
+<span class="source-line-no">445</span><span id="line.445">        instance.setShippingInfo(template.getShippingInfo());</span>
+<span class="source-line-no">446</span><span id="line.446">        instance.setPaymentInfo(template.getPaymentInfo());</span>
+<span class="source-line-no">447</span><span id="line.447">        instance.setShippingRateInput(template.getShippingRateInput());</span>
+<span class="source-line-no">448</span><span id="line.448">        instance.setItemShippingAddresses(template.getItemShippingAddresses());</span>
+<span class="source-line-no">449</span><span id="line.449">        instance.setDirectDiscounts(template.getDirectDiscounts());</span>
+<span class="source-line-no">450</span><span id="line.450">        instance.setCustom(template.getCustom());</span>
+<span class="source-line-no">451</span><span id="line.451">        instance.setQuoteState(template.getQuoteState());</span>
+<span class="source-line-no">452</span><span id="line.452">        instance.setState(template.getState());</span>
+<span class="source-line-no">453</span><span id="line.453">        instance.setPurchaseOrderNumber(template.getPurchaseOrderNumber());</span>
+<span class="source-line-no">454</span><span id="line.454">        instance.setBusinessUnit(template.getBusinessUnit());</span>
+<span class="source-line-no">455</span><span id="line.455">        return instance;</span>
+<span class="source-line-no">456</span><span id="line.456">    }</span>
+<span class="source-line-no">457</span><span id="line.457"></span>
+<span class="source-line-no">458</span><span id="line.458">    public static QuoteBuilder builder() {</span>
+<span class="source-line-no">459</span><span id="line.459">        return QuoteBuilder.of();</span>
+<span class="source-line-no">460</span><span id="line.460">    }</span>
+<span class="source-line-no">461</span><span id="line.461"></span>
+<span class="source-line-no">462</span><span id="line.462">    public static QuoteBuilder builder(final Quote template) {</span>
+<span class="source-line-no">463</span><span id="line.463">        return QuoteBuilder.of(template);</span>
+<span class="source-line-no">464</span><span id="line.464">    }</span>
+<span class="source-line-no">465</span><span id="line.465"></span>
+<span class="source-line-no">466</span><span id="line.466">    default &lt;T&gt; T withQuote(Function&lt;Quote, T&gt; helper) {</span>
+<span class="source-line-no">467</span><span id="line.467">        return helper.apply(this);</span>
 <span class="source-line-no">468</span><span id="line.468">    }</span>
 <span class="source-line-no">469</span><span id="line.469"></span>
 <span class="source-line-no">470</span><span id="line.470">    public static com.commercetools.api.models.common.ReferenceTypeId referenceTypeId() {</span>

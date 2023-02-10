@@ -53,7 +53,7 @@
 <span class="source-line-no">040</span><span id="line.40"> */</span>
 <span class="source-line-no">041</span><span id="line.41">@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")</span>
 <span class="source-line-no">042</span><span id="line.42">@JsonDeserialize(as = ReviewImpl.class)</span>
-<span class="source-line-no">043</span><span id="line.43">public interface Review extends BaseResource, com.commercetools.api.models.DomainResource&lt;Review&gt;,</span>
+<span class="source-line-no">043</span><span id="line.43">public interface Review extends BaseResource, ReviewMixin, com.commercetools.api.models.DomainResource&lt;Review&gt;,</span>
 <span class="source-line-no">044</span><span id="line.44">        com.commercetools.api.models.Referencable&lt;Review&gt;, com.commercetools.api.models.ResourceIdentifiable&lt;Review&gt;,</span>
 <span class="source-line-no">045</span><span id="line.45">        com.commercetools.api.models.Customizable&lt;Review&gt;, com.commercetools.api.models.WithKey {</span>
 <span class="source-line-no">046</span><span id="line.46"></span>
@@ -258,35 +258,25 @@
 <span class="source-line-no">245</span><span id="line.245">        return helper.apply(this);</span>
 <span class="source-line-no">246</span><span id="line.246">    }</span>
 <span class="source-line-no">247</span><span id="line.247"></span>
-<span class="source-line-no">248</span><span id="line.248">    @Override</span>
-<span class="source-line-no">249</span><span id="line.249">    public default com.commercetools.api.models.common.ResourceIdentifier toResourceIdentifier() {</span>
-<span class="source-line-no">250</span><span id="line.250">        return com.commercetools.api.models.review.ReviewResourceIdentifier.builder().id(getId()).build();</span>
-<span class="source-line-no">251</span><span id="line.251">    }</span>
-<span class="source-line-no">252</span><span id="line.252"></span>
-<span class="source-line-no">253</span><span id="line.253">    @Override</span>
-<span class="source-line-no">254</span><span id="line.254">    public default com.commercetools.api.models.common.Reference toReference() {</span>
-<span class="source-line-no">255</span><span id="line.255">        return com.commercetools.api.models.review.ReviewReference.builder().id(getId()).build();</span>
-<span class="source-line-no">256</span><span id="line.256">    }</span>
+<span class="source-line-no">248</span><span id="line.248">    public static com.commercetools.api.models.common.ReferenceTypeId referenceTypeId() {</span>
+<span class="source-line-no">249</span><span id="line.249">        return com.commercetools.api.models.common.ReferenceTypeId.REVIEW;</span>
+<span class="source-line-no">250</span><span id="line.250">    }</span>
+<span class="source-line-no">251</span><span id="line.251"></span>
+<span class="source-line-no">252</span><span id="line.252">    @Deprecated</span>
+<span class="source-line-no">253</span><span id="line.253">    @JsonIgnore</span>
+<span class="source-line-no">254</span><span id="line.254">    public default void setTarget(final Object target) {</span>
+<span class="source-line-no">255</span><span id="line.255">        setTarget((Reference) target);</span>
+<span class="source-line-no">256</span><span id="line.256">    };</span>
 <span class="source-line-no">257</span><span id="line.257"></span>
-<span class="source-line-no">258</span><span id="line.258">    public static com.commercetools.api.models.common.ReferenceTypeId referenceTypeId() {</span>
-<span class="source-line-no">259</span><span id="line.259">        return com.commercetools.api.models.common.ReferenceTypeId.REVIEW;</span>
-<span class="source-line-no">260</span><span id="line.260">    }</span>
-<span class="source-line-no">261</span><span id="line.261"></span>
-<span class="source-line-no">262</span><span id="line.262">    @Deprecated</span>
-<span class="source-line-no">263</span><span id="line.263">    @JsonIgnore</span>
-<span class="source-line-no">264</span><span id="line.264">    public default void setTarget(final Object target) {</span>
-<span class="source-line-no">265</span><span id="line.265">        setTarget((Reference) target);</span>
-<span class="source-line-no">266</span><span id="line.266">    };</span>
-<span class="source-line-no">267</span><span id="line.267"></span>
-<span class="source-line-no">268</span><span id="line.268">    public static com.fasterxml.jackson.core.type.TypeReference&lt;Review&gt; typeReference() {</span>
-<span class="source-line-no">269</span><span id="line.269">        return new com.fasterxml.jackson.core.type.TypeReference&lt;Review&gt;() {</span>
-<span class="source-line-no">270</span><span id="line.270">            @Override</span>
-<span class="source-line-no">271</span><span id="line.271">            public String toString() {</span>
-<span class="source-line-no">272</span><span id="line.272">                return "TypeReference&lt;Review&gt;";</span>
-<span class="source-line-no">273</span><span id="line.273">            }</span>
-<span class="source-line-no">274</span><span id="line.274">        };</span>
-<span class="source-line-no">275</span><span id="line.275">    }</span>
-<span class="source-line-no">276</span><span id="line.276">}</span>
+<span class="source-line-no">258</span><span id="line.258">    public static com.fasterxml.jackson.core.type.TypeReference&lt;Review&gt; typeReference() {</span>
+<span class="source-line-no">259</span><span id="line.259">        return new com.fasterxml.jackson.core.type.TypeReference&lt;Review&gt;() {</span>
+<span class="source-line-no">260</span><span id="line.260">            @Override</span>
+<span class="source-line-no">261</span><span id="line.261">            public String toString() {</span>
+<span class="source-line-no">262</span><span id="line.262">                return "TypeReference&lt;Review&gt;";</span>
+<span class="source-line-no">263</span><span id="line.263">            }</span>
+<span class="source-line-no">264</span><span id="line.264">        };</span>
+<span class="source-line-no">265</span><span id="line.265">    }</span>
+<span class="source-line-no">266</span><span id="line.266">}</span>
 
 
 

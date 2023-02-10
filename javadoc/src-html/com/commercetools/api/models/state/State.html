@@ -53,7 +53,7 @@
 <span class="source-line-no">040</span><span id="line.40"> */</span>
 <span class="source-line-no">041</span><span id="line.41">@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")</span>
 <span class="source-line-no">042</span><span id="line.42">@JsonDeserialize(as = StateImpl.class)</span>
-<span class="source-line-no">043</span><span id="line.43">public interface State extends BaseResource, com.commercetools.api.models.DomainResource&lt;State&gt;,</span>
+<span class="source-line-no">043</span><span id="line.43">public interface State extends BaseResource, StateMixin, com.commercetools.api.models.DomainResource&lt;State&gt;,</span>
 <span class="source-line-no">044</span><span id="line.44">        com.commercetools.api.models.Referencable&lt;State&gt;, com.commercetools.api.models.ResourceIdentifiable&lt;State&gt;,</span>
 <span class="source-line-no">045</span><span id="line.45">        com.commercetools.api.models.WithKey {</span>
 <span class="source-line-no">046</span><span id="line.46"></span>
@@ -228,29 +228,19 @@
 <span class="source-line-no">215</span><span id="line.215">        return helper.apply(this);</span>
 <span class="source-line-no">216</span><span id="line.216">    }</span>
 <span class="source-line-no">217</span><span id="line.217"></span>
-<span class="source-line-no">218</span><span id="line.218">    @Override</span>
-<span class="source-line-no">219</span><span id="line.219">    public default com.commercetools.api.models.common.ResourceIdentifier toResourceIdentifier() {</span>
-<span class="source-line-no">220</span><span id="line.220">        return com.commercetools.api.models.state.StateResourceIdentifier.builder().id(getId()).build();</span>
-<span class="source-line-no">221</span><span id="line.221">    }</span>
-<span class="source-line-no">222</span><span id="line.222"></span>
-<span class="source-line-no">223</span><span id="line.223">    @Override</span>
-<span class="source-line-no">224</span><span id="line.224">    public default com.commercetools.api.models.common.Reference toReference() {</span>
-<span class="source-line-no">225</span><span id="line.225">        return com.commercetools.api.models.state.StateReference.builder().id(getId()).build();</span>
-<span class="source-line-no">226</span><span id="line.226">    }</span>
-<span class="source-line-no">227</span><span id="line.227"></span>
-<span class="source-line-no">228</span><span id="line.228">    public static com.commercetools.api.models.common.ReferenceTypeId referenceTypeId() {</span>
-<span class="source-line-no">229</span><span id="line.229">        return com.commercetools.api.models.common.ReferenceTypeId.STATE;</span>
-<span class="source-line-no">230</span><span id="line.230">    }</span>
-<span class="source-line-no">231</span><span id="line.231"></span>
-<span class="source-line-no">232</span><span id="line.232">    public static com.fasterxml.jackson.core.type.TypeReference&lt;State&gt; typeReference() {</span>
-<span class="source-line-no">233</span><span id="line.233">        return new com.fasterxml.jackson.core.type.TypeReference&lt;State&gt;() {</span>
-<span class="source-line-no">234</span><span id="line.234">            @Override</span>
-<span class="source-line-no">235</span><span id="line.235">            public String toString() {</span>
-<span class="source-line-no">236</span><span id="line.236">                return "TypeReference&lt;State&gt;";</span>
-<span class="source-line-no">237</span><span id="line.237">            }</span>
-<span class="source-line-no">238</span><span id="line.238">        };</span>
-<span class="source-line-no">239</span><span id="line.239">    }</span>
-<span class="source-line-no">240</span><span id="line.240">}</span>
+<span class="source-line-no">218</span><span id="line.218">    public static com.commercetools.api.models.common.ReferenceTypeId referenceTypeId() {</span>
+<span class="source-line-no">219</span><span id="line.219">        return com.commercetools.api.models.common.ReferenceTypeId.STATE;</span>
+<span class="source-line-no">220</span><span id="line.220">    }</span>
+<span class="source-line-no">221</span><span id="line.221"></span>
+<span class="source-line-no">222</span><span id="line.222">    public static com.fasterxml.jackson.core.type.TypeReference&lt;State&gt; typeReference() {</span>
+<span class="source-line-no">223</span><span id="line.223">        return new com.fasterxml.jackson.core.type.TypeReference&lt;State&gt;() {</span>
+<span class="source-line-no">224</span><span id="line.224">            @Override</span>
+<span class="source-line-no">225</span><span id="line.225">            public String toString() {</span>
+<span class="source-line-no">226</span><span id="line.226">                return "TypeReference&lt;State&gt;";</span>
+<span class="source-line-no">227</span><span id="line.227">            }</span>
+<span class="source-line-no">228</span><span id="line.228">        };</span>
+<span class="source-line-no">229</span><span id="line.229">    }</span>
+<span class="source-line-no">230</span><span id="line.230">}</span>
 
 
 

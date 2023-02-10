@@ -20,7 +20,7 @@
 <span class="source-line-no">007</span><span id="line.7">import io.vrap.rmf.base.client.utils.Generated;</span>
 <span class="source-line-no">008</span><span id="line.8"></span>
 <span class="source-line-no">009</span><span id="line.9">@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")</span>
-<span class="source-line-no">010</span><span id="line.10">public class ByProjectKeyCustomersRequestBuilder {</span>
+<span class="source-line-no">010</span><span id="line.10">public class ByProjectKeyCustomersRequestBuilder implements ByProjectKeyCustomersRequestBuilderMixin {</span>
 <span class="source-line-no">011</span><span id="line.11"></span>
 <span class="source-line-no">012</span><span id="line.12">    private final ApiHttpClient apiHttpClient;</span>
 <span class="source-line-no">013</span><span id="line.13">    private final String projectKey;</span>
@@ -80,47 +80,7 @@
 <span class="source-line-no">067</span><span id="line.67">        return new ByProjectKeyCustomersByIDRequestBuilder(apiHttpClient, projectKey, ID);</span>
 <span class="source-line-no">068</span><span id="line.68">    }</span>
 <span class="source-line-no">069</span><span id="line.69"></span>
-<span class="source-line-no">070</span><span id="line.70">    public ByProjectKeyCustomersByIDPost update(</span>
-<span class="source-line-no">071</span><span id="line.71">            com.commercetools.api.models.Versioned&lt;com.commercetools.api.models.customer.Customer&gt; customer,</span>
-<span class="source-line-no">072</span><span id="line.72">            java.util.List&lt;com.commercetools.api.models.customer.CustomerUpdateAction&gt; actions) {</span>
-<span class="source-line-no">073</span><span id="line.73">        return withId(customer.getId()).post(builder -&gt; com.commercetools.api.models.customer.CustomerUpdate.builder()</span>
-<span class="source-line-no">074</span><span id="line.74">                .version(customer.getVersion())</span>
-<span class="source-line-no">075</span><span id="line.75">                .actions(actions));</span>
-<span class="source-line-no">076</span><span id="line.76">    }</span>
-<span class="source-line-no">077</span><span id="line.77"></span>
-<span class="source-line-no">078</span><span id="line.78">    public ByProjectKeyCustomersByIDPost update(</span>
-<span class="source-line-no">079</span><span id="line.79">            com.commercetools.api.models.Versioned&lt;com.commercetools.api.models.customer.Customer&gt; customer,</span>
-<span class="source-line-no">080</span><span id="line.80">            UnaryOperator&lt;UpdateActionBuilder&lt;com.commercetools.api.models.customer.CustomerUpdateAction, com.commercetools.api.models.customer.CustomerUpdateActionBuilder&gt;&gt; op) {</span>
-<span class="source-line-no">081</span><span id="line.81">        return withId(customer.getId()).post(builder -&gt; com.commercetools.api.models.customer.CustomerUpdate.builder()</span>
-<span class="source-line-no">082</span><span id="line.82">                .version(customer.getVersion())</span>
-<span class="source-line-no">083</span><span id="line.83">                .actions(op.apply(UpdateActionBuilder</span>
-<span class="source-line-no">084</span><span id="line.84">                        .of(com.commercetools.api.models.customer.CustomerUpdateActionBuilder::of)).actions));</span>
-<span class="source-line-no">085</span><span id="line.85">    }</span>
-<span class="source-line-no">086</span><span id="line.86"></span>
-<span class="source-line-no">087</span><span id="line.87">    public WithUpdateActionBuilder&lt;com.commercetools.api.models.customer.CustomerUpdateAction, com.commercetools.api.models.customer.CustomerUpdateActionBuilder, ByProjectKeyCustomersByIDPost&gt; update(</span>
-<span class="source-line-no">088</span><span id="line.88">            com.commercetools.api.models.Versioned&lt;com.commercetools.api.models.customer.Customer&gt; customer) {</span>
-<span class="source-line-no">089</span><span id="line.89">        return builder -&gt; withId(customer.getId())</span>
-<span class="source-line-no">090</span><span id="line.90">                .post(b -&gt; com.commercetools.api.models.customer.CustomerUpdate.builder()</span>
-<span class="source-line-no">091</span><span id="line.91">                        .version(customer.getVersion())</span>
-<span class="source-line-no">092</span><span id="line.92">                        .actions(builder.apply(UpdateActionBuilder</span>
-<span class="source-line-no">093</span><span id="line.93">                                .of(com.commercetools.api.models.customer.CustomerUpdateActionBuilder::of)).actions));</span>
-<span class="source-line-no">094</span><span id="line.94">    }</span>
-<span class="source-line-no">095</span><span id="line.95"></span>
-<span class="source-line-no">096</span><span id="line.96">    public ByProjectKeyCustomersByIDDelete delete(</span>
-<span class="source-line-no">097</span><span id="line.97">            com.commercetools.api.models.Versioned&lt;com.commercetools.api.models.customer.Customer&gt; customer) {</span>
-<span class="source-line-no">098</span><span id="line.98">        return withId(customer.getId()).delete().withVersion(customer.getVersion());</span>
-<span class="source-line-no">099</span><span id="line.99">    }</span>
-<span class="source-line-no">100</span><span id="line.100"></span>
-<span class="source-line-no">101</span><span id="line.101">    public ByProjectKeyCustomersPost create(com.commercetools.api.models.customer.CustomerDraft customerDraft) {</span>
-<span class="source-line-no">102</span><span id="line.102">        return post(customerDraft);</span>
-<span class="source-line-no">103</span><span id="line.103">    }</span>
-<span class="source-line-no">104</span><span id="line.104"></span>
-<span class="source-line-no">105</span><span id="line.105">    public ByProjectKeyCustomersPost create(</span>
-<span class="source-line-no">106</span><span id="line.106">            UnaryOperator&lt;com.commercetools.api.models.customer.CustomerDraftBuilder&gt; op) {</span>
-<span class="source-line-no">107</span><span id="line.107">        return post(op.apply(com.commercetools.api.models.customer.CustomerDraftBuilder.of()).build());</span>
-<span class="source-line-no">108</span><span id="line.108">    }</span>
-<span class="source-line-no">109</span><span id="line.109"></span>
-<span class="source-line-no">110</span><span id="line.110">}</span>
+<span class="source-line-no">070</span><span id="line.70">}</span>
 
 
 

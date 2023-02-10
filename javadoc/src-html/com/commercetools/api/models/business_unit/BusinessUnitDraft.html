@@ -22,7 +22,7 @@
 <span class="source-line-no">009</span><span id="line.9">import javax.validation.constraints.NotNull;</span>
 <span class="source-line-no">010</span><span id="line.10"></span>
 <span class="source-line-no">011</span><span id="line.11">import com.commercetools.api.models.common.BaseAddress;</span>
-<span class="source-line-no">012</span><span id="line.12">import com.commercetools.api.models.store.StoreKeyReference;</span>
+<span class="source-line-no">012</span><span id="line.12">import com.commercetools.api.models.store.StoreResourceIdentifier;</span>
 <span class="source-line-no">013</span><span id="line.13">import com.commercetools.api.models.type.CustomFieldsDraft;</span>
 <span class="source-line-no">014</span><span id="line.14">import com.fasterxml.jackson.annotation.*;</span>
 <span class="source-line-no">015</span><span id="line.15">import com.fasterxml.jackson.databind.annotation.*;</span>
@@ -30,7 +30,7 @@
 <span class="source-line-no">017</span><span id="line.17">import io.vrap.rmf.base.client.utils.Generated;</span>
 <span class="source-line-no">018</span><span id="line.18"></span>
 <span class="source-line-no">019</span><span id="line.19">/**</span>
-<span class="source-line-no">020</span><span id="line.20"> *  &lt;p&gt;Generic draft type to model those fields all Business Units have in common.&lt;/p&gt;</span>
+<span class="source-line-no">020</span><span id="line.20"> *  &lt;p&gt;Generic draft type to model those fields all Business Units have in common. The additional fields required for creating a Company or Division are represented on CompanyDraft and DivisionDraft.&lt;/p&gt;</span>
 <span class="source-line-no">021</span><span id="line.21"> *</span>
 <span class="source-line-no">022</span><span id="line.22"> * &lt;hr&gt;</span>
 <span class="source-line-no">023</span><span id="line.23"> * Example to create a subtype instance using the builder pattern</span>
@@ -66,11 +66,11 @@
 <span class="source-line-no">053</span><span id="line.53">    public BusinessUnitStatus getStatus();</span>
 <span class="source-line-no">054</span><span id="line.54"></span>
 <span class="source-line-no">055</span><span id="line.55">    /**</span>
-<span class="source-line-no">056</span><span id="line.56">     *  &lt;p&gt;References to Stores the Business Unit is associated with. Can only be set when &lt;code&gt;storeMode&lt;/code&gt; is &lt;code&gt;Explicit&lt;/code&gt;. If not empty, the Business Unit can only be linked to Carts and Orders of a referenced Store. If empty, the Business Unit can only create Carts, Orders, or Quotes that have no &lt;code&gt;store&lt;/code&gt; value. Defaults to empty for Companies and not set for Divisions.&lt;/p&gt;</span>
+<span class="source-line-no">056</span><span id="line.56">     *  &lt;p&gt;Sets the Stores the Business Unit is associated with. Can only be set when &lt;code&gt;storeMode&lt;/code&gt; is &lt;code&gt;Explicit&lt;/code&gt;. If not empty, the Business Unit can only be linked to Carts and Orders of a referenced Store. If empty, the Business Unit can only create Carts, Orders, or Quotes that have no &lt;code&gt;store&lt;/code&gt; value. Defaults to empty for Companies and not set for Divisions.&lt;/p&gt;</span>
 <span class="source-line-no">057</span><span id="line.57">     */</span>
 <span class="source-line-no">058</span><span id="line.58">    @Valid</span>
 <span class="source-line-no">059</span><span id="line.59">    @JsonProperty("stores")</span>
-<span class="source-line-no">060</span><span id="line.60">    public List&lt;StoreKeyReference&gt; getStores();</span>
+<span class="source-line-no">060</span><span id="line.60">    public List&lt;StoreResourceIdentifier&gt; getStores();</span>
 <span class="source-line-no">061</span><span id="line.61"></span>
 <span class="source-line-no">062</span><span id="line.62">    /**</span>
 <span class="source-line-no">063</span><span id="line.63">     *  &lt;p&gt;Defines whether the Stores of the Business Unit are set on the Business Unit or are inherited from a parent. Defaults to &lt;code&gt;Explicit&lt;/code&gt; for Companies and to &lt;code&gt;FromParent&lt;/code&gt; for Divisions.&lt;/p&gt;</span>
@@ -154,9 +154,9 @@
 <span class="source-line-no">141</span><span id="line.141">    public void setStatus(final BusinessUnitStatus status);</span>
 <span class="source-line-no">142</span><span id="line.142"></span>
 <span class="source-line-no">143</span><span id="line.143">    @JsonIgnore</span>
-<span class="source-line-no">144</span><span id="line.144">    public void setStores(final StoreKeyReference... stores);</span>
+<span class="source-line-no">144</span><span id="line.144">    public void setStores(final StoreResourceIdentifier... stores);</span>
 <span class="source-line-no">145</span><span id="line.145"></span>
-<span class="source-line-no">146</span><span id="line.146">    public void setStores(final List&lt;StoreKeyReference&gt; stores);</span>
+<span class="source-line-no">146</span><span id="line.146">    public void setStores(final List&lt;StoreResourceIdentifier&gt; stores);</span>
 <span class="source-line-no">147</span><span id="line.147"></span>
 <span class="source-line-no">148</span><span id="line.148">    public void setStoreMode(final BusinessUnitStoreMode storeMode);</span>
 <span class="source-line-no">149</span><span id="line.149"></span>

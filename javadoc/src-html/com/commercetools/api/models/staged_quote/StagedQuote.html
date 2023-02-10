@@ -57,7 +57,7 @@
 <span class="source-line-no">044</span><span id="line.44"> */</span>
 <span class="source-line-no">045</span><span id="line.45">@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")</span>
 <span class="source-line-no">046</span><span id="line.46">@JsonDeserialize(as = StagedQuoteImpl.class)</span>
-<span class="source-line-no">047</span><span id="line.47">public interface StagedQuote extends BaseResource {</span>
+<span class="source-line-no">047</span><span id="line.47">public interface StagedQuote extends BaseResource, com.commercetools.api.models.WithKey {</span>
 <span class="source-line-no">048</span><span id="line.48"></span>
 <span class="source-line-no">049</span><span id="line.49">    /**</span>
 <span class="source-line-no">050</span><span id="line.50">     *  &lt;p&gt;The unique ID of the StagedQuote.&lt;/p&gt;</span>
@@ -167,90 +167,100 @@
 <span class="source-line-no">154</span><span id="line.154">    public StateReference getState();</span>
 <span class="source-line-no">155</span><span id="line.155"></span>
 <span class="source-line-no">156</span><span id="line.156">    /**</span>
-<span class="source-line-no">157</span><span id="line.157">     *  &lt;p&gt;The BusinessUnit for the Staged Quote.&lt;/p&gt;</span>
+<span class="source-line-no">157</span><span id="line.157">     *  &lt;p&gt;The Purchase Order Number is typically set by the Buyer on a QuoteRequest to track the purchase order during the quote and order flow.&lt;/p&gt;</span>
 <span class="source-line-no">158</span><span id="line.158">     */</span>
-<span class="source-line-no">159</span><span id="line.159">    @Valid</span>
-<span class="source-line-no">160</span><span id="line.160">    @JsonProperty("businessUnit")</span>
-<span class="source-line-no">161</span><span id="line.161">    public BusinessUnitKeyReference getBusinessUnit();</span>
+<span class="source-line-no">159</span><span id="line.159"></span>
+<span class="source-line-no">160</span><span id="line.160">    @JsonProperty("purchaseOrderNumber")</span>
+<span class="source-line-no">161</span><span id="line.161">    public String getPurchaseOrderNumber();</span>
 <span class="source-line-no">162</span><span id="line.162"></span>
-<span class="source-line-no">163</span><span id="line.163">    public void setId(final String id);</span>
-<span class="source-line-no">164</span><span id="line.164"></span>
-<span class="source-line-no">165</span><span id="line.165">    public void setVersion(final Long version);</span>
-<span class="source-line-no">166</span><span id="line.166"></span>
-<span class="source-line-no">167</span><span id="line.167">    public void setKey(final String key);</span>
-<span class="source-line-no">168</span><span id="line.168"></span>
-<span class="source-line-no">169</span><span id="line.169">    public void setCreatedAt(final ZonedDateTime createdAt);</span>
-<span class="source-line-no">170</span><span id="line.170"></span>
-<span class="source-line-no">171</span><span id="line.171">    public void setLastModifiedAt(final ZonedDateTime lastModifiedAt);</span>
-<span class="source-line-no">172</span><span id="line.172"></span>
-<span class="source-line-no">173</span><span id="line.173">    public void setLastModifiedBy(final LastModifiedBy lastModifiedBy);</span>
-<span class="source-line-no">174</span><span id="line.174"></span>
-<span class="source-line-no">175</span><span id="line.175">    public void setCreatedBy(final CreatedBy createdBy);</span>
-<span class="source-line-no">176</span><span id="line.176"></span>
-<span class="source-line-no">177</span><span id="line.177">    public void setStagedQuoteState(final StagedQuoteState stagedQuoteState);</span>
-<span class="source-line-no">178</span><span id="line.178"></span>
-<span class="source-line-no">179</span><span id="line.179">    public void setCustomer(final CustomerReference customer);</span>
-<span class="source-line-no">180</span><span id="line.180"></span>
-<span class="source-line-no">181</span><span id="line.181">    public void setQuoteRequest(final QuoteRequestReference quoteRequest);</span>
-<span class="source-line-no">182</span><span id="line.182"></span>
-<span class="source-line-no">183</span><span id="line.183">    public void setQuotationCart(final CartReference quotationCart);</span>
-<span class="source-line-no">184</span><span id="line.184"></span>
-<span class="source-line-no">185</span><span id="line.185">    public void setValidTo(final ZonedDateTime validTo);</span>
-<span class="source-line-no">186</span><span id="line.186"></span>
-<span class="source-line-no">187</span><span id="line.187">    public void setSellerComment(final String sellerComment);</span>
-<span class="source-line-no">188</span><span id="line.188"></span>
-<span class="source-line-no">189</span><span id="line.189">    public void setCustom(final CustomFields custom);</span>
-<span class="source-line-no">190</span><span id="line.190"></span>
-<span class="source-line-no">191</span><span id="line.191">    public void setState(final StateReference state);</span>
-<span class="source-line-no">192</span><span id="line.192"></span>
-<span class="source-line-no">193</span><span id="line.193">    public void setBusinessUnit(final BusinessUnitKeyReference businessUnit);</span>
-<span class="source-line-no">194</span><span id="line.194"></span>
-<span class="source-line-no">195</span><span id="line.195">    public static StagedQuote of() {</span>
-<span class="source-line-no">196</span><span id="line.196">        return new StagedQuoteImpl();</span>
-<span class="source-line-no">197</span><span id="line.197">    }</span>
-<span class="source-line-no">198</span><span id="line.198"></span>
-<span class="source-line-no">199</span><span id="line.199">    public static StagedQuote of(final StagedQuote template) {</span>
-<span class="source-line-no">200</span><span id="line.200">        StagedQuoteImpl instance = new StagedQuoteImpl();</span>
-<span class="source-line-no">201</span><span id="line.201">        instance.setId(template.getId());</span>
-<span class="source-line-no">202</span><span id="line.202">        instance.setVersion(template.getVersion());</span>
-<span class="source-line-no">203</span><span id="line.203">        instance.setCreatedAt(template.getCreatedAt());</span>
-<span class="source-line-no">204</span><span id="line.204">        instance.setLastModifiedAt(template.getLastModifiedAt());</span>
-<span class="source-line-no">205</span><span id="line.205">        instance.setKey(template.getKey());</span>
-<span class="source-line-no">206</span><span id="line.206">        instance.setLastModifiedBy(template.getLastModifiedBy());</span>
-<span class="source-line-no">207</span><span id="line.207">        instance.setCreatedBy(template.getCreatedBy());</span>
-<span class="source-line-no">208</span><span id="line.208">        instance.setStagedQuoteState(template.getStagedQuoteState());</span>
-<span class="source-line-no">209</span><span id="line.209">        instance.setCustomer(template.getCustomer());</span>
-<span class="source-line-no">210</span><span id="line.210">        instance.setQuoteRequest(template.getQuoteRequest());</span>
-<span class="source-line-no">211</span><span id="line.211">        instance.setQuotationCart(template.getQuotationCart());</span>
-<span class="source-line-no">212</span><span id="line.212">        instance.setValidTo(template.getValidTo());</span>
-<span class="source-line-no">213</span><span id="line.213">        instance.setSellerComment(template.getSellerComment());</span>
-<span class="source-line-no">214</span><span id="line.214">        instance.setCustom(template.getCustom());</span>
-<span class="source-line-no">215</span><span id="line.215">        instance.setState(template.getState());</span>
-<span class="source-line-no">216</span><span id="line.216">        instance.setBusinessUnit(template.getBusinessUnit());</span>
-<span class="source-line-no">217</span><span id="line.217">        return instance;</span>
-<span class="source-line-no">218</span><span id="line.218">    }</span>
-<span class="source-line-no">219</span><span id="line.219"></span>
-<span class="source-line-no">220</span><span id="line.220">    public static StagedQuoteBuilder builder() {</span>
-<span class="source-line-no">221</span><span id="line.221">        return StagedQuoteBuilder.of();</span>
-<span class="source-line-no">222</span><span id="line.222">    }</span>
-<span class="source-line-no">223</span><span id="line.223"></span>
-<span class="source-line-no">224</span><span id="line.224">    public static StagedQuoteBuilder builder(final StagedQuote template) {</span>
-<span class="source-line-no">225</span><span id="line.225">        return StagedQuoteBuilder.of(template);</span>
-<span class="source-line-no">226</span><span id="line.226">    }</span>
-<span class="source-line-no">227</span><span id="line.227"></span>
-<span class="source-line-no">228</span><span id="line.228">    default &lt;T&gt; T withStagedQuote(Function&lt;StagedQuote, T&gt; helper) {</span>
-<span class="source-line-no">229</span><span id="line.229">        return helper.apply(this);</span>
-<span class="source-line-no">230</span><span id="line.230">    }</span>
-<span class="source-line-no">231</span><span id="line.231"></span>
-<span class="source-line-no">232</span><span id="line.232">    public static com.fasterxml.jackson.core.type.TypeReference&lt;StagedQuote&gt; typeReference() {</span>
-<span class="source-line-no">233</span><span id="line.233">        return new com.fasterxml.jackson.core.type.TypeReference&lt;StagedQuote&gt;() {</span>
-<span class="source-line-no">234</span><span id="line.234">            @Override</span>
-<span class="source-line-no">235</span><span id="line.235">            public String toString() {</span>
-<span class="source-line-no">236</span><span id="line.236">                return "TypeReference&lt;StagedQuote&gt;";</span>
-<span class="source-line-no">237</span><span id="line.237">            }</span>
-<span class="source-line-no">238</span><span id="line.238">        };</span>
-<span class="source-line-no">239</span><span id="line.239">    }</span>
-<span class="source-line-no">240</span><span id="line.240">}</span>
+<span class="source-line-no">163</span><span id="line.163">    /**</span>
+<span class="source-line-no">164</span><span id="line.164">     *  &lt;p&gt;The BusinessUnit for the Staged Quote.&lt;/p&gt;</span>
+<span class="source-line-no">165</span><span id="line.165">     */</span>
+<span class="source-line-no">166</span><span id="line.166">    @Valid</span>
+<span class="source-line-no">167</span><span id="line.167">    @JsonProperty("businessUnit")</span>
+<span class="source-line-no">168</span><span id="line.168">    public BusinessUnitKeyReference getBusinessUnit();</span>
+<span class="source-line-no">169</span><span id="line.169"></span>
+<span class="source-line-no">170</span><span id="line.170">    public void setId(final String id);</span>
+<span class="source-line-no">171</span><span id="line.171"></span>
+<span class="source-line-no">172</span><span id="line.172">    public void setVersion(final Long version);</span>
+<span class="source-line-no">173</span><span id="line.173"></span>
+<span class="source-line-no">174</span><span id="line.174">    public void setKey(final String key);</span>
+<span class="source-line-no">175</span><span id="line.175"></span>
+<span class="source-line-no">176</span><span id="line.176">    public void setCreatedAt(final ZonedDateTime createdAt);</span>
+<span class="source-line-no">177</span><span id="line.177"></span>
+<span class="source-line-no">178</span><span id="line.178">    public void setLastModifiedAt(final ZonedDateTime lastModifiedAt);</span>
+<span class="source-line-no">179</span><span id="line.179"></span>
+<span class="source-line-no">180</span><span id="line.180">    public void setLastModifiedBy(final LastModifiedBy lastModifiedBy);</span>
+<span class="source-line-no">181</span><span id="line.181"></span>
+<span class="source-line-no">182</span><span id="line.182">    public void setCreatedBy(final CreatedBy createdBy);</span>
+<span class="source-line-no">183</span><span id="line.183"></span>
+<span class="source-line-no">184</span><span id="line.184">    public void setStagedQuoteState(final StagedQuoteState stagedQuoteState);</span>
+<span class="source-line-no">185</span><span id="line.185"></span>
+<span class="source-line-no">186</span><span id="line.186">    public void setCustomer(final CustomerReference customer);</span>
+<span class="source-line-no">187</span><span id="line.187"></span>
+<span class="source-line-no">188</span><span id="line.188">    public void setQuoteRequest(final QuoteRequestReference quoteRequest);</span>
+<span class="source-line-no">189</span><span id="line.189"></span>
+<span class="source-line-no">190</span><span id="line.190">    public void setQuotationCart(final CartReference quotationCart);</span>
+<span class="source-line-no">191</span><span id="line.191"></span>
+<span class="source-line-no">192</span><span id="line.192">    public void setValidTo(final ZonedDateTime validTo);</span>
+<span class="source-line-no">193</span><span id="line.193"></span>
+<span class="source-line-no">194</span><span id="line.194">    public void setSellerComment(final String sellerComment);</span>
+<span class="source-line-no">195</span><span id="line.195"></span>
+<span class="source-line-no">196</span><span id="line.196">    public void setCustom(final CustomFields custom);</span>
+<span class="source-line-no">197</span><span id="line.197"></span>
+<span class="source-line-no">198</span><span id="line.198">    public void setState(final StateReference state);</span>
+<span class="source-line-no">199</span><span id="line.199"></span>
+<span class="source-line-no">200</span><span id="line.200">    public void setPurchaseOrderNumber(final String purchaseOrderNumber);</span>
+<span class="source-line-no">201</span><span id="line.201"></span>
+<span class="source-line-no">202</span><span id="line.202">    public void setBusinessUnit(final BusinessUnitKeyReference businessUnit);</span>
+<span class="source-line-no">203</span><span id="line.203"></span>
+<span class="source-line-no">204</span><span id="line.204">    public static StagedQuote of() {</span>
+<span class="source-line-no">205</span><span id="line.205">        return new StagedQuoteImpl();</span>
+<span class="source-line-no">206</span><span id="line.206">    }</span>
+<span class="source-line-no">207</span><span id="line.207"></span>
+<span class="source-line-no">208</span><span id="line.208">    public static StagedQuote of(final StagedQuote template) {</span>
+<span class="source-line-no">209</span><span id="line.209">        StagedQuoteImpl instance = new StagedQuoteImpl();</span>
+<span class="source-line-no">210</span><span id="line.210">        instance.setId(template.getId());</span>
+<span class="source-line-no">211</span><span id="line.211">        instance.setVersion(template.getVersion());</span>
+<span class="source-line-no">212</span><span id="line.212">        instance.setCreatedAt(template.getCreatedAt());</span>
+<span class="source-line-no">213</span><span id="line.213">        instance.setLastModifiedAt(template.getLastModifiedAt());</span>
+<span class="source-line-no">214</span><span id="line.214">        instance.setKey(template.getKey());</span>
+<span class="source-line-no">215</span><span id="line.215">        instance.setLastModifiedBy(template.getLastModifiedBy());</span>
+<span class="source-line-no">216</span><span id="line.216">        instance.setCreatedBy(template.getCreatedBy());</span>
+<span class="source-line-no">217</span><span id="line.217">        instance.setStagedQuoteState(template.getStagedQuoteState());</span>
+<span class="source-line-no">218</span><span id="line.218">        instance.setCustomer(template.getCustomer());</span>
+<span class="source-line-no">219</span><span id="line.219">        instance.setQuoteRequest(template.getQuoteRequest());</span>
+<span class="source-line-no">220</span><span id="line.220">        instance.setQuotationCart(template.getQuotationCart());</span>
+<span class="source-line-no">221</span><span id="line.221">        instance.setValidTo(template.getValidTo());</span>
+<span class="source-line-no">222</span><span id="line.222">        instance.setSellerComment(template.getSellerComment());</span>
+<span class="source-line-no">223</span><span id="line.223">        instance.setCustom(template.getCustom());</span>
+<span class="source-line-no">224</span><span id="line.224">        instance.setState(template.getState());</span>
+<span class="source-line-no">225</span><span id="line.225">        instance.setPurchaseOrderNumber(template.getPurchaseOrderNumber());</span>
+<span class="source-line-no">226</span><span id="line.226">        instance.setBusinessUnit(template.getBusinessUnit());</span>
+<span class="source-line-no">227</span><span id="line.227">        return instance;</span>
+<span class="source-line-no">228</span><span id="line.228">    }</span>
+<span class="source-line-no">229</span><span id="line.229"></span>
+<span class="source-line-no">230</span><span id="line.230">    public static StagedQuoteBuilder builder() {</span>
+<span class="source-line-no">231</span><span id="line.231">        return StagedQuoteBuilder.of();</span>
+<span class="source-line-no">232</span><span id="line.232">    }</span>
+<span class="source-line-no">233</span><span id="line.233"></span>
+<span class="source-line-no">234</span><span id="line.234">    public static StagedQuoteBuilder builder(final StagedQuote template) {</span>
+<span class="source-line-no">235</span><span id="line.235">        return StagedQuoteBuilder.of(template);</span>
+<span class="source-line-no">236</span><span id="line.236">    }</span>
+<span class="source-line-no">237</span><span id="line.237"></span>
+<span class="source-line-no">238</span><span id="line.238">    default &lt;T&gt; T withStagedQuote(Function&lt;StagedQuote, T&gt; helper) {</span>
+<span class="source-line-no">239</span><span id="line.239">        return helper.apply(this);</span>
+<span class="source-line-no">240</span><span id="line.240">    }</span>
+<span class="source-line-no">241</span><span id="line.241"></span>
+<span class="source-line-no">242</span><span id="line.242">    public static com.fasterxml.jackson.core.type.TypeReference&lt;StagedQuote&gt; typeReference() {</span>
+<span class="source-line-no">243</span><span id="line.243">        return new com.fasterxml.jackson.core.type.TypeReference&lt;StagedQuote&gt;() {</span>
+<span class="source-line-no">244</span><span id="line.244">            @Override</span>
+<span class="source-line-no">245</span><span id="line.245">            public String toString() {</span>
+<span class="source-line-no">246</span><span id="line.246">                return "TypeReference&lt;StagedQuote&gt;";</span>
+<span class="source-line-no">247</span><span id="line.247">            }</span>
+<span class="source-line-no">248</span><span id="line.248">        };</span>
+<span class="source-line-no">249</span><span id="line.249">    }</span>
+<span class="source-line-no">250</span><span id="line.250">}</span>
 
 
 

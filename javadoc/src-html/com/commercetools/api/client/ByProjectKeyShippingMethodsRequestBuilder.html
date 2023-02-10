@@ -20,7 +20,7 @@
 <span class="source-line-no">007</span><span id="line.7">import io.vrap.rmf.base.client.utils.Generated;</span>
 <span class="source-line-no">008</span><span id="line.8"></span>
 <span class="source-line-no">009</span><span id="line.9">@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")</span>
-<span class="source-line-no">010</span><span id="line.10">public class ByProjectKeyShippingMethodsRequestBuilder {</span>
+<span class="source-line-no">010</span><span id="line.10">public class ByProjectKeyShippingMethodsRequestBuilder implements ByProjectKeyShippingMethodsRequestBuilderMixin {</span>
 <span class="source-line-no">011</span><span id="line.11"></span>
 <span class="source-line-no">012</span><span id="line.12">    private final ApiHttpClient apiHttpClient;</span>
 <span class="source-line-no">013</span><span id="line.13">    private final String projectKey;</span>
@@ -68,50 +68,7 @@
 <span class="source-line-no">055</span><span id="line.55">        return new ByProjectKeyShippingMethodsByIDRequestBuilder(apiHttpClient, projectKey, ID);</span>
 <span class="source-line-no">056</span><span id="line.56">    }</span>
 <span class="source-line-no">057</span><span id="line.57"></span>
-<span class="source-line-no">058</span><span id="line.58">    public ByProjectKeyShippingMethodsByIDPost update(</span>
-<span class="source-line-no">059</span><span id="line.59">            com.commercetools.api.models.Versioned&lt;com.commercetools.api.models.shipping_method.ShippingMethod&gt; shippingMethod,</span>
-<span class="source-line-no">060</span><span id="line.60">            java.util.List&lt;com.commercetools.api.models.shipping_method.ShippingMethodUpdateAction&gt; actions) {</span>
-<span class="source-line-no">061</span><span id="line.61">        return withId(shippingMethod.getId())</span>
-<span class="source-line-no">062</span><span id="line.62">                .post(builder -&gt; com.commercetools.api.models.shipping_method.ShippingMethodUpdate.builder()</span>
-<span class="source-line-no">063</span><span id="line.63">                        .version(shippingMethod.getVersion())</span>
-<span class="source-line-no">064</span><span id="line.64">                        .actions(actions));</span>
-<span class="source-line-no">065</span><span id="line.65">    }</span>
-<span class="source-line-no">066</span><span id="line.66"></span>
-<span class="source-line-no">067</span><span id="line.67">    public ByProjectKeyShippingMethodsByIDPost update(</span>
-<span class="source-line-no">068</span><span id="line.68">            com.commercetools.api.models.Versioned&lt;com.commercetools.api.models.shipping_method.ShippingMethod&gt; shippingMethod,</span>
-<span class="source-line-no">069</span><span id="line.69">            UnaryOperator&lt;UpdateActionBuilder&lt;com.commercetools.api.models.shipping_method.ShippingMethodUpdateAction, com.commercetools.api.models.shipping_method.ShippingMethodUpdateActionBuilder&gt;&gt; op) {</span>
-<span class="source-line-no">070</span><span id="line.70">        return withId(shippingMethod.getId()).post(</span>
-<span class="source-line-no">071</span><span id="line.71">            builder -&gt; com.commercetools.api.models.shipping_method.ShippingMethodUpdate.builder()</span>
-<span class="source-line-no">072</span><span id="line.72">                    .version(shippingMethod.getVersion())</span>
-<span class="source-line-no">073</span><span id="line.73">                    .actions(op.apply(UpdateActionBuilder.of(</span>
-<span class="source-line-no">074</span><span id="line.74">                        com.commercetools.api.models.shipping_method.ShippingMethodUpdateActionBuilder::of)).actions));</span>
-<span class="source-line-no">075</span><span id="line.75">    }</span>
-<span class="source-line-no">076</span><span id="line.76"></span>
-<span class="source-line-no">077</span><span id="line.77">    public WithUpdateActionBuilder&lt;com.commercetools.api.models.shipping_method.ShippingMethodUpdateAction, com.commercetools.api.models.shipping_method.ShippingMethodUpdateActionBuilder, ByProjectKeyShippingMethodsByIDPost&gt; update(</span>
-<span class="source-line-no">078</span><span id="line.78">            com.commercetools.api.models.Versioned&lt;com.commercetools.api.models.shipping_method.ShippingMethod&gt; shippingMethod) {</span>
-<span class="source-line-no">079</span><span id="line.79">        return builder -&gt; withId(shippingMethod.getId()).post(</span>
-<span class="source-line-no">080</span><span id="line.80">            b -&gt; com.commercetools.api.models.shipping_method.ShippingMethodUpdate.builder()</span>
-<span class="source-line-no">081</span><span id="line.81">                    .version(shippingMethod.getVersion())</span>
-<span class="source-line-no">082</span><span id="line.82">                    .actions(builder.apply(UpdateActionBuilder.of(</span>
-<span class="source-line-no">083</span><span id="line.83">                        com.commercetools.api.models.shipping_method.ShippingMethodUpdateActionBuilder::of)).actions));</span>
-<span class="source-line-no">084</span><span id="line.84">    }</span>
-<span class="source-line-no">085</span><span id="line.85"></span>
-<span class="source-line-no">086</span><span id="line.86">    public ByProjectKeyShippingMethodsByIDDelete delete(</span>
-<span class="source-line-no">087</span><span id="line.87">            com.commercetools.api.models.Versioned&lt;com.commercetools.api.models.shipping_method.ShippingMethod&gt; shippingMethod) {</span>
-<span class="source-line-no">088</span><span id="line.88">        return withId(shippingMethod.getId()).delete().withVersion(shippingMethod.getVersion());</span>
-<span class="source-line-no">089</span><span id="line.89">    }</span>
-<span class="source-line-no">090</span><span id="line.90"></span>
-<span class="source-line-no">091</span><span id="line.91">    public ByProjectKeyShippingMethodsPost create(</span>
-<span class="source-line-no">092</span><span id="line.92">            com.commercetools.api.models.shipping_method.ShippingMethodDraft shippingMethodDraft) {</span>
-<span class="source-line-no">093</span><span id="line.93">        return post(shippingMethodDraft);</span>
-<span class="source-line-no">094</span><span id="line.94">    }</span>
-<span class="source-line-no">095</span><span id="line.95"></span>
-<span class="source-line-no">096</span><span id="line.96">    public ByProjectKeyShippingMethodsPost create(</span>
-<span class="source-line-no">097</span><span id="line.97">            UnaryOperator&lt;com.commercetools.api.models.shipping_method.ShippingMethodDraftBuilder&gt; op) {</span>
-<span class="source-line-no">098</span><span id="line.98">        return post(op.apply(com.commercetools.api.models.shipping_method.ShippingMethodDraftBuilder.of()).build());</span>
-<span class="source-line-no">099</span><span id="line.99">    }</span>
-<span class="source-line-no">100</span><span id="line.100"></span>
-<span class="source-line-no">101</span><span id="line.101">}</span>
+<span class="source-line-no">058</span><span id="line.58">}</span>
 
 
 

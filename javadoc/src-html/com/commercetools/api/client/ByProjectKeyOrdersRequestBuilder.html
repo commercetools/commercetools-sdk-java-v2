@@ -20,7 +20,7 @@
 <span class="source-line-no">007</span><span id="line.7">import io.vrap.rmf.base.client.utils.Generated;</span>
 <span class="source-line-no">008</span><span id="line.8"></span>
 <span class="source-line-no">009</span><span id="line.9">@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")</span>
-<span class="source-line-no">010</span><span id="line.10">public class ByProjectKeyOrdersRequestBuilder {</span>
+<span class="source-line-no">010</span><span id="line.10">public class ByProjectKeyOrdersRequestBuilder implements ByProjectKeyOrdersRequestBuilderMixin {</span>
 <span class="source-line-no">011</span><span id="line.11"></span>
 <span class="source-line-no">012</span><span id="line.12">    private final ApiHttpClient apiHttpClient;</span>
 <span class="source-line-no">013</span><span id="line.13">    private final String projectKey;</span>
@@ -66,46 +66,7 @@
 <span class="source-line-no">053</span><span id="line.53">        return new ByProjectKeyOrdersSearchRequestBuilder(apiHttpClient, projectKey);</span>
 <span class="source-line-no">054</span><span id="line.54">    }</span>
 <span class="source-line-no">055</span><span id="line.55"></span>
-<span class="source-line-no">056</span><span id="line.56">    public ByProjectKeyOrdersByIDPost update(</span>
-<span class="source-line-no">057</span><span id="line.57">            com.commercetools.api.models.Versioned&lt;com.commercetools.api.models.order.Order&gt; order,</span>
-<span class="source-line-no">058</span><span id="line.58">            java.util.List&lt;com.commercetools.api.models.order.OrderUpdateAction&gt; actions) {</span>
-<span class="source-line-no">059</span><span id="line.59">        return withId(order.getId()).post(builder -&gt; com.commercetools.api.models.order.OrderUpdate.builder()</span>
-<span class="source-line-no">060</span><span id="line.60">                .version(order.getVersion())</span>
-<span class="source-line-no">061</span><span id="line.61">                .actions(actions));</span>
-<span class="source-line-no">062</span><span id="line.62">    }</span>
-<span class="source-line-no">063</span><span id="line.63"></span>
-<span class="source-line-no">064</span><span id="line.64">    public ByProjectKeyOrdersByIDPost update(</span>
-<span class="source-line-no">065</span><span id="line.65">            com.commercetools.api.models.Versioned&lt;com.commercetools.api.models.order.Order&gt; order,</span>
-<span class="source-line-no">066</span><span id="line.66">            UnaryOperator&lt;UpdateActionBuilder&lt;com.commercetools.api.models.order.OrderUpdateAction, com.commercetools.api.models.order.OrderUpdateActionBuilder&gt;&gt; op) {</span>
-<span class="source-line-no">067</span><span id="line.67">        return withId(order.getId()).post(builder -&gt; com.commercetools.api.models.order.OrderUpdate.builder()</span>
-<span class="source-line-no">068</span><span id="line.68">                .version(order.getVersion())</span>
-<span class="source-line-no">069</span><span id="line.69">                .actions(op.apply(</span>
-<span class="source-line-no">070</span><span id="line.70">                    UpdateActionBuilder.of(com.commercetools.api.models.order.OrderUpdateActionBuilder::of)).actions));</span>
-<span class="source-line-no">071</span><span id="line.71">    }</span>
-<span class="source-line-no">072</span><span id="line.72"></span>
-<span class="source-line-no">073</span><span id="line.73">    public WithUpdateActionBuilder&lt;com.commercetools.api.models.order.OrderUpdateAction, com.commercetools.api.models.order.OrderUpdateActionBuilder, ByProjectKeyOrdersByIDPost&gt; update(</span>
-<span class="source-line-no">074</span><span id="line.74">            com.commercetools.api.models.Versioned&lt;com.commercetools.api.models.order.Order&gt; order) {</span>
-<span class="source-line-no">075</span><span id="line.75">        return builder -&gt; withId(order.getId()).post(b -&gt; com.commercetools.api.models.order.OrderUpdate.builder()</span>
-<span class="source-line-no">076</span><span id="line.76">                .version(order.getVersion())</span>
-<span class="source-line-no">077</span><span id="line.77">                .actions(builder.apply(</span>
-<span class="source-line-no">078</span><span id="line.78">                    UpdateActionBuilder.of(com.commercetools.api.models.order.OrderUpdateActionBuilder::of)).actions));</span>
-<span class="source-line-no">079</span><span id="line.79">    }</span>
-<span class="source-line-no">080</span><span id="line.80"></span>
-<span class="source-line-no">081</span><span id="line.81">    public ByProjectKeyOrdersByIDDelete delete(</span>
-<span class="source-line-no">082</span><span id="line.82">            com.commercetools.api.models.Versioned&lt;com.commercetools.api.models.order.Order&gt; order) {</span>
-<span class="source-line-no">083</span><span id="line.83">        return withId(order.getId()).delete().withVersion(order.getVersion());</span>
-<span class="source-line-no">084</span><span id="line.84">    }</span>
-<span class="source-line-no">085</span><span id="line.85"></span>
-<span class="source-line-no">086</span><span id="line.86">    public ByProjectKeyOrdersPost create(com.commercetools.api.models.order.OrderFromCartDraft orderFromCartDraft) {</span>
-<span class="source-line-no">087</span><span id="line.87">        return post(orderFromCartDraft);</span>
-<span class="source-line-no">088</span><span id="line.88">    }</span>
-<span class="source-line-no">089</span><span id="line.89"></span>
-<span class="source-line-no">090</span><span id="line.90">    public ByProjectKeyOrdersPost create(</span>
-<span class="source-line-no">091</span><span id="line.91">            UnaryOperator&lt;com.commercetools.api.models.order.OrderFromCartDraftBuilder&gt; op) {</span>
-<span class="source-line-no">092</span><span id="line.92">        return post(op.apply(com.commercetools.api.models.order.OrderFromCartDraftBuilder.of()).build());</span>
-<span class="source-line-no">093</span><span id="line.93">    }</span>
-<span class="source-line-no">094</span><span id="line.94"></span>
-<span class="source-line-no">095</span><span id="line.95">}</span>
+<span class="source-line-no">056</span><span id="line.56">}</span>
 
 
 

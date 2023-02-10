@@ -55,7 +55,7 @@
 <span class="source-line-no">042</span><span id="line.42"> */</span>
 <span class="source-line-no">043</span><span id="line.43">@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")</span>
 <span class="source-line-no">044</span><span id="line.44">@JsonDeserialize(as = ChannelImpl.class)</span>
-<span class="source-line-no">045</span><span id="line.45">public interface Channel extends BaseResource, com.commercetools.api.models.DomainResource&lt;Channel&gt;,</span>
+<span class="source-line-no">045</span><span id="line.45">public interface Channel extends BaseResource, ChannelMixin, com.commercetools.api.models.DomainResource&lt;Channel&gt;,</span>
 <span class="source-line-no">046</span><span id="line.46">        com.commercetools.api.models.Referencable&lt;Channel&gt;, com.commercetools.api.models.ResourceIdentifiable&lt;Channel&gt;,</span>
 <span class="source-line-no">047</span><span id="line.47">        com.commercetools.api.models.Customizable&lt;Channel&gt;, com.commercetools.api.models.WithKey {</span>
 <span class="source-line-no">048</span><span id="line.48"></span>
@@ -223,29 +223,19 @@
 <span class="source-line-no">210</span><span id="line.210">        return helper.apply(this);</span>
 <span class="source-line-no">211</span><span id="line.211">    }</span>
 <span class="source-line-no">212</span><span id="line.212"></span>
-<span class="source-line-no">213</span><span id="line.213">    @Override</span>
-<span class="source-line-no">214</span><span id="line.214">    public default com.commercetools.api.models.common.ResourceIdentifier toResourceIdentifier() {</span>
-<span class="source-line-no">215</span><span id="line.215">        return com.commercetools.api.models.channel.ChannelResourceIdentifier.builder().id(getId()).build();</span>
-<span class="source-line-no">216</span><span id="line.216">    }</span>
-<span class="source-line-no">217</span><span id="line.217"></span>
-<span class="source-line-no">218</span><span id="line.218">    @Override</span>
-<span class="source-line-no">219</span><span id="line.219">    public default com.commercetools.api.models.common.Reference toReference() {</span>
-<span class="source-line-no">220</span><span id="line.220">        return com.commercetools.api.models.channel.ChannelReference.builder().id(getId()).build();</span>
-<span class="source-line-no">221</span><span id="line.221">    }</span>
-<span class="source-line-no">222</span><span id="line.222"></span>
-<span class="source-line-no">223</span><span id="line.223">    public static com.commercetools.api.models.common.ReferenceTypeId referenceTypeId() {</span>
-<span class="source-line-no">224</span><span id="line.224">        return com.commercetools.api.models.common.ReferenceTypeId.CHANNEL;</span>
-<span class="source-line-no">225</span><span id="line.225">    }</span>
-<span class="source-line-no">226</span><span id="line.226"></span>
-<span class="source-line-no">227</span><span id="line.227">    public static com.fasterxml.jackson.core.type.TypeReference&lt;Channel&gt; typeReference() {</span>
-<span class="source-line-no">228</span><span id="line.228">        return new com.fasterxml.jackson.core.type.TypeReference&lt;Channel&gt;() {</span>
-<span class="source-line-no">229</span><span id="line.229">            @Override</span>
-<span class="source-line-no">230</span><span id="line.230">            public String toString() {</span>
-<span class="source-line-no">231</span><span id="line.231">                return "TypeReference&lt;Channel&gt;";</span>
-<span class="source-line-no">232</span><span id="line.232">            }</span>
-<span class="source-line-no">233</span><span id="line.233">        };</span>
-<span class="source-line-no">234</span><span id="line.234">    }</span>
-<span class="source-line-no">235</span><span id="line.235">}</span>
+<span class="source-line-no">213</span><span id="line.213">    public static com.commercetools.api.models.common.ReferenceTypeId referenceTypeId() {</span>
+<span class="source-line-no">214</span><span id="line.214">        return com.commercetools.api.models.common.ReferenceTypeId.CHANNEL;</span>
+<span class="source-line-no">215</span><span id="line.215">    }</span>
+<span class="source-line-no">216</span><span id="line.216"></span>
+<span class="source-line-no">217</span><span id="line.217">    public static com.fasterxml.jackson.core.type.TypeReference&lt;Channel&gt; typeReference() {</span>
+<span class="source-line-no">218</span><span id="line.218">        return new com.fasterxml.jackson.core.type.TypeReference&lt;Channel&gt;() {</span>
+<span class="source-line-no">219</span><span id="line.219">            @Override</span>
+<span class="source-line-no">220</span><span id="line.220">            public String toString() {</span>
+<span class="source-line-no">221</span><span id="line.221">                return "TypeReference&lt;Channel&gt;";</span>
+<span class="source-line-no">222</span><span id="line.222">            }</span>
+<span class="source-line-no">223</span><span id="line.223">        };</span>
+<span class="source-line-no">224</span><span id="line.224">    }</span>
+<span class="source-line-no">225</span><span id="line.225">}</span>
 
 
 

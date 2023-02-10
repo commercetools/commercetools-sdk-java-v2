@@ -37,7 +37,7 @@
 <span class="source-line-no">024</span><span id="line.24">import io.vrap.rmf.base.client.utils.Generated;</span>
 <span class="source-line-no">025</span><span id="line.25"></span>
 <span class="source-line-no">026</span><span id="line.26">/**</span>
-<span class="source-line-no">027</span><span id="line.27"> *  &lt;p&gt;The data representation for a price to be imported that is persisted as an Embedded Price in the Project.&lt;/p&gt;</span>
+<span class="source-line-no">027</span><span id="line.27"> *  &lt;p&gt;The data representation for a price to be imported that is persisted as a Price in the Project.&lt;/p&gt;</span>
 <span class="source-line-no">028</span><span id="line.28"> *</span>
 <span class="source-line-no">029</span><span id="line.29"> * &lt;hr&gt;</span>
 <span class="source-line-no">030</span><span id="line.30"> * Example to create an instance using the builder pattern</span>
@@ -93,14 +93,14 @@
 <span class="source-line-no">080</span><span id="line.80">    public ZonedDateTime getValidUntil();</span>
 <span class="source-line-no">081</span><span id="line.81"></span>
 <span class="source-line-no">082</span><span id="line.82">    /**</span>
-<span class="source-line-no">083</span><span id="line.83">     *  &lt;p&gt;The Reference to the CustomerGroup with which the Embedded Price is associated. If referenced CustomerGroup does not exist, the &lt;code&gt;state&lt;/code&gt; of the ImportOperation will be set to &lt;code&gt;unresolved&lt;/code&gt; until the necessary CustomerGroup is created.&lt;/p&gt;</span>
+<span class="source-line-no">083</span><span id="line.83">     *  &lt;p&gt;The Reference to the CustomerGroup with which the Price is associated. If referenced CustomerGroup does not exist, the &lt;code&gt;state&lt;/code&gt; of the ImportOperation will be set to &lt;code&gt;unresolved&lt;/code&gt; until the necessary CustomerGroup is created.&lt;/p&gt;</span>
 <span class="source-line-no">084</span><span id="line.84">     */</span>
 <span class="source-line-no">085</span><span id="line.85">    @Valid</span>
 <span class="source-line-no">086</span><span id="line.86">    @JsonProperty("customerGroup")</span>
 <span class="source-line-no">087</span><span id="line.87">    public CustomerGroupKeyReference getCustomerGroup();</span>
 <span class="source-line-no">088</span><span id="line.88"></span>
 <span class="source-line-no">089</span><span id="line.89">    /**</span>
-<span class="source-line-no">090</span><span id="line.90">     *  &lt;p&gt;The Reference to the Channel with which the Embedded Price is associated. If referenced Channel does not exist, the &lt;code&gt;state&lt;/code&gt; of the ImportOperation will be set to &lt;code&gt;unresolved&lt;/code&gt; until the necessary Channel is created.&lt;/p&gt;</span>
+<span class="source-line-no">090</span><span id="line.90">     *  &lt;p&gt;The Reference to the Channel with which the Price is associated. If referenced Channel does not exist, the &lt;code&gt;state&lt;/code&gt; of the ImportOperation will be set to &lt;code&gt;unresolved&lt;/code&gt; until the necessary Channel is created.&lt;/p&gt;</span>
 <span class="source-line-no">091</span><span id="line.91">     */</span>
 <span class="source-line-no">092</span><span id="line.92">    @Valid</span>
 <span class="source-line-no">093</span><span id="line.93">    @JsonProperty("channel")</span>
@@ -135,7 +135,7 @@
 <span class="source-line-no">122</span><span id="line.122">    public Custom getCustom();</span>
 <span class="source-line-no">123</span><span id="line.123"></span>
 <span class="source-line-no">124</span><span id="line.124">    /**</span>
-<span class="source-line-no">125</span><span id="line.125">     *  &lt;p&gt;The ProductVariant in which this Embedded Price is contained. The Reference to the ProductVariant with which the Embedded Price is associated. If referenced ProductVariant does not exist, the &lt;code&gt;state&lt;/code&gt; of the ImportOperation will be set to &lt;code&gt;unresolved&lt;/code&gt; until the necessary ProductVariant is created.&lt;/p&gt;</span>
+<span class="source-line-no">125</span><span id="line.125">     *  &lt;p&gt;The ProductVariant in which this Embedded Price is contained. The Reference to the ProductVariant with which the Price is associated. If referenced ProductVariant does not exist, the &lt;code&gt;state&lt;/code&gt; of the ImportOperation will be set to &lt;code&gt;unresolved&lt;/code&gt; until the necessary ProductVariant is created.&lt;/p&gt;</span>
 <span class="source-line-no">126</span><span id="line.126">     */</span>
 <span class="source-line-no">127</span><span id="line.127">    @NotNull</span>
 <span class="source-line-no">128</span><span id="line.128">    @Valid</span>
@@ -143,7 +143,7 @@
 <span class="source-line-no">130</span><span id="line.130">    public ProductVariantKeyReference getProductVariant();</span>
 <span class="source-line-no">131</span><span id="line.131"></span>
 <span class="source-line-no">132</span><span id="line.132">    /**</span>
-<span class="source-line-no">133</span><span id="line.133">     *  &lt;p&gt;The Product in which the Product Variant containing this Embedded Price is contained. Maps to &lt;code&gt;ProductVariant.product&lt;/code&gt;. The Reference to the Product with which the Embedded Price is associated. If referenced Product does not exist, the &lt;code&gt;state&lt;/code&gt; of the ImportOperation will be set to &lt;code&gt;unresolved&lt;/code&gt; until the necessary Product is created.&lt;/p&gt;</span>
+<span class="source-line-no">133</span><span id="line.133">     *  &lt;p&gt;The Product in which the Product Variant containing this Embedded Price is contained. Maps to &lt;code&gt;ProductVariant.product&lt;/code&gt;. The Reference to the Product with which the Price is associated. If referenced Product does not exist, the &lt;code&gt;state&lt;/code&gt; of the ImportOperation will be set to &lt;code&gt;unresolved&lt;/code&gt; until the necessary Product is created.&lt;/p&gt;</span>
 <span class="source-line-no">134</span><span id="line.134">     */</span>
 <span class="source-line-no">135</span><span id="line.135">    @NotNull</span>
 <span class="source-line-no">136</span><span id="line.136">    @Valid</span>

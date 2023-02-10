@@ -33,7 +33,12 @@
 <span class="source-line-no">020</span><span id="line.20">            T request, Function&lt;TBody, TBuilder&gt; builderCopyFn, BiFunction&lt;TBuilder, Long, TBuilder&gt; updateFn) {</span>
 <span class="source-line-no">021</span><span id="line.21">        return new ConcurrentModificationRetryHandler&lt;&gt;(request, builderCopyFn, updateFn);</span>
 <span class="source-line-no">022</span><span id="line.22">    }</span>
-<span class="source-line-no">023</span><span id="line.23">}</span>
+<span class="source-line-no">023</span><span id="line.23"></span>
+<span class="source-line-no">024</span><span id="line.24">    static &lt;T extends ApiDeleteMethod&lt;T, TResult&gt;, TResult&gt; RequestCommand&lt;TResult&gt; concurrentModification(T request) {</span>
+<span class="source-line-no">025</span><span id="line.25">        return new ConcurrentModificationDeleteRetryHandler&lt;&gt;(request,</span>
+<span class="source-line-no">026</span><span id="line.26">            (apiRequest, newVersion) -&gt; request.withVersion(newVersion).asBaseType());</span>
+<span class="source-line-no">027</span><span id="line.27">    }</span>
+<span class="source-line-no">028</span><span id="line.28">}</span>
 
 
 

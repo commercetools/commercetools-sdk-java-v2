@@ -40,7 +40,7 @@
 <span class="source-line-no">027</span><span id="line.27"> */</span>
 <span class="source-line-no">028</span><span id="line.28">@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")</span>
 <span class="source-line-no">029</span><span id="line.29">@JsonDeserialize(as = BaseAddressImpl.class)</span>
-<span class="source-line-no">030</span><span id="line.30">public interface BaseAddress extends com.commercetools.api.models.WithKey {</span>
+<span class="source-line-no">030</span><span id="line.30">public interface BaseAddress extends com.commercetools.api.models.WithKey, BaseAddressMixin {</span>
 <span class="source-line-no">031</span><span id="line.31"></span>
 <span class="source-line-no">032</span><span id="line.32">    /**</span>
 <span class="source-line-no">033</span><span id="line.33">     *  &lt;p&gt;Unique identifier of the Address.&lt;/p&gt;</span>
@@ -313,67 +313,15 @@
 <span class="source-line-no">300</span><span id="line.300">        return helper.apply(this);</span>
 <span class="source-line-no">301</span><span id="line.301">    }</span>
 <span class="source-line-no">302</span><span id="line.302"></span>
-<span class="source-line-no">303</span><span id="line.303">    public default AddressDraft toDraft() {</span>
-<span class="source-line-no">304</span><span id="line.304">        if (this instanceof AddressDraft) {</span>
-<span class="source-line-no">305</span><span id="line.305">            return (AddressDraft) this;</span>
-<span class="source-line-no">306</span><span id="line.306">        }</span>
-<span class="source-line-no">307</span><span id="line.307">        return toDraftBuilder().build();</span>
-<span class="source-line-no">308</span><span id="line.308">    }</span>
-<span class="source-line-no">309</span><span id="line.309"></span>
-<span class="source-line-no">310</span><span id="line.310">    public default AddressDraftBuilder toDraftBuilder() {</span>
-<span class="source-line-no">311</span><span id="line.311">        if (this instanceof AddressDraft) {</span>
-<span class="source-line-no">312</span><span id="line.312">            return AddressDraft.builder((AddressDraft) this);</span>
-<span class="source-line-no">313</span><span id="line.313">        }</span>
-<span class="source-line-no">314</span><span id="line.314">        AddressDraftBuilder builder = AddressDraft.builder()</span>
-<span class="source-line-no">315</span><span id="line.315">                .key(this.getKey())</span>
-<span class="source-line-no">316</span><span id="line.316">                .country(this.getCountry())</span>
-<span class="source-line-no">317</span><span id="line.317">                .title(this.getTitle())</span>
-<span class="source-line-no">318</span><span id="line.318">                .salutation(this.getSalutation())</span>
-<span class="source-line-no">319</span><span id="line.319">                .firstName(this.getFirstName())</span>
-<span class="source-line-no">320</span><span id="line.320">                .lastName(this.getLastName())</span>
-<span class="source-line-no">321</span><span id="line.321">                .streetName(this.getStreetName())</span>
-<span class="source-line-no">322</span><span id="line.322">                .streetNumber(this.getStreetNumber())</span>
-<span class="source-line-no">323</span><span id="line.323">                .additionalStreetInfo(this.getAdditionalStreetInfo())</span>
-<span class="source-line-no">324</span><span id="line.324">                .postalCode(this.getPostalCode())</span>
-<span class="source-line-no">325</span><span id="line.325">                .city(this.getCity())</span>
-<span class="source-line-no">326</span><span id="line.326">                .region(this.getRegion())</span>
-<span class="source-line-no">327</span><span id="line.327">                .state(this.getState())</span>
-<span class="source-line-no">328</span><span id="line.328">                .company(this.getCompany())</span>
-<span class="source-line-no">329</span><span id="line.329">                .department(this.getDepartment())</span>
-<span class="source-line-no">330</span><span id="line.330">                .building(this.getBuilding())</span>
-<span class="source-line-no">331</span><span id="line.331">                .apartment(this.getApartment())</span>
-<span class="source-line-no">332</span><span id="line.332">                .pOBox(this.getPOBox())</span>
-<span class="source-line-no">333</span><span id="line.333">                .phone(this.getPhone())</span>
-<span class="source-line-no">334</span><span id="line.334">                .mobile(this.getMobile())</span>
-<span class="source-line-no">335</span><span id="line.335">                .email(this.getEmail())</span>
-<span class="source-line-no">336</span><span id="line.336">                .fax(this.getFax())</span>
-<span class="source-line-no">337</span><span id="line.337">                .additionalAddressInfo(this.getAdditionalAddressInfo())</span>
-<span class="source-line-no">338</span><span id="line.338">                .externalId(this.getExternalId());</span>
-<span class="source-line-no">339</span><span id="line.339">        if (this instanceof Address) {</span>
-<span class="source-line-no">340</span><span id="line.340">            builder.custom(Optional.ofNullable(((Address) this).getCustom())</span>
-<span class="source-line-no">341</span><span id="line.341">                    .map(com.commercetools.api.models.type.CustomFields::toDraft)</span>
-<span class="source-line-no">342</span><span id="line.342">                    .orElse(null));</span>
-<span class="source-line-no">343</span><span id="line.343">        }</span>
-<span class="source-line-no">344</span><span id="line.344"></span>
-<span class="source-line-no">345</span><span id="line.345">        return builder;</span>
-<span class="source-line-no">346</span><span id="line.346">    }</span>
-<span class="source-line-no">347</span><span id="line.347"></span>
-<span class="source-line-no">348</span><span id="line.348">    public default boolean equalsIgnoreId(final BaseAddress address) {</span>
-<span class="source-line-no">349</span><span id="line.349">        return address != null &amp;&amp; address.toDraftBuilder()</span>
-<span class="source-line-no">350</span><span id="line.350">                .id(null)</span>
-<span class="source-line-no">351</span><span id="line.351">                .buildUnchecked()</span>
-<span class="source-line-no">352</span><span id="line.352">                .equals(this.toDraftBuilder().id(null).buildUnchecked());</span>
-<span class="source-line-no">353</span><span id="line.353">    }</span>
-<span class="source-line-no">354</span><span id="line.354"></span>
-<span class="source-line-no">355</span><span id="line.355">    public static com.fasterxml.jackson.core.type.TypeReference&lt;BaseAddress&gt; typeReference() {</span>
-<span class="source-line-no">356</span><span id="line.356">        return new com.fasterxml.jackson.core.type.TypeReference&lt;BaseAddress&gt;() {</span>
-<span class="source-line-no">357</span><span id="line.357">            @Override</span>
-<span class="source-line-no">358</span><span id="line.358">            public String toString() {</span>
-<span class="source-line-no">359</span><span id="line.359">                return "TypeReference&lt;BaseAddress&gt;";</span>
-<span class="source-line-no">360</span><span id="line.360">            }</span>
-<span class="source-line-no">361</span><span id="line.361">        };</span>
-<span class="source-line-no">362</span><span id="line.362">    }</span>
-<span class="source-line-no">363</span><span id="line.363">}</span>
+<span class="source-line-no">303</span><span id="line.303">    public static com.fasterxml.jackson.core.type.TypeReference&lt;BaseAddress&gt; typeReference() {</span>
+<span class="source-line-no">304</span><span id="line.304">        return new com.fasterxml.jackson.core.type.TypeReference&lt;BaseAddress&gt;() {</span>
+<span class="source-line-no">305</span><span id="line.305">            @Override</span>
+<span class="source-line-no">306</span><span id="line.306">            public String toString() {</span>
+<span class="source-line-no">307</span><span id="line.307">                return "TypeReference&lt;BaseAddress&gt;";</span>
+<span class="source-line-no">308</span><span id="line.308">            }</span>
+<span class="source-line-no">309</span><span id="line.309">        };</span>
+<span class="source-line-no">310</span><span id="line.310">    }</span>
+<span class="source-line-no">311</span><span id="line.311">}</span>
 
 
 

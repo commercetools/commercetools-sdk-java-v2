@@ -22,6 +22,16 @@ types:
     (java-extends): 'com.commercetools.api.models.WithKey'
   AssetDraft:
     (java-extends): 'com.commercetools.api.models.CustomizableDraft<AssetDraft>, com.commercetools.api.models.WithKey'
+  AssetDimensions:
+    (java-extends): 'com.commercetools.api.models.Customizable<AssetDimensions>'
+    (java-mixin):
+      default Integer getWidth() {
+          return getW();
+      }
+
+      default Integer getHeight() {
+          return getH();
+      }
   LocalizedString:
     (java-extends): 'com.commercetools.api.models.common.LocalizedStringUtil'
   ReplicaCartDraft:
@@ -735,30 +745,24 @@ types:
   TrackingData:
     (java-extends): 'com.commercetools.api.models.Customizable<TrackingData>'
     (java-mixin): |
-        default TrackingData withTrackingId(@Nullable final String trackingId) {
+        default TrackingData withTrackingId(javax.annotation.Nullable final String trackingId) {
             return TrackingDataBuilder.of(this).trackingId(trackingId).build();
         }
 
-        default TrackingData withCarrier(@Nullable final String carrier) {
+        default TrackingData withCarrier(javax.annotation.Nullable final String carrier) {
             return TrackingDataBuilder.of(this).carrier(carrier).build();
         }
 
-        default TrackingData withProvider(@Nullable final String provider) {
+        default TrackingData withProvider(javax.annotation.Nullable final String provider) {
             return TrackingDataBuilder.of(this).provider(provider).build();
         }
 
-        default TrackingData withProviderTransaction(@Nullable final String providerTransaction) {
+        default TrackingData withProviderTransaction(javax.annotation.Nullable final String providerTransaction) {
             return TrackingDataBuilder.of(this).providerTransaction(providerTransaction).build();
         }
 
         default TrackingData withIsReturn(final boolean isReturn) {
             return TrackingDataBuilder.of(this).isReturn(isReturn).build();
-        }
-  InventoryMode:
-    (java-extends): 'com.commercetools.api.models.Customizable<InventoryMode>'
-    (java-mixin): |
-        public static InventoryMode defaultValue() {
-            return InventoryMode.NONE;
         }
   ApiClientPagedQueryResponse:
     (java-extends): 'com.commercetools.api.models.ResourcePagedQueryResponse<ApiClient>'

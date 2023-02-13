@@ -34,7 +34,7 @@ public interface MyCartAddItemShippingAddressAction extends MyCartUpdateAction {
     String ADD_ITEM_SHIPPING_ADDRESS = "addItemShippingAddress";
 
     /**
-     *
+     *  <p>Polymorphic base type that represents a postal address and contact details. Depending on the read or write action, it can be either Address or AddressDraft that only differ in the data type for the optional <code>custom</code> field.</p>
      */
     @NotNull
     @Valid

@@ -14,7 +14,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * AddressDraft
+ *  <p>Address type to be used on write methods. Optionally, use the <code>custom</code> field in addition to the fields of a BaseAddress.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -38,25 +38,7 @@ public interface AddressDraft extends BaseAddress, com.commercetools.api.models.
     @JsonProperty("custom")
     public CustomFieldsDraft getCustom();
 
-    /**
-     *  <p>Unique identifier for the Address. Not recommended to set it manually since the API overwrites this ID when creating an Address for a Customer. Use <code>key</code> instead and omit this field from the request to let the API generate the ID for the Address.</p>
-     */
-
-    @JsonProperty("id")
-    public String getId();
-
-    /**
-     *  <p>User-defined unique identifier for the Address.</p>
-     */
-
-    @JsonProperty("key")
-    public String getKey();
-
     public void setCustom(final CustomFieldsDraft custom);
-
-    public void setId(final String id);
-
-    public void setKey(final String key);
 
     public static AddressDraft of() {
         return new AddressDraftImpl();

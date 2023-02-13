@@ -25,7 +25,7 @@ public class OrderAddItemShippingAddressActionBuilder implements Builder<OrderAd
     private com.commercetools.api.models.common.BaseAddress address;
 
     /**
-     *
+     *  <p>Polymorphic base type that represents a postal address and contact details. Depending on the read or write action, it can be either Address or AddressDraft that only differ in the data type for the optional <code>custom</code> field.</p>
      */
 
     public OrderAddItemShippingAddressActionBuilder address(
@@ -35,7 +35,7 @@ public class OrderAddItemShippingAddressActionBuilder implements Builder<OrderAd
     }
 
     /**
-     *
+     *  <p>Polymorphic base type that represents a postal address and contact details. Depending on the read or write action, it can be either Address or AddressDraft that only differ in the data type for the optional <code>custom</code> field.</p>
      */
 
     public OrderAddItemShippingAddressActionBuilder address(

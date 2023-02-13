@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * AddressDraft
+ *  <p>Address type to be used on write methods. Optionally, use the <code>custom</code> field in addition to the fields of a BaseAddress.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class AddressDraftImpl implements AddressDraft, ModelBase {
@@ -121,7 +121,8 @@ public class AddressDraftImpl implements AddressDraft, ModelBase {
     }
 
     /**
-     *  <p>Unique identifier for the Address. Not recommended to set it manually since the API overwrites this ID when creating an Address for a Customer. Use <code>key</code> instead and omit this field from the request to let the API generate the ID for the Address.</p>
+     *  <p>Unique identifier of the Address.</p>
+     *  <p>It is not recommended to set it manually since the API overwrites this ID when creating an Address for a Customer. Use <code>key</code> instead and omit this field from the request to let the API generate the ID for the Address.</p>
      */
 
     public String getId() {
@@ -129,7 +130,7 @@ public class AddressDraftImpl implements AddressDraft, ModelBase {
     }
 
     /**
-     *  <p>User-defined unique identifier for the Address.</p>
+     *  <p>User-defined identifier of the Address that must be unique when multiple addresses are referenced in BusinessUnits, Customers, and <code>itemShippingAddresses</code> (LineItem-specific addresses) of a Cart, Order, QuoteRequest, or Quote.</p>
      */
 
     public String getKey() {
@@ -137,7 +138,7 @@ public class AddressDraftImpl implements AddressDraft, ModelBase {
     }
 
     /**
-     *  <p>Two-digit country code as per ISO 3166-1 alpha-2.</p>
+     *  <p>Name of the country.</p>
      */
 
     public String getCountry() {

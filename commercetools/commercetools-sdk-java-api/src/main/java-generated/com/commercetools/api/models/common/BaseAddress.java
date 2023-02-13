@@ -13,7 +13,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * BaseAddress
+ *  <p>Polymorphic base type that represents a postal address and contact details. Depending on the read or write action, it can be either Address or AddressDraft that only differ in the data type for the optional <code>custom</code> field.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -31,20 +31,21 @@ public interface BaseAddress extends com.commercetools.api.models.WithKey, BaseA
 
     /**
      *  <p>Unique identifier of the Address.</p>
+     *  <p>It is not recommended to set it manually since the API overwrites this ID when creating an Address for a Customer. Use <code>key</code> instead and omit this field from the request to let the API generate the ID for the Address.</p>
      */
 
     @JsonProperty("id")
     public String getId();
 
     /**
-     *  <p>User-defined unique identifier of the Address.</p>
+     *  <p>User-defined identifier of the Address that must be unique when multiple addresses are referenced in BusinessUnits, Customers, and <code>itemShippingAddresses</code> (LineItem-specific addresses) of a Cart, Order, QuoteRequest, or Quote.</p>
      */
 
     @JsonProperty("key")
     public String getKey();
 
     /**
-     *  <p>Two-digit country code as per ISO 3166-1 alpha-2.</p>
+     *  <p>Name of the country.</p>
      */
     @NotNull
     @JsonProperty("country")

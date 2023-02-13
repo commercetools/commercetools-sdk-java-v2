@@ -111,7 +111,7 @@ public class AddressBuilder implements Builder<Address> {
     }
 
     /**
-     *  <p>User-defined unique identifier of the Address.</p>
+     *  <p>User-defined identifier of the Address that must be unique when multiple addresses are referenced in BusinessUnits, Customers, and <code>itemShippingAddresses</code> (LineItem-specific addresses) of a Cart, Order, QuoteRequest, or Quote.</p>
      */
 
     public AddressBuilder key(@Nullable final String key) {
@@ -120,7 +120,7 @@ public class AddressBuilder implements Builder<Address> {
     }
 
     /**
-     *  <p>Two-digit country code as per ISO 3166-1 alpha-2.</p>
+     *  <p>Name of the country.</p>
      */
 
     public AddressBuilder country(final String country) {

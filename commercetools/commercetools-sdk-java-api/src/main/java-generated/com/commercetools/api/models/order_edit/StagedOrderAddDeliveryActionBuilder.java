@@ -93,7 +93,7 @@ public class StagedOrderAddDeliveryActionBuilder implements Builder<StagedOrderA
     }
 
     /**
-     *
+     *  <p>Polymorphic base type that represents a postal address and contact details. Depending on the read or write action, it can be either Address or AddressDraft that only differ in the data type for the optional <code>custom</code> field.</p>
      */
 
     public StagedOrderAddDeliveryActionBuilder address(
@@ -103,7 +103,7 @@ public class StagedOrderAddDeliveryActionBuilder implements Builder<StagedOrderA
     }
 
     /**
-     *
+     *  <p>Polymorphic base type that represents a postal address and contact details. Depending on the read or write action, it can be either Address or AddressDraft that only differ in the data type for the optional <code>custom</code> field.</p>
      */
 
     public StagedOrderAddDeliveryActionBuilder address(

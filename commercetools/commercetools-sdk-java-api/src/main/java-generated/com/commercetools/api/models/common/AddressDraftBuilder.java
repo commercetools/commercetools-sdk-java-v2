@@ -102,7 +102,8 @@ public class AddressDraftBuilder implements Builder<AddressDraft> {
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
 
     /**
-     *  <p>Unique identifier for the Address. Not recommended to set it manually since the API overwrites this ID when creating an Address for a Customer. Use <code>key</code> instead and omit this field from the request to let the API generate the ID for the Address.</p>
+     *  <p>Unique identifier of the Address.</p>
+     *  <p>It is not recommended to set it manually since the API overwrites this ID when creating an Address for a Customer. Use <code>key</code> instead and omit this field from the request to let the API generate the ID for the Address.</p>
      */
 
     public AddressDraftBuilder id(@Nullable final String id) {
@@ -111,7 +112,7 @@ public class AddressDraftBuilder implements Builder<AddressDraft> {
     }
 
     /**
-     *  <p>User-defined unique identifier for the Address.</p>
+     *  <p>User-defined identifier of the Address that must be unique when multiple addresses are referenced in BusinessUnits, Customers, and <code>itemShippingAddresses</code> (LineItem-specific addresses) of a Cart, Order, QuoteRequest, or Quote.</p>
      */
 
     public AddressDraftBuilder key(@Nullable final String key) {
@@ -120,7 +121,7 @@ public class AddressDraftBuilder implements Builder<AddressDraft> {
     }
 
     /**
-     *  <p>Two-digit country code as per ISO 3166-1 alpha-2.</p>
+     *  <p>Name of the country.</p>
      */
 
     public AddressDraftBuilder country(final String country) {

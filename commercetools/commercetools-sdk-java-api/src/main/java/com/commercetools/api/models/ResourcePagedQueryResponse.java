@@ -34,7 +34,8 @@ public interface ResourcePagedQueryResponse<T> {
      */
     default Long getPageIndex() {
         if (getTotal() == null || getLimit() == null || getLimit() == 0) {
-            throw new UnsupportedOperationException("Can only be used if the limit & total are known and limit is non-zero.");
+            throw new UnsupportedOperationException(
+                "Can only be used if the limit & total are known and limit is non-zero.");
         }
         return (long) Math.floor(getOffset() / getLimit().doubleValue());
     }
@@ -46,7 +47,8 @@ public interface ResourcePagedQueryResponse<T> {
      */
     default Long getTotalPages() {
         if (getTotal() == null || getLimit() == null || getLimit() == 0) {
-            throw new UnsupportedOperationException("Can only be used if the limit & total are known and limit is non-zero.");
+            throw new UnsupportedOperationException(
+                "Can only be used if the limit & total are known and limit is non-zero.");
         }
         return (long) Math.ceil(getTotal() / getLimit().doubleValue());
     }

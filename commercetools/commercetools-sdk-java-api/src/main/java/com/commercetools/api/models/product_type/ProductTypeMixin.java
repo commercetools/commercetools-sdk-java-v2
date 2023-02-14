@@ -1,15 +1,15 @@
 
 package com.commercetools.api.models.product_type;
 
+import java.util.Optional;
+
 import com.commercetools.api.models.Referencable;
 import com.commercetools.api.models.ResourceIdentifiable;
-
-import java.util.List;
-import java.util.Optional;
 
 public interface ProductTypeMixin extends Referencable<ProductType>, ResourceIdentifiable<ProductType> {
 
     AttributeDefinition getAttribute(final String attributeName);
+
     Optional<AttributeDefinition> findAttribute(final String attributeName);
 
     @Override

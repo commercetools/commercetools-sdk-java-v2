@@ -51,6 +51,11 @@ types:
     (java-extends): 'com.commercetools.api.models.WithKey'
   Cart:
     (java-extends): 'CartMixin, com.commercetools.api.models.DomainResource<Cart>, com.commercetools.api.models.Referencable<Cart>, com.commercetools.api.models.ResourceIdentifiable<Cart>, com.commercetools.api.models.Customizable<Cart>, com.commercetools.api.models.order.OrderLike<Cart>, com.commercetools.api.models.WithKey'
+  InventoryMode:
+    (java-mixin): |
+      public static com.commercetools.api.models.cart.InventoryMode defaultValue() {
+          return com.commercetools.api.models.cart.InventoryMode.NONE;
+      }
   CartDiscount:
     (java-extends): 'CartDiscountMixin, com.commercetools.api.models.DomainResource<CartDiscount>, com.commercetools.api.models.Referencable<CartDiscount>, com.commercetools.api.models.ResourceIdentifiable<CartDiscount>, com.commercetools.api.models.Customizable<CartDiscount>, com.commercetools.api.models.WithKey'
     (java-mixin): |
@@ -290,19 +295,10 @@ types:
   ProductDiscountUpdateAction:
     (java-extends): 'com.commercetools.api.models.ResourceUpdateAction<ProductDiscountUpdateAction>'
   ProductType:
-    (java-extends): 'AttributeDefinitionContainer, ProductTypeMixin, com.commercetools.api.models.DomainResource<ProductType>, com.commercetools.api.models.Referencable<ProductType>, com.commercetools.api.models.ResourceIdentifiable<ProductType>, com.commercetools.api.models.WithKey'
+    (java-extends): 'ProductTypeMixin, com.commercetools.api.models.DomainResource<ProductType>, com.commercetools.api.models.Referencable<ProductType>, com.commercetools.api.models.ResourceIdentifiable<ProductType>, com.commercetools.api.models.WithKey'
     (java-mixin): |
       public static com.commercetools.api.models.common.ReferenceTypeId referenceTypeId() {
           return com.commercetools.api.models.common.ReferenceTypeId.PRODUCT_TYPE;
-      }
-
-      default com.commercetools.api.models.product_type.AttributeDefinition getAttribute(final String attributeName) {
-          return AttributeDefinitionContainer.super.getAttribute(attributeName);
-      }
-
-      @Override
-      default Optional<AttributeDefinition> findAttribute(final String attributeName) {
-          return AttributeDefinitionContainer.super.findAttribute(attributeName);
       }
   ProductTypeDraft:
     (java-extends): 'com.commercetools.api.models.WithKey'
@@ -587,11 +583,6 @@ types:
       public static com.commercetools.api.models.common.ReferenceTypeId referenceTypeId() {
           return com.commercetools.api.models.common.ReferenceTypeId.TYPE;
       }
-
-      @Nullable
-      default FieldDefinition getFieldDefinitionByName(final String name) {
-          return getFieldDefinitions().stream().filter(def -> def.getName().equals(name)).findFirst().orElse(null);
-      }
   TypeDraft:
     (java-extends): 'com.commercetools.api.models.WithKey'
   TypePagedQueryResponse:
@@ -762,26 +753,6 @@ types:
     (java-extends): 'com.commercetools.api.models.CustomizableDraft<DeliveryDraft>'
   TrackingData:
     (java-extends): 'com.commercetools.api.models.Customizable<TrackingData>'
-    (java-mixin): |
-        default TrackingData withTrackingId(javax.annotation.Nullable final String trackingId) {
-            return TrackingDataBuilder.of(this).trackingId(trackingId).build();
-        }
-
-        default TrackingData withCarrier(javax.annotation.Nullable final String carrier) {
-            return TrackingDataBuilder.of(this).carrier(carrier).build();
-        }
-
-        default TrackingData withProvider(javax.annotation.Nullable final String provider) {
-            return TrackingDataBuilder.of(this).provider(provider).build();
-        }
-
-        default TrackingData withProviderTransaction(javax.annotation.Nullable final String providerTransaction) {
-            return TrackingDataBuilder.of(this).providerTransaction(providerTransaction).build();
-        }
-
-        default TrackingData withIsReturn(final boolean isReturn) {
-            return TrackingDataBuilder.of(this).isReturn(isReturn).build();
-        }
   ApiClientPagedQueryResponse:
     (java-extends): 'com.commercetools.api.models.ResourcePagedQueryResponse<ApiClient>'
   AttributeGroup:
@@ -793,7 +764,7 @@ types:
   AttributeGroupReference:
     (java-extends): 'com.commercetools.api.models.Identifiable<AttributeGroup>'
   AttributeGroupResourceIdentifier:
-    (java-extends): com.commercetools.api.models.Identifiable<AttributeGroup>
+    (java-extends): 'com.commercetools.api.models.Identifiable<AttributeGroup>'
   AttributeGroupPagedQueryResponse:
     (java-extends): 'com.commercetools.api.models.ResourcePagedQueryResponse<AttributeGroup>'
   AttributeGroupUpdate:
@@ -808,9 +779,9 @@ types:
   BusinessUnitPagedQueryResponse:
     (java-extends): 'com.commercetools.api.models.ResourcePagedQueryResponse<BusinessUnit>'
   BusinessUnitReference:
-    (java-extends): com.commercetools.api.models.Identifiable<BusinessUnit>
+    (java-extends): 'com.commercetools.api.models.Identifiable<BusinessUnit>'
   BusinessUnitResourceIdentifier:
-    (java-extends): com.commercetools.api.models.Identifiable<BusinessUnit>
+    (java-extends): 'com.commercetools.api.models.Identifiable<BusinessUnit>'
   BusinessUnitUpdate:
     (java-extends): 'com.commercetools.api.models.ResourceUpdate<  BusinessUnitUpdate,
       BusinessUnitUpdateAction, BusinessUnitUpdateBuilder>'
@@ -1101,7 +1072,8 @@ types:
           com.commercetools.api.models.order_edit.OrderEditPagedQueryResponse>'
     get:
       (java-implements):
-        'com.commercetools.api.models.PagedQueryResourceRequest<ByProjectKeyOrdersGet,
+        'com.commercetools.api.client.ByProjectKeyOrdersGetMixin,
+        com.commercetools.api.models.PagedQueryResourceRequest<ByProjectKeyOrdersGet,
         com.commercetools.api.models.order.OrderPagedQueryResponse>'
     /{ID}:
       delete:

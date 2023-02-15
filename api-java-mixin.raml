@@ -41,6 +41,11 @@ types:
     (java-extends): 'com.commercetools.api.models.WithKey'
   Cart:
     (java-extends): 'CartMixin, com.commercetools.api.models.DomainResource<Cart>, com.commercetools.api.models.Referencable<Cart>, com.commercetools.api.models.ResourceIdentifiable<Cart>, com.commercetools.api.models.Customizable<Cart>, com.commercetools.api.models.order.OrderLike<Cart>, com.commercetools.api.models.WithKey'
+  InventoryMode:
+    (java-mixin): |
+      public static com.commercetools.api.models.cart.InventoryMode defaultValue() {
+          return com.commercetools.api.models.cart.InventoryMode.NONE;
+      }
   CartDiscount:
     (java-extends): 'CartDiscountMixin, com.commercetools.api.models.DomainResource<CartDiscount>, com.commercetools.api.models.Referencable<CartDiscount>, com.commercetools.api.models.ResourceIdentifiable<CartDiscount>, com.commercetools.api.models.Customizable<CartDiscount>, com.commercetools.api.models.WithKey'
     (java-mixin): |
@@ -280,10 +285,19 @@ types:
   ProductDiscountUpdateAction:
     (java-extends): 'com.commercetools.api.models.ResourceUpdateAction<ProductDiscountUpdateAction>'
   ProductType:
-    (java-extends): 'ProductTypeMixin, com.commercetools.api.models.DomainResource<ProductType>, com.commercetools.api.models.Referencable<ProductType>, com.commercetools.api.models.ResourceIdentifiable<ProductType>, com.commercetools.api.models.WithKey'
+    (java-extends): 'AttributeDefinitionContainer, ProductTypeMixin, com.commercetools.api.models.DomainResource<ProductType>, com.commercetools.api.models.Referencable<ProductType>, com.commercetools.api.models.ResourceIdentifiable<ProductType>, com.commercetools.api.models.WithKey'
     (java-mixin): |
       public static com.commercetools.api.models.common.ReferenceTypeId referenceTypeId() {
           return com.commercetools.api.models.common.ReferenceTypeId.PRODUCT_TYPE;
+      }
+
+      default com.commercetools.api.models.product_type.AttributeDefinition getAttribute(final String attributeName) {
+          return AttributeDefinitionContainer.super.getAttribute(attributeName);
+      }
+
+      @Override
+      default Optional<AttributeDefinition> findAttribute(final String attributeName) {
+          return AttributeDefinitionContainer.super.findAttribute(attributeName);
       }
   ProductTypeDraft:
     (java-extends): 'com.commercetools.api.models.WithKey'
@@ -568,6 +582,11 @@ types:
       public static com.commercetools.api.models.common.ReferenceTypeId referenceTypeId() {
           return com.commercetools.api.models.common.ReferenceTypeId.TYPE;
       }
+
+      @Nullable
+      default FieldDefinition getFieldDefinitionByName(final String name) {
+          return getFieldDefinitions().stream().filter(def -> def.getName().equals(name)).findFirst().orElse(null);
+      }
   TypeDraft:
     (java-extends): 'com.commercetools.api.models.WithKey'
   TypePagedQueryResponse:
@@ -585,6 +604,10 @@ types:
     (java-mixin): |
       public static com.commercetools.api.models.common.ReferenceTypeId referenceTypeId() {
           return com.commercetools.api.models.common.ReferenceTypeId.ZONE;
+      }
+
+      default boolean contains(final String countryCode) {
+          return getLocations().stream().anyMatch(location -> location.getCountry().equals(countryCode));
       }
   ZoneDraft:
     (java-extends): 'com.commercetools.api.models.WithKey'

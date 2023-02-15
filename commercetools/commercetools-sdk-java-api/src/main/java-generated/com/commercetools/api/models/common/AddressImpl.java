@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * Address
+ *  <p>Address type returned by read methods. Optionally, the <code>custom</code> field can be present in addition to the fields of a BaseAddress.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class AddressImpl implements Address, ModelBase {
@@ -129,7 +129,7 @@ public class AddressImpl implements Address, ModelBase {
     }
 
     /**
-     *  <p>User-defined unique identifier of the Address.</p>
+     *  <p>User-defined identifier of the Address that must be unique when multiple addresses are referenced in BusinessUnits, Customers, and <code>itemShippingAddresses</code> (LineItem-specific addresses) of a Cart, Order, QuoteRequest, or Quote.</p>
      */
 
     public String getKey() {
@@ -137,7 +137,7 @@ public class AddressImpl implements Address, ModelBase {
     }
 
     /**
-     *  <p>Two-digit country code as per ISO 3166-1 alpha-2.</p>
+     *  <p>Name of the country.</p>
      */
 
     public String getCountry() {

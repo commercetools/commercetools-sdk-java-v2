@@ -1,18 +1,9 @@
 **Api changes**
 
 <details>
-<summary>Changed Property(s)</summary>
+<summary>Added QueryParameter(s)</summary>
 
-- :warning: changed property `stores` of type `BusinessUnitDraft` from type `StoreKeyReference[]` to `StoreResourceIdentifier[]`
-- :warning: changed property `stores` of type `CompanyDraft` from type `StoreKeyReference[]` to `StoreResourceIdentifier[]`
-- :warning: changed property `stores` of type `DivisionDraft` from type `StoreKeyReference[]` to `StoreResourceIdentifier[]`
-</details>
-
-
-<details>
-<summary>Added Property(s)</summary>
-
-- added property `oldValue` to type `StandalonePriceValueChangedMessage`
-- added property `oldValue` to type `StandalonePriceValueChangedMessagePayload`
+- added query parameter `sort` to method `get /{projectKey}/product-selections/key={key}/products`
+- added query parameter `sort` to method `get /{projectKey}/product-selections/{ID}/products`
 </details>
 

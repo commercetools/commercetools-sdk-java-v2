@@ -5,20 +5,33 @@ import java.net.MalformedURLException;
 import java.net.URI;
 import java.net.URL;
 import java.nio.charset.StandardCharsets;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Optional;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 
-public class ApiHttpRequest extends Base {
+public class ApiHttpRequest extends Base implements ContextAware<ApiHttpRequest> {
 
     private ApiHttpMethod method;
     private URI uri;
     private ApiHttpHeaders headers;
     private byte[] body;
 
+    private Map<Object, Object> contextMap = new HashMap<>();
+
     public ApiHttpRequest() {
+    }
+
+    public ApiHttpRequest(final ApiHttpMethod method, final URI uri, final ApiHttpHeaders headers, final byte[] body,
+            final Map<Object, Object> contextMap) {
+        this.method = method;
+        this.uri = uri;
+        this.headers = headers;
+        this.body = body;
+        this.contextMap = contextMap;
     }
 
     public ApiHttpRequest(final ApiHttpMethod method, final URI uri, final ApiHttpHeaders headers, final byte[] body) {
@@ -33,6 +46,45 @@ public class ApiHttpRequest extends Base {
         this.uri = r.uri;
         this.headers = r.headers;
         this.body = r.body;
+        this.contextMap = r.contextMap;
+    }
+
+    public Map<Object, Object> getContextMap() {
+        return contextMap;
+    }
+
+    public ApiHttpRequest withContextMap(final Map<Object, Object> contextMap) {
+        final ApiHttpRequest request = copy();
+        request.contextMap = new HashMap<>(contextMap);
+
+        return request;
+    }
+
+    @SuppressWarnings("unchecked")
+    public <T> T getContext(Class<T> key) {
+        return (T) contextMap.get(key);
+    }
+
+    public <T> ApiHttpRequest addContext(T value) {
+        final ApiHttpRequest request = copy();
+        final Map<Object, Object> contextMap = new HashMap<>(request.contextMap);
+        contextMap.put(value.getClass(), value);
+        request.contextMap = contextMap;
+
+        return request;
+    }
+
+    public Object getContext(Object key) {
+        return contextMap.get(key);
+    }
+
+    public ApiHttpRequest addContext(Object key, Object value) {
+        final ApiHttpRequest request = copy();
+        final Map<Object, Object> contextMap = new HashMap<>(request.contextMap);
+        contextMap.put(key, value);
+        request.contextMap = contextMap;
+
+        return request;
     }
 
     public ApiHttpMethod getMethod() {
@@ -170,11 +222,17 @@ public class ApiHttpRequest extends Base {
                 .append(uri, request.uri)
                 .append(headers, request.headers)
                 .append(body, request.body)
+                .append(contextMap, request.contextMap)
                 .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(method).append(uri).append(headers).append(body).toHashCode();
+        return new HashCodeBuilder(17, 37).append(method)
+                .append(uri)
+                .append(headers)
+                .append(body)
+                .append(contextMap)
+                .toHashCode();
     }
 }

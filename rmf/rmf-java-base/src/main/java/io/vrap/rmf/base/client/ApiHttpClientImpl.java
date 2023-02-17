@@ -38,7 +38,7 @@ public class ApiHttpClientImpl extends AutoCloseableService implements ApiHttpCl
     @Override
     public CompletableFuture<ApiHttpResponse<byte[]>> execute(final ApiHttpRequest request) {
         rejectExecutionIfClosed(CLOSED_MESSAGE);
-        return stack.invoke(request.resolve(baseUri));
+        return stack.execute(request.resolve(baseUri));
     }
 
     @Override

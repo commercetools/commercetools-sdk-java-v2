@@ -29,14 +29,14 @@ final class ConcurrentModificationDeleteRetryHandler<T extends ApiDeleteMethod<T
     @SuppressWarnings("unchecked")
     public CompletableFuture<ApiHttpResponse<TResult>> execute() {
         Function<Throwable, CompletableFuture<ApiHttpResponse<TResult>>> fn = (throwable) -> {
-            Throwable cause = throwable instanceof CompletionException ? throwable.getCause() : throwable;
+            final Throwable cause = throwable instanceof CompletionException ? throwable.getCause() : throwable;
             if (cause instanceof ConcurrentModificationException) {
                 return updateFn
                         .apply(request, ((ConcurrentModificationException) throwable.getCause()).getCurrentVersion())
                         .execute();
             }
 
-            CompletableFuture<ApiHttpResponse<TResult>> f = new CompletableFuture<>();
+            final CompletableFuture<ApiHttpResponse<TResult>> f = new CompletableFuture<>();
             f.completeExceptionally(throwable);
             return f;
         };

@@ -45,6 +45,8 @@ public class ClientBuilder implements Builder<ApiHttpClient> {
     private Supplier<Middleware> correlationIdMiddleware;
     private InternalLoggerMiddleware internalLoggerMiddleware;
     private UserAgentMiddleware userAgentMiddleware;
+
+    private Supplier<TelemetryMiddleware> telemetryMiddleware;
     private List<Middleware> middlewares = new ArrayList<>();
     private Supplier<HandlerStack> stack;
     private VrapHttpClient httpClient;
@@ -152,6 +154,7 @@ public class ClientBuilder implements Builder<ApiHttpClient> {
     private Supplier<HandlerStack> stackSupplier() {
         return () -> {
             final List<Middleware> middlewareStack = new ArrayList<>();
+            Optional.ofNullable(telemetryMiddleware).map(m -> middlewareStack.add(m.get()));
             Optional.ofNullable(errorMiddleware).map(m -> middlewareStack.add(m.get()));
             Optional.ofNullable(internalLoggerMiddleware).map(middlewareStack::add);
             Optional.ofNullable(userAgentMiddleware).map(middlewareStack::add);
@@ -693,6 +696,25 @@ public class ClientBuilder implements Builder<ApiHttpClient> {
      */
     public ClientBuilder withErrorMiddleware(ErrorMiddleware.ExceptionMode exceptionMode) {
         return withErrorMiddleware(() -> ErrorMiddleware.of(httpExceptionFactory.get(), exceptionMode));
+    }
+
+    /**
+     * add middleware to collect and report telemetry data
+     * @param telemetryMiddleware {@link TelemetryMiddleware} to be used
+     * @return ClientBuilder instance
+     */
+    public ClientBuilder withTelemetryMiddleware(final Supplier<TelemetryMiddleware> telemetryMiddleware) {
+        this.telemetryMiddleware = telemetryMiddleware;
+        return this;
+    }
+
+    /**
+     * add middleware to collect and report telemetry data
+     * @param telemetryMiddleware {@link TelemetryMiddleware} to be used
+     * @return ClientBuilder instance
+     */
+    public ClientBuilder withTelemetryMiddleware(final TelemetryMiddleware telemetryMiddleware) {
+        return withTelemetryMiddleware(() -> telemetryMiddleware);
     }
 
     /**

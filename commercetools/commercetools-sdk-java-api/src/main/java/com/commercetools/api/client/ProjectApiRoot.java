@@ -191,6 +191,34 @@ public class ProjectApiRoot implements Closeable {
         return with().inStoreKeyWithStoreKeyValue(storeKey);
     }
 
+    public ByProjectKeyBusinessUnitsRequestBuilder businessUnits() {
+        return with().businessUnits();
+    }
+
+    public ByProjectKeyQuotesRequestBuilder quotes() {
+        return with().quotes();
+    }
+
+    public ByProjectKeyQuoteRequestsRequestBuilder quoteRequests() {
+        return with().quoteRequests();
+    }
+
+    public ByProjectKeyStagedQuotesRequestBuilder stagedQuotes() {
+        return with().stagedQuotes();
+    }
+
+    public ByProjectKeyStandalonePricesRequestBuilder standalonePrices() {
+        return with().standalonePrices();
+    }
+
+    public ByProjectKeyAttributeGroupsRequestBuilder attributeGroups() {
+        return with().attributeGroups();
+    }
+
+    public ByProjectKeyInBusinessUnitKeyByBusinessUnitKeyRequestBuilder inBusinessUnit(final String businessUnitKey) {
+        return with().inBusinessUnitKeyWithBusinessUnitKeyValue(businessUnitKey);
+    }
+
     public <R> R with(Function<ProjectApiRoot, R> op) {
         return op.apply(this);
     }

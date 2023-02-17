@@ -4,9 +4,6 @@ package com.commercetools.api.models.zone;
 import com.commercetools.api.models.Referencable;
 import com.commercetools.api.models.ResourceIdentifiable;
 
-import java.util.List;
-import java.util.Set;
-
 public interface ZoneMixin extends Referencable<Zone>, ResourceIdentifiable<Zone> {
     @Override
     public default ZoneResourceIdentifier toResourceIdentifier() {

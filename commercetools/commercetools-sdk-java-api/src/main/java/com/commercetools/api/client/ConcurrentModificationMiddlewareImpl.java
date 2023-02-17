@@ -59,7 +59,7 @@ public class ConcurrentModificationMiddlewareImpl implements ConcurrentModificat
     public ConcurrentModificationMiddlewareImpl(final int maxRetries, final long delay, final long maxDelay,
             ObjectMapper mapper) {
         this.mapper = mapper;
-        RetryPolicy<ApiHttpResponse<byte[]>> retryPolicy = RetryPolicy.<ApiHttpResponse<byte[]>> builder()
+        final RetryPolicy<ApiHttpResponse<byte[]>> retryPolicy = RetryPolicy.<ApiHttpResponse<byte[]>> builder()
                 .withBackoff(delay, maxDelay, ChronoUnit.MILLIS)
                 .withJitter(0.25)
                 .withMaxRetries(maxRetries)
@@ -73,13 +73,12 @@ public class ConcurrentModificationMiddlewareImpl implements ConcurrentModificat
     public CompletableFuture<ApiHttpResponse<byte[]>> invoke(ApiHttpRequest request,
             Function<ApiHttpRequest, CompletableFuture<ApiHttpResponse<byte[]>>> next) {
 
-        Function<Throwable, CompletableFuture<ApiHttpResponse<byte[]>>> fn = (throwable) -> {
+        final Function<Throwable, CompletableFuture<ApiHttpResponse<byte[]>>> fn = (throwable) -> {
             if (throwable instanceof ConcurrentModificationException) {
                 final Long newVersion = ((ConcurrentModificationException) throwable).getCurrentVersion();
-                final JsonNode jsonNode;
                 if (newVersion != null && request.getMethod() == ApiHttpMethod.POST) {
                     try {
-                        jsonNode = mapper.readTree(request.getBody());
+                        final JsonNode jsonNode = mapper.readTree(request.getBody());
                         if (jsonNode instanceof ObjectNode && jsonNode.has(VERSION)) {
                             ((ObjectNode) jsonNode).replace(VERSION, new LongNode(newVersion));
                             return next.apply(request.withBody(jsonNode.toString()));
@@ -90,7 +89,7 @@ public class ConcurrentModificationMiddlewareImpl implements ConcurrentModificat
                 }
             }
 
-            CompletableFuture<ApiHttpResponse<byte[]>> f = new CompletableFuture<>();
+            final CompletableFuture<ApiHttpResponse<byte[]>> f = new CompletableFuture<>();
             f.completeExceptionally(throwable);
             return f;
         };
@@ -106,14 +105,17 @@ public class ConcurrentModificationMiddlewareImpl implements ConcurrentModificat
     private void logEventFailure(ExecutionAttemptedEvent<ApiHttpResponse<byte[]>> event) {
         final int attempt = event.getAttemptCount();
 
+        final Optional<MDCContext> requestContext;
         final Throwable failure = event.getLastException();
         if (failure instanceof ApiHttpException) {
             final ApiHttpException httpException = (ApiHttpException) failure;
             final ApiHttpRequest request = httpException.getRequest();
-            Optional.ofNullable(request)
-                    .map(r -> r.getContext(MDCContext.class))
-                    .ifPresent(mdcContext -> MDC.setContextMap(mdcContext.getValue()));
+            requestContext = Optional.ofNullable(request).map(r -> r.getContext(MDCContext.class));
         }
+        else {
+            requestContext = Optional.empty();
+        }
+        requestContext.ifPresent(c -> MDC.setContextMap(c.getValue()));
         logger.info(() -> "ConcurrentModification Retry #" + attempt);
         logger.trace(() -> {
             if (failure instanceof ApiHttpException) {
@@ -126,7 +128,7 @@ public class ConcurrentModificationMiddlewareImpl implements ConcurrentModificat
             }
             return event.toString();
         });
-        MDC.clear();
+        requestContext.ifPresent(c -> MDC.clear());
     }
 
     private String requestLog(final int attempt, ApiHttpRequest request, ApiHttpResponse<?> response) {

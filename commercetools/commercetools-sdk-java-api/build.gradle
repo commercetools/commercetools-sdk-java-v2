@@ -8,6 +8,7 @@ dependencies {
     implementation javax.validation
     api slf4j.api
     api commons.lang3
+    implementation 'org.jetbrains:annotations:23.0.0'
 
     testImplementation project(':commercetools:commercetools-http-client')
     testImplementation project(':commercetools:commercetools-apachehttp-client')

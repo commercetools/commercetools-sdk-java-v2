@@ -41,7 +41,7 @@ public interface ReviewDraft extends com.commercetools.api.models.CustomizableDr
     public String getKey();
 
     /**
-     *  <p>If set, this value must be unique among Reviews. For example, if you want to have only one Review per Customer and per Product, you can set the value to Customer <code>id</code>&nbsp;+ Product <code>id</code>.</p>
+     *  <p>If set, this value must be unique among Reviews. For example, if you want to have only one Review per Customer and per Product, you can set the value to Customer <code>id</code>��+ Product <code>id</code>.</p>
      */
 
     @JsonProperty("uniquenessValue")

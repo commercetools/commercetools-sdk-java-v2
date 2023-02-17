@@ -290,15 +290,6 @@ types:
       public static com.commercetools.api.models.common.ReferenceTypeId referenceTypeId() {
           return com.commercetools.api.models.common.ReferenceTypeId.PRODUCT_TYPE;
       }
-
-      default com.commercetools.api.models.product_type.AttributeDefinition getAttribute(final String attributeName) {
-          return AttributeDefinitionContainer.super.getAttribute(attributeName);
-      }
-
-      @Override
-      default Optional<AttributeDefinition> findAttribute(final String attributeName) {
-          return AttributeDefinitionContainer.super.findAttribute(attributeName);
-      }
   ProductTypeDraft:
     (java-extends): 'com.commercetools.api.models.WithKey'
   ProductTypePagedQueryResponse:
@@ -582,11 +573,6 @@ types:
       public static com.commercetools.api.models.common.ReferenceTypeId referenceTypeId() {
           return com.commercetools.api.models.common.ReferenceTypeId.TYPE;
       }
-
-      @Nullable
-      default FieldDefinition getFieldDefinitionByName(final String name) {
-          return getFieldDefinitions().stream().filter(def -> def.getName().equals(name)).findFirst().orElse(null);
-      }
   TypeDraft:
     (java-extends): 'com.commercetools.api.models.WithKey'
   TypePagedQueryResponse:
@@ -604,10 +590,6 @@ types:
     (java-mixin): |
       public static com.commercetools.api.models.common.ReferenceTypeId referenceTypeId() {
           return com.commercetools.api.models.common.ReferenceTypeId.ZONE;
-      }
-
-      default boolean contains(final String countryCode) {
-          return getLocations().stream().anyMatch(location -> location.getCountry().equals(countryCode));
       }
   ZoneDraft:
     (java-extends): 'com.commercetools.api.models.WithKey'

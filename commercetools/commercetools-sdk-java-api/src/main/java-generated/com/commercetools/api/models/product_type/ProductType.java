@@ -37,8 +37,8 @@ import io.vrap.rmf.base.client.utils.Generated;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProductTypeImpl.class)
-public interface ProductType
-        extends BaseResource, ProductTypeMixin, com.commercetools.api.models.DomainResource<ProductType>,
+public interface ProductType extends BaseResource, AttributeDefinitionContainer, ProductTypeMixin,
+        com.commercetools.api.models.DomainResource<ProductType>,
         com.commercetools.api.models.Referencable<ProductType>,
         com.commercetools.api.models.ResourceIdentifiable<ProductType>, com.commercetools.api.models.WithKey {
 
@@ -168,6 +168,15 @@ public interface ProductType
 
     public static com.commercetools.api.models.common.ReferenceTypeId referenceTypeId() {
         return com.commercetools.api.models.common.ReferenceTypeId.PRODUCT_TYPE;
+    }
+
+    default com.commercetools.api.models.product_type.AttributeDefinition getAttribute(final String attributeName) {
+        return AttributeDefinitionContainer.super.getAttribute(attributeName);
+    }
+
+    @Override
+    default Optional<AttributeDefinition> findAttribute(final String attributeName) {
+        return AttributeDefinitionContainer.super.findAttribute(attributeName);
     }
 
     public static com.fasterxml.jackson.core.type.TypeReference<ProductType> typeReference() {

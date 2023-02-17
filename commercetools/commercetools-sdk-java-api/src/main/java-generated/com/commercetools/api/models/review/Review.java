@@ -94,7 +94,7 @@ public interface Review extends BaseResource, ReviewMixin, com.commercetools.api
     public String getKey();
 
     /**
-     *  <p>Must be unique among Reviews. For example, if this value is set to Customer <code>id</code>&nbsp;+ Product <code>id</code>, only one Review per Customer and per Product is allowed.</p>
+     *  <p>Must be unique among Reviews. For example, if this value is set to Customer <code>id</code>��+ Product <code>id</code>, only one Review per Customer and per Product is allowed.</p>
      */
 
     @JsonProperty("uniquenessValue")

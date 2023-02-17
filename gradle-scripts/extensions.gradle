@@ -7,6 +7,7 @@ ext {
             client: 'com.commercetools.sdk.jvm.core:commercetools-java-client-core:2.9.0',
             models: 'com.commercetools.sdk.jvm.core:commercetools-models:2.9.0',
             convenience: 'com.commercetools.sdk.jvm.core:commercetools-convenience:2.9.0',
+            http: 'com.commercetools.sdk.jvm.core:commercetools-java-client-ahc-2_12:2.9.0',
             version: {
                 strictly '[1.62.0,)'
                 prefer '2.9.0'

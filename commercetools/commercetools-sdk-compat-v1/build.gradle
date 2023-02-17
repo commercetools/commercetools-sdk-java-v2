@@ -3,9 +3,10 @@ apply plugin: "me.champeau.jmh"
 jmh {
     iterations = 10
     benchmarkMode = ['thrpt', 'avgt']
-    threads = 25
-    fork = 3
-    timeOnIteration = '1s'
+    threads = 10
+    fork = 1
+    timeOnIteration = '3s'
+    excludes = ['.*retrieveProject.*']
 }
 dependencies {
 
@@ -23,6 +24,7 @@ dependencies {
 
     jmhImplementation project(':commercetools:commercetools-async-http-client')
     jmhImplementation project(':commercetools:commercetools-apachehttp-client')
+    jmhImplementation ctsdkv1.http version ctsdkv1.version
     testImplementation project(':commercetools:commercetools-http-client')
     testImplementation ctsdkv1.client version ctsdkv1.version
     testImplementation ctsdkv1.models version ctsdkv1.version

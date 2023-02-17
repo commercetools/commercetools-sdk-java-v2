@@ -26,3 +26,5 @@ jobs:
                   CTP_CLIENT_SECRET: ${{ secrets.CTP_CLIENT_SECRET_PR }}
                   CTP_PROJECT_KEY: ${{ secrets.CTP_PROJECT_KEY_PR }}
                   CTP_JVM_SDK_LOG_LEVEL: OFF
+            - name: Output results
+              run: cat commercetools/commercetools-sdk-compat-v1/build/results/jmh/results.txt

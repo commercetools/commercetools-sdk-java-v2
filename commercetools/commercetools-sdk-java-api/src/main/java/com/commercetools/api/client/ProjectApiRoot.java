@@ -5,6 +5,8 @@ import java.io.Closeable;
 import java.util.function.Function;
 
 import io.vrap.rmf.base.client.ApiHttpClient;
+import io.vrap.rmf.base.client.Context;
+import io.vrap.rmf.base.client.ContextApiHttpClient;
 import io.vrap.rmf.base.client.SerializerOnlyApiHttpClient;
 
 /**
@@ -33,6 +35,16 @@ public class ProjectApiRoot implements Closeable {
 
     public static ProjectApiRoot fromClient(final String projectKey, final ApiHttpClient apiHttpClient) {
         return new ProjectApiRoot(projectKey, apiHttpClient);
+    }
+
+    public static ProjectApiRoot withContext(final String projectKey, final ApiHttpClient apiHttpClient,
+            final Context context) {
+        return new ProjectApiRoot(projectKey, ContextApiHttpClient.of(apiHttpClient, context));
+    }
+
+    public static ProjectApiRoot withContext(final ProjectApiRoot projectApiRoot, final Context context) {
+        return new ProjectApiRoot(projectApiRoot.projectKey,
+            ContextApiHttpClient.of(projectApiRoot.apiHttpClient, context));
     }
 
     public ByProjectKeyRequestBuilder with() {

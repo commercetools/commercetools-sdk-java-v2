@@ -29,6 +29,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  */
 @JsonSubTypes({
         @JsonSubTypes.Type(value = com.commercetools.api.models.extension.AWSLambdaDestinationImpl.class, name = AWSLambdaDestination.AWS_LAMBDA),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.extension.GoogleCloudFunctionDestinationImpl.class, name = GoogleCloudFunctionDestination.GOOGLE_CLOUD_FUNCTION),
         @JsonSubTypes.Type(value = com.commercetools.api.models.extension.HttpDestinationImpl.class, name = HttpDestination.HTTP) })
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "type", defaultImpl = ExtensionDestinationImpl.class, visible = true)
 @JsonDeserialize(as = ExtensionDestinationImpl.class)
@@ -44,6 +45,10 @@ public interface ExtensionDestination {
 
     public static com.commercetools.api.models.extension.AWSLambdaDestinationBuilder awsLambdaBuilder() {
         return com.commercetools.api.models.extension.AWSLambdaDestinationBuilder.of();
+    }
+
+    public static com.commercetools.api.models.extension.GoogleCloudFunctionDestinationBuilder googleCloudFunctionBuilder() {
+        return com.commercetools.api.models.extension.GoogleCloudFunctionDestinationBuilder.of();
     }
 
     public static com.commercetools.api.models.extension.HttpDestinationBuilder httpBuilder() {

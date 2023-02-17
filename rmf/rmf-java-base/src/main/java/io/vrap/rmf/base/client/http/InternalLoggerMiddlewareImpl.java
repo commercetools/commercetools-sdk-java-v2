@@ -50,8 +50,8 @@ class InternalLoggerMiddlewareImpl implements InternalLoggerMiddleware {
     @Override
     public CompletableFuture<ApiHttpResponse<byte[]>> invoke(final ApiHttpRequest request,
             final Function<ApiHttpRequest, CompletableFuture<ApiHttpResponse<byte[]>>> next) {
-        InternalLogger logger = factory.createFor(request, InternalLogger.TOPIC_REQUEST);
-        Optional<MDCContext> requestContext = Optional.ofNullable(request.getContext(MDCContext.class));
+        final InternalLogger logger = factory.createFor(request, InternalLogger.TOPIC_REQUEST);
+        final Optional<MDCContext> requestContext = Optional.ofNullable(request.getContext(MDCContext.class));
         requestContext.ifPresent(c -> MDC.setContextMap(c.getValue()));
         logger.debug(() -> request);
         logger.trace(() -> {
@@ -90,7 +90,7 @@ class InternalLoggerMiddlewareImpl implements InternalLoggerMiddleware {
         final long startTime = System.currentTimeMillis();
         return next.apply(request).whenComplete((response, throwable) -> {
             final long executionTime = System.currentTimeMillis() - startTime;
-            InternalLogger responseLogger = factory.createFor(request, InternalLogger.TOPIC_RESPONSE);
+            final InternalLogger responseLogger = factory.createFor(request, InternalLogger.TOPIC_RESPONSE);
 
             if (throwable != null) {
                 requestContext.ifPresent(c -> MDC.setContextMap(c.getValue()));
@@ -138,7 +138,7 @@ class InternalLoggerMiddlewareImpl implements InternalLoggerMiddleware {
                 requestContext.ifPresent(c -> MDC.clear());
             }
             else {
-                Optional<MDCContext> responseContext = Optional.ofNullable(response.getContext(MDCContext.class));
+                final Optional<MDCContext> responseContext = Optional.ofNullable(response.getContext(MDCContext.class));
                 responseContext.ifPresent(c -> MDC.setContextMap(c.getValue()));
 
                 responseLogger.log(responseLogEvent, () -> String.format("%s %s %s %s %s %s",

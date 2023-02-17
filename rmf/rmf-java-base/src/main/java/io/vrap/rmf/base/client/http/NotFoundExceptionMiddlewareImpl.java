@@ -30,8 +30,8 @@ class NotFoundExceptionMiddlewareImpl implements NotFoundExceptionMiddleware {
             Throwable cause = throwable instanceof CompletionException ? throwable.getCause() : throwable;
             if (cause instanceof NotFoundException && requestPredicate.test(request)) {
                 ApiHttpResponse<byte[]> response = ((NotFoundException) throwable.getCause()).getResponse();
-                return CompletableFuture
-                        .completedFuture(new ApiHttpResponse<>(response.getStatusCode(), response.getHeaders(), null));
+                return CompletableFuture.completedFuture(new ApiHttpResponse<>(response.getStatusCode(),
+                    response.getHeaders(), null, response.getMessage(), response.getContextMap()));
             }
             CompletableFuture<ApiHttpResponse<byte[]>> future = new CompletableFuture<>();
             future.completeExceptionally(throwable.getCause());

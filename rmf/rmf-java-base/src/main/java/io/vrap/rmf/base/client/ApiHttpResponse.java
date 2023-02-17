@@ -2,18 +2,22 @@
 package io.vrap.rmf.base.client;
 
 import java.nio.charset.StandardCharsets;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Optional;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 
-public class ApiHttpResponse<U> extends Base {
+public class ApiHttpResponse<U> extends Base implements ContextAware<ApiHttpResponse<U>> {
 
     private int statusCode;
     private ApiHttpHeaders headers;
     private U body;
     private String message;
+
+    private Map<Object, Object> contextMap = new HashMap<>();
 
     public ApiHttpResponse(final int statusCode, final ApiHttpHeaders headers, final U body) {
         this(statusCode, headers, body, null);
@@ -26,11 +30,59 @@ public class ApiHttpResponse<U> extends Base {
         this.message = message;
     }
 
+    public ApiHttpResponse(final int statusCode, final ApiHttpHeaders headers, final U body, final String message,
+            final Map<Object, Object> contextMap) {
+        this.statusCode = statusCode;
+        this.headers = Optional.ofNullable(headers).orElse(new ApiHttpHeaders());
+        this.body = body;
+        this.message = message;
+        this.contextMap = contextMap;
+    }
+
     public ApiHttpResponse(final ApiHttpResponse<U> response) {
         this.statusCode = response.statusCode;
         this.headers = response.headers;
         this.body = response.body;
         this.message = response.message;
+        this.contextMap = response.contextMap;
+    }
+
+    public Map<Object, Object> getContextMap() {
+        return contextMap;
+    }
+
+    public ApiHttpResponse<U> withContextMap(final Map<Object, Object> contextMap) {
+        ApiHttpResponse<U> response = copy();
+        response.contextMap = new HashMap<>(contextMap);
+
+        return response;
+    }
+
+    @SuppressWarnings("unchecked")
+    public <T> T getContext(Class<T> key) {
+        return (T) contextMap.get(key);
+    }
+
+    public <T> ApiHttpResponse<U> addContext(T value) {
+        ApiHttpResponse<U> response = copy();
+        Map<Object, Object> contextMap = new HashMap<>(response.contextMap);
+        contextMap.put(value.getClass(), value);
+        response.contextMap = contextMap;
+
+        return response;
+    }
+
+    public Object getContext(Object key) {
+        return contextMap.get(key);
+    }
+
+    public ApiHttpResponse<U> addContext(Object key, Object value) {
+        ApiHttpResponse<U> response = copy();
+        Map<Object, Object> contextMap = new HashMap<>(response.contextMap);
+        contextMap.put(key, value);
+        response.contextMap = contextMap;
+
+        return response;
     }
 
     public int getStatusCode() {
@@ -121,11 +173,17 @@ public class ApiHttpResponse<U> extends Base {
                 .append(headers, response.headers)
                 .append(body, response.body)
                 .append(message, response.message)
+                .append(contextMap, response.contextMap)
                 .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(statusCode).append(headers).append(body).append(message).toHashCode();
+        return new HashCodeBuilder(17, 37).append(statusCode)
+                .append(headers)
+                .append(body)
+                .append(message)
+                .append(contextMap)
+                .toHashCode();
     }
 }

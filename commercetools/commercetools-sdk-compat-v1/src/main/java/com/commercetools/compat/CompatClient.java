@@ -63,7 +63,7 @@ public class CompatClient implements ApiHttpClient {
 
     @Override
     public <O> CompletableFuture<ApiHttpResponse<O>> execute(ClientRequestCommand<O> method) {
-        return client.execute(method);
+        return method.execute(this);
     }
 
     @Override

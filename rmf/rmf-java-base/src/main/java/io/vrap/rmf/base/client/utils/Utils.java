@@ -41,6 +41,7 @@ public final class Utils {
             return (ApiHttpResponse<O>) response;
         }
         O newBody = JsonUtils.fromJsonByteArray(response.getBody(), outputType);
-        return new ApiHttpResponse<>(response.getStatusCode(), response.getHeaders(), newBody);
+        return new ApiHttpResponse<>(response.getStatusCode(), response.getHeaders(), newBody, response.getMessage(),
+            response.getContextMap());
     }
 }

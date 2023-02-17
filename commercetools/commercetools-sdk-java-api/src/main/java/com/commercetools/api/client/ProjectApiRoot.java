@@ -5,6 +5,8 @@ import java.io.Closeable;
 import java.util.function.Function;
 
 import io.vrap.rmf.base.client.ApiHttpClient;
+import io.vrap.rmf.base.client.Context;
+import io.vrap.rmf.base.client.ContextApiHttpClient;
 import io.vrap.rmf.base.client.SerializerOnlyApiHttpClient;
 
 /**
@@ -33,6 +35,16 @@ public class ProjectApiRoot implements Closeable {
 
     public static ProjectApiRoot fromClient(final String projectKey, final ApiHttpClient apiHttpClient) {
         return new ProjectApiRoot(projectKey, apiHttpClient);
+    }
+
+    public static ProjectApiRoot withContext(final String projectKey, final ApiHttpClient apiHttpClient,
+            final Context context) {
+        return new ProjectApiRoot(projectKey, ContextApiHttpClient.of(apiHttpClient, context));
+    }
+
+    public static ProjectApiRoot withContext(final ProjectApiRoot projectApiRoot, final Context context) {
+        return new ProjectApiRoot(projectApiRoot.projectKey,
+            ContextApiHttpClient.of(projectApiRoot.apiHttpClient, context));
     }
 
     public ByProjectKeyRequestBuilder with() {
@@ -177,6 +189,34 @@ public class ProjectApiRoot implements Closeable {
 
     public ByProjectKeyInStoreKeyByStoreKeyRequestBuilder inStore(String storeKey) {
         return with().inStoreKeyWithStoreKeyValue(storeKey);
+    }
+
+    public ByProjectKeyBusinessUnitsRequestBuilder businessUnits() {
+        return with().businessUnits();
+    }
+
+    public ByProjectKeyQuotesRequestBuilder quotes() {
+        return with().quotes();
+    }
+
+    public ByProjectKeyQuoteRequestsRequestBuilder quoteRequests() {
+        return with().quoteRequests();
+    }
+
+    public ByProjectKeyStagedQuotesRequestBuilder stagedQuotes() {
+        return with().stagedQuotes();
+    }
+
+    public ByProjectKeyStandalonePricesRequestBuilder standalonePrices() {
+        return with().standalonePrices();
+    }
+
+    public ByProjectKeyAttributeGroupsRequestBuilder attributeGroups() {
+        return with().attributeGroups();
+    }
+
+    public ByProjectKeyInBusinessUnitKeyByBusinessUnitKeyRequestBuilder inBusinessUnit(final String businessUnitKey) {
+        return with().inBusinessUnitKeyWithBusinessUnitKeyValue(businessUnitKey);
     }
 
     public <R> R with(Function<ProjectApiRoot, R> op) {

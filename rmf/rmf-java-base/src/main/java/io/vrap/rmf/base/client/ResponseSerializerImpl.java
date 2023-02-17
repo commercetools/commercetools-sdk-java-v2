@@ -25,7 +25,8 @@ class ResponseSerializerImpl implements ResponseSerializer {
                 return (ApiHttpResponse<O>) response;
             }
             O newBody = mapper.readValue(response.getBody(), outputType);
-            return new ApiHttpResponse<>(response.getStatusCode(), response.getHeaders(), newBody);
+            return new ApiHttpResponse<>(response.getStatusCode(), response.getHeaders(), newBody,
+                response.getMessage(), response.getContextMap());
         }
         catch (IOException e) {
             throw new RuntimeException(e);
@@ -38,7 +39,8 @@ class ResponseSerializerImpl implements ResponseSerializer {
                 return (ApiHttpResponse<O>) response;
             }
             O newBody = mapper.readValue(response.getBody(), outputType);
-            return new ApiHttpResponse<>(response.getStatusCode(), response.getHeaders(), newBody);
+            return new ApiHttpResponse<>(response.getStatusCode(), response.getHeaders(), newBody,
+                response.getMessage(), response.getContextMap());
         }
         catch (IOException e) {
             throw new RuntimeException(e);
@@ -52,7 +54,8 @@ class ResponseSerializerImpl implements ResponseSerializer {
                 return (ApiHttpResponse<O>) response;
             }
             O newBody = mapper.readValue(response.getBody(), outputType);
-            return new ApiHttpResponse<>(response.getStatusCode(), response.getHeaders(), newBody);
+            return new ApiHttpResponse<>(response.getStatusCode(), response.getHeaders(), newBody,
+                response.getMessage(), response.getContextMap());
         }
         catch (IOException e) {
             throw new RuntimeException(e);

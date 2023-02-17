@@ -51,8 +51,8 @@ class InternalLoggerMiddlewareImpl implements InternalLoggerMiddleware {
     public CompletableFuture<ApiHttpResponse<byte[]>> invoke(final ApiHttpRequest request,
             final Function<ApiHttpRequest, CompletableFuture<ApiHttpResponse<byte[]>>> next) {
         InternalLogger logger = factory.createFor(request, InternalLogger.TOPIC_REQUEST);
-        Optional.ofNullable(request.getContext(MDCContext.class))
-                .ifPresent(mdcContext -> MDC.setContextMap(mdcContext.getValue()));
+        Optional<MDCContext> requestContext = Optional.ofNullable(request.getContext(MDCContext.class));
+        requestContext.ifPresent(c -> MDC.setContextMap(c.getValue()));
         logger.debug(() -> request);
         logger.trace(() -> {
             final String output;
@@ -86,15 +86,14 @@ class InternalLoggerMiddlewareImpl implements InternalLoggerMiddleware {
             }
             return output;
         });
-        MDC.clear();
+        requestContext.ifPresent(c -> MDC.clear());
         final long startTime = System.currentTimeMillis();
         return next.apply(request).whenComplete((response, throwable) -> {
             final long executionTime = System.currentTimeMillis() - startTime;
             InternalLogger responseLogger = factory.createFor(request, InternalLogger.TOPIC_RESPONSE);
 
             if (throwable != null) {
-                Optional.ofNullable(request.getContext(MDCContext.class))
-                        .ifPresent(mdcContext -> MDC.setContextMap(mdcContext.getValue()));
+                requestContext.ifPresent(c -> MDC.setContextMap(c.getValue()));
                 Throwable cause = throwable instanceof CompletionException ? throwable.getCause() : throwable;
                 if (cause instanceof ApiHttpException) {
                     final ApiHttpResponse<byte[]> errorResponse = ((ApiHttpException) throwable.getCause())
@@ -136,10 +135,11 @@ class InternalLoggerMiddlewareImpl implements InternalLoggerMiddleware {
                             .orElse(defaultExceptionLogEvent);
                     responseLogger.log(level, throwable::getCause, throwable);
                 }
+                requestContext.ifPresent(c -> MDC.clear());
             }
             else {
-                Optional.ofNullable(response.getContext(MDCContext.class))
-                        .ifPresent(mdcContext -> MDC.setContextMap(mdcContext.getValue()));
+                Optional<MDCContext> responseContext = Optional.ofNullable(response.getContext(MDCContext.class));
+                responseContext.ifPresent(c -> MDC.setContextMap(c.getValue()));
 
                 responseLogger.log(responseLogEvent, () -> String.format("%s %s %s %s %s %s",
                     request.getMethod().name(), request.getUrl(), response.getStatusCode(), executionTime,
@@ -157,8 +157,8 @@ class InternalLoggerMiddlewareImpl implements InternalLoggerMiddleware {
                         + Optional.ofNullable(response.getBody())
                                 .map(body -> JsonUtils.prettyPrint(response.getBodyAsString().orElse("")))
                                 .orElse("<no body>"));
+                responseContext.ifPresent(c -> MDC.clear());
             }
-            MDC.clear();
         });
     }
 }

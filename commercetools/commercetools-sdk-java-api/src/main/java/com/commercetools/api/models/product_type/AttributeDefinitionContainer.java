@@ -1,10 +1,12 @@
+
 package com.commercetools.api.models.product_type;
 
-import org.apache.commons.lang3.StringUtils;
-
-import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Optional;
+
+import javax.annotation.Nullable;
+
+import org.apache.commons.lang3.StringUtils;
 
 public interface AttributeDefinitionContainer {
     List<AttributeDefinition> getAttributes();

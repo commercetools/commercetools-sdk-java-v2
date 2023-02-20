@@ -1,13 +1,10 @@
 
-package commercetools;
+package com.commercetools.history.client;
 
 import java.lang.reflect.Method;
 import java.lang.reflect.Modifier;
 import java.util.List;
 import java.util.stream.Collectors;
-
-import com.commercetools.api.client.ByProjectKeyRequestBuilder;
-import com.commercetools.api.client.ProjectScopedApiRoot;
 
 import org.assertj.core.api.Assertions;
 import org.assertj.core.util.Lists;
@@ -15,8 +12,7 @@ import org.junit.jupiter.api.Test;
 
 public class ProjectApiRootTest {
 
-    private static final List<String> ignoreMethods = Lists.newArrayList("inStoreKeyWithStoreKeyValue",
-        "inBusinessUnitKeyWithBusinessUnitKeyValue");
+    private static final List<String> ignoreMethods = Lists.newArrayList();
 
     /**
      * Retrieves all public methods of the {@link ProjectScopedApiRoot} and the public methods of the {@link ByProjectKeyRequestBuilder} and

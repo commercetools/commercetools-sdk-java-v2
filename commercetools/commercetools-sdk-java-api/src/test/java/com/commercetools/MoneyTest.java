@@ -1,12 +1,15 @@
 
 package com.commercetools;
 
+import java.math.BigDecimal;
 import java.util.Collections;
 
 import javax.money.MonetaryAmount;
 
 import com.commercetools.api.models.cart.*;
 import com.commercetools.api.models.common.*;
+import com.commercetools.api.models.tax_category.TaxRate;
+import com.commercetools.api.models.tax_category.TaxRateBuilder;
 import com.fasterxml.jackson.databind.JsonNode;
 
 import io.vrap.rmf.base.client.utils.json.JsonUtils;
@@ -14,6 +17,8 @@ import io.vrap.rmf.base.client.utils.json.JsonUtils;
 import org.assertj.core.api.Assertions;
 import org.javamoney.moneta.FastMoney;
 import org.junit.jupiter.api.Test;
+
+import static org.assertj.core.api.Assertions.assertThat;
 
 public class MoneyTest {
     @Test
@@ -297,5 +302,64 @@ public class MoneyTest {
                 .isEqualTo(3);
         Assertions.assertThat(highCartNode.get("customLineItems").get(0).get("money").get("currencyCode").asText())
                 .isEqualTo("EUR");
+    }
+
+    @Test
+    public void calculatesAppliedTaxes() {
+        final long totalNet = 100L;
+        final long totalGross = 119L;
+        assertThat(MoneyUtil.calculateAppliedTaxes(taxedPriceOf(totalNet, totalGross)))
+                .isEqualTo(TypedMoneyBuilder.of()
+                        .centPrecisionBuilder().centAmount(19L).build()
+                );
+    }
+
+    @Test
+    public void calculatesGrossWhenTaxesIncluded(){
+        final TaxRate taxRate = taxRateOf(0.19, true);
+        final MonetaryAmount amount = monetaryAmountOf(100);
+        assertThat(MoneyUtil.calculateGrossPrice(amount, taxRate)).isEqualTo(monetaryAmountOf(100));
+    }
+
+    @Test
+    public void calculatesGrossWhenTaxesNotIncluded() throws Exception {
+        final TaxRate taxRate = taxRateOf(0.19, false);
+        final MonetaryAmount amount = monetaryAmountOf(100);
+        assertThat(MoneyUtil.calculateGrossPrice(amount, taxRate)).isEqualTo(monetaryAmountOf(119));
+    }
+
+    @Test
+    public void calculatesNetWhenTaxesIncluded() throws Exception {
+        final TaxRate taxRate = taxRateOf(0.19, true);
+        final MonetaryAmount amount = monetaryAmountOf(119);
+        assertThat(MoneyUtil.calculateNetPrice(amount, taxRate)).isEqualTo(monetaryAmountOf(100));
+    }
+
+    @Test
+    public void calculatesNetWhenTaxesNotIncluded() throws Exception {
+        final TaxRate taxRate = taxRateOf(0.19, false);
+        final MonetaryAmount amount = monetaryAmountOf(119);
+        assertThat(MoneyUtil.calculateNetPrice(amount, taxRate)).isEqualTo(monetaryAmountOf(119));
+    }
+
+    private static TaxedItemPrice taxedPriceOf(final long totalNet, final long totalGross) {
+        return  TaxedItemPriceBuilder.of()
+                .totalNet((TypedMoney) monetaryAmountOf(totalNet))
+                .totalGross((TypedMoney) monetaryAmountOf(totalGross))
+                .build();
+    }
+
+    private static TaxRate taxRateOf(final Double amount, boolean includedPrice) {
+        return  TaxRateBuilder.of()
+                .amount(amount)
+                .includedInPrice(includedPrice)
+                .build();
+    }
+
+    private static MonetaryAmount monetaryAmountOf(final long amount) {
+        return MoneyBuilder.of()
+                .centAmount(amount)
+                .currencyCode("EUR")
+                .build();
     }
 }

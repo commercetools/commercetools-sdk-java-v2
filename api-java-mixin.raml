@@ -1053,12 +1053,12 @@ types:
     /edits:
       get:
         (java-implements):
-          'ByProjectKeyOrdersGetMixin,
-          com.commercetools.api.models.PagedQueryResourceRequest<ByProjectKeyOrdersEditsGet,
+          'com.commercetools.api.models.PagedQueryResourceRequest<ByProjectKeyOrdersEditsGet,
           com.commercetools.api.models.order_edit.OrderEditPagedQueryResponse>'
     get:
       (java-implements):
-        'com.commercetools.api.models.PagedQueryResourceRequest<ByProjectKeyOrdersGet,
+        'ByProjectKeyOrdersGetMixin,
+        com.commercetools.api.models.PagedQueryResourceRequest<ByProjectKeyOrdersGet,
         com.commercetools.api.models.order.OrderPagedQueryResponse>'
     /{ID}:
       delete:

@@ -169,6 +169,19 @@
             ]
         },
         {
+            "moduleName": "org.jetbrains:annotations",
+            "moduleVersion": "23.0.0",
+            "moduleUrls": [
+                "https://github.com/JetBrains/java-annotations"
+            ],
+            "moduleLicenses": [
+                {
+                    "moduleLicense": "Apache License, Version 2.0",
+                    "moduleLicenseUrl": "https://www.apache.org/licenses/LICENSE-2.0"
+                }
+            ]
+        },
+        {
             "moduleName": "org.slf4j:slf4j-api",
             "moduleVersion": "1.7.36",
             "moduleUrls": [

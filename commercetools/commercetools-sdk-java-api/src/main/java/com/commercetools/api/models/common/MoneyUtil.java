@@ -9,6 +9,8 @@ import java.util.Optional;
 import javax.money.*;
 import javax.money.Monetary;
 
+import com.commercetools.api.models.cart.TaxedItemPrice;
+import com.commercetools.api.models.tax_category.TaxRate;
 import com.commercetools.money.MonetaryProvider;
 import com.commercetools.money.MonetarySupplier;
 
@@ -139,5 +141,51 @@ public class MoneyUtil {
                 .numberValue(BigDecimal.class)
                 .setScale(Math.max(0, fractionsDigit), RoundingMode.HALF_EVEN);
         return number.scaleByPowerOfTen(number.scale());
+    }
+
+    /**
+     * Calculates the taxes applied to the pricing.
+     */
+    public static MonetaryAmount calculateAppliedTaxes(final TaxedItemPrice taxedPrice) {
+        return taxedPrice.getTotalGross().subtract(taxedPrice.getTotalNet());
+    }
+
+    /**
+     * Calculates the gross price of the given amount according to its tax rate.
+     * Whether the provided amount is already gross or net is determined by the tax rate.
+     */
+    public static MonetaryAmount calculateGrossPrice(final MonetaryAmount amount, final TaxRate taxRate) {
+        return taxRate.getIncludedInPrice() ? amount : convertNetToGrossPrice(amount, taxRate.getAmount());
+    }
+
+    /**
+     * Calculates the net price of the given amount according to its tax rate.
+     * Whether the provided amount is already net or gross is determined by the tax rate.
+     * @param amount the monetary amount
+     * @param taxRate the tax rate corresponding to the {@code amount}
+     * @return the net monetary amount
+     */
+    public static MonetaryAmount calculateNetPrice(final MonetaryAmount amount, final TaxRate taxRate) {
+        return taxRate.getIncludedInPrice() ? convertGrossToNetPrice(amount, taxRate.getAmount()) : amount;
+    }
+
+    /**
+     * Converts the given net amount (i.e. without taxes) to gross (i.e. with taxes included) according to the provided tax rate.
+     * @param netAmount the net monetary amount
+     * @param taxRate the given tax rate, e.g. {@code 0.19} for 19% tax
+     * @return the gross monetary amount
+     */
+    public static MonetaryAmount convertNetToGrossPrice(final MonetaryAmount netAmount, final double taxRate) {
+        return netAmount.multiply(1 + taxRate);
+    }
+
+    /**
+     * Converts the given gross amount (i.e. with taxes included) to net (i.e. without taxes) according to the provided tax rate.
+     * @param grossAmount the gross monetary amount
+     * @param taxRate the given tax rate, e.g. {@code 0.19} for 19% tax
+     * @return the net monetary amount
+     */
+    public static MonetaryAmount convertGrossToNetPrice(final MonetaryAmount grossAmount, final double taxRate) {
+        return grossAmount.divide(1 + taxRate);
     }
 }

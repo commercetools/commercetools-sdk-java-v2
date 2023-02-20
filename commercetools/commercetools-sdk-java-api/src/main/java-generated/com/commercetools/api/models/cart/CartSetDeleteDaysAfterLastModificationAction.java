@@ -62,6 +62,10 @@ public interface CartSetDeleteDaysAfterLastModificationAction extends CartUpdate
         return helper.apply(this);
     }
 
+    public static CartSetDeleteDaysAfterLastModificationAction ofUnset() {
+        return new CartSetDeleteDaysAfterLastModificationActionImpl(null);
+    }
+
     public static com.fasterxml.jackson.core.type.TypeReference<CartSetDeleteDaysAfterLastModificationAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<CartSetDeleteDaysAfterLastModificationAction>() {
             @Override

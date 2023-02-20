@@ -59,6 +59,10 @@ public interface OrderEditSetKeyAction extends OrderEditUpdateAction {
         return helper.apply(this);
     }
 
+    public static OrderEditSetKeyAction ofUnset() {
+        return new OrderEditSetKeyActionImpl(null);
+    }
+
     public static com.fasterxml.jackson.core.type.TypeReference<OrderEditSetKeyAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<OrderEditSetKeyAction>() {
             @Override

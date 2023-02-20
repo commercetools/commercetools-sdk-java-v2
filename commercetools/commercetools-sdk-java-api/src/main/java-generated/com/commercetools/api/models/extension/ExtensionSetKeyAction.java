@@ -59,6 +59,10 @@ public interface ExtensionSetKeyAction extends ExtensionUpdateAction {
         return helper.apply(this);
     }
 
+    public static ExtensionSetKeyAction ofUnset() {
+        return new ExtensionSetKeyActionImpl(null);
+    }
+
     public static com.fasterxml.jackson.core.type.TypeReference<ExtensionSetKeyAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ExtensionSetKeyAction>() {
             @Override

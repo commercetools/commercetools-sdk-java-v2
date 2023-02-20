@@ -59,6 +59,10 @@ public interface CartSetKeyAction extends CartUpdateAction {
         return helper.apply(this);
     }
 
+    public static CartSetKeyAction ofUnset() {
+        return new CartSetKeyActionImpl(null);
+    }
+
     public static com.fasterxml.jackson.core.type.TypeReference<CartSetKeyAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<CartSetKeyAction>() {
             @Override

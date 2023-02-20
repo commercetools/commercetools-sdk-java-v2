@@ -93,6 +93,15 @@ public interface ProductSetAttributeInAllVariantsAction extends ProductUpdateAct
         return helper.apply(this);
     }
 
+    public static ProductSetAttributeInAllVariantsAction ofUnsetAttribute(final String name) {
+        return ofUnsetAttribute(name, null);
+    }
+
+    public static ProductSetAttributeInAllVariantsAction ofUnsetAttribute(final String name,
+            @javax.annotation.Nullable final Boolean staged) {
+        return new ProductSetAttributeInAllVariantsActionImpl(name, null, staged);
+    }
+
     public static com.fasterxml.jackson.core.type.TypeReference<ProductSetAttributeInAllVariantsAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ProductSetAttributeInAllVariantsAction>() {
             @Override

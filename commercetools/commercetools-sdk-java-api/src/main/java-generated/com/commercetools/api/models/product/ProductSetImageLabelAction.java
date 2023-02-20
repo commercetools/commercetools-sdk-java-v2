@@ -102,6 +102,14 @@ public interface ProductSetImageLabelAction extends ProductUpdateAction {
         return helper.apply(this);
     }
 
+    public static ProductSetImageLabelAction ofUnset() {
+        return new ProductSetImageLabelActionImpl();
+    }
+
+    public static ProductSetImageLabelAction ofUnsetStaged(final Long variantId, final String imageUrl) {
+        return new ProductSetImageLabelActionImpl(null, variantId, imageUrl, null, null);
+    }
+
     public static com.fasterxml.jackson.core.type.TypeReference<ProductSetImageLabelAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ProductSetImageLabelAction>() {
             @Override

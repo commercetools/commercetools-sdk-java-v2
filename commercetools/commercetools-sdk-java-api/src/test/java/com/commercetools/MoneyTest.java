@@ -1,7 +1,8 @@
 
 package com.commercetools;
 
-import java.math.BigDecimal;
+import static org.assertj.core.api.Assertions.assertThat;
+
 import java.util.Collections;
 
 import javax.money.MonetaryAmount;
@@ -17,8 +18,6 @@ import io.vrap.rmf.base.client.utils.json.JsonUtils;
 import org.assertj.core.api.Assertions;
 import org.javamoney.moneta.FastMoney;
 import org.junit.jupiter.api.Test;
-
-import static org.assertj.core.api.Assertions.assertThat;
 
 public class MoneyTest {
     @Test
@@ -309,13 +308,11 @@ public class MoneyTest {
         final long totalNet = 100L;
         final long totalGross = 119L;
         assertThat(MoneyUtil.calculateAppliedTaxes(taxedPriceOf(totalNet, totalGross)))
-                .isEqualTo(TypedMoneyBuilder.of()
-                        .centPrecisionBuilder().centAmount(19L).build()
-                );
+                .isEqualTo(TypedMoneyBuilder.of().centPrecisionBuilder().centAmount(19L).build());
     }
 
     @Test
-    public void calculatesGrossWhenTaxesIncluded(){
+    public void calculatesGrossWhenTaxesIncluded() {
         final TaxRate taxRate = taxRateOf(0.19, true);
         final MonetaryAmount amount = monetaryAmountOf(100);
         assertThat(MoneyUtil.calculateGrossPrice(amount, taxRate)).isEqualTo(monetaryAmountOf(100));
@@ -343,23 +340,17 @@ public class MoneyTest {
     }
 
     private static TaxedItemPrice taxedPriceOf(final long totalNet, final long totalGross) {
-        return  TaxedItemPriceBuilder.of()
+        return TaxedItemPriceBuilder.of()
                 .totalNet((TypedMoney) monetaryAmountOf(totalNet))
                 .totalGross((TypedMoney) monetaryAmountOf(totalGross))
                 .build();
     }
 
     private static TaxRate taxRateOf(final Double amount, boolean includedPrice) {
-        return  TaxRateBuilder.of()
-                .amount(amount)
-                .includedInPrice(includedPrice)
-                .build();
+        return TaxRateBuilder.of().amount(amount).includedInPrice(includedPrice).build();
     }
 
     private static MonetaryAmount monetaryAmountOf(final long amount) {
-        return MoneyBuilder.of()
-                .centAmount(amount)
-                .currencyCode("EUR")
-                .build();
+        return MoneyBuilder.of().centAmount(amount).currencyCode("EUR").build();
     }
 }

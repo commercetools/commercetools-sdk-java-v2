@@ -59,6 +59,10 @@ public interface ProductDiscountSetKeyAction extends ProductDiscountUpdateAction
         return helper.apply(this);
     }
 
+    public static ProductDiscountSetKeyAction ofUnset() {
+        return new ProductDiscountSetKeyActionImpl(null);
+    }
+
     public static com.fasterxml.jackson.core.type.TypeReference<ProductDiscountSetKeyAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ProductDiscountSetKeyAction>() {
             @Override

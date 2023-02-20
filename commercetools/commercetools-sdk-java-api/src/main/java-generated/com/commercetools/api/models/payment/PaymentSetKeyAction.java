@@ -59,6 +59,10 @@ public interface PaymentSetKeyAction extends PaymentUpdateAction {
         return helper.apply(this);
     }
 
+    public static PaymentSetKeyAction ofUnset() {
+        return new PaymentSetKeyActionImpl(null);
+    }
+
     public static com.fasterxml.jackson.core.type.TypeReference<PaymentSetKeyAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<PaymentSetKeyAction>() {
             @Override

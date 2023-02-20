@@ -59,6 +59,10 @@ public interface CategorySetKeyAction extends CategoryUpdateAction {
         return helper.apply(this);
     }
 
+    public static CategorySetKeyAction ofUnset() {
+        return new CategorySetKeyActionImpl(null);
+    }
+
     public static com.fasterxml.jackson.core.type.TypeReference<CategorySetKeyAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<CategorySetKeyAction>() {
             @Override

@@ -59,6 +59,10 @@ public interface CustomerSetKeyAction extends CustomerUpdateAction {
         return helper.apply(this);
     }
 
+    public static CustomerSetKeyAction ofUnset() {
+        return new CustomerSetKeyActionImpl(null);
+    }
+
     public static com.fasterxml.jackson.core.type.TypeReference<CustomerSetKeyAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<CustomerSetKeyAction>() {
             @Override

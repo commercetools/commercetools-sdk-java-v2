@@ -111,6 +111,45 @@ public interface ProductSetAttributeAction extends ProductUpdateAction {
         return helper.apply(this);
     }
 
+    public static ProductSetAttributeAction ofVariantId(final Long variantId, final String name,
+            @javax.annotation.Nullable final com.fasterxml.jackson.databind.JsonNode value,
+            @javax.annotation.Nullable final Boolean staged) {
+        return new ProductSetAttributeActionImpl(variantId, null, name, value, staged);
+    }
+
+    public static ProductSetAttributeAction ofSku(final String sku, final String name,
+            @javax.annotation.Nullable final com.fasterxml.jackson.databind.JsonNode value,
+            @javax.annotation.Nullable final Boolean staged) {
+        return new ProductSetAttributeActionImpl(null, sku, name, value, staged);
+    }
+
+    public static ProductSetAttributeAction ofUnsetAttribute(final Long variantId, final String name) {
+        return ofUnsetAttribute(variantId, name, null);
+    }
+
+    public static ProductSetAttributeAction ofUnsetAttribute(final Long variantId, final String name,
+            @javax.annotation.Nullable final Boolean staged) {
+        return ofVariantId(variantId, name, null, staged);
+    }
+
+    public static ProductSetAttributeAction ofUnsetAttributeForVariantId(final Long variantId, final String name) {
+        return ofUnsetAttributeForVariantId(variantId, name, null);
+    }
+
+    public static ProductSetAttributeAction ofUnsetAttributeForVariantId(final Long variantId, final String name,
+            @javax.annotation.Nullable final Boolean staged) {
+        return ofVariantId(variantId, name, null, staged);
+    }
+
+    public static ProductSetAttributeAction ofUnsetAttributeForSku(final String sku, final String name) {
+        return ofUnsetAttributeForSku(sku, name, null);
+    }
+
+    public static ProductSetAttributeAction ofUnsetAttributeForSku(final String sku, final String name,
+            @javax.annotation.Nullable final Boolean staged) {
+        return ofSku(sku, name, null, staged);
+    }
+
     public static com.fasterxml.jackson.core.type.TypeReference<ProductSetAttributeAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ProductSetAttributeAction>() {
             @Override

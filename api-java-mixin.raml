@@ -273,6 +273,11 @@ types:
       public static PaymentSetKeyAction ofUnset() {
           return new PaymentSetKeyActionImpl(null);
       }
+  ProductSetCustomerAction:
+    (java-mixin): |
+      public static ProductSetCustomerAction ofUnset() {
+          return new ProductSetCustomerActionImpl(null);
+      }
   Transaction:
     (java-extends): 'com.commercetools.api.models.Customizable<Transaction>'
   TransactionDraft:
@@ -543,6 +548,11 @@ types:
       public static ReviewSetKeyAction ofUnset() {
           return new ReviewSetKeyActionImpl(null);
       }
+  ReviewSetCustomerAction:
+    (java-mixin): |
+      public static ReviewSetCustomerAction ofUnset() {
+          return new ReviewSetCustomerActionImpl(null);
+      }
   ShippingMethod:
     (java-extends): 'ShippingMethodMixin, com.commercetools.api.models.DomainResource<ShippingMethod>, com.commercetools.api.models.Referencable<ShippingMethod>, com.commercetools.api.models.ResourceIdentifiable<ShippingMethod>, com.commercetools.api.models.Customizable<ShippingMethod>, com.commercetools.api.models.WithKey'
     (java-mixin): |
@@ -566,6 +576,16 @@ types:
     (java-mixin): |
       public static ShippingMethodSetKeyAction ofUnset() {
           return new ShippingMethodSetKeyActionImpl(null);
+      }
+  ShippingMethodSetCustomerAction:
+    (java-mixin): |
+      public static ShippingMethodSetCustomerAction ofUnset() {
+          return new ShippingMethodSetCustomerActionImpl(null);
+      }
+  ShippingMethodSetSlugAction:
+    (java-mixin): |
+      public static ShippingMethodSetSlugAction ofUnset() {
+          return new ShippingMethodSetSlugActionImpl(null);
       }
   ShoppingList:
     (java-extends): 'ShoppingListMixin, com.commercetools.api.models.DomainResource<ShoppingList>, com.commercetools.api.models.Referencable<ShoppingList>, com.commercetools.api.models.ResourceIdentifiable<ShoppingList>, com.commercetools.api.models.Customizable<ShoppingList>, com.commercetools.api.models.WithKey'

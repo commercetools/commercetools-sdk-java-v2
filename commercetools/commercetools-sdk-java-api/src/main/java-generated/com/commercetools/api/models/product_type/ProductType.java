@@ -170,15 +170,6 @@ public interface ProductType extends BaseResource, AttributeDefinitionContainer,
         return com.commercetools.api.models.common.ReferenceTypeId.PRODUCT_TYPE;
     }
 
-    default com.commercetools.api.models.product_type.AttributeDefinition getAttribute(final String attributeName) {
-        return AttributeDefinitionContainer.super.getAttribute(attributeName);
-    }
-
-    @Override
-    default Optional<AttributeDefinition> findAttribute(final String attributeName) {
-        return AttributeDefinitionContainer.super.findAttribute(attributeName);
-    }
-
     public static com.fasterxml.jackson.core.type.TypeReference<ProductType> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ProductType>() {
             @Override

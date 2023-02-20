@@ -170,10 +170,6 @@ public interface Zone extends BaseResource, ZoneMixin, com.commercetools.api.mod
         return com.commercetools.api.models.common.ReferenceTypeId.ZONE;
     }
 
-    default boolean contains(final String countryCode) {
-        return getLocations().stream().anyMatch(location -> location.getCountry().equals(countryCode));
-    }
-
     public static com.fasterxml.jackson.core.type.TypeReference<Zone> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<Zone>() {
             @Override

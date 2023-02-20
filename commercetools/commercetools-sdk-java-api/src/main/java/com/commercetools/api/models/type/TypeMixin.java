@@ -1,6 +1,8 @@
 
 package com.commercetools.api.models.type;
 
+import java.util.List;
+
 import com.commercetools.api.models.Referencable;
 import com.commercetools.api.models.ResourceIdentifiable;
 

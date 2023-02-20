@@ -247,7 +247,8 @@ types:
   ProductPagedQueryResponse:
     (java-extends): 'com.commercetools.api.models.ResourcePagedQueryResponse<Product>'
   ProductProjection:
-    (java-extends): 'ProductDataLike, com.commercetools.api.models.DomainResource<ProductProjection>, com.commercetools.api.models.WithKey'
+    (java-extends): 'ProductDataLike, ProductProjectionMixin,
+      com.commercetools.api.models.DomainResource<ProductProjection>, com.commercetools.api.models.WithKey'
   ProductVariant:
     (java-extends): 'com.commercetools.api.models.WithKey'
   ProductVariantDraft:

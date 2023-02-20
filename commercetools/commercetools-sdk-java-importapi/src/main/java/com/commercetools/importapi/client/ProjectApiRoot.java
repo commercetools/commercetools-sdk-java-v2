@@ -6,7 +6,7 @@ import java.io.Closeable;
 import io.vrap.rmf.base.client.ApiHttpClient;
 import io.vrap.rmf.base.client.SerializerOnlyApiHttpClient;
 
-public class ProjectApiRoot implements Closeable {
+public class ProjectApiRoot implements Closeable, ProjectScopedApiRoot {
     private final String projectKey;
     private final ApiHttpClient apiHttpClient;
 
@@ -23,6 +23,7 @@ public class ProjectApiRoot implements Closeable {
         return new ProjectApiRoot(projectKey, apiHttpClient);
     }
 
+    @Override
     public ByProjectKeyRequestBuilder with() {
         return ApiRoot.fromClient(apiHttpClient).withProjectKeyValue(projectKey);
     }
@@ -31,52 +32,74 @@ public class ProjectApiRoot implements Closeable {
         return ApiRoot.fromClient(apiHttpClient).withProjectKeyValue(projectKey);
     }
 
+    @Override
     public ByProjectKeyImportContainersRequestBuilder importContainers() {
         return with().importContainers();
     }
 
+    @Override
     public ByProjectKeyImportOperationsRequestBuilder importOperations() {
         return with().importOperations();
     }
 
+    @Override
     public ByProjectKeyCategoriesRequestBuilder categories() {
         return with().categories();
     }
 
+    @Override
     public ByProjectKeyPricesRequestBuilder prices() {
         return with().prices();
     }
 
+    @Override
     public ByProjectKeyProductsRequestBuilder products() {
         return with().products();
     }
 
+    @Override
     public ByProjectKeyProductDraftsRequestBuilder productDrafts() {
         return with().productDrafts();
     }
 
+    @Override
     public ByProjectKeyProductTypesRequestBuilder productTypes() {
         return with().productTypes();
     }
 
+    @Override
     public ByProjectKeyProductVariantsRequestBuilder productVariants() {
         return with().productVariants();
     }
 
+    @Override
     public ByProjectKeyProductVariantPatchesRequestBuilder productVariantPatches() {
         return with().productVariantPatches();
     }
 
+    @Override
     public ByProjectKeyOrdersRequestBuilder orders() {
         return with().orders();
     }
 
+    @Override
     public ByProjectKeyOrderPatchesRequestBuilder orderPatches() {
         return with().orderPatches();
     }
 
+    @Override
     public ByProjectKeyCustomersRequestBuilder customers() {
         return with().customers();
+    }
+
+    @Override
+    public ByProjectKeyStandalonePricesRequestBuilder standalonePrices() {
+        return with().standalonePrices();
+    }
+
+    @Override
+    public ByProjectKeyInventoriesRequestBuilder inventories() {
+        return with().inventories();
     }
 
     @Override

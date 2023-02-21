@@ -75,7 +75,7 @@ public interface OrderSetDeliveryAddressAction extends OrderUpdateAction {
     }
 
     public static OrderSetDeliveryAddressAction ofUnset() {
-        return new OrderSetDeliveryAddressActionImpl(null);
+        return new OrderSetDeliveryAddressActionImpl();
     }
 
     public static com.fasterxml.jackson.core.type.TypeReference<OrderSetDeliveryAddressAction> typeReference() {

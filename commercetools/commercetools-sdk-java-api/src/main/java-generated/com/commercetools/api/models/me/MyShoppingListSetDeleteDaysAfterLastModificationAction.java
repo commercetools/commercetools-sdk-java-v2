@@ -63,7 +63,7 @@ public interface MyShoppingListSetDeleteDaysAfterLastModificationAction extends 
     }
 
     public static MyShoppingListSetDeleteDaysAfterLastModificationAction ofUnset() {
-        return new MyShoppingListSetDeleteDaysAfterLastModificationAction(null);
+        return new MyShoppingListSetDeleteDaysAfterLastModificationActionImpl(null);
     }
 
     public static com.fasterxml.jackson.core.type.TypeReference<MyShoppingListSetDeleteDaysAfterLastModificationAction> typeReference() {

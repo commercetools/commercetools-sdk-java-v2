@@ -206,7 +206,7 @@ types:
   OrderSetDeliveryAddressAction:
     (java-mixin): |
       public static OrderSetDeliveryAddressAction ofUnset() {
-          return new OrderSetDeliveryAddressActionImpl(null);
+          return new OrderSetDeliveryAddressActionImpl();
       }
   OrderEdit:
     (java-extends): 'OrderEditMixin, com.commercetools.api.models.DomainResource<OrderEdit>, com.commercetools.api.models.Referencable<OrderEdit>, com.commercetools.api.models.ResourceIdentifiable<OrderEdit>, com.commercetools.api.models.Customizable<OrderEdit>, com.commercetools.api.models.WithKey'
@@ -247,7 +247,7 @@ types:
   StagedOrderSetDeliveryAddressAction:
     (java-mixin): |
       public static StagedOrderSetDeliveryAddressAction ofUnset() {
-          return new StagedOrderSetDeliveryAddressActionImpl(null);
+          return new StagedOrderSetDeliveryAddressActionImpl();
       }
   Payment:
     (java-extends): 'PaymentMixin, com.commercetools.api.models.DomainResource<Payment>, com.commercetools.api.models.Referencable<Payment>, com.commercetools.api.models.ResourceIdentifiable<Payment>, com.commercetools.api.models.Customizable<Payment>, com.commercetools.api.models.WithKey'
@@ -1075,7 +1075,7 @@ types:
   MyShoppingListSetDeleteDaysAfterLastModificationAction:
     (java-mixin): |
       public static MyShoppingListSetDeleteDaysAfterLastModificationAction ofUnset() {
-          return new MyShoppingListSetDeleteDaysAfterLastModificationAction(null);
+          return new MyShoppingListSetDeleteDaysAfterLastModificationActionImpl(null);
       }
   MyShoppingListAddLineItemAction:
     (java-extends): 'com.commercetools.api.models.CustomizableDraft<MyShoppingListAddLineItemAction>'

@@ -304,53 +304,52 @@ public class MoneyTest {
     }
 
     @Test
-    public void calculatesAppliedTaxes() {
-        final long totalNet = 100L;
-        final long totalGross = 119L;
-        assertThat(MoneyUtil.calculateAppliedTaxes(taxedPriceOf(totalNet, totalGross)))
-                .isEqualTo(TypedMoneyBuilder.of().centPrecisionBuilder().centAmount(19L).build());
+    public void calculatesAppliedTaxes() throws Exception {
+        assertThat(MoneyUtil.calculateAppliedTaxes(taxedPriceOf())).isEqualTo(
+            CentPrecisionMoneyBuilder.of().centAmount(19L).currencyCode("EUR").fractionDigits(2).build());
     }
 
     @Test
-    public void calculatesGrossWhenTaxesIncluded() {
-        final TaxRate taxRate = taxRateOf(0.19, true);
-        final MonetaryAmount amount = monetaryAmountOf(100);
-        assertThat(MoneyUtil.calculateGrossPrice(amount, taxRate)).isEqualTo(monetaryAmountOf(100));
+    public void calculatesGrossWhenTaxesIncluded() throws Exception {
+        final TaxRate taxRate = taxRateOf(true);
+        final Money amount = centMonetaryAmountOf(100);
+        assertThat(MoneyUtil.calculateGrossPrice(amount, taxRate)).isEqualTo(centMonetaryAmountOf(100));
     }
 
     @Test
     public void calculatesGrossWhenTaxesNotIncluded() throws Exception {
-        final TaxRate taxRate = taxRateOf(0.19, false);
-        final MonetaryAmount amount = monetaryAmountOf(100);
-        assertThat(MoneyUtil.calculateGrossPrice(amount, taxRate)).isEqualTo(monetaryAmountOf(119));
+        final TaxRate taxRate = taxRateOf(false);
+        final Money amount = centMonetaryAmountOf(100);
+        assertThat(MoneyUtil.calculateGrossPrice(amount, taxRate)).isEqualTo(centMonetaryAmountOf(119));
     }
 
     @Test
     public void calculatesNetWhenTaxesIncluded() throws Exception {
-        final TaxRate taxRate = taxRateOf(0.19, true);
-        final MonetaryAmount amount = monetaryAmountOf(119);
-        assertThat(MoneyUtil.calculateNetPrice(amount, taxRate)).isEqualTo(monetaryAmountOf(100));
+        final TaxRate taxRate = taxRateOf(true);
+        final Money amount = centMonetaryAmountOf(119);
+        assertThat(MoneyUtil.calculateNetPrice(amount, taxRate)).isEqualTo(centMonetaryAmountOf(100));
     }
 
     @Test
     public void calculatesNetWhenTaxesNotIncluded() throws Exception {
-        final TaxRate taxRate = taxRateOf(0.19, false);
-        final MonetaryAmount amount = monetaryAmountOf(119);
-        assertThat(MoneyUtil.calculateNetPrice(amount, taxRate)).isEqualTo(monetaryAmountOf(119));
+        final TaxRate taxRate = taxRateOf(false);
+        final Money amount = centMonetaryAmountOf(119);
+        assertThat(MoneyUtil.calculateNetPrice(amount, taxRate)).isEqualTo(centMonetaryAmountOf(119));
     }
 
-    private static TaxedItemPrice taxedPriceOf(final long totalNet, final long totalGross) {
+    private static TaxedItemPrice taxedPriceOf() {
         return TaxedItemPriceBuilder.of()
-                .totalNet((TypedMoney) monetaryAmountOf(totalNet))
-                .totalGross((TypedMoney) monetaryAmountOf(totalGross))
+                .totalNet(CentPrecisionMoneyBuilder.of().centAmount(100L).currencyCode("EUR").fractionDigits(2).build())
+                .totalGross(
+                    CentPrecisionMoneyBuilder.of().centAmount(119L).currencyCode("EUR").fractionDigits(2).build())
                 .build();
     }
 
-    private static TaxRate taxRateOf(final Double amount, boolean includedPrice) {
-        return TaxRateBuilder.of().amount(amount).includedInPrice(includedPrice).build();
+    private static TaxRate taxRateOf(boolean includedPrice) {
+        return TaxRateBuilder.of().amount(0.19).country("DE").name("test-foo").includedInPrice(includedPrice).build();
     }
 
-    private static MonetaryAmount monetaryAmountOf(final long amount) {
-        return MoneyBuilder.of().centAmount(amount).currencyCode("EUR").build();
+    private static Money centMonetaryAmountOf(final long amount) {
+        return CentPrecisionMoneyBuilder.of().centAmount(amount).currencyCode("EUR").fractionDigits(2).build();
     }
 }

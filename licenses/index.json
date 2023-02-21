@@ -2,7 +2,7 @@
     "dependencies": [
         {
             "moduleName": "com.commercetools.sdk.jvm.core:commercetools-java-client-core",
-            "moduleVersion": "2.9.0",
+            "moduleVersion": "2.14.0",
             "moduleLicenses": [
                 {
                     "moduleLicense": "Apache License, Version 2.0",
@@ -12,7 +12,7 @@
         },
         {
             "moduleName": "com.commercetools.sdk.jvm.core:commercetools-models",
-            "moduleVersion": "2.9.0",
+            "moduleVersion": "2.14.0",
             "moduleLicenses": [
                 {
                     "moduleLicense": "Apache License, Version 2.0",
@@ -22,7 +22,7 @@
         },
         {
             "moduleName": "com.commercetools.sdk.jvm.core:commercetools-sdk-base",
-            "moduleVersion": "2.9.0",
+            "moduleVersion": "2.14.0",
             "moduleLicenses": [
                 {
                     "moduleLicense": "Apache License, Version 2.0",
@@ -32,7 +32,7 @@
         },
         {
             "moduleName": "com.commercetools.sdk.jvm.core:sdk-http",
-            "moduleVersion": "2.9.0",
+            "moduleVersion": "2.14.0",
             "moduleLicenses": [
                 {
                     "moduleLicense": "Apache License, Version 2.0",

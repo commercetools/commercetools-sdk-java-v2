@@ -305,8 +305,7 @@ public class MoneyTest {
 
     @Test
     public void calculatesAppliedTaxes() throws Exception {
-        assertThat(MoneyUtil.calculateAppliedTaxes(taxedPriceOf())).isEqualTo(
-            CentPrecisionMoneyBuilder.of().centAmount(19L).currencyCode("EUR").fractionDigits(2).build());
+        assertThat(MoneyUtil.calculateAppliedTaxes(taxedPriceOf())).isEqualTo(centMonetaryAmountOf(19));
     }
 
     @Test
@@ -339,9 +338,8 @@ public class MoneyTest {
 
     private static TaxedItemPrice taxedPriceOf() {
         return TaxedItemPriceBuilder.of()
-                .totalNet(CentPrecisionMoneyBuilder.of().centAmount(100L).currencyCode("EUR").fractionDigits(2).build())
-                .totalGross(
-                    CentPrecisionMoneyBuilder.of().centAmount(119L).currencyCode("EUR").fractionDigits(2).build())
+                .totalNet(centMonetaryAmountOf(100))
+                .totalGross(centMonetaryAmountOf(119))
                 .build();
     }
 
@@ -349,7 +347,7 @@ public class MoneyTest {
         return TaxRateBuilder.of().amount(0.19).country("DE").name("test-foo").includedInPrice(includedPrice).build();
     }
 
-    private static Money centMonetaryAmountOf(final long amount) {
+    private static CentPrecisionMoney centMonetaryAmountOf(final long amount) {
         return CentPrecisionMoneyBuilder.of().centAmount(amount).currencyCode("EUR").fractionDigits(2).build();
     }
 }

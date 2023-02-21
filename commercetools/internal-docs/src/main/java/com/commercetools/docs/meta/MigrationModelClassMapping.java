@@ -1525,10 +1525,6 @@ package com.commercetools.docs.meta;
  *   <td>{@link com.commercetools.api.models.product.ProductData}</td>
  * </tr>
  * <tr>
- *   <td>{@link io.sphere.sdk.products.ProductDataLike}</td>
- *   <td>{@link com.commercetools.api.models.product.ProductDataLike}</td>
- * </tr>
- * <tr>
  *   <td>{@link io.sphere.sdk.products.ProductDraft}</td>
  *   <td>{@link com.commercetools.api.models.product.ProductDraft}</td>
  * </tr>
@@ -2401,10 +2397,6 @@ package com.commercetools.docs.meta;
  *   <td>{@link com.commercetools.api.models.subscription.Destination}</td>
  * </tr>
  * <tr>
- *   <td>{@link io.sphere.sdk.subscriptions.IronMqDestination}</td>
- *   <td>removed</td>
- * </tr>
- * <tr>
  *   <td>{@link io.sphere.sdk.subscriptions.MessageSubscription}</td>
  *   <td>{@link com.commercetools.api.models.subscription.MessageSubscription}</td>
  * </tr>
@@ -2717,6 +2709,9 @@ package com.commercetools.docs.meta;
  * </tr>
  * <tr>
  *   <td>{@link io.sphere.sdk.producttypes.ProductTypeLocalRepository}</td>
+ * </tr>
+ * <tr>
+ *   <td>{@link io.sphere.sdk.subscriptions.IronMqDestination}</td>
  * </tr>
  * </table>
  *

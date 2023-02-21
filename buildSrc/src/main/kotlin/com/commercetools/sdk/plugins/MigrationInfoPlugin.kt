@@ -2,6 +2,7 @@ package com.commercetools.sdk.plugins
 
 import com.github.javaparser.StaticJavaParser
 import com.github.javaparser.ast.CompilationUnit
+import com.github.javaparser.ast.NodeList
 import com.github.javaparser.ast.body.ClassOrInterfaceDeclaration
 import com.github.javaparser.ast.body.TypeDeclaration
 import com.google.common.base.CaseFormat
@@ -34,6 +35,7 @@ class MigrationInfoPlugin : Plugin<Project> {
     private fun createInfoTask(project: Project) {
         val extension = project.extensions.create("migration", MigrationInfoPluginExtension::class.java)
         val exportTask = project.task("migrateClassInfo")
+        val clazz = extension.className.getOrElse("com.commercetools.docs.meta.MigrationModelClassMapping")
         exportTask.group = "documentation"
 
         exportTask.doLast {
@@ -42,13 +44,17 @@ class MigrationInfoPlugin : Plugin<Project> {
             var javaFiles: Set<File> = emptySet();
             extension.v1BaseFolder.getOrElse(emptyList())
                     .forEach { folder -> javaFiles = javaFiles.plus(project.fileTree(mapOf("dir" to folder, "include" to "**/*.java")).files) }
-            val writer: Writer = Files.newBufferedWriter(outputFolder.resolve(project.name + ".java"))
+            val writer: Writer = Files.newBufferedWriter(outputFolder.resolve(clazz.simpleName() + ".java"))
 
             val hash = gitHash(project)
             val result = javaFiles.flatMap { file ->
                 javaFileInfo(file, project, hash, extension.includePackages.orNull, extension.v2BaseFolder.getOrElse(listOf("src/main")))
             }.associate { entry -> entry.key to entry.value }.toSortedMap()
             println("# Classes: " + result.filter { (_, value) -> value.sdkV2Classes.isEmpty()  }.size)
+
+            writer.appendLine("")
+            writer.appendLine("package ${clazz.packageName()};")
+            writer.appendLine("")
             writer.appendLine("/**")
             writer.appendLine(" *")
             writer.appendLine(" * <h2>Mapping of model classes from SDK v1 to v2</h2>")
@@ -103,6 +109,8 @@ class MigrationInfoPlugin : Plugin<Project> {
                     }
             writer.appendLine(" * </table>")
             writer.appendLine(" */")
+            writer.appendLine("public class ${clazz.simpleName()} {")
+            writer.appendLine("}")
             writer.close()
         }
     }
@@ -118,6 +126,7 @@ class MigrationInfoPlugin : Plugin<Project> {
                 .filterIsInstance<ClassOrInterfaceDeclaration>()
                 .map { typeDeclaration: TypeDeclaration<*> -> typeDeclaration as ClassOrInterfaceDeclaration }
                 .filter { declaration -> declaration.isInterface.or(declaration.fullyQualifiedName.get().contains(".commands.updateactions")) }
+                .filter { declaration -> declaration.isPublic }
                 .filterNot { declaration -> declaration.isAbstract }
                 .filterNot { declaration -> declaration.fullyQualifiedName.get().contains(".queries") }
                 .filterNot { declaration -> declaration.fullyQualifiedName.get().contains(".expansion") }
@@ -327,4 +336,9 @@ fun String.packageName(): String {
     if (this.isEmpty() or this.contains(".").not()) return ""
     val packageFolder = Paths.get(this.replace(".", "/"))
     return packageFolder.parent.toString().replace("/", ".");
+}
+
+fun String.simpleName(): String {
+    if (this.isEmpty() or this.contains(".").not()) return this
+    return this.split(".").last()
 }

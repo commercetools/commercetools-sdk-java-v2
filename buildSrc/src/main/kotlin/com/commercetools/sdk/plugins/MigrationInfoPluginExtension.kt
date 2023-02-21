@@ -8,4 +8,5 @@ interface MigrationInfoPluginExtension {
     val includePackages: ListProperty<String>
     val v1BaseFolder: ListProperty<String>
     val v2BaseFolder: ListProperty<String>
+    val className: Property<String>
 }

@@ -31,6 +31,7 @@ task runMainMethodThreadLeakTest(type: JavaExec) {
 apply plugin: com.commercetools.sdk.plugins.MigrationInfoPlugin
 
 migration {
+    outputFolder = "../internal-docs/src/main/java/com/commercetools/docs/meta"
     v1BaseFolder = [
             '/Users/jensschulze/workspace/commercetools-jvm-sdk/commercetools-models/src/main',
             '/Users/jensschulze/workspace/commercetools-jvm-sdk/commercetools-models/target/generated-sources/annotations'

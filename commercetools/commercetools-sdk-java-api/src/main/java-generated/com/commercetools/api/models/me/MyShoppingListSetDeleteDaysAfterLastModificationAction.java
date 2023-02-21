@@ -62,10 +62,6 @@ public interface MyShoppingListSetDeleteDaysAfterLastModificationAction extends 
         return helper.apply(this);
     }
 
-    public static MyShoppingListSetDeleteDaysAfterLastModificationAction ofUnset() {
-        return new MyShoppingListSetDeleteDaysAfterLastModificationActionImpl(null);
-    }
-
     public static com.fasterxml.jackson.core.type.TypeReference<MyShoppingListSetDeleteDaysAfterLastModificationAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<MyShoppingListSetDeleteDaysAfterLastModificationAction>() {
             @Override

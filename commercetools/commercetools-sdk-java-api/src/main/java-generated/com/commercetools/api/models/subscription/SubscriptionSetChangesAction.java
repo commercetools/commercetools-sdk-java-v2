@@ -64,6 +64,10 @@ public interface SubscriptionSetChangesAction extends SubscriptionUpdateAction {
         return helper.apply(this);
     }
 
+    public static SubscriptionSetChangesAction ofUnset() {
+        return new SubscriptionSetChangesActionImpl(null);
+    }
+
     public static com.fasterxml.jackson.core.type.TypeReference<SubscriptionSetChangesAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<SubscriptionSetChangesAction>() {
             @Override

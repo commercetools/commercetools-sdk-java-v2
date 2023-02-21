@@ -72,6 +72,10 @@ public interface CartDiscountSetCustomFieldAction extends CartDiscountUpdateActi
         return helper.apply(this);
     }
 
+    public static CartDiscountSetCustomFieldAction ofUnset(final String name) {
+        return CartDiscountSetCustomFieldActionBuilder.of().name(name).build();
+    }
+
     public static com.fasterxml.jackson.core.type.TypeReference<CartDiscountSetCustomFieldAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<CartDiscountSetCustomFieldAction>() {
             @Override

@@ -95,11 +95,11 @@ public interface ProductSetProductPriceCustomFieldAction extends ProductUpdateAc
         return helper.apply(this);
     }
 
-    public static ProductSetProductPriceCustomFieldAction ofUnset(final Long variantId, final String priceId) {
+    public static ProductSetProductPriceCustomFieldAction ofUnset(final String name, final String priceId) {
         return ProductSetProductPriceCustomFieldActionBuilder.of().name(name).priceId(priceId).build();
     }
 
-    public static ProductSetProductPriceCustomFieldAction ofUnsetStaged(final Long variantId, final String priceId,
+    public static ProductSetProductPriceCustomFieldAction ofUnsetStaged(final String name, final String priceId,
             @javax.annotation.Nullable final Boolean staged) {
         return ProductSetProductPriceCustomFieldActionBuilder.of().name(name).priceId(priceId).staged(staged).build();
     }

@@ -248,7 +248,7 @@ types:
   OrderSetBillingAddressCustomFieldAction:
     (java-mixin): |
       public static OrderSetBillingAddressCustomFieldAction ofUnset(final String name) {
-          return OrderSetBillingAddressCustomFieldAction.of().name(name).build();
+          return OrderSetBillingAddressCustomFieldActionBuilder.of().name(name).build();
       }
   OrderSetCustomLineItemCustomFieldAction:
     (java-mixin): |
@@ -337,7 +337,7 @@ types:
   StagedOrderSetBillingAddressCustomFieldAction:
     (java-mixin): |
       public static StagedOrderSetBillingAddressCustomFieldAction ofUnset(final String name) {
-          return StagedOrderSetBillingAddressCustomFieldAction.of().name(name).build();
+          return StagedOrderSetBillingAddressCustomFieldActionBuilder.of().name(name).build();
       }
   StagedOrderSetCustomLineItemCustomFieldAction:
     (java-mixin): |
@@ -476,11 +476,12 @@ types:
       }
   ProductSetProductPriceCustomFieldAction:
     (java-mixin): |
-      public static ProductSetProductPriceCustomFieldAction ofUnset(final Long variantId, final String priceId) {
+      public static ProductSetProductPriceCustomFieldAction ofUnset(final String name, final String priceId) {
           return ProductSetProductPriceCustomFieldActionBuilder.of().name(name).priceId(priceId).build();
       }
 
-      public static ProductSetProductPriceCustomFieldAction ofUnsetStaged(final Long variantId, final String priceId, @javax.annotation.Nullable final Boolean staged) {
+      public static ProductSetProductPriceCustomFieldAction ofUnsetStaged(final String name, final String priceId,
+              @javax.annotation.Nullable final Boolean staged) {
           return ProductSetProductPriceCustomFieldActionBuilder.of().name(name).priceId(priceId).staged(staged).build();
       }
   ProductSetAttributeAction:
@@ -655,7 +656,7 @@ types:
   QuoteRequestSetCustomFieldAction:
     (java-mixin): |
       public static QuoteRequestSetCustomFieldAction ofUnset(final String name) {
-          return QuoteRequestSetCustomFieldAction.of().name(name).build();
+          return QuoteRequestSetCustomFieldActionBuilder.of().name(name).build();
       }
   QuoteRequest:
     (java-extends): 'com.commercetools.api.models.WithKey'
@@ -1184,7 +1185,7 @@ types:
   CartSetBillingAddressCustomFieldAction:
     (java-mixin): |
       public static CartSetBillingAddressCustomFieldAction ofUnset(final String name) {
-          return CartSetBillingAddressCustomFieldAction.of().name(name).build();
+          return CartSetBillingAddressCustomFieldActionBuilder.of().name(name).build();
       }
   CartSetCustomLineItemCustomFieldAction:
     (java-mixin): |

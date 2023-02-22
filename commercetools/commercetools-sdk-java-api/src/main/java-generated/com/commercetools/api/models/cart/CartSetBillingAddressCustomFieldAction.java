@@ -75,7 +75,7 @@ public interface CartSetBillingAddressCustomFieldAction extends CartUpdateAction
     }
 
     public static CartSetBillingAddressCustomFieldAction ofUnset(final String name) {
-        return CartSetBillingAddressCustomFieldAction.of().name(name).build();
+        return CartSetBillingAddressCustomFieldActionBuilder.of().name(name).build();
     }
 
     public static com.fasterxml.jackson.core.type.TypeReference<CartSetBillingAddressCustomFieldAction> typeReference() {

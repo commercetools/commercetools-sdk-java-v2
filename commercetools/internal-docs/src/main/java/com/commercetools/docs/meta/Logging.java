@@ -114,6 +114,31 @@ import org.slf4j.event.Level;
  * [pool-1-thread-1] DEBUG commercetools.products.request.commands - io.vrap.rmf.base.client.ApiHttpRequest@1d2c6948[method=POST,uri="https://api.europe-west1.gcp.commercetools.com/test-php-dev-integration-1/products",headers=[...],textInterpretedBody={"productType":{"id":"cda39953-23af-4e85-abb0-5b89517ec5f2","typeId":"product-type"},"name":{"random-string-b66de021-d2fa-4262-8837-94a6992a8cdc":"random-string-da28a010-e66b-49d4-a18b-f1bfc145d2f6"},...}]
  * [pool-1-thread-1] DEBUG commercetools.products.request.queries - io.vrap.rmf.base.client.ApiHttpRequest@53667fdb[method=GET,uri="https://api.europe-west1.gcp.commercetools.com/test-php-dev-integration-1/products/ef745227-b115-4132-ba2c-4e46db80df79",headers=[...],textInterpretedBody=empty body]
  * }</pre>
+ *
+ * <h2 id=mdc_usage>Usage of Mapped Diagnostic Context</h2>
+ *
+ * <p>The SDK uses {@link java.util.concurrent.CompletableFuture CompletableFutures} extensively and the {@link java.util.concurrent.ExecutorService} typically has a thread pool
+ * to execute the futures. This could lead to the fact that the future is executed on different threads. In case the {@link org.slf4j.MDC} is used by the application the context
+ * could get lost while executing the futures. As the CompletableFutures don't allow attaching a Context you have to make them and the ExecutorService
+ * context aware so that they will restore the MDC before executing the future tasks.</p>
+ *
+ * <p>The SDK additionally supports the attachment of a {@link io.vrap.rmf.base.client.Context} to a client {@link io.vrap.rmf.base.client.ContextApiHttpClient},
+ * the {@link io.vrap.rmf.base.client.ApiHttpRequest} and the {@link io.vrap.rmf.base.client.ApiHttpResponse} by implementing the
+ * {@link io.vrap.rmf.base.client.ContextAware} interface</p>
+ *
+ * <p>The {@link com.commercetools.api.client.ProjectApiRoot} also allows to add a {@link io.vrap.rmf.base.client.Context} to it. This is useful
+ * to create a context aware root from a global instance when needed.</p>
+ *
+ * {@include.example example.ExamplesTest#mdcProjectApiRoot()}
+ *
+ * <p>The above example creates a {@link io.vrap.rmf.base.client.MDCContext} and take a copy of the MDC. The ApiHttpClient will be wrapped in a ContextApiHttpClient
+ * and set the context to all requests and responses executed.</p>
+ *
+ * <p>The {@link io.vrap.rmf.base.client.http.InternalLoggerMiddleware} will restore the MDC before logging and clean up afterwards to avoid
+ * pollution of threads with unrelated context data. The same applies for the {@link com.commercetools.api.client.ConcurrentModificationMiddleware}</p>
+ *
+ * <p>The usage of the {@link io.vrap.rmf.base.client.Context} object in the SDK allows further extensions to transport request related context data e.g.
+ * for telemetry purposes.</p>
  */
 public class Logging {
 }

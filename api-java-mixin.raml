@@ -252,8 +252,8 @@ types:
       }
   OrderSetCustomLineItemCustomFieldAction:
     (java-mixin): |
-      public static OrderSetLineItemCustomFieldAction ofUnset(final String name, final String customLineItemId) {
-          return OrderSetLineItemCustomFieldActionBuilder.of().name(name).customLineItemId(customLineItemId).build();
+      public static OrderSetCustomLineItemCustomFieldAction ofUnset(final String name, final String customLineItemId) {
+          return OrderSetCustomLineItemCustomFieldActionBuilder.of().name(name).customLineItemId(customLineItemId).build();
       }
   OrderSetDeliveryAddressCustomFieldAction:
     (java-mixin): |

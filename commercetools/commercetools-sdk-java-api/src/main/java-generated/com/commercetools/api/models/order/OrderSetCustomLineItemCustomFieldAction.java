@@ -85,8 +85,11 @@ public interface OrderSetCustomLineItemCustomFieldAction extends OrderUpdateActi
         return helper.apply(this);
     }
 
-    public static OrderSetLineItemCustomFieldAction ofUnset(final String name, final String customLineItemId) {
-        return OrderSetLineItemCustomFieldActionBuilder.of().name(name).customLineItemId(customLineItemId).build();
+    public static OrderSetCustomLineItemCustomFieldAction ofUnset(final String name, final String customLineItemId) {
+        return OrderSetCustomLineItemCustomFieldActionBuilder.of()
+                .name(name)
+                .customLineItemId(customLineItemId)
+                .build();
     }
 
     public static com.fasterxml.jackson.core.type.TypeReference<OrderSetCustomLineItemCustomFieldAction> typeReference() {

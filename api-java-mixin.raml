@@ -25,13 +25,7 @@ types:
   LocalizedString:
     (java-extends): 'com.commercetools.api.models.common.LocalizedStringUtil'
   ReplicaCartDraft:
-    (java-extends): 'com.commercetools.api.models.WithKey'
-    (java-mixin): |
-      @JsonIgnore
-      @Deprecated
-      public default void setReference(final Object reference) {
-          setReference((Reference)reference);
-      };
+    (java-extends): 'ReplicaCartDraftMixin, com.commercetools.api.models.WithKey'
     properties:
       reference:
         type: Reference
@@ -964,12 +958,10 @@ types:
   ZoneUpdateAction:
     (java-extends): 'com.commercetools.api.models.ResourceUpdateAction<ZoneUpdateAction>'
   CentPrecisionMoney:
+    (java-extends): 'CentPrecisionMoneyMixin'
     (java-mixin): |
       public static CentPrecisionMoney of(final javax.money.MonetaryAmount monetaryAmount) {
           return MoneyUtil.of(monetaryAmount);
-      }
-      public default CentPrecisionMoneyDraft toDraft() {
-          return CentPrecisionMoneyDraft.of(this);
       }
   CentPrecisionMoneyDraft:
     (java-mixin): |
@@ -984,18 +976,14 @@ types:
           return instance;
       }
   HighPrecisionMoney:
+    (java-extends): 'HighPrecisionMoneyMixin'
     (java-mixin): |
       public static HighPrecisionMoney of(final javax.money.MonetaryAmount monetaryAmount, final int fractionDigits) {
           return MoneyUtil.of(monetaryAmount, fractionDigits);
       }
-      public default HighPrecisionMoneyDraft toDraft() {
-          return HighPrecisionMoneyDraft.of(this);
-      }
-      @Override
-      default javax.money.MonetaryOperator createMoneyOperator() {
-          return amount -> MoneyUtil.of(amount, getFractionDigits());
-      }
+
   HighPrecisionMoneyDraft:
+    (java-extends): 'HighPrecisionMoneyDraftMixin'
     (java-mixin): |
       public static HighPrecisionMoneyDraft of(javax.money.MonetaryAmount monetaryAmount, final int fractionDigits) {
           return MoneyUtil.draftOf(monetaryAmount, fractionDigits);
@@ -1008,34 +996,10 @@ types:
           instance.setPreciseAmount(template.getPreciseAmount());
           return instance;
       }
-      @Override
-      default javax.money.MonetaryOperator createMoneyOperator() {
-          return amount -> MoneyUtil.draftOf(amount, getFractionDigits());
-      }
   TypedMoney:
-    (java-mixin): |
-      @Override
-      default javax.money.MonetaryOperator createMoneyOperator() {
-          return MoneyUtil::of;
-      }
+    (java-extends): 'TypedMoneyMixin'
   TypedMoneyDraft:
-    (java-mixin): |
-      @Override
-      default javax.money.MonetaryOperator createMoneyOperator() {
-          return MoneyUtil::draftOf;
-      }
-  Money:
-    (java-extends): 'com.commercetools.api.models.common.MonetaryAmountConvertable'
-    (java-mixin): |
-      public default TypedMoneyDraft toDraft() {
-          if (this instanceof TypedMoneyDraft) {
-              return (TypedMoneyDraft) this;
-          }
-          return TypedMoneyDraft.centPrecisionBuilder()
-                  .centAmount(this.getCentAmount())
-                  .currencyCode(this.getCurrencyCode())
-                  .build();
-      }
+    (java-extends): 'TypedMoneyDraftMixin'
   Reference:
     (java-extends): 'ReferenceMixin'
   KeyReference:
@@ -1043,12 +1007,7 @@ types:
   ResourceIdentifier:
     (java-extends): 'com.commercetools.api.models.WithKey'
   TypeReference:
-    (java-extends): com.commercetools.api.models.Identifiable<Type>
-    (java-mixin): |
-      @Override
-      public default TypeResourceIdentifier toResourceIdentifier() {
-          return TypeResourceIdentifier.builder().id(this.getId()).build();
-      }
+    (java-extends): 'TypeReferenceMixin'
   CustomFields:
     (java-extends): 'CustomFieldsMixin'
   CustomFieldsDraft:
@@ -1061,19 +1020,7 @@ types:
           return template.toDraftBuilder();
       }
   Parcel:
-    (java-extends): 'com.commercetools.api.models.Customizable<Parcel>'
-    (java-mixin): |
-      public default ParcelDraftBuilder toDraftBuilder() {
-          return ParcelDraft.builder()
-                  .measurements(this.getMeasurements())
-                  .trackingData(this.getTrackingData())
-                  .items(this.getItems())
-                  .custom(this.getCustom().toDraft());
-      }
-
-      public default ParcelDraft toDraft() {
-          return toDraftBuilder().build();
-      }
+    (java-extends): 'ParcelMixin'
   ParcelDraft:
     (java-extends): 'com.commercetools.api.models.CustomizableDraft<ParcelDraft>'
   ReturnItem:
@@ -1081,19 +1028,7 @@ types:
   ReturnItemDraft:
     (java-extends): 'com.commercetools.api.models.CustomizableDraft<ReturnItemDraft>'
   Delivery:
-    (java-extends): 'com.commercetools.api.models.Customizable<Delivery>'
-    (java-mixin): |
-      public default DeliveryDraftBuilder toDraftBuilder() {
-          return DeliveryDraft.builder()
-                  .address(this.getAddress().toDraft())
-                  .items(this.getItems())
-                  .parcels(this.getParcels().stream().map(Parcel::toDraft).collect(java.util.stream.Collectors.toList()))
-                  .custom(this.getCustom().toDraft());
-      }
-
-      public default DeliveryDraft toDraft() {
-          return toDraftBuilder().build();
-      }
+    (java-extends): 'DeliveryMixin'
   DeliveryDraft:
     (java-extends): 'com.commercetools.api.models.CustomizableDraft<DeliveryDraft>'
   ApiClientPagedQueryResponse:
@@ -1107,7 +1042,7 @@ types:
   AttributeGroupReference:
     (java-extends): 'com.commercetools.api.models.Identifiable<AttributeGroup>'
   AttributeGroupResourceIdentifier:
-    (java-extends): com.commercetools.api.models.Identifiable<AttributeGroup>
+    (java-extends): 'com.commercetools.api.models.Identifiable<AttributeGroup>'
   AttributeGroupPagedQueryResponse:
     (java-extends): 'com.commercetools.api.models.ResourcePagedQueryResponse<AttributeGroup>'
   AttributeGroupUpdate:
@@ -1127,9 +1062,9 @@ types:
   BusinessUnitPagedQueryResponse:
     (java-extends): 'com.commercetools.api.models.ResourcePagedQueryResponse<BusinessUnit>'
   BusinessUnitReference:
-    (java-extends): com.commercetools.api.models.Identifiable<BusinessUnit>
+    (java-extends): 'com.commercetools.api.models.Identifiable<BusinessUnit>'
   BusinessUnitResourceIdentifier:
-    (java-extends): com.commercetools.api.models.Identifiable<BusinessUnit>
+    (java-extends): 'com.commercetools.api.models.Identifiable<BusinessUnit>'
   BusinessUnitUpdate:
     (java-extends): 'com.commercetools.api.models.ResourceUpdate<  BusinessUnitUpdate,
       BusinessUnitUpdateAction, BusinessUnitUpdateBuilder>'

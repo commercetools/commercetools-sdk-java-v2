@@ -29,7 +29,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CentPrecisionMoneyImpl.class)
-public interface CentPrecisionMoney extends TypedMoney {
+public interface CentPrecisionMoney extends TypedMoney, CentPrecisionMoneyMixin {
 
     String CENT_PRECISION = "centPrecision";
 
@@ -68,10 +68,6 @@ public interface CentPrecisionMoney extends TypedMoney {
 
     public static CentPrecisionMoney of(final javax.money.MonetaryAmount monetaryAmount) {
         return MoneyUtil.of(monetaryAmount);
-    }
-
-    public default CentPrecisionMoneyDraft toDraft() {
-        return CentPrecisionMoneyDraft.of(this);
     }
 
     public static com.fasterxml.jackson.core.type.TypeReference<CentPrecisionMoney> typeReference() {

@@ -29,7 +29,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = TypeReferenceImpl.class)
-public interface TypeReference extends Reference, com.commercetools.api.models.Identifiable<Type> {
+public interface TypeReference extends Reference, TypeReferenceMixin {
 
     String TYPE = "type";
 
@@ -72,11 +72,6 @@ public interface TypeReference extends Reference, com.commercetools.api.models.I
 
     default <T> T withTypeReference(Function<TypeReference, T> helper) {
         return helper.apply(this);
-    }
-
-    @Override
-    public default TypeResourceIdentifier toResourceIdentifier() {
-        return TypeResourceIdentifier.builder().id(this.getId()).build();
     }
 
     public static com.fasterxml.jackson.core.type.TypeReference<TypeReference> typeReference() {

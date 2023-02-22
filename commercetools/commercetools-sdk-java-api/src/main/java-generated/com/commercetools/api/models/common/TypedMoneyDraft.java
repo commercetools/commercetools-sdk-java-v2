@@ -30,7 +30,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "type", defaultImpl = TypedMoneyDraftImpl.class, visible = true)
 @JsonDeserialize(as = TypedMoneyDraftImpl.class)
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-public interface TypedMoneyDraft extends Money {
+public interface TypedMoneyDraft extends Money, TypedMoneyDraftMixin {
 
     /**
      *
@@ -58,11 +58,6 @@ public interface TypedMoneyDraft extends Money {
 
     default <T> T withTypedMoneyDraft(Function<TypedMoneyDraft, T> helper) {
         return helper.apply(this);
-    }
-
-    @Override
-    default javax.money.MonetaryOperator createMoneyOperator() {
-        return MoneyUtil::draftOf;
     }
 
     public static com.fasterxml.jackson.core.type.TypeReference<TypedMoneyDraft> typeReference() {

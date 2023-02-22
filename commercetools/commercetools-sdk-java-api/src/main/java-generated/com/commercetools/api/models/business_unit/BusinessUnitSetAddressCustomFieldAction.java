@@ -85,6 +85,10 @@ public interface BusinessUnitSetAddressCustomFieldAction extends BusinessUnitUpd
         return helper.apply(this);
     }
 
+    public static BusinessUnitSetAddressCustomFieldAction ofUnset(final String name) {
+        return BusinessUnitSetAddressCustomFieldActionBuilder.of().name(name).build();
+    }
+
     public static com.fasterxml.jackson.core.type.TypeReference<BusinessUnitSetAddressCustomFieldAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<BusinessUnitSetAddressCustomFieldAction>() {
             @Override

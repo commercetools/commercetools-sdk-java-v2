@@ -102,8 +102,9 @@ public interface ProductSetImageLabelAction extends ProductUpdateAction {
         return helper.apply(this);
     }
 
-    public static ProductSetImageLabelAction ofUnset() {
-        return new ProductSetImageLabelActionImpl();
+    public static ProductSetImageLabelAction ofUnset(final Long variantId, final String imageUrl,
+            @javax.annotation.Nullable final Boolean staged) {
+        return new ProductSetImageLabelActionImpl(null, variantId, imageUrl, null, staged);
     }
 
     public static ProductSetImageLabelAction ofUnsetStaged(final Long variantId, final String imageUrl) {

@@ -76,6 +76,10 @@ public interface StagedOrderSetBillingAddressCustomFieldAction extends StagedOrd
         return helper.apply(this);
     }
 
+    public static StagedOrderSetBillingAddressCustomFieldAction ofUnset(final String name) {
+        return StagedOrderSetBillingAddressCustomFieldAction.of().name(name).build();
+    }
+
     public static com.fasterxml.jackson.core.type.TypeReference<StagedOrderSetBillingAddressCustomFieldAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<StagedOrderSetBillingAddressCustomFieldAction>() {
             @Override

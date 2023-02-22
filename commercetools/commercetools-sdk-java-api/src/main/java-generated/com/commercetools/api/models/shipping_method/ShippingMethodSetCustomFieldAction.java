@@ -72,6 +72,10 @@ public interface ShippingMethodSetCustomFieldAction extends ShippingMethodUpdate
         return helper.apply(this);
     }
 
+    public static ShippingMethodSetCustomFieldAction ofUnset(final String name) {
+        return ShippingMethodSetCustomFieldActionBuilder.of().name(name).build();
+    }
+
     public static com.fasterxml.jackson.core.type.TypeReference<ShippingMethodSetCustomFieldAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ShippingMethodSetCustomFieldAction>() {
             @Override

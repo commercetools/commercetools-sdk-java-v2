@@ -74,6 +74,10 @@ public interface OrderSetBillingAddressCustomFieldAction extends OrderUpdateActi
         return helper.apply(this);
     }
 
+    public static OrderSetBillingAddressCustomFieldAction ofUnset(final String name) {
+        return OrderSetBillingAddressCustomFieldAction.of().name(name).build();
+    }
+
     public static com.fasterxml.jackson.core.type.TypeReference<OrderSetBillingAddressCustomFieldAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<OrderSetBillingAddressCustomFieldAction>() {
             @Override

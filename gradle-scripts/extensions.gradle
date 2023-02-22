@@ -1,15 +1,15 @@
 ext {
     versions = [
-            jackson: "2.13.4",
+            jackson: "2.14.1",
     ]
 
     ctsdkv1 = [
-            client: 'com.commercetools.sdk.jvm.core:commercetools-java-client-core:2.9.0',
-            models: 'com.commercetools.sdk.jvm.core:commercetools-models:2.9.0',
-            convenience: 'com.commercetools.sdk.jvm.core:commercetools-convenience:2.9.0',
+            client: 'com.commercetools.sdk.jvm.core:commercetools-java-client-core:2.14.0',
+            models: 'com.commercetools.sdk.jvm.core:commercetools-models:2.14.0',
+            convenience: 'com.commercetools.sdk.jvm.core:commercetools-convenience:2.14.0',
             version: {
                 strictly '[1.62.0,)'
-                prefer '2.9.0'
+                prefer '2.14.0'
             }
     ]
 
@@ -51,15 +51,15 @@ ext {
     ]
 
     junit = [
-            junit: 'org.junit.jupiter:junit-jupiter:5.8.2',
-            dataprovider: 'com.tngtech.junit.dataprovider:junit-jupiter-dataprovider:2.9',
+            junit: 'org.junit.jupiter:junit-jupiter:5.9.1',
+            dataprovider: 'com.tngtech.junit.dataprovider:junit-jupiter-dataprovider:2.10',
             jsonassert: 'org.skyscreamer:jsonassert:1.5.1',
             assertj: 'org.assertj:assertj-core:3.23.1'
     ]
 
     mockito = [
-            inline: 'org.mockito:mockito-inline:4.6.1',
-            junit: 'org.mockito:mockito-junit-jupiter:4.6.1',
+            inline: 'org.mockito:mockito-inline:4.9.0',
+            junit: 'org.mockito:mockito-junit-jupiter:4.9.0',
     ]
 
     failsafe = [

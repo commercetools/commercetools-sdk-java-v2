@@ -112,42 +112,40 @@ public interface ProductSetAttributeAction extends ProductUpdateAction {
     }
 
     public static ProductSetAttributeAction ofVariantId(final Long variantId, final String name,
-            @javax.annotation.Nullable final com.fasterxml.jackson.databind.JsonNode value,
-            @javax.annotation.Nullable final Boolean staged) {
-        return ProductSetAttributeActionBuilder.of().variantId(variantId).staged(staged).build();
+            final com.fasterxml.jackson.databind.JsonNode value, final Boolean staged) {
+        return ProductSetAttributeActionBuilder.of()
+                .variantId(variantId)
+                .name(name)
+                .value(value)
+                .staged(staged)
+                .build();
     }
 
     public static ProductSetAttributeAction ofSku(final String sku, final String name,
-            @javax.annotation.Nullable final com.fasterxml.jackson.databind.JsonNode value,
-            @javax.annotation.Nullable final Boolean staged) {
+            final com.fasterxml.jackson.databind.JsonNode value, final Boolean staged) {
         return ProductSetAttributeActionBuilder.of().sku(sku).name(name).value(value).staged(staged).build();
     }
 
     public static ProductSetAttributeAction ofUnsetAttribute(final Long variantId, final String name) {
-        return ofUnsetAttribute(variantId, name, null);
+        return ProductSetAttributeActionBuilder.of().variantId(variantId).name(name).build();
     }
 
     public static ProductSetAttributeAction ofUnsetAttribute(final Long variantId, final String name,
             @javax.annotation.Nullable final Boolean staged) {
-        return ofVariantId(variantId, name, null, staged);
+        return ProductSetAttributeActionBuilder.of().variantId(variantId).name(name).staged(staged).build();
     }
 
     public static ProductSetAttributeAction ofUnsetAttributeForVariantId(final Long variantId, final String name) {
-        return ofUnsetAttributeForVariantId(variantId, name, null);
-    }
-
-    public static ProductSetAttributeAction ofUnsetAttributeForVariantId(final Long variantId, final String name,
-            @javax.annotation.Nullable final Boolean staged) {
-        return ofVariantId(variantId, name, null, staged);
+        return ProductSetAttributeActionBuilder.of().variantId(variantId).name(name).build();
     }
 
     public static ProductSetAttributeAction ofUnsetAttributeForSku(final String sku, final String name) {
-        return ofUnsetAttributeForSku(sku, name, null);
+        return ProductSetAttributeActionBuilder.of().sku(sku).name(name).build();
     }
 
     public static ProductSetAttributeAction ofUnsetAttributeForSku(final String sku, final String name,
-            @javax.annotation.Nullable final Boolean staged) {
-        return ofSku(sku, name, null, staged);
+            final Boolean staged) {
+        return ProductSetAttributeActionBuilder.of().sku(sku).name(name).staged(staged).build();
     }
 
     public static com.fasterxml.jackson.core.type.TypeReference<ProductSetAttributeAction> typeReference() {

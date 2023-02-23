@@ -486,36 +486,32 @@ types:
       }
   ProductSetAttributeAction:
     (java-mixin): |
-      public static ProductSetAttributeAction ofVariantId(final Long variantId, final String name, @javax.annotation.Nullable final com.fasterxml.jackson.databind.JsonNode value, @javax.annotation.Nullable final Boolean staged) {
-          return ProductSetAttributeActionBuilder.of().variantId(variantId).staged(staged).build();
+      public static ProductSetAttributeAction ofVariantId(final Long variantId, final String name, final com.fasterxml.jackson.databind.JsonNode value, final Boolean staged) {
+          return ProductSetAttributeActionBuilder.of().variantId(variantId).name(name).value(value).staged(staged).build();
       }
 
-      public static ProductSetAttributeAction ofSku(final String sku, final String name, @javax.annotation.Nullable final com.fasterxml.jackson.databind.JsonNode value, @javax.annotation.Nullable final Boolean staged) {
+      public static ProductSetAttributeAction ofSku(final String sku, final String name, final com.fasterxml.jackson.databind.JsonNode value, final Boolean staged) {
           return ProductSetAttributeActionBuilder.of().sku(sku).name(name).value(value).staged(staged).build();
       }
 
       public static ProductSetAttributeAction ofUnsetAttribute(final Long variantId, final String name) {
-          return ofUnsetAttribute(variantId, name, null);
+          return ProductSetAttributeActionBuilder.of().variantId(variantId).name(name).build();
       }
 
       public static ProductSetAttributeAction ofUnsetAttribute(final Long variantId, final String name, @javax.annotation.Nullable final Boolean staged) {
-          return ofVariantId(variantId, name, null, staged);
+          return ProductSetAttributeActionBuilder.of().variantId(variantId).name(name).staged(staged).build();
       }
 
       public static ProductSetAttributeAction ofUnsetAttributeForVariantId(final Long variantId, final String name) {
-          return ofUnsetAttributeForVariantId(variantId, name, null);
-      }
-
-      public static ProductSetAttributeAction ofUnsetAttributeForVariantId(final Long variantId, final String name, @javax.annotation.Nullable final Boolean staged) {
-          return ofVariantId(variantId, name, null, staged);
+          return ProductSetAttributeActionBuilder.of().variantId(variantId).name(name).build();
       }
 
       public static ProductSetAttributeAction ofUnsetAttributeForSku(final String sku, final String name) {
-          return ofUnsetAttributeForSku(sku, name, null);
+          return ProductSetAttributeActionBuilder.of().sku(sku).name(name).build();
       }
 
-      public static ProductSetAttributeAction ofUnsetAttributeForSku(final String sku, final String name, @javax.annotation.Nullable final Boolean staged) {
-          return ofSku(sku, name, null, staged);
+      public static ProductSetAttributeAction ofUnsetAttributeForSku(final String sku, final String name, final Boolean staged) {
+          return ProductSetAttributeActionBuilder.of().sku(sku).name(name).staged(staged).build();
       }
   ProductSetAttributeInAllVariantsAction:
     (java-mixin): |
@@ -964,10 +960,13 @@ types:
   ZoneUpdateAction:
     (java-extends): 'com.commercetools.api.models.ResourceUpdateAction<ZoneUpdateAction>'
   CentPrecisionMoney:
-    (java-extends): 'CentPrecisionMoneyMixin'
     (java-mixin): |
       public static CentPrecisionMoney of(final javax.money.MonetaryAmount monetaryAmount) {
           return MoneyUtil.of(monetaryAmount);
+      }
+
+      public default CentPrecisionMoneyDraft toDraft() {
+          return CentPrecisionMoneyDraft.of(this);
       }
   CentPrecisionMoneyDraft:
     (java-mixin): |

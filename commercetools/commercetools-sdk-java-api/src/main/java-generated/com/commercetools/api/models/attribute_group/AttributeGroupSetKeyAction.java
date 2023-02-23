@@ -60,7 +60,7 @@ public interface AttributeGroupSetKeyAction extends AttributeGroupUpdateAction {
     }
 
     public static AttributeGroupSetKeyAction ofUnset() {
-        return new AttributeGroupSetKeyActionImpl(null);
+        return AttributeGroupSetKeyAction.of();
     }
 
     public static com.fasterxml.jackson.core.type.TypeReference<AttributeGroupSetKeyAction> typeReference() {

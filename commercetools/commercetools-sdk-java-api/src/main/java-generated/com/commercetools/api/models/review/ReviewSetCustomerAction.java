@@ -63,7 +63,7 @@ public interface ReviewSetCustomerAction extends ReviewUpdateAction {
     }
 
     public static ReviewSetCustomerAction ofUnset() {
-        return new ReviewSetCustomerActionImpl(null);
+        return ReviewSetCustomerAction.of();
     }
 
     public static com.fasterxml.jackson.core.type.TypeReference<ReviewSetCustomerAction> typeReference() {

@@ -99,7 +99,7 @@ public interface ProductSetAttributeInAllVariantsAction extends ProductUpdateAct
 
     public static ProductSetAttributeInAllVariantsAction ofUnsetAttribute(final String name,
             @javax.annotation.Nullable final Boolean staged) {
-        return new ProductSetAttributeInAllVariantsActionImpl(name, null, staged);
+        return ProductSetAttributeInAllVariantsActionBuilder.of().name(name).staged(staged).build();
     }
 
     public static com.fasterxml.jackson.core.type.TypeReference<ProductSetAttributeInAllVariantsAction> typeReference() {

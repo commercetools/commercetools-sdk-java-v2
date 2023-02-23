@@ -63,7 +63,7 @@ public interface ProductSetTaxCategoryAction extends ProductUpdateAction {
     }
 
     public static ProductSetTaxCategoryAction ofUnset() {
-        return new ProductSetTaxCategoryActionImpl(null);
+        return ProductSetTaxCategoryAction.of();
     }
 
     public static com.fasterxml.jackson.core.type.TypeReference<ProductSetTaxCategoryAction> typeReference() {

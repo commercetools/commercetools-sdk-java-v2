@@ -62,7 +62,7 @@ public interface CartSetShippingRateInputAction extends CartUpdateAction {
     }
 
     public static CartSetShippingRateInputAction ofUnset() {
-        return new CartSetShippingRateInputActionImpl(null);
+        return CartSetShippingRateInputAction.of();
     }
 
     public static com.fasterxml.jackson.core.type.TypeReference<CartSetShippingRateInputAction> typeReference() {

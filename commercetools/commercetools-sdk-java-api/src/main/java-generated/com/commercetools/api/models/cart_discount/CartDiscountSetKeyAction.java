@@ -60,7 +60,7 @@ public interface CartDiscountSetKeyAction extends CartDiscountUpdateAction {
     }
 
     public static CartDiscountSetKeyAction ofUnset() {
-        return new CartDiscountSetKeyActionImpl(null);
+        return CartDiscountSetKeyAction.of();
     }
 
     public static com.fasterxml.jackson.core.type.TypeReference<CartDiscountSetKeyAction> typeReference() {

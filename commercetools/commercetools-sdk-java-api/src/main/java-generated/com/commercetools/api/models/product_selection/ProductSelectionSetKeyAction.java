@@ -60,7 +60,7 @@ public interface ProductSelectionSetKeyAction extends ProductSelectionUpdateActi
     }
 
     public static ProductSelectionSetKeyAction ofUnset() {
-        return new ProductSelectionSetKeyActionImpl(null);
+        return ProductSelectionSetKeyAction.of();
     }
 
     public static com.fasterxml.jackson.core.type.TypeReference<ProductSelectionSetKeyAction> typeReference() {

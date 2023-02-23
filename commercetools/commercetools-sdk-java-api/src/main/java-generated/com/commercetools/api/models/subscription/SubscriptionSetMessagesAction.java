@@ -65,7 +65,7 @@ public interface SubscriptionSetMessagesAction extends SubscriptionUpdateAction 
     }
 
     public static SubscriptionSetMessagesAction ofUnset() {
-        return new SubscriptionSetMessagesActionImpl(null);
+        return SubscriptionSetMessagesAction.of();
     }
 
     public static com.fasterxml.jackson.core.type.TypeReference<SubscriptionSetMessagesAction> typeReference() {

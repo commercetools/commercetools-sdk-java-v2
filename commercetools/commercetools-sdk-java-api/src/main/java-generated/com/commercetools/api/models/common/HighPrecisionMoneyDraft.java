@@ -30,7 +30,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = HighPrecisionMoneyDraftImpl.class)
 public interface HighPrecisionMoneyDraft
-        extends TypedMoneyDraft, HighPrecisionMoneyDraftMixin, io.vrap.rmf.base.client.Draft<HighPrecisionMoneyDraft> {
+        extends TypedMoneyDraft, io.vrap.rmf.base.client.Draft<HighPrecisionMoneyDraft> {
 
     String HIGH_PRECISION = "highPrecision";
 
@@ -99,6 +99,11 @@ public interface HighPrecisionMoneyDraft
         instance.setFractionDigits(template.getFractionDigits());
         instance.setPreciseAmount(template.getPreciseAmount());
         return instance;
+    }
+
+    @Override
+    default javax.money.MonetaryOperator createMoneyOperator() {
+        return amount -> MoneyUtil.draftOf(amount, getFractionDigits());
     }
 
     public static com.fasterxml.jackson.core.type.TypeReference<HighPrecisionMoneyDraft> typeReference() {

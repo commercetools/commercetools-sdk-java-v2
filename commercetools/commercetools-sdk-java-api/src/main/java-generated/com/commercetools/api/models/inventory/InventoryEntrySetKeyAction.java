@@ -60,7 +60,7 @@ public interface InventoryEntrySetKeyAction extends InventoryEntryUpdateAction {
     }
 
     public static InventoryEntrySetKeyAction ofUnset() {
-        return new InventoryEntrySetKeyActionImpl(null);
+        return InventoryEntrySetKeyAction.of();
     }
 
     public static com.fasterxml.jackson.core.type.TypeReference<InventoryEntrySetKeyAction> typeReference() {

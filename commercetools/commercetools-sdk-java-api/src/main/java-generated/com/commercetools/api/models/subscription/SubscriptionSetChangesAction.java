@@ -65,7 +65,7 @@ public interface SubscriptionSetChangesAction extends SubscriptionUpdateAction {
     }
 
     public static SubscriptionSetChangesAction ofUnset() {
-        return new SubscriptionSetChangesActionImpl(null);
+        return SubscriptionSetChangesAction.of();
     }
 
     public static com.fasterxml.jackson.core.type.TypeReference<SubscriptionSetChangesAction> typeReference() {

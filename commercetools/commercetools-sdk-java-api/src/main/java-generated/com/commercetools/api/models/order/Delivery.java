@@ -34,7 +34,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = DeliveryImpl.class)
-public interface Delivery extends DeliveryMixin {
+public interface Delivery extends DeliveryMixin, com.commercetools.api.models.Customizable<Delivery> {
 
     /**
      *  <p>Unique identifier of the Delivery.</p>

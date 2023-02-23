@@ -29,8 +29,8 @@ import io.vrap.rmf.base.client.utils.Generated;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ReplicaCartDraftImpl.class)
-public interface ReplicaCartDraft extends ReplicaCartDraftMixin, com.commercetools.api.models.WithKey,
-        io.vrap.rmf.base.client.Draft<ReplicaCartDraft> {
+public interface ReplicaCartDraft
+        extends com.commercetools.api.models.WithKey, io.vrap.rmf.base.client.Draft<ReplicaCartDraft> {
 
     /**
      *  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
@@ -73,6 +73,12 @@ public interface ReplicaCartDraft extends ReplicaCartDraftMixin, com.commercetoo
     default <T> T withReplicaCartDraft(Function<ReplicaCartDraft, T> helper) {
         return helper.apply(this);
     }
+
+    @JsonIgnore
+    @Deprecated
+    public default void setReference(final Object reference) {
+        setReference((Reference) reference);
+    };
 
     public static com.fasterxml.jackson.core.type.TypeReference<ReplicaCartDraft> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ReplicaCartDraft>() {

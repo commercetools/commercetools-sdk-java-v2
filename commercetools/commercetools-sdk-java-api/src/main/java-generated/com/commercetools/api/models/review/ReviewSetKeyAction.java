@@ -60,7 +60,7 @@ public interface ReviewSetKeyAction extends ReviewUpdateAction {
     }
 
     public static ReviewSetKeyAction ofUnset() {
-        return new ReviewSetKeyActionImpl(null);
+        return ReviewSetKeyAction.of();
     }
 
     public static com.fasterxml.jackson.core.type.TypeReference<ReviewSetKeyAction> typeReference() {

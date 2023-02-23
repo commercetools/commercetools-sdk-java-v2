@@ -60,7 +60,7 @@ public interface PaymentSetKeyAction extends PaymentUpdateAction {
     }
 
     public static PaymentSetKeyAction ofUnset() {
-        return new PaymentSetKeyActionImpl(null);
+        return PaymentSetKeyAction.of();
     }
 
     public static com.fasterxml.jackson.core.type.TypeReference<PaymentSetKeyAction> typeReference() {

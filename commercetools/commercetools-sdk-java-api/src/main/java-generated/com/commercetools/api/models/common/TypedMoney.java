@@ -33,7 +33,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "type", defaultImpl = TypedMoneyImpl.class, visible = true)
 @JsonDeserialize(as = TypedMoneyImpl.class)
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-public interface TypedMoney extends Money, TypedMoneyMixin {
+public interface TypedMoney extends Money {
 
     /**
      *  <p>MoneyType supports two different values, one for amounts in cent precision and another one for sub-cent amounts up to 20 fraction digits.</p>
@@ -65,6 +65,11 @@ public interface TypedMoney extends Money, TypedMoneyMixin {
 
     default <T> T withTypedMoney(Function<TypedMoney, T> helper) {
         return helper.apply(this);
+    }
+
+    @Override
+    default javax.money.MonetaryOperator createMoneyOperator() {
+        return MoneyUtil::of;
     }
 
     public static com.fasterxml.jackson.core.type.TypeReference<TypedMoney> typeReference() {

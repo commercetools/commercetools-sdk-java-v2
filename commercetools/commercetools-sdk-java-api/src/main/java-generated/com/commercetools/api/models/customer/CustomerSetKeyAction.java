@@ -60,7 +60,7 @@ public interface CustomerSetKeyAction extends CustomerUpdateAction {
     }
 
     public static CustomerSetKeyAction ofUnset() {
-        return new CustomerSetKeyActionImpl(null);
+        return CustomerSetKeyAction.of();
     }
 
     public static com.fasterxml.jackson.core.type.TypeReference<CustomerSetKeyAction> typeReference() {

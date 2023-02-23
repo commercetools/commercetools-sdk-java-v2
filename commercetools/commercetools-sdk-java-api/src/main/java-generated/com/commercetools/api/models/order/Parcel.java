@@ -31,7 +31,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ParcelImpl.class)
-public interface Parcel extends ParcelMixin {
+public interface Parcel extends ParcelMixin, com.commercetools.api.models.Customizable<Parcel> {
 
     /**
      *  <p>Unique identifier of the Parcel.</p>

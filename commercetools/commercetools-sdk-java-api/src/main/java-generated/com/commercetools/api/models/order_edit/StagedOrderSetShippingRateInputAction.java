@@ -65,7 +65,7 @@ public interface StagedOrderSetShippingRateInputAction extends StagedOrderUpdate
     }
 
     public static StagedOrderSetShippingRateInputAction ofUnset() {
-        return new StagedOrderSetShippingRateInputActionImpl(null);
+        return StagedOrderSetShippingRateInputAction.of();
     }
 
     public static com.fasterxml.jackson.core.type.TypeReference<StagedOrderSetShippingRateInputAction> typeReference() {

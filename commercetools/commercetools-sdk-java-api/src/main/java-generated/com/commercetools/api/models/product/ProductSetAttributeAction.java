@@ -114,13 +114,13 @@ public interface ProductSetAttributeAction extends ProductUpdateAction {
     public static ProductSetAttributeAction ofVariantId(final Long variantId, final String name,
             @javax.annotation.Nullable final com.fasterxml.jackson.databind.JsonNode value,
             @javax.annotation.Nullable final Boolean staged) {
-        return new ProductSetAttributeActionImpl(variantId, null, name, value, staged);
+        return ProductSetAttributeActionBuilder.of().variantId(variantId).staged(staged).build();
     }
 
     public static ProductSetAttributeAction ofSku(final String sku, final String name,
             @javax.annotation.Nullable final com.fasterxml.jackson.databind.JsonNode value,
             @javax.annotation.Nullable final Boolean staged) {
-        return new ProductSetAttributeActionImpl(null, sku, name, value, staged);
+        return ProductSetAttributeActionBuilder.of().sku(sku).name(name).value(value).staged(staged).build();
     }
 
     public static ProductSetAttributeAction ofUnsetAttribute(final Long variantId, final String name) {

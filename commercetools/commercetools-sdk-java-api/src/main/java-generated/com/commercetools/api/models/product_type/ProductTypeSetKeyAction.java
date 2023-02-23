@@ -60,7 +60,7 @@ public interface ProductTypeSetKeyAction extends ProductTypeUpdateAction {
     }
 
     public static ProductTypeSetKeyAction ofUnset() {
-        return new ProductTypeSetKeyActionImpl(null);
+        return ProductTypeSetKeyAction.of();
     }
 
     public static com.fasterxml.jackson.core.type.TypeReference<ProductTypeSetKeyAction> typeReference() {

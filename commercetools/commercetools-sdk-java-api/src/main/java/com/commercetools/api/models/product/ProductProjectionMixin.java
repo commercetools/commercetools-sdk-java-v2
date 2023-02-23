@@ -11,9 +11,6 @@ import javax.annotation.Nullable;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 public interface ProductProjectionMixin {
-
-    String getId();
-
     ProductVariant getMasterVariant();
 
     List<ProductVariant> getVariants();

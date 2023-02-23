@@ -173,7 +173,7 @@ types:
   ExtensionSetKeyAction:
     (java-mixin): |
       public static ExtensionSetKeyAction ofUnset() {
-          return new ExtensionSetKeyActionImpl(null);
+          return ExtensionSetKeyAction.of();
       }
   InventoryEntry:
     (java-extends): 'InventoryEntryMixin, com.commercetools.api.models.DomainResource<InventoryEntry>, com.commercetools.api.models.Referencable<InventoryEntry>, com.commercetools.api.models.ResourceIdentifiable<InventoryEntry>, com.commercetools.api.models.Customizable<InventoryEntry>, com.commercetools.api.models.WithKey'

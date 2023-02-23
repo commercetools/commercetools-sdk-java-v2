@@ -427,11 +427,11 @@ types:
   ProductDraft:
     (java-extends): 'com.commercetools.api.models.WithKey'
   ProductData:
-    (java-extends): 'ProductDataLike'
+    (java-extends): 'ProductDataLike, ProductProjectionMixin'
   ProductPagedQueryResponse:
     (java-extends): 'com.commercetools.api.models.ResourcePagedQueryResponse<Product>'
   ProductProjection:
-    (java-extends): 'ProductDataLike, ProductProjectionMixin,
+    (java-extends): 'ProductProjectionMixin,
       com.commercetools.api.models.DomainResource<ProductProjection>, com.commercetools.api.models.WithKey'
   ProductVariant:
     (java-extends): 'com.commercetools.api.models.WithKey'

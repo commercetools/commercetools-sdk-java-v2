@@ -45,7 +45,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProductProjectionImpl.class)
-public interface ProductProjection extends BaseResource, ProductDataLike, ProductProjectionMixin,
+public interface ProductProjection extends BaseResource, ProductProjectionMixin,
         com.commercetools.api.models.DomainResource<ProductProjection>, com.commercetools.api.models.WithKey {
 
     /**

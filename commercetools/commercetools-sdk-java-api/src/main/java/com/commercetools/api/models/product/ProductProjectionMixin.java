@@ -6,13 +6,47 @@ import java.util.Objects;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
+import javax.annotation.Nullable;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 public interface ProductProjectionMixin {
 
     String getId();
 
-    ProductVariant getVariant(final long variantId);
+    ProductVariant getMasterVariant();
 
-    List<ProductVariant> getAllVariants();
+    List<ProductVariant> getVariants();
+
+    /**
+     * Finds a product variant by id.
+     *
+     * @param variantId the id of the variant to find
+     * @return variant or null if no variant exists with {@code id}
+     */
+    @Nullable
+    default ProductVariant getVariant(final long variantId) {
+        final ProductVariant result;
+        if (variantId == getMasterVariant().getId()) {
+            result = getMasterVariant();
+        }
+        else {
+            result = getVariants().stream().filter(v -> v.getId() == variantId).findFirst().orElse(null);
+        }
+        return result;
+    }
+
+    /**
+     * Gets all variants in the product including the master variant as first element in the list.
+     *
+     * @see #getMasterVariant()
+     * @see #getVariants()
+     * @return all variants
+     */
+    @JsonIgnore
+    default List<ProductVariant> getAllVariants() {
+        return ProductsPackage.getAllVariants(this);
+    }
 
     default Optional<ProductVariant> findVariant(final ByIdVariantIdentifier identifier) {
         return getId().equals(identifier.getProductId()) ? Optional.ofNullable(getVariant(identifier.getVariantId()))

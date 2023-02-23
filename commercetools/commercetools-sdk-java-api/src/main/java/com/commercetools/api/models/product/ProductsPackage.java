@@ -14,7 +14,7 @@ final class ProductsPackage {
     private ProductsPackage() {
     }
 
-    static Optional<ProductVariant> getVariant(final long variantId, final ProductDataLike product) {
+    static Optional<ProductVariant> getVariant(final long variantId, final ProductProjectionMixin product) {
         final Optional<ProductVariant> result;
         final ProductVariant masterVariant = product.getMasterVariant();
         if (Objects.equals(variantId, masterVariant.getId())) {
@@ -26,11 +26,11 @@ final class ProductsPackage {
         return result;
     }
 
-    static ProductVariant getVariantOrMaster(final long variantId, final ProductDataLike product) {
+    static ProductVariant getVariantOrMaster(final long variantId, final ProductProjectionMixin product) {
         return Optional.ofNullable(product.getVariant(variantId)).orElseGet(product::getMasterVariant);
     }
 
-    static List<ProductVariant> getAllVariants(final ProductDataLike product) {
+    static List<ProductVariant> getAllVariants(final ProductProjectionMixin product) {
         final List<ProductVariant> nonMasterVariants = product.getVariants();
         final ArrayList<ProductVariant> result = new ArrayList<>(1 + nonMasterVariants.size());
         result.add(product.getMasterVariant());

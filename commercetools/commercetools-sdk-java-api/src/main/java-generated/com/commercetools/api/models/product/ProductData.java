@@ -35,7 +35,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProductDataImpl.class)
-public interface ProductData extends ProductDataLike {
+public interface ProductData extends ProductDataLike, ProductProjectionMixin {
 
     /**
      *  <p>Name of the Product.</p>

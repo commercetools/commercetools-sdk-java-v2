@@ -6,9 +6,13 @@ import java.util.Objects;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
-public interface ProductProjectionMixin extends ProductDataLike {
+public interface ProductProjectionMixin {
 
     String getId();
+
+    ProductVariant getVariant(final long variantId);
+
+    List<ProductVariant> getAllVariants();
 
     default Optional<ProductVariant> findVariant(final ByIdVariantIdentifier identifier) {
         return getId().equals(identifier.getProductId()) ? Optional.ofNullable(getVariant(identifier.getVariantId()))

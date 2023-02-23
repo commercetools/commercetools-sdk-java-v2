@@ -3,12 +3,16 @@ package com.commercetools.api.models.order;
 
 import java.util.List;
 
-public interface ParcelMixin extends com.commercetools.api.models.Customizable<Parcel> {
+import com.commercetools.api.models.type.CustomFields;
+
+public interface ParcelMixin {
     public ParcelMeasurements getMeasurements();
 
     public TrackingData getTrackingData();
 
     public List<DeliveryItem> getItems();
+
+    public CustomFields getCustom();
 
     public default ParcelDraftBuilder toDraftBuilder() {
         return ParcelDraft.builder()

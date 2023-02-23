@@ -4,13 +4,16 @@ package com.commercetools.api.models.order;
 import java.util.List;
 
 import com.commercetools.api.models.common.Address;
+import com.commercetools.api.models.type.CustomFields;
 
-public interface DeliveryMixin extends com.commercetools.api.models.Customizable<Delivery> {
+public interface DeliveryMixin {
     public Address getAddress();
 
     public List<DeliveryItem> getItems();
 
     public List<Parcel> getParcels();
+
+    public CustomFields getCustom();
 
     public default DeliveryDraftBuilder toDraftBuilder() {
         return DeliveryDraft.builder()

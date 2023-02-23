@@ -2,62 +2,15 @@
 package com.commercetools.api.models.product;
 
 import java.util.List;
-import java.util.Objects;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
-import javax.annotation.Nullable;
-
-import com.fasterxml.jackson.annotation.JsonIgnore;
-
-public interface ProductProjectionMixin {
-    ProductVariant getMasterVariant();
-
-    List<ProductVariant> getVariants();
-
-    /**
-     * Finds a product variant by id.
-     *
-     * @param variantId the id of the variant to find
-     * @return variant or null if no variant exists with {@code id}
-     */
-    @Nullable
-    default ProductVariant getVariant(final long variantId) {
-        final ProductVariant result;
-        if (variantId == getMasterVariant().getId()) {
-            result = getMasterVariant();
-        }
-        else {
-            result = getVariants().stream().filter(v -> v.getId() == variantId).findFirst().orElse(null);
-        }
-        return result;
-    }
-
-    /**
-     * Gets all variants in the product including the master variant as first element in the list.
-     *
-     * @see #getMasterVariant()
-     * @see #getVariants()
-     * @return all variants
-     */
-    @JsonIgnore
-    default List<ProductVariant> getAllVariants() {
-        return ProductsPackage.getAllVariants(this);
-    }
+public interface ProductProjectionMixin extends ProductDataLike {
+    public String getId();
 
     default Optional<ProductVariant> findVariant(final ByIdVariantIdentifier identifier) {
         return getId().equals(identifier.getProductId()) ? Optional.ofNullable(getVariant(identifier.getVariantId()))
                 : Optional.empty();
-    }
-
-    /**
-     * Finds a variant by SKU.
-     * @param sku the sku for the variant
-     * @return Optional of the found variant
-     */
-    default Optional<ProductVariant> findVariantBySku(final String sku) {
-        Objects.requireNonNull(sku);
-        return getAllVariants().stream().filter(v -> sku.equals(v.getSku())).findFirst();
     }
 
     /**

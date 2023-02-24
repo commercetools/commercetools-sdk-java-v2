@@ -84,6 +84,10 @@ public interface OrderSetReturnItemCustomFieldAction extends OrderUpdateAction {
         return helper.apply(this);
     }
 
+    public static OrderSetReturnItemCustomFieldAction ofUnset(final String name, final String returnItemId) {
+        return OrderSetReturnItemCustomFieldActionBuilder.of().name(name).returnItemId(returnItemId).build();
+    }
+
     public static com.fasterxml.jackson.core.type.TypeReference<OrderSetReturnItemCustomFieldAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<OrderSetReturnItemCustomFieldAction>() {
             @Override

@@ -72,6 +72,10 @@ public interface ReviewSetCustomFieldAction extends ReviewUpdateAction {
         return helper.apply(this);
     }
 
+    public static ReviewSetCustomFieldAction ofUnset(final String name) {
+        return ReviewSetCustomFieldActionBuilder.of().name(name).build();
+    }
+
     public static com.fasterxml.jackson.core.type.TypeReference<ReviewSetCustomFieldAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ReviewSetCustomFieldAction>() {
             @Override

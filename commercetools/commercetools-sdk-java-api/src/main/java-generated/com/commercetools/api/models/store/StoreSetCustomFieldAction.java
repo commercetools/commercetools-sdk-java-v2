@@ -72,6 +72,10 @@ public interface StoreSetCustomFieldAction extends StoreUpdateAction {
         return helper.apply(this);
     }
 
+    public static StoreSetCustomFieldAction ofUnset(final String name) {
+        return StoreSetCustomFieldActionBuilder.of().name(name).build();
+    }
+
     public static com.fasterxml.jackson.core.type.TypeReference<StoreSetCustomFieldAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<StoreSetCustomFieldAction>() {
             @Override

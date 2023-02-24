@@ -37,8 +37,8 @@ import io.vrap.rmf.base.client.utils.Generated;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProductTypeImpl.class)
-public interface ProductType
-        extends BaseResource, ProductTypeMixin, com.commercetools.api.models.DomainResource<ProductType>,
+public interface ProductType extends BaseResource, AttributeDefinitionContainer, ProductTypeMixin,
+        com.commercetools.api.models.DomainResource<ProductType>,
         com.commercetools.api.models.Referencable<ProductType>,
         com.commercetools.api.models.ResourceIdentifiable<ProductType>, com.commercetools.api.models.WithKey {
 

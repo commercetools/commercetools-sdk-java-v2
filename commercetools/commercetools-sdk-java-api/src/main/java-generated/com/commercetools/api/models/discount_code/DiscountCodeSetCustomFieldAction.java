@@ -72,6 +72,10 @@ public interface DiscountCodeSetCustomFieldAction extends DiscountCodeUpdateActi
         return helper.apply(this);
     }
 
+    public static DiscountCodeSetCustomFieldAction ofUnset(final String name) {
+        return DiscountCodeSetCustomFieldActionBuilder.of().name(name).build();
+    }
+
     public static com.fasterxml.jackson.core.type.TypeReference<DiscountCodeSetCustomFieldAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<DiscountCodeSetCustomFieldAction>() {
             @Override

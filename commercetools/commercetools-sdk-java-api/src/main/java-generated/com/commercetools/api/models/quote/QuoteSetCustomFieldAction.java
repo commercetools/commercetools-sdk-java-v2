@@ -72,6 +72,10 @@ public interface QuoteSetCustomFieldAction extends QuoteUpdateAction {
         return helper.apply(this);
     }
 
+    public static QuoteSetCustomFieldAction ofUnset(final String name) {
+        return QuoteSetCustomFieldActionBuilder.of().name(name).build();
+    }
+
     public static com.fasterxml.jackson.core.type.TypeReference<QuoteSetCustomFieldAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<QuoteSetCustomFieldAction>() {
             @Override

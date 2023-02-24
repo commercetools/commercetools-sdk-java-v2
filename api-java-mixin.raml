@@ -41,6 +41,11 @@ types:
     (java-extends): 'com.commercetools.api.models.WithKey'
   Cart:
     (java-extends): 'CartMixin, com.commercetools.api.models.DomainResource<Cart>, com.commercetools.api.models.Referencable<Cart>, com.commercetools.api.models.ResourceIdentifiable<Cart>, com.commercetools.api.models.Customizable<Cart>, com.commercetools.api.models.order.OrderLike<Cart>, com.commercetools.api.models.WithKey'
+  InventoryMode:
+    (java-mixin): |
+      public static com.commercetools.api.models.cart.InventoryMode defaultValue() {
+          return com.commercetools.api.models.cart.InventoryMode.NONE;
+      }
   CartDiscount:
     (java-extends): 'CartDiscountMixin, com.commercetools.api.models.DomainResource<CartDiscount>, com.commercetools.api.models.Referencable<CartDiscount>, com.commercetools.api.models.ResourceIdentifiable<CartDiscount>, com.commercetools.api.models.Customizable<CartDiscount>, com.commercetools.api.models.WithKey'
     (java-mixin): |
@@ -92,6 +97,21 @@ types:
       CustomerUpdateAction, CustomerUpdateBuilder>'
   CustomerUpdateAction:
     (java-extends): 'com.commercetools.api.models.ResourceUpdateAction<CustomerUpdateAction>'
+  CustomerSetKeyAction:
+    (java-mixin): |
+      public static CustomerSetKeyAction ofUnset() {
+          return CustomerSetKeyAction.of();
+      }
+  CustomerSetCustomFieldAction:
+    (java-mixin): |
+      public static CustomerSetCustomFieldAction ofUnset(final String name) {
+          return CustomerSetCustomFieldActionBuilder.of().name(name).build();
+      }
+  CustomerSetAddressCustomFieldAction:
+    (java-mixin): |
+      public static CustomerSetAddressCustomFieldAction ofUnset(final String name) {
+          return CustomerSetAddressCustomFieldActionBuilder.of().name(name).build();
+      }
   CustomerGroup:
     (java-extends): 'CustomerGroupMixin, com.commercetools.api.models.DomainResource<CustomerGroup>, com.commercetools.api.models.Referencable<CustomerGroup>, com.commercetools.api.models.ResourceIdentifiable<CustomerGroup>, com.commercetools.api.models.Customizable<CustomerGroup>, com.commercetools.api.models.WithKey'
     (java-mixin): |
@@ -111,6 +131,16 @@ types:
       CustomerGroupUpdateAction, CustomerGroupUpdateBuilder>'
   CustomerGroupUpdateAction:
     (java-extends): 'com.commercetools.api.models.ResourceUpdateAction<CustomerGroupUpdateAction>'
+  CustomerGroupSetKeyAction:
+    (java-mixin): |
+      public static CustomerGroupSetKeyAction ofUnset() {
+          return CustomerGroupSetKeyAction.of();
+      }
+  CustomerGroupSetCustomFieldAction:
+    (java-mixin): |
+      public static CustomerGroupSetCustomFieldAction ofUnset(final String name) {
+          return CustomerGroupSetCustomFieldActionBuilder.of().name(name).build();
+      }
   DiscountCode:
     (java-extends): 'DiscountCodeMixin, com.commercetools.api.models.DomainResource<DiscountCode>, com.commercetools.api.models.Referencable<DiscountCode>, com.commercetools.api.models.ResourceIdentifiable<DiscountCode>, com.commercetools.api.models.Customizable<DiscountCode>'
     (java-mixin): |
@@ -130,6 +160,11 @@ types:
       DiscountCodeUpdateAction, DiscountCodeUpdateBuilder>'
   DiscountCodeUpdateAction:
     (java-extends): 'com.commercetools.api.models.ResourceUpdateAction<DiscountCodeUpdateAction>'
+  DiscountCodeSetCustomFieldAction:
+    (java-mixin): |
+      public static DiscountCodeSetCustomFieldAction ofUnset(final String name) {
+          return DiscountCodeSetCustomFieldActionBuilder.of().name(name).build();
+      }
   Extension:
     (java-extends): 'com.commercetools.api.models.DomainResource<Extension>, com.commercetools.api.models.WithKey'
   ExtensionDraft:
@@ -141,6 +176,11 @@ types:
       ExtensionUpdateAction, ExtensionUpdateBuilder>'
   ExtensionUpdateAction:
     (java-extends): 'com.commercetools.api.models.ResourceUpdateAction<ExtensionUpdateAction>'
+  ExtensionSetKeyAction:
+    (java-mixin): |
+      public static ExtensionSetKeyAction ofUnset() {
+          return ExtensionSetKeyAction.of();
+      }
   InventoryEntry:
     (java-extends): 'InventoryEntryMixin, com.commercetools.api.models.DomainResource<InventoryEntry>, com.commercetools.api.models.Referencable<InventoryEntry>, com.commercetools.api.models.ResourceIdentifiable<InventoryEntry>, com.commercetools.api.models.Customizable<InventoryEntry>, com.commercetools.api.models.WithKey'
     (java-mixin): |
@@ -160,6 +200,16 @@ types:
       InventoryEntryUpdateAction, InventoryEntryUpdateBuilder>'
   InventoryEntryUpdateAction:
     (java-extends): 'com.commercetools.api.models.ResourceUpdateAction<InventoryEntryUpdateAction>'
+  InventoryEntrySetKeyAction:
+    (java-mixin): |
+      public static InventoryEntrySetKeyAction ofUnset() {
+          return InventoryEntrySetKeyAction.of();
+      }
+  InventoryEntrySetCustomFieldAction:
+    (java-mixin): |
+      public static InventoryEntrySetCustomFieldAction ofUnset(final String name) {
+          return InventoryEntrySetCustomFieldActionBuilder.of().name(name).build();
+      }
   Order:
     (java-extends): 'OrderMixin, com.commercetools.api.models.DomainResource<Order>, com.commercetools.api.models.Referencable<Order>, com.commercetools.api.models.ResourceIdentifiable<Order>, com.commercetools.api.models.Customizable<Order>, com.commercetools.api.models.order.OrderLike<Order>'
     (java-mixin): |
@@ -178,7 +228,63 @@ types:
     (java-extends): 'com.commercetools.api.models.ResourceUpdate<OrderUpdate, OrderUpdateAction, OrderUpdateBuilder>'
   OrderUpdateAction:
     (java-extends): 'com.commercetools.api.models.ResourceUpdateAction<OrderUpdateAction>'
-
+  OrderAddDeliveryAction:
+    (java-extends): 'com.commercetools.api.models.CustomizableDraft<OrderAddDeliveryAction>'
+  OrderSetDeliveryAddressAction:
+    (java-mixin): |
+      public static OrderSetDeliveryAddressAction ofUnset(final String deliveryId) {
+          return OrderSetDeliveryAddressActionBuilder.of().deliveryId(deliveryId).build();
+      }
+  OrderSetLineItemCustomFieldAction:
+    (java-mixin): |
+      public static OrderSetLineItemCustomFieldAction ofUnset(final String name, final String lineItemId) {
+          return OrderSetLineItemCustomFieldActionBuilder.of().name(name).lineItemId(lineItemId).build();
+      }
+  OrderSetCustomFieldAction:
+    (java-mixin): |
+      public static OrderSetCustomFieldAction ofUnset(final String name) {
+          return OrderSetCustomFieldActionBuilder.of().name(name).build();
+      }
+  OrderSetBillingAddressCustomFieldAction:
+    (java-mixin): |
+      public static OrderSetBillingAddressCustomFieldAction ofUnset(final String name) {
+          return OrderSetBillingAddressCustomFieldActionBuilder.of().name(name).build();
+      }
+  OrderSetCustomLineItemCustomFieldAction:
+    (java-mixin): |
+      public static OrderSetCustomLineItemCustomFieldAction ofUnset(final String name, final String customLineItemId) {
+          return OrderSetCustomLineItemCustomFieldActionBuilder.of().name(name).customLineItemId(customLineItemId).build();
+      }
+  OrderSetDeliveryAddressCustomFieldAction:
+    (java-mixin): |
+      public static OrderSetDeliveryAddressCustomFieldAction ofUnset(final String name, final String deliveryId) {
+          return OrderSetDeliveryAddressCustomFieldActionBuilder.of().name(name).deliveryId(deliveryId).build();
+      }
+  OrderSetItemShippingAddressCustomFieldAction:
+    (java-mixin): |
+      public static OrderSetItemShippingAddressCustomFieldAction ofUnset(final String name, final String addressKey) {
+          return OrderSetItemShippingAddressCustomFieldActionBuilder.of().name(name).addressKey(addressKey).build();
+      }
+  OrderSetShippingAddressCustomFieldAction:
+    (java-mixin): |
+      public static OrderSetShippingAddressCustomFieldAction ofUnset(final String name) {
+          return OrderSetShippingAddressCustomFieldActionBuilder.of().name(name).build();
+      }
+  OrderSetDeliveryCustomFieldAction:
+    (java-mixin): |
+      public static OrderSetDeliveryCustomFieldAction ofUnset(final String name, final String deliveryId) {
+          return OrderSetDeliveryCustomFieldActionBuilder.of().name(name).deliveryId(deliveryId).build();
+      }
+  OrderSetParcelCustomFieldAction:
+    (java-mixin): |
+      public static OrderSetParcelCustomFieldAction ofUnset(final String name, final String parcelId) {
+          return OrderSetParcelCustomFieldActionBuilder.of().name(name).parcelId(parcelId).build();
+      }
+  OrderSetReturnItemCustomFieldAction:
+    (java-mixin): |
+      public static OrderSetReturnItemCustomFieldAction ofUnset(final String name, final String returnItemId) {
+          return OrderSetReturnItemCustomFieldActionBuilder.of().name(name).returnItemId(returnItemId).build();
+      }
   OrderEdit:
     (java-extends): 'OrderEditMixin, com.commercetools.api.models.DomainResource<OrderEdit>, com.commercetools.api.models.Referencable<OrderEdit>, com.commercetools.api.models.ResourceIdentifiable<OrderEdit>, com.commercetools.api.models.Customizable<OrderEdit>, com.commercetools.api.models.WithKey'
     (java-mixin): |
@@ -195,6 +301,16 @@ types:
     (java-extends): 'com.commercetools.api.models.ResourceUpdate<OrderEditUpdate, OrderEditUpdateAction, OrderEditUpdateBuilder>'
   OrderEditUpdateAction:
     (java-extends): 'com.commercetools.api.models.ResourceUpdateAction<OrderEditUpdateAction>'
+  OrderEditSetKeyAction:
+    (java-mixin): |
+      public static OrderEditSetKeyAction ofUnset() {
+          return OrderEditSetKeyAction.of();
+      }
+  OrderEditSetCustomFieldAction:
+    (java-mixin): |
+      public static OrderEditSetCustomFieldAction ofUnset(final String name) {
+          return OrderEditSetCustomFieldActionBuilder.of().name(name).build();
+      }
   StagedOrderUpdateAction:
     (java-extends): 'com.commercetools.api.models.ResourceUpdateAction<StagedOrderUpdateAction>'
   StagedOrderAddCustomLineItemAction:
@@ -203,9 +319,66 @@ types:
     (java-extends): 'com.commercetools.api.models.CustomizableDraft<StagedOrderAddDeliveryAction>'
   StagedOrderAddLineItemAction:
     (java-extends): 'com.commercetools.api.models.CustomizableDraft<StagedOrderAddLineItemAction>'
-  OrderAddDeliveryAction:
-    (java-extends): 'com.commercetools.api.models.CustomizableDraft<OrderAddDeliveryAction>'
-
+  StagedOrderSetShippingRateInputAction:
+    (java-mixin): |
+      public static StagedOrderSetShippingRateInputAction ofUnset() {
+          return StagedOrderSetShippingRateInputAction.of();
+      }
+  StagedOrderSetDeliveryAddressAction:
+    (java-mixin): |
+      public static StagedOrderSetDeliveryAddressAction ofUnset() {
+          return StagedOrderSetDeliveryAddressAction.of();
+      }
+  StagedOrderSetLineItemCustomFieldAction:
+    (java-mixin): |
+      public static StagedOrderSetLineItemCustomFieldAction ofUnset(final String name, final String lineItemId) {
+          return StagedOrderSetLineItemCustomFieldActionBuilder.of().name(name).lineItemId(lineItemId).build();
+      }
+  StagedOrderSetBillingAddressCustomFieldAction:
+    (java-mixin): |
+      public static StagedOrderSetBillingAddressCustomFieldAction ofUnset(final String name) {
+          return StagedOrderSetBillingAddressCustomFieldActionBuilder.of().name(name).build();
+      }
+  StagedOrderSetCustomLineItemCustomFieldAction:
+    (java-mixin): |
+      public static StagedOrderSetCustomLineItemCustomFieldAction ofUnset(final String name, final String customLineItemId) {
+          return StagedOrderSetCustomLineItemCustomFieldActionBuilder.of().name(name).customLineItemId(customLineItemId).build();
+      }
+  StagedOrderSetDeliveryAddressCustomFieldAction:
+    (java-mixin): |
+      public static StagedOrderSetDeliveryAddressCustomFieldAction ofUnset(final String name, final String deliveryId) {
+          return StagedOrderSetDeliveryAddressCustomFieldActionBuilder.of().name(name).deliveryId(deliveryId).build();
+      }
+  StagedOrderSetItemShippingAddressCustomFieldAction:
+    (java-mixin): |
+      public static StagedOrderSetItemShippingAddressCustomFieldAction ofUnset(final String name, final String addressKey) {
+          return StagedOrderSetItemShippingAddressCustomFieldActionBuilder.of().name(name).addressKey(addressKey).build();
+      }
+  StagedOrderSetShippingAddressCustomFieldAction:
+    (java-mixin): |
+      public static StagedOrderSetShippingAddressCustomFieldAction ofUnset(final String name) {
+          return StagedOrderSetShippingAddressCustomFieldActionBuilder.of().name(name).build();
+      }
+  StagedOrderSetDeliveryCustomFieldAction:
+    (java-mixin): |
+      public static StagedOrderSetDeliveryCustomFieldAction ofUnset(final String name, final String deliveryId) {
+          return StagedOrderSetDeliveryCustomFieldActionBuilder.of().name(name).deliveryId(deliveryId).build();
+      }
+  StagedOrderSetParcelCustomFieldAction:
+    (java-mixin): |
+      public static StagedOrderSetParcelCustomFieldAction ofUnset(final String name, final String parcelId) {
+          return StagedOrderSetParcelCustomFieldActionBuilder.of().name(name).parcelId(parcelId).build();
+      }
+  StagedOrderSetReturnItemCustomFieldAction:
+    (java-mixin): |
+      public static StagedOrderSetReturnItemCustomFieldAction ofUnset(final String name, final String returnItemId) {
+          return StagedOrderSetReturnItemCustomFieldActionBuilder.of().name(name).returnItemId(returnItemId).build();
+      }
+  StagedOrderSetCustomFieldAction:
+    (java-mixin): |
+      public static StagedOrderSetCustomFieldAction ofUnset(final String name) {
+          return StagedOrderSetCustomFieldActionBuilder.of().name(name).build();
+      }
   Payment:
     (java-extends): 'PaymentMixin, com.commercetools.api.models.DomainResource<Payment>, com.commercetools.api.models.Referencable<Payment>, com.commercetools.api.models.ResourceIdentifiable<Payment>, com.commercetools.api.models.Customizable<Payment>, com.commercetools.api.models.WithKey'
     (java-mixin): |
@@ -225,6 +398,22 @@ types:
       PaymentUpdateAction, PaymentUpdateBuilder>'
   PaymentUpdateAction:
     (java-extends): 'com.commercetools.api.models.ResourceUpdateAction<PaymentUpdateAction>'
+  PaymentSetKeyAction:
+    (java-mixin): |
+      public static PaymentSetKeyAction ofUnset() {
+          return PaymentSetKeyAction.of();
+      }
+  PaymentSetCustomFieldAction:
+    (java-mixin): |
+      public static PaymentSetCustomFieldAction ofUnset(final String name) {
+          return PaymentSetCustomFieldActionBuilder.of().name(name).build();
+      }
+  PaymentSetTransactionCustomFieldAction:
+    (java-mixin): |
+      public static PaymentSetTransactionCustomFieldAction ofUnset(final String name, final String transactionId) {
+          return PaymentSetTransactionCustomFieldActionBuilder.of().name(name).transactionId(transactionId).build();
+      }
+
   Transaction:
     (java-extends): 'com.commercetools.api.models.Customizable<Transaction>'
   TransactionDraft:
@@ -242,7 +431,8 @@ types:
   ProductPagedQueryResponse:
     (java-extends): 'com.commercetools.api.models.ResourcePagedQueryResponse<Product>'
   ProductProjection:
-    (java-extends): 'ProductDataLike, com.commercetools.api.models.DomainResource<ProductProjection>, com.commercetools.api.models.WithKey'
+    (java-extends): 'ProductDataLike, ProductProjectionMixin,
+      com.commercetools.api.models.DomainResource<ProductProjection>, com.commercetools.api.models.WithKey'
   ProductVariant:
     (java-extends): 'com.commercetools.api.models.WithKey'
   ProductVariantDraft:
@@ -260,6 +450,78 @@ types:
       ProductUpdateAction, ProductUpdateBuilder>'
   ProductUpdateAction:
     (java-extends): 'com.commercetools.api.models.ResourceUpdateAction<ProductUpdateAction>'
+  ProductSetKeyAction:
+    (java-mixin): |
+      public static ProductSetKeyAction ofUnset() {
+          return ProductSetKeyAction.of();
+      }
+  ProductSetImageLabelAction:
+    (java-mixin): |
+      public static ProductSetImageLabelAction ofUnset(final Long variantId, final String imageUrl, final Boolean staged) {
+          return ProductSetImageLabelActionBuilder.of().variantId(variantId).imageUrl(imageUrl).staged(staged).build();
+      }
+
+      public static ProductSetImageLabelAction ofUnsetStaged(final Long variantId, final String imageUrl) {
+          return ProductSetImageLabelActionBuilder.of().variantId(variantId).imageUrl(imageUrl).build();
+      }
+  ProductSetTaxCategoryAction:
+    (java-mixin): |
+      public static ProductSetTaxCategoryAction ofUnset() {
+          return ProductSetTaxCategoryAction.of();
+      }
+  ProductSetCustomerAction:
+    (java-mixin): |
+      public static ProductSetCustomerAction ofUnset() {
+          return ProductSetCustomerAction.of();
+      }
+  ProductSetProductPriceCustomFieldAction:
+    (java-mixin): |
+      public static ProductSetProductPriceCustomFieldAction ofUnset(final String name, final String priceId) {
+          return ProductSetProductPriceCustomFieldActionBuilder.of().name(name).priceId(priceId).build();
+      }
+
+      public static ProductSetProductPriceCustomFieldAction ofUnsetStaged(final String name, final String priceId,
+              final Boolean staged) {
+          return ProductSetProductPriceCustomFieldActionBuilder.of().name(name).priceId(priceId).staged(staged).build();
+      }
+  ProductSetAttributeAction:
+    (java-mixin): |
+      public static ProductSetAttributeAction ofVariantId(final Long variantId, final String name, final com.fasterxml.jackson.databind.JsonNode value, final Boolean staged) {
+          return ProductSetAttributeActionBuilder.of().variantId(variantId).name(name).value(value).staged(staged).build();
+      }
+
+      public static ProductSetAttributeAction ofSku(final String sku, final String name, final com.fasterxml.jackson.databind.JsonNode value, final Boolean staged) {
+          return ProductSetAttributeActionBuilder.of().sku(sku).name(name).value(value).staged(staged).build();
+      }
+
+      public static ProductSetAttributeAction ofUnsetAttribute(final Long variantId, final String name) {
+          return ProductSetAttributeActionBuilder.of().variantId(variantId).name(name).build();
+      }
+
+      public static ProductSetAttributeAction ofUnsetAttribute(final Long variantId, final String name, final Boolean staged) {
+          return ProductSetAttributeActionBuilder.of().variantId(variantId).name(name).staged(staged).build();
+      }
+
+      public static ProductSetAttributeAction ofUnsetAttributeForVariantId(final Long variantId, final String name) {
+          return ProductSetAttributeActionBuilder.of().variantId(variantId).name(name).build();
+      }
+
+      public static ProductSetAttributeAction ofUnsetAttributeForSku(final String sku, final String name) {
+          return ProductSetAttributeActionBuilder.of().sku(sku).name(name).build();
+      }
+
+      public static ProductSetAttributeAction ofUnsetAttributeForSku(final String sku, final String name, final Boolean staged) {
+          return ProductSetAttributeActionBuilder.of().sku(sku).name(name).staged(staged).build();
+      }
+  ProductSetAttributeInAllVariantsAction:
+    (java-mixin): |
+      public static ProductSetAttributeInAllVariantsAction ofUnsetAttribute(final String name) {
+          return ProductSetAttributeInAllVariantsActionBuilder.of().name(name).build();
+      }
+
+      public static ProductSetAttributeInAllVariantsAction ofUnsetAttribute(final String name, final Boolean staged) {
+          return ProductSetAttributeInAllVariantsActionBuilder.of().name(name).staged(staged).build();
+      }
   ProductDiscount:
     (java-extends): 'ProductDiscountMixin, com.commercetools.api.models.DomainResource<ProductDiscount>, com.commercetools.api.models.Referencable<ProductDiscount>, com.commercetools.api.models.ResourceIdentifiable<ProductDiscount>, com.commercetools.api.models.WithKey'
     (java-mixin): |
@@ -279,8 +541,13 @@ types:
       ProductDiscountUpdateAction, ProductDiscountUpdateBuilder>'
   ProductDiscountUpdateAction:
     (java-extends): 'com.commercetools.api.models.ResourceUpdateAction<ProductDiscountUpdateAction>'
+  ProductDiscountSetKeyAction:
+    (java-mixin): |
+      public static ProductDiscountSetKeyAction ofUnset() {
+          return ProductDiscountSetKeyAction.of();
+      }
   ProductType:
-    (java-extends): 'ProductTypeMixin, com.commercetools.api.models.DomainResource<ProductType>, com.commercetools.api.models.Referencable<ProductType>, com.commercetools.api.models.ResourceIdentifiable<ProductType>, com.commercetools.api.models.WithKey'
+    (java-extends): 'AttributeDefinitionContainer, ProductTypeMixin, com.commercetools.api.models.DomainResource<ProductType>, com.commercetools.api.models.Referencable<ProductType>, com.commercetools.api.models.ResourceIdentifiable<ProductType>, com.commercetools.api.models.WithKey'
     (java-mixin): |
       public static com.commercetools.api.models.common.ReferenceTypeId referenceTypeId() {
           return com.commercetools.api.models.common.ReferenceTypeId.PRODUCT_TYPE;
@@ -298,6 +565,11 @@ types:
       ProductTypeUpdateAction, ProductTypeUpdateBuilder>'
   ProductTypeUpdateAction:
     (java-extends): 'com.commercetools.api.models.ResourceUpdateAction<ProductTypeUpdateAction>'
+  ProductTypeSetKeyAction:
+    (java-mixin): |
+      public static ProductTypeSetKeyAction ofUnset() {
+          return ProductTypeSetKeyAction.of();
+      }
   Project:
     (java-extends): 'com.commercetools.api.models.WithKey'
   ProjectUpdate:
@@ -305,7 +577,11 @@ types:
       ProjectUpdateAction, ProjectUpdateBuilder>'
   ProjectUpdateAction:
     (java-extends): 'com.commercetools.api.models.ResourceUpdateAction<ProjectUpdateAction>'
-
+  ProjectSetShippingRateInputTypeAction:
+    (java-mixin): |
+      public static ProjectSetShippingRateInputTypeAction ofUnset() {
+          return ProjectSetShippingRateInputTypeAction.of();
+      }
   AssignedProductSelectionPagedQueryResponse:
     (java-extends): 'com.commercetools.api.models.ResourcePagedQueryResponse<AssignedProductSelection>'
 
@@ -330,6 +606,11 @@ types:
       ProductSelectionUpdateAction, ProductSelectionUpdateBuilder>'
   ProductSelectionUpdateAction:
     (java-extends): 'com.commercetools.api.models.ResourceUpdateAction<ProductSelectionUpdateAction>'
+  ProductSelectionSetKeyAction:
+    (java-mixin): |
+      public static ProductSelectionSetKeyAction ofUnset() {
+          return ProductSelectionSetKeyAction.of();
+      }
   ProductsInStorePagedQueryResponse:
     (java-extends): 'com.commercetools.api.models.ResourcePagedQueryResponse<ProductSelectionAssignment>'
 
@@ -352,6 +633,11 @@ types:
       QuoteUpdateAction, QuoteUpdateBuilder>'
   QuoteUpdateAction:
     (java-extends): 'com.commercetools.api.models.ResourceUpdateAction<QuoteUpdateAction>'
+  QuoteSetCustomFieldAction:
+    (java-mixin): |
+      public static QuoteSetCustomFieldAction ofUnset(final String name) {
+          return QuoteSetCustomFieldActionBuilder.of().name(name).build();
+      }
   QuoteRequestPagedQueryResponse:
     (java-extends): 'com.commercetools.api.models.ResourcePagedQueryResponse<QuoteRequest>'
   QuoteRequestReference:
@@ -363,6 +649,11 @@ types:
       QuoteRequestUpdateAction, QuoteRequestUpdateBuilder>'
   QuoteRequestUpdateAction:
     (java-extends): 'com.commercetools.api.models.ResourceUpdateAction<QuoteRequestUpdateAction>'
+  QuoteRequestSetCustomFieldAction:
+    (java-mixin): |
+      public static QuoteRequestSetCustomFieldAction ofUnset(final String name) {
+          return QuoteRequestSetCustomFieldActionBuilder.of().name(name).build();
+      }
   QuoteRequest:
     (java-extends): 'com.commercetools.api.models.WithKey'
   QuoteRequestDraft:
@@ -409,7 +700,21 @@ types:
       ReviewUpdateAction, ReviewUpdateBuilder>'
   ReviewUpdateAction:
     (java-extends): 'com.commercetools.api.models.ResourceUpdateAction<ReviewUpdateAction>'
-
+  ReviewSetKeyAction:
+    (java-mixin): |
+      public static ReviewSetKeyAction ofUnset() {
+          return ReviewSetKeyAction.of();
+      }
+  ReviewSetCustomerAction:
+    (java-mixin): |
+      public static ReviewSetCustomerAction ofUnset() {
+          return ReviewSetCustomerAction.of();
+      }
+  ReviewSetCustomFieldAction:
+    (java-mixin): |
+      public static ReviewSetCustomFieldAction ofUnset(final String name) {
+          return ReviewSetCustomFieldActionBuilder.of().name(name).build();
+      }
   ShippingMethod:
     (java-extends): 'ShippingMethodMixin, com.commercetools.api.models.DomainResource<ShippingMethod>, com.commercetools.api.models.Referencable<ShippingMethod>, com.commercetools.api.models.ResourceIdentifiable<ShippingMethod>, com.commercetools.api.models.Customizable<ShippingMethod>, com.commercetools.api.models.WithKey'
     (java-mixin): |
@@ -429,7 +734,16 @@ types:
       ShippingMethodUpdateAction, ShippingMethodUpdateBuilder>'
   ShippingMethodUpdateAction:
     (java-extends): 'com.commercetools.api.models.ResourceUpdateAction<ShippingMethodUpdateAction>'
-
+  ShippingMethodSetKeyAction:
+    (java-mixin): |
+      public static ShippingMethodSetKeyAction ofUnset() {
+          return ShippingMethodSetKeyAction.of();
+      }
+  ShippingMethodSetCustomFieldAction:
+    (java-mixin): |
+      public static ShippingMethodSetCustomFieldAction ofUnset(final String name) {
+          return ShippingMethodSetCustomFieldActionBuilder.of().name(name).build();
+      }
   ShoppingList:
     (java-extends): 'ShoppingListMixin, com.commercetools.api.models.DomainResource<ShoppingList>, com.commercetools.api.models.Referencable<ShoppingList>, com.commercetools.api.models.ResourceIdentifiable<ShoppingList>, com.commercetools.api.models.Customizable<ShoppingList>, com.commercetools.api.models.WithKey'
     (java-mixin): |
@@ -457,6 +771,31 @@ types:
     (java-extends): 'com.commercetools.api.models.CustomizableDraft<ShoppingListAddLineItemAction>'
   ShoppingListAddTextLineItemAction:
     (java-extends): 'com.commercetools.api.models.CustomizableDraft<ShoppingListAddTextLineItemAction>'
+  ShoppingListSetLineItemCustomFieldAction:
+    (java-mixin): |
+      public static ShoppingListSetLineItemCustomFieldAction ofUnset(final String name, final String lineItemId) {
+          return ShoppingListSetLineItemCustomFieldActionBuilder.of().name(name).lineItemId(lineItemId).build();
+      }
+  ShoppingListSetCustomerAction:
+    (java-mixin): |
+      public static ShoppingListSetCustomerAction ofUnset() {
+          return ShoppingListSetCustomerAction.of();
+      }
+  ShoppingListSetSlugAction:
+    (java-mixin): |
+      public static ShoppingListSetSlugAction ofUnset() {
+          return ShoppingListSetSlugAction.of();
+      }
+  ShoppingListSetCustomFieldAction:
+    (java-mixin): |
+      public static ShoppingListSetCustomFieldAction ofUnset(final String name) {
+          return ShoppingListSetCustomFieldActionBuilder.of().name(name).build();
+      }
+  ShoppingListSetTextLineItemCustomFieldAction:
+    (java-mixin): |
+      public static ShoppingListSetTextLineItemCustomFieldAction ofUnset(final String name, final String textLineItemId) {
+          return ShoppingListSetTextLineItemCustomFieldActionBuilder.of().name(name).textLineItemId(textLineItemId).build();
+      }
   TextLineItem:
     (java-extends): 'com.commercetools.api.models.Customizable<TextLineItem>'
   TextLineItemDraft:
@@ -473,7 +812,11 @@ types:
       StagedQuoteUpdateAction, StagedQuoteUpdateBuilder>'
   StagedQuoteUpdateAction:
     (java-extends): 'com.commercetools.api.models.ResourceUpdateAction<StagedQuoteUpdateAction>'
-
+  StagedQuoteSetCustomFieldAction:
+    (java-mixin): |
+      public static StagedQuoteSetCustomFieldAction ofUnset(final String name) {
+          return StagedQuoteSetCustomFieldActionBuilder.of().name(name).build();
+      }
   StandalonePrice:
     (java-extends): 'StandalonePriceMixin, com.commercetools.api.models.DomainResource<StandalonePrice>, com.commercetools.api.models.Referencable<StandalonePrice>, com.commercetools.api.models.ResourceIdentifiable<StandalonePrice>, com.commercetools.api.models.Customizable<StandalonePrice>, com.commercetools.api.models.WithKey'
     (java-mixin): |
@@ -489,7 +832,11 @@ types:
       StandalonePriceUpdateAction, StandalonePriceUpdateBuilder>'
   StandalonePriceUpdateAction:
     (java-extends): 'com.commercetools.api.models.ResourceUpdateAction<StandalonePriceUpdateAction>'
-
+  StandalonePriceSetCustomFieldAction:
+    (java-mixin): |
+      public static StandalonePriceSetCustomFieldAction ofUnset(final String name) {
+          return StandalonePriceSetCustomFieldActionBuilder.of().name(name).build();
+      }
   State:
     (java-extends): 'StateMixin, com.commercetools.api.models.DomainResource<State>, com.commercetools.api.models.Referencable<State>, com.commercetools.api.models.ResourceIdentifiable<State>, com.commercetools.api.models.WithKey'
     (java-mixin): |
@@ -529,7 +876,11 @@ types:
       StoreUpdateAction, StoreUpdateBuilder>'
   StoreUpdateAction:
     (java-extends): 'com.commercetools.api.models.ResourceUpdateAction<StoreUpdateAction>'
-
+  StoreSetCustomFieldAction:
+    (java-mixin): |
+      public static StoreSetCustomFieldAction ofUnset(final String name) {
+          return StoreSetCustomFieldActionBuilder.of().name(name).build();
+      }
   Subscription:
     (java-extends): 'com.commercetools.api.models.DomainResource<Subscription>, com.commercetools.api.models.WithKey'
   SubscriptionDraft:
@@ -541,7 +892,16 @@ types:
       SubscriptionUpdateAction, SubscriptionUpdateBuilder>'
   SubscriptionUpdateAction:
     (java-extends): 'com.commercetools.api.models.ResourceUpdateAction<SubscriptionUpdateAction>'
-
+  SubscriptionSetMessagesAction:
+    (java-mixin): |
+      public static SubscriptionSetMessagesAction ofUnset() {
+          return SubscriptionSetMessagesAction.of();
+      }
+  SubscriptionSetChangesAction:
+    (java-mixin): |
+      public static SubscriptionSetChangesAction ofUnset() {
+          return SubscriptionSetChangesAction.of();
+      }
   TaxCategory:
     (java-extends): 'TaxCategoryMixin, com.commercetools.api.models.DomainResource<TaxCategory>, com.commercetools.api.models.Referencable<TaxCategory>, com.commercetools.api.models.ResourceIdentifiable<TaxCategory>, com.commercetools.api.models.WithKey'
     (java-mixin): |
@@ -604,6 +964,7 @@ types:
       public static CentPrecisionMoney of(final javax.money.MonetaryAmount monetaryAmount) {
           return MoneyUtil.of(monetaryAmount);
       }
+
       public default CentPrecisionMoneyDraft toDraft() {
           return CentPrecisionMoneyDraft.of(this);
       }
@@ -624,9 +985,11 @@ types:
       public static HighPrecisionMoney of(final javax.money.MonetaryAmount monetaryAmount, final int fractionDigits) {
           return MoneyUtil.of(monetaryAmount, fractionDigits);
       }
+
       public default HighPrecisionMoneyDraft toDraft() {
           return HighPrecisionMoneyDraft.of(this);
       }
+
       @Override
       default javax.money.MonetaryOperator createMoneyOperator() {
           return amount -> MoneyUtil.of(amount, getFractionDigits());
@@ -636,6 +999,7 @@ types:
       public static HighPrecisionMoneyDraft of(javax.money.MonetaryAmount monetaryAmount, final int fractionDigits) {
           return MoneyUtil.draftOf(monetaryAmount, fractionDigits);
       }
+
       public static HighPrecisionMoneyDraft of(final HighPrecisionMoney template) {
           HighPrecisionMoneyDraftImpl instance = new HighPrecisionMoneyDraftImpl();
           instance.setCentAmount(template.getCentAmount());
@@ -644,6 +1008,7 @@ types:
           instance.setPreciseAmount(template.getPreciseAmount());
           return instance;
       }
+
       @Override
       default javax.money.MonetaryOperator createMoneyOperator() {
           return amount -> MoneyUtil.draftOf(amount, getFractionDigits());
@@ -660,18 +1025,6 @@ types:
       default javax.money.MonetaryOperator createMoneyOperator() {
           return MoneyUtil::draftOf;
       }
-  Money:
-    (java-extends): 'com.commercetools.api.models.common.MonetaryAmountConvertable'
-    (java-mixin): |
-      public default TypedMoneyDraft toDraft() {
-          if (this instanceof TypedMoneyDraft) {
-              return (TypedMoneyDraft) this;
-          }
-          return TypedMoneyDraft.centPrecisionBuilder()
-                  .centAmount(this.getCentAmount())
-                  .currencyCode(this.getCurrencyCode())
-                  .build();
-      }
   Reference:
     (java-extends): 'ReferenceMixin'
   KeyReference:
@@ -679,7 +1032,7 @@ types:
   ResourceIdentifier:
     (java-extends): 'com.commercetools.api.models.WithKey'
   TypeReference:
-    (java-extends): com.commercetools.api.models.Identifiable<Type>
+    (java-extends): 'com.commercetools.api.models.Identifiable<Type>'
     (java-mixin): |
       @Override
       public default TypeResourceIdentifier toResourceIdentifier() {
@@ -697,19 +1050,7 @@ types:
           return template.toDraftBuilder();
       }
   Parcel:
-    (java-extends): 'com.commercetools.api.models.Customizable<Parcel>'
-    (java-mixin): |
-      public default ParcelDraftBuilder toDraftBuilder() {
-          return ParcelDraft.builder()
-                  .measurements(this.getMeasurements())
-                  .trackingData(this.getTrackingData())
-                  .items(this.getItems())
-                  .custom(this.getCustom().toDraft());
-      }
-
-      public default ParcelDraft toDraft() {
-          return toDraftBuilder().build();
-      }
+    (java-extends): 'ParcelMixin, com.commercetools.api.models.Customizable<Parcel>'
   ParcelDraft:
     (java-extends): 'com.commercetools.api.models.CustomizableDraft<ParcelDraft>'
   ReturnItem:
@@ -717,19 +1058,7 @@ types:
   ReturnItemDraft:
     (java-extends): 'com.commercetools.api.models.CustomizableDraft<ReturnItemDraft>'
   Delivery:
-    (java-extends): 'com.commercetools.api.models.Customizable<Delivery>'
-    (java-mixin): |
-      public default DeliveryDraftBuilder toDraftBuilder() {
-          return DeliveryDraft.builder()
-                  .address(this.getAddress().toDraft())
-                  .items(this.getItems())
-                  .parcels(this.getParcels().stream().map(Parcel::toDraft).collect(java.util.stream.Collectors.toList()))
-                  .custom(this.getCustom().toDraft());
-      }
-
-      public default DeliveryDraft toDraft() {
-          return toDraftBuilder().build();
-      }
+    (java-extends): 'DeliveryMixin, com.commercetools.api.models.Customizable<Delivery>'
   DeliveryDraft:
     (java-extends): 'com.commercetools.api.models.CustomizableDraft<DeliveryDraft>'
   ApiClientPagedQueryResponse:
@@ -743,7 +1072,7 @@ types:
   AttributeGroupReference:
     (java-extends): 'com.commercetools.api.models.Identifiable<AttributeGroup>'
   AttributeGroupResourceIdentifier:
-    (java-extends): com.commercetools.api.models.Identifiable<AttributeGroup>
+    (java-extends): 'com.commercetools.api.models.Identifiable<AttributeGroup>'
   AttributeGroupPagedQueryResponse:
     (java-extends): 'com.commercetools.api.models.ResourcePagedQueryResponse<AttributeGroup>'
   AttributeGroupUpdate:
@@ -751,6 +1080,11 @@ types:
       AttributeGroupUpdateAction, AttributeGroupUpdateBuilder>'
   AttributeGroupUpdateAction:
     (java-extends): 'com.commercetools.api.models.ResourceUpdateAction<AttributeGroupUpdateAction>'
+  AttributeGroupSetKeyAction:
+    (java-mixin): |
+      public static AttributeGroupSetKeyAction ofUnset() {
+          return AttributeGroupSetKeyAction.of();
+      }
   BusinessUnit:
     (java-extends): 'com.commercetools.api.models.WithKey'
   BusinessUnitDraft:
@@ -758,14 +1092,24 @@ types:
   BusinessUnitPagedQueryResponse:
     (java-extends): 'com.commercetools.api.models.ResourcePagedQueryResponse<BusinessUnit>'
   BusinessUnitReference:
-    (java-extends): com.commercetools.api.models.Identifiable<BusinessUnit>
+    (java-extends): 'com.commercetools.api.models.Identifiable<BusinessUnit>'
   BusinessUnitResourceIdentifier:
-    (java-extends): com.commercetools.api.models.Identifiable<BusinessUnit>
+    (java-extends): 'com.commercetools.api.models.Identifiable<BusinessUnit>'
   BusinessUnitUpdate:
     (java-extends): 'com.commercetools.api.models.ResourceUpdate<  BusinessUnitUpdate,
       BusinessUnitUpdateAction, BusinessUnitUpdateBuilder>'
   BusinessUnitUpdateAction:
     (java-extends): 'com.commercetools.api.models.ResourceUpdateAction<BusinessUnitUpdateAction>'
+  BusinessUnitSetCustomFieldAction:
+    (java-mixin): |
+      public static BusinessUnitSetCustomFieldAction ofUnset(final String name) {
+          return BusinessUnitSetCustomFieldActionBuilder.of().name(name).build();
+      }
+  BusinessUnitSetAddressCustomFieldAction:
+    (java-mixin): |
+      public static BusinessUnitSetAddressCustomFieldAction ofUnset(final String name) {
+          return BusinessUnitSetAddressCustomFieldActionBuilder.of().name(name).build();
+      }
   CartDraft:
     (java-extends): 'com.commercetools.api.models.CustomizableDraft<CartDraft>, com.commercetools.api.models.WithKey'
   CartPagedQueryResponse:
@@ -778,6 +1122,56 @@ types:
     (java-extends): 'com.commercetools.api.models.ResourceUpdate<CartUpdate, CartUpdateAction, CartUpdateBuilder>'
   CartUpdateAction:
     (java-extends): 'com.commercetools.api.models.ResourceUpdateAction<CartUpdateAction>'
+  CartSetDeleteDaysAfterLastModificationAction:
+    (java-mixin): |
+      public static CartSetDeleteDaysAfterLastModificationAction ofUnset() {
+          return CartSetDeleteDaysAfterLastModificationAction.of();
+      }
+  CartSetShippingRateInputAction:
+    (java-mixin): |
+      public static CartSetShippingRateInputAction ofUnset() {
+          return CartSetShippingRateInputAction.of();
+      }
+  CartSetKeyAction:
+    (java-mixin): |
+      public static CartSetKeyAction ofUnset() {
+          return CartSetKeyAction.of();
+      }
+  CartSetLineItemCustomFieldAction:
+    (java-mixin): |
+      public static CartSetLineItemCustomFieldAction ofUnset(final String name, final String lineItemId) {
+          return CartSetLineItemCustomFieldActionBuilder.of().name(name).lineItemId(lineItemId).build();
+      }
+  CartSetCustomFieldAction:
+    (java-mixin): |
+      public static CartSetCustomFieldAction ofUnset(final String name) {
+          return CartSetCustomFieldActionBuilder.of().name(name).build();
+      }
+  CartSetBillingAddressCustomFieldAction:
+    (java-mixin): |
+      public static CartSetBillingAddressCustomFieldAction ofUnset(final String name) {
+          return CartSetBillingAddressCustomFieldActionBuilder.of().name(name).build();
+      }
+  CartSetCustomLineItemCustomFieldAction:
+    (java-mixin): |
+      public static CartSetCustomLineItemCustomFieldAction ofUnset(final String name, final String customLineItemId) {
+          return CartSetCustomLineItemCustomFieldActionBuilder.of().name(name).customLineItemId(customLineItemId).build();
+      }
+  CartSetDeliveryAddressCustomFieldAction:
+    (java-mixin): |
+      public static CartSetDeliveryAddressCustomFieldAction ofUnset(final String name, final String deliveryId) {
+          return CartSetDeliveryAddressCustomFieldActionBuilder.of().name(name).deliveryId(deliveryId).build();
+      }
+  CartSetItemShippingAddressCustomFieldAction:
+    (java-mixin): |
+      public static CartSetItemShippingAddressCustomFieldAction ofUnset(final String name, final String addressKey) {
+          return CartSetItemShippingAddressCustomFieldActionBuilder.of().name(name).addressKey(addressKey).build();
+      }
+  CartSetShippingAddressCustomFieldAction:
+    (java-mixin): |
+      public static CartSetShippingAddressCustomFieldAction ofUnset(final String name) {
+          return CartSetShippingAddressCustomFieldActionBuilder.of().name(name).build();
+      }
   CategoryDraft:
     (java-extends): 'com.commercetools.api.models.CustomizableDraft<CategoryDraft>, com.commercetools.api.models.WithKey'
   CategoryPagedQueryResponse:
@@ -792,6 +1186,16 @@ types:
       CategoryUpdateAction, CategoryUpdateBuilder>'
   CategoryUpdateAction:
     (java-extends): 'com.commercetools.api.models.ResourceUpdateAction<CategoryUpdateAction>'
+  CategorySetKeyAction:
+    (java-mixin): |
+      public static CategorySetKeyAction ofUnset() {
+          return CategorySetKeyAction.of();
+      }
+  CategorySetCustomFieldAction:
+    (java-mixin): |
+      public static CategorySetCustomFieldAction ofUnset(final String name) {
+          return CategorySetCustomFieldActionBuilder.of().name(name).build();
+      }
   CartDiscountDraft:
     (java-extends): 'com.commercetools.api.models.CustomizableDraft<CartDiscountDraft>, com.commercetools.api.models.WithKey'
   CartDiscountPagedQueryResponse:
@@ -805,6 +1209,16 @@ types:
       CartDiscountUpdateAction, CartDiscountUpdateBuilder>'
   CartDiscountUpdateAction:
     (java-extends): 'com.commercetools.api.models.ResourceUpdateAction<CartDiscountUpdateAction>'
+  CartDiscountSetKeyAction:
+    (java-mixin): |
+      public static CartDiscountSetKeyAction ofUnset() {
+          return CartDiscountSetKeyAction.of();
+      }
+  CartDiscountSetCustomFieldAction:
+    (java-mixin): |
+      public static CartDiscountSetCustomFieldAction ofUnset(final String name) {
+          return CartDiscountSetCustomFieldActionBuilder.of().name(name).build();
+      }
   CartAddCustomLineItemAction:
     (java-extends): 'com.commercetools.api.models.CustomizableDraft<CartAddCustomLineItemAction>'
   CartAddLineItemAction:
@@ -822,7 +1236,21 @@ types:
       ChannelUpdateAction, ChannelUpdateBuilder>'
   ChannelUpdateAction:
     (java-extends): 'com.commercetools.api.models.ResourceUpdateAction<ChannelUpdateAction>'
-
+  ChannelSetGeoLocationAction:
+    (java-mixin): |
+      public static ChannelSetGeoLocationAction ofUnset() {
+          return ChannelSetGeoLocationAction.of();
+      }
+  ChannelSetCustomFieldAction:
+    (java-mixin): |
+      public static ChannelSetCustomFieldAction ofUnset(final String name) {
+          return ChannelSetCustomFieldActionBuilder.of().name(name).build();
+      }
+  ChannelSetAddressCustomFieldAction:
+    (java-mixin): |
+      public static ChannelSetAddressCustomFieldAction ofUnset(final String name) {
+          return ChannelSetAddressCustomFieldActionBuilder.of().name(name).build();
+      }
   CustomLineItem:
     (java-extends): 'com.commercetools.api.models.Customizable<CustomLineItem>'
   CustomLineItemDraft:
@@ -1051,7 +1479,8 @@ types:
           com.commercetools.api.models.order_edit.OrderEditPagedQueryResponse>'
     get:
       (java-implements):
-        'com.commercetools.api.models.PagedQueryResourceRequest<ByProjectKeyOrdersGet,
+        'ByProjectKeyOrdersGetMixin,
+        com.commercetools.api.models.PagedQueryResourceRequest<ByProjectKeyOrdersGet,
         com.commercetools.api.models.order.OrderPagedQueryResponse>'
     /{ID}:
       delete:

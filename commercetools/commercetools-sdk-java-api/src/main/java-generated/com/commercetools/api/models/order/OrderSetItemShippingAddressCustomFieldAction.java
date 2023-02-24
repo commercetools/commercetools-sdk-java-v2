@@ -86,6 +86,10 @@ public interface OrderSetItemShippingAddressCustomFieldAction extends OrderUpdat
         return helper.apply(this);
     }
 
+    public static OrderSetItemShippingAddressCustomFieldAction ofUnset(final String name, final String addressKey) {
+        return OrderSetItemShippingAddressCustomFieldActionBuilder.of().name(name).addressKey(addressKey).build();
+    }
+
     public static com.fasterxml.jackson.core.type.TypeReference<OrderSetItemShippingAddressCustomFieldAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<OrderSetItemShippingAddressCustomFieldAction>() {
             @Override

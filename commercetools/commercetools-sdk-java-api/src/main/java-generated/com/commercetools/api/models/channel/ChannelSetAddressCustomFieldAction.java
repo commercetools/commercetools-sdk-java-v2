@@ -72,6 +72,10 @@ public interface ChannelSetAddressCustomFieldAction extends ChannelUpdateAction 
         return helper.apply(this);
     }
 
+    public static ChannelSetAddressCustomFieldAction ofUnset(final String name) {
+        return ChannelSetAddressCustomFieldActionBuilder.of().name(name).build();
+    }
+
     public static com.fasterxml.jackson.core.type.TypeReference<ChannelSetAddressCustomFieldAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ChannelSetAddressCustomFieldAction>() {
             @Override

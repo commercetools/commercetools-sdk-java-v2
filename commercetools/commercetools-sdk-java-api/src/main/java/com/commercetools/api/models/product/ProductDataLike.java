@@ -2,6 +2,8 @@
 package com.commercetools.api.models.product;
 
 import java.util.List;
+import java.util.Objects;
+import java.util.Optional;
 
 import javax.annotation.Nullable;
 
@@ -91,6 +93,16 @@ public interface ProductDataLike extends WithLocalizedSlug, MetaAttributes {
      */
     default ProductVariant getVariantOrMaster(final long variantId) {
         return ProductsPackage.getVariantOrMaster(variantId, this);
+    }
+
+    /**
+     * Finds a variant by SKU.
+     * @param sku the sku for the variant
+     * @return Optional of the found variant
+     */
+    default Optional<ProductVariant> findVariantBySku(final String sku) {
+        Objects.requireNonNull(sku);
+        return getAllVariants().stream().filter(v -> sku.equals(v.getSku())).findFirst();
     }
 
     SearchKeywords getSearchKeywords();

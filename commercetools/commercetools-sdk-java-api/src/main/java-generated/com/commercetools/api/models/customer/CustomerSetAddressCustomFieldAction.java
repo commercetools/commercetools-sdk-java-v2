@@ -84,6 +84,10 @@ public interface CustomerSetAddressCustomFieldAction extends CustomerUpdateActio
         return helper.apply(this);
     }
 
+    public static CustomerSetAddressCustomFieldAction ofUnset(final String name) {
+        return CustomerSetAddressCustomFieldActionBuilder.of().name(name).build();
+    }
+
     public static com.fasterxml.jackson.core.type.TypeReference<CustomerSetAddressCustomFieldAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<CustomerSetAddressCustomFieldAction>() {
             @Override

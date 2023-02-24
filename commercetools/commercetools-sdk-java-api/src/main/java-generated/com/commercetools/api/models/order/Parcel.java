@@ -31,7 +31,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ParcelImpl.class)
-public interface Parcel extends com.commercetools.api.models.Customizable<Parcel> {
+public interface Parcel extends ParcelMixin, com.commercetools.api.models.Customizable<Parcel> {
 
     /**
      *  <p>Unique identifier of the Parcel.</p>
@@ -115,18 +115,6 @@ public interface Parcel extends com.commercetools.api.models.Customizable<Parcel
 
     default <T> T withParcel(Function<Parcel, T> helper) {
         return helper.apply(this);
-    }
-
-    public default ParcelDraftBuilder toDraftBuilder() {
-        return ParcelDraft.builder()
-                .measurements(this.getMeasurements())
-                .trackingData(this.getTrackingData())
-                .items(this.getItems())
-                .custom(this.getCustom().toDraft());
-    }
-
-    public default ParcelDraft toDraft() {
-        return toDraftBuilder().build();
     }
 
     public static com.fasterxml.jackson.core.type.TypeReference<Parcel> typeReference() {

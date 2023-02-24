@@ -72,6 +72,10 @@ public interface InventoryEntrySetCustomFieldAction extends InventoryEntryUpdate
         return helper.apply(this);
     }
 
+    public static InventoryEntrySetCustomFieldAction ofUnset(final String name) {
+        return InventoryEntrySetCustomFieldActionBuilder.of().name(name).build();
+    }
+
     public static com.fasterxml.jackson.core.type.TypeReference<InventoryEntrySetCustomFieldAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<InventoryEntrySetCustomFieldAction>() {
             @Override

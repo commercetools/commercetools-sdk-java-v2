@@ -74,6 +74,10 @@ public interface OrderSetDeliveryAddressAction extends OrderUpdateAction {
         return helper.apply(this);
     }
 
+    public static OrderSetDeliveryAddressAction ofUnset(final String deliveryId) {
+        return OrderSetDeliveryAddressActionBuilder.of().deliveryId(deliveryId).build();
+    }
+
     public static com.fasterxml.jackson.core.type.TypeReference<OrderSetDeliveryAddressAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<OrderSetDeliveryAddressAction>() {
             @Override

@@ -72,6 +72,10 @@ public interface CustomerGroupSetCustomFieldAction extends CustomerGroupUpdateAc
         return helper.apply(this);
     }
 
+    public static CustomerGroupSetCustomFieldAction ofUnset(final String name) {
+        return CustomerGroupSetCustomFieldActionBuilder.of().name(name).build();
+    }
+
     public static com.fasterxml.jackson.core.type.TypeReference<CustomerGroupSetCustomFieldAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<CustomerGroupSetCustomFieldAction>() {
             @Override

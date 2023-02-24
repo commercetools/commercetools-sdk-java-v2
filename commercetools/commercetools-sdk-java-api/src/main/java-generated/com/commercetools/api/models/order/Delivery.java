@@ -34,7 +34,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = DeliveryImpl.class)
-public interface Delivery extends com.commercetools.api.models.Customizable<Delivery> {
+public interface Delivery extends DeliveryMixin, com.commercetools.api.models.Customizable<Delivery> {
 
     /**
      *  <p>Unique identifier of the Delivery.</p>
@@ -123,18 +123,6 @@ public interface Delivery extends com.commercetools.api.models.Customizable<Deli
 
     default <T> T withDelivery(Function<Delivery, T> helper) {
         return helper.apply(this);
-    }
-
-    public default DeliveryDraftBuilder toDraftBuilder() {
-        return DeliveryDraft.builder()
-                .address(this.getAddress().toDraft())
-                .items(this.getItems())
-                .parcels(this.getParcels().stream().map(Parcel::toDraft).collect(java.util.stream.Collectors.toList()))
-                .custom(this.getCustom().toDraft());
-    }
-
-    public default DeliveryDraft toDraft() {
-        return toDraftBuilder().build();
     }
 
     public static com.fasterxml.jackson.core.type.TypeReference<Delivery> typeReference() {

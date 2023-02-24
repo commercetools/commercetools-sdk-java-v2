@@ -72,6 +72,10 @@ public interface CustomerSetCustomFieldAction extends CustomerUpdateAction {
         return helper.apply(this);
     }
 
+    public static CustomerSetCustomFieldAction ofUnset(final String name) {
+        return CustomerSetCustomFieldActionBuilder.of().name(name).build();
+    }
+
     public static com.fasterxml.jackson.core.type.TypeReference<CustomerSetCustomFieldAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<CustomerSetCustomFieldAction>() {
             @Override

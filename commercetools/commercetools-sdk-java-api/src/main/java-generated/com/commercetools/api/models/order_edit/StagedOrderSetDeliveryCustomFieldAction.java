@@ -86,6 +86,10 @@ public interface StagedOrderSetDeliveryCustomFieldAction extends StagedOrderUpda
         return helper.apply(this);
     }
 
+    public static StagedOrderSetDeliveryCustomFieldAction ofUnset(final String name, final String deliveryId) {
+        return StagedOrderSetDeliveryCustomFieldActionBuilder.of().name(name).deliveryId(deliveryId).build();
+    }
+
     public static com.fasterxml.jackson.core.type.TypeReference<StagedOrderSetDeliveryCustomFieldAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<StagedOrderSetDeliveryCustomFieldAction>() {
             @Override

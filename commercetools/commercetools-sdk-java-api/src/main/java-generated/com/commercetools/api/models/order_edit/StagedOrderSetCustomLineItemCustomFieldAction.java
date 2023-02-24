@@ -87,6 +87,14 @@ public interface StagedOrderSetCustomLineItemCustomFieldAction extends StagedOrd
         return helper.apply(this);
     }
 
+    public static StagedOrderSetCustomLineItemCustomFieldAction ofUnset(final String name,
+            final String customLineItemId) {
+        return StagedOrderSetCustomLineItemCustomFieldActionBuilder.of()
+                .name(name)
+                .customLineItemId(customLineItemId)
+                .build();
+    }
+
     public static com.fasterxml.jackson.core.type.TypeReference<StagedOrderSetCustomLineItemCustomFieldAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<StagedOrderSetCustomLineItemCustomFieldAction>() {
             @Override

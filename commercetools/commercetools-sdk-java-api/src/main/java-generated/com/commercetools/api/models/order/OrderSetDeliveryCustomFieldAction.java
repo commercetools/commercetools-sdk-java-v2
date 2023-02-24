@@ -83,6 +83,10 @@ public interface OrderSetDeliveryCustomFieldAction extends OrderUpdateAction {
         return helper.apply(this);
     }
 
+    public static OrderSetDeliveryCustomFieldAction ofUnset(final String name, final String deliveryId) {
+        return OrderSetDeliveryCustomFieldActionBuilder.of().name(name).deliveryId(deliveryId).build();
+    }
+
     public static com.fasterxml.jackson.core.type.TypeReference<OrderSetDeliveryCustomFieldAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<OrderSetDeliveryCustomFieldAction>() {
             @Override

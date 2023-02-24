@@ -35,7 +35,7 @@ public interface CartDiscountValueFixedDraft
     String FIXED = "fixed";
 
     /**
-     *  <p>Money values in different currencies. A fixed Cart Discount will only match a price if this array contains a value with the same currency. If it contains 10&euro; and 15$, the matching &euro; price will be discounted by 10&euro; and the matching $ price will be discounted to 15$.</p>
+     *  <p>Money values in different currencies. A fixed Cart Discount will only match a price if this array contains a value with the same currency. If it contains 10��� and 15$, the matching ��� price will be discounted by 10��� and the matching $ price will be discounted to 15$.</p>
      */
     @NotNull
     @Valid

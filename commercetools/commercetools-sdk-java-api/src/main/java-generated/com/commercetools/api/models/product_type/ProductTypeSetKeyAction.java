@@ -59,6 +59,10 @@ public interface ProductTypeSetKeyAction extends ProductTypeUpdateAction {
         return helper.apply(this);
     }
 
+    public static ProductTypeSetKeyAction ofUnset() {
+        return ProductTypeSetKeyAction.of();
+    }
+
     public static com.fasterxml.jackson.core.type.TypeReference<ProductTypeSetKeyAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ProductTypeSetKeyAction>() {
             @Override

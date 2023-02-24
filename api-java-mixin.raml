@@ -457,7 +457,7 @@ types:
       }
   ProductSetImageLabelAction:
     (java-mixin): |
-      public static ProductSetImageLabelAction ofUnset(final Long variantId, final String imageUrl, @javax.annotation.Nullable final Boolean staged) {
+      public static ProductSetImageLabelAction ofUnset(final Long variantId, final String imageUrl, final Boolean staged) {
           return ProductSetImageLabelActionBuilder.of().variantId(variantId).imageUrl(imageUrl).staged(staged).build();
       }
 
@@ -481,7 +481,7 @@ types:
       }
 
       public static ProductSetProductPriceCustomFieldAction ofUnsetStaged(final String name, final String priceId,
-              @javax.annotation.Nullable final Boolean staged) {
+              final Boolean staged) {
           return ProductSetProductPriceCustomFieldActionBuilder.of().name(name).priceId(priceId).staged(staged).build();
       }
   ProductSetAttributeAction:
@@ -498,7 +498,7 @@ types:
           return ProductSetAttributeActionBuilder.of().variantId(variantId).name(name).build();
       }
 
-      public static ProductSetAttributeAction ofUnsetAttribute(final Long variantId, final String name, @javax.annotation.Nullable final Boolean staged) {
+      public static ProductSetAttributeAction ofUnsetAttribute(final Long variantId, final String name, final Boolean staged) {
           return ProductSetAttributeActionBuilder.of().variantId(variantId).name(name).staged(staged).build();
       }
 
@@ -516,10 +516,10 @@ types:
   ProductSetAttributeInAllVariantsAction:
     (java-mixin): |
       public static ProductSetAttributeInAllVariantsAction ofUnsetAttribute(final String name) {
-          return ofUnsetAttribute(name, null);
+          return ProductSetAttributeInAllVariantsActionBuilder.of().name(name).build();
       }
 
-      public static ProductSetAttributeInAllVariantsAction ofUnsetAttribute(final String name, @javax.annotation.Nullable final Boolean staged) {
+      public static ProductSetAttributeInAllVariantsAction ofUnsetAttribute(final String name, final Boolean staged) {
           return ProductSetAttributeInAllVariantsActionBuilder.of().name(name).staged(staged).build();
       }
   ProductDiscount:
@@ -999,6 +999,7 @@ types:
       public static HighPrecisionMoneyDraft of(javax.money.MonetaryAmount monetaryAmount, final int fractionDigits) {
           return MoneyUtil.draftOf(monetaryAmount, fractionDigits);
       }
+
       public static HighPrecisionMoneyDraft of(final HighPrecisionMoney template) {
           HighPrecisionMoneyDraftImpl instance = new HighPrecisionMoneyDraftImpl();
           instance.setCentAmount(template.getCentAmount());
@@ -1007,6 +1008,7 @@ types:
           instance.setPreciseAmount(template.getPreciseAmount());
           return instance;
       }
+
       @Override
       default javax.money.MonetaryOperator createMoneyOperator() {
           return amount -> MoneyUtil.draftOf(amount, getFractionDigits());

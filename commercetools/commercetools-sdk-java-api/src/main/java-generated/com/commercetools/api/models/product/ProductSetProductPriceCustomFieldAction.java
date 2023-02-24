@@ -100,7 +100,7 @@ public interface ProductSetProductPriceCustomFieldAction extends ProductUpdateAc
     }
 
     public static ProductSetProductPriceCustomFieldAction ofUnsetStaged(final String name, final String priceId,
-            @javax.annotation.Nullable final Boolean staged) {
+            final Boolean staged) {
         return ProductSetProductPriceCustomFieldActionBuilder.of().name(name).priceId(priceId).staged(staged).build();
     }
 

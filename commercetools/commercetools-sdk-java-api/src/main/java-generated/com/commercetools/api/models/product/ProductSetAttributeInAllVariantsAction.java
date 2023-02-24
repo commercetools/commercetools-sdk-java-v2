@@ -94,11 +94,10 @@ public interface ProductSetAttributeInAllVariantsAction extends ProductUpdateAct
     }
 
     public static ProductSetAttributeInAllVariantsAction ofUnsetAttribute(final String name) {
-        return ofUnsetAttribute(name, null);
+        return ProductSetAttributeInAllVariantsActionBuilder.of().name(name).build();
     }
 
-    public static ProductSetAttributeInAllVariantsAction ofUnsetAttribute(final String name,
-            @javax.annotation.Nullable final Boolean staged) {
+    public static ProductSetAttributeInAllVariantsAction ofUnsetAttribute(final String name, final Boolean staged) {
         return ProductSetAttributeInAllVariantsActionBuilder.of().name(name).staged(staged).build();
     }
 

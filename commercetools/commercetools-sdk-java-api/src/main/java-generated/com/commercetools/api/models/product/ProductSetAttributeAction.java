@@ -131,7 +131,7 @@ public interface ProductSetAttributeAction extends ProductUpdateAction {
     }
 
     public static ProductSetAttributeAction ofUnsetAttribute(final Long variantId, final String name,
-            @javax.annotation.Nullable final Boolean staged) {
+            final Boolean staged) {
         return ProductSetAttributeActionBuilder.of().variantId(variantId).name(name).staged(staged).build();
     }
 

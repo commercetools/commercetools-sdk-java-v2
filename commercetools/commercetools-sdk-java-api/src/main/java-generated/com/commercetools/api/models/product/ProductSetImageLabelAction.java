@@ -103,7 +103,7 @@ public interface ProductSetImageLabelAction extends ProductUpdateAction {
     }
 
     public static ProductSetImageLabelAction ofUnset(final Long variantId, final String imageUrl,
-            @javax.annotation.Nullable final Boolean staged) {
+            final Boolean staged) {
         return ProductSetImageLabelActionBuilder.of().variantId(variantId).imageUrl(imageUrl).staged(staged).build();
     }
 

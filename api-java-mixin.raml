@@ -796,6 +796,16 @@ types:
       public static ShoppingListSetTextLineItemCustomFieldAction ofUnset(final String name, final String textLineItemId) {
           return ShoppingListSetTextLineItemCustomFieldActionBuilder.of().name(name).textLineItemId(textLineItemId).build();
       }
+  ShoppingListSetDeleteDaysAfterLastModificationAction:
+    (java-mixin): |
+      public static ShoppingListSetDeleteDaysAfterLastModificationAction ofUnset() {
+          return ShoppingListSetDeleteDaysAfterLastModificationAction.of();
+      }
+  ShoppingListSetKeyAction:
+    (java-mixin): |
+      public static ShoppingListSetKeyAction ofUnset() {
+          return ShoppingListSetKeyAction.of();
+      }
   TextLineItem:
     (java-extends): 'com.commercetools.api.models.Customizable<TextLineItem>'
   TextLineItemDraft:

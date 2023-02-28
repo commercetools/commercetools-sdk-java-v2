@@ -38,7 +38,11 @@ public class CartsFixtures {
     }
 
     public static void withCart(final Consumer<Cart> consumer) {
-        CartDraft cartDraft = CartDraftBuilder.of().currency("EUR").country("DE").build();
+        CartDraft cartDraft = CartDraftBuilder.of()
+                .key(CommercetoolsTestUtils.randomKey())
+                .currency("EUR")
+                .country("DE")
+                .build();
 
         Cart cart = createCart(cartDraft);
         try {

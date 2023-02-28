@@ -1,20 +1,21 @@
 
 package commercetools.cart;
 
-import static commercetools.cart.CartsFixtures.createCart;
-import static commercetools.cart.CartsFixtures.deleteCart;
+import static commercetools.cart.CartsFixtures.*;
 import static commercetools.category.CategoryFixtures.withCategory;
 import static commercetools.product.ProductFixtures.*;
 import static commercetools.product_type.ProductTypeFixtures.withProductType;
 import static commercetools.tax_category.TaxCategoryFixtures.withTaxCategory;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
+import java.util.function.BiFunction;
 
-import com.commercetools.api.models.cart.Cart;
-import com.commercetools.api.models.cart.CartDraft;
-import com.commercetools.api.models.cart.CartDraftBuilder;
+import com.commercetools.api.models.cart.*;
+import com.commercetools.api.models.discount_code.DiscountCode;
 import com.commercetools.api.models.product.Product;
+import commercetools.discount_code.DiscountCodeFixtures;
 import commercetools.product.ProductFixtures;
 import commercetools.utils.CommercetoolsTestUtils;
 
@@ -22,6 +23,33 @@ import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 public class CartIntegrationTests {
+
+    @Test
+    public void queryById() {
+        CartsFixtures.withCart(cart -> {
+            Cart queriedCart = CommercetoolsTestUtils.getProjectApiRoot()
+                    .carts()
+                    .withId(cart.getId())
+                    .get()
+                    .executeBlocking()
+                    .getBody();
+            Assertions.assertThat(queriedCart).isEqualTo(cart);
+        });
+    }
+
+    @Test
+    public void queryByKey() {
+        CartsFixtures.withCart(cart -> {
+            Cart queriedCart = CommercetoolsTestUtils.getProjectApiRoot()
+                    .carts()
+                    .withKey(cart.getKey())
+                    .get()
+                    .executeBlocking()
+                    .getBody();
+            Assertions.assertThat(queriedCart).isEqualTo(cart);
+        });
+    }
+
     @Test
     public void queryByCustomerId() {
         CartsFixtures.withCartWithCustomer((cart, customer) -> {
@@ -86,6 +114,25 @@ public class CartIntegrationTests {
     }
 
     @Test
+    public void expandDiscountCodeReference() {
+        withUpdateableCartAndDiscount((cart, discountCode) -> {
+            Cart queriedCartWithExpandedDiscountCode = CommercetoolsTestUtils.getProjectApiRoot()
+                    .carts()
+                    .withId(cart.getId())
+                    .get()
+                    .withExpand(() -> "discountCodes[*].discountCode")
+                    .executeBlocking()
+                    .getBody();
+
+            Assertions
+                    .assertThat(
+                        queriedCartWithExpandedDiscountCode.getDiscountCodes().get(0).getDiscountCode().getObj())
+                    .isEqualTo(discountCode);
+            return queriedCartWithExpandedDiscountCode;
+        });
+    }
+
+    @Test
     public void bigCart() {
         withTaxCategory(
             taxCategory -> withCategory(category -> withProductType(createProductTypeDraft(), productType -> {
@@ -108,6 +155,30 @@ public class CartIntegrationTests {
                     products.forEach(ProductFixtures::deleteProduct);
                 }
             })));
+    }
+
+    private void withUpdateableCartAndDiscount(final BiFunction<Cart, DiscountCode, Cart> function) {
+        DiscountCodeFixtures.withUpdateableDiscountCode(discountCode -> {
+            CartsFixtures.withUpdateableCart(cart -> {
+                CartAddDiscountCodeAction cartAddDiscountCodeAction = CartAddDiscountCodeActionBuilder.of()
+                        .code(discountCode.getCode())
+                        .build();
+                Cart updatedCart = CommercetoolsTestUtils.getProjectApiRoot()
+                        .carts()
+                        .update(cart, Collections.singletonList(cartAddDiscountCodeAction))
+                        .executeBlocking()
+                        .getBody();
+
+                return function.apply(updatedCart, discountCode);
+            });
+
+            return CommercetoolsTestUtils.getProjectApiRoot()
+                    .discountCodes()
+                    .withId(discountCode.getId())
+                    .get()
+                    .executeBlocking()
+                    .getBody();
+        });
     }
 
 }

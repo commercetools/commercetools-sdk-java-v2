@@ -35,10 +35,10 @@ The benefit is that after the <strong>ApiRootBuilder</strong> has been defined, 
 ```
 2.x
 ```java
-        final ByProjectKeyRequestBuilder projectRoot = ApiRootBuilder.of()
+        final ProjectApiRoot projectRoot = ApiRootBuilder.of()
                 .defaultClient(ClientCredentials.of().withClientId("clientId").withClientSecret("clientSecret").build(),
                             ServiceRegion.GCP_EUROPE_WEST1.getOAuthTokenUrl(), ServiceRegion.GCP_EUROPE_WEST1.getApiUrl())
-                .buildForProject("projectKey");
+                .build("projectKey");
 ```
 
 <a id="timout-setting"></a>

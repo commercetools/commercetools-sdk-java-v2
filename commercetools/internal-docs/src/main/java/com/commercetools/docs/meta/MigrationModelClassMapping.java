@@ -3,7 +3,12 @@ package com.commercetools.docs.meta;
 
 /**
  *
- * <h2>Mapping of model classes from SDK v1 to v2</h2>
+ * <ul>
+ * <li><a href="#model-mapping">Mapping of model classes from SDK v1 to v2</a></li>
+ * <li><a href="#command-mapping">Mapping of commands from SDK v1 to v2</a></li>
+ * <li><a href="#package-mapping">Package name changes</a></li>
+ * </ul>
+ * <h2 id="model-mapping">Mapping of model classes from SDK v1 to v2</h2>
  *
  * <table>
  * <caption></caption>
@@ -2719,7 +2724,7 @@ package com.commercetools.docs.meta;
  * </tr>
  * </table>
  *
- * <h2>Mapping of commands from SDK v1 to v2</h2>
+ * <h2 id="command-mapping">Mapping of commands from SDK v1 to v2</h2>
  *
  * <table>
  * <caption></caption>
@@ -3094,7 +3099,7 @@ package com.commercetools.docs.meta;
  * </tr>
  * </table>
  *
- * <h2>Package name changes</h2>
+ * <h2 id="package-mapping">Package name changes</h2>
  *
  * Please be aware this list shows to which package a class may have been moved based on the source package
  * <table>

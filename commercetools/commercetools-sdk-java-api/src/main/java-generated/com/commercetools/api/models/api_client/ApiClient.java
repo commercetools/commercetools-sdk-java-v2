@@ -31,7 +31,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ApiClientImpl.class)
-public interface ApiClient {
+public interface ApiClient extends com.commercetools.api.models.Identifiable<ApiClient> {
 
     /**
      *  <p>The OAuth2 <code>client_id</code> that can be used to obtain an access token.</p>

@@ -77,7 +77,7 @@ loadScripts(document, 'script');</script>
 <section class="description">
 <dl class="notes">
 <dt>All Superinterfaces:</dt>
-<dd><code><a href="../common/BaseResource.html" title="interface in com.commercetools.api.models.common">BaseResource</a></code>, <code><a href="../DomainResource.html" title="interface in com.commercetools.api.models">DomainResource</a>&lt;<a href="ProductProjection.html" title="interface in com.commercetools.api.models.product">ProductProjection</a>&gt;</code>, <code><a href="../Identifiable.html" title="interface in com.commercetools.api.models">Identifiable</a>&lt;<a href="ProductProjection.html" title="interface in com.commercetools.api.models.product">ProductProjection</a>&gt;</code>, <code><a href="../common/MetaAttributes.html" title="interface in com.commercetools.api.models.common">MetaAttributes</a></code>, <code><a href="ProductDataLike.html" title="interface in com.commercetools.api.models.product">ProductDataLike</a></code>, <code><a href="../Versioned.html" title="interface in com.commercetools.api.models">Versioned</a>&lt;<a href="ProductProjection.html" title="interface in com.commercetools.api.models.product">ProductProjection</a>&gt;</code>, <code><a href="../WithKey.html" title="interface in com.commercetools.api.models">WithKey</a></code>, <code><a href="../common/WithLocalizedSlug.html" title="interface in com.commercetools.api.models.common">WithLocalizedSlug</a></code></dd>
+<dd><code><a href="../common/BaseResource.html" title="interface in com.commercetools.api.models.common">BaseResource</a></code>, <code><a href="../DomainResource.html" title="interface in com.commercetools.api.models">DomainResource</a>&lt;<a href="ProductProjection.html" title="interface in com.commercetools.api.models.product">ProductProjection</a>&gt;</code>, <code><a href="../Identifiable.html" title="interface in com.commercetools.api.models">Identifiable</a>&lt;<a href="ProductProjection.html" title="interface in com.commercetools.api.models.product">ProductProjection</a>&gt;</code>, <code><a href="../common/MetaAttributes.html" title="interface in com.commercetools.api.models.common">MetaAttributes</a></code>, <code><a href="ProductDataLike.html" title="interface in com.commercetools.api.models.product">ProductDataLike</a></code>, <code><a href="ProductProjectionMixin.html" title="interface in com.commercetools.api.models.product">ProductProjectionMixin</a></code>, <code><a href="../Versioned.html" title="interface in com.commercetools.api.models">Versioned</a>&lt;<a href="ProductProjection.html" title="interface in com.commercetools.api.models.product">ProductProjection</a>&gt;</code>, <code><a href="../WithKey.html" title="interface in com.commercetools.api.models">WithKey</a></code>, <code><a href="../common/WithLocalizedSlug.html" title="interface in com.commercetools.api.models.common">WithLocalizedSlug</a></code></dd>
 </dl>
 <dl class="notes">
 <dt>All Known Implementing Classes:</dt>
@@ -85,7 +85,7 @@ loadScripts(document, 'script');</script>
 </dl>
 <hr>
 <div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductProjection.html#line.46">ProductProjection</a></span><span class="extends-implements">
-extends <a href="../common/BaseResource.html" title="interface in com.commercetools.api.models.common">BaseResource</a>, <a href="ProductDataLike.html" title="interface in com.commercetools.api.models.product">ProductDataLike</a>, <a href="../DomainResource.html" title="interface in com.commercetools.api.models">DomainResource</a>&lt;<a href="ProductProjection.html" title="interface in com.commercetools.api.models.product">ProductProjection</a>&gt;, <a href="../WithKey.html" title="interface in com.commercetools.api.models">WithKey</a></span></div>
+extends <a href="../common/BaseResource.html" title="interface in com.commercetools.api.models.common">BaseResource</a>, <a href="ProductDataLike.html" title="interface in com.commercetools.api.models.product">ProductDataLike</a>, <a href="ProductProjectionMixin.html" title="interface in com.commercetools.api.models.product">ProductProjectionMixin</a>, <a href="../DomainResource.html" title="interface in com.commercetools.api.models">DomainResource</a>&lt;<a href="ProductProjection.html" title="interface in com.commercetools.api.models.product">ProductProjection</a>&gt;, <a href="../WithKey.html" title="interface in com.commercetools.api.models">WithKey</a></span></div>
 <div class="block">ProductProjection
 
  <hr>
@@ -339,7 +339,10 @@ extends <a href="../common/BaseResource.html" title="interface in com.commerceto
 <code><a href="../DomainResource.html#get()">get</a></code></div>
 <div class="inherited-list">
 <h3 id="methods.inherited.from.class.com.commercetools.api.models.product.ProductDataLike">Methods inherited from interface&nbsp;com.commercetools.api.models.product.<a href="ProductDataLike.html" title="interface in com.commercetools.api.models.product">ProductDataLike</a></h3>
-<code><a href="ProductDataLike.html#getAllVariants()">getAllVariants</a>, <a href="ProductDataLike.html#getVariant(long)">getVariant</a>, <a href="ProductDataLike.html#getVariantOrMaster(long)">getVariantOrMaster</a></code></div>
+<code><a href="ProductDataLike.html#findVariantBySku(java.lang.String)">findVariantBySku</a>, <a href="ProductDataLike.html#getAllVariants()">getAllVariants</a>, <a href="ProductDataLike.html#getVariant(long)">getVariant</a>, <a href="ProductDataLike.html#getVariantOrMaster(long)">getVariantOrMaster</a></code></div>
+<div class="inherited-list">
+<h3 id="methods.inherited.from.class.com.commercetools.api.models.product.ProductProjectionMixin">Methods inherited from interface&nbsp;com.commercetools.api.models.product.<a href="ProductProjectionMixin.html" title="interface in com.commercetools.api.models.product">ProductProjectionMixin</a></h3>
+<code><a href="ProductProjectionMixin.html#findFirstMatchingVariant()">findFirstMatchingVariant</a>, <a href="ProductProjectionMixin.html#findMatchingVariants()">findMatchingVariants</a>, <a href="ProductProjectionMixin.html#findVariant(com.commercetools.api.models.product.ByIdVariantIdentifier)">findVariant</a></code></div>
 </section>
 </li>
 </ul>
@@ -364,6 +367,8 @@ extends <a href="../common/BaseResource.html" title="interface in com.commerceto
 <dd><code><a href="../DomainResource.html#getId()">getId</a></code>&nbsp;in interface&nbsp;<code><a href="../DomainResource.html" title="interface in com.commercetools.api.models">DomainResource</a>&lt;<a href="ProductProjection.html" title="interface in com.commercetools.api.models.product">ProductProjection</a>&gt;</code></dd>
 <dt>Specified by:</dt>
 <dd><code><a href="../Identifiable.html#getId()">getId</a></code>&nbsp;in interface&nbsp;<code><a href="../Identifiable.html" title="interface in com.commercetools.api.models">Identifiable</a>&lt;<a href="ProductProjection.html" title="interface in com.commercetools.api.models.product">ProductProjection</a>&gt;</code></dd>
+<dt>Specified by:</dt>
+<dd><code><a href="ProductProjectionMixin.html#getId()">getId</a></code>&nbsp;in interface&nbsp;<code><a href="ProductProjectionMixin.html" title="interface in com.commercetools.api.models.product">ProductProjectionMixin</a></code></dd>
 <dt>Specified by:</dt>
 <dd><code><a href="../Versioned.html#getId()">getId</a></code>&nbsp;in interface&nbsp;<code><a href="../Versioned.html" title="interface in com.commercetools.api.models">Versioned</a>&lt;<a href="ProductProjection.html" title="interface in com.commercetools.api.models.product">ProductProjection</a>&gt;</code></dd>
 <dt>Returns:</dt>

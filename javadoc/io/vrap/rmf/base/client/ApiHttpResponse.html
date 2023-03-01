@@ -78,9 +78,14 @@ loadScripts(document, 'script');</script>
 <div class="inheritance">io.vrap.rmf.base.client.ApiHttpResponse&lt;U&gt;</div>
 </div>
 <section class="description">
+<dl class="notes">
+<dt>All Implemented Interfaces:</dt>
+<dd><code><a href="ContextAware.html" title="interface in io.vrap.rmf.base.client">ContextAware</a>&lt;<a href="ApiHttpResponse.html" title="class in io.vrap.rmf.base.client">ApiHttpResponse</a>&lt;U&gt;&gt;</code></dd>
+</dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/io/vrap/rmf/base/client/ApiHttpResponse.html#line.11">ApiHttpResponse</a>&lt;U&gt;</span>
-<span class="extends-implements">extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></span></div>
+<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/io/vrap/rmf/base/client/ApiHttpResponse.html#line.13">ApiHttpResponse</a>&lt;U&gt;</span>
+<span class="extends-implements">extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
+implements <a href="ContextAware.html" title="interface in io.vrap.rmf.base.client">ContextAware</a>&lt;<a href="ApiHttpResponse.html" title="class in io.vrap.rmf.base.client">ApiHttpResponse</a>&lt;U&gt;&gt;</span></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -101,8 +106,14 @@ loadScripts(document, 'script');</script>
  <a href="ApiHttpResponse.html" title="type parameter in ApiHttpResponse">U</a>&nbsp;body,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;message)</code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
-<div class="col-constructor-name even-row-color"><code><span class="member-name-link"><a href="#%3Cinit%3E(io.vrap.rmf.base.client.ApiHttpResponse)">ApiHttpResponse</a></span>&#8203;(<a href="ApiHttpResponse.html" title="class in io.vrap.rmf.base.client">ApiHttpResponse</a>&lt;<a href="ApiHttpResponse.html" title="type parameter in ApiHttpResponse">U</a>&gt;&nbsp;response)</code></div>
+<div class="col-constructor-name even-row-color"><code><span class="member-name-link"><a href="#%3Cinit%3E(int,io.vrap.rmf.base.client.ApiHttpHeaders,U,java.lang.String,java.util.Map)">ApiHttpResponse</a></span>&#8203;(int&nbsp;statusCode,
+ <a href="ApiHttpHeaders.html" title="class in io.vrap.rmf.base.client">ApiHttpHeaders</a>&nbsp;headers,
+ <a href="ApiHttpResponse.html" title="type parameter in ApiHttpResponse">U</a>&nbsp;body,
+ <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;message,
+ <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>,&#8203;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&gt;&nbsp;contextMap)</code></div>
 <div class="col-last even-row-color">&nbsp;</div>
+<div class="col-constructor-name odd-row-color"><code><span class="member-name-link"><a href="#%3Cinit%3E(io.vrap.rmf.base.client.ApiHttpResponse)">ApiHttpResponse</a></span>&#8203;(<a href="ApiHttpResponse.html" title="class in io.vrap.rmf.base.client">ApiHttpResponse</a>&lt;<a href="ApiHttpResponse.html" title="type parameter in ApiHttpResponse">U</a>&gt;&nbsp;response)</code></div>
+<div class="col-last odd-row-color">&nbsp;</div>
 </div>
 </section>
 </li>
@@ -117,6 +128,13 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
+<div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ApiHttpResponse.html" title="class in io.vrap.rmf.base.client">ApiHttpResponse</a>&lt;<a href="ApiHttpResponse.html" title="type parameter in ApiHttpResponse">U</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#addContext(java.lang.Object,java.lang.Object)">addContext</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;key,
+ <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;value)</code></div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code>&lt;T&gt;&nbsp;<a href="ApiHttpResponse.html" title="class in io.vrap.rmf.base.client">ApiHttpResponse</a>&lt;<a href="ApiHttpResponse.html" title="type parameter in ApiHttpResponse">U</a>&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#addContext(T)">addContext</a></span>&#8203;(T&nbsp;value)</code></div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code>boolean</code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#equals(java.lang.Object)">equals</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;o)</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
@@ -126,29 +144,41 @@ loadScripts(document, 'script');</script>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Optional.html" title="class or interface in java.util" class="external-link">Optional</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getBodyAsString()">getBodyAsString</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ApiHttpHeaders.html" title="class in io.vrap.rmf.base.client">ApiHttpHeaders</a></code></div>
-<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getHeaders()">getHeaders</a></span>()</code></div>
+<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code>&lt;T&gt;&nbsp;T</code></div>
+<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getContext(java.lang.Class)">getContext</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;T&gt;&nbsp;key)</code></div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></code></div>
+<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getContext(java.lang.Object)">getContext</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;key)</code></div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>,&#8203;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getContextMap()">getContextMap</a></span>()</code></div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ApiHttpHeaders.html" title="class in io.vrap.rmf.base.client">ApiHttpHeaders</a></code></div>
+<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getHeaders()">getHeaders</a></span>()</code></div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getMessage()">getMessage</a></span>()</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getMessage()">getMessage</a></span>()</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getSecuredBody()">getSecuredBody</a></span>()</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code>int</code></div>
-<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getStatusCode()">getStatusCode</a></span>()</code></div>
+<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getSecuredBody()">getSecuredBody</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code>int</code></div>
-<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#hashCode()">hashCode</a></span>()</code></div>
+<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getStatusCode()">getStatusCode</a></span>()</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code>int</code></div>
-<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#reflectionHashCode()">reflectionHashCode</a></span>()</code></div>
+<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#hashCode()">hashCode</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#toString()">toString</a></span>()</code></div>
+<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code>int</code></div>
+<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#reflectionHashCode()">reflectionHashCode</a></span>()</code></div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#toString()">toString</a></span>()</code></div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ApiHttpResponse.html" title="class in io.vrap.rmf.base.client">ApiHttpResponse</a>&lt;<a href="ApiHttpResponse.html" title="type parameter in ApiHttpResponse">U</a>&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#withBody(U)">withBody</a></span>&#8203;(<a href="ApiHttpResponse.html" title="type parameter in ApiHttpResponse">U</a>&nbsp;body)</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ApiHttpResponse.html" title="class in io.vrap.rmf.base.client">ApiHttpResponse</a>&lt;<a href="ApiHttpResponse.html" title="type parameter in ApiHttpResponse">U</a>&gt;</code></div>
-<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#withBody(U)">withBody</a></span>&#8203;(<a href="ApiHttpResponse.html" title="type parameter in ApiHttpResponse">U</a>&nbsp;body)</code></div>
+<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#withContextMap(java.util.Map)">withContextMap</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>,&#8203;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&gt;&nbsp;contextMap)</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ApiHttpResponse.html" title="class in io.vrap.rmf.base.client">ApiHttpResponse</a>&lt;<a href="ApiHttpResponse.html" title="type parameter in ApiHttpResponse">U</a>&gt;</code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#withHeaders(io.vrap.rmf.base.client.ApiHttpHeaders)">withHeaders</a></span>&#8203;(<a href="ApiHttpHeaders.html" title="class in io.vrap.rmf.base.client">ApiHttpHeaders</a>&nbsp;headers)</code></div>
@@ -179,7 +209,7 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="&lt;init&gt;(int,io.vrap.rmf.base.client.ApiHttpHeaders,U)">
 <h3 id="&lt;init&gt;(int,io.vrap.rmf.base.client.ApiHttpHeaders,java.lang.Object)">ApiHttpResponse</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/io/vrap/rmf/base/client/ApiHttpResponse.html#line.18">ApiHttpResponse</a></span>&#8203;<span class="parameters">(int&nbsp;statusCode,
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/io/vrap/rmf/base/client/ApiHttpResponse.html#line.22">ApiHttpResponse</a></span>&#8203;<span class="parameters">(int&nbsp;statusCode,
  <a href="ApiHttpHeaders.html" title="class in io.vrap.rmf.base.client">ApiHttpHeaders</a>&nbsp;headers,
  <a href="ApiHttpResponse.html" title="type parameter in ApiHttpResponse">U</a>&nbsp;body)</span></div>
 </section>
@@ -187,16 +217,26 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="&lt;init&gt;(int,io.vrap.rmf.base.client.ApiHttpHeaders,U,java.lang.String)">
 <h3 id="&lt;init&gt;(int,io.vrap.rmf.base.client.ApiHttpHeaders,java.lang.Object,java.lang.String)">ApiHttpResponse</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/io/vrap/rmf/base/client/ApiHttpResponse.html#line.22">ApiHttpResponse</a></span>&#8203;<span class="parameters">(int&nbsp;statusCode,
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/io/vrap/rmf/base/client/ApiHttpResponse.html#line.26">ApiHttpResponse</a></span>&#8203;<span class="parameters">(int&nbsp;statusCode,
  <a href="ApiHttpHeaders.html" title="class in io.vrap.rmf.base.client">ApiHttpHeaders</a>&nbsp;headers,
  <a href="ApiHttpResponse.html" title="type parameter in ApiHttpResponse">U</a>&nbsp;body,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;message)</span></div>
 </section>
 </li>
 <li>
+<section class="detail" id="&lt;init&gt;(int,io.vrap.rmf.base.client.ApiHttpHeaders,U,java.lang.String,java.util.Map)">
+<h3 id="&lt;init&gt;(int,io.vrap.rmf.base.client.ApiHttpHeaders,java.lang.Object,java.lang.String,java.util.Map)">ApiHttpResponse</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/io/vrap/rmf/base/client/ApiHttpResponse.html#line.33">ApiHttpResponse</a></span>&#8203;<span class="parameters">(int&nbsp;statusCode,
+ <a href="ApiHttpHeaders.html" title="class in io.vrap.rmf.base.client">ApiHttpHeaders</a>&nbsp;headers,
+ <a href="ApiHttpResponse.html" title="type parameter in ApiHttpResponse">U</a>&nbsp;body,
+ <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;message,
+ <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>,&#8203;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&gt;&nbsp;contextMap)</span></div>
+</section>
+</li>
+<li>
 <section class="detail" id="&lt;init&gt;(io.vrap.rmf.base.client.ApiHttpResponse)">
 <h3>ApiHttpResponse</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/io/vrap/rmf/base/client/ApiHttpResponse.html#line.29">ApiHttpResponse</a></span>&#8203;<span class="parameters">(<a href="ApiHttpResponse.html" title="class in io.vrap.rmf.base.client">ApiHttpResponse</a>&lt;<a href="ApiHttpResponse.html" title="type parameter in ApiHttpResponse">U</a>&gt;&nbsp;response)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/io/vrap/rmf/base/client/ApiHttpResponse.html#line.42">ApiHttpResponse</a></span>&#8203;<span class="parameters">(<a href="ApiHttpResponse.html" title="class in io.vrap.rmf.base.client">ApiHttpResponse</a>&lt;<a href="ApiHttpResponse.html" title="type parameter in ApiHttpResponse">U</a>&gt;&nbsp;response)</span></div>
 </section>
 </li>
 </ul>
@@ -208,81 +248,142 @@ loadScripts(document, 'script');</script>
 <h2>Method Details</h2>
 <ul class="member-list">
 <li>
+<section class="detail" id="getContextMap()">
+<h3>getContextMap</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>,&#8203;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/io/vrap/rmf/base/client/ApiHttpResponse.html#line.50">getContextMap</a></span>()</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="ContextAware.html#getContextMap()">getContextMap</a></code>&nbsp;in interface&nbsp;<code><a href="ContextAware.html" title="interface in io.vrap.rmf.base.client">ContextAware</a>&lt;<a href="ApiHttpResponse.html" title="type parameter in ApiHttpResponse">U</a>&gt;</code></dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="withContextMap(java.util.Map)">
+<h3>withContextMap</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ApiHttpResponse.html" title="class in io.vrap.rmf.base.client">ApiHttpResponse</a>&lt;<a href="ApiHttpResponse.html" title="type parameter in ApiHttpResponse">U</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/io/vrap/rmf/base/client/ApiHttpResponse.html#line.54">withContextMap</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>,&#8203;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&gt;&nbsp;contextMap)</span></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="ContextAware.html#withContextMap(java.util.Map)">withContextMap</a></code>&nbsp;in interface&nbsp;<code><a href="ContextAware.html" title="interface in io.vrap.rmf.base.client">ContextAware</a>&lt;<a href="ApiHttpResponse.html" title="type parameter in ApiHttpResponse">U</a>&gt;</code></dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getContext(java.lang.Class)">
+<h3>getContext</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/io/vrap/rmf/base/client/ApiHttpResponse.html#line.61">getContext</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;T&gt;&nbsp;key)</span></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="ContextAware.html#getContext(java.lang.Class)">getContext</a></code>&nbsp;in interface&nbsp;<code><a href="ContextAware.html" title="interface in io.vrap.rmf.base.client">ContextAware</a>&lt;<a href="ApiHttpResponse.html" title="type parameter in ApiHttpResponse">U</a>&gt;</code></dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="addContext(T)">
+<h3 id="addContext(java.lang.Object)">addContext</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type"><a href="ApiHttpResponse.html" title="class in io.vrap.rmf.base.client">ApiHttpResponse</a>&lt;<a href="ApiHttpResponse.html" title="type parameter in ApiHttpResponse">U</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/io/vrap/rmf/base/client/ApiHttpResponse.html#line.66">addContext</a></span>&#8203;<span class="parameters">(T&nbsp;value)</span></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="ContextAware.html#addContext(T)">addContext</a></code>&nbsp;in interface&nbsp;<code><a href="ContextAware.html" title="interface in io.vrap.rmf.base.client">ContextAware</a>&lt;<a href="ApiHttpResponse.html" title="type parameter in ApiHttpResponse">U</a>&gt;</code></dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getContext(java.lang.Object)">
+<h3>getContext</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/io/vrap/rmf/base/client/ApiHttpResponse.html#line.75">getContext</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;key)</span></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="ContextAware.html#getContext(java.lang.Object)">getContext</a></code>&nbsp;in interface&nbsp;<code><a href="ContextAware.html" title="interface in io.vrap.rmf.base.client">ContextAware</a>&lt;<a href="ApiHttpResponse.html" title="type parameter in ApiHttpResponse">U</a>&gt;</code></dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="addContext(java.lang.Object,java.lang.Object)">
+<h3>addContext</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ApiHttpResponse.html" title="class in io.vrap.rmf.base.client">ApiHttpResponse</a>&lt;<a href="ApiHttpResponse.html" title="type parameter in ApiHttpResponse">U</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/io/vrap/rmf/base/client/ApiHttpResponse.html#line.79">addContext</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;key,
+ <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;value)</span></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="ContextAware.html#addContext(java.lang.Object,java.lang.Object)">addContext</a></code>&nbsp;in interface&nbsp;<code><a href="ContextAware.html" title="interface in io.vrap.rmf.base.client">ContextAware</a>&lt;<a href="ApiHttpResponse.html" title="type parameter in ApiHttpResponse">U</a>&gt;</code></dd>
+</dl>
+</section>
+</li>
+<li>
 <section class="detail" id="getStatusCode()">
 <h3>getStatusCode</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/io/vrap/rmf/base/client/ApiHttpResponse.html#line.36">getStatusCode</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/io/vrap/rmf/base/client/ApiHttpResponse.html#line.88">getStatusCode</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="withStatusCode(int)">
 <h3>withStatusCode</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ApiHttpResponse.html" title="class in io.vrap.rmf.base.client">ApiHttpResponse</a>&lt;<a href="ApiHttpResponse.html" title="type parameter in ApiHttpResponse">U</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/io/vrap/rmf/base/client/ApiHttpResponse.html#line.40">withStatusCode</a></span>&#8203;<span class="parameters">(int&nbsp;statusCode)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ApiHttpResponse.html" title="class in io.vrap.rmf.base.client">ApiHttpResponse</a>&lt;<a href="ApiHttpResponse.html" title="type parameter in ApiHttpResponse">U</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/io/vrap/rmf/base/client/ApiHttpResponse.html#line.92">withStatusCode</a></span>&#8203;<span class="parameters">(int&nbsp;statusCode)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getHeaders()">
 <h3>getHeaders</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ApiHttpHeaders.html" title="class in io.vrap.rmf.base.client">ApiHttpHeaders</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/io/vrap/rmf/base/client/ApiHttpResponse.html#line.47">getHeaders</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ApiHttpHeaders.html" title="class in io.vrap.rmf.base.client">ApiHttpHeaders</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/io/vrap/rmf/base/client/ApiHttpResponse.html#line.99">getHeaders</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="withHeaders(io.vrap.rmf.base.client.ApiHttpHeaders)">
 <h3>withHeaders</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ApiHttpResponse.html" title="class in io.vrap.rmf.base.client">ApiHttpResponse</a>&lt;<a href="ApiHttpResponse.html" title="type parameter in ApiHttpResponse">U</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/io/vrap/rmf/base/client/ApiHttpResponse.html#line.51">withHeaders</a></span>&#8203;<span class="parameters">(<a href="ApiHttpHeaders.html" title="class in io.vrap.rmf.base.client">ApiHttpHeaders</a>&nbsp;headers)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ApiHttpResponse.html" title="class in io.vrap.rmf.base.client">ApiHttpResponse</a>&lt;<a href="ApiHttpResponse.html" title="type parameter in ApiHttpResponse">U</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/io/vrap/rmf/base/client/ApiHttpResponse.html#line.103">withHeaders</a></span>&#8203;<span class="parameters">(<a href="ApiHttpHeaders.html" title="class in io.vrap.rmf.base.client">ApiHttpHeaders</a>&nbsp;headers)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getBody()">
 <h3>getBody</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ApiHttpResponse.html" title="type parameter in ApiHttpResponse">U</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/io/vrap/rmf/base/client/ApiHttpResponse.html#line.58">getBody</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ApiHttpResponse.html" title="type parameter in ApiHttpResponse">U</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/io/vrap/rmf/base/client/ApiHttpResponse.html#line.110">getBody</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="withBody(U)">
 <h3 id="withBody(java.lang.Object)">withBody</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ApiHttpResponse.html" title="class in io.vrap.rmf.base.client">ApiHttpResponse</a>&lt;<a href="ApiHttpResponse.html" title="type parameter in ApiHttpResponse">U</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/io/vrap/rmf/base/client/ApiHttpResponse.html#line.62">withBody</a></span>&#8203;<span class="parameters">(<a href="ApiHttpResponse.html" title="type parameter in ApiHttpResponse">U</a>&nbsp;body)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ApiHttpResponse.html" title="class in io.vrap.rmf.base.client">ApiHttpResponse</a>&lt;<a href="ApiHttpResponse.html" title="type parameter in ApiHttpResponse">U</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/io/vrap/rmf/base/client/ApiHttpResponse.html#line.114">withBody</a></span>&#8203;<span class="parameters">(<a href="ApiHttpResponse.html" title="type parameter in ApiHttpResponse">U</a>&nbsp;body)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getMessage()">
 <h3>getMessage</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/io/vrap/rmf/base/client/ApiHttpResponse.html#line.69">getMessage</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/io/vrap/rmf/base/client/ApiHttpResponse.html#line.121">getMessage</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="withMessage(java.lang.String)">
 <h3>withMessage</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ApiHttpResponse.html" title="class in io.vrap.rmf.base.client">ApiHttpResponse</a>&lt;<a href="ApiHttpResponse.html" title="type parameter in ApiHttpResponse">U</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/io/vrap/rmf/base/client/ApiHttpResponse.html#line.73">withMessage</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;message)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ApiHttpResponse.html" title="class in io.vrap.rmf.base.client">ApiHttpResponse</a>&lt;<a href="ApiHttpResponse.html" title="type parameter in ApiHttpResponse">U</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/io/vrap/rmf/base/client/ApiHttpResponse.html#line.125">withMessage</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;message)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="toString()">
 <h3>toString</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/io/vrap/rmf/base/client/ApiHttpResponse.html#line.80">toString</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/io/vrap/rmf/base/client/ApiHttpResponse.html#line.132">toString</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getBodyAsString()">
 <h3>getBodyAsString</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Optional.html" title="class or interface in java.util" class="external-link">Optional</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/io/vrap/rmf/base/client/ApiHttpResponse.html#line.93">getBodyAsString</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Optional.html" title="class or interface in java.util" class="external-link">Optional</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/io/vrap/rmf/base/client/ApiHttpResponse.html#line.145">getBodyAsString</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getSecuredBody()">
 <h3>getSecuredBody</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/io/vrap/rmf/base/client/ApiHttpResponse.html#line.102">getSecuredBody</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/io/vrap/rmf/base/client/ApiHttpResponse.html#line.154">getSecuredBody</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="equals(java.lang.Object)">
 <h3>equals</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/io/vrap/rmf/base/client/ApiHttpResponse.html#line.110">equals</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;o)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/io/vrap/rmf/base/client/ApiHttpResponse.html#line.162">equals</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;o)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="hashCode()">
 <h3>hashCode</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/io/vrap/rmf/base/client/ApiHttpResponse.html#line.127">hashCode</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/io/vrap/rmf/base/client/ApiHttpResponse.html#line.180">hashCode</a></span>()</div>
 </section>
 </li>
 <li>

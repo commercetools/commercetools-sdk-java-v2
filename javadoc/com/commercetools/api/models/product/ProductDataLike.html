@@ -81,14 +81,14 @@ loadScripts(document, 'script');</script>
 </dl>
 <dl class="notes">
 <dt>All Known Subinterfaces:</dt>
-<dd><code><a href="ProductData.html" title="interface in com.commercetools.api.models.product">ProductData</a></code>, <code><a href="ProductProjection.html" title="interface in com.commercetools.api.models.product">ProductProjection</a></code></dd>
+<dd><code><a href="ProductData.html" title="interface in com.commercetools.api.models.product">ProductData</a></code>, <code><a href="ProductProjection.html" title="interface in com.commercetools.api.models.product">ProductProjection</a></code>, <code><a href="ProductProjectionMixin.html" title="interface in com.commercetools.api.models.product">ProductProjectionMixin</a></code></dd>
 </dl>
 <dl class="notes">
 <dt>All Known Implementing Classes:</dt>
 <dd><code><a href="ProductDataImpl.html" title="class in com.commercetools.api.models.product">ProductDataImpl</a></code>, <code><a href="ProductProjectionImpl.html" title="class in com.commercetools.api.models.product">ProductProjectionImpl</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductDataLike.html#line.17">ProductDataLike</a></span><span class="extends-implements">
+<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductDataLike.html#line.19">ProductDataLike</a></span><span class="extends-implements">
 extends <a href="../common/WithLocalizedSlug.html" title="interface in com.commercetools.api.models.common">WithLocalizedSlug</a>, <a href="../common/MetaAttributes.html" title="interface in com.commercetools.api.models.common">MetaAttributes</a></span></div>
 <div class="block">Interface to describe commonalities between differen product representations</div>
 </section>
@@ -105,56 +105,61 @@ extends <a href="../common/WithLocalizedSlug.html" title="interface in com.comme
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
-<div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table"><code>default <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ProductVariant.html" title="interface in com.commercetools.api.models.product">ProductVariant</a>&gt;</code></div>
-<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table"><code><span class="member-name-link"><a href="#getAllVariants()">getAllVariants</a></span>()</code></div>
+<div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table"><code>default <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Optional.html" title="class or interface in java.util" class="external-link">Optional</a>&lt;<a href="ProductVariant.html" title="interface in com.commercetools.api.models.product">ProductVariant</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table"><code><span class="member-name-link"><a href="#findVariantBySku(java.lang.String)">findVariantBySku</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;sku)</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table">
+<div class="block">Finds a variant by SKU.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table"><code>default <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ProductVariant.html" title="interface in com.commercetools.api.models.product">ProductVariant</a>&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table"><code><span class="member-name-link"><a href="#getAllVariants()">getAllVariants</a></span>()</code></div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table">
 <div class="block">Gets all variants in the product including the master variant as first element in the list.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../category/CategoryReference.html" title="interface in com.commercetools.api.models.category">CategoryReference</a>&gt;</code></div>
-<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getCategories()">getCategories</a></span>()</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><a href="CategoryOrderHints.html" title="interface in com.commercetools.api.models.product">CategoryOrderHints</a></code></div>
-<div class="col-second even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getCategoryOrderHints()">getCategoryOrderHints</a></span>()</code></div>
+<div class="col-first even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../category/CategoryReference.html" title="interface in com.commercetools.api.models.category">CategoryReference</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getCategories()">getCategories</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a></code></div>
-<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getDescription()">getDescription</a></span>()</code></div>
+<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><a href="CategoryOrderHints.html" title="interface in com.commercetools.api.models.product">CategoryOrderHints</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getCategoryOrderHints()">getCategoryOrderHints</a></span>()</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><a href="ProductVariant.html" title="interface in com.commercetools.api.models.product">ProductVariant</a></code></div>
-<div class="col-second even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getMasterVariant()">getMasterVariant</a></span>()</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
+<div class="col-first even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a></code></div>
+<div class="col-second even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getDescription()">getDescription</a></span>()</code></div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><a href="ProductVariant.html" title="interface in com.commercetools.api.models.product">ProductVariant</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getMasterVariant()">getMasterVariant</a></span>()</code></div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
 <div class="block">Returns the master variant.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a></code></div>
-<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getMetaDescription()">getMetaDescription</a></span>()</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a></code></div>
-<div class="col-second even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getMetaKeywords()">getMetaKeywords</a></span>()</code></div>
+<div class="col-second even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getMetaDescription()">getMetaDescription</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a></code></div>
-<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getMetaTitle()">getMetaTitle</a></span>()</code></div>
+<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getMetaKeywords()">getMetaKeywords</a></span>()</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a></code></div>
-<div class="col-second even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getName()">getName</a></span>()</code></div>
+<div class="col-second even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getMetaTitle()">getMetaTitle</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><a href="SearchKeywords.html" title="interface in com.commercetools.api.models.product">SearchKeywords</a></code></div>
-<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getSearchKeywords()">getSearchKeywords</a></span>()</code></div>
+<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getName()">getName</a></span>()</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a></code></div>
-<div class="col-second even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getSlug()">getSlug</a></span>()</code></div>
+<div class="col-first even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><a href="SearchKeywords.html" title="interface in com.commercetools.api.models.product">SearchKeywords</a></code></div>
+<div class="col-second even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getSearchKeywords()">getSearchKeywords</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table"><code>default <a href="ProductVariant.html" title="interface in com.commercetools.api.models.product">ProductVariant</a></code></div>
-<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table"><code><span class="member-name-link"><a href="#getVariant(long)">getVariant</a></span>&#8203;(long&nbsp;variantId)</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table">
+<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getSlug()">getSlug</a></span>()</code></div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table"><code>default <a href="ProductVariant.html" title="interface in com.commercetools.api.models.product">ProductVariant</a></code></div>
+<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table"><code><span class="member-name-link"><a href="#getVariant(long)">getVariant</a></span>&#8203;(long&nbsp;variantId)</code></div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table">
 <div class="block">Finds a product variant by id.</div>
 </div>
-<div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table"><code>default <a href="ProductVariant.html" title="interface in com.commercetools.api.models.product">ProductVariant</a></code></div>
-<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table"><code><span class="member-name-link"><a href="#getVariantOrMaster(long)">getVariantOrMaster</a></span>&#8203;(long&nbsp;variantId)</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table">
+<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table"><code>default <a href="ProductVariant.html" title="interface in com.commercetools.api.models.product">ProductVariant</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table"><code><span class="member-name-link"><a href="#getVariantOrMaster(long)">getVariantOrMaster</a></span>&#8203;(long&nbsp;variantId)</code></div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table">
 <div class="block">Finds a product variant by id and returns the master variant if not variant with the id is present.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ProductVariant.html" title="interface in com.commercetools.api.models.product">ProductVariant</a>&gt;</code></div>
-<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getVariants()">getVariants</a></span>()</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
+<div class="col-first even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ProductVariant.html" title="interface in com.commercetools.api.models.product">ProductVariant</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getVariants()">getVariants</a></span>()</code></div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
 <div class="block">Gets the variants which are not identical to the master variant.</div>
 </div>
 </div>
@@ -174,26 +179,26 @@ extends <a href="../common/WithLocalizedSlug.html" title="interface in com.comme
 <li>
 <section class="detail" id="getName()">
 <h3>getName</h3>
-<div class="member-signature"><span class="return-type"><a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductDataLike.html#line.19">getName</a></span>()</div>
+<div class="member-signature"><span class="return-type"><a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductDataLike.html#line.21">getName</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getCategories()">
 <h3>getCategories</h3>
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../category/CategoryReference.html" title="interface in com.commercetools.api.models.category">CategoryReference</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductDataLike.html#line.21">getCategories</a></span>()</div>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../category/CategoryReference.html" title="interface in com.commercetools.api.models.category">CategoryReference</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductDataLike.html#line.23">getCategories</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getDescription()">
 <h3>getDescription</h3>
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
-</span><span class="return-type"><a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductDataLike.html#line.23">getDescription</a></span>()</div>
+</span><span class="return-type"><a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductDataLike.html#line.25">getDescription</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getSlug()">
 <h3>getSlug</h3>
-<div class="member-signature"><span class="return-type"><a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductDataLike.html#line.26">getSlug</a></span>()</div>
+<div class="member-signature"><span class="return-type"><a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductDataLike.html#line.28">getSlug</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../common/WithLocalizedSlug.html#getSlug()">getSlug</a></code>&nbsp;in interface&nbsp;<code><a href="../common/WithLocalizedSlug.html" title="interface in com.commercetools.api.models.common">WithLocalizedSlug</a></code></dd>
@@ -204,7 +209,7 @@ extends <a href="../common/WithLocalizedSlug.html" title="interface in com.comme
 <section class="detail" id="getMetaTitle()">
 <h3>getMetaTitle</h3>
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
-</span><span class="return-type"><a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductDataLike.html#line.28">getMetaTitle</a></span>()</div>
+</span><span class="return-type"><a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductDataLike.html#line.30">getMetaTitle</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../common/MetaAttributes.html#getMetaTitle()">getMetaTitle</a></code>&nbsp;in interface&nbsp;<code><a href="../common/MetaAttributes.html" title="interface in com.commercetools.api.models.common">MetaAttributes</a></code></dd>
@@ -215,7 +220,7 @@ extends <a href="../common/WithLocalizedSlug.html" title="interface in com.comme
 <section class="detail" id="getMetaDescription()">
 <h3>getMetaDescription</h3>
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
-</span><span class="return-type"><a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductDataLike.html#line.31">getMetaDescription</a></span>()</div>
+</span><span class="return-type"><a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductDataLike.html#line.33">getMetaDescription</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../common/MetaAttributes.html#getMetaDescription()">getMetaDescription</a></code>&nbsp;in interface&nbsp;<code><a href="../common/MetaAttributes.html" title="interface in com.commercetools.api.models.common">MetaAttributes</a></code></dd>
@@ -226,7 +231,7 @@ extends <a href="../common/WithLocalizedSlug.html" title="interface in com.comme
 <section class="detail" id="getMetaKeywords()">
 <h3>getMetaKeywords</h3>
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
-</span><span class="return-type"><a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductDataLike.html#line.34">getMetaKeywords</a></span>()</div>
+</span><span class="return-type"><a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductDataLike.html#line.36">getMetaKeywords</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../common/MetaAttributes.html#getMetaKeywords()">getMetaKeywords</a></code>&nbsp;in interface&nbsp;<code><a href="../common/MetaAttributes.html" title="interface in com.commercetools.api.models.common">MetaAttributes</a></code></dd>
@@ -236,7 +241,7 @@ extends <a href="../common/WithLocalizedSlug.html" title="interface in com.comme
 <li>
 <section class="detail" id="getMasterVariant()">
 <h3>getMasterVariant</h3>
-<div class="member-signature"><span class="return-type"><a href="ProductVariant.html" title="interface in com.commercetools.api.models.product">ProductVariant</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductDataLike.html#line.44">getMasterVariant</a></span>()</div>
+<div class="member-signature"><span class="return-type"><a href="ProductVariant.html" title="interface in com.commercetools.api.models.product">ProductVariant</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductDataLike.html#line.46">getMasterVariant</a></span>()</div>
 <div class="block">Returns the master variant. Every product as 1 to n variants, so this is always present.</div>
 <dl class="notes">
 <dt>Returns:</dt>
@@ -250,7 +255,7 @@ extends <a href="../common/WithLocalizedSlug.html" title="interface in com.comme
 <li>
 <section class="detail" id="getVariants()">
 <h3>getVariants</h3>
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ProductVariant.html" title="interface in com.commercetools.api.models.product">ProductVariant</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductDataLike.html#line.55">getVariants</a></span>()</div>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ProductVariant.html" title="interface in com.commercetools.api.models.product">ProductVariant</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductDataLike.html#line.57">getVariants</a></span>()</div>
 <div class="block">Gets the variants which are not identical to the master variant. This list can be empty.</div>
 <dl class="notes">
 <dt>Returns:</dt>
@@ -264,7 +269,7 @@ extends <a href="../common/WithLocalizedSlug.html" title="interface in com.comme
 <li>
 <section class="detail" id="getAllVariants()">
 <h3>getAllVariants</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ProductVariant.html" title="interface in com.commercetools.api.models.product">ProductVariant</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductDataLike.html#line.64">getAllVariants</a></span>()</div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ProductVariant.html" title="interface in com.commercetools.api.models.product">ProductVariant</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductDataLike.html#line.66">getAllVariants</a></span>()</div>
 <div class="block">Gets all variants in the product including the master variant as first element in the list.</div>
 <dl class="notes">
 <dt>Returns:</dt>
@@ -279,7 +284,7 @@ extends <a href="../common/WithLocalizedSlug.html" title="interface in com.comme
 <section class="detail" id="getVariant(long)">
 <h3>getVariant</h3>
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
-</span><span class="modifiers">default</span>&nbsp;<span class="return-type"><a href="ProductVariant.html" title="interface in com.commercetools.api.models.product">ProductVariant</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductDataLike.html#line.75">getVariant</a></span>&#8203;<span class="parameters">(long&nbsp;variantId)</span></div>
+</span><span class="modifiers">default</span>&nbsp;<span class="return-type"><a href="ProductVariant.html" title="interface in com.commercetools.api.models.product">ProductVariant</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductDataLike.html#line.77">getVariant</a></span>&#8203;<span class="parameters">(long&nbsp;variantId)</span></div>
 <div class="block">Finds a product variant by id.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -292,7 +297,7 @@ extends <a href="../common/WithLocalizedSlug.html" title="interface in com.comme
 <li>
 <section class="detail" id="getVariantOrMaster(long)">
 <h3>getVariantOrMaster</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type"><a href="ProductVariant.html" title="interface in com.commercetools.api.models.product">ProductVariant</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductDataLike.html#line.92">getVariantOrMaster</a></span>&#8203;<span class="parameters">(long&nbsp;variantId)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type"><a href="ProductVariant.html" title="interface in com.commercetools.api.models.product">ProductVariant</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductDataLike.html#line.94">getVariantOrMaster</a></span>&#8203;<span class="parameters">(long&nbsp;variantId)</span></div>
 <div class="block">Finds a product variant by id and returns the master variant if not variant with the id is present.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -303,16 +308,29 @@ extends <a href="../common/WithLocalizedSlug.html" title="interface in com.comme
 </section>
 </li>
 <li>
+<section class="detail" id="findVariantBySku(java.lang.String)">
+<h3>findVariantBySku</h3>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Optional.html" title="class or interface in java.util" class="external-link">Optional</a>&lt;<a href="ProductVariant.html" title="interface in com.commercetools.api.models.product">ProductVariant</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductDataLike.html#line.103">findVariantBySku</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;sku)</span></div>
+<div class="block">Finds a variant by SKU.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>sku</code> - the sku for the variant</dd>
+<dt>Returns:</dt>
+<dd>Optional of the found variant</dd>
+</dl>
+</section>
+</li>
+<li>
 <section class="detail" id="getSearchKeywords()">
 <h3>getSearchKeywords</h3>
-<div class="member-signature"><span class="return-type"><a href="SearchKeywords.html" title="interface in com.commercetools.api.models.product">SearchKeywords</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductDataLike.html#line.96">getSearchKeywords</a></span>()</div>
+<div class="member-signature"><span class="return-type"><a href="SearchKeywords.html" title="interface in com.commercetools.api.models.product">SearchKeywords</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductDataLike.html#line.108">getSearchKeywords</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getCategoryOrderHints()">
 <h3>getCategoryOrderHints</h3>
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
-</span><span class="return-type"><a href="CategoryOrderHints.html" title="interface in com.commercetools.api.models.product">CategoryOrderHints</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductDataLike.html#line.98">getCategoryOrderHints</a></span>()</div>
+</span><span class="return-type"><a href="CategoryOrderHints.html" title="interface in com.commercetools.api.models.product">CategoryOrderHints</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductDataLike.html#line.110">getCategoryOrderHints</a></span>()</div>
 </section>
 </li>
 </ul>

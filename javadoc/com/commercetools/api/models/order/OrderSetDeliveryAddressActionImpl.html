@@ -140,7 +140,9 @@ implements <a href="OrderSetDeliveryAddressAction.html" title="interface in com.
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="../common/BaseAddress.html" title="interface in com.commercetools.api.models.common">BaseAddress</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getAddress()">getAddress</a></span>()</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">Polymorphic base type that represents a postal address and contact details.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getDeliveryId()">getDeliveryId</a></span>()</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
@@ -222,6 +224,7 @@ implements <a href="OrderSetDeliveryAddressAction.html" title="interface in com.
 <section class="detail" id="getAddress()">
 <h3>getAddress</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/BaseAddress.html" title="interface in com.commercetools.api.models.common">BaseAddress</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderSetDeliveryAddressActionImpl.html#line.61">getAddress</a></span>()</div>
+<div class="block"><p>Polymorphic base type that represents a postal address and contact details. Depending on the read or write action, it can be either Address or AddressDraft that only differ in the data type for the optional <code>custom</code> field.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="OrderSetDeliveryAddressAction.html#getAddress()">getAddress</a></code>&nbsp;in interface&nbsp;<code><a href="OrderSetDeliveryAddressAction.html" title="interface in com.commercetools.api.models.order">OrderSetDeliveryAddressAction</a></code></dd>

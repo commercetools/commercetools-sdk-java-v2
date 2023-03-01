@@ -75,7 +75,7 @@ loadScripts(document, 'script');</script>
 </div>
 <section class="description">
 <hr>
-<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../src-html/com/commercetools/docs/meta/Logging.html#line.118">Logging</a></span>
+<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../src-html/com/commercetools/docs/meta/Logging.html#line.143">Logging</a></span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></span></div>
 <div class="block"><h2 id=logging>Logging</h2>
 
@@ -191,7 +191,34 @@ loadScripts(document, 'script');</script>
  <pre><code>
  [pool-1-thread-1] DEBUG commercetools.products.request.commands - io.vrap.rmf.base.client.ApiHttpRequest@1d2c6948[method=POST,uri="https://api.europe-west1.gcp.commercetools.com/test-php-dev-integration-1/products",headers=[...],textInterpretedBody={"productType":{"id":"cda39953-23af-4e85-abb0-5b89517ec5f2","typeId":"product-type"},"name":{"random-string-b66de021-d2fa-4262-8837-94a6992a8cdc":"random-string-da28a010-e66b-49d4-a18b-f1bfc145d2f6"},...}]
  [pool-1-thread-1] DEBUG commercetools.products.request.queries - io.vrap.rmf.base.client.ApiHttpRequest@53667fdb[method=GET,uri="https://api.europe-west1.gcp.commercetools.com/test-php-dev-integration-1/products/ef745227-b115-4132-ba2c-4e46db80df79",headers=[...],textInterpretedBody=empty body]
- </code></pre></div>
+ </code></pre>
+
+ <h2 id=mdc_usage>Usage of Mapped Diagnostic Context</h2>
+
+ <p>The SDK uses <a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletableFuture.html" title="class or interface in java.util.concurrent" class="external-link"><code>CompletableFutures</code></a> extensively and the <a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ExecutorService.html" title="class or interface in java.util.concurrent" class="external-link"><code>ExecutorService</code></a> typically has a thread pool
+ to execute the futures. This could lead to the fact that the future is executed on different threads. In case the <code>MDC</code> is used by the application the context
+ could get lost while executing the futures. As the CompletableFutures don't allow attaching a Context you have to make them and the ExecutorService
+ context aware so that they will restore the MDC before executing the future tasks.</p>
+
+ <p>The SDK additionally supports the attachment of a <a href="../../../../io/vrap/rmf/base/client/Context.html" title="interface in io.vrap.rmf.base.client"><code>Context</code></a> to a client <a href="../../../../io/vrap/rmf/base/client/ContextApiHttpClient.html" title="interface in io.vrap.rmf.base.client"><code>ContextApiHttpClient</code></a>,
+ the <a href="../../../../io/vrap/rmf/base/client/ApiHttpRequest.html" title="class in io.vrap.rmf.base.client"><code>ApiHttpRequest</code></a> and the <a href="../../../../io/vrap/rmf/base/client/ApiHttpResponse.html" title="class in io.vrap.rmf.base.client"><code>ApiHttpResponse</code></a> by implementing the
+ <a href="../../../../io/vrap/rmf/base/client/ContextAware.html" title="interface in io.vrap.rmf.base.client"><code>ContextAware</code></a> interface</p>
+
+ <p>The <a href="../../api/client/ProjectApiRoot.html" title="class in com.commercetools.api.client"><code>ProjectApiRoot</code></a> also allows to add a <a href="../../../../io/vrap/rmf/base/client/Context.html" title="interface in io.vrap.rmf.base.client"><code>Context</code></a> to it. This is useful
+ to create a context aware root from a global instance when needed.</p>
+
+ <div id="example-ExamplesTest-mdcProjectApiRoot--%s" class=code-example><pre><code class='java'>ProjectApiRoot globalRoot = ProjectApiRoot.of("test");
+ProjectApiRoot apiRoot = ProjectApiRoot.withContext(globalRoot, new MDCContext());
+</code><p>See the <a href="https://github.com/commercetools/commercetools-sdk-java-v2/blob/master/commercetools/internal-docs/src/test/java/example/ExamplesTest.java" target="_blank">test code</a>.</pre></div>
+
+ <p>The above example creates a <a href="../../../../io/vrap/rmf/base/client/MDCContext.html" title="class in io.vrap.rmf.base.client"><code>MDCContext</code></a> and take a copy of the MDC. The ApiHttpClient will be wrapped in a ContextApiHttpClient
+ and set the context to all requests and responses executed.</p>
+
+ <p>The <a href="../../../../io/vrap/rmf/base/client/http/InternalLoggerMiddleware.html" title="interface in io.vrap.rmf.base.client.http"><code>InternalLoggerMiddleware</code></a> will restore the MDC before logging and clean up afterwards to avoid
+ pollution of threads with unrelated context data. The same applies for the <a href="../../api/client/ConcurrentModificationMiddleware.html" title="interface in com.commercetools.api.client"><code>ConcurrentModificationMiddleware</code></a></p>
+
+ <p>The usage of the <a href="../../../../io/vrap/rmf/base/client/Context.html" title="interface in io.vrap.rmf.base.client"><code>Context</code></a> object in the SDK allows further extensions to transport request related context data e.g.
+ for telemetry purposes.</p></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -229,7 +256,7 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="&lt;init&gt;()">
 <h3>Logging</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/docs/meta/Logging.html#line.118">Logging</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/docs/meta/Logging.html#line.143">Logging</a></span>()</div>
 </section>
 </li>
 </ul>

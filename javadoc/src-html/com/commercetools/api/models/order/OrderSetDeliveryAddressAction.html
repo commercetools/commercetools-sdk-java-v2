@@ -54,7 +54,7 @@
 <span class="source-line-no">041</span><span id="line.41">    public String getDeliveryId();</span>
 <span class="source-line-no">042</span><span id="line.42"></span>
 <span class="source-line-no">043</span><span id="line.43">    /**</span>
-<span class="source-line-no">044</span><span id="line.44">     *</span>
+<span class="source-line-no">044</span><span id="line.44">     *  &lt;p&gt;Polymorphic base type that represents a postal address and contact details. Depending on the read or write action, it can be either Address or AddressDraft that only differ in the data type for the optional &lt;code&gt;custom&lt;/code&gt; field.&lt;/p&gt;</span>
 <span class="source-line-no">045</span><span id="line.45">     */</span>
 <span class="source-line-no">046</span><span id="line.46">    @Valid</span>
 <span class="source-line-no">047</span><span id="line.47">    @JsonProperty("address")</span>
@@ -87,15 +87,19 @@
 <span class="source-line-no">074</span><span id="line.74">        return helper.apply(this);</span>
 <span class="source-line-no">075</span><span id="line.75">    }</span>
 <span class="source-line-no">076</span><span id="line.76"></span>
-<span class="source-line-no">077</span><span id="line.77">    public static com.fasterxml.jackson.core.type.TypeReference&lt;OrderSetDeliveryAddressAction&gt; typeReference() {</span>
-<span class="source-line-no">078</span><span id="line.78">        return new com.fasterxml.jackson.core.type.TypeReference&lt;OrderSetDeliveryAddressAction&gt;() {</span>
-<span class="source-line-no">079</span><span id="line.79">            @Override</span>
-<span class="source-line-no">080</span><span id="line.80">            public String toString() {</span>
-<span class="source-line-no">081</span><span id="line.81">                return "TypeReference&lt;OrderSetDeliveryAddressAction&gt;";</span>
-<span class="source-line-no">082</span><span id="line.82">            }</span>
-<span class="source-line-no">083</span><span id="line.83">        };</span>
-<span class="source-line-no">084</span><span id="line.84">    }</span>
-<span class="source-line-no">085</span><span id="line.85">}</span>
+<span class="source-line-no">077</span><span id="line.77">    public static OrderSetDeliveryAddressAction ofUnset(final String deliveryId) {</span>
+<span class="source-line-no">078</span><span id="line.78">        return OrderSetDeliveryAddressActionBuilder.of().deliveryId(deliveryId).build();</span>
+<span class="source-line-no">079</span><span id="line.79">    }</span>
+<span class="source-line-no">080</span><span id="line.80"></span>
+<span class="source-line-no">081</span><span id="line.81">    public static com.fasterxml.jackson.core.type.TypeReference&lt;OrderSetDeliveryAddressAction&gt; typeReference() {</span>
+<span class="source-line-no">082</span><span id="line.82">        return new com.fasterxml.jackson.core.type.TypeReference&lt;OrderSetDeliveryAddressAction&gt;() {</span>
+<span class="source-line-no">083</span><span id="line.83">            @Override</span>
+<span class="source-line-no">084</span><span id="line.84">            public String toString() {</span>
+<span class="source-line-no">085</span><span id="line.85">                return "TypeReference&lt;OrderSetDeliveryAddressAction&gt;";</span>
+<span class="source-line-no">086</span><span id="line.86">            }</span>
+<span class="source-line-no">087</span><span id="line.87">        };</span>
+<span class="source-line-no">088</span><span id="line.88">    }</span>
+<span class="source-line-no">089</span><span id="line.89">}</span>
 
 
 

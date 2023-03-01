@@ -33,65 +33,65 @@
 <span class="source-line-no">020</span><span id="line.20"></span>
 <span class="source-line-no">021</span><span id="line.21">import org.slf4j.Logger;</span>
 <span class="source-line-no">022</span><span id="line.22">import org.slf4j.LoggerFactory;</span>
-<span class="source-line-no">023</span><span id="line.23"></span>
-<span class="source-line-no">024</span><span id="line.24">import dev.failsafe.Failsafe;</span>
-<span class="source-line-no">025</span><span id="line.25">import dev.failsafe.FailsafeExecutor;</span>
-<span class="source-line-no">026</span><span id="line.26">import dev.failsafe.RetryPolicy;</span>
-<span class="source-line-no">027</span><span id="line.27">import dev.failsafe.event.ExecutionAttemptedEvent;</span>
-<span class="source-line-no">028</span><span id="line.28"></span>
-<span class="source-line-no">029</span><span id="line.29">/**</span>
-<span class="source-line-no">030</span><span id="line.30"> * Implementation of the {@link ConcurrentModificationMiddleware}. Uses {@link RetryPolicy} to retry upon {@link ConcurrentModificationException}.</span>
-<span class="source-line-no">031</span><span id="line.31"> * In case of a retry the request will an update request will be modified to include the</span>
-<span class="source-line-no">032</span><span id="line.32"> * {@link ConcurrentModificationException#getCurrentVersion() current version} reported by the error response.</span>
-<span class="source-line-no">033</span><span id="line.33"> */</span>
-<span class="source-line-no">034</span><span id="line.34">public class ConcurrentModificationMiddlewareImpl implements ConcurrentModificationMiddleware {</span>
-<span class="source-line-no">035</span><span id="line.35">    static final String loggerName = ClientBuilder.COMMERCETOOLS + ".retry.concurrent_modification";</span>
-<span class="source-line-no">036</span><span id="line.36">    private static final InternalLogger logger = InternalLogger.getLogger(loggerName);</span>
-<span class="source-line-no">037</span><span id="line.37">    private static final Logger classLogger = LoggerFactory.getLogger(ConcurrentModificationMiddleware.class);</span>
-<span class="source-line-no">038</span><span id="line.38"></span>
-<span class="source-line-no">039</span><span id="line.39">    public static final String VERSION = "version";</span>
-<span class="source-line-no">040</span><span id="line.40">    public static final int DEFAULT_MAX_DELAY = 60000;</span>
-<span class="source-line-no">041</span><span id="line.41">    public static final int DEFAULT_INITIAL_DELAY = 200;</span>
-<span class="source-line-no">042</span><span id="line.42"></span>
-<span class="source-line-no">043</span><span id="line.43">    private final ObjectMapper mapper;</span>
-<span class="source-line-no">044</span><span id="line.44">    private final FailsafeExecutor&lt;ApiHttpResponse&lt;byte[]&gt;&gt; executor;</span>
-<span class="source-line-no">045</span><span id="line.45"></span>
-<span class="source-line-no">046</span><span id="line.46">    public ConcurrentModificationMiddlewareImpl() {</span>
-<span class="source-line-no">047</span><span id="line.47">        this(1, DEFAULT_INITIAL_DELAY, DEFAULT_MAX_DELAY, new ObjectMapper());</span>
-<span class="source-line-no">048</span><span id="line.48">    }</span>
-<span class="source-line-no">049</span><span id="line.49"></span>
-<span class="source-line-no">050</span><span id="line.50">    public ConcurrentModificationMiddlewareImpl(final int maxRetries) {</span>
-<span class="source-line-no">051</span><span id="line.51">        this(maxRetries, DEFAULT_INITIAL_DELAY, DEFAULT_MAX_DELAY, new ObjectMapper());</span>
-<span class="source-line-no">052</span><span id="line.52">    }</span>
-<span class="source-line-no">053</span><span id="line.53"></span>
-<span class="source-line-no">054</span><span id="line.54">    public ConcurrentModificationMiddlewareImpl(final int maxRetries, final long delay, final long maxDelay) {</span>
-<span class="source-line-no">055</span><span id="line.55">        this(maxRetries, delay, maxDelay, new ObjectMapper());</span>
-<span class="source-line-no">056</span><span id="line.56">    }</span>
-<span class="source-line-no">057</span><span id="line.57"></span>
-<span class="source-line-no">058</span><span id="line.58">    public ConcurrentModificationMiddlewareImpl(final int maxRetries, final long delay, final long maxDelay,</span>
-<span class="source-line-no">059</span><span id="line.59">            ObjectMapper mapper) {</span>
-<span class="source-line-no">060</span><span id="line.60">        this.mapper = mapper;</span>
-<span class="source-line-no">061</span><span id="line.61">        RetryPolicy&lt;ApiHttpResponse&lt;byte[]&gt;&gt; retryPolicy = RetryPolicy.&lt;ApiHttpResponse&lt;byte[]&gt;&gt; builder()</span>
-<span class="source-line-no">062</span><span id="line.62">                .withBackoff(delay, maxDelay, ChronoUnit.MILLIS)</span>
-<span class="source-line-no">063</span><span id="line.63">                .withJitter(0.25)</span>
-<span class="source-line-no">064</span><span id="line.64">                .withMaxRetries(maxRetries)</span>
-<span class="source-line-no">065</span><span id="line.65">                .onRetry(this::logEventFailure)</span>
-<span class="source-line-no">066</span><span id="line.66">                .handle(ConcurrentModificationException.class)</span>
-<span class="source-line-no">067</span><span id="line.67">                .build();</span>
-<span class="source-line-no">068</span><span id="line.68">        this.executor = Failsafe.with(retryPolicy);</span>
-<span class="source-line-no">069</span><span id="line.69">    }</span>
-<span class="source-line-no">070</span><span id="line.70"></span>
-<span class="source-line-no">071</span><span id="line.71">    @Override</span>
-<span class="source-line-no">072</span><span id="line.72">    public CompletableFuture&lt;ApiHttpResponse&lt;byte[]&gt;&gt; invoke(ApiHttpRequest request,</span>
-<span class="source-line-no">073</span><span id="line.73">            Function&lt;ApiHttpRequest, CompletableFuture&lt;ApiHttpResponse&lt;byte[]&gt;&gt;&gt; next) {</span>
-<span class="source-line-no">074</span><span id="line.74"></span>
-<span class="source-line-no">075</span><span id="line.75">        Function&lt;Throwable, CompletableFuture&lt;ApiHttpResponse&lt;byte[]&gt;&gt;&gt; fn = (throwable) -&gt; {</span>
-<span class="source-line-no">076</span><span id="line.76">            if (throwable instanceof ConcurrentModificationException) {</span>
-<span class="source-line-no">077</span><span id="line.77">                final Long newVersion = ((ConcurrentModificationException) throwable).getCurrentVersion();</span>
-<span class="source-line-no">078</span><span id="line.78">                final JsonNode jsonNode;</span>
+<span class="source-line-no">023</span><span id="line.23">import org.slf4j.MDC;</span>
+<span class="source-line-no">024</span><span id="line.24"></span>
+<span class="source-line-no">025</span><span id="line.25">import dev.failsafe.Failsafe;</span>
+<span class="source-line-no">026</span><span id="line.26">import dev.failsafe.FailsafeExecutor;</span>
+<span class="source-line-no">027</span><span id="line.27">import dev.failsafe.RetryPolicy;</span>
+<span class="source-line-no">028</span><span id="line.28">import dev.failsafe.event.ExecutionAttemptedEvent;</span>
+<span class="source-line-no">029</span><span id="line.29"></span>
+<span class="source-line-no">030</span><span id="line.30">/**</span>
+<span class="source-line-no">031</span><span id="line.31"> * Implementation of the {@link ConcurrentModificationMiddleware}. Uses {@link RetryPolicy} to retry upon {@link ConcurrentModificationException}.</span>
+<span class="source-line-no">032</span><span id="line.32"> * In case of a retry the request will an update request will be modified to include the</span>
+<span class="source-line-no">033</span><span id="line.33"> * {@link ConcurrentModificationException#getCurrentVersion() current version} reported by the error response.</span>
+<span class="source-line-no">034</span><span id="line.34"> */</span>
+<span class="source-line-no">035</span><span id="line.35">public class ConcurrentModificationMiddlewareImpl implements ConcurrentModificationMiddleware {</span>
+<span class="source-line-no">036</span><span id="line.36">    static final String loggerName = ClientBuilder.COMMERCETOOLS + ".retry.concurrent_modification";</span>
+<span class="source-line-no">037</span><span id="line.37">    private static final InternalLogger logger = InternalLogger.getLogger(loggerName);</span>
+<span class="source-line-no">038</span><span id="line.38">    private static final Logger classLogger = LoggerFactory.getLogger(ConcurrentModificationMiddleware.class);</span>
+<span class="source-line-no">039</span><span id="line.39"></span>
+<span class="source-line-no">040</span><span id="line.40">    public static final String VERSION = "version";</span>
+<span class="source-line-no">041</span><span id="line.41">    public static final int DEFAULT_MAX_DELAY = 60000;</span>
+<span class="source-line-no">042</span><span id="line.42">    public static final int DEFAULT_INITIAL_DELAY = 200;</span>
+<span class="source-line-no">043</span><span id="line.43"></span>
+<span class="source-line-no">044</span><span id="line.44">    private final ObjectMapper mapper;</span>
+<span class="source-line-no">045</span><span id="line.45">    private final FailsafeExecutor&lt;ApiHttpResponse&lt;byte[]&gt;&gt; executor;</span>
+<span class="source-line-no">046</span><span id="line.46"></span>
+<span class="source-line-no">047</span><span id="line.47">    public ConcurrentModificationMiddlewareImpl() {</span>
+<span class="source-line-no">048</span><span id="line.48">        this(1, DEFAULT_INITIAL_DELAY, DEFAULT_MAX_DELAY, new ObjectMapper());</span>
+<span class="source-line-no">049</span><span id="line.49">    }</span>
+<span class="source-line-no">050</span><span id="line.50"></span>
+<span class="source-line-no">051</span><span id="line.51">    public ConcurrentModificationMiddlewareImpl(final int maxRetries) {</span>
+<span class="source-line-no">052</span><span id="line.52">        this(maxRetries, DEFAULT_INITIAL_DELAY, DEFAULT_MAX_DELAY, new ObjectMapper());</span>
+<span class="source-line-no">053</span><span id="line.53">    }</span>
+<span class="source-line-no">054</span><span id="line.54"></span>
+<span class="source-line-no">055</span><span id="line.55">    public ConcurrentModificationMiddlewareImpl(final int maxRetries, final long delay, final long maxDelay) {</span>
+<span class="source-line-no">056</span><span id="line.56">        this(maxRetries, delay, maxDelay, new ObjectMapper());</span>
+<span class="source-line-no">057</span><span id="line.57">    }</span>
+<span class="source-line-no">058</span><span id="line.58"></span>
+<span class="source-line-no">059</span><span id="line.59">    public ConcurrentModificationMiddlewareImpl(final int maxRetries, final long delay, final long maxDelay,</span>
+<span class="source-line-no">060</span><span id="line.60">            ObjectMapper mapper) {</span>
+<span class="source-line-no">061</span><span id="line.61">        this.mapper = mapper;</span>
+<span class="source-line-no">062</span><span id="line.62">        final RetryPolicy&lt;ApiHttpResponse&lt;byte[]&gt;&gt; retryPolicy = RetryPolicy.&lt;ApiHttpResponse&lt;byte[]&gt;&gt; builder()</span>
+<span class="source-line-no">063</span><span id="line.63">                .withBackoff(delay, maxDelay, ChronoUnit.MILLIS)</span>
+<span class="source-line-no">064</span><span id="line.64">                .withJitter(0.25)</span>
+<span class="source-line-no">065</span><span id="line.65">                .withMaxRetries(maxRetries)</span>
+<span class="source-line-no">066</span><span id="line.66">                .onRetry(this::logEventFailure)</span>
+<span class="source-line-no">067</span><span id="line.67">                .handle(ConcurrentModificationException.class)</span>
+<span class="source-line-no">068</span><span id="line.68">                .build();</span>
+<span class="source-line-no">069</span><span id="line.69">        this.executor = Failsafe.with(retryPolicy);</span>
+<span class="source-line-no">070</span><span id="line.70">    }</span>
+<span class="source-line-no">071</span><span id="line.71"></span>
+<span class="source-line-no">072</span><span id="line.72">    @Override</span>
+<span class="source-line-no">073</span><span id="line.73">    public CompletableFuture&lt;ApiHttpResponse&lt;byte[]&gt;&gt; invoke(ApiHttpRequest request,</span>
+<span class="source-line-no">074</span><span id="line.74">            Function&lt;ApiHttpRequest, CompletableFuture&lt;ApiHttpResponse&lt;byte[]&gt;&gt;&gt; next) {</span>
+<span class="source-line-no">075</span><span id="line.75"></span>
+<span class="source-line-no">076</span><span id="line.76">        final Function&lt;Throwable, CompletableFuture&lt;ApiHttpResponse&lt;byte[]&gt;&gt;&gt; fn = (throwable) -&gt; {</span>
+<span class="source-line-no">077</span><span id="line.77">            if (throwable instanceof ConcurrentModificationException) {</span>
+<span class="source-line-no">078</span><span id="line.78">                final Long newVersion = ((ConcurrentModificationException) throwable).getCurrentVersion();</span>
 <span class="source-line-no">079</span><span id="line.79">                if (newVersion != null &amp;&amp; request.getMethod() == ApiHttpMethod.POST) {</span>
 <span class="source-line-no">080</span><span id="line.80">                    try {</span>
-<span class="source-line-no">081</span><span id="line.81">                        jsonNode = mapper.readTree(request.getBody());</span>
+<span class="source-line-no">081</span><span id="line.81">                        final JsonNode jsonNode = mapper.readTree(request.getBody());</span>
 <span class="source-line-no">082</span><span id="line.82">                        if (jsonNode instanceof ObjectNode &amp;&amp; jsonNode.has(VERSION)) {</span>
 <span class="source-line-no">083</span><span id="line.83">                            ((ObjectNode) jsonNode).replace(VERSION, new LongNode(newVersion));</span>
 <span class="source-line-no">084</span><span id="line.84">                            return next.apply(request.withBody(jsonNode.toString()));</span>
@@ -102,7 +102,7 @@
 <span class="source-line-no">089</span><span id="line.89">                }</span>
 <span class="source-line-no">090</span><span id="line.90">            }</span>
 <span class="source-line-no">091</span><span id="line.91"></span>
-<span class="source-line-no">092</span><span id="line.92">            CompletableFuture&lt;ApiHttpResponse&lt;byte[]&gt;&gt; f = new CompletableFuture&lt;&gt;();</span>
+<span class="source-line-no">092</span><span id="line.92">            final CompletableFuture&lt;ApiHttpResponse&lt;byte[]&gt;&gt; f = new CompletableFuture&lt;&gt;();</span>
 <span class="source-line-no">093</span><span id="line.93">            f.completeExceptionally(throwable);</span>
 <span class="source-line-no">094</span><span id="line.94">            return f;</span>
 <span class="source-line-no">095</span><span id="line.95">        };</span>
@@ -118,62 +118,73 @@
 <span class="source-line-no">105</span><span id="line.105">    private void logEventFailure(ExecutionAttemptedEvent&lt;ApiHttpResponse&lt;byte[]&gt;&gt; event) {</span>
 <span class="source-line-no">106</span><span id="line.106">        final int attempt = event.getAttemptCount();</span>
 <span class="source-line-no">107</span><span id="line.107"></span>
-<span class="source-line-no">108</span><span id="line.108">        logger.info(() -&gt; "ConcurrentModification Retry #" + attempt);</span>
-<span class="source-line-no">109</span><span id="line.109">        logger.trace(() -&gt; {</span>
-<span class="source-line-no">110</span><span id="line.110">            final Throwable failure = event.getLastException();</span>
-<span class="source-line-no">111</span><span id="line.111">            if (failure instanceof ApiHttpException) {</span>
-<span class="source-line-no">112</span><span id="line.112">                final ApiHttpException httpException = (ApiHttpException) failure;</span>
-<span class="source-line-no">113</span><span id="line.113">                final ApiHttpRequest request = httpException.getRequest();</span>
-<span class="source-line-no">114</span><span id="line.114">                final ApiHttpResponse&lt;byte[]&gt; response = httpException.getResponse();</span>
-<span class="source-line-no">115</span><span id="line.115">                if (request != null) {</span>
-<span class="source-line-no">116</span><span id="line.116">                    return requestLog(attempt, request, response);</span>
-<span class="source-line-no">117</span><span id="line.117">                }</span>
-<span class="source-line-no">118</span><span id="line.118">            }</span>
-<span class="source-line-no">119</span><span id="line.119">            return event.toString();</span>
-<span class="source-line-no">120</span><span id="line.120">        });</span>
-<span class="source-line-no">121</span><span id="line.121">    }</span>
-<span class="source-line-no">122</span><span id="line.122"></span>
-<span class="source-line-no">123</span><span id="line.123">    private String requestLog(final int attempt, ApiHttpRequest request, ApiHttpResponse&lt;?&gt; response) {</span>
-<span class="source-line-no">124</span><span id="line.124">        String output;</span>
-<span class="source-line-no">125</span><span id="line.125">        final String httpMethodAndUrl = request.getMethod().name() + " " + request.getUrl().toString();</span>
-<span class="source-line-no">126</span><span id="line.126">        if (request.getBody() != null) {</span>
-<span class="source-line-no">127</span><span id="line.127">            final String unformattedBody = request.getSecuredBody();</span>
-<span class="source-line-no">128</span><span id="line.128">            final boolean isJsonRequest = request.getHeaders()</span>
-<span class="source-line-no">129</span><span id="line.129">                    .getHeaders(ApiHttpHeaders.CONTENT_TYPE)</span>
-<span class="source-line-no">130</span><span id="line.130">                    .stream()</span>
-<span class="source-line-no">131</span><span id="line.131">                    .findFirst()</span>
-<span class="source-line-no">132</span><span id="line.132">                    .map(ct -&gt; ct.getValue().toLowerCase().contains("json"))</span>
-<span class="source-line-no">133</span><span id="line.133">                    .orElse(true);</span>
-<span class="source-line-no">134</span><span id="line.134">            if (isJsonRequest) {</span>
-<span class="source-line-no">135</span><span id="line.135">                String prettyPrint;</span>
-<span class="source-line-no">136</span><span id="line.136">                try {</span>
-<span class="source-line-no">137</span><span id="line.137">                    prettyPrint = JsonUtils.prettyPrint(unformattedBody);</span>
-<span class="source-line-no">138</span><span id="line.138">                }</span>
-<span class="source-line-no">139</span><span id="line.139">                catch (final JsonException e) {</span>
-<span class="source-line-no">140</span><span id="line.140">                    classLogger.warn("pretty print failed", e);</span>
-<span class="source-line-no">141</span><span id="line.141">                    prettyPrint = unformattedBody;</span>
-<span class="source-line-no">142</span><span id="line.142">                }</span>
-<span class="source-line-no">143</span><span id="line.143">                output = "ConcurrentModification Retry #" + attempt + ": " + request + "\n" + httpMethodAndUrl</span>
-<span class="source-line-no">144</span><span id="line.144">                        + "\nformatted: " + prettyPrint;</span>
-<span class="source-line-no">145</span><span id="line.145">            }</span>
-<span class="source-line-no">146</span><span id="line.146">            else {</span>
-<span class="source-line-no">147</span><span id="line.147">                output = "ConcurrentModification Retry #" + attempt + ": " + request + "\n" + request.getMethod().name()</span>
-<span class="source-line-no">148</span><span id="line.148">                        + " " + request.getUrl() + " " + unformattedBody;</span>
-<span class="source-line-no">149</span><span id="line.149">            }</span>
-<span class="source-line-no">150</span><span id="line.150">        }</span>
-<span class="source-line-no">151</span><span id="line.151">        else {</span>
-<span class="source-line-no">152</span><span id="line.152">            output = "ConcurrentModification Retry #" + attempt + ": " + request + "\n" + httpMethodAndUrl</span>
-<span class="source-line-no">153</span><span id="line.153">                    + " &lt;no body&gt;";</span>
-<span class="source-line-no">154</span><span id="line.154">        }</span>
-<span class="source-line-no">155</span><span id="line.155">        if (response != null) {</span>
-<span class="source-line-no">156</span><span id="line.156">            output += "\nFailure response: " + response.getStatusCode() + "\n" + response + "\n"</span>
-<span class="source-line-no">157</span><span id="line.157">                    + Optional.ofNullable(response.getBody())</span>
-<span class="source-line-no">158</span><span id="line.158">                            .map(body -&gt; JsonUtils.prettyPrint(response.getBodyAsString().orElse("")))</span>
-<span class="source-line-no">159</span><span id="line.159">                            .orElse("&lt;no body&gt;");</span>
-<span class="source-line-no">160</span><span id="line.160">        }</span>
-<span class="source-line-no">161</span><span id="line.161">        return output;</span>
-<span class="source-line-no">162</span><span id="line.162">    }</span>
-<span class="source-line-no">163</span><span id="line.163">}</span>
+<span class="source-line-no">108</span><span id="line.108">        final Optional&lt;MDCContext&gt; requestContext;</span>
+<span class="source-line-no">109</span><span id="line.109">        final Throwable failure = event.getLastException();</span>
+<span class="source-line-no">110</span><span id="line.110">        if (failure instanceof ApiHttpException) {</span>
+<span class="source-line-no">111</span><span id="line.111">            final ApiHttpException httpException = (ApiHttpException) failure;</span>
+<span class="source-line-no">112</span><span id="line.112">            final ApiHttpRequest request = httpException.getRequest();</span>
+<span class="source-line-no">113</span><span id="line.113">            requestContext = Optional.ofNullable(request).map(r -&gt; r.getContext(MDCContext.class));</span>
+<span class="source-line-no">114</span><span id="line.114">        }</span>
+<span class="source-line-no">115</span><span id="line.115">        else {</span>
+<span class="source-line-no">116</span><span id="line.116">            requestContext = Optional.empty();</span>
+<span class="source-line-no">117</span><span id="line.117">        }</span>
+<span class="source-line-no">118</span><span id="line.118">        requestContext.ifPresent(c -&gt; MDC.setContextMap(c.getValue()));</span>
+<span class="source-line-no">119</span><span id="line.119">        logger.info(() -&gt; "ConcurrentModification Retry #" + attempt);</span>
+<span class="source-line-no">120</span><span id="line.120">        logger.trace(() -&gt; {</span>
+<span class="source-line-no">121</span><span id="line.121">            if (failure instanceof ApiHttpException) {</span>
+<span class="source-line-no">122</span><span id="line.122">                final ApiHttpException httpException = (ApiHttpException) failure;</span>
+<span class="source-line-no">123</span><span id="line.123">                final ApiHttpRequest request = httpException.getRequest();</span>
+<span class="source-line-no">124</span><span id="line.124">                final ApiHttpResponse&lt;byte[]&gt; response = httpException.getResponse();</span>
+<span class="source-line-no">125</span><span id="line.125">                if (request != null) {</span>
+<span class="source-line-no">126</span><span id="line.126">                    return requestLog(attempt, request, response);</span>
+<span class="source-line-no">127</span><span id="line.127">                }</span>
+<span class="source-line-no">128</span><span id="line.128">            }</span>
+<span class="source-line-no">129</span><span id="line.129">            return event.toString();</span>
+<span class="source-line-no">130</span><span id="line.130">        });</span>
+<span class="source-line-no">131</span><span id="line.131">        requestContext.ifPresent(c -&gt; MDC.clear());</span>
+<span class="source-line-no">132</span><span id="line.132">    }</span>
+<span class="source-line-no">133</span><span id="line.133"></span>
+<span class="source-line-no">134</span><span id="line.134">    private String requestLog(final int attempt, ApiHttpRequest request, ApiHttpResponse&lt;?&gt; response) {</span>
+<span class="source-line-no">135</span><span id="line.135">        String output;</span>
+<span class="source-line-no">136</span><span id="line.136">        final String httpMethodAndUrl = request.getMethod().name() + " " + request.getUrl().toString();</span>
+<span class="source-line-no">137</span><span id="line.137">        if (request.getBody() != null) {</span>
+<span class="source-line-no">138</span><span id="line.138">            final String unformattedBody = request.getSecuredBody();</span>
+<span class="source-line-no">139</span><span id="line.139">            final boolean isJsonRequest = request.getHeaders()</span>
+<span class="source-line-no">140</span><span id="line.140">                    .getHeaders(ApiHttpHeaders.CONTENT_TYPE)</span>
+<span class="source-line-no">141</span><span id="line.141">                    .stream()</span>
+<span class="source-line-no">142</span><span id="line.142">                    .findFirst()</span>
+<span class="source-line-no">143</span><span id="line.143">                    .map(ct -&gt; ct.getValue().toLowerCase().contains("json"))</span>
+<span class="source-line-no">144</span><span id="line.144">                    .orElse(true);</span>
+<span class="source-line-no">145</span><span id="line.145">            if (isJsonRequest) {</span>
+<span class="source-line-no">146</span><span id="line.146">                String prettyPrint;</span>
+<span class="source-line-no">147</span><span id="line.147">                try {</span>
+<span class="source-line-no">148</span><span id="line.148">                    prettyPrint = JsonUtils.prettyPrint(unformattedBody);</span>
+<span class="source-line-no">149</span><span id="line.149">                }</span>
+<span class="source-line-no">150</span><span id="line.150">                catch (final JsonException e) {</span>
+<span class="source-line-no">151</span><span id="line.151">                    classLogger.warn("pretty print failed", e);</span>
+<span class="source-line-no">152</span><span id="line.152">                    prettyPrint = unformattedBody;</span>
+<span class="source-line-no">153</span><span id="line.153">                }</span>
+<span class="source-line-no">154</span><span id="line.154">                output = "ConcurrentModification Retry #" + attempt + ": " + request + "\n" + httpMethodAndUrl</span>
+<span class="source-line-no">155</span><span id="line.155">                        + "\nformatted: " + prettyPrint;</span>
+<span class="source-line-no">156</span><span id="line.156">            }</span>
+<span class="source-line-no">157</span><span id="line.157">            else {</span>
+<span class="source-line-no">158</span><span id="line.158">                output = "ConcurrentModification Retry #" + attempt + ": " + request + "\n" + request.getMethod().name()</span>
+<span class="source-line-no">159</span><span id="line.159">                        + " " + request.getUrl() + " " + unformattedBody;</span>
+<span class="source-line-no">160</span><span id="line.160">            }</span>
+<span class="source-line-no">161</span><span id="line.161">        }</span>
+<span class="source-line-no">162</span><span id="line.162">        else {</span>
+<span class="source-line-no">163</span><span id="line.163">            output = "ConcurrentModification Retry #" + attempt + ": " + request + "\n" + httpMethodAndUrl</span>
+<span class="source-line-no">164</span><span id="line.164">                    + " &lt;no body&gt;";</span>
+<span class="source-line-no">165</span><span id="line.165">        }</span>
+<span class="source-line-no">166</span><span id="line.166">        if (response != null) {</span>
+<span class="source-line-no">167</span><span id="line.167">            output += "\nFailure response: " + response.getStatusCode() + "\n" + response + "\n"</span>
+<span class="source-line-no">168</span><span id="line.168">                    + Optional.ofNullable(response.getBody())</span>
+<span class="source-line-no">169</span><span id="line.169">                            .map(body -&gt; JsonUtils.prettyPrint(response.getBodyAsString().orElse("")))</span>
+<span class="source-line-no">170</span><span id="line.170">                            .orElse("&lt;no body&gt;");</span>
+<span class="source-line-no">171</span><span id="line.171">        }</span>
+<span class="source-line-no">172</span><span id="line.172">        return output;</span>
+<span class="source-line-no">173</span><span id="line.173">    }</span>
+<span class="source-line-no">174</span><span id="line.174">}</span>
 
 
 

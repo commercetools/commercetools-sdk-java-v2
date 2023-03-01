@@ -15,102 +15,114 @@
 <span class="source-line-no">002</span><span id="line.2">package com.commercetools.api.models.product;</span>
 <span class="source-line-no">003</span><span id="line.3"></span>
 <span class="source-line-no">004</span><span id="line.4">import java.util.List;</span>
-<span class="source-line-no">005</span><span id="line.5"></span>
-<span class="source-line-no">006</span><span id="line.6">import javax.annotation.Nullable;</span>
+<span class="source-line-no">005</span><span id="line.5">import java.util.Objects;</span>
+<span class="source-line-no">006</span><span id="line.6">import java.util.Optional;</span>
 <span class="source-line-no">007</span><span id="line.7"></span>
-<span class="source-line-no">008</span><span id="line.8">import com.commercetools.api.models.category.CategoryReference;</span>
-<span class="source-line-no">009</span><span id="line.9">import com.commercetools.api.models.common.LocalizedString;</span>
-<span class="source-line-no">010</span><span id="line.10">import com.commercetools.api.models.common.MetaAttributes;</span>
-<span class="source-line-no">011</span><span id="line.11">import com.commercetools.api.models.common.WithLocalizedSlug;</span>
-<span class="source-line-no">012</span><span id="line.12">import com.fasterxml.jackson.annotation.JsonIgnore;</span>
-<span class="source-line-no">013</span><span id="line.13"></span>
-<span class="source-line-no">014</span><span id="line.14">/**</span>
-<span class="source-line-no">015</span><span id="line.15"> * Interface to describe commonalities between differen product representations</span>
-<span class="source-line-no">016</span><span id="line.16"> */</span>
-<span class="source-line-no">017</span><span id="line.17">public interface ProductDataLike extends WithLocalizedSlug, MetaAttributes {</span>
-<span class="source-line-no">018</span><span id="line.18"></span>
-<span class="source-line-no">019</span><span id="line.19">    LocalizedString getName();</span>
+<span class="source-line-no">008</span><span id="line.8">import javax.annotation.Nullable;</span>
+<span class="source-line-no">009</span><span id="line.9"></span>
+<span class="source-line-no">010</span><span id="line.10">import com.commercetools.api.models.category.CategoryReference;</span>
+<span class="source-line-no">011</span><span id="line.11">import com.commercetools.api.models.common.LocalizedString;</span>
+<span class="source-line-no">012</span><span id="line.12">import com.commercetools.api.models.common.MetaAttributes;</span>
+<span class="source-line-no">013</span><span id="line.13">import com.commercetools.api.models.common.WithLocalizedSlug;</span>
+<span class="source-line-no">014</span><span id="line.14">import com.fasterxml.jackson.annotation.JsonIgnore;</span>
+<span class="source-line-no">015</span><span id="line.15"></span>
+<span class="source-line-no">016</span><span id="line.16">/**</span>
+<span class="source-line-no">017</span><span id="line.17"> * Interface to describe commonalities between differen product representations</span>
+<span class="source-line-no">018</span><span id="line.18"> */</span>
+<span class="source-line-no">019</span><span id="line.19">public interface ProductDataLike extends WithLocalizedSlug, MetaAttributes {</span>
 <span class="source-line-no">020</span><span id="line.20"></span>
-<span class="source-line-no">021</span><span id="line.21">    List&lt;CategoryReference&gt; getCategories();</span>
+<span class="source-line-no">021</span><span id="line.21">    LocalizedString getName();</span>
 <span class="source-line-no">022</span><span id="line.22"></span>
-<span class="source-line-no">023</span><span id="line.23">    @Nullable</span>
-<span class="source-line-no">024</span><span id="line.24">    LocalizedString getDescription();</span>
-<span class="source-line-no">025</span><span id="line.25"></span>
-<span class="source-line-no">026</span><span id="line.26">    LocalizedString getSlug();</span>
+<span class="source-line-no">023</span><span id="line.23">    List&lt;CategoryReference&gt; getCategories();</span>
+<span class="source-line-no">024</span><span id="line.24"></span>
+<span class="source-line-no">025</span><span id="line.25">    @Nullable</span>
+<span class="source-line-no">026</span><span id="line.26">    LocalizedString getDescription();</span>
 <span class="source-line-no">027</span><span id="line.27"></span>
-<span class="source-line-no">028</span><span id="line.28">    @Nullable</span>
-<span class="source-line-no">029</span><span id="line.29">    LocalizedString getMetaTitle();</span>
-<span class="source-line-no">030</span><span id="line.30"></span>
-<span class="source-line-no">031</span><span id="line.31">    @Nullable</span>
-<span class="source-line-no">032</span><span id="line.32">    LocalizedString getMetaDescription();</span>
-<span class="source-line-no">033</span><span id="line.33"></span>
-<span class="source-line-no">034</span><span id="line.34">    @Nullable</span>
-<span class="source-line-no">035</span><span id="line.35">    LocalizedString getMetaKeywords();</span>
-<span class="source-line-no">036</span><span id="line.36"></span>
-<span class="source-line-no">037</span><span id="line.37">    /**</span>
-<span class="source-line-no">038</span><span id="line.38">     * Returns the master variant. Every product as 1 to n variants, so this is always present.</span>
-<span class="source-line-no">039</span><span id="line.39">     *</span>
-<span class="source-line-no">040</span><span id="line.40">     * @see #getAllVariants()</span>
-<span class="source-line-no">041</span><span id="line.41">     * @see #getVariants()</span>
-<span class="source-line-no">042</span><span id="line.42">     * @return the main variant in the product</span>
-<span class="source-line-no">043</span><span id="line.43">     */</span>
-<span class="source-line-no">044</span><span id="line.44">    ProductVariant getMasterVariant();</span>
-<span class="source-line-no">045</span><span id="line.45"></span>
-<span class="source-line-no">046</span><span id="line.46">    /**</span>
-<span class="source-line-no">047</span><span id="line.47">     * Gets the variants which are not identical to the master variant. This list can be empty.</span>
-<span class="source-line-no">048</span><span id="line.48">     *</span>
-<span class="source-line-no">049</span><span id="line.49">     * @see #getAllVariants()</span>
-<span class="source-line-no">050</span><span id="line.50">     * @see #getMasterVariant()</span>
-<span class="source-line-no">051</span><span id="line.51">     *</span>
-<span class="source-line-no">052</span><span id="line.52">     *</span>
-<span class="source-line-no">053</span><span id="line.53">     * @return all variants except the one in {@link #getMasterVariant()}</span>
-<span class="source-line-no">054</span><span id="line.54">     */</span>
-<span class="source-line-no">055</span><span id="line.55">    List&lt;ProductVariant&gt; getVariants();</span>
-<span class="source-line-no">056</span><span id="line.56"></span>
-<span class="source-line-no">057</span><span id="line.57">    /**</span>
-<span class="source-line-no">058</span><span id="line.58">     * Gets all variants in the product including the master variant as first element in the list.</span>
-<span class="source-line-no">059</span><span id="line.59">     *</span>
-<span class="source-line-no">060</span><span id="line.60">     * @see #getMasterVariant()</span>
-<span class="source-line-no">061</span><span id="line.61">     * @see #getVariants()</span>
-<span class="source-line-no">062</span><span id="line.62">     * @return all variants</span>
-<span class="source-line-no">063</span><span id="line.63">     */</span>
-<span class="source-line-no">064</span><span id="line.64">    @JsonIgnore</span>
-<span class="source-line-no">065</span><span id="line.65">    default List&lt;ProductVariant&gt; getAllVariants() {</span>
-<span class="source-line-no">066</span><span id="line.66">        return ProductsPackage.getAllVariants(this);</span>
-<span class="source-line-no">067</span><span id="line.67">    }</span>
-<span class="source-line-no">068</span><span id="line.68"></span>
-<span class="source-line-no">069</span><span id="line.69">    /**</span>
-<span class="source-line-no">070</span><span id="line.70">     * Finds a product variant by id.</span>
-<span class="source-line-no">071</span><span id="line.71">     *</span>
-<span class="source-line-no">072</span><span id="line.72">     * @param variantId the id of the variant to find</span>
-<span class="source-line-no">073</span><span id="line.73">     * @return variant or null if no variant exists with {@code id}</span>
-<span class="source-line-no">074</span><span id="line.74">     */</span>
-<span class="source-line-no">075</span><span id="line.75">    @Nullable</span>
-<span class="source-line-no">076</span><span id="line.76">    default ProductVariant getVariant(final long variantId) {</span>
-<span class="source-line-no">077</span><span id="line.77">        final ProductVariant result;</span>
-<span class="source-line-no">078</span><span id="line.78">        if (variantId == getMasterVariant().getId()) {</span>
-<span class="source-line-no">079</span><span id="line.79">            result = getMasterVariant();</span>
-<span class="source-line-no">080</span><span id="line.80">        }</span>
-<span class="source-line-no">081</span><span id="line.81">        else {</span>
-<span class="source-line-no">082</span><span id="line.82">            result = getVariants().stream().filter(v -&gt; v.getId() == variantId).findFirst().orElse(null);</span>
-<span class="source-line-no">083</span><span id="line.83">        }</span>
-<span class="source-line-no">084</span><span id="line.84">        return result;</span>
-<span class="source-line-no">085</span><span id="line.85">    }</span>
-<span class="source-line-no">086</span><span id="line.86"></span>
-<span class="source-line-no">087</span><span id="line.87">    /**</span>
-<span class="source-line-no">088</span><span id="line.88">     * Finds a product variant by id and returns the master variant if not variant with the id is present.</span>
-<span class="source-line-no">089</span><span id="line.89">     * @param variantId the id of the variant to find</span>
-<span class="source-line-no">090</span><span id="line.90">     * @return a variant</span>
-<span class="source-line-no">091</span><span id="line.91">     */</span>
-<span class="source-line-no">092</span><span id="line.92">    default ProductVariant getVariantOrMaster(final long variantId) {</span>
-<span class="source-line-no">093</span><span id="line.93">        return ProductsPackage.getVariantOrMaster(variantId, this);</span>
-<span class="source-line-no">094</span><span id="line.94">    }</span>
-<span class="source-line-no">095</span><span id="line.95"></span>
-<span class="source-line-no">096</span><span id="line.96">    SearchKeywords getSearchKeywords();</span>
+<span class="source-line-no">028</span><span id="line.28">    LocalizedString getSlug();</span>
+<span class="source-line-no">029</span><span id="line.29"></span>
+<span class="source-line-no">030</span><span id="line.30">    @Nullable</span>
+<span class="source-line-no">031</span><span id="line.31">    LocalizedString getMetaTitle();</span>
+<span class="source-line-no">032</span><span id="line.32"></span>
+<span class="source-line-no">033</span><span id="line.33">    @Nullable</span>
+<span class="source-line-no">034</span><span id="line.34">    LocalizedString getMetaDescription();</span>
+<span class="source-line-no">035</span><span id="line.35"></span>
+<span class="source-line-no">036</span><span id="line.36">    @Nullable</span>
+<span class="source-line-no">037</span><span id="line.37">    LocalizedString getMetaKeywords();</span>
+<span class="source-line-no">038</span><span id="line.38"></span>
+<span class="source-line-no">039</span><span id="line.39">    /**</span>
+<span class="source-line-no">040</span><span id="line.40">     * Returns the master variant. Every product as 1 to n variants, so this is always present.</span>
+<span class="source-line-no">041</span><span id="line.41">     *</span>
+<span class="source-line-no">042</span><span id="line.42">     * @see #getAllVariants()</span>
+<span class="source-line-no">043</span><span id="line.43">     * @see #getVariants()</span>
+<span class="source-line-no">044</span><span id="line.44">     * @return the main variant in the product</span>
+<span class="source-line-no">045</span><span id="line.45">     */</span>
+<span class="source-line-no">046</span><span id="line.46">    ProductVariant getMasterVariant();</span>
+<span class="source-line-no">047</span><span id="line.47"></span>
+<span class="source-line-no">048</span><span id="line.48">    /**</span>
+<span class="source-line-no">049</span><span id="line.49">     * Gets the variants which are not identical to the master variant. This list can be empty.</span>
+<span class="source-line-no">050</span><span id="line.50">     *</span>
+<span class="source-line-no">051</span><span id="line.51">     * @see #getAllVariants()</span>
+<span class="source-line-no">052</span><span id="line.52">     * @see #getMasterVariant()</span>
+<span class="source-line-no">053</span><span id="line.53">     *</span>
+<span class="source-line-no">054</span><span id="line.54">     *</span>
+<span class="source-line-no">055</span><span id="line.55">     * @return all variants except the one in {@link #getMasterVariant()}</span>
+<span class="source-line-no">056</span><span id="line.56">     */</span>
+<span class="source-line-no">057</span><span id="line.57">    List&lt;ProductVariant&gt; getVariants();</span>
+<span class="source-line-no">058</span><span id="line.58"></span>
+<span class="source-line-no">059</span><span id="line.59">    /**</span>
+<span class="source-line-no">060</span><span id="line.60">     * Gets all variants in the product including the master variant as first element in the list.</span>
+<span class="source-line-no">061</span><span id="line.61">     *</span>
+<span class="source-line-no">062</span><span id="line.62">     * @see #getMasterVariant()</span>
+<span class="source-line-no">063</span><span id="line.63">     * @see #getVariants()</span>
+<span class="source-line-no">064</span><span id="line.64">     * @return all variants</span>
+<span class="source-line-no">065</span><span id="line.65">     */</span>
+<span class="source-line-no">066</span><span id="line.66">    @JsonIgnore</span>
+<span class="source-line-no">067</span><span id="line.67">    default List&lt;ProductVariant&gt; getAllVariants() {</span>
+<span class="source-line-no">068</span><span id="line.68">        return ProductsPackage.getAllVariants(this);</span>
+<span class="source-line-no">069</span><span id="line.69">    }</span>
+<span class="source-line-no">070</span><span id="line.70"></span>
+<span class="source-line-no">071</span><span id="line.71">    /**</span>
+<span class="source-line-no">072</span><span id="line.72">     * Finds a product variant by id.</span>
+<span class="source-line-no">073</span><span id="line.73">     *</span>
+<span class="source-line-no">074</span><span id="line.74">     * @param variantId the id of the variant to find</span>
+<span class="source-line-no">075</span><span id="line.75">     * @return variant or null if no variant exists with {@code id}</span>
+<span class="source-line-no">076</span><span id="line.76">     */</span>
+<span class="source-line-no">077</span><span id="line.77">    @Nullable</span>
+<span class="source-line-no">078</span><span id="line.78">    default ProductVariant getVariant(final long variantId) {</span>
+<span class="source-line-no">079</span><span id="line.79">        final ProductVariant result;</span>
+<span class="source-line-no">080</span><span id="line.80">        if (variantId == getMasterVariant().getId()) {</span>
+<span class="source-line-no">081</span><span id="line.81">            result = getMasterVariant();</span>
+<span class="source-line-no">082</span><span id="line.82">        }</span>
+<span class="source-line-no">083</span><span id="line.83">        else {</span>
+<span class="source-line-no">084</span><span id="line.84">            result = getVariants().stream().filter(v -&gt; v.getId() == variantId).findFirst().orElse(null);</span>
+<span class="source-line-no">085</span><span id="line.85">        }</span>
+<span class="source-line-no">086</span><span id="line.86">        return result;</span>
+<span class="source-line-no">087</span><span id="line.87">    }</span>
+<span class="source-line-no">088</span><span id="line.88"></span>
+<span class="source-line-no">089</span><span id="line.89">    /**</span>
+<span class="source-line-no">090</span><span id="line.90">     * Finds a product variant by id and returns the master variant if not variant with the id is present.</span>
+<span class="source-line-no">091</span><span id="line.91">     * @param variantId the id of the variant to find</span>
+<span class="source-line-no">092</span><span id="line.92">     * @return a variant</span>
+<span class="source-line-no">093</span><span id="line.93">     */</span>
+<span class="source-line-no">094</span><span id="line.94">    default ProductVariant getVariantOrMaster(final long variantId) {</span>
+<span class="source-line-no">095</span><span id="line.95">        return ProductsPackage.getVariantOrMaster(variantId, this);</span>
+<span class="source-line-no">096</span><span id="line.96">    }</span>
 <span class="source-line-no">097</span><span id="line.97"></span>
-<span class="source-line-no">098</span><span id="line.98">    @Nullable</span>
-<span class="source-line-no">099</span><span id="line.99">    CategoryOrderHints getCategoryOrderHints();</span>
-<span class="source-line-no">100</span><span id="line.100">}</span>
+<span class="source-line-no">098</span><span id="line.98">    /**</span>
+<span class="source-line-no">099</span><span id="line.99">     * Finds a variant by SKU.</span>
+<span class="source-line-no">100</span><span id="line.100">     * @param sku the sku for the variant</span>
+<span class="source-line-no">101</span><span id="line.101">     * @return Optional of the found variant</span>
+<span class="source-line-no">102</span><span id="line.102">     */</span>
+<span class="source-line-no">103</span><span id="line.103">    default Optional&lt;ProductVariant&gt; findVariantBySku(final String sku) {</span>
+<span class="source-line-no">104</span><span id="line.104">        Objects.requireNonNull(sku);</span>
+<span class="source-line-no">105</span><span id="line.105">        return getAllVariants().stream().filter(v -&gt; sku.equals(v.getSku())).findFirst();</span>
+<span class="source-line-no">106</span><span id="line.106">    }</span>
+<span class="source-line-no">107</span><span id="line.107"></span>
+<span class="source-line-no">108</span><span id="line.108">    SearchKeywords getSearchKeywords();</span>
+<span class="source-line-no">109</span><span id="line.109"></span>
+<span class="source-line-no">110</span><span id="line.110">    @Nullable</span>
+<span class="source-line-no">111</span><span id="line.111">    CategoryOrderHints getCategoryOrderHints();</span>
+<span class="source-line-no">112</span><span id="line.112">}</span>
 
 
 

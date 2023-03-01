@@ -15,18 +15,83 @@
 <span class="source-line-no">002</span><span id="line.2">package com.commercetools.api.models;</span>
 <span class="source-line-no">003</span><span id="line.3"></span>
 <span class="source-line-no">004</span><span id="line.4">import java.util.List;</span>
-<span class="source-line-no">005</span><span id="line.5"></span>
-<span class="source-line-no">006</span><span id="line.6">public interface ResourcePagedQueryResponse&lt;T&gt; {</span>
-<span class="source-line-no">007</span><span id="line.7">    public Long getLimit();</span>
-<span class="source-line-no">008</span><span id="line.8"></span>
-<span class="source-line-no">009</span><span id="line.9">    public Long getCount();</span>
-<span class="source-line-no">010</span><span id="line.10"></span>
-<span class="source-line-no">011</span><span id="line.11">    public Long getTotal();</span>
-<span class="source-line-no">012</span><span id="line.12"></span>
-<span class="source-line-no">013</span><span id="line.13">    public Long getOffset();</span>
-<span class="source-line-no">014</span><span id="line.14"></span>
-<span class="source-line-no">015</span><span id="line.15">    List&lt;T&gt; getResults();</span>
-<span class="source-line-no">016</span><span id="line.16">}</span>
+<span class="source-line-no">005</span><span id="line.5">import java.util.Optional;</span>
+<span class="source-line-no">006</span><span id="line.6"></span>
+<span class="source-line-no">007</span><span id="line.7">public interface ResourcePagedQueryResponse&lt;T&gt; {</span>
+<span class="source-line-no">008</span><span id="line.8">    public Long getLimit();</span>
+<span class="source-line-no">009</span><span id="line.9"></span>
+<span class="source-line-no">010</span><span id="line.10">    public Long getCount();</span>
+<span class="source-line-no">011</span><span id="line.11"></span>
+<span class="source-line-no">012</span><span id="line.12">    public Long getTotal();</span>
+<span class="source-line-no">013</span><span id="line.13"></span>
+<span class="source-line-no">014</span><span id="line.14">    public Long getOffset();</span>
+<span class="source-line-no">015</span><span id="line.15"></span>
+<span class="source-line-no">016</span><span id="line.16">    List&lt;T&gt; getResults();</span>
+<span class="source-line-no">017</span><span id="line.17"></span>
+<span class="source-line-no">018</span><span id="line.18">    /**</span>
+<span class="source-line-no">019</span><span id="line.19">     * Tries to access the first element of the result list.</span>
+<span class="source-line-no">020</span><span id="line.20">     * Use case: query by slug which should contain zero or one element in the result list.</span>
+<span class="source-line-no">021</span><span id="line.21">     *</span>
+<span class="source-line-no">022</span><span id="line.22">     * @return the first value or absent</span>
+<span class="source-line-no">023</span><span id="line.23">     */</span>
+<span class="source-line-no">024</span><span id="line.24">    default Optional&lt;T&gt; head() {</span>
+<span class="source-line-no">025</span><span id="line.25">        final List&lt;T&gt; results = getResults();</span>
+<span class="source-line-no">026</span><span id="line.26">        return results.isEmpty() ? Optional.empty() : Optional.of(results.get(0));</span>
+<span class="source-line-no">027</span><span id="line.27">    }</span>
+<span class="source-line-no">028</span><span id="line.28"></span>
+<span class="source-line-no">029</span><span id="line.29">    /**</span>
+<span class="source-line-no">030</span><span id="line.30">     * Calculates the page number of the result, the pages are indexed staring 0, which means that {@code getPageIndex()}</span>
+<span class="source-line-no">031</span><span id="line.31">     * returns a value in [0,n) , given 'n' is the total number of pages</span>
+<span class="source-line-no">032</span><span id="line.32">     *</span>
+<span class="source-line-no">033</span><span id="line.33">     * @return the page number of the result</span>
+<span class="source-line-no">034</span><span id="line.34">     */</span>
+<span class="source-line-no">035</span><span id="line.35">    default Long getPageIndex() {</span>
+<span class="source-line-no">036</span><span id="line.36">        if (getTotal() == null || getLimit() == null || getLimit() == 0) {</span>
+<span class="source-line-no">037</span><span id="line.37">            throw new UnsupportedOperationException(</span>
+<span class="source-line-no">038</span><span id="line.38">                "Can only be used if the limit &amp; total are known and limit is non-zero.");</span>
+<span class="source-line-no">039</span><span id="line.39">        }</span>
+<span class="source-line-no">040</span><span id="line.40">        return (long) Math.floor(getOffset() / getLimit().doubleValue());</span>
+<span class="source-line-no">041</span><span id="line.41">    }</span>
+<span class="source-line-no">042</span><span id="line.42"></span>
+<span class="source-line-no">043</span><span id="line.43">    /**</span>
+<span class="source-line-no">044</span><span id="line.44">     * Calculates the total number of pages matching the request.</span>
+<span class="source-line-no">045</span><span id="line.45">     *</span>
+<span class="source-line-no">046</span><span id="line.46">     * @return the total number of pages</span>
+<span class="source-line-no">047</span><span id="line.47">     */</span>
+<span class="source-line-no">048</span><span id="line.48">    default Long getTotalPages() {</span>
+<span class="source-line-no">049</span><span id="line.49">        if (getTotal() == null || getLimit() == null || getLimit() == 0) {</span>
+<span class="source-line-no">050</span><span id="line.50">            throw new UnsupportedOperationException(</span>
+<span class="source-line-no">051</span><span id="line.51">                "Can only be used if the limit &amp; total are known and limit is non-zero.");</span>
+<span class="source-line-no">052</span><span id="line.52">        }</span>
+<span class="source-line-no">053</span><span id="line.53">        return (long) Math.ceil(getTotal() / getLimit().doubleValue());</span>
+<span class="source-line-no">054</span><span id="line.54">    }</span>
+<span class="source-line-no">055</span><span id="line.55"></span>
+<span class="source-line-no">056</span><span id="line.56">    /**</span>
+<span class="source-line-no">057</span><span id="line.57">     * Checks if this is the first page of a result.</span>
+<span class="source-line-no">058</span><span id="line.58">     *</span>
+<span class="source-line-no">059</span><span id="line.59">     * @return true if offset is 0 otherwise false</span>
+<span class="source-line-no">060</span><span id="line.60">     */</span>
+<span class="source-line-no">061</span><span id="line.61">    default boolean isFirst() {</span>
+<span class="source-line-no">062</span><span id="line.62">        if (getOffset() == null) {</span>
+<span class="source-line-no">063</span><span id="line.63">            throw new UnsupportedOperationException("Can only be used if the offset is known.");</span>
+<span class="source-line-no">064</span><span id="line.64">        }</span>
+<span class="source-line-no">065</span><span id="line.65">        return getOffset() == 0;</span>
+<span class="source-line-no">066</span><span id="line.66">    }</span>
+<span class="source-line-no">067</span><span id="line.67"></span>
+<span class="source-line-no">068</span><span id="line.68">    /**</span>
+<span class="source-line-no">069</span><span id="line.69">     * Checks if it is the last possible page.</span>
+<span class="source-line-no">070</span><span id="line.70">     *</span>
+<span class="source-line-no">071</span><span id="line.71">     * @return true if doing a request with an incremented offset parameter would cause an empty result otherwise false.</span>
+<span class="source-line-no">072</span><span id="line.72">     */</span>
+<span class="source-line-no">073</span><span id="line.73">    default boolean isLast() {</span>
+<span class="source-line-no">074</span><span id="line.74">        if (getOffset() == null || getTotal() == null) {</span>
+<span class="source-line-no">075</span><span id="line.75">            throw new UnsupportedOperationException("Can only be used if the offset &amp; total are known.");</span>
+<span class="source-line-no">076</span><span id="line.76">        }</span>
+<span class="source-line-no">077</span><span id="line.77">        //currently counting the total amount is performed in a second database call, so it is possible</span>
+<span class="source-line-no">078</span><span id="line.78">        //that the left side can be greater than total</span>
+<span class="source-line-no">079</span><span id="line.79">        return getOffset() + getCount() &gt;= getTotal();</span>
+<span class="source-line-no">080</span><span id="line.80">    }</span>
+<span class="source-line-no">081</span><span id="line.81">}</span>
 
 
 

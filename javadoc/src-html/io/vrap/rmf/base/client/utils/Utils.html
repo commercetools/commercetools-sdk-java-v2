@@ -54,9 +54,10 @@
 <span class="source-line-no">041</span><span id="line.41">            return (ApiHttpResponse&lt;O&gt;) response;</span>
 <span class="source-line-no">042</span><span id="line.42">        }</span>
 <span class="source-line-no">043</span><span id="line.43">        O newBody = JsonUtils.fromJsonByteArray(response.getBody(), outputType);</span>
-<span class="source-line-no">044</span><span id="line.44">        return new ApiHttpResponse&lt;&gt;(response.getStatusCode(), response.getHeaders(), newBody);</span>
-<span class="source-line-no">045</span><span id="line.45">    }</span>
-<span class="source-line-no">046</span><span id="line.46">}</span>
+<span class="source-line-no">044</span><span id="line.44">        return new ApiHttpResponse&lt;&gt;(response.getStatusCode(), response.getHeaders(), newBody, response.getMessage(),</span>
+<span class="source-line-no">045</span><span id="line.45">            response.getContextMap());</span>
+<span class="source-line-no">046</span><span id="line.46">    }</span>
+<span class="source-line-no">047</span><span id="line.47">}</span>
 
 
 

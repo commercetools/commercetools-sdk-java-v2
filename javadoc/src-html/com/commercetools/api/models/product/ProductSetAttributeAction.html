@@ -124,15 +124,52 @@
 <span class="source-line-no">111</span><span id="line.111">        return helper.apply(this);</span>
 <span class="source-line-no">112</span><span id="line.112">    }</span>
 <span class="source-line-no">113</span><span id="line.113"></span>
-<span class="source-line-no">114</span><span id="line.114">    public static com.fasterxml.jackson.core.type.TypeReference&lt;ProductSetAttributeAction&gt; typeReference() {</span>
-<span class="source-line-no">115</span><span id="line.115">        return new com.fasterxml.jackson.core.type.TypeReference&lt;ProductSetAttributeAction&gt;() {</span>
-<span class="source-line-no">116</span><span id="line.116">            @Override</span>
-<span class="source-line-no">117</span><span id="line.117">            public String toString() {</span>
-<span class="source-line-no">118</span><span id="line.118">                return "TypeReference&lt;ProductSetAttributeAction&gt;";</span>
-<span class="source-line-no">119</span><span id="line.119">            }</span>
-<span class="source-line-no">120</span><span id="line.120">        };</span>
-<span class="source-line-no">121</span><span id="line.121">    }</span>
-<span class="source-line-no">122</span><span id="line.122">}</span>
+<span class="source-line-no">114</span><span id="line.114">    public static ProductSetAttributeAction ofVariantId(final Long variantId, final String name,</span>
+<span class="source-line-no">115</span><span id="line.115">            final com.fasterxml.jackson.databind.JsonNode value, final Boolean staged) {</span>
+<span class="source-line-no">116</span><span id="line.116">        return ProductSetAttributeActionBuilder.of()</span>
+<span class="source-line-no">117</span><span id="line.117">                .variantId(variantId)</span>
+<span class="source-line-no">118</span><span id="line.118">                .name(name)</span>
+<span class="source-line-no">119</span><span id="line.119">                .value(value)</span>
+<span class="source-line-no">120</span><span id="line.120">                .staged(staged)</span>
+<span class="source-line-no">121</span><span id="line.121">                .build();</span>
+<span class="source-line-no">122</span><span id="line.122">    }</span>
+<span class="source-line-no">123</span><span id="line.123"></span>
+<span class="source-line-no">124</span><span id="line.124">    public static ProductSetAttributeAction ofSku(final String sku, final String name,</span>
+<span class="source-line-no">125</span><span id="line.125">            final com.fasterxml.jackson.databind.JsonNode value, final Boolean staged) {</span>
+<span class="source-line-no">126</span><span id="line.126">        return ProductSetAttributeActionBuilder.of().sku(sku).name(name).value(value).staged(staged).build();</span>
+<span class="source-line-no">127</span><span id="line.127">    }</span>
+<span class="source-line-no">128</span><span id="line.128"></span>
+<span class="source-line-no">129</span><span id="line.129">    public static ProductSetAttributeAction ofUnsetAttribute(final Long variantId, final String name) {</span>
+<span class="source-line-no">130</span><span id="line.130">        return ProductSetAttributeActionBuilder.of().variantId(variantId).name(name).build();</span>
+<span class="source-line-no">131</span><span id="line.131">    }</span>
+<span class="source-line-no">132</span><span id="line.132"></span>
+<span class="source-line-no">133</span><span id="line.133">    public static ProductSetAttributeAction ofUnsetAttribute(final Long variantId, final String name,</span>
+<span class="source-line-no">134</span><span id="line.134">            final Boolean staged) {</span>
+<span class="source-line-no">135</span><span id="line.135">        return ProductSetAttributeActionBuilder.of().variantId(variantId).name(name).staged(staged).build();</span>
+<span class="source-line-no">136</span><span id="line.136">    }</span>
+<span class="source-line-no">137</span><span id="line.137"></span>
+<span class="source-line-no">138</span><span id="line.138">    public static ProductSetAttributeAction ofUnsetAttributeForVariantId(final Long variantId, final String name) {</span>
+<span class="source-line-no">139</span><span id="line.139">        return ProductSetAttributeActionBuilder.of().variantId(variantId).name(name).build();</span>
+<span class="source-line-no">140</span><span id="line.140">    }</span>
+<span class="source-line-no">141</span><span id="line.141"></span>
+<span class="source-line-no">142</span><span id="line.142">    public static ProductSetAttributeAction ofUnsetAttributeForSku(final String sku, final String name) {</span>
+<span class="source-line-no">143</span><span id="line.143">        return ProductSetAttributeActionBuilder.of().sku(sku).name(name).build();</span>
+<span class="source-line-no">144</span><span id="line.144">    }</span>
+<span class="source-line-no">145</span><span id="line.145"></span>
+<span class="source-line-no">146</span><span id="line.146">    public static ProductSetAttributeAction ofUnsetAttributeForSku(final String sku, final String name,</span>
+<span class="source-line-no">147</span><span id="line.147">            final Boolean staged) {</span>
+<span class="source-line-no">148</span><span id="line.148">        return ProductSetAttributeActionBuilder.of().sku(sku).name(name).staged(staged).build();</span>
+<span class="source-line-no">149</span><span id="line.149">    }</span>
+<span class="source-line-no">150</span><span id="line.150"></span>
+<span class="source-line-no">151</span><span id="line.151">    public static com.fasterxml.jackson.core.type.TypeReference&lt;ProductSetAttributeAction&gt; typeReference() {</span>
+<span class="source-line-no">152</span><span id="line.152">        return new com.fasterxml.jackson.core.type.TypeReference&lt;ProductSetAttributeAction&gt;() {</span>
+<span class="source-line-no">153</span><span id="line.153">            @Override</span>
+<span class="source-line-no">154</span><span id="line.154">            public String toString() {</span>
+<span class="source-line-no">155</span><span id="line.155">                return "TypeReference&lt;ProductSetAttributeAction&gt;";</span>
+<span class="source-line-no">156</span><span id="line.156">            }</span>
+<span class="source-line-no">157</span><span id="line.157">        };</span>
+<span class="source-line-no">158</span><span id="line.158">    }</span>
+<span class="source-line-no">159</span><span id="line.159">}</span>
 
 
 

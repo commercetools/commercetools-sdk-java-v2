@@ -90,7 +90,7 @@ loadScripts(document, 'script');</script>
 <hr>
 <div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/BaseAddress.html#line.28">BaseAddress</a></span><span class="extends-implements">
 extends <a href="../WithKey.html" title="interface in com.commercetools.api.models">WithKey</a>, <a href="BaseAddressMixin.html" title="interface in com.commercetools.api.models.common">BaseAddressMixin</a></span></div>
-<div class="block">BaseAddress
+<div class="block"><p>Polymorphic base type that represents a postal address and contact details. Depending on the read or write action, it can be either Address or AddressDraft that only differ in the data type for the optional <code>custom</code> field.</p>
 
  <hr>
  Example to create an instance using the builder pattern
@@ -154,7 +154,7 @@ extends <a href="../WithKey.html" title="interface in com.commercetools.api.mode
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getCountry()">getCountry</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
-<div class="block">Two-digit country code as per ISO 3166-1 alpha-2.</div>
+<div class="block">Name of the country.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getDepartment()">getDepartment</a></span>()</code></div>
@@ -189,7 +189,7 @@ extends <a href="../WithKey.html" title="interface in com.commercetools.api.mode
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getKey()">getKey</a></span>()</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
-<div class="block">User-defined unique identifier of the Address.</div>
+<div class="block">User-defined identifier of the Address that must be unique when multiple addresses are referenced in BusinessUnits, Customers, and <code>itemShippingAddresses</code> (LineItem-specific addresses) of a Cart, Order, QuoteRequest, or Quote.</div>
 </div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getLastName()">getLastName</a></span>()</code></div>
@@ -353,15 +353,16 @@ extends <a href="../WithKey.html" title="interface in com.commercetools.api.mode
 <li>
 <section class="detail" id="getId()">
 <h3>getId</h3>
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/BaseAddress.html#line.36">getId</a></span>()</div>
-<div class="block"><p>Unique identifier of the Address.</p></div>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/BaseAddress.html#line.37">getId</a></span>()</div>
+<div class="block"><p>Unique identifier of the Address.</p>
+  <p>It is not recommended to set it manually since the API overwrites this ID when creating an Address for a Customer. Use <code>key</code> instead and omit this field from the request to let the API generate the ID for the Address.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getKey()">
 <h3>getKey</h3>
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/BaseAddress.html#line.43">getKey</a></span>()</div>
-<div class="block"><p>User-defined unique identifier of the Address.</p></div>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/BaseAddress.html#line.44">getKey</a></span>()</div>
+<div class="block"><p>User-defined identifier of the Address that must be unique when multiple addresses are referenced in BusinessUnits, Customers, and <code>itemShippingAddresses</code> (LineItem-specific addresses) of a Cart, Order, QuoteRequest, or Quote.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="BaseAddressMixin.html#getKey()">getKey</a></code>&nbsp;in interface&nbsp;<code><a href="BaseAddressMixin.html" title="interface in com.commercetools.api.models.common">BaseAddressMixin</a></code></dd>
@@ -374,8 +375,8 @@ extends <a href="../WithKey.html" title="interface in com.commercetools.api.mode
 <section class="detail" id="getCountry()">
 <h3>getCountry</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/BaseAddress.html#line.49">getCountry</a></span>()</div>
-<div class="block"><p>Two-digit country code as per ISO 3166-1 alpha-2.</p></div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/BaseAddress.html#line.50">getCountry</a></span>()</div>
+<div class="block"><p>Name of the country.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="BaseAddressMixin.html#getCountry()">getCountry</a></code>&nbsp;in interface&nbsp;<code><a href="BaseAddressMixin.html" title="interface in com.commercetools.api.models.common">BaseAddressMixin</a></code></dd>
@@ -385,7 +386,7 @@ extends <a href="../WithKey.html" title="interface in com.commercetools.api.mode
 <li>
 <section class="detail" id="getTitle()">
 <h3>getTitle</h3>
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/BaseAddress.html#line.57">getTitle</a></span>()</div>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/BaseAddress.html#line.58">getTitle</a></span>()</div>
 <div class="block"><p>Title of the contact, for example 'Dr.'</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
@@ -396,7 +397,7 @@ extends <a href="../WithKey.html" title="interface in com.commercetools.api.mode
 <li>
 <section class="detail" id="getSalutation()">
 <h3>getSalutation</h3>
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/BaseAddress.html#line.64">getSalutation</a></span>()</div>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/BaseAddress.html#line.65">getSalutation</a></span>()</div>
 <div class="block"><p>Salutation of the contact, for example 'Mr.' or 'Ms.'</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
@@ -407,7 +408,7 @@ extends <a href="../WithKey.html" title="interface in com.commercetools.api.mode
 <li>
 <section class="detail" id="getFirstName()">
 <h3>getFirstName</h3>
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/BaseAddress.html#line.71">getFirstName</a></span>()</div>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/BaseAddress.html#line.72">getFirstName</a></span>()</div>
 <div class="block"><p>Given name (first name) of the contact.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
@@ -418,7 +419,7 @@ extends <a href="../WithKey.html" title="interface in com.commercetools.api.mode
 <li>
 <section class="detail" id="getLastName()">
 <h3>getLastName</h3>
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/BaseAddress.html#line.78">getLastName</a></span>()</div>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/BaseAddress.html#line.79">getLastName</a></span>()</div>
 <div class="block"><p>Family name (last name) of the contact.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
@@ -429,7 +430,7 @@ extends <a href="../WithKey.html" title="interface in com.commercetools.api.mode
 <li>
 <section class="detail" id="getStreetName()">
 <h3>getStreetName</h3>
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/BaseAddress.html#line.85">getStreetName</a></span>()</div>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/BaseAddress.html#line.86">getStreetName</a></span>()</div>
 <div class="block"><p>Name of the street.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
@@ -440,7 +441,7 @@ extends <a href="../WithKey.html" title="interface in com.commercetools.api.mode
 <li>
 <section class="detail" id="getStreetNumber()">
 <h3>getStreetNumber</h3>
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/BaseAddress.html#line.92">getStreetNumber</a></span>()</div>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/BaseAddress.html#line.93">getStreetNumber</a></span>()</div>
 <div class="block"><p>Street number.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
@@ -451,7 +452,7 @@ extends <a href="../WithKey.html" title="interface in com.commercetools.api.mode
 <li>
 <section class="detail" id="getAdditionalStreetInfo()">
 <h3>getAdditionalStreetInfo</h3>
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/BaseAddress.html#line.99">getAdditionalStreetInfo</a></span>()</div>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/BaseAddress.html#line.100">getAdditionalStreetInfo</a></span>()</div>
 <div class="block"><p>Further information on the street address.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
@@ -462,7 +463,7 @@ extends <a href="../WithKey.html" title="interface in com.commercetools.api.mode
 <li>
 <section class="detail" id="getPostalCode()">
 <h3>getPostalCode</h3>
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/BaseAddress.html#line.106">getPostalCode</a></span>()</div>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/BaseAddress.html#line.107">getPostalCode</a></span>()</div>
 <div class="block"><p>Postal code.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
@@ -473,7 +474,7 @@ extends <a href="../WithKey.html" title="interface in com.commercetools.api.mode
 <li>
 <section class="detail" id="getCity()">
 <h3>getCity</h3>
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/BaseAddress.html#line.113">getCity</a></span>()</div>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/BaseAddress.html#line.114">getCity</a></span>()</div>
 <div class="block"><p>Name of the city.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
@@ -484,7 +485,7 @@ extends <a href="../WithKey.html" title="interface in com.commercetools.api.mode
 <li>
 <section class="detail" id="getRegion()">
 <h3>getRegion</h3>
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/BaseAddress.html#line.120">getRegion</a></span>()</div>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/BaseAddress.html#line.121">getRegion</a></span>()</div>
 <div class="block"><p>Name of the region.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
@@ -495,7 +496,7 @@ extends <a href="../WithKey.html" title="interface in com.commercetools.api.mode
 <li>
 <section class="detail" id="getState()">
 <h3>getState</h3>
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/BaseAddress.html#line.127">getState</a></span>()</div>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/BaseAddress.html#line.128">getState</a></span>()</div>
 <div class="block"><p>Name of the state, for example, Colorado.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
@@ -506,7 +507,7 @@ extends <a href="../WithKey.html" title="interface in com.commercetools.api.mode
 <li>
 <section class="detail" id="getCompany()">
 <h3>getCompany</h3>
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/BaseAddress.html#line.134">getCompany</a></span>()</div>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/BaseAddress.html#line.135">getCompany</a></span>()</div>
 <div class="block"><p>Name of the company.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
@@ -517,7 +518,7 @@ extends <a href="../WithKey.html" title="interface in com.commercetools.api.mode
 <li>
 <section class="detail" id="getDepartment()">
 <h3>getDepartment</h3>
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/BaseAddress.html#line.141">getDepartment</a></span>()</div>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/BaseAddress.html#line.142">getDepartment</a></span>()</div>
 <div class="block"><p>Name of the department.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
@@ -528,7 +529,7 @@ extends <a href="../WithKey.html" title="interface in com.commercetools.api.mode
 <li>
 <section class="detail" id="getBuilding()">
 <h3>getBuilding</h3>
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/BaseAddress.html#line.148">getBuilding</a></span>()</div>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/BaseAddress.html#line.149">getBuilding</a></span>()</div>
 <div class="block"><p>Number or name of the building.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
@@ -539,7 +540,7 @@ extends <a href="../WithKey.html" title="interface in com.commercetools.api.mode
 <li>
 <section class="detail" id="getApartment()">
 <h3>getApartment</h3>
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/BaseAddress.html#line.155">getApartment</a></span>()</div>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/BaseAddress.html#line.156">getApartment</a></span>()</div>
 <div class="block"><p>Number or name of the apartment.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
@@ -550,7 +551,7 @@ extends <a href="../WithKey.html" title="interface in com.commercetools.api.mode
 <li>
 <section class="detail" id="getPOBox()">
 <h3>getPOBox</h3>
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/BaseAddress.html#line.162">getPOBox</a></span>()</div>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/BaseAddress.html#line.163">getPOBox</a></span>()</div>
 <div class="block"><p>Post office box number.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
@@ -561,7 +562,7 @@ extends <a href="../WithKey.html" title="interface in com.commercetools.api.mode
 <li>
 <section class="detail" id="getPhone()">
 <h3>getPhone</h3>
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/BaseAddress.html#line.169">getPhone</a></span>()</div>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/BaseAddress.html#line.170">getPhone</a></span>()</div>
 <div class="block"><p>Phone number of the contact.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
@@ -572,7 +573,7 @@ extends <a href="../WithKey.html" title="interface in com.commercetools.api.mode
 <li>
 <section class="detail" id="getMobile()">
 <h3>getMobile</h3>
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/BaseAddress.html#line.176">getMobile</a></span>()</div>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/BaseAddress.html#line.177">getMobile</a></span>()</div>
 <div class="block"><p>Mobile phone number of the contact.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
@@ -583,7 +584,7 @@ extends <a href="../WithKey.html" title="interface in com.commercetools.api.mode
 <li>
 <section class="detail" id="getEmail()">
 <h3>getEmail</h3>
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/BaseAddress.html#line.183">getEmail</a></span>()</div>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/BaseAddress.html#line.184">getEmail</a></span>()</div>
 <div class="block"><p>Email address of the contact.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
@@ -594,7 +595,7 @@ extends <a href="../WithKey.html" title="interface in com.commercetools.api.mode
 <li>
 <section class="detail" id="getFax()">
 <h3>getFax</h3>
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/BaseAddress.html#line.190">getFax</a></span>()</div>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/BaseAddress.html#line.191">getFax</a></span>()</div>
 <div class="block"><p>Fax number of the contact.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
@@ -605,7 +606,7 @@ extends <a href="../WithKey.html" title="interface in com.commercetools.api.mode
 <li>
 <section class="detail" id="getAdditionalAddressInfo()">
 <h3>getAdditionalAddressInfo</h3>
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/BaseAddress.html#line.197">getAdditionalAddressInfo</a></span>()</div>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/BaseAddress.html#line.198">getAdditionalAddressInfo</a></span>()</div>
 <div class="block"><p>Further information on the Address.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
@@ -616,7 +617,7 @@ extends <a href="../WithKey.html" title="interface in com.commercetools.api.mode
 <li>
 <section class="detail" id="getExternalId()">
 <h3>getExternalId</h3>
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/BaseAddress.html#line.204">getExternalId</a></span>()</div>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/BaseAddress.html#line.205">getExternalId</a></span>()</div>
 <div class="block"><p>ID for the contact used in an external system.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
@@ -627,187 +628,187 @@ extends <a href="../WithKey.html" title="interface in com.commercetools.api.mode
 <li>
 <section class="detail" id="setId(java.lang.String)">
 <h3>setId</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/BaseAddress.html#line.207">setId</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;id)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/BaseAddress.html#line.208">setId</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;id)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setKey(java.lang.String)">
 <h3>setKey</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/BaseAddress.html#line.209">setKey</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/BaseAddress.html#line.210">setKey</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setCountry(java.lang.String)">
 <h3>setCountry</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/BaseAddress.html#line.211">setCountry</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;country)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/BaseAddress.html#line.212">setCountry</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;country)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setTitle(java.lang.String)">
 <h3>setTitle</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/BaseAddress.html#line.213">setTitle</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;title)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/BaseAddress.html#line.214">setTitle</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;title)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setSalutation(java.lang.String)">
 <h3>setSalutation</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/BaseAddress.html#line.215">setSalutation</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;salutation)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/BaseAddress.html#line.216">setSalutation</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;salutation)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setFirstName(java.lang.String)">
 <h3>setFirstName</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/BaseAddress.html#line.217">setFirstName</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;firstName)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/BaseAddress.html#line.218">setFirstName</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;firstName)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setLastName(java.lang.String)">
 <h3>setLastName</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/BaseAddress.html#line.219">setLastName</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;lastName)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/BaseAddress.html#line.220">setLastName</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;lastName)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setStreetName(java.lang.String)">
 <h3>setStreetName</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/BaseAddress.html#line.221">setStreetName</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;streetName)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/BaseAddress.html#line.222">setStreetName</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;streetName)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setStreetNumber(java.lang.String)">
 <h3>setStreetNumber</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/BaseAddress.html#line.223">setStreetNumber</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;streetNumber)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/BaseAddress.html#line.224">setStreetNumber</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;streetNumber)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setAdditionalStreetInfo(java.lang.String)">
 <h3>setAdditionalStreetInfo</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/BaseAddress.html#line.225">setAdditionalStreetInfo</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;additionalStreetInfo)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/BaseAddress.html#line.226">setAdditionalStreetInfo</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;additionalStreetInfo)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setPostalCode(java.lang.String)">
 <h3>setPostalCode</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/BaseAddress.html#line.227">setPostalCode</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;postalCode)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/BaseAddress.html#line.228">setPostalCode</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;postalCode)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setCity(java.lang.String)">
 <h3>setCity</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/BaseAddress.html#line.229">setCity</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;city)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/BaseAddress.html#line.230">setCity</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;city)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setRegion(java.lang.String)">
 <h3>setRegion</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/BaseAddress.html#line.231">setRegion</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;region)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/BaseAddress.html#line.232">setRegion</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;region)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setState(java.lang.String)">
 <h3>setState</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/BaseAddress.html#line.233">setState</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;state)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/BaseAddress.html#line.234">setState</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;state)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setCompany(java.lang.String)">
 <h3>setCompany</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/BaseAddress.html#line.235">setCompany</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;company)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/BaseAddress.html#line.236">setCompany</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;company)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setDepartment(java.lang.String)">
 <h3>setDepartment</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/BaseAddress.html#line.237">setDepartment</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;department)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/BaseAddress.html#line.238">setDepartment</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;department)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setBuilding(java.lang.String)">
 <h3>setBuilding</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/BaseAddress.html#line.239">setBuilding</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;building)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/BaseAddress.html#line.240">setBuilding</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;building)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setApartment(java.lang.String)">
 <h3>setApartment</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/BaseAddress.html#line.241">setApartment</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;apartment)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/BaseAddress.html#line.242">setApartment</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;apartment)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setPOBox(java.lang.String)">
 <h3>setPOBox</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/BaseAddress.html#line.243">setPOBox</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;pOBox)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/BaseAddress.html#line.244">setPOBox</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;pOBox)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setPhone(java.lang.String)">
 <h3>setPhone</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/BaseAddress.html#line.245">setPhone</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;phone)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/BaseAddress.html#line.246">setPhone</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;phone)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setMobile(java.lang.String)">
 <h3>setMobile</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/BaseAddress.html#line.247">setMobile</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;mobile)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/BaseAddress.html#line.248">setMobile</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;mobile)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setEmail(java.lang.String)">
 <h3>setEmail</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/BaseAddress.html#line.249">setEmail</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;email)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/BaseAddress.html#line.250">setEmail</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;email)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setFax(java.lang.String)">
 <h3>setFax</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/BaseAddress.html#line.251">setFax</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;fax)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/BaseAddress.html#line.252">setFax</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;fax)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setAdditionalAddressInfo(java.lang.String)">
 <h3>setAdditionalAddressInfo</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/BaseAddress.html#line.253">setAdditionalAddressInfo</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;additionalAddressInfo)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/BaseAddress.html#line.254">setAdditionalAddressInfo</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;additionalAddressInfo)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setExternalId(java.lang.String)">
 <h3>setExternalId</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/BaseAddress.html#line.255">setExternalId</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;externalId)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/BaseAddress.html#line.256">setExternalId</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;externalId)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="BaseAddress.html" title="interface in com.commercetools.api.models.common">BaseAddress</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/BaseAddress.html#line.257">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="BaseAddress.html" title="interface in com.commercetools.api.models.common">BaseAddress</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/BaseAddress.html#line.258">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.api.models.common.BaseAddress)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="BaseAddress.html" title="interface in com.commercetools.api.models.common">BaseAddress</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/BaseAddress.html#line.261">of</a></span>&#8203;<span class="parameters">(<a href="BaseAddress.html" title="interface in com.commercetools.api.models.common">BaseAddress</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="BaseAddress.html" title="interface in com.commercetools.api.models.common">BaseAddress</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/BaseAddress.html#line.262">of</a></span>&#8203;<span class="parameters">(<a href="BaseAddress.html" title="interface in com.commercetools.api.models.common">BaseAddress</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder()">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="BaseAddressBuilder.html" title="class in com.commercetools.api.models.common">BaseAddressBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/BaseAddress.html#line.291">builder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="BaseAddressBuilder.html" title="class in com.commercetools.api.models.common">BaseAddressBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/BaseAddress.html#line.292">builder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder(com.commercetools.api.models.common.BaseAddress)">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="BaseAddressBuilder.html" title="class in com.commercetools.api.models.common">BaseAddressBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/BaseAddress.html#line.295">builder</a></span>&#8203;<span class="parameters">(<a href="BaseAddress.html" title="interface in com.commercetools.api.models.common">BaseAddress</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="BaseAddressBuilder.html" title="class in com.commercetools.api.models.common">BaseAddressBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/BaseAddress.html#line.296">builder</a></span>&#8203;<span class="parameters">(<a href="BaseAddress.html" title="interface in com.commercetools.api.models.common">BaseAddress</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withBaseAddress(java.util.function.Function)">
 <h3>withBaseAddress</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/BaseAddress.html#line.299">withBaseAddress</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="BaseAddress.html" title="interface in com.commercetools.api.models.common">BaseAddress</a>,&#8203;T&gt;&nbsp;helper)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/BaseAddress.html#line.300">withBaseAddress</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="BaseAddress.html" title="interface in com.commercetools.api.models.common">BaseAddress</a>,&#8203;T&gt;&nbsp;helper)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="typeReference()">
 <h3>typeReference</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="BaseAddress.html" title="interface in com.commercetools.api.models.common">BaseAddress</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/BaseAddress.html#line.303">typeReference</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="BaseAddress.html" title="interface in com.commercetools.api.models.common">BaseAddress</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/BaseAddress.html#line.304">typeReference</a></span>()</div>
 </section>
 </li>
 </ul>

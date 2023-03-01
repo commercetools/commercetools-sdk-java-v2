@@ -47,7 +47,7 @@
 <span class="source-line-no">034</span><span id="line.34"> */</span>
 <span class="source-line-no">035</span><span id="line.35">@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")</span>
 <span class="source-line-no">036</span><span id="line.36">@JsonDeserialize(as = DeliveryImpl.class)</span>
-<span class="source-line-no">037</span><span id="line.37">public interface Delivery extends com.commercetools.api.models.Customizable&lt;Delivery&gt; {</span>
+<span class="source-line-no">037</span><span id="line.37">public interface Delivery extends DeliveryMixin, com.commercetools.api.models.Customizable&lt;Delivery&gt; {</span>
 <span class="source-line-no">038</span><span id="line.38"></span>
 <span class="source-line-no">039</span><span id="line.39">    /**</span>
 <span class="source-line-no">040</span><span id="line.40">     *  &lt;p&gt;Unique identifier of the Delivery.&lt;/p&gt;</span>
@@ -138,27 +138,15 @@
 <span class="source-line-no">125</span><span id="line.125">        return helper.apply(this);</span>
 <span class="source-line-no">126</span><span id="line.126">    }</span>
 <span class="source-line-no">127</span><span id="line.127"></span>
-<span class="source-line-no">128</span><span id="line.128">    public default DeliveryDraftBuilder toDraftBuilder() {</span>
-<span class="source-line-no">129</span><span id="line.129">        return DeliveryDraft.builder()</span>
-<span class="source-line-no">130</span><span id="line.130">                .address(this.getAddress().toDraft())</span>
-<span class="source-line-no">131</span><span id="line.131">                .items(this.getItems())</span>
-<span class="source-line-no">132</span><span id="line.132">                .parcels(this.getParcels().stream().map(Parcel::toDraft).collect(java.util.stream.Collectors.toList()))</span>
-<span class="source-line-no">133</span><span id="line.133">                .custom(this.getCustom().toDraft());</span>
-<span class="source-line-no">134</span><span id="line.134">    }</span>
-<span class="source-line-no">135</span><span id="line.135"></span>
-<span class="source-line-no">136</span><span id="line.136">    public default DeliveryDraft toDraft() {</span>
-<span class="source-line-no">137</span><span id="line.137">        return toDraftBuilder().build();</span>
-<span class="source-line-no">138</span><span id="line.138">    }</span>
-<span class="source-line-no">139</span><span id="line.139"></span>
-<span class="source-line-no">140</span><span id="line.140">    public static com.fasterxml.jackson.core.type.TypeReference&lt;Delivery&gt; typeReference() {</span>
-<span class="source-line-no">141</span><span id="line.141">        return new com.fasterxml.jackson.core.type.TypeReference&lt;Delivery&gt;() {</span>
-<span class="source-line-no">142</span><span id="line.142">            @Override</span>
-<span class="source-line-no">143</span><span id="line.143">            public String toString() {</span>
-<span class="source-line-no">144</span><span id="line.144">                return "TypeReference&lt;Delivery&gt;";</span>
-<span class="source-line-no">145</span><span id="line.145">            }</span>
-<span class="source-line-no">146</span><span id="line.146">        };</span>
-<span class="source-line-no">147</span><span id="line.147">    }</span>
-<span class="source-line-no">148</span><span id="line.148">}</span>
+<span class="source-line-no">128</span><span id="line.128">    public static com.fasterxml.jackson.core.type.TypeReference&lt;Delivery&gt; typeReference() {</span>
+<span class="source-line-no">129</span><span id="line.129">        return new com.fasterxml.jackson.core.type.TypeReference&lt;Delivery&gt;() {</span>
+<span class="source-line-no">130</span><span id="line.130">            @Override</span>
+<span class="source-line-no">131</span><span id="line.131">            public String toString() {</span>
+<span class="source-line-no">132</span><span id="line.132">                return "TypeReference&lt;Delivery&gt;";</span>
+<span class="source-line-no">133</span><span id="line.133">            }</span>
+<span class="source-line-no">134</span><span id="line.134">        };</span>
+<span class="source-line-no">135</span><span id="line.135">    }</span>
+<span class="source-line-no">136</span><span id="line.136">}</span>
 
 
 

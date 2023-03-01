@@ -77,7 +77,7 @@ loadScripts(document, 'script');</script>
 <section class="description">
 <dl class="notes">
 <dt>All Superinterfaces:</dt>
-<dd><code><a href="../Customizable.html" title="interface in com.commercetools.api.models">Customizable</a>&lt;<a href="Parcel.html" title="interface in com.commercetools.api.models.order">Parcel</a>&gt;</code></dd>
+<dd><code><a href="../Customizable.html" title="interface in com.commercetools.api.models">Customizable</a>&lt;<a href="Parcel.html" title="interface in com.commercetools.api.models.order">Parcel</a>&gt;</code>, <code><a href="ParcelMixin.html" title="interface in com.commercetools.api.models.order">ParcelMixin</a></code></dd>
 </dl>
 <dl class="notes">
 <dt>All Known Implementing Classes:</dt>
@@ -85,7 +85,7 @@ loadScripts(document, 'script');</script>
 </dl>
 <hr>
 <div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/Parcel.html#line.32">Parcel</a></span><span class="extends-implements">
-extends <a href="../Customizable.html" title="interface in com.commercetools.api.models">Customizable</a>&lt;<a href="Parcel.html" title="interface in com.commercetools.api.models.order">Parcel</a>&gt;</span></div>
+extends <a href="ParcelMixin.html" title="interface in com.commercetools.api.models.order">ParcelMixin</a>, <a href="../Customizable.html" title="interface in com.commercetools.api.models">Customizable</a>&lt;<a href="Parcel.html" title="interface in com.commercetools.api.models.order">Parcel</a>&gt;</span></div>
 <div class="block">Parcel
 
  <hr>
@@ -169,12 +169,6 @@ extends <a href="../Customizable.html" title="interface in com.commercetools.api
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#setTrackingData(com.commercetools.api.models.order.TrackingData)">setTrackingData</a></span>&#8203;(<a href="TrackingData.html" title="interface in com.commercetools.api.models.order">TrackingData</a>&nbsp;trackingData)</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table"><code>default <a href="ParcelDraft.html" title="interface in com.commercetools.api.models.order">ParcelDraft</a></code></div>
-<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table"><code><span class="member-name-link"><a href="#toDraft()">toDraft</a></span>()</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table"><code>default <a href="ParcelDraftBuilder.html" title="class in com.commercetools.api.models.order">ParcelDraftBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table"><code><span class="member-name-link"><a href="#toDraftBuilder()">toDraftBuilder</a></span>()</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table-tab1 method-summary-table"><code>static com.fasterxml.jackson.core.type.TypeReference&lt;<a href="Parcel.html" title="interface in com.commercetools.api.models.order">Parcel</a>&gt;</code></div>
 <div class="col-second odd-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#typeReference()">typeReference</a></span>()</code></div>
 <div class="col-last odd-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
@@ -187,6 +181,9 @@ extends <a href="../Customizable.html" title="interface in com.commercetools.api
 <div class="inherited-list">
 <h3 id="methods.inherited.from.class.com.commercetools.api.models.Customizable">Methods inherited from interface&nbsp;com.commercetools.api.models.<a href="../Customizable.html" title="interface in com.commercetools.api.models">Customizable</a></h3>
 <code><a href="../Customizable.html#unwrapCustomizable()">unwrapCustomizable</a></code></div>
+<div class="inherited-list">
+<h3 id="methods.inherited.from.class.com.commercetools.api.models.order.ParcelMixin">Methods inherited from interface&nbsp;com.commercetools.api.models.order.<a href="ParcelMixin.html" title="interface in com.commercetools.api.models.order">ParcelMixin</a></h3>
+<code><a href="ParcelMixin.html#toDraft()">toDraft</a>, <a href="ParcelMixin.html#toDraftBuilder()">toDraftBuilder</a></code></div>
 </section>
 </li>
 </ul>
@@ -218,6 +215,10 @@ extends <a href="../Customizable.html" title="interface in com.commercetools.api
 <h3>getMeasurements</h3>
 <div class="member-signature"><span class="annotations">@Valid
 </span><span class="return-type">@Valid <a href="ParcelMeasurements.html" title="interface in com.commercetools.api.models.order">ParcelMeasurements</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/Parcel.html#line.53">getMeasurements</a></span>()</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="ParcelMixin.html#getMeasurements()">getMeasurements</a></code>&nbsp;in interface&nbsp;<code><a href="ParcelMixin.html" title="interface in com.commercetools.api.models.order">ParcelMixin</a></code></dd>
+</dl>
 </section>
 </li>
 <li>
@@ -225,6 +226,10 @@ extends <a href="../Customizable.html" title="interface in com.commercetools.api
 <h3>getTrackingData</h3>
 <div class="member-signature"><span class="annotations">@Valid
 </span><span class="return-type">@Valid <a href="TrackingData.html" title="interface in com.commercetools.api.models.order">TrackingData</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/Parcel.html#line.60">getTrackingData</a></span>()</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="ParcelMixin.html#getTrackingData()">getTrackingData</a></code>&nbsp;in interface&nbsp;<code><a href="ParcelMixin.html" title="interface in com.commercetools.api.models.order">ParcelMixin</a></code></dd>
+</dl>
 </section>
 </li>
 <li>
@@ -233,6 +238,10 @@ extends <a href="../Customizable.html" title="interface in com.commercetools.api
 <div class="member-signature"><span class="annotations">@Valid
 </span><span class="return-type">@Valid <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="DeliveryItem.html" title="interface in com.commercetools.api.models.order">DeliveryItem</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/Parcel.html#line.67">getItems</a></span>()</div>
 <div class="block"><p>The delivery items contained in this parcel.</p></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="ParcelMixin.html#getItems()">getItems</a></code>&nbsp;in interface&nbsp;<code><a href="ParcelMixin.html" title="interface in com.commercetools.api.models.order">ParcelMixin</a></code></dd>
+</dl>
 </section>
 </li>
 <li>
@@ -244,6 +253,8 @@ extends <a href="../Customizable.html" title="interface in com.commercetools.api
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../Customizable.html#getCustom()">getCustom</a></code>&nbsp;in interface&nbsp;<code><a href="../Customizable.html" title="interface in com.commercetools.api.models">Customizable</a>&lt;<a href="Parcel.html" title="interface in com.commercetools.api.models.order">Parcel</a>&gt;</code></dd>
+<dt>Specified by:</dt>
+<dd><code><a href="ParcelMixin.html#getCustom()">getCustom</a></code>&nbsp;in interface&nbsp;<code><a href="ParcelMixin.html" title="interface in com.commercetools.api.models.order">ParcelMixin</a></code></dd>
 </dl>
 </section>
 </li>
@@ -324,21 +335,9 @@ extends <a href="../Customizable.html" title="interface in com.commercetools.api
 </section>
 </li>
 <li>
-<section class="detail" id="toDraftBuilder()">
-<h3>toDraftBuilder</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type"><a href="ParcelDraftBuilder.html" title="class in com.commercetools.api.models.order">ParcelDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/Parcel.html#line.120">toDraftBuilder</a></span>()</div>
-</section>
-</li>
-<li>
-<section class="detail" id="toDraft()">
-<h3>toDraft</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type"><a href="ParcelDraft.html" title="interface in com.commercetools.api.models.order">ParcelDraft</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/Parcel.html#line.128">toDraft</a></span>()</div>
-</section>
-</li>
-<li>
 <section class="detail" id="typeReference()">
 <h3>typeReference</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="Parcel.html" title="interface in com.commercetools.api.models.order">Parcel</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/Parcel.html#line.132">typeReference</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="Parcel.html" title="interface in com.commercetools.api.models.order">Parcel</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/Parcel.html#line.120">typeReference</a></span>()</div>
 </section>
 </li>
 </ul>

@@ -33,15 +33,16 @@
 <span class="source-line-no">020</span><span id="line.20">    }</span>
 <span class="source-line-no">021</span><span id="line.21"></span>
 <span class="source-line-no">022</span><span id="line.22">    public CompletableFuture&lt;ApiHttpResponse&lt;byte[]&gt;&gt; execute(final ApiHttpRequest apiHttpRequest) {</span>
-<span class="source-line-no">023</span><span id="line.23">        return httpClient.execute(apiHttpRequest);</span>
-<span class="source-line-no">024</span><span id="line.24">    }</span>
-<span class="source-line-no">025</span><span id="line.25"></span>
-<span class="source-line-no">026</span><span id="line.26">    @Override</span>
-<span class="source-line-no">027</span><span id="line.27">    protected void internalClose() {</span>
-<span class="source-line-no">028</span><span id="line.28">        if (httpClient instanceof AutoCloseable)</span>
-<span class="source-line-no">029</span><span id="line.29">            closeQuietly((AutoCloseable) httpClient);</span>
-<span class="source-line-no">030</span><span id="line.30">    }</span>
-<span class="source-line-no">031</span><span id="line.31">}</span>
+<span class="source-line-no">023</span><span id="line.23">        return httpClient.execute(apiHttpRequest)</span>
+<span class="source-line-no">024</span><span id="line.24">                .thenApply(response -&gt; response.withContextMap(apiHttpRequest.getContextMap()));</span>
+<span class="source-line-no">025</span><span id="line.25">    }</span>
+<span class="source-line-no">026</span><span id="line.26"></span>
+<span class="source-line-no">027</span><span id="line.27">    @Override</span>
+<span class="source-line-no">028</span><span id="line.28">    protected void internalClose() {</span>
+<span class="source-line-no">029</span><span id="line.29">        if (httpClient instanceof AutoCloseable)</span>
+<span class="source-line-no">030</span><span id="line.30">            closeQuietly((AutoCloseable) httpClient);</span>
+<span class="source-line-no">031</span><span id="line.31">    }</span>
+<span class="source-line-no">032</span><span id="line.32">}</span>
 
 
 

@@ -127,9 +127,34 @@
 <span class="source-line-no">114</span><span id="line.114"> * [pool-1-thread-1] DEBUG commercetools.products.request.commands - io.vrap.rmf.base.client.ApiHttpRequest@1d2c6948[method=POST,uri="https://api.europe-west1.gcp.commercetools.com/test-php-dev-integration-1/products",headers=[...],textInterpretedBody={"productType":{"id":"cda39953-23af-4e85-abb0-5b89517ec5f2","typeId":"product-type"},"name":{"random-string-b66de021-d2fa-4262-8837-94a6992a8cdc":"random-string-da28a010-e66b-49d4-a18b-f1bfc145d2f6"},...}]</span>
 <span class="source-line-no">115</span><span id="line.115"> * [pool-1-thread-1] DEBUG commercetools.products.request.queries - io.vrap.rmf.base.client.ApiHttpRequest@53667fdb[method=GET,uri="https://api.europe-west1.gcp.commercetools.com/test-php-dev-integration-1/products/ef745227-b115-4132-ba2c-4e46db80df79",headers=[...],textInterpretedBody=empty body]</span>
 <span class="source-line-no">116</span><span id="line.116"> * }&lt;/pre&gt;</span>
-<span class="source-line-no">117</span><span id="line.117"> */</span>
-<span class="source-line-no">118</span><span id="line.118">public class Logging {</span>
-<span class="source-line-no">119</span><span id="line.119">}</span>
+<span class="source-line-no">117</span><span id="line.117"> *</span>
+<span class="source-line-no">118</span><span id="line.118"> * &lt;h2 id=mdc_usage&gt;Usage of Mapped Diagnostic Context&lt;/h2&gt;</span>
+<span class="source-line-no">119</span><span id="line.119"> *</span>
+<span class="source-line-no">120</span><span id="line.120"> * &lt;p&gt;The SDK uses {@link java.util.concurrent.CompletableFuture CompletableFutures} extensively and the {@link java.util.concurrent.ExecutorService} typically has a thread pool</span>
+<span class="source-line-no">121</span><span id="line.121"> * to execute the futures. This could lead to the fact that the future is executed on different threads. In case the {@link org.slf4j.MDC} is used by the application the context</span>
+<span class="source-line-no">122</span><span id="line.122"> * could get lost while executing the futures. As the CompletableFutures don't allow attaching a Context you have to make them and the ExecutorService</span>
+<span class="source-line-no">123</span><span id="line.123"> * context aware so that they will restore the MDC before executing the future tasks.&lt;/p&gt;</span>
+<span class="source-line-no">124</span><span id="line.124"> *</span>
+<span class="source-line-no">125</span><span id="line.125"> * &lt;p&gt;The SDK additionally supports the attachment of a {@link io.vrap.rmf.base.client.Context} to a client {@link io.vrap.rmf.base.client.ContextApiHttpClient},</span>
+<span class="source-line-no">126</span><span id="line.126"> * the {@link io.vrap.rmf.base.client.ApiHttpRequest} and the {@link io.vrap.rmf.base.client.ApiHttpResponse} by implementing the</span>
+<span class="source-line-no">127</span><span id="line.127"> * {@link io.vrap.rmf.base.client.ContextAware} interface&lt;/p&gt;</span>
+<span class="source-line-no">128</span><span id="line.128"> *</span>
+<span class="source-line-no">129</span><span id="line.129"> * &lt;p&gt;The {@link com.commercetools.api.client.ProjectApiRoot} also allows to add a {@link io.vrap.rmf.base.client.Context} to it. This is useful</span>
+<span class="source-line-no">130</span><span id="line.130"> * to create a context aware root from a global instance when needed.&lt;/p&gt;</span>
+<span class="source-line-no">131</span><span id="line.131"> *</span>
+<span class="source-line-no">132</span><span id="line.132"> * {@include.example example.ExamplesTest#mdcProjectApiRoot()}</span>
+<span class="source-line-no">133</span><span id="line.133"> *</span>
+<span class="source-line-no">134</span><span id="line.134"> * &lt;p&gt;The above example creates a {@link io.vrap.rmf.base.client.MDCContext} and take a copy of the MDC. The ApiHttpClient will be wrapped in a ContextApiHttpClient</span>
+<span class="source-line-no">135</span><span id="line.135"> * and set the context to all requests and responses executed.&lt;/p&gt;</span>
+<span class="source-line-no">136</span><span id="line.136"> *</span>
+<span class="source-line-no">137</span><span id="line.137"> * &lt;p&gt;The {@link io.vrap.rmf.base.client.http.InternalLoggerMiddleware} will restore the MDC before logging and clean up afterwards to avoid</span>
+<span class="source-line-no">138</span><span id="line.138"> * pollution of threads with unrelated context data. The same applies for the {@link com.commercetools.api.client.ConcurrentModificationMiddleware}&lt;/p&gt;</span>
+<span class="source-line-no">139</span><span id="line.139"> *</span>
+<span class="source-line-no">140</span><span id="line.140"> * &lt;p&gt;The usage of the {@link io.vrap.rmf.base.client.Context} object in the SDK allows further extensions to transport request related context data e.g.</span>
+<span class="source-line-no">141</span><span id="line.141"> * for telemetry purposes.&lt;/p&gt;</span>
+<span class="source-line-no">142</span><span id="line.142"> */</span>
+<span class="source-line-no">143</span><span id="line.143">public class Logging {</span>
+<span class="source-line-no">144</span><span id="line.144">}</span>
 
 
 

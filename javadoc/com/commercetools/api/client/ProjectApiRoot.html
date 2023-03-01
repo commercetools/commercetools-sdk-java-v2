@@ -80,12 +80,12 @@ loadScripts(document, 'script');</script>
 <section class="description">
 <dl class="notes">
 <dt>All Implemented Interfaces:</dt>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/io/Closeable.html" title="class or interface in java.io" class="external-link">Closeable</a></code>, <code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/AutoCloseable.html" title="class or interface in java.lang" class="external-link">AutoCloseable</a></code></dd>
+<dd><code><a href="ProjectScopedApiRoot.html" title="interface in com.commercetools.api.client">ProjectScopedApiRoot</a></code>, <code><a href="https://docs.oracle.com/javase/8/docs/api/java/io/Closeable.html" title="class or interface in java.io" class="external-link">Closeable</a></code>, <code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/AutoCloseable.html" title="class or interface in java.lang" class="external-link">AutoCloseable</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ProjectApiRoot.html#line.13">ProjectApiRoot</a></span>
+<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ProjectApiRoot.html#line.15">ProjectApiRoot</a></span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
-implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Closeable.html" title="class or interface in java.io" class="external-link">Closeable</a></span></div>
+implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Closeable.html" title="class or interface in java.io" class="external-link">Closeable</a>, <a href="ProjectScopedApiRoot.html" title="interface in com.commercetools.api.client">ProjectScopedApiRoot</a></span></div>
 <div class="block">Project scoped API root</div>
 </section>
 <section class="summary">
@@ -103,6 +103,12 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Closeable.
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ByProjectKeyApiClientsRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyApiClientsRequestBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#apiClients()">apiClients</a></span>()</code></div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ByProjectKeyAttributeGroupsRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyAttributeGroupsRequestBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#attributeGroups()">attributeGroups</a></span>()</code></div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ByProjectKeyBusinessUnitsRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyBusinessUnitsRequestBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#businessUnits()">businessUnits</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ByProjectKeyCartDiscountsRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyCartDiscountsRequestBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#cartDiscounts()">cartDiscounts</a></span>()</code></div>
@@ -150,84 +156,108 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Closeable.
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ByProjectKeyGraphqlRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyGraphqlRequestBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#graphql()">graphql</a></span>()</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ByProjectKeyInStoreKeyByStoreKeyRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyRequestBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#inStore(java.lang.String)">inStore</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;storeKey)</code></div>
+<div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ByProjectKeyInBusinessUnitKeyByBusinessUnitKeyRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyInBusinessUnitKeyByBusinessUnitKeyRequestBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#inBusinessUnit(java.lang.String)">inBusinessUnit</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;businessUnitKey)</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ByProjectKeyInventoryRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyInventoryRequestBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#inventory()">inventory</a></span>()</code></div>
+<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ByProjectKeyInStoreKeyByStoreKeyRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyRequestBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#inStore(java.lang.String)">inStore</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;storeKey)</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ByProjectKeyLoginRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyLoginRequestBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#login()">login</a></span>()</code></div>
+<div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ByProjectKeyInventoryRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyInventoryRequestBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#inventory()">inventory</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ByProjectKeyMeRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyMeRequestBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#me()">me</a></span>()</code></div>
+<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ByProjectKeyLoginRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyLoginRequestBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#login()">login</a></span>()</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ByProjectKeyMessagesRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyMessagesRequestBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#messages()">messages</a></span>()</code></div>
+<div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ByProjectKeyMeRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyMeRequestBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#me()">me</a></span>()</code></div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ByProjectKeyMessagesRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyMessagesRequestBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#messages()">messages</a></span>()</code></div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code>static <a href="ProjectApiRoot.html" title="class in com.commercetools.api.client">ProjectApiRoot</a></code></div>
+<div class="col-second even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#of(java.lang.String)">of</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;projectKey)</code></div>
+<div class="col-last even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ByProjectKeyOrdersRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyOrdersRequestBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#orders()">orders</a></span>()</code></div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ByProjectKeyPaymentsRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyPaymentsRequestBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#payments()">payments</a></span>()</code></div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ByProjectKeyPost.html" title="class in com.commercetools.api.client">ByProjectKeyPost</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#post(com.commercetools.api.models.project.ProjectUpdate)">post</a></span>&#8203;(<a href="../models/project/ProjectUpdate.html" title="interface in com.commercetools.api.models.project">ProjectUpdate</a>&nbsp;projectUpdate)</code></div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ByProjectKeyProductDiscountsRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyProductDiscountsRequestBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#productDiscounts()">productDiscounts</a></span>()</code></div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ByProjectKeyProductProjectionsRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyProductProjectionsRequestBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#productProjections()">productProjections</a></span>()</code></div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ByProjectKeyProductsRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyProductsRequestBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#products()">products</a></span>()</code></div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ByProjectKeyProductSelectionsRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyProductSelectionsRequestBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#productSelections()">productSelections</a></span>()</code></div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ByProjectKeyProductTypesRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyProductTypesRequestBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#productTypes()">productTypes</a></span>()</code></div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ByProjectKeyQuoteRequestsRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyQuoteRequestsRequestBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#quoteRequests()">quoteRequests</a></span>()</code></div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ByProjectKeyQuotesRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyQuotesRequestBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#quotes()">quotes</a></span>()</code></div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ByProjectKeyReviewsRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyReviewsRequestBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#reviews()">reviews</a></span>()</code></div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ByProjectKeyShippingMethodsRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyShippingMethodsRequestBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#shippingMethods()">shippingMethods</a></span>()</code></div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ByProjectKeyShoppingListsRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyShoppingListsRequestBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#shoppingLists()">shoppingLists</a></span>()</code></div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ByProjectKeyStagedQuotesRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyStagedQuotesRequestBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#stagedQuotes()">stagedQuotes</a></span>()</code></div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ByProjectKeyStandalonePricesRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyStandalonePricesRequestBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#standalonePrices()">standalonePrices</a></span>()</code></div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ByProjectKeyStatesRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyStatesRequestBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#states()">states</a></span>()</code></div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ByProjectKeyStoresRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyStoresRequestBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#stores()">stores</a></span>()</code></div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ByProjectKeySubscriptionsRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeySubscriptionsRequestBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#subscriptions()">subscriptions</a></span>()</code></div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ByProjectKeyTaxCategoriesRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyTaxCategoriesRequestBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#taxCategories()">taxCategories</a></span>()</code></div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ByProjectKeyTypesRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyTypesRequestBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#types()">types</a></span>()</code></div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ByProjectKeyRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyRequestBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#with()">with</a></span>()</code></div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code>&lt;R&gt;&nbsp;R</code></div>
+<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#with(java.util.function.Function)">with</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ProjectApiRoot.html" title="class in com.commercetools.api.client">ProjectApiRoot</a>,&#8203;R&gt;&nbsp;op)</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code>static <a href="ProjectApiRoot.html" title="class in com.commercetools.api.client">ProjectApiRoot</a></code></div>
-<div class="col-second odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#of(java.lang.String)">of</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;projectKey)</code></div>
+<div class="col-second odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#withContext(com.commercetools.api.client.ProjectApiRoot,io.vrap.rmf.base.client.Context)">withContext</a></span>&#8203;(<a href="ProjectApiRoot.html" title="class in com.commercetools.api.client">ProjectApiRoot</a>&nbsp;projectApiRoot,
+ <a href="../../../../io/vrap/rmf/base/client/Context.html" title="interface in io.vrap.rmf.base.client">Context</a>&nbsp;context)</code></div>
 <div class="col-last odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ByProjectKeyOrdersRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyOrdersRequestBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#orders()">orders</a></span>()</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ByProjectKeyPaymentsRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyPaymentsRequestBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#payments()">payments</a></span>()</code></div>
+<div class="col-first even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code>static <a href="ProjectApiRoot.html" title="class in com.commercetools.api.client">ProjectApiRoot</a></code></div>
+<div class="col-second even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#withContext(java.lang.String,io.vrap.rmf.base.client.ApiHttpClient,io.vrap.rmf.base.client.Context)">withContext</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;projectKey,
+ <a href="../../../../io/vrap/rmf/base/client/ApiHttpClient.html" title="interface in io.vrap.rmf.base.client">ApiHttpClient</a>&nbsp;apiHttpClient,
+ <a href="../../../../io/vrap/rmf/base/client/Context.html" title="interface in io.vrap.rmf.base.client">Context</a>&nbsp;context)</code></div>
+<div class="col-last even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ByProjectKeyRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyRequestBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#withProjectKey(java.lang.String)">withProjectKey</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;projectKey)</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ByProjectKeyPost.html" title="class in com.commercetools.api.client">ByProjectKeyPost</a></code></div>
-<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#post(com.commercetools.api.models.project.ProjectUpdate)">post</a></span>&#8203;(<a href="../models/project/ProjectUpdate.html" title="interface in com.commercetools.api.models.project">ProjectUpdate</a>&nbsp;projectUpdate)</code></div>
+<div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ByProjectKeyZonesRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyZonesRequestBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#zones()">zones</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ByProjectKeyProductDiscountsRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyProductDiscountsRequestBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#productDiscounts()">productDiscounts</a></span>()</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ByProjectKeyProductProjectionsRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyProductProjectionsRequestBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#productProjections()">productProjections</a></span>()</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ByProjectKeyProductsRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyProductsRequestBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#products()">products</a></span>()</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ByProjectKeyProductSelectionsRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyProductSelectionsRequestBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#productSelections()">productSelections</a></span>()</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ByProjectKeyProductTypesRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyProductTypesRequestBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#productTypes()">productTypes</a></span>()</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ByProjectKeyReviewsRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyReviewsRequestBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#reviews()">reviews</a></span>()</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ByProjectKeyShippingMethodsRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyShippingMethodsRequestBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#shippingMethods()">shippingMethods</a></span>()</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ByProjectKeyShoppingListsRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyShoppingListsRequestBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#shoppingLists()">shoppingLists</a></span>()</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ByProjectKeyStatesRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyStatesRequestBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#states()">states</a></span>()</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ByProjectKeyStoresRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyStoresRequestBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#stores()">stores</a></span>()</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ByProjectKeySubscriptionsRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeySubscriptionsRequestBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#subscriptions()">subscriptions</a></span>()</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ByProjectKeyTaxCategoriesRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyTaxCategoriesRequestBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#taxCategories()">taxCategories</a></span>()</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ByProjectKeyTypesRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyTypesRequestBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#types()">types</a></span>()</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ByProjectKeyRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyRequestBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#with()">with</a></span>()</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code>&lt;R&gt;&nbsp;R</code></div>
-<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#with(java.util.function.Function)">with</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ProjectApiRoot.html" title="class in com.commercetools.api.client">ProjectApiRoot</a>,&#8203;R&gt;&nbsp;op)</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ByProjectKeyRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyRequestBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#withProjectKey(java.lang.String)">withProjectKey</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;projectKey)</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ByProjectKeyZonesRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyZonesRequestBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#zones()">zones</a></span>()</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
 </div>
 </div>
 </div>
@@ -248,254 +278,483 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Closeable.
 <li>
 <section class="detail" id="getProjectKey()">
 <h3>getProjectKey</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ProjectApiRoot.html#line.22">getProjectKey</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ProjectApiRoot.html#line.24">getProjectKey</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getApiHttpClient()">
 <h3>getApiHttpClient</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../../../../io/vrap/rmf/base/client/ApiHttpClient.html" title="interface in io.vrap.rmf.base.client">ApiHttpClient</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ProjectApiRoot.html#line.26">getApiHttpClient</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../../../../io/vrap/rmf/base/client/ApiHttpClient.html" title="interface in io.vrap.rmf.base.client">ApiHttpClient</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ProjectApiRoot.html#line.28">getApiHttpClient</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(java.lang.String)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="ProjectApiRoot.html" title="class in com.commercetools.api.client">ProjectApiRoot</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ProjectApiRoot.html#line.30">of</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;projectKey)</span></div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="ProjectApiRoot.html" title="class in com.commercetools.api.client">ProjectApiRoot</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ProjectApiRoot.html#line.32">of</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;projectKey)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="fromClient(java.lang.String,io.vrap.rmf.base.client.ApiHttpClient)">
 <h3>fromClient</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="ProjectApiRoot.html" title="class in com.commercetools.api.client">ProjectApiRoot</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ProjectApiRoot.html#line.34">fromClient</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;projectKey,
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="ProjectApiRoot.html" title="class in com.commercetools.api.client">ProjectApiRoot</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ProjectApiRoot.html#line.36">fromClient</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;projectKey,
  <a href="../../../../io/vrap/rmf/base/client/ApiHttpClient.html" title="interface in io.vrap.rmf.base.client">ApiHttpClient</a>&nbsp;apiHttpClient)</span></div>
+</section>
+</li>
+<li>
+<section class="detail" id="withContext(java.lang.String,io.vrap.rmf.base.client.ApiHttpClient,io.vrap.rmf.base.client.Context)">
+<h3>withContext</h3>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="ProjectApiRoot.html" title="class in com.commercetools.api.client">ProjectApiRoot</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ProjectApiRoot.html#line.40">withContext</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;projectKey,
+ <a href="../../../../io/vrap/rmf/base/client/ApiHttpClient.html" title="interface in io.vrap.rmf.base.client">ApiHttpClient</a>&nbsp;apiHttpClient,
+ <a href="../../../../io/vrap/rmf/base/client/Context.html" title="interface in io.vrap.rmf.base.client">Context</a>&nbsp;context)</span></div>
+</section>
+</li>
+<li>
+<section class="detail" id="withContext(com.commercetools.api.client.ProjectApiRoot,io.vrap.rmf.base.client.Context)">
+<h3>withContext</h3>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="ProjectApiRoot.html" title="class in com.commercetools.api.client">ProjectApiRoot</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ProjectApiRoot.html#line.45">withContext</a></span>&#8203;<span class="parameters">(<a href="ProjectApiRoot.html" title="class in com.commercetools.api.client">ProjectApiRoot</a>&nbsp;projectApiRoot,
+ <a href="../../../../io/vrap/rmf/base/client/Context.html" title="interface in io.vrap.rmf.base.client">Context</a>&nbsp;context)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="with()">
 <h3>with</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyRequestBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ProjectApiRoot.html#line.38">with</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyRequestBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ProjectApiRoot.html#line.50">with</a></span>()</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="ProjectScopedApiRoot.html#with()">with</a></code>&nbsp;in interface&nbsp;<code><a href="ProjectScopedApiRoot.html" title="interface in com.commercetools.api.client">ProjectScopedApiRoot</a></code></dd>
+</dl>
 </section>
 </li>
 <li>
 <section class="detail" id="withProjectKey(java.lang.String)">
 <h3>withProjectKey</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyRequestBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ProjectApiRoot.html#line.42">withProjectKey</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;projectKey)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyRequestBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ProjectApiRoot.html#line.55">withProjectKey</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;projectKey)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="get()">
 <h3>get</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyGet.html" title="class in com.commercetools.api.client">ByProjectKeyGet</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ProjectApiRoot.html#line.46">get</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyGet.html" title="class in com.commercetools.api.client">ByProjectKeyGet</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ProjectApiRoot.html#line.59">get</a></span>()</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="ProjectScopedApiRoot.html#get()">get</a></code>&nbsp;in interface&nbsp;<code><a href="ProjectScopedApiRoot.html" title="interface in com.commercetools.api.client">ProjectScopedApiRoot</a></code></dd>
+</dl>
 </section>
 </li>
 <li>
 <section class="detail" id="post(com.commercetools.api.models.project.ProjectUpdate)">
 <h3>post</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyPost.html" title="class in com.commercetools.api.client">ByProjectKeyPost</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ProjectApiRoot.html#line.50">post</a></span>&#8203;<span class="parameters">(<a href="../models/project/ProjectUpdate.html" title="interface in com.commercetools.api.models.project">ProjectUpdate</a>&nbsp;projectUpdate)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyPost.html" title="class in com.commercetools.api.client">ByProjectKeyPost</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ProjectApiRoot.html#line.64">post</a></span>&#8203;<span class="parameters">(<a href="../models/project/ProjectUpdate.html" title="interface in com.commercetools.api.models.project">ProjectUpdate</a>&nbsp;projectUpdate)</span></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="ProjectScopedApiRoot.html#post(com.commercetools.api.models.project.ProjectUpdate)">post</a></code>&nbsp;in interface&nbsp;<code><a href="ProjectScopedApiRoot.html" title="interface in com.commercetools.api.client">ProjectScopedApiRoot</a></code></dd>
+</dl>
 </section>
 </li>
 <li>
 <section class="detail" id="categories()">
 <h3>categories</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyCategoriesRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyCategoriesRequestBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ProjectApiRoot.html#line.54">categories</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyCategoriesRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyCategoriesRequestBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ProjectApiRoot.html#line.69">categories</a></span>()</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="ProjectScopedApiRoot.html#categories()">categories</a></code>&nbsp;in interface&nbsp;<code><a href="ProjectScopedApiRoot.html" title="interface in com.commercetools.api.client">ProjectScopedApiRoot</a></code></dd>
+</dl>
 </section>
 </li>
 <li>
 <section class="detail" id="carts()">
 <h3>carts</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyCartsRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyCartsRequestBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ProjectApiRoot.html#line.58">carts</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyCartsRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyCartsRequestBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ProjectApiRoot.html#line.74">carts</a></span>()</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="ProjectScopedApiRoot.html#carts()">carts</a></code>&nbsp;in interface&nbsp;<code><a href="ProjectScopedApiRoot.html" title="interface in com.commercetools.api.client">ProjectScopedApiRoot</a></code></dd>
+</dl>
 </section>
 </li>
 <li>
 <section class="detail" id="cartDiscounts()">
 <h3>cartDiscounts</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyCartDiscountsRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyCartDiscountsRequestBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ProjectApiRoot.html#line.62">cartDiscounts</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyCartDiscountsRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyCartDiscountsRequestBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ProjectApiRoot.html#line.79">cartDiscounts</a></span>()</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="ProjectScopedApiRoot.html#cartDiscounts()">cartDiscounts</a></code>&nbsp;in interface&nbsp;<code><a href="ProjectScopedApiRoot.html" title="interface in com.commercetools.api.client">ProjectScopedApiRoot</a></code></dd>
+</dl>
 </section>
 </li>
 <li>
 <section class="detail" id="channels()">
 <h3>channels</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyChannelsRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyChannelsRequestBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ProjectApiRoot.html#line.66">channels</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyChannelsRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyChannelsRequestBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ProjectApiRoot.html#line.84">channels</a></span>()</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="ProjectScopedApiRoot.html#channels()">channels</a></code>&nbsp;in interface&nbsp;<code><a href="ProjectScopedApiRoot.html" title="interface in com.commercetools.api.client">ProjectScopedApiRoot</a></code></dd>
+</dl>
 </section>
 </li>
 <li>
 <section class="detail" id="customers()">
 <h3>customers</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyCustomersRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyCustomersRequestBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ProjectApiRoot.html#line.70">customers</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyCustomersRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyCustomersRequestBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ProjectApiRoot.html#line.89">customers</a></span>()</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="ProjectScopedApiRoot.html#customers()">customers</a></code>&nbsp;in interface&nbsp;<code><a href="ProjectScopedApiRoot.html" title="interface in com.commercetools.api.client">ProjectScopedApiRoot</a></code></dd>
+</dl>
 </section>
 </li>
 <li>
 <section class="detail" id="customerGroups()">
 <h3>customerGroups</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyCustomerGroupsRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyCustomerGroupsRequestBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ProjectApiRoot.html#line.74">customerGroups</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyCustomerGroupsRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyCustomerGroupsRequestBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ProjectApiRoot.html#line.94">customerGroups</a></span>()</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="ProjectScopedApiRoot.html#customerGroups()">customerGroups</a></code>&nbsp;in interface&nbsp;<code><a href="ProjectScopedApiRoot.html" title="interface in com.commercetools.api.client">ProjectScopedApiRoot</a></code></dd>
+</dl>
 </section>
 </li>
 <li>
 <section class="detail" id="customObjects()">
 <h3>customObjects</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyCustomObjectsRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyCustomObjectsRequestBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ProjectApiRoot.html#line.78">customObjects</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyCustomObjectsRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyCustomObjectsRequestBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ProjectApiRoot.html#line.99">customObjects</a></span>()</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="ProjectScopedApiRoot.html#customObjects()">customObjects</a></code>&nbsp;in interface&nbsp;<code><a href="ProjectScopedApiRoot.html" title="interface in com.commercetools.api.client">ProjectScopedApiRoot</a></code></dd>
+</dl>
 </section>
 </li>
 <li>
 <section class="detail" id="discountCodes()">
 <h3>discountCodes</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyDiscountCodesRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyDiscountCodesRequestBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ProjectApiRoot.html#line.82">discountCodes</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyDiscountCodesRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyDiscountCodesRequestBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ProjectApiRoot.html#line.104">discountCodes</a></span>()</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="ProjectScopedApiRoot.html#discountCodes()">discountCodes</a></code>&nbsp;in interface&nbsp;<code><a href="ProjectScopedApiRoot.html" title="interface in com.commercetools.api.client">ProjectScopedApiRoot</a></code></dd>
+</dl>
 </section>
 </li>
 <li>
 <section class="detail" id="graphql()">
 <h3>graphql</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyGraphqlRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyGraphqlRequestBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ProjectApiRoot.html#line.86">graphql</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyGraphqlRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyGraphqlRequestBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ProjectApiRoot.html#line.109">graphql</a></span>()</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="ProjectScopedApiRoot.html#graphql()">graphql</a></code>&nbsp;in interface&nbsp;<code><a href="ProjectScopedApiRoot.html" title="interface in com.commercetools.api.client">ProjectScopedApiRoot</a></code></dd>
+</dl>
 </section>
 </li>
 <li>
 <section class="detail" id="inventory()">
 <h3>inventory</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyInventoryRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyInventoryRequestBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ProjectApiRoot.html#line.90">inventory</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyInventoryRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyInventoryRequestBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ProjectApiRoot.html#line.114">inventory</a></span>()</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="ProjectScopedApiRoot.html#inventory()">inventory</a></code>&nbsp;in interface&nbsp;<code><a href="ProjectScopedApiRoot.html" title="interface in com.commercetools.api.client">ProjectScopedApiRoot</a></code></dd>
+</dl>
 </section>
 </li>
 <li>
 <section class="detail" id="login()">
 <h3>login</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyLoginRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyLoginRequestBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ProjectApiRoot.html#line.94">login</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyLoginRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyLoginRequestBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ProjectApiRoot.html#line.119">login</a></span>()</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="ProjectScopedApiRoot.html#login()">login</a></code>&nbsp;in interface&nbsp;<code><a href="ProjectScopedApiRoot.html" title="interface in com.commercetools.api.client">ProjectScopedApiRoot</a></code></dd>
+</dl>
 </section>
 </li>
 <li>
 <section class="detail" id="messages()">
 <h3>messages</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyMessagesRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyMessagesRequestBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ProjectApiRoot.html#line.98">messages</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyMessagesRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyMessagesRequestBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ProjectApiRoot.html#line.124">messages</a></span>()</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="ProjectScopedApiRoot.html#messages()">messages</a></code>&nbsp;in interface&nbsp;<code><a href="ProjectScopedApiRoot.html" title="interface in com.commercetools.api.client">ProjectScopedApiRoot</a></code></dd>
+</dl>
 </section>
 </li>
 <li>
 <section class="detail" id="orders()">
 <h3>orders</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyOrdersRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyOrdersRequestBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ProjectApiRoot.html#line.102">orders</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyOrdersRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyOrdersRequestBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ProjectApiRoot.html#line.129">orders</a></span>()</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="ProjectScopedApiRoot.html#orders()">orders</a></code>&nbsp;in interface&nbsp;<code><a href="ProjectScopedApiRoot.html" title="interface in com.commercetools.api.client">ProjectScopedApiRoot</a></code></dd>
+</dl>
 </section>
 </li>
 <li>
 <section class="detail" id="payments()">
 <h3>payments</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyPaymentsRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyPaymentsRequestBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ProjectApiRoot.html#line.106">payments</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyPaymentsRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyPaymentsRequestBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ProjectApiRoot.html#line.134">payments</a></span>()</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="ProjectScopedApiRoot.html#payments()">payments</a></code>&nbsp;in interface&nbsp;<code><a href="ProjectScopedApiRoot.html" title="interface in com.commercetools.api.client">ProjectScopedApiRoot</a></code></dd>
+</dl>
 </section>
 </li>
 <li>
 <section class="detail" id="products()">
 <h3>products</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyProductsRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyProductsRequestBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ProjectApiRoot.html#line.110">products</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyProductsRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyProductsRequestBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ProjectApiRoot.html#line.139">products</a></span>()</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="ProjectScopedApiRoot.html#products()">products</a></code>&nbsp;in interface&nbsp;<code><a href="ProjectScopedApiRoot.html" title="interface in com.commercetools.api.client">ProjectScopedApiRoot</a></code></dd>
+</dl>
 </section>
 </li>
 <li>
 <section class="detail" id="productDiscounts()">
 <h3>productDiscounts</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyProductDiscountsRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyProductDiscountsRequestBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ProjectApiRoot.html#line.114">productDiscounts</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyProductDiscountsRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyProductDiscountsRequestBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ProjectApiRoot.html#line.144">productDiscounts</a></span>()</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="ProjectScopedApiRoot.html#productDiscounts()">productDiscounts</a></code>&nbsp;in interface&nbsp;<code><a href="ProjectScopedApiRoot.html" title="interface in com.commercetools.api.client">ProjectScopedApiRoot</a></code></dd>
+</dl>
 </section>
 </li>
 <li>
 <section class="detail" id="productProjections()">
 <h3>productProjections</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyProductProjectionsRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyProductProjectionsRequestBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ProjectApiRoot.html#line.118">productProjections</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyProductProjectionsRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyProductProjectionsRequestBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ProjectApiRoot.html#line.149">productProjections</a></span>()</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="ProjectScopedApiRoot.html#productProjections()">productProjections</a></code>&nbsp;in interface&nbsp;<code><a href="ProjectScopedApiRoot.html" title="interface in com.commercetools.api.client">ProjectScopedApiRoot</a></code></dd>
+</dl>
 </section>
 </li>
 <li>
 <section class="detail" id="productSelections()">
 <h3>productSelections</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyProductSelectionsRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyProductSelectionsRequestBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ProjectApiRoot.html#line.122">productSelections</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyProductSelectionsRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyProductSelectionsRequestBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ProjectApiRoot.html#line.154">productSelections</a></span>()</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="ProjectScopedApiRoot.html#productSelections()">productSelections</a></code>&nbsp;in interface&nbsp;<code><a href="ProjectScopedApiRoot.html" title="interface in com.commercetools.api.client">ProjectScopedApiRoot</a></code></dd>
+</dl>
 </section>
 </li>
 <li>
 <section class="detail" id="productTypes()">
 <h3>productTypes</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyProductTypesRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyProductTypesRequestBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ProjectApiRoot.html#line.126">productTypes</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyProductTypesRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyProductTypesRequestBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ProjectApiRoot.html#line.159">productTypes</a></span>()</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="ProjectScopedApiRoot.html#productTypes()">productTypes</a></code>&nbsp;in interface&nbsp;<code><a href="ProjectScopedApiRoot.html" title="interface in com.commercetools.api.client">ProjectScopedApiRoot</a></code></dd>
+</dl>
 </section>
 </li>
 <li>
 <section class="detail" id="reviews()">
 <h3>reviews</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyReviewsRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyReviewsRequestBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ProjectApiRoot.html#line.130">reviews</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyReviewsRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyReviewsRequestBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ProjectApiRoot.html#line.164">reviews</a></span>()</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="ProjectScopedApiRoot.html#reviews()">reviews</a></code>&nbsp;in interface&nbsp;<code><a href="ProjectScopedApiRoot.html" title="interface in com.commercetools.api.client">ProjectScopedApiRoot</a></code></dd>
+</dl>
 </section>
 </li>
 <li>
 <section class="detail" id="shippingMethods()">
 <h3>shippingMethods</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyShippingMethodsRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyShippingMethodsRequestBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ProjectApiRoot.html#line.134">shippingMethods</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyShippingMethodsRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyShippingMethodsRequestBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ProjectApiRoot.html#line.169">shippingMethods</a></span>()</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="ProjectScopedApiRoot.html#shippingMethods()">shippingMethods</a></code>&nbsp;in interface&nbsp;<code><a href="ProjectScopedApiRoot.html" title="interface in com.commercetools.api.client">ProjectScopedApiRoot</a></code></dd>
+</dl>
 </section>
 </li>
 <li>
 <section class="detail" id="shoppingLists()">
 <h3>shoppingLists</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyShoppingListsRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyShoppingListsRequestBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ProjectApiRoot.html#line.138">shoppingLists</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyShoppingListsRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyShoppingListsRequestBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ProjectApiRoot.html#line.174">shoppingLists</a></span>()</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="ProjectScopedApiRoot.html#shoppingLists()">shoppingLists</a></code>&nbsp;in interface&nbsp;<code><a href="ProjectScopedApiRoot.html" title="interface in com.commercetools.api.client">ProjectScopedApiRoot</a></code></dd>
+</dl>
 </section>
 </li>
 <li>
 <section class="detail" id="states()">
 <h3>states</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyStatesRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyStatesRequestBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ProjectApiRoot.html#line.142">states</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyStatesRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyStatesRequestBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ProjectApiRoot.html#line.179">states</a></span>()</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="ProjectScopedApiRoot.html#states()">states</a></code>&nbsp;in interface&nbsp;<code><a href="ProjectScopedApiRoot.html" title="interface in com.commercetools.api.client">ProjectScopedApiRoot</a></code></dd>
+</dl>
 </section>
 </li>
 <li>
 <section class="detail" id="subscriptions()">
 <h3>subscriptions</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeySubscriptionsRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeySubscriptionsRequestBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ProjectApiRoot.html#line.146">subscriptions</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeySubscriptionsRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeySubscriptionsRequestBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ProjectApiRoot.html#line.184">subscriptions</a></span>()</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="ProjectScopedApiRoot.html#subscriptions()">subscriptions</a></code>&nbsp;in interface&nbsp;<code><a href="ProjectScopedApiRoot.html" title="interface in com.commercetools.api.client">ProjectScopedApiRoot</a></code></dd>
+</dl>
 </section>
 </li>
 <li>
 <section class="detail" id="taxCategories()">
 <h3>taxCategories</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyTaxCategoriesRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyTaxCategoriesRequestBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ProjectApiRoot.html#line.150">taxCategories</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyTaxCategoriesRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyTaxCategoriesRequestBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ProjectApiRoot.html#line.189">taxCategories</a></span>()</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="ProjectScopedApiRoot.html#taxCategories()">taxCategories</a></code>&nbsp;in interface&nbsp;<code><a href="ProjectScopedApiRoot.html" title="interface in com.commercetools.api.client">ProjectScopedApiRoot</a></code></dd>
+</dl>
 </section>
 </li>
 <li>
 <section class="detail" id="types()">
 <h3>types</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyTypesRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyTypesRequestBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ProjectApiRoot.html#line.154">types</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyTypesRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyTypesRequestBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ProjectApiRoot.html#line.194">types</a></span>()</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="ProjectScopedApiRoot.html#types()">types</a></code>&nbsp;in interface&nbsp;<code><a href="ProjectScopedApiRoot.html" title="interface in com.commercetools.api.client">ProjectScopedApiRoot</a></code></dd>
+</dl>
 </section>
 </li>
 <li>
 <section class="detail" id="zones()">
 <h3>zones</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyZonesRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyZonesRequestBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ProjectApiRoot.html#line.158">zones</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyZonesRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyZonesRequestBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ProjectApiRoot.html#line.199">zones</a></span>()</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="ProjectScopedApiRoot.html#zones()">zones</a></code>&nbsp;in interface&nbsp;<code><a href="ProjectScopedApiRoot.html" title="interface in com.commercetools.api.client">ProjectScopedApiRoot</a></code></dd>
+</dl>
 </section>
 </li>
 <li>
 <section class="detail" id="me()">
 <h3>me</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyMeRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyMeRequestBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ProjectApiRoot.html#line.162">me</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyMeRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyMeRequestBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ProjectApiRoot.html#line.204">me</a></span>()</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="ProjectScopedApiRoot.html#me()">me</a></code>&nbsp;in interface&nbsp;<code><a href="ProjectScopedApiRoot.html" title="interface in com.commercetools.api.client">ProjectScopedApiRoot</a></code></dd>
+</dl>
 </section>
 </li>
 <li>
 <section class="detail" id="extensions()">
 <h3>extensions</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyExtensionsRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyExtensionsRequestBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ProjectApiRoot.html#line.166">extensions</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyExtensionsRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyExtensionsRequestBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ProjectApiRoot.html#line.209">extensions</a></span>()</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="ProjectScopedApiRoot.html#extensions()">extensions</a></code>&nbsp;in interface&nbsp;<code><a href="ProjectScopedApiRoot.html" title="interface in com.commercetools.api.client">ProjectScopedApiRoot</a></code></dd>
+</dl>
 </section>
 </li>
 <li>
 <section class="detail" id="apiClients()">
 <h3>apiClients</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyApiClientsRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyApiClientsRequestBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ProjectApiRoot.html#line.170">apiClients</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyApiClientsRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyApiClientsRequestBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ProjectApiRoot.html#line.214">apiClients</a></span>()</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="ProjectScopedApiRoot.html#apiClients()">apiClients</a></code>&nbsp;in interface&nbsp;<code><a href="ProjectScopedApiRoot.html" title="interface in com.commercetools.api.client">ProjectScopedApiRoot</a></code></dd>
+</dl>
 </section>
 </li>
 <li>
 <section class="detail" id="stores()">
 <h3>stores</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyStoresRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyStoresRequestBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ProjectApiRoot.html#line.174">stores</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyStoresRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyStoresRequestBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ProjectApiRoot.html#line.219">stores</a></span>()</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="ProjectScopedApiRoot.html#stores()">stores</a></code>&nbsp;in interface&nbsp;<code><a href="ProjectScopedApiRoot.html" title="interface in com.commercetools.api.client">ProjectScopedApiRoot</a></code></dd>
+</dl>
 </section>
 </li>
 <li>
 <section class="detail" id="inStore(java.lang.String)">
 <h3>inStore</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyInStoreKeyByStoreKeyRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyRequestBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ProjectApiRoot.html#line.178">inStore</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;storeKey)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyInStoreKeyByStoreKeyRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyRequestBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ProjectApiRoot.html#line.224">inStore</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;storeKey)</span></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="ProjectScopedApiRoot.html#inStore(java.lang.String)">inStore</a></code>&nbsp;in interface&nbsp;<code><a href="ProjectScopedApiRoot.html" title="interface in com.commercetools.api.client">ProjectScopedApiRoot</a></code></dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="businessUnits()">
+<h3>businessUnits</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyBusinessUnitsRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyBusinessUnitsRequestBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ProjectApiRoot.html#line.229">businessUnits</a></span>()</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="ProjectScopedApiRoot.html#businessUnits()">businessUnits</a></code>&nbsp;in interface&nbsp;<code><a href="ProjectScopedApiRoot.html" title="interface in com.commercetools.api.client">ProjectScopedApiRoot</a></code></dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="quotes()">
+<h3>quotes</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyQuotesRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyQuotesRequestBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ProjectApiRoot.html#line.234">quotes</a></span>()</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="ProjectScopedApiRoot.html#quotes()">quotes</a></code>&nbsp;in interface&nbsp;<code><a href="ProjectScopedApiRoot.html" title="interface in com.commercetools.api.client">ProjectScopedApiRoot</a></code></dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="quoteRequests()">
+<h3>quoteRequests</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyQuoteRequestsRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyQuoteRequestsRequestBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ProjectApiRoot.html#line.239">quoteRequests</a></span>()</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="ProjectScopedApiRoot.html#quoteRequests()">quoteRequests</a></code>&nbsp;in interface&nbsp;<code><a href="ProjectScopedApiRoot.html" title="interface in com.commercetools.api.client">ProjectScopedApiRoot</a></code></dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="stagedQuotes()">
+<h3>stagedQuotes</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyStagedQuotesRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyStagedQuotesRequestBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ProjectApiRoot.html#line.244">stagedQuotes</a></span>()</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="ProjectScopedApiRoot.html#stagedQuotes()">stagedQuotes</a></code>&nbsp;in interface&nbsp;<code><a href="ProjectScopedApiRoot.html" title="interface in com.commercetools.api.client">ProjectScopedApiRoot</a></code></dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="standalonePrices()">
+<h3>standalonePrices</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyStandalonePricesRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyStandalonePricesRequestBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ProjectApiRoot.html#line.249">standalonePrices</a></span>()</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="ProjectScopedApiRoot.html#standalonePrices()">standalonePrices</a></code>&nbsp;in interface&nbsp;<code><a href="ProjectScopedApiRoot.html" title="interface in com.commercetools.api.client">ProjectScopedApiRoot</a></code></dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="attributeGroups()">
+<h3>attributeGroups</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyAttributeGroupsRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyAttributeGroupsRequestBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ProjectApiRoot.html#line.254">attributeGroups</a></span>()</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="ProjectScopedApiRoot.html#attributeGroups()">attributeGroups</a></code>&nbsp;in interface&nbsp;<code><a href="ProjectScopedApiRoot.html" title="interface in com.commercetools.api.client">ProjectScopedApiRoot</a></code></dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="inBusinessUnit(java.lang.String)">
+<h3>inBusinessUnit</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyInBusinessUnitKeyByBusinessUnitKeyRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyInBusinessUnitKeyByBusinessUnitKeyRequestBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ProjectApiRoot.html#line.259">inBusinessUnit</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;businessUnitKey)</span></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="ProjectScopedApiRoot.html#inBusinessUnit(java.lang.String)">inBusinessUnit</a></code>&nbsp;in interface&nbsp;<code><a href="ProjectScopedApiRoot.html" title="interface in com.commercetools.api.client">ProjectScopedApiRoot</a></code></dd>
+</dl>
 </section>
 </li>
 <li>
 <section class="detail" id="with(java.util.function.Function)">
 <h3>with</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="type-parameters">&lt;R&gt;</span>&nbsp;<span class="return-type">R</span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ProjectApiRoot.html#line.182">with</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ProjectApiRoot.html" title="class in com.commercetools.api.client">ProjectApiRoot</a>,&#8203;R&gt;&nbsp;op)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="type-parameters">&lt;R&gt;</span>&nbsp;<span class="return-type">R</span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ProjectApiRoot.html#line.264">with</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ProjectApiRoot.html" title="class in com.commercetools.api.client">ProjectApiRoot</a>,&#8203;R&gt;&nbsp;op)</span></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="ProjectScopedApiRoot.html#with(java.util.function.Function)">with</a></code>&nbsp;in interface&nbsp;<code><a href="ProjectScopedApiRoot.html" title="interface in com.commercetools.api.client">ProjectScopedApiRoot</a></code></dd>
+</dl>
 </section>
 </li>
 <li>
 <section class="detail" id="close()">
 <h3>close</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ProjectApiRoot.html#line.186">close</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ProjectApiRoot.html#line.269">close</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/AutoCloseable.html#close()" title="class or interface in java.lang" class="external-link">close</a></code>&nbsp;in interface&nbsp;<code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/AutoCloseable.html" title="class or interface in java.lang" class="external-link">AutoCloseable</a></code></dd>

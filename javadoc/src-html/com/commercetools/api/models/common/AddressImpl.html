@@ -28,7 +28,7 @@
 <span class="source-line-no">015</span><span id="line.15">import org.apache.commons.lang3.builder.HashCodeBuilder;</span>
 <span class="source-line-no">016</span><span id="line.16"></span>
 <span class="source-line-no">017</span><span id="line.17">/**</span>
-<span class="source-line-no">018</span><span id="line.18"> * Address</span>
+<span class="source-line-no">018</span><span id="line.18"> *  &lt;p&gt;Address type returned by read methods. Optionally, the &lt;code&gt;custom&lt;/code&gt; field can be present in addition to the fields of a BaseAddress.&lt;/p&gt;</span>
 <span class="source-line-no">019</span><span id="line.19"> */</span>
 <span class="source-line-no">020</span><span id="line.20">@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")</span>
 <span class="source-line-no">021</span><span id="line.21">public class AddressImpl implements Address, ModelBase {</span>
@@ -142,7 +142,7 @@
 <span class="source-line-no">129</span><span id="line.129">    }</span>
 <span class="source-line-no">130</span><span id="line.130"></span>
 <span class="source-line-no">131</span><span id="line.131">    /**</span>
-<span class="source-line-no">132</span><span id="line.132">     *  &lt;p&gt;User-defined unique identifier of the Address.&lt;/p&gt;</span>
+<span class="source-line-no">132</span><span id="line.132">     *  &lt;p&gt;User-defined identifier of the Address that must be unique when multiple addresses are referenced in BusinessUnits, Customers, and &lt;code&gt;itemShippingAddresses&lt;/code&gt; (LineItem-specific addresses) of a Cart, Order, QuoteRequest, or Quote.&lt;/p&gt;</span>
 <span class="source-line-no">133</span><span id="line.133">     */</span>
 <span class="source-line-no">134</span><span id="line.134"></span>
 <span class="source-line-no">135</span><span id="line.135">    public String getKey() {</span>
@@ -150,7 +150,7 @@
 <span class="source-line-no">137</span><span id="line.137">    }</span>
 <span class="source-line-no">138</span><span id="line.138"></span>
 <span class="source-line-no">139</span><span id="line.139">    /**</span>
-<span class="source-line-no">140</span><span id="line.140">     *  &lt;p&gt;Two-digit country code as per ISO 3166-1 alpha-2.&lt;/p&gt;</span>
+<span class="source-line-no">140</span><span id="line.140">     *  &lt;p&gt;Name of the country.&lt;/p&gt;</span>
 <span class="source-line-no">141</span><span id="line.141">     */</span>
 <span class="source-line-no">142</span><span id="line.142"></span>
 <span class="source-line-no">143</span><span id="line.143">    public String getCountry() {</span>

@@ -192,24 +192,7 @@
         },
         {
             "moduleName": "com.squareup.okio:okio",
-            "moduleVersion": "3.0.0"
-        },
-        {
-            "moduleName": "com.squareup.okio:okio",
             "moduleVersion": "3.2.0"
-        },
-        {
-            "moduleName": "com.squareup.okio:okio-jvm",
-            "moduleVersion": "3.0.0",
-            "moduleUrls": [
-                "https://github.com/square/okio/"
-            ],
-            "moduleLicenses": [
-                {
-                    "moduleLicense": "Apache License, Version 2.0",
-                    "moduleLicenseUrl": "https://www.apache.org/licenses/LICENSE-2.0"
-                }
-            ]
         },
         {
             "moduleName": "com.squareup.okio:okio-jvm",
@@ -947,33 +930,7 @@
         },
         {
             "moduleName": "org.jetbrains.kotlin:kotlin-stdlib-jdk7",
-            "moduleVersion": "1.5.31",
-            "moduleUrls": [
-                "https://kotlinlang.org/"
-            ],
-            "moduleLicenses": [
-                {
-                    "moduleLicense": "Apache License, Version 2.0",
-                    "moduleLicenseUrl": "https://www.apache.org/licenses/LICENSE-2.0"
-                }
-            ]
-        },
-        {
-            "moduleName": "org.jetbrains.kotlin:kotlin-stdlib-jdk7",
             "moduleVersion": "1.6.20",
-            "moduleUrls": [
-                "https://kotlinlang.org/"
-            ],
-            "moduleLicenses": [
-                {
-                    "moduleLicense": "Apache License, Version 2.0",
-                    "moduleLicenseUrl": "https://www.apache.org/licenses/LICENSE-2.0"
-                }
-            ]
-        },
-        {
-            "moduleName": "org.jetbrains.kotlin:kotlin-stdlib-jdk8",
-            "moduleVersion": "1.5.31",
             "moduleUrls": [
                 "https://kotlinlang.org/"
             ],

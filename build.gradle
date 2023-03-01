@@ -191,7 +191,8 @@ allprojects {
     }
 }
 
-task alljavadoc(type: Javadoc) {
+tasks.register('alljavadoc', Javadoc) {
+    group = "documentation"
     source documentationProjects.collect { project(it).sourceSets.main.allJava }
     classpath = files(documentationProjects.collect { project(it).sourceSets.test.compileClasspath })
     destinationDir = file("${buildDir}/docs/javadoc")
@@ -221,12 +222,12 @@ task alljavadoc(type: Javadoc) {
         addStringOption('Xdoclint:missing,accessibility,reference', '-quiet')
         addBooleanOption('linksource', true)
         groups = [
-                "API": ["com.commercetools.api.*"],
-                "History": ["com.commercetools.history.*"],
-                "Import": ["com.commercetools.importapi.*"],
-                "ML": ["com.commercetools.ml.*"],
+                "API"          : ["com.commercetools.api.*"],
+                "History"      : ["com.commercetools.history.*"],
+                "Import"       : ["com.commercetools.importapi.*"],
+                "ML"           : ["com.commercetools.ml.*"],
                 "Base Packages": ["io.vrap.rmf.base.*"],
-                "HTTP Clients": [
+                "HTTP Clients" : [
                         "com.commercetools.http.*",
                         "io.vrap.rmf.okhttp.*"
                 ]
@@ -235,7 +236,7 @@ task alljavadoc(type: Javadoc) {
     }
 
     doLast {
-        copy{
+        copy {
             from "src/main/javadoc/resources"
             into "${buildDir}/docs/javadoc/resources"
         }

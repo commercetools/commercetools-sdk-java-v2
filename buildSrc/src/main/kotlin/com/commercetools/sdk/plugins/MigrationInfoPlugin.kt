@@ -2,7 +2,6 @@ package com.commercetools.sdk.plugins
 
 import com.github.javaparser.StaticJavaParser
 import com.github.javaparser.ast.CompilationUnit
-import com.github.javaparser.ast.NodeList
 import com.github.javaparser.ast.body.ClassOrInterfaceDeclaration
 import com.github.javaparser.ast.body.TypeDeclaration
 import com.google.common.base.CaseFormat
@@ -13,6 +12,7 @@ import java.io.IOException
 import java.io.Writer
 import java.nio.file.Files
 import java.nio.file.Paths
+import java.util.*
 import java.util.AbstractMap.SimpleEntry
 import kotlin.io.path.exists
 import kotlin.io.path.name
@@ -31,6 +31,7 @@ class MigrationInfoPlugin : Plugin<Project> {
         createInfoTask(project)
     }
 
+    lateinit var v1Files : Map<File, CompilationUnit>;
 
     private fun createInfoTask(project: Project) {
         val extension = project.extensions.create("migration", MigrationInfoPluginExtension::class.java)
@@ -46,11 +47,21 @@ class MigrationInfoPlugin : Plugin<Project> {
                     .forEach { folder -> javaFiles = javaFiles.plus(project.fileTree(mapOf("dir" to folder, "include" to "**/*.java")).files) }
             val writer: Writer = Files.newBufferedWriter(outputFolder.resolve(clazz.simpleName() + ".java"))
 
+            v1Files = javaFiles.associateWith { file -> StaticJavaParser.parse(file) }
             val hash = gitHash(project)
             val result = javaFiles.flatMap { file ->
                 javaFileInfo(file, project, hash, extension.includePackages.orNull, extension.v2BaseFolder.getOrElse(listOf("src/main")))
             }.associate { entry -> entry.key to entry.value }.toSortedMap()
-            println("# Classes: " + result.filter { (_, value) -> value.sdkV2Classes.isEmpty()  }.size)
+
+            val createCommands = javaFiles.flatMap { file ->
+                createCommandFileInfo(file, project, hash, extension.includePackages.orNull, extension.v2BaseFolder.getOrElse(listOf("src/main")))
+            }.associate { entry -> entry.key to entry.value }.toSortedMap()
+            val updateCommands = javaFiles.flatMap { file ->
+                updateCommandFileInfo(file, project, hash, extension.includePackages.orNull, extension.v2BaseFolder.getOrElse(listOf("src/main")))
+            }.associate { entry -> entry.key to entry.value }.toSortedMap()
+            val deleteCommands = javaFiles.flatMap { file ->
+                deleteCommandFileInfo(file, project, hash, extension.includePackages.orNull, extension.v2BaseFolder.getOrElse(listOf("src/main")))
+            }.associate { entry -> entry.key to entry.value }.toSortedMap()
 
             writer.appendLine("")
             writer.appendLine("package ${clazz.packageName()};")
@@ -88,6 +99,24 @@ class MigrationInfoPlugin : Plugin<Project> {
             }
             writer.appendLine(" * </table>")
             writer.appendLine(" *")
+            writer.appendLine(" * <h2>Mapping of commands from SDK v1 to v2</h2>")
+            writer.appendLine(" *")
+            writer.appendLine(" * <table>")
+            writer.appendLine(" * <caption></caption>")
+            writer.appendLine(" * <tr><th>v1</td><th>v2</th></tr>")
+
+            createCommands.plus(updateCommands).plus(deleteCommands)
+                    .forEach { (key, value) ->
+                        run {
+                            writer.appendLine(" * <tr>")
+                            writer.appendLine(" *   <td style=\"vertical-align: top;\">{@link ${value.name} }</td>")
+                            writer.appendLine(" *   <td>${value.usageV2}</td>")
+                            writer.appendLine(" * </tr>")
+                        }
+                    }
+
+            writer.appendLine(" * </table>")
+            writer.appendLine(" *")
             writer.appendLine(" * <h2>Package name changes</h2>")
             writer.appendLine(" *")
             writer.appendLine(" * Please be aware this list shows to which package a class may have been moved based on the source package")
@@ -115,8 +144,86 @@ class MigrationInfoPlugin : Plugin<Project> {
         }
     }
 
+    private fun createCommandFileInfo(file: File, project: Project, hash: String, includePackages: List<String>?, v2BaseFolder: List<String>):  List<Map.Entry<String, Info>> {
+        val parse: CompilationUnit = v1Files[file]!!
+        val relativeFile = file.relativeTo(project.rootDir)
+        if (includePackages != null && includePackages.isNotEmpty() && includePackages.firstOrNull { s: String -> parse.packageDeclaration.get().nameAsString.startsWith(s) } == null) {
+            return listOf()
+        }
+        val declarations = parse
+                .types
+                .filterIsInstance<ClassOrInterfaceDeclaration>()
+                .map { typeDeclaration: TypeDeclaration<*> -> typeDeclaration as ClassOrInterfaceDeclaration }
+                .filter { declaration -> declaration.extendedTypes.any { it.nameAsString.contains("DraftBasedCreateCommandDsl") } }
+                .filter { declaration -> declaration.isInterface }
+                .filter { declaration -> declaration.isPublic }
+
+        return declarations.flatMap { declaration ->
+            listOf(SimpleEntry(declaration.fullyQualifiedName.get(), Info(
+                    "class",
+                    declaration.fullyQualifiedName.get(),
+                    declaration.nameAsString,
+                    relativeFile.toString(),
+                    "",
+                    declaration.v2CommandClassUsage()
+            )))
+        }
+    }
+
+    private fun updateCommandFileInfo(file: File, project: Project, hash: String, includePackages: List<String>?, v2BaseFolder: List<String>):  List<Map.Entry<String, Info>> {
+        val parse: CompilationUnit = v1Files[file]!!
+        val relativeFile = file.relativeTo(project.rootDir)
+        if (includePackages != null && includePackages.isNotEmpty() && includePackages.firstOrNull { s: String -> parse.packageDeclaration.get().nameAsString.startsWith(s) } == null) {
+            return listOf()
+        }
+        val declarations = parse
+                .types
+                .filterIsInstance<ClassOrInterfaceDeclaration>()
+                .map { typeDeclaration: TypeDeclaration<*> -> typeDeclaration as ClassOrInterfaceDeclaration }
+                .filter { declaration -> declaration.extendedTypes.any { it.nameAsString.contains("UpdateCommandDsl") } }
+                .filter { declaration -> declaration.isInterface }
+                .filter { declaration -> declaration.isPublic }
+
+        return declarations.flatMap { declaration ->
+            listOf(SimpleEntry(declaration.fullyQualifiedName.get(), Info(
+                    "class",
+                    declaration.fullyQualifiedName.get(),
+                    declaration.nameAsString,
+                    relativeFile.toString(),
+                    "",
+                    declaration.v2CommandClassUsage()
+            )))
+        }
+    }
+
+    private fun deleteCommandFileInfo(file: File, project: Project, hash: String, includePackages: List<String>?, v2BaseFolder: List<String>):  List<Map.Entry<String, Info>> {
+        val parse: CompilationUnit = v1Files[file]!!
+        val relativeFile = file.relativeTo(project.rootDir)
+        if (includePackages != null && includePackages.isNotEmpty() && includePackages.firstOrNull { s: String -> parse.packageDeclaration.get().nameAsString.startsWith(s) } == null) {
+            return listOf()
+        }
+        val declarations = parse
+                .types
+                .filterIsInstance<ClassOrInterfaceDeclaration>()
+                .map { typeDeclaration: TypeDeclaration<*> -> typeDeclaration as ClassOrInterfaceDeclaration }
+                .filter { declaration -> declaration.extendedTypes.any { it.nameAsString.startsWith("DeleteCommand") } }
+                .filter { declaration -> declaration.isInterface }
+                .filter { declaration -> declaration.isPublic }
+
+        return declarations.flatMap { declaration ->
+            listOf(SimpleEntry(declaration.fullyQualifiedName.get(), Info(
+                    "class",
+                    declaration.fullyQualifiedName.get(),
+                    declaration.nameAsString,
+                    relativeFile.toString(),
+                    "",
+                    declaration.v2CommandClassUsage()
+            )))
+        }
+    }
+
     private fun javaFileInfo(file: File, project: Project, hash: String, includePackages: List<String>?, v2BaseFolder: List<String>):  List<Map.Entry<String, Info>> {
-        val parse: CompilationUnit = StaticJavaParser.parse(file)
+        val parse: CompilationUnit = v1Files[file]!!
         val relativeFile = file.relativeTo(project.rootDir)
         if (includePackages != null && includePackages.isNotEmpty() && includePackages.firstOrNull { s: String -> parse.packageDeclaration.get().nameAsString.startsWith(s) } == null) {
             return listOf()
@@ -137,6 +244,7 @@ class MigrationInfoPlugin : Plugin<Project> {
             listOf(SimpleEntry(declaration.fullyQualifiedName.get(), Info(
                     "class",
                     declaration.fullyQualifiedName.get(),
+                    declaration.nameAsString,
                     relativeFile.toString(),
                     declaration.v2Class(v2BaseFolder)
 //                    "gitHash" to hash,
@@ -148,7 +256,7 @@ class MigrationInfoPlugin : Plugin<Project> {
         }
     }
 
-    data class Info(val type: String, val name: String, val file: String, val sdkV2Classes: String) {
+    data class Info(val type: String, val name: String, val simpleName: String, val file: String, val sdkV2Classes: String, val usageV2: String = "") {
         var v1Package: String = name.packageName();
         var v2Package: String = sdkV2Classes.packageName();
     }
@@ -218,6 +326,51 @@ class MigrationInfoPlugin : Plugin<Project> {
         return v2Classes.joinToString(", ");
     }
 
+//    fun ClassOrInterfaceDeclaration.v1CreateCommandClassUsage(): Pair<String, String> {
+//
+//        if (commandClassUsageV1Mapping.containsKey(this.fullyQualifiedName.get())) {
+//            return commandClassUsageV1Mapping.get(this.fullyQualifiedName.get()) ?: Pair("", "")
+//        }
+//        val v1PackageName = this.fullyQualifiedName.map { it.replace("." + this.name.toString(), "") }.get()
+//        val v1ModelPackageName = v1PackageName.replace(".commands", "");
+//
+//        return this.getMethodsByName("of").map { "$v1ModelPackageName.${it.parameters.filter { it.nameAsString.contains("draft", true) }.map { it.typeAsString }.firstOrNull() ?: "" }" to "of(${it.parameters.joinToString(",") { it.typeAsString }})" }.first()
+//    }
+//
+//    fun ClassOrInterfaceDeclaration.v1UpdateCommandClassUsage(): Pair<String, String> {
+//
+//        if (commandClassUsageV1Mapping.containsKey(this.fullyQualifiedName.get())) {
+//            return commandClassUsageV1Mapping.get(this.fullyQualifiedName.get()) ?: Pair("", "")
+//        }
+//
+//        return this.getMethodsByName("of").filter { it.parameters.any { it.typeAsString.startsWith("UpdateAction") } }.map { "" to "of(${it.parameters.joinToString(",") { it.typeAsString.split("<").first() + if (it.isVarArgs) "..." else "" }})" }.first()
+//    }
+//
+//    fun ClassOrInterfaceDeclaration.v1DeleteCommandClassUsage(): Pair<String, String> {
+//
+//        if (commandClassUsageV1Mapping.containsKey(this.fullyQualifiedName.get())) {
+//            return commandClassUsageV1Mapping.get(this.fullyQualifiedName.get()) ?: Pair("", "")
+//        }
+//        return this.getMethodsByName("of").filter { it.parameters.any { it.typeAsString.startsWith("Versioned") } }.map { "" to "of(${it.parameters.joinToString(",") { it.typeAsString.split("<").first() }})" }.firstOrNull() ?: Pair("", "")
+//    }
+
+    fun ClassOrInterfaceDeclaration.v2CommandClassUsage(): String {
+
+        if (commandClassMapping.containsKey(this.fullyQualifiedName.get())) {
+            return commandClassMapping.get(this.fullyQualifiedName.get()).orEmpty()
+        }
+
+        return "{@include.example example.CommandMigrationTest#${this.nameAsString.firstLowerCase()}()}"
+    }
+
+    private fun String.firstLowerCase(): String {
+        return this.replaceFirstChar {
+            it.lowercase(
+                    Locale.getDefault()
+            )
+        }
+    }
+
     val packageMapping = mapOf(
             "io.sphere.sdk.apiclient" to "com.commercetools.api.models.api_client",
             "io.sphere.sdk.carts" to "com.commercetools.api.models.cart",
@@ -255,6 +408,14 @@ class MigrationInfoPlugin : Plugin<Project> {
             "io.sphere.sdk.models" to "com.commercetools.api.models.common",
             ".commands.stagedactions" to "",
             ".commands.updateactions" to ""
+    )
+
+    val commandClassUsageV1Mapping = mapOf(
+            "" to Pair("", "")
+    )
+
+    val commandClassMapping = mapOf(
+            "" to ""
     )
 
     val classMapping = mapOf(

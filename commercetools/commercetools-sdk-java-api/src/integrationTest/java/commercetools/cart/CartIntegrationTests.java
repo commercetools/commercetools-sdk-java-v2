@@ -7,6 +7,8 @@ import static commercetools.product.ProductFixtures.*;
 import static commercetools.product_type.ProductTypeFixtures.withProductType;
 import static commercetools.tax_category.TaxCategoryFixtures.withTaxCategory;
 
+import java.time.ZonedDateTime;
+import java.time.temporal.ChronoUnit;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -158,27 +160,30 @@ public class CartIntegrationTests {
     }
 
     private void withUpdateableCartAndDiscount(final BiFunction<Cart, DiscountCode, Cart> function) {
-        DiscountCodeFixtures.withUpdateableDiscountCode(discountCode -> {
-            CartsFixtures.withUpdateableCart(cart -> {
-                CartAddDiscountCodeAction cartAddDiscountCodeAction = CartAddDiscountCodeActionBuilder.of()
-                        .code(discountCode.getCode())
-                        .build();
-                Cart updatedCart = CommercetoolsTestUtils.getProjectApiRoot()
-                        .carts()
-                        .update(cart, Collections.singletonList(cartAddDiscountCodeAction))
-                        .executeBlocking()
-                        .getBody();
+        DiscountCodeFixtures
+                .withUpdateableDiscountCode(discountCodeDraftBuilder -> discountCodeDraftBuilder.isActive(true)
+                        .validFrom(ZonedDateTime.now().minus(1, ChronoUnit.HOURS)),
+                    discountCode -> {
+                        CartsFixtures.withUpdateableCart(cart -> {
+                            CartAddDiscountCodeAction cartAddDiscountCodeAction = CartAddDiscountCodeActionBuilder.of()
+                                    .code(discountCode.getCode())
+                                    .build();
+                            Cart updatedCart = CommercetoolsTestUtils.getProjectApiRoot()
+                                    .carts()
+                                    .update(cart, Collections.singletonList(cartAddDiscountCodeAction))
+                                    .executeBlocking()
+                                    .getBody();
 
-                return function.apply(updatedCart, discountCode);
-            });
+                            return function.apply(updatedCart, discountCode);
+                        });
 
-            return CommercetoolsTestUtils.getProjectApiRoot()
-                    .discountCodes()
-                    .withId(discountCode.getId())
-                    .get()
-                    .executeBlocking()
-                    .getBody();
-        });
+                        return CommercetoolsTestUtils.getProjectApiRoot()
+                                .discountCodes()
+                                .withId(discountCode.getId())
+                                .get()
+                                .executeBlocking()
+                                .getBody();
+                    });
     }
 
 }

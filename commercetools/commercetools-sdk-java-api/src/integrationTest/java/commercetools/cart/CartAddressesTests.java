@@ -1,13 +1,16 @@
 
 package commercetools.cart;
 
+import static commercetools.cart.CartsFixtures.withUpdateableCart;
 import static commercetools.product.ProductFixtures.withPublishedProduct;
 
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 import java.util.Locale;
 
 import com.commercetools.api.models.cart.Cart;
+import com.commercetools.api.models.cart.CartAddItemShippingAddressActionBuilder;
 import com.commercetools.api.models.cart.CartDraft;
 import com.commercetools.api.models.cart.CartDraftBuilder;
 import com.commercetools.api.models.common.BaseAddress;
@@ -17,7 +20,7 @@ import commercetools.utils.CommercetoolsTestUtils;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-public class CartCreateTests {
+public class CartAddressesTests {
 
     @Test
     public void createCartWithMultipleItemShippingAddresses() {
@@ -51,6 +54,29 @@ public class CartCreateTests {
 
             Assertions.assertThat(createdCart.getId()).isNotEmpty();
             Assertions.assertThat(createdCart.getItemShippingAddresses()).hasSize(3);
+        });
+    }
+
+    @Test
+    public void addItemShippingAddressToCart() {
+        withUpdateableCart(cart -> {
+            Assertions.assertThat(cart.getItemShippingAddresses()).isEmpty();
+            final BaseAddress address1 = BaseAddressBuilder.of()
+                    .country(Locale.GERMANY.getCountry())
+                    .key(CommercetoolsTestUtils.randomKey())
+                    .build();
+
+            final Cart updatedCart = CommercetoolsTestUtils.getProjectApiRoot()
+                    .carts()
+                    .update(cart,
+                        Collections
+                                .singletonList(CartAddItemShippingAddressActionBuilder.of().address(address1).build()))
+                    .executeBlocking()
+                    .getBody();
+
+            Assertions.assertThat(updatedCart.getItemShippingAddresses()).hasSize(1);
+
+            return updatedCart;
         });
     }
 }

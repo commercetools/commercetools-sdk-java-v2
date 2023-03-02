@@ -1,19 +1,6 @@
 
 package commercetools.cart;
 
-import com.commercetools.api.models.cart.*;
-import com.commercetools.api.models.product.Product;
-import com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier;
-import com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifierBuilder;
-import commercetools.product.ProductFixtures;
-import commercetools.tax_category.TaxCategoryFixtures;
-import commercetools.utils.CommercetoolsTestUtils;
-import org.assertj.core.api.Assertions;
-import org.junit.jupiter.api.Test;
-
-import java.util.ArrayList;
-import java.util.List;
-
 import static commercetools.cart.CartsFixtures.createCart;
 import static commercetools.cart.CartsFixtures.deleteCart;
 import static commercetools.category.CategoryFixtures.withCategory;
@@ -21,6 +8,19 @@ import static commercetools.product.ProductFixtures.createProduct;
 import static commercetools.product.ProductFixtures.createProductTypeDraft;
 import static commercetools.product_type.ProductTypeFixtures.withProductType;
 import static commercetools.tax_category.TaxCategoryFixtures.withTaxCategory;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import com.commercetools.api.models.cart.*;
+import com.commercetools.api.models.product.Product;
+import com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifierBuilder;
+import commercetools.product.ProductFixtures;
+import commercetools.tax_category.TaxCategoryFixtures;
+import commercetools.utils.CommercetoolsTestUtils;
+
+import org.assertj.core.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 public class CartLineItemTests {
 
@@ -50,7 +50,7 @@ public class CartLineItemTests {
     }
 
     @Test
-    public void createNewCartWithCustomLineItems(){
+    public void createNewCartWithCustomLineItems() {
         TaxCategoryFixtures.withTaxCategory(taxCategory -> {
             final CustomLineItemDraft customLineItemDraft = CustomLineItemDraftBuilder.of()
                     .name(builder -> builder.addValue("test", "test"))
@@ -72,8 +72,7 @@ public class CartLineItemTests {
                     .executeBlocking()
                     .getBody();
 
-            Assertions.assertThat(createdCart.getCustomLineItems())
-                    .hasSize(1);
+            Assertions.assertThat(createdCart.getCustomLineItems()).hasSize(1);
 
             CartsFixtures.deleteCart(createdCart.getId(), createdCart.getVersion());
         });

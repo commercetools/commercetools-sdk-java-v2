@@ -77,7 +77,7 @@ class MigrationInfoPlugin : Plugin<Project> {
             writer.appendLine(" *")
             writer.appendLine(" * <table>")
             writer.appendLine(" * <caption></caption>")
-            writer.appendLine(" * <tr><th>v1</td><th>v2</th></tr>")
+            writer.appendLine(" * <tr><th>v1</th><th>v2</th></tr>")
 
             result.filter { (_, value) -> value.sdkV2Classes.isNotEmpty()  }
                     .forEach { (key, value) ->
@@ -94,7 +94,7 @@ class MigrationInfoPlugin : Plugin<Project> {
             writer.appendLine(" *")
             writer.appendLine(" * <table>")
             writer.appendLine(" * <caption></caption>")
-            writer.appendLine(" * <tr><th>v1</td></tr>")
+            writer.appendLine(" * <tr><th>v1</th></tr>")
             result.filter { (_, value) -> value.sdkV2Classes.isEmpty()  }.forEach { (key, value) ->
                 run {
                     writer.appendLine(" * <tr>")
@@ -108,7 +108,7 @@ class MigrationInfoPlugin : Plugin<Project> {
             writer.appendLine(" *")
             writer.appendLine(" * <table>")
             writer.appendLine(" * <caption></caption>")
-            writer.appendLine(" * <tr><th>v1</td><th>v2</th></tr>")
+            writer.appendLine(" * <tr><th>v1</th><th>v2</th></tr>")
 
             createCommands.plus(updateCommands).plus(deleteCommands)
                     .forEach { (key, value) ->
@@ -127,7 +127,7 @@ class MigrationInfoPlugin : Plugin<Project> {
             writer.appendLine(" * Please be aware this list shows to which package a class may have been moved based on the source package")
             writer.appendLine(" * <table>")
             writer.appendLine(" * <caption></caption>")
-            writer.appendLine(" * <tr><th>v1</td><th>v2</th></tr>")
+            writer.appendLine(" * <tr><th>v1</th><th>v2</th></tr>")
 
             result.filter { (_, value) -> value.sdkV2Classes.isNotEmpty()  }
                     .map { (_, value) -> value.v1Package to value.v2Package }

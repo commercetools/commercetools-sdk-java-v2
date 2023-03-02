@@ -12,7 +12,7 @@ package com.commercetools.docs.meta;
  *
  * <table>
  * <caption></caption>
- * <tr><th>v1</td><th>v2</th></tr>
+ * <tr><th>v1</th><th>v2</th></tr>
  * <tr>
  *   <td>{@link io.sphere.sdk.apiclient.ApiClient}</td>
  *   <td>{@link com.commercetools.api.models.api_client.ApiClient}</td>
@@ -2655,7 +2655,7 @@ package com.commercetools.docs.meta;
  *
  * <table>
  * <caption></caption>
- * <tr><th>v1</td></tr>
+ * <tr><th>v1</th></tr>
  * <tr>
  *   <td>{@link io.sphere.sdk.cartdiscounts.CartDiscountPredicate}</td>
  * </tr>
@@ -2728,7 +2728,7 @@ package com.commercetools.docs.meta;
  *
  * <table>
  * <caption></caption>
- * <tr><th>v1</td><th>v2</th></tr>
+ * <tr><th>v1</th><th>v2</th></tr>
  * <tr>
  *   <td style="vertical-align: top;">{@link io.sphere.sdk.apiclient.commands.ApiClientCreateCommand }</td>
  *   <td>{@include.example example.CommandMigrationTest#apiClientCreateCommand()}</td>
@@ -3104,7 +3104,7 @@ package com.commercetools.docs.meta;
  * Please be aware this list shows to which package a class may have been moved based on the source package
  * <table>
  * <caption></caption>
- * <tr><th>v1</td><th>v2</th></tr>
+ * <tr><th>v1</th><th>v2</th></tr>
  * <tr>
  *   <td>{@link io.sphere.sdk.apiclient}</td>
  *   <td>{@link com.commercetools.api.models.api_client}</td>

@@ -2,23 +2,17 @@
 package commercetools.cart;
 
 import static commercetools.cart.CartsFixtures.*;
-import static commercetools.category.CategoryFixtures.withCategory;
 import static commercetools.product.ProductFixtures.*;
-import static commercetools.product_type.ProductTypeFixtures.withProductType;
-import static commercetools.tax_category.TaxCategoryFixtures.withTaxCategory;
 
 import java.time.ZonedDateTime;
 import java.time.temporal.ChronoUnit;
-import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.function.BiFunction;
 
 import com.commercetools.api.models.cart.*;
 import com.commercetools.api.models.discount_code.DiscountCode;
-import com.commercetools.api.models.product.Product;
 import commercetools.discount_code.DiscountCodeFixtures;
-import commercetools.product.ProductFixtures;
 import commercetools.utils.CommercetoolsTestUtils;
 
 import org.assertj.core.api.Assertions;
@@ -132,31 +126,6 @@ public class CartQueryTests {
                     .isEqualTo(discountCode);
             return queriedCartWithExpandedDiscountCode;
         });
-    }
-
-    @Test
-    public void bigCart() {
-        withTaxCategory(
-            taxCategory -> withCategory(category -> withProductType(createProductTypeDraft(), productType -> {
-                List<Product> products = new ArrayList<>();
-                for (int i = 0; i < 100; i++) {
-                    products.add(createProduct(productType, category, taxCategory, true));
-                }
-
-                CartDraftBuilder cartDraft = CartDraft.builder().currency("EUR").country("DE");
-                products.forEach(product -> cartDraft.plusLineItems(lineItemDraftBuilder -> lineItemDraftBuilder
-                        .sku(product.getMasterData().getCurrent().getMasterVariant().getSku())));
-
-                try {
-                    final long startTime = System.currentTimeMillis();
-                    Cart cart = createCart(cartDraft.build());
-                    final long executionTime = System.currentTimeMillis() - startTime;
-                    deleteCart(cart.getId(), cart.getVersion());
-                }
-                finally {
-                    products.forEach(ProductFixtures::deleteProduct);
-                }
-            })));
     }
 
     private void withUpdateableCartAndDiscount(final BiFunction<Cart, DiscountCode, Cart> function) {

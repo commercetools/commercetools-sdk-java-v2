@@ -87,6 +87,10 @@ public interface StagedOrderSetReturnItemCustomFieldAction extends StagedOrderUp
         return helper.apply(this);
     }
 
+    public static StagedOrderSetReturnItemCustomFieldAction ofUnset(final String name, final String returnItemId) {
+        return StagedOrderSetReturnItemCustomFieldActionBuilder.of().name(name).returnItemId(returnItemId).build();
+    }
+
     public static com.fasterxml.jackson.core.type.TypeReference<StagedOrderSetReturnItemCustomFieldAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<StagedOrderSetReturnItemCustomFieldAction>() {
             @Override

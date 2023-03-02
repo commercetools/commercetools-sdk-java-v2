@@ -62,6 +62,10 @@ public interface ChannelSetGeoLocationAction extends ChannelUpdateAction {
         return helper.apply(this);
     }
 
+    public static ChannelSetGeoLocationAction ofUnset() {
+        return ChannelSetGeoLocationAction.of();
+    }
+
     public static com.fasterxml.jackson.core.type.TypeReference<ChannelSetGeoLocationAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ChannelSetGeoLocationAction>() {
             @Override

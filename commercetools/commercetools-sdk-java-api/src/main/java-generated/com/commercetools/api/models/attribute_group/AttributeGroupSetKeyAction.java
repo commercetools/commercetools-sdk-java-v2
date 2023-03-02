@@ -59,6 +59,10 @@ public interface AttributeGroupSetKeyAction extends AttributeGroupUpdateAction {
         return helper.apply(this);
     }
 
+    public static AttributeGroupSetKeyAction ofUnset() {
+        return AttributeGroupSetKeyAction.of();
+    }
+
     public static com.fasterxml.jackson.core.type.TypeReference<AttributeGroupSetKeyAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<AttributeGroupSetKeyAction>() {
             @Override

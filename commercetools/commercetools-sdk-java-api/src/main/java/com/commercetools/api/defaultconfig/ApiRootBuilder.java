@@ -259,6 +259,14 @@ public class ApiRootBuilder {
         return with(clientBuilder -> clientBuilder.withErrorMiddleware(errorMiddleware));
     }
 
+    public ApiRootBuilder withTelemetryMiddleware(final Supplier<TelemetryMiddleware> telemetryMiddleware) {
+        return with(clientBuilder -> clientBuilder.withTelemetryMiddleware(telemetryMiddleware));
+    }
+
+    public ApiRootBuilder withTelemetryMiddleware(final TelemetryMiddleware telemetryMiddleware) {
+        return with(clientBuilder -> clientBuilder.withTelemetryMiddleware(telemetryMiddleware));
+    }
+
     public ApiRootBuilder addConcurrentModificationMiddleware() {
         return addConcurrentModificationMiddleware(ConcurrentModificationMiddleware.of());
     }

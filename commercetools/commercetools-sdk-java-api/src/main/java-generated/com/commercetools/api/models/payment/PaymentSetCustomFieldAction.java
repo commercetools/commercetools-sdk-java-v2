@@ -72,6 +72,10 @@ public interface PaymentSetCustomFieldAction extends PaymentUpdateAction {
         return helper.apply(this);
     }
 
+    public static PaymentSetCustomFieldAction ofUnset(final String name) {
+        return PaymentSetCustomFieldActionBuilder.of().name(name).build();
+    }
+
     public static com.fasterxml.jackson.core.type.TypeReference<PaymentSetCustomFieldAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<PaymentSetCustomFieldAction>() {
             @Override

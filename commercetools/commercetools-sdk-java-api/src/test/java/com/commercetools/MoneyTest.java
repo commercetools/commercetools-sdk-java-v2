@@ -1,12 +1,16 @@
 
 package com.commercetools;
 
+import static org.assertj.core.api.Assertions.assertThat;
+
 import java.util.Collections;
 
 import javax.money.MonetaryAmount;
 
 import com.commercetools.api.models.cart.*;
 import com.commercetools.api.models.common.*;
+import com.commercetools.api.models.tax_category.TaxRate;
+import com.commercetools.api.models.tax_category.TaxRateBuilder;
 import com.fasterxml.jackson.databind.JsonNode;
 
 import io.vrap.rmf.base.client.utils.json.JsonUtils;
@@ -297,5 +301,53 @@ public class MoneyTest {
                 .isEqualTo(3);
         Assertions.assertThat(highCartNode.get("customLineItems").get(0).get("money").get("currencyCode").asText())
                 .isEqualTo("EUR");
+    }
+
+    @Test
+    public void calculatesAppliedTaxes() throws Exception {
+        assertThat(MoneyUtil.calculateAppliedTaxes(taxedPriceOf())).isEqualTo(centMonetaryAmountOf(19));
+    }
+
+    @Test
+    public void calculatesGrossWhenTaxesIncluded() throws Exception {
+        final TaxRate taxRate = taxRateOf(true);
+        final Money amount = centMonetaryAmountOf(100);
+        assertThat(MoneyUtil.calculateGrossPrice(amount, taxRate)).isEqualTo(centMonetaryAmountOf(100));
+    }
+
+    @Test
+    public void calculatesGrossWhenTaxesNotIncluded() throws Exception {
+        final TaxRate taxRate = taxRateOf(false);
+        final Money amount = centMonetaryAmountOf(100);
+        assertThat(MoneyUtil.calculateGrossPrice(amount, taxRate)).isEqualTo(centMonetaryAmountOf(119));
+    }
+
+    @Test
+    public void calculatesNetWhenTaxesIncluded() throws Exception {
+        final TaxRate taxRate = taxRateOf(true);
+        final Money amount = centMonetaryAmountOf(119);
+        assertThat(MoneyUtil.calculateNetPrice(amount, taxRate)).isEqualTo(centMonetaryAmountOf(100));
+    }
+
+    @Test
+    public void calculatesNetWhenTaxesNotIncluded() throws Exception {
+        final TaxRate taxRate = taxRateOf(false);
+        final Money amount = centMonetaryAmountOf(119);
+        assertThat(MoneyUtil.calculateNetPrice(amount, taxRate)).isEqualTo(centMonetaryAmountOf(119));
+    }
+
+    private static TaxedItemPrice taxedPriceOf() {
+        return TaxedItemPriceBuilder.of()
+                .totalNet(centMonetaryAmountOf(100))
+                .totalGross(centMonetaryAmountOf(119))
+                .build();
+    }
+
+    private static TaxRate taxRateOf(boolean includedPrice) {
+        return TaxRateBuilder.of().amount(0.19).country("DE").name("test-foo").includedInPrice(includedPrice).build();
+    }
+
+    private static CentPrecisionMoney centMonetaryAmountOf(final long amount) {
+        return CentPrecisionMoneyBuilder.of().centAmount(amount).currencyCode("EUR").fractionDigits(2).build();
     }
 }

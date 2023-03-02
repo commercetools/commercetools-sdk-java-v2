@@ -26,17 +26,6 @@ import reactor.core.publisher.Mono;
 @Controller
 public class AppController {
 
-    private final ProjectRepository projectRepository;
-
-    private final ProductsRepository productsRepository;
-
-    @Autowired
-    public AppController(ProjectRepository projectRepository, ProductsRepository productsRepository) {
-        this.projectRepository = projectRepository;
-        this.productsRepository = productsRepository;
-
-    }
-
     @GetMapping("/login")
     public String viewLoginPage(ServerWebExchange exchange, Model model) {
         // custom logic before showing login page...
@@ -60,10 +49,10 @@ public class AppController {
     }
 
     @GetMapping("/p")
-    public String pop(@RequestAttribute("meClient") ProjectApiRoot client, Model model, WebSession session) {
+    public String pop(@RequestAttribute("contextRoot") ProjectApiRoot contextRoot, @RequestAttribute("meClient") ProjectApiRoot meClient, Model model, WebSession session) {
 
-        Mono<List<ProductProjection>> products = productsRepository.products();
-        final Mono<Cart> cart = new MeRepository(client, session).meCart();
+        Mono<List<ProductProjection>> products =  new ProductsRepository(contextRoot).products();
+        final Mono<Cart> cart = new MeRepository(meClient, session).meCart();
 
         model.addAttribute("products", products);
         model.addAttribute("cart", cart);

@@ -72,6 +72,10 @@ public interface CategorySetCustomFieldAction extends CategoryUpdateAction {
         return helper.apply(this);
     }
 
+    public static CategorySetCustomFieldAction ofUnset(final String name) {
+        return CategorySetCustomFieldActionBuilder.of().name(name).build();
+    }
+
     public static com.fasterxml.jackson.core.type.TypeReference<CategorySetCustomFieldAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<CategorySetCustomFieldAction>() {
             @Override

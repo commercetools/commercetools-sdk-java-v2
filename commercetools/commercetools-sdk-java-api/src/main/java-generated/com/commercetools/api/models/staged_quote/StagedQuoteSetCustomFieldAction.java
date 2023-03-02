@@ -72,6 +72,10 @@ public interface StagedQuoteSetCustomFieldAction extends StagedQuoteUpdateAction
         return helper.apply(this);
     }
 
+    public static StagedQuoteSetCustomFieldAction ofUnset(final String name) {
+        return StagedQuoteSetCustomFieldActionBuilder.of().name(name).build();
+    }
+
     public static com.fasterxml.jackson.core.type.TypeReference<StagedQuoteSetCustomFieldAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<StagedQuoteSetCustomFieldAction>() {
             @Override

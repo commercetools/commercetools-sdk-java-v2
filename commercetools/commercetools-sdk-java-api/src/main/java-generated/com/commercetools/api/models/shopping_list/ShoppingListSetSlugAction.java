@@ -62,6 +62,10 @@ public interface ShoppingListSetSlugAction extends ShoppingListUpdateAction {
         return helper.apply(this);
     }
 
+    public static ShoppingListSetSlugAction ofUnset() {
+        return ShoppingListSetSlugAction.of();
+    }
+
     public static com.fasterxml.jackson.core.type.TypeReference<ShoppingListSetSlugAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ShoppingListSetSlugAction>() {
             @Override

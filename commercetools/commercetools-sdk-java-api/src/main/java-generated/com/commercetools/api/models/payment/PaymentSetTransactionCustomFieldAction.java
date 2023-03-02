@@ -85,6 +85,10 @@ public interface PaymentSetTransactionCustomFieldAction extends PaymentUpdateAct
         return helper.apply(this);
     }
 
+    public static PaymentSetTransactionCustomFieldAction ofUnset(final String name, final String transactionId) {
+        return PaymentSetTransactionCustomFieldActionBuilder.of().name(name).transactionId(transactionId).build();
+    }
+
     public static com.fasterxml.jackson.core.type.TypeReference<PaymentSetTransactionCustomFieldAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<PaymentSetTransactionCustomFieldAction>() {
             @Override

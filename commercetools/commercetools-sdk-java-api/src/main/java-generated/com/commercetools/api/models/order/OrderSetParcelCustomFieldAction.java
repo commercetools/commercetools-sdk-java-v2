@@ -83,6 +83,10 @@ public interface OrderSetParcelCustomFieldAction extends OrderUpdateAction {
         return helper.apply(this);
     }
 
+    public static OrderSetParcelCustomFieldAction ofUnset(final String name, final String parcelId) {
+        return OrderSetParcelCustomFieldActionBuilder.of().name(name).parcelId(parcelId).build();
+    }
+
     public static com.fasterxml.jackson.core.type.TypeReference<OrderSetParcelCustomFieldAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<OrderSetParcelCustomFieldAction>() {
             @Override

@@ -487,4 +487,9 @@ public class ExamplesTest {
                 // ...
                 .build();
     }
+
+    public void mdcProjectApiRoot() {
+        ProjectApiRoot globalRoot = ProjectApiRoot.of("test");
+        ProjectApiRoot apiRoot = ProjectApiRoot.withContext(globalRoot, new MDCContext());
+    }
 }

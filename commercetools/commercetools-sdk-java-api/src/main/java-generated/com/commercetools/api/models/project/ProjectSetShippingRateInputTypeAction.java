@@ -62,6 +62,10 @@ public interface ProjectSetShippingRateInputTypeAction extends ProjectUpdateActi
         return helper.apply(this);
     }
 
+    public static ProjectSetShippingRateInputTypeAction ofUnset() {
+        return ProjectSetShippingRateInputTypeAction.of();
+    }
+
     public static com.fasterxml.jackson.core.type.TypeReference<ProjectSetShippingRateInputTypeAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ProjectSetShippingRateInputTypeAction>() {
             @Override

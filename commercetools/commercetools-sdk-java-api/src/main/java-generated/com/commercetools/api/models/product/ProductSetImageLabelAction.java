@@ -102,6 +102,15 @@ public interface ProductSetImageLabelAction extends ProductUpdateAction {
         return helper.apply(this);
     }
 
+    public static ProductSetImageLabelAction ofUnset(final Long variantId, final String imageUrl,
+            final Boolean staged) {
+        return ProductSetImageLabelActionBuilder.of().variantId(variantId).imageUrl(imageUrl).staged(staged).build();
+    }
+
+    public static ProductSetImageLabelAction ofUnsetStaged(final Long variantId, final String imageUrl) {
+        return ProductSetImageLabelActionBuilder.of().variantId(variantId).imageUrl(imageUrl).build();
+    }
+
     public static com.fasterxml.jackson.core.type.TypeReference<ProductSetImageLabelAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ProductSetImageLabelAction>() {
             @Override

@@ -3,11 +3,16 @@ package com.commercetools.docs.meta;
 
 /**
  *
- * <h2>Mapping of model classes from SDK v1 to v2</h2>
+ * <ul>
+ * <li><a href="#model-mapping">Mapping of model classes from SDK v1 to v2</a></li>
+ * <li><a href="#command-mapping">Mapping of commands from SDK v1 to v2</a></li>
+ * <li><a href="#package-mapping">Package name changes</a></li>
+ * </ul>
+ * <h2 id="model-mapping">Mapping of model classes from SDK v1 to v2</h2>
  *
  * <table>
  * <caption></caption>
- * <tr><th>v1</td><th>v2</th></tr>
+ * <tr><th>v1</th><th>v2</th></tr>
  * <tr>
  *   <td>{@link io.sphere.sdk.apiclient.ApiClient}</td>
  *   <td>{@link com.commercetools.api.models.api_client.ApiClient}</td>
@@ -1497,6 +1502,14 @@ package com.commercetools.docs.meta;
  *   <td>{@link com.commercetools.api.models.product_discount.ProductDiscountSetValidUntilAction}</td>
  * </tr>
  * <tr>
+ *   <td>{@link io.sphere.sdk.products.ByIdVariantIdentifier}</td>
+ *   <td>{@link com.commercetools.api.models.product.ByIdVariantIdentifier}</td>
+ * </tr>
+ * <tr>
+ *   <td>{@link io.sphere.sdk.products.BySkuVariantIdentifier}</td>
+ *   <td>{@link com.commercetools.api.models.product.BySkuVariantIdentifier}</td>
+ * </tr>
+ * <tr>
  *   <td>{@link io.sphere.sdk.products.Image}</td>
  *   <td>{@link com.commercetools.api.models.common.Image}</td>
  * </tr>
@@ -1523,10 +1536,6 @@ package com.commercetools.docs.meta;
  * <tr>
  *   <td>{@link io.sphere.sdk.products.ProductData}</td>
  *   <td>{@link com.commercetools.api.models.product.ProductData}</td>
- * </tr>
- * <tr>
- *   <td>{@link io.sphere.sdk.products.ProductDataLike}</td>
- *   <td>{@link com.commercetools.api.models.product.ProductDataLike}</td>
  * </tr>
  * <tr>
  *   <td>{@link io.sphere.sdk.products.ProductDraft}</td>
@@ -1559,6 +1568,10 @@ package com.commercetools.docs.meta;
  * <tr>
  *   <td>{@link io.sphere.sdk.products.SuggestionResult}</td>
  *   <td>{@link com.commercetools.api.models.product.SuggestionResult}</td>
+ * </tr>
+ * <tr>
+ *   <td>{@link io.sphere.sdk.products.VariantIdentifier}</td>
+ *   <td>{@link com.commercetools.api.models.product.VariantIdentifier}</td>
  * </tr>
  * <tr>
  *   <td>{@link io.sphere.sdk.products.attributes.Attribute}</td>
@@ -1799,6 +1812,10 @@ package com.commercetools.docs.meta;
  * <tr>
  *   <td>{@link io.sphere.sdk.productselections.commands.updateactions.SetKey}</td>
  *   <td>{@link com.commercetools.api.models.product_selection.ProductSelectionSetKeyAction}</td>
+ * </tr>
+ * <tr>
+ *   <td>{@link io.sphere.sdk.producttypes.AttributeDefinitionContainer}</td>
+ *   <td>{@link com.commercetools.api.models.product_type.AttributeDefinitionContainer}</td>
  * </tr>
  * <tr>
  *   <td>{@link io.sphere.sdk.producttypes.ProductType}</td>
@@ -2401,10 +2418,6 @@ package com.commercetools.docs.meta;
  *   <td>{@link com.commercetools.api.models.subscription.Destination}</td>
  * </tr>
  * <tr>
- *   <td>{@link io.sphere.sdk.subscriptions.IronMqDestination}</td>
- *   <td>removed</td>
- * </tr>
- * <tr>
  *   <td>{@link io.sphere.sdk.subscriptions.MessageSubscription}</td>
  *   <td>{@link com.commercetools.api.models.subscription.MessageSubscription}</td>
  * </tr>
@@ -2642,7 +2655,7 @@ package com.commercetools.docs.meta;
  *
  * <table>
  * <caption></caption>
- * <tr><th>v1</td></tr>
+ * <tr><th>v1</th></tr>
  * <tr>
  *   <td>{@link io.sphere.sdk.cartdiscounts.CartDiscountPredicate}</td>
  * </tr>
@@ -2671,12 +2684,6 @@ package com.commercetools.docs.meta;
  *   <td>{@link io.sphere.sdk.products.AttributeContainerDraft}</td>
  * </tr>
  * <tr>
- *   <td>{@link io.sphere.sdk.products.ByIdVariantIdentifier}</td>
- * </tr>
- * <tr>
- *   <td>{@link io.sphere.sdk.products.BySkuVariantIdentifier}</td>
- * </tr>
- * <tr>
  *   <td>{@link io.sphere.sdk.products.PriceLike}</td>
  * </tr>
  * <tr>
@@ -2684,9 +2691,6 @@ package com.commercetools.docs.meta;
  * </tr>
  * <tr>
  *   <td>{@link io.sphere.sdk.products.ProductLike}</td>
- * </tr>
- * <tr>
- *   <td>{@link io.sphere.sdk.products.VariantIdentifier}</td>
  * </tr>
  * <tr>
  *   <td>{@link io.sphere.sdk.products.attributes.AttributeAccess}</td>
@@ -2710,22 +2714,397 @@ package com.commercetools.docs.meta;
  *   <td>{@link io.sphere.sdk.products.messages.SimpleProductMessage}</td>
  * </tr>
  * <tr>
- *   <td>{@link io.sphere.sdk.producttypes.AttributeDefinitionContainer}</td>
- * </tr>
- * <tr>
  *   <td>{@link io.sphere.sdk.producttypes.MetaProductType}</td>
  * </tr>
  * <tr>
  *   <td>{@link io.sphere.sdk.producttypes.ProductTypeLocalRepository}</td>
  * </tr>
+ * <tr>
+ *   <td>{@link io.sphere.sdk.subscriptions.IronMqDestination}</td>
+ * </tr>
  * </table>
  *
- * <h2>Package name changes</h2>
+ * <h2 id="command-mapping">Mapping of commands from SDK v1 to v2</h2>
+ *
+ * <table>
+ * <caption></caption>
+ * <tr><th>v1</th><th>v2</th></tr>
+ * <tr>
+ *   <td style="vertical-align: top;">{@link io.sphere.sdk.apiclient.commands.ApiClientCreateCommand }</td>
+ *   <td>{@include.example example.CommandMigrationTest#apiClientCreateCommand()}</td>
+ * </tr>
+ * <tr>
+ *   <td style="vertical-align: top;">{@link io.sphere.sdk.cartdiscounts.commands.CartDiscountCreateCommand }</td>
+ *   <td>{@include.example example.CommandMigrationTest#cartDiscountCreateCommand()}</td>
+ * </tr>
+ * <tr>
+ *   <td style="vertical-align: top;">{@link io.sphere.sdk.carts.commands.CartCreateCommand }</td>
+ *   <td>{@include.example example.CommandMigrationTest#cartCreateCommand()}</td>
+ * </tr>
+ * <tr>
+ *   <td style="vertical-align: top;">{@link io.sphere.sdk.carts.commands.CartInStoreCreateCommand }</td>
+ *   <td>{@include.example example.CommandMigrationTest#cartInStoreCreateCommand()}</td>
+ * </tr>
+ * <tr>
+ *   <td style="vertical-align: top;">{@link io.sphere.sdk.categories.commands.CategoryCreateCommand }</td>
+ *   <td>{@include.example example.CommandMigrationTest#categoryCreateCommand()}</td>
+ * </tr>
+ * <tr>
+ *   <td style="vertical-align: top;">{@link io.sphere.sdk.channels.commands.ChannelCreateCommand }</td>
+ *   <td>{@include.example example.CommandMigrationTest#channelCreateCommand()}</td>
+ * </tr>
+ * <tr>
+ *   <td style="vertical-align: top;">{@link io.sphere.sdk.customergroups.commands.CustomerGroupCreateCommand }</td>
+ *   <td>{@include.example example.CommandMigrationTest#customerGroupCreateCommand()}</td>
+ * </tr>
+ * <tr>
+ *   <td style="vertical-align: top;">{@link io.sphere.sdk.customers.commands.CustomerCreateCommand }</td>
+ *   <td>{@include.example example.CommandMigrationTest#customerCreateCommand()}</td>
+ * </tr>
+ * <tr>
+ *   <td style="vertical-align: top;">{@link io.sphere.sdk.customers.commands.CustomerInStoreCreateCommand }</td>
+ *   <td>{@include.example example.CommandMigrationTest#customerInStoreCreateCommand()}</td>
+ * </tr>
+ * <tr>
+ *   <td style="vertical-align: top;">{@link io.sphere.sdk.discountcodes.commands.DiscountCodeCreateCommand }</td>
+ *   <td>{@include.example example.CommandMigrationTest#discountCodeCreateCommand()}</td>
+ * </tr>
+ * <tr>
+ *   <td style="vertical-align: top;">{@link io.sphere.sdk.extensions.commands.ExtensionCreateCommand }</td>
+ *   <td>{@include.example example.CommandMigrationTest#extensionCreateCommand()}</td>
+ * </tr>
+ * <tr>
+ *   <td style="vertical-align: top;">{@link io.sphere.sdk.inventory.commands.InventoryEntryCreateCommand }</td>
+ *   <td>{@include.example example.CommandMigrationTest#inventoryEntryCreateCommand()}</td>
+ * </tr>
+ * <tr>
+ *   <td style="vertical-align: top;">{@link io.sphere.sdk.orderedits.commands.OrderEditCreateCommand }</td>
+ *   <td>{@include.example example.CommandMigrationTest#orderEditCreateCommand()}</td>
+ * </tr>
+ * <tr>
+ *   <td style="vertical-align: top;">{@link io.sphere.sdk.orders.commands.OrderFromCartCreateCommand }</td>
+ *   <td>{@include.example example.CommandMigrationTest#orderFromCartCreateCommand()}</td>
+ * </tr>
+ * <tr>
+ *   <td style="vertical-align: top;">{@link io.sphere.sdk.orders.commands.OrderFromCartInStoreCreateCommand }</td>
+ *   <td>{@include.example example.CommandMigrationTest#orderFromCartInStoreCreateCommand()}</td>
+ * </tr>
+ * <tr>
+ *   <td style="vertical-align: top;">{@link io.sphere.sdk.payments.commands.PaymentCreateCommand }</td>
+ *   <td>{@include.example example.CommandMigrationTest#paymentCreateCommand()}</td>
+ * </tr>
+ * <tr>
+ *   <td style="vertical-align: top;">{@link io.sphere.sdk.productdiscounts.commands.ProductDiscountCreateCommand }</td>
+ *   <td>{@include.example example.CommandMigrationTest#productDiscountCreateCommand()}</td>
+ * </tr>
+ * <tr>
+ *   <td style="vertical-align: top;">{@link io.sphere.sdk.products.commands.ProductCreateCommand }</td>
+ *   <td>{@include.example example.CommandMigrationTest#productCreateCommand()}</td>
+ * </tr>
+ * <tr>
+ *   <td style="vertical-align: top;">{@link io.sphere.sdk.productselections.commands.ProductSelectionCreateCommand }</td>
+ *   <td>{@include.example example.CommandMigrationTest#productSelectionCreateCommand()}</td>
+ * </tr>
+ * <tr>
+ *   <td style="vertical-align: top;">{@link io.sphere.sdk.producttypes.commands.ProductTypeCreateCommand }</td>
+ *   <td>{@include.example example.CommandMigrationTest#productTypeCreateCommand()}</td>
+ * </tr>
+ * <tr>
+ *   <td style="vertical-align: top;">{@link io.sphere.sdk.reviews.commands.ReviewCreateCommand }</td>
+ *   <td>{@include.example example.CommandMigrationTest#reviewCreateCommand()}</td>
+ * </tr>
+ * <tr>
+ *   <td style="vertical-align: top;">{@link io.sphere.sdk.shippingmethods.commands.ShippingMethodCreateCommand }</td>
+ *   <td>{@include.example example.CommandMigrationTest#shippingMethodCreateCommand()}</td>
+ * </tr>
+ * <tr>
+ *   <td style="vertical-align: top;">{@link io.sphere.sdk.shoppinglists.commands.ShoppingListCreateCommand }</td>
+ *   <td>{@include.example example.CommandMigrationTest#shoppingListCreateCommand()}</td>
+ * </tr>
+ * <tr>
+ *   <td style="vertical-align: top;">{@link io.sphere.sdk.shoppinglists.commands.ShoppingListInStoreCreateCommand }</td>
+ *   <td>{@include.example example.CommandMigrationTest#shoppingListInStoreCreateCommand()}</td>
+ * </tr>
+ * <tr>
+ *   <td style="vertical-align: top;">{@link io.sphere.sdk.states.commands.StateCreateCommand }</td>
+ *   <td>{@include.example example.CommandMigrationTest#stateCreateCommand()}</td>
+ * </tr>
+ * <tr>
+ *   <td style="vertical-align: top;">{@link io.sphere.sdk.stores.commands.StoreCreateCommand }</td>
+ *   <td>{@include.example example.CommandMigrationTest#storeCreateCommand()}</td>
+ * </tr>
+ * <tr>
+ *   <td style="vertical-align: top;">{@link io.sphere.sdk.subscriptions.commands.SubscriptionCreateCommand }</td>
+ *   <td>{@include.example example.CommandMigrationTest#subscriptionCreateCommand()}</td>
+ * </tr>
+ * <tr>
+ *   <td style="vertical-align: top;">{@link io.sphere.sdk.taxcategories.commands.TaxCategoryCreateCommand }</td>
+ *   <td>{@include.example example.CommandMigrationTest#taxCategoryCreateCommand()}</td>
+ * </tr>
+ * <tr>
+ *   <td style="vertical-align: top;">{@link io.sphere.sdk.types.commands.TypeCreateCommand }</td>
+ *   <td>{@include.example example.CommandMigrationTest#typeCreateCommand()}</td>
+ * </tr>
+ * <tr>
+ *   <td style="vertical-align: top;">{@link io.sphere.sdk.zones.commands.ZoneCreateCommand }</td>
+ *   <td>{@include.example example.CommandMigrationTest#zoneCreateCommand()}</td>
+ * </tr>
+ * <tr>
+ *   <td style="vertical-align: top;">{@link io.sphere.sdk.cartdiscounts.commands.CartDiscountUpdateCommand }</td>
+ *   <td>{@include.example example.CommandMigrationTest#cartDiscountUpdateCommand()}</td>
+ * </tr>
+ * <tr>
+ *   <td style="vertical-align: top;">{@link io.sphere.sdk.carts.commands.CartInStoreUpdateCommand }</td>
+ *   <td>{@include.example example.CommandMigrationTest#cartInStoreUpdateCommand()}</td>
+ * </tr>
+ * <tr>
+ *   <td style="vertical-align: top;">{@link io.sphere.sdk.carts.commands.CartUpdateCommand }</td>
+ *   <td>{@include.example example.CommandMigrationTest#cartUpdateCommand()}</td>
+ * </tr>
+ * <tr>
+ *   <td style="vertical-align: top;">{@link io.sphere.sdk.categories.commands.CategoryUpdateCommand }</td>
+ *   <td>{@include.example example.CommandMigrationTest#categoryUpdateCommand()}</td>
+ * </tr>
+ * <tr>
+ *   <td style="vertical-align: top;">{@link io.sphere.sdk.channels.commands.ChannelUpdateCommand }</td>
+ *   <td>{@include.example example.CommandMigrationTest#channelUpdateCommand()}</td>
+ * </tr>
+ * <tr>
+ *   <td style="vertical-align: top;">{@link io.sphere.sdk.customergroups.commands.CustomerGroupUpdateCommand }</td>
+ *   <td>{@include.example example.CommandMigrationTest#customerGroupUpdateCommand()}</td>
+ * </tr>
+ * <tr>
+ *   <td style="vertical-align: top;">{@link io.sphere.sdk.customers.commands.CustomerInStoreUpdateCommand }</td>
+ *   <td>{@include.example example.CommandMigrationTest#customerInStoreUpdateCommand()}</td>
+ * </tr>
+ * <tr>
+ *   <td style="vertical-align: top;">{@link io.sphere.sdk.customers.commands.CustomerUpdateCommand }</td>
+ *   <td>{@include.example example.CommandMigrationTest#customerUpdateCommand()}</td>
+ * </tr>
+ * <tr>
+ *   <td style="vertical-align: top;">{@link io.sphere.sdk.discountcodes.commands.DiscountCodeUpdateCommand }</td>
+ *   <td>{@include.example example.CommandMigrationTest#discountCodeUpdateCommand()}</td>
+ * </tr>
+ * <tr>
+ *   <td style="vertical-align: top;">{@link io.sphere.sdk.extensions.commands.ExtensionUpdateCommand }</td>
+ *   <td>{@include.example example.CommandMigrationTest#extensionUpdateCommand()}</td>
+ * </tr>
+ * <tr>
+ *   <td style="vertical-align: top;">{@link io.sphere.sdk.inventory.commands.InventoryEntryUpdateCommand }</td>
+ *   <td>{@include.example example.CommandMigrationTest#inventoryEntryUpdateCommand()}</td>
+ * </tr>
+ * <tr>
+ *   <td style="vertical-align: top;">{@link io.sphere.sdk.orderedits.commands.OrderEditUpdateCommand }</td>
+ *   <td>{@include.example example.CommandMigrationTest#orderEditUpdateCommand()}</td>
+ * </tr>
+ * <tr>
+ *   <td style="vertical-align: top;">{@link io.sphere.sdk.orders.commands.OrderInStoreUpdateByIdCommand }</td>
+ *   <td>{@include.example example.CommandMigrationTest#orderInStoreUpdateByIdCommand()}</td>
+ * </tr>
+ * <tr>
+ *   <td style="vertical-align: top;">{@link io.sphere.sdk.orders.commands.OrderInStoreUpdateByOrderNumberCommand }</td>
+ *   <td>{@include.example example.CommandMigrationTest#orderInStoreUpdateByOrderNumberCommand()}</td>
+ * </tr>
+ * <tr>
+ *   <td style="vertical-align: top;">{@link io.sphere.sdk.orders.commands.OrderUpdateCommand }</td>
+ *   <td>{@include.example example.CommandMigrationTest#orderUpdateCommand()}</td>
+ * </tr>
+ * <tr>
+ *   <td style="vertical-align: top;">{@link io.sphere.sdk.payments.commands.PaymentUpdateCommand }</td>
+ *   <td>{@include.example example.CommandMigrationTest#paymentUpdateCommand()}</td>
+ * </tr>
+ * <tr>
+ *   <td style="vertical-align: top;">{@link io.sphere.sdk.productdiscounts.commands.ProductDiscountUpdateCommand }</td>
+ *   <td>{@include.example example.CommandMigrationTest#productDiscountUpdateCommand()}</td>
+ * </tr>
+ * <tr>
+ *   <td style="vertical-align: top;">{@link io.sphere.sdk.products.commands.ProductUpdateCommand }</td>
+ *   <td>{@include.example example.CommandMigrationTest#productUpdateCommand()}</td>
+ * </tr>
+ * <tr>
+ *   <td style="vertical-align: top;">{@link io.sphere.sdk.productselections.commands.ProductSelectionUpdateCommand }</td>
+ *   <td>{@include.example example.CommandMigrationTest#productSelectionUpdateCommand()}</td>
+ * </tr>
+ * <tr>
+ *   <td style="vertical-align: top;">{@link io.sphere.sdk.producttypes.commands.ProductTypeUpdateCommand }</td>
+ *   <td>{@include.example example.CommandMigrationTest#productTypeUpdateCommand()}</td>
+ * </tr>
+ * <tr>
+ *   <td style="vertical-align: top;">{@link io.sphere.sdk.reviews.commands.ReviewUpdateCommand }</td>
+ *   <td>{@include.example example.CommandMigrationTest#reviewUpdateCommand()}</td>
+ * </tr>
+ * <tr>
+ *   <td style="vertical-align: top;">{@link io.sphere.sdk.shippingmethods.commands.ShippingMethodUpdateCommand }</td>
+ *   <td>{@include.example example.CommandMigrationTest#shippingMethodUpdateCommand()}</td>
+ * </tr>
+ * <tr>
+ *   <td style="vertical-align: top;">{@link io.sphere.sdk.shoppinglists.commands.ShoppingListInStoreUpdateCommand }</td>
+ *   <td>{@include.example example.CommandMigrationTest#shoppingListInStoreUpdateCommand()}</td>
+ * </tr>
+ * <tr>
+ *   <td style="vertical-align: top;">{@link io.sphere.sdk.shoppinglists.commands.ShoppingListUpdateCommand }</td>
+ *   <td>{@include.example example.CommandMigrationTest#shoppingListUpdateCommand()}</td>
+ * </tr>
+ * <tr>
+ *   <td style="vertical-align: top;">{@link io.sphere.sdk.states.commands.StateUpdateCommand }</td>
+ *   <td>{@include.example example.CommandMigrationTest#stateUpdateCommand()}</td>
+ * </tr>
+ * <tr>
+ *   <td style="vertical-align: top;">{@link io.sphere.sdk.stores.commands.StoreUpdateCommand }</td>
+ *   <td>{@include.example example.CommandMigrationTest#storeUpdateCommand()}</td>
+ * </tr>
+ * <tr>
+ *   <td style="vertical-align: top;">{@link io.sphere.sdk.subscriptions.commands.SubscriptionUpdateCommand }</td>
+ *   <td>{@include.example example.CommandMigrationTest#subscriptionUpdateCommand()}</td>
+ * </tr>
+ * <tr>
+ *   <td style="vertical-align: top;">{@link io.sphere.sdk.taxcategories.commands.TaxCategoryUpdateCommand }</td>
+ *   <td>{@include.example example.CommandMigrationTest#taxCategoryUpdateCommand()}</td>
+ * </tr>
+ * <tr>
+ *   <td style="vertical-align: top;">{@link io.sphere.sdk.types.commands.TypeUpdateCommand }</td>
+ *   <td>{@include.example example.CommandMigrationTest#typeUpdateCommand()}</td>
+ * </tr>
+ * <tr>
+ *   <td style="vertical-align: top;">{@link io.sphere.sdk.zones.commands.ZoneUpdateCommand }</td>
+ *   <td>{@include.example example.CommandMigrationTest#zoneUpdateCommand()}</td>
+ * </tr>
+ * <tr>
+ *   <td style="vertical-align: top;">{@link io.sphere.sdk.apiclient.commands.ApiClientDeleteCommand }</td>
+ *   <td>{@include.example example.CommandMigrationTest#apiClientDeleteCommand()}</td>
+ * </tr>
+ * <tr>
+ *   <td style="vertical-align: top;">{@link io.sphere.sdk.cartdiscounts.commands.CartDiscountDeleteCommand }</td>
+ *   <td>{@include.example example.CommandMigrationTest#cartDiscountDeleteCommand()}</td>
+ * </tr>
+ * <tr>
+ *   <td style="vertical-align: top;">{@link io.sphere.sdk.carts.commands.CartDeleteCommand }</td>
+ *   <td>{@include.example example.CommandMigrationTest#cartDeleteCommand()}</td>
+ * </tr>
+ * <tr>
+ *   <td style="vertical-align: top;">{@link io.sphere.sdk.carts.commands.CartInStoreDeleteCommand }</td>
+ *   <td>{@include.example example.CommandMigrationTest#cartInStoreDeleteCommand()}</td>
+ * </tr>
+ * <tr>
+ *   <td style="vertical-align: top;">{@link io.sphere.sdk.categories.commands.CategoryDeleteCommand }</td>
+ *   <td>{@include.example example.CommandMigrationTest#categoryDeleteCommand()}</td>
+ * </tr>
+ * <tr>
+ *   <td style="vertical-align: top;">{@link io.sphere.sdk.channels.commands.ChannelDeleteCommand }</td>
+ *   <td>{@include.example example.CommandMigrationTest#channelDeleteCommand()}</td>
+ * </tr>
+ * <tr>
+ *   <td style="vertical-align: top;">{@link io.sphere.sdk.customergroups.commands.CustomerGroupDeleteCommand }</td>
+ *   <td>{@include.example example.CommandMigrationTest#customerGroupDeleteCommand()}</td>
+ * </tr>
+ * <tr>
+ *   <td style="vertical-align: top;">{@link io.sphere.sdk.customers.commands.CustomerDeleteCommand }</td>
+ *   <td>{@include.example example.CommandMigrationTest#customerDeleteCommand()}</td>
+ * </tr>
+ * <tr>
+ *   <td style="vertical-align: top;">{@link io.sphere.sdk.customers.commands.CustomerInStoreDeleteCommand }</td>
+ *   <td>{@include.example example.CommandMigrationTest#customerInStoreDeleteCommand()}</td>
+ * </tr>
+ * <tr>
+ *   <td style="vertical-align: top;">{@link io.sphere.sdk.customobjects.commands.CustomObjectDeleteCommand }</td>
+ *   <td>{@include.example example.CommandMigrationTest#customObjectDeleteCommand()}</td>
+ * </tr>
+ * <tr>
+ *   <td style="vertical-align: top;">{@link io.sphere.sdk.discountcodes.commands.DiscountCodeDeleteCommand }</td>
+ *   <td>{@include.example example.CommandMigrationTest#discountCodeDeleteCommand()}</td>
+ * </tr>
+ * <tr>
+ *   <td style="vertical-align: top;">{@link io.sphere.sdk.extensions.commands.ExtensionDeleteCommand }</td>
+ *   <td>{@include.example example.CommandMigrationTest#extensionDeleteCommand()}</td>
+ * </tr>
+ * <tr>
+ *   <td style="vertical-align: top;">{@link io.sphere.sdk.inventory.commands.InventoryEntryDeleteCommand }</td>
+ *   <td>{@include.example example.CommandMigrationTest#inventoryEntryDeleteCommand()}</td>
+ * </tr>
+ * <tr>
+ *   <td style="vertical-align: top;">{@link io.sphere.sdk.orderedits.commands.OrderEditDeleteCommand }</td>
+ *   <td>{@include.example example.CommandMigrationTest#orderEditDeleteCommand()}</td>
+ * </tr>
+ * <tr>
+ *   <td style="vertical-align: top;">{@link io.sphere.sdk.orders.commands.OrderDeleteCommand }</td>
+ *   <td>{@include.example example.CommandMigrationTest#orderDeleteCommand()}</td>
+ * </tr>
+ * <tr>
+ *   <td style="vertical-align: top;">{@link io.sphere.sdk.orders.commands.OrderInStoreDeleteByIdCommand }</td>
+ *   <td>{@include.example example.CommandMigrationTest#orderInStoreDeleteByIdCommand()}</td>
+ * </tr>
+ * <tr>
+ *   <td style="vertical-align: top;">{@link io.sphere.sdk.orders.commands.OrderInStoreDeleteByOrderNumberCommand }</td>
+ *   <td>{@include.example example.CommandMigrationTest#orderInStoreDeleteByOrderNumberCommand()}</td>
+ * </tr>
+ * <tr>
+ *   <td style="vertical-align: top;">{@link io.sphere.sdk.payments.commands.PaymentDeleteCommand }</td>
+ *   <td>{@include.example example.CommandMigrationTest#paymentDeleteCommand()}</td>
+ * </tr>
+ * <tr>
+ *   <td style="vertical-align: top;">{@link io.sphere.sdk.productdiscounts.commands.ProductDiscountDeleteCommand }</td>
+ *   <td>{@include.example example.CommandMigrationTest#productDiscountDeleteCommand()}</td>
+ * </tr>
+ * <tr>
+ *   <td style="vertical-align: top;">{@link io.sphere.sdk.products.commands.ProductDeleteCommand }</td>
+ *   <td>{@include.example example.CommandMigrationTest#productDeleteCommand()}</td>
+ * </tr>
+ * <tr>
+ *   <td style="vertical-align: top;">{@link io.sphere.sdk.productselections.commands.ProductSelectionDeleteCommand }</td>
+ *   <td>{@include.example example.CommandMigrationTest#productSelectionDeleteCommand()}</td>
+ * </tr>
+ * <tr>
+ *   <td style="vertical-align: top;">{@link io.sphere.sdk.producttypes.commands.ProductTypeDeleteCommand }</td>
+ *   <td>{@include.example example.CommandMigrationTest#productTypeDeleteCommand()}</td>
+ * </tr>
+ * <tr>
+ *   <td style="vertical-align: top;">{@link io.sphere.sdk.reviews.commands.ReviewDeleteCommand }</td>
+ *   <td>{@include.example example.CommandMigrationTest#reviewDeleteCommand()}</td>
+ * </tr>
+ * <tr>
+ *   <td style="vertical-align: top;">{@link io.sphere.sdk.shippingmethods.commands.ShippingMethodDeleteCommand }</td>
+ *   <td>{@include.example example.CommandMigrationTest#shippingMethodDeleteCommand()}</td>
+ * </tr>
+ * <tr>
+ *   <td style="vertical-align: top;">{@link io.sphere.sdk.shoppinglists.commands.ShoppingListDeleteCommand }</td>
+ *   <td>{@include.example example.CommandMigrationTest#shoppingListDeleteCommand()}</td>
+ * </tr>
+ * <tr>
+ *   <td style="vertical-align: top;">{@link io.sphere.sdk.shoppinglists.commands.ShoppingListInStoreDeleteCommand }</td>
+ *   <td>{@include.example example.CommandMigrationTest#shoppingListInStoreDeleteCommand()}</td>
+ * </tr>
+ * <tr>
+ *   <td style="vertical-align: top;">{@link io.sphere.sdk.states.commands.StateDeleteCommand }</td>
+ *   <td>{@include.example example.CommandMigrationTest#stateDeleteCommand()}</td>
+ * </tr>
+ * <tr>
+ *   <td style="vertical-align: top;">{@link io.sphere.sdk.stores.commands.StoreDeleteCommand }</td>
+ *   <td>{@include.example example.CommandMigrationTest#storeDeleteCommand()}</td>
+ * </tr>
+ * <tr>
+ *   <td style="vertical-align: top;">{@link io.sphere.sdk.subscriptions.commands.SubscriptionDeleteCommand }</td>
+ *   <td>{@include.example example.CommandMigrationTest#subscriptionDeleteCommand()}</td>
+ * </tr>
+ * <tr>
+ *   <td style="vertical-align: top;">{@link io.sphere.sdk.taxcategories.commands.TaxCategoryDeleteCommand }</td>
+ *   <td>{@include.example example.CommandMigrationTest#taxCategoryDeleteCommand()}</td>
+ * </tr>
+ * <tr>
+ *   <td style="vertical-align: top;">{@link io.sphere.sdk.types.commands.TypeDeleteCommand }</td>
+ *   <td>{@include.example example.CommandMigrationTest#typeDeleteCommand()}</td>
+ * </tr>
+ * <tr>
+ *   <td style="vertical-align: top;">{@link io.sphere.sdk.zones.commands.ZoneDeleteCommand }</td>
+ *   <td>{@include.example example.CommandMigrationTest#zoneDeleteCommand()}</td>
+ * </tr>
+ * </table>
+ *
+ * <h2 id="package-mapping">Package name changes</h2>
  *
  * Please be aware this list shows to which package a class may have been moved based on the source package
  * <table>
  * <caption></caption>
- * <tr><th>v1</td><th>v2</th></tr>
+ * <tr><th>v1</th><th>v2</th></tr>
  * <tr>
  *   <td>{@link io.sphere.sdk.apiclient}</td>
  *   <td>{@link com.commercetools.api.models.api_client}</td>
@@ -2852,7 +3231,7 @@ package com.commercetools.docs.meta;
  * </tr>
  * <tr>
  *   <td>{@link io.sphere.sdk.products}</td>
- *   <td>{@link com.commercetools.api.models.common}, {@link com.commercetools.api.models.product}</td>
+ *   <td>{@link com.commercetools.api.models.product}, {@link com.commercetools.api.models.common}</td>
  * </tr>
  * <tr>
  *   <td>{@link io.sphere.sdk.products.attributes}</td>

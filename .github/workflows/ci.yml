@@ -37,7 +37,7 @@ jobs:
         run: ./gradlew checkLicense
 
       - uses: stefanzweifel/git-auto-commit-action@v4
-        if: github.event_name == 'push'
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
         with:
             file_pattern: 'licenses/index.json licenses/**/index.json'
             commit_message: "TASK: Updating license information"
@@ -93,6 +93,9 @@ jobs:
           with:
               distribution: 'temurin'
               java-version: '16'
+
+      - name: Setup Graphviz
+        uses: ts-graphviz/setup-graphviz@v1
 
       -   name: build javadoc
           if: github.event_name == 'push' && github.ref == 'refs/heads/main'

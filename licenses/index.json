@@ -2,7 +2,7 @@
     "dependencies": [
         {
             "moduleName": "com.commercetools.sdk.jvm.core:commercetools-java-client-core",
-            "moduleVersion": "2.9.0",
+            "moduleVersion": "2.14.0",
             "moduleLicenses": [
                 {
                     "moduleLicense": "Apache License, Version 2.0",
@@ -12,7 +12,7 @@
         },
         {
             "moduleName": "com.commercetools.sdk.jvm.core:commercetools-models",
-            "moduleVersion": "2.9.0",
+            "moduleVersion": "2.14.0",
             "moduleLicenses": [
                 {
                     "moduleLicense": "Apache License, Version 2.0",
@@ -22,7 +22,7 @@
         },
         {
             "moduleName": "com.commercetools.sdk.jvm.core:commercetools-sdk-base",
-            "moduleVersion": "2.9.0",
+            "moduleVersion": "2.14.0",
             "moduleLicenses": [
                 {
                     "moduleLicense": "Apache License, Version 2.0",
@@ -32,7 +32,7 @@
         },
         {
             "moduleName": "com.commercetools.sdk.jvm.core:sdk-http",
-            "moduleVersion": "2.9.0",
+            "moduleVersion": "2.14.0",
             "moduleLicenses": [
                 {
                     "moduleLicense": "Apache License, Version 2.0",
@@ -181,34 +181,8 @@
             ]
         },
         {
-            "moduleName": "com.squareup.okhttp3:okhttp",
-            "moduleVersion": "4.9.1",
-            "moduleUrls": [
-                "https://square.github.io/okhttp/"
-            ],
-            "moduleLicenses": [
-                {
-                    "moduleLicense": "Apache License, Version 2.0",
-                    "moduleLicenseUrl": "https://www.apache.org/licenses/LICENSE-2.0"
-                }
-            ]
-        },
-        {
             "moduleName": "com.squareup.okio:okio",
             "moduleVersion": "1.17.2",
-            "moduleLicenses": [
-                {
-                    "moduleLicense": "Apache License, Version 2.0",
-                    "moduleLicenseUrl": "https://www.apache.org/licenses/LICENSE-2.0"
-                }
-            ]
-        },
-        {
-            "moduleName": "com.squareup.okio:okio",
-            "moduleVersion": "2.8.0",
-            "moduleUrls": [
-                "https://github.com/square/okio/"
-            ],
             "moduleLicenses": [
                 {
                     "moduleLicense": "Apache License, Version 2.0",
@@ -930,33 +904,7 @@
         },
         {
             "moduleName": "org.jetbrains.kotlin:kotlin-stdlib",
-            "moduleVersion": "1.4.10",
-            "moduleUrls": [
-                "https://kotlinlang.org/"
-            ],
-            "moduleLicenses": [
-                {
-                    "moduleLicense": "Apache License, Version 2.0",
-                    "moduleLicenseUrl": "https://www.apache.org/licenses/LICENSE-2.0"
-                }
-            ]
-        },
-        {
-            "moduleName": "org.jetbrains.kotlin:kotlin-stdlib",
             "moduleVersion": "1.6.20",
-            "moduleUrls": [
-                "https://kotlinlang.org/"
-            ],
-            "moduleLicenses": [
-                {
-                    "moduleLicense": "Apache License, Version 2.0",
-                    "moduleLicenseUrl": "https://www.apache.org/licenses/LICENSE-2.0"
-                }
-            ]
-        },
-        {
-            "moduleName": "org.jetbrains.kotlin:kotlin-stdlib-common",
-            "moduleVersion": "1.4.10",
             "moduleUrls": [
                 "https://kotlinlang.org/"
             ],

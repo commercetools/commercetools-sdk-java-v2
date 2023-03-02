@@ -73,6 +73,10 @@ public interface StandalonePriceSetCustomFieldAction extends StandalonePriceUpda
         return helper.apply(this);
     }
 
+    public static StandalonePriceSetCustomFieldAction ofUnset(final String name) {
+        return StandalonePriceSetCustomFieldActionBuilder.of().name(name).build();
+    }
+
     public static com.fasterxml.jackson.core.type.TypeReference<StandalonePriceSetCustomFieldAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<StandalonePriceSetCustomFieldAction>() {
             @Override

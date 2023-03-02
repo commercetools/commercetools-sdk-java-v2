@@ -76,6 +76,10 @@ public interface StagedOrderSetDeliveryAddressAction extends StagedOrderUpdateAc
         return helper.apply(this);
     }
 
+    public static StagedOrderSetDeliveryAddressAction ofUnset() {
+        return StagedOrderSetDeliveryAddressAction.of();
+    }
+
     public static com.fasterxml.jackson.core.type.TypeReference<StagedOrderSetDeliveryAddressAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<StagedOrderSetDeliveryAddressAction>() {
             @Override

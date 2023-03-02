@@ -59,6 +59,10 @@ public interface ShoppingListSetKeyAction extends ShoppingListUpdateAction {
         return helper.apply(this);
     }
 
+    public static ShoppingListSetKeyAction ofUnset() {
+        return ShoppingListSetKeyAction.of();
+    }
+
     public static com.fasterxml.jackson.core.type.TypeReference<ShoppingListSetKeyAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ShoppingListSetKeyAction>() {
             @Override

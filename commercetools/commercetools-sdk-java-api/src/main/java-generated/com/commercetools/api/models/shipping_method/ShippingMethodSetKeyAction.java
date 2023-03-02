@@ -59,6 +59,10 @@ public interface ShippingMethodSetKeyAction extends ShippingMethodUpdateAction {
         return helper.apply(this);
     }
 
+    public static ShippingMethodSetKeyAction ofUnset() {
+        return ShippingMethodSetKeyAction.of();
+    }
+
     public static com.fasterxml.jackson.core.type.TypeReference<ShippingMethodSetKeyAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ShippingMethodSetKeyAction>() {
             @Override

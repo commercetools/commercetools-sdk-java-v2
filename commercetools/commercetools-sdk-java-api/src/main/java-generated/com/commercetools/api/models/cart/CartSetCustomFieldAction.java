@@ -72,6 +72,10 @@ public interface CartSetCustomFieldAction extends CartUpdateAction {
         return helper.apply(this);
     }
 
+    public static CartSetCustomFieldAction ofUnset(final String name) {
+        return CartSetCustomFieldActionBuilder.of().name(name).build();
+    }
+
     public static com.fasterxml.jackson.core.type.TypeReference<CartSetCustomFieldAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<CartSetCustomFieldAction>() {
             @Override

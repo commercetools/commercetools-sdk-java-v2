@@ -85,6 +85,10 @@ public interface ShoppingListSetLineItemCustomFieldAction extends ShoppingListUp
         return helper.apply(this);
     }
 
+    public static ShoppingListSetLineItemCustomFieldAction ofUnset(final String name, final String lineItemId) {
+        return ShoppingListSetLineItemCustomFieldActionBuilder.of().name(name).lineItemId(lineItemId).build();
+    }
+
     public static com.fasterxml.jackson.core.type.TypeReference<ShoppingListSetLineItemCustomFieldAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ShoppingListSetLineItemCustomFieldAction>() {
             @Override

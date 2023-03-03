@@ -15,18 +15,14 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * CartAddLineItemAction
+ *  <p>If the Cart contains a LineItem for a Product Variant with the same LineItemMode, Custom Fields, supply and distribution channel, then only the quantity of the existing Line Item is increased. If LineItem <code>shippingDetails</code> is set, it is merged. All addresses will be present afterwards and, for address keys present in both shipping details, the quantity will be summed up. A new Line Item is added when the <code>externalPrice</code> or <code>externalTotalPrice</code> is set in this update action. The LineItem price is set as described in LineItem Price selection.</p>
+ *  <p>If the Tax Rate is not set, a MissingTaxRateForCountry error is returned.</p>
+ *  <p>If the Line Items do not have a Price according to the Product <code>priceMode</code> value for a selected currency and/or country, Customer Group, or Channel, a MatchingPriceNotFound error is returned.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CartAddLineItemActionImpl implements CartAddLineItemAction, ModelBase {
 
     private String action;
-
-    private com.commercetools.api.models.type.CustomFieldsDraft custom;
-
-    private com.commercetools.api.models.channel.ChannelResourceIdentifier distributionChannel;
-
-    private com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate;
 
     private String productId;
 
@@ -36,35 +32,42 @@ public class CartAddLineItemActionImpl implements CartAddLineItemAction, ModelBa
 
     private Long quantity;
 
+    private com.commercetools.api.models.channel.ChannelResourceIdentifier distributionChannel;
+
     private com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel;
 
     private com.commercetools.api.models.common.Money externalPrice;
 
     private com.commercetools.api.models.cart.ExternalLineItemTotalPrice externalTotalPrice;
 
+    private com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate;
+
     private com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails;
 
+    private com.commercetools.api.models.type.CustomFieldsDraft custom;
+
     @JsonCreator
-    CartAddLineItemActionImpl(@JsonProperty("custom") final com.commercetools.api.models.type.CustomFieldsDraft custom,
+    CartAddLineItemActionImpl(@JsonProperty("productId") final String productId,
+            @JsonProperty("variantId") final Long variantId, @JsonProperty("sku") final String sku,
+            @JsonProperty("quantity") final Long quantity,
             @JsonProperty("distributionChannel") final com.commercetools.api.models.channel.ChannelResourceIdentifier distributionChannel,
-            @JsonProperty("externalTaxRate") final com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate,
-            @JsonProperty("productId") final String productId, @JsonProperty("variantId") final Long variantId,
-            @JsonProperty("sku") final String sku, @JsonProperty("quantity") final Long quantity,
             @JsonProperty("supplyChannel") final com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel,
             @JsonProperty("externalPrice") final com.commercetools.api.models.common.Money externalPrice,
             @JsonProperty("externalTotalPrice") final com.commercetools.api.models.cart.ExternalLineItemTotalPrice externalTotalPrice,
-            @JsonProperty("shippingDetails") final com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails) {
-        this.custom = custom;
-        this.distributionChannel = distributionChannel;
-        this.externalTaxRate = externalTaxRate;
+            @JsonProperty("externalTaxRate") final com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate,
+            @JsonProperty("shippingDetails") final com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails,
+            @JsonProperty("custom") final com.commercetools.api.models.type.CustomFieldsDraft custom) {
         this.productId = productId;
         this.variantId = variantId;
         this.sku = sku;
         this.quantity = quantity;
+        this.distributionChannel = distributionChannel;
         this.supplyChannel = supplyChannel;
         this.externalPrice = externalPrice;
         this.externalTotalPrice = externalTotalPrice;
+        this.externalTaxRate = externalTaxRate;
         this.shippingDetails = shippingDetails;
+        this.custom = custom;
         this.action = ADD_LINE_ITEM;
     }
 
@@ -81,31 +84,8 @@ public class CartAddLineItemActionImpl implements CartAddLineItemAction, ModelBa
     }
 
     /**
-     *  <p>The representation used when creating or updating a customizable data type with Custom Fields.</p>
-     */
-
-    public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
-        return this.custom;
-    }
-
-    /**
-     *  <p>ResourceIdentifier to a Channel.</p>
-     */
-
-    public com.commercetools.api.models.channel.ChannelResourceIdentifier getDistributionChannel() {
-        return this.distributionChannel;
-    }
-
-    /**
-     *
-     */
-
-    public com.commercetools.api.models.cart.ExternalTaxRateDraft getExternalTaxRate() {
-        return this.externalTaxRate;
-    }
-
-    /**
-     *
+     *  <p>ID of an existing Product.</p>
+     *  <p>Either the <code>productId</code> and <code>variantId</code>, or <code>sku</code> must be provided.</p>
      */
 
     public String getProductId() {
@@ -113,7 +93,9 @@ public class CartAddLineItemActionImpl implements CartAddLineItemAction, ModelBa
     }
 
     /**
-     *
+     *  <p>ID of an existing ProductVariant in the Product.</p>
+     *  <p>If not given, the Master Variant is used.</p>
+     *  <p>Either the <code>productId</code> and <code>variantId</code>, or <code>sku</code> must be provided.</p>
      */
 
     public Long getVariantId() {
@@ -121,7 +103,8 @@ public class CartAddLineItemActionImpl implements CartAddLineItemAction, ModelBa
     }
 
     /**
-     *
+     *  <p>SKU of an existing ProductVariant.</p>
+     *  <p>Either the <code>productId</code> and <code>variantId</code>, or <code>sku</code> must be provided.</p>
      */
 
     public String getSku() {
@@ -129,7 +112,7 @@ public class CartAddLineItemActionImpl implements CartAddLineItemAction, ModelBa
     }
 
     /**
-     *
+     *  <p>Number of Line Items to add to the Cart.</p>
      */
 
     public Long getQuantity() {
@@ -137,7 +120,15 @@ public class CartAddLineItemActionImpl implements CartAddLineItemAction, ModelBa
     }
 
     /**
-     *  <p>ResourceIdentifier to a Channel.</p>
+     *  <p>Used to select a Product Price. The Channel must have the <code>ProductDistribution</code> ChannelRoleEnum. If the Cart is bound to a Store with <code>distributionChannels</code> set, the Channel must match one of the Store's distribution channels.</p>
+     */
+
+    public com.commercetools.api.models.channel.ChannelResourceIdentifier getDistributionChannel() {
+        return this.distributionChannel;
+    }
+
+    /**
+     *  <p>Used to identify Inventory entries that must be reserved. The Channel must have the <code>InventorySupply</code> ChannelRoleEnum.</p>
      */
 
     public com.commercetools.api.models.channel.ChannelResourceIdentifier getSupplyChannel() {
@@ -145,8 +136,7 @@ public class CartAddLineItemActionImpl implements CartAddLineItemAction, ModelBa
     }
 
     /**
-     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
-     *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
+     *  <p>Sets the LineItem <code>price</code> value, and the <code>priceMode</code> to <code>ExternalPrice</code> LineItemPriceMode.</p>
      */
 
     public com.commercetools.api.models.common.Money getExternalPrice() {
@@ -154,7 +144,7 @@ public class CartAddLineItemActionImpl implements CartAddLineItemAction, ModelBa
     }
 
     /**
-     *
+     *  <p>Sets the LineItem <code>price</code> and <code>totalPrice</code> values, and the <code>priceMode</code> to <code>ExternalTotal</code> LineItemPriceMode.</p>
      */
 
     public com.commercetools.api.models.cart.ExternalLineItemTotalPrice getExternalTotalPrice() {
@@ -162,24 +152,27 @@ public class CartAddLineItemActionImpl implements CartAddLineItemAction, ModelBa
     }
 
     /**
-     *
+     *  <p>External Tax Rate for the Line Item, if the Cart has the <code>External</code> TaxMode.</p>
+     */
+
+    public com.commercetools.api.models.cart.ExternalTaxRateDraft getExternalTaxRate() {
+        return this.externalTaxRate;
+    }
+
+    /**
+     *  <p>Container for Line Item-specific addresses.</p>
      */
 
     public com.commercetools.api.models.cart.ItemShippingDetailsDraft getShippingDetails() {
         return this.shippingDetails;
     }
 
-    public void setCustom(final com.commercetools.api.models.type.CustomFieldsDraft custom) {
-        this.custom = custom;
-    }
+    /**
+     *  <p>Custom Fields for the Line Item.</p>
+     */
 
-    public void setDistributionChannel(
-            final com.commercetools.api.models.channel.ChannelResourceIdentifier distributionChannel) {
-        this.distributionChannel = distributionChannel;
-    }
-
-    public void setExternalTaxRate(final com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate) {
-        this.externalTaxRate = externalTaxRate;
+    public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
+        return this.custom;
     }
 
     public void setProductId(final String productId) {
@@ -198,6 +191,11 @@ public class CartAddLineItemActionImpl implements CartAddLineItemAction, ModelBa
         this.quantity = quantity;
     }
 
+    public void setDistributionChannel(
+            final com.commercetools.api.models.channel.ChannelResourceIdentifier distributionChannel) {
+        this.distributionChannel = distributionChannel;
+    }
+
     public void setSupplyChannel(final com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel) {
         this.supplyChannel = supplyChannel;
     }
@@ -211,8 +209,16 @@ public class CartAddLineItemActionImpl implements CartAddLineItemAction, ModelBa
         this.externalTotalPrice = externalTotalPrice;
     }
 
+    public void setExternalTaxRate(final com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate) {
+        this.externalTaxRate = externalTaxRate;
+    }
+
     public void setShippingDetails(final com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails) {
         this.shippingDetails = shippingDetails;
+    }
+
+    public void setCustom(final com.commercetools.api.models.type.CustomFieldsDraft custom) {
+        this.custom = custom;
     }
 
     @Override
@@ -226,34 +232,34 @@ public class CartAddLineItemActionImpl implements CartAddLineItemAction, ModelBa
         CartAddLineItemActionImpl that = (CartAddLineItemActionImpl) o;
 
         return new EqualsBuilder().append(action, that.action)
-                .append(custom, that.custom)
-                .append(distributionChannel, that.distributionChannel)
-                .append(externalTaxRate, that.externalTaxRate)
                 .append(productId, that.productId)
                 .append(variantId, that.variantId)
                 .append(sku, that.sku)
                 .append(quantity, that.quantity)
+                .append(distributionChannel, that.distributionChannel)
                 .append(supplyChannel, that.supplyChannel)
                 .append(externalPrice, that.externalPrice)
                 .append(externalTotalPrice, that.externalTotalPrice)
+                .append(externalTaxRate, that.externalTaxRate)
                 .append(shippingDetails, that.shippingDetails)
+                .append(custom, that.custom)
                 .isEquals();
     }
 
     @Override
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(action)
-                .append(custom)
-                .append(distributionChannel)
-                .append(externalTaxRate)
                 .append(productId)
                 .append(variantId)
                 .append(sku)
                 .append(quantity)
+                .append(distributionChannel)
                 .append(supplyChannel)
                 .append(externalPrice)
                 .append(externalTotalPrice)
+                .append(externalTaxRate)
                 .append(shippingDetails)
+                .append(custom)
                 .toHashCode();
     }
 

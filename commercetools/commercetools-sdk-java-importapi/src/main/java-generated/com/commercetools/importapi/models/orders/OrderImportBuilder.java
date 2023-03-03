@@ -92,6 +92,9 @@ public class OrderImportBuilder implements Builder<OrderImport> {
     @Nullable
     private com.commercetools.importapi.models.common.StoreKeyReference store;
 
+    @Nullable
+    private com.commercetools.importapi.models.common.StateKeyReference state;
+
     /**
      *  <p>Maps to <code>Order.orderNumber</code>, String that uniquely identifies an order. It should be unique across a project. Once it's set it cannot be changed.</p>
      */
@@ -555,6 +558,25 @@ public class OrderImportBuilder implements Builder<OrderImport> {
         return this;
     }
 
+    /**
+     *  <p>Reference to a State in a custom workflow.</p>
+     */
+
+    public OrderImportBuilder state(
+            Function<com.commercetools.importapi.models.common.StateKeyReferenceBuilder, com.commercetools.importapi.models.common.StateKeyReferenceBuilder> builder) {
+        this.state = builder.apply(com.commercetools.importapi.models.common.StateKeyReferenceBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Reference to a State in a custom workflow.</p>
+     */
+
+    public OrderImportBuilder state(@Nullable final com.commercetools.importapi.models.common.StateKeyReference state) {
+        this.state = state;
+        return this;
+    }
+
     public String getOrderNumber() {
         return this.orderNumber;
     }
@@ -668,13 +690,18 @@ public class OrderImportBuilder implements Builder<OrderImport> {
         return this.store;
     }
 
+    @Nullable
+    public com.commercetools.importapi.models.common.StateKeyReference getState() {
+        return this.state;
+    }
+
     public OrderImport build() {
         Objects.requireNonNull(orderNumber, OrderImport.class + ": orderNumber is missing");
         Objects.requireNonNull(totalPrice, OrderImport.class + ": totalPrice is missing");
         return new OrderImportImpl(orderNumber, customer, customerEmail, lineItems, customLineItems, totalPrice,
             taxedPrice, shippingAddress, billingAddress, customerGroup, country, orderState, shipmentState,
             paymentState, shippingInfo, completedAt, custom, inventoryMode, taxRoundingMode, taxCalculationMode, origin,
-            itemShippingAddresses, store);
+            itemShippingAddresses, store, state);
     }
 
     /**
@@ -684,7 +711,7 @@ public class OrderImportBuilder implements Builder<OrderImport> {
         return new OrderImportImpl(orderNumber, customer, customerEmail, lineItems, customLineItems, totalPrice,
             taxedPrice, shippingAddress, billingAddress, customerGroup, country, orderState, shipmentState,
             paymentState, shippingInfo, completedAt, custom, inventoryMode, taxRoundingMode, taxCalculationMode, origin,
-            itemShippingAddresses, store);
+            itemShippingAddresses, store, state);
     }
 
     public static OrderImportBuilder of() {
@@ -716,6 +743,7 @@ public class OrderImportBuilder implements Builder<OrderImport> {
         builder.origin = template.getOrigin();
         builder.itemShippingAddresses = template.getItemShippingAddresses();
         builder.store = template.getStore();
+        builder.state = template.getState();
         return builder;
     }
 

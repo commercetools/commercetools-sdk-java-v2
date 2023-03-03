@@ -33,7 +33,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface DiscountedLineItemPrice {
 
     /**
-     *
+     *  <p>Money value of the discounted Line Item or Custom Line Item.</p>
      */
     @NotNull
     @Valid
@@ -41,7 +41,7 @@ public interface DiscountedLineItemPrice {
     public TypedMoney getValue();
 
     /**
-     *
+     *  <p>Discount applicable on the Line Item or Custom Line Item.</p>
      */
     @NotNull
     @Valid

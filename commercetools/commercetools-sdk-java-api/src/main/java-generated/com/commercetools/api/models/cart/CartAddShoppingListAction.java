@@ -16,7 +16,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * CartAddShoppingListAction
+ *  <p>Adds all LineItems of a ShoppingList to the Cart.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -35,7 +35,7 @@ public interface CartAddShoppingListAction extends CartUpdateAction {
     String ADD_SHOPPING_LIST = "addShoppingList";
 
     /**
-     *  <p>ResourceIdentifier to a ShoppingList.</p>
+     *  <p>Shopping List that contains the Line Items to be added.</p>
      */
     @NotNull
     @Valid
@@ -43,24 +43,24 @@ public interface CartAddShoppingListAction extends CartUpdateAction {
     public ShoppingListResourceIdentifier getShoppingList();
 
     /**
-     *  <p>ResourceIdentifier to a Channel.</p>
-     */
-    @Valid
-    @JsonProperty("supplyChannel")
-    public ChannelResourceIdentifier getSupplyChannel();
-
-    /**
-     *  <p>ResourceIdentifier to a Channel.</p>
+     *  <p><code>distributionChannel</code> to set for all LineItems that are added to the Cart. The Channel must have the <code>ProductDistribution</code> ChannelRoleEnum.</p>
      */
     @Valid
     @JsonProperty("distributionChannel")
     public ChannelResourceIdentifier getDistributionChannel();
 
+    /**
+     *  <p><code>supplyChannel</code> to set for all LineItems that are added to the Cart. The Channel must have the <code>InventorySupply</code> ChannelRoleEnum.</p>
+     */
+    @Valid
+    @JsonProperty("supplyChannel")
+    public ChannelResourceIdentifier getSupplyChannel();
+
     public void setShoppingList(final ShoppingListResourceIdentifier shoppingList);
 
-    public void setSupplyChannel(final ChannelResourceIdentifier supplyChannel);
-
     public void setDistributionChannel(final ChannelResourceIdentifier distributionChannel);
+
+    public void setSupplyChannel(final ChannelResourceIdentifier supplyChannel);
 
     public static CartAddShoppingListAction of() {
         return new CartAddShoppingListActionImpl();
@@ -69,8 +69,8 @@ public interface CartAddShoppingListAction extends CartUpdateAction {
     public static CartAddShoppingListAction of(final CartAddShoppingListAction template) {
         CartAddShoppingListActionImpl instance = new CartAddShoppingListActionImpl();
         instance.setShoppingList(template.getShoppingList());
-        instance.setSupplyChannel(template.getSupplyChannel());
         instance.setDistributionChannel(template.getDistributionChannel());
+        instance.setSupplyChannel(template.getSupplyChannel());
         return instance;
     }
 

@@ -151,7 +151,7 @@ public class ReviewImpl implements Review, ModelBase {
     }
 
     /**
-     *  <p>Must be unique among Reviews. For example, if this value is set to Customer <code>id</code>��+ Product <code>id</code>, only one Review per Customer and per Product is allowed.</p>
+     *  <p>Must be unique among Reviews. For example, if this value is set to Customer <code>id</code>&nbsp;+ Product <code>id</code>, only one Review per Customer and per Product is allowed.</p>
      */
 
     public String getUniquenessValue() {

@@ -44,7 +44,7 @@ public class MyCartAddPaymentActionImpl implements MyCartAddPaymentAction, Model
     }
 
     /**
-     *  <p>ResourceIdentifier of a Payment.</p>
+     *  <p>Payment to add to the Cart. Must not be assigned to another Order or active Cart already.</p>
      */
 
     public com.commercetools.api.models.payment.PaymentResourceIdentifier getPayment() {

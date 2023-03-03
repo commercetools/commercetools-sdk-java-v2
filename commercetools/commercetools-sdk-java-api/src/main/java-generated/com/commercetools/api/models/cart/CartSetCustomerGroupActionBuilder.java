@@ -27,7 +27,7 @@ public class CartSetCustomerGroupActionBuilder implements Builder<CartSetCustome
     private com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier customerGroup;
 
     /**
-     *  <p>ResourceIdentifier to a CustomerGroup.</p>
+     *  <p>Value to set. If empty, any existing value is removed.</p>
      */
 
     public CartSetCustomerGroupActionBuilder customerGroup(
@@ -39,7 +39,7 @@ public class CartSetCustomerGroupActionBuilder implements Builder<CartSetCustome
     }
 
     /**
-     *  <p>ResourceIdentifier to a CustomerGroup.</p>
+     *  <p>Value to set. If empty, any existing value is removed.</p>
      */
 
     public CartSetCustomerGroupActionBuilder customerGroup(

@@ -28,7 +28,7 @@ public class CartChangeCustomLineItemMoneyActionBuilder implements Builder<CartC
     private com.commercetools.api.models.common.Money money;
 
     /**
-     *
+     *  <p><code>id</code> of the CustomLineItem to update.</p>
      */
 
     public CartChangeCustomLineItemMoneyActionBuilder customLineItemId(final String customLineItemId) {
@@ -37,8 +37,7 @@ public class CartChangeCustomLineItemMoneyActionBuilder implements Builder<CartC
     }
 
     /**
-     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
-     *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
+     *  <p>Value to set. Must not be empty. Can be a negative amount.</p>
      */
 
     public CartChangeCustomLineItemMoneyActionBuilder money(
@@ -48,8 +47,7 @@ public class CartChangeCustomLineItemMoneyActionBuilder implements Builder<CartC
     }
 
     /**
-     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
-     *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
+     *  <p>Value to set. Must not be empty. Can be a negative amount.</p>
      */
 
     public CartChangeCustomLineItemMoneyActionBuilder money(final com.commercetools.api.models.common.Money money) {

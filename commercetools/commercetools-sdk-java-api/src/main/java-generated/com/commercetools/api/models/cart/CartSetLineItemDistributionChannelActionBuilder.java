@@ -31,7 +31,7 @@ public class CartSetLineItemDistributionChannelActionBuilder
     private com.commercetools.api.models.channel.ChannelResourceIdentifier distributionChannel;
 
     /**
-     *
+     *  <p><code>id</code> of the LineItem to update.</p>
      */
 
     public CartSetLineItemDistributionChannelActionBuilder lineItemId(final String lineItemId) {
@@ -40,7 +40,10 @@ public class CartSetLineItemDistributionChannelActionBuilder
     }
 
     /**
-     *  <p>ResourceIdentifier to a Channel.</p>
+     *  <ul>
+     *   <li>If present, a Reference to the Channel is set for the LineItem specified by <code>lineItemId</code>.</li>
+     *   <li>If not present, the current Reference to a distribution channel is removed from the LineItem specified by <code>lineItemId</code>. The Channel must have the <code>ProductDistribution</code> ChannelRoleEnum.</li>
+     *  </ul>
      */
 
     public CartSetLineItemDistributionChannelActionBuilder distributionChannel(
@@ -52,7 +55,10 @@ public class CartSetLineItemDistributionChannelActionBuilder
     }
 
     /**
-     *  <p>ResourceIdentifier to a Channel.</p>
+     *  <ul>
+     *   <li>If present, a Reference to the Channel is set for the LineItem specified by <code>lineItemId</code>.</li>
+     *   <li>If not present, the current Reference to a distribution channel is removed from the LineItem specified by <code>lineItemId</code>. The Channel must have the <code>ProductDistribution</code> ChannelRoleEnum.</li>
+     *  </ul>
      */
 
     public CartSetLineItemDistributionChannelActionBuilder distributionChannel(

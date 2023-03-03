@@ -29,7 +29,7 @@ public class MyCartApplyDeltaToLineItemShippingDetailsTargetsActionBuilder
     private java.util.List<com.commercetools.api.models.cart.ItemShippingTarget> targetsDelta;
 
     /**
-     *
+     *  <p><code>id</code> of the LineItem to update.</p>
      */
 
     public MyCartApplyDeltaToLineItemShippingDetailsTargetsActionBuilder lineItemId(final String lineItemId) {
@@ -38,7 +38,7 @@ public class MyCartApplyDeltaToLineItemShippingDetailsTargetsActionBuilder
     }
 
     /**
-     *
+     *  <p>Using positive or negative quantities increases or decreases the number of items shipped to an address.</p>
      */
 
     public MyCartApplyDeltaToLineItemShippingDetailsTargetsActionBuilder targetsDelta(
@@ -48,7 +48,7 @@ public class MyCartApplyDeltaToLineItemShippingDetailsTargetsActionBuilder
     }
 
     /**
-     *
+     *  <p>Using positive or negative quantities increases or decreases the number of items shipped to an address.</p>
      */
 
     public MyCartApplyDeltaToLineItemShippingDetailsTargetsActionBuilder targetsDelta(
@@ -58,7 +58,7 @@ public class MyCartApplyDeltaToLineItemShippingDetailsTargetsActionBuilder
     }
 
     /**
-     *
+     *  <p>Using positive or negative quantities increases or decreases the number of items shipped to an address.</p>
      */
 
     public MyCartApplyDeltaToLineItemShippingDetailsTargetsActionBuilder plusTargetsDelta(
@@ -71,7 +71,7 @@ public class MyCartApplyDeltaToLineItemShippingDetailsTargetsActionBuilder
     }
 
     /**
-     *
+     *  <p>Using positive or negative quantities increases or decreases the number of items shipped to an address.</p>
      */
 
     public MyCartApplyDeltaToLineItemShippingDetailsTargetsActionBuilder plusTargetsDelta(
@@ -84,7 +84,7 @@ public class MyCartApplyDeltaToLineItemShippingDetailsTargetsActionBuilder
     }
 
     /**
-     *
+     *  <p>Using positive or negative quantities increases or decreases the number of items shipped to an address.</p>
      */
 
     public MyCartApplyDeltaToLineItemShippingDetailsTargetsActionBuilder withTargetsDelta(

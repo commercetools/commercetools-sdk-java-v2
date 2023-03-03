@@ -135,6 +135,11 @@ public interface ResourceTypeId {
     */
     ResourceTypeId REVIEW = ResourceTypeIdEnum.REVIEW;
     /**
+    	<p><a href="ctp:api:type:Shipping">Shipping</a></p>
+
+    */
+    ResourceTypeId SHIPPING = ResourceTypeIdEnum.SHIPPING;
+    /**
     	<p><a href="ctp:api:type:ShippingMethod">ShippingMethod</a></p>
 
     */
@@ -211,6 +216,8 @@ public interface ResourceTypeId {
         QUOTE("quote"),
 
         REVIEW("review"),
+
+        SHIPPING("shipping"),
 
         SHIPPING_METHOD("shipping-method"),
 

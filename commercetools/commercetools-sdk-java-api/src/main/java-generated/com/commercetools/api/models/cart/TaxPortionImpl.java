@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * TaxPortion
+ *  <p>The tax portions are calculated from the TaxRates. If a Tax Rate has SubRates, they are used and can be identified by name. Tax portions from Line Items with the same <code>rate</code> and <code>name</code> are accumulated to the same tax portion.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class TaxPortionImpl implements TaxPortion, ModelBase {
@@ -24,11 +24,11 @@ public class TaxPortionImpl implements TaxPortion, ModelBase {
 
     private Double rate;
 
-    private com.commercetools.api.models.common.TypedMoney amount;
+    private com.commercetools.api.models.common.CentPrecisionMoney amount;
 
     @JsonCreator
     TaxPortionImpl(@JsonProperty("name") final String name, @JsonProperty("rate") final Double rate,
-            @JsonProperty("amount") final com.commercetools.api.models.common.TypedMoney amount) {
+            @JsonProperty("amount") final com.commercetools.api.models.common.CentPrecisionMoney amount) {
         this.name = name;
         this.rate = rate;
         this.amount = amount;
@@ -38,7 +38,7 @@ public class TaxPortionImpl implements TaxPortion, ModelBase {
     }
 
     /**
-     *
+     *  <p>Name of the tax portion.</p>
      */
 
     public String getName() {
@@ -46,7 +46,7 @@ public class TaxPortionImpl implements TaxPortion, ModelBase {
     }
 
     /**
-     *  <p>A number in the range [0..1]</p>
+     *  <p>A number in the range 0-1.</p>
      */
 
     public Double getRate() {
@@ -54,10 +54,10 @@ public class TaxPortionImpl implements TaxPortion, ModelBase {
     }
 
     /**
-     *
+     *  <p>Money value of the tax portion.</p>
      */
 
-    public com.commercetools.api.models.common.TypedMoney getAmount() {
+    public com.commercetools.api.models.common.CentPrecisionMoney getAmount() {
         return this.amount;
     }
 
@@ -69,7 +69,7 @@ public class TaxPortionImpl implements TaxPortion, ModelBase {
         this.rate = rate;
     }
 
-    public void setAmount(final com.commercetools.api.models.common.TypedMoney amount) {
+    public void setAmount(final com.commercetools.api.models.common.CentPrecisionMoney amount) {
         this.amount = amount;
     }
 

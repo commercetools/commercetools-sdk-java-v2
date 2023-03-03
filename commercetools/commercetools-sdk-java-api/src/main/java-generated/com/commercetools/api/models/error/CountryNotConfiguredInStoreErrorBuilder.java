@@ -7,12 +7,12 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * CountryNotConfiguredInStoreBuilder
+ * CountryNotConfiguredInStoreErrorBuilder
  * <hr>
  * Example to create an instance using the builder pattern
  * <div class=code-example>
  * <pre><code class='java'>
- *     CountryNotConfiguredInStore countryNotConfiguredInStore = CountryNotConfiguredInStore.builder()
+ *     CountryNotConfiguredInStoreError countryNotConfiguredInStoreError = CountryNotConfiguredInStoreError.builder()
  *             .message("{message}")
  *             .plusStoreCountries(storeCountriesBuilder -> storeCountriesBuilder)
  *             .country("{country}")
@@ -21,7 +21,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-public class CountryNotConfiguredInStoreBuilder implements Builder<CountryNotConfiguredInStore> {
+public class CountryNotConfiguredInStoreErrorBuilder implements Builder<CountryNotConfiguredInStoreError> {
 
     private String message;
 
@@ -35,7 +35,7 @@ public class CountryNotConfiguredInStoreBuilder implements Builder<CountryNotCon
      *  <p><code>"The country $country is not configured for the store $store."</code></p>
      */
 
-    public CountryNotConfiguredInStoreBuilder message(final String message) {
+    public CountryNotConfiguredInStoreErrorBuilder message(final String message) {
         this.message = message;
         return this;
     }
@@ -44,7 +44,7 @@ public class CountryNotConfiguredInStoreBuilder implements Builder<CountryNotCon
      *  <p>Error-specific additional fields.</p>
      */
 
-    public CountryNotConfiguredInStoreBuilder values(final Map<String, java.lang.Object> values) {
+    public CountryNotConfiguredInStoreErrorBuilder values(final Map<String, java.lang.Object> values) {
         this.values = values;
         return this;
     }
@@ -53,7 +53,7 @@ public class CountryNotConfiguredInStoreBuilder implements Builder<CountryNotCon
      *  <p>Error-specific additional fields.</p>
      */
 
-    public CountryNotConfiguredInStoreBuilder addValue(final String key, final java.lang.Object value) {
+    public CountryNotConfiguredInStoreErrorBuilder addValue(final String key, final java.lang.Object value) {
         if (this.values == null) {
             values = new HashMap<>();
         }
@@ -65,7 +65,7 @@ public class CountryNotConfiguredInStoreBuilder implements Builder<CountryNotCon
      *  <p>Countries configured for the Store.</p>
      */
 
-    public CountryNotConfiguredInStoreBuilder storeCountries(final String... storeCountries) {
+    public CountryNotConfiguredInStoreErrorBuilder storeCountries(final String... storeCountries) {
         this.storeCountries = new ArrayList<>(Arrays.asList(storeCountries));
         return this;
     }
@@ -74,7 +74,7 @@ public class CountryNotConfiguredInStoreBuilder implements Builder<CountryNotCon
      *  <p>Countries configured for the Store.</p>
      */
 
-    public CountryNotConfiguredInStoreBuilder storeCountries(final java.util.List<String> storeCountries) {
+    public CountryNotConfiguredInStoreErrorBuilder storeCountries(final java.util.List<String> storeCountries) {
         this.storeCountries = storeCountries;
         return this;
     }
@@ -83,7 +83,7 @@ public class CountryNotConfiguredInStoreBuilder implements Builder<CountryNotCon
      *  <p>Countries configured for the Store.</p>
      */
 
-    public CountryNotConfiguredInStoreBuilder plusStoreCountries(final String... storeCountries) {
+    public CountryNotConfiguredInStoreErrorBuilder plusStoreCountries(final String... storeCountries) {
         if (this.storeCountries == null) {
             this.storeCountries = new ArrayList<>();
         }
@@ -95,7 +95,7 @@ public class CountryNotConfiguredInStoreBuilder implements Builder<CountryNotCon
      *  <p>The country that is not configured for the Store but referenced on the Cart or Order.</p>
      */
 
-    public CountryNotConfiguredInStoreBuilder country(final String country) {
+    public CountryNotConfiguredInStoreErrorBuilder country(final String country) {
         this.country = country;
         return this;
     }
@@ -116,26 +116,26 @@ public class CountryNotConfiguredInStoreBuilder implements Builder<CountryNotCon
         return this.country;
     }
 
-    public CountryNotConfiguredInStore build() {
-        Objects.requireNonNull(message, CountryNotConfiguredInStore.class + ": message is missing");
-        Objects.requireNonNull(storeCountries, CountryNotConfiguredInStore.class + ": storeCountries is missing");
-        Objects.requireNonNull(country, CountryNotConfiguredInStore.class + ": country is missing");
-        return new CountryNotConfiguredInStoreImpl(message, values, storeCountries, country);
+    public CountryNotConfiguredInStoreError build() {
+        Objects.requireNonNull(message, CountryNotConfiguredInStoreError.class + ": message is missing");
+        Objects.requireNonNull(storeCountries, CountryNotConfiguredInStoreError.class + ": storeCountries is missing");
+        Objects.requireNonNull(country, CountryNotConfiguredInStoreError.class + ": country is missing");
+        return new CountryNotConfiguredInStoreErrorImpl(message, values, storeCountries, country);
     }
 
     /**
-     * builds CountryNotConfiguredInStore without checking for non null required values
+     * builds CountryNotConfiguredInStoreError without checking for non null required values
      */
-    public CountryNotConfiguredInStore buildUnchecked() {
-        return new CountryNotConfiguredInStoreImpl(message, values, storeCountries, country);
+    public CountryNotConfiguredInStoreError buildUnchecked() {
+        return new CountryNotConfiguredInStoreErrorImpl(message, values, storeCountries, country);
     }
 
-    public static CountryNotConfiguredInStoreBuilder of() {
-        return new CountryNotConfiguredInStoreBuilder();
+    public static CountryNotConfiguredInStoreErrorBuilder of() {
+        return new CountryNotConfiguredInStoreErrorBuilder();
     }
 
-    public static CountryNotConfiguredInStoreBuilder of(final CountryNotConfiguredInStore template) {
-        CountryNotConfiguredInStoreBuilder builder = new CountryNotConfiguredInStoreBuilder();
+    public static CountryNotConfiguredInStoreErrorBuilder of(final CountryNotConfiguredInStoreError template) {
+        CountryNotConfiguredInStoreErrorBuilder builder = new CountryNotConfiguredInStoreErrorBuilder();
         builder.message = template.getMessage();
         builder.values = template.values();
         builder.storeCountries = template.getStoreCountries();

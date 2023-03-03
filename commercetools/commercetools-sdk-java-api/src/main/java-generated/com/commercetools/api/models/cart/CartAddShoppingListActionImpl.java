@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * CartAddShoppingListAction
+ *  <p>Adds all LineItems of a ShoppingList to the Cart.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CartAddShoppingListActionImpl implements CartAddShoppingListAction, ModelBase {
@@ -24,18 +24,18 @@ public class CartAddShoppingListActionImpl implements CartAddShoppingListAction,
 
     private com.commercetools.api.models.shopping_list.ShoppingListResourceIdentifier shoppingList;
 
-    private com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel;
-
     private com.commercetools.api.models.channel.ChannelResourceIdentifier distributionChannel;
+
+    private com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel;
 
     @JsonCreator
     CartAddShoppingListActionImpl(
             @JsonProperty("shoppingList") final com.commercetools.api.models.shopping_list.ShoppingListResourceIdentifier shoppingList,
-            @JsonProperty("supplyChannel") final com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel,
-            @JsonProperty("distributionChannel") final com.commercetools.api.models.channel.ChannelResourceIdentifier distributionChannel) {
+            @JsonProperty("distributionChannel") final com.commercetools.api.models.channel.ChannelResourceIdentifier distributionChannel,
+            @JsonProperty("supplyChannel") final com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel) {
         this.shoppingList = shoppingList;
-        this.supplyChannel = supplyChannel;
         this.distributionChannel = distributionChannel;
+        this.supplyChannel = supplyChannel;
         this.action = ADD_SHOPPING_LIST;
     }
 
@@ -52,7 +52,7 @@ public class CartAddShoppingListActionImpl implements CartAddShoppingListAction,
     }
 
     /**
-     *  <p>ResourceIdentifier to a ShoppingList.</p>
+     *  <p>Shopping List that contains the Line Items to be added.</p>
      */
 
     public com.commercetools.api.models.shopping_list.ShoppingListResourceIdentifier getShoppingList() {
@@ -60,19 +60,19 @@ public class CartAddShoppingListActionImpl implements CartAddShoppingListAction,
     }
 
     /**
-     *  <p>ResourceIdentifier to a Channel.</p>
-     */
-
-    public com.commercetools.api.models.channel.ChannelResourceIdentifier getSupplyChannel() {
-        return this.supplyChannel;
-    }
-
-    /**
-     *  <p>ResourceIdentifier to a Channel.</p>
+     *  <p><code>distributionChannel</code> to set for all LineItems that are added to the Cart. The Channel must have the <code>ProductDistribution</code> ChannelRoleEnum.</p>
      */
 
     public com.commercetools.api.models.channel.ChannelResourceIdentifier getDistributionChannel() {
         return this.distributionChannel;
+    }
+
+    /**
+     *  <p><code>supplyChannel</code> to set for all LineItems that are added to the Cart. The Channel must have the <code>InventorySupply</code> ChannelRoleEnum.</p>
+     */
+
+    public com.commercetools.api.models.channel.ChannelResourceIdentifier getSupplyChannel() {
+        return this.supplyChannel;
     }
 
     public void setShoppingList(
@@ -80,13 +80,13 @@ public class CartAddShoppingListActionImpl implements CartAddShoppingListAction,
         this.shoppingList = shoppingList;
     }
 
-    public void setSupplyChannel(final com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel) {
-        this.supplyChannel = supplyChannel;
-    }
-
     public void setDistributionChannel(
             final com.commercetools.api.models.channel.ChannelResourceIdentifier distributionChannel) {
         this.distributionChannel = distributionChannel;
+    }
+
+    public void setSupplyChannel(final com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel) {
+        this.supplyChannel = supplyChannel;
     }
 
     @Override
@@ -101,8 +101,8 @@ public class CartAddShoppingListActionImpl implements CartAddShoppingListAction,
 
         return new EqualsBuilder().append(action, that.action)
                 .append(shoppingList, that.shoppingList)
-                .append(supplyChannel, that.supplyChannel)
                 .append(distributionChannel, that.distributionChannel)
+                .append(supplyChannel, that.supplyChannel)
                 .isEquals();
     }
 
@@ -110,8 +110,8 @@ public class CartAddShoppingListActionImpl implements CartAddShoppingListAction,
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(action)
                 .append(shoppingList)
-                .append(supplyChannel)
                 .append(distributionChannel)
+                .append(supplyChannel)
                 .toHashCode();
     }
 

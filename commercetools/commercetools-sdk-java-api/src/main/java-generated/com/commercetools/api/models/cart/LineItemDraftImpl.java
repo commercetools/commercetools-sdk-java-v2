@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * LineItemDraft
+ *  <p>For Product Variant identification, either the <code>productId</code> and <code>variantId</code>, or <code>sku</code> must be provided.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class LineItemDraftImpl implements LineItemDraft, ModelBase {
@@ -36,8 +36,6 @@ public class LineItemDraftImpl implements LineItemDraft, ModelBase {
 
     private com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate;
 
-    private com.commercetools.api.models.type.CustomFieldsDraft custom;
-
     private com.commercetools.api.models.common.Money externalPrice;
 
     private com.commercetools.api.models.cart.ExternalLineItemTotalPrice externalTotalPrice;
@@ -45,6 +43,8 @@ public class LineItemDraftImpl implements LineItemDraft, ModelBase {
     private com.commercetools.api.models.cart.InventoryMode inventoryMode;
 
     private com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails;
+
+    private com.commercetools.api.models.type.CustomFieldsDraft custom;
 
     @JsonCreator
     LineItemDraftImpl(@JsonProperty("productId") final String productId,
@@ -54,11 +54,11 @@ public class LineItemDraftImpl implements LineItemDraft, ModelBase {
             @JsonProperty("supplyChannel") final com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel,
             @JsonProperty("distributionChannel") final com.commercetools.api.models.channel.ChannelResourceIdentifier distributionChannel,
             @JsonProperty("externalTaxRate") final com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate,
-            @JsonProperty("custom") final com.commercetools.api.models.type.CustomFieldsDraft custom,
             @JsonProperty("externalPrice") final com.commercetools.api.models.common.Money externalPrice,
             @JsonProperty("externalTotalPrice") final com.commercetools.api.models.cart.ExternalLineItemTotalPrice externalTotalPrice,
             @JsonProperty("inventoryMode") final com.commercetools.api.models.cart.InventoryMode inventoryMode,
-            @JsonProperty("shippingDetails") final com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails) {
+            @JsonProperty("shippingDetails") final com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails,
+            @JsonProperty("custom") final com.commercetools.api.models.type.CustomFieldsDraft custom) {
         this.productId = productId;
         this.variantId = variantId;
         this.sku = sku;
@@ -67,18 +67,18 @@ public class LineItemDraftImpl implements LineItemDraft, ModelBase {
         this.supplyChannel = supplyChannel;
         this.distributionChannel = distributionChannel;
         this.externalTaxRate = externalTaxRate;
-        this.custom = custom;
         this.externalPrice = externalPrice;
         this.externalTotalPrice = externalTotalPrice;
         this.inventoryMode = inventoryMode;
         this.shippingDetails = shippingDetails;
+        this.custom = custom;
     }
 
     public LineItemDraftImpl() {
     }
 
     /**
-     *
+     *  <p><code>id</code> of the Product.</p>
      */
 
     public String getProductId() {
@@ -86,7 +86,7 @@ public class LineItemDraftImpl implements LineItemDraft, ModelBase {
     }
 
     /**
-     *
+     *  <p><code>id</code> of the ProductVariant in the Product. If not provided, the Master Variant is used.</p>
      */
 
     public Long getVariantId() {
@@ -94,7 +94,7 @@ public class LineItemDraftImpl implements LineItemDraft, ModelBase {
     }
 
     /**
-     *
+     *  <p><code>sku</code> of the ProductVariant.</p>
      */
 
     public String getSku() {
@@ -102,7 +102,7 @@ public class LineItemDraftImpl implements LineItemDraft, ModelBase {
     }
 
     /**
-     *  <p>The amount of a <code>LineItem</code>in the cart. Must be a positive integer.</p>
+     *  <p>Number of Product Variants to add to the Cart.</p>
      */
 
     public Long getQuantity() {
@@ -110,7 +110,8 @@ public class LineItemDraftImpl implements LineItemDraft, ModelBase {
     }
 
     /**
-     *  <p>When the line item was added to the cart. Optional for backwards compatibility reasons only.</p>
+     *  <p>Date and time (UTC) the Product Variant is added to the Cart. If not set, it defaults to the current date and time.</p>
+     *  <p>Optional for backwards compatibility reasons.</p>
      */
 
     public java.time.ZonedDateTime getAddedAt() {
@@ -118,7 +119,7 @@ public class LineItemDraftImpl implements LineItemDraft, ModelBase {
     }
 
     /**
-     *  <p>By providing supply channel information, you can unique identify inventory entries that should be reserved. The provided channel should have the InventorySupply role.</p>
+     *  <p>Used to identify Inventory entries that must be reserved. The referenced Channel must have the <code>InventorySupply</code> ChannelRoleEnum.</p>
      */
 
     public com.commercetools.api.models.channel.ChannelResourceIdentifier getSupplyChannel() {
@@ -126,7 +127,8 @@ public class LineItemDraftImpl implements LineItemDraft, ModelBase {
     }
 
     /**
-     *  <p>The channel is used to select a ProductPrice. The provided channel should have the ProductDistribution role.</p>
+     *  <p>Used to select a Product Price. The referenced Channel must have the <code>ProductDistribution</code> ChannelRoleEnum.</p>
+     *  <p>If the Cart is bound to a Store with <code>distributionChannels</code> set, the Channel must match one of the Store's distribution channels.</p>
      */
 
     public com.commercetools.api.models.channel.ChannelResourceIdentifier getDistributionChannel() {
@@ -134,7 +136,7 @@ public class LineItemDraftImpl implements LineItemDraft, ModelBase {
     }
 
     /**
-     *  <p>An external tax rate can be set if the cart has the <code>External</code> TaxMode.</p>
+     *  <p>External Tax Rate for the Line Item if the Cart has the <code>External</code> TaxMode.</p>
      */
 
     public com.commercetools.api.models.cart.ExternalTaxRateDraft getExternalTaxRate() {
@@ -142,15 +144,7 @@ public class LineItemDraftImpl implements LineItemDraft, ModelBase {
     }
 
     /**
-     *  <p>The custom fields.</p>
-     */
-
-    public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
-        return this.custom;
-    }
-
-    /**
-     *  <p>Sets the line item <code>price</code> to the given value and sets the line item <code>priceMode</code> to <code>ExternalPrice</code> LineItemPriceMode.</p>
+     *  <p>Sets the LineItem <code>price</code> value, and the <code>priceMode</code> to <code>ExternalPrice</code> LineItemPriceMode.</p>
      */
 
     public com.commercetools.api.models.common.Money getExternalPrice() {
@@ -158,7 +152,7 @@ public class LineItemDraftImpl implements LineItemDraft, ModelBase {
     }
 
     /**
-     *  <p>Sets the line item <code>price</code> and <code>totalPrice</code> to the given values and sets the line item <code>priceMode</code> to <code>ExternalTotal</code> LineItemPriceMode.</p>
+     *  <p>Sets the LineItem <code>price</code> and <code>totalPrice</code> values, and the <code>priceMode</code> to <code>ExternalTotal</code> LineItemPriceMode.</p>
      */
 
     public com.commercetools.api.models.cart.ExternalLineItemTotalPrice getExternalTotalPrice() {
@@ -166,7 +160,7 @@ public class LineItemDraftImpl implements LineItemDraft, ModelBase {
     }
 
     /**
-     *  <p>Inventory mode specific to the line item only, valid for the entire <code>quantity</code> of the line item. Set only if inventory mode should be different from the <code>inventoryMode</code> specified on the Cart.</p>
+     *  <p>Inventory mode specific to the Line Item only, and valid for the entire <code>quantity</code> of the Line Item. Set only if the inventory mode should be different from the <code>inventoryMode</code> specified on the Cart.</p>
      */
 
     public com.commercetools.api.models.cart.InventoryMode getInventoryMode() {
@@ -174,11 +168,19 @@ public class LineItemDraftImpl implements LineItemDraft, ModelBase {
     }
 
     /**
-     *  <p>Container for line item specific address(es).</p>
+     *  <p>Container for Line Item-specific addresses.</p>
      */
 
     public com.commercetools.api.models.cart.ItemShippingDetailsDraft getShippingDetails() {
         return this.shippingDetails;
+    }
+
+    /**
+     *  <p>Custom Fields for the Line Item.</p>
+     */
+
+    public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
+        return this.custom;
     }
 
     public void setProductId(final String productId) {
@@ -214,10 +216,6 @@ public class LineItemDraftImpl implements LineItemDraft, ModelBase {
         this.externalTaxRate = externalTaxRate;
     }
 
-    public void setCustom(final com.commercetools.api.models.type.CustomFieldsDraft custom) {
-        this.custom = custom;
-    }
-
     public void setExternalPrice(final com.commercetools.api.models.common.Money externalPrice) {
         this.externalPrice = externalPrice;
     }
@@ -233,6 +231,10 @@ public class LineItemDraftImpl implements LineItemDraft, ModelBase {
 
     public void setShippingDetails(final com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails) {
         this.shippingDetails = shippingDetails;
+    }
+
+    public void setCustom(final com.commercetools.api.models.type.CustomFieldsDraft custom) {
+        this.custom = custom;
     }
 
     @Override
@@ -253,11 +255,11 @@ public class LineItemDraftImpl implements LineItemDraft, ModelBase {
                 .append(supplyChannel, that.supplyChannel)
                 .append(distributionChannel, that.distributionChannel)
                 .append(externalTaxRate, that.externalTaxRate)
-                .append(custom, that.custom)
                 .append(externalPrice, that.externalPrice)
                 .append(externalTotalPrice, that.externalTotalPrice)
                 .append(inventoryMode, that.inventoryMode)
                 .append(shippingDetails, that.shippingDetails)
+                .append(custom, that.custom)
                 .isEquals();
     }
 
@@ -271,11 +273,11 @@ public class LineItemDraftImpl implements LineItemDraft, ModelBase {
                 .append(supplyChannel)
                 .append(distributionChannel)
                 .append(externalTaxRate)
-                .append(custom)
                 .append(externalPrice)
                 .append(externalTotalPrice)
                 .append(inventoryMode)
                 .append(shippingDetails)
+                .append(custom)
                 .toHashCode();
     }
 

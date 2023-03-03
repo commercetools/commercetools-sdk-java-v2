@@ -14,7 +14,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * CartSetDirectDiscountsAction
+ *  <p>Adds a DirectDiscount, but only if no DiscountCode has been added to the Cart. Either a Discount Code or a Direct Discount can exist on a Cart at the same time.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -33,7 +33,10 @@ public interface CartSetDirectDiscountsAction extends CartUpdateAction {
     String SET_DIRECT_DISCOUNTS = "setDirectDiscounts";
 
     /**
-     *
+     *  <ul>
+     *   <li>If set, all existing Direct Discounts are replaced. The discounts apply in the order they are added to the list.</li>
+     *   <li>If empty, all existing Direct Discounts are removed and all affected prices on the Cart or Order are recalculated.</li>
+     *  </ul>
      */
     @NotNull
     @Valid

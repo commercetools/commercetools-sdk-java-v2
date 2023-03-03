@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * MyCartAddItemShippingAddressAction
+ *  <p>Adds an address to a Cart when shipping to multiple addresses is desired.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class MyCartAddItemShippingAddressActionImpl implements MyCartAddItemShippingAddressAction, ModelBase {
@@ -44,7 +44,8 @@ public class MyCartAddItemShippingAddressActionImpl implements MyCartAddItemShip
     }
 
     /**
-     *  <p>Polymorphic base type that represents a postal address and contact details. Depending on the read or write action, it can be either Address or AddressDraft that only differ in the data type for the optional <code>custom</code> field.</p>
+     *  <p>Address to append to <code>itemShippingAddresses</code>.</p>
+     *  <p>The new address must have a key that is unique accross this Cart.</p>
      */
 
     public com.commercetools.api.models.common.BaseAddress getAddress() {

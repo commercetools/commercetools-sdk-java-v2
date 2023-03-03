@@ -27,7 +27,7 @@ public class MyCartSetDeleteDaysAfterLastModificationActionBuilder
     private Integer deleteDaysAfterLastModification;
 
     /**
-     *
+     *  <p>Value to set. If not provided, the default value for this field configured in Project settings is assigned.</p>
      */
 
     public MyCartSetDeleteDaysAfterLastModificationActionBuilder deleteDaysAfterLastModification(

@@ -51,7 +51,7 @@ public class CartSetLineItemCustomTypeActionImpl implements CartSetLineItemCusto
     }
 
     /**
-     *
+     *  <p><code>id</code> of the LineItem to update.</p>
      */
 
     public String getLineItemId() {
@@ -59,7 +59,7 @@ public class CartSetLineItemCustomTypeActionImpl implements CartSetLineItemCusto
     }
 
     /**
-     *  <p>Defines the Type that extends the LineItem with Custom Fields. If absent, any existing Type and Custom Fields are removed from the LineItem.</p>
+     *  <p>Defines the Type that extends the Line Item with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Line Item.</p>
      */
 
     public com.commercetools.api.models.type.TypeResourceIdentifier getType() {
@@ -67,7 +67,7 @@ public class CartSetLineItemCustomTypeActionImpl implements CartSetLineItemCusto
     }
 
     /**
-     *  <p>Sets the Custom Fields fields for the LineItem.</p>
+     *  <p>Sets the Custom Fields fields for the Line Item.</p>
      */
 
     public com.commercetools.api.models.type.FieldContainer getFields() {

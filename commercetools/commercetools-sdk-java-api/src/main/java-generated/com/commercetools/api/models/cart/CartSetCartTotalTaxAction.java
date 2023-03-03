@@ -15,7 +15,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * CartSetCartTotalTaxAction
+ *  <p>This update action results in the <code>taxedPrice</code> field being added to the Cart when the <code>ExternalAmount</code> TaxMode is used.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -34,7 +34,7 @@ public interface CartSetCartTotalTaxAction extends CartUpdateAction {
     String SET_CART_TOTAL_TAX = "setCartTotalTax";
 
     /**
-     *  <p>The total gross amount of the cart (totalNet + taxes).</p>
+     *  <p>The Cart's total gross price becoming the <code>totalGross</code> field (<code>totalNet</code> + taxes) on the Cart's <code>taxedPrice</code>.</p>
      */
     @NotNull
     @Valid
@@ -42,7 +42,7 @@ public interface CartSetCartTotalTaxAction extends CartUpdateAction {
     public Money getExternalTotalGross();
 
     /**
-     *
+     *  <p>Set if the <code>externalTotalGross</code> price is a sum of portions with different tax rates.</p>
      */
     @Valid
     @JsonProperty("externalTaxPortions")

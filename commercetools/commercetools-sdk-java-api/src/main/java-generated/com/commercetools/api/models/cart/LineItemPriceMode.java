@@ -10,23 +10,40 @@ import com.fasterxml.jackson.annotation.JsonValue;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * LineItemPriceMode
+ *  <p>This mode indicates how the price is set for the Line Item.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public interface LineItemPriceMode {
 
+    /**
+    	<p>The <a href="ctp:api:type:LineItemPriceSelection">price is selected</a> from the Product Variant.
+    	This is the default mode.</p>
+
+    */
     LineItemPriceMode PLATFORM = LineItemPriceModeEnum.PLATFORM;
+    /**
+    	<p>The Line Item price is set externally.
+    	Cart Discounts can apply to Line Items with this price mode.
+    	All update actions that change the quantity of a Line Item with this price mode require the <code>externalPrice</code> field to be given.</p>
 
-    LineItemPriceMode EXTERNAL_TOTAL = LineItemPriceModeEnum.EXTERNAL_TOTAL;
-
+    */
     LineItemPriceMode EXTERNAL_PRICE = LineItemPriceModeEnum.EXTERNAL_PRICE;
+    /**
+    	<p>The Line Item price with the total is set externally.
+    	Cart Discounts are deactivated for Line Items with this price mode.
+    	Although a Line Item with this price mode has both <code>price</code> and <code>totalPrice</code> set externally, only <code>totalPrice</code> is used to calculate the total price of a Cart.
+    	All update actions that change the quantity of a Line Item with this price mode can set the new price with the <code>externalTotal</code> field.
+    	If the <code>externalTotal</code> field is not given in the update actions, the external price is unset and the price mode is set to <code>Platform</code>.</p>
+
+    */
+    LineItemPriceMode EXTERNAL_TOTAL = LineItemPriceModeEnum.EXTERNAL_TOTAL;
 
     enum LineItemPriceModeEnum implements LineItemPriceMode {
         PLATFORM("Platform"),
 
-        EXTERNAL_TOTAL("ExternalTotal"),
+        EXTERNAL_PRICE("ExternalPrice"),
 
-        EXTERNAL_PRICE("ExternalPrice");
+        EXTERNAL_TOTAL("ExternalTotal");
         private final String jsonName;
 
         private LineItemPriceModeEnum(final String jsonName) {

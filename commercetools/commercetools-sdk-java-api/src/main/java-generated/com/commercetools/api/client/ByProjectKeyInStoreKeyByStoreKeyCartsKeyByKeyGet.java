@@ -18,7 +18,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Returns a cart by its key from a specific Store. If the cart exists in the project but does not have the store field, or the store field references a different store, this method returns a ResourceNotFound error. The cart may not contain up-to-date prices, discounts etc. If you want to ensure they're up-to-date, send an Update request with the Recalculate update action instead.</p>
+ *  <p>If the Cart exists in the Project but does not have the <code>store</code> field, or the <code>store</code> field references a different Store, a ResourceNotFound error is returned.</p>
+ *  <p>To ensure the Cart is up-to-date with current values (such as Prices and Discounts), use the Recalculate update action.</p>
  *
  * <hr>
  * <div class=code-example>

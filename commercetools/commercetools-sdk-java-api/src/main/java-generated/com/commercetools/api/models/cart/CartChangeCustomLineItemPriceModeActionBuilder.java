@@ -28,7 +28,7 @@ public class CartChangeCustomLineItemPriceModeActionBuilder
     private com.commercetools.api.models.cart.CustomLineItemPriceMode mode;
 
     /**
-     *  <p>ID of the Custom Line Item to be updated.</p>
+     *  <p><code>id</code> of the CustomLineItem to update.</p>
      */
 
     public CartChangeCustomLineItemPriceModeActionBuilder customLineItemId(final String customLineItemId) {
@@ -37,7 +37,7 @@ public class CartChangeCustomLineItemPriceModeActionBuilder
     }
 
     /**
-     *  <p>New value to set.</p>
+     *  <p>New value to set. Must not be empty.</p>
      */
 
     public CartChangeCustomLineItemPriceModeActionBuilder mode(

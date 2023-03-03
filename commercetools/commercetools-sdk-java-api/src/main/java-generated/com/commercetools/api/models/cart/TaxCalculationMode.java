@@ -10,13 +10,22 @@ import com.fasterxml.jackson.annotation.JsonValue;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * TaxCalculationMode
+ *  <p>Determines in which Tax calculation mode taxed prices are calculated.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public interface TaxCalculationMode {
 
-    TaxCalculationMode LINE_ITEM_LEVEL = TaxCalculationModeEnum.LINE_ITEM_LEVEL;
+    /**
+    	<p>Taxes are calculated <strong>after</strong> the unit price is multiplied by the quantity. This is the default mode.</p>
+    	<p>For example, <code>($1.08 * 3 = $3.24) * 1.19 = $3.8556 -&gt; $3.86 rounded</code></p>
 
+    */
+    TaxCalculationMode LINE_ITEM_LEVEL = TaxCalculationModeEnum.LINE_ITEM_LEVEL;
+    /**
+    	<p>Taxes are calculated on the unit price <strong>before</strong> multiplying by the quantity.</p>
+    	<p>For example, <code>($1.08 * 1.19 = $1.2852 -&gt; $1.29 rounded) * 3 = $3.87</code></p>
+
+    */
     TaxCalculationMode UNIT_PRICE_LEVEL = TaxCalculationModeEnum.UNIT_PRICE_LEVEL;
 
     enum TaxCalculationModeEnum implements TaxCalculationMode {

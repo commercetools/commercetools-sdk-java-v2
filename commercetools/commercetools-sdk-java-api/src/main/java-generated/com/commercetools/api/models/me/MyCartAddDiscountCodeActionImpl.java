@@ -15,7 +15,9 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * MyCartAddDiscountCodeAction
+ *  <p>Adds a DiscountCode to the Cart to activate the related CartDiscounts. Adding a Discount Code is only possible if no DirectDiscount has been applied to the Cart. Discount Codes can be added to frozen Carts, but their DiscountCodeState is then <code>DoesNotMatchCart</code>.</p>
+ *  <p>The maximum number of Discount Codes in a Cart is restricted by a limit.</p>
+ *  <p>Specific Error Code: MatchingPriceNotFound</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class MyCartAddDiscountCodeActionImpl implements MyCartAddDiscountCodeAction, ModelBase {
@@ -43,7 +45,7 @@ public class MyCartAddDiscountCodeActionImpl implements MyCartAddDiscountCodeAct
     }
 
     /**
-     *
+     *  <p><code>code</code> of a DiscountCode.</p>
      */
 
     public String getCode() {

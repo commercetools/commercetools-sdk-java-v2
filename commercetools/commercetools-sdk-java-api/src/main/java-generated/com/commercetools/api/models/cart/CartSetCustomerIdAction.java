@@ -11,7 +11,8 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * CartSetCustomerIdAction
+ *  <p>Setting the Cart's <code>customerId</code> can lead to updates on all its LineItem <code>prices</code>.</p>
+ *  <p>If the Customer with the specified <code>id</code> cannot be found, this update action returns a MissingTaxRateForCountry error.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -29,7 +30,7 @@ public interface CartSetCustomerIdAction extends CartUpdateAction {
     String SET_CUSTOMER_ID = "setCustomerId";
 
     /**
-     *  <p>If set, a customer with the given ID must exist in the project.</p>
+     *  <p><code>id</code> of an existing Customer. If empty, any value is removed.</p>
      */
 
     @JsonProperty("customerId")

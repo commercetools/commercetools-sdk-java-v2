@@ -4,7 +4,6 @@ package commercetools.cart;
 import static commercetools.cart.CartsFixtures.withUpdateableCart;
 import static commercetools.type.TypeFixtures.withType;
 
-import java.util.Arrays;
 import java.util.Collections;
 
 import com.commercetools.api.models.cart.*;
@@ -31,12 +30,10 @@ public class CartCustomFieldsTests {
 
                 Cart updatedCart = CommercetoolsTestUtils.getProjectApiRoot()
                         .carts()
-                        .update(cart,
-                            Arrays.asList(
-                                CartSetCustomTypeActionBuilder.of()
-                                        .type(TypeResourceIdentifierBuilder.of().id(type.getId()).build())
-                                        .build(),
-                                CartSetCustomFieldActionBuilder.of().name(FIELD_NAME).value(FIELD_VALUE).build()))
+                        .update(cart)
+                        .with(b -> b.plus(actionBuilder -> actionBuilder.setCustomTypeBuilder()
+                                .type(type.toResourceIdentifier())
+                                .fields(fieldsBuilder -> fieldsBuilder.addValue(FIELD_NAME, FIELD_VALUE))))
                         .executeBlocking()
                         .getBody();
 

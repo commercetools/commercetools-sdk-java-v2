@@ -15,36 +15,37 @@
 <span class="source-line-no">002</span><span id="line.2">package com.commercetools.docs.meta;</span>
 <span class="source-line-no">003</span><span id="line.3"></span>
 <span class="source-line-no">004</span><span id="line.4">/**</span>
-<span class="source-line-no">005</span><span id="line.5"> * &lt;h2 id=about-clients&gt;About the client&lt;/h2&gt;</span>
-<span class="source-line-no">006</span><span id="line.6"> *</span>
-<span class="source-line-no">007</span><span id="line.7"> * &lt;p&gt;The commercetools Composable Commerce client communicates asynchronously with the API via HTTPS</span>
-<span class="source-line-no">008</span><span id="line.8"> * and it takes care about authentication.&lt;/p&gt;</span>
-<span class="source-line-no">009</span><span id="line.9"> *</span>
-<span class="source-line-no">010</span><span id="line.10"> * &lt;p&gt;The client uses Java objects to formulate an HTTP request, performs the request and</span>
-<span class="source-line-no">011</span><span id="line.11"> * maps the JSON response into a Java object. Since the client is thread-safe you need</span>
-<span class="source-line-no">012</span><span id="line.12"> * only one client to perform multiple requests in parallel.&lt;/p&gt;</span>
-<span class="source-line-no">013</span><span id="line.13"> *</span>
-<span class="source-line-no">014</span><span id="line.14"> * &lt;h3 id=instantiation&gt;Instantiation&lt;/h3&gt;</span>
-<span class="source-line-no">015</span><span id="line.15"> *</span>
-<span class="source-line-no">016</span><span id="line.16"> * &lt;p&gt;Creating an instance for a project:&lt;/p&gt;</span>
-<span class="source-line-no">017</span><span id="line.17"> *</span>
-<span class="source-line-no">018</span><span id="line.18"> * {@include.example example.ExamplesTest#instance()}</span>
-<span class="source-line-no">019</span><span id="line.19"> *</span>
-<span class="source-line-no">020</span><span id="line.20"> * &lt;h3 id=perform-requests&gt;Performing requests&lt;/h3&gt;</span>
-<span class="source-line-no">021</span><span id="line.21"> *</span>
-<span class="source-line-no">022</span><span id="line.22"> * &lt;p&gt;A client works on the abstraction level of one HTTP request.</span>
-<span class="source-line-no">023</span><span id="line.23"> * With one client you can start multiple requests in parallel, it is thread-safe.&lt;/p&gt;</span>
-<span class="source-line-no">024</span><span id="line.24"> *</span>
-<span class="source-line-no">025</span><span id="line.25"> * &lt;h4&gt;Example&lt;/h4&gt;</span>
-<span class="source-line-no">026</span><span id="line.26"> *</span>
-<span class="source-line-no">027</span><span id="line.27"> * {@include.example example.ExamplesTest#performRequest()}</span>
-<span class="source-line-no">028</span><span id="line.28"> *</span>
-<span class="source-line-no">029</span><span id="line.29"> * &lt;h3 id=closing&gt;Closing the client&lt;/h3&gt;</span>
-<span class="source-line-no">030</span><span id="line.30"> *</span>
-<span class="source-line-no">031</span><span id="line.31"> * &lt;p&gt;The client holds resources like thread pools and IO connections, so call {@code close()} to release them.&lt;/p&gt;</span>
-<span class="source-line-no">032</span><span id="line.32"> */</span>
-<span class="source-line-no">033</span><span id="line.33">public class GettingStarted {</span>
-<span class="source-line-no">034</span><span id="line.34">}</span>
+<span class="source-line-no">005</span><span id="line.5"> * {@include.toc}</span>
+<span class="source-line-no">006</span><span id="line.6"> * &lt;h2 id=about-clients&gt;About the client&lt;/h2&gt;</span>
+<span class="source-line-no">007</span><span id="line.7"> *</span>
+<span class="source-line-no">008</span><span id="line.8"> * &lt;p&gt;The commercetools Composable Commerce client communicates asynchronously with the API via HTTPS</span>
+<span class="source-line-no">009</span><span id="line.9"> * and it takes care about authentication.&lt;/p&gt;</span>
+<span class="source-line-no">010</span><span id="line.10"> *</span>
+<span class="source-line-no">011</span><span id="line.11"> * &lt;p&gt;The client uses Java objects to formulate an HTTP request, performs the request and</span>
+<span class="source-line-no">012</span><span id="line.12"> * maps the JSON response into a Java object. Since the client is thread-safe you need</span>
+<span class="source-line-no">013</span><span id="line.13"> * only one client to perform multiple requests in parallel.&lt;/p&gt;</span>
+<span class="source-line-no">014</span><span id="line.14"> *</span>
+<span class="source-line-no">015</span><span id="line.15"> * &lt;h3 id=instantiation&gt;Instantiation&lt;/h3&gt;</span>
+<span class="source-line-no">016</span><span id="line.16"> *</span>
+<span class="source-line-no">017</span><span id="line.17"> * &lt;p&gt;Creating an instance for a project:&lt;/p&gt;</span>
+<span class="source-line-no">018</span><span id="line.18"> *</span>
+<span class="source-line-no">019</span><span id="line.19"> * {@include.example example.ExamplesTest#instance()}</span>
+<span class="source-line-no">020</span><span id="line.20"> *</span>
+<span class="source-line-no">021</span><span id="line.21"> * &lt;h3 id=perform-requests&gt;Performing requests&lt;/h3&gt;</span>
+<span class="source-line-no">022</span><span id="line.22"> *</span>
+<span class="source-line-no">023</span><span id="line.23"> * &lt;p&gt;A client works on the abstraction level of one HTTP request.</span>
+<span class="source-line-no">024</span><span id="line.24"> * With one client you can start multiple requests in parallel, it is thread-safe.&lt;/p&gt;</span>
+<span class="source-line-no">025</span><span id="line.25"> *</span>
+<span class="source-line-no">026</span><span id="line.26"> * &lt;h4&gt;Example&lt;/h4&gt;</span>
+<span class="source-line-no">027</span><span id="line.27"> *</span>
+<span class="source-line-no">028</span><span id="line.28"> * {@include.example example.ExamplesTest#performRequest()}</span>
+<span class="source-line-no">029</span><span id="line.29"> *</span>
+<span class="source-line-no">030</span><span id="line.30"> * &lt;h3 id=closing&gt;Closing the client&lt;/h3&gt;</span>
+<span class="source-line-no">031</span><span id="line.31"> *</span>
+<span class="source-line-no">032</span><span id="line.32"> * &lt;p&gt;The client holds resources like thread pools and IO connections, so call {@code close()} to release them.&lt;/p&gt;</span>
+<span class="source-line-no">033</span><span id="line.33"> */</span>
+<span class="source-line-no">034</span><span id="line.34">public class GettingStarted {</span>
+<span class="source-line-no">035</span><span id="line.35">}</span>
 
 
 

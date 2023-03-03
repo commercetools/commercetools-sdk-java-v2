@@ -77,13 +77,13 @@ loadScripts(document, 'script');</script>
 <hr>
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../src-html/com/commercetools/docs/meta/DataRepresentation.html#line.75">DataRepresentation</a></span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></span></div>
-<div class="block"><b>Table of content</b><ul><li>Representation</li><ul><li>Interfaces</li><ul><li>Polymorphic types</li><li>Builder</li></ul><ul><li>Object property</li><li>Array property</li><li>Polymorphic types</li><li>Implementation</li></ul></ul></ul>
- <h2>Representation</h2>
+<div class="block"><b>Table of content</b><ul><li><a href="#representation">Representation</a></li><ul><li><a href="#interfaces">Interfaces</a></li><ul><li><a href="#polymorphic-types">Polymorphic types</a></li><li><a href="#builder">Builder</a></li></ul><ul><li><a href="#object-builder">Object property</a></li><li><a href="#array-builder">Array property</a></li><li><a href="#polymorphic-builder">Polymorphic types</a></li><li><a href="#impl">Implementation</a></li></ul></ul></ul>
+ <h2 id="representation">Representation</h2>
 
  The SDK provides types for each of the types described in the documentation of the REST API. Each type is represented
  by an interface, an implementation class and a builder class.
 
- <h3>Interfaces</h3>
+ <h3 id="interfaces">Interfaces</h3>
 
  The interface class describes the JSON structure by providing Getters and Setters. The necessary annotations to de-/serialize
  the JSON is defined here.
@@ -108,7 +108,7 @@ AttributeLocalizedEnumValue color = attributes.asLocalizedEnum("color");
 
  The model interfaces define the inheritance/composition structure of all documented types.
 
- <h4>Polymorphic types</h4>
+ <h4 id="polymorphic-types">Polymorphic types</h4>
 
  Each polymorphic type interface provides methods for all it's subtype builders
  <div id="example-ExamplesTest-polymorphicInterface--%s" class=code-example><pre><code class='java'>CustomerGroupChangeNameAction action1 = CustomerGroupUpdateAction.changeNameBuilder().name("foo").build();
@@ -123,14 +123,14 @@ CustomerGroupSetKeyAction action2 = CustomerGroupUpdateAction.setKeyBuilder().ke
         .build();
 </code><p>See the <a href="https://github.com/commercetools/commercetools-sdk-java-v2/blob/master/commercetools/internal-docs/src/test/java/example/ExamplesTest.java" target="_blank">test code</a>.</pre></div>
 
- <h3>Builder</h3>
+ <h3 id="builder">Builder</h3>
 
  For each type a builder class exists. Each property can be set using the method with the property name at the builder instance. E.g.:
  <div id="example-ExamplesTest-builderProperty--%s" class=code-example><pre><code class='java'>CustomerDraft customerDraft = CustomerDraft.builder().email("john.doe@example.com").build();
 </code><p>See the <a href="https://github.com/commercetools/commercetools-sdk-java-v2/blob/master/commercetools/internal-docs/src/test/java/example/ExamplesTest.java" target="_blank">test code</a>.</pre></div>
 
 
- <h4>Object property</h4>
+ <h4 id="object-builder">Object property</h4>
 
  If the property is an object type a method with a lambda function parameter is usable. The function is called with
  a builder instance of the properties type.
@@ -140,7 +140,7 @@ CustomerGroupSetKeyAction action2 = CustomerGroupUpdateAction.setKeyBuilder().ke
         .build();
 </code><p>See the <a href="https://github.com/commercetools/commercetools-sdk-java-v2/blob/master/commercetools/internal-docs/src/test/java/example/ExamplesTest.java" target="_blank">test code</a>.</pre></div>
 
- <h4>Array property</h4>
+ <h4 id="array-builder">Array property</h4>
 
  Array properties have additional methods for adding addtional elements and build element instances.
  <div id="example-ExamplesTest-builderArray--%s" class=code-example><pre><code class='java'>CustomerDraft customerDraft = CustomerDraft.builder()
@@ -169,7 +169,7 @@ CustomerDraft customerDraft4 = CustomerDraft.builder()
         .build();
 </code><p>See the <a href="https://github.com/commercetools/commercetools-sdk-java-v2/blob/master/commercetools/internal-docs/src/test/java/example/ExamplesTest.java" target="_blank">test code</a>.</pre></div>
 
- <h4>Polymorphic types</h4>
+ <h4 id="polymorphic-builder">Polymorphic types</h4>
 
  Each polymorphic type builder provides methods for all it's subtype builders
  <div id="example-ExamplesTest-polymorphicBuilder--%s" class=code-example><pre><code class='java'>CustomerGroupChangeNameAction action1 = CustomerGroupUpdateActionBuilder.of()
@@ -189,7 +189,7 @@ CustomerGroupSetKeyAction action2 = CustomerGroupUpdateActionBuilder.of().setKey
 </code><p>See the <a href="https://github.com/commercetools/commercetools-sdk-java-v2/blob/master/commercetools/internal-docs/src/test/java/example/ExamplesTest.java" target="_blank">test code</a>.</pre></div>
 
 
- <h3>Implementation</h3>
+ <h3 id="impl">Implementation</h3>
 
  Each type has an implementation class (POJO). The class implements all properties of all interfaces and it's getters and setters.
  Also the implementation class implements an equals and hashcode method. The constructor is defined package private as

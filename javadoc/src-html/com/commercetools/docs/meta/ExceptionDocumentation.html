@@ -18,7 +18,7 @@
 <span class="source-line-no">005</span><span id="line.5"> * {@include.toc}</span>
 <span class="source-line-no">006</span><span id="line.6"> * The exception hierarchy documentation.</span>
 <span class="source-line-no">007</span><span id="line.7"> *</span>
-<span class="source-line-no">008</span><span id="line.8"> * &lt;h2&gt;Exceptions&lt;/h2&gt;</span>
+<span class="source-line-no">008</span><span id="line.8"> * &lt;h2 id="exceptions"&gt;Exceptions&lt;/h2&gt;</span>
 <span class="source-line-no">009</span><span id="line.9"> *</span>
 <span class="source-line-no">010</span><span id="line.10"> * The SDK makes use of exceptions from the Java JDK, such as {@link java.lang.IllegalArgumentException}, and provides own exceptions which all inherit from {@link io.vrap.rmf.base.client.error.BaseException}.</span>
 <span class="source-line-no">011</span><span id="line.11"> *</span>
@@ -33,13 +33,13 @@
 <span class="source-line-no">020</span><span id="line.20"> *</span>
 <span class="source-line-no">021</span><span id="line.21"> * &lt;img src="{@docRoot}/io/vrap/rmf/base/client/error/exceptionhierarchy.svg" alt="Exception hierarchy" width="95%"&gt;</span>
 <span class="source-line-no">022</span><span id="line.22"> *</span>
-<span class="source-line-no">023</span><span id="line.23"> * &lt;h3&gt;Errors&lt;/h3&gt;</span>
+<span class="source-line-no">023</span><span id="line.23"> * &lt;h3 id="errors"&gt;Errors&lt;/h3&gt;</span>
 <span class="source-line-no">024</span><span id="line.24"> *</span>
 <span class="source-line-no">025</span><span id="line.25"> * If a command cannot be performed due to unfulfilled preconditions</span>
 <span class="source-line-no">026</span><span id="line.26"> * the API can return one error response with multiple errors (&lt;a href="https://docs.commercetools.com/api/errors"&gt;listing of error codes&lt;/a&gt;).</span>
 <span class="source-line-no">027</span><span id="line.27"> * The SDK will then put a {@link io.vrap.rmf.base.client.error.BadRequestException} into a {@link java.util.concurrent.CompletionStage}.</span>
 <span class="source-line-no">028</span><span id="line.28"> *</span>
-<span class="source-line-no">029</span><span id="line.29"> * &lt;h3&gt;Custom HttpExceptionFactory&lt;/h3&gt;</span>
+<span class="source-line-no">029</span><span id="line.29"> * &lt;h3 id="custom"&gt;Custom HttpExceptionFactory&lt;/h3&gt;</span>
 <span class="source-line-no">030</span><span id="line.30"> *</span>
 <span class="source-line-no">031</span><span id="line.31"> * &lt;p&gt;In case a response with a status code of 400 or higher are treated as errors and raise exceptions. These exceptions</span>
 <span class="source-line-no">032</span><span id="line.32"> * are created by the {@link io.vrap.rmf.base.client.error.DefaultHttpExceptionFactory}. In case you want to override the handling you have to implement</span>

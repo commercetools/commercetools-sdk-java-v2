@@ -77,10 +77,10 @@ loadScripts(document, 'script');</script>
 <hr>
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../src-html/com/commercetools/docs/meta/ExceptionDocumentation.html#line.37">ExceptionDocumentation</a></span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></span></div>
-<div class="block"><b>Table of content</b><ul><li>Exceptions</li><ul><li>Errors</li><li>Custom HttpExceptionFactory</li></ul></ul>
+<div class="block"><b>Table of content</b><ul><li><a href="#exceptions">Exceptions</a></li><ul><li><a href="#errors">Errors</a></li><li><a href="#custom">Custom HttpExceptionFactory</a></li></ul></ul>
  The exception hierarchy documentation.
 
- <h2>Exceptions</h2>
+ <h2 id="exceptions">Exceptions</h2>
 
  The SDK makes use of exceptions from the Java JDK, such as <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html" title="class or interface in java.lang" class="external-link"><code>IllegalArgumentException</code></a>, and provides own exceptions which all inherit from <a href="../../../../io/vrap/rmf/base/client/error/BaseException.html" title="class in io.vrap.rmf.base.client.error"><code>BaseException</code></a>.
 
@@ -95,13 +95,13 @@ loadScripts(document, 'script');</script>
 
  <img src="../../../../io/vrap/rmf/base/client/error/exceptionhierarchy.svg" alt="Exception hierarchy" width="95%">
 
- <h3>Errors</h3>
+ <h3 id="errors">Errors</h3>
 
  If a command cannot be performed due to unfulfilled preconditions
  the API can return one error response with multiple errors (<a href="https://docs.commercetools.com/api/errors">listing of error codes</a>).
  The SDK will then put a <a href="../../../../io/vrap/rmf/base/client/error/BadRequestException.html" title="class in io.vrap.rmf.base.client.error"><code>BadRequestException</code></a> into a <a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletionStage.html" title="class or interface in java.util.concurrent" class="external-link"><code>CompletionStage</code></a>.
 
- <h3>Custom HttpExceptionFactory</h3>
+ <h3 id="custom">Custom HttpExceptionFactory</h3>
 
  <p>In case a response with a status code of 400 or higher are treated as errors and raise exceptions. These exceptions
  are created by the <a href="../../../../io/vrap/rmf/base/client/error/DefaultHttpExceptionFactory.html" title="class in io.vrap.rmf.base.client.error"><code>DefaultHttpExceptionFactory</code></a>. In case you want to override the handling you have to implement

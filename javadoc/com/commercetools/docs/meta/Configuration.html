@@ -77,10 +77,10 @@ loadScripts(document, 'script');</script>
 <hr>
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../src-html/com/commercetools/docs/meta/Configuration.html#line.58">Configuration</a></span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></span></div>
-<div class="block"><b>Table of content</b><ul><li><a href="#configuration">Configuration</a></li><ul><li>ApiRoot and ProjectApiRoot</li><li>Custom HTTP client</li><li>Error handling</li><ul><li>Unwrap exceptions</li><li>Not found</li></ul></ul>
+<div class="block"><b>Table of content</b><ul><li><a href="#configuration">Configuration</a></li><ul><li><a href="#api-root">ApiRoot and ProjectApiRoot</a></li><li><a href="#custom-client">Custom HTTP client</a></li><li><a href="#error-handling">Error handling</a></li><ul><li><a href="#unwrap-exceptions">Unwrap exceptions</a></li><li><a href="#not-found">Not found</a></li></ul></ul></ul>
  <h2 id=configuration>Configuration</h2>
 
- <h3>ApiRoot and ProjectApiRoot</h3>
+ <h3 id="api-root">ApiRoot and ProjectApiRoot</h3>
 
  <p>The SDK modules provide an ApiRootBuilder to create an <a href="../../../../io/vrap/rmf/base/client/ApiHttpClient.html" title="interface in io.vrap.rmf.base.client"><code>ApiHttpClient</code></a>. To ease the development
  the builder can also create a module specific ApiRoot or ProjectApiRoot. E.g.: <a href="../../api/client/ApiRoot.html" title="class in com.commercetools.api.client"><code>ApiRoot</code></a>
@@ -127,7 +127,7 @@ ProjectApiRoot projectApiRoot = ImportApiRootBuilder.of()
         .build("my-projectkey");
 </code><p>See the <a href="https://github.com/commercetools/commercetools-sdk-java-v2/blob/master/commercetools/internal-docs/src/test/java/example/ImportExamplesTest.java" target="_blank">test code</a>.</pre></div>
 
- <h3>Custom HTTP client</h3>
+ <h3 id="custom-client">Custom HTTP client</h3>
 
  <p>The builder can be instantiated with a custom <a href="../../../../io/vrap/rmf/base/client/VrapHttpClient.html" title="interface in io.vrap.rmf.base.client"><code>VrapHttpClient</code></a> instance. For example a
  specific instance of a client</p>
@@ -153,11 +153,11 @@ ProjectApiRoot projectApiRoot = ApiRootBuilder.of(client)
         .build("my-project-key");
 </code><p>See the <a href="https://github.com/commercetools/commercetools-sdk-java-v2/blob/master/commercetools/internal-docs/src/test/java/example/ExamplesTest.java" target="_blank">test code</a>.</pre></div>
 
- <h3>Error handling</h3>
+ <h3 id="error-handling">Error handling</h3>
 
  <p>The client builder adds methods to allow the customization of the error handling</p>
 
- <h4>Unwrap exceptions</h4>
+ <h4 id="unwrap-exceptions">Unwrap exceptions</h4>
 
  <p>By default the <a href="../../../../io/vrap/rmf/base/client/http/ErrorMiddleware.html" title="interface in io.vrap.rmf.base.client.http"><code>ErrorMiddleware</code></a> is configured to throw a CompletionException. The
  <a href="../../../../io/vrap/rmf/base/client/ClientBuilder.html#withErrorMiddleware(io.vrap.rmf.base.client.http.ErrorMiddleware.ExceptionMode)"><code>ClientBuilder.withErrorMiddleware(ErrorMiddleware.ExceptionMode)</code></a> method allows to configure
@@ -170,7 +170,7 @@ ProjectApiRoot projectApiRoot = ApiRootBuilder.of(client)
         .build();
 </code><p>See the <a href="https://github.com/commercetools/commercetools-sdk-java-v2/blob/master/commercetools/internal-docs/src/test/java/example/ExamplesTest.java" target="_blank">test code</a>.</pre></div>
 
- <h4>Not found</h4>
+ <h4 id="not-found">Not found</h4>
 
  <p>The <a href="../../../../io/vrap/rmf/base/client/http/ErrorMiddleware.html" title="interface in io.vrap.rmf.base.client.http"><code>ErrorMiddleware</code></a> throws for every response with a status code 400 or higher an exception. This can be unwanted
  behaviour for a <a href="../../../../io/vrap/rmf/base/client/error/NotFoundException.html" title="class in io.vrap.rmf.base.client.error"><code>NotFoundException</code></a>. The method <a href="../../../../io/vrap/rmf/base/client/ClientBuilder.html#addNotFoundExceptionMiddleware()"><code>ClientBuilder.addNotFoundExceptionMiddleware()</code></a>

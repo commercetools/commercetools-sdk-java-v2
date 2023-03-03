@@ -11,15 +11,21 @@
             "lineItems": [],
             "cartState": "Active",
             "totalPrice": {
+                "type": "centPrecision",
                 "currencyCode": "USD",
+                "fractionDigits": 2,
                 "centAmount": 0
             },
             "taxedPrice": {
                 "totalNet": {
+                    "type": "centPrecision",
                     "currencyCode": "USD",
+                    "fractionDigits": 2,
                     "centAmount": 0
                 },
                 "totalGross": {
+                    "type": "centPrecision",
+                    "fractionDigits": 2,
                     "currencyCode": "USD",
                     "centAmount": 0
                 },

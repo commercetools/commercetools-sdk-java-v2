@@ -82,7 +82,7 @@ dependencies {
 
 ### Migration Guidelines
 To migrate from the 1.x to the 2.x, there is a guideline below:
-* [Migration guidelines from v1 to v2](https://commercetools.github.io/commercetools-sdk-java-v2/javadoc/index.html)
+* [Migration guidelines from v1 to v2](https://commercetools.github.io/commercetools-sdk-java-v2/javadoc/com/commercetools/docs/meta/Migration.html)
 
 ## Documentation
 

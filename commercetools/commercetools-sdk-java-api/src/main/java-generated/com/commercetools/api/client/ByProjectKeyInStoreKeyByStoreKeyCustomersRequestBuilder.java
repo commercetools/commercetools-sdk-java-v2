@@ -25,7 +25,6 @@ public class ByProjectKeyInStoreKeyByStoreKeyCustomersRequestBuilder
         return new ByProjectKeyInStoreKeyByStoreKeyCustomersGet(apiHttpClient, projectKey, storeKey);
     }
 
-    @Override
     public ByProjectKeyInStoreKeyByStoreKeyCustomersPost post(
             com.commercetools.api.models.customer.CustomerDraft customerDraft) {
         return new ByProjectKeyInStoreKeyByStoreKeyCustomersPost(apiHttpClient, projectKey, storeKey, customerDraft);

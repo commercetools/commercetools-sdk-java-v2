@@ -34,7 +34,7 @@ public interface LineItemDraft extends com.commercetools.api.models.Customizable
         io.vrap.rmf.base.client.Draft<LineItemDraft> {
 
     /**
-     *  <p><code>id</code> of the Product.</p>
+     *  <p><code>id</code> of a published Product.</p>
      */
 
     @JsonProperty("productId")
@@ -55,7 +55,7 @@ public interface LineItemDraft extends com.commercetools.api.models.Customizable
     public String getSku();
 
     /**
-     *  <p>Number of Product Variants to add to the Cart.</p>
+     *  <p>Quantity of the Product Variant to add to the Cart.</p>
      */
 
     @JsonProperty("quantity")
@@ -70,13 +70,6 @@ public interface LineItemDraft extends com.commercetools.api.models.Customizable
     public ZonedDateTime getAddedAt();
 
     /**
-     *  <p>Used to identify Inventory entries that must be reserved. The referenced Channel must have the <code>InventorySupply</code> ChannelRoleEnum.</p>
-     */
-    @Valid
-    @JsonProperty("supplyChannel")
-    public ChannelResourceIdentifier getSupplyChannel();
-
-    /**
      *  <p>Used to select a Product Price. The referenced Channel must have the <code>ProductDistribution</code> ChannelRoleEnum.</p>
      *  <p>If the Cart is bound to a Store with <code>distributionChannels</code> set, the Channel must match one of the Store's distribution channels.</p>
      */
@@ -85,11 +78,11 @@ public interface LineItemDraft extends com.commercetools.api.models.Customizable
     public ChannelResourceIdentifier getDistributionChannel();
 
     /**
-     *  <p>External Tax Rate for the Line Item if the Cart has the <code>External</code> TaxMode.</p>
+     *  <p>Used to identify Inventory entries that must be reserved. The referenced Channel must have the <code>InventorySupply</code> ChannelRoleEnum.</p>
      */
     @Valid
-    @JsonProperty("externalTaxRate")
-    public ExternalTaxRateDraft getExternalTaxRate();
+    @JsonProperty("supplyChannel")
+    public ChannelResourceIdentifier getSupplyChannel();
 
     /**
      *  <p>Sets the LineItem <code>price</code> value, and the <code>priceMode</code> to <code>ExternalPrice</code> LineItemPriceMode.</p>
@@ -104,6 +97,13 @@ public interface LineItemDraft extends com.commercetools.api.models.Customizable
     @Valid
     @JsonProperty("externalTotalPrice")
     public ExternalLineItemTotalPrice getExternalTotalPrice();
+
+    /**
+     *  <p>External Tax Rate for the Line Item if the Cart has the <code>External</code> TaxMode.</p>
+     */
+    @Valid
+    @JsonProperty("externalTaxRate")
+    public ExternalTaxRateDraft getExternalTaxRate();
 
     /**
      *  <p>Inventory mode specific to the Line Item only, and valid for the entire <code>quantity</code> of the Line Item. Set only if the inventory mode should be different from the <code>inventoryMode</code> specified on the Cart.</p>
@@ -136,15 +136,15 @@ public interface LineItemDraft extends com.commercetools.api.models.Customizable
 
     public void setAddedAt(final ZonedDateTime addedAt);
 
-    public void setSupplyChannel(final ChannelResourceIdentifier supplyChannel);
-
     public void setDistributionChannel(final ChannelResourceIdentifier distributionChannel);
 
-    public void setExternalTaxRate(final ExternalTaxRateDraft externalTaxRate);
+    public void setSupplyChannel(final ChannelResourceIdentifier supplyChannel);
 
     public void setExternalPrice(final Money externalPrice);
 
     public void setExternalTotalPrice(final ExternalLineItemTotalPrice externalTotalPrice);
+
+    public void setExternalTaxRate(final ExternalTaxRateDraft externalTaxRate);
 
     public void setInventoryMode(final InventoryMode inventoryMode);
 
@@ -163,11 +163,11 @@ public interface LineItemDraft extends com.commercetools.api.models.Customizable
         instance.setSku(template.getSku());
         instance.setQuantity(template.getQuantity());
         instance.setAddedAt(template.getAddedAt());
-        instance.setSupplyChannel(template.getSupplyChannel());
         instance.setDistributionChannel(template.getDistributionChannel());
-        instance.setExternalTaxRate(template.getExternalTaxRate());
+        instance.setSupplyChannel(template.getSupplyChannel());
         instance.setExternalPrice(template.getExternalPrice());
         instance.setExternalTotalPrice(template.getExternalTotalPrice());
+        instance.setExternalTaxRate(template.getExternalTaxRate());
         instance.setInventoryMode(template.getInventoryMode());
         instance.setShippingDetails(template.getShippingDetails());
         instance.setCustom(template.getCustom());

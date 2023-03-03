@@ -32,6 +32,8 @@ public class CartAddLineItemActionImpl implements CartAddLineItemAction, ModelBa
 
     private Long quantity;
 
+    private java.time.ZonedDateTime addedAt;
+
     private com.commercetools.api.models.channel.ChannelResourceIdentifier distributionChannel;
 
     private com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel;
@@ -42,6 +44,8 @@ public class CartAddLineItemActionImpl implements CartAddLineItemAction, ModelBa
 
     private com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate;
 
+    private com.commercetools.api.models.cart.InventoryMode inventoryMode;
+
     private com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails;
 
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
@@ -50,22 +54,26 @@ public class CartAddLineItemActionImpl implements CartAddLineItemAction, ModelBa
     CartAddLineItemActionImpl(@JsonProperty("productId") final String productId,
             @JsonProperty("variantId") final Long variantId, @JsonProperty("sku") final String sku,
             @JsonProperty("quantity") final Long quantity,
+            @JsonProperty("addedAt") final java.time.ZonedDateTime addedAt,
             @JsonProperty("distributionChannel") final com.commercetools.api.models.channel.ChannelResourceIdentifier distributionChannel,
             @JsonProperty("supplyChannel") final com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel,
             @JsonProperty("externalPrice") final com.commercetools.api.models.common.Money externalPrice,
             @JsonProperty("externalTotalPrice") final com.commercetools.api.models.cart.ExternalLineItemTotalPrice externalTotalPrice,
             @JsonProperty("externalTaxRate") final com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate,
+            @JsonProperty("inventoryMode") final com.commercetools.api.models.cart.InventoryMode inventoryMode,
             @JsonProperty("shippingDetails") final com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails,
             @JsonProperty("custom") final com.commercetools.api.models.type.CustomFieldsDraft custom) {
         this.productId = productId;
         this.variantId = variantId;
         this.sku = sku;
         this.quantity = quantity;
+        this.addedAt = addedAt;
         this.distributionChannel = distributionChannel;
         this.supplyChannel = supplyChannel;
         this.externalPrice = externalPrice;
         this.externalTotalPrice = externalTotalPrice;
         this.externalTaxRate = externalTaxRate;
+        this.inventoryMode = inventoryMode;
         this.shippingDetails = shippingDetails;
         this.custom = custom;
         this.action = ADD_LINE_ITEM;
@@ -84,7 +92,7 @@ public class CartAddLineItemActionImpl implements CartAddLineItemAction, ModelBa
     }
 
     /**
-     *  <p>ID of an existing Product.</p>
+     *  <p><code>id</code> of the published Product.</p>
      *  <p>Either the <code>productId</code> and <code>variantId</code>, or <code>sku</code> must be provided.</p>
      */
 
@@ -93,8 +101,7 @@ public class CartAddLineItemActionImpl implements CartAddLineItemAction, ModelBa
     }
 
     /**
-     *  <p>ID of an existing ProductVariant in the Product.</p>
-     *  <p>If not given, the Master Variant is used.</p>
+     *  <p><code>id</code> of the ProductVariant in the Product. If not provided, the Master Variant is used.</p>
      *  <p>Either the <code>productId</code> and <code>variantId</code>, or <code>sku</code> must be provided.</p>
      */
 
@@ -103,7 +110,7 @@ public class CartAddLineItemActionImpl implements CartAddLineItemAction, ModelBa
     }
 
     /**
-     *  <p>SKU of an existing ProductVariant.</p>
+     *  <p>SKU of the ProductVariant.</p>
      *  <p>Either the <code>productId</code> and <code>variantId</code>, or <code>sku</code> must be provided.</p>
      */
 
@@ -112,11 +119,20 @@ public class CartAddLineItemActionImpl implements CartAddLineItemAction, ModelBa
     }
 
     /**
-     *  <p>Number of Line Items to add to the Cart.</p>
+     *  <p>Quantity of the Product Variant to add to the Cart.</p>
      */
 
     public Long getQuantity() {
         return this.quantity;
+    }
+
+    /**
+     *  <p>Date and time (UTC) the Product Variant is added to the Cart. If not set, it defaults to the current date and time.</p>
+     *  <p>Optional for backwards compatibility reasons.</p>
+     */
+
+    public java.time.ZonedDateTime getAddedAt() {
+        return this.addedAt;
     }
 
     /**
@@ -160,6 +176,14 @@ public class CartAddLineItemActionImpl implements CartAddLineItemAction, ModelBa
     }
 
     /**
+     *  <p>Inventory mode specific to the Line Item only, and valid for the entire <code>quantity</code> of the Line Item. Set only if the inventory mode should be different from the <code>inventoryMode</code> specified on the Cart.</p>
+     */
+
+    public com.commercetools.api.models.cart.InventoryMode getInventoryMode() {
+        return this.inventoryMode;
+    }
+
+    /**
      *  <p>Container for Line Item-specific addresses.</p>
      */
 
@@ -191,6 +215,10 @@ public class CartAddLineItemActionImpl implements CartAddLineItemAction, ModelBa
         this.quantity = quantity;
     }
 
+    public void setAddedAt(final java.time.ZonedDateTime addedAt) {
+        this.addedAt = addedAt;
+    }
+
     public void setDistributionChannel(
             final com.commercetools.api.models.channel.ChannelResourceIdentifier distributionChannel) {
         this.distributionChannel = distributionChannel;
@@ -211,6 +239,10 @@ public class CartAddLineItemActionImpl implements CartAddLineItemAction, ModelBa
 
     public void setExternalTaxRate(final com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate) {
         this.externalTaxRate = externalTaxRate;
+    }
+
+    public void setInventoryMode(final com.commercetools.api.models.cart.InventoryMode inventoryMode) {
+        this.inventoryMode = inventoryMode;
     }
 
     public void setShippingDetails(final com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails) {
@@ -236,11 +268,13 @@ public class CartAddLineItemActionImpl implements CartAddLineItemAction, ModelBa
                 .append(variantId, that.variantId)
                 .append(sku, that.sku)
                 .append(quantity, that.quantity)
+                .append(addedAt, that.addedAt)
                 .append(distributionChannel, that.distributionChannel)
                 .append(supplyChannel, that.supplyChannel)
                 .append(externalPrice, that.externalPrice)
                 .append(externalTotalPrice, that.externalTotalPrice)
                 .append(externalTaxRate, that.externalTaxRate)
+                .append(inventoryMode, that.inventoryMode)
                 .append(shippingDetails, that.shippingDetails)
                 .append(custom, that.custom)
                 .isEquals();
@@ -253,11 +287,13 @@ public class CartAddLineItemActionImpl implements CartAddLineItemAction, ModelBa
                 .append(variantId)
                 .append(sku)
                 .append(quantity)
+                .append(addedAt)
                 .append(distributionChannel)
                 .append(supplyChannel)
                 .append(externalPrice)
                 .append(externalTotalPrice)
                 .append(externalTaxRate)
+                .append(inventoryMode)
                 .append(shippingDetails)
                 .append(custom)
                 .toHashCode();

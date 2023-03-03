@@ -8,11 +8,8 @@ import java.util.function.Function;
 
 import javax.validation.Valid;
 
-import com.commercetools.api.models.cart.ExternalLineItemTotalPrice;
-import com.commercetools.api.models.cart.ExternalTaxRateDraft;
 import com.commercetools.api.models.cart.ItemShippingDetailsDraft;
 import com.commercetools.api.models.channel.ChannelResourceIdentifier;
-import com.commercetools.api.models.common.Money;
 import com.commercetools.api.models.type.CustomFieldsDraft;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
@@ -73,6 +70,14 @@ public interface MyCartAddLineItemAction
     public Long getQuantity();
 
     /**
+     *  <p>Date and time (UTC) the Line Item was added to the Cart. If not set, it defaults to the current date and time.</p>
+     *  <p>Optional for backwards compatibility reasons.</p>
+     */
+
+    @JsonProperty("addedAt")
+    public ZonedDateTime getAddedAt();
+
+    /**
      *  <p>Used to select a Product Price. The Channel must have the <code>ProductDistribution</code> ChannelRoleEnum. If the Cart is bound to a Store with <code>distributionChannels</code> set, the Channel must match one of the Store's distribution channels.</p>
      */
     @Valid
@@ -87,40 +92,11 @@ public interface MyCartAddLineItemAction
     public ChannelResourceIdentifier getSupplyChannel();
 
     /**
-     *  <p>Sets the LineItem <code>price</code> value, and the <code>priceMode</code> to <code>ExternalPrice</code> LineItemPriceMode.</p>
-     */
-    @Valid
-    @JsonProperty("externalPrice")
-    public Money getExternalPrice();
-
-    /**
-     *  <p>Sets the LineItem <code>price</code> and <code>totalPrice</code> values, and the <code>priceMode</code> to <code>ExternalTotal</code> LineItemPriceMode.</p>
-     */
-    @Valid
-    @JsonProperty("externalTotalPrice")
-    public ExternalLineItemTotalPrice getExternalTotalPrice();
-
-    /**
-     *  <p>External Tax Rate for the Line Item, if the Cart has the <code>External</code> TaxMode.</p>
-     */
-    @Valid
-    @JsonProperty("externalTaxRate")
-    public ExternalTaxRateDraft getExternalTaxRate();
-
-    /**
      *  <p>Container for Line Item-specific addresses.</p>
      */
     @Valid
     @JsonProperty("shippingDetails")
     public ItemShippingDetailsDraft getShippingDetails();
-
-    /**
-     *  <p>Date and time (UTC) the Line Item was added to the Cart. If not set, it defaults to the current date and time.</p>
-     *  <p>Optional for backwards compatibility reasons.</p>
-     */
-
-    @JsonProperty("addedAt")
-    public ZonedDateTime getAddedAt();
 
     /**
      *  <p>Custom Fields for the Line Item.</p>
@@ -137,19 +113,13 @@ public interface MyCartAddLineItemAction
 
     public void setQuantity(final Long quantity);
 
+    public void setAddedAt(final ZonedDateTime addedAt);
+
     public void setDistributionChannel(final ChannelResourceIdentifier distributionChannel);
 
     public void setSupplyChannel(final ChannelResourceIdentifier supplyChannel);
 
-    public void setExternalPrice(final Money externalPrice);
-
-    public void setExternalTotalPrice(final ExternalLineItemTotalPrice externalTotalPrice);
-
-    public void setExternalTaxRate(final ExternalTaxRateDraft externalTaxRate);
-
     public void setShippingDetails(final ItemShippingDetailsDraft shippingDetails);
-
-    public void setAddedAt(final ZonedDateTime addedAt);
 
     public void setCustom(final CustomFieldsDraft custom);
 
@@ -163,13 +133,10 @@ public interface MyCartAddLineItemAction
         instance.setVariantId(template.getVariantId());
         instance.setSku(template.getSku());
         instance.setQuantity(template.getQuantity());
+        instance.setAddedAt(template.getAddedAt());
         instance.setDistributionChannel(template.getDistributionChannel());
         instance.setSupplyChannel(template.getSupplyChannel());
-        instance.setExternalPrice(template.getExternalPrice());
-        instance.setExternalTotalPrice(template.getExternalTotalPrice());
-        instance.setExternalTaxRate(template.getExternalTaxRate());
         instance.setShippingDetails(template.getShippingDetails());
-        instance.setAddedAt(template.getAddedAt());
         instance.setCustom(template.getCustom());
         return instance;
     }

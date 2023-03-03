@@ -36,25 +36,16 @@ public class MyCartAddLineItemActionBuilder implements Builder<MyCartAddLineItem
     private Long quantity;
 
     @Nullable
+    private java.time.ZonedDateTime addedAt;
+
+    @Nullable
     private com.commercetools.api.models.channel.ChannelResourceIdentifier distributionChannel;
 
     @Nullable
     private com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel;
 
     @Nullable
-    private com.commercetools.api.models.common.Money externalPrice;
-
-    @Nullable
-    private com.commercetools.api.models.cart.ExternalLineItemTotalPrice externalTotalPrice;
-
-    @Nullable
-    private com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate;
-
-    @Nullable
     private com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails;
-
-    @Nullable
-    private java.time.ZonedDateTime addedAt;
 
     @Nullable
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
@@ -96,6 +87,16 @@ public class MyCartAddLineItemActionBuilder implements Builder<MyCartAddLineItem
 
     public MyCartAddLineItemActionBuilder quantity(@Nullable final Long quantity) {
         this.quantity = quantity;
+        return this;
+    }
+
+    /**
+     *  <p>Date and time (UTC) the Line Item was added to the Cart. If not set, it defaults to the current date and time.</p>
+     *  <p>Optional for backwards compatibility reasons.</p>
+     */
+
+    public MyCartAddLineItemActionBuilder addedAt(@Nullable final java.time.ZonedDateTime addedAt) {
+        this.addedAt = addedAt;
         return this;
     }
 
@@ -143,69 +144,6 @@ public class MyCartAddLineItemActionBuilder implements Builder<MyCartAddLineItem
     }
 
     /**
-     *  <p>Sets the LineItem <code>price</code> value, and the <code>priceMode</code> to <code>ExternalPrice</code> LineItemPriceMode.</p>
-     */
-
-    public MyCartAddLineItemActionBuilder externalPrice(
-            Function<com.commercetools.api.models.common.MoneyBuilder, com.commercetools.api.models.common.MoneyBuilder> builder) {
-        this.externalPrice = builder.apply(com.commercetools.api.models.common.MoneyBuilder.of()).build();
-        return this;
-    }
-
-    /**
-     *  <p>Sets the LineItem <code>price</code> value, and the <code>priceMode</code> to <code>ExternalPrice</code> LineItemPriceMode.</p>
-     */
-
-    public MyCartAddLineItemActionBuilder externalPrice(
-            @Nullable final com.commercetools.api.models.common.Money externalPrice) {
-        this.externalPrice = externalPrice;
-        return this;
-    }
-
-    /**
-     *  <p>Sets the LineItem <code>price</code> and <code>totalPrice</code> values, and the <code>priceMode</code> to <code>ExternalTotal</code> LineItemPriceMode.</p>
-     */
-
-    public MyCartAddLineItemActionBuilder externalTotalPrice(
-            Function<com.commercetools.api.models.cart.ExternalLineItemTotalPriceBuilder, com.commercetools.api.models.cart.ExternalLineItemTotalPriceBuilder> builder) {
-        this.externalTotalPrice = builder
-                .apply(com.commercetools.api.models.cart.ExternalLineItemTotalPriceBuilder.of())
-                .build();
-        return this;
-    }
-
-    /**
-     *  <p>Sets the LineItem <code>price</code> and <code>totalPrice</code> values, and the <code>priceMode</code> to <code>ExternalTotal</code> LineItemPriceMode.</p>
-     */
-
-    public MyCartAddLineItemActionBuilder externalTotalPrice(
-            @Nullable final com.commercetools.api.models.cart.ExternalLineItemTotalPrice externalTotalPrice) {
-        this.externalTotalPrice = externalTotalPrice;
-        return this;
-    }
-
-    /**
-     *  <p>External Tax Rate for the Line Item, if the Cart has the <code>External</code> TaxMode.</p>
-     */
-
-    public MyCartAddLineItemActionBuilder externalTaxRate(
-            Function<com.commercetools.api.models.cart.ExternalTaxRateDraftBuilder, com.commercetools.api.models.cart.ExternalTaxRateDraftBuilder> builder) {
-        this.externalTaxRate = builder.apply(com.commercetools.api.models.cart.ExternalTaxRateDraftBuilder.of())
-                .build();
-        return this;
-    }
-
-    /**
-     *  <p>External Tax Rate for the Line Item, if the Cart has the <code>External</code> TaxMode.</p>
-     */
-
-    public MyCartAddLineItemActionBuilder externalTaxRate(
-            @Nullable final com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate) {
-        this.externalTaxRate = externalTaxRate;
-        return this;
-    }
-
-    /**
      *  <p>Container for Line Item-specific addresses.</p>
      */
 
@@ -223,16 +161,6 @@ public class MyCartAddLineItemActionBuilder implements Builder<MyCartAddLineItem
     public MyCartAddLineItemActionBuilder shippingDetails(
             @Nullable final com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails) {
         this.shippingDetails = shippingDetails;
-        return this;
-    }
-
-    /**
-     *  <p>Date and time (UTC) the Line Item was added to the Cart. If not set, it defaults to the current date and time.</p>
-     *  <p>Optional for backwards compatibility reasons.</p>
-     */
-
-    public MyCartAddLineItemActionBuilder addedAt(@Nullable final java.time.ZonedDateTime addedAt) {
-        this.addedAt = addedAt;
         return this;
     }
 
@@ -277,6 +205,11 @@ public class MyCartAddLineItemActionBuilder implements Builder<MyCartAddLineItem
     }
 
     @Nullable
+    public java.time.ZonedDateTime getAddedAt() {
+        return this.addedAt;
+    }
+
+    @Nullable
     public com.commercetools.api.models.channel.ChannelResourceIdentifier getDistributionChannel() {
         return this.distributionChannel;
     }
@@ -287,28 +220,8 @@ public class MyCartAddLineItemActionBuilder implements Builder<MyCartAddLineItem
     }
 
     @Nullable
-    public com.commercetools.api.models.common.Money getExternalPrice() {
-        return this.externalPrice;
-    }
-
-    @Nullable
-    public com.commercetools.api.models.cart.ExternalLineItemTotalPrice getExternalTotalPrice() {
-        return this.externalTotalPrice;
-    }
-
-    @Nullable
-    public com.commercetools.api.models.cart.ExternalTaxRateDraft getExternalTaxRate() {
-        return this.externalTaxRate;
-    }
-
-    @Nullable
     public com.commercetools.api.models.cart.ItemShippingDetailsDraft getShippingDetails() {
         return this.shippingDetails;
-    }
-
-    @Nullable
-    public java.time.ZonedDateTime getAddedAt() {
-        return this.addedAt;
     }
 
     @Nullable
@@ -317,16 +230,16 @@ public class MyCartAddLineItemActionBuilder implements Builder<MyCartAddLineItem
     }
 
     public MyCartAddLineItemAction build() {
-        return new MyCartAddLineItemActionImpl(productId, variantId, sku, quantity, distributionChannel, supplyChannel,
-            externalPrice, externalTotalPrice, externalTaxRate, shippingDetails, addedAt, custom);
+        return new MyCartAddLineItemActionImpl(productId, variantId, sku, quantity, addedAt, distributionChannel,
+            supplyChannel, shippingDetails, custom);
     }
 
     /**
      * builds MyCartAddLineItemAction without checking for non null required values
      */
     public MyCartAddLineItemAction buildUnchecked() {
-        return new MyCartAddLineItemActionImpl(productId, variantId, sku, quantity, distributionChannel, supplyChannel,
-            externalPrice, externalTotalPrice, externalTaxRate, shippingDetails, addedAt, custom);
+        return new MyCartAddLineItemActionImpl(productId, variantId, sku, quantity, addedAt, distributionChannel,
+            supplyChannel, shippingDetails, custom);
     }
 
     public static MyCartAddLineItemActionBuilder of() {
@@ -339,13 +252,10 @@ public class MyCartAddLineItemActionBuilder implements Builder<MyCartAddLineItem
         builder.variantId = template.getVariantId();
         builder.sku = template.getSku();
         builder.quantity = template.getQuantity();
+        builder.addedAt = template.getAddedAt();
         builder.distributionChannel = template.getDistributionChannel();
         builder.supplyChannel = template.getSupplyChannel();
-        builder.externalPrice = template.getExternalPrice();
-        builder.externalTotalPrice = template.getExternalTotalPrice();
-        builder.externalTaxRate = template.getExternalTaxRate();
         builder.shippingDetails = template.getShippingDetails();
-        builder.addedAt = template.getAddedAt();
         builder.custom = template.getCustom();
         return builder;
     }

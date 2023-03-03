@@ -2,6 +2,7 @@
 package com.commercetools.api.models.cart;
 
 import java.time.*;
+import java.time.ZonedDateTime;
 import java.util.*;
 import java.util.function.Function;
 
@@ -37,7 +38,7 @@ public interface CartAddLineItemAction
     String ADD_LINE_ITEM = "addLineItem";
 
     /**
-     *  <p>ID of an existing Product.</p>
+     *  <p><code>id</code> of the published Product.</p>
      *  <p>Either the <code>productId</code> and <code>variantId</code>, or <code>sku</code> must be provided.</p>
      */
 
@@ -45,8 +46,7 @@ public interface CartAddLineItemAction
     public String getProductId();
 
     /**
-     *  <p>ID of an existing ProductVariant in the Product.</p>
-     *  <p>If not given, the Master Variant is used.</p>
+     *  <p><code>id</code> of the ProductVariant in the Product. If not provided, the Master Variant is used.</p>
      *  <p>Either the <code>productId</code> and <code>variantId</code>, or <code>sku</code> must be provided.</p>
      */
 
@@ -54,7 +54,7 @@ public interface CartAddLineItemAction
     public Long getVariantId();
 
     /**
-     *  <p>SKU of an existing ProductVariant.</p>
+     *  <p>SKU of the ProductVariant.</p>
      *  <p>Either the <code>productId</code> and <code>variantId</code>, or <code>sku</code> must be provided.</p>
      */
 
@@ -62,11 +62,19 @@ public interface CartAddLineItemAction
     public String getSku();
 
     /**
-     *  <p>Number of Line Items to add to the Cart.</p>
+     *  <p>Quantity of the Product Variant to add to the Cart.</p>
      */
 
     @JsonProperty("quantity")
     public Long getQuantity();
+
+    /**
+     *  <p>Date and time (UTC) the Product Variant is added to the Cart. If not set, it defaults to the current date and time.</p>
+     *  <p>Optional for backwards compatibility reasons.</p>
+     */
+
+    @JsonProperty("addedAt")
+    public ZonedDateTime getAddedAt();
 
     /**
      *  <p>Used to select a Product Price. The Channel must have the <code>ProductDistribution</code> ChannelRoleEnum. If the Cart is bound to a Store with <code>distributionChannels</code> set, the Channel must match one of the Store's distribution channels.</p>
@@ -104,6 +112,13 @@ public interface CartAddLineItemAction
     public ExternalTaxRateDraft getExternalTaxRate();
 
     /**
+     *  <p>Inventory mode specific to the Line Item only, and valid for the entire <code>quantity</code> of the Line Item. Set only if the inventory mode should be different from the <code>inventoryMode</code> specified on the Cart.</p>
+     */
+
+    @JsonProperty("inventoryMode")
+    public InventoryMode getInventoryMode();
+
+    /**
      *  <p>Container for Line Item-specific addresses.</p>
      */
     @Valid
@@ -125,6 +140,8 @@ public interface CartAddLineItemAction
 
     public void setQuantity(final Long quantity);
 
+    public void setAddedAt(final ZonedDateTime addedAt);
+
     public void setDistributionChannel(final ChannelResourceIdentifier distributionChannel);
 
     public void setSupplyChannel(final ChannelResourceIdentifier supplyChannel);
@@ -134,6 +151,8 @@ public interface CartAddLineItemAction
     public void setExternalTotalPrice(final ExternalLineItemTotalPrice externalTotalPrice);
 
     public void setExternalTaxRate(final ExternalTaxRateDraft externalTaxRate);
+
+    public void setInventoryMode(final InventoryMode inventoryMode);
 
     public void setShippingDetails(final ItemShippingDetailsDraft shippingDetails);
 
@@ -149,11 +168,13 @@ public interface CartAddLineItemAction
         instance.setVariantId(template.getVariantId());
         instance.setSku(template.getSku());
         instance.setQuantity(template.getQuantity());
+        instance.setAddedAt(template.getAddedAt());
         instance.setDistributionChannel(template.getDistributionChannel());
         instance.setSupplyChannel(template.getSupplyChannel());
         instance.setExternalPrice(template.getExternalPrice());
         instance.setExternalTotalPrice(template.getExternalTotalPrice());
         instance.setExternalTaxRate(template.getExternalTaxRate());
+        instance.setInventoryMode(template.getInventoryMode());
         instance.setShippingDetails(template.getShippingDetails());
         instance.setCustom(template.getCustom());
         return instance;

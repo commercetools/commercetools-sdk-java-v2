@@ -32,19 +32,13 @@ public class MyCartAddLineItemActionImpl implements MyCartAddLineItemAction, Mod
 
     private Long quantity;
 
+    private java.time.ZonedDateTime addedAt;
+
     private com.commercetools.api.models.channel.ChannelResourceIdentifier distributionChannel;
 
     private com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel;
 
-    private com.commercetools.api.models.common.Money externalPrice;
-
-    private com.commercetools.api.models.cart.ExternalLineItemTotalPrice externalTotalPrice;
-
-    private com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate;
-
     private com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails;
-
-    private java.time.ZonedDateTime addedAt;
 
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
 
@@ -52,25 +46,19 @@ public class MyCartAddLineItemActionImpl implements MyCartAddLineItemAction, Mod
     MyCartAddLineItemActionImpl(@JsonProperty("productId") final String productId,
             @JsonProperty("variantId") final Long variantId, @JsonProperty("sku") final String sku,
             @JsonProperty("quantity") final Long quantity,
+            @JsonProperty("addedAt") final java.time.ZonedDateTime addedAt,
             @JsonProperty("distributionChannel") final com.commercetools.api.models.channel.ChannelResourceIdentifier distributionChannel,
             @JsonProperty("supplyChannel") final com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel,
-            @JsonProperty("externalPrice") final com.commercetools.api.models.common.Money externalPrice,
-            @JsonProperty("externalTotalPrice") final com.commercetools.api.models.cart.ExternalLineItemTotalPrice externalTotalPrice,
-            @JsonProperty("externalTaxRate") final com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate,
             @JsonProperty("shippingDetails") final com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails,
-            @JsonProperty("addedAt") final java.time.ZonedDateTime addedAt,
             @JsonProperty("custom") final com.commercetools.api.models.type.CustomFieldsDraft custom) {
         this.productId = productId;
         this.variantId = variantId;
         this.sku = sku;
         this.quantity = quantity;
+        this.addedAt = addedAt;
         this.distributionChannel = distributionChannel;
         this.supplyChannel = supplyChannel;
-        this.externalPrice = externalPrice;
-        this.externalTotalPrice = externalTotalPrice;
-        this.externalTaxRate = externalTaxRate;
         this.shippingDetails = shippingDetails;
-        this.addedAt = addedAt;
         this.custom = custom;
         this.action = ADD_LINE_ITEM;
     }
@@ -124,6 +112,15 @@ public class MyCartAddLineItemActionImpl implements MyCartAddLineItemAction, Mod
     }
 
     /**
+     *  <p>Date and time (UTC) the Line Item was added to the Cart. If not set, it defaults to the current date and time.</p>
+     *  <p>Optional for backwards compatibility reasons.</p>
+     */
+
+    public java.time.ZonedDateTime getAddedAt() {
+        return this.addedAt;
+    }
+
+    /**
      *  <p>Used to select a Product Price. The Channel must have the <code>ProductDistribution</code> ChannelRoleEnum. If the Cart is bound to a Store with <code>distributionChannels</code> set, the Channel must match one of the Store's distribution channels.</p>
      */
 
@@ -140,44 +137,11 @@ public class MyCartAddLineItemActionImpl implements MyCartAddLineItemAction, Mod
     }
 
     /**
-     *  <p>Sets the LineItem <code>price</code> value, and the <code>priceMode</code> to <code>ExternalPrice</code> LineItemPriceMode.</p>
-     */
-
-    public com.commercetools.api.models.common.Money getExternalPrice() {
-        return this.externalPrice;
-    }
-
-    /**
-     *  <p>Sets the LineItem <code>price</code> and <code>totalPrice</code> values, and the <code>priceMode</code> to <code>ExternalTotal</code> LineItemPriceMode.</p>
-     */
-
-    public com.commercetools.api.models.cart.ExternalLineItemTotalPrice getExternalTotalPrice() {
-        return this.externalTotalPrice;
-    }
-
-    /**
-     *  <p>External Tax Rate for the Line Item, if the Cart has the <code>External</code> TaxMode.</p>
-     */
-
-    public com.commercetools.api.models.cart.ExternalTaxRateDraft getExternalTaxRate() {
-        return this.externalTaxRate;
-    }
-
-    /**
      *  <p>Container for Line Item-specific addresses.</p>
      */
 
     public com.commercetools.api.models.cart.ItemShippingDetailsDraft getShippingDetails() {
         return this.shippingDetails;
-    }
-
-    /**
-     *  <p>Date and time (UTC) the Line Item was added to the Cart. If not set, it defaults to the current date and time.</p>
-     *  <p>Optional for backwards compatibility reasons.</p>
-     */
-
-    public java.time.ZonedDateTime getAddedAt() {
-        return this.addedAt;
     }
 
     /**
@@ -204,6 +168,10 @@ public class MyCartAddLineItemActionImpl implements MyCartAddLineItemAction, Mod
         this.quantity = quantity;
     }
 
+    public void setAddedAt(final java.time.ZonedDateTime addedAt) {
+        this.addedAt = addedAt;
+    }
+
     public void setDistributionChannel(
             final com.commercetools.api.models.channel.ChannelResourceIdentifier distributionChannel) {
         this.distributionChannel = distributionChannel;
@@ -213,25 +181,8 @@ public class MyCartAddLineItemActionImpl implements MyCartAddLineItemAction, Mod
         this.supplyChannel = supplyChannel;
     }
 
-    public void setExternalPrice(final com.commercetools.api.models.common.Money externalPrice) {
-        this.externalPrice = externalPrice;
-    }
-
-    public void setExternalTotalPrice(
-            final com.commercetools.api.models.cart.ExternalLineItemTotalPrice externalTotalPrice) {
-        this.externalTotalPrice = externalTotalPrice;
-    }
-
-    public void setExternalTaxRate(final com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate) {
-        this.externalTaxRate = externalTaxRate;
-    }
-
     public void setShippingDetails(final com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails) {
         this.shippingDetails = shippingDetails;
-    }
-
-    public void setAddedAt(final java.time.ZonedDateTime addedAt) {
-        this.addedAt = addedAt;
     }
 
     public void setCustom(final com.commercetools.api.models.type.CustomFieldsDraft custom) {
@@ -253,13 +204,10 @@ public class MyCartAddLineItemActionImpl implements MyCartAddLineItemAction, Mod
                 .append(variantId, that.variantId)
                 .append(sku, that.sku)
                 .append(quantity, that.quantity)
+                .append(addedAt, that.addedAt)
                 .append(distributionChannel, that.distributionChannel)
                 .append(supplyChannel, that.supplyChannel)
-                .append(externalPrice, that.externalPrice)
-                .append(externalTotalPrice, that.externalTotalPrice)
-                .append(externalTaxRate, that.externalTaxRate)
                 .append(shippingDetails, that.shippingDetails)
-                .append(addedAt, that.addedAt)
                 .append(custom, that.custom)
                 .isEquals();
     }
@@ -271,13 +219,10 @@ public class MyCartAddLineItemActionImpl implements MyCartAddLineItemAction, Mod
                 .append(variantId)
                 .append(sku)
                 .append(quantity)
+                .append(addedAt)
                 .append(distributionChannel)
                 .append(supplyChannel)
-                .append(externalPrice)
-                .append(externalTotalPrice)
-                .append(externalTaxRate)
                 .append(shippingDetails)
-                .append(addedAt)
                 .append(custom)
                 .toHashCode();
     }

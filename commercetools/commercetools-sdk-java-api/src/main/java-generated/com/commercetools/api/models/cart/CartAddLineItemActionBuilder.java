@@ -36,6 +36,9 @@ public class CartAddLineItemActionBuilder implements Builder<CartAddLineItemActi
     private Long quantity;
 
     @Nullable
+    private java.time.ZonedDateTime addedAt;
+
+    @Nullable
     private com.commercetools.api.models.channel.ChannelResourceIdentifier distributionChannel;
 
     @Nullable
@@ -51,13 +54,16 @@ public class CartAddLineItemActionBuilder implements Builder<CartAddLineItemActi
     private com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate;
 
     @Nullable
+    private com.commercetools.api.models.cart.InventoryMode inventoryMode;
+
+    @Nullable
     private com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails;
 
     @Nullable
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
 
     /**
-     *  <p>ID of an existing Product.</p>
+     *  <p><code>id</code> of the published Product.</p>
      *  <p>Either the <code>productId</code> and <code>variantId</code>, or <code>sku</code> must be provided.</p>
      */
 
@@ -67,8 +73,7 @@ public class CartAddLineItemActionBuilder implements Builder<CartAddLineItemActi
     }
 
     /**
-     *  <p>ID of an existing ProductVariant in the Product.</p>
-     *  <p>If not given, the Master Variant is used.</p>
+     *  <p><code>id</code> of the ProductVariant in the Product. If not provided, the Master Variant is used.</p>
      *  <p>Either the <code>productId</code> and <code>variantId</code>, or <code>sku</code> must be provided.</p>
      */
 
@@ -78,7 +83,7 @@ public class CartAddLineItemActionBuilder implements Builder<CartAddLineItemActi
     }
 
     /**
-     *  <p>SKU of an existing ProductVariant.</p>
+     *  <p>SKU of the ProductVariant.</p>
      *  <p>Either the <code>productId</code> and <code>variantId</code>, or <code>sku</code> must be provided.</p>
      */
 
@@ -88,11 +93,21 @@ public class CartAddLineItemActionBuilder implements Builder<CartAddLineItemActi
     }
 
     /**
-     *  <p>Number of Line Items to add to the Cart.</p>
+     *  <p>Quantity of the Product Variant to add to the Cart.</p>
      */
 
     public CartAddLineItemActionBuilder quantity(@Nullable final Long quantity) {
         this.quantity = quantity;
+        return this;
+    }
+
+    /**
+     *  <p>Date and time (UTC) the Product Variant is added to the Cart. If not set, it defaults to the current date and time.</p>
+     *  <p>Optional for backwards compatibility reasons.</p>
+     */
+
+    public CartAddLineItemActionBuilder addedAt(@Nullable final java.time.ZonedDateTime addedAt) {
+        this.addedAt = addedAt;
         return this;
     }
 
@@ -203,6 +218,16 @@ public class CartAddLineItemActionBuilder implements Builder<CartAddLineItemActi
     }
 
     /**
+     *  <p>Inventory mode specific to the Line Item only, and valid for the entire <code>quantity</code> of the Line Item. Set only if the inventory mode should be different from the <code>inventoryMode</code> specified on the Cart.</p>
+     */
+
+    public CartAddLineItemActionBuilder inventoryMode(
+            @Nullable final com.commercetools.api.models.cart.InventoryMode inventoryMode) {
+        this.inventoryMode = inventoryMode;
+        return this;
+    }
+
+    /**
      *  <p>Container for Line Item-specific addresses.</p>
      */
 
@@ -264,6 +289,11 @@ public class CartAddLineItemActionBuilder implements Builder<CartAddLineItemActi
     }
 
     @Nullable
+    public java.time.ZonedDateTime getAddedAt() {
+        return this.addedAt;
+    }
+
+    @Nullable
     public com.commercetools.api.models.channel.ChannelResourceIdentifier getDistributionChannel() {
         return this.distributionChannel;
     }
@@ -289,6 +319,11 @@ public class CartAddLineItemActionBuilder implements Builder<CartAddLineItemActi
     }
 
     @Nullable
+    public com.commercetools.api.models.cart.InventoryMode getInventoryMode() {
+        return this.inventoryMode;
+    }
+
+    @Nullable
     public com.commercetools.api.models.cart.ItemShippingDetailsDraft getShippingDetails() {
         return this.shippingDetails;
     }
@@ -299,16 +334,16 @@ public class CartAddLineItemActionBuilder implements Builder<CartAddLineItemActi
     }
 
     public CartAddLineItemAction build() {
-        return new CartAddLineItemActionImpl(productId, variantId, sku, quantity, distributionChannel, supplyChannel,
-            externalPrice, externalTotalPrice, externalTaxRate, shippingDetails, custom);
+        return new CartAddLineItemActionImpl(productId, variantId, sku, quantity, addedAt, distributionChannel,
+            supplyChannel, externalPrice, externalTotalPrice, externalTaxRate, inventoryMode, shippingDetails, custom);
     }
 
     /**
      * builds CartAddLineItemAction without checking for non null required values
      */
     public CartAddLineItemAction buildUnchecked() {
-        return new CartAddLineItemActionImpl(productId, variantId, sku, quantity, distributionChannel, supplyChannel,
-            externalPrice, externalTotalPrice, externalTaxRate, shippingDetails, custom);
+        return new CartAddLineItemActionImpl(productId, variantId, sku, quantity, addedAt, distributionChannel,
+            supplyChannel, externalPrice, externalTotalPrice, externalTaxRate, inventoryMode, shippingDetails, custom);
     }
 
     public static CartAddLineItemActionBuilder of() {
@@ -321,11 +356,13 @@ public class CartAddLineItemActionBuilder implements Builder<CartAddLineItemActi
         builder.variantId = template.getVariantId();
         builder.sku = template.getSku();
         builder.quantity = template.getQuantity();
+        builder.addedAt = template.getAddedAt();
         builder.distributionChannel = template.getDistributionChannel();
         builder.supplyChannel = template.getSupplyChannel();
         builder.externalPrice = template.getExternalPrice();
         builder.externalTotalPrice = template.getExternalTotalPrice();
         builder.externalTaxRate = template.getExternalTaxRate();
+        builder.inventoryMode = template.getInventoryMode();
         builder.shippingDetails = template.getShippingDetails();
         builder.custom = template.getCustom();
         return builder;

@@ -30,15 +30,15 @@ public class LineItemDraftImpl implements LineItemDraft, ModelBase {
 
     private java.time.ZonedDateTime addedAt;
 
-    private com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel;
-
     private com.commercetools.api.models.channel.ChannelResourceIdentifier distributionChannel;
 
-    private com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate;
+    private com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel;
 
     private com.commercetools.api.models.common.Money externalPrice;
 
     private com.commercetools.api.models.cart.ExternalLineItemTotalPrice externalTotalPrice;
+
+    private com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate;
 
     private com.commercetools.api.models.cart.InventoryMode inventoryMode;
 
@@ -51,11 +51,11 @@ public class LineItemDraftImpl implements LineItemDraft, ModelBase {
             @JsonProperty("variantId") final Long variantId, @JsonProperty("sku") final String sku,
             @JsonProperty("quantity") final Long quantity,
             @JsonProperty("addedAt") final java.time.ZonedDateTime addedAt,
-            @JsonProperty("supplyChannel") final com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel,
             @JsonProperty("distributionChannel") final com.commercetools.api.models.channel.ChannelResourceIdentifier distributionChannel,
-            @JsonProperty("externalTaxRate") final com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate,
+            @JsonProperty("supplyChannel") final com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel,
             @JsonProperty("externalPrice") final com.commercetools.api.models.common.Money externalPrice,
             @JsonProperty("externalTotalPrice") final com.commercetools.api.models.cart.ExternalLineItemTotalPrice externalTotalPrice,
+            @JsonProperty("externalTaxRate") final com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate,
             @JsonProperty("inventoryMode") final com.commercetools.api.models.cart.InventoryMode inventoryMode,
             @JsonProperty("shippingDetails") final com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails,
             @JsonProperty("custom") final com.commercetools.api.models.type.CustomFieldsDraft custom) {
@@ -64,11 +64,11 @@ public class LineItemDraftImpl implements LineItemDraft, ModelBase {
         this.sku = sku;
         this.quantity = quantity;
         this.addedAt = addedAt;
-        this.supplyChannel = supplyChannel;
         this.distributionChannel = distributionChannel;
-        this.externalTaxRate = externalTaxRate;
+        this.supplyChannel = supplyChannel;
         this.externalPrice = externalPrice;
         this.externalTotalPrice = externalTotalPrice;
+        this.externalTaxRate = externalTaxRate;
         this.inventoryMode = inventoryMode;
         this.shippingDetails = shippingDetails;
         this.custom = custom;
@@ -78,7 +78,7 @@ public class LineItemDraftImpl implements LineItemDraft, ModelBase {
     }
 
     /**
-     *  <p><code>id</code> of the Product.</p>
+     *  <p><code>id</code> of a published Product.</p>
      */
 
     public String getProductId() {
@@ -102,7 +102,7 @@ public class LineItemDraftImpl implements LineItemDraft, ModelBase {
     }
 
     /**
-     *  <p>Number of Product Variants to add to the Cart.</p>
+     *  <p>Quantity of the Product Variant to add to the Cart.</p>
      */
 
     public Long getQuantity() {
@@ -119,14 +119,6 @@ public class LineItemDraftImpl implements LineItemDraft, ModelBase {
     }
 
     /**
-     *  <p>Used to identify Inventory entries that must be reserved. The referenced Channel must have the <code>InventorySupply</code> ChannelRoleEnum.</p>
-     */
-
-    public com.commercetools.api.models.channel.ChannelResourceIdentifier getSupplyChannel() {
-        return this.supplyChannel;
-    }
-
-    /**
      *  <p>Used to select a Product Price. The referenced Channel must have the <code>ProductDistribution</code> ChannelRoleEnum.</p>
      *  <p>If the Cart is bound to a Store with <code>distributionChannels</code> set, the Channel must match one of the Store's distribution channels.</p>
      */
@@ -136,11 +128,11 @@ public class LineItemDraftImpl implements LineItemDraft, ModelBase {
     }
 
     /**
-     *  <p>External Tax Rate for the Line Item if the Cart has the <code>External</code> TaxMode.</p>
+     *  <p>Used to identify Inventory entries that must be reserved. The referenced Channel must have the <code>InventorySupply</code> ChannelRoleEnum.</p>
      */
 
-    public com.commercetools.api.models.cart.ExternalTaxRateDraft getExternalTaxRate() {
-        return this.externalTaxRate;
+    public com.commercetools.api.models.channel.ChannelResourceIdentifier getSupplyChannel() {
+        return this.supplyChannel;
     }
 
     /**
@@ -157,6 +149,14 @@ public class LineItemDraftImpl implements LineItemDraft, ModelBase {
 
     public com.commercetools.api.models.cart.ExternalLineItemTotalPrice getExternalTotalPrice() {
         return this.externalTotalPrice;
+    }
+
+    /**
+     *  <p>External Tax Rate for the Line Item if the Cart has the <code>External</code> TaxMode.</p>
+     */
+
+    public com.commercetools.api.models.cart.ExternalTaxRateDraft getExternalTaxRate() {
+        return this.externalTaxRate;
     }
 
     /**
@@ -203,17 +203,13 @@ public class LineItemDraftImpl implements LineItemDraft, ModelBase {
         this.addedAt = addedAt;
     }
 
-    public void setSupplyChannel(final com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel) {
-        this.supplyChannel = supplyChannel;
-    }
-
     public void setDistributionChannel(
             final com.commercetools.api.models.channel.ChannelResourceIdentifier distributionChannel) {
         this.distributionChannel = distributionChannel;
     }
 
-    public void setExternalTaxRate(final com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate) {
-        this.externalTaxRate = externalTaxRate;
+    public void setSupplyChannel(final com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel) {
+        this.supplyChannel = supplyChannel;
     }
 
     public void setExternalPrice(final com.commercetools.api.models.common.Money externalPrice) {
@@ -223,6 +219,10 @@ public class LineItemDraftImpl implements LineItemDraft, ModelBase {
     public void setExternalTotalPrice(
             final com.commercetools.api.models.cart.ExternalLineItemTotalPrice externalTotalPrice) {
         this.externalTotalPrice = externalTotalPrice;
+    }
+
+    public void setExternalTaxRate(final com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate) {
+        this.externalTaxRate = externalTaxRate;
     }
 
     public void setInventoryMode(final com.commercetools.api.models.cart.InventoryMode inventoryMode) {
@@ -252,11 +252,11 @@ public class LineItemDraftImpl implements LineItemDraft, ModelBase {
                 .append(sku, that.sku)
                 .append(quantity, that.quantity)
                 .append(addedAt, that.addedAt)
-                .append(supplyChannel, that.supplyChannel)
                 .append(distributionChannel, that.distributionChannel)
-                .append(externalTaxRate, that.externalTaxRate)
+                .append(supplyChannel, that.supplyChannel)
                 .append(externalPrice, that.externalPrice)
                 .append(externalTotalPrice, that.externalTotalPrice)
+                .append(externalTaxRate, that.externalTaxRate)
                 .append(inventoryMode, that.inventoryMode)
                 .append(shippingDetails, that.shippingDetails)
                 .append(custom, that.custom)
@@ -270,11 +270,11 @@ public class LineItemDraftImpl implements LineItemDraft, ModelBase {
                 .append(sku)
                 .append(quantity)
                 .append(addedAt)
-                .append(supplyChannel)
                 .append(distributionChannel)
-                .append(externalTaxRate)
+                .append(supplyChannel)
                 .append(externalPrice)
                 .append(externalTotalPrice)
+                .append(externalTaxRate)
                 .append(inventoryMode)
                 .append(shippingDetails)
                 .append(custom)

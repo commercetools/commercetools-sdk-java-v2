@@ -3,12 +3,12 @@ package com.commercetools.docs.meta;
 
 /**
  * {@include.toc}
- * <h2>Representation</h2>
+ * <h2 id="representation">Representation</h2>
  *
  * The SDK provides types for each of the types described in the documentation of the REST API. Each type is represented
  * by an interface, an implementation class and a builder class.
  *
- * <h3>Interfaces</h3>
+ * <h3 id="interfaces">Interfaces</h3>
  *
  * The interface class describes the JSON structure by providing Getters and Setters. The necessary annotations to de-/serialize
  * the JSON is defined here.
@@ -25,7 +25,7 @@ package com.commercetools.docs.meta;
  *
  * The model interfaces define the inheritance/composition structure of all documented types.
  *
- * <h4>Polymorphic types</h4>
+ * <h4 id="polymorphic-types">Polymorphic types</h4>
  *
  * Each polymorphic type interface provides methods for all it's subtype builders
  * {@include.example example.ExamplesTest#polymorphicInterface()}
@@ -34,24 +34,24 @@ package com.commercetools.docs.meta;
  *
  * {@include.example example.ExamplesTest#updateBodyInterface()}
  *
- * <h3>Builder</h3>
+ * <h3 id="builder">Builder</h3>
  *
  * For each type a builder class exists. Each property can be set using the method with the property name at the builder instance. E.g.:
  * {@include.example example.ExamplesTest#builderProperty()}
  *
  *
- * <h4>Object property</h4>
+ * <h4 id="object-builder">Object property</h4>
  *
  * If the property is an object type a method with a lambda function parameter is usable. The function is called with
  * a builder instance of the properties type.
  * {@include.example example.ExamplesTest#builderLambda()}
  *
- * <h4>Array property</h4>
+ * <h4 id="array-builder">Array property</h4>
  *
  * Array properties have additional methods for adding addtional elements and build element instances.
  * {@include.example example.ExamplesTest#builderArray()}
  *
- * <h4>Polymorphic types</h4>
+ * <h4 id="polymorphic-builder">Polymorphic types</h4>
  *
  * Each polymorphic type builder provides methods for all it's subtype builders
  * {@include.example example.ExamplesTest#polymorphicBuilder()}
@@ -61,7 +61,7 @@ package com.commercetools.docs.meta;
  * {@include.example example.ExamplesTest#updateBodyBuilder()}
 
  *
- * <h3>Implementation</h3>
+ * <h3 id="impl">Implementation</h3>
  *
  * Each type has an implementation class (POJO). The class implements all properties of all interfaces and it's getters and setters.
  * Also the implementation class implements an equals and hashcode method. The constructor is defined package private as

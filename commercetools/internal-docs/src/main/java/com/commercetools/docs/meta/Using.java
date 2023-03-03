@@ -4,6 +4,7 @@ package com.commercetools.docs.meta;
 import io.vrap.rmf.base.client.ApiMethod;
 
 /**
+ * {@include.toc}
  * <h2 id=using>Using SDK</h2>
  *
  * <p>SDK follows a builder pattern when creating requests and model entities. Category resource will be used to demonstrate

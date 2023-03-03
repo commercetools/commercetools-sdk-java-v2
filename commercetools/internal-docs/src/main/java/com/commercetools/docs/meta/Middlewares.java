@@ -2,6 +2,7 @@
 package com.commercetools.docs.meta;
 
 /**
+    {@include.toc}
     <h2>Middlewares</h2>
 
     <p></p>

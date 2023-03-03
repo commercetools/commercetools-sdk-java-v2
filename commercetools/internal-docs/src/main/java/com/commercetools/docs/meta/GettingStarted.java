@@ -2,6 +2,7 @@
 package com.commercetools.docs.meta;
 
 /**
+ * {@include.toc}
  * <h2 id=about-clients>About the client</h2>
  *
  * <p>The commercetools Composable Commerce client communicates asynchronously with the API via HTTPS

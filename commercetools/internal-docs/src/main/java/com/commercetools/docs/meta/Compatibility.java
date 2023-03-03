@@ -2,6 +2,7 @@
 package com.commercetools.docs.meta;
 
 /**
+ * {@include.toc}
  * <h2>Compatibility layer for JVM SDK</h2>
  *
  * <p>The module <code>commercetools-sdk-compat-v1</code> allows the usage of the SDK in conjunction with the JVM SDK (v1)</p>

@@ -2,6 +2,7 @@
 package com.commercetools.docs.meta;
 
 /**
+ * {@include.toc}
  * <h2 id="compatibility-module">SDK v1 compatibility module</h2>
  *
  * <p>The SDK provides a compatibility module. This module e.g. allows the usage of the SDKv2 client

@@ -8,6 +8,7 @@ import io.vrap.rmf.base.client.http.InternalLoggerFactory;
 import org.slf4j.event.Level;
 
 /**
+ * {@include.toc}
  * <h2 id=logging>Logging</h2>
  *
  * <p>Internal logging used by the commercetools Composable Commerce client itself. Uses slf4j logger named {@code commercetools}.</p>

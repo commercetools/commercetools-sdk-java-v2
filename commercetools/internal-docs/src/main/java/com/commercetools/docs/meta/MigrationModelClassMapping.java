@@ -2,12 +2,7 @@
 package com.commercetools.docs.meta;
 
 /**
- *
- * <ul>
- * <li><a href="#model-mapping">Mapping of model classes from SDK v1 to v2</a></li>
- * <li><a href="#command-mapping">Mapping of commands from SDK v1 to v2</a></li>
- * <li><a href="#package-mapping">Package name changes</a></li>
- * </ul>
+ * {@include.toc}
  * <h2 id="model-mapping">Mapping of model classes from SDK v1 to v2</h2>
  *
  * <table>

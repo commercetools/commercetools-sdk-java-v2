@@ -2,7 +2,7 @@
 package com.commercetools.docs.meta;
 
 /**
- *
+ * {@include.toc}
  * <h2>Representation</h2>
  *
  * The SDK provides types for each of the types described in the documentation of the REST API. Each type is represented

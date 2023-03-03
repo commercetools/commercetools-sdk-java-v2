@@ -2,6 +2,7 @@
 package com.commercetools.docs.meta;
 
 /**
+ * {@include.toc}
  * The exception hierarchy documentation.
  *
  * <h2>Exceptions</h2>

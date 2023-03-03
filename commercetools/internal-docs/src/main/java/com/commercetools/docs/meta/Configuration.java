@@ -5,6 +5,7 @@ import io.vrap.rmf.base.client.ClientBuilder;
 import io.vrap.rmf.base.client.http.ErrorMiddleware;
 
 /**
+ * {@include.toc}
  * <h2 id=configuration>Configuration</h2>
  *
  * <h3>ApiRoot and ProjectApiRoot</h3>

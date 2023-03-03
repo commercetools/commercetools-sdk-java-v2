@@ -215,7 +215,7 @@ tasks.register('alljavadoc', Javadoc) {
             <script src="{@docRoot}/resources/javascripts/main.js"></script>
             <link rel="stylesheet" href="{@docRoot}/resources/stylesheets/main.css">
         """
-        taglets = ['com.commercetools.taglets.CodeTaglet', 'com.commercetools.taglets.FileIncludeTaglet', 'org.jdrupes.taglets.plantUml.StartUml', 'org.jdrupes.taglets.plantUml.EndUml', 'org.jdrupes.taglets.plantUml.PlantUml']
+        taglets = ['com.commercetools.taglets.CodeTaglet', 'com.commercetools.taglets.ToCTaglet', 'com.commercetools.taglets.FileIncludeTaglet', 'org.jdrupes.taglets.plantUml.StartUml', 'org.jdrupes.taglets.plantUml.EndUml', 'org.jdrupes.taglets.plantUml.PlantUml']
         tagletPath = configurations.taglet.files as List
         maxMemory = '2g'
         addBooleanOption('-allow-script-in-comments', true)

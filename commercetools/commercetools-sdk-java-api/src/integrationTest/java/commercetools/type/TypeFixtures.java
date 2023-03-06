@@ -91,4 +91,13 @@ public class TypeFixtures {
 
         return type;
     }
+
+    public static String getFieldName(Type type) {
+        return type.getFieldDefinitions()
+                .stream()
+                .filter(fieldDefinition -> fieldDefinition.getType().equals(CustomFieldStringTypeBuilder.of().build()))
+                .map(FieldDefinition::getName)
+                .findFirst()
+                .orElse(null);
+    }
 }

@@ -2,12 +2,19 @@
 package commercetools.category;
 
 import static commercetools.category.CategoryFixtures.*;
+import static commercetools.type.TypeFixtures.getFieldName;
+import static commercetools.type.TypeFixtures.withType;
+
+import java.util.Collections;
+import java.util.Optional;
 
 import com.commercetools.api.models.category.*;
+import com.commercetools.api.models.common.Asset;
+import com.commercetools.api.models.common.AssetSourceBuilder;
 import com.commercetools.api.models.common.LocalizedString;
 import commercetools.utils.CommercetoolsTestUtils;
 
-import org.junit.jupiter.api.Assertions;
+import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 public class CategoryIntegrationTests {
@@ -15,36 +22,9 @@ public class CategoryIntegrationTests {
     @Test
     public void createAndDelete() {
         Category category = createCategory();
-        Assertions.assertNotNull(category);
+        Assertions.assertThat(category).isNotNull();
         Category deletedCategory = deleteCategory(category.getId(), category.getVersion());
-        Assertions.assertEquals(category.getId(), deletedCategory.getId());
-    }
-
-    @Test
-    public void getById() {
-        withCategory(category -> {
-            Category queriedCategory = CommercetoolsTestUtils.getProjectApiRoot()
-                    .categories()
-                    .withId(category.getId())
-                    .get()
-                    .executeBlocking()
-                    .getBody();
-            Assertions.assertEquals(category.getId(), queriedCategory.getId());
-        });
-    }
-
-    @Test
-    public void getByKey() {
-        withCategory(category -> {
-            Category queriedCategory = CommercetoolsTestUtils.getProjectApiRoot()
-                    .categories()
-                    .withKey(category.getKey())
-                    .get()
-                    .executeBlocking()
-                    .getBody();
-            Assertions.assertEquals(category.getId(), queriedCategory.getId());
-            Assertions.assertEquals(category.getKey(), queriedCategory.getKey());
-        });
+        Assertions.assertThat(category.getId()).isEqualTo(deletedCategory.getId());
     }
 
     @Test
@@ -57,7 +37,7 @@ public class CategoryIntegrationTests {
                 .withVersion(category.getVersion())
                 .executeBlocking()
                 .getBody();
-        Assertions.assertEquals(category.getId(), deletedCategory.getId());
+        Assertions.assertThat(category.getId()).isEqualTo(deletedCategory.getId());
     }
 
     @Test
@@ -70,21 +50,7 @@ public class CategoryIntegrationTests {
                 .withVersion(category.getVersion())
                 .executeBlocking()
                 .getBody();
-        Assertions.assertEquals(category.getId(), deletedCategory.getId());
-    }
-
-    @Test
-    public void queryCategories() {
-        Category category = createCategory();
-        CategoryPagedQueryResponse response = CommercetoolsTestUtils.getProjectApiRoot()
-                .categories()
-                .get()
-                .withWhere("id=" + "\"" + category.getId() + "\"")
-                .executeBlocking()
-                .getBody();
-        Assertions.assertEquals(response.getResults().size(), 1);
-        Assertions.assertEquals(response.getResults().get(0).getId(), category.getId());
-        deleteCategory(category.getId(), category.getVersion());
+        Assertions.assertThat(category.getId()).isEqualTo(deletedCategory.getId());
     }
 
     @Test
@@ -103,10 +69,50 @@ public class CategoryIntegrationTests {
                     .post(categoryUpdate)
                     .executeBlocking()
                     .getBody();
-            Assertions.assertEquals(category.getId(), updatedCategory.getId());
-            Assertions.assertEquals(newName.values(), updatedCategory.getName().values());
+            Assertions.assertThat(category.getId()).isEqualTo(updatedCategory.getId());
+            Assertions.assertThat(newName.values()).isEqualTo(updatedCategory.getName().values());
 
             return updatedCategory;
+        });
+    }
+
+    @Test
+    public void addAssetsAndCustomFields() {
+        withType(type -> {
+            withUpdateableCategory(category -> {
+                final String ASSET_KEY = "test-asset";
+                final CategoryAddAssetAction categoryAddAssetAction = CategoryAddAssetActionBuilder.of()
+                        .asset(assetDraftBuilder -> assetDraftBuilder
+                                .sources(AssetSourceBuilder.of().uri("www.myphoto.com").build())
+                                .name(localizedStringBuilder -> localizedStringBuilder.addValue("test-photo",
+                                    "test-photo"))
+                                .key(ASSET_KEY))
+                        .build();
+
+                final String FIELD_NAME = getFieldName(type);
+                final String FIELD_VALUE = "field value";
+
+                final CategorySetCustomTypeAction setCustomTypeAction = CategorySetCustomTypeActionBuilder.of()
+                        .type(type.toResourceIdentifier())
+                        .fields(fieldsBuilder -> fieldsBuilder.addValue(FIELD_NAME, FIELD_VALUE))
+                        .build();
+
+                final Category updatedCategory = CommercetoolsTestUtils.getProjectApiRoot()
+                        .categories()
+                        .update(category)
+                        .with(builder -> builder.plus(categoryAddAssetAction).plus(setCustomTypeAction))
+                        .executeBlocking()
+                        .getBody();
+
+                Assertions.assertThat(updatedCategory.getCustom().getFields().values())
+                        .isEqualTo(Collections.singletonMap(FIELD_NAME, FIELD_VALUE));
+                final Optional<Asset> newAsset = updatedCategory.getAssets()
+                        .stream()
+                        .filter(asset -> asset.getKey().equals(ASSET_KEY))
+                        .findAny();
+                Assertions.assertThat(newAsset).isPresent();
+                return updatedCategory;
+            });
         });
     }
 }

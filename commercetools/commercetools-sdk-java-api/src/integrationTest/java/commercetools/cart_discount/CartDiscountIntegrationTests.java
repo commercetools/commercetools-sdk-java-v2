@@ -2,6 +2,7 @@
 package commercetools.cart_discount;
 
 import static commercetools.cart_discount.CartDiscountFixtures.*;
+import static commercetools.type.TypeFixtures.getFieldName;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -10,8 +11,6 @@ import java.util.Optional;
 
 import com.commercetools.api.models.cart_discount.*;
 import com.commercetools.api.models.common.ReferenceTypeId;
-import com.commercetools.api.models.type.CustomFieldStringTypeBuilder;
-import com.commercetools.api.models.type.FieldDefinition;
 import commercetools.type.TypeFixtures;
 import commercetools.utils.CommercetoolsTestUtils;
 
@@ -111,13 +110,7 @@ public class CartDiscountIntegrationTests {
     public void setCustomTypeToExistingCartDiscount() {
         TypeFixtures.withType(type -> {
             withUpdateableCartDiscount(cartDiscount -> {
-                final String FIELD_NAME = type.getFieldDefinitions()
-                        .stream()
-                        .filter(fieldDefinition -> fieldDefinition.getType()
-                                .equals(CustomFieldStringTypeBuilder.of().build()))
-                        .map(FieldDefinition::getName)
-                        .findFirst()
-                        .orElse(null);
+                final String FIELD_NAME = getFieldName(type);
                 final String FIELD_VALUE = "field value";
 
                 final CartDiscount updatedCartDiscount = CommercetoolsTestUtils.getProjectApiRoot()

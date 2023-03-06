@@ -14,7 +14,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * CartSetCustomLineItemTaxAmountAction
+ *  <p>Can be used if the Cart has the <code>ExternalAmount</code> TaxMode.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -33,14 +33,14 @@ public interface CartSetCustomLineItemTaxAmountAction extends CartUpdateAction {
     String SET_CUSTOM_LINE_ITEM_TAX_AMOUNT = "setCustomLineItemTaxAmount";
 
     /**
-     *
+     *  <p><code>id</code> of the CustomLineItem to update.</p>
      */
     @NotNull
     @JsonProperty("customLineItemId")
     public String getCustomLineItemId();
 
     /**
-     *
+     *  <p>Value to set. If empty, any existing value is removed.</p>
      */
     @Valid
     @JsonProperty("externalTaxAmount")

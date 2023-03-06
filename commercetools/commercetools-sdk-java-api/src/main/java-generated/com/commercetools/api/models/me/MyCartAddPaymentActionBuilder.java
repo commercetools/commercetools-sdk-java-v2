@@ -25,7 +25,7 @@ public class MyCartAddPaymentActionBuilder implements Builder<MyCartAddPaymentAc
     private com.commercetools.api.models.payment.PaymentResourceIdentifier payment;
 
     /**
-     *  <p>ResourceIdentifier of a Payment.</p>
+     *  <p>Payment to add to the Cart. Must not be assigned to another Order or active Cart already.</p>
      */
 
     public MyCartAddPaymentActionBuilder payment(
@@ -36,7 +36,7 @@ public class MyCartAddPaymentActionBuilder implements Builder<MyCartAddPaymentAc
     }
 
     /**
-     *  <p>ResourceIdentifier of a Payment.</p>
+     *  <p>Payment to add to the Cart. Must not be assigned to another Order or active Cart already.</p>
      */
 
     public MyCartAddPaymentActionBuilder payment(

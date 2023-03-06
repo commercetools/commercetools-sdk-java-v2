@@ -66,7 +66,7 @@ public class ReviewDraftBuilder implements Builder<ReviewDraft> {
     }
 
     /**
-     *  <p>If set, this value must be unique among Reviews. For example, if you want to have only one Review per Customer and per Product, you can set the value to Customer <code>id</code>��+ Product <code>id</code>.</p>
+     *  <p>If set, this value must be unique among Reviews. For example, if you want to have only one Review per Customer and per Product, you can set the value to Customer <code>id</code>&nbsp;+ Product <code>id</code>.</p>
      */
 
     public ReviewDraftBuilder uniquenessValue(@Nullable final String uniquenessValue) {

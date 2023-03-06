@@ -235,7 +235,7 @@ public class MoneyTest {
     @Test
     public void serialization() {
         Cart cart = Cart.builder()
-                .totalPrice(b -> b.centPrecisionBuilder().centAmount(100L).fractionDigits(2).currencyCode("EUR"))
+                .totalPrice(b -> b.centAmount(100L).fractionDigits(2).currencyCode("EUR"))
                 .buildUnchecked();
 
         JsonNode cartNode = JsonUtils.toJsonNode(cart);
@@ -245,22 +245,6 @@ public class MoneyTest {
         Assertions.assertThat(cartNode.get("totalPrice").get("centAmount").asInt()).isEqualTo(100);
         Assertions.assertThat(cartNode.get("totalPrice").get("fractionDigits").asInt()).isEqualTo(2);
         Assertions.assertThat(cartNode.get("totalPrice").get("currencyCode").asText()).isEqualTo("EUR");
-
-        Cart highCart = Cart.builder()
-                .totalPrice(b -> b.highPrecisionBuilder()
-                        .centAmount(100L)
-                        .fractionDigits(3)
-                        .preciseAmount(1000L)
-                        .currencyCode("EUR"))
-                .buildUnchecked();
-
-        JsonNode highCartNode = JsonUtils.toJsonNode(highCart);
-        Assertions.assertThat(highCartNode.get("totalPrice")).hasSize(5);
-        Assertions.assertThat(highCartNode.get("totalPrice").get("type").asText()).isEqualTo("highPrecision");
-        Assertions.assertThat(highCartNode.get("totalPrice").get("centAmount").asInt()).isEqualTo(100);
-        Assertions.assertThat(highCartNode.get("totalPrice").get("preciseAmount").asInt()).isEqualTo(1000);
-        Assertions.assertThat(highCartNode.get("totalPrice").get("fractionDigits").asInt()).isEqualTo(3);
-        Assertions.assertThat(highCartNode.get("totalPrice").get("currencyCode").asText()).isEqualTo("EUR");
     }
 
     @Test

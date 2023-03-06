@@ -30,7 +30,7 @@ public class CartSetCartTotalTaxActionBuilder implements Builder<CartSetCartTota
     private java.util.List<com.commercetools.api.models.cart.TaxPortionDraft> externalTaxPortions;
 
     /**
-     *  <p>The total gross amount of the cart (totalNet + taxes).</p>
+     *  <p>The Cart's total gross price becoming the <code>totalGross</code> field (<code>totalNet</code> + taxes) on the Cart's <code>taxedPrice</code>.</p>
      */
 
     public CartSetCartTotalTaxActionBuilder externalTotalGross(
@@ -40,7 +40,7 @@ public class CartSetCartTotalTaxActionBuilder implements Builder<CartSetCartTota
     }
 
     /**
-     *  <p>The total gross amount of the cart (totalNet + taxes).</p>
+     *  <p>The Cart's total gross price becoming the <code>totalGross</code> field (<code>totalNet</code> + taxes) on the Cart's <code>taxedPrice</code>.</p>
      */
 
     public CartSetCartTotalTaxActionBuilder externalTotalGross(
@@ -50,7 +50,7 @@ public class CartSetCartTotalTaxActionBuilder implements Builder<CartSetCartTota
     }
 
     /**
-     *
+     *  <p>Set if the <code>externalTotalGross</code> price is a sum of portions with different tax rates.</p>
      */
 
     public CartSetCartTotalTaxActionBuilder externalTaxPortions(
@@ -60,7 +60,7 @@ public class CartSetCartTotalTaxActionBuilder implements Builder<CartSetCartTota
     }
 
     /**
-     *
+     *  <p>Set if the <code>externalTotalGross</code> price is a sum of portions with different tax rates.</p>
      */
 
     public CartSetCartTotalTaxActionBuilder externalTaxPortions(
@@ -70,7 +70,7 @@ public class CartSetCartTotalTaxActionBuilder implements Builder<CartSetCartTota
     }
 
     /**
-     *
+     *  <p>Set if the <code>externalTotalGross</code> price is a sum of portions with different tax rates.</p>
      */
 
     public CartSetCartTotalTaxActionBuilder plusExternalTaxPortions(
@@ -83,7 +83,7 @@ public class CartSetCartTotalTaxActionBuilder implements Builder<CartSetCartTota
     }
 
     /**
-     *
+     *  <p>Set if the <code>externalTotalGross</code> price is a sum of portions with different tax rates.</p>
      */
 
     public CartSetCartTotalTaxActionBuilder plusExternalTaxPortions(
@@ -97,7 +97,7 @@ public class CartSetCartTotalTaxActionBuilder implements Builder<CartSetCartTota
     }
 
     /**
-     *
+     *  <p>Set if the <code>externalTotalGross</code> price is a sum of portions with different tax rates.</p>
      */
 
     public CartSetCartTotalTaxActionBuilder withExternalTaxPortions(

@@ -15,7 +15,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * TaxPortionDraft
+ *  <p>Represents the portions that sum up to the <code>totalGross</code> field of a TaxedPrice.</p>
+ *  <p>The portions are calculated from the TaxRates. If a Tax Rate has SubRates, they are used and can be identified by name. Tax portions from Line Items with the same <code>rate</code> and <code>name</code> will be accumulated to the same tax portion.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class TaxPortionDraftImpl implements TaxPortionDraft, ModelBase {
@@ -38,7 +39,7 @@ public class TaxPortionDraftImpl implements TaxPortionDraft, ModelBase {
     }
 
     /**
-     *
+     *  <p>Name of the tax portion.</p>
      */
 
     public String getName() {
@@ -46,7 +47,7 @@ public class TaxPortionDraftImpl implements TaxPortionDraft, ModelBase {
     }
 
     /**
-     *
+     *  <p>A number in the range 0-1.</p>
      */
 
     public Double getRate() {
@@ -54,8 +55,7 @@ public class TaxPortionDraftImpl implements TaxPortionDraft, ModelBase {
     }
 
     /**
-     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
-     *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
+     *  <p>Money value for the tax portion.</p>
      */
 
     public com.commercetools.api.models.common.Money getAmount() {

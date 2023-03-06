@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * CartSetLineItemTaxAmountAction
+ *  <p>Can be used if the Cart has the <code>ExternalAmount</code> TaxMode.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CartSetLineItemTaxAmountActionImpl implements CartSetLineItemTaxAmountAction, ModelBase {
@@ -51,7 +51,7 @@ public class CartSetLineItemTaxAmountActionImpl implements CartSetLineItemTaxAmo
     }
 
     /**
-     *
+     *  <p><code>id</code> of the LineItem to update.</p>
      */
 
     public String getLineItemId() {
@@ -59,7 +59,7 @@ public class CartSetLineItemTaxAmountActionImpl implements CartSetLineItemTaxAmo
     }
 
     /**
-     *
+     *  <p>Value to set. If empty, any existing value is removed.</p>
      */
 
     public com.commercetools.api.models.cart.ExternalTaxAmountDraft getExternalTaxAmount() {
@@ -67,7 +67,7 @@ public class CartSetLineItemTaxAmountActionImpl implements CartSetLineItemTaxAmo
     }
 
     /**
-     *  <p><code>key</code> of the ShippingMethod used for this Line Item.``` This is required for Carts with <code>Multiple</code> ShippingMode.</p>
+     *  <p><code>key</code> of the ShippingMethod used for this Line Item. This is required for Carts with <code>Multiple</code> ShippingMode.</p>
      */
 
     public String getShippingKey() {

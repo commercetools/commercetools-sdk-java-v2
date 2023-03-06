@@ -39,8 +39,7 @@ public class TaxedPriceDraftImpl implements TaxedPriceDraft, ModelBase {
     }
 
     /**
-     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
-     *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
+     *  <p>Total net price of the Line Item or Custom Line Item.</p>
      */
 
     public com.commercetools.api.models.common.Money getTotalNet() {
@@ -48,8 +47,7 @@ public class TaxedPriceDraftImpl implements TaxedPriceDraft, ModelBase {
     }
 
     /**
-     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
-     *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
+     *  <p>Total gross price of the Line Item or Custom Line Item.</p>
      */
 
     public com.commercetools.api.models.common.Money getTotalGross() {
@@ -57,7 +55,8 @@ public class TaxedPriceDraftImpl implements TaxedPriceDraft, ModelBase {
     }
 
     /**
-     *
+     *  <p>Taxable portions added to the <code>totalGross</code>.</p>
+     *  <p>Calculated from the TaxRates.</p>
      */
 
     public java.util.List<com.commercetools.api.models.cart.TaxPortionDraft> getTaxPortions() {

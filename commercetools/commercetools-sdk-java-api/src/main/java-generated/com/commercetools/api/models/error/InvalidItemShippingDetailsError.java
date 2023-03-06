@@ -14,7 +14,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 /**
  *  <p>Returned when Line Item or Custom Line Item quantities set under ItemShippingDetails do not match the sum of the quantities in their respective shipping details.</p>
- *  <p>The error is returned as a failed response to the Create Order from Cart and Create Order from Cart in a Store requests.</p>
+ *  <p>The error is returned as a failed response to the Create Order from Cart and Create Order in Store from Cart requests.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

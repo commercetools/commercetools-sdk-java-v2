@@ -232,7 +232,7 @@ public class CommandMigrationTest {
                 .carts()
                 .withId(resource.getId())
                 .post(updateBuilder -> updateBuilder.version(resource.getVersion()));
-        //        projectApiRoot.inStore(storeKey).carts().update(resource).with(actionsBuilder -> actionsBuilder);
+        projectApiRoot.inStore(storeKey).carts().update(resource).with(actionsBuilder -> actionsBuilder);
     }
 
     public void cartUpdateCommand() {
@@ -273,7 +273,7 @@ public class CommandMigrationTest {
                 .customers()
                 .withId(resource.getId())
                 .post(updateBuilder -> updateBuilder.version(resource.getVersion()));
-        //        projectApiRoot.inStore(storeKey).customers().update(resource).with(actionsBuilder -> actionsBuilder);
+        projectApiRoot.inStore(storeKey).customers().update(resource).with(actionsBuilder -> actionsBuilder);
     }
 
     public void customerUpdateCommand() {
@@ -323,7 +323,7 @@ public class CommandMigrationTest {
                 .orders()
                 .withId(resource.getId())
                 .post(updateBuilder -> updateBuilder.version(resource.getVersion()));
-        //        projectApiRoot.inStore(storeKey).orders().update(resource).with(actionsBuilder -> actionsBuilder);
+        projectApiRoot.inStore(storeKey).orders().update(resource).with(actionsBuilder -> actionsBuilder);
     }
 
     public void orderInStoreUpdateByOrderNumberCommand() {
@@ -332,7 +332,6 @@ public class CommandMigrationTest {
                 .orders()
                 .withOrderNumber(resource.getOrderNumber())
                 .post(updateBuilder -> updateBuilder.version(resource.getVersion()));
-        //        projectApiRoot.inStore(storeKey).orders().update(resource).with(actionsBuilder -> actionsBuilder);
     }
 
     public void orderUpdateCommand() {
@@ -370,7 +369,7 @@ public class CommandMigrationTest {
         projectApiRoot.productSelections()
                 .withId(resource.getId())
                 .post(updateBuilder -> updateBuilder.version(resource.getVersion()));
-        //        projectApiRoot.productSelections().update(resource).with(actionsBuilder -> actionsBuilder);
+        projectApiRoot.productSelections().update(resource).with(actionsBuilder -> actionsBuilder);
     }
 
     public void productTypeUpdateCommand() {
@@ -403,7 +402,7 @@ public class CommandMigrationTest {
                 .shoppingLists()
                 .withId(resource.getId())
                 .post(updateBuilder -> updateBuilder.version(resource.getVersion()));
-        //        projectApiRoot.inStore(storeKey).shoppingLists().update(resource).with(actionsBuilder -> actionsBuilder);
+        projectApiRoot.inStore(storeKey).shoppingLists().update(resource).with(actionsBuilder -> actionsBuilder);
     }
 
     public void shoppingListUpdateCommand() {

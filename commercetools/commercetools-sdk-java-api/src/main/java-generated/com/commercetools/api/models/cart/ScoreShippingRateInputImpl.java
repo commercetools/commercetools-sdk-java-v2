@@ -43,7 +43,7 @@ public class ScoreShippingRateInputImpl implements ScoreShippingRateInput, Model
     }
 
     /**
-     *
+     *  <p>Abstract value for categorizing a Cart.</p>
      */
 
     public Long getScore() {

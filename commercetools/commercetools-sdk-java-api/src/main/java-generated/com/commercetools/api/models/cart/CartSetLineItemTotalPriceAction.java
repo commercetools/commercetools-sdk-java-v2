@@ -14,7 +14,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * CartSetLineItemTotalPriceAction
+ *  <p>Sets the LineItem <code>totalPrice</code> and <code>price</code>, and changes the <code>priceMode</code> to <code>ExternalTotal</code> LineItemPriceMode.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -33,14 +33,14 @@ public interface CartSetLineItemTotalPriceAction extends CartUpdateAction {
     String SET_LINE_ITEM_TOTAL_PRICE = "setLineItemTotalPrice";
 
     /**
-     *
+     *  <p><code>id</code> of the LineItem to update.</p>
      */
     @NotNull
     @JsonProperty("lineItemId")
     public String getLineItemId();
 
     /**
-     *
+     *  <p>Value to set. If <code>externalTotalPrice</code> is not given and the <code>priceMode</code> is <code>ExternalTotal</code>, the external price is unset and the <code>priceMode</code> is set to <code>Platform</code>.</p>
      */
     @Valid
     @JsonProperty("externalTotalPrice")

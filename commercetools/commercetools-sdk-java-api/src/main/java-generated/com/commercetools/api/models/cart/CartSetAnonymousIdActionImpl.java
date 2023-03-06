@@ -43,7 +43,7 @@ public class CartSetAnonymousIdActionImpl implements CartSetAnonymousIdAction, M
     }
 
     /**
-     *  <p>If not set, any existing anonymous ID will be removed.</p>
+     *  <p>Value to set. If empty, any existing value is removed.</p>
      */
 
     public String getAnonymousId() {

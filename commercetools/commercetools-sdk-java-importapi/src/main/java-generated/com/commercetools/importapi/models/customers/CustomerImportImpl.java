@@ -66,6 +66,8 @@ public class CustomerImportImpl implements CustomerImport, ModelBase {
 
     private com.commercetools.importapi.models.customfields.Custom custom;
 
+    private com.commercetools.importapi.models.customers.AuthenticationMode authenticationMode;
+
     @JsonCreator
     CustomerImportImpl(@JsonProperty("key") final String key,
             @JsonProperty("customerNumber") final String customerNumber, @JsonProperty("email") final String email,
@@ -84,7 +86,8 @@ public class CustomerImportImpl implements CustomerImport, ModelBase {
             @JsonProperty("defaultShippingAddress") final Integer defaultShippingAddress,
             @JsonProperty("shippingAddresses") final java.util.List<Integer> shippingAddresses,
             @JsonProperty("locale") final String locale,
-            @JsonProperty("custom") final com.commercetools.importapi.models.customfields.Custom custom) {
+            @JsonProperty("custom") final com.commercetools.importapi.models.customfields.Custom custom,
+            @JsonProperty("authenticationMode") final com.commercetools.importapi.models.customers.AuthenticationMode authenticationMode) {
         this.key = key;
         this.customerNumber = customerNumber;
         this.email = email;
@@ -108,6 +111,7 @@ public class CustomerImportImpl implements CustomerImport, ModelBase {
         this.shippingAddresses = shippingAddresses;
         this.locale = locale;
         this.custom = custom;
+        this.authenticationMode = authenticationMode;
     }
 
     public CustomerImportImpl() {
@@ -290,11 +294,22 @@ public class CustomerImportImpl implements CustomerImport, ModelBase {
     }
 
     /**
-     *  <p>The custom fields for this Customer.</p>
+     *  <p>The Custom Fields for this Customer.</p>
      */
 
     public com.commercetools.importapi.models.customfields.Custom getCustom() {
         return this.custom;
+    }
+
+    /**
+     *  <ul>
+     *   <li>Set to <code>Password</code> to make the <code>password</code> field required for the Customer.</li>
+     *   <li>Set to <code>ExternalAuth</code> when the password is not required for the Customer.</li>
+     *  </ul>
+     */
+
+    public com.commercetools.importapi.models.customers.AuthenticationMode getAuthenticationMode() {
+        return this.authenticationMode;
     }
 
     public void setKey(final String key) {
@@ -407,6 +422,11 @@ public class CustomerImportImpl implements CustomerImport, ModelBase {
         this.custom = custom;
     }
 
+    public void setAuthenticationMode(
+            final com.commercetools.importapi.models.customers.AuthenticationMode authenticationMode) {
+        this.authenticationMode = authenticationMode;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -440,6 +460,7 @@ public class CustomerImportImpl implements CustomerImport, ModelBase {
                 .append(shippingAddresses, that.shippingAddresses)
                 .append(locale, that.locale)
                 .append(custom, that.custom)
+                .append(authenticationMode, that.authenticationMode)
                 .isEquals();
     }
 
@@ -468,6 +489,7 @@ public class CustomerImportImpl implements CustomerImport, ModelBase {
                 .append(shippingAddresses)
                 .append(locale)
                 .append(custom)
+                .append(authenticationMode)
                 .toHashCode();
     }
 

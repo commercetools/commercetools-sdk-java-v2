@@ -15,7 +15,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * CartRemoveLineItemAction
+ *  <p>The LineItem price is updated as described in LineItem Price selection.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -34,36 +34,35 @@ public interface CartRemoveLineItemAction extends CartUpdateAction {
     String REMOVE_LINE_ITEM = "removeLineItem";
 
     /**
-     *
+     *  <p><code>id</code> of the Line Item to remove.</p>
      */
     @NotNull
     @JsonProperty("lineItemId")
     public String getLineItemId();
 
     /**
-     *
+     *  <p>New value to set. If absent or <code>0</code>, the Line Item is removed from the Cart.</p>
      */
 
     @JsonProperty("quantity")
     public Long getQuantity();
 
     /**
-     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
-     *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
+     *  <p>Sets the LineItem <code>price</code> to the given value when decreasing the quantity of a Line Item with the <code>ExternalPrice</code> LineItemPriceMode.</p>
      */
     @Valid
     @JsonProperty("externalPrice")
     public Money getExternalPrice();
 
     /**
-     *
+     *  <p>Sets the LineItem <code>price</code> and <code>totalPrice</code> to the given value when decreasing the quantity of a Line Item with the <code>ExternalTotal</code> LineItemPriceMode.</p>
      */
     @Valid
     @JsonProperty("externalTotalPrice")
     public ExternalLineItemTotalPrice getExternalTotalPrice();
 
     /**
-     *
+     *  <p>Container for Line Item-specific addresses to remove.</p>
      */
     @Valid
     @JsonProperty("shippingDetailsToRemove")

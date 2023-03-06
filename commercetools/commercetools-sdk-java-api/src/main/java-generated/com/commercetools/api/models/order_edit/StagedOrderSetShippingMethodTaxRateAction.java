@@ -33,7 +33,7 @@ public interface StagedOrderSetShippingMethodTaxRateAction extends StagedOrderUp
     String SET_SHIPPING_METHOD_TAX_RATE = "setShippingMethodTaxRate";
 
     /**
-     *
+     *  <p>Controls calculation of taxed prices for Line Items, Custom Line Items, and Shipping Methods as explained in Cart tax calculation.</p>
      */
     @Valid
     @JsonProperty("externalTaxRate")

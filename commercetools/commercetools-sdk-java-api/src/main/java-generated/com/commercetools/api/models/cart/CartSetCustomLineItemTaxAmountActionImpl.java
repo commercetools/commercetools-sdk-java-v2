@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * CartSetCustomLineItemTaxAmountAction
+ *  <p>Can be used if the Cart has the <code>ExternalAmount</code> TaxMode.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CartSetCustomLineItemTaxAmountActionImpl implements CartSetCustomLineItemTaxAmountAction, ModelBase {
@@ -47,7 +47,7 @@ public class CartSetCustomLineItemTaxAmountActionImpl implements CartSetCustomLi
     }
 
     /**
-     *
+     *  <p><code>id</code> of the CustomLineItem to update.</p>
      */
 
     public String getCustomLineItemId() {
@@ -55,7 +55,7 @@ public class CartSetCustomLineItemTaxAmountActionImpl implements CartSetCustomLi
     }
 
     /**
-     *
+     *  <p>Value to set. If empty, any existing value is removed.</p>
      */
 
     public com.commercetools.api.models.cart.ExternalTaxAmountDraft getExternalTaxAmount() {

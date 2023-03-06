@@ -32,7 +32,7 @@ public interface CartSetShippingCustomFieldAction extends CartUpdateAction {
     String SET_SHIPPING_CUSTOM_FIELD = "setShippingCustomField";
 
     /**
-     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multiple</code> ShippingMode.</p>
+     *  <p>The <code>shippingKey</code> of the Shipping to customize. Used to specify which Shipping Method to customize on a Cart with <code>Multiple</code> ShippingMode. Leave this empty to customize the one and only ShippingMethod on a <code>Single</code> ShippingMode Cart.</p>
      */
 
     @JsonProperty("shippingKey")

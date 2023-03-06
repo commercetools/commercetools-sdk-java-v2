@@ -68,6 +68,8 @@ public class OrderImportImpl implements OrderImport, ModelBase {
 
     private com.commercetools.importapi.models.common.StoreKeyReference store;
 
+    private com.commercetools.importapi.models.common.StateKeyReference state;
+
     @JsonCreator
     OrderImportImpl(@JsonProperty("orderNumber") final String orderNumber,
             @JsonProperty("customer") final com.commercetools.importapi.models.common.CustomerKeyReference customer,
@@ -91,7 +93,8 @@ public class OrderImportImpl implements OrderImport, ModelBase {
             @JsonProperty("taxCalculationMode") final com.commercetools.importapi.models.orders.TaxCalculationMode taxCalculationMode,
             @JsonProperty("origin") final com.commercetools.importapi.models.orders.CartOrigin origin,
             @JsonProperty("itemShippingAddresses") final java.util.List<com.commercetools.importapi.models.common.Address> itemShippingAddresses,
-            @JsonProperty("store") final com.commercetools.importapi.models.common.StoreKeyReference store) {
+            @JsonProperty("store") final com.commercetools.importapi.models.common.StoreKeyReference store,
+            @JsonProperty("state") final com.commercetools.importapi.models.common.StateKeyReference state) {
         this.orderNumber = orderNumber;
         this.customer = customer;
         this.customerEmail = customerEmail;
@@ -115,6 +118,7 @@ public class OrderImportImpl implements OrderImport, ModelBase {
         this.origin = origin;
         this.itemShippingAddresses = itemShippingAddresses;
         this.store = store;
+        this.state = state;
     }
 
     public OrderImportImpl() {
@@ -304,6 +308,14 @@ public class OrderImportImpl implements OrderImport, ModelBase {
         return this.store;
     }
 
+    /**
+     *  <p>Reference to a State in a custom workflow.</p>
+     */
+
+    public com.commercetools.importapi.models.common.StateKeyReference getState() {
+        return this.state;
+    }
+
     public void setOrderNumber(final String orderNumber) {
         this.orderNumber = orderNumber;
     }
@@ -415,6 +427,10 @@ public class OrderImportImpl implements OrderImport, ModelBase {
         this.store = store;
     }
 
+    public void setState(final com.commercetools.importapi.models.common.StateKeyReference state) {
+        this.state = state;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -448,6 +464,7 @@ public class OrderImportImpl implements OrderImport, ModelBase {
                 .append(origin, that.origin)
                 .append(itemShippingAddresses, that.itemShippingAddresses)
                 .append(store, that.store)
+                .append(state, that.state)
                 .isEquals();
     }
 
@@ -476,6 +493,7 @@ public class OrderImportImpl implements OrderImport, ModelBase {
                 .append(origin)
                 .append(itemShippingAddresses)
                 .append(store)
+                .append(state)
                 .toHashCode();
     }
 

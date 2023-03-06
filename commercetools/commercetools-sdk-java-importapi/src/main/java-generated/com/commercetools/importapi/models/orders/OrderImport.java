@@ -12,6 +12,7 @@ import javax.validation.constraints.NotNull;
 import com.commercetools.importapi.models.common.Address;
 import com.commercetools.importapi.models.common.CustomerGroupKeyReference;
 import com.commercetools.importapi.models.common.CustomerKeyReference;
+import com.commercetools.importapi.models.common.StateKeyReference;
 import com.commercetools.importapi.models.common.StoreKeyReference;
 import com.commercetools.importapi.models.common.TypedMoney;
 import com.commercetools.importapi.models.customfields.Custom;
@@ -202,6 +203,13 @@ public interface OrderImport {
     @JsonProperty("store")
     public StoreKeyReference getStore();
 
+    /**
+     *  <p>Reference to a State in a custom workflow.</p>
+     */
+    @Valid
+    @JsonProperty("state")
+    public StateKeyReference getState();
+
     public void setOrderNumber(final String orderNumber);
 
     public void setCustomer(final CustomerKeyReference customer);
@@ -257,6 +265,8 @@ public interface OrderImport {
 
     public void setStore(final StoreKeyReference store);
 
+    public void setState(final StateKeyReference state);
+
     public static OrderImport of() {
         return new OrderImportImpl();
     }
@@ -286,6 +296,7 @@ public interface OrderImport {
         instance.setOrigin(template.getOrigin());
         instance.setItemShippingAddresses(template.getItemShippingAddresses());
         instance.setStore(template.getStore());
+        instance.setState(template.getState());
         return instance;
     }
 

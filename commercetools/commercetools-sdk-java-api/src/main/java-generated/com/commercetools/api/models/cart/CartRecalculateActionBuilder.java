@@ -26,7 +26,10 @@ public class CartRecalculateActionBuilder implements Builder<CartRecalculateActi
     private Boolean updateProductData;
 
     /**
-     *  <p>If set to <code>true</code>, the line item product data (<code>name</code>, <code>variant</code> and <code>productType</code>) will also be updated. If set to <code>false</code>, only the prices and tax rates of the line item will be updated. Notice that if the Product's priceMode value is <code>Embedded</code> ProductPriceMode, the updated price of a line item may not correspond to a price in <code>variant.prices</code> anymore.</p>
+     *  <ul>
+     *   <li>Leave empty or set to <code>false</code> to only update the Prices and TaxRates of the Line Items.</li>
+     *   <li>Set to <code>true</code> to update the Line Items' product data (like <code>name</code>, <code>variant</code> and <code>productType</code>) also.</li>
+     *  </ul>
      */
 
     public CartRecalculateActionBuilder updateProductData(@Nullable final Boolean updateProductData) {

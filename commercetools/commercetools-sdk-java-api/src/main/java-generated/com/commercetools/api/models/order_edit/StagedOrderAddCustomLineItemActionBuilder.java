@@ -149,7 +149,7 @@ public class StagedOrderAddCustomLineItemActionBuilder implements Builder<Staged
     }
 
     /**
-     *
+     *  <p>Controls calculation of taxed prices for Line Items, Custom Line Items, and Shipping Methods as explained in Cart tax calculation.</p>
      */
 
     public StagedOrderAddCustomLineItemActionBuilder externalTaxRate(
@@ -160,7 +160,7 @@ public class StagedOrderAddCustomLineItemActionBuilder implements Builder<Staged
     }
 
     /**
-     *
+     *  <p>Controls calculation of taxed prices for Line Items, Custom Line Items, and Shipping Methods as explained in Cart tax calculation.</p>
      */
 
     public StagedOrderAddCustomLineItemActionBuilder externalTaxRate(

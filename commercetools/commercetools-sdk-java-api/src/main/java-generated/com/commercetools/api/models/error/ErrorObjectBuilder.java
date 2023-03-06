@@ -35,8 +35,8 @@ public class ErrorObjectBuilder {
         return com.commercetools.api.models.error.ConcurrentModificationErrorBuilder.of();
     }
 
-    public com.commercetools.api.models.error.CountryNotConfiguredInStoreBuilder countryNotConfiguredInStoreBuilder() {
-        return com.commercetools.api.models.error.CountryNotConfiguredInStoreBuilder.of();
+    public com.commercetools.api.models.error.CountryNotConfiguredInStoreErrorBuilder countryNotConfiguredInStoreBuilder() {
+        return com.commercetools.api.models.error.CountryNotConfiguredInStoreErrorBuilder.of();
     }
 
     public com.commercetools.api.models.error.DiscountCodeNonApplicableErrorBuilder discountCodeNonApplicableBuilder() {

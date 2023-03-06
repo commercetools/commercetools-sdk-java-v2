@@ -169,7 +169,7 @@ public class ScopedPriceBuilder implements Builder<ScopedPrice> {
     }
 
     /**
-     *  <p>Is set if a matching ProductDiscount exists. If set, the Cart uses the discounted value for the Cart Price calculation.</p>
+     *  <p>Is set when a matching ProductDiscount exists. If set, the Cart uses the discounted value for the Cart Price calculation.</p>
      *  <p>When a relative Product Discount is applied and the fractional part of the discounted Price is 0.5, the discounted Price is rounded half down in favor of the Customer.</p>
      */
 
@@ -180,7 +180,7 @@ public class ScopedPriceBuilder implements Builder<ScopedPrice> {
     }
 
     /**
-     *  <p>Is set if a matching ProductDiscount exists. If set, the Cart uses the discounted value for the Cart Price calculation.</p>
+     *  <p>Is set when a matching ProductDiscount exists. If set, the Cart uses the discounted value for the Cart Price calculation.</p>
      *  <p>When a relative Product Discount is applied and the fractional part of the discounted Price is 0.5, the discounted Price is rounded half down in favor of the Customer.</p>
      */
 

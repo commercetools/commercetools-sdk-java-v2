@@ -19,12 +19,17 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
  *  <p>The error is returned as a failed response to:</p>
  *  <ul>
  *   <li>Create Cart in Store request and Set Country update action on Carts.</li>
- *   <li>Create Order in a Store from a Cart requests and Set Country on My Orders.</li>
- *   <li>Create Order by Import request.</li>
+ *   <li>Create Cart in Store request and Set Country update action on My Carts.</li>
+ *   <li>Create Order in Store from Cart requests on Orders.</li>
+ *   <li>Create Order from Cart in a Store requests on My Orders.</li>
+ *   <li>Create Order from Quote requests on Orders.</li>
+ *   <li>Create Order from Quote requests on My Orders.</li>
+ *   <li>Create Order by Import request on Order Import.</li>
+ *   <li>Set Country on Order Edits.</li>
  *  </ul>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-public class CountryNotConfiguredInStoreImpl implements CountryNotConfiguredInStore, ModelBase {
+public class CountryNotConfiguredInStoreErrorImpl implements CountryNotConfiguredInStoreError, ModelBase {
 
     private String code;
 
@@ -37,7 +42,7 @@ public class CountryNotConfiguredInStoreImpl implements CountryNotConfiguredInSt
     private String country;
 
     @JsonCreator
-    CountryNotConfiguredInStoreImpl(@JsonProperty("message") final String message,
+    CountryNotConfiguredInStoreErrorImpl(@JsonProperty("message") final String message,
             @JsonProperty("values") final Map<String, java.lang.Object> values,
             @JsonProperty("storeCountries") final java.util.List<String> storeCountries,
             @JsonProperty("country") final String country) {
@@ -48,7 +53,7 @@ public class CountryNotConfiguredInStoreImpl implements CountryNotConfiguredInSt
         this.code = COUNTRY_NOT_CONFIGURED_IN_STORE;
     }
 
-    public CountryNotConfiguredInStoreImpl() {
+    public CountryNotConfiguredInStoreErrorImpl() {
         this.code = COUNTRY_NOT_CONFIGURED_IN_STORE;
     }
 
@@ -123,7 +128,7 @@ public class CountryNotConfiguredInStoreImpl implements CountryNotConfiguredInSt
         if (o == null || getClass() != o.getClass())
             return false;
 
-        CountryNotConfiguredInStoreImpl that = (CountryNotConfiguredInStoreImpl) o;
+        CountryNotConfiguredInStoreErrorImpl that = (CountryNotConfiguredInStoreErrorImpl) o;
 
         return new EqualsBuilder().append(code, that.code)
                 .append(message, that.message)

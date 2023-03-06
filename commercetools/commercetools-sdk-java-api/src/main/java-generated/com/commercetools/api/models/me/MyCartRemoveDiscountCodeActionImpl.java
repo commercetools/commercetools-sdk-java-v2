@@ -44,7 +44,7 @@ public class MyCartRemoveDiscountCodeActionImpl implements MyCartRemoveDiscountC
     }
 
     /**
-     *  <p>Reference to a DiscountCode.</p>
+     *  <p>Discount Code to remove from the Cart.</p>
      */
 
     public com.commercetools.api.models.discount_code.DiscountCodeReference getDiscountCode() {

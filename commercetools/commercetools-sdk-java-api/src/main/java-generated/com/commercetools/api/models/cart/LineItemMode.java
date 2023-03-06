@@ -10,13 +10,25 @@ import com.fasterxml.jackson.annotation.JsonValue;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * LineItemMode
+ *  <p>Indicates how a Line Item is added to a Cart.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public interface LineItemMode {
 
-    LineItemMode STANDARD = LineItemModeEnum.STANDARD;
+    /**
+    	<p>The Line Item is added during <a href="/../api/projects/carts#create-cart">Cart creation</a> or using the <a href="ctp:api:type:CartAddLineItemAction">Add LineItem</a> update action.
+    	The Line Item quantity can be changed without restriction.</p>
 
+    */
+    LineItemMode STANDARD = LineItemModeEnum.STANDARD;
+    /**
+    	<p>The Line Item is added automatically by a Cart Discount with <a href="ctp:api:type:CartDiscountValueGiftLineItem">CartDiscountValueGiftLineItem</a>.</p>
+    	<p>The quantity cannot be <a href="ctp:api:type:CartChangeLineItemQuantityAction">increased</a>, and it won't be merged when the same Line Item is <a href="ctp:api:type:CartAddLineItemAction">added</a> to the Cart.
+    	If the gift is <a href="ctp:api:type:CartRemoveLineItemAction">removed</a>, an entry is added to the <code>refusedGifts</code> array and the discount won't be applied to the Cart.
+    	The price cannot be changed <a href="ctp:api:type:CartSetLineItemTotalPriceAction">externally</a>.</p>
+    	<p>All other updates, such as the ones related to Custom Fields, can be used.</p>
+
+    */
     LineItemMode GIFT_LINE_ITEM = LineItemModeEnum.GIFT_LINE_ITEM;
 
     enum LineItemModeEnum implements LineItemMode {

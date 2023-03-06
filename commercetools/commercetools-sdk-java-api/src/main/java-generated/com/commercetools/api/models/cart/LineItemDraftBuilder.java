@@ -39,16 +39,10 @@ public class LineItemDraftBuilder implements Builder<LineItemDraft> {
     private java.time.ZonedDateTime addedAt;
 
     @Nullable
-    private com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel;
-
-    @Nullable
     private com.commercetools.api.models.channel.ChannelResourceIdentifier distributionChannel;
 
     @Nullable
-    private com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate;
-
-    @Nullable
-    private com.commercetools.api.models.type.CustomFieldsDraft custom;
+    private com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel;
 
     @Nullable
     private com.commercetools.api.models.common.Money externalPrice;
@@ -57,13 +51,19 @@ public class LineItemDraftBuilder implements Builder<LineItemDraft> {
     private com.commercetools.api.models.cart.ExternalLineItemTotalPrice externalTotalPrice;
 
     @Nullable
+    private com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate;
+
+    @Nullable
     private com.commercetools.api.models.cart.InventoryMode inventoryMode;
 
     @Nullable
     private com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails;
 
+    @Nullable
+    private com.commercetools.api.models.type.CustomFieldsDraft custom;
+
     /**
-     *
+     *  <p><code>id</code> of a published Product.</p>
      */
 
     public LineItemDraftBuilder productId(@Nullable final String productId) {
@@ -72,7 +72,7 @@ public class LineItemDraftBuilder implements Builder<LineItemDraft> {
     }
 
     /**
-     *
+     *  <p><code>id</code> of the ProductVariant in the Product. If not provided, the Master Variant is used.</p>
      */
 
     public LineItemDraftBuilder variantId(@Nullable final Long variantId) {
@@ -81,7 +81,7 @@ public class LineItemDraftBuilder implements Builder<LineItemDraft> {
     }
 
     /**
-     *
+     *  <p><code>sku</code> of the ProductVariant.</p>
      */
 
     public LineItemDraftBuilder sku(@Nullable final String sku) {
@@ -90,7 +90,7 @@ public class LineItemDraftBuilder implements Builder<LineItemDraft> {
     }
 
     /**
-     *  <p>The amount of a <code>LineItem</code>in the cart. Must be a positive integer.</p>
+     *  <p>Quantity of the Product Variant to add to the Cart.</p>
      */
 
     public LineItemDraftBuilder quantity(@Nullable final Long quantity) {
@@ -99,7 +99,8 @@ public class LineItemDraftBuilder implements Builder<LineItemDraft> {
     }
 
     /**
-     *  <p>When the line item was added to the cart. Optional for backwards compatibility reasons only.</p>
+     *  <p>Date and time (UTC) the Product Variant is added to the Cart. If not set, it defaults to the current date and time.</p>
+     *  <p>Optional for backwards compatibility reasons.</p>
      */
 
     public LineItemDraftBuilder addedAt(@Nullable final java.time.ZonedDateTime addedAt) {
@@ -108,28 +109,8 @@ public class LineItemDraftBuilder implements Builder<LineItemDraft> {
     }
 
     /**
-     *  <p>By providing supply channel information, you can unique identify inventory entries that should be reserved. The provided channel should have the InventorySupply role.</p>
-     */
-
-    public LineItemDraftBuilder supplyChannel(
-            Function<com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder, com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder> builder) {
-        this.supplyChannel = builder.apply(com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder.of())
-                .build();
-        return this;
-    }
-
-    /**
-     *  <p>By providing supply channel information, you can unique identify inventory entries that should be reserved. The provided channel should have the InventorySupply role.</p>
-     */
-
-    public LineItemDraftBuilder supplyChannel(
-            @Nullable final com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel) {
-        this.supplyChannel = supplyChannel;
-        return this;
-    }
-
-    /**
-     *  <p>The channel is used to select a ProductPrice. The provided channel should have the ProductDistribution role.</p>
+     *  <p>Used to select a Product Price. The referenced Channel must have the <code>ProductDistribution</code> ChannelRoleEnum.</p>
+     *  <p>If the Cart is bound to a Store with <code>distributionChannels</code> set, the Channel must match one of the Store's distribution channels.</p>
      */
 
     public LineItemDraftBuilder distributionChannel(
@@ -141,7 +122,8 @@ public class LineItemDraftBuilder implements Builder<LineItemDraft> {
     }
 
     /**
-     *  <p>The channel is used to select a ProductPrice. The provided channel should have the ProductDistribution role.</p>
+     *  <p>Used to select a Product Price. The referenced Channel must have the <code>ProductDistribution</code> ChannelRoleEnum.</p>
+     *  <p>If the Cart is bound to a Store with <code>distributionChannels</code> set, the Channel must match one of the Store's distribution channels.</p>
      */
 
     public LineItemDraftBuilder distributionChannel(
@@ -151,47 +133,28 @@ public class LineItemDraftBuilder implements Builder<LineItemDraft> {
     }
 
     /**
-     *  <p>An external tax rate can be set if the cart has the <code>External</code> TaxMode.</p>
+     *  <p>Used to identify Inventory entries that must be reserved. The referenced Channel must have the <code>InventorySupply</code> ChannelRoleEnum.</p>
      */
 
-    public LineItemDraftBuilder externalTaxRate(
-            Function<com.commercetools.api.models.cart.ExternalTaxRateDraftBuilder, com.commercetools.api.models.cart.ExternalTaxRateDraftBuilder> builder) {
-        this.externalTaxRate = builder.apply(com.commercetools.api.models.cart.ExternalTaxRateDraftBuilder.of())
+    public LineItemDraftBuilder supplyChannel(
+            Function<com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder, com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder> builder) {
+        this.supplyChannel = builder.apply(com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder.of())
                 .build();
         return this;
     }
 
     /**
-     *  <p>An external tax rate can be set if the cart has the <code>External</code> TaxMode.</p>
+     *  <p>Used to identify Inventory entries that must be reserved. The referenced Channel must have the <code>InventorySupply</code> ChannelRoleEnum.</p>
      */
 
-    public LineItemDraftBuilder externalTaxRate(
-            @Nullable final com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate) {
-        this.externalTaxRate = externalTaxRate;
+    public LineItemDraftBuilder supplyChannel(
+            @Nullable final com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel) {
+        this.supplyChannel = supplyChannel;
         return this;
     }
 
     /**
-     *  <p>The custom fields.</p>
-     */
-
-    public LineItemDraftBuilder custom(
-            Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraftBuilder> builder) {
-        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsDraftBuilder.of()).build();
-        return this;
-    }
-
-    /**
-     *  <p>The custom fields.</p>
-     */
-
-    public LineItemDraftBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFieldsDraft custom) {
-        this.custom = custom;
-        return this;
-    }
-
-    /**
-     *  <p>Sets the line item <code>price</code> to the given value and sets the line item <code>priceMode</code> to <code>ExternalPrice</code> LineItemPriceMode.</p>
+     *  <p>Sets the LineItem <code>price</code> value, and the <code>priceMode</code> to <code>ExternalPrice</code> LineItemPriceMode.</p>
      */
 
     public LineItemDraftBuilder externalPrice(
@@ -201,7 +164,7 @@ public class LineItemDraftBuilder implements Builder<LineItemDraft> {
     }
 
     /**
-     *  <p>Sets the line item <code>price</code> to the given value and sets the line item <code>priceMode</code> to <code>ExternalPrice</code> LineItemPriceMode.</p>
+     *  <p>Sets the LineItem <code>price</code> value, and the <code>priceMode</code> to <code>ExternalPrice</code> LineItemPriceMode.</p>
      */
 
     public LineItemDraftBuilder externalPrice(@Nullable final com.commercetools.api.models.common.Money externalPrice) {
@@ -210,7 +173,7 @@ public class LineItemDraftBuilder implements Builder<LineItemDraft> {
     }
 
     /**
-     *  <p>Sets the line item <code>price</code> and <code>totalPrice</code> to the given values and sets the line item <code>priceMode</code> to <code>ExternalTotal</code> LineItemPriceMode.</p>
+     *  <p>Sets the LineItem <code>price</code> and <code>totalPrice</code> values, and the <code>priceMode</code> to <code>ExternalTotal</code> LineItemPriceMode.</p>
      */
 
     public LineItemDraftBuilder externalTotalPrice(
@@ -222,7 +185,7 @@ public class LineItemDraftBuilder implements Builder<LineItemDraft> {
     }
 
     /**
-     *  <p>Sets the line item <code>price</code> and <code>totalPrice</code> to the given values and sets the line item <code>priceMode</code> to <code>ExternalTotal</code> LineItemPriceMode.</p>
+     *  <p>Sets the LineItem <code>price</code> and <code>totalPrice</code> values, and the <code>priceMode</code> to <code>ExternalTotal</code> LineItemPriceMode.</p>
      */
 
     public LineItemDraftBuilder externalTotalPrice(
@@ -232,7 +195,28 @@ public class LineItemDraftBuilder implements Builder<LineItemDraft> {
     }
 
     /**
-     *  <p>Inventory mode specific to the line item only, valid for the entire <code>quantity</code> of the line item. Set only if inventory mode should be different from the <code>inventoryMode</code> specified on the Cart.</p>
+     *  <p>External Tax Rate for the Line Item if the Cart has the <code>External</code> TaxMode.</p>
+     */
+
+    public LineItemDraftBuilder externalTaxRate(
+            Function<com.commercetools.api.models.cart.ExternalTaxRateDraftBuilder, com.commercetools.api.models.cart.ExternalTaxRateDraftBuilder> builder) {
+        this.externalTaxRate = builder.apply(com.commercetools.api.models.cart.ExternalTaxRateDraftBuilder.of())
+                .build();
+        return this;
+    }
+
+    /**
+     *  <p>External Tax Rate for the Line Item if the Cart has the <code>External</code> TaxMode.</p>
+     */
+
+    public LineItemDraftBuilder externalTaxRate(
+            @Nullable final com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate) {
+        this.externalTaxRate = externalTaxRate;
+        return this;
+    }
+
+    /**
+     *  <p>Inventory mode specific to the Line Item only, and valid for the entire <code>quantity</code> of the Line Item. Set only if the inventory mode should be different from the <code>inventoryMode</code> specified on the Cart.</p>
      */
 
     public LineItemDraftBuilder inventoryMode(
@@ -242,7 +226,7 @@ public class LineItemDraftBuilder implements Builder<LineItemDraft> {
     }
 
     /**
-     *  <p>Container for line item specific address(es).</p>
+     *  <p>Container for Line Item-specific addresses.</p>
      */
 
     public LineItemDraftBuilder shippingDetails(
@@ -253,12 +237,31 @@ public class LineItemDraftBuilder implements Builder<LineItemDraft> {
     }
 
     /**
-     *  <p>Container for line item specific address(es).</p>
+     *  <p>Container for Line Item-specific addresses.</p>
      */
 
     public LineItemDraftBuilder shippingDetails(
             @Nullable final com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails) {
         this.shippingDetails = shippingDetails;
+        return this;
+    }
+
+    /**
+     *  <p>Custom Fields for the Line Item.</p>
+     */
+
+    public LineItemDraftBuilder custom(
+            Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraftBuilder> builder) {
+        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsDraftBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Custom Fields for the Line Item.</p>
+     */
+
+    public LineItemDraftBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFieldsDraft custom) {
+        this.custom = custom;
         return this;
     }
 
@@ -288,23 +291,13 @@ public class LineItemDraftBuilder implements Builder<LineItemDraft> {
     }
 
     @Nullable
-    public com.commercetools.api.models.channel.ChannelResourceIdentifier getSupplyChannel() {
-        return this.supplyChannel;
-    }
-
-    @Nullable
     public com.commercetools.api.models.channel.ChannelResourceIdentifier getDistributionChannel() {
         return this.distributionChannel;
     }
 
     @Nullable
-    public com.commercetools.api.models.cart.ExternalTaxRateDraft getExternalTaxRate() {
-        return this.externalTaxRate;
-    }
-
-    @Nullable
-    public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
-        return this.custom;
+    public com.commercetools.api.models.channel.ChannelResourceIdentifier getSupplyChannel() {
+        return this.supplyChannel;
     }
 
     @Nullable
@@ -318,6 +311,11 @@ public class LineItemDraftBuilder implements Builder<LineItemDraft> {
     }
 
     @Nullable
+    public com.commercetools.api.models.cart.ExternalTaxRateDraft getExternalTaxRate() {
+        return this.externalTaxRate;
+    }
+
+    @Nullable
     public com.commercetools.api.models.cart.InventoryMode getInventoryMode() {
         return this.inventoryMode;
     }
@@ -327,17 +325,22 @@ public class LineItemDraftBuilder implements Builder<LineItemDraft> {
         return this.shippingDetails;
     }
 
+    @Nullable
+    public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
+        return this.custom;
+    }
+
     public LineItemDraft build() {
-        return new LineItemDraftImpl(productId, variantId, sku, quantity, addedAt, supplyChannel, distributionChannel,
-            externalTaxRate, custom, externalPrice, externalTotalPrice, inventoryMode, shippingDetails);
+        return new LineItemDraftImpl(productId, variantId, sku, quantity, addedAt, distributionChannel, supplyChannel,
+            externalPrice, externalTotalPrice, externalTaxRate, inventoryMode, shippingDetails, custom);
     }
 
     /**
      * builds LineItemDraft without checking for non null required values
      */
     public LineItemDraft buildUnchecked() {
-        return new LineItemDraftImpl(productId, variantId, sku, quantity, addedAt, supplyChannel, distributionChannel,
-            externalTaxRate, custom, externalPrice, externalTotalPrice, inventoryMode, shippingDetails);
+        return new LineItemDraftImpl(productId, variantId, sku, quantity, addedAt, distributionChannel, supplyChannel,
+            externalPrice, externalTotalPrice, externalTaxRate, inventoryMode, shippingDetails, custom);
     }
 
     public static LineItemDraftBuilder of() {
@@ -351,14 +354,14 @@ public class LineItemDraftBuilder implements Builder<LineItemDraft> {
         builder.sku = template.getSku();
         builder.quantity = template.getQuantity();
         builder.addedAt = template.getAddedAt();
-        builder.supplyChannel = template.getSupplyChannel();
         builder.distributionChannel = template.getDistributionChannel();
-        builder.externalTaxRate = template.getExternalTaxRate();
-        builder.custom = template.getCustom();
+        builder.supplyChannel = template.getSupplyChannel();
         builder.externalPrice = template.getExternalPrice();
         builder.externalTotalPrice = template.getExternalTotalPrice();
+        builder.externalTaxRate = template.getExternalTaxRate();
         builder.inventoryMode = template.getInventoryMode();
         builder.shippingDetails = template.getShippingDetails();
+        builder.custom = template.getCustom();
         return builder;
     }
 

@@ -43,7 +43,7 @@ public class ClassificationShippingRateInputDraftImpl implements ClassificationS
     }
 
     /**
-     *
+     *  <p>Key of the value used as a programmatic identifier.</p>
      */
 
     public String getKey() {

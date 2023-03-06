@@ -15,7 +15,8 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * TaxPortionDraft
+ *  <p>Represents the portions that sum up to the <code>totalGross</code> field of a TaxedPrice.</p>
+ *  <p>The portions are calculated from the TaxRates. If a Tax Rate has SubRates, they are used and can be identified by name. Tax portions from Line Items with the same <code>rate</code> and <code>name</code> will be accumulated to the same tax portion.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -33,22 +34,21 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface TaxPortionDraft extends io.vrap.rmf.base.client.Draft<TaxPortionDraft> {
 
     /**
-     *
+     *  <p>Name of the tax portion.</p>
      */
 
     @JsonProperty("name")
     public String getName();
 
     /**
-     *
+     *  <p>A number in the range 0-1.</p>
      */
     @NotNull
     @JsonProperty("rate")
     public Double getRate();
 
     /**
-     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
-     *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
+     *  <p>Money value for the tax portion.</p>
      */
     @NotNull
     @Valid

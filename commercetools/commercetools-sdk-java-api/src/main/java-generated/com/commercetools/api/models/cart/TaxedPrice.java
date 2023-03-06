@@ -8,7 +8,7 @@ import java.util.function.Function;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
-import com.commercetools.api.models.common.TypedMoney;
+import com.commercetools.api.models.common.CentPrecisionMoney;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -34,23 +34,24 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface TaxedPrice {
 
     /**
-     *
+     *  <p>Total net price of the Cart or Order.</p>
      */
     @NotNull
     @Valid
     @JsonProperty("totalNet")
-    public TypedMoney getTotalNet();
+    public CentPrecisionMoney getTotalNet();
 
     /**
-     *
+     *  <p>Total gross price of the Cart or Order.</p>
      */
     @NotNull
     @Valid
     @JsonProperty("totalGross")
-    public TypedMoney getTotalGross();
+    public CentPrecisionMoney getTotalGross();
 
     /**
-     *  <p>TaxedPrice fields that can be used in query predicates: <code>totalNet</code>, <code>totalGross</code>.</p>
+     *  <p>Taxable portions added to the total net price.</p>
+     *  <p>Calculated from the TaxRates.</p>
      */
     @NotNull
     @Valid
@@ -58,22 +59,23 @@ public interface TaxedPrice {
     public List<TaxPortion> getTaxPortions();
 
     /**
-     *  <p>Calculated automatically as the subtraction of <code>totalGross</code> - <code>totalNet</code>.</p>
+     *  <p>Total tax applicable for the Cart or Order.</p>
+     *  <p>Automatically calculated as the difference between the <code>totalGross</code> and <code>totalNet</code> values.</p>
      */
     @Valid
     @JsonProperty("totalTax")
-    public TypedMoney getTotalTax();
+    public CentPrecisionMoney getTotalTax();
 
-    public void setTotalNet(final TypedMoney totalNet);
+    public void setTotalNet(final CentPrecisionMoney totalNet);
 
-    public void setTotalGross(final TypedMoney totalGross);
+    public void setTotalGross(final CentPrecisionMoney totalGross);
 
     @JsonIgnore
     public void setTaxPortions(final TaxPortion... taxPortions);
 
     public void setTaxPortions(final List<TaxPortion> taxPortions);
 
-    public void setTotalTax(final TypedMoney totalTax);
+    public void setTotalTax(final CentPrecisionMoney totalTax);
 
     public static TaxedPrice of() {
         return new TaxedPriceImpl();

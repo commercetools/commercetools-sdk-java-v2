@@ -27,7 +27,7 @@ public class CartSetShippingMethodTaxRateActionBuilder implements Builder<CartSe
     private com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate;
 
     /**
-     *
+     *  <p>Value to set. If empty, any existing value is removed.</p>
      */
 
     public CartSetShippingMethodTaxRateActionBuilder externalTaxRate(
@@ -38,7 +38,7 @@ public class CartSetShippingMethodTaxRateActionBuilder implements Builder<CartSe
     }
 
     /**
-     *
+     *  <p>Value to set. If empty, any existing value is removed.</p>
      */
 
     public CartSetShippingMethodTaxRateActionBuilder externalTaxRate(

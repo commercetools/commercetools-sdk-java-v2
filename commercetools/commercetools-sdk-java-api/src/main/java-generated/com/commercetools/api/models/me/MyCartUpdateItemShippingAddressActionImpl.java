@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * MyCartUpdateItemShippingAddressAction
+ *  <p>Updates an address in <code>itemShippingAddresses</code> by keeping the Address <code>key</code>.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class MyCartUpdateItemShippingAddressActionImpl implements MyCartUpdateItemShippingAddressAction, ModelBase {
@@ -44,7 +44,7 @@ public class MyCartUpdateItemShippingAddressActionImpl implements MyCartUpdateIt
     }
 
     /**
-     *  <p>Polymorphic base type that represents a postal address and contact details. Depending on the read or write action, it can be either Address or AddressDraft that only differ in the data type for the optional <code>custom</code> field.</p>
+     *  <p>The new Address with the same <code>key</code> as the Address it will replace.</p>
      */
 
     public com.commercetools.api.models.common.BaseAddress getAddress() {

@@ -13,7 +13,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * CartChangeTaxRoundingModeAction
+ *  <p>Changing the tax rounding mode leads to recalculation of taxes.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -32,7 +32,7 @@ public interface CartChangeTaxRoundingModeAction extends CartUpdateAction {
     String CHANGE_TAX_ROUNDING_MODE = "changeTaxRoundingMode";
 
     /**
-     *
+     *  <p>New value to set.</p>
      */
     @NotNull
     @JsonProperty("taxRoundingMode")

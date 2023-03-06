@@ -14,7 +14,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Creates a request for creating new Orders or updating existing ones.</p>
+ *  <p>Creates a request for creating new Orders.</p>
  *
  * <hr>
  * <div class=code-example>

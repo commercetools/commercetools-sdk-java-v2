@@ -3,6 +3,8 @@ package com.commercetools.api.models.cart;
 
 import java.util.*;
 
+import javax.annotation.Nullable;
+
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -13,7 +15,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <div class=code-example>
  * <pre><code class='java'>
  *     CartSetCustomerEmailAction cartSetCustomerEmailAction = CartSetCustomerEmailAction.builder()
- *             .email("{email}")
  *             .build()
  * </code></pre>
  * </div>
@@ -21,23 +22,24 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CartSetCustomerEmailActionBuilder implements Builder<CartSetCustomerEmailAction> {
 
+    @Nullable
     private String email;
 
     /**
-     *
+     *  <p>Value to set. If empty, any existing value is removed.</p>
      */
 
-    public CartSetCustomerEmailActionBuilder email(final String email) {
+    public CartSetCustomerEmailActionBuilder email(@Nullable final String email) {
         this.email = email;
         return this;
     }
 
+    @Nullable
     public String getEmail() {
         return this.email;
     }
 
     public CartSetCustomerEmailAction build() {
-        Objects.requireNonNull(email, CartSetCustomerEmailAction.class + ": email is missing");
         return new CartSetCustomerEmailActionImpl(email);
     }
 

@@ -10,7 +10,7 @@ import com.fasterxml.jackson.annotation.JsonValue;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>This mode determines the type of Prices used for Product Price Selection as well as for LineItem Price selection.</p>
+ *  <p>This mode determines the type of Prices used for Product Price Selection and for LineItem Price selection.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public interface ProductPriceModeEnum {

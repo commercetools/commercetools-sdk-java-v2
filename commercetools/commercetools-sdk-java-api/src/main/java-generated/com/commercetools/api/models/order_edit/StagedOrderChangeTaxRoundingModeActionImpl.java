@@ -44,7 +44,7 @@ public class StagedOrderChangeTaxRoundingModeActionImpl implements StagedOrderCh
     }
 
     /**
-     *
+     *  <p>Determines how monetary values are rounded.</p>
      */
 
     public com.commercetools.api.models.cart.RoundingMode getTaxRoundingMode() {

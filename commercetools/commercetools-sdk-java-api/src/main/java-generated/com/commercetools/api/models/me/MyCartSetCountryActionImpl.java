@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * MyCartSetCountryAction
+ *  <p>Setting the country can lead to changes in the LineItem prices.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class MyCartSetCountryActionImpl implements MyCartSetCountryAction, ModelBase {
@@ -43,7 +43,8 @@ public class MyCartSetCountryActionImpl implements MyCartSetCountryAction, Model
     }
 
     /**
-     *  <p>Two-digit country code as per ISO 3166-1 alpha-2.</p>
+     *  <p>Value to set. If empty, any existing value is removed.</p>
+     *  <p>If the Cart is bound to a <code>store</code>, the provided value must be included in the Store's <code>countries</code>. Otherwise a CountryNotConfiguredInStore error is returned.</p>
      */
 
     public String getCountry() {

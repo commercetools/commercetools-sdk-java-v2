@@ -18,8 +18,8 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
  *  <p>Returned when the Price, Tax Rate, or Shipping Rate of some Line Items changed since they were last added to the Cart.</p>
  *  <p>The error is returned as a failed response to:</p>
  *  <ul>
- *   <li>Create Order from Cart and Create Order from Cart in a Store requests on Orders.</li>
- *   <li>Create Order from a Cart and Create Order in a Store from a Cart requests on My Orders.</li>
+ *   <li>Create Order from Cart and Create Order in Store from Cart requests on Orders.</li>
+ *   <li>Create Order from Cart and Create Order in Store from Cart requests on My Orders.</li>
  *  </ul>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")

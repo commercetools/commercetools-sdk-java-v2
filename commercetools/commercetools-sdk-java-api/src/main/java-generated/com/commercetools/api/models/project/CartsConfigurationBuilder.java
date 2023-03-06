@@ -29,7 +29,8 @@ public class CartsConfigurationBuilder implements Builder<CartsConfiguration> {
     private Boolean countryTaxRateFallbackEnabled;
 
     /**
-     *  <p>Default value for the <code>deleteDaysAfterLastModification</code> parameter of the CartDraft. This field may not be present on Projects created before January 2020.</p>
+     *  <p>Default value for the <code>deleteDaysAfterLastModification</code> parameter of the CartDraft and MyCartDraft. If a ChangeSubscription for Carts exists, a ResourceDeletedDeliveryPayload is sent upon deletion of a Cart.</p>
+     *  <p>This field may not be present on Projects created before January 2020.</p>
      */
 
     public CartsConfigurationBuilder deleteDaysAfterLastModification(

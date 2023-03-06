@@ -25,13 +25,13 @@ import com.fasterxml.jackson.databind.JsonNode;
  *
  * <p>{@link com.commercetools.api.models.business_unit.BusinessUnitSetCustomFieldAction#ofUnset(String)}</p>
  * {@include.example example.HelperMethodsTest#businessUnitSetCustomFieldUnset()}
- *
  * <p>{@link com.commercetools.api.models.business_unit.BusinessUnitSetAddressCustomFieldAction#ofUnset(String)}</p>
  * {@include.example example.HelperMethodsTest#businessUnitSetAddressCustomFieldUnset()}
  *
  * <h3>Carts</h3>
  *
- * <p>{@link com.commercetools.api.models.cart.InventoryMode##defaultValue()}</p>
+ * To be added
+ * <p>{com.commercetools.api.models.cart.InventoryMode##defaultValue()}</p>
  * {@include.example example.HelperMethodsTest#cartInventoryModeDefaultValue()}
  * <p>{@link com.commercetools.api.models.cart.Cart#toResourceIdentifier()}</p>
  * {@include.example example.HelperMethodsTest#cartToResourceIdentifier()}
@@ -116,8 +116,33 @@ import com.fasterxml.jackson.databind.JsonNode;
  * {@include.example example.HelperMethodsTest#channelSetCustomFieldUnset()}
  *
  * <h3>Common</h3>
- * <h4>MoneyUtil</h4>
+ * <h4>BaseAddress</h4>
+ * <p>{@link com.commercetools.api.models.common.BaseAddress#toDraft())}</p>
+ * {@include.example example.HelperMethodsTest#toAddressDraft()}
+ * <p>{@link com.commercetools.api.models.common.BaseAddress#toDraftBuilder()}</p>
+ * {@include.example example.HelperMethodsTest#toAddressDraftBuilder()}
+ * <p>{@link com.commercetools.api.models.common.BaseAddress#equalsIgnoreId(BaseAddress)} ())}</p>
+ * {@include.example example.HelperMethodsTest#equalsIgnoreId()}
  *
+ * <h4>CentPrecisionMoney</h4>
+ * <p>{@link com.commercetools.api.models.common.CentPrecisionMoney#toDraft())}</p>
+ * {@include.example example.HelperMethodsTest#toCentPrecisionMoneyDraft()}
+ *
+ * <h4>HighPrecisionMoney</h4>
+ * <p>{@link com.commercetools.api.models.common.HighPrecisionMoney#toDraft()}</p>
+ * {@include.example example.HelperMethodsTest#toHighPrecisionMoneyDraft()}
+ * <p>{@link com.commercetools.api.models.common.HighPrecisionMoney#createMoneyOperator()}</p>
+ * {@include.example example.HelperMethodsTest#createMoneyOperator()}
+ * <p>{@link com.commercetools.api.models.common.HighPrecisionMoneyDraft#createMoneyOperator()}</p>
+ * {@include.example example.HelperMethodsTest#createMoneyOperatorFromDraft()}
+ *
+ * <h4>TypedMoney</h4>
+ * <p>{@link com.commercetools.api.models.common.TypedMoney#createMoneyOperator()}</p>
+ * {@include.example example.HelperMethodsTest#createMoneyOperatorTypedMoney()}
+ * <p>{@link com.commercetools.api.models.common.TypedMoneyDraft#createMoneyOperator()}</p>
+ * {@include.example example.HelperMethodsTest#createMoneyOperatorFromTypedMoneyDraft()}
+ *
+ * <h4>MoneyUtil</h4>
  * <p>{@link com.commercetools.api.models.common.MoneyUtil#toMonetaryAmount(Money)}</p>
  * {@include.example example.HelperMethodsTest#moneyToMonetaryAmount()}
  * <p>{@link com.commercetools.api.models.common.MoneyUtil#toMonetaryAmount(TypedMoneyDraft)}</p>
@@ -208,43 +233,84 @@ import com.fasterxml.jackson.databind.JsonNode;
  * <p>{@link com.commercetools.api.models.inventory.InventoryEntrySetKeyAction#ofUnset()}</p>
  * {@include.example example.HelperMethodsTest#inventorySetKeyUnset()}
  *
-
  * <h3>Order Edits</h3>
  *
- * <p>{@link com.commercetools.api.models.order_edit.OrderEditSetKeyAction#ofUnset()} ofUnset()</p>
- * <p>{@link com.commercetools.api.models.order_edit.OrderEditSetCustomFieldAction#ofUnset(String)} ofUnset(final String name)
- * <p>{@link com.commercetools.api.models.order_edit.StagedOrderSetShippingRateInputAction#ofUnset()} ofUnset()</p>
- * <p>{@link com.commercetools.api.models.order_edit.StagedOrderSetDeliveryAddressAction#ofUnset()} ofUnset()</p>
- * <p>{@link com.commercetools.api.models.order_edit.StagedOrderSetLineItemCustomFieldAction#ofUnset(String, String)} ofUnset(final String name, final String lineItemId)</p>
- * <p>{@link com.commercetools.api.models.order_edit.StagedOrderSetCustomLineItemCustomFieldAction#ofUnset(String, String)} ofUnset(final String name, final String customLineItemId)</p>
- * <p>{@link com.commercetools.api.models.order_edit.StagedOrderSetDeliveryAddressCustomFieldAction#ofUnset(String, String)} ofUnset(final String name, final String deliveryId)</p>
- * <p>{@link com.commercetools.api.models.order_edit.StagedOrderSetItemShippingAddressCustomFieldAction#ofUnset(String, String)} ofUnset(final String name, final String addressKey)</p>
- * <p>{@link com.commercetools.api.models.order_edit.StagedOrderSetShippingAddressCustomFieldAction#ofUnset(String)} ofUnset(final String name)</p>
- * <p>{@link com.commercetools.api.models.order_edit.StagedOrderSetDeliveryCustomFieldAction#ofUnset(String, String)} ofUnset(final String name, final String deliveryId)</p>
- * <p>{@link com.commercetools.api.models.order_edit.StagedOrderSetParcelCustomFieldAction#ofUnset(String, String)} ofUnset(final String name, final String parcelId)</p>
- * <p>{@link com.commercetools.api.models.order_edit.StagedOrderSetReturnItemCustomFieldAction#ofUnset(String, String)} ofUnset(final String name, final String returnItemId)</p>
- * <p>{@link com.commercetools.api.models.order_edit.StagedOrderSetCustomFieldAction#ofUnset(String)} ofUnset(final String name)</p>
+ * <p>{@link com.commercetools.api.models.order_edit.OrderEdit#toResourceIdentifier()}</p>
+ * {@include.example example.HelperMethodsTest#orderEditResourceIdentifier()}
+ * <p>{@link com.commercetools.api.models.order_edit.OrderEdit#toReference()}</p>
+ * {@include.example example.HelperMethodsTest#orderEditToReference()}
+ * <p>{@link com.commercetools.api.models.order_edit.OrderEditSetKeyAction#ofUnset()}</p>
+ * {@include.example example.HelperMethodsTest#orderEditSetKeyUnset()}
+ * <p>{@link com.commercetools.api.models.order_edit.OrderEditSetCustomFieldAction#ofUnset(String)}</p>
+ * {@include.example example.HelperMethodsTest#orderEditSetCustomFieldUnset()}
+ * <p>{@link com.commercetools.api.models.order_edit.StagedOrderSetShippingRateInputAction#ofUnset()}</p>
+ * {@include.example example.HelperMethodsTest#orderEditStagedOrderSetShippingRateInputUnset()}
+ * <p>{@link com.commercetools.api.models.order_edit.StagedOrderSetDeliveryAddressAction#ofUnset()}</p>
+ * {@include.example example.HelperMethodsTest#orderEditStagedOrderSetDeliveryAddressInputUnset()}
+ * <p>{@link com.commercetools.api.models.order_edit.StagedOrderSetLineItemCustomFieldAction#ofUnset(String, String)}</p>
+ * {@include.example example.HelperMethodsTest#orderEditStagedOrderSetLineItemCustomFieldUnset()}
+ * <p>{@link com.commercetools.api.models.order_edit.StagedOrderSetCustomLineItemCustomFieldAction#ofUnset(String, String)}</p>
+ * {@include.example example.HelperMethodsTest#orderEditStagedOrderSetCustomLineItemCustomFieldUnset()}
+ * <p>{@link com.commercetools.api.models.order_edit.StagedOrderSetDeliveryAddressCustomFieldAction#ofUnset(String, String)}</p>
+ * {@include.example example.HelperMethodsTest#orderEditStagedOrderSetDeliveryAddressCustomFieldUnset()}
+ * <p>{@link com.commercetools.api.models.order_edit.StagedOrderSetItemShippingAddressCustomFieldAction#ofUnset(String, String)}</p>
+ * {@include.example example.HelperMethodsTest#orderEditStagedOrderSetItemShippingAddressCustomFieldUnset()}
+ * <p>{@link com.commercetools.api.models.order_edit.StagedOrderSetShippingAddressCustomFieldAction#ofUnset(String)}</p>
+ * {@include.example example.HelperMethodsTest#orderEditStagedOrderSetShippingAddressCustomFieldUnset()}
+ * <p>{@link com.commercetools.api.models.order_edit.StagedOrderSetDeliveryCustomFieldAction#ofUnset(String, String)}</p>
+ * {@include.example example.HelperMethodsTest#orderEditStagedOrderSetDeliveryCustomFieldUnset()}
+ * <p>{@link com.commercetools.api.models.order_edit.StagedOrderSetParcelCustomFieldAction#ofUnset(String, String)}</p>
+ * {@include.example example.HelperMethodsTest#orderEditStagedOrderSetParcelCustomFieldUnset()}
+ * <p>{@link com.commercetools.api.models.order_edit.StagedOrderSetReturnItemCustomFieldAction#ofUnset(String, String)}</p>
+ * {@include.example example.HelperMethodsTest#orderEditStagedOrderSetReturnItemCustomFieldUnset()}
+ * <p>{@link com.commercetools.api.models.order_edit.StagedOrderSetCustomFieldAction#ofUnset(String)}</p>
+ * {@include.example example.HelperMethodsTest#orderEditStagedOrderSetCustomFieldUnset()}
  *
  * <h3>Orders</h3>
  *
- * <p>{@link com.commercetools.api.models.order.OrderSetDeliveryAddressAction#ofUnset(String)} ofUnset(final String deliveryId)</p>
- * <p>{@link com.commercetools.api.models.order.OrderSetLineItemCustomFieldAction#ofUnset(String, String)} ofUnset(final String name, final String lineItemId)</p>
- * <p>{@link com.commercetools.api.models.order.OrderSetCustomFieldAction#ofUnset(String)} ofUnset(final String name)</p>
- * <p>{@link com.commercetools.api.models.order.OrderSetBillingAddressCustomFieldAction#ofUnset(String)} ofUnset(final String name)</p>
- * <p>{@link com.commercetools.api.models.order.OrderSetCustomLineItemCustomFieldAction#ofUnset(String, String)} ofUnset(final String name, final String customLineItemId)</p>
- * <p>{@link com.commercetools.api.models.order.OrderSetDeliveryAddressCustomFieldAction#ofUnset(String, String)} ofUnset(final String name, final String deliveryId)</p>
- * <p>{@link com.commercetools.api.models.order.OrderSetItemShippingAddressCustomFieldAction#ofUnset(String, String)} ofUnset(final String name, final String addressKey)</p>
- * <p>{@link com.commercetools.api.models.order.OrderSetShippingAddressCustomFieldAction#ofUnset(String)} ofUnset(final String name)</p>
- * <p>{@link com.commercetools.api.models.order.OrderSetDeliveryAddressCustomFieldAction#ofUnset(String, String)} ofUnset(final String name, final String deliveryId)</p>
- * <p>{@link com.commercetools.api.models.order.OrderSetParcelCustomFieldAction#ofUnset(String, String)} ofUnset(final String name, final String parcelId)</p>
- * <p>{@link com.commercetools.api.models.order.OrderSetReturnItemCustomFieldAction#ofUnset(String, String)} ofUnset(final String name, final String returnItemId)</p>
- * <p>{@link com.commercetools.api.client.ByProjectKeyOrdersGet#byCustomerId(String)} ByProjectKeyOrdersGet byCustomerId(final String customerId)</p>
- * <p>{@link com.commercetools.api.client.ByProjectKeyOrdersGet#byCustomerEmail(String)} ByProjectKeyOrdersGet byCustomerEmail(final String customerEmail)</p>
+ * <p>{@link com.commercetools.api.models.order.Order#toResourceIdentifier()}</p>
+ * {@include.example example.HelperMethodsTest#orderResourceIdentifier()}
+ * <p>{@link com.commercetools.api.models.order.Order#toReference()}</p>
+ * {@include.example example.HelperMethodsTest#orderToReference()}
+ * <p>{@link com.commercetools.api.models.order.Order#calculateSubTotalPrice()}</p>
+ * {@include.example example.HelperMethodsTest#calculateSubTotalPrice()}
+ * <p>{@link com.commercetools.api.models.order.Parcel#toDraft()}</p>
+ * {@include.example example.HelperMethodsTest#toParcelDraft()}
+ * <p>{@link com.commercetools.api.models.order.Parcel#toDraftBuilder()}
+ * {@include.example example.HelperMethodsTest#toParcelDraftBuilder()}
+ * <p>{@link com.commercetools.api.models.order.Delivery#toDraft()}</p>
+ * {@include.example example.HelperMethodsTest#toDeliveryDraft()}
+ * <p>{@link com.commercetools.api.models.order.Delivery#toDraftBuilder()}
+ * {@include.example example.HelperMethodsTest#toDeliveryDraftBuilder()}
+ * <p>{@link com.commercetools.api.models.order.OrderSetDeliveryAddressAction#ofUnset(String)}</p>
+ * {@include.example example.HelperMethodsTest#orderSetDeliveryAddressUnset()}
+ * <p>{@link com.commercetools.api.models.order.OrderSetLineItemCustomFieldAction#ofUnset(String, String)}</p>
+ * {@include.example example.HelperMethodsTest#orderSetLineItemCustomFieldUnset()}
+ * <p>{@link com.commercetools.api.models.order.OrderSetCustomFieldAction#ofUnset(String)}</p>
+ * {@include.example example.HelperMethodsTest#orderSetCustomFieldUnset()}
+ * <p>{@link com.commercetools.api.models.order.OrderSetBillingAddressCustomFieldAction#ofUnset(String)}</p>
+ * {@include.example example.HelperMethodsTest#orderSetBillingAddressCustomFieldUnset()}
+ * <p>{@link com.commercetools.api.models.order.OrderSetCustomLineItemCustomFieldAction#ofUnset(String, String)}</p>
+ * {@include.example example.HelperMethodsTest#orderSetCustomLineItemCustomFieldUnset()}
+ * <p>{@link com.commercetools.api.models.order.OrderSetDeliveryAddressCustomFieldAction#ofUnset(String, String)}</p>
+ * {@include.example example.HelperMethodsTest#orderSetDeliveryAddressCustomFieldUnset()}
+ * <p>{@link com.commercetools.api.models.order.OrderSetItemShippingAddressCustomFieldAction#ofUnset(String, String)}</p>
+ * {@include.example example.HelperMethodsTest#orderSetItemShippingAddressCustomFieldUnset()}
+ * <p>{@link com.commercetools.api.models.order.OrderSetShippingAddressCustomFieldAction#ofUnset(String)}</p>
+ * {@include.example example.HelperMethodsTest#orderSetShippingAddressCustomFieldUnset()}
+ * <p>{@link com.commercetools.api.models.order.OrderSetParcelCustomFieldAction#ofUnset(String, String)}</p>
+ * {@include.example example.HelperMethodsTest#orderSetParcelCustomFieldUnset()}
+ * <p>{@link com.commercetools.api.models.order.OrderSetReturnItemCustomFieldAction#ofUnset(String, String)}</p>
+ * {@include.example example.HelperMethodsTest#orderSetReturnItemCustomFieldUnset()}
+ *
+ * <p>{@link com.commercetools.api.client.ByProjectKeyOrdersGet#byCustomerId(String)}</p>
+ * {@include.example example.HelperMethodsTest#getOrderByCustomerId()}
+ * <p>{@link com.commercetools.api.client.ByProjectKeyOrdersGet#byCustomerEmail(String)}
  *
  * <h3>Payments</h3>
  *
  * <p>{@link com.commercetools.api.models.payment.PaymentSetTransactionCustomFieldAction#ofUnset(String, String)} ofUnset(final String name, final String transactionId)</p>
- * <p>{@link com.commercetools.api.models.payment.PaymentSetCustomFieldAction#ofUnset(String)} ofUnset(final String name)</p>
+ * <p>{@link com.commercetools.api.models.payment.PaymentSetCustomFieldAction#ofUnset(String)}</p>
  *
  * <h3>Products</h3>
  *
@@ -287,27 +353,27 @@ import com.fasterxml.jackson.databind.JsonNode;
  *
  * <h3>Quotes</h3>
  *
- * <p>{@link com.commercetools.api.models.quote.QuoteSetCustomFieldAction#ofUnset(String)} ofUnset(final String name)</p>
+ * <p>{@link com.commercetools.api.models.quote.QuoteSetCustomFieldAction#ofUnset(String)}</p>
  *
  * <h3>Quotes Requests</h3>
  *
- * <p>{@link com.commercetools.api.models.quote_request.QuoteRequestSetCustomFieldAction#ofUnset(String)} ofUnset(final String name)</p>
+ * <p>{@link com.commercetools.api.models.quote_request.QuoteRequestSetCustomFieldAction#ofUnset(String)}</p>
  *
  * <h3>Reviews</h3>
  *
- * <p>{@link com.commercetools.api.models.review.ReviewSetCustomFieldAction#ofUnset(String)} ofUnset(final String name)</p>
+ * <p>{@link com.commercetools.api.models.review.ReviewSetCustomFieldAction#ofUnset(String)}</p>
  * <p>{@link com.commercetools.api.models.review.ReviewSetCustomerAction#ofUnset()} ofUnset()</p>
  * <p>{@link com.commercetools.api.models.review.ReviewSetKeyAction#ofUnset()} ofUnset()</p>
  *
  * <h3>Shipping Methods</h3>
  *
- * <p>{@link com.commercetools.api.models.shipping_method.ShippingMethodSetCustomFieldAction#ofUnset(String)} ofUnset(final String name)</p>
+ * <p>{@link com.commercetools.api.models.shipping_method.ShippingMethodSetCustomFieldAction#ofUnset(String)}</p>
  * <p>{@link com.commercetools.api.models.shipping_method.ShippingMethodSetKeyAction#ofUnset()} ofUnset()</p>
  *
  * <h3>Shopping Lists</h3>
  *
  * <p>{@link com.commercetools.api.models.shopping_list.ShoppingListSetCustomerAction#ofUnset()} ofUnset()</p>
- * <p>{@link com.commercetools.api.models.shopping_list.ShoppingListSetCustomFieldAction#ofUnset(String)} ofUnset(final String name)</p>
+ * <p>{@link com.commercetools.api.models.shopping_list.ShoppingListSetCustomFieldAction#ofUnset(String)}</p>
  * <p>{@link com.commercetools.api.models.shopping_list.ShoppingListSetDeleteDaysAfterLastModificationAction#ofUnset()} ofUnset()</p>
  * <p>{@link com.commercetools.api.models.shopping_list.ShoppingListSetLineItemCustomFieldAction#ofUnset(String, String)} ofUnset(final String name, final String lineItemId)</p>
  * <p>{@link com.commercetools.api.models.shopping_list.ShoppingListSetKeyAction#ofUnset()} ofUnset()</p>
@@ -316,15 +382,15 @@ import com.fasterxml.jackson.databind.JsonNode;
  *
  * <h3>Staged Quotes</h3>
  *
- * <p>{@link com.commercetools.api.models.staged_quote.StagedQuoteSetCustomFieldAction#ofUnset(String)} ofUnset(final String name)</p>
+ * <p>{@link com.commercetools.api.models.staged_quote.StagedQuoteSetCustomFieldAction#ofUnset(String)}</p>
  *
  * <h3>Standalone Prices</h3>
  *
- * <p>{@link com.commercetools.api.models.standalone_price.StandalonePriceSetCustomFieldAction#ofUnset(String)} ofUnset(final String name)</p>
+ * <p>{@link com.commercetools.api.models.standalone_price.StandalonePriceSetCustomFieldAction#ofUnset(String)}</p>
  *
  * <h3>Stores</h3>
  *
- * <p>{@link com.commercetools.api.models.store.StoreSetCustomFieldAction#ofUnset(String)} ofUnset(final String name)</p>
+ * <p>{@link com.commercetools.api.models.store.StoreSetCustomFieldAction#ofUnset(String)}</p>
  *
  * <h3>Subscriptions</h3>
  *

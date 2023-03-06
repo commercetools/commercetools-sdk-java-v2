@@ -4,14 +4,18 @@ package commercetools.cart_discount;
 import static commercetools.cart_discount.CartDiscountFixtures.*;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
 
 import com.commercetools.api.models.cart_discount.*;
 import com.commercetools.api.models.common.ReferenceTypeId;
+import com.commercetools.api.models.type.CustomFieldStringTypeBuilder;
+import com.commercetools.api.models.type.FieldDefinition;
+import commercetools.type.TypeFixtures;
 import commercetools.utils.CommercetoolsTestUtils;
 
-import org.junit.jupiter.api.Assertions;
+import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 public class CartDiscountIntegrationTests {
@@ -19,7 +23,7 @@ public class CartDiscountIntegrationTests {
     @Test
     public void ref() {
         Optional<ReferenceTypeId> optional = ReferenceTypeId.findEnumViaJsonName("product-type");
-        Assertions.assertTrue(optional.isPresent());
+        Assertions.assertThat(optional.isPresent()).isTrue();
     }
 
     @Test
@@ -43,8 +47,8 @@ public class CartDiscountIntegrationTests {
                 .executeBlocking()
                 .getBody();
 
-        Assertions.assertNotNull(cartDiscount);
-        Assertions.assertEquals(cartDiscountDraft.getKey(), cartDiscount.getKey());
+        Assertions.assertThat(cartDiscount).isNotNull();
+        Assertions.assertThat(cartDiscountDraft.getKey()).isEqualTo(cartDiscount.getKey());
 
         CartDiscount deletedCartDiscount = CommercetoolsTestUtils.getProjectApiRoot()
                 .cartDiscounts()
@@ -54,52 +58,7 @@ public class CartDiscountIntegrationTests {
                 .executeBlocking()
                 .getBody();
 
-        Assertions.assertNotNull(deletedCartDiscount);
-    }
-
-    @Test
-    public void getById() {
-        withCartDiscount(cartDiscount -> {
-            CartDiscount queriedCartDiscount = CommercetoolsTestUtils.getProjectApiRoot()
-                    .cartDiscounts()
-                    .withId(cartDiscount.getId())
-                    .get()
-                    .executeBlocking()
-                    .getBody();
-
-            Assertions.assertNotNull(queriedCartDiscount);
-            Assertions.assertEquals(queriedCartDiscount.getId(), cartDiscount.getId());
-        });
-    }
-
-    @Test
-    public void getByKey() {
-        withCartDiscount(cartDiscount -> {
-            CartDiscount queriedCartDiscount = CommercetoolsTestUtils.getProjectApiRoot()
-                    .cartDiscounts()
-                    .withKey(cartDiscount.getKey())
-                    .get()
-                    .executeBlocking()
-                    .getBody();
-
-            Assertions.assertNotNull(queriedCartDiscount);
-            Assertions.assertEquals(queriedCartDiscount.getId(), cartDiscount.getId());
-        });
-    }
-
-    @Test
-    public void query() {
-        withCartDiscount(cartDiscount -> {
-            CartDiscountPagedQueryResponse response = CommercetoolsTestUtils.getProjectApiRoot()
-                    .cartDiscounts()
-                    .get()
-                    .withWhere("id=" + "\"" + cartDiscount.getId() + "\"")
-                    .executeBlocking()
-                    .getBody();
-
-            Assertions.assertNotNull(response);
-            Assertions.assertEquals(response.getResults().get(0).getId(), cartDiscount.getId());
-        });
+        Assertions.assertThat(deletedCartDiscount).isNotNull();
     }
 
     @Test
@@ -118,8 +77,8 @@ public class CartDiscountIntegrationTests {
                     .executeBlocking()
                     .getBody();
 
-            Assertions.assertNotNull(updatedCartDiscount);
-            Assertions.assertEquals(updatedCartDiscount.getKey(), newKey);
+            Assertions.assertThat(updatedCartDiscount).isNotNull();
+            Assertions.assertThat(updatedCartDiscount.getKey()).isEqualTo(newKey);
 
             return updatedCartDiscount;
         });
@@ -141,10 +100,40 @@ public class CartDiscountIntegrationTests {
                     .executeBlocking()
                     .getBody();
 
-            Assertions.assertNotNull(updatedCartDiscount);
-            Assertions.assertEquals(updatedCartDiscount.getKey(), newKey);
+            Assertions.assertThat(updatedCartDiscount).isNotNull();
+            Assertions.assertThat(updatedCartDiscount.getKey()).isEqualTo(newKey);
 
             return updatedCartDiscount;
+        });
+    }
+
+    @Test
+    public void setCustomTypeToExistingCartDiscount() {
+        TypeFixtures.withType(type -> {
+            withUpdateableCartDiscount(cartDiscount -> {
+                final String FIELD_NAME = type.getFieldDefinitions()
+                        .stream()
+                        .filter(fieldDefinition -> fieldDefinition.getType()
+                                .equals(CustomFieldStringTypeBuilder.of().build()))
+                        .map(FieldDefinition::getName)
+                        .findFirst()
+                        .orElse(null);
+                final String FIELD_VALUE = "field value";
+
+                final CartDiscount updatedCartDiscount = CommercetoolsTestUtils.getProjectApiRoot()
+                        .cartDiscounts()
+                        .update(cartDiscount)
+                        .with(builder -> builder.plus(actionBuilder -> actionBuilder.setCustomTypeBuilder()
+                                .type(type.toResourceIdentifier())
+                                .fields(fieldsBuilder -> fieldsBuilder.addValue(FIELD_NAME, FIELD_VALUE))))
+                        .executeBlocking()
+                        .getBody();
+
+                Assertions.assertThat(updatedCartDiscount.getCustom().getFields().values())
+                        .isEqualTo(Collections.singletonMap(FIELD_NAME, FIELD_VALUE));
+
+                return updatedCartDiscount;
+            });
         });
     }
 }

@@ -122,16 +122,16 @@
 <span class="source-line-no">109</span><span id="line.109">    public Long getVariantId();</span>
 <span class="source-line-no">110</span><span id="line.110"></span>
 <span class="source-line-no">111</span><span id="line.111">    /**</span>
-<span class="source-line-no">112</span><span id="line.112">     *  &lt;p&gt;Data of the ProductVariant. Returned when expanded using &lt;code&gt;expand=lineItems[*].variant&lt;/code&gt;.&lt;/p&gt;</span>
-<span class="source-line-no">113</span><span id="line.113">     *  &lt;p&gt;&lt;em&gt;Limitation: &lt;code&gt;expand=lineItems[0].variant&lt;/code&gt; is not supported.&lt;/em&gt;&lt;/p&gt;</span>
+<span class="source-line-no">112</span><span id="line.112">     *  &lt;p&gt;Data of the ProductVariant.&lt;/p&gt;</span>
+<span class="source-line-no">113</span><span id="line.113">     *  &lt;p&gt;Returned when expanded using &lt;code&gt;expand=lineItems[*].variant&lt;/code&gt;. You cannot expand only a single element of the array.&lt;/p&gt;</span>
 <span class="source-line-no">114</span><span id="line.114">     */</span>
 <span class="source-line-no">115</span><span id="line.115">    @Valid</span>
 <span class="source-line-no">116</span><span id="line.116">    @JsonProperty("variant")</span>
 <span class="source-line-no">117</span><span id="line.117">    public ProductVariant getVariant();</span>
 <span class="source-line-no">118</span><span id="line.118"></span>
 <span class="source-line-no">119</span><span id="line.119">    /**</span>
-<span class="source-line-no">120</span><span id="line.120">     *  &lt;p&gt;Slug of the current ProductData. Only returned when expanded using &lt;code&gt;expand=lineItems[*].productSlug&lt;/code&gt;.&lt;/p&gt;</span>
-<span class="source-line-no">121</span><span id="line.121">     *  &lt;p&gt;&lt;em&gt;Limitation: &lt;code&gt;expand=lineItems[0].productSlug&lt;/code&gt; is not supported.&lt;/em&gt;&lt;/p&gt;</span>
+<span class="source-line-no">120</span><span id="line.120">     *  &lt;p&gt;Slug of the current ProductData.&lt;/p&gt;</span>
+<span class="source-line-no">121</span><span id="line.121">     *  &lt;p&gt;Returned when expanded using &lt;code&gt;expand=lineItems[*].productSlug&lt;/code&gt;. You cannot expand only a single element of the array.&lt;/p&gt;</span>
 <span class="source-line-no">122</span><span id="line.122">     */</span>
 <span class="source-line-no">123</span><span id="line.123">    @Valid</span>
 <span class="source-line-no">124</span><span id="line.124">    @JsonProperty("productSlug")</span>

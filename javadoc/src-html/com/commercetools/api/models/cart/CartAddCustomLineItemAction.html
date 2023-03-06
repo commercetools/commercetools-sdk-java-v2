@@ -31,31 +31,31 @@
 <span class="source-line-no">018</span><span id="line.18">import io.vrap.rmf.base.client.utils.Generated;</span>
 <span class="source-line-no">019</span><span id="line.19"></span>
 <span class="source-line-no">020</span><span id="line.20">/**</span>
-<span class="source-line-no">021</span><span id="line.21"> * CartAddCustomLineItemAction</span>
-<span class="source-line-no">022</span><span id="line.22"> *</span>
-<span class="source-line-no">023</span><span id="line.23"> * &lt;hr&gt;</span>
-<span class="source-line-no">024</span><span id="line.24"> * Example to create an instance using the builder pattern</span>
-<span class="source-line-no">025</span><span id="line.25"> * &lt;div class=code-example&gt;</span>
-<span class="source-line-no">026</span><span id="line.26"> * &lt;pre&gt;&lt;code class='java'&gt;</span>
-<span class="source-line-no">027</span><span id="line.27"> *     CartAddCustomLineItemAction cartAddCustomLineItemAction = CartAddCustomLineItemAction.builder()</span>
-<span class="source-line-no">028</span><span id="line.28"> *             .money(moneyBuilder -&gt; moneyBuilder)</span>
-<span class="source-line-no">029</span><span id="line.29"> *             .name(nameBuilder -&gt; nameBuilder)</span>
-<span class="source-line-no">030</span><span id="line.30"> *             .quantity(0.3)</span>
-<span class="source-line-no">031</span><span id="line.31"> *             .slug("{slug}")</span>
-<span class="source-line-no">032</span><span id="line.32"> *             .build()</span>
-<span class="source-line-no">033</span><span id="line.33"> * &lt;/code&gt;&lt;/pre&gt;</span>
-<span class="source-line-no">034</span><span id="line.34"> * &lt;/div&gt;</span>
-<span class="source-line-no">035</span><span id="line.35"> */</span>
-<span class="source-line-no">036</span><span id="line.36">@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")</span>
-<span class="source-line-no">037</span><span id="line.37">@JsonDeserialize(as = CartAddCustomLineItemActionImpl.class)</span>
-<span class="source-line-no">038</span><span id="line.38">public interface CartAddCustomLineItemAction</span>
-<span class="source-line-no">039</span><span id="line.39">        extends CartUpdateAction, com.commercetools.api.models.CustomizableDraft&lt;CartAddCustomLineItemAction&gt; {</span>
-<span class="source-line-no">040</span><span id="line.40"></span>
-<span class="source-line-no">041</span><span id="line.41">    String ADD_CUSTOM_LINE_ITEM = "addCustomLineItem";</span>
-<span class="source-line-no">042</span><span id="line.42"></span>
-<span class="source-line-no">043</span><span id="line.43">    /**</span>
-<span class="source-line-no">044</span><span id="line.44">     *  &lt;p&gt;Draft type that stores amounts in cent precision for the specified currency.&lt;/p&gt;</span>
-<span class="source-line-no">045</span><span id="line.45">     *  &lt;p&gt;For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.&lt;/p&gt;</span>
+<span class="source-line-no">021</span><span id="line.21"> *  &lt;p&gt;If the Cart already contains a CustomLineItem with the same &lt;code&gt;slug&lt;/code&gt;, &lt;code&gt;name&lt;/code&gt;, &lt;code&gt;money&lt;/code&gt;, &lt;code&gt;taxCategory&lt;/code&gt;, &lt;code&gt;state&lt;/code&gt;, and Custom Fields, then only the quantity of the existing Custom Line Item is increased. If CustomLineItem &lt;code&gt;shippingDetails&lt;/code&gt; are set, they are merged with the &lt;code&gt;targets&lt;/code&gt; that already exist on the ItemShippingDetails of the Custom Line Item. In case of overlapping address keys the ItemShippingTarget &lt;code&gt;quantity&lt;/code&gt; is summed up.&lt;/p&gt;</span>
+<span class="source-line-no">022</span><span id="line.22"> *  &lt;p&gt;If the Cart already contains a Custom Line Item with the same slug that is otherwise not identical, an InvalidOperation error is returned.&lt;/p&gt;</span>
+<span class="source-line-no">023</span><span id="line.23"> *  &lt;p&gt;If the Tax Rate is not set, a MissingTaxRateForCountry error is returned.&lt;/p&gt;</span>
+<span class="source-line-no">024</span><span id="line.24"> *</span>
+<span class="source-line-no">025</span><span id="line.25"> * &lt;hr&gt;</span>
+<span class="source-line-no">026</span><span id="line.26"> * Example to create an instance using the builder pattern</span>
+<span class="source-line-no">027</span><span id="line.27"> * &lt;div class=code-example&gt;</span>
+<span class="source-line-no">028</span><span id="line.28"> * &lt;pre&gt;&lt;code class='java'&gt;</span>
+<span class="source-line-no">029</span><span id="line.29"> *     CartAddCustomLineItemAction cartAddCustomLineItemAction = CartAddCustomLineItemAction.builder()</span>
+<span class="source-line-no">030</span><span id="line.30"> *             .money(moneyBuilder -&gt; moneyBuilder)</span>
+<span class="source-line-no">031</span><span id="line.31"> *             .name(nameBuilder -&gt; nameBuilder)</span>
+<span class="source-line-no">032</span><span id="line.32"> *             .slug("{slug}")</span>
+<span class="source-line-no">033</span><span id="line.33"> *             .build()</span>
+<span class="source-line-no">034</span><span id="line.34"> * &lt;/code&gt;&lt;/pre&gt;</span>
+<span class="source-line-no">035</span><span id="line.35"> * &lt;/div&gt;</span>
+<span class="source-line-no">036</span><span id="line.36"> */</span>
+<span class="source-line-no">037</span><span id="line.37">@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")</span>
+<span class="source-line-no">038</span><span id="line.38">@JsonDeserialize(as = CartAddCustomLineItemActionImpl.class)</span>
+<span class="source-line-no">039</span><span id="line.39">public interface CartAddCustomLineItemAction</span>
+<span class="source-line-no">040</span><span id="line.40">        extends CartUpdateAction, com.commercetools.api.models.CustomizableDraft&lt;CartAddCustomLineItemAction&gt; {</span>
+<span class="source-line-no">041</span><span id="line.41"></span>
+<span class="source-line-no">042</span><span id="line.42">    String ADD_CUSTOM_LINE_ITEM = "addCustomLineItem";</span>
+<span class="source-line-no">043</span><span id="line.43"></span>
+<span class="source-line-no">044</span><span id="line.44">    /**</span>
+<span class="source-line-no">045</span><span id="line.45">     *  &lt;p&gt;Money value of the Custom Line Item. The value can be negative.&lt;/p&gt;</span>
 <span class="source-line-no">046</span><span id="line.46">     */</span>
 <span class="source-line-no">047</span><span id="line.47">    @NotNull</span>
 <span class="source-line-no">048</span><span id="line.48">    @Valid</span>
@@ -63,7 +63,7 @@
 <span class="source-line-no">050</span><span id="line.50">    public Money getMoney();</span>
 <span class="source-line-no">051</span><span id="line.51"></span>
 <span class="source-line-no">052</span><span id="line.52">    /**</span>
-<span class="source-line-no">053</span><span id="line.53">     *  &lt;p&gt;JSON object where the keys are of type Locale, and the values are the strings used for the corresponding language.&lt;/p&gt;</span>
+<span class="source-line-no">053</span><span id="line.53">     *  &lt;p&gt;Name of the Custom Line Item.&lt;/p&gt;</span>
 <span class="source-line-no">054</span><span id="line.54">     */</span>
 <span class="source-line-no">055</span><span id="line.55">    @NotNull</span>
 <span class="source-line-no">056</span><span id="line.56">    @Valid</span>
@@ -71,104 +71,115 @@
 <span class="source-line-no">058</span><span id="line.58">    public LocalizedString getName();</span>
 <span class="source-line-no">059</span><span id="line.59"></span>
 <span class="source-line-no">060</span><span id="line.60">    /**</span>
-<span class="source-line-no">061</span><span id="line.61">     *</span>
+<span class="source-line-no">061</span><span id="line.61">     *  &lt;p&gt;Number of Custom Line Items to add to the Cart.&lt;/p&gt;</span>
 <span class="source-line-no">062</span><span id="line.62">     */</span>
-<span class="source-line-no">063</span><span id="line.63">    @NotNull</span>
+<span class="source-line-no">063</span><span id="line.63"></span>
 <span class="source-line-no">064</span><span id="line.64">    @JsonProperty("quantity")</span>
 <span class="source-line-no">065</span><span id="line.65">    public Long getQuantity();</span>
 <span class="source-line-no">066</span><span id="line.66"></span>
 <span class="source-line-no">067</span><span id="line.67">    /**</span>
-<span class="source-line-no">068</span><span id="line.68">     *</span>
+<span class="source-line-no">068</span><span id="line.68">     *  &lt;p&gt;User-defined identifier used in a deep-link URL for the Custom Line Item. It must match the pattern &lt;code&gt;[a-zA-Z0-9_-]{2,256}&lt;/code&gt;.&lt;/p&gt;</span>
 <span class="source-line-no">069</span><span id="line.69">     */</span>
 <span class="source-line-no">070</span><span id="line.70">    @NotNull</span>
 <span class="source-line-no">071</span><span id="line.71">    @JsonProperty("slug")</span>
 <span class="source-line-no">072</span><span id="line.72">    public String getSlug();</span>
 <span class="source-line-no">073</span><span id="line.73"></span>
 <span class="source-line-no">074</span><span id="line.74">    /**</span>
-<span class="source-line-no">075</span><span id="line.75">     *  &lt;p&gt;ResourceIdentifier to a TaxCategory.&lt;/p&gt;</span>
-<span class="source-line-no">076</span><span id="line.76">     */</span>
-<span class="source-line-no">077</span><span id="line.77">    @Valid</span>
-<span class="source-line-no">078</span><span id="line.78">    @JsonProperty("taxCategory")</span>
-<span class="source-line-no">079</span><span id="line.79">    public TaxCategoryResourceIdentifier getTaxCategory();</span>
-<span class="source-line-no">080</span><span id="line.80"></span>
-<span class="source-line-no">081</span><span id="line.81">    /**</span>
-<span class="source-line-no">082</span><span id="line.82">     *  &lt;p&gt;The representation used when creating or updating a customizable data type with Custom Fields.&lt;/p&gt;</span>
-<span class="source-line-no">083</span><span id="line.83">     */</span>
-<span class="source-line-no">084</span><span id="line.84">    @Valid</span>
-<span class="source-line-no">085</span><span id="line.85">    @JsonProperty("custom")</span>
-<span class="source-line-no">086</span><span id="line.86">    public CustomFieldsDraft getCustom();</span>
-<span class="source-line-no">087</span><span id="line.87"></span>
-<span class="source-line-no">088</span><span id="line.88">    /**</span>
-<span class="source-line-no">089</span><span id="line.89">     *</span>
-<span class="source-line-no">090</span><span id="line.90">     */</span>
-<span class="source-line-no">091</span><span id="line.91">    @Valid</span>
-<span class="source-line-no">092</span><span id="line.92">    @JsonProperty("externalTaxRate")</span>
-<span class="source-line-no">093</span><span id="line.93">    public ExternalTaxRateDraft getExternalTaxRate();</span>
-<span class="source-line-no">094</span><span id="line.94"></span>
-<span class="source-line-no">095</span><span id="line.95">    /**</span>
-<span class="source-line-no">096</span><span id="line.96">     *  &lt;ul&gt;</span>
-<span class="source-line-no">097</span><span id="line.97">     *   &lt;li&gt;If &lt;code&gt;Standard&lt;/code&gt;, Cart Discounts with a matching CartDiscountCustomLineItemsTarget are applied to the Custom Line Item.&lt;/li&gt;</span>
-<span class="source-line-no">098</span><span id="line.98">     *   &lt;li&gt;If &lt;code&gt;External&lt;/code&gt;, Cart Discounts are not considered on the Custom Line Item.&lt;/li&gt;</span>
-<span class="source-line-no">099</span><span id="line.99">     *  &lt;/ul&gt;</span>
-<span class="source-line-no">100</span><span id="line.100">     */</span>
-<span class="source-line-no">101</span><span id="line.101"></span>
-<span class="source-line-no">102</span><span id="line.102">    @JsonProperty("priceMode")</span>
-<span class="source-line-no">103</span><span id="line.103">    public CustomLineItemPriceMode getPriceMode();</span>
-<span class="source-line-no">104</span><span id="line.104"></span>
-<span class="source-line-no">105</span><span id="line.105">    public void setMoney(final Money money);</span>
-<span class="source-line-no">106</span><span id="line.106"></span>
-<span class="source-line-no">107</span><span id="line.107">    public void setName(final LocalizedString name);</span>
-<span class="source-line-no">108</span><span id="line.108"></span>
-<span class="source-line-no">109</span><span id="line.109">    public void setQuantity(final Long quantity);</span>
-<span class="source-line-no">110</span><span id="line.110"></span>
-<span class="source-line-no">111</span><span id="line.111">    public void setSlug(final String slug);</span>
+<span class="source-line-no">075</span><span id="line.75">     *  &lt;p&gt;Used to select a Tax Rate when a Cart has the &lt;code&gt;Platform&lt;/code&gt; TaxMode.&lt;/p&gt;</span>
+<span class="source-line-no">076</span><span id="line.76">     *  &lt;p&gt;If TaxMode is &lt;code&gt;Platform&lt;/code&gt;, this field must not be empty.&lt;/p&gt;</span>
+<span class="source-line-no">077</span><span id="line.77">     */</span>
+<span class="source-line-no">078</span><span id="line.78">    @Valid</span>
+<span class="source-line-no">079</span><span id="line.79">    @JsonProperty("taxCategory")</span>
+<span class="source-line-no">080</span><span id="line.80">    public TaxCategoryResourceIdentifier getTaxCategory();</span>
+<span class="source-line-no">081</span><span id="line.81"></span>
+<span class="source-line-no">082</span><span id="line.82">    /**</span>
+<span class="source-line-no">083</span><span id="line.83">     *  &lt;p&gt;An external Tax Rate can be set if the Cart has &lt;code&gt;External&lt;/code&gt; TaxMode.&lt;/p&gt;</span>
+<span class="source-line-no">084</span><span id="line.84">     */</span>
+<span class="source-line-no">085</span><span id="line.85">    @Valid</span>
+<span class="source-line-no">086</span><span id="line.86">    @JsonProperty("externalTaxRate")</span>
+<span class="source-line-no">087</span><span id="line.87">    public ExternalTaxRateDraft getExternalTaxRate();</span>
+<span class="source-line-no">088</span><span id="line.88"></span>
+<span class="source-line-no">089</span><span id="line.89">    /**</span>
+<span class="source-line-no">090</span><span id="line.90">     *  &lt;p&gt;Container for Custom Line Item-specific addresses.&lt;/p&gt;</span>
+<span class="source-line-no">091</span><span id="line.91">     */</span>
+<span class="source-line-no">092</span><span id="line.92">    @Valid</span>
+<span class="source-line-no">093</span><span id="line.93">    @JsonProperty("shippingDetails")</span>
+<span class="source-line-no">094</span><span id="line.94">    public ItemShippingDetailsDraft getShippingDetails();</span>
+<span class="source-line-no">095</span><span id="line.95"></span>
+<span class="source-line-no">096</span><span id="line.96">    /**</span>
+<span class="source-line-no">097</span><span id="line.97">     *  &lt;p&gt;Custom Fields for the Custom Line Item.&lt;/p&gt;</span>
+<span class="source-line-no">098</span><span id="line.98">     */</span>
+<span class="source-line-no">099</span><span id="line.99">    @Valid</span>
+<span class="source-line-no">100</span><span id="line.100">    @JsonProperty("custom")</span>
+<span class="source-line-no">101</span><span id="line.101">    public CustomFieldsDraft getCustom();</span>
+<span class="source-line-no">102</span><span id="line.102"></span>
+<span class="source-line-no">103</span><span id="line.103">    /**</span>
+<span class="source-line-no">104</span><span id="line.104">     *  &lt;ul&gt;</span>
+<span class="source-line-no">105</span><span id="line.105">     *   &lt;li&gt;If &lt;code&gt;Standard&lt;/code&gt;, Cart Discounts with a matching CartDiscountCustomLineItemsTarget are applied to the Custom Line Item.&lt;/li&gt;</span>
+<span class="source-line-no">106</span><span id="line.106">     *   &lt;li&gt;If &lt;code&gt;External&lt;/code&gt;, Cart Discounts are not considered on the Custom Line Item.&lt;/li&gt;</span>
+<span class="source-line-no">107</span><span id="line.107">     *  &lt;/ul&gt;</span>
+<span class="source-line-no">108</span><span id="line.108">     */</span>
+<span class="source-line-no">109</span><span id="line.109"></span>
+<span class="source-line-no">110</span><span id="line.110">    @JsonProperty("priceMode")</span>
+<span class="source-line-no">111</span><span id="line.111">    public CustomLineItemPriceMode getPriceMode();</span>
 <span class="source-line-no">112</span><span id="line.112"></span>
-<span class="source-line-no">113</span><span id="line.113">    public void setTaxCategory(final TaxCategoryResourceIdentifier taxCategory);</span>
+<span class="source-line-no">113</span><span id="line.113">    public void setMoney(final Money money);</span>
 <span class="source-line-no">114</span><span id="line.114"></span>
-<span class="source-line-no">115</span><span id="line.115">    public void setCustom(final CustomFieldsDraft custom);</span>
+<span class="source-line-no">115</span><span id="line.115">    public void setName(final LocalizedString name);</span>
 <span class="source-line-no">116</span><span id="line.116"></span>
-<span class="source-line-no">117</span><span id="line.117">    public void setExternalTaxRate(final ExternalTaxRateDraft externalTaxRate);</span>
+<span class="source-line-no">117</span><span id="line.117">    public void setQuantity(final Long quantity);</span>
 <span class="source-line-no">118</span><span id="line.118"></span>
-<span class="source-line-no">119</span><span id="line.119">    public void setPriceMode(final CustomLineItemPriceMode priceMode);</span>
+<span class="source-line-no">119</span><span id="line.119">    public void setSlug(final String slug);</span>
 <span class="source-line-no">120</span><span id="line.120"></span>
-<span class="source-line-no">121</span><span id="line.121">    public static CartAddCustomLineItemAction of() {</span>
-<span class="source-line-no">122</span><span id="line.122">        return new CartAddCustomLineItemActionImpl();</span>
-<span class="source-line-no">123</span><span id="line.123">    }</span>
+<span class="source-line-no">121</span><span id="line.121">    public void setTaxCategory(final TaxCategoryResourceIdentifier taxCategory);</span>
+<span class="source-line-no">122</span><span id="line.122"></span>
+<span class="source-line-no">123</span><span id="line.123">    public void setExternalTaxRate(final ExternalTaxRateDraft externalTaxRate);</span>
 <span class="source-line-no">124</span><span id="line.124"></span>
-<span class="source-line-no">125</span><span id="line.125">    public static CartAddCustomLineItemAction of(final CartAddCustomLineItemAction template) {</span>
-<span class="source-line-no">126</span><span id="line.126">        CartAddCustomLineItemActionImpl instance = new CartAddCustomLineItemActionImpl();</span>
-<span class="source-line-no">127</span><span id="line.127">        instance.setMoney(template.getMoney());</span>
-<span class="source-line-no">128</span><span id="line.128">        instance.setName(template.getName());</span>
-<span class="source-line-no">129</span><span id="line.129">        instance.setQuantity(template.getQuantity());</span>
-<span class="source-line-no">130</span><span id="line.130">        instance.setSlug(template.getSlug());</span>
-<span class="source-line-no">131</span><span id="line.131">        instance.setTaxCategory(template.getTaxCategory());</span>
-<span class="source-line-no">132</span><span id="line.132">        instance.setCustom(template.getCustom());</span>
-<span class="source-line-no">133</span><span id="line.133">        instance.setExternalTaxRate(template.getExternalTaxRate());</span>
-<span class="source-line-no">134</span><span id="line.134">        instance.setPriceMode(template.getPriceMode());</span>
-<span class="source-line-no">135</span><span id="line.135">        return instance;</span>
-<span class="source-line-no">136</span><span id="line.136">    }</span>
-<span class="source-line-no">137</span><span id="line.137"></span>
-<span class="source-line-no">138</span><span id="line.138">    public static CartAddCustomLineItemActionBuilder builder() {</span>
-<span class="source-line-no">139</span><span id="line.139">        return CartAddCustomLineItemActionBuilder.of();</span>
-<span class="source-line-no">140</span><span id="line.140">    }</span>
-<span class="source-line-no">141</span><span id="line.141"></span>
-<span class="source-line-no">142</span><span id="line.142">    public static CartAddCustomLineItemActionBuilder builder(final CartAddCustomLineItemAction template) {</span>
-<span class="source-line-no">143</span><span id="line.143">        return CartAddCustomLineItemActionBuilder.of(template);</span>
-<span class="source-line-no">144</span><span id="line.144">    }</span>
-<span class="source-line-no">145</span><span id="line.145"></span>
-<span class="source-line-no">146</span><span id="line.146">    default &lt;T&gt; T withCartAddCustomLineItemAction(Function&lt;CartAddCustomLineItemAction, T&gt; helper) {</span>
-<span class="source-line-no">147</span><span id="line.147">        return helper.apply(this);</span>
-<span class="source-line-no">148</span><span id="line.148">    }</span>
-<span class="source-line-no">149</span><span id="line.149"></span>
-<span class="source-line-no">150</span><span id="line.150">    public static com.fasterxml.jackson.core.type.TypeReference&lt;CartAddCustomLineItemAction&gt; typeReference() {</span>
-<span class="source-line-no">151</span><span id="line.151">        return new com.fasterxml.jackson.core.type.TypeReference&lt;CartAddCustomLineItemAction&gt;() {</span>
-<span class="source-line-no">152</span><span id="line.152">            @Override</span>
-<span class="source-line-no">153</span><span id="line.153">            public String toString() {</span>
-<span class="source-line-no">154</span><span id="line.154">                return "TypeReference&lt;CartAddCustomLineItemAction&gt;";</span>
-<span class="source-line-no">155</span><span id="line.155">            }</span>
-<span class="source-line-no">156</span><span id="line.156">        };</span>
-<span class="source-line-no">157</span><span id="line.157">    }</span>
-<span class="source-line-no">158</span><span id="line.158">}</span>
+<span class="source-line-no">125</span><span id="line.125">    public void setShippingDetails(final ItemShippingDetailsDraft shippingDetails);</span>
+<span class="source-line-no">126</span><span id="line.126"></span>
+<span class="source-line-no">127</span><span id="line.127">    public void setCustom(final CustomFieldsDraft custom);</span>
+<span class="source-line-no">128</span><span id="line.128"></span>
+<span class="source-line-no">129</span><span id="line.129">    public void setPriceMode(final CustomLineItemPriceMode priceMode);</span>
+<span class="source-line-no">130</span><span id="line.130"></span>
+<span class="source-line-no">131</span><span id="line.131">    public static CartAddCustomLineItemAction of() {</span>
+<span class="source-line-no">132</span><span id="line.132">        return new CartAddCustomLineItemActionImpl();</span>
+<span class="source-line-no">133</span><span id="line.133">    }</span>
+<span class="source-line-no">134</span><span id="line.134"></span>
+<span class="source-line-no">135</span><span id="line.135">    public static CartAddCustomLineItemAction of(final CartAddCustomLineItemAction template) {</span>
+<span class="source-line-no">136</span><span id="line.136">        CartAddCustomLineItemActionImpl instance = new CartAddCustomLineItemActionImpl();</span>
+<span class="source-line-no">137</span><span id="line.137">        instance.setMoney(template.getMoney());</span>
+<span class="source-line-no">138</span><span id="line.138">        instance.setName(template.getName());</span>
+<span class="source-line-no">139</span><span id="line.139">        instance.setQuantity(template.getQuantity());</span>
+<span class="source-line-no">140</span><span id="line.140">        instance.setSlug(template.getSlug());</span>
+<span class="source-line-no">141</span><span id="line.141">        instance.setTaxCategory(template.getTaxCategory());</span>
+<span class="source-line-no">142</span><span id="line.142">        instance.setExternalTaxRate(template.getExternalTaxRate());</span>
+<span class="source-line-no">143</span><span id="line.143">        instance.setShippingDetails(template.getShippingDetails());</span>
+<span class="source-line-no">144</span><span id="line.144">        instance.setCustom(template.getCustom());</span>
+<span class="source-line-no">145</span><span id="line.145">        instance.setPriceMode(template.getPriceMode());</span>
+<span class="source-line-no">146</span><span id="line.146">        return instance;</span>
+<span class="source-line-no">147</span><span id="line.147">    }</span>
+<span class="source-line-no">148</span><span id="line.148"></span>
+<span class="source-line-no">149</span><span id="line.149">    public static CartAddCustomLineItemActionBuilder builder() {</span>
+<span class="source-line-no">150</span><span id="line.150">        return CartAddCustomLineItemActionBuilder.of();</span>
+<span class="source-line-no">151</span><span id="line.151">    }</span>
+<span class="source-line-no">152</span><span id="line.152"></span>
+<span class="source-line-no">153</span><span id="line.153">    public static CartAddCustomLineItemActionBuilder builder(final CartAddCustomLineItemAction template) {</span>
+<span class="source-line-no">154</span><span id="line.154">        return CartAddCustomLineItemActionBuilder.of(template);</span>
+<span class="source-line-no">155</span><span id="line.155">    }</span>
+<span class="source-line-no">156</span><span id="line.156"></span>
+<span class="source-line-no">157</span><span id="line.157">    default &lt;T&gt; T withCartAddCustomLineItemAction(Function&lt;CartAddCustomLineItemAction, T&gt; helper) {</span>
+<span class="source-line-no">158</span><span id="line.158">        return helper.apply(this);</span>
+<span class="source-line-no">159</span><span id="line.159">    }</span>
+<span class="source-line-no">160</span><span id="line.160"></span>
+<span class="source-line-no">161</span><span id="line.161">    public static com.fasterxml.jackson.core.type.TypeReference&lt;CartAddCustomLineItemAction&gt; typeReference() {</span>
+<span class="source-line-no">162</span><span id="line.162">        return new com.fasterxml.jackson.core.type.TypeReference&lt;CartAddCustomLineItemAction&gt;() {</span>
+<span class="source-line-no">163</span><span id="line.163">            @Override</span>
+<span class="source-line-no">164</span><span id="line.164">            public String toString() {</span>
+<span class="source-line-no">165</span><span id="line.165">                return "TypeReference&lt;CartAddCustomLineItemAction&gt;";</span>
+<span class="source-line-no">166</span><span id="line.166">            }</span>
+<span class="source-line-no">167</span><span id="line.167">        };</span>
+<span class="source-line-no">168</span><span id="line.168">    }</span>
+<span class="source-line-no">169</span><span id="line.169">}</span>
 
 
 

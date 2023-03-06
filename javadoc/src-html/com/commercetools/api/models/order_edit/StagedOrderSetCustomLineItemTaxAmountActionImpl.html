@@ -69,46 +69,51 @@
 <span class="source-line-no">056</span><span id="line.56">    }</span>
 <span class="source-line-no">057</span><span id="line.57"></span>
 <span class="source-line-no">058</span><span id="line.58">    /**</span>
-<span class="source-line-no">059</span><span id="line.59">     *</span>
-<span class="source-line-no">060</span><span id="line.60">     */</span>
-<span class="source-line-no">061</span><span id="line.61"></span>
-<span class="source-line-no">062</span><span id="line.62">    public com.commercetools.api.models.cart.ExternalTaxAmountDraft getExternalTaxAmount() {</span>
-<span class="source-line-no">063</span><span id="line.63">        return this.externalTaxAmount;</span>
-<span class="source-line-no">064</span><span id="line.64">    }</span>
-<span class="source-line-no">065</span><span id="line.65"></span>
-<span class="source-line-no">066</span><span id="line.66">    public void setCustomLineItemId(final String customLineItemId) {</span>
-<span class="source-line-no">067</span><span id="line.67">        this.customLineItemId = customLineItemId;</span>
-<span class="source-line-no">068</span><span id="line.68">    }</span>
-<span class="source-line-no">069</span><span id="line.69"></span>
-<span class="source-line-no">070</span><span id="line.70">    public void setExternalTaxAmount(final com.commercetools.api.models.cart.ExternalTaxAmountDraft externalTaxAmount) {</span>
-<span class="source-line-no">071</span><span id="line.71">        this.externalTaxAmount = externalTaxAmount;</span>
-<span class="source-line-no">072</span><span id="line.72">    }</span>
-<span class="source-line-no">073</span><span id="line.73"></span>
-<span class="source-line-no">074</span><span id="line.74">    @Override</span>
-<span class="source-line-no">075</span><span id="line.75">    public boolean equals(Object o) {</span>
-<span class="source-line-no">076</span><span id="line.76">        if (this == o)</span>
-<span class="source-line-no">077</span><span id="line.77">            return true;</span>
+<span class="source-line-no">059</span><span id="line.59">     *  &lt;p&gt;Cannot be used in LineItemDraft or CustomLineItemDraft.&lt;/p&gt;</span>
+<span class="source-line-no">060</span><span id="line.60">     *  &lt;p&gt;Can only be set by these update actions:&lt;/p&gt;</span>
+<span class="source-line-no">061</span><span id="line.61">     *  &lt;ul&gt;</span>
+<span class="source-line-no">062</span><span id="line.62">     *   &lt;li&gt;Set LineItem TaxAmount, Set CustomLineItem TaxAmount, or Set ShippingMethod TaxAmount on Carts&lt;/li&gt;</span>
+<span class="source-line-no">063</span><span id="line.63">     *   &lt;li&gt;Set LineItem TaxAmount, Set CustomLineItem TaxAmount, or Set ShippingMethod TaxAmount on Order Edits&lt;/li&gt;</span>
+<span class="source-line-no">064</span><span id="line.64">     *  &lt;/ul&gt;</span>
+<span class="source-line-no">065</span><span id="line.65">     */</span>
+<span class="source-line-no">066</span><span id="line.66"></span>
+<span class="source-line-no">067</span><span id="line.67">    public com.commercetools.api.models.cart.ExternalTaxAmountDraft getExternalTaxAmount() {</span>
+<span class="source-line-no">068</span><span id="line.68">        return this.externalTaxAmount;</span>
+<span class="source-line-no">069</span><span id="line.69">    }</span>
+<span class="source-line-no">070</span><span id="line.70"></span>
+<span class="source-line-no">071</span><span id="line.71">    public void setCustomLineItemId(final String customLineItemId) {</span>
+<span class="source-line-no">072</span><span id="line.72">        this.customLineItemId = customLineItemId;</span>
+<span class="source-line-no">073</span><span id="line.73">    }</span>
+<span class="source-line-no">074</span><span id="line.74"></span>
+<span class="source-line-no">075</span><span id="line.75">    public void setExternalTaxAmount(final com.commercetools.api.models.cart.ExternalTaxAmountDraft externalTaxAmount) {</span>
+<span class="source-line-no">076</span><span id="line.76">        this.externalTaxAmount = externalTaxAmount;</span>
+<span class="source-line-no">077</span><span id="line.77">    }</span>
 <span class="source-line-no">078</span><span id="line.78"></span>
-<span class="source-line-no">079</span><span id="line.79">        if (o == null || getClass() != o.getClass())</span>
-<span class="source-line-no">080</span><span id="line.80">            return false;</span>
-<span class="source-line-no">081</span><span id="line.81"></span>
-<span class="source-line-no">082</span><span id="line.82">        StagedOrderSetCustomLineItemTaxAmountActionImpl that = (StagedOrderSetCustomLineItemTaxAmountActionImpl) o;</span>
+<span class="source-line-no">079</span><span id="line.79">    @Override</span>
+<span class="source-line-no">080</span><span id="line.80">    public boolean equals(Object o) {</span>
+<span class="source-line-no">081</span><span id="line.81">        if (this == o)</span>
+<span class="source-line-no">082</span><span id="line.82">            return true;</span>
 <span class="source-line-no">083</span><span id="line.83"></span>
-<span class="source-line-no">084</span><span id="line.84">        return new EqualsBuilder().append(action, that.action)</span>
-<span class="source-line-no">085</span><span id="line.85">                .append(customLineItemId, that.customLineItemId)</span>
-<span class="source-line-no">086</span><span id="line.86">                .append(externalTaxAmount, that.externalTaxAmount)</span>
-<span class="source-line-no">087</span><span id="line.87">                .isEquals();</span>
-<span class="source-line-no">088</span><span id="line.88">    }</span>
-<span class="source-line-no">089</span><span id="line.89"></span>
-<span class="source-line-no">090</span><span id="line.90">    @Override</span>
-<span class="source-line-no">091</span><span id="line.91">    public int hashCode() {</span>
-<span class="source-line-no">092</span><span id="line.92">        return new HashCodeBuilder(17, 37).append(action)</span>
-<span class="source-line-no">093</span><span id="line.93">                .append(customLineItemId)</span>
-<span class="source-line-no">094</span><span id="line.94">                .append(externalTaxAmount)</span>
-<span class="source-line-no">095</span><span id="line.95">                .toHashCode();</span>
-<span class="source-line-no">096</span><span id="line.96">    }</span>
-<span class="source-line-no">097</span><span id="line.97"></span>
-<span class="source-line-no">098</span><span id="line.98">}</span>
+<span class="source-line-no">084</span><span id="line.84">        if (o == null || getClass() != o.getClass())</span>
+<span class="source-line-no">085</span><span id="line.85">            return false;</span>
+<span class="source-line-no">086</span><span id="line.86"></span>
+<span class="source-line-no">087</span><span id="line.87">        StagedOrderSetCustomLineItemTaxAmountActionImpl that = (StagedOrderSetCustomLineItemTaxAmountActionImpl) o;</span>
+<span class="source-line-no">088</span><span id="line.88"></span>
+<span class="source-line-no">089</span><span id="line.89">        return new EqualsBuilder().append(action, that.action)</span>
+<span class="source-line-no">090</span><span id="line.90">                .append(customLineItemId, that.customLineItemId)</span>
+<span class="source-line-no">091</span><span id="line.91">                .append(externalTaxAmount, that.externalTaxAmount)</span>
+<span class="source-line-no">092</span><span id="line.92">                .isEquals();</span>
+<span class="source-line-no">093</span><span id="line.93">    }</span>
+<span class="source-line-no">094</span><span id="line.94"></span>
+<span class="source-line-no">095</span><span id="line.95">    @Override</span>
+<span class="source-line-no">096</span><span id="line.96">    public int hashCode() {</span>
+<span class="source-line-no">097</span><span id="line.97">        return new HashCodeBuilder(17, 37).append(action)</span>
+<span class="source-line-no">098</span><span id="line.98">                .append(customLineItemId)</span>
+<span class="source-line-no">099</span><span id="line.99">                .append(externalTaxAmount)</span>
+<span class="source-line-no">100</span><span id="line.100">                .toHashCode();</span>
+<span class="source-line-no">101</span><span id="line.101">    }</span>
+<span class="source-line-no">102</span><span id="line.102"></span>
+<span class="source-line-no">103</span><span id="line.103">}</span>
 
 
 

@@ -29,7 +29,7 @@
 <span class="source-line-no">016</span><span id="line.16">import io.vrap.rmf.base.client.utils.Generated;</span>
 <span class="source-line-no">017</span><span id="line.17"></span>
 <span class="source-line-no">018</span><span id="line.18">/**</span>
-<span class="source-line-no">019</span><span id="line.19"> * DirectDiscount</span>
+<span class="source-line-no">019</span><span id="line.19"> *  &lt;p&gt;Represents a CartDiscount that is only associated with a single Cart or Order.&lt;/p&gt;</span>
 <span class="source-line-no">020</span><span id="line.20"> *</span>
 <span class="source-line-no">021</span><span id="line.21"> * &lt;hr&gt;</span>
 <span class="source-line-no">022</span><span id="line.22"> * Example to create an instance using the builder pattern</span>
@@ -47,14 +47,14 @@
 <span class="source-line-no">034</span><span id="line.34">public interface DirectDiscount {</span>
 <span class="source-line-no">035</span><span id="line.35"></span>
 <span class="source-line-no">036</span><span id="line.36">    /**</span>
-<span class="source-line-no">037</span><span id="line.37">     *  &lt;p&gt;The unique ID of the cart discount.&lt;/p&gt;</span>
+<span class="source-line-no">037</span><span id="line.37">     *  &lt;p&gt;Unique identifier of the Direct Discount.&lt;/p&gt;</span>
 <span class="source-line-no">038</span><span id="line.38">     */</span>
 <span class="source-line-no">039</span><span id="line.39">    @NotNull</span>
 <span class="source-line-no">040</span><span id="line.40">    @JsonProperty("id")</span>
 <span class="source-line-no">041</span><span id="line.41">    public String getId();</span>
 <span class="source-line-no">042</span><span id="line.42"></span>
 <span class="source-line-no">043</span><span id="line.43">    /**</span>
-<span class="source-line-no">044</span><span id="line.44">     *</span>
+<span class="source-line-no">044</span><span id="line.44">     *  &lt;p&gt;Effect of the Discount on the Cart.&lt;/p&gt;</span>
 <span class="source-line-no">045</span><span id="line.45">     */</span>
 <span class="source-line-no">046</span><span id="line.46">    @NotNull</span>
 <span class="source-line-no">047</span><span id="line.47">    @Valid</span>
@@ -62,51 +62,52 @@
 <span class="source-line-no">049</span><span id="line.49">    public CartDiscountValue getValue();</span>
 <span class="source-line-no">050</span><span id="line.50"></span>
 <span class="source-line-no">051</span><span id="line.51">    /**</span>
-<span class="source-line-no">052</span><span id="line.52">     *  &lt;p&gt;Empty when the &lt;code&gt;value&lt;/code&gt; has type &lt;code&gt;giftLineItem&lt;/code&gt;, otherwise a CartDiscountTarget is set.&lt;/p&gt;</span>
-<span class="source-line-no">053</span><span id="line.53">     */</span>
-<span class="source-line-no">054</span><span id="line.54">    @Valid</span>
-<span class="source-line-no">055</span><span id="line.55">    @JsonProperty("target")</span>
-<span class="source-line-no">056</span><span id="line.56">    public CartDiscountTarget getTarget();</span>
-<span class="source-line-no">057</span><span id="line.57"></span>
-<span class="source-line-no">058</span><span id="line.58">    public void setId(final String id);</span>
-<span class="source-line-no">059</span><span id="line.59"></span>
-<span class="source-line-no">060</span><span id="line.60">    public void setValue(final CartDiscountValue value);</span>
-<span class="source-line-no">061</span><span id="line.61"></span>
-<span class="source-line-no">062</span><span id="line.62">    public void setTarget(final CartDiscountTarget target);</span>
-<span class="source-line-no">063</span><span id="line.63"></span>
-<span class="source-line-no">064</span><span id="line.64">    public static DirectDiscount of() {</span>
-<span class="source-line-no">065</span><span id="line.65">        return new DirectDiscountImpl();</span>
-<span class="source-line-no">066</span><span id="line.66">    }</span>
-<span class="source-line-no">067</span><span id="line.67"></span>
-<span class="source-line-no">068</span><span id="line.68">    public static DirectDiscount of(final DirectDiscount template) {</span>
-<span class="source-line-no">069</span><span id="line.69">        DirectDiscountImpl instance = new DirectDiscountImpl();</span>
-<span class="source-line-no">070</span><span id="line.70">        instance.setId(template.getId());</span>
-<span class="source-line-no">071</span><span id="line.71">        instance.setValue(template.getValue());</span>
-<span class="source-line-no">072</span><span id="line.72">        instance.setTarget(template.getTarget());</span>
-<span class="source-line-no">073</span><span id="line.73">        return instance;</span>
-<span class="source-line-no">074</span><span id="line.74">    }</span>
-<span class="source-line-no">075</span><span id="line.75"></span>
-<span class="source-line-no">076</span><span id="line.76">    public static DirectDiscountBuilder builder() {</span>
-<span class="source-line-no">077</span><span id="line.77">        return DirectDiscountBuilder.of();</span>
-<span class="source-line-no">078</span><span id="line.78">    }</span>
-<span class="source-line-no">079</span><span id="line.79"></span>
-<span class="source-line-no">080</span><span id="line.80">    public static DirectDiscountBuilder builder(final DirectDiscount template) {</span>
-<span class="source-line-no">081</span><span id="line.81">        return DirectDiscountBuilder.of(template);</span>
-<span class="source-line-no">082</span><span id="line.82">    }</span>
-<span class="source-line-no">083</span><span id="line.83"></span>
-<span class="source-line-no">084</span><span id="line.84">    default &lt;T&gt; T withDirectDiscount(Function&lt;DirectDiscount, T&gt; helper) {</span>
-<span class="source-line-no">085</span><span id="line.85">        return helper.apply(this);</span>
-<span class="source-line-no">086</span><span id="line.86">    }</span>
-<span class="source-line-no">087</span><span id="line.87"></span>
-<span class="source-line-no">088</span><span id="line.88">    public static com.fasterxml.jackson.core.type.TypeReference&lt;DirectDiscount&gt; typeReference() {</span>
-<span class="source-line-no">089</span><span id="line.89">        return new com.fasterxml.jackson.core.type.TypeReference&lt;DirectDiscount&gt;() {</span>
-<span class="source-line-no">090</span><span id="line.90">            @Override</span>
-<span class="source-line-no">091</span><span id="line.91">            public String toString() {</span>
-<span class="source-line-no">092</span><span id="line.92">                return "TypeReference&lt;DirectDiscount&gt;";</span>
-<span class="source-line-no">093</span><span id="line.93">            }</span>
-<span class="source-line-no">094</span><span id="line.94">        };</span>
-<span class="source-line-no">095</span><span id="line.95">    }</span>
-<span class="source-line-no">096</span><span id="line.96">}</span>
+<span class="source-line-no">052</span><span id="line.52">     *  &lt;p&gt;Part of the Cart that is discounted.&lt;/p&gt;</span>
+<span class="source-line-no">053</span><span id="line.53">     *  &lt;p&gt;Empty when the &lt;code&gt;value&lt;/code&gt; is set to &lt;code&gt;giftLineItem&lt;/code&gt;.&lt;/p&gt;</span>
+<span class="source-line-no">054</span><span id="line.54">     */</span>
+<span class="source-line-no">055</span><span id="line.55">    @Valid</span>
+<span class="source-line-no">056</span><span id="line.56">    @JsonProperty("target")</span>
+<span class="source-line-no">057</span><span id="line.57">    public CartDiscountTarget getTarget();</span>
+<span class="source-line-no">058</span><span id="line.58"></span>
+<span class="source-line-no">059</span><span id="line.59">    public void setId(final String id);</span>
+<span class="source-line-no">060</span><span id="line.60"></span>
+<span class="source-line-no">061</span><span id="line.61">    public void setValue(final CartDiscountValue value);</span>
+<span class="source-line-no">062</span><span id="line.62"></span>
+<span class="source-line-no">063</span><span id="line.63">    public void setTarget(final CartDiscountTarget target);</span>
+<span class="source-line-no">064</span><span id="line.64"></span>
+<span class="source-line-no">065</span><span id="line.65">    public static DirectDiscount of() {</span>
+<span class="source-line-no">066</span><span id="line.66">        return new DirectDiscountImpl();</span>
+<span class="source-line-no">067</span><span id="line.67">    }</span>
+<span class="source-line-no">068</span><span id="line.68"></span>
+<span class="source-line-no">069</span><span id="line.69">    public static DirectDiscount of(final DirectDiscount template) {</span>
+<span class="source-line-no">070</span><span id="line.70">        DirectDiscountImpl instance = new DirectDiscountImpl();</span>
+<span class="source-line-no">071</span><span id="line.71">        instance.setId(template.getId());</span>
+<span class="source-line-no">072</span><span id="line.72">        instance.setValue(template.getValue());</span>
+<span class="source-line-no">073</span><span id="line.73">        instance.setTarget(template.getTarget());</span>
+<span class="source-line-no">074</span><span id="line.74">        return instance;</span>
+<span class="source-line-no">075</span><span id="line.75">    }</span>
+<span class="source-line-no">076</span><span id="line.76"></span>
+<span class="source-line-no">077</span><span id="line.77">    public static DirectDiscountBuilder builder() {</span>
+<span class="source-line-no">078</span><span id="line.78">        return DirectDiscountBuilder.of();</span>
+<span class="source-line-no">079</span><span id="line.79">    }</span>
+<span class="source-line-no">080</span><span id="line.80"></span>
+<span class="source-line-no">081</span><span id="line.81">    public static DirectDiscountBuilder builder(final DirectDiscount template) {</span>
+<span class="source-line-no">082</span><span id="line.82">        return DirectDiscountBuilder.of(template);</span>
+<span class="source-line-no">083</span><span id="line.83">    }</span>
+<span class="source-line-no">084</span><span id="line.84"></span>
+<span class="source-line-no">085</span><span id="line.85">    default &lt;T&gt; T withDirectDiscount(Function&lt;DirectDiscount, T&gt; helper) {</span>
+<span class="source-line-no">086</span><span id="line.86">        return helper.apply(this);</span>
+<span class="source-line-no">087</span><span id="line.87">    }</span>
+<span class="source-line-no">088</span><span id="line.88"></span>
+<span class="source-line-no">089</span><span id="line.89">    public static com.fasterxml.jackson.core.type.TypeReference&lt;DirectDiscount&gt; typeReference() {</span>
+<span class="source-line-no">090</span><span id="line.90">        return new com.fasterxml.jackson.core.type.TypeReference&lt;DirectDiscount&gt;() {</span>
+<span class="source-line-no">091</span><span id="line.91">            @Override</span>
+<span class="source-line-no">092</span><span id="line.92">            public String toString() {</span>
+<span class="source-line-no">093</span><span id="line.93">                return "TypeReference&lt;DirectDiscount&gt;";</span>
+<span class="source-line-no">094</span><span id="line.94">            }</span>
+<span class="source-line-no">095</span><span id="line.95">        };</span>
+<span class="source-line-no">096</span><span id="line.96">    }</span>
+<span class="source-line-no">097</span><span id="line.97">}</span>
 
 
 

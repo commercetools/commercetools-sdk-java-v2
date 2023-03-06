@@ -41,20 +41,20 @@
 <span class="source-line-no">028</span><span id="line.28"></span>
 <span class="source-line-no">029</span><span id="line.29">    private com.commercetools.api.models.cart.ShippingRateInputDraft shippingRateInput;</span>
 <span class="source-line-no">030</span><span id="line.30"></span>
-<span class="source-line-no">031</span><span id="line.31">    private String externalTaxRate;</span>
+<span class="source-line-no">031</span><span id="line.31">    private com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate;</span>
 <span class="source-line-no">032</span><span id="line.32"></span>
-<span class="source-line-no">033</span><span id="line.33">    private java.util.List&lt;com.commercetools.api.models.order.Delivery&gt; deliveries;</span>
+<span class="source-line-no">033</span><span id="line.33">    private java.util.List&lt;com.commercetools.api.models.order.DeliveryDraft&gt; deliveries;</span>
 <span class="source-line-no">034</span><span id="line.34"></span>
-<span class="source-line-no">035</span><span id="line.35">    private String custom;</span>
+<span class="source-line-no">035</span><span id="line.35">    private com.commercetools.api.models.type.CustomFieldsDraft custom;</span>
 <span class="source-line-no">036</span><span id="line.36"></span>
 <span class="source-line-no">037</span><span id="line.37">    @JsonCreator</span>
 <span class="source-line-no">038</span><span id="line.38">    ShippingDraftImpl(@JsonProperty("key") final String key,</span>
 <span class="source-line-no">039</span><span id="line.39">            @JsonProperty("shippingMethod") final com.commercetools.api.models.shipping_method.ShippingMethodReference shippingMethod,</span>
 <span class="source-line-no">040</span><span id="line.40">            @JsonProperty("shippingAddress") final com.commercetools.api.models.common.BaseAddress shippingAddress,</span>
 <span class="source-line-no">041</span><span id="line.41">            @JsonProperty("shippingRateInput") final com.commercetools.api.models.cart.ShippingRateInputDraft shippingRateInput,</span>
-<span class="source-line-no">042</span><span id="line.42">            @JsonProperty("externalTaxRate") final String externalTaxRate,</span>
-<span class="source-line-no">043</span><span id="line.43">            @JsonProperty("deliveries") final java.util.List&lt;com.commercetools.api.models.order.Delivery&gt; deliveries,</span>
-<span class="source-line-no">044</span><span id="line.44">            @JsonProperty("custom") final String custom) {</span>
+<span class="source-line-no">042</span><span id="line.42">            @JsonProperty("externalTaxRate") final com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate,</span>
+<span class="source-line-no">043</span><span id="line.43">            @JsonProperty("deliveries") final java.util.List&lt;com.commercetools.api.models.order.DeliveryDraft&gt; deliveries,</span>
+<span class="source-line-no">044</span><span id="line.44">            @JsonProperty("custom") final com.commercetools.api.models.type.CustomFieldsDraft custom) {</span>
 <span class="source-line-no">045</span><span id="line.45">        this.key = key;</span>
 <span class="source-line-no">046</span><span id="line.46">        this.shippingMethod = shippingMethod;</span>
 <span class="source-line-no">047</span><span id="line.47">        this.shippingAddress = shippingAddress;</span>
@@ -68,7 +68,7 @@
 <span class="source-line-no">055</span><span id="line.55">    }</span>
 <span class="source-line-no">056</span><span id="line.56"></span>
 <span class="source-line-no">057</span><span id="line.57">    /**</span>
-<span class="source-line-no">058</span><span id="line.58">     *  &lt;p&gt;User-defined unique identifier of the Shipping Method in a Cart with &lt;code&gt;Multiple&lt;/code&gt; ShippingMode.&lt;/p&gt;</span>
+<span class="source-line-no">058</span><span id="line.58">     *  &lt;p&gt;User-defined unique identifier for the Shipping in a Cart with &lt;code&gt;Multiple&lt;/code&gt; ShippingMode.&lt;/p&gt;</span>
 <span class="source-line-no">059</span><span id="line.59">     */</span>
 <span class="source-line-no">060</span><span id="line.60"></span>
 <span class="source-line-no">061</span><span id="line.61">    public String getKey() {</span>
@@ -92,12 +92,12 @@
 <span class="source-line-no">079</span><span id="line.79">    }</span>
 <span class="source-line-no">080</span><span id="line.80"></span>
 <span class="source-line-no">081</span><span id="line.81">    /**</span>
-<span class="source-line-no">082</span><span id="line.82">     *  &lt;p&gt;Used as an input to select a ShippingRatePriceTier.&lt;/p&gt;</span>
+<span class="source-line-no">082</span><span id="line.82">     *  &lt;p&gt;Input used to select a ShippingRatePriceTier. The data type of this field depends on the &lt;code&gt;shippingRateInputType.type&lt;/code&gt; configured in the Project:&lt;/p&gt;</span>
 <span class="source-line-no">083</span><span id="line.83">     *  &lt;ul&gt;</span>
-<span class="source-line-no">084</span><span id="line.84">     *   &lt;li&gt;Must be ClassificationShippingRateInput if ShippingRateInputType is CartClassificationType.&lt;/li&gt;</span>
-<span class="source-line-no">085</span><span id="line.85">     *   &lt;li&gt;Must be ScoreShippingRateInput if ShippingRateInputType is CartScoreType.&lt;/li&gt;</span>
-<span class="source-line-no">086</span><span id="line.86">     *  &lt;/ul&gt;</span>
-<span class="source-line-no">087</span><span id="line.87">     *  &lt;p&gt;The &lt;code&gt;shippingRateInput&lt;/code&gt; cannot be set on the Cart if CartValueType is defined.&lt;/p&gt;</span>
+<span class="source-line-no">084</span><span id="line.84">     *   &lt;li&gt;If &lt;code&gt;CartClassification&lt;/code&gt;, it must be ClassificationShippingRateInputDraft.&lt;/li&gt;</span>
+<span class="source-line-no">085</span><span id="line.85">     *   &lt;li&gt;If &lt;code&gt;CartScore&lt;/code&gt;, it must be ScoreShippingRateInputDraft.&lt;/li&gt;</span>
+<span class="source-line-no">086</span><span id="line.86">     *   &lt;li&gt;If &lt;code&gt;CartValue&lt;/code&gt;, it cannot be set.&lt;/li&gt;</span>
+<span class="source-line-no">087</span><span id="line.87">     *  &lt;/ul&gt;</span>
 <span class="source-line-no">088</span><span id="line.88">     */</span>
 <span class="source-line-no">089</span><span id="line.89"></span>
 <span class="source-line-no">090</span><span id="line.90">    public com.commercetools.api.models.cart.ShippingRateInputDraft getShippingRateInput() {</span>
@@ -108,15 +108,15 @@
 <span class="source-line-no">095</span><span id="line.95">     *  &lt;p&gt;Tax Rate used for taxing a shipping expense if the Cart has the &lt;code&gt;External&lt;/code&gt; TaxMode.&lt;/p&gt;</span>
 <span class="source-line-no">096</span><span id="line.96">     */</span>
 <span class="source-line-no">097</span><span id="line.97"></span>
-<span class="source-line-no">098</span><span id="line.98">    public String getExternalTaxRate() {</span>
+<span class="source-line-no">098</span><span id="line.98">    public com.commercetools.api.models.cart.ExternalTaxRateDraft getExternalTaxRate() {</span>
 <span class="source-line-no">099</span><span id="line.99">        return this.externalTaxRate;</span>
 <span class="source-line-no">100</span><span id="line.100">    }</span>
 <span class="source-line-no">101</span><span id="line.101"></span>
 <span class="source-line-no">102</span><span id="line.102">    /**</span>
-<span class="source-line-no">103</span><span id="line.103">     *  &lt;p&gt;Holds information on how items are delivered to customers.&lt;/p&gt;</span>
+<span class="source-line-no">103</span><span id="line.103">     *  &lt;p&gt;Deliveries to be shipped with the Shipping Method.&lt;/p&gt;</span>
 <span class="source-line-no">104</span><span id="line.104">     */</span>
 <span class="source-line-no">105</span><span id="line.105"></span>
-<span class="source-line-no">106</span><span id="line.106">    public java.util.List&lt;com.commercetools.api.models.order.Delivery&gt; getDeliveries() {</span>
+<span class="source-line-no">106</span><span id="line.106">    public java.util.List&lt;com.commercetools.api.models.order.DeliveryDraft&gt; getDeliveries() {</span>
 <span class="source-line-no">107</span><span id="line.107">        return this.deliveries;</span>
 <span class="source-line-no">108</span><span id="line.108">    }</span>
 <span class="source-line-no">109</span><span id="line.109"></span>
@@ -124,7 +124,7 @@
 <span class="source-line-no">111</span><span id="line.111">     *  &lt;p&gt;Custom Fields for Shipping.&lt;/p&gt;</span>
 <span class="source-line-no">112</span><span id="line.112">     */</span>
 <span class="source-line-no">113</span><span id="line.113"></span>
-<span class="source-line-no">114</span><span id="line.114">    public String getCustom() {</span>
+<span class="source-line-no">114</span><span id="line.114">    public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {</span>
 <span class="source-line-no">115</span><span id="line.115">        return this.custom;</span>
 <span class="source-line-no">116</span><span id="line.116">    }</span>
 <span class="source-line-no">117</span><span id="line.117"></span>
@@ -145,19 +145,19 @@
 <span class="source-line-no">132</span><span id="line.132">        this.shippingRateInput = shippingRateInput;</span>
 <span class="source-line-no">133</span><span id="line.133">    }</span>
 <span class="source-line-no">134</span><span id="line.134"></span>
-<span class="source-line-no">135</span><span id="line.135">    public void setExternalTaxRate(final String externalTaxRate) {</span>
+<span class="source-line-no">135</span><span id="line.135">    public void setExternalTaxRate(final com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate) {</span>
 <span class="source-line-no">136</span><span id="line.136">        this.externalTaxRate = externalTaxRate;</span>
 <span class="source-line-no">137</span><span id="line.137">    }</span>
 <span class="source-line-no">138</span><span id="line.138"></span>
-<span class="source-line-no">139</span><span id="line.139">    public void setDeliveries(final com.commercetools.api.models.order.Delivery... deliveries) {</span>
+<span class="source-line-no">139</span><span id="line.139">    public void setDeliveries(final com.commercetools.api.models.order.DeliveryDraft... deliveries) {</span>
 <span class="source-line-no">140</span><span id="line.140">        this.deliveries = new ArrayList&lt;&gt;(Arrays.asList(deliveries));</span>
 <span class="source-line-no">141</span><span id="line.141">    }</span>
 <span class="source-line-no">142</span><span id="line.142"></span>
-<span class="source-line-no">143</span><span id="line.143">    public void setDeliveries(final java.util.List&lt;com.commercetools.api.models.order.Delivery&gt; deliveries) {</span>
+<span class="source-line-no">143</span><span id="line.143">    public void setDeliveries(final java.util.List&lt;com.commercetools.api.models.order.DeliveryDraft&gt; deliveries) {</span>
 <span class="source-line-no">144</span><span id="line.144">        this.deliveries = deliveries;</span>
 <span class="source-line-no">145</span><span id="line.145">    }</span>
 <span class="source-line-no">146</span><span id="line.146"></span>
-<span class="source-line-no">147</span><span id="line.147">    public void setCustom(final String custom) {</span>
+<span class="source-line-no">147</span><span id="line.147">    public void setCustom(final com.commercetools.api.models.type.CustomFieldsDraft custom) {</span>
 <span class="source-line-no">148</span><span id="line.148">        this.custom = custom;</span>
 <span class="source-line-no">149</span><span id="line.149">    }</span>
 <span class="source-line-no">150</span><span id="line.150"></span>

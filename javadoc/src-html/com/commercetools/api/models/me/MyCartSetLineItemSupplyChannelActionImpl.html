@@ -28,7 +28,7 @@
 <span class="source-line-no">015</span><span id="line.15">import org.apache.commons.lang3.builder.HashCodeBuilder;</span>
 <span class="source-line-no">016</span><span id="line.16"></span>
 <span class="source-line-no">017</span><span id="line.17">/**</span>
-<span class="source-line-no">018</span><span id="line.18"> * MyCartSetLineItemSupplyChannelAction</span>
+<span class="source-line-no">018</span><span id="line.18"> *  &lt;p&gt;Performing this action has no impact on inventory that should be reserved.&lt;/p&gt;</span>
 <span class="source-line-no">019</span><span id="line.19"> */</span>
 <span class="source-line-no">020</span><span id="line.20">@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")</span>
 <span class="source-line-no">021</span><span id="line.21">public class MyCartSetLineItemSupplyChannelActionImpl implements MyCartSetLineItemSupplyChannelAction, ModelBase {</span>
@@ -60,7 +60,7 @@
 <span class="source-line-no">047</span><span id="line.47">    }</span>
 <span class="source-line-no">048</span><span id="line.48"></span>
 <span class="source-line-no">049</span><span id="line.49">    /**</span>
-<span class="source-line-no">050</span><span id="line.50">     *</span>
+<span class="source-line-no">050</span><span id="line.50">     *  &lt;p&gt;&lt;code&gt;id&lt;/code&gt; of the LineItem to update.&lt;/p&gt;</span>
 <span class="source-line-no">051</span><span id="line.51">     */</span>
 <span class="source-line-no">052</span><span id="line.52"></span>
 <span class="source-line-no">053</span><span id="line.53">    public String getLineItemId() {</span>
@@ -68,43 +68,46 @@
 <span class="source-line-no">055</span><span id="line.55">    }</span>
 <span class="source-line-no">056</span><span id="line.56"></span>
 <span class="source-line-no">057</span><span id="line.57">    /**</span>
-<span class="source-line-no">058</span><span id="line.58">     *  &lt;p&gt;ResourceIdentifier to a Channel.&lt;/p&gt;</span>
-<span class="source-line-no">059</span><span id="line.59">     */</span>
-<span class="source-line-no">060</span><span id="line.60"></span>
-<span class="source-line-no">061</span><span id="line.61">    public com.commercetools.api.models.channel.ChannelResourceIdentifier getSupplyChannel() {</span>
-<span class="source-line-no">062</span><span id="line.62">        return this.supplyChannel;</span>
-<span class="source-line-no">063</span><span id="line.63">    }</span>
-<span class="source-line-no">064</span><span id="line.64"></span>
-<span class="source-line-no">065</span><span id="line.65">    public void setLineItemId(final String lineItemId) {</span>
-<span class="source-line-no">066</span><span id="line.66">        this.lineItemId = lineItemId;</span>
-<span class="source-line-no">067</span><span id="line.67">    }</span>
-<span class="source-line-no">068</span><span id="line.68"></span>
-<span class="source-line-no">069</span><span id="line.69">    public void setSupplyChannel(final com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel) {</span>
-<span class="source-line-no">070</span><span id="line.70">        this.supplyChannel = supplyChannel;</span>
-<span class="source-line-no">071</span><span id="line.71">    }</span>
-<span class="source-line-no">072</span><span id="line.72"></span>
-<span class="source-line-no">073</span><span id="line.73">    @Override</span>
-<span class="source-line-no">074</span><span id="line.74">    public boolean equals(Object o) {</span>
-<span class="source-line-no">075</span><span id="line.75">        if (this == o)</span>
-<span class="source-line-no">076</span><span id="line.76">            return true;</span>
-<span class="source-line-no">077</span><span id="line.77"></span>
-<span class="source-line-no">078</span><span id="line.78">        if (o == null || getClass() != o.getClass())</span>
-<span class="source-line-no">079</span><span id="line.79">            return false;</span>
+<span class="source-line-no">058</span><span id="line.58">     *  &lt;ul&gt;</span>
+<span class="source-line-no">059</span><span id="line.59">     *   &lt;li&gt;If present, a Reference to the Channel is set for the LineItem specified by &lt;code&gt;lineItemId&lt;/code&gt;.&lt;/li&gt;</span>
+<span class="source-line-no">060</span><span id="line.60">     *   &lt;li&gt;If not present, the current Reference to a supply channel will be removed from the LineItem specified by &lt;code&gt;lineItemId&lt;/code&gt;. The Channel must have the &lt;code&gt;InventorySupply&lt;/code&gt; ChannelRoleEnum.&lt;/li&gt;</span>
+<span class="source-line-no">061</span><span id="line.61">     *  &lt;/ul&gt;</span>
+<span class="source-line-no">062</span><span id="line.62">     */</span>
+<span class="source-line-no">063</span><span id="line.63"></span>
+<span class="source-line-no">064</span><span id="line.64">    public com.commercetools.api.models.channel.ChannelResourceIdentifier getSupplyChannel() {</span>
+<span class="source-line-no">065</span><span id="line.65">        return this.supplyChannel;</span>
+<span class="source-line-no">066</span><span id="line.66">    }</span>
+<span class="source-line-no">067</span><span id="line.67"></span>
+<span class="source-line-no">068</span><span id="line.68">    public void setLineItemId(final String lineItemId) {</span>
+<span class="source-line-no">069</span><span id="line.69">        this.lineItemId = lineItemId;</span>
+<span class="source-line-no">070</span><span id="line.70">    }</span>
+<span class="source-line-no">071</span><span id="line.71"></span>
+<span class="source-line-no">072</span><span id="line.72">    public void setSupplyChannel(final com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel) {</span>
+<span class="source-line-no">073</span><span id="line.73">        this.supplyChannel = supplyChannel;</span>
+<span class="source-line-no">074</span><span id="line.74">    }</span>
+<span class="source-line-no">075</span><span id="line.75"></span>
+<span class="source-line-no">076</span><span id="line.76">    @Override</span>
+<span class="source-line-no">077</span><span id="line.77">    public boolean equals(Object o) {</span>
+<span class="source-line-no">078</span><span id="line.78">        if (this == o)</span>
+<span class="source-line-no">079</span><span id="line.79">            return true;</span>
 <span class="source-line-no">080</span><span id="line.80"></span>
-<span class="source-line-no">081</span><span id="line.81">        MyCartSetLineItemSupplyChannelActionImpl that = (MyCartSetLineItemSupplyChannelActionImpl) o;</span>
-<span class="source-line-no">082</span><span id="line.82"></span>
-<span class="source-line-no">083</span><span id="line.83">        return new EqualsBuilder().append(action, that.action)</span>
-<span class="source-line-no">084</span><span id="line.84">                .append(lineItemId, that.lineItemId)</span>
-<span class="source-line-no">085</span><span id="line.85">                .append(supplyChannel, that.supplyChannel)</span>
-<span class="source-line-no">086</span><span id="line.86">                .isEquals();</span>
-<span class="source-line-no">087</span><span id="line.87">    }</span>
-<span class="source-line-no">088</span><span id="line.88"></span>
-<span class="source-line-no">089</span><span id="line.89">    @Override</span>
-<span class="source-line-no">090</span><span id="line.90">    public int hashCode() {</span>
-<span class="source-line-no">091</span><span id="line.91">        return new HashCodeBuilder(17, 37).append(action).append(lineItemId).append(supplyChannel).toHashCode();</span>
-<span class="source-line-no">092</span><span id="line.92">    }</span>
-<span class="source-line-no">093</span><span id="line.93"></span>
-<span class="source-line-no">094</span><span id="line.94">}</span>
+<span class="source-line-no">081</span><span id="line.81">        if (o == null || getClass() != o.getClass())</span>
+<span class="source-line-no">082</span><span id="line.82">            return false;</span>
+<span class="source-line-no">083</span><span id="line.83"></span>
+<span class="source-line-no">084</span><span id="line.84">        MyCartSetLineItemSupplyChannelActionImpl that = (MyCartSetLineItemSupplyChannelActionImpl) o;</span>
+<span class="source-line-no">085</span><span id="line.85"></span>
+<span class="source-line-no">086</span><span id="line.86">        return new EqualsBuilder().append(action, that.action)</span>
+<span class="source-line-no">087</span><span id="line.87">                .append(lineItemId, that.lineItemId)</span>
+<span class="source-line-no">088</span><span id="line.88">                .append(supplyChannel, that.supplyChannel)</span>
+<span class="source-line-no">089</span><span id="line.89">                .isEquals();</span>
+<span class="source-line-no">090</span><span id="line.90">    }</span>
+<span class="source-line-no">091</span><span id="line.91"></span>
+<span class="source-line-no">092</span><span id="line.92">    @Override</span>
+<span class="source-line-no">093</span><span id="line.93">    public int hashCode() {</span>
+<span class="source-line-no">094</span><span id="line.94">        return new HashCodeBuilder(17, 37).append(action).append(lineItemId).append(supplyChannel).toHashCode();</span>
+<span class="source-line-no">095</span><span id="line.95">    }</span>
+<span class="source-line-no">096</span><span id="line.96"></span>
+<span class="source-line-no">097</span><span id="line.97">}</span>
 
 
 

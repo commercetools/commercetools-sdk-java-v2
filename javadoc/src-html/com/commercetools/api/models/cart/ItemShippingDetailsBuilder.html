@@ -41,7 +41,7 @@
 <span class="source-line-no">028</span><span id="line.28">    private Boolean valid;</span>
 <span class="source-line-no">029</span><span id="line.29"></span>
 <span class="source-line-no">030</span><span id="line.30">    /**</span>
-<span class="source-line-no">031</span><span id="line.31">     *  &lt;p&gt;Used to map what sub-quantity should be shipped to which address. Duplicate address keys are not allowed.&lt;/p&gt;</span>
+<span class="source-line-no">031</span><span id="line.31">     *  &lt;p&gt;Holds information on the quantity of Line Items or Custom Line Items and the address it is shipped.&lt;/p&gt;</span>
 <span class="source-line-no">032</span><span id="line.32">     */</span>
 <span class="source-line-no">033</span><span id="line.33"></span>
 <span class="source-line-no">034</span><span id="line.34">    public ItemShippingDetailsBuilder targets(final com.commercetools.api.models.cart.ItemShippingTarget... targets) {</span>
@@ -50,7 +50,7 @@
 <span class="source-line-no">037</span><span id="line.37">    }</span>
 <span class="source-line-no">038</span><span id="line.38"></span>
 <span class="source-line-no">039</span><span id="line.39">    /**</span>
-<span class="source-line-no">040</span><span id="line.40">     *  &lt;p&gt;Used to map what sub-quantity should be shipped to which address. Duplicate address keys are not allowed.&lt;/p&gt;</span>
+<span class="source-line-no">040</span><span id="line.40">     *  &lt;p&gt;Holds information on the quantity of Line Items or Custom Line Items and the address it is shipped.&lt;/p&gt;</span>
 <span class="source-line-no">041</span><span id="line.41">     */</span>
 <span class="source-line-no">042</span><span id="line.42"></span>
 <span class="source-line-no">043</span><span id="line.43">    public ItemShippingDetailsBuilder targets(</span>
@@ -60,7 +60,7 @@
 <span class="source-line-no">047</span><span id="line.47">    }</span>
 <span class="source-line-no">048</span><span id="line.48"></span>
 <span class="source-line-no">049</span><span id="line.49">    /**</span>
-<span class="source-line-no">050</span><span id="line.50">     *  &lt;p&gt;Used to map what sub-quantity should be shipped to which address. Duplicate address keys are not allowed.&lt;/p&gt;</span>
+<span class="source-line-no">050</span><span id="line.50">     *  &lt;p&gt;Holds information on the quantity of Line Items or Custom Line Items and the address it is shipped.&lt;/p&gt;</span>
 <span class="source-line-no">051</span><span id="line.51">     */</span>
 <span class="source-line-no">052</span><span id="line.52"></span>
 <span class="source-line-no">053</span><span id="line.53">    public ItemShippingDetailsBuilder plusTargets(</span>
@@ -73,7 +73,7 @@
 <span class="source-line-no">060</span><span id="line.60">    }</span>
 <span class="source-line-no">061</span><span id="line.61"></span>
 <span class="source-line-no">062</span><span id="line.62">    /**</span>
-<span class="source-line-no">063</span><span id="line.63">     *  &lt;p&gt;Used to map what sub-quantity should be shipped to which address. Duplicate address keys are not allowed.&lt;/p&gt;</span>
+<span class="source-line-no">063</span><span id="line.63">     *  &lt;p&gt;Holds information on the quantity of Line Items or Custom Line Items and the address it is shipped.&lt;/p&gt;</span>
 <span class="source-line-no">064</span><span id="line.64">     */</span>
 <span class="source-line-no">065</span><span id="line.65"></span>
 <span class="source-line-no">066</span><span id="line.66">    public ItemShippingDetailsBuilder plusTargets(</span>
@@ -86,7 +86,7 @@
 <span class="source-line-no">073</span><span id="line.73">    }</span>
 <span class="source-line-no">074</span><span id="line.74"></span>
 <span class="source-line-no">075</span><span id="line.75">    /**</span>
-<span class="source-line-no">076</span><span id="line.76">     *  &lt;p&gt;Used to map what sub-quantity should be shipped to which address. Duplicate address keys are not allowed.&lt;/p&gt;</span>
+<span class="source-line-no">076</span><span id="line.76">     *  &lt;p&gt;Holds information on the quantity of Line Items or Custom Line Items and the address it is shipped.&lt;/p&gt;</span>
 <span class="source-line-no">077</span><span id="line.77">     */</span>
 <span class="source-line-no">078</span><span id="line.78"></span>
 <span class="source-line-no">079</span><span id="line.79">    public ItemShippingDetailsBuilder withTargets(</span>
@@ -97,47 +97,50 @@
 <span class="source-line-no">084</span><span id="line.84">    }</span>
 <span class="source-line-no">085</span><span id="line.85"></span>
 <span class="source-line-no">086</span><span id="line.86">    /**</span>
-<span class="source-line-no">087</span><span id="line.87">     *  &lt;p&gt;&lt;code&gt;true&lt;/code&gt; if the quantity of the Line Item or Custom Line Item is equal to the sum of the sub-quantities in &lt;code&gt;targets&lt;/code&gt;, else it is &lt;code&gt;false&lt;/code&gt;. Ordering a Cart with value as &lt;code&gt;false&lt;/code&gt; returns an InvalidItemShippingDetails error.&lt;/p&gt;</span>
-<span class="source-line-no">088</span><span id="line.88">     */</span>
-<span class="source-line-no">089</span><span id="line.89"></span>
-<span class="source-line-no">090</span><span id="line.90">    public ItemShippingDetailsBuilder valid(final Boolean valid) {</span>
-<span class="source-line-no">091</span><span id="line.91">        this.valid = valid;</span>
-<span class="source-line-no">092</span><span id="line.92">        return this;</span>
-<span class="source-line-no">093</span><span id="line.93">    }</span>
-<span class="source-line-no">094</span><span id="line.94"></span>
-<span class="source-line-no">095</span><span id="line.95">    public java.util.List&lt;com.commercetools.api.models.cart.ItemShippingTarget&gt; getTargets() {</span>
-<span class="source-line-no">096</span><span id="line.96">        return this.targets;</span>
-<span class="source-line-no">097</span><span id="line.97">    }</span>
-<span class="source-line-no">098</span><span id="line.98"></span>
-<span class="source-line-no">099</span><span id="line.99">    public Boolean getValid() {</span>
-<span class="source-line-no">100</span><span id="line.100">        return this.valid;</span>
-<span class="source-line-no">101</span><span id="line.101">    }</span>
-<span class="source-line-no">102</span><span id="line.102"></span>
-<span class="source-line-no">103</span><span id="line.103">    public ItemShippingDetails build() {</span>
-<span class="source-line-no">104</span><span id="line.104">        Objects.requireNonNull(targets, ItemShippingDetails.class + ": targets is missing");</span>
-<span class="source-line-no">105</span><span id="line.105">        Objects.requireNonNull(valid, ItemShippingDetails.class + ": valid is missing");</span>
-<span class="source-line-no">106</span><span id="line.106">        return new ItemShippingDetailsImpl(targets, valid);</span>
-<span class="source-line-no">107</span><span id="line.107">    }</span>
-<span class="source-line-no">108</span><span id="line.108"></span>
-<span class="source-line-no">109</span><span id="line.109">    /**</span>
-<span class="source-line-no">110</span><span id="line.110">     * builds ItemShippingDetails without checking for non null required values</span>
-<span class="source-line-no">111</span><span id="line.111">     */</span>
-<span class="source-line-no">112</span><span id="line.112">    public ItemShippingDetails buildUnchecked() {</span>
-<span class="source-line-no">113</span><span id="line.113">        return new ItemShippingDetailsImpl(targets, valid);</span>
-<span class="source-line-no">114</span><span id="line.114">    }</span>
-<span class="source-line-no">115</span><span id="line.115"></span>
-<span class="source-line-no">116</span><span id="line.116">    public static ItemShippingDetailsBuilder of() {</span>
-<span class="source-line-no">117</span><span id="line.117">        return new ItemShippingDetailsBuilder();</span>
-<span class="source-line-no">118</span><span id="line.118">    }</span>
-<span class="source-line-no">119</span><span id="line.119"></span>
-<span class="source-line-no">120</span><span id="line.120">    public static ItemShippingDetailsBuilder of(final ItemShippingDetails template) {</span>
-<span class="source-line-no">121</span><span id="line.121">        ItemShippingDetailsBuilder builder = new ItemShippingDetailsBuilder();</span>
-<span class="source-line-no">122</span><span id="line.122">        builder.targets = template.getTargets();</span>
-<span class="source-line-no">123</span><span id="line.123">        builder.valid = template.getValid();</span>
-<span class="source-line-no">124</span><span id="line.124">        return builder;</span>
-<span class="source-line-no">125</span><span id="line.125">    }</span>
-<span class="source-line-no">126</span><span id="line.126"></span>
-<span class="source-line-no">127</span><span id="line.127">}</span>
+<span class="source-line-no">087</span><span id="line.87">     *  &lt;ul&gt;</span>
+<span class="source-line-no">088</span><span id="line.88">     *   &lt;li&gt;&lt;code&gt;true&lt;/code&gt; if the quantity of Line Items or Custom Line Items is equal to the sum of sub-quantities defined in &lt;code&gt;targets&lt;/code&gt;.&lt;/li&gt;</span>
+<span class="source-line-no">089</span><span id="line.89">     *   &lt;li&gt;&lt;code&gt;false&lt;/code&gt; if the quantity of Line Items or Custom Line Items is not equal to the sum of sub-quantities defined in &lt;code&gt;targets&lt;/code&gt;. Ordering a Cart when the value is &lt;code&gt;false&lt;/code&gt; returns an InvalidItemShippingDetails error.&lt;/li&gt;</span>
+<span class="source-line-no">090</span><span id="line.90">     *  &lt;/ul&gt;</span>
+<span class="source-line-no">091</span><span id="line.91">     */</span>
+<span class="source-line-no">092</span><span id="line.92"></span>
+<span class="source-line-no">093</span><span id="line.93">    public ItemShippingDetailsBuilder valid(final Boolean valid) {</span>
+<span class="source-line-no">094</span><span id="line.94">        this.valid = valid;</span>
+<span class="source-line-no">095</span><span id="line.95">        return this;</span>
+<span class="source-line-no">096</span><span id="line.96">    }</span>
+<span class="source-line-no">097</span><span id="line.97"></span>
+<span class="source-line-no">098</span><span id="line.98">    public java.util.List&lt;com.commercetools.api.models.cart.ItemShippingTarget&gt; getTargets() {</span>
+<span class="source-line-no">099</span><span id="line.99">        return this.targets;</span>
+<span class="source-line-no">100</span><span id="line.100">    }</span>
+<span class="source-line-no">101</span><span id="line.101"></span>
+<span class="source-line-no">102</span><span id="line.102">    public Boolean getValid() {</span>
+<span class="source-line-no">103</span><span id="line.103">        return this.valid;</span>
+<span class="source-line-no">104</span><span id="line.104">    }</span>
+<span class="source-line-no">105</span><span id="line.105"></span>
+<span class="source-line-no">106</span><span id="line.106">    public ItemShippingDetails build() {</span>
+<span class="source-line-no">107</span><span id="line.107">        Objects.requireNonNull(targets, ItemShippingDetails.class + ": targets is missing");</span>
+<span class="source-line-no">108</span><span id="line.108">        Objects.requireNonNull(valid, ItemShippingDetails.class + ": valid is missing");</span>
+<span class="source-line-no">109</span><span id="line.109">        return new ItemShippingDetailsImpl(targets, valid);</span>
+<span class="source-line-no">110</span><span id="line.110">    }</span>
+<span class="source-line-no">111</span><span id="line.111"></span>
+<span class="source-line-no">112</span><span id="line.112">    /**</span>
+<span class="source-line-no">113</span><span id="line.113">     * builds ItemShippingDetails without checking for non null required values</span>
+<span class="source-line-no">114</span><span id="line.114">     */</span>
+<span class="source-line-no">115</span><span id="line.115">    public ItemShippingDetails buildUnchecked() {</span>
+<span class="source-line-no">116</span><span id="line.116">        return new ItemShippingDetailsImpl(targets, valid);</span>
+<span class="source-line-no">117</span><span id="line.117">    }</span>
+<span class="source-line-no">118</span><span id="line.118"></span>
+<span class="source-line-no">119</span><span id="line.119">    public static ItemShippingDetailsBuilder of() {</span>
+<span class="source-line-no">120</span><span id="line.120">        return new ItemShippingDetailsBuilder();</span>
+<span class="source-line-no">121</span><span id="line.121">    }</span>
+<span class="source-line-no">122</span><span id="line.122"></span>
+<span class="source-line-no">123</span><span id="line.123">    public static ItemShippingDetailsBuilder of(final ItemShippingDetails template) {</span>
+<span class="source-line-no">124</span><span id="line.124">        ItemShippingDetailsBuilder builder = new ItemShippingDetailsBuilder();</span>
+<span class="source-line-no">125</span><span id="line.125">        builder.targets = template.getTargets();</span>
+<span class="source-line-no">126</span><span id="line.126">        builder.valid = template.getValid();</span>
+<span class="source-line-no">127</span><span id="line.127">        return builder;</span>
+<span class="source-line-no">128</span><span id="line.128">    }</span>
+<span class="source-line-no">129</span><span id="line.129"></span>
+<span class="source-line-no">130</span><span id="line.130">}</span>
 
 
 

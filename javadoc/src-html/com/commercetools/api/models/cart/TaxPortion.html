@@ -21,14 +21,14 @@
 <span class="source-line-no">008</span><span id="line.8">import javax.validation.Valid;</span>
 <span class="source-line-no">009</span><span id="line.9">import javax.validation.constraints.NotNull;</span>
 <span class="source-line-no">010</span><span id="line.10"></span>
-<span class="source-line-no">011</span><span id="line.11">import com.commercetools.api.models.common.TypedMoney;</span>
+<span class="source-line-no">011</span><span id="line.11">import com.commercetools.api.models.common.CentPrecisionMoney;</span>
 <span class="source-line-no">012</span><span id="line.12">import com.fasterxml.jackson.annotation.*;</span>
 <span class="source-line-no">013</span><span id="line.13">import com.fasterxml.jackson.databind.annotation.*;</span>
 <span class="source-line-no">014</span><span id="line.14"></span>
 <span class="source-line-no">015</span><span id="line.15">import io.vrap.rmf.base.client.utils.Generated;</span>
 <span class="source-line-no">016</span><span id="line.16"></span>
 <span class="source-line-no">017</span><span id="line.17">/**</span>
-<span class="source-line-no">018</span><span id="line.18"> * TaxPortion</span>
+<span class="source-line-no">018</span><span id="line.18"> *  &lt;p&gt;The tax portions are calculated from the TaxRates. If a Tax Rate has SubRates, they are used and can be identified by name. Tax portions from Line Items with the same &lt;code&gt;rate&lt;/code&gt; and &lt;code&gt;name&lt;/code&gt; are accumulated to the same tax portion.&lt;/p&gt;</span>
 <span class="source-line-no">019</span><span id="line.19"> *</span>
 <span class="source-line-no">020</span><span id="line.20"> * &lt;hr&gt;</span>
 <span class="source-line-no">021</span><span id="line.21"> * Example to create an instance using the builder pattern</span>
@@ -46,32 +46,32 @@
 <span class="source-line-no">033</span><span id="line.33">public interface TaxPortion {</span>
 <span class="source-line-no">034</span><span id="line.34"></span>
 <span class="source-line-no">035</span><span id="line.35">    /**</span>
-<span class="source-line-no">036</span><span id="line.36">     *</span>
+<span class="source-line-no">036</span><span id="line.36">     *  &lt;p&gt;Name of the tax portion.&lt;/p&gt;</span>
 <span class="source-line-no">037</span><span id="line.37">     */</span>
 <span class="source-line-no">038</span><span id="line.38"></span>
 <span class="source-line-no">039</span><span id="line.39">    @JsonProperty("name")</span>
 <span class="source-line-no">040</span><span id="line.40">    public String getName();</span>
 <span class="source-line-no">041</span><span id="line.41"></span>
 <span class="source-line-no">042</span><span id="line.42">    /**</span>
-<span class="source-line-no">043</span><span id="line.43">     *  &lt;p&gt;A number in the range [0..1]&lt;/p&gt;</span>
+<span class="source-line-no">043</span><span id="line.43">     *  &lt;p&gt;A number in the range 0-1.&lt;/p&gt;</span>
 <span class="source-line-no">044</span><span id="line.44">     */</span>
 <span class="source-line-no">045</span><span id="line.45">    @NotNull</span>
 <span class="source-line-no">046</span><span id="line.46">    @JsonProperty("rate")</span>
 <span class="source-line-no">047</span><span id="line.47">    public Double getRate();</span>
 <span class="source-line-no">048</span><span id="line.48"></span>
 <span class="source-line-no">049</span><span id="line.49">    /**</span>
-<span class="source-line-no">050</span><span id="line.50">     *</span>
+<span class="source-line-no">050</span><span id="line.50">     *  &lt;p&gt;Money value of the tax portion.&lt;/p&gt;</span>
 <span class="source-line-no">051</span><span id="line.51">     */</span>
 <span class="source-line-no">052</span><span id="line.52">    @NotNull</span>
 <span class="source-line-no">053</span><span id="line.53">    @Valid</span>
 <span class="source-line-no">054</span><span id="line.54">    @JsonProperty("amount")</span>
-<span class="source-line-no">055</span><span id="line.55">    public TypedMoney getAmount();</span>
+<span class="source-line-no">055</span><span id="line.55">    public CentPrecisionMoney getAmount();</span>
 <span class="source-line-no">056</span><span id="line.56"></span>
 <span class="source-line-no">057</span><span id="line.57">    public void setName(final String name);</span>
 <span class="source-line-no">058</span><span id="line.58"></span>
 <span class="source-line-no">059</span><span id="line.59">    public void setRate(final Double rate);</span>
 <span class="source-line-no">060</span><span id="line.60"></span>
-<span class="source-line-no">061</span><span id="line.61">    public void setAmount(final TypedMoney amount);</span>
+<span class="source-line-no">061</span><span id="line.61">    public void setAmount(final CentPrecisionMoney amount);</span>
 <span class="source-line-no">062</span><span id="line.62"></span>
 <span class="source-line-no">063</span><span id="line.63">    public static TaxPortion of() {</span>
 <span class="source-line-no">064</span><span id="line.64">        return new TaxPortionImpl();</span>

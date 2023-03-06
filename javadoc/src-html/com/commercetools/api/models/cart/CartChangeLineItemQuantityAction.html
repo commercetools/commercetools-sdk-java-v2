@@ -28,96 +28,99 @@
 <span class="source-line-no">015</span><span id="line.15">import io.vrap.rmf.base.client.utils.Generated;</span>
 <span class="source-line-no">016</span><span id="line.16"></span>
 <span class="source-line-no">017</span><span id="line.17">/**</span>
-<span class="source-line-no">018</span><span id="line.18"> * CartChangeLineItemQuantityAction</span>
-<span class="source-line-no">019</span><span id="line.19"> *</span>
-<span class="source-line-no">020</span><span id="line.20"> * &lt;hr&gt;</span>
-<span class="source-line-no">021</span><span id="line.21"> * Example to create an instance using the builder pattern</span>
-<span class="source-line-no">022</span><span id="line.22"> * &lt;div class=code-example&gt;</span>
-<span class="source-line-no">023</span><span id="line.23"> * &lt;pre&gt;&lt;code class='java'&gt;</span>
-<span class="source-line-no">024</span><span id="line.24"> *     CartChangeLineItemQuantityAction cartChangeLineItemQuantityAction = CartChangeLineItemQuantityAction.builder()</span>
-<span class="source-line-no">025</span><span id="line.25"> *             .lineItemId("{lineItemId}")</span>
-<span class="source-line-no">026</span><span id="line.26"> *             .quantity(0.3)</span>
-<span class="source-line-no">027</span><span id="line.27"> *             .build()</span>
-<span class="source-line-no">028</span><span id="line.28"> * &lt;/code&gt;&lt;/pre&gt;</span>
-<span class="source-line-no">029</span><span id="line.29"> * &lt;/div&gt;</span>
-<span class="source-line-no">030</span><span id="line.30"> */</span>
-<span class="source-line-no">031</span><span id="line.31">@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")</span>
-<span class="source-line-no">032</span><span id="line.32">@JsonDeserialize(as = CartChangeLineItemQuantityActionImpl.class)</span>
-<span class="source-line-no">033</span><span id="line.33">public interface CartChangeLineItemQuantityAction extends CartUpdateAction {</span>
-<span class="source-line-no">034</span><span id="line.34"></span>
-<span class="source-line-no">035</span><span id="line.35">    String CHANGE_LINE_ITEM_QUANTITY = "changeLineItemQuantity";</span>
+<span class="source-line-no">018</span><span id="line.18"> *  &lt;p&gt;When multiple shipping addresses are set for a Line Item, use the Remove LineItem and Add LineItem update action to change the shipping details. Since it is not possible for the API to infer how the overall change in the Line Item quantity should be distributed over the sub-quantities, the &lt;code&gt;shippingDetails&lt;/code&gt; field is kept in its current state to avoid data loss.&lt;/p&gt;</span>
+<span class="source-line-no">019</span><span id="line.19"> *  &lt;p&gt;To change the Line Item quantity and shipping details together, use this update action in combination with the Set LineItemShippingDetails update action in a single Cart update command.&lt;/p&gt;</span>
+<span class="source-line-no">020</span><span id="line.20"> *  &lt;p&gt;The LineItem price is set as described in LineItem Price selection.&lt;/p&gt;</span>
+<span class="source-line-no">021</span><span id="line.21"> *</span>
+<span class="source-line-no">022</span><span id="line.22"> * &lt;hr&gt;</span>
+<span class="source-line-no">023</span><span id="line.23"> * Example to create an instance using the builder pattern</span>
+<span class="source-line-no">024</span><span id="line.24"> * &lt;div class=code-example&gt;</span>
+<span class="source-line-no">025</span><span id="line.25"> * &lt;pre&gt;&lt;code class='java'&gt;</span>
+<span class="source-line-no">026</span><span id="line.26"> *     CartChangeLineItemQuantityAction cartChangeLineItemQuantityAction = CartChangeLineItemQuantityAction.builder()</span>
+<span class="source-line-no">027</span><span id="line.27"> *             .lineItemId("{lineItemId}")</span>
+<span class="source-line-no">028</span><span id="line.28"> *             .quantity(0.3)</span>
+<span class="source-line-no">029</span><span id="line.29"> *             .build()</span>
+<span class="source-line-no">030</span><span id="line.30"> * &lt;/code&gt;&lt;/pre&gt;</span>
+<span class="source-line-no">031</span><span id="line.31"> * &lt;/div&gt;</span>
+<span class="source-line-no">032</span><span id="line.32"> */</span>
+<span class="source-line-no">033</span><span id="line.33">@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")</span>
+<span class="source-line-no">034</span><span id="line.34">@JsonDeserialize(as = CartChangeLineItemQuantityActionImpl.class)</span>
+<span class="source-line-no">035</span><span id="line.35">public interface CartChangeLineItemQuantityAction extends CartUpdateAction {</span>
 <span class="source-line-no">036</span><span id="line.36"></span>
-<span class="source-line-no">037</span><span id="line.37">    /**</span>
-<span class="source-line-no">038</span><span id="line.38">     *</span>
-<span class="source-line-no">039</span><span id="line.39">     */</span>
-<span class="source-line-no">040</span><span id="line.40">    @NotNull</span>
-<span class="source-line-no">041</span><span id="line.41">    @JsonProperty("lineItemId")</span>
-<span class="source-line-no">042</span><span id="line.42">    public String getLineItemId();</span>
-<span class="source-line-no">043</span><span id="line.43"></span>
-<span class="source-line-no">044</span><span id="line.44">    /**</span>
-<span class="source-line-no">045</span><span id="line.45">     *</span>
-<span class="source-line-no">046</span><span id="line.46">     */</span>
-<span class="source-line-no">047</span><span id="line.47">    @NotNull</span>
-<span class="source-line-no">048</span><span id="line.48">    @JsonProperty("quantity")</span>
-<span class="source-line-no">049</span><span id="line.49">    public Long getQuantity();</span>
-<span class="source-line-no">050</span><span id="line.50"></span>
-<span class="source-line-no">051</span><span id="line.51">    /**</span>
-<span class="source-line-no">052</span><span id="line.52">     *  &lt;p&gt;Draft type that stores amounts in cent precision for the specified currency.&lt;/p&gt;</span>
-<span class="source-line-no">053</span><span id="line.53">     *  &lt;p&gt;For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.&lt;/p&gt;</span>
-<span class="source-line-no">054</span><span id="line.54">     */</span>
-<span class="source-line-no">055</span><span id="line.55">    @Valid</span>
-<span class="source-line-no">056</span><span id="line.56">    @JsonProperty("externalPrice")</span>
-<span class="source-line-no">057</span><span id="line.57">    public Money getExternalPrice();</span>
-<span class="source-line-no">058</span><span id="line.58"></span>
-<span class="source-line-no">059</span><span id="line.59">    /**</span>
-<span class="source-line-no">060</span><span id="line.60">     *</span>
-<span class="source-line-no">061</span><span id="line.61">     */</span>
-<span class="source-line-no">062</span><span id="line.62">    @Valid</span>
-<span class="source-line-no">063</span><span id="line.63">    @JsonProperty("externalTotalPrice")</span>
-<span class="source-line-no">064</span><span id="line.64">    public ExternalLineItemTotalPrice getExternalTotalPrice();</span>
-<span class="source-line-no">065</span><span id="line.65"></span>
-<span class="source-line-no">066</span><span id="line.66">    public void setLineItemId(final String lineItemId);</span>
-<span class="source-line-no">067</span><span id="line.67"></span>
-<span class="source-line-no">068</span><span id="line.68">    public void setQuantity(final Long quantity);</span>
-<span class="source-line-no">069</span><span id="line.69"></span>
-<span class="source-line-no">070</span><span id="line.70">    public void setExternalPrice(final Money externalPrice);</span>
-<span class="source-line-no">071</span><span id="line.71"></span>
-<span class="source-line-no">072</span><span id="line.72">    public void setExternalTotalPrice(final ExternalLineItemTotalPrice externalTotalPrice);</span>
-<span class="source-line-no">073</span><span id="line.73"></span>
-<span class="source-line-no">074</span><span id="line.74">    public static CartChangeLineItemQuantityAction of() {</span>
-<span class="source-line-no">075</span><span id="line.75">        return new CartChangeLineItemQuantityActionImpl();</span>
-<span class="source-line-no">076</span><span id="line.76">    }</span>
-<span class="source-line-no">077</span><span id="line.77"></span>
-<span class="source-line-no">078</span><span id="line.78">    public static CartChangeLineItemQuantityAction of(final CartChangeLineItemQuantityAction template) {</span>
-<span class="source-line-no">079</span><span id="line.79">        CartChangeLineItemQuantityActionImpl instance = new CartChangeLineItemQuantityActionImpl();</span>
-<span class="source-line-no">080</span><span id="line.80">        instance.setLineItemId(template.getLineItemId());</span>
-<span class="source-line-no">081</span><span id="line.81">        instance.setQuantity(template.getQuantity());</span>
-<span class="source-line-no">082</span><span id="line.82">        instance.setExternalPrice(template.getExternalPrice());</span>
-<span class="source-line-no">083</span><span id="line.83">        instance.setExternalTotalPrice(template.getExternalTotalPrice());</span>
-<span class="source-line-no">084</span><span id="line.84">        return instance;</span>
-<span class="source-line-no">085</span><span id="line.85">    }</span>
-<span class="source-line-no">086</span><span id="line.86"></span>
-<span class="source-line-no">087</span><span id="line.87">    public static CartChangeLineItemQuantityActionBuilder builder() {</span>
-<span class="source-line-no">088</span><span id="line.88">        return CartChangeLineItemQuantityActionBuilder.of();</span>
-<span class="source-line-no">089</span><span id="line.89">    }</span>
-<span class="source-line-no">090</span><span id="line.90"></span>
-<span class="source-line-no">091</span><span id="line.91">    public static CartChangeLineItemQuantityActionBuilder builder(final CartChangeLineItemQuantityAction template) {</span>
-<span class="source-line-no">092</span><span id="line.92">        return CartChangeLineItemQuantityActionBuilder.of(template);</span>
-<span class="source-line-no">093</span><span id="line.93">    }</span>
-<span class="source-line-no">094</span><span id="line.94"></span>
-<span class="source-line-no">095</span><span id="line.95">    default &lt;T&gt; T withCartChangeLineItemQuantityAction(Function&lt;CartChangeLineItemQuantityAction, T&gt; helper) {</span>
-<span class="source-line-no">096</span><span id="line.96">        return helper.apply(this);</span>
-<span class="source-line-no">097</span><span id="line.97">    }</span>
-<span class="source-line-no">098</span><span id="line.98"></span>
-<span class="source-line-no">099</span><span id="line.99">    public static com.fasterxml.jackson.core.type.TypeReference&lt;CartChangeLineItemQuantityAction&gt; typeReference() {</span>
-<span class="source-line-no">100</span><span id="line.100">        return new com.fasterxml.jackson.core.type.TypeReference&lt;CartChangeLineItemQuantityAction&gt;() {</span>
-<span class="source-line-no">101</span><span id="line.101">            @Override</span>
-<span class="source-line-no">102</span><span id="line.102">            public String toString() {</span>
-<span class="source-line-no">103</span><span id="line.103">                return "TypeReference&lt;CartChangeLineItemQuantityAction&gt;";</span>
-<span class="source-line-no">104</span><span id="line.104">            }</span>
-<span class="source-line-no">105</span><span id="line.105">        };</span>
-<span class="source-line-no">106</span><span id="line.106">    }</span>
-<span class="source-line-no">107</span><span id="line.107">}</span>
+<span class="source-line-no">037</span><span id="line.37">    String CHANGE_LINE_ITEM_QUANTITY = "changeLineItemQuantity";</span>
+<span class="source-line-no">038</span><span id="line.38"></span>
+<span class="source-line-no">039</span><span id="line.39">    /**</span>
+<span class="source-line-no">040</span><span id="line.40">     *  &lt;p&gt;&lt;code&gt;id&lt;/code&gt; of the LineItem to update.&lt;/p&gt;</span>
+<span class="source-line-no">041</span><span id="line.41">     */</span>
+<span class="source-line-no">042</span><span id="line.42">    @NotNull</span>
+<span class="source-line-no">043</span><span id="line.43">    @JsonProperty("lineItemId")</span>
+<span class="source-line-no">044</span><span id="line.44">    public String getLineItemId();</span>
+<span class="source-line-no">045</span><span id="line.45"></span>
+<span class="source-line-no">046</span><span id="line.46">    /**</span>
+<span class="source-line-no">047</span><span id="line.47">     *  &lt;p&gt;New value to set.&lt;/p&gt;</span>
+<span class="source-line-no">048</span><span id="line.48">     *  &lt;p&gt;If &lt;code&gt;0&lt;/code&gt;, the Line Item is removed from the Cart.&lt;/p&gt;</span>
+<span class="source-line-no">049</span><span id="line.49">     */</span>
+<span class="source-line-no">050</span><span id="line.50">    @NotNull</span>
+<span class="source-line-no">051</span><span id="line.51">    @JsonProperty("quantity")</span>
+<span class="source-line-no">052</span><span id="line.52">    public Long getQuantity();</span>
+<span class="source-line-no">053</span><span id="line.53"></span>
+<span class="source-line-no">054</span><span id="line.54">    /**</span>
+<span class="source-line-no">055</span><span id="line.55">     *  &lt;p&gt;Sets the LineItem &lt;code&gt;price&lt;/code&gt; to the given value when changing the quantity of a Line Item with the &lt;code&gt;ExternalPrice&lt;/code&gt; LineItemPriceMode.&lt;/p&gt;</span>
+<span class="source-line-no">056</span><span id="line.56">     *  &lt;p&gt;The LineItem price is updated as described in LineItem Price selection.&lt;/p&gt;</span>
+<span class="source-line-no">057</span><span id="line.57">     */</span>
+<span class="source-line-no">058</span><span id="line.58">    @Valid</span>
+<span class="source-line-no">059</span><span id="line.59">    @JsonProperty("externalPrice")</span>
+<span class="source-line-no">060</span><span id="line.60">    public Money getExternalPrice();</span>
+<span class="source-line-no">061</span><span id="line.61"></span>
+<span class="source-line-no">062</span><span id="line.62">    /**</span>
+<span class="source-line-no">063</span><span id="line.63">     *  &lt;p&gt;Sets the LineItem &lt;code&gt;price&lt;/code&gt; and &lt;code&gt;totalPrice&lt;/code&gt; to the given value when changing the quantity of a Line Item with the &lt;code&gt;ExternalTotal&lt;/code&gt; LineItemPriceMode.&lt;/p&gt;</span>
+<span class="source-line-no">064</span><span id="line.64">     */</span>
+<span class="source-line-no">065</span><span id="line.65">    @Valid</span>
+<span class="source-line-no">066</span><span id="line.66">    @JsonProperty("externalTotalPrice")</span>
+<span class="source-line-no">067</span><span id="line.67">    public ExternalLineItemTotalPrice getExternalTotalPrice();</span>
+<span class="source-line-no">068</span><span id="line.68"></span>
+<span class="source-line-no">069</span><span id="line.69">    public void setLineItemId(final String lineItemId);</span>
+<span class="source-line-no">070</span><span id="line.70"></span>
+<span class="source-line-no">071</span><span id="line.71">    public void setQuantity(final Long quantity);</span>
+<span class="source-line-no">072</span><span id="line.72"></span>
+<span class="source-line-no">073</span><span id="line.73">    public void setExternalPrice(final Money externalPrice);</span>
+<span class="source-line-no">074</span><span id="line.74"></span>
+<span class="source-line-no">075</span><span id="line.75">    public void setExternalTotalPrice(final ExternalLineItemTotalPrice externalTotalPrice);</span>
+<span class="source-line-no">076</span><span id="line.76"></span>
+<span class="source-line-no">077</span><span id="line.77">    public static CartChangeLineItemQuantityAction of() {</span>
+<span class="source-line-no">078</span><span id="line.78">        return new CartChangeLineItemQuantityActionImpl();</span>
+<span class="source-line-no">079</span><span id="line.79">    }</span>
+<span class="source-line-no">080</span><span id="line.80"></span>
+<span class="source-line-no">081</span><span id="line.81">    public static CartChangeLineItemQuantityAction of(final CartChangeLineItemQuantityAction template) {</span>
+<span class="source-line-no">082</span><span id="line.82">        CartChangeLineItemQuantityActionImpl instance = new CartChangeLineItemQuantityActionImpl();</span>
+<span class="source-line-no">083</span><span id="line.83">        instance.setLineItemId(template.getLineItemId());</span>
+<span class="source-line-no">084</span><span id="line.84">        instance.setQuantity(template.getQuantity());</span>
+<span class="source-line-no">085</span><span id="line.85">        instance.setExternalPrice(template.getExternalPrice());</span>
+<span class="source-line-no">086</span><span id="line.86">        instance.setExternalTotalPrice(template.getExternalTotalPrice());</span>
+<span class="source-line-no">087</span><span id="line.87">        return instance;</span>
+<span class="source-line-no">088</span><span id="line.88">    }</span>
+<span class="source-line-no">089</span><span id="line.89"></span>
+<span class="source-line-no">090</span><span id="line.90">    public static CartChangeLineItemQuantityActionBuilder builder() {</span>
+<span class="source-line-no">091</span><span id="line.91">        return CartChangeLineItemQuantityActionBuilder.of();</span>
+<span class="source-line-no">092</span><span id="line.92">    }</span>
+<span class="source-line-no">093</span><span id="line.93"></span>
+<span class="source-line-no">094</span><span id="line.94">    public static CartChangeLineItemQuantityActionBuilder builder(final CartChangeLineItemQuantityAction template) {</span>
+<span class="source-line-no">095</span><span id="line.95">        return CartChangeLineItemQuantityActionBuilder.of(template);</span>
+<span class="source-line-no">096</span><span id="line.96">    }</span>
+<span class="source-line-no">097</span><span id="line.97"></span>
+<span class="source-line-no">098</span><span id="line.98">    default &lt;T&gt; T withCartChangeLineItemQuantityAction(Function&lt;CartChangeLineItemQuantityAction, T&gt; helper) {</span>
+<span class="source-line-no">099</span><span id="line.99">        return helper.apply(this);</span>
+<span class="source-line-no">100</span><span id="line.100">    }</span>
+<span class="source-line-no">101</span><span id="line.101"></span>
+<span class="source-line-no">102</span><span id="line.102">    public static com.fasterxml.jackson.core.type.TypeReference&lt;CartChangeLineItemQuantityAction&gt; typeReference() {</span>
+<span class="source-line-no">103</span><span id="line.103">        return new com.fasterxml.jackson.core.type.TypeReference&lt;CartChangeLineItemQuantityAction&gt;() {</span>
+<span class="source-line-no">104</span><span id="line.104">            @Override</span>
+<span class="source-line-no">105</span><span id="line.105">            public String toString() {</span>
+<span class="source-line-no">106</span><span id="line.106">                return "TypeReference&lt;CartChangeLineItemQuantityAction&gt;";</span>
+<span class="source-line-no">107</span><span id="line.107">            }</span>
+<span class="source-line-no">108</span><span id="line.108">        };</span>
+<span class="source-line-no">109</span><span id="line.109">    }</span>
+<span class="source-line-no">110</span><span id="line.110">}</span>
 
 
 

@@ -2,6 +2,7 @@
 package com.commercetools.docs.meta;
 
 /**
+ * {@include.toc}
  * <h2 id=features>Features</h2>
  *
  * <h3 id=embracing-java-8>Embracing Java 8</h3>

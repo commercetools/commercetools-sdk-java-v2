@@ -32,7 +32,7 @@ public class ItemShippingTargetBuilder implements Builder<ItemShippingTarget> {
     private String shippingMethodKey;
 
     /**
-     *  <p>The key of the address in the cart's <code>itemShippingAddresses</code></p>
+     *  <p>Key of the address in the Cart <code>itemShippingAddresses</code>. Duplicate address keys are not allowed.</p>
      */
 
     public ItemShippingTargetBuilder addressKey(final String addressKey) {
@@ -41,7 +41,8 @@ public class ItemShippingTargetBuilder implements Builder<ItemShippingTarget> {
     }
 
     /**
-     *  <p>The quantity of items that should go to the address with the specified <code>addressKey</code>. Only positive values are allowed. Using <code>0</code> as quantity is also possible in a draft object, but the element will not be present in the resulting ItemShippingDetails.</p>
+     *  <p>Quantity of Line Items or Custom Line Items shipped to the address with the specified <code>addressKey</code>.</p>
+     *  <p>If a quantity is updated to <code>0</code> when defining ItemShippingDetailsDraft, the <code>targets</code> are removed from a Line Item or Custom Line Item in the resulting ItemShippingDetails.</p>
      */
 
     public ItemShippingTargetBuilder quantity(final Long quantity) {

@@ -36,7 +36,7 @@ public class DiscountCodeInfoImpl implements DiscountCodeInfo, ModelBase {
     }
 
     /**
-     *
+     *  <p>Discount Code associated with the Cart or Order.</p>
      */
 
     public com.commercetools.api.models.discount_code.DiscountCodeReference getDiscountCode() {
@@ -44,7 +44,7 @@ public class DiscountCodeInfoImpl implements DiscountCodeInfo, ModelBase {
     }
 
     /**
-     *
+     *  <p>Indicates the state of the Discount Code applied to the Cart or Order.</p>
      */
 
     public com.commercetools.api.models.cart.DiscountCodeState getState() {

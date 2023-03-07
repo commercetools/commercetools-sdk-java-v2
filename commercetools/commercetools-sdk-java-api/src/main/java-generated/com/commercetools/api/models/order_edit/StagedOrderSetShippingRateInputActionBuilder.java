@@ -27,7 +27,7 @@ public class StagedOrderSetShippingRateInputActionBuilder implements Builder<Sta
     private com.commercetools.api.models.cart.ShippingRateInputDraft shippingRateInput;
 
     /**
-     *
+     *  <p>Generic type holding specifc ShippingRateInputDraft types.</p>
      */
 
     public StagedOrderSetShippingRateInputActionBuilder shippingRateInput(
@@ -37,7 +37,7 @@ public class StagedOrderSetShippingRateInputActionBuilder implements Builder<Sta
     }
 
     /**
-     *
+     *  <p>Generic type holding specifc ShippingRateInputDraft types.</p>
      */
 
     public StagedOrderSetShippingRateInputActionBuilder shippingRateInput(

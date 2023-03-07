@@ -76,7 +76,7 @@ public class StagedOrderSetShippingAddressAndShippingMethodActionBuilder
     }
 
     /**
-     *
+     *  <p>Controls calculation of taxed prices for Line Items, Custom Line Items, and Shipping Methods as explained in Cart tax calculation.</p>
      */
 
     public StagedOrderSetShippingAddressAndShippingMethodActionBuilder externalTaxRate(
@@ -87,7 +87,7 @@ public class StagedOrderSetShippingAddressAndShippingMethodActionBuilder
     }
 
     /**
-     *
+     *  <p>Controls calculation of taxed prices for Line Items, Custom Line Items, and Shipping Methods as explained in Cart tax calculation.</p>
      */
 
     public StagedOrderSetShippingAddressAndShippingMethodActionBuilder externalTaxRate(

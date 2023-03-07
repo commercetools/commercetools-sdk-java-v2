@@ -29,7 +29,7 @@ public interface CartSetAnonymousIdAction extends CartUpdateAction {
     String SET_ANONYMOUS_ID = "setAnonymousId";
 
     /**
-     *  <p>If not set, any existing anonymous ID will be removed.</p>
+     *  <p>Value to set. If empty, any existing value is removed.</p>
      */
 
     @JsonProperty("anonymousId")

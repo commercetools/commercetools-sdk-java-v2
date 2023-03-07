@@ -13,7 +13,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * ShippingRateInputDraft
+ *  <p>Generic type holding specifc ShippingRateInputDraft types.</p>
  *
  * <hr>
  * Example to create a subtype instance using the builder pattern

@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * CartSetShippingCustomTypeAction
+ *  <p>This action sets, overwrites, or removes any existing Custom Type and Custom Fields for the Cart's <code>shippingMethod</code> or <code>shipping</code>.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CartSetShippingCustomTypeActionImpl implements CartSetShippingCustomTypeAction, ModelBase {
@@ -51,7 +51,7 @@ public class CartSetShippingCustomTypeActionImpl implements CartSetShippingCusto
     }
 
     /**
-     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multiple</code> ShippingMode.</p>
+     *  <p>The <code>shippingKey</code> of the Shipping to customize. Used to specify which Shipping Method to customize on a Cart with <code>Multiple</code> ShippingMode. Leave this empty to customize the one and only ShippingMethod on a <code>Single</code> ShippingMode Cart.</p>
      */
 
     public String getShippingKey() {
@@ -59,7 +59,7 @@ public class CartSetShippingCustomTypeActionImpl implements CartSetShippingCusto
     }
 
     /**
-     *  <p>Defines the Type that extends the <code>shippingAddress</code> with Custom Fields. If absent, any existing Type and Custom Fields are removed from the <code>shippingAddress</code>.</p>
+     *  <p>Defines the Type that extends the specified ShippingMethod with Custom Fields. If absent, any existing Type and Custom Fields are removed from the ShippingMethod.</p>
      */
 
     public com.commercetools.api.models.type.TypeResourceIdentifier getType() {
@@ -67,7 +67,7 @@ public class CartSetShippingCustomTypeActionImpl implements CartSetShippingCusto
     }
 
     /**
-     *  <p>Sets the Custom Fields fields for the <code>shippingAddress</code>.</p>
+     *  <p>Sets the Custom Fields fields for the <code>shippingMethod</code>.</p>
      */
 
     public com.commercetools.api.models.type.FieldContainer getFields() {

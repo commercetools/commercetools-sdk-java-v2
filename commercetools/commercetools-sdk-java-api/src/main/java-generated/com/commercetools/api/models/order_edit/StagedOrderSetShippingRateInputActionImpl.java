@@ -44,7 +44,7 @@ public class StagedOrderSetShippingRateInputActionImpl implements StagedOrderSet
     }
 
     /**
-     *
+     *  <p>Generic type holding specifc ShippingRateInputDraft types.</p>
      */
 
     public com.commercetools.api.models.cart.ShippingRateInputDraft getShippingRateInput() {

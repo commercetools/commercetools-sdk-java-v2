@@ -33,7 +33,7 @@ public class DirectDiscountBuilder implements Builder<DirectDiscount> {
     private com.commercetools.api.models.cart_discount.CartDiscountTarget target;
 
     /**
-     *  <p>The unique ID of the cart discount.</p>
+     *  <p>Unique identifier of the Direct Discount.</p>
      */
 
     public DirectDiscountBuilder id(final String id) {
@@ -42,7 +42,7 @@ public class DirectDiscountBuilder implements Builder<DirectDiscount> {
     }
 
     /**
-     *
+     *  <p>Effect of the Discount on the Cart.</p>
      */
 
     public DirectDiscountBuilder value(final com.commercetools.api.models.cart_discount.CartDiscountValue value) {
@@ -51,7 +51,7 @@ public class DirectDiscountBuilder implements Builder<DirectDiscount> {
     }
 
     /**
-     *
+     *  <p>Effect of the Discount on the Cart.</p>
      */
 
     public DirectDiscountBuilder value(
@@ -61,7 +61,8 @@ public class DirectDiscountBuilder implements Builder<DirectDiscount> {
     }
 
     /**
-     *  <p>Empty when the <code>value</code> has type <code>giftLineItem</code>, otherwise a CartDiscountTarget is set.</p>
+     *  <p>Part of the Cart that is discounted.</p>
+     *  <p>Empty when the <code>value</code> is set to <code>giftLineItem</code>.</p>
      */
 
     public DirectDiscountBuilder target(
@@ -71,7 +72,8 @@ public class DirectDiscountBuilder implements Builder<DirectDiscount> {
     }
 
     /**
-     *  <p>Empty when the <code>value</code> has type <code>giftLineItem</code>, otherwise a CartDiscountTarget is set.</p>
+     *  <p>Part of the Cart that is discounted.</p>
+     *  <p>Empty when the <code>value</code> is set to <code>giftLineItem</code>.</p>
      */
 
     public DirectDiscountBuilder target(

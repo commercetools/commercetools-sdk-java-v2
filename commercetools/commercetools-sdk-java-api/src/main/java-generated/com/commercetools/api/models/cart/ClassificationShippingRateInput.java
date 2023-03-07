@@ -35,14 +35,14 @@ public interface ClassificationShippingRateInput extends ShippingRateInput {
     String CLASSIFICATION = "Classification";
 
     /**
-     *
+     *  <p>Key of the value used as a programmatic identifier.</p>
      */
     @NotNull
     @JsonProperty("key")
     public String getKey();
 
     /**
-     *  <p>JSON object where the keys are of type Locale, and the values are the strings used for the corresponding language.</p>
+     *  <p>Descriptive localized label of the value.</p>
      */
     @NotNull
     @Valid

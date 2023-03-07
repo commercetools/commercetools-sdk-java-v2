@@ -102,7 +102,7 @@ public class StagedOrderAddLineItemActionImpl implements StagedOrderAddLineItemA
     }
 
     /**
-     *
+     *  <p>Controls calculation of taxed prices for Line Items, Custom Line Items, and Shipping Methods as explained in Cart tax calculation.</p>
      */
 
     public com.commercetools.api.models.cart.ExternalTaxRateDraft getExternalTaxRate() {
@@ -175,7 +175,7 @@ public class StagedOrderAddLineItemActionImpl implements StagedOrderAddLineItemA
     }
 
     /**
-     *
+     *  <p>For order creation and updates, the sum of the <code>targets</code> must match the quantity of the Line Items or Custom Line Items.</p>
      */
 
     public com.commercetools.api.models.cart.ItemShippingDetailsDraft getShippingDetails() {

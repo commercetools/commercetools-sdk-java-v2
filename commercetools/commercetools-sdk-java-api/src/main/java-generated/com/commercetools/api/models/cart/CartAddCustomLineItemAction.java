@@ -18,7 +18,9 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * CartAddCustomLineItemAction
+ *  <p>If the Cart already contains a CustomLineItem with the same <code>slug</code>, <code>name</code>, <code>money</code>, <code>taxCategory</code>, <code>state</code>, and Custom Fields, then only the quantity of the existing Custom Line Item is increased. If CustomLineItem <code>shippingDetails</code> are set, they are merged with the <code>targets</code> that already exist on the ItemShippingDetails of the Custom Line Item. In case of overlapping address keys the ItemShippingTarget <code>quantity</code> is summed up.</p>
+ *  <p>If the Cart already contains a Custom Line Item with the same slug that is otherwise not identical, an InvalidOperation error is returned.</p>
+ *  <p>If the Tax Rate is not set, a MissingTaxRateForCountry error is returned.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -27,7 +29,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     CartAddCustomLineItemAction cartAddCustomLineItemAction = CartAddCustomLineItemAction.builder()
  *             .money(moneyBuilder -> moneyBuilder)
  *             .name(nameBuilder -> nameBuilder)
- *             .quantity(0.3)
  *             .slug("{slug}")
  *             .build()
  * </code></pre>
@@ -41,8 +42,7 @@ public interface CartAddCustomLineItemAction
     String ADD_CUSTOM_LINE_ITEM = "addCustomLineItem";
 
     /**
-     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
-     *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
+     *  <p>Money value of the Custom Line Item. The value can be negative.</p>
      */
     @NotNull
     @Valid
@@ -50,7 +50,7 @@ public interface CartAddCustomLineItemAction
     public Money getMoney();
 
     /**
-     *  <p>JSON object where the keys are of type Locale, and the values are the strings used for the corresponding language.</p>
+     *  <p>Name of the Custom Line Item.</p>
      */
     @NotNull
     @Valid
@@ -58,39 +58,47 @@ public interface CartAddCustomLineItemAction
     public LocalizedString getName();
 
     /**
-     *
+     *  <p>Number of Custom Line Items to add to the Cart.</p>
      */
-    @NotNull
+
     @JsonProperty("quantity")
     public Long getQuantity();
 
     /**
-     *
+     *  <p>User-defined identifier used in a deep-link URL for the Custom Line Item. It must match the pattern <code>[a-zA-Z0-9_-]{2,256}</code>.</p>
      */
     @NotNull
     @JsonProperty("slug")
     public String getSlug();
 
     /**
-     *  <p>ResourceIdentifier to a TaxCategory.</p>
+     *  <p>Used to select a Tax Rate when a Cart has the <code>Platform</code> TaxMode.</p>
+     *  <p>If TaxMode is <code>Platform</code>, this field must not be empty.</p>
      */
     @Valid
     @JsonProperty("taxCategory")
     public TaxCategoryResourceIdentifier getTaxCategory();
 
     /**
-     *  <p>The representation used when creating or updating a customizable data type with Custom Fields.</p>
-     */
-    @Valid
-    @JsonProperty("custom")
-    public CustomFieldsDraft getCustom();
-
-    /**
-     *
+     *  <p>An external Tax Rate can be set if the Cart has <code>External</code> TaxMode.</p>
      */
     @Valid
     @JsonProperty("externalTaxRate")
     public ExternalTaxRateDraft getExternalTaxRate();
+
+    /**
+     *  <p>Container for Custom Line Item-specific addresses.</p>
+     */
+    @Valid
+    @JsonProperty("shippingDetails")
+    public ItemShippingDetailsDraft getShippingDetails();
+
+    /**
+     *  <p>Custom Fields for the Custom Line Item.</p>
+     */
+    @Valid
+    @JsonProperty("custom")
+    public CustomFieldsDraft getCustom();
 
     /**
      *  <ul>
@@ -112,9 +120,11 @@ public interface CartAddCustomLineItemAction
 
     public void setTaxCategory(final TaxCategoryResourceIdentifier taxCategory);
 
-    public void setCustom(final CustomFieldsDraft custom);
-
     public void setExternalTaxRate(final ExternalTaxRateDraft externalTaxRate);
+
+    public void setShippingDetails(final ItemShippingDetailsDraft shippingDetails);
+
+    public void setCustom(final CustomFieldsDraft custom);
 
     public void setPriceMode(final CustomLineItemPriceMode priceMode);
 
@@ -129,8 +139,9 @@ public interface CartAddCustomLineItemAction
         instance.setQuantity(template.getQuantity());
         instance.setSlug(template.getSlug());
         instance.setTaxCategory(template.getTaxCategory());
-        instance.setCustom(template.getCustom());
         instance.setExternalTaxRate(template.getExternalTaxRate());
+        instance.setShippingDetails(template.getShippingDetails());
+        instance.setCustom(template.getCustom());
         instance.setPriceMode(template.getPriceMode());
         return instance;
     }

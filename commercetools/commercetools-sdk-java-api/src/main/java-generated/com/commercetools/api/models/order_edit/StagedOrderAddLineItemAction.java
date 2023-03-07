@@ -54,7 +54,7 @@ public interface StagedOrderAddLineItemAction
     public ChannelResourceIdentifier getDistributionChannel();
 
     /**
-     *
+     *  <p>Controls calculation of taxed prices for Line Items, Custom Line Items, and Shipping Methods as explained in Cart tax calculation.</p>
      */
     @Valid
     @JsonProperty("externalTaxRate")
@@ -118,7 +118,7 @@ public interface StagedOrderAddLineItemAction
     public ExternalLineItemTotalPrice getExternalTotalPrice();
 
     /**
-     *
+     *  <p>For order creation and updates, the sum of the <code>targets</code> must match the quantity of the Line Items or Custom Line Items.</p>
      */
     @Valid
     @JsonProperty("shippingDetails")

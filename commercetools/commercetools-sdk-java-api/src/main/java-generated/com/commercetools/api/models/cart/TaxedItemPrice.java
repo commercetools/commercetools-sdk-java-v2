@@ -8,7 +8,7 @@ import java.util.function.Function;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
-import com.commercetools.api.models.common.TypedMoney;
+import com.commercetools.api.models.common.CentPrecisionMoney;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -33,33 +33,33 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface TaxedItemPrice {
 
     /**
-     *
+     *  <p>Total net amount of the Line Item or Custom Line Item.</p>
      */
     @NotNull
     @Valid
     @JsonProperty("totalNet")
-    public TypedMoney getTotalNet();
+    public CentPrecisionMoney getTotalNet();
 
     /**
-     *  <p>TaxedItemPrice fields can not be used in query predicates.</p>
+     *  <p>Total gross amount of the Line Item or Custom Line Item.</p>
      */
     @NotNull
     @Valid
     @JsonProperty("totalGross")
-    public TypedMoney getTotalGross();
+    public CentPrecisionMoney getTotalGross();
 
     /**
-     *  <p>Calculated automatically as the subtraction of <code>totalGross</code> - <code>totalNet</code>.</p>
+     *  <p>Total tax applicable for the Line Item or Custom Line Item. Automatically calculated as the difference between the <code>totalGross</code> and <code>totalNet</code> values.</p>
      */
     @Valid
     @JsonProperty("totalTax")
-    public TypedMoney getTotalTax();
+    public CentPrecisionMoney getTotalTax();
 
-    public void setTotalNet(final TypedMoney totalNet);
+    public void setTotalNet(final CentPrecisionMoney totalNet);
 
-    public void setTotalGross(final TypedMoney totalGross);
+    public void setTotalGross(final CentPrecisionMoney totalGross);
 
-    public void setTotalTax(final TypedMoney totalTax);
+    public void setTotalTax(final CentPrecisionMoney totalTax);
 
     public static TaxedItemPrice of() {
         return new TaxedItemPriceImpl();

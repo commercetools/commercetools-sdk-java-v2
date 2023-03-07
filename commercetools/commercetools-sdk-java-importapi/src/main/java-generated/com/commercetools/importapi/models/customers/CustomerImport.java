@@ -28,7 +28,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     CustomerImport customerImport = CustomerImport.builder()
  *             .key("{key}")
  *             .email("{email}")
- *             .password("{password}")
  *             .plusAddresses(addressesBuilder -> addressesBuilder)
  *             .build()
  * </code></pre>
@@ -55,7 +54,7 @@ public interface CustomerImport extends ImportResource {
     /**
      *  <p>Maps to <code>Customer.password</code>.</p>
      */
-    @NotNull
+
     @JsonProperty("password")
     public String getPassword();
 
@@ -187,11 +186,21 @@ public interface CustomerImport extends ImportResource {
     public String getLocale();
 
     /**
-     *  <p>The custom fields for this Customer.</p>
+     *  <p>The Custom Fields for this Customer.</p>
      */
     @Valid
     @JsonProperty("custom")
     public Custom getCustom();
+
+    /**
+     *  <ul>
+     *   <li>Set to <code>Password</code> to make the <code>password</code> field required for the Customer.</li>
+     *   <li>Set to <code>ExternalAuth</code> when the password is not required for the Customer.</li>
+     *  </ul>
+     */
+
+    @JsonProperty("authenticationMode")
+    public AuthenticationMode getAuthenticationMode();
 
     public void setCustomerNumber(final String customerNumber);
 
@@ -249,6 +258,8 @@ public interface CustomerImport extends ImportResource {
 
     public void setCustom(final Custom custom);
 
+    public void setAuthenticationMode(final AuthenticationMode authenticationMode);
+
     public static CustomerImport of() {
         return new CustomerImportImpl();
     }
@@ -278,6 +289,7 @@ public interface CustomerImport extends ImportResource {
         instance.setShippingAddresses(template.getShippingAddresses());
         instance.setLocale(template.getLocale());
         instance.setCustom(template.getCustom());
+        instance.setAuthenticationMode(template.getAuthenticationMode());
         return instance;
     }
 

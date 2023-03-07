@@ -30,7 +30,7 @@ public class CartSetCustomLineItemTaxAmountActionBuilder implements Builder<Cart
     private com.commercetools.api.models.cart.ExternalTaxAmountDraft externalTaxAmount;
 
     /**
-     *
+     *  <p><code>id</code> of the CustomLineItem to update.</p>
      */
 
     public CartSetCustomLineItemTaxAmountActionBuilder customLineItemId(final String customLineItemId) {
@@ -39,7 +39,7 @@ public class CartSetCustomLineItemTaxAmountActionBuilder implements Builder<Cart
     }
 
     /**
-     *
+     *  <p>Value to set. If empty, any existing value is removed.</p>
      */
 
     public CartSetCustomLineItemTaxAmountActionBuilder externalTaxAmount(
@@ -50,7 +50,7 @@ public class CartSetCustomLineItemTaxAmountActionBuilder implements Builder<Cart
     }
 
     /**
-     *
+     *  <p>Value to set. If empty, any existing value is removed.</p>
      */
 
     public CartSetCustomLineItemTaxAmountActionBuilder externalTaxAmount(

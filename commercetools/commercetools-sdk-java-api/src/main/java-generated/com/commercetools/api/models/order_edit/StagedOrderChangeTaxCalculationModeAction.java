@@ -34,7 +34,7 @@ public interface StagedOrderChangeTaxCalculationModeAction extends StagedOrderUp
     String CHANGE_TAX_CALCULATION_MODE = "changeTaxCalculationMode";
 
     /**
-     *
+     *  <p>Determines in which Tax calculation mode taxed prices are calculated.</p>
      */
     @NotNull
     @JsonProperty("taxCalculationMode")

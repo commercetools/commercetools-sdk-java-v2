@@ -44,7 +44,7 @@ public class MyCartRemovePaymentActionImpl implements MyCartRemovePaymentAction,
     }
 
     /**
-     *  <p>ResourceIdentifier of a Payment.</p>
+     *  <p>Payment to remove from the Cart.</p>
      */
 
     public com.commercetools.api.models.payment.PaymentResourceIdentifier getPayment() {

@@ -25,7 +25,10 @@ public class CartSetDirectDiscountsActionBuilder implements Builder<CartSetDirec
     private java.util.List<com.commercetools.api.models.cart.DirectDiscountDraft> discounts;
 
     /**
-     *
+     *  <ul>
+     *   <li>If set, all existing Direct Discounts are replaced. The discounts apply in the order they are added to the list.</li>
+     *   <li>If empty, all existing Direct Discounts are removed and all affected prices on the Cart or Order are recalculated.</li>
+     *  </ul>
      */
 
     public CartSetDirectDiscountsActionBuilder discounts(
@@ -35,7 +38,10 @@ public class CartSetDirectDiscountsActionBuilder implements Builder<CartSetDirec
     }
 
     /**
-     *
+     *  <ul>
+     *   <li>If set, all existing Direct Discounts are replaced. The discounts apply in the order they are added to the list.</li>
+     *   <li>If empty, all existing Direct Discounts are removed and all affected prices on the Cart or Order are recalculated.</li>
+     *  </ul>
      */
 
     public CartSetDirectDiscountsActionBuilder discounts(
@@ -45,7 +51,10 @@ public class CartSetDirectDiscountsActionBuilder implements Builder<CartSetDirec
     }
 
     /**
-     *
+     *  <ul>
+     *   <li>If set, all existing Direct Discounts are replaced. The discounts apply in the order they are added to the list.</li>
+     *   <li>If empty, all existing Direct Discounts are removed and all affected prices on the Cart or Order are recalculated.</li>
+     *  </ul>
      */
 
     public CartSetDirectDiscountsActionBuilder plusDiscounts(
@@ -58,7 +67,10 @@ public class CartSetDirectDiscountsActionBuilder implements Builder<CartSetDirec
     }
 
     /**
-     *
+     *  <ul>
+     *   <li>If set, all existing Direct Discounts are replaced. The discounts apply in the order they are added to the list.</li>
+     *   <li>If empty, all existing Direct Discounts are removed and all affected prices on the Cart or Order are recalculated.</li>
+     *  </ul>
      */
 
     public CartSetDirectDiscountsActionBuilder plusDiscounts(
@@ -71,7 +83,10 @@ public class CartSetDirectDiscountsActionBuilder implements Builder<CartSetDirec
     }
 
     /**
-     *
+     *  <ul>
+     *   <li>If set, all existing Direct Discounts are replaced. The discounts apply in the order they are added to the list.</li>
+     *   <li>If empty, all existing Direct Discounts are removed and all affected prices on the Cart or Order are recalculated.</li>
+     *  </ul>
      */
 
     public CartSetDirectDiscountsActionBuilder withDiscounts(

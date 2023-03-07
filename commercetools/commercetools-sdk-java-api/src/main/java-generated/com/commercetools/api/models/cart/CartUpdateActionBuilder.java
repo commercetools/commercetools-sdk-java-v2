@@ -127,6 +127,10 @@ public class CartUpdateActionBuilder {
         return com.commercetools.api.models.cart.CartSetBillingAddressCustomTypeActionBuilder.of();
     }
 
+    public com.commercetools.api.models.cart.CartSetBusinessUnitActionBuilder setBusinessUnitBuilder() {
+        return com.commercetools.api.models.cart.CartSetBusinessUnitActionBuilder.of();
+    }
+
     public com.commercetools.api.models.cart.CartSetCartTotalTaxActionBuilder setCartTotalTaxBuilder() {
         return com.commercetools.api.models.cart.CartSetCartTotalTaxActionBuilder.of();
     }

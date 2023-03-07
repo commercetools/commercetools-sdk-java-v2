@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * CartAddCustomShippingMethodAction
+ *  <p>To add a custom Shipping Method (independent of the ShippingMethods managed through the Shipping Methods API) to the Cart, it <strong>must have</strong> the <code>Multiple</code> ShippingMode.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CartAddCustomShippingMethodActionImpl implements CartAddCustomShippingMethodAction, ModelBase {
@@ -34,11 +34,11 @@ public class CartAddCustomShippingMethodActionImpl implements CartAddCustomShipp
 
     private com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier taxCategory;
 
-    private String externalTaxRate;
+    private com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate;
 
-    private java.util.List<com.commercetools.api.models.order.Delivery> deliveries;
+    private java.util.List<com.commercetools.api.models.order.DeliveryDraft> deliveries;
 
-    private String custom;
+    private com.commercetools.api.models.type.CustomFieldsDraft custom;
 
     @JsonCreator
     CartAddCustomShippingMethodActionImpl(@JsonProperty("shippingKey") final String shippingKey,
@@ -47,9 +47,9 @@ public class CartAddCustomShippingMethodActionImpl implements CartAddCustomShipp
             @JsonProperty("shippingRate") final com.commercetools.api.models.shipping_method.ShippingRateDraft shippingRate,
             @JsonProperty("shippingRateInput") final com.commercetools.api.models.cart.ShippingRateInputDraft shippingRateInput,
             @JsonProperty("taxCategory") final com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier taxCategory,
-            @JsonProperty("externalTaxRate") final String externalTaxRate,
-            @JsonProperty("deliveries") final java.util.List<com.commercetools.api.models.order.Delivery> deliveries,
-            @JsonProperty("custom") final String custom) {
+            @JsonProperty("externalTaxRate") final com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate,
+            @JsonProperty("deliveries") final java.util.List<com.commercetools.api.models.order.DeliveryDraft> deliveries,
+            @JsonProperty("custom") final com.commercetools.api.models.type.CustomFieldsDraft custom) {
         this.shippingKey = shippingKey;
         this.shippingMethodName = shippingMethodName;
         this.shippingAddress = shippingAddress;
@@ -75,7 +75,7 @@ public class CartAddCustomShippingMethodActionImpl implements CartAddCustomShipp
     }
 
     /**
-     *  <p>User-defined unique identifier of the custom Shipping Method in a Cart with <code>Multiple</code> ShippingMode.</p>
+     *  <p>User-defined identifier for the custom Shipping Method that must be unique across the Cart with <code>Multiple</code> ShippingMode.</p>
      */
 
     public String getShippingKey() {
@@ -107,12 +107,12 @@ public class CartAddCustomShippingMethodActionImpl implements CartAddCustomShipp
     }
 
     /**
-     *  <p>Used as an input to select a ShippingRatePriceTier.</p>
+     *  <p>Input used to select a ShippingRatePriceTier. The data type of this field depends on the <code>shippingRateInputType.type</code> configured in the Project:</p>
      *  <ul>
-     *   <li>Must be ClassificationShippingRateInput if ShippingRateInputType is CartClassificationType.</li>
-     *   <li>Must be ScoreShippingRateInput if ShippingRateInputType is CartScoreType.</li>
+     *   <li>If <code>CartClassification</code>, it must be ClassificationShippingRateInputDraft.</li>
+     *   <li>If <code>CartScore</code>, it must be ScoreShippingRateInputDraft.</li>
+     *   <li>If <code>CartValue</code>, it cannot be set.</li>
      *  </ul>
-     *  <p>The <code>shippingRateInput</code> cannot be set on the Cart if CartValueType is defined.</p>
      */
 
     public com.commercetools.api.models.cart.ShippingRateInputDraft getShippingRateInput() {
@@ -120,7 +120,7 @@ public class CartAddCustomShippingMethodActionImpl implements CartAddCustomShipp
     }
 
     /**
-     *  <p>Tax Category used to determine a shipping Tax Rate if a Cart has the <code>Platform</code> TaxMode.</p>
+     *  <p>Tax Category used to determine a shipping Tax Rate if the Cart has the <code>Platform</code> TaxMode.</p>
      */
 
     public com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier getTaxCategory() {
@@ -131,15 +131,15 @@ public class CartAddCustomShippingMethodActionImpl implements CartAddCustomShipp
      *  <p>Tax Rate used to tax a shipping expense if the Cart has the <code>External</code> TaxMode.</p>
      */
 
-    public String getExternalTaxRate() {
+    public com.commercetools.api.models.cart.ExternalTaxRateDraft getExternalTaxRate() {
         return this.externalTaxRate;
     }
 
     /**
-     *  <p>Deliveries tied to a Shipping Method in a multi-shipping method Cart. It holds information on how items are delivered to customers.</p>
+     *  <p>Deliveries to be shipped with the custom Shipping Method.</p>
      */
 
-    public java.util.List<com.commercetools.api.models.order.Delivery> getDeliveries() {
+    public java.util.List<com.commercetools.api.models.order.DeliveryDraft> getDeliveries() {
         return this.deliveries;
     }
 
@@ -147,7 +147,7 @@ public class CartAddCustomShippingMethodActionImpl implements CartAddCustomShipp
      *  <p>Custom Fields for the custom Shipping Method.</p>
      */
 
-    public String getCustom() {
+    public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
         return this.custom;
     }
 
@@ -176,19 +176,19 @@ public class CartAddCustomShippingMethodActionImpl implements CartAddCustomShipp
         this.taxCategory = taxCategory;
     }
 
-    public void setExternalTaxRate(final String externalTaxRate) {
+    public void setExternalTaxRate(final com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate) {
         this.externalTaxRate = externalTaxRate;
     }
 
-    public void setDeliveries(final com.commercetools.api.models.order.Delivery... deliveries) {
+    public void setDeliveries(final com.commercetools.api.models.order.DeliveryDraft... deliveries) {
         this.deliveries = new ArrayList<>(Arrays.asList(deliveries));
     }
 
-    public void setDeliveries(final java.util.List<com.commercetools.api.models.order.Delivery> deliveries) {
+    public void setDeliveries(final java.util.List<com.commercetools.api.models.order.DeliveryDraft> deliveries) {
         this.deliveries = deliveries;
     }
 
-    public void setCustom(final String custom) {
+    public void setCustom(final com.commercetools.api.models.type.CustomFieldsDraft custom) {
         this.custom = custom;
     }
 

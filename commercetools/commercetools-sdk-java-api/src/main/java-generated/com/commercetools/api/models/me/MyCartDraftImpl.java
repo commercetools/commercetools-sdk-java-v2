@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * MyCartDraft
+ *  <p>The <code>customerId</code> is determined by a password flow token and automatically set on the resulting Cart. The <code>anonymousId</code> is determined by a token for an anonymous session and automatically set on the resulting Cart.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class MyCartDraftImpl implements MyCartDraft, ModelBase {
@@ -24,73 +24,73 @@ public class MyCartDraftImpl implements MyCartDraft, ModelBase {
 
     private String customerEmail;
 
-    private String country;
+    private com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifier businessUnit;
 
-    private com.commercetools.api.models.cart.InventoryMode inventoryMode;
+    private com.commercetools.api.models.store.StoreResourceIdentifier store;
 
     private java.util.List<com.commercetools.api.models.me.MyLineItemDraft> lineItems;
 
-    private com.commercetools.api.models.common.BaseAddress shippingAddress;
+    private com.commercetools.api.models.cart.TaxMode taxMode;
+
+    private com.commercetools.api.models.cart.InventoryMode inventoryMode;
 
     private com.commercetools.api.models.common.BaseAddress billingAddress;
 
+    private com.commercetools.api.models.common.BaseAddress shippingAddress;
+
     private com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifier shippingMethod;
-
-    private com.commercetools.api.models.type.CustomFieldsDraft custom;
-
-    private String locale;
-
-    private com.commercetools.api.models.cart.TaxMode taxMode;
-
-    private Long deleteDaysAfterLastModification;
 
     private java.util.List<com.commercetools.api.models.common.BaseAddress> itemShippingAddresses;
 
-    private com.commercetools.api.models.business_unit.BusinessUnitKeyReference businessUnit;
-
-    private com.commercetools.api.models.store.StoreKeyReference store;
-
     private java.util.List<String> discountCodes;
+
+    private String country;
+
+    private String locale;
+
+    private Long deleteDaysAfterLastModification;
+
+    private com.commercetools.api.models.type.CustomFieldsDraft custom;
 
     @JsonCreator
     MyCartDraftImpl(@JsonProperty("currency") final String currency,
-            @JsonProperty("customerEmail") final String customerEmail, @JsonProperty("country") final String country,
-            @JsonProperty("inventoryMode") final com.commercetools.api.models.cart.InventoryMode inventoryMode,
+            @JsonProperty("customerEmail") final String customerEmail,
+            @JsonProperty("businessUnit") final com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifier businessUnit,
+            @JsonProperty("store") final com.commercetools.api.models.store.StoreResourceIdentifier store,
             @JsonProperty("lineItems") final java.util.List<com.commercetools.api.models.me.MyLineItemDraft> lineItems,
-            @JsonProperty("shippingAddress") final com.commercetools.api.models.common.BaseAddress shippingAddress,
-            @JsonProperty("billingAddress") final com.commercetools.api.models.common.BaseAddress billingAddress,
-            @JsonProperty("shippingMethod") final com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifier shippingMethod,
-            @JsonProperty("custom") final com.commercetools.api.models.type.CustomFieldsDraft custom,
-            @JsonProperty("locale") final String locale,
             @JsonProperty("taxMode") final com.commercetools.api.models.cart.TaxMode taxMode,
-            @JsonProperty("deleteDaysAfterLastModification") final Long deleteDaysAfterLastModification,
+            @JsonProperty("inventoryMode") final com.commercetools.api.models.cart.InventoryMode inventoryMode,
+            @JsonProperty("billingAddress") final com.commercetools.api.models.common.BaseAddress billingAddress,
+            @JsonProperty("shippingAddress") final com.commercetools.api.models.common.BaseAddress shippingAddress,
+            @JsonProperty("shippingMethod") final com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifier shippingMethod,
             @JsonProperty("itemShippingAddresses") final java.util.List<com.commercetools.api.models.common.BaseAddress> itemShippingAddresses,
-            @JsonProperty("businessUnit") final com.commercetools.api.models.business_unit.BusinessUnitKeyReference businessUnit,
-            @JsonProperty("store") final com.commercetools.api.models.store.StoreKeyReference store,
-            @JsonProperty("discountCodes") final java.util.List<String> discountCodes) {
+            @JsonProperty("discountCodes") final java.util.List<String> discountCodes,
+            @JsonProperty("country") final String country, @JsonProperty("locale") final String locale,
+            @JsonProperty("deleteDaysAfterLastModification") final Long deleteDaysAfterLastModification,
+            @JsonProperty("custom") final com.commercetools.api.models.type.CustomFieldsDraft custom) {
         this.currency = currency;
         this.customerEmail = customerEmail;
-        this.country = country;
-        this.inventoryMode = inventoryMode;
-        this.lineItems = lineItems;
-        this.shippingAddress = shippingAddress;
-        this.billingAddress = billingAddress;
-        this.shippingMethod = shippingMethod;
-        this.custom = custom;
-        this.locale = locale;
-        this.taxMode = taxMode;
-        this.deleteDaysAfterLastModification = deleteDaysAfterLastModification;
-        this.itemShippingAddresses = itemShippingAddresses;
         this.businessUnit = businessUnit;
         this.store = store;
+        this.lineItems = lineItems;
+        this.taxMode = taxMode;
+        this.inventoryMode = inventoryMode;
+        this.billingAddress = billingAddress;
+        this.shippingAddress = shippingAddress;
+        this.shippingMethod = shippingMethod;
+        this.itemShippingAddresses = itemShippingAddresses;
         this.discountCodes = discountCodes;
+        this.country = country;
+        this.locale = locale;
+        this.deleteDaysAfterLastModification = deleteDaysAfterLastModification;
+        this.custom = custom;
     }
 
     public MyCartDraftImpl() {
     }
 
     /**
-     *  <p>A three-digit currency code as per ISO 3166-1 alpha-2.</p>
+     *  <p>Currency the Cart uses.</p>
      */
 
     public String getCurrency() {
@@ -98,7 +98,7 @@ public class MyCartDraftImpl implements MyCartDraft, ModelBase {
     }
 
     /**
-     *
+     *  <p>Email address of the Customer the Cart belongs to.</p>
      */
 
     public String getCustomerEmail() {
@@ -106,23 +106,23 @@ public class MyCartDraftImpl implements MyCartDraft, ModelBase {
     }
 
     /**
-     *  <p>A two-digit country code as per ISO 3166-1 alpha-2.</p>
+     *  <p>ResourceIdentifier to the Business Unit the Cart should belong to.</p>
      */
 
-    public String getCountry() {
-        return this.country;
+    public com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifier getBusinessUnit() {
+        return this.businessUnit;
     }
 
     /**
-     *  <p>Default inventory mode is <code>None</code>.</p>
+     *  <p>ResourceIdentifier to the Store the Cart should belong to. Once set, it cannot be updated.</p>
      */
 
-    public com.commercetools.api.models.cart.InventoryMode getInventoryMode() {
-        return this.inventoryMode;
+    public com.commercetools.api.models.store.StoreResourceIdentifier getStore() {
+        return this.store;
     }
 
     /**
-     *
+     *  <p>Line Items to add to the Cart.</p>
      */
 
     public java.util.List<com.commercetools.api.models.me.MyLineItemDraft> getLineItems() {
@@ -130,47 +130,7 @@ public class MyCartDraftImpl implements MyCartDraft, ModelBase {
     }
 
     /**
-     *
-     */
-
-    public com.commercetools.api.models.common.BaseAddress getShippingAddress() {
-        return this.shippingAddress;
-    }
-
-    /**
-     *
-     */
-
-    public com.commercetools.api.models.common.BaseAddress getBillingAddress() {
-        return this.billingAddress;
-    }
-
-    /**
-     *
-     */
-
-    public com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifier getShippingMethod() {
-        return this.shippingMethod;
-    }
-
-    /**
-     *  <p>The custom fields.</p>
-     */
-
-    public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
-        return this.custom;
-    }
-
-    /**
-     *
-     */
-
-    public String getLocale() {
-        return this.locale;
-    }
-
-    /**
-     *  <p>The <code>TaxMode</code> <code>Disabled</code> can not be set on the My Carts endpoint.</p>
+     *  <p>Determines how Tax Rates are set. The <code>Disabled</code> TaxMode <strong>cannot</strong> be set.</p>
      */
 
     public com.commercetools.api.models.cart.TaxMode getTaxMode() {
@@ -178,15 +138,40 @@ public class MyCartDraftImpl implements MyCartDraft, ModelBase {
     }
 
     /**
-     *  <p>The cart will be deleted automatically if it hasn't been modified for the specified amount of days and it is in the <code>Active</code> CartState. If a ChangeSubscription for carts exists, a <code>ResourceDeleted</code> notification will be sent.</p>
+     *  <p>Determines how stock quantities are tracked for Line Items in the Cart.</p>
      */
 
-    public Long getDeleteDaysAfterLastModification() {
-        return this.deleteDaysAfterLastModification;
+    public com.commercetools.api.models.cart.InventoryMode getInventoryMode() {
+        return this.inventoryMode;
     }
 
     /**
-     *  <p>Contains addresses for orders with multiple shipping addresses. Each address must contain a key which is unique in this cart.</p>
+     *  <p>Billing address associated with the Cart.</p>
+     */
+
+    public com.commercetools.api.models.common.BaseAddress getBillingAddress() {
+        return this.billingAddress;
+    }
+
+    /**
+     *  <p>Shipping address associated with the Cart. Determines eligible ShippingMethod rates and Tax Rates of Line Items.</p>
+     */
+
+    public com.commercetools.api.models.common.BaseAddress getShippingAddress() {
+        return this.shippingAddress;
+    }
+
+    /**
+     *  <p>Shipping Method for the Cart. If the referenced ShippingMethod has a <code>predicate</code> that does not match the Cart, an InvalidOperation error is returned when creating a Cart.</p>
+     */
+
+    public com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifier getShippingMethod() {
+        return this.shippingMethod;
+    }
+
+    /**
+     *  <p>Multiple shipping addresses of the Cart. Each address must contain a <code>key</code> that is unique in this Cart. The keys are used by LineItems to reference these addresses under their <code>shippingDetails</code>.</p>
+     *  <p>Eligible Shipping Methods or applicable Tax Rates are determined by the Cart <code>shippingAddress</code>, and not <code>itemShippingAddresses</code>.</p>
      */
 
     public java.util.List<com.commercetools.api.models.common.BaseAddress> getItemShippingAddresses() {
@@ -194,27 +179,44 @@ public class MyCartDraftImpl implements MyCartDraft, ModelBase {
     }
 
     /**
-     *  <p>The BusinessUnit the cart will belong to.</p>
-     */
-
-    public com.commercetools.api.models.business_unit.BusinessUnitKeyReference getBusinessUnit() {
-        return this.businessUnit;
-    }
-
-    /**
-     *  <p>Reference to a Store by its key.</p>
-     */
-
-    public com.commercetools.api.models.store.StoreKeyReference getStore() {
-        return this.store;
-    }
-
-    /**
-     *  <p>The code of existing DiscountCodes.</p>
+     *  <p><code>code</code> of the existing DiscountCodes to add to the Cart.</p>
      */
 
     public java.util.List<String> getDiscountCodes() {
         return this.discountCodes;
+    }
+
+    /**
+     *  <p>Used for LineItem Price selection. If used for Create Cart in Store, the provided country must be one of the Store's <code>countries</code>.</p>
+     */
+
+    public String getCountry() {
+        return this.country;
+    }
+
+    /**
+     *  <p>Languages of the Cart. Can only contain languages supported by the Project.</p>
+     */
+
+    public String getLocale() {
+        return this.locale;
+    }
+
+    /**
+     *  <p>Number of days after which a Cart with <code>Active</code> CartState is deleted since its last modification. If not provided, the default value for this field configured in Project settings is assigned.</p>
+     *  <p>Create a ChangeSubscription for Carts to receive a ResourceDeletedDeliveryPayload upon deletion of the Cart.</p>
+     */
+
+    public Long getDeleteDaysAfterLastModification() {
+        return this.deleteDaysAfterLastModification;
+    }
+
+    /**
+     *  <p>Custom Fields for the Cart.</p>
+     */
+
+    public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
+        return this.custom;
     }
 
     public void setCurrency(final String currency) {
@@ -225,12 +227,13 @@ public class MyCartDraftImpl implements MyCartDraft, ModelBase {
         this.customerEmail = customerEmail;
     }
 
-    public void setCountry(final String country) {
-        this.country = country;
+    public void setBusinessUnit(
+            final com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifier businessUnit) {
+        this.businessUnit = businessUnit;
     }
 
-    public void setInventoryMode(final com.commercetools.api.models.cart.InventoryMode inventoryMode) {
-        this.inventoryMode = inventoryMode;
+    public void setStore(final com.commercetools.api.models.store.StoreResourceIdentifier store) {
+        this.store = store;
     }
 
     public void setLineItems(final com.commercetools.api.models.me.MyLineItemDraft... lineItems) {
@@ -241,33 +244,25 @@ public class MyCartDraftImpl implements MyCartDraft, ModelBase {
         this.lineItems = lineItems;
     }
 
-    public void setShippingAddress(final com.commercetools.api.models.common.BaseAddress shippingAddress) {
-        this.shippingAddress = shippingAddress;
+    public void setTaxMode(final com.commercetools.api.models.cart.TaxMode taxMode) {
+        this.taxMode = taxMode;
+    }
+
+    public void setInventoryMode(final com.commercetools.api.models.cart.InventoryMode inventoryMode) {
+        this.inventoryMode = inventoryMode;
     }
 
     public void setBillingAddress(final com.commercetools.api.models.common.BaseAddress billingAddress) {
         this.billingAddress = billingAddress;
     }
 
+    public void setShippingAddress(final com.commercetools.api.models.common.BaseAddress shippingAddress) {
+        this.shippingAddress = shippingAddress;
+    }
+
     public void setShippingMethod(
             final com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifier shippingMethod) {
         this.shippingMethod = shippingMethod;
-    }
-
-    public void setCustom(final com.commercetools.api.models.type.CustomFieldsDraft custom) {
-        this.custom = custom;
-    }
-
-    public void setLocale(final String locale) {
-        this.locale = locale;
-    }
-
-    public void setTaxMode(final com.commercetools.api.models.cart.TaxMode taxMode) {
-        this.taxMode = taxMode;
-    }
-
-    public void setDeleteDaysAfterLastModification(final Long deleteDaysAfterLastModification) {
-        this.deleteDaysAfterLastModification = deleteDaysAfterLastModification;
     }
 
     public void setItemShippingAddresses(
@@ -280,21 +275,28 @@ public class MyCartDraftImpl implements MyCartDraft, ModelBase {
         this.itemShippingAddresses = itemShippingAddresses;
     }
 
-    public void setBusinessUnit(
-            final com.commercetools.api.models.business_unit.BusinessUnitKeyReference businessUnit) {
-        this.businessUnit = businessUnit;
-    }
-
-    public void setStore(final com.commercetools.api.models.store.StoreKeyReference store) {
-        this.store = store;
-    }
-
     public void setDiscountCodes(final String... discountCodes) {
         this.discountCodes = new ArrayList<>(Arrays.asList(discountCodes));
     }
 
     public void setDiscountCodes(final java.util.List<String> discountCodes) {
         this.discountCodes = discountCodes;
+    }
+
+    public void setCountry(final String country) {
+        this.country = country;
+    }
+
+    public void setLocale(final String locale) {
+        this.locale = locale;
+    }
+
+    public void setDeleteDaysAfterLastModification(final Long deleteDaysAfterLastModification) {
+        this.deleteDaysAfterLastModification = deleteDaysAfterLastModification;
+    }
+
+    public void setCustom(final com.commercetools.api.models.type.CustomFieldsDraft custom) {
+        this.custom = custom;
     }
 
     @Override
@@ -309,20 +311,20 @@ public class MyCartDraftImpl implements MyCartDraft, ModelBase {
 
         return new EqualsBuilder().append(currency, that.currency)
                 .append(customerEmail, that.customerEmail)
-                .append(country, that.country)
-                .append(inventoryMode, that.inventoryMode)
-                .append(lineItems, that.lineItems)
-                .append(shippingAddress, that.shippingAddress)
-                .append(billingAddress, that.billingAddress)
-                .append(shippingMethod, that.shippingMethod)
-                .append(custom, that.custom)
-                .append(locale, that.locale)
-                .append(taxMode, that.taxMode)
-                .append(deleteDaysAfterLastModification, that.deleteDaysAfterLastModification)
-                .append(itemShippingAddresses, that.itemShippingAddresses)
                 .append(businessUnit, that.businessUnit)
                 .append(store, that.store)
+                .append(lineItems, that.lineItems)
+                .append(taxMode, that.taxMode)
+                .append(inventoryMode, that.inventoryMode)
+                .append(billingAddress, that.billingAddress)
+                .append(shippingAddress, that.shippingAddress)
+                .append(shippingMethod, that.shippingMethod)
+                .append(itemShippingAddresses, that.itemShippingAddresses)
                 .append(discountCodes, that.discountCodes)
+                .append(country, that.country)
+                .append(locale, that.locale)
+                .append(deleteDaysAfterLastModification, that.deleteDaysAfterLastModification)
+                .append(custom, that.custom)
                 .isEquals();
     }
 
@@ -330,20 +332,20 @@ public class MyCartDraftImpl implements MyCartDraft, ModelBase {
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(currency)
                 .append(customerEmail)
-                .append(country)
-                .append(inventoryMode)
-                .append(lineItems)
-                .append(shippingAddress)
-                .append(billingAddress)
-                .append(shippingMethod)
-                .append(custom)
-                .append(locale)
-                .append(taxMode)
-                .append(deleteDaysAfterLastModification)
-                .append(itemShippingAddresses)
                 .append(businessUnit)
                 .append(store)
+                .append(lineItems)
+                .append(taxMode)
+                .append(inventoryMode)
+                .append(billingAddress)
+                .append(shippingAddress)
+                .append(shippingMethod)
+                .append(itemShippingAddresses)
                 .append(discountCodes)
+                .append(country)
+                .append(locale)
+                .append(deleteDaysAfterLastModification)
+                .append(custom)
                 .toHashCode();
     }
 

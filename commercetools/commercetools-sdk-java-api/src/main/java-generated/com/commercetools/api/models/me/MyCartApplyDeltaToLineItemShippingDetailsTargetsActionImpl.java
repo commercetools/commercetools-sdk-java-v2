@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * MyCartApplyDeltaToLineItemShippingDetailsTargetsAction
+ *  <p>To override the shipping details, see Set LineItemShippingDetails.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class MyCartApplyDeltaToLineItemShippingDetailsTargetsActionImpl
@@ -48,7 +48,7 @@ public class MyCartApplyDeltaToLineItemShippingDetailsTargetsActionImpl
     }
 
     /**
-     *
+     *  <p><code>id</code> of the LineItem to update.</p>
      */
 
     public String getLineItemId() {
@@ -56,7 +56,7 @@ public class MyCartApplyDeltaToLineItemShippingDetailsTargetsActionImpl
     }
 
     /**
-     *
+     *  <p>Using positive or negative quantities increases or decreases the number of items shipped to an address.</p>
      */
 
     public java.util.List<com.commercetools.api.models.cart.ItemShippingTarget> getTargetsDelta() {

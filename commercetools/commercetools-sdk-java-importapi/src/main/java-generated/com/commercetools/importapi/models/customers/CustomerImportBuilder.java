@@ -18,7 +18,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     CustomerImport customerImport = CustomerImport.builder()
  *             .key("{key}")
  *             .email("{email}")
- *             .password("{password}")
  *             .plusAddresses(addressesBuilder -> addressesBuilder)
  *             .build()
  * </code></pre>
@@ -34,6 +33,7 @@ public class CustomerImportBuilder implements Builder<CustomerImport> {
 
     private String email;
 
+    @Nullable
     private String password;
 
     @Nullable
@@ -92,6 +92,9 @@ public class CustomerImportBuilder implements Builder<CustomerImport> {
     @Nullable
     private com.commercetools.importapi.models.customfields.Custom custom;
 
+    @Nullable
+    private com.commercetools.importapi.models.customers.AuthenticationMode authenticationMode;
+
     /**
      *  <p>User-defined unique identifier.</p>
      */
@@ -123,7 +126,7 @@ public class CustomerImportBuilder implements Builder<CustomerImport> {
      *  <p>Maps to <code>Customer.password</code>.</p>
      */
 
-    public CustomerImportBuilder password(final String password) {
+    public CustomerImportBuilder password(@Nullable final String password) {
         this.password = password;
         return this;
     }
@@ -444,7 +447,7 @@ public class CustomerImportBuilder implements Builder<CustomerImport> {
     }
 
     /**
-     *  <p>The custom fields for this Customer.</p>
+     *  <p>The Custom Fields for this Customer.</p>
      */
 
     public CustomerImportBuilder custom(
@@ -454,11 +457,24 @@ public class CustomerImportBuilder implements Builder<CustomerImport> {
     }
 
     /**
-     *  <p>The custom fields for this Customer.</p>
+     *  <p>The Custom Fields for this Customer.</p>
      */
 
     public CustomerImportBuilder custom(@Nullable final com.commercetools.importapi.models.customfields.Custom custom) {
         this.custom = custom;
+        return this;
+    }
+
+    /**
+     *  <ul>
+     *   <li>Set to <code>Password</code> to make the <code>password</code> field required for the Customer.</li>
+     *   <li>Set to <code>ExternalAuth</code> when the password is not required for the Customer.</li>
+     *  </ul>
+     */
+
+    public CustomerImportBuilder authenticationMode(
+            @Nullable final com.commercetools.importapi.models.customers.AuthenticationMode authenticationMode) {
+        this.authenticationMode = authenticationMode;
         return this;
     }
 
@@ -475,6 +491,7 @@ public class CustomerImportBuilder implements Builder<CustomerImport> {
         return this.email;
     }
 
+    @Nullable
     public String getPassword() {
         return this.password;
     }
@@ -573,14 +590,19 @@ public class CustomerImportBuilder implements Builder<CustomerImport> {
         return this.custom;
     }
 
+    @Nullable
+    public com.commercetools.importapi.models.customers.AuthenticationMode getAuthenticationMode() {
+        return this.authenticationMode;
+    }
+
     public CustomerImport build() {
         Objects.requireNonNull(key, CustomerImport.class + ": key is missing");
         Objects.requireNonNull(email, CustomerImport.class + ": email is missing");
-        Objects.requireNonNull(password, CustomerImport.class + ": password is missing");
         Objects.requireNonNull(addresses, CustomerImport.class + ": addresses is missing");
         return new CustomerImportImpl(key, customerNumber, email, password, stores, firstName, lastName, middleName,
             title, salutation, externalId, dateOfBirth, companyName, vatId, isEmailVerified, customerGroup, addresses,
-            defaultBillingAddress, billingAddresses, defaultShippingAddress, shippingAddresses, locale, custom);
+            defaultBillingAddress, billingAddresses, defaultShippingAddress, shippingAddresses, locale, custom,
+            authenticationMode);
     }
 
     /**
@@ -589,7 +611,8 @@ public class CustomerImportBuilder implements Builder<CustomerImport> {
     public CustomerImport buildUnchecked() {
         return new CustomerImportImpl(key, customerNumber, email, password, stores, firstName, lastName, middleName,
             title, salutation, externalId, dateOfBirth, companyName, vatId, isEmailVerified, customerGroup, addresses,
-            defaultBillingAddress, billingAddresses, defaultShippingAddress, shippingAddresses, locale, custom);
+            defaultBillingAddress, billingAddresses, defaultShippingAddress, shippingAddresses, locale, custom,
+            authenticationMode);
     }
 
     public static CustomerImportBuilder of() {
@@ -621,6 +644,7 @@ public class CustomerImportBuilder implements Builder<CustomerImport> {
         builder.shippingAddresses = template.getShippingAddresses();
         builder.locale = template.getLocale();
         builder.custom = template.getCustom();
+        builder.authenticationMode = template.getAuthenticationMode();
         return builder;
     }
 

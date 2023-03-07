@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * LineItem
+ *  <p>The representation of a Line Item in a Cart.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class LineItemImpl implements LineItem, ModelBase {
@@ -36,15 +36,15 @@ public class LineItemImpl implements LineItem, ModelBase {
 
     private com.commercetools.api.models.common.Price price;
 
+    private Long quantity;
+
+    private com.commercetools.api.models.common.CentPrecisionMoney totalPrice;
+
+    private java.util.List<com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantity> discountedPricePerQuantity;
+
     private com.commercetools.api.models.cart.TaxedItemPrice taxedPrice;
 
     private java.util.List<com.commercetools.api.models.cart.MethodTaxedPrice> taxedPricePortions;
-
-    private com.commercetools.api.models.common.TypedMoney totalPrice;
-
-    private Long quantity;
-
-    private java.time.ZonedDateTime addedAt;
 
     private java.util.List<com.commercetools.api.models.order.ItemState> state;
 
@@ -56,17 +56,17 @@ public class LineItemImpl implements LineItem, ModelBase {
 
     private com.commercetools.api.models.channel.ChannelReference distributionChannel;
 
-    private java.util.List<com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantity> discountedPricePerQuantity;
-
     private com.commercetools.api.models.cart.LineItemPriceMode priceMode;
 
     private com.commercetools.api.models.cart.LineItemMode lineItemMode;
 
-    private com.commercetools.api.models.type.CustomFields custom;
-
     private com.commercetools.api.models.cart.InventoryMode inventoryMode;
 
     private com.commercetools.api.models.cart.ItemShippingDetails shippingDetails;
+
+    private com.commercetools.api.models.type.CustomFields custom;
+
+    private java.time.ZonedDateTime addedAt;
 
     private java.time.ZonedDateTime lastModifiedAt;
 
@@ -78,22 +78,22 @@ public class LineItemImpl implements LineItem, ModelBase {
             @JsonProperty("productType") final com.commercetools.api.models.product_type.ProductTypeReference productType,
             @JsonProperty("variant") final com.commercetools.api.models.product.ProductVariant variant,
             @JsonProperty("price") final com.commercetools.api.models.common.Price price,
+            @JsonProperty("quantity") final Long quantity,
+            @JsonProperty("totalPrice") final com.commercetools.api.models.common.CentPrecisionMoney totalPrice,
+            @JsonProperty("discountedPricePerQuantity") final java.util.List<com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantity> discountedPricePerQuantity,
             @JsonProperty("taxedPrice") final com.commercetools.api.models.cart.TaxedItemPrice taxedPrice,
             @JsonProperty("taxedPricePortions") final java.util.List<com.commercetools.api.models.cart.MethodTaxedPrice> taxedPricePortions,
-            @JsonProperty("totalPrice") final com.commercetools.api.models.common.TypedMoney totalPrice,
-            @JsonProperty("quantity") final Long quantity,
-            @JsonProperty("addedAt") final java.time.ZonedDateTime addedAt,
             @JsonProperty("state") final java.util.List<com.commercetools.api.models.order.ItemState> state,
             @JsonProperty("taxRate") final com.commercetools.api.models.tax_category.TaxRate taxRate,
             @JsonProperty("perMethodTaxRate") final java.util.List<com.commercetools.api.models.cart.MethodTaxRate> perMethodTaxRate,
             @JsonProperty("supplyChannel") final com.commercetools.api.models.channel.ChannelReference supplyChannel,
             @JsonProperty("distributionChannel") final com.commercetools.api.models.channel.ChannelReference distributionChannel,
-            @JsonProperty("discountedPricePerQuantity") final java.util.List<com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantity> discountedPricePerQuantity,
             @JsonProperty("priceMode") final com.commercetools.api.models.cart.LineItemPriceMode priceMode,
             @JsonProperty("lineItemMode") final com.commercetools.api.models.cart.LineItemMode lineItemMode,
-            @JsonProperty("custom") final com.commercetools.api.models.type.CustomFields custom,
             @JsonProperty("inventoryMode") final com.commercetools.api.models.cart.InventoryMode inventoryMode,
             @JsonProperty("shippingDetails") final com.commercetools.api.models.cart.ItemShippingDetails shippingDetails,
+            @JsonProperty("custom") final com.commercetools.api.models.type.CustomFields custom,
+            @JsonProperty("addedAt") final java.time.ZonedDateTime addedAt,
             @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt) {
         this.id = id;
         this.productId = productId;
@@ -103,22 +103,22 @@ public class LineItemImpl implements LineItem, ModelBase {
         this.productType = productType;
         this.variant = variant;
         this.price = price;
+        this.quantity = quantity;
+        this.totalPrice = totalPrice;
+        this.discountedPricePerQuantity = discountedPricePerQuantity;
         this.taxedPrice = taxedPrice;
         this.taxedPricePortions = taxedPricePortions;
-        this.totalPrice = totalPrice;
-        this.quantity = quantity;
-        this.addedAt = addedAt;
         this.state = state;
         this.taxRate = taxRate;
         this.perMethodTaxRate = perMethodTaxRate;
         this.supplyChannel = supplyChannel;
         this.distributionChannel = distributionChannel;
-        this.discountedPricePerQuantity = discountedPricePerQuantity;
         this.priceMode = priceMode;
         this.lineItemMode = lineItemMode;
-        this.custom = custom;
         this.inventoryMode = inventoryMode;
         this.shippingDetails = shippingDetails;
+        this.custom = custom;
+        this.addedAt = addedAt;
         this.lastModifiedAt = lastModifiedAt;
     }
 
@@ -126,7 +126,7 @@ public class LineItemImpl implements LineItem, ModelBase {
     }
 
     /**
-     *  <p>Unique identifier of the LineItem.</p>
+     *  <p>Unique identifier of the Line Item.</p>
      */
 
     public String getId() {
@@ -134,7 +134,7 @@ public class LineItemImpl implements LineItem, ModelBase {
     }
 
     /**
-     *
+     *  <p><code>id</code> of the Product the Line Item is based on.</p>
      */
 
     public String getProductId() {
@@ -142,7 +142,13 @@ public class LineItemImpl implements LineItem, ModelBase {
     }
 
     /**
-     *  <p>User-defined unique identifier of the Product. Only present on Line Items in a Cart when the <code>key</code> is available on that specific Product at the time the Line Item is created or updated on the Cart. On Order resources this field is only present when the <code>key</code> is available on the specific Product at the time the Order is created from the Cart. This field is in general not present on Carts that had no updates until 3 December 2021 and on Orders created before this date.</p>
+     *  <p><code>key</code> of the Product.</p>
+     *  <p>This field is only present on:</p>
+     *  <ul>
+     *   <li>Line Items in a Cart when the <code>key</code> is available on that specific Product at the time the Line Item was created or updated on the Cart.</li>
+     *   <li>Orders when the <code>key</code> is available on the specific Product at the time the Order was created from the Cart.</li>
+     *  </ul>
+     *  <p>Present on resources created or updated after 3 December 2021.</p>
      */
 
     public String getProductKey() {
@@ -150,7 +156,7 @@ public class LineItemImpl implements LineItem, ModelBase {
     }
 
     /**
-     *  <p>The product name.</p>
+     *  <p>Name of the Product.</p>
      */
 
     public com.commercetools.api.models.common.LocalizedString getName() {
@@ -158,7 +164,7 @@ public class LineItemImpl implements LineItem, ModelBase {
     }
 
     /**
-     *  <p>The slug of a product is inserted on the fly. It is always up-to-date and can therefore be used to link to the product detail page of the product. It is empty if the product has been deleted. The slug is also empty if the cart or order is retrieved via Reference Expansion or is a snapshot in a Message.</p>
+     *  <p><code>slug</code> of the current version of the Product. Updated automatically if the <code>slug</code> changes. Empty if the Product has been deleted. The <code>productSlug</code> field of LineItem is not expanded when using Reference Expansion.</p>
      */
 
     public com.commercetools.api.models.common.LocalizedString getProductSlug() {
@@ -166,7 +172,7 @@ public class LineItemImpl implements LineItem, ModelBase {
     }
 
     /**
-     *
+     *  <p>Product Type of the Product.</p>
      */
 
     public com.commercetools.api.models.product_type.ProductTypeReference getProductType() {
@@ -174,7 +180,8 @@ public class LineItemImpl implements LineItem, ModelBase {
     }
 
     /**
-     *  <p>The variant data is saved when the variant is added to the cart, and not updated automatically. It can manually be updated with the Recalculate update action.</p>
+     *  <p>Holds the data of the Product Variant added to the Cart.</p>
+     *  <p>The data is saved at the time the Product Variant is added to the Cart and is not updated automatically when Product Variant data changes. Must be updated using the Recalculate update action.</p>
      */
 
     public com.commercetools.api.models.product.ProductVariant getVariant() {
@@ -182,7 +189,7 @@ public class LineItemImpl implements LineItem, ModelBase {
     }
 
     /**
-     *  <p>The price of a line item is selected from the product variant according to the Product's priceMode value. If the <code>priceMode</code> is <code>Embedded</code> ProductPriceMode and the <code>variant</code> field hasn't been updated, the price may not correspond to a price in <code>variant.prices</code>.</p>
+     *  <p>Price of a Line Item selected from the Product Variant according to the Product <code>priceMode</code>. If the <code>priceMode</code> is <code>Embedded</code> ProductPriceMode and the <code>variant</code> field hasn't been updated, the price may not correspond to a price in <code>variant.prices</code>.</p>
      */
 
     public com.commercetools.api.models.common.Price getPrice() {
@@ -190,31 +197,7 @@ public class LineItemImpl implements LineItem, ModelBase {
     }
 
     /**
-     *  <p>Set once the <code>taxRate</code> is set.</p>
-     */
-
-    public com.commercetools.api.models.cart.TaxedItemPrice getTaxedPrice() {
-        return this.taxedPrice;
-    }
-
-    /**
-     *  <p>Taxed price of the Shipping Method that is set automatically after <code>perMethodTaxRate</code> is set.</p>
-     */
-
-    public java.util.List<com.commercetools.api.models.cart.MethodTaxedPrice> getTaxedPricePortions() {
-        return this.taxedPricePortions;
-    }
-
-    /**
-     *  <p>The total price of this line item. If the line item is discounted, then the <code>totalPrice</code> is the DiscountedLineItemPriceForQuantity multiplied by <code>quantity</code>. Otherwise the total price is the product price multiplied by the <code>quantity</code>. <code>totalPrice</code> may or may not include the taxes: it depends on the taxRate.includedInPrice property.</p>
-     */
-
-    public com.commercetools.api.models.common.TypedMoney getTotalPrice() {
-        return this.totalPrice;
-    }
-
-    /**
-     *  <p>The amount of a LineItem in the cart. Must be a positive integer.</p>
+     *  <p>Number of Line Items of the given Product Variant present in the Cart.</p>
      */
 
     public Long getQuantity() {
@@ -222,56 +205,15 @@ public class LineItemImpl implements LineItem, ModelBase {
     }
 
     /**
-     *  <p>When the line item was added to the cart. Optional for backwards compatibility reasons only.</p>
+     *  <p>Total price of this Line Item equalling <code>price</code> multiplied by <code>quantity</code>. If the Line Item is discounted, the total price is the <code>discountedPricePerQuantity</code> multiplied by <code>quantity</code>. Includes taxes if the TaxRate <code>includedInPrice</code> is <code>true</code>.</p>
      */
 
-    public java.time.ZonedDateTime getAddedAt() {
-        return this.addedAt;
+    public com.commercetools.api.models.common.CentPrecisionMoney getTotalPrice() {
+        return this.totalPrice;
     }
 
     /**
-     *
-     */
-
-    public java.util.List<com.commercetools.api.models.order.ItemState> getState() {
-        return this.state;
-    }
-
-    /**
-     *  <p>Will be set automatically in the <code>Platform</code> TaxMode once the shipping address is set is set. For the <code>External</code> tax mode the tax rate has to be set explicitly with the ExternalTaxRateDraft.</p>
-     */
-
-    public com.commercetools.api.models.tax_category.TaxRate getTaxRate() {
-        return this.taxRate;
-    }
-
-    /**
-     *  <p>Tax Rate per Shipping Method that is automatically set after the Shipping Method is added to a Cart with the <code>Platform</code> TaxMode and <code>Multiple</code> ShippingMode.</p>
-     *  <p>For the <code>External</code> TaxMode, the Tax Rate must be set with ExternalTaxRateDraft.</p>
-     */
-
-    public java.util.List<com.commercetools.api.models.cart.MethodTaxRate> getPerMethodTaxRate() {
-        return this.perMethodTaxRate;
-    }
-
-    /**
-     *  <p>The supply channel identifies the inventory entries that should be reserved. The channel has the role InventorySupply.</p>
-     */
-
-    public com.commercetools.api.models.channel.ChannelReference getSupplyChannel() {
-        return this.supplyChannel;
-    }
-
-    /**
-     *  <p>The distribution channel is used to select a ProductPrice. The channel has the role ProductDistribution.</p>
-     */
-
-    public com.commercetools.api.models.channel.ChannelReference getDistributionChannel() {
-        return this.distributionChannel;
-    }
-
-    /**
-     *
+     *  <p>Discounted price of a single quantity of the Line Item.</p>
      */
 
     public java.util.List<com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantity> getDiscountedPricePerQuantity() {
@@ -279,7 +221,66 @@ public class LineItemImpl implements LineItem, ModelBase {
     }
 
     /**
-     *
+     *  <p>Automatically set after <code>taxRate</code> is set.</p>
+     */
+
+    public com.commercetools.api.models.cart.TaxedItemPrice getTaxedPrice() {
+        return this.taxedPrice;
+    }
+
+    /**
+     *  <p>Taxed price of the Shipping Method that is automatically set after <code>perMethodTaxRate</code> is set.</p>
+     */
+
+    public java.util.List<com.commercetools.api.models.cart.MethodTaxedPrice> getTaxedPricePortions() {
+        return this.taxedPricePortions;
+    }
+
+    /**
+     *  <p>State of the Line Item in the Cart.</p>
+     */
+
+    public java.util.List<com.commercetools.api.models.order.ItemState> getState() {
+        return this.state;
+    }
+
+    /**
+     *  <ul>
+     *   <li>For a Cart with <code>Platform</code> TaxMode, the <code>taxRate</code> of Line Items is set automatically once a shipping address is set. The rate is based on the TaxCategory that applies for the shipping address.</li>
+     *   <li>For a Cart with <code>External</code> TaxMode, the <code>taxRate</code> of Line Items can be set using ExternalTaxRateDraft.</li>
+     *  </ul>
+     */
+
+    public com.commercetools.api.models.tax_category.TaxRate getTaxRate() {
+        return this.taxRate;
+    }
+
+    /**
+     *  <p>Tax Rate per Shipping Method for a Cart with <code>Multiple</code> ShippingMode. For a Cart with <code>Platform</code> TaxMode it is automatically set after the Shipping Method is added. For a Cart with <code>External</code> TaxMode, the Tax Rate must be set with ExternalTaxRateDraft.</p>
+     */
+
+    public java.util.List<com.commercetools.api.models.cart.MethodTaxRate> getPerMethodTaxRate() {
+        return this.perMethodTaxRate;
+    }
+
+    /**
+     *  <p>Identifies Inventory entries that are reserved. The referenced Channel has the <code>InventorySupply</code> ChannelRoleEnum.</p>
+     */
+
+    public com.commercetools.api.models.channel.ChannelReference getSupplyChannel() {
+        return this.supplyChannel;
+    }
+
+    /**
+     *  <p>Used to select a Product Price. The referenced Channel has the <code>ProductDistribution</code> ChannelRoleEnum.</p>
+     */
+
+    public com.commercetools.api.models.channel.ChannelReference getDistributionChannel() {
+        return this.distributionChannel;
+    }
+
+    /**
+     *  <p>Indicates how the Price for the Line Item is set.</p>
      */
 
     public com.commercetools.api.models.cart.LineItemPriceMode getPriceMode() {
@@ -287,7 +288,7 @@ public class LineItemImpl implements LineItem, ModelBase {
     }
 
     /**
-     *
+     *  <p>Indicates how the Line Item is added to the Cart.</p>
      */
 
     public com.commercetools.api.models.cart.LineItemMode getLineItemMode() {
@@ -295,15 +296,7 @@ public class LineItemImpl implements LineItem, ModelBase {
     }
 
     /**
-     *
-     */
-
-    public com.commercetools.api.models.type.CustomFields getCustom() {
-        return this.custom;
-    }
-
-    /**
-     *  <p>Inventory mode specific to the line item only, valid for the entire <code>quantity</code> of the line item. Only present if inventory mode is different from the <code>inventoryMode</code> specified on the Cart.</p>
+     *  <p>Inventory mode specific to this Line Item only, and valid for the entire <code>quantity</code> of the Line Item. Only present if the inventory mode is different from the <code>inventoryMode</code> specified on the Cart.</p>
      */
 
     public com.commercetools.api.models.cart.InventoryMode getInventoryMode() {
@@ -311,7 +304,7 @@ public class LineItemImpl implements LineItem, ModelBase {
     }
 
     /**
-     *  <p>Container for line item specific address(es).</p>
+     *  <p>Container for Line Item-specific addresses.</p>
      */
 
     public com.commercetools.api.models.cart.ItemShippingDetails getShippingDetails() {
@@ -319,7 +312,23 @@ public class LineItemImpl implements LineItem, ModelBase {
     }
 
     /**
-     *  <p>The date when the LineItem was last modified by one of the following actions setLineItemShippingDetails, addLineItem, removeLineItem, or changeLineItemQuantity. Optional only for backwards compatible reasons. When the LineItem is created lastModifiedAt is set to addedAt.</p>
+     *  <p>Custom Fields of the Line Item.</p>
+     */
+
+    public com.commercetools.api.models.type.CustomFields getCustom() {
+        return this.custom;
+    }
+
+    /**
+     *  <p>Date and time (UTC) the Line Item was added to the Cart.</p>
+     */
+
+    public java.time.ZonedDateTime getAddedAt() {
+        return this.addedAt;
+    }
+
+    /**
+     *  <p>Date and time (UTC) the Line Item was last updated.</p>
      */
 
     public java.time.ZonedDateTime getLastModifiedAt() {
@@ -358,6 +367,24 @@ public class LineItemImpl implements LineItem, ModelBase {
         this.price = price;
     }
 
+    public void setQuantity(final Long quantity) {
+        this.quantity = quantity;
+    }
+
+    public void setTotalPrice(final com.commercetools.api.models.common.CentPrecisionMoney totalPrice) {
+        this.totalPrice = totalPrice;
+    }
+
+    public void setDiscountedPricePerQuantity(
+            final com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantity... discountedPricePerQuantity) {
+        this.discountedPricePerQuantity = new ArrayList<>(Arrays.asList(discountedPricePerQuantity));
+    }
+
+    public void setDiscountedPricePerQuantity(
+            final java.util.List<com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantity> discountedPricePerQuantity) {
+        this.discountedPricePerQuantity = discountedPricePerQuantity;
+    }
+
     public void setTaxedPrice(final com.commercetools.api.models.cart.TaxedItemPrice taxedPrice) {
         this.taxedPrice = taxedPrice;
     }
@@ -369,18 +396,6 @@ public class LineItemImpl implements LineItem, ModelBase {
     public void setTaxedPricePortions(
             final java.util.List<com.commercetools.api.models.cart.MethodTaxedPrice> taxedPricePortions) {
         this.taxedPricePortions = taxedPricePortions;
-    }
-
-    public void setTotalPrice(final com.commercetools.api.models.common.TypedMoney totalPrice) {
-        this.totalPrice = totalPrice;
-    }
-
-    public void setQuantity(final Long quantity) {
-        this.quantity = quantity;
-    }
-
-    public void setAddedAt(final java.time.ZonedDateTime addedAt) {
-        this.addedAt = addedAt;
     }
 
     public void setState(final com.commercetools.api.models.order.ItemState... state) {
@@ -413,16 +428,6 @@ public class LineItemImpl implements LineItem, ModelBase {
         this.distributionChannel = distributionChannel;
     }
 
-    public void setDiscountedPricePerQuantity(
-            final com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantity... discountedPricePerQuantity) {
-        this.discountedPricePerQuantity = new ArrayList<>(Arrays.asList(discountedPricePerQuantity));
-    }
-
-    public void setDiscountedPricePerQuantity(
-            final java.util.List<com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantity> discountedPricePerQuantity) {
-        this.discountedPricePerQuantity = discountedPricePerQuantity;
-    }
-
     public void setPriceMode(final com.commercetools.api.models.cart.LineItemPriceMode priceMode) {
         this.priceMode = priceMode;
     }
@@ -431,16 +436,20 @@ public class LineItemImpl implements LineItem, ModelBase {
         this.lineItemMode = lineItemMode;
     }
 
-    public void setCustom(final com.commercetools.api.models.type.CustomFields custom) {
-        this.custom = custom;
-    }
-
     public void setInventoryMode(final com.commercetools.api.models.cart.InventoryMode inventoryMode) {
         this.inventoryMode = inventoryMode;
     }
 
     public void setShippingDetails(final com.commercetools.api.models.cart.ItemShippingDetails shippingDetails) {
         this.shippingDetails = shippingDetails;
+    }
+
+    public void setCustom(final com.commercetools.api.models.type.CustomFields custom) {
+        this.custom = custom;
+    }
+
+    public void setAddedAt(final java.time.ZonedDateTime addedAt) {
+        this.addedAt = addedAt;
     }
 
     public void setLastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {
@@ -465,22 +474,22 @@ public class LineItemImpl implements LineItem, ModelBase {
                 .append(productType, that.productType)
                 .append(variant, that.variant)
                 .append(price, that.price)
+                .append(quantity, that.quantity)
+                .append(totalPrice, that.totalPrice)
+                .append(discountedPricePerQuantity, that.discountedPricePerQuantity)
                 .append(taxedPrice, that.taxedPrice)
                 .append(taxedPricePortions, that.taxedPricePortions)
-                .append(totalPrice, that.totalPrice)
-                .append(quantity, that.quantity)
-                .append(addedAt, that.addedAt)
                 .append(state, that.state)
                 .append(taxRate, that.taxRate)
                 .append(perMethodTaxRate, that.perMethodTaxRate)
                 .append(supplyChannel, that.supplyChannel)
                 .append(distributionChannel, that.distributionChannel)
-                .append(discountedPricePerQuantity, that.discountedPricePerQuantity)
                 .append(priceMode, that.priceMode)
                 .append(lineItemMode, that.lineItemMode)
-                .append(custom, that.custom)
                 .append(inventoryMode, that.inventoryMode)
                 .append(shippingDetails, that.shippingDetails)
+                .append(custom, that.custom)
+                .append(addedAt, that.addedAt)
                 .append(lastModifiedAt, that.lastModifiedAt)
                 .isEquals();
     }
@@ -495,22 +504,22 @@ public class LineItemImpl implements LineItem, ModelBase {
                 .append(productType)
                 .append(variant)
                 .append(price)
+                .append(quantity)
+                .append(totalPrice)
+                .append(discountedPricePerQuantity)
                 .append(taxedPrice)
                 .append(taxedPricePortions)
-                .append(totalPrice)
-                .append(quantity)
-                .append(addedAt)
                 .append(state)
                 .append(taxRate)
                 .append(perMethodTaxRate)
                 .append(supplyChannel)
                 .append(distributionChannel)
-                .append(discountedPricePerQuantity)
                 .append(priceMode)
                 .append(lineItemMode)
-                .append(custom)
                 .append(inventoryMode)
                 .append(shippingDetails)
+                .append(custom)
+                .append(addedAt)
                 .append(lastModifiedAt)
                 .toHashCode();
     }

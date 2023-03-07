@@ -19,18 +19,17 @@ import io.vrap.rmf.base.client.utils.Generated;
  * Example to create an instance using the builder pattern
  * <div class=code-example>
  * <pre><code class='java'>
- *     ProductVariantSelectionInclusion productVariantSelectionInclusion = ProductVariantSelectionInclusion.builder()
+ *     ProductVariantSelectionIncludeOnly productVariantSelectionIncludeOnly = ProductVariantSelectionIncludeOnly.builder()
  *             .plusSkus(skusBuilder -> skusBuilder)
  *             .build()
  * </code></pre>
  * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-@JsonDeserialize(as = ProductVariantSelectionInclusionImpl.class)
-@Deprecated
-public interface ProductVariantSelectionInclusion extends ProductVariantSelection {
+@JsonDeserialize(as = ProductVariantSelectionIncludeOnlyImpl.class)
+public interface ProductVariantSelectionIncludeOnly extends ProductVariantSelection {
 
-    String INCLUSION = "inclusion";
+    String INCLUDE_ONLY = "includeOnly";
 
     /**
      *
@@ -51,33 +50,33 @@ public interface ProductVariantSelectionInclusion extends ProductVariantSelectio
 
     public void setSkus(final List<String> skus);
 
-    public static ProductVariantSelectionInclusion of() {
-        return new ProductVariantSelectionInclusionImpl();
+    public static ProductVariantSelectionIncludeOnly of() {
+        return new ProductVariantSelectionIncludeOnlyImpl();
     }
 
-    public static ProductVariantSelectionInclusion of(final ProductVariantSelectionInclusion template) {
-        ProductVariantSelectionInclusionImpl instance = new ProductVariantSelectionInclusionImpl();
+    public static ProductVariantSelectionIncludeOnly of(final ProductVariantSelectionIncludeOnly template) {
+        ProductVariantSelectionIncludeOnlyImpl instance = new ProductVariantSelectionIncludeOnlyImpl();
         instance.setSkus(template.getSkus());
         return instance;
     }
 
-    public static ProductVariantSelectionInclusionBuilder builder() {
-        return ProductVariantSelectionInclusionBuilder.of();
+    public static ProductVariantSelectionIncludeOnlyBuilder builder() {
+        return ProductVariantSelectionIncludeOnlyBuilder.of();
     }
 
-    public static ProductVariantSelectionInclusionBuilder builder(final ProductVariantSelectionInclusion template) {
-        return ProductVariantSelectionInclusionBuilder.of(template);
+    public static ProductVariantSelectionIncludeOnlyBuilder builder(final ProductVariantSelectionIncludeOnly template) {
+        return ProductVariantSelectionIncludeOnlyBuilder.of(template);
     }
 
-    default <T> T withProductVariantSelectionInclusion(Function<ProductVariantSelectionInclusion, T> helper) {
+    default <T> T withProductVariantSelectionIncludeOnly(Function<ProductVariantSelectionIncludeOnly, T> helper) {
         return helper.apply(this);
     }
 
-    public static com.fasterxml.jackson.core.type.TypeReference<ProductVariantSelectionInclusion> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ProductVariantSelectionInclusion>() {
+    public static com.fasterxml.jackson.core.type.TypeReference<ProductVariantSelectionIncludeOnly> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ProductVariantSelectionIncludeOnly>() {
             @Override
             public String toString() {
-                return "TypeReference<ProductVariantSelectionInclusion>";
+                return "TypeReference<ProductVariantSelectionIncludeOnly>";
             }
         };
     }

@@ -15,24 +15,23 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>All Product Variants except the explicitly stated SKUs are part of the Product Selection.</p>
+ *  <p>Only Product Variants with explicitly stated SKUs are part of the Product Selection.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-@Deprecated
-public class ProductVariantSelectionExclusionImpl implements ProductVariantSelectionExclusion, ModelBase {
+public class ProductVariantSelectionIncludeOnlyImpl implements ProductVariantSelectionIncludeOnly, ModelBase {
 
     private com.commercetools.api.models.product_selection.ProductVariantSelectionTypeEnum type;
 
     private java.util.List<String> skus;
 
     @JsonCreator
-    ProductVariantSelectionExclusionImpl(@JsonProperty("skus") final java.util.List<String> skus) {
+    ProductVariantSelectionIncludeOnlyImpl(@JsonProperty("skus") final java.util.List<String> skus) {
         this.skus = skus;
-        this.type = ProductVariantSelectionTypeEnum.findEnum("exclusion");
+        this.type = ProductVariantSelectionTypeEnum.findEnum("includeOnly");
     }
 
-    public ProductVariantSelectionExclusionImpl() {
-        this.type = ProductVariantSelectionTypeEnum.findEnum("exclusion");
+    public ProductVariantSelectionIncludeOnlyImpl() {
+        this.type = ProductVariantSelectionTypeEnum.findEnum("includeOnly");
     }
 
     /**
@@ -44,7 +43,7 @@ public class ProductVariantSelectionExclusionImpl implements ProductVariantSelec
     }
 
     /**
-     *  <p>Non-empty array of SKUs representing Product Variants to be excluded from the Product Selection.</p>
+     *  <p>Non-empty array of SKUs representing Product Variants to be included into the Product Selection.</p>
      */
 
     public java.util.List<String> getSkus() {
@@ -67,7 +66,7 @@ public class ProductVariantSelectionExclusionImpl implements ProductVariantSelec
         if (o == null || getClass() != o.getClass())
             return false;
 
-        ProductVariantSelectionExclusionImpl that = (ProductVariantSelectionExclusionImpl) o;
+        ProductVariantSelectionIncludeOnlyImpl that = (ProductVariantSelectionIncludeOnlyImpl) o;
 
         return new EqualsBuilder().append(type, that.type).append(skus, that.skus).isEquals();
     }

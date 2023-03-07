@@ -19,10 +19,18 @@ public interface ProductVariantSelectionTypeEnum {
 
     ProductVariantSelectionTypeEnum EXCLUSION = ProductVariantSelectionTypeEnumEnum.EXCLUSION;
 
+    ProductVariantSelectionTypeEnum INCLUDE_ONLY = ProductVariantSelectionTypeEnumEnum.INCLUDE_ONLY;
+
+    ProductVariantSelectionTypeEnum INCLUDE_ALL_EXCEPT = ProductVariantSelectionTypeEnumEnum.INCLUDE_ALL_EXCEPT;
+
     enum ProductVariantSelectionTypeEnumEnum implements ProductVariantSelectionTypeEnum {
         INCLUSION("inclusion"),
 
-        EXCLUSION("exclusion");
+        EXCLUSION("exclusion"),
+
+        INCLUDE_ONLY("includeOnly"),
+
+        INCLUDE_ALL_EXCEPT("includeAllExcept");
         private final String jsonName;
 
         private ProductVariantSelectionTypeEnumEnum(final String jsonName) {

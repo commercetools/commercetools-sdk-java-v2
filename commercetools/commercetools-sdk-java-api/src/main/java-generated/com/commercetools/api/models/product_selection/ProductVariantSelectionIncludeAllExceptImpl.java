@@ -18,21 +18,20 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
  *  <p>All Product Variants except the explicitly stated SKUs are part of the Product Selection.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-@Deprecated
-public class ProductVariantSelectionExclusionImpl implements ProductVariantSelectionExclusion, ModelBase {
+public class ProductVariantSelectionIncludeAllExceptImpl implements ProductVariantSelectionIncludeAllExcept, ModelBase {
 
     private com.commercetools.api.models.product_selection.ProductVariantSelectionTypeEnum type;
 
     private java.util.List<String> skus;
 
     @JsonCreator
-    ProductVariantSelectionExclusionImpl(@JsonProperty("skus") final java.util.List<String> skus) {
+    ProductVariantSelectionIncludeAllExceptImpl(@JsonProperty("skus") final java.util.List<String> skus) {
         this.skus = skus;
-        this.type = ProductVariantSelectionTypeEnum.findEnum("exclusion");
+        this.type = ProductVariantSelectionTypeEnum.findEnum("includeAllExcept");
     }
 
-    public ProductVariantSelectionExclusionImpl() {
-        this.type = ProductVariantSelectionTypeEnum.findEnum("exclusion");
+    public ProductVariantSelectionIncludeAllExceptImpl() {
+        this.type = ProductVariantSelectionTypeEnum.findEnum("includeAllExcept");
     }
 
     /**
@@ -67,7 +66,7 @@ public class ProductVariantSelectionExclusionImpl implements ProductVariantSelec
         if (o == null || getClass() != o.getClass())
             return false;
 
-        ProductVariantSelectionExclusionImpl that = (ProductVariantSelectionExclusionImpl) o;
+        ProductVariantSelectionIncludeAllExceptImpl that = (ProductVariantSelectionIncludeAllExceptImpl) o;
 
         return new EqualsBuilder().append(type, that.type).append(skus, that.skus).isEquals();
     }

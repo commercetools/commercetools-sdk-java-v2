@@ -1,14 +1,16 @@
+
 package commercetools.order;
 
 import com.commercetools.api.models.order.Order;
 import commercetools.utils.CommercetoolsTestUtils;
+
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 public class OrderQueryTests {
 
     @Test
-    public void getById(){
+    public void getById() {
         OrdersFixtures.withOrder(order -> {
             final Order queriedOrder = CommercetoolsTestUtils.getProjectApiRoot()
                     .orders()
@@ -22,7 +24,7 @@ public class OrderQueryTests {
     }
 
     @Test
-    public void getByOrderNumber(){
+    public void getByOrderNumber() {
         OrdersFixtures.withOrder(order -> {
             final Order queriedOrder = CommercetoolsTestUtils.getProjectApiRoot()
                     .orders()

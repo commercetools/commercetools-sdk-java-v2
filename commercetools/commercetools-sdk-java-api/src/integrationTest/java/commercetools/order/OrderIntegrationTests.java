@@ -1,17 +1,8 @@
 
 package commercetools.order;
 
-import static commercetools.cart.CartsFixtures.withUpdateableCart;
-import static commercetools.product.ProductFixtures.withPublishedProduct;
-import static commercetools.tax_category.TaxCategoryFixtures.withTaxCategory;
-
-import java.util.function.Consumer;
-
 import com.commercetools.api.models.cart.*;
-import com.commercetools.api.models.common.BaseAddress;
-import com.commercetools.api.models.common.BaseAddressBuilder;
 import com.commercetools.api.models.order.Order;
-import com.commercetools.api.models.order.OrderFromCartDraft;
 import com.commercetools.api.models.order.OrderState;
 import com.commercetools.api.models.order.OrderUpdate;
 import commercetools.utils.CommercetoolsTestUtils;

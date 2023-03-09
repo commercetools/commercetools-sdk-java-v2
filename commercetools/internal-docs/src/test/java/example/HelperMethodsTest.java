@@ -28,6 +28,8 @@ import com.commercetools.api.models.extension.*;
 import com.commercetools.api.models.inventory.*;
 import com.commercetools.api.models.order.*;
 import com.commercetools.api.models.order_edit.*;
+import com.commercetools.api.models.payment.*;
+import com.commercetools.api.models.product.*;
 import com.commercetools.api.models.tax_category.TaxRate;
 import com.commercetools.api.models.tax_category.TaxRateBuilder;
 
@@ -39,20 +41,9 @@ public class HelperMethodsTest {
     ProjectApiRoot projectApiRoot;
 
     // Business Unit helper methods examples
-    private BusinessUnit createBusinessUnitFromDraft(ProjectApiRoot projectApiRoot) {
-        final BusinessUnitDraft businessUnitDraft = BusinessUnitDraftBuilder.of()
-                .companyBuilder()
-                .name("test-name-" + UUID.randomUUID().toString())
-                .key("test-key-" + UUID.randomUUID().toString())
-                .contactEmail("test@example.com")
-                .build();
-
-        return projectApiRoot.businessUnits().post(businessUnitDraft).executeBlocking().getBody();
-    }
+    BusinessUnit businessUnit;
 
     public void businessUnitSetCustomFieldUnset() {
-        final BusinessUnit businessUnit = createBusinessUnitFromDraft(projectApiRoot);
-
         final BusinessUnit updatedBusinessUnit = projectApiRoot.businessUnits()
                 .withId(businessUnit.getId())
                 .post(BusinessUnitUpdateBuilder.of()
@@ -64,8 +55,6 @@ public class HelperMethodsTest {
     }
 
     public void businessUnitSetAddressCustomFieldUnset() {
-        final BusinessUnit businessUnit = createBusinessUnitFromDraft(projectApiRoot);
-
         final BusinessUnit updatedBusinessUnit = projectApiRoot.businessUnits()
                 .withId(businessUnit.getId())
                 .post(BusinessUnitUpdateBuilder.of()
@@ -77,15 +66,7 @@ public class HelperMethodsTest {
     }
 
     //Cart helper methods examples
-    private Cart createCartFromDraft(ProjectApiRoot projectApiRoot) {
-        final CartDraft cartDraft = CartDraftBuilder.of()
-                .key("test-key-" + UUID.randomUUID().toString())
-                .country("DE")
-                .currency("EUR")
-                .build();
-
-        return projectApiRoot.carts().post(cartDraft).executeBlocking().getBody();
-    }
+    Cart cart;
 
     // TODO to be added
     public void cartInventoryModeDefaultValue() {
@@ -93,20 +74,15 @@ public class HelperMethodsTest {
     }
 
     public void cartToResourceIdentifier() {
-        final Cart cart = createCartFromDraft(projectApiRoot);
 
         final CartResourceIdentifier cartResourceIdentifier = cart.toResourceIdentifier();
     }
 
     public void cartToReference() {
-        final Cart cart = createCartFromDraft(projectApiRoot);
-
         final CartReference cartReference = cart.toReference();
     }
 
     public void cartSetLineItemCustomFieldUnset() {
-        final Cart cart = createCartFromDraft(projectApiRoot);
-
         final String name = "test-name-" + UUID.randomUUID().toString();
         final String lineId = "test-lineId-" + UUID.randomUUID().toString();
         final Cart updatedCart = projectApiRoot.carts()
@@ -120,8 +96,6 @@ public class HelperMethodsTest {
     }
 
     public void cartSetCustomFieldUnset() {
-        final Cart cart = createCartFromDraft(projectApiRoot);
-
         final String name = "test-name-" + UUID.randomUUID().toString();
         final Cart updatedCart = projectApiRoot.carts()
                 .withId(cart.getId())
@@ -134,8 +108,6 @@ public class HelperMethodsTest {
     }
 
     public void cartSetCustomLineItemCustomFieldUnset() {
-        final Cart cart = createCartFromDraft(projectApiRoot);
-
         final String name = "test-name-" + UUID.randomUUID().toString();
         final String customLineId = "test-customLineId-" + UUID.randomUUID().toString();
         final Cart updatedCart = projectApiRoot.carts()
@@ -149,8 +121,6 @@ public class HelperMethodsTest {
     }
 
     public void cartSetDeleteDaysAfterLastModificationUnset() {
-        final Cart cart = createCartFromDraft(projectApiRoot);
-
         final Cart updatedCart = projectApiRoot.carts()
                 .withId(cart.getId())
                 .post(CartUpdateBuilder.of()
@@ -162,8 +132,6 @@ public class HelperMethodsTest {
     }
 
     public void cartSetDeliveryAddressCustomFieldUnset() {
-        final Cart cart = createCartFromDraft(projectApiRoot);
-
         final String name = "test-name-" + UUID.randomUUID().toString();
         final String deliveryId = "test-deliveryId-" + UUID.randomUUID().toString();
         final Cart updatedCart = projectApiRoot.carts()
@@ -177,8 +145,6 @@ public class HelperMethodsTest {
     }
 
     public void cartSetItemShippingAddressCustomFieldUnset() {
-        final Cart cart = createCartFromDraft(projectApiRoot);
-
         final String name = "test-name-" + UUID.randomUUID().toString();
         final String addressKey = "test-addressKey-" + UUID.randomUUID().toString();
         final Cart updatedCart = projectApiRoot.carts()
@@ -192,8 +158,6 @@ public class HelperMethodsTest {
     }
 
     public void cartSetShippingAddressCustomFieldUnset() {
-        final Cart cart = createCartFromDraft(projectApiRoot);
-
         final String name = "test-name-" + UUID.randomUUID().toString();
         final Cart updatedCart = projectApiRoot.carts()
                 .withId(cart.getId())
@@ -206,8 +170,6 @@ public class HelperMethodsTest {
     }
 
     public void cartSetShippingRateInputUnset() {
-        final Cart cart = createCartFromDraft(projectApiRoot);
-
         final Cart updatedCart = projectApiRoot.carts()
                 .withId(cart.getId())
                 .post(CartUpdateBuilder.of()
@@ -219,8 +181,6 @@ public class HelperMethodsTest {
     }
 
     public void cartSetKeyUnset() {
-        final Cart cart = createCartFromDraft(projectApiRoot);
-
         final Cart updatedCart = projectApiRoot.carts()
                 .withId(cart.getId())
                 .post(CartUpdateBuilder.of().version(cart.getVersion()).actions(CartSetKeyAction.ofUnset()).build())
@@ -229,31 +189,17 @@ public class HelperMethodsTest {
     }
 
     // Cart Discount helper methods examples
-    private CartDiscount createCartDiscountFromDraft(ProjectApiRoot projectApiRoot) {
-        final CartDiscountDraft cartDiscountDraft = CartDiscountDraftBuilder.of()
-                .key("test-key-" + UUID.randomUUID().toString())
-                .name(LocalizedStringBuilder.of().addValue("en", "cart-discount-name").build())
-                .isActive(true)
-                .build();
-
-        return projectApiRoot.cartDiscounts().post(cartDiscountDraft).executeBlocking().getBody();
-    }
+    CartDiscount cartDiscount;
 
     public void cartDiscountToResourceIdentifier() {
-        final CartDiscount cartDiscount = createCartDiscountFromDraft(projectApiRoot);
-
         final CartDiscountResourceIdentifier cartDiscountResourceIdentifier = cartDiscount.toResourceIdentifier();
     }
 
     public void cartDiscountToReference() {
-        final CartDiscount cartDiscount = createCartDiscountFromDraft(projectApiRoot);
-
         final CartDiscountReference cartDiscountReference = cartDiscount.toReference();
     }
 
     public void cartDiscountSetCustomFieldUnset() {
-        final CartDiscount cartDiscount = createCartDiscountFromDraft(projectApiRoot);
-
         final CartDiscount updatedCartDiscount = projectApiRoot.cartDiscounts()
                 .withId(cartDiscount.getId())
                 .post(CartDiscountUpdateBuilder.of()
@@ -265,8 +211,6 @@ public class HelperMethodsTest {
     }
 
     public void cartDiscountSetKeyUnset() {
-        final CartDiscount cartDiscount = createCartDiscountFromDraft(projectApiRoot);
-
         final CartDiscount updatedCartDiscount = projectApiRoot.cartDiscounts()
                 .withId(cartDiscount.getId())
                 .post(CartDiscountUpdateBuilder.of()
@@ -278,15 +222,7 @@ public class HelperMethodsTest {
     }
 
     //Category helper methods examples
-    private Category createCategoryFromDraft(ProjectApiRoot projectApiRoot) {
-        final CategoryDraft categoryDraft = CategoryDraftBuilder.of()
-                .key("test-key")
-                .name(LocalizedStringBuilder.of().addValue("en", "category-name").build())
-                .slug(LocalizedStringBuilder.of().addValue("en", "category-slug").build())
-                .build();
-
-        return projectApiRoot.categories().post(categoryDraft).executeBlocking().getBody();
-    }
+    Category category;
 
     private List<Category> createCategoryHierarchy() {
         final List<String> rootIds = asList("0", "1", "2", "3");
@@ -294,7 +230,7 @@ public class HelperMethodsTest {
         final List<String> grandchildIds = asList("u", "v", "w", "x");
 
         final List<Category> rootCategories = rootIds.stream()
-                .map(id -> CategoryBuilder.of(createCategoryFromDraft(projectApiRoot)).build())
+                .map(id -> CategoryBuilder.of(category).build())
                 .collect(toList());
         final List<Category> children = createChildren(childIds, rootCategories);
         final List<Category> grandchildren = createChildren(grandchildIds, children);
@@ -332,20 +268,14 @@ public class HelperMethodsTest {
     }
 
     public void categoryToResourceIdentifier() {
-        final Category category = createCategoryFromDraft(projectApiRoot);
-
         final CategoryResourceIdentifier categoryResourceIdentifier = category.toResourceIdentifier();
     }
 
     public void categoryToReference() {
-        final Category category = createCategoryFromDraft(projectApiRoot);
-
         final CategoryReference categoryReference = category.toReference();
     }
 
     public void categorySetKeyUnset() {
-        final Category category = createCategoryFromDraft(projectApiRoot);
-
         final Category updatedCategory = projectApiRoot.categories()
                 .withId(category.getId())
                 .post(CategoryUpdateBuilder.of()
@@ -357,8 +287,6 @@ public class HelperMethodsTest {
     }
 
     public void categorySetCustomFieldUnset() {
-        final Category category = createCategoryFromDraft(projectApiRoot);
-
         final String name = "test-name-" + UUID.randomUUID().toString();
         final Category updatedCategory = projectApiRoot.categories()
                 .withId(category.getId())
@@ -453,31 +381,17 @@ public class HelperMethodsTest {
     }
 
     //Channel helper methods examples
-    private Channel createChannelFromDraft(ProjectApiRoot projectApiRoot) {
-        final ChannelDraft channelDraft = ChannelDraftBuilder.of()
-                .key("test-key-" + UUID.randomUUID().toString())
-                .name(LocalizedStringBuilder.of().addValue("en", "channel-name").build())
-                .address(AddressBuilder.of().country("DE").build())
-                .build();
-
-        return projectApiRoot.channels().post(channelDraft).executeBlocking().getBody();
-    }
+    Channel channel;
 
     public void channelToResourceIdentifier() {
-        final Channel channel = createChannelFromDraft(projectApiRoot);
-
         final ChannelResourceIdentifier channelResourceIdentifier = channel.toResourceIdentifier();
     }
 
     public void channelToReference() {
-        final Channel channel = createChannelFromDraft(projectApiRoot);
-
         final ChannelReference channelReference = channel.toReference();
     }
 
     public void channelSetGeoLocationUnset() {
-        final Channel channel = createChannelFromDraft(projectApiRoot);
-
         final Channel updatedChannel = projectApiRoot.channels()
                 .withId(channel.getId())
                 .post(ChannelUpdateBuilder.of()
@@ -489,8 +403,6 @@ public class HelperMethodsTest {
     }
 
     public void channelSetAddressCustomFieldUnset() {
-        final Channel channel = createChannelFromDraft(projectApiRoot);
-
         final String name = "test-name-" + UUID.randomUUID().toString();
         final Channel updatedChannel = projectApiRoot.channels()
                 .withId(channel.getId())
@@ -503,8 +415,6 @@ public class HelperMethodsTest {
     }
 
     public void channelSetCustomFieldUnset() {
-        final Channel channel = createChannelFromDraft(projectApiRoot);
-
         final String name = "test-name-" + UUID.randomUUID().toString();
         final Channel updatedChannel = projectApiRoot.channels()
                 .withId(channel.getId())
@@ -785,53 +695,29 @@ public class HelperMethodsTest {
     }
 
     // Custom Objects helper methods examples
-    private CustomObject createCustomObjectFromDraft(ProjectApiRoot projectApiRoot) {
-        final CustomObjectDraft customObjectDraft = CustomObjectDraftBuilder.of()
-                .key("test-key-" + UUID.randomUUID().toString())
-                .container("containerTest")
-                .build();
 
-        return projectApiRoot.customObjects().post(customObjectDraft).executeBlocking().getBody();
-    }
+    CustomObject customObject;
 
     public void customObjectToReference() {
-        final CustomObject customObject = createCustomObjectFromDraft(projectApiRoot);
-
         final CustomObjectReference customObjectReference = customObject.toReference();
     }
 
     // Customer helper methods examples
-    private Customer createCustomerFromDraft(ProjectApiRoot projectApiRoot) {
-        final CustomerDraft customerDraft = CustomerDraftBuilder.of()
-                .key("test-key-" + UUID.randomUUID().toString())
-                .email("test@example.com")
-                .password("Password")
-                .build();
-
-        return (Customer) projectApiRoot.customers().post(customerDraft).executeBlocking().getBody();
-    }
+    Customer customer;
 
     public void customerResourceIdentifier() {
-        final Customer customer = createCustomerFromDraft(projectApiRoot);
-
         final CustomerResourceIdentifier customerResourceIdentifier = customer.toResourceIdentifier();
     }
 
     public void customerToReference() {
-        final Customer customer = createCustomerFromDraft(projectApiRoot);
-
         final CustomerReference customerReference = customer.toReference();
     }
 
     public void customerDraftBuilderFromCustomer() {
-        final Customer customer = createCustomerFromDraft(projectApiRoot);
-
         final CustomerDraftBuilder customerDraftBuilder = CustomerDraft.builder(customer);
     }
 
     public void customerSetAddressCustomFieldUnset() {
-        final Customer customer = createCustomerFromDraft(projectApiRoot);
-
         final String name = "test-name-" + UUID.randomUUID().toString();
         final Customer updatedCustomer = projectApiRoot.customers()
                 .withId(customer.getId())
@@ -844,8 +730,6 @@ public class HelperMethodsTest {
     }
 
     public void customerSetCustomFieldUnset() {
-        final Customer customer = createCustomerFromDraft(projectApiRoot);
-
         final String name = "test-name-" + UUID.randomUUID().toString();
         final Customer updatedCustomer = projectApiRoot.customers()
                 .withId(customer.getId())
@@ -858,8 +742,6 @@ public class HelperMethodsTest {
     }
 
     public void customerSetKeyUnset() {
-        final Customer customer = createCustomerFromDraft(projectApiRoot);
-
         final Customer updatedCustomer = projectApiRoot.customers()
                 .withId(customer.getId())
                 .post(CustomerUpdateBuilder.of()
@@ -871,31 +753,17 @@ public class HelperMethodsTest {
     }
 
     // Customer Group helper methods examples
-
-    private CustomerGroup createCustomerGroupFromDraft(ProjectApiRoot projectApiRoot) {
-        final CustomerGroupDraft customerGroupDraft = CustomerGroupDraftBuilder.of()
-                .key("test-key-" + UUID.randomUUID().toString())
-                .groupName("test-group-name")
-                .build();
-
-        return projectApiRoot.customerGroups().post(customerGroupDraft).executeBlocking().getBody();
-    }
+    CustomerGroup customerGroup;
 
     public void customerGroupResourceIdentifier() {
-        final CustomerGroup customerGroup = createCustomerGroupFromDraft(projectApiRoot);
-
         final CustomerGroupResourceIdentifier customerGroupResourceIdentifier = customerGroup.toResourceIdentifier();
     }
 
     public void customerGroupToReference() {
-        final CustomerGroup customerGroup = createCustomerGroupFromDraft(projectApiRoot);
-
         final CustomerGroupReference customerGroupReference = customerGroup.toReference();
     }
 
     public void customerGroupSetKeyUnset() {
-        final CustomerGroup customerGroup = createCustomerGroupFromDraft(projectApiRoot);
-
         final CustomerGroup updatedCustomerGroup = projectApiRoot.customerGroups()
                 .withId(customerGroup.getId())
                 .post(CustomerGroupUpdateBuilder.of()
@@ -907,8 +775,6 @@ public class HelperMethodsTest {
     }
 
     public void customerGroupSetCustomFieldUnset() {
-        final CustomerGroup customerGroup = createCustomerGroupFromDraft(projectApiRoot);
-
         final String name = "test-name-" + UUID.randomUUID().toString();
         final CustomerGroup updatedCustomerGroup = projectApiRoot.customerGroups()
                 .withId(customerGroup.getId())
@@ -921,33 +787,17 @@ public class HelperMethodsTest {
     }
 
     // Discount Code helper methods examples
-
-    private DiscountCode createDiscountCodeFromDraft(ProjectApiRoot projectApiRoot) {
-        final DiscountCodeDraft discountCodeDraft = DiscountCodeDraftBuilder.of()
-                .name(LocalizedStringBuilder.of().addValue("en", "discount-code-name").build())
-                .isActive(true)
-                .maxApplications(1000L)
-                .maxApplicationsPerCustomer(1L)
-                .build();
-
-        return projectApiRoot.discountCodes().post(discountCodeDraft).executeBlocking().getBody();
-    }
+    DiscountCode discountCode;
 
     public void discountCodeResourceIdentifier() {
-        final DiscountCode discountCode = createDiscountCodeFromDraft(projectApiRoot);
-
         final DiscountCodeResourceIdentifier cdiscountCodeResourceIdentifier = discountCode.toResourceIdentifier();
     }
 
     public void discountCodeToReference() {
-        final DiscountCode discountCode = createDiscountCodeFromDraft(projectApiRoot);
-
         final DiscountCodeReference discountCodeReference = discountCode.toReference();
     }
 
     public void discountCodeSetCustomFieldUnset() {
-        final DiscountCode discountCode = createDiscountCodeFromDraft(projectApiRoot);
-
         final String name = "test-name-" + UUID.randomUUID().toString();
         final DiscountCode updatedDiscountCode = projectApiRoot.discountCodes()
                 .withId(discountCode.getId())
@@ -961,18 +811,9 @@ public class HelperMethodsTest {
 
     // Extension helper methods examples
 
-    private Extension createExtensionFromDraft(ProjectApiRoot projectApiRoot) {
-        final ExtensionDraft extensionDraft = ExtensionDraftBuilder.of()
-                .key("test-key-" + UUID.randomUUID().toString())
-                .destination(AWSLambdaDestinationBuilder.of().build())
-                .build();
-
-        return projectApiRoot.extensions().post(extensionDraft).executeBlocking().getBody();
-    }
+    Extension extension;
 
     public void extensionSetKeyUnset() {
-        final Extension extension = createExtensionFromDraft(projectApiRoot);
-
         final Extension updatedExtension = projectApiRoot.extensions()
                 .withId(extension.getId())
                 .post(ExtensionUpdateBuilder.of()
@@ -985,31 +826,17 @@ public class HelperMethodsTest {
 
     // Inventory helper methods examples
 
-    private InventoryEntry createInventoryFromDraft(ProjectApiRoot projectApiRoot) {
-        final InventoryEntryDraft inventoryDraft = InventoryEntryDraftBuilder.of()
-                .key("test-key-" + UUID.randomUUID().toString())
-                .sku("test-sku-" + UUID.randomUUID().toString())
-                .quantityOnStock(100L)
-                .build();
-
-        return projectApiRoot.inventory().post(inventoryDraft).executeBlocking().getBody();
-    }
+    InventoryEntry inventoryEntry;
 
     public void inventoryResourceIdentifier() {
-        final InventoryEntry inventoryEntry = createInventoryFromDraft(projectApiRoot);
-
         final InventoryEntryResourceIdentifier inventoryEntryResourceIdentifier = inventoryEntry.toResourceIdentifier();
     }
 
     public void inventoryToReference() {
-        final InventoryEntry inventoryEntry = createInventoryFromDraft(projectApiRoot);
-
         final InventoryEntryReference inventoryEntryReference = inventoryEntry.toReference();
     }
 
     public void inventorySetKeyUnset() {
-        final InventoryEntry inventoryEntry = createInventoryFromDraft(projectApiRoot);
-
         final InventoryEntry updatedInventoryEntry = projectApiRoot.inventory()
                 .withId(inventoryEntry.getId())
                 .post(InventoryEntryUpdateBuilder.of()
@@ -1021,8 +848,6 @@ public class HelperMethodsTest {
     }
 
     public void inventorySetCustomFieldUnset() {
-        final InventoryEntry inventoryEntry = createInventoryFromDraft(projectApiRoot);
-
         final String name = "test-name-" + UUID.randomUUID().toString();
         final InventoryEntry updatedInventoryEntry = projectApiRoot.inventory()
                 .withId(inventoryEntry.getId())
@@ -1034,25 +859,15 @@ public class HelperMethodsTest {
                 .getBody();
     }
 
-    // Order
+    // Order helper methods examples
 
-    private Order createOrderFromDraft(ProjectApiRoot projectApiRoot) {
-        final OrderFromCartDraft orderFromCartDraft = OrderFromCartDraftBuilder.of()
-                .cart(CartResourceIdentifierBuilder.of().build())
-                .build();
-
-        return projectApiRoot.orders().post(orderFromCartDraft).executeBlocking().getBody();
-    }
+    Order order;
 
     public void orderResourceIdentifier() {
-        final Order order = createOrderFromDraft(projectApiRoot);
-
         final OrderResourceIdentifier orderResourceIdentifier = order.toResourceIdentifier();
     }
 
     public void orderToReference() {
-        final Order order = createOrderFromDraft(projectApiRoot);
-
         final OrderReference orderReference = order.toReference();
     }
 
@@ -1091,8 +906,6 @@ public class HelperMethodsTest {
     }
 
     public void orderSetDeliveryAddressUnset() {
-        final Order order = createOrderFromDraft(projectApiRoot);
-
         final String deliveryId = "test-deliveryId-" + UUID.randomUUID().toString();
         final Order updatedOrder = projectApiRoot.orders()
                 .withId(order.getId())
@@ -1105,8 +918,6 @@ public class HelperMethodsTest {
     }
 
     public void orderSetLineItemCustomFieldUnset() {
-        final Order order = createOrderFromDraft(projectApiRoot);
-
         final String name = "test-name-" + UUID.randomUUID().toString();
         final String lineItemId = "test-lineItemId-" + UUID.randomUUID().toString();
         final Order updatedOrder = projectApiRoot.orders()
@@ -1120,8 +931,6 @@ public class HelperMethodsTest {
     }
 
     public void orderSetCustomFieldUnset() {
-        final Order order = createOrderFromDraft(projectApiRoot);
-
         final String name = "test-name-" + UUID.randomUUID().toString();
         final Order updatedOrder = projectApiRoot.orders()
                 .withId(order.getId())
@@ -1134,8 +943,6 @@ public class HelperMethodsTest {
     }
 
     public void orderSetBillingAddressCustomFieldUnset() {
-        final Order order = createOrderFromDraft(projectApiRoot);
-
         final String name = "test-name-" + UUID.randomUUID().toString();
         final Order updatedOrder = projectApiRoot.orders()
                 .withId(order.getId())
@@ -1148,8 +955,6 @@ public class HelperMethodsTest {
     }
 
     public void orderSetCustomLineItemCustomFieldUnset() {
-        final Order order = createOrderFromDraft(projectApiRoot);
-
         final String name = "test-name-" + UUID.randomUUID().toString();
         final String customLineItemId = "test-customLineItemId-" + UUID.randomUUID().toString();
         final Order updatedOrder = projectApiRoot.orders()
@@ -1163,8 +968,6 @@ public class HelperMethodsTest {
     }
 
     public void orderSetDeliveryAddressCustomFieldUnset() {
-        final Order order = createOrderFromDraft(projectApiRoot);
-
         final String name = "test-name-" + UUID.randomUUID().toString();
         final String deliveryId = "test-deliveryId-" + UUID.randomUUID().toString();
         final Order updatedOrder = projectApiRoot.orders()
@@ -1178,8 +981,6 @@ public class HelperMethodsTest {
     }
 
     public void orderSetItemShippingAddressCustomFieldUnset() {
-        final Order order = createOrderFromDraft(projectApiRoot);
-
         final String name = "test-name-" + UUID.randomUUID().toString();
         final String addressKey = "test-addressKey-" + UUID.randomUUID().toString();
         final Order updatedOrder = projectApiRoot.orders()
@@ -1193,8 +994,6 @@ public class HelperMethodsTest {
     }
 
     public void orderSetShippingAddressCustomFieldUnset() {
-        final Order order = createOrderFromDraft(projectApiRoot);
-
         final String name = "test-name-" + UUID.randomUUID().toString();
         final Order updatedOrder = projectApiRoot.orders()
                 .withId(order.getId())
@@ -1207,8 +1006,6 @@ public class HelperMethodsTest {
     }
 
     public void orderSetParcelCustomFieldUnset() {
-        final Order order = createOrderFromDraft(projectApiRoot);
-
         final String name = "test-name-" + UUID.randomUUID().toString();
         final String parcelId = "test-parcelId-" + UUID.randomUUID().toString();
         final Order updatedOrder = projectApiRoot.orders()
@@ -1222,8 +1019,6 @@ public class HelperMethodsTest {
     }
 
     public void orderSetReturnItemCustomFieldUnset() {
-        final Order order = createOrderFromDraft(projectApiRoot);
-
         final String name = "test-name-" + UUID.randomUUID().toString();
         final String returnItemId = "test-returnItemId-" + UUID.randomUUID().toString();
         final Order updatedOrder = projectApiRoot.orders()
@@ -1237,8 +1032,6 @@ public class HelperMethodsTest {
     }
 
     public void getOrderByCustomerId() {
-        final Order order = createOrderFromDraft(projectApiRoot);
-
         final OrderPagedQueryResponse orderPagedQueryResponse = projectApiRoot.orders()
                 .get()
                 .byCustomerId(order.getCustomerId())
@@ -1247,8 +1040,6 @@ public class HelperMethodsTest {
     }
 
     public void getOrderByCustomerEmail() {
-        final Order order = createOrderFromDraft(projectApiRoot);
-
         final OrderPagedQueryResponse orderPagedQueryResponse = projectApiRoot.orders()
                 .get()
                 .byCustomerEmail(order.getCustomerEmail())
@@ -1256,32 +1047,19 @@ public class HelperMethodsTest {
                 .getBody();
     }
 
-    // Order Edit
+    // Order Edit helper methods examples
 
-    private OrderEdit createOrderEditFromDraft(ProjectApiRoot projectApiRoot) {
-        Order order = createOrderFromDraft(projectApiRoot);
-        OrderEditDraft orderEditDraft = OrderEditDraftBuilder.of()
-                .resource(OrderReferenceBuilder.of().id(order.getId()).build())
-                .build();
-
-        return projectApiRoot.orders().edits().post(orderEditDraft).executeBlocking().getBody();
-    }
+    OrderEdit orderEdit;
 
     public void orderEditResourceIdentifier() {
-        final OrderEdit orderEdit = createOrderEditFromDraft(projectApiRoot);
-
         final OrderEditResourceIdentifier orderEditResourceIdentifier = orderEdit.toResourceIdentifier();
     }
 
     public void orderEditToReference() {
-        final OrderEdit orderEdit = createOrderEditFromDraft(projectApiRoot);
-
         final OrderEditReference orderEditReference = orderEdit.toReference();
     }
 
     public void orderEditSetKeyUnset() {
-        final OrderEdit orderEdit = createOrderEditFromDraft(projectApiRoot);
-
         final OrderEdit updatedOrderEdit = projectApiRoot.orders()
                 .edits()
                 .withId(orderEdit.getId())
@@ -1294,8 +1072,6 @@ public class HelperMethodsTest {
     }
 
     public void orderEditSetCustomFieldUnset() {
-        final OrderEdit orderEdit = createOrderEditFromDraft(projectApiRoot);
-
         final String name = "test-name-" + UUID.randomUUID().toString();
         final OrderEdit updatedOrderEdit = projectApiRoot.orders()
                 .edits()
@@ -1309,8 +1085,6 @@ public class HelperMethodsTest {
     }
 
     public void orderEditStagedOrderSetShippingRateInputUnset() {
-        final OrderEdit orderEdit = createOrderEditFromDraft(projectApiRoot);
-
         final OrderEdit updatedOrderEdit = projectApiRoot.orders()
                 .edits()
                 .withId(orderEdit.getId())
@@ -1325,8 +1099,6 @@ public class HelperMethodsTest {
     }
 
     public void orderEditStagedOrderSetDeliveryAddressInputUnset() {
-        final OrderEdit orderEdit = createOrderEditFromDraft(projectApiRoot);
-
         final OrderEdit updatedOrderEdit = projectApiRoot.orders()
                 .edits()
                 .withId(orderEdit.getId())
@@ -1341,8 +1113,6 @@ public class HelperMethodsTest {
     }
 
     public void orderEditStagedOrderSetLineItemCustomFieldUnset() {
-        final OrderEdit orderEdit = createOrderEditFromDraft(projectApiRoot);
-
         final String name = "test-name-" + UUID.randomUUID().toString();
         final String lineItemId = "test-lineItemId-" + UUID.randomUUID().toString();
         final OrderEdit updatedOrderEdit = projectApiRoot.orders()
@@ -1359,8 +1129,6 @@ public class HelperMethodsTest {
     }
 
     public void orderEditStagedOrderSetCustomLineItemCustomFieldUnset() {
-        final OrderEdit orderEdit = createOrderEditFromDraft(projectApiRoot);
-
         final String name = "test-name-" + UUID.randomUUID().toString();
         final String customLineItemId = "test-customLineItemId-" + UUID.randomUUID().toString();
         final OrderEdit updatedOrderEdit = projectApiRoot.orders()
@@ -1378,8 +1146,6 @@ public class HelperMethodsTest {
     }
 
     public void orderEditStagedOrderSetDeliveryAddressCustomFieldUnset() {
-        final OrderEdit orderEdit = createOrderEditFromDraft(projectApiRoot);
-
         final String name = "test-name-" + UUID.randomUUID().toString();
         final String deliveryId = "test-deliveryId-" + UUID.randomUUID().toString();
         final OrderEdit updatedOrderEdit = projectApiRoot.orders()
@@ -1396,8 +1162,6 @@ public class HelperMethodsTest {
     }
 
     public void orderEditStagedOrderSetItemShippingAddressCustomFieldUnset() {
-        final OrderEdit orderEdit = createOrderEditFromDraft(projectApiRoot);
-
         final String name = "test-name-" + UUID.randomUUID().toString();
         final String addressKey = "test-addressKey-" + UUID.randomUUID().toString();
         final OrderEdit updatedOrderEdit = projectApiRoot.orders()
@@ -1415,8 +1179,6 @@ public class HelperMethodsTest {
     }
 
     public void orderEditStagedOrderSetShippingAddressCustomFieldUnset() {
-        final OrderEdit orderEdit = createOrderEditFromDraft(projectApiRoot);
-
         final String name = "test-name-" + UUID.randomUUID().toString();
         final OrderEdit updatedOrderEdit = projectApiRoot.orders()
                 .edits()
@@ -1432,8 +1194,6 @@ public class HelperMethodsTest {
     }
 
     public void orderEditStagedOrderSetDeliveryCustomFieldUnset() {
-        final OrderEdit orderEdit = createOrderEditFromDraft(projectApiRoot);
-
         final String name = "test-name-" + UUID.randomUUID().toString();
         final String deliveryId = "test-deliveryId-" + UUID.randomUUID().toString();
         final OrderEdit updatedOrderEdit = projectApiRoot.orders()
@@ -1450,8 +1210,6 @@ public class HelperMethodsTest {
     }
 
     public void orderEditStagedOrderSetParcelCustomFieldUnset() {
-        final OrderEdit orderEdit = createOrderEditFromDraft(projectApiRoot);
-
         final String name = "test-name-" + UUID.randomUUID().toString();
         final String parcelId = "test-parcelId-" + UUID.randomUUID().toString();
         final OrderEdit updatedOrderEdit = projectApiRoot.orders()
@@ -1468,8 +1226,6 @@ public class HelperMethodsTest {
     }
 
     public void orderEditStagedOrderSetReturnItemCustomFieldUnset() {
-        final OrderEdit orderEdit = createOrderEditFromDraft(projectApiRoot);
-
         final String name = "test-name-" + UUID.randomUUID().toString();
         final String returnItemId = "test-returnItemId-" + UUID.randomUUID().toString();
         final OrderEdit updatedOrderEdit = projectApiRoot.orders()
@@ -1486,8 +1242,6 @@ public class HelperMethodsTest {
     }
 
     public void orderEditStagedOrderSetCustomFieldUnset() {
-        final OrderEdit orderEdit = createOrderEditFromDraft(projectApiRoot);
-
         final String name = "test-name-" + UUID.randomUUID().toString();
         final OrderEdit updatedOrderEdit = projectApiRoot.orders()
                 .edits()
@@ -1497,6 +1251,134 @@ public class HelperMethodsTest {
                         .actions(OrderEditUpdateAction.addStagedActionBuilder()
                                 .stagedAction(StagedOrderSetCustomFieldAction.ofUnset(name))
                                 .build())
+                        .build())
+                .executeBlocking()
+                .getBody();
+    }
+
+    // Payment helper methods examples
+
+    Payment payment;
+
+    public void paymentResourceIdentifier() {
+        final PaymentResourceIdentifier paymentResourceIdentifier = payment.toResourceIdentifier();
+    }
+
+    public void paymentToReference() {
+        final PaymentReference paymentReference = payment.toReference();
+    }
+
+    public void paymentSetTransactionCustomFieldUnset() {
+        final String name = "test-name-" + UUID.randomUUID().toString();
+        final String transactionId = "test-transactionId-" + UUID.randomUUID().toString();
+        final Payment updatedPayment = projectApiRoot.payments()
+                .withId(payment.getId())
+                .post(PaymentUpdateBuilder.of()
+                        .version(payment.getVersion())
+                        .actions(PaymentSetTransactionCustomFieldAction.ofUnset(name, transactionId))
+                        .build())
+                .executeBlocking()
+                .getBody();
+    }
+
+    public void paymentSetCustomFieldUnset() {
+        final String name = "test-name-" + UUID.randomUUID().toString();
+        final Payment updatedPayment = projectApiRoot.payments()
+                .withId(payment.getId())
+                .post(PaymentUpdateBuilder.of()
+                        .version(payment.getVersion())
+                        .actions(PaymentSetCustomFieldAction.ofUnset(name))
+                        .build())
+                .executeBlocking()
+                .getBody();
+    }
+
+    // Product helper methods examples
+    Product product;
+    ProductProjection productProjectionStaged;
+
+    public void productResourceIdentifier() {
+        final ProductResourceIdentifier productResourceIdentifier = product.toResourceIdentifier();
+    }
+
+    public void productToReference() {
+        final ProductReference productReference = product.toReference();
+    }
+
+    public void productFindVariantBySku() {
+        ProductProjection productProjection = ProductProjectionBuilder.of()
+                .masterVariant(product.getMasterData().getStaged().getMasterVariant())
+                .build();
+
+        Optional<ProductVariant> productVariant = productProjection.findVariantBySku("sku-test");
+    }
+
+    public void productGetVariantOrMaster() {
+        ProductVariant productVariant = product.getMasterData().getCurrent().getVariantOrMaster(111111L);
+    }
+
+    public void productGetVariant() {
+        ProductProjection productProjection = ProductProjectionBuilder.of()
+                .masterVariant(product.getMasterData().getStaged().getMasterVariant())
+                .build();
+
+        Optional<ProductVariant> productVariant = Optional.ofNullable(
+            productProjection.getVariant(product.getMasterData().getCurrent().getVariants().get(0).getId()));
+    }
+
+    public void productByIdVariantIdentifierOf() {
+        final LineItem lineItem = LineItemBuilder.of()
+                .productId(product.getId())
+                .name(LocalizedStringBuilder.of().build())
+                .build();
+
+        final ByIdVariantIdentifier byIdVariantIdentifier = ByIdVariantIdentifier.of(lineItem.getProductId(),
+            lineItem.getVariant().getId());
+    }
+
+    public void productByIdVariantIdentifierOfWithReferencable() {
+        final LineItem lineItem = LineItemBuilder.of()
+                .productId(product.getId())
+                .name(LocalizedStringBuilder.of().build())
+                .build();
+
+        final ByIdVariantIdentifier byIdVariantIdentifier = ByIdVariantIdentifier.of(product,
+            lineItem.getVariant().getId());
+    }
+
+    public void productBySkuVariantIdentifierOf() {
+        final LineItem lineItem = LineItemBuilder.of()
+                .productId(product.getId())
+                .variant(ProductVariantBuilder.of().sku("test-sku").build())
+                .name(LocalizedStringBuilder.of().build())
+                .build();
+
+        final BySkuVariantIdentifier bySkuVariantIdentifier = BySkuVariantIdentifier.of(lineItem.getVariant().getSku());
+    }
+
+    public void productProjectionFindVariant() {
+        Optional<ProductVariant> productVariant = productProjectionStaged.findVariant(
+            Objects.requireNonNull(product.getMasterData().getStaged().getMasterVariant().getIdentifier()));
+    }
+
+    public void productProjectionFindMatchingVariants() {
+        Optional<ProductVariant> productVariant = productProjectionStaged.findMatchingVariants()
+                .stream()
+                .filter(variant -> variant.hasAttribute("size-attribute"))
+                .findFirst();
+    }
+
+    public void productProjectionFindFirstMatchingVariants() {
+        Optional<ProductVariant> productVariant = productProjectionStaged.findFirstMatchingVariant()
+                .filter(variant -> variant.hasAttribute("size-attribute"));
+    }
+
+    public void productSetKeyUnset() {
+        final Payment updatedPayment = projectApiRoot.payments()
+                .withId(payment.getId())
+                .post(PaymentUpdateBuilder.of()
+                        .version(payment.getVersion())
+                        .actions(PaymentSetKeyAction.ofUnset())
                         .build())
                 .executeBlocking()
                 .getBody();

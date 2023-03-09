@@ -100,15 +100,6 @@ public class ByProjectKeyProductSelectionsByIDProductsTest {
                                 .withWithTotal(true)
                                 .createHttpRequest(),
                         "get", "test_projectKey/product-selections/test_ID/products?withTotal=true", },
-                new Object[] {
-                        apiRoot.withProjectKey("test_projectKey")
-                                .productSelections()
-                                .withId("test_ID")
-                                .products()
-                                .get()
-                                .withSort("sort")
-                                .createHttpRequest(),
-                        "get", "test_projectKey/product-selections/test_ID/products?sort=sort", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .productSelections()
                         .withId("test_ID")
@@ -144,12 +135,6 @@ public class ByProjectKeyProductSelectionsByIDProductsTest {
                         .products()
                         .get()
                         .withWithTotal(true), },
-                new Object[] { apiRoot.withProjectKey("test_projectKey")
-                        .productSelections()
-                        .withId("test_ID")
-                        .products()
-                        .get()
-                        .withSort("sort"), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .productSelections()
                         .withId("test_ID")

@@ -309,33 +309,70 @@ import com.fasterxml.jackson.databind.JsonNode;
  *
  * <h3>Payments</h3>
  *
- * <p>{@link com.commercetools.api.models.payment.PaymentSetTransactionCustomFieldAction#ofUnset(String, String)} ofUnset(final String name, final String transactionId)</p>
+ * <p>{@link com.commercetools.api.models.payment.Payment#toResourceIdentifier()}</p>
+ * {@include.example example.HelperMethodsTest#paymentResourceIdentifier()}
+ * <p>{@link com.commercetools.api.models.payment.Payment#toReference()}</p>
+ * {@include.example example.HelperMethodsTest#paymentToReference()}
+ * <p>{@link com.commercetools.api.models.payment.PaymentSetTransactionCustomFieldAction#ofUnset(String, String)}</p>
+ * {@include.example example.HelperMethodsTest#paymentSetTransactionCustomFieldUnset()}
  * <p>{@link com.commercetools.api.models.payment.PaymentSetCustomFieldAction#ofUnset(String)}</p>
+ * {@include.example example.HelperMethodsTest#paymentSetCustomFieldUnset()}
  *
  * <h3>Products</h3>
  *
- * <p>{@link com.commercetools.api.models.product.ProductDataLike#findVariantBySku(String)} Optional<ProductVariant> findVariantBySku(final String sku)</p>
- * <p>{@link com.commercetools.api.models.product.ByIdVariantIdentifier#of(Referencable, Integer)} ByIdVariantIdentifier of(final Referencable<Product> product, final Integer variantId)</p>
- * <p>{@link com.commercetools.api.models.product.ByIdVariantIdentifier#of(String, Integer)} ByIdVariantIdentifier of(final String productId, final Integer variantId)</p>
- * <p>{@link com.commercetools.api.models.product.BySkuVariantIdentifier#of(String)} BySkuVariantIdentifier of(final String sku)</p>
- * <p>{@link com.commercetools.api.models.product.ProductProjection#findVariant(ByIdVariantIdentifier)} Optional<ProductVariant> findVariant(final ByIdVariantIdentifier identifier)</p>
- * <p>{@link com.commercetools.api.models.product.ProductProjection#findMatchingVariants()} List<ProductVariant> findMatchingVariants()</p>
- * <p>{@link com.commercetools.api.models.product.ProductProjection#findFirstMatchingVariant()} Optional<ProductVariant> findFirstMatchingVariant()</p>
+ * <p>{@link com.commercetools.api.models.product.Product#toResourceIdentifier()}</p>
+ * {@include.example example.HelperMethodsTest#productResourceIdentifier()}
+ * <p>{@link com.commercetools.api.models.product.Product#toReference()}</p>
+ * {@include.example example.HelperMethodsTest#productToReference()}
+ * <p>{@link com.commercetools.api.models.product.ProductDataLike#findVariantBySku(String)}</p>
+ * {@include.example example.HelperMethodsTest#productFindVariantBySku()}
+ * <p>{@link com.commercetools.api.models.product.ProductDataLike#getVariantOrMaster(long)}</p>
+ * {@include.example example.HelperMethodsTest#productGetVariantOrMaster()}
+ * <p>{@link com.commercetools.api.models.product.ProductDataLike#getVariant(long)}</p>
+ * {@include.example example.HelperMethodsTest#productGetVariant()}
+ * <p>{@link com.commercetools.api.models.product.ByIdVariantIdentifier#of(Referencable, Long)}</p>
+ * {@include.example example.HelperMethodsTest#productByIdVariantIdentifierOfWithReferencable()}
+ * <p>{@link com.commercetools.api.models.product.ByIdVariantIdentifier#of(String, Long)}</p>
+ * {@include.example example.HelperMethodsTest#productByIdVariantIdentifierOf()}
+ * <p>{@link com.commercetools.api.models.product.BySkuVariantIdentifier#of(String)}</p>
+ * {@include.example example.HelperMethodsTest#productBySkuVariantIdentifierOf()}
+ * <p>{@link com.commercetools.api.models.product.ProductProjection#findVariant(ByIdVariantIdentifier)}</p>
+ * {@include.example example.HelperMethodsTest#productProjectionFindVariant()}
+ * <p>{@link com.commercetools.api.models.product.ProductProjection#findMatchingVariants()}</p>
+ * {@include.example example.HelperMethodsTest#productProjectionFindMatchingVariants()}
+ * <p>{@link com.commercetools.api.models.product.ProductProjection#findFirstMatchingVariant()}</p>
+ * {@include.example example.HelperMethodsTest#productProjectionFindFirstMatchingVariants()}
+ *
  * <p>{@link com.commercetools.api.models.product.ProductSetKeyAction#ofUnset()} ofUnset()</p>
- * <p>{@link com.commercetools.api.models.product.ProductSetImageLabelAction#ofUnset(Long, String, Boolean)} ofUnset(final Long variantId, final String imageUrl, final Boolean staged)</p>
- * <p>{@link com.commercetools.api.models.product.ProductSetImageLabelAction#ofUnset(Long, String, Boolean)} ofUnsetStaged(final Long variantId, final String imageUrl)</p>
+ * {@include.example example.HelperMethodsTest#productSetKeyUnset()}
+ * <p>{@link com.commercetools.api.models.product.ProductSetImageLabelAction#ofUnset(Long, String, Boolean)}</p>
+ * {@include.example example.HelperMethodsTest#productToReference()}
+ * <p>{@link com.commercetools.api.models.product.ProductSetImageLabelAction#ofUnsetStaged(Long, String)}</p>
+ * {@include.example example.HelperMethodsTest#productToReference()}
  * <p>{@link com.commercetools.api.models.product.ProductSetProductPriceCustomFieldAction#ofUnset(String, String)} ofUnset(final String name, final String priceId)</p>
+ * {@include.example example.HelperMethodsTest#productToReference()}
  * <p>{@link com.commercetools.api.models.product.ProductSetProductPriceCustomFieldAction#ofUnsetStaged(String, String, Boolean)} ofUnsetStaged(final String name, final String priceId, final Boolean staged)</p>
+ * {@include.example example.HelperMethodsTest#productToReference()}
  * <p>{@link com.commercetools.api.models.product.ProductSetTaxCategoryAction#ofUnset()} ofUnset()</p>
+ * {@include.example example.HelperMethodsTest#productToReference()}
  * <p>{@link com.commercetools.api.models.product.ProductSetAttributeAction#ofVariantId(Long, String, JsonNode, Boolean)} ofVariantId(final Long variantId, final String name, final com.fasterxml.jackson.databind.JsonNode value, final Boolean staged)</p>
+ * {@include.example example.HelperMethodsTest#productToReference()}
  * <p>{@link com.commercetools.api.models.product.ProductSetAttributeAction#ofSku(String, String, JsonNode, Boolean)} ofSku(final String sku, final String name, final com.fasterxml.jackson.databind.JsonNode value, final Boolean staged)</p>
+ * {@include.example example.HelperMethodsTest#productToReference()}
  * <p>{@link com.commercetools.api.models.product.ProductSetAttributeAction#ofUnsetAttribute(Long, String)} ofUnsetAttribute(final Long variantId, final String name)</p>
+ * {@include.example example.HelperMethodsTest#productToReference()}
  * <p>{@link com.commercetools.api.models.product.ProductSetAttributeAction#ofUnsetAttribute(Long, String, Boolean)} ofUnsetAttribute(final Long variantId, final String name, final Boolean staged)</p>
+ * {@include.example example.HelperMethodsTest#productToReference()}
  * <p>{@link com.commercetools.api.models.product.ProductSetAttributeAction#ofUnsetAttributeForVariantId(Long, String)} ofUnsetAttributeForVariantId(final Long variantId, final String name)</p>
+ * {@include.example example.HelperMethodsTest#productToReference()}
  * <p>{@link com.commercetools.api.models.product.ProductSetAttributeAction#ofUnsetAttributeForSku(String, String)} ofUnsetAttributeForSku(final String sku, final String name)</p>
+ * {@include.example example.HelperMethodsTest#productToReference()}
  * <p>{@link com.commercetools.api.models.product.ProductSetAttributeAction#ofUnsetAttributeForSku(String, String, Boolean)} ofUnsetAttributeForSku(final String sku, final String name, final Boolean staged)</p>
+ * {@include.example example.HelperMethodsTest#productToReference()}
  * <p>{@link com.commercetools.api.models.product.ProductSetAttributeInAllVariantsAction#ofUnsetAttribute(String)} ofUnsetAttribute(final String name)</p>
+ * {@include.example example.HelperMethodsTest#productToReference()}
  * <p>{@link com.commercetools.api.models.product.ProductSetAttributeInAllVariantsAction#ofUnsetAttribute(String, Boolean)} ofUnsetAttribute(final String name, final Boolean staged)</p>
+ * {@include.example example.HelperMethodsTest#productToReference()}
  *
  * <h3>Product Discounts</h3>
  *

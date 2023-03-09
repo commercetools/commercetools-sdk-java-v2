@@ -70,32 +70,16 @@ public class ByProjectKeyInStoreKeyByStoreKeyMeActiveCartTest {
                                 .me()
                                 .activeCart()
                                 .get()
-                                .withExpand("expand")
-                                .createHttpRequest(),
-                        "get", "test_projectKey/in-store/key=test_storeKey/me/active-cart?expand=expand", },
-                new Object[] {
-                        apiRoot.withProjectKey("test_projectKey")
-                                .inStoreKeyWithStoreKeyValue("test_storeKey")
-                                .me()
-                                .activeCart()
-                                .get()
                                 .createHttpRequest(),
                         "get", "test_projectKey/in-store/key=test_storeKey/me/active-cart", } };
     }
 
     @DataProvider
     public static Object[][] executeMethodParameters() {
-        return new Object[][] {
-                new Object[] { apiRoot.withProjectKey("test_projectKey")
-                        .inStoreKeyWithStoreKeyValue("test_storeKey")
-                        .me()
-                        .activeCart()
-                        .get()
-                        .withExpand("expand"), },
-                new Object[] { apiRoot.withProjectKey("test_projectKey")
-                        .inStoreKeyWithStoreKeyValue("test_storeKey")
-                        .me()
-                        .activeCart()
-                        .get(), } };
+        return new Object[][] { new Object[] { apiRoot.withProjectKey("test_projectKey")
+                .inStoreKeyWithStoreKeyValue("test_storeKey")
+                .me()
+                .activeCart()
+                .get(), } };
     }
 }

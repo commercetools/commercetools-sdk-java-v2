@@ -33,6 +33,19 @@ jobs:
             commit_user_email: automation@commercetools.com
             commit_author: Auto Mation <automation@commercetools.com>
 
+      - name: "Run if style changes have been detected"
+        if: steps.auto-commit-action.outputs.changes_detected == 'true'
+        run: echo "${{steps.auto-commit-action.outputs.commit_hash}}" >> .git-blame-ignore-revs
+
+      - uses: stefanzweifel/git-auto-commit-action@v4
+        if: github.event_name == 'push' && github.ref != 'refs/heads/main'
+        with:
+            file_pattern: '.git-blame-ignore-revs'
+            commit_message: "spotless: add commit to blame ignore revs file"
+            commit_user_name: automation-commercetools
+            commit_user_email: automation@commercetools.com
+            commit_author: Auto Mation <automation@commercetools.com>
+
       - name: License check
         run: ./gradlew checkLicense
 

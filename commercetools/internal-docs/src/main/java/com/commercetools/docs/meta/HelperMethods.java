@@ -520,7 +520,7 @@ import com.fasterxml.jackson.databind.JsonNode;
  * <p>{@link com.commercetools.api.models.type.Type#toReference()}</p>
  * {@include.example example.HelperMethodsTest#typeToReference()}
  * <p>{@link com.commercetools.api.models.type.Type#getFieldDefinitionByName(String)}</p>
- * {@include.example example.HelperMethodsTest#typeToReference()}
+ * {@include.example example.HelperMethodsTest#typeGetFieldDefinitionByName()}
  * <p>{@link com.commercetools.api.models.type.CustomFields#toDraft()}</p>
  * {@include.example example.HelperMethodsTest#customFieldsToDraft()}
  * <p>{@link com.commercetools.api.models.type.CustomFields#toDraftBuilder()}</p>
@@ -528,15 +528,25 @@ import com.fasterxml.jackson.databind.JsonNode;
  *
  * <h3>Zones</h3>
  *
- * <p>{@link com.commercetools.api.models.zone.Zone#contains(String)} boolean contains(final String countryCode)</p>
+ * <p>{@link com.commercetools.api.models.zone.Zone#toResourceIdentifier()}</p>
+ * {@include.example example.HelperMethodsTest#zoneResourceIdentifier()}
+ * <p>{@link com.commercetools.api.models.zone.Zone#toReference()}</p>
+ * {@include.example example.HelperMethodsTest#zoneToReference()}
+ * <p>{@link com.commercetools.api.models.zone.Zone#contains(String)}</p>
+ * {@include.example example.HelperMethodsTest#zoneContains()}
  *
  * <h3>ResourcePagedQueryResponse</h3>
  *
- * <p>{@link com.commercetools.api.models.ResourcePagedQueryResponse#head()} Optional<T> head()</p>
- * <p>{@link com.commercetools.api.models.ResourcePagedQueryResponse#getPageIndex()} Long getPageIndex()</p>
- * <p>{@link com.commercetools.api.models.ResourcePagedQueryResponse#getTotalPages()} Long getTotalPages()</p>
- * <p>{@link com.commercetools.api.models.ResourcePagedQueryResponse#isFirst()} boolean isFirst()</p>
- * <p>{@link com.commercetools.api.models.ResourcePagedQueryResponse#isLast()} boolean isLast()</p>
+ * <p>{@link com.commercetools.api.models.ResourcePagedQueryResponse#head()}</p>
+ * {@include.example example.HelperMethodsTest#pagedQueryResponseHead()}
+ * <p>{@link com.commercetools.api.models.ResourcePagedQueryResponse#getPageIndex()}</p>
+ * {@include.example example.HelperMethodsTest#queryResponseGetPageIndex()}
+ * <p>{@link com.commercetools.api.models.ResourcePagedQueryResponse#getTotalPages()}</p>
+ * {@include.example example.HelperMethodsTest#queryResponseGetTotalPages()}
+ * <p>{@link com.commercetools.api.models.ResourcePagedQueryResponse#isFirst()}</p>
+ * {@include.example example.HelperMethodsTest#queryResponseIsFirst()}
+ * <p>{@link com.commercetools.api.models.ResourcePagedQueryResponse#isLast()}</p>
+ * {@include.example example.HelperMethodsTest#queryResponseIsLast()}
  *
  *
  *

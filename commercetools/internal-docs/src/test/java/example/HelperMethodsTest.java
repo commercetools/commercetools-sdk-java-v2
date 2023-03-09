@@ -58,6 +58,10 @@ import com.commercetools.api.models.subscription.SubscriptionSetChangesAction;
 import com.commercetools.api.models.subscription.SubscriptionSetMessagesAction;
 import com.commercetools.api.models.subscription.SubscriptionUpdateBuilder;
 import com.commercetools.api.models.tax_category.*;
+import com.commercetools.api.models.type.*;
+import com.commercetools.api.models.zone.Zone;
+import com.commercetools.api.models.zone.ZoneReference;
+import com.commercetools.api.models.zone.ZoneResourceIdentifier;
 
 import io.vrap.rmf.base.client.utils.json.JsonUtils;
 
@@ -2007,4 +2011,106 @@ public class HelperMethodsTest {
     public void taxCategoryToReference() {
         final TaxCategoryReference taxCategoryReference = taxCategory.toReference();
     }
+
+    // Type helper methods examples
+
+    Type type;
+
+    public void typeResourceIdentifier() {
+        final TypeResourceIdentifier typeResourceIdentifier = type.toResourceIdentifier();
+    }
+
+    public void typeToReference() {
+        final TypeReference typeReference = type.toReference();
+    }
+
+    public void typeGetFieldDefinitionByName() {
+        String name = type.getFieldDefinitionByName("type-test-name").getType().getName();
+        LocalizedString label = type.getFieldDefinitionByName("type-test-name").getLabel();
+        TypeTextInputHint inputHint = type.getFieldDefinitionByName("type-test-name").getInputHint();
+        Boolean isRequired = type.getFieldDefinitionByName("type-test-name").getRequired();
+    }
+
+    public void toCustomFieldDraft() {
+        final CustomFields customField = CustomFieldsBuilder.of().fields(FieldContainerBuilder.of().build()).build();
+
+        final CustomFieldsDraft customFieldsDraft = customField.toDraft();
+    }
+
+    public void toCustomFieldDraftBuilder() {
+        final CustomFields customField = CustomFieldsBuilder.of().fields(FieldContainerBuilder.of().build()).build();
+
+        final CustomFieldsDraftBuilder customFieldsDraftBuilder = customField.toDraftBuilder();
+    }
+
+    // Zone helper methods examples
+
+    Zone zone;
+
+    public void zoneResourceIdentifier() {
+        final ZoneResourceIdentifier zoneResourceIdentifier = zone.toResourceIdentifier();
+    }
+
+    public void zoneToReference() {
+        final ZoneReference zoneReference = zone.toReference();
+    }
+
+    public void zoneContains() {
+        boolean hasZoneCountryCode = zone.contains("DE");
+    }
+
+    // ResourcePagedQueryResponse helper methods examples
+
+    public void queryResponseHead() {
+        CategoryPagedQueryResponse queryResponse = projectApiRoot.withProjectKey("project-key")
+                .categories()
+                .get()
+                .withWhere("id = :catId")
+                .withPredicateVar("catId", category.getId())
+                .executeBlocking()
+                .getBody();
+
+        Category categoryHead = queryResponse.head().get();
+    }
+
+    public void queryResponseGetPageIndex() {
+        CategoryPagedQueryResponse queryResponse = CategoryPagedQueryResponseBuilder.of()
+                .offset(100L)
+                .limit(25L)
+                .total(125L)
+                .results(category)
+                .build();
+        long pageIndex = queryResponse.getPageIndex();
+    }
+
+    public void queryResponseGetTotalPages() {
+        CategoryPagedQueryResponse queryResponse = CategoryPagedQueryResponseBuilder.of()
+                .offset(100L)
+                .limit(25L)
+                .total(125L)
+                .results(category)
+                .build();
+        long totalPages = queryResponse.getTotalPages();
+    }
+
+    public void queryResponseIsFirst() {
+        CategoryPagedQueryResponse queryResponse = CategoryPagedQueryResponseBuilder.of()
+                .offset(100L)
+                .limit(25L)
+                .total(125L)
+                .results(category)
+                .build();
+        boolean isFirst = queryResponse.isFirst();
+    }
+
+    public void queryResponseIsLast() {
+        CategoryPagedQueryResponse queryResponse = CategoryPagedQueryResponseBuilder.of()
+                .offset(100L)
+                .limit(25L)
+                .total(125L)
+                .results(category)
+                .build();
+        boolean isLast = queryResponse.isLast();
+    }
+
 }

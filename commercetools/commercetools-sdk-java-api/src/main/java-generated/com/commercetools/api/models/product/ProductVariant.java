@@ -32,7 +32,8 @@ import io.vrap.rmf.base.client.utils.Generated;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProductVariantImpl.class)
-public interface ProductVariant extends com.commercetools.api.models.WithKey, ProductVariantMixin {
+public interface ProductVariant extends com.commercetools.api.models.WithKey, ProductVariantMixin,
+        com.commercetools.api.models.product.AttributeContainer {
 
     /**
      *  <p>A unique, sequential identifier of the Product Variant within the Product.</p>

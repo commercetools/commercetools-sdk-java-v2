@@ -3,7 +3,7 @@ package com.commercetools.api.models.product;
 
 import javax.annotation.Nullable;
 
-public interface ProductVariantMixin extends AttributeContainer {
+public interface ProductVariantMixin {
     /**
      * Gets the id of the product and the variant. This operation may not be available.
      * It will be available if this {@link ProductVariant} has been created

@@ -30,8 +30,36 @@ import com.commercetools.api.models.order.*;
 import com.commercetools.api.models.order_edit.*;
 import com.commercetools.api.models.payment.*;
 import com.commercetools.api.models.product.*;
-import com.commercetools.api.models.tax_category.TaxRate;
-import com.commercetools.api.models.tax_category.TaxRateBuilder;
+import com.commercetools.api.models.product_discount.*;
+import com.commercetools.api.models.product_selection.ProductSelection;
+import com.commercetools.api.models.product_selection.ProductSelectionReference;
+import com.commercetools.api.models.product_selection.ProductSelectionResourceIdentifier;
+import com.commercetools.api.models.product_type.*;
+import com.commercetools.api.models.project.Project;
+import com.commercetools.api.models.project.ProjectSetShippingRateInputTypeAction;
+import com.commercetools.api.models.project.ProjectUpdateBuilder;
+import com.commercetools.api.models.quote.*;
+import com.commercetools.api.models.quote_request.QuoteRequest;
+import com.commercetools.api.models.quote_request.QuoteRequestSetCustomFieldAction;
+import com.commercetools.api.models.quote_request.QuoteRequestUpdateBuilder;
+import com.commercetools.api.models.review.*;
+import com.commercetools.api.models.shipping_method.*;
+import com.commercetools.api.models.shopping_list.*;
+import com.commercetools.api.models.staged_quote.StagedQuote;
+import com.commercetools.api.models.staged_quote.StagedQuoteSetCustomFieldAction;
+import com.commercetools.api.models.staged_quote.StagedQuoteUpdateBuilder;
+import com.commercetools.api.models.standalone_price.*;
+import com.commercetools.api.models.state.State;
+import com.commercetools.api.models.state.StateReference;
+import com.commercetools.api.models.state.StateResourceIdentifier;
+import com.commercetools.api.models.store.*;
+import com.commercetools.api.models.subscription.Subscription;
+import com.commercetools.api.models.subscription.SubscriptionSetChangesAction;
+import com.commercetools.api.models.subscription.SubscriptionSetMessagesAction;
+import com.commercetools.api.models.subscription.SubscriptionUpdateBuilder;
+import com.commercetools.api.models.tax_category.*;
+
+import io.vrap.rmf.base.client.utils.json.JsonUtils;
 
 import org.javamoney.moneta.CurrencyUnitBuilder;
 import org.javamoney.moneta.FastMoney;
@@ -1374,14 +1402,609 @@ public class HelperMethodsTest {
     }
 
     public void productSetKeyUnset() {
-        final Payment updatedPayment = projectApiRoot.payments()
-                .withId(payment.getId())
-                .post(PaymentUpdateBuilder.of()
-                        .version(payment.getVersion())
-                        .actions(PaymentSetKeyAction.ofUnset())
+        final Product updatedProduct = projectApiRoot.products()
+                .withId(product.getId())
+                .post(ProductUpdateBuilder.of()
+                        .version(product.getVersion())
+                        .actions(ProductSetKeyAction.ofUnset())
                         .build())
                 .executeBlocking()
                 .getBody();
     }
 
+    public void productSetImageLabelUnSet() {
+        long variantId = 12345L;
+        String imageUrl = "/url/myimage.png";
+        final Product updatedProduct = projectApiRoot.products()
+                .withId(product.getId())
+                .post(ProductUpdateBuilder.of()
+                        .version(product.getVersion())
+                        .actions(ProductSetImageLabelAction.ofUnset(variantId, imageUrl, true))
+                        .build())
+                .executeBlocking()
+                .getBody();
+    }
+
+    public void productSetImageLabelUnSetStaged() {
+        long variantId = 12345L;
+        String imageUrl = "/url/myimage.png";
+        final Product updatedProduct = projectApiRoot.products()
+                .withId(product.getId())
+                .post(ProductUpdateBuilder.of()
+                        .version(product.getVersion())
+                        .actions(ProductSetImageLabelAction.ofUnsetStaged(variantId, imageUrl))
+                        .build())
+                .executeBlocking()
+                .getBody();
+    }
+
+    public void productSetProductPriceCustomFieldUnset() {
+        final String name = "test-name-" + UUID.randomUUID().toString();
+        final String priceId = "test-priceId-" + UUID.randomUUID().toString();
+        final Product updatedProduct = projectApiRoot.products()
+                .withId(product.getId())
+                .post(ProductUpdateBuilder.of()
+                        .version(product.getVersion())
+                        .actions(ProductSetProductPriceCustomFieldAction.ofUnset(name, priceId))
+                        .build())
+                .executeBlocking()
+                .getBody();
+    }
+
+    public void productSetProductPriceCustomFieldUnsetStaged() {
+        final String name = "test-name-" + UUID.randomUUID().toString();
+        final String priceId = "test-priceId-" + UUID.randomUUID().toString();
+        final Product updatedProduct = projectApiRoot.products()
+                .withId(product.getId())
+                .post(ProductUpdateBuilder.of()
+                        .version(product.getVersion())
+                        .actions(ProductSetProductPriceCustomFieldAction.ofUnsetStaged(name, priceId, true))
+                        .build())
+                .executeBlocking()
+                .getBody();
+    }
+
+    public void productSetTaxCategoryUnset() {
+        final Product updatedProduct = projectApiRoot.products()
+                .withId(product.getId())
+                .post(ProductUpdateBuilder.of()
+                        .version(product.getVersion())
+                        .actions(ProductSetTaxCategoryAction.ofUnset())
+                        .build())
+                .executeBlocking()
+                .getBody();
+    }
+
+    public void productSetAttributeOfVariantId() {
+        final String name = "test-name-" + UUID.randomUUID().toString();
+        long variantId = 12345L;
+        final Attribute attribute = AttributeBuilder.of().name("attribute-name").build();
+
+        final Product updatedProduct = projectApiRoot.products()
+                .withId(product.getId())
+                .post(ProductUpdateBuilder.of()
+                        .version(product.getVersion())
+                        .actions(ProductSetAttributeAction.ofVariantId(variantId, name, JsonUtils.toJsonNode(attribute),
+                            true))
+                        .build())
+                .executeBlocking()
+                .getBody();
+    }
+
+    public void productSetAttributeOfSku() {
+        final String name = "test-name-" + UUID.randomUUID().toString();
+        final String sku = "test-sku-" + UUID.randomUUID().toString();
+
+        final Attribute attribute = AttributeBuilder.of().name("attribute-name").build();
+
+        final Product updatedProduct = projectApiRoot.products()
+                .withId(product.getId())
+                .post(ProductUpdateBuilder.of()
+                        .version(product.getVersion())
+                        .actions(ProductSetAttributeAction.ofSku(sku, name, JsonUtils.toJsonNode(attribute), true))
+                        .build())
+                .executeBlocking()
+                .getBody();
+    }
+
+    public void productSetAttributeUnsetAttribute() {
+        final String name = "test-name-" + UUID.randomUUID().toString();
+        long variantId = 12345L;
+        final Product updatedProduct = projectApiRoot.products()
+                .withId(product.getId())
+                .post(ProductUpdateBuilder.of()
+                        .version(product.getVersion())
+                        .actions(ProductSetAttributeAction.ofUnsetAttribute(variantId, name))
+                        .build())
+                .executeBlocking()
+                .getBody();
+    }
+
+    public void productSetAttributeUnsetAttributeStaged() {
+        final String name = "test-name-" + UUID.randomUUID().toString();
+        long variantId = 12345L;
+        final Product updatedProduct = projectApiRoot.products()
+                .withId(product.getId())
+                .post(ProductUpdateBuilder.of()
+                        .version(product.getVersion())
+                        .actions(ProductSetAttributeAction.ofUnsetAttribute(variantId, name, true))
+                        .build())
+                .executeBlocking()
+                .getBody();
+    }
+
+    public void productSetAttributeUnsetAttributeForVariantId() {
+        final String name = "test-name-" + UUID.randomUUID().toString();
+        long variantId = 12345L;
+        final Product updatedProduct = projectApiRoot.products()
+                .withId(product.getId())
+                .post(ProductUpdateBuilder.of()
+                        .version(product.getVersion())
+                        .actions(ProductSetAttributeAction.ofUnsetAttributeForVariantId(variantId, name))
+                        .build())
+                .executeBlocking()
+                .getBody();
+    }
+
+    public void productSetAttributeUnsetAttributeForSku() {
+        final String name = "test-name-" + UUID.randomUUID().toString();
+        final String sku = "test-sku-" + UUID.randomUUID().toString();
+        final Product updatedProduct = projectApiRoot.products()
+                .withId(product.getId())
+                .post(ProductUpdateBuilder.of()
+                        .version(product.getVersion())
+                        .actions(ProductSetAttributeAction.ofUnsetAttributeForSku(sku, name))
+                        .build())
+                .executeBlocking()
+                .getBody();
+    }
+
+    public void productSetAttributeUnsetAttributeForSkuStaged() {
+        final String name = "test-name-" + UUID.randomUUID().toString();
+        final String sku = "test-sku-" + UUID.randomUUID().toString();
+        final Product updatedProduct = projectApiRoot.products()
+                .withId(product.getId())
+                .post(ProductUpdateBuilder.of()
+                        .version(product.getVersion())
+                        .actions(ProductSetAttributeAction.ofUnsetAttributeForSku(sku, name, true))
+                        .build())
+                .executeBlocking()
+                .getBody();
+    }
+
+    public void productSetAttributeInAllVariantsUnsetAttribute() {
+        final String name = "test-name-" + UUID.randomUUID().toString();
+
+        final Product updatedProduct = projectApiRoot.products()
+                .withId(product.getId())
+                .post(ProductUpdateBuilder.of()
+                        .version(product.getVersion())
+                        .actions(ProductSetAttributeInAllVariantsAction.ofUnsetAttribute(name))
+                        .build())
+                .executeBlocking()
+                .getBody();
+    }
+
+    public void productSetAttributeInAllVariantsUnsetAttributeStaged() {
+        final String name = "test-name-" + UUID.randomUUID().toString();
+
+        final Product updatedProduct = projectApiRoot.products()
+                .withId(product.getId())
+                .post(ProductUpdateBuilder.of()
+                        .version(product.getVersion())
+                        .actions(ProductSetAttributeInAllVariantsAction.ofUnsetAttribute(name, true))
+                        .build())
+                .executeBlocking()
+                .getBody();
+    }
+
+    // Product Discount helper methods examples
+
+    ProductDiscount productDiscount;
+
+    public void productDiscountResourceIdentifier() {
+        final ProductDiscountResourceIdentifier productDiscountResourceIdentifier = productDiscount
+                .toResourceIdentifier();
+    }
+
+    public void productDiscountToReference() {
+        final ProductDiscountReference productDiscountReference = productDiscount.toReference();
+    }
+
+    public void productDiscountSetKeyUnset() {
+        final ProductDiscount updatedProductDiscount = projectApiRoot.productDiscounts()
+                .withId(productDiscount.getId())
+                .post(ProductDiscountUpdateBuilder.of()
+                        .version(productDiscount.getVersion())
+                        .actions(ProductDiscountSetKeyAction.ofUnset())
+                        .build())
+                .executeBlocking()
+                .getBody();
+    }
+
+    // Product Selection helper methods examples
+
+    ProductSelection productSelection;
+
+    public void productSelectionResourceIdentifier() {
+        final ProductSelectionResourceIdentifier productSelectionResourceIdentifier = productSelection
+                .toResourceIdentifier();
+    }
+
+    public void productSelectionToReference() {
+        final ProductSelectionReference productSelectionReference = productSelection.toReference();
+    }
+
+    // Product Type helper methods examples
+
+    ProductType productType;
+
+    public void productTypeResourceIdentifier() {
+        final ProductTypeResourceIdentifier productTypeResourceIdentifier = productType.toResourceIdentifier();
+    }
+
+    public void productTypeToReference() {
+        final ProductTypeReference productTypeReference = productType.toReference();
+    }
+
+    public void productTypeGetAttribute() {
+        final ProductVariant masterVariant = product.getMasterData().getStaged().getMasterVariant();
+
+        final Attribute attribute = masterVariant.getAttribute("attribute-name");
+    }
+
+    public void productTypeFindAttribute() {
+        final ProductVariant masterVariant = product.getMasterData().getStaged().getMasterVariant();
+
+        final Optional<Attribute> attribute = masterVariant.findAttribute("attribute-name");
+    }
+
+    public void productTypeSetKeyUnset() {
+        final ProductType updatedProductType = projectApiRoot.productTypes()
+                .withId(productType.getId())
+                .post(ProductTypeUpdateBuilder.of()
+                        .version(productType.getVersion())
+                        .actions(ProductTypeSetKeyAction.ofUnset())
+                        .build())
+                .executeBlocking()
+                .getBody();
+    }
+
+    // Project helper method
+    Project project;
+    public void projectSetShippingRateInputTypeUnset() {
+        final Project updatedProject = projectApiRoot.withProjectKey(project.getKey())
+                .post(ProjectUpdateBuilder.of()
+                        .version(project.getVersion())
+                        .actions(ProjectSetShippingRateInputTypeAction.ofUnset())
+                        .build())
+                .executeBlocking()
+                .getBody();
+    }
+
+    // Quotes helper methods examples
+
+    Quote quote;
+
+    public void quoteResourceIdentifier() {
+        final QuoteResourceIdentifier quoteResourceIdentifier = quote.toResourceIdentifier();
+    }
+
+    public void quoteToReference() {
+        final QuoteReference quoteReference = quote.toReference();
+    }
+
+    public void quoteSetCustomFieldUnset() {
+        final String name = "test-name-" + UUID.randomUUID().toString();
+
+        final Quote updatedQuote = projectApiRoot.quotes()
+                .withId(quote.getId())
+                .post(QuoteUpdateBuilder.of()
+                        .version(quote.getVersion())
+                        .actions(QuoteSetCustomFieldAction.ofUnset(name))
+                        .build())
+                .executeBlocking()
+                .getBody();
+    }
+
+    // Quote requests helper methods examples
+
+    QuoteRequest quoteRequest;
+
+    public void quoteRequestSetCustomFieldUnset() {
+        final String name = "test-name-" + UUID.randomUUID().toString();
+
+        final QuoteRequest updatedQuoteRequest = projectApiRoot.quoteRequests()
+                .withId(quoteRequest.getId())
+                .post(QuoteRequestUpdateBuilder.of()
+                        .version(quoteRequest.getVersion())
+                        .actions(QuoteRequestSetCustomFieldAction.ofUnset(name))
+                        .build())
+                .executeBlocking()
+                .getBody();
+    }
+
+    // Review helper methods examples
+
+    Review review;
+
+    public void reviewResourceIdentifier() {
+        final ReviewResourceIdentifier reviewResourceIdentifier = review.toResourceIdentifier();
+    }
+
+    public void reviewToReference() {
+        final ReviewReference reviewReference = review.toReference();
+    }
+
+    public void reviewSetCustomFieldUnset() {
+        final String name = "test-name-" + UUID.randomUUID().toString();
+
+        final Review updatedReview = projectApiRoot.reviews()
+                .withId(review.getId())
+                .post(ReviewUpdateBuilder.of()
+                        .version(review.getVersion())
+                        .actions(ReviewSetCustomFieldAction.ofUnset(name))
+                        .build())
+                .executeBlocking()
+                .getBody();
+    }
+
+    public void reviewSetCustomerUnset() {
+        final Review updatedReview = projectApiRoot.reviews()
+                .withId(review.getId())
+                .post(ReviewUpdateBuilder.of()
+                        .version(review.getVersion())
+                        .actions(ReviewSetCustomerAction.ofUnset())
+                        .build())
+                .executeBlocking()
+                .getBody();
+    }
+
+    public void reviewSetKeyUnset() {
+        final Review updatedReview = projectApiRoot.reviews()
+                .withId(review.getId())
+                .post(
+                    ReviewUpdateBuilder.of().version(review.getVersion()).actions(ReviewSetKeyAction.ofUnset()).build())
+                .executeBlocking()
+                .getBody();
+    }
+
+    // Shipping Method helper methods examples
+
+    ShippingMethod shippingMethod;
+
+    public void shippingMethodResourceIdentifier() {
+        final ShippingMethodResourceIdentifier shippingMethodResourceIdentifier = shippingMethod.toResourceIdentifier();
+    }
+
+    public void shippingMethodToReference() {
+        final ShippingMethodReference shippingMethodReference = shippingMethod.toReference();
+    }
+
+    public void shippingMethodSetCustomFieldUnset() {
+        final String name = "test-name-" + UUID.randomUUID().toString();
+
+        final ShippingMethod updatedShippingMethod = projectApiRoot.shippingMethods()
+                .withId(shippingMethod.getId())
+                .post(ShippingMethodUpdateBuilder.of()
+                        .version(shippingMethod.getVersion())
+                        .actions(ShippingMethodSetCustomFieldAction.ofUnset(name))
+                        .build())
+                .executeBlocking()
+                .getBody();
+    }
+
+    public void shippingMethodSetKeyUnset() {
+        final ShippingMethod updatedShippingMethod = projectApiRoot.shippingMethods()
+                .withId(shippingMethod.getId())
+                .post(ShippingMethodUpdateBuilder.of()
+                        .version(shippingMethod.getVersion())
+                        .actions(ShippingMethodSetKeyAction.ofUnset())
+                        .build())
+                .executeBlocking()
+                .getBody();
+    }
+
+    // Shopping List helper methods examples
+
+    ShoppingList shoppingList;
+
+    public void shoppingListResourceIdentifier() {
+        final ShoppingListResourceIdentifier shoppingListResourceIdentifier = shoppingList.toResourceIdentifier();
+    }
+
+    public void shoppingListToReference() {
+        final ShoppingListReference shoppingListReference = shoppingList.toReference();
+    }
+
+    public void shoppingListSetCustomerUnset() {
+        final ShoppingList updatedShoppingList = projectApiRoot.shoppingLists()
+                .withId(shoppingList.getId())
+                .post(ShoppingListUpdateBuilder.of()
+                        .version(shoppingList.getVersion())
+                        .actions(ShoppingListSetCustomerAction.ofUnset())
+                        .build())
+                .executeBlocking()
+                .getBody();
+    }
+
+    public void shoppingListSetCustomFieldUnset() {
+        final String name = "test-name-" + UUID.randomUUID().toString();
+
+        final ShoppingList updatedShoppingList = projectApiRoot.shoppingLists()
+                .withId(shoppingList.getId())
+                .post(ShoppingListUpdateBuilder.of()
+                        .version(shoppingList.getVersion())
+                        .actions(ShoppingListSetCustomFieldAction.ofUnset(name))
+                        .build())
+                .executeBlocking()
+                .getBody();
+    }
+
+    public void shoppingListSetDeleteDaysAfterLastModificationUnset() {
+        final ShoppingList updatedShoppingList = projectApiRoot.shoppingLists()
+                .withId(shoppingList.getId())
+                .post(ShoppingListUpdateBuilder.of()
+                        .version(shoppingList.getVersion())
+                        .actions(ShoppingListSetDeleteDaysAfterLastModificationAction.ofUnset())
+                        .build())
+                .executeBlocking()
+                .getBody();
+    }
+
+    public void shoppingListSetLineItemCustomFieldUnset() {
+        final String name = "test-name-" + UUID.randomUUID().toString();
+        final String lineItemId = "test-lineItemId-" + UUID.randomUUID().toString();
+
+        final ShoppingList updatedShoppingList = projectApiRoot.shoppingLists()
+                .withId(shoppingList.getId())
+                .post(ShoppingListUpdateBuilder.of()
+                        .version(shoppingList.getVersion())
+                        .actions(ShoppingListSetLineItemCustomFieldAction.ofUnset(name, lineItemId))
+                        .build())
+                .executeBlocking()
+                .getBody();
+    }
+
+    public void shoppingListSetKeyUnset() {
+        final ShoppingList updatedShoppingList = projectApiRoot.shoppingLists()
+                .withId(shoppingList.getId())
+                .post(ShoppingListUpdateBuilder.of()
+                        .version(shoppingList.getVersion())
+                        .actions(ShoppingListSetKeyAction.ofUnset())
+                        .build())
+                .executeBlocking()
+                .getBody();
+    }
+
+    public void shoppingListSetTextLineItemCustomFieldUnset() {
+        final String name = "test-name-" + UUID.randomUUID().toString();
+        final String textLineItemId = "test-textLineItemId-" + UUID.randomUUID().toString();
+
+        final ShoppingList updatedShoppingList = projectApiRoot.shoppingLists()
+                .withId(shoppingList.getId())
+                .post(ShoppingListUpdateBuilder.of()
+                        .version(shoppingList.getVersion())
+                        .actions(ShoppingListSetTextLineItemCustomFieldAction.ofUnset(name, textLineItemId))
+                        .build())
+                .executeBlocking()
+                .getBody();
+    }
+
+    // Staged Quote helper methods examples
+
+    StagedQuote stagedQuote;
+    public void stagedQuoteSetCustomFieldUnset() {
+        final String name = "test-name-" + UUID.randomUUID().toString();
+
+        final StagedQuote updatedStagedQuote = projectApiRoot.stagedQuotes()
+                .withId(stagedQuote.getId())
+                .post(StagedQuoteUpdateBuilder.of()
+                        .version(stagedQuote.getVersion())
+                        .actions(StagedQuoteSetCustomFieldAction.ofUnset(name))
+                        .build())
+                .executeBlocking()
+                .getBody();
+    }
+
+    // Standalone Price helper methods examples
+
+    StandalonePrice standalonePrice;
+
+    public void standalonePriceResourceIdentifier() {
+        final StandalonePriceResourceIdentifier standalonePriceResourceIdentifier = standalonePrice
+                .toResourceIdentifier();
+    }
+
+    public void standalonePriceToReference() {
+        final StandalonePriceReference standalonePriceReference = standalonePrice.toReference();
+    }
+
+    public void standalonePriceSetCustomFieldUnset() {
+        final String name = "test-name-" + UUID.randomUUID().toString();
+
+        final StandalonePrice updatedStandalonePrice = projectApiRoot.standalonePrices()
+                .withId(standalonePrice.getId())
+                .post(StandalonePriceUpdateBuilder.of()
+                        .version(standalonePrice.getVersion())
+                        .actions(StandalonePriceSetCustomFieldAction.ofUnset(name))
+                        .build())
+                .executeBlocking()
+                .getBody();
+    }
+
+    // State helper methods examples
+
+    State state;
+
+    public void stateResourceIdentifier() {
+        final StateResourceIdentifier stateResourceIdentifier = state.toResourceIdentifier();
+    }
+
+    public void stateToReference() {
+        final StateReference stateReference = state.toReference();
+    }
+
+    // Store helper methods examples
+
+    Store store;
+
+    public void storeResourceIdentifier() {
+        final StoreResourceIdentifier storeResourceIdentifier = store.toResourceIdentifier();
+    }
+
+    public void storeToReference() {
+        final StoreReference storeReference = store.toReference();
+    }
+
+    public void storeSetCustomFieldUnset() {
+        final String name = "test-name-" + UUID.randomUUID().toString();
+
+        final Store updatedStore = projectApiRoot.stores()
+                .withId(store.getId())
+                .post(StoreUpdateBuilder.of()
+                        .version(store.getVersion())
+                        .actions(StoreSetCustomFieldAction.ofUnset(name))
+                        .build())
+                .executeBlocking()
+                .getBody();
+    }
+
+    // Subscription helper methods examples
+
+    Subscription subscription;
+
+    public void subscriptionSetMessagesUnset() {
+        final Subscription updatedSubscription = projectApiRoot.subscriptions()
+                .withId(subscription.getId())
+                .post(SubscriptionUpdateBuilder.of()
+                        .version(subscription.getVersion())
+                        .actions(SubscriptionSetMessagesAction.ofUnset())
+                        .build())
+                .executeBlocking()
+                .getBody();
+    }
+
+    public void subscriptionSetChangesUnset() {
+        final Subscription updatedSubscription = projectApiRoot.subscriptions()
+                .withId(subscription.getId())
+                .post(SubscriptionUpdateBuilder.of()
+                        .version(subscription.getVersion())
+                        .actions(SubscriptionSetChangesAction.ofUnset())
+                        .build())
+                .executeBlocking()
+                .getBody();
+    }
+
+    // Tax Category helper methods examples
+
+    TaxCategory taxCategory;
+
+    public void taxCategoryResourceIdentifier() {
+        final TaxCategoryResourceIdentifier taxCategoryResourceIdentifier = taxCategory.toResourceIdentifier();
+    }
+
+    public void taxCategoryToReference() {
+        final TaxCategoryReference taxCategoryReference = taxCategory.toReference();
+    }
 }

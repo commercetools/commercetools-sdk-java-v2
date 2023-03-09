@@ -343,100 +343,188 @@ import com.fasterxml.jackson.databind.JsonNode;
  * <p>{@link com.commercetools.api.models.product.ProductProjection#findFirstMatchingVariant()}</p>
  * {@include.example example.HelperMethodsTest#productProjectionFindFirstMatchingVariants()}
  *
- * <p>{@link com.commercetools.api.models.product.ProductSetKeyAction#ofUnset()} ofUnset()</p>
+ * <p>{@link com.commercetools.api.models.product.ProductSetKeyAction#ofUnset()}</p>
  * {@include.example example.HelperMethodsTest#productSetKeyUnset()}
  * <p>{@link com.commercetools.api.models.product.ProductSetImageLabelAction#ofUnset(Long, String, Boolean)}</p>
- * {@include.example example.HelperMethodsTest#productToReference()}
+ * {@include.example example.HelperMethodsTest#productSetImageLabelUnSet()}
  * <p>{@link com.commercetools.api.models.product.ProductSetImageLabelAction#ofUnsetStaged(Long, String)}</p>
- * {@include.example example.HelperMethodsTest#productToReference()}
- * <p>{@link com.commercetools.api.models.product.ProductSetProductPriceCustomFieldAction#ofUnset(String, String)} ofUnset(final String name, final String priceId)</p>
- * {@include.example example.HelperMethodsTest#productToReference()}
- * <p>{@link com.commercetools.api.models.product.ProductSetProductPriceCustomFieldAction#ofUnsetStaged(String, String, Boolean)} ofUnsetStaged(final String name, final String priceId, final Boolean staged)</p>
- * {@include.example example.HelperMethodsTest#productToReference()}
- * <p>{@link com.commercetools.api.models.product.ProductSetTaxCategoryAction#ofUnset()} ofUnset()</p>
- * {@include.example example.HelperMethodsTest#productToReference()}
- * <p>{@link com.commercetools.api.models.product.ProductSetAttributeAction#ofVariantId(Long, String, JsonNode, Boolean)} ofVariantId(final Long variantId, final String name, final com.fasterxml.jackson.databind.JsonNode value, final Boolean staged)</p>
- * {@include.example example.HelperMethodsTest#productToReference()}
- * <p>{@link com.commercetools.api.models.product.ProductSetAttributeAction#ofSku(String, String, JsonNode, Boolean)} ofSku(final String sku, final String name, final com.fasterxml.jackson.databind.JsonNode value, final Boolean staged)</p>
- * {@include.example example.HelperMethodsTest#productToReference()}
- * <p>{@link com.commercetools.api.models.product.ProductSetAttributeAction#ofUnsetAttribute(Long, String)} ofUnsetAttribute(final Long variantId, final String name)</p>
- * {@include.example example.HelperMethodsTest#productToReference()}
- * <p>{@link com.commercetools.api.models.product.ProductSetAttributeAction#ofUnsetAttribute(Long, String, Boolean)} ofUnsetAttribute(final Long variantId, final String name, final Boolean staged)</p>
- * {@include.example example.HelperMethodsTest#productToReference()}
- * <p>{@link com.commercetools.api.models.product.ProductSetAttributeAction#ofUnsetAttributeForVariantId(Long, String)} ofUnsetAttributeForVariantId(final Long variantId, final String name)</p>
- * {@include.example example.HelperMethodsTest#productToReference()}
- * <p>{@link com.commercetools.api.models.product.ProductSetAttributeAction#ofUnsetAttributeForSku(String, String)} ofUnsetAttributeForSku(final String sku, final String name)</p>
- * {@include.example example.HelperMethodsTest#productToReference()}
- * <p>{@link com.commercetools.api.models.product.ProductSetAttributeAction#ofUnsetAttributeForSku(String, String, Boolean)} ofUnsetAttributeForSku(final String sku, final String name, final Boolean staged)</p>
- * {@include.example example.HelperMethodsTest#productToReference()}
- * <p>{@link com.commercetools.api.models.product.ProductSetAttributeInAllVariantsAction#ofUnsetAttribute(String)} ofUnsetAttribute(final String name)</p>
- * {@include.example example.HelperMethodsTest#productToReference()}
- * <p>{@link com.commercetools.api.models.product.ProductSetAttributeInAllVariantsAction#ofUnsetAttribute(String, Boolean)} ofUnsetAttribute(final String name, final Boolean staged)</p>
- * {@include.example example.HelperMethodsTest#productToReference()}
+ * {@include.example example.HelperMethodsTest#productSetImageLabelUnSetStaged()}
+ * <p>{@link com.commercetools.api.models.product.ProductSetProductPriceCustomFieldAction#ofUnset(String, String)}</p>
+ * {@include.example example.HelperMethodsTest#productSetProductPriceCustomFieldUnset()}
+ * <p>{@link com.commercetools.api.models.product.ProductSetProductPriceCustomFieldAction#ofUnsetStaged(String, String, Boolean)}</p>
+ * {@include.example example.HelperMethodsTest#productSetProductPriceCustomFieldUnsetStaged()}
+ * <p>{@link com.commercetools.api.models.product.ProductSetTaxCategoryAction#ofUnset()}</p>
+ * {@include.example example.HelperMethodsTest#productSetTaxCategoryUnset()}
+ *
+ * <p>{@link com.commercetools.api.models.product.ProductSetAttributeAction#ofVariantId(Long, String, JsonNode, Boolean)}</p>
+ * {@include.example example.HelperMethodsTest#productSetAttributeOfVariantId()}
+ * <p>{@link com.commercetools.api.models.product.ProductSetAttributeAction#ofSku(String, String, JsonNode, Boolean)}</p>
+ * {@include.example example.HelperMethodsTest#productSetAttributeOfSku()}
+ *
+ * <p>{@link com.commercetools.api.models.product.ProductSetAttributeAction#ofUnsetAttribute(Long, String)}/p>
+ * {@include.example example.HelperMethodsTest#productSetAttributeUnsetAttribute()}
+ * <p>{@link com.commercetools.api.models.product.ProductSetAttributeAction#ofUnsetAttribute(Long, String, Boolean)}</p>
+ * {@include.example example.HelperMethodsTest#productSetAttributeUnsetAttributeStaged()}
+ * <p>{@link com.commercetools.api.models.product.ProductSetAttributeAction#ofUnsetAttributeForVariantId(Long, String)}</p>
+ * {@include.example example.HelperMethodsTest#productSetAttributeUnsetAttributeForVariantId()}
+ * <p>{@link com.commercetools.api.models.product.ProductSetAttributeAction#ofUnsetAttributeForSku(String, String)}</p>
+ * {@include.example example.HelperMethodsTest#productSetAttributeUnsetAttributeForSku()}
+ * <p>{@link com.commercetools.api.models.product.ProductSetAttributeAction#ofUnsetAttributeForSku(String, String, Boolean)}</p>
+ * {@include.example example.HelperMethodsTest#productSetAttributeUnsetAttributeForSkuStaged()}
+ * <p>{@link com.commercetools.api.models.product.ProductSetAttributeInAllVariantsAction#ofUnsetAttribute(String)}</p>
+ * {@include.example example.HelperMethodsTest#productSetAttributeInAllVariantsUnsetAttribute()}
+ * <p>{@link com.commercetools.api.models.product.ProductSetAttributeInAllVariantsAction#ofUnsetAttribute(String, Boolean)}</p>
+ * {@include.example example.HelperMethodsTest#productSetAttributeInAllVariantsUnsetAttributeStaged()}
  *
  * <h3>Product Discounts</h3>
  *
- * <p>{@link com.commercetools.api.models.product_discount.ProductDiscountSetKeyAction#ofUnset()} ofUnset()</p>
+ * <p>{@link com.commercetools.api.models.product_discount.ProductDiscount#toResourceIdentifier()}</p>
+ * {@include.example example.HelperMethodsTest#productDiscountResourceIdentifier()}
+ * <p>{@link com.commercetools.api.models.product_discount.ProductDiscount#toReference()}</p>
+ * {@include.example example.HelperMethodsTest#productDiscountToReference()}
+ * <p>{@link com.commercetools.api.models.product_discount.ProductDiscountSetKeyAction#ofUnset()}</p>
+ * {@include.example example.HelperMethodsTest#productDiscountSetKeyUnset()}
+ *
+ * <h3>Product Selections</h3>
+ *
+ * <p>{@link com.commercetools.api.models.product_selection.ProductSelection#toResourceIdentifier()}</p>
+ * {@include.example example.HelperMethodsTest#productSelectionResourceIdentifier()}
+ * <p>{@link com.commercetools.api.models.product_selection.ProductSelection#toReference()}</p>
+ * {@include.example example.HelperMethodsTest#productSelectionToReference()}
  *
  * <h3>Product Types</h3>
  *
- * <p>{@link com.commercetools.api.models.product_type.AttributeDefinitionContainer#getAttribute(String)} AttributeDefinition getAttribute(final String attributeName)</p>
- * <p>{@link com.commercetools.api.models.product_type.AttributeDefinitionContainer#findAttribute(String)} Optional<AttributeDefinition> findAttribute(final String attributeName)</p>
- * <p>{@link com.commercetools.api.models.product_type.ProductTypeSetKeyAction#ofUnset()} ofUnset()</p>
+ * <p>{@link com.commercetools.api.models.product_type.ProductType#toResourceIdentifier()}</p>
+ * {@include.example example.HelperMethodsTest#productTypeResourceIdentifier()}
+ * <p>{@link com.commercetools.api.models.product_type.ProductType#toReference()}</p>
+ * {@include.example example.HelperMethodsTest#productTypeToReference()}
+ * <p>{@link com.commercetools.api.models.product_type.AttributeDefinitionContainer#getAttribute(String)}</p>
+ * {@include.example example.HelperMethodsTest#productTypeGetAttribute()}
+ * <p>{@link com.commercetools.api.models.product_type.AttributeDefinitionContainer#findAttribute(String)}</p>
+ * {@include.example example.HelperMethodsTest#productTypeFindAttribute()}
+ * <p>{@link com.commercetools.api.models.product_type.ProductTypeSetKeyAction#ofUnset()}</p>
+ * {@include.example example.HelperMethodsTest#productTypeSetKeyUnset()}
  *
  * <h3>Projects</h3>
  *
- * <p>{@link com.commercetools.api.models.project.ProjectSetShippingRateInputTypeAction#ofUnset()} ofUnset()</p>
+ * <p>{@link com.commercetools.api.models.project.ProjectSetShippingRateInputTypeAction#ofUnset()}</p>
+ * {@include.example example.HelperMethodsTest#projectSetShippingRateInputTypeUnset()}
  *
  * <h3>Quotes</h3>
  *
+ * <p>{@link com.commercetools.api.models.quote.Quote#toResourceIdentifier()}</p>
+ * {@include.example example.HelperMethodsTest#quoteResourceIdentifier()}
+ * <p>{@link com.commercetools.api.models.quote.Quote#toReference()}</p>
+ * {@include.example example.HelperMethodsTest#quoteToReference()}
  * <p>{@link com.commercetools.api.models.quote.QuoteSetCustomFieldAction#ofUnset(String)}</p>
+ * {@include.example example.HelperMethodsTest#quoteSetCustomFieldUnset()}
  *
  * <h3>Quotes Requests</h3>
  *
  * <p>{@link com.commercetools.api.models.quote_request.QuoteRequestSetCustomFieldAction#ofUnset(String)}</p>
+ * {@include.example example.HelperMethodsTest#quoteRequestSetCustomFieldUnset()}
  *
  * <h3>Reviews</h3>
  *
+ * <p>{@link com.commercetools.api.models.review.Review#toResourceIdentifier()}</p>
+ * {@include.example example.HelperMethodsTest#reviewResourceIdentifier()}
+ * <p>{@link com.commercetools.api.models.review.Review#toReference()}</p>
+ * {@include.example example.HelperMethodsTest#reviewToReference()}
  * <p>{@link com.commercetools.api.models.review.ReviewSetCustomFieldAction#ofUnset(String)}</p>
- * <p>{@link com.commercetools.api.models.review.ReviewSetCustomerAction#ofUnset()} ofUnset()</p>
- * <p>{@link com.commercetools.api.models.review.ReviewSetKeyAction#ofUnset()} ofUnset()</p>
+ * {@include.example example.HelperMethodsTest#reviewSetCustomFieldUnset()}
+ * <p>{@link com.commercetools.api.models.review.ReviewSetCustomerAction#ofUnset()}</p>
+ * {@include.example example.HelperMethodsTest#reviewSetCustomerUnset()}
+ * <p>{@link com.commercetools.api.models.review.ReviewSetKeyAction#ofUnset()}</p>
+ * {@include.example example.HelperMethodsTest#reviewSetKeyUnset()}
  *
  * <h3>Shipping Methods</h3>
  *
+ * <p>{@link com.commercetools.api.models.shipping_method.ShippingMethod#toResourceIdentifier()}</p>
+ * {@include.example example.HelperMethodsTest#reviewResourceIdentifier()}
+ * <p>{@link com.commercetools.api.models.shipping_method.ShippingMethod#toReference()}</p>
+ * {@include.example example.HelperMethodsTest#reviewToReference()}
  * <p>{@link com.commercetools.api.models.shipping_method.ShippingMethodSetCustomFieldAction#ofUnset(String)}</p>
- * <p>{@link com.commercetools.api.models.shipping_method.ShippingMethodSetKeyAction#ofUnset()} ofUnset()</p>
+ * {@include.example example.HelperMethodsTest#shippingMethodSetCustomFieldUnset()}
+ * <p>{@link com.commercetools.api.models.shipping_method.ShippingMethodSetKeyAction#ofUnset()}</p>
+ * {@include.example example.HelperMethodsTest#shippingMethodSetKeyUnset()}
  *
  * <h3>Shopping Lists</h3>
  *
- * <p>{@link com.commercetools.api.models.shopping_list.ShoppingListSetCustomerAction#ofUnset()} ofUnset()</p>
+ * <p>{@link com.commercetools.api.models.shopping_list.ShoppingList#toResourceIdentifier()}</p>
+ * {@include.example example.HelperMethodsTest#shoppingListResourceIdentifier()}
+ * <p>{@link com.commercetools.api.models.shopping_list.ShoppingList#toReference()}</p>
+ * {@include.example example.HelperMethodsTest#shoppingListToReference()}
+ * <p>{@link com.commercetools.api.models.shopping_list.ShoppingListSetCustomerAction#ofUnset()}</p>
+ * {@include.example example.HelperMethodsTest#shoppingListSetCustomerUnset()}
  * <p>{@link com.commercetools.api.models.shopping_list.ShoppingListSetCustomFieldAction#ofUnset(String)}</p>
- * <p>{@link com.commercetools.api.models.shopping_list.ShoppingListSetDeleteDaysAfterLastModificationAction#ofUnset()} ofUnset()</p>
- * <p>{@link com.commercetools.api.models.shopping_list.ShoppingListSetLineItemCustomFieldAction#ofUnset(String, String)} ofUnset(final String name, final String lineItemId)</p>
- * <p>{@link com.commercetools.api.models.shopping_list.ShoppingListSetKeyAction#ofUnset()} ofUnset()</p>
- * <p>{@link com.commercetools.api.models.shopping_list.ShoppingListSetTextLineItemCustomFieldAction#ofUnset(String, String)} ofUnset(final String name, final String textLineItemId)</p>
- * <p>{@link com.commercetools.api.models.shopping_list.ShoppingListSetSlugAction#ofUnset()} ofUnset()</p>
+ * {@include.example example.HelperMethodsTest#shoppingListSetCustomFieldUnset()}
+ * <p>{@link com.commercetools.api.models.shopping_list.ShoppingListSetDeleteDaysAfterLastModificationAction#ofUnset()}</p>
+ * {@include.example example.HelperMethodsTest#shoppingListSetDeleteDaysAfterLastModificationUnset()}
+ * <p>{@link com.commercetools.api.models.shopping_list.ShoppingListSetLineItemCustomFieldAction#ofUnset(String, String)}</p>
+ * {@include.example example.HelperMethodsTest#shoppingListSetLineItemCustomFieldUnset()}
+ * <p>{@link com.commercetools.api.models.shopping_list.ShoppingListSetKeyAction#ofUnset()}</p>
+ * {@include.example example.HelperMethodsTest#shoppingListSetKeyUnset()}
+ * <p>{@link com.commercetools.api.models.shopping_list.ShoppingListSetTextLineItemCustomFieldAction#ofUnset(String, String)}</p>
+ * {@include.example example.HelperMethodsTest#shoppingListSetTextLineItemCustomFieldUnset()}
+ * <p>{@link com.commercetools.api.models.shopping_list.ShoppingListSetSlugAction#ofUnset()}</p>
+ * {@include.example example.HelperMethodsTest#shoppingListSetSlugUnset()}
  *
  * <h3>Staged Quotes</h3>
  *
  * <p>{@link com.commercetools.api.models.staged_quote.StagedQuoteSetCustomFieldAction#ofUnset(String)}</p>
+ * {@include.example example.HelperMethodsTest#stagedQuoteSetCustomFieldUnset()}
  *
  * <h3>Standalone Prices</h3>
  *
+ * <p>{@link com.commercetools.api.models.standalone_price.StandalonePrice#toResourceIdentifier()}</p>
+ * {@include.example example.HelperMethodsTest#standalonePriceResourceIdentifier()}
+ * <p>{@link com.commercetools.api.models.standalone_price.StandalonePrice#toReference()}</p>
+ * {@include.example example.HelperMethodsTest#standalonePriceToReference()}
  * <p>{@link com.commercetools.api.models.standalone_price.StandalonePriceSetCustomFieldAction#ofUnset(String)}</p>
+ * {@include.example example.HelperMethodsTest#standalonePriceSetCustomFieldUnset()}
+ *
+ * <h3>States</h3>
+ *
+ * <p>{@link com.commercetools.api.models.state.State#toResourceIdentifier()}</p>
+ * {@include.example example.HelperMethodsTest#stateResourceIdentifier()}
+ * <p>{@link com.commercetools.api.models.state.State#toReference()}</p>
+ * {@include.example example.HelperMethodsTest#stateToReference()}
  *
  * <h3>Stores</h3>
  *
+ * <p>{@link com.commercetools.api.models.store.Store#toResourceIdentifier()}</p>
+ * {@include.example example.HelperMethodsTest#storeResourceIdentifier()}
+ * <p>{@link com.commercetools.api.models.store.Store#toReference()}</p>
+ * {@include.example example.HelperMethodsTest#storeToReference()}
  * <p>{@link com.commercetools.api.models.store.StoreSetCustomFieldAction#ofUnset(String)}</p>
+ * {@include.example example.HelperMethodsTest#storeSetCustomFieldUnset()}
  *
  * <h3>Subscriptions</h3>
  *
- * <p>{@link com.commercetools.api.models.subscription.SubscriptionSetMessagesAction#ofUnset()} ofUnset()</p>
- * <p>{@link com.commercetools.api.models.subscription.SubscriptionSetChangesAction#ofUnset()} ofUnset()</p>
+ * <p>{@link com.commercetools.api.models.subscription.SubscriptionSetMessagesAction#ofUnset()}</p>
+ * {@include.example example.HelperMethodsTest#subscriptionSetMessagesUnset()}
+ * <p>{@link com.commercetools.api.models.subscription.SubscriptionSetChangesAction#ofUnset()}</p>
+ * {@include.example example.HelperMethodsTest#subscriptionSetChangesUnset()}
+ *
+ * <h3>Tax Categories</h3>
+ *
+ * <p>{@link com.commercetools.api.models.tax_category.TaxCategory#toResourceIdentifier()}</p>
+ * {@include.example example.HelperMethodsTest#taxCategoryResourceIdentifier()}
+ * <p>{@link com.commercetools.api.models.tax_category.TaxCategory#toReference()}</p>
+ * {@include.example example.HelperMethodsTest#taxCategoryToReference()}
  *
  * <h3>Types</h3>
  *
- * <p>{@link com.commercetools.api.models.type.Type#getFieldDefinitionByName(String)} FieldDefinition getFieldDefinitionByName(final String name)</p>
+ * <p>{@link com.commercetools.api.models.type.Type#toResourceIdentifier()}</p>
+ * {@include.example example.HelperMethodsTest#typeResourceIdentifier()}
+ * <p>{@link com.commercetools.api.models.type.Type#toReference()}</p>
+ * {@include.example example.HelperMethodsTest#typeToReference()}
+ * <p>{@link com.commercetools.api.models.type.Type#getFieldDefinitionByName(String)}</p>
+ * {@include.example example.HelperMethodsTest#typeToReference()}
+ * <p>{@link com.commercetools.api.models.type.CustomFields#toDraft()}</p>
+ * {@include.example example.HelperMethodsTest#customFieldsToDraft()}
+ * <p>{@link com.commercetools.api.models.type.CustomFields#toDraftBuilder()}</p>
+ * {@include.example example.HelperMethodsTest#customFieldsToDraftBuilder()}
  *
  * <h3>Zones</h3>
  *

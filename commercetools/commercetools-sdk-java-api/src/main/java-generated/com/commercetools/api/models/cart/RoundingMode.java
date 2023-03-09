@@ -10,26 +10,15 @@ import com.fasterxml.jackson.annotation.JsonValue;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>Determines how monetary values are rounded.</p>
+ * RoundingMode
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public interface RoundingMode {
 
-    /**
-    	<p><a href="https://en.wikipedia.org/wiki/Rounding#Round_half_to_even">Round half to even</a></p>
-    	<p>Default mode for a new Cart.</p>
-
-    */
     RoundingMode HALF_EVEN = RoundingModeEnum.HALF_EVEN;
-    /**
-    	<p><a href="https://en.wikipedia.org/wiki/Rounding#Round_half_up">Round half up</a></p>
 
-    */
     RoundingMode HALF_UP = RoundingModeEnum.HALF_UP;
-    /**
-    	<p><a href="https://en.wikipedia.org/wiki/Rounding#Round_half_down">Round half down</a></p>
 
-    */
     RoundingMode HALF_DOWN = RoundingModeEnum.HALF_DOWN;
 
     enum RoundingModeEnum implements RoundingMode {

@@ -35,7 +35,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface Shipping {
 
     /**
-     *  <p>User-defined unique identifier of the Shipping in a Cart with <code>Multiple</code> ShippingMode.</p>
+     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multiple</code> ShippingMode.</p>
      */
     @NotNull
     @JsonProperty("shippingKey")
@@ -50,7 +50,7 @@ public interface Shipping {
     public ShippingInfo getShippingInfo();
 
     /**
-     *  <p>Determines the shipping rates and Tax Rates of associated Line Items.</p>
+     *  <p>Determines the shipping rates and Tax Rates of the associated Line Item quantities.</p>
      */
     @NotNull
     @Valid
@@ -58,11 +58,10 @@ public interface Shipping {
     public Address getShippingAddress();
 
     /**
-     *  <p>Used as an input to select a ShippingRatePriceTier. The data type of this field depends on the <code>shippingRateInputType.type</code> configured in the Project:</p>
+     *  <p>Used as an input to select a ShippingRatePriceTier.</p>
      *  <ul>
-     *   <li>If <code>CartClassification</code>, it is ClassificationShippingRateInput.</li>
-     *   <li>If <code>CartScore</code>, it is ScoreShippingRateInput.</li>
-     *   <li>If <code>CartValue</code>, it cannot be used.</li>
+     *   <li>Must be ClassificationShippingRateInput if ShippingRateInputType is CartClassificationType.</li>
+     *   <li>Must be ScoreShippingRateInput if ShippingRateInputType is CartScoreType.</li>
      *  </ul>
      */
     @Valid

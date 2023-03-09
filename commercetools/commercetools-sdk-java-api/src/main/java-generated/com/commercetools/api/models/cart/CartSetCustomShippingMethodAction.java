@@ -16,8 +16,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>To set the Cart's custom Shipping Method (independent of the ShippingMethods managed through the Shipping Methods API) the Cart must have the <code>Single</code> ShippingMode and a <code>shippingAddress</code>.</p>
- *  <p>To unset a custom Shipping Method on a Cart, use the Set ShippingMethod update action without the <code>shippingMethod</code> field instead.</p>
+ * CartSetCustomShippingMethodAction
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -37,14 +36,14 @@ public interface CartSetCustomShippingMethodAction extends CartUpdateAction {
     String SET_CUSTOM_SHIPPING_METHOD = "setCustomShippingMethod";
 
     /**
-     *  <p>Name of the custom Shipping Method.</p>
+     *
      */
     @NotNull
     @JsonProperty("shippingMethodName")
     public String getShippingMethodName();
 
     /**
-     *  <p>Determines the shipping price.</p>
+     *
      */
     @NotNull
     @Valid
@@ -52,14 +51,14 @@ public interface CartSetCustomShippingMethodAction extends CartUpdateAction {
     public ShippingRateDraft getShippingRate();
 
     /**
-     *  <p>Tax Category used to determine the Tax Rate when the Cart has the <code>Platform</code> TaxMode.</p>
+     *  <p>ResourceIdentifier to a TaxCategory.</p>
      */
     @Valid
     @JsonProperty("taxCategory")
     public TaxCategoryResourceIdentifier getTaxCategory();
 
     /**
-     *  <p>External Tax Rate for the <code>shippingRate</code> to be set if the Cart has the <code>External</code> TaxMode.</p>
+     *
      */
     @Valid
     @JsonProperty("externalTaxRate")

@@ -11,8 +11,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>Number of days after which a Cart with <code>Active</code> CartState is deleted since its last modification.</p>
- *  <p>If a ChangeSubscription exists for Carts, a ResourceDeletedDeliveryPayload is sent.</p>
+ * MyCartSetDeleteDaysAfterLastModificationAction
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -30,7 +29,7 @@ public interface MyCartSetDeleteDaysAfterLastModificationAction extends MyCartUp
     String SET_DELETE_DAYS_AFTER_LAST_MODIFICATION = "setDeleteDaysAfterLastModification";
 
     /**
-     *  <p>Value to set. If not provided, the default value for this field configured in Project settings is assigned.</p>
+     *
      */
 
     @JsonProperty("deleteDaysAfterLastModification")

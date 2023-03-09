@@ -8,7 +8,7 @@ import java.util.function.Function;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
-import com.commercetools.api.models.common.CentPrecisionMoney;
+import com.commercetools.api.models.common.TypedMoney;
 import com.commercetools.api.models.order.Delivery;
 import com.commercetools.api.models.shipping_method.ShippingMethodReference;
 import com.commercetools.api.models.shipping_method.ShippingRate;
@@ -40,7 +40,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ShippingInfo {
 
     /**
-     *  <p>Name of the Shipping Method.</p>
+     *
      */
     @NotNull
     @JsonProperty("shippingMethodName")
@@ -52,10 +52,10 @@ public interface ShippingInfo {
     @NotNull
     @Valid
     @JsonProperty("price")
-    public CentPrecisionMoney getPrice();
+    public TypedMoney getPrice();
 
     /**
-     *  <p>Used to determine the price.</p>
+     *  <p>The shipping rate used to determine the price.</p>
      */
     @NotNull
     @Valid
@@ -63,50 +63,49 @@ public interface ShippingInfo {
     public ShippingRate getShippingRate();
 
     /**
-     *  <p>Automatically set after the <code>taxRate</code> is set.</p>
+     *  <p>Set once the <code>taxRate</code> is set.</p>
      */
     @Valid
     @JsonProperty("taxedPrice")
     public TaxedItemPrice getTaxedPrice();
 
     /**
-     *  <p>Automatically set in the <code>Platform</code> TaxMode after the shipping address is set.</p>
-     *  <p>For the <code>External</code> TaxMode the Tax Rate must be set explicitly with the ExternalTaxRateDraft.</p>
+     *  <p>Will be set automatically in the <code>Platform</code> TaxMode once the shipping address is set is set. For the <code>External</code> tax mode the tax rate has to be set explicitly with the ExternalTaxRateDraft.</p>
      */
     @Valid
     @JsonProperty("taxRate")
     public TaxRate getTaxRate();
 
     /**
-     *  <p>Used to select a Tax Rate when a Cart has the <code>Platform</code> TaxMode.</p>
+     *
      */
     @Valid
     @JsonProperty("taxCategory")
     public TaxCategoryReference getTaxCategory();
 
     /**
-     *  <p>Not set if a custom Shipping Method is used.</p>
+     *  <p>Not set if custom shipping method is used.</p>
      */
     @Valid
     @JsonProperty("shippingMethod")
     public ShippingMethodReference getShippingMethod();
 
     /**
-     *  <p>Information on how items are delivered to customers.</p>
+     *  <p>Deliveries are compilations of information on how the articles are being delivered to the customers.</p>
      */
     @Valid
     @JsonProperty("deliveries")
     public List<Delivery> getDeliveries();
 
     /**
-     *  <p>Discounted price of the Shipping Method.</p>
+     *
      */
     @Valid
     @JsonProperty("discountedPrice")
     public DiscountedLineItemPrice getDiscountedPrice();
 
     /**
-     *  <p>Indicates whether the ShippingMethod referenced in this ShippingInfo is allowed for the Cart.</p>
+     *  <p>Indicates whether the ShippingMethod referenced in this ShippingInfo is allowed for the cart or not.</p>
      */
     @NotNull
     @JsonProperty("shippingMethodState")
@@ -114,7 +113,7 @@ public interface ShippingInfo {
 
     public void setShippingMethodName(final String shippingMethodName);
 
-    public void setPrice(final CentPrecisionMoney price);
+    public void setPrice(final TypedMoney price);
 
     public void setShippingRate(final ShippingRate shippingRate);
 

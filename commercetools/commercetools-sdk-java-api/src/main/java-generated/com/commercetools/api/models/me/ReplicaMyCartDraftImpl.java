@@ -34,7 +34,7 @@ public class ReplicaMyCartDraftImpl implements ReplicaMyCartDraft, ModelBase {
     }
 
     /**
-     *  <p>Reference to a Cart or Order that is replicated.</p>
+     *
      */
 
     public java.lang.Object getReference() {

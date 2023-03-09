@@ -18,7 +18,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Returns an order by its ID from a specific Store. If the order exists in the project but does not have the store field, or the <code>store</code> field references a different Store, this method returns a ResourceNotFound error.</p>
+ *  <p>Returns an order by its ID from a specific Store. If the order exists in the project but does not have the store field, or the store field references a different store, this method returns a ResourceNotFound error.</p>
  *
  * <hr>
  * <div class=code-example>

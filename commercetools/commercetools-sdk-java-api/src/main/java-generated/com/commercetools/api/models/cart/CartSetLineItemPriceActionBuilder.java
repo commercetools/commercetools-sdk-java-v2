@@ -30,7 +30,7 @@ public class CartSetLineItemPriceActionBuilder implements Builder<CartSetLineIte
     private com.commercetools.api.models.common.Money externalPrice;
 
     /**
-     *  <p><code>id</code> of the LineItem to update.</p>
+     *
      */
 
     public CartSetLineItemPriceActionBuilder lineItemId(final String lineItemId) {
@@ -39,7 +39,8 @@ public class CartSetLineItemPriceActionBuilder implements Builder<CartSetLineIte
     }
 
     /**
-     *  <p>Value to set. If <code>externalPrice</code> is not given and the <code>priceMode</code> is <code>ExternalPrice</code>, the external price is unset and the <code>priceMode</code> is set to <code>Platform</code>.</p>
+     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
+     *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
      */
 
     public CartSetLineItemPriceActionBuilder externalPrice(
@@ -49,7 +50,8 @@ public class CartSetLineItemPriceActionBuilder implements Builder<CartSetLineIte
     }
 
     /**
-     *  <p>Value to set. If <code>externalPrice</code> is not given and the <code>priceMode</code> is <code>ExternalPrice</code>, the external price is unset and the <code>priceMode</code> is set to <code>Platform</code>.</p>
+     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
+     *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
      */
 
     public CartSetLineItemPriceActionBuilder externalPrice(

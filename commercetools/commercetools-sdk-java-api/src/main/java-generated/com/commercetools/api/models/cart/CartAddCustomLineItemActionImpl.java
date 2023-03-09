@@ -15,9 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>If the Cart already contains a CustomLineItem with the same <code>slug</code>, <code>name</code>, <code>money</code>, <code>taxCategory</code>, <code>state</code>, and Custom Fields, then only the quantity of the existing Custom Line Item is increased. If CustomLineItem <code>shippingDetails</code> are set, they are merged with the <code>targets</code> that already exist on the ItemShippingDetails of the Custom Line Item. In case of overlapping address keys the ItemShippingTarget <code>quantity</code> is summed up.</p>
- *  <p>If the Cart already contains a Custom Line Item with the same slug that is otherwise not identical, an InvalidOperation error is returned.</p>
- *  <p>If the Tax Rate is not set, a MissingTaxRateForCountry error is returned.</p>
+ * CartAddCustomLineItemAction
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CartAddCustomLineItemActionImpl implements CartAddCustomLineItemAction, ModelBase {
@@ -34,11 +32,9 @@ public class CartAddCustomLineItemActionImpl implements CartAddCustomLineItemAct
 
     private com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier taxCategory;
 
-    private com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate;
-
-    private com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails;
-
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
+
+    private com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate;
 
     private com.commercetools.api.models.cart.CustomLineItemPriceMode priceMode;
 
@@ -47,18 +43,16 @@ public class CartAddCustomLineItemActionImpl implements CartAddCustomLineItemAct
             @JsonProperty("name") final com.commercetools.api.models.common.LocalizedString name,
             @JsonProperty("quantity") final Long quantity, @JsonProperty("slug") final String slug,
             @JsonProperty("taxCategory") final com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier taxCategory,
-            @JsonProperty("externalTaxRate") final com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate,
-            @JsonProperty("shippingDetails") final com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails,
             @JsonProperty("custom") final com.commercetools.api.models.type.CustomFieldsDraft custom,
+            @JsonProperty("externalTaxRate") final com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate,
             @JsonProperty("priceMode") final com.commercetools.api.models.cart.CustomLineItemPriceMode priceMode) {
         this.money = money;
         this.name = name;
         this.quantity = quantity;
         this.slug = slug;
         this.taxCategory = taxCategory;
-        this.externalTaxRate = externalTaxRate;
-        this.shippingDetails = shippingDetails;
         this.custom = custom;
+        this.externalTaxRate = externalTaxRate;
         this.priceMode = priceMode;
         this.action = ADD_CUSTOM_LINE_ITEM;
     }
@@ -76,7 +70,8 @@ public class CartAddCustomLineItemActionImpl implements CartAddCustomLineItemAct
     }
 
     /**
-     *  <p>Money value of the Custom Line Item. The value can be negative.</p>
+     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
+     *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
      */
 
     public com.commercetools.api.models.common.Money getMoney() {
@@ -84,7 +79,7 @@ public class CartAddCustomLineItemActionImpl implements CartAddCustomLineItemAct
     }
 
     /**
-     *  <p>Name of the Custom Line Item.</p>
+     *  <p>JSON object where the keys are of type Locale, and the values are the strings used for the corresponding language.</p>
      */
 
     public com.commercetools.api.models.common.LocalizedString getName() {
@@ -92,7 +87,7 @@ public class CartAddCustomLineItemActionImpl implements CartAddCustomLineItemAct
     }
 
     /**
-     *  <p>Number of Custom Line Items to add to the Cart.</p>
+     *
      */
 
     public Long getQuantity() {
@@ -100,7 +95,7 @@ public class CartAddCustomLineItemActionImpl implements CartAddCustomLineItemAct
     }
 
     /**
-     *  <p>User-defined identifier used in a deep-link URL for the Custom Line Item. It must match the pattern <code>[a-zA-Z0-9_-]{2,256}</code>.</p>
+     *
      */
 
     public String getSlug() {
@@ -108,8 +103,7 @@ public class CartAddCustomLineItemActionImpl implements CartAddCustomLineItemAct
     }
 
     /**
-     *  <p>Used to select a Tax Rate when a Cart has the <code>Platform</code> TaxMode.</p>
-     *  <p>If TaxMode is <code>Platform</code>, this field must not be empty.</p>
+     *  <p>ResourceIdentifier to a TaxCategory.</p>
      */
 
     public com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier getTaxCategory() {
@@ -117,27 +111,19 @@ public class CartAddCustomLineItemActionImpl implements CartAddCustomLineItemAct
     }
 
     /**
-     *  <p>An external Tax Rate can be set if the Cart has <code>External</code> TaxMode.</p>
-     */
-
-    public com.commercetools.api.models.cart.ExternalTaxRateDraft getExternalTaxRate() {
-        return this.externalTaxRate;
-    }
-
-    /**
-     *  <p>Container for Custom Line Item-specific addresses.</p>
-     */
-
-    public com.commercetools.api.models.cart.ItemShippingDetailsDraft getShippingDetails() {
-        return this.shippingDetails;
-    }
-
-    /**
-     *  <p>Custom Fields for the Custom Line Item.</p>
+     *  <p>The representation used when creating or updating a customizable data type with Custom Fields.</p>
      */
 
     public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
         return this.custom;
+    }
+
+    /**
+     *
+     */
+
+    public com.commercetools.api.models.cart.ExternalTaxRateDraft getExternalTaxRate() {
+        return this.externalTaxRate;
     }
 
     /**
@@ -172,16 +158,12 @@ public class CartAddCustomLineItemActionImpl implements CartAddCustomLineItemAct
         this.taxCategory = taxCategory;
     }
 
-    public void setExternalTaxRate(final com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate) {
-        this.externalTaxRate = externalTaxRate;
-    }
-
-    public void setShippingDetails(final com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails) {
-        this.shippingDetails = shippingDetails;
-    }
-
     public void setCustom(final com.commercetools.api.models.type.CustomFieldsDraft custom) {
         this.custom = custom;
+    }
+
+    public void setExternalTaxRate(final com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate) {
+        this.externalTaxRate = externalTaxRate;
     }
 
     public void setPriceMode(final com.commercetools.api.models.cart.CustomLineItemPriceMode priceMode) {
@@ -204,9 +186,8 @@ public class CartAddCustomLineItemActionImpl implements CartAddCustomLineItemAct
                 .append(quantity, that.quantity)
                 .append(slug, that.slug)
                 .append(taxCategory, that.taxCategory)
-                .append(externalTaxRate, that.externalTaxRate)
-                .append(shippingDetails, that.shippingDetails)
                 .append(custom, that.custom)
+                .append(externalTaxRate, that.externalTaxRate)
                 .append(priceMode, that.priceMode)
                 .isEquals();
     }
@@ -219,9 +200,8 @@ public class CartAddCustomLineItemActionImpl implements CartAddCustomLineItemAct
                 .append(quantity)
                 .append(slug)
                 .append(taxCategory)
-                .append(externalTaxRate)
-                .append(shippingDetails)
                 .append(custom)
+                .append(externalTaxRate)
                 .append(priceMode)
                 .toHashCode();
     }

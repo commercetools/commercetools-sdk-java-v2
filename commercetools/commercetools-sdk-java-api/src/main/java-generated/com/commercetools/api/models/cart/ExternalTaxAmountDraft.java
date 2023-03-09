@@ -15,12 +15,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>Cannot be used in LineItemDraft or CustomLineItemDraft.</p>
- *  <p>Can only be set by these update actions:</p>
- *  <ul>
- *   <li>Set LineItem TaxAmount, Set CustomLineItem TaxAmount, or Set ShippingMethod TaxAmount on Carts</li>
- *   <li>Set LineItem TaxAmount, Set CustomLineItem TaxAmount, or Set ShippingMethod TaxAmount on Order Edits</li>
- *  </ul>
+ * ExternalTaxAmountDraft
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -38,7 +33,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ExternalTaxAmountDraft extends io.vrap.rmf.base.client.Draft<ExternalTaxAmountDraft> {
 
     /**
-     *  <p>Total gross amount (<code>totalNet</code> + <code>taxPortions</code>) of the Line Item or Custom Line Item.</p>
+     *  <p>The total gross amount of the item (totalNet + taxes).</p>
      */
     @NotNull
     @Valid
@@ -46,7 +41,7 @@ public interface ExternalTaxAmountDraft extends io.vrap.rmf.base.client.Draft<Ex
     public Money getTotalGross();
 
     /**
-     *  <p>Tax Rates and subrates of states and countries.</p>
+     *
      */
     @NotNull
     @Valid

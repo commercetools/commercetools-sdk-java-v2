@@ -29,7 +29,7 @@ public class ShippingInfoBuilder implements Builder<ShippingInfo> {
 
     private String shippingMethodName;
 
-    private com.commercetools.api.models.common.CentPrecisionMoney price;
+    private com.commercetools.api.models.common.TypedMoney price;
 
     private com.commercetools.api.models.shipping_method.ShippingRate shippingRate;
 
@@ -54,7 +54,7 @@ public class ShippingInfoBuilder implements Builder<ShippingInfo> {
     private com.commercetools.api.models.cart.ShippingMethodState shippingMethodState;
 
     /**
-     *  <p>Name of the Shipping Method.</p>
+     *
      */
 
     public ShippingInfoBuilder shippingMethodName(final String shippingMethodName) {
@@ -66,9 +66,8 @@ public class ShippingInfoBuilder implements Builder<ShippingInfo> {
      *  <p>Determined based on the ShippingRate and its tiered prices, and either the sum of LineItem prices or the <code>shippingRateInput</code> field.</p>
      */
 
-    public ShippingInfoBuilder price(
-            Function<com.commercetools.api.models.common.CentPrecisionMoneyBuilder, com.commercetools.api.models.common.CentPrecisionMoneyBuilder> builder) {
-        this.price = builder.apply(com.commercetools.api.models.common.CentPrecisionMoneyBuilder.of()).build();
+    public ShippingInfoBuilder price(final com.commercetools.api.models.common.TypedMoney price) {
+        this.price = price;
         return this;
     }
 
@@ -76,13 +75,14 @@ public class ShippingInfoBuilder implements Builder<ShippingInfo> {
      *  <p>Determined based on the ShippingRate and its tiered prices, and either the sum of LineItem prices or the <code>shippingRateInput</code> field.</p>
      */
 
-    public ShippingInfoBuilder price(final com.commercetools.api.models.common.CentPrecisionMoney price) {
-        this.price = price;
+    public ShippingInfoBuilder price(
+            Function<com.commercetools.api.models.common.TypedMoneyBuilder, Builder<? extends com.commercetools.api.models.common.TypedMoney>> builder) {
+        this.price = builder.apply(com.commercetools.api.models.common.TypedMoneyBuilder.of()).build();
         return this;
     }
 
     /**
-     *  <p>Used to determine the price.</p>
+     *  <p>The shipping rate used to determine the price.</p>
      */
 
     public ShippingInfoBuilder shippingRate(
@@ -93,7 +93,7 @@ public class ShippingInfoBuilder implements Builder<ShippingInfo> {
     }
 
     /**
-     *  <p>Used to determine the price.</p>
+     *  <p>The shipping rate used to determine the price.</p>
      */
 
     public ShippingInfoBuilder shippingRate(
@@ -103,7 +103,7 @@ public class ShippingInfoBuilder implements Builder<ShippingInfo> {
     }
 
     /**
-     *  <p>Automatically set after the <code>taxRate</code> is set.</p>
+     *  <p>Set once the <code>taxRate</code> is set.</p>
      */
 
     public ShippingInfoBuilder taxedPrice(
@@ -113,7 +113,7 @@ public class ShippingInfoBuilder implements Builder<ShippingInfo> {
     }
 
     /**
-     *  <p>Automatically set after the <code>taxRate</code> is set.</p>
+     *  <p>Set once the <code>taxRate</code> is set.</p>
      */
 
     public ShippingInfoBuilder taxedPrice(@Nullable final com.commercetools.api.models.cart.TaxedItemPrice taxedPrice) {
@@ -122,8 +122,7 @@ public class ShippingInfoBuilder implements Builder<ShippingInfo> {
     }
 
     /**
-     *  <p>Automatically set in the <code>Platform</code> TaxMode after the shipping address is set.</p>
-     *  <p>For the <code>External</code> TaxMode the Tax Rate must be set explicitly with the ExternalTaxRateDraft.</p>
+     *  <p>Will be set automatically in the <code>Platform</code> TaxMode once the shipping address is set is set. For the <code>External</code> tax mode the tax rate has to be set explicitly with the ExternalTaxRateDraft.</p>
      */
 
     public ShippingInfoBuilder taxRate(
@@ -133,8 +132,7 @@ public class ShippingInfoBuilder implements Builder<ShippingInfo> {
     }
 
     /**
-     *  <p>Automatically set in the <code>Platform</code> TaxMode after the shipping address is set.</p>
-     *  <p>For the <code>External</code> TaxMode the Tax Rate must be set explicitly with the ExternalTaxRateDraft.</p>
+     *  <p>Will be set automatically in the <code>Platform</code> TaxMode once the shipping address is set is set. For the <code>External</code> tax mode the tax rate has to be set explicitly with the ExternalTaxRateDraft.</p>
      */
 
     public ShippingInfoBuilder taxRate(@Nullable final com.commercetools.api.models.tax_category.TaxRate taxRate) {
@@ -143,7 +141,7 @@ public class ShippingInfoBuilder implements Builder<ShippingInfo> {
     }
 
     /**
-     *  <p>Used to select a Tax Rate when a Cart has the <code>Platform</code> TaxMode.</p>
+     *
      */
 
     public ShippingInfoBuilder taxCategory(
@@ -154,7 +152,7 @@ public class ShippingInfoBuilder implements Builder<ShippingInfo> {
     }
 
     /**
-     *  <p>Used to select a Tax Rate when a Cart has the <code>Platform</code> TaxMode.</p>
+     *
      */
 
     public ShippingInfoBuilder taxCategory(
@@ -164,7 +162,7 @@ public class ShippingInfoBuilder implements Builder<ShippingInfo> {
     }
 
     /**
-     *  <p>Not set if a custom Shipping Method is used.</p>
+     *  <p>Not set if custom shipping method is used.</p>
      */
 
     public ShippingInfoBuilder shippingMethod(
@@ -176,7 +174,7 @@ public class ShippingInfoBuilder implements Builder<ShippingInfo> {
     }
 
     /**
-     *  <p>Not set if a custom Shipping Method is used.</p>
+     *  <p>Not set if custom shipping method is used.</p>
      */
 
     public ShippingInfoBuilder shippingMethod(
@@ -186,7 +184,7 @@ public class ShippingInfoBuilder implements Builder<ShippingInfo> {
     }
 
     /**
-     *  <p>Information on how items are delivered to customers.</p>
+     *  <p>Deliveries are compilations of information on how the articles are being delivered to the customers.</p>
      */
 
     public ShippingInfoBuilder deliveries(@Nullable final com.commercetools.api.models.order.Delivery... deliveries) {
@@ -195,7 +193,7 @@ public class ShippingInfoBuilder implements Builder<ShippingInfo> {
     }
 
     /**
-     *  <p>Information on how items are delivered to customers.</p>
+     *  <p>Deliveries are compilations of information on how the articles are being delivered to the customers.</p>
      */
 
     public ShippingInfoBuilder deliveries(
@@ -205,7 +203,7 @@ public class ShippingInfoBuilder implements Builder<ShippingInfo> {
     }
 
     /**
-     *  <p>Information on how items are delivered to customers.</p>
+     *  <p>Deliveries are compilations of information on how the articles are being delivered to the customers.</p>
      */
 
     public ShippingInfoBuilder plusDeliveries(
@@ -218,7 +216,7 @@ public class ShippingInfoBuilder implements Builder<ShippingInfo> {
     }
 
     /**
-     *  <p>Information on how items are delivered to customers.</p>
+     *  <p>Deliveries are compilations of information on how the articles are being delivered to the customers.</p>
      */
 
     public ShippingInfoBuilder plusDeliveries(
@@ -231,7 +229,7 @@ public class ShippingInfoBuilder implements Builder<ShippingInfo> {
     }
 
     /**
-     *  <p>Information on how items are delivered to customers.</p>
+     *  <p>Deliveries are compilations of information on how the articles are being delivered to the customers.</p>
      */
 
     public ShippingInfoBuilder withDeliveries(
@@ -242,7 +240,7 @@ public class ShippingInfoBuilder implements Builder<ShippingInfo> {
     }
 
     /**
-     *  <p>Discounted price of the Shipping Method.</p>
+     *
      */
 
     public ShippingInfoBuilder discountedPrice(
@@ -253,7 +251,7 @@ public class ShippingInfoBuilder implements Builder<ShippingInfo> {
     }
 
     /**
-     *  <p>Discounted price of the Shipping Method.</p>
+     *
      */
 
     public ShippingInfoBuilder discountedPrice(
@@ -263,7 +261,7 @@ public class ShippingInfoBuilder implements Builder<ShippingInfo> {
     }
 
     /**
-     *  <p>Indicates whether the ShippingMethod referenced in this ShippingInfo is allowed for the Cart.</p>
+     *  <p>Indicates whether the ShippingMethod referenced in this ShippingInfo is allowed for the cart or not.</p>
      */
 
     public ShippingInfoBuilder shippingMethodState(
@@ -276,7 +274,7 @@ public class ShippingInfoBuilder implements Builder<ShippingInfo> {
         return this.shippingMethodName;
     }
 
-    public com.commercetools.api.models.common.CentPrecisionMoney getPrice() {
+    public com.commercetools.api.models.common.TypedMoney getPrice() {
         return this.price;
     }
 

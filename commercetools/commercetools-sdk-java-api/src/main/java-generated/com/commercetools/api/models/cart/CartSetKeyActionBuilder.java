@@ -26,7 +26,7 @@ public class CartSetKeyActionBuilder implements Builder<CartSetKeyAction> {
     private String key;
 
     /**
-     *  <p>Value to set. If empty, any existing key will be removed.</p>
+     *
      */
 
     public CartSetKeyActionBuilder key(@Nullable final String key) {

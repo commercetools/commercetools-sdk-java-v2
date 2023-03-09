@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>A generic item that can be added to the Cart but is not bound to a Product that can be used for discounts (negative money), vouchers, complex cart rules, additional services, or fees. You control the lifecycle of this item.</p>
+ * CustomLineItem
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomLineItemImpl implements CustomLineItem, ModelBase {
@@ -28,7 +28,7 @@ public class CustomLineItemImpl implements CustomLineItem, ModelBase {
 
     private com.commercetools.api.models.cart.TaxedItemPrice taxedPrice;
 
-    private com.commercetools.api.models.common.CentPrecisionMoney totalPrice;
+    private com.commercetools.api.models.common.TypedMoney totalPrice;
 
     private String slug;
 
@@ -53,7 +53,7 @@ public class CustomLineItemImpl implements CustomLineItem, ModelBase {
             @JsonProperty("name") final com.commercetools.api.models.common.LocalizedString name,
             @JsonProperty("money") final com.commercetools.api.models.common.TypedMoney money,
             @JsonProperty("taxedPrice") final com.commercetools.api.models.cart.TaxedItemPrice taxedPrice,
-            @JsonProperty("totalPrice") final com.commercetools.api.models.common.CentPrecisionMoney totalPrice,
+            @JsonProperty("totalPrice") final com.commercetools.api.models.common.TypedMoney totalPrice,
             @JsonProperty("slug") final String slug, @JsonProperty("quantity") final Long quantity,
             @JsonProperty("state") final java.util.List<com.commercetools.api.models.order.ItemState> state,
             @JsonProperty("taxCategory") final com.commercetools.api.models.tax_category.TaxCategoryReference taxCategory,
@@ -82,7 +82,7 @@ public class CustomLineItemImpl implements CustomLineItem, ModelBase {
     }
 
     /**
-     *  <p>Unique identifier of the Custom Line Item.</p>
+     *  <p>Unique identifier of the CustomLineItem.</p>
      */
 
     public String getId() {
@@ -90,7 +90,7 @@ public class CustomLineItemImpl implements CustomLineItem, ModelBase {
     }
 
     /**
-     *  <p>Name of the Custom Line Item.</p>
+     *  <p>The name of this CustomLineItem.</p>
      */
 
     public com.commercetools.api.models.common.LocalizedString getName() {
@@ -98,7 +98,7 @@ public class CustomLineItemImpl implements CustomLineItem, ModelBase {
     }
 
     /**
-     *  <p>Money value of the Custom Line Item.</p>
+     *  <p>The cost to add to the cart. The amount can be negative.</p>
      */
 
     public com.commercetools.api.models.common.TypedMoney getMoney() {
@@ -106,7 +106,7 @@ public class CustomLineItemImpl implements CustomLineItem, ModelBase {
     }
 
     /**
-     *  <p>Automatically set after the <code>taxRate</code> is set.</p>
+     *  <p>Set once the <code>taxRate</code> is set.</p>
      */
 
     public com.commercetools.api.models.cart.TaxedItemPrice getTaxedPrice() {
@@ -114,16 +114,15 @@ public class CustomLineItemImpl implements CustomLineItem, ModelBase {
     }
 
     /**
-     *  <p>Total price of the Custom Line Item (<code>money</code> multiplied by <code>quantity</code>). If the Custom Line Item is discounted, the total price is <code>discountedPricePerQuantity</code> multiplied by <code>quantity</code>.</p>
-     *  <p>Includes taxes if the TaxRate <code>includedInPrice</code> is <code>true</code>.</p>
+     *  <p>The total price of this custom line item. If custom line item is discounted, then the <code>totalPrice</code> would be the discounted custom line item price multiplied by <code>quantity</code>. Otherwise a total price is just a <code>money</code> multiplied by the <code>quantity</code>. <code>totalPrice</code> may or may not include the taxes: it depends on the taxRate.includedInPrice property.</p>
      */
 
-    public com.commercetools.api.models.common.CentPrecisionMoney getTotalPrice() {
+    public com.commercetools.api.models.common.TypedMoney getTotalPrice() {
         return this.totalPrice;
     }
 
     /**
-     *  <p>User-defined identifier used in a deep-link URL for the Custom Line Item. It matches the pattern <code>[a-zA-Z0-9_-]{2,256}</code>.</p>
+     *  <p>A unique String in the cart to identify this CustomLineItem.</p>
      */
 
     public String getSlug() {
@@ -131,7 +130,7 @@ public class CustomLineItemImpl implements CustomLineItem, ModelBase {
     }
 
     /**
-     *  <p>Number of Custom Line Items in the Cart.</p>
+     *  <p>The amount of a CustomLineItem in the cart. Must be a positive integer.</p>
      */
 
     public Long getQuantity() {
@@ -139,7 +138,7 @@ public class CustomLineItemImpl implements CustomLineItem, ModelBase {
     }
 
     /**
-     *  <p>State of the Custom Line Item in the Cart.</p>
+     *
      */
 
     public java.util.List<com.commercetools.api.models.order.ItemState> getState() {
@@ -147,7 +146,7 @@ public class CustomLineItemImpl implements CustomLineItem, ModelBase {
     }
 
     /**
-     *  <p>Used to select a Tax Rate when a Cart has the <code>Platform</code> TaxMode.</p>
+     *
      */
 
     public com.commercetools.api.models.tax_category.TaxCategoryReference getTaxCategory() {
@@ -155,10 +154,7 @@ public class CustomLineItemImpl implements CustomLineItem, ModelBase {
     }
 
     /**
-     *  <ul>
-     *   <li>For a Cart with <code>Platform</code> TaxMode, the <code>taxRate</code> of Custom Line Items is set automatically once a shipping address is set. The rate is based on the TaxCategory that applies for the shipping address.</li>
-     *   <li>For a Cart with <code>External</code> TaxMode, the <code>taxRate</code> of Custom Line Items can be set using ExternalTaxRateDraft.</li>
-     *  </ul>
+     *  <p>Will be set automatically in the <code>Platform</code> TaxMode once the shipping address is set is set. For the <code>External</code> tax mode the tax rate has to be set explicitly with the ExternalTaxRateDraft.</p>
      */
 
     public com.commercetools.api.models.tax_category.TaxRate getTaxRate() {
@@ -166,7 +162,7 @@ public class CustomLineItemImpl implements CustomLineItem, ModelBase {
     }
 
     /**
-     *  <p>Discounted price of a single quantity of the Custom Line Item.</p>
+     *
      */
 
     public java.util.List<com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantity> getDiscountedPricePerQuantity() {
@@ -174,7 +170,7 @@ public class CustomLineItemImpl implements CustomLineItem, ModelBase {
     }
 
     /**
-     *  <p>Custom Fields of the Custom Line Item.</p>
+     *
      */
 
     public com.commercetools.api.models.type.CustomFields getCustom() {
@@ -182,7 +178,7 @@ public class CustomLineItemImpl implements CustomLineItem, ModelBase {
     }
 
     /**
-     *  <p>Container for Custom Line Item-specific addresses.</p>
+     *  <p>Container for custom line item specific address(es). CustomLineItem fields that can be used in query predicates: <code>slug</code>, <code>name</code>, <code>quantity</code>, <code>money</code>, <code>state</code>, <code>discountedPricePerQuantity</code>.</p>
      */
 
     public com.commercetools.api.models.cart.ItemShippingDetails getShippingDetails() {
@@ -190,7 +186,7 @@ public class CustomLineItemImpl implements CustomLineItem, ModelBase {
     }
 
     /**
-     *  <p>Indicates whether Cart Discounts with a matching CartDiscountCustomLineItemsTarget are applied to the Custom Line Item.</p>
+     *  <p>Specifies whether Cart Discounts with a matching CartDiscountCustomLineItemsTarget are applied to the Custom Line Item.</p>
      */
 
     public com.commercetools.api.models.cart.CustomLineItemPriceMode getPriceMode() {
@@ -213,7 +209,7 @@ public class CustomLineItemImpl implements CustomLineItem, ModelBase {
         this.taxedPrice = taxedPrice;
     }
 
-    public void setTotalPrice(final com.commercetools.api.models.common.CentPrecisionMoney totalPrice) {
+    public void setTotalPrice(final com.commercetools.api.models.common.TypedMoney totalPrice) {
         this.totalPrice = totalPrice;
     }
 

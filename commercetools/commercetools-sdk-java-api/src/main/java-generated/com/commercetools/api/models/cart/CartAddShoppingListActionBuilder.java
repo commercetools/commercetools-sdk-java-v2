@@ -27,13 +27,13 @@ public class CartAddShoppingListActionBuilder implements Builder<CartAddShopping
     private com.commercetools.api.models.shopping_list.ShoppingListResourceIdentifier shoppingList;
 
     @Nullable
-    private com.commercetools.api.models.channel.ChannelResourceIdentifier distributionChannel;
-
-    @Nullable
     private com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel;
 
+    @Nullable
+    private com.commercetools.api.models.channel.ChannelResourceIdentifier distributionChannel;
+
     /**
-     *  <p>Shopping List that contains the Line Items to be added.</p>
+     *  <p>ResourceIdentifier to a ShoppingList.</p>
      */
 
     public CartAddShoppingListActionBuilder shoppingList(
@@ -45,7 +45,7 @@ public class CartAddShoppingListActionBuilder implements Builder<CartAddShopping
     }
 
     /**
-     *  <p>Shopping List that contains the Line Items to be added.</p>
+     *  <p>ResourceIdentifier to a ShoppingList.</p>
      */
 
     public CartAddShoppingListActionBuilder shoppingList(
@@ -55,7 +55,28 @@ public class CartAddShoppingListActionBuilder implements Builder<CartAddShopping
     }
 
     /**
-     *  <p><code>distributionChannel</code> to set for all LineItems that are added to the Cart. The Channel must have the <code>ProductDistribution</code> ChannelRoleEnum.</p>
+     *  <p>ResourceIdentifier to a Channel.</p>
+     */
+
+    public CartAddShoppingListActionBuilder supplyChannel(
+            Function<com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder, com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder> builder) {
+        this.supplyChannel = builder.apply(com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder.of())
+                .build();
+        return this;
+    }
+
+    /**
+     *  <p>ResourceIdentifier to a Channel.</p>
+     */
+
+    public CartAddShoppingListActionBuilder supplyChannel(
+            @Nullable final com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel) {
+        this.supplyChannel = supplyChannel;
+        return this;
+    }
+
+    /**
+     *  <p>ResourceIdentifier to a Channel.</p>
      */
 
     public CartAddShoppingListActionBuilder distributionChannel(
@@ -67,7 +88,7 @@ public class CartAddShoppingListActionBuilder implements Builder<CartAddShopping
     }
 
     /**
-     *  <p><code>distributionChannel</code> to set for all LineItems that are added to the Cart. The Channel must have the <code>ProductDistribution</code> ChannelRoleEnum.</p>
+     *  <p>ResourceIdentifier to a Channel.</p>
      */
 
     public CartAddShoppingListActionBuilder distributionChannel(
@@ -76,34 +97,8 @@ public class CartAddShoppingListActionBuilder implements Builder<CartAddShopping
         return this;
     }
 
-    /**
-     *  <p><code>supplyChannel</code> to set for all LineItems that are added to the Cart. The Channel must have the <code>InventorySupply</code> ChannelRoleEnum.</p>
-     */
-
-    public CartAddShoppingListActionBuilder supplyChannel(
-            Function<com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder, com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder> builder) {
-        this.supplyChannel = builder.apply(com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder.of())
-                .build();
-        return this;
-    }
-
-    /**
-     *  <p><code>supplyChannel</code> to set for all LineItems that are added to the Cart. The Channel must have the <code>InventorySupply</code> ChannelRoleEnum.</p>
-     */
-
-    public CartAddShoppingListActionBuilder supplyChannel(
-            @Nullable final com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel) {
-        this.supplyChannel = supplyChannel;
-        return this;
-    }
-
     public com.commercetools.api.models.shopping_list.ShoppingListResourceIdentifier getShoppingList() {
         return this.shoppingList;
-    }
-
-    @Nullable
-    public com.commercetools.api.models.channel.ChannelResourceIdentifier getDistributionChannel() {
-        return this.distributionChannel;
     }
 
     @Nullable
@@ -111,16 +106,21 @@ public class CartAddShoppingListActionBuilder implements Builder<CartAddShopping
         return this.supplyChannel;
     }
 
+    @Nullable
+    public com.commercetools.api.models.channel.ChannelResourceIdentifier getDistributionChannel() {
+        return this.distributionChannel;
+    }
+
     public CartAddShoppingListAction build() {
         Objects.requireNonNull(shoppingList, CartAddShoppingListAction.class + ": shoppingList is missing");
-        return new CartAddShoppingListActionImpl(shoppingList, distributionChannel, supplyChannel);
+        return new CartAddShoppingListActionImpl(shoppingList, supplyChannel, distributionChannel);
     }
 
     /**
      * builds CartAddShoppingListAction without checking for non null required values
      */
     public CartAddShoppingListAction buildUnchecked() {
-        return new CartAddShoppingListActionImpl(shoppingList, distributionChannel, supplyChannel);
+        return new CartAddShoppingListActionImpl(shoppingList, supplyChannel, distributionChannel);
     }
 
     public static CartAddShoppingListActionBuilder of() {
@@ -130,8 +130,8 @@ public class CartAddShoppingListActionBuilder implements Builder<CartAddShopping
     public static CartAddShoppingListActionBuilder of(final CartAddShoppingListAction template) {
         CartAddShoppingListActionBuilder builder = new CartAddShoppingListActionBuilder();
         builder.shoppingList = template.getShoppingList();
-        builder.distributionChannel = template.getDistributionChannel();
         builder.supplyChannel = template.getSupplyChannel();
+        builder.distributionChannel = template.getDistributionChannel();
         return builder;
     }
 

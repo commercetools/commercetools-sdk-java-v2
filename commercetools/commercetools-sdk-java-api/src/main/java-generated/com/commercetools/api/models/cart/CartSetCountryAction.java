@@ -11,7 +11,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>Setting the country can lead to changes in the LineItem prices.</p>
+ * CartSetCountryAction
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -29,8 +29,7 @@ public interface CartSetCountryAction extends CartUpdateAction {
     String SET_COUNTRY = "setCountry";
 
     /**
-     *  <p>Value to set. If empty, any existing value is removed.</p>
-     *  <p>If the Cart is bound to a <code>store</code>, the provided value must be included in the Store's <code>countries</code>. Otherwise a CountryNotConfiguredInStore error is returned.</p>
+     *  <p>Two-digit country code as per ISO 3166-1 alpha-2.</p>
      */
 
     @JsonProperty("country")

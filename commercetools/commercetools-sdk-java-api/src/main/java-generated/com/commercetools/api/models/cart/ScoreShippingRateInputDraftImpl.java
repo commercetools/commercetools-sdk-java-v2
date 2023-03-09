@@ -43,7 +43,7 @@ public class ScoreShippingRateInputDraftImpl implements ScoreShippingRateInputDr
     }
 
     /**
-     *  <p>Abstract value for categorizing a Cart.</p>
+     *
      */
 
     public Long getScore() {

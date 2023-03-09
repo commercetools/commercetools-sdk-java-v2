@@ -10,26 +10,15 @@ import com.fasterxml.jackson.annotation.JsonValue;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>Indicates who created the Cart.</p>
+ * CartOrigin
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public interface CartOrigin {
 
-    /**
-    	<p>Cart was created by a Customer.</p>
-    	<p>This is the default value.</p>
-
-    */
     CartOrigin CUSTOMER = CartOriginEnum.CUSTOMER;
-    /**
-    	<p>Cart was created by a merchant on behalf of a Customer.</p>
 
-    */
     CartOrigin MERCHANT = CartOriginEnum.MERCHANT;
-    /**
-    	<p>Cart was created as part of a Quote (BETA).</p>
 
-    */
     CartOrigin QUOTE = CartOriginEnum.QUOTE;
 
     enum CartOriginEnum implements CartOrigin {

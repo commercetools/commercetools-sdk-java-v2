@@ -34,14 +34,14 @@ public interface MyCartSetLineItemShippingDetailsAction extends MyCartUpdateActi
     String SET_LINE_ITEM_SHIPPING_DETAILS = "setLineItemShippingDetails";
 
     /**
-     *  <p><code>id</code> of the LineItem to update.</p>
+     *
      */
     @NotNull
     @JsonProperty("lineItemId")
     public String getLineItemId();
 
     /**
-     *  <p>Value to set. If empty, the existing value is removed.</p>
+     *
      */
     @Valid
     @JsonProperty("shippingDetails")

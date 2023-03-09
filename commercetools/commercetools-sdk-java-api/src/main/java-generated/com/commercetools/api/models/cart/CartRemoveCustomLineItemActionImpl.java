@@ -15,8 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>This update action does not support specifying quantities, unlike the Remove LineItem update action.</p>
- *  <p>If <code>shippingDetails</code> must be partially removed, use the Change CustomLineItem Quantity update action.</p>
+ * CartRemoveCustomLineItemAction
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CartRemoveCustomLineItemActionImpl implements CartRemoveCustomLineItemAction, ModelBase {
@@ -44,7 +43,7 @@ public class CartRemoveCustomLineItemActionImpl implements CartRemoveCustomLineI
     }
 
     /**
-     *  <p><code>id</code> of the Custom Line Item to remove.</p>
+     *
      */
 
     public String getCustomLineItemId() {

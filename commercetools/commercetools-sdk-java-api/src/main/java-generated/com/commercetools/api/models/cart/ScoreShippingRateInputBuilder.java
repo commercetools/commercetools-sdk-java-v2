@@ -24,7 +24,7 @@ public class ScoreShippingRateInputBuilder implements Builder<ScoreShippingRateI
     private Long score;
 
     /**
-     *  <p>Abstract value for categorizing a Cart.</p>
+     *
      */
 
     public ScoreShippingRateInputBuilder score(final Long score) {

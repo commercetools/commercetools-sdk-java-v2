@@ -51,7 +51,7 @@ public class CartSetDeliveryAddressCustomTypeActionImpl implements CartSetDelive
     }
 
     /**
-     *  <p><code>id</code> of the Delivery.</p>
+     *
      */
 
     public String getDeliveryId() {
@@ -59,7 +59,7 @@ public class CartSetDeliveryAddressCustomTypeActionImpl implements CartSetDelive
     }
 
     /**
-     *  <p>Defines the Type that extends the Delivery <code>address</code> with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Delivery <code>address</code>.</p>
+     *  <p>Defines the Type that extends the <code>address</code> in a Delivery with Custom Fields. If absent, any existing Type and Custom Fields are removed from the <code>address</code> in a Delivery.</p>
      */
 
     public com.commercetools.api.models.type.TypeResourceIdentifier getType() {
@@ -67,7 +67,7 @@ public class CartSetDeliveryAddressCustomTypeActionImpl implements CartSetDelive
     }
 
     /**
-     *  <p>Sets the Custom Fields fields for the Delivery <code>address</code>.</p>
+     *  <p>Sets the Custom Fields fields for the <code>address</code> in a Delivery.</p>
      */
 
     public com.commercetools.api.models.type.FieldContainer getFields() {

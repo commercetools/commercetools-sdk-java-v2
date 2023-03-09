@@ -32,14 +32,14 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface DiscountedLineItemPriceForQuantity {
 
     /**
-     *  <p>Number of Line Items or Custom Line Items in the Cart.</p>
+     *
      */
     @NotNull
     @JsonProperty("quantity")
     public Long getQuantity();
 
     /**
-     *  <p>Discounted price of the Line Item or Custom Line Item.</p>
+     *
      */
     @NotNull
     @Valid

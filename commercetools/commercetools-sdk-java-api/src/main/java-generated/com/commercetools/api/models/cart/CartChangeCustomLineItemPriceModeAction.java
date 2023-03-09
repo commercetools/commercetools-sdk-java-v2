@@ -33,14 +33,14 @@ public interface CartChangeCustomLineItemPriceModeAction extends CartUpdateActio
     String CHANGE_CUSTOM_LINE_ITEM_PRICE_MODE = "changeCustomLineItemPriceMode";
 
     /**
-     *  <p><code>id</code> of the CustomLineItem to update.</p>
+     *  <p>ID of the Custom Line Item to be updated.</p>
      */
     @NotNull
     @JsonProperty("customLineItemId")
     public String getCustomLineItemId();
 
     /**
-     *  <p>New value to set. Must not be empty.</p>
+     *  <p>New value to set.</p>
      */
     @NotNull
     @JsonProperty("mode")

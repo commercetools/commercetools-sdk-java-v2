@@ -22,7 +22,7 @@ public class ShippingInfoImpl implements ShippingInfo, ModelBase {
 
     private String shippingMethodName;
 
-    private com.commercetools.api.models.common.CentPrecisionMoney price;
+    private com.commercetools.api.models.common.TypedMoney price;
 
     private com.commercetools.api.models.shipping_method.ShippingRate shippingRate;
 
@@ -42,7 +42,7 @@ public class ShippingInfoImpl implements ShippingInfo, ModelBase {
 
     @JsonCreator
     ShippingInfoImpl(@JsonProperty("shippingMethodName") final String shippingMethodName,
-            @JsonProperty("price") final com.commercetools.api.models.common.CentPrecisionMoney price,
+            @JsonProperty("price") final com.commercetools.api.models.common.TypedMoney price,
             @JsonProperty("shippingRate") final com.commercetools.api.models.shipping_method.ShippingRate shippingRate,
             @JsonProperty("taxedPrice") final com.commercetools.api.models.cart.TaxedItemPrice taxedPrice,
             @JsonProperty("taxRate") final com.commercetools.api.models.tax_category.TaxRate taxRate,
@@ -67,7 +67,7 @@ public class ShippingInfoImpl implements ShippingInfo, ModelBase {
     }
 
     /**
-     *  <p>Name of the Shipping Method.</p>
+     *
      */
 
     public String getShippingMethodName() {
@@ -78,12 +78,12 @@ public class ShippingInfoImpl implements ShippingInfo, ModelBase {
      *  <p>Determined based on the ShippingRate and its tiered prices, and either the sum of LineItem prices or the <code>shippingRateInput</code> field.</p>
      */
 
-    public com.commercetools.api.models.common.CentPrecisionMoney getPrice() {
+    public com.commercetools.api.models.common.TypedMoney getPrice() {
         return this.price;
     }
 
     /**
-     *  <p>Used to determine the price.</p>
+     *  <p>The shipping rate used to determine the price.</p>
      */
 
     public com.commercetools.api.models.shipping_method.ShippingRate getShippingRate() {
@@ -91,7 +91,7 @@ public class ShippingInfoImpl implements ShippingInfo, ModelBase {
     }
 
     /**
-     *  <p>Automatically set after the <code>taxRate</code> is set.</p>
+     *  <p>Set once the <code>taxRate</code> is set.</p>
      */
 
     public com.commercetools.api.models.cart.TaxedItemPrice getTaxedPrice() {
@@ -99,8 +99,7 @@ public class ShippingInfoImpl implements ShippingInfo, ModelBase {
     }
 
     /**
-     *  <p>Automatically set in the <code>Platform</code> TaxMode after the shipping address is set.</p>
-     *  <p>For the <code>External</code> TaxMode the Tax Rate must be set explicitly with the ExternalTaxRateDraft.</p>
+     *  <p>Will be set automatically in the <code>Platform</code> TaxMode once the shipping address is set is set. For the <code>External</code> tax mode the tax rate has to be set explicitly with the ExternalTaxRateDraft.</p>
      */
 
     public com.commercetools.api.models.tax_category.TaxRate getTaxRate() {
@@ -108,7 +107,7 @@ public class ShippingInfoImpl implements ShippingInfo, ModelBase {
     }
 
     /**
-     *  <p>Used to select a Tax Rate when a Cart has the <code>Platform</code> TaxMode.</p>
+     *
      */
 
     public com.commercetools.api.models.tax_category.TaxCategoryReference getTaxCategory() {
@@ -116,7 +115,7 @@ public class ShippingInfoImpl implements ShippingInfo, ModelBase {
     }
 
     /**
-     *  <p>Not set if a custom Shipping Method is used.</p>
+     *  <p>Not set if custom shipping method is used.</p>
      */
 
     public com.commercetools.api.models.shipping_method.ShippingMethodReference getShippingMethod() {
@@ -124,7 +123,7 @@ public class ShippingInfoImpl implements ShippingInfo, ModelBase {
     }
 
     /**
-     *  <p>Information on how items are delivered to customers.</p>
+     *  <p>Deliveries are compilations of information on how the articles are being delivered to the customers.</p>
      */
 
     public java.util.List<com.commercetools.api.models.order.Delivery> getDeliveries() {
@@ -132,7 +131,7 @@ public class ShippingInfoImpl implements ShippingInfo, ModelBase {
     }
 
     /**
-     *  <p>Discounted price of the Shipping Method.</p>
+     *
      */
 
     public com.commercetools.api.models.cart.DiscountedLineItemPrice getDiscountedPrice() {
@@ -140,7 +139,7 @@ public class ShippingInfoImpl implements ShippingInfo, ModelBase {
     }
 
     /**
-     *  <p>Indicates whether the ShippingMethod referenced in this ShippingInfo is allowed for the Cart.</p>
+     *  <p>Indicates whether the ShippingMethod referenced in this ShippingInfo is allowed for the cart or not.</p>
      */
 
     public com.commercetools.api.models.cart.ShippingMethodState getShippingMethodState() {
@@ -151,7 +150,7 @@ public class ShippingInfoImpl implements ShippingInfo, ModelBase {
         this.shippingMethodName = shippingMethodName;
     }
 
-    public void setPrice(final com.commercetools.api.models.common.CentPrecisionMoney price) {
+    public void setPrice(final com.commercetools.api.models.common.TypedMoney price) {
         this.price = price;
     }
 

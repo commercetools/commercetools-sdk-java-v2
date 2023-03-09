@@ -35,7 +35,7 @@ public class DiscountedLineItemPriceForQuantityImpl implements DiscountedLineIte
     }
 
     /**
-     *  <p>Number of Line Items or Custom Line Items in the Cart.</p>
+     *
      */
 
     public Long getQuantity() {
@@ -43,7 +43,7 @@ public class DiscountedLineItemPriceForQuantityImpl implements DiscountedLineIte
     }
 
     /**
-     *  <p>Discounted price of the Line Item or Custom Line Item.</p>
+     *
      */
 
     public com.commercetools.api.models.cart.DiscountedLineItemPrice getDiscountedPrice() {

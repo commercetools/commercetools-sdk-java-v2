@@ -29,7 +29,7 @@ public class CartApplyDeltaToLineItemShippingDetailsTargetsActionBuilder
     private java.util.List<com.commercetools.api.models.cart.ItemShippingTarget> targetsDelta;
 
     /**
-     *  <p><code>id</code> of the LineItem to update.</p>
+     *
      */
 
     public CartApplyDeltaToLineItemShippingDetailsTargetsActionBuilder lineItemId(final String lineItemId) {
@@ -38,7 +38,7 @@ public class CartApplyDeltaToLineItemShippingDetailsTargetsActionBuilder
     }
 
     /**
-     *  <p>Using positive or negative quantities increases or decreases the number of items shipped to an address.</p>
+     *
      */
 
     public CartApplyDeltaToLineItemShippingDetailsTargetsActionBuilder targetsDelta(
@@ -48,7 +48,7 @@ public class CartApplyDeltaToLineItemShippingDetailsTargetsActionBuilder
     }
 
     /**
-     *  <p>Using positive or negative quantities increases or decreases the number of items shipped to an address.</p>
+     *
      */
 
     public CartApplyDeltaToLineItemShippingDetailsTargetsActionBuilder targetsDelta(
@@ -58,7 +58,7 @@ public class CartApplyDeltaToLineItemShippingDetailsTargetsActionBuilder
     }
 
     /**
-     *  <p>Using positive or negative quantities increases or decreases the number of items shipped to an address.</p>
+     *
      */
 
     public CartApplyDeltaToLineItemShippingDetailsTargetsActionBuilder plusTargetsDelta(
@@ -71,7 +71,7 @@ public class CartApplyDeltaToLineItemShippingDetailsTargetsActionBuilder
     }
 
     /**
-     *  <p>Using positive or negative quantities increases or decreases the number of items shipped to an address.</p>
+     *
      */
 
     public CartApplyDeltaToLineItemShippingDetailsTargetsActionBuilder plusTargetsDelta(
@@ -84,7 +84,7 @@ public class CartApplyDeltaToLineItemShippingDetailsTargetsActionBuilder
     }
 
     /**
-     *  <p>Using positive or negative quantities increases or decreases the number of items shipped to an address.</p>
+     *
      */
 
     public CartApplyDeltaToLineItemShippingDetailsTargetsActionBuilder withTargetsDelta(

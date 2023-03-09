@@ -30,7 +30,7 @@ public class MyCartSetLineItemSupplyChannelActionBuilder implements Builder<MyCa
     private com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel;
 
     /**
-     *  <p><code>id</code> of the LineItem to update.</p>
+     *
      */
 
     public MyCartSetLineItemSupplyChannelActionBuilder lineItemId(final String lineItemId) {
@@ -39,10 +39,7 @@ public class MyCartSetLineItemSupplyChannelActionBuilder implements Builder<MyCa
     }
 
     /**
-     *  <ul>
-     *   <li>If present, a Reference to the Channel is set for the LineItem specified by <code>lineItemId</code>.</li>
-     *   <li>If not present, the current Reference to a supply channel will be removed from the LineItem specified by <code>lineItemId</code>. The Channel must have the <code>InventorySupply</code> ChannelRoleEnum.</li>
-     *  </ul>
+     *  <p>ResourceIdentifier to a Channel.</p>
      */
 
     public MyCartSetLineItemSupplyChannelActionBuilder supplyChannel(
@@ -53,10 +50,7 @@ public class MyCartSetLineItemSupplyChannelActionBuilder implements Builder<MyCa
     }
 
     /**
-     *  <ul>
-     *   <li>If present, a Reference to the Channel is set for the LineItem specified by <code>lineItemId</code>.</li>
-     *   <li>If not present, the current Reference to a supply channel will be removed from the LineItem specified by <code>lineItemId</code>. The Channel must have the <code>InventorySupply</code> ChannelRoleEnum.</li>
-     *  </ul>
+     *  <p>ResourceIdentifier to a Channel.</p>
      */
 
     public MyCartSetLineItemSupplyChannelActionBuilder supplyChannel(

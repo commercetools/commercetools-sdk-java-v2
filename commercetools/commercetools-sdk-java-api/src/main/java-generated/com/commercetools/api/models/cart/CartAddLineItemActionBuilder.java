@@ -24,6 +24,15 @@ import io.vrap.rmf.base.client.utils.Generated;
 public class CartAddLineItemActionBuilder implements Builder<CartAddLineItemAction> {
 
     @Nullable
+    private com.commercetools.api.models.type.CustomFieldsDraft custom;
+
+    @Nullable
+    private com.commercetools.api.models.channel.ChannelResourceIdentifier distributionChannel;
+
+    @Nullable
+    private com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate;
+
+    @Nullable
     private String productId;
 
     @Nullable
@@ -36,12 +45,6 @@ public class CartAddLineItemActionBuilder implements Builder<CartAddLineItemActi
     private Long quantity;
 
     @Nullable
-    private java.time.ZonedDateTime addedAt;
-
-    @Nullable
-    private com.commercetools.api.models.channel.ChannelResourceIdentifier distributionChannel;
-
-    @Nullable
     private com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel;
 
     @Nullable
@@ -51,68 +54,30 @@ public class CartAddLineItemActionBuilder implements Builder<CartAddLineItemActi
     private com.commercetools.api.models.cart.ExternalLineItemTotalPrice externalTotalPrice;
 
     @Nullable
-    private com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate;
-
-    @Nullable
-    private com.commercetools.api.models.cart.InventoryMode inventoryMode;
-
-    @Nullable
     private com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails;
 
-    @Nullable
-    private com.commercetools.api.models.type.CustomFieldsDraft custom;
-
     /**
-     *  <p><code>id</code> of the published Product.</p>
-     *  <p>Either the <code>productId</code> and <code>variantId</code>, or <code>sku</code> must be provided.</p>
+     *  <p>The representation used when creating or updating a customizable data type with Custom Fields.</p>
      */
 
-    public CartAddLineItemActionBuilder productId(@Nullable final String productId) {
-        this.productId = productId;
+    public CartAddLineItemActionBuilder custom(
+            Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraftBuilder> builder) {
+        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsDraftBuilder.of()).build();
         return this;
     }
 
     /**
-     *  <p><code>id</code> of the ProductVariant in the Product. If not provided, the Master Variant is used.</p>
-     *  <p>Either the <code>productId</code> and <code>variantId</code>, or <code>sku</code> must be provided.</p>
+     *  <p>The representation used when creating or updating a customizable data type with Custom Fields.</p>
      */
 
-    public CartAddLineItemActionBuilder variantId(@Nullable final Long variantId) {
-        this.variantId = variantId;
+    public CartAddLineItemActionBuilder custom(
+            @Nullable final com.commercetools.api.models.type.CustomFieldsDraft custom) {
+        this.custom = custom;
         return this;
     }
 
     /**
-     *  <p>SKU of the ProductVariant.</p>
-     *  <p>Either the <code>productId</code> and <code>variantId</code>, or <code>sku</code> must be provided.</p>
-     */
-
-    public CartAddLineItemActionBuilder sku(@Nullable final String sku) {
-        this.sku = sku;
-        return this;
-    }
-
-    /**
-     *  <p>Quantity of the Product Variant to add to the Cart.</p>
-     */
-
-    public CartAddLineItemActionBuilder quantity(@Nullable final Long quantity) {
-        this.quantity = quantity;
-        return this;
-    }
-
-    /**
-     *  <p>Date and time (UTC) the Product Variant is added to the Cart. If not set, it defaults to the current date and time.</p>
-     *  <p>Optional for backwards compatibility reasons.</p>
-     */
-
-    public CartAddLineItemActionBuilder addedAt(@Nullable final java.time.ZonedDateTime addedAt) {
-        this.addedAt = addedAt;
-        return this;
-    }
-
-    /**
-     *  <p>Used to select a Product Price. The Channel must have the <code>ProductDistribution</code> ChannelRoleEnum. If the Cart is bound to a Store with <code>distributionChannels</code> set, the Channel must match one of the Store's distribution channels.</p>
+     *  <p>ResourceIdentifier to a Channel.</p>
      */
 
     public CartAddLineItemActionBuilder distributionChannel(
@@ -124,7 +89,7 @@ public class CartAddLineItemActionBuilder implements Builder<CartAddLineItemActi
     }
 
     /**
-     *  <p>Used to select a Product Price. The Channel must have the <code>ProductDistribution</code> ChannelRoleEnum. If the Cart is bound to a Store with <code>distributionChannels</code> set, the Channel must match one of the Store's distribution channels.</p>
+     *  <p>ResourceIdentifier to a Channel.</p>
      */
 
     public CartAddLineItemActionBuilder distributionChannel(
@@ -134,7 +99,64 @@ public class CartAddLineItemActionBuilder implements Builder<CartAddLineItemActi
     }
 
     /**
-     *  <p>Used to identify Inventory entries that must be reserved. The Channel must have the <code>InventorySupply</code> ChannelRoleEnum.</p>
+     *
+     */
+
+    public CartAddLineItemActionBuilder externalTaxRate(
+            Function<com.commercetools.api.models.cart.ExternalTaxRateDraftBuilder, com.commercetools.api.models.cart.ExternalTaxRateDraftBuilder> builder) {
+        this.externalTaxRate = builder.apply(com.commercetools.api.models.cart.ExternalTaxRateDraftBuilder.of())
+                .build();
+        return this;
+    }
+
+    /**
+     *
+     */
+
+    public CartAddLineItemActionBuilder externalTaxRate(
+            @Nullable final com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate) {
+        this.externalTaxRate = externalTaxRate;
+        return this;
+    }
+
+    /**
+     *
+     */
+
+    public CartAddLineItemActionBuilder productId(@Nullable final String productId) {
+        this.productId = productId;
+        return this;
+    }
+
+    /**
+     *
+     */
+
+    public CartAddLineItemActionBuilder variantId(@Nullable final Long variantId) {
+        this.variantId = variantId;
+        return this;
+    }
+
+    /**
+     *
+     */
+
+    public CartAddLineItemActionBuilder sku(@Nullable final String sku) {
+        this.sku = sku;
+        return this;
+    }
+
+    /**
+     *
+     */
+
+    public CartAddLineItemActionBuilder quantity(@Nullable final Long quantity) {
+        this.quantity = quantity;
+        return this;
+    }
+
+    /**
+     *  <p>ResourceIdentifier to a Channel.</p>
      */
 
     public CartAddLineItemActionBuilder supplyChannel(
@@ -145,7 +167,7 @@ public class CartAddLineItemActionBuilder implements Builder<CartAddLineItemActi
     }
 
     /**
-     *  <p>Used to identify Inventory entries that must be reserved. The Channel must have the <code>InventorySupply</code> ChannelRoleEnum.</p>
+     *  <p>ResourceIdentifier to a Channel.</p>
      */
 
     public CartAddLineItemActionBuilder supplyChannel(
@@ -155,7 +177,8 @@ public class CartAddLineItemActionBuilder implements Builder<CartAddLineItemActi
     }
 
     /**
-     *  <p>Sets the LineItem <code>price</code> value, and the <code>priceMode</code> to <code>ExternalPrice</code> LineItemPriceMode.</p>
+     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
+     *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
      */
 
     public CartAddLineItemActionBuilder externalPrice(
@@ -165,7 +188,8 @@ public class CartAddLineItemActionBuilder implements Builder<CartAddLineItemActi
     }
 
     /**
-     *  <p>Sets the LineItem <code>price</code> value, and the <code>priceMode</code> to <code>ExternalPrice</code> LineItemPriceMode.</p>
+     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
+     *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
      */
 
     public CartAddLineItemActionBuilder externalPrice(
@@ -175,7 +199,7 @@ public class CartAddLineItemActionBuilder implements Builder<CartAddLineItemActi
     }
 
     /**
-     *  <p>Sets the LineItem <code>price</code> and <code>totalPrice</code> values, and the <code>priceMode</code> to <code>ExternalTotal</code> LineItemPriceMode.</p>
+     *
      */
 
     public CartAddLineItemActionBuilder externalTotalPrice(
@@ -187,7 +211,7 @@ public class CartAddLineItemActionBuilder implements Builder<CartAddLineItemActi
     }
 
     /**
-     *  <p>Sets the LineItem <code>price</code> and <code>totalPrice</code> values, and the <code>priceMode</code> to <code>ExternalTotal</code> LineItemPriceMode.</p>
+     *
      */
 
     public CartAddLineItemActionBuilder externalTotalPrice(
@@ -197,38 +221,7 @@ public class CartAddLineItemActionBuilder implements Builder<CartAddLineItemActi
     }
 
     /**
-     *  <p>External Tax Rate for the Line Item, if the Cart has the <code>External</code> TaxMode.</p>
-     */
-
-    public CartAddLineItemActionBuilder externalTaxRate(
-            Function<com.commercetools.api.models.cart.ExternalTaxRateDraftBuilder, com.commercetools.api.models.cart.ExternalTaxRateDraftBuilder> builder) {
-        this.externalTaxRate = builder.apply(com.commercetools.api.models.cart.ExternalTaxRateDraftBuilder.of())
-                .build();
-        return this;
-    }
-
-    /**
-     *  <p>External Tax Rate for the Line Item, if the Cart has the <code>External</code> TaxMode.</p>
-     */
-
-    public CartAddLineItemActionBuilder externalTaxRate(
-            @Nullable final com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate) {
-        this.externalTaxRate = externalTaxRate;
-        return this;
-    }
-
-    /**
-     *  <p>Inventory mode specific to the Line Item only, and valid for the entire <code>quantity</code> of the Line Item. Set only if the inventory mode should be different from the <code>inventoryMode</code> specified on the Cart.</p>
-     */
-
-    public CartAddLineItemActionBuilder inventoryMode(
-            @Nullable final com.commercetools.api.models.cart.InventoryMode inventoryMode) {
-        this.inventoryMode = inventoryMode;
-        return this;
-    }
-
-    /**
-     *  <p>Container for Line Item-specific addresses.</p>
+     *
      */
 
     public CartAddLineItemActionBuilder shippingDetails(
@@ -239,7 +232,7 @@ public class CartAddLineItemActionBuilder implements Builder<CartAddLineItemActi
     }
 
     /**
-     *  <p>Container for Line Item-specific addresses.</p>
+     *
      */
 
     public CartAddLineItemActionBuilder shippingDetails(
@@ -248,24 +241,19 @@ public class CartAddLineItemActionBuilder implements Builder<CartAddLineItemActi
         return this;
     }
 
-    /**
-     *  <p>Custom Fields for the Line Item.</p>
-     */
-
-    public CartAddLineItemActionBuilder custom(
-            Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraftBuilder> builder) {
-        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsDraftBuilder.of()).build();
-        return this;
+    @Nullable
+    public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
+        return this.custom;
     }
 
-    /**
-     *  <p>Custom Fields for the Line Item.</p>
-     */
+    @Nullable
+    public com.commercetools.api.models.channel.ChannelResourceIdentifier getDistributionChannel() {
+        return this.distributionChannel;
+    }
 
-    public CartAddLineItemActionBuilder custom(
-            @Nullable final com.commercetools.api.models.type.CustomFieldsDraft custom) {
-        this.custom = custom;
-        return this;
+    @Nullable
+    public com.commercetools.api.models.cart.ExternalTaxRateDraft getExternalTaxRate() {
+        return this.externalTaxRate;
     }
 
     @Nullable
@@ -289,16 +277,6 @@ public class CartAddLineItemActionBuilder implements Builder<CartAddLineItemActi
     }
 
     @Nullable
-    public java.time.ZonedDateTime getAddedAt() {
-        return this.addedAt;
-    }
-
-    @Nullable
-    public com.commercetools.api.models.channel.ChannelResourceIdentifier getDistributionChannel() {
-        return this.distributionChannel;
-    }
-
-    @Nullable
     public com.commercetools.api.models.channel.ChannelResourceIdentifier getSupplyChannel() {
         return this.supplyChannel;
     }
@@ -314,36 +292,21 @@ public class CartAddLineItemActionBuilder implements Builder<CartAddLineItemActi
     }
 
     @Nullable
-    public com.commercetools.api.models.cart.ExternalTaxRateDraft getExternalTaxRate() {
-        return this.externalTaxRate;
-    }
-
-    @Nullable
-    public com.commercetools.api.models.cart.InventoryMode getInventoryMode() {
-        return this.inventoryMode;
-    }
-
-    @Nullable
     public com.commercetools.api.models.cart.ItemShippingDetailsDraft getShippingDetails() {
         return this.shippingDetails;
     }
 
-    @Nullable
-    public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
-        return this.custom;
-    }
-
     public CartAddLineItemAction build() {
-        return new CartAddLineItemActionImpl(productId, variantId, sku, quantity, addedAt, distributionChannel,
-            supplyChannel, externalPrice, externalTotalPrice, externalTaxRate, inventoryMode, shippingDetails, custom);
+        return new CartAddLineItemActionImpl(custom, distributionChannel, externalTaxRate, productId, variantId, sku,
+            quantity, supplyChannel, externalPrice, externalTotalPrice, shippingDetails);
     }
 
     /**
      * builds CartAddLineItemAction without checking for non null required values
      */
     public CartAddLineItemAction buildUnchecked() {
-        return new CartAddLineItemActionImpl(productId, variantId, sku, quantity, addedAt, distributionChannel,
-            supplyChannel, externalPrice, externalTotalPrice, externalTaxRate, inventoryMode, shippingDetails, custom);
+        return new CartAddLineItemActionImpl(custom, distributionChannel, externalTaxRate, productId, variantId, sku,
+            quantity, supplyChannel, externalPrice, externalTotalPrice, shippingDetails);
     }
 
     public static CartAddLineItemActionBuilder of() {
@@ -352,19 +315,17 @@ public class CartAddLineItemActionBuilder implements Builder<CartAddLineItemActi
 
     public static CartAddLineItemActionBuilder of(final CartAddLineItemAction template) {
         CartAddLineItemActionBuilder builder = new CartAddLineItemActionBuilder();
+        builder.custom = template.getCustom();
+        builder.distributionChannel = template.getDistributionChannel();
+        builder.externalTaxRate = template.getExternalTaxRate();
         builder.productId = template.getProductId();
         builder.variantId = template.getVariantId();
         builder.sku = template.getSku();
         builder.quantity = template.getQuantity();
-        builder.addedAt = template.getAddedAt();
-        builder.distributionChannel = template.getDistributionChannel();
         builder.supplyChannel = template.getSupplyChannel();
         builder.externalPrice = template.getExternalPrice();
         builder.externalTotalPrice = template.getExternalTotalPrice();
-        builder.externalTaxRate = template.getExternalTaxRate();
-        builder.inventoryMode = template.getInventoryMode();
         builder.shippingDetails = template.getShippingDetails();
-        builder.custom = template.getCustom();
         return builder;
     }
 

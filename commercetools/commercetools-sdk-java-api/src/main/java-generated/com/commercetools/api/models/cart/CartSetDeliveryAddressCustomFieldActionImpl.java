@@ -50,7 +50,7 @@ public class CartSetDeliveryAddressCustomFieldActionImpl implements CartSetDeliv
     }
 
     /**
-     *  <p><code>id</code> of the Delivery.</p>
+     *
      */
 
     public String getDeliveryId() {

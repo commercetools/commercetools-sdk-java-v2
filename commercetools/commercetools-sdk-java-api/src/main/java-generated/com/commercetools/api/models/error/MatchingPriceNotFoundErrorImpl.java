@@ -20,8 +20,8 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
  *  <ul>
  *   <li>Add LineItem, Add CustomLineItem, and Add DiscountCode update actions on Carts.</li>
  *   <li>Add LineItem, Add CustomLineItem, and Add DiscountCode update actions on Order Edits.</li>
- *   <li>Create Order from Cart and Create Order in Store from Cart requests on Orders.</li>
- *   <li>Create Order from Cart and Create Order in Store from Cart requests on My Orders.</li>
+ *   <li>Create Order from Cart and Create Order from Cart in a Store requests on Orders.</li>
+ *   <li>Create Order from a Cart and Create Order in a Store from a Cart requests on My Orders.</li>
  *  </ul>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")

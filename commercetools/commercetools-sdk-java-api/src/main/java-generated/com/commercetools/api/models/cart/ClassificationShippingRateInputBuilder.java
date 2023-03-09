@@ -28,7 +28,7 @@ public class ClassificationShippingRateInputBuilder implements Builder<Classific
     private com.commercetools.api.models.common.LocalizedString label;
 
     /**
-     *  <p>Key of the value used as a programmatic identifier.</p>
+     *
      */
 
     public ClassificationShippingRateInputBuilder key(final String key) {
@@ -37,7 +37,7 @@ public class ClassificationShippingRateInputBuilder implements Builder<Classific
     }
 
     /**
-     *  <p>Descriptive localized label of the value.</p>
+     *  <p>JSON object where the keys are of type Locale, and the values are the strings used for the corresponding language.</p>
      */
 
     public ClassificationShippingRateInputBuilder label(
@@ -47,7 +47,7 @@ public class ClassificationShippingRateInputBuilder implements Builder<Classific
     }
 
     /**
-     *  <p>Descriptive localized label of the value.</p>
+     *  <p>JSON object where the keys are of type Locale, and the values are the strings used for the corresponding language.</p>
      */
 
     public ClassificationShippingRateInputBuilder label(

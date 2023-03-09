@@ -34,7 +34,7 @@ public interface CartAddPaymentAction extends CartUpdateAction {
     String ADD_PAYMENT = "addPayment";
 
     /**
-     *  <p>Payment to add to the Cart. Must not be assigned to another Order or active Cart already.</p>
+     *
      */
     @NotNull
     @Valid

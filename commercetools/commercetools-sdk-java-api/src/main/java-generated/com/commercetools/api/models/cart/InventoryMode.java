@@ -10,38 +10,23 @@ import com.fasterxml.jackson.annotation.JsonValue;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>Indicates how Line Items in a Cart are tracked.</p>
+ * InventoryMode
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public interface InventoryMode {
 
-    /**
-    	<p>Adding and ordering items from a Cart are independent of the Inventory with no inventory checks or modifications.</p>
-    	<p>This is the default mode.</p>
-
-    */
-    InventoryMode NONE = InventoryModeEnum.NONE;
-    /**
-    	<p>Orders are tracked on the Inventory, and ordering a <a href="ctp:api:type:LineItem">LineItem</a> deducts the available quantity on the respective <a href="ctp:api:type:InventoryEntry">InventoryEntry</a>.</p>
-    	<p>An <a href="/../api/projects/orders#create-order">Order can be created</a> even if the Line Item quantity is zero or negative, but if no matching Inventory Entry exists for the Line Item, an <a href="ctp:api:type:OutOfStockError">OutOfStock</a> error is returned.</p>
-
-    */
     InventoryMode TRACK_ONLY = InventoryModeEnum.TRACK_ONLY;
-    /**
-    	<p>Line Items in a Cart are only reserved for the duration of the ordering transaction.
-    	If a Line Item is not available when <a href="/../api/projects/orders#create-order">creating an Order</a>, an <a href="ctp:api:type:OutOfStockError">OutOfStock</a> error is returned.
-    	This is because the <a href="ctp:api:type:InventoryEntry">InventoryEntry</a> <code>availableQuantity</code> is insufficient (but is still updated) for the ordered Line Item quantity.</p>
-    	<p>However, an Order can be created if the <a href="ctp:api:type:InventoryEntry">InventoryEntry</a> <code>restockableInDays</code> is set (including <code>0</code>).</p>
 
-    */
     InventoryMode RESERVE_ON_ORDER = InventoryModeEnum.RESERVE_ON_ORDER;
 
-    enum InventoryModeEnum implements InventoryMode {
-        NONE("None"),
+    InventoryMode NONE = InventoryModeEnum.NONE;
 
+    enum InventoryModeEnum implements InventoryMode {
         TRACK_ONLY("TrackOnly"),
 
-        RESERVE_ON_ORDER("ReserveOnOrder");
+        RESERVE_ON_ORDER("ReserveOnOrder"),
+
+        NONE("None");
         private final String jsonName;
 
         private InventoryModeEnum(final String jsonName) {

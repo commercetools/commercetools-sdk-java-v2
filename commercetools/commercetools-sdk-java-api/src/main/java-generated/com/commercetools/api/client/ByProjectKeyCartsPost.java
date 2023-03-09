@@ -18,7 +18,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Creating a Cart fails with an InvalidOperation error if the ShippingMethod referenced in the CartDraft has a <code>predicate</code> that does not match the Cart.</p>
+ *  <p>Creating a cart can fail with an InvalidOperation if the referenced shipping method in the CartDraft has a predicate which does not match the cart.</p>
  *
  * <hr>
  * <div class=code-example>

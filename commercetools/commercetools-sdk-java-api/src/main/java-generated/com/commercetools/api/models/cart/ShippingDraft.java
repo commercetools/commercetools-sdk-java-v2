@@ -9,9 +9,8 @@ import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.common.BaseAddress;
-import com.commercetools.api.models.order.DeliveryDraft;
+import com.commercetools.api.models.order.Delivery;
 import com.commercetools.api.models.shipping_method.ShippingMethodReference;
-import com.commercetools.api.models.type.CustomFieldsDraft;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -26,7 +25,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     ShippingDraft shippingDraft = ShippingDraft.builder()
  *             .key("{key}")
- *             .shippingAddress(shippingAddressBuilder -> shippingAddressBuilder)
+ *             .plusDeliveries(deliveriesBuilder -> deliveriesBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -37,7 +36,7 @@ public interface ShippingDraft
         extends com.commercetools.api.models.WithKey, io.vrap.rmf.base.client.Draft<ShippingDraft> {
 
     /**
-     *  <p>User-defined unique identifier for the Shipping in a Cart with <code>Multiple</code> ShippingMode.</p>
+     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multiple</code> ShippingMode.</p>
      */
     @NotNull
     @JsonProperty("key")
@@ -53,18 +52,17 @@ public interface ShippingDraft
     /**
      *  <p>Determines the shipping rate and Tax Rate of the associated Line Items.</p>
      */
-    @NotNull
     @Valid
     @JsonProperty("shippingAddress")
     public BaseAddress getShippingAddress();
 
     /**
-     *  <p>Input used to select a ShippingRatePriceTier. The data type of this field depends on the <code>shippingRateInputType.type</code> configured in the Project:</p>
+     *  <p>Used as an input to select a ShippingRatePriceTier.</p>
      *  <ul>
-     *   <li>If <code>CartClassification</code>, it must be ClassificationShippingRateInputDraft.</li>
-     *   <li>If <code>CartScore</code>, it must be ScoreShippingRateInputDraft.</li>
-     *   <li>If <code>CartValue</code>, it cannot be set.</li>
+     *   <li>Must be ClassificationShippingRateInput if ShippingRateInputType is CartClassificationType.</li>
+     *   <li>Must be ScoreShippingRateInput if ShippingRateInputType is CartScoreType.</li>
      *  </ul>
+     *  <p>The <code>shippingRateInput</code> cannot be set on the Cart if CartValueType is defined.</p>
      */
     @Valid
     @JsonProperty("shippingRateInput")
@@ -73,23 +71,24 @@ public interface ShippingDraft
     /**
      *  <p>Tax Rate used for taxing a shipping expense if the Cart has the <code>External</code> TaxMode.</p>
      */
-    @Valid
+
     @JsonProperty("externalTaxRate")
-    public ExternalTaxRateDraft getExternalTaxRate();
+    public String getExternalTaxRate();
 
     /**
-     *  <p>Deliveries to be shipped with the Shipping Method.</p>
+     *  <p>Holds information on how items are delivered to customers.</p>
      */
+    @NotNull
     @Valid
     @JsonProperty("deliveries")
-    public List<DeliveryDraft> getDeliveries();
+    public List<Delivery> getDeliveries();
 
     /**
      *  <p>Custom Fields for Shipping.</p>
      */
-    @Valid
+
     @JsonProperty("custom")
-    public CustomFieldsDraft getCustom();
+    public String getCustom();
 
     public void setKey(final String key);
 
@@ -99,14 +98,14 @@ public interface ShippingDraft
 
     public void setShippingRateInput(final ShippingRateInputDraft shippingRateInput);
 
-    public void setExternalTaxRate(final ExternalTaxRateDraft externalTaxRate);
+    public void setExternalTaxRate(final String externalTaxRate);
 
     @JsonIgnore
-    public void setDeliveries(final DeliveryDraft... deliveries);
+    public void setDeliveries(final Delivery... deliveries);
 
-    public void setDeliveries(final List<DeliveryDraft> deliveries);
+    public void setDeliveries(final List<Delivery> deliveries);
 
-    public void setCustom(final CustomFieldsDraft custom);
+    public void setCustom(final String custom);
 
     public static ShippingDraft of() {
         return new ShippingDraftImpl();

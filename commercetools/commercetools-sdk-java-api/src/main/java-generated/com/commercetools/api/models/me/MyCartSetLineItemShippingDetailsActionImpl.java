@@ -47,7 +47,7 @@ public class MyCartSetLineItemShippingDetailsActionImpl implements MyCartSetLine
     }
 
     /**
-     *  <p><code>id</code> of the LineItem to update.</p>
+     *
      */
 
     public String getLineItemId() {
@@ -55,7 +55,7 @@ public class MyCartSetLineItemShippingDetailsActionImpl implements MyCartSetLine
     }
 
     /**
-     *  <p>Value to set. If empty, the existing value is removed.</p>
+     *
      */
 
     public com.commercetools.api.models.cart.ItemShippingDetailsDraft getShippingDetails() {

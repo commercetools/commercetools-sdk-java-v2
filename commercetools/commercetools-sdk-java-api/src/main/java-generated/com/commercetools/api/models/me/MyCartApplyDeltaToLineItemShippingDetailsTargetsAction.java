@@ -15,7 +15,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>To override the shipping details, see Set LineItemShippingDetails.</p>
+ * MyCartApplyDeltaToLineItemShippingDetailsTargetsAction
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -35,14 +35,14 @@ public interface MyCartApplyDeltaToLineItemShippingDetailsTargetsAction extends 
     String APPLY_DELTA_TO_LINE_ITEM_SHIPPING_DETAILS_TARGETS = "applyDeltaToLineItemShippingDetailsTargets";
 
     /**
-     *  <p><code>id</code> of the LineItem to update.</p>
+     *
      */
     @NotNull
     @JsonProperty("lineItemId")
     public String getLineItemId();
 
     /**
-     *  <p>Using positive or negative quantities increases or decreases the number of items shipped to an address.</p>
+     *
      */
     @NotNull
     @Valid

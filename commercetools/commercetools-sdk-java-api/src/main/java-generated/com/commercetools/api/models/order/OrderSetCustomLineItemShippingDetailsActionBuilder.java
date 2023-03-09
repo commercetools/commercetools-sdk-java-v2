@@ -40,7 +40,7 @@ public class OrderSetCustomLineItemShippingDetailsActionBuilder
     }
 
     /**
-     *  <p>For order creation and updates, the sum of the <code>targets</code> must match the quantity of the Line Items or Custom Line Items.</p>
+     *
      */
 
     public OrderSetCustomLineItemShippingDetailsActionBuilder shippingDetails(
@@ -51,7 +51,7 @@ public class OrderSetCustomLineItemShippingDetailsActionBuilder
     }
 
     /**
-     *  <p>For order creation and updates, the sum of the <code>targets</code> must match the quantity of the Line Items or Custom Line Items.</p>
+     *
      */
 
     public OrderSetCustomLineItemShippingDetailsActionBuilder shippingDetails(

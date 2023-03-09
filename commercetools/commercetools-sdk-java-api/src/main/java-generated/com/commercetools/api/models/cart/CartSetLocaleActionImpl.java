@@ -43,7 +43,7 @@ public class CartSetLocaleActionImpl implements CartSetLocaleAction, ModelBase {
     }
 
     /**
-     *  <p>Value to set. Must be one of the Project's <code>languages</code>. If empty, any existing value will be removed.</p>
+     *
      */
 
     public String getLocale() {

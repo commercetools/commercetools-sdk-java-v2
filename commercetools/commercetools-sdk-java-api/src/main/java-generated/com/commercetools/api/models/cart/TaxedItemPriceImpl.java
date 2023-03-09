@@ -20,16 +20,16 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class TaxedItemPriceImpl implements TaxedItemPrice, ModelBase {
 
-    private com.commercetools.api.models.common.CentPrecisionMoney totalNet;
+    private com.commercetools.api.models.common.TypedMoney totalNet;
 
-    private com.commercetools.api.models.common.CentPrecisionMoney totalGross;
+    private com.commercetools.api.models.common.TypedMoney totalGross;
 
-    private com.commercetools.api.models.common.CentPrecisionMoney totalTax;
+    private com.commercetools.api.models.common.TypedMoney totalTax;
 
     @JsonCreator
-    TaxedItemPriceImpl(@JsonProperty("totalNet") final com.commercetools.api.models.common.CentPrecisionMoney totalNet,
-            @JsonProperty("totalGross") final com.commercetools.api.models.common.CentPrecisionMoney totalGross,
-            @JsonProperty("totalTax") final com.commercetools.api.models.common.CentPrecisionMoney totalTax) {
+    TaxedItemPriceImpl(@JsonProperty("totalNet") final com.commercetools.api.models.common.TypedMoney totalNet,
+            @JsonProperty("totalGross") final com.commercetools.api.models.common.TypedMoney totalGross,
+            @JsonProperty("totalTax") final com.commercetools.api.models.common.TypedMoney totalTax) {
         this.totalNet = totalNet;
         this.totalGross = totalGross;
         this.totalTax = totalTax;
@@ -39,38 +39,38 @@ public class TaxedItemPriceImpl implements TaxedItemPrice, ModelBase {
     }
 
     /**
-     *  <p>Total net amount of the Line Item or Custom Line Item.</p>
+     *
      */
 
-    public com.commercetools.api.models.common.CentPrecisionMoney getTotalNet() {
+    public com.commercetools.api.models.common.TypedMoney getTotalNet() {
         return this.totalNet;
     }
 
     /**
-     *  <p>Total gross amount of the Line Item or Custom Line Item.</p>
+     *  <p>TaxedItemPrice fields can not be used in query predicates.</p>
      */
 
-    public com.commercetools.api.models.common.CentPrecisionMoney getTotalGross() {
+    public com.commercetools.api.models.common.TypedMoney getTotalGross() {
         return this.totalGross;
     }
 
     /**
-     *  <p>Total tax applicable for the Line Item or Custom Line Item. Automatically calculated as the difference between the <code>totalGross</code> and <code>totalNet</code> values.</p>
+     *  <p>Calculated automatically as the subtraction of <code>totalGross</code> - <code>totalNet</code>.</p>
      */
 
-    public com.commercetools.api.models.common.CentPrecisionMoney getTotalTax() {
+    public com.commercetools.api.models.common.TypedMoney getTotalTax() {
         return this.totalTax;
     }
 
-    public void setTotalNet(final com.commercetools.api.models.common.CentPrecisionMoney totalNet) {
+    public void setTotalNet(final com.commercetools.api.models.common.TypedMoney totalNet) {
         this.totalNet = totalNet;
     }
 
-    public void setTotalGross(final com.commercetools.api.models.common.CentPrecisionMoney totalGross) {
+    public void setTotalGross(final com.commercetools.api.models.common.TypedMoney totalGross) {
         this.totalGross = totalGross;
     }
 
-    public void setTotalTax(final com.commercetools.api.models.common.CentPrecisionMoney totalTax) {
+    public void setTotalTax(final com.commercetools.api.models.common.TypedMoney totalTax) {
         this.totalTax = totalTax;
     }
 

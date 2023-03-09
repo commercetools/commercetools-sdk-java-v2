@@ -28,7 +28,7 @@ public class ItemShippingDetailsBuilder implements Builder<ItemShippingDetails> 
     private Boolean valid;
 
     /**
-     *  <p>Holds information on the quantity of Line Items or Custom Line Items and the address it is shipped.</p>
+     *  <p>Used to map what sub-quantity should be shipped to which address. Duplicate address keys are not allowed.</p>
      */
 
     public ItemShippingDetailsBuilder targets(final com.commercetools.api.models.cart.ItemShippingTarget... targets) {
@@ -37,7 +37,7 @@ public class ItemShippingDetailsBuilder implements Builder<ItemShippingDetails> 
     }
 
     /**
-     *  <p>Holds information on the quantity of Line Items or Custom Line Items and the address it is shipped.</p>
+     *  <p>Used to map what sub-quantity should be shipped to which address. Duplicate address keys are not allowed.</p>
      */
 
     public ItemShippingDetailsBuilder targets(
@@ -47,7 +47,7 @@ public class ItemShippingDetailsBuilder implements Builder<ItemShippingDetails> 
     }
 
     /**
-     *  <p>Holds information on the quantity of Line Items or Custom Line Items and the address it is shipped.</p>
+     *  <p>Used to map what sub-quantity should be shipped to which address. Duplicate address keys are not allowed.</p>
      */
 
     public ItemShippingDetailsBuilder plusTargets(
@@ -60,7 +60,7 @@ public class ItemShippingDetailsBuilder implements Builder<ItemShippingDetails> 
     }
 
     /**
-     *  <p>Holds information on the quantity of Line Items or Custom Line Items and the address it is shipped.</p>
+     *  <p>Used to map what sub-quantity should be shipped to which address. Duplicate address keys are not allowed.</p>
      */
 
     public ItemShippingDetailsBuilder plusTargets(
@@ -73,7 +73,7 @@ public class ItemShippingDetailsBuilder implements Builder<ItemShippingDetails> 
     }
 
     /**
-     *  <p>Holds information on the quantity of Line Items or Custom Line Items and the address it is shipped.</p>
+     *  <p>Used to map what sub-quantity should be shipped to which address. Duplicate address keys are not allowed.</p>
      */
 
     public ItemShippingDetailsBuilder withTargets(
@@ -84,10 +84,7 @@ public class ItemShippingDetailsBuilder implements Builder<ItemShippingDetails> 
     }
 
     /**
-     *  <ul>
-     *   <li><code>true</code> if the quantity of Line Items or Custom Line Items is equal to the sum of sub-quantities defined in <code>targets</code>.</li>
-     *   <li><code>false</code> if the quantity of Line Items or Custom Line Items is not equal to the sum of sub-quantities defined in <code>targets</code>. Ordering a Cart when the value is <code>false</code> returns an InvalidItemShippingDetails error.</li>
-     *  </ul>
+     *  <p><code>true</code> if the quantity of the Line Item or Custom Line Item is equal to the sum of the sub-quantities in <code>targets</code>, else it is <code>false</code>. Ordering a Cart with value as <code>false</code> returns an InvalidItemShippingDetails error.</p>
      */
 
     public ItemShippingDetailsBuilder valid(final Boolean valid) {

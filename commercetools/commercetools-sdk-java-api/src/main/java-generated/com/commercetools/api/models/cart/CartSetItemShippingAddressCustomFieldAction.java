@@ -33,7 +33,7 @@ public interface CartSetItemShippingAddressCustomFieldAction extends CartUpdateA
     String SET_ITEM_SHIPPING_ADDRESS_CUSTOM_FIELD = "setItemShippingAddressCustomField";
 
     /**
-     *  <p><code>key</code> of the Address in <code>itemShippingAddress</code>.</p>
+     *
      */
     @NotNull
     @JsonProperty("addressKey")

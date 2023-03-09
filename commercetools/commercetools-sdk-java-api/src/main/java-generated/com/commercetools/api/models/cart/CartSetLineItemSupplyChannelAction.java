@@ -15,7 +15,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>Performing this action has no impact on inventory that should be reserved.</p>
+ * CartSetLineItemSupplyChannelAction
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -34,17 +34,14 @@ public interface CartSetLineItemSupplyChannelAction extends CartUpdateAction {
     String SET_LINE_ITEM_SUPPLY_CHANNEL = "setLineItemSupplyChannel";
 
     /**
-     *  <p><code>id</code> of the LineItem to update.</p>
+     *
      */
     @NotNull
     @JsonProperty("lineItemId")
     public String getLineItemId();
 
     /**
-     *  <ul>
-     *   <li>If present, a Reference to the Channel is set for the LineItem specified by <code>lineItemId</code>.</li>
-     *   <li>If not present, the current Reference to a supply channel will be removed from the LineItem specified by <code>lineItemId</code>. The Channel must have the <code>InventorySupply</code> ChannelRoleEnum.</li>
-     *  </ul>
+     *  <p>ResourceIdentifier to a Channel.</p>
      */
     @Valid
     @JsonProperty("supplyChannel")

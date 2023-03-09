@@ -30,8 +30,7 @@ public class MyCartSetShippingMethodActionBuilder implements Builder<MyCartSetSh
     private com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate;
 
     /**
-     *  <p>Value to set. If empty, any existing value is removed.</p>
-     *  <p>If the referenced Shipping Method has a predicate that does not match the Cart, an InvalidOperation error is returned.</p>
+     *  <p>ResourceIdentifier to a ShippingMethod.</p>
      */
 
     public MyCartSetShippingMethodActionBuilder shippingMethod(
@@ -43,8 +42,7 @@ public class MyCartSetShippingMethodActionBuilder implements Builder<MyCartSetSh
     }
 
     /**
-     *  <p>Value to set. If empty, any existing value is removed.</p>
-     *  <p>If the referenced Shipping Method has a predicate that does not match the Cart, an InvalidOperation error is returned.</p>
+     *  <p>ResourceIdentifier to a ShippingMethod.</p>
      */
 
     public MyCartSetShippingMethodActionBuilder shippingMethod(
@@ -54,7 +52,7 @@ public class MyCartSetShippingMethodActionBuilder implements Builder<MyCartSetSh
     }
 
     /**
-     *  <p>An external Tax Rate can be set if the Cart has the <code>External</code> TaxMode.</p>
+     *
      */
 
     public MyCartSetShippingMethodActionBuilder externalTaxRate(
@@ -65,7 +63,7 @@ public class MyCartSetShippingMethodActionBuilder implements Builder<MyCartSetSh
     }
 
     /**
-     *  <p>An external Tax Rate can be set if the Cart has the <code>External</code> TaxMode.</p>
+     *
      */
 
     public MyCartSetShippingMethodActionBuilder externalTaxRate(

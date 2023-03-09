@@ -33,7 +33,7 @@ public class CartSetShippingCustomTypeActionBuilder implements Builder<CartSetSh
     private com.commercetools.api.models.type.FieldContainer fields;
 
     /**
-     *  <p>The <code>shippingKey</code> of the Shipping to customize. Used to specify which Shipping Method to customize on a Cart with <code>Multiple</code> ShippingMode. Leave this empty to customize the one and only ShippingMethod on a <code>Single</code> ShippingMode Cart.</p>
+     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multiple</code> ShippingMode.</p>
      */
 
     public CartSetShippingCustomTypeActionBuilder shippingKey(@Nullable final String shippingKey) {
@@ -42,7 +42,7 @@ public class CartSetShippingCustomTypeActionBuilder implements Builder<CartSetSh
     }
 
     /**
-     *  <p>Defines the Type that extends the specified ShippingMethod with Custom Fields. If absent, any existing Type and Custom Fields are removed from the ShippingMethod.</p>
+     *  <p>Defines the Type that extends the <code>shippingAddress</code> with Custom Fields. If absent, any existing Type and Custom Fields are removed from the <code>shippingAddress</code>.</p>
      */
 
     public CartSetShippingCustomTypeActionBuilder type(
@@ -52,7 +52,7 @@ public class CartSetShippingCustomTypeActionBuilder implements Builder<CartSetSh
     }
 
     /**
-     *  <p>Defines the Type that extends the specified ShippingMethod with Custom Fields. If absent, any existing Type and Custom Fields are removed from the ShippingMethod.</p>
+     *  <p>Defines the Type that extends the <code>shippingAddress</code> with Custom Fields. If absent, any existing Type and Custom Fields are removed from the <code>shippingAddress</code>.</p>
      */
 
     public CartSetShippingCustomTypeActionBuilder type(
@@ -62,7 +62,7 @@ public class CartSetShippingCustomTypeActionBuilder implements Builder<CartSetSh
     }
 
     /**
-     *  <p>Sets the Custom Fields fields for the <code>shippingMethod</code>.</p>
+     *  <p>Sets the Custom Fields fields for the <code>shippingAddress</code>.</p>
      */
 
     public CartSetShippingCustomTypeActionBuilder fields(
@@ -72,7 +72,7 @@ public class CartSetShippingCustomTypeActionBuilder implements Builder<CartSetSh
     }
 
     /**
-     *  <p>Sets the Custom Fields fields for the <code>shippingMethod</code>.</p>
+     *  <p>Sets the Custom Fields fields for the <code>shippingAddress</code>.</p>
      */
 
     public CartSetShippingCustomTypeActionBuilder fields(

@@ -35,7 +35,7 @@ public interface CartSetCustomLineItemCustomTypeAction extends CartUpdateAction 
     String SET_CUSTOM_LINE_ITEM_CUSTOM_TYPE = "setCustomLineItemCustomType";
 
     /**
-     *  <p><code>id</code> of the CustomLineItem to update.</p>
+     *
      */
     @NotNull
     @JsonProperty("customLineItemId")

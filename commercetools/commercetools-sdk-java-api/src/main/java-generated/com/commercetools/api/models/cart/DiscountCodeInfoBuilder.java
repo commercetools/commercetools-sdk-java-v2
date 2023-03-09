@@ -28,7 +28,7 @@ public class DiscountCodeInfoBuilder implements Builder<DiscountCodeInfo> {
     private com.commercetools.api.models.cart.DiscountCodeState state;
 
     /**
-     *  <p>Discount Code associated with the Cart or Order.</p>
+     *
      */
 
     public DiscountCodeInfoBuilder discountCode(
@@ -39,7 +39,7 @@ public class DiscountCodeInfoBuilder implements Builder<DiscountCodeInfo> {
     }
 
     /**
-     *  <p>Discount Code associated with the Cart or Order.</p>
+     *
      */
 
     public DiscountCodeInfoBuilder discountCode(
@@ -49,7 +49,7 @@ public class DiscountCodeInfoBuilder implements Builder<DiscountCodeInfo> {
     }
 
     /**
-     *  <p>Indicates the state of the Discount Code applied to the Cart or Order.</p>
+     *
      */
 
     public DiscountCodeInfoBuilder state(final com.commercetools.api.models.cart.DiscountCodeState state) {

@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Performing this action has no impact on inventory that should be reserved.</p>
+ * MyCartSetLineItemSupplyChannelAction
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class MyCartSetLineItemSupplyChannelActionImpl implements MyCartSetLineItemSupplyChannelAction, ModelBase {
@@ -47,7 +47,7 @@ public class MyCartSetLineItemSupplyChannelActionImpl implements MyCartSetLineIt
     }
 
     /**
-     *  <p><code>id</code> of the LineItem to update.</p>
+     *
      */
 
     public String getLineItemId() {
@@ -55,10 +55,7 @@ public class MyCartSetLineItemSupplyChannelActionImpl implements MyCartSetLineIt
     }
 
     /**
-     *  <ul>
-     *   <li>If present, a Reference to the Channel is set for the LineItem specified by <code>lineItemId</code>.</li>
-     *   <li>If not present, the current Reference to a supply channel will be removed from the LineItem specified by <code>lineItemId</code>. The Channel must have the <code>InventorySupply</code> ChannelRoleEnum.</li>
-     *  </ul>
+     *  <p>ResourceIdentifier to a Channel.</p>
      */
 
     public com.commercetools.api.models.channel.ChannelResourceIdentifier getSupplyChannel() {

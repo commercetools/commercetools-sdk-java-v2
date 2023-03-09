@@ -16,7 +16,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>Represents a CartDiscount that is only associated with a single Cart or Order.</p>
+ * DirectDiscount
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -34,14 +34,14 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface DirectDiscount {
 
     /**
-     *  <p>Unique identifier of the Direct Discount.</p>
+     *  <p>The unique ID of the cart discount.</p>
      */
     @NotNull
     @JsonProperty("id")
     public String getId();
 
     /**
-     *  <p>Effect of the Discount on the Cart.</p>
+     *
      */
     @NotNull
     @Valid
@@ -49,8 +49,7 @@ public interface DirectDiscount {
     public CartDiscountValue getValue();
 
     /**
-     *  <p>Part of the Cart that is discounted.</p>
-     *  <p>Empty when the <code>value</code> is set to <code>giftLineItem</code>.</p>
+     *  <p>Empty when the <code>value</code> has type <code>giftLineItem</code>, otherwise a CartDiscountTarget is set.</p>
      */
     @Valid
     @JsonProperty("target")

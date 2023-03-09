@@ -10,14 +10,13 @@ import com.fasterxml.jackson.annotation.JsonValue;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>Determines if Cart Discounts can be applied to a Custom Line Item in the Cart.</p>
+ * CustomLineItemPriceMode
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public interface CustomLineItemPriceMode {
 
     /**
-    	<p>Allows application of <a href="/../api/projects/cartDiscounts">Cart Discounts</a> for the Custom Line Item.</p>
-    	<p>This is the default mode for backwards compatibility.</p>
+    	<p>Lets Composable Commerce apply Cart Discounts for the Custom Line Item. This is the default mode for backwards compatibility.</p>
 
     */
     CustomLineItemPriceMode STANDARD = CustomLineItemPriceModeEnum.STANDARD;

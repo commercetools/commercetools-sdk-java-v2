@@ -49,7 +49,7 @@ public class CartApplyDeltaToCustomLineItemShippingDetailsTargetsActionImpl
     }
 
     /**
-     *  <p><code>id</code> of the CustomLineItem to update.</p>
+     *
      */
 
     public String getCustomLineItemId() {
@@ -57,7 +57,7 @@ public class CartApplyDeltaToCustomLineItemShippingDetailsTargetsActionImpl
     }
 
     /**
-     *  <p>Using positive or negative quantities increases or decreases the number of items shipped to an address.</p>
+     *
      */
 
     public java.util.List<com.commercetools.api.models.cart.ItemShippingTarget> getTargetsDelta() {

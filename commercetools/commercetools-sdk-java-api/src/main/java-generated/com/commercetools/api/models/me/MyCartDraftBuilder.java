@@ -30,49 +30,49 @@ public class MyCartDraftBuilder implements Builder<MyCartDraft> {
     private String customerEmail;
 
     @Nullable
-    private com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifier businessUnit;
-
-    @Nullable
-    private com.commercetools.api.models.store.StoreResourceIdentifier store;
-
-    @Nullable
-    private java.util.List<com.commercetools.api.models.me.MyLineItemDraft> lineItems;
-
-    @Nullable
-    private com.commercetools.api.models.cart.TaxMode taxMode;
+    private String country;
 
     @Nullable
     private com.commercetools.api.models.cart.InventoryMode inventoryMode;
 
     @Nullable
-    private com.commercetools.api.models.common.BaseAddress billingAddress;
+    private java.util.List<com.commercetools.api.models.me.MyLineItemDraft> lineItems;
 
     @Nullable
     private com.commercetools.api.models.common.BaseAddress shippingAddress;
 
     @Nullable
+    private com.commercetools.api.models.common.BaseAddress billingAddress;
+
+    @Nullable
     private com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifier shippingMethod;
 
     @Nullable
-    private java.util.List<com.commercetools.api.models.common.BaseAddress> itemShippingAddresses;
-
-    @Nullable
-    private java.util.List<String> discountCodes;
-
-    @Nullable
-    private String country;
+    private com.commercetools.api.models.type.CustomFieldsDraft custom;
 
     @Nullable
     private String locale;
 
     @Nullable
+    private com.commercetools.api.models.cart.TaxMode taxMode;
+
+    @Nullable
     private Long deleteDaysAfterLastModification;
 
     @Nullable
-    private com.commercetools.api.models.type.CustomFieldsDraft custom;
+    private java.util.List<com.commercetools.api.models.common.BaseAddress> itemShippingAddresses;
+
+    @Nullable
+    private com.commercetools.api.models.business_unit.BusinessUnitKeyReference businessUnit;
+
+    @Nullable
+    private com.commercetools.api.models.store.StoreKeyReference store;
+
+    @Nullable
+    private java.util.List<String> discountCodes;
 
     /**
-     *  <p>Currency the Cart uses.</p>
+     *  <p>A three-digit currency code as per ISO 3166-1 alpha-2.</p>
      */
 
     public MyCartDraftBuilder currency(final String currency) {
@@ -81,7 +81,7 @@ public class MyCartDraftBuilder implements Builder<MyCartDraft> {
     }
 
     /**
-     *  <p>Email address of the Customer the Cart belongs to.</p>
+     *
      */
 
     public MyCartDraftBuilder customerEmail(@Nullable final String customerEmail) {
@@ -90,48 +90,26 @@ public class MyCartDraftBuilder implements Builder<MyCartDraft> {
     }
 
     /**
-     *  <p>ResourceIdentifier to the Business Unit the Cart should belong to.</p>
+     *  <p>A two-digit country code as per ISO 3166-1 alpha-2.</p>
      */
 
-    public MyCartDraftBuilder businessUnit(
-            Function<com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifierBuilder, com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifierBuilder> builder) {
-        this.businessUnit = builder
-                .apply(com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifierBuilder.of())
-                .build();
+    public MyCartDraftBuilder country(@Nullable final String country) {
+        this.country = country;
         return this;
     }
 
     /**
-     *  <p>ResourceIdentifier to the Business Unit the Cart should belong to.</p>
+     *  <p>Default inventory mode is <code>None</code>.</p>
      */
 
-    public MyCartDraftBuilder businessUnit(
-            @Nullable final com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifier businessUnit) {
-        this.businessUnit = businessUnit;
+    public MyCartDraftBuilder inventoryMode(
+            @Nullable final com.commercetools.api.models.cart.InventoryMode inventoryMode) {
+        this.inventoryMode = inventoryMode;
         return this;
     }
 
     /**
-     *  <p>ResourceIdentifier to the Store the Cart should belong to. Once set, it cannot be updated.</p>
-     */
-
-    public MyCartDraftBuilder store(
-            Function<com.commercetools.api.models.store.StoreResourceIdentifierBuilder, com.commercetools.api.models.store.StoreResourceIdentifierBuilder> builder) {
-        this.store = builder.apply(com.commercetools.api.models.store.StoreResourceIdentifierBuilder.of()).build();
-        return this;
-    }
-
-    /**
-     *  <p>ResourceIdentifier to the Store the Cart should belong to. Once set, it cannot be updated.</p>
-     */
-
-    public MyCartDraftBuilder store(@Nullable final com.commercetools.api.models.store.StoreResourceIdentifier store) {
-        this.store = store;
-        return this;
-    }
-
-    /**
-     *  <p>Line Items to add to the Cart.</p>
+     *
      */
 
     public MyCartDraftBuilder lineItems(@Nullable final com.commercetools.api.models.me.MyLineItemDraft... lineItems) {
@@ -140,7 +118,7 @@ public class MyCartDraftBuilder implements Builder<MyCartDraft> {
     }
 
     /**
-     *  <p>Line Items to add to the Cart.</p>
+     *
      */
 
     public MyCartDraftBuilder lineItems(
@@ -150,7 +128,7 @@ public class MyCartDraftBuilder implements Builder<MyCartDraft> {
     }
 
     /**
-     *  <p>Line Items to add to the Cart.</p>
+     *
      */
 
     public MyCartDraftBuilder plusLineItems(
@@ -163,7 +141,7 @@ public class MyCartDraftBuilder implements Builder<MyCartDraft> {
     }
 
     /**
-     *  <p>Line Items to add to the Cart.</p>
+     *
      */
 
     public MyCartDraftBuilder plusLineItems(
@@ -176,7 +154,7 @@ public class MyCartDraftBuilder implements Builder<MyCartDraft> {
     }
 
     /**
-     *  <p>Line Items to add to the Cart.</p>
+     *
      */
 
     public MyCartDraftBuilder withLineItems(
@@ -187,46 +165,7 @@ public class MyCartDraftBuilder implements Builder<MyCartDraft> {
     }
 
     /**
-     *  <p>Determines how Tax Rates are set. The <code>Disabled</code> TaxMode <strong>cannot</strong> be set.</p>
-     */
-
-    public MyCartDraftBuilder taxMode(@Nullable final com.commercetools.api.models.cart.TaxMode taxMode) {
-        this.taxMode = taxMode;
-        return this;
-    }
-
-    /**
-     *  <p>Determines how stock quantities are tracked for Line Items in the Cart.</p>
-     */
-
-    public MyCartDraftBuilder inventoryMode(
-            @Nullable final com.commercetools.api.models.cart.InventoryMode inventoryMode) {
-        this.inventoryMode = inventoryMode;
-        return this;
-    }
-
-    /**
-     *  <p>Billing address associated with the Cart.</p>
-     */
-
-    public MyCartDraftBuilder billingAddress(
-            Function<com.commercetools.api.models.common.BaseAddressBuilder, com.commercetools.api.models.common.BaseAddressBuilder> builder) {
-        this.billingAddress = builder.apply(com.commercetools.api.models.common.BaseAddressBuilder.of()).build();
-        return this;
-    }
-
-    /**
-     *  <p>Billing address associated with the Cart.</p>
-     */
-
-    public MyCartDraftBuilder billingAddress(
-            @Nullable final com.commercetools.api.models.common.BaseAddress billingAddress) {
-        this.billingAddress = billingAddress;
-        return this;
-    }
-
-    /**
-     *  <p>Shipping address associated with the Cart. Determines eligible ShippingMethod rates and Tax Rates of Line Items.</p>
+     *
      */
 
     public MyCartDraftBuilder shippingAddress(
@@ -236,7 +175,7 @@ public class MyCartDraftBuilder implements Builder<MyCartDraft> {
     }
 
     /**
-     *  <p>Shipping address associated with the Cart. Determines eligible ShippingMethod rates and Tax Rates of Line Items.</p>
+     *
      */
 
     public MyCartDraftBuilder shippingAddress(
@@ -246,7 +185,27 @@ public class MyCartDraftBuilder implements Builder<MyCartDraft> {
     }
 
     /**
-     *  <p>Shipping Method for the Cart. If the referenced ShippingMethod has a <code>predicate</code> that does not match the Cart, an InvalidOperation error is returned when creating a Cart.</p>
+     *
+     */
+
+    public MyCartDraftBuilder billingAddress(
+            Function<com.commercetools.api.models.common.BaseAddressBuilder, com.commercetools.api.models.common.BaseAddressBuilder> builder) {
+        this.billingAddress = builder.apply(com.commercetools.api.models.common.BaseAddressBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *
+     */
+
+    public MyCartDraftBuilder billingAddress(
+            @Nullable final com.commercetools.api.models.common.BaseAddress billingAddress) {
+        this.billingAddress = billingAddress;
+        return this;
+    }
+
+    /**
+     *
      */
 
     public MyCartDraftBuilder shippingMethod(
@@ -258,7 +217,7 @@ public class MyCartDraftBuilder implements Builder<MyCartDraft> {
     }
 
     /**
-     *  <p>Shipping Method for the Cart. If the referenced ShippingMethod has a <code>predicate</code> that does not match the Cart, an InvalidOperation error is returned when creating a Cart.</p>
+     *
      */
 
     public MyCartDraftBuilder shippingMethod(
@@ -268,8 +227,53 @@ public class MyCartDraftBuilder implements Builder<MyCartDraft> {
     }
 
     /**
-     *  <p>Multiple shipping addresses of the Cart. Each address must contain a <code>key</code> that is unique in this Cart. The keys are used by LineItems to reference these addresses under their <code>shippingDetails</code>.</p>
-     *  <p>Eligible Shipping Methods or applicable Tax Rates are determined by the Cart <code>shippingAddress</code>, and not <code>itemShippingAddresses</code>.</p>
+     *  <p>The custom fields.</p>
+     */
+
+    public MyCartDraftBuilder custom(
+            Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraftBuilder> builder) {
+        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsDraftBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>The custom fields.</p>
+     */
+
+    public MyCartDraftBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFieldsDraft custom) {
+        this.custom = custom;
+        return this;
+    }
+
+    /**
+     *
+     */
+
+    public MyCartDraftBuilder locale(@Nullable final String locale) {
+        this.locale = locale;
+        return this;
+    }
+
+    /**
+     *  <p>The <code>TaxMode</code> <code>Disabled</code> can not be set on the My Carts endpoint.</p>
+     */
+
+    public MyCartDraftBuilder taxMode(@Nullable final com.commercetools.api.models.cart.TaxMode taxMode) {
+        this.taxMode = taxMode;
+        return this;
+    }
+
+    /**
+     *  <p>The cart will be deleted automatically if it hasn't been modified for the specified amount of days and it is in the <code>Active</code> CartState. If a ChangeSubscription for carts exists, a <code>ResourceDeleted</code> notification will be sent.</p>
+     */
+
+    public MyCartDraftBuilder deleteDaysAfterLastModification(@Nullable final Long deleteDaysAfterLastModification) {
+        this.deleteDaysAfterLastModification = deleteDaysAfterLastModification;
+        return this;
+    }
+
+    /**
+     *  <p>Contains addresses for orders with multiple shipping addresses. Each address must contain a key which is unique in this cart.</p>
      */
 
     public MyCartDraftBuilder itemShippingAddresses(
@@ -279,8 +283,7 @@ public class MyCartDraftBuilder implements Builder<MyCartDraft> {
     }
 
     /**
-     *  <p>Multiple shipping addresses of the Cart. Each address must contain a <code>key</code> that is unique in this Cart. The keys are used by LineItems to reference these addresses under their <code>shippingDetails</code>.</p>
-     *  <p>Eligible Shipping Methods or applicable Tax Rates are determined by the Cart <code>shippingAddress</code>, and not <code>itemShippingAddresses</code>.</p>
+     *  <p>Contains addresses for orders with multiple shipping addresses. Each address must contain a key which is unique in this cart.</p>
      */
 
     public MyCartDraftBuilder itemShippingAddresses(
@@ -290,8 +293,7 @@ public class MyCartDraftBuilder implements Builder<MyCartDraft> {
     }
 
     /**
-     *  <p>Multiple shipping addresses of the Cart. Each address must contain a <code>key</code> that is unique in this Cart. The keys are used by LineItems to reference these addresses under their <code>shippingDetails</code>.</p>
-     *  <p>Eligible Shipping Methods or applicable Tax Rates are determined by the Cart <code>shippingAddress</code>, and not <code>itemShippingAddresses</code>.</p>
+     *  <p>Contains addresses for orders with multiple shipping addresses. Each address must contain a key which is unique in this cart.</p>
      */
 
     public MyCartDraftBuilder plusItemShippingAddresses(
@@ -304,8 +306,7 @@ public class MyCartDraftBuilder implements Builder<MyCartDraft> {
     }
 
     /**
-     *  <p>Multiple shipping addresses of the Cart. Each address must contain a <code>key</code> that is unique in this Cart. The keys are used by LineItems to reference these addresses under their <code>shippingDetails</code>.</p>
-     *  <p>Eligible Shipping Methods or applicable Tax Rates are determined by the Cart <code>shippingAddress</code>, and not <code>itemShippingAddresses</code>.</p>
+     *  <p>Contains addresses for orders with multiple shipping addresses. Each address must contain a key which is unique in this cart.</p>
      */
 
     public MyCartDraftBuilder plusItemShippingAddresses(
@@ -319,8 +320,7 @@ public class MyCartDraftBuilder implements Builder<MyCartDraft> {
     }
 
     /**
-     *  <p>Multiple shipping addresses of the Cart. Each address must contain a <code>key</code> that is unique in this Cart. The keys are used by LineItems to reference these addresses under their <code>shippingDetails</code>.</p>
-     *  <p>Eligible Shipping Methods or applicable Tax Rates are determined by the Cart <code>shippingAddress</code>, and not <code>itemShippingAddresses</code>.</p>
+     *  <p>Contains addresses for orders with multiple shipping addresses. Each address must contain a key which is unique in this cart.</p>
      */
 
     public MyCartDraftBuilder withItemShippingAddresses(
@@ -332,7 +332,48 @@ public class MyCartDraftBuilder implements Builder<MyCartDraft> {
     }
 
     /**
-     *  <p><code>code</code> of the existing DiscountCodes to add to the Cart.</p>
+     *  <p>The BusinessUnit the cart will belong to.</p>
+     */
+
+    public MyCartDraftBuilder businessUnit(
+            Function<com.commercetools.api.models.business_unit.BusinessUnitKeyReferenceBuilder, com.commercetools.api.models.business_unit.BusinessUnitKeyReferenceBuilder> builder) {
+        this.businessUnit = builder
+                .apply(com.commercetools.api.models.business_unit.BusinessUnitKeyReferenceBuilder.of())
+                .build();
+        return this;
+    }
+
+    /**
+     *  <p>The BusinessUnit the cart will belong to.</p>
+     */
+
+    public MyCartDraftBuilder businessUnit(
+            @Nullable final com.commercetools.api.models.business_unit.BusinessUnitKeyReference businessUnit) {
+        this.businessUnit = businessUnit;
+        return this;
+    }
+
+    /**
+     *  <p>Reference to a Store by its key.</p>
+     */
+
+    public MyCartDraftBuilder store(
+            Function<com.commercetools.api.models.store.StoreKeyReferenceBuilder, com.commercetools.api.models.store.StoreKeyReferenceBuilder> builder) {
+        this.store = builder.apply(com.commercetools.api.models.store.StoreKeyReferenceBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Reference to a Store by its key.</p>
+     */
+
+    public MyCartDraftBuilder store(@Nullable final com.commercetools.api.models.store.StoreKeyReference store) {
+        this.store = store;
+        return this;
+    }
+
+    /**
+     *  <p>The code of existing DiscountCodes.</p>
      */
 
     public MyCartDraftBuilder discountCodes(@Nullable final String... discountCodes) {
@@ -341,7 +382,7 @@ public class MyCartDraftBuilder implements Builder<MyCartDraft> {
     }
 
     /**
-     *  <p><code>code</code> of the existing DiscountCodes to add to the Cart.</p>
+     *  <p>The code of existing DiscountCodes.</p>
      */
 
     public MyCartDraftBuilder discountCodes(@Nullable final java.util.List<String> discountCodes) {
@@ -350,7 +391,7 @@ public class MyCartDraftBuilder implements Builder<MyCartDraft> {
     }
 
     /**
-     *  <p><code>code</code> of the existing DiscountCodes to add to the Cart.</p>
+     *  <p>The code of existing DiscountCodes.</p>
      */
 
     public MyCartDraftBuilder plusDiscountCodes(@Nullable final String... discountCodes) {
@@ -358,53 +399,6 @@ public class MyCartDraftBuilder implements Builder<MyCartDraft> {
             this.discountCodes = new ArrayList<>();
         }
         this.discountCodes.addAll(Arrays.asList(discountCodes));
-        return this;
-    }
-
-    /**
-     *  <p>Used for LineItem Price selection. If used for Create Cart in Store, the provided country must be one of the Store's <code>countries</code>.</p>
-     */
-
-    public MyCartDraftBuilder country(@Nullable final String country) {
-        this.country = country;
-        return this;
-    }
-
-    /**
-     *  <p>Languages of the Cart. Can only contain languages supported by the Project.</p>
-     */
-
-    public MyCartDraftBuilder locale(@Nullable final String locale) {
-        this.locale = locale;
-        return this;
-    }
-
-    /**
-     *  <p>Number of days after which a Cart with <code>Active</code> CartState is deleted since its last modification. If not provided, the default value for this field configured in Project settings is assigned.</p>
-     *  <p>Create a ChangeSubscription for Carts to receive a ResourceDeletedDeliveryPayload upon deletion of the Cart.</p>
-     */
-
-    public MyCartDraftBuilder deleteDaysAfterLastModification(@Nullable final Long deleteDaysAfterLastModification) {
-        this.deleteDaysAfterLastModification = deleteDaysAfterLastModification;
-        return this;
-    }
-
-    /**
-     *  <p>Custom Fields for the Cart.</p>
-     */
-
-    public MyCartDraftBuilder custom(
-            Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraftBuilder> builder) {
-        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsDraftBuilder.of()).build();
-        return this;
-    }
-
-    /**
-     *  <p>Custom Fields for the Cart.</p>
-     */
-
-    public MyCartDraftBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFieldsDraft custom) {
-        this.custom = custom;
         return this;
     }
 
@@ -418,23 +412,8 @@ public class MyCartDraftBuilder implements Builder<MyCartDraft> {
     }
 
     @Nullable
-    public com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifier getBusinessUnit() {
-        return this.businessUnit;
-    }
-
-    @Nullable
-    public com.commercetools.api.models.store.StoreResourceIdentifier getStore() {
-        return this.store;
-    }
-
-    @Nullable
-    public java.util.List<com.commercetools.api.models.me.MyLineItemDraft> getLineItems() {
-        return this.lineItems;
-    }
-
-    @Nullable
-    public com.commercetools.api.models.cart.TaxMode getTaxMode() {
-        return this.taxMode;
+    public String getCountry() {
+        return this.country;
     }
 
     @Nullable
@@ -443,8 +422,8 @@ public class MyCartDraftBuilder implements Builder<MyCartDraft> {
     }
 
     @Nullable
-    public com.commercetools.api.models.common.BaseAddress getBillingAddress() {
-        return this.billingAddress;
+    public java.util.List<com.commercetools.api.models.me.MyLineItemDraft> getLineItems() {
+        return this.lineItems;
     }
 
     @Nullable
@@ -453,23 +432,18 @@ public class MyCartDraftBuilder implements Builder<MyCartDraft> {
     }
 
     @Nullable
+    public com.commercetools.api.models.common.BaseAddress getBillingAddress() {
+        return this.billingAddress;
+    }
+
+    @Nullable
     public com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifier getShippingMethod() {
         return this.shippingMethod;
     }
 
     @Nullable
-    public java.util.List<com.commercetools.api.models.common.BaseAddress> getItemShippingAddresses() {
-        return this.itemShippingAddresses;
-    }
-
-    @Nullable
-    public java.util.List<String> getDiscountCodes() {
-        return this.discountCodes;
-    }
-
-    @Nullable
-    public String getCountry() {
-        return this.country;
+    public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
+        return this.custom;
     }
 
     @Nullable
@@ -478,29 +452,49 @@ public class MyCartDraftBuilder implements Builder<MyCartDraft> {
     }
 
     @Nullable
+    public com.commercetools.api.models.cart.TaxMode getTaxMode() {
+        return this.taxMode;
+    }
+
+    @Nullable
     public Long getDeleteDaysAfterLastModification() {
         return this.deleteDaysAfterLastModification;
     }
 
     @Nullable
-    public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
-        return this.custom;
+    public java.util.List<com.commercetools.api.models.common.BaseAddress> getItemShippingAddresses() {
+        return this.itemShippingAddresses;
+    }
+
+    @Nullable
+    public com.commercetools.api.models.business_unit.BusinessUnitKeyReference getBusinessUnit() {
+        return this.businessUnit;
+    }
+
+    @Nullable
+    public com.commercetools.api.models.store.StoreKeyReference getStore() {
+        return this.store;
+    }
+
+    @Nullable
+    public java.util.List<String> getDiscountCodes() {
+        return this.discountCodes;
     }
 
     public MyCartDraft build() {
         Objects.requireNonNull(currency, MyCartDraft.class + ": currency is missing");
-        return new MyCartDraftImpl(currency, customerEmail, businessUnit, store, lineItems, taxMode, inventoryMode,
-            billingAddress, shippingAddress, shippingMethod, itemShippingAddresses, discountCodes, country, locale,
-            deleteDaysAfterLastModification, custom);
+        return new MyCartDraftImpl(currency, customerEmail, country, inventoryMode, lineItems, shippingAddress,
+            billingAddress, shippingMethod, custom, locale, taxMode, deleteDaysAfterLastModification,
+            itemShippingAddresses, businessUnit, store, discountCodes);
     }
 
     /**
      * builds MyCartDraft without checking for non null required values
      */
     public MyCartDraft buildUnchecked() {
-        return new MyCartDraftImpl(currency, customerEmail, businessUnit, store, lineItems, taxMode, inventoryMode,
-            billingAddress, shippingAddress, shippingMethod, itemShippingAddresses, discountCodes, country, locale,
-            deleteDaysAfterLastModification, custom);
+        return new MyCartDraftImpl(currency, customerEmail, country, inventoryMode, lineItems, shippingAddress,
+            billingAddress, shippingMethod, custom, locale, taxMode, deleteDaysAfterLastModification,
+            itemShippingAddresses, businessUnit, store, discountCodes);
     }
 
     public static MyCartDraftBuilder of() {
@@ -511,20 +505,20 @@ public class MyCartDraftBuilder implements Builder<MyCartDraft> {
         MyCartDraftBuilder builder = new MyCartDraftBuilder();
         builder.currency = template.getCurrency();
         builder.customerEmail = template.getCustomerEmail();
+        builder.country = template.getCountry();
+        builder.inventoryMode = template.getInventoryMode();
+        builder.lineItems = template.getLineItems();
+        builder.shippingAddress = template.getShippingAddress();
+        builder.billingAddress = template.getBillingAddress();
+        builder.shippingMethod = template.getShippingMethod();
+        builder.custom = template.getCustom();
+        builder.locale = template.getLocale();
+        builder.taxMode = template.getTaxMode();
+        builder.deleteDaysAfterLastModification = template.getDeleteDaysAfterLastModification();
+        builder.itemShippingAddresses = template.getItemShippingAddresses();
         builder.businessUnit = template.getBusinessUnit();
         builder.store = template.getStore();
-        builder.lineItems = template.getLineItems();
-        builder.taxMode = template.getTaxMode();
-        builder.inventoryMode = template.getInventoryMode();
-        builder.billingAddress = template.getBillingAddress();
-        builder.shippingAddress = template.getShippingAddress();
-        builder.shippingMethod = template.getShippingMethod();
-        builder.itemShippingAddresses = template.getItemShippingAddresses();
         builder.discountCodes = template.getDiscountCodes();
-        builder.country = template.getCountry();
-        builder.locale = template.getLocale();
-        builder.deleteDaysAfterLastModification = template.getDeleteDaysAfterLastModification();
-        builder.custom = template.getCustom();
         return builder;
     }
 

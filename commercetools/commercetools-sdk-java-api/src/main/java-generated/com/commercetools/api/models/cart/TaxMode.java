@@ -10,38 +10,17 @@ import com.fasterxml.jackson.annotation.JsonValue;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>Indicates how taxes are set on the Cart.</p>
+ * TaxMode
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public interface TaxMode {
 
-    /**
-    	<p>Tax Rates are selected automatically from the <a href="ctp:api:type:TaxCategory">TaxCategories</a> based on the <a href="ctp:api:type:Cart">Cart</a> <code>shippingAddress</code>.
-    	This is the default tax mode for a new Cart.</p>
-    	<p><code>totalNet</code>, <code>totalGross</code>, and <code>taxPortions</code> fields are calculated based on the <code>taxRoundingMode</code>.</p>
-
-    */
     TaxMode PLATFORM = TaxModeEnum.PLATFORM;
-    /**
-    	<p>Tax Rates are set externally per <a href="ctp:api:type:ExternalTaxRateDraft">ExternalTaxRateDraft</a>.
-    	A Cart can be ordered only if all Line Items, Custom Line Items, and the Shipping Method have an external Tax Rate set.</p>
-    	<p><code>totalNet</code>, <code>totalGross</code>, and <code>taxPortions</code> fields are calculated based on the <code>taxRoundingMode</code>.</p>
 
-    */
     TaxMode EXTERNAL = TaxModeEnum.EXTERNAL;
-    /**
-    	<p>Tax amounts, Tax Rates, and tax portions are set externally per <a href="ctp:api:type:ExternalTaxRateDraft">ExternalTaxRateDraft</a>.
-    	A Cart can be ordered only if the Cart and all Line Items, Custom Line Items, and the Shipping Method have an external tax amount and rate set.</p>
-    	<p>Price-specific update actions on Carts require external recalculation of the total gross price.
-    	Hence, the <code>externalTaxAmount</code> is removed in these cases and must be reset with <a href="ctp:api:type:CartSetLineItemTaxAmountAction">Set LineItem TaxAmount</a>, <a href="ctp:api:type:CartSetCustomLineItemTaxAmountAction">Set CustomLineItem TaxAmount</a>, or <a href="ctp:api:type:CartSetShippingMethodTaxAmountAction">Set ShippingMethod TaxAmount</a> update actions.</p>
 
-    */
     TaxMode EXTERNAL_AMOUNT = TaxModeEnum.EXTERNAL_AMOUNT;
-    /**
-    	<p>No taxes are added to the Cart.</p>
-    	<p>Note that this tax mode cannot be set on the <a href="/../api/projects/me-carts">My Carts</a> API.</p>
 
-    */
     TaxMode DISABLED = TaxModeEnum.DISABLED;
 
     enum TaxModeEnum implements TaxMode {

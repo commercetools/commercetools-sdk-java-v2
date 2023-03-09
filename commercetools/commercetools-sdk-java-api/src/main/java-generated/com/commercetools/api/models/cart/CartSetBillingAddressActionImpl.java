@@ -44,7 +44,7 @@ public class CartSetBillingAddressActionImpl implements CartSetBillingAddressAct
     }
 
     /**
-     *  <p>Value to set. If empty, any existing value is removed.</p>
+     *
      */
 
     public com.commercetools.api.models.common.BaseAddress getAddress() {

@@ -28,8 +28,7 @@ public class ExternalLineItemTotalPriceBuilder implements Builder<ExternalLineIt
     private com.commercetools.api.models.common.Money totalPrice;
 
     /**
-     *  <p>Price of the Line Item.</p>
-     *  <p>The value is selected from the Product Variant according to the Product <code>priceMode</code>.</p>
+     *
      */
 
     public ExternalLineItemTotalPriceBuilder price(
@@ -39,8 +38,7 @@ public class ExternalLineItemTotalPriceBuilder implements Builder<ExternalLineIt
     }
 
     /**
-     *  <p>Price of the Line Item.</p>
-     *  <p>The value is selected from the Product Variant according to the Product <code>priceMode</code>.</p>
+     *
      */
 
     public ExternalLineItemTotalPriceBuilder price(final com.commercetools.api.models.common.Money price) {
@@ -49,7 +47,7 @@ public class ExternalLineItemTotalPriceBuilder implements Builder<ExternalLineIt
     }
 
     /**
-     *  <p>Total price of the Line Item.</p>
+     *
      */
 
     public ExternalLineItemTotalPriceBuilder totalPrice(
@@ -59,7 +57,7 @@ public class ExternalLineItemTotalPriceBuilder implements Builder<ExternalLineIt
     }
 
     /**
-     *  <p>Total price of the Line Item.</p>
+     *
      */
 
     public ExternalLineItemTotalPriceBuilder totalPrice(final com.commercetools.api.models.common.Money totalPrice) {

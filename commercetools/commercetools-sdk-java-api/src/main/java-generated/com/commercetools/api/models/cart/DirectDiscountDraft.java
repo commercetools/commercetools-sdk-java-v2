@@ -16,9 +16,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>Represents a CartDiscount that can only be associated with a single Cart or Order.</p>
- *  <p>Direct Discounts are always active and valid, and have the default <code>Stacking</code> StackingMode. They apply in the order in which they are listed in the <code>directDiscounts</code> array of Carts or Orders, and do not have a sorting order like Cart Discounts.</p>
- *  <p>If a Direct Discount is present, any matching Cart Discounts in the Project are ignored. Additionally, a Cart or Order supports either Discount Codes or Direct Discounts at the same time.</p>
+ * DirectDiscountDraft
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -35,7 +33,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface DirectDiscountDraft extends io.vrap.rmf.base.client.Draft<DirectDiscountDraft> {
 
     /**
-     *  <p>Defines the effect the Discount will have.</p>
+     *
      */
     @NotNull
     @Valid
@@ -43,8 +41,7 @@ public interface DirectDiscountDraft extends io.vrap.rmf.base.client.Draft<Direc
     public CartDiscountValue getValue();
 
     /**
-     *  <p>Defines what part of the Cart will be discounted.</p>
-     *  <p>If <code>value</code> is set to <code>giftLineItem</code>, this must not be set.</p>
+     *  <p>Empty when the <code>value</code> has type <code>giftLineItem</code>, otherwise a CartDiscountTarget is set.</p>
      */
     @Valid
     @JsonProperty("target")

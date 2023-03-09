@@ -15,8 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>To set the Cart's custom Shipping Method (independent of the ShippingMethods managed through the Shipping Methods API) the Cart must have the <code>Single</code> ShippingMode and a <code>shippingAddress</code>.</p>
- *  <p>To unset a custom Shipping Method on a Cart, use the Set ShippingMethod update action without the <code>shippingMethod</code> field instead.</p>
+ * CartSetCustomShippingMethodAction
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CartSetCustomShippingMethodActionImpl implements CartSetCustomShippingMethodAction, ModelBase {
@@ -56,7 +55,7 @@ public class CartSetCustomShippingMethodActionImpl implements CartSetCustomShipp
     }
 
     /**
-     *  <p>Name of the custom Shipping Method.</p>
+     *
      */
 
     public String getShippingMethodName() {
@@ -64,7 +63,7 @@ public class CartSetCustomShippingMethodActionImpl implements CartSetCustomShipp
     }
 
     /**
-     *  <p>Determines the shipping price.</p>
+     *
      */
 
     public com.commercetools.api.models.shipping_method.ShippingRateDraft getShippingRate() {
@@ -72,7 +71,7 @@ public class CartSetCustomShippingMethodActionImpl implements CartSetCustomShipp
     }
 
     /**
-     *  <p>Tax Category used to determine the Tax Rate when the Cart has the <code>Platform</code> TaxMode.</p>
+     *  <p>ResourceIdentifier to a TaxCategory.</p>
      */
 
     public com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier getTaxCategory() {
@@ -80,7 +79,7 @@ public class CartSetCustomShippingMethodActionImpl implements CartSetCustomShipp
     }
 
     /**
-     *  <p>External Tax Rate for the <code>shippingRate</code> to be set if the Cart has the <code>External</code> TaxMode.</p>
+     *
      */
 
     public com.commercetools.api.models.cart.ExternalTaxRateDraft getExternalTaxRate() {

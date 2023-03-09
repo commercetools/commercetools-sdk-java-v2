@@ -15,8 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>This update action can only be used if a Customer is not assigned to a Cart. If a Customer is already assigned, the Cart has the same Customer Group as the assigned Customer.</p>
- *  <p>Setting the Customer Group also updates the LineItem <code>prices</code> according to the Customer Group.</p>
+ * CartSetCustomerGroupAction
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CartSetCustomerGroupActionImpl implements CartSetCustomerGroupAction, ModelBase {
@@ -45,7 +44,7 @@ public class CartSetCustomerGroupActionImpl implements CartSetCustomerGroupActio
     }
 
     /**
-     *  <p>Value to set. If empty, any existing value is removed.</p>
+     *  <p>ResourceIdentifier to a CustomerGroup.</p>
      */
 
     public com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier getCustomerGroup() {

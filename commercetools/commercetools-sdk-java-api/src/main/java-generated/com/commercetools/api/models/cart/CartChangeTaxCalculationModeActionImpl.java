@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Changing the tax calculation mode leads to recalculation of taxes.</p>
+ * CartChangeTaxCalculationModeAction
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CartChangeTaxCalculationModeActionImpl implements CartChangeTaxCalculationModeAction, ModelBase {
@@ -44,7 +44,7 @@ public class CartChangeTaxCalculationModeActionImpl implements CartChangeTaxCalc
     }
 
     /**
-     *  <p>New value to set.</p>
+     *
      */
 
     public com.commercetools.api.models.cart.TaxCalculationMode getTaxCalculationMode() {

@@ -39,7 +39,6 @@ import io.vrap.rmf.base.client.utils.Generated;
         @JsonSubTypes.Type(value = com.commercetools.api.models.me.MyCartRemoveLineItemActionImpl.class, name = MyCartRemoveLineItemAction.REMOVE_LINE_ITEM),
         @JsonSubTypes.Type(value = com.commercetools.api.models.me.MyCartRemovePaymentActionImpl.class, name = MyCartRemovePaymentAction.REMOVE_PAYMENT),
         @JsonSubTypes.Type(value = com.commercetools.api.models.me.MyCartSetBillingAddressActionImpl.class, name = MyCartSetBillingAddressAction.SET_BILLING_ADDRESS),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.me.MyCartSetBusinessUnitActionImpl.class, name = MyCartSetBusinessUnitAction.SET_BUSINESS_UNIT),
         @JsonSubTypes.Type(value = com.commercetools.api.models.me.MyCartSetCountryActionImpl.class, name = MyCartSetCountryAction.SET_COUNTRY),
         @JsonSubTypes.Type(value = com.commercetools.api.models.me.MyCartSetCustomFieldActionImpl.class, name = MyCartSetCustomFieldAction.SET_CUSTOM_FIELD),
         @JsonSubTypes.Type(value = com.commercetools.api.models.me.MyCartSetCustomTypeActionImpl.class, name = MyCartSetCustomTypeAction.SET_CUSTOM_TYPE),
@@ -116,10 +115,6 @@ public interface MyCartUpdateAction extends com.commercetools.api.models.Resourc
 
     public static com.commercetools.api.models.me.MyCartSetBillingAddressActionBuilder setBillingAddressBuilder() {
         return com.commercetools.api.models.me.MyCartSetBillingAddressActionBuilder.of();
-    }
-
-    public static com.commercetools.api.models.me.MyCartSetBusinessUnitActionBuilder setBusinessUnitBuilder() {
-        return com.commercetools.api.models.me.MyCartSetBusinessUnitActionBuilder.of();
     }
 
     public static com.commercetools.api.models.me.MyCartSetCountryActionBuilder setCountryBuilder() {

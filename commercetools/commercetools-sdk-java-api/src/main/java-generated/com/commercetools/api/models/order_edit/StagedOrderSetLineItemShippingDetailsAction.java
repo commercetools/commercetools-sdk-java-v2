@@ -42,7 +42,7 @@ public interface StagedOrderSetLineItemShippingDetailsAction extends StagedOrder
     public String getLineItemId();
 
     /**
-     *  <p>For order creation and updates, the sum of the <code>targets</code> must match the quantity of the Line Items or Custom Line Items.</p>
+     *
      */
     @Valid
     @JsonProperty("shippingDetails")

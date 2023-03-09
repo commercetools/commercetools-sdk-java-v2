@@ -39,7 +39,7 @@ public class CartRemoveLineItemActionBuilder implements Builder<CartRemoveLineIt
     private com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetailsToRemove;
 
     /**
-     *  <p><code>id</code> of the Line Item to remove.</p>
+     *
      */
 
     public CartRemoveLineItemActionBuilder lineItemId(final String lineItemId) {
@@ -48,7 +48,7 @@ public class CartRemoveLineItemActionBuilder implements Builder<CartRemoveLineIt
     }
 
     /**
-     *  <p>New value to set. If absent or <code>0</code>, the Line Item is removed from the Cart.</p>
+     *
      */
 
     public CartRemoveLineItemActionBuilder quantity(@Nullable final Long quantity) {
@@ -57,7 +57,8 @@ public class CartRemoveLineItemActionBuilder implements Builder<CartRemoveLineIt
     }
 
     /**
-     *  <p>Sets the LineItem <code>price</code> to the given value when decreasing the quantity of a Line Item with the <code>ExternalPrice</code> LineItemPriceMode.</p>
+     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
+     *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
      */
 
     public CartRemoveLineItemActionBuilder externalPrice(
@@ -67,7 +68,8 @@ public class CartRemoveLineItemActionBuilder implements Builder<CartRemoveLineIt
     }
 
     /**
-     *  <p>Sets the LineItem <code>price</code> to the given value when decreasing the quantity of a Line Item with the <code>ExternalPrice</code> LineItemPriceMode.</p>
+     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
+     *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
      */
 
     public CartRemoveLineItemActionBuilder externalPrice(
@@ -77,7 +79,7 @@ public class CartRemoveLineItemActionBuilder implements Builder<CartRemoveLineIt
     }
 
     /**
-     *  <p>Sets the LineItem <code>price</code> and <code>totalPrice</code> to the given value when decreasing the quantity of a Line Item with the <code>ExternalTotal</code> LineItemPriceMode.</p>
+     *
      */
 
     public CartRemoveLineItemActionBuilder externalTotalPrice(
@@ -89,7 +91,7 @@ public class CartRemoveLineItemActionBuilder implements Builder<CartRemoveLineIt
     }
 
     /**
-     *  <p>Sets the LineItem <code>price</code> and <code>totalPrice</code> to the given value when decreasing the quantity of a Line Item with the <code>ExternalTotal</code> LineItemPriceMode.</p>
+     *
      */
 
     public CartRemoveLineItemActionBuilder externalTotalPrice(
@@ -99,7 +101,7 @@ public class CartRemoveLineItemActionBuilder implements Builder<CartRemoveLineIt
     }
 
     /**
-     *  <p>Container for Line Item-specific addresses to remove.</p>
+     *
      */
 
     public CartRemoveLineItemActionBuilder shippingDetailsToRemove(
@@ -111,7 +113,7 @@ public class CartRemoveLineItemActionBuilder implements Builder<CartRemoveLineIt
     }
 
     /**
-     *  <p>Container for Line Item-specific addresses to remove.</p>
+     *
      */
 
     public CartRemoveLineItemActionBuilder shippingDetailsToRemove(

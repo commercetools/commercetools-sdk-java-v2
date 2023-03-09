@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Used for replicating an existing Cart or Order.</p>
+ * ReplicaCartDraft
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ReplicaCartDraftImpl implements ReplicaCartDraft, ModelBase {
@@ -43,7 +43,7 @@ public class ReplicaCartDraftImpl implements ReplicaCartDraft, ModelBase {
     }
 
     /**
-     *  <p>User-defined unique identifier for the Cart.</p>
+     *  <p>User-specific unique identifier of the cart.</p>
      */
 
     public String getKey() {

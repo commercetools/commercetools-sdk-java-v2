@@ -15,8 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Setting the Cart's <code>customerId</code> can lead to updates on all its LineItem <code>prices</code>.</p>
- *  <p>If the Customer with the specified <code>id</code> cannot be found, this update action returns a MissingTaxRateForCountry error.</p>
+ * CartSetCustomerIdAction
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CartSetCustomerIdActionImpl implements CartSetCustomerIdAction, ModelBase {
@@ -44,7 +43,7 @@ public class CartSetCustomerIdActionImpl implements CartSetCustomerIdAction, Mod
     }
 
     /**
-     *  <p><code>id</code> of an existing Customer. If empty, any value is removed.</p>
+     *  <p>If set, a customer with the given ID must exist in the project.</p>
      */
 
     public String getCustomerId() {

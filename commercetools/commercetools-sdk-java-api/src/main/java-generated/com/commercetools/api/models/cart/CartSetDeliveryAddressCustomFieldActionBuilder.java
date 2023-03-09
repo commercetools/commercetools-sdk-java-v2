@@ -33,7 +33,7 @@ public class CartSetDeliveryAddressCustomFieldActionBuilder
     private java.lang.Object value;
 
     /**
-     *  <p><code>id</code> of the Delivery.</p>
+     *
      */
 
     public CartSetDeliveryAddressCustomFieldActionBuilder deliveryId(final String deliveryId) {

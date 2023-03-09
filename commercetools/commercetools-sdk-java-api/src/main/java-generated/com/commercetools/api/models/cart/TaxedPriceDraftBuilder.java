@@ -31,7 +31,8 @@ public class TaxedPriceDraftBuilder implements Builder<TaxedPriceDraft> {
     private java.util.List<com.commercetools.api.models.cart.TaxPortionDraft> taxPortions;
 
     /**
-     *  <p>Total net price of the Line Item or Custom Line Item.</p>
+     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
+     *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
      */
 
     public TaxedPriceDraftBuilder totalNet(
@@ -41,7 +42,8 @@ public class TaxedPriceDraftBuilder implements Builder<TaxedPriceDraft> {
     }
 
     /**
-     *  <p>Total net price of the Line Item or Custom Line Item.</p>
+     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
+     *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
      */
 
     public TaxedPriceDraftBuilder totalNet(final com.commercetools.api.models.common.Money totalNet) {
@@ -50,7 +52,8 @@ public class TaxedPriceDraftBuilder implements Builder<TaxedPriceDraft> {
     }
 
     /**
-     *  <p>Total gross price of the Line Item or Custom Line Item.</p>
+     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
+     *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
      */
 
     public TaxedPriceDraftBuilder totalGross(
@@ -60,7 +63,8 @@ public class TaxedPriceDraftBuilder implements Builder<TaxedPriceDraft> {
     }
 
     /**
-     *  <p>Total gross price of the Line Item or Custom Line Item.</p>
+     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
+     *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
      */
 
     public TaxedPriceDraftBuilder totalGross(final com.commercetools.api.models.common.Money totalGross) {
@@ -69,8 +73,7 @@ public class TaxedPriceDraftBuilder implements Builder<TaxedPriceDraft> {
     }
 
     /**
-     *  <p>Taxable portions added to the <code>totalGross</code>.</p>
-     *  <p>Calculated from the TaxRates.</p>
+     *
      */
 
     public TaxedPriceDraftBuilder taxPortions(final com.commercetools.api.models.cart.TaxPortionDraft... taxPortions) {
@@ -79,8 +82,7 @@ public class TaxedPriceDraftBuilder implements Builder<TaxedPriceDraft> {
     }
 
     /**
-     *  <p>Taxable portions added to the <code>totalGross</code>.</p>
-     *  <p>Calculated from the TaxRates.</p>
+     *
      */
 
     public TaxedPriceDraftBuilder taxPortions(
@@ -90,8 +92,7 @@ public class TaxedPriceDraftBuilder implements Builder<TaxedPriceDraft> {
     }
 
     /**
-     *  <p>Taxable portions added to the <code>totalGross</code>.</p>
-     *  <p>Calculated from the TaxRates.</p>
+     *
      */
 
     public TaxedPriceDraftBuilder plusTaxPortions(
@@ -104,8 +105,7 @@ public class TaxedPriceDraftBuilder implements Builder<TaxedPriceDraft> {
     }
 
     /**
-     *  <p>Taxable portions added to the <code>totalGross</code>.</p>
-     *  <p>Calculated from the TaxRates.</p>
+     *
      */
 
     public TaxedPriceDraftBuilder plusTaxPortions(
@@ -118,8 +118,7 @@ public class TaxedPriceDraftBuilder implements Builder<TaxedPriceDraft> {
     }
 
     /**
-     *  <p>Taxable portions added to the <code>totalGross</code>.</p>
-     *  <p>Calculated from the TaxRates.</p>
+     *
      */
 
     public TaxedPriceDraftBuilder withTaxPortions(

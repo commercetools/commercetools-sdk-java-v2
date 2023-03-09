@@ -1023,12 +1023,7 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
     }
 
     /**
-     *  <p>Input used to select a ShippingRatePriceTier. The data type of this field depends on the <code>shippingRateInputType.type</code> configured in the Project:</p>
-     *  <ul>
-     *   <li>If <code>CartClassification</code>, it is ClassificationShippingRateInput.</li>
-     *   <li>If <code>CartScore</code>, it is ScoreShippingRateInput.</li>
-     *   <li>If <code>CartValue</code>, it cannot be used.</li>
-     *  </ul>
+     *  <p>The shippingRateInput is used as an input to select a ShippingRatePriceTier.</p>
      */
 
     public StagedOrderBuilder shippingRateInput(
@@ -1038,12 +1033,7 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
     }
 
     /**
-     *  <p>Input used to select a ShippingRatePriceTier. The data type of this field depends on the <code>shippingRateInputType.type</code> configured in the Project:</p>
-     *  <ul>
-     *   <li>If <code>CartClassification</code>, it is ClassificationShippingRateInput.</li>
-     *   <li>If <code>CartScore</code>, it is ScoreShippingRateInput.</li>
-     *   <li>If <code>CartValue</code>, it cannot be used.</li>
-     *  </ul>
+     *  <p>The shippingRateInput is used as an input to select a ShippingRatePriceTier.</p>
      */
 
     public StagedOrderBuilder shippingRateInput(

@@ -17,6 +17,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     CustomLineItemDraft customLineItemDraft = CustomLineItemDraft.builder()
  *             .name(nameBuilder -> nameBuilder)
+ *             .quantity(0.3)
  *             .money(moneyBuilder -> moneyBuilder)
  *             .slug("{slug}")
  *             .priceMode(CustomLineItemPriceMode.STANDARD)
@@ -29,7 +30,6 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
 
     private com.commercetools.api.models.common.LocalizedString name;
 
-    @Nullable
     private Long quantity;
 
     private com.commercetools.api.models.common.Money money;
@@ -51,7 +51,7 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
     private com.commercetools.api.models.cart.CustomLineItemPriceMode priceMode;
 
     /**
-     *  <p>Name of the Custom Line Item.</p>
+     *
      */
 
     public CustomLineItemDraftBuilder name(
@@ -61,7 +61,7 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
     }
 
     /**
-     *  <p>Name of the Custom Line Item.</p>
+     *
      */
 
     public CustomLineItemDraftBuilder name(final com.commercetools.api.models.common.LocalizedString name) {
@@ -70,16 +70,16 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
     }
 
     /**
-     *  <p>Number of Custom Line Items to add to the Cart.</p>
+     *  <p>The amount of a CustomLineItemin the cart. Must be a positive integer.</p>
      */
 
-    public CustomLineItemDraftBuilder quantity(@Nullable final Long quantity) {
+    public CustomLineItemDraftBuilder quantity(final Long quantity) {
         this.quantity = quantity;
         return this;
     }
 
     /**
-     *  <p>Money value of the Custom Line Item. The value can be negative.</p>
+     *
      */
 
     public CustomLineItemDraftBuilder money(
@@ -89,7 +89,7 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
     }
 
     /**
-     *  <p>Money value of the Custom Line Item. The value can be negative.</p>
+     *
      */
 
     public CustomLineItemDraftBuilder money(final com.commercetools.api.models.common.Money money) {
@@ -98,7 +98,7 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
     }
 
     /**
-     *  <p>User-defined identifier used in a deep-link URL for the Custom Line Item. It must match the pattern <code>[a-zA-Z0-9_-]{2,256}</code>.</p>
+     *
      */
 
     public CustomLineItemDraftBuilder slug(final String slug) {
@@ -107,7 +107,7 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
     }
 
     /**
-     *  <p>Used to select a Tax Rate when a Cart has the <code>Platform</code> TaxMode. This field is required for <code>Platform</code> TaxMode.</p>
+     *  <p>The given tax category will be used to select a tax rate when a cart has the TaxMode <code>Platform</code>.</p>
      */
 
     public CustomLineItemDraftBuilder taxCategory(
@@ -119,7 +119,7 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
     }
 
     /**
-     *  <p>Used to select a Tax Rate when a Cart has the <code>Platform</code> TaxMode. This field is required for <code>Platform</code> TaxMode.</p>
+     *  <p>The given tax category will be used to select a tax rate when a cart has the TaxMode <code>Platform</code>.</p>
      */
 
     public CustomLineItemDraftBuilder taxCategory(
@@ -129,7 +129,7 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
     }
 
     /**
-     *  <p>External Tax Rate for the Custom Line Item if the Cart has the <code>External</code> TaxMode.</p>
+     *  <p>An external tax rate can be set if the cart has the <code>External</code> TaxMode.</p>
      */
 
     public CustomLineItemDraftBuilder externalTaxRate(
@@ -140,7 +140,7 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
     }
 
     /**
-     *  <p>External Tax Rate for the Custom Line Item if the Cart has the <code>External</code> TaxMode.</p>
+     *  <p>An external tax rate can be set if the cart has the <code>External</code> TaxMode.</p>
      */
 
     public CustomLineItemDraftBuilder externalTaxRate(
@@ -150,7 +150,7 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
     }
 
     /**
-     *  <p>Custom Fields for the Custom Line Item.</p>
+     *  <p>The custom fields.</p>
      */
 
     public CustomLineItemDraftBuilder custom(
@@ -160,7 +160,7 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
     }
 
     /**
-     *  <p>Custom Fields for the Custom Line Item.</p>
+     *  <p>The custom fields.</p>
      */
 
     public CustomLineItemDraftBuilder custom(
@@ -170,7 +170,7 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
     }
 
     /**
-     *  <p>Container for Custom Line Item-specific addresses.</p>
+     *  <p>Container for custom line item specific address(es).</p>
      */
 
     public CustomLineItemDraftBuilder shippingDetails(
@@ -181,7 +181,7 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
     }
 
     /**
-     *  <p>Container for Custom Line Item-specific addresses.</p>
+     *  <p>Container for custom line item specific address(es).</p>
      */
 
     public CustomLineItemDraftBuilder shippingDetails(
@@ -207,7 +207,6 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
         return this.name;
     }
 
-    @Nullable
     public Long getQuantity() {
         return this.quantity;
     }
@@ -246,6 +245,7 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
 
     public CustomLineItemDraft build() {
         Objects.requireNonNull(name, CustomLineItemDraft.class + ": name is missing");
+        Objects.requireNonNull(quantity, CustomLineItemDraft.class + ": quantity is missing");
         Objects.requireNonNull(money, CustomLineItemDraft.class + ": money is missing");
         Objects.requireNonNull(slug, CustomLineItemDraft.class + ": slug is missing");
         Objects.requireNonNull(priceMode, CustomLineItemDraft.class + ": priceMode is missing");

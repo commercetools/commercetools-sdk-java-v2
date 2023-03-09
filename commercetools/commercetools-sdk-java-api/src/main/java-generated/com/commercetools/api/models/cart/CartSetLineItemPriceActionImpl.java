@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Sets the LineItem <code>price</code> and changes the <code>priceMode</code> to <code>ExternalPrice</code> LineItemPriceMode.</p>
+ * CartSetLineItemPriceAction
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CartSetLineItemPriceActionImpl implements CartSetLineItemPriceAction, ModelBase {
@@ -47,7 +47,7 @@ public class CartSetLineItemPriceActionImpl implements CartSetLineItemPriceActio
     }
 
     /**
-     *  <p><code>id</code> of the LineItem to update.</p>
+     *
      */
 
     public String getLineItemId() {
@@ -55,7 +55,8 @@ public class CartSetLineItemPriceActionImpl implements CartSetLineItemPriceActio
     }
 
     /**
-     *  <p>Value to set. If <code>externalPrice</code> is not given and the <code>priceMode</code> is <code>ExternalPrice</code>, the external price is unset and the <code>priceMode</code> is set to <code>Platform</code>.</p>
+     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
+     *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
      */
 
     public com.commercetools.api.models.common.Money getExternalPrice() {

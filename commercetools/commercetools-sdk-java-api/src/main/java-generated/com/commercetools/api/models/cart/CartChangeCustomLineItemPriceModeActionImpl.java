@@ -47,7 +47,7 @@ public class CartChangeCustomLineItemPriceModeActionImpl implements CartChangeCu
     }
 
     /**
-     *  <p><code>id</code> of the CustomLineItem to update.</p>
+     *  <p>ID of the Custom Line Item to be updated.</p>
      */
 
     public String getCustomLineItemId() {
@@ -55,7 +55,7 @@ public class CartChangeCustomLineItemPriceModeActionImpl implements CartChangeCu
     }
 
     /**
-     *  <p>New value to set. Must not be empty.</p>
+     *  <p>New value to set.</p>
      */
 
     public com.commercetools.api.models.cart.CustomLineItemPriceMode getMode() {

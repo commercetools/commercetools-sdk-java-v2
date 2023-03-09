@@ -34,7 +34,7 @@ public class CartSetItemShippingAddressCustomTypeActionBuilder
     private com.commercetools.api.models.type.FieldContainer fields;
 
     /**
-     *  <p><code>key</code> of the Address in <code>itemShippingAddress</code>.</p>
+     *
      */
 
     public CartSetItemShippingAddressCustomTypeActionBuilder addressKey(final String addressKey) {

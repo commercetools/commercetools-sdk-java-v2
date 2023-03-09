@@ -7,6 +7,7 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.cart.ItemShippingDetailsDraft;
 import com.commercetools.api.models.channel.ChannelResourceIdentifier;
@@ -17,13 +18,14 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>For Product Variant identification, either the <code>productId</code> and <code>variantId</code>, or <code>sku</code> must be provided.</p>
+ * MyLineItemDraft
  *
  * <hr>
  * Example to create an instance using the builder pattern
  * <div class=code-example>
  * <pre><code class='java'>
  *     MyLineItemDraft myLineItemDraft = MyLineItemDraft.builder()
+ *             .quantity(0.3)
  *             .build()
  * </code></pre>
  * </div>
@@ -34,75 +36,71 @@ public interface MyLineItemDraft extends com.commercetools.api.models.Customizab
         io.vrap.rmf.base.client.Draft<MyLineItemDraft> {
 
     /**
-     *  <p><code>id</code> of the Product.</p>
+     *
      */
 
     @JsonProperty("productId")
     public String getProductId();
 
     /**
-     *  <p><code>id</code> of the ProductVariant in the Product. If not provided, the Master Variant is used.</p>
+     *
      */
 
     @JsonProperty("variantId")
     public Long getVariantId();
 
     /**
-     *  <p><code>sku</code> of the ProductVariant.</p>
+     *
      */
-
-    @JsonProperty("sku")
-    public String getSku();
-
-    /**
-     *  <p>Number of Product Variants to add to the Cart.</p>
-     */
-
+    @NotNull
     @JsonProperty("quantity")
     public Long getQuantity();
 
     /**
-     *  <p>Date and time (UTC) the Product Variant is added to the Cart. If not set, it defaults to the current date and time.</p>
-     *  <p>Optional for backwards compatibility reasons.</p>
+     *  <p>When the line item was added to the cart. Optional for backwards compatibility reasons only.</p>
      */
 
     @JsonProperty("addedAt")
     public ZonedDateTime getAddedAt();
 
     /**
-     *  <p>Used to identify Inventory entries that must be reserved. The Channel must have the <code>InventorySupply</code> ChannelRoleEnum.</p>
+     *  <p>By providing supply channel information, you can unique identify inventory entries that should be reserved. The provided channel should have the InventorySupply role.</p>
      */
     @Valid
     @JsonProperty("supplyChannel")
     public ChannelResourceIdentifier getSupplyChannel();
 
     /**
-     *  <p>Used to select a Product Price. The Channel must have the <code>ProductDistribution</code> ChannelRoleEnum.</p>
-     *  <p>If the Cart is bound to a Store with <code>distributionChannels</code> set, the Channel must match one of the Store's distribution channels.</p>
+     *  <p>The channel is used to select a ProductPrice. The provided channel should have the ProductDistribution role.</p>
      */
     @Valid
     @JsonProperty("distributionChannel")
     public ChannelResourceIdentifier getDistributionChannel();
 
     /**
-     *  <p>Container for Line Item-specific addresses.</p>
+     *  <p>The custom fields.</p>
+     */
+    @Valid
+    @JsonProperty("custom")
+    public CustomFieldsDraft getCustom();
+
+    /**
+     *  <p>Container for line item specific address(es).</p>
      */
     @Valid
     @JsonProperty("shippingDetails")
     public ItemShippingDetailsDraft getShippingDetails();
 
     /**
-     *  <p>Custom Fields for the Cart.</p>
+     *
      */
-    @Valid
-    @JsonProperty("custom")
-    public CustomFieldsDraft getCustom();
+
+    @JsonProperty("sku")
+    public String getSku();
 
     public void setProductId(final String productId);
 
     public void setVariantId(final Long variantId);
-
-    public void setSku(final String sku);
 
     public void setQuantity(final Long quantity);
 
@@ -112,9 +110,11 @@ public interface MyLineItemDraft extends com.commercetools.api.models.Customizab
 
     public void setDistributionChannel(final ChannelResourceIdentifier distributionChannel);
 
+    public void setCustom(final CustomFieldsDraft custom);
+
     public void setShippingDetails(final ItemShippingDetailsDraft shippingDetails);
 
-    public void setCustom(final CustomFieldsDraft custom);
+    public void setSku(final String sku);
 
     public static MyLineItemDraft of() {
         return new MyLineItemDraftImpl();
@@ -124,13 +124,13 @@ public interface MyLineItemDraft extends com.commercetools.api.models.Customizab
         MyLineItemDraftImpl instance = new MyLineItemDraftImpl();
         instance.setProductId(template.getProductId());
         instance.setVariantId(template.getVariantId());
-        instance.setSku(template.getSku());
         instance.setQuantity(template.getQuantity());
         instance.setAddedAt(template.getAddedAt());
         instance.setSupplyChannel(template.getSupplyChannel());
         instance.setDistributionChannel(template.getDistributionChannel());
-        instance.setShippingDetails(template.getShippingDetails());
         instance.setCustom(template.getCustom());
+        instance.setShippingDetails(template.getShippingDetails());
+        instance.setSku(template.getSku());
         return instance;
     }
 

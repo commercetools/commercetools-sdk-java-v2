@@ -145,8 +145,8 @@ public class ShoppingListLineItemImpl implements ShoppingListLineItem, ModelBase
     }
 
     /**
-     *  <p>Data of the ProductVariant.</p>
-     *  <p>Returned when expanded using <code>expand=lineItems[*].variant</code>. You cannot expand only a single element of the array.</p>
+     *  <p>Data of the ProductVariant. Returned when expanded using <code>expand=lineItems[*].variant</code>.</p>
+     *  <p><em>Limitation: <code>expand=lineItems[0].variant</code> is not supported.</em></p>
      */
 
     public com.commercetools.api.models.product.ProductVariant getVariant() {
@@ -154,8 +154,8 @@ public class ShoppingListLineItemImpl implements ShoppingListLineItem, ModelBase
     }
 
     /**
-     *  <p>Slug of the current ProductData.</p>
-     *  <p>Returned when expanded using <code>expand=lineItems[*].productSlug</code>. You cannot expand only a single element of the array.</p>
+     *  <p>Slug of the current ProductData. Only returned when expanded using <code>expand=lineItems[*].productSlug</code>.</p>
+     *  <p><em>Limitation: <code>expand=lineItems[0].productSlug</code> is not supported.</em></p>
      */
 
     public com.commercetools.api.models.common.LocalizedString getProductSlug() {

@@ -15,10 +15,6 @@ public class ExtensionDestinationBuilder {
         return com.commercetools.api.models.extension.AWSLambdaDestinationBuilder.of();
     }
 
-    public com.commercetools.api.models.extension.GoogleCloudFunctionDestinationBuilder googleCloudFunctionBuilder() {
-        return com.commercetools.api.models.extension.GoogleCloudFunctionDestinationBuilder.of();
-    }
-
     public com.commercetools.api.models.extension.HttpDestinationBuilder httpBuilder() {
         return com.commercetools.api.models.extension.HttpDestinationBuilder.of();
     }

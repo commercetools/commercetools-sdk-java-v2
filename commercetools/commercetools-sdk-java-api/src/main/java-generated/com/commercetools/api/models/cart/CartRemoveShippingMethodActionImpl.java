@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Removes a Shipping Method from a Cart that has the <code>Multiple</code> ShippingMode.</p>
+ * CartRemoveShippingMethodAction
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CartRemoveShippingMethodActionImpl implements CartRemoveShippingMethodAction, ModelBase {
@@ -43,7 +43,7 @@ public class CartRemoveShippingMethodActionImpl implements CartRemoveShippingMet
     }
 
     /**
-     *  <p>User-defined unique identifier of the Shipping Method to remove from the Cart.</p>
+     *  <p>User-defined unique identifier of the Shipping Method to remove in a Cart with <code>Multiple</code> ShippingMode.</p>
      */
 
     public String getShippingKey() {

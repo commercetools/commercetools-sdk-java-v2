@@ -45,7 +45,7 @@ public class StagedOrderChangeTaxCalculationModeActionImpl
     }
 
     /**
-     *  <p>Determines in which Tax calculation mode taxed prices are calculated.</p>
+     *
      */
 
     public com.commercetools.api.models.cart.TaxCalculationMode getTaxCalculationMode() {

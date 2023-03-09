@@ -15,8 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Number of days after which a Cart with <code>Active</code> CartState is deleted since its last modification.</p>
- *  <p>If a ChangeSubscription exists for Carts, a ResourceDeletedDeliveryPayload is sent.</p>
+ * CartSetDeleteDaysAfterLastModificationAction
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CartSetDeleteDaysAfterLastModificationActionImpl
@@ -46,7 +45,7 @@ public class CartSetDeleteDaysAfterLastModificationActionImpl
     }
 
     /**
-     *  <p>Value to set. If not provided, the default value for this field configured in Project settings is assigned.</p>
+     *
      */
 
     public Integer getDeleteDaysAfterLastModification() {

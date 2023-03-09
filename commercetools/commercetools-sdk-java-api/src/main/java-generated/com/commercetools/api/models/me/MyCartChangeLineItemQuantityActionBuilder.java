@@ -36,7 +36,7 @@ public class MyCartChangeLineItemQuantityActionBuilder implements Builder<MyCart
     private com.commercetools.api.models.cart.ExternalLineItemTotalPrice externalTotalPrice;
 
     /**
-     *  <p><code>id</code> of the LineItem to update.</p>
+     *
      */
 
     public MyCartChangeLineItemQuantityActionBuilder lineItemId(final String lineItemId) {
@@ -45,8 +45,7 @@ public class MyCartChangeLineItemQuantityActionBuilder implements Builder<MyCart
     }
 
     /**
-     *  <p>New value to set.</p>
-     *  <p>If <code>0</code>, the Line Item is removed from the Cart.</p>
+     *
      */
 
     public MyCartChangeLineItemQuantityActionBuilder quantity(final Long quantity) {
@@ -55,8 +54,8 @@ public class MyCartChangeLineItemQuantityActionBuilder implements Builder<MyCart
     }
 
     /**
-     *  <p>Sets the LineItem <code>price</code> to the given value when changing the quantity of a Line Item with the <code>ExternalPrice</code> LineItemPriceMode.</p>
-     *  <p>The LineItem price is updated as described in LineItem Price selection.</p>
+     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
+     *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
      */
 
     public MyCartChangeLineItemQuantityActionBuilder externalPrice(
@@ -66,8 +65,8 @@ public class MyCartChangeLineItemQuantityActionBuilder implements Builder<MyCart
     }
 
     /**
-     *  <p>Sets the LineItem <code>price</code> to the given value when changing the quantity of a Line Item with the <code>ExternalPrice</code> LineItemPriceMode.</p>
-     *  <p>The LineItem price is updated as described in LineItem Price selection.</p>
+     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
+     *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
      */
 
     public MyCartChangeLineItemQuantityActionBuilder externalPrice(
@@ -77,7 +76,7 @@ public class MyCartChangeLineItemQuantityActionBuilder implements Builder<MyCart
     }
 
     /**
-     *  <p>Sets the LineItem <code>price</code> and <code>totalPrice</code> to the given value when changing the quantity of a Line Item with the <code>ExternalTotal</code> LineItemPriceMode.</p>
+     *
      */
 
     public MyCartChangeLineItemQuantityActionBuilder externalTotalPrice(
@@ -89,7 +88,7 @@ public class MyCartChangeLineItemQuantityActionBuilder implements Builder<MyCart
     }
 
     /**
-     *  <p>Sets the LineItem <code>price</code> and <code>totalPrice</code> to the given value when changing the quantity of a Line Item with the <code>ExternalTotal</code> LineItemPriceMode.</p>
+     *
      */
 
     public MyCartChangeLineItemQuantityActionBuilder externalTotalPrice(

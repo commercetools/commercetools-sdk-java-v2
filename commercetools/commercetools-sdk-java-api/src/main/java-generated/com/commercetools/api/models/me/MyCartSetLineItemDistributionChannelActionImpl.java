@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Setting a distribution channel for a LineItem can lead to an updated <code>price</code> as described in LineItem Price selection.</p>
+ * MyCartSetLineItemDistributionChannelAction
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class MyCartSetLineItemDistributionChannelActionImpl
@@ -48,7 +48,7 @@ public class MyCartSetLineItemDistributionChannelActionImpl
     }
 
     /**
-     *  <p><code>id</code> of the LineItem to update.</p>
+     *
      */
 
     public String getLineItemId() {
@@ -56,10 +56,7 @@ public class MyCartSetLineItemDistributionChannelActionImpl
     }
 
     /**
-     *  <ul>
-     *   <li>If present, a Reference to the Channel is set for the LineItem specified by <code>lineItemId</code>.</li>
-     *   <li>If not present, the current Reference to a distribution channel is removed from the LineItem specified by <code>lineItemId</code>. The Channel must have the <code>ProductDistribution</code> ChannelRoleEnum.</li>
-     *  </ul>
+     *  <p>ResourceIdentifier to a Channel.</p>
      */
 
     public com.commercetools.api.models.channel.ChannelResourceIdentifier getDistributionChannel() {

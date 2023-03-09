@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Controls calculation of taxed prices for Line Items, Custom Line Items, and Shipping Methods as explained in Cart tax calculation.</p>
+ * ExternalTaxRateDraft
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ExternalTaxRateDraftImpl implements ExternalTaxRateDraft, ModelBase {
@@ -24,32 +24,32 @@ public class ExternalTaxRateDraftImpl implements ExternalTaxRateDraft, ModelBase
 
     private Double amount;
 
-    private Boolean includedInPrice;
-
     private String country;
 
     private String state;
 
     private java.util.List<com.commercetools.api.models.tax_category.SubRate> subRates;
 
+    private Boolean includedInPrice;
+
     @JsonCreator
     ExternalTaxRateDraftImpl(@JsonProperty("name") final String name, @JsonProperty("amount") final Double amount,
-            @JsonProperty("includedInPrice") final Boolean includedInPrice,
             @JsonProperty("country") final String country, @JsonProperty("state") final String state,
-            @JsonProperty("subRates") final java.util.List<com.commercetools.api.models.tax_category.SubRate> subRates) {
+            @JsonProperty("subRates") final java.util.List<com.commercetools.api.models.tax_category.SubRate> subRates,
+            @JsonProperty("includedInPrice") final Boolean includedInPrice) {
         this.name = name;
         this.amount = amount;
-        this.includedInPrice = includedInPrice;
         this.country = country;
         this.state = state;
         this.subRates = subRates;
+        this.includedInPrice = includedInPrice;
     }
 
     public ExternalTaxRateDraftImpl() {
     }
 
     /**
-     *  <p>Name of the Tax Rate.</p>
+     *
      */
 
     public String getName() {
@@ -57,11 +57,7 @@ public class ExternalTaxRateDraftImpl implements ExternalTaxRateDraft, ModelBase
     }
 
     /**
-     *  <p>Percentage in the range of 0-1.</p>
-     *  <ul>
-     *   <li>If no <code>subRates</code> are specified, a value must be defined.</li>
-     *   <li>If <code>subRates</code> are specified, this can be omitted or its value must be the sum of all <code>subRates</code> amounts.</li>
-     *  </ul>
+     *  <p>Percentage in the range of [0..1]. Must be supplied if no <code>subRates</code> are specified. If <code>subRates</code> are specified then the <code>amount</code> can be omitted or it must be the sum of the amounts of all <code>subRates</code>.</p>
      */
 
     public Double getAmount() {
@@ -69,18 +65,7 @@ public class ExternalTaxRateDraftImpl implements ExternalTaxRateDraft, ModelBase
     }
 
     /**
-     *  <ul>
-     *   <li>If set to <code>false</code>, the related price is considered the net price and the provided <code>amount</code> is applied to calculate the gross price.</li>
-     *   <li>If set to <code>true</code>, the related price is considered the gross price, and the provided <code>amount</code> is applied to calculate the net price.</li>
-     *  </ul>
-     */
-
-    public Boolean getIncludedInPrice() {
-        return this.includedInPrice;
-    }
-
-    /**
-     *  <p>Country for which the tax applies.</p>
+     *  <p>A two-digit country code as per ISO 3166-1 alpha-2.</p>
      */
 
     public String getCountry() {
@@ -88,7 +73,7 @@ public class ExternalTaxRateDraftImpl implements ExternalTaxRateDraft, ModelBase
     }
 
     /**
-     *  <p>State within the specified country.</p>
+     *  <p>The state in the country</p>
      */
 
     public String getState() {
@@ -96,11 +81,19 @@ public class ExternalTaxRateDraftImpl implements ExternalTaxRateDraft, ModelBase
     }
 
     /**
-     *  <p>For countries (such as the US) where the total tax is a combination of multiple taxes (such as state and local taxes).</p>
+     *  <p>For countries (e.g. the US) where the total tax is a combination of multiple taxes (e.g. state and local taxes).</p>
      */
 
     public java.util.List<com.commercetools.api.models.tax_category.SubRate> getSubRates() {
         return this.subRates;
+    }
+
+    /**
+     *  <p>The default value for <code>includedInPrice</code> is FALSE.</p>
+     */
+
+    public Boolean getIncludedInPrice() {
+        return this.includedInPrice;
     }
 
     public void setName(final String name) {
@@ -109,10 +102,6 @@ public class ExternalTaxRateDraftImpl implements ExternalTaxRateDraft, ModelBase
 
     public void setAmount(final Double amount) {
         this.amount = amount;
-    }
-
-    public void setIncludedInPrice(final Boolean includedInPrice) {
-        this.includedInPrice = includedInPrice;
     }
 
     public void setCountry(final String country) {
@@ -131,6 +120,10 @@ public class ExternalTaxRateDraftImpl implements ExternalTaxRateDraft, ModelBase
         this.subRates = subRates;
     }
 
+    public void setIncludedInPrice(final Boolean includedInPrice) {
+        this.includedInPrice = includedInPrice;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -143,10 +136,10 @@ public class ExternalTaxRateDraftImpl implements ExternalTaxRateDraft, ModelBase
 
         return new EqualsBuilder().append(name, that.name)
                 .append(amount, that.amount)
-                .append(includedInPrice, that.includedInPrice)
                 .append(country, that.country)
                 .append(state, that.state)
                 .append(subRates, that.subRates)
+                .append(includedInPrice, that.includedInPrice)
                 .isEquals();
     }
 
@@ -154,10 +147,10 @@ public class ExternalTaxRateDraftImpl implements ExternalTaxRateDraft, ModelBase
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(name)
                 .append(amount)
-                .append(includedInPrice)
                 .append(country)
                 .append(state)
                 .append(subRates)
+                .append(includedInPrice)
                 .toHashCode();
     }
 

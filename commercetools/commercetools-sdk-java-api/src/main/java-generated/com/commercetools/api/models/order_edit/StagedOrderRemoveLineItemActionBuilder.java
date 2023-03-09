@@ -101,7 +101,7 @@ public class StagedOrderRemoveLineItemActionBuilder implements Builder<StagedOrd
     }
 
     /**
-     *  <p>For order creation and updates, the sum of the <code>targets</code> must match the quantity of the Line Items or Custom Line Items.</p>
+     *
      */
 
     public StagedOrderRemoveLineItemActionBuilder shippingDetailsToRemove(
@@ -113,7 +113,7 @@ public class StagedOrderRemoveLineItemActionBuilder implements Builder<StagedOrd
     }
 
     /**
-     *  <p>For order creation and updates, the sum of the <code>targets</code> must match the quantity of the Line Items or Custom Line Items.</p>
+     *
      */
 
     public StagedOrderRemoveLineItemActionBuilder shippingDetailsToRemove(

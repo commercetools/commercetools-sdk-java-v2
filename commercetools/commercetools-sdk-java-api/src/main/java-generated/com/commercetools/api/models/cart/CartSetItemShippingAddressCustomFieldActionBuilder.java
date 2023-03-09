@@ -33,7 +33,7 @@ public class CartSetItemShippingAddressCustomFieldActionBuilder
     private java.lang.Object value;
 
     /**
-     *  <p><code>key</code> of the Address in <code>itemShippingAddress</code>.</p>
+     *
      */
 
     public CartSetItemShippingAddressCustomFieldActionBuilder addressKey(final String addressKey) {

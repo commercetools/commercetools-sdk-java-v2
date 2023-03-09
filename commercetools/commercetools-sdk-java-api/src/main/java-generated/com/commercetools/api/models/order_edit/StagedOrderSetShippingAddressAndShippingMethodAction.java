@@ -52,7 +52,7 @@ public interface StagedOrderSetShippingAddressAndShippingMethodAction extends St
     public ShippingMethodResourceIdentifier getShippingMethod();
 
     /**
-     *  <p>Controls calculation of taxed prices for Line Items, Custom Line Items, and Shipping Methods as explained in Cart tax calculation.</p>
+     *
      */
     @Valid
     @JsonProperty("externalTaxRate")

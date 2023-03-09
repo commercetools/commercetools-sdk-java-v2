@@ -36,7 +36,7 @@ public class DiscountedLineItemPortionImpl implements DiscountedLineItemPortion,
     }
 
     /**
-     *  <p>Cart Discount applicable on the Line Item.</p>
+     *
      */
 
     public com.commercetools.api.models.cart_discount.CartDiscountReference getDiscount() {
@@ -44,7 +44,7 @@ public class DiscountedLineItemPortionImpl implements DiscountedLineItemPortion,
     }
 
     /**
-     *  <p>Money value of the discount applicable.</p>
+     *
      */
 
     public com.commercetools.api.models.common.TypedMoney getDiscountedAmount() {

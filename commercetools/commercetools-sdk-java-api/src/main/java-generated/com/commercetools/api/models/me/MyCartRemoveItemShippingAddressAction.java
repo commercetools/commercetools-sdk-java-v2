@@ -13,7 +13,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>An address can only be removed if it is not referenced in any ItemShippingTarget of the Cart.</p>
+ * MyCartRemoveItemShippingAddressAction
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -32,7 +32,7 @@ public interface MyCartRemoveItemShippingAddressAction extends MyCartUpdateActio
     String REMOVE_ITEM_SHIPPING_ADDRESS = "removeItemShippingAddress";
 
     /**
-     *  <p><code>key</code> of the Address to remove from <code>itemShippingAddresses</code>.</p>
+     *
      */
     @NotNull
     @JsonProperty("addressKey")

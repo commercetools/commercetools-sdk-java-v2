@@ -13,7 +13,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>Removes a Shipping Method from a Cart that has the <code>Multiple</code> ShippingMode.</p>
+ * CartRemoveShippingMethodAction
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -32,7 +32,7 @@ public interface CartRemoveShippingMethodAction extends CartUpdateAction {
     String REMOVE_SHIPPING_METHOD = "removeShippingMethod";
 
     /**
-     *  <p>User-defined unique identifier of the Shipping Method to remove from the Cart.</p>
+     *  <p>User-defined unique identifier of the Shipping Method to remove in a Cart with <code>Multiple</code> ShippingMode.</p>
      */
     @NotNull
     @JsonProperty("shippingKey")

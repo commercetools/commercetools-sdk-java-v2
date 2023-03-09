@@ -63,10 +63,6 @@ public class MyCartUpdateActionBuilder {
         return com.commercetools.api.models.me.MyCartSetBillingAddressActionBuilder.of();
     }
 
-    public com.commercetools.api.models.me.MyCartSetBusinessUnitActionBuilder setBusinessUnitBuilder() {
-        return com.commercetools.api.models.me.MyCartSetBusinessUnitActionBuilder.of();
-    }
-
     public com.commercetools.api.models.me.MyCartSetCountryActionBuilder setCountryBuilder() {
         return com.commercetools.api.models.me.MyCartSetCountryActionBuilder.of();
     }

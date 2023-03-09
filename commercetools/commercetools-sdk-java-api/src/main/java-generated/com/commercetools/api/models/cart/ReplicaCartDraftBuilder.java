@@ -49,7 +49,7 @@ public class ReplicaCartDraftBuilder implements Builder<ReplicaCartDraft> {
     }
 
     /**
-     *  <p>User-defined unique identifier for the Cart.</p>
+     *  <p>User-specific unique identifier of the cart.</p>
      */
 
     public ReplicaCartDraftBuilder key(@Nullable final String key) {

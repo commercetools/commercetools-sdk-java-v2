@@ -16,6 +16,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <div class=code-example>
  * <pre><code class='java'>
  *     MyLineItemDraft myLineItemDraft = MyLineItemDraft.builder()
+ *             .quantity(0.3)
  *             .build()
  * </code></pre>
  * </div>
@@ -29,10 +30,6 @@ public class MyLineItemDraftBuilder implements Builder<MyLineItemDraft> {
     @Nullable
     private Long variantId;
 
-    @Nullable
-    private String sku;
-
-    @Nullable
     private Long quantity;
 
     @Nullable
@@ -45,13 +42,16 @@ public class MyLineItemDraftBuilder implements Builder<MyLineItemDraft> {
     private com.commercetools.api.models.channel.ChannelResourceIdentifier distributionChannel;
 
     @Nullable
+    private com.commercetools.api.models.type.CustomFieldsDraft custom;
+
+    @Nullable
     private com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails;
 
     @Nullable
-    private com.commercetools.api.models.type.CustomFieldsDraft custom;
+    private String sku;
 
     /**
-     *  <p><code>id</code> of the Product.</p>
+     *
      */
 
     public MyLineItemDraftBuilder productId(@Nullable final String productId) {
@@ -60,7 +60,7 @@ public class MyLineItemDraftBuilder implements Builder<MyLineItemDraft> {
     }
 
     /**
-     *  <p><code>id</code> of the ProductVariant in the Product. If not provided, the Master Variant is used.</p>
+     *
      */
 
     public MyLineItemDraftBuilder variantId(@Nullable final Long variantId) {
@@ -69,26 +69,16 @@ public class MyLineItemDraftBuilder implements Builder<MyLineItemDraft> {
     }
 
     /**
-     *  <p><code>sku</code> of the ProductVariant.</p>
+     *
      */
 
-    public MyLineItemDraftBuilder sku(@Nullable final String sku) {
-        this.sku = sku;
-        return this;
-    }
-
-    /**
-     *  <p>Number of Product Variants to add to the Cart.</p>
-     */
-
-    public MyLineItemDraftBuilder quantity(@Nullable final Long quantity) {
+    public MyLineItemDraftBuilder quantity(final Long quantity) {
         this.quantity = quantity;
         return this;
     }
 
     /**
-     *  <p>Date and time (UTC) the Product Variant is added to the Cart. If not set, it defaults to the current date and time.</p>
-     *  <p>Optional for backwards compatibility reasons.</p>
+     *  <p>When the line item was added to the cart. Optional for backwards compatibility reasons only.</p>
      */
 
     public MyLineItemDraftBuilder addedAt(@Nullable final java.time.ZonedDateTime addedAt) {
@@ -97,7 +87,7 @@ public class MyLineItemDraftBuilder implements Builder<MyLineItemDraft> {
     }
 
     /**
-     *  <p>Used to identify Inventory entries that must be reserved. The Channel must have the <code>InventorySupply</code> ChannelRoleEnum.</p>
+     *  <p>By providing supply channel information, you can unique identify inventory entries that should be reserved. The provided channel should have the InventorySupply role.</p>
      */
 
     public MyLineItemDraftBuilder supplyChannel(
@@ -108,7 +98,7 @@ public class MyLineItemDraftBuilder implements Builder<MyLineItemDraft> {
     }
 
     /**
-     *  <p>Used to identify Inventory entries that must be reserved. The Channel must have the <code>InventorySupply</code> ChannelRoleEnum.</p>
+     *  <p>By providing supply channel information, you can unique identify inventory entries that should be reserved. The provided channel should have the InventorySupply role.</p>
      */
 
     public MyLineItemDraftBuilder supplyChannel(
@@ -118,8 +108,7 @@ public class MyLineItemDraftBuilder implements Builder<MyLineItemDraft> {
     }
 
     /**
-     *  <p>Used to select a Product Price. The Channel must have the <code>ProductDistribution</code> ChannelRoleEnum.</p>
-     *  <p>If the Cart is bound to a Store with <code>distributionChannels</code> set, the Channel must match one of the Store's distribution channels.</p>
+     *  <p>The channel is used to select a ProductPrice. The provided channel should have the ProductDistribution role.</p>
      */
 
     public MyLineItemDraftBuilder distributionChannel(
@@ -131,8 +120,7 @@ public class MyLineItemDraftBuilder implements Builder<MyLineItemDraft> {
     }
 
     /**
-     *  <p>Used to select a Product Price. The Channel must have the <code>ProductDistribution</code> ChannelRoleEnum.</p>
-     *  <p>If the Cart is bound to a Store with <code>distributionChannels</code> set, the Channel must match one of the Store's distribution channels.</p>
+     *  <p>The channel is used to select a ProductPrice. The provided channel should have the ProductDistribution role.</p>
      */
 
     public MyLineItemDraftBuilder distributionChannel(
@@ -142,7 +130,26 @@ public class MyLineItemDraftBuilder implements Builder<MyLineItemDraft> {
     }
 
     /**
-     *  <p>Container for Line Item-specific addresses.</p>
+     *  <p>The custom fields.</p>
+     */
+
+    public MyLineItemDraftBuilder custom(
+            Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraftBuilder> builder) {
+        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsDraftBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>The custom fields.</p>
+     */
+
+    public MyLineItemDraftBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFieldsDraft custom) {
+        this.custom = custom;
+        return this;
+    }
+
+    /**
+     *  <p>Container for line item specific address(es).</p>
      */
 
     public MyLineItemDraftBuilder shippingDetails(
@@ -153,7 +160,7 @@ public class MyLineItemDraftBuilder implements Builder<MyLineItemDraft> {
     }
 
     /**
-     *  <p>Container for Line Item-specific addresses.</p>
+     *  <p>Container for line item specific address(es).</p>
      */
 
     public MyLineItemDraftBuilder shippingDetails(
@@ -163,21 +170,11 @@ public class MyLineItemDraftBuilder implements Builder<MyLineItemDraft> {
     }
 
     /**
-     *  <p>Custom Fields for the Cart.</p>
+     *
      */
 
-    public MyLineItemDraftBuilder custom(
-            Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraftBuilder> builder) {
-        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsDraftBuilder.of()).build();
-        return this;
-    }
-
-    /**
-     *  <p>Custom Fields for the Cart.</p>
-     */
-
-    public MyLineItemDraftBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFieldsDraft custom) {
-        this.custom = custom;
+    public MyLineItemDraftBuilder sku(@Nullable final String sku) {
+        this.sku = sku;
         return this;
     }
 
@@ -191,12 +188,6 @@ public class MyLineItemDraftBuilder implements Builder<MyLineItemDraft> {
         return this.variantId;
     }
 
-    @Nullable
-    public String getSku() {
-        return this.sku;
-    }
-
-    @Nullable
     public Long getQuantity() {
         return this.quantity;
     }
@@ -217,26 +208,32 @@ public class MyLineItemDraftBuilder implements Builder<MyLineItemDraft> {
     }
 
     @Nullable
+    public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
+        return this.custom;
+    }
+
+    @Nullable
     public com.commercetools.api.models.cart.ItemShippingDetailsDraft getShippingDetails() {
         return this.shippingDetails;
     }
 
     @Nullable
-    public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
-        return this.custom;
+    public String getSku() {
+        return this.sku;
     }
 
     public MyLineItemDraft build() {
-        return new MyLineItemDraftImpl(productId, variantId, sku, quantity, addedAt, supplyChannel, distributionChannel,
-            shippingDetails, custom);
+        Objects.requireNonNull(quantity, MyLineItemDraft.class + ": quantity is missing");
+        return new MyLineItemDraftImpl(productId, variantId, quantity, addedAt, supplyChannel, distributionChannel,
+            custom, shippingDetails, sku);
     }
 
     /**
      * builds MyLineItemDraft without checking for non null required values
      */
     public MyLineItemDraft buildUnchecked() {
-        return new MyLineItemDraftImpl(productId, variantId, sku, quantity, addedAt, supplyChannel, distributionChannel,
-            shippingDetails, custom);
+        return new MyLineItemDraftImpl(productId, variantId, quantity, addedAt, supplyChannel, distributionChannel,
+            custom, shippingDetails, sku);
     }
 
     public static MyLineItemDraftBuilder of() {
@@ -247,13 +244,13 @@ public class MyLineItemDraftBuilder implements Builder<MyLineItemDraft> {
         MyLineItemDraftBuilder builder = new MyLineItemDraftBuilder();
         builder.productId = template.getProductId();
         builder.variantId = template.getVariantId();
-        builder.sku = template.getSku();
         builder.quantity = template.getQuantity();
         builder.addedAt = template.getAddedAt();
         builder.supplyChannel = template.getSupplyChannel();
         builder.distributionChannel = template.getDistributionChannel();
-        builder.shippingDetails = template.getShippingDetails();
         builder.custom = template.getCustom();
+        builder.shippingDetails = template.getShippingDetails();
+        builder.sku = template.getSku();
         return builder;
     }
 

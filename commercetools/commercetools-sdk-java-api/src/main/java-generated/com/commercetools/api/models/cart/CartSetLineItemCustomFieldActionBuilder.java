@@ -32,7 +32,7 @@ public class CartSetLineItemCustomFieldActionBuilder implements Builder<CartSetL
     private java.lang.Object value;
 
     /**
-     *  <p><code>id</code> of the LineItem to update.</p>
+     *
      */
 
     public CartSetLineItemCustomFieldActionBuilder lineItemId(final String lineItemId) {

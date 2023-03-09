@@ -22,6 +22,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     CartUpdateAction cartUpdateAction = CartUpdateAction.addCustomLineItemBuilder()
  *             money(moneyBuilder -> moneyBuilder)
  *             name(nameBuilder -> nameBuilder)
+ *             quantity(0.3)
  *             slug("{slug}")
  *             .build()
  * </code></pre>
@@ -57,7 +58,6 @@ import io.vrap.rmf.base.client.utils.Generated;
         @JsonSubTypes.Type(value = com.commercetools.api.models.cart.CartSetBillingAddressActionImpl.class, name = CartSetBillingAddressAction.SET_BILLING_ADDRESS),
         @JsonSubTypes.Type(value = com.commercetools.api.models.cart.CartSetBillingAddressCustomFieldActionImpl.class, name = CartSetBillingAddressCustomFieldAction.SET_BILLING_ADDRESS_CUSTOM_FIELD),
         @JsonSubTypes.Type(value = com.commercetools.api.models.cart.CartSetBillingAddressCustomTypeActionImpl.class, name = CartSetBillingAddressCustomTypeAction.SET_BILLING_ADDRESS_CUSTOM_TYPE),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.cart.CartSetBusinessUnitActionImpl.class, name = CartSetBusinessUnitAction.SET_BUSINESS_UNIT),
         @JsonSubTypes.Type(value = com.commercetools.api.models.cart.CartSetCartTotalTaxActionImpl.class, name = CartSetCartTotalTaxAction.SET_CART_TOTAL_TAX),
         @JsonSubTypes.Type(value = com.commercetools.api.models.cart.CartSetCountryActionImpl.class, name = CartSetCountryAction.SET_COUNTRY),
         @JsonSubTypes.Type(value = com.commercetools.api.models.cart.CartSetCustomFieldActionImpl.class, name = CartSetCustomFieldAction.SET_CUSTOM_FIELD),
@@ -225,10 +225,6 @@ public interface CartUpdateAction extends com.commercetools.api.models.ResourceU
 
     public static com.commercetools.api.models.cart.CartSetBillingAddressCustomTypeActionBuilder setBillingAddressCustomTypeBuilder() {
         return com.commercetools.api.models.cart.CartSetBillingAddressCustomTypeActionBuilder.of();
-    }
-
-    public static com.commercetools.api.models.cart.CartSetBusinessUnitActionBuilder setBusinessUnitBuilder() {
-        return com.commercetools.api.models.cart.CartSetBusinessUnitActionBuilder.of();
     }
 
     public static com.commercetools.api.models.cart.CartSetCartTotalTaxActionBuilder setCartTotalTaxBuilder() {

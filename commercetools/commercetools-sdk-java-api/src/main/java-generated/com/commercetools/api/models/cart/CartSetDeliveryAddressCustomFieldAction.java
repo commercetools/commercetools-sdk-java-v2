@@ -33,7 +33,7 @@ public interface CartSetDeliveryAddressCustomFieldAction extends CartUpdateActio
     String SET_DELIVERY_ADDRESS_CUSTOM_FIELD = "setDeliveryAddressCustomField";
 
     /**
-     *  <p><code>id</code> of the Delivery.</p>
+     *
      */
     @NotNull
     @JsonProperty("deliveryId")

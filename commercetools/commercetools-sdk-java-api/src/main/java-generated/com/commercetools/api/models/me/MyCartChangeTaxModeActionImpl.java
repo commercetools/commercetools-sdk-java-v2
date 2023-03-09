@@ -15,10 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <ul>
- *   <li>When <code>External</code> TaxMode is changed to <code>Platform</code> or <code>Disabled</code>, all previously set external Tax Rates are removed.</li>
- *   <li>When set to <code>Platform</code>, Line Items, Custom Line Items, and Shipping Method require a Tax Category with a Tax Rate for the Cart's <code>shippingAddress</code>.</li>
- *  </ul>
+ * MyCartChangeTaxModeAction
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class MyCartChangeTaxModeActionImpl implements MyCartChangeTaxModeAction, ModelBase {
@@ -46,7 +43,7 @@ public class MyCartChangeTaxModeActionImpl implements MyCartChangeTaxModeAction,
     }
 
     /**
-     *  <p>The new TaxMode.</p>
+     *
      */
 
     public com.commercetools.api.models.cart.TaxMode getTaxMode() {

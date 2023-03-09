@@ -14,7 +14,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 /**
  *  <p>Returned when the Cart contains a ShippingMethod that is not allowed for the Cart. In this case, the ShippingMethodState value is <code>DoesNotMatchCart</code>.</p>
- *  <p>The error is returned as a failed response to the Create Order from Cart or Create Order in Store from Cart requests.</p>
+ *  <p>The error is returned as a failed response to the Create Order from Cart or Create Order from Cart in a Store requests.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

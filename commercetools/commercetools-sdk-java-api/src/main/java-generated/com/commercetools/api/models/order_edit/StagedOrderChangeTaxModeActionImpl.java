@@ -44,7 +44,7 @@ public class StagedOrderChangeTaxModeActionImpl implements StagedOrderChangeTaxM
     }
 
     /**
-     *  <p>Indicates how taxes are set on the Cart.</p>
+     *
      */
 
     public com.commercetools.api.models.cart.TaxMode getTaxMode() {

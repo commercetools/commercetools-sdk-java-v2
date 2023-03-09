@@ -66,7 +66,7 @@ public interface StagedOrderRemoveLineItemAction extends StagedOrderUpdateAction
     public ExternalLineItemTotalPrice getExternalTotalPrice();
 
     /**
-     *  <p>For order creation and updates, the sum of the <code>targets</code> must match the quantity of the Line Items or Custom Line Items.</p>
+     *
      */
     @Valid
     @JsonProperty("shippingDetailsToRemove")

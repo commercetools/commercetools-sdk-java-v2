@@ -10,21 +10,13 @@ import com.fasterxml.jackson.annotation.JsonValue;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>Determines whether a ShippingMethod is allowed for a Cart.</p>
+ * ShippingMethodState
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public interface ShippingMethodState {
 
-    /**
-    	<p>The <a href="ctp:api:type:ShippingMethod">ShippingMethod</a> <code>predicate</code> does not match the Cart.</p>
-    	<p>Ordering this Cart returns an <a href="ctp:api:type:ShippingMethodDoesNotMatchCartError">ShippingMethodDoesNotMatchCart</a> error.</p>
-
-    */
     ShippingMethodState DOES_NOT_MATCH_CART = ShippingMethodStateEnum.DOES_NOT_MATCH_CART;
-    /**
-    	<p>Either the <a href="ctp:api:type:ShippingMethod">ShippingMethod</a> <code>predicate</code> matches the Cart or there is no <code>predicate</code> defined.</p>
 
-    */
     ShippingMethodState MATCHES_CART = ShippingMethodStateEnum.MATCHES_CART;
 
     enum ShippingMethodStateEnum implements ShippingMethodState {

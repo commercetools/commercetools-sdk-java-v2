@@ -48,7 +48,7 @@ public class MyCartSetCustomTypeActionImpl implements MyCartSetCustomTypeAction,
     }
 
     /**
-     *  <p>Defines the Type that extends the Cart with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Cart.</p>
+     *  <p>Defines the Type that extends the MyCart with Custom Fields. If absent, any existing Type and Custom Fields are removed from the MyCart.</p>
      */
 
     public com.commercetools.api.models.type.TypeResourceIdentifier getType() {
@@ -56,7 +56,7 @@ public class MyCartSetCustomTypeActionImpl implements MyCartSetCustomTypeAction,
     }
 
     /**
-     *  <p>Sets the Custom Fields fields for the Cart.</p>
+     *  <p>Sets the Custom Fields fields for the MyCart.</p>
      */
 
     public com.commercetools.api.models.type.FieldContainer getFields() {

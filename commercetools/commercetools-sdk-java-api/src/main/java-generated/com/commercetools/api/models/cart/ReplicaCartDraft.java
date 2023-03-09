@@ -15,7 +15,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>Used for replicating an existing Cart or Order.</p>
+ * ReplicaCartDraft
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -41,7 +41,7 @@ public interface ReplicaCartDraft
     public Reference getReference();
 
     /**
-     *  <p>User-defined unique identifier for the Cart.</p>
+     *  <p>User-specific unique identifier of the cart.</p>
      */
 
     @JsonProperty("key")

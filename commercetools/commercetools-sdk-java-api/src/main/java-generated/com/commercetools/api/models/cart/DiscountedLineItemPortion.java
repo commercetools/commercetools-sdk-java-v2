@@ -34,7 +34,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface DiscountedLineItemPortion {
 
     /**
-     *  <p>Cart Discount applicable on the Line Item.</p>
+     *
      */
     @NotNull
     @Valid
@@ -42,7 +42,7 @@ public interface DiscountedLineItemPortion {
     public CartDiscountReference getDiscount();
 
     /**
-     *  <p>Money value of the discount applicable.</p>
+     *
      */
     @NotNull
     @Valid

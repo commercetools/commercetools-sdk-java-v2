@@ -24,7 +24,7 @@ public class ClassificationShippingRateInputDraftBuilder implements Builder<Clas
     private String key;
 
     /**
-     *  <p>Key of the value used as a programmatic identifier.</p>
+     *
      */
 
     public ClassificationShippingRateInputDraftBuilder key(final String key) {

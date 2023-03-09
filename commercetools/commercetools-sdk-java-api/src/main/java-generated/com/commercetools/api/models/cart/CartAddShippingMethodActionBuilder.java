@@ -19,6 +19,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .shippingKey("{shippingKey}")
  *             .shippingMethod(shippingMethodBuilder -> shippingMethodBuilder)
  *             .shippingAddress(shippingAddressBuilder -> shippingAddressBuilder)
+ *             .plusDeliveries(deliveriesBuilder -> deliveriesBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -28,7 +29,7 @@ public class CartAddShippingMethodActionBuilder implements Builder<CartAddShippi
 
     private String shippingKey;
 
-    private com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifier shippingMethod;
+    private com.commercetools.api.models.shipping_method.ShippingMethodReference shippingMethod;
 
     private com.commercetools.api.models.common.BaseAddress shippingAddress;
 
@@ -36,16 +37,15 @@ public class CartAddShippingMethodActionBuilder implements Builder<CartAddShippi
     private com.commercetools.api.models.cart.ShippingRateInputDraft shippingRateInput;
 
     @Nullable
-    private com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate;
+    private String externalTaxRate;
+
+    private java.util.List<com.commercetools.api.models.order.Delivery> deliveries;
 
     @Nullable
-    private java.util.List<com.commercetools.api.models.order.DeliveryDraft> deliveries;
-
-    @Nullable
-    private com.commercetools.api.models.type.CustomFieldsDraft custom;
+    private String custom;
 
     /**
-     *  <p>User-defined identifier for the Shipping that must be unique across the Cart with <code>Multiple</code> ShippingMode.</p>
+     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multiple</code> ShippingMode.</p>
      */
 
     public CartAddShippingMethodActionBuilder shippingKey(final String shippingKey) {
@@ -54,23 +54,23 @@ public class CartAddShippingMethodActionBuilder implements Builder<CartAddShippi
     }
 
     /**
-     *  <p>RecourceIdentifier to a ShippingMethod to add to the Cart with <code>Multiple</code> ShippingMode. If the referenced Shipping Method has a predicate that does not match the Cart, an InvalidOperation error is returned.</p>
+     *  <p>Value to set. If empty, any existing value is removed.</p>
      */
 
     public CartAddShippingMethodActionBuilder shippingMethod(
-            Function<com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifierBuilder, com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifierBuilder> builder) {
+            Function<com.commercetools.api.models.shipping_method.ShippingMethodReferenceBuilder, com.commercetools.api.models.shipping_method.ShippingMethodReferenceBuilder> builder) {
         this.shippingMethod = builder
-                .apply(com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifierBuilder.of())
+                .apply(com.commercetools.api.models.shipping_method.ShippingMethodReferenceBuilder.of())
                 .build();
         return this;
     }
 
     /**
-     *  <p>RecourceIdentifier to a ShippingMethod to add to the Cart with <code>Multiple</code> ShippingMode. If the referenced Shipping Method has a predicate that does not match the Cart, an InvalidOperation error is returned.</p>
+     *  <p>Value to set. If empty, any existing value is removed.</p>
      */
 
     public CartAddShippingMethodActionBuilder shippingMethod(
-            final com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifier shippingMethod) {
+            final com.commercetools.api.models.shipping_method.ShippingMethodReference shippingMethod) {
         this.shippingMethod = shippingMethod;
         return this;
     }
@@ -96,12 +96,12 @@ public class CartAddShippingMethodActionBuilder implements Builder<CartAddShippi
     }
 
     /**
-     *  <p>Input used to select a ShippingRatePriceTier. The data type of this field depends on the <code>shippingRateInputType.type</code> configured in the Project:</p>
+     *  <p>Used as an input to select a ShippingRatePriceTier.</p>
      *  <ul>
-     *   <li>If <code>CartClassification</code>, it must be ClassificationShippingRateInputDraft.</li>
-     *   <li>If <code>CartScore</code>, it must be ScoreShippingRateInputDraft.</li>
-     *   <li>If <code>CartValue</code>, it cannot be set.</li>
+     *   <li>Must be ClassificationShippingRateInput if ShippingRateInputType is CartClassificationType.</li>
+     *   <li>Must be ScoreShippingRateInput if ShippingRateInputType is CartScoreType.</li>
      *  </ul>
+     *  <p>The <code>shippingRateInput</code> cannot be set on the Cart if CartValueType is defined.</p>
      */
 
     public CartAddShippingMethodActionBuilder shippingRateInput(
@@ -111,12 +111,12 @@ public class CartAddShippingMethodActionBuilder implements Builder<CartAddShippi
     }
 
     /**
-     *  <p>Input used to select a ShippingRatePriceTier. The data type of this field depends on the <code>shippingRateInputType.type</code> configured in the Project:</p>
+     *  <p>Used as an input to select a ShippingRatePriceTier.</p>
      *  <ul>
-     *   <li>If <code>CartClassification</code>, it must be ClassificationShippingRateInputDraft.</li>
-     *   <li>If <code>CartScore</code>, it must be ScoreShippingRateInputDraft.</li>
-     *   <li>If <code>CartValue</code>, it cannot be set.</li>
+     *   <li>Must be ClassificationShippingRateInput if ShippingRateInputType is CartClassificationType.</li>
+     *   <li>Must be ScoreShippingRateInput if ShippingRateInputType is CartScoreType.</li>
      *  </ul>
+     *  <p>The <code>shippingRateInput</code> cannot be set on the Cart if CartValueType is defined.</p>
      */
 
     public CartAddShippingMethodActionBuilder shippingRateInput(
@@ -127,52 +127,40 @@ public class CartAddShippingMethodActionBuilder implements Builder<CartAddShippi
     }
 
     /**
-     *  <p>Tax Rate used to tax a shipping expense if the Cart has the <code>External</code> TaxMode.</p>
+     *  <p>Tax Rate used to tax a shipping expense if a Cart has the <code>External</code> TaxMode.</p>
      */
 
-    public CartAddShippingMethodActionBuilder externalTaxRate(
-            Function<com.commercetools.api.models.cart.ExternalTaxRateDraftBuilder, com.commercetools.api.models.cart.ExternalTaxRateDraftBuilder> builder) {
-        this.externalTaxRate = builder.apply(com.commercetools.api.models.cart.ExternalTaxRateDraftBuilder.of())
-                .build();
-        return this;
-    }
-
-    /**
-     *  <p>Tax Rate used to tax a shipping expense if the Cart has the <code>External</code> TaxMode.</p>
-     */
-
-    public CartAddShippingMethodActionBuilder externalTaxRate(
-            @Nullable final com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate) {
+    public CartAddShippingMethodActionBuilder externalTaxRate(@Nullable final String externalTaxRate) {
         this.externalTaxRate = externalTaxRate;
         return this;
     }
 
     /**
-     *  <p>Deliveries to be shipped with the referenced Shipping Method.</p>
+     *  <p>Deliveries tied to a Shipping Method in a multi-shipping method Cart. It holds information on how items are delivered to customers.</p>
      */
 
     public CartAddShippingMethodActionBuilder deliveries(
-            @Nullable final com.commercetools.api.models.order.DeliveryDraft... deliveries) {
+            final com.commercetools.api.models.order.Delivery... deliveries) {
         this.deliveries = new ArrayList<>(Arrays.asList(deliveries));
         return this;
     }
 
     /**
-     *  <p>Deliveries to be shipped with the referenced Shipping Method.</p>
+     *  <p>Deliveries tied to a Shipping Method in a multi-shipping method Cart. It holds information on how items are delivered to customers.</p>
      */
 
     public CartAddShippingMethodActionBuilder deliveries(
-            @Nullable final java.util.List<com.commercetools.api.models.order.DeliveryDraft> deliveries) {
+            final java.util.List<com.commercetools.api.models.order.Delivery> deliveries) {
         this.deliveries = deliveries;
         return this;
     }
 
     /**
-     *  <p>Deliveries to be shipped with the referenced Shipping Method.</p>
+     *  <p>Deliveries tied to a Shipping Method in a multi-shipping method Cart. It holds information on how items are delivered to customers.</p>
      */
 
     public CartAddShippingMethodActionBuilder plusDeliveries(
-            @Nullable final com.commercetools.api.models.order.DeliveryDraft... deliveries) {
+            final com.commercetools.api.models.order.Delivery... deliveries) {
         if (this.deliveries == null) {
             this.deliveries = new ArrayList<>();
         }
@@ -181,26 +169,26 @@ public class CartAddShippingMethodActionBuilder implements Builder<CartAddShippi
     }
 
     /**
-     *  <p>Deliveries to be shipped with the referenced Shipping Method.</p>
+     *  <p>Deliveries tied to a Shipping Method in a multi-shipping method Cart. It holds information on how items are delivered to customers.</p>
      */
 
     public CartAddShippingMethodActionBuilder plusDeliveries(
-            Function<com.commercetools.api.models.order.DeliveryDraftBuilder, com.commercetools.api.models.order.DeliveryDraftBuilder> builder) {
+            Function<com.commercetools.api.models.order.DeliveryBuilder, com.commercetools.api.models.order.DeliveryBuilder> builder) {
         if (this.deliveries == null) {
             this.deliveries = new ArrayList<>();
         }
-        this.deliveries.add(builder.apply(com.commercetools.api.models.order.DeliveryDraftBuilder.of()).build());
+        this.deliveries.add(builder.apply(com.commercetools.api.models.order.DeliveryBuilder.of()).build());
         return this;
     }
 
     /**
-     *  <p>Deliveries to be shipped with the referenced Shipping Method.</p>
+     *  <p>Deliveries tied to a Shipping Method in a multi-shipping method Cart. It holds information on how items are delivered to customers.</p>
      */
 
     public CartAddShippingMethodActionBuilder withDeliveries(
-            Function<com.commercetools.api.models.order.DeliveryDraftBuilder, com.commercetools.api.models.order.DeliveryDraftBuilder> builder) {
+            Function<com.commercetools.api.models.order.DeliveryBuilder, com.commercetools.api.models.order.DeliveryBuilder> builder) {
         this.deliveries = new ArrayList<>();
-        this.deliveries.add(builder.apply(com.commercetools.api.models.order.DeliveryDraftBuilder.of()).build());
+        this.deliveries.add(builder.apply(com.commercetools.api.models.order.DeliveryBuilder.of()).build());
         return this;
     }
 
@@ -208,18 +196,7 @@ public class CartAddShippingMethodActionBuilder implements Builder<CartAddShippi
      *  <p>Custom Fields for the Shipping Method.</p>
      */
 
-    public CartAddShippingMethodActionBuilder custom(
-            Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraftBuilder> builder) {
-        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsDraftBuilder.of()).build();
-        return this;
-    }
-
-    /**
-     *  <p>Custom Fields for the Shipping Method.</p>
-     */
-
-    public CartAddShippingMethodActionBuilder custom(
-            @Nullable final com.commercetools.api.models.type.CustomFieldsDraft custom) {
+    public CartAddShippingMethodActionBuilder custom(@Nullable final String custom) {
         this.custom = custom;
         return this;
     }
@@ -228,7 +205,7 @@ public class CartAddShippingMethodActionBuilder implements Builder<CartAddShippi
         return this.shippingKey;
     }
 
-    public com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifier getShippingMethod() {
+    public com.commercetools.api.models.shipping_method.ShippingMethodReference getShippingMethod() {
         return this.shippingMethod;
     }
 
@@ -242,17 +219,16 @@ public class CartAddShippingMethodActionBuilder implements Builder<CartAddShippi
     }
 
     @Nullable
-    public com.commercetools.api.models.cart.ExternalTaxRateDraft getExternalTaxRate() {
+    public String getExternalTaxRate() {
         return this.externalTaxRate;
     }
 
-    @Nullable
-    public java.util.List<com.commercetools.api.models.order.DeliveryDraft> getDeliveries() {
+    public java.util.List<com.commercetools.api.models.order.Delivery> getDeliveries() {
         return this.deliveries;
     }
 
     @Nullable
-    public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
+    public String getCustom() {
         return this.custom;
     }
 
@@ -260,6 +236,7 @@ public class CartAddShippingMethodActionBuilder implements Builder<CartAddShippi
         Objects.requireNonNull(shippingKey, CartAddShippingMethodAction.class + ": shippingKey is missing");
         Objects.requireNonNull(shippingMethod, CartAddShippingMethodAction.class + ": shippingMethod is missing");
         Objects.requireNonNull(shippingAddress, CartAddShippingMethodAction.class + ": shippingAddress is missing");
+        Objects.requireNonNull(deliveries, CartAddShippingMethodAction.class + ": deliveries is missing");
         return new CartAddShippingMethodActionImpl(shippingKey, shippingMethod, shippingAddress, shippingRateInput,
             externalTaxRate, deliveries, custom);
     }

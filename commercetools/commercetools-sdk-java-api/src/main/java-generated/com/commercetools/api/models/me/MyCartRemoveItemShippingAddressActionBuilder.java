@@ -24,7 +24,7 @@ public class MyCartRemoveItemShippingAddressActionBuilder implements Builder<MyC
     private String addressKey;
 
     /**
-     *  <p><code>key</code> of the Address to remove from <code>itemShippingAddresses</code>.</p>
+     *
      */
 
     public MyCartRemoveItemShippingAddressActionBuilder addressKey(final String addressKey) {

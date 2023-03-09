@@ -48,7 +48,7 @@ public class CartSetCustomLineItemShippingDetailsActionImpl
     }
 
     /**
-     *  <p><code>id</code> of the CustomLineItem to update.</p>
+     *
      */
 
     public String getCustomLineItemId() {
@@ -56,7 +56,7 @@ public class CartSetCustomLineItemShippingDetailsActionImpl
     }
 
     /**
-     *  <p>Value to set. If empty, any existing value is removed.</p>
+     *
      */
 
     public com.commercetools.api.models.cart.ItemShippingDetailsDraft getShippingDetails() {

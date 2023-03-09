@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Adds a DirectDiscount, but only if no DiscountCode has been added to the Cart. Either a Discount Code or a Direct Discount can exist on a Cart at the same time.</p>
+ * CartSetDirectDiscountsAction
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CartSetDirectDiscountsActionImpl implements CartSetDirectDiscountsAction, ModelBase {
@@ -44,10 +44,7 @@ public class CartSetDirectDiscountsActionImpl implements CartSetDirectDiscountsA
     }
 
     /**
-     *  <ul>
-     *   <li>If set, all existing Direct Discounts are replaced. The discounts apply in the order they are added to the list.</li>
-     *   <li>If empty, all existing Direct Discounts are removed and all affected prices on the Cart or Order are recalculated.</li>
-     *  </ul>
+     *
      */
 
     public java.util.List<com.commercetools.api.models.cart.DirectDiscountDraft> getDiscounts() {

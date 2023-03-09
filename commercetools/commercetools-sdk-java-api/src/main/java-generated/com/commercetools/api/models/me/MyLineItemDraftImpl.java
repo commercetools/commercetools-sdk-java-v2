@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>For Product Variant identification, either the <code>productId</code> and <code>variantId</code>, or <code>sku</code> must be provided.</p>
+ * MyLineItemDraft
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class MyLineItemDraftImpl implements MyLineItemDraft, ModelBase {
@@ -23,8 +23,6 @@ public class MyLineItemDraftImpl implements MyLineItemDraft, ModelBase {
     private String productId;
 
     private Long variantId;
-
-    private String sku;
 
     private Long quantity;
 
@@ -34,35 +32,37 @@ public class MyLineItemDraftImpl implements MyLineItemDraft, ModelBase {
 
     private com.commercetools.api.models.channel.ChannelResourceIdentifier distributionChannel;
 
+    private com.commercetools.api.models.type.CustomFieldsDraft custom;
+
     private com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails;
 
-    private com.commercetools.api.models.type.CustomFieldsDraft custom;
+    private String sku;
 
     @JsonCreator
     MyLineItemDraftImpl(@JsonProperty("productId") final String productId,
-            @JsonProperty("variantId") final Long variantId, @JsonProperty("sku") final String sku,
-            @JsonProperty("quantity") final Long quantity,
+            @JsonProperty("variantId") final Long variantId, @JsonProperty("quantity") final Long quantity,
             @JsonProperty("addedAt") final java.time.ZonedDateTime addedAt,
             @JsonProperty("supplyChannel") final com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel,
             @JsonProperty("distributionChannel") final com.commercetools.api.models.channel.ChannelResourceIdentifier distributionChannel,
+            @JsonProperty("custom") final com.commercetools.api.models.type.CustomFieldsDraft custom,
             @JsonProperty("shippingDetails") final com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails,
-            @JsonProperty("custom") final com.commercetools.api.models.type.CustomFieldsDraft custom) {
+            @JsonProperty("sku") final String sku) {
         this.productId = productId;
         this.variantId = variantId;
-        this.sku = sku;
         this.quantity = quantity;
         this.addedAt = addedAt;
         this.supplyChannel = supplyChannel;
         this.distributionChannel = distributionChannel;
-        this.shippingDetails = shippingDetails;
         this.custom = custom;
+        this.shippingDetails = shippingDetails;
+        this.sku = sku;
     }
 
     public MyLineItemDraftImpl() {
     }
 
     /**
-     *  <p><code>id</code> of the Product.</p>
+     *
      */
 
     public String getProductId() {
@@ -70,7 +70,7 @@ public class MyLineItemDraftImpl implements MyLineItemDraft, ModelBase {
     }
 
     /**
-     *  <p><code>id</code> of the ProductVariant in the Product. If not provided, the Master Variant is used.</p>
+     *
      */
 
     public Long getVariantId() {
@@ -78,15 +78,7 @@ public class MyLineItemDraftImpl implements MyLineItemDraft, ModelBase {
     }
 
     /**
-     *  <p><code>sku</code> of the ProductVariant.</p>
-     */
-
-    public String getSku() {
-        return this.sku;
-    }
-
-    /**
-     *  <p>Number of Product Variants to add to the Cart.</p>
+     *
      */
 
     public Long getQuantity() {
@@ -94,8 +86,7 @@ public class MyLineItemDraftImpl implements MyLineItemDraft, ModelBase {
     }
 
     /**
-     *  <p>Date and time (UTC) the Product Variant is added to the Cart. If not set, it defaults to the current date and time.</p>
-     *  <p>Optional for backwards compatibility reasons.</p>
+     *  <p>When the line item was added to the cart. Optional for backwards compatibility reasons only.</p>
      */
 
     public java.time.ZonedDateTime getAddedAt() {
@@ -103,7 +94,7 @@ public class MyLineItemDraftImpl implements MyLineItemDraft, ModelBase {
     }
 
     /**
-     *  <p>Used to identify Inventory entries that must be reserved. The Channel must have the <code>InventorySupply</code> ChannelRoleEnum.</p>
+     *  <p>By providing supply channel information, you can unique identify inventory entries that should be reserved. The provided channel should have the InventorySupply role.</p>
      */
 
     public com.commercetools.api.models.channel.ChannelResourceIdentifier getSupplyChannel() {
@@ -111,8 +102,7 @@ public class MyLineItemDraftImpl implements MyLineItemDraft, ModelBase {
     }
 
     /**
-     *  <p>Used to select a Product Price. The Channel must have the <code>ProductDistribution</code> ChannelRoleEnum.</p>
-     *  <p>If the Cart is bound to a Store with <code>distributionChannels</code> set, the Channel must match one of the Store's distribution channels.</p>
+     *  <p>The channel is used to select a ProductPrice. The provided channel should have the ProductDistribution role.</p>
      */
 
     public com.commercetools.api.models.channel.ChannelResourceIdentifier getDistributionChannel() {
@@ -120,7 +110,15 @@ public class MyLineItemDraftImpl implements MyLineItemDraft, ModelBase {
     }
 
     /**
-     *  <p>Container for Line Item-specific addresses.</p>
+     *  <p>The custom fields.</p>
+     */
+
+    public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
+        return this.custom;
+    }
+
+    /**
+     *  <p>Container for line item specific address(es).</p>
      */
 
     public com.commercetools.api.models.cart.ItemShippingDetailsDraft getShippingDetails() {
@@ -128,11 +126,11 @@ public class MyLineItemDraftImpl implements MyLineItemDraft, ModelBase {
     }
 
     /**
-     *  <p>Custom Fields for the Cart.</p>
+     *
      */
 
-    public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
-        return this.custom;
+    public String getSku() {
+        return this.sku;
     }
 
     public void setProductId(final String productId) {
@@ -141,10 +139,6 @@ public class MyLineItemDraftImpl implements MyLineItemDraft, ModelBase {
 
     public void setVariantId(final Long variantId) {
         this.variantId = variantId;
-    }
-
-    public void setSku(final String sku) {
-        this.sku = sku;
     }
 
     public void setQuantity(final Long quantity) {
@@ -164,12 +158,16 @@ public class MyLineItemDraftImpl implements MyLineItemDraft, ModelBase {
         this.distributionChannel = distributionChannel;
     }
 
+    public void setCustom(final com.commercetools.api.models.type.CustomFieldsDraft custom) {
+        this.custom = custom;
+    }
+
     public void setShippingDetails(final com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails) {
         this.shippingDetails = shippingDetails;
     }
 
-    public void setCustom(final com.commercetools.api.models.type.CustomFieldsDraft custom) {
-        this.custom = custom;
+    public void setSku(final String sku) {
+        this.sku = sku;
     }
 
     @Override
@@ -184,13 +182,13 @@ public class MyLineItemDraftImpl implements MyLineItemDraft, ModelBase {
 
         return new EqualsBuilder().append(productId, that.productId)
                 .append(variantId, that.variantId)
-                .append(sku, that.sku)
                 .append(quantity, that.quantity)
                 .append(addedAt, that.addedAt)
                 .append(supplyChannel, that.supplyChannel)
                 .append(distributionChannel, that.distributionChannel)
-                .append(shippingDetails, that.shippingDetails)
                 .append(custom, that.custom)
+                .append(shippingDetails, that.shippingDetails)
+                .append(sku, that.sku)
                 .isEquals();
     }
 
@@ -198,13 +196,13 @@ public class MyLineItemDraftImpl implements MyLineItemDraft, ModelBase {
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(productId)
                 .append(variantId)
-                .append(sku)
                 .append(quantity)
                 .append(addedAt)
                 .append(supplyChannel)
                 .append(distributionChannel)
-                .append(shippingDetails)
                 .append(custom)
+                .append(shippingDetails)
+                .append(sku)
                 .toHashCode();
     }
 

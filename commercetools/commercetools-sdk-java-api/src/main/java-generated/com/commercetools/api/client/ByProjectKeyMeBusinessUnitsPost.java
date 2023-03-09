@@ -18,7 +18,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Automatically assigns the authenticated user to the Business Unit in the Associate Roles of <code>Admin</code> as well as <code>Buyer</code>.</p>
+ *
  *
  * <hr>
  * <div class=code-example>

@@ -15,8 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>When multiple shipping addresses are set for a Custom Line Item, use the Add CustomLineItem update action to change the shipping details. Since it is not possible for the API to infer how the overall change in the Custom Line Item quantity should be distributed over the sub-quantities, the <code>shippingDetails</code> field is kept in its current state to avoid data loss.</p>
- *  <p>To change the Custom Line Item quantity and shipping details together, use this update action in combination with the Set CustomLineItemShippingDetails update action in a single Cart update command.</p>
+ * CartChangeCustomLineItemQuantityAction
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CartChangeCustomLineItemQuantityActionImpl implements CartChangeCustomLineItemQuantityAction, ModelBase {
@@ -48,7 +47,7 @@ public class CartChangeCustomLineItemQuantityActionImpl implements CartChangeCus
     }
 
     /**
-     *  <p><code>id</code> of the CustomLineItem to update.</p>
+     *
      */
 
     public String getCustomLineItemId() {
@@ -56,8 +55,7 @@ public class CartChangeCustomLineItemQuantityActionImpl implements CartChangeCus
     }
 
     /**
-     *  <p>New value to set.</p>
-     *  <p>If <code>0</code>, the Custom Line Item is removed from the Cart.</p>
+     *
      */
 
     public Long getQuantity() {

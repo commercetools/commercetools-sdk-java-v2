@@ -33,7 +33,7 @@ public class CartSetCustomLineItemCustomTypeActionBuilder implements Builder<Car
     private com.commercetools.api.models.type.FieldContainer fields;
 
     /**
-     *  <p><code>id</code> of the CustomLineItem to update.</p>
+     *
      */
 
     public CartSetCustomLineItemCustomTypeActionBuilder customLineItemId(final String customLineItemId) {

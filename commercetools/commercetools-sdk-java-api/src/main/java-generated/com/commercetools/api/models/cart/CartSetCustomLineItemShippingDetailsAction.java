@@ -33,14 +33,14 @@ public interface CartSetCustomLineItemShippingDetailsAction extends CartUpdateAc
     String SET_CUSTOM_LINE_ITEM_SHIPPING_DETAILS = "setCustomLineItemShippingDetails";
 
     /**
-     *  <p><code>id</code> of the CustomLineItem to update.</p>
+     *
      */
     @NotNull
     @JsonProperty("customLineItemId")
     public String getCustomLineItemId();
 
     /**
-     *  <p>Value to set. If empty, any existing value is removed.</p>
+     *
      */
     @Valid
     @JsonProperty("shippingDetails")

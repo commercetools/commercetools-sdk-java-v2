@@ -11,12 +11,12 @@ final class VariantIdentifierImpl implements ByIdVariantIdentifier, BySkuVariant
     @Nullable
     private final String productId;
     @Nullable
-    private final Integer variantId;
+    private final Long variantId;
     @Nullable
     private final String sku;
 
     @JsonCreator
-    VariantIdentifierImpl(@Nullable final String productId, @Nullable final Integer variantId,
+    VariantIdentifierImpl(@Nullable final String productId, @Nullable final Long variantId,
             @Nullable final String sku) {
         this.productId = productId;
         this.variantId = variantId;
@@ -31,7 +31,7 @@ final class VariantIdentifierImpl implements ByIdVariantIdentifier, BySkuVariant
 
     @Nullable
     @Override
-    public Integer getVariantId() {
+    public Long getVariantId() {
         return variantId;
     }
 

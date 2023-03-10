@@ -177,7 +177,9 @@ public class CompanyImpl implements Company, ModelBase {
     }
 
     /**
-     *  <p>References to Stores the Business Unit is associated with. If empty, the Business Unit can only create Carts, Orders, or Quotes that have no <code>store</code> value. If not empty, the Business Unit can only be linked to Carts and Orders of a referenced Store. Only present when <code>storeMode</code> is <code>Explicit</code>.</p>
+     *  <p>References to Stores the Business Unit is associated with. Only present when <code>storeMode</code> is <code>Explicit</code>.</p>
+     *  <p>If the Business Unit has Stores defined, then all of its Carts, Orders, Quotes, or Quote Requests must belong to one of the Business Unit's Stores.</p>
+     *  <p>If the Business Unit has no Stores, then all of its Carts, Orders, Quotes, or Quote Requests must not belong to any Store.</p>
      */
 
     public java.util.List<com.commercetools.api.models.store.StoreKeyReference> getStores() {

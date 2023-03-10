@@ -1393,17 +1393,17 @@ public class HelperMethodsTest {
     //            Objects.requireNonNull(product.getMasterData().getStaged().getMasterVariant().getIdentifier()));
     //    }
 
-    public void productProjectionFindMatchingVariants() {
-        Optional<ProductVariant> productVariant = productProjectionStaged.findMatchingVariants()
-                .stream()
-                .filter(variant -> variant.hasAttribute("size-attribute"))
-                .findFirst();
-    }
-
-    public void productProjectionFindFirstMatchingVariants() {
-        Optional<ProductVariant> productVariant = productProjectionStaged.findFirstMatchingVariant()
-                .filter(variant -> variant.hasAttribute("size-attribute"));
-    }
+    //    public void productProjectionFindMatchingVariants() {
+    //        Optional<ProductVariant> productVariant = productProjectionStaged.findMatchingVariants()
+    //                .stream()
+    //                .filter(variant -> variant.hasAttribute("size-attribute"))
+    //                .findFirst();
+    //    }
+    //
+    //    public void productProjectionFindFirstMatchingVariants() {
+    //        Optional<ProductVariant> productVariant = productProjectionStaged.findFirstMatchingVariant()
+    //                .filter(variant -> variant.hasAttribute("size-attribute"));
+    //    }
 
     public void productSetKeyUnset() {
         final Product updatedProduct = projectApiRoot.products()
@@ -1651,17 +1651,17 @@ public class HelperMethodsTest {
         final ProductTypeReference productTypeReference = productType.toReference();
     }
 
-    public void productTypeGetAttribute() {
-        final ProductVariant masterVariant = product.getMasterData().getStaged().getMasterVariant();
-
-        final Attribute attribute = masterVariant.getAttribute("attribute-name");
-    }
-
-    public void productTypeFindAttribute() {
-        final ProductVariant masterVariant = product.getMasterData().getStaged().getMasterVariant();
-
-        final Optional<Attribute> attribute = masterVariant.findAttribute("attribute-name");
-    }
+    //    public void productTypeGetAttribute() {
+    //        final ProductVariant masterVariant = product.getMasterData().getStaged().getMasterVariant();
+    //
+    //        final Attribute attribute = masterVariant.getAttribute("attribute-name");
+    //    }
+    //
+    //    public void productTypeFindAttribute() {
+    //        final ProductVariant masterVariant = product.getMasterData().getStaged().getMasterVariant();
+    //
+    //        final Optional<Attribute> attribute = masterVariant.findAttribute("attribute-name");
+    //    }
 
     public void productTypeSetKeyUnset() {
         final ProductType updatedProductType = projectApiRoot.productTypes()

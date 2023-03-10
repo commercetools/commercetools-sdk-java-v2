@@ -29,7 +29,7 @@ class ResponseSerializerImpl implements ResponseSerializer {
                 response.getMessage(), response.getContextMap());
         }
         catch (IOException e) {
-            throw new RuntimeException(e);
+            throw new DeserializationException(e.getMessage(), e);
         }
     }
 
@@ -43,7 +43,7 @@ class ResponseSerializerImpl implements ResponseSerializer {
                 response.getMessage(), response.getContextMap());
         }
         catch (IOException e) {
-            throw new RuntimeException(e);
+            throw new DeserializationException(e.getMessage(), e);
         }
     }
 
@@ -58,7 +58,7 @@ class ResponseSerializerImpl implements ResponseSerializer {
                 response.getMessage(), response.getContextMap());
         }
         catch (IOException e) {
-            throw new RuntimeException(e);
+            throw new DeserializationException(e.getMessage(), e);
         }
     }
 

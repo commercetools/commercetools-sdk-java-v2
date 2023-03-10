@@ -237,7 +237,7 @@ public class MoneyTest {
     @Test
     public void serialization() {
         Cart cart = Cart.builder()
-                .totalPrice(b -> b.centAmount(100L).fractionDigits(2).currencyCode("EUR"))
+                .totalPrice(b -> b.centPrecisionBuilder().centAmount(100L).fractionDigits(2).currencyCode("EUR"))
                 .buildUnchecked();
 
         JsonNode cartNode = JsonUtils.toJsonNode(cart);

@@ -15,11 +15,9 @@ import com.commercetools.api.models.tax_category.TaxRate;
 import com.fasterxml.jackson.databind.JsonNode;
 
 /**
- * <h2 id=using>Helper Methods</h2>
+ * <p>The helper methods simplify the use of our SDK.</p>
  *
- * <p>The helper methods simplify the use of our SDK. The list below is sorted by the endpoint.</p>
- *
- *
+ * <p>The list below is sorted by endpoint.</p>
  *
  * <h3>Business Units</h3>
  *
@@ -338,10 +336,13 @@ import com.fasterxml.jackson.databind.JsonNode;
  * <p>{@link com.commercetools.api.models.product.BySkuVariantIdentifier#of(String)}</p>
  * {@include.example example.HelperMethodsTest#productBySkuVariantIdentifierOf()}
  * <p>{@link com.commercetools.api.models.product.ProductProjection#findVariant(ByIdVariantIdentifier)}</p>
+ * To be added
  * {@include.example example.HelperMethodsTest#productProjectionFindVariant()}
  * <p>{@link com.commercetools.api.models.product.ProductProjection#findMatchingVariants()}</p>
+ * To be added
  * {@include.example example.HelperMethodsTest#productProjectionFindMatchingVariants()}
  * <p>{@link com.commercetools.api.models.product.ProductProjection#findFirstMatchingVariant()}</p>
+ * To be added
  * {@include.example example.HelperMethodsTest#productProjectionFindFirstMatchingVariants()}
  *
  * <p>{@link com.commercetools.api.models.product.ProductSetKeyAction#ofUnset()}</p>
@@ -400,8 +401,10 @@ import com.fasterxml.jackson.databind.JsonNode;
  * <p>{@link com.commercetools.api.models.product_type.ProductType#toReference()}</p>
  * {@include.example example.HelperMethodsTest#productTypeToReference()}
  * <p>{@link com.commercetools.api.models.product_type.AttributeDefinitionContainer#getAttribute(String)}</p>
+ * To be added
  * {@include.example example.HelperMethodsTest#productTypeGetAttribute()}
  * <p>{@link com.commercetools.api.models.product_type.AttributeDefinitionContainer#findAttribute(String)}</p>
+ * To be added
  * {@include.example example.HelperMethodsTest#productTypeFindAttribute()}
  * <p>{@link com.commercetools.api.models.product_type.ProductTypeSetKeyAction#ofUnset()}</p>
  * {@include.example example.HelperMethodsTest#productTypeSetKeyUnset()}

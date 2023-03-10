@@ -1388,10 +1388,10 @@ public class HelperMethodsTest {
         final BySkuVariantIdentifier bySkuVariantIdentifier = BySkuVariantIdentifier.of(lineItem.getVariant().getSku());
     }
 
-    public void productProjectionFindVariant() {
-        Optional<ProductVariant> productVariant = productProjectionStaged.findVariant(
-            Objects.requireNonNull(product.getMasterData().getStaged().getMasterVariant().getIdentifier()));
-    }
+    //    public void productProjectionFindVariant() {
+    //        Optional<ProductVariant> productVariant = productProjectionStaged.findVariant(
+    //            Objects.requireNonNull(product.getMasterData().getStaged().getMasterVariant().getIdentifier()));
+    //    }
 
     public void productProjectionFindMatchingVariants() {
         Optional<ProductVariant> productVariant = productProjectionStaged.findMatchingVariants()

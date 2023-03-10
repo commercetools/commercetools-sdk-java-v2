@@ -17,7 +17,7 @@ import com.fasterxml.jackson.databind.JsonNode;
 /**
  * <h2 id=using>Helper Methods</h2>
  *
- * <p>These helper methods simplify the use of our SDK.</p>
+ * <p>The helper methods simplify the use of our SDK. The list below is sorted by the endpoint.</p>
  *
  *
  *
@@ -175,11 +175,11 @@ import com.fasterxml.jackson.databind.JsonNode;
  * {@include.example example.HelperMethodsTest#calculatesAppliedTaxes()}
  * <p>{@link com.commercetools.api.models.common.MoneyUtil#calculateGrossPrice(MonetaryAmount, TaxRate)}</p>
  * {@include.example example.HelperMethodsTest#calculateGrossPrice()}
- * <p>{@link com.commercetools.api.models.common.MoneyUtil#calculateNetPrice(MonetaryAmount, TaxRate)} MonetaryAmount calculateNetPrice(final MonetaryAmount amount, final TaxRate taxRate)</p>
+ * <p>{@link com.commercetools.api.models.common.MoneyUtil#calculateNetPrice(MonetaryAmount, TaxRate)}</p>
  * {@include.example example.HelperMethodsTest#calculateNetPrice()}
- * <p>{@link com.commercetools.api.models.common.MoneyUtil#convertNetToGrossPrice(MonetaryAmount, double)} MonetaryAmount convertNetToGrossPrice(final MonetaryAmount netAmount, final double taxRate)</p>
+ * <p>{@link com.commercetools.api.models.common.MoneyUtil#convertNetToGrossPrice(MonetaryAmount, double)}</p>
  * {@include.example example.HelperMethodsTest#convertNetToGross()}
- * <p>{@link com.commercetools.api.models.common.MoneyUtil#convertGrossToNetPrice(MonetaryAmount, double)} MonetaryAmount convertGrossToNetPrice(final MonetaryAmount grossAmount, final double taxRate)</p>
+ * <p>{@link com.commercetools.api.models.common.MoneyUtil#convertGrossToNetPrice(MonetaryAmount, double)}</p>
  * {@include.example example.HelperMethodsTest#convertGrossToNetPrice()}
  *
  * <h3>Customers</h3>
@@ -306,6 +306,7 @@ import com.fasterxml.jackson.databind.JsonNode;
  * <p>{@link com.commercetools.api.client.ByProjectKeyOrdersGet#byCustomerId(String)}</p>
  * {@include.example example.HelperMethodsTest#getOrderByCustomerId()}
  * <p>{@link com.commercetools.api.client.ByProjectKeyOrdersGet#byCustomerEmail(String)}
+ * {@include.example example.HelperMethodsTest#getOrderByCustomerEmail()}
  *
  * <h3>Payments</h3>
  *

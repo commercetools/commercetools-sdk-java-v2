@@ -1,17 +1,18 @@
 
 package commercetools.order;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import com.commercetools.api.models.order.Order;
 import com.commercetools.api.models.order.OrderPagedSearchResponse;
 import com.commercetools.api.models.order.OrderSearchQuery;
+import com.commercetools.api.models.order.OrderSearchSorting;
 import com.commercetools.api.models.project.OrderSearchStatus;
 import com.commercetools.api.models.project.Project;
 import com.commercetools.api.models.project.ProjectUpdateActionBuilder;
 import com.commercetools.api.models.project.ProjectUpdateBuilder;
-import com.fasterxml.jackson.annotation.JsonUnwrapped;
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.node.ObjectNode;
+import com.fasterxml.jackson.annotation.JsonAnyGetter;
 import commercetools.utils.CommercetoolsTestUtils;
 
 import org.assertj.core.api.Assertions;
@@ -50,46 +51,59 @@ public class OrderQueryTests {
     @Test
     public void search() {
         OrdersFixtures.withOrder(order -> {
-            try {
-                Project project = CommercetoolsTestUtils.getProjectApiRoot().get().executeBlocking().getBody();
-                CommercetoolsTestUtils.getProjectApiRoot()
-                        .post(ProjectUpdateBuilder.of()
-                                .plusActions(ProjectUpdateActionBuilder.of()
-                                        .changeOrderSearchStatusBuilder()
-                                        .status(OrderSearchStatus.ACTIVATED)
-                                        .build())
-                                .version(project.getVersion())
-                                .build())
-                        .executeBlocking();
-            }
-            catch (Exception e) {
-                System.out.println(e);
-            }
+            ensureOrderSearchIndexing();
 
-            try {
-
-                OrderPagedSearchResponse response = CommercetoolsTestUtils.getProjectApiRoot()
-                        .orders()
-                        .search()
-                        .post(orderSearchRequestBuilder -> orderSearchRequestBuilder.query(new OrderSearchQuery() {
-                            @JsonUnwrapped
-                            public ObjectNode getValue() throws JsonProcessingException {
-                                final ObjectMapper mapper = new ObjectMapper();
-                                return mapper.createObjectNode()
-                                        .set("exists",
-                                            mapper.createObjectNode()
-                                                    .putObject("exists")
-                                                    .put("field", "custom.deliveryDate")
-                                                    .put("customType", "StringType"));
+            OrderPagedSearchResponse response = CommercetoolsTestUtils.getProjectApiRoot()
+                    .orders()
+                    .search()
+                    .post(orderSearchRequestBuilder -> orderSearchRequestBuilder.query(new OrderSearchQuery() {
+                        /*
+                        {
+                            "exists": {
+                                "field": "custom.deliveryDate",
+                                "customType": "StringType"
                             }
-                        }))
-                        .executeBlocking()
-                        .getBody();
-                Assertions.assertThat(response).isNotNull();
-            }
-            catch (Exception e) {
-                System.out.println(e);
-            }
+                        }
+                        */
+                        @JsonAnyGetter
+                        public Map<String, Object> getValue() {
+                            final Map<String, Object> mapper = new HashMap<>();
+                            final Map<String, Object> exists = new HashMap<>();
+                            exists.put("field", "custom.deliveryDate");
+                            exists.put("customType", "StringType");
+                            mapper.put("exists", exists);
+                            return mapper;
+                        }
+                    }).sort(new OrderSearchSorting() {
+                        @JsonAnyGetter
+                        public Map<String, Object> getValue() {
+                            final Map<String, Object> mapper = new HashMap<>();
+                            mapper.put("field", "createdAt");
+                            mapper.put("order", "desc");
+                            return mapper;
+                        }
+                    }).limit(20))
+                    .executeBlocking()
+                    .getBody();
+            Assertions.assertThat(response).isNotNull();
         });
+    }
+
+    private static void ensureOrderSearchIndexing() {
+        try {
+            Project project = CommercetoolsTestUtils.getProjectApiRoot().get().executeBlocking().getBody();
+            CommercetoolsTestUtils.getProjectApiRoot()
+                    .post(ProjectUpdateBuilder.of()
+                            .plusActions(ProjectUpdateActionBuilder.of()
+                                    .changeOrderSearchStatusBuilder()
+                                    .status(OrderSearchStatus.ACTIVATED)
+                                    .build())
+                            .version(project.getVersion())
+                            .build())
+                    .executeBlocking();
+        }
+        catch (Exception e) {
+            // ignore exception in this case
+        }
     }
 }

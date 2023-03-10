@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html th:fragment="layout (title, content)" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title th:replace="${title}">Checkout app</title>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="/resources/lib/bootstrap/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css"  href="/resources/css/site.css"/>
+    <link rel="icon" type="image/x-icon" href="/resources/favicon.ico">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container">
+                <a class="brand" href="/">
+                    <img width="100" src="https://commercetools.com/_build/images/logos/commercetools-logo-desktop.svg" alt="commercetools"/>
+                </a> &nbsp;
+                <a class="navbar-brand" th:href="@{/}">Checkout App</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" th:href="@{/}">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" th:href="@{/p}">Products</a>
+                        </li>
+                    </ul>
+                    <div th:replace="shared/login-partial.html"></div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            <p th:replace="${content}">Layout content</p>
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2021 - commercetools
+        </div>
+    </footer>
+    <script src="/resources/lib/jquery/dist/jquery.min.js"></script>
+    <script src="/resources/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/resources/js/site.js"></script>
+</body>
+</html>

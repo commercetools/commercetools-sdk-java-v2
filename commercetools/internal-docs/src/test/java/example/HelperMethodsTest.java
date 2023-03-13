@@ -2100,6 +2100,10 @@ public class HelperMethodsTest {
         final TaxCategoryReference taxCategoryReference = taxCategory.toReference();
     }
 
+    public void taxCategoryReferenceTypeId() {
+        ReferenceTypeId referenceTypeId = TaxCategory.referenceTypeId();
+    }
+
     // Type helper methods examples
 
     Type type;
@@ -2110,6 +2114,10 @@ public class HelperMethodsTest {
 
     public void typeToReference() {
         final TypeReference typeReference = type.toReference();
+    }
+
+    public void typeReferenceTypeId() {
+        ReferenceTypeId referenceTypeId = Type.referenceTypeId();
     }
 
     public void typeGetFieldDefinitionByName() {
@@ -2141,6 +2149,10 @@ public class HelperMethodsTest {
 
     public void zoneToReference() {
         final ZoneReference zoneReference = zone.toReference();
+    }
+
+    public void zoneReferenceTypeId() {
+        ReferenceTypeId referenceTypeId = Zone.referenceTypeId();
     }
 
     public void zoneContains() {

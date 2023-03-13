@@ -574,6 +574,8 @@ import com.fasterxml.jackson.databind.JsonNode;
  * {@include.example example.HelperMethodsTest#typeResourceIdentifier()}
  * <p>{@link com.commercetools.api.models.type.Type#toReference()}</p>
  * {@include.example example.HelperMethodsTest#typeToReference()}
+ * <p>{@link com.commercetools.api.models.type.Type#referenceTypeId()}</p>
+ * {@include.example example.HelperMethodsTest#typeReferenceTypeId()}
  * <p>{@link com.commercetools.api.models.type.Type#getFieldDefinitionByName(String)}</p>
  * {@include.example example.HelperMethodsTest#typeGetFieldDefinitionByName()}
  * <p>{@link com.commercetools.api.models.type.CustomFields#toDraft()}</p>
@@ -587,6 +589,8 @@ import com.fasterxml.jackson.databind.JsonNode;
  * {@include.example example.HelperMethodsTest#zoneResourceIdentifier()}
  * <p>{@link com.commercetools.api.models.zone.Zone#toReference()}</p>
  * {@include.example example.HelperMethodsTest#zoneToReference()}
+ * <p>{@link com.commercetools.api.models.zone.Zone#referenceTypeId()}</p>
+ * {@include.example example.HelperMethodsTest#zoneReferenceTypeId()}
  * <p>{@link com.commercetools.api.models.zone.Zone#contains(String)}</p>
  * {@include.example example.HelperMethodsTest#zoneContains()}
  *

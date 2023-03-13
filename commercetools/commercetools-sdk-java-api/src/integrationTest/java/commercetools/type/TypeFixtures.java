@@ -37,7 +37,7 @@ public class TypeFixtures {
                 .key(CommercetoolsTestUtils.randomKey())
                 .name(CommercetoolsTestUtils.randomLocalizedString())
                 .resourceTypeIds(Arrays.asList(ResourceTypeId.ASSET, ResourceTypeId.CATEGORY, ResourceTypeId.ORDER,
-                    ResourceTypeId.CART_DISCOUNT))
+                    ResourceTypeId.CART_DISCOUNT, ResourceTypeId.PAYMENT_INTERFACE_INTERACTION, ResourceTypeId.PAYMENT))
                 .withFieldDefinitions(
                     fieldDefinitionBuilder -> fieldDefinitionBuilder.type(CustomFieldStringTypeBuilder.of().build())
                             .name("string-field")

@@ -30,7 +30,7 @@ public interface TaxMode {
     */
     TaxMode EXTERNAL = TaxModeEnum.EXTERNAL;
     /**
-    	<p>Tax amounts, Tax Rates, and tax portions are set externally per <a href="ctp:api:type:ExternalTaxRateDraft">ExternalTaxRateDraft</a>.
+    	<p>Tax amounts, Tax Rates, and tax portions are set externally per <a href="ctp:api:type:ExternalTaxAmountDraft">ExternalTaxAmountDraft</a>.
     	A Cart can be ordered only if the Cart and all Line Items, Custom Line Items, and the Shipping Method have an external tax amount and rate set.</p>
     	<p>Price-specific update actions on Carts require external recalculation of the total gross price.
     	Hence, the <code>externalTaxAmount</code> is removed in these cases and must be reset with <a href="ctp:api:type:CartSetLineItemTaxAmountAction">Set LineItem TaxAmount</a>, <a href="ctp:api:type:CartSetCustomLineItemTaxAmountAction">Set CustomLineItem TaxAmount</a>, or <a href="ctp:api:type:CartSetShippingMethodTaxAmountAction">Set ShippingMethod TaxAmount</a> update actions.</p>

@@ -1436,22 +1436,31 @@ public class HelperMethodsTest {
         final BySkuVariantIdentifier bySkuVariantIdentifier = BySkuVariantIdentifier.of(lineItem.getVariant().getSku());
     }
 
-    //    public void productProjectionFindVariant() {
-    //        Optional<ProductVariant> productVariant = productProjectionStaged.findVariant(
-    //            Objects.requireNonNull(product.getMasterData().getStaged().getMasterVariant().getIdentifier()));
-    //    }
+    public void productProjectionFindVariant() {
+        ProductProjectionPagedSearchResponse response = null;
 
-    //    public void productProjectionFindMatchingVariants() {
-    //        Optional<ProductVariant> productVariant = productProjectionStaged.findMatchingVariants()
-    //                .stream()
-    //                .filter(variant -> variant.hasAttribute("size-attribute"))
-    //                .findFirst();
-    //    }
-    //
-    //    public void productProjectionFindFirstMatchingVariants() {
-    //        Optional<ProductVariant> productVariant = productProjectionStaged.findFirstMatchingVariant()
-    //                .filter(variant -> variant.hasAttribute("size-attribute"));
-    //    }
+        ProductVariant productVariant = response.getResults()
+                .stream()
+                .map(productProjection -> productProjection.findVariant(ByIdVariantIdentifier.of("abc", 3L)))
+                .filter(Optional::isPresent)
+                .map(Optional::get)
+                .findFirst()
+                .get();
+    }
+
+    public void productProjectionFindMatchingVariants() {
+        Attribute attribute = AttributeBuilder.of().name("string").value("color").build();
+        Optional<ProductVariant> productVariant = productProjectionStaged.findMatchingVariants()
+                .stream()
+                .filter(variant -> variant.getAttributes().contains(attribute))
+                .findAny();
+    }
+
+    public void productProjectionFindFirstMatchingVariants() {
+        Attribute attribute = AttributeBuilder.of().name("string").value("size").build();
+        Optional<ProductVariant> productVariant = productProjectionStaged.findFirstMatchingVariant()
+                .filter(variant -> variant.getAttributes().contains(attribute));
+    }
 
     public void productSetKeyUnset() {
         final Product updatedProduct = projectApiRoot.products()
@@ -1711,17 +1720,13 @@ public class HelperMethodsTest {
         ReferenceTypeId referenceTypeId = ProductType.referenceTypeId();
     }
 
-    //    public void productTypeGetAttribute() {
-    //        final ProductVariant masterVariant = product.getMasterData().getStaged().getMasterVariant();
-    //
-    //        final Attribute attribute = masterVariant.getAttribute("attribute-name");
-    //    }
-    //
-    //    public void productTypeFindAttribute() {
-    //        final ProductVariant masterVariant = product.getMasterData().getStaged().getMasterVariant();
-    //
-    //        final Optional<Attribute> attribute = masterVariant.findAttribute("attribute-name");
-    //    }
+    public void productTypeGetAttribute() {
+        final Attribute attribute = (Attribute) productType.getAttribute("attribute-name");
+    }
+
+    public void productTypeFindAttribute() {
+        final Optional<AttributeDefinition> attribute = productType.findAttribute("attribute-name");
+    }
 
     public void productTypeSetKeyUnset() {
         final ProductType updatedProductType = projectApiRoot.productTypes()

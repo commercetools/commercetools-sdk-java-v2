@@ -86,7 +86,7 @@ public interface Price extends com.commercetools.api.models.Customizable<Price>,
     public ZonedDateTime getValidFrom();
 
     /**
-     *  <p>Date and time until this Price is valid.</p>
+     *  <p>Date and time until this Price is valid. Prices that are no longer valid are not automatically removed, but they can be removed if necessary.</p>
      */
 
     @JsonProperty("validUntil")

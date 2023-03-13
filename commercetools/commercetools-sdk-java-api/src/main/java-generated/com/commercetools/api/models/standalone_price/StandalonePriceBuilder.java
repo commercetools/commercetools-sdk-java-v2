@@ -253,7 +253,7 @@ public class StandalonePriceBuilder implements Builder<StandalonePrice> {
     }
 
     /**
-     *  <p>Date until the Price is valid.</p>
+     *  <p>Date until the Price is valid. Standalone Prices that are no longer valid are not automatically deleted, but they can be deleted if necessary.</p>
      */
 
     public StandalonePriceBuilder validUntil(@Nullable final java.time.ZonedDateTime validUntil) {

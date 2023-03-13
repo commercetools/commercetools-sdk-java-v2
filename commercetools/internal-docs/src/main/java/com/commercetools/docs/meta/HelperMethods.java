@@ -62,6 +62,8 @@ import com.fasterxml.jackson.databind.JsonNode;
  * {@include.example example.HelperMethodsTest#cartDiscountToResourceIdentifier()}
  * <p>{@link com.commercetools.api.models.cart_discount.CartDiscount#toReference()}</p>
  * {@include.example example.HelperMethodsTest#cartDiscountToReference()}
+ * <p>{@link com.commercetools.api.models.cart_discount.CartDiscount#referenceTypeId()}</p>
+ * {@include.example example.HelperMethodsTest#cartDiscountReferenceTypeId()}
  * <p>{@link com.commercetools.api.models.cart_discount.CartDiscountSetCustomFieldAction#ofUnset(String)}</p>
  * {@include.example example.HelperMethodsTest#cartDiscountSetCustomFieldUnset()}
  * <p>{@link com.commercetools.api.models.cart_discount.CartDiscountSetKeyAction#ofUnset()}</p>
@@ -73,6 +75,8 @@ import com.fasterxml.jackson.databind.JsonNode;
  * {@include.example example.HelperMethodsTest#categoryToResourceIdentifier()}
  * <p>{@link com.commercetools.api.models.category.Category#toReference()}</p>
  * {@include.example example.HelperMethodsTest#categoryToReference()}
+ * <p>{@link com.commercetools.api.models.category.Category#referenceTypeId()}</p>
+ * {@include.example example.HelperMethodsTest#categoryReferenceTypeId()}
  * <p>{@link com.commercetools.api.models.category.CategorySetKeyAction#ofUnset()}</p>
  * {@include.example example.HelperMethodsTest#categorySetKeyUnset()}
  * <p>{@link com.commercetools.api.models.category.CategorySetCustomFieldAction#ofUnset(String)}</p>
@@ -106,6 +110,8 @@ import com.fasterxml.jackson.databind.JsonNode;
  * {@include.example example.HelperMethodsTest#channelToResourceIdentifier()}
  * <p>{@link com.commercetools.api.models.channel.Channel#toReference()}</p>
  * {@include.example example.HelperMethodsTest#channelToReference()}
+ * <p>{@link com.commercetools.api.models.channel.Channel#referenceTypeId()}</p>
+ * {@include.example example.HelperMethodsTest#channelReferenceTypeId()}
  * <p>{@link com.commercetools.api.models.channel.ChannelSetGeoLocationAction}</p>
  * {@include.example example.HelperMethodsTest#channelSetGeoLocationUnset()}
  * <p>{@link com.commercetools.api.models.channel.ChannelSetAddressCustomFieldAction}</p>
@@ -180,12 +186,21 @@ import com.fasterxml.jackson.databind.JsonNode;
  * <p>{@link com.commercetools.api.models.common.MoneyUtil#convertGrossToNetPrice(MonetaryAmount, double)}</p>
  * {@include.example example.HelperMethodsTest#convertGrossToNetPrice()}
  *
+ * <h3>Custom Objects</h3>
+ *
+ * <p>{@link com.commercetools.api.models.custom_object.CustomObject#toReference()}</p>
+ * {@include.example example.HelperMethodsTest#customObjectToReference()}
+ * <p>{@link com.commercetools.api.models.custom_object.CustomObject#referenceTypeId()}</p>
+ * {@include.example example.HelperMethodsTest#customObjectReferenceTypeId()}
+ *
  * <h3>Customers</h3>
  *
  * <p>{@link com.commercetools.api.models.customer.Customer#toResourceIdentifier()}</p>
  * {@include.example example.HelperMethodsTest#customerToResourceIdentifier()}
  * <p>{@link com.commercetools.api.models.customer.Customer#toReference()}</p>
  * {@include.example example.HelperMethodsTest#customerToReference()}
+ * <p>{@link com.commercetools.api.models.customer.Customer#referenceTypeId()}</p>
+ * {@include.example example.HelperMethodsTest#customerReferenceTypeId()}
  * <p>{@link com.commercetools.api.models.customer.CustomerDraft#builder()}</p>
  * {@include.example example.HelperMethodsTest#customerDraftBuilderFromCustomer()}
  * <p>{@link com.commercetools.api.models.customer.CustomerSetAddressCustomFieldAction#ofUnset(String)}</p>
@@ -201,6 +216,8 @@ import com.fasterxml.jackson.databind.JsonNode;
  * {@include.example example.HelperMethodsTest#customerGroupToResourceIdentifier()}
  * <p>{@link com.commercetools.api.models.customer_group.CustomerGroup#toReference()}</p>
  * {@include.example example.HelperMethodsTest#customerGroupToReference()}
+ * <p>{@link com.commercetools.api.models.customer_group.CustomerGroup#referenceTypeId()}</p>
+ * {@include.example example.HelperMethodsTest#customerGroupReferenceTypeId()}
  * <p>{@link com.commercetools.api.models.customer_group.CustomerGroupSetCustomFieldAction#ofUnset(String)}</p>
  * {@include.example example.HelperMethodsTest#customerGroupSetCustomFieldUnset()}
  * <p>{@link com.commercetools.api.models.customer_group.CustomerGroupSetKeyAction#ofUnset()}</p>
@@ -212,6 +229,8 @@ import com.fasterxml.jackson.databind.JsonNode;
  * {@include.example example.HelperMethodsTest#discountCodeResourceIdentifier()}
  * <p>{@link com.commercetools.api.models.discount_code.DiscountCode#toReference()}</p>
  * {@include.example example.HelperMethodsTest#discountCodeToReference()}
+ * <p>{@link com.commercetools.api.models.discount_code.DiscountCode#referenceTypeId()}</p>
+ * {@include.example example.HelperMethodsTest#discountCodeReferenceTypeId()}
  * <p>{@link com.commercetools.api.models.discount_code.DiscountCodeSetCustomFieldAction}</p>
  * {@include.example example.HelperMethodsTest#discountCodeSetCustomFieldUnset()}
  *
@@ -226,6 +245,8 @@ import com.fasterxml.jackson.databind.JsonNode;
  * {@include.example example.HelperMethodsTest#inventoryResourceIdentifier()}
  * <p>{@link com.commercetools.api.models.inventory.InventoryEntry#toReference()}</p>
  * {@include.example example.HelperMethodsTest#inventoryToReference()}
+ * <p>{@link com.commercetools.api.models.inventory.InventoryEntry#referenceTypeId()}</p>
+ * {@include.example example.HelperMethodsTest#inventoryReferenceTypeId()}
  * <p>{@link com.commercetools.api.models.inventory.InventoryEntrySetCustomFieldAction#ofUnset(String)}</p>
  * {@include.example example.HelperMethodsTest#inventorySetCustomFieldUnset()}
  * <p>{@link com.commercetools.api.models.inventory.InventoryEntrySetKeyAction#ofUnset()}</p>
@@ -237,6 +258,8 @@ import com.fasterxml.jackson.databind.JsonNode;
  * {@include.example example.HelperMethodsTest#orderEditResourceIdentifier()}
  * <p>{@link com.commercetools.api.models.order_edit.OrderEdit#toReference()}</p>
  * {@include.example example.HelperMethodsTest#orderEditToReference()}
+ * <p>{@link com.commercetools.api.models.order_edit.OrderEdit#referenceTypeId()}</p>
+ * {@include.example example.HelperMethodsTest#orderEditReferenceTypeId()}
  * <p>{@link com.commercetools.api.models.order_edit.OrderEditSetKeyAction#ofUnset()}</p>
  * {@include.example example.HelperMethodsTest#orderEditSetKeyUnset()}
  * <p>{@link com.commercetools.api.models.order_edit.OrderEditSetCustomFieldAction#ofUnset(String)}</p>
@@ -270,6 +293,8 @@ import com.fasterxml.jackson.databind.JsonNode;
  * {@include.example example.HelperMethodsTest#orderResourceIdentifier()}
  * <p>{@link com.commercetools.api.models.order.Order#toReference()}</p>
  * {@include.example example.HelperMethodsTest#orderToReference()}
+ * <p>{@link com.commercetools.api.models.order.Order#referenceTypeId()}</p>
+ * {@include.example example.HelperMethodsTest#orderReferenceTypeId()}
  * <p>{@link com.commercetools.api.models.order.Order#calculateSubTotalPrice()}</p>
  * {@include.example example.HelperMethodsTest#calculateSubTotalPrice()}
  * <p>{@link com.commercetools.api.models.order.Parcel#toDraft()}</p>
@@ -312,6 +337,8 @@ import com.fasterxml.jackson.databind.JsonNode;
  * {@include.example example.HelperMethodsTest#paymentResourceIdentifier()}
  * <p>{@link com.commercetools.api.models.payment.Payment#toReference()}</p>
  * {@include.example example.HelperMethodsTest#paymentToReference()}
+ * <p>{@link com.commercetools.api.models.payment.Payment#referenceTypeId()}</p>
+ * {@include.example example.HelperMethodsTest#paymentReferenceTypeId()}
  * <p>{@link com.commercetools.api.models.payment.PaymentSetTransactionCustomFieldAction#ofUnset(String, String)}</p>
  * {@include.example example.HelperMethodsTest#paymentSetTransactionCustomFieldUnset()}
  * <p>{@link com.commercetools.api.models.payment.PaymentSetCustomFieldAction#ofUnset(String)}</p>
@@ -323,6 +350,8 @@ import com.fasterxml.jackson.databind.JsonNode;
  * {@include.example example.HelperMethodsTest#productResourceIdentifier()}
  * <p>{@link com.commercetools.api.models.product.Product#toReference()}</p>
  * {@include.example example.HelperMethodsTest#productToReference()}
+ * <p>{@link com.commercetools.api.models.product.Product#referenceTypeId()}</p>
+ * {@include.example example.HelperMethodsTest#productReferenceTypeId()}
  * <p>{@link com.commercetools.api.models.product.ProductDataLike#findVariantBySku(String)}</p>
  * {@include.example example.HelperMethodsTest#productFindVariantBySku()}
  * <p>{@link com.commercetools.api.models.product.ProductDataLike#getVariantOrMaster(long)}</p>
@@ -384,15 +413,10 @@ import com.fasterxml.jackson.databind.JsonNode;
  * {@include.example example.HelperMethodsTest#productDiscountResourceIdentifier()}
  * <p>{@link com.commercetools.api.models.product_discount.ProductDiscount#toReference()}</p>
  * {@include.example example.HelperMethodsTest#productDiscountToReference()}
+ * <p>{@link com.commercetools.api.models.product_discount.ProductDiscount#referenceTypeId()}</p>
+ * {@include.example example.HelperMethodsTest#productDiscountReferenceTypeId()}
  * <p>{@link com.commercetools.api.models.product_discount.ProductDiscountSetKeyAction#ofUnset()}</p>
  * {@include.example example.HelperMethodsTest#productDiscountSetKeyUnset()}
- *
- * <h3>Product Selections</h3>
- *
- * <p>{@link com.commercetools.api.models.product_selection.ProductSelection#toResourceIdentifier()}</p>
- * {@include.example example.HelperMethodsTest#productSelectionResourceIdentifier()}
- * <p>{@link com.commercetools.api.models.product_selection.ProductSelection#toReference()}</p>
- * {@include.example example.HelperMethodsTest#productSelectionToReference()}
  *
  * <h3>Product Types</h3>
  *
@@ -400,6 +424,8 @@ import com.fasterxml.jackson.databind.JsonNode;
  * {@include.example example.HelperMethodsTest#productTypeResourceIdentifier()}
  * <p>{@link com.commercetools.api.models.product_type.ProductType#toReference()}</p>
  * {@include.example example.HelperMethodsTest#productTypeToReference()}
+ * <p>{@link com.commercetools.api.models.product_type.ProductType#referenceTypeId()}</p>
+ * {@include.example example.HelperMethodsTest#productTypeReferenceTypeId()}
  * <p>{@link com.commercetools.api.models.product_type.AttributeDefinitionContainer#getAttribute(String)}</p>
  * To be added
  * {@include.example example.HelperMethodsTest#productTypeGetAttribute()}
@@ -408,6 +434,15 @@ import com.fasterxml.jackson.databind.JsonNode;
  * {@include.example example.HelperMethodsTest#productTypeFindAttribute()}
  * <p>{@link com.commercetools.api.models.product_type.ProductTypeSetKeyAction#ofUnset()}</p>
  * {@include.example example.HelperMethodsTest#productTypeSetKeyUnset()}
+ *
+ * <h3>Product Selections</h3>
+ *
+ * <p>{@link com.commercetools.api.models.product_selection.ProductSelection#toResourceIdentifier()}</p>
+ * {@include.example example.HelperMethodsTest#productSelectionResourceIdentifier()}
+ * <p>{@link com.commercetools.api.models.product_selection.ProductSelection#toReference()}</p>
+ * {@include.example example.HelperMethodsTest#productSelectionToReference()}
+ * <p>{@link com.commercetools.api.models.product_selection.ProductSelection#referenceTypeId()}</p>
+ * {@include.example example.HelperMethodsTest#productSelectionReferenceTypeId()}
  *
  * <h3>Projects</h3>
  *
@@ -420,6 +455,8 @@ import com.fasterxml.jackson.databind.JsonNode;
  * {@include.example example.HelperMethodsTest#quoteResourceIdentifier()}
  * <p>{@link com.commercetools.api.models.quote.Quote#toReference()}</p>
  * {@include.example example.HelperMethodsTest#quoteToReference()}
+ * <p>{@link com.commercetools.api.models.quote.Quote#referenceTypeId()}</p>
+ * {@include.example example.HelperMethodsTest#quoteReferenceTypeId()}
  * <p>{@link com.commercetools.api.models.quote.QuoteSetCustomFieldAction#ofUnset(String)}</p>
  * {@include.example example.HelperMethodsTest#quoteSetCustomFieldUnset()}
  *
@@ -434,6 +471,8 @@ import com.fasterxml.jackson.databind.JsonNode;
  * {@include.example example.HelperMethodsTest#reviewResourceIdentifier()}
  * <p>{@link com.commercetools.api.models.review.Review#toReference()}</p>
  * {@include.example example.HelperMethodsTest#reviewToReference()}
+ * <p>{@link com.commercetools.api.models.review.Review#referenceTypeId()}</p>
+ * {@include.example example.HelperMethodsTest#reviewReferenceTypeId()}
  * <p>{@link com.commercetools.api.models.review.ReviewSetCustomFieldAction#ofUnset(String)}</p>
  * {@include.example example.HelperMethodsTest#reviewSetCustomFieldUnset()}
  * <p>{@link com.commercetools.api.models.review.ReviewSetCustomerAction#ofUnset()}</p>
@@ -444,9 +483,11 @@ import com.fasterxml.jackson.databind.JsonNode;
  * <h3>Shipping Methods</h3>
  *
  * <p>{@link com.commercetools.api.models.shipping_method.ShippingMethod#toResourceIdentifier()}</p>
- * {@include.example example.HelperMethodsTest#reviewResourceIdentifier()}
+ * {@include.example example.HelperMethodsTest#shippingMethodResourceIdentifier()}
  * <p>{@link com.commercetools.api.models.shipping_method.ShippingMethod#toReference()}</p>
- * {@include.example example.HelperMethodsTest#reviewToReference()}
+ * {@include.example example.HelperMethodsTest#shippingMethodToReference()}
+ * <p>{@link com.commercetools.api.models.shipping_method.ShippingMethod#referenceTypeId()}</p>
+ * {@include.example example.HelperMethodsTest#shippingMethodReferenceTypeId()}
  * <p>{@link com.commercetools.api.models.shipping_method.ShippingMethodSetCustomFieldAction#ofUnset(String)}</p>
  * {@include.example example.HelperMethodsTest#shippingMethodSetCustomFieldUnset()}
  * <p>{@link com.commercetools.api.models.shipping_method.ShippingMethodSetKeyAction#ofUnset()}</p>
@@ -458,6 +499,8 @@ import com.fasterxml.jackson.databind.JsonNode;
  * {@include.example example.HelperMethodsTest#shoppingListResourceIdentifier()}
  * <p>{@link com.commercetools.api.models.shopping_list.ShoppingList#toReference()}</p>
  * {@include.example example.HelperMethodsTest#shoppingListToReference()}
+ * <p>{@link com.commercetools.api.models.shopping_list.ShoppingList#referenceTypeId()}</p>
+ * {@include.example example.HelperMethodsTest#shoppingListReferenceTypeId()}
  * <p>{@link com.commercetools.api.models.shopping_list.ShoppingListSetCustomerAction#ofUnset()}</p>
  * {@include.example example.HelperMethodsTest#shoppingListSetCustomerUnset()}
  * <p>{@link com.commercetools.api.models.shopping_list.ShoppingListSetCustomFieldAction#ofUnset(String)}</p>
@@ -484,6 +527,8 @@ import com.fasterxml.jackson.databind.JsonNode;
  * {@include.example example.HelperMethodsTest#standalonePriceResourceIdentifier()}
  * <p>{@link com.commercetools.api.models.standalone_price.StandalonePrice#toReference()}</p>
  * {@include.example example.HelperMethodsTest#standalonePriceToReference()}
+ * <p>{@link com.commercetools.api.models.standalone_price.StandalonePrice#referenceTypeId()}</p>
+ * {@include.example example.HelperMethodsTest#standalonePriceReferenceTypeId()}
  * <p>{@link com.commercetools.api.models.standalone_price.StandalonePriceSetCustomFieldAction#ofUnset(String)}</p>
  * {@include.example example.HelperMethodsTest#standalonePriceSetCustomFieldUnset()}
  *
@@ -493,6 +538,8 @@ import com.fasterxml.jackson.databind.JsonNode;
  * {@include.example example.HelperMethodsTest#stateResourceIdentifier()}
  * <p>{@link com.commercetools.api.models.state.State#toReference()}</p>
  * {@include.example example.HelperMethodsTest#stateToReference()}
+ * <p>{@link com.commercetools.api.models.state.State#referenceTypeId()}</p>
+ * {@include.example example.HelperMethodsTest#stateReferenceTypeId()}
  *
  * <h3>Stores</h3>
  *
@@ -500,6 +547,8 @@ import com.fasterxml.jackson.databind.JsonNode;
  * {@include.example example.HelperMethodsTest#storeResourceIdentifier()}
  * <p>{@link com.commercetools.api.models.store.Store#toReference()}</p>
  * {@include.example example.HelperMethodsTest#storeToReference()}
+ * <p>{@link com.commercetools.api.models.store.Store#referenceTypeId()}</p>
+ * {@include.example example.HelperMethodsTest#storeReferenceTypeId()}
  * <p>{@link com.commercetools.api.models.store.StoreSetCustomFieldAction#ofUnset(String)}</p>
  * {@include.example example.HelperMethodsTest#storeSetCustomFieldUnset()}
  *
@@ -516,6 +565,8 @@ import com.fasterxml.jackson.databind.JsonNode;
  * {@include.example example.HelperMethodsTest#taxCategoryResourceIdentifier()}
  * <p>{@link com.commercetools.api.models.tax_category.TaxCategory#toReference()}</p>
  * {@include.example example.HelperMethodsTest#taxCategoryToReference()}
+ * <p>{@link com.commercetools.api.models.tax_category.TaxCategory#referenceTypeId()}</p>
+ * {@include.example example.HelperMethodsTest#taxCategoryReferenceTypeId()}
  *
  * <h3>Types</h3>
  *

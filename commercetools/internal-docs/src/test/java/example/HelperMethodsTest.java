@@ -227,6 +227,10 @@ public class HelperMethodsTest {
         final CartDiscountResourceIdentifier cartDiscountResourceIdentifier = cartDiscount.toResourceIdentifier();
     }
 
+    public void cartDiscountReferenceTypeId() {
+        ReferenceTypeId referenceTypeId = CartDiscount.referenceTypeId();
+    }
+
     public void cartDiscountToReference() {
         final CartDiscountReference cartDiscountReference = cartDiscount.toReference();
     }
@@ -305,6 +309,10 @@ public class HelperMethodsTest {
 
     public void categoryToReference() {
         final CategoryReference categoryReference = category.toReference();
+    }
+
+    public void categoryDiscountReferenceTypeId() {
+        ReferenceTypeId referenceTypeId = Category.referenceTypeId();
     }
 
     public void categorySetKeyUnset() {
@@ -421,6 +429,10 @@ public class HelperMethodsTest {
 
     public void channelToReference() {
         final ChannelReference channelReference = channel.toReference();
+    }
+
+    public void channelDiscountReferenceTypeId() {
+        ReferenceTypeId referenceTypeId = Channel.referenceTypeId();
     }
 
     public void channelSetGeoLocationUnset() {
@@ -734,6 +746,10 @@ public class HelperMethodsTest {
         final CustomObjectReference customObjectReference = customObject.toReference();
     }
 
+    public void customObjectReferenceTypeId() {
+        ReferenceTypeId referenceTypeId = CustomObject.referenceTypeId();
+    }
+
     // Customer helper methods examples
     Customer customer;
 
@@ -743,6 +759,10 @@ public class HelperMethodsTest {
 
     public void customerToReference() {
         final CustomerReference customerReference = customer.toReference();
+    }
+
+    public void customerReferenceTypeId() {
+        ReferenceTypeId referenceTypeId = Customer.referenceTypeId();
     }
 
     public void customerDraftBuilderFromCustomer() {
@@ -795,6 +815,10 @@ public class HelperMethodsTest {
         final CustomerGroupReference customerGroupReference = customerGroup.toReference();
     }
 
+    public void customerGroupReferenceTypeId() {
+        ReferenceTypeId referenceTypeId = CustomerGroup.referenceTypeId();
+    }
+
     public void customerGroupSetKeyUnset() {
         final CustomerGroup updatedCustomerGroup = projectApiRoot.customerGroups()
                 .withId(customerGroup.getId())
@@ -827,6 +851,10 @@ public class HelperMethodsTest {
 
     public void discountCodeToReference() {
         final DiscountCodeReference discountCodeReference = discountCode.toReference();
+    }
+
+    public void discountCodeReferenceTypeId() {
+        ReferenceTypeId referenceTypeId = DiscountCode.referenceTypeId();
     }
 
     public void discountCodeSetCustomFieldUnset() {
@@ -868,6 +896,10 @@ public class HelperMethodsTest {
         final InventoryEntryReference inventoryEntryReference = inventoryEntry.toReference();
     }
 
+    public void inventoryReferenceTypeId() {
+        ReferenceTypeId referenceTypeId = InventoryEntry.referenceTypeId();
+    }
+
     public void inventorySetKeyUnset() {
         final InventoryEntry updatedInventoryEntry = projectApiRoot.inventory()
                 .withId(inventoryEntry.getId())
@@ -901,6 +933,10 @@ public class HelperMethodsTest {
 
     public void orderToReference() {
         final OrderReference orderReference = order.toReference();
+    }
+
+    public void orderReferenceTypeId() {
+        ReferenceTypeId referenceTypeId = Order.referenceTypeId();
     }
 
     public void calculateSubTotalPrice() {
@@ -1089,6 +1125,10 @@ public class HelperMethodsTest {
 
     public void orderEditToReference() {
         final OrderEditReference orderEditReference = orderEdit.toReference();
+    }
+
+    public void orderEditReferenceTypeId() {
+        ReferenceTypeId referenceTypeId = OrderEdit.referenceTypeId();
     }
 
     public void orderEditSetKeyUnset() {
@@ -1300,6 +1340,10 @@ public class HelperMethodsTest {
         final PaymentReference paymentReference = payment.toReference();
     }
 
+    public void paymentEditReferenceTypeId() {
+        ReferenceTypeId referenceTypeId = Payment.referenceTypeId();
+    }
+
     public void paymentSetTransactionCustomFieldUnset() {
         final String name = "test-name-" + UUID.randomUUID().toString();
         final String transactionId = "test-transactionId-" + UUID.randomUUID().toString();
@@ -1335,6 +1379,10 @@ public class HelperMethodsTest {
 
     public void productToReference() {
         final ProductReference productReference = product.toReference();
+    }
+
+    public void productReferenceTypeId() {
+        ReferenceTypeId referenceTypeId = Product.referenceTypeId();
     }
 
     public void productFindVariantBySku() {
@@ -1615,6 +1663,10 @@ public class HelperMethodsTest {
         final ProductDiscountReference productDiscountReference = productDiscount.toReference();
     }
 
+    public void productDiscountReferenceTypeId() {
+        ReferenceTypeId referenceTypeId = ProductDiscount.referenceTypeId();
+    }
+
     public void productDiscountSetKeyUnset() {
         final ProductDiscount updatedProductDiscount = projectApiRoot.productDiscounts()
                 .withId(productDiscount.getId())
@@ -1639,6 +1691,10 @@ public class HelperMethodsTest {
         final ProductSelectionReference productSelectionReference = productSelection.toReference();
     }
 
+    public void productSelectionReferenceTypeId() {
+        ReferenceTypeId referenceTypeId = ProductSelection.referenceTypeId();
+    }
+
     // Product Type helper methods examples
 
     ProductType productType;
@@ -1649,6 +1705,10 @@ public class HelperMethodsTest {
 
     public void productTypeToReference() {
         final ProductTypeReference productTypeReference = productType.toReference();
+    }
+
+    public void productTypeReferenceTypeId() {
+        ReferenceTypeId referenceTypeId = ProductType.referenceTypeId();
     }
 
     //    public void productTypeGetAttribute() {
@@ -1698,6 +1758,10 @@ public class HelperMethodsTest {
         final QuoteReference quoteReference = quote.toReference();
     }
 
+    public void quoteReferenceTypeId() {
+        ReferenceTypeId referenceTypeId = Quote.referenceTypeId();
+    }
+
     public void quoteSetCustomFieldUnset() {
         final String name = "test-name-" + UUID.randomUUID().toString();
 
@@ -1738,6 +1802,10 @@ public class HelperMethodsTest {
 
     public void reviewToReference() {
         final ReviewReference reviewReference = review.toReference();
+    }
+
+    public void reviewReferenceTypeId() {
+        ReferenceTypeId referenceTypeId = Review.referenceTypeId();
     }
 
     public void reviewSetCustomFieldUnset() {
@@ -1785,6 +1853,10 @@ public class HelperMethodsTest {
         final ShippingMethodReference shippingMethodReference = shippingMethod.toReference();
     }
 
+    public void shippingMethodReferenceTypeId() {
+        ReferenceTypeId referenceTypeId = ShippingMethod.referenceTypeId();
+    }
+
     public void shippingMethodSetCustomFieldUnset() {
         final String name = "test-name-" + UUID.randomUUID().toString();
 
@@ -1819,6 +1891,10 @@ public class HelperMethodsTest {
 
     public void shoppingListToReference() {
         final ShoppingListReference shoppingListReference = shoppingList.toReference();
+    }
+
+    public void shoppingListReferenceTypeId() {
+        ReferenceTypeId referenceTypeId = ShoppingList.referenceTypeId();
     }
 
     public void shoppingListSetCustomerUnset() {
@@ -1924,6 +2000,10 @@ public class HelperMethodsTest {
         final StandalonePriceReference standalonePriceReference = standalonePrice.toReference();
     }
 
+    public void standalonePriceReferenceTypeId() {
+        ReferenceTypeId referenceTypeId = StandalonePrice.referenceTypeId();
+    }
+
     public void standalonePriceSetCustomFieldUnset() {
         final String name = "test-name-" + UUID.randomUUID().toString();
 
@@ -1949,6 +2029,10 @@ public class HelperMethodsTest {
         final StateReference stateReference = state.toReference();
     }
 
+    public void stateReferenceTypeId() {
+        ReferenceTypeId referenceTypeId = State.referenceTypeId();
+    }
+
     // Store helper methods examples
 
     Store store;
@@ -1959,6 +2043,10 @@ public class HelperMethodsTest {
 
     public void storeToReference() {
         final StoreReference storeReference = store.toReference();
+    }
+
+    public void storeReferenceTypeId() {
+        ReferenceTypeId referenceTypeId = Store.referenceTypeId();
     }
 
     public void storeSetCustomFieldUnset() {

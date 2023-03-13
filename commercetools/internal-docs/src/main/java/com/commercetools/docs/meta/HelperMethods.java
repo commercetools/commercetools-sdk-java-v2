@@ -365,10 +365,8 @@ import com.fasterxml.jackson.databind.JsonNode;
  * <p>{@link com.commercetools.api.models.product.BySkuVariantIdentifier#of(String)}</p>
  * {@include.example example.HelperMethodsTest#productBySkuVariantIdentifierOf()}
  * <p>{@link com.commercetools.api.models.product.ProductProjection#findVariant(ByIdVariantIdentifier)}</p>
- * To be added
  * {@include.example example.HelperMethodsTest#productProjectionFindVariant()}
  * <p>{@link com.commercetools.api.models.product.ProductProjection#findMatchingVariants()}</p>
- * To be added
  * {@include.example example.HelperMethodsTest#productProjectionFindMatchingVariants()}
  * <p>{@link com.commercetools.api.models.product.ProductProjection#findFirstMatchingVariant()}</p>
  * To be added
@@ -427,10 +425,8 @@ import com.fasterxml.jackson.databind.JsonNode;
  * <p>{@link com.commercetools.api.models.product_type.ProductType#referenceTypeId()}</p>
  * {@include.example example.HelperMethodsTest#productTypeReferenceTypeId()}
  * <p>{@link com.commercetools.api.models.product_type.AttributeDefinitionContainer#getAttribute(String)}</p>
- * To be added
  * {@include.example example.HelperMethodsTest#productTypeGetAttribute()}
  * <p>{@link com.commercetools.api.models.product_type.AttributeDefinitionContainer#findAttribute(String)}</p>
- * To be added
  * {@include.example example.HelperMethodsTest#productTypeFindAttribute()}
  * <p>{@link com.commercetools.api.models.product_type.ProductTypeSetKeyAction#ofUnset()}</p>
  * {@include.example example.HelperMethodsTest#productTypeSetKeyUnset()}

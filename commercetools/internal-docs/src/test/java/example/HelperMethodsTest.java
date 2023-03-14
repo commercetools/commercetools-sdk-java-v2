@@ -1352,7 +1352,7 @@ public class HelperMethodsTest {
         final PaymentReference paymentReference = payment.toReference();
     }
 
-    public void paymentEditReferenceTypeId() {
+    public void paymentReferenceTypeId() {
         ReferenceTypeId referenceTypeId = Payment.referenceTypeId();
     }
 

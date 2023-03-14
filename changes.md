@@ -148,3 +148,10 @@
 - added type `AuthenticationMode`
 </details>
 
+
+<details>
+<summary>Added Helper Methods to Javadoc</summary>
+
+- added a list of the helper methods introduced plus the related examples
+</details>
+

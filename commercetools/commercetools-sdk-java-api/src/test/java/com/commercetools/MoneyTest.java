@@ -5,6 +5,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 import java.util.Collections;
 
+import javax.money.CurrencyUnit;
 import javax.money.MonetaryAmount;
 
 import com.commercetools.api.models.cart.*;
@@ -16,6 +17,7 @@ import com.fasterxml.jackson.databind.JsonNode;
 import io.vrap.rmf.base.client.utils.json.JsonUtils;
 
 import org.assertj.core.api.Assertions;
+import org.javamoney.moneta.CurrencyUnitBuilder;
 import org.javamoney.moneta.FastMoney;
 import org.junit.jupiter.api.Test;
 
@@ -318,6 +320,39 @@ public class MoneyTest {
         final TaxRate taxRate = taxRateOf(false);
         final Money amount = centMonetaryAmountOf(119);
         assertThat(MoneyUtil.calculateNetPrice(amount, taxRate)).isEqualTo(centMonetaryAmountOf(119));
+    }
+
+    @Test
+    public void zeroAmountString() {
+        final MonetaryAmount zeroAmount = MoneyUtil.zeroAmount("EUR");
+
+        assertThat(zeroAmount.getNumber().doubleValue()).isEqualTo(0);
+        assertThat(zeroAmount.getCurrency()).isEqualTo(CurrencyUnitBuilder.of("EUR", "").build());
+    }
+
+    @Test
+    public void zeroAmountStringCurrencyUnit() {
+        final CurrencyUnit currencyUnit = CurrencyUnitBuilder.of("EUR", "").build();
+        final MonetaryAmount zeroAmount = MoneyUtil.zeroAmount(currencyUnit);
+
+        assertThat(zeroAmount.getNumber().doubleValue()).isEqualTo(0);
+        assertThat(zeroAmount.getCurrency()).isEqualTo(CurrencyUnitBuilder.of("EUR", "").build());
+    }
+
+    @Test
+    public void convertNetToGross() {
+        final MonetaryAmount netAmount = centMonetaryAmountOf(100L);
+        final double taxRate = 0.19;
+
+        assertThat(MoneyUtil.convertNetToGrossPrice(netAmount, taxRate)).isEqualTo(centMonetaryAmountOf(119L));
+    }
+
+    @Test
+    public void convertGrossToNetPrice() {
+        final MonetaryAmount grossAmount = centMonetaryAmountOf(119L);
+        final double taxRate = 0.19;
+
+        assertThat(MoneyUtil.convertGrossToNetPrice(grossAmount, taxRate)).isEqualTo(centMonetaryAmountOf(100L));
     }
 
     private static TaxedItemPrice taxedPriceOf() {

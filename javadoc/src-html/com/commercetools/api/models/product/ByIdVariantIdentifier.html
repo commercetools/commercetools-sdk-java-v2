@@ -19,13 +19,13 @@
 <span class="source-line-no">006</span><span id="line.6">public interface ByIdVariantIdentifier extends VariantIdentifier {</span>
 <span class="source-line-no">007</span><span id="line.7">    String getProductId();</span>
 <span class="source-line-no">008</span><span id="line.8"></span>
-<span class="source-line-no">009</span><span id="line.9">    Integer getVariantId();</span>
+<span class="source-line-no">009</span><span id="line.9">    Long getVariantId();</span>
 <span class="source-line-no">010</span><span id="line.10"></span>
-<span class="source-line-no">011</span><span id="line.11">    static ByIdVariantIdentifier of(final Referencable&lt;Product&gt; product, final Integer variantId) {</span>
+<span class="source-line-no">011</span><span id="line.11">    static ByIdVariantIdentifier of(final Referencable&lt;Product&gt; product, final Long variantId) {</span>
 <span class="source-line-no">012</span><span id="line.12">        return of(product.toReference().getId(), variantId);</span>
 <span class="source-line-no">013</span><span id="line.13">    }</span>
 <span class="source-line-no">014</span><span id="line.14"></span>
-<span class="source-line-no">015</span><span id="line.15">    static ByIdVariantIdentifier of(final String productId, final Integer variantId) {</span>
+<span class="source-line-no">015</span><span id="line.15">    static ByIdVariantIdentifier of(final String productId, final Long variantId) {</span>
 <span class="source-line-no">016</span><span id="line.16">        return new VariantIdentifierImpl(productId, variantId, null);</span>
 <span class="source-line-no">017</span><span id="line.17">    }</span>
 <span class="source-line-no">018</span><span id="line.18">}</span>

@@ -19,14 +19,14 @@ import com.fasterxml.jackson.databind.JsonNode;
  *
  * <p>The list below is sorted by endpoint.</p>
  *
- * <h3>Business Units</h3>
+ * <h2>Business Units</h2>
  *
  * <p>{@link com.commercetools.api.models.business_unit.BusinessUnitSetCustomFieldAction#ofUnset(String)}</p>
  * {@include.example example.HelperMethodsTest#businessUnitSetCustomFieldUnset()}
  * <p>{@link com.commercetools.api.models.business_unit.BusinessUnitSetAddressCustomFieldAction#ofUnset(String)}</p>
  * {@include.example example.HelperMethodsTest#businessUnitSetAddressCustomFieldUnset()}
  *
- * <h3>Carts</h3>
+ * <h2>Carts</h2>
  *
  * To be added
  * <p>{com.commercetools.api.models.cart.InventoryMode##defaultValue()}</p>
@@ -56,7 +56,7 @@ import com.fasterxml.jackson.databind.JsonNode;
  * <p>{@link com.commercetools.api.models.cart.CartSetKeyAction#ofUnset()}</p>
  * {@include.example example.HelperMethodsTest#cartSetKeyUnset()}
  *
- * <h3>Cart Discounts</h3>
+ * <h2>Cart Discounts</h2>
  *
  * <p>{@link com.commercetools.api.models.cart_discount.CartDiscount#toResourceIdentifier()}</p>
  * {@include.example example.HelperMethodsTest#cartDiscountToResourceIdentifier()}
@@ -69,7 +69,7 @@ import com.fasterxml.jackson.databind.JsonNode;
  * <p>{@link com.commercetools.api.models.cart_discount.CartDiscountSetKeyAction#ofUnset()}</p>
  * {@include.example example.HelperMethodsTest#cartDiscountSetKeyUnset()}
  *
- * <h3>Categories</h3>
+ * <h2>Categories</h2>
  *
  * <p>{@link com.commercetools.api.models.category.Category#toResourceIdentifier()}</p>
  * {@include.example example.HelperMethodsTest#categoryToResourceIdentifier()}
@@ -104,7 +104,7 @@ import com.fasterxml.jackson.databind.JsonNode;
  * <p>{@link com.commercetools.api.models.category.CategoryTree#getRootAncestor(Identifiable)}</p>
  * {@include.example example.HelperMethodsTest#categoryTreeGetRootAncestor()}
  *
- * <h3>Channels</h3>
+ * <h2>Channels</h2>
  *
  * <p>{@link com.commercetools.api.models.channel.Channel#toResourceIdentifier()}</p>
  * {@include.example example.HelperMethodsTest#channelToResourceIdentifier()}
@@ -119,8 +119,8 @@ import com.fasterxml.jackson.databind.JsonNode;
  * <p>{@link com.commercetools.api.models.channel.ChannelSetCustomFieldAction}</p>
  * {@include.example example.HelperMethodsTest#channelSetCustomFieldUnset()}
  *
- * <h3>Common</h3>
- * <h4>BaseAddress</h4>
+ * <h2>Common</h2>
+ * <h3>BaseAddress</h3>
  * <p>{@link com.commercetools.api.models.common.BaseAddress#toDraft())}</p>
  * {@include.example example.HelperMethodsTest#addressToDraft()}
  * <p>{@link com.commercetools.api.models.common.BaseAddress#toDraftBuilder()}</p>
@@ -128,11 +128,11 @@ import com.fasterxml.jackson.databind.JsonNode;
  * <p>{@link com.commercetools.api.models.common.BaseAddress#equalsIgnoreId(BaseAddress)} ())}</p>
  * {@include.example example.HelperMethodsTest#equalsIgnoreId()}
  *
- * <h4>CentPrecisionMoney</h4>
+ * <h3>CentPrecisionMoney</h3>
  * <p>{@link com.commercetools.api.models.common.CentPrecisionMoney#toDraft())}</p>
  * {@include.example example.HelperMethodsTest#centPrecisionMoneyToDraft()}
  *
- * <h4>HighPrecisionMoney</h4>
+ * <h3>HighPrecisionMoney</h3>
  * <p>{@link com.commercetools.api.models.common.HighPrecisionMoney#toDraft()}</p>
  * {@include.example example.HelperMethodsTest#highPrecisionMoneyToDraft()}
  * <p>{@link com.commercetools.api.models.common.HighPrecisionMoney#createMoneyOperator()}</p>
@@ -140,13 +140,13 @@ import com.fasterxml.jackson.databind.JsonNode;
  * <p>{@link com.commercetools.api.models.common.HighPrecisionMoneyDraft#createMoneyOperator()}</p>
  * {@include.example example.HelperMethodsTest#createMoneyOperatorFromDraft()}
  *
- * <h4>TypedMoney</h4>
+ * <h3>TypedMoney</h3>
  * <p>{@link com.commercetools.api.models.common.TypedMoney#createMoneyOperator()}</p>
  * {@include.example example.HelperMethodsTest#createMoneyOperatorTypedMoney()}
  * <p>{@link com.commercetools.api.models.common.TypedMoneyDraft#createMoneyOperator()}</p>
  * {@include.example example.HelperMethodsTest#createMoneyOperatorFromTypedMoneyDraft()}
  *
- * <h4>MoneyUtil</h4>
+ * <h3>MoneyUtil</h3>
  * <p>{@link com.commercetools.api.models.common.MoneyUtil#toMonetaryAmount(Money)}</p>
  * {@include.example example.HelperMethodsTest#moneyToMonetaryAmount()}
  * <p>{@link com.commercetools.api.models.common.MoneyUtil#toMonetaryAmount(TypedMoneyDraft)}</p>
@@ -186,14 +186,14 @@ import com.fasterxml.jackson.databind.JsonNode;
  * <p>{@link com.commercetools.api.models.common.MoneyUtil#convertGrossToNetPrice(MonetaryAmount, double)}</p>
  * {@include.example example.HelperMethodsTest#convertGrossToNetPrice()}
  *
- * <h3>Custom Objects</h3>
+ * <h2>Custom Objects</h2>
  *
  * <p>{@link com.commercetools.api.models.custom_object.CustomObject#toReference()}</p>
  * {@include.example example.HelperMethodsTest#customObjectToReference()}
  * <p>{@link com.commercetools.api.models.custom_object.CustomObject#referenceTypeId()}</p>
  * {@include.example example.HelperMethodsTest#customObjectReferenceTypeId()}
  *
- * <h3>Customers</h3>
+ * <h2>Customers</h2>
  *
  * <p>{@link com.commercetools.api.models.customer.Customer#toResourceIdentifier()}</p>
  * {@include.example example.HelperMethodsTest#customerToResourceIdentifier()}
@@ -210,7 +210,7 @@ import com.fasterxml.jackson.databind.JsonNode;
  * <p>{@link com.commercetools.api.models.customer.CustomerSetKeyAction#ofUnset()}</p>
  * {@include.example example.HelperMethodsTest#customerSetKeyUnset()}
  *
- * <h3>Customer Groups</h3>
+ * <h2>Customer Groups</h2>
  *
  * <p>{@link com.commercetools.api.models.customer_group.CustomerGroup#toResourceIdentifier()}</p>
  * {@include.example example.HelperMethodsTest#customerGroupToResourceIdentifier()}
@@ -223,7 +223,7 @@ import com.fasterxml.jackson.databind.JsonNode;
  * <p>{@link com.commercetools.api.models.customer_group.CustomerGroupSetKeyAction#ofUnset()}</p>
  * {@include.example example.HelperMethodsTest#customerGroupSetKeyUnset()}
  *
- * <h3>Discount Codes</h3>
+ * <h2>Discount Codes</h2>
  *
  * <p>{@link com.commercetools.api.models.discount_code.DiscountCode#toResourceIdentifier()}</p>
  * {@include.example example.HelperMethodsTest#discountCodeToResourceIdentifier()}
@@ -234,12 +234,12 @@ import com.fasterxml.jackson.databind.JsonNode;
  * <p>{@link com.commercetools.api.models.discount_code.DiscountCodeSetCustomFieldAction}</p>
  * {@include.example example.HelperMethodsTest#discountCodeSetCustomFieldUnset()}
  *
- * <h3>Extension</h3>
+ * <h2>Extension</h2>
  *
  * <p>{@link com.commercetools.api.models.extension.ExtensionSetKeyAction#ofUnset()}</p>
  * {@include.example example.HelperMethodsTest#extensionSetKeyUnset()}
  *
- * <h3>Inventory</h3>
+ * <h2>Inventory</h2>
  *
  * <p>{@link com.commercetools.api.models.inventory.InventoryEntry#toResourceIdentifier()}</p>
  * {@include.example example.HelperMethodsTest#inventoryToResourceIdentifier()}
@@ -252,7 +252,7 @@ import com.fasterxml.jackson.databind.JsonNode;
  * <p>{@link com.commercetools.api.models.inventory.InventoryEntrySetKeyAction#ofUnset()}</p>
  * {@include.example example.HelperMethodsTest#inventorySetKeyUnset()}
  *
- * <h3>Order Edits</h3>
+ * <h2>Order Edits</h2>
  *
  * <p>{@link com.commercetools.api.models.order_edit.OrderEdit#toResourceIdentifier()}</p>
  * {@include.example example.HelperMethodsTest#orderEditToResourceIdentifier()}
@@ -287,7 +287,7 @@ import com.fasterxml.jackson.databind.JsonNode;
  * <p>{@link com.commercetools.api.models.order_edit.StagedOrderSetCustomFieldAction#ofUnset(String)}</p>
  * {@include.example example.HelperMethodsTest#orderEditStagedOrderSetCustomFieldUnset()}
  *
- * <h3>Orders</h3>
+ * <h2>Orders</h2>
  *
  * <p>{@link com.commercetools.api.models.order.Order#toResourceIdentifier()}</p>
  * {@include.example example.HelperMethodsTest#orderToResourceIdentifier()}
@@ -331,7 +331,7 @@ import com.fasterxml.jackson.databind.JsonNode;
  * <p>{@link com.commercetools.api.client.ByProjectKeyOrdersGet#byCustomerEmail(String)}
  * {@include.example example.HelperMethodsTest#getOrderByCustomerEmail()}
  *
- * <h3>Payments</h3>
+ * <h2>Payments</h2>
  *
  * <p>{@link com.commercetools.api.models.payment.Payment#toResourceIdentifier()}</p>
  * {@include.example example.HelperMethodsTest#paymentToResourceIdentifier()}
@@ -344,7 +344,7 @@ import com.fasterxml.jackson.databind.JsonNode;
  * <p>{@link com.commercetools.api.models.payment.PaymentSetCustomFieldAction#ofUnset(String)}</p>
  * {@include.example example.HelperMethodsTest#paymentSetCustomFieldUnset()}
  *
- * <h3>Products</h3>
+ * <h2>Products</h2>
  *
  * <p>{@link com.commercetools.api.models.product.Product#toResourceIdentifier()}</p>
  * {@include.example example.HelperMethodsTest#productToResourceIdentifier()}
@@ -405,7 +405,7 @@ import com.fasterxml.jackson.databind.JsonNode;
  * <p>{@link com.commercetools.api.models.product.ProductSetAttributeInAllVariantsAction#ofUnsetAttribute(String, Boolean)}</p>
  * {@include.example example.HelperMethodsTest#productSetAttributeInAllVariantsUnsetAttributeStaged()}
  *
- * <h3>Product Discounts</h3>
+ * <h2>Product Discounts</h2>
  *
  * <p>{@link com.commercetools.api.models.product_discount.ProductDiscount#toResourceIdentifier()}</p>
  * {@include.example example.HelperMethodsTest#productDiscountToResourceIdentifier()}
@@ -416,7 +416,7 @@ import com.fasterxml.jackson.databind.JsonNode;
  * <p>{@link com.commercetools.api.models.product_discount.ProductDiscountSetKeyAction#ofUnset()}</p>
  * {@include.example example.HelperMethodsTest#productDiscountSetKeyUnset()}
  *
- * <h3>Product Types</h3>
+ * <h2>Product Types</h2>
  *
  * <p>{@link com.commercetools.api.models.product_type.ProductType#toResourceIdentifier()}</p>
  * {@include.example example.HelperMethodsTest#productTypeToResourceIdentifier()}
@@ -431,7 +431,7 @@ import com.fasterxml.jackson.databind.JsonNode;
  * <p>{@link com.commercetools.api.models.product_type.ProductTypeSetKeyAction#ofUnset()}</p>
  * {@include.example example.HelperMethodsTest#productTypeSetKeyUnset()}
  *
- * <h3>Product Selections</h3>
+ * <h2>Product Selections</h2>
  *
  * <p>{@link com.commercetools.api.models.product_selection.ProductSelection#toResourceIdentifier()}</p>
  * {@include.example example.HelperMethodsTest#productSelectionToResourceIdentifier()}
@@ -440,12 +440,12 @@ import com.fasterxml.jackson.databind.JsonNode;
  * <p>{@link com.commercetools.api.models.product_selection.ProductSelection#referenceTypeId()}</p>
  * {@include.example example.HelperMethodsTest#productSelectionReferenceTypeId()}
  *
- * <h3>Projects</h3>
+ * <h2>Projects</h2>
  *
  * <p>{@link com.commercetools.api.models.project.ProjectSetShippingRateInputTypeAction#ofUnset()}</p>
  * {@include.example example.HelperMethodsTest#projectSetShippingRateInputTypeUnset()}
  *
- * <h3>Quotes</h3>
+ * <h2>Quotes</h2>
  *
  * <p>{@link com.commercetools.api.models.quote.Quote#toResourceIdentifier()}</p>
  * {@include.example example.HelperMethodsTest#quoteToResourceIdentifier()}
@@ -456,12 +456,12 @@ import com.fasterxml.jackson.databind.JsonNode;
  * <p>{@link com.commercetools.api.models.quote.QuoteSetCustomFieldAction#ofUnset(String)}</p>
  * {@include.example example.HelperMethodsTest#quoteSetCustomFieldUnset()}
  *
- * <h3>Quotes Requests</h3>
+ * <h2>Quotes Requests</h2>
  *
  * <p>{@link com.commercetools.api.models.quote_request.QuoteRequestSetCustomFieldAction#ofUnset(String)}</p>
  * {@include.example example.HelperMethodsTest#quoteRequestSetCustomFieldUnset()}
  *
- * <h3>Reviews</h3>
+ * <h2>Reviews</h2>
  *
  * <p>{@link com.commercetools.api.models.review.Review#toResourceIdentifier()}</p>
  * {@include.example example.HelperMethodsTest#reviewToResourceIdentifier()}
@@ -476,7 +476,7 @@ import com.fasterxml.jackson.databind.JsonNode;
  * <p>{@link com.commercetools.api.models.review.ReviewSetKeyAction#ofUnset()}</p>
  * {@include.example example.HelperMethodsTest#reviewSetKeyUnset()}
  *
- * <h3>Shipping Methods</h3>
+ * <h2>Shipping Methods</h2>
  *
  * <p>{@link com.commercetools.api.models.shipping_method.ShippingMethod#toResourceIdentifier()}</p>
  * {@include.example example.HelperMethodsTest#shippingMethodToResourceIdentifier()}
@@ -489,7 +489,7 @@ import com.fasterxml.jackson.databind.JsonNode;
  * <p>{@link com.commercetools.api.models.shipping_method.ShippingMethodSetKeyAction#ofUnset()}</p>
  * {@include.example example.HelperMethodsTest#shippingMethodSetKeyUnset()}
  *
- * <h3>Shopping Lists</h3>
+ * <h2>Shopping Lists</h2>
  *
  * <p>{@link com.commercetools.api.models.shopping_list.ShoppingList#toResourceIdentifier()}</p>
  * {@include.example example.HelperMethodsTest#shoppingListToResourceIdentifier()}
@@ -512,12 +512,12 @@ import com.fasterxml.jackson.databind.JsonNode;
  * <p>{@link com.commercetools.api.models.shopping_list.ShoppingListSetSlugAction#ofUnset()}</p>
  * {@include.example example.HelperMethodsTest#shoppingListSetSlugUnset()}
  *
- * <h3>Staged Quotes</h3>
+ * <h2>Staged Quotes</h2>
  *
  * <p>{@link com.commercetools.api.models.staged_quote.StagedQuoteSetCustomFieldAction#ofUnset(String)}</p>
  * {@include.example example.HelperMethodsTest#stagedQuoteSetCustomFieldUnset()}
  *
- * <h3>Standalone Prices</h3>
+ * <h2>Standalone Prices</h2>
  *
  * <p>{@link com.commercetools.api.models.standalone_price.StandalonePrice#toResourceIdentifier()}</p>
  * {@include.example example.HelperMethodsTest#standalonePriceToResourceIdentifier()}
@@ -528,7 +528,7 @@ import com.fasterxml.jackson.databind.JsonNode;
  * <p>{@link com.commercetools.api.models.standalone_price.StandalonePriceSetCustomFieldAction#ofUnset(String)}</p>
  * {@include.example example.HelperMethodsTest#standalonePriceSetCustomFieldUnset()}
  *
- * <h3>States</h3>
+ * <h2>States</h2>
  *
  * <p>{@link com.commercetools.api.models.state.State#toResourceIdentifier()}</p>
  * {@include.example example.HelperMethodsTest#stateToResourceIdentifier()}
@@ -537,7 +537,7 @@ import com.fasterxml.jackson.databind.JsonNode;
  * <p>{@link com.commercetools.api.models.state.State#referenceTypeId()}</p>
  * {@include.example example.HelperMethodsTest#stateReferenceTypeId()}
  *
- * <h3>Stores</h3>
+ * <h2>Stores</h2>
  *
  * <p>{@link com.commercetools.api.models.store.Store#toResourceIdentifier()}</p>
  * {@include.example example.HelperMethodsTest#storeToResourceIdentifier()}
@@ -548,14 +548,14 @@ import com.fasterxml.jackson.databind.JsonNode;
  * <p>{@link com.commercetools.api.models.store.StoreSetCustomFieldAction#ofUnset(String)}</p>
  * {@include.example example.HelperMethodsTest#storeSetCustomFieldUnset()}
  *
- * <h3>Subscriptions</h3>
+ * <h2>Subscriptions</h2>
  *
  * <p>{@link com.commercetools.api.models.subscription.SubscriptionSetMessagesAction#ofUnset()}</p>
  * {@include.example example.HelperMethodsTest#subscriptionSetMessagesUnset()}
  * <p>{@link com.commercetools.api.models.subscription.SubscriptionSetChangesAction#ofUnset()}</p>
  * {@include.example example.HelperMethodsTest#subscriptionSetChangesUnset()}
  *
- * <h3>Tax Categories</h3>
+ * <h2>Tax Categories</h2>
  *
  * <p>{@link com.commercetools.api.models.tax_category.TaxCategory#toResourceIdentifier()}</p>
  * {@include.example example.HelperMethodsTest#taxCategoryToResourceIdentifier()}
@@ -564,7 +564,7 @@ import com.fasterxml.jackson.databind.JsonNode;
  * <p>{@link com.commercetools.api.models.tax_category.TaxCategory#referenceTypeId()}</p>
  * {@include.example example.HelperMethodsTest#taxCategoryReferenceTypeId()}
  *
- * <h3>Types</h3>
+ * <h2>Types</h2>
  *
  * <p>{@link com.commercetools.api.models.type.Type#toResourceIdentifier()}</p>
  * {@include.example example.HelperMethodsTest#typeToResourceIdentifier()}
@@ -579,7 +579,7 @@ import com.fasterxml.jackson.databind.JsonNode;
  * <p>{@link com.commercetools.api.models.type.CustomFields#toDraftBuilder()}</p>
  * {@include.example example.HelperMethodsTest#customFieldsToDraftBuilder()}
  *
- * <h3>Zones</h3>
+ * <h2>Zones</h2>
  *
  * <p>{@link com.commercetools.api.models.zone.Zone#toResourceIdentifier()}</p>
  * {@include.example example.HelperMethodsTest#zoneToResourceIdentifier()}
@@ -590,7 +590,7 @@ import com.fasterxml.jackson.databind.JsonNode;
  * <p>{@link com.commercetools.api.models.zone.Zone#contains(String)}</p>
  * {@include.example example.HelperMethodsTest#zoneContains()}
  *
- * <h3>ResourcePagedQueryResponse</h3>
+ * <h2>ResourcePagedQueryResponse</h2>
  *
  * <p>{@link com.commercetools.api.models.ResourcePagedQueryResponse#head()}</p>
  * {@include.example example.HelperMethodsTest#queryResponseHead()}

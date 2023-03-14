@@ -323,7 +323,7 @@ public class HelperMethodsTest {
         final CategoryReference categoryReference = category.toReference();
     }
 
-    public void categoryDiscountReferenceTypeId() {
+    public void categoryReferenceTypeId() {
         ReferenceTypeId referenceTypeId = Category.referenceTypeId();
     }
 

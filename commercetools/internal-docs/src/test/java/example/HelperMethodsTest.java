@@ -486,7 +486,7 @@ public class HelperMethodsTest {
 
     // BaseAddress helper methods examples
 
-    public void toAddressDraft() {
+    public void addressToDraft() {
         final Address address = AddressBuilder.of()
                 .key("address-key")
                 .country("DE")
@@ -498,7 +498,7 @@ public class HelperMethodsTest {
         final AddressDraft addressDraft = address.toDraft();
     }
 
-    public void toAddressDraftBuilder() {
+    public void addressToDraftBuilder() {
         final Address address = AddressBuilder.of()
                 .key("address-key")
                 .country("DE")
@@ -518,7 +518,7 @@ public class HelperMethodsTest {
     }
 
     //CentPrecisionMoney
-    public void toCentPrecisionMoneyDraft() {
+    public void centPrecisionMoneyToDraft() {
         final CentPrecisionMoney centPrecisionMoney = CentPrecisionMoneyBuilder.of()
                 .fractionDigits(2)
                 .centAmount(100L)
@@ -529,7 +529,7 @@ public class HelperMethodsTest {
     }
 
     //HighPrecisionMoney
-    public void toHighPrecisionMoneyDraft() {
+    public void highPrecisionMoneyToDraft() {
         final HighPrecisionMoney highPrecisionMoney = HighPrecisionMoneyBuilder.of()
                 .fractionDigits(2)
                 .centAmount(100L)
@@ -961,25 +961,25 @@ public class HelperMethodsTest {
         final MonetaryAmount subTotal = cart.calculateSubTotalPrice();
     }
 
-    public void toParcelDraft() {
+    public void parcelToDraft() {
         final Parcel parcel = ParcelBuilder.of().id("parcel-id").build();
 
         final ParcelDraft parcelDraft = parcel.toDraft();
     }
 
-    public void toParcelDraftBuilder() {
+    public void parcelToDraftBuilder() {
         final Parcel parcel = ParcelBuilder.of().id("parcel-id").build();
 
         final ParcelDraftBuilder parcelDraftBuilder = parcel.toDraftBuilder();
     }
 
-    public void toDeliveryDraft() {
+    public void deliveryToDraft() {
         final Delivery delivery = DeliveryBuilder.of().id("delivery-id").build();
 
         final DeliveryDraft deliveryDraft = delivery.toDraft();
     }
 
-    public void toDeliveryDraftBuilder() {
+    public void deliveryToDraftBuilder() {
         final Delivery delivery = DeliveryBuilder.of().id("delivery-id").build();
 
         final DeliveryDraftBuilder deliveryDraftBuilder = delivery.toDraftBuilder();
@@ -2155,13 +2155,13 @@ public class HelperMethodsTest {
         Boolean isRequired = type.getFieldDefinitionByName("type-test-name").getRequired();
     }
 
-    public void toCustomFieldDraft() {
+    public void customFieldsToDraft() {
         final CustomFields customField = CustomFieldsBuilder.of().fields(FieldContainerBuilder.of().build()).build();
 
         final CustomFieldsDraft customFieldsDraft = customField.toDraft();
     }
 
-    public void toCustomFieldDraftBuilder() {
+    public void customFieldsToDraftBuilder() {
         final CustomFields customField = CustomFieldsBuilder.of().fields(FieldContainerBuilder.of().build()).build();
 
         final CustomFieldsDraftBuilder customFieldsDraftBuilder = customField.toDraftBuilder();

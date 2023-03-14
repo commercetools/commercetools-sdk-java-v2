@@ -122,19 +122,19 @@ import com.fasterxml.jackson.databind.JsonNode;
  * <h3>Common</h3>
  * <h4>BaseAddress</h4>
  * <p>{@link com.commercetools.api.models.common.BaseAddress#toDraft())}</p>
- * {@include.example example.HelperMethodsTest#toAddressDraft()}
+ * {@include.example example.HelperMethodsTest#addressToDraft()}
  * <p>{@link com.commercetools.api.models.common.BaseAddress#toDraftBuilder()}</p>
- * {@include.example example.HelperMethodsTest#toAddressDraftBuilder()}
+ * {@include.example example.HelperMethodsTest#addressToDraftBuilder()}
  * <p>{@link com.commercetools.api.models.common.BaseAddress#equalsIgnoreId(BaseAddress)} ())}</p>
  * {@include.example example.HelperMethodsTest#equalsIgnoreId()}
  *
  * <h4>CentPrecisionMoney</h4>
  * <p>{@link com.commercetools.api.models.common.CentPrecisionMoney#toDraft())}</p>
- * {@include.example example.HelperMethodsTest#toCentPrecisionMoneyDraft()}
+ * {@include.example example.HelperMethodsTest#centPrecisionMoneyToDraft()}
  *
  * <h4>HighPrecisionMoney</h4>
  * <p>{@link com.commercetools.api.models.common.HighPrecisionMoney#toDraft()}</p>
- * {@include.example example.HelperMethodsTest#toHighPrecisionMoneyDraft()}
+ * {@include.example example.HelperMethodsTest#highPrecisionMoneyToDraft()}
  * <p>{@link com.commercetools.api.models.common.HighPrecisionMoney#createMoneyOperator()}</p>
  * {@include.example example.HelperMethodsTest#createMoneyOperator()}
  * <p>{@link com.commercetools.api.models.common.HighPrecisionMoneyDraft#createMoneyOperator()}</p>
@@ -298,13 +298,13 @@ import com.fasterxml.jackson.databind.JsonNode;
  * <p>{@link com.commercetools.api.models.order.Order#calculateSubTotalPrice()}</p>
  * {@include.example example.HelperMethodsTest#calculateSubTotalPrice()}
  * <p>{@link com.commercetools.api.models.order.Parcel#toDraft()}</p>
- * {@include.example example.HelperMethodsTest#toParcelDraft()}
+ * {@include.example example.HelperMethodsTest#parcelToDraft()}
  * <p>{@link com.commercetools.api.models.order.Parcel#toDraftBuilder()}
- * {@include.example example.HelperMethodsTest#toParcelDraftBuilder()}
+ * {@include.example example.HelperMethodsTest#parcelToDraftBuilder()}
  * <p>{@link com.commercetools.api.models.order.Delivery#toDraft()}</p>
- * {@include.example example.HelperMethodsTest#toDeliveryDraft()}
+ * {@include.example example.HelperMethodsTest#deliveryToDraft()}
  * <p>{@link com.commercetools.api.models.order.Delivery#toDraftBuilder()}
- * {@include.example example.HelperMethodsTest#toDeliveryDraftBuilder()}
+ * {@include.example example.HelperMethodsTest#deliveryToDraftBuilder()}
  * <p>{@link com.commercetools.api.models.order.OrderSetDeliveryAddressAction#ofUnset(String)}</p>
  * {@include.example example.HelperMethodsTest#orderSetDeliveryAddressUnset()}
  * <p>{@link com.commercetools.api.models.order.OrderSetLineItemCustomFieldAction#ofUnset(String, String)}</p>
@@ -593,7 +593,7 @@ import com.fasterxml.jackson.databind.JsonNode;
  * <h3>ResourcePagedQueryResponse</h3>
  *
  * <p>{@link com.commercetools.api.models.ResourcePagedQueryResponse#head()}</p>
- * {@include.example example.HelperMethodsTest#pagedQueryResponseHead()}
+ * {@include.example example.HelperMethodsTest#queryResponseHead()}
  * <p>{@link com.commercetools.api.models.ResourcePagedQueryResponse#getPageIndex()}</p>
  * {@include.example example.HelperMethodsTest#queryResponseGetPageIndex()}
  * <p>{@link com.commercetools.api.models.ResourcePagedQueryResponse#getTotalPages()}</p>

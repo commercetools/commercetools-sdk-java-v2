@@ -1988,6 +1988,17 @@ public class HelperMethodsTest {
                 .getBody();
     }
 
+    public void shoppingListSetSlugUnset() {
+        final ShoppingList updatedShoppingList = projectApiRoot.shoppingLists()
+                .withId(shoppingList.getId())
+                .post(ShoppingListUpdateBuilder.of()
+                        .version(shoppingList.getVersion())
+                        .actions(ShoppingListSetSlugAction.ofUnset())
+                        .build())
+                .executeBlocking()
+                .getBody();
+    }
+
     // Staged Quote helper methods examples
 
     StagedQuote stagedQuote;

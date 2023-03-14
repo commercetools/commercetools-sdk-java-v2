@@ -765,7 +765,7 @@ public class HelperMethodsTest {
     // Customer helper methods examples
     Customer customer;
 
-    public void customeToResourceIdentifier() {
+    public void customerToResourceIdentifier() {
         final CustomerResourceIdentifier customerResourceIdentifier = customer.toResourceIdentifier();
     }
 

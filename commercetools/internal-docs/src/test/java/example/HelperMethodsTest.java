@@ -819,7 +819,7 @@ public class HelperMethodsTest {
     // Customer Group helper methods examples
     CustomerGroup customerGroup;
 
-    public void customerGroupResourceIdentifier() {
+    public void customerGroupToResourceIdentifier() {
         final CustomerGroupResourceIdentifier customerGroupResourceIdentifier = customerGroup.toResourceIdentifier();
     }
 
@@ -857,7 +857,7 @@ public class HelperMethodsTest {
     // Discount Code helper methods examples
     DiscountCode discountCode;
 
-    public void discountCodeResourceIdentifier() {
+    public void discountCodeToResourceIdentifier() {
         final DiscountCodeResourceIdentifier cdiscountCodeResourceIdentifier = discountCode.toResourceIdentifier();
     }
 
@@ -900,7 +900,7 @@ public class HelperMethodsTest {
 
     InventoryEntry inventoryEntry;
 
-    public void inventoryResourceIdentifier() {
+    public void inventoryToResourceIdentifier() {
         final InventoryEntryResourceIdentifier inventoryEntryResourceIdentifier = inventoryEntry.toResourceIdentifier();
     }
 
@@ -939,7 +939,7 @@ public class HelperMethodsTest {
 
     Order order;
 
-    public void orderResourceIdentifier() {
+    public void orderToResourceIdentifier() {
         final OrderResourceIdentifier orderResourceIdentifier = order.toResourceIdentifier();
     }
 

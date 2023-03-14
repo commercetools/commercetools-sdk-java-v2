@@ -443,7 +443,7 @@ public class HelperMethodsTest {
         final ChannelReference channelReference = channel.toReference();
     }
 
-    public void channelDiscountReferenceTypeId() {
+    public void channelReferenceTypeId() {
         ReferenceTypeId referenceTypeId = Channel.referenceTypeId();
     }
 

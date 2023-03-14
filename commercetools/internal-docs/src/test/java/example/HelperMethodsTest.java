@@ -765,7 +765,7 @@ public class HelperMethodsTest {
     // Customer helper methods examples
     Customer customer;
 
-    public void customerResourceIdentifier() {
+    public void customeToResourceIdentifier() {
         final CustomerResourceIdentifier customerResourceIdentifier = customer.toResourceIdentifier();
     }
 
@@ -1131,7 +1131,7 @@ public class HelperMethodsTest {
 
     OrderEdit orderEdit;
 
-    public void orderEditResourceIdentifier() {
+    public void orderEditToResourceIdentifier() {
         final OrderEditResourceIdentifier orderEditResourceIdentifier = orderEdit.toResourceIdentifier();
     }
 
@@ -1344,7 +1344,7 @@ public class HelperMethodsTest {
 
     Payment payment;
 
-    public void paymentResourceIdentifier() {
+    public void paymentToResourceIdentifier() {
         final PaymentResourceIdentifier paymentResourceIdentifier = payment.toResourceIdentifier();
     }
 
@@ -1385,7 +1385,7 @@ public class HelperMethodsTest {
     Product product;
     ProductProjection productProjectionStaged;
 
-    public void productResourceIdentifier() {
+    public void productToResourceIdentifier() {
         final ProductResourceIdentifier productResourceIdentifier = product.toResourceIdentifier();
     }
 
@@ -1675,7 +1675,7 @@ public class HelperMethodsTest {
 
     ProductDiscount productDiscount;
 
-    public void productDiscountResourceIdentifier() {
+    public void productDiscountToResourceIdentifier() {
         final ProductDiscountResourceIdentifier productDiscountResourceIdentifier = productDiscount
                 .toResourceIdentifier();
     }
@@ -1703,7 +1703,7 @@ public class HelperMethodsTest {
 
     ProductSelection productSelection;
 
-    public void productSelectionResourceIdentifier() {
+    public void productSelectionToResourceIdentifier() {
         final ProductSelectionResourceIdentifier productSelectionResourceIdentifier = productSelection
                 .toResourceIdentifier();
     }
@@ -1720,7 +1720,7 @@ public class HelperMethodsTest {
 
     ProductType productType;
 
-    public void productTypeResourceIdentifier() {
+    public void productTypeToResourceIdentifier() {
         final ProductTypeResourceIdentifier productTypeResourceIdentifier = productType.toResourceIdentifier();
     }
 
@@ -1767,7 +1767,7 @@ public class HelperMethodsTest {
 
     Quote quote;
 
-    public void quoteResourceIdentifier() {
+    public void quoteToResourceIdentifier() {
         final QuoteResourceIdentifier quoteResourceIdentifier = quote.toResourceIdentifier();
     }
 
@@ -1813,7 +1813,7 @@ public class HelperMethodsTest {
 
     Review review;
 
-    public void reviewResourceIdentifier() {
+    public void reviewToResourceIdentifier() {
         final ReviewResourceIdentifier reviewResourceIdentifier = review.toResourceIdentifier();
     }
 
@@ -1862,7 +1862,7 @@ public class HelperMethodsTest {
 
     ShippingMethod shippingMethod;
 
-    public void shippingMethodResourceIdentifier() {
+    public void shippingMethodToResourceIdentifier() {
         final ShippingMethodResourceIdentifier shippingMethodResourceIdentifier = shippingMethod.toResourceIdentifier();
     }
 
@@ -1902,7 +1902,7 @@ public class HelperMethodsTest {
 
     ShoppingList shoppingList;
 
-    public void shoppingListResourceIdentifier() {
+    public void shoppingListToResourceIdentifier() {
         final ShoppingListResourceIdentifier shoppingListResourceIdentifier = shoppingList.toResourceIdentifier();
     }
 
@@ -2008,7 +2008,7 @@ public class HelperMethodsTest {
 
     StandalonePrice standalonePrice;
 
-    public void standalonePriceResourceIdentifier() {
+    public void standalonePriceToResourceIdentifier() {
         final StandalonePriceResourceIdentifier standalonePriceResourceIdentifier = standalonePrice
                 .toResourceIdentifier();
     }
@@ -2038,7 +2038,7 @@ public class HelperMethodsTest {
 
     State state;
 
-    public void stateResourceIdentifier() {
+    public void stateToResourceIdentifier() {
         final StateResourceIdentifier stateResourceIdentifier = state.toResourceIdentifier();
     }
 
@@ -2054,7 +2054,7 @@ public class HelperMethodsTest {
 
     Store store;
 
-    public void storeResourceIdentifier() {
+    public void storeToResourceIdentifier() {
         final StoreResourceIdentifier storeResourceIdentifier = store.toResourceIdentifier();
     }
 
@@ -2109,7 +2109,7 @@ public class HelperMethodsTest {
 
     TaxCategory taxCategory;
 
-    public void taxCategoryResourceIdentifier() {
+    public void taxCategoryToResourceIdentifier() {
         final TaxCategoryResourceIdentifier taxCategoryResourceIdentifier = taxCategory.toResourceIdentifier();
     }
 
@@ -2125,7 +2125,7 @@ public class HelperMethodsTest {
 
     Type type;
 
-    public void typeResourceIdentifier() {
+    public void typeToResourceIdentifier() {
         final TypeResourceIdentifier typeResourceIdentifier = type.toResourceIdentifier();
     }
 
@@ -2160,7 +2160,7 @@ public class HelperMethodsTest {
 
     Zone zone;
 
-    public void zoneResourceIdentifier() {
+    public void zoneToResourceIdentifier() {
         final ZoneResourceIdentifier zoneResourceIdentifier = zone.toResourceIdentifier();
     }
 

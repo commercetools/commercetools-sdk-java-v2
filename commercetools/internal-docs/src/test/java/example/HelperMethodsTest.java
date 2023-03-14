@@ -139,6 +139,18 @@ public class HelperMethodsTest {
                 .getBody();
     }
 
+    public void cartSetBillingAddressCustomFieldAUnset() {
+        final String name = "test-name-" + UUID.randomUUID().toString();
+        final Cart updatedCart = projectApiRoot.carts()
+                .withId(cart.getId())
+                .post(CartUpdateBuilder.of()
+                        .version(cart.getVersion())
+                        .actions(CartSetBillingAddressCustomFieldAction.ofUnset(name))
+                        .build())
+                .executeBlocking()
+                .getBody();
+    }
+
     public void cartSetCustomLineItemCustomFieldUnset() {
         final String name = "test-name-" + UUID.randomUUID().toString();
         final String customLineId = "test-customLineId-" + UUID.randomUUID().toString();

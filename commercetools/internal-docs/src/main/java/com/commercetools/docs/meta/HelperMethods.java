@@ -226,7 +226,7 @@ import com.fasterxml.jackson.databind.JsonNode;
  * <h3>Discount Codes</h3>
  *
  * <p>{@link com.commercetools.api.models.discount_code.DiscountCode#toResourceIdentifier()}</p>
- * {@include.example example.HelperMethodsTest#discountCodeResourceIdentifier()}
+ * {@include.example example.HelperMethodsTest#discountCodeToResourceIdentifier()}
  * <p>{@link com.commercetools.api.models.discount_code.DiscountCode#toReference()}</p>
  * {@include.example example.HelperMethodsTest#discountCodeToReference()}
  * <p>{@link com.commercetools.api.models.discount_code.DiscountCode#referenceTypeId()}</p>
@@ -242,7 +242,7 @@ import com.fasterxml.jackson.databind.JsonNode;
  * <h3>Inventory</h3>
  *
  * <p>{@link com.commercetools.api.models.inventory.InventoryEntry#toResourceIdentifier()}</p>
- * {@include.example example.HelperMethodsTest#inventoryResourceIdentifier()}
+ * {@include.example example.HelperMethodsTest#inventoryToResourceIdentifier()}
  * <p>{@link com.commercetools.api.models.inventory.InventoryEntry#toReference()}</p>
  * {@include.example example.HelperMethodsTest#inventoryToReference()}
  * <p>{@link com.commercetools.api.models.inventory.InventoryEntry#referenceTypeId()}</p>
@@ -255,7 +255,7 @@ import com.fasterxml.jackson.databind.JsonNode;
  * <h3>Order Edits</h3>
  *
  * <p>{@link com.commercetools.api.models.order_edit.OrderEdit#toResourceIdentifier()}</p>
- * {@include.example example.HelperMethodsTest#orderEditResourceIdentifier()}
+ * {@include.example example.HelperMethodsTest#orderEditToResourceIdentifier()}
  * <p>{@link com.commercetools.api.models.order_edit.OrderEdit#toReference()}</p>
  * {@include.example example.HelperMethodsTest#orderEditToReference()}
  * <p>{@link com.commercetools.api.models.order_edit.OrderEdit#referenceTypeId()}</p>
@@ -290,7 +290,7 @@ import com.fasterxml.jackson.databind.JsonNode;
  * <h3>Orders</h3>
  *
  * <p>{@link com.commercetools.api.models.order.Order#toResourceIdentifier()}</p>
- * {@include.example example.HelperMethodsTest#orderResourceIdentifier()}
+ * {@include.example example.HelperMethodsTest#orderToResourceIdentifier()}
  * <p>{@link com.commercetools.api.models.order.Order#toReference()}</p>
  * {@include.example example.HelperMethodsTest#orderToReference()}
  * <p>{@link com.commercetools.api.models.order.Order#referenceTypeId()}</p>
@@ -334,7 +334,7 @@ import com.fasterxml.jackson.databind.JsonNode;
  * <h3>Payments</h3>
  *
  * <p>{@link com.commercetools.api.models.payment.Payment#toResourceIdentifier()}</p>
- * {@include.example example.HelperMethodsTest#paymentResourceIdentifier()}
+ * {@include.example example.HelperMethodsTest#paymentToResourceIdentifier()}
  * <p>{@link com.commercetools.api.models.payment.Payment#toReference()}</p>
  * {@include.example example.HelperMethodsTest#paymentToReference()}
  * <p>{@link com.commercetools.api.models.payment.Payment#referenceTypeId()}</p>
@@ -347,7 +347,7 @@ import com.fasterxml.jackson.databind.JsonNode;
  * <h3>Products</h3>
  *
  * <p>{@link com.commercetools.api.models.product.Product#toResourceIdentifier()}</p>
- * {@include.example example.HelperMethodsTest#productResourceIdentifier()}
+ * {@include.example example.HelperMethodsTest#productToResourceIdentifier()}
  * <p>{@link com.commercetools.api.models.product.Product#toReference()}</p>
  * {@include.example example.HelperMethodsTest#productToReference()}
  * <p>{@link com.commercetools.api.models.product.Product#referenceTypeId()}</p>
@@ -408,7 +408,7 @@ import com.fasterxml.jackson.databind.JsonNode;
  * <h3>Product Discounts</h3>
  *
  * <p>{@link com.commercetools.api.models.product_discount.ProductDiscount#toResourceIdentifier()}</p>
- * {@include.example example.HelperMethodsTest#productDiscountResourceIdentifier()}
+ * {@include.example example.HelperMethodsTest#productDiscountToResourceIdentifier()}
  * <p>{@link com.commercetools.api.models.product_discount.ProductDiscount#toReference()}</p>
  * {@include.example example.HelperMethodsTest#productDiscountToReference()}
  * <p>{@link com.commercetools.api.models.product_discount.ProductDiscount#referenceTypeId()}</p>
@@ -419,7 +419,7 @@ import com.fasterxml.jackson.databind.JsonNode;
  * <h3>Product Types</h3>
  *
  * <p>{@link com.commercetools.api.models.product_type.ProductType#toResourceIdentifier()}</p>
- * {@include.example example.HelperMethodsTest#productTypeResourceIdentifier()}
+ * {@include.example example.HelperMethodsTest#productTypeToResourceIdentifier()}
  * <p>{@link com.commercetools.api.models.product_type.ProductType#toReference()}</p>
  * {@include.example example.HelperMethodsTest#productTypeToReference()}
  * <p>{@link com.commercetools.api.models.product_type.ProductType#referenceTypeId()}</p>
@@ -434,7 +434,7 @@ import com.fasterxml.jackson.databind.JsonNode;
  * <h3>Product Selections</h3>
  *
  * <p>{@link com.commercetools.api.models.product_selection.ProductSelection#toResourceIdentifier()}</p>
- * {@include.example example.HelperMethodsTest#productSelectionResourceIdentifier()}
+ * {@include.example example.HelperMethodsTest#productSelectionToResourceIdentifier()}
  * <p>{@link com.commercetools.api.models.product_selection.ProductSelection#toReference()}</p>
  * {@include.example example.HelperMethodsTest#productSelectionToReference()}
  * <p>{@link com.commercetools.api.models.product_selection.ProductSelection#referenceTypeId()}</p>
@@ -448,7 +448,7 @@ import com.fasterxml.jackson.databind.JsonNode;
  * <h3>Quotes</h3>
  *
  * <p>{@link com.commercetools.api.models.quote.Quote#toResourceIdentifier()}</p>
- * {@include.example example.HelperMethodsTest#quoteResourceIdentifier()}
+ * {@include.example example.HelperMethodsTest#quoteToResourceIdentifier()}
  * <p>{@link com.commercetools.api.models.quote.Quote#toReference()}</p>
  * {@include.example example.HelperMethodsTest#quoteToReference()}
  * <p>{@link com.commercetools.api.models.quote.Quote#referenceTypeId()}</p>
@@ -464,7 +464,7 @@ import com.fasterxml.jackson.databind.JsonNode;
  * <h3>Reviews</h3>
  *
  * <p>{@link com.commercetools.api.models.review.Review#toResourceIdentifier()}</p>
- * {@include.example example.HelperMethodsTest#reviewResourceIdentifier()}
+ * {@include.example example.HelperMethodsTest#reviewToResourceIdentifier()}
  * <p>{@link com.commercetools.api.models.review.Review#toReference()}</p>
  * {@include.example example.HelperMethodsTest#reviewToReference()}
  * <p>{@link com.commercetools.api.models.review.Review#referenceTypeId()}</p>
@@ -479,7 +479,7 @@ import com.fasterxml.jackson.databind.JsonNode;
  * <h3>Shipping Methods</h3>
  *
  * <p>{@link com.commercetools.api.models.shipping_method.ShippingMethod#toResourceIdentifier()}</p>
- * {@include.example example.HelperMethodsTest#shippingMethodResourceIdentifier()}
+ * {@include.example example.HelperMethodsTest#shippingMethodToResourceIdentifier()}
  * <p>{@link com.commercetools.api.models.shipping_method.ShippingMethod#toReference()}</p>
  * {@include.example example.HelperMethodsTest#shippingMethodToReference()}
  * <p>{@link com.commercetools.api.models.shipping_method.ShippingMethod#referenceTypeId()}</p>
@@ -492,7 +492,7 @@ import com.fasterxml.jackson.databind.JsonNode;
  * <h3>Shopping Lists</h3>
  *
  * <p>{@link com.commercetools.api.models.shopping_list.ShoppingList#toResourceIdentifier()}</p>
- * {@include.example example.HelperMethodsTest#shoppingListResourceIdentifier()}
+ * {@include.example example.HelperMethodsTest#shoppingListToResourceIdentifier()}
  * <p>{@link com.commercetools.api.models.shopping_list.ShoppingList#toReference()}</p>
  * {@include.example example.HelperMethodsTest#shoppingListToReference()}
  * <p>{@link com.commercetools.api.models.shopping_list.ShoppingList#referenceTypeId()}</p>
@@ -520,7 +520,7 @@ import com.fasterxml.jackson.databind.JsonNode;
  * <h3>Standalone Prices</h3>
  *
  * <p>{@link com.commercetools.api.models.standalone_price.StandalonePrice#toResourceIdentifier()}</p>
- * {@include.example example.HelperMethodsTest#standalonePriceResourceIdentifier()}
+ * {@include.example example.HelperMethodsTest#standalonePriceToResourceIdentifier()}
  * <p>{@link com.commercetools.api.models.standalone_price.StandalonePrice#toReference()}</p>
  * {@include.example example.HelperMethodsTest#standalonePriceToReference()}
  * <p>{@link com.commercetools.api.models.standalone_price.StandalonePrice#referenceTypeId()}</p>
@@ -531,7 +531,7 @@ import com.fasterxml.jackson.databind.JsonNode;
  * <h3>States</h3>
  *
  * <p>{@link com.commercetools.api.models.state.State#toResourceIdentifier()}</p>
- * {@include.example example.HelperMethodsTest#stateResourceIdentifier()}
+ * {@include.example example.HelperMethodsTest#stateToResourceIdentifier()}
  * <p>{@link com.commercetools.api.models.state.State#toReference()}</p>
  * {@include.example example.HelperMethodsTest#stateToReference()}
  * <p>{@link com.commercetools.api.models.state.State#referenceTypeId()}</p>
@@ -540,7 +540,7 @@ import com.fasterxml.jackson.databind.JsonNode;
  * <h3>Stores</h3>
  *
  * <p>{@link com.commercetools.api.models.store.Store#toResourceIdentifier()}</p>
- * {@include.example example.HelperMethodsTest#storeResourceIdentifier()}
+ * {@include.example example.HelperMethodsTest#storeToResourceIdentifier()}
  * <p>{@link com.commercetools.api.models.store.Store#toReference()}</p>
  * {@include.example example.HelperMethodsTest#storeToReference()}
  * <p>{@link com.commercetools.api.models.store.Store#referenceTypeId()}</p>
@@ -558,7 +558,7 @@ import com.fasterxml.jackson.databind.JsonNode;
  * <h3>Tax Categories</h3>
  *
  * <p>{@link com.commercetools.api.models.tax_category.TaxCategory#toResourceIdentifier()}</p>
- * {@include.example example.HelperMethodsTest#taxCategoryResourceIdentifier()}
+ * {@include.example example.HelperMethodsTest#taxCategoryToResourceIdentifier()}
  * <p>{@link com.commercetools.api.models.tax_category.TaxCategory#toReference()}</p>
  * {@include.example example.HelperMethodsTest#taxCategoryToReference()}
  * <p>{@link com.commercetools.api.models.tax_category.TaxCategory#referenceTypeId()}</p>
@@ -567,7 +567,7 @@ import com.fasterxml.jackson.databind.JsonNode;
  * <h3>Types</h3>
  *
  * <p>{@link com.commercetools.api.models.type.Type#toResourceIdentifier()}</p>
- * {@include.example example.HelperMethodsTest#typeResourceIdentifier()}
+ * {@include.example example.HelperMethodsTest#typeToResourceIdentifier()}
  * <p>{@link com.commercetools.api.models.type.Type#toReference()}</p>
  * {@include.example example.HelperMethodsTest#typeToReference()}
  * <p>{@link com.commercetools.api.models.type.Type#referenceTypeId()}</p>
@@ -582,7 +582,7 @@ import com.fasterxml.jackson.databind.JsonNode;
  * <h3>Zones</h3>
  *
  * <p>{@link com.commercetools.api.models.zone.Zone#toResourceIdentifier()}</p>
- * {@include.example example.HelperMethodsTest#zoneResourceIdentifier()}
+ * {@include.example example.HelperMethodsTest#zoneToResourceIdentifier()}
  * <p>{@link com.commercetools.api.models.zone.Zone#toReference()}</p>
  * {@include.example example.HelperMethodsTest#zoneToReference()}
  * <p>{@link com.commercetools.api.models.zone.Zone#referenceTypeId()}</p>

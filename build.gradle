@@ -27,7 +27,7 @@ configurations {
 }
 
 dependencies {
-    taglet 'com.commercetools.build.taglets:commercetools-taglets:3.4.0'
+    taglet 'com.commercetools.build.taglets:commercetools-taglets:3.5.0'
     taglet 'org.jdrupes.taglets:plantuml-taglet:2.0.1'
 }
 

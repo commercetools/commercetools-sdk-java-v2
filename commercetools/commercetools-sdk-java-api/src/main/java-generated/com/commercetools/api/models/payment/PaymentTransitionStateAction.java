@@ -35,7 +35,7 @@ public interface PaymentTransitionStateAction extends PaymentUpdateAction {
     String TRANSITION_STATE = "transitionState";
 
     /**
-     *  <p>Reference to a State.</p>
+     *  <p>ResourceIdentifier to a State.</p>
      */
     @NotNull
     @Valid

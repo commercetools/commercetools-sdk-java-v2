@@ -51,7 +51,7 @@ public class PaymentStatusDraftBuilder implements Builder<PaymentStatusDraft> {
     }
 
     /**
-     *  <p>Reference to a State.</p>
+     *  <p>ResourceIdentifier to a State.</p>
      */
 
     public PaymentStatusDraftBuilder state(
@@ -61,7 +61,7 @@ public class PaymentStatusDraftBuilder implements Builder<PaymentStatusDraft> {
     }
 
     /**
-     *  <p>Reference to a State.</p>
+     *  <p>ResourceIdentifier to a State.</p>
      */
 
     public PaymentStatusDraftBuilder state(

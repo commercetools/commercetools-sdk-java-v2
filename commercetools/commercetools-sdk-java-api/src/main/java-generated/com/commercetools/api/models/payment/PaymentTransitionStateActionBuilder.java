@@ -30,7 +30,7 @@ public class PaymentTransitionStateActionBuilder implements Builder<PaymentTrans
     private Boolean force;
 
     /**
-     *  <p>Reference to a State.</p>
+     *  <p>ResourceIdentifier to a State.</p>
      */
 
     public PaymentTransitionStateActionBuilder state(
@@ -40,7 +40,7 @@ public class PaymentTransitionStateActionBuilder implements Builder<PaymentTrans
     }
 
     /**
-     *  <p>Reference to a State.</p>
+     *  <p>ResourceIdentifier to a State.</p>
      */
 
     public PaymentTransitionStateActionBuilder state(

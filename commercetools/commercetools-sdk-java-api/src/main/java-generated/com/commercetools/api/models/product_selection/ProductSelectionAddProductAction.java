@@ -43,7 +43,7 @@ public interface ProductSelectionAddProductAction extends ProductSelectionUpdate
     public ProductResourceIdentifier getProduct();
 
     /**
-     *  <p>Selects which Variants of the newly added Product will be included, or excluded, from the Product Selection. If not supplied all Variants are deemed to be included.</p>
+     *  <p>Defines which Variants of the Product will be included from the Product Selection. If not supplied all Variants are deemed to be included.</p>
      */
     @Valid
     @JsonProperty("variantSelection")

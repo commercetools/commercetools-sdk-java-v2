@@ -22,11 +22,11 @@ public class ProductSelectionCreatedMessagePayloadImpl implements ProductSelecti
 
     private String type;
 
-    private com.commercetools.api.models.product_selection.IndividualProductSelectionType productSelection;
+    private com.commercetools.api.models.product_selection.ProductSelectionType productSelection;
 
     @JsonCreator
     ProductSelectionCreatedMessagePayloadImpl(
-            @JsonProperty("productSelection") final com.commercetools.api.models.product_selection.IndividualProductSelectionType productSelection) {
+            @JsonProperty("productSelection") final com.commercetools.api.models.product_selection.ProductSelectionType productSelection) {
         this.productSelection = productSelection;
         this.type = PRODUCT_SELECTION_CREATED;
     }
@@ -47,12 +47,12 @@ public class ProductSelectionCreatedMessagePayloadImpl implements ProductSelecti
      *  <p>The <code>type</code> and <code>name</code> of the individual Product Selection.</p>
      */
 
-    public com.commercetools.api.models.product_selection.IndividualProductSelectionType getProductSelection() {
+    public com.commercetools.api.models.product_selection.ProductSelectionType getProductSelection() {
         return this.productSelection;
     }
 
     public void setProductSelection(
-            final com.commercetools.api.models.product_selection.IndividualProductSelectionType productSelection) {
+            final com.commercetools.api.models.product_selection.ProductSelectionType productSelection) {
         this.productSelection = productSelection;
     }
 

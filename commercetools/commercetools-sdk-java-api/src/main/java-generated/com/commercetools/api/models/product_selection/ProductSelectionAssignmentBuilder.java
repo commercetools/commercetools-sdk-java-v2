@@ -32,6 +32,9 @@ public class ProductSelectionAssignmentBuilder implements Builder<ProductSelecti
     @Nullable
     private com.commercetools.api.models.product_selection.ProductVariantSelection variantSelection;
 
+    @Nullable
+    private com.commercetools.api.models.product_selection.ProductVariantExclusion variantExclusion;
+
     /**
      *  <p>Reference to a Product that is assigned to the ProductSelection.</p>
      */
@@ -75,7 +78,8 @@ public class ProductSelectionAssignmentBuilder implements Builder<ProductSelecti
     }
 
     /**
-     *  <p>Selects which Variants of the newly added Product will be included, or excluded, from the Product Selection. The list of SKUs will be updated automatically on any change of those performed on the respective Product itself.</p>
+     *  <p>Define which Variants of the added Product will be included from the Product Selection.</p>
+     *  <p>This field is only available for Assignments to a Product Selection of type Individual. The list of SKUs will be updated automatically on any change of those performed on the respective Product itself.</p>
      */
 
     public ProductSelectionAssignmentBuilder variantSelection(
@@ -85,7 +89,8 @@ public class ProductSelectionAssignmentBuilder implements Builder<ProductSelecti
     }
 
     /**
-     *  <p>Selects which Variants of the newly added Product will be included, or excluded, from the Product Selection. The list of SKUs will be updated automatically on any change of those performed on the respective Product itself.</p>
+     *  <p>Define which Variants of the added Product will be included from the Product Selection.</p>
+     *  <p>This field is only available for Assignments to a Product Selection of type Individual. The list of SKUs will be updated automatically on any change of those performed on the respective Product itself.</p>
      */
 
     public ProductSelectionAssignmentBuilder variantSelection(
@@ -93,6 +98,30 @@ public class ProductSelectionAssignmentBuilder implements Builder<ProductSelecti
         this.variantSelection = builder
                 .apply(com.commercetools.api.models.product_selection.ProductVariantSelectionBuilder.of())
                 .build();
+        return this;
+    }
+
+    /**
+     *  <p>Defines which Variants of the Product will be excluded from the Product Selection.</p>
+     *  <p>This field is only available for Assignments to a Product Selection of type Individual Exclusion. The list of SKUs will be updated automatically on any change of those performed on the respective Product itself.</p>
+     */
+
+    public ProductSelectionAssignmentBuilder variantExclusion(
+            Function<com.commercetools.api.models.product_selection.ProductVariantExclusionBuilder, com.commercetools.api.models.product_selection.ProductVariantExclusionBuilder> builder) {
+        this.variantExclusion = builder
+                .apply(com.commercetools.api.models.product_selection.ProductVariantExclusionBuilder.of())
+                .build();
+        return this;
+    }
+
+    /**
+     *  <p>Defines which Variants of the Product will be excluded from the Product Selection.</p>
+     *  <p>This field is only available for Assignments to a Product Selection of type Individual Exclusion. The list of SKUs will be updated automatically on any change of those performed on the respective Product itself.</p>
+     */
+
+    public ProductSelectionAssignmentBuilder variantExclusion(
+            @Nullable final com.commercetools.api.models.product_selection.ProductVariantExclusion variantExclusion) {
+        this.variantExclusion = variantExclusion;
         return this;
     }
 
@@ -109,17 +138,22 @@ public class ProductSelectionAssignmentBuilder implements Builder<ProductSelecti
         return this.variantSelection;
     }
 
+    @Nullable
+    public com.commercetools.api.models.product_selection.ProductVariantExclusion getVariantExclusion() {
+        return this.variantExclusion;
+    }
+
     public ProductSelectionAssignment build() {
         Objects.requireNonNull(product, ProductSelectionAssignment.class + ": product is missing");
         Objects.requireNonNull(productSelection, ProductSelectionAssignment.class + ": productSelection is missing");
-        return new ProductSelectionAssignmentImpl(product, productSelection, variantSelection);
+        return new ProductSelectionAssignmentImpl(product, productSelection, variantSelection, variantExclusion);
     }
 
     /**
      * builds ProductSelectionAssignment without checking for non null required values
      */
     public ProductSelectionAssignment buildUnchecked() {
-        return new ProductSelectionAssignmentImpl(product, productSelection, variantSelection);
+        return new ProductSelectionAssignmentImpl(product, productSelection, variantSelection, variantExclusion);
     }
 
     public static ProductSelectionAssignmentBuilder of() {
@@ -131,6 +165,7 @@ public class ProductSelectionAssignmentBuilder implements Builder<ProductSelecti
         builder.product = template.getProduct();
         builder.productSelection = template.getProductSelection();
         builder.variantSelection = template.getVariantSelection();
+        builder.variantExclusion = template.getVariantExclusion();
         return builder;
     }
 

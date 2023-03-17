@@ -29,6 +29,9 @@ public class AssignedProductReferenceBuilder implements Builder<AssignedProductR
     @Nullable
     private com.commercetools.api.models.product_selection.ProductVariantSelection variantSelection;
 
+    @Nullable
+    private com.commercetools.api.models.product_selection.ProductVariantExclusion variantExclusion;
+
     /**
      *  <p>Reference to a Product that is assigned to the Product Selection.</p>
      */
@@ -50,7 +53,8 @@ public class AssignedProductReferenceBuilder implements Builder<AssignedProductR
     }
 
     /**
-     *  <p>The Variants of the Product that are included, or excluded, from the Product Selection. In absence of this field, all Variants are deemed to be included.</p>
+     *  <p>The Variants of the Product that are included from the Product Selection.</p>
+     *  <p>This field may exist only for the IndividualProductSelectionType. In absence of this field, all Variants are deemed to be included.</p>
      */
 
     public AssignedProductReferenceBuilder variantSelection(
@@ -60,7 +64,8 @@ public class AssignedProductReferenceBuilder implements Builder<AssignedProductR
     }
 
     /**
-     *  <p>The Variants of the Product that are included, or excluded, from the Product Selection. In absence of this field, all Variants are deemed to be included.</p>
+     *  <p>The Variants of the Product that are included from the Product Selection.</p>
+     *  <p>This field may exist only for the IndividualProductSelectionType. In absence of this field, all Variants are deemed to be included.</p>
      */
 
     public AssignedProductReferenceBuilder variantSelection(
@@ -68,6 +73,30 @@ public class AssignedProductReferenceBuilder implements Builder<AssignedProductR
         this.variantSelection = builder
                 .apply(com.commercetools.api.models.product_selection.ProductVariantSelectionBuilder.of())
                 .build();
+        return this;
+    }
+
+    /**
+     *  <p>The Variants of the Product that are excluded from the Product Selection.</p>
+     *  <p>This field may exist only for the IndividualExclusionProductSelectionType. In absence of this field, all Variants are deemed to be excluded.</p>
+     */
+
+    public AssignedProductReferenceBuilder variantExclusion(
+            Function<com.commercetools.api.models.product_selection.ProductVariantExclusionBuilder, com.commercetools.api.models.product_selection.ProductVariantExclusionBuilder> builder) {
+        this.variantExclusion = builder
+                .apply(com.commercetools.api.models.product_selection.ProductVariantExclusionBuilder.of())
+                .build();
+        return this;
+    }
+
+    /**
+     *  <p>The Variants of the Product that are excluded from the Product Selection.</p>
+     *  <p>This field may exist only for the IndividualExclusionProductSelectionType. In absence of this field, all Variants are deemed to be excluded.</p>
+     */
+
+    public AssignedProductReferenceBuilder variantExclusion(
+            @Nullable final com.commercetools.api.models.product_selection.ProductVariantExclusion variantExclusion) {
+        this.variantExclusion = variantExclusion;
         return this;
     }
 
@@ -80,16 +109,21 @@ public class AssignedProductReferenceBuilder implements Builder<AssignedProductR
         return this.variantSelection;
     }
 
+    @Nullable
+    public com.commercetools.api.models.product_selection.ProductVariantExclusion getVariantExclusion() {
+        return this.variantExclusion;
+    }
+
     public AssignedProductReference build() {
         Objects.requireNonNull(product, AssignedProductReference.class + ": product is missing");
-        return new AssignedProductReferenceImpl(product, variantSelection);
+        return new AssignedProductReferenceImpl(product, variantSelection, variantExclusion);
     }
 
     /**
      * builds AssignedProductReference without checking for non null required values
      */
     public AssignedProductReference buildUnchecked() {
-        return new AssignedProductReferenceImpl(product, variantSelection);
+        return new AssignedProductReferenceImpl(product, variantSelection, variantExclusion);
     }
 
     public static AssignedProductReferenceBuilder of() {
@@ -100,6 +134,7 @@ public class AssignedProductReferenceBuilder implements Builder<AssignedProductR
         AssignedProductReferenceBuilder builder = new AssignedProductReferenceBuilder();
         builder.product = template.getProduct();
         builder.variantSelection = template.getVariantSelection();
+        builder.variantExclusion = template.getVariantExclusion();
         return builder;
     }
 

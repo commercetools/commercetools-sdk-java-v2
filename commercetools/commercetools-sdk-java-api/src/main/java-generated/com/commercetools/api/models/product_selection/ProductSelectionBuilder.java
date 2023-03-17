@@ -169,7 +169,7 @@ public class ProductSelectionBuilder implements Builder<ProductSelection> {
     }
 
     /**
-     *  <p>Specifies in which way the Products are assigned to the ProductSelection. Currently, the only way of doing this is to specify each Product individually. Hence, the type is fixed to <code>individual</code> for now, but we have plans to add other types in the future.</p>
+     *  <p>Specifies in which way the Products are assigned to the ProductSelection. Currently, the only way of doing this is to specify each Product individually, either by including or excluding them explicitly.</p>
      */
 
     public ProductSelectionBuilder type(
@@ -179,7 +179,7 @@ public class ProductSelectionBuilder implements Builder<ProductSelection> {
     }
 
     /**
-     *  <p>Custom Fields of this ProductSelection.</p>
+     *  <p>Custom Fields of the ProductSelection.</p>
      */
 
     public ProductSelectionBuilder custom(
@@ -189,7 +189,7 @@ public class ProductSelectionBuilder implements Builder<ProductSelection> {
     }
 
     /**
-     *  <p>Custom Fields of this ProductSelection.</p>
+     *  <p>Custom Fields of the ProductSelection.</p>
      */
 
     public ProductSelectionBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFields custom) {

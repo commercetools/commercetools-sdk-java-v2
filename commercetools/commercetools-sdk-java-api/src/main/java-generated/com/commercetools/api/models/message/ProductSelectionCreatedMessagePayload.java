@@ -8,7 +8,7 @@ import java.util.function.Function;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
-import com.commercetools.api.models.product_selection.IndividualProductSelectionType;
+import com.commercetools.api.models.product_selection.ProductSelectionType;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -39,9 +39,9 @@ public interface ProductSelectionCreatedMessagePayload extends MessagePayload {
     @NotNull
     @Valid
     @JsonProperty("productSelection")
-    public IndividualProductSelectionType getProductSelection();
+    public ProductSelectionType getProductSelection();
 
-    public void setProductSelection(final IndividualProductSelectionType productSelection);
+    public void setProductSelection(final ProductSelectionType productSelection);
 
     public static ProductSelectionCreatedMessagePayload of() {
         return new ProductSelectionCreatedMessagePayloadImpl();

@@ -85,7 +85,7 @@ public class ProductPresentWithDifferentVariantSelectionErrorBuilder
     }
 
     /**
-     *  <p>Existing Product Variant Selection for the Product in the Product Selection.</p>
+     *  <p>Existing Product Variant Selection or Exclusion for the Product in the Product Selection.</p>
      */
 
     public ProductPresentWithDifferentVariantSelectionErrorBuilder existingVariantSelection(
@@ -95,7 +95,7 @@ public class ProductPresentWithDifferentVariantSelectionErrorBuilder
     }
 
     /**
-     *  <p>Existing Product Variant Selection for the Product in the Product Selection.</p>
+     *  <p>Existing Product Variant Selection or Exclusion for the Product in the Product Selection.</p>
      */
 
     public ProductPresentWithDifferentVariantSelectionErrorBuilder existingVariantSelection(

@@ -55,11 +55,20 @@ public interface ProductSelectionDraft extends com.commercetools.api.models.Cust
     @JsonProperty("custom")
     public CustomFieldsDraft getCustom();
 
+    /**
+     *  <p>Type of the Product Selection.</p>
+     */
+
+    @JsonProperty("type")
+    public ProductSelectionTypeEnum getType();
+
     public void setKey(final String key);
 
     public void setName(final LocalizedString name);
 
     public void setCustom(final CustomFieldsDraft custom);
+
+    public void setType(final ProductSelectionTypeEnum type);
 
     public static ProductSelectionDraft of() {
         return new ProductSelectionDraftImpl();
@@ -70,6 +79,7 @@ public interface ProductSelectionDraft extends com.commercetools.api.models.Cust
         instance.setKey(template.getKey());
         instance.setName(template.getName());
         instance.setCustom(template.getCustom());
+        instance.setType(template.getType());
         return instance;
     }
 

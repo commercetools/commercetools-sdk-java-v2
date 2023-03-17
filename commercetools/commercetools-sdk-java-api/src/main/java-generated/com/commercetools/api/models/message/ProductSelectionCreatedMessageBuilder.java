@@ -54,7 +54,7 @@ public class ProductSelectionCreatedMessageBuilder implements Builder<ProductSel
     @Nullable
     private com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers;
 
-    private com.commercetools.api.models.product_selection.IndividualProductSelectionType productSelection;
+    private com.commercetools.api.models.product_selection.ProductSelectionType productSelection;
 
     /**
      *  <p>Unique identifier of the Message. Can be used to track which Messages have been processed.</p>
@@ -197,10 +197,8 @@ public class ProductSelectionCreatedMessageBuilder implements Builder<ProductSel
      */
 
     public ProductSelectionCreatedMessageBuilder productSelection(
-            Function<com.commercetools.api.models.product_selection.IndividualProductSelectionTypeBuilder, com.commercetools.api.models.product_selection.IndividualProductSelectionTypeBuilder> builder) {
-        this.productSelection = builder
-                .apply(com.commercetools.api.models.product_selection.IndividualProductSelectionTypeBuilder.of())
-                .build();
+            final com.commercetools.api.models.product_selection.ProductSelectionType productSelection) {
+        this.productSelection = productSelection;
         return this;
     }
 
@@ -209,8 +207,10 @@ public class ProductSelectionCreatedMessageBuilder implements Builder<ProductSel
      */
 
     public ProductSelectionCreatedMessageBuilder productSelection(
-            final com.commercetools.api.models.product_selection.IndividualProductSelectionType productSelection) {
-        this.productSelection = productSelection;
+            Function<com.commercetools.api.models.product_selection.ProductSelectionTypeBuilder, Builder<? extends com.commercetools.api.models.product_selection.ProductSelectionType>> builder) {
+        this.productSelection = builder
+                .apply(com.commercetools.api.models.product_selection.ProductSelectionTypeBuilder.of())
+                .build();
         return this;
     }
 
@@ -257,7 +257,7 @@ public class ProductSelectionCreatedMessageBuilder implements Builder<ProductSel
         return this.resourceUserProvidedIdentifiers;
     }
 
-    public com.commercetools.api.models.product_selection.IndividualProductSelectionType getProductSelection() {
+    public com.commercetools.api.models.product_selection.ProductSelectionType getProductSelection() {
         return this.productSelection;
     }
 

@@ -26,13 +26,17 @@ public class ProductSelectionDraftImpl implements ProductSelectionDraft, ModelBa
 
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
 
+    private com.commercetools.api.models.product_selection.ProductSelectionTypeEnum type;
+
     @JsonCreator
     ProductSelectionDraftImpl(@JsonProperty("key") final String key,
             @JsonProperty("name") final com.commercetools.api.models.common.LocalizedString name,
-            @JsonProperty("custom") final com.commercetools.api.models.type.CustomFieldsDraft custom) {
+            @JsonProperty("custom") final com.commercetools.api.models.type.CustomFieldsDraft custom,
+            @JsonProperty("type") final com.commercetools.api.models.product_selection.ProductSelectionTypeEnum type) {
         this.key = key;
         this.name = name;
         this.custom = custom;
+        this.type = type;
     }
 
     public ProductSelectionDraftImpl() {
@@ -62,6 +66,14 @@ public class ProductSelectionDraftImpl implements ProductSelectionDraft, ModelBa
         return this.custom;
     }
 
+    /**
+     *  <p>Type of the Product Selection.</p>
+     */
+
+    public com.commercetools.api.models.product_selection.ProductSelectionTypeEnum getType() {
+        return this.type;
+    }
+
     public void setKey(final String key) {
         this.key = key;
     }
@@ -74,6 +86,10 @@ public class ProductSelectionDraftImpl implements ProductSelectionDraft, ModelBa
         this.custom = custom;
     }
 
+    public void setType(final com.commercetools.api.models.product_selection.ProductSelectionTypeEnum type) {
+        this.type = type;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -84,12 +100,16 @@ public class ProductSelectionDraftImpl implements ProductSelectionDraft, ModelBa
 
         ProductSelectionDraftImpl that = (ProductSelectionDraftImpl) o;
 
-        return new EqualsBuilder().append(key, that.key).append(name, that.name).append(custom, that.custom).isEquals();
+        return new EqualsBuilder().append(key, that.key)
+                .append(name, that.name)
+                .append(custom, that.custom)
+                .append(type, that.type)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(key).append(name).append(custom).toHashCode();
+        return new HashCodeBuilder(17, 37).append(key).append(name).append(custom).append(type).toHashCode();
     }
 
 }

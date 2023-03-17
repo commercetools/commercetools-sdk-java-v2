@@ -19,13 +19,14 @@ import io.vrap.rmf.base.client.utils.Generated;
  * Example to create a subtype instance using the builder pattern
  * <div class=code-example>
  * <pre><code class='java'>
- *     ProductSelectionType productSelectionType = ProductSelectionType.individualBuilder()
+ *     ProductSelectionType productSelectionType = ProductSelectionType.individualExclusionBuilder()
  *             name(nameBuilder -> nameBuilder)
  *             .build()
  * </code></pre>
  * </div>
  */
 @JsonSubTypes({
+        @JsonSubTypes.Type(value = com.commercetools.api.models.product_selection.IndividualExclusionProductSelectionTypeImpl.class, name = IndividualExclusionProductSelectionType.INDIVIDUAL_EXCLUSION),
         @JsonSubTypes.Type(value = com.commercetools.api.models.product_selection.IndividualProductSelectionTypeImpl.class, name = IndividualProductSelectionType.INDIVIDUAL) })
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "type", defaultImpl = ProductSelectionTypeImpl.class, visible = true)
 @JsonDeserialize(as = ProductSelectionTypeImpl.class)
@@ -33,11 +34,15 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ProductSelectionType {
 
     /**
-     *  <p>The following type of Product Selections is supported:</p>
+     *  <p>The following types of Product Selections are supported:</p>
      */
     @NotNull
     @JsonProperty("type")
     public ProductSelectionTypeEnum getType();
+
+    public static com.commercetools.api.models.product_selection.IndividualExclusionProductSelectionTypeBuilder individualExclusionBuilder() {
+        return com.commercetools.api.models.product_selection.IndividualExclusionProductSelectionTypeBuilder.of();
+    }
 
     public static com.commercetools.api.models.product_selection.IndividualProductSelectionTypeBuilder individualBuilder() {
         return com.commercetools.api.models.product_selection.IndividualProductSelectionTypeBuilder.of();

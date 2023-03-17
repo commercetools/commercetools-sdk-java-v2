@@ -15,7 +15,11 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * ProductSelectionAssignment
+ *  <p>Given the type of Product Selection this Assignment refers to, it may contain:</p>
+ *  <ul>
+ *   <li><code>variantSelection</code> field if the Product Selection is of type Individual.</li>
+ *   <li><code>variantExclusion</code> field if the Product Selection is of type Individual Exclusion.</li>
+ *  </ul>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -49,17 +53,28 @@ public interface ProductSelectionAssignment {
     public ProductSelectionReference getProductSelection();
 
     /**
-     *  <p>Selects which Variants of the newly added Product will be included, or excluded, from the Product Selection. The list of SKUs will be updated automatically on any change of those performed on the respective Product itself.</p>
+     *  <p>Define which Variants of the added Product will be included from the Product Selection.</p>
+     *  <p>This field is only available for Assignments to a Product Selection of type Individual. The list of SKUs will be updated automatically on any change of those performed on the respective Product itself.</p>
      */
     @Valid
     @JsonProperty("variantSelection")
     public ProductVariantSelection getVariantSelection();
+
+    /**
+     *  <p>Defines which Variants of the Product will be excluded from the Product Selection.</p>
+     *  <p>This field is only available for Assignments to a Product Selection of type Individual Exclusion. The list of SKUs will be updated automatically on any change of those performed on the respective Product itself.</p>
+     */
+    @Valid
+    @JsonProperty("variantExclusion")
+    public ProductVariantExclusion getVariantExclusion();
 
     public void setProduct(final ProductReference product);
 
     public void setProductSelection(final ProductSelectionReference productSelection);
 
     public void setVariantSelection(final ProductVariantSelection variantSelection);
+
+    public void setVariantExclusion(final ProductVariantExclusion variantExclusion);
 
     public static ProductSelectionAssignment of() {
         return new ProductSelectionAssignmentImpl();
@@ -70,6 +85,7 @@ public interface ProductSelectionAssignment {
         instance.setProduct(template.getProduct());
         instance.setProductSelection(template.getProductSelection());
         instance.setVariantSelection(template.getVariantSelection());
+        instance.setVariantExclusion(template.getVariantExclusion());
         return instance;
     }
 

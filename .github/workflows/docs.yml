@@ -23,6 +23,9 @@ jobs:
         with:
           path: sdk
 
+      - uses: gradle/wrapper-validation-action@v1
+        working-directory: sdk
+
       - name: Checkout
         uses: actions/checkout@v3
         with:

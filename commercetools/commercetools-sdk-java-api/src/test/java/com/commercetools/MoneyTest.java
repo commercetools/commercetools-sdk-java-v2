@@ -1,6 +1,7 @@
 
 package com.commercetools;
 
+import static com.commercetools.TestUtils.stringFromResource;
 import static org.assertj.core.api.Assertions.assertThat;
 
 import java.util.Collections;
@@ -353,6 +354,13 @@ public class MoneyTest {
         final double taxRate = 0.19;
 
         assertThat(MoneyUtil.convertGrossToNetPrice(grossAmount, taxRate)).isEqualTo(centMonetaryAmountOf(100L));
+    }
+
+    @Test
+    public void toMonetaryAmount() {
+        Price price = JsonUtils.fromJsonString(stringFromResource("price.json"), Price.class);
+
+        Assertions.assertThat(price.getValue().getCurrency()).isEqualTo(DefaultCurrencyUnits.EUR);
     }
 
     private static TaxedItemPrice taxedPriceOf() {

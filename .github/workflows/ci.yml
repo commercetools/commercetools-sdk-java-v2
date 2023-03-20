@@ -5,11 +5,17 @@ on:
 
 name: CI
 
+# Declare default permissions as read only.
+permissions: read-all
+
 jobs:
   integrationTest:
     name: Integration tests
 
     runs-on: ubuntu-latest
+
+    permissions:
+        contents: write  # for stefanzweifel/git-auto-commit-action to push code in repo
 
     steps:
       - name: Checkout

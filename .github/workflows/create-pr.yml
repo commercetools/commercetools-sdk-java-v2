@@ -5,10 +5,15 @@ on:
 
 name: Create Changes PR
 
+# Declare default permissions as read only.
+permissions: read-all
+
 jobs:
   create_pr:
     name: Create/Update PR
 
+    permissions:
+      pull-requests: write
     runs-on: ubuntu-latest
     steps:
       - name: Checkout

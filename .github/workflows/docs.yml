@@ -6,9 +6,15 @@ on:
             required: true
 name: Deploy docs
 
+# Declare default permissions as read only.
+permissions: read-all
+
 jobs:
   docs:
     name: Build and release docs
+
+    permissions:
+        contents: write  # for stefanzweifel/git-auto-commit-action to push code in repo
 
     runs-on: ubuntu-latest
     steps:

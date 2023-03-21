@@ -5,15 +5,23 @@ on:
 
 name: CI
 
+# Declare default permissions as read only.
+permissions: read-all
+
 jobs:
   integrationTest:
     name: Integration tests
 
     runs-on: ubuntu-latest
 
+    permissions:
+        contents: write  # for stefanzweifel/git-auto-commit-action to push code in repo
+
     steps:
       - name: Checkout
         uses: actions/checkout@v3
+
+      - uses: gradle/wrapper-validation-action@v1
 
       - name: Setup Java
         uses: actions/setup-java@v3
@@ -100,6 +108,8 @@ jobs:
     steps:
       -   name: Checkout
           uses: actions/checkout@v3
+
+      - uses: gradle/wrapper-validation-action@v1
 
       -   name: Setup Java
           uses: actions/setup-java@v3

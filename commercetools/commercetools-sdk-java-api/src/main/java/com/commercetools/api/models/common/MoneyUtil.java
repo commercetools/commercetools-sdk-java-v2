@@ -59,7 +59,9 @@ public class MoneyUtil {
         if (money instanceof HighPrecisionMoney) {
             return toMonetaryAmount((HighPrecisionMoney) money);
         }
-        return toMonetaryAmount((CentPrecisionMoney) money);
+        CurrencyUnit unit = Monetary.getCurrency(money.getCurrencyCode());
+        return MONETARY_PROVIDER.asMonetaryAmount(money.getCentAmount(),
+            Optional.ofNullable(money.getFractionDigits()).orElse(unit.getDefaultFractionDigits()), unit);
     }
 
     public static MonetaryAmount toMonetaryAmount(final CentPrecisionMoney money) {

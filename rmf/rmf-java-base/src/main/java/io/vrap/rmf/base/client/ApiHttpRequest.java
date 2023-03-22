@@ -69,6 +69,10 @@ public class ApiHttpRequest extends Base implements ContextAware<ApiHttpRequest>
         final ApiHttpRequest request = copy();
         final Map<Object, Object> contextMap = new HashMap<>(request.contextMap);
         contextMap.put(value.getClass(), value);
+        if (value instanceof ClassReferenceContext) {
+            contextMap.put(((ClassReferenceContext) value).classReference(), value);
+        }
+
         request.contextMap = contextMap;
 
         return request;

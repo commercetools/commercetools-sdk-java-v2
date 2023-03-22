@@ -178,6 +178,7 @@ def documentationProjects= [
         ":commercetools:commercetools-okhttp-client3",
         ":commercetools:commercetools-okhttp-client4",
         ":commercetools:commercetools-money",
+        ":commercetools:commercetools-monitoring-newrelic",
         ":commercetools:internal-docs",
         ":rmf:okhttp-client"
 ]
@@ -205,7 +206,7 @@ tasks.register('alljavadoc', Javadoc) {
         setAuthor false
         noTimestamp = true
 
-        links 'https://docs.oracle.com/javase/8/docs/api/', "https://www.javadoc.io/doc/com.fasterxml.jackson.core/jackson-databind/${versions.jackson}/", 'https://commercetools.github.io/commercetools-jvm-sdk/apidocs/'
+        links 'https://docs.oracle.com/javase/8/docs/api/', "https://www.javadoc.io/doc/com.fasterxml.jackson.core/jackson-databind/${versions.jackson}/", 'https://commercetools.github.io/commercetools-jvm-sdk/apidocs/', 'https://newrelic.github.io/java-agent-api/javadoc/'
         overview = "src/main/javadoc/overview.html"
         bottom = """
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.8.0/styles/default.min.css">
@@ -230,7 +231,8 @@ tasks.register('alljavadoc', Javadoc) {
                 "HTTP Clients" : [
                         "com.commercetools.http.*",
                         "io.vrap.rmf.okhttp.*"
-                ]
+                ],
+                "Monitoring"   : ["com.commercetools.monitoring.*"]
         ]
         addStringOption('source', '8')
     }

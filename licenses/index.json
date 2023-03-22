@@ -145,6 +145,19 @@
             ]
         },
         {
+            "moduleName": "com.newrelic.agent.java:newrelic-api",
+            "moduleVersion": "8.0.1",
+            "moduleUrls": [
+                "https://github.com/newrelic/newrelic-java-agent"
+            ],
+            "moduleLicenses": [
+                {
+                    "moduleLicense": "Apache License, Version 2.0",
+                    "moduleLicenseUrl": "https://www.apache.org/licenses/LICENSE-2.0"
+                }
+            ]
+        },
+        {
             "moduleName": "com.spotify:completable-futures",
             "moduleVersion": "0.3.5",
             "moduleUrls": [

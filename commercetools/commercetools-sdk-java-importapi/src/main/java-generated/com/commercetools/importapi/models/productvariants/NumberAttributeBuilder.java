@@ -30,6 +30,8 @@ public class NumberAttributeBuilder implements Builder<NumberAttribute> {
 
     /**
      *  <p>The name of this attribute must match a name of the product types attribute definitions. The name is required if this type is used in a product variant and must not be set when used in a product variant patch.</p>
+     * @param name
+     * @return Builder
      */
 
     public NumberAttributeBuilder name(@Nullable final String name) {
@@ -39,6 +41,8 @@ public class NumberAttributeBuilder implements Builder<NumberAttribute> {
 
     /**
      *
+     * @param value
+     * @return Builder
      */
 
     public NumberAttributeBuilder value(final Double value) {

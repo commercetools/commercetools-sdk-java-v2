@@ -27,6 +27,8 @@ public class StagedOrderSetCountryActionBuilder implements Builder<StagedOrderSe
 
     /**
      *
+     * @param country
+     * @return Builder
      */
 
     public StagedOrderSetCountryActionBuilder country(@Nullable final String country) {

@@ -25,6 +25,8 @@ public class TypeKeyReferenceBuilder implements Builder<TypeKeyReference> {
 
     /**
      *
+     * @param key
+     * @return Builder
      */
 
     public TypeKeyReferenceBuilder key(final String key) {

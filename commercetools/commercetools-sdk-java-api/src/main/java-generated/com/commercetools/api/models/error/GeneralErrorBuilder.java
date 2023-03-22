@@ -27,6 +27,8 @@ public class GeneralErrorBuilder implements Builder<GeneralError> {
 
     /**
      *  <p>Description about any known details of the problem, for example, <code>"Write operations are temporarily unavailable"</code>.</p>
+     * @param message
+     * @return Builder
      */
 
     public GeneralErrorBuilder message(final String message) {

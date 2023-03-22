@@ -35,6 +35,8 @@ public class ChangeAssetNameChangeBuilder implements Builder<ChangeAssetNameChan
 
     /**
      *  <p>Update action for <code>changeAssetName</code></p>
+     * @param change
+     * @return Builder
      */
 
     public ChangeAssetNameChangeBuilder change(final String change) {
@@ -44,6 +46,7 @@ public class ChangeAssetNameChangeBuilder implements Builder<ChangeAssetNameChan
 
     /**
      *
+     * @return Builder
      */
 
     public ChangeAssetNameChangeBuilder asset(
@@ -54,6 +57,8 @@ public class ChangeAssetNameChangeBuilder implements Builder<ChangeAssetNameChan
 
     /**
      *
+     * @param asset
+     * @return Builder
      */
 
     public ChangeAssetNameChangeBuilder asset(
@@ -64,6 +69,7 @@ public class ChangeAssetNameChangeBuilder implements Builder<ChangeAssetNameChan
 
     /**
      *
+     * @return Builder
      */
 
     public ChangeAssetNameChangeBuilder nextValue(
@@ -74,6 +80,8 @@ public class ChangeAssetNameChangeBuilder implements Builder<ChangeAssetNameChan
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public ChangeAssetNameChangeBuilder nextValue(
@@ -84,6 +92,7 @@ public class ChangeAssetNameChangeBuilder implements Builder<ChangeAssetNameChan
 
     /**
      *
+     * @return Builder
      */
 
     public ChangeAssetNameChangeBuilder previousValue(
@@ -94,6 +103,8 @@ public class ChangeAssetNameChangeBuilder implements Builder<ChangeAssetNameChan
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public ChangeAssetNameChangeBuilder previousValue(

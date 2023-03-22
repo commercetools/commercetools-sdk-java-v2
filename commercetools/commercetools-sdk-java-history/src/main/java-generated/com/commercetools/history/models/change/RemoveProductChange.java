@@ -36,6 +36,7 @@ public interface RemoveProductChange extends Change {
 
     /**
      *
+     * @return type
      */
     @NotNull
     @JsonProperty("type")
@@ -43,6 +44,7 @@ public interface RemoveProductChange extends Change {
 
     /**
      *  <p>Update action for when a product is unassigned from a product selection</p>
+     * @return change
      */
     @NotNull
     @JsonProperty("change")
@@ -50,6 +52,7 @@ public interface RemoveProductChange extends Change {
 
     /**
      *
+     * @return previousValue
      */
     @NotNull
     @Valid

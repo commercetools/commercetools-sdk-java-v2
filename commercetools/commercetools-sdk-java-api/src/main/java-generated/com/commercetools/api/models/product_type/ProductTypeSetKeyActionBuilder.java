@@ -27,6 +27,8 @@ public class ProductTypeSetKeyActionBuilder implements Builder<ProductTypeSetKey
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
+     * @param key
+     * @return Builder
      */
 
     public ProductTypeSetKeyActionBuilder key(@Nullable final String key) {

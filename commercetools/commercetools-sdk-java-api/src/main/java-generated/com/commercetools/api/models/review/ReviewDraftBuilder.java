@@ -58,6 +58,8 @@ public class ReviewDraftBuilder implements Builder<ReviewDraft> {
 
     /**
      *  <p>User-defined unique identifier for the Review.</p>
+     * @param key
+     * @return Builder
      */
 
     public ReviewDraftBuilder key(@Nullable final String key) {
@@ -67,6 +69,8 @@ public class ReviewDraftBuilder implements Builder<ReviewDraft> {
 
     /**
      *  <p>If set, this value must be unique among Reviews. For example, if you want to have only one Review per Customer and per Product, you can set the value to Customer <code>id</code>&nbsp;+ Product <code>id</code>.</p>
+     * @param uniquenessValue
+     * @return Builder
      */
 
     public ReviewDraftBuilder uniquenessValue(@Nullable final String uniquenessValue) {
@@ -76,6 +80,8 @@ public class ReviewDraftBuilder implements Builder<ReviewDraft> {
 
     /**
      *  <p>Language in which the content of the Review is written.</p>
+     * @param locale
+     * @return Builder
      */
 
     public ReviewDraftBuilder locale(@Nullable final String locale) {
@@ -85,6 +91,8 @@ public class ReviewDraftBuilder implements Builder<ReviewDraft> {
 
     /**
      *  <p>Name of the author.</p>
+     * @param authorName
+     * @return Builder
      */
 
     public ReviewDraftBuilder authorName(@Nullable final String authorName) {
@@ -94,6 +102,8 @@ public class ReviewDraftBuilder implements Builder<ReviewDraft> {
 
     /**
      *  <p>Title of the Review.</p>
+     * @param title
+     * @return Builder
      */
 
     public ReviewDraftBuilder title(@Nullable final String title) {
@@ -103,6 +113,8 @@ public class ReviewDraftBuilder implements Builder<ReviewDraft> {
 
     /**
      *  <p>Content of the Review.</p>
+     * @param text
+     * @return Builder
      */
 
     public ReviewDraftBuilder text(@Nullable final String text) {
@@ -113,6 +125,8 @@ public class ReviewDraftBuilder implements Builder<ReviewDraft> {
     /**
      *  <p>Draft type to create a Reference or a KeyReference to a resource. Provide either the <code>id</code> or (wherever supported) the <code>key</code> of the resource to reference, but depending on the API endpoint the response returns either a Reference or a KeyReference. For example, the field <code>parent</code> of a CategoryDraft takes a ResourceIdentifier for its value while the value of the corresponding field of a Category is a Reference.</p>
      *  <p>Each resource type has its corresponding ResourceIdentifier, like ChannelResourceIdentifier.</p>
+     * @param target
+     * @return Builder
      */
 
     public ReviewDraftBuilder target(@Nullable final com.commercetools.api.models.common.ResourceIdentifier target) {
@@ -123,6 +137,7 @@ public class ReviewDraftBuilder implements Builder<ReviewDraft> {
     /**
      *  <p>Draft type to create a Reference or a KeyReference to a resource. Provide either the <code>id</code> or (wherever supported) the <code>key</code> of the resource to reference, but depending on the API endpoint the response returns either a Reference or a KeyReference. For example, the field <code>parent</code> of a CategoryDraft takes a ResourceIdentifier for its value while the value of the corresponding field of a Category is a Reference.</p>
      *  <p>Each resource type has its corresponding ResourceIdentifier, like ChannelResourceIdentifier.</p>
+     * @return Builder
      */
 
     public ReviewDraftBuilder target(
@@ -133,6 +148,7 @@ public class ReviewDraftBuilder implements Builder<ReviewDraft> {
 
     /**
      *  <p>State of the Review. Used for approval processes, see Review approval process for details.</p>
+     * @return Builder
      */
 
     public ReviewDraftBuilder state(
@@ -143,6 +159,8 @@ public class ReviewDraftBuilder implements Builder<ReviewDraft> {
 
     /**
      *  <p>State of the Review. Used for approval processes, see Review approval process for details.</p>
+     * @param state
+     * @return Builder
      */
 
     public ReviewDraftBuilder state(@Nullable final com.commercetools.api.models.state.StateResourceIdentifier state) {
@@ -152,6 +170,8 @@ public class ReviewDraftBuilder implements Builder<ReviewDraft> {
 
     /**
      *  <p>Rating of the targeted Product or Channel. This rating can represent the number of stars, a percentage, or a like (+1)/dislike (-1). A rating is used in the ratings statistics of the targeted object, unless the Review is in a State that does not have the role <code>ReviewIncludedInStatistics</code>.</p>
+     * @param rating
+     * @return Builder
      */
 
     public ReviewDraftBuilder rating(@Nullable final Integer rating) {
@@ -161,6 +181,7 @@ public class ReviewDraftBuilder implements Builder<ReviewDraft> {
 
     /**
      *  <p>Customer who created the Review.</p>
+     * @return Builder
      */
 
     public ReviewDraftBuilder customer(
@@ -172,6 +193,8 @@ public class ReviewDraftBuilder implements Builder<ReviewDraft> {
 
     /**
      *  <p>Customer who created the Review.</p>
+     * @param customer
+     * @return Builder
      */
 
     public ReviewDraftBuilder customer(
@@ -182,6 +205,7 @@ public class ReviewDraftBuilder implements Builder<ReviewDraft> {
 
     /**
      *  <p>Custom Fields for the Review.</p>
+     * @return Builder
      */
 
     public ReviewDraftBuilder custom(
@@ -192,6 +216,8 @@ public class ReviewDraftBuilder implements Builder<ReviewDraft> {
 
     /**
      *  <p>Custom Fields for the Review.</p>
+     * @param custom
+     * @return Builder
      */
 
     public ReviewDraftBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFieldsDraft custom) {

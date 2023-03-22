@@ -25,6 +25,8 @@ public class ShippingRatePriceTierBuilder implements Builder<ShippingRatePriceTi
 
     /**
      *
+     * @param type
+     * @return Builder
      */
 
     public ShippingRatePriceTierBuilder type(final com.commercetools.history.models.common.ShippingRateTierType type) {

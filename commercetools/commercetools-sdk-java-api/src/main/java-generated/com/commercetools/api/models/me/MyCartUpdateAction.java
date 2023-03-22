@@ -61,6 +61,7 @@ public interface MyCartUpdateAction extends com.commercetools.api.models.Resourc
 
     /**
      *
+     * @return action
      */
     @NotNull
     @JsonProperty("action")

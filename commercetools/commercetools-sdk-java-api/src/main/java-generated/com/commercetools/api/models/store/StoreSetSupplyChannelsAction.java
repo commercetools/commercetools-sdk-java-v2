@@ -34,6 +34,7 @@ public interface StoreSetSupplyChannelsAction extends StoreUpdateAction {
 
     /**
      *  <p>Value to set. If not defined, the Store's <code>supplyChannels</code> are unset.</p>
+     * @return supplyChannels
      */
     @Valid
     @JsonProperty("supplyChannels")

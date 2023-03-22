@@ -26,6 +26,7 @@ public class OrderDiscountCodeRemovedMessagePayloadBuilder implements Builder<Or
 
     /**
      *  <p>DiscountCode that was removed.</p>
+     * @return Builder
      */
 
     public OrderDiscountCodeRemovedMessagePayloadBuilder discountCode(
@@ -37,6 +38,8 @@ public class OrderDiscountCodeRemovedMessagePayloadBuilder implements Builder<Or
 
     /**
      *  <p>DiscountCode that was removed.</p>
+     * @param discountCode
+     * @return Builder
      */
 
     public OrderDiscountCodeRemovedMessagePayloadBuilder discountCode(

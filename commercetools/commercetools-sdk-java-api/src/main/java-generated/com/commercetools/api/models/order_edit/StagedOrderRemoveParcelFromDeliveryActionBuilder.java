@@ -26,6 +26,8 @@ public class StagedOrderRemoveParcelFromDeliveryActionBuilder
 
     /**
      *
+     * @param parcelId
+     * @return Builder
      */
 
     public StagedOrderRemoveParcelFromDeliveryActionBuilder parcelId(final String parcelId) {

@@ -29,6 +29,7 @@ public class TaxedPriceBuilder implements Builder<TaxedPrice> {
 
     /**
      *
+     * @return Builder
      */
 
     public TaxedPriceBuilder totalNet(
@@ -39,6 +40,8 @@ public class TaxedPriceBuilder implements Builder<TaxedPrice> {
 
     /**
      *
+     * @param totalNet
+     * @return Builder
      */
 
     public TaxedPriceBuilder totalNet(final com.commercetools.history.models.common.Money totalNet) {
@@ -48,6 +51,7 @@ public class TaxedPriceBuilder implements Builder<TaxedPrice> {
 
     /**
      *
+     * @return Builder
      */
 
     public TaxedPriceBuilder totalGross(
@@ -58,6 +62,8 @@ public class TaxedPriceBuilder implements Builder<TaxedPrice> {
 
     /**
      *
+     * @param totalGross
+     * @return Builder
      */
 
     public TaxedPriceBuilder totalGross(final com.commercetools.history.models.common.Money totalGross) {

@@ -27,6 +27,8 @@ public class StagedOrderChangePaymentStateActionBuilder implements Builder<Stage
 
     /**
      *
+     * @param paymentState
+     * @return Builder
      */
 
     public StagedOrderChangePaymentStateActionBuilder paymentState(

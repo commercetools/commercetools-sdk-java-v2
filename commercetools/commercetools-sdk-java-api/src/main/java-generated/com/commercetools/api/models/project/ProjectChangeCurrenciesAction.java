@@ -33,6 +33,7 @@ public interface ProjectChangeCurrenciesAction extends ProjectUpdateAction {
 
     /**
      *  <p>New value to set. Must not be empty.</p>
+     * @return currencies
      */
     @NotNull
     @JsonProperty("currencies")

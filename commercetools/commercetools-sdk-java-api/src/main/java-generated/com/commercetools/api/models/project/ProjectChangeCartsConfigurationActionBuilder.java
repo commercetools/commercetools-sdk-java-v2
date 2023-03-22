@@ -26,6 +26,7 @@ public class ProjectChangeCartsConfigurationActionBuilder implements Builder<Pro
 
     /**
      *  <p>Configuration for the Carts feature.</p>
+     * @return Builder
      */
 
     public ProjectChangeCartsConfigurationActionBuilder cartsConfiguration(
@@ -37,6 +38,8 @@ public class ProjectChangeCartsConfigurationActionBuilder implements Builder<Pro
 
     /**
      *  <p>Configuration for the Carts feature.</p>
+     * @param cartsConfiguration
+     * @return Builder
      */
 
     public ProjectChangeCartsConfigurationActionBuilder cartsConfiguration(

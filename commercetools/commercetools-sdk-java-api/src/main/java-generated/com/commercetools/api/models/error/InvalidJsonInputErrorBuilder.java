@@ -30,6 +30,8 @@ public class InvalidJsonInputErrorBuilder implements Builder<InvalidJsonInputErr
 
     /**
      *  <p><code>"Request body does not contain valid JSON."</code></p>
+     * @param message
+     * @return Builder
      */
 
     public InvalidJsonInputErrorBuilder message(final String message) {
@@ -60,6 +62,8 @@ public class InvalidJsonInputErrorBuilder implements Builder<InvalidJsonInputErr
 
     /**
      *  <p>Further explanation about why the JSON is invalid.</p>
+     * @param detailedErrorMessage
+     * @return Builder
      */
 
     public InvalidJsonInputErrorBuilder detailedErrorMessage(final String detailedErrorMessage) {

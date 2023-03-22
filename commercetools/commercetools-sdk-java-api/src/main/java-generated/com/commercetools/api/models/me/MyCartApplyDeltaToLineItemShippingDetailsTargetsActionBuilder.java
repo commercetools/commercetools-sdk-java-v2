@@ -30,6 +30,8 @@ public class MyCartApplyDeltaToLineItemShippingDetailsTargetsActionBuilder
 
     /**
      *  <p><code>id</code> of the LineItem to update.</p>
+     * @param lineItemId
+     * @return Builder
      */
 
     public MyCartApplyDeltaToLineItemShippingDetailsTargetsActionBuilder lineItemId(final String lineItemId) {
@@ -39,6 +41,8 @@ public class MyCartApplyDeltaToLineItemShippingDetailsTargetsActionBuilder
 
     /**
      *  <p>Using positive or negative quantities increases or decreases the number of items shipped to an address.</p>
+     * @param targetsDelta
+     * @return Builder
      */
 
     public MyCartApplyDeltaToLineItemShippingDetailsTargetsActionBuilder targetsDelta(
@@ -49,6 +53,8 @@ public class MyCartApplyDeltaToLineItemShippingDetailsTargetsActionBuilder
 
     /**
      *  <p>Using positive or negative quantities increases or decreases the number of items shipped to an address.</p>
+     * @param targetsDelta
+     * @return Builder
      */
 
     public MyCartApplyDeltaToLineItemShippingDetailsTargetsActionBuilder targetsDelta(
@@ -59,6 +65,8 @@ public class MyCartApplyDeltaToLineItemShippingDetailsTargetsActionBuilder
 
     /**
      *  <p>Using positive or negative quantities increases or decreases the number of items shipped to an address.</p>
+     * @param targetsDelta
+     * @return Builder
      */
 
     public MyCartApplyDeltaToLineItemShippingDetailsTargetsActionBuilder plusTargetsDelta(
@@ -72,6 +80,7 @@ public class MyCartApplyDeltaToLineItemShippingDetailsTargetsActionBuilder
 
     /**
      *  <p>Using positive or negative quantities increases or decreases the number of items shipped to an address.</p>
+     * @return Builder
      */
 
     public MyCartApplyDeltaToLineItemShippingDetailsTargetsActionBuilder plusTargetsDelta(
@@ -85,6 +94,7 @@ public class MyCartApplyDeltaToLineItemShippingDetailsTargetsActionBuilder
 
     /**
      *  <p>Using positive or negative quantities increases or decreases the number of items shipped to an address.</p>
+     * @return Builder
      */
 
     public MyCartApplyDeltaToLineItemShippingDetailsTargetsActionBuilder withTargetsDelta(

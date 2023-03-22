@@ -35,6 +35,7 @@ public interface OrderImportLineItemStateAction extends OrderUpdateAction {
 
     /**
      *
+     * @return lineItemId
      */
     @NotNull
     @JsonProperty("lineItemId")
@@ -42,6 +43,7 @@ public interface OrderImportLineItemStateAction extends OrderUpdateAction {
 
     /**
      *
+     * @return state
      */
     @NotNull
     @Valid

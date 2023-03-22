@@ -89,6 +89,7 @@ public interface ResourceIdentifier extends com.commercetools.api.models.WithKey
 
     /**
      *  <p>Type of referenced resource. If given, it must match the expected ReferenceTypeId of the referenced resource.</p>
+     * @return typeId
      */
 
     @JsonProperty("typeId")
@@ -96,6 +97,7 @@ public interface ResourceIdentifier extends com.commercetools.api.models.WithKey
 
     /**
      *  <p>Unique identifier of the referenced resource. Required if <code>key</code> is absent.</p>
+     * @return id
      */
 
     @JsonProperty("id")
@@ -103,6 +105,7 @@ public interface ResourceIdentifier extends com.commercetools.api.models.WithKey
 
     /**
      *  <p>User-defined unique identifier of the referenced resource. Required if <code>id</code> is absent.</p>
+     * @return key
      */
 
     @JsonProperty("key")

@@ -32,6 +32,8 @@ public class StoreSetProductSelectionsActionBuilder implements Builder<StoreSetP
      *   <li>If provided, Product Selections for which <code>active</code> is set to <code>true</code> are available in the Store.</li>
      *   <li>If not provided or provided as empty array, the action removes all Product Selections from this Store, meaning all Products in the Project are available in this Store.</li>
      *  </ul>
+     * @param productSelections
+     * @return Builder
      */
 
     public StoreSetProductSelectionsActionBuilder productSelections(
@@ -46,6 +48,8 @@ public class StoreSetProductSelectionsActionBuilder implements Builder<StoreSetP
      *   <li>If provided, Product Selections for which <code>active</code> is set to <code>true</code> are available in the Store.</li>
      *   <li>If not provided or provided as empty array, the action removes all Product Selections from this Store, meaning all Products in the Project are available in this Store.</li>
      *  </ul>
+     * @param productSelections
+     * @return Builder
      */
 
     public StoreSetProductSelectionsActionBuilder productSelections(
@@ -60,6 +64,8 @@ public class StoreSetProductSelectionsActionBuilder implements Builder<StoreSetP
      *   <li>If provided, Product Selections for which <code>active</code> is set to <code>true</code> are available in the Store.</li>
      *   <li>If not provided or provided as empty array, the action removes all Product Selections from this Store, meaning all Products in the Project are available in this Store.</li>
      *  </ul>
+     * @param productSelections
+     * @return Builder
      */
 
     public StoreSetProductSelectionsActionBuilder plusProductSelections(
@@ -77,6 +83,7 @@ public class StoreSetProductSelectionsActionBuilder implements Builder<StoreSetP
      *   <li>If provided, Product Selections for which <code>active</code> is set to <code>true</code> are available in the Store.</li>
      *   <li>If not provided or provided as empty array, the action removes all Product Selections from this Store, meaning all Products in the Project are available in this Store.</li>
      *  </ul>
+     * @return Builder
      */
 
     public StoreSetProductSelectionsActionBuilder plusProductSelections(
@@ -95,6 +102,7 @@ public class StoreSetProductSelectionsActionBuilder implements Builder<StoreSetP
      *   <li>If provided, Product Selections for which <code>active</code> is set to <code>true</code> are available in the Store.</li>
      *   <li>If not provided or provided as empty array, the action removes all Product Selections from this Store, meaning all Products in the Project are available in this Store.</li>
      *  </ul>
+     * @return Builder
      */
 
     public StoreSetProductSelectionsActionBuilder withProductSelections(

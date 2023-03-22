@@ -33,6 +33,7 @@ public interface CategoryChangeOrderHintAction extends CategoryUpdateAction {
 
     /**
      *  <p>New value to set. Must be a decimal value between 0 and 1.</p>
+     * @return orderHint
      */
     @NotNull
     @JsonProperty("orderHint")

@@ -28,6 +28,8 @@ public class BusinessUnitSetStoresActionBuilder implements Builder<BusinessUnitS
 
     /**
      *  <p>Stores to set. Overrides the current list of Stores.</p>
+     * @param stores
+     * @return Builder
      */
 
     public BusinessUnitSetStoresActionBuilder stores(
@@ -38,6 +40,8 @@ public class BusinessUnitSetStoresActionBuilder implements Builder<BusinessUnitS
 
     /**
      *  <p>Stores to set. Overrides the current list of Stores.</p>
+     * @param stores
+     * @return Builder
      */
 
     public BusinessUnitSetStoresActionBuilder stores(
@@ -48,6 +52,8 @@ public class BusinessUnitSetStoresActionBuilder implements Builder<BusinessUnitS
 
     /**
      *  <p>Stores to set. Overrides the current list of Stores.</p>
+     * @param stores
+     * @return Builder
      */
 
     public BusinessUnitSetStoresActionBuilder plusStores(
@@ -61,6 +67,7 @@ public class BusinessUnitSetStoresActionBuilder implements Builder<BusinessUnitS
 
     /**
      *  <p>Stores to set. Overrides the current list of Stores.</p>
+     * @return Builder
      */
 
     public BusinessUnitSetStoresActionBuilder plusStores(
@@ -74,6 +81,7 @@ public class BusinessUnitSetStoresActionBuilder implements Builder<BusinessUnitS
 
     /**
      *  <p>Stores to set. Overrides the current list of Stores.</p>
+     * @return Builder
      */
 
     public BusinessUnitSetStoresActionBuilder withStores(

@@ -36,6 +36,7 @@ public interface StagedOrderSetLineItemDistributionChannelAction extends StagedO
 
     /**
      *
+     * @return lineItemId
      */
     @NotNull
     @JsonProperty("lineItemId")
@@ -43,6 +44,7 @@ public interface StagedOrderSetLineItemDistributionChannelAction extends StagedO
 
     /**
      *  <p>ResourceIdentifier to a Channel.</p>
+     * @return distributionChannel
      */
     @Valid
     @JsonProperty("distributionChannel")

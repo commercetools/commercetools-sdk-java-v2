@@ -33,6 +33,7 @@ public interface StringLabel extends Label {
 
     /**
      *
+     * @return type
      */
     @NotNull
     @JsonProperty("type")
@@ -40,6 +41,7 @@ public interface StringLabel extends Label {
 
     /**
      *
+     * @return value
      */
     @NotNull
     @JsonProperty("value")

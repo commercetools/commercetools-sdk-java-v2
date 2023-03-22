@@ -32,6 +32,7 @@ public interface OrderSearchRequest {
 
     /**
      *  <p>The Order search query.</p>
+     * @return query
      */
     @NotNull
     @Valid
@@ -40,6 +41,7 @@ public interface OrderSearchRequest {
 
     /**
      *  <p>Controls how results to your query are sorted. If not provided, the results are sorted by relevance in descending order.</p>
+     * @return sort
      */
     @Valid
     @JsonProperty("sort")
@@ -47,6 +49,7 @@ public interface OrderSearchRequest {
 
     /**
      *  <p>The maximum number of search results to be returned.</p>
+     * @return limit
      */
 
     @JsonProperty("limit")
@@ -54,6 +57,7 @@ public interface OrderSearchRequest {
 
     /**
      *  <p>The number of search results to be skipped in the response for pagination.</p>
+     * @return offset
      */
 
     @JsonProperty("offset")

@@ -34,6 +34,7 @@ public interface Image {
 
     /**
      *
+     * @return url
      */
     @NotNull
     @JsonProperty("url")
@@ -41,6 +42,7 @@ public interface Image {
 
     /**
      *
+     * @return dimensions
      */
     @NotNull
     @Valid
@@ -49,6 +51,7 @@ public interface Image {
 
     /**
      *
+     * @return label
      */
     @NotNull
     @JsonProperty("label")

@@ -34,6 +34,7 @@ public interface ScoreShippingRateInputDraft
 
     /**
      *  <p>Abstract value for categorizing a Cart.</p>
+     * @return score
      */
     @NotNull
     @JsonProperty("score")

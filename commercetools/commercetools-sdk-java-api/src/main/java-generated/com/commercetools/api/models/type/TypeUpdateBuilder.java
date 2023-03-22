@@ -29,6 +29,8 @@ public class TypeUpdateBuilder implements Builder<TypeUpdate> {
 
     /**
      *  <p>Expected version of the type on which the changes should be applied. If the expected version does not match the actual version, a ConcurrentModification error is returned.</p>
+     * @param version
+     * @return Builder
      */
 
     public TypeUpdateBuilder version(final Long version) {
@@ -38,6 +40,8 @@ public class TypeUpdateBuilder implements Builder<TypeUpdate> {
 
     /**
      *  <p>Update actions to be performed on the Type.</p>
+     * @param actions
+     * @return Builder
      */
 
     public TypeUpdateBuilder actions(final com.commercetools.api.models.type.TypeUpdateAction... actions) {
@@ -47,6 +51,8 @@ public class TypeUpdateBuilder implements Builder<TypeUpdate> {
 
     /**
      *  <p>Update actions to be performed on the Type.</p>
+     * @param actions
+     * @return Builder
      */
 
     public TypeUpdateBuilder actions(final java.util.List<com.commercetools.api.models.type.TypeUpdateAction> actions) {
@@ -56,6 +62,8 @@ public class TypeUpdateBuilder implements Builder<TypeUpdate> {
 
     /**
      *  <p>Update actions to be performed on the Type.</p>
+     * @param actions
+     * @return Builder
      */
 
     public TypeUpdateBuilder plusActions(final com.commercetools.api.models.type.TypeUpdateAction... actions) {
@@ -68,6 +76,7 @@ public class TypeUpdateBuilder implements Builder<TypeUpdate> {
 
     /**
      *  <p>Update actions to be performed on the Type.</p>
+     * @return Builder
      */
 
     public TypeUpdateBuilder plusActions(
@@ -81,6 +90,7 @@ public class TypeUpdateBuilder implements Builder<TypeUpdate> {
 
     /**
      *  <p>Update actions to be performed on the Type.</p>
+     * @return Builder
      */
 
     public TypeUpdateBuilder withActions(

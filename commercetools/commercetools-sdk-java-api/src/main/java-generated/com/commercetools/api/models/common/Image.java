@@ -33,6 +33,7 @@ public interface Image {
 
     /**
      *  <p>URL of the image in its original size that must be unique within a single ProductVariant.</p>
+     * @return url
      */
     @NotNull
     @JsonProperty("url")
@@ -40,6 +41,7 @@ public interface Image {
 
     /**
      *  <p>Dimensions of the original image.</p>
+     * @return dimensions
      */
     @NotNull
     @Valid
@@ -48,6 +50,7 @@ public interface Image {
 
     /**
      *  <p>Custom label for the image.</p>
+     * @return label
      */
 
     @JsonProperty("label")

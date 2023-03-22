@@ -27,6 +27,8 @@ public class ResourceSizeLimitExceededErrorBuilder implements Builder<ResourceSi
 
     /**
      *  <p><code>"The resource size exceeds the maximal allowed size of 16 MB."</code></p>
+     * @param message
+     * @return Builder
      */
 
     public ResourceSizeLimitExceededErrorBuilder message(final String message) {

@@ -36,6 +36,7 @@ public interface PaymentLabel extends Label {
 
     /**
      *
+     * @return type
      */
     @NotNull
     @JsonProperty("type")
@@ -43,6 +44,7 @@ public interface PaymentLabel extends Label {
 
     /**
      *
+     * @return key
      */
     @NotNull
     @JsonProperty("key")
@@ -50,6 +52,7 @@ public interface PaymentLabel extends Label {
 
     /**
      *
+     * @return amountPlanned
      */
     @NotNull
     @Valid

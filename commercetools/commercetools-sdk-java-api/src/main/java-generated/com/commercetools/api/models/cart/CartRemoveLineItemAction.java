@@ -35,6 +35,7 @@ public interface CartRemoveLineItemAction extends CartUpdateAction {
 
     /**
      *  <p><code>id</code> of the Line Item to remove.</p>
+     * @return lineItemId
      */
     @NotNull
     @JsonProperty("lineItemId")
@@ -42,6 +43,7 @@ public interface CartRemoveLineItemAction extends CartUpdateAction {
 
     /**
      *  <p>New value to set. If absent or <code>0</code>, the Line Item is removed from the Cart.</p>
+     * @return quantity
      */
 
     @JsonProperty("quantity")
@@ -49,6 +51,7 @@ public interface CartRemoveLineItemAction extends CartUpdateAction {
 
     /**
      *  <p>Sets the LineItem <code>price</code> to the given value when decreasing the quantity of a Line Item with the <code>ExternalPrice</code> LineItemPriceMode.</p>
+     * @return externalPrice
      */
     @Valid
     @JsonProperty("externalPrice")
@@ -56,6 +59,7 @@ public interface CartRemoveLineItemAction extends CartUpdateAction {
 
     /**
      *  <p>Sets the LineItem <code>price</code> and <code>totalPrice</code> to the given value when decreasing the quantity of a Line Item with the <code>ExternalTotal</code> LineItemPriceMode.</p>
+     * @return externalTotalPrice
      */
     @Valid
     @JsonProperty("externalTotalPrice")
@@ -63,6 +67,7 @@ public interface CartRemoveLineItemAction extends CartUpdateAction {
 
     /**
      *  <p>Container for Line Item-specific addresses to remove.</p>
+     * @return shippingDetailsToRemove
      */
     @Valid
     @JsonProperty("shippingDetailsToRemove")

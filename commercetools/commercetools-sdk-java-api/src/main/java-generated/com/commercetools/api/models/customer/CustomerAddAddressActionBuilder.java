@@ -26,6 +26,7 @@ public class CustomerAddAddressActionBuilder implements Builder<CustomerAddAddre
 
     /**
      *  <p>Value to append to the <code>addresses</code> array.</p>
+     * @return Builder
      */
 
     public CustomerAddAddressActionBuilder address(
@@ -36,6 +37,8 @@ public class CustomerAddAddressActionBuilder implements Builder<CustomerAddAddre
 
     /**
      *  <p>Value to append to the <code>addresses</code> array.</p>
+     * @param address
+     * @return Builder
      */
 
     public CustomerAddAddressActionBuilder address(final com.commercetools.api.models.common.BaseAddress address) {

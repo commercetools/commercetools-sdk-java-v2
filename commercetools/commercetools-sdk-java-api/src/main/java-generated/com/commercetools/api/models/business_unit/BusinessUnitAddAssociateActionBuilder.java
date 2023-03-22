@@ -26,6 +26,7 @@ public class BusinessUnitAddAssociateActionBuilder implements Builder<BusinessUn
 
     /**
      *  <p>The Associate to add.</p>
+     * @return Builder
      */
 
     public BusinessUnitAddAssociateActionBuilder associate(
@@ -36,6 +37,8 @@ public class BusinessUnitAddAssociateActionBuilder implements Builder<BusinessUn
 
     /**
      *  <p>The Associate to add.</p>
+     * @param associate
+     * @return Builder
      */
 
     public BusinessUnitAddAssociateActionBuilder associate(

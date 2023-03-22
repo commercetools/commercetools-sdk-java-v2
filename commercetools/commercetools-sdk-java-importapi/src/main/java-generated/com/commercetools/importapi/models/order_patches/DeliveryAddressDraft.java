@@ -33,6 +33,7 @@ public interface DeliveryAddressDraft extends io.vrap.rmf.base.client.Draft<Deli
 
     /**
      *
+     * @return deliveryId
      */
     @NotNull
     @JsonProperty("deliveryId")
@@ -40,6 +41,7 @@ public interface DeliveryAddressDraft extends io.vrap.rmf.base.client.Draft<Deli
 
     /**
      *
+     * @return address
      */
     @Valid
     @JsonProperty("address")

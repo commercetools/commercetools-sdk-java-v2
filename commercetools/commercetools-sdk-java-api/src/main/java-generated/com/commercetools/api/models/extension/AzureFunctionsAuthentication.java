@@ -34,6 +34,7 @@ public interface AzureFunctionsAuthentication extends HttpDestinationAuthenticat
 
     /**
      *  <p>Partially hidden on retrieval for security reasons.</p>
+     * @return key
      */
     @NotNull
     @JsonProperty("key")

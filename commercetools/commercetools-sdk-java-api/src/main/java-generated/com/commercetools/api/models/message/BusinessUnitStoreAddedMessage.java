@@ -42,6 +42,7 @@ public interface BusinessUnitStoreAddedMessage extends Message {
 
     /**
      *  <p>The Store that was added to the Business Unit.</p>
+     * @return store
      */
     @NotNull
     @Valid

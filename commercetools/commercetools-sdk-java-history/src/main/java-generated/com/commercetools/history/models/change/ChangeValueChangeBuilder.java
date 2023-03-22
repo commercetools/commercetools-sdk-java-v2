@@ -32,6 +32,8 @@ public class ChangeValueChangeBuilder implements Builder<ChangeValueChange> {
 
     /**
      *  <p>Update action for <code>changeValue</code> on cart discounts and product discounts</p>
+     * @param change
+     * @return Builder
      */
 
     public ChangeValueChangeBuilder change(final String change) {
@@ -41,6 +43,8 @@ public class ChangeValueChangeBuilder implements Builder<ChangeValueChange> {
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public ChangeValueChangeBuilder nextValue(
@@ -51,6 +55,7 @@ public class ChangeValueChangeBuilder implements Builder<ChangeValueChange> {
 
     /**
      *
+     * @return Builder
      */
 
     public ChangeValueChangeBuilder nextValue(
@@ -62,6 +67,8 @@ public class ChangeValueChangeBuilder implements Builder<ChangeValueChange> {
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public ChangeValueChangeBuilder previousValue(
@@ -72,6 +79,7 @@ public class ChangeValueChangeBuilder implements Builder<ChangeValueChange> {
 
     /**
      *
+     * @return Builder
      */
 
     public ChangeValueChangeBuilder previousValue(

@@ -208,6 +208,7 @@ public interface StagedOrderUpdateAction
 
     /**
      *
+     * @return action
      */
     @NotNull
     @JsonProperty("action")

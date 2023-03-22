@@ -27,6 +27,8 @@ public class OrderEditSetKeyActionBuilder implements Builder<OrderEditSetKeyActi
 
     /**
      *  <p>If <code>key</code> is absent or <code>null</code>, this field will be removed if it exists.</p>
+     * @param key
+     * @return Builder
      */
 
     public OrderEditSetKeyActionBuilder key(@Nullable final String key) {

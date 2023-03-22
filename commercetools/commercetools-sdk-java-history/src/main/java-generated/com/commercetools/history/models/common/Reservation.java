@@ -35,6 +35,7 @@ public interface Reservation {
 
     /**
      *
+     * @return quantity
      */
     @NotNull
     @JsonProperty("quantity")
@@ -42,6 +43,7 @@ public interface Reservation {
 
     /**
      *
+     * @return owner
      */
     @NotNull
     @Valid
@@ -50,6 +52,7 @@ public interface Reservation {
 
     /**
      *
+     * @return createdAt
      */
     @NotNull
     @JsonProperty("createdAt")
@@ -57,6 +60,7 @@ public interface Reservation {
 
     /**
      *
+     * @return checkoutStartedAt
      */
     @NotNull
     @JsonProperty("checkoutStartedAt")

@@ -42,6 +42,7 @@ public interface StandalonePriceImport extends ImportResource {
 
     /**
      *  <p>User-defined unique identifier for the Standalone Price.</p>
+     * @return key
      */
     @NotNull
     @JsonProperty("key")
@@ -49,6 +50,7 @@ public interface StandalonePriceImport extends ImportResource {
 
     /**
      *  <p>Identifies the ProductVariant to which this Standalone Price is associated. This value is not validated to exist in Product Variants.</p>
+     * @return sku
      */
     @NotNull
     @JsonProperty("sku")
@@ -56,6 +58,7 @@ public interface StandalonePriceImport extends ImportResource {
 
     /**
      *  <p>Sets the money value of this Price.</p>
+     * @return value
      */
     @NotNull
     @Valid
@@ -64,6 +67,7 @@ public interface StandalonePriceImport extends ImportResource {
 
     /**
      *  <p>Sets the country for which this Price is valid.</p>
+     * @return country
      */
 
     @JsonProperty("country")
@@ -71,6 +75,7 @@ public interface StandalonePriceImport extends ImportResource {
 
     /**
      *  <p>Sets the CustomerGroup for which this Price is valid.</p>
+     * @return customerGroup
      */
     @Valid
     @JsonProperty("customerGroup")
@@ -78,6 +83,7 @@ public interface StandalonePriceImport extends ImportResource {
 
     /**
      *  <p>Sets the product distribution Channel for which this Price is valid</p>
+     * @return channel
      */
     @Valid
     @JsonProperty("channel")
@@ -85,6 +91,7 @@ public interface StandalonePriceImport extends ImportResource {
 
     /**
      *  <p>Sets the date from which the Price is valid.</p>
+     * @return validFrom
      */
 
     @JsonProperty("validFrom")
@@ -92,6 +99,7 @@ public interface StandalonePriceImport extends ImportResource {
 
     /**
      *  <p>Sets the date until the Price is valid.</p>
+     * @return validUntil
      */
 
     @JsonProperty("validUntil")
@@ -99,6 +107,7 @@ public interface StandalonePriceImport extends ImportResource {
 
     /**
      *  <p>Sets price tiers.</p>
+     * @return tiers
      */
     @Valid
     @JsonProperty("tiers")
@@ -106,6 +115,7 @@ public interface StandalonePriceImport extends ImportResource {
 
     /**
      *  <p>Sets a discounted price for this Price that is different from the base price with value.</p>
+     * @return discounted
      */
     @Valid
     @JsonProperty("discounted")
@@ -113,6 +123,7 @@ public interface StandalonePriceImport extends ImportResource {
 
     /**
      *  <p>Custom Fields for the StandalonePrice.</p>
+     * @return custom
      */
     @Valid
     @JsonProperty("custom")

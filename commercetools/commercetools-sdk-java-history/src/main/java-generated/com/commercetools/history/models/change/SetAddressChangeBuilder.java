@@ -32,6 +32,8 @@ public class SetAddressChangeBuilder implements Builder<SetAddressChange> {
 
     /**
      *  <p>Update action for <code>setAddress</code> action.</p>
+     * @param change
+     * @return Builder
      */
 
     public SetAddressChangeBuilder change(final String change) {
@@ -41,6 +43,7 @@ public class SetAddressChangeBuilder implements Builder<SetAddressChange> {
 
     /**
      *
+     * @return Builder
      */
 
     public SetAddressChangeBuilder nextValue(
@@ -51,6 +54,8 @@ public class SetAddressChangeBuilder implements Builder<SetAddressChange> {
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public SetAddressChangeBuilder nextValue(final com.commercetools.history.models.common.Address nextValue) {
@@ -60,6 +65,7 @@ public class SetAddressChangeBuilder implements Builder<SetAddressChange> {
 
     /**
      *
+     * @return Builder
      */
 
     public SetAddressChangeBuilder previousValue(
@@ -70,6 +76,8 @@ public class SetAddressChangeBuilder implements Builder<SetAddressChange> {
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public SetAddressChangeBuilder previousValue(final com.commercetools.history.models.common.Address previousValue) {

@@ -34,6 +34,7 @@ public interface OrderLabel extends Label {
 
     /**
      *
+     * @return type
      */
     @NotNull
     @JsonProperty("type")
@@ -41,6 +42,7 @@ public interface OrderLabel extends Label {
 
     /**
      *
+     * @return customerEmail
      */
     @NotNull
     @JsonProperty("customerEmail")
@@ -48,6 +50,7 @@ public interface OrderLabel extends Label {
 
     /**
      *
+     * @return orderNumber
      */
     @NotNull
     @JsonProperty("orderNumber")

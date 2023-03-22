@@ -33,6 +33,7 @@ public interface ProductVariantSelectionIncludeOnly extends ProductVariantSelect
 
     /**
      *
+     * @return type
      */
     @NotNull
     @JsonProperty("type")
@@ -40,6 +41,7 @@ public interface ProductVariantSelectionIncludeOnly extends ProductVariantSelect
 
     /**
      *  <p>Non-empty array of SKUs representing Product Variants to be included into the Product Selection.</p>
+     * @return skus
      */
     @NotNull
     @JsonProperty("skus")

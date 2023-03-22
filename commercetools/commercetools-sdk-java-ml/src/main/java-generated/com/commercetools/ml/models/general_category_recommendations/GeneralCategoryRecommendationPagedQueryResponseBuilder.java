@@ -36,6 +36,8 @@ public class GeneralCategoryRecommendationPagedQueryResponseBuilder
 
     /**
      *
+     * @param count
+     * @return Builder
      */
 
     public GeneralCategoryRecommendationPagedQueryResponseBuilder count(final Long count) {
@@ -45,6 +47,8 @@ public class GeneralCategoryRecommendationPagedQueryResponseBuilder
 
     /**
      *
+     * @param total
+     * @return Builder
      */
 
     public GeneralCategoryRecommendationPagedQueryResponseBuilder total(final Long total) {
@@ -54,6 +58,8 @@ public class GeneralCategoryRecommendationPagedQueryResponseBuilder
 
     /**
      *  <p>Number of elements skipped.</p>
+     * @param offset
+     * @return Builder
      */
 
     public GeneralCategoryRecommendationPagedQueryResponseBuilder offset(final Long offset) {
@@ -63,6 +69,8 @@ public class GeneralCategoryRecommendationPagedQueryResponseBuilder
 
     /**
      *
+     * @param results
+     * @return Builder
      */
 
     public GeneralCategoryRecommendationPagedQueryResponseBuilder results(
@@ -73,6 +81,8 @@ public class GeneralCategoryRecommendationPagedQueryResponseBuilder
 
     /**
      *
+     * @param results
+     * @return Builder
      */
 
     public GeneralCategoryRecommendationPagedQueryResponseBuilder results(
@@ -83,6 +93,8 @@ public class GeneralCategoryRecommendationPagedQueryResponseBuilder
 
     /**
      *
+     * @param results
+     * @return Builder
      */
 
     public GeneralCategoryRecommendationPagedQueryResponseBuilder plusResults(
@@ -96,6 +108,7 @@ public class GeneralCategoryRecommendationPagedQueryResponseBuilder
 
     /**
      *
+     * @return Builder
      */
 
     public GeneralCategoryRecommendationPagedQueryResponseBuilder plusResults(
@@ -112,6 +125,7 @@ public class GeneralCategoryRecommendationPagedQueryResponseBuilder
 
     /**
      *
+     * @return Builder
      */
 
     public GeneralCategoryRecommendationPagedQueryResponseBuilder withResults(

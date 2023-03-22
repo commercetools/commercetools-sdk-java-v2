@@ -31,6 +31,8 @@ public class CartDiscountReferenceBuilder implements Builder<CartDiscountReferen
 
     /**
      *  <p>Unique identifier of the referenced CartDiscount.</p>
+     * @param id
+     * @return Builder
      */
 
     public CartDiscountReferenceBuilder id(final String id) {
@@ -40,6 +42,7 @@ public class CartDiscountReferenceBuilder implements Builder<CartDiscountReferen
 
     /**
      *  <p>Contains the representation of the expanded CartDiscount. Only present in responses to requests with Reference Expansion for CartDiscounts.</p>
+     * @return Builder
      */
 
     public CartDiscountReferenceBuilder obj(
@@ -50,6 +53,8 @@ public class CartDiscountReferenceBuilder implements Builder<CartDiscountReferen
 
     /**
      *  <p>Contains the representation of the expanded CartDiscount. Only present in responses to requests with Reference Expansion for CartDiscounts.</p>
+     * @param obj
+     * @return Builder
      */
 
     public CartDiscountReferenceBuilder obj(

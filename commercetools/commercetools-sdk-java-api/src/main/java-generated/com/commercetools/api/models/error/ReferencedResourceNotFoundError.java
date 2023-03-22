@@ -35,6 +35,7 @@ public interface ReferencedResourceNotFoundError extends ErrorObject {
 
     /**
      *
+     * @return code
      */
     @NotNull
     @JsonProperty("code")
@@ -42,6 +43,7 @@ public interface ReferencedResourceNotFoundError extends ErrorObject {
 
     /**
      *  <p><code>"The referenced object of type $typeId $predicate was not found. It either doesn't exist, or it can't be accessed from this endpoint (e.g., if the endpoint filters by store or customer account)."</code></p>
+     * @return message
      */
     @NotNull
     @JsonProperty("message")
@@ -49,6 +51,7 @@ public interface ReferencedResourceNotFoundError extends ErrorObject {
 
     /**
      *  <p>Type of referenced resource.</p>
+     * @return typeId
      */
     @NotNull
     @JsonProperty("typeId")
@@ -56,6 +59,7 @@ public interface ReferencedResourceNotFoundError extends ErrorObject {
 
     /**
      *  <p>Unique identifier of the referenced resource, if known.</p>
+     * @return id
      */
 
     @JsonProperty("id")
@@ -63,6 +67,7 @@ public interface ReferencedResourceNotFoundError extends ErrorObject {
 
     /**
      *  <p>User-defined unique identifier of the referenced resource, if known.</p>
+     * @return key
      */
 
     @JsonProperty("key")

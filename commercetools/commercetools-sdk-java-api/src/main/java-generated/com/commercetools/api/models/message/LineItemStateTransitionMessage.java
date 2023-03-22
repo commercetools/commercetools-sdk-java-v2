@@ -47,6 +47,7 @@ public interface LineItemStateTransitionMessage extends OrderMessage {
 
     /**
      *  <p>Unique identifier of the Line Item.</p>
+     * @return lineItemId
      */
     @NotNull
     @JsonProperty("lineItemId")
@@ -54,6 +55,7 @@ public interface LineItemStateTransitionMessage extends OrderMessage {
 
     /**
      *  <p>Date and time (UTC) when the transition of the Line Item State was performed.</p>
+     * @return transitionDate
      */
     @NotNull
     @JsonProperty("transitionDate")
@@ -61,6 +63,7 @@ public interface LineItemStateTransitionMessage extends OrderMessage {
 
     /**
      *  <p>Number of Line Items for which the State was transitioned.</p>
+     * @return quantity
      */
     @NotNull
     @JsonProperty("quantity")
@@ -68,6 +71,7 @@ public interface LineItemStateTransitionMessage extends OrderMessage {
 
     /**
      *  <p>State the Line Item was transitioned from.</p>
+     * @return fromState
      */
     @NotNull
     @Valid
@@ -76,6 +80,7 @@ public interface LineItemStateTransitionMessage extends OrderMessage {
 
     /**
      *  <p>State the Line Item was transitioned to.</p>
+     * @return toState
      */
     @NotNull
     @Valid

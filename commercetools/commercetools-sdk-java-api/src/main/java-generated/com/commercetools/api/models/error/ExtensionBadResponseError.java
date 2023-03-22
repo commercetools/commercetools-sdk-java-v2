@@ -37,6 +37,7 @@ public interface ExtensionBadResponseError extends ErrorObject {
 
     /**
      *
+     * @return code
      */
     @NotNull
     @JsonProperty("code")
@@ -44,6 +45,7 @@ public interface ExtensionBadResponseError extends ErrorObject {
 
     /**
      *  <p>Description of the invalid Extension response. For example, <code>"The extension did not return the expected JSON."</code>.</p>
+     * @return message
      */
     @NotNull
     @JsonProperty("message")
@@ -51,6 +53,7 @@ public interface ExtensionBadResponseError extends ErrorObject {
 
     /**
      *  <p>User-defined localized description of the error.</p>
+     * @return localizedMessage
      */
     @Valid
     @JsonProperty("localizedMessage")
@@ -58,6 +61,7 @@ public interface ExtensionBadResponseError extends ErrorObject {
 
     /**
      *  <p>Any information that should be returned to the API caller.</p>
+     * @return extensionExtraInfo
      */
     @Valid
     @JsonProperty("extensionExtraInfo")
@@ -65,6 +69,7 @@ public interface ExtensionBadResponseError extends ErrorObject {
 
     /**
      *  <p>Additional errors related to the API Extension.</p>
+     * @return extensionErrors
      */
     @NotNull
     @Valid
@@ -73,6 +78,7 @@ public interface ExtensionBadResponseError extends ErrorObject {
 
     /**
      *  <p>The response body returned by the Extension.</p>
+     * @return extensionBody
      */
 
     @JsonProperty("extensionBody")
@@ -80,6 +86,7 @@ public interface ExtensionBadResponseError extends ErrorObject {
 
     /**
      *  <p>Http status code returned by the Extension.</p>
+     * @return extensionStatusCode
      */
 
     @JsonProperty("extensionStatusCode")
@@ -87,6 +94,7 @@ public interface ExtensionBadResponseError extends ErrorObject {
 
     /**
      *  <p>Unique identifier of the Extension.</p>
+     * @return extensionId
      */
     @NotNull
     @JsonProperty("extensionId")
@@ -94,6 +102,7 @@ public interface ExtensionBadResponseError extends ErrorObject {
 
     /**
      *  <p>User-defined unique identifier of the Extension.</p>
+     * @return extensionKey
      */
 
     @JsonProperty("extensionKey")

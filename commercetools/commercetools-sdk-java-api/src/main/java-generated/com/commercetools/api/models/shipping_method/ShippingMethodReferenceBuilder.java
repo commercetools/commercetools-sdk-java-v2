@@ -31,6 +31,8 @@ public class ShippingMethodReferenceBuilder implements Builder<ShippingMethodRef
 
     /**
      *  <p>Unique identifier of the referenced ShippingMethod.</p>
+     * @param id
+     * @return Builder
      */
 
     public ShippingMethodReferenceBuilder id(final String id) {
@@ -40,6 +42,7 @@ public class ShippingMethodReferenceBuilder implements Builder<ShippingMethodRef
 
     /**
      *  <p>Contains the representation of the expanded ShippingMethod. Only present in responses to requests with Reference Expansion for ShippingMethods.</p>
+     * @return Builder
      */
 
     public ShippingMethodReferenceBuilder obj(
@@ -50,6 +53,8 @@ public class ShippingMethodReferenceBuilder implements Builder<ShippingMethodRef
 
     /**
      *  <p>Contains the representation of the expanded ShippingMethod. Only present in responses to requests with Reference Expansion for ShippingMethods.</p>
+     * @param obj
+     * @return Builder
      */
 
     public ShippingMethodReferenceBuilder obj(

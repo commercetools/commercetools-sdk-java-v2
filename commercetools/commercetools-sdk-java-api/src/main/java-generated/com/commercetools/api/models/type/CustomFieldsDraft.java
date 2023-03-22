@@ -32,6 +32,7 @@ public interface CustomFieldsDraft extends io.vrap.rmf.base.client.Draft<CustomF
 
     /**
      *  <p><code>id</code> or <code>key</code> of the Type.</p>
+     * @return type
      */
     @NotNull
     @Valid
@@ -40,6 +41,7 @@ public interface CustomFieldsDraft extends io.vrap.rmf.base.client.Draft<CustomF
 
     /**
      *  <p>Object containing the Custom Fields for the customized resource or data type.</p>
+     * @return fields
      */
     @Valid
     @JsonProperty("fields")

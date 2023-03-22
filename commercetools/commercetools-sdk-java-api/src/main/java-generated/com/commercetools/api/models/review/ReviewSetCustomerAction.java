@@ -33,6 +33,7 @@ public interface ReviewSetCustomerAction extends ReviewUpdateAction {
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
+     * @return customer
      */
     @Valid
     @JsonProperty("customer")

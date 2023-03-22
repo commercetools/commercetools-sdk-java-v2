@@ -32,6 +32,7 @@ public interface UnresolvedReferences {
 
     /**
      *
+     * @return key
      */
     @NotNull
     @JsonProperty("key")
@@ -39,6 +40,7 @@ public interface UnresolvedReferences {
 
     /**
      *  <p>The type of the referenced resource.</p>
+     * @return typeId
      */
     @NotNull
     @JsonProperty("typeId")

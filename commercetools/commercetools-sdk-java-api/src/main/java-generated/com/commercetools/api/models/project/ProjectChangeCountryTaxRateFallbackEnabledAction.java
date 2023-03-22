@@ -33,6 +33,7 @@ public interface ProjectChangeCountryTaxRateFallbackEnabledAction extends Projec
 
     /**
      *  <p>When <code>true</code>, country <em>- no state</em> Tax Rate is used as fallback. See CartsConfiguration.</p>
+     * @return countryTaxRateFallbackEnabled
      */
     @NotNull
     @JsonProperty("countryTaxRateFallbackEnabled")

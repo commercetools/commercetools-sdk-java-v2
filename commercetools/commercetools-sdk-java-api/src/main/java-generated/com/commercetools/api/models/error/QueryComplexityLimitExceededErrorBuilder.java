@@ -27,6 +27,8 @@ public class QueryComplexityLimitExceededErrorBuilder implements Builder<QueryCo
 
     /**
      *
+     * @param message
+     * @return Builder
      */
 
     public QueryComplexityLimitExceededErrorBuilder message(final String message) {

@@ -32,6 +32,8 @@ public class SetStoresChangeBuilder implements Builder<SetStoresChange> {
 
     /**
      *  <p>Shape of the action for <code>setStores</code></p>
+     * @param change
+     * @return Builder
      */
 
     public SetStoresChangeBuilder change(final String change) {
@@ -41,6 +43,8 @@ public class SetStoresChangeBuilder implements Builder<SetStoresChange> {
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public SetStoresChangeBuilder previousValue(
@@ -51,6 +55,8 @@ public class SetStoresChangeBuilder implements Builder<SetStoresChange> {
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public SetStoresChangeBuilder previousValue(
@@ -61,6 +67,8 @@ public class SetStoresChangeBuilder implements Builder<SetStoresChange> {
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public SetStoresChangeBuilder plusPreviousValue(
@@ -74,6 +82,7 @@ public class SetStoresChangeBuilder implements Builder<SetStoresChange> {
 
     /**
      *
+     * @return Builder
      */
 
     public SetStoresChangeBuilder plusPreviousValue(
@@ -87,6 +96,7 @@ public class SetStoresChangeBuilder implements Builder<SetStoresChange> {
 
     /**
      *
+     * @return Builder
      */
 
     public SetStoresChangeBuilder withPreviousValue(
@@ -98,6 +108,8 @@ public class SetStoresChangeBuilder implements Builder<SetStoresChange> {
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public SetStoresChangeBuilder nextValue(final com.commercetools.history.models.common.Reference... nextValue) {
@@ -107,6 +119,8 @@ public class SetStoresChangeBuilder implements Builder<SetStoresChange> {
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public SetStoresChangeBuilder nextValue(
@@ -117,6 +131,8 @@ public class SetStoresChangeBuilder implements Builder<SetStoresChange> {
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public SetStoresChangeBuilder plusNextValue(final com.commercetools.history.models.common.Reference... nextValue) {
@@ -129,6 +145,7 @@ public class SetStoresChangeBuilder implements Builder<SetStoresChange> {
 
     /**
      *
+     * @return Builder
      */
 
     public SetStoresChangeBuilder plusNextValue(
@@ -142,6 +159,7 @@ public class SetStoresChangeBuilder implements Builder<SetStoresChange> {
 
     /**
      *
+     * @return Builder
      */
 
     public SetStoresChangeBuilder withNextValue(

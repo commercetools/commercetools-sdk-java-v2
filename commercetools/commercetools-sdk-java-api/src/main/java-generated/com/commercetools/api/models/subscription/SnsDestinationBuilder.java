@@ -36,6 +36,8 @@ public class SnsDestinationBuilder implements Builder<SnsDestination> {
 
     /**
      *  <p>Only present if <code>authenticationMode</code> is set to <code>Credentials</code>.</p>
+     * @param accessKey
+     * @return Builder
      */
 
     public SnsDestinationBuilder accessKey(@Nullable final String accessKey) {
@@ -45,6 +47,8 @@ public class SnsDestinationBuilder implements Builder<SnsDestination> {
 
     /**
      *  <p>Only present if <code>authenticationMode</code> is set to <code>Credentials</code>.</p>
+     * @param accessSecret
+     * @return Builder
      */
 
     public SnsDestinationBuilder accessSecret(@Nullable final String accessSecret) {
@@ -54,6 +58,8 @@ public class SnsDestinationBuilder implements Builder<SnsDestination> {
 
     /**
      *  <p>Amazon Resource Name (ARN) of the topic.</p>
+     * @param topicArn
+     * @return Builder
      */
 
     public SnsDestinationBuilder topicArn(final String topicArn) {
@@ -63,6 +69,8 @@ public class SnsDestinationBuilder implements Builder<SnsDestination> {
 
     /**
      *  <p>Defines the method of authentication for the SNS topic.</p>
+     * @param authenticationMode
+     * @return Builder
      */
 
     public SnsDestinationBuilder authenticationMode(

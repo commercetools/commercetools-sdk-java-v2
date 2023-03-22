@@ -25,6 +25,8 @@ public class DiscountCodeChangeGroupsActionBuilder implements Builder<DiscountCo
 
     /**
      *  <p>New value to set. An empty array removes the DiscountCode from all groups.</p>
+     * @param groups
+     * @return Builder
      */
 
     public DiscountCodeChangeGroupsActionBuilder groups(final String... groups) {
@@ -34,6 +36,8 @@ public class DiscountCodeChangeGroupsActionBuilder implements Builder<DiscountCo
 
     /**
      *  <p>New value to set. An empty array removes the DiscountCode from all groups.</p>
+     * @param groups
+     * @return Builder
      */
 
     public DiscountCodeChangeGroupsActionBuilder groups(final java.util.List<String> groups) {
@@ -43,6 +47,8 @@ public class DiscountCodeChangeGroupsActionBuilder implements Builder<DiscountCo
 
     /**
      *  <p>New value to set. An empty array removes the DiscountCode from all groups.</p>
+     * @param groups
+     * @return Builder
      */
 
     public DiscountCodeChangeGroupsActionBuilder plusGroups(final String... groups) {

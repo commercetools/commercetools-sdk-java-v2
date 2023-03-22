@@ -37,6 +37,8 @@ public class ProductAddPriceActionBuilder implements Builder<ProductAddPriceActi
 
     /**
      *  <p>The <code>id</code> of the ProductVariant to update.</p>
+     * @param variantId
+     * @return Builder
      */
 
     public ProductAddPriceActionBuilder variantId(@Nullable final Long variantId) {
@@ -46,6 +48,8 @@ public class ProductAddPriceActionBuilder implements Builder<ProductAddPriceActi
 
     /**
      *  <p>The <code>sku</code> of the ProductVariant to update.</p>
+     * @param sku
+     * @return Builder
      */
 
     public ProductAddPriceActionBuilder sku(@Nullable final String sku) {
@@ -55,6 +59,7 @@ public class ProductAddPriceActionBuilder implements Builder<ProductAddPriceActi
 
     /**
      *  <p>Embedded Price to add to the Product Variant.</p>
+     * @return Builder
      */
 
     public ProductAddPriceActionBuilder price(
@@ -65,6 +70,8 @@ public class ProductAddPriceActionBuilder implements Builder<ProductAddPriceActi
 
     /**
      *  <p>Embedded Price to add to the Product Variant.</p>
+     * @param price
+     * @return Builder
      */
 
     public ProductAddPriceActionBuilder price(final com.commercetools.api.models.common.PriceDraft price) {
@@ -74,6 +81,8 @@ public class ProductAddPriceActionBuilder implements Builder<ProductAddPriceActi
 
     /**
      *  <p>If <code>true</code>, only the staged <code>prices</code> is updated. If <code>false</code>, both the current and staged <code>prices</code> are updated.</p>
+     * @param staged
+     * @return Builder
      */
 
     public ProductAddPriceActionBuilder staged(@Nullable final Boolean staged) {

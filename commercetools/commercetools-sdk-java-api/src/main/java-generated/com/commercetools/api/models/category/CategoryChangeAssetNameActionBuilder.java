@@ -34,6 +34,8 @@ public class CategoryChangeAssetNameActionBuilder implements Builder<CategoryCha
 
     /**
      *  <p>New value to set. Either <code>assetId</code> or <code>assetKey</code> is required.</p>
+     * @param assetId
+     * @return Builder
      */
 
     public CategoryChangeAssetNameActionBuilder assetId(@Nullable final String assetId) {
@@ -43,6 +45,8 @@ public class CategoryChangeAssetNameActionBuilder implements Builder<CategoryCha
 
     /**
      *  <p>New value to set. Either <code>assetId</code> or <code>assetKey</code> is required.</p>
+     * @param assetKey
+     * @return Builder
      */
 
     public CategoryChangeAssetNameActionBuilder assetKey(@Nullable final String assetKey) {
@@ -52,6 +56,7 @@ public class CategoryChangeAssetNameActionBuilder implements Builder<CategoryCha
 
     /**
      *  <p>New value to set. Must not be empty.</p>
+     * @return Builder
      */
 
     public CategoryChangeAssetNameActionBuilder name(
@@ -62,6 +67,8 @@ public class CategoryChangeAssetNameActionBuilder implements Builder<CategoryCha
 
     /**
      *  <p>New value to set. Must not be empty.</p>
+     * @param name
+     * @return Builder
      */
 
     public CategoryChangeAssetNameActionBuilder name(final com.commercetools.api.models.common.LocalizedString name) {

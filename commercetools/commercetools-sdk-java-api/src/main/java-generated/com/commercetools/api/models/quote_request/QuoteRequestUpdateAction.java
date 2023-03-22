@@ -38,6 +38,7 @@ public interface QuoteRequestUpdateAction
 
     /**
      *
+     * @return action
      */
     @NotNull
     @JsonProperty("action")

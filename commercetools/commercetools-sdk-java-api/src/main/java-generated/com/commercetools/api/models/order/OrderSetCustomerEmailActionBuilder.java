@@ -27,6 +27,8 @@ public class OrderSetCustomerEmailActionBuilder implements Builder<OrderSetCusto
 
     /**
      *
+     * @param email
+     * @return Builder
      */
 
     public OrderSetCustomerEmailActionBuilder email(@Nullable final String email) {

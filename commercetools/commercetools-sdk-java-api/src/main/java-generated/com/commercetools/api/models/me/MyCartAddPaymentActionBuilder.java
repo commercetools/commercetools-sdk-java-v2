@@ -26,6 +26,7 @@ public class MyCartAddPaymentActionBuilder implements Builder<MyCartAddPaymentAc
 
     /**
      *  <p>Payment to add to the Cart. Must not be assigned to another Order or active Cart already.</p>
+     * @return Builder
      */
 
     public MyCartAddPaymentActionBuilder payment(
@@ -37,6 +38,8 @@ public class MyCartAddPaymentActionBuilder implements Builder<MyCartAddPaymentAc
 
     /**
      *  <p>Payment to add to the Cart. Must not be assigned to another Order or active Cart already.</p>
+     * @param payment
+     * @return Builder
      */
 
     public MyCartAddPaymentActionBuilder payment(

@@ -40,6 +40,8 @@ public class OrderTransitionLineItemStateActionBuilder implements Builder<OrderT
 
     /**
      *
+     * @param lineItemId
+     * @return Builder
      */
 
     public OrderTransitionLineItemStateActionBuilder lineItemId(final String lineItemId) {
@@ -49,6 +51,8 @@ public class OrderTransitionLineItemStateActionBuilder implements Builder<OrderT
 
     /**
      *
+     * @param quantity
+     * @return Builder
      */
 
     public OrderTransitionLineItemStateActionBuilder quantity(final Long quantity) {
@@ -58,6 +62,7 @@ public class OrderTransitionLineItemStateActionBuilder implements Builder<OrderT
 
     /**
      *  <p>ResourceIdentifier to a State.</p>
+     * @return Builder
      */
 
     public OrderTransitionLineItemStateActionBuilder fromState(
@@ -68,6 +73,8 @@ public class OrderTransitionLineItemStateActionBuilder implements Builder<OrderT
 
     /**
      *  <p>ResourceIdentifier to a State.</p>
+     * @param fromState
+     * @return Builder
      */
 
     public OrderTransitionLineItemStateActionBuilder fromState(
@@ -78,6 +85,7 @@ public class OrderTransitionLineItemStateActionBuilder implements Builder<OrderT
 
     /**
      *  <p>ResourceIdentifier to a State.</p>
+     * @return Builder
      */
 
     public OrderTransitionLineItemStateActionBuilder toState(
@@ -88,6 +96,8 @@ public class OrderTransitionLineItemStateActionBuilder implements Builder<OrderT
 
     /**
      *  <p>ResourceIdentifier to a State.</p>
+     * @param toState
+     * @return Builder
      */
 
     public OrderTransitionLineItemStateActionBuilder toState(
@@ -98,6 +108,8 @@ public class OrderTransitionLineItemStateActionBuilder implements Builder<OrderT
 
     /**
      *
+     * @param actualTransitionDate
+     * @return Builder
      */
 
     public OrderTransitionLineItemStateActionBuilder actualTransitionDate(

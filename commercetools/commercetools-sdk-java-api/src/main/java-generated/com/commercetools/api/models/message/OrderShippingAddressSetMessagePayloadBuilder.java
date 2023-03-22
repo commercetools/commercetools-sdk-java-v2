@@ -31,6 +31,7 @@ public class OrderShippingAddressSetMessagePayloadBuilder implements Builder<Ord
 
     /**
      *  <p>Shipping address on the Order after the Set Shipping Address update action.</p>
+     * @return Builder
      */
 
     public OrderShippingAddressSetMessagePayloadBuilder address(
@@ -41,6 +42,8 @@ public class OrderShippingAddressSetMessagePayloadBuilder implements Builder<Ord
 
     /**
      *  <p>Shipping address on the Order after the Set Shipping Address update action.</p>
+     * @param address
+     * @return Builder
      */
 
     public OrderShippingAddressSetMessagePayloadBuilder address(
@@ -51,6 +54,7 @@ public class OrderShippingAddressSetMessagePayloadBuilder implements Builder<Ord
 
     /**
      *  <p>Shipping address on the Order before the Set Shipping Address update action.</p>
+     * @return Builder
      */
 
     public OrderShippingAddressSetMessagePayloadBuilder oldAddress(
@@ -61,6 +65,8 @@ public class OrderShippingAddressSetMessagePayloadBuilder implements Builder<Ord
 
     /**
      *  <p>Shipping address on the Order before the Set Shipping Address update action.</p>
+     * @param oldAddress
+     * @return Builder
      */
 
     public OrderShippingAddressSetMessagePayloadBuilder oldAddress(

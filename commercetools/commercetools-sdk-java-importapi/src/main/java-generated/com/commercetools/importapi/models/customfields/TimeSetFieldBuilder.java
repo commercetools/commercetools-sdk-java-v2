@@ -25,6 +25,8 @@ public class TimeSetFieldBuilder implements Builder<TimeSetField> {
 
     /**
      *
+     * @param value
+     * @return Builder
      */
 
     public TimeSetFieldBuilder value(final java.time.LocalTime... value) {
@@ -34,6 +36,8 @@ public class TimeSetFieldBuilder implements Builder<TimeSetField> {
 
     /**
      *
+     * @param value
+     * @return Builder
      */
 
     public TimeSetFieldBuilder value(final java.util.List<java.time.LocalTime> value) {
@@ -43,6 +47,8 @@ public class TimeSetFieldBuilder implements Builder<TimeSetField> {
 
     /**
      *
+     * @param value
+     * @return Builder
      */
 
     public TimeSetFieldBuilder plusValue(final java.time.LocalTime... value) {

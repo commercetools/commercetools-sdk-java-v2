@@ -25,6 +25,8 @@ public class AttributeTypeBuilder implements Builder<AttributeType> {
 
     /**
      *
+     * @param name
+     * @return Builder
      */
 
     public AttributeTypeBuilder name(final String name) {

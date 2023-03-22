@@ -35,6 +35,7 @@ public interface StandalonePriceChangeValueAction extends StandalonePriceUpdateA
 
     /**
      *  <p>New value to set. Must not be empty.</p>
+     * @return value
      */
     @NotNull
     @Valid
@@ -43,6 +44,7 @@ public interface StandalonePriceChangeValueAction extends StandalonePriceUpdateA
 
     /**
      *  <p>If set to <code>true</code> the update action applies to the StagedStandalonePrice. If set to <code>false</code>, the update action applies to the current StandalonePrice.</p>
+     * @return staged
      */
 
     @JsonProperty("staged")

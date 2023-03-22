@@ -27,6 +27,8 @@ public class StagedOrderChangeShipmentStateActionBuilder implements Builder<Stag
 
     /**
      *
+     * @param shipmentState
+     * @return Builder
      */
 
     public StagedOrderChangeShipmentStateActionBuilder shipmentState(

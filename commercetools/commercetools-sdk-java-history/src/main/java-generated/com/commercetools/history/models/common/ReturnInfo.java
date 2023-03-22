@@ -34,6 +34,7 @@ public interface ReturnInfo {
 
     /**
      *
+     * @return items
      */
     @NotNull
     @Valid
@@ -42,6 +43,7 @@ public interface ReturnInfo {
 
     /**
      *  <p>Identifies, which return tracking ID is connected to this particular return.</p>
+     * @return returnTrackingId
      */
     @NotNull
     @JsonProperty("returnTrackingId")
@@ -49,6 +51,7 @@ public interface ReturnInfo {
 
     /**
      *
+     * @return returnDate
      */
     @NotNull
     @JsonProperty("returnDate")

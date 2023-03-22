@@ -29,6 +29,8 @@ public class AddFieldDefinitionChangeBuilder implements Builder<AddFieldDefiniti
 
     /**
      *  <p>Update action for <code>addFieldDefinition</code> on payments</p>
+     * @param change
+     * @return Builder
      */
 
     public AddFieldDefinitionChangeBuilder change(final String change) {
@@ -38,6 +40,7 @@ public class AddFieldDefinitionChangeBuilder implements Builder<AddFieldDefiniti
 
     /**
      *
+     * @return Builder
      */
 
     public AddFieldDefinitionChangeBuilder nextValue(
@@ -48,6 +51,8 @@ public class AddFieldDefinitionChangeBuilder implements Builder<AddFieldDefiniti
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public AddFieldDefinitionChangeBuilder nextValue(

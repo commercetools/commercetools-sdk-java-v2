@@ -36,6 +36,7 @@ public interface FacetResult {
 
     /**
      *
+     * @return type
      */
     @NotNull
     @JsonProperty("type")

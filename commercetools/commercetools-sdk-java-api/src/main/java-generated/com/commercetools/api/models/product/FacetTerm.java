@@ -31,6 +31,7 @@ public interface FacetTerm {
 
     /**
      *
+     * @return term
      */
     @NotNull
     @JsonProperty("term")
@@ -38,6 +39,7 @@ public interface FacetTerm {
 
     /**
      *
+     * @return count
      */
     @NotNull
     @JsonProperty("count")
@@ -45,6 +47,7 @@ public interface FacetTerm {
 
     /**
      *
+     * @return productCount
      */
 
     @JsonProperty("productCount")

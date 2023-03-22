@@ -33,6 +33,7 @@ public interface InvalidInputError extends ErrorObject {
 
     /**
      *
+     * @return code
      */
     @NotNull
     @JsonProperty("code")
@@ -40,6 +41,7 @@ public interface InvalidInputError extends ErrorObject {
 
     /**
      *  <p>Description of the constraints that are not met by the request. For example, <code>"Invalid $propertyName. It may be a non-empty string up to $maxLength"</code>.</p>
+     * @return message
      */
     @NotNull
     @JsonProperty("message")

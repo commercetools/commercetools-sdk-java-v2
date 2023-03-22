@@ -197,6 +197,7 @@ public interface Message extends BaseResource, com.commercetools.api.models.Doma
 
     /**
      *  <p>Unique identifier of the Message. Can be used to track which Messages have been processed.</p>
+     * @return id
      */
     @NotNull
     @JsonProperty("id")
@@ -204,6 +205,7 @@ public interface Message extends BaseResource, com.commercetools.api.models.Doma
 
     /**
      *  <p>Version of a resource. In case of Messages, this is always <code>1</code>.</p>
+     * @return version
      */
     @NotNull
     @JsonProperty("version")
@@ -211,6 +213,7 @@ public interface Message extends BaseResource, com.commercetools.api.models.Doma
 
     /**
      *  <p>Date and time (UTC) the Message was generated.</p>
+     * @return createdAt
      */
     @NotNull
     @JsonProperty("createdAt")
@@ -218,6 +221,7 @@ public interface Message extends BaseResource, com.commercetools.api.models.Doma
 
     /**
      *  <p>Value of <code>createdAt</code>.</p>
+     * @return lastModifiedAt
      */
     @NotNull
     @JsonProperty("lastModifiedAt")
@@ -225,6 +229,7 @@ public interface Message extends BaseResource, com.commercetools.api.models.Doma
 
     /**
      *  <p>Value of <code>createdBy</code>.</p>
+     * @return lastModifiedBy
      */
     @Valid
     @JsonProperty("lastModifiedBy")
@@ -232,6 +237,7 @@ public interface Message extends BaseResource, com.commercetools.api.models.Doma
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @return createdBy
      */
     @Valid
     @JsonProperty("createdBy")
@@ -239,6 +245,7 @@ public interface Message extends BaseResource, com.commercetools.api.models.Doma
 
     /**
      *  <p>Message number in relation to other Messages for a given resource. The <code>sequenceNumber</code> of the next Message for the resource is the successor of the <code>sequenceNumber</code> of the current Message. Meaning, the <code>sequenceNumber</code> of the next Message equals the <code>sequenceNumber</code> of the current Message + 1. <code>sequenceNumber</code> can be used to ensure that Messages are processed in the correct order for a particular resource.</p>
+     * @return sequenceNumber
      */
     @NotNull
     @JsonProperty("sequenceNumber")
@@ -246,6 +253,7 @@ public interface Message extends BaseResource, com.commercetools.api.models.Doma
 
     /**
      *  <p>Reference to the resource on which the change or action was performed.</p>
+     * @return resource
      */
     @NotNull
     @Valid
@@ -254,6 +262,7 @@ public interface Message extends BaseResource, com.commercetools.api.models.Doma
 
     /**
      *  <p>Version of the resource on which the change or action was performed.</p>
+     * @return resourceVersion
      */
     @NotNull
     @JsonProperty("resourceVersion")
@@ -261,6 +270,7 @@ public interface Message extends BaseResource, com.commercetools.api.models.Doma
 
     /**
      *  <p>Message Type of the Message.</p>
+     * @return type
      */
     @NotNull
     @JsonProperty("type")
@@ -268,6 +278,7 @@ public interface Message extends BaseResource, com.commercetools.api.models.Doma
 
     /**
      *  <p>User-provided identifiers of the resource, such as <code>key</code> or <code>externalId</code>. Only present if the resource has such identifiers.</p>
+     * @return resourceUserProvidedIdentifiers
      */
     @Valid
     @JsonProperty("resourceUserProvidedIdentifiers")

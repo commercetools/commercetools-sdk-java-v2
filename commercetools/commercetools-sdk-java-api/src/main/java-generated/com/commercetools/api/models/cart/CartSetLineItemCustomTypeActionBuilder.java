@@ -34,6 +34,8 @@ public class CartSetLineItemCustomTypeActionBuilder implements Builder<CartSetLi
 
     /**
      *  <p><code>id</code> of the LineItem to update.</p>
+     * @param lineItemId
+     * @return Builder
      */
 
     public CartSetLineItemCustomTypeActionBuilder lineItemId(final String lineItemId) {
@@ -43,6 +45,7 @@ public class CartSetLineItemCustomTypeActionBuilder implements Builder<CartSetLi
 
     /**
      *  <p>Defines the Type that extends the Line Item with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Line Item.</p>
+     * @return Builder
      */
 
     public CartSetLineItemCustomTypeActionBuilder type(
@@ -53,6 +56,8 @@ public class CartSetLineItemCustomTypeActionBuilder implements Builder<CartSetLi
 
     /**
      *  <p>Defines the Type that extends the Line Item with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Line Item.</p>
+     * @param type
+     * @return Builder
      */
 
     public CartSetLineItemCustomTypeActionBuilder type(
@@ -63,6 +68,7 @@ public class CartSetLineItemCustomTypeActionBuilder implements Builder<CartSetLi
 
     /**
      *  <p>Sets the Custom Fields fields for the Line Item.</p>
+     * @return Builder
      */
 
     public CartSetLineItemCustomTypeActionBuilder fields(
@@ -73,6 +79,8 @@ public class CartSetLineItemCustomTypeActionBuilder implements Builder<CartSetLi
 
     /**
      *  <p>Sets the Custom Fields fields for the Line Item.</p>
+     * @param fields
+     * @return Builder
      */
 
     public CartSetLineItemCustomTypeActionBuilder fields(

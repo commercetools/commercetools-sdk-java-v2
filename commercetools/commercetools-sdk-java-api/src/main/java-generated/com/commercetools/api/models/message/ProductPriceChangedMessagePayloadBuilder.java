@@ -40,6 +40,8 @@ public class ProductPriceChangedMessagePayloadBuilder implements Builder<Product
 
     /**
      *  <p>Unique identifier of the ProductVariant for which the Price was changed.</p>
+     * @param variantId
+     * @return Builder
      */
 
     public ProductPriceChangedMessagePayloadBuilder variantId(final Long variantId) {
@@ -49,6 +51,7 @@ public class ProductPriceChangedMessagePayloadBuilder implements Builder<Product
 
     /**
      *  <p>The current Embedded Price before the Change Embedded Price update action.</p>
+     * @return Builder
      */
 
     public ProductPriceChangedMessagePayloadBuilder oldPrice(
@@ -59,6 +62,8 @@ public class ProductPriceChangedMessagePayloadBuilder implements Builder<Product
 
     /**
      *  <p>The current Embedded Price before the Change Embedded Price update action.</p>
+     * @param oldPrice
+     * @return Builder
      */
 
     public ProductPriceChangedMessagePayloadBuilder oldPrice(final com.commercetools.api.models.common.Price oldPrice) {
@@ -68,6 +73,7 @@ public class ProductPriceChangedMessagePayloadBuilder implements Builder<Product
 
     /**
      *  <p>The Embedded Price after the Change Embedded Price update action.</p>
+     * @return Builder
      */
 
     public ProductPriceChangedMessagePayloadBuilder newPrice(
@@ -78,6 +84,8 @@ public class ProductPriceChangedMessagePayloadBuilder implements Builder<Product
 
     /**
      *  <p>The Embedded Price after the Change Embedded Price update action.</p>
+     * @param newPrice
+     * @return Builder
      */
 
     public ProductPriceChangedMessagePayloadBuilder newPrice(final com.commercetools.api.models.common.Price newPrice) {
@@ -87,6 +95,8 @@ public class ProductPriceChangedMessagePayloadBuilder implements Builder<Product
 
     /**
      *  <p>Whether the update was only applied to the staged Product Projection.</p>
+     * @param staged
+     * @return Builder
      */
 
     public ProductPriceChangedMessagePayloadBuilder staged(final Boolean staged) {
@@ -96,6 +106,7 @@ public class ProductPriceChangedMessagePayloadBuilder implements Builder<Product
 
     /**
      *  <p>The staged Embedded Price before the Change Embedded Price update action.</p>
+     * @return Builder
      */
 
     public ProductPriceChangedMessagePayloadBuilder oldStagedPrice(
@@ -106,6 +117,8 @@ public class ProductPriceChangedMessagePayloadBuilder implements Builder<Product
 
     /**
      *  <p>The staged Embedded Price before the Change Embedded Price update action.</p>
+     * @param oldStagedPrice
+     * @return Builder
      */
 
     public ProductPriceChangedMessagePayloadBuilder oldStagedPrice(

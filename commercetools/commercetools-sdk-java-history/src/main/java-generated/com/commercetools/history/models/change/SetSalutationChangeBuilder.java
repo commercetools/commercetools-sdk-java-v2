@@ -31,6 +31,8 @@ public class SetSalutationChangeBuilder implements Builder<SetSalutationChange> 
 
     /**
      *  <p>Shape of the action for <code>setSalutation</code></p>
+     * @param change
+     * @return Builder
      */
 
     public SetSalutationChangeBuilder change(final String change) {
@@ -40,6 +42,8 @@ public class SetSalutationChangeBuilder implements Builder<SetSalutationChange> 
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public SetSalutationChangeBuilder previousValue(final String previousValue) {
@@ -49,6 +53,8 @@ public class SetSalutationChangeBuilder implements Builder<SetSalutationChange> 
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public SetSalutationChangeBuilder nextValue(final String nextValue) {

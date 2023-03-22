@@ -34,6 +34,7 @@ public interface ZoneRemoveLocationAction extends ZoneUpdateAction {
 
     /**
      *  <p>Location to be removed from the Zone.</p>
+     * @return location
      */
     @NotNull
     @Valid

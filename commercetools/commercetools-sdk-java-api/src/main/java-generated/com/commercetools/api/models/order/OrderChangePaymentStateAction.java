@@ -30,6 +30,7 @@ public interface OrderChangePaymentStateAction extends OrderUpdateAction {
 
     /**
      *
+     * @return paymentState
      */
 
     @JsonProperty("paymentState")

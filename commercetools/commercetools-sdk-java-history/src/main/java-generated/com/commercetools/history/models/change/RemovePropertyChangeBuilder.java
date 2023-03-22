@@ -30,6 +30,8 @@ public class RemovePropertyChangeBuilder implements Builder<RemovePropertyChange
 
     /**
      *  <p>Update action for <code>removeProperty</code> on custom objects</p>
+     * @param change
+     * @return Builder
      */
 
     public RemovePropertyChangeBuilder change(final String change) {
@@ -39,6 +41,8 @@ public class RemovePropertyChangeBuilder implements Builder<RemovePropertyChange
 
     /**
      *  <p>Value path to the property that was removed</p>
+     * @param path
+     * @return Builder
      */
 
     public RemovePropertyChangeBuilder path(final String path) {
@@ -48,6 +52,8 @@ public class RemovePropertyChangeBuilder implements Builder<RemovePropertyChange
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public RemovePropertyChangeBuilder previousValue(final java.lang.Object previousValue) {

@@ -26,6 +26,8 @@ public class QuoteRequestChangeQuoteRequestStateActionBuilder
 
     /**
      *  <p>New state to be set for the Quote Request.</p>
+     * @param quoteRequestState
+     * @return Builder
      */
 
     public QuoteRequestChangeQuoteRequestStateActionBuilder quoteRequestState(

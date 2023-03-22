@@ -30,6 +30,7 @@ public interface CustomerRemoveShippingAddressIdAction extends CustomerUpdateAct
 
     /**
      *  <p><code>id</code> of the Address to remove from <code>shippingAddressesIds</code>.</p>
+     * @return addressId
      */
 
     @JsonProperty("addressId")
@@ -37,6 +38,7 @@ public interface CustomerRemoveShippingAddressIdAction extends CustomerUpdateAct
 
     /**
      *  <p><code>key</code> of the Address to remove from <code>shippingAddressesIds</code>.</p>
+     * @return addressKey
      */
 
     @JsonProperty("addressKey")

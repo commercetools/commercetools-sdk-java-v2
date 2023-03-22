@@ -25,6 +25,8 @@ public class CartChangeTaxCalculationModeActionBuilder implements Builder<CartCh
 
     /**
      *  <p>New value to set.</p>
+     * @param taxCalculationMode
+     * @return Builder
      */
 
     public CartChangeTaxCalculationModeActionBuilder taxCalculationMode(

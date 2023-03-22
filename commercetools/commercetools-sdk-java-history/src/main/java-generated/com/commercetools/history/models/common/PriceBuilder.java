@@ -29,6 +29,8 @@ public class PriceBuilder implements Builder<Price> {
 
     /**
      *
+     * @param id
+     * @return Builder
      */
 
     public PriceBuilder id(final String id) {
@@ -38,6 +40,7 @@ public class PriceBuilder implements Builder<Price> {
 
     /**
      *
+     * @return Builder
      */
 
     public PriceBuilder value(
@@ -48,6 +51,8 @@ public class PriceBuilder implements Builder<Price> {
 
     /**
      *
+     * @param value
+     * @return Builder
      */
 
     public PriceBuilder value(final com.commercetools.history.models.common.Money value) {

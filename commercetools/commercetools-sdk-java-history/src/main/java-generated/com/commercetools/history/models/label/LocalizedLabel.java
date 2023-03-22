@@ -35,6 +35,7 @@ public interface LocalizedLabel extends Label {
 
     /**
      *
+     * @return type
      */
     @NotNull
     @JsonProperty("type")
@@ -42,6 +43,7 @@ public interface LocalizedLabel extends Label {
 
     /**
      *
+     * @return value
      */
     @NotNull
     @Valid

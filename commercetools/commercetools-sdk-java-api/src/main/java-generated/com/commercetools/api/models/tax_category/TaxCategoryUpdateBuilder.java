@@ -29,6 +29,8 @@ public class TaxCategoryUpdateBuilder implements Builder<TaxCategoryUpdate> {
 
     /**
      *  <p>Expected version of the TaxCategory on which the changes should be applied. If the expected version does not match the actual version, a ConcurrentModification error is returned.</p>
+     * @param version
+     * @return Builder
      */
 
     public TaxCategoryUpdateBuilder version(final Long version) {
@@ -38,6 +40,8 @@ public class TaxCategoryUpdateBuilder implements Builder<TaxCategoryUpdate> {
 
     /**
      *  <p>Update actions to be performed on the TaxCategory.</p>
+     * @param actions
+     * @return Builder
      */
 
     public TaxCategoryUpdateBuilder actions(
@@ -48,6 +52,8 @@ public class TaxCategoryUpdateBuilder implements Builder<TaxCategoryUpdate> {
 
     /**
      *  <p>Update actions to be performed on the TaxCategory.</p>
+     * @param actions
+     * @return Builder
      */
 
     public TaxCategoryUpdateBuilder actions(
@@ -58,6 +64,8 @@ public class TaxCategoryUpdateBuilder implements Builder<TaxCategoryUpdate> {
 
     /**
      *  <p>Update actions to be performed on the TaxCategory.</p>
+     * @param actions
+     * @return Builder
      */
 
     public TaxCategoryUpdateBuilder plusActions(
@@ -71,6 +79,7 @@ public class TaxCategoryUpdateBuilder implements Builder<TaxCategoryUpdate> {
 
     /**
      *  <p>Update actions to be performed on the TaxCategory.</p>
+     * @return Builder
      */
 
     public TaxCategoryUpdateBuilder plusActions(
@@ -85,6 +94,7 @@ public class TaxCategoryUpdateBuilder implements Builder<TaxCategoryUpdate> {
 
     /**
      *  <p>Update actions to be performed on the TaxCategory.</p>
+     * @return Builder
      */
 
     public TaxCategoryUpdateBuilder withActions(

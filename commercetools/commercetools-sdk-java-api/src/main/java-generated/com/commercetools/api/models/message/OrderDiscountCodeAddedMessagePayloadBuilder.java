@@ -26,6 +26,7 @@ public class OrderDiscountCodeAddedMessagePayloadBuilder implements Builder<Orde
 
     /**
      *  <p>DiscountCode that was added.</p>
+     * @return Builder
      */
 
     public OrderDiscountCodeAddedMessagePayloadBuilder discountCode(
@@ -37,6 +38,8 @@ public class OrderDiscountCodeAddedMessagePayloadBuilder implements Builder<Orde
 
     /**
      *  <p>DiscountCode that was added.</p>
+     * @param discountCode
+     * @return Builder
      */
 
     public OrderDiscountCodeAddedMessagePayloadBuilder discountCode(

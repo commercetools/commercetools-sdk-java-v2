@@ -37,6 +37,7 @@ public class AssignedProductSelectionBuilder implements Builder<AssignedProductS
 
     /**
      *  <p>Reference to the Product Selection that this assignment is part of.</p>
+     * @return Builder
      */
 
     public AssignedProductSelectionBuilder productSelection(
@@ -49,6 +50,8 @@ public class AssignedProductSelectionBuilder implements Builder<AssignedProductS
 
     /**
      *  <p>Reference to the Product Selection that this assignment is part of.</p>
+     * @param productSelection
+     * @return Builder
      */
 
     public AssignedProductSelectionBuilder productSelection(
@@ -60,6 +63,8 @@ public class AssignedProductSelectionBuilder implements Builder<AssignedProductS
     /**
      *  <p>Defines which Variants of the Product will be included from the Product Selection.</p>
      *  <p>This field is only available for Assignments to a Product Selection of type Individual.</p>
+     * @param variantSelection
+     * @return Builder
      */
 
     public AssignedProductSelectionBuilder variantSelection(
@@ -71,6 +76,7 @@ public class AssignedProductSelectionBuilder implements Builder<AssignedProductS
     /**
      *  <p>Defines which Variants of the Product will be included from the Product Selection.</p>
      *  <p>This field is only available for Assignments to a Product Selection of type Individual.</p>
+     * @return Builder
      */
 
     public AssignedProductSelectionBuilder variantSelection(
@@ -84,6 +90,7 @@ public class AssignedProductSelectionBuilder implements Builder<AssignedProductS
     /**
      *  <p>Defines which Variants of the Product will be excluded from the Product Selection.</p>
      *  <p>This field is only available for Assignments to a Product Selection of type Individual Exclusion.</p>
+     * @return Builder
      */
 
     public AssignedProductSelectionBuilder variantExclusion(
@@ -97,6 +104,8 @@ public class AssignedProductSelectionBuilder implements Builder<AssignedProductS
     /**
      *  <p>Defines which Variants of the Product will be excluded from the Product Selection.</p>
      *  <p>This field is only available for Assignments to a Product Selection of type Individual Exclusion.</p>
+     * @param variantExclusion
+     * @return Builder
      */
 
     public AssignedProductSelectionBuilder variantExclusion(
@@ -107,6 +116,8 @@ public class AssignedProductSelectionBuilder implements Builder<AssignedProductS
 
     /**
      *  <p>Date and time (UTC) this assignment was initially created.</p>
+     * @param createdAt
+     * @return Builder
      */
 
     public AssignedProductSelectionBuilder createdAt(final java.time.ZonedDateTime createdAt) {

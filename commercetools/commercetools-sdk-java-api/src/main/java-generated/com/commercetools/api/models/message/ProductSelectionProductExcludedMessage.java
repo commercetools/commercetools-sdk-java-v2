@@ -44,6 +44,7 @@ public interface ProductSelectionProductExcludedMessage extends Message {
 
     /**
      *  <p>Product that was excluded from the Product Selection.</p>
+     * @return product
      */
     @NotNull
     @Valid
@@ -52,6 +53,7 @@ public interface ProductSelectionProductExcludedMessage extends Message {
 
     /**
      *  <p>Product Variant Exclusion after the Exclude Product update action.</p>
+     * @return variantExclusion
      */
     @NotNull
     @Valid

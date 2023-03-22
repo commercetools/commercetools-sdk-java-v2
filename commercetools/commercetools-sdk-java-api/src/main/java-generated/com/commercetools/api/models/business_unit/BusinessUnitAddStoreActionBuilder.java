@@ -26,6 +26,7 @@ public class BusinessUnitAddStoreActionBuilder implements Builder<BusinessUnitAd
 
     /**
      *  <p>Store to add.</p>
+     * @return Builder
      */
 
     public BusinessUnitAddStoreActionBuilder store(
@@ -36,6 +37,8 @@ public class BusinessUnitAddStoreActionBuilder implements Builder<BusinessUnitAd
 
     /**
      *  <p>Store to add.</p>
+     * @param store
+     * @return Builder
      */
 
     public BusinessUnitAddStoreActionBuilder store(

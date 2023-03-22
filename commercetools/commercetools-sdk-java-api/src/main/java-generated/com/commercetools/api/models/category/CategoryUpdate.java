@@ -34,6 +34,7 @@ public interface CategoryUpdate extends
 
     /**
      *  <p>Expected version of the Category on which the changes should be applied. If the expected version does not match the actual version, a ConcurrentModification error is returned.</p>
+     * @return version
      */
     @NotNull
     @JsonProperty("version")
@@ -41,6 +42,7 @@ public interface CategoryUpdate extends
 
     /**
      *  <p>Update actions to be performed on the Category.</p>
+     * @return actions
      */
     @NotNull
     @Valid

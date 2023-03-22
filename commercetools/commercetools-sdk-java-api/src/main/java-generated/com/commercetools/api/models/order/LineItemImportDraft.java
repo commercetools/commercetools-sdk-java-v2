@@ -43,6 +43,7 @@ public interface LineItemImportDraft extends com.commercetools.api.models.Custom
 
     /**
      *  <p>ID of the existing product. You also need to specify the ID of the variant if this property is set or alternatively you can just specify SKU of the product variant.</p>
+     * @return productId
      */
 
     @JsonProperty("productId")
@@ -50,6 +51,7 @@ public interface LineItemImportDraft extends com.commercetools.api.models.Custom
 
     /**
      *  <p>The product name.</p>
+     * @return name
      */
     @NotNull
     @Valid
@@ -58,6 +60,7 @@ public interface LineItemImportDraft extends com.commercetools.api.models.Custom
 
     /**
      *
+     * @return variant
      */
     @NotNull
     @Valid
@@ -66,6 +69,7 @@ public interface LineItemImportDraft extends com.commercetools.api.models.Custom
 
     /**
      *
+     * @return price
      */
     @NotNull
     @Valid
@@ -74,6 +78,7 @@ public interface LineItemImportDraft extends com.commercetools.api.models.Custom
 
     /**
      *
+     * @return quantity
      */
     @NotNull
     @JsonProperty("quantity")
@@ -81,6 +86,7 @@ public interface LineItemImportDraft extends com.commercetools.api.models.Custom
 
     /**
      *
+     * @return state
      */
     @Valid
     @JsonProperty("state")
@@ -88,6 +94,7 @@ public interface LineItemImportDraft extends com.commercetools.api.models.Custom
 
     /**
      *  <p>Connection to a particular supplier. By providing supply channel information, you can uniquely identify inventory entries that should be reserved. The provided channel should have the InventorySupply role.</p>
+     * @return supplyChannel
      */
     @Valid
     @JsonProperty("supplyChannel")
@@ -95,6 +102,7 @@ public interface LineItemImportDraft extends com.commercetools.api.models.Custom
 
     /**
      *  <p>The channel is used to select a ProductPrice. The provided channel should have the ProductDistribution role.</p>
+     * @return distributionChannel
      */
     @Valid
     @JsonProperty("distributionChannel")
@@ -102,6 +110,7 @@ public interface LineItemImportDraft extends com.commercetools.api.models.Custom
 
     /**
      *
+     * @return taxRate
      */
     @Valid
     @JsonProperty("taxRate")
@@ -109,6 +118,7 @@ public interface LineItemImportDraft extends com.commercetools.api.models.Custom
 
     /**
      *  <p>The custom fields.</p>
+     * @return custom
      */
     @Valid
     @JsonProperty("custom")
@@ -116,6 +126,7 @@ public interface LineItemImportDraft extends com.commercetools.api.models.Custom
 
     /**
      *  <p>Inventory mode specific to the line item only, valid for the entire <code>quantity</code> of the line item. Set only if inventory mode should be different from the <code>inventoryMode</code> specified on the OrderImportDraft.</p>
+     * @return inventoryMode
      */
 
     @JsonProperty("inventoryMode")
@@ -123,6 +134,7 @@ public interface LineItemImportDraft extends com.commercetools.api.models.Custom
 
     /**
      *
+     * @return shippingDetails
      */
     @Valid
     @JsonProperty("shippingDetails")

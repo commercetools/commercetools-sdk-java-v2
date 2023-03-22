@@ -36,6 +36,7 @@ public interface MyShoppingListSetTextLineItemCustomTypeAction extends MyShoppin
 
     /**
      *  <p>The <code>id</code> of the TextLineItem to update.</p>
+     * @return textLineItemId
      */
     @NotNull
     @JsonProperty("textLineItemId")
@@ -43,6 +44,7 @@ public interface MyShoppingListSetTextLineItemCustomTypeAction extends MyShoppin
 
     /**
      *  <p>Defines the Type that extends the TextLineItem with Custom Fields. If absent, any existing Type and Custom Fields are removed from the TextLineItem.</p>
+     * @return type
      */
     @Valid
     @JsonProperty("type")
@@ -50,6 +52,7 @@ public interface MyShoppingListSetTextLineItemCustomTypeAction extends MyShoppin
 
     /**
      *  <p>Sets the Custom Fields fields for the TextLineItem.</p>
+     * @return fields
      */
     @Valid
     @JsonProperty("fields")

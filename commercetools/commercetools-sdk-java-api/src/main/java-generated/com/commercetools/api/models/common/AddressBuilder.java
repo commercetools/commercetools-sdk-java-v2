@@ -103,6 +103,8 @@ public class AddressBuilder implements Builder<Address> {
 
     /**
      *
+     * @param id
+     * @return Builder
      */
 
     public AddressBuilder id(@Nullable final String id) {
@@ -112,6 +114,8 @@ public class AddressBuilder implements Builder<Address> {
 
     /**
      *  <p>User-defined identifier of the Address that must be unique when multiple addresses are referenced in BusinessUnits, Customers, and <code>itemShippingAddresses</code> (LineItem-specific addresses) of a Cart, Order, QuoteRequest, or Quote.</p>
+     * @param key
+     * @return Builder
      */
 
     public AddressBuilder key(@Nullable final String key) {
@@ -121,6 +125,8 @@ public class AddressBuilder implements Builder<Address> {
 
     /**
      *  <p>Name of the country.</p>
+     * @param country
+     * @return Builder
      */
 
     public AddressBuilder country(final String country) {
@@ -130,6 +136,8 @@ public class AddressBuilder implements Builder<Address> {
 
     /**
      *  <p>Title of the contact, for example 'Dr.'</p>
+     * @param title
+     * @return Builder
      */
 
     public AddressBuilder title(@Nullable final String title) {
@@ -139,6 +147,8 @@ public class AddressBuilder implements Builder<Address> {
 
     /**
      *  <p>Salutation of the contact, for example 'Mr.' or 'Ms.'</p>
+     * @param salutation
+     * @return Builder
      */
 
     public AddressBuilder salutation(@Nullable final String salutation) {
@@ -148,6 +158,8 @@ public class AddressBuilder implements Builder<Address> {
 
     /**
      *  <p>Given name (first name) of the contact.</p>
+     * @param firstName
+     * @return Builder
      */
 
     public AddressBuilder firstName(@Nullable final String firstName) {
@@ -157,6 +169,8 @@ public class AddressBuilder implements Builder<Address> {
 
     /**
      *  <p>Family name (last name) of the contact.</p>
+     * @param lastName
+     * @return Builder
      */
 
     public AddressBuilder lastName(@Nullable final String lastName) {
@@ -166,6 +180,8 @@ public class AddressBuilder implements Builder<Address> {
 
     /**
      *  <p>Name of the street.</p>
+     * @param streetName
+     * @return Builder
      */
 
     public AddressBuilder streetName(@Nullable final String streetName) {
@@ -175,6 +191,8 @@ public class AddressBuilder implements Builder<Address> {
 
     /**
      *  <p>Street number.</p>
+     * @param streetNumber
+     * @return Builder
      */
 
     public AddressBuilder streetNumber(@Nullable final String streetNumber) {
@@ -184,6 +202,8 @@ public class AddressBuilder implements Builder<Address> {
 
     /**
      *  <p>Further information on the street address.</p>
+     * @param additionalStreetInfo
+     * @return Builder
      */
 
     public AddressBuilder additionalStreetInfo(@Nullable final String additionalStreetInfo) {
@@ -193,6 +213,8 @@ public class AddressBuilder implements Builder<Address> {
 
     /**
      *  <p>Postal code.</p>
+     * @param postalCode
+     * @return Builder
      */
 
     public AddressBuilder postalCode(@Nullable final String postalCode) {
@@ -202,6 +224,8 @@ public class AddressBuilder implements Builder<Address> {
 
     /**
      *  <p>Name of the city.</p>
+     * @param city
+     * @return Builder
      */
 
     public AddressBuilder city(@Nullable final String city) {
@@ -211,6 +235,8 @@ public class AddressBuilder implements Builder<Address> {
 
     /**
      *  <p>Name of the region.</p>
+     * @param region
+     * @return Builder
      */
 
     public AddressBuilder region(@Nullable final String region) {
@@ -220,6 +246,8 @@ public class AddressBuilder implements Builder<Address> {
 
     /**
      *  <p>Name of the state, for example, Colorado.</p>
+     * @param state
+     * @return Builder
      */
 
     public AddressBuilder state(@Nullable final String state) {
@@ -229,6 +257,8 @@ public class AddressBuilder implements Builder<Address> {
 
     /**
      *  <p>Name of the company.</p>
+     * @param company
+     * @return Builder
      */
 
     public AddressBuilder company(@Nullable final String company) {
@@ -238,6 +268,8 @@ public class AddressBuilder implements Builder<Address> {
 
     /**
      *  <p>Name of the department.</p>
+     * @param department
+     * @return Builder
      */
 
     public AddressBuilder department(@Nullable final String department) {
@@ -247,6 +279,8 @@ public class AddressBuilder implements Builder<Address> {
 
     /**
      *  <p>Number or name of the building.</p>
+     * @param building
+     * @return Builder
      */
 
     public AddressBuilder building(@Nullable final String building) {
@@ -256,6 +290,8 @@ public class AddressBuilder implements Builder<Address> {
 
     /**
      *  <p>Number or name of the apartment.</p>
+     * @param apartment
+     * @return Builder
      */
 
     public AddressBuilder apartment(@Nullable final String apartment) {
@@ -265,6 +301,8 @@ public class AddressBuilder implements Builder<Address> {
 
     /**
      *  <p>Post office box number.</p>
+     * @param pOBox
+     * @return Builder
      */
 
     public AddressBuilder pOBox(@Nullable final String pOBox) {
@@ -274,6 +312,8 @@ public class AddressBuilder implements Builder<Address> {
 
     /**
      *  <p>Phone number of the contact.</p>
+     * @param phone
+     * @return Builder
      */
 
     public AddressBuilder phone(@Nullable final String phone) {
@@ -283,6 +323,8 @@ public class AddressBuilder implements Builder<Address> {
 
     /**
      *  <p>Mobile phone number of the contact.</p>
+     * @param mobile
+     * @return Builder
      */
 
     public AddressBuilder mobile(@Nullable final String mobile) {
@@ -292,6 +334,8 @@ public class AddressBuilder implements Builder<Address> {
 
     /**
      *  <p>Email address of the contact.</p>
+     * @param email
+     * @return Builder
      */
 
     public AddressBuilder email(@Nullable final String email) {
@@ -301,6 +345,8 @@ public class AddressBuilder implements Builder<Address> {
 
     /**
      *  <p>Fax number of the contact.</p>
+     * @param fax
+     * @return Builder
      */
 
     public AddressBuilder fax(@Nullable final String fax) {
@@ -310,6 +356,8 @@ public class AddressBuilder implements Builder<Address> {
 
     /**
      *  <p>Further information on the Address.</p>
+     * @param additionalAddressInfo
+     * @return Builder
      */
 
     public AddressBuilder additionalAddressInfo(@Nullable final String additionalAddressInfo) {
@@ -319,6 +367,8 @@ public class AddressBuilder implements Builder<Address> {
 
     /**
      *  <p>ID for the contact used in an external system.</p>
+     * @param externalId
+     * @return Builder
      */
 
     public AddressBuilder externalId(@Nullable final String externalId) {
@@ -328,6 +378,7 @@ public class AddressBuilder implements Builder<Address> {
 
     /**
      *  <p>Custom Fields defined for the Address.</p>
+     * @return Builder
      */
 
     public AddressBuilder custom(
@@ -338,6 +389,8 @@ public class AddressBuilder implements Builder<Address> {
 
     /**
      *  <p>Custom Fields defined for the Address.</p>
+     * @param custom
+     * @return Builder
      */
 
     public AddressBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFields custom) {

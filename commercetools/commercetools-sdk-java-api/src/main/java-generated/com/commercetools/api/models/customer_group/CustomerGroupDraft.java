@@ -34,6 +34,7 @@ public interface CustomerGroupDraft extends com.commercetools.api.models.Customi
 
     /**
      *  <p>User-defined unique identifier for the CustomerGroup.</p>
+     * @return key
      */
 
     @JsonProperty("key")
@@ -41,6 +42,7 @@ public interface CustomerGroupDraft extends com.commercetools.api.models.Customi
 
     /**
      *  <p>Unique value which must be different from any value used for <code>name</code> in CustomerGroup in the Project. If not, a DuplicateField error is returned.</p>
+     * @return groupName
      */
     @NotNull
     @JsonProperty("groupName")
@@ -48,6 +50,7 @@ public interface CustomerGroupDraft extends com.commercetools.api.models.Customi
 
     /**
      *  <p>Custom Fields for the CustomerGroup.</p>
+     * @return custom
      */
     @Valid
     @JsonProperty("custom")

@@ -27,6 +27,8 @@ public class InventoryEntrySetKeyActionBuilder implements Builder<InventoryEntry
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
+     * @param key
+     * @return Builder
      */
 
     public InventoryEntrySetKeyActionBuilder key(@Nullable final String key) {

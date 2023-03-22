@@ -28,6 +28,8 @@ public class CustomFieldEnumValueBuilder implements Builder<CustomFieldEnumValue
 
     /**
      *  <p>Key of the value used as a programmatic identifier.</p>
+     * @param key
+     * @return Builder
      */
 
     public CustomFieldEnumValueBuilder key(final String key) {
@@ -37,6 +39,8 @@ public class CustomFieldEnumValueBuilder implements Builder<CustomFieldEnumValue
 
     /**
      *  <p>Descriptive label of the value.</p>
+     * @param label
+     * @return Builder
      */
 
     public CustomFieldEnumValueBuilder label(final String label) {

@@ -37,6 +37,7 @@ public interface StagedOrderSetLineItemCustomTypeAction extends StagedOrderUpdat
 
     /**
      *
+     * @return lineItemId
      */
     @NotNull
     @JsonProperty("lineItemId")
@@ -44,6 +45,7 @@ public interface StagedOrderSetLineItemCustomTypeAction extends StagedOrderUpdat
 
     /**
      *  <p>Defines the Type that extends the LineItem with Custom Fields. If absent, any existing Type and Custom Fields are removed from the LineItem.</p>
+     * @return type
      */
     @Valid
     @JsonProperty("type")
@@ -51,6 +53,7 @@ public interface StagedOrderSetLineItemCustomTypeAction extends StagedOrderUpdat
 
     /**
      *  <p>Sets the Custom Fields fields for the LineItem.</p>
+     * @return fields
      */
     @Valid
     @JsonProperty("fields")

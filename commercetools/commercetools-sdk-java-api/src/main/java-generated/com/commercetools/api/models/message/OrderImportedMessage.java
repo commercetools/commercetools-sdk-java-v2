@@ -42,6 +42,7 @@ public interface OrderImportedMessage extends OrderMessage {
 
     /**
      *  <p>Order that was imported.</p>
+     * @return order
      */
     @NotNull
     @Valid

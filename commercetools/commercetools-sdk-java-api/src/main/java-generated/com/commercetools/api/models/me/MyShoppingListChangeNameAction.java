@@ -35,6 +35,7 @@ public interface MyShoppingListChangeNameAction extends MyShoppingListUpdateActi
 
     /**
      *  <p>New value to set. Must not be empty.</p>
+     * @return name
      */
     @NotNull
     @Valid

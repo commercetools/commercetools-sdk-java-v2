@@ -35,6 +35,7 @@ public interface OrderFromQuoteDraft extends io.vrap.rmf.base.client.Draft<Order
 
     /**
      *  <p>ResourceIdentifier of the Quote from which this Order is created. If the Quote has <code>QuoteState</code> in <code>Accepted</code>, <code>Declined</code> or <code>Withdrawn</code> then the order creation will fail. The creation will also fail if the <code>Quote</code> has expired (<code>validTo</code> check).</p>
+     * @return quote
      */
     @NotNull
     @Valid
@@ -43,6 +44,7 @@ public interface OrderFromQuoteDraft extends io.vrap.rmf.base.client.Draft<Order
 
     /**
      *  <p><code>version</code> of the Quote from which an Order is created.</p>
+     * @return version
      */
     @NotNull
     @JsonProperty("version")
@@ -50,6 +52,7 @@ public interface OrderFromQuoteDraft extends io.vrap.rmf.base.client.Draft<Order
 
     /**
      *  <p>If <code>true</code>, the <code>quoteState</code> of the referenced Quote will be set to <code>Accepted</code>.</p>
+     * @return quoteStateToAccepted
      */
 
     @JsonProperty("quoteStateToAccepted")
@@ -57,6 +60,7 @@ public interface OrderFromQuoteDraft extends io.vrap.rmf.base.client.Draft<Order
 
     /**
      *  <p>String that uniquely identifies an order. It can be used to create more human-readable (in contrast to ID) identifier for the order. It should be unique across a project. Once it's set it cannot be changed. For easier use on Get, Update and Delete actions we suggest assigning order numbers that match the regular expression <code>[a-z0-9_\-]{2,36}</code>.</p>
+     * @return orderNumber
      */
 
     @JsonProperty("orderNumber")
@@ -64,6 +68,7 @@ public interface OrderFromQuoteDraft extends io.vrap.rmf.base.client.Draft<Order
 
     /**
      *
+     * @return paymentState
      */
 
     @JsonProperty("paymentState")
@@ -71,6 +76,7 @@ public interface OrderFromQuoteDraft extends io.vrap.rmf.base.client.Draft<Order
 
     /**
      *
+     * @return shipmentState
      */
 
     @JsonProperty("shipmentState")
@@ -78,6 +84,7 @@ public interface OrderFromQuoteDraft extends io.vrap.rmf.base.client.Draft<Order
 
     /**
      *  <p>Order will be created with <code>Open</code> status by default.</p>
+     * @return orderState
      */
 
     @JsonProperty("orderState")
@@ -85,6 +92,7 @@ public interface OrderFromQuoteDraft extends io.vrap.rmf.base.client.Draft<Order
 
     /**
      *
+     * @return state
      */
     @Valid
     @JsonProperty("state")

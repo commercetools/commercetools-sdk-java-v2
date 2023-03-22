@@ -35,6 +35,7 @@ public interface ProductAddPriceAction extends ProductUpdateAction {
 
     /**
      *  <p>The <code>id</code> of the ProductVariant to update.</p>
+     * @return variantId
      */
 
     @JsonProperty("variantId")
@@ -42,6 +43,7 @@ public interface ProductAddPriceAction extends ProductUpdateAction {
 
     /**
      *  <p>The <code>sku</code> of the ProductVariant to update.</p>
+     * @return sku
      */
 
     @JsonProperty("sku")
@@ -49,6 +51,7 @@ public interface ProductAddPriceAction extends ProductUpdateAction {
 
     /**
      *  <p>Embedded Price to add to the Product Variant.</p>
+     * @return price
      */
     @NotNull
     @Valid
@@ -57,6 +60,7 @@ public interface ProductAddPriceAction extends ProductUpdateAction {
 
     /**
      *  <p>If <code>true</code>, only the staged <code>prices</code> is updated. If <code>false</code>, both the current and staged <code>prices</code> are updated.</p>
+     * @return staged
      */
 
     @JsonProperty("staged")

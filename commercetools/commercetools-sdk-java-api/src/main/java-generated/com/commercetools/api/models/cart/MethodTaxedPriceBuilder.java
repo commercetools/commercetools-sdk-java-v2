@@ -31,6 +31,8 @@ public class MethodTaxedPriceBuilder implements Builder<MethodTaxedPrice> {
 
     /**
      *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multiple</code> ShippingMode.</p>
+     * @param shippingMethodKey
+     * @return Builder
      */
 
     public MethodTaxedPriceBuilder shippingMethodKey(final String shippingMethodKey) {
@@ -40,6 +42,7 @@ public class MethodTaxedPriceBuilder implements Builder<MethodTaxedPrice> {
 
     /**
      *  <p>Taxed price for the Shipping Method.</p>
+     * @return Builder
      */
 
     public MethodTaxedPriceBuilder taxedPrice(
@@ -50,6 +53,8 @@ public class MethodTaxedPriceBuilder implements Builder<MethodTaxedPrice> {
 
     /**
      *  <p>Taxed price for the Shipping Method.</p>
+     * @param taxedPrice
+     * @return Builder
      */
 
     public MethodTaxedPriceBuilder taxedPrice(

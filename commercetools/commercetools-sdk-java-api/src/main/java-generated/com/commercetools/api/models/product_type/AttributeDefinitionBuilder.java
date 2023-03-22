@@ -49,6 +49,8 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
 
     /**
      *  <p>Describes the Type of the Attribute.</p>
+     * @param type
+     * @return Builder
      */
 
     public AttributeDefinitionBuilder type(final com.commercetools.api.models.product_type.AttributeType type) {
@@ -58,6 +60,7 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
 
     /**
      *  <p>Describes the Type of the Attribute.</p>
+     * @return Builder
      */
 
     public AttributeDefinitionBuilder type(
@@ -68,6 +71,8 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
 
     /**
      *  <p>User-defined name of the Attribute that is unique within the Project.</p>
+     * @param name
+     * @return Builder
      */
 
     public AttributeDefinitionBuilder name(final String name) {
@@ -77,6 +82,7 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
 
     /**
      *  <p>Human-readable label for the Attribute.</p>
+     * @return Builder
      */
 
     public AttributeDefinitionBuilder label(
@@ -87,6 +93,8 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
 
     /**
      *  <p>Human-readable label for the Attribute.</p>
+     * @param label
+     * @return Builder
      */
 
     public AttributeDefinitionBuilder label(final com.commercetools.api.models.common.LocalizedString label) {
@@ -96,6 +104,8 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
 
     /**
      *  <p>If <code>true</code>, the Attribute must have a value on a ProductVariant.</p>
+     * @param isRequired
+     * @return Builder
      */
 
     public AttributeDefinitionBuilder isRequired(final Boolean isRequired) {
@@ -105,6 +115,8 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
 
     /**
      *  <p>Specifies how Attributes are validated across all variants of a Product.</p>
+     * @param attributeConstraint
+     * @return Builder
      */
 
     public AttributeDefinitionBuilder attributeConstraint(
@@ -115,6 +127,7 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
 
     /**
      *  <p>Provides additional Attribute information to aid content managers configure Product details.</p>
+     * @return Builder
      */
 
     public AttributeDefinitionBuilder inputTip(
@@ -125,6 +138,8 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
 
     /**
      *  <p>Provides additional Attribute information to aid content managers configure Product details.</p>
+     * @param inputTip
+     * @return Builder
      */
 
     public AttributeDefinitionBuilder inputTip(
@@ -135,6 +150,8 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
 
     /**
      *  <p>Provides a visual representation directive for values of this Attribute (only relevant for AttributeTextType and AttributeLocalizableTextType).</p>
+     * @param inputHint
+     * @return Builder
      */
 
     public AttributeDefinitionBuilder inputHint(
@@ -146,6 +163,8 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
     /**
      *  <p>If <code>true</code>, the Attribute's values are available for the Product Projections Search API for use in full-text search queries, filters, and facets.</p>
      *  <p>Which exact features are available with this flag depends on the specific AttributeType. The maximum size of a searchable field is <strong>restricted</strong> by the Field content size limit. This constraint is enforced at both Product creation and Product update. If the length of the input exceeds the maximum size, an InvalidField error is returned.</p>
+     * @param isSearchable
+     * @return Builder
      */
 
     public AttributeDefinitionBuilder isSearchable(final Boolean isSearchable) {

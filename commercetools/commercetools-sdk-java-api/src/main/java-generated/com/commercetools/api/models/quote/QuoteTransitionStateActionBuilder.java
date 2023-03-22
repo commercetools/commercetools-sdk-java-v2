@@ -31,6 +31,7 @@ public class QuoteTransitionStateActionBuilder implements Builder<QuoteTransitio
 
     /**
      *  <p>Value to set. If there is no State yet, this must be an initial State.</p>
+     * @return Builder
      */
 
     public QuoteTransitionStateActionBuilder state(
@@ -41,6 +42,8 @@ public class QuoteTransitionStateActionBuilder implements Builder<QuoteTransitio
 
     /**
      *  <p>Value to set. If there is no State yet, this must be an initial State.</p>
+     * @param state
+     * @return Builder
      */
 
     public QuoteTransitionStateActionBuilder state(
@@ -51,6 +54,8 @@ public class QuoteTransitionStateActionBuilder implements Builder<QuoteTransitio
 
     /**
      *  <p>Switch validations on or off.</p>
+     * @param force
+     * @return Builder
      */
 
     public QuoteTransitionStateActionBuilder force(@Nullable final Boolean force) {

@@ -30,6 +30,8 @@ public class CustomerRemoveShippingAddressIdActionBuilder implements Builder<Cus
 
     /**
      *  <p><code>id</code> of the Address to remove from <code>shippingAddressesIds</code>.</p>
+     * @param addressId
+     * @return Builder
      */
 
     public CustomerRemoveShippingAddressIdActionBuilder addressId(@Nullable final String addressId) {
@@ -39,6 +41,8 @@ public class CustomerRemoveShippingAddressIdActionBuilder implements Builder<Cus
 
     /**
      *  <p><code>key</code> of the Address to remove from <code>shippingAddressesIds</code>.</p>
+     * @param addressKey
+     * @return Builder
      */
 
     public CustomerRemoveShippingAddressIdActionBuilder addressKey(@Nullable final String addressKey) {

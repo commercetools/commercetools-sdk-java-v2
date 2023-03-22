@@ -30,6 +30,8 @@ public class MyShoppingListRemoveTextLineItemActionBuilder implements Builder<My
 
     /**
      *  <p>The <code>id</code> of the TextLineItem to update.</p>
+     * @param textLineItemId
+     * @return Builder
      */
 
     public MyShoppingListRemoveTextLineItemActionBuilder textLineItemId(final String textLineItemId) {
@@ -39,6 +41,8 @@ public class MyShoppingListRemoveTextLineItemActionBuilder implements Builder<My
 
     /**
      *  <p>Amount to remove from the <code>quantity</code> of the TextLineItem. If not set, the TextLineItem is removed from the ShoppingList. If this value matches or exceeds the current <code>quantity</code> of the TextLineItem, the TextLineItem is removed from the ShoppingList.</p>
+     * @param quantity
+     * @return Builder
      */
 
     public MyShoppingListRemoveTextLineItemActionBuilder quantity(@Nullable final Long quantity) {

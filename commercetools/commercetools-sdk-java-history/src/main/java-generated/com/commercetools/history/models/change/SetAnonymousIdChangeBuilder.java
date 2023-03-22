@@ -31,6 +31,8 @@ public class SetAnonymousIdChangeBuilder implements Builder<SetAnonymousIdChange
 
     /**
      *  <p>Shape of the action for <code>setAnonymousId</code></p>
+     * @param change
+     * @return Builder
      */
 
     public SetAnonymousIdChangeBuilder change(final String change) {
@@ -40,6 +42,8 @@ public class SetAnonymousIdChangeBuilder implements Builder<SetAnonymousIdChange
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public SetAnonymousIdChangeBuilder previousValue(final String previousValue) {
@@ -49,6 +53,8 @@ public class SetAnonymousIdChangeBuilder implements Builder<SetAnonymousIdChange
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public SetAnonymousIdChangeBuilder nextValue(final String nextValue) {

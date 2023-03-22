@@ -28,6 +28,8 @@ public class DeliveryItemBuilder implements Builder<DeliveryItem> {
 
     /**
      *  <p>Unique identifier of the DeliveryItem.</p>
+     * @param id
+     * @return Builder
      */
 
     public DeliveryItemBuilder id(final String id) {
@@ -37,6 +39,8 @@ public class DeliveryItemBuilder implements Builder<DeliveryItem> {
 
     /**
      *
+     * @param quantity
+     * @return Builder
      */
 
     public DeliveryItemBuilder quantity(final Long quantity) {

@@ -34,6 +34,7 @@ public interface ProductVariantSelectionInclusion extends ProductVariantSelectio
 
     /**
      *
+     * @return type
      */
     @NotNull
     @JsonProperty("type")
@@ -41,6 +42,7 @@ public interface ProductVariantSelectionInclusion extends ProductVariantSelectio
 
     /**
      *  <p>Non-empty array of SKUs representing Product Variants to be included into the Product Selection.</p>
+     * @return skus
      */
     @NotNull
     @JsonProperty("skus")

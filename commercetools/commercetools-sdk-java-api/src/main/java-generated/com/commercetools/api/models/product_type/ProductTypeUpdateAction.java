@@ -54,6 +54,7 @@ public interface ProductTypeUpdateAction
 
     /**
      *
+     * @return action
      */
     @NotNull
     @JsonProperty("action")

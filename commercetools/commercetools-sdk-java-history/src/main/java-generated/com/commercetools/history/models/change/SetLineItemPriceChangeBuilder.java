@@ -35,6 +35,8 @@ public class SetLineItemPriceChangeBuilder implements Builder<SetLineItemPriceCh
 
     /**
      *  <p>Update action for <code>setLineItemPrice</code></p>
+     * @param change
+     * @return Builder
      */
 
     public SetLineItemPriceChangeBuilder change(final String change) {
@@ -44,6 +46,7 @@ public class SetLineItemPriceChangeBuilder implements Builder<SetLineItemPriceCh
 
     /**
      *
+     * @return Builder
      */
 
     public SetLineItemPriceChangeBuilder lineItem(
@@ -54,6 +57,8 @@ public class SetLineItemPriceChangeBuilder implements Builder<SetLineItemPriceCh
 
     /**
      *
+     * @param lineItem
+     * @return Builder
      */
 
     public SetLineItemPriceChangeBuilder lineItem(
@@ -64,6 +69,7 @@ public class SetLineItemPriceChangeBuilder implements Builder<SetLineItemPriceCh
 
     /**
      *
+     * @return Builder
      */
 
     public SetLineItemPriceChangeBuilder nextValue(
@@ -74,6 +80,8 @@ public class SetLineItemPriceChangeBuilder implements Builder<SetLineItemPriceCh
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public SetLineItemPriceChangeBuilder nextValue(final com.commercetools.history.models.common.Price nextValue) {
@@ -83,6 +91,7 @@ public class SetLineItemPriceChangeBuilder implements Builder<SetLineItemPriceCh
 
     /**
      *
+     * @return Builder
      */
 
     public SetLineItemPriceChangeBuilder previousValue(
@@ -93,6 +102,8 @@ public class SetLineItemPriceChangeBuilder implements Builder<SetLineItemPriceCh
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public SetLineItemPriceChangeBuilder previousValue(

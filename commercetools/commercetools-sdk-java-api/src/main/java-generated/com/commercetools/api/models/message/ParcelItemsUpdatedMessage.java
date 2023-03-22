@@ -45,6 +45,7 @@ public interface ParcelItemsUpdatedMessage extends OrderMessage {
 
     /**
      *  <p>Unique identifier of the Parcel.</p>
+     * @return parcelId
      */
     @NotNull
     @JsonProperty("parcelId")
@@ -52,6 +53,7 @@ public interface ParcelItemsUpdatedMessage extends OrderMessage {
 
     /**
      *  <p>Unique identifier of the Delivery.</p>
+     * @return deliveryId
      */
     @NotNull
     @JsonProperty("deliveryId")
@@ -59,6 +61,7 @@ public interface ParcelItemsUpdatedMessage extends OrderMessage {
 
     /**
      *  <p>Delivery Items after the Set Parcel Items update action.</p>
+     * @return items
      */
     @NotNull
     @Valid
@@ -67,6 +70,7 @@ public interface ParcelItemsUpdatedMessage extends OrderMessage {
 
     /**
      *  <p>Delivery Items before the Set Parcel Items update action.</p>
+     * @return oldItems
      */
     @NotNull
     @Valid
@@ -75,6 +79,7 @@ public interface ParcelItemsUpdatedMessage extends OrderMessage {
 
     /**
      *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multi</code> ShippingMode.</p>
+     * @return shippingKey
      */
 
     @JsonProperty("shippingKey")

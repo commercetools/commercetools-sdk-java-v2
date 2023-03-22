@@ -32,6 +32,7 @@ public interface GraphQLErrorLocation {
 
     /**
      *
+     * @return line
      */
     @NotNull
     @JsonProperty("line")
@@ -39,6 +40,7 @@ public interface GraphQLErrorLocation {
 
     /**
      *
+     * @return column
      */
     @NotNull
     @JsonProperty("column")

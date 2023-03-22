@@ -35,6 +35,7 @@ public interface StateSetDescriptionAction extends StateUpdateAction {
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
+     * @return description
      */
     @NotNull
     @Valid

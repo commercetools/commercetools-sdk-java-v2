@@ -35,6 +35,7 @@ public interface TaxedPriceDraft extends io.vrap.rmf.base.client.Draft<TaxedPric
 
     /**
      *  <p>Total net price of the Line Item or Custom Line Item.</p>
+     * @return totalNet
      */
     @NotNull
     @Valid
@@ -43,6 +44,7 @@ public interface TaxedPriceDraft extends io.vrap.rmf.base.client.Draft<TaxedPric
 
     /**
      *  <p>Total gross price of the Line Item or Custom Line Item.</p>
+     * @return totalGross
      */
     @NotNull
     @Valid
@@ -52,6 +54,7 @@ public interface TaxedPriceDraft extends io.vrap.rmf.base.client.Draft<TaxedPric
     /**
      *  <p>Taxable portions added to the <code>totalGross</code>.</p>
      *  <p>Calculated from the TaxRates.</p>
+     * @return taxPortions
      */
     @NotNull
     @Valid

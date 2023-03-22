@@ -25,6 +25,8 @@ public class BooleanFieldBuilder implements Builder<BooleanField> {
 
     /**
      *
+     * @param value
+     * @return Builder
      */
 
     public BooleanFieldBuilder value(final Boolean value) {

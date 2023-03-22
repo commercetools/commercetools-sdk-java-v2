@@ -26,6 +26,7 @@ public class MyPaymentAddTransactionActionBuilder implements Builder<MyPaymentAd
 
     /**
      *  <p>Transaction to add to the Payment.</p>
+     * @return Builder
      */
 
     public MyPaymentAddTransactionActionBuilder transaction(
@@ -36,6 +37,8 @@ public class MyPaymentAddTransactionActionBuilder implements Builder<MyPaymentAd
 
     /**
      *  <p>Transaction to add to the Payment.</p>
+     * @param transaction
+     * @return Builder
      */
 
     public MyPaymentAddTransactionActionBuilder transaction(

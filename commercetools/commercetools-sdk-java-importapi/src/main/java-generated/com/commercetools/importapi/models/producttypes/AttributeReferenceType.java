@@ -34,6 +34,7 @@ public interface AttributeReferenceType extends AttributeType {
 
     /**
      *  <p>The type of the referenced resource.</p>
+     * @return referenceTypeId
      */
     @NotNull
     @JsonProperty("referenceTypeId")

@@ -29,6 +29,8 @@ public class AddAttributeDefinitionChangeBuilder implements Builder<AddAttribute
 
     /**
      *  <p>Update action for <code>addAttributeDefinition</code> on product types</p>
+     * @param change
+     * @return Builder
      */
 
     public AddAttributeDefinitionChangeBuilder change(final String change) {
@@ -38,6 +40,7 @@ public class AddAttributeDefinitionChangeBuilder implements Builder<AddAttribute
 
     /**
      *
+     * @return Builder
      */
 
     public AddAttributeDefinitionChangeBuilder nextValue(
@@ -48,6 +51,8 @@ public class AddAttributeDefinitionChangeBuilder implements Builder<AddAttribute
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public AddAttributeDefinitionChangeBuilder nextValue(

@@ -34,6 +34,7 @@ public interface ProductTypeRemoveAttributeDefinitionAction extends ProductTypeU
 
     /**
      *  <p>Name of the Attribute to remove.</p>
+     * @return name
      */
     @NotNull
     @JsonProperty("name")

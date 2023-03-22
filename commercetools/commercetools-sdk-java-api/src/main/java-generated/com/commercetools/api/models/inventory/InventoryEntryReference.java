@@ -35,6 +35,7 @@ public interface InventoryEntryReference extends Reference, com.commercetools.ap
 
     /**
      *  <p>Contains the representation of the expanded InventoryEntry. Only present in responses to requests with Reference Expansion for InventoryEntries.</p>
+     * @return obj
      */
     @Valid
     @JsonProperty("obj")
@@ -42,6 +43,7 @@ public interface InventoryEntryReference extends Reference, com.commercetools.ap
 
     /**
      *  <p>Unique identifier of the referenced InventoryEntry.</p>
+     * @return id
      */
     @NotNull
     @JsonProperty("id")

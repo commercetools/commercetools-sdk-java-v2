@@ -39,6 +39,7 @@ public interface OrderTransitionCustomLineItemStateAction extends OrderUpdateAct
 
     /**
      *
+     * @return customLineItemId
      */
     @NotNull
     @JsonProperty("customLineItemId")
@@ -46,6 +47,7 @@ public interface OrderTransitionCustomLineItemStateAction extends OrderUpdateAct
 
     /**
      *
+     * @return quantity
      */
     @NotNull
     @JsonProperty("quantity")
@@ -53,6 +55,7 @@ public interface OrderTransitionCustomLineItemStateAction extends OrderUpdateAct
 
     /**
      *  <p>ResourceIdentifier to a State.</p>
+     * @return fromState
      */
     @NotNull
     @Valid
@@ -61,6 +64,7 @@ public interface OrderTransitionCustomLineItemStateAction extends OrderUpdateAct
 
     /**
      *  <p>ResourceIdentifier to a State.</p>
+     * @return toState
      */
     @NotNull
     @Valid
@@ -69,6 +73,7 @@ public interface OrderTransitionCustomLineItemStateAction extends OrderUpdateAct
 
     /**
      *
+     * @return actualTransitionDate
      */
 
     @JsonProperty("actualTransitionDate")

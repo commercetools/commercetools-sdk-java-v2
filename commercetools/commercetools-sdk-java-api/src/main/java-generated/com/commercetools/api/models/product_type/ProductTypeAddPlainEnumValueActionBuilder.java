@@ -29,6 +29,8 @@ public class ProductTypeAddPlainEnumValueActionBuilder implements Builder<Produc
 
     /**
      *  <p>Name of the AttributeDefinition to update.</p>
+     * @param attributeName
+     * @return Builder
      */
 
     public ProductTypeAddPlainEnumValueActionBuilder attributeName(final String attributeName) {
@@ -38,6 +40,7 @@ public class ProductTypeAddPlainEnumValueActionBuilder implements Builder<Produc
 
     /**
      *  <p>Value to append to the array.</p>
+     * @return Builder
      */
 
     public ProductTypeAddPlainEnumValueActionBuilder value(
@@ -49,6 +52,8 @@ public class ProductTypeAddPlainEnumValueActionBuilder implements Builder<Produc
 
     /**
      *  <p>Value to append to the array.</p>
+     * @param value
+     * @return Builder
      */
 
     public ProductTypeAddPlainEnumValueActionBuilder value(

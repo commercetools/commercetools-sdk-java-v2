@@ -33,6 +33,7 @@ public interface OrderShippingInfoSetMessagePayload extends OrderMessagePayload 
 
     /**
      *  <p>ShippingInfo after the Set Shipping Method or Set Custom Shipping Method update action.</p>
+     * @return shippingInfo
      */
     @Valid
     @JsonProperty("shippingInfo")
@@ -40,6 +41,7 @@ public interface OrderShippingInfoSetMessagePayload extends OrderMessagePayload 
 
     /**
      *  <p>ShippingInfo before the Set Shipping Method or Set Custom Shipping Method update action.</p>
+     * @return oldShippingInfo
      */
     @Valid
     @JsonProperty("oldShippingInfo")

@@ -64,6 +64,8 @@ public class LineItemDraftBuilder implements Builder<LineItemDraft> {
 
     /**
      *  <p><code>id</code> of a published Product.</p>
+     * @param productId
+     * @return Builder
      */
 
     public LineItemDraftBuilder productId(@Nullable final String productId) {
@@ -73,6 +75,8 @@ public class LineItemDraftBuilder implements Builder<LineItemDraft> {
 
     /**
      *  <p><code>id</code> of the ProductVariant in the Product. If not provided, the Master Variant is used.</p>
+     * @param variantId
+     * @return Builder
      */
 
     public LineItemDraftBuilder variantId(@Nullable final Long variantId) {
@@ -82,6 +86,8 @@ public class LineItemDraftBuilder implements Builder<LineItemDraft> {
 
     /**
      *  <p><code>sku</code> of the ProductVariant.</p>
+     * @param sku
+     * @return Builder
      */
 
     public LineItemDraftBuilder sku(@Nullable final String sku) {
@@ -91,6 +97,8 @@ public class LineItemDraftBuilder implements Builder<LineItemDraft> {
 
     /**
      *  <p>Quantity of the Product Variant to add to the Cart.</p>
+     * @param quantity
+     * @return Builder
      */
 
     public LineItemDraftBuilder quantity(@Nullable final Long quantity) {
@@ -101,6 +109,8 @@ public class LineItemDraftBuilder implements Builder<LineItemDraft> {
     /**
      *  <p>Date and time (UTC) the Product Variant is added to the Cart. If not set, it defaults to the current date and time.</p>
      *  <p>Optional for backwards compatibility reasons.</p>
+     * @param addedAt
+     * @return Builder
      */
 
     public LineItemDraftBuilder addedAt(@Nullable final java.time.ZonedDateTime addedAt) {
@@ -111,6 +121,7 @@ public class LineItemDraftBuilder implements Builder<LineItemDraft> {
     /**
      *  <p>Used to select a Product Price. The referenced Channel must have the <code>ProductDistribution</code> ChannelRoleEnum.</p>
      *  <p>If the Cart is bound to a Store with <code>distributionChannels</code> set, the Channel must match one of the Store's distribution channels.</p>
+     * @return Builder
      */
 
     public LineItemDraftBuilder distributionChannel(
@@ -124,6 +135,8 @@ public class LineItemDraftBuilder implements Builder<LineItemDraft> {
     /**
      *  <p>Used to select a Product Price. The referenced Channel must have the <code>ProductDistribution</code> ChannelRoleEnum.</p>
      *  <p>If the Cart is bound to a Store with <code>distributionChannels</code> set, the Channel must match one of the Store's distribution channels.</p>
+     * @param distributionChannel
+     * @return Builder
      */
 
     public LineItemDraftBuilder distributionChannel(
@@ -134,6 +147,7 @@ public class LineItemDraftBuilder implements Builder<LineItemDraft> {
 
     /**
      *  <p>Used to identify Inventory entries that must be reserved. The referenced Channel must have the <code>InventorySupply</code> ChannelRoleEnum.</p>
+     * @return Builder
      */
 
     public LineItemDraftBuilder supplyChannel(
@@ -145,6 +159,8 @@ public class LineItemDraftBuilder implements Builder<LineItemDraft> {
 
     /**
      *  <p>Used to identify Inventory entries that must be reserved. The referenced Channel must have the <code>InventorySupply</code> ChannelRoleEnum.</p>
+     * @param supplyChannel
+     * @return Builder
      */
 
     public LineItemDraftBuilder supplyChannel(
@@ -155,6 +171,7 @@ public class LineItemDraftBuilder implements Builder<LineItemDraft> {
 
     /**
      *  <p>Sets the LineItem <code>price</code> value, and the <code>priceMode</code> to <code>ExternalPrice</code> LineItemPriceMode.</p>
+     * @return Builder
      */
 
     public LineItemDraftBuilder externalPrice(
@@ -165,6 +182,8 @@ public class LineItemDraftBuilder implements Builder<LineItemDraft> {
 
     /**
      *  <p>Sets the LineItem <code>price</code> value, and the <code>priceMode</code> to <code>ExternalPrice</code> LineItemPriceMode.</p>
+     * @param externalPrice
+     * @return Builder
      */
 
     public LineItemDraftBuilder externalPrice(@Nullable final com.commercetools.api.models.common.Money externalPrice) {
@@ -174,6 +193,7 @@ public class LineItemDraftBuilder implements Builder<LineItemDraft> {
 
     /**
      *  <p>Sets the LineItem <code>price</code> and <code>totalPrice</code> values, and the <code>priceMode</code> to <code>ExternalTotal</code> LineItemPriceMode.</p>
+     * @return Builder
      */
 
     public LineItemDraftBuilder externalTotalPrice(
@@ -186,6 +206,8 @@ public class LineItemDraftBuilder implements Builder<LineItemDraft> {
 
     /**
      *  <p>Sets the LineItem <code>price</code> and <code>totalPrice</code> values, and the <code>priceMode</code> to <code>ExternalTotal</code> LineItemPriceMode.</p>
+     * @param externalTotalPrice
+     * @return Builder
      */
 
     public LineItemDraftBuilder externalTotalPrice(
@@ -196,6 +218,7 @@ public class LineItemDraftBuilder implements Builder<LineItemDraft> {
 
     /**
      *  <p>External Tax Rate for the Line Item if the Cart has the <code>External</code> TaxMode.</p>
+     * @return Builder
      */
 
     public LineItemDraftBuilder externalTaxRate(
@@ -207,6 +230,8 @@ public class LineItemDraftBuilder implements Builder<LineItemDraft> {
 
     /**
      *  <p>External Tax Rate for the Line Item if the Cart has the <code>External</code> TaxMode.</p>
+     * @param externalTaxRate
+     * @return Builder
      */
 
     public LineItemDraftBuilder externalTaxRate(
@@ -217,6 +242,8 @@ public class LineItemDraftBuilder implements Builder<LineItemDraft> {
 
     /**
      *  <p>Inventory mode specific to the Line Item only, and valid for the entire <code>quantity</code> of the Line Item. Set only if the inventory mode should be different from the <code>inventoryMode</code> specified on the Cart.</p>
+     * @param inventoryMode
+     * @return Builder
      */
 
     public LineItemDraftBuilder inventoryMode(
@@ -227,6 +254,7 @@ public class LineItemDraftBuilder implements Builder<LineItemDraft> {
 
     /**
      *  <p>Container for Line Item-specific addresses.</p>
+     * @return Builder
      */
 
     public LineItemDraftBuilder shippingDetails(
@@ -238,6 +266,8 @@ public class LineItemDraftBuilder implements Builder<LineItemDraft> {
 
     /**
      *  <p>Container for Line Item-specific addresses.</p>
+     * @param shippingDetails
+     * @return Builder
      */
 
     public LineItemDraftBuilder shippingDetails(
@@ -248,6 +278,7 @@ public class LineItemDraftBuilder implements Builder<LineItemDraft> {
 
     /**
      *  <p>Custom Fields for the Line Item.</p>
+     * @return Builder
      */
 
     public LineItemDraftBuilder custom(
@@ -258,6 +289,8 @@ public class LineItemDraftBuilder implements Builder<LineItemDraft> {
 
     /**
      *  <p>Custom Fields for the Line Item.</p>
+     * @param custom
+     * @return Builder
      */
 
     public LineItemDraftBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFieldsDraft custom) {

@@ -34,6 +34,8 @@ public class BusinessUnitChangeAddressActionBuilder implements Builder<BusinessU
 
     /**
      *  <p>ID of the address to change. Either <code>addressId</code> or <code>addressKey</code> is required.</p>
+     * @param addressId
+     * @return Builder
      */
 
     public BusinessUnitChangeAddressActionBuilder addressId(@Nullable final String addressId) {
@@ -43,6 +45,8 @@ public class BusinessUnitChangeAddressActionBuilder implements Builder<BusinessU
 
     /**
      *  <p>Key of the address to change. Either <code>addressId</code> or <code>addressKey</code> is required.</p>
+     * @param addressKey
+     * @return Builder
      */
 
     public BusinessUnitChangeAddressActionBuilder addressKey(@Nullable final String addressKey) {
@@ -52,6 +56,7 @@ public class BusinessUnitChangeAddressActionBuilder implements Builder<BusinessU
 
     /**
      *  <p>New address to set.</p>
+     * @return Builder
      */
 
     public BusinessUnitChangeAddressActionBuilder address(
@@ -62,6 +67,8 @@ public class BusinessUnitChangeAddressActionBuilder implements Builder<BusinessU
 
     /**
      *  <p>New address to set.</p>
+     * @param address
+     * @return Builder
      */
 
     public BusinessUnitChangeAddressActionBuilder address(

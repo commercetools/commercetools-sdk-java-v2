@@ -41,6 +41,8 @@ public class ChangeLocalizedEnumValueLabelChangeBuilder implements Builder<Chang
 
     /**
      *  <p>Update action for <code>changeLocalizedEnumValueLabel</code> on types</p>
+     * @param change
+     * @return Builder
      */
 
     public ChangeLocalizedEnumValueLabelChangeBuilder change(final String change) {
@@ -50,6 +52,8 @@ public class ChangeLocalizedEnumValueLabelChangeBuilder implements Builder<Chang
 
     /**
      *  <p>The name of the field definition updated.</p>
+     * @param fieldName
+     * @return Builder
      */
 
     public ChangeLocalizedEnumValueLabelChangeBuilder fieldName(final String fieldName) {
@@ -59,6 +63,8 @@ public class ChangeLocalizedEnumValueLabelChangeBuilder implements Builder<Chang
 
     /**
      *  <p>The name of the attribute updated.</p>
+     * @param attributeName
+     * @return Builder
      */
 
     public ChangeLocalizedEnumValueLabelChangeBuilder attributeName(final String attributeName) {
@@ -68,6 +74,8 @@ public class ChangeLocalizedEnumValueLabelChangeBuilder implements Builder<Chang
 
     /**
      *  <p>Key of the values that was updated</p>
+     * @param valueKey
+     * @return Builder
      */
 
     public ChangeLocalizedEnumValueLabelChangeBuilder valueKey(final String valueKey) {
@@ -77,6 +85,7 @@ public class ChangeLocalizedEnumValueLabelChangeBuilder implements Builder<Chang
 
     /**
      *
+     * @return Builder
      */
 
     public ChangeLocalizedEnumValueLabelChangeBuilder previousValue(
@@ -87,6 +96,8 @@ public class ChangeLocalizedEnumValueLabelChangeBuilder implements Builder<Chang
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public ChangeLocalizedEnumValueLabelChangeBuilder previousValue(
@@ -97,6 +108,7 @@ public class ChangeLocalizedEnumValueLabelChangeBuilder implements Builder<Chang
 
     /**
      *
+     * @return Builder
      */
 
     public ChangeLocalizedEnumValueLabelChangeBuilder nextValue(
@@ -107,6 +119,8 @@ public class ChangeLocalizedEnumValueLabelChangeBuilder implements Builder<Chang
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public ChangeLocalizedEnumValueLabelChangeBuilder nextValue(

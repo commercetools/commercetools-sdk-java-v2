@@ -35,6 +35,7 @@ public interface ExternalLineItemTotalPrice {
     /**
      *  <p>Price of the Line Item.</p>
      *  <p>The value is selected from the Product Variant according to the Product <code>priceMode</code>.</p>
+     * @return price
      */
     @NotNull
     @Valid
@@ -43,6 +44,7 @@ public interface ExternalLineItemTotalPrice {
 
     /**
      *  <p>Total price of the Line Item.</p>
+     * @return totalPrice
      */
     @NotNull
     @Valid

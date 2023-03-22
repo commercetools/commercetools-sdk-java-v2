@@ -35,6 +35,7 @@ public interface MyBusinessUnitAddAddressAction extends MyBusinessUnitUpdateActi
 
     /**
      *  <p>The address to add to <code>addresses</code>.</p>
+     * @return address
      */
     @NotNull
     @Valid

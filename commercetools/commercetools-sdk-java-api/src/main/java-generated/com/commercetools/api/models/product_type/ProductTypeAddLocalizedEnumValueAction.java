@@ -35,6 +35,7 @@ public interface ProductTypeAddLocalizedEnumValueAction extends ProductTypeUpdat
 
     /**
      *  <p>Name of the AttributeDefinition to update.</p>
+     * @return attributeName
      */
     @NotNull
     @JsonProperty("attributeName")
@@ -42,6 +43,7 @@ public interface ProductTypeAddLocalizedEnumValueAction extends ProductTypeUpdat
 
     /**
      *  <p>Value to append to the array.</p>
+     * @return value
      */
     @NotNull
     @Valid

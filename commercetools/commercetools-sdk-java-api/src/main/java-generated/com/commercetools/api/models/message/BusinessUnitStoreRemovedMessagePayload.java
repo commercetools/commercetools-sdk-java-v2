@@ -35,6 +35,7 @@ public interface BusinessUnitStoreRemovedMessagePayload extends MessagePayload {
 
     /**
      *  <p>The Store that was removed from the Business Unit.</p>
+     * @return store
      */
     @NotNull
     @Valid

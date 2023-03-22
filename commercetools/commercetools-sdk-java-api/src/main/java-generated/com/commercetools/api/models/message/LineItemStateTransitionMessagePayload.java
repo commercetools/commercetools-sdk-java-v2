@@ -40,6 +40,7 @@ public interface LineItemStateTransitionMessagePayload extends OrderMessagePaylo
 
     /**
      *  <p>Unique identifier of the Line Item.</p>
+     * @return lineItemId
      */
     @NotNull
     @JsonProperty("lineItemId")
@@ -47,6 +48,7 @@ public interface LineItemStateTransitionMessagePayload extends OrderMessagePaylo
 
     /**
      *  <p>Date and time (UTC) when the transition of the Line Item State was performed.</p>
+     * @return transitionDate
      */
     @NotNull
     @JsonProperty("transitionDate")
@@ -54,6 +56,7 @@ public interface LineItemStateTransitionMessagePayload extends OrderMessagePaylo
 
     /**
      *  <p>Number of Line Items for which the State was transitioned.</p>
+     * @return quantity
      */
     @NotNull
     @JsonProperty("quantity")
@@ -61,6 +64,7 @@ public interface LineItemStateTransitionMessagePayload extends OrderMessagePaylo
 
     /**
      *  <p>State the Line Item was transitioned from.</p>
+     * @return fromState
      */
     @NotNull
     @Valid
@@ -69,6 +73,7 @@ public interface LineItemStateTransitionMessagePayload extends OrderMessagePaylo
 
     /**
      *  <p>State the Line Item was transitioned to.</p>
+     * @return toState
      */
     @NotNull
     @Valid

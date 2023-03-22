@@ -28,6 +28,8 @@ public class EnumValueBuilder implements Builder<EnumValue> {
 
     /**
      *
+     * @param key
+     * @return Builder
      */
 
     public EnumValueBuilder key(final String key) {
@@ -37,6 +39,8 @@ public class EnumValueBuilder implements Builder<EnumValue> {
 
     /**
      *
+     * @param label
+     * @return Builder
      */
 
     public EnumValueBuilder label(final String label) {

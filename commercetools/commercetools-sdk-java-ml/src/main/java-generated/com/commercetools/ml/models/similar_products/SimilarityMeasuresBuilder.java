@@ -39,6 +39,8 @@ public class SimilarityMeasuresBuilder implements Builder<SimilarityMeasures> {
 
     /**
      *  <p>Importance of the <code>name</code> attribute in overall similarity.</p>
+     * @param name
+     * @return Builder
      */
 
     public SimilarityMeasuresBuilder name(@Nullable final Long name) {
@@ -48,6 +50,8 @@ public class SimilarityMeasuresBuilder implements Builder<SimilarityMeasures> {
 
     /**
      *  <p>Importance of the <code>description</code> attribute in overall similarity.</p>
+     * @param description
+     * @return Builder
      */
 
     public SimilarityMeasuresBuilder description(@Nullable final Long description) {
@@ -57,6 +61,8 @@ public class SimilarityMeasuresBuilder implements Builder<SimilarityMeasures> {
 
     /**
      *  <p>Importance of the <code>description</code> attribute in overall similarity.</p>
+     * @param attribute
+     * @return Builder
      */
 
     public SimilarityMeasuresBuilder attribute(@Nullable final Long attribute) {
@@ -66,6 +72,8 @@ public class SimilarityMeasuresBuilder implements Builder<SimilarityMeasures> {
 
     /**
      *  <p>Importance of the number of product variants in overall similarity.</p>
+     * @param variantCount
+     * @return Builder
      */
 
     public SimilarityMeasuresBuilder variantCount(@Nullable final Long variantCount) {
@@ -75,6 +83,8 @@ public class SimilarityMeasuresBuilder implements Builder<SimilarityMeasures> {
 
     /**
      *  <p>Importance of the <code>price</code> attribute in overall similarity.</p>
+     * @param price
+     * @return Builder
      */
 
     public SimilarityMeasuresBuilder price(@Nullable final Long price) {

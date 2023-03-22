@@ -25,6 +25,8 @@ public class CartChangeTaxRoundingModeActionBuilder implements Builder<CartChang
 
     /**
      *  <p>New value to set.</p>
+     * @param taxRoundingMode
+     * @return Builder
      */
 
     public CartChangeTaxRoundingModeActionBuilder taxRoundingMode(

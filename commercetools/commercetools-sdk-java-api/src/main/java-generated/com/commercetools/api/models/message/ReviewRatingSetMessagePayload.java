@@ -35,6 +35,7 @@ public interface ReviewRatingSetMessagePayload extends MessagePayload {
 
     /**
      *  <p>The <code>rating</code> of the Review before the Set Rating update action.</p>
+     * @return oldRating
      */
 
     @JsonProperty("oldRating")
@@ -42,6 +43,7 @@ public interface ReviewRatingSetMessagePayload extends MessagePayload {
 
     /**
      *  <p>The <code>rating</code> of the Review after the Set Rating update action.</p>
+     * @return newRating
      */
 
     @JsonProperty("newRating")
@@ -49,6 +51,7 @@ public interface ReviewRatingSetMessagePayload extends MessagePayload {
 
     /**
      *  <p>Whether the Review was taken into account in the ratings statistics of the target.</p>
+     * @return includedInStatistics
      */
     @NotNull
     @JsonProperty("includedInStatistics")
@@ -56,6 +59,7 @@ public interface ReviewRatingSetMessagePayload extends MessagePayload {
 
     /**
      *  <p>Reference to the resource that the Review belongs to.</p>
+     * @return target
      */
     @Valid
     @JsonProperty("target")

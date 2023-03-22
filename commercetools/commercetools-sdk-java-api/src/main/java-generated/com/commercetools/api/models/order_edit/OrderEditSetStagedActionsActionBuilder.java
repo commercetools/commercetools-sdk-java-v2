@@ -26,6 +26,8 @@ public class OrderEditSetStagedActionsActionBuilder implements Builder<OrderEdit
 
     /**
      *  <p>The actions to edit the <code>resource</code>.</p>
+     * @param stagedActions
+     * @return Builder
      */
 
     public OrderEditSetStagedActionsActionBuilder stagedActions(
@@ -36,6 +38,8 @@ public class OrderEditSetStagedActionsActionBuilder implements Builder<OrderEdit
 
     /**
      *  <p>The actions to edit the <code>resource</code>.</p>
+     * @param stagedActions
+     * @return Builder
      */
 
     public OrderEditSetStagedActionsActionBuilder stagedActions(
@@ -46,6 +50,8 @@ public class OrderEditSetStagedActionsActionBuilder implements Builder<OrderEdit
 
     /**
      *  <p>The actions to edit the <code>resource</code>.</p>
+     * @param stagedActions
+     * @return Builder
      */
 
     public OrderEditSetStagedActionsActionBuilder plusStagedActions(
@@ -59,6 +65,7 @@ public class OrderEditSetStagedActionsActionBuilder implements Builder<OrderEdit
 
     /**
      *  <p>The actions to edit the <code>resource</code>.</p>
+     * @return Builder
      */
 
     public OrderEditSetStagedActionsActionBuilder plusStagedActions(
@@ -73,6 +80,7 @@ public class OrderEditSetStagedActionsActionBuilder implements Builder<OrderEdit
 
     /**
      *  <p>The actions to edit the <code>resource</code>.</p>
+     * @return Builder
      */
 
     public OrderEditSetStagedActionsActionBuilder withStagedActions(

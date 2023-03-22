@@ -29,6 +29,8 @@ public class StandalonePriceUpdateBuilder implements Builder<StandalonePriceUpda
 
     /**
      *  <p>Expected version of the StandalonePrice on which the changes should be applied. If the expected version does not match the actual version, a ConcurrentModification error is returned.</p>
+     * @param version
+     * @return Builder
      */
 
     public StandalonePriceUpdateBuilder version(final Long version) {
@@ -38,6 +40,8 @@ public class StandalonePriceUpdateBuilder implements Builder<StandalonePriceUpda
 
     /**
      *  <p>Update actions to be performed on the StandalonePrice.</p>
+     * @param actions
+     * @return Builder
      */
 
     public StandalonePriceUpdateBuilder actions(
@@ -48,6 +52,8 @@ public class StandalonePriceUpdateBuilder implements Builder<StandalonePriceUpda
 
     /**
      *  <p>Update actions to be performed on the StandalonePrice.</p>
+     * @param actions
+     * @return Builder
      */
 
     public StandalonePriceUpdateBuilder actions(
@@ -58,6 +64,8 @@ public class StandalonePriceUpdateBuilder implements Builder<StandalonePriceUpda
 
     /**
      *  <p>Update actions to be performed on the StandalonePrice.</p>
+     * @param actions
+     * @return Builder
      */
 
     public StandalonePriceUpdateBuilder plusActions(
@@ -71,6 +79,7 @@ public class StandalonePriceUpdateBuilder implements Builder<StandalonePriceUpda
 
     /**
      *  <p>Update actions to be performed on the StandalonePrice.</p>
+     * @return Builder
      */
 
     public StandalonePriceUpdateBuilder plusActions(
@@ -86,6 +95,7 @@ public class StandalonePriceUpdateBuilder implements Builder<StandalonePriceUpda
 
     /**
      *  <p>Update actions to be performed on the StandalonePrice.</p>
+     * @return Builder
      */
 
     public StandalonePriceUpdateBuilder withActions(

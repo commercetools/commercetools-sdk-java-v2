@@ -27,6 +27,7 @@ public class MyCartAddItemShippingAddressActionBuilder implements Builder<MyCart
     /**
      *  <p>Address to append to <code>itemShippingAddresses</code>.</p>
      *  <p>The new address must have a key that is unique accross this Cart.</p>
+     * @return Builder
      */
 
     public MyCartAddItemShippingAddressActionBuilder address(
@@ -38,6 +39,8 @@ public class MyCartAddItemShippingAddressActionBuilder implements Builder<MyCart
     /**
      *  <p>Address to append to <code>itemShippingAddresses</code>.</p>
      *  <p>The new address must have a key that is unique accross this Cart.</p>
+     * @param address
+     * @return Builder
      */
 
     public MyCartAddItemShippingAddressActionBuilder address(

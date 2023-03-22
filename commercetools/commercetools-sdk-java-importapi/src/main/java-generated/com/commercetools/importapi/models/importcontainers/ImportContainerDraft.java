@@ -32,6 +32,7 @@ public interface ImportContainerDraft extends io.vrap.rmf.base.client.Draft<Impo
 
     /**
      *  <p>User-defined unique identifier of the ImportContainer. Keys can only contain alphanumeric characters (a-Z, 0-9), underscores and hyphens (_, -).</p>
+     * @return key
      */
     @NotNull
     @JsonProperty("key")
@@ -39,6 +40,7 @@ public interface ImportContainerDraft extends io.vrap.rmf.base.client.Draft<Impo
 
     /**
      *  <p>The resource type to be imported. If not given, the ImportContainer is able to import all of the supported ImportResourceTypes.</p>
+     * @return resourceType
      */
 
     @JsonProperty("resourceType")

@@ -42,6 +42,7 @@ public interface QuoteCreatedMessage extends Message {
 
     /**
      *  <p>Quote that was created.</p>
+     * @return quote
      */
     @NotNull
     @Valid

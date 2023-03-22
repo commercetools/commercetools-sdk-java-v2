@@ -54,6 +54,8 @@ public class FacetRangeBuilder implements Builder<FacetRange> {
 
     /**
      *
+     * @param from
+     * @return Builder
      */
 
     public FacetRangeBuilder from(final Double from) {
@@ -63,6 +65,8 @@ public class FacetRangeBuilder implements Builder<FacetRange> {
 
     /**
      *
+     * @param fromStr
+     * @return Builder
      */
 
     public FacetRangeBuilder fromStr(final String fromStr) {
@@ -72,6 +76,8 @@ public class FacetRangeBuilder implements Builder<FacetRange> {
 
     /**
      *
+     * @param to
+     * @return Builder
      */
 
     public FacetRangeBuilder to(final Double to) {
@@ -81,6 +87,8 @@ public class FacetRangeBuilder implements Builder<FacetRange> {
 
     /**
      *
+     * @param toStr
+     * @return Builder
      */
 
     public FacetRangeBuilder toStr(final String toStr) {
@@ -90,6 +98,8 @@ public class FacetRangeBuilder implements Builder<FacetRange> {
 
     /**
      *
+     * @param count
+     * @return Builder
      */
 
     public FacetRangeBuilder count(final Long count) {
@@ -99,6 +109,8 @@ public class FacetRangeBuilder implements Builder<FacetRange> {
 
     /**
      *
+     * @param productCount
+     * @return Builder
      */
 
     public FacetRangeBuilder productCount(@Nullable final Long productCount) {
@@ -108,6 +120,8 @@ public class FacetRangeBuilder implements Builder<FacetRange> {
 
     /**
      *
+     * @param total
+     * @return Builder
      */
 
     public FacetRangeBuilder total(final Double total) {
@@ -117,6 +131,8 @@ public class FacetRangeBuilder implements Builder<FacetRange> {
 
     /**
      *
+     * @param min
+     * @return Builder
      */
 
     public FacetRangeBuilder min(final Double min) {
@@ -126,6 +142,8 @@ public class FacetRangeBuilder implements Builder<FacetRange> {
 
     /**
      *
+     * @param max
+     * @return Builder
      */
 
     public FacetRangeBuilder max(final Double max) {
@@ -135,6 +153,8 @@ public class FacetRangeBuilder implements Builder<FacetRange> {
 
     /**
      *
+     * @param mean
+     * @return Builder
      */
 
     public FacetRangeBuilder mean(final Double mean) {

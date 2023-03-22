@@ -44,6 +44,7 @@ public interface ProductDiscountUpdateAction
 
     /**
      *
+     * @return action
      */
     @NotNull
     @JsonProperty("action")

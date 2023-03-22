@@ -40,6 +40,8 @@ public class AttributeGroupPagedQueryResponseBuilder implements Builder<Attribut
 
     /**
      *  <p>Number of results requested in the query request.</p>
+     * @param limit
+     * @return Builder
      */
 
     public AttributeGroupPagedQueryResponseBuilder limit(final Long limit) {
@@ -49,6 +51,8 @@ public class AttributeGroupPagedQueryResponseBuilder implements Builder<Attribut
 
     /**
      *  <p>Offset supplied by the client or the server default. It is the number of elements skipped, not a page number.</p>
+     * @param offset
+     * @return Builder
      */
 
     public AttributeGroupPagedQueryResponseBuilder offset(final Long offset) {
@@ -58,6 +62,8 @@ public class AttributeGroupPagedQueryResponseBuilder implements Builder<Attribut
 
     /**
      *  <p>Actual number of results returned.</p>
+     * @param count
+     * @return Builder
      */
 
     public AttributeGroupPagedQueryResponseBuilder count(final Long count) {
@@ -67,6 +73,8 @@ public class AttributeGroupPagedQueryResponseBuilder implements Builder<Attribut
 
     /**
      *  <p>Total number of results matching the query. This number is an estimation that is not strongly consistent. This field is returned by default. For improved performance, calculating this field can be deactivated by using the query parameter <code>withTotal=false</code>. When the results are filtered with a Query Predicate, <code>total</code> is subject to a limit.</p>
+     * @param total
+     * @return Builder
      */
 
     public AttributeGroupPagedQueryResponseBuilder total(@Nullable final Long total) {
@@ -76,6 +84,8 @@ public class AttributeGroupPagedQueryResponseBuilder implements Builder<Attribut
 
     /**
      *  <p>AttributeGroups matching the query.</p>
+     * @param results
+     * @return Builder
      */
 
     public AttributeGroupPagedQueryResponseBuilder results(
@@ -86,6 +96,8 @@ public class AttributeGroupPagedQueryResponseBuilder implements Builder<Attribut
 
     /**
      *  <p>AttributeGroups matching the query.</p>
+     * @param results
+     * @return Builder
      */
 
     public AttributeGroupPagedQueryResponseBuilder results(
@@ -96,6 +108,8 @@ public class AttributeGroupPagedQueryResponseBuilder implements Builder<Attribut
 
     /**
      *  <p>AttributeGroups matching the query.</p>
+     * @param results
+     * @return Builder
      */
 
     public AttributeGroupPagedQueryResponseBuilder plusResults(
@@ -109,6 +123,7 @@ public class AttributeGroupPagedQueryResponseBuilder implements Builder<Attribut
 
     /**
      *  <p>AttributeGroups matching the query.</p>
+     * @return Builder
      */
 
     public AttributeGroupPagedQueryResponseBuilder plusResults(
@@ -123,6 +138,7 @@ public class AttributeGroupPagedQueryResponseBuilder implements Builder<Attribut
 
     /**
      *  <p>AttributeGroups matching the query.</p>
+     * @return Builder
      */
 
     public AttributeGroupPagedQueryResponseBuilder withResults(

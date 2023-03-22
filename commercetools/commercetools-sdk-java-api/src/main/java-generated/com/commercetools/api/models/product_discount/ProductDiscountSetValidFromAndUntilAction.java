@@ -31,6 +31,7 @@ public interface ProductDiscountSetValidFromAndUntilAction extends ProductDiscou
 
     /**
      *  <p>Value to set. Take Eventual Consistency into account for calculated undiscounted values.</p>
+     * @return validFrom
      */
 
     @JsonProperty("validFrom")
@@ -38,6 +39,7 @@ public interface ProductDiscountSetValidFromAndUntilAction extends ProductDiscou
 
     /**
      *  <p>Value to set. Take Eventual Consistency into account for calculated undiscounted values.</p>
+     * @return validUntil
      */
 
     @JsonProperty("validUntil")

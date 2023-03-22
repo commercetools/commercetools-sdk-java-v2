@@ -26,6 +26,8 @@ public class ChangeValueAbsoluteChangeValueBuilder implements Builder<ChangeValu
 
     /**
      *
+     * @param money
+     * @return Builder
      */
 
     public ChangeValueAbsoluteChangeValueBuilder money(final com.commercetools.history.models.common.Money... money) {
@@ -35,6 +37,8 @@ public class ChangeValueAbsoluteChangeValueBuilder implements Builder<ChangeValu
 
     /**
      *
+     * @param money
+     * @return Builder
      */
 
     public ChangeValueAbsoluteChangeValueBuilder money(
@@ -45,6 +49,8 @@ public class ChangeValueAbsoluteChangeValueBuilder implements Builder<ChangeValu
 
     /**
      *
+     * @param money
+     * @return Builder
      */
 
     public ChangeValueAbsoluteChangeValueBuilder plusMoney(
@@ -58,6 +64,7 @@ public class ChangeValueAbsoluteChangeValueBuilder implements Builder<ChangeValu
 
     /**
      *
+     * @return Builder
      */
 
     public ChangeValueAbsoluteChangeValueBuilder plusMoney(
@@ -71,6 +78,7 @@ public class ChangeValueAbsoluteChangeValueBuilder implements Builder<ChangeValu
 
     /**
      *
+     * @return Builder
      */
 
     public ChangeValueAbsoluteChangeValueBuilder withMoney(

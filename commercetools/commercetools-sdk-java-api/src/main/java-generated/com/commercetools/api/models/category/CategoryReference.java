@@ -35,6 +35,7 @@ public interface CategoryReference extends Reference, com.commercetools.api.mode
 
     /**
      *  <p>Contains the representation of the expanded Category. Only present in responses to requests with Reference Expansion for Categories.</p>
+     * @return obj
      */
     @Valid
     @JsonProperty("obj")
@@ -42,6 +43,7 @@ public interface CategoryReference extends Reference, com.commercetools.api.mode
 
     /**
      *  <p>Unique identifier of the referenced Category.</p>
+     * @return id
      */
     @NotNull
     @JsonProperty("id")

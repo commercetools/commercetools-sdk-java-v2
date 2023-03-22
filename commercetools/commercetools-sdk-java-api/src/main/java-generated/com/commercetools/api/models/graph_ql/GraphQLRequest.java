@@ -32,6 +32,7 @@ public interface GraphQLRequest {
 
     /**
      *
+     * @return query
      */
     @NotNull
     @JsonProperty("query")
@@ -39,6 +40,7 @@ public interface GraphQLRequest {
 
     /**
      *
+     * @return operationName
      */
 
     @JsonProperty("operationName")
@@ -46,6 +48,7 @@ public interface GraphQLRequest {
 
     /**
      *
+     * @return variables
      */
     @Valid
     @JsonProperty("variables")

@@ -30,6 +30,8 @@ public class DateSetAttributeBuilder implements Builder<DateSetAttribute> {
 
     /**
      *  <p>The name of this attribute must match a name of the product types attribute definitions. The name is required if this type is used in a product variant and must not be set when used in a product variant patch.</p>
+     * @param name
+     * @return Builder
      */
 
     public DateSetAttributeBuilder name(@Nullable final String name) {
@@ -39,6 +41,8 @@ public class DateSetAttributeBuilder implements Builder<DateSetAttribute> {
 
     /**
      *
+     * @param value
+     * @return Builder
      */
 
     public DateSetAttributeBuilder value(final java.time.LocalDate... value) {
@@ -48,6 +52,8 @@ public class DateSetAttributeBuilder implements Builder<DateSetAttribute> {
 
     /**
      *
+     * @param value
+     * @return Builder
      */
 
     public DateSetAttributeBuilder value(final java.util.List<java.time.LocalDate> value) {
@@ -57,6 +63,8 @@ public class DateSetAttributeBuilder implements Builder<DateSetAttribute> {
 
     /**
      *
+     * @param value
+     * @return Builder
      */
 
     public DateSetAttributeBuilder plusValue(final java.time.LocalDate... value) {

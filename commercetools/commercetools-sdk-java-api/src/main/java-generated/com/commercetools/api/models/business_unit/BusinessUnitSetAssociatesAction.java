@@ -34,6 +34,7 @@ public interface BusinessUnitSetAssociatesAction extends BusinessUnitUpdateActio
 
     /**
      *  <p>The new list of Associates. If not provided, any existing list is removed.</p>
+     * @return associates
      */
     @NotNull
     @Valid

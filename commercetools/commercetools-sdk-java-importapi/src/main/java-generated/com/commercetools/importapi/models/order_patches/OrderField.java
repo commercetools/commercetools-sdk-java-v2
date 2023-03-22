@@ -30,6 +30,7 @@ public interface OrderField {
 
     /**
      *  <p>Maps to <code>Order.returnInfo</code></p>
+     * @return addReturnInfo
      */
     @Valid
     @JsonProperty("addReturnInfo")
@@ -37,6 +38,7 @@ public interface OrderField {
 
     /**
      *  <p>Maps to <code>Order.delivery</code></p>
+     * @return addParcelToDelivery
      */
     @Valid
     @JsonProperty("addParcelToDelivery")
@@ -44,6 +46,7 @@ public interface OrderField {
 
     /**
      *  <p>Maps to <code>Order.delivery</code></p>
+     * @return addDeliveries
      */
     @Valid
     @JsonProperty("addDeliveries")
@@ -51,6 +54,7 @@ public interface OrderField {
 
     /**
      *  <p>Maps to <code>Order.removeDelivery</code></p>
+     * @return removeDelivery
      */
     @Valid
     @JsonProperty("removeDelivery")
@@ -58,6 +62,7 @@ public interface OrderField {
 
     /**
      *  <p>Maps to <code>Order.removeParcelFromDelivery</code></p>
+     * @return removeParcelFromDelivery
      */
     @Valid
     @JsonProperty("removeParcelFromDelivery")
@@ -65,6 +70,7 @@ public interface OrderField {
 
     /**
      *  <p>Maps to <code>Order.addressDraft</code></p>
+     * @return setDeliveryAddress
      */
     @Valid
     @JsonProperty("setDeliveryAddress")
@@ -72,6 +78,7 @@ public interface OrderField {
 
     /**
      *  <p>Maps to <code>Order.parcelMeasurements</code></p>
+     * @return setParcelMeasurements
      */
     @Valid
     @JsonProperty("setParcelMeasurements")
@@ -79,6 +86,7 @@ public interface OrderField {
 
     /**
      *  <p>Maps to <code>Order.parcelTrackingData</code></p>
+     * @return setParcelTrackingData
      */
     @Valid
     @JsonProperty("setParcelTrackingData")
@@ -86,6 +94,7 @@ public interface OrderField {
 
     /**
      *  <p>Maps to <code>Order.parcelItems</code></p>
+     * @return setParcelItems
      */
     @Valid
     @JsonProperty("setParcelItems")

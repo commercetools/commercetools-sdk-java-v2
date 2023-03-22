@@ -26,6 +26,8 @@ public class StagedOrderChangeTaxCalculationModeActionBuilder
 
     /**
      *  <p>Determines in which Tax calculation mode taxed prices are calculated.</p>
+     * @param taxCalculationMode
+     * @return Builder
      */
 
     public StagedOrderChangeTaxCalculationModeActionBuilder taxCalculationMode(

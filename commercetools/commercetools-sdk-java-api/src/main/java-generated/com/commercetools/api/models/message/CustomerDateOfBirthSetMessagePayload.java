@@ -31,6 +31,7 @@ public interface CustomerDateOfBirthSetMessagePayload extends MessagePayload {
 
     /**
      *  <p>The <code>dateOfBirth</code> that was set during the Set Date of Birth update action.</p>
+     * @return dateOfBirth
      */
 
     @JsonProperty("dateOfBirth")

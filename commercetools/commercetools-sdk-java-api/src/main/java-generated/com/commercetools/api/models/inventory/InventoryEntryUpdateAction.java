@@ -43,6 +43,7 @@ public interface InventoryEntryUpdateAction
 
     /**
      *
+     * @return action
      */
     @NotNull
     @JsonProperty("action")

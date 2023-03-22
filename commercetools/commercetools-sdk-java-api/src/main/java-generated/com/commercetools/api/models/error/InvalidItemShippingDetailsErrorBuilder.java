@@ -33,6 +33,8 @@ public class InvalidItemShippingDetailsErrorBuilder implements Builder<InvalidIt
 
     /**
      *  <p><code>"Inconsistent shipping details for $subject with ID $itemId. $subject quantity is $itemQuantity and shippingTargets quantity sum is $quantitySum."</code></p>
+     * @param message
+     * @return Builder
      */
 
     public InvalidItemShippingDetailsErrorBuilder message(final String message) {
@@ -63,6 +65,8 @@ public class InvalidItemShippingDetailsErrorBuilder implements Builder<InvalidIt
 
     /**
      *  <p><code>"LineItem"</code> or <code>"CustomLineItem"</code></p>
+     * @param subject
+     * @return Builder
      */
 
     public InvalidItemShippingDetailsErrorBuilder subject(final String subject) {
@@ -72,6 +76,8 @@ public class InvalidItemShippingDetailsErrorBuilder implements Builder<InvalidIt
 
     /**
      *  <p>Unique identifier of the Line Item or Custom Line Item.</p>
+     * @param itemId
+     * @return Builder
      */
 
     public InvalidItemShippingDetailsErrorBuilder itemId(final String itemId) {

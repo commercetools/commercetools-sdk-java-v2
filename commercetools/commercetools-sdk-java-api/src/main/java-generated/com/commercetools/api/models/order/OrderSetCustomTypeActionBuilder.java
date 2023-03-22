@@ -31,6 +31,7 @@ public class OrderSetCustomTypeActionBuilder implements Builder<OrderSetCustomTy
 
     /**
      *  <p>Defines the Type that extends the Order with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Order.</p>
+     * @return Builder
      */
 
     public OrderSetCustomTypeActionBuilder type(
@@ -41,6 +42,8 @@ public class OrderSetCustomTypeActionBuilder implements Builder<OrderSetCustomTy
 
     /**
      *  <p>Defines the Type that extends the Order with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Order.</p>
+     * @param type
+     * @return Builder
      */
 
     public OrderSetCustomTypeActionBuilder type(
@@ -51,6 +54,7 @@ public class OrderSetCustomTypeActionBuilder implements Builder<OrderSetCustomTy
 
     /**
      *  <p>Sets the Custom Fields fields for the Order.</p>
+     * @return Builder
      */
 
     public OrderSetCustomTypeActionBuilder fields(
@@ -61,6 +65,8 @@ public class OrderSetCustomTypeActionBuilder implements Builder<OrderSetCustomTy
 
     /**
      *  <p>Sets the Custom Fields fields for the Order.</p>
+     * @param fields
+     * @return Builder
      */
 
     public OrderSetCustomTypeActionBuilder fields(

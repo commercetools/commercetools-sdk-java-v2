@@ -38,6 +38,7 @@ public interface Transaction extends com.commercetools.api.models.Customizable<T
 
     /**
      *  <p>Unique identifier of the Transaction.</p>
+     * @return id
      */
     @NotNull
     @JsonProperty("id")
@@ -45,6 +46,7 @@ public interface Transaction extends com.commercetools.api.models.Customizable<T
 
     /**
      *  <p>Date and time (UTC) the Transaction took place.</p>
+     * @return timestamp
      */
 
     @JsonProperty("timestamp")
@@ -52,6 +54,7 @@ public interface Transaction extends com.commercetools.api.models.Customizable<T
 
     /**
      *  <p>Type of the Transaction. For example, <code>Authorization</code>.</p>
+     * @return type
      */
     @NotNull
     @JsonProperty("type")
@@ -59,6 +62,7 @@ public interface Transaction extends com.commercetools.api.models.Customizable<T
 
     /**
      *  <p>Money value of the Transaction.</p>
+     * @return amount
      */
     @NotNull
     @Valid
@@ -67,6 +71,7 @@ public interface Transaction extends com.commercetools.api.models.Customizable<T
 
     /**
      *  <p>Identifier used by the interface that manages the Transaction (usually the PSP). If a matching interaction was logged in the <code>interfaceInteractions</code> array, the corresponding interaction can be found with this ID.</p>
+     * @return interactionId
      */
 
     @JsonProperty("interactionId")
@@ -74,6 +79,7 @@ public interface Transaction extends com.commercetools.api.models.Customizable<T
 
     /**
      *  <p>State of the Transaction.</p>
+     * @return state
      */
     @NotNull
     @JsonProperty("state")
@@ -81,6 +87,7 @@ public interface Transaction extends com.commercetools.api.models.Customizable<T
 
     /**
      *  <p>Custom Fields defined for the Transaction.</p>
+     * @return custom
      */
     @Valid
     @JsonProperty("custom")

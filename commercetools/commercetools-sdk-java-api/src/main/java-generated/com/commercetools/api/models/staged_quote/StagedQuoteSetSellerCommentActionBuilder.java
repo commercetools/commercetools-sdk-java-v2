@@ -27,6 +27,8 @@ public class StagedQuoteSetSellerCommentActionBuilder implements Builder<StagedQ
 
     /**
      *  <p>If <code>sellerComment</code> is absent or <code>null</code>, this field will be removed if it exists.</p>
+     * @param sellerComment
+     * @return Builder
      */
 
     public StagedQuoteSetSellerCommentActionBuilder sellerComment(@Nullable final String sellerComment) {

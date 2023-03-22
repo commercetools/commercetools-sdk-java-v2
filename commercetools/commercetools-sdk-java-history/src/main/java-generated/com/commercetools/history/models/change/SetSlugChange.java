@@ -37,6 +37,7 @@ public interface SetSlugChange extends Change {
 
     /**
      *
+     * @return type
      */
     @NotNull
     @JsonProperty("type")
@@ -44,6 +45,7 @@ public interface SetSlugChange extends Change {
 
     /**
      *  <p>Shape of the action for <code>setSlug</code></p>
+     * @return change
      */
     @NotNull
     @JsonProperty("change")
@@ -51,6 +53,7 @@ public interface SetSlugChange extends Change {
 
     /**
      *
+     * @return previousValue
      */
     @NotNull
     @Valid
@@ -59,6 +62,7 @@ public interface SetSlugChange extends Change {
 
     /**
      *
+     * @return nextValue
      */
     @NotNull
     @Valid

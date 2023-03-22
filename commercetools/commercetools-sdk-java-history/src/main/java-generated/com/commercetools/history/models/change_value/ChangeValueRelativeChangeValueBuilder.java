@@ -25,6 +25,8 @@ public class ChangeValueRelativeChangeValueBuilder implements Builder<ChangeValu
 
     /**
      *
+     * @param permyriad
+     * @return Builder
      */
 
     public ChangeValueRelativeChangeValueBuilder permyriad(final Integer permyriad) {

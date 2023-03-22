@@ -34,6 +34,8 @@ public class CategorySetAssetSourcesActionBuilder implements Builder<CategorySet
 
     /**
      *  <p>New value to set. Either <code>assetId</code> or <code>assetKey</code> is required.</p>
+     * @param assetId
+     * @return Builder
      */
 
     public CategorySetAssetSourcesActionBuilder assetId(@Nullable final String assetId) {
@@ -43,6 +45,8 @@ public class CategorySetAssetSourcesActionBuilder implements Builder<CategorySet
 
     /**
      *  <p>New value to set. Either <code>assetId</code> or <code>assetKey</code> is required.</p>
+     * @param assetKey
+     * @return Builder
      */
 
     public CategorySetAssetSourcesActionBuilder assetKey(@Nullable final String assetKey) {
@@ -52,6 +56,8 @@ public class CategorySetAssetSourcesActionBuilder implements Builder<CategorySet
 
     /**
      *  <p>Must not be empty. At least one entry is required.</p>
+     * @param sources
+     * @return Builder
      */
 
     public CategorySetAssetSourcesActionBuilder sources(
@@ -62,6 +68,8 @@ public class CategorySetAssetSourcesActionBuilder implements Builder<CategorySet
 
     /**
      *  <p>Must not be empty. At least one entry is required.</p>
+     * @param sources
+     * @return Builder
      */
 
     public CategorySetAssetSourcesActionBuilder sources(
@@ -72,6 +80,8 @@ public class CategorySetAssetSourcesActionBuilder implements Builder<CategorySet
 
     /**
      *  <p>Must not be empty. At least one entry is required.</p>
+     * @param sources
+     * @return Builder
      */
 
     public CategorySetAssetSourcesActionBuilder plusSources(
@@ -85,6 +95,7 @@ public class CategorySetAssetSourcesActionBuilder implements Builder<CategorySet
 
     /**
      *  <p>Must not be empty. At least one entry is required.</p>
+     * @return Builder
      */
 
     public CategorySetAssetSourcesActionBuilder plusSources(
@@ -98,6 +109,7 @@ public class CategorySetAssetSourcesActionBuilder implements Builder<CategorySet
 
     /**
      *  <p>Must not be empty. At least one entry is required.</p>
+     * @return Builder
      */
 
     public CategorySetAssetSourcesActionBuilder withSources(

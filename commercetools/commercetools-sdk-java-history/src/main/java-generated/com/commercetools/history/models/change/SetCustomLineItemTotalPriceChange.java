@@ -40,6 +40,7 @@ public interface SetCustomLineItemTotalPriceChange extends Change {
 
     /**
      *
+     * @return type
      */
     @NotNull
     @JsonProperty("type")
@@ -47,6 +48,7 @@ public interface SetCustomLineItemTotalPriceChange extends Change {
 
     /**
      *  <p>Update action for <code>setCustomLineItemTotalPrice</code></p>
+     * @return change
      */
     @NotNull
     @JsonProperty("change")
@@ -54,6 +56,7 @@ public interface SetCustomLineItemTotalPriceChange extends Change {
 
     /**
      *
+     * @return customLineItem
      */
     @NotNull
     @Valid
@@ -62,6 +65,7 @@ public interface SetCustomLineItemTotalPriceChange extends Change {
 
     /**
      *
+     * @return customLineItemId
      */
     @NotNull
     @JsonProperty("customLineItemId")
@@ -69,6 +73,7 @@ public interface SetCustomLineItemTotalPriceChange extends Change {
 
     /**
      *
+     * @return nextValue
      */
     @NotNull
     @Valid
@@ -77,6 +82,7 @@ public interface SetCustomLineItemTotalPriceChange extends Change {
 
     /**
      *
+     * @return previousValue
      */
     @NotNull
     @Valid

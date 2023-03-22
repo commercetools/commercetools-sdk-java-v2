@@ -34,6 +34,7 @@ public interface BusinessUnitChangeAssociateAction extends BusinessUnitUpdateAct
 
     /**
      *  <p>New version of an existing Associate.</p>
+     * @return associate
      */
     @NotNull
     @Valid

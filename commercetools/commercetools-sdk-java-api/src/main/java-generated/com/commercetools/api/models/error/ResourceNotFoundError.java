@@ -33,6 +33,7 @@ public interface ResourceNotFoundError extends ErrorObject {
 
     /**
      *
+     * @return code
      */
     @NotNull
     @JsonProperty("code")
@@ -40,6 +41,7 @@ public interface ResourceNotFoundError extends ErrorObject {
 
     /**
      *  <p><code>"The Resource with ID $resourceId was not found."</code></p>
+     * @return message
      */
     @NotNull
     @JsonProperty("message")

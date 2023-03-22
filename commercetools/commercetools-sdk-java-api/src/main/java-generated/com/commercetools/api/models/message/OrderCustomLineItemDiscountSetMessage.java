@@ -44,6 +44,7 @@ public interface OrderCustomLineItemDiscountSetMessage extends OrderMessage {
 
     /**
      *  <p>Unique identifier for the Custom Line Item.</p>
+     * @return customLineItemId
      */
     @NotNull
     @JsonProperty("customLineItemId")
@@ -51,6 +52,7 @@ public interface OrderCustomLineItemDiscountSetMessage extends OrderMessage {
 
     /**
      *  <p>Array of DiscountedLineItemPriceForQuantity after the Discount recalculation.</p>
+     * @return discountedPricePerQuantity
      */
     @NotNull
     @Valid
@@ -59,6 +61,7 @@ public interface OrderCustomLineItemDiscountSetMessage extends OrderMessage {
 
     /**
      *  <p>TaxedItemPrice of the Custom Line Item after the Discount recalculation.</p>
+     * @return taxedPrice
      */
     @Valid
     @JsonProperty("taxedPrice")

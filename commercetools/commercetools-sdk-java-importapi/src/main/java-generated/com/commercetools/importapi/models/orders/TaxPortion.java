@@ -34,6 +34,7 @@ public interface TaxPortion {
 
     /**
      *
+     * @return name
      */
 
     @JsonProperty("name")
@@ -41,6 +42,7 @@ public interface TaxPortion {
 
     /**
      *
+     * @return rate
      */
     @NotNull
     @JsonProperty("rate")
@@ -48,6 +50,7 @@ public interface TaxPortion {
 
     /**
      *
+     * @return amount
      */
     @NotNull
     @Valid

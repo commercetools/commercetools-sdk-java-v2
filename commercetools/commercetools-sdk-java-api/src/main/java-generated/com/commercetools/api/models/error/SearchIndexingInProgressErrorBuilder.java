@@ -27,6 +27,8 @@ public class SearchIndexingInProgressErrorBuilder implements Builder<SearchIndex
 
     /**
      *  <p><code>"The indexing is currently in progress. Please wait until the status is "Activated" to execute search requests."</code></p>
+     * @param message
+     * @return Builder
      */
 
     public SearchIndexingInProgressErrorBuilder message(final String message) {

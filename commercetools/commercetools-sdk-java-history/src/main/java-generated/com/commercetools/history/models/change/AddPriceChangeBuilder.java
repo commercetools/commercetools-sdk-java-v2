@@ -35,6 +35,8 @@ public class AddPriceChangeBuilder implements Builder<AddPriceChange> {
 
     /**
      *  <p>Update action for adding prices</p>
+     * @param change
+     * @return Builder
      */
 
     public AddPriceChangeBuilder change(final String change) {
@@ -44,6 +46,8 @@ public class AddPriceChangeBuilder implements Builder<AddPriceChange> {
 
     /**
      *
+     * @param catalogData
+     * @return Builder
      */
 
     public AddPriceChangeBuilder catalogData(final String catalogData) {
@@ -53,6 +57,8 @@ public class AddPriceChangeBuilder implements Builder<AddPriceChange> {
 
     /**
      *
+     * @param priceId
+     * @return Builder
      */
 
     public AddPriceChangeBuilder priceId(final String priceId) {
@@ -62,6 +68,7 @@ public class AddPriceChangeBuilder implements Builder<AddPriceChange> {
 
     /**
      *
+     * @return Builder
      */
 
     public AddPriceChangeBuilder nextValue(
@@ -72,6 +79,8 @@ public class AddPriceChangeBuilder implements Builder<AddPriceChange> {
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public AddPriceChangeBuilder nextValue(final com.commercetools.history.models.common.Price nextValue) {

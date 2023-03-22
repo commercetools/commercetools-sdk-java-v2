@@ -26,6 +26,7 @@ public class OrderCustomLineItemAddedMessagePayloadBuilder implements Builder<Or
 
     /**
      *  <p>Custom Line Item that was added to the Order.</p>
+     * @return Builder
      */
 
     public OrderCustomLineItemAddedMessagePayloadBuilder customLineItem(
@@ -36,6 +37,8 @@ public class OrderCustomLineItemAddedMessagePayloadBuilder implements Builder<Or
 
     /**
      *  <p>Custom Line Item that was added to the Order.</p>
+     * @param customLineItem
+     * @return Builder
      */
 
     public OrderCustomLineItemAddedMessagePayloadBuilder customLineItem(

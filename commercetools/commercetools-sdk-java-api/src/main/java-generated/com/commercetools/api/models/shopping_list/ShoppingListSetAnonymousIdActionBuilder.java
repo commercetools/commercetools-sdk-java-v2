@@ -27,6 +27,8 @@ public class ShoppingListSetAnonymousIdActionBuilder implements Builder<Shopping
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
+     * @param anonymousId
+     * @return Builder
      */
 
     public ShoppingListSetAnonymousIdActionBuilder anonymousId(@Nullable final String anonymousId) {

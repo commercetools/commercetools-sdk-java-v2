@@ -41,6 +41,8 @@ public class SetDiscountedPriceChangeBuilder implements Builder<SetDiscountedPri
 
     /**
      *  <p>Update action for <code>setDiscountedPrice</code></p>
+     * @param change
+     * @return Builder
      */
 
     public SetDiscountedPriceChangeBuilder change(final String change) {
@@ -50,6 +52,8 @@ public class SetDiscountedPriceChangeBuilder implements Builder<SetDiscountedPri
 
     /**
      *
+     * @param catalogData
+     * @return Builder
      */
 
     public SetDiscountedPriceChangeBuilder catalogData(final String catalogData) {
@@ -59,6 +63,8 @@ public class SetDiscountedPriceChangeBuilder implements Builder<SetDiscountedPri
 
     /**
      *
+     * @param variant
+     * @return Builder
      */
 
     public SetDiscountedPriceChangeBuilder variant(final String variant) {
@@ -68,6 +74,8 @@ public class SetDiscountedPriceChangeBuilder implements Builder<SetDiscountedPri
 
     /**
      *
+     * @param priceId
+     * @return Builder
      */
 
     public SetDiscountedPriceChangeBuilder priceId(final String priceId) {
@@ -77,6 +85,7 @@ public class SetDiscountedPriceChangeBuilder implements Builder<SetDiscountedPri
 
     /**
      *
+     * @return Builder
      */
 
     public SetDiscountedPriceChangeBuilder previousValue(
@@ -87,6 +96,8 @@ public class SetDiscountedPriceChangeBuilder implements Builder<SetDiscountedPri
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public SetDiscountedPriceChangeBuilder previousValue(
@@ -97,6 +108,7 @@ public class SetDiscountedPriceChangeBuilder implements Builder<SetDiscountedPri
 
     /**
      *
+     * @return Builder
      */
 
     public SetDiscountedPriceChangeBuilder nextValue(
@@ -107,6 +119,8 @@ public class SetDiscountedPriceChangeBuilder implements Builder<SetDiscountedPri
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public SetDiscountedPriceChangeBuilder nextValue(final com.commercetools.history.models.common.Price nextValue) {

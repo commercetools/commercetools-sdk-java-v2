@@ -30,6 +30,8 @@ public class MessagesConfigurationBuilder implements Builder<MessagesConfigurati
 
     /**
      *  <p>When <code>true</code>, the Messages Query feature is active.</p>
+     * @param enabled
+     * @return Builder
      */
 
     public MessagesConfigurationBuilder enabled(final Boolean enabled) {
@@ -39,6 +41,8 @@ public class MessagesConfigurationBuilder implements Builder<MessagesConfigurati
 
     /**
      *  <p>Specifies the number of days each Message should be available via the Messages Query API. For Messages older than the specified period, it is not guaranteed that they are still accessible via the API. This field may not be present on Projects created before 8 October 2018.</p>
+     * @param deleteDaysAfterCreation
+     * @return Builder
      */
 
     public MessagesConfigurationBuilder deleteDaysAfterCreation(@Nullable final Integer deleteDaysAfterCreation) {

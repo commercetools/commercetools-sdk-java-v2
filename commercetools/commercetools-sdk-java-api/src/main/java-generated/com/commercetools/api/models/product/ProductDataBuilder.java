@@ -58,6 +58,7 @@ public class ProductDataBuilder implements Builder<ProductData> {
 
     /**
      *  <p>Name of the Product.</p>
+     * @return Builder
      */
 
     public ProductDataBuilder name(
@@ -68,6 +69,8 @@ public class ProductDataBuilder implements Builder<ProductData> {
 
     /**
      *  <p>Name of the Product.</p>
+     * @param name
+     * @return Builder
      */
 
     public ProductDataBuilder name(final com.commercetools.api.models.common.LocalizedString name) {
@@ -77,6 +80,8 @@ public class ProductDataBuilder implements Builder<ProductData> {
 
     /**
      *  <p>Categories assigned to the Product.</p>
+     * @param categories
+     * @return Builder
      */
 
     public ProductDataBuilder categories(final com.commercetools.api.models.category.CategoryReference... categories) {
@@ -86,6 +91,8 @@ public class ProductDataBuilder implements Builder<ProductData> {
 
     /**
      *  <p>Categories assigned to the Product.</p>
+     * @param categories
+     * @return Builder
      */
 
     public ProductDataBuilder categories(
@@ -96,6 +103,8 @@ public class ProductDataBuilder implements Builder<ProductData> {
 
     /**
      *  <p>Categories assigned to the Product.</p>
+     * @param categories
+     * @return Builder
      */
 
     public ProductDataBuilder plusCategories(
@@ -109,6 +118,7 @@ public class ProductDataBuilder implements Builder<ProductData> {
 
     /**
      *  <p>Categories assigned to the Product.</p>
+     * @return Builder
      */
 
     public ProductDataBuilder plusCategories(
@@ -122,6 +132,7 @@ public class ProductDataBuilder implements Builder<ProductData> {
 
     /**
      *  <p>Categories assigned to the Product.</p>
+     * @return Builder
      */
 
     public ProductDataBuilder withCategories(
@@ -133,6 +144,7 @@ public class ProductDataBuilder implements Builder<ProductData> {
 
     /**
      *  <p>Numerical values to allow ordering of Products within a specified Category.</p>
+     * @return Builder
      */
 
     public ProductDataBuilder categoryOrderHints(
@@ -144,6 +156,8 @@ public class ProductDataBuilder implements Builder<ProductData> {
 
     /**
      *  <p>Numerical values to allow ordering of Products within a specified Category.</p>
+     * @param categoryOrderHints
+     * @return Builder
      */
 
     public ProductDataBuilder categoryOrderHints(
@@ -154,6 +168,7 @@ public class ProductDataBuilder implements Builder<ProductData> {
 
     /**
      *  <p>Description of the Product.</p>
+     * @return Builder
      */
 
     public ProductDataBuilder description(
@@ -164,6 +179,8 @@ public class ProductDataBuilder implements Builder<ProductData> {
 
     /**
      *  <p>Description of the Product.</p>
+     * @param description
+     * @return Builder
      */
 
     public ProductDataBuilder description(
@@ -174,6 +191,7 @@ public class ProductDataBuilder implements Builder<ProductData> {
 
     /**
      *  <p>User-defined identifier used in a deep-link URL for the Product. Must be unique across a Project, but can be the same for Products in different Locales. Matches the pattern <code>[a-zA-Z0-9_\\-]{2,256}</code>.</p>
+     * @return Builder
      */
 
     public ProductDataBuilder slug(
@@ -184,6 +202,8 @@ public class ProductDataBuilder implements Builder<ProductData> {
 
     /**
      *  <p>User-defined identifier used in a deep-link URL for the Product. Must be unique across a Project, but can be the same for Products in different Locales. Matches the pattern <code>[a-zA-Z0-9_\\-]{2,256}</code>.</p>
+     * @param slug
+     * @return Builder
      */
 
     public ProductDataBuilder slug(final com.commercetools.api.models.common.LocalizedString slug) {
@@ -193,6 +213,7 @@ public class ProductDataBuilder implements Builder<ProductData> {
 
     /**
      *  <p>Title of the Product displayed in search results.</p>
+     * @return Builder
      */
 
     public ProductDataBuilder metaTitle(
@@ -203,6 +224,8 @@ public class ProductDataBuilder implements Builder<ProductData> {
 
     /**
      *  <p>Title of the Product displayed in search results.</p>
+     * @param metaTitle
+     * @return Builder
      */
 
     public ProductDataBuilder metaTitle(@Nullable final com.commercetools.api.models.common.LocalizedString metaTitle) {
@@ -212,6 +235,7 @@ public class ProductDataBuilder implements Builder<ProductData> {
 
     /**
      *  <p>Description of the Product displayed in search results below the meta title.</p>
+     * @return Builder
      */
 
     public ProductDataBuilder metaDescription(
@@ -222,6 +246,8 @@ public class ProductDataBuilder implements Builder<ProductData> {
 
     /**
      *  <p>Description of the Product displayed in search results below the meta title.</p>
+     * @param metaDescription
+     * @return Builder
      */
 
     public ProductDataBuilder metaDescription(
@@ -232,6 +258,7 @@ public class ProductDataBuilder implements Builder<ProductData> {
 
     /**
      *  <p>Keywords that give additional information about the Product to search engines.</p>
+     * @return Builder
      */
 
     public ProductDataBuilder metaKeywords(
@@ -242,6 +269,8 @@ public class ProductDataBuilder implements Builder<ProductData> {
 
     /**
      *  <p>Keywords that give additional information about the Product to search engines.</p>
+     * @param metaKeywords
+     * @return Builder
      */
 
     public ProductDataBuilder metaKeywords(
@@ -252,6 +281,7 @@ public class ProductDataBuilder implements Builder<ProductData> {
 
     /**
      *  <p>The Master Variant of the Product.</p>
+     * @return Builder
      */
 
     public ProductDataBuilder masterVariant(
@@ -262,6 +292,8 @@ public class ProductDataBuilder implements Builder<ProductData> {
 
     /**
      *  <p>The Master Variant of the Product.</p>
+     * @param masterVariant
+     * @return Builder
      */
 
     public ProductDataBuilder masterVariant(final com.commercetools.api.models.product.ProductVariant masterVariant) {
@@ -271,6 +303,8 @@ public class ProductDataBuilder implements Builder<ProductData> {
 
     /**
      *  <p>Additional Product Variants.</p>
+     * @param variants
+     * @return Builder
      */
 
     public ProductDataBuilder variants(final com.commercetools.api.models.product.ProductVariant... variants) {
@@ -280,6 +314,8 @@ public class ProductDataBuilder implements Builder<ProductData> {
 
     /**
      *  <p>Additional Product Variants.</p>
+     * @param variants
+     * @return Builder
      */
 
     public ProductDataBuilder variants(
@@ -290,6 +326,8 @@ public class ProductDataBuilder implements Builder<ProductData> {
 
     /**
      *  <p>Additional Product Variants.</p>
+     * @param variants
+     * @return Builder
      */
 
     public ProductDataBuilder plusVariants(final com.commercetools.api.models.product.ProductVariant... variants) {
@@ -302,6 +340,7 @@ public class ProductDataBuilder implements Builder<ProductData> {
 
     /**
      *  <p>Additional Product Variants.</p>
+     * @return Builder
      */
 
     public ProductDataBuilder plusVariants(
@@ -315,6 +354,7 @@ public class ProductDataBuilder implements Builder<ProductData> {
 
     /**
      *  <p>Additional Product Variants.</p>
+     * @return Builder
      */
 
     public ProductDataBuilder withVariants(
@@ -326,6 +366,7 @@ public class ProductDataBuilder implements Builder<ProductData> {
 
     /**
      *  <p>Used by Product Suggestions, but is also considered for a full text search.</p>
+     * @return Builder
      */
 
     public ProductDataBuilder searchKeywords(
@@ -336,6 +377,8 @@ public class ProductDataBuilder implements Builder<ProductData> {
 
     /**
      *  <p>Used by Product Suggestions, but is also considered for a full text search.</p>
+     * @param searchKeywords
+     * @return Builder
      */
 
     public ProductDataBuilder searchKeywords(final com.commercetools.api.models.product.SearchKeywords searchKeywords) {

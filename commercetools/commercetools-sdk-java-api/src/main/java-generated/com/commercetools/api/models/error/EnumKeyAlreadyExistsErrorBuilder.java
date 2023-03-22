@@ -33,6 +33,8 @@ public class EnumKeyAlreadyExistsErrorBuilder implements Builder<EnumKeyAlreadyE
 
     /**
      *  <p><code>"The $attributeName attribute definition already contains an enum value with the key $enumKey."</code></p>
+     * @param message
+     * @return Builder
      */
 
     public EnumKeyAlreadyExistsErrorBuilder message(final String message) {
@@ -63,6 +65,8 @@ public class EnumKeyAlreadyExistsErrorBuilder implements Builder<EnumKeyAlreadyE
 
     /**
      *  <p>Conflicting enum key.</p>
+     * @param conflictingEnumKey
+     * @return Builder
      */
 
     public EnumKeyAlreadyExistsErrorBuilder conflictingEnumKey(final String conflictingEnumKey) {
@@ -72,6 +76,8 @@ public class EnumKeyAlreadyExistsErrorBuilder implements Builder<EnumKeyAlreadyE
 
     /**
      *  <p>Name of the conflicting Attribute.</p>
+     * @param conflictingAttributeName
+     * @return Builder
      */
 
     public EnumKeyAlreadyExistsErrorBuilder conflictingAttributeName(final String conflictingAttributeName) {

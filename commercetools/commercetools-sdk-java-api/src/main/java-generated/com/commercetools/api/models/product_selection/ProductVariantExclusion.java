@@ -31,6 +31,7 @@ public interface ProductVariantExclusion {
 
     /**
      *  <p>Non-empty array of SKUs representing Product Variants to be included in the Product Selection of type Individual Exclusion.</p>
+     * @return skus
      */
     @NotNull
     @JsonProperty("skus")

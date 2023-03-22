@@ -29,6 +29,7 @@ public class DiscountedLineItemPriceDraftBuilder implements Builder<DiscountedLi
 
     /**
      *
+     * @return Builder
      */
 
     public DiscountedLineItemPriceDraftBuilder value(
@@ -39,6 +40,8 @@ public class DiscountedLineItemPriceDraftBuilder implements Builder<DiscountedLi
 
     /**
      *
+     * @param value
+     * @return Builder
      */
 
     public DiscountedLineItemPriceDraftBuilder value(final com.commercetools.importapi.models.common.Money value) {
@@ -48,6 +51,8 @@ public class DiscountedLineItemPriceDraftBuilder implements Builder<DiscountedLi
 
     /**
      *
+     * @param includedDiscounts
+     * @return Builder
      */
 
     public DiscountedLineItemPriceDraftBuilder includedDiscounts(
@@ -58,6 +63,8 @@ public class DiscountedLineItemPriceDraftBuilder implements Builder<DiscountedLi
 
     /**
      *
+     * @param includedDiscounts
+     * @return Builder
      */
 
     public DiscountedLineItemPriceDraftBuilder includedDiscounts(
@@ -68,6 +75,8 @@ public class DiscountedLineItemPriceDraftBuilder implements Builder<DiscountedLi
 
     /**
      *
+     * @param includedDiscounts
+     * @return Builder
      */
 
     public DiscountedLineItemPriceDraftBuilder plusIncludedDiscounts(
@@ -81,6 +90,7 @@ public class DiscountedLineItemPriceDraftBuilder implements Builder<DiscountedLi
 
     /**
      *
+     * @return Builder
      */
 
     public DiscountedLineItemPriceDraftBuilder plusIncludedDiscounts(
@@ -95,6 +105,7 @@ public class DiscountedLineItemPriceDraftBuilder implements Builder<DiscountedLi
 
     /**
      *
+     * @return Builder
      */
 
     public DiscountedLineItemPriceDraftBuilder withIncludedDiscounts(

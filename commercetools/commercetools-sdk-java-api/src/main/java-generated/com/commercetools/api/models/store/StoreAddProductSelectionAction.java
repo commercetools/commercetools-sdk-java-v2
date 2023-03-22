@@ -35,6 +35,7 @@ public interface StoreAddProductSelectionAction extends StoreUpdateAction {
 
     /**
      *  <p>Product Selection to add to the Store either activated or deactivated.</p>
+     * @return productSelection
      */
     @NotNull
     @Valid
@@ -43,6 +44,7 @@ public interface StoreAddProductSelectionAction extends StoreUpdateAction {
 
     /**
      *  <p>Set to <code>true</code> to make all Products assigned to the referenced Product Selection available in the Store.</p>
+     * @return active
      */
 
     @JsonProperty("active")

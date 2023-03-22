@@ -29,6 +29,7 @@ public class ProductSelectionSettingBuilder implements Builder<ProductSelectionS
 
     /**
      *  <p>Reference to a ProductSelection.</p>
+     * @return Builder
      */
 
     public ProductSelectionSettingBuilder productSelection(
@@ -41,6 +42,8 @@ public class ProductSelectionSettingBuilder implements Builder<ProductSelectionS
 
     /**
      *  <p>Reference to a ProductSelection.</p>
+     * @param productSelection
+     * @return Builder
      */
 
     public ProductSelectionSettingBuilder productSelection(
@@ -51,6 +54,8 @@ public class ProductSelectionSettingBuilder implements Builder<ProductSelectionS
 
     /**
      *  <p>If <code>true</code>, all Products assigned to this Product Selection are part of the Store's assortment.</p>
+     * @param active
+     * @return Builder
      */
 
     public ProductSelectionSettingBuilder active(final Boolean active) {

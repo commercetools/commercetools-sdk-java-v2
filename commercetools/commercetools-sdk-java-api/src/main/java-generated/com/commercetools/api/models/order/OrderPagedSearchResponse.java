@@ -33,6 +33,7 @@ public interface OrderPagedSearchResponse {
 
     /**
      *  <p>Total number of results matching the query.</p>
+     * @return total
      */
     @NotNull
     @JsonProperty("total")
@@ -40,6 +41,7 @@ public interface OrderPagedSearchResponse {
 
     /**
      *  <p>Number of elements skipped.</p>
+     * @return offset
      */
 
     @JsonProperty("offset")
@@ -47,6 +49,7 @@ public interface OrderPagedSearchResponse {
 
     /**
      *  <p>Number of results requested.</p>
+     * @return limit
      */
 
     @JsonProperty("limit")
@@ -54,6 +57,7 @@ public interface OrderPagedSearchResponse {
 
     /**
      *  <p>Actual results.</p>
+     * @return hits
      */
     @NotNull
     @Valid

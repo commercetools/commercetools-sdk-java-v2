@@ -27,6 +27,8 @@ public class StoreSetLanguagesActionBuilder implements Builder<StoreSetLanguages
 
     /**
      *  <p>Value to set.</p>
+     * @param languages
+     * @return Builder
      */
 
     public StoreSetLanguagesActionBuilder languages(@Nullable final String... languages) {
@@ -36,6 +38,8 @@ public class StoreSetLanguagesActionBuilder implements Builder<StoreSetLanguages
 
     /**
      *  <p>Value to set.</p>
+     * @param languages
+     * @return Builder
      */
 
     public StoreSetLanguagesActionBuilder languages(@Nullable final java.util.List<String> languages) {
@@ -45,6 +49,8 @@ public class StoreSetLanguagesActionBuilder implements Builder<StoreSetLanguages
 
     /**
      *  <p>Value to set.</p>
+     * @param languages
+     * @return Builder
      */
 
     public StoreSetLanguagesActionBuilder plusLanguages(@Nullable final String... languages) {

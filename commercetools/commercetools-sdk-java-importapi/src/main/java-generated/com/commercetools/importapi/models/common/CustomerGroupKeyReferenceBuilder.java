@@ -25,6 +25,8 @@ public class CustomerGroupKeyReferenceBuilder implements Builder<CustomerGroupKe
 
     /**
      *
+     * @param key
+     * @return Builder
      */
 
     public CustomerGroupKeyReferenceBuilder key(final String key) {

@@ -32,6 +32,8 @@ public class SetShippingMethodChangeBuilder implements Builder<SetShippingMethod
 
     /**
      *  <p>Update action for <code>setShippingMethod</code></p>
+     * @param change
+     * @return Builder
      */
 
     public SetShippingMethodChangeBuilder change(final String change) {
@@ -41,6 +43,7 @@ public class SetShippingMethodChangeBuilder implements Builder<SetShippingMethod
 
     /**
      *
+     * @return Builder
      */
 
     public SetShippingMethodChangeBuilder nextValue(
@@ -53,6 +56,8 @@ public class SetShippingMethodChangeBuilder implements Builder<SetShippingMethod
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public SetShippingMethodChangeBuilder nextValue(
@@ -63,6 +68,7 @@ public class SetShippingMethodChangeBuilder implements Builder<SetShippingMethod
 
     /**
      *
+     * @return Builder
      */
 
     public SetShippingMethodChangeBuilder previousValue(
@@ -75,6 +81,8 @@ public class SetShippingMethodChangeBuilder implements Builder<SetShippingMethod
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public SetShippingMethodChangeBuilder previousValue(

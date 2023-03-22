@@ -36,6 +36,7 @@ public interface MyCartApplyDeltaToLineItemShippingDetailsTargetsAction extends 
 
     /**
      *  <p><code>id</code> of the LineItem to update.</p>
+     * @return lineItemId
      */
     @NotNull
     @JsonProperty("lineItemId")
@@ -43,6 +44,7 @@ public interface MyCartApplyDeltaToLineItemShippingDetailsTargetsAction extends 
 
     /**
      *  <p>Using positive or negative quantities increases or decreases the number of items shipped to an address.</p>
+     * @return targetsDelta
      */
     @NotNull
     @Valid

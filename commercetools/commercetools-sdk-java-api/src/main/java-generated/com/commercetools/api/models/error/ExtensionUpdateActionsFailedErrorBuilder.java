@@ -39,6 +39,8 @@ public class ExtensionUpdateActionsFailedErrorBuilder implements Builder<Extensi
 
     /**
      *  <p><code>"The extension returned update actions that could not be executed."</code></p>
+     * @param message
+     * @return Builder
      */
 
     public ExtensionUpdateActionsFailedErrorBuilder message(final String message) {
@@ -69,6 +71,7 @@ public class ExtensionUpdateActionsFailedErrorBuilder implements Builder<Extensi
 
     /**
      *  <p>User-defined localized description of the error.</p>
+     * @return Builder
      */
 
     public ExtensionUpdateActionsFailedErrorBuilder localizedMessage(
@@ -79,6 +82,8 @@ public class ExtensionUpdateActionsFailedErrorBuilder implements Builder<Extensi
 
     /**
      *  <p>User-defined localized description of the error.</p>
+     * @param localizedMessage
+     * @return Builder
      */
 
     public ExtensionUpdateActionsFailedErrorBuilder localizedMessage(
@@ -89,6 +94,8 @@ public class ExtensionUpdateActionsFailedErrorBuilder implements Builder<Extensi
 
     /**
      *  <p>Any information that should be returned to the API caller.</p>
+     * @param extensionExtraInfo
+     * @return Builder
      */
 
     public ExtensionUpdateActionsFailedErrorBuilder extensionExtraInfo(
@@ -99,6 +106,8 @@ public class ExtensionUpdateActionsFailedErrorBuilder implements Builder<Extensi
 
     /**
      *  <p>Additional errors related to the API Extension.</p>
+     * @param extensionErrors
+     * @return Builder
      */
 
     public ExtensionUpdateActionsFailedErrorBuilder extensionErrors(
@@ -109,6 +118,8 @@ public class ExtensionUpdateActionsFailedErrorBuilder implements Builder<Extensi
 
     /**
      *  <p>Additional errors related to the API Extension.</p>
+     * @param extensionErrors
+     * @return Builder
      */
 
     public ExtensionUpdateActionsFailedErrorBuilder extensionErrors(
@@ -119,6 +130,8 @@ public class ExtensionUpdateActionsFailedErrorBuilder implements Builder<Extensi
 
     /**
      *  <p>Additional errors related to the API Extension.</p>
+     * @param extensionErrors
+     * @return Builder
      */
 
     public ExtensionUpdateActionsFailedErrorBuilder plusExtensionErrors(
@@ -132,6 +145,7 @@ public class ExtensionUpdateActionsFailedErrorBuilder implements Builder<Extensi
 
     /**
      *  <p>Additional errors related to the API Extension.</p>
+     * @return Builder
      */
 
     public ExtensionUpdateActionsFailedErrorBuilder plusExtensionErrors(
@@ -145,6 +159,7 @@ public class ExtensionUpdateActionsFailedErrorBuilder implements Builder<Extensi
 
     /**
      *  <p>Additional errors related to the API Extension.</p>
+     * @return Builder
      */
 
     public ExtensionUpdateActionsFailedErrorBuilder withExtensionErrors(

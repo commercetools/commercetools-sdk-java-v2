@@ -39,6 +39,7 @@ public interface SetOrderTotalTaxChange extends Change {
 
     /**
      *
+     * @return type
      */
     @NotNull
     @JsonProperty("type")
@@ -46,6 +47,7 @@ public interface SetOrderTotalTaxChange extends Change {
 
     /**
      *  <p>Update action for <code>setOrderTotalTax</code></p>
+     * @return change
      */
     @NotNull
     @JsonProperty("change")
@@ -53,6 +55,7 @@ public interface SetOrderTotalTaxChange extends Change {
 
     /**
      *
+     * @return taxMode
      */
     @NotNull
     @JsonProperty("taxMode")
@@ -60,6 +63,7 @@ public interface SetOrderTotalTaxChange extends Change {
 
     /**
      *
+     * @return nextValue
      */
     @NotNull
     @Valid
@@ -68,6 +72,7 @@ public interface SetOrderTotalTaxChange extends Change {
 
     /**
      *
+     * @return previousValue
      */
     @NotNull
     @Valid

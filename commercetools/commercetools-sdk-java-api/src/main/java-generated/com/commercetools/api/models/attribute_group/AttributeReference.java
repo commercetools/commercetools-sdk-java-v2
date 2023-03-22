@@ -31,6 +31,7 @@ public interface AttributeReference extends com.commercetools.api.models.WithKey
 
     /**
      *  <p>Key of the attribute.</p>
+     * @return key
      */
     @NotNull
     @JsonProperty("key")

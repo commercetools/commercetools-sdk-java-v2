@@ -40,6 +40,7 @@ public interface LocalizableTextAttribute extends Attribute {
      *    "en": "dog food"
      *  }
      *  </code></pre>
+     * @return value
      */
     @NotNull
     @Valid

@@ -36,6 +36,7 @@ public interface DuplicateAttributeValueError extends ErrorObject {
 
     /**
      *
+     * @return code
      */
     @NotNull
     @JsonProperty("code")
@@ -43,6 +44,7 @@ public interface DuplicateAttributeValueError extends ErrorObject {
 
     /**
      *  <p><code>"Attribute can't have the same value in a different variant."</code></p>
+     * @return message
      */
     @NotNull
     @JsonProperty("message")
@@ -50,6 +52,7 @@ public interface DuplicateAttributeValueError extends ErrorObject {
 
     /**
      *  <p>Conflicting Attributes.</p>
+     * @return attribute
      */
     @NotNull
     @Valid

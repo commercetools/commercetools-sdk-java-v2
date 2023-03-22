@@ -34,6 +34,7 @@ public interface ProjectChangeShoppingListsConfigurationAction extends ProjectUp
 
     /**
      *  <p>Configuration for the Shopping Lists feature.</p>
+     * @return shoppingListsConfiguration
      */
     @NotNull
     @Valid

@@ -28,6 +28,7 @@ public class ShoppingListSetCustomerActionBuilder implements Builder<ShoppingLis
 
     /**
      *  <p>The Customer the ShoppingList should be associated to. If empty, any existing value will be removed.</p>
+     * @return Builder
      */
 
     public ShoppingListSetCustomerActionBuilder customer(
@@ -39,6 +40,8 @@ public class ShoppingListSetCustomerActionBuilder implements Builder<ShoppingLis
 
     /**
      *  <p>The Customer the ShoppingList should be associated to. If empty, any existing value will be removed.</p>
+     * @param customer
+     * @return Builder
      */
 
     public ShoppingListSetCustomerActionBuilder customer(

@@ -28,6 +28,8 @@ public class ShoppingListSetDeleteDaysAfterLastModificationActionBuilder
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
+     * @param deleteDaysAfterLastModification
+     * @return Builder
      */
 
     public ShoppingListSetDeleteDaysAfterLastModificationActionBuilder deleteDaysAfterLastModification(

@@ -31,6 +31,8 @@ public class ChangeDescriptionChangeBuilder implements Builder<ChangeDescription
 
     /**
      *  <p>Shape of the action for <code>changeDescription</code></p>
+     * @param change
+     * @return Builder
      */
 
     public ChangeDescriptionChangeBuilder change(final String change) {
@@ -40,6 +42,8 @@ public class ChangeDescriptionChangeBuilder implements Builder<ChangeDescription
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public ChangeDescriptionChangeBuilder previousValue(final String previousValue) {
@@ -49,6 +53,8 @@ public class ChangeDescriptionChangeBuilder implements Builder<ChangeDescription
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public ChangeDescriptionChangeBuilder nextValue(final String nextValue) {

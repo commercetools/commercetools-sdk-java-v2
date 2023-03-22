@@ -33,6 +33,7 @@ public interface ParcelMeasurementDraft extends io.vrap.rmf.base.client.Draft<Pa
 
     /**
      *
+     * @return parcelId
      */
     @NotNull
     @JsonProperty("parcelId")
@@ -40,6 +41,7 @@ public interface ParcelMeasurementDraft extends io.vrap.rmf.base.client.Draft<Pa
 
     /**
      *
+     * @return measurements
      */
     @Valid
     @JsonProperty("measurements")

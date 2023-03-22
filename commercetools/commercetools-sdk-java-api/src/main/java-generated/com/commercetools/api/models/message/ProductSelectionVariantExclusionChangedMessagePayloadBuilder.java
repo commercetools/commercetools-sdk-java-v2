@@ -33,6 +33,7 @@ public class ProductSelectionVariantExclusionChangedMessagePayloadBuilder
 
     /**
      *  <p>Product for which the Product Variant Exclusion changed.</p>
+     * @return Builder
      */
 
     public ProductSelectionVariantExclusionChangedMessagePayloadBuilder product(
@@ -43,6 +44,8 @@ public class ProductSelectionVariantExclusionChangedMessagePayloadBuilder
 
     /**
      *  <p>Product for which the Product Variant Exclusion changed.</p>
+     * @param product
+     * @return Builder
      */
 
     public ProductSelectionVariantExclusionChangedMessagePayloadBuilder product(
@@ -53,6 +56,7 @@ public class ProductSelectionVariantExclusionChangedMessagePayloadBuilder
 
     /**
      *  <p>Product Variant Exclusion before the Set Variant Exclusion update action.</p>
+     * @return Builder
      */
 
     public ProductSelectionVariantExclusionChangedMessagePayloadBuilder oldVariantExclusion(
@@ -65,6 +69,8 @@ public class ProductSelectionVariantExclusionChangedMessagePayloadBuilder
 
     /**
      *  <p>Product Variant Exclusion before the Set Variant Exclusion update action.</p>
+     * @param oldVariantExclusion
+     * @return Builder
      */
 
     public ProductSelectionVariantExclusionChangedMessagePayloadBuilder oldVariantExclusion(
@@ -75,6 +81,7 @@ public class ProductSelectionVariantExclusionChangedMessagePayloadBuilder
 
     /**
      *  <p>Product Variant Exclusion after the Set Variant Exclusion update action.</p>
+     * @return Builder
      */
 
     public ProductSelectionVariantExclusionChangedMessagePayloadBuilder newVariantExclusion(
@@ -87,6 +94,8 @@ public class ProductSelectionVariantExclusionChangedMessagePayloadBuilder
 
     /**
      *  <p>Product Variant Exclusion after the Set Variant Exclusion update action.</p>
+     * @param newVariantExclusion
+     * @return Builder
      */
 
     public ProductSelectionVariantExclusionChangedMessagePayloadBuilder newVariantExclusion(

@@ -26,6 +26,8 @@ public class ProductVariantSelectionIncludeAllExceptBuilder
 
     /**
      *  <p>Non-empty array of SKUs representing Product Variants to be excluded from the Product Selection.</p>
+     * @param skus
+     * @return Builder
      */
 
     public ProductVariantSelectionIncludeAllExceptBuilder skus(final String... skus) {
@@ -35,6 +37,8 @@ public class ProductVariantSelectionIncludeAllExceptBuilder
 
     /**
      *  <p>Non-empty array of SKUs representing Product Variants to be excluded from the Product Selection.</p>
+     * @param skus
+     * @return Builder
      */
 
     public ProductVariantSelectionIncludeAllExceptBuilder skus(final java.util.List<String> skus) {
@@ -44,6 +48,8 @@ public class ProductVariantSelectionIncludeAllExceptBuilder
 
     /**
      *  <p>Non-empty array of SKUs representing Product Variants to be excluded from the Product Selection.</p>
+     * @param skus
+     * @return Builder
      */
 
     public ProductVariantSelectionIncludeAllExceptBuilder plusSkus(final String... skus) {

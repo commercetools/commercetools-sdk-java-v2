@@ -31,6 +31,8 @@ public class StateReferenceBuilder implements Builder<StateReference> {
 
     /**
      *  <p>Unique identifier of the referenced State.</p>
+     * @param id
+     * @return Builder
      */
 
     public StateReferenceBuilder id(final String id) {
@@ -40,6 +42,7 @@ public class StateReferenceBuilder implements Builder<StateReference> {
 
     /**
      *  <p>Contains the representation of the expanded State. Only present in responses to requests with Reference Expansion for States.</p>
+     * @return Builder
      */
 
     public StateReferenceBuilder obj(
@@ -50,6 +53,8 @@ public class StateReferenceBuilder implements Builder<StateReference> {
 
     /**
      *  <p>Contains the representation of the expanded State. Only present in responses to requests with Reference Expansion for States.</p>
+     * @param obj
+     * @return Builder
      */
 
     public StateReferenceBuilder obj(@Nullable final com.commercetools.api.models.state.State obj) {

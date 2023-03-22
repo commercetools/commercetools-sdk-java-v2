@@ -33,6 +33,7 @@ public interface EnumField extends CustomField {
 
     /**
      *
+     * @return value
      */
     @NotNull
     @JsonProperty("value")

@@ -26,6 +26,8 @@ public class AttributeEnumTypeBuilder implements Builder<AttributeEnumType> {
 
     /**
      *  <p>Available values that can be assigned to Products.</p>
+     * @param values
+     * @return Builder
      */
 
     public AttributeEnumTypeBuilder values(
@@ -36,6 +38,8 @@ public class AttributeEnumTypeBuilder implements Builder<AttributeEnumType> {
 
     /**
      *  <p>Available values that can be assigned to Products.</p>
+     * @param values
+     * @return Builder
      */
 
     public AttributeEnumTypeBuilder values(
@@ -46,6 +50,8 @@ public class AttributeEnumTypeBuilder implements Builder<AttributeEnumType> {
 
     /**
      *  <p>Available values that can be assigned to Products.</p>
+     * @param values
+     * @return Builder
      */
 
     public AttributeEnumTypeBuilder plusValues(
@@ -59,6 +65,7 @@ public class AttributeEnumTypeBuilder implements Builder<AttributeEnumType> {
 
     /**
      *  <p>Available values that can be assigned to Products.</p>
+     * @return Builder
      */
 
     public AttributeEnumTypeBuilder plusValues(
@@ -73,6 +80,7 @@ public class AttributeEnumTypeBuilder implements Builder<AttributeEnumType> {
 
     /**
      *  <p>Available values that can be assigned to Products.</p>
+     * @return Builder
      */
 
     public AttributeEnumTypeBuilder withValues(

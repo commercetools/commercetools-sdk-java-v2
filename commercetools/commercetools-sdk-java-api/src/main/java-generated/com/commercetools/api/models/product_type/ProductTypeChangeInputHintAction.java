@@ -34,6 +34,7 @@ public interface ProductTypeChangeInputHintAction extends ProductTypeUpdateActio
 
     /**
      *  <p>Name of the AttributeDefinition to update.</p>
+     * @return attributeName
      */
     @NotNull
     @JsonProperty("attributeName")
@@ -41,6 +42,7 @@ public interface ProductTypeChangeInputHintAction extends ProductTypeUpdateActio
 
     /**
      *  <p><code>SingleLine</code> or <code>MultiLine</code></p>
+     * @return newValue
      */
     @NotNull
     @JsonProperty("newValue")

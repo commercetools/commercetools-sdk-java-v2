@@ -31,6 +31,7 @@ public class ProductVariantDeletedMessagePayloadBuilder implements Builder<Produ
 
     /**
      *  <p>Unique identifier of the Product Variant that was added.</p>
+     * @return Builder
      */
 
     public ProductVariantDeletedMessagePayloadBuilder variant(
@@ -41,6 +42,8 @@ public class ProductVariantDeletedMessagePayloadBuilder implements Builder<Produ
 
     /**
      *  <p>Unique identifier of the Product Variant that was added.</p>
+     * @param variant
+     * @return Builder
      */
 
     public ProductVariantDeletedMessagePayloadBuilder variant(
@@ -51,6 +54,8 @@ public class ProductVariantDeletedMessagePayloadBuilder implements Builder<Produ
 
     /**
      *  <p>List of image URLs that were removed with the Remove Product Variant update action.</p>
+     * @param removedImageUrls
+     * @return Builder
      */
 
     public ProductVariantDeletedMessagePayloadBuilder removedImageUrls(final String... removedImageUrls) {
@@ -60,6 +65,8 @@ public class ProductVariantDeletedMessagePayloadBuilder implements Builder<Produ
 
     /**
      *  <p>List of image URLs that were removed with the Remove Product Variant update action.</p>
+     * @param removedImageUrls
+     * @return Builder
      */
 
     public ProductVariantDeletedMessagePayloadBuilder removedImageUrls(final java.util.List<String> removedImageUrls) {
@@ -69,6 +76,8 @@ public class ProductVariantDeletedMessagePayloadBuilder implements Builder<Produ
 
     /**
      *  <p>List of image URLs that were removed with the Remove Product Variant update action.</p>
+     * @param removedImageUrls
+     * @return Builder
      */
 
     public ProductVariantDeletedMessagePayloadBuilder plusRemovedImageUrls(final String... removedImageUrls) {

@@ -31,6 +31,8 @@ public class ChangePaymentStateChangeBuilder implements Builder<ChangePaymentSta
 
     /**
      *  <p>Update action for <code>changePaymentState</code></p>
+     * @param change
+     * @return Builder
      */
 
     public ChangePaymentStateChangeBuilder change(final String change) {
@@ -40,6 +42,8 @@ public class ChangePaymentStateChangeBuilder implements Builder<ChangePaymentSta
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public ChangePaymentStateChangeBuilder nextValue(
@@ -50,6 +54,8 @@ public class ChangePaymentStateChangeBuilder implements Builder<ChangePaymentSta
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public ChangePaymentStateChangeBuilder previousValue(

@@ -33,6 +33,7 @@ public interface BusinessUnitChangeStatusAction extends BusinessUnitUpdateAction
 
     /**
      *  <p>New status to set.</p>
+     * @return status
      */
     @NotNull
     @JsonProperty("status")

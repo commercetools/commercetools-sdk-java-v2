@@ -46,6 +46,8 @@ public class InventoryEntryDraftBuilder implements Builder<InventoryEntryDraft> 
 
     /**
      *  <p>ProductVariant <code>sku</code> of the InventoryEntry.</p>
+     * @param sku
+     * @return Builder
      */
 
     public InventoryEntryDraftBuilder sku(final String sku) {
@@ -55,6 +57,8 @@ public class InventoryEntryDraftBuilder implements Builder<InventoryEntryDraft> 
 
     /**
      *  <p>User-defined unique identifier for the InventoryEntry.</p>
+     * @param key
+     * @return Builder
      */
 
     public InventoryEntryDraftBuilder key(@Nullable final String key) {
@@ -64,6 +68,7 @@ public class InventoryEntryDraftBuilder implements Builder<InventoryEntryDraft> 
 
     /**
      *  <p>Channel that supplies this InventoryEntry.</p>
+     * @return Builder
      */
 
     public InventoryEntryDraftBuilder supplyChannel(
@@ -75,6 +80,8 @@ public class InventoryEntryDraftBuilder implements Builder<InventoryEntryDraft> 
 
     /**
      *  <p>Channel that supplies this InventoryEntry.</p>
+     * @param supplyChannel
+     * @return Builder
      */
 
     public InventoryEntryDraftBuilder supplyChannel(
@@ -85,6 +92,8 @@ public class InventoryEntryDraftBuilder implements Builder<InventoryEntryDraft> 
 
     /**
      *  <p>Overall amount of stock.</p>
+     * @param quantityOnStock
+     * @return Builder
      */
 
     public InventoryEntryDraftBuilder quantityOnStock(final Long quantityOnStock) {
@@ -94,6 +103,8 @@ public class InventoryEntryDraftBuilder implements Builder<InventoryEntryDraft> 
 
     /**
      *  <p>How often the InventoryEntry is restocked (in days).</p>
+     * @param restockableInDays
+     * @return Builder
      */
 
     public InventoryEntryDraftBuilder restockableInDays(@Nullable final Long restockableInDays) {
@@ -103,6 +114,8 @@ public class InventoryEntryDraftBuilder implements Builder<InventoryEntryDraft> 
 
     /**
      *  <p>Date and time of the next restock.</p>
+     * @param expectedDelivery
+     * @return Builder
      */
 
     public InventoryEntryDraftBuilder expectedDelivery(@Nullable final java.time.ZonedDateTime expectedDelivery) {
@@ -112,6 +125,7 @@ public class InventoryEntryDraftBuilder implements Builder<InventoryEntryDraft> 
 
     /**
      *  <p>Custom Fields of the InventoryEntry.</p>
+     * @return Builder
      */
 
     public InventoryEntryDraftBuilder custom(
@@ -122,6 +136,8 @@ public class InventoryEntryDraftBuilder implements Builder<InventoryEntryDraft> 
 
     /**
      *  <p>Custom Fields of the InventoryEntry.</p>
+     * @param custom
+     * @return Builder
      */
 
     public InventoryEntryDraftBuilder custom(

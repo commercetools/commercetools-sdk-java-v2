@@ -27,6 +27,8 @@ public class QuoteRequestQuoteRenegotiationActionBuilder implements Builder<Quot
 
     /**
      *  <p>Message from the Buyer regarding the Quote renegotiation request.</p>
+     * @param buyerComment
+     * @return Builder
      */
 
     public QuoteRequestQuoteRenegotiationActionBuilder buyerComment(@Nullable final String buyerComment) {

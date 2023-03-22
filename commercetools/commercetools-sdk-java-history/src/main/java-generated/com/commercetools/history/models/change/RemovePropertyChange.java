@@ -34,6 +34,7 @@ public interface RemovePropertyChange extends Change {
 
     /**
      *
+     * @return type
      */
     @NotNull
     @JsonProperty("type")
@@ -41,6 +42,7 @@ public interface RemovePropertyChange extends Change {
 
     /**
      *  <p>Update action for <code>removeProperty</code> on custom objects</p>
+     * @return change
      */
     @NotNull
     @JsonProperty("change")
@@ -48,6 +50,7 @@ public interface RemovePropertyChange extends Change {
 
     /**
      *  <p>Value path to the property that was removed</p>
+     * @return path
      */
     @NotNull
     @JsonProperty("path")
@@ -55,6 +58,7 @@ public interface RemovePropertyChange extends Change {
 
     /**
      *
+     * @return previousValue
      */
     @NotNull
     @JsonProperty("previousValue")

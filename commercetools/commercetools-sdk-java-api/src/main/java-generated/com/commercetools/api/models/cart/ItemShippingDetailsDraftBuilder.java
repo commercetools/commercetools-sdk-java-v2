@@ -27,6 +27,8 @@ public class ItemShippingDetailsDraftBuilder implements Builder<ItemShippingDeta
     /**
      *  <p>Holds information on the quantity of Line Items or Custom Line Items and the address it is shipped.</p>
      *  <p>If multiple shipping addresses are present for a Line Item or Custom Line Item, sub-quantities must be specified.</p>
+     * @param targets
+     * @return Builder
      */
 
     public ItemShippingDetailsDraftBuilder targets(
@@ -38,6 +40,8 @@ public class ItemShippingDetailsDraftBuilder implements Builder<ItemShippingDeta
     /**
      *  <p>Holds information on the quantity of Line Items or Custom Line Items and the address it is shipped.</p>
      *  <p>If multiple shipping addresses are present for a Line Item or Custom Line Item, sub-quantities must be specified.</p>
+     * @param targets
+     * @return Builder
      */
 
     public ItemShippingDetailsDraftBuilder targets(
@@ -49,6 +53,8 @@ public class ItemShippingDetailsDraftBuilder implements Builder<ItemShippingDeta
     /**
      *  <p>Holds information on the quantity of Line Items or Custom Line Items and the address it is shipped.</p>
      *  <p>If multiple shipping addresses are present for a Line Item or Custom Line Item, sub-quantities must be specified.</p>
+     * @param targets
+     * @return Builder
      */
 
     public ItemShippingDetailsDraftBuilder plusTargets(
@@ -63,6 +69,7 @@ public class ItemShippingDetailsDraftBuilder implements Builder<ItemShippingDeta
     /**
      *  <p>Holds information on the quantity of Line Items or Custom Line Items and the address it is shipped.</p>
      *  <p>If multiple shipping addresses are present for a Line Item or Custom Line Item, sub-quantities must be specified.</p>
+     * @return Builder
      */
 
     public ItemShippingDetailsDraftBuilder plusTargets(
@@ -77,6 +84,7 @@ public class ItemShippingDetailsDraftBuilder implements Builder<ItemShippingDeta
     /**
      *  <p>Holds information on the quantity of Line Items or Custom Line Items and the address it is shipped.</p>
      *  <p>If multiple shipping addresses are present for a Line Item or Custom Line Item, sub-quantities must be specified.</p>
+     * @return Builder
      */
 
     public ItemShippingDetailsDraftBuilder withTargets(

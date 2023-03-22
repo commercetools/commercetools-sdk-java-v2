@@ -29,6 +29,8 @@ public class DuplicateVariantValuesErrorBuilder implements Builder<DuplicateVari
 
     /**
      *
+     * @param message
+     * @return Builder
      */
 
     public DuplicateVariantValuesErrorBuilder message(final String message) {
@@ -38,6 +40,7 @@ public class DuplicateVariantValuesErrorBuilder implements Builder<DuplicateVari
 
     /**
      *  <p>The offending variant values.</p>
+     * @return Builder
      */
 
     public DuplicateVariantValuesErrorBuilder variantValues(
@@ -48,6 +51,8 @@ public class DuplicateVariantValuesErrorBuilder implements Builder<DuplicateVari
 
     /**
      *  <p>The offending variant values.</p>
+     * @param variantValues
+     * @return Builder
      */
 
     public DuplicateVariantValuesErrorBuilder variantValues(

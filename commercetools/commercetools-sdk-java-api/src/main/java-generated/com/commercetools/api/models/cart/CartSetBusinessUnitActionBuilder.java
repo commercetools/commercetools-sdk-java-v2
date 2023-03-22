@@ -26,6 +26,7 @@ public class CartSetBusinessUnitActionBuilder implements Builder<CartSetBusiness
 
     /**
      *  <p>New Business Unit to assign to the Cart, which must have access to the Store that is set on the Cart.</p>
+     * @return Builder
      */
 
     public CartSetBusinessUnitActionBuilder businessUnit(
@@ -38,6 +39,8 @@ public class CartSetBusinessUnitActionBuilder implements Builder<CartSetBusiness
 
     /**
      *  <p>New Business Unit to assign to the Cart, which must have access to the Store that is set on the Cart.</p>
+     * @param businessUnit
+     * @return Builder
      */
 
     public CartSetBusinessUnitActionBuilder businessUnit(

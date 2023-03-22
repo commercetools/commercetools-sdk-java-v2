@@ -27,6 +27,8 @@ public class LanguageUsedInStoresErrorBuilder implements Builder<LanguageUsedInS
 
     /**
      *  <p><code>"Language(s) in use by a store cannot be deleted. Remove them in all the stores of this project first."</code></p>
+     * @param message
+     * @return Builder
      */
 
     public LanguageUsedInStoresErrorBuilder message(final String message) {

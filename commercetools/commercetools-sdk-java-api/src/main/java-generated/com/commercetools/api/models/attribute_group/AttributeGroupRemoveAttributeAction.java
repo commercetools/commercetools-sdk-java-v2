@@ -34,6 +34,7 @@ public interface AttributeGroupRemoveAttributeAction extends AttributeGroupUpdat
 
     /**
      *  <p>Value to remove.</p>
+     * @return attribute
      */
     @NotNull
     @Valid

@@ -32,6 +32,8 @@ public class OrderEditAppliedBuilder implements Builder<OrderEditApplied> {
 
     /**
      *
+     * @param appliedAt
+     * @return Builder
      */
 
     public OrderEditAppliedBuilder appliedAt(final java.time.ZonedDateTime appliedAt) {
@@ -41,6 +43,7 @@ public class OrderEditAppliedBuilder implements Builder<OrderEditApplied> {
 
     /**
      *
+     * @return Builder
      */
 
     public OrderEditAppliedBuilder excerptBeforeEdit(
@@ -52,6 +55,8 @@ public class OrderEditAppliedBuilder implements Builder<OrderEditApplied> {
 
     /**
      *
+     * @param excerptBeforeEdit
+     * @return Builder
      */
 
     public OrderEditAppliedBuilder excerptBeforeEdit(
@@ -62,6 +67,7 @@ public class OrderEditAppliedBuilder implements Builder<OrderEditApplied> {
 
     /**
      *
+     * @return Builder
      */
 
     public OrderEditAppliedBuilder excerptAfterEdit(
@@ -72,6 +78,8 @@ public class OrderEditAppliedBuilder implements Builder<OrderEditApplied> {
 
     /**
      *
+     * @param excerptAfterEdit
+     * @return Builder
      */
 
     public OrderEditAppliedBuilder excerptAfterEdit(

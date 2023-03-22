@@ -52,6 +52,7 @@ public class OrderFieldBuilder implements Builder<OrderField> {
 
     /**
      *  <p>Maps to <code>Order.returnInfo</code></p>
+     * @return Builder
      */
 
     public OrderFieldBuilder addReturnInfo(
@@ -63,6 +64,8 @@ public class OrderFieldBuilder implements Builder<OrderField> {
 
     /**
      *  <p>Maps to <code>Order.returnInfo</code></p>
+     * @param addReturnInfo
+     * @return Builder
      */
 
     public OrderFieldBuilder addReturnInfo(
@@ -73,6 +76,7 @@ public class OrderFieldBuilder implements Builder<OrderField> {
 
     /**
      *  <p>Maps to <code>Order.delivery</code></p>
+     * @return Builder
      */
 
     public OrderFieldBuilder addParcelToDelivery(
@@ -85,6 +89,8 @@ public class OrderFieldBuilder implements Builder<OrderField> {
 
     /**
      *  <p>Maps to <code>Order.delivery</code></p>
+     * @param addParcelToDelivery
+     * @return Builder
      */
 
     public OrderFieldBuilder addParcelToDelivery(
@@ -95,6 +101,8 @@ public class OrderFieldBuilder implements Builder<OrderField> {
 
     /**
      *  <p>Maps to <code>Order.delivery</code></p>
+     * @param addDeliveries
+     * @return Builder
      */
 
     public OrderFieldBuilder addDeliveries(
@@ -105,6 +113,8 @@ public class OrderFieldBuilder implements Builder<OrderField> {
 
     /**
      *  <p>Maps to <code>Order.delivery</code></p>
+     * @param addDeliveries
+     * @return Builder
      */
 
     public OrderFieldBuilder addDeliveries(
@@ -115,6 +125,8 @@ public class OrderFieldBuilder implements Builder<OrderField> {
 
     /**
      *  <p>Maps to <code>Order.delivery</code></p>
+     * @param addDeliveries
+     * @return Builder
      */
 
     public OrderFieldBuilder plusAddDeliveries(
@@ -128,6 +140,7 @@ public class OrderFieldBuilder implements Builder<OrderField> {
 
     /**
      *  <p>Maps to <code>Order.delivery</code></p>
+     * @return Builder
      */
 
     public OrderFieldBuilder plusAddDeliveries(
@@ -142,6 +155,7 @@ public class OrderFieldBuilder implements Builder<OrderField> {
 
     /**
      *  <p>Maps to <code>Order.delivery</code></p>
+     * @return Builder
      */
 
     public OrderFieldBuilder withAddDeliveries(
@@ -154,6 +168,7 @@ public class OrderFieldBuilder implements Builder<OrderField> {
 
     /**
      *  <p>Maps to <code>Order.removeDelivery</code></p>
+     * @return Builder
      */
 
     public OrderFieldBuilder removeDelivery(
@@ -166,6 +181,8 @@ public class OrderFieldBuilder implements Builder<OrderField> {
 
     /**
      *  <p>Maps to <code>Order.removeDelivery</code></p>
+     * @param removeDelivery
+     * @return Builder
      */
 
     public OrderFieldBuilder removeDelivery(
@@ -176,6 +193,7 @@ public class OrderFieldBuilder implements Builder<OrderField> {
 
     /**
      *  <p>Maps to <code>Order.removeParcelFromDelivery</code></p>
+     * @return Builder
      */
 
     public OrderFieldBuilder removeParcelFromDelivery(
@@ -188,6 +206,8 @@ public class OrderFieldBuilder implements Builder<OrderField> {
 
     /**
      *  <p>Maps to <code>Order.removeParcelFromDelivery</code></p>
+     * @param removeParcelFromDelivery
+     * @return Builder
      */
 
     public OrderFieldBuilder removeParcelFromDelivery(
@@ -198,6 +218,7 @@ public class OrderFieldBuilder implements Builder<OrderField> {
 
     /**
      *  <p>Maps to <code>Order.addressDraft</code></p>
+     * @return Builder
      */
 
     public OrderFieldBuilder setDeliveryAddress(
@@ -210,6 +231,8 @@ public class OrderFieldBuilder implements Builder<OrderField> {
 
     /**
      *  <p>Maps to <code>Order.addressDraft</code></p>
+     * @param setDeliveryAddress
+     * @return Builder
      */
 
     public OrderFieldBuilder setDeliveryAddress(
@@ -220,6 +243,7 @@ public class OrderFieldBuilder implements Builder<OrderField> {
 
     /**
      *  <p>Maps to <code>Order.parcelMeasurements</code></p>
+     * @return Builder
      */
 
     public OrderFieldBuilder setParcelMeasurements(
@@ -232,6 +256,8 @@ public class OrderFieldBuilder implements Builder<OrderField> {
 
     /**
      *  <p>Maps to <code>Order.parcelMeasurements</code></p>
+     * @param setParcelMeasurements
+     * @return Builder
      */
 
     public OrderFieldBuilder setParcelMeasurements(
@@ -242,6 +268,7 @@ public class OrderFieldBuilder implements Builder<OrderField> {
 
     /**
      *  <p>Maps to <code>Order.parcelTrackingData</code></p>
+     * @return Builder
      */
 
     public OrderFieldBuilder setParcelTrackingData(
@@ -254,6 +281,8 @@ public class OrderFieldBuilder implements Builder<OrderField> {
 
     /**
      *  <p>Maps to <code>Order.parcelTrackingData</code></p>
+     * @param setParcelTrackingData
+     * @return Builder
      */
 
     public OrderFieldBuilder setParcelTrackingData(
@@ -264,6 +293,8 @@ public class OrderFieldBuilder implements Builder<OrderField> {
 
     /**
      *  <p>Maps to <code>Order.parcelItems</code></p>
+     * @param setParcelItems
+     * @return Builder
      */
 
     public OrderFieldBuilder setParcelItems(
@@ -274,6 +305,8 @@ public class OrderFieldBuilder implements Builder<OrderField> {
 
     /**
      *  <p>Maps to <code>Order.parcelItems</code></p>
+     * @param setParcelItems
+     * @return Builder
      */
 
     public OrderFieldBuilder setParcelItems(
@@ -284,6 +317,8 @@ public class OrderFieldBuilder implements Builder<OrderField> {
 
     /**
      *  <p>Maps to <code>Order.parcelItems</code></p>
+     * @param setParcelItems
+     * @return Builder
      */
 
     public OrderFieldBuilder plusSetParcelItems(
@@ -297,6 +332,7 @@ public class OrderFieldBuilder implements Builder<OrderField> {
 
     /**
      *  <p>Maps to <code>Order.parcelItems</code></p>
+     * @return Builder
      */
 
     public OrderFieldBuilder plusSetParcelItems(
@@ -311,6 +347,7 @@ public class OrderFieldBuilder implements Builder<OrderField> {
 
     /**
      *  <p>Maps to <code>Order.parcelItems</code></p>
+     * @return Builder
      */
 
     public OrderFieldBuilder withSetParcelItems(

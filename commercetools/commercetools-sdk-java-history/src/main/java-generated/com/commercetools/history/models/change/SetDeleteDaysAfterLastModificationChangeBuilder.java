@@ -32,6 +32,8 @@ public class SetDeleteDaysAfterLastModificationChangeBuilder
 
     /**
      *  <p>Shape of the action for <code>setDeleteDaysAfterLastModification</code></p>
+     * @param change
+     * @return Builder
      */
 
     public SetDeleteDaysAfterLastModificationChangeBuilder change(final String change) {
@@ -41,6 +43,8 @@ public class SetDeleteDaysAfterLastModificationChangeBuilder
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public SetDeleteDaysAfterLastModificationChangeBuilder previousValue(final Integer previousValue) {
@@ -50,6 +54,8 @@ public class SetDeleteDaysAfterLastModificationChangeBuilder
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public SetDeleteDaysAfterLastModificationChangeBuilder nextValue(final Integer nextValue) {

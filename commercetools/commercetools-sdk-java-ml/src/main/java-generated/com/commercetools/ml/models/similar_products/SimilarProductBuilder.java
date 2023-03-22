@@ -34,6 +34,7 @@ public class SimilarProductBuilder implements Builder<SimilarProduct> {
 
     /**
      *  <p>Reference to Product</p>
+     * @return Builder
      */
 
     public SimilarProductBuilder product(
@@ -44,6 +45,8 @@ public class SimilarProductBuilder implements Builder<SimilarProduct> {
 
     /**
      *  <p>Reference to Product</p>
+     * @param product
+     * @return Builder
      */
 
     public SimilarProductBuilder product(@Nullable final com.commercetools.ml.models.common.ProductReference product) {
@@ -53,6 +56,8 @@ public class SimilarProductBuilder implements Builder<SimilarProduct> {
 
     /**
      *  <p>ID of the ProductVariant that was compared.</p>
+     * @param variantId
+     * @return Builder
      */
 
     public SimilarProductBuilder variantId(@Nullable final Long variantId) {
@@ -62,6 +67,7 @@ public class SimilarProductBuilder implements Builder<SimilarProduct> {
 
     /**
      *  <p>Supplementary information about the data used for similarity estimation. This information helps you understand the estimated confidence score, but it should not be used to identify a product.</p>
+     * @return Builder
      */
 
     public SimilarProductBuilder meta(
@@ -72,6 +78,8 @@ public class SimilarProductBuilder implements Builder<SimilarProduct> {
 
     /**
      *  <p>Supplementary information about the data used for similarity estimation. This information helps you understand the estimated confidence score, but it should not be used to identify a product.</p>
+     * @param meta
+     * @return Builder
      */
 
     public SimilarProductBuilder meta(

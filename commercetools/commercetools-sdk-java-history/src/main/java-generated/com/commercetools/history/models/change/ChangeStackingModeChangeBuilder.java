@@ -31,6 +31,8 @@ public class ChangeStackingModeChangeBuilder implements Builder<ChangeStackingMo
 
     /**
      *  <p>Update action for <code>changeStackingMode</code> on cart discounts</p>
+     * @param change
+     * @return Builder
      */
 
     public ChangeStackingModeChangeBuilder change(final String change) {
@@ -40,6 +42,8 @@ public class ChangeStackingModeChangeBuilder implements Builder<ChangeStackingMo
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public ChangeStackingModeChangeBuilder nextValue(
@@ -50,6 +54,8 @@ public class ChangeStackingModeChangeBuilder implements Builder<ChangeStackingMo
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public ChangeStackingModeChangeBuilder previousValue(

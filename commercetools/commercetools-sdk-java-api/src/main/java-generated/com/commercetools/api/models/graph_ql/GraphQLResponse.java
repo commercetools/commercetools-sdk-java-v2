@@ -30,6 +30,7 @@ public interface GraphQLResponse {
 
     /**
      *
+     * @return data
      */
 
     @JsonProperty("data")
@@ -37,6 +38,7 @@ public interface GraphQLResponse {
 
     /**
      *
+     * @return errors
      */
     @Valid
     @JsonProperty("errors")

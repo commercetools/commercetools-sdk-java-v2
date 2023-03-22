@@ -31,6 +31,8 @@ public class TransactionChangeValueBuilder implements Builder<TransactionChangeV
 
     /**
      *
+     * @param id
+     * @return Builder
      */
 
     public TransactionChangeValueBuilder id(final String id) {
@@ -40,6 +42,8 @@ public class TransactionChangeValueBuilder implements Builder<TransactionChangeV
 
     /**
      *
+     * @param interactionId
+     * @return Builder
      */
 
     public TransactionChangeValueBuilder interactionId(final String interactionId) {
@@ -49,6 +53,8 @@ public class TransactionChangeValueBuilder implements Builder<TransactionChangeV
 
     /**
      *
+     * @param timestamp
+     * @return Builder
      */
 
     public TransactionChangeValueBuilder timestamp(final String timestamp) {

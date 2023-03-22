@@ -28,6 +28,7 @@ public interface TrackingData {
 
     /**
      *  <p>The ID to track one parcel.</p>
+     * @return trackingId
      */
 
     @JsonProperty("trackingId")
@@ -35,6 +36,7 @@ public interface TrackingData {
 
     /**
      *  <p>The carrier that delivers the parcel.</p>
+     * @return carrier
      */
 
     @JsonProperty("carrier")
@@ -42,6 +44,7 @@ public interface TrackingData {
 
     /**
      *
+     * @return provider
      */
 
     @JsonProperty("provider")
@@ -49,6 +52,7 @@ public interface TrackingData {
 
     /**
      *
+     * @return providerTransaction
      */
 
     @JsonProperty("providerTransaction")
@@ -56,6 +60,7 @@ public interface TrackingData {
 
     /**
      *  <p>Flag to distinguish if the parcel is on the way to the customer (false) or on the way back (true).</p>
+     * @return isReturn
      */
 
     @JsonProperty("isReturn")

@@ -32,6 +32,7 @@ public interface Hit {
 
     /**
      *  <p>Unique identifier of the Order.</p>
+     * @return id
      */
     @NotNull
     @JsonProperty("id")
@@ -39,6 +40,7 @@ public interface Hit {
 
     /**
      *  <p>Current version of the Order.</p>
+     * @return version
      */
     @NotNull
     @JsonProperty("version")
@@ -46,6 +48,7 @@ public interface Hit {
 
     /**
      *  <p>The higher the value is, the more relevant the hit is for the search request.</p>
+     * @return relevance
      */
 
     @JsonProperty("relevance")

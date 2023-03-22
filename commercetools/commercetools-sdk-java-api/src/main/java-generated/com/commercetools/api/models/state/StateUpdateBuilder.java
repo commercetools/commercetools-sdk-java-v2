@@ -29,6 +29,8 @@ public class StateUpdateBuilder implements Builder<StateUpdate> {
 
     /**
      *  <p>Expected version of the State on which the changes should be applied. If the expected version does not match the actual version, a ConcurrentModification error is returned.</p>
+     * @param version
+     * @return Builder
      */
 
     public StateUpdateBuilder version(final Long version) {
@@ -38,6 +40,8 @@ public class StateUpdateBuilder implements Builder<StateUpdate> {
 
     /**
      *  <p>Update actions to be performed on the State.</p>
+     * @param actions
+     * @return Builder
      */
 
     public StateUpdateBuilder actions(final com.commercetools.api.models.state.StateUpdateAction... actions) {
@@ -47,6 +51,8 @@ public class StateUpdateBuilder implements Builder<StateUpdate> {
 
     /**
      *  <p>Update actions to be performed on the State.</p>
+     * @param actions
+     * @return Builder
      */
 
     public StateUpdateBuilder actions(
@@ -57,6 +63,8 @@ public class StateUpdateBuilder implements Builder<StateUpdate> {
 
     /**
      *  <p>Update actions to be performed on the State.</p>
+     * @param actions
+     * @return Builder
      */
 
     public StateUpdateBuilder plusActions(final com.commercetools.api.models.state.StateUpdateAction... actions) {
@@ -69,6 +77,7 @@ public class StateUpdateBuilder implements Builder<StateUpdate> {
 
     /**
      *  <p>Update actions to be performed on the State.</p>
+     * @return Builder
      */
 
     public StateUpdateBuilder plusActions(
@@ -82,6 +91,7 @@ public class StateUpdateBuilder implements Builder<StateUpdate> {
 
     /**
      *  <p>Update actions to be performed on the State.</p>
+     * @return Builder
      */
 
     public StateUpdateBuilder withActions(

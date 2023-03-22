@@ -31,6 +31,7 @@ public class OrderShippingInfoSetMessagePayloadBuilder implements Builder<OrderS
 
     /**
      *  <p>ShippingInfo after the Set Shipping Method or Set Custom Shipping Method update action.</p>
+     * @return Builder
      */
 
     public OrderShippingInfoSetMessagePayloadBuilder shippingInfo(
@@ -41,6 +42,8 @@ public class OrderShippingInfoSetMessagePayloadBuilder implements Builder<OrderS
 
     /**
      *  <p>ShippingInfo after the Set Shipping Method or Set Custom Shipping Method update action.</p>
+     * @param shippingInfo
+     * @return Builder
      */
 
     public OrderShippingInfoSetMessagePayloadBuilder shippingInfo(
@@ -51,6 +54,7 @@ public class OrderShippingInfoSetMessagePayloadBuilder implements Builder<OrderS
 
     /**
      *  <p>ShippingInfo before the Set Shipping Method or Set Custom Shipping Method update action.</p>
+     * @return Builder
      */
 
     public OrderShippingInfoSetMessagePayloadBuilder oldShippingInfo(
@@ -61,6 +65,8 @@ public class OrderShippingInfoSetMessagePayloadBuilder implements Builder<OrderS
 
     /**
      *  <p>ShippingInfo before the Set Shipping Method or Set Custom Shipping Method update action.</p>
+     * @param oldShippingInfo
+     * @return Builder
      */
 
     public OrderShippingInfoSetMessagePayloadBuilder oldShippingInfo(

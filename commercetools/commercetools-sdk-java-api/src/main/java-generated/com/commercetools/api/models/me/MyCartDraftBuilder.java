@@ -73,6 +73,8 @@ public class MyCartDraftBuilder implements Builder<MyCartDraft> {
 
     /**
      *  <p>Currency the Cart uses.</p>
+     * @param currency
+     * @return Builder
      */
 
     public MyCartDraftBuilder currency(final String currency) {
@@ -82,6 +84,8 @@ public class MyCartDraftBuilder implements Builder<MyCartDraft> {
 
     /**
      *  <p>Email address of the Customer the Cart belongs to.</p>
+     * @param customerEmail
+     * @return Builder
      */
 
     public MyCartDraftBuilder customerEmail(@Nullable final String customerEmail) {
@@ -91,6 +95,7 @@ public class MyCartDraftBuilder implements Builder<MyCartDraft> {
 
     /**
      *  <p>ResourceIdentifier to the Business Unit the Cart should belong to.</p>
+     * @return Builder
      */
 
     public MyCartDraftBuilder businessUnit(
@@ -103,6 +108,8 @@ public class MyCartDraftBuilder implements Builder<MyCartDraft> {
 
     /**
      *  <p>ResourceIdentifier to the Business Unit the Cart should belong to.</p>
+     * @param businessUnit
+     * @return Builder
      */
 
     public MyCartDraftBuilder businessUnit(
@@ -113,6 +120,7 @@ public class MyCartDraftBuilder implements Builder<MyCartDraft> {
 
     /**
      *  <p>ResourceIdentifier to the Store the Cart should belong to. Once set, it cannot be updated.</p>
+     * @return Builder
      */
 
     public MyCartDraftBuilder store(
@@ -123,6 +131,8 @@ public class MyCartDraftBuilder implements Builder<MyCartDraft> {
 
     /**
      *  <p>ResourceIdentifier to the Store the Cart should belong to. Once set, it cannot be updated.</p>
+     * @param store
+     * @return Builder
      */
 
     public MyCartDraftBuilder store(@Nullable final com.commercetools.api.models.store.StoreResourceIdentifier store) {
@@ -132,6 +142,8 @@ public class MyCartDraftBuilder implements Builder<MyCartDraft> {
 
     /**
      *  <p>Line Items to add to the Cart.</p>
+     * @param lineItems
+     * @return Builder
      */
 
     public MyCartDraftBuilder lineItems(@Nullable final com.commercetools.api.models.me.MyLineItemDraft... lineItems) {
@@ -141,6 +153,8 @@ public class MyCartDraftBuilder implements Builder<MyCartDraft> {
 
     /**
      *  <p>Line Items to add to the Cart.</p>
+     * @param lineItems
+     * @return Builder
      */
 
     public MyCartDraftBuilder lineItems(
@@ -151,6 +165,8 @@ public class MyCartDraftBuilder implements Builder<MyCartDraft> {
 
     /**
      *  <p>Line Items to add to the Cart.</p>
+     * @param lineItems
+     * @return Builder
      */
 
     public MyCartDraftBuilder plusLineItems(
@@ -164,6 +180,7 @@ public class MyCartDraftBuilder implements Builder<MyCartDraft> {
 
     /**
      *  <p>Line Items to add to the Cart.</p>
+     * @return Builder
      */
 
     public MyCartDraftBuilder plusLineItems(
@@ -177,6 +194,7 @@ public class MyCartDraftBuilder implements Builder<MyCartDraft> {
 
     /**
      *  <p>Line Items to add to the Cart.</p>
+     * @return Builder
      */
 
     public MyCartDraftBuilder withLineItems(
@@ -188,6 +206,8 @@ public class MyCartDraftBuilder implements Builder<MyCartDraft> {
 
     /**
      *  <p>Determines how Tax Rates are set. The <code>Disabled</code> TaxMode <strong>cannot</strong> be set.</p>
+     * @param taxMode
+     * @return Builder
      */
 
     public MyCartDraftBuilder taxMode(@Nullable final com.commercetools.api.models.cart.TaxMode taxMode) {
@@ -197,6 +217,8 @@ public class MyCartDraftBuilder implements Builder<MyCartDraft> {
 
     /**
      *  <p>Determines how stock quantities are tracked for Line Items in the Cart.</p>
+     * @param inventoryMode
+     * @return Builder
      */
 
     public MyCartDraftBuilder inventoryMode(
@@ -207,6 +229,7 @@ public class MyCartDraftBuilder implements Builder<MyCartDraft> {
 
     /**
      *  <p>Billing address associated with the Cart.</p>
+     * @return Builder
      */
 
     public MyCartDraftBuilder billingAddress(
@@ -217,6 +240,8 @@ public class MyCartDraftBuilder implements Builder<MyCartDraft> {
 
     /**
      *  <p>Billing address associated with the Cart.</p>
+     * @param billingAddress
+     * @return Builder
      */
 
     public MyCartDraftBuilder billingAddress(
@@ -227,6 +252,7 @@ public class MyCartDraftBuilder implements Builder<MyCartDraft> {
 
     /**
      *  <p>Shipping address associated with the Cart. Determines eligible ShippingMethod rates and Tax Rates of Line Items.</p>
+     * @return Builder
      */
 
     public MyCartDraftBuilder shippingAddress(
@@ -237,6 +263,8 @@ public class MyCartDraftBuilder implements Builder<MyCartDraft> {
 
     /**
      *  <p>Shipping address associated with the Cart. Determines eligible ShippingMethod rates and Tax Rates of Line Items.</p>
+     * @param shippingAddress
+     * @return Builder
      */
 
     public MyCartDraftBuilder shippingAddress(
@@ -247,6 +275,7 @@ public class MyCartDraftBuilder implements Builder<MyCartDraft> {
 
     /**
      *  <p>Shipping Method for the Cart. If the referenced ShippingMethod has a <code>predicate</code> that does not match the Cart, an InvalidOperation error is returned when creating a Cart.</p>
+     * @return Builder
      */
 
     public MyCartDraftBuilder shippingMethod(
@@ -259,6 +288,8 @@ public class MyCartDraftBuilder implements Builder<MyCartDraft> {
 
     /**
      *  <p>Shipping Method for the Cart. If the referenced ShippingMethod has a <code>predicate</code> that does not match the Cart, an InvalidOperation error is returned when creating a Cart.</p>
+     * @param shippingMethod
+     * @return Builder
      */
 
     public MyCartDraftBuilder shippingMethod(
@@ -270,6 +301,8 @@ public class MyCartDraftBuilder implements Builder<MyCartDraft> {
     /**
      *  <p>Multiple shipping addresses of the Cart. Each address must contain a <code>key</code> that is unique in this Cart. The keys are used by LineItems to reference these addresses under their <code>shippingDetails</code>.</p>
      *  <p>Eligible Shipping Methods or applicable Tax Rates are determined by the Cart <code>shippingAddress</code>, and not <code>itemShippingAddresses</code>.</p>
+     * @param itemShippingAddresses
+     * @return Builder
      */
 
     public MyCartDraftBuilder itemShippingAddresses(
@@ -281,6 +314,8 @@ public class MyCartDraftBuilder implements Builder<MyCartDraft> {
     /**
      *  <p>Multiple shipping addresses of the Cart. Each address must contain a <code>key</code> that is unique in this Cart. The keys are used by LineItems to reference these addresses under their <code>shippingDetails</code>.</p>
      *  <p>Eligible Shipping Methods or applicable Tax Rates are determined by the Cart <code>shippingAddress</code>, and not <code>itemShippingAddresses</code>.</p>
+     * @param itemShippingAddresses
+     * @return Builder
      */
 
     public MyCartDraftBuilder itemShippingAddresses(
@@ -292,6 +327,8 @@ public class MyCartDraftBuilder implements Builder<MyCartDraft> {
     /**
      *  <p>Multiple shipping addresses of the Cart. Each address must contain a <code>key</code> that is unique in this Cart. The keys are used by LineItems to reference these addresses under their <code>shippingDetails</code>.</p>
      *  <p>Eligible Shipping Methods or applicable Tax Rates are determined by the Cart <code>shippingAddress</code>, and not <code>itemShippingAddresses</code>.</p>
+     * @param itemShippingAddresses
+     * @return Builder
      */
 
     public MyCartDraftBuilder plusItemShippingAddresses(
@@ -306,6 +343,7 @@ public class MyCartDraftBuilder implements Builder<MyCartDraft> {
     /**
      *  <p>Multiple shipping addresses of the Cart. Each address must contain a <code>key</code> that is unique in this Cart. The keys are used by LineItems to reference these addresses under their <code>shippingDetails</code>.</p>
      *  <p>Eligible Shipping Methods or applicable Tax Rates are determined by the Cart <code>shippingAddress</code>, and not <code>itemShippingAddresses</code>.</p>
+     * @return Builder
      */
 
     public MyCartDraftBuilder plusItemShippingAddresses(
@@ -321,6 +359,7 @@ public class MyCartDraftBuilder implements Builder<MyCartDraft> {
     /**
      *  <p>Multiple shipping addresses of the Cart. Each address must contain a <code>key</code> that is unique in this Cart. The keys are used by LineItems to reference these addresses under their <code>shippingDetails</code>.</p>
      *  <p>Eligible Shipping Methods or applicable Tax Rates are determined by the Cart <code>shippingAddress</code>, and not <code>itemShippingAddresses</code>.</p>
+     * @return Builder
      */
 
     public MyCartDraftBuilder withItemShippingAddresses(
@@ -333,6 +372,8 @@ public class MyCartDraftBuilder implements Builder<MyCartDraft> {
 
     /**
      *  <p><code>code</code> of the existing DiscountCodes to add to the Cart.</p>
+     * @param discountCodes
+     * @return Builder
      */
 
     public MyCartDraftBuilder discountCodes(@Nullable final String... discountCodes) {
@@ -342,6 +383,8 @@ public class MyCartDraftBuilder implements Builder<MyCartDraft> {
 
     /**
      *  <p><code>code</code> of the existing DiscountCodes to add to the Cart.</p>
+     * @param discountCodes
+     * @return Builder
      */
 
     public MyCartDraftBuilder discountCodes(@Nullable final java.util.List<String> discountCodes) {
@@ -351,6 +394,8 @@ public class MyCartDraftBuilder implements Builder<MyCartDraft> {
 
     /**
      *  <p><code>code</code> of the existing DiscountCodes to add to the Cart.</p>
+     * @param discountCodes
+     * @return Builder
      */
 
     public MyCartDraftBuilder plusDiscountCodes(@Nullable final String... discountCodes) {
@@ -363,6 +408,8 @@ public class MyCartDraftBuilder implements Builder<MyCartDraft> {
 
     /**
      *  <p>Used for LineItem Price selection. If used for Create Cart in Store, the provided country must be one of the Store's <code>countries</code>.</p>
+     * @param country
+     * @return Builder
      */
 
     public MyCartDraftBuilder country(@Nullable final String country) {
@@ -372,6 +419,8 @@ public class MyCartDraftBuilder implements Builder<MyCartDraft> {
 
     /**
      *  <p>Languages of the Cart. Can only contain languages supported by the Project.</p>
+     * @param locale
+     * @return Builder
      */
 
     public MyCartDraftBuilder locale(@Nullable final String locale) {
@@ -382,6 +431,8 @@ public class MyCartDraftBuilder implements Builder<MyCartDraft> {
     /**
      *  <p>Number of days after which a Cart with <code>Active</code> CartState is deleted since its last modification. If not provided, the default value for this field configured in Project settings is assigned.</p>
      *  <p>Create a ChangeSubscription for Carts to receive a ResourceDeletedDeliveryPayload upon deletion of the Cart.</p>
+     * @param deleteDaysAfterLastModification
+     * @return Builder
      */
 
     public MyCartDraftBuilder deleteDaysAfterLastModification(@Nullable final Long deleteDaysAfterLastModification) {
@@ -391,6 +442,7 @@ public class MyCartDraftBuilder implements Builder<MyCartDraft> {
 
     /**
      *  <p>Custom Fields for the Cart.</p>
+     * @return Builder
      */
 
     public MyCartDraftBuilder custom(
@@ -401,6 +453,8 @@ public class MyCartDraftBuilder implements Builder<MyCartDraft> {
 
     /**
      *  <p>Custom Fields for the Cart.</p>
+     * @param custom
+     * @return Builder
      */
 
     public MyCartDraftBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFieldsDraft custom) {

@@ -46,6 +46,8 @@ public class StateDraftBuilder implements Builder<StateDraft> {
 
     /**
      *  <p>User-defined unique identifier for the State.</p>
+     * @param key
+     * @return Builder
      */
 
     public StateDraftBuilder key(final String key) {
@@ -55,6 +57,8 @@ public class StateDraftBuilder implements Builder<StateDraft> {
 
     /**
      *  <p>Specify to which resource or object type the State is assigned to.</p>
+     * @param type
+     * @return Builder
      */
 
     public StateDraftBuilder type(final com.commercetools.api.models.state.StateTypeEnum type) {
@@ -64,6 +68,7 @@ public class StateDraftBuilder implements Builder<StateDraft> {
 
     /**
      *  <p>Name of the State.</p>
+     * @return Builder
      */
 
     public StateDraftBuilder name(
@@ -74,6 +79,8 @@ public class StateDraftBuilder implements Builder<StateDraft> {
 
     /**
      *  <p>Name of the State.</p>
+     * @param name
+     * @return Builder
      */
 
     public StateDraftBuilder name(@Nullable final com.commercetools.api.models.common.LocalizedString name) {
@@ -83,6 +90,7 @@ public class StateDraftBuilder implements Builder<StateDraft> {
 
     /**
      *  <p>Description of the State.</p>
+     * @return Builder
      */
 
     public StateDraftBuilder description(
@@ -93,6 +101,8 @@ public class StateDraftBuilder implements Builder<StateDraft> {
 
     /**
      *  <p>Description of the State.</p>
+     * @param description
+     * @return Builder
      */
 
     public StateDraftBuilder description(
@@ -103,6 +113,8 @@ public class StateDraftBuilder implements Builder<StateDraft> {
 
     /**
      *  <p>Set to <code>false</code> if the State is not the first step in a workflow.</p>
+     * @param initial
+     * @return Builder
      */
 
     public StateDraftBuilder initial(@Nullable final Boolean initial) {
@@ -112,6 +124,8 @@ public class StateDraftBuilder implements Builder<StateDraft> {
 
     /**
      *  <p>If suitable, assign predifined roles the State can fulfill in case the State's <code>type</code> is <code>LineItemState</code> or <code>ReviewState</code>.</p>
+     * @param roles
+     * @return Builder
      */
 
     public StateDraftBuilder roles(@Nullable final com.commercetools.api.models.state.StateRoleEnum... roles) {
@@ -121,6 +135,8 @@ public class StateDraftBuilder implements Builder<StateDraft> {
 
     /**
      *  <p>If suitable, assign predifined roles the State can fulfill in case the State's <code>type</code> is <code>LineItemState</code> or <code>ReviewState</code>.</p>
+     * @param roles
+     * @return Builder
      */
 
     public StateDraftBuilder roles(
@@ -131,6 +147,8 @@ public class StateDraftBuilder implements Builder<StateDraft> {
 
     /**
      *  <p>If suitable, assign predifined roles the State can fulfill in case the State's <code>type</code> is <code>LineItemState</code> or <code>ReviewState</code>.</p>
+     * @param roles
+     * @return Builder
      */
 
     public StateDraftBuilder plusRoles(@Nullable final com.commercetools.api.models.state.StateRoleEnum... roles) {
@@ -148,6 +166,8 @@ public class StateDraftBuilder implements Builder<StateDraft> {
      *   <li>Set to empty list for not allowing any transition from the current State and defining it as final State for a workflow.</li>
      *   <li>Do not set this field at all to turn off validation and allowing transitions to any other State of the same <code>type</code> as the current State.</li>
      *  </ul>
+     * @param transitions
+     * @return Builder
      */
 
     public StateDraftBuilder transitions(
@@ -163,6 +183,8 @@ public class StateDraftBuilder implements Builder<StateDraft> {
      *   <li>Set to empty list for not allowing any transition from the current State and defining it as final State for a workflow.</li>
      *   <li>Do not set this field at all to turn off validation and allowing transitions to any other State of the same <code>type</code> as the current State.</li>
      *  </ul>
+     * @param transitions
+     * @return Builder
      */
 
     public StateDraftBuilder transitions(
@@ -178,6 +200,8 @@ public class StateDraftBuilder implements Builder<StateDraft> {
      *   <li>Set to empty list for not allowing any transition from the current State and defining it as final State for a workflow.</li>
      *   <li>Do not set this field at all to turn off validation and allowing transitions to any other State of the same <code>type</code> as the current State.</li>
      *  </ul>
+     * @param transitions
+     * @return Builder
      */
 
     public StateDraftBuilder plusTransitions(
@@ -196,6 +220,7 @@ public class StateDraftBuilder implements Builder<StateDraft> {
      *   <li>Set to empty list for not allowing any transition from the current State and defining it as final State for a workflow.</li>
      *   <li>Do not set this field at all to turn off validation and allowing transitions to any other State of the same <code>type</code> as the current State.</li>
      *  </ul>
+     * @return Builder
      */
 
     public StateDraftBuilder plusTransitions(
@@ -215,6 +240,7 @@ public class StateDraftBuilder implements Builder<StateDraft> {
      *   <li>Set to empty list for not allowing any transition from the current State and defining it as final State for a workflow.</li>
      *   <li>Do not set this field at all to turn off validation and allowing transitions to any other State of the same <code>type</code> as the current State.</li>
      *  </ul>
+     * @return Builder
      */
 
     public StateDraftBuilder withTransitions(

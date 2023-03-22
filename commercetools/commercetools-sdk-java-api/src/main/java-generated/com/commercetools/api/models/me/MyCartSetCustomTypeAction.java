@@ -34,6 +34,7 @@ public interface MyCartSetCustomTypeAction extends MyCartUpdateAction {
 
     /**
      *  <p>Defines the Type that extends the Cart with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Cart.</p>
+     * @return type
      */
     @Valid
     @JsonProperty("type")
@@ -41,6 +42,7 @@ public interface MyCartSetCustomTypeAction extends MyCartUpdateAction {
 
     /**
      *  <p>Sets the Custom Fields fields for the Cart.</p>
+     * @return fields
      */
     @Valid
     @JsonProperty("fields")

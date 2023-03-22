@@ -61,6 +61,8 @@ public class ProductSlugChangedMessageBuilder implements Builder<ProductSlugChan
 
     /**
      *  <p>Unique identifier of the Message. Can be used to track which Messages have been processed.</p>
+     * @param id
+     * @return Builder
      */
 
     public ProductSlugChangedMessageBuilder id(final String id) {
@@ -70,6 +72,8 @@ public class ProductSlugChangedMessageBuilder implements Builder<ProductSlugChan
 
     /**
      *  <p>Version of a resource. In case of Messages, this is always <code>1</code>.</p>
+     * @param version
+     * @return Builder
      */
 
     public ProductSlugChangedMessageBuilder version(final Long version) {
@@ -79,6 +83,8 @@ public class ProductSlugChangedMessageBuilder implements Builder<ProductSlugChan
 
     /**
      *  <p>Date and time (UTC) the Message was generated.</p>
+     * @param createdAt
+     * @return Builder
      */
 
     public ProductSlugChangedMessageBuilder createdAt(final java.time.ZonedDateTime createdAt) {
@@ -88,6 +94,8 @@ public class ProductSlugChangedMessageBuilder implements Builder<ProductSlugChan
 
     /**
      *  <p>Value of <code>createdAt</code>.</p>
+     * @param lastModifiedAt
+     * @return Builder
      */
 
     public ProductSlugChangedMessageBuilder lastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {
@@ -97,6 +105,7 @@ public class ProductSlugChangedMessageBuilder implements Builder<ProductSlugChan
 
     /**
      *  <p>Value of <code>createdBy</code>.</p>
+     * @return Builder
      */
 
     public ProductSlugChangedMessageBuilder lastModifiedBy(
@@ -107,6 +116,8 @@ public class ProductSlugChangedMessageBuilder implements Builder<ProductSlugChan
 
     /**
      *  <p>Value of <code>createdBy</code>.</p>
+     * @param lastModifiedBy
+     * @return Builder
      */
 
     public ProductSlugChangedMessageBuilder lastModifiedBy(
@@ -117,6 +128,7 @@ public class ProductSlugChangedMessageBuilder implements Builder<ProductSlugChan
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @return Builder
      */
 
     public ProductSlugChangedMessageBuilder createdBy(
@@ -127,6 +139,8 @@ public class ProductSlugChangedMessageBuilder implements Builder<ProductSlugChan
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param createdBy
+     * @return Builder
      */
 
     public ProductSlugChangedMessageBuilder createdBy(
@@ -137,6 +151,8 @@ public class ProductSlugChangedMessageBuilder implements Builder<ProductSlugChan
 
     /**
      *  <p>Message number in relation to other Messages for a given resource. The <code>sequenceNumber</code> of the next Message for the resource is the successor of the <code>sequenceNumber</code> of the current Message. Meaning, the <code>sequenceNumber</code> of the next Message equals the <code>sequenceNumber</code> of the current Message + 1. <code>sequenceNumber</code> can be used to ensure that Messages are processed in the correct order for a particular resource.</p>
+     * @param sequenceNumber
+     * @return Builder
      */
 
     public ProductSlugChangedMessageBuilder sequenceNumber(final Long sequenceNumber) {
@@ -146,6 +162,8 @@ public class ProductSlugChangedMessageBuilder implements Builder<ProductSlugChan
 
     /**
      *  <p>Reference to the resource on which the change or action was performed.</p>
+     * @param resource
+     * @return Builder
      */
 
     public ProductSlugChangedMessageBuilder resource(final com.commercetools.api.models.common.Reference resource) {
@@ -155,6 +173,7 @@ public class ProductSlugChangedMessageBuilder implements Builder<ProductSlugChan
 
     /**
      *  <p>Reference to the resource on which the change or action was performed.</p>
+     * @return Builder
      */
 
     public ProductSlugChangedMessageBuilder resource(
@@ -165,6 +184,8 @@ public class ProductSlugChangedMessageBuilder implements Builder<ProductSlugChan
 
     /**
      *  <p>Version of the resource on which the change or action was performed.</p>
+     * @param resourceVersion
+     * @return Builder
      */
 
     public ProductSlugChangedMessageBuilder resourceVersion(final Long resourceVersion) {
@@ -174,6 +195,7 @@ public class ProductSlugChangedMessageBuilder implements Builder<ProductSlugChan
 
     /**
      *  <p>User-provided identifiers of the resource, such as <code>key</code> or <code>externalId</code>. Only present if the resource has such identifiers.</p>
+     * @return Builder
      */
 
     public ProductSlugChangedMessageBuilder resourceUserProvidedIdentifiers(
@@ -186,6 +208,8 @@ public class ProductSlugChangedMessageBuilder implements Builder<ProductSlugChan
 
     /**
      *  <p>User-provided identifiers of the resource, such as <code>key</code> or <code>externalId</code>. Only present if the resource has such identifiers.</p>
+     * @param resourceUserProvidedIdentifiers
+     * @return Builder
      */
 
     public ProductSlugChangedMessageBuilder resourceUserProvidedIdentifiers(
@@ -196,6 +220,7 @@ public class ProductSlugChangedMessageBuilder implements Builder<ProductSlugChan
 
     /**
      *  <p>The slug of the Product after the Change Slug update action.</p>
+     * @return Builder
      */
 
     public ProductSlugChangedMessageBuilder slug(
@@ -206,6 +231,8 @@ public class ProductSlugChangedMessageBuilder implements Builder<ProductSlugChan
 
     /**
      *  <p>The slug of the Product after the Change Slug update action.</p>
+     * @param slug
+     * @return Builder
      */
 
     public ProductSlugChangedMessageBuilder slug(final com.commercetools.api.models.common.LocalizedString slug) {
@@ -215,6 +242,7 @@ public class ProductSlugChangedMessageBuilder implements Builder<ProductSlugChan
 
     /**
      *  <p>The slug of the Product before the Change Slug update action.</p>
+     * @return Builder
      */
 
     public ProductSlugChangedMessageBuilder oldSlug(
@@ -225,6 +253,8 @@ public class ProductSlugChangedMessageBuilder implements Builder<ProductSlugChan
 
     /**
      *  <p>The slug of the Product before the Change Slug update action.</p>
+     * @param oldSlug
+     * @return Builder
      */
 
     public ProductSlugChangedMessageBuilder oldSlug(

@@ -34,6 +34,7 @@ public class ShippingRateDraftBuilder implements Builder<ShippingRateDraft> {
 
     /**
      *  <p>Money value of the ShippingRate.</p>
+     * @return Builder
      */
 
     public ShippingRateDraftBuilder price(
@@ -44,6 +45,8 @@ public class ShippingRateDraftBuilder implements Builder<ShippingRateDraft> {
 
     /**
      *  <p>Money value of the ShippingRate.</p>
+     * @param price
+     * @return Builder
      */
 
     public ShippingRateDraftBuilder price(final com.commercetools.api.models.common.Money price) {
@@ -53,6 +56,7 @@ public class ShippingRateDraftBuilder implements Builder<ShippingRateDraft> {
 
     /**
      *  <p>Shipping is free if the sum of the (Custom) Line Item Prices reaches the specified value.</p>
+     * @return Builder
      */
 
     public ShippingRateDraftBuilder freeAbove(
@@ -63,6 +67,8 @@ public class ShippingRateDraftBuilder implements Builder<ShippingRateDraft> {
 
     /**
      *  <p>Shipping is free if the sum of the (Custom) Line Item Prices reaches the specified value.</p>
+     * @param freeAbove
+     * @return Builder
      */
 
     public ShippingRateDraftBuilder freeAbove(@Nullable final com.commercetools.api.models.common.Money freeAbove) {
@@ -72,6 +78,8 @@ public class ShippingRateDraftBuilder implements Builder<ShippingRateDraft> {
 
     /**
      *  <p>Price tiers for the ShippingRate.</p>
+     * @param tiers
+     * @return Builder
      */
 
     public ShippingRateDraftBuilder tiers(
@@ -82,6 +90,8 @@ public class ShippingRateDraftBuilder implements Builder<ShippingRateDraft> {
 
     /**
      *  <p>Price tiers for the ShippingRate.</p>
+     * @param tiers
+     * @return Builder
      */
 
     public ShippingRateDraftBuilder tiers(
@@ -92,6 +102,8 @@ public class ShippingRateDraftBuilder implements Builder<ShippingRateDraft> {
 
     /**
      *  <p>Price tiers for the ShippingRate.</p>
+     * @param tiers
+     * @return Builder
      */
 
     public ShippingRateDraftBuilder plusTiers(
@@ -105,6 +117,7 @@ public class ShippingRateDraftBuilder implements Builder<ShippingRateDraft> {
 
     /**
      *  <p>Price tiers for the ShippingRate.</p>
+     * @return Builder
      */
 
     public ShippingRateDraftBuilder plusTiers(
@@ -119,6 +132,7 @@ public class ShippingRateDraftBuilder implements Builder<ShippingRateDraft> {
 
     /**
      *  <p>Price tiers for the ShippingRate.</p>
+     * @return Builder
      */
 
     public ShippingRateDraftBuilder withTiers(

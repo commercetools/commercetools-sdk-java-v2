@@ -31,6 +31,7 @@ public interface CustomerCreatePasswordResetToken {
 
     /**
      *  <p>Email address of the Customer treated as case-insensitive.</p>
+     * @return email
      */
     @NotNull
     @JsonProperty("email")
@@ -38,6 +39,7 @@ public interface CustomerCreatePasswordResetToken {
 
     /**
      *  <p>Validity period of the generated token in minutes.</p>
+     * @return ttlMinutes
      */
 
     @JsonProperty("ttlMinutes")

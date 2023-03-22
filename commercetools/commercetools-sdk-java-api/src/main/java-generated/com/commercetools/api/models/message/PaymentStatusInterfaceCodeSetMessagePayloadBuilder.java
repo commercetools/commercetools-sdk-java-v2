@@ -31,6 +31,8 @@ public class PaymentStatusInterfaceCodeSetMessagePayloadBuilder
 
     /**
      *  <p>Unique identifier for the Payment for which the Set StatusInterfaceCode update action was applied.</p>
+     * @param paymentId
+     * @return Builder
      */
 
     public PaymentStatusInterfaceCodeSetMessagePayloadBuilder paymentId(final String paymentId) {
@@ -40,6 +42,8 @@ public class PaymentStatusInterfaceCodeSetMessagePayloadBuilder
 
     /**
      *  <p>The <code>interfaceCode</code> that was set during the Set StatusInterfaceCode update action.</p>
+     * @param interfaceCode
+     * @return Builder
      */
 
     public PaymentStatusInterfaceCodeSetMessagePayloadBuilder interfaceCode(@Nullable final String interfaceCode) {

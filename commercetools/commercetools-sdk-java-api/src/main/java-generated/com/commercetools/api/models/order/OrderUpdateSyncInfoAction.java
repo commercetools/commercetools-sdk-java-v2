@@ -36,6 +36,7 @@ public interface OrderUpdateSyncInfoAction extends OrderUpdateAction {
 
     /**
      *  <p>ResourceIdentifier to a Channel.</p>
+     * @return channel
      */
     @NotNull
     @Valid
@@ -44,6 +45,7 @@ public interface OrderUpdateSyncInfoAction extends OrderUpdateAction {
 
     /**
      *
+     * @return externalId
      */
 
     @JsonProperty("externalId")
@@ -51,6 +53,7 @@ public interface OrderUpdateSyncInfoAction extends OrderUpdateAction {
 
     /**
      *
+     * @return syncedAt
      */
 
     @JsonProperty("syncedAt")

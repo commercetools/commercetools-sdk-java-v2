@@ -25,6 +25,8 @@ public class DiscountCodeChangeIsActiveActionBuilder implements Builder<Discount
 
     /**
      *  <p>New value to set. Set to <code>true</code> to activate the DiscountCode for all matching Discounts.</p>
+     * @param isActive
+     * @return Builder
      */
 
     public DiscountCodeChangeIsActiveActionBuilder isActive(final Boolean isActive) {

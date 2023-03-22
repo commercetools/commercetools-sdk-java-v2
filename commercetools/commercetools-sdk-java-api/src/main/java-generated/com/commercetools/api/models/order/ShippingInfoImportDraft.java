@@ -40,6 +40,7 @@ public interface ShippingInfoImportDraft extends io.vrap.rmf.base.client.Draft<S
 
     /**
      *
+     * @return shippingMethodName
      */
     @NotNull
     @JsonProperty("shippingMethodName")
@@ -47,6 +48,7 @@ public interface ShippingInfoImportDraft extends io.vrap.rmf.base.client.Draft<S
 
     /**
      *
+     * @return price
      */
     @NotNull
     @Valid
@@ -55,6 +57,7 @@ public interface ShippingInfoImportDraft extends io.vrap.rmf.base.client.Draft<S
 
     /**
      *  <p>The shipping rate used to determine the price.</p>
+     * @return shippingRate
      */
     @NotNull
     @Valid
@@ -63,6 +66,7 @@ public interface ShippingInfoImportDraft extends io.vrap.rmf.base.client.Draft<S
 
     /**
      *
+     * @return taxRate
      */
     @Valid
     @JsonProperty("taxRate")
@@ -70,6 +74,7 @@ public interface ShippingInfoImportDraft extends io.vrap.rmf.base.client.Draft<S
 
     /**
      *
+     * @return taxCategory
      */
     @Valid
     @JsonProperty("taxCategory")
@@ -77,6 +82,7 @@ public interface ShippingInfoImportDraft extends io.vrap.rmf.base.client.Draft<S
 
     /**
      *  <p>Not set if custom shipping method is used.</p>
+     * @return shippingMethod
      */
     @Valid
     @JsonProperty("shippingMethod")
@@ -84,6 +90,7 @@ public interface ShippingInfoImportDraft extends io.vrap.rmf.base.client.Draft<S
 
     /**
      *  <p>Deliveries are compilations of information on how the articles are being delivered to the customers.</p>
+     * @return deliveries
      */
     @Valid
     @JsonProperty("deliveries")
@@ -91,6 +98,7 @@ public interface ShippingInfoImportDraft extends io.vrap.rmf.base.client.Draft<S
 
     /**
      *
+     * @return discountedPrice
      */
     @Valid
     @JsonProperty("discountedPrice")
@@ -98,6 +106,7 @@ public interface ShippingInfoImportDraft extends io.vrap.rmf.base.client.Draft<S
 
     /**
      *  <p>Indicates whether the ShippingMethod referenced is allowed for the cart or not.</p>
+     * @return shippingMethodState
      */
 
     @JsonProperty("shippingMethodState")

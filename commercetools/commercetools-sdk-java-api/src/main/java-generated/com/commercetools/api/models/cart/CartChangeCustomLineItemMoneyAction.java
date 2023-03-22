@@ -36,6 +36,7 @@ public interface CartChangeCustomLineItemMoneyAction extends CartUpdateAction {
 
     /**
      *  <p><code>id</code> of the CustomLineItem to update.</p>
+     * @return customLineItemId
      */
     @NotNull
     @JsonProperty("customLineItemId")
@@ -43,6 +44,7 @@ public interface CartChangeCustomLineItemMoneyAction extends CartUpdateAction {
 
     /**
      *  <p>Value to set. Must not be empty. Can be a negative amount.</p>
+     * @return money
      */
     @NotNull
     @Valid

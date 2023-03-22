@@ -26,6 +26,7 @@ public class QuoteRequestCreatedMessagePayloadBuilder implements Builder<QuoteRe
 
     /**
      *  <p>Quote Request that was created.</p>
+     * @return Builder
      */
 
     public QuoteRequestCreatedMessagePayloadBuilder quoteRequest(
@@ -36,6 +37,8 @@ public class QuoteRequestCreatedMessagePayloadBuilder implements Builder<QuoteRe
 
     /**
      *  <p>Quote Request that was created.</p>
+     * @param quoteRequest
+     * @return Builder
      */
 
     public QuoteRequestCreatedMessagePayloadBuilder quoteRequest(

@@ -37,6 +37,7 @@ public interface StagedOrderAddShoppingListAction extends StagedOrderUpdateActio
 
     /**
      *  <p>ResourceIdentifier to a ShoppingList.</p>
+     * @return shoppingList
      */
     @NotNull
     @Valid
@@ -45,6 +46,7 @@ public interface StagedOrderAddShoppingListAction extends StagedOrderUpdateActio
 
     /**
      *  <p>ResourceIdentifier to a Channel.</p>
+     * @return supplyChannel
      */
     @Valid
     @JsonProperty("supplyChannel")
@@ -52,6 +54,7 @@ public interface StagedOrderAddShoppingListAction extends StagedOrderUpdateActio
 
     /**
      *  <p>ResourceIdentifier to a Channel.</p>
+     * @return distributionChannel
      */
     @Valid
     @JsonProperty("distributionChannel")

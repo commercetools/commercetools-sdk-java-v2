@@ -26,6 +26,7 @@ public class ZoneAddLocationActionBuilder implements Builder<ZoneAddLocationActi
 
     /**
      *  <p>Location to be added to the Zone.</p>
+     * @return Builder
      */
 
     public ZoneAddLocationActionBuilder location(
@@ -36,6 +37,8 @@ public class ZoneAddLocationActionBuilder implements Builder<ZoneAddLocationActi
 
     /**
      *  <p>Location to be added to the Zone.</p>
+     * @param location
+     * @return Builder
      */
 
     public ZoneAddLocationActionBuilder location(final com.commercetools.api.models.zone.Location location) {

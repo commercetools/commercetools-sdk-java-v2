@@ -37,6 +37,8 @@ public class DeliveryAddressSetMessagePayloadBuilder implements Builder<Delivery
 
     /**
      *  <p>Unique identifier of the Parcel.</p>
+     * @param deliveryId
+     * @return Builder
      */
 
     public DeliveryAddressSetMessagePayloadBuilder deliveryId(final String deliveryId) {
@@ -46,6 +48,7 @@ public class DeliveryAddressSetMessagePayloadBuilder implements Builder<Delivery
 
     /**
      *  <p>Address after the Set Delivery Address update action.</p>
+     * @return Builder
      */
 
     public DeliveryAddressSetMessagePayloadBuilder address(
@@ -56,6 +59,8 @@ public class DeliveryAddressSetMessagePayloadBuilder implements Builder<Delivery
 
     /**
      *  <p>Address after the Set Delivery Address update action.</p>
+     * @param address
+     * @return Builder
      */
 
     public DeliveryAddressSetMessagePayloadBuilder address(
@@ -66,6 +71,7 @@ public class DeliveryAddressSetMessagePayloadBuilder implements Builder<Delivery
 
     /**
      *  <p>Address before the Set Delivery Address update action.</p>
+     * @return Builder
      */
 
     public DeliveryAddressSetMessagePayloadBuilder oldAddress(
@@ -76,6 +82,8 @@ public class DeliveryAddressSetMessagePayloadBuilder implements Builder<Delivery
 
     /**
      *  <p>Address before the Set Delivery Address update action.</p>
+     * @param oldAddress
+     * @return Builder
      */
 
     public DeliveryAddressSetMessagePayloadBuilder oldAddress(
@@ -86,6 +94,8 @@ public class DeliveryAddressSetMessagePayloadBuilder implements Builder<Delivery
 
     /**
      *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multi</code> ShippingMode.</p>
+     * @param shippingKey
+     * @return Builder
      */
 
     public DeliveryAddressSetMessagePayloadBuilder shippingKey(@Nullable final String shippingKey) {

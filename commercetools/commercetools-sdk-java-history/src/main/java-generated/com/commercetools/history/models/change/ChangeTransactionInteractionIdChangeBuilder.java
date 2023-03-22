@@ -35,6 +35,8 @@ public class ChangeTransactionInteractionIdChangeBuilder implements Builder<Chan
 
     /**
      *  <p>Update action for <code>changeTransactionInteractionId</code> on payments</p>
+     * @param change
+     * @return Builder
      */
 
     public ChangeTransactionInteractionIdChangeBuilder change(final String change) {
@@ -44,6 +46,7 @@ public class ChangeTransactionInteractionIdChangeBuilder implements Builder<Chan
 
     /**
      *
+     * @return Builder
      */
 
     public ChangeTransactionInteractionIdChangeBuilder transaction(
@@ -56,6 +59,8 @@ public class ChangeTransactionInteractionIdChangeBuilder implements Builder<Chan
 
     /**
      *
+     * @param transaction
+     * @return Builder
      */
 
     public ChangeTransactionInteractionIdChangeBuilder transaction(
@@ -66,6 +71,8 @@ public class ChangeTransactionInteractionIdChangeBuilder implements Builder<Chan
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public ChangeTransactionInteractionIdChangeBuilder nextValue(final String nextValue) {
@@ -75,6 +82,8 @@ public class ChangeTransactionInteractionIdChangeBuilder implements Builder<Chan
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public ChangeTransactionInteractionIdChangeBuilder previousValue(final String previousValue) {

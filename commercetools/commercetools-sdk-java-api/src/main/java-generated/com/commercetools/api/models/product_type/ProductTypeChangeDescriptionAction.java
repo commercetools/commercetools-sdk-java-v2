@@ -33,6 +33,7 @@ public interface ProductTypeChangeDescriptionAction extends ProductTypeUpdateAct
 
     /**
      *  <p>New value to set.</p>
+     * @return description
      */
     @NotNull
     @JsonProperty("description")

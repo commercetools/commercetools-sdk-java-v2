@@ -35,6 +35,7 @@ public interface MyCartSetLineItemSupplyChannelAction extends MyCartUpdateAction
 
     /**
      *  <p><code>id</code> of the LineItem to update.</p>
+     * @return lineItemId
      */
     @NotNull
     @JsonProperty("lineItemId")
@@ -45,6 +46,7 @@ public interface MyCartSetLineItemSupplyChannelAction extends MyCartUpdateAction
      *   <li>If present, a Reference to the Channel is set for the LineItem specified by <code>lineItemId</code>.</li>
      *   <li>If not present, the current Reference to a supply channel will be removed from the LineItem specified by <code>lineItemId</code>. The Channel must have the <code>InventorySupply</code> ChannelRoleEnum.</li>
      *  </ul>
+     * @return supplyChannel
      */
     @Valid
     @JsonProperty("supplyChannel")

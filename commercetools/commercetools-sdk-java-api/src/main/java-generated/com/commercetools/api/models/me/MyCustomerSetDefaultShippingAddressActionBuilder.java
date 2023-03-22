@@ -31,6 +31,8 @@ public class MyCustomerSetDefaultShippingAddressActionBuilder
 
     /**
      *  <p><code>id</code> of the Address to become the default shipping address.</p>
+     * @param addressId
+     * @return Builder
      */
 
     public MyCustomerSetDefaultShippingAddressActionBuilder addressId(@Nullable final String addressId) {
@@ -40,6 +42,8 @@ public class MyCustomerSetDefaultShippingAddressActionBuilder
 
     /**
      *  <p><code>key</code> of the Address to become the default shipping address.</p>
+     * @param addressKey
+     * @return Builder
      */
 
     public MyCustomerSetDefaultShippingAddressActionBuilder addressKey(@Nullable final String addressKey) {

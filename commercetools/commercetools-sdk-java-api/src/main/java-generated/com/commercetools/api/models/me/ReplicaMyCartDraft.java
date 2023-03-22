@@ -32,6 +32,7 @@ public interface ReplicaMyCartDraft extends io.vrap.rmf.base.client.Draft<Replic
 
     /**
      *  <p>Reference to a Cart or Order that is replicated.</p>
+     * @return reference
      */
     @NotNull
     @JsonProperty("reference")

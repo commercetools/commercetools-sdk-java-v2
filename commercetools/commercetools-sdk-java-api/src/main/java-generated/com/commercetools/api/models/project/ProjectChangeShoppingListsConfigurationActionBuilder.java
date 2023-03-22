@@ -27,6 +27,7 @@ public class ProjectChangeShoppingListsConfigurationActionBuilder
 
     /**
      *  <p>Configuration for the Shopping Lists feature.</p>
+     * @return Builder
      */
 
     public ProjectChangeShoppingListsConfigurationActionBuilder shoppingListsConfiguration(
@@ -39,6 +40,8 @@ public class ProjectChangeShoppingListsConfigurationActionBuilder
 
     /**
      *  <p>Configuration for the Shopping Lists feature.</p>
+     * @param shoppingListsConfiguration
+     * @return Builder
      */
 
     public ProjectChangeShoppingListsConfigurationActionBuilder shoppingListsConfiguration(

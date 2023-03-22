@@ -34,6 +34,7 @@ public interface CustomFieldEnumType extends FieldType {
 
     /**
      *  <p>Allowed values.</p>
+     * @return values
      */
     @NotNull
     @Valid

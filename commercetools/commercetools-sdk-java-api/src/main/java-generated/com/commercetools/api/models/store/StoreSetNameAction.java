@@ -33,6 +33,7 @@ public interface StoreSetNameAction extends StoreUpdateAction {
 
     /**
      *  <p>Value to set.</p>
+     * @return name
      */
     @Valid
     @JsonProperty("name")

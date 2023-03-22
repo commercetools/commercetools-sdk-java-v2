@@ -42,6 +42,7 @@ public interface CartAddCustomShippingMethodAction extends CartUpdateAction {
 
     /**
      *  <p>User-defined identifier for the custom Shipping Method that must be unique across the Cart with <code>Multiple</code> ShippingMode.</p>
+     * @return shippingKey
      */
     @NotNull
     @JsonProperty("shippingKey")
@@ -49,6 +50,7 @@ public interface CartAddCustomShippingMethodAction extends CartUpdateAction {
 
     /**
      *  <p>Name of the custom Shipping Method.</p>
+     * @return shippingMethodName
      */
     @NotNull
     @JsonProperty("shippingMethodName")
@@ -56,6 +58,7 @@ public interface CartAddCustomShippingMethodAction extends CartUpdateAction {
 
     /**
      *  <p>Determines the shipping rate and Tax Rate of the associated Line Items.</p>
+     * @return shippingAddress
      */
     @NotNull
     @Valid
@@ -64,6 +67,7 @@ public interface CartAddCustomShippingMethodAction extends CartUpdateAction {
 
     /**
      *  <p>Determines the shipping price.</p>
+     * @return shippingRate
      */
     @NotNull
     @Valid
@@ -77,6 +81,7 @@ public interface CartAddCustomShippingMethodAction extends CartUpdateAction {
      *   <li>If <code>CartScore</code>, it must be ScoreShippingRateInputDraft.</li>
      *   <li>If <code>CartValue</code>, it cannot be set.</li>
      *  </ul>
+     * @return shippingRateInput
      */
     @Valid
     @JsonProperty("shippingRateInput")
@@ -84,6 +89,7 @@ public interface CartAddCustomShippingMethodAction extends CartUpdateAction {
 
     /**
      *  <p>Tax Category used to determine a shipping Tax Rate if the Cart has the <code>Platform</code> TaxMode.</p>
+     * @return taxCategory
      */
     @Valid
     @JsonProperty("taxCategory")
@@ -91,6 +97,7 @@ public interface CartAddCustomShippingMethodAction extends CartUpdateAction {
 
     /**
      *  <p>Tax Rate used to tax a shipping expense if the Cart has the <code>External</code> TaxMode.</p>
+     * @return externalTaxRate
      */
     @Valid
     @JsonProperty("externalTaxRate")
@@ -98,6 +105,7 @@ public interface CartAddCustomShippingMethodAction extends CartUpdateAction {
 
     /**
      *  <p>Deliveries to be shipped with the custom Shipping Method.</p>
+     * @return deliveries
      */
     @Valid
     @JsonProperty("deliveries")
@@ -105,6 +113,7 @@ public interface CartAddCustomShippingMethodAction extends CartUpdateAction {
 
     /**
      *  <p>Custom Fields for the custom Shipping Method.</p>
+     * @return custom
      */
     @Valid
     @JsonProperty("custom")

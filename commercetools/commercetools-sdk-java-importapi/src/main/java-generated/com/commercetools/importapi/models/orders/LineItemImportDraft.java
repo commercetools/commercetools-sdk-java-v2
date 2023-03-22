@@ -41,6 +41,7 @@ public interface LineItemImportDraft extends io.vrap.rmf.base.client.Draft<LineI
 
     /**
      *  <p>Maps to <code>LineItem.productId</code>.</p>
+     * @return product
      */
     @Valid
     @JsonProperty("product")
@@ -48,6 +49,7 @@ public interface LineItemImportDraft extends io.vrap.rmf.base.client.Draft<LineI
 
     /**
      *  <p>Maps to <code>LineItem.name</code>.</p>
+     * @return name
      */
     @NotNull
     @Valid
@@ -56,6 +58,7 @@ public interface LineItemImportDraft extends io.vrap.rmf.base.client.Draft<LineI
 
     /**
      *  <p>Maps to <code>ProductVariantImportDraft</code>.</p>
+     * @return variant
      */
     @NotNull
     @Valid
@@ -64,6 +67,7 @@ public interface LineItemImportDraft extends io.vrap.rmf.base.client.Draft<LineI
 
     /**
      *  <p>Maps to <code>LineItem.price</code>.</p>
+     * @return price
      */
     @NotNull
     @Valid
@@ -72,6 +76,7 @@ public interface LineItemImportDraft extends io.vrap.rmf.base.client.Draft<LineI
 
     /**
      *  <p>Maps to <code>LineItem.quantity</code>.</p>
+     * @return quantity
      */
     @NotNull
     @JsonProperty("quantity")
@@ -79,6 +84,7 @@ public interface LineItemImportDraft extends io.vrap.rmf.base.client.Draft<LineI
 
     /**
      *
+     * @return state
      */
     @Valid
     @JsonProperty("state")
@@ -86,6 +92,7 @@ public interface LineItemImportDraft extends io.vrap.rmf.base.client.Draft<LineI
 
     /**
      *  <p>Maps to <code>LineItem.supplyChannel</code>. The Reference to the Supply Channel with which the LineItem is associated. If referenced Supply Channel does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Supply Channel is created.</p>
+     * @return supplyChannel
      */
     @Valid
     @JsonProperty("supplyChannel")
@@ -93,6 +100,7 @@ public interface LineItemImportDraft extends io.vrap.rmf.base.client.Draft<LineI
 
     /**
      *  <p>Maps to <code>LineItem.distributionChannel</code>. The Reference to the Distribution Channel with which the LineItem is associated. If referenced CustomerGroup does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Distribution Channel is created.</p>
+     * @return distributionChannel
      */
     @Valid
     @JsonProperty("distributionChannel")
@@ -100,6 +108,7 @@ public interface LineItemImportDraft extends io.vrap.rmf.base.client.Draft<LineI
 
     /**
      *  <p>Maps to <code>LineItem.taxRate</code>.</p>
+     * @return taxRate
      */
     @Valid
     @JsonProperty("taxRate")
@@ -107,6 +116,7 @@ public interface LineItemImportDraft extends io.vrap.rmf.base.client.Draft<LineI
 
     /**
      *  <p>Maps to LineItem.shippingDetails.</p>
+     * @return shippingDetails
      */
     @Valid
     @JsonProperty("shippingDetails")
@@ -114,6 +124,7 @@ public interface LineItemImportDraft extends io.vrap.rmf.base.client.Draft<LineI
 
     /**
      *  <p>Custom Fields for this Line Item.</p>
+     * @return custom
      */
     @Valid
     @JsonProperty("custom")

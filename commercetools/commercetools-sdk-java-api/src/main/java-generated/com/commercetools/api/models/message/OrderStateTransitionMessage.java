@@ -43,6 +43,7 @@ public interface OrderStateTransitionMessage extends OrderMessage {
 
     /**
      *  <p>OrderState after the Transition State update action.</p>
+     * @return state
      */
     @NotNull
     @Valid
@@ -51,6 +52,7 @@ public interface OrderStateTransitionMessage extends OrderMessage {
 
     /**
      *  <p>OrderState before the Transition State update action.</p>
+     * @return oldState
      */
     @Valid
     @JsonProperty("oldState")
@@ -58,6 +60,7 @@ public interface OrderStateTransitionMessage extends OrderMessage {
 
     /**
      *  <p>Whether State transition validations were turned off during the Transition State update action.</p>
+     * @return force
      */
     @NotNull
     @JsonProperty("force")

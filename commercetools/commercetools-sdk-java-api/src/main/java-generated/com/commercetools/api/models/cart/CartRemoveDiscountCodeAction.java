@@ -35,6 +35,7 @@ public interface CartRemoveDiscountCodeAction extends CartUpdateAction {
 
     /**
      *  <p>Discount Code to remove from the Cart.</p>
+     * @return discountCode
      */
     @NotNull
     @Valid

@@ -37,6 +37,7 @@ public interface InventoryEntryDraft extends com.commercetools.api.models.Custom
 
     /**
      *  <p>ProductVariant <code>sku</code> of the InventoryEntry.</p>
+     * @return sku
      */
     @NotNull
     @JsonProperty("sku")
@@ -44,6 +45,7 @@ public interface InventoryEntryDraft extends com.commercetools.api.models.Custom
 
     /**
      *  <p>User-defined unique identifier for the InventoryEntry.</p>
+     * @return key
      */
 
     @JsonProperty("key")
@@ -51,6 +53,7 @@ public interface InventoryEntryDraft extends com.commercetools.api.models.Custom
 
     /**
      *  <p>Channel that supplies this InventoryEntry.</p>
+     * @return supplyChannel
      */
     @Valid
     @JsonProperty("supplyChannel")
@@ -58,6 +61,7 @@ public interface InventoryEntryDraft extends com.commercetools.api.models.Custom
 
     /**
      *  <p>Overall amount of stock.</p>
+     * @return quantityOnStock
      */
     @NotNull
     @JsonProperty("quantityOnStock")
@@ -65,6 +69,7 @@ public interface InventoryEntryDraft extends com.commercetools.api.models.Custom
 
     /**
      *  <p>How often the InventoryEntry is restocked (in days).</p>
+     * @return restockableInDays
      */
 
     @JsonProperty("restockableInDays")
@@ -72,6 +77,7 @@ public interface InventoryEntryDraft extends com.commercetools.api.models.Custom
 
     /**
      *  <p>Date and time of the next restock.</p>
+     * @return expectedDelivery
      */
 
     @JsonProperty("expectedDelivery")
@@ -79,6 +85,7 @@ public interface InventoryEntryDraft extends com.commercetools.api.models.Custom
 
     /**
      *  <p>Custom Fields of the InventoryEntry.</p>
+     * @return custom
      */
     @Valid
     @JsonProperty("custom")

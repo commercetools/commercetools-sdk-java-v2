@@ -25,6 +25,8 @@ public class CategoryKeyReferenceBuilder implements Builder<CategoryKeyReference
 
     /**
      *
+     * @param key
+     * @return Builder
      */
 
     public CategoryKeyReferenceBuilder key(final String key) {

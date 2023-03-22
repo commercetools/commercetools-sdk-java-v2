@@ -28,6 +28,8 @@ public class EventBridgeDestinationBuilder implements Builder<EventBridgeDestina
 
     /**
      *  <p>AWS region that receives the events.</p>
+     * @param region
+     * @return Builder
      */
 
     public EventBridgeDestinationBuilder region(final String region) {
@@ -37,6 +39,8 @@ public class EventBridgeDestinationBuilder implements Builder<EventBridgeDestina
 
     /**
      *  <p>ID of the AWS account that receives the events.</p>
+     * @param accountId
+     * @return Builder
      */
 
     public EventBridgeDestinationBuilder accountId(final String accountId) {

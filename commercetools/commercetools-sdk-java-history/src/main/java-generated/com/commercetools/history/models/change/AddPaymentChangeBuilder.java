@@ -32,6 +32,8 @@ public class AddPaymentChangeBuilder implements Builder<AddPaymentChange> {
 
     /**
      *  <p>Update action for <code>addPayment</code> &amp; <code>removePayment</code></p>
+     * @param change
+     * @return Builder
      */
 
     public AddPaymentChangeBuilder change(final String change) {
@@ -41,6 +43,7 @@ public class AddPaymentChangeBuilder implements Builder<AddPaymentChange> {
 
     /**
      *
+     * @return Builder
      */
 
     public AddPaymentChangeBuilder nextValue(
@@ -51,6 +54,8 @@ public class AddPaymentChangeBuilder implements Builder<AddPaymentChange> {
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public AddPaymentChangeBuilder nextValue(final com.commercetools.history.models.common.PaymentInfo nextValue) {
@@ -60,6 +65,7 @@ public class AddPaymentChangeBuilder implements Builder<AddPaymentChange> {
 
     /**
      *
+     * @return Builder
      */
 
     public AddPaymentChangeBuilder previousValue(
@@ -70,6 +76,8 @@ public class AddPaymentChangeBuilder implements Builder<AddPaymentChange> {
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public AddPaymentChangeBuilder previousValue(

@@ -26,6 +26,7 @@ public class ChannelChangeDescriptionActionBuilder implements Builder<ChannelCha
 
     /**
      *  <p>New value to set. Must not be empty.</p>
+     * @return Builder
      */
 
     public ChannelChangeDescriptionActionBuilder description(
@@ -36,6 +37,8 @@ public class ChannelChangeDescriptionActionBuilder implements Builder<ChannelCha
 
     /**
      *  <p>New value to set. Must not be empty.</p>
+     * @param description
+     * @return Builder
      */
 
     public ChannelChangeDescriptionActionBuilder description(

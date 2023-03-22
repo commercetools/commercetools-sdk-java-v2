@@ -31,6 +31,7 @@ public class StagedQuoteTransitionStateActionBuilder implements Builder<StagedQu
 
     /**
      *  <p>Value to set. If there is no State yet, the new State must be an initial State.</p>
+     * @return Builder
      */
 
     public StagedQuoteTransitionStateActionBuilder state(
@@ -41,6 +42,8 @@ public class StagedQuoteTransitionStateActionBuilder implements Builder<StagedQu
 
     /**
      *  <p>Value to set. If there is no State yet, the new State must be an initial State.</p>
+     * @param state
+     * @return Builder
      */
 
     public StagedQuoteTransitionStateActionBuilder state(
@@ -51,6 +54,8 @@ public class StagedQuoteTransitionStateActionBuilder implements Builder<StagedQu
 
     /**
      *  <p>Switch validations on or off.</p>
+     * @param force
+     * @return Builder
      */
 
     public StagedQuoteTransitionStateActionBuilder force(@Nullable final Boolean force) {

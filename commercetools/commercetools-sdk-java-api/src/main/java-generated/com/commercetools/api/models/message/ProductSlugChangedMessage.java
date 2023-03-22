@@ -42,6 +42,7 @@ public interface ProductSlugChangedMessage extends Message {
 
     /**
      *  <p>The slug of the Product after the Change Slug update action.</p>
+     * @return slug
      */
     @NotNull
     @Valid
@@ -50,6 +51,7 @@ public interface ProductSlugChangedMessage extends Message {
 
     /**
      *  <p>The slug of the Product before the Change Slug update action.</p>
+     * @return oldSlug
      */
     @Valid
     @JsonProperty("oldSlug")

@@ -38,6 +38,8 @@ public class SetLineItemProductSlugChangeBuilder implements Builder<SetLineItemP
 
     /**
      *  <p>Update action for <code>setLineItemProductSlug</code></p>
+     * @param change
+     * @return Builder
      */
 
     public SetLineItemProductSlugChangeBuilder change(final String change) {
@@ -47,6 +49,7 @@ public class SetLineItemProductSlugChangeBuilder implements Builder<SetLineItemP
 
     /**
      *
+     * @return Builder
      */
 
     public SetLineItemProductSlugChangeBuilder lineItem(
@@ -57,6 +60,8 @@ public class SetLineItemProductSlugChangeBuilder implements Builder<SetLineItemP
 
     /**
      *
+     * @param lineItem
+     * @return Builder
      */
 
     public SetLineItemProductSlugChangeBuilder lineItem(
@@ -67,6 +72,8 @@ public class SetLineItemProductSlugChangeBuilder implements Builder<SetLineItemP
 
     /**
      *
+     * @param variant
+     * @return Builder
      */
 
     public SetLineItemProductSlugChangeBuilder variant(final String variant) {
@@ -76,6 +83,7 @@ public class SetLineItemProductSlugChangeBuilder implements Builder<SetLineItemP
 
     /**
      *
+     * @return Builder
      */
 
     public SetLineItemProductSlugChangeBuilder nextValue(
@@ -86,6 +94,8 @@ public class SetLineItemProductSlugChangeBuilder implements Builder<SetLineItemP
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public SetLineItemProductSlugChangeBuilder nextValue(
@@ -96,6 +106,7 @@ public class SetLineItemProductSlugChangeBuilder implements Builder<SetLineItemP
 
     /**
      *
+     * @return Builder
      */
 
     public SetLineItemProductSlugChangeBuilder previousValue(
@@ -106,6 +117,8 @@ public class SetLineItemProductSlugChangeBuilder implements Builder<SetLineItemP
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public SetLineItemProductSlugChangeBuilder previousValue(

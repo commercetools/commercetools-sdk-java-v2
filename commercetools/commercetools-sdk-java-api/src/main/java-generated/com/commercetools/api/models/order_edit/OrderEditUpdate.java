@@ -34,6 +34,7 @@ public interface OrderEditUpdate extends
 
     /**
      *
+     * @return version
      */
     @NotNull
     @JsonProperty("version")
@@ -41,6 +42,7 @@ public interface OrderEditUpdate extends
 
     /**
      *
+     * @return actions
      */
     @NotNull
     @Valid
@@ -49,6 +51,7 @@ public interface OrderEditUpdate extends
 
     /**
      *
+     * @return dryRun
      */
 
     @JsonProperty("dryRun")

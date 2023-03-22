@@ -36,6 +36,7 @@ public interface StagedQuoteStateTransitionMessagePayload extends MessagePayload
 
     /**
      *  <p>State of the Quote after the Transition State update action.</p>
+     * @return state
      */
     @NotNull
     @Valid
@@ -44,6 +45,7 @@ public interface StagedQuoteStateTransitionMessagePayload extends MessagePayload
 
     /**
      *  <p>State of the Quote before the Transition State update action.</p>
+     * @return oldState
      */
     @Valid
     @JsonProperty("oldState")
@@ -51,6 +53,7 @@ public interface StagedQuoteStateTransitionMessagePayload extends MessagePayload
 
     /**
      *  <p>Whether State transition validations were turned off during the Transition State update action.</p>
+     * @return force
      */
     @NotNull
     @JsonProperty("force")

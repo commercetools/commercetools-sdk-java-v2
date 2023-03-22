@@ -67,6 +67,8 @@ public class InventoryEntryBuilder implements Builder<InventoryEntry> {
 
     /**
      *  <p>Unique identifier of the InventoryEntry.</p>
+     * @param id
+     * @return Builder
      */
 
     public InventoryEntryBuilder id(final String id) {
@@ -76,6 +78,8 @@ public class InventoryEntryBuilder implements Builder<InventoryEntry> {
 
     /**
      *  <p>Current version of the InventoryEntry.</p>
+     * @param version
+     * @return Builder
      */
 
     public InventoryEntryBuilder version(final Long version) {
@@ -85,6 +89,8 @@ public class InventoryEntryBuilder implements Builder<InventoryEntry> {
 
     /**
      *  <p>Date and time (UTC) the InventoryEntry was initially created.</p>
+     * @param createdAt
+     * @return Builder
      */
 
     public InventoryEntryBuilder createdAt(final java.time.ZonedDateTime createdAt) {
@@ -94,6 +100,8 @@ public class InventoryEntryBuilder implements Builder<InventoryEntry> {
 
     /**
      *  <p>Date and time (UTC) the InventoryEntry was last updated.</p>
+     * @param lastModifiedAt
+     * @return Builder
      */
 
     public InventoryEntryBuilder lastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {
@@ -103,6 +111,7 @@ public class InventoryEntryBuilder implements Builder<InventoryEntry> {
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @return Builder
      */
 
     public InventoryEntryBuilder lastModifiedBy(
@@ -113,6 +122,8 @@ public class InventoryEntryBuilder implements Builder<InventoryEntry> {
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param lastModifiedBy
+     * @return Builder
      */
 
     public InventoryEntryBuilder lastModifiedBy(
@@ -123,6 +134,7 @@ public class InventoryEntryBuilder implements Builder<InventoryEntry> {
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @return Builder
      */
 
     public InventoryEntryBuilder createdBy(
@@ -133,6 +145,8 @@ public class InventoryEntryBuilder implements Builder<InventoryEntry> {
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param createdBy
+     * @return Builder
      */
 
     public InventoryEntryBuilder createdBy(@Nullable final com.commercetools.api.models.common.CreatedBy createdBy) {
@@ -142,6 +156,8 @@ public class InventoryEntryBuilder implements Builder<InventoryEntry> {
 
     /**
      *  <p>User-defined unique identifier of the InventoryEntry.</p>
+     * @param key
+     * @return Builder
      */
 
     public InventoryEntryBuilder key(@Nullable final String key) {
@@ -151,6 +167,8 @@ public class InventoryEntryBuilder implements Builder<InventoryEntry> {
 
     /**
      *  <p>ProductVariant <code>sku</code> of the InventoryEntry.</p>
+     * @param sku
+     * @return Builder
      */
 
     public InventoryEntryBuilder sku(final String sku) {
@@ -160,6 +178,7 @@ public class InventoryEntryBuilder implements Builder<InventoryEntry> {
 
     /**
      *  <p>Channel that supplies this InventoryEntry.</p>
+     * @return Builder
      */
 
     public InventoryEntryBuilder supplyChannel(
@@ -170,6 +189,8 @@ public class InventoryEntryBuilder implements Builder<InventoryEntry> {
 
     /**
      *  <p>Channel that supplies this InventoryEntry.</p>
+     * @param supplyChannel
+     * @return Builder
      */
 
     public InventoryEntryBuilder supplyChannel(
@@ -180,6 +201,8 @@ public class InventoryEntryBuilder implements Builder<InventoryEntry> {
 
     /**
      *  <p>Overall amount of stock (<code>availableQuantity</code> + reserved).</p>
+     * @param quantityOnStock
+     * @return Builder
      */
 
     public InventoryEntryBuilder quantityOnStock(final Long quantityOnStock) {
@@ -189,6 +212,8 @@ public class InventoryEntryBuilder implements Builder<InventoryEntry> {
 
     /**
      *  <p>Available amount of stock (<code>quantityOnStock</code> - reserved).</p>
+     * @param availableQuantity
+     * @return Builder
      */
 
     public InventoryEntryBuilder availableQuantity(final Long availableQuantity) {
@@ -198,6 +223,8 @@ public class InventoryEntryBuilder implements Builder<InventoryEntry> {
 
     /**
      *  <p>How often the InventoryEntry is restocked (in days).</p>
+     * @param restockableInDays
+     * @return Builder
      */
 
     public InventoryEntryBuilder restockableInDays(@Nullable final Long restockableInDays) {
@@ -207,6 +234,8 @@ public class InventoryEntryBuilder implements Builder<InventoryEntry> {
 
     /**
      *  <p>Date and time of the next restock.</p>
+     * @param expectedDelivery
+     * @return Builder
      */
 
     public InventoryEntryBuilder expectedDelivery(@Nullable final java.time.ZonedDateTime expectedDelivery) {
@@ -216,6 +245,7 @@ public class InventoryEntryBuilder implements Builder<InventoryEntry> {
 
     /**
      *  <p>Custom Fields of the InventoryEntry.</p>
+     * @return Builder
      */
 
     public InventoryEntryBuilder custom(
@@ -226,6 +256,8 @@ public class InventoryEntryBuilder implements Builder<InventoryEntry> {
 
     /**
      *  <p>Custom Fields of the InventoryEntry.</p>
+     * @param custom
+     * @return Builder
      */
 
     public InventoryEntryBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFields custom) {

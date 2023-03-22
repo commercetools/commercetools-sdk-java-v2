@@ -33,6 +33,7 @@ public interface AzureServiceBusDestination extends Destination {
 
     /**
      *  <p>SharedAccessKey is partially hidden on retrieval for security reasons.</p>
+     * @return connectionString
      */
     @NotNull
     @JsonProperty("connectionString")

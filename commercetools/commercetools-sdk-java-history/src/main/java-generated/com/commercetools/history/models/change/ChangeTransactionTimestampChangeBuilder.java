@@ -35,6 +35,8 @@ public class ChangeTransactionTimestampChangeBuilder implements Builder<ChangeTr
 
     /**
      *  <p>Update action for <code>changeTransactionTimestamp</code> on payments</p>
+     * @param change
+     * @return Builder
      */
 
     public ChangeTransactionTimestampChangeBuilder change(final String change) {
@@ -44,6 +46,7 @@ public class ChangeTransactionTimestampChangeBuilder implements Builder<ChangeTr
 
     /**
      *
+     * @return Builder
      */
 
     public ChangeTransactionTimestampChangeBuilder transaction(
@@ -56,6 +59,8 @@ public class ChangeTransactionTimestampChangeBuilder implements Builder<ChangeTr
 
     /**
      *
+     * @param transaction
+     * @return Builder
      */
 
     public ChangeTransactionTimestampChangeBuilder transaction(
@@ -66,6 +71,8 @@ public class ChangeTransactionTimestampChangeBuilder implements Builder<ChangeTr
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public ChangeTransactionTimestampChangeBuilder nextValue(final String nextValue) {
@@ -75,6 +82,8 @@ public class ChangeTransactionTimestampChangeBuilder implements Builder<ChangeTr
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public ChangeTransactionTimestampChangeBuilder previousValue(final String previousValue) {

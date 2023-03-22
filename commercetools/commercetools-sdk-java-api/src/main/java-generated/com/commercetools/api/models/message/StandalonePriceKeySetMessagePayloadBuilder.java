@@ -30,6 +30,8 @@ public class StandalonePriceKeySetMessagePayloadBuilder implements Builder<Stand
 
     /**
      *  <p><code>key</code> value of the StandalonePrice after the Set Key update action.</p>
+     * @param key
+     * @return Builder
      */
 
     public StandalonePriceKeySetMessagePayloadBuilder key(@Nullable final String key) {
@@ -39,6 +41,8 @@ public class StandalonePriceKeySetMessagePayloadBuilder implements Builder<Stand
 
     /**
      *  <p><code>key</code> value of the StandalonePrice before the Set Key update action.</p>
+     * @param oldKey
+     * @return Builder
      */
 
     public StandalonePriceKeySetMessagePayloadBuilder oldKey(@Nullable final String oldKey) {

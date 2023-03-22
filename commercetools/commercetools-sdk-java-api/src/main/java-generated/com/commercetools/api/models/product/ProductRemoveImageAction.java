@@ -33,6 +33,7 @@ public interface ProductRemoveImageAction extends ProductUpdateAction {
 
     /**
      *  <p>The <code>id</code> of the ProductVariant to update.</p>
+     * @return variantId
      */
 
     @JsonProperty("variantId")
@@ -40,6 +41,7 @@ public interface ProductRemoveImageAction extends ProductUpdateAction {
 
     /**
      *  <p>The <code>sku</code> of the ProductVariant to update.</p>
+     * @return sku
      */
 
     @JsonProperty("sku")
@@ -47,6 +49,7 @@ public interface ProductRemoveImageAction extends ProductUpdateAction {
 
     /**
      *  <p>The URL of the image to remove.</p>
+     * @return imageUrl
      */
     @NotNull
     @JsonProperty("imageUrl")
@@ -54,6 +57,7 @@ public interface ProductRemoveImageAction extends ProductUpdateAction {
 
     /**
      *  <p>If <code>true</code>, only the staged image is removed. If <code>false</code>, both the current and staged image is removed.</p>
+     * @return staged
      */
 
     @JsonProperty("staged")

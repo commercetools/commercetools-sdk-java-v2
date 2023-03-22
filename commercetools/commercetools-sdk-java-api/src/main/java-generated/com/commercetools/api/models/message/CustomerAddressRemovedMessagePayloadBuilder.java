@@ -26,6 +26,7 @@ public class CustomerAddressRemovedMessagePayloadBuilder implements Builder<Cust
 
     /**
      *  <p>Address that was removed during the Remove Address update action.</p>
+     * @return Builder
      */
 
     public CustomerAddressRemovedMessagePayloadBuilder address(
@@ -36,6 +37,8 @@ public class CustomerAddressRemovedMessagePayloadBuilder implements Builder<Cust
 
     /**
      *  <p>Address that was removed during the Remove Address update action.</p>
+     * @param address
+     * @return Builder
      */
 
     public CustomerAddressRemovedMessagePayloadBuilder address(

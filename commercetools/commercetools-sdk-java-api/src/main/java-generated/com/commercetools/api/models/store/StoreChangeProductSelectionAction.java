@@ -35,6 +35,7 @@ public interface StoreChangeProductSelectionAction extends StoreUpdateAction {
 
     /**
      *  <p>Current Product Selection of the Store to be activated or deactivated.</p>
+     * @return productSelection
      */
     @NotNull
     @Valid
@@ -43,6 +44,7 @@ public interface StoreChangeProductSelectionAction extends StoreUpdateAction {
 
     /**
      *  <p>Set to <code>true</code> if all Products assigned to the Product Selection should become part of the Store's assortment.</p>
+     * @return active
      */
 
     @JsonProperty("active")

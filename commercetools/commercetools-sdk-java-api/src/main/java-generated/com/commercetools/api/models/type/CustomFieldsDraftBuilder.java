@@ -31,6 +31,7 @@ public class CustomFieldsDraftBuilder implements Builder<CustomFieldsDraft> {
 
     /**
      *  <p><code>id</code> or <code>key</code> of the Type.</p>
+     * @return Builder
      */
 
     public CustomFieldsDraftBuilder type(
@@ -41,6 +42,8 @@ public class CustomFieldsDraftBuilder implements Builder<CustomFieldsDraft> {
 
     /**
      *  <p><code>id</code> or <code>key</code> of the Type.</p>
+     * @param type
+     * @return Builder
      */
 
     public CustomFieldsDraftBuilder type(final com.commercetools.api.models.type.TypeResourceIdentifier type) {
@@ -50,6 +53,7 @@ public class CustomFieldsDraftBuilder implements Builder<CustomFieldsDraft> {
 
     /**
      *  <p>Object containing the Custom Fields for the customized resource or data type.</p>
+     * @return Builder
      */
 
     public CustomFieldsDraftBuilder fields(
@@ -60,6 +64,8 @@ public class CustomFieldsDraftBuilder implements Builder<CustomFieldsDraft> {
 
     /**
      *  <p>Object containing the Custom Fields for the customized resource or data type.</p>
+     * @param fields
+     * @return Builder
      */
 
     public CustomFieldsDraftBuilder fields(@Nullable final com.commercetools.api.models.type.FieldContainer fields) {

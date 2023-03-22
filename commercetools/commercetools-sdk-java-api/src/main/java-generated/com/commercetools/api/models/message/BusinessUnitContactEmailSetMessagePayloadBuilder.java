@@ -28,6 +28,8 @@ public class BusinessUnitContactEmailSetMessagePayloadBuilder
 
     /**
      *  <p>The contact email that was updated on the Business Unit.</p>
+     * @param contactEmail
+     * @return Builder
      */
 
     public BusinessUnitContactEmailSetMessagePayloadBuilder contactEmail(@Nullable final String contactEmail) {

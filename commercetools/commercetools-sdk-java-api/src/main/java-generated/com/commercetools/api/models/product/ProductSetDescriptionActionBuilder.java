@@ -31,6 +31,7 @@ public class ProductSetDescriptionActionBuilder implements Builder<ProductSetDes
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
+     * @return Builder
      */
 
     public ProductSetDescriptionActionBuilder description(
@@ -41,6 +42,8 @@ public class ProductSetDescriptionActionBuilder implements Builder<ProductSetDes
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
+     * @param description
+     * @return Builder
      */
 
     public ProductSetDescriptionActionBuilder description(
@@ -51,6 +54,8 @@ public class ProductSetDescriptionActionBuilder implements Builder<ProductSetDes
 
     /**
      *  <p>If <code>true</code>, only the staged <code>description</code> is updated. If <code>false</code>, both the current and staged <code>description</code> are updated.</p>
+     * @param staged
+     * @return Builder
      */
 
     public ProductSetDescriptionActionBuilder staged(@Nullable final Boolean staged) {

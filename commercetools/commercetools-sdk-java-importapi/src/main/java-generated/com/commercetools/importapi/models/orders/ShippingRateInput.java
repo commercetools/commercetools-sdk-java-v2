@@ -36,6 +36,7 @@ public interface ShippingRateInput {
 
     /**
      *
+     * @return type
      */
     @NotNull
     @JsonProperty("type")

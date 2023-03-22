@@ -71,6 +71,7 @@ public interface Quote extends BaseResource, QuoteMixin, com.commercetools.api.m
 
     /**
      *  <p>Unique identifier of the Quote.</p>
+     * @return id
      */
     @NotNull
     @JsonProperty("id")
@@ -78,6 +79,7 @@ public interface Quote extends BaseResource, QuoteMixin, com.commercetools.api.m
 
     /**
      *  <p>Current version of the Quote.</p>
+     * @return version
      */
     @NotNull
     @JsonProperty("version")
@@ -85,6 +87,7 @@ public interface Quote extends BaseResource, QuoteMixin, com.commercetools.api.m
 
     /**
      *  <p>User-defined unique identifier of the Quote.</p>
+     * @return key
      */
 
     @JsonProperty("key")
@@ -92,6 +95,7 @@ public interface Quote extends BaseResource, QuoteMixin, com.commercetools.api.m
 
     /**
      *  <p>Date and time (UTC) the Quote was initially created.</p>
+     * @return createdAt
      */
     @NotNull
     @JsonProperty("createdAt")
@@ -99,6 +103,7 @@ public interface Quote extends BaseResource, QuoteMixin, com.commercetools.api.m
 
     /**
      *  <p>Date and time (UTC) the Quote was last updated.</p>
+     * @return lastModifiedAt
      */
     @NotNull
     @JsonProperty("lastModifiedAt")
@@ -106,6 +111,7 @@ public interface Quote extends BaseResource, QuoteMixin, com.commercetools.api.m
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @return lastModifiedBy
      */
     @Valid
     @JsonProperty("lastModifiedBy")
@@ -113,6 +119,7 @@ public interface Quote extends BaseResource, QuoteMixin, com.commercetools.api.m
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @return createdBy
      */
     @Valid
     @JsonProperty("createdBy")
@@ -120,6 +127,7 @@ public interface Quote extends BaseResource, QuoteMixin, com.commercetools.api.m
 
     /**
      *  <p>Quote Request related to the Quote.</p>
+     * @return quoteRequest
      */
     @NotNull
     @Valid
@@ -128,6 +136,7 @@ public interface Quote extends BaseResource, QuoteMixin, com.commercetools.api.m
 
     /**
      *  <p>Staged Quote related to the Quote.</p>
+     * @return stagedQuote
      */
     @NotNull
     @Valid
@@ -136,6 +145,7 @@ public interface Quote extends BaseResource, QuoteMixin, com.commercetools.api.m
 
     /**
      *  <p>The Buyer who requested the Quote.</p>
+     * @return customer
      */
     @Valid
     @JsonProperty("customer")
@@ -143,6 +153,7 @@ public interface Quote extends BaseResource, QuoteMixin, com.commercetools.api.m
 
     /**
      *  <p>Set automatically when <code>customer</code> is set and the Customer is a member of a Customer Group. Used for Product Variant price selection.</p>
+     * @return customerGroup
      */
     @Valid
     @JsonProperty("customerGroup")
@@ -150,6 +161,7 @@ public interface Quote extends BaseResource, QuoteMixin, com.commercetools.api.m
 
     /**
      *  <p>Expiration date for the Quote.</p>
+     * @return validTo
      */
 
     @JsonProperty("validTo")
@@ -157,6 +169,7 @@ public interface Quote extends BaseResource, QuoteMixin, com.commercetools.api.m
 
     /**
      *  <p>Message from the Seller included in the offer.</p>
+     * @return sellerComment
      */
 
     @JsonProperty("sellerComment")
@@ -164,6 +177,7 @@ public interface Quote extends BaseResource, QuoteMixin, com.commercetools.api.m
 
     /**
      *  <p>Message from the Buyer included in the renegotiation request.</p>
+     * @return buyerComment
      */
 
     @JsonProperty("buyerComment")
@@ -171,6 +185,7 @@ public interface Quote extends BaseResource, QuoteMixin, com.commercetools.api.m
 
     /**
      *  <p>The Store to which the Buyer belongs.</p>
+     * @return store
      */
     @Valid
     @JsonProperty("store")
@@ -178,6 +193,7 @@ public interface Quote extends BaseResource, QuoteMixin, com.commercetools.api.m
 
     /**
      *  <p>The Line Items for which the Quote is requested.</p>
+     * @return lineItems
      */
     @NotNull
     @Valid
@@ -186,6 +202,7 @@ public interface Quote extends BaseResource, QuoteMixin, com.commercetools.api.m
 
     /**
      *  <p>The Custom Line Items for which the Quote is requested.</p>
+     * @return customLineItems
      */
     @NotNull
     @Valid
@@ -194,6 +211,7 @@ public interface Quote extends BaseResource, QuoteMixin, com.commercetools.api.m
 
     /**
      *  <p>Sum of all <code>totalPrice</code> fields of the <code>lineItems</code> and <code>customLineItems</code>, as well as the <code>price</code> field of <code>shippingInfo</code> (if it exists). <code>totalPrice</code> may or may not include the taxes: it depends on the taxRate.includedInPrice property of each price.</p>
+     * @return totalPrice
      */
     @NotNull
     @Valid
@@ -202,6 +220,7 @@ public interface Quote extends BaseResource, QuoteMixin, com.commercetools.api.m
 
     /**
      *  <p>Not set until the shipping address is set. Will be set automatically in the <code>Platform</code> TaxMode. For the <code>External</code> tax mode it will be set as soon as the external tax rates for all line items, custom line items, and shipping in the cart are set.</p>
+     * @return taxedPrice
      */
     @Valid
     @JsonProperty("taxedPrice")
@@ -209,6 +228,7 @@ public interface Quote extends BaseResource, QuoteMixin, com.commercetools.api.m
 
     /**
      *  <p>Used to determine the eligible ShippingMethods and rates as well as the tax rate of the Line Items.</p>
+     * @return shippingAddress
      */
     @Valid
     @JsonProperty("shippingAddress")
@@ -216,6 +236,7 @@ public interface Quote extends BaseResource, QuoteMixin, com.commercetools.api.m
 
     /**
      *  <p>Address used for invoicing.</p>
+     * @return billingAddress
      */
     @Valid
     @JsonProperty("billingAddress")
@@ -223,6 +244,7 @@ public interface Quote extends BaseResource, QuoteMixin, com.commercetools.api.m
 
     /**
      *  <p>Inventory mode of the Cart referenced in the QuoteRequestDraft.</p>
+     * @return inventoryMode
      */
 
     @JsonProperty("inventoryMode")
@@ -230,6 +252,7 @@ public interface Quote extends BaseResource, QuoteMixin, com.commercetools.api.m
 
     /**
      *  <p>Tax mode of the Cart referenced in the QuoteRequestDraft.</p>
+     * @return taxMode
      */
     @NotNull
     @JsonProperty("taxMode")
@@ -237,6 +260,7 @@ public interface Quote extends BaseResource, QuoteMixin, com.commercetools.api.m
 
     /**
      *  <p>When calculating taxes for <code>taxedPrice</code>, the selected mode is used for rounding.</p>
+     * @return taxRoundingMode
      */
     @NotNull
     @JsonProperty("taxRoundingMode")
@@ -244,6 +268,7 @@ public interface Quote extends BaseResource, QuoteMixin, com.commercetools.api.m
 
     /**
      *  <p>When calculating taxes for <code>taxedPrice</code>, the selected mode is used for calculating the price with <code>LineItemLevel</code> (horizontally) or <code>UnitPriceLevel</code> (vertically) calculation mode.</p>
+     * @return taxCalculationMode
      */
     @NotNull
     @JsonProperty("taxCalculationMode")
@@ -251,6 +276,7 @@ public interface Quote extends BaseResource, QuoteMixin, com.commercetools.api.m
 
     /**
      *  <p>Used for Product Variant price selection.</p>
+     * @return country
      */
 
     @JsonProperty("country")
@@ -258,6 +284,7 @@ public interface Quote extends BaseResource, QuoteMixin, com.commercetools.api.m
 
     /**
      *  <p>Set automatically once the ShippingMethod is set.</p>
+     * @return shippingInfo
      */
     @Valid
     @JsonProperty("shippingInfo")
@@ -265,6 +292,7 @@ public interface Quote extends BaseResource, QuoteMixin, com.commercetools.api.m
 
     /**
      *  <p>Log of payment transactions related to the Quote.</p>
+     * @return paymentInfo
      */
     @Valid
     @JsonProperty("paymentInfo")
@@ -272,6 +300,7 @@ public interface Quote extends BaseResource, QuoteMixin, com.commercetools.api.m
 
     /**
      *  <p>Used to select a ShippingRatePriceTier.</p>
+     * @return shippingRateInput
      */
     @Valid
     @JsonProperty("shippingRateInput")
@@ -279,6 +308,7 @@ public interface Quote extends BaseResource, QuoteMixin, com.commercetools.api.m
 
     /**
      *  <p>Contains addresses for carts with multiple shipping addresses. Line items reference these addresses under their <code>shippingDetails</code>. The addresses captured here are not used to determine eligible shipping methods or the applicable tax rate. Only the cart's <code>shippingAddress</code> is used for this.</p>
+     * @return itemShippingAddresses
      */
     @Valid
     @JsonProperty("itemShippingAddresses")
@@ -286,6 +316,7 @@ public interface Quote extends BaseResource, QuoteMixin, com.commercetools.api.m
 
     /**
      *  <p>Discounts that are only valid for the Quote and cannot be associated to any other Cart or Order.</p>
+     * @return directDiscounts
      */
     @Valid
     @JsonProperty("directDiscounts")
@@ -293,6 +324,7 @@ public interface Quote extends BaseResource, QuoteMixin, com.commercetools.api.m
 
     /**
      *  <p>Custom Fields on the Quote.</p>
+     * @return custom
      */
     @Valid
     @JsonProperty("custom")
@@ -300,6 +332,7 @@ public interface Quote extends BaseResource, QuoteMixin, com.commercetools.api.m
 
     /**
      *  <p>Predefined states tracking the status of the Quote.</p>
+     * @return quoteState
      */
     @NotNull
     @JsonProperty("quoteState")
@@ -307,6 +340,7 @@ public interface Quote extends BaseResource, QuoteMixin, com.commercetools.api.m
 
     /**
      *  <p>State of the Quote. This reference can point to a State in a custom workflow.</p>
+     * @return state
      */
     @Valid
     @JsonProperty("state")
@@ -314,6 +348,7 @@ public interface Quote extends BaseResource, QuoteMixin, com.commercetools.api.m
 
     /**
      *  <p>The Purchase Order Number is typically set by the Buyer on a QuoteRequest to track the purchase order during the quote and order flow.</p>
+     * @return purchaseOrderNumber
      */
 
     @JsonProperty("purchaseOrderNumber")
@@ -321,6 +356,7 @@ public interface Quote extends BaseResource, QuoteMixin, com.commercetools.api.m
 
     /**
      *  <p>The BusinessUnit for the Quote.</p>
+     * @return businessUnit
      */
     @Valid
     @JsonProperty("businessUnit")

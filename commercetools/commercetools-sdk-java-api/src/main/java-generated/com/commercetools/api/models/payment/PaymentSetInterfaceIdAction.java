@@ -33,6 +33,7 @@ public interface PaymentSetInterfaceIdAction extends PaymentUpdateAction {
 
     /**
      *  <p>Value to set. Once set, the <code>interfaceId</code> cannot be changed.</p>
+     * @return interfaceId
      */
     @NotNull
     @JsonProperty("interfaceId")

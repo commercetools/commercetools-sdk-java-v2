@@ -38,6 +38,7 @@ public interface ShippingDraft
 
     /**
      *  <p>User-defined unique identifier for the Shipping in a Cart with <code>Multiple</code> ShippingMode.</p>
+     * @return key
      */
     @NotNull
     @JsonProperty("key")
@@ -45,6 +46,7 @@ public interface ShippingDraft
 
     /**
      *  <p>Shipping Methods added to the Cart with <code>Multiple</code> ShippingMode.</p>
+     * @return shippingMethod
      */
     @Valid
     @JsonProperty("shippingMethod")
@@ -52,6 +54,7 @@ public interface ShippingDraft
 
     /**
      *  <p>Determines the shipping rate and Tax Rate of the associated Line Items.</p>
+     * @return shippingAddress
      */
     @NotNull
     @Valid
@@ -65,6 +68,7 @@ public interface ShippingDraft
      *   <li>If <code>CartScore</code>, it must be ScoreShippingRateInputDraft.</li>
      *   <li>If <code>CartValue</code>, it cannot be set.</li>
      *  </ul>
+     * @return shippingRateInput
      */
     @Valid
     @JsonProperty("shippingRateInput")
@@ -72,6 +76,7 @@ public interface ShippingDraft
 
     /**
      *  <p>Tax Rate used for taxing a shipping expense if the Cart has the <code>External</code> TaxMode.</p>
+     * @return externalTaxRate
      */
     @Valid
     @JsonProperty("externalTaxRate")
@@ -79,6 +84,7 @@ public interface ShippingDraft
 
     /**
      *  <p>Deliveries to be shipped with the Shipping Method.</p>
+     * @return deliveries
      */
     @Valid
     @JsonProperty("deliveries")
@@ -86,6 +92,7 @@ public interface ShippingDraft
 
     /**
      *  <p>Custom Fields for Shipping.</p>
+     * @return custom
      */
     @Valid
     @JsonProperty("custom")

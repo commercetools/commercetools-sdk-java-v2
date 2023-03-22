@@ -36,6 +36,7 @@ public interface ProductDiscountMatchQuery {
 
     /**
      *  <p>ID of the specified Product.</p>
+     * @return productId
      */
     @NotNull
     @JsonProperty("productId")
@@ -43,6 +44,7 @@ public interface ProductDiscountMatchQuery {
 
     /**
      *  <p>ID of the specified Product Variant.</p>
+     * @return variantId
      */
     @NotNull
     @JsonProperty("variantId")
@@ -50,6 +52,7 @@ public interface ProductDiscountMatchQuery {
 
     /**
      *  <p>Controls which projected representation is applied for the query. Set to <code>true</code> for the <code>staged</code> Product Projection of the specified Product Variant, set to <code>false</code> for the <code>current</code> one.</p>
+     * @return staged
      */
     @NotNull
     @JsonProperty("staged")
@@ -57,6 +60,7 @@ public interface ProductDiscountMatchQuery {
 
     /**
      *  <p>Specified Price of the specified Product Variant.</p>
+     * @return price
      */
     @NotNull
     @Valid

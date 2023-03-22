@@ -27,6 +27,8 @@ public class ZoneSetKeyActionBuilder implements Builder<ZoneSetKeyAction> {
 
     /**
      *  <p>If <code>key</code> is absent or <code>null</code>, the existing key, if any, will be removed.</p>
+     * @param key
+     * @return Builder
      */
 
     public ZoneSetKeyActionBuilder key(@Nullable final String key) {

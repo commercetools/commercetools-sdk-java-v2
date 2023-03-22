@@ -55,6 +55,8 @@ public class MyDivisionDraftBuilder implements Builder<MyDivisionDraft> {
 
     /**
      *  <p>User-defined unique identifier for the BusinessUnit.</p>
+     * @param key
+     * @return Builder
      */
 
     public MyDivisionDraftBuilder key(final String key) {
@@ -64,6 +66,8 @@ public class MyDivisionDraftBuilder implements Builder<MyDivisionDraft> {
 
     /**
      *  <p>Name of the Business Unit.</p>
+     * @param name
+     * @return Builder
      */
 
     public MyDivisionDraftBuilder name(final String name) {
@@ -73,6 +77,8 @@ public class MyDivisionDraftBuilder implements Builder<MyDivisionDraft> {
 
     /**
      *  <p>Email address of the Business Unit.</p>
+     * @param contactEmail
+     * @return Builder
      */
 
     public MyDivisionDraftBuilder contactEmail(@Nullable final String contactEmail) {
@@ -82,6 +88,7 @@ public class MyDivisionDraftBuilder implements Builder<MyDivisionDraft> {
 
     /**
      *  <p>Custom Fields for the Business Unit.</p>
+     * @return Builder
      */
 
     public MyDivisionDraftBuilder custom(
@@ -92,6 +99,8 @@ public class MyDivisionDraftBuilder implements Builder<MyDivisionDraft> {
 
     /**
      *  <p>Custom Fields for the Business Unit.</p>
+     * @param custom
+     * @return Builder
      */
 
     public MyDivisionDraftBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFields custom) {
@@ -101,6 +110,8 @@ public class MyDivisionDraftBuilder implements Builder<MyDivisionDraft> {
 
     /**
      *  <p>Addresses used by the Business Unit.</p>
+     * @param addresses
+     * @return Builder
      */
 
     public MyDivisionDraftBuilder addresses(
@@ -111,6 +122,8 @@ public class MyDivisionDraftBuilder implements Builder<MyDivisionDraft> {
 
     /**
      *  <p>Addresses used by the Business Unit.</p>
+     * @param addresses
+     * @return Builder
      */
 
     public MyDivisionDraftBuilder addresses(
@@ -121,6 +134,8 @@ public class MyDivisionDraftBuilder implements Builder<MyDivisionDraft> {
 
     /**
      *  <p>Addresses used by the Business Unit.</p>
+     * @param addresses
+     * @return Builder
      */
 
     public MyDivisionDraftBuilder plusAddresses(
@@ -134,6 +149,7 @@ public class MyDivisionDraftBuilder implements Builder<MyDivisionDraft> {
 
     /**
      *  <p>Addresses used by the Business Unit.</p>
+     * @return Builder
      */
 
     public MyDivisionDraftBuilder plusAddresses(
@@ -147,6 +163,7 @@ public class MyDivisionDraftBuilder implements Builder<MyDivisionDraft> {
 
     /**
      *  <p>Addresses used by the Business Unit.</p>
+     * @return Builder
      */
 
     public MyDivisionDraftBuilder withAddresses(
@@ -158,6 +175,8 @@ public class MyDivisionDraftBuilder implements Builder<MyDivisionDraft> {
 
     /**
      *  <p>Indexes of entries in <code>addresses</code> to set as shipping addresses. The <code>shippingAddressIds</code> of the Customer will be replaced by these addresses.</p>
+     * @param shippingAddresses
+     * @return Builder
      */
 
     public MyDivisionDraftBuilder shippingAddresses(@Nullable final Integer... shippingAddresses) {
@@ -167,6 +186,8 @@ public class MyDivisionDraftBuilder implements Builder<MyDivisionDraft> {
 
     /**
      *  <p>Indexes of entries in <code>addresses</code> to set as shipping addresses. The <code>shippingAddressIds</code> of the Customer will be replaced by these addresses.</p>
+     * @param shippingAddresses
+     * @return Builder
      */
 
     public MyDivisionDraftBuilder shippingAddresses(@Nullable final java.util.List<Integer> shippingAddresses) {
@@ -176,6 +197,8 @@ public class MyDivisionDraftBuilder implements Builder<MyDivisionDraft> {
 
     /**
      *  <p>Indexes of entries in <code>addresses</code> to set as shipping addresses. The <code>shippingAddressIds</code> of the Customer will be replaced by these addresses.</p>
+     * @param shippingAddresses
+     * @return Builder
      */
 
     public MyDivisionDraftBuilder plusShippingAddresses(@Nullable final Integer... shippingAddresses) {
@@ -188,6 +211,8 @@ public class MyDivisionDraftBuilder implements Builder<MyDivisionDraft> {
 
     /**
      *  <p>Index of the entry in <code>addresses</code> to set as the default shipping address.</p>
+     * @param defaultShippingAddress
+     * @return Builder
      */
 
     public MyDivisionDraftBuilder defaultShippingAddress(@Nullable final Integer defaultShippingAddress) {
@@ -197,6 +222,8 @@ public class MyDivisionDraftBuilder implements Builder<MyDivisionDraft> {
 
     /**
      *  <p>Indexes of entries in <code>addresses</code> to set as billing addresses. The <code>billingAddressIds</code> of the Customer will be replaced by these addresses.</p>
+     * @param billingAddresses
+     * @return Builder
      */
 
     public MyDivisionDraftBuilder billingAddresses(@Nullable final Integer... billingAddresses) {
@@ -206,6 +233,8 @@ public class MyDivisionDraftBuilder implements Builder<MyDivisionDraft> {
 
     /**
      *  <p>Indexes of entries in <code>addresses</code> to set as billing addresses. The <code>billingAddressIds</code> of the Customer will be replaced by these addresses.</p>
+     * @param billingAddresses
+     * @return Builder
      */
 
     public MyDivisionDraftBuilder billingAddresses(@Nullable final java.util.List<Integer> billingAddresses) {
@@ -215,6 +244,8 @@ public class MyDivisionDraftBuilder implements Builder<MyDivisionDraft> {
 
     /**
      *  <p>Indexes of entries in <code>addresses</code> to set as billing addresses. The <code>billingAddressIds</code> of the Customer will be replaced by these addresses.</p>
+     * @param billingAddresses
+     * @return Builder
      */
 
     public MyDivisionDraftBuilder plusBillingAddresses(@Nullable final Integer... billingAddresses) {
@@ -227,6 +258,8 @@ public class MyDivisionDraftBuilder implements Builder<MyDivisionDraft> {
 
     /**
      *  <p>Index of the entry in <code>addresses</code> to set as the default billing address.</p>
+     * @param defaultBillingAddress
+     * @return Builder
      */
 
     public MyDivisionDraftBuilder defaultBillingAddress(@Nullable final Integer defaultBillingAddress) {
@@ -236,6 +269,7 @@ public class MyDivisionDraftBuilder implements Builder<MyDivisionDraft> {
 
     /**
      *  <p>The parent unit of this Division. Can be a Company or a Division.</p>
+     * @return Builder
      */
 
     public MyDivisionDraftBuilder parentUnit(
@@ -248,6 +282,8 @@ public class MyDivisionDraftBuilder implements Builder<MyDivisionDraft> {
 
     /**
      *  <p>The parent unit of this Division. Can be a Company or a Division.</p>
+     * @param parentUnit
+     * @return Builder
      */
 
     public MyDivisionDraftBuilder parentUnit(

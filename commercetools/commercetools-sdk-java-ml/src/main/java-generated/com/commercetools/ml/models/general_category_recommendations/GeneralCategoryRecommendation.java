@@ -32,6 +32,7 @@ public interface GeneralCategoryRecommendation {
 
     /**
      *  <p>An English category name that is recommended for a product.</p>
+     * @return categoryName
      */
     @NotNull
     @JsonProperty("categoryName")
@@ -39,6 +40,7 @@ public interface GeneralCategoryRecommendation {
 
     /**
      *  <p>Probability score for the category recommendation.</p>
+     * @return confidence
      */
     @NotNull
     @JsonProperty("confidence")

@@ -31,6 +31,7 @@ public interface MyCartSetDeleteDaysAfterLastModificationAction extends MyCartUp
 
     /**
      *  <p>Value to set. If not provided, the default value for this field configured in Project settings is assigned.</p>
+     * @return deleteDaysAfterLastModification
      */
 
     @JsonProperty("deleteDaysAfterLastModification")

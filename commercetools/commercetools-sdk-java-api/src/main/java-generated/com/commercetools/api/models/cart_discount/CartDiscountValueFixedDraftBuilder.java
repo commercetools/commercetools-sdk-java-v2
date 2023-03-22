@@ -26,6 +26,8 @@ public class CartDiscountValueFixedDraftBuilder implements Builder<CartDiscountV
 
     /**
      *  <p>Money values in different currencies. A fixed Cart Discount will only match a price if this array contains a value with the same currency. If it contains 10&euro; and 15$, the matching &euro; price will be discounted by 10&euro; and the matching $ price will be discounted to 15$.</p>
+     * @param money
+     * @return Builder
      */
 
     public CartDiscountValueFixedDraftBuilder money(final com.commercetools.api.models.common.Money... money) {
@@ -35,6 +37,8 @@ public class CartDiscountValueFixedDraftBuilder implements Builder<CartDiscountV
 
     /**
      *  <p>Money values in different currencies. A fixed Cart Discount will only match a price if this array contains a value with the same currency. If it contains 10&euro; and 15$, the matching &euro; price will be discounted by 10&euro; and the matching $ price will be discounted to 15$.</p>
+     * @param money
+     * @return Builder
      */
 
     public CartDiscountValueFixedDraftBuilder money(
@@ -45,6 +49,8 @@ public class CartDiscountValueFixedDraftBuilder implements Builder<CartDiscountV
 
     /**
      *  <p>Money values in different currencies. A fixed Cart Discount will only match a price if this array contains a value with the same currency. If it contains 10&euro; and 15$, the matching &euro; price will be discounted by 10&euro; and the matching $ price will be discounted to 15$.</p>
+     * @param money
+     * @return Builder
      */
 
     public CartDiscountValueFixedDraftBuilder plusMoney(final com.commercetools.api.models.common.Money... money) {
@@ -57,6 +63,7 @@ public class CartDiscountValueFixedDraftBuilder implements Builder<CartDiscountV
 
     /**
      *  <p>Money values in different currencies. A fixed Cart Discount will only match a price if this array contains a value with the same currency. If it contains 10&euro; and 15$, the matching &euro; price will be discounted by 10&euro; and the matching $ price will be discounted to 15$.</p>
+     * @return Builder
      */
 
     public CartDiscountValueFixedDraftBuilder plusMoney(
@@ -70,6 +77,7 @@ public class CartDiscountValueFixedDraftBuilder implements Builder<CartDiscountV
 
     /**
      *  <p>Money values in different currencies. A fixed Cart Discount will only match a price if this array contains a value with the same currency. If it contains 10&euro; and 15$, the matching &euro; price will be discounted by 10&euro; and the matching $ price will be discounted to 15$.</p>
+     * @return Builder
      */
 
     public CartDiscountValueFixedDraftBuilder withMoney(

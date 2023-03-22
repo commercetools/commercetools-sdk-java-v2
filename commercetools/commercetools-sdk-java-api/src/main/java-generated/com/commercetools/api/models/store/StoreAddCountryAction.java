@@ -35,6 +35,7 @@ public interface StoreAddCountryAction extends StoreUpdateAction {
 
     /**
      *  <p>Value to append to <code>countries</code>.</p>
+     * @return country
      */
     @NotNull
     @Valid

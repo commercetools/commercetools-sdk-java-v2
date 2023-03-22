@@ -25,6 +25,8 @@ public class InvalidJsonInputBuilder implements Builder<InvalidJsonInput> {
 
     /**
      *
+     * @param message
+     * @return Builder
      */
 
     public InvalidJsonInputBuilder message(final String message) {

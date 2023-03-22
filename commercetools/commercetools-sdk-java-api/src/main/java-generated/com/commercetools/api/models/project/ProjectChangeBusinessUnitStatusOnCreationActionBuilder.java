@@ -26,6 +26,8 @@ public class ProjectChangeBusinessUnitStatusOnCreationActionBuilder
 
     /**
      *  <p>Status for Business Units created using the My Business Unit endpoint.</p>
+     * @param status
+     * @return Builder
      */
 
     public ProjectChangeBusinessUnitStatusOnCreationActionBuilder status(

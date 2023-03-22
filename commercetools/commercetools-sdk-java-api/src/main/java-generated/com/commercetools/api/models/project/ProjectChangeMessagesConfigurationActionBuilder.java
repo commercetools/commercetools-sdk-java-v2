@@ -27,6 +27,7 @@ public class ProjectChangeMessagesConfigurationActionBuilder
 
     /**
      *  <p>Configuration for the Messages Query feature.</p>
+     * @return Builder
      */
 
     public ProjectChangeMessagesConfigurationActionBuilder messagesConfiguration(
@@ -39,6 +40,8 @@ public class ProjectChangeMessagesConfigurationActionBuilder
 
     /**
      *  <p>Configuration for the Messages Query feature.</p>
+     * @param messagesConfiguration
+     * @return Builder
      */
 
     public ProjectChangeMessagesConfigurationActionBuilder messagesConfiguration(

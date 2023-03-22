@@ -32,6 +32,8 @@ public class OrderShippingRateInputSetMessagePayloadBuilder
 
     /**
      *  <p>ShippingRateInput after the Set ShippingRateInput update action.</p>
+     * @param shippingRateInput
+     * @return Builder
      */
 
     public OrderShippingRateInputSetMessagePayloadBuilder shippingRateInput(
@@ -42,6 +44,7 @@ public class OrderShippingRateInputSetMessagePayloadBuilder
 
     /**
      *  <p>ShippingRateInput after the Set ShippingRateInput update action.</p>
+     * @return Builder
      */
 
     public OrderShippingRateInputSetMessagePayloadBuilder shippingRateInput(
@@ -52,6 +55,8 @@ public class OrderShippingRateInputSetMessagePayloadBuilder
 
     /**
      *  <p>ShippingRateInput before the Set ShippingRateInput update action.</p>
+     * @param oldShippingRateInput
+     * @return Builder
      */
 
     public OrderShippingRateInputSetMessagePayloadBuilder oldShippingRateInput(
@@ -62,6 +67,7 @@ public class OrderShippingRateInputSetMessagePayloadBuilder
 
     /**
      *  <p>ShippingRateInput before the Set ShippingRateInput update action.</p>
+     * @return Builder
      */
 
     public OrderShippingRateInputSetMessagePayloadBuilder oldShippingRateInput(

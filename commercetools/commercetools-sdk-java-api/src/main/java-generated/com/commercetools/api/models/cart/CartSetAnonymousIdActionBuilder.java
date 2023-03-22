@@ -27,6 +27,8 @@ public class CartSetAnonymousIdActionBuilder implements Builder<CartSetAnonymous
 
     /**
      *  <p>Value to set. If empty, any existing value is removed.</p>
+     * @param anonymousId
+     * @return Builder
      */
 
     public CartSetAnonymousIdActionBuilder anonymousId(@Nullable final String anonymousId) {

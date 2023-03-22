@@ -34,6 +34,7 @@ public interface CartChangeCustomLineItemPriceModeAction extends CartUpdateActio
 
     /**
      *  <p><code>id</code> of the CustomLineItem to update.</p>
+     * @return customLineItemId
      */
     @NotNull
     @JsonProperty("customLineItemId")
@@ -41,6 +42,7 @@ public interface CartChangeCustomLineItemPriceModeAction extends CartUpdateActio
 
     /**
      *  <p>New value to set. Must not be empty.</p>
+     * @return mode
      */
     @NotNull
     @JsonProperty("mode")

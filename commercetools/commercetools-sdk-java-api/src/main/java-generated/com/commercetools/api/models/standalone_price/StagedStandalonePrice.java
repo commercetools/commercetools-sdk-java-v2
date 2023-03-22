@@ -34,6 +34,7 @@ public interface StagedStandalonePrice {
 
     /**
      *  <p>Money value of the StagedStandalonePrice.</p>
+     * @return value
      */
     @NotNull
     @Valid
@@ -42,6 +43,7 @@ public interface StagedStandalonePrice {
 
     /**
      *  <p>Discounted price for the StagedStandalonePrice.</p>
+     * @return discounted
      */
     @Valid
     @JsonProperty("discounted")

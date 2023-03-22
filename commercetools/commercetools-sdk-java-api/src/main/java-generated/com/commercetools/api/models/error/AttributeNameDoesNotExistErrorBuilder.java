@@ -30,6 +30,8 @@ public class AttributeNameDoesNotExistErrorBuilder implements Builder<AttributeN
 
     /**
      *  <p><code>"Attribute definition for $attributeName does not exist on type $typeName."</code></p>
+     * @param message
+     * @return Builder
      */
 
     public AttributeNameDoesNotExistErrorBuilder message(final String message) {
@@ -60,6 +62,8 @@ public class AttributeNameDoesNotExistErrorBuilder implements Builder<AttributeN
 
     /**
      *  <p>Non-existent Attribute name.</p>
+     * @param invalidAttributeName
+     * @return Builder
      */
 
     public AttributeNameDoesNotExistErrorBuilder invalidAttributeName(final String invalidAttributeName) {

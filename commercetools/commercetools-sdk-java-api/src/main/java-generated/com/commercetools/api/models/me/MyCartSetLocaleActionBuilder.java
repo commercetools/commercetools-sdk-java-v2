@@ -27,6 +27,8 @@ public class MyCartSetLocaleActionBuilder implements Builder<MyCartSetLocaleActi
 
     /**
      *  <p>Value to set. Must be one of the Project's <code>languages</code>. If empty, any existing value will be removed.</p>
+     * @param locale
+     * @return Builder
      */
 
     public MyCartSetLocaleActionBuilder locale(@Nullable final String locale) {

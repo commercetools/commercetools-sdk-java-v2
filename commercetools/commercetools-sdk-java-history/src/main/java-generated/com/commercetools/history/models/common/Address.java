@@ -55,6 +55,7 @@ public interface Address {
 
     /**
      *  <p>Unique ID of the Address.</p>
+     * @return id
      */
     @NotNull
     @JsonProperty("id")
@@ -62,6 +63,7 @@ public interface Address {
 
     /**
      *
+     * @return key
      */
     @NotNull
     @JsonProperty("key")
@@ -69,6 +71,7 @@ public interface Address {
 
     /**
      *
+     * @return title
      */
     @NotNull
     @JsonProperty("title")
@@ -76,6 +79,7 @@ public interface Address {
 
     /**
      *
+     * @return salutation
      */
     @NotNull
     @JsonProperty("salutation")
@@ -83,6 +87,7 @@ public interface Address {
 
     /**
      *
+     * @return firstName
      */
     @NotNull
     @JsonProperty("firstName")
@@ -90,6 +95,7 @@ public interface Address {
 
     /**
      *
+     * @return lastName
      */
     @NotNull
     @JsonProperty("lastName")
@@ -97,6 +103,7 @@ public interface Address {
 
     /**
      *
+     * @return streetName
      */
     @NotNull
     @JsonProperty("streetName")
@@ -104,6 +111,7 @@ public interface Address {
 
     /**
      *
+     * @return streetNumber
      */
     @NotNull
     @JsonProperty("streetNumber")
@@ -111,6 +119,7 @@ public interface Address {
 
     /**
      *
+     * @return additionalStreetInfo
      */
     @NotNull
     @JsonProperty("additionalStreetInfo")
@@ -118,6 +127,7 @@ public interface Address {
 
     /**
      *
+     * @return postalCode
      */
     @NotNull
     @JsonProperty("postalCode")
@@ -125,6 +135,7 @@ public interface Address {
 
     /**
      *
+     * @return city
      */
     @NotNull
     @JsonProperty("city")
@@ -132,6 +143,7 @@ public interface Address {
 
     /**
      *
+     * @return region
      */
     @NotNull
     @JsonProperty("region")
@@ -139,6 +151,7 @@ public interface Address {
 
     /**
      *
+     * @return state
      */
     @NotNull
     @JsonProperty("state")
@@ -146,6 +159,7 @@ public interface Address {
 
     /**
      *  <p>Two-digit country code as per ISO 3166-1 alpha-2.</p>
+     * @return country
      */
     @NotNull
     @JsonProperty("country")
@@ -153,6 +167,7 @@ public interface Address {
 
     /**
      *
+     * @return company
      */
     @NotNull
     @JsonProperty("company")
@@ -160,6 +175,7 @@ public interface Address {
 
     /**
      *
+     * @return department
      */
     @NotNull
     @JsonProperty("department")
@@ -167,6 +183,7 @@ public interface Address {
 
     /**
      *
+     * @return building
      */
     @NotNull
     @JsonProperty("building")
@@ -174,6 +191,7 @@ public interface Address {
 
     /**
      *
+     * @return apartment
      */
     @NotNull
     @JsonProperty("apartment")
@@ -181,6 +199,7 @@ public interface Address {
 
     /**
      *
+     * @return pOBox
      */
     @NotNull
     @JsonProperty("pOBox")
@@ -188,6 +207,7 @@ public interface Address {
 
     /**
      *
+     * @return phone
      */
     @NotNull
     @JsonProperty("phone")
@@ -195,6 +215,7 @@ public interface Address {
 
     /**
      *
+     * @return mobile
      */
     @NotNull
     @JsonProperty("mobile")
@@ -202,6 +223,7 @@ public interface Address {
 
     /**
      *
+     * @return email
      */
     @NotNull
     @JsonProperty("email")
@@ -209,6 +231,7 @@ public interface Address {
 
     /**
      *
+     * @return fax
      */
     @NotNull
     @JsonProperty("fax")
@@ -216,6 +239,7 @@ public interface Address {
 
     /**
      *
+     * @return additionalAddressInfo
      */
     @NotNull
     @JsonProperty("additionalAddressInfo")
@@ -223,6 +247,7 @@ public interface Address {
 
     /**
      *
+     * @return externalId
      */
     @NotNull
     @JsonProperty("externalId")

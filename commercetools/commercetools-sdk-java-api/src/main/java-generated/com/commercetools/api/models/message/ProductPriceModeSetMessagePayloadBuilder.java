@@ -25,6 +25,8 @@ public class ProductPriceModeSetMessagePayloadBuilder implements Builder<Product
 
     /**
      *  <p>The PriceMode that was set.</p>
+     * @param to
+     * @return Builder
      */
 
     public ProductPriceModeSetMessagePayloadBuilder to(

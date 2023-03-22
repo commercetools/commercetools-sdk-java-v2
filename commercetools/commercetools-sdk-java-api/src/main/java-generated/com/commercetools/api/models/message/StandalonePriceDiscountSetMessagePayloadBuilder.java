@@ -29,6 +29,7 @@ public class StandalonePriceDiscountSetMessagePayloadBuilder
 
     /**
      *  <p>The new <code>discounted</code> value of the updated StandalonePrice.</p>
+     * @return Builder
      */
 
     public StandalonePriceDiscountSetMessagePayloadBuilder discounted(
@@ -39,6 +40,8 @@ public class StandalonePriceDiscountSetMessagePayloadBuilder
 
     /**
      *  <p>The new <code>discounted</code> value of the updated StandalonePrice.</p>
+     * @param discounted
+     * @return Builder
      */
 
     public StandalonePriceDiscountSetMessagePayloadBuilder discounted(

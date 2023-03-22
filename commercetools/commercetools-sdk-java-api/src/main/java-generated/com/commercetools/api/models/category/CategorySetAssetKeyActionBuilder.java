@@ -30,6 +30,8 @@ public class CategorySetAssetKeyActionBuilder implements Builder<CategorySetAsse
 
     /**
      *  <p>Value to set.</p>
+     * @param assetId
+     * @return Builder
      */
 
     public CategorySetAssetKeyActionBuilder assetId(final String assetId) {
@@ -39,6 +41,8 @@ public class CategorySetAssetKeyActionBuilder implements Builder<CategorySetAsse
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
+     * @param assetKey
+     * @return Builder
      */
 
     public CategorySetAssetKeyActionBuilder assetKey(@Nullable final String assetKey) {

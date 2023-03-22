@@ -32,6 +32,8 @@ public class ProductPriceRemovedMessagePayloadBuilder implements Builder<Product
 
     /**
      *  <p>Unique identifier of the ProductVariant for which the Price was removed.</p>
+     * @param variantId
+     * @return Builder
      */
 
     public ProductPriceRemovedMessagePayloadBuilder variantId(final Long variantId) {
@@ -41,6 +43,7 @@ public class ProductPriceRemovedMessagePayloadBuilder implements Builder<Product
 
     /**
      *  <p>The Embedded Price that was removed from the ProductVariant.</p>
+     * @return Builder
      */
 
     public ProductPriceRemovedMessagePayloadBuilder price(
@@ -51,6 +54,8 @@ public class ProductPriceRemovedMessagePayloadBuilder implements Builder<Product
 
     /**
      *  <p>The Embedded Price that was removed from the ProductVariant.</p>
+     * @param price
+     * @return Builder
      */
 
     public ProductPriceRemovedMessagePayloadBuilder price(final com.commercetools.api.models.common.Price price) {
@@ -60,6 +65,8 @@ public class ProductPriceRemovedMessagePayloadBuilder implements Builder<Product
 
     /**
      *  <p>Whether the update was only applied to the staged Product Projection.</p>
+     * @param staged
+     * @return Builder
      */
 
     public ProductPriceRemovedMessagePayloadBuilder staged(final Boolean staged) {

@@ -54,6 +54,8 @@ public class DuplicateStandalonePriceScopeErrorBuilder implements Builder<Duplic
 
     /**
      *  <p><code>"Duplicate standalone price scope for SKU: $sku. The combination of SKU, currency, country, customerGroup, channel, validFrom and validUntil must be unique for each standalone price."</code></p>
+     * @param message
+     * @return Builder
      */
 
     public DuplicateStandalonePriceScopeErrorBuilder message(final String message) {
@@ -84,6 +86,7 @@ public class DuplicateStandalonePriceScopeErrorBuilder implements Builder<Duplic
 
     /**
      *  <p>Reference to the conflicting Standalone Price.</p>
+     * @return Builder
      */
 
     public DuplicateStandalonePriceScopeErrorBuilder conflictingStandalonePrice(
@@ -96,6 +99,8 @@ public class DuplicateStandalonePriceScopeErrorBuilder implements Builder<Duplic
 
     /**
      *  <p>Reference to the conflicting Standalone Price.</p>
+     * @param conflictingStandalonePrice
+     * @return Builder
      */
 
     public DuplicateStandalonePriceScopeErrorBuilder conflictingStandalonePrice(
@@ -106,6 +111,8 @@ public class DuplicateStandalonePriceScopeErrorBuilder implements Builder<Duplic
 
     /**
      *  <p>SKU of the ProductVariant to which the conflicting Standalone Price is associated.</p>
+     * @param sku
+     * @return Builder
      */
 
     public DuplicateStandalonePriceScopeErrorBuilder sku(final String sku) {
@@ -115,6 +122,8 @@ public class DuplicateStandalonePriceScopeErrorBuilder implements Builder<Duplic
 
     /**
      *  <p>Currency code of the country.</p>
+     * @param currency
+     * @return Builder
      */
 
     public DuplicateStandalonePriceScopeErrorBuilder currency(final String currency) {
@@ -124,6 +133,8 @@ public class DuplicateStandalonePriceScopeErrorBuilder implements Builder<Duplic
 
     /**
      *  <p>Country code of the geographic location.</p>
+     * @param country
+     * @return Builder
      */
 
     public DuplicateStandalonePriceScopeErrorBuilder country(@Nullable final String country) {
@@ -133,6 +144,7 @@ public class DuplicateStandalonePriceScopeErrorBuilder implements Builder<Duplic
 
     /**
      *  <p>CustomerGroup for which the Standalone Price is valid.</p>
+     * @return Builder
      */
 
     public DuplicateStandalonePriceScopeErrorBuilder customerGroup(
@@ -145,6 +157,8 @@ public class DuplicateStandalonePriceScopeErrorBuilder implements Builder<Duplic
 
     /**
      *  <p>CustomerGroup for which the Standalone Price is valid.</p>
+     * @param customerGroup
+     * @return Builder
      */
 
     public DuplicateStandalonePriceScopeErrorBuilder customerGroup(
@@ -155,6 +169,7 @@ public class DuplicateStandalonePriceScopeErrorBuilder implements Builder<Duplic
 
     /**
      *  <p>Channel for which the Standalone Price is valid.</p>
+     * @return Builder
      */
 
     public DuplicateStandalonePriceScopeErrorBuilder channel(
@@ -166,6 +181,8 @@ public class DuplicateStandalonePriceScopeErrorBuilder implements Builder<Duplic
 
     /**
      *  <p>Channel for which the Standalone Price is valid.</p>
+     * @param channel
+     * @return Builder
      */
 
     public DuplicateStandalonePriceScopeErrorBuilder channel(
@@ -176,6 +193,8 @@ public class DuplicateStandalonePriceScopeErrorBuilder implements Builder<Duplic
 
     /**
      *  <p>Date and time (UTC) from which the Standalone Price is valid.</p>
+     * @param validFrom
+     * @return Builder
      */
 
     public DuplicateStandalonePriceScopeErrorBuilder validFrom(@Nullable final java.time.ZonedDateTime validFrom) {
@@ -185,6 +204,8 @@ public class DuplicateStandalonePriceScopeErrorBuilder implements Builder<Duplic
 
     /**
      *  <p>Date and time (UTC) until which the Standalone Price is valid.</p>
+     * @param validUntil
+     * @return Builder
      */
 
     public DuplicateStandalonePriceScopeErrorBuilder validUntil(@Nullable final java.time.ZonedDateTime validUntil) {

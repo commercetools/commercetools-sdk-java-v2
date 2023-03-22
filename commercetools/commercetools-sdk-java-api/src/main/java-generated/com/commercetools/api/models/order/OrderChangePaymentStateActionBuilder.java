@@ -27,6 +27,8 @@ public class OrderChangePaymentStateActionBuilder implements Builder<OrderChange
 
     /**
      *
+     * @param paymentState
+     * @return Builder
      */
 
     public OrderChangePaymentStateActionBuilder paymentState(

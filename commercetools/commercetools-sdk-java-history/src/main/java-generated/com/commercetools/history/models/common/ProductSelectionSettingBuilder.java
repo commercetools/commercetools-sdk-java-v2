@@ -29,6 +29,7 @@ public class ProductSelectionSettingBuilder implements Builder<ProductSelectionS
 
     /**
      *
+     * @return Builder
      */
 
     public ProductSelectionSettingBuilder productSelection(
@@ -39,6 +40,8 @@ public class ProductSelectionSettingBuilder implements Builder<ProductSelectionS
 
     /**
      *
+     * @param productSelection
+     * @return Builder
      */
 
     public ProductSelectionSettingBuilder productSelection(
@@ -49,6 +52,8 @@ public class ProductSelectionSettingBuilder implements Builder<ProductSelectionS
 
     /**
      *
+     * @param active
+     * @return Builder
      */
 
     public ProductSelectionSettingBuilder active(final Boolean active) {

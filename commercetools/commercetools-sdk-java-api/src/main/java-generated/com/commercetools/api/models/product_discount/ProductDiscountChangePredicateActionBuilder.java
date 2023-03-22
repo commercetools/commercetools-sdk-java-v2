@@ -25,6 +25,8 @@ public class ProductDiscountChangePredicateActionBuilder implements Builder<Prod
 
     /**
      *  <p>New value to set. Must be a valid ProductDiscount predicate.</p>
+     * @param predicate
+     * @return Builder
      */
 
     public ProductDiscountChangePredicateActionBuilder predicate(final String predicate) {

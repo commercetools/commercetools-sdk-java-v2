@@ -29,6 +29,8 @@ public class ItemShippingDetailsBuilder implements Builder<ItemShippingDetails> 
 
     /**
      *  <p>Holds information on the quantity of Line Items or Custom Line Items and the address it is shipped.</p>
+     * @param targets
+     * @return Builder
      */
 
     public ItemShippingDetailsBuilder targets(final com.commercetools.api.models.cart.ItemShippingTarget... targets) {
@@ -38,6 +40,8 @@ public class ItemShippingDetailsBuilder implements Builder<ItemShippingDetails> 
 
     /**
      *  <p>Holds information on the quantity of Line Items or Custom Line Items and the address it is shipped.</p>
+     * @param targets
+     * @return Builder
      */
 
     public ItemShippingDetailsBuilder targets(
@@ -48,6 +52,8 @@ public class ItemShippingDetailsBuilder implements Builder<ItemShippingDetails> 
 
     /**
      *  <p>Holds information on the quantity of Line Items or Custom Line Items and the address it is shipped.</p>
+     * @param targets
+     * @return Builder
      */
 
     public ItemShippingDetailsBuilder plusTargets(
@@ -61,6 +67,7 @@ public class ItemShippingDetailsBuilder implements Builder<ItemShippingDetails> 
 
     /**
      *  <p>Holds information on the quantity of Line Items or Custom Line Items and the address it is shipped.</p>
+     * @return Builder
      */
 
     public ItemShippingDetailsBuilder plusTargets(
@@ -74,6 +81,7 @@ public class ItemShippingDetailsBuilder implements Builder<ItemShippingDetails> 
 
     /**
      *  <p>Holds information on the quantity of Line Items or Custom Line Items and the address it is shipped.</p>
+     * @return Builder
      */
 
     public ItemShippingDetailsBuilder withTargets(
@@ -88,6 +96,8 @@ public class ItemShippingDetailsBuilder implements Builder<ItemShippingDetails> 
      *   <li><code>true</code> if the quantity of Line Items or Custom Line Items is equal to the sum of sub-quantities defined in <code>targets</code>.</li>
      *   <li><code>false</code> if the quantity of Line Items or Custom Line Items is not equal to the sum of sub-quantities defined in <code>targets</code>. Ordering a Cart when the value is <code>false</code> returns an InvalidItemShippingDetails error.</li>
      *  </ul>
+     * @param valid
+     * @return Builder
      */
 
     public ItemShippingDetailsBuilder valid(final Boolean valid) {

@@ -35,6 +35,7 @@ public interface CartDiscountValueFixed extends CartDiscountValue {
 
     /**
      *  <p>Cent precision money values in different currencies.</p>
+     * @return money
      */
     @NotNull
     @Valid

@@ -35,6 +35,7 @@ public interface ProductVariantDraftImport {
 
     /**
      *
+     * @return sku
      */
 
     @JsonProperty("sku")
@@ -42,6 +43,7 @@ public interface ProductVariantDraftImport {
 
     /**
      *
+     * @return key
      */
     @NotNull
     @JsonProperty("key")
@@ -49,6 +51,7 @@ public interface ProductVariantDraftImport {
 
     /**
      *
+     * @return prices
      */
     @Valid
     @JsonProperty("prices")
@@ -56,6 +59,7 @@ public interface ProductVariantDraftImport {
 
     /**
      *
+     * @return attributes
      */
     @Valid
     @JsonProperty("attributes")
@@ -63,6 +67,7 @@ public interface ProductVariantDraftImport {
 
     /**
      *
+     * @return images
      */
     @Valid
     @JsonProperty("images")
@@ -70,6 +75,7 @@ public interface ProductVariantDraftImport {
 
     /**
      *
+     * @return assets
      */
     @Valid
     @JsonProperty("assets")

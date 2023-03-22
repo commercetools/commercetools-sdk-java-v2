@@ -34,6 +34,7 @@ public interface StagedQuoteReference extends Reference, com.commercetools.api.m
 
     /**
      *  <p>Contains the representation of the expanded StagedQuote. Only present in responses to requests with Reference Expansion for StagedQuote.</p>
+     * @return obj
      */
     @Valid
     @JsonProperty("obj")

@@ -34,6 +34,7 @@ public interface ShoppingListLineItemDraft
 
     /**
      *  <p>Unique identifier of a Product.</p>
+     * @return productId
      */
 
     @JsonProperty("productId")
@@ -41,6 +42,7 @@ public interface ShoppingListLineItemDraft
 
     /**
      *  <p><code>id</code> of the ProductVariant. If not set, the ShoppingListLineItem refers to the Master Variant.</p>
+     * @return variantId
      */
 
     @JsonProperty("variantId")
@@ -48,6 +50,7 @@ public interface ShoppingListLineItemDraft
 
     /**
      *  <p><code>sku</code> of the ProductVariant.</p>
+     * @return sku
      */
 
     @JsonProperty("sku")
@@ -55,6 +58,7 @@ public interface ShoppingListLineItemDraft
 
     /**
      *  <p>Date and time the ShoppingListLineItem is added to the ShoppingList. If not set, the current date and time (UTC) is used.</p>
+     * @return addedAt
      */
 
     @JsonProperty("addedAt")
@@ -62,6 +66,7 @@ public interface ShoppingListLineItemDraft
 
     /**
      *  <p>Custom Fields of the ShoppingListLineItem.</p>
+     * @return custom
      */
     @Valid
     @JsonProperty("custom")
@@ -69,6 +74,7 @@ public interface ShoppingListLineItemDraft
 
     /**
      *  <p>Number of Products in the ShoppingListLineItem.</p>
+     * @return quantity
      */
 
     @JsonProperty("quantity")

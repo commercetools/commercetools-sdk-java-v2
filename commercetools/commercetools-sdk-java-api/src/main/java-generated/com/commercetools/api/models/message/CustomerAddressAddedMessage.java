@@ -42,6 +42,7 @@ public interface CustomerAddressAddedMessage extends Message {
 
     /**
      *  <p>Address that was added during the Add Address update action.</p>
+     * @return address
      */
     @NotNull
     @Valid

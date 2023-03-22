@@ -33,6 +33,7 @@ public interface DeliveryDraft extends com.commercetools.api.models.Customizable
 
     /**
      *  <p>Items which are shipped in this delivery regardless their distribution over several parcels. Can also be specified individually for each Parcel.</p>
+     * @return items
      */
     @Valid
     @JsonProperty("items")
@@ -40,6 +41,7 @@ public interface DeliveryDraft extends com.commercetools.api.models.Customizable
 
     /**
      *
+     * @return parcels
      */
     @Valid
     @JsonProperty("parcels")
@@ -47,6 +49,7 @@ public interface DeliveryDraft extends com.commercetools.api.models.Customizable
 
     /**
      *
+     * @return address
      */
     @Valid
     @JsonProperty("address")
@@ -54,6 +57,7 @@ public interface DeliveryDraft extends com.commercetools.api.models.Customizable
 
     /**
      *  <p>Custom Fields for the Transaction.</p>
+     * @return custom
      */
     @Valid
     @JsonProperty("custom")

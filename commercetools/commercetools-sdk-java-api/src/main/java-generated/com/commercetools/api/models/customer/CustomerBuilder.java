@@ -115,6 +115,8 @@ public class CustomerBuilder implements Builder<Customer> {
 
     /**
      *  <p>Unique identifier of the Customer.</p>
+     * @param id
+     * @return Builder
      */
 
     public CustomerBuilder id(final String id) {
@@ -124,6 +126,8 @@ public class CustomerBuilder implements Builder<Customer> {
 
     /**
      *  <p>Current version of the Customer.</p>
+     * @param version
+     * @return Builder
      */
 
     public CustomerBuilder version(final Long version) {
@@ -133,6 +137,8 @@ public class CustomerBuilder implements Builder<Customer> {
 
     /**
      *  <p>Date and time (UTC) the Customer was initially created.</p>
+     * @param createdAt
+     * @return Builder
      */
 
     public CustomerBuilder createdAt(final java.time.ZonedDateTime createdAt) {
@@ -142,6 +148,8 @@ public class CustomerBuilder implements Builder<Customer> {
 
     /**
      *  <p>Date and time (UTC) the Customer was last updated.</p>
+     * @param lastModifiedAt
+     * @return Builder
      */
 
     public CustomerBuilder lastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {
@@ -151,6 +159,8 @@ public class CustomerBuilder implements Builder<Customer> {
 
     /**
      *  <p>User-defined unique identifier of the Customer.</p>
+     * @param key
+     * @return Builder
      */
 
     public CustomerBuilder key(@Nullable final String key) {
@@ -161,6 +171,8 @@ public class CustomerBuilder implements Builder<Customer> {
     /**
      *  <p>User-defined unique identifier of the Customer.</p>
      *  <p>Can be used to refer to a Customer in a human-readable way (in emails, invoices, and other correspondence).</p>
+     * @param customerNumber
+     * @return Builder
      */
 
     public CustomerBuilder customerNumber(@Nullable final String customerNumber) {
@@ -170,6 +182,8 @@ public class CustomerBuilder implements Builder<Customer> {
 
     /**
      *  <p>Optional identifier for use in external systems like Customer Relationship Management (CRM) or Enterprise Resource Planning (ERP).</p>
+     * @param externalId
+     * @return Builder
      */
 
     public CustomerBuilder externalId(@Nullable final String externalId) {
@@ -179,6 +193,7 @@ public class CustomerBuilder implements Builder<Customer> {
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @return Builder
      */
 
     public CustomerBuilder lastModifiedBy(
@@ -189,6 +204,8 @@ public class CustomerBuilder implements Builder<Customer> {
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param lastModifiedBy
+     * @return Builder
      */
 
     public CustomerBuilder lastModifiedBy(
@@ -199,6 +216,7 @@ public class CustomerBuilder implements Builder<Customer> {
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @return Builder
      */
 
     public CustomerBuilder createdBy(
@@ -209,6 +227,8 @@ public class CustomerBuilder implements Builder<Customer> {
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param createdBy
+     * @return Builder
      */
 
     public CustomerBuilder createdBy(@Nullable final com.commercetools.api.models.common.CreatedBy createdBy) {
@@ -218,6 +238,8 @@ public class CustomerBuilder implements Builder<Customer> {
 
     /**
      *  <p>Email address of the Customer that is unique for an entire Project or to a Store the Customer is assigned to. It is the mandatory unique identifier of a Customer.</p>
+     * @param email
+     * @return Builder
      */
 
     public CustomerBuilder email(final String email) {
@@ -227,6 +249,8 @@ public class CustomerBuilder implements Builder<Customer> {
 
     /**
      *  <p>Present only when <code>authenticationMode</code> is set to <code>Password</code>.</p>
+     * @param password
+     * @return Builder
      */
 
     public CustomerBuilder password(@Nullable final String password) {
@@ -236,6 +260,8 @@ public class CustomerBuilder implements Builder<Customer> {
 
     /**
      *  <p>Given name (first name) of the Customer.</p>
+     * @param firstName
+     * @return Builder
      */
 
     public CustomerBuilder firstName(@Nullable final String firstName) {
@@ -245,6 +271,8 @@ public class CustomerBuilder implements Builder<Customer> {
 
     /**
      *  <p>Family name (last name) of the Customer.</p>
+     * @param lastName
+     * @return Builder
      */
 
     public CustomerBuilder lastName(@Nullable final String lastName) {
@@ -254,6 +282,8 @@ public class CustomerBuilder implements Builder<Customer> {
 
     /**
      *  <p>Middle name of the Customer.</p>
+     * @param middleName
+     * @return Builder
      */
 
     public CustomerBuilder middleName(@Nullable final String middleName) {
@@ -263,6 +293,8 @@ public class CustomerBuilder implements Builder<Customer> {
 
     /**
      *  <p>Title of the Customer, for example, 'Dr.'.</p>
+     * @param title
+     * @return Builder
      */
 
     public CustomerBuilder title(@Nullable final String title) {
@@ -272,6 +304,8 @@ public class CustomerBuilder implements Builder<Customer> {
 
     /**
      *  <p>Date of birth of the Customer.</p>
+     * @param dateOfBirth
+     * @return Builder
      */
 
     public CustomerBuilder dateOfBirth(@Nullable final java.time.LocalDate dateOfBirth) {
@@ -281,6 +315,8 @@ public class CustomerBuilder implements Builder<Customer> {
 
     /**
      *  <p>Company name of the Customer.</p>
+     * @param companyName
+     * @return Builder
      */
 
     public CustomerBuilder companyName(@Nullable final String companyName) {
@@ -290,6 +326,8 @@ public class CustomerBuilder implements Builder<Customer> {
 
     /**
      *  <p>Unique VAT ID of the Customer.</p>
+     * @param vatId
+     * @return Builder
      */
 
     public CustomerBuilder vatId(@Nullable final String vatId) {
@@ -299,6 +337,8 @@ public class CustomerBuilder implements Builder<Customer> {
 
     /**
      *  <p>Addresses used by the Customer.</p>
+     * @param addresses
+     * @return Builder
      */
 
     public CustomerBuilder addresses(final com.commercetools.api.models.common.Address... addresses) {
@@ -308,6 +348,8 @@ public class CustomerBuilder implements Builder<Customer> {
 
     /**
      *  <p>Addresses used by the Customer.</p>
+     * @param addresses
+     * @return Builder
      */
 
     public CustomerBuilder addresses(final java.util.List<com.commercetools.api.models.common.Address> addresses) {
@@ -317,6 +359,8 @@ public class CustomerBuilder implements Builder<Customer> {
 
     /**
      *  <p>Addresses used by the Customer.</p>
+     * @param addresses
+     * @return Builder
      */
 
     public CustomerBuilder plusAddresses(final com.commercetools.api.models.common.Address... addresses) {
@@ -329,6 +373,7 @@ public class CustomerBuilder implements Builder<Customer> {
 
     /**
      *  <p>Addresses used by the Customer.</p>
+     * @return Builder
      */
 
     public CustomerBuilder plusAddresses(
@@ -342,6 +387,7 @@ public class CustomerBuilder implements Builder<Customer> {
 
     /**
      *  <p>Addresses used by the Customer.</p>
+     * @return Builder
      */
 
     public CustomerBuilder withAddresses(
@@ -353,6 +399,8 @@ public class CustomerBuilder implements Builder<Customer> {
 
     /**
      *  <p>ID of the address in <code>addresses</code> used as the default shipping address.</p>
+     * @param defaultShippingAddressId
+     * @return Builder
      */
 
     public CustomerBuilder defaultShippingAddressId(@Nullable final String defaultShippingAddressId) {
@@ -362,6 +410,8 @@ public class CustomerBuilder implements Builder<Customer> {
 
     /**
      *  <p>IDs of addresses in <code>addresses</code> used as shipping addresses.</p>
+     * @param shippingAddressIds
+     * @return Builder
      */
 
     public CustomerBuilder shippingAddressIds(@Nullable final String... shippingAddressIds) {
@@ -371,6 +421,8 @@ public class CustomerBuilder implements Builder<Customer> {
 
     /**
      *  <p>IDs of addresses in <code>addresses</code> used as shipping addresses.</p>
+     * @param shippingAddressIds
+     * @return Builder
      */
 
     public CustomerBuilder shippingAddressIds(@Nullable final java.util.List<String> shippingAddressIds) {
@@ -380,6 +432,8 @@ public class CustomerBuilder implements Builder<Customer> {
 
     /**
      *  <p>IDs of addresses in <code>addresses</code> used as shipping addresses.</p>
+     * @param shippingAddressIds
+     * @return Builder
      */
 
     public CustomerBuilder plusShippingAddressIds(@Nullable final String... shippingAddressIds) {
@@ -392,6 +446,8 @@ public class CustomerBuilder implements Builder<Customer> {
 
     /**
      *  <p>ID of the address in <code>addresses</code> used as the default billing address.</p>
+     * @param defaultBillingAddressId
+     * @return Builder
      */
 
     public CustomerBuilder defaultBillingAddressId(@Nullable final String defaultBillingAddressId) {
@@ -401,6 +457,8 @@ public class CustomerBuilder implements Builder<Customer> {
 
     /**
      *  <p>IDs of addresses in <code>addresses</code> used as billing addresses.</p>
+     * @param billingAddressIds
+     * @return Builder
      */
 
     public CustomerBuilder billingAddressIds(@Nullable final String... billingAddressIds) {
@@ -410,6 +468,8 @@ public class CustomerBuilder implements Builder<Customer> {
 
     /**
      *  <p>IDs of addresses in <code>addresses</code> used as billing addresses.</p>
+     * @param billingAddressIds
+     * @return Builder
      */
 
     public CustomerBuilder billingAddressIds(@Nullable final java.util.List<String> billingAddressIds) {
@@ -419,6 +479,8 @@ public class CustomerBuilder implements Builder<Customer> {
 
     /**
      *  <p>IDs of addresses in <code>addresses</code> used as billing addresses.</p>
+     * @param billingAddressIds
+     * @return Builder
      */
 
     public CustomerBuilder plusBillingAddressIds(@Nullable final String... billingAddressIds) {
@@ -431,6 +493,8 @@ public class CustomerBuilder implements Builder<Customer> {
 
     /**
      *  <p>Indicates whether the email address of the Customer is verified.</p>
+     * @param isEmailVerified
+     * @return Builder
      */
 
     public CustomerBuilder isEmailVerified(final Boolean isEmailVerified) {
@@ -440,6 +504,7 @@ public class CustomerBuilder implements Builder<Customer> {
 
     /**
      *  <p>CustomerGroup to which the Customer belongs.</p>
+     * @return Builder
      */
 
     public CustomerBuilder customerGroup(
@@ -452,6 +517,8 @@ public class CustomerBuilder implements Builder<Customer> {
 
     /**
      *  <p>CustomerGroup to which the Customer belongs.</p>
+     * @param customerGroup
+     * @return Builder
      */
 
     public CustomerBuilder customerGroup(
@@ -462,6 +529,7 @@ public class CustomerBuilder implements Builder<Customer> {
 
     /**
      *  <p>Custom Fields for the Customer.</p>
+     * @return Builder
      */
 
     public CustomerBuilder custom(
@@ -472,6 +540,8 @@ public class CustomerBuilder implements Builder<Customer> {
 
     /**
      *  <p>Custom Fields for the Customer.</p>
+     * @param custom
+     * @return Builder
      */
 
     public CustomerBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFields custom) {
@@ -481,6 +551,8 @@ public class CustomerBuilder implements Builder<Customer> {
 
     /**
      *  <p>Preferred language of the Customer.</p>
+     * @param locale
+     * @return Builder
      */
 
     public CustomerBuilder locale(@Nullable final String locale) {
@@ -490,6 +562,8 @@ public class CustomerBuilder implements Builder<Customer> {
 
     /**
      *  <p>Salutation of the Customer, for example, 'Mr.' or 'Mrs.'.</p>
+     * @param salutation
+     * @return Builder
      */
 
     public CustomerBuilder salutation(@Nullable final String salutation) {
@@ -503,6 +577,8 @@ public class CustomerBuilder implements Builder<Customer> {
      *   <li>If no Stores are specified, the Customer is a global customer, and can log in using the Password Flow for global Customers.</li>
      *   <li>If any Stores are specified, the Customer can only log in using the Password Flow for Customers in a Store for those specific Stores.</li>
      *  </ul>
+     * @param stores
+     * @return Builder
      */
 
     public CustomerBuilder stores(@Nullable final com.commercetools.api.models.store.StoreKeyReference... stores) {
@@ -516,6 +592,8 @@ public class CustomerBuilder implements Builder<Customer> {
      *   <li>If no Stores are specified, the Customer is a global customer, and can log in using the Password Flow for global Customers.</li>
      *   <li>If any Stores are specified, the Customer can only log in using the Password Flow for Customers in a Store for those specific Stores.</li>
      *  </ul>
+     * @param stores
+     * @return Builder
      */
 
     public CustomerBuilder stores(
@@ -530,6 +608,8 @@ public class CustomerBuilder implements Builder<Customer> {
      *   <li>If no Stores are specified, the Customer is a global customer, and can log in using the Password Flow for global Customers.</li>
      *   <li>If any Stores are specified, the Customer can only log in using the Password Flow for Customers in a Store for those specific Stores.</li>
      *  </ul>
+     * @param stores
+     * @return Builder
      */
 
     public CustomerBuilder plusStores(@Nullable final com.commercetools.api.models.store.StoreKeyReference... stores) {
@@ -546,6 +626,7 @@ public class CustomerBuilder implements Builder<Customer> {
      *   <li>If no Stores are specified, the Customer is a global customer, and can log in using the Password Flow for global Customers.</li>
      *   <li>If any Stores are specified, the Customer can only log in using the Password Flow for Customers in a Store for those specific Stores.</li>
      *  </ul>
+     * @return Builder
      */
 
     public CustomerBuilder plusStores(
@@ -563,6 +644,7 @@ public class CustomerBuilder implements Builder<Customer> {
      *   <li>If no Stores are specified, the Customer is a global customer, and can log in using the Password Flow for global Customers.</li>
      *   <li>If any Stores are specified, the Customer can only log in using the Password Flow for Customers in a Store for those specific Stores.</li>
      *  </ul>
+     * @return Builder
      */
 
     public CustomerBuilder withStores(
@@ -574,6 +656,8 @@ public class CustomerBuilder implements Builder<Customer> {
 
     /**
      *  <p>Indicates whether the <code>password</code> is required for the Customer.</p>
+     * @param authenticationMode
+     * @return Builder
      */
 
     public CustomerBuilder authenticationMode(

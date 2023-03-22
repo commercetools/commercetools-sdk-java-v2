@@ -31,6 +31,7 @@ public class DeliveryRemovedMessagePayloadBuilder implements Builder<DeliveryRem
 
     /**
      *  <p>The Delivery that was removed from the Order.</p>
+     * @return Builder
      */
 
     public DeliveryRemovedMessagePayloadBuilder delivery(
@@ -41,6 +42,8 @@ public class DeliveryRemovedMessagePayloadBuilder implements Builder<DeliveryRem
 
     /**
      *  <p>The Delivery that was removed from the Order.</p>
+     * @param delivery
+     * @return Builder
      */
 
     public DeliveryRemovedMessagePayloadBuilder delivery(final com.commercetools.api.models.order.Delivery delivery) {
@@ -50,6 +53,8 @@ public class DeliveryRemovedMessagePayloadBuilder implements Builder<DeliveryRem
 
     /**
      *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multi</code> ShippingMode.</p>
+     * @param shippingKey
+     * @return Builder
      */
 
     public DeliveryRemovedMessagePayloadBuilder shippingKey(@Nullable final String shippingKey) {

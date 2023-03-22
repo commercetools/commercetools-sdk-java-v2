@@ -29,6 +29,8 @@ public class ItemStateBuilder implements Builder<ItemState> {
 
     /**
      *
+     * @param quantity
+     * @return Builder
      */
 
     public ItemStateBuilder quantity(final Double quantity) {
@@ -38,6 +40,7 @@ public class ItemStateBuilder implements Builder<ItemState> {
 
     /**
      *  <p>Maps to <code>ItemState.state</code>.</p>
+     * @return Builder
      */
 
     public ItemStateBuilder state(
@@ -48,6 +51,8 @@ public class ItemStateBuilder implements Builder<ItemState> {
 
     /**
      *  <p>Maps to <code>ItemState.state</code>.</p>
+     * @param state
+     * @return Builder
      */
 
     public ItemStateBuilder state(final com.commercetools.importapi.models.common.StateKeyReference state) {

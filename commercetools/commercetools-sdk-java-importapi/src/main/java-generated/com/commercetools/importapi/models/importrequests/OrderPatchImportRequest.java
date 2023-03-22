@@ -35,6 +35,7 @@ public interface OrderPatchImportRequest extends ImportRequest {
 
     /**
      *  <p>The order patches of this request</p>
+     * @return patches
      */
     @NotNull
     @Valid

@@ -30,6 +30,8 @@ public class ErrorByExtensionBuilder implements Builder<ErrorByExtension> {
 
     /**
      *  <p>Unique identifier of the Extension.</p>
+     * @param id
+     * @return Builder
      */
 
     public ErrorByExtensionBuilder id(final String id) {
@@ -39,6 +41,8 @@ public class ErrorByExtensionBuilder implements Builder<ErrorByExtension> {
 
     /**
      *  <p>User-defined unique identifier of the Extension.</p>
+     * @param key
+     * @return Builder
      */
 
     public ErrorByExtensionBuilder key(@Nullable final String key) {

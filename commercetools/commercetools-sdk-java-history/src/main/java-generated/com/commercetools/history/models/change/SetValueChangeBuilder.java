@@ -29,6 +29,8 @@ public class SetValueChangeBuilder implements Builder<SetValueChange> {
 
     /**
      *  <p>Update action for <code>setValue</code> on custom objects</p>
+     * @param change
+     * @return Builder
      */
 
     public SetValueChangeBuilder change(final String change) {
@@ -38,6 +40,8 @@ public class SetValueChangeBuilder implements Builder<SetValueChange> {
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public SetValueChangeBuilder nextValue(final java.lang.Object nextValue) {
@@ -47,6 +51,8 @@ public class SetValueChangeBuilder implements Builder<SetValueChange> {
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public SetValueChangeBuilder previousValue(final java.lang.Object previousValue) {

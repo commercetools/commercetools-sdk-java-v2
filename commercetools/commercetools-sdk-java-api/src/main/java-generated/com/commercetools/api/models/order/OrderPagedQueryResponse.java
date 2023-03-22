@@ -35,6 +35,7 @@ public interface OrderPagedQueryResponse extends com.commercetools.api.models.Re
 
     /**
      *  <p>Number of results requested.</p>
+     * @return limit
      */
     @NotNull
     @JsonProperty("limit")
@@ -42,6 +43,7 @@ public interface OrderPagedQueryResponse extends com.commercetools.api.models.Re
 
     /**
      *
+     * @return count
      */
     @NotNull
     @JsonProperty("count")
@@ -49,6 +51,7 @@ public interface OrderPagedQueryResponse extends com.commercetools.api.models.Re
 
     /**
      *
+     * @return total
      */
 
     @JsonProperty("total")
@@ -56,6 +59,7 @@ public interface OrderPagedQueryResponse extends com.commercetools.api.models.Re
 
     /**
      *  <p>Number of elements skipped.</p>
+     * @return offset
      */
     @NotNull
     @JsonProperty("offset")
@@ -63,6 +67,7 @@ public interface OrderPagedQueryResponse extends com.commercetools.api.models.Re
 
     /**
      *
+     * @return results
      */
     @NotNull
     @Valid

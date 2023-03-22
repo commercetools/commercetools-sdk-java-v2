@@ -42,6 +42,7 @@ public interface OrderDeletedMessage extends OrderMessage {
 
     /**
      *  <p>Order that has been deleted.</p>
+     * @return order
      */
     @NotNull
     @Valid

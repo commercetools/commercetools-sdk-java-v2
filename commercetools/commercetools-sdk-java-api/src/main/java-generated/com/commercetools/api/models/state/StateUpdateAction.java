@@ -42,6 +42,7 @@ public interface StateUpdateAction extends com.commercetools.api.models.Resource
 
     /**
      *
+     * @return action
      */
     @NotNull
     @JsonProperty("action")

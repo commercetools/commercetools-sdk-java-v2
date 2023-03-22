@@ -38,6 +38,7 @@ public interface SetShoppingListLineItemCustomFieldChange extends Change {
 
     /**
      *
+     * @return type
      */
     @NotNull
     @JsonProperty("type")
@@ -45,6 +46,7 @@ public interface SetShoppingListLineItemCustomFieldChange extends Change {
 
     /**
      *  <p>Update action for <code>setLineItemCustomField</code></p>
+     * @return change
      */
     @NotNull
     @JsonProperty("change")
@@ -52,6 +54,7 @@ public interface SetShoppingListLineItemCustomFieldChange extends Change {
 
     /**
      *
+     * @return name
      */
     @NotNull
     @JsonProperty("name")
@@ -59,6 +62,7 @@ public interface SetShoppingListLineItemCustomFieldChange extends Change {
 
     /**
      *
+     * @return customTypeId
      */
     @NotNull
     @JsonProperty("customTypeId")
@@ -66,6 +70,7 @@ public interface SetShoppingListLineItemCustomFieldChange extends Change {
 
     /**
      *
+     * @return lineItem
      */
     @NotNull
     @Valid
@@ -74,6 +79,7 @@ public interface SetShoppingListLineItemCustomFieldChange extends Change {
 
     /**
      *
+     * @return nextValue
      */
     @NotNull
     @JsonProperty("nextValue")
@@ -81,6 +87,7 @@ public interface SetShoppingListLineItemCustomFieldChange extends Change {
 
     /**
      *
+     * @return previousValue
      */
     @NotNull
     @JsonProperty("previousValue")

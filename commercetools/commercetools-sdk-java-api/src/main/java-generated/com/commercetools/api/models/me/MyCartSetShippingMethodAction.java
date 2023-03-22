@@ -35,6 +35,7 @@ public interface MyCartSetShippingMethodAction extends MyCartUpdateAction {
     /**
      *  <p>Value to set. If empty, any existing value is removed.</p>
      *  <p>If the referenced Shipping Method has a predicate that does not match the Cart, an InvalidOperation error is returned.</p>
+     * @return shippingMethod
      */
     @Valid
     @JsonProperty("shippingMethod")
@@ -42,6 +43,7 @@ public interface MyCartSetShippingMethodAction extends MyCartUpdateAction {
 
     /**
      *  <p>An external Tax Rate can be set if the Cart has the <code>External</code> TaxMode.</p>
+     * @return externalTaxRate
      */
     @Valid
     @JsonProperty("externalTaxRate")

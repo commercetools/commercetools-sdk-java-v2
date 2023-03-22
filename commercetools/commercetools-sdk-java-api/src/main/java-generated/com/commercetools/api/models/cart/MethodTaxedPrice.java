@@ -32,6 +32,7 @@ public interface MethodTaxedPrice {
 
     /**
      *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multiple</code> ShippingMode.</p>
+     * @return shippingMethodKey
      */
     @NotNull
     @JsonProperty("shippingMethodKey")
@@ -39,6 +40,7 @@ public interface MethodTaxedPrice {
 
     /**
      *  <p>Taxed price for the Shipping Method.</p>
+     * @return taxedPrice
      */
     @Valid
     @JsonProperty("taxedPrice")

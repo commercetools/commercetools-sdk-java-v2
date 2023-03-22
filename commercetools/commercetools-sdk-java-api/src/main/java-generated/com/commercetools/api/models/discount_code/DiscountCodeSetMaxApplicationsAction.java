@@ -30,6 +30,7 @@ public interface DiscountCodeSetMaxApplicationsAction extends DiscountCodeUpdate
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
+     * @return maxApplications
      */
 
     @JsonProperty("maxApplications")

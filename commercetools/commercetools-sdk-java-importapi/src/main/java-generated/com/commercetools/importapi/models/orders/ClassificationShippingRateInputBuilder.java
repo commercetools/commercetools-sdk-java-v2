@@ -29,6 +29,8 @@ public class ClassificationShippingRateInputBuilder implements Builder<Classific
 
     /**
      *
+     * @param key
+     * @return Builder
      */
 
     public ClassificationShippingRateInputBuilder key(final String key) {
@@ -43,6 +45,7 @@ public class ClassificationShippingRateInputBuilder implements Builder<Classific
      *    "en": "dog food"
      *  }
      *  </code></pre>
+     * @return Builder
      */
 
     public ClassificationShippingRateInputBuilder label(
@@ -58,6 +61,8 @@ public class ClassificationShippingRateInputBuilder implements Builder<Classific
      *    "en": "dog food"
      *  }
      *  </code></pre>
+     * @param label
+     * @return Builder
      */
 
     public ClassificationShippingRateInputBuilder label(

@@ -34,6 +34,8 @@ public class OrderSetReturnItemCustomTypeActionBuilder implements Builder<OrderS
 
     /**
      *
+     * @param returnItemId
+     * @return Builder
      */
 
     public OrderSetReturnItemCustomTypeActionBuilder returnItemId(final String returnItemId) {
@@ -43,6 +45,7 @@ public class OrderSetReturnItemCustomTypeActionBuilder implements Builder<OrderS
 
     /**
      *  <p>Defines the Type that extends the ReturnItem with Custom Fields. If absent, any existing Type and Custom Fields are removed from the ReturnItem.</p>
+     * @return Builder
      */
 
     public OrderSetReturnItemCustomTypeActionBuilder type(
@@ -53,6 +56,8 @@ public class OrderSetReturnItemCustomTypeActionBuilder implements Builder<OrderS
 
     /**
      *  <p>Defines the Type that extends the ReturnItem with Custom Fields. If absent, any existing Type and Custom Fields are removed from the ReturnItem.</p>
+     * @param type
+     * @return Builder
      */
 
     public OrderSetReturnItemCustomTypeActionBuilder type(
@@ -63,6 +68,7 @@ public class OrderSetReturnItemCustomTypeActionBuilder implements Builder<OrderS
 
     /**
      *  <p>Sets the Custom Fields fields for the ReturnItem.</p>
+     * @return Builder
      */
 
     public OrderSetReturnItemCustomTypeActionBuilder fields(
@@ -73,6 +79,8 @@ public class OrderSetReturnItemCustomTypeActionBuilder implements Builder<OrderS
 
     /**
      *  <p>Sets the Custom Fields fields for the ReturnItem.</p>
+     * @param fields
+     * @return Builder
      */
 
     public OrderSetReturnItemCustomTypeActionBuilder fields(

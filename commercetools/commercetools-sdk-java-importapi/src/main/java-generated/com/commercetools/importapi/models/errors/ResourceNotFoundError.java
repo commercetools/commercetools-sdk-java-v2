@@ -31,6 +31,7 @@ public interface ResourceNotFoundError extends ErrorObject {
 
     /**
      *
+     * @return resource
      */
 
     @JsonProperty("resource")

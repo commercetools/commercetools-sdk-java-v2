@@ -33,6 +33,8 @@ public class HitBuilder implements Builder<Hit> {
 
     /**
      *  <p>Unique identifier of the Order.</p>
+     * @param id
+     * @return Builder
      */
 
     public HitBuilder id(final String id) {
@@ -42,6 +44,8 @@ public class HitBuilder implements Builder<Hit> {
 
     /**
      *  <p>Current version of the Order.</p>
+     * @param version
+     * @return Builder
      */
 
     public HitBuilder version(final Long version) {
@@ -51,6 +55,8 @@ public class HitBuilder implements Builder<Hit> {
 
     /**
      *  <p>The higher the value is, the more relevant the hit is for the search request.</p>
+     * @param relevance
+     * @return Builder
      */
 
     public HitBuilder relevance(@Nullable final Double relevance) {

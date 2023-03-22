@@ -29,6 +29,8 @@ public class AttributeGroupUpdateBuilder implements Builder<AttributeGroupUpdate
 
     /**
      *  <p>Expected version of the AttributeGroup on which the changes should be applied. If the expected version does not match the actual version, a 409 Conflict will be returned.</p>
+     * @param version
+     * @return Builder
      */
 
     public AttributeGroupUpdateBuilder version(final Long version) {
@@ -38,6 +40,8 @@ public class AttributeGroupUpdateBuilder implements Builder<AttributeGroupUpdate
 
     /**
      *  <p>Update actions to be performed on the AttributeGroup.</p>
+     * @param actions
+     * @return Builder
      */
 
     public AttributeGroupUpdateBuilder actions(
@@ -48,6 +52,8 @@ public class AttributeGroupUpdateBuilder implements Builder<AttributeGroupUpdate
 
     /**
      *  <p>Update actions to be performed on the AttributeGroup.</p>
+     * @param actions
+     * @return Builder
      */
 
     public AttributeGroupUpdateBuilder actions(
@@ -58,6 +64,8 @@ public class AttributeGroupUpdateBuilder implements Builder<AttributeGroupUpdate
 
     /**
      *  <p>Update actions to be performed on the AttributeGroup.</p>
+     * @param actions
+     * @return Builder
      */
 
     public AttributeGroupUpdateBuilder plusActions(
@@ -71,6 +79,7 @@ public class AttributeGroupUpdateBuilder implements Builder<AttributeGroupUpdate
 
     /**
      *  <p>Update actions to be performed on the AttributeGroup.</p>
+     * @return Builder
      */
 
     public AttributeGroupUpdateBuilder plusActions(
@@ -85,6 +94,7 @@ public class AttributeGroupUpdateBuilder implements Builder<AttributeGroupUpdate
 
     /**
      *  <p>Update actions to be performed on the AttributeGroup.</p>
+     * @return Builder
      */
 
     public AttributeGroupUpdateBuilder withActions(

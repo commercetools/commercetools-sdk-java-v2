@@ -28,6 +28,7 @@ public class MyCartSetBillingAddressActionBuilder implements Builder<MyCartSetBi
 
     /**
      *  <p>Value to set. If empty, any existing value is removed.</p>
+     * @return Builder
      */
 
     public MyCartSetBillingAddressActionBuilder address(
@@ -38,6 +39,8 @@ public class MyCartSetBillingAddressActionBuilder implements Builder<MyCartSetBi
 
     /**
      *  <p>Value to set. If empty, any existing value is removed.</p>
+     * @param address
+     * @return Builder
      */
 
     public MyCartSetBillingAddressActionBuilder address(

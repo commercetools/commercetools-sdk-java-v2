@@ -27,6 +27,7 @@ public class StandalonePriceStagedChangesAppliedMessagePayloadBuilder
 
     /**
      *  <p>Applied changes of the StandalonePrice after the Apply Staged Changes update action.</p>
+     * @return Builder
      */
 
     public StandalonePriceStagedChangesAppliedMessagePayloadBuilder stagedChanges(
@@ -39,6 +40,8 @@ public class StandalonePriceStagedChangesAppliedMessagePayloadBuilder
 
     /**
      *  <p>Applied changes of the StandalonePrice after the Apply Staged Changes update action.</p>
+     * @param stagedChanges
+     * @return Builder
      */
 
     public StandalonePriceStagedChangesAppliedMessagePayloadBuilder stagedChanges(

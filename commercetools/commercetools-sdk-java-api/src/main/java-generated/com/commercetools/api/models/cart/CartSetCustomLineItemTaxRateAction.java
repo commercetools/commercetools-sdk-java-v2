@@ -34,6 +34,7 @@ public interface CartSetCustomLineItemTaxRateAction extends CartUpdateAction {
 
     /**
      *  <p><code>id</code> of the CustomLineItem to update.</p>
+     * @return customLineItemId
      */
     @NotNull
     @JsonProperty("customLineItemId")
@@ -41,6 +42,7 @@ public interface CartSetCustomLineItemTaxRateAction extends CartUpdateAction {
 
     /**
      *  <p>Value to set. If empty, an existing value is removed.</p>
+     * @return externalTaxRate
      */
     @Valid
     @JsonProperty("externalTaxRate")

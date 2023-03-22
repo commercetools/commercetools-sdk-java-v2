@@ -28,6 +28,7 @@ public class ShoppingListSetStoreActionBuilder implements Builder<ShoppingListSe
 
     /**
      *  <p>The Store the ShoppingList should be assigned to. If empty, any existing value will be removed.</p>
+     * @return Builder
      */
 
     public ShoppingListSetStoreActionBuilder store(
@@ -38,6 +39,8 @@ public class ShoppingListSetStoreActionBuilder implements Builder<ShoppingListSe
 
     /**
      *  <p>The Store the ShoppingList should be assigned to. If empty, any existing value will be removed.</p>
+     * @param store
+     * @return Builder
      */
 
     public ShoppingListSetStoreActionBuilder store(

@@ -25,6 +25,8 @@ public class StateKeyReferenceBuilder implements Builder<StateKeyReference> {
 
     /**
      *
+     * @param key
+     * @return Builder
      */
 
     public StateKeyReferenceBuilder key(final String key) {

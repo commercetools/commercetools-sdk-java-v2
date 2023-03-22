@@ -32,6 +32,7 @@ public interface BaseAddress extends com.commercetools.api.models.WithKey, BaseA
     /**
      *  <p>Unique identifier of the Address.</p>
      *  <p>It is not recommended to set it manually since the API overwrites this ID when creating an Address for a Customer. Use <code>key</code> instead and omit this field from the request to let the API generate the ID for the Address.</p>
+     * @return id
      */
 
     @JsonProperty("id")
@@ -39,6 +40,7 @@ public interface BaseAddress extends com.commercetools.api.models.WithKey, BaseA
 
     /**
      *  <p>User-defined identifier of the Address that must be unique when multiple addresses are referenced in BusinessUnits, Customers, and <code>itemShippingAddresses</code> (LineItem-specific addresses) of a Cart, Order, QuoteRequest, or Quote.</p>
+     * @return key
      */
 
     @JsonProperty("key")
@@ -46,6 +48,7 @@ public interface BaseAddress extends com.commercetools.api.models.WithKey, BaseA
 
     /**
      *  <p>Name of the country.</p>
+     * @return country
      */
     @NotNull
     @JsonProperty("country")
@@ -53,6 +56,7 @@ public interface BaseAddress extends com.commercetools.api.models.WithKey, BaseA
 
     /**
      *  <p>Title of the contact, for example 'Dr.'</p>
+     * @return title
      */
 
     @JsonProperty("title")
@@ -60,6 +64,7 @@ public interface BaseAddress extends com.commercetools.api.models.WithKey, BaseA
 
     /**
      *  <p>Salutation of the contact, for example 'Mr.' or 'Ms.'</p>
+     * @return salutation
      */
 
     @JsonProperty("salutation")
@@ -67,6 +72,7 @@ public interface BaseAddress extends com.commercetools.api.models.WithKey, BaseA
 
     /**
      *  <p>Given name (first name) of the contact.</p>
+     * @return firstName
      */
 
     @JsonProperty("firstName")
@@ -74,6 +80,7 @@ public interface BaseAddress extends com.commercetools.api.models.WithKey, BaseA
 
     /**
      *  <p>Family name (last name) of the contact.</p>
+     * @return lastName
      */
 
     @JsonProperty("lastName")
@@ -81,6 +88,7 @@ public interface BaseAddress extends com.commercetools.api.models.WithKey, BaseA
 
     /**
      *  <p>Name of the street.</p>
+     * @return streetName
      */
 
     @JsonProperty("streetName")
@@ -88,6 +96,7 @@ public interface BaseAddress extends com.commercetools.api.models.WithKey, BaseA
 
     /**
      *  <p>Street number.</p>
+     * @return streetNumber
      */
 
     @JsonProperty("streetNumber")
@@ -95,6 +104,7 @@ public interface BaseAddress extends com.commercetools.api.models.WithKey, BaseA
 
     /**
      *  <p>Further information on the street address.</p>
+     * @return additionalStreetInfo
      */
 
     @JsonProperty("additionalStreetInfo")
@@ -102,6 +112,7 @@ public interface BaseAddress extends com.commercetools.api.models.WithKey, BaseA
 
     /**
      *  <p>Postal code.</p>
+     * @return postalCode
      */
 
     @JsonProperty("postalCode")
@@ -109,6 +120,7 @@ public interface BaseAddress extends com.commercetools.api.models.WithKey, BaseA
 
     /**
      *  <p>Name of the city.</p>
+     * @return city
      */
 
     @JsonProperty("city")
@@ -116,6 +128,7 @@ public interface BaseAddress extends com.commercetools.api.models.WithKey, BaseA
 
     /**
      *  <p>Name of the region.</p>
+     * @return region
      */
 
     @JsonProperty("region")
@@ -123,6 +136,7 @@ public interface BaseAddress extends com.commercetools.api.models.WithKey, BaseA
 
     /**
      *  <p>Name of the state, for example, Colorado.</p>
+     * @return state
      */
 
     @JsonProperty("state")
@@ -130,6 +144,7 @@ public interface BaseAddress extends com.commercetools.api.models.WithKey, BaseA
 
     /**
      *  <p>Name of the company.</p>
+     * @return company
      */
 
     @JsonProperty("company")
@@ -137,6 +152,7 @@ public interface BaseAddress extends com.commercetools.api.models.WithKey, BaseA
 
     /**
      *  <p>Name of the department.</p>
+     * @return department
      */
 
     @JsonProperty("department")
@@ -144,6 +160,7 @@ public interface BaseAddress extends com.commercetools.api.models.WithKey, BaseA
 
     /**
      *  <p>Number or name of the building.</p>
+     * @return building
      */
 
     @JsonProperty("building")
@@ -151,6 +168,7 @@ public interface BaseAddress extends com.commercetools.api.models.WithKey, BaseA
 
     /**
      *  <p>Number or name of the apartment.</p>
+     * @return apartment
      */
 
     @JsonProperty("apartment")
@@ -158,6 +176,7 @@ public interface BaseAddress extends com.commercetools.api.models.WithKey, BaseA
 
     /**
      *  <p>Post office box number.</p>
+     * @return pOBox
      */
 
     @JsonProperty("pOBox")
@@ -165,6 +184,7 @@ public interface BaseAddress extends com.commercetools.api.models.WithKey, BaseA
 
     /**
      *  <p>Phone number of the contact.</p>
+     * @return phone
      */
 
     @JsonProperty("phone")
@@ -172,6 +192,7 @@ public interface BaseAddress extends com.commercetools.api.models.WithKey, BaseA
 
     /**
      *  <p>Mobile phone number of the contact.</p>
+     * @return mobile
      */
 
     @JsonProperty("mobile")
@@ -179,6 +200,7 @@ public interface BaseAddress extends com.commercetools.api.models.WithKey, BaseA
 
     /**
      *  <p>Email address of the contact.</p>
+     * @return email
      */
 
     @JsonProperty("email")
@@ -186,6 +208,7 @@ public interface BaseAddress extends com.commercetools.api.models.WithKey, BaseA
 
     /**
      *  <p>Fax number of the contact.</p>
+     * @return fax
      */
 
     @JsonProperty("fax")
@@ -193,6 +216,7 @@ public interface BaseAddress extends com.commercetools.api.models.WithKey, BaseA
 
     /**
      *  <p>Further information on the Address.</p>
+     * @return additionalAddressInfo
      */
 
     @JsonProperty("additionalAddressInfo")
@@ -200,6 +224,7 @@ public interface BaseAddress extends com.commercetools.api.models.WithKey, BaseA
 
     /**
      *  <p>ID for the contact used in an external system.</p>
+     * @return externalId
      */
 
     @JsonProperty("externalId")

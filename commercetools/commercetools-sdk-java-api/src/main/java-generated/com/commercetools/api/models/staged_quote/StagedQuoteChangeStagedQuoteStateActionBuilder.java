@@ -26,6 +26,8 @@ public class StagedQuoteChangeStagedQuoteStateActionBuilder
 
     /**
      *  <p>New state to be set for the Staged Quote.</p>
+     * @param stagedQuoteState
+     * @return Builder
      */
 
     public StagedQuoteChangeStagedQuoteStateActionBuilder stagedQuoteState(

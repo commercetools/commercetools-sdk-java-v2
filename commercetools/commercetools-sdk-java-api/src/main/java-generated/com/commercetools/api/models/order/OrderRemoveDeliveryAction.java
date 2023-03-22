@@ -33,6 +33,7 @@ public interface OrderRemoveDeliveryAction extends OrderUpdateAction {
 
     /**
      *
+     * @return deliveryId
      */
     @NotNull
     @JsonProperty("deliveryId")

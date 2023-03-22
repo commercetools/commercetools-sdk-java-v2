@@ -31,6 +31,8 @@ public class SetAuthorNameChangeBuilder implements Builder<SetAuthorNameChange> 
 
     /**
      *  <p>Shape of the action for <code>setAuthorName</code></p>
+     * @param change
+     * @return Builder
      */
 
     public SetAuthorNameChangeBuilder change(final String change) {
@@ -40,6 +42,8 @@ public class SetAuthorNameChangeBuilder implements Builder<SetAuthorNameChange> 
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public SetAuthorNameChangeBuilder previousValue(final String previousValue) {
@@ -49,6 +53,8 @@ public class SetAuthorNameChangeBuilder implements Builder<SetAuthorNameChange> 
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public SetAuthorNameChangeBuilder nextValue(final String nextValue) {

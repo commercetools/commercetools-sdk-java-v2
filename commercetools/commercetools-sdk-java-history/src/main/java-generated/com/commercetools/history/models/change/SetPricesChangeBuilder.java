@@ -38,6 +38,8 @@ public class SetPricesChangeBuilder implements Builder<SetPricesChange> {
 
     /**
      *  <p>Update action for <code>setPrices</code></p>
+     * @param change
+     * @return Builder
      */
 
     public SetPricesChangeBuilder change(final String change) {
@@ -47,6 +49,8 @@ public class SetPricesChangeBuilder implements Builder<SetPricesChange> {
 
     /**
      *
+     * @param catalogData
+     * @return Builder
      */
 
     public SetPricesChangeBuilder catalogData(final String catalogData) {
@@ -56,6 +60,8 @@ public class SetPricesChangeBuilder implements Builder<SetPricesChange> {
 
     /**
      *
+     * @param variant
+     * @return Builder
      */
 
     public SetPricesChangeBuilder variant(final String variant) {
@@ -65,6 +71,8 @@ public class SetPricesChangeBuilder implements Builder<SetPricesChange> {
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public SetPricesChangeBuilder previousValue(final com.commercetools.history.models.common.Price... previousValue) {
@@ -74,6 +82,8 @@ public class SetPricesChangeBuilder implements Builder<SetPricesChange> {
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public SetPricesChangeBuilder previousValue(
@@ -84,6 +94,8 @@ public class SetPricesChangeBuilder implements Builder<SetPricesChange> {
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public SetPricesChangeBuilder plusPreviousValue(
@@ -97,6 +109,7 @@ public class SetPricesChangeBuilder implements Builder<SetPricesChange> {
 
     /**
      *
+     * @return Builder
      */
 
     public SetPricesChangeBuilder plusPreviousValue(
@@ -110,6 +123,7 @@ public class SetPricesChangeBuilder implements Builder<SetPricesChange> {
 
     /**
      *
+     * @return Builder
      */
 
     public SetPricesChangeBuilder withPreviousValue(
@@ -121,6 +135,8 @@ public class SetPricesChangeBuilder implements Builder<SetPricesChange> {
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public SetPricesChangeBuilder nextValue(final com.commercetools.history.models.common.Price... nextValue) {
@@ -130,6 +146,8 @@ public class SetPricesChangeBuilder implements Builder<SetPricesChange> {
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public SetPricesChangeBuilder nextValue(
@@ -140,6 +158,8 @@ public class SetPricesChangeBuilder implements Builder<SetPricesChange> {
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public SetPricesChangeBuilder plusNextValue(final com.commercetools.history.models.common.Price... nextValue) {
@@ -152,6 +172,7 @@ public class SetPricesChangeBuilder implements Builder<SetPricesChange> {
 
     /**
      *
+     * @return Builder
      */
 
     public SetPricesChangeBuilder plusNextValue(
@@ -165,6 +186,7 @@ public class SetPricesChangeBuilder implements Builder<SetPricesChange> {
 
     /**
      *
+     * @return Builder
      */
 
     public SetPricesChangeBuilder withNextValue(

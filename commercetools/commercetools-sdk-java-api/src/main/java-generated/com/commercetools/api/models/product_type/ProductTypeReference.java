@@ -35,6 +35,7 @@ public interface ProductTypeReference extends Reference, com.commercetools.api.m
 
     /**
      *  <p>Contains the representation of the expanded ProductType. Only present in responses to requests with Reference Expansion for ProductTypes.</p>
+     * @return obj
      */
     @Valid
     @JsonProperty("obj")
@@ -42,6 +43,7 @@ public interface ProductTypeReference extends Reference, com.commercetools.api.m
 
     /**
      *  <p>Unique identifier of the referenced ProductType.</p>
+     * @return id
      */
     @NotNull
     @JsonProperty("id")

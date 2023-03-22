@@ -31,6 +31,8 @@ public class MyCustomerSetDefaultBillingAddressActionBuilder
 
     /**
      *  <p><code>id</code> of the Address to become the default billing address.</p>
+     * @param addressId
+     * @return Builder
      */
 
     public MyCustomerSetDefaultBillingAddressActionBuilder addressId(@Nullable final String addressId) {
@@ -40,6 +42,8 @@ public class MyCustomerSetDefaultBillingAddressActionBuilder
 
     /**
      *  <p><code>key</code> of the Address to become the default billing address.</p>
+     * @param addressKey
+     * @return Builder
      */
 
     public MyCustomerSetDefaultBillingAddressActionBuilder addressKey(@Nullable final String addressKey) {

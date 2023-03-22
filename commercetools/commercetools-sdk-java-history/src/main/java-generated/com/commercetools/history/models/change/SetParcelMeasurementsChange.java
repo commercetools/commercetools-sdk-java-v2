@@ -39,6 +39,7 @@ public interface SetParcelMeasurementsChange extends Change {
 
     /**
      *
+     * @return type
      */
     @NotNull
     @JsonProperty("type")
@@ -46,6 +47,7 @@ public interface SetParcelMeasurementsChange extends Change {
 
     /**
      *  <p>Update action for <code>setParcelMeasurements</code></p>
+     * @return change
      */
     @NotNull
     @JsonProperty("change")
@@ -53,6 +55,7 @@ public interface SetParcelMeasurementsChange extends Change {
 
     /**
      *
+     * @return parcel
      */
     @NotNull
     @Valid
@@ -61,6 +64,7 @@ public interface SetParcelMeasurementsChange extends Change {
 
     /**
      *
+     * @return nextValue
      */
     @NotNull
     @Valid
@@ -69,6 +73,7 @@ public interface SetParcelMeasurementsChange extends Change {
 
     /**
      *
+     * @return previousValue
      */
     @NotNull
     @Valid

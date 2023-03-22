@@ -34,6 +34,7 @@ public interface EventBridgeDestination extends Destination {
 
     /**
      *  <p>AWS region that receives the events.</p>
+     * @return region
      */
     @NotNull
     @JsonProperty("region")
@@ -41,6 +42,7 @@ public interface EventBridgeDestination extends Destination {
 
     /**
      *  <p>ID of the AWS account that receives the events.</p>
+     * @return accountId
      */
     @NotNull
     @JsonProperty("accountId")

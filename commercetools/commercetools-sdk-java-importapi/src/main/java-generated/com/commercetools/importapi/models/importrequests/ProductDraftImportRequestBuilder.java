@@ -26,6 +26,8 @@ public class ProductDraftImportRequestBuilder implements Builder<ProductDraftImp
 
     /**
      *  <p>The product draft import resources of this request.</p>
+     * @param resources
+     * @return Builder
      */
 
     public ProductDraftImportRequestBuilder resources(
@@ -36,6 +38,8 @@ public class ProductDraftImportRequestBuilder implements Builder<ProductDraftImp
 
     /**
      *  <p>The product draft import resources of this request.</p>
+     * @param resources
+     * @return Builder
      */
 
     public ProductDraftImportRequestBuilder resources(
@@ -46,6 +50,8 @@ public class ProductDraftImportRequestBuilder implements Builder<ProductDraftImp
 
     /**
      *  <p>The product draft import resources of this request.</p>
+     * @param resources
+     * @return Builder
      */
 
     public ProductDraftImportRequestBuilder plusResources(
@@ -59,6 +65,7 @@ public class ProductDraftImportRequestBuilder implements Builder<ProductDraftImp
 
     /**
      *  <p>The product draft import resources of this request.</p>
+     * @return Builder
      */
 
     public ProductDraftImportRequestBuilder plusResources(
@@ -73,6 +80,7 @@ public class ProductDraftImportRequestBuilder implements Builder<ProductDraftImp
 
     /**
      *  <p>The product draft import resources of this request.</p>
+     * @return Builder
      */
 
     public ProductDraftImportRequestBuilder withResources(

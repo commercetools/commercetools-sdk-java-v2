@@ -36,6 +36,7 @@ public interface StoreSetProductSelectionsAction extends StoreUpdateAction {
      *   <li>If provided, Product Selections for which <code>active</code> is set to <code>true</code> are available in the Store.</li>
      *   <li>If not provided or provided as empty array, the action removes all Product Selections from this Store, meaning all Products in the Project are available in this Store.</li>
      *  </ul>
+     * @return productSelections
      */
     @Valid
     @JsonProperty("productSelections")

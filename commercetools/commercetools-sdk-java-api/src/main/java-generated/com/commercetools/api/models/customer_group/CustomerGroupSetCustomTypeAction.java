@@ -34,6 +34,7 @@ public interface CustomerGroupSetCustomTypeAction extends CustomerGroupUpdateAct
 
     /**
      *  <p>Defines the Type that extends the CustomerGroup with Custom Fields. If absent, any existing Type and Custom Fields are removed from the CustomerGroup.</p>
+     * @return type
      */
     @Valid
     @JsonProperty("type")
@@ -41,6 +42,7 @@ public interface CustomerGroupSetCustomTypeAction extends CustomerGroupUpdateAct
 
     /**
      *  <p>Sets the Custom Fields fields for the CustomerGroup.</p>
+     * @return fields
      */
     @Valid
     @JsonProperty("fields")

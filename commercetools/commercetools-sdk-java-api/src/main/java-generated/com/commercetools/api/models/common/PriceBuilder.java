@@ -58,6 +58,8 @@ public class PriceBuilder implements Builder<Price> {
 
     /**
      *  <p>Unique identifier of this Price.</p>
+     * @param id
+     * @return Builder
      */
 
     public PriceBuilder id(final String id) {
@@ -67,6 +69,8 @@ public class PriceBuilder implements Builder<Price> {
 
     /**
      *  <p>User-defined identifier of the Price. It is unique per ProductVariant.</p>
+     * @param key
+     * @return Builder
      */
 
     public PriceBuilder key(@Nullable final String key) {
@@ -76,6 +80,8 @@ public class PriceBuilder implements Builder<Price> {
 
     /**
      *  <p>Money value of this Price.</p>
+     * @param value
+     * @return Builder
      */
 
     public PriceBuilder value(final com.commercetools.api.models.common.TypedMoney value) {
@@ -85,6 +91,7 @@ public class PriceBuilder implements Builder<Price> {
 
     /**
      *  <p>Money value of this Price.</p>
+     * @return Builder
      */
 
     public PriceBuilder value(
@@ -95,6 +102,8 @@ public class PriceBuilder implements Builder<Price> {
 
     /**
      *  <p>Country for which this Price is valid.</p>
+     * @param country
+     * @return Builder
      */
 
     public PriceBuilder country(@Nullable final String country) {
@@ -104,6 +113,7 @@ public class PriceBuilder implements Builder<Price> {
 
     /**
      *  <p>CustomerGroup for which this Price is valid.</p>
+     * @return Builder
      */
 
     public PriceBuilder customerGroup(
@@ -116,6 +126,8 @@ public class PriceBuilder implements Builder<Price> {
 
     /**
      *  <p>CustomerGroup for which this Price is valid.</p>
+     * @param customerGroup
+     * @return Builder
      */
 
     public PriceBuilder customerGroup(
@@ -126,6 +138,7 @@ public class PriceBuilder implements Builder<Price> {
 
     /**
      *  <p><code>ProductDistribution</code> Channel for which this Price is valid.</p>
+     * @return Builder
      */
 
     public PriceBuilder channel(
@@ -136,6 +149,8 @@ public class PriceBuilder implements Builder<Price> {
 
     /**
      *  <p><code>ProductDistribution</code> Channel for which this Price is valid.</p>
+     * @param channel
+     * @return Builder
      */
 
     public PriceBuilder channel(@Nullable final com.commercetools.api.models.channel.ChannelReference channel) {
@@ -145,6 +160,8 @@ public class PriceBuilder implements Builder<Price> {
 
     /**
      *  <p>Date and time from which this Price is valid.</p>
+     * @param validFrom
+     * @return Builder
      */
 
     public PriceBuilder validFrom(@Nullable final java.time.ZonedDateTime validFrom) {
@@ -154,6 +171,8 @@ public class PriceBuilder implements Builder<Price> {
 
     /**
      *  <p>Date and time until this Price is valid. Prices that are no longer valid are not automatically removed, but they can be removed if necessary.</p>
+     * @param validUntil
+     * @return Builder
      */
 
     public PriceBuilder validUntil(@Nullable final java.time.ZonedDateTime validUntil) {
@@ -163,6 +182,7 @@ public class PriceBuilder implements Builder<Price> {
 
     /**
      *  <p>Is set if a ProductDiscount has been applied. If set, the API uses the DiscountedPrice value for the Line Item Price selection. When a relative discount has been applied and the fraction part of the DiscountedPrice <code>value</code> is 0.5, the <code>value</code> is rounded in favor of the customer with half-down rounding.</p>
+     * @return Builder
      */
 
     public PriceBuilder discounted(
@@ -173,6 +193,8 @@ public class PriceBuilder implements Builder<Price> {
 
     /**
      *  <p>Is set if a ProductDiscount has been applied. If set, the API uses the DiscountedPrice value for the Line Item Price selection. When a relative discount has been applied and the fraction part of the DiscountedPrice <code>value</code> is 0.5, the <code>value</code> is rounded in favor of the customer with half-down rounding.</p>
+     * @param discounted
+     * @return Builder
      */
 
     public PriceBuilder discounted(@Nullable final com.commercetools.api.models.common.DiscountedPrice discounted) {
@@ -182,6 +204,8 @@ public class PriceBuilder implements Builder<Price> {
 
     /**
      *  <p>Present if different Prices for certain LineItem quantities have been specified.</p>
+     * @param tiers
+     * @return Builder
      */
 
     public PriceBuilder tiers(@Nullable final com.commercetools.api.models.common.PriceTier... tiers) {
@@ -191,6 +215,8 @@ public class PriceBuilder implements Builder<Price> {
 
     /**
      *  <p>Present if different Prices for certain LineItem quantities have been specified.</p>
+     * @param tiers
+     * @return Builder
      */
 
     public PriceBuilder tiers(@Nullable final java.util.List<com.commercetools.api.models.common.PriceTier> tiers) {
@@ -200,6 +226,8 @@ public class PriceBuilder implements Builder<Price> {
 
     /**
      *  <p>Present if different Prices for certain LineItem quantities have been specified.</p>
+     * @param tiers
+     * @return Builder
      */
 
     public PriceBuilder plusTiers(@Nullable final com.commercetools.api.models.common.PriceTier... tiers) {
@@ -212,6 +240,7 @@ public class PriceBuilder implements Builder<Price> {
 
     /**
      *  <p>Present if different Prices for certain LineItem quantities have been specified.</p>
+     * @return Builder
      */
 
     public PriceBuilder plusTiers(
@@ -225,6 +254,7 @@ public class PriceBuilder implements Builder<Price> {
 
     /**
      *  <p>Present if different Prices for certain LineItem quantities have been specified.</p>
+     * @return Builder
      */
 
     public PriceBuilder withTiers(
@@ -236,6 +266,7 @@ public class PriceBuilder implements Builder<Price> {
 
     /**
      *  <p>Custom Fields defined for the Price.</p>
+     * @return Builder
      */
 
     public PriceBuilder custom(
@@ -246,6 +277,8 @@ public class PriceBuilder implements Builder<Price> {
 
     /**
      *  <p>Custom Fields defined for the Price.</p>
+     * @param custom
+     * @return Builder
      */
 
     public PriceBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFields custom) {

@@ -45,6 +45,7 @@ public interface ProductPublishedMessage extends Message {
 
     /**
      *  <p>List of image URLs which were removed during the Publish update action.</p>
+     * @return removedImageUrls
      */
     @NotNull
     @JsonProperty("removedImageUrls")
@@ -52,6 +53,7 @@ public interface ProductPublishedMessage extends Message {
 
     /**
      *  <p>Current Product Projection of the Product at the time of creation.</p>
+     * @return productProjection
      */
     @NotNull
     @Valid
@@ -60,6 +62,7 @@ public interface ProductPublishedMessage extends Message {
 
     /**
      *  <p>Publishing Scope that was used during the Publish update action.</p>
+     * @return scope
      */
     @NotNull
     @JsonProperty("scope")

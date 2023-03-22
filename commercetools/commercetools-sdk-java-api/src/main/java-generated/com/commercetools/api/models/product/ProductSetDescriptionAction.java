@@ -33,6 +33,7 @@ public interface ProductSetDescriptionAction extends ProductUpdateAction {
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
+     * @return description
      */
     @Valid
     @JsonProperty("description")
@@ -40,6 +41,7 @@ public interface ProductSetDescriptionAction extends ProductUpdateAction {
 
     /**
      *  <p>If <code>true</code>, only the staged <code>description</code> is updated. If <code>false</code>, both the current and staged <code>description</code> are updated.</p>
+     * @return staged
      */
 
     @JsonProperty("staged")

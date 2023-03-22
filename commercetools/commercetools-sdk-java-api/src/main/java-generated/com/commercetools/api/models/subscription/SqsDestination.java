@@ -36,6 +36,7 @@ public interface SqsDestination extends Destination {
 
     /**
      *  <p>Only present if <code>authenticationMode</code> is set to <code>Credentials</code>.</p>
+     * @return accessKey
      */
 
     @JsonProperty("accessKey")
@@ -43,6 +44,7 @@ public interface SqsDestination extends Destination {
 
     /**
      *  <p>Only present if <code>authenticationMode</code> is set to <code>Credentials</code>.</p>
+     * @return accessSecret
      */
 
     @JsonProperty("accessSecret")
@@ -50,6 +52,7 @@ public interface SqsDestination extends Destination {
 
     /**
      *  <p>URL of the Amazon SQS queue.</p>
+     * @return queueUrl
      */
     @NotNull
     @JsonProperty("queueUrl")
@@ -57,6 +60,7 @@ public interface SqsDestination extends Destination {
 
     /**
      *  <p>AWS Region the message queue is located in.</p>
+     * @return region
      */
     @NotNull
     @JsonProperty("region")
@@ -64,6 +68,7 @@ public interface SqsDestination extends Destination {
 
     /**
      *  <p>Defines the method of authentication for the SQS queue.</p>
+     * @return authenticationMode
      */
 
     @JsonProperty("authenticationMode")

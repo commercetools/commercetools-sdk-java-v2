@@ -32,6 +32,8 @@ public class AddDeliveryChangeBuilder implements Builder<AddDeliveryChange> {
 
     /**
      *  <p>Update action for <code>addDelivery</code></p>
+     * @param change
+     * @return Builder
      */
 
     public AddDeliveryChangeBuilder change(final String change) {
@@ -41,6 +43,7 @@ public class AddDeliveryChangeBuilder implements Builder<AddDeliveryChange> {
 
     /**
      *
+     * @return Builder
      */
 
     public AddDeliveryChangeBuilder nextValue(
@@ -52,6 +55,8 @@ public class AddDeliveryChangeBuilder implements Builder<AddDeliveryChange> {
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public AddDeliveryChangeBuilder nextValue(
@@ -62,6 +67,7 @@ public class AddDeliveryChangeBuilder implements Builder<AddDeliveryChange> {
 
     /**
      *
+     * @return Builder
      */
 
     public AddDeliveryChangeBuilder previousValue(
@@ -74,6 +80,8 @@ public class AddDeliveryChangeBuilder implements Builder<AddDeliveryChange> {
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public AddDeliveryChangeBuilder previousValue(

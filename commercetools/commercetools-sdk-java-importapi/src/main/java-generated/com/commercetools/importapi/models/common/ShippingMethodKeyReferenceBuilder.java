@@ -25,6 +25,8 @@ public class ShippingMethodKeyReferenceBuilder implements Builder<ShippingMethod
 
     /**
      *
+     * @param key
+     * @return Builder
      */
 
     public ShippingMethodKeyReferenceBuilder key(final String key) {

@@ -35,6 +35,8 @@ public class SetParcelTrackingDataChangeBuilder implements Builder<SetParcelTrac
 
     /**
      *  <p>Update action for <code>setParcelTrackingData</code></p>
+     * @param change
+     * @return Builder
      */
 
     public SetParcelTrackingDataChangeBuilder change(final String change) {
@@ -44,6 +46,7 @@ public class SetParcelTrackingDataChangeBuilder implements Builder<SetParcelTrac
 
     /**
      *
+     * @return Builder
      */
 
     public SetParcelTrackingDataChangeBuilder parcel(
@@ -55,6 +58,8 @@ public class SetParcelTrackingDataChangeBuilder implements Builder<SetParcelTrac
 
     /**
      *
+     * @param parcel
+     * @return Builder
      */
 
     public SetParcelTrackingDataChangeBuilder parcel(
@@ -65,6 +70,7 @@ public class SetParcelTrackingDataChangeBuilder implements Builder<SetParcelTrac
 
     /**
      *
+     * @return Builder
      */
 
     public SetParcelTrackingDataChangeBuilder nextValue(
@@ -75,6 +81,8 @@ public class SetParcelTrackingDataChangeBuilder implements Builder<SetParcelTrac
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public SetParcelTrackingDataChangeBuilder nextValue(
@@ -85,6 +93,7 @@ public class SetParcelTrackingDataChangeBuilder implements Builder<SetParcelTrac
 
     /**
      *
+     * @return Builder
      */
 
     public SetParcelTrackingDataChangeBuilder previousValue(
@@ -95,6 +104,8 @@ public class SetParcelTrackingDataChangeBuilder implements Builder<SetParcelTrac
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public SetParcelTrackingDataChangeBuilder previousValue(

@@ -27,6 +27,7 @@ public class IndividualExclusionProductSelectionTypeBuilder
 
     /**
      *  <p>The name of the ProductSelection which is recommended to be unique.</p>
+     * @return Builder
      */
 
     public IndividualExclusionProductSelectionTypeBuilder name(
@@ -37,6 +38,8 @@ public class IndividualExclusionProductSelectionTypeBuilder
 
     /**
      *  <p>The name of the ProductSelection which is recommended to be unique.</p>
+     * @param name
+     * @return Builder
      */
 
     public IndividualExclusionProductSelectionTypeBuilder name(

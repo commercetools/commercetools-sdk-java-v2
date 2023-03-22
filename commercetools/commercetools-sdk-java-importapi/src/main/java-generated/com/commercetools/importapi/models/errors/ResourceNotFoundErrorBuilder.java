@@ -30,6 +30,8 @@ public class ResourceNotFoundErrorBuilder implements Builder<ResourceNotFoundErr
 
     /**
      *
+     * @param message
+     * @return Builder
      */
 
     public ResourceNotFoundErrorBuilder message(final String message) {
@@ -39,6 +41,8 @@ public class ResourceNotFoundErrorBuilder implements Builder<ResourceNotFoundErr
 
     /**
      *
+     * @param resource
+     * @return Builder
      */
 
     public ResourceNotFoundErrorBuilder resource(@Nullable final java.lang.Object resource) {

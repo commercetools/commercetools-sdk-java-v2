@@ -31,6 +31,8 @@ public class MyCustomerChangePasswordBuilder implements Builder<MyCustomerChange
 
     /**
      *  <p>Expected version of the Customer on which the changes should be applied.</p>
+     * @param version
+     * @return Builder
      */
 
     public MyCustomerChangePasswordBuilder version(final Long version) {
@@ -41,6 +43,8 @@ public class MyCustomerChangePasswordBuilder implements Builder<MyCustomerChange
     /**
      *  <p>Current password of the Customer.</p>
      *  <p>If the current password does not match, an InvalidCurrentPassword error is returned.</p>
+     * @param currentPassword
+     * @return Builder
      */
 
     public MyCustomerChangePasswordBuilder currentPassword(final String currentPassword) {
@@ -50,6 +54,8 @@ public class MyCustomerChangePasswordBuilder implements Builder<MyCustomerChange
 
     /**
      *  <p>New password to be set.</p>
+     * @param newPassword
+     * @return Builder
      */
 
     public MyCustomerChangePasswordBuilder newPassword(final String newPassword) {

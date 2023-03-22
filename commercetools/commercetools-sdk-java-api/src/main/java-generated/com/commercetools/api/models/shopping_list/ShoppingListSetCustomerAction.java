@@ -33,6 +33,7 @@ public interface ShoppingListSetCustomerAction extends ShoppingListUpdateAction 
 
     /**
      *  <p>The Customer the ShoppingList should be associated to. If empty, any existing value will be removed.</p>
+     * @return customer
      */
     @Valid
     @JsonProperty("customer")

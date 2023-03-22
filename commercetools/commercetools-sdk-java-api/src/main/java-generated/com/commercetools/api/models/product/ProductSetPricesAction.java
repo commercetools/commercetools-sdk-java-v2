@@ -35,6 +35,7 @@ public interface ProductSetPricesAction extends ProductUpdateAction {
 
     /**
      *  <p>The <code>id</code> of the ProductVariant to update.</p>
+     * @return variantId
      */
 
     @JsonProperty("variantId")
@@ -42,6 +43,7 @@ public interface ProductSetPricesAction extends ProductUpdateAction {
 
     /**
      *  <p>The <code>sku</code> of the ProductVariant to update.</p>
+     * @return sku
      */
 
     @JsonProperty("sku")
@@ -49,6 +51,7 @@ public interface ProductSetPricesAction extends ProductUpdateAction {
 
     /**
      *  <p>The Embedded Prices to set. Each Price must have its unique Price scope (with same currency, country, Customer Group, Channel, <code>validFrom</code> and <code>validUntil</code>).</p>
+     * @return prices
      */
     @NotNull
     @Valid
@@ -57,6 +60,7 @@ public interface ProductSetPricesAction extends ProductUpdateAction {
 
     /**
      *  <p>If <code>true</code>, only the staged ProductVariant is updated. If <code>false</code>, both the current and staged ProductVariant are updated.</p>
+     * @return staged
      */
 
     @JsonProperty("staged")

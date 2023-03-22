@@ -25,6 +25,8 @@ public class ImportResourceBuilder implements Builder<ImportResource> {
 
     /**
      *  <p>User-defined unique identifier.</p>
+     * @param key
+     * @return Builder
      */
 
     public ImportResourceBuilder key(final String key) {

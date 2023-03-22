@@ -34,6 +34,7 @@ public interface AttributeLocalizedEnumType extends AttributeType {
 
     /**
      *  <p>Available values that can be assigned to Products.</p>
+     * @return values
      */
     @NotNull
     @Valid

@@ -35,6 +35,8 @@ public class AssetSourceBuilder implements Builder<AssetSource> {
 
     /**
      *
+     * @param uri
+     * @return Builder
      */
 
     public AssetSourceBuilder uri(final String uri) {
@@ -44,6 +46,8 @@ public class AssetSourceBuilder implements Builder<AssetSource> {
 
     /**
      *
+     * @param key
+     * @return Builder
      */
 
     public AssetSourceBuilder key(final String key) {
@@ -53,6 +57,7 @@ public class AssetSourceBuilder implements Builder<AssetSource> {
 
     /**
      *
+     * @return Builder
      */
 
     public AssetSourceBuilder dimensions(
@@ -63,6 +68,8 @@ public class AssetSourceBuilder implements Builder<AssetSource> {
 
     /**
      *
+     * @param dimensions
+     * @return Builder
      */
 
     public AssetSourceBuilder dimensions(final com.commercetools.history.models.common.AssetDimensions dimensions) {
@@ -72,6 +79,8 @@ public class AssetSourceBuilder implements Builder<AssetSource> {
 
     /**
      *
+     * @param contentType
+     * @return Builder
      */
 
     public AssetSourceBuilder contentType(final String contentType) {

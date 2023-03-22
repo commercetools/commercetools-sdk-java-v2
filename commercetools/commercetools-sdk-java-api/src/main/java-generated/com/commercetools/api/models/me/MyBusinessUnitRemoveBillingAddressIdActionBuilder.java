@@ -31,6 +31,8 @@ public class MyBusinessUnitRemoveBillingAddressIdActionBuilder
 
     /**
      *  <p>ID of the billing address to be removed. Either <code>addressId</code> or <code>addressKey</code> is required.</p>
+     * @param addressId
+     * @return Builder
      */
 
     public MyBusinessUnitRemoveBillingAddressIdActionBuilder addressId(@Nullable final String addressId) {
@@ -40,6 +42,8 @@ public class MyBusinessUnitRemoveBillingAddressIdActionBuilder
 
     /**
      *  <p>Key of the billing address to be removed. Either <code>addressId</code> or <code>addressKey</code> is required.</p>
+     * @param addressKey
+     * @return Builder
      */
 
     public MyBusinessUnitRemoveBillingAddressIdActionBuilder addressKey(@Nullable final String addressKey) {

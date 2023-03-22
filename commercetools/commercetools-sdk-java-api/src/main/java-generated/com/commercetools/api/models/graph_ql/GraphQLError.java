@@ -34,6 +34,7 @@ public interface GraphQLError {
 
     /**
      *
+     * @return message
      */
     @NotNull
     @JsonProperty("message")
@@ -41,6 +42,7 @@ public interface GraphQLError {
 
     /**
      *
+     * @return locations
      */
     @NotNull
     @Valid
@@ -49,6 +51,7 @@ public interface GraphQLError {
 
     /**
      *
+     * @return path
      */
     @NotNull
     @JsonProperty("path")

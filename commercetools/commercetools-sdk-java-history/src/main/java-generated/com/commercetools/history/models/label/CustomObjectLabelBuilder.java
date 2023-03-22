@@ -28,6 +28,8 @@ public class CustomObjectLabelBuilder implements Builder<CustomObjectLabel> {
 
     /**
      *
+     * @param key
+     * @return Builder
      */
 
     public CustomObjectLabelBuilder key(final String key) {
@@ -37,6 +39,8 @@ public class CustomObjectLabelBuilder implements Builder<CustomObjectLabel> {
 
     /**
      *
+     * @param container
+     * @return Builder
      */
 
     public CustomObjectLabelBuilder container(final String container) {

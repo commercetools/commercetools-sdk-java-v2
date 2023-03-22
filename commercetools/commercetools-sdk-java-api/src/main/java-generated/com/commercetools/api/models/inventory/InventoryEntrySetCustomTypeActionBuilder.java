@@ -31,6 +31,7 @@ public class InventoryEntrySetCustomTypeActionBuilder implements Builder<Invento
 
     /**
      *  <p>Defines the Type that extends the InventoryEntry with Custom Fields. If absent, any existing Type and Custom Fields are removed from the InventoryEntry.</p>
+     * @return Builder
      */
 
     public InventoryEntrySetCustomTypeActionBuilder type(
@@ -41,6 +42,8 @@ public class InventoryEntrySetCustomTypeActionBuilder implements Builder<Invento
 
     /**
      *  <p>Defines the Type that extends the InventoryEntry with Custom Fields. If absent, any existing Type and Custom Fields are removed from the InventoryEntry.</p>
+     * @param type
+     * @return Builder
      */
 
     public InventoryEntrySetCustomTypeActionBuilder type(
@@ -51,6 +54,7 @@ public class InventoryEntrySetCustomTypeActionBuilder implements Builder<Invento
 
     /**
      *  <p>Sets the Custom Fields fields for the InventoryEntry.</p>
+     * @return Builder
      */
 
     public InventoryEntrySetCustomTypeActionBuilder fields(
@@ -61,6 +65,8 @@ public class InventoryEntrySetCustomTypeActionBuilder implements Builder<Invento
 
     /**
      *  <p>Sets the Custom Fields fields for the InventoryEntry.</p>
+     * @param fields
+     * @return Builder
      */
 
     public InventoryEntrySetCustomTypeActionBuilder fields(

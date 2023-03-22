@@ -40,6 +40,8 @@ public class MyCartRemoveLineItemActionBuilder implements Builder<MyCartRemoveLi
 
     /**
      *  <p><code>id</code> of the Line Item to remove.</p>
+     * @param lineItemId
+     * @return Builder
      */
 
     public MyCartRemoveLineItemActionBuilder lineItemId(final String lineItemId) {
@@ -50,6 +52,8 @@ public class MyCartRemoveLineItemActionBuilder implements Builder<MyCartRemoveLi
     /**
      *  <p>New value to set.</p>
      *  <p>If <code>0</code>, the Line Item is removed from the Cart.</p>
+     * @param quantity
+     * @return Builder
      */
 
     public MyCartRemoveLineItemActionBuilder quantity(@Nullable final Long quantity) {
@@ -59,6 +63,7 @@ public class MyCartRemoveLineItemActionBuilder implements Builder<MyCartRemoveLi
 
     /**
      *  <p>Sets the LineItem <code>price</code> to the given value when decreasing the quantity of a Line Item with the <code>ExternalPrice</code> LineItemPriceMode.</p>
+     * @return Builder
      */
 
     public MyCartRemoveLineItemActionBuilder externalPrice(
@@ -69,6 +74,8 @@ public class MyCartRemoveLineItemActionBuilder implements Builder<MyCartRemoveLi
 
     /**
      *  <p>Sets the LineItem <code>price</code> to the given value when decreasing the quantity of a Line Item with the <code>ExternalPrice</code> LineItemPriceMode.</p>
+     * @param externalPrice
+     * @return Builder
      */
 
     public MyCartRemoveLineItemActionBuilder externalPrice(
@@ -79,6 +86,7 @@ public class MyCartRemoveLineItemActionBuilder implements Builder<MyCartRemoveLi
 
     /**
      *  <p>Sets the LineItem <code>price</code> and <code>totalPrice</code> to the given value when decreasing the quantity of a Line Item with the <code>ExternalTotal</code> LineItemPriceMode.</p>
+     * @return Builder
      */
 
     public MyCartRemoveLineItemActionBuilder externalTotalPrice(
@@ -91,6 +99,8 @@ public class MyCartRemoveLineItemActionBuilder implements Builder<MyCartRemoveLi
 
     /**
      *  <p>Sets the LineItem <code>price</code> and <code>totalPrice</code> to the given value when decreasing the quantity of a Line Item with the <code>ExternalTotal</code> LineItemPriceMode.</p>
+     * @param externalTotalPrice
+     * @return Builder
      */
 
     public MyCartRemoveLineItemActionBuilder externalTotalPrice(
@@ -101,6 +111,7 @@ public class MyCartRemoveLineItemActionBuilder implements Builder<MyCartRemoveLi
 
     /**
      *  <p>Container for Line Item-specific addresses to remove.</p>
+     * @return Builder
      */
 
     public MyCartRemoveLineItemActionBuilder shippingDetailsToRemove(
@@ -113,6 +124,8 @@ public class MyCartRemoveLineItemActionBuilder implements Builder<MyCartRemoveLi
 
     /**
      *  <p>Container for Line Item-specific addresses to remove.</p>
+     * @param shippingDetailsToRemove
+     * @return Builder
      */
 
     public MyCartRemoveLineItemActionBuilder shippingDetailsToRemove(

@@ -32,6 +32,7 @@ public interface SimilarProductMeta {
 
     /**
      *  <p>Localized product name used for similarity estimation.</p>
+     * @return name
      */
     @Valid
     @JsonProperty("name")
@@ -39,6 +40,7 @@ public interface SimilarProductMeta {
 
     /**
      *  <p>Localized product description used for similarity estimation.</p>
+     * @return description
      */
     @Valid
     @JsonProperty("description")
@@ -46,6 +48,7 @@ public interface SimilarProductMeta {
 
     /**
      *  <p>The product price in cents using the currency defined in SimilarProductSearchRequest If multiple prices exist, the median value is taken as a representative amount.</p>
+     * @return price
      */
     @Valid
     @JsonProperty("price")
@@ -53,6 +56,7 @@ public interface SimilarProductMeta {
 
     /**
      *  <p>Total number of variants associated with the product.</p>
+     * @return variantCount
      */
 
     @JsonProperty("variantCount")

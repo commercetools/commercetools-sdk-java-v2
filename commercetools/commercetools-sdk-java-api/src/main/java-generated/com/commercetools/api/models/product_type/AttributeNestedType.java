@@ -34,6 +34,7 @@ public interface AttributeNestedType extends AttributeType {
 
     /**
      *  <p>Attributes that can be stored as nested Attributes of the current Attribute.</p>
+     * @return typeReference
      */
     @NotNull
     @Valid

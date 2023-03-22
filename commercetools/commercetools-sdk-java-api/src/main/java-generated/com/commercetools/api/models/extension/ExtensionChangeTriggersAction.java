@@ -34,6 +34,7 @@ public interface ExtensionChangeTriggersAction extends ExtensionUpdateAction {
 
     /**
      *  <p>New value to set. Must not be empty.</p>
+     * @return triggers
      */
     @NotNull
     @Valid

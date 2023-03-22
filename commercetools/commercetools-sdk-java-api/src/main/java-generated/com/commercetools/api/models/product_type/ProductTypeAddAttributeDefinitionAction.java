@@ -34,6 +34,7 @@ public interface ProductTypeAddAttributeDefinitionAction extends ProductTypeUpda
 
     /**
      *  <p>Value to append to <code>attributes</code>.</p>
+     * @return attribute
      */
     @NotNull
     @Valid

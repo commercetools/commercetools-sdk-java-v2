@@ -36,6 +36,7 @@ public interface PaymentDraft extends com.commercetools.api.models.CustomizableD
 
     /**
      *  <p>Reference to a Customer associated with the Payment.</p>
+     * @return customer
      */
     @Valid
     @JsonProperty("customer")
@@ -43,6 +44,7 @@ public interface PaymentDraft extends com.commercetools.api.models.CustomizableD
 
     /**
      *  <p>Anonymous session associated with the Payment.</p>
+     * @return anonymousId
      */
 
     @JsonProperty("anonymousId")
@@ -50,6 +52,7 @@ public interface PaymentDraft extends com.commercetools.api.models.CustomizableD
 
     /**
      *  <p>Additional identifier for external systems like Customer Relationship Management (CRM) or Enterprise Resource Planning (ERP).</p>
+     * @return externalId
      */
 
     @JsonProperty("externalId")
@@ -57,6 +60,7 @@ public interface PaymentDraft extends com.commercetools.api.models.CustomizableD
 
     /**
      *  <p>Identifier used by the payment service that processes the Payment (for example, a PSP). The combination of <code>interfaceId</code> and the <code>paymentInterface</code> field on PaymentMethodInfo must be unique. Once set, it cannot be changed.</p>
+     * @return interfaceId
      */
 
     @JsonProperty("interfaceId")
@@ -64,6 +68,7 @@ public interface PaymentDraft extends com.commercetools.api.models.CustomizableD
 
     /**
      *  <p>Money value the Payment intends to receive from the customer. The value typically matches the Cart or Order gross total.</p>
+     * @return amountPlanned
      */
     @NotNull
     @Valid
@@ -72,6 +77,7 @@ public interface PaymentDraft extends com.commercetools.api.models.CustomizableD
 
     /**
      *  <p>Deprecated because the value can be calculated from the total amounts saved in the Transactions.</p>
+     * @return amountAuthorized
      */
     @Valid
     @JsonProperty("amountAuthorized")
@@ -79,6 +85,7 @@ public interface PaymentDraft extends com.commercetools.api.models.CustomizableD
 
     /**
      *  <p>Deprecated because this field is of little practical value, as it is either not reliably known, or the authorization time is fixed for a PSP.</p>
+     * @return authorizedUntil
      */
 
     @JsonProperty("authorizedUntil")
@@ -86,6 +93,7 @@ public interface PaymentDraft extends com.commercetools.api.models.CustomizableD
 
     /**
      *  <p>Deprecated because the value can be calculated from the total amounts saved in the Transactions.</p>
+     * @return amountPaid
      */
     @Valid
     @JsonProperty("amountPaid")
@@ -93,6 +101,7 @@ public interface PaymentDraft extends com.commercetools.api.models.CustomizableD
 
     /**
      *  <p>Deprecated because the value can be calculated from the total amounts saved in the Transactions.</p>
+     * @return amountRefunded
      */
     @Valid
     @JsonProperty("amountRefunded")
@@ -100,6 +109,7 @@ public interface PaymentDraft extends com.commercetools.api.models.CustomizableD
 
     /**
      *  <p>Information regarding the payment interface (for example, a PSP), and the specific payment method used.</p>
+     * @return paymentMethodInfo
      */
     @Valid
     @JsonProperty("paymentMethodInfo")
@@ -107,6 +117,7 @@ public interface PaymentDraft extends com.commercetools.api.models.CustomizableD
 
     /**
      *  <p>Current status of the Payment.</p>
+     * @return paymentStatus
      */
     @Valid
     @JsonProperty("paymentStatus")
@@ -114,6 +125,7 @@ public interface PaymentDraft extends com.commercetools.api.models.CustomizableD
 
     /**
      *  <p>Financial transactions of the Payment. Each Transaction has a TransactionType and a TransactionState.</p>
+     * @return transactions
      */
     @Valid
     @JsonProperty("transactions")
@@ -121,6 +133,7 @@ public interface PaymentDraft extends com.commercetools.api.models.CustomizableD
 
     /**
      *  <p>Represents information exchange with the payment service, for example, a PSP. An interaction may be a request sent, or a response or notification received from the payment service.</p>
+     * @return interfaceInteractions
      */
     @Valid
     @JsonProperty("interfaceInteractions")
@@ -128,6 +141,7 @@ public interface PaymentDraft extends com.commercetools.api.models.CustomizableD
 
     /**
      *  <p>Custom Fields for the Payment.</p>
+     * @return custom
      */
     @Valid
     @JsonProperty("custom")
@@ -135,6 +149,7 @@ public interface PaymentDraft extends com.commercetools.api.models.CustomizableD
 
     /**
      *  <p>User-defined unique identifier for the Payment.</p>
+     * @return key
      */
 
     @JsonProperty("key")

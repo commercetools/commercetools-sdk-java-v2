@@ -30,6 +30,7 @@ public interface CustomerAddBillingAddressIdAction extends CustomerUpdateAction 
 
     /**
      *  <p><code>id</code> of the Address to become a billing address.</p>
+     * @return addressId
      */
 
     @JsonProperty("addressId")
@@ -37,6 +38,7 @@ public interface CustomerAddBillingAddressIdAction extends CustomerUpdateAction 
 
     /**
      *  <p><code>key</code> of the Address to become a billing address.</p>
+     * @return addressKey
      */
 
     @JsonProperty("addressKey")

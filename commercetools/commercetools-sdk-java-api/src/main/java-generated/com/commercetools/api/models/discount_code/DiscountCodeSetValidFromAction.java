@@ -31,6 +31,7 @@ public interface DiscountCodeSetValidFromAction extends DiscountCodeUpdateAction
 
     /**
      *  <p>Value to set that must be earlier than <code>validUntil</code>. If empty, any existing value will be removed.</p>
+     * @return validFrom
      */
 
     @JsonProperty("validFrom")

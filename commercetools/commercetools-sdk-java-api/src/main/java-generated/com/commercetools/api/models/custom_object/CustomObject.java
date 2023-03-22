@@ -43,6 +43,7 @@ public interface CustomObject
 
     /**
      *  <p>Unique identifier of the CustomObject.</p>
+     * @return id
      */
     @NotNull
     @JsonProperty("id")
@@ -50,6 +51,7 @@ public interface CustomObject
 
     /**
      *  <p>Current version of the CustomObject.</p>
+     * @return version
      */
     @NotNull
     @JsonProperty("version")
@@ -57,6 +59,7 @@ public interface CustomObject
 
     /**
      *  <p>Date and time (UTC) the CustomObject was initially created.</p>
+     * @return createdAt
      */
     @NotNull
     @JsonProperty("createdAt")
@@ -64,6 +67,7 @@ public interface CustomObject
 
     /**
      *  <p>Date and time (UTC) the CustomObject was last updated.</p>
+     * @return lastModifiedAt
      */
     @NotNull
     @JsonProperty("lastModifiedAt")
@@ -71,6 +75,7 @@ public interface CustomObject
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @return lastModifiedBy
      */
     @Valid
     @JsonProperty("lastModifiedBy")
@@ -78,6 +83,7 @@ public interface CustomObject
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @return createdBy
      */
     @Valid
     @JsonProperty("createdBy")
@@ -85,6 +91,7 @@ public interface CustomObject
 
     /**
      *  <p>Namespace to group CustomObjects.</p>
+     * @return container
      */
     @NotNull
     @JsonProperty("container")
@@ -92,6 +99,7 @@ public interface CustomObject
 
     /**
      *  <p>User-defined unique identifier of the CustomObject within the defined <code>container</code>.</p>
+     * @return key
      */
     @NotNull
     @JsonProperty("key")
@@ -99,6 +107,7 @@ public interface CustomObject
 
     /**
      *  <p>JSON standard types Number, String, Boolean, Array, Object, and common API data types. For values of type Reference the integrity of the data is not guaranteed. If the referenced object is deleted, the API does not delete the corresponding reference to it and the <code>value</code> points to a non-existing object in such case.</p>
+     * @return value
      */
     @NotNull
     @JsonProperty("value")

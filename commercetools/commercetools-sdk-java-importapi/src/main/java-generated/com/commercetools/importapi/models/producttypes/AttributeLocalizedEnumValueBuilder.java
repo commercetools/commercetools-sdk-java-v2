@@ -29,6 +29,8 @@ public class AttributeLocalizedEnumValueBuilder implements Builder<AttributeLoca
 
     /**
      *
+     * @param key
+     * @return Builder
      */
 
     public AttributeLocalizedEnumValueBuilder key(final String key) {
@@ -43,6 +45,7 @@ public class AttributeLocalizedEnumValueBuilder implements Builder<AttributeLoca
      *    "en": "dog food"
      *  }
      *  </code></pre>
+     * @return Builder
      */
 
     public AttributeLocalizedEnumValueBuilder label(
@@ -58,6 +61,8 @@ public class AttributeLocalizedEnumValueBuilder implements Builder<AttributeLoca
      *    "en": "dog food"
      *  }
      *  </code></pre>
+     * @param label
+     * @return Builder
      */
 
     public AttributeLocalizedEnumValueBuilder label(

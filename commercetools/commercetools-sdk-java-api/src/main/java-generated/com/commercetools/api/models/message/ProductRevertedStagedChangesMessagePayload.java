@@ -33,6 +33,7 @@ public interface ProductRevertedStagedChangesMessagePayload extends MessagePaylo
 
     /**
      *  <p>List of image URLs that were removed during the Revert Staged Changes update action.</p>
+     * @return removedImageUrls
      */
     @NotNull
     @JsonProperty("removedImageUrls")

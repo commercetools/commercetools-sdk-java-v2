@@ -31,6 +31,8 @@ public class SetCartPredicateChangeBuilder implements Builder<SetCartPredicateCh
 
     /**
      *  <p>Shape of the action for <code>setCartPredicate</code></p>
+     * @param change
+     * @return Builder
      */
 
     public SetCartPredicateChangeBuilder change(final String change) {
@@ -40,6 +42,8 @@ public class SetCartPredicateChangeBuilder implements Builder<SetCartPredicateCh
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public SetCartPredicateChangeBuilder previousValue(final String previousValue) {
@@ -49,6 +53,8 @@ public class SetCartPredicateChangeBuilder implements Builder<SetCartPredicateCh
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public SetCartPredicateChangeBuilder nextValue(final String nextValue) {

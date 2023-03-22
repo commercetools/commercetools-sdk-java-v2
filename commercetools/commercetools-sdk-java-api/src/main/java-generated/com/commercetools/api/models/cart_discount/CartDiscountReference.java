@@ -35,6 +35,7 @@ public interface CartDiscountReference extends Reference, com.commercetools.api.
 
     /**
      *  <p>Contains the representation of the expanded CartDiscount. Only present in responses to requests with Reference Expansion for CartDiscounts.</p>
+     * @return obj
      */
     @Valid
     @JsonProperty("obj")
@@ -42,6 +43,7 @@ public interface CartDiscountReference extends Reference, com.commercetools.api.
 
     /**
      *  <p>Unique identifier of the referenced CartDiscount.</p>
+     * @return id
      */
     @NotNull
     @JsonProperty("id")

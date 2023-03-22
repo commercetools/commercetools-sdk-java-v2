@@ -25,6 +25,8 @@ public class DateFieldBuilder implements Builder<DateField> {
 
     /**
      *
+     * @param value
+     * @return Builder
      */
 
     public DateFieldBuilder value(final java.time.LocalDate value) {

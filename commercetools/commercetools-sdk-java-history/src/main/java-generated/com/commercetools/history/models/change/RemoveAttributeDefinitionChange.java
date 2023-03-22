@@ -36,6 +36,7 @@ public interface RemoveAttributeDefinitionChange extends Change {
 
     /**
      *
+     * @return type
      */
     @NotNull
     @JsonProperty("type")
@@ -43,6 +44,7 @@ public interface RemoveAttributeDefinitionChange extends Change {
 
     /**
      *  <p>Update action for <code>removeAttributeDefinition</code> on product types</p>
+     * @return change
      */
     @NotNull
     @JsonProperty("change")
@@ -50,6 +52,7 @@ public interface RemoveAttributeDefinitionChange extends Change {
 
     /**
      *
+     * @return previousValue
      */
     @NotNull
     @Valid

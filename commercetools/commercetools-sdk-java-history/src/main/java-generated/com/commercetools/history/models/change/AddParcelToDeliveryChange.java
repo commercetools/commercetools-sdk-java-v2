@@ -37,6 +37,7 @@ public interface AddParcelToDeliveryChange extends Change {
 
     /**
      *
+     * @return type
      */
     @NotNull
     @JsonProperty("type")
@@ -44,6 +45,7 @@ public interface AddParcelToDeliveryChange extends Change {
 
     /**
      *  <p>Update action for <code>addParcelToDelivery</code></p>
+     * @return change
      */
     @NotNull
     @JsonProperty("change")
@@ -51,6 +53,7 @@ public interface AddParcelToDeliveryChange extends Change {
 
     /**
      *
+     * @return deliveryId
      */
     @NotNull
     @JsonProperty("deliveryId")
@@ -58,6 +61,7 @@ public interface AddParcelToDeliveryChange extends Change {
 
     /**
      *
+     * @return nextValue
      */
     @NotNull
     @Valid

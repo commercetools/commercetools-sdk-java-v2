@@ -42,6 +42,7 @@ public interface OrderCustomLineItemAddedMessage extends OrderMessage {
 
     /**
      *  <p>Custom Line Item that was added to the Order.</p>
+     * @return customLineItem
      */
     @NotNull
     @Valid

@@ -34,6 +34,8 @@ public class CartClassificationTierBuilder implements Builder<CartClassification
 
     /**
      *  <p><code>key</code> selected from the <code>values</code> of the CartClassificationType configured in the Project.</p>
+     * @param value
+     * @return Builder
      */
 
     public CartClassificationTierBuilder value(final String value) {
@@ -43,6 +45,7 @@ public class CartClassificationTierBuilder implements Builder<CartClassification
 
     /**
      *  <p>Fixed shipping rate for the selected classification.</p>
+     * @return Builder
      */
 
     public CartClassificationTierBuilder price(
@@ -53,6 +56,8 @@ public class CartClassificationTierBuilder implements Builder<CartClassification
 
     /**
      *  <p>Fixed shipping rate for the selected classification.</p>
+     * @param price
+     * @return Builder
      */
 
     public CartClassificationTierBuilder price(final com.commercetools.api.models.common.Money price) {
@@ -62,6 +67,8 @@ public class CartClassificationTierBuilder implements Builder<CartClassification
 
     /**
      *  <p>Appears in response to Get ShippingMethods for a Cart if the shipping rate matches the search query.</p>
+     * @param isMatching
+     * @return Builder
      */
 
     public CartClassificationTierBuilder isMatching(@Nullable final Boolean isMatching) {

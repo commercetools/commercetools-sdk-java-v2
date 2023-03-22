@@ -26,6 +26,7 @@ public class CartUpdateItemShippingAddressActionBuilder implements Builder<CartU
 
     /**
      *  <p>The new Address with the same <code>key</code> as the Address it will replace.</p>
+     * @return Builder
      */
 
     public CartUpdateItemShippingAddressActionBuilder address(
@@ -36,6 +37,8 @@ public class CartUpdateItemShippingAddressActionBuilder implements Builder<CartU
 
     /**
      *  <p>The new Address with the same <code>key</code> as the Address it will replace.</p>
+     * @param address
+     * @return Builder
      */
 
     public CartUpdateItemShippingAddressActionBuilder address(

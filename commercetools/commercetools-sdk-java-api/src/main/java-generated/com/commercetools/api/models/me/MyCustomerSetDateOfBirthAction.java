@@ -31,6 +31,7 @@ public interface MyCustomerSetDateOfBirthAction extends MyCustomerUpdateAction {
 
     /**
      *  <p>Value to set. If empty, any existing value is removed.</p>
+     * @return dateOfBirth
      */
 
     @JsonProperty("dateOfBirth")

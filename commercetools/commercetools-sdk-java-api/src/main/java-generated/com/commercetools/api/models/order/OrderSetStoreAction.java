@@ -33,6 +33,7 @@ public interface OrderSetStoreAction extends OrderUpdateAction {
 
     /**
      *  <p>ResourceIdentifier to a Store.</p>
+     * @return store
      */
     @Valid
     @JsonProperty("store")

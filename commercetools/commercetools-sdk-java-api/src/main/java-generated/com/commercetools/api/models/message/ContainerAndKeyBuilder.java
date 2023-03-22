@@ -28,6 +28,8 @@ public class ContainerAndKeyBuilder implements Builder<ContainerAndKey> {
 
     /**
      *  <p>User-defined identifier that is unique within the given container.</p>
+     * @param key
+     * @return Builder
      */
 
     public ContainerAndKeyBuilder key(final String key) {
@@ -37,6 +39,8 @@ public class ContainerAndKeyBuilder implements Builder<ContainerAndKey> {
 
     /**
      *  <p>Namespace to group Custom Objects.</p>
+     * @param container
+     * @return Builder
      */
 
     public ContainerAndKeyBuilder container(final String container) {

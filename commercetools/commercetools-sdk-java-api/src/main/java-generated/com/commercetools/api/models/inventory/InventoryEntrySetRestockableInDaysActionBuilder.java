@@ -28,6 +28,8 @@ public class InventoryEntrySetRestockableInDaysActionBuilder
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
+     * @param restockableInDays
+     * @return Builder
      */
 
     public InventoryEntrySetRestockableInDaysActionBuilder restockableInDays(@Nullable final Long restockableInDays) {

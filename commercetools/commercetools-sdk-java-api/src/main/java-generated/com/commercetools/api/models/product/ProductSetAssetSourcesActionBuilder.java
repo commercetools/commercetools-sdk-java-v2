@@ -43,6 +43,8 @@ public class ProductSetAssetSourcesActionBuilder implements Builder<ProductSetAs
 
     /**
      *  <p>The <code>id</code> of the ProductVariant to update.</p>
+     * @param variantId
+     * @return Builder
      */
 
     public ProductSetAssetSourcesActionBuilder variantId(@Nullable final Long variantId) {
@@ -52,6 +54,8 @@ public class ProductSetAssetSourcesActionBuilder implements Builder<ProductSetAs
 
     /**
      *  <p>The <code>sku</code> of the ProductVariant to update.</p>
+     * @param sku
+     * @return Builder
      */
 
     public ProductSetAssetSourcesActionBuilder sku(@Nullable final String sku) {
@@ -61,6 +65,8 @@ public class ProductSetAssetSourcesActionBuilder implements Builder<ProductSetAs
 
     /**
      *  <p>If <code>true</code>, only the staged Asset is updated. If <code>false</code> both the current and staged Asset is updated.</p>
+     * @param staged
+     * @return Builder
      */
 
     public ProductSetAssetSourcesActionBuilder staged(@Nullable final Boolean staged) {
@@ -70,6 +76,8 @@ public class ProductSetAssetSourcesActionBuilder implements Builder<ProductSetAs
 
     /**
      *  <p>The <code>id</code> of the Asset to update.</p>
+     * @param assetId
+     * @return Builder
      */
 
     public ProductSetAssetSourcesActionBuilder assetId(@Nullable final String assetId) {
@@ -79,6 +87,8 @@ public class ProductSetAssetSourcesActionBuilder implements Builder<ProductSetAs
 
     /**
      *  <p>The <code>key</code> of the Asset to update.</p>
+     * @param assetKey
+     * @return Builder
      */
 
     public ProductSetAssetSourcesActionBuilder assetKey(@Nullable final String assetKey) {
@@ -88,6 +98,8 @@ public class ProductSetAssetSourcesActionBuilder implements Builder<ProductSetAs
 
     /**
      *  <p>Value to set.</p>
+     * @param sources
+     * @return Builder
      */
 
     public ProductSetAssetSourcesActionBuilder sources(
@@ -98,6 +110,8 @@ public class ProductSetAssetSourcesActionBuilder implements Builder<ProductSetAs
 
     /**
      *  <p>Value to set.</p>
+     * @param sources
+     * @return Builder
      */
 
     public ProductSetAssetSourcesActionBuilder sources(
@@ -108,6 +122,8 @@ public class ProductSetAssetSourcesActionBuilder implements Builder<ProductSetAs
 
     /**
      *  <p>Value to set.</p>
+     * @param sources
+     * @return Builder
      */
 
     public ProductSetAssetSourcesActionBuilder plusSources(
@@ -121,6 +137,7 @@ public class ProductSetAssetSourcesActionBuilder implements Builder<ProductSetAs
 
     /**
      *  <p>Value to set.</p>
+     * @return Builder
      */
 
     public ProductSetAssetSourcesActionBuilder plusSources(
@@ -134,6 +151,7 @@ public class ProductSetAssetSourcesActionBuilder implements Builder<ProductSetAs
 
     /**
      *  <p>Value to set.</p>
+     * @return Builder
      */
 
     public ProductSetAssetSourcesActionBuilder withSources(

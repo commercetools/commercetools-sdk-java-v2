@@ -36,6 +36,7 @@ public interface OrderSetParcelCustomTypeAction extends OrderUpdateAction {
 
     /**
      *
+     * @return parcelId
      */
     @NotNull
     @JsonProperty("parcelId")
@@ -43,6 +44,7 @@ public interface OrderSetParcelCustomTypeAction extends OrderUpdateAction {
 
     /**
      *  <p>Defines the Type that extends the Parcel with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Parcel.</p>
+     * @return type
      */
     @Valid
     @JsonProperty("type")
@@ -50,6 +52,7 @@ public interface OrderSetParcelCustomTypeAction extends OrderUpdateAction {
 
     /**
      *  <p>Sets the Custom Fields fields for the Parcel.</p>
+     * @return fields
      */
     @Valid
     @JsonProperty("fields")

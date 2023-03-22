@@ -29,6 +29,7 @@ public class ShippingMethodTaxAmountChangeValueBuilder implements Builder<Shippi
 
     /**
      *
+     * @return Builder
      */
 
     public ShippingMethodTaxAmountChangeValueBuilder taxedPrice(
@@ -39,6 +40,8 @@ public class ShippingMethodTaxAmountChangeValueBuilder implements Builder<Shippi
 
     /**
      *
+     * @param taxedPrice
+     * @return Builder
      */
 
     public ShippingMethodTaxAmountChangeValueBuilder taxedPrice(
@@ -49,6 +52,7 @@ public class ShippingMethodTaxAmountChangeValueBuilder implements Builder<Shippi
 
     /**
      *  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>
+     * @return Builder
      */
 
     public ShippingMethodTaxAmountChangeValueBuilder taxRate(
@@ -59,6 +63,8 @@ public class ShippingMethodTaxAmountChangeValueBuilder implements Builder<Shippi
 
     /**
      *  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>
+     * @param taxRate
+     * @return Builder
      */
 
     public ShippingMethodTaxAmountChangeValueBuilder taxRate(

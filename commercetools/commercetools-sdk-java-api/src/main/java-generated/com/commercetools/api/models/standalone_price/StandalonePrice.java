@@ -52,6 +52,7 @@ public interface StandalonePrice
 
     /**
      *  <p>Unique identifier of the StandalonePrice.</p>
+     * @return id
      */
     @NotNull
     @JsonProperty("id")
@@ -59,6 +60,7 @@ public interface StandalonePrice
 
     /**
      *  <p>Current version of the StandalonePrice.</p>
+     * @return version
      */
     @NotNull
     @JsonProperty("version")
@@ -66,6 +68,7 @@ public interface StandalonePrice
 
     /**
      *  <p>Date and time (UTC) the StandalonePrice was initially created.</p>
+     * @return createdAt
      */
     @NotNull
     @JsonProperty("createdAt")
@@ -73,6 +76,7 @@ public interface StandalonePrice
 
     /**
      *  <p>Date and time (UTC) the StandalonePrice was last updated.</p>
+     * @return lastModifiedAt
      */
     @NotNull
     @JsonProperty("lastModifiedAt")
@@ -80,6 +84,7 @@ public interface StandalonePrice
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @return lastModifiedBy
      */
     @Valid
     @JsonProperty("lastModifiedBy")
@@ -87,6 +92,7 @@ public interface StandalonePrice
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @return createdBy
      */
     @Valid
     @JsonProperty("createdBy")
@@ -94,6 +100,7 @@ public interface StandalonePrice
 
     /**
      *  <p>User-defined unique identifier of the StandalonePrice.</p>
+     * @return key
      */
 
     @JsonProperty("key")
@@ -101,6 +108,7 @@ public interface StandalonePrice
 
     /**
      *  <p>SKU of the ProductVariant to which this Price is associated.</p>
+     * @return sku
      */
     @NotNull
     @JsonProperty("sku")
@@ -108,6 +116,7 @@ public interface StandalonePrice
 
     /**
      *  <p>Money value of this Price.</p>
+     * @return value
      */
     @NotNull
     @Valid
@@ -116,6 +125,7 @@ public interface StandalonePrice
 
     /**
      *  <p>Country for which this Price is valid.</p>
+     * @return country
      */
 
     @JsonProperty("country")
@@ -123,6 +133,7 @@ public interface StandalonePrice
 
     /**
      *  <p>CustomerGroup for which this Price is valid.</p>
+     * @return customerGroup
      */
     @Valid
     @JsonProperty("customerGroup")
@@ -130,6 +141,7 @@ public interface StandalonePrice
 
     /**
      *  <p>Product distribution Channel for which this Price is valid.</p>
+     * @return channel
      */
     @Valid
     @JsonProperty("channel")
@@ -137,6 +149,7 @@ public interface StandalonePrice
 
     /**
      *  <p>Date from which the Price is valid.</p>
+     * @return validFrom
      */
 
     @JsonProperty("validFrom")
@@ -144,6 +157,7 @@ public interface StandalonePrice
 
     /**
      *  <p>Date until the Price is valid. Standalone Prices that are no longer valid are not automatically deleted, but they can be deleted if necessary.</p>
+     * @return validUntil
      */
 
     @JsonProperty("validUntil")
@@ -151,6 +165,7 @@ public interface StandalonePrice
 
     /**
      *  <p>Price tiers if any are defined.</p>
+     * @return tiers
      */
     @Valid
     @JsonProperty("tiers")
@@ -158,6 +173,7 @@ public interface StandalonePrice
 
     /**
      *  <p>Set if a matching ProductDiscount exists. If set, the API uses the <code>discounted</code> value for the LineItem Price selection. When a relative discount is applied and the fraction part of the <code>discounted</code> price is 0.5, the discounted price is rounded in favor of the customer with the half down rounding.</p>
+     * @return discounted
      */
     @Valid
     @JsonProperty("discounted")
@@ -165,6 +181,7 @@ public interface StandalonePrice
 
     /**
      *  <p>Custom Fields for the StandalonePrice.</p>
+     * @return custom
      */
     @Valid
     @JsonProperty("custom")
@@ -172,6 +189,7 @@ public interface StandalonePrice
 
     /**
      *  <p>Staged changes of the StandalonePrice. Only present if the StandalonePrice has staged changes.</p>
+     * @return staged
      */
     @Valid
     @JsonProperty("staged")
@@ -179,6 +197,7 @@ public interface StandalonePrice
 
     /**
      *  <p>If set to <code>true</code>, the StandalonePrice is considered during price selection. If set to <code>false</code>, the StandalonePrice is not considered during price selection.</p>
+     * @return active
      */
     @NotNull
     @JsonProperty("active")

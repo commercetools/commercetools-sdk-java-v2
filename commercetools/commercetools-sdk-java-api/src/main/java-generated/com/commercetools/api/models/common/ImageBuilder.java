@@ -34,6 +34,8 @@ public class ImageBuilder implements Builder<Image> {
 
     /**
      *  <p>URL of the image in its original size that must be unique within a single ProductVariant.</p>
+     * @param url
+     * @return Builder
      */
 
     public ImageBuilder url(final String url) {
@@ -43,6 +45,7 @@ public class ImageBuilder implements Builder<Image> {
 
     /**
      *  <p>Dimensions of the original image.</p>
+     * @return Builder
      */
 
     public ImageBuilder dimensions(
@@ -53,6 +56,8 @@ public class ImageBuilder implements Builder<Image> {
 
     /**
      *  <p>Dimensions of the original image.</p>
+     * @param dimensions
+     * @return Builder
      */
 
     public ImageBuilder dimensions(final com.commercetools.api.models.common.ImageDimensions dimensions) {
@@ -62,6 +67,8 @@ public class ImageBuilder implements Builder<Image> {
 
     /**
      *  <p>Custom label for the image.</p>
+     * @param label
+     * @return Builder
      */
 
     public ImageBuilder label(@Nullable final String label) {

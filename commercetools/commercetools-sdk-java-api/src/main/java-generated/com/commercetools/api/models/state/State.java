@@ -46,6 +46,7 @@ public interface State extends BaseResource, StateMixin, com.commercetools.api.m
 
     /**
      *  <p>Unique identifier of the State.</p>
+     * @return id
      */
     @NotNull
     @JsonProperty("id")
@@ -53,6 +54,7 @@ public interface State extends BaseResource, StateMixin, com.commercetools.api.m
 
     /**
      *  <p>Current version of the State.</p>
+     * @return version
      */
     @NotNull
     @JsonProperty("version")
@@ -60,6 +62,7 @@ public interface State extends BaseResource, StateMixin, com.commercetools.api.m
 
     /**
      *  <p>Date and time (UTC) the State was initially created.</p>
+     * @return createdAt
      */
     @NotNull
     @JsonProperty("createdAt")
@@ -67,6 +70,7 @@ public interface State extends BaseResource, StateMixin, com.commercetools.api.m
 
     /**
      *  <p>Date and time (UTC) the State was last updated.</p>
+     * @return lastModifiedAt
      */
     @NotNull
     @JsonProperty("lastModifiedAt")
@@ -74,6 +78,7 @@ public interface State extends BaseResource, StateMixin, com.commercetools.api.m
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @return lastModifiedBy
      */
     @Valid
     @JsonProperty("lastModifiedBy")
@@ -81,6 +86,7 @@ public interface State extends BaseResource, StateMixin, com.commercetools.api.m
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @return createdBy
      */
     @Valid
     @JsonProperty("createdBy")
@@ -88,6 +94,7 @@ public interface State extends BaseResource, StateMixin, com.commercetools.api.m
 
     /**
      *  <p>User-defined unique identifier of the State.</p>
+     * @return key
      */
     @NotNull
     @JsonProperty("key")
@@ -95,6 +102,7 @@ public interface State extends BaseResource, StateMixin, com.commercetools.api.m
 
     /**
      *  <p>Indicates to which resource or object types the State is assigned to.</p>
+     * @return type
      */
     @NotNull
     @JsonProperty("type")
@@ -102,6 +110,7 @@ public interface State extends BaseResource, StateMixin, com.commercetools.api.m
 
     /**
      *  <p>Name of the State.</p>
+     * @return name
      */
     @Valid
     @JsonProperty("name")
@@ -109,6 +118,7 @@ public interface State extends BaseResource, StateMixin, com.commercetools.api.m
 
     /**
      *  <p>Description of the State.</p>
+     * @return description
      */
     @Valid
     @JsonProperty("description")
@@ -116,6 +126,7 @@ public interface State extends BaseResource, StateMixin, com.commercetools.api.m
 
     /**
      *  <p><code>true</code> for an initial State, the first State in a workflow.</p>
+     * @return initial
      */
     @NotNull
     @JsonProperty("initial")
@@ -123,6 +134,7 @@ public interface State extends BaseResource, StateMixin, com.commercetools.api.m
 
     /**
      *  <p><code>true</code> for States that are an integral part of the Project. Those States cannot be deleted and their <code>key</code> cannot be changed.</p>
+     * @return builtIn
      */
     @NotNull
     @JsonProperty("builtIn")
@@ -130,6 +142,7 @@ public interface State extends BaseResource, StateMixin, com.commercetools.api.m
 
     /**
      *  <p>Roles the State can fulfill for Reviews and Line Items.</p>
+     * @return roles
      */
 
     @JsonProperty("roles")
@@ -141,6 +154,7 @@ public interface State extends BaseResource, StateMixin, com.commercetools.api.m
      *   <li>if empty, no transitions are allowed from the current State, defining the current State as final for this workflow.</li>
      *   <li>if not set, the validation is turned off and the current State can be transitioned to any other State of the same <code>type</code> as the current State.</li>
      *  </ul>
+     * @return transitions
      */
     @Valid
     @JsonProperty("transitions")

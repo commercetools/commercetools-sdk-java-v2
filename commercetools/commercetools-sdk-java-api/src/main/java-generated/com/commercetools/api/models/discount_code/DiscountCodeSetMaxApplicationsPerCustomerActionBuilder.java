@@ -28,6 +28,8 @@ public class DiscountCodeSetMaxApplicationsPerCustomerActionBuilder
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
+     * @param maxApplicationsPerCustomer
+     * @return Builder
      */
 
     public DiscountCodeSetMaxApplicationsPerCustomerActionBuilder maxApplicationsPerCustomer(

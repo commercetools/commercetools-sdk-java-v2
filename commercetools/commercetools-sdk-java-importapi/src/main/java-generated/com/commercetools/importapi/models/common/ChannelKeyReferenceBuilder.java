@@ -25,6 +25,8 @@ public class ChannelKeyReferenceBuilder implements Builder<ChannelKeyReference> 
 
     /**
      *
+     * @param key
+     * @return Builder
      */
 
     public ChannelKeyReferenceBuilder key(final String key) {

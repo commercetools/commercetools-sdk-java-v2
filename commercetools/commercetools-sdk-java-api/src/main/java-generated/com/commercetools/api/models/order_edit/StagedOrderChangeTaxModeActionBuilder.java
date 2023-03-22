@@ -25,6 +25,8 @@ public class StagedOrderChangeTaxModeActionBuilder implements Builder<StagedOrde
 
     /**
      *  <p>Indicates how taxes are set on the Cart.</p>
+     * @param taxMode
+     * @return Builder
      */
 
     public StagedOrderChangeTaxModeActionBuilder taxMode(final com.commercetools.api.models.cart.TaxMode taxMode) {

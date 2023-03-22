@@ -33,6 +33,7 @@ public interface ChangeTargetLineItemsChangeValue extends ChangeTargetChangeValu
 
     /**
      *
+     * @return type
      */
     @NotNull
     @JsonProperty("type")
@@ -40,6 +41,7 @@ public interface ChangeTargetLineItemsChangeValue extends ChangeTargetChangeValu
 
     /**
      *
+     * @return predicate
      */
     @NotNull
     @JsonProperty("predicate")

@@ -35,6 +35,7 @@ public interface ProductTypeSetInputTipAction extends ProductTypeUpdateAction {
 
     /**
      *  <p>Name of the AttributeDefinition to update.</p>
+     * @return attributeName
      */
     @NotNull
     @JsonProperty("attributeName")
@@ -42,6 +43,7 @@ public interface ProductTypeSetInputTipAction extends ProductTypeUpdateAction {
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
+     * @return inputTip
      */
     @Valid
     @JsonProperty("inputTip")

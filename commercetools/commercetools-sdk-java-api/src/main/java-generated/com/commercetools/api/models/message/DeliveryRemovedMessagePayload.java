@@ -35,6 +35,7 @@ public interface DeliveryRemovedMessagePayload extends OrderMessagePayload {
 
     /**
      *  <p>The Delivery that was removed from the Order.</p>
+     * @return delivery
      */
     @NotNull
     @Valid
@@ -43,6 +44,7 @@ public interface DeliveryRemovedMessagePayload extends OrderMessagePayload {
 
     /**
      *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multi</code> ShippingMode.</p>
+     * @return shippingKey
      */
 
     @JsonProperty("shippingKey")

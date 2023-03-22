@@ -27,6 +27,8 @@ public class PaymentSetAnonymousIdActionBuilder implements Builder<PaymentSetAno
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
+     * @param anonymousId
+     * @return Builder
      */
 
     public PaymentSetAnonymousIdActionBuilder anonymousId(@Nullable final String anonymousId) {

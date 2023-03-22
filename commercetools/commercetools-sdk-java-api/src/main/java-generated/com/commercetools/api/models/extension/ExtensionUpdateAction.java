@@ -38,6 +38,7 @@ public interface ExtensionUpdateAction
 
     /**
      *
+     * @return action
      */
     @NotNull
     @JsonProperty("action")

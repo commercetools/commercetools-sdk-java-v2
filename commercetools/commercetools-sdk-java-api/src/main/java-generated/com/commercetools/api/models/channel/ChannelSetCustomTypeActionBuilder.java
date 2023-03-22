@@ -31,6 +31,7 @@ public class ChannelSetCustomTypeActionBuilder implements Builder<ChannelSetCust
 
     /**
      *  <p>Defines the Type that extends the Channel with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Channel.</p>
+     * @return Builder
      */
 
     public ChannelSetCustomTypeActionBuilder type(
@@ -41,6 +42,8 @@ public class ChannelSetCustomTypeActionBuilder implements Builder<ChannelSetCust
 
     /**
      *  <p>Defines the Type that extends the Channel with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Channel.</p>
+     * @param type
+     * @return Builder
      */
 
     public ChannelSetCustomTypeActionBuilder type(
@@ -51,6 +54,7 @@ public class ChannelSetCustomTypeActionBuilder implements Builder<ChannelSetCust
 
     /**
      *  <p>Sets the Custom Fields fields for the Channel.</p>
+     * @return Builder
      */
 
     public ChannelSetCustomTypeActionBuilder fields(
@@ -61,6 +65,8 @@ public class ChannelSetCustomTypeActionBuilder implements Builder<ChannelSetCust
 
     /**
      *  <p>Sets the Custom Fields fields for the Channel.</p>
+     * @param fields
+     * @return Builder
      */
 
     public ChannelSetCustomTypeActionBuilder fields(

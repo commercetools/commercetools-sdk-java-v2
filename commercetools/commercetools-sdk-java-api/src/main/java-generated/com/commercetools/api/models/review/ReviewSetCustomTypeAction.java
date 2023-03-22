@@ -34,6 +34,7 @@ public interface ReviewSetCustomTypeAction extends ReviewUpdateAction {
 
     /**
      *  <p>Defines the Type that extends the Review with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Review.</p>
+     * @return type
      */
     @Valid
     @JsonProperty("type")
@@ -41,6 +42,7 @@ public interface ReviewSetCustomTypeAction extends ReviewUpdateAction {
 
     /**
      *  <p>Sets the Custom Fields fields for the Review.</p>
+     * @return fields
      */
     @Valid
     @JsonProperty("fields")

@@ -36,6 +36,8 @@ public class MyCustomerSigninBuilder implements Builder<MyCustomerSignin> {
 
     /**
      *  <p>Email address of the Customer treated as case-insensitive.</p>
+     * @param email
+     * @return Builder
      */
 
     public MyCustomerSigninBuilder email(final String email) {
@@ -45,6 +47,8 @@ public class MyCustomerSigninBuilder implements Builder<MyCustomerSignin> {
 
     /**
      *  <p>Password of the Customer.</p>
+     * @param password
+     * @return Builder
      */
 
     public MyCustomerSigninBuilder password(final String password) {
@@ -57,6 +61,8 @@ public class MyCustomerSigninBuilder implements Builder<MyCustomerSignin> {
      *   <li>If <code>MergeWithExistingCustomerCart</code>, LineItems of the anonymous Cart are merged with the recently modified active Customer Cart.</li>
      *   <li>If <code>UseAsNewActiveCustomerCart</code>, the anonymous Cart is used as the new active Customer Cart, and no LineItems are merged.</li>
      *  </ul>
+     * @param activeCartSignInMode
+     * @return Builder
      */
 
     public MyCustomerSigninBuilder activeCartSignInMode(
@@ -70,6 +76,8 @@ public class MyCustomerSigninBuilder implements Builder<MyCustomerSignin> {
      *   <li>If <code>true</code>, the LineItem Product data (<code>name</code>, <code>variant</code>, and <code>productType</code>) of the returned Cart is updated.</li>
      *   <li>If <code>false</code>, only the prices, discounts, and tax rates are updated.</li>
      *  </ul>
+     * @param updateProductData
+     * @return Builder
      */
 
     public MyCustomerSigninBuilder updateProductData(@Nullable final Boolean updateProductData) {

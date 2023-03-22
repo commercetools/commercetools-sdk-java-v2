@@ -33,6 +33,7 @@ public interface SearchFacetPathNotFoundError extends ErrorObject {
 
     /**
      *
+     * @return code
      */
     @NotNull
     @JsonProperty("code")
@@ -40,6 +41,7 @@ public interface SearchFacetPathNotFoundError extends ErrorObject {
 
     /**
      *  <p><code>"Facet path $path not found."</code></p>
+     * @return message
      */
     @NotNull
     @JsonProperty("message")

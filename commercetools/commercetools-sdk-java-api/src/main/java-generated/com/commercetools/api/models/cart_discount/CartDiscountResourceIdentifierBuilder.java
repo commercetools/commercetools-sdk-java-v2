@@ -30,6 +30,8 @@ public class CartDiscountResourceIdentifierBuilder implements Builder<CartDiscou
 
     /**
      *  <p>Unique identifier of the referenced CartDiscount. Either <code>id</code> or <code>key</code> is required.</p>
+     * @param id
+     * @return Builder
      */
 
     public CartDiscountResourceIdentifierBuilder id(@Nullable final String id) {
@@ -39,6 +41,8 @@ public class CartDiscountResourceIdentifierBuilder implements Builder<CartDiscou
 
     /**
      *  <p>User-defined unique identifier of the referenced CartDiscount. Either <code>id</code> or <code>key</code> is required.</p>
+     * @param key
+     * @return Builder
      */
 
     public CartDiscountResourceIdentifierBuilder key(@Nullable final String key) {

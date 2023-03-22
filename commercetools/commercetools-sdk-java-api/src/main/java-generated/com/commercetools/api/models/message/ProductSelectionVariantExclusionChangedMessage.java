@@ -45,6 +45,7 @@ public interface ProductSelectionVariantExclusionChangedMessage extends Message 
 
     /**
      *  <p>Product for which the Product Variant Exclusion changed.</p>
+     * @return product
      */
     @NotNull
     @Valid
@@ -53,6 +54,7 @@ public interface ProductSelectionVariantExclusionChangedMessage extends Message 
 
     /**
      *  <p>Product Variant Exclusion before the Set Variant Exclusion update action.</p>
+     * @return oldVariantExclusion
      */
     @NotNull
     @Valid
@@ -61,6 +63,7 @@ public interface ProductSelectionVariantExclusionChangedMessage extends Message 
 
     /**
      *  <p>Product Variant Exclusion after the Set Variant Exclusion update action.</p>
+     * @return newVariantExclusion
      */
     @NotNull
     @Valid

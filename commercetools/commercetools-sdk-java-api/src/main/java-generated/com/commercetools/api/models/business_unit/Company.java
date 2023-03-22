@@ -43,6 +43,7 @@ public interface Company extends BusinessUnit {
 
     /**
      *  <p>Is always <code>Explicit</code> since a Company does not have a parent Business Unit the Stores can be inherited from.</p>
+     * @return storeMode
      */
     @NotNull
     @JsonProperty("storeMode")

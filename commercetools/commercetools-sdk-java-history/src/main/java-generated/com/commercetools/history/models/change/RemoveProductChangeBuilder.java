@@ -29,6 +29,8 @@ public class RemoveProductChangeBuilder implements Builder<RemoveProductChange> 
 
     /**
      *  <p>Update action for when a product is unassigned from a product selection</p>
+     * @param change
+     * @return Builder
      */
 
     public RemoveProductChangeBuilder change(final String change) {
@@ -38,6 +40,7 @@ public class RemoveProductChangeBuilder implements Builder<RemoveProductChange> 
 
     /**
      *
+     * @return Builder
      */
 
     public RemoveProductChangeBuilder previousValue(
@@ -48,6 +51,8 @@ public class RemoveProductChangeBuilder implements Builder<RemoveProductChange> 
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public RemoveProductChangeBuilder previousValue(

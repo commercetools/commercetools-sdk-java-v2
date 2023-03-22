@@ -33,6 +33,8 @@ public class CartSetShippingRateInputActionBuilder implements Builder<CartSetShi
      *   <li>If <code>CartScore</code>, it must be ScoreShippingRateInputDraft.</li>
      *   <li>If <code>CartValue</code>, it cannot be set.</li>
      *  </ul>
+     * @param shippingRateInput
+     * @return Builder
      */
 
     public CartSetShippingRateInputActionBuilder shippingRateInput(
@@ -48,6 +50,7 @@ public class CartSetShippingRateInputActionBuilder implements Builder<CartSetShi
      *   <li>If <code>CartScore</code>, it must be ScoreShippingRateInputDraft.</li>
      *   <li>If <code>CartValue</code>, it cannot be set.</li>
      *  </ul>
+     * @return Builder
      */
 
     public CartSetShippingRateInputActionBuilder shippingRateInput(

@@ -32,6 +32,7 @@ public interface AttributePlainEnumValue {
 
     /**
      *
+     * @return key
      */
     @NotNull
     @JsonProperty("key")
@@ -39,6 +40,7 @@ public interface AttributePlainEnumValue {
 
     /**
      *
+     * @return label
      */
     @NotNull
     @JsonProperty("label")

@@ -38,6 +38,7 @@ public interface CustomerGroupUpdateAction
 
     /**
      *
+     * @return action
      */
     @NotNull
     @JsonProperty("action")

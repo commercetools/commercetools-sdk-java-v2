@@ -37,6 +37,7 @@ public interface ProductVariantSelection {
 
     /**
      *  <p>Determines whether the SKUs are to be included in, or excluded from, the Product Selection.</p>
+     * @return type
      */
     @NotNull
     @JsonProperty("type")

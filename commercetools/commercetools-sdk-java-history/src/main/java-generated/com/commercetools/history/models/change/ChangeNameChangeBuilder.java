@@ -31,6 +31,8 @@ public class ChangeNameChangeBuilder implements Builder<ChangeNameChange> {
 
     /**
      *  <p>Shape of the action for <code>changeName</code></p>
+     * @param change
+     * @return Builder
      */
 
     public ChangeNameChangeBuilder change(final String change) {
@@ -40,6 +42,8 @@ public class ChangeNameChangeBuilder implements Builder<ChangeNameChange> {
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public ChangeNameChangeBuilder previousValue(final String previousValue) {
@@ -49,6 +53,8 @@ public class ChangeNameChangeBuilder implements Builder<ChangeNameChange> {
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public ChangeNameChangeBuilder nextValue(final String nextValue) {

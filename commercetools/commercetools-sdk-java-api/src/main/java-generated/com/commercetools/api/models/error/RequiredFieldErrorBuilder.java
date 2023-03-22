@@ -30,6 +30,8 @@ public class RequiredFieldErrorBuilder implements Builder<RequiredFieldError> {
 
     /**
      *  <p><code>"A value is required for field $field."</code></p>
+     * @param message
+     * @return Builder
      */
 
     public RequiredFieldErrorBuilder message(final String message) {
@@ -60,6 +62,8 @@ public class RequiredFieldErrorBuilder implements Builder<RequiredFieldError> {
 
     /**
      *  <p>Name of the field missing the value.</p>
+     * @param field
+     * @return Builder
      */
 
     public RequiredFieldErrorBuilder field(final String field) {

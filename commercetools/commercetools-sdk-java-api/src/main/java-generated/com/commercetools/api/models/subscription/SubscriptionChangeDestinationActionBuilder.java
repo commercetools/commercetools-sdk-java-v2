@@ -26,6 +26,8 @@ public class SubscriptionChangeDestinationActionBuilder implements Builder<Subsc
 
     /**
      *  <p>New value to set. Must not be empty.</p>
+     * @param destination
+     * @return Builder
      */
 
     public SubscriptionChangeDestinationActionBuilder destination(
@@ -36,6 +38,7 @@ public class SubscriptionChangeDestinationActionBuilder implements Builder<Subsc
 
     /**
      *  <p>New value to set. Must not be empty.</p>
+     * @return Builder
      */
 
     public SubscriptionChangeDestinationActionBuilder destination(

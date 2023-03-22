@@ -34,6 +34,8 @@ public class CustomerChangeAddressActionBuilder implements Builder<CustomerChang
 
     /**
      *  <p><code>id</code> of the Address to change.</p>
+     * @param addressId
+     * @return Builder
      */
 
     public CustomerChangeAddressActionBuilder addressId(@Nullable final String addressId) {
@@ -43,6 +45,8 @@ public class CustomerChangeAddressActionBuilder implements Builder<CustomerChang
 
     /**
      *  <p><code>key</code> of the Address to change.</p>
+     * @param addressKey
+     * @return Builder
      */
 
     public CustomerChangeAddressActionBuilder addressKey(@Nullable final String addressKey) {
@@ -52,6 +56,7 @@ public class CustomerChangeAddressActionBuilder implements Builder<CustomerChang
 
     /**
      *  <p>Value to set.</p>
+     * @return Builder
      */
 
     public CustomerChangeAddressActionBuilder address(
@@ -62,6 +67,8 @@ public class CustomerChangeAddressActionBuilder implements Builder<CustomerChang
 
     /**
      *  <p>Value to set.</p>
+     * @param address
+     * @return Builder
      */
 
     public CustomerChangeAddressActionBuilder address(final com.commercetools.api.models.common.BaseAddress address) {

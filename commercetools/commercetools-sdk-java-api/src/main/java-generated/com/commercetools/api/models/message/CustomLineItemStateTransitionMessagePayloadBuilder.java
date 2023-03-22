@@ -39,6 +39,8 @@ public class CustomLineItemStateTransitionMessagePayloadBuilder
 
     /**
      *  <p>Unique identifier of the Custom Line Item.</p>
+     * @param customLineItemId
+     * @return Builder
      */
 
     public CustomLineItemStateTransitionMessagePayloadBuilder customLineItemId(final String customLineItemId) {
@@ -48,6 +50,8 @@ public class CustomLineItemStateTransitionMessagePayloadBuilder
 
     /**
      *  <p>Date and time (UTC) when the transition of the Custom Line Item State was performed.</p>
+     * @param transitionDate
+     * @return Builder
      */
 
     public CustomLineItemStateTransitionMessagePayloadBuilder transitionDate(
@@ -58,6 +62,8 @@ public class CustomLineItemStateTransitionMessagePayloadBuilder
 
     /**
      *  <p>Number of Custom Line Items for which the State was transitioned.</p>
+     * @param quantity
+     * @return Builder
      */
 
     public CustomLineItemStateTransitionMessagePayloadBuilder quantity(final Long quantity) {
@@ -67,6 +73,7 @@ public class CustomLineItemStateTransitionMessagePayloadBuilder
 
     /**
      *  <p>State the Custom Line Item was transitioned from.</p>
+     * @return Builder
      */
 
     public CustomLineItemStateTransitionMessagePayloadBuilder fromState(
@@ -77,6 +84,8 @@ public class CustomLineItemStateTransitionMessagePayloadBuilder
 
     /**
      *  <p>State the Custom Line Item was transitioned from.</p>
+     * @param fromState
+     * @return Builder
      */
 
     public CustomLineItemStateTransitionMessagePayloadBuilder fromState(
@@ -87,6 +96,7 @@ public class CustomLineItemStateTransitionMessagePayloadBuilder
 
     /**
      *  <p>State the Custom Line Item was transitioned to.</p>
+     * @return Builder
      */
 
     public CustomLineItemStateTransitionMessagePayloadBuilder toState(
@@ -97,6 +107,8 @@ public class CustomLineItemStateTransitionMessagePayloadBuilder
 
     /**
      *  <p>State the Custom Line Item was transitioned to.</p>
+     * @param toState
+     * @return Builder
      */
 
     public CustomLineItemStateTransitionMessagePayloadBuilder toState(

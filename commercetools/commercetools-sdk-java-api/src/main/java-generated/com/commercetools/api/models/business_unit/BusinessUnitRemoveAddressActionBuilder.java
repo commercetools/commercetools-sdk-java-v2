@@ -30,6 +30,8 @@ public class BusinessUnitRemoveAddressActionBuilder implements Builder<BusinessU
 
     /**
      *  <p>ID of the address to be removed. Either <code>addressId</code> or <code>addressKey</code> is required.</p>
+     * @param addressId
+     * @return Builder
      */
 
     public BusinessUnitRemoveAddressActionBuilder addressId(@Nullable final String addressId) {
@@ -39,6 +41,8 @@ public class BusinessUnitRemoveAddressActionBuilder implements Builder<BusinessU
 
     /**
      *  <p>Key of the address to be removed. Either <code>addressId</code> or <code>addressKey</code> is required.</p>
+     * @param addressKey
+     * @return Builder
      */
 
     public BusinessUnitRemoveAddressActionBuilder addressKey(@Nullable final String addressKey) {

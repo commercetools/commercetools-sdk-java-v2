@@ -35,6 +35,7 @@ public interface OrderRemovePaymentAction extends OrderUpdateAction {
 
     /**
      *  <p>ResourceIdentifier of a Payment.</p>
+     * @return payment
      */
     @NotNull
     @Valid

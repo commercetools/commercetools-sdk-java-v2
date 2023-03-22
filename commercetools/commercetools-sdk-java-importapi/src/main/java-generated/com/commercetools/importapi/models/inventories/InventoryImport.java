@@ -38,6 +38,7 @@ public interface InventoryImport extends ImportResource {
 
     /**
      *  <p>Maps to <code>Inventory.sku</code></p>
+     * @return sku
      */
     @NotNull
     @JsonProperty("sku")
@@ -45,6 +46,7 @@ public interface InventoryImport extends ImportResource {
 
     /**
      *  <p>Maps to <code>Inventory.quantityOnStock</code></p>
+     * @return quantityOnStock
      */
     @NotNull
     @JsonProperty("quantityOnStock")
@@ -52,6 +54,7 @@ public interface InventoryImport extends ImportResource {
 
     /**
      *  <p>Maps to <code>Inventory.restockableInDays</code></p>
+     * @return restockableInDays
      */
 
     @JsonProperty("restockableInDays")
@@ -59,6 +62,7 @@ public interface InventoryImport extends ImportResource {
 
     /**
      *  <p>Maps to <code>Inventory.expectedDelivery</code></p>
+     * @return expectedDelivery
      */
 
     @JsonProperty("expectedDelivery")
@@ -66,6 +70,7 @@ public interface InventoryImport extends ImportResource {
 
     /**
      *  <p>Maps to <code>Inventory.supplyChannel</code></p>
+     * @return supplyChannel
      */
     @Valid
     @JsonProperty("supplyChannel")
@@ -73,6 +78,7 @@ public interface InventoryImport extends ImportResource {
 
     /**
      *  <p>Maps to <code>Inventory.custom</code>.</p>
+     * @return custom
      */
     @Valid
     @JsonProperty("custom")

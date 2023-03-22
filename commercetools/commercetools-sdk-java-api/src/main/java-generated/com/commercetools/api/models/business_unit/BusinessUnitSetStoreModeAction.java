@@ -35,6 +35,7 @@ public interface BusinessUnitSetStoreModeAction extends BusinessUnitUpdateAction
 
     /**
      *  <p>Set to <code>Explicit</code> to specify Stores for the Business Unit. Set to <code>FromParent</code> to inherit Stores from a parent.</p>
+     * @return storeMode
      */
     @NotNull
     @JsonProperty("storeMode")
@@ -42,6 +43,7 @@ public interface BusinessUnitSetStoreModeAction extends BusinessUnitUpdateAction
 
     /**
      *  <p>Set the Stores the Business Unit is associated with. Can only be set if <code>storeMode</code> is <code>Explicit</code>.</p>
+     * @return stores
      */
     @Valid
     @JsonProperty("stores")

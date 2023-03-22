@@ -34,6 +34,8 @@ public class ImageBuilder implements Builder<Image> {
 
     /**
      *  <p>URL of the image in its original size. The URL must be unique within a single variant. It can be used to obtain the image in different sizes.</p>
+     * @param url
+     * @return Builder
      */
 
     public ImageBuilder url(final String url) {
@@ -43,6 +45,7 @@ public class ImageBuilder implements Builder<Image> {
 
     /**
      *  <p>Dimensions of the original image. This can be used by your application, for example, to determine whether the image is large enough to display a zoom view.</p>
+     * @return Builder
      */
 
     public ImageBuilder dimensions(
@@ -53,6 +56,8 @@ public class ImageBuilder implements Builder<Image> {
 
     /**
      *  <p>Dimensions of the original image. This can be used by your application, for example, to determine whether the image is large enough to display a zoom view.</p>
+     * @param dimensions
+     * @return Builder
      */
 
     public ImageBuilder dimensions(final com.commercetools.importapi.models.common.AssetDimensions dimensions) {
@@ -62,6 +67,8 @@ public class ImageBuilder implements Builder<Image> {
 
     /**
      *  <p>Custom label that can be used, for example, as an image description.</p>
+     * @param label
+     * @return Builder
      */
 
     public ImageBuilder label(@Nullable final String label) {

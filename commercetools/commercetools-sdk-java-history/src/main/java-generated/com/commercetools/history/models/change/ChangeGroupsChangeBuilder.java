@@ -31,6 +31,8 @@ public class ChangeGroupsChangeBuilder implements Builder<ChangeGroupsChange> {
 
     /**
      *  <p>Update action for <code>changeGroups</code> on stores</p>
+     * @param change
+     * @return Builder
      */
 
     public ChangeGroupsChangeBuilder change(final String change) {
@@ -40,6 +42,8 @@ public class ChangeGroupsChangeBuilder implements Builder<ChangeGroupsChange> {
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public ChangeGroupsChangeBuilder previousValue(final String... previousValue) {
@@ -49,6 +53,8 @@ public class ChangeGroupsChangeBuilder implements Builder<ChangeGroupsChange> {
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public ChangeGroupsChangeBuilder previousValue(final java.util.List<String> previousValue) {
@@ -58,6 +64,8 @@ public class ChangeGroupsChangeBuilder implements Builder<ChangeGroupsChange> {
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public ChangeGroupsChangeBuilder plusPreviousValue(final String... previousValue) {
@@ -70,6 +78,8 @@ public class ChangeGroupsChangeBuilder implements Builder<ChangeGroupsChange> {
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public ChangeGroupsChangeBuilder nextValue(final String... nextValue) {
@@ -79,6 +89,8 @@ public class ChangeGroupsChangeBuilder implements Builder<ChangeGroupsChange> {
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public ChangeGroupsChangeBuilder nextValue(final java.util.List<String> nextValue) {
@@ -88,6 +100,8 @@ public class ChangeGroupsChangeBuilder implements Builder<ChangeGroupsChange> {
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public ChangeGroupsChangeBuilder plusNextValue(final String... nextValue) {

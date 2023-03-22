@@ -35,6 +35,7 @@ public interface DiscountCodeChangeCartDiscountsAction extends DiscountCodeUpdat
 
     /**
      *  <p>New value to set.</p>
+     * @return cartDiscounts
      */
     @NotNull
     @Valid

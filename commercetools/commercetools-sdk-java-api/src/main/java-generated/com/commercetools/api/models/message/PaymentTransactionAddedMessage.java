@@ -42,6 +42,7 @@ public interface PaymentTransactionAddedMessage extends Message {
 
     /**
      *  <p>Transaction that was added to the Payment.</p>
+     * @return transaction
      */
     @NotNull
     @Valid

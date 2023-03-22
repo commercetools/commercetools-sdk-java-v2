@@ -35,6 +35,7 @@ public interface CategoryCreatedMessagePayload extends MessagePayload {
 
     /**
      *  <p>Category that was created.</p>
+     * @return category
      */
     @NotNull
     @Valid

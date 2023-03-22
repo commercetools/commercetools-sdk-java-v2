@@ -35,6 +35,7 @@ public interface CategorySlugChangedMessagePayload extends MessagePayload {
 
     /**
      *  <p>The slug of the Category after the Change Slug update action.</p>
+     * @return slug
      */
     @NotNull
     @Valid
@@ -43,6 +44,7 @@ public interface CategorySlugChangedMessagePayload extends MessagePayload {
 
     /**
      *  <p>The slug of the Category before the Change Slug update action.</p>
+     * @return oldSlug
      */
     @Valid
     @JsonProperty("oldSlug")

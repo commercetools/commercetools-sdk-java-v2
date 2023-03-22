@@ -38,6 +38,7 @@ public interface StagedOrderAddDeliveryAction
 
     /**
      *
+     * @return items
      */
     @Valid
     @JsonProperty("items")
@@ -45,6 +46,7 @@ public interface StagedOrderAddDeliveryAction
 
     /**
      *  <p>Polymorphic base type that represents a postal address and contact details. Depending on the read or write action, it can be either Address or AddressDraft that only differ in the data type for the optional <code>custom</code> field.</p>
+     * @return address
      */
     @Valid
     @JsonProperty("address")
@@ -52,6 +54,7 @@ public interface StagedOrderAddDeliveryAction
 
     /**
      *
+     * @return parcels
      */
     @Valid
     @JsonProperty("parcels")
@@ -59,6 +62,7 @@ public interface StagedOrderAddDeliveryAction
 
     /**
      *  <p>Custom Fields for the Transaction.</p>
+     * @return custom
      */
     @Valid
     @JsonProperty("custom")

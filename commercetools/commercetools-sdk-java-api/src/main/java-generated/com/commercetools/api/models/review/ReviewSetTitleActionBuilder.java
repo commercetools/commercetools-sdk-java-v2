@@ -27,6 +27,8 @@ public class ReviewSetTitleActionBuilder implements Builder<ReviewSetTitleAction
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
+     * @param title
+     * @return Builder
      */
 
     public ReviewSetTitleActionBuilder title(@Nullable final String title) {

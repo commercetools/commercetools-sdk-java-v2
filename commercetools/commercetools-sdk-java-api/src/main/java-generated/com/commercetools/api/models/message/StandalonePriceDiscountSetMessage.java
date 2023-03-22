@@ -40,6 +40,7 @@ public interface StandalonePriceDiscountSetMessage extends Message {
 
     /**
      *  <p>The new <code>discounted</code> value of the updated StandalonePrice.</p>
+     * @return discounted
      */
     @Valid
     @JsonProperty("discounted")

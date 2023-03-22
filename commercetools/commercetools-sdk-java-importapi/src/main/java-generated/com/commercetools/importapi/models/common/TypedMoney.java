@@ -37,6 +37,7 @@ public interface TypedMoney {
 
     /**
      *
+     * @return type
      */
     @NotNull
     @JsonProperty("type")
@@ -44,6 +45,7 @@ public interface TypedMoney {
 
     /**
      *
+     * @return fractionDigits
      */
 
     @JsonProperty("fractionDigits")
@@ -51,6 +53,7 @@ public interface TypedMoney {
 
     /**
      *
+     * @return centAmount
      */
     @NotNull
     @JsonProperty("centAmount")
@@ -58,6 +61,7 @@ public interface TypedMoney {
 
     /**
      *  <p>The currency code compliant to ISO 4217.</p>
+     * @return currencyCode
      */
     @NotNull
     @JsonProperty("currencyCode")

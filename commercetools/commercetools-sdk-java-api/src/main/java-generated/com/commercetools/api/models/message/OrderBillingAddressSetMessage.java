@@ -40,6 +40,7 @@ public interface OrderBillingAddressSetMessage extends OrderMessage {
 
     /**
      *  <p>Billing address on the Order after the Set Billing Address update action.</p>
+     * @return address
      */
     @Valid
     @JsonProperty("address")
@@ -47,6 +48,7 @@ public interface OrderBillingAddressSetMessage extends OrderMessage {
 
     /**
      *  <p>Billing address on the Order before the Set Billing Address update action.</p>
+     * @return oldAddress
      */
     @Valid
     @JsonProperty("oldAddress")

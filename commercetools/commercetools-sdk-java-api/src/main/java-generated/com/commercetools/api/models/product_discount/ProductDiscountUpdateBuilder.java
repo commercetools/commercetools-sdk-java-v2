@@ -29,6 +29,8 @@ public class ProductDiscountUpdateBuilder implements Builder<ProductDiscountUpda
 
     /**
      *  <p>Expected version of the ProductDiscount on which the changes should be applied. If the expected version does not match the actual version, a ConcurrentModification error is returned.</p>
+     * @param version
+     * @return Builder
      */
 
     public ProductDiscountUpdateBuilder version(final Long version) {
@@ -38,6 +40,8 @@ public class ProductDiscountUpdateBuilder implements Builder<ProductDiscountUpda
 
     /**
      *  <p>Update actions to be performed on the ProductDiscount.</p>
+     * @param actions
+     * @return Builder
      */
 
     public ProductDiscountUpdateBuilder actions(
@@ -48,6 +52,8 @@ public class ProductDiscountUpdateBuilder implements Builder<ProductDiscountUpda
 
     /**
      *  <p>Update actions to be performed on the ProductDiscount.</p>
+     * @param actions
+     * @return Builder
      */
 
     public ProductDiscountUpdateBuilder actions(
@@ -58,6 +64,8 @@ public class ProductDiscountUpdateBuilder implements Builder<ProductDiscountUpda
 
     /**
      *  <p>Update actions to be performed on the ProductDiscount.</p>
+     * @param actions
+     * @return Builder
      */
 
     public ProductDiscountUpdateBuilder plusActions(
@@ -71,6 +79,7 @@ public class ProductDiscountUpdateBuilder implements Builder<ProductDiscountUpda
 
     /**
      *  <p>Update actions to be performed on the ProductDiscount.</p>
+     * @return Builder
      */
 
     public ProductDiscountUpdateBuilder plusActions(
@@ -86,6 +95,7 @@ public class ProductDiscountUpdateBuilder implements Builder<ProductDiscountUpda
 
     /**
      *  <p>Update actions to be performed on the ProductDiscount.</p>
+     * @return Builder
      */
 
     public ProductDiscountUpdateBuilder withActions(

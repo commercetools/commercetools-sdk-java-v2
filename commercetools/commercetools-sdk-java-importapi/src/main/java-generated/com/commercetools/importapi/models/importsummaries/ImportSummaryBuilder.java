@@ -29,6 +29,7 @@ public class ImportSummaryBuilder implements Builder<ImportSummary> {
 
     /**
      *  <p>The import status of an ImportContainer given by the number of resources in each Processing State.</p>
+     * @return Builder
      */
 
     public ImportSummaryBuilder states(
@@ -40,6 +41,8 @@ public class ImportSummaryBuilder implements Builder<ImportSummary> {
 
     /**
      *  <p>The import status of an ImportContainer given by the number of resources in each Processing State.</p>
+     * @param states
+     * @return Builder
      */
 
     public ImportSummaryBuilder states(
@@ -50,6 +53,8 @@ public class ImportSummaryBuilder implements Builder<ImportSummary> {
 
     /**
      *  <p>The total number of ImportOperations received for this Import Summary.</p>
+     * @param total
+     * @return Builder
      */
 
     public ImportSummaryBuilder total(final Long total) {

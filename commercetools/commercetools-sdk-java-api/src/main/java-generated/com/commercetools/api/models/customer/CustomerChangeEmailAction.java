@@ -33,6 +33,7 @@ public interface CustomerChangeEmailAction extends CustomerUpdateAction {
 
     /**
      *  <p>Value to set.</p>
+     * @return email
      */
     @NotNull
     @JsonProperty("email")

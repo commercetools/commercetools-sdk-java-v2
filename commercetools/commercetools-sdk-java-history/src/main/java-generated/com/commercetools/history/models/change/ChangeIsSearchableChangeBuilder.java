@@ -34,6 +34,8 @@ public class ChangeIsSearchableChangeBuilder implements Builder<ChangeIsSearchab
 
     /**
      *  <p>Update action for <code>changeIsSearchable</code> on product types</p>
+     * @param change
+     * @return Builder
      */
 
     public ChangeIsSearchableChangeBuilder change(final String change) {
@@ -43,6 +45,8 @@ public class ChangeIsSearchableChangeBuilder implements Builder<ChangeIsSearchab
 
     /**
      *  <p>The name of the updated attribute.</p>
+     * @param attributeName
+     * @return Builder
      */
 
     public ChangeIsSearchableChangeBuilder attributeName(final String attributeName) {
@@ -52,6 +56,8 @@ public class ChangeIsSearchableChangeBuilder implements Builder<ChangeIsSearchab
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public ChangeIsSearchableChangeBuilder nextValue(final Boolean nextValue) {
@@ -61,6 +67,8 @@ public class ChangeIsSearchableChangeBuilder implements Builder<ChangeIsSearchab
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public ChangeIsSearchableChangeBuilder previousValue(final Boolean previousValue) {

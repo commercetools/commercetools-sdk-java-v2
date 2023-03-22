@@ -37,6 +37,8 @@ public class DeliveryItemsUpdatedMessagePayloadBuilder implements Builder<Delive
 
     /**
      *  <p>Unique identifier of the Delivery.</p>
+     * @param deliveryId
+     * @return Builder
      */
 
     public DeliveryItemsUpdatedMessagePayloadBuilder deliveryId(final String deliveryId) {
@@ -46,6 +48,8 @@ public class DeliveryItemsUpdatedMessagePayloadBuilder implements Builder<Delive
 
     /**
      *  <p>Delivery Items after the Set Delivery Items update action.</p>
+     * @param items
+     * @return Builder
      */
 
     public DeliveryItemsUpdatedMessagePayloadBuilder items(
@@ -56,6 +60,8 @@ public class DeliveryItemsUpdatedMessagePayloadBuilder implements Builder<Delive
 
     /**
      *  <p>Delivery Items after the Set Delivery Items update action.</p>
+     * @param items
+     * @return Builder
      */
 
     public DeliveryItemsUpdatedMessagePayloadBuilder items(
@@ -66,6 +72,8 @@ public class DeliveryItemsUpdatedMessagePayloadBuilder implements Builder<Delive
 
     /**
      *  <p>Delivery Items after the Set Delivery Items update action.</p>
+     * @param items
+     * @return Builder
      */
 
     public DeliveryItemsUpdatedMessagePayloadBuilder plusItems(
@@ -79,6 +87,7 @@ public class DeliveryItemsUpdatedMessagePayloadBuilder implements Builder<Delive
 
     /**
      *  <p>Delivery Items after the Set Delivery Items update action.</p>
+     * @return Builder
      */
 
     public DeliveryItemsUpdatedMessagePayloadBuilder plusItems(
@@ -92,6 +101,7 @@ public class DeliveryItemsUpdatedMessagePayloadBuilder implements Builder<Delive
 
     /**
      *  <p>Delivery Items after the Set Delivery Items update action.</p>
+     * @return Builder
      */
 
     public DeliveryItemsUpdatedMessagePayloadBuilder withItems(
@@ -103,6 +113,8 @@ public class DeliveryItemsUpdatedMessagePayloadBuilder implements Builder<Delive
 
     /**
      *  <p>Delivery Items before the Set Delivery Items update action.</p>
+     * @param oldItems
+     * @return Builder
      */
 
     public DeliveryItemsUpdatedMessagePayloadBuilder oldItems(
@@ -113,6 +125,8 @@ public class DeliveryItemsUpdatedMessagePayloadBuilder implements Builder<Delive
 
     /**
      *  <p>Delivery Items before the Set Delivery Items update action.</p>
+     * @param oldItems
+     * @return Builder
      */
 
     public DeliveryItemsUpdatedMessagePayloadBuilder oldItems(
@@ -123,6 +137,8 @@ public class DeliveryItemsUpdatedMessagePayloadBuilder implements Builder<Delive
 
     /**
      *  <p>Delivery Items before the Set Delivery Items update action.</p>
+     * @param oldItems
+     * @return Builder
      */
 
     public DeliveryItemsUpdatedMessagePayloadBuilder plusOldItems(
@@ -136,6 +152,7 @@ public class DeliveryItemsUpdatedMessagePayloadBuilder implements Builder<Delive
 
     /**
      *  <p>Delivery Items before the Set Delivery Items update action.</p>
+     * @return Builder
      */
 
     public DeliveryItemsUpdatedMessagePayloadBuilder plusOldItems(
@@ -149,6 +166,7 @@ public class DeliveryItemsUpdatedMessagePayloadBuilder implements Builder<Delive
 
     /**
      *  <p>Delivery Items before the Set Delivery Items update action.</p>
+     * @return Builder
      */
 
     public DeliveryItemsUpdatedMessagePayloadBuilder withOldItems(
@@ -160,6 +178,8 @@ public class DeliveryItemsUpdatedMessagePayloadBuilder implements Builder<Delive
 
     /**
      *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multi</code> ShippingMode.</p>
+     * @param shippingKey
+     * @return Builder
      */
 
     public DeliveryItemsUpdatedMessagePayloadBuilder shippingKey(@Nullable final String shippingKey) {

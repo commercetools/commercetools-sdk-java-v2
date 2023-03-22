@@ -33,6 +33,7 @@ public interface CategorySetMetaDescriptionAction extends CategoryUpdateAction {
 
     /**
      *  <p>Value to set.</p>
+     * @return metaDescription
      */
     @Valid
     @JsonProperty("metaDescription")

@@ -36,6 +36,7 @@ public interface ShoppingListSetLineItemCustomTypeAction extends ShoppingListUpd
 
     /**
      *  <p>The <code>id</code> of the ShoppingListLineItem to update.</p>
+     * @return lineItemId
      */
     @NotNull
     @JsonProperty("lineItemId")
@@ -43,6 +44,7 @@ public interface ShoppingListSetLineItemCustomTypeAction extends ShoppingListUpd
 
     /**
      *  <p>Defines the Type that extends the ShoppingListLineItem with Custom Fields. If absent, any existing Type and Custom Fields are removed from the ShoppingListLineItem.</p>
+     * @return type
      */
     @Valid
     @JsonProperty("type")
@@ -50,6 +52,7 @@ public interface ShoppingListSetLineItemCustomTypeAction extends ShoppingListUpd
 
     /**
      *  <p>Sets the Custom Fields fields for the ShoppingListLineItem.</p>
+     * @return fields
      */
     @Valid
     @JsonProperty("fields")

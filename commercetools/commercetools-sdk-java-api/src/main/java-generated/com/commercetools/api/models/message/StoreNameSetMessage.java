@@ -40,6 +40,7 @@ public interface StoreNameSetMessage extends Message {
 
     /**
      *  <p>Name of the Store set during the Set Name update action.</p>
+     * @return name
      */
     @Valid
     @JsonProperty("name")
@@ -47,6 +48,7 @@ public interface StoreNameSetMessage extends Message {
 
     /**
      *  <p>Names set for the Store in different locales.</p>
+     * @return nameAllLocales
      */
     @Valid
     @JsonProperty("nameAllLocales")

@@ -31,6 +31,7 @@ public class OrderBillingAddressSetMessagePayloadBuilder implements Builder<Orde
 
     /**
      *  <p>Billing address on the Order after the Set Billing Address update action.</p>
+     * @return Builder
      */
 
     public OrderBillingAddressSetMessagePayloadBuilder address(
@@ -41,6 +42,8 @@ public class OrderBillingAddressSetMessagePayloadBuilder implements Builder<Orde
 
     /**
      *  <p>Billing address on the Order after the Set Billing Address update action.</p>
+     * @param address
+     * @return Builder
      */
 
     public OrderBillingAddressSetMessagePayloadBuilder address(
@@ -51,6 +54,7 @@ public class OrderBillingAddressSetMessagePayloadBuilder implements Builder<Orde
 
     /**
      *  <p>Billing address on the Order before the Set Billing Address update action.</p>
+     * @return Builder
      */
 
     public OrderBillingAddressSetMessagePayloadBuilder oldAddress(
@@ -61,6 +65,8 @@ public class OrderBillingAddressSetMessagePayloadBuilder implements Builder<Orde
 
     /**
      *  <p>Billing address on the Order before the Set Billing Address update action.</p>
+     * @param oldAddress
+     * @return Builder
      */
 
     public OrderBillingAddressSetMessagePayloadBuilder oldAddress(

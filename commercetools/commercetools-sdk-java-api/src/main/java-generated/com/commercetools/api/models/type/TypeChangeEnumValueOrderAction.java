@@ -34,6 +34,7 @@ public interface TypeChangeEnumValueOrderAction extends TypeUpdateAction {
 
     /**
      *  <p><code>name</code> of the FieldDefinition to update.</p>
+     * @return fieldName
      */
     @NotNull
     @JsonProperty("fieldName")
@@ -41,6 +42,7 @@ public interface TypeChangeEnumValueOrderAction extends TypeUpdateAction {
 
     /**
      *  <p>Must match the set of <code>key</code>s of the EnumValues in the FieldDefinition (apart from their order).</p>
+     * @return keys
      */
     @NotNull
     @JsonProperty("keys")

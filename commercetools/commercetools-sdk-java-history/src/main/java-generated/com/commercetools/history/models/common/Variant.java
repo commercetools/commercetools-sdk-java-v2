@@ -33,6 +33,7 @@ public interface Variant {
 
     /**
      *
+     * @return id
      */
     @NotNull
     @JsonProperty("id")
@@ -40,6 +41,7 @@ public interface Variant {
 
     /**
      *
+     * @return sku
      */
     @NotNull
     @JsonProperty("sku")
@@ -47,6 +49,7 @@ public interface Variant {
 
     /**
      *
+     * @return key
      */
     @NotNull
     @JsonProperty("key")

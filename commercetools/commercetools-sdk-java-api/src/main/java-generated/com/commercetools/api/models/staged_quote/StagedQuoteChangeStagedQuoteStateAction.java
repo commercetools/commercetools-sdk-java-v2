@@ -33,6 +33,7 @@ public interface StagedQuoteChangeStagedQuoteStateAction extends StagedQuoteUpda
 
     /**
      *  <p>New state to be set for the Staged Quote.</p>
+     * @return stagedQuoteState
      */
     @NotNull
     @JsonProperty("stagedQuoteState")

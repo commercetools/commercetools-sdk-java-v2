@@ -26,6 +26,8 @@ public class LocalizedStringSetFieldBuilder implements Builder<LocalizedStringSe
 
     /**
      *
+     * @param value
+     * @return Builder
      */
 
     public LocalizedStringSetFieldBuilder value(
@@ -36,6 +38,8 @@ public class LocalizedStringSetFieldBuilder implements Builder<LocalizedStringSe
 
     /**
      *
+     * @param value
+     * @return Builder
      */
 
     public LocalizedStringSetFieldBuilder value(
@@ -46,6 +50,8 @@ public class LocalizedStringSetFieldBuilder implements Builder<LocalizedStringSe
 
     /**
      *
+     * @param value
+     * @return Builder
      */
 
     public LocalizedStringSetFieldBuilder plusValue(
@@ -59,6 +65,7 @@ public class LocalizedStringSetFieldBuilder implements Builder<LocalizedStringSe
 
     /**
      *
+     * @return Builder
      */
 
     public LocalizedStringSetFieldBuilder plusValue(
@@ -72,6 +79,7 @@ public class LocalizedStringSetFieldBuilder implements Builder<LocalizedStringSe
 
     /**
      *
+     * @return Builder
      */
 
     public LocalizedStringSetFieldBuilder withValue(

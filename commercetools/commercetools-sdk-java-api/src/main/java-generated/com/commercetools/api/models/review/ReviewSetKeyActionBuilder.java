@@ -27,6 +27,8 @@ public class ReviewSetKeyActionBuilder implements Builder<ReviewSetKeyAction> {
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
+     * @param key
+     * @return Builder
      */
 
     public ReviewSetKeyActionBuilder key(@Nullable final String key) {

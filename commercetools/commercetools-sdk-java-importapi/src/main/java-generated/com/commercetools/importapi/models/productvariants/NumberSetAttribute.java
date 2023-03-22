@@ -33,6 +33,7 @@ public interface NumberSetAttribute extends Attribute {
 
     /**
      *
+     * @return value
      */
     @NotNull
     @JsonProperty("value")

@@ -28,6 +28,8 @@ public class ReviewLabelBuilder implements Builder<ReviewLabel> {
 
     /**
      *
+     * @param key
+     * @return Builder
      */
 
     public ReviewLabelBuilder key(final String key) {
@@ -37,6 +39,8 @@ public class ReviewLabelBuilder implements Builder<ReviewLabel> {
 
     /**
      *
+     * @param title
+     * @return Builder
      */
 
     public ReviewLabelBuilder title(final String title) {

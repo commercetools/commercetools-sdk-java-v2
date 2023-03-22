@@ -38,6 +38,7 @@ public interface SetCustomLineItemCustomFieldChange extends Change {
 
     /**
      *
+     * @return type
      */
     @NotNull
     @JsonProperty("type")
@@ -45,6 +46,7 @@ public interface SetCustomLineItemCustomFieldChange extends Change {
 
     /**
      *  <p>Update action for <code>setCustomLineItemCustomField</code></p>
+     * @return change
      */
     @NotNull
     @JsonProperty("change")
@@ -52,6 +54,7 @@ public interface SetCustomLineItemCustomFieldChange extends Change {
 
     /**
      *
+     * @return name
      */
     @NotNull
     @JsonProperty("name")
@@ -59,6 +62,7 @@ public interface SetCustomLineItemCustomFieldChange extends Change {
 
     /**
      *
+     * @return customLineItem
      */
     @NotNull
     @Valid
@@ -67,6 +71,7 @@ public interface SetCustomLineItemCustomFieldChange extends Change {
 
     /**
      *
+     * @return customLineItemId
      */
     @NotNull
     @JsonProperty("customLineItemId")
@@ -74,6 +79,7 @@ public interface SetCustomLineItemCustomFieldChange extends Change {
 
     /**
      *
+     * @return nextValue
      */
     @NotNull
     @JsonProperty("nextValue")
@@ -81,6 +87,7 @@ public interface SetCustomLineItemCustomFieldChange extends Change {
 
     /**
      *
+     * @return previousValue
      */
     @NotNull
     @JsonProperty("previousValue")

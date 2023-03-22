@@ -40,6 +40,7 @@ public interface CustomShippingDraft
 
     /**
      *  <p>User-defined unique identifier of the custom Shipping Method in the Cart with <code>Multiple</code> ShippingMode.</p>
+     * @return key
      */
     @NotNull
     @JsonProperty("key")
@@ -47,6 +48,7 @@ public interface CustomShippingDraft
 
     /**
      *  <p>Name of the custom Shipping Method.</p>
+     * @return shippingMethodName
      */
     @NotNull
     @JsonProperty("shippingMethodName")
@@ -54,6 +56,7 @@ public interface CustomShippingDraft
 
     /**
      *  <p>Determines the shipping rate and Tax Rate of the associated Line Items.</p>
+     * @return shippingAddress
      */
     @Valid
     @JsonProperty("shippingAddress")
@@ -61,6 +64,7 @@ public interface CustomShippingDraft
 
     /**
      *  <p>Determines the shipping price.</p>
+     * @return shippingRate
      */
     @NotNull
     @Valid
@@ -74,6 +78,7 @@ public interface CustomShippingDraft
      *   <li>If <code>CartScore</code>, it must be ScoreShippingRateInputDraft.</li>
      *   <li>If <code>CartValue</code>, it cannot be set.</li>
      *  </ul>
+     * @return shippingRateInput
      */
     @Valid
     @JsonProperty("shippingRateInput")
@@ -81,6 +86,7 @@ public interface CustomShippingDraft
 
     /**
      *  <p>Tax Category used to determine a shipping Tax Rate if the Cart has the <code>Platform</code> TaxMode.</p>
+     * @return taxCategory
      */
     @Valid
     @JsonProperty("taxCategory")
@@ -88,6 +94,7 @@ public interface CustomShippingDraft
 
     /**
      *  <p>Tax Rate used to tax a shipping expense if the Cart has the <code>External</code> TaxMode.</p>
+     * @return externalTaxRate
      */
     @Valid
     @JsonProperty("externalTaxRate")
@@ -95,6 +102,7 @@ public interface CustomShippingDraft
 
     /**
      *  <p>Deliveries to be shipped with the custom Shipping Method.</p>
+     * @return deliveries
      */
     @Valid
     @JsonProperty("deliveries")
@@ -102,6 +110,7 @@ public interface CustomShippingDraft
 
     /**
      *  <p>Custom Fields for the custom Shipping Method.</p>
+     * @return custom
      */
     @Valid
     @JsonProperty("custom")

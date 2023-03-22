@@ -27,6 +27,8 @@ public class InvalidInputErrorBuilder implements Builder<InvalidInputError> {
 
     /**
      *  <p>Description of the constraints that are not met by the request. For example, <code>"Invalid $propertyName. It may be a non-empty string up to $maxLength"</code>.</p>
+     * @param message
+     * @return Builder
      */
 
     public InvalidInputErrorBuilder message(final String message) {

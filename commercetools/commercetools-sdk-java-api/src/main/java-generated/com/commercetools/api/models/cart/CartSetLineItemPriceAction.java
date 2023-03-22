@@ -35,6 +35,7 @@ public interface CartSetLineItemPriceAction extends CartUpdateAction {
 
     /**
      *  <p><code>id</code> of the LineItem to update.</p>
+     * @return lineItemId
      */
     @NotNull
     @JsonProperty("lineItemId")
@@ -42,6 +43,7 @@ public interface CartSetLineItemPriceAction extends CartUpdateAction {
 
     /**
      *  <p>Value to set. If <code>externalPrice</code> is not given and the <code>priceMode</code> is <code>ExternalPrice</code>, the external price is unset and the <code>priceMode</code> is set to <code>Platform</code>.</p>
+     * @return externalPrice
      */
     @Valid
     @JsonProperty("externalPrice")

@@ -35,6 +35,7 @@ public interface TypePagedQueryResponse extends com.commercetools.api.models.Res
 
     /**
      *  <p>Number of results requested.</p>
+     * @return limit
      */
     @NotNull
     @JsonProperty("limit")
@@ -42,6 +43,7 @@ public interface TypePagedQueryResponse extends com.commercetools.api.models.Res
 
     /**
      *  <p>Number of elements skipped.</p>
+     * @return offset
      */
     @NotNull
     @JsonProperty("offset")
@@ -49,6 +51,7 @@ public interface TypePagedQueryResponse extends com.commercetools.api.models.Res
 
     /**
      *  <p>Actual number of results returned.</p>
+     * @return count
      */
     @NotNull
     @JsonProperty("count")
@@ -56,6 +59,7 @@ public interface TypePagedQueryResponse extends com.commercetools.api.models.Res
 
     /**
      *  <p>Total number of results matching the query. This number is an estimation that is not strongly consistent. This field is returned by default. For improved performance, calculating this field can be deactivated by using the query parameter <code>withTotal=false</code>. When the results are filtered with a Query Predicate, <code>total</code> is subject to a limit.</p>
+     * @return total
      */
 
     @JsonProperty("total")
@@ -63,6 +67,7 @@ public interface TypePagedQueryResponse extends com.commercetools.api.models.Res
 
     /**
      *  <p>Types matching the query.</p>
+     * @return results
      */
     @NotNull
     @Valid

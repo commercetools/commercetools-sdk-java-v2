@@ -31,6 +31,7 @@ public class CategorySetCustomTypeActionBuilder implements Builder<CategorySetCu
 
     /**
      *  <p>Defines the Type that extends the Category with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Category.</p>
+     * @return Builder
      */
 
     public CategorySetCustomTypeActionBuilder type(
@@ -41,6 +42,8 @@ public class CategorySetCustomTypeActionBuilder implements Builder<CategorySetCu
 
     /**
      *  <p>Defines the Type that extends the Category with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Category.</p>
+     * @param type
+     * @return Builder
      */
 
     public CategorySetCustomTypeActionBuilder type(
@@ -51,6 +54,7 @@ public class CategorySetCustomTypeActionBuilder implements Builder<CategorySetCu
 
     /**
      *  <p>Sets the Custom Fields fields for the Category.</p>
+     * @return Builder
      */
 
     public CategorySetCustomTypeActionBuilder fields(
@@ -61,6 +65,8 @@ public class CategorySetCustomTypeActionBuilder implements Builder<CategorySetCu
 
     /**
      *  <p>Sets the Custom Fields fields for the Category.</p>
+     * @param fields
+     * @return Builder
      */
 
     public CategorySetCustomTypeActionBuilder fields(

@@ -28,6 +28,8 @@ public class SubscriptionSetChangesActionBuilder implements Builder<Subscription
 
     /**
      *  <p>Value to set. Can only be unset if <code>messages</code> is set.</p>
+     * @param changes
+     * @return Builder
      */
 
     public SubscriptionSetChangesActionBuilder changes(
@@ -38,6 +40,8 @@ public class SubscriptionSetChangesActionBuilder implements Builder<Subscription
 
     /**
      *  <p>Value to set. Can only be unset if <code>messages</code> is set.</p>
+     * @param changes
+     * @return Builder
      */
 
     public SubscriptionSetChangesActionBuilder changes(
@@ -48,6 +52,8 @@ public class SubscriptionSetChangesActionBuilder implements Builder<Subscription
 
     /**
      *  <p>Value to set. Can only be unset if <code>messages</code> is set.</p>
+     * @param changes
+     * @return Builder
      */
 
     public SubscriptionSetChangesActionBuilder plusChanges(
@@ -61,6 +67,7 @@ public class SubscriptionSetChangesActionBuilder implements Builder<Subscription
 
     /**
      *  <p>Value to set. Can only be unset if <code>messages</code> is set.</p>
+     * @return Builder
      */
 
     public SubscriptionSetChangesActionBuilder plusChanges(
@@ -75,6 +82,7 @@ public class SubscriptionSetChangesActionBuilder implements Builder<Subscription
 
     /**
      *  <p>Value to set. Can only be unset if <code>messages</code> is set.</p>
+     * @return Builder
      */
 
     public SubscriptionSetChangesActionBuilder withChanges(

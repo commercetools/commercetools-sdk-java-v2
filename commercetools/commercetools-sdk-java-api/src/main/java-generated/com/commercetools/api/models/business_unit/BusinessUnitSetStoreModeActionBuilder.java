@@ -31,6 +31,8 @@ public class BusinessUnitSetStoreModeActionBuilder implements Builder<BusinessUn
 
     /**
      *  <p>Set to <code>Explicit</code> to specify Stores for the Business Unit. Set to <code>FromParent</code> to inherit Stores from a parent.</p>
+     * @param storeMode
+     * @return Builder
      */
 
     public BusinessUnitSetStoreModeActionBuilder storeMode(
@@ -41,6 +43,8 @@ public class BusinessUnitSetStoreModeActionBuilder implements Builder<BusinessUn
 
     /**
      *  <p>Set the Stores the Business Unit is associated with. Can only be set if <code>storeMode</code> is <code>Explicit</code>.</p>
+     * @param stores
+     * @return Builder
      */
 
     public BusinessUnitSetStoreModeActionBuilder stores(
@@ -51,6 +55,8 @@ public class BusinessUnitSetStoreModeActionBuilder implements Builder<BusinessUn
 
     /**
      *  <p>Set the Stores the Business Unit is associated with. Can only be set if <code>storeMode</code> is <code>Explicit</code>.</p>
+     * @param stores
+     * @return Builder
      */
 
     public BusinessUnitSetStoreModeActionBuilder stores(
@@ -61,6 +67,8 @@ public class BusinessUnitSetStoreModeActionBuilder implements Builder<BusinessUn
 
     /**
      *  <p>Set the Stores the Business Unit is associated with. Can only be set if <code>storeMode</code> is <code>Explicit</code>.</p>
+     * @param stores
+     * @return Builder
      */
 
     public BusinessUnitSetStoreModeActionBuilder plusStores(
@@ -74,6 +82,7 @@ public class BusinessUnitSetStoreModeActionBuilder implements Builder<BusinessUn
 
     /**
      *  <p>Set the Stores the Business Unit is associated with. Can only be set if <code>storeMode</code> is <code>Explicit</code>.</p>
+     * @return Builder
      */
 
     public BusinessUnitSetStoreModeActionBuilder plusStores(
@@ -87,6 +96,7 @@ public class BusinessUnitSetStoreModeActionBuilder implements Builder<BusinessUn
 
     /**
      *  <p>Set the Stores the Business Unit is associated with. Can only be set if <code>storeMode</code> is <code>Explicit</code>.</p>
+     * @return Builder
      */
 
     public BusinessUnitSetStoreModeActionBuilder withStores(

@@ -32,6 +32,7 @@ public interface ItemShippingTarget {
 
     /**
      *  <p>Maps to <code>ItemShippingTarget.addressKey</code>.</p>
+     * @return addressKey
      */
     @NotNull
     @JsonProperty("addressKey")
@@ -39,6 +40,7 @@ public interface ItemShippingTarget {
 
     /**
      *  <p>Maps to <code>ItemShippingTarget.quantity</code>.</p>
+     * @return quantity
      */
     @NotNull
     @JsonProperty("quantity")

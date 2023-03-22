@@ -50,6 +50,7 @@ public class StagedOrderAddCustomLineItemActionBuilder implements Builder<Staged
     /**
      *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
      *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
+     * @return Builder
      */
 
     public StagedOrderAddCustomLineItemActionBuilder money(
@@ -61,6 +62,8 @@ public class StagedOrderAddCustomLineItemActionBuilder implements Builder<Staged
     /**
      *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
      *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
+     * @param money
+     * @return Builder
      */
 
     public StagedOrderAddCustomLineItemActionBuilder money(final com.commercetools.api.models.common.Money money) {
@@ -70,6 +73,7 @@ public class StagedOrderAddCustomLineItemActionBuilder implements Builder<Staged
 
     /**
      *  <p>JSON object where the keys are of type Locale, and the values are the strings used for the corresponding language.</p>
+     * @return Builder
      */
 
     public StagedOrderAddCustomLineItemActionBuilder name(
@@ -80,6 +84,8 @@ public class StagedOrderAddCustomLineItemActionBuilder implements Builder<Staged
 
     /**
      *  <p>JSON object where the keys are of type Locale, and the values are the strings used for the corresponding language.</p>
+     * @param name
+     * @return Builder
      */
 
     public StagedOrderAddCustomLineItemActionBuilder name(
@@ -90,6 +96,8 @@ public class StagedOrderAddCustomLineItemActionBuilder implements Builder<Staged
 
     /**
      *
+     * @param quantity
+     * @return Builder
      */
 
     public StagedOrderAddCustomLineItemActionBuilder quantity(@Nullable final Long quantity) {
@@ -99,6 +107,8 @@ public class StagedOrderAddCustomLineItemActionBuilder implements Builder<Staged
 
     /**
      *
+     * @param slug
+     * @return Builder
      */
 
     public StagedOrderAddCustomLineItemActionBuilder slug(final String slug) {
@@ -108,6 +118,7 @@ public class StagedOrderAddCustomLineItemActionBuilder implements Builder<Staged
 
     /**
      *  <p>ResourceIdentifier to a TaxCategory.</p>
+     * @return Builder
      */
 
     public StagedOrderAddCustomLineItemActionBuilder taxCategory(
@@ -120,6 +131,8 @@ public class StagedOrderAddCustomLineItemActionBuilder implements Builder<Staged
 
     /**
      *  <p>ResourceIdentifier to a TaxCategory.</p>
+     * @param taxCategory
+     * @return Builder
      */
 
     public StagedOrderAddCustomLineItemActionBuilder taxCategory(
@@ -130,6 +143,7 @@ public class StagedOrderAddCustomLineItemActionBuilder implements Builder<Staged
 
     /**
      *  <p>The representation used when creating or updating a customizable data type with Custom Fields.</p>
+     * @return Builder
      */
 
     public StagedOrderAddCustomLineItemActionBuilder custom(
@@ -140,6 +154,8 @@ public class StagedOrderAddCustomLineItemActionBuilder implements Builder<Staged
 
     /**
      *  <p>The representation used when creating or updating a customizable data type with Custom Fields.</p>
+     * @param custom
+     * @return Builder
      */
 
     public StagedOrderAddCustomLineItemActionBuilder custom(
@@ -150,6 +166,7 @@ public class StagedOrderAddCustomLineItemActionBuilder implements Builder<Staged
 
     /**
      *  <p>Controls calculation of taxed prices for Line Items, Custom Line Items, and Shipping Methods as explained in Cart tax calculation.</p>
+     * @return Builder
      */
 
     public StagedOrderAddCustomLineItemActionBuilder externalTaxRate(
@@ -161,6 +178,8 @@ public class StagedOrderAddCustomLineItemActionBuilder implements Builder<Staged
 
     /**
      *  <p>Controls calculation of taxed prices for Line Items, Custom Line Items, and Shipping Methods as explained in Cart tax calculation.</p>
+     * @param externalTaxRate
+     * @return Builder
      */
 
     public StagedOrderAddCustomLineItemActionBuilder externalTaxRate(
@@ -174,6 +193,8 @@ public class StagedOrderAddCustomLineItemActionBuilder implements Builder<Staged
      *   <li>If <code>Standard</code>, Cart Discounts with a matching CartDiscountCustomLineItemsTarget are applied to the Custom Line Item.</li>
      *   <li>If <code>External</code>, Cart Discounts are not considered on the Custom Line Item.</li>
      *  </ul>
+     * @param priceMode
+     * @return Builder
      */
 
     public StagedOrderAddCustomLineItemActionBuilder priceMode(

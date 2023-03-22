@@ -29,6 +29,8 @@ public class PaymentTransactionStateChangedMessagePayloadBuilder
 
     /**
      *  <p>Unique identifier for the Transaction for which the Transaction State changed.</p>
+     * @param transactionId
+     * @return Builder
      */
 
     public PaymentTransactionStateChangedMessagePayloadBuilder transactionId(final String transactionId) {
@@ -38,6 +40,8 @@ public class PaymentTransactionStateChangedMessagePayloadBuilder
 
     /**
      *  <p>Transaction State after the Change Transaction State update action.</p>
+     * @param state
+     * @return Builder
      */
 
     public PaymentTransactionStateChangedMessagePayloadBuilder state(

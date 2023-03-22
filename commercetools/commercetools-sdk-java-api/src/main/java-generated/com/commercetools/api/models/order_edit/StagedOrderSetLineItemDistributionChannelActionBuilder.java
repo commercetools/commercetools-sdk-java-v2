@@ -32,6 +32,8 @@ public class StagedOrderSetLineItemDistributionChannelActionBuilder
 
     /**
      *
+     * @param lineItemId
+     * @return Builder
      */
 
     public StagedOrderSetLineItemDistributionChannelActionBuilder lineItemId(final String lineItemId) {
@@ -41,6 +43,7 @@ public class StagedOrderSetLineItemDistributionChannelActionBuilder
 
     /**
      *  <p>ResourceIdentifier to a Channel.</p>
+     * @return Builder
      */
 
     public StagedOrderSetLineItemDistributionChannelActionBuilder distributionChannel(
@@ -53,6 +56,8 @@ public class StagedOrderSetLineItemDistributionChannelActionBuilder
 
     /**
      *  <p>ResourceIdentifier to a Channel.</p>
+     * @param distributionChannel
+     * @return Builder
      */
 
     public StagedOrderSetLineItemDistributionChannelActionBuilder distributionChannel(

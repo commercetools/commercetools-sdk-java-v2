@@ -35,6 +35,7 @@ public interface OrderDeletedMessagePayload extends OrderMessagePayload {
 
     /**
      *  <p>Order that has been deleted.</p>
+     * @return order
      */
     @NotNull
     @Valid

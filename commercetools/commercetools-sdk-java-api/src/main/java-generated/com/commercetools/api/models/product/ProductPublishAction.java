@@ -31,6 +31,7 @@ public interface ProductPublishAction extends ProductUpdateAction {
 
     /**
      *  <p><code>All</code> or <code>Prices</code></p>
+     * @return scope
      */
 
     @JsonProperty("scope")

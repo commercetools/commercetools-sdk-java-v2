@@ -40,6 +40,7 @@ public interface PriceChangedError extends ErrorObject {
 
     /**
      *
+     * @return code
      */
     @NotNull
     @JsonProperty("code")
@@ -47,6 +48,7 @@ public interface PriceChangedError extends ErrorObject {
 
     /**
      *  <p>Plain text description of the reason for the Price change. For example, <code>"The price or tax of some line items changed at the time of placing the order: $lineItems."</code>.</p>
+     * @return message
      */
     @NotNull
     @JsonProperty("message")
@@ -54,6 +56,7 @@ public interface PriceChangedError extends ErrorObject {
 
     /**
      *  <p>Unique identifiers of the Line Items for which the Price or TaxRate has changed.</p>
+     * @return lineItems
      */
     @NotNull
     @JsonProperty("lineItems")
@@ -61,6 +64,7 @@ public interface PriceChangedError extends ErrorObject {
 
     /**
      *  <p><code>true</code> if the ShippingRate has changed.</p>
+     * @return shipping
      */
     @NotNull
     @JsonProperty("shipping")

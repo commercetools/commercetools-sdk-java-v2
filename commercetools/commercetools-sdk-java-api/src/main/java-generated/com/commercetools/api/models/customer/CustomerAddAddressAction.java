@@ -35,6 +35,7 @@ public interface CustomerAddAddressAction extends CustomerUpdateAction {
 
     /**
      *  <p>Value to append to the <code>addresses</code> array.</p>
+     * @return address
      */
     @NotNull
     @Valid

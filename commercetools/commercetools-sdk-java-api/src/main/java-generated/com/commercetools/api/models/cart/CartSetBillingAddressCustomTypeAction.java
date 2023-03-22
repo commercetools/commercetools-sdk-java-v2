@@ -34,6 +34,7 @@ public interface CartSetBillingAddressCustomTypeAction extends CartUpdateAction 
 
     /**
      *  <p>Defines the Type that extends the <code>billingAddress</code> with Custom Fields. If absent, any existing Type and Custom Fields are removed from the <code>billingAddress</code>.</p>
+     * @return type
      */
     @Valid
     @JsonProperty("type")
@@ -41,6 +42,7 @@ public interface CartSetBillingAddressCustomTypeAction extends CartUpdateAction 
 
     /**
      *  <p>Sets the Custom Fields fields for the <code>billingAddress</code>.</p>
+     * @return fields
      */
     @Valid
     @JsonProperty("fields")

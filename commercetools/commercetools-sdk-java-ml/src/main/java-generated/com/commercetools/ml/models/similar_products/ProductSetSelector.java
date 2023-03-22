@@ -31,6 +31,7 @@ public interface ProductSetSelector {
 
     /**
      *  <p>The project containing the project set.</p>
+     * @return projectKey
      */
     @NotNull
     @JsonProperty("projectKey")
@@ -38,6 +39,7 @@ public interface ProductSetSelector {
 
     /**
      *  <p>An array of Product IDs to compare. If unspecified, no Product ID filter is applied.</p>
+     * @return productIds
      */
 
     @JsonProperty("productIds")
@@ -45,6 +47,7 @@ public interface ProductSetSelector {
 
     /**
      *  <p>An array of product type IDs. Only products with product types in this array are compared. If unspecified, no product type filter is applied.</p>
+     * @return productTypeIds
      */
 
     @JsonProperty("productTypeIds")
@@ -52,6 +55,7 @@ public interface ProductSetSelector {
 
     /**
      *  <p>Specifies use of staged or current product data.</p>
+     * @return staged
      */
 
     @JsonProperty("staged")
@@ -59,6 +63,7 @@ public interface ProductSetSelector {
 
     /**
      *  <p>Specifies use of product variants. If set to <code>true</code>, all product variants are compared, not just the master variant.</p>
+     * @return includeVariants
      */
 
     @JsonProperty("includeVariants")
@@ -66,6 +71,7 @@ public interface ProductSetSelector {
 
     /**
      *  <p>Maximum number of products to check (if unspecified, all products are considered). Note that the maximum number of product comparisons between two productSets is 20,000,000. This limit cannot be exceeded. If you need a higher limit, contact https://support.commercetools.com</p>
+     * @return productSetLimit
      */
 
     @JsonProperty("productSetLimit")

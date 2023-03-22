@@ -29,6 +29,8 @@ public class OrderSetParcelItemsActionBuilder implements Builder<OrderSetParcelI
 
     /**
      *
+     * @param parcelId
+     * @return Builder
      */
 
     public OrderSetParcelItemsActionBuilder parcelId(final String parcelId) {
@@ -38,6 +40,8 @@ public class OrderSetParcelItemsActionBuilder implements Builder<OrderSetParcelI
 
     /**
      *
+     * @param items
+     * @return Builder
      */
 
     public OrderSetParcelItemsActionBuilder items(final com.commercetools.api.models.order.DeliveryItem... items) {
@@ -47,6 +51,8 @@ public class OrderSetParcelItemsActionBuilder implements Builder<OrderSetParcelI
 
     /**
      *
+     * @param items
+     * @return Builder
      */
 
     public OrderSetParcelItemsActionBuilder items(
@@ -57,6 +63,8 @@ public class OrderSetParcelItemsActionBuilder implements Builder<OrderSetParcelI
 
     /**
      *
+     * @param items
+     * @return Builder
      */
 
     public OrderSetParcelItemsActionBuilder plusItems(final com.commercetools.api.models.order.DeliveryItem... items) {
@@ -69,6 +77,7 @@ public class OrderSetParcelItemsActionBuilder implements Builder<OrderSetParcelI
 
     /**
      *
+     * @return Builder
      */
 
     public OrderSetParcelItemsActionBuilder plusItems(
@@ -82,6 +91,7 @@ public class OrderSetParcelItemsActionBuilder implements Builder<OrderSetParcelI
 
     /**
      *
+     * @return Builder
      */
 
     public OrderSetParcelItemsActionBuilder withItems(

@@ -26,6 +26,8 @@ public class BusinessUnitSetAssociatesActionBuilder implements Builder<BusinessU
 
     /**
      *  <p>The new list of Associates. If not provided, any existing list is removed.</p>
+     * @param associates
+     * @return Builder
      */
 
     public BusinessUnitSetAssociatesActionBuilder associates(
@@ -36,6 +38,8 @@ public class BusinessUnitSetAssociatesActionBuilder implements Builder<BusinessU
 
     /**
      *  <p>The new list of Associates. If not provided, any existing list is removed.</p>
+     * @param associates
+     * @return Builder
      */
 
     public BusinessUnitSetAssociatesActionBuilder associates(
@@ -46,6 +50,8 @@ public class BusinessUnitSetAssociatesActionBuilder implements Builder<BusinessU
 
     /**
      *  <p>The new list of Associates. If not provided, any existing list is removed.</p>
+     * @param associates
+     * @return Builder
      */
 
     public BusinessUnitSetAssociatesActionBuilder plusAssociates(
@@ -59,6 +65,7 @@ public class BusinessUnitSetAssociatesActionBuilder implements Builder<BusinessU
 
     /**
      *  <p>The new list of Associates. If not provided, any existing list is removed.</p>
+     * @return Builder
      */
 
     public BusinessUnitSetAssociatesActionBuilder plusAssociates(
@@ -73,6 +80,7 @@ public class BusinessUnitSetAssociatesActionBuilder implements Builder<BusinessU
 
     /**
      *  <p>The new list of Associates. If not provided, any existing list is removed.</p>
+     * @return Builder
      */
 
     public BusinessUnitSetAssociatesActionBuilder withAssociates(

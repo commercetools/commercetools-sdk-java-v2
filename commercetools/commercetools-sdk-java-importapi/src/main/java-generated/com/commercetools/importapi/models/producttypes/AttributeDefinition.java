@@ -36,6 +36,7 @@ public interface AttributeDefinition {
 
     /**
      *
+     * @return type
      */
     @NotNull
     @Valid
@@ -44,6 +45,7 @@ public interface AttributeDefinition {
 
     /**
      *
+     * @return name
      */
     @NotNull
     @JsonProperty("name")
@@ -56,6 +58,7 @@ public interface AttributeDefinition {
      *    "en": "dog food"
      *  }
      *  </code></pre>
+     * @return label
      */
     @NotNull
     @Valid
@@ -64,6 +67,7 @@ public interface AttributeDefinition {
 
     /**
      *
+     * @return isRequired
      */
     @NotNull
     @JsonProperty("isRequired")
@@ -71,6 +75,7 @@ public interface AttributeDefinition {
 
     /**
      *
+     * @return attributeConstraint
      */
 
     @JsonProperty("attributeConstraint")
@@ -83,6 +88,7 @@ public interface AttributeDefinition {
      *    "en": "dog food"
      *  }
      *  </code></pre>
+     * @return inputTip
      */
     @Valid
     @JsonProperty("inputTip")
@@ -90,6 +96,7 @@ public interface AttributeDefinition {
 
     /**
      *
+     * @return inputHint
      */
 
     @JsonProperty("inputHint")
@@ -97,6 +104,7 @@ public interface AttributeDefinition {
 
     /**
      *
+     * @return isSearchable
      */
 
     @JsonProperty("isSearchable")

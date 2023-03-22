@@ -29,6 +29,7 @@ public class ZoneRateDraftBuilder implements Builder<ZoneRateDraft> {
 
     /**
      *  <p>Sets the Zone for which the shippng rates are valid.</p>
+     * @return Builder
      */
 
     public ZoneRateDraftBuilder zone(
@@ -39,6 +40,8 @@ public class ZoneRateDraftBuilder implements Builder<ZoneRateDraft> {
 
     /**
      *  <p>Sets the Zone for which the shippng rates are valid.</p>
+     * @param zone
+     * @return Builder
      */
 
     public ZoneRateDraftBuilder zone(final com.commercetools.api.models.zone.ZoneResourceIdentifier zone) {
@@ -48,6 +51,8 @@ public class ZoneRateDraftBuilder implements Builder<ZoneRateDraft> {
 
     /**
      *  <p>Shipping rates for the <code>currencies</code> configured in the Project. The array must not contain two ShippingRates with the same CurrencyCode.</p>
+     * @param shippingRates
+     * @return Builder
      */
 
     public ZoneRateDraftBuilder shippingRates(
@@ -58,6 +63,8 @@ public class ZoneRateDraftBuilder implements Builder<ZoneRateDraft> {
 
     /**
      *  <p>Shipping rates for the <code>currencies</code> configured in the Project. The array must not contain two ShippingRates with the same CurrencyCode.</p>
+     * @param shippingRates
+     * @return Builder
      */
 
     public ZoneRateDraftBuilder shippingRates(
@@ -68,6 +75,8 @@ public class ZoneRateDraftBuilder implements Builder<ZoneRateDraft> {
 
     /**
      *  <p>Shipping rates for the <code>currencies</code> configured in the Project. The array must not contain two ShippingRates with the same CurrencyCode.</p>
+     * @param shippingRates
+     * @return Builder
      */
 
     public ZoneRateDraftBuilder plusShippingRates(
@@ -81,6 +90,7 @@ public class ZoneRateDraftBuilder implements Builder<ZoneRateDraft> {
 
     /**
      *  <p>Shipping rates for the <code>currencies</code> configured in the Project. The array must not contain two ShippingRates with the same CurrencyCode.</p>
+     * @return Builder
      */
 
     public ZoneRateDraftBuilder plusShippingRates(
@@ -95,6 +105,7 @@ public class ZoneRateDraftBuilder implements Builder<ZoneRateDraft> {
 
     /**
      *  <p>Shipping rates for the <code>currencies</code> configured in the Project. The array must not contain two ShippingRates with the same CurrencyCode.</p>
+     * @return Builder
      */
 
     public ZoneRateDraftBuilder withShippingRates(

@@ -34,6 +34,7 @@ public interface DuplicateEnumValuesError extends ErrorObject {
 
     /**
      *
+     * @return code
      */
     @NotNull
     @JsonProperty("code")
@@ -41,6 +42,7 @@ public interface DuplicateEnumValuesError extends ErrorObject {
 
     /**
      *  <p><code>"The enum values contain duplicate keys: $listOfDuplicateKeys."</code></p>
+     * @return message
      */
     @NotNull
     @JsonProperty("message")
@@ -48,6 +50,7 @@ public interface DuplicateEnumValuesError extends ErrorObject {
 
     /**
      *  <p>Duplicate keys.</p>
+     * @return duplicates
      */
     @NotNull
     @JsonProperty("duplicates")

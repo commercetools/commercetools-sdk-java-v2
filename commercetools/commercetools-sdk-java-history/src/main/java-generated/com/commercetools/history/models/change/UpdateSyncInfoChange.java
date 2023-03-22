@@ -37,6 +37,7 @@ public interface UpdateSyncInfoChange extends Change {
 
     /**
      *
+     * @return type
      */
     @NotNull
     @JsonProperty("type")
@@ -44,6 +45,7 @@ public interface UpdateSyncInfoChange extends Change {
 
     /**
      *  <p>Update action for <code>updateSyncInfo</code></p>
+     * @return change
      */
     @NotNull
     @JsonProperty("change")
@@ -51,6 +53,7 @@ public interface UpdateSyncInfoChange extends Change {
 
     /**
      *
+     * @return channelId
      */
     @NotNull
     @JsonProperty("channelId")
@@ -58,6 +61,7 @@ public interface UpdateSyncInfoChange extends Change {
 
     /**
      *
+     * @return nextValue
      */
     @NotNull
     @Valid

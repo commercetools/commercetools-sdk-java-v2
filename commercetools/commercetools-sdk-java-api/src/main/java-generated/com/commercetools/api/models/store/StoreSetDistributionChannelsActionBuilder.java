@@ -28,6 +28,8 @@ public class StoreSetDistributionChannelsActionBuilder implements Builder<StoreS
 
     /**
      *  <p>Value to set. If not defined, the Store's <code>distributionChannels</code> are unset.</p>
+     * @param distributionChannels
+     * @return Builder
      */
 
     public StoreSetDistributionChannelsActionBuilder distributionChannels(
@@ -38,6 +40,8 @@ public class StoreSetDistributionChannelsActionBuilder implements Builder<StoreS
 
     /**
      *  <p>Value to set. If not defined, the Store's <code>distributionChannels</code> are unset.</p>
+     * @param distributionChannels
+     * @return Builder
      */
 
     public StoreSetDistributionChannelsActionBuilder distributionChannels(
@@ -48,6 +52,8 @@ public class StoreSetDistributionChannelsActionBuilder implements Builder<StoreS
 
     /**
      *  <p>Value to set. If not defined, the Store's <code>distributionChannels</code> are unset.</p>
+     * @param distributionChannels
+     * @return Builder
      */
 
     public StoreSetDistributionChannelsActionBuilder plusDistributionChannels(
@@ -61,6 +67,7 @@ public class StoreSetDistributionChannelsActionBuilder implements Builder<StoreS
 
     /**
      *  <p>Value to set. If not defined, the Store's <code>distributionChannels</code> are unset.</p>
+     * @return Builder
      */
 
     public StoreSetDistributionChannelsActionBuilder plusDistributionChannels(
@@ -75,6 +82,7 @@ public class StoreSetDistributionChannelsActionBuilder implements Builder<StoreS
 
     /**
      *  <p>Value to set. If not defined, the Store's <code>distributionChannels</code> are unset.</p>
+     * @return Builder
      */
 
     public StoreSetDistributionChannelsActionBuilder withDistributionChannels(

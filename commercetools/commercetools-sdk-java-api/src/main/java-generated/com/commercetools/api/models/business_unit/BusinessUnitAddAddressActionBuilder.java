@@ -26,6 +26,7 @@ public class BusinessUnitAddAddressActionBuilder implements Builder<BusinessUnit
 
     /**
      *  <p>Address to add to the addresses of the Business Unit.</p>
+     * @return Builder
      */
 
     public BusinessUnitAddAddressActionBuilder address(
@@ -36,6 +37,8 @@ public class BusinessUnitAddAddressActionBuilder implements Builder<BusinessUnit
 
     /**
      *  <p>Address to add to the addresses of the Business Unit.</p>
+     * @param address
+     * @return Builder
      */
 
     public BusinessUnitAddAddressActionBuilder address(final com.commercetools.api.models.common.BaseAddress address) {

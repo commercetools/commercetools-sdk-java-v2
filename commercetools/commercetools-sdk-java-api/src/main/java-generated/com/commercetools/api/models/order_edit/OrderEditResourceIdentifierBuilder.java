@@ -30,6 +30,8 @@ public class OrderEditResourceIdentifierBuilder implements Builder<OrderEditReso
 
     /**
      *  <p>Unique identifier of the referenced OrderEdit. Either <code>id</code> or <code>key</code> is required.</p>
+     * @param id
+     * @return Builder
      */
 
     public OrderEditResourceIdentifierBuilder id(@Nullable final String id) {
@@ -39,6 +41,8 @@ public class OrderEditResourceIdentifierBuilder implements Builder<OrderEditReso
 
     /**
      *  <p>User-defined unique identifier of the referenced OrderEdit. Either <code>id</code> or <code>key</code> is required.</p>
+     * @param key
+     * @return Builder
      */
 
     public OrderEditResourceIdentifierBuilder key(@Nullable final String key) {

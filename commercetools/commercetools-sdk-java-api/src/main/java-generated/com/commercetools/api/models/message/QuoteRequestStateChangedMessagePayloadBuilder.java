@@ -28,6 +28,8 @@ public class QuoteRequestStateChangedMessagePayloadBuilder implements Builder<Qu
 
     /**
      *  <p>State of the Quote Request after the Change Quote Request State update action.</p>
+     * @param quoteRequestState
+     * @return Builder
      */
 
     public QuoteRequestStateChangedMessagePayloadBuilder quoteRequestState(
@@ -38,6 +40,8 @@ public class QuoteRequestStateChangedMessagePayloadBuilder implements Builder<Qu
 
     /**
      *  <p>State of the Quote Request before the Change Quote Request State update action.</p>
+     * @param oldQuoteRequestState
+     * @return Builder
      */
 
     public QuoteRequestStateChangedMessagePayloadBuilder oldQuoteRequestState(

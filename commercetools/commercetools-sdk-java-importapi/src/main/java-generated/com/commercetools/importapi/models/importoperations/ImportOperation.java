@@ -43,6 +43,7 @@ public interface ImportOperation {
 
     /**
      *  <p>The version of the ImportOperation.</p>
+     * @return version
      */
     @NotNull
     @JsonProperty("version")
@@ -50,6 +51,7 @@ public interface ImportOperation {
 
     /**
      *  <p>The key of the importContainer.</p>
+     * @return importContainerKey
      */
     @NotNull
     @JsonProperty("importContainerKey")
@@ -57,6 +59,7 @@ public interface ImportOperation {
 
     /**
      *  <p>The key of the resource.</p>
+     * @return resourceKey
      */
     @NotNull
     @JsonProperty("resourceKey")
@@ -64,6 +67,7 @@ public interface ImportOperation {
 
     /**
      *  <p>The ID of the ImportOperation.</p>
+     * @return id
      */
     @NotNull
     @JsonProperty("id")
@@ -71,6 +75,7 @@ public interface ImportOperation {
 
     /**
      *  <p>The import status of the resource. Set to <code>rejected</code> or <code>validationFailed</code> if the import of the resource was not successful.</p>
+     * @return state
      */
     @NotNull
     @JsonProperty("state")
@@ -78,6 +83,7 @@ public interface ImportOperation {
 
     /**
      *  <p>The version of the imported resource when the import was successful.</p>
+     * @return resourceVersion
      */
 
     @JsonProperty("resourceVersion")
@@ -85,6 +91,7 @@ public interface ImportOperation {
 
     /**
      *  <p>Contains an error if the import of the resource was not successful. See Errors.</p>
+     * @return errors
      */
     @Valid
     @JsonProperty("errors")
@@ -92,6 +99,7 @@ public interface ImportOperation {
 
     /**
      *  <p>In case of unresolved status this array will show the unresolved references</p>
+     * @return unresolvedReferences
      */
     @Valid
     @JsonProperty("unresolvedReferences")
@@ -99,6 +107,7 @@ public interface ImportOperation {
 
     /**
      *  <p>The time when the ImportOperation was created.</p>
+     * @return createdAt
      */
     @NotNull
     @JsonProperty("createdAt")
@@ -106,6 +115,7 @@ public interface ImportOperation {
 
     /**
      *  <p>The last time When the ImportOperation was modified.</p>
+     * @return lastModifiedAt
      */
     @NotNull
     @JsonProperty("lastModifiedAt")
@@ -113,6 +123,7 @@ public interface ImportOperation {
 
     /**
      *  <p>The expiration time of the ImportOperation.</p>
+     * @return expiresAt
      */
     @NotNull
     @JsonProperty("expiresAt")

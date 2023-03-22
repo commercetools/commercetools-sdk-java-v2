@@ -43,6 +43,7 @@ public interface CartAddCustomLineItemAction
 
     /**
      *  <p>Money value of the Custom Line Item. The value can be negative.</p>
+     * @return money
      */
     @NotNull
     @Valid
@@ -51,6 +52,7 @@ public interface CartAddCustomLineItemAction
 
     /**
      *  <p>Name of the Custom Line Item.</p>
+     * @return name
      */
     @NotNull
     @Valid
@@ -59,6 +61,7 @@ public interface CartAddCustomLineItemAction
 
     /**
      *  <p>Number of Custom Line Items to add to the Cart.</p>
+     * @return quantity
      */
 
     @JsonProperty("quantity")
@@ -66,6 +69,7 @@ public interface CartAddCustomLineItemAction
 
     /**
      *  <p>User-defined identifier used in a deep-link URL for the Custom Line Item. It must match the pattern <code>[a-zA-Z0-9_-]{2,256}</code>.</p>
+     * @return slug
      */
     @NotNull
     @JsonProperty("slug")
@@ -74,6 +78,7 @@ public interface CartAddCustomLineItemAction
     /**
      *  <p>Used to select a Tax Rate when a Cart has the <code>Platform</code> TaxMode.</p>
      *  <p>If TaxMode is <code>Platform</code>, this field must not be empty.</p>
+     * @return taxCategory
      */
     @Valid
     @JsonProperty("taxCategory")
@@ -81,6 +86,7 @@ public interface CartAddCustomLineItemAction
 
     /**
      *  <p>An external Tax Rate can be set if the Cart has <code>External</code> TaxMode.</p>
+     * @return externalTaxRate
      */
     @Valid
     @JsonProperty("externalTaxRate")
@@ -88,6 +94,7 @@ public interface CartAddCustomLineItemAction
 
     /**
      *  <p>Container for Custom Line Item-specific addresses.</p>
+     * @return shippingDetails
      */
     @Valid
     @JsonProperty("shippingDetails")
@@ -95,6 +102,7 @@ public interface CartAddCustomLineItemAction
 
     /**
      *  <p>Custom Fields for the Custom Line Item.</p>
+     * @return custom
      */
     @Valid
     @JsonProperty("custom")
@@ -105,6 +113,7 @@ public interface CartAddCustomLineItemAction
      *   <li>If <code>Standard</code>, Cart Discounts with a matching CartDiscountCustomLineItemsTarget are applied to the Custom Line Item.</li>
      *   <li>If <code>External</code>, Cart Discounts are not considered on the Custom Line Item.</li>
      *  </ul>
+     * @return priceMode
      */
 
     @JsonProperty("priceMode")

@@ -35,6 +35,7 @@ public interface OrderReturnShipmentStateChangedMessagePayload extends OrderMess
 
     /**
      *  <p>Unique identifier of the ReturnItem.</p>
+     * @return returnItemId
      */
     @NotNull
     @JsonProperty("returnItemId")
@@ -42,6 +43,7 @@ public interface OrderReturnShipmentStateChangedMessagePayload extends OrderMess
 
     /**
      *  <p>State of the ReturnItem after the Set Return Shipment State update action.</p>
+     * @return returnShipmentState
      */
     @NotNull
     @JsonProperty("returnShipmentState")

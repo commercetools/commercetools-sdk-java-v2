@@ -39,6 +39,7 @@ public interface CustomerImport extends ImportResource {
 
     /**
      *  <p>Maps to <code>Customer.customerNumber</code>.</p>
+     * @return customerNumber
      */
 
     @JsonProperty("customerNumber")
@@ -46,6 +47,7 @@ public interface CustomerImport extends ImportResource {
 
     /**
      *  <p>Maps to <code>Customer.email</code>.</p>
+     * @return email
      */
     @NotNull
     @JsonProperty("email")
@@ -53,6 +55,7 @@ public interface CustomerImport extends ImportResource {
 
     /**
      *  <p>Maps to <code>Customer.password</code>.</p>
+     * @return password
      */
 
     @JsonProperty("password")
@@ -60,6 +63,7 @@ public interface CustomerImport extends ImportResource {
 
     /**
      *  <p>The References to the Stores with which the Customer is associated. If referenced Stores do not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Stores are created.</p>
+     * @return stores
      */
     @Valid
     @JsonProperty("stores")
@@ -67,6 +71,7 @@ public interface CustomerImport extends ImportResource {
 
     /**
      *  <p>Maps to <code>Customer.firstName</code>.</p>
+     * @return firstName
      */
 
     @JsonProperty("firstName")
@@ -74,6 +79,7 @@ public interface CustomerImport extends ImportResource {
 
     /**
      *  <p>Maps to <code>Customer.lastName</code>.</p>
+     * @return lastName
      */
 
     @JsonProperty("lastName")
@@ -81,6 +87,7 @@ public interface CustomerImport extends ImportResource {
 
     /**
      *  <p>Maps to <code>Customer.middleName</code>.</p>
+     * @return middleName
      */
 
     @JsonProperty("middleName")
@@ -88,6 +95,7 @@ public interface CustomerImport extends ImportResource {
 
     /**
      *  <p>Maps to <code>Customer.title</code>.</p>
+     * @return title
      */
 
     @JsonProperty("title")
@@ -95,6 +103,7 @@ public interface CustomerImport extends ImportResource {
 
     /**
      *  <p>Maps to <code>Customer.salutation</code>.</p>
+     * @return salutation
      */
 
     @JsonProperty("salutation")
@@ -102,6 +111,7 @@ public interface CustomerImport extends ImportResource {
 
     /**
      *  <p>Maps to <code>Customer.externalId</code>.</p>
+     * @return externalId
      */
 
     @JsonProperty("externalId")
@@ -109,6 +119,7 @@ public interface CustomerImport extends ImportResource {
 
     /**
      *  <p>Maps to <code>Customer.dateOfBirth</code>.</p>
+     * @return dateOfBirth
      */
 
     @JsonProperty("dateOfBirth")
@@ -116,6 +127,7 @@ public interface CustomerImport extends ImportResource {
 
     /**
      *  <p>Maps to <code>Customer.companyName</code>.</p>
+     * @return companyName
      */
 
     @JsonProperty("companyName")
@@ -123,6 +135,7 @@ public interface CustomerImport extends ImportResource {
 
     /**
      *  <p>Maps to <code>Customer.vatId</code>.</p>
+     * @return vatId
      */
 
     @JsonProperty("vatId")
@@ -130,6 +143,7 @@ public interface CustomerImport extends ImportResource {
 
     /**
      *  <p>Maps to <code>Customer.isEmailVerified</code>.</p>
+     * @return isEmailVerified
      */
 
     @JsonProperty("isEmailVerified")
@@ -137,6 +151,7 @@ public interface CustomerImport extends ImportResource {
 
     /**
      *  <p>The Reference to the CustomerGroup with which the Customer is associated. If referenced CustomerGroup does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary CustomerGroup is created.</p>
+     * @return customerGroup
      */
     @Valid
     @JsonProperty("customerGroup")
@@ -144,6 +159,7 @@ public interface CustomerImport extends ImportResource {
 
     /**
      *  <p>Maps to <code>Customer.addresses</code>.</p>
+     * @return addresses
      */
     @NotNull
     @Valid
@@ -152,6 +168,7 @@ public interface CustomerImport extends ImportResource {
 
     /**
      *  <p>The index of the address in the addresses array. The <code>defaultBillingAddressId</code> of the customer will be set to the ID of that address.</p>
+     * @return defaultBillingAddress
      */
 
     @JsonProperty("defaultBillingAddress")
@@ -159,6 +176,7 @@ public interface CustomerImport extends ImportResource {
 
     /**
      *  <p>The indices of the billing addresses in the addresses array. The <code>billingAddressIds</code> of the customer will be set to the IDs of that addresses.</p>
+     * @return billingAddresses
      */
 
     @JsonProperty("billingAddresses")
@@ -166,6 +184,7 @@ public interface CustomerImport extends ImportResource {
 
     /**
      *  <p>The index of the address in the addresses array. The <code>defaultShippingAddressId</code> of the customer will be set to the ID of that address.</p>
+     * @return defaultShippingAddress
      */
 
     @JsonProperty("defaultShippingAddress")
@@ -173,6 +192,7 @@ public interface CustomerImport extends ImportResource {
 
     /**
      *  <p>The indices of the shipping addresses in the addresses array. The <code>shippingAddressIds</code> of the customer will be set to the IDs of that addresses.</p>
+     * @return shippingAddresses
      */
 
     @JsonProperty("shippingAddresses")
@@ -180,6 +200,7 @@ public interface CustomerImport extends ImportResource {
 
     /**
      *  <p>Maps to <code>Customer.locale</code>.</p>
+     * @return locale
      */
 
     @JsonProperty("locale")
@@ -187,6 +208,7 @@ public interface CustomerImport extends ImportResource {
 
     /**
      *  <p>The Custom Fields for this Customer.</p>
+     * @return custom
      */
     @Valid
     @JsonProperty("custom")
@@ -197,6 +219,7 @@ public interface CustomerImport extends ImportResource {
      *   <li>Set to <code>Password</code> to make the <code>password</code> field required for the Customer.</li>
      *   <li>Set to <code>ExternalAuth</code> when the password is not required for the Customer.</li>
      *  </ul>
+     * @return authenticationMode
      */
 
     @JsonProperty("authenticationMode")

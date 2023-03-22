@@ -35,6 +35,8 @@ public class CentPrecisionMoneyBuilder implements Builder<CentPrecisionMoney> {
      *   <li>Cents for EUR and USD, pence for GBP, or centime for CHF (5 CHF is specified as <code>500</code>).</li>
      *   <li>The value in the major unit for currencies without minor units, like JPY (5 JPY is specified as <code>5</code>).</li>
      *  </ul>
+     * @param centAmount
+     * @return Builder
      */
 
     public CentPrecisionMoneyBuilder centAmount(final Long centAmount) {
@@ -44,6 +46,8 @@ public class CentPrecisionMoneyBuilder implements Builder<CentPrecisionMoney> {
 
     /**
      *  <p>Currency code compliant to ISO 4217.</p>
+     * @param currencyCode
+     * @return Builder
      */
 
     public CentPrecisionMoneyBuilder currencyCode(final String currencyCode) {
@@ -53,6 +57,8 @@ public class CentPrecisionMoneyBuilder implements Builder<CentPrecisionMoney> {
 
     /**
      *  <p>The number of default fraction digits for the given currency, like <code>2</code> for EUR or <code>0</code> for JPY.</p>
+     * @param fractionDigits
+     * @return Builder
      */
 
     public CentPrecisionMoneyBuilder fractionDigits(final Integer fractionDigits) {

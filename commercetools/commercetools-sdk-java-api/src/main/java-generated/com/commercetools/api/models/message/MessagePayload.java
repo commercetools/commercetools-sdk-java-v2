@@ -185,6 +185,7 @@ public interface MessagePayload {
 
     /**
      *
+     * @return type
      */
     @NotNull
     @JsonProperty("type")

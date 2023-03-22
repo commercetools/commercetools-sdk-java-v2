@@ -34,6 +34,7 @@ public class OrderStateTransitionMessagePayloadBuilder implements Builder<OrderS
 
     /**
      *  <p>OrderState after the Transition State update action.</p>
+     * @return Builder
      */
 
     public OrderStateTransitionMessagePayloadBuilder state(
@@ -44,6 +45,8 @@ public class OrderStateTransitionMessagePayloadBuilder implements Builder<OrderS
 
     /**
      *  <p>OrderState after the Transition State update action.</p>
+     * @param state
+     * @return Builder
      */
 
     public OrderStateTransitionMessagePayloadBuilder state(
@@ -54,6 +57,7 @@ public class OrderStateTransitionMessagePayloadBuilder implements Builder<OrderS
 
     /**
      *  <p>OrderState before the Transition State update action.</p>
+     * @return Builder
      */
 
     public OrderStateTransitionMessagePayloadBuilder oldState(
@@ -64,6 +68,8 @@ public class OrderStateTransitionMessagePayloadBuilder implements Builder<OrderS
 
     /**
      *  <p>OrderState before the Transition State update action.</p>
+     * @param oldState
+     * @return Builder
      */
 
     public OrderStateTransitionMessagePayloadBuilder oldState(
@@ -74,6 +80,8 @@ public class OrderStateTransitionMessagePayloadBuilder implements Builder<OrderS
 
     /**
      *  <p>Whether State transition validations were turned off during the Transition State update action.</p>
+     * @param force
+     * @return Builder
      */
 
     public OrderStateTransitionMessagePayloadBuilder force(final Boolean force) {

@@ -35,6 +35,7 @@ public interface DuplicateVariantValuesError extends ErrorObject {
 
     /**
      *
+     * @return code
      */
     @NotNull
     @JsonProperty("code")
@@ -42,6 +43,7 @@ public interface DuplicateVariantValuesError extends ErrorObject {
 
     /**
      *  <p><code>"A duplicate combination of the variant values (sku, key, images, prices, attributes) exists."</code></p>
+     * @return message
      */
     @NotNull
     @JsonProperty("message")
@@ -49,6 +51,7 @@ public interface DuplicateVariantValuesError extends ErrorObject {
 
     /**
      *  <p>Every Product Variant must have a distinct combination of SKU, prices, and custom Attribute values.</p>
+     * @return variantValues
      */
     @NotNull
     @Valid

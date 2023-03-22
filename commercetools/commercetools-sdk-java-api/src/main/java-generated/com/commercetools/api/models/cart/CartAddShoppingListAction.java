@@ -36,6 +36,7 @@ public interface CartAddShoppingListAction extends CartUpdateAction {
 
     /**
      *  <p>Shopping List that contains the Line Items to be added.</p>
+     * @return shoppingList
      */
     @NotNull
     @Valid
@@ -44,6 +45,7 @@ public interface CartAddShoppingListAction extends CartUpdateAction {
 
     /**
      *  <p><code>distributionChannel</code> to set for all LineItems that are added to the Cart. The Channel must have the <code>ProductDistribution</code> ChannelRoleEnum.</p>
+     * @return distributionChannel
      */
     @Valid
     @JsonProperty("distributionChannel")
@@ -51,6 +53,7 @@ public interface CartAddShoppingListAction extends CartUpdateAction {
 
     /**
      *  <p><code>supplyChannel</code> to set for all LineItems that are added to the Cart. The Channel must have the <code>InventorySupply</code> ChannelRoleEnum.</p>
+     * @return supplyChannel
      */
     @Valid
     @JsonProperty("supplyChannel")

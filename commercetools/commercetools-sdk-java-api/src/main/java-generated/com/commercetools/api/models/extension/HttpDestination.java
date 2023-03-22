@@ -34,6 +34,7 @@ public interface HttpDestination extends ExtensionDestination {
 
     /**
      *  <p>URL to the target destination.</p>
+     * @return url
      */
     @NotNull
     @JsonProperty("url")
@@ -41,6 +42,7 @@ public interface HttpDestination extends ExtensionDestination {
 
     /**
      *  <p>Authentication methods (such as <code>Basic</code> or <code>Bearer</code>).</p>
+     * @return authentication
      */
     @Valid
     @JsonProperty("authentication")

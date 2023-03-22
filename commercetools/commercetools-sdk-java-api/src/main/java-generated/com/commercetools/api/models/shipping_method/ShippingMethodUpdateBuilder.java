@@ -29,6 +29,8 @@ public class ShippingMethodUpdateBuilder implements Builder<ShippingMethodUpdate
 
     /**
      *  <p>Expected version of the ShippingMethod on which the changes should be applied. If the expected version does not match the actual version, a 409 Conflict will be returned.</p>
+     * @param version
+     * @return Builder
      */
 
     public ShippingMethodUpdateBuilder version(final Long version) {
@@ -38,6 +40,8 @@ public class ShippingMethodUpdateBuilder implements Builder<ShippingMethodUpdate
 
     /**
      *  <p>Update actions to be performed on the ShippingMethod.</p>
+     * @param actions
+     * @return Builder
      */
 
     public ShippingMethodUpdateBuilder actions(
@@ -48,6 +52,8 @@ public class ShippingMethodUpdateBuilder implements Builder<ShippingMethodUpdate
 
     /**
      *  <p>Update actions to be performed on the ShippingMethod.</p>
+     * @param actions
+     * @return Builder
      */
 
     public ShippingMethodUpdateBuilder actions(
@@ -58,6 +64,8 @@ public class ShippingMethodUpdateBuilder implements Builder<ShippingMethodUpdate
 
     /**
      *  <p>Update actions to be performed on the ShippingMethod.</p>
+     * @param actions
+     * @return Builder
      */
 
     public ShippingMethodUpdateBuilder plusActions(
@@ -71,6 +79,7 @@ public class ShippingMethodUpdateBuilder implements Builder<ShippingMethodUpdate
 
     /**
      *  <p>Update actions to be performed on the ShippingMethod.</p>
+     * @return Builder
      */
 
     public ShippingMethodUpdateBuilder plusActions(
@@ -85,6 +94,7 @@ public class ShippingMethodUpdateBuilder implements Builder<ShippingMethodUpdate
 
     /**
      *  <p>Update actions to be performed on the ShippingMethod.</p>
+     * @return Builder
      */
 
     public ShippingMethodUpdateBuilder withActions(

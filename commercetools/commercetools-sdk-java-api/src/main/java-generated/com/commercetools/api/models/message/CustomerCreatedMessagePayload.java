@@ -35,6 +35,7 @@ public interface CustomerCreatedMessagePayload extends MessagePayload {
 
     /**
      *  <p>Customer that was created.</p>
+     * @return customer
      */
     @NotNull
     @Valid

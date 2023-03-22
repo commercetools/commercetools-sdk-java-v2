@@ -26,6 +26,7 @@ public class ProductSelectionRemoveProductActionBuilder implements Builder<Produ
 
     /**
      *  <p>ResourceIdentifier of the Product</p>
+     * @return Builder
      */
 
     public ProductSelectionRemoveProductActionBuilder product(
@@ -37,6 +38,8 @@ public class ProductSelectionRemoveProductActionBuilder implements Builder<Produ
 
     /**
      *  <p>ResourceIdentifier of the Product</p>
+     * @param product
+     * @return Builder
      */
 
     public ProductSelectionRemoveProductActionBuilder product(

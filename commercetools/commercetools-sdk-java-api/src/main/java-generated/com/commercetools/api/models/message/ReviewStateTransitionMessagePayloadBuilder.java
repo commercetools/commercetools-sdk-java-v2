@@ -43,6 +43,7 @@ public class ReviewStateTransitionMessagePayloadBuilder implements Builder<Revie
 
     /**
      *  <p>State of the Review before the Transition State update action.</p>
+     * @return Builder
      */
 
     public ReviewStateTransitionMessagePayloadBuilder oldState(
@@ -53,6 +54,8 @@ public class ReviewStateTransitionMessagePayloadBuilder implements Builder<Revie
 
     /**
      *  <p>State of the Review before the Transition State update action.</p>
+     * @param oldState
+     * @return Builder
      */
 
     public ReviewStateTransitionMessagePayloadBuilder oldState(
@@ -63,6 +66,7 @@ public class ReviewStateTransitionMessagePayloadBuilder implements Builder<Revie
 
     /**
      *  <p>State of the Review after the Transition State update action.</p>
+     * @return Builder
      */
 
     public ReviewStateTransitionMessagePayloadBuilder newState(
@@ -73,6 +77,8 @@ public class ReviewStateTransitionMessagePayloadBuilder implements Builder<Revie
 
     /**
      *  <p>State of the Review after the Transition State update action.</p>
+     * @param newState
+     * @return Builder
      */
 
     public ReviewStateTransitionMessagePayloadBuilder newState(
@@ -83,6 +89,8 @@ public class ReviewStateTransitionMessagePayloadBuilder implements Builder<Revie
 
     /**
      *  <p>Whether the old Review was taken into account in the rating statistics of the target before the state transition.</p>
+     * @param oldIncludedInStatistics
+     * @return Builder
      */
 
     public ReviewStateTransitionMessagePayloadBuilder oldIncludedInStatistics(final Boolean oldIncludedInStatistics) {
@@ -92,6 +100,8 @@ public class ReviewStateTransitionMessagePayloadBuilder implements Builder<Revie
 
     /**
      *  <p>Whether the new Review was taken into account in the rating statistics of the target after the state transition.</p>
+     * @param newIncludedInStatistics
+     * @return Builder
      */
 
     public ReviewStateTransitionMessagePayloadBuilder newIncludedInStatistics(final Boolean newIncludedInStatistics) {
@@ -101,6 +111,8 @@ public class ReviewStateTransitionMessagePayloadBuilder implements Builder<Revie
 
     /**
      *  <p>Reference to the resource that the Review belongs to.</p>
+     * @param target
+     * @return Builder
      */
 
     public ReviewStateTransitionMessagePayloadBuilder target(
@@ -111,6 +123,7 @@ public class ReviewStateTransitionMessagePayloadBuilder implements Builder<Revie
 
     /**
      *  <p>Reference to the resource that the Review belongs to.</p>
+     * @return Builder
      */
 
     public ReviewStateTransitionMessagePayloadBuilder target(
@@ -121,6 +134,8 @@ public class ReviewStateTransitionMessagePayloadBuilder implements Builder<Revie
 
     /**
      *  <p>Whether State transition validations were turned off during the Transition State update action.</p>
+     * @param force
+     * @return Builder
      */
 
     public ReviewStateTransitionMessagePayloadBuilder force(final Boolean force) {

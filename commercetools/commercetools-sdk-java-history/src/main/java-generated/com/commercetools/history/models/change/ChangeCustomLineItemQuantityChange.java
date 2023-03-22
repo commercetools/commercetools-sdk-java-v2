@@ -39,6 +39,7 @@ public interface ChangeCustomLineItemQuantityChange extends Change {
 
     /**
      *
+     * @return type
      */
     @NotNull
     @JsonProperty("type")
@@ -46,6 +47,7 @@ public interface ChangeCustomLineItemQuantityChange extends Change {
 
     /**
      *  <p>Update action for <code>changeCustomLineItemQuantity</code></p>
+     * @return change
      */
     @NotNull
     @JsonProperty("change")
@@ -53,6 +55,7 @@ public interface ChangeCustomLineItemQuantityChange extends Change {
 
     /**
      *
+     * @return customLineItem
      */
     @NotNull
     @Valid
@@ -61,6 +64,7 @@ public interface ChangeCustomLineItemQuantityChange extends Change {
 
     /**
      *
+     * @return customLineItemId
      */
     @NotNull
     @JsonProperty("customLineItemId")
@@ -68,6 +72,7 @@ public interface ChangeCustomLineItemQuantityChange extends Change {
 
     /**
      *
+     * @return nextValue
      */
     @NotNull
     @JsonProperty("nextValue")
@@ -75,6 +80,7 @@ public interface ChangeCustomLineItemQuantityChange extends Change {
 
     /**
      *
+     * @return previousValue
      */
     @NotNull
     @JsonProperty("previousValue")

@@ -34,6 +34,7 @@ public interface RangeFacetResult extends FacetResult {
 
     /**
      *
+     * @return ranges
      */
     @NotNull
     @Valid

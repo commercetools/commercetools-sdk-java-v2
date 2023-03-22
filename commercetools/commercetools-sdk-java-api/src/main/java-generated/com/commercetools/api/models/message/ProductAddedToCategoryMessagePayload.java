@@ -36,6 +36,7 @@ public interface ProductAddedToCategoryMessagePayload extends MessagePayload {
 
     /**
      *  <p>Category the Product was added to.</p>
+     * @return category
      */
     @NotNull
     @Valid
@@ -44,6 +45,7 @@ public interface ProductAddedToCategoryMessagePayload extends MessagePayload {
 
     /**
      *  <p>Whether the update was only applied to the staged Product Projection.</p>
+     * @return staged
      */
     @NotNull
     @JsonProperty("staged")

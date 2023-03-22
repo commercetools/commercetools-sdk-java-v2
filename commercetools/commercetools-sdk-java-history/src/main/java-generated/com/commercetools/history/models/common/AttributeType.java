@@ -31,6 +31,7 @@ public interface AttributeType {
 
     /**
      *
+     * @return name
      */
     @NotNull
     @JsonProperty("name")

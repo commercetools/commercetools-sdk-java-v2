@@ -67,6 +67,8 @@ public class BusinessUnitStoreModeChangedMessageBuilder implements Builder<Busin
 
     /**
      *  <p>Unique identifier of the Message. Can be used to track which Messages have been processed.</p>
+     * @param id
+     * @return Builder
      */
 
     public BusinessUnitStoreModeChangedMessageBuilder id(final String id) {
@@ -76,6 +78,8 @@ public class BusinessUnitStoreModeChangedMessageBuilder implements Builder<Busin
 
     /**
      *  <p>Version of a resource. In case of Messages, this is always <code>1</code>.</p>
+     * @param version
+     * @return Builder
      */
 
     public BusinessUnitStoreModeChangedMessageBuilder version(final Long version) {
@@ -85,6 +89,8 @@ public class BusinessUnitStoreModeChangedMessageBuilder implements Builder<Busin
 
     /**
      *  <p>Date and time (UTC) the Message was generated.</p>
+     * @param createdAt
+     * @return Builder
      */
 
     public BusinessUnitStoreModeChangedMessageBuilder createdAt(final java.time.ZonedDateTime createdAt) {
@@ -94,6 +100,8 @@ public class BusinessUnitStoreModeChangedMessageBuilder implements Builder<Busin
 
     /**
      *  <p>Value of <code>createdAt</code>.</p>
+     * @param lastModifiedAt
+     * @return Builder
      */
 
     public BusinessUnitStoreModeChangedMessageBuilder lastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {
@@ -103,6 +111,7 @@ public class BusinessUnitStoreModeChangedMessageBuilder implements Builder<Busin
 
     /**
      *  <p>Value of <code>createdBy</code>.</p>
+     * @return Builder
      */
 
     public BusinessUnitStoreModeChangedMessageBuilder lastModifiedBy(
@@ -113,6 +122,8 @@ public class BusinessUnitStoreModeChangedMessageBuilder implements Builder<Busin
 
     /**
      *  <p>Value of <code>createdBy</code>.</p>
+     * @param lastModifiedBy
+     * @return Builder
      */
 
     public BusinessUnitStoreModeChangedMessageBuilder lastModifiedBy(
@@ -123,6 +134,7 @@ public class BusinessUnitStoreModeChangedMessageBuilder implements Builder<Busin
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @return Builder
      */
 
     public BusinessUnitStoreModeChangedMessageBuilder createdBy(
@@ -133,6 +145,8 @@ public class BusinessUnitStoreModeChangedMessageBuilder implements Builder<Busin
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param createdBy
+     * @return Builder
      */
 
     public BusinessUnitStoreModeChangedMessageBuilder createdBy(
@@ -143,6 +157,8 @@ public class BusinessUnitStoreModeChangedMessageBuilder implements Builder<Busin
 
     /**
      *  <p>Message number in relation to other Messages for a given resource. The <code>sequenceNumber</code> of the next Message for the resource is the successor of the <code>sequenceNumber</code> of the current Message. Meaning, the <code>sequenceNumber</code> of the next Message equals the <code>sequenceNumber</code> of the current Message + 1. <code>sequenceNumber</code> can be used to ensure that Messages are processed in the correct order for a particular resource.</p>
+     * @param sequenceNumber
+     * @return Builder
      */
 
     public BusinessUnitStoreModeChangedMessageBuilder sequenceNumber(final Long sequenceNumber) {
@@ -152,6 +168,8 @@ public class BusinessUnitStoreModeChangedMessageBuilder implements Builder<Busin
 
     /**
      *  <p>Reference to the resource on which the change or action was performed.</p>
+     * @param resource
+     * @return Builder
      */
 
     public BusinessUnitStoreModeChangedMessageBuilder resource(
@@ -162,6 +180,7 @@ public class BusinessUnitStoreModeChangedMessageBuilder implements Builder<Busin
 
     /**
      *  <p>Reference to the resource on which the change or action was performed.</p>
+     * @return Builder
      */
 
     public BusinessUnitStoreModeChangedMessageBuilder resource(
@@ -172,6 +191,8 @@ public class BusinessUnitStoreModeChangedMessageBuilder implements Builder<Busin
 
     /**
      *  <p>Version of the resource on which the change or action was performed.</p>
+     * @param resourceVersion
+     * @return Builder
      */
 
     public BusinessUnitStoreModeChangedMessageBuilder resourceVersion(final Long resourceVersion) {
@@ -181,6 +202,7 @@ public class BusinessUnitStoreModeChangedMessageBuilder implements Builder<Busin
 
     /**
      *  <p>User-provided identifiers of the resource, such as <code>key</code> or <code>externalId</code>. Only present if the resource has such identifiers.</p>
+     * @return Builder
      */
 
     public BusinessUnitStoreModeChangedMessageBuilder resourceUserProvidedIdentifiers(
@@ -193,6 +215,8 @@ public class BusinessUnitStoreModeChangedMessageBuilder implements Builder<Busin
 
     /**
      *  <p>User-provided identifiers of the resource, such as <code>key</code> or <code>externalId</code>. Only present if the resource has such identifiers.</p>
+     * @param resourceUserProvidedIdentifiers
+     * @return Builder
      */
 
     public BusinessUnitStoreModeChangedMessageBuilder resourceUserProvidedIdentifiers(
@@ -203,6 +227,8 @@ public class BusinessUnitStoreModeChangedMessageBuilder implements Builder<Busin
 
     /**
      *  <p>Stores of the Business Unit after the Set Store Mode update action.</p>
+     * @param stores
+     * @return Builder
      */
 
     public BusinessUnitStoreModeChangedMessageBuilder stores(
@@ -213,6 +239,8 @@ public class BusinessUnitStoreModeChangedMessageBuilder implements Builder<Busin
 
     /**
      *  <p>Stores of the Business Unit after the Set Store Mode update action.</p>
+     * @param stores
+     * @return Builder
      */
 
     public BusinessUnitStoreModeChangedMessageBuilder stores(
@@ -223,6 +251,8 @@ public class BusinessUnitStoreModeChangedMessageBuilder implements Builder<Busin
 
     /**
      *  <p>Stores of the Business Unit after the Set Store Mode update action.</p>
+     * @param stores
+     * @return Builder
      */
 
     public BusinessUnitStoreModeChangedMessageBuilder plusStores(
@@ -236,6 +266,7 @@ public class BusinessUnitStoreModeChangedMessageBuilder implements Builder<Busin
 
     /**
      *  <p>Stores of the Business Unit after the Set Store Mode update action.</p>
+     * @return Builder
      */
 
     public BusinessUnitStoreModeChangedMessageBuilder plusStores(
@@ -249,6 +280,7 @@ public class BusinessUnitStoreModeChangedMessageBuilder implements Builder<Busin
 
     /**
      *  <p>Stores of the Business Unit after the Set Store Mode update action.</p>
+     * @return Builder
      */
 
     public BusinessUnitStoreModeChangedMessageBuilder withStores(
@@ -260,6 +292,8 @@ public class BusinessUnitStoreModeChangedMessageBuilder implements Builder<Busin
 
     /**
      *  <p>BusinessUnitStoreMode of the Business Unit after the Set Store Mode update action.</p>
+     * @param storeMode
+     * @return Builder
      */
 
     public BusinessUnitStoreModeChangedMessageBuilder storeMode(
@@ -270,6 +304,8 @@ public class BusinessUnitStoreModeChangedMessageBuilder implements Builder<Busin
 
     /**
      *  <p>Stores of the Business Unit before the Set Store Mode update action.</p>
+     * @param oldStores
+     * @return Builder
      */
 
     public BusinessUnitStoreModeChangedMessageBuilder oldStores(
@@ -280,6 +316,8 @@ public class BusinessUnitStoreModeChangedMessageBuilder implements Builder<Busin
 
     /**
      *  <p>Stores of the Business Unit before the Set Store Mode update action.</p>
+     * @param oldStores
+     * @return Builder
      */
 
     public BusinessUnitStoreModeChangedMessageBuilder oldStores(
@@ -290,6 +328,8 @@ public class BusinessUnitStoreModeChangedMessageBuilder implements Builder<Busin
 
     /**
      *  <p>Stores of the Business Unit before the Set Store Mode update action.</p>
+     * @param oldStores
+     * @return Builder
      */
 
     public BusinessUnitStoreModeChangedMessageBuilder plusOldStores(
@@ -303,6 +343,7 @@ public class BusinessUnitStoreModeChangedMessageBuilder implements Builder<Busin
 
     /**
      *  <p>Stores of the Business Unit before the Set Store Mode update action.</p>
+     * @return Builder
      */
 
     public BusinessUnitStoreModeChangedMessageBuilder plusOldStores(
@@ -316,6 +357,7 @@ public class BusinessUnitStoreModeChangedMessageBuilder implements Builder<Busin
 
     /**
      *  <p>Stores of the Business Unit before the Set Store Mode update action.</p>
+     * @return Builder
      */
 
     public BusinessUnitStoreModeChangedMessageBuilder withOldStores(
@@ -327,6 +369,8 @@ public class BusinessUnitStoreModeChangedMessageBuilder implements Builder<Busin
 
     /**
      *  <p>BusinessUnitStoreMode of the Business Unit before the Set Store Mode update action.</p>
+     * @param oldStoreMode
+     * @return Builder
      */
 
     public BusinessUnitStoreModeChangedMessageBuilder oldStoreMode(

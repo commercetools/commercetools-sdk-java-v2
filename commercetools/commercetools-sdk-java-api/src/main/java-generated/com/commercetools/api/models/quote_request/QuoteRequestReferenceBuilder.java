@@ -31,6 +31,8 @@ public class QuoteRequestReferenceBuilder implements Builder<QuoteRequestReferen
 
     /**
      *  <p>Unique ID of the referenced resource.</p>
+     * @param id
+     * @return Builder
      */
 
     public QuoteRequestReferenceBuilder id(final String id) {
@@ -40,6 +42,7 @@ public class QuoteRequestReferenceBuilder implements Builder<QuoteRequestReferen
 
     /**
      *  <p>Contains the representation of the expanded QuoteRequest. Only present in responses to requests with Reference Expansion for QuoteRequest.</p>
+     * @return Builder
      */
 
     public QuoteRequestReferenceBuilder obj(
@@ -50,6 +53,8 @@ public class QuoteRequestReferenceBuilder implements Builder<QuoteRequestReferen
 
     /**
      *  <p>Contains the representation of the expanded QuoteRequest. Only present in responses to requests with Reference Expansion for QuoteRequest.</p>
+     * @param obj
+     * @return Builder
      */
 
     public QuoteRequestReferenceBuilder obj(

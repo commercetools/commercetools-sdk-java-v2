@@ -31,6 +31,7 @@ public interface ErrorByExtension {
 
     /**
      *  <p>Unique identifier of the Extension.</p>
+     * @return id
      */
     @NotNull
     @JsonProperty("id")
@@ -38,6 +39,7 @@ public interface ErrorByExtension {
 
     /**
      *  <p>User-defined unique identifier of the Extension.</p>
+     * @return key
      */
 
     @JsonProperty("key")

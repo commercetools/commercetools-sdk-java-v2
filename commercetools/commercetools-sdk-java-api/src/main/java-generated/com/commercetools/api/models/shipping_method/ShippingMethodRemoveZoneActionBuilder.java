@@ -26,6 +26,7 @@ public class ShippingMethodRemoveZoneActionBuilder implements Builder<ShippingMe
 
     /**
      *  <p>Value to remove from <code>zoneRates</code>.</p>
+     * @return Builder
      */
 
     public ShippingMethodRemoveZoneActionBuilder zone(
@@ -36,6 +37,8 @@ public class ShippingMethodRemoveZoneActionBuilder implements Builder<ShippingMe
 
     /**
      *  <p>Value to remove from <code>zoneRates</code>.</p>
+     * @param zone
+     * @return Builder
      */
 
     public ShippingMethodRemoveZoneActionBuilder zone(

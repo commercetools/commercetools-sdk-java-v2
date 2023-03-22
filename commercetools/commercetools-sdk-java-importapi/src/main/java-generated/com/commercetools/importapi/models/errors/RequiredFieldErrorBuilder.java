@@ -28,6 +28,8 @@ public class RequiredFieldErrorBuilder implements Builder<RequiredFieldError> {
 
     /**
      *
+     * @param message
+     * @return Builder
      */
 
     public RequiredFieldErrorBuilder message(final String message) {
@@ -37,6 +39,8 @@ public class RequiredFieldErrorBuilder implements Builder<RequiredFieldError> {
 
     /**
      *  <p>The name of the field.</p>
+     * @param field
+     * @return Builder
      */
 
     public RequiredFieldErrorBuilder field(final String field) {

@@ -34,6 +34,7 @@ public interface Associate {
 
     /**
      *  <p>Roles the Associate holds within the Business Unit.</p>
+     * @return roles
      */
     @NotNull
     @JsonProperty("roles")
@@ -41,6 +42,7 @@ public interface Associate {
 
     /**
      *  <p>The Customer that is part of the Business Unit.</p>
+     * @return customer
      */
     @NotNull
     @Valid

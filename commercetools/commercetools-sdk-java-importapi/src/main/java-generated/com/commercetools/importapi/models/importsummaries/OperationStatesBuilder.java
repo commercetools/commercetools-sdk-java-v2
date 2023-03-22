@@ -40,6 +40,8 @@ public class OperationStatesBuilder implements Builder<OperationStates> {
 
     /**
      *  <p>The number of resources in the <code>processing</code> state.</p>
+     * @param processing
+     * @return Builder
      */
 
     public OperationStatesBuilder processing(final Long processing) {
@@ -49,6 +51,8 @@ public class OperationStatesBuilder implements Builder<OperationStates> {
 
     /**
      *  <p>The number of resources in the <code>validationFailed</code> state.</p>
+     * @param validationFailed
+     * @return Builder
      */
 
     public OperationStatesBuilder validationFailed(final Long validationFailed) {
@@ -58,6 +62,8 @@ public class OperationStatesBuilder implements Builder<OperationStates> {
 
     /**
      *  <p>The number of resources in the <code>unresolved</code> state.</p>
+     * @param unresolved
+     * @return Builder
      */
 
     public OperationStatesBuilder unresolved(final Long unresolved) {
@@ -67,6 +73,8 @@ public class OperationStatesBuilder implements Builder<OperationStates> {
 
     /**
      *  <p>The number of resources in the <code>waitForMasterVariant</code> state.</p>
+     * @param waitForMasterVariant
+     * @return Builder
      */
 
     public OperationStatesBuilder waitForMasterVariant(final Long waitForMasterVariant) {
@@ -76,6 +84,8 @@ public class OperationStatesBuilder implements Builder<OperationStates> {
 
     /**
      *  <p>The number of resources in the <code>imported</code> state.</p>
+     * @param imported
+     * @return Builder
      */
 
     public OperationStatesBuilder imported(final Long imported) {
@@ -85,6 +95,8 @@ public class OperationStatesBuilder implements Builder<OperationStates> {
 
     /**
      *  <p>The number of resources in the <code>rejected</code> state.</p>
+     * @param rejected
+     * @return Builder
      */
 
     public OperationStatesBuilder rejected(final Long rejected) {

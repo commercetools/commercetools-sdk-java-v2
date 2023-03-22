@@ -28,6 +28,8 @@ public class AttributePlainEnumValueBuilder implements Builder<AttributePlainEnu
 
     /**
      *  <p>Key of the value used as a programmatic identifier, for example in facets &amp; filters.</p>
+     * @param key
+     * @return Builder
      */
 
     public AttributePlainEnumValueBuilder key(final String key) {
@@ -37,6 +39,8 @@ public class AttributePlainEnumValueBuilder implements Builder<AttributePlainEnu
 
     /**
      *  <p>Descriptive label of the value.</p>
+     * @param label
+     * @return Builder
      */
 
     public AttributePlainEnumValueBuilder label(final String label) {

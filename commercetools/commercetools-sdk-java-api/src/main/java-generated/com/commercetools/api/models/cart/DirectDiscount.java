@@ -35,6 +35,7 @@ public interface DirectDiscount {
 
     /**
      *  <p>Unique identifier of the Direct Discount.</p>
+     * @return id
      */
     @NotNull
     @JsonProperty("id")
@@ -42,6 +43,7 @@ public interface DirectDiscount {
 
     /**
      *  <p>Effect of the Discount on the Cart.</p>
+     * @return value
      */
     @NotNull
     @Valid
@@ -51,6 +53,7 @@ public interface DirectDiscount {
     /**
      *  <p>Part of the Cart that is discounted.</p>
      *  <p>Empty when the <code>value</code> is set to <code>giftLineItem</code>.</p>
+     * @return target
      */
     @Valid
     @JsonProperty("target")

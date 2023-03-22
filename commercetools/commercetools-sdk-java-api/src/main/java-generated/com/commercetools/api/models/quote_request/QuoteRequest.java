@@ -66,6 +66,7 @@ public interface QuoteRequest extends BaseResource, com.commercetools.api.models
 
     /**
      *  <p>Unique identifier of the QuoteRequest.</p>
+     * @return id
      */
     @NotNull
     @JsonProperty("id")
@@ -73,6 +74,7 @@ public interface QuoteRequest extends BaseResource, com.commercetools.api.models
 
     /**
      *  <p>Current version of the QuoteRequest.</p>
+     * @return version
      */
     @NotNull
     @JsonProperty("version")
@@ -80,6 +82,7 @@ public interface QuoteRequest extends BaseResource, com.commercetools.api.models
 
     /**
      *  <p>User-defined unique identifier of the QuoteRequest.</p>
+     * @return key
      */
 
     @JsonProperty("key")
@@ -87,6 +90,7 @@ public interface QuoteRequest extends BaseResource, com.commercetools.api.models
 
     /**
      *  <p>Date and time (UTC) the QuoteRequest was initially created.</p>
+     * @return createdAt
      */
     @NotNull
     @JsonProperty("createdAt")
@@ -94,6 +98,7 @@ public interface QuoteRequest extends BaseResource, com.commercetools.api.models
 
     /**
      *  <p>Date and time (UTC) the QuoteRequest was last updated.</p>
+     * @return lastModifiedAt
      */
     @NotNull
     @JsonProperty("lastModifiedAt")
@@ -101,6 +106,7 @@ public interface QuoteRequest extends BaseResource, com.commercetools.api.models
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @return lastModifiedBy
      */
     @Valid
     @JsonProperty("lastModifiedBy")
@@ -108,6 +114,7 @@ public interface QuoteRequest extends BaseResource, com.commercetools.api.models
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @return createdBy
      */
     @Valid
     @JsonProperty("createdBy")
@@ -115,6 +122,7 @@ public interface QuoteRequest extends BaseResource, com.commercetools.api.models
 
     /**
      *  <p>Indicates the current state of the Quote Request in the negotiation process.</p>
+     * @return quoteRequestState
      */
     @NotNull
     @JsonProperty("quoteRequestState")
@@ -122,6 +130,7 @@ public interface QuoteRequest extends BaseResource, com.commercetools.api.models
 
     /**
      *  <p>Message from the Buyer included in the Quote Request.</p>
+     * @return comment
      */
 
     @JsonProperty("comment")
@@ -129,6 +138,7 @@ public interface QuoteRequest extends BaseResource, com.commercetools.api.models
 
     /**
      *  <p>The Buyer who raised the request.</p>
+     * @return customer
      */
     @NotNull
     @Valid
@@ -137,6 +147,7 @@ public interface QuoteRequest extends BaseResource, com.commercetools.api.models
 
     /**
      *  <p>Set automatically when <code>customer</code> is set and the Customer is a member of a Customer Group. Used for Product Variant price selection.</p>
+     * @return customerGroup
      */
     @Valid
     @JsonProperty("customerGroup")
@@ -144,6 +155,7 @@ public interface QuoteRequest extends BaseResource, com.commercetools.api.models
 
     /**
      *  <p>The Store to which the Buyer belongs.</p>
+     * @return store
      */
     @Valid
     @JsonProperty("store")
@@ -151,6 +163,7 @@ public interface QuoteRequest extends BaseResource, com.commercetools.api.models
 
     /**
      *  <p>The Line Items for which a Quote is requested.</p>
+     * @return lineItems
      */
     @NotNull
     @Valid
@@ -159,6 +172,7 @@ public interface QuoteRequest extends BaseResource, com.commercetools.api.models
 
     /**
      *  <p>The Custom Line Items for which a Quote is requested.</p>
+     * @return customLineItems
      */
     @NotNull
     @Valid
@@ -167,6 +181,7 @@ public interface QuoteRequest extends BaseResource, com.commercetools.api.models
 
     /**
      *  <p>Sum of all <code>totalPrice</code> fields of the <code>lineItems</code> and <code>customLineItems</code>, as well as the <code>price</code> field of <code>shippingInfo</code> (if it exists). <code>totalPrice</code> may or may not include the taxes: it depends on the taxRate.includedInPrice property of each price.</p>
+     * @return totalPrice
      */
     @NotNull
     @Valid
@@ -175,6 +190,7 @@ public interface QuoteRequest extends BaseResource, com.commercetools.api.models
 
     /**
      *  <p>Not set until the shipping address is set. Will be set automatically in the <code>Platform</code> TaxMode. For the <code>External</code> tax mode it will be set as soon as the external tax rates for all line items, custom line items, and shipping in the cart are set.</p>
+     * @return taxedPrice
      */
     @Valid
     @JsonProperty("taxedPrice")
@@ -182,6 +198,7 @@ public interface QuoteRequest extends BaseResource, com.commercetools.api.models
 
     /**
      *  <p>Used to determine the eligible ShippingMethods and rates as well as the tax rate of the Line Items.</p>
+     * @return shippingAddress
      */
     @Valid
     @JsonProperty("shippingAddress")
@@ -189,6 +206,7 @@ public interface QuoteRequest extends BaseResource, com.commercetools.api.models
 
     /**
      *  <p>Address used for invoicing.</p>
+     * @return billingAddress
      */
     @Valid
     @JsonProperty("billingAddress")
@@ -196,6 +214,7 @@ public interface QuoteRequest extends BaseResource, com.commercetools.api.models
 
     /**
      *  <p>Inventory mode of the Cart referenced in the QuoteRequestDraft.</p>
+     * @return inventoryMode
      */
 
     @JsonProperty("inventoryMode")
@@ -203,6 +222,7 @@ public interface QuoteRequest extends BaseResource, com.commercetools.api.models
 
     /**
      *  <p>Tax mode of the Cart referenced in the QuoteRequestDraft.</p>
+     * @return taxMode
      */
     @NotNull
     @JsonProperty("taxMode")
@@ -210,6 +230,7 @@ public interface QuoteRequest extends BaseResource, com.commercetools.api.models
 
     /**
      *  <p>When calculating taxes for <code>taxedPrice</code>, the selected mode is used for rounding.</p>
+     * @return taxRoundingMode
      */
     @NotNull
     @JsonProperty("taxRoundingMode")
@@ -217,6 +238,7 @@ public interface QuoteRequest extends BaseResource, com.commercetools.api.models
 
     /**
      *  <p>When calculating taxes for <code>taxedPrice</code>, the selected mode is used for calculating the price with <code>LineItemLevel</code> (horizontally) or <code>UnitPriceLevel</code> (vertically) calculation mode.</p>
+     * @return taxCalculationMode
      */
     @NotNull
     @JsonProperty("taxCalculationMode")
@@ -224,6 +246,7 @@ public interface QuoteRequest extends BaseResource, com.commercetools.api.models
 
     /**
      *  <p>Used for Product Variant price selection.</p>
+     * @return country
      */
 
     @JsonProperty("country")
@@ -231,6 +254,7 @@ public interface QuoteRequest extends BaseResource, com.commercetools.api.models
 
     /**
      *  <p>Set automatically once the ShippingMethod is set.</p>
+     * @return shippingInfo
      */
     @Valid
     @JsonProperty("shippingInfo")
@@ -238,6 +262,7 @@ public interface QuoteRequest extends BaseResource, com.commercetools.api.models
 
     /**
      *  <p>Log of payment transactions related to the Quote.</p>
+     * @return paymentInfo
      */
     @Valid
     @JsonProperty("paymentInfo")
@@ -245,6 +270,7 @@ public interface QuoteRequest extends BaseResource, com.commercetools.api.models
 
     /**
      *  <p>Used to select a ShippingRatePriceTier.</p>
+     * @return shippingRateInput
      */
     @Valid
     @JsonProperty("shippingRateInput")
@@ -252,6 +278,7 @@ public interface QuoteRequest extends BaseResource, com.commercetools.api.models
 
     /**
      *  <p>Contains addresses for carts with multiple shipping addresses. Line items reference these addresses under their <code>shippingDetails</code>. The addresses captured here are not used to determine eligible shipping methods or the applicable tax rate. Only the cart's <code>shippingAddress</code> is used for this.</p>
+     * @return itemShippingAddresses
      */
     @Valid
     @JsonProperty("itemShippingAddresses")
@@ -259,6 +286,7 @@ public interface QuoteRequest extends BaseResource, com.commercetools.api.models
 
     /**
      *  <p>Discounts that are only valid for the Quote and cannot be associated to any other Cart or Order.</p>
+     * @return directDiscounts
      */
     @Valid
     @JsonProperty("directDiscounts")
@@ -266,6 +294,7 @@ public interface QuoteRequest extends BaseResource, com.commercetools.api.models
 
     /**
      *  <p>Custom Fields of the Quote Request.</p>
+     * @return custom
      */
     @Valid
     @JsonProperty("custom")
@@ -273,6 +302,7 @@ public interface QuoteRequest extends BaseResource, com.commercetools.api.models
 
     /**
      *  <p>State of the Quote Request. This reference can point to a State in a custom workflow.</p>
+     * @return state
      */
     @Valid
     @JsonProperty("state")
@@ -280,6 +310,7 @@ public interface QuoteRequest extends BaseResource, com.commercetools.api.models
 
     /**
      *  <p>Identifier for a purchase order, usually in a B2B context. The Purchase Order Number is typically entered by the Buyer.</p>
+     * @return purchaseOrderNumber
      */
 
     @JsonProperty("purchaseOrderNumber")
@@ -287,6 +318,7 @@ public interface QuoteRequest extends BaseResource, com.commercetools.api.models
 
     /**
      *  <p>The BusinessUnit for the Quote Request.</p>
+     * @return businessUnit
      */
     @Valid
     @JsonProperty("businessUnit")

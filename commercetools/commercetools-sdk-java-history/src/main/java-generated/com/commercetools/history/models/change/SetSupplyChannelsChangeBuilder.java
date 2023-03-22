@@ -32,6 +32,8 @@ public class SetSupplyChannelsChangeBuilder implements Builder<SetSupplyChannels
 
     /**
      *  <p>Shape of the action for <code>setSupplyChannels</code></p>
+     * @param change
+     * @return Builder
      */
 
     public SetSupplyChannelsChangeBuilder change(final String change) {
@@ -41,6 +43,8 @@ public class SetSupplyChannelsChangeBuilder implements Builder<SetSupplyChannels
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public SetSupplyChannelsChangeBuilder previousValue(
@@ -51,6 +55,8 @@ public class SetSupplyChannelsChangeBuilder implements Builder<SetSupplyChannels
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public SetSupplyChannelsChangeBuilder previousValue(
@@ -61,6 +67,8 @@ public class SetSupplyChannelsChangeBuilder implements Builder<SetSupplyChannels
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public SetSupplyChannelsChangeBuilder plusPreviousValue(
@@ -74,6 +82,7 @@ public class SetSupplyChannelsChangeBuilder implements Builder<SetSupplyChannels
 
     /**
      *
+     * @return Builder
      */
 
     public SetSupplyChannelsChangeBuilder plusPreviousValue(
@@ -87,6 +96,7 @@ public class SetSupplyChannelsChangeBuilder implements Builder<SetSupplyChannels
 
     /**
      *
+     * @return Builder
      */
 
     public SetSupplyChannelsChangeBuilder withPreviousValue(
@@ -98,6 +108,8 @@ public class SetSupplyChannelsChangeBuilder implements Builder<SetSupplyChannels
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public SetSupplyChannelsChangeBuilder nextValue(
@@ -108,6 +120,8 @@ public class SetSupplyChannelsChangeBuilder implements Builder<SetSupplyChannels
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public SetSupplyChannelsChangeBuilder nextValue(
@@ -118,6 +132,8 @@ public class SetSupplyChannelsChangeBuilder implements Builder<SetSupplyChannels
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public SetSupplyChannelsChangeBuilder plusNextValue(
@@ -131,6 +147,7 @@ public class SetSupplyChannelsChangeBuilder implements Builder<SetSupplyChannels
 
     /**
      *
+     * @return Builder
      */
 
     public SetSupplyChannelsChangeBuilder plusNextValue(
@@ -144,6 +161,7 @@ public class SetSupplyChannelsChangeBuilder implements Builder<SetSupplyChannels
 
     /**
      *
+     * @return Builder
      */
 
     public SetSupplyChannelsChangeBuilder withNextValue(

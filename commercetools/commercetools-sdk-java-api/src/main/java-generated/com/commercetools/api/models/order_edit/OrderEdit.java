@@ -48,6 +48,7 @@ public interface OrderEdit extends BaseResource, OrderEditMixin, com.commercetoo
 
     /**
      *  <p>Unique identifier of the OrderEdit.</p>
+     * @return id
      */
     @NotNull
     @JsonProperty("id")
@@ -55,6 +56,7 @@ public interface OrderEdit extends BaseResource, OrderEditMixin, com.commercetoo
 
     /**
      *  <p>The current version of the OrderEdit.</p>
+     * @return version
      */
     @NotNull
     @JsonProperty("version")
@@ -62,6 +64,7 @@ public interface OrderEdit extends BaseResource, OrderEditMixin, com.commercetoo
 
     /**
      *
+     * @return createdAt
      */
     @NotNull
     @JsonProperty("createdAt")
@@ -69,6 +72,7 @@ public interface OrderEdit extends BaseResource, OrderEditMixin, com.commercetoo
 
     /**
      *
+     * @return lastModifiedAt
      */
     @NotNull
     @JsonProperty("lastModifiedAt")
@@ -76,6 +80,7 @@ public interface OrderEdit extends BaseResource, OrderEditMixin, com.commercetoo
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @return lastModifiedBy
      */
     @Valid
     @JsonProperty("lastModifiedBy")
@@ -83,6 +88,7 @@ public interface OrderEdit extends BaseResource, OrderEditMixin, com.commercetoo
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @return createdBy
      */
     @Valid
     @JsonProperty("createdBy")
@@ -90,6 +96,7 @@ public interface OrderEdit extends BaseResource, OrderEditMixin, com.commercetoo
 
     /**
      *  <p>User-defined unique identifier of the OrderEdit.</p>
+     * @return key
      */
 
     @JsonProperty("key")
@@ -97,6 +104,7 @@ public interface OrderEdit extends BaseResource, OrderEditMixin, com.commercetoo
 
     /**
      *  <p>The order to be updated with this edit.</p>
+     * @return resource
      */
     @NotNull
     @Valid
@@ -105,6 +113,7 @@ public interface OrderEdit extends BaseResource, OrderEditMixin, com.commercetoo
 
     /**
      *  <p>The actions to apply to the Order. Cannot be updated after the edit has been applied.</p>
+     * @return stagedActions
      */
     @NotNull
     @Valid
@@ -113,6 +122,7 @@ public interface OrderEdit extends BaseResource, OrderEditMixin, com.commercetoo
 
     /**
      *
+     * @return custom
      */
     @Valid
     @JsonProperty("custom")
@@ -120,6 +130,7 @@ public interface OrderEdit extends BaseResource, OrderEditMixin, com.commercetoo
 
     /**
      *  <p>Contains a preview of the changes in case of unapplied edit. For applied edits, it contains the summary of the changes.</p>
+     * @return result
      */
     @NotNull
     @Valid
@@ -128,6 +139,7 @@ public interface OrderEdit extends BaseResource, OrderEditMixin, com.commercetoo
 
     /**
      *  <p>This field can be used to add textual information regarding the edit.</p>
+     * @return comment
      */
 
     @JsonProperty("comment")

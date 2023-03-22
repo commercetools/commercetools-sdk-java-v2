@@ -35,6 +35,7 @@ public interface BusinessUnitAddStoreAction extends BusinessUnitUpdateAction {
 
     /**
      *  <p>Store to add.</p>
+     * @return store
      */
     @NotNull
     @Valid

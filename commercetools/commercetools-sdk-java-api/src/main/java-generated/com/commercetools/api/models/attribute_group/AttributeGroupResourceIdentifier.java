@@ -32,6 +32,7 @@ public interface AttributeGroupResourceIdentifier
 
     /**
      *  <p>Platform-generated unique identifier of the referenced AttributeGroup. Either <code>id</code> or <code>key</code> is required.</p>
+     * @return id
      */
 
     @JsonProperty("id")
@@ -39,6 +40,7 @@ public interface AttributeGroupResourceIdentifier
 
     /**
      *  <p>User-generated unique identifier of the referenced AttributeGroup. Either <code>id</code> or <code>key</code> is required.</p>
+     * @return key
      */
 
     @JsonProperty("key")

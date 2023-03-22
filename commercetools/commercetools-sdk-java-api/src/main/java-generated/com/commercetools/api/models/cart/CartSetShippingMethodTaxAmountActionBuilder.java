@@ -28,6 +28,7 @@ public class CartSetShippingMethodTaxAmountActionBuilder implements Builder<Cart
 
     /**
      *  <p>Value to set. If empty, any existing value is removed.</p>
+     * @return Builder
      */
 
     public CartSetShippingMethodTaxAmountActionBuilder externalTaxAmount(
@@ -39,6 +40,8 @@ public class CartSetShippingMethodTaxAmountActionBuilder implements Builder<Cart
 
     /**
      *  <p>Value to set. If empty, any existing value is removed.</p>
+     * @param externalTaxAmount
+     * @return Builder
      */
 
     public CartSetShippingMethodTaxAmountActionBuilder externalTaxAmount(

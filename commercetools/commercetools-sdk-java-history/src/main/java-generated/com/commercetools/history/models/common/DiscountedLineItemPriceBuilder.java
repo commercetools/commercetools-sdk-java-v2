@@ -29,6 +29,7 @@ public class DiscountedLineItemPriceBuilder implements Builder<DiscountedLineIte
 
     /**
      *
+     * @return Builder
      */
 
     public DiscountedLineItemPriceBuilder value(
@@ -39,6 +40,8 @@ public class DiscountedLineItemPriceBuilder implements Builder<DiscountedLineIte
 
     /**
      *
+     * @param value
+     * @return Builder
      */
 
     public DiscountedLineItemPriceBuilder value(final com.commercetools.history.models.common.Money value) {
@@ -48,6 +51,8 @@ public class DiscountedLineItemPriceBuilder implements Builder<DiscountedLineIte
 
     /**
      *
+     * @param includedDiscounts
+     * @return Builder
      */
 
     public DiscountedLineItemPriceBuilder includedDiscounts(
@@ -58,6 +63,8 @@ public class DiscountedLineItemPriceBuilder implements Builder<DiscountedLineIte
 
     /**
      *
+     * @param includedDiscounts
+     * @return Builder
      */
 
     public DiscountedLineItemPriceBuilder includedDiscounts(
@@ -68,6 +75,8 @@ public class DiscountedLineItemPriceBuilder implements Builder<DiscountedLineIte
 
     /**
      *
+     * @param includedDiscounts
+     * @return Builder
      */
 
     public DiscountedLineItemPriceBuilder plusIncludedDiscounts(
@@ -81,6 +90,7 @@ public class DiscountedLineItemPriceBuilder implements Builder<DiscountedLineIte
 
     /**
      *
+     * @return Builder
      */
 
     public DiscountedLineItemPriceBuilder plusIncludedDiscounts(
@@ -95,6 +105,7 @@ public class DiscountedLineItemPriceBuilder implements Builder<DiscountedLineIte
 
     /**
      *
+     * @return Builder
      */
 
     public DiscountedLineItemPriceBuilder withIncludedDiscounts(

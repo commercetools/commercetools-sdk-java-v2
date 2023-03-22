@@ -33,6 +33,7 @@ public interface ResourceSizeLimitExceededError extends ErrorObject {
 
     /**
      *
+     * @return code
      */
     @NotNull
     @JsonProperty("code")
@@ -40,6 +41,7 @@ public interface ResourceSizeLimitExceededError extends ErrorObject {
 
     /**
      *  <p><code>"The resource size exceeds the maximal allowed size of 16 MB."</code></p>
+     * @return message
      */
     @NotNull
     @JsonProperty("message")

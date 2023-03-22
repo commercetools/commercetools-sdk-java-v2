@@ -46,6 +46,8 @@ public class ShippingDraftBuilder implements Builder<ShippingDraft> {
 
     /**
      *  <p>User-defined unique identifier for the Shipping in a Cart with <code>Multiple</code> ShippingMode.</p>
+     * @param key
+     * @return Builder
      */
 
     public ShippingDraftBuilder key(final String key) {
@@ -55,6 +57,7 @@ public class ShippingDraftBuilder implements Builder<ShippingDraft> {
 
     /**
      *  <p>Shipping Methods added to the Cart with <code>Multiple</code> ShippingMode.</p>
+     * @return Builder
      */
 
     public ShippingDraftBuilder shippingMethod(
@@ -67,6 +70,8 @@ public class ShippingDraftBuilder implements Builder<ShippingDraft> {
 
     /**
      *  <p>Shipping Methods added to the Cart with <code>Multiple</code> ShippingMode.</p>
+     * @param shippingMethod
+     * @return Builder
      */
 
     public ShippingDraftBuilder shippingMethod(
@@ -77,6 +82,7 @@ public class ShippingDraftBuilder implements Builder<ShippingDraft> {
 
     /**
      *  <p>Determines the shipping rate and Tax Rate of the associated Line Items.</p>
+     * @return Builder
      */
 
     public ShippingDraftBuilder shippingAddress(
@@ -87,6 +93,8 @@ public class ShippingDraftBuilder implements Builder<ShippingDraft> {
 
     /**
      *  <p>Determines the shipping rate and Tax Rate of the associated Line Items.</p>
+     * @param shippingAddress
+     * @return Builder
      */
 
     public ShippingDraftBuilder shippingAddress(final com.commercetools.api.models.common.BaseAddress shippingAddress) {
@@ -101,6 +109,8 @@ public class ShippingDraftBuilder implements Builder<ShippingDraft> {
      *   <li>If <code>CartScore</code>, it must be ScoreShippingRateInputDraft.</li>
      *   <li>If <code>CartValue</code>, it cannot be set.</li>
      *  </ul>
+     * @param shippingRateInput
+     * @return Builder
      */
 
     public ShippingDraftBuilder shippingRateInput(
@@ -116,6 +126,7 @@ public class ShippingDraftBuilder implements Builder<ShippingDraft> {
      *   <li>If <code>CartScore</code>, it must be ScoreShippingRateInputDraft.</li>
      *   <li>If <code>CartValue</code>, it cannot be set.</li>
      *  </ul>
+     * @return Builder
      */
 
     public ShippingDraftBuilder shippingRateInput(
@@ -127,6 +138,7 @@ public class ShippingDraftBuilder implements Builder<ShippingDraft> {
 
     /**
      *  <p>Tax Rate used for taxing a shipping expense if the Cart has the <code>External</code> TaxMode.</p>
+     * @return Builder
      */
 
     public ShippingDraftBuilder externalTaxRate(
@@ -138,6 +150,8 @@ public class ShippingDraftBuilder implements Builder<ShippingDraft> {
 
     /**
      *  <p>Tax Rate used for taxing a shipping expense if the Cart has the <code>External</code> TaxMode.</p>
+     * @param externalTaxRate
+     * @return Builder
      */
 
     public ShippingDraftBuilder externalTaxRate(
@@ -148,6 +162,8 @@ public class ShippingDraftBuilder implements Builder<ShippingDraft> {
 
     /**
      *  <p>Deliveries to be shipped with the Shipping Method.</p>
+     * @param deliveries
+     * @return Builder
      */
 
     public ShippingDraftBuilder deliveries(
@@ -158,6 +174,8 @@ public class ShippingDraftBuilder implements Builder<ShippingDraft> {
 
     /**
      *  <p>Deliveries to be shipped with the Shipping Method.</p>
+     * @param deliveries
+     * @return Builder
      */
 
     public ShippingDraftBuilder deliveries(
@@ -168,6 +186,8 @@ public class ShippingDraftBuilder implements Builder<ShippingDraft> {
 
     /**
      *  <p>Deliveries to be shipped with the Shipping Method.</p>
+     * @param deliveries
+     * @return Builder
      */
 
     public ShippingDraftBuilder plusDeliveries(
@@ -181,6 +201,7 @@ public class ShippingDraftBuilder implements Builder<ShippingDraft> {
 
     /**
      *  <p>Deliveries to be shipped with the Shipping Method.</p>
+     * @return Builder
      */
 
     public ShippingDraftBuilder plusDeliveries(
@@ -194,6 +215,7 @@ public class ShippingDraftBuilder implements Builder<ShippingDraft> {
 
     /**
      *  <p>Deliveries to be shipped with the Shipping Method.</p>
+     * @return Builder
      */
 
     public ShippingDraftBuilder withDeliveries(
@@ -205,6 +227,7 @@ public class ShippingDraftBuilder implements Builder<ShippingDraft> {
 
     /**
      *  <p>Custom Fields for Shipping.</p>
+     * @return Builder
      */
 
     public ShippingDraftBuilder custom(
@@ -215,6 +238,8 @@ public class ShippingDraftBuilder implements Builder<ShippingDraft> {
 
     /**
      *  <p>Custom Fields for Shipping.</p>
+     * @param custom
+     * @return Builder
      */
 
     public ShippingDraftBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFieldsDraft custom) {

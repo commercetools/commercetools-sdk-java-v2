@@ -30,6 +30,8 @@ public class ProductSelectionResourceIdentifierBuilder implements Builder<Produc
 
     /**
      *  <p>Unique identifier of the referenced ProductSelection. Either <code>id</code> or <code>key</code> is required.</p>
+     * @param id
+     * @return Builder
      */
 
     public ProductSelectionResourceIdentifierBuilder id(@Nullable final String id) {
@@ -39,6 +41,8 @@ public class ProductSelectionResourceIdentifierBuilder implements Builder<Produc
 
     /**
      *  <p>User-defined unique identifier of the referenced ProductSelection. Either <code>id</code> or <code>key</code> is required.</p>
+     * @param key
+     * @return Builder
      */
 
     public ProductSelectionResourceIdentifierBuilder key(@Nullable final String key) {

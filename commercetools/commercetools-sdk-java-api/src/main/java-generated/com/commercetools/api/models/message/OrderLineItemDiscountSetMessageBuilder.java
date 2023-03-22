@@ -70,6 +70,8 @@ public class OrderLineItemDiscountSetMessageBuilder implements Builder<OrderLine
 
     /**
      *  <p>Unique identifier of the Message. Can be used to track which Messages have been processed.</p>
+     * @param id
+     * @return Builder
      */
 
     public OrderLineItemDiscountSetMessageBuilder id(final String id) {
@@ -79,6 +81,8 @@ public class OrderLineItemDiscountSetMessageBuilder implements Builder<OrderLine
 
     /**
      *  <p>Version of a resource. In case of Messages, this is always <code>1</code>.</p>
+     * @param version
+     * @return Builder
      */
 
     public OrderLineItemDiscountSetMessageBuilder version(final Long version) {
@@ -88,6 +92,8 @@ public class OrderLineItemDiscountSetMessageBuilder implements Builder<OrderLine
 
     /**
      *  <p>Date and time (UTC) the Message was generated.</p>
+     * @param createdAt
+     * @return Builder
      */
 
     public OrderLineItemDiscountSetMessageBuilder createdAt(final java.time.ZonedDateTime createdAt) {
@@ -97,6 +103,8 @@ public class OrderLineItemDiscountSetMessageBuilder implements Builder<OrderLine
 
     /**
      *  <p>Value of <code>createdAt</code>.</p>
+     * @param lastModifiedAt
+     * @return Builder
      */
 
     public OrderLineItemDiscountSetMessageBuilder lastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {
@@ -106,6 +114,7 @@ public class OrderLineItemDiscountSetMessageBuilder implements Builder<OrderLine
 
     /**
      *  <p>Value of <code>createdBy</code>.</p>
+     * @return Builder
      */
 
     public OrderLineItemDiscountSetMessageBuilder lastModifiedBy(
@@ -116,6 +125,8 @@ public class OrderLineItemDiscountSetMessageBuilder implements Builder<OrderLine
 
     /**
      *  <p>Value of <code>createdBy</code>.</p>
+     * @param lastModifiedBy
+     * @return Builder
      */
 
     public OrderLineItemDiscountSetMessageBuilder lastModifiedBy(
@@ -126,6 +137,7 @@ public class OrderLineItemDiscountSetMessageBuilder implements Builder<OrderLine
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @return Builder
      */
 
     public OrderLineItemDiscountSetMessageBuilder createdBy(
@@ -136,6 +148,8 @@ public class OrderLineItemDiscountSetMessageBuilder implements Builder<OrderLine
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param createdBy
+     * @return Builder
      */
 
     public OrderLineItemDiscountSetMessageBuilder createdBy(
@@ -146,6 +160,8 @@ public class OrderLineItemDiscountSetMessageBuilder implements Builder<OrderLine
 
     /**
      *  <p>Message number in relation to other Messages for a given resource. The <code>sequenceNumber</code> of the next Message for the resource is the successor of the <code>sequenceNumber</code> of the current Message. Meaning, the <code>sequenceNumber</code> of the next Message equals the <code>sequenceNumber</code> of the current Message + 1. <code>sequenceNumber</code> can be used to ensure that Messages are processed in the correct order for a particular resource.</p>
+     * @param sequenceNumber
+     * @return Builder
      */
 
     public OrderLineItemDiscountSetMessageBuilder sequenceNumber(final Long sequenceNumber) {
@@ -155,6 +171,8 @@ public class OrderLineItemDiscountSetMessageBuilder implements Builder<OrderLine
 
     /**
      *  <p>Reference to the resource on which the change or action was performed.</p>
+     * @param resource
+     * @return Builder
      */
 
     public OrderLineItemDiscountSetMessageBuilder resource(
@@ -165,6 +183,7 @@ public class OrderLineItemDiscountSetMessageBuilder implements Builder<OrderLine
 
     /**
      *  <p>Reference to the resource on which the change or action was performed.</p>
+     * @return Builder
      */
 
     public OrderLineItemDiscountSetMessageBuilder resource(
@@ -175,6 +194,8 @@ public class OrderLineItemDiscountSetMessageBuilder implements Builder<OrderLine
 
     /**
      *  <p>Version of the resource on which the change or action was performed.</p>
+     * @param resourceVersion
+     * @return Builder
      */
 
     public OrderLineItemDiscountSetMessageBuilder resourceVersion(final Long resourceVersion) {
@@ -184,6 +205,7 @@ public class OrderLineItemDiscountSetMessageBuilder implements Builder<OrderLine
 
     /**
      *  <p>User-provided identifiers of the resource, such as <code>key</code> or <code>externalId</code>. Only present if the resource has such identifiers.</p>
+     * @return Builder
      */
 
     public OrderLineItemDiscountSetMessageBuilder resourceUserProvidedIdentifiers(
@@ -196,6 +218,8 @@ public class OrderLineItemDiscountSetMessageBuilder implements Builder<OrderLine
 
     /**
      *  <p>User-provided identifiers of the resource, such as <code>key</code> or <code>externalId</code>. Only present if the resource has such identifiers.</p>
+     * @param resourceUserProvidedIdentifiers
+     * @return Builder
      */
 
     public OrderLineItemDiscountSetMessageBuilder resourceUserProvidedIdentifiers(
@@ -206,6 +230,8 @@ public class OrderLineItemDiscountSetMessageBuilder implements Builder<OrderLine
 
     /**
      *  <p>Unique identifier for the Line Item.</p>
+     * @param lineItemId
+     * @return Builder
      */
 
     public OrderLineItemDiscountSetMessageBuilder lineItemId(final String lineItemId) {
@@ -215,6 +241,8 @@ public class OrderLineItemDiscountSetMessageBuilder implements Builder<OrderLine
 
     /**
      *  <p>Array of DiscountedLineItemPriceForQuantity after the Discount recalculation.</p>
+     * @param discountedPricePerQuantity
+     * @return Builder
      */
 
     public OrderLineItemDiscountSetMessageBuilder discountedPricePerQuantity(
@@ -225,6 +253,8 @@ public class OrderLineItemDiscountSetMessageBuilder implements Builder<OrderLine
 
     /**
      *  <p>Array of DiscountedLineItemPriceForQuantity after the Discount recalculation.</p>
+     * @param discountedPricePerQuantity
+     * @return Builder
      */
 
     public OrderLineItemDiscountSetMessageBuilder discountedPricePerQuantity(
@@ -235,6 +265,8 @@ public class OrderLineItemDiscountSetMessageBuilder implements Builder<OrderLine
 
     /**
      *  <p>Array of DiscountedLineItemPriceForQuantity after the Discount recalculation.</p>
+     * @param discountedPricePerQuantity
+     * @return Builder
      */
 
     public OrderLineItemDiscountSetMessageBuilder plusDiscountedPricePerQuantity(
@@ -248,6 +280,7 @@ public class OrderLineItemDiscountSetMessageBuilder implements Builder<OrderLine
 
     /**
      *  <p>Array of DiscountedLineItemPriceForQuantity after the Discount recalculation.</p>
+     * @return Builder
      */
 
     public OrderLineItemDiscountSetMessageBuilder plusDiscountedPricePerQuantity(
@@ -262,6 +295,7 @@ public class OrderLineItemDiscountSetMessageBuilder implements Builder<OrderLine
 
     /**
      *  <p>Array of DiscountedLineItemPriceForQuantity after the Discount recalculation.</p>
+     * @return Builder
      */
 
     public OrderLineItemDiscountSetMessageBuilder withDiscountedPricePerQuantity(
@@ -274,6 +308,7 @@ public class OrderLineItemDiscountSetMessageBuilder implements Builder<OrderLine
 
     /**
      *  <p>Total Price of the Line Item after the Discount recalculation.</p>
+     * @return Builder
      */
 
     public OrderLineItemDiscountSetMessageBuilder totalPrice(
@@ -284,6 +319,8 @@ public class OrderLineItemDiscountSetMessageBuilder implements Builder<OrderLine
 
     /**
      *  <p>Total Price of the Line Item after the Discount recalculation.</p>
+     * @param totalPrice
+     * @return Builder
      */
 
     public OrderLineItemDiscountSetMessageBuilder totalPrice(
@@ -294,6 +331,7 @@ public class OrderLineItemDiscountSetMessageBuilder implements Builder<OrderLine
 
     /**
      *  <p>TaxedItemPrice of the Line Item after the Discount recalculation.</p>
+     * @return Builder
      */
 
     public OrderLineItemDiscountSetMessageBuilder taxedPrice(
@@ -304,6 +342,8 @@ public class OrderLineItemDiscountSetMessageBuilder implements Builder<OrderLine
 
     /**
      *  <p>TaxedItemPrice of the Line Item after the Discount recalculation.</p>
+     * @param taxedPrice
+     * @return Builder
      */
 
     public OrderLineItemDiscountSetMessageBuilder taxedPrice(
@@ -314,6 +354,8 @@ public class OrderLineItemDiscountSetMessageBuilder implements Builder<OrderLine
 
     /**
      *  <p>Taxed price of the Shipping Methods in a Cart with <code>Multi</code> ShippingMode..</p>
+     * @param taxedPricePortions
+     * @return Builder
      */
 
     public OrderLineItemDiscountSetMessageBuilder taxedPricePortions(
@@ -324,6 +366,8 @@ public class OrderLineItemDiscountSetMessageBuilder implements Builder<OrderLine
 
     /**
      *  <p>Taxed price of the Shipping Methods in a Cart with <code>Multi</code> ShippingMode..</p>
+     * @param taxedPricePortions
+     * @return Builder
      */
 
     public OrderLineItemDiscountSetMessageBuilder taxedPricePortions(
@@ -334,6 +378,8 @@ public class OrderLineItemDiscountSetMessageBuilder implements Builder<OrderLine
 
     /**
      *  <p>Taxed price of the Shipping Methods in a Cart with <code>Multi</code> ShippingMode..</p>
+     * @param taxedPricePortions
+     * @return Builder
      */
 
     public OrderLineItemDiscountSetMessageBuilder plusTaxedPricePortions(
@@ -347,6 +393,7 @@ public class OrderLineItemDiscountSetMessageBuilder implements Builder<OrderLine
 
     /**
      *  <p>Taxed price of the Shipping Methods in a Cart with <code>Multi</code> ShippingMode..</p>
+     * @return Builder
      */
 
     public OrderLineItemDiscountSetMessageBuilder plusTaxedPricePortions(
@@ -361,6 +408,7 @@ public class OrderLineItemDiscountSetMessageBuilder implements Builder<OrderLine
 
     /**
      *  <p>Taxed price of the Shipping Methods in a Cart with <code>Multi</code> ShippingMode..</p>
+     * @return Builder
      */
 
     public OrderLineItemDiscountSetMessageBuilder withTaxedPricePortions(

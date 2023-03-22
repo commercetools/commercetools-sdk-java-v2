@@ -37,6 +37,7 @@ public interface EditPreviewFailedError extends ErrorObject {
 
     /**
      *
+     * @return code
      */
     @NotNull
     @JsonProperty("code")
@@ -44,6 +45,7 @@ public interface EditPreviewFailedError extends ErrorObject {
 
     /**
      *  <p><code>"Error while applying staged actions. ShippingMethods could not be determined."</code></p>
+     * @return message
      */
     @NotNull
     @JsonProperty("message")
@@ -51,6 +53,7 @@ public interface EditPreviewFailedError extends ErrorObject {
 
     /**
      *  <p>State of the OrderEdit where the <code>stagedActions</code> cannot be applied to the Order.</p>
+     * @return result
      */
     @NotNull
     @Valid

@@ -40,6 +40,7 @@ public interface CustomLineItemStateTransitionMessagePayload extends OrderMessag
 
     /**
      *  <p>Unique identifier of the Custom Line Item.</p>
+     * @return customLineItemId
      */
     @NotNull
     @JsonProperty("customLineItemId")
@@ -47,6 +48,7 @@ public interface CustomLineItemStateTransitionMessagePayload extends OrderMessag
 
     /**
      *  <p>Date and time (UTC) when the transition of the Custom Line Item State was performed.</p>
+     * @return transitionDate
      */
     @NotNull
     @JsonProperty("transitionDate")
@@ -54,6 +56,7 @@ public interface CustomLineItemStateTransitionMessagePayload extends OrderMessag
 
     /**
      *  <p>Number of Custom Line Items for which the State was transitioned.</p>
+     * @return quantity
      */
     @NotNull
     @JsonProperty("quantity")
@@ -61,6 +64,7 @@ public interface CustomLineItemStateTransitionMessagePayload extends OrderMessag
 
     /**
      *  <p>State the Custom Line Item was transitioned from.</p>
+     * @return fromState
      */
     @NotNull
     @Valid
@@ -69,6 +73,7 @@ public interface CustomLineItemStateTransitionMessagePayload extends OrderMessag
 
     /**
      *  <p>State the Custom Line Item was transitioned to.</p>
+     * @return toState
      */
     @NotNull
     @Valid

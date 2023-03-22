@@ -25,6 +25,8 @@ public class BusinessUnitKeyReferenceBuilder implements Builder<BusinessUnitKeyR
 
     /**
      *  <p>Unique and immutable key of the referenced BusinessUnit.</p>
+     * @param key
+     * @return Builder
      */
 
     public BusinessUnitKeyReferenceBuilder key(final String key) {

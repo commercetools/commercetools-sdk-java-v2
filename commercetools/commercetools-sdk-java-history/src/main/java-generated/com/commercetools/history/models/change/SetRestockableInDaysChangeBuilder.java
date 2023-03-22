@@ -31,6 +31,8 @@ public class SetRestockableInDaysChangeBuilder implements Builder<SetRestockable
 
     /**
      *  <p>Shape of the action for <code>setRestockableInDays</code></p>
+     * @param change
+     * @return Builder
      */
 
     public SetRestockableInDaysChangeBuilder change(final String change) {
@@ -40,6 +42,8 @@ public class SetRestockableInDaysChangeBuilder implements Builder<SetRestockable
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public SetRestockableInDaysChangeBuilder previousValue(final Integer previousValue) {
@@ -49,6 +53,8 @@ public class SetRestockableInDaysChangeBuilder implements Builder<SetRestockable
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public SetRestockableInDaysChangeBuilder nextValue(final Integer nextValue) {

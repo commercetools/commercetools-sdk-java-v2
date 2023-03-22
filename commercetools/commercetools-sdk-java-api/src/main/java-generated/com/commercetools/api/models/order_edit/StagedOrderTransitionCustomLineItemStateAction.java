@@ -40,6 +40,7 @@ public interface StagedOrderTransitionCustomLineItemStateAction extends StagedOr
 
     /**
      *
+     * @return customLineItemId
      */
     @NotNull
     @JsonProperty("customLineItemId")
@@ -47,6 +48,7 @@ public interface StagedOrderTransitionCustomLineItemStateAction extends StagedOr
 
     /**
      *
+     * @return quantity
      */
     @NotNull
     @JsonProperty("quantity")
@@ -54,6 +56,7 @@ public interface StagedOrderTransitionCustomLineItemStateAction extends StagedOr
 
     /**
      *  <p>ResourceIdentifier to a State.</p>
+     * @return fromState
      */
     @NotNull
     @Valid
@@ -62,6 +65,7 @@ public interface StagedOrderTransitionCustomLineItemStateAction extends StagedOr
 
     /**
      *  <p>ResourceIdentifier to a State.</p>
+     * @return toState
      */
     @NotNull
     @Valid
@@ -70,6 +74,7 @@ public interface StagedOrderTransitionCustomLineItemStateAction extends StagedOr
 
     /**
      *
+     * @return actualTransitionDate
      */
 
     @JsonProperty("actualTransitionDate")

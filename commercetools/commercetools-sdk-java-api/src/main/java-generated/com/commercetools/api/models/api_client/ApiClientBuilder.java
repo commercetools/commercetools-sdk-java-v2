@@ -51,6 +51,8 @@ public class ApiClientBuilder implements Builder<ApiClient> {
 
     /**
      *  <p>The OAuth2 <code>client_id</code> that can be used to obtain an access token.</p>
+     * @param id
+     * @return Builder
      */
 
     public ApiClientBuilder id(final String id) {
@@ -60,6 +62,8 @@ public class ApiClientBuilder implements Builder<ApiClient> {
 
     /**
      *  <p>Name of the APIClient.</p>
+     * @param name
+     * @return Builder
      */
 
     public ApiClientBuilder name(final String name) {
@@ -69,6 +73,8 @@ public class ApiClientBuilder implements Builder<ApiClient> {
 
     /**
      *  <p>Whitespace-separated list of OAuth scopes that can be used when obtaining an access token.</p>
+     * @param scope
+     * @return Builder
      */
 
     public ApiClientBuilder scope(final String scope) {
@@ -78,6 +84,8 @@ public class ApiClientBuilder implements Builder<ApiClient> {
 
     /**
      *  <p>Only shown once in the response of creating the APIClient. This is the OAuth2 <code>client_secret</code> that can be used to obtain an access token.</p>
+     * @param secret
+     * @return Builder
      */
 
     public ApiClientBuilder secret(@Nullable final String secret) {
@@ -87,6 +95,8 @@ public class ApiClientBuilder implements Builder<ApiClient> {
 
     /**
      *  <p>Date of the last day this APIClient was used to obtain an access token.</p>
+     * @param lastUsedAt
+     * @return Builder
      */
 
     public ApiClientBuilder lastUsedAt(@Nullable final java.time.LocalDate lastUsedAt) {
@@ -96,6 +106,8 @@ public class ApiClientBuilder implements Builder<ApiClient> {
 
     /**
      *  <p>If set, the Client will be deleted on (or shortly after) this point in time.</p>
+     * @param deleteAt
+     * @return Builder
      */
 
     public ApiClientBuilder deleteAt(@Nullable final java.time.ZonedDateTime deleteAt) {
@@ -105,6 +117,8 @@ public class ApiClientBuilder implements Builder<ApiClient> {
 
     /**
      *  <p>Date and time (UTC) the APIClient was initially created at.</p>
+     * @param createdAt
+     * @return Builder
      */
 
     public ApiClientBuilder createdAt(@Nullable final java.time.ZonedDateTime createdAt) {
@@ -114,6 +128,8 @@ public class ApiClientBuilder implements Builder<ApiClient> {
 
     /**
      *  <p>Expiration time in seconds for each access token obtained by the APIClient. Only present when set with the APIClientDraft. If not present the default value applies.</p>
+     * @param accessTokenValiditySeconds
+     * @return Builder
      */
 
     public ApiClientBuilder accessTokenValiditySeconds(@Nullable final Integer accessTokenValiditySeconds) {
@@ -123,6 +139,8 @@ public class ApiClientBuilder implements Builder<ApiClient> {
 
     /**
      *  <p>Inactivity expiration time in seconds for each refresh token obtained by the APIClient. Only present when set with the APIClientDraft. If not present the default value applies.</p>
+     * @param refreshTokenValiditySeconds
+     * @return Builder
      */
 
     public ApiClientBuilder refreshTokenValiditySeconds(@Nullable final Integer refreshTokenValiditySeconds) {

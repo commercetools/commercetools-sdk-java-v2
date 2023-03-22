@@ -34,6 +34,7 @@ public interface QuoteRequestSetCustomTypeAction extends QuoteRequestUpdateActio
 
     /**
      *  <p>Defines the Type that extends the QuoteRequest with Custom Fields. If absent, any existing Type and Custom Fields are removed from the QuoteRequest.</p>
+     * @return type
      */
     @Valid
     @JsonProperty("type")
@@ -41,6 +42,7 @@ public interface QuoteRequestSetCustomTypeAction extends QuoteRequestUpdateActio
 
     /**
      *  <p>Sets the Custom Fields fields for the QuoteRequest.</p>
+     * @return fields
      */
     @Valid
     @JsonProperty("fields")

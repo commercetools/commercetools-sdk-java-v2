@@ -31,6 +31,8 @@ public class CartSetCustomLineItemTaxAmountActionBuilder implements Builder<Cart
 
     /**
      *  <p><code>id</code> of the CustomLineItem to update.</p>
+     * @param customLineItemId
+     * @return Builder
      */
 
     public CartSetCustomLineItemTaxAmountActionBuilder customLineItemId(final String customLineItemId) {
@@ -40,6 +42,7 @@ public class CartSetCustomLineItemTaxAmountActionBuilder implements Builder<Cart
 
     /**
      *  <p>Value to set. If empty, any existing value is removed.</p>
+     * @return Builder
      */
 
     public CartSetCustomLineItemTaxAmountActionBuilder externalTaxAmount(
@@ -51,6 +54,8 @@ public class CartSetCustomLineItemTaxAmountActionBuilder implements Builder<Cart
 
     /**
      *  <p>Value to set. If empty, any existing value is removed.</p>
+     * @param externalTaxAmount
+     * @return Builder
      */
 
     public CartSetCustomLineItemTaxAmountActionBuilder externalTaxAmount(

@@ -27,6 +27,8 @@ public class ReviewSetAuthorNameActionBuilder implements Builder<ReviewSetAuthor
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
+     * @param authorName
+     * @return Builder
      */
 
     public ReviewSetAuthorNameActionBuilder authorName(@Nullable final String authorName) {

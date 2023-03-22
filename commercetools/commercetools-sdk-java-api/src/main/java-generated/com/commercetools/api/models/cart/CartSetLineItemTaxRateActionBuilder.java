@@ -34,6 +34,8 @@ public class CartSetLineItemTaxRateActionBuilder implements Builder<CartSetLineI
 
     /**
      *  <p><code>id</code> of the LineItem to update.</p>
+     * @param lineItemId
+     * @return Builder
      */
 
     public CartSetLineItemTaxRateActionBuilder lineItemId(final String lineItemId) {
@@ -43,6 +45,7 @@ public class CartSetLineItemTaxRateActionBuilder implements Builder<CartSetLineI
 
     /**
      *  <p>Value to set. If empty, any existing value is removed.</p>
+     * @return Builder
      */
 
     public CartSetLineItemTaxRateActionBuilder externalTaxRate(
@@ -54,6 +57,8 @@ public class CartSetLineItemTaxRateActionBuilder implements Builder<CartSetLineI
 
     /**
      *  <p>Value to set. If empty, any existing value is removed.</p>
+     * @param externalTaxRate
+     * @return Builder
      */
 
     public CartSetLineItemTaxRateActionBuilder externalTaxRate(
@@ -64,6 +69,8 @@ public class CartSetLineItemTaxRateActionBuilder implements Builder<CartSetLineI
 
     /**
      *  <p><code>key</code> of the ShippingMethod used for this Line Item. This is required for Carts with <code>Multiple</code> ShippingMode.</p>
+     * @param shippingKey
+     * @return Builder
      */
 
     public CartSetLineItemTaxRateActionBuilder shippingKey(@Nullable final String shippingKey) {

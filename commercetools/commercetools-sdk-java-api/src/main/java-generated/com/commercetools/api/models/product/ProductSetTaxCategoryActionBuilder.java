@@ -28,6 +28,7 @@ public class ProductSetTaxCategoryActionBuilder implements Builder<ProductSetTax
 
     /**
      *  <p>The Tax Category to set. If empty, any existing value will be removed.</p>
+     * @return Builder
      */
 
     public ProductSetTaxCategoryActionBuilder taxCategory(
@@ -40,6 +41,8 @@ public class ProductSetTaxCategoryActionBuilder implements Builder<ProductSetTax
 
     /**
      *  <p>The Tax Category to set. If empty, any existing value will be removed.</p>
+     * @param taxCategory
+     * @return Builder
      */
 
     public ProductSetTaxCategoryActionBuilder taxCategory(

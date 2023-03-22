@@ -30,6 +30,8 @@ public class BusinessUnitResourceIdentifierBuilder implements Builder<BusinessUn
 
     /**
      *  <p>Unique identifier of the referenced BusinessUnit. Either <code>id</code> or <code>key</code> is required.</p>
+     * @param id
+     * @return Builder
      */
 
     public BusinessUnitResourceIdentifierBuilder id(@Nullable final String id) {
@@ -39,6 +41,8 @@ public class BusinessUnitResourceIdentifierBuilder implements Builder<BusinessUn
 
     /**
      *  <p>Unique key of the referenced BusinessUnit. Either <code>id</code> or <code>key</code> is required.</p>
+     * @param key
+     * @return Builder
      */
 
     public BusinessUnitResourceIdentifierBuilder key(@Nullable final String key) {

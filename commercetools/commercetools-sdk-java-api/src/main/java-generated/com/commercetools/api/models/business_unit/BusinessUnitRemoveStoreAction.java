@@ -35,6 +35,7 @@ public interface BusinessUnitRemoveStoreAction extends BusinessUnitUpdateAction 
 
     /**
      *  <p>Store to remove.</p>
+     * @return store
      */
     @NotNull
     @Valid

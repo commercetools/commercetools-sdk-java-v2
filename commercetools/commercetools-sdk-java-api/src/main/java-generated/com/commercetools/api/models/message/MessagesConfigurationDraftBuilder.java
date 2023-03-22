@@ -28,6 +28,8 @@ public class MessagesConfigurationDraftBuilder implements Builder<MessagesConfig
 
     /**
      *  <p>Setting to <code>true</code> activates the Messages Query feature.</p>
+     * @param enabled
+     * @return Builder
      */
 
     public MessagesConfigurationDraftBuilder enabled(final Boolean enabled) {
@@ -37,6 +39,8 @@ public class MessagesConfigurationDraftBuilder implements Builder<MessagesConfig
 
     /**
      *  <p>Specifies the number of days each Message should be available via the Messages Query API. For Messages older than the specified period, it is not guaranteed that they are still accessible via the API.</p>
+     * @param deleteDaysAfterCreation
+     * @return Builder
      */
 
     public MessagesConfigurationDraftBuilder deleteDaysAfterCreation(final Integer deleteDaysAfterCreation) {

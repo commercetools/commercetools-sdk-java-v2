@@ -30,6 +30,7 @@ public interface OrderChangeShipmentStateAction extends OrderUpdateAction {
 
     /**
      *
+     * @return shipmentState
      */
 
     @JsonProperty("shipmentState")

@@ -35,6 +35,7 @@ public interface LocalizableTextSetAttribute extends Attribute {
 
     /**
      *
+     * @return value
      */
     @NotNull
     @Valid

@@ -26,6 +26,7 @@ public class SimilarProductSearchRequestMetaBuilder implements Builder<SimilarPr
 
     /**
      *  <p>The SimilarityMeasures used in this search.</p>
+     * @return Builder
      */
 
     public SimilarProductSearchRequestMetaBuilder similarityMeasures(
@@ -38,6 +39,8 @@ public class SimilarProductSearchRequestMetaBuilder implements Builder<SimilarPr
 
     /**
      *  <p>The SimilarityMeasures used in this search.</p>
+     * @param similarityMeasures
+     * @return Builder
      */
 
     public SimilarProductSearchRequestMetaBuilder similarityMeasures(

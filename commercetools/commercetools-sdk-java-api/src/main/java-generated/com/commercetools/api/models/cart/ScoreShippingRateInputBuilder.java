@@ -25,6 +25,8 @@ public class ScoreShippingRateInputBuilder implements Builder<ScoreShippingRateI
 
     /**
      *  <p>Abstract value for categorizing a Cart.</p>
+     * @param score
+     * @return Builder
      */
 
     public ScoreShippingRateInputBuilder score(final Long score) {

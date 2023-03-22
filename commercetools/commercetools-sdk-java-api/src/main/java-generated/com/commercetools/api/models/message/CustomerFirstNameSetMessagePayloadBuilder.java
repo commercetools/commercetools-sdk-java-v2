@@ -27,6 +27,8 @@ public class CustomerFirstNameSetMessagePayloadBuilder implements Builder<Custom
 
     /**
      *  <p>The <code>firstName</code> that was set during the Set First Name update action.</p>
+     * @param firstName
+     * @return Builder
      */
 
     public CustomerFirstNameSetMessagePayloadBuilder firstName(@Nullable final String firstName) {

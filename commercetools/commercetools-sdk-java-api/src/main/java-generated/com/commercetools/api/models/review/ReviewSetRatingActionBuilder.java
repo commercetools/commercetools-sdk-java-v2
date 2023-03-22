@@ -27,6 +27,8 @@ public class ReviewSetRatingActionBuilder implements Builder<ReviewSetRatingActi
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
+     * @param rating
+     * @return Builder
      */
 
     public ReviewSetRatingActionBuilder rating(@Nullable final Integer rating) {

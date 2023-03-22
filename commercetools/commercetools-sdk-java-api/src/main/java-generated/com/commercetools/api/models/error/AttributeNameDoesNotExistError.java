@@ -35,6 +35,7 @@ public interface AttributeNameDoesNotExistError extends ErrorObject {
 
     /**
      *
+     * @return code
      */
     @NotNull
     @JsonProperty("code")
@@ -42,6 +43,7 @@ public interface AttributeNameDoesNotExistError extends ErrorObject {
 
     /**
      *  <p><code>"Attribute definition for $attributeName does not exist on type $typeName."</code></p>
+     * @return message
      */
     @NotNull
     @JsonProperty("message")
@@ -49,6 +51,7 @@ public interface AttributeNameDoesNotExistError extends ErrorObject {
 
     /**
      *  <p>Non-existent Attribute name.</p>
+     * @return invalidAttributeName
      */
     @NotNull
     @JsonProperty("invalidAttributeName")

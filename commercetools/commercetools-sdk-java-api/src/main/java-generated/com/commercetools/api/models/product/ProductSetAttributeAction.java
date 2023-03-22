@@ -33,6 +33,7 @@ public interface ProductSetAttributeAction extends ProductUpdateAction {
 
     /**
      *  <p>The <code>id</code> of the ProductVariant to update.</p>
+     * @return variantId
      */
 
     @JsonProperty("variantId")
@@ -40,6 +41,7 @@ public interface ProductSetAttributeAction extends ProductUpdateAction {
 
     /**
      *  <p>The <code>sku</code> of the ProductVariant to update.</p>
+     * @return sku
      */
 
     @JsonProperty("sku")
@@ -47,6 +49,7 @@ public interface ProductSetAttributeAction extends ProductUpdateAction {
 
     /**
      *  <p>The name of the Attribute to set.</p>
+     * @return name
      */
     @NotNull
     @JsonProperty("name")
@@ -63,6 +66,7 @@ public interface ProductSetAttributeAction extends ProductUpdateAction {
      *   <li>For Nested Type Attributes, use the list of values of all Attributes of the nested Product as <code>value</code>.</li>
      *   <li>For Reference Type Attributes, use the Reference object as <code>value</code>.</li>
      *  </ul>
+     * @return value
      */
 
     @JsonProperty("value")
@@ -70,6 +74,7 @@ public interface ProductSetAttributeAction extends ProductUpdateAction {
 
     /**
      *  <p>If <code>true</code>, only the staged Attribute is set. If <code>false</code>, both current and staged Attribute is set.</p>
+     * @return staged
      */
 
     @JsonProperty("staged")

@@ -37,6 +37,8 @@ public class ProductSetPricesActionBuilder implements Builder<ProductSetPricesAc
 
     /**
      *  <p>The <code>id</code> of the ProductVariant to update.</p>
+     * @param variantId
+     * @return Builder
      */
 
     public ProductSetPricesActionBuilder variantId(@Nullable final Long variantId) {
@@ -46,6 +48,8 @@ public class ProductSetPricesActionBuilder implements Builder<ProductSetPricesAc
 
     /**
      *  <p>The <code>sku</code> of the ProductVariant to update.</p>
+     * @param sku
+     * @return Builder
      */
 
     public ProductSetPricesActionBuilder sku(@Nullable final String sku) {
@@ -55,6 +59,8 @@ public class ProductSetPricesActionBuilder implements Builder<ProductSetPricesAc
 
     /**
      *  <p>The Embedded Prices to set. Each Price must have its unique Price scope (with same currency, country, Customer Group, Channel, <code>validFrom</code> and <code>validUntil</code>).</p>
+     * @param prices
+     * @return Builder
      */
 
     public ProductSetPricesActionBuilder prices(final com.commercetools.api.models.common.PriceDraft... prices) {
@@ -64,6 +70,8 @@ public class ProductSetPricesActionBuilder implements Builder<ProductSetPricesAc
 
     /**
      *  <p>The Embedded Prices to set. Each Price must have its unique Price scope (with same currency, country, Customer Group, Channel, <code>validFrom</code> and <code>validUntil</code>).</p>
+     * @param prices
+     * @return Builder
      */
 
     public ProductSetPricesActionBuilder prices(
@@ -74,6 +82,8 @@ public class ProductSetPricesActionBuilder implements Builder<ProductSetPricesAc
 
     /**
      *  <p>The Embedded Prices to set. Each Price must have its unique Price scope (with same currency, country, Customer Group, Channel, <code>validFrom</code> and <code>validUntil</code>).</p>
+     * @param prices
+     * @return Builder
      */
 
     public ProductSetPricesActionBuilder plusPrices(final com.commercetools.api.models.common.PriceDraft... prices) {
@@ -86,6 +96,7 @@ public class ProductSetPricesActionBuilder implements Builder<ProductSetPricesAc
 
     /**
      *  <p>The Embedded Prices to set. Each Price must have its unique Price scope (with same currency, country, Customer Group, Channel, <code>validFrom</code> and <code>validUntil</code>).</p>
+     * @return Builder
      */
 
     public ProductSetPricesActionBuilder plusPrices(
@@ -99,6 +110,7 @@ public class ProductSetPricesActionBuilder implements Builder<ProductSetPricesAc
 
     /**
      *  <p>The Embedded Prices to set. Each Price must have its unique Price scope (with same currency, country, Customer Group, Channel, <code>validFrom</code> and <code>validUntil</code>).</p>
+     * @return Builder
      */
 
     public ProductSetPricesActionBuilder withPrices(
@@ -110,6 +122,8 @@ public class ProductSetPricesActionBuilder implements Builder<ProductSetPricesAc
 
     /**
      *  <p>If <code>true</code>, only the staged ProductVariant is updated. If <code>false</code>, both the current and staged ProductVariant are updated.</p>
+     * @param staged
+     * @return Builder
      */
 
     public ProductSetPricesActionBuilder staged(@Nullable final Boolean staged) {

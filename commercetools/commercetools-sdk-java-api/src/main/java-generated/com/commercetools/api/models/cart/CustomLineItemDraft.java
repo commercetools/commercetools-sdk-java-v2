@@ -40,6 +40,7 @@ public interface CustomLineItemDraft extends com.commercetools.api.models.Custom
 
     /**
      *  <p>Name of the Custom Line Item.</p>
+     * @return name
      */
     @NotNull
     @Valid
@@ -48,6 +49,7 @@ public interface CustomLineItemDraft extends com.commercetools.api.models.Custom
 
     /**
      *  <p>Number of Custom Line Items to add to the Cart.</p>
+     * @return quantity
      */
 
     @JsonProperty("quantity")
@@ -55,6 +57,7 @@ public interface CustomLineItemDraft extends com.commercetools.api.models.Custom
 
     /**
      *  <p>Money value of the Custom Line Item. The value can be negative.</p>
+     * @return money
      */
     @NotNull
     @Valid
@@ -63,6 +66,7 @@ public interface CustomLineItemDraft extends com.commercetools.api.models.Custom
 
     /**
      *  <p>User-defined identifier used in a deep-link URL for the Custom Line Item. It must match the pattern <code>[a-zA-Z0-9_-]{2,256}</code>.</p>
+     * @return slug
      */
     @NotNull
     @JsonProperty("slug")
@@ -70,6 +74,7 @@ public interface CustomLineItemDraft extends com.commercetools.api.models.Custom
 
     /**
      *  <p>Used to select a Tax Rate when a Cart has the <code>Platform</code> TaxMode. This field is required for <code>Platform</code> TaxMode.</p>
+     * @return taxCategory
      */
     @Valid
     @JsonProperty("taxCategory")
@@ -77,6 +82,7 @@ public interface CustomLineItemDraft extends com.commercetools.api.models.Custom
 
     /**
      *  <p>External Tax Rate for the Custom Line Item if the Cart has the <code>External</code> TaxMode.</p>
+     * @return externalTaxRate
      */
     @Valid
     @JsonProperty("externalTaxRate")
@@ -84,6 +90,7 @@ public interface CustomLineItemDraft extends com.commercetools.api.models.Custom
 
     /**
      *  <p>Custom Fields for the Custom Line Item.</p>
+     * @return custom
      */
     @Valid
     @JsonProperty("custom")
@@ -91,6 +98,7 @@ public interface CustomLineItemDraft extends com.commercetools.api.models.Custom
 
     /**
      *  <p>Container for Custom Line Item-specific addresses.</p>
+     * @return shippingDetails
      */
     @Valid
     @JsonProperty("shippingDetails")
@@ -101,6 +109,7 @@ public interface CustomLineItemDraft extends com.commercetools.api.models.Custom
      *   <li>If <code>Standard</code>, Cart Discounts with a matching CartDiscountCustomLineItemsTarget are applied to the Custom Line Item.</li>
      *   <li>If <code>External</code>, Cart Discounts are not considered on the Custom Line Item.</li>
      *  </ul>
+     * @return priceMode
      */
     @NotNull
     @JsonProperty("priceMode")

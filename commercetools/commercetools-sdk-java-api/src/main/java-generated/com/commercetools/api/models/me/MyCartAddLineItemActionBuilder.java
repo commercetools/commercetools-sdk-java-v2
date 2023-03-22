@@ -53,6 +53,8 @@ public class MyCartAddLineItemActionBuilder implements Builder<MyCartAddLineItem
     /**
      *  <p><code>id</code> of the Product.</p>
      *  <p>Either the <code>productId</code> and <code>variantId</code>, or <code>sku</code> must be provided.</p>
+     * @param productId
+     * @return Builder
      */
 
     public MyCartAddLineItemActionBuilder productId(@Nullable final String productId) {
@@ -64,6 +66,8 @@ public class MyCartAddLineItemActionBuilder implements Builder<MyCartAddLineItem
      *  <p><code>id</code> of the ProductVariant in the Product.</p>
      *  <p>If not given, the Master Variant is used.</p>
      *  <p>Either the <code>productId</code> and <code>variantId</code>, or <code>sku</code> must be provided.</p>
+     * @param variantId
+     * @return Builder
      */
 
     public MyCartAddLineItemActionBuilder variantId(@Nullable final Long variantId) {
@@ -74,6 +78,8 @@ public class MyCartAddLineItemActionBuilder implements Builder<MyCartAddLineItem
     /**
      *  <p><code>sku</code> of the ProductVariant.</p>
      *  <p>Either the <code>productId</code> and <code>variantId</code>, or <code>sku</code> must be provided.</p>
+     * @param sku
+     * @return Builder
      */
 
     public MyCartAddLineItemActionBuilder sku(@Nullable final String sku) {
@@ -83,6 +89,8 @@ public class MyCartAddLineItemActionBuilder implements Builder<MyCartAddLineItem
 
     /**
      *  <p>Number of Line Items to add to the Cart.</p>
+     * @param quantity
+     * @return Builder
      */
 
     public MyCartAddLineItemActionBuilder quantity(@Nullable final Long quantity) {
@@ -93,6 +101,8 @@ public class MyCartAddLineItemActionBuilder implements Builder<MyCartAddLineItem
     /**
      *  <p>Date and time (UTC) the Line Item was added to the Cart. If not set, it defaults to the current date and time.</p>
      *  <p>Optional for backwards compatibility reasons.</p>
+     * @param addedAt
+     * @return Builder
      */
 
     public MyCartAddLineItemActionBuilder addedAt(@Nullable final java.time.ZonedDateTime addedAt) {
@@ -102,6 +112,7 @@ public class MyCartAddLineItemActionBuilder implements Builder<MyCartAddLineItem
 
     /**
      *  <p>Used to select a Product Price. The Channel must have the <code>ProductDistribution</code> ChannelRoleEnum. If the Cart is bound to a Store with <code>distributionChannels</code> set, the Channel must match one of the Store's distribution channels.</p>
+     * @return Builder
      */
 
     public MyCartAddLineItemActionBuilder distributionChannel(
@@ -114,6 +125,8 @@ public class MyCartAddLineItemActionBuilder implements Builder<MyCartAddLineItem
 
     /**
      *  <p>Used to select a Product Price. The Channel must have the <code>ProductDistribution</code> ChannelRoleEnum. If the Cart is bound to a Store with <code>distributionChannels</code> set, the Channel must match one of the Store's distribution channels.</p>
+     * @param distributionChannel
+     * @return Builder
      */
 
     public MyCartAddLineItemActionBuilder distributionChannel(
@@ -124,6 +137,7 @@ public class MyCartAddLineItemActionBuilder implements Builder<MyCartAddLineItem
 
     /**
      *  <p>Used to identify Inventory entries that must be reserved. The Channel must have the <code>InventorySupply</code> ChannelRoleEnum.</p>
+     * @return Builder
      */
 
     public MyCartAddLineItemActionBuilder supplyChannel(
@@ -135,6 +149,8 @@ public class MyCartAddLineItemActionBuilder implements Builder<MyCartAddLineItem
 
     /**
      *  <p>Used to identify Inventory entries that must be reserved. The Channel must have the <code>InventorySupply</code> ChannelRoleEnum.</p>
+     * @param supplyChannel
+     * @return Builder
      */
 
     public MyCartAddLineItemActionBuilder supplyChannel(
@@ -145,6 +161,7 @@ public class MyCartAddLineItemActionBuilder implements Builder<MyCartAddLineItem
 
     /**
      *  <p>Container for Line Item-specific addresses.</p>
+     * @return Builder
      */
 
     public MyCartAddLineItemActionBuilder shippingDetails(
@@ -156,6 +173,8 @@ public class MyCartAddLineItemActionBuilder implements Builder<MyCartAddLineItem
 
     /**
      *  <p>Container for Line Item-specific addresses.</p>
+     * @param shippingDetails
+     * @return Builder
      */
 
     public MyCartAddLineItemActionBuilder shippingDetails(
@@ -166,6 +185,7 @@ public class MyCartAddLineItemActionBuilder implements Builder<MyCartAddLineItem
 
     /**
      *  <p>Custom Fields for the Line Item.</p>
+     * @return Builder
      */
 
     public MyCartAddLineItemActionBuilder custom(
@@ -176,6 +196,8 @@ public class MyCartAddLineItemActionBuilder implements Builder<MyCartAddLineItem
 
     /**
      *  <p>Custom Fields for the Line Item.</p>
+     * @param custom
+     * @return Builder
      */
 
     public MyCartAddLineItemActionBuilder custom(

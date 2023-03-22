@@ -39,6 +39,8 @@ public class ImportContainerBuilder implements Builder<ImportContainer> {
 
     /**
      *  <p>User-defined unique identifier for the ImportContainer. Keys can only contain alphanumeric characters (a-Z, 0-9), underscores and hyphens (_, -).</p>
+     * @param key
+     * @return Builder
      */
 
     public ImportContainerBuilder key(final String key) {
@@ -48,6 +50,8 @@ public class ImportContainerBuilder implements Builder<ImportContainer> {
 
     /**
      *  <p>The resource type the ImportContainer is able to handle. If not present, the ImportContainer is able to import all of the supported ImportResourceTypes.</p>
+     * @param resourceType
+     * @return Builder
      */
 
     public ImportContainerBuilder resourceType(
@@ -58,6 +62,8 @@ public class ImportContainerBuilder implements Builder<ImportContainer> {
 
     /**
      *  <p>The version of the ImportContainer.</p>
+     * @param version
+     * @return Builder
      */
 
     public ImportContainerBuilder version(final Long version) {
@@ -67,6 +73,8 @@ public class ImportContainerBuilder implements Builder<ImportContainer> {
 
     /**
      *  <p>The time when the ImportContainer was created.</p>
+     * @param createdAt
+     * @return Builder
      */
 
     public ImportContainerBuilder createdAt(final java.time.ZonedDateTime createdAt) {
@@ -76,6 +84,8 @@ public class ImportContainerBuilder implements Builder<ImportContainer> {
 
     /**
      *  <p>The last time when the ImportContainer was modified.</p>
+     * @param lastModifiedAt
+     * @return Builder
      */
 
     public ImportContainerBuilder lastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {

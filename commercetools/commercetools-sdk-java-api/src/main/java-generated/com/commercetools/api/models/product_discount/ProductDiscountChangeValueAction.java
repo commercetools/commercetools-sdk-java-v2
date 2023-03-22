@@ -34,6 +34,7 @@ public interface ProductDiscountChangeValueAction extends ProductDiscountUpdateA
 
     /**
      *  <p>New value to set. Must not be empty.</p>
+     * @return value
      */
     @NotNull
     @Valid

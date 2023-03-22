@@ -39,6 +39,8 @@ public class ProductMoveImageToPositionActionBuilder implements Builder<ProductM
 
     /**
      *  <p>The <code>id</code> of the ProductVariant to update.</p>
+     * @param variantId
+     * @return Builder
      */
 
     public ProductMoveImageToPositionActionBuilder variantId(@Nullable final Long variantId) {
@@ -48,6 +50,8 @@ public class ProductMoveImageToPositionActionBuilder implements Builder<ProductM
 
     /**
      *  <p>The <code>sku</code> of the ProductVariant to update.</p>
+     * @param sku
+     * @return Builder
      */
 
     public ProductMoveImageToPositionActionBuilder sku(@Nullable final String sku) {
@@ -57,6 +61,8 @@ public class ProductMoveImageToPositionActionBuilder implements Builder<ProductM
 
     /**
      *  <p>The URL of the image to update.</p>
+     * @param imageUrl
+     * @return Builder
      */
 
     public ProductMoveImageToPositionActionBuilder imageUrl(final String imageUrl) {
@@ -66,6 +72,8 @@ public class ProductMoveImageToPositionActionBuilder implements Builder<ProductM
 
     /**
      *  <p>Position in <code>images</code> where the image should be moved. Must be between <code>0</code> and the total number of images minus <code>1</code>.</p>
+     * @param position
+     * @return Builder
      */
 
     public ProductMoveImageToPositionActionBuilder position(final Long position) {
@@ -75,6 +83,8 @@ public class ProductMoveImageToPositionActionBuilder implements Builder<ProductM
 
     /**
      *  <p>If <code>true</code>, only the staged <code>images</code> is updated. If <code>false</code>, both the current and staged <code>images</code> is updated.</p>
+     * @param staged
+     * @return Builder
      */
 
     public ProductMoveImageToPositionActionBuilder staged(@Nullable final Boolean staged) {

@@ -35,6 +35,8 @@ public class ChangeTextLineItemNameChangeBuilder implements Builder<ChangeTextLi
 
     /**
      *  <p>Update action for <code>changeTextLineItemName</code></p>
+     * @param change
+     * @return Builder
      */
 
     public ChangeTextLineItemNameChangeBuilder change(final String change) {
@@ -44,6 +46,7 @@ public class ChangeTextLineItemNameChangeBuilder implements Builder<ChangeTextLi
 
     /**
      *
+     * @return Builder
      */
 
     public ChangeTextLineItemNameChangeBuilder textLineItem(
@@ -55,6 +58,8 @@ public class ChangeTextLineItemNameChangeBuilder implements Builder<ChangeTextLi
 
     /**
      *
+     * @param textLineItem
+     * @return Builder
      */
 
     public ChangeTextLineItemNameChangeBuilder textLineItem(
@@ -65,6 +70,7 @@ public class ChangeTextLineItemNameChangeBuilder implements Builder<ChangeTextLi
 
     /**
      *
+     * @return Builder
      */
 
     public ChangeTextLineItemNameChangeBuilder nextValue(
@@ -75,6 +81,8 @@ public class ChangeTextLineItemNameChangeBuilder implements Builder<ChangeTextLi
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public ChangeTextLineItemNameChangeBuilder nextValue(
@@ -85,6 +93,7 @@ public class ChangeTextLineItemNameChangeBuilder implements Builder<ChangeTextLi
 
     /**
      *
+     * @return Builder
      */
 
     public ChangeTextLineItemNameChangeBuilder previousValue(
@@ -95,6 +104,8 @@ public class ChangeTextLineItemNameChangeBuilder implements Builder<ChangeTextLi
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public ChangeTextLineItemNameChangeBuilder previousValue(

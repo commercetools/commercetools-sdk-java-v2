@@ -33,6 +33,7 @@ public interface PriceTier {
 
     /**
      *  <p>The minimum quantity this price tier is valid for.</p>
+     * @return minimumQuantity
      */
     @NotNull
     @JsonProperty("minimumQuantity")
@@ -40,6 +41,7 @@ public interface PriceTier {
 
     /**
      *  <p>The currency of a price tier is always the same as the currency of the base Price.</p>
+     * @return value
      */
     @NotNull
     @Valid

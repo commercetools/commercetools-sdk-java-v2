@@ -30,6 +30,8 @@ public class FilteredFacetResultBuilder implements Builder<FilteredFacetResult> 
 
     /**
      *
+     * @param count
+     * @return Builder
      */
 
     public FilteredFacetResultBuilder count(final Long count) {
@@ -39,6 +41,8 @@ public class FilteredFacetResultBuilder implements Builder<FilteredFacetResult> 
 
     /**
      *
+     * @param productCount
+     * @return Builder
      */
 
     public FilteredFacetResultBuilder productCount(@Nullable final Long productCount) {

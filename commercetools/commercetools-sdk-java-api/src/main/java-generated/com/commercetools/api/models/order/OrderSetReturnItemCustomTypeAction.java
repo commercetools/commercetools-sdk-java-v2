@@ -36,6 +36,7 @@ public interface OrderSetReturnItemCustomTypeAction extends OrderUpdateAction {
 
     /**
      *
+     * @return returnItemId
      */
     @NotNull
     @JsonProperty("returnItemId")
@@ -43,6 +44,7 @@ public interface OrderSetReturnItemCustomTypeAction extends OrderUpdateAction {
 
     /**
      *  <p>Defines the Type that extends the ReturnItem with Custom Fields. If absent, any existing Type and Custom Fields are removed from the ReturnItem.</p>
+     * @return type
      */
     @Valid
     @JsonProperty("type")
@@ -50,6 +52,7 @@ public interface OrderSetReturnItemCustomTypeAction extends OrderUpdateAction {
 
     /**
      *  <p>Sets the Custom Fields fields for the ReturnItem.</p>
+     * @return fields
      */
     @Valid
     @JsonProperty("fields")

@@ -31,6 +31,7 @@ public class CustomBuilder implements Builder<Custom> {
 
     /**
      *  <p>The type that provides the field definitions for this object.</p>
+     * @return Builder
      */
 
     public CustomBuilder type(
@@ -41,6 +42,8 @@ public class CustomBuilder implements Builder<Custom> {
 
     /**
      *  <p>The type that provides the field definitions for this object.</p>
+     * @param type
+     * @return Builder
      */
 
     public CustomBuilder type(final com.commercetools.importapi.models.common.TypeKeyReference type) {
@@ -50,6 +53,7 @@ public class CustomBuilder implements Builder<Custom> {
 
     /**
      *  <p>The custom fields of this object.</p>
+     * @return Builder
      */
 
     public CustomBuilder fields(
@@ -60,6 +64,8 @@ public class CustomBuilder implements Builder<Custom> {
 
     /**
      *  <p>The custom fields of this object.</p>
+     * @param fields
+     * @return Builder
      */
 
     public CustomBuilder fields(@Nullable final com.commercetools.importapi.models.customfields.FieldContainer fields) {

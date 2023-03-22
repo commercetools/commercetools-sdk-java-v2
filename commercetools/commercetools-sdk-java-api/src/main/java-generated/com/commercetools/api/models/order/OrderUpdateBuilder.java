@@ -29,6 +29,8 @@ public class OrderUpdateBuilder implements Builder<OrderUpdate> {
 
     /**
      *
+     * @param version
+     * @return Builder
      */
 
     public OrderUpdateBuilder version(final Long version) {
@@ -38,6 +40,8 @@ public class OrderUpdateBuilder implements Builder<OrderUpdate> {
 
     /**
      *
+     * @param actions
+     * @return Builder
      */
 
     public OrderUpdateBuilder actions(final com.commercetools.api.models.order.OrderUpdateAction... actions) {
@@ -47,6 +51,8 @@ public class OrderUpdateBuilder implements Builder<OrderUpdate> {
 
     /**
      *
+     * @param actions
+     * @return Builder
      */
 
     public OrderUpdateBuilder actions(
@@ -57,6 +63,8 @@ public class OrderUpdateBuilder implements Builder<OrderUpdate> {
 
     /**
      *
+     * @param actions
+     * @return Builder
      */
 
     public OrderUpdateBuilder plusActions(final com.commercetools.api.models.order.OrderUpdateAction... actions) {
@@ -69,6 +77,7 @@ public class OrderUpdateBuilder implements Builder<OrderUpdate> {
 
     /**
      *
+     * @return Builder
      */
 
     public OrderUpdateBuilder plusActions(
@@ -82,6 +91,7 @@ public class OrderUpdateBuilder implements Builder<OrderUpdate> {
 
     /**
      *
+     * @return Builder
      */
 
     public OrderUpdateBuilder withActions(

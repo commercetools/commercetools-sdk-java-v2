@@ -37,6 +37,7 @@ public interface CustomerCompanyNameSetMessage extends Message {
 
     /**
      *  <p>The <code>companyName</code> that was set during the Set Company Name update action.</p>
+     * @return companyName
      */
 
     @JsonProperty("companyName")

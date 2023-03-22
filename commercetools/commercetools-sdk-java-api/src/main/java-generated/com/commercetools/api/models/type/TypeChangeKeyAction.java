@@ -33,6 +33,7 @@ public interface TypeChangeKeyAction extends TypeUpdateAction {
 
     /**
      *  <p>New value to set. Must not be empty.</p>
+     * @return key
      */
     @NotNull
     @JsonProperty("key")

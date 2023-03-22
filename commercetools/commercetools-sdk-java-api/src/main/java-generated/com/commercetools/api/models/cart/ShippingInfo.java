@@ -41,6 +41,7 @@ public interface ShippingInfo {
 
     /**
      *  <p>Name of the Shipping Method.</p>
+     * @return shippingMethodName
      */
     @NotNull
     @JsonProperty("shippingMethodName")
@@ -48,6 +49,7 @@ public interface ShippingInfo {
 
     /**
      *  <p>Determined based on the ShippingRate and its tiered prices, and either the sum of LineItem prices or the <code>shippingRateInput</code> field.</p>
+     * @return price
      */
     @NotNull
     @Valid
@@ -56,6 +58,7 @@ public interface ShippingInfo {
 
     /**
      *  <p>Used to determine the price.</p>
+     * @return shippingRate
      */
     @NotNull
     @Valid
@@ -64,6 +67,7 @@ public interface ShippingInfo {
 
     /**
      *  <p>Automatically set after the <code>taxRate</code> is set.</p>
+     * @return taxedPrice
      */
     @Valid
     @JsonProperty("taxedPrice")
@@ -72,6 +76,7 @@ public interface ShippingInfo {
     /**
      *  <p>Automatically set in the <code>Platform</code> TaxMode after the shipping address is set.</p>
      *  <p>For the <code>External</code> TaxMode the Tax Rate must be set explicitly with the ExternalTaxRateDraft.</p>
+     * @return taxRate
      */
     @Valid
     @JsonProperty("taxRate")
@@ -79,6 +84,7 @@ public interface ShippingInfo {
 
     /**
      *  <p>Used to select a Tax Rate when a Cart has the <code>Platform</code> TaxMode.</p>
+     * @return taxCategory
      */
     @Valid
     @JsonProperty("taxCategory")
@@ -86,6 +92,7 @@ public interface ShippingInfo {
 
     /**
      *  <p>Not set if a custom Shipping Method is used.</p>
+     * @return shippingMethod
      */
     @Valid
     @JsonProperty("shippingMethod")
@@ -93,6 +100,7 @@ public interface ShippingInfo {
 
     /**
      *  <p>Information on how items are delivered to customers.</p>
+     * @return deliveries
      */
     @Valid
     @JsonProperty("deliveries")
@@ -100,6 +108,7 @@ public interface ShippingInfo {
 
     /**
      *  <p>Discounted price of the Shipping Method.</p>
+     * @return discountedPrice
      */
     @Valid
     @JsonProperty("discountedPrice")
@@ -107,6 +116,7 @@ public interface ShippingInfo {
 
     /**
      *  <p>Indicates whether the ShippingMethod referenced in this ShippingInfo is allowed for the Cart.</p>
+     * @return shippingMethodState
      */
     @NotNull
     @JsonProperty("shippingMethodState")

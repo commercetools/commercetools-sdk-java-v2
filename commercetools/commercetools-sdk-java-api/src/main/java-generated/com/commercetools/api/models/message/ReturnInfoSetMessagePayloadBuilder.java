@@ -28,6 +28,8 @@ public class ReturnInfoSetMessagePayloadBuilder implements Builder<ReturnInfoSet
 
     /**
      *  <p>The ReturnInfo that was set on the Order or Order Edit.</p>
+     * @param returnInfo
+     * @return Builder
      */
 
     public ReturnInfoSetMessagePayloadBuilder returnInfo(
@@ -38,6 +40,8 @@ public class ReturnInfoSetMessagePayloadBuilder implements Builder<ReturnInfoSet
 
     /**
      *  <p>The ReturnInfo that was set on the Order or Order Edit.</p>
+     * @param returnInfo
+     * @return Builder
      */
 
     public ReturnInfoSetMessagePayloadBuilder returnInfo(
@@ -48,6 +52,8 @@ public class ReturnInfoSetMessagePayloadBuilder implements Builder<ReturnInfoSet
 
     /**
      *  <p>The ReturnInfo that was set on the Order or Order Edit.</p>
+     * @param returnInfo
+     * @return Builder
      */
 
     public ReturnInfoSetMessagePayloadBuilder plusReturnInfo(
@@ -61,6 +67,7 @@ public class ReturnInfoSetMessagePayloadBuilder implements Builder<ReturnInfoSet
 
     /**
      *  <p>The ReturnInfo that was set on the Order or Order Edit.</p>
+     * @return Builder
      */
 
     public ReturnInfoSetMessagePayloadBuilder plusReturnInfo(
@@ -74,6 +81,7 @@ public class ReturnInfoSetMessagePayloadBuilder implements Builder<ReturnInfoSet
 
     /**
      *  <p>The ReturnInfo that was set on the Order or Order Edit.</p>
+     * @return Builder
      */
 
     public ReturnInfoSetMessagePayloadBuilder withReturnInfo(

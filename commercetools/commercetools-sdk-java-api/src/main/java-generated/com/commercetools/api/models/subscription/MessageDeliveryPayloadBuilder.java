@@ -55,6 +55,8 @@ public class MessageDeliveryPayloadBuilder implements Builder<MessageDeliveryPay
 
     /**
      *  <p><code>key</code> of the Project. Useful in message processing if the Destination receives events from multiple Projects.</p>
+     * @param projectKey
+     * @return Builder
      */
 
     public MessageDeliveryPayloadBuilder projectKey(final String projectKey) {
@@ -64,6 +66,8 @@ public class MessageDeliveryPayloadBuilder implements Builder<MessageDeliveryPay
 
     /**
      *  <p>Reference to the resource that triggered the message.</p>
+     * @param resource
+     * @return Builder
      */
 
     public MessageDeliveryPayloadBuilder resource(final com.commercetools.api.models.common.Reference resource) {
@@ -73,6 +77,7 @@ public class MessageDeliveryPayloadBuilder implements Builder<MessageDeliveryPay
 
     /**
      *  <p>Reference to the resource that triggered the message.</p>
+     * @return Builder
      */
 
     public MessageDeliveryPayloadBuilder resource(
@@ -83,6 +88,7 @@ public class MessageDeliveryPayloadBuilder implements Builder<MessageDeliveryPay
 
     /**
      *  <p>User-defined unique identifiers of the resource.</p>
+     * @return Builder
      */
 
     public MessageDeliveryPayloadBuilder resourceUserProvidedIdentifiers(
@@ -95,6 +101,8 @@ public class MessageDeliveryPayloadBuilder implements Builder<MessageDeliveryPay
 
     /**
      *  <p>User-defined unique identifiers of the resource.</p>
+     * @param resourceUserProvidedIdentifiers
+     * @return Builder
      */
 
     public MessageDeliveryPayloadBuilder resourceUserProvidedIdentifiers(
@@ -105,6 +113,8 @@ public class MessageDeliveryPayloadBuilder implements Builder<MessageDeliveryPay
 
     /**
      *  <p>Unique ID of the message.</p>
+     * @param id
+     * @return Builder
      */
 
     public MessageDeliveryPayloadBuilder id(final String id) {
@@ -114,6 +124,8 @@ public class MessageDeliveryPayloadBuilder implements Builder<MessageDeliveryPay
 
     /**
      *  <p>Last seen version of the resource.</p>
+     * @param version
+     * @return Builder
      */
 
     public MessageDeliveryPayloadBuilder version(final Long version) {
@@ -123,6 +135,8 @@ public class MessageDeliveryPayloadBuilder implements Builder<MessageDeliveryPay
 
     /**
      *  <p>Date and time (UTC) the resource was initially created.</p>
+     * @param createdAt
+     * @return Builder
      */
 
     public MessageDeliveryPayloadBuilder createdAt(final java.time.ZonedDateTime createdAt) {
@@ -132,6 +146,8 @@ public class MessageDeliveryPayloadBuilder implements Builder<MessageDeliveryPay
 
     /**
      *  <p>Date and time (UTC) the resource was last modified.</p>
+     * @param lastModifiedAt
+     * @return Builder
      */
 
     public MessageDeliveryPayloadBuilder lastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {
@@ -141,6 +157,8 @@ public class MessageDeliveryPayloadBuilder implements Builder<MessageDeliveryPay
 
     /**
      *  <p>Used to ensure all messages of the resource are processed in correct order. The <code>sequenceNumber</code> of the next message of the resource is a successor of the <code>sequenceNumber</code> of the current message.</p>
+     * @param sequenceNumber
+     * @return Builder
      */
 
     public MessageDeliveryPayloadBuilder sequenceNumber(final Long sequenceNumber) {
@@ -150,6 +168,8 @@ public class MessageDeliveryPayloadBuilder implements Builder<MessageDeliveryPay
 
     /**
      *  <p>Version of the resource on which the change was performed.</p>
+     * @param resourceVersion
+     * @return Builder
      */
 
     public MessageDeliveryPayloadBuilder resourceVersion(final Long resourceVersion) {
@@ -159,6 +179,7 @@ public class MessageDeliveryPayloadBuilder implements Builder<MessageDeliveryPay
 
     /**
      *  <p>If the payload does not fit into the size limit or its format is not accepted by the messaging service, the <code>payloadNotIncluded</code> field is present.</p>
+     * @return Builder
      */
 
     public MessageDeliveryPayloadBuilder payloadNotIncluded(
@@ -171,6 +192,8 @@ public class MessageDeliveryPayloadBuilder implements Builder<MessageDeliveryPay
 
     /**
      *  <p>If the payload does not fit into the size limit or its format is not accepted by the messaging service, the <code>payloadNotIncluded</code> field is present.</p>
+     * @param payloadNotIncluded
+     * @return Builder
      */
 
     public MessageDeliveryPayloadBuilder payloadNotIncluded(

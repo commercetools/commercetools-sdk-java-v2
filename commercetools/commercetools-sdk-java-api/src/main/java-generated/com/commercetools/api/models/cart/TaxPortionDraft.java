@@ -35,6 +35,7 @@ public interface TaxPortionDraft extends io.vrap.rmf.base.client.Draft<TaxPortio
 
     /**
      *  <p>Name of the tax portion.</p>
+     * @return name
      */
 
     @JsonProperty("name")
@@ -42,6 +43,7 @@ public interface TaxPortionDraft extends io.vrap.rmf.base.client.Draft<TaxPortio
 
     /**
      *  <p>A number in the range 0-1.</p>
+     * @return rate
      */
     @NotNull
     @JsonProperty("rate")
@@ -49,6 +51,7 @@ public interface TaxPortionDraft extends io.vrap.rmf.base.client.Draft<TaxPortio
 
     /**
      *  <p>Money value for the tax portion.</p>
+     * @return amount
      */
     @NotNull
     @Valid

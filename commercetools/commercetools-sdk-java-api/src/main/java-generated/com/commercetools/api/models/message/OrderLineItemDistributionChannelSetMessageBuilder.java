@@ -62,6 +62,8 @@ public class OrderLineItemDistributionChannelSetMessageBuilder
 
     /**
      *  <p>Unique identifier of the Message. Can be used to track which Messages have been processed.</p>
+     * @param id
+     * @return Builder
      */
 
     public OrderLineItemDistributionChannelSetMessageBuilder id(final String id) {
@@ -71,6 +73,8 @@ public class OrderLineItemDistributionChannelSetMessageBuilder
 
     /**
      *  <p>Version of a resource. In case of Messages, this is always <code>1</code>.</p>
+     * @param version
+     * @return Builder
      */
 
     public OrderLineItemDistributionChannelSetMessageBuilder version(final Long version) {
@@ -80,6 +84,8 @@ public class OrderLineItemDistributionChannelSetMessageBuilder
 
     /**
      *  <p>Date and time (UTC) the Message was generated.</p>
+     * @param createdAt
+     * @return Builder
      */
 
     public OrderLineItemDistributionChannelSetMessageBuilder createdAt(final java.time.ZonedDateTime createdAt) {
@@ -89,6 +95,8 @@ public class OrderLineItemDistributionChannelSetMessageBuilder
 
     /**
      *  <p>Value of <code>createdAt</code>.</p>
+     * @param lastModifiedAt
+     * @return Builder
      */
 
     public OrderLineItemDistributionChannelSetMessageBuilder lastModifiedAt(
@@ -99,6 +107,7 @@ public class OrderLineItemDistributionChannelSetMessageBuilder
 
     /**
      *  <p>Value of <code>createdBy</code>.</p>
+     * @return Builder
      */
 
     public OrderLineItemDistributionChannelSetMessageBuilder lastModifiedBy(
@@ -109,6 +118,8 @@ public class OrderLineItemDistributionChannelSetMessageBuilder
 
     /**
      *  <p>Value of <code>createdBy</code>.</p>
+     * @param lastModifiedBy
+     * @return Builder
      */
 
     public OrderLineItemDistributionChannelSetMessageBuilder lastModifiedBy(
@@ -119,6 +130,7 @@ public class OrderLineItemDistributionChannelSetMessageBuilder
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @return Builder
      */
 
     public OrderLineItemDistributionChannelSetMessageBuilder createdBy(
@@ -129,6 +141,8 @@ public class OrderLineItemDistributionChannelSetMessageBuilder
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param createdBy
+     * @return Builder
      */
 
     public OrderLineItemDistributionChannelSetMessageBuilder createdBy(
@@ -139,6 +153,8 @@ public class OrderLineItemDistributionChannelSetMessageBuilder
 
     /**
      *  <p>Message number in relation to other Messages for a given resource. The <code>sequenceNumber</code> of the next Message for the resource is the successor of the <code>sequenceNumber</code> of the current Message. Meaning, the <code>sequenceNumber</code> of the next Message equals the <code>sequenceNumber</code> of the current Message + 1. <code>sequenceNumber</code> can be used to ensure that Messages are processed in the correct order for a particular resource.</p>
+     * @param sequenceNumber
+     * @return Builder
      */
 
     public OrderLineItemDistributionChannelSetMessageBuilder sequenceNumber(final Long sequenceNumber) {
@@ -148,6 +164,8 @@ public class OrderLineItemDistributionChannelSetMessageBuilder
 
     /**
      *  <p>Reference to the resource on which the change or action was performed.</p>
+     * @param resource
+     * @return Builder
      */
 
     public OrderLineItemDistributionChannelSetMessageBuilder resource(
@@ -158,6 +176,7 @@ public class OrderLineItemDistributionChannelSetMessageBuilder
 
     /**
      *  <p>Reference to the resource on which the change or action was performed.</p>
+     * @return Builder
      */
 
     public OrderLineItemDistributionChannelSetMessageBuilder resource(
@@ -168,6 +187,8 @@ public class OrderLineItemDistributionChannelSetMessageBuilder
 
     /**
      *  <p>Version of the resource on which the change or action was performed.</p>
+     * @param resourceVersion
+     * @return Builder
      */
 
     public OrderLineItemDistributionChannelSetMessageBuilder resourceVersion(final Long resourceVersion) {
@@ -177,6 +198,7 @@ public class OrderLineItemDistributionChannelSetMessageBuilder
 
     /**
      *  <p>User-provided identifiers of the resource, such as <code>key</code> or <code>externalId</code>. Only present if the resource has such identifiers.</p>
+     * @return Builder
      */
 
     public OrderLineItemDistributionChannelSetMessageBuilder resourceUserProvidedIdentifiers(
@@ -189,6 +211,8 @@ public class OrderLineItemDistributionChannelSetMessageBuilder
 
     /**
      *  <p>User-provided identifiers of the resource, such as <code>key</code> or <code>externalId</code>. Only present if the resource has such identifiers.</p>
+     * @param resourceUserProvidedIdentifiers
+     * @return Builder
      */
 
     public OrderLineItemDistributionChannelSetMessageBuilder resourceUserProvidedIdentifiers(
@@ -199,6 +223,8 @@ public class OrderLineItemDistributionChannelSetMessageBuilder
 
     /**
      *  <p>Unique identifier of the Line Item.</p>
+     * @param lineItemId
+     * @return Builder
      */
 
     public OrderLineItemDistributionChannelSetMessageBuilder lineItemId(final String lineItemId) {
@@ -208,6 +234,7 @@ public class OrderLineItemDistributionChannelSetMessageBuilder
 
     /**
      *  <p>Distribution Channel that was set.</p>
+     * @return Builder
      */
 
     public OrderLineItemDistributionChannelSetMessageBuilder distributionChannel(
@@ -219,6 +246,8 @@ public class OrderLineItemDistributionChannelSetMessageBuilder
 
     /**
      *  <p>Distribution Channel that was set.</p>
+     * @param distributionChannel
+     * @return Builder
      */
 
     public OrderLineItemDistributionChannelSetMessageBuilder distributionChannel(

@@ -27,6 +27,8 @@ public class CategorySetKeyActionBuilder implements Builder<CategorySetKeyAction
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
+     * @param key
+     * @return Builder
      */
 
     public CategorySetKeyActionBuilder key(@Nullable final String key) {

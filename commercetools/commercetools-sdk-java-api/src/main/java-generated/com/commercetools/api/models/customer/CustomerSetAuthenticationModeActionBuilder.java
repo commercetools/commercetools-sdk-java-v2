@@ -30,6 +30,8 @@ public class CustomerSetAuthenticationModeActionBuilder implements Builder<Custo
 
     /**
      *  <p>Value to set. Changing a Customer's <code>authMode</code> from <code>Password</code> to <code>ExternalAuth</code> deletes the Customer's password.</p>
+     * @param authMode
+     * @return Builder
      */
 
     public CustomerSetAuthenticationModeActionBuilder authMode(
@@ -40,6 +42,8 @@ public class CustomerSetAuthenticationModeActionBuilder implements Builder<Custo
 
     /**
      *  <p>Required when <code>authMode</code> is <code>Password</code>.</p>
+     * @param password
+     * @return Builder
      */
 
     public CustomerSetAuthenticationModeActionBuilder password(@Nullable final String password) {

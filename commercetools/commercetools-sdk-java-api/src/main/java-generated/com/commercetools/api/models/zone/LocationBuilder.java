@@ -30,6 +30,8 @@ public class LocationBuilder implements Builder<Location> {
 
     /**
      *  <p>Country code of the geographic location.</p>
+     * @param country
+     * @return Builder
      */
 
     public LocationBuilder country(final String country) {
@@ -39,6 +41,8 @@ public class LocationBuilder implements Builder<Location> {
 
     /**
      *  <p>State within the country.</p>
+     * @param state
+     * @return Builder
      */
 
     public LocationBuilder state(@Nullable final String state) {

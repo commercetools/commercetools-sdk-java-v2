@@ -33,6 +33,7 @@ public interface Image {
 
     /**
      *  <p>URL of the image in its original size. The URL must be unique within a single variant. It can be used to obtain the image in different sizes.</p>
+     * @return url
      */
     @NotNull
     @JsonProperty("url")
@@ -40,6 +41,7 @@ public interface Image {
 
     /**
      *  <p>Dimensions of the original image. This can be used by your application, for example, to determine whether the image is large enough to display a zoom view.</p>
+     * @return dimensions
      */
     @NotNull
     @Valid
@@ -48,6 +50,7 @@ public interface Image {
 
     /**
      *  <p>Custom label that can be used, for example, as an image description.</p>
+     * @return label
      */
 
     @JsonProperty("label")

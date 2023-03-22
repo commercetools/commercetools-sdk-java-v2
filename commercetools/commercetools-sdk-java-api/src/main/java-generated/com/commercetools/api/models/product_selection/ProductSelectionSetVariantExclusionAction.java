@@ -36,6 +36,7 @@ public interface ProductSelectionSetVariantExclusionAction extends ProductSelect
 
     /**
      *  <p>ResourceIdentifier of the Product</p>
+     * @return product
      */
     @NotNull
     @Valid
@@ -44,6 +45,7 @@ public interface ProductSelectionSetVariantExclusionAction extends ProductSelect
 
     /**
      *  <p>Determines which Variants of the previously excluded Product are to be included in the Product Selection of type Individual Exclusion. Leave it empty to unset an existing Variant Exclusion.</p>
+     * @return variantExclusion
      */
     @Valid
     @JsonProperty("variantExclusion")

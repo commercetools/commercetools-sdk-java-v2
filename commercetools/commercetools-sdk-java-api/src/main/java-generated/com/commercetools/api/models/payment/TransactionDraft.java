@@ -37,6 +37,7 @@ public interface TransactionDraft extends com.commercetools.api.models.Customiza
 
     /**
      *  <p>Date and time (UTC) the Transaction took place.</p>
+     * @return timestamp
      */
 
     @JsonProperty("timestamp")
@@ -44,6 +45,7 @@ public interface TransactionDraft extends com.commercetools.api.models.Customiza
 
     /**
      *  <p>Type of the Transaction.</p>
+     * @return type
      */
     @NotNull
     @JsonProperty("type")
@@ -51,6 +53,7 @@ public interface TransactionDraft extends com.commercetools.api.models.Customiza
 
     /**
      *  <p>Money value for the Transaction.</p>
+     * @return amount
      */
     @NotNull
     @Valid
@@ -59,6 +62,7 @@ public interface TransactionDraft extends com.commercetools.api.models.Customiza
 
     /**
      *  <p>Identifier used by the payment service that manages the Transaction. Can be used to correlate the Transaction to an interface interaction.</p>
+     * @return interactionId
      */
 
     @JsonProperty("interactionId")
@@ -66,6 +70,7 @@ public interface TransactionDraft extends com.commercetools.api.models.Customiza
 
     /**
      *  <p>State of the Transaction.</p>
+     * @return state
      */
 
     @JsonProperty("state")
@@ -73,6 +78,7 @@ public interface TransactionDraft extends com.commercetools.api.models.Customiza
 
     /**
      *  <p>Custom Fields of the Transaction.</p>
+     * @return custom
      */
     @Valid
     @JsonProperty("custom")

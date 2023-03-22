@@ -36,6 +36,7 @@ public interface EnumKeyDoesNotExistError extends ErrorObject {
 
     /**
      *
+     * @return code
      */
     @NotNull
     @JsonProperty("code")
@@ -43,6 +44,7 @@ public interface EnumKeyDoesNotExistError extends ErrorObject {
 
     /**
      *  <p><code>"The $fieldName field definition does not contain an enum value with the key $enumKey."</code></p>
+     * @return message
      */
     @NotNull
     @JsonProperty("message")
@@ -50,6 +52,7 @@ public interface EnumKeyDoesNotExistError extends ErrorObject {
 
     /**
      *  <p>Conflicting enum key.</p>
+     * @return conflictingEnumKey
      */
     @NotNull
     @JsonProperty("conflictingEnumKey")
@@ -57,6 +60,7 @@ public interface EnumKeyDoesNotExistError extends ErrorObject {
 
     /**
      *  <p>Name of the conflicting Attribute.</p>
+     * @return conflictingAttributeName
      */
     @NotNull
     @JsonProperty("conflictingAttributeName")

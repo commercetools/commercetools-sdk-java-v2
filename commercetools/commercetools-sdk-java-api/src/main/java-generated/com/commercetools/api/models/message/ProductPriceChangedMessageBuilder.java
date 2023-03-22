@@ -70,6 +70,8 @@ public class ProductPriceChangedMessageBuilder implements Builder<ProductPriceCh
 
     /**
      *  <p>Unique identifier of the Message. Can be used to track which Messages have been processed.</p>
+     * @param id
+     * @return Builder
      */
 
     public ProductPriceChangedMessageBuilder id(final String id) {
@@ -79,6 +81,8 @@ public class ProductPriceChangedMessageBuilder implements Builder<ProductPriceCh
 
     /**
      *  <p>Version of a resource. In case of Messages, this is always <code>1</code>.</p>
+     * @param version
+     * @return Builder
      */
 
     public ProductPriceChangedMessageBuilder version(final Long version) {
@@ -88,6 +92,8 @@ public class ProductPriceChangedMessageBuilder implements Builder<ProductPriceCh
 
     /**
      *  <p>Date and time (UTC) the Message was generated.</p>
+     * @param createdAt
+     * @return Builder
      */
 
     public ProductPriceChangedMessageBuilder createdAt(final java.time.ZonedDateTime createdAt) {
@@ -97,6 +103,8 @@ public class ProductPriceChangedMessageBuilder implements Builder<ProductPriceCh
 
     /**
      *  <p>Value of <code>createdAt</code>.</p>
+     * @param lastModifiedAt
+     * @return Builder
      */
 
     public ProductPriceChangedMessageBuilder lastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {
@@ -106,6 +114,7 @@ public class ProductPriceChangedMessageBuilder implements Builder<ProductPriceCh
 
     /**
      *  <p>Value of <code>createdBy</code>.</p>
+     * @return Builder
      */
 
     public ProductPriceChangedMessageBuilder lastModifiedBy(
@@ -116,6 +125,8 @@ public class ProductPriceChangedMessageBuilder implements Builder<ProductPriceCh
 
     /**
      *  <p>Value of <code>createdBy</code>.</p>
+     * @param lastModifiedBy
+     * @return Builder
      */
 
     public ProductPriceChangedMessageBuilder lastModifiedBy(
@@ -126,6 +137,7 @@ public class ProductPriceChangedMessageBuilder implements Builder<ProductPriceCh
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @return Builder
      */
 
     public ProductPriceChangedMessageBuilder createdBy(
@@ -136,6 +148,8 @@ public class ProductPriceChangedMessageBuilder implements Builder<ProductPriceCh
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param createdBy
+     * @return Builder
      */
 
     public ProductPriceChangedMessageBuilder createdBy(
@@ -146,6 +160,8 @@ public class ProductPriceChangedMessageBuilder implements Builder<ProductPriceCh
 
     /**
      *  <p>Message number in relation to other Messages for a given resource. The <code>sequenceNumber</code> of the next Message for the resource is the successor of the <code>sequenceNumber</code> of the current Message. Meaning, the <code>sequenceNumber</code> of the next Message equals the <code>sequenceNumber</code> of the current Message + 1. <code>sequenceNumber</code> can be used to ensure that Messages are processed in the correct order for a particular resource.</p>
+     * @param sequenceNumber
+     * @return Builder
      */
 
     public ProductPriceChangedMessageBuilder sequenceNumber(final Long sequenceNumber) {
@@ -155,6 +171,8 @@ public class ProductPriceChangedMessageBuilder implements Builder<ProductPriceCh
 
     /**
      *  <p>Reference to the resource on which the change or action was performed.</p>
+     * @param resource
+     * @return Builder
      */
 
     public ProductPriceChangedMessageBuilder resource(final com.commercetools.api.models.common.Reference resource) {
@@ -164,6 +182,7 @@ public class ProductPriceChangedMessageBuilder implements Builder<ProductPriceCh
 
     /**
      *  <p>Reference to the resource on which the change or action was performed.</p>
+     * @return Builder
      */
 
     public ProductPriceChangedMessageBuilder resource(
@@ -174,6 +193,8 @@ public class ProductPriceChangedMessageBuilder implements Builder<ProductPriceCh
 
     /**
      *  <p>Version of the resource on which the change or action was performed.</p>
+     * @param resourceVersion
+     * @return Builder
      */
 
     public ProductPriceChangedMessageBuilder resourceVersion(final Long resourceVersion) {
@@ -183,6 +204,7 @@ public class ProductPriceChangedMessageBuilder implements Builder<ProductPriceCh
 
     /**
      *  <p>User-provided identifiers of the resource, such as <code>key</code> or <code>externalId</code>. Only present if the resource has such identifiers.</p>
+     * @return Builder
      */
 
     public ProductPriceChangedMessageBuilder resourceUserProvidedIdentifiers(
@@ -195,6 +217,8 @@ public class ProductPriceChangedMessageBuilder implements Builder<ProductPriceCh
 
     /**
      *  <p>User-provided identifiers of the resource, such as <code>key</code> or <code>externalId</code>. Only present if the resource has such identifiers.</p>
+     * @param resourceUserProvidedIdentifiers
+     * @return Builder
      */
 
     public ProductPriceChangedMessageBuilder resourceUserProvidedIdentifiers(
@@ -205,6 +229,8 @@ public class ProductPriceChangedMessageBuilder implements Builder<ProductPriceCh
 
     /**
      *  <p>Unique identifier of the ProductVariant for which the Price was changed.</p>
+     * @param variantId
+     * @return Builder
      */
 
     public ProductPriceChangedMessageBuilder variantId(final Long variantId) {
@@ -214,6 +240,7 @@ public class ProductPriceChangedMessageBuilder implements Builder<ProductPriceCh
 
     /**
      *  <p>The current Embedded Price before the Change Embedded Price update action.</p>
+     * @return Builder
      */
 
     public ProductPriceChangedMessageBuilder oldPrice(
@@ -224,6 +251,8 @@ public class ProductPriceChangedMessageBuilder implements Builder<ProductPriceCh
 
     /**
      *  <p>The current Embedded Price before the Change Embedded Price update action.</p>
+     * @param oldPrice
+     * @return Builder
      */
 
     public ProductPriceChangedMessageBuilder oldPrice(final com.commercetools.api.models.common.Price oldPrice) {
@@ -233,6 +262,7 @@ public class ProductPriceChangedMessageBuilder implements Builder<ProductPriceCh
 
     /**
      *  <p>The Embedded Price after the Change Embedded Price update action.</p>
+     * @return Builder
      */
 
     public ProductPriceChangedMessageBuilder newPrice(
@@ -243,6 +273,8 @@ public class ProductPriceChangedMessageBuilder implements Builder<ProductPriceCh
 
     /**
      *  <p>The Embedded Price after the Change Embedded Price update action.</p>
+     * @param newPrice
+     * @return Builder
      */
 
     public ProductPriceChangedMessageBuilder newPrice(final com.commercetools.api.models.common.Price newPrice) {
@@ -252,6 +284,8 @@ public class ProductPriceChangedMessageBuilder implements Builder<ProductPriceCh
 
     /**
      *  <p>Whether the update was only applied to the staged Product Projection.</p>
+     * @param staged
+     * @return Builder
      */
 
     public ProductPriceChangedMessageBuilder staged(final Boolean staged) {
@@ -261,6 +295,7 @@ public class ProductPriceChangedMessageBuilder implements Builder<ProductPriceCh
 
     /**
      *  <p>The staged Embedded Price before the Change Embedded Price update action.</p>
+     * @return Builder
      */
 
     public ProductPriceChangedMessageBuilder oldStagedPrice(
@@ -271,6 +306,8 @@ public class ProductPriceChangedMessageBuilder implements Builder<ProductPriceCh
 
     /**
      *  <p>The staged Embedded Price before the Change Embedded Price update action.</p>
+     * @param oldStagedPrice
+     * @return Builder
      */
 
     public ProductPriceChangedMessageBuilder oldStagedPrice(

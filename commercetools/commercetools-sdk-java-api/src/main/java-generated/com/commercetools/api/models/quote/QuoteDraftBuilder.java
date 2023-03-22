@@ -43,6 +43,8 @@ public class QuoteDraftBuilder implements Builder<QuoteDraft> {
 
     /**
      *  <p>User-defined unique identifier for the Quote.</p>
+     * @param key
+     * @return Builder
      */
 
     public QuoteDraftBuilder key(@Nullable final String key) {
@@ -52,6 +54,7 @@ public class QuoteDraftBuilder implements Builder<QuoteDraft> {
 
     /**
      *  <p>StagedQuote from which the Quote is created.</p>
+     * @return Builder
      */
 
     public QuoteDraftBuilder stagedQuote(
@@ -64,6 +67,8 @@ public class QuoteDraftBuilder implements Builder<QuoteDraft> {
 
     /**
      *  <p>StagedQuote from which the Quote is created.</p>
+     * @param stagedQuote
+     * @return Builder
      */
 
     public QuoteDraftBuilder stagedQuote(
@@ -74,6 +79,8 @@ public class QuoteDraftBuilder implements Builder<QuoteDraft> {
 
     /**
      *  <p>Current version of the StagedQuote.</p>
+     * @param stagedQuoteVersion
+     * @return Builder
      */
 
     public QuoteDraftBuilder stagedQuoteVersion(final Long stagedQuoteVersion) {
@@ -83,6 +90,8 @@ public class QuoteDraftBuilder implements Builder<QuoteDraft> {
 
     /**
      *  <p>If <code>true</code>, the <code>stagedQuoteState</code> of the referenced StagedQuote will be set to <code>Sent</code>.</p>
+     * @param stagedQuoteStateToSent
+     * @return Builder
      */
 
     public QuoteDraftBuilder stagedQuoteStateToSent(@Nullable final Boolean stagedQuoteStateToSent) {
@@ -92,6 +101,7 @@ public class QuoteDraftBuilder implements Builder<QuoteDraft> {
 
     /**
      *  <p>State of the Quote. This reference can point to a State in a custom workflow.</p>
+     * @return Builder
      */
 
     public QuoteDraftBuilder state(
@@ -102,6 +112,8 @@ public class QuoteDraftBuilder implements Builder<QuoteDraft> {
 
     /**
      *  <p>State of the Quote. This reference can point to a State in a custom workflow.</p>
+     * @param state
+     * @return Builder
      */
 
     public QuoteDraftBuilder state(@Nullable final com.commercetools.api.models.state.StateReference state) {
@@ -115,6 +127,7 @@ public class QuoteDraftBuilder implements Builder<QuoteDraft> {
      *   <li>If specified, the Custom Fields are merged with the Custom Fields on the referenced StagedQuote and added to the Quote.</li>
      *   <li>If empty, the Custom Fields on the referenced StagedQuote are added to the Quote automatically.</li>
      *  </ul>
+     * @return Builder
      */
 
     public QuoteDraftBuilder custom(
@@ -129,6 +142,8 @@ public class QuoteDraftBuilder implements Builder<QuoteDraft> {
      *   <li>If specified, the Custom Fields are merged with the Custom Fields on the referenced StagedQuote and added to the Quote.</li>
      *   <li>If empty, the Custom Fields on the referenced StagedQuote are added to the Quote automatically.</li>
      *  </ul>
+     * @param custom
+     * @return Builder
      */
 
     public QuoteDraftBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFieldsDraft custom) {

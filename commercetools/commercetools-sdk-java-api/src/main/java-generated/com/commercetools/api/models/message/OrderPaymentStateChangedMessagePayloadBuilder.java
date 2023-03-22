@@ -30,6 +30,8 @@ public class OrderPaymentStateChangedMessagePayloadBuilder implements Builder<Or
 
     /**
      *  <p>PaymentState after the Change Payment State update action.</p>
+     * @param paymentState
+     * @return Builder
      */
 
     public OrderPaymentStateChangedMessagePayloadBuilder paymentState(
@@ -40,6 +42,8 @@ public class OrderPaymentStateChangedMessagePayloadBuilder implements Builder<Or
 
     /**
      *  <p>PaymentState before the Change Payment State update action.</p>
+     * @param oldPaymentState
+     * @return Builder
      */
 
     public OrderPaymentStateChangedMessagePayloadBuilder oldPaymentState(

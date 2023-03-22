@@ -40,6 +40,8 @@ public class MyTransactionDraftBuilder implements Builder<MyTransactionDraft> {
 
     /**
      *  <p>Date and time (UTC) the Transaction took place.</p>
+     * @param timestamp
+     * @return Builder
      */
 
     public MyTransactionDraftBuilder timestamp(@Nullable final java.time.ZonedDateTime timestamp) {
@@ -49,6 +51,8 @@ public class MyTransactionDraftBuilder implements Builder<MyTransactionDraft> {
 
     /**
      *  <p>Type of the Transaction. Only <code>Authorization</code> or <code>Charge</code> is allowed.</p>
+     * @param type
+     * @return Builder
      */
 
     public MyTransactionDraftBuilder type(final com.commercetools.api.models.payment.TransactionType type) {
@@ -58,6 +62,7 @@ public class MyTransactionDraftBuilder implements Builder<MyTransactionDraft> {
 
     /**
      *  <p>Money value for the Transaction.</p>
+     * @return Builder
      */
 
     public MyTransactionDraftBuilder amount(
@@ -68,6 +73,8 @@ public class MyTransactionDraftBuilder implements Builder<MyTransactionDraft> {
 
     /**
      *  <p>Money value for the Transaction.</p>
+     * @param amount
+     * @return Builder
      */
 
     public MyTransactionDraftBuilder amount(final com.commercetools.api.models.common.Money amount) {
@@ -77,6 +84,8 @@ public class MyTransactionDraftBuilder implements Builder<MyTransactionDraft> {
 
     /**
      *  <p>Identifier used by the payment service that manages the Transaction. Can be used to correlate the Transaction to an interface interaction.</p>
+     * @param interactionId
+     * @return Builder
      */
 
     public MyTransactionDraftBuilder interactionId(@Nullable final String interactionId) {
@@ -86,6 +95,7 @@ public class MyTransactionDraftBuilder implements Builder<MyTransactionDraft> {
 
     /**
      *  <p>Custom Fields of the Transaction.</p>
+     * @return Builder
      */
 
     public MyTransactionDraftBuilder custom(
@@ -96,6 +106,8 @@ public class MyTransactionDraftBuilder implements Builder<MyTransactionDraft> {
 
     /**
      *  <p>Custom Fields of the Transaction.</p>
+     * @param custom
+     * @return Builder
      */
 
     public MyTransactionDraftBuilder custom(

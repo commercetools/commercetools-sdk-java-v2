@@ -27,6 +27,8 @@ public class ProductSetPriceModeActionBuilder implements Builder<ProductSetPrice
 
     /**
      *  <p>Specifies which type of Prices should be used when looking up a price for the Product.</p>
+     * @param priceMode
+     * @return Builder
      */
 
     public ProductSetPriceModeActionBuilder priceMode(

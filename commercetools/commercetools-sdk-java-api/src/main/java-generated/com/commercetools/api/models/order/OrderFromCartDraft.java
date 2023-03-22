@@ -35,6 +35,7 @@ public interface OrderFromCartDraft extends io.vrap.rmf.base.client.Draft<OrderF
 
     /**
      *  <p>Unique identifier of the Cart from which you can create an Order.</p>
+     * @return id
      */
     @Deprecated
     @JsonProperty("id")
@@ -42,6 +43,7 @@ public interface OrderFromCartDraft extends io.vrap.rmf.base.client.Draft<OrderF
 
     /**
      *  <p>ResourceIdentifier of the Cart from which this order is created.</p>
+     * @return cart
      */
     @Valid
     @JsonProperty("cart")
@@ -49,6 +51,7 @@ public interface OrderFromCartDraft extends io.vrap.rmf.base.client.Draft<OrderF
 
     /**
      *
+     * @return version
      */
     @NotNull
     @JsonProperty("version")
@@ -56,6 +59,7 @@ public interface OrderFromCartDraft extends io.vrap.rmf.base.client.Draft<OrderF
 
     /**
      *  <p>String that uniquely identifies an order. It can be used to create more human-readable (in contrast to ID) identifier for the order. It should be unique across a project. Once it's set it cannot be changed. For easier use on Get, Update and Delete actions we suggest assigning order numbers that match the regular expression <code>[a-z0-9_\-]{2,36}</code>.</p>
+     * @return orderNumber
      */
 
     @JsonProperty("orderNumber")
@@ -63,6 +67,7 @@ public interface OrderFromCartDraft extends io.vrap.rmf.base.client.Draft<OrderF
 
     /**
      *  <p>Identifier for a purchase order, usually in a B2B context. The Purchase Order Number is typically entered by the Buyer and can also be used with Quotes.</p>
+     * @return purchaseOrderNumber
      */
 
     @JsonProperty("purchaseOrderNumber")
@@ -70,6 +75,7 @@ public interface OrderFromCartDraft extends io.vrap.rmf.base.client.Draft<OrderF
 
     /**
      *
+     * @return paymentState
      */
 
     @JsonProperty("paymentState")
@@ -77,6 +83,7 @@ public interface OrderFromCartDraft extends io.vrap.rmf.base.client.Draft<OrderF
 
     /**
      *
+     * @return shipmentState
      */
 
     @JsonProperty("shipmentState")
@@ -84,6 +91,7 @@ public interface OrderFromCartDraft extends io.vrap.rmf.base.client.Draft<OrderF
 
     /**
      *  <p>Order will be created with <code>Open</code> status by default.</p>
+     * @return orderState
      */
 
     @JsonProperty("orderState")
@@ -91,6 +99,7 @@ public interface OrderFromCartDraft extends io.vrap.rmf.base.client.Draft<OrderF
 
     /**
      *
+     * @return state
      */
     @Valid
     @JsonProperty("state")
@@ -98,6 +107,7 @@ public interface OrderFromCartDraft extends io.vrap.rmf.base.client.Draft<OrderF
 
     /**
      *  <p>Custom Fields for the Order. The Custom Field type must match the type of the Custom Fields in the referenced Cart. If specified, the Custom Fields are merged with the Custom Fields on the referenced Cart and added to the Order. If empty, the Custom Fields on the referenced Cart are added to the Order automatically.</p>
+     * @return custom
      */
     @Valid
     @JsonProperty("custom")

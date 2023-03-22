@@ -35,6 +35,7 @@ public interface BusinessUnitCreatedMessagePayload extends MessagePayload {
 
     /**
      *  <p>The Business Unit that was created.</p>
+     * @return businessUnit
      */
     @NotNull
     @Valid

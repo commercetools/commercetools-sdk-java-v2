@@ -26,6 +26,7 @@ public class StandalonePriceCreatedMessagePayloadBuilder implements Builder<Stan
 
     /**
      *  <p>Standalone Price that was created.</p>
+     * @return Builder
      */
 
     public StandalonePriceCreatedMessagePayloadBuilder standalonePrice(
@@ -37,6 +38,8 @@ public class StandalonePriceCreatedMessagePayloadBuilder implements Builder<Stan
 
     /**
      *  <p>Standalone Price that was created.</p>
+     * @param standalonePrice
+     * @return Builder
      */
 
     public StandalonePriceCreatedMessagePayloadBuilder standalonePrice(

@@ -65,6 +65,7 @@ public interface Cart extends BaseResource, CartMixin, com.commercetools.api.mod
 
     /**
      *  <p>Unique identifier of the Cart.</p>
+     * @return id
      */
     @NotNull
     @JsonProperty("id")
@@ -72,6 +73,7 @@ public interface Cart extends BaseResource, CartMixin, com.commercetools.api.mod
 
     /**
      *  <p>Current version of the Cart.</p>
+     * @return version
      */
     @NotNull
     @JsonProperty("version")
@@ -79,6 +81,7 @@ public interface Cart extends BaseResource, CartMixin, com.commercetools.api.mod
 
     /**
      *  <p>User-defined unique identifier of the Cart.</p>
+     * @return key
      */
 
     @JsonProperty("key")
@@ -86,6 +89,7 @@ public interface Cart extends BaseResource, CartMixin, com.commercetools.api.mod
 
     /**
      *  <p><code>id</code> of the Customer that the Cart belongs to.</p>
+     * @return customerId
      */
 
     @JsonProperty("customerId")
@@ -93,6 +97,7 @@ public interface Cart extends BaseResource, CartMixin, com.commercetools.api.mod
 
     /**
      *  <p>Email address of the Customer that the Cart belongs to.</p>
+     * @return customerEmail
      */
 
     @JsonProperty("customerEmail")
@@ -100,6 +105,7 @@ public interface Cart extends BaseResource, CartMixin, com.commercetools.api.mod
 
     /**
      *  <p>Reference to the Customer Group of the Customer that the Cart belongs to. Used for LineItem Price selection.</p>
+     * @return customerGroup
      */
     @Valid
     @JsonProperty("customerGroup")
@@ -107,6 +113,7 @@ public interface Cart extends BaseResource, CartMixin, com.commercetools.api.mod
 
     /**
      *  <p>Anonymous session associated with the Cart.</p>
+     * @return anonymousId
      */
 
     @JsonProperty("anonymousId")
@@ -114,6 +121,7 @@ public interface Cart extends BaseResource, CartMixin, com.commercetools.api.mod
 
     /**
      *  <p>Reference to a Business Unit the Cart belongs to.</p>
+     * @return businessUnit
      */
     @Valid
     @JsonProperty("businessUnit")
@@ -121,6 +129,7 @@ public interface Cart extends BaseResource, CartMixin, com.commercetools.api.mod
 
     /**
      *  <p>Reference to a Store the Cart belongs to.</p>
+     * @return store
      */
     @Valid
     @JsonProperty("store")
@@ -128,6 +137,7 @@ public interface Cart extends BaseResource, CartMixin, com.commercetools.api.mod
 
     /**
      *  <p>Line Items added to the Cart.</p>
+     * @return lineItems
      */
     @NotNull
     @Valid
@@ -136,6 +146,7 @@ public interface Cart extends BaseResource, CartMixin, com.commercetools.api.mod
 
     /**
      *  <p>Custom Line Items added to the Cart.</p>
+     * @return customLineItems
      */
     @NotNull
     @Valid
@@ -144,6 +155,7 @@ public interface Cart extends BaseResource, CartMixin, com.commercetools.api.mod
 
     /**
      *  <p>Sum of all LineItem quantities, excluding CustomLineItems. Only present when the Cart has at least one LineItem.</p>
+     * @return totalLineItemQuantity
      */
 
     @JsonProperty("totalLineItemQuantity")
@@ -152,6 +164,7 @@ public interface Cart extends BaseResource, CartMixin, com.commercetools.api.mod
     /**
      *  <p>Sum of the <code>totalPrice</code> field of all LineItems and CustomLineItems, and if available, the <code>price</code> field of ShippingInfo.</p>
      *  <p>Taxes are included if TaxRate <code>includedInPrice</code> is <code>true</code> for each price.</p>
+     * @return totalPrice
      */
     @NotNull
     @Valid
@@ -163,6 +176,7 @@ public interface Cart extends BaseResource, CartMixin, com.commercetools.api.mod
      *   <li>For a Cart with <code>Platform</code> TaxMode, it is automatically set when a shipping address is set.</li>
      *   <li>For a Cart with <code>External</code> TaxMode, it is automatically set when the external Tax Rate for all Line Items, Custom Line Items, and Shipping Methods in the Cart are set.</li>
      *  </ul>
+     * @return taxedPrice
      */
     @Valid
     @JsonProperty("taxedPrice")
@@ -170,6 +184,7 @@ public interface Cart extends BaseResource, CartMixin, com.commercetools.api.mod
 
     /**
      *  <p>Sum of the <code>taxedPrice</code> field of ShippingInfo across all Shipping Methods.</p>
+     * @return taxedShippingPrice
      */
     @Valid
     @JsonProperty("taxedShippingPrice")
@@ -177,6 +192,7 @@ public interface Cart extends BaseResource, CartMixin, com.commercetools.api.mod
 
     /**
      *  <p>Indicates how Tax Rates are set.</p>
+     * @return taxMode
      */
     @NotNull
     @JsonProperty("taxMode")
@@ -184,6 +200,7 @@ public interface Cart extends BaseResource, CartMixin, com.commercetools.api.mod
 
     /**
      *  <p>Indicates how monetary values are rounded when calculating taxes for <code>taxedPrice</code>.</p>
+     * @return taxRoundingMode
      */
     @NotNull
     @JsonProperty("taxRoundingMode")
@@ -191,6 +208,7 @@ public interface Cart extends BaseResource, CartMixin, com.commercetools.api.mod
 
     /**
      *  <p>Indicates how taxes are calculated when calculating taxes for <code>taxedPrice</code>.</p>
+     * @return taxCalculationMode
      */
     @NotNull
     @JsonProperty("taxCalculationMode")
@@ -198,6 +216,7 @@ public interface Cart extends BaseResource, CartMixin, com.commercetools.api.mod
 
     /**
      *  <p>Indicates how stock quantities are tracked for Line Items in the Cart.</p>
+     * @return inventoryMode
      */
     @NotNull
     @JsonProperty("inventoryMode")
@@ -205,6 +224,7 @@ public interface Cart extends BaseResource, CartMixin, com.commercetools.api.mod
 
     /**
      *  <p>Current status of the Cart.</p>
+     * @return cartState
      */
     @NotNull
     @JsonProperty("cartState")
@@ -212,6 +232,7 @@ public interface Cart extends BaseResource, CartMixin, com.commercetools.api.mod
 
     /**
      *  <p>Billing address associated with the Cart.</p>
+     * @return billingAddress
      */
     @Valid
     @JsonProperty("billingAddress")
@@ -219,6 +240,7 @@ public interface Cart extends BaseResource, CartMixin, com.commercetools.api.mod
 
     /**
      *  <p>Shipping address associated with the Cart. Determines eligible ShippingMethod rates and Tax Rates of Line Items.</p>
+     * @return shippingAddress
      */
     @Valid
     @JsonProperty("shippingAddress")
@@ -226,6 +248,7 @@ public interface Cart extends BaseResource, CartMixin, com.commercetools.api.mod
 
     /**
      *  <p>Indicates whether the Cart has one or multiple Shipping Methods.</p>
+     * @return shippingMode
      */
     @NotNull
     @JsonProperty("shippingMode")
@@ -233,6 +256,7 @@ public interface Cart extends BaseResource, CartMixin, com.commercetools.api.mod
 
     /**
      *  <p>Shipping-related information of a Cart with <code>Single</code> ShippingMode. Automatically set when a Shipping Method is set.</p>
+     * @return shippingInfo
      */
     @Valid
     @JsonProperty("shippingInfo")
@@ -240,6 +264,7 @@ public interface Cart extends BaseResource, CartMixin, com.commercetools.api.mod
 
     /**
      *  <p>Shipping-related information of a Cart with <code>Multiple</code> ShippingMode. Updated automatically each time a new Shipping Method is added.</p>
+     * @return shipping
      */
     @NotNull
     @Valid
@@ -253,6 +278,7 @@ public interface Cart extends BaseResource, CartMixin, com.commercetools.api.mod
      *   <li>If <code>CartScore</code>, it is ScoreShippingRateInput.</li>
      *   <li>If <code>CartValue</code>, it cannot be used.</li>
      *  </ul>
+     * @return shippingRateInput
      */
     @Valid
     @JsonProperty("shippingRateInput")
@@ -261,6 +287,7 @@ public interface Cart extends BaseResource, CartMixin, com.commercetools.api.mod
     /**
      *  <p>Additional shipping addresses of the Cart as specified by LineItems using the <code>shippingDetails</code> field.</p>
      *  <p>Eligible Shipping Methods or applicable Tax Rates are determined by the address in <code>shippingAddress</code>, and not <code>itemShippingAddresses</code>.</p>
+     * @return itemShippingAddresses
      */
     @NotNull
     @Valid
@@ -269,6 +296,7 @@ public interface Cart extends BaseResource, CartMixin, com.commercetools.api.mod
 
     /**
      *  <p>Discount Codes applied to the Cart. A Cart that has <code>directDiscounts</code> cannot have <code>discountCodes</code>.</p>
+     * @return discountCodes
      */
     @NotNull
     @Valid
@@ -277,6 +305,7 @@ public interface Cart extends BaseResource, CartMixin, com.commercetools.api.mod
 
     /**
      *  <p>Direct Discounts added to the Cart. A Cart that has <code>discountCodes</code> cannot have <code>directDiscounts</code>.</p>
+     * @return directDiscounts
      */
     @NotNull
     @Valid
@@ -285,6 +314,7 @@ public interface Cart extends BaseResource, CartMixin, com.commercetools.api.mod
 
     /**
      *  <p>Automatically set when a Line Item with <code>GiftLineItem</code> LineItemMode is removed from the Cart.</p>
+     * @return refusedGifts
      */
     @NotNull
     @Valid
@@ -293,6 +323,7 @@ public interface Cart extends BaseResource, CartMixin, com.commercetools.api.mod
 
     /**
      *  <p>Payment information related to the Cart.</p>
+     * @return paymentInfo
      */
     @Valid
     @JsonProperty("paymentInfo")
@@ -300,6 +331,7 @@ public interface Cart extends BaseResource, CartMixin, com.commercetools.api.mod
 
     /**
      *  <p>Used for LineItem Price selection.</p>
+     * @return country
      */
 
     @JsonProperty("country")
@@ -307,6 +339,7 @@ public interface Cart extends BaseResource, CartMixin, com.commercetools.api.mod
 
     /**
      *  <p>Languages of the Cart. Can only contain languages supported by the Project.</p>
+     * @return locale
      */
 
     @JsonProperty("locale")
@@ -314,6 +347,7 @@ public interface Cart extends BaseResource, CartMixin, com.commercetools.api.mod
 
     /**
      *  <p>Indicates how the Cart was created.</p>
+     * @return origin
      */
     @NotNull
     @JsonProperty("origin")
@@ -321,6 +355,7 @@ public interface Cart extends BaseResource, CartMixin, com.commercetools.api.mod
 
     /**
      *  <p>Custom Fields of the Cart.</p>
+     * @return custom
      */
     @Valid
     @JsonProperty("custom")
@@ -328,6 +363,7 @@ public interface Cart extends BaseResource, CartMixin, com.commercetools.api.mod
 
     /**
      *  <p>Number of days after which an active Cart is deleted since its last modification. Configured in Project settings.</p>
+     * @return deleteDaysAfterLastModification
      */
 
     @JsonProperty("deleteDaysAfterLastModification")
@@ -335,6 +371,7 @@ public interface Cart extends BaseResource, CartMixin, com.commercetools.api.mod
 
     /**
      *  <p>Date and time (UTC) the Cart was initially created.</p>
+     * @return createdAt
      */
     @NotNull
     @JsonProperty("createdAt")
@@ -342,6 +379,7 @@ public interface Cart extends BaseResource, CartMixin, com.commercetools.api.mod
 
     /**
      *  <p>Date and time (UTC) the Cart was last updated.</p>
+     * @return lastModifiedAt
      */
     @NotNull
     @JsonProperty("lastModifiedAt")
@@ -349,6 +387,7 @@ public interface Cart extends BaseResource, CartMixin, com.commercetools.api.mod
 
     /**
      *  <p>Present on resources updated after 1 February 2019 except for events not tracked.</p>
+     * @return lastModifiedBy
      */
     @Valid
     @JsonProperty("lastModifiedBy")
@@ -356,6 +395,7 @@ public interface Cart extends BaseResource, CartMixin, com.commercetools.api.mod
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @return createdBy
      */
     @Valid
     @JsonProperty("createdBy")

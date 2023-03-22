@@ -31,6 +31,7 @@ public interface CartDiscountSetValidFromAndUntilAction extends CartDiscountUpda
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
+     * @return validFrom
      */
 
     @JsonProperty("validFrom")
@@ -38,6 +39,7 @@ public interface CartDiscountSetValidFromAndUntilAction extends CartDiscountUpda
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
+     * @return validUntil
      */
 
     @JsonProperty("validUntil")

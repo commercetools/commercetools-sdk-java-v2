@@ -40,6 +40,8 @@ public class ShippingMethodPagedQueryResponseBuilder implements Builder<Shipping
 
     /**
      *  <p>Number of results requested.</p>
+     * @param limit
+     * @return Builder
      */
 
     public ShippingMethodPagedQueryResponseBuilder limit(@Nullable final Long limit) {
@@ -49,6 +51,8 @@ public class ShippingMethodPagedQueryResponseBuilder implements Builder<Shipping
 
     /**
      *  <p>Actual number of results returned.</p>
+     * @param count
+     * @return Builder
      */
 
     public ShippingMethodPagedQueryResponseBuilder count(final Long count) {
@@ -58,6 +62,8 @@ public class ShippingMethodPagedQueryResponseBuilder implements Builder<Shipping
 
     /**
      *  <p>Total number of results matching the query. This number is an estimation that is not strongly consistent. This field is returned by default. For improved performance, calculating this field can be deactivated by using the query parameter <code>withTotal=false</code>. When the results are filtered with a Query Predicate, <code>total</code> is subject to a limit.</p>
+     * @param total
+     * @return Builder
      */
 
     public ShippingMethodPagedQueryResponseBuilder total(@Nullable final Long total) {
@@ -67,6 +73,8 @@ public class ShippingMethodPagedQueryResponseBuilder implements Builder<Shipping
 
     /**
      *  <p>Number of elements skipped.</p>
+     * @param offset
+     * @return Builder
      */
 
     public ShippingMethodPagedQueryResponseBuilder offset(@Nullable final Long offset) {
@@ -76,6 +84,8 @@ public class ShippingMethodPagedQueryResponseBuilder implements Builder<Shipping
 
     /**
      *  <p>Shipping Methods matching the query.</p>
+     * @param results
+     * @return Builder
      */
 
     public ShippingMethodPagedQueryResponseBuilder results(
@@ -86,6 +96,8 @@ public class ShippingMethodPagedQueryResponseBuilder implements Builder<Shipping
 
     /**
      *  <p>Shipping Methods matching the query.</p>
+     * @param results
+     * @return Builder
      */
 
     public ShippingMethodPagedQueryResponseBuilder results(
@@ -96,6 +108,8 @@ public class ShippingMethodPagedQueryResponseBuilder implements Builder<Shipping
 
     /**
      *  <p>Shipping Methods matching the query.</p>
+     * @param results
+     * @return Builder
      */
 
     public ShippingMethodPagedQueryResponseBuilder plusResults(
@@ -109,6 +123,7 @@ public class ShippingMethodPagedQueryResponseBuilder implements Builder<Shipping
 
     /**
      *  <p>Shipping Methods matching the query.</p>
+     * @return Builder
      */
 
     public ShippingMethodPagedQueryResponseBuilder plusResults(
@@ -123,6 +138,7 @@ public class ShippingMethodPagedQueryResponseBuilder implements Builder<Shipping
 
     /**
      *  <p>Shipping Methods matching the query.</p>
+     * @return Builder
      */
 
     public ShippingMethodPagedQueryResponseBuilder withResults(

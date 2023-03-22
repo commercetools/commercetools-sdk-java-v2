@@ -33,6 +33,7 @@ public interface ChannelSetGeoLocationAction extends ChannelUpdateAction {
 
     /**
      *  <p>Value to set.</p>
+     * @return geoLocation
      */
     @Valid
     @JsonProperty("geoLocation")

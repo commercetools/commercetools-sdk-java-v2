@@ -31,6 +31,8 @@ public class SetMethodInfoMethodChangeBuilder implements Builder<SetMethodInfoMe
 
     /**
      *  <p>Shape of the action for <code>setMethodInfoMethod</code></p>
+     * @param change
+     * @return Builder
      */
 
     public SetMethodInfoMethodChangeBuilder change(final String change) {
@@ -40,6 +42,8 @@ public class SetMethodInfoMethodChangeBuilder implements Builder<SetMethodInfoMe
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public SetMethodInfoMethodChangeBuilder previousValue(final String previousValue) {
@@ -49,6 +53,8 @@ public class SetMethodInfoMethodChangeBuilder implements Builder<SetMethodInfoMe
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public SetMethodInfoMethodChangeBuilder nextValue(final String nextValue) {

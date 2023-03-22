@@ -36,6 +36,7 @@ public interface DivisionDraft extends BusinessUnitDraft, io.vrap.rmf.base.clien
 
     /**
      *  <p>The parent unit of this Division. Can be a Company or a Division.</p>
+     * @return parentUnit
      */
     @NotNull
     @Valid
@@ -44,6 +45,7 @@ public interface DivisionDraft extends BusinessUnitDraft, io.vrap.rmf.base.clien
 
     /**
      *  <p>If not set, the Division inherits the Stores from its <code>parentUnit</code>. Set this to <code>Explicit</code> if you want to set the Stores explicitly in the <code>stores</code> field instead.</p>
+     * @return storeMode
      */
 
     @JsonProperty("storeMode")

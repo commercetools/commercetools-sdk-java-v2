@@ -28,6 +28,7 @@ public class ShippingMethodSetLocalizedNameActionBuilder implements Builder<Ship
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
+     * @return Builder
      */
 
     public ShippingMethodSetLocalizedNameActionBuilder localizedName(
@@ -38,6 +39,8 @@ public class ShippingMethodSetLocalizedNameActionBuilder implements Builder<Ship
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
+     * @param localizedName
+     * @return Builder
      */
 
     public ShippingMethodSetLocalizedNameActionBuilder localizedName(

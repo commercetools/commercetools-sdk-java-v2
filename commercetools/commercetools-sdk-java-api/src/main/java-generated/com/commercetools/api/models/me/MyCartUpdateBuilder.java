@@ -29,6 +29,8 @@ public class MyCartUpdateBuilder implements Builder<MyCartUpdate> {
 
     /**
      *  <p>Expected version of the Cart on which the changes apply. If it does not match the actual version, a 409 Conflict error is returned.</p>
+     * @param version
+     * @return Builder
      */
 
     public MyCartUpdateBuilder version(final Long version) {
@@ -38,6 +40,8 @@ public class MyCartUpdateBuilder implements Builder<MyCartUpdate> {
 
     /**
      *  <p>Update actions to be performed on the Cart.</p>
+     * @param actions
+     * @return Builder
      */
 
     public MyCartUpdateBuilder actions(final com.commercetools.api.models.me.MyCartUpdateAction... actions) {
@@ -47,6 +51,8 @@ public class MyCartUpdateBuilder implements Builder<MyCartUpdate> {
 
     /**
      *  <p>Update actions to be performed on the Cart.</p>
+     * @param actions
+     * @return Builder
      */
 
     public MyCartUpdateBuilder actions(
@@ -57,6 +63,8 @@ public class MyCartUpdateBuilder implements Builder<MyCartUpdate> {
 
     /**
      *  <p>Update actions to be performed on the Cart.</p>
+     * @param actions
+     * @return Builder
      */
 
     public MyCartUpdateBuilder plusActions(final com.commercetools.api.models.me.MyCartUpdateAction... actions) {
@@ -69,6 +77,7 @@ public class MyCartUpdateBuilder implements Builder<MyCartUpdate> {
 
     /**
      *  <p>Update actions to be performed on the Cart.</p>
+     * @return Builder
      */
 
     public MyCartUpdateBuilder plusActions(
@@ -82,6 +91,7 @@ public class MyCartUpdateBuilder implements Builder<MyCartUpdate> {
 
     /**
      *  <p>Update actions to be performed on the Cart.</p>
+     * @return Builder
      */
 
     public MyCartUpdateBuilder withActions(

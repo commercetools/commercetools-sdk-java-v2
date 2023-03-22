@@ -33,6 +33,7 @@ public interface BusinessUnitSetStoresAction extends BusinessUnitUpdateAction {
 
     /**
      *  <p>Stores to set. Overrides the current list of Stores.</p>
+     * @return stores
      */
     @Valid
     @JsonProperty("stores")

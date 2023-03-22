@@ -25,6 +25,8 @@ public class ChangeTargetLineItemsChangeValueBuilder implements Builder<ChangeTa
 
     /**
      *
+     * @param predicate
+     * @return Builder
      */
 
     public ChangeTargetLineItemsChangeValueBuilder predicate(final String predicate) {

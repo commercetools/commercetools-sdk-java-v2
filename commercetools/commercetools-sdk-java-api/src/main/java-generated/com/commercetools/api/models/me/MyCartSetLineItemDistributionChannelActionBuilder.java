@@ -32,6 +32,8 @@ public class MyCartSetLineItemDistributionChannelActionBuilder
 
     /**
      *  <p><code>id</code> of the LineItem to update.</p>
+     * @param lineItemId
+     * @return Builder
      */
 
     public MyCartSetLineItemDistributionChannelActionBuilder lineItemId(final String lineItemId) {
@@ -44,6 +46,7 @@ public class MyCartSetLineItemDistributionChannelActionBuilder
      *   <li>If present, a Reference to the Channel is set for the LineItem specified by <code>lineItemId</code>.</li>
      *   <li>If not present, the current Reference to a distribution channel is removed from the LineItem specified by <code>lineItemId</code>. The Channel must have the <code>ProductDistribution</code> ChannelRoleEnum.</li>
      *  </ul>
+     * @return Builder
      */
 
     public MyCartSetLineItemDistributionChannelActionBuilder distributionChannel(
@@ -59,6 +62,8 @@ public class MyCartSetLineItemDistributionChannelActionBuilder
      *   <li>If present, a Reference to the Channel is set for the LineItem specified by <code>lineItemId</code>.</li>
      *   <li>If not present, the current Reference to a distribution channel is removed from the LineItem specified by <code>lineItemId</code>. The Channel must have the <code>ProductDistribution</code> ChannelRoleEnum.</li>
      *  </ul>
+     * @param distributionChannel
+     * @return Builder
      */
 
     public MyCartSetLineItemDistributionChannelActionBuilder distributionChannel(

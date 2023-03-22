@@ -32,6 +32,8 @@ public class ReferenceExistsErrorBuilder implements Builder<ReferenceExistsError
 
     /**
      *  <p><code>"Can not delete a $resource while it is referenced by at least one $referencedBy."</code></p>
+     * @param message
+     * @return Builder
      */
 
     public ReferenceExistsErrorBuilder message(final String message) {
@@ -62,6 +64,8 @@ public class ReferenceExistsErrorBuilder implements Builder<ReferenceExistsError
 
     /**
      *  <p>Type of referenced resource.</p>
+     * @param referencedBy
+     * @return Builder
      */
 
     public ReferenceExistsErrorBuilder referencedBy(

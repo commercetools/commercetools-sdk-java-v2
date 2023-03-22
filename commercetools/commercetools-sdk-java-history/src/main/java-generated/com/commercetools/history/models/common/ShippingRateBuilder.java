@@ -35,6 +35,7 @@ public class ShippingRateBuilder implements Builder<ShippingRate> {
 
     /**
      *
+     * @return Builder
      */
 
     public ShippingRateBuilder price(
@@ -45,6 +46,8 @@ public class ShippingRateBuilder implements Builder<ShippingRate> {
 
     /**
      *
+     * @param price
+     * @return Builder
      */
 
     public ShippingRateBuilder price(final com.commercetools.history.models.common.Money price) {
@@ -54,6 +57,7 @@ public class ShippingRateBuilder implements Builder<ShippingRate> {
 
     /**
      *
+     * @return Builder
      */
 
     public ShippingRateBuilder freeAbove(
@@ -64,6 +68,8 @@ public class ShippingRateBuilder implements Builder<ShippingRate> {
 
     /**
      *
+     * @param freeAbove
+     * @return Builder
      */
 
     public ShippingRateBuilder freeAbove(final com.commercetools.history.models.common.Money freeAbove) {
@@ -73,6 +79,8 @@ public class ShippingRateBuilder implements Builder<ShippingRate> {
 
     /**
      *  <p>Only appears in response to requests for ShippingMethods by Cart or location to mark this shipping rate as one that matches the Cart or location.</p>
+     * @param isMatching
+     * @return Builder
      */
 
     public ShippingRateBuilder isMatching(final Boolean isMatching) {
@@ -82,6 +90,8 @@ public class ShippingRateBuilder implements Builder<ShippingRate> {
 
     /**
      *
+     * @param tiers
+     * @return Builder
      */
 
     public ShippingRateBuilder tiers(final com.commercetools.history.models.common.ShippingRatePriceTier... tiers) {
@@ -91,6 +101,8 @@ public class ShippingRateBuilder implements Builder<ShippingRate> {
 
     /**
      *
+     * @param tiers
+     * @return Builder
      */
 
     public ShippingRateBuilder tiers(
@@ -101,6 +113,8 @@ public class ShippingRateBuilder implements Builder<ShippingRate> {
 
     /**
      *
+     * @param tiers
+     * @return Builder
      */
 
     public ShippingRateBuilder plusTiers(final com.commercetools.history.models.common.ShippingRatePriceTier... tiers) {
@@ -113,6 +127,7 @@ public class ShippingRateBuilder implements Builder<ShippingRate> {
 
     /**
      *
+     * @return Builder
      */
 
     public ShippingRateBuilder plusTiers(
@@ -127,6 +142,7 @@ public class ShippingRateBuilder implements Builder<ShippingRate> {
 
     /**
      *
+     * @return Builder
      */
 
     public ShippingRateBuilder withTiers(

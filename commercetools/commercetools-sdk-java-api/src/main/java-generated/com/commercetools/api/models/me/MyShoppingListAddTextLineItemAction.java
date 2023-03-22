@@ -38,6 +38,7 @@ public interface MyShoppingListAddTextLineItemAction extends MyShoppingListUpdat
 
     /**
      *  <p>Name of the TextLineItem.</p>
+     * @return name
      */
     @NotNull
     @Valid
@@ -46,6 +47,7 @@ public interface MyShoppingListAddTextLineItemAction extends MyShoppingListUpdat
 
     /**
      *  <p>Description of the TextLineItem.</p>
+     * @return description
      */
     @Valid
     @JsonProperty("description")
@@ -53,6 +55,7 @@ public interface MyShoppingListAddTextLineItemAction extends MyShoppingListUpdat
 
     /**
      *  <p>Number of entries in the TextLineItem.</p>
+     * @return quantity
      */
 
     @JsonProperty("quantity")
@@ -60,6 +63,7 @@ public interface MyShoppingListAddTextLineItemAction extends MyShoppingListUpdat
 
     /**
      *  <p>Date and time the TextLineItem is added to the ShoppingList. If not set, the current date and time (UTC) is used.</p>
+     * @return addedAt
      */
 
     @JsonProperty("addedAt")
@@ -67,6 +71,7 @@ public interface MyShoppingListAddTextLineItemAction extends MyShoppingListUpdat
 
     /**
      *  <p>Custom Fields defined for the TextLineItem.</p>
+     * @return custom
      */
     @Valid
     @JsonProperty("custom")

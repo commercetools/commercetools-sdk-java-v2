@@ -35,6 +35,7 @@ public interface CustomerReference extends Reference, com.commercetools.api.mode
 
     /**
      *  <p>Contains the representation of the expanded Customer. Only present in responses to requests with Reference Expansion for Customers.</p>
+     * @return obj
      */
     @Valid
     @JsonProperty("obj")
@@ -42,6 +43,7 @@ public interface CustomerReference extends Reference, com.commercetools.api.mode
 
     /**
      *  <p>Unique identifier of the referenced Customer.</p>
+     * @return id
      */
     @NotNull
     @JsonProperty("id")

@@ -34,6 +34,7 @@ public interface OrderUpdate
 
     /**
      *
+     * @return version
      */
     @NotNull
     @JsonProperty("version")
@@ -41,6 +42,7 @@ public interface OrderUpdate
 
     /**
      *
+     * @return actions
      */
     @NotNull
     @Valid

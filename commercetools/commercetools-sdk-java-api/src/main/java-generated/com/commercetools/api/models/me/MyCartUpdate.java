@@ -34,6 +34,7 @@ public interface MyCartUpdate
 
     /**
      *  <p>Expected version of the Cart on which the changes apply. If it does not match the actual version, a 409 Conflict error is returned.</p>
+     * @return version
      */
     @NotNull
     @JsonProperty("version")
@@ -41,6 +42,7 @@ public interface MyCartUpdate
 
     /**
      *  <p>Update actions to be performed on the Cart.</p>
+     * @return actions
      */
     @NotNull
     @Valid

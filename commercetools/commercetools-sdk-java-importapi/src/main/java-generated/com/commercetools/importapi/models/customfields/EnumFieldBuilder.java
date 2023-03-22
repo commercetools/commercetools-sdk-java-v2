@@ -25,6 +25,8 @@ public class EnumFieldBuilder implements Builder<EnumField> {
 
     /**
      *
+     * @param value
+     * @return Builder
      */
 
     public EnumFieldBuilder value(final String value) {

@@ -37,6 +37,8 @@ public class CartClassificationTierBuilder implements Builder<CartClassification
 
     /**
      *
+     * @param value
+     * @return Builder
      */
 
     public CartClassificationTierBuilder value(final String value) {
@@ -46,6 +48,7 @@ public class CartClassificationTierBuilder implements Builder<CartClassification
 
     /**
      *
+     * @return Builder
      */
 
     public CartClassificationTierBuilder price(
@@ -56,6 +59,8 @@ public class CartClassificationTierBuilder implements Builder<CartClassification
 
     /**
      *
+     * @param price
+     * @return Builder
      */
 
     public CartClassificationTierBuilder price(final com.commercetools.importapi.models.common.Money price) {
@@ -65,6 +70,8 @@ public class CartClassificationTierBuilder implements Builder<CartClassification
 
     /**
      *
+     * @param tiers
+     * @return Builder
      */
 
     public CartClassificationTierBuilder tiers(
@@ -75,6 +82,8 @@ public class CartClassificationTierBuilder implements Builder<CartClassification
 
     /**
      *
+     * @param tiers
+     * @return Builder
      */
 
     public CartClassificationTierBuilder tiers(
@@ -85,6 +94,8 @@ public class CartClassificationTierBuilder implements Builder<CartClassification
 
     /**
      *
+     * @param tiers
+     * @return Builder
      */
 
     public CartClassificationTierBuilder plusTiers(
@@ -98,6 +109,7 @@ public class CartClassificationTierBuilder implements Builder<CartClassification
 
     /**
      *
+     * @return Builder
      */
 
     public CartClassificationTierBuilder plusTiers(
@@ -112,6 +124,7 @@ public class CartClassificationTierBuilder implements Builder<CartClassification
 
     /**
      *
+     * @return Builder
      */
 
     public CartClassificationTierBuilder withTiers(
@@ -124,6 +137,8 @@ public class CartClassificationTierBuilder implements Builder<CartClassification
 
     /**
      *
+     * @param isMatching
+     * @return Builder
      */
 
     public CartClassificationTierBuilder isMatching(@Nullable final Boolean isMatching) {

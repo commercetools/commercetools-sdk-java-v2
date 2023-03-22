@@ -25,6 +25,8 @@ public class MyBusinessUnitChangeNameActionBuilder implements Builder<MyBusiness
 
     /**
      *  <p>New name to set.</p>
+     * @param name
+     * @return Builder
      */
 
     public MyBusinessUnitChangeNameActionBuilder name(final String name) {

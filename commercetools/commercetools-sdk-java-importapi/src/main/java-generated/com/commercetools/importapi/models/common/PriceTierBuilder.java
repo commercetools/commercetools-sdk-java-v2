@@ -29,6 +29,8 @@ public class PriceTierBuilder implements Builder<PriceTier> {
 
     /**
      *  <p>The minimum quantity this price tier is valid for.</p>
+     * @param minimumQuantity
+     * @return Builder
      */
 
     public PriceTierBuilder minimumQuantity(final Long minimumQuantity) {
@@ -38,6 +40,8 @@ public class PriceTierBuilder implements Builder<PriceTier> {
 
     /**
      *  <p>The currency of a price tier is always the same as the currency of the base Price.</p>
+     * @param value
+     * @return Builder
      */
 
     public PriceTierBuilder value(final com.commercetools.importapi.models.common.TypedMoney value) {
@@ -47,6 +51,7 @@ public class PriceTierBuilder implements Builder<PriceTier> {
 
     /**
      *  <p>The currency of a price tier is always the same as the currency of the base Price.</p>
+     * @return Builder
      */
 
     public PriceTierBuilder value(

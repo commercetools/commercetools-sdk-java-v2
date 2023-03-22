@@ -31,6 +31,8 @@ public class SetIsValidChangeBuilder implements Builder<SetIsValidChange> {
 
     /**
      *  <p>Shape of the action for <code>setIsValid</code></p>
+     * @param change
+     * @return Builder
      */
 
     public SetIsValidChangeBuilder change(final String change) {
@@ -40,6 +42,8 @@ public class SetIsValidChangeBuilder implements Builder<SetIsValidChange> {
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public SetIsValidChangeBuilder previousValue(final Boolean previousValue) {
@@ -49,6 +53,8 @@ public class SetIsValidChangeBuilder implements Builder<SetIsValidChange> {
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public SetIsValidChangeBuilder nextValue(final Boolean nextValue) {

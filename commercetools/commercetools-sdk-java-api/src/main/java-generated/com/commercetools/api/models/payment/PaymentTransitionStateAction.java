@@ -36,6 +36,7 @@ public interface PaymentTransitionStateAction extends PaymentUpdateAction {
 
     /**
      *  <p>ResourceIdentifier to a State.</p>
+     * @return state
      */
     @NotNull
     @Valid
@@ -44,6 +45,7 @@ public interface PaymentTransitionStateAction extends PaymentUpdateAction {
 
     /**
      *  <p>Set to <code>true</code> to skip validations when transitioning to the new State.</p>
+     * @return force
      */
 
     @JsonProperty("force")

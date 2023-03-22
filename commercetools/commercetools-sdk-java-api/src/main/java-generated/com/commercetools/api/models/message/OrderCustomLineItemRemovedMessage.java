@@ -43,6 +43,7 @@ public interface OrderCustomLineItemRemovedMessage extends OrderMessage {
 
     /**
      *  <p>Unique identifier of the Custom Line Item.</p>
+     * @return customLineItemId
      */
     @NotNull
     @JsonProperty("customLineItemId")
@@ -50,6 +51,7 @@ public interface OrderCustomLineItemRemovedMessage extends OrderMessage {
 
     /**
      *  <p>Custom Line Item that was removed from the Order.</p>
+     * @return customLineItem
      */
     @NotNull
     @Valid

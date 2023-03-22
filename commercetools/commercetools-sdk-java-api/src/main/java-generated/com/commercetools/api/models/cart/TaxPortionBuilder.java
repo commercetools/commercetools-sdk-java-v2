@@ -34,6 +34,8 @@ public class TaxPortionBuilder implements Builder<TaxPortion> {
 
     /**
      *  <p>Name of the tax portion.</p>
+     * @param name
+     * @return Builder
      */
 
     public TaxPortionBuilder name(@Nullable final String name) {
@@ -43,6 +45,8 @@ public class TaxPortionBuilder implements Builder<TaxPortion> {
 
     /**
      *  <p>A number in the range 0-1.</p>
+     * @param rate
+     * @return Builder
      */
 
     public TaxPortionBuilder rate(final Double rate) {
@@ -52,6 +56,7 @@ public class TaxPortionBuilder implements Builder<TaxPortion> {
 
     /**
      *  <p>Money value of the tax portion.</p>
+     * @return Builder
      */
 
     public TaxPortionBuilder amount(
@@ -62,6 +67,8 @@ public class TaxPortionBuilder implements Builder<TaxPortion> {
 
     /**
      *  <p>Money value of the tax portion.</p>
+     * @param amount
+     * @return Builder
      */
 
     public TaxPortionBuilder amount(final com.commercetools.api.models.common.CentPrecisionMoney amount) {

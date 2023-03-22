@@ -34,6 +34,7 @@ public interface GeoJson {
 
     /**
      *
+     * @return type
      */
     @NotNull
     @JsonProperty("type")

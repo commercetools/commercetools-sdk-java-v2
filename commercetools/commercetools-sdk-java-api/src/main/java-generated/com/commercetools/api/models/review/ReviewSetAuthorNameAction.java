@@ -30,6 +30,7 @@ public interface ReviewSetAuthorNameAction extends ReviewUpdateAction {
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
+     * @return authorName
      */
 
     @JsonProperty("authorName")

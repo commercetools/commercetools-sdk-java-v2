@@ -33,6 +33,7 @@ public interface ShoppingListSetStoreAction extends ShoppingListUpdateAction {
 
     /**
      *  <p>The Store the ShoppingList should be assigned to. If empty, any existing value will be removed.</p>
+     * @return store
      */
     @Valid
     @JsonProperty("store")

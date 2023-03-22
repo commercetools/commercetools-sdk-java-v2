@@ -25,6 +25,8 @@ public class StagedOrderChangeTaxRoundingModeActionBuilder implements Builder<St
 
     /**
      *  <p>Determines how monetary values are rounded.</p>
+     * @param taxRoundingMode
+     * @return Builder
      */
 
     public StagedOrderChangeTaxRoundingModeActionBuilder taxRoundingMode(

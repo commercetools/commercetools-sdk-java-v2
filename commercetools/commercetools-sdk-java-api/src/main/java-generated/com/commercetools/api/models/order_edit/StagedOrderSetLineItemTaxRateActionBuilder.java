@@ -34,6 +34,8 @@ public class StagedOrderSetLineItemTaxRateActionBuilder implements Builder<Stage
 
     /**
      *
+     * @param lineItemId
+     * @return Builder
      */
 
     public StagedOrderSetLineItemTaxRateActionBuilder lineItemId(final String lineItemId) {
@@ -43,6 +45,7 @@ public class StagedOrderSetLineItemTaxRateActionBuilder implements Builder<Stage
 
     /**
      *  <p>Controls calculation of taxed prices for Line Items, Custom Line Items, and Shipping Methods as explained in Cart tax calculation.</p>
+     * @return Builder
      */
 
     public StagedOrderSetLineItemTaxRateActionBuilder externalTaxRate(
@@ -54,6 +57,8 @@ public class StagedOrderSetLineItemTaxRateActionBuilder implements Builder<Stage
 
     /**
      *  <p>Controls calculation of taxed prices for Line Items, Custom Line Items, and Shipping Methods as explained in Cart tax calculation.</p>
+     * @param externalTaxRate
+     * @return Builder
      */
 
     public StagedOrderSetLineItemTaxRateActionBuilder externalTaxRate(
@@ -64,6 +69,8 @@ public class StagedOrderSetLineItemTaxRateActionBuilder implements Builder<Stage
 
     /**
      *  <p><code>key</code> of the ShippingMethod used for this Line Item. This is required for Carts with <code>Multiple</code> ShippingMode.</p>
+     * @param shippingKey
+     * @return Builder
      */
 
     public StagedOrderSetLineItemTaxRateActionBuilder shippingKey(@Nullable final String shippingKey) {

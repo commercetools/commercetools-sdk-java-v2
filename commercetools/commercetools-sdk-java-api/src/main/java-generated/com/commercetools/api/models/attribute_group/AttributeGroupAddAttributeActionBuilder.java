@@ -26,6 +26,7 @@ public class AttributeGroupAddAttributeActionBuilder implements Builder<Attribut
 
     /**
      *  <p>Value to add.</p>
+     * @return Builder
      */
 
     public AttributeGroupAddAttributeActionBuilder attribute(
@@ -37,6 +38,8 @@ public class AttributeGroupAddAttributeActionBuilder implements Builder<Attribut
 
     /**
      *  <p>Value to add.</p>
+     * @param attribute
+     * @return Builder
      */
 
     public AttributeGroupAddAttributeActionBuilder attribute(

@@ -40,6 +40,7 @@ public interface StagedQuoteSellerCommentSetMessage extends Message {
 
     /**
      *  <p><code>sellerComment</code> on the StagedQuote after a successful Set Seller Comment update action.</p>
+     * @return sellerComment
      */
     @NotNull
     @JsonProperty("sellerComment")

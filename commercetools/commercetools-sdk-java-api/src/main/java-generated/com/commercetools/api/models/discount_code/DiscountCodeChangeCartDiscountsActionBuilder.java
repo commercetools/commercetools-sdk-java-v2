@@ -26,6 +26,8 @@ public class DiscountCodeChangeCartDiscountsActionBuilder implements Builder<Dis
 
     /**
      *  <p>New value to set.</p>
+     * @param cartDiscounts
+     * @return Builder
      */
 
     public DiscountCodeChangeCartDiscountsActionBuilder cartDiscounts(
@@ -36,6 +38,8 @@ public class DiscountCodeChangeCartDiscountsActionBuilder implements Builder<Dis
 
     /**
      *  <p>New value to set.</p>
+     * @param cartDiscounts
+     * @return Builder
      */
 
     public DiscountCodeChangeCartDiscountsActionBuilder cartDiscounts(
@@ -46,6 +50,8 @@ public class DiscountCodeChangeCartDiscountsActionBuilder implements Builder<Dis
 
     /**
      *  <p>New value to set.</p>
+     * @param cartDiscounts
+     * @return Builder
      */
 
     public DiscountCodeChangeCartDiscountsActionBuilder plusCartDiscounts(
@@ -59,6 +65,7 @@ public class DiscountCodeChangeCartDiscountsActionBuilder implements Builder<Dis
 
     /**
      *  <p>New value to set.</p>
+     * @return Builder
      */
 
     public DiscountCodeChangeCartDiscountsActionBuilder plusCartDiscounts(
@@ -74,6 +81,7 @@ public class DiscountCodeChangeCartDiscountsActionBuilder implements Builder<Dis
 
     /**
      *  <p>New value to set.</p>
+     * @return Builder
      */
 
     public DiscountCodeChangeCartDiscountsActionBuilder withCartDiscounts(

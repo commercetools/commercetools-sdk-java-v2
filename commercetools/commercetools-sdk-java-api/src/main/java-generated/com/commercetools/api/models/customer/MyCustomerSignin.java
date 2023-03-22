@@ -32,6 +32,7 @@ public interface MyCustomerSignin {
 
     /**
      *  <p>Email address of the Customer treated as case-insensitive.</p>
+     * @return email
      */
     @NotNull
     @JsonProperty("email")
@@ -39,6 +40,7 @@ public interface MyCustomerSignin {
 
     /**
      *  <p>Password of the Customer.</p>
+     * @return password
      */
     @NotNull
     @JsonProperty("password")
@@ -49,6 +51,7 @@ public interface MyCustomerSignin {
      *   <li>If <code>MergeWithExistingCustomerCart</code>, LineItems of the anonymous Cart are merged with the recently modified active Customer Cart.</li>
      *   <li>If <code>UseAsNewActiveCustomerCart</code>, the anonymous Cart is used as the new active Customer Cart, and no LineItems are merged.</li>
      *  </ul>
+     * @return activeCartSignInMode
      */
 
     @JsonProperty("activeCartSignInMode")
@@ -59,6 +62,7 @@ public interface MyCustomerSignin {
      *   <li>If <code>true</code>, the LineItem Product data (<code>name</code>, <code>variant</code>, and <code>productType</code>) of the returned Cart is updated.</li>
      *   <li>If <code>false</code>, only the prices, discounts, and tax rates are updated.</li>
      *  </ul>
+     * @return updateProductData
      */
 
     @JsonProperty("updateProductData")

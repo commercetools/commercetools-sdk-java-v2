@@ -34,6 +34,7 @@ public interface ShippingMethodDoesNotMatchCartError extends ErrorObject {
 
     /**
      *
+     * @return code
      */
     @NotNull
     @JsonProperty("code")
@@ -41,6 +42,7 @@ public interface ShippingMethodDoesNotMatchCartError extends ErrorObject {
 
     /**
      *  <p><code>"The predicate does not match the cart."</code></p>
+     * @return message
      */
     @NotNull
     @JsonProperty("message")

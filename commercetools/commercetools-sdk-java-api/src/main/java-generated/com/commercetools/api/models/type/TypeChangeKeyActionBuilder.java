@@ -25,6 +25,8 @@ public class TypeChangeKeyActionBuilder implements Builder<TypeChangeKeyAction> 
 
     /**
      *  <p>New value to set. Must not be empty.</p>
+     * @param key
+     * @return Builder
      */
 
     public TypeChangeKeyActionBuilder key(final String key) {

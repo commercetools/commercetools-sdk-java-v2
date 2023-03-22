@@ -28,6 +28,8 @@ public class ProductTypeChangeInputHintActionBuilder implements Builder<ProductT
 
     /**
      *  <p>Name of the AttributeDefinition to update.</p>
+     * @param attributeName
+     * @return Builder
      */
 
     public ProductTypeChangeInputHintActionBuilder attributeName(final String attributeName) {
@@ -37,6 +39,8 @@ public class ProductTypeChangeInputHintActionBuilder implements Builder<ProductT
 
     /**
      *  <p><code>SingleLine</code> or <code>MultiLine</code></p>
+     * @param newValue
+     * @return Builder
      */
 
     public ProductTypeChangeInputHintActionBuilder newValue(

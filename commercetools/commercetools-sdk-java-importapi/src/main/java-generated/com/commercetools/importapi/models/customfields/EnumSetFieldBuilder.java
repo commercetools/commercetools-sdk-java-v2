@@ -25,6 +25,8 @@ public class EnumSetFieldBuilder implements Builder<EnumSetField> {
 
     /**
      *
+     * @param value
+     * @return Builder
      */
 
     public EnumSetFieldBuilder value(final String... value) {
@@ -34,6 +36,8 @@ public class EnumSetFieldBuilder implements Builder<EnumSetField> {
 
     /**
      *
+     * @param value
+     * @return Builder
      */
 
     public EnumSetFieldBuilder value(final java.util.List<String> value) {
@@ -43,6 +47,8 @@ public class EnumSetFieldBuilder implements Builder<EnumSetField> {
 
     /**
      *
+     * @param value
+     * @return Builder
      */
 
     public EnumSetFieldBuilder plusValue(final String... value) {

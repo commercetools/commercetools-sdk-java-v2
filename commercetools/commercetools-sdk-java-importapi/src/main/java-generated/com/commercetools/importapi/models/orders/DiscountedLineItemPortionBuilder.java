@@ -29,6 +29,7 @@ public class DiscountedLineItemPortionBuilder implements Builder<DiscountedLineI
 
     /**
      *  <p>References a cart discount by key.</p>
+     * @return Builder
      */
 
     public DiscountedLineItemPortionBuilder discount(
@@ -40,6 +41,8 @@ public class DiscountedLineItemPortionBuilder implements Builder<DiscountedLineI
 
     /**
      *  <p>References a cart discount by key.</p>
+     * @param discount
+     * @return Builder
      */
 
     public DiscountedLineItemPortionBuilder discount(
@@ -50,6 +53,7 @@ public class DiscountedLineItemPortionBuilder implements Builder<DiscountedLineI
 
     /**
      *
+     * @return Builder
      */
 
     public DiscountedLineItemPortionBuilder discountedAmount(
@@ -60,6 +64,8 @@ public class DiscountedLineItemPortionBuilder implements Builder<DiscountedLineI
 
     /**
      *
+     * @param discountedAmount
+     * @return Builder
      */
 
     public DiscountedLineItemPortionBuilder discountedAmount(

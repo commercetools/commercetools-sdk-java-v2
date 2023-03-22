@@ -35,6 +35,7 @@ public interface HighPrecisionMoney extends TypedMoney {
 
     /**
      *
+     * @return preciseAmount
      */
     @NotNull
     @JsonProperty("preciseAmount")

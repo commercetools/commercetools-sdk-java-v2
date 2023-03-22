@@ -31,6 +31,8 @@ public class SearchKeywordBuilder implements Builder<SearchKeyword> {
 
     /**
      *  <p>Text to return in the result of a suggest query.</p>
+     * @param text
+     * @return Builder
      */
 
     public SearchKeywordBuilder text(final String text) {
@@ -40,6 +42,8 @@ public class SearchKeywordBuilder implements Builder<SearchKeyword> {
 
     /**
      *  <p>If no tokenizer is defined, the <code>text</code> is used as a single token.</p>
+     * @param suggestTokenizer
+     * @return Builder
      */
 
     public SearchKeywordBuilder suggestTokenizer(
@@ -50,6 +54,7 @@ public class SearchKeywordBuilder implements Builder<SearchKeyword> {
 
     /**
      *  <p>If no tokenizer is defined, the <code>text</code> is used as a single token.</p>
+     * @return Builder
      */
 
     public SearchKeywordBuilder suggestTokenizer(

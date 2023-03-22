@@ -31,6 +31,7 @@ public interface ImportResource {
 
     /**
      *  <p>User-defined unique identifier.</p>
+     * @return key
      */
     @NotNull
     @JsonProperty("key")

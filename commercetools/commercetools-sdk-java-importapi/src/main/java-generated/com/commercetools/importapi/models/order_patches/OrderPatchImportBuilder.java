@@ -29,6 +29,8 @@ public class OrderPatchImportBuilder implements Builder<OrderPatchImport> {
 
     /**
      *  <p>Maps to <code>Order.orderNumber</code>, String that uniquely identifies an order, unique across a project.</p>
+     * @param orderNumber
+     * @return Builder
      */
 
     public OrderPatchImportBuilder orderNumber(final String orderNumber) {
@@ -38,6 +40,7 @@ public class OrderPatchImportBuilder implements Builder<OrderPatchImport> {
 
     /**
      *  <p>Each field referenced must be defined in an already existing order in the project or the import operation state is set to <code>validationFailed</code>.</p>
+     * @return Builder
      */
 
     public OrderPatchImportBuilder fields(
@@ -48,6 +51,8 @@ public class OrderPatchImportBuilder implements Builder<OrderPatchImport> {
 
     /**
      *  <p>Each field referenced must be defined in an already existing order in the project or the import operation state is set to <code>validationFailed</code>.</p>
+     * @param fields
+     * @return Builder
      */
 
     public OrderPatchImportBuilder fields(final com.commercetools.importapi.models.order_patches.OrderField fields) {

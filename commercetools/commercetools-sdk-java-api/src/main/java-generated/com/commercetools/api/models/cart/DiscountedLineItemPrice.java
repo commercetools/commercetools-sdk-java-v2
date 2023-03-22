@@ -34,6 +34,7 @@ public interface DiscountedLineItemPrice {
 
     /**
      *  <p>Money value of the discounted Line Item or Custom Line Item.</p>
+     * @return value
      */
     @NotNull
     @Valid
@@ -42,6 +43,7 @@ public interface DiscountedLineItemPrice {
 
     /**
      *  <p>Discount applicable on the Line Item or Custom Line Item.</p>
+     * @return includedDiscounts
      */
     @NotNull
     @Valid

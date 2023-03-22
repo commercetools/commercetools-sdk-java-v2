@@ -36,6 +36,7 @@ public interface ReviewRatingStatistics {
 
     /**
      *  <p>Average rating of one target This number is rounded with 5 decimals.</p>
+     * @return averageRating
      */
     @NotNull
     @JsonProperty("averageRating")
@@ -43,6 +44,7 @@ public interface ReviewRatingStatistics {
 
     /**
      *  <p>Highest rating of one target</p>
+     * @return highestRating
      */
     @NotNull
     @JsonProperty("highestRating")
@@ -50,6 +52,7 @@ public interface ReviewRatingStatistics {
 
     /**
      *  <p>Lowest rating of one target</p>
+     * @return lowestRating
      */
     @NotNull
     @JsonProperty("lowestRating")
@@ -57,6 +60,7 @@ public interface ReviewRatingStatistics {
 
     /**
      *  <p>Number of ratings taken into account</p>
+     * @return count
      */
     @NotNull
     @JsonProperty("count")
@@ -64,6 +68,7 @@ public interface ReviewRatingStatistics {
 
     /**
      *  <p>Full distribution of the ratings. The keys are the different ratings and the values are the count of reviews having this rating. Only the used ratings appear in this object.</p>
+     * @return ratingsDistribution
      */
     @NotNull
     @Valid

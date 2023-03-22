@@ -32,6 +32,8 @@ public class ShoppingListSetTextLineItemDescriptionActionBuilder
 
     /**
      *  <p>The <code>id</code> of the TextLineItem to update.</p>
+     * @param textLineItemId
+     * @return Builder
      */
 
     public ShoppingListSetTextLineItemDescriptionActionBuilder textLineItemId(final String textLineItemId) {
@@ -41,6 +43,7 @@ public class ShoppingListSetTextLineItemDescriptionActionBuilder
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
+     * @return Builder
      */
 
     public ShoppingListSetTextLineItemDescriptionActionBuilder description(
@@ -51,6 +54,8 @@ public class ShoppingListSetTextLineItemDescriptionActionBuilder
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
+     * @param description
+     * @return Builder
      */
 
     public ShoppingListSetTextLineItemDescriptionActionBuilder description(

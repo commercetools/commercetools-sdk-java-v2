@@ -41,6 +41,8 @@ public class SetCustomLineItemTaxAmountChangeBuilder implements Builder<SetCusto
 
     /**
      *  <p>Update action for <code>setCustomLineItemTaxAmount</code></p>
+     * @param change
+     * @return Builder
      */
 
     public SetCustomLineItemTaxAmountChangeBuilder change(final String change) {
@@ -50,6 +52,7 @@ public class SetCustomLineItemTaxAmountChangeBuilder implements Builder<SetCusto
 
     /**
      *
+     * @return Builder
      */
 
     public SetCustomLineItemTaxAmountChangeBuilder customLineItem(
@@ -61,6 +64,8 @@ public class SetCustomLineItemTaxAmountChangeBuilder implements Builder<SetCusto
 
     /**
      *
+     * @param customLineItem
+     * @return Builder
      */
 
     public SetCustomLineItemTaxAmountChangeBuilder customLineItem(
@@ -71,6 +76,8 @@ public class SetCustomLineItemTaxAmountChangeBuilder implements Builder<SetCusto
 
     /**
      *
+     * @param customLineItemId
+     * @return Builder
      */
 
     public SetCustomLineItemTaxAmountChangeBuilder customLineItemId(final String customLineItemId) {
@@ -80,6 +87,8 @@ public class SetCustomLineItemTaxAmountChangeBuilder implements Builder<SetCusto
 
     /**
      *
+     * @param taxMode
+     * @return Builder
      */
 
     public SetCustomLineItemTaxAmountChangeBuilder taxMode(
@@ -90,6 +99,7 @@ public class SetCustomLineItemTaxAmountChangeBuilder implements Builder<SetCusto
 
     /**
      *  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>
+     * @return Builder
      */
 
     public SetCustomLineItemTaxAmountChangeBuilder nextValue(
@@ -100,6 +110,8 @@ public class SetCustomLineItemTaxAmountChangeBuilder implements Builder<SetCusto
 
     /**
      *  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>
+     * @param nextValue
+     * @return Builder
      */
 
     public SetCustomLineItemTaxAmountChangeBuilder nextValue(
@@ -110,6 +122,7 @@ public class SetCustomLineItemTaxAmountChangeBuilder implements Builder<SetCusto
 
     /**
      *  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>
+     * @return Builder
      */
 
     public SetCustomLineItemTaxAmountChangeBuilder previousValue(
@@ -120,6 +133,8 @@ public class SetCustomLineItemTaxAmountChangeBuilder implements Builder<SetCusto
 
     /**
      *  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>
+     * @param previousValue
+     * @return Builder
      */
 
     public SetCustomLineItemTaxAmountChangeBuilder previousValue(

@@ -38,6 +38,8 @@ public class ParcelMeasurementsUpdatedMessagePayloadBuilder
 
     /**
      *  <p>Unique identifier of the Delivery.</p>
+     * @param deliveryId
+     * @return Builder
      */
 
     public ParcelMeasurementsUpdatedMessagePayloadBuilder deliveryId(final String deliveryId) {
@@ -47,6 +49,8 @@ public class ParcelMeasurementsUpdatedMessagePayloadBuilder
 
     /**
      *  <p>Unique identifier of the Parcel.</p>
+     * @param parcelId
+     * @return Builder
      */
 
     public ParcelMeasurementsUpdatedMessagePayloadBuilder parcelId(final String parcelId) {
@@ -56,6 +60,7 @@ public class ParcelMeasurementsUpdatedMessagePayloadBuilder
 
     /**
      *  <p>The Parcel Measurements that were set on the Parcel.</p>
+     * @return Builder
      */
 
     public ParcelMeasurementsUpdatedMessagePayloadBuilder measurements(
@@ -66,6 +71,8 @@ public class ParcelMeasurementsUpdatedMessagePayloadBuilder
 
     /**
      *  <p>The Parcel Measurements that were set on the Parcel.</p>
+     * @param measurements
+     * @return Builder
      */
 
     public ParcelMeasurementsUpdatedMessagePayloadBuilder measurements(
@@ -76,6 +83,8 @@ public class ParcelMeasurementsUpdatedMessagePayloadBuilder
 
     /**
      *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multi</code> ShippingMode.</p>
+     * @param shippingKey
+     * @return Builder
      */
 
     public ParcelMeasurementsUpdatedMessagePayloadBuilder shippingKey(@Nullable final String shippingKey) {

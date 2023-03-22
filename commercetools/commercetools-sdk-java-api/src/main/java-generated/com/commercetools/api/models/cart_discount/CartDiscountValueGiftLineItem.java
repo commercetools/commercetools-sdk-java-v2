@@ -37,6 +37,7 @@ public interface CartDiscountValueGiftLineItem extends CartDiscountValue {
 
     /**
      *  <p>Reference to a Product.</p>
+     * @return product
      */
     @NotNull
     @Valid
@@ -45,6 +46,7 @@ public interface CartDiscountValueGiftLineItem extends CartDiscountValue {
 
     /**
      *  <p>ProductVariant of the Product.</p>
+     * @return variantId
      */
     @NotNull
     @JsonProperty("variantId")
@@ -52,6 +54,7 @@ public interface CartDiscountValueGiftLineItem extends CartDiscountValue {
 
     /**
      *  <p>Channel must have the ChannelRoleEnum <code>InventorySupply</code>.</p>
+     * @return supplyChannel
      */
     @Valid
     @JsonProperty("supplyChannel")
@@ -59,6 +62,7 @@ public interface CartDiscountValueGiftLineItem extends CartDiscountValue {
 
     /**
      *  <p>Channel must have the ChannelRoleEnum <code>ProductDistribution</code>.</p>
+     * @return distributionChannel
      */
     @Valid
     @JsonProperty("distributionChannel")

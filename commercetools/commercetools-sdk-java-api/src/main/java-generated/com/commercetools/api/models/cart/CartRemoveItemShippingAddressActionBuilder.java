@@ -25,6 +25,8 @@ public class CartRemoveItemShippingAddressActionBuilder implements Builder<CartR
 
     /**
      *  <p><code>key</code> of the Address to remove from <code>itemShippingAddresses</code>.</p>
+     * @param addressKey
+     * @return Builder
      */
 
     public CartRemoveItemShippingAddressActionBuilder addressKey(final String addressKey) {

@@ -37,6 +37,8 @@ public class ClientLoggingBuilder implements Builder<ClientLogging> {
 
     /**
      *  <p><code>id</code> of the APIClient which created the resource.</p>
+     * @param clientId
+     * @return Builder
      */
 
     public ClientLoggingBuilder clientId(@Nullable final String clientId) {
@@ -46,6 +48,8 @@ public class ClientLoggingBuilder implements Builder<ClientLogging> {
 
     /**
      *  <p>External user ID provided by <code>X-External-User-ID</code> HTTP Header.</p>
+     * @param externalUserId
+     * @return Builder
      */
 
     public ClientLoggingBuilder externalUserId(@Nullable final String externalUserId) {
@@ -55,6 +59,7 @@ public class ClientLoggingBuilder implements Builder<ClientLogging> {
 
     /**
      *  <p>Indicates the Customer who modified the resource using a token from the password flow.</p>
+     * @return Builder
      */
 
     public ClientLoggingBuilder customer(
@@ -65,6 +70,8 @@ public class ClientLoggingBuilder implements Builder<ClientLogging> {
 
     /**
      *  <p>Indicates the Customer who modified the resource using a token from the password flow.</p>
+     * @param customer
+     * @return Builder
      */
 
     public ClientLoggingBuilder customer(
@@ -75,6 +82,8 @@ public class ClientLoggingBuilder implements Builder<ClientLogging> {
 
     /**
      *  <p>Indicates that the resource was modified during an anonymous session with the logged ID.</p>
+     * @param anonymousId
+     * @return Builder
      */
 
     public ClientLoggingBuilder anonymousId(@Nullable final String anonymousId) {

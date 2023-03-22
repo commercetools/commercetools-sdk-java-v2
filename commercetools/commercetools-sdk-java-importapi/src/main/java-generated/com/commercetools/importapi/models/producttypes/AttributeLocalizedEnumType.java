@@ -34,6 +34,7 @@ public interface AttributeLocalizedEnumType extends AttributeType {
 
     /**
      *
+     * @return values
      */
     @NotNull
     @Valid

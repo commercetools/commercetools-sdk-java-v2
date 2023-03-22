@@ -31,6 +31,8 @@ public class ChangeOrderHintChangeBuilder implements Builder<ChangeOrderHintChan
 
     /**
      *  <p>Shape of the action for <code>changeOrderHint</code></p>
+     * @param change
+     * @return Builder
      */
 
     public ChangeOrderHintChangeBuilder change(final String change) {
@@ -40,6 +42,8 @@ public class ChangeOrderHintChangeBuilder implements Builder<ChangeOrderHintChan
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public ChangeOrderHintChangeBuilder previousValue(final String previousValue) {
@@ -49,6 +53,8 @@ public class ChangeOrderHintChangeBuilder implements Builder<ChangeOrderHintChan
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public ChangeOrderHintChangeBuilder nextValue(final String nextValue) {

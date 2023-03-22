@@ -32,6 +32,8 @@ public class AddItemShippingAddressesChangeBuilder implements Builder<AddItemShi
 
     /**
      *  <p>Update action for <code>addItemShippingAddress</code></p>
+     * @param change
+     * @return Builder
      */
 
     public AddItemShippingAddressesChangeBuilder change(final String change) {
@@ -41,6 +43,7 @@ public class AddItemShippingAddressesChangeBuilder implements Builder<AddItemShi
 
     /**
      *
+     * @return Builder
      */
 
     public AddItemShippingAddressesChangeBuilder nextValue(
@@ -51,6 +54,8 @@ public class AddItemShippingAddressesChangeBuilder implements Builder<AddItemShi
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public AddItemShippingAddressesChangeBuilder nextValue(
@@ -61,6 +66,7 @@ public class AddItemShippingAddressesChangeBuilder implements Builder<AddItemShi
 
     /**
      *
+     * @return Builder
      */
 
     public AddItemShippingAddressesChangeBuilder previousValue(
@@ -71,6 +77,8 @@ public class AddItemShippingAddressesChangeBuilder implements Builder<AddItemShi
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public AddItemShippingAddressesChangeBuilder previousValue(

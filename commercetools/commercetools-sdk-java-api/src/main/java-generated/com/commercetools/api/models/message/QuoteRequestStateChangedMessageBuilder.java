@@ -61,6 +61,8 @@ public class QuoteRequestStateChangedMessageBuilder implements Builder<QuoteRequ
 
     /**
      *  <p>Unique identifier of the Message. Can be used to track which Messages have been processed.</p>
+     * @param id
+     * @return Builder
      */
 
     public QuoteRequestStateChangedMessageBuilder id(final String id) {
@@ -70,6 +72,8 @@ public class QuoteRequestStateChangedMessageBuilder implements Builder<QuoteRequ
 
     /**
      *  <p>Version of a resource. In case of Messages, this is always <code>1</code>.</p>
+     * @param version
+     * @return Builder
      */
 
     public QuoteRequestStateChangedMessageBuilder version(final Long version) {
@@ -79,6 +83,8 @@ public class QuoteRequestStateChangedMessageBuilder implements Builder<QuoteRequ
 
     /**
      *  <p>Date and time (UTC) the Message was generated.</p>
+     * @param createdAt
+     * @return Builder
      */
 
     public QuoteRequestStateChangedMessageBuilder createdAt(final java.time.ZonedDateTime createdAt) {
@@ -88,6 +94,8 @@ public class QuoteRequestStateChangedMessageBuilder implements Builder<QuoteRequ
 
     /**
      *  <p>Value of <code>createdAt</code>.</p>
+     * @param lastModifiedAt
+     * @return Builder
      */
 
     public QuoteRequestStateChangedMessageBuilder lastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {
@@ -97,6 +105,7 @@ public class QuoteRequestStateChangedMessageBuilder implements Builder<QuoteRequ
 
     /**
      *  <p>Value of <code>createdBy</code>.</p>
+     * @return Builder
      */
 
     public QuoteRequestStateChangedMessageBuilder lastModifiedBy(
@@ -107,6 +116,8 @@ public class QuoteRequestStateChangedMessageBuilder implements Builder<QuoteRequ
 
     /**
      *  <p>Value of <code>createdBy</code>.</p>
+     * @param lastModifiedBy
+     * @return Builder
      */
 
     public QuoteRequestStateChangedMessageBuilder lastModifiedBy(
@@ -117,6 +128,7 @@ public class QuoteRequestStateChangedMessageBuilder implements Builder<QuoteRequ
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @return Builder
      */
 
     public QuoteRequestStateChangedMessageBuilder createdBy(
@@ -127,6 +139,8 @@ public class QuoteRequestStateChangedMessageBuilder implements Builder<QuoteRequ
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param createdBy
+     * @return Builder
      */
 
     public QuoteRequestStateChangedMessageBuilder createdBy(
@@ -137,6 +151,8 @@ public class QuoteRequestStateChangedMessageBuilder implements Builder<QuoteRequ
 
     /**
      *  <p>Message number in relation to other Messages for a given resource. The <code>sequenceNumber</code> of the next Message for the resource is the successor of the <code>sequenceNumber</code> of the current Message. Meaning, the <code>sequenceNumber</code> of the next Message equals the <code>sequenceNumber</code> of the current Message + 1. <code>sequenceNumber</code> can be used to ensure that Messages are processed in the correct order for a particular resource.</p>
+     * @param sequenceNumber
+     * @return Builder
      */
 
     public QuoteRequestStateChangedMessageBuilder sequenceNumber(final Long sequenceNumber) {
@@ -146,6 +162,8 @@ public class QuoteRequestStateChangedMessageBuilder implements Builder<QuoteRequ
 
     /**
      *  <p>Reference to the resource on which the change or action was performed.</p>
+     * @param resource
+     * @return Builder
      */
 
     public QuoteRequestStateChangedMessageBuilder resource(
@@ -156,6 +174,7 @@ public class QuoteRequestStateChangedMessageBuilder implements Builder<QuoteRequ
 
     /**
      *  <p>Reference to the resource on which the change or action was performed.</p>
+     * @return Builder
      */
 
     public QuoteRequestStateChangedMessageBuilder resource(
@@ -166,6 +185,8 @@ public class QuoteRequestStateChangedMessageBuilder implements Builder<QuoteRequ
 
     /**
      *  <p>Version of the resource on which the change or action was performed.</p>
+     * @param resourceVersion
+     * @return Builder
      */
 
     public QuoteRequestStateChangedMessageBuilder resourceVersion(final Long resourceVersion) {
@@ -175,6 +196,7 @@ public class QuoteRequestStateChangedMessageBuilder implements Builder<QuoteRequ
 
     /**
      *  <p>User-provided identifiers of the resource, such as <code>key</code> or <code>externalId</code>. Only present if the resource has such identifiers.</p>
+     * @return Builder
      */
 
     public QuoteRequestStateChangedMessageBuilder resourceUserProvidedIdentifiers(
@@ -187,6 +209,8 @@ public class QuoteRequestStateChangedMessageBuilder implements Builder<QuoteRequ
 
     /**
      *  <p>User-provided identifiers of the resource, such as <code>key</code> or <code>externalId</code>. Only present if the resource has such identifiers.</p>
+     * @param resourceUserProvidedIdentifiers
+     * @return Builder
      */
 
     public QuoteRequestStateChangedMessageBuilder resourceUserProvidedIdentifiers(
@@ -197,6 +221,8 @@ public class QuoteRequestStateChangedMessageBuilder implements Builder<QuoteRequ
 
     /**
      *  <p>State of the Quote Request after the Change Quote Request State update action.</p>
+     * @param quoteRequestState
+     * @return Builder
      */
 
     public QuoteRequestStateChangedMessageBuilder quoteRequestState(
@@ -207,6 +233,8 @@ public class QuoteRequestStateChangedMessageBuilder implements Builder<QuoteRequ
 
     /**
      *  <p>State of the Quote Request before the Change Quote Request State update action.</p>
+     * @param oldQuoteRequestState
+     * @return Builder
      */
 
     public QuoteRequestStateChangedMessageBuilder oldQuoteRequestState(

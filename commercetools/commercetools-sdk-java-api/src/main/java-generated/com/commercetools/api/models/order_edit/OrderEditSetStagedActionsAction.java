@@ -35,6 +35,7 @@ public interface OrderEditSetStagedActionsAction extends OrderEditUpdateAction {
 
     /**
      *  <p>The actions to edit the <code>resource</code>.</p>
+     * @return stagedActions
      */
     @NotNull
     @Valid

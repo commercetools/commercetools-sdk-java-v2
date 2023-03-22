@@ -32,6 +32,7 @@ public interface SubRate {
 
     /**
      *  <p>Name of the SubRate.</p>
+     * @return name
      */
     @NotNull
     @JsonProperty("name")
@@ -39,6 +40,7 @@ public interface SubRate {
 
     /**
      *
+     * @return amount
      */
     @NotNull
     @JsonProperty("amount")

@@ -39,6 +39,7 @@ public interface ExternalTaxAmountDraft extends io.vrap.rmf.base.client.Draft<Ex
 
     /**
      *  <p>Total gross amount (<code>totalNet</code> + <code>taxPortions</code>) of the Line Item or Custom Line Item.</p>
+     * @return totalGross
      */
     @NotNull
     @Valid
@@ -47,6 +48,7 @@ public interface ExternalTaxAmountDraft extends io.vrap.rmf.base.client.Draft<Ex
 
     /**
      *  <p>Tax Rates and subrates of states and countries.</p>
+     * @return taxRate
      */
     @NotNull
     @Valid

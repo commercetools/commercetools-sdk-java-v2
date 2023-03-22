@@ -34,6 +34,8 @@ public class PaymentMethodInfoBuilder implements Builder<PaymentMethodInfo> {
 
     /**
      *  <p>Payment service that processes the Payment (for example, a PSP). Once set, it cannot be changed. The combination of <code>paymentInterface</code> and the <code>interfaceId</code> of a Payment must be unique.</p>
+     * @param paymentInterface
+     * @return Builder
      */
 
     public PaymentMethodInfoBuilder paymentInterface(@Nullable final String paymentInterface) {
@@ -43,6 +45,8 @@ public class PaymentMethodInfoBuilder implements Builder<PaymentMethodInfo> {
 
     /**
      *  <p>Payment method used, for example, credit card, or cash advance.</p>
+     * @param method
+     * @return Builder
      */
 
     public PaymentMethodInfoBuilder method(@Nullable final String method) {
@@ -52,6 +56,7 @@ public class PaymentMethodInfoBuilder implements Builder<PaymentMethodInfo> {
 
     /**
      *  <p>Localizable name of the payment method.</p>
+     * @return Builder
      */
 
     public PaymentMethodInfoBuilder name(
@@ -62,6 +67,8 @@ public class PaymentMethodInfoBuilder implements Builder<PaymentMethodInfo> {
 
     /**
      *  <p>Localizable name of the payment method.</p>
+     * @param name
+     * @return Builder
      */
 
     public PaymentMethodInfoBuilder name(@Nullable final com.commercetools.api.models.common.LocalizedString name) {

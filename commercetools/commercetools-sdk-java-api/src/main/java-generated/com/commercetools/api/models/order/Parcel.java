@@ -35,6 +35,7 @@ public interface Parcel extends ParcelMixin, com.commercetools.api.models.Custom
 
     /**
      *  <p>Unique identifier of the Parcel.</p>
+     * @return id
      */
     @NotNull
     @JsonProperty("id")
@@ -42,6 +43,7 @@ public interface Parcel extends ParcelMixin, com.commercetools.api.models.Custom
 
     /**
      *
+     * @return createdAt
      */
     @NotNull
     @JsonProperty("createdAt")
@@ -49,6 +51,7 @@ public interface Parcel extends ParcelMixin, com.commercetools.api.models.Custom
 
     /**
      *
+     * @return measurements
      */
     @Valid
     @JsonProperty("measurements")
@@ -56,6 +59,7 @@ public interface Parcel extends ParcelMixin, com.commercetools.api.models.Custom
 
     /**
      *
+     * @return trackingData
      */
     @Valid
     @JsonProperty("trackingData")
@@ -63,6 +67,7 @@ public interface Parcel extends ParcelMixin, com.commercetools.api.models.Custom
 
     /**
      *  <p>The delivery items contained in this parcel.</p>
+     * @return items
      */
     @Valid
     @JsonProperty("items")
@@ -70,6 +75,7 @@ public interface Parcel extends ParcelMixin, com.commercetools.api.models.Custom
 
     /**
      *  <p>Custom Fields of this parcel.</p>
+     * @return custom
      */
     @Valid
     @JsonProperty("custom")

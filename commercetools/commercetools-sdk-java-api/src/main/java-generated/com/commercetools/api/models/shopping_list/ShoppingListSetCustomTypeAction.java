@@ -34,6 +34,7 @@ public interface ShoppingListSetCustomTypeAction extends ShoppingListUpdateActio
 
     /**
      *  <p>Defines the Type that extends the ShoppingList with Custom Fields. If absent, any existing Type and Custom Fields are removed from the ShoppingList.</p>
+     * @return type
      */
     @Valid
     @JsonProperty("type")
@@ -41,6 +42,7 @@ public interface ShoppingListSetCustomTypeAction extends ShoppingListUpdateActio
 
     /**
      *  <p>Sets the Custom Fields fields for the ShoppingList.</p>
+     * @return fields
      */
     @Valid
     @JsonProperty("fields")

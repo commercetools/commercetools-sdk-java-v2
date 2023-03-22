@@ -46,6 +46,8 @@ public class TransactionBuilder implements Builder<Transaction> {
 
     /**
      *  <p>Unique identifier of the Transaction.</p>
+     * @param id
+     * @return Builder
      */
 
     public TransactionBuilder id(final String id) {
@@ -55,6 +57,8 @@ public class TransactionBuilder implements Builder<Transaction> {
 
     /**
      *  <p>Date and time (UTC) the Transaction took place.</p>
+     * @param timestamp
+     * @return Builder
      */
 
     public TransactionBuilder timestamp(@Nullable final java.time.ZonedDateTime timestamp) {
@@ -64,6 +68,8 @@ public class TransactionBuilder implements Builder<Transaction> {
 
     /**
      *  <p>Type of the Transaction. For example, <code>Authorization</code>.</p>
+     * @param type
+     * @return Builder
      */
 
     public TransactionBuilder type(final com.commercetools.api.models.payment.TransactionType type) {
@@ -73,6 +79,7 @@ public class TransactionBuilder implements Builder<Transaction> {
 
     /**
      *  <p>Money value of the Transaction.</p>
+     * @return Builder
      */
 
     public TransactionBuilder amount(
@@ -83,6 +90,8 @@ public class TransactionBuilder implements Builder<Transaction> {
 
     /**
      *  <p>Money value of the Transaction.</p>
+     * @param amount
+     * @return Builder
      */
 
     public TransactionBuilder amount(final com.commercetools.api.models.common.CentPrecisionMoney amount) {
@@ -92,6 +101,8 @@ public class TransactionBuilder implements Builder<Transaction> {
 
     /**
      *  <p>Identifier used by the interface that manages the Transaction (usually the PSP). If a matching interaction was logged in the <code>interfaceInteractions</code> array, the corresponding interaction can be found with this ID.</p>
+     * @param interactionId
+     * @return Builder
      */
 
     public TransactionBuilder interactionId(@Nullable final String interactionId) {
@@ -101,6 +112,8 @@ public class TransactionBuilder implements Builder<Transaction> {
 
     /**
      *  <p>State of the Transaction.</p>
+     * @param state
+     * @return Builder
      */
 
     public TransactionBuilder state(final com.commercetools.api.models.payment.TransactionState state) {
@@ -110,6 +123,7 @@ public class TransactionBuilder implements Builder<Transaction> {
 
     /**
      *  <p>Custom Fields defined for the Transaction.</p>
+     * @return Builder
      */
 
     public TransactionBuilder custom(
@@ -120,6 +134,8 @@ public class TransactionBuilder implements Builder<Transaction> {
 
     /**
      *  <p>Custom Fields defined for the Transaction.</p>
+     * @param custom
+     * @return Builder
      */
 
     public TransactionBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFields custom) {

@@ -49,6 +49,7 @@ public interface ShippingMethodUpdateAction
 
     /**
      *
+     * @return action
      */
     @NotNull
     @JsonProperty("action")

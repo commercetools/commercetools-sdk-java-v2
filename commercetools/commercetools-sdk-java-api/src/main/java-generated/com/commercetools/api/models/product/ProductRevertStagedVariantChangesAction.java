@@ -33,6 +33,7 @@ public interface ProductRevertStagedVariantChangesAction extends ProductUpdateAc
 
     /**
      *  <p>The <code>id</code> of the ProductVariant to revert.</p>
+     * @return variantId
      */
     @NotNull
     @JsonProperty("variantId")

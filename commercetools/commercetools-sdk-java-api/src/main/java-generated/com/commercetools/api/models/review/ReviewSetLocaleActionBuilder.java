@@ -27,6 +27,8 @@ public class ReviewSetLocaleActionBuilder implements Builder<ReviewSetLocaleActi
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
+     * @param locale
+     * @return Builder
      */
 
     public ReviewSetLocaleActionBuilder locale(@Nullable final String locale) {

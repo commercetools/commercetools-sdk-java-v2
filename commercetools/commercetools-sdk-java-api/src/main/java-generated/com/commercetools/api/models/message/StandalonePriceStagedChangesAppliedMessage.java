@@ -42,6 +42,7 @@ public interface StandalonePriceStagedChangesAppliedMessage extends Message {
 
     /**
      *  <p>Applied changes of the StandalonePrice after the Apply Staged Changes update action.</p>
+     * @return stagedChanges
      */
     @NotNull
     @Valid

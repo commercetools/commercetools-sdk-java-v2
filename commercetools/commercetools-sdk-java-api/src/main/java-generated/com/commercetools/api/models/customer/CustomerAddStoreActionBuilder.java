@@ -26,6 +26,7 @@ public class CustomerAddStoreActionBuilder implements Builder<CustomerAddStoreAc
 
     /**
      *  <p>ResourceIdentifier of the Store to add.</p>
+     * @return Builder
      */
 
     public CustomerAddStoreActionBuilder store(
@@ -36,6 +37,8 @@ public class CustomerAddStoreActionBuilder implements Builder<CustomerAddStoreAc
 
     /**
      *  <p>ResourceIdentifier of the Store to add.</p>
+     * @param store
+     * @return Builder
      */
 
     public CustomerAddStoreActionBuilder store(final com.commercetools.api.models.store.StoreResourceIdentifier store) {

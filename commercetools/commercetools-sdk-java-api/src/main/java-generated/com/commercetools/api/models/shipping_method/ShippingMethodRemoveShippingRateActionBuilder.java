@@ -29,6 +29,7 @@ public class ShippingMethodRemoveShippingRateActionBuilder implements Builder<Sh
 
     /**
      *  <p>Zone from which the ShippingRate should be removed.</p>
+     * @return Builder
      */
 
     public ShippingMethodRemoveShippingRateActionBuilder zone(
@@ -39,6 +40,8 @@ public class ShippingMethodRemoveShippingRateActionBuilder implements Builder<Sh
 
     /**
      *  <p>Zone from which the ShippingRate should be removed.</p>
+     * @param zone
+     * @return Builder
      */
 
     public ShippingMethodRemoveShippingRateActionBuilder zone(
@@ -49,6 +52,7 @@ public class ShippingMethodRemoveShippingRateActionBuilder implements Builder<Sh
 
     /**
      *  <p>Value to remove from <code>shippingRates</code>.</p>
+     * @return Builder
      */
 
     public ShippingMethodRemoveShippingRateActionBuilder shippingRate(
@@ -60,6 +64,8 @@ public class ShippingMethodRemoveShippingRateActionBuilder implements Builder<Sh
 
     /**
      *  <p>Value to remove from <code>shippingRates</code>.</p>
+     * @param shippingRate
+     * @return Builder
      */
 
     public ShippingMethodRemoveShippingRateActionBuilder shippingRate(

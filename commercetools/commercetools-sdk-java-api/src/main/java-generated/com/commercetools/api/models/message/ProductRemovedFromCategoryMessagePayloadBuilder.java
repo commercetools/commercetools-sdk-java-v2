@@ -30,6 +30,7 @@ public class ProductRemovedFromCategoryMessagePayloadBuilder
 
     /**
      *  <p>Category the Product was removed from.</p>
+     * @return Builder
      */
 
     public ProductRemovedFromCategoryMessagePayloadBuilder category(
@@ -40,6 +41,8 @@ public class ProductRemovedFromCategoryMessagePayloadBuilder
 
     /**
      *  <p>Category the Product was removed from.</p>
+     * @param category
+     * @return Builder
      */
 
     public ProductRemovedFromCategoryMessagePayloadBuilder category(
@@ -50,6 +53,8 @@ public class ProductRemovedFromCategoryMessagePayloadBuilder
 
     /**
      *  <p>Whether the update was only applied to the staged Product Projection.</p>
+     * @param staged
+     * @return Builder
      */
 
     public ProductRemovedFromCategoryMessagePayloadBuilder staged(final Boolean staged) {

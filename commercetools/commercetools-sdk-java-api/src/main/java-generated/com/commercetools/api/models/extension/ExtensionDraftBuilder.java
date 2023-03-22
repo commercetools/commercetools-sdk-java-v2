@@ -37,6 +37,8 @@ public class ExtensionDraftBuilder implements Builder<ExtensionDraft> {
 
     /**
      *  <p>User-defined unique identifier for the Extension.</p>
+     * @param key
+     * @return Builder
      */
 
     public ExtensionDraftBuilder key(@Nullable final String key) {
@@ -46,6 +48,8 @@ public class ExtensionDraftBuilder implements Builder<ExtensionDraft> {
 
     /**
      *  <p>Defines where the Extension can be reached.</p>
+     * @param destination
+     * @return Builder
      */
 
     public ExtensionDraftBuilder destination(
@@ -56,6 +60,7 @@ public class ExtensionDraftBuilder implements Builder<ExtensionDraft> {
 
     /**
      *  <p>Defines where the Extension can be reached.</p>
+     * @return Builder
      */
 
     public ExtensionDraftBuilder destination(
@@ -67,6 +72,8 @@ public class ExtensionDraftBuilder implements Builder<ExtensionDraft> {
 
     /**
      *  <p>Describes what triggers the Extension.</p>
+     * @param triggers
+     * @return Builder
      */
 
     public ExtensionDraftBuilder triggers(final com.commercetools.api.models.extension.ExtensionTrigger... triggers) {
@@ -76,6 +83,8 @@ public class ExtensionDraftBuilder implements Builder<ExtensionDraft> {
 
     /**
      *  <p>Describes what triggers the Extension.</p>
+     * @param triggers
+     * @return Builder
      */
 
     public ExtensionDraftBuilder triggers(
@@ -86,6 +95,8 @@ public class ExtensionDraftBuilder implements Builder<ExtensionDraft> {
 
     /**
      *  <p>Describes what triggers the Extension.</p>
+     * @param triggers
+     * @return Builder
      */
 
     public ExtensionDraftBuilder plusTriggers(
@@ -99,6 +110,7 @@ public class ExtensionDraftBuilder implements Builder<ExtensionDraft> {
 
     /**
      *  <p>Describes what triggers the Extension.</p>
+     * @return Builder
      */
 
     public ExtensionDraftBuilder plusTriggers(
@@ -112,6 +124,7 @@ public class ExtensionDraftBuilder implements Builder<ExtensionDraft> {
 
     /**
      *  <p>Describes what triggers the Extension.</p>
+     * @return Builder
      */
 
     public ExtensionDraftBuilder withTriggers(
@@ -124,6 +137,8 @@ public class ExtensionDraftBuilder implements Builder<ExtensionDraft> {
     /**
      *  <p>Maximum time (in milliseconds) the Extension can respond within. If no timeout is provided, the default value is used for all types of Extensions. The maximum value is 10000 ms (10 seconds) for <code>payment</code> Extensions and 2000 ms (2 seconds) for all other Extensions.</p>
      *  <p>This limit can be increased per Project after we review the performance impact. Please contact our support via the Support Portal and provide the Region, Project key, and use case.</p>
+     * @param timeoutInMs
+     * @return Builder
      */
 
     public ExtensionDraftBuilder timeoutInMs(@Nullable final Integer timeoutInMs) {

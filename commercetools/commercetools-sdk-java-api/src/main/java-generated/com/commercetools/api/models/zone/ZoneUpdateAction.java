@@ -38,6 +38,7 @@ public interface ZoneUpdateAction extends com.commercetools.api.models.ResourceU
 
     /**
      *
+     * @return action
      */
     @NotNull
     @JsonProperty("action")

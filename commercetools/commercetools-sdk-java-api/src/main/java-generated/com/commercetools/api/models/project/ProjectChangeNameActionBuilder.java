@@ -25,6 +25,8 @@ public class ProjectChangeNameActionBuilder implements Builder<ProjectChangeName
 
     /**
      *  <p>New value to set. Must not be empty.</p>
+     * @param name
+     * @return Builder
      */
 
     public ProjectChangeNameActionBuilder name(final String name) {

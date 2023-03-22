@@ -30,6 +30,7 @@ public interface BusinessUnitRemoveBillingAddressIdAction extends BusinessUnitUp
 
     /**
      *  <p>ID of the address to be removed from <code>billingAddressIds</code>. Either <code>addressId</code> or <code>addressKey</code> is required.</p>
+     * @return addressId
      */
 
     @JsonProperty("addressId")
@@ -37,6 +38,7 @@ public interface BusinessUnitRemoveBillingAddressIdAction extends BusinessUnitUp
 
     /**
      *  <p>Key of the address to be removed from <code>billingAddressIds</code>. Either <code>addressId</code> or <code>addressKey</code> is required.</p>
+     * @return addressKey
      */
 
     @JsonProperty("addressKey")

@@ -33,6 +33,7 @@ public interface ZoneChangeNameAction extends ZoneUpdateAction {
 
     /**
      *  <p>New name of the Zone.</p>
+     * @return name
      */
     @NotNull
     @JsonProperty("name")

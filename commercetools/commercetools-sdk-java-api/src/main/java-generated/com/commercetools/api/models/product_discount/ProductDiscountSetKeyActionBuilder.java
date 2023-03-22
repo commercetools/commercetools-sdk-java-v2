@@ -27,6 +27,8 @@ public class ProductDiscountSetKeyActionBuilder implements Builder<ProductDiscou
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
+     * @param key
+     * @return Builder
      */
 
     public ProductDiscountSetKeyActionBuilder key(@Nullable final String key) {

@@ -29,6 +29,8 @@ public class LocalizedEnumValueBuilder implements Builder<LocalizedEnumValue> {
 
     /**
      *
+     * @param key
+     * @return Builder
      */
 
     public LocalizedEnumValueBuilder key(final String key) {
@@ -43,6 +45,7 @@ public class LocalizedEnumValueBuilder implements Builder<LocalizedEnumValue> {
      *    "en": "dog food"
      *  }
      *  </code></pre>
+     * @return Builder
      */
 
     public LocalizedEnumValueBuilder label(
@@ -58,6 +61,8 @@ public class LocalizedEnumValueBuilder implements Builder<LocalizedEnumValue> {
      *    "en": "dog food"
      *  }
      *  </code></pre>
+     * @param label
+     * @return Builder
      */
 
     public LocalizedEnumValueBuilder label(final com.commercetools.importapi.models.common.LocalizedString label) {

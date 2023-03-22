@@ -37,6 +37,7 @@ public interface CustomerFirstNameSetMessage extends Message {
 
     /**
      *  <p>The <code>firstName</code> that was set during the Set First Name update action.</p>
+     * @return firstName
      */
 
     @JsonProperty("firstName")

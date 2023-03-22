@@ -43,6 +43,8 @@ public class TextLineItemBuilder implements Builder<TextLineItem> {
 
     /**
      *  <p>Date and time (UTC) the TextLineItem was added to the ShoppingList.</p>
+     * @param addedAt
+     * @return Builder
      */
 
     public TextLineItemBuilder addedAt(final java.time.ZonedDateTime addedAt) {
@@ -52,6 +54,7 @@ public class TextLineItemBuilder implements Builder<TextLineItem> {
 
     /**
      *  <p>Custom Fields of the TextLineItem.</p>
+     * @return Builder
      */
 
     public TextLineItemBuilder custom(
@@ -62,6 +65,8 @@ public class TextLineItemBuilder implements Builder<TextLineItem> {
 
     /**
      *  <p>Custom Fields of the TextLineItem.</p>
+     * @param custom
+     * @return Builder
      */
 
     public TextLineItemBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFields custom) {
@@ -71,6 +76,7 @@ public class TextLineItemBuilder implements Builder<TextLineItem> {
 
     /**
      *  <p>Description of the TextLineItem.</p>
+     * @return Builder
      */
 
     public TextLineItemBuilder description(
@@ -81,6 +87,8 @@ public class TextLineItemBuilder implements Builder<TextLineItem> {
 
     /**
      *  <p>Description of the TextLineItem.</p>
+     * @param description
+     * @return Builder
      */
 
     public TextLineItemBuilder description(
@@ -91,6 +99,8 @@ public class TextLineItemBuilder implements Builder<TextLineItem> {
 
     /**
      *  <p>Unique identifier of the TextLineItem.</p>
+     * @param id
+     * @return Builder
      */
 
     public TextLineItemBuilder id(final String id) {
@@ -100,6 +110,7 @@ public class TextLineItemBuilder implements Builder<TextLineItem> {
 
     /**
      *  <p>Name of the TextLineItem.</p>
+     * @return Builder
      */
 
     public TextLineItemBuilder name(
@@ -110,6 +121,8 @@ public class TextLineItemBuilder implements Builder<TextLineItem> {
 
     /**
      *  <p>Name of the TextLineItem.</p>
+     * @param name
+     * @return Builder
      */
 
     public TextLineItemBuilder name(final com.commercetools.api.models.common.LocalizedString name) {
@@ -119,6 +132,8 @@ public class TextLineItemBuilder implements Builder<TextLineItem> {
 
     /**
      *  <p>Number of entries in the TextLineItem.</p>
+     * @param quantity
+     * @return Builder
      */
 
     public TextLineItemBuilder quantity(final Long quantity) {

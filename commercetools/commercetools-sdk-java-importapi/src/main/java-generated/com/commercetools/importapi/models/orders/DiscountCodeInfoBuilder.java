@@ -31,6 +31,7 @@ public class DiscountCodeInfoBuilder implements Builder<DiscountCodeInfo> {
 
     /**
      *  <p>References a discount code by key.</p>
+     * @return Builder
      */
 
     public DiscountCodeInfoBuilder discountCode(
@@ -43,6 +44,8 @@ public class DiscountCodeInfoBuilder implements Builder<DiscountCodeInfo> {
 
     /**
      *  <p>References a discount code by key.</p>
+     * @param discountCode
+     * @return Builder
      */
 
     public DiscountCodeInfoBuilder discountCode(
@@ -53,6 +56,8 @@ public class DiscountCodeInfoBuilder implements Builder<DiscountCodeInfo> {
 
     /**
      *  <p>Maps to <code>DiscountCodeInfo.state</code></p>
+     * @param state
+     * @return Builder
      */
 
     public DiscountCodeInfoBuilder state(

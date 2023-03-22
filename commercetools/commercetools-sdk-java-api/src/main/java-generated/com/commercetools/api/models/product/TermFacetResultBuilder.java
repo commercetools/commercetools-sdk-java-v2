@@ -38,6 +38,8 @@ public class TermFacetResultBuilder implements Builder<TermFacetResult> {
 
     /**
      *
+     * @param dataType
+     * @return Builder
      */
 
     public TermFacetResultBuilder dataType(final com.commercetools.api.models.product.TermFacetResultType dataType) {
@@ -47,6 +49,8 @@ public class TermFacetResultBuilder implements Builder<TermFacetResult> {
 
     /**
      *
+     * @param missing
+     * @return Builder
      */
 
     public TermFacetResultBuilder missing(final Long missing) {
@@ -56,6 +60,8 @@ public class TermFacetResultBuilder implements Builder<TermFacetResult> {
 
     /**
      *
+     * @param total
+     * @return Builder
      */
 
     public TermFacetResultBuilder total(final Long total) {
@@ -65,6 +71,8 @@ public class TermFacetResultBuilder implements Builder<TermFacetResult> {
 
     /**
      *
+     * @param other
+     * @return Builder
      */
 
     public TermFacetResultBuilder other(final Long other) {
@@ -74,6 +82,8 @@ public class TermFacetResultBuilder implements Builder<TermFacetResult> {
 
     /**
      *
+     * @param terms
+     * @return Builder
      */
 
     public TermFacetResultBuilder terms(final com.commercetools.api.models.product.FacetTerm... terms) {
@@ -83,6 +93,8 @@ public class TermFacetResultBuilder implements Builder<TermFacetResult> {
 
     /**
      *
+     * @param terms
+     * @return Builder
      */
 
     public TermFacetResultBuilder terms(final java.util.List<com.commercetools.api.models.product.FacetTerm> terms) {
@@ -92,6 +104,8 @@ public class TermFacetResultBuilder implements Builder<TermFacetResult> {
 
     /**
      *
+     * @param terms
+     * @return Builder
      */
 
     public TermFacetResultBuilder plusTerms(final com.commercetools.api.models.product.FacetTerm... terms) {
@@ -104,6 +118,7 @@ public class TermFacetResultBuilder implements Builder<TermFacetResult> {
 
     /**
      *
+     * @return Builder
      */
 
     public TermFacetResultBuilder plusTerms(
@@ -117,6 +132,7 @@ public class TermFacetResultBuilder implements Builder<TermFacetResult> {
 
     /**
      *
+     * @return Builder
      */
 
     public TermFacetResultBuilder withTerms(

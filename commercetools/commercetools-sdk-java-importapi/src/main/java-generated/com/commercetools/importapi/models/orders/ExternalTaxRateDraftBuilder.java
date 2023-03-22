@@ -43,6 +43,8 @@ public class ExternalTaxRateDraftBuilder implements Builder<ExternalTaxRateDraft
 
     /**
      *
+     * @param name
+     * @return Builder
      */
 
     public ExternalTaxRateDraftBuilder name(final String name) {
@@ -52,6 +54,8 @@ public class ExternalTaxRateDraftBuilder implements Builder<ExternalTaxRateDraft
 
     /**
      *
+     * @param amount
+     * @return Builder
      */
 
     public ExternalTaxRateDraftBuilder amount(@Nullable final Double amount) {
@@ -61,6 +65,8 @@ public class ExternalTaxRateDraftBuilder implements Builder<ExternalTaxRateDraft
 
     /**
      *
+     * @param country
+     * @return Builder
      */
 
     public ExternalTaxRateDraftBuilder country(final String country) {
@@ -70,6 +76,8 @@ public class ExternalTaxRateDraftBuilder implements Builder<ExternalTaxRateDraft
 
     /**
      *
+     * @param state
+     * @return Builder
      */
 
     public ExternalTaxRateDraftBuilder state(@Nullable final String state) {
@@ -79,6 +87,8 @@ public class ExternalTaxRateDraftBuilder implements Builder<ExternalTaxRateDraft
 
     /**
      *
+     * @param subRates
+     * @return Builder
      */
 
     public ExternalTaxRateDraftBuilder subRates(
@@ -89,6 +99,8 @@ public class ExternalTaxRateDraftBuilder implements Builder<ExternalTaxRateDraft
 
     /**
      *
+     * @param subRates
+     * @return Builder
      */
 
     public ExternalTaxRateDraftBuilder subRates(
@@ -99,6 +111,8 @@ public class ExternalTaxRateDraftBuilder implements Builder<ExternalTaxRateDraft
 
     /**
      *
+     * @param subRates
+     * @return Builder
      */
 
     public ExternalTaxRateDraftBuilder plusSubRates(
@@ -112,6 +126,7 @@ public class ExternalTaxRateDraftBuilder implements Builder<ExternalTaxRateDraft
 
     /**
      *
+     * @return Builder
      */
 
     public ExternalTaxRateDraftBuilder plusSubRates(
@@ -125,6 +140,7 @@ public class ExternalTaxRateDraftBuilder implements Builder<ExternalTaxRateDraft
 
     /**
      *
+     * @return Builder
      */
 
     public ExternalTaxRateDraftBuilder withSubRates(
@@ -136,6 +152,8 @@ public class ExternalTaxRateDraftBuilder implements Builder<ExternalTaxRateDraft
 
     /**
      *
+     * @param includedInPrice
+     * @return Builder
      */
 
     public ExternalTaxRateDraftBuilder includedInPrice(@Nullable final Boolean includedInPrice) {

@@ -25,6 +25,8 @@ public class ShippingMethodChangeNameActionBuilder implements Builder<ShippingMe
 
     /**
      *  <p>Value to set. Must not be empty.</p>
+     * @param name
+     * @return Builder
      */
 
     public ShippingMethodChangeNameActionBuilder name(final String name) {

@@ -27,6 +27,8 @@ public class AnonymousIdAlreadyInUseErrorBuilder implements Builder<AnonymousIdA
 
     /**
      *  <p><code>"The given anonymous ID is already in use."</code></p>
+     * @param message
+     * @return Builder
      */
 
     public AnonymousIdAlreadyInUseErrorBuilder message(final String message) {

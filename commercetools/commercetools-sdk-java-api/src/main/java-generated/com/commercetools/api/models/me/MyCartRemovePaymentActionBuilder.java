@@ -26,6 +26,7 @@ public class MyCartRemovePaymentActionBuilder implements Builder<MyCartRemovePay
 
     /**
      *  <p>Payment to remove from the Cart.</p>
+     * @return Builder
      */
 
     public MyCartRemovePaymentActionBuilder payment(
@@ -37,6 +38,8 @@ public class MyCartRemovePaymentActionBuilder implements Builder<MyCartRemovePay
 
     /**
      *  <p>Payment to remove from the Cart.</p>
+     * @param payment
+     * @return Builder
      */
 
     public MyCartRemovePaymentActionBuilder payment(

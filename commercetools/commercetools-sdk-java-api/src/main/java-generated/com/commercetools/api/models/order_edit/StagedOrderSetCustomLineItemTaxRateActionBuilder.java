@@ -32,6 +32,8 @@ public class StagedOrderSetCustomLineItemTaxRateActionBuilder
 
     /**
      *
+     * @param customLineItemId
+     * @return Builder
      */
 
     public StagedOrderSetCustomLineItemTaxRateActionBuilder customLineItemId(final String customLineItemId) {
@@ -41,6 +43,7 @@ public class StagedOrderSetCustomLineItemTaxRateActionBuilder
 
     /**
      *  <p>Controls calculation of taxed prices for Line Items, Custom Line Items, and Shipping Methods as explained in Cart tax calculation.</p>
+     * @return Builder
      */
 
     public StagedOrderSetCustomLineItemTaxRateActionBuilder externalTaxRate(
@@ -52,6 +55,8 @@ public class StagedOrderSetCustomLineItemTaxRateActionBuilder
 
     /**
      *  <p>Controls calculation of taxed prices for Line Items, Custom Line Items, and Shipping Methods as explained in Cart tax calculation.</p>
+     * @param externalTaxRate
+     * @return Builder
      */
 
     public StagedOrderSetCustomLineItemTaxRateActionBuilder externalTaxRate(

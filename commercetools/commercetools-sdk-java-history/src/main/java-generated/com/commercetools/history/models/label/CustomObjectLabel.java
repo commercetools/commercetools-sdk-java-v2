@@ -34,6 +34,7 @@ public interface CustomObjectLabel extends Label {
 
     /**
      *
+     * @return type
      */
     @NotNull
     @JsonProperty("type")
@@ -41,6 +42,7 @@ public interface CustomObjectLabel extends Label {
 
     /**
      *
+     * @return key
      */
     @NotNull
     @JsonProperty("key")
@@ -48,6 +50,7 @@ public interface CustomObjectLabel extends Label {
 
     /**
      *
+     * @return container
      */
     @NotNull
     @JsonProperty("container")

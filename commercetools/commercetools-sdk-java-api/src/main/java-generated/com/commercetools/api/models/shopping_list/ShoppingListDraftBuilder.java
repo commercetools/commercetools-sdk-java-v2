@@ -58,6 +58,7 @@ public class ShoppingListDraftBuilder implements Builder<ShoppingListDraft> {
 
     /**
      *  <p>Name of the ShoppingList.</p>
+     * @return Builder
      */
 
     public ShoppingListDraftBuilder name(
@@ -68,6 +69,8 @@ public class ShoppingListDraftBuilder implements Builder<ShoppingListDraft> {
 
     /**
      *  <p>Name of the ShoppingList.</p>
+     * @param name
+     * @return Builder
      */
 
     public ShoppingListDraftBuilder name(final com.commercetools.api.models.common.LocalizedString name) {
@@ -77,6 +80,7 @@ public class ShoppingListDraftBuilder implements Builder<ShoppingListDraft> {
 
     /**
      *  <p>Human-readable identifiers usually used as deep-link URL to the related ShoppingList. Each slug is unique across a Project, but a ShoppingList can have the same slug for different languages. The slug must match the pattern <code>[a-zA-Z0-9_-]{2,256}</code>.</p>
+     * @return Builder
      */
 
     public ShoppingListDraftBuilder slug(
@@ -87,6 +91,8 @@ public class ShoppingListDraftBuilder implements Builder<ShoppingListDraft> {
 
     /**
      *  <p>Human-readable identifiers usually used as deep-link URL to the related ShoppingList. Each slug is unique across a Project, but a ShoppingList can have the same slug for different languages. The slug must match the pattern <code>[a-zA-Z0-9_-]{2,256}</code>.</p>
+     * @param slug
+     * @return Builder
      */
 
     public ShoppingListDraftBuilder slug(@Nullable final com.commercetools.api.models.common.LocalizedString slug) {
@@ -96,6 +102,7 @@ public class ShoppingListDraftBuilder implements Builder<ShoppingListDraft> {
 
     /**
      *  <p>The Customer the ShoppingList should be associated to.</p>
+     * @return Builder
      */
 
     public ShoppingListDraftBuilder customer(
@@ -107,6 +114,8 @@ public class ShoppingListDraftBuilder implements Builder<ShoppingListDraft> {
 
     /**
      *  <p>The Customer the ShoppingList should be associated to.</p>
+     * @param customer
+     * @return Builder
      */
 
     public ShoppingListDraftBuilder customer(
@@ -117,6 +126,8 @@ public class ShoppingListDraftBuilder implements Builder<ShoppingListDraft> {
 
     /**
      *  <p>User-defined unique identifier for the ShoppingList.</p>
+     * @param key
+     * @return Builder
      */
 
     public ShoppingListDraftBuilder key(@Nullable final String key) {
@@ -126,6 +137,7 @@ public class ShoppingListDraftBuilder implements Builder<ShoppingListDraft> {
 
     /**
      *  <p>Description of the ShoppingList.</p>
+     * @return Builder
      */
 
     public ShoppingListDraftBuilder description(
@@ -136,6 +148,8 @@ public class ShoppingListDraftBuilder implements Builder<ShoppingListDraft> {
 
     /**
      *  <p>Description of the ShoppingList.</p>
+     * @param description
+     * @return Builder
      */
 
     public ShoppingListDraftBuilder description(
@@ -146,6 +160,8 @@ public class ShoppingListDraftBuilder implements Builder<ShoppingListDraft> {
 
     /**
      *  <p>Identifies ShoppingLists belonging to an anonymous session.</p>
+     * @param anonymousId
+     * @return Builder
      */
 
     public ShoppingListDraftBuilder anonymousId(@Nullable final String anonymousId) {
@@ -155,6 +171,8 @@ public class ShoppingListDraftBuilder implements Builder<ShoppingListDraft> {
 
     /**
      *  <p>Number of days after which the ShoppingList will be automatically deleted if it has not been modified. If not set, the default value configured in the Project is used.</p>
+     * @param deleteDaysAfterLastModification
+     * @return Builder
      */
 
     public ShoppingListDraftBuilder deleteDaysAfterLastModification(
@@ -165,6 +183,8 @@ public class ShoppingListDraftBuilder implements Builder<ShoppingListDraft> {
 
     /**
      *  <p>Line Items (containing Products) to add to the ShoppingList.</p>
+     * @param lineItems
+     * @return Builder
      */
 
     public ShoppingListDraftBuilder lineItems(
@@ -175,6 +195,8 @@ public class ShoppingListDraftBuilder implements Builder<ShoppingListDraft> {
 
     /**
      *  <p>Line Items (containing Products) to add to the ShoppingList.</p>
+     * @param lineItems
+     * @return Builder
      */
 
     public ShoppingListDraftBuilder lineItems(
@@ -185,6 +207,8 @@ public class ShoppingListDraftBuilder implements Builder<ShoppingListDraft> {
 
     /**
      *  <p>Line Items (containing Products) to add to the ShoppingList.</p>
+     * @param lineItems
+     * @return Builder
      */
 
     public ShoppingListDraftBuilder plusLineItems(
@@ -198,6 +222,7 @@ public class ShoppingListDraftBuilder implements Builder<ShoppingListDraft> {
 
     /**
      *  <p>Line Items (containing Products) to add to the ShoppingList.</p>
+     * @return Builder
      */
 
     public ShoppingListDraftBuilder plusLineItems(
@@ -212,6 +237,7 @@ public class ShoppingListDraftBuilder implements Builder<ShoppingListDraft> {
 
     /**
      *  <p>Line Items (containing Products) to add to the ShoppingList.</p>
+     * @return Builder
      */
 
     public ShoppingListDraftBuilder withLineItems(
@@ -224,6 +250,8 @@ public class ShoppingListDraftBuilder implements Builder<ShoppingListDraft> {
 
     /**
      *  <p>Line Items (containing text values) to add to the ShoppingList.</p>
+     * @param textLineItems
+     * @return Builder
      */
 
     public ShoppingListDraftBuilder textLineItems(
@@ -234,6 +262,8 @@ public class ShoppingListDraftBuilder implements Builder<ShoppingListDraft> {
 
     /**
      *  <p>Line Items (containing text values) to add to the ShoppingList.</p>
+     * @param textLineItems
+     * @return Builder
      */
 
     public ShoppingListDraftBuilder textLineItems(
@@ -244,6 +274,8 @@ public class ShoppingListDraftBuilder implements Builder<ShoppingListDraft> {
 
     /**
      *  <p>Line Items (containing text values) to add to the ShoppingList.</p>
+     * @param textLineItems
+     * @return Builder
      */
 
     public ShoppingListDraftBuilder plusTextLineItems(
@@ -257,6 +289,7 @@ public class ShoppingListDraftBuilder implements Builder<ShoppingListDraft> {
 
     /**
      *  <p>Line Items (containing text values) to add to the ShoppingList.</p>
+     * @return Builder
      */
 
     public ShoppingListDraftBuilder plusTextLineItems(
@@ -271,6 +304,7 @@ public class ShoppingListDraftBuilder implements Builder<ShoppingListDraft> {
 
     /**
      *  <p>Line Items (containing text values) to add to the ShoppingList.</p>
+     * @return Builder
      */
 
     public ShoppingListDraftBuilder withTextLineItems(
@@ -283,6 +317,7 @@ public class ShoppingListDraftBuilder implements Builder<ShoppingListDraft> {
 
     /**
      *  <p>Assigns the new ShoppingList to the Store.</p>
+     * @return Builder
      */
 
     public ShoppingListDraftBuilder store(
@@ -293,6 +328,8 @@ public class ShoppingListDraftBuilder implements Builder<ShoppingListDraft> {
 
     /**
      *  <p>Assigns the new ShoppingList to the Store.</p>
+     * @param store
+     * @return Builder
      */
 
     public ShoppingListDraftBuilder store(
@@ -303,6 +340,7 @@ public class ShoppingListDraftBuilder implements Builder<ShoppingListDraft> {
 
     /**
      *  <p>Custom Fields defined for the ShoppingList.</p>
+     * @return Builder
      */
 
     public ShoppingListDraftBuilder custom(
@@ -313,6 +351,8 @@ public class ShoppingListDraftBuilder implements Builder<ShoppingListDraft> {
 
     /**
      *  <p>Custom Fields defined for the ShoppingList.</p>
+     * @param custom
+     * @return Builder
      */
 
     public ShoppingListDraftBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFieldsDraft custom) {

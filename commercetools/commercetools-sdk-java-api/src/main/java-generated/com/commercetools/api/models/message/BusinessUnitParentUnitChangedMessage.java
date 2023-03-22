@@ -40,6 +40,7 @@ public interface BusinessUnitParentUnitChangedMessage extends Message {
 
     /**
      *  <p>Parent unit of the Business Unit before the Change Parent Unit update action.</p>
+     * @return oldParentUnit
      */
     @Valid
     @JsonProperty("oldParentUnit")
@@ -47,6 +48,7 @@ public interface BusinessUnitParentUnitChangedMessage extends Message {
 
     /**
      *  <p>Parent unit of the Business Unit after the Change Parent Unit update action.</p>
+     * @return newParentUnit
      */
     @Valid
     @JsonProperty("newParentUnit")

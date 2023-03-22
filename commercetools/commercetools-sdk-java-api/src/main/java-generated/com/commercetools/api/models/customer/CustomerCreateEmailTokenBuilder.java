@@ -33,6 +33,8 @@ public class CustomerCreateEmailTokenBuilder implements Builder<CustomerCreateEm
 
     /**
      *  <p>Unique identifier of the Customer.</p>
+     * @param id
+     * @return Builder
      */
 
     public CustomerCreateEmailTokenBuilder id(final String id) {
@@ -42,6 +44,8 @@ public class CustomerCreateEmailTokenBuilder implements Builder<CustomerCreateEm
 
     /**
      *  <p>Expected version of the Customer.</p>
+     * @param version
+     * @return Builder
      */
 
     public CustomerCreateEmailTokenBuilder version(@Nullable final Long version) {
@@ -51,6 +55,8 @@ public class CustomerCreateEmailTokenBuilder implements Builder<CustomerCreateEm
 
     /**
      *  <p>Validity period of the generated token in minutes.</p>
+     * @param ttlMinutes
+     * @return Builder
      */
 
     public CustomerCreateEmailTokenBuilder ttlMinutes(final Long ttlMinutes) {

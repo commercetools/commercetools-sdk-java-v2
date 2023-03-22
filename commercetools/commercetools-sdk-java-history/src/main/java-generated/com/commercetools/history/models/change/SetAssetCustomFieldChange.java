@@ -38,6 +38,7 @@ public interface SetAssetCustomFieldChange extends Change {
 
     /**
      *  <p>Update action for <code>setAssetCustomField</code></p>
+     * @return change
      */
     @NotNull
     @JsonProperty("change")
@@ -45,6 +46,7 @@ public interface SetAssetCustomFieldChange extends Change {
 
     /**
      *
+     * @return type
      */
     @NotNull
     @JsonProperty("type")
@@ -52,6 +54,7 @@ public interface SetAssetCustomFieldChange extends Change {
 
     /**
      *
+     * @return name
      */
     @NotNull
     @JsonProperty("name")
@@ -59,6 +62,7 @@ public interface SetAssetCustomFieldChange extends Change {
 
     /**
      *
+     * @return customTypeId
      */
     @NotNull
     @JsonProperty("customTypeId")
@@ -66,6 +70,7 @@ public interface SetAssetCustomFieldChange extends Change {
 
     /**
      *
+     * @return asset
      */
     @NotNull
     @Valid
@@ -74,6 +79,7 @@ public interface SetAssetCustomFieldChange extends Change {
 
     /**
      *
+     * @return nextValue
      */
     @NotNull
     @JsonProperty("nextValue")
@@ -81,6 +87,7 @@ public interface SetAssetCustomFieldChange extends Change {
 
     /**
      *
+     * @return previousValue
      */
     @NotNull
     @JsonProperty("previousValue")

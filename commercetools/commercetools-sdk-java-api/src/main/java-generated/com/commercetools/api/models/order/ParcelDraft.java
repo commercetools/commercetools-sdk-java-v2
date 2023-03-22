@@ -32,6 +32,7 @@ public interface ParcelDraft extends com.commercetools.api.models.CustomizableDr
 
     /**
      *
+     * @return measurements
      */
     @Valid
     @JsonProperty("measurements")
@@ -39,6 +40,7 @@ public interface ParcelDraft extends com.commercetools.api.models.CustomizableDr
 
     /**
      *
+     * @return trackingData
      */
     @Valid
     @JsonProperty("trackingData")
@@ -46,6 +48,7 @@ public interface ParcelDraft extends com.commercetools.api.models.CustomizableDr
 
     /**
      *  <p>The delivery items contained in this parcel.</p>
+     * @return items
      */
     @Valid
     @JsonProperty("items")
@@ -53,6 +56,7 @@ public interface ParcelDraft extends com.commercetools.api.models.CustomizableDr
 
     /**
      *  <p>Custom Fields of this parcel.</p>
+     * @return custom
      */
     @Valid
     @JsonProperty("custom")

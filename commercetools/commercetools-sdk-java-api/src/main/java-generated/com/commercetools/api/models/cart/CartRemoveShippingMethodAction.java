@@ -33,6 +33,7 @@ public interface CartRemoveShippingMethodAction extends CartUpdateAction {
 
     /**
      *  <p>User-defined unique identifier of the Shipping Method to remove from the Cart.</p>
+     * @return shippingKey
      */
     @NotNull
     @JsonProperty("shippingKey")

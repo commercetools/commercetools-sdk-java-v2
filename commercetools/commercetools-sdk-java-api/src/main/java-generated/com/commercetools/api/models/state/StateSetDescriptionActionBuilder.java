@@ -26,6 +26,7 @@ public class StateSetDescriptionActionBuilder implements Builder<StateSetDescrip
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
+     * @return Builder
      */
 
     public StateSetDescriptionActionBuilder description(
@@ -36,6 +37,8 @@ public class StateSetDescriptionActionBuilder implements Builder<StateSetDescrip
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
+     * @param description
+     * @return Builder
      */
 
     public StateSetDescriptionActionBuilder description(

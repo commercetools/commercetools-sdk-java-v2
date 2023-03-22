@@ -32,6 +32,7 @@ public interface AssetDimensions {
 
     /**
      *  <p>The width of the asset source.</p>
+     * @return w
      */
     @NotNull
     @JsonProperty("w")
@@ -39,6 +40,7 @@ public interface AssetDimensions {
 
     /**
      *  <p>The height of the asset source.</p>
+     * @return h
      */
     @NotNull
     @JsonProperty("h")

@@ -46,6 +46,7 @@ public interface ImportRequest {
 
     /**
      *  <p>The type of the import resource.</p>
+     * @return type
      */
     @NotNull
     @JsonProperty("type")

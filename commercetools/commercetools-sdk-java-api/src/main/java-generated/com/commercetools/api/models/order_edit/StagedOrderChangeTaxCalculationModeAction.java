@@ -35,6 +35,7 @@ public interface StagedOrderChangeTaxCalculationModeAction extends StagedOrderUp
 
     /**
      *  <p>Determines in which Tax calculation mode taxed prices are calculated.</p>
+     * @return taxCalculationMode
      */
     @NotNull
     @JsonProperty("taxCalculationMode")

@@ -35,6 +35,7 @@ public interface DiscountedLineItemPortion {
 
     /**
      *  <p>Cart Discount applicable on the Line Item.</p>
+     * @return discount
      */
     @NotNull
     @Valid
@@ -43,6 +44,7 @@ public interface DiscountedLineItemPortion {
 
     /**
      *  <p>Money value of the discount applicable.</p>
+     * @return discountedAmount
      */
     @NotNull
     @Valid

@@ -41,6 +41,7 @@ public interface StagedOrderAddLineItemAction
 
     /**
      *  <p>The representation used when creating or updating a customizable data type with Custom Fields.</p>
+     * @return custom
      */
     @Valid
     @JsonProperty("custom")
@@ -48,6 +49,7 @@ public interface StagedOrderAddLineItemAction
 
     /**
      *  <p>ResourceIdentifier to a Channel.</p>
+     * @return distributionChannel
      */
     @Valid
     @JsonProperty("distributionChannel")
@@ -55,6 +57,7 @@ public interface StagedOrderAddLineItemAction
 
     /**
      *  <p>Controls calculation of taxed prices for Line Items, Custom Line Items, and Shipping Methods as explained in Cart tax calculation.</p>
+     * @return externalTaxRate
      */
     @Valid
     @JsonProperty("externalTaxRate")
@@ -62,6 +65,7 @@ public interface StagedOrderAddLineItemAction
 
     /**
      *
+     * @return productId
      */
 
     @JsonProperty("productId")
@@ -69,6 +73,7 @@ public interface StagedOrderAddLineItemAction
 
     /**
      *
+     * @return variantId
      */
 
     @JsonProperty("variantId")
@@ -76,6 +81,7 @@ public interface StagedOrderAddLineItemAction
 
     /**
      *
+     * @return sku
      */
 
     @JsonProperty("sku")
@@ -83,6 +89,7 @@ public interface StagedOrderAddLineItemAction
 
     /**
      *
+     * @return quantity
      */
 
     @JsonProperty("quantity")
@@ -90,6 +97,7 @@ public interface StagedOrderAddLineItemAction
 
     /**
      *
+     * @return addedAt
      */
 
     @JsonProperty("addedAt")
@@ -97,6 +105,7 @@ public interface StagedOrderAddLineItemAction
 
     /**
      *  <p>ResourceIdentifier to a Channel.</p>
+     * @return supplyChannel
      */
     @Valid
     @JsonProperty("supplyChannel")
@@ -105,6 +114,7 @@ public interface StagedOrderAddLineItemAction
     /**
      *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
      *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
+     * @return externalPrice
      */
     @Valid
     @JsonProperty("externalPrice")
@@ -112,6 +122,7 @@ public interface StagedOrderAddLineItemAction
 
     /**
      *
+     * @return externalTotalPrice
      */
     @Valid
     @JsonProperty("externalTotalPrice")
@@ -119,6 +130,7 @@ public interface StagedOrderAddLineItemAction
 
     /**
      *  <p>For order creation and updates, the sum of the <code>targets</code> must match the quantity of the Line Items or Custom Line Items.</p>
+     * @return shippingDetails
      */
     @Valid
     @JsonProperty("shippingDetails")

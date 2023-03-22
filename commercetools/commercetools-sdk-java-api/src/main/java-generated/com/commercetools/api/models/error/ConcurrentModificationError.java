@@ -33,6 +33,7 @@ public interface ConcurrentModificationError extends ErrorObject {
 
     /**
      *
+     * @return code
      */
     @NotNull
     @JsonProperty("code")
@@ -40,6 +41,7 @@ public interface ConcurrentModificationError extends ErrorObject {
 
     /**
      *  <p><code>"Object $resourceId has a different version than expected. Expected: $expectedVersion - Actual: $currentVersion."</code></p>
+     * @return message
      */
     @NotNull
     @JsonProperty("message")
@@ -47,6 +49,7 @@ public interface ConcurrentModificationError extends ErrorObject {
 
     /**
      *  <p>Current version of the resource.</p>
+     * @return currentVersion
      */
 
     @JsonProperty("currentVersion")

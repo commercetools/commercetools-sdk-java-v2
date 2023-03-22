@@ -53,6 +53,7 @@ public interface KeyReference {
 
     /**
      *
+     * @return key
      */
     @NotNull
     @JsonProperty("key")
@@ -60,6 +61,7 @@ public interface KeyReference {
 
     /**
      *  <p>The type of the referenced resource.</p>
+     * @return typeId
      */
     @NotNull
     @JsonProperty("typeId")

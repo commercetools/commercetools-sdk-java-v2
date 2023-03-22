@@ -37,6 +37,7 @@ public interface StagedOrderImportLineItemStateAction extends StagedOrderUpdateA
 
     /**
      *
+     * @return lineItemId
      */
     @NotNull
     @JsonProperty("lineItemId")
@@ -44,6 +45,7 @@ public interface StagedOrderImportLineItemStateAction extends StagedOrderUpdateA
 
     /**
      *
+     * @return state
      */
     @NotNull
     @Valid

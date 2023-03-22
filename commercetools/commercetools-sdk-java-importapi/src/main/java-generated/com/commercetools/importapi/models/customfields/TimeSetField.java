@@ -34,6 +34,7 @@ public interface TimeSetField extends CustomField {
 
     /**
      *
+     * @return value
      */
     @NotNull
     @JsonProperty("value")

@@ -34,6 +34,7 @@ public interface StagedOrderAddDiscountCodeAction extends StagedOrderUpdateActio
 
     /**
      *
+     * @return code
      */
     @NotNull
     @JsonProperty("code")

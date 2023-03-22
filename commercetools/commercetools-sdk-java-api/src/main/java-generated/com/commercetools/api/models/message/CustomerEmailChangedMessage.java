@@ -40,6 +40,7 @@ public interface CustomerEmailChangedMessage extends Message {
 
     /**
      *  <p>The <code>email</code> that was set during the Change Email update action.</p>
+     * @return email
      */
     @NotNull
     @JsonProperty("email")

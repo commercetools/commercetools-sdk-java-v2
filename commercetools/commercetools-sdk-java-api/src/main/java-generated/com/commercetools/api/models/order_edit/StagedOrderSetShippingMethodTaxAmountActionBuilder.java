@@ -34,6 +34,7 @@ public class StagedOrderSetShippingMethodTaxAmountActionBuilder
      *   <li>Set LineItem TaxAmount, Set CustomLineItem TaxAmount, or Set ShippingMethod TaxAmount on Carts</li>
      *   <li>Set LineItem TaxAmount, Set CustomLineItem TaxAmount, or Set ShippingMethod TaxAmount on Order Edits</li>
      *  </ul>
+     * @return Builder
      */
 
     public StagedOrderSetShippingMethodTaxAmountActionBuilder externalTaxAmount(
@@ -50,6 +51,8 @@ public class StagedOrderSetShippingMethodTaxAmountActionBuilder
      *   <li>Set LineItem TaxAmount, Set CustomLineItem TaxAmount, or Set ShippingMethod TaxAmount on Carts</li>
      *   <li>Set LineItem TaxAmount, Set CustomLineItem TaxAmount, or Set ShippingMethod TaxAmount on Order Edits</li>
      *  </ul>
+     * @param externalTaxAmount
+     * @return Builder
      */
 
     public StagedOrderSetShippingMethodTaxAmountActionBuilder externalTaxAmount(

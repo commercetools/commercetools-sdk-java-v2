@@ -27,6 +27,8 @@ public class StagedQuoteSetValidToActionBuilder implements Builder<StagedQuoteSe
 
     /**
      *  <p>If <code>validTo</code> is absent or <code>null</code>, this field will be removed if it exists.</p>
+     * @param validTo
+     * @return Builder
      */
 
     public StagedQuoteSetValidToActionBuilder validTo(@Nullable final java.time.ZonedDateTime validTo) {

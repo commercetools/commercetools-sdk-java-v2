@@ -33,6 +33,7 @@ public interface ProductSetMetaTitleAction extends ProductUpdateAction {
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
+     * @return metaTitle
      */
     @Valid
     @JsonProperty("metaTitle")
@@ -40,6 +41,7 @@ public interface ProductSetMetaTitleAction extends ProductUpdateAction {
 
     /**
      *  <p>If <code>true</code>, only the staged <code>metaTitle</code> is updated. If <code>false</code>, both the current and staged <code>metaTitle</code> are updated.</p>
+     * @return staged
      */
 
     @JsonProperty("staged")

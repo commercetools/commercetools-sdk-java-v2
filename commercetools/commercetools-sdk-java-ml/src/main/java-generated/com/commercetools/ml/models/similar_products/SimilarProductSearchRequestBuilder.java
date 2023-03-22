@@ -49,6 +49,8 @@ public class SimilarProductSearchRequestBuilder implements Builder<SimilarProduc
 
     /**
      *  <p>Number of results requested.</p>
+     * @param limit
+     * @return Builder
      */
 
     public SimilarProductSearchRequestBuilder limit(@Nullable final Long limit) {
@@ -58,6 +60,8 @@ public class SimilarProductSearchRequestBuilder implements Builder<SimilarProduc
 
     /**
      *  <p>Number of elements skipped.</p>
+     * @param offset
+     * @return Builder
      */
 
     public SimilarProductSearchRequestBuilder offset(@Nullable final Long offset) {
@@ -67,6 +71,8 @@ public class SimilarProductSearchRequestBuilder implements Builder<SimilarProduc
 
     /**
      *  <p>language tag used to prioritize language for text comparisons.</p>
+     * @param language
+     * @return Builder
      */
 
     public SimilarProductSearchRequestBuilder language(@Nullable final String language) {
@@ -76,6 +82,8 @@ public class SimilarProductSearchRequestBuilder implements Builder<SimilarProduc
 
     /**
      *  <p>The three-digit currency code to compare prices in. When a product has multiple prices, all prices for the product are converted to the currency provided by the currency attribute and the median price is calculated for comparison. Currencies are converted using the ECB currency exchange rates at the time the request is made. Of the currency codes, only currencies with currency exchange rates provided by the ECB are supported.</p>
+     * @param currencyCode
+     * @return Builder
      */
 
     public SimilarProductSearchRequestBuilder currencyCode(@Nullable final String currencyCode) {
@@ -85,6 +93,7 @@ public class SimilarProductSearchRequestBuilder implements Builder<SimilarProduc
 
     /**
      *  <p><code>similarityMeasures</code> defines the attributes taken into account to measure product similarity.</p>
+     * @return Builder
      */
 
     public SimilarProductSearchRequestBuilder similarityMeasures(
@@ -97,6 +106,8 @@ public class SimilarProductSearchRequestBuilder implements Builder<SimilarProduc
 
     /**
      *  <p><code>similarityMeasures</code> defines the attributes taken into account to measure product similarity.</p>
+     * @param similarityMeasures
+     * @return Builder
      */
 
     public SimilarProductSearchRequestBuilder similarityMeasures(
@@ -107,6 +118,8 @@ public class SimilarProductSearchRequestBuilder implements Builder<SimilarProduc
 
     /**
      *  <p>Array of length 2 of ProductSetSelector</p>
+     * @param productSetSelectors
+     * @return Builder
      */
 
     public SimilarProductSearchRequestBuilder productSetSelectors(
@@ -117,6 +130,8 @@ public class SimilarProductSearchRequestBuilder implements Builder<SimilarProduc
 
     /**
      *  <p>Array of length 2 of ProductSetSelector</p>
+     * @param productSetSelectors
+     * @return Builder
      */
 
     public SimilarProductSearchRequestBuilder productSetSelectors(
@@ -127,6 +142,8 @@ public class SimilarProductSearchRequestBuilder implements Builder<SimilarProduc
 
     /**
      *  <p>Array of length 2 of ProductSetSelector</p>
+     * @param productSetSelectors
+     * @return Builder
      */
 
     public SimilarProductSearchRequestBuilder plusProductSetSelectors(
@@ -140,6 +157,7 @@ public class SimilarProductSearchRequestBuilder implements Builder<SimilarProduc
 
     /**
      *  <p>Array of length 2 of ProductSetSelector</p>
+     * @return Builder
      */
 
     public SimilarProductSearchRequestBuilder plusProductSetSelectors(
@@ -154,6 +172,7 @@ public class SimilarProductSearchRequestBuilder implements Builder<SimilarProduc
 
     /**
      *  <p>Array of length 2 of ProductSetSelector</p>
+     * @return Builder
      */
 
     public SimilarProductSearchRequestBuilder withProductSetSelectors(
@@ -166,6 +185,8 @@ public class SimilarProductSearchRequestBuilder implements Builder<SimilarProduc
 
     /**
      *
+     * @param confidenceMin
+     * @return Builder
      */
 
     public SimilarProductSearchRequestBuilder confidenceMin(@Nullable final Double confidenceMin) {
@@ -175,6 +196,8 @@ public class SimilarProductSearchRequestBuilder implements Builder<SimilarProduc
 
     /**
      *
+     * @param confidenceMax
+     * @return Builder
      */
 
     public SimilarProductSearchRequestBuilder confidenceMax(@Nullable final Double confidenceMax) {

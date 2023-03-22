@@ -44,6 +44,7 @@ public interface OrderEditAppliedMessage extends OrderMessage {
 
     /**
      *  <p>OrderEdit that was applied.</p>
+     * @return edit
      */
     @NotNull
     @Valid
@@ -52,6 +53,7 @@ public interface OrderEditAppliedMessage extends OrderMessage {
 
     /**
      *  <p>Information about a successfully applied OrderEdit.</p>
+     * @return result
      */
     @NotNull
     @Valid

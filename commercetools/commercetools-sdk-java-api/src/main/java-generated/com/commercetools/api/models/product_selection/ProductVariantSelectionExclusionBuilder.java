@@ -26,6 +26,8 @@ public class ProductVariantSelectionExclusionBuilder implements Builder<ProductV
 
     /**
      *  <p>Non-empty array of SKUs representing Product Variants to be excluded from the Product Selection.</p>
+     * @param skus
+     * @return Builder
      */
 
     public ProductVariantSelectionExclusionBuilder skus(final String... skus) {
@@ -35,6 +37,8 @@ public class ProductVariantSelectionExclusionBuilder implements Builder<ProductV
 
     /**
      *  <p>Non-empty array of SKUs representing Product Variants to be excluded from the Product Selection.</p>
+     * @param skus
+     * @return Builder
      */
 
     public ProductVariantSelectionExclusionBuilder skus(final java.util.List<String> skus) {
@@ -44,6 +48,8 @@ public class ProductVariantSelectionExclusionBuilder implements Builder<ProductV
 
     /**
      *  <p>Non-empty array of SKUs representing Product Variants to be excluded from the Product Selection.</p>
+     * @param skus
+     * @return Builder
      */
 
     public ProductVariantSelectionExclusionBuilder plusSkus(final String... skus) {

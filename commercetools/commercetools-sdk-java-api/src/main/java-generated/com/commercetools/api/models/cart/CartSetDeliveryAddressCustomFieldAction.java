@@ -34,6 +34,7 @@ public interface CartSetDeliveryAddressCustomFieldAction extends CartUpdateActio
 
     /**
      *  <p><code>id</code> of the Delivery.</p>
+     * @return deliveryId
      */
     @NotNull
     @JsonProperty("deliveryId")
@@ -41,6 +42,7 @@ public interface CartSetDeliveryAddressCustomFieldAction extends CartUpdateActio
 
     /**
      *  <p>Name of the Custom Field.</p>
+     * @return name
      */
     @NotNull
     @JsonProperty("name")
@@ -48,6 +50,7 @@ public interface CartSetDeliveryAddressCustomFieldAction extends CartUpdateActio
 
     /**
      *  <p>If <code>value</code> is absent or <code>null</code>, this field will be removed if it exists. Removing a field that does not exist returns an InvalidOperation error. If <code>value</code> is provided, it is set for the field defined by <code>name</code>.</p>
+     * @return value
      */
 
     @JsonProperty("value")

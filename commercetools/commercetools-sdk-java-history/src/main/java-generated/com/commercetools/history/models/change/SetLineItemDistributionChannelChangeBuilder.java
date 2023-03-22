@@ -38,6 +38,8 @@ public class SetLineItemDistributionChannelChangeBuilder implements Builder<SetL
 
     /**
      *  <p>Update action for <code>setLineItemDistributionChannel</code></p>
+     * @param change
+     * @return Builder
      */
 
     public SetLineItemDistributionChannelChangeBuilder change(final String change) {
@@ -47,6 +49,7 @@ public class SetLineItemDistributionChannelChangeBuilder implements Builder<SetL
 
     /**
      *
+     * @return Builder
      */
 
     public SetLineItemDistributionChannelChangeBuilder lineItem(
@@ -57,6 +60,8 @@ public class SetLineItemDistributionChannelChangeBuilder implements Builder<SetL
 
     /**
      *
+     * @param lineItem
+     * @return Builder
      */
 
     public SetLineItemDistributionChannelChangeBuilder lineItem(
@@ -67,6 +72,8 @@ public class SetLineItemDistributionChannelChangeBuilder implements Builder<SetL
 
     /**
      *
+     * @param variant
+     * @return Builder
      */
 
     public SetLineItemDistributionChannelChangeBuilder variant(final String variant) {
@@ -76,6 +83,7 @@ public class SetLineItemDistributionChannelChangeBuilder implements Builder<SetL
 
     /**
      *
+     * @return Builder
      */
 
     public SetLineItemDistributionChannelChangeBuilder nextValue(
@@ -86,6 +94,8 @@ public class SetLineItemDistributionChannelChangeBuilder implements Builder<SetL
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public SetLineItemDistributionChannelChangeBuilder nextValue(
@@ -96,6 +106,7 @@ public class SetLineItemDistributionChannelChangeBuilder implements Builder<SetL
 
     /**
      *
+     * @return Builder
      */
 
     public SetLineItemDistributionChannelChangeBuilder previousValue(
@@ -106,6 +117,8 @@ public class SetLineItemDistributionChannelChangeBuilder implements Builder<SetL
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public SetLineItemDistributionChannelChangeBuilder previousValue(

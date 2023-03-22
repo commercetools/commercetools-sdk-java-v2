@@ -31,6 +31,8 @@ public class CustomFieldExpandedValueBuilder implements Builder<CustomFieldExpan
 
     /**
      *  <p>Name of a custom field.</p>
+     * @param name
+     * @return Builder
      */
 
     public CustomFieldExpandedValueBuilder name(final String name) {
@@ -40,6 +42,8 @@ public class CustomFieldExpandedValueBuilder implements Builder<CustomFieldExpan
 
     /**
      *
+     * @param value
+     * @return Builder
      */
 
     public CustomFieldExpandedValueBuilder value(final java.lang.Object value) {
@@ -49,6 +53,7 @@ public class CustomFieldExpandedValueBuilder implements Builder<CustomFieldExpan
 
     /**
      *
+     * @return Builder
      */
 
     public CustomFieldExpandedValueBuilder label(
@@ -59,6 +64,8 @@ public class CustomFieldExpandedValueBuilder implements Builder<CustomFieldExpan
 
     /**
      *
+     * @param label
+     * @return Builder
      */
 
     public CustomFieldExpandedValueBuilder label(final com.commercetools.history.models.common.LocalizedString label) {

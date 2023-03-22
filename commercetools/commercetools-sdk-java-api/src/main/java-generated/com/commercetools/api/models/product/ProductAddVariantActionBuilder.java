@@ -46,6 +46,8 @@ public class ProductAddVariantActionBuilder implements Builder<ProductAddVariant
 
     /**
      *  <p>Value to set. Must be unique.</p>
+     * @param sku
+     * @return Builder
      */
 
     public ProductAddVariantActionBuilder sku(@Nullable final String sku) {
@@ -55,6 +57,8 @@ public class ProductAddVariantActionBuilder implements Builder<ProductAddVariant
 
     /**
      *  <p>Value to set. Must be unique.</p>
+     * @param key
+     * @return Builder
      */
 
     public ProductAddVariantActionBuilder key(@Nullable final String key) {
@@ -64,6 +68,8 @@ public class ProductAddVariantActionBuilder implements Builder<ProductAddVariant
 
     /**
      *  <p>Embedded Prices for the Product Variant.</p>
+     * @param prices
+     * @return Builder
      */
 
     public ProductAddVariantActionBuilder prices(
@@ -74,6 +80,8 @@ public class ProductAddVariantActionBuilder implements Builder<ProductAddVariant
 
     /**
      *  <p>Embedded Prices for the Product Variant.</p>
+     * @param prices
+     * @return Builder
      */
 
     public ProductAddVariantActionBuilder prices(
@@ -84,6 +92,8 @@ public class ProductAddVariantActionBuilder implements Builder<ProductAddVariant
 
     /**
      *  <p>Embedded Prices for the Product Variant.</p>
+     * @param prices
+     * @return Builder
      */
 
     public ProductAddVariantActionBuilder plusPrices(
@@ -97,6 +107,7 @@ public class ProductAddVariantActionBuilder implements Builder<ProductAddVariant
 
     /**
      *  <p>Embedded Prices for the Product Variant.</p>
+     * @return Builder
      */
 
     public ProductAddVariantActionBuilder plusPrices(
@@ -110,6 +121,7 @@ public class ProductAddVariantActionBuilder implements Builder<ProductAddVariant
 
     /**
      *  <p>Embedded Prices for the Product Variant.</p>
+     * @return Builder
      */
 
     public ProductAddVariantActionBuilder withPrices(
@@ -121,6 +133,8 @@ public class ProductAddVariantActionBuilder implements Builder<ProductAddVariant
 
     /**
      *  <p>Images for the Product Variant.</p>
+     * @param images
+     * @return Builder
      */
 
     public ProductAddVariantActionBuilder images(@Nullable final com.commercetools.api.models.common.Image... images) {
@@ -130,6 +144,8 @@ public class ProductAddVariantActionBuilder implements Builder<ProductAddVariant
 
     /**
      *  <p>Images for the Product Variant.</p>
+     * @param images
+     * @return Builder
      */
 
     public ProductAddVariantActionBuilder images(
@@ -140,6 +156,8 @@ public class ProductAddVariantActionBuilder implements Builder<ProductAddVariant
 
     /**
      *  <p>Images for the Product Variant.</p>
+     * @param images
+     * @return Builder
      */
 
     public ProductAddVariantActionBuilder plusImages(
@@ -153,6 +171,7 @@ public class ProductAddVariantActionBuilder implements Builder<ProductAddVariant
 
     /**
      *  <p>Images for the Product Variant.</p>
+     * @return Builder
      */
 
     public ProductAddVariantActionBuilder plusImages(
@@ -166,6 +185,7 @@ public class ProductAddVariantActionBuilder implements Builder<ProductAddVariant
 
     /**
      *  <p>Images for the Product Variant.</p>
+     * @return Builder
      */
 
     public ProductAddVariantActionBuilder withImages(
@@ -177,6 +197,8 @@ public class ProductAddVariantActionBuilder implements Builder<ProductAddVariant
 
     /**
      *  <p>Attributes for the Product Variant.</p>
+     * @param attributes
+     * @return Builder
      */
 
     public ProductAddVariantActionBuilder attributes(
@@ -187,6 +209,8 @@ public class ProductAddVariantActionBuilder implements Builder<ProductAddVariant
 
     /**
      *  <p>Attributes for the Product Variant.</p>
+     * @param attributes
+     * @return Builder
      */
 
     public ProductAddVariantActionBuilder attributes(
@@ -197,6 +221,8 @@ public class ProductAddVariantActionBuilder implements Builder<ProductAddVariant
 
     /**
      *  <p>Attributes for the Product Variant.</p>
+     * @param attributes
+     * @return Builder
      */
 
     public ProductAddVariantActionBuilder plusAttributes(
@@ -210,6 +236,7 @@ public class ProductAddVariantActionBuilder implements Builder<ProductAddVariant
 
     /**
      *  <p>Attributes for the Product Variant.</p>
+     * @return Builder
      */
 
     public ProductAddVariantActionBuilder plusAttributes(
@@ -223,6 +250,7 @@ public class ProductAddVariantActionBuilder implements Builder<ProductAddVariant
 
     /**
      *  <p>Attributes for the Product Variant.</p>
+     * @return Builder
      */
 
     public ProductAddVariantActionBuilder withAttributes(
@@ -234,6 +262,8 @@ public class ProductAddVariantActionBuilder implements Builder<ProductAddVariant
 
     /**
      *  <p>If <code>true</code> the new Product Variant is only staged. If <code>false</code> the new Product Variant is both current and staged.</p>
+     * @param staged
+     * @return Builder
      */
 
     public ProductAddVariantActionBuilder staged(@Nullable final Boolean staged) {
@@ -243,6 +273,8 @@ public class ProductAddVariantActionBuilder implements Builder<ProductAddVariant
 
     /**
      *  <p>Media assets for the Product Variant.</p>
+     * @param assets
+     * @return Builder
      */
 
     public ProductAddVariantActionBuilder assets(
@@ -253,6 +285,8 @@ public class ProductAddVariantActionBuilder implements Builder<ProductAddVariant
 
     /**
      *  <p>Media assets for the Product Variant.</p>
+     * @param assets
+     * @return Builder
      */
 
     public ProductAddVariantActionBuilder assets(
@@ -263,6 +297,8 @@ public class ProductAddVariantActionBuilder implements Builder<ProductAddVariant
 
     /**
      *  <p>Media assets for the Product Variant.</p>
+     * @param assets
+     * @return Builder
      */
 
     public ProductAddVariantActionBuilder plusAssets(
@@ -276,6 +312,7 @@ public class ProductAddVariantActionBuilder implements Builder<ProductAddVariant
 
     /**
      *  <p>Media assets for the Product Variant.</p>
+     * @return Builder
      */
 
     public ProductAddVariantActionBuilder plusAssets(
@@ -289,6 +326,7 @@ public class ProductAddVariantActionBuilder implements Builder<ProductAddVariant
 
     /**
      *  <p>Media assets for the Product Variant.</p>
+     * @return Builder
      */
 
     public ProductAddVariantActionBuilder withAssets(

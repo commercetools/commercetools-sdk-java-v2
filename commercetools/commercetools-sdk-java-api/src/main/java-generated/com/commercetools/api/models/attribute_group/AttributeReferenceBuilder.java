@@ -25,6 +25,8 @@ public class AttributeReferenceBuilder implements Builder<AttributeReference> {
 
     /**
      *  <p>Key of the attribute.</p>
+     * @param key
+     * @return Builder
      */
 
     public AttributeReferenceBuilder key(final String key) {

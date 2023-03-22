@@ -40,6 +40,7 @@ public interface SetCustomLineItemMoneyChange extends Change {
 
     /**
      *
+     * @return type
      */
     @NotNull
     @JsonProperty("type")
@@ -47,6 +48,7 @@ public interface SetCustomLineItemMoneyChange extends Change {
 
     /**
      *  <p>Update action for <code>setCustomLineItemMoney</code></p>
+     * @return change
      */
     @NotNull
     @JsonProperty("change")
@@ -54,6 +56,7 @@ public interface SetCustomLineItemMoneyChange extends Change {
 
     /**
      *
+     * @return customLineItem
      */
     @NotNull
     @Valid
@@ -62,6 +65,7 @@ public interface SetCustomLineItemMoneyChange extends Change {
 
     /**
      *
+     * @return customLineItemId
      */
     @NotNull
     @JsonProperty("customLineItemId")
@@ -69,6 +73,7 @@ public interface SetCustomLineItemMoneyChange extends Change {
 
     /**
      *
+     * @return nextValue
      */
     @NotNull
     @Valid
@@ -77,6 +82,7 @@ public interface SetCustomLineItemMoneyChange extends Change {
 
     /**
      *
+     * @return previousValue
      */
     @NotNull
     @Valid

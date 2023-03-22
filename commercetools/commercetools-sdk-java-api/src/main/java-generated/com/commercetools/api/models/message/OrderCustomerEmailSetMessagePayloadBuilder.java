@@ -30,6 +30,8 @@ public class OrderCustomerEmailSetMessagePayloadBuilder implements Builder<Order
 
     /**
      *  <p>Email address on the Order after the Set Customer Email update action.</p>
+     * @param email
+     * @return Builder
      */
 
     public OrderCustomerEmailSetMessagePayloadBuilder email(@Nullable final String email) {
@@ -39,6 +41,8 @@ public class OrderCustomerEmailSetMessagePayloadBuilder implements Builder<Order
 
     /**
      *  <p>Email address on the Order before the Set Customer Email update action.</p>
+     * @param oldEmail
+     * @return Builder
      */
 
     public OrderCustomerEmailSetMessagePayloadBuilder oldEmail(@Nullable final String oldEmail) {

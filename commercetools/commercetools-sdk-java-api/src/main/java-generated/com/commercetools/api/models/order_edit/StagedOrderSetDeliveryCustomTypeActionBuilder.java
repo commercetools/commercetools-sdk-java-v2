@@ -34,6 +34,8 @@ public class StagedOrderSetDeliveryCustomTypeActionBuilder implements Builder<St
 
     /**
      *
+     * @param deliveryId
+     * @return Builder
      */
 
     public StagedOrderSetDeliveryCustomTypeActionBuilder deliveryId(final String deliveryId) {
@@ -43,6 +45,7 @@ public class StagedOrderSetDeliveryCustomTypeActionBuilder implements Builder<St
 
     /**
      *  <p>Defines the Type that extends the Delivery with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Delivery.</p>
+     * @return Builder
      */
 
     public StagedOrderSetDeliveryCustomTypeActionBuilder type(
@@ -53,6 +56,8 @@ public class StagedOrderSetDeliveryCustomTypeActionBuilder implements Builder<St
 
     /**
      *  <p>Defines the Type that extends the Delivery with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Delivery.</p>
+     * @param type
+     * @return Builder
      */
 
     public StagedOrderSetDeliveryCustomTypeActionBuilder type(
@@ -63,6 +68,7 @@ public class StagedOrderSetDeliveryCustomTypeActionBuilder implements Builder<St
 
     /**
      *  <p>Sets the Custom Fields fields for the Delivery.</p>
+     * @return Builder
      */
 
     public StagedOrderSetDeliveryCustomTypeActionBuilder fields(
@@ -73,6 +79,8 @@ public class StagedOrderSetDeliveryCustomTypeActionBuilder implements Builder<St
 
     /**
      *  <p>Sets the Custom Fields fields for the Delivery.</p>
+     * @param fields
+     * @return Builder
      */
 
     public StagedOrderSetDeliveryCustomTypeActionBuilder fields(

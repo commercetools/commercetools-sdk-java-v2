@@ -35,6 +35,7 @@ public interface CartSetBusinessUnitAction extends CartUpdateAction {
 
     /**
      *  <p>New Business Unit to assign to the Cart, which must have access to the Store that is set on the Cart.</p>
+     * @return businessUnit
      */
     @NotNull
     @Valid

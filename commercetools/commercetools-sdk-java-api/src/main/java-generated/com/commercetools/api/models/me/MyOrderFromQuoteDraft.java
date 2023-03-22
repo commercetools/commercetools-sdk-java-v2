@@ -32,6 +32,7 @@ public interface MyOrderFromQuoteDraft extends io.vrap.rmf.base.client.Draft<MyO
 
     /**
      *  <p>Unique identifier of the Quote from which the Order is created.</p>
+     * @return id
      */
     @NotNull
     @JsonProperty("id")
@@ -39,6 +40,7 @@ public interface MyOrderFromQuoteDraft extends io.vrap.rmf.base.client.Draft<MyO
 
     /**
      *  <p><code>version</code> of the Quote from which the Order is created.</p>
+     * @return version
      */
     @NotNull
     @JsonProperty("version")
@@ -46,6 +48,7 @@ public interface MyOrderFromQuoteDraft extends io.vrap.rmf.base.client.Draft<MyO
 
     /**
      *  <p>Set to <code>true</code>, if the <code>quoteState</code> of the referenced Quote should be set to <code>Accepted</code>.</p>
+     * @return quoteStateToAccepted
      */
 
     @JsonProperty("quoteStateToAccepted")

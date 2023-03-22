@@ -34,6 +34,7 @@ public interface ClassificationShippingRateInputDraft
 
     /**
      *  <p>Key of the value used as a programmatic identifier.</p>
+     * @return key
      */
     @NotNull
     @JsonProperty("key")

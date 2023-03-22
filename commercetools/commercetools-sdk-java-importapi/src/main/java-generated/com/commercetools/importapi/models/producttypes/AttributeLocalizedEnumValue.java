@@ -34,6 +34,7 @@ public interface AttributeLocalizedEnumValue {
 
     /**
      *
+     * @return key
      */
     @NotNull
     @JsonProperty("key")
@@ -46,6 +47,7 @@ public interface AttributeLocalizedEnumValue {
      *    "en": "dog food"
      *  }
      *  </code></pre>
+     * @return label
      */
     @NotNull
     @Valid

@@ -39,6 +39,7 @@ public interface MyCartChangeLineItemQuantityAction extends MyCartUpdateAction {
 
     /**
      *  <p><code>id</code> of the LineItem to update.</p>
+     * @return lineItemId
      */
     @NotNull
     @JsonProperty("lineItemId")
@@ -47,6 +48,7 @@ public interface MyCartChangeLineItemQuantityAction extends MyCartUpdateAction {
     /**
      *  <p>New value to set.</p>
      *  <p>If <code>0</code>, the Line Item is removed from the Cart.</p>
+     * @return quantity
      */
     @NotNull
     @JsonProperty("quantity")
@@ -55,6 +57,7 @@ public interface MyCartChangeLineItemQuantityAction extends MyCartUpdateAction {
     /**
      *  <p>Sets the LineItem <code>price</code> to the given value when changing the quantity of a Line Item with the <code>ExternalPrice</code> LineItemPriceMode.</p>
      *  <p>The LineItem price is updated as described in LineItem Price selection.</p>
+     * @return externalPrice
      */
     @Valid
     @JsonProperty("externalPrice")
@@ -62,6 +65,7 @@ public interface MyCartChangeLineItemQuantityAction extends MyCartUpdateAction {
 
     /**
      *  <p>Sets the LineItem <code>price</code> and <code>totalPrice</code> to the given value when changing the quantity of a Line Item with the <code>ExternalTotal</code> LineItemPriceMode.</p>
+     * @return externalTotalPrice
      */
     @Valid
     @JsonProperty("externalTotalPrice")

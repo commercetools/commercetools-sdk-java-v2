@@ -30,6 +30,8 @@ public class EnumSetAttributeBuilder implements Builder<EnumSetAttribute> {
 
     /**
      *  <p>The name of this attribute must match a name of the product types attribute definitions. The name is required if this type is used in a product variant and must not be set when used in a product variant patch.</p>
+     * @param name
+     * @return Builder
      */
 
     public EnumSetAttributeBuilder name(@Nullable final String name) {
@@ -39,6 +41,8 @@ public class EnumSetAttributeBuilder implements Builder<EnumSetAttribute> {
 
     /**
      *
+     * @param value
+     * @return Builder
      */
 
     public EnumSetAttributeBuilder value(final String... value) {
@@ -48,6 +52,8 @@ public class EnumSetAttributeBuilder implements Builder<EnumSetAttribute> {
 
     /**
      *
+     * @param value
+     * @return Builder
      */
 
     public EnumSetAttributeBuilder value(final java.util.List<String> value) {
@@ -57,6 +63,8 @@ public class EnumSetAttributeBuilder implements Builder<EnumSetAttribute> {
 
     /**
      *
+     * @param value
+     * @return Builder
      */
 
     public EnumSetAttributeBuilder plusValue(final String... value) {

@@ -70,6 +70,8 @@ public class ParcelItemsUpdatedMessageBuilder implements Builder<ParcelItemsUpda
 
     /**
      *  <p>Unique identifier of the Message. Can be used to track which Messages have been processed.</p>
+     * @param id
+     * @return Builder
      */
 
     public ParcelItemsUpdatedMessageBuilder id(final String id) {
@@ -79,6 +81,8 @@ public class ParcelItemsUpdatedMessageBuilder implements Builder<ParcelItemsUpda
 
     /**
      *  <p>Version of a resource. In case of Messages, this is always <code>1</code>.</p>
+     * @param version
+     * @return Builder
      */
 
     public ParcelItemsUpdatedMessageBuilder version(final Long version) {
@@ -88,6 +92,8 @@ public class ParcelItemsUpdatedMessageBuilder implements Builder<ParcelItemsUpda
 
     /**
      *  <p>Date and time (UTC) the Message was generated.</p>
+     * @param createdAt
+     * @return Builder
      */
 
     public ParcelItemsUpdatedMessageBuilder createdAt(final java.time.ZonedDateTime createdAt) {
@@ -97,6 +103,8 @@ public class ParcelItemsUpdatedMessageBuilder implements Builder<ParcelItemsUpda
 
     /**
      *  <p>Value of <code>createdAt</code>.</p>
+     * @param lastModifiedAt
+     * @return Builder
      */
 
     public ParcelItemsUpdatedMessageBuilder lastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {
@@ -106,6 +114,7 @@ public class ParcelItemsUpdatedMessageBuilder implements Builder<ParcelItemsUpda
 
     /**
      *  <p>Value of <code>createdBy</code>.</p>
+     * @return Builder
      */
 
     public ParcelItemsUpdatedMessageBuilder lastModifiedBy(
@@ -116,6 +125,8 @@ public class ParcelItemsUpdatedMessageBuilder implements Builder<ParcelItemsUpda
 
     /**
      *  <p>Value of <code>createdBy</code>.</p>
+     * @param lastModifiedBy
+     * @return Builder
      */
 
     public ParcelItemsUpdatedMessageBuilder lastModifiedBy(
@@ -126,6 +137,7 @@ public class ParcelItemsUpdatedMessageBuilder implements Builder<ParcelItemsUpda
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @return Builder
      */
 
     public ParcelItemsUpdatedMessageBuilder createdBy(
@@ -136,6 +148,8 @@ public class ParcelItemsUpdatedMessageBuilder implements Builder<ParcelItemsUpda
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param createdBy
+     * @return Builder
      */
 
     public ParcelItemsUpdatedMessageBuilder createdBy(
@@ -146,6 +160,8 @@ public class ParcelItemsUpdatedMessageBuilder implements Builder<ParcelItemsUpda
 
     /**
      *  <p>Message number in relation to other Messages for a given resource. The <code>sequenceNumber</code> of the next Message for the resource is the successor of the <code>sequenceNumber</code> of the current Message. Meaning, the <code>sequenceNumber</code> of the next Message equals the <code>sequenceNumber</code> of the current Message + 1. <code>sequenceNumber</code> can be used to ensure that Messages are processed in the correct order for a particular resource.</p>
+     * @param sequenceNumber
+     * @return Builder
      */
 
     public ParcelItemsUpdatedMessageBuilder sequenceNumber(final Long sequenceNumber) {
@@ -155,6 +171,8 @@ public class ParcelItemsUpdatedMessageBuilder implements Builder<ParcelItemsUpda
 
     /**
      *  <p>Reference to the resource on which the change or action was performed.</p>
+     * @param resource
+     * @return Builder
      */
 
     public ParcelItemsUpdatedMessageBuilder resource(final com.commercetools.api.models.common.Reference resource) {
@@ -164,6 +182,7 @@ public class ParcelItemsUpdatedMessageBuilder implements Builder<ParcelItemsUpda
 
     /**
      *  <p>Reference to the resource on which the change or action was performed.</p>
+     * @return Builder
      */
 
     public ParcelItemsUpdatedMessageBuilder resource(
@@ -174,6 +193,8 @@ public class ParcelItemsUpdatedMessageBuilder implements Builder<ParcelItemsUpda
 
     /**
      *  <p>Version of the resource on which the change or action was performed.</p>
+     * @param resourceVersion
+     * @return Builder
      */
 
     public ParcelItemsUpdatedMessageBuilder resourceVersion(final Long resourceVersion) {
@@ -183,6 +204,7 @@ public class ParcelItemsUpdatedMessageBuilder implements Builder<ParcelItemsUpda
 
     /**
      *  <p>User-provided identifiers of the resource, such as <code>key</code> or <code>externalId</code>. Only present if the resource has such identifiers.</p>
+     * @return Builder
      */
 
     public ParcelItemsUpdatedMessageBuilder resourceUserProvidedIdentifiers(
@@ -195,6 +217,8 @@ public class ParcelItemsUpdatedMessageBuilder implements Builder<ParcelItemsUpda
 
     /**
      *  <p>User-provided identifiers of the resource, such as <code>key</code> or <code>externalId</code>. Only present if the resource has such identifiers.</p>
+     * @param resourceUserProvidedIdentifiers
+     * @return Builder
      */
 
     public ParcelItemsUpdatedMessageBuilder resourceUserProvidedIdentifiers(
@@ -205,6 +229,8 @@ public class ParcelItemsUpdatedMessageBuilder implements Builder<ParcelItemsUpda
 
     /**
      *  <p>Unique identifier of the Parcel.</p>
+     * @param parcelId
+     * @return Builder
      */
 
     public ParcelItemsUpdatedMessageBuilder parcelId(final String parcelId) {
@@ -214,6 +240,8 @@ public class ParcelItemsUpdatedMessageBuilder implements Builder<ParcelItemsUpda
 
     /**
      *  <p>Unique identifier of the Delivery.</p>
+     * @param deliveryId
+     * @return Builder
      */
 
     public ParcelItemsUpdatedMessageBuilder deliveryId(final String deliveryId) {
@@ -223,6 +251,8 @@ public class ParcelItemsUpdatedMessageBuilder implements Builder<ParcelItemsUpda
 
     /**
      *  <p>Delivery Items after the Set Parcel Items update action.</p>
+     * @param items
+     * @return Builder
      */
 
     public ParcelItemsUpdatedMessageBuilder items(final com.commercetools.api.models.order.DeliveryItem... items) {
@@ -232,6 +262,8 @@ public class ParcelItemsUpdatedMessageBuilder implements Builder<ParcelItemsUpda
 
     /**
      *  <p>Delivery Items after the Set Parcel Items update action.</p>
+     * @param items
+     * @return Builder
      */
 
     public ParcelItemsUpdatedMessageBuilder items(
@@ -242,6 +274,8 @@ public class ParcelItemsUpdatedMessageBuilder implements Builder<ParcelItemsUpda
 
     /**
      *  <p>Delivery Items after the Set Parcel Items update action.</p>
+     * @param items
+     * @return Builder
      */
 
     public ParcelItemsUpdatedMessageBuilder plusItems(final com.commercetools.api.models.order.DeliveryItem... items) {
@@ -254,6 +288,7 @@ public class ParcelItemsUpdatedMessageBuilder implements Builder<ParcelItemsUpda
 
     /**
      *  <p>Delivery Items after the Set Parcel Items update action.</p>
+     * @return Builder
      */
 
     public ParcelItemsUpdatedMessageBuilder plusItems(
@@ -267,6 +302,7 @@ public class ParcelItemsUpdatedMessageBuilder implements Builder<ParcelItemsUpda
 
     /**
      *  <p>Delivery Items after the Set Parcel Items update action.</p>
+     * @return Builder
      */
 
     public ParcelItemsUpdatedMessageBuilder withItems(
@@ -278,6 +314,8 @@ public class ParcelItemsUpdatedMessageBuilder implements Builder<ParcelItemsUpda
 
     /**
      *  <p>Delivery Items before the Set Parcel Items update action.</p>
+     * @param oldItems
+     * @return Builder
      */
 
     public ParcelItemsUpdatedMessageBuilder oldItems(
@@ -288,6 +326,8 @@ public class ParcelItemsUpdatedMessageBuilder implements Builder<ParcelItemsUpda
 
     /**
      *  <p>Delivery Items before the Set Parcel Items update action.</p>
+     * @param oldItems
+     * @return Builder
      */
 
     public ParcelItemsUpdatedMessageBuilder oldItems(
@@ -298,6 +338,8 @@ public class ParcelItemsUpdatedMessageBuilder implements Builder<ParcelItemsUpda
 
     /**
      *  <p>Delivery Items before the Set Parcel Items update action.</p>
+     * @param oldItems
+     * @return Builder
      */
 
     public ParcelItemsUpdatedMessageBuilder plusOldItems(
@@ -311,6 +353,7 @@ public class ParcelItemsUpdatedMessageBuilder implements Builder<ParcelItemsUpda
 
     /**
      *  <p>Delivery Items before the Set Parcel Items update action.</p>
+     * @return Builder
      */
 
     public ParcelItemsUpdatedMessageBuilder plusOldItems(
@@ -324,6 +367,7 @@ public class ParcelItemsUpdatedMessageBuilder implements Builder<ParcelItemsUpda
 
     /**
      *  <p>Delivery Items before the Set Parcel Items update action.</p>
+     * @return Builder
      */
 
     public ParcelItemsUpdatedMessageBuilder withOldItems(
@@ -335,6 +379,8 @@ public class ParcelItemsUpdatedMessageBuilder implements Builder<ParcelItemsUpda
 
     /**
      *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multi</code> ShippingMode.</p>
+     * @param shippingKey
+     * @return Builder
      */
 
     public ParcelItemsUpdatedMessageBuilder shippingKey(@Nullable final String shippingKey) {

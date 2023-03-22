@@ -41,6 +41,8 @@ public class SetLineItemTaxAmountChangeBuilder implements Builder<SetLineItemTax
 
     /**
      *  <p>Update action for <code>setLineItemTaxAmount</code></p>
+     * @param change
+     * @return Builder
      */
 
     public SetLineItemTaxAmountChangeBuilder change(final String change) {
@@ -50,6 +52,7 @@ public class SetLineItemTaxAmountChangeBuilder implements Builder<SetLineItemTax
 
     /**
      *
+     * @return Builder
      */
 
     public SetLineItemTaxAmountChangeBuilder lineItem(
@@ -60,6 +63,8 @@ public class SetLineItemTaxAmountChangeBuilder implements Builder<SetLineItemTax
 
     /**
      *
+     * @param lineItem
+     * @return Builder
      */
 
     public SetLineItemTaxAmountChangeBuilder lineItem(
@@ -70,6 +75,8 @@ public class SetLineItemTaxAmountChangeBuilder implements Builder<SetLineItemTax
 
     /**
      *
+     * @param variant
+     * @return Builder
      */
 
     public SetLineItemTaxAmountChangeBuilder variant(final String variant) {
@@ -79,6 +86,8 @@ public class SetLineItemTaxAmountChangeBuilder implements Builder<SetLineItemTax
 
     /**
      *
+     * @param taxMode
+     * @return Builder
      */
 
     public SetLineItemTaxAmountChangeBuilder taxMode(final com.commercetools.history.models.common.TaxMode taxMode) {
@@ -88,6 +97,7 @@ public class SetLineItemTaxAmountChangeBuilder implements Builder<SetLineItemTax
 
     /**
      *  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>
+     * @return Builder
      */
 
     public SetLineItemTaxAmountChangeBuilder nextValue(
@@ -98,6 +108,8 @@ public class SetLineItemTaxAmountChangeBuilder implements Builder<SetLineItemTax
 
     /**
      *  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>
+     * @param nextValue
+     * @return Builder
      */
 
     public SetLineItemTaxAmountChangeBuilder nextValue(
@@ -108,6 +120,7 @@ public class SetLineItemTaxAmountChangeBuilder implements Builder<SetLineItemTax
 
     /**
      *  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>
+     * @return Builder
      */
 
     public SetLineItemTaxAmountChangeBuilder previousValue(
@@ -118,6 +131,8 @@ public class SetLineItemTaxAmountChangeBuilder implements Builder<SetLineItemTax
 
     /**
      *  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>
+     * @param previousValue
+     * @return Builder
      */
 
     public SetLineItemTaxAmountChangeBuilder previousValue(

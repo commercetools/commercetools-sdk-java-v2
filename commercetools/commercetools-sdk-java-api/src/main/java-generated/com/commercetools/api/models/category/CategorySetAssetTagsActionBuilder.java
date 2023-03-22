@@ -33,6 +33,8 @@ public class CategorySetAssetTagsActionBuilder implements Builder<CategorySetAss
 
     /**
      *  <p>New value to set. Either <code>assetId</code> or <code>assetKey</code> is required.</p>
+     * @param assetId
+     * @return Builder
      */
 
     public CategorySetAssetTagsActionBuilder assetId(@Nullable final String assetId) {
@@ -42,6 +44,8 @@ public class CategorySetAssetTagsActionBuilder implements Builder<CategorySetAss
 
     /**
      *  <p>New value to set. Either <code>assetId</code> or <code>assetKey</code> is required.</p>
+     * @param assetKey
+     * @return Builder
      */
 
     public CategorySetAssetTagsActionBuilder assetKey(@Nullable final String assetKey) {
@@ -51,6 +55,8 @@ public class CategorySetAssetTagsActionBuilder implements Builder<CategorySetAss
 
     /**
      *  <p>Keywords for categorizing and organizing Assets.</p>
+     * @param tags
+     * @return Builder
      */
 
     public CategorySetAssetTagsActionBuilder tags(@Nullable final String... tags) {
@@ -60,6 +66,8 @@ public class CategorySetAssetTagsActionBuilder implements Builder<CategorySetAss
 
     /**
      *  <p>Keywords for categorizing and organizing Assets.</p>
+     * @param tags
+     * @return Builder
      */
 
     public CategorySetAssetTagsActionBuilder tags(@Nullable final java.util.List<String> tags) {
@@ -69,6 +77,8 @@ public class CategorySetAssetTagsActionBuilder implements Builder<CategorySetAss
 
     /**
      *  <p>Keywords for categorizing and organizing Assets.</p>
+     * @param tags
+     * @return Builder
      */
 
     public CategorySetAssetTagsActionBuilder plusTags(@Nullable final String... tags) {

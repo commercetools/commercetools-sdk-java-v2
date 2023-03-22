@@ -59,6 +59,8 @@ public class StandalonePriceExternalDiscountSetMessageBuilder
 
     /**
      *  <p>Unique identifier of the Message. Can be used to track which Messages have been processed.</p>
+     * @param id
+     * @return Builder
      */
 
     public StandalonePriceExternalDiscountSetMessageBuilder id(final String id) {
@@ -68,6 +70,8 @@ public class StandalonePriceExternalDiscountSetMessageBuilder
 
     /**
      *  <p>Version of a resource. In case of Messages, this is always <code>1</code>.</p>
+     * @param version
+     * @return Builder
      */
 
     public StandalonePriceExternalDiscountSetMessageBuilder version(final Long version) {
@@ -77,6 +81,8 @@ public class StandalonePriceExternalDiscountSetMessageBuilder
 
     /**
      *  <p>Date and time (UTC) the Message was generated.</p>
+     * @param createdAt
+     * @return Builder
      */
 
     public StandalonePriceExternalDiscountSetMessageBuilder createdAt(final java.time.ZonedDateTime createdAt) {
@@ -86,6 +92,8 @@ public class StandalonePriceExternalDiscountSetMessageBuilder
 
     /**
      *  <p>Value of <code>createdAt</code>.</p>
+     * @param lastModifiedAt
+     * @return Builder
      */
 
     public StandalonePriceExternalDiscountSetMessageBuilder lastModifiedAt(
@@ -96,6 +104,7 @@ public class StandalonePriceExternalDiscountSetMessageBuilder
 
     /**
      *  <p>Value of <code>createdBy</code>.</p>
+     * @return Builder
      */
 
     public StandalonePriceExternalDiscountSetMessageBuilder lastModifiedBy(
@@ -106,6 +115,8 @@ public class StandalonePriceExternalDiscountSetMessageBuilder
 
     /**
      *  <p>Value of <code>createdBy</code>.</p>
+     * @param lastModifiedBy
+     * @return Builder
      */
 
     public StandalonePriceExternalDiscountSetMessageBuilder lastModifiedBy(
@@ -116,6 +127,7 @@ public class StandalonePriceExternalDiscountSetMessageBuilder
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @return Builder
      */
 
     public StandalonePriceExternalDiscountSetMessageBuilder createdBy(
@@ -126,6 +138,8 @@ public class StandalonePriceExternalDiscountSetMessageBuilder
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param createdBy
+     * @return Builder
      */
 
     public StandalonePriceExternalDiscountSetMessageBuilder createdBy(
@@ -136,6 +150,8 @@ public class StandalonePriceExternalDiscountSetMessageBuilder
 
     /**
      *  <p>Message number in relation to other Messages for a given resource. The <code>sequenceNumber</code> of the next Message for the resource is the successor of the <code>sequenceNumber</code> of the current Message. Meaning, the <code>sequenceNumber</code> of the next Message equals the <code>sequenceNumber</code> of the current Message + 1. <code>sequenceNumber</code> can be used to ensure that Messages are processed in the correct order for a particular resource.</p>
+     * @param sequenceNumber
+     * @return Builder
      */
 
     public StandalonePriceExternalDiscountSetMessageBuilder sequenceNumber(final Long sequenceNumber) {
@@ -145,6 +161,8 @@ public class StandalonePriceExternalDiscountSetMessageBuilder
 
     /**
      *  <p>Reference to the resource on which the change or action was performed.</p>
+     * @param resource
+     * @return Builder
      */
 
     public StandalonePriceExternalDiscountSetMessageBuilder resource(
@@ -155,6 +173,7 @@ public class StandalonePriceExternalDiscountSetMessageBuilder
 
     /**
      *  <p>Reference to the resource on which the change or action was performed.</p>
+     * @return Builder
      */
 
     public StandalonePriceExternalDiscountSetMessageBuilder resource(
@@ -165,6 +184,8 @@ public class StandalonePriceExternalDiscountSetMessageBuilder
 
     /**
      *  <p>Version of the resource on which the change or action was performed.</p>
+     * @param resourceVersion
+     * @return Builder
      */
 
     public StandalonePriceExternalDiscountSetMessageBuilder resourceVersion(final Long resourceVersion) {
@@ -174,6 +195,7 @@ public class StandalonePriceExternalDiscountSetMessageBuilder
 
     /**
      *  <p>User-provided identifiers of the resource, such as <code>key</code> or <code>externalId</code>. Only present if the resource has such identifiers.</p>
+     * @return Builder
      */
 
     public StandalonePriceExternalDiscountSetMessageBuilder resourceUserProvidedIdentifiers(
@@ -186,6 +208,8 @@ public class StandalonePriceExternalDiscountSetMessageBuilder
 
     /**
      *  <p>User-provided identifiers of the resource, such as <code>key</code> or <code>externalId</code>. Only present if the resource has such identifiers.</p>
+     * @param resourceUserProvidedIdentifiers
+     * @return Builder
      */
 
     public StandalonePriceExternalDiscountSetMessageBuilder resourceUserProvidedIdentifiers(
@@ -196,6 +220,7 @@ public class StandalonePriceExternalDiscountSetMessageBuilder
 
     /**
      *  <p>The <code>discounted</code> value of the StandalonePrice after the Set Discounted Price update action.</p>
+     * @return Builder
      */
 
     public StandalonePriceExternalDiscountSetMessageBuilder discounted(
@@ -206,6 +231,8 @@ public class StandalonePriceExternalDiscountSetMessageBuilder
 
     /**
      *  <p>The <code>discounted</code> value of the StandalonePrice after the Set Discounted Price update action.</p>
+     * @param discounted
+     * @return Builder
      */
 
     public StandalonePriceExternalDiscountSetMessageBuilder discounted(

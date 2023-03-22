@@ -31,6 +31,7 @@ public class StoreSetCustomTypeActionBuilder implements Builder<StoreSetCustomTy
 
     /**
      *  <p>Defines the Type that extends the Store with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Store.</p>
+     * @return Builder
      */
 
     public StoreSetCustomTypeActionBuilder type(
@@ -41,6 +42,8 @@ public class StoreSetCustomTypeActionBuilder implements Builder<StoreSetCustomTy
 
     /**
      *  <p>Defines the Type that extends the Store with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Store.</p>
+     * @param type
+     * @return Builder
      */
 
     public StoreSetCustomTypeActionBuilder type(
@@ -51,6 +54,7 @@ public class StoreSetCustomTypeActionBuilder implements Builder<StoreSetCustomTy
 
     /**
      *  <p>Sets the Custom Fields fields for the Store.</p>
+     * @return Builder
      */
 
     public StoreSetCustomTypeActionBuilder fields(
@@ -61,6 +65,8 @@ public class StoreSetCustomTypeActionBuilder implements Builder<StoreSetCustomTy
 
     /**
      *  <p>Sets the Custom Fields fields for the Store.</p>
+     * @param fields
+     * @return Builder
      */
 
     public StoreSetCustomTypeActionBuilder fields(

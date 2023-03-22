@@ -34,6 +34,7 @@ public interface StoreKeyReference extends KeyReference {
 
     /**
      *  <p>Unique and immutable key of the referenced Store.</p>
+     * @return key
      */
     @NotNull
     @JsonProperty("key")

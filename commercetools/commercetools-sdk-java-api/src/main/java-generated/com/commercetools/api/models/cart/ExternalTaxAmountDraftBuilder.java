@@ -29,6 +29,7 @@ public class ExternalTaxAmountDraftBuilder implements Builder<ExternalTaxAmountD
 
     /**
      *  <p>Total gross amount (<code>totalNet</code> + <code>taxPortions</code>) of the Line Item or Custom Line Item.</p>
+     * @return Builder
      */
 
     public ExternalTaxAmountDraftBuilder totalGross(
@@ -39,6 +40,8 @@ public class ExternalTaxAmountDraftBuilder implements Builder<ExternalTaxAmountD
 
     /**
      *  <p>Total gross amount (<code>totalNet</code> + <code>taxPortions</code>) of the Line Item or Custom Line Item.</p>
+     * @param totalGross
+     * @return Builder
      */
 
     public ExternalTaxAmountDraftBuilder totalGross(final com.commercetools.api.models.common.Money totalGross) {
@@ -48,6 +51,7 @@ public class ExternalTaxAmountDraftBuilder implements Builder<ExternalTaxAmountD
 
     /**
      *  <p>Tax Rates and subrates of states and countries.</p>
+     * @return Builder
      */
 
     public ExternalTaxAmountDraftBuilder taxRate(
@@ -58,6 +62,8 @@ public class ExternalTaxAmountDraftBuilder implements Builder<ExternalTaxAmountD
 
     /**
      *  <p>Tax Rates and subrates of states and countries.</p>
+     * @param taxRate
+     * @return Builder
      */
 
     public ExternalTaxAmountDraftBuilder taxRate(final com.commercetools.api.models.cart.ExternalTaxRateDraft taxRate) {

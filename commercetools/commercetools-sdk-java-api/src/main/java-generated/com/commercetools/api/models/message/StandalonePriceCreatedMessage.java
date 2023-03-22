@@ -42,6 +42,7 @@ public interface StandalonePriceCreatedMessage extends Message {
 
     /**
      *  <p>Standalone Price that was created.</p>
+     * @return standalonePrice
      */
     @NotNull
     @Valid

@@ -36,6 +36,8 @@ public class BusinessUnitStoreModeChangedMessagePayloadBuilder
 
     /**
      *  <p>Stores of the Business Unit after the Set Store Mode update action.</p>
+     * @param stores
+     * @return Builder
      */
 
     public BusinessUnitStoreModeChangedMessagePayloadBuilder stores(
@@ -46,6 +48,8 @@ public class BusinessUnitStoreModeChangedMessagePayloadBuilder
 
     /**
      *  <p>Stores of the Business Unit after the Set Store Mode update action.</p>
+     * @param stores
+     * @return Builder
      */
 
     public BusinessUnitStoreModeChangedMessagePayloadBuilder stores(
@@ -56,6 +60,8 @@ public class BusinessUnitStoreModeChangedMessagePayloadBuilder
 
     /**
      *  <p>Stores of the Business Unit after the Set Store Mode update action.</p>
+     * @param stores
+     * @return Builder
      */
 
     public BusinessUnitStoreModeChangedMessagePayloadBuilder plusStores(
@@ -69,6 +75,7 @@ public class BusinessUnitStoreModeChangedMessagePayloadBuilder
 
     /**
      *  <p>Stores of the Business Unit after the Set Store Mode update action.</p>
+     * @return Builder
      */
 
     public BusinessUnitStoreModeChangedMessagePayloadBuilder plusStores(
@@ -82,6 +89,7 @@ public class BusinessUnitStoreModeChangedMessagePayloadBuilder
 
     /**
      *  <p>Stores of the Business Unit after the Set Store Mode update action.</p>
+     * @return Builder
      */
 
     public BusinessUnitStoreModeChangedMessagePayloadBuilder withStores(
@@ -93,6 +101,8 @@ public class BusinessUnitStoreModeChangedMessagePayloadBuilder
 
     /**
      *  <p>BusinessUnitStoreMode of the Business Unit after the Set Store Mode update action.</p>
+     * @param storeMode
+     * @return Builder
      */
 
     public BusinessUnitStoreModeChangedMessagePayloadBuilder storeMode(
@@ -103,6 +113,8 @@ public class BusinessUnitStoreModeChangedMessagePayloadBuilder
 
     /**
      *  <p>Stores of the Business Unit before the Set Store Mode update action.</p>
+     * @param oldStores
+     * @return Builder
      */
 
     public BusinessUnitStoreModeChangedMessagePayloadBuilder oldStores(
@@ -113,6 +125,8 @@ public class BusinessUnitStoreModeChangedMessagePayloadBuilder
 
     /**
      *  <p>Stores of the Business Unit before the Set Store Mode update action.</p>
+     * @param oldStores
+     * @return Builder
      */
 
     public BusinessUnitStoreModeChangedMessagePayloadBuilder oldStores(
@@ -123,6 +137,8 @@ public class BusinessUnitStoreModeChangedMessagePayloadBuilder
 
     /**
      *  <p>Stores of the Business Unit before the Set Store Mode update action.</p>
+     * @param oldStores
+     * @return Builder
      */
 
     public BusinessUnitStoreModeChangedMessagePayloadBuilder plusOldStores(
@@ -136,6 +152,7 @@ public class BusinessUnitStoreModeChangedMessagePayloadBuilder
 
     /**
      *  <p>Stores of the Business Unit before the Set Store Mode update action.</p>
+     * @return Builder
      */
 
     public BusinessUnitStoreModeChangedMessagePayloadBuilder plusOldStores(
@@ -149,6 +166,7 @@ public class BusinessUnitStoreModeChangedMessagePayloadBuilder
 
     /**
      *  <p>Stores of the Business Unit before the Set Store Mode update action.</p>
+     * @return Builder
      */
 
     public BusinessUnitStoreModeChangedMessagePayloadBuilder withOldStores(
@@ -160,6 +178,8 @@ public class BusinessUnitStoreModeChangedMessagePayloadBuilder
 
     /**
      *  <p>BusinessUnitStoreMode of the Business Unit before the Set Store Mode update action.</p>
+     * @param oldStoreMode
+     * @return Builder
      */
 
     public BusinessUnitStoreModeChangedMessagePayloadBuilder oldStoreMode(

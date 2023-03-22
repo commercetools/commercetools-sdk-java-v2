@@ -31,6 +31,7 @@ public class StagedOrderTransitionStateActionBuilder implements Builder<StagedOr
 
     /**
      *  <p>ResourceIdentifier to a State.</p>
+     * @return Builder
      */
 
     public StagedOrderTransitionStateActionBuilder state(
@@ -41,6 +42,8 @@ public class StagedOrderTransitionStateActionBuilder implements Builder<StagedOr
 
     /**
      *  <p>ResourceIdentifier to a State.</p>
+     * @param state
+     * @return Builder
      */
 
     public StagedOrderTransitionStateActionBuilder state(
@@ -51,6 +54,8 @@ public class StagedOrderTransitionStateActionBuilder implements Builder<StagedOr
 
     /**
      *
+     * @param force
+     * @return Builder
      */
 
     public StagedOrderTransitionStateActionBuilder force(@Nullable final Boolean force) {

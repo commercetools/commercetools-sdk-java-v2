@@ -29,6 +29,8 @@ public class PaymentChangeTransactionTimestampActionBuilder
 
     /**
      *  <p>Unique identifier of the Transaction.</p>
+     * @param transactionId
+     * @return Builder
      */
 
     public PaymentChangeTransactionTimestampActionBuilder transactionId(final String transactionId) {
@@ -38,6 +40,8 @@ public class PaymentChangeTransactionTimestampActionBuilder
 
     /**
      *  <p>Timestamp of the Transaction as reported by the payment service.</p>
+     * @param timestamp
+     * @return Builder
      */
 
     public PaymentChangeTransactionTimestampActionBuilder timestamp(final java.time.ZonedDateTime timestamp) {

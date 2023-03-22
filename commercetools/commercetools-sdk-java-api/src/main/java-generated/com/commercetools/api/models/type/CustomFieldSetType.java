@@ -34,6 +34,7 @@ public interface CustomFieldSetType extends FieldType {
 
     /**
      *  <p>Field type of the elements in the set.</p>
+     * @return elementType
      */
     @NotNull
     @Valid

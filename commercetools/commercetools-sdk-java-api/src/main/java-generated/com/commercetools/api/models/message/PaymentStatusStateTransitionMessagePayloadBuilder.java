@@ -30,6 +30,7 @@ public class PaymentStatusStateTransitionMessagePayloadBuilder
 
     /**
      *  <p>State of the Payment after the Transition State update action.</p>
+     * @return Builder
      */
 
     public PaymentStatusStateTransitionMessagePayloadBuilder state(
@@ -40,6 +41,8 @@ public class PaymentStatusStateTransitionMessagePayloadBuilder
 
     /**
      *  <p>State of the Payment after the Transition State update action.</p>
+     * @param state
+     * @return Builder
      */
 
     public PaymentStatusStateTransitionMessagePayloadBuilder state(
@@ -50,6 +53,8 @@ public class PaymentStatusStateTransitionMessagePayloadBuilder
 
     /**
      *  <p>Whether State transition validations were turned off during the Change Transaction State update action.</p>
+     * @param force
+     * @return Builder
      */
 
     public PaymentStatusStateTransitionMessagePayloadBuilder force(final Boolean force) {

@@ -29,6 +29,8 @@ public class ExtensionUpdateBuilder implements Builder<ExtensionUpdate> {
 
     /**
      *  <p>Expected version of the Extension on which the changes should be applied. If the expected version does not match the actual version, a ConcurrentModification error is returned.</p>
+     * @param version
+     * @return Builder
      */
 
     public ExtensionUpdateBuilder version(final Long version) {
@@ -38,6 +40,8 @@ public class ExtensionUpdateBuilder implements Builder<ExtensionUpdate> {
 
     /**
      *  <p>Update actions to be performed on the Extension.</p>
+     * @param actions
+     * @return Builder
      */
 
     public ExtensionUpdateBuilder actions(
@@ -48,6 +52,8 @@ public class ExtensionUpdateBuilder implements Builder<ExtensionUpdate> {
 
     /**
      *  <p>Update actions to be performed on the Extension.</p>
+     * @param actions
+     * @return Builder
      */
 
     public ExtensionUpdateBuilder actions(
@@ -58,6 +64,8 @@ public class ExtensionUpdateBuilder implements Builder<ExtensionUpdate> {
 
     /**
      *  <p>Update actions to be performed on the Extension.</p>
+     * @param actions
+     * @return Builder
      */
 
     public ExtensionUpdateBuilder plusActions(
@@ -71,6 +79,7 @@ public class ExtensionUpdateBuilder implements Builder<ExtensionUpdate> {
 
     /**
      *  <p>Update actions to be performed on the Extension.</p>
+     * @return Builder
      */
 
     public ExtensionUpdateBuilder plusActions(
@@ -85,6 +94,7 @@ public class ExtensionUpdateBuilder implements Builder<ExtensionUpdate> {
 
     /**
      *  <p>Update actions to be performed on the Extension.</p>
+     * @return Builder
      */
 
     public ExtensionUpdateBuilder withActions(

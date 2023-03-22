@@ -33,6 +33,7 @@ public interface InventoryEntryAddQuantityAction extends InventoryEntryUpdateAct
 
     /**
      *  <p>Value to add to <code>quantityOnStock</code>.</p>
+     * @return quantity
      */
     @NotNull
     @JsonProperty("quantity")

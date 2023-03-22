@@ -32,6 +32,8 @@ public class FacetTermBuilder implements Builder<FacetTerm> {
 
     /**
      *
+     * @param term
+     * @return Builder
      */
 
     public FacetTermBuilder term(final java.lang.Object term) {
@@ -41,6 +43,8 @@ public class FacetTermBuilder implements Builder<FacetTerm> {
 
     /**
      *
+     * @param count
+     * @return Builder
      */
 
     public FacetTermBuilder count(final Long count) {
@@ -50,6 +54,8 @@ public class FacetTermBuilder implements Builder<FacetTerm> {
 
     /**
      *
+     * @param productCount
+     * @return Builder
      */
 
     public FacetTermBuilder productCount(@Nullable final Long productCount) {

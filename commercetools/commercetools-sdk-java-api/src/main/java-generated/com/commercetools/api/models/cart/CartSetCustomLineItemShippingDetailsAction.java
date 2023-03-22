@@ -34,6 +34,7 @@ public interface CartSetCustomLineItemShippingDetailsAction extends CartUpdateAc
 
     /**
      *  <p><code>id</code> of the CustomLineItem to update.</p>
+     * @return customLineItemId
      */
     @NotNull
     @JsonProperty("customLineItemId")
@@ -41,6 +42,7 @@ public interface CartSetCustomLineItemShippingDetailsAction extends CartUpdateAc
 
     /**
      *  <p>Value to set. If empty, any existing value is removed.</p>
+     * @return shippingDetails
      */
     @Valid
     @JsonProperty("shippingDetails")

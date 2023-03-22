@@ -33,6 +33,7 @@ public interface ChannelSetAddressAction extends ChannelUpdateAction {
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
+     * @return address
      */
     @Valid
     @JsonProperty("address")

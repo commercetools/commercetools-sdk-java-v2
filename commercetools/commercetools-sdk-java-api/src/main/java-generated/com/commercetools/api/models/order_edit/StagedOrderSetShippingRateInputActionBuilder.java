@@ -28,6 +28,8 @@ public class StagedOrderSetShippingRateInputActionBuilder implements Builder<Sta
 
     /**
      *  <p>Generic type holding specifc ShippingRateInputDraft types.</p>
+     * @param shippingRateInput
+     * @return Builder
      */
 
     public StagedOrderSetShippingRateInputActionBuilder shippingRateInput(
@@ -38,6 +40,7 @@ public class StagedOrderSetShippingRateInputActionBuilder implements Builder<Sta
 
     /**
      *  <p>Generic type holding specifc ShippingRateInputDraft types.</p>
+     * @return Builder
      */
 
     public StagedOrderSetShippingRateInputActionBuilder shippingRateInput(

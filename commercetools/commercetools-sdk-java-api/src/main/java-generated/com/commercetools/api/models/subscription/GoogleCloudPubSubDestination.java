@@ -34,6 +34,7 @@ public interface GoogleCloudPubSubDestination extends Destination {
 
     /**
      *  <p>ID of the Google Cloud project that contains the Pub/Sub topic.</p>
+     * @return projectId
      */
     @NotNull
     @JsonProperty("projectId")
@@ -41,6 +42,7 @@ public interface GoogleCloudPubSubDestination extends Destination {
 
     /**
      *  <p>Name of the topic.</p>
+     * @return topic
      */
     @NotNull
     @JsonProperty("topic")

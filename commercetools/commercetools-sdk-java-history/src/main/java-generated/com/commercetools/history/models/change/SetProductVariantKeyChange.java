@@ -36,6 +36,7 @@ public interface SetProductVariantKeyChange extends Change {
 
     /**
      *
+     * @return type
      */
     @NotNull
     @JsonProperty("type")
@@ -43,6 +44,7 @@ public interface SetProductVariantKeyChange extends Change {
 
     /**
      *  <p>Update action for <code>setProductVariantKey</code></p>
+     * @return change
      */
     @NotNull
     @JsonProperty("change")
@@ -50,6 +52,7 @@ public interface SetProductVariantKeyChange extends Change {
 
     /**
      *
+     * @return catalogData
      */
     @NotNull
     @JsonProperty("catalogData")
@@ -57,6 +60,7 @@ public interface SetProductVariantKeyChange extends Change {
 
     /**
      *
+     * @return previousValue
      */
     @NotNull
     @JsonProperty("previousValue")
@@ -64,6 +68,7 @@ public interface SetProductVariantKeyChange extends Change {
 
     /**
      *
+     * @return nextValue
      */
     @NotNull
     @JsonProperty("nextValue")

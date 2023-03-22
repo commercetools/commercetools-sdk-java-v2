@@ -33,6 +33,7 @@ public interface ImportOperationStatus {
 
     /**
      *  <p>The ID of the ImportOperation.</p>
+     * @return operationId
      */
 
     @JsonProperty("operationId")
@@ -40,6 +41,7 @@ public interface ImportOperationStatus {
 
     /**
      *  <p>The validation state of the ImportOperation.</p>
+     * @return state
      */
     @NotNull
     @JsonProperty("state")
@@ -47,6 +49,7 @@ public interface ImportOperationStatus {
 
     /**
      *  <p>The validation errors for the ImportOperation. See Errors.</p>
+     * @return errors
      */
     @Valid
     @JsonProperty("errors")

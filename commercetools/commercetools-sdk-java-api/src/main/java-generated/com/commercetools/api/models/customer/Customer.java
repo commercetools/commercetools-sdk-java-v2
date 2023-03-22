@@ -51,6 +51,7 @@ public interface Customer extends BaseResource, CustomerMixin, com.commercetools
 
     /**
      *  <p>Unique identifier of the Customer.</p>
+     * @return id
      */
     @NotNull
     @JsonProperty("id")
@@ -58,6 +59,7 @@ public interface Customer extends BaseResource, CustomerMixin, com.commercetools
 
     /**
      *  <p>Current version of the Customer.</p>
+     * @return version
      */
     @NotNull
     @JsonProperty("version")
@@ -65,6 +67,7 @@ public interface Customer extends BaseResource, CustomerMixin, com.commercetools
 
     /**
      *  <p>User-defined unique identifier of the Customer.</p>
+     * @return key
      */
 
     @JsonProperty("key")
@@ -73,6 +76,7 @@ public interface Customer extends BaseResource, CustomerMixin, com.commercetools
     /**
      *  <p>User-defined unique identifier of the Customer.</p>
      *  <p>Can be used to refer to a Customer in a human-readable way (in emails, invoices, and other correspondence).</p>
+     * @return customerNumber
      */
 
     @JsonProperty("customerNumber")
@@ -80,6 +84,7 @@ public interface Customer extends BaseResource, CustomerMixin, com.commercetools
 
     /**
      *  <p>Optional identifier for use in external systems like Customer Relationship Management (CRM) or Enterprise Resource Planning (ERP).</p>
+     * @return externalId
      */
 
     @JsonProperty("externalId")
@@ -87,6 +92,7 @@ public interface Customer extends BaseResource, CustomerMixin, com.commercetools
 
     /**
      *  <p>Date and time (UTC) the Customer was initially created.</p>
+     * @return createdAt
      */
     @NotNull
     @JsonProperty("createdAt")
@@ -94,6 +100,7 @@ public interface Customer extends BaseResource, CustomerMixin, com.commercetools
 
     /**
      *  <p>Date and time (UTC) the Customer was last updated.</p>
+     * @return lastModifiedAt
      */
     @NotNull
     @JsonProperty("lastModifiedAt")
@@ -101,6 +108,7 @@ public interface Customer extends BaseResource, CustomerMixin, com.commercetools
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @return lastModifiedBy
      */
     @Valid
     @JsonProperty("lastModifiedBy")
@@ -108,6 +116,7 @@ public interface Customer extends BaseResource, CustomerMixin, com.commercetools
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @return createdBy
      */
     @Valid
     @JsonProperty("createdBy")
@@ -115,6 +124,7 @@ public interface Customer extends BaseResource, CustomerMixin, com.commercetools
 
     /**
      *  <p>Email address of the Customer that is unique for an entire Project or to a Store the Customer is assigned to. It is the mandatory unique identifier of a Customer.</p>
+     * @return email
      */
     @NotNull
     @JsonProperty("email")
@@ -122,6 +132,7 @@ public interface Customer extends BaseResource, CustomerMixin, com.commercetools
 
     /**
      *  <p>Present only when <code>authenticationMode</code> is set to <code>Password</code>.</p>
+     * @return password
      */
 
     @JsonProperty("password")
@@ -129,6 +140,7 @@ public interface Customer extends BaseResource, CustomerMixin, com.commercetools
 
     /**
      *  <p>Given name (first name) of the Customer.</p>
+     * @return firstName
      */
 
     @JsonProperty("firstName")
@@ -136,6 +148,7 @@ public interface Customer extends BaseResource, CustomerMixin, com.commercetools
 
     /**
      *  <p>Family name (last name) of the Customer.</p>
+     * @return lastName
      */
 
     @JsonProperty("lastName")
@@ -143,6 +156,7 @@ public interface Customer extends BaseResource, CustomerMixin, com.commercetools
 
     /**
      *  <p>Middle name of the Customer.</p>
+     * @return middleName
      */
 
     @JsonProperty("middleName")
@@ -150,6 +164,7 @@ public interface Customer extends BaseResource, CustomerMixin, com.commercetools
 
     /**
      *  <p>Title of the Customer, for example, 'Dr.'.</p>
+     * @return title
      */
 
     @JsonProperty("title")
@@ -157,6 +172,7 @@ public interface Customer extends BaseResource, CustomerMixin, com.commercetools
 
     /**
      *  <p>Date of birth of the Customer.</p>
+     * @return dateOfBirth
      */
 
     @JsonProperty("dateOfBirth")
@@ -164,6 +180,7 @@ public interface Customer extends BaseResource, CustomerMixin, com.commercetools
 
     /**
      *  <p>Company name of the Customer.</p>
+     * @return companyName
      */
 
     @JsonProperty("companyName")
@@ -171,6 +188,7 @@ public interface Customer extends BaseResource, CustomerMixin, com.commercetools
 
     /**
      *  <p>Unique VAT ID of the Customer.</p>
+     * @return vatId
      */
 
     @JsonProperty("vatId")
@@ -178,6 +196,7 @@ public interface Customer extends BaseResource, CustomerMixin, com.commercetools
 
     /**
      *  <p>Addresses used by the Customer.</p>
+     * @return addresses
      */
     @NotNull
     @Valid
@@ -186,6 +205,7 @@ public interface Customer extends BaseResource, CustomerMixin, com.commercetools
 
     /**
      *  <p>ID of the address in <code>addresses</code> used as the default shipping address.</p>
+     * @return defaultShippingAddressId
      */
 
     @JsonProperty("defaultShippingAddressId")
@@ -193,6 +213,7 @@ public interface Customer extends BaseResource, CustomerMixin, com.commercetools
 
     /**
      *  <p>IDs of addresses in <code>addresses</code> used as shipping addresses.</p>
+     * @return shippingAddressIds
      */
 
     @JsonProperty("shippingAddressIds")
@@ -200,6 +221,7 @@ public interface Customer extends BaseResource, CustomerMixin, com.commercetools
 
     /**
      *  <p>ID of the address in <code>addresses</code> used as the default billing address.</p>
+     * @return defaultBillingAddressId
      */
 
     @JsonProperty("defaultBillingAddressId")
@@ -207,6 +229,7 @@ public interface Customer extends BaseResource, CustomerMixin, com.commercetools
 
     /**
      *  <p>IDs of addresses in <code>addresses</code> used as billing addresses.</p>
+     * @return billingAddressIds
      */
 
     @JsonProperty("billingAddressIds")
@@ -214,6 +237,7 @@ public interface Customer extends BaseResource, CustomerMixin, com.commercetools
 
     /**
      *  <p>Indicates whether the email address of the Customer is verified.</p>
+     * @return isEmailVerified
      */
     @NotNull
     @JsonProperty("isEmailVerified")
@@ -221,6 +245,7 @@ public interface Customer extends BaseResource, CustomerMixin, com.commercetools
 
     /**
      *  <p>CustomerGroup to which the Customer belongs.</p>
+     * @return customerGroup
      */
     @Valid
     @JsonProperty("customerGroup")
@@ -228,6 +253,7 @@ public interface Customer extends BaseResource, CustomerMixin, com.commercetools
 
     /**
      *  <p>Custom Fields for the Customer.</p>
+     * @return custom
      */
     @Valid
     @JsonProperty("custom")
@@ -235,6 +261,7 @@ public interface Customer extends BaseResource, CustomerMixin, com.commercetools
 
     /**
      *  <p>Preferred language of the Customer.</p>
+     * @return locale
      */
 
     @JsonProperty("locale")
@@ -242,6 +269,7 @@ public interface Customer extends BaseResource, CustomerMixin, com.commercetools
 
     /**
      *  <p>Salutation of the Customer, for example, 'Mr.' or 'Mrs.'.</p>
+     * @return salutation
      */
 
     @JsonProperty("salutation")
@@ -253,6 +281,7 @@ public interface Customer extends BaseResource, CustomerMixin, com.commercetools
      *   <li>If no Stores are specified, the Customer is a global customer, and can log in using the Password Flow for global Customers.</li>
      *   <li>If any Stores are specified, the Customer can only log in using the Password Flow for Customers in a Store for those specific Stores.</li>
      *  </ul>
+     * @return stores
      */
     @Valid
     @JsonProperty("stores")
@@ -260,6 +289,7 @@ public interface Customer extends BaseResource, CustomerMixin, com.commercetools
 
     /**
      *  <p>Indicates whether the <code>password</code> is required for the Customer.</p>
+     * @return authenticationMode
      */
     @NotNull
     @JsonProperty("authenticationMode")

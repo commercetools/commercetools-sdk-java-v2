@@ -35,6 +35,8 @@ public class RemoveBillingAddressIdChangeBuilder implements Builder<RemoveBillin
 
     /**
      *  <p>Update action for <code>removeBillingAddressId</code> action on customers.</p>
+     * @param change
+     * @return Builder
      */
 
     public RemoveBillingAddressIdChangeBuilder change(final String change) {
@@ -44,6 +46,8 @@ public class RemoveBillingAddressIdChangeBuilder implements Builder<RemoveBillin
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public RemoveBillingAddressIdChangeBuilder nextValue(final String... nextValue) {
@@ -53,6 +57,8 @@ public class RemoveBillingAddressIdChangeBuilder implements Builder<RemoveBillin
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public RemoveBillingAddressIdChangeBuilder nextValue(final java.util.List<String> nextValue) {
@@ -62,6 +68,8 @@ public class RemoveBillingAddressIdChangeBuilder implements Builder<RemoveBillin
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public RemoveBillingAddressIdChangeBuilder plusNextValue(final String... nextValue) {
@@ -74,6 +82,8 @@ public class RemoveBillingAddressIdChangeBuilder implements Builder<RemoveBillin
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public RemoveBillingAddressIdChangeBuilder previousValue(final String... previousValue) {
@@ -83,6 +93,8 @@ public class RemoveBillingAddressIdChangeBuilder implements Builder<RemoveBillin
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public RemoveBillingAddressIdChangeBuilder previousValue(final java.util.List<String> previousValue) {
@@ -92,6 +104,8 @@ public class RemoveBillingAddressIdChangeBuilder implements Builder<RemoveBillin
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public RemoveBillingAddressIdChangeBuilder plusPreviousValue(final String... previousValue) {
@@ -104,6 +118,7 @@ public class RemoveBillingAddressIdChangeBuilder implements Builder<RemoveBillin
 
     /**
      *
+     * @return Builder
      */
 
     public RemoveBillingAddressIdChangeBuilder address(
@@ -114,6 +129,8 @@ public class RemoveBillingAddressIdChangeBuilder implements Builder<RemoveBillin
 
     /**
      *
+     * @param address
+     * @return Builder
      */
 
     public RemoveBillingAddressIdChangeBuilder address(final com.commercetools.history.models.common.Address address) {

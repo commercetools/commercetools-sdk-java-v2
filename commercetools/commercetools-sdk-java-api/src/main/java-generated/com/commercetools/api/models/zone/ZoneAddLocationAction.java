@@ -34,6 +34,7 @@ public interface ZoneAddLocationAction extends ZoneUpdateAction {
 
     /**
      *  <p>Location to be added to the Zone.</p>
+     * @return location
      */
     @NotNull
     @Valid

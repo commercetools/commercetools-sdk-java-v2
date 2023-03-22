@@ -31,6 +31,7 @@ public interface Location {
 
     /**
      *  <p>Country code of the geographic location.</p>
+     * @return country
      */
     @NotNull
     @JsonProperty("country")
@@ -38,6 +39,7 @@ public interface Location {
 
     /**
      *  <p>State within the country.</p>
+     * @return state
      */
 
     @JsonProperty("state")

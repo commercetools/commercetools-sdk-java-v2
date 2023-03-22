@@ -25,6 +25,8 @@ public class StateChangeTypeActionBuilder implements Builder<StateChangeTypeActi
 
     /**
      *  <p>Resource or object types the State shall be assigned to. Must not be empty.</p>
+     * @param type
+     * @return Builder
      */
 
     public StateChangeTypeActionBuilder type(final com.commercetools.api.models.state.StateTypeEnum type) {

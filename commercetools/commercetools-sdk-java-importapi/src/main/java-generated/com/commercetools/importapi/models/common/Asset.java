@@ -35,6 +35,7 @@ public interface Asset {
 
     /**
      *  <p>User-defined identifier for the asset. Asset keys are unique inside their container (a product variant or a category).</p>
+     * @return key
      */
     @NotNull
     @JsonProperty("key")
@@ -42,6 +43,7 @@ public interface Asset {
 
     /**
      *
+     * @return sources
      */
     @NotNull
     @Valid
@@ -55,6 +57,7 @@ public interface Asset {
      *    "en": "dog food"
      *  }
      *  </code></pre>
+     * @return name
      */
     @NotNull
     @Valid
@@ -68,6 +71,7 @@ public interface Asset {
      *    "en": "dog food"
      *  }
      *  </code></pre>
+     * @return description
      */
     @Valid
     @JsonProperty("description")
@@ -75,6 +79,7 @@ public interface Asset {
 
     /**
      *
+     * @return tags
      */
 
     @JsonProperty("tags")
@@ -82,6 +87,7 @@ public interface Asset {
 
     /**
      *  <p>The representation to be sent to the server when creating a resource with custom fields.</p>
+     * @return custom
      */
     @Valid
     @JsonProperty("custom")

@@ -29,6 +29,8 @@ public class ProductTypeChangeAttributeConstraintActionBuilder
 
     /**
      *  <p>Name of the AttributeDefinition to update.</p>
+     * @param attributeName
+     * @return Builder
      */
 
     public ProductTypeChangeAttributeConstraintActionBuilder attributeName(final String attributeName) {
@@ -38,6 +40,8 @@ public class ProductTypeChangeAttributeConstraintActionBuilder
 
     /**
      *  <p><code>None</code></p>
+     * @param newValue
+     * @return Builder
      */
 
     public ProductTypeChangeAttributeConstraintActionBuilder newValue(

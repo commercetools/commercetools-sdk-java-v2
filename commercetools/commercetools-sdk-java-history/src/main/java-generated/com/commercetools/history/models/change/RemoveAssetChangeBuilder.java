@@ -29,6 +29,8 @@ public class RemoveAssetChangeBuilder implements Builder<RemoveAssetChange> {
 
     /**
      *  <p>Update action for <code>removeAsset</code></p>
+     * @param change
+     * @return Builder
      */
 
     public RemoveAssetChangeBuilder change(final String change) {
@@ -38,6 +40,7 @@ public class RemoveAssetChangeBuilder implements Builder<RemoveAssetChange> {
 
     /**
      *
+     * @return Builder
      */
 
     public RemoveAssetChangeBuilder previousValue(
@@ -48,6 +51,8 @@ public class RemoveAssetChangeBuilder implements Builder<RemoveAssetChange> {
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public RemoveAssetChangeBuilder previousValue(final com.commercetools.history.models.common.Asset previousValue) {

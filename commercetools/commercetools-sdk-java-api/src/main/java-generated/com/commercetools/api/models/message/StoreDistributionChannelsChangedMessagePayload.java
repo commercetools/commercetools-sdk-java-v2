@@ -33,6 +33,7 @@ public interface StoreDistributionChannelsChangedMessagePayload extends MessageP
 
     /**
      *  <p>Product distribution Channels that have been added to the Store.</p>
+     * @return addedDistributionChannels
      */
     @Valid
     @JsonProperty("addedDistributionChannels")
@@ -40,6 +41,7 @@ public interface StoreDistributionChannelsChangedMessagePayload extends MessageP
 
     /**
      *  <p>Product distribution Channels that have been removed from the Store.</p>
+     * @return removedDistributionChannels
      */
     @Valid
     @JsonProperty("removedDistributionChannels")

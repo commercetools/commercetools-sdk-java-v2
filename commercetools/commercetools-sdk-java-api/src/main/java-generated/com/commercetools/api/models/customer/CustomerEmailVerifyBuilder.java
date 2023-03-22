@@ -30,6 +30,8 @@ public class CustomerEmailVerifyBuilder implements Builder<CustomerEmailVerify> 
 
     /**
      *  <p>Expected version of the Customer.</p>
+     * @param version
+     * @return Builder
      */
 
     public CustomerEmailVerifyBuilder version(@Nullable final Long version) {
@@ -39,6 +41,8 @@ public class CustomerEmailVerifyBuilder implements Builder<CustomerEmailVerify> 
 
     /**
      *  <p>Value of the token to verify Customer email.</p>
+     * @param tokenValue
+     * @return Builder
      */
 
     public CustomerEmailVerifyBuilder tokenValue(final String tokenValue) {

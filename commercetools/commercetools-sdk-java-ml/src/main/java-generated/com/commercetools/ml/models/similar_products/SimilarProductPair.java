@@ -33,6 +33,7 @@ public interface SimilarProductPair {
 
     /**
      *  <p>The probability of product similarity.</p>
+     * @return confidence
      */
     @NotNull
     @JsonProperty("confidence")
@@ -40,6 +41,7 @@ public interface SimilarProductPair {
 
     /**
      *
+     * @return products
      */
     @NotNull
     @Valid

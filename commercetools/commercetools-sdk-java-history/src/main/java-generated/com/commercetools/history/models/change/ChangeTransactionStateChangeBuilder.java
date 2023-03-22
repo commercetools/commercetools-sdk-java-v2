@@ -35,6 +35,8 @@ public class ChangeTransactionStateChangeBuilder implements Builder<ChangeTransa
 
     /**
      *  <p>Update action for <code>changeTransactionState</code> on payments</p>
+     * @param change
+     * @return Builder
      */
 
     public ChangeTransactionStateChangeBuilder change(final String change) {
@@ -44,6 +46,7 @@ public class ChangeTransactionStateChangeBuilder implements Builder<ChangeTransa
 
     /**
      *
+     * @return Builder
      */
 
     public ChangeTransactionStateChangeBuilder transaction(
@@ -56,6 +59,8 @@ public class ChangeTransactionStateChangeBuilder implements Builder<ChangeTransa
 
     /**
      *
+     * @param transaction
+     * @return Builder
      */
 
     public ChangeTransactionStateChangeBuilder transaction(
@@ -66,6 +71,8 @@ public class ChangeTransactionStateChangeBuilder implements Builder<ChangeTransa
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public ChangeTransactionStateChangeBuilder nextValue(
@@ -76,6 +83,8 @@ public class ChangeTransactionStateChangeBuilder implements Builder<ChangeTransa
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public ChangeTransactionStateChangeBuilder previousValue(

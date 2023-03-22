@@ -37,6 +37,7 @@ public interface DuplicatePriceKeyError extends ErrorObject {
 
     /**
      *
+     * @return code
      */
     @NotNull
     @JsonProperty("code")
@@ -44,6 +45,7 @@ public interface DuplicatePriceKeyError extends ErrorObject {
 
     /**
      *  <p><code>"Duplicate price key: $priceKey. The price key must be unique per variant."</code></p>
+     * @return message
      */
     @NotNull
     @JsonProperty("message")
@@ -51,6 +53,7 @@ public interface DuplicatePriceKeyError extends ErrorObject {
 
     /**
      *  <p>Conflicting Embedded Price.</p>
+     * @return conflictingPrice
      */
     @NotNull
     @Valid

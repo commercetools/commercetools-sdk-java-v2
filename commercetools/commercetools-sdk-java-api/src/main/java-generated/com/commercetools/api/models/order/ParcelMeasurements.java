@@ -28,6 +28,7 @@ public interface ParcelMeasurements {
 
     /**
      *
+     * @return heightInMillimeter
      */
 
     @JsonProperty("heightInMillimeter")
@@ -35,6 +36,7 @@ public interface ParcelMeasurements {
 
     /**
      *
+     * @return lengthInMillimeter
      */
 
     @JsonProperty("lengthInMillimeter")
@@ -42,6 +44,7 @@ public interface ParcelMeasurements {
 
     /**
      *
+     * @return widthInMillimeter
      */
 
     @JsonProperty("widthInMillimeter")
@@ -49,6 +52,7 @@ public interface ParcelMeasurements {
 
     /**
      *
+     * @return weightInGram
      */
 
     @JsonProperty("weightInGram")

@@ -38,6 +38,7 @@ public interface StagedOrderChangeLineItemQuantityAction extends StagedOrderUpda
 
     /**
      *
+     * @return lineItemId
      */
     @NotNull
     @JsonProperty("lineItemId")
@@ -45,6 +46,7 @@ public interface StagedOrderChangeLineItemQuantityAction extends StagedOrderUpda
 
     /**
      *
+     * @return quantity
      */
     @NotNull
     @JsonProperty("quantity")
@@ -53,6 +55,7 @@ public interface StagedOrderChangeLineItemQuantityAction extends StagedOrderUpda
     /**
      *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
      *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
+     * @return externalPrice
      */
     @Valid
     @JsonProperty("externalPrice")
@@ -60,6 +63,7 @@ public interface StagedOrderChangeLineItemQuantityAction extends StagedOrderUpda
 
     /**
      *
+     * @return externalTotalPrice
      */
     @Valid
     @JsonProperty("externalTotalPrice")

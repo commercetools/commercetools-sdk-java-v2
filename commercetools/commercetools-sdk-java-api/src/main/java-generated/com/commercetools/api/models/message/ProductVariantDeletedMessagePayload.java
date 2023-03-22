@@ -35,6 +35,7 @@ public interface ProductVariantDeletedMessagePayload extends MessagePayload {
 
     /**
      *  <p>Unique identifier of the Product Variant that was added.</p>
+     * @return variant
      */
     @Valid
     @JsonProperty("variant")
@@ -42,6 +43,7 @@ public interface ProductVariantDeletedMessagePayload extends MessagePayload {
 
     /**
      *  <p>List of image URLs that were removed with the Remove Product Variant update action.</p>
+     * @return removedImageUrls
      */
     @NotNull
     @JsonProperty("removedImageUrls")

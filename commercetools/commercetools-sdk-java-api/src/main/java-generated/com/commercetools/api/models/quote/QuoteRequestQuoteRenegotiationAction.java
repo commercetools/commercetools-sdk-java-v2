@@ -30,6 +30,7 @@ public interface QuoteRequestQuoteRenegotiationAction extends QuoteUpdateAction 
 
     /**
      *  <p>Message from the Buyer regarding the Quote renegotiation request.</p>
+     * @return buyerComment
      */
 
     @JsonProperty("buyerComment")

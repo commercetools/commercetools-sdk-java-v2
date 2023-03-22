@@ -36,6 +36,7 @@ public interface ShoppingListChangeTextLineItemNameAction extends ShoppingListUp
 
     /**
      *  <p>The <code>id</code> of the TextLineItem to update.</p>
+     * @return textLineItemId
      */
     @NotNull
     @JsonProperty("textLineItemId")
@@ -43,6 +44,7 @@ public interface ShoppingListChangeTextLineItemNameAction extends ShoppingListUp
 
     /**
      *  <p>New value to set. Must not be empty.</p>
+     * @return name
      */
     @NotNull
     @Valid

@@ -29,6 +29,8 @@ public class MyQuoteUpdateBuilder implements Builder<MyQuoteUpdate> {
 
     /**
      *  <p>Expected version of the Quote to which the changes should be applied. If the expected version does not match the actual version, a 409 Conflict error will be returned.</p>
+     * @param version
+     * @return Builder
      */
 
     public MyQuoteUpdateBuilder version(final Long version) {
@@ -38,6 +40,8 @@ public class MyQuoteUpdateBuilder implements Builder<MyQuoteUpdate> {
 
     /**
      *  <p>Update actions to be performed on the Quote.</p>
+     * @param actions
+     * @return Builder
      */
 
     public MyQuoteUpdateBuilder actions(final com.commercetools.api.models.me.MyQuoteUpdateAction... actions) {
@@ -47,6 +51,8 @@ public class MyQuoteUpdateBuilder implements Builder<MyQuoteUpdate> {
 
     /**
      *  <p>Update actions to be performed on the Quote.</p>
+     * @param actions
+     * @return Builder
      */
 
     public MyQuoteUpdateBuilder actions(
@@ -57,6 +63,8 @@ public class MyQuoteUpdateBuilder implements Builder<MyQuoteUpdate> {
 
     /**
      *  <p>Update actions to be performed on the Quote.</p>
+     * @param actions
+     * @return Builder
      */
 
     public MyQuoteUpdateBuilder plusActions(final com.commercetools.api.models.me.MyQuoteUpdateAction... actions) {
@@ -69,6 +77,7 @@ public class MyQuoteUpdateBuilder implements Builder<MyQuoteUpdate> {
 
     /**
      *  <p>Update actions to be performed on the Quote.</p>
+     * @return Builder
      */
 
     public MyQuoteUpdateBuilder plusActions(
@@ -82,6 +91,7 @@ public class MyQuoteUpdateBuilder implements Builder<MyQuoteUpdate> {
 
     /**
      *  <p>Update actions to be performed on the Quote.</p>
+     * @return Builder
      */
 
     public MyQuoteUpdateBuilder withActions(

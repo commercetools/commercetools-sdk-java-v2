@@ -32,6 +32,7 @@ public class TaxedPriceDraftBuilder implements Builder<TaxedPriceDraft> {
 
     /**
      *  <p>Total net price of the Line Item or Custom Line Item.</p>
+     * @return Builder
      */
 
     public TaxedPriceDraftBuilder totalNet(
@@ -42,6 +43,8 @@ public class TaxedPriceDraftBuilder implements Builder<TaxedPriceDraft> {
 
     /**
      *  <p>Total net price of the Line Item or Custom Line Item.</p>
+     * @param totalNet
+     * @return Builder
      */
 
     public TaxedPriceDraftBuilder totalNet(final com.commercetools.api.models.common.Money totalNet) {
@@ -51,6 +54,7 @@ public class TaxedPriceDraftBuilder implements Builder<TaxedPriceDraft> {
 
     /**
      *  <p>Total gross price of the Line Item or Custom Line Item.</p>
+     * @return Builder
      */
 
     public TaxedPriceDraftBuilder totalGross(
@@ -61,6 +65,8 @@ public class TaxedPriceDraftBuilder implements Builder<TaxedPriceDraft> {
 
     /**
      *  <p>Total gross price of the Line Item or Custom Line Item.</p>
+     * @param totalGross
+     * @return Builder
      */
 
     public TaxedPriceDraftBuilder totalGross(final com.commercetools.api.models.common.Money totalGross) {
@@ -71,6 +77,8 @@ public class TaxedPriceDraftBuilder implements Builder<TaxedPriceDraft> {
     /**
      *  <p>Taxable portions added to the <code>totalGross</code>.</p>
      *  <p>Calculated from the TaxRates.</p>
+     * @param taxPortions
+     * @return Builder
      */
 
     public TaxedPriceDraftBuilder taxPortions(final com.commercetools.api.models.cart.TaxPortionDraft... taxPortions) {
@@ -81,6 +89,8 @@ public class TaxedPriceDraftBuilder implements Builder<TaxedPriceDraft> {
     /**
      *  <p>Taxable portions added to the <code>totalGross</code>.</p>
      *  <p>Calculated from the TaxRates.</p>
+     * @param taxPortions
+     * @return Builder
      */
 
     public TaxedPriceDraftBuilder taxPortions(
@@ -92,6 +102,8 @@ public class TaxedPriceDraftBuilder implements Builder<TaxedPriceDraft> {
     /**
      *  <p>Taxable portions added to the <code>totalGross</code>.</p>
      *  <p>Calculated from the TaxRates.</p>
+     * @param taxPortions
+     * @return Builder
      */
 
     public TaxedPriceDraftBuilder plusTaxPortions(
@@ -106,6 +118,7 @@ public class TaxedPriceDraftBuilder implements Builder<TaxedPriceDraft> {
     /**
      *  <p>Taxable portions added to the <code>totalGross</code>.</p>
      *  <p>Calculated from the TaxRates.</p>
+     * @return Builder
      */
 
     public TaxedPriceDraftBuilder plusTaxPortions(
@@ -120,6 +133,7 @@ public class TaxedPriceDraftBuilder implements Builder<TaxedPriceDraft> {
     /**
      *  <p>Taxable portions added to the <code>totalGross</code>.</p>
      *  <p>Calculated from the TaxRates.</p>
+     * @return Builder
      */
 
     public TaxedPriceDraftBuilder withTaxPortions(

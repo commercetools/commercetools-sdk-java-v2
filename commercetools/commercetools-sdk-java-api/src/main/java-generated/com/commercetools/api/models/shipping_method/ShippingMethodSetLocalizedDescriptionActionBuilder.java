@@ -29,6 +29,7 @@ public class ShippingMethodSetLocalizedDescriptionActionBuilder
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
+     * @return Builder
      */
 
     public ShippingMethodSetLocalizedDescriptionActionBuilder localizedDescription(
@@ -40,6 +41,8 @@ public class ShippingMethodSetLocalizedDescriptionActionBuilder
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
+     * @param localizedDescription
+     * @return Builder
      */
 
     public ShippingMethodSetLocalizedDescriptionActionBuilder localizedDescription(

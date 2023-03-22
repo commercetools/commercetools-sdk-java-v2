@@ -31,6 +31,7 @@ public interface CustomShippingMethodChangeValue {
 
     /**
      *
+     * @return name
      */
     @NotNull
     @JsonProperty("name")

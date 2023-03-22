@@ -25,6 +25,8 @@ public class ChangeStatusUpdateActionBuilder implements Builder<ChangeStatusUpda
 
     /**
      *
+     * @param status
+     * @return Builder
      */
 
     public ChangeStatusUpdateActionBuilder status(

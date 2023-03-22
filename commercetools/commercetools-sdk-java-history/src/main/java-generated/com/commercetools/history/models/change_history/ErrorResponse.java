@@ -33,6 +33,7 @@ public interface ErrorResponse {
 
     /**
      *
+     * @return statusCode
      */
     @NotNull
     @JsonProperty("statusCode")
@@ -40,6 +41,7 @@ public interface ErrorResponse {
 
     /**
      *
+     * @return message
      */
     @NotNull
     @JsonProperty("message")
@@ -47,6 +49,7 @@ public interface ErrorResponse {
 
     /**
      *
+     * @return error
      */
 
     @JsonProperty("error")
@@ -54,6 +57,7 @@ public interface ErrorResponse {
 
     /**
      *
+     * @return error_description
      */
 
     @JsonProperty("error_description")
@@ -61,6 +65,7 @@ public interface ErrorResponse {
 
     /**
      *
+     * @return errors
      */
     @Valid
     @JsonProperty("errors")

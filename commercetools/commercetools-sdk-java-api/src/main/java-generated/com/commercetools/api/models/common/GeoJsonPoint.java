@@ -33,6 +33,7 @@ public interface GeoJsonPoint extends GeoJson {
 
     /**
      *  <p>Longitude (stored on index <code>[0]</code>) and latitude (stored on index <code>[1]</code>) of the Point.</p>
+     * @return coordinates
      */
     @NotNull
     @JsonProperty("coordinates")

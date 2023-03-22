@@ -35,6 +35,7 @@ public interface ProductAddToCategoryAction extends ProductUpdateAction {
 
     /**
      *  <p>The Category to add.</p>
+     * @return category
      */
     @NotNull
     @Valid
@@ -43,6 +44,7 @@ public interface ProductAddToCategoryAction extends ProductUpdateAction {
 
     /**
      *  <p>A string representing a number between 0 and 1. Must start with <code>0.</code> and cannot end with <code>0</code>. If empty, any existing value will be removed.</p>
+     * @return orderHint
      */
 
     @JsonProperty("orderHint")
@@ -50,6 +52,7 @@ public interface ProductAddToCategoryAction extends ProductUpdateAction {
 
     /**
      *  <p>If <code>true</code>, only the staged <code>categories</code> and <code>categoryOrderHints</code> are updated. If <code>false</code>, both the current and staged <code>categories</code> and <code>categoryOrderHints</code> are updated.</p>
+     * @return staged
      */
 
     @JsonProperty("staged")

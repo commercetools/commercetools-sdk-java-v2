@@ -29,6 +29,8 @@ public class RemoveDeliveryItemsChangeBuilder implements Builder<RemoveDeliveryI
 
     /**
      *  <p>Update action for <code>removeDelivery</code></p>
+     * @param change
+     * @return Builder
      */
 
     public RemoveDeliveryItemsChangeBuilder change(final String change) {
@@ -38,6 +40,7 @@ public class RemoveDeliveryItemsChangeBuilder implements Builder<RemoveDeliveryI
 
     /**
      *
+     * @return Builder
      */
 
     public RemoveDeliveryItemsChangeBuilder previousValue(
@@ -48,6 +51,8 @@ public class RemoveDeliveryItemsChangeBuilder implements Builder<RemoveDeliveryI
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public RemoveDeliveryItemsChangeBuilder previousValue(

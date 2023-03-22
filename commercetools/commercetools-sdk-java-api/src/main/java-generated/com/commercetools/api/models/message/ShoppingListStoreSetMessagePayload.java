@@ -35,6 +35,7 @@ public interface ShoppingListStoreSetMessagePayload extends MessagePayload {
 
     /**
      *  <p>Reference to a Store by its key.</p>
+     * @return store
      */
     @NotNull
     @Valid

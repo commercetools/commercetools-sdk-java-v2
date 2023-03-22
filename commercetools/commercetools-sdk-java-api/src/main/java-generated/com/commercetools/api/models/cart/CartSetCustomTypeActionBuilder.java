@@ -31,6 +31,7 @@ public class CartSetCustomTypeActionBuilder implements Builder<CartSetCustomType
 
     /**
      *  <p>Defines the Type that extends the Cart with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Cart.</p>
+     * @return Builder
      */
 
     public CartSetCustomTypeActionBuilder type(
@@ -41,6 +42,8 @@ public class CartSetCustomTypeActionBuilder implements Builder<CartSetCustomType
 
     /**
      *  <p>Defines the Type that extends the Cart with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Cart.</p>
+     * @param type
+     * @return Builder
      */
 
     public CartSetCustomTypeActionBuilder type(
@@ -51,6 +54,7 @@ public class CartSetCustomTypeActionBuilder implements Builder<CartSetCustomType
 
     /**
      *  <p>Sets the Custom Fields fields for the Cart.</p>
+     * @return Builder
      */
 
     public CartSetCustomTypeActionBuilder fields(
@@ -61,6 +65,8 @@ public class CartSetCustomTypeActionBuilder implements Builder<CartSetCustomType
 
     /**
      *  <p>Sets the Custom Fields fields for the Cart.</p>
+     * @param fields
+     * @return Builder
      */
 
     public CartSetCustomTypeActionBuilder fields(

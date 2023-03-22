@@ -33,6 +33,8 @@ public class CountryNotConfiguredInStoreErrorBuilder implements Builder<CountryN
 
     /**
      *  <p><code>"The country $country is not configured for the store $store."</code></p>
+     * @param message
+     * @return Builder
      */
 
     public CountryNotConfiguredInStoreErrorBuilder message(final String message) {
@@ -63,6 +65,8 @@ public class CountryNotConfiguredInStoreErrorBuilder implements Builder<CountryN
 
     /**
      *  <p>Countries configured for the Store.</p>
+     * @param storeCountries
+     * @return Builder
      */
 
     public CountryNotConfiguredInStoreErrorBuilder storeCountries(final String... storeCountries) {
@@ -72,6 +76,8 @@ public class CountryNotConfiguredInStoreErrorBuilder implements Builder<CountryN
 
     /**
      *  <p>Countries configured for the Store.</p>
+     * @param storeCountries
+     * @return Builder
      */
 
     public CountryNotConfiguredInStoreErrorBuilder storeCountries(final java.util.List<String> storeCountries) {
@@ -81,6 +87,8 @@ public class CountryNotConfiguredInStoreErrorBuilder implements Builder<CountryN
 
     /**
      *  <p>Countries configured for the Store.</p>
+     * @param storeCountries
+     * @return Builder
      */
 
     public CountryNotConfiguredInStoreErrorBuilder plusStoreCountries(final String... storeCountries) {
@@ -93,6 +101,8 @@ public class CountryNotConfiguredInStoreErrorBuilder implements Builder<CountryN
 
     /**
      *  <p>The country that is not configured for the Store but referenced on the Cart or Order.</p>
+     * @param country
+     * @return Builder
      */
 
     public CountryNotConfiguredInStoreErrorBuilder country(final String country) {

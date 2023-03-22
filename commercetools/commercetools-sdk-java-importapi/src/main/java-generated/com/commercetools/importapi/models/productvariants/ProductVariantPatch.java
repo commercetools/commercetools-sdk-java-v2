@@ -33,6 +33,7 @@ public interface ProductVariantPatch {
 
     /**
      *  <p>The ProductVariant to which this patch is applied. The Reference to the ProductVariant with which the ProductVariantPatch is associated. If referenced ProductVariant does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary ProductVariant is created.</p>
+     * @return productVariant
      */
     @NotNull
     @Valid
@@ -47,6 +48,7 @@ public interface ProductVariantPatch {
      *   <li>Attempting to set a <code>null</code> value to a required Attribute will make the import operation fail with an InvalidOperation error.</li>
      *   <li>Importing LocalizableTextAttributes or LocalizableTextSetAttributes follows an override pattern, meaning that omitted localized fields will be deleted, new fields will be created, and existing fields will be updated. You can also delete localized fields by setting their value to <code>null</code>.</li>
      *  </ul>
+     * @return attributes
      */
     @Valid
     @JsonProperty("attributes")
@@ -54,6 +56,7 @@ public interface ProductVariantPatch {
 
     /**
      *  <p>If <code>false</code>, the attribute changes are applied to both current and staged projected representations of the Product.</p>
+     * @return staged
      */
 
     @JsonProperty("staged")

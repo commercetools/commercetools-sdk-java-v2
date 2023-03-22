@@ -25,6 +25,8 @@ public class BusinessUnitChangeStatusActionBuilder implements Builder<BusinessUn
 
     /**
      *  <p>New status to set.</p>
+     * @param status
+     * @return Builder
      */
 
     public BusinessUnitChangeStatusActionBuilder status(final String status) {

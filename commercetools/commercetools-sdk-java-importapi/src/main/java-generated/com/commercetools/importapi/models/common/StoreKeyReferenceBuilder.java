@@ -25,6 +25,8 @@ public class StoreKeyReferenceBuilder implements Builder<StoreKeyReference> {
 
     /**
      *
+     * @param key
+     * @return Builder
      */
 
     public StoreKeyReferenceBuilder key(final String key) {

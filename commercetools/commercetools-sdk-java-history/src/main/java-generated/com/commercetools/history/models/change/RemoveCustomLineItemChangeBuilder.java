@@ -32,6 +32,8 @@ public class RemoveCustomLineItemChangeBuilder implements Builder<RemoveCustomLi
 
     /**
      *  <p>Update action for adding and removing custom line items</p>
+     * @param change
+     * @return Builder
      */
 
     public RemoveCustomLineItemChangeBuilder change(final String change) {
@@ -41,6 +43,7 @@ public class RemoveCustomLineItemChangeBuilder implements Builder<RemoveCustomLi
 
     /**
      *
+     * @return Builder
      */
 
     public RemoveCustomLineItemChangeBuilder nextValue(
@@ -51,6 +54,8 @@ public class RemoveCustomLineItemChangeBuilder implements Builder<RemoveCustomLi
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public RemoveCustomLineItemChangeBuilder nextValue(
@@ -61,6 +66,7 @@ public class RemoveCustomLineItemChangeBuilder implements Builder<RemoveCustomLi
 
     /**
      *
+     * @return Builder
      */
 
     public RemoveCustomLineItemChangeBuilder previousValue(
@@ -71,6 +77,8 @@ public class RemoveCustomLineItemChangeBuilder implements Builder<RemoveCustomLi
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public RemoveCustomLineItemChangeBuilder previousValue(

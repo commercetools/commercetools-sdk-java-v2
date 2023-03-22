@@ -29,6 +29,8 @@ public class AssetChangeValueBuilder implements Builder<AssetChangeValue> {
 
     /**
      *
+     * @param id
+     * @return Builder
      */
 
     public AssetChangeValueBuilder id(final String id) {
@@ -38,6 +40,7 @@ public class AssetChangeValueBuilder implements Builder<AssetChangeValue> {
 
     /**
      *
+     * @return Builder
      */
 
     public AssetChangeValueBuilder name(
@@ -48,6 +51,8 @@ public class AssetChangeValueBuilder implements Builder<AssetChangeValue> {
 
     /**
      *
+     * @param name
+     * @return Builder
      */
 
     public AssetChangeValueBuilder name(final com.commercetools.history.models.common.LocalizedString name) {

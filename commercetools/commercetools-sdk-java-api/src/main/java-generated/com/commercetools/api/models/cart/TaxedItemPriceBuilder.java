@@ -34,6 +34,7 @@ public class TaxedItemPriceBuilder implements Builder<TaxedItemPrice> {
 
     /**
      *  <p>Total net amount of the Line Item or Custom Line Item.</p>
+     * @return Builder
      */
 
     public TaxedItemPriceBuilder totalNet(
@@ -44,6 +45,8 @@ public class TaxedItemPriceBuilder implements Builder<TaxedItemPrice> {
 
     /**
      *  <p>Total net amount of the Line Item or Custom Line Item.</p>
+     * @param totalNet
+     * @return Builder
      */
 
     public TaxedItemPriceBuilder totalNet(final com.commercetools.api.models.common.CentPrecisionMoney totalNet) {
@@ -53,6 +56,7 @@ public class TaxedItemPriceBuilder implements Builder<TaxedItemPrice> {
 
     /**
      *  <p>Total gross amount of the Line Item or Custom Line Item.</p>
+     * @return Builder
      */
 
     public TaxedItemPriceBuilder totalGross(
@@ -63,6 +67,8 @@ public class TaxedItemPriceBuilder implements Builder<TaxedItemPrice> {
 
     /**
      *  <p>Total gross amount of the Line Item or Custom Line Item.</p>
+     * @param totalGross
+     * @return Builder
      */
 
     public TaxedItemPriceBuilder totalGross(final com.commercetools.api.models.common.CentPrecisionMoney totalGross) {
@@ -72,6 +78,7 @@ public class TaxedItemPriceBuilder implements Builder<TaxedItemPrice> {
 
     /**
      *  <p>Total tax applicable for the Line Item or Custom Line Item. Automatically calculated as the difference between the <code>totalGross</code> and <code>totalNet</code> values.</p>
+     * @return Builder
      */
 
     public TaxedItemPriceBuilder totalTax(
@@ -82,6 +89,8 @@ public class TaxedItemPriceBuilder implements Builder<TaxedItemPrice> {
 
     /**
      *  <p>Total tax applicable for the Line Item or Custom Line Item. Automatically calculated as the difference between the <code>totalGross</code> and <code>totalNet</code> values.</p>
+     * @param totalTax
+     * @return Builder
      */
 
     public TaxedItemPriceBuilder totalTax(

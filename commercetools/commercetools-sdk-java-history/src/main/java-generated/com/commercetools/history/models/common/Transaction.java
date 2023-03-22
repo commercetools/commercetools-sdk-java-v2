@@ -37,6 +37,7 @@ public interface Transaction {
 
     /**
      *  <p>Unique identifier of the Transaction.</p>
+     * @return id
      */
     @NotNull
     @JsonProperty("id")
@@ -44,6 +45,7 @@ public interface Transaction {
 
     /**
      *  <p>Time at which the transaction took place.</p>
+     * @return timestamp
      */
     @NotNull
     @JsonProperty("timestamp")
@@ -51,6 +53,7 @@ public interface Transaction {
 
     /**
      *
+     * @return type
      */
     @NotNull
     @JsonProperty("type")
@@ -58,6 +61,7 @@ public interface Transaction {
 
     /**
      *
+     * @return amount
      */
     @NotNull
     @Valid
@@ -66,6 +70,7 @@ public interface Transaction {
 
     /**
      *  <p>Identifier used by the interface that manages the transaction (usually the PSP). If a matching interaction was logged in the <code>interfaceInteractions</code> array, the corresponding interaction should be findable with this ID.</p>
+     * @return interactionId
      */
     @NotNull
     @JsonProperty("interactionId")
@@ -73,6 +78,7 @@ public interface Transaction {
 
     /**
      *
+     * @return state
      */
     @NotNull
     @JsonProperty("state")

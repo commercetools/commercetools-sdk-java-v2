@@ -40,6 +40,7 @@ public interface ReturnInfoSetMessage extends OrderMessage {
 
     /**
      *  <p>The ReturnInfo that was set on the Order or Order Edit.</p>
+     * @return returnInfo
      */
     @Valid
     @JsonProperty("returnInfo")

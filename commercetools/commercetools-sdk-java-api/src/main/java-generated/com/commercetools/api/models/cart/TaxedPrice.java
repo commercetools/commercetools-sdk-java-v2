@@ -35,6 +35,7 @@ public interface TaxedPrice {
 
     /**
      *  <p>Total net price of the Cart or Order.</p>
+     * @return totalNet
      */
     @NotNull
     @Valid
@@ -43,6 +44,7 @@ public interface TaxedPrice {
 
     /**
      *  <p>Total gross price of the Cart or Order.</p>
+     * @return totalGross
      */
     @NotNull
     @Valid
@@ -52,6 +54,7 @@ public interface TaxedPrice {
     /**
      *  <p>Taxable portions added to the total net price.</p>
      *  <p>Calculated from the TaxRates.</p>
+     * @return taxPortions
      */
     @NotNull
     @Valid
@@ -61,6 +64,7 @@ public interface TaxedPrice {
     /**
      *  <p>Total tax applicable for the Cart or Order.</p>
      *  <p>Automatically calculated as the difference between the <code>totalGross</code> and <code>totalNet</code> values.</p>
+     * @return totalTax
      */
     @Valid
     @JsonProperty("totalTax")

@@ -27,6 +27,8 @@ public class CustomerSetCustomerNumberActionBuilder implements Builder<CustomerS
 
     /**
      *  <p>Value to set. Once set, it cannot be changed.</p>
+     * @param customerNumber
+     * @return Builder
      */
 
     public CustomerSetCustomerNumberActionBuilder customerNumber(@Nullable final String customerNumber) {

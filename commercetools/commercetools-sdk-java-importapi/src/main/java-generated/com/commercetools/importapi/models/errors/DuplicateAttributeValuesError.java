@@ -36,6 +36,7 @@ public interface DuplicateAttributeValuesError extends ErrorObject {
 
     /**
      *
+     * @return attributes
      */
     @NotNull
     @Valid

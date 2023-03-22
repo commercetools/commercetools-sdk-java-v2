@@ -33,6 +33,7 @@ public interface StandalonePriceSetDiscountedPriceAction extends StandalonePrice
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
+     * @return discounted
      */
     @Valid
     @JsonProperty("discounted")

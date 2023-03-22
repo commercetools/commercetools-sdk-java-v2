@@ -35,6 +35,7 @@ public interface ShippingRate {
 
     /**
      *
+     * @return price
      */
     @NotNull
     @Valid
@@ -43,6 +44,7 @@ public interface ShippingRate {
 
     /**
      *
+     * @return freeAbove
      */
     @NotNull
     @Valid
@@ -51,6 +53,7 @@ public interface ShippingRate {
 
     /**
      *  <p>Only appears in response to requests for ShippingMethods by Cart or location to mark this shipping rate as one that matches the Cart or location.</p>
+     * @return isMatching
      */
     @NotNull
     @JsonProperty("isMatching")
@@ -58,6 +61,7 @@ public interface ShippingRate {
 
     /**
      *
+     * @return tiers
      */
     @NotNull
     @Valid

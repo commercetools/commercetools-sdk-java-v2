@@ -33,6 +33,7 @@ public interface BooleanSetAttribute extends Attribute {
 
     /**
      *
+     * @return value
      */
     @NotNull
     @JsonProperty("value")

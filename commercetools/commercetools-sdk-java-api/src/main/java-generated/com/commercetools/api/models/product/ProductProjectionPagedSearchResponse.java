@@ -37,6 +37,7 @@ public interface ProductProjectionPagedSearchResponse
 
     /**
      *  <p>Number of results requested.</p>
+     * @return limit
      */
     @NotNull
     @JsonProperty("limit")
@@ -44,6 +45,7 @@ public interface ProductProjectionPagedSearchResponse
 
     /**
      *
+     * @return count
      */
     @NotNull
     @JsonProperty("count")
@@ -51,6 +53,7 @@ public interface ProductProjectionPagedSearchResponse
 
     /**
      *
+     * @return total
      */
 
     @JsonProperty("total")
@@ -58,6 +61,7 @@ public interface ProductProjectionPagedSearchResponse
 
     /**
      *  <p>Number of elements skipped.</p>
+     * @return offset
      */
     @NotNull
     @JsonProperty("offset")
@@ -65,6 +69,7 @@ public interface ProductProjectionPagedSearchResponse
 
     /**
      *
+     * @return results
      */
     @NotNull
     @Valid
@@ -73,6 +78,7 @@ public interface ProductProjectionPagedSearchResponse
 
     /**
      *
+     * @return facets
      */
     @NotNull
     @Valid

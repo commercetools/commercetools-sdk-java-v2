@@ -59,6 +59,7 @@ public interface BusinessUnitUpdateAction
 
     /**
      *
+     * @return action
      */
     @NotNull
     @JsonProperty("action")

@@ -32,6 +32,8 @@ public class UpdateSyncInfoChangeBuilder implements Builder<UpdateSyncInfoChange
 
     /**
      *  <p>Update action for <code>updateSyncInfo</code></p>
+     * @param change
+     * @return Builder
      */
 
     public UpdateSyncInfoChangeBuilder change(final String change) {
@@ -41,6 +43,8 @@ public class UpdateSyncInfoChangeBuilder implements Builder<UpdateSyncInfoChange
 
     /**
      *
+     * @param channelId
+     * @return Builder
      */
 
     public UpdateSyncInfoChangeBuilder channelId(final String channelId) {
@@ -50,6 +54,7 @@ public class UpdateSyncInfoChangeBuilder implements Builder<UpdateSyncInfoChange
 
     /**
      *
+     * @return Builder
      */
 
     public UpdateSyncInfoChangeBuilder nextValue(
@@ -60,6 +65,8 @@ public class UpdateSyncInfoChangeBuilder implements Builder<UpdateSyncInfoChange
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public UpdateSyncInfoChangeBuilder nextValue(final com.commercetools.history.models.common.SyncInfo nextValue) {

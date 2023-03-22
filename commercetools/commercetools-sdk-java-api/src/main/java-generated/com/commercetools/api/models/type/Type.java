@@ -46,6 +46,7 @@ public interface Type extends BaseResource, TypeMixin, com.commercetools.api.mod
 
     /**
      *  <p>Unique identifier of the Type.</p>
+     * @return id
      */
     @NotNull
     @JsonProperty("id")
@@ -53,6 +54,7 @@ public interface Type extends BaseResource, TypeMixin, com.commercetools.api.mod
 
     /**
      *  <p>Current version of the Type.</p>
+     * @return version
      */
     @NotNull
     @JsonProperty("version")
@@ -60,6 +62,7 @@ public interface Type extends BaseResource, TypeMixin, com.commercetools.api.mod
 
     /**
      *  <p>Date and time (UTC) the Type was initially created.</p>
+     * @return createdAt
      */
     @NotNull
     @JsonProperty("createdAt")
@@ -67,6 +70,7 @@ public interface Type extends BaseResource, TypeMixin, com.commercetools.api.mod
 
     /**
      *  <p>Date and time (UTC) the Type was last updated.</p>
+     * @return lastModifiedAt
      */
     @NotNull
     @JsonProperty("lastModifiedAt")
@@ -74,6 +78,7 @@ public interface Type extends BaseResource, TypeMixin, com.commercetools.api.mod
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @return lastModifiedBy
      */
     @Valid
     @JsonProperty("lastModifiedBy")
@@ -81,6 +86,7 @@ public interface Type extends BaseResource, TypeMixin, com.commercetools.api.mod
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @return createdBy
      */
     @Valid
     @JsonProperty("createdBy")
@@ -88,6 +94,7 @@ public interface Type extends BaseResource, TypeMixin, com.commercetools.api.mod
 
     /**
      *  <p>User-defined unique identifier of the Type.</p>
+     * @return key
      */
     @NotNull
     @JsonProperty("key")
@@ -95,6 +102,7 @@ public interface Type extends BaseResource, TypeMixin, com.commercetools.api.mod
 
     /**
      *  <p>Name of the Type.</p>
+     * @return name
      */
     @NotNull
     @Valid
@@ -103,6 +111,7 @@ public interface Type extends BaseResource, TypeMixin, com.commercetools.api.mod
 
     /**
      *  <p>Description of the Type.</p>
+     * @return description
      */
     @Valid
     @JsonProperty("description")
@@ -110,6 +119,7 @@ public interface Type extends BaseResource, TypeMixin, com.commercetools.api.mod
 
     /**
      *  <p>Resources and/or data types for which the Type is defined.</p>
+     * @return resourceTypeIds
      */
     @NotNull
     @JsonProperty("resourceTypeIds")
@@ -117,6 +127,7 @@ public interface Type extends BaseResource, TypeMixin, com.commercetools.api.mod
 
     /**
      *  <p>Defines Custom Fields.</p>
+     * @return fieldDefinitions
      */
     @NotNull
     @Valid

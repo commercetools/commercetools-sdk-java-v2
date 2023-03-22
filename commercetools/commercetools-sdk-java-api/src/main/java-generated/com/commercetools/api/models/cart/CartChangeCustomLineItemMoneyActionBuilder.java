@@ -29,6 +29,8 @@ public class CartChangeCustomLineItemMoneyActionBuilder implements Builder<CartC
 
     /**
      *  <p><code>id</code> of the CustomLineItem to update.</p>
+     * @param customLineItemId
+     * @return Builder
      */
 
     public CartChangeCustomLineItemMoneyActionBuilder customLineItemId(final String customLineItemId) {
@@ -38,6 +40,7 @@ public class CartChangeCustomLineItemMoneyActionBuilder implements Builder<CartC
 
     /**
      *  <p>Value to set. Must not be empty. Can be a negative amount.</p>
+     * @return Builder
      */
 
     public CartChangeCustomLineItemMoneyActionBuilder money(
@@ -48,6 +51,8 @@ public class CartChangeCustomLineItemMoneyActionBuilder implements Builder<CartC
 
     /**
      *  <p>Value to set. Must not be empty. Can be a negative amount.</p>
+     * @param money
+     * @return Builder
      */
 
     public CartChangeCustomLineItemMoneyActionBuilder money(final com.commercetools.api.models.common.Money money) {

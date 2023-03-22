@@ -29,6 +29,8 @@ public class ResultItemBuilder implements Builder<ResultItem> {
 
     /**
      *  <p>The URL of the image.</p>
+     * @param imageUrl
+     * @return Builder
      */
 
     public ResultItemBuilder imageUrl(final String imageUrl) {
@@ -38,6 +40,8 @@ public class ResultItemBuilder implements Builder<ResultItem> {
 
     /**
      *  <p>An array of product variants containing the image URL.</p>
+     * @param productVariants
+     * @return Builder
      */
 
     public ResultItemBuilder productVariants(
@@ -48,6 +52,8 @@ public class ResultItemBuilder implements Builder<ResultItem> {
 
     /**
      *  <p>An array of product variants containing the image URL.</p>
+     * @param productVariants
+     * @return Builder
      */
 
     public ResultItemBuilder productVariants(
@@ -58,6 +64,8 @@ public class ResultItemBuilder implements Builder<ResultItem> {
 
     /**
      *  <p>An array of product variants containing the image URL.</p>
+     * @param productVariants
+     * @return Builder
      */
 
     public ResultItemBuilder plusProductVariants(
@@ -71,6 +79,7 @@ public class ResultItemBuilder implements Builder<ResultItem> {
 
     /**
      *  <p>An array of product variants containing the image URL.</p>
+     * @return Builder
      */
 
     public ResultItemBuilder plusProductVariants(
@@ -84,6 +93,7 @@ public class ResultItemBuilder implements Builder<ResultItem> {
 
     /**
      *  <p>An array of product variants containing the image URL.</p>
+     * @return Builder
      */
 
     public ResultItemBuilder withProductVariants(

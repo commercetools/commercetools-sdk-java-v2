@@ -67,6 +67,8 @@ public class StateBuilder implements Builder<State> {
 
     /**
      *  <p>Unique identifier of the State.</p>
+     * @param id
+     * @return Builder
      */
 
     public StateBuilder id(final String id) {
@@ -76,6 +78,8 @@ public class StateBuilder implements Builder<State> {
 
     /**
      *  <p>Current version of the State.</p>
+     * @param version
+     * @return Builder
      */
 
     public StateBuilder version(final Long version) {
@@ -85,6 +89,8 @@ public class StateBuilder implements Builder<State> {
 
     /**
      *  <p>Date and time (UTC) the State was initially created.</p>
+     * @param createdAt
+     * @return Builder
      */
 
     public StateBuilder createdAt(final java.time.ZonedDateTime createdAt) {
@@ -94,6 +100,8 @@ public class StateBuilder implements Builder<State> {
 
     /**
      *  <p>Date and time (UTC) the State was last updated.</p>
+     * @param lastModifiedAt
+     * @return Builder
      */
 
     public StateBuilder lastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {
@@ -103,6 +111,7 @@ public class StateBuilder implements Builder<State> {
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @return Builder
      */
 
     public StateBuilder lastModifiedBy(
@@ -113,6 +122,8 @@ public class StateBuilder implements Builder<State> {
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param lastModifiedBy
+     * @return Builder
      */
 
     public StateBuilder lastModifiedBy(
@@ -123,6 +134,7 @@ public class StateBuilder implements Builder<State> {
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @return Builder
      */
 
     public StateBuilder createdBy(
@@ -133,6 +145,8 @@ public class StateBuilder implements Builder<State> {
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param createdBy
+     * @return Builder
      */
 
     public StateBuilder createdBy(@Nullable final com.commercetools.api.models.common.CreatedBy createdBy) {
@@ -142,6 +156,8 @@ public class StateBuilder implements Builder<State> {
 
     /**
      *  <p>User-defined unique identifier of the State.</p>
+     * @param key
+     * @return Builder
      */
 
     public StateBuilder key(final String key) {
@@ -151,6 +167,8 @@ public class StateBuilder implements Builder<State> {
 
     /**
      *  <p>Indicates to which resource or object types the State is assigned to.</p>
+     * @param type
+     * @return Builder
      */
 
     public StateBuilder type(final com.commercetools.api.models.state.StateTypeEnum type) {
@@ -160,6 +178,7 @@ public class StateBuilder implements Builder<State> {
 
     /**
      *  <p>Name of the State.</p>
+     * @return Builder
      */
 
     public StateBuilder name(
@@ -170,6 +189,8 @@ public class StateBuilder implements Builder<State> {
 
     /**
      *  <p>Name of the State.</p>
+     * @param name
+     * @return Builder
      */
 
     public StateBuilder name(@Nullable final com.commercetools.api.models.common.LocalizedString name) {
@@ -179,6 +200,7 @@ public class StateBuilder implements Builder<State> {
 
     /**
      *  <p>Description of the State.</p>
+     * @return Builder
      */
 
     public StateBuilder description(
@@ -189,6 +211,8 @@ public class StateBuilder implements Builder<State> {
 
     /**
      *  <p>Description of the State.</p>
+     * @param description
+     * @return Builder
      */
 
     public StateBuilder description(@Nullable final com.commercetools.api.models.common.LocalizedString description) {
@@ -198,6 +222,8 @@ public class StateBuilder implements Builder<State> {
 
     /**
      *  <p><code>true</code> for an initial State, the first State in a workflow.</p>
+     * @param initial
+     * @return Builder
      */
 
     public StateBuilder initial(final Boolean initial) {
@@ -207,6 +233,8 @@ public class StateBuilder implements Builder<State> {
 
     /**
      *  <p><code>true</code> for States that are an integral part of the Project. Those States cannot be deleted and their <code>key</code> cannot be changed.</p>
+     * @param builtIn
+     * @return Builder
      */
 
     public StateBuilder builtIn(final Boolean builtIn) {
@@ -216,6 +244,8 @@ public class StateBuilder implements Builder<State> {
 
     /**
      *  <p>Roles the State can fulfill for Reviews and Line Items.</p>
+     * @param roles
+     * @return Builder
      */
 
     public StateBuilder roles(@Nullable final com.commercetools.api.models.state.StateRoleEnum... roles) {
@@ -225,6 +255,8 @@ public class StateBuilder implements Builder<State> {
 
     /**
      *  <p>Roles the State can fulfill for Reviews and Line Items.</p>
+     * @param roles
+     * @return Builder
      */
 
     public StateBuilder roles(@Nullable final java.util.List<com.commercetools.api.models.state.StateRoleEnum> roles) {
@@ -234,6 +266,8 @@ public class StateBuilder implements Builder<State> {
 
     /**
      *  <p>Roles the State can fulfill for Reviews and Line Items.</p>
+     * @param roles
+     * @return Builder
      */
 
     public StateBuilder plusRoles(@Nullable final com.commercetools.api.models.state.StateRoleEnum... roles) {
@@ -250,6 +284,8 @@ public class StateBuilder implements Builder<State> {
      *   <li>if empty, no transitions are allowed from the current State, defining the current State as final for this workflow.</li>
      *   <li>if not set, the validation is turned off and the current State can be transitioned to any other State of the same <code>type</code> as the current State.</li>
      *  </ul>
+     * @param transitions
+     * @return Builder
      */
 
     public StateBuilder transitions(@Nullable final com.commercetools.api.models.state.StateReference... transitions) {
@@ -263,6 +299,8 @@ public class StateBuilder implements Builder<State> {
      *   <li>if empty, no transitions are allowed from the current State, defining the current State as final for this workflow.</li>
      *   <li>if not set, the validation is turned off and the current State can be transitioned to any other State of the same <code>type</code> as the current State.</li>
      *  </ul>
+     * @param transitions
+     * @return Builder
      */
 
     public StateBuilder transitions(
@@ -277,6 +315,8 @@ public class StateBuilder implements Builder<State> {
      *   <li>if empty, no transitions are allowed from the current State, defining the current State as final for this workflow.</li>
      *   <li>if not set, the validation is turned off and the current State can be transitioned to any other State of the same <code>type</code> as the current State.</li>
      *  </ul>
+     * @param transitions
+     * @return Builder
      */
 
     public StateBuilder plusTransitions(
@@ -294,6 +334,7 @@ public class StateBuilder implements Builder<State> {
      *   <li>if empty, no transitions are allowed from the current State, defining the current State as final for this workflow.</li>
      *   <li>if not set, the validation is turned off and the current State can be transitioned to any other State of the same <code>type</code> as the current State.</li>
      *  </ul>
+     * @return Builder
      */
 
     public StateBuilder plusTransitions(
@@ -311,6 +352,7 @@ public class StateBuilder implements Builder<State> {
      *   <li>if empty, no transitions are allowed from the current State, defining the current State as final for this workflow.</li>
      *   <li>if not set, the validation is turned off and the current State can be transitioned to any other State of the same <code>type</code> as the current State.</li>
      *  </ul>
+     * @return Builder
      */
 
     public StateBuilder withTransitions(

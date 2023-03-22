@@ -49,6 +49,8 @@ public class MyPaymentBuilder implements Builder<MyPayment> {
 
     /**
      *  <p>Unique identifier of the Payment.</p>
+     * @param id
+     * @return Builder
      */
 
     public MyPaymentBuilder id(final String id) {
@@ -58,6 +60,8 @@ public class MyPaymentBuilder implements Builder<MyPayment> {
 
     /**
      *  <p>Current version of the Payment.</p>
+     * @param version
+     * @return Builder
      */
 
     public MyPaymentBuilder version(final Long version) {
@@ -67,6 +71,7 @@ public class MyPaymentBuilder implements Builder<MyPayment> {
 
     /**
      *  <p>Reference to a Customer associated with the Payment. Set automatically with a password flow token. Either <code>customer</code> or <code>anonymousId</code> is present.</p>
+     * @return Builder
      */
 
     public MyPaymentBuilder customer(
@@ -77,6 +82,8 @@ public class MyPaymentBuilder implements Builder<MyPayment> {
 
     /**
      *  <p>Reference to a Customer associated with the Payment. Set automatically with a password flow token. Either <code>customer</code> or <code>anonymousId</code> is present.</p>
+     * @param customer
+     * @return Builder
      */
 
     public MyPaymentBuilder customer(@Nullable final com.commercetools.api.models.customer.CustomerReference customer) {
@@ -86,6 +93,8 @@ public class MyPaymentBuilder implements Builder<MyPayment> {
 
     /**
      *  <p>Anonymous session associated with the Payment. Set automatically with a token for an anonymous session. Either <code>customer</code> or <code>anonymousId</code> is present.</p>
+     * @param anonymousId
+     * @return Builder
      */
 
     public MyPaymentBuilder anonymousId(@Nullable final String anonymousId) {
@@ -95,6 +104,7 @@ public class MyPaymentBuilder implements Builder<MyPayment> {
 
     /**
      *  <p>Money value the Payment intends to receive from the customer. The value typically matches the Cart or Order gross total.</p>
+     * @return Builder
      */
 
     public MyPaymentBuilder amountPlanned(
@@ -105,6 +115,8 @@ public class MyPaymentBuilder implements Builder<MyPayment> {
 
     /**
      *  <p>Money value the Payment intends to receive from the customer. The value typically matches the Cart or Order gross total.</p>
+     * @param amountPlanned
+     * @return Builder
      */
 
     public MyPaymentBuilder amountPlanned(final com.commercetools.api.models.common.CentPrecisionMoney amountPlanned) {
@@ -114,6 +126,7 @@ public class MyPaymentBuilder implements Builder<MyPayment> {
 
     /**
      *  <p>Information regarding the payment interface (for example, a PSP), and the specific payment method used.</p>
+     * @return Builder
      */
 
     public MyPaymentBuilder paymentMethodInfo(
@@ -125,6 +138,8 @@ public class MyPaymentBuilder implements Builder<MyPayment> {
 
     /**
      *  <p>Information regarding the payment interface (for example, a PSP), and the specific payment method used.</p>
+     * @param paymentMethodInfo
+     * @return Builder
      */
 
     public MyPaymentBuilder paymentMethodInfo(
@@ -135,6 +150,8 @@ public class MyPaymentBuilder implements Builder<MyPayment> {
 
     /**
      *  <p>Financial transactions of the Payment. Each Transaction has a TransactionType and a TransactionState.</p>
+     * @param transactions
+     * @return Builder
      */
 
     public MyPaymentBuilder transactions(final com.commercetools.api.models.payment.Transaction... transactions) {
@@ -144,6 +161,8 @@ public class MyPaymentBuilder implements Builder<MyPayment> {
 
     /**
      *  <p>Financial transactions of the Payment. Each Transaction has a TransactionType and a TransactionState.</p>
+     * @param transactions
+     * @return Builder
      */
 
     public MyPaymentBuilder transactions(
@@ -154,6 +173,8 @@ public class MyPaymentBuilder implements Builder<MyPayment> {
 
     /**
      *  <p>Financial transactions of the Payment. Each Transaction has a TransactionType and a TransactionState.</p>
+     * @param transactions
+     * @return Builder
      */
 
     public MyPaymentBuilder plusTransactions(final com.commercetools.api.models.payment.Transaction... transactions) {
@@ -166,6 +187,7 @@ public class MyPaymentBuilder implements Builder<MyPayment> {
 
     /**
      *  <p>Financial transactions of the Payment. Each Transaction has a TransactionType and a TransactionState.</p>
+     * @return Builder
      */
 
     public MyPaymentBuilder plusTransactions(
@@ -179,6 +201,7 @@ public class MyPaymentBuilder implements Builder<MyPayment> {
 
     /**
      *  <p>Financial transactions of the Payment. Each Transaction has a TransactionType and a TransactionState.</p>
+     * @return Builder
      */
 
     public MyPaymentBuilder withTransactions(
@@ -190,6 +213,7 @@ public class MyPaymentBuilder implements Builder<MyPayment> {
 
     /**
      *  <p>Custom Fields defined for the Payment.</p>
+     * @return Builder
      */
 
     public MyPaymentBuilder custom(
@@ -200,6 +224,8 @@ public class MyPaymentBuilder implements Builder<MyPayment> {
 
     /**
      *  <p>Custom Fields defined for the Payment.</p>
+     * @param custom
+     * @return Builder
      */
 
     public MyPaymentBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFields custom) {

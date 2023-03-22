@@ -67,6 +67,8 @@ public class StoreBuilder implements Builder<Store> {
 
     /**
      *  <p>Unique ID of the Store.</p>
+     * @param id
+     * @return Builder
      */
 
     public StoreBuilder id(final String id) {
@@ -76,6 +78,8 @@ public class StoreBuilder implements Builder<Store> {
 
     /**
      *  <p>Current version of the Store.</p>
+     * @param version
+     * @return Builder
      */
 
     public StoreBuilder version(final Long version) {
@@ -85,6 +89,8 @@ public class StoreBuilder implements Builder<Store> {
 
     /**
      *  <p>Date and time (UTC) the Store was initially created.</p>
+     * @param createdAt
+     * @return Builder
      */
 
     public StoreBuilder createdAt(final java.time.ZonedDateTime createdAt) {
@@ -94,6 +100,8 @@ public class StoreBuilder implements Builder<Store> {
 
     /**
      *  <p>Date and time (UTC) the Store was last updated.</p>
+     * @param lastModifiedAt
+     * @return Builder
      */
 
     public StoreBuilder lastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {
@@ -103,6 +111,7 @@ public class StoreBuilder implements Builder<Store> {
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @return Builder
      */
 
     public StoreBuilder lastModifiedBy(
@@ -113,6 +122,8 @@ public class StoreBuilder implements Builder<Store> {
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param lastModifiedBy
+     * @return Builder
      */
 
     public StoreBuilder lastModifiedBy(
@@ -123,6 +134,7 @@ public class StoreBuilder implements Builder<Store> {
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @return Builder
      */
 
     public StoreBuilder createdBy(
@@ -133,6 +145,8 @@ public class StoreBuilder implements Builder<Store> {
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param createdBy
+     * @return Builder
      */
 
     public StoreBuilder createdBy(@Nullable final com.commercetools.api.models.common.CreatedBy createdBy) {
@@ -142,6 +156,8 @@ public class StoreBuilder implements Builder<Store> {
 
     /**
      *  <p>User-defined unique and immutable identifier for the Store.</p>
+     * @param key
+     * @return Builder
      */
 
     public StoreBuilder key(final String key) {
@@ -151,6 +167,7 @@ public class StoreBuilder implements Builder<Store> {
 
     /**
      *  <p>Name of the Store.</p>
+     * @return Builder
      */
 
     public StoreBuilder name(
@@ -161,6 +178,8 @@ public class StoreBuilder implements Builder<Store> {
 
     /**
      *  <p>Name of the Store.</p>
+     * @param name
+     * @return Builder
      */
 
     public StoreBuilder name(@Nullable final com.commercetools.api.models.common.LocalizedString name) {
@@ -170,6 +189,8 @@ public class StoreBuilder implements Builder<Store> {
 
     /**
      *  <p>Languages configured for the Store.</p>
+     * @param languages
+     * @return Builder
      */
 
     public StoreBuilder languages(final String... languages) {
@@ -179,6 +200,8 @@ public class StoreBuilder implements Builder<Store> {
 
     /**
      *  <p>Languages configured for the Store.</p>
+     * @param languages
+     * @return Builder
      */
 
     public StoreBuilder languages(final java.util.List<String> languages) {
@@ -188,6 +211,8 @@ public class StoreBuilder implements Builder<Store> {
 
     /**
      *  <p>Languages configured for the Store.</p>
+     * @param languages
+     * @return Builder
      */
 
     public StoreBuilder plusLanguages(final String... languages) {
@@ -200,6 +225,8 @@ public class StoreBuilder implements Builder<Store> {
 
     /**
      *  <p>Countries defined for the Store.</p>
+     * @param countries
+     * @return Builder
      */
 
     public StoreBuilder countries(final com.commercetools.api.models.store_country.StoreCountry... countries) {
@@ -209,6 +236,8 @@ public class StoreBuilder implements Builder<Store> {
 
     /**
      *  <p>Countries defined for the Store.</p>
+     * @param countries
+     * @return Builder
      */
 
     public StoreBuilder countries(
@@ -219,6 +248,8 @@ public class StoreBuilder implements Builder<Store> {
 
     /**
      *  <p>Countries defined for the Store.</p>
+     * @param countries
+     * @return Builder
      */
 
     public StoreBuilder plusCountries(final com.commercetools.api.models.store_country.StoreCountry... countries) {
@@ -231,6 +262,7 @@ public class StoreBuilder implements Builder<Store> {
 
     /**
      *  <p>Countries defined for the Store.</p>
+     * @return Builder
      */
 
     public StoreBuilder plusCountries(
@@ -244,6 +276,7 @@ public class StoreBuilder implements Builder<Store> {
 
     /**
      *  <p>Countries defined for the Store.</p>
+     * @return Builder
      */
 
     public StoreBuilder withCountries(
@@ -255,6 +288,8 @@ public class StoreBuilder implements Builder<Store> {
 
     /**
      *  <p>Product Distribution Channels allowed for the Store.</p>
+     * @param distributionChannels
+     * @return Builder
      */
 
     public StoreBuilder distributionChannels(
@@ -265,6 +300,8 @@ public class StoreBuilder implements Builder<Store> {
 
     /**
      *  <p>Product Distribution Channels allowed for the Store.</p>
+     * @param distributionChannels
+     * @return Builder
      */
 
     public StoreBuilder distributionChannels(
@@ -275,6 +312,8 @@ public class StoreBuilder implements Builder<Store> {
 
     /**
      *  <p>Product Distribution Channels allowed for the Store.</p>
+     * @param distributionChannels
+     * @return Builder
      */
 
     public StoreBuilder plusDistributionChannels(
@@ -288,6 +327,7 @@ public class StoreBuilder implements Builder<Store> {
 
     /**
      *  <p>Product Distribution Channels allowed for the Store.</p>
+     * @return Builder
      */
 
     public StoreBuilder plusDistributionChannels(
@@ -302,6 +342,7 @@ public class StoreBuilder implements Builder<Store> {
 
     /**
      *  <p>Product Distribution Channels allowed for the Store.</p>
+     * @return Builder
      */
 
     public StoreBuilder withDistributionChannels(
@@ -314,6 +355,8 @@ public class StoreBuilder implements Builder<Store> {
 
     /**
      *  <p>Inventory Supply Channels allowed for the Store.</p>
+     * @param supplyChannels
+     * @return Builder
      */
 
     public StoreBuilder supplyChannels(final com.commercetools.api.models.channel.ChannelReference... supplyChannels) {
@@ -323,6 +366,8 @@ public class StoreBuilder implements Builder<Store> {
 
     /**
      *  <p>Inventory Supply Channels allowed for the Store.</p>
+     * @param supplyChannels
+     * @return Builder
      */
 
     public StoreBuilder supplyChannels(
@@ -333,6 +378,8 @@ public class StoreBuilder implements Builder<Store> {
 
     /**
      *  <p>Inventory Supply Channels allowed for the Store.</p>
+     * @param supplyChannels
+     * @return Builder
      */
 
     public StoreBuilder plusSupplyChannels(
@@ -346,6 +393,7 @@ public class StoreBuilder implements Builder<Store> {
 
     /**
      *  <p>Inventory Supply Channels allowed for the Store.</p>
+     * @return Builder
      */
 
     public StoreBuilder plusSupplyChannels(
@@ -360,6 +408,7 @@ public class StoreBuilder implements Builder<Store> {
 
     /**
      *  <p>Inventory Supply Channels allowed for the Store.</p>
+     * @return Builder
      */
 
     public StoreBuilder withSupplyChannels(
@@ -378,6 +427,8 @@ public class StoreBuilder implements Builder<Store> {
      *   <li>If all the Product Selections provided are <code>inactive</code> and there's at least a Product Selection of type <code>individual</code>, no Product is availlable in this Store.</li>
      *   <li>If at least an <code>active</code> Product Selection is provided, only <code>active</code> Product Selections are considered to compute the availlability in this Store.</li>
      *  </ul>
+     * @param productSelections
+     * @return Builder
      */
 
     public StoreBuilder productSelections(
@@ -394,6 +445,8 @@ public class StoreBuilder implements Builder<Store> {
      *   <li>If all the Product Selections provided are <code>inactive</code> and there's at least a Product Selection of type <code>individual</code>, no Product is availlable in this Store.</li>
      *   <li>If at least an <code>active</code> Product Selection is provided, only <code>active</code> Product Selections are considered to compute the availlability in this Store.</li>
      *  </ul>
+     * @param productSelections
+     * @return Builder
      */
 
     public StoreBuilder productSelections(
@@ -410,6 +463,8 @@ public class StoreBuilder implements Builder<Store> {
      *   <li>If all the Product Selections provided are <code>inactive</code> and there's at least a Product Selection of type <code>individual</code>, no Product is availlable in this Store.</li>
      *   <li>If at least an <code>active</code> Product Selection is provided, only <code>active</code> Product Selections are considered to compute the availlability in this Store.</li>
      *  </ul>
+     * @param productSelections
+     * @return Builder
      */
 
     public StoreBuilder plusProductSelections(
@@ -429,6 +484,7 @@ public class StoreBuilder implements Builder<Store> {
      *   <li>If all the Product Selections provided are <code>inactive</code> and there's at least a Product Selection of type <code>individual</code>, no Product is availlable in this Store.</li>
      *   <li>If at least an <code>active</code> Product Selection is provided, only <code>active</code> Product Selections are considered to compute the availlability in this Store.</li>
      *  </ul>
+     * @return Builder
      */
 
     public StoreBuilder plusProductSelections(
@@ -449,6 +505,7 @@ public class StoreBuilder implements Builder<Store> {
      *   <li>If all the Product Selections provided are <code>inactive</code> and there's at least a Product Selection of type <code>individual</code>, no Product is availlable in this Store.</li>
      *   <li>If at least an <code>active</code> Product Selection is provided, only <code>active</code> Product Selections are considered to compute the availlability in this Store.</li>
      *  </ul>
+     * @return Builder
      */
 
     public StoreBuilder withProductSelections(
@@ -461,6 +518,7 @@ public class StoreBuilder implements Builder<Store> {
 
     /**
      *  <p>Custom fields for the Store.</p>
+     * @return Builder
      */
 
     public StoreBuilder custom(
@@ -471,6 +529,8 @@ public class StoreBuilder implements Builder<Store> {
 
     /**
      *  <p>Custom fields for the Store.</p>
+     * @param custom
+     * @return Builder
      */
 
     public StoreBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFields custom) {

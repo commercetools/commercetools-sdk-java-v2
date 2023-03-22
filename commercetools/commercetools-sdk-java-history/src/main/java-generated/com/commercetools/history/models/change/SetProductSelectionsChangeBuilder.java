@@ -32,6 +32,8 @@ public class SetProductSelectionsChangeBuilder implements Builder<SetProductSele
 
     /**
      *  <p>Update action for <code>setProductSelections</code></p>
+     * @param change
+     * @return Builder
      */
 
     public SetProductSelectionsChangeBuilder change(final String change) {
@@ -41,6 +43,8 @@ public class SetProductSelectionsChangeBuilder implements Builder<SetProductSele
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public SetProductSelectionsChangeBuilder previousValue(
@@ -51,6 +55,8 @@ public class SetProductSelectionsChangeBuilder implements Builder<SetProductSele
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public SetProductSelectionsChangeBuilder previousValue(
@@ -61,6 +67,8 @@ public class SetProductSelectionsChangeBuilder implements Builder<SetProductSele
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public SetProductSelectionsChangeBuilder plusPreviousValue(
@@ -74,6 +82,7 @@ public class SetProductSelectionsChangeBuilder implements Builder<SetProductSele
 
     /**
      *
+     * @return Builder
      */
 
     public SetProductSelectionsChangeBuilder plusPreviousValue(
@@ -88,6 +97,7 @@ public class SetProductSelectionsChangeBuilder implements Builder<SetProductSele
 
     /**
      *
+     * @return Builder
      */
 
     public SetProductSelectionsChangeBuilder withPreviousValue(
@@ -100,6 +110,8 @@ public class SetProductSelectionsChangeBuilder implements Builder<SetProductSele
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public SetProductSelectionsChangeBuilder nextValue(
@@ -110,6 +122,8 @@ public class SetProductSelectionsChangeBuilder implements Builder<SetProductSele
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public SetProductSelectionsChangeBuilder nextValue(
@@ -120,6 +134,8 @@ public class SetProductSelectionsChangeBuilder implements Builder<SetProductSele
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public SetProductSelectionsChangeBuilder plusNextValue(
@@ -133,6 +149,7 @@ public class SetProductSelectionsChangeBuilder implements Builder<SetProductSele
 
     /**
      *
+     * @return Builder
      */
 
     public SetProductSelectionsChangeBuilder plusNextValue(
@@ -147,6 +164,7 @@ public class SetProductSelectionsChangeBuilder implements Builder<SetProductSele
 
     /**
      *
+     * @return Builder
      */
 
     public SetProductSelectionsChangeBuilder withNextValue(

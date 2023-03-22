@@ -57,6 +57,7 @@ public interface ShoppingListUpdateAction
 
     /**
      *
+     * @return action
      */
     @NotNull
     @JsonProperty("action")

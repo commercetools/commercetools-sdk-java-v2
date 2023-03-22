@@ -31,6 +31,7 @@ public interface StoreResourceIdentifier extends ResourceIdentifier, com.commerc
 
     /**
      *  <p>Unique ID of the referenced Store. Either <code>id</code> or <code>key</code> is required.</p>
+     * @return id
      */
 
     @JsonProperty("id")
@@ -38,6 +39,7 @@ public interface StoreResourceIdentifier extends ResourceIdentifier, com.commerc
 
     /**
      *  <p>Unique key of the referenced Store. Either <code>id</code> or <code>key</code> is required.</p>
+     * @return key
      */
 
     @JsonProperty("key")

@@ -36,6 +36,7 @@ public interface OperationStates {
 
     /**
      *  <p>The number of resources in the <code>processing</code> state.</p>
+     * @return processing
      */
     @NotNull
     @JsonProperty("processing")
@@ -43,6 +44,7 @@ public interface OperationStates {
 
     /**
      *  <p>The number of resources in the <code>validationFailed</code> state.</p>
+     * @return validationFailed
      */
     @NotNull
     @JsonProperty("validationFailed")
@@ -50,6 +52,7 @@ public interface OperationStates {
 
     /**
      *  <p>The number of resources in the <code>unresolved</code> state.</p>
+     * @return unresolved
      */
     @NotNull
     @JsonProperty("unresolved")
@@ -57,6 +60,7 @@ public interface OperationStates {
 
     /**
      *  <p>The number of resources in the <code>waitForMasterVariant</code> state.</p>
+     * @return waitForMasterVariant
      */
     @NotNull
     @JsonProperty("waitForMasterVariant")
@@ -64,6 +68,7 @@ public interface OperationStates {
 
     /**
      *  <p>The number of resources in the <code>imported</code> state.</p>
+     * @return imported
      */
     @NotNull
     @JsonProperty("imported")
@@ -71,6 +76,7 @@ public interface OperationStates {
 
     /**
      *  <p>The number of resources in the <code>rejected</code> state.</p>
+     * @return rejected
      */
     @NotNull
     @JsonProperty("rejected")

@@ -35,6 +35,7 @@ public interface OrderCreatedMessagePayload extends OrderMessagePayload {
 
     /**
      *  <p>Order that was created.</p>
+     * @return order
      */
     @NotNull
     @Valid

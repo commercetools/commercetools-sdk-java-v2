@@ -33,6 +33,7 @@ public interface StringField extends CustomField {
 
     /**
      *
+     * @return value
      */
     @NotNull
     @JsonProperty("value")

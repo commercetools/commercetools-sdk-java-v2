@@ -31,6 +31,7 @@ public interface StateResourceIdentifier extends ResourceIdentifier, com.commerc
 
     /**
      *  <p>Unique identifier of the referenced State. Either <code>id</code> or <code>key</code> is required.</p>
+     * @return id
      */
 
     @JsonProperty("id")
@@ -38,6 +39,7 @@ public interface StateResourceIdentifier extends ResourceIdentifier, com.commerc
 
     /**
      *  <p>User-defined unique identifier of the referenced State. Either <code>id</code> or <code>key</code> is required.</p>
+     * @return key
      */
 
     @JsonProperty("key")

@@ -27,6 +27,8 @@ public class TaxCategorySetKeyActionBuilder implements Builder<TaxCategorySetKey
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
+     * @param key
+     * @return Builder
      */
 
     public TaxCategorySetKeyActionBuilder key(@Nullable final String key) {

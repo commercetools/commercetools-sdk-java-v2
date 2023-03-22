@@ -35,6 +35,7 @@ public interface StagedOrderChangeTaxRoundingModeAction extends StagedOrderUpdat
 
     /**
      *  <p>Determines how monetary values are rounded.</p>
+     * @return taxRoundingMode
      */
     @NotNull
     @JsonProperty("taxRoundingMode")

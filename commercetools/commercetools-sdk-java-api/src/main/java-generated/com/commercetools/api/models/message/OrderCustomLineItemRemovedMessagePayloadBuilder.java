@@ -30,6 +30,8 @@ public class OrderCustomLineItemRemovedMessagePayloadBuilder
 
     /**
      *  <p>Unique identifier of the Custom Line Item.</p>
+     * @param customLineItemId
+     * @return Builder
      */
 
     public OrderCustomLineItemRemovedMessagePayloadBuilder customLineItemId(final String customLineItemId) {
@@ -39,6 +41,7 @@ public class OrderCustomLineItemRemovedMessagePayloadBuilder
 
     /**
      *  <p>Custom Line Item that was removed from the Order.</p>
+     * @return Builder
      */
 
     public OrderCustomLineItemRemovedMessagePayloadBuilder customLineItem(
@@ -49,6 +52,8 @@ public class OrderCustomLineItemRemovedMessagePayloadBuilder
 
     /**
      *  <p>Custom Line Item that was removed from the Order.</p>
+     * @param customLineItem
+     * @return Builder
      */
 
     public OrderCustomLineItemRemovedMessagePayloadBuilder customLineItem(

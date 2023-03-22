@@ -33,6 +33,7 @@ public interface ShippingMethodChangeNameAction extends ShippingMethodUpdateActi
 
     /**
      *  <p>Value to set. Must not be empty.</p>
+     * @return name
      */
     @NotNull
     @JsonProperty("name")

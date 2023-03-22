@@ -27,6 +27,8 @@ public class ShippingMethodDoesNotMatchCartErrorBuilder implements Builder<Shipp
 
     /**
      *  <p><code>"The predicate does not match the cart."</code></p>
+     * @param message
+     * @return Builder
      */
 
     public ShippingMethodDoesNotMatchCartErrorBuilder message(final String message) {

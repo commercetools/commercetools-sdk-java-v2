@@ -35,6 +35,8 @@ public class SetAttributeChangeBuilder implements Builder<SetAttributeChange> {
 
     /**
      *  <p>Update action for <code>setAttribute</code></p>
+     * @param change
+     * @return Builder
      */
 
     public SetAttributeChangeBuilder change(final String change) {
@@ -44,6 +46,8 @@ public class SetAttributeChangeBuilder implements Builder<SetAttributeChange> {
 
     /**
      *
+     * @param catalogData
+     * @return Builder
      */
 
     public SetAttributeChangeBuilder catalogData(final String catalogData) {
@@ -53,6 +57,7 @@ public class SetAttributeChangeBuilder implements Builder<SetAttributeChange> {
 
     /**
      *
+     * @return Builder
      */
 
     public SetAttributeChangeBuilder previousValue(
@@ -64,6 +69,8 @@ public class SetAttributeChangeBuilder implements Builder<SetAttributeChange> {
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public SetAttributeChangeBuilder previousValue(
@@ -74,6 +81,7 @@ public class SetAttributeChangeBuilder implements Builder<SetAttributeChange> {
 
     /**
      *
+     * @return Builder
      */
 
     public SetAttributeChangeBuilder nextValue(
@@ -85,6 +93,8 @@ public class SetAttributeChangeBuilder implements Builder<SetAttributeChange> {
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public SetAttributeChangeBuilder nextValue(

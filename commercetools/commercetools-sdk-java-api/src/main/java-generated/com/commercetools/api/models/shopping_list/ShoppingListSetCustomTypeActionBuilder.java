@@ -31,6 +31,7 @@ public class ShoppingListSetCustomTypeActionBuilder implements Builder<ShoppingL
 
     /**
      *  <p>Defines the Type that extends the ShoppingList with Custom Fields. If absent, any existing Type and Custom Fields are removed from the ShoppingList.</p>
+     * @return Builder
      */
 
     public ShoppingListSetCustomTypeActionBuilder type(
@@ -41,6 +42,8 @@ public class ShoppingListSetCustomTypeActionBuilder implements Builder<ShoppingL
 
     /**
      *  <p>Defines the Type that extends the ShoppingList with Custom Fields. If absent, any existing Type and Custom Fields are removed from the ShoppingList.</p>
+     * @param type
+     * @return Builder
      */
 
     public ShoppingListSetCustomTypeActionBuilder type(
@@ -51,6 +54,7 @@ public class ShoppingListSetCustomTypeActionBuilder implements Builder<ShoppingL
 
     /**
      *  <p>Sets the Custom Fields fields for the ShoppingList.</p>
+     * @return Builder
      */
 
     public ShoppingListSetCustomTypeActionBuilder fields(
@@ -61,6 +65,8 @@ public class ShoppingListSetCustomTypeActionBuilder implements Builder<ShoppingL
 
     /**
      *  <p>Sets the Custom Fields fields for the ShoppingList.</p>
+     * @param fields
+     * @return Builder
      */
 
     public ShoppingListSetCustomTypeActionBuilder fields(

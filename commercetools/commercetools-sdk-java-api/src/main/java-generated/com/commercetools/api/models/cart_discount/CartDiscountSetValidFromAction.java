@@ -31,6 +31,7 @@ public interface CartDiscountSetValidFromAction extends CartDiscountUpdateAction
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
+     * @return validFrom
      */
 
     @JsonProperty("validFrom")

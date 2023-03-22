@@ -35,6 +35,7 @@ public interface GeneralCategoryRecommendationPagedQueryResponse {
 
     /**
      *
+     * @return count
      */
     @NotNull
     @JsonProperty("count")
@@ -42,6 +43,7 @@ public interface GeneralCategoryRecommendationPagedQueryResponse {
 
     /**
      *
+     * @return total
      */
     @NotNull
     @JsonProperty("total")
@@ -49,6 +51,7 @@ public interface GeneralCategoryRecommendationPagedQueryResponse {
 
     /**
      *  <p>Number of elements skipped.</p>
+     * @return offset
      */
     @NotNull
     @JsonProperty("offset")
@@ -56,6 +59,7 @@ public interface GeneralCategoryRecommendationPagedQueryResponse {
 
     /**
      *
+     * @return results
      */
     @NotNull
     @Valid

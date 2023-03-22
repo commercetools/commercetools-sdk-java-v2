@@ -47,6 +47,7 @@ public interface DeliveryPayload {
 
     /**
      *  <p><code>key</code> of the Project. Useful in message processing if the Destination receives events from multiple Projects.</p>
+     * @return projectKey
      */
     @NotNull
     @JsonProperty("projectKey")
@@ -54,6 +55,7 @@ public interface DeliveryPayload {
 
     /**
      *  <p>Identifies the payload.</p>
+     * @return notificationType
      */
     @NotNull
     @JsonProperty("notificationType")
@@ -61,6 +63,7 @@ public interface DeliveryPayload {
 
     /**
      *  <p>Reference to the resource that triggered the message.</p>
+     * @return resource
      */
     @NotNull
     @Valid
@@ -69,6 +72,7 @@ public interface DeliveryPayload {
 
     /**
      *  <p>User-defined unique identifiers of the resource.</p>
+     * @return resourceUserProvidedIdentifiers
      */
     @Valid
     @JsonProperty("resourceUserProvidedIdentifiers")

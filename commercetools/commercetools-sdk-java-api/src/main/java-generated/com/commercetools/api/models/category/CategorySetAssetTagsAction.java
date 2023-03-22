@@ -30,6 +30,7 @@ public interface CategorySetAssetTagsAction extends CategoryUpdateAction {
 
     /**
      *  <p>New value to set. Either <code>assetId</code> or <code>assetKey</code> is required.</p>
+     * @return assetId
      */
 
     @JsonProperty("assetId")
@@ -37,6 +38,7 @@ public interface CategorySetAssetTagsAction extends CategoryUpdateAction {
 
     /**
      *  <p>New value to set. Either <code>assetId</code> or <code>assetKey</code> is required.</p>
+     * @return assetKey
      */
 
     @JsonProperty("assetKey")
@@ -44,6 +46,7 @@ public interface CategorySetAssetTagsAction extends CategoryUpdateAction {
 
     /**
      *  <p>Keywords for categorizing and organizing Assets.</p>
+     * @return tags
      */
 
     @JsonProperty("tags")

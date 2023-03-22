@@ -31,6 +31,8 @@ public class ProductSelectionReferenceBuilder implements Builder<ProductSelectio
 
     /**
      *  <p>Unique identifier of the referenced ProductSelection.</p>
+     * @param id
+     * @return Builder
      */
 
     public ProductSelectionReferenceBuilder id(final String id) {
@@ -40,6 +42,7 @@ public class ProductSelectionReferenceBuilder implements Builder<ProductSelectio
 
     /**
      *  <p>Contains the representation of the expanded ProductSelection. Only present in responses to requests with Reference Expansion for ProductSelections.</p>
+     * @return Builder
      */
 
     public ProductSelectionReferenceBuilder obj(
@@ -50,6 +53,8 @@ public class ProductSelectionReferenceBuilder implements Builder<ProductSelectio
 
     /**
      *  <p>Contains the representation of the expanded ProductSelection. Only present in responses to requests with Reference Expansion for ProductSelections.</p>
+     * @param obj
+     * @return Builder
      */
 
     public ProductSelectionReferenceBuilder obj(

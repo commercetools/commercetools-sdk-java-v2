@@ -33,6 +33,7 @@ public interface TypeSetDescriptionAction extends TypeUpdateAction {
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
+     * @return description
      */
     @Valid
     @JsonProperty("description")

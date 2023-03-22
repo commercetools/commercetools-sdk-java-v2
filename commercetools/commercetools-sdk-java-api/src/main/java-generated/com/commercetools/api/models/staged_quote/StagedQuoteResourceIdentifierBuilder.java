@@ -30,6 +30,8 @@ public class StagedQuoteResourceIdentifierBuilder implements Builder<StagedQuote
 
     /**
      *  <p>Unique identifier of the referenced resource. Required if <code>key</code> is absent.</p>
+     * @param id
+     * @return Builder
      */
 
     public StagedQuoteResourceIdentifierBuilder id(@Nullable final String id) {
@@ -39,6 +41,8 @@ public class StagedQuoteResourceIdentifierBuilder implements Builder<StagedQuote
 
     /**
      *  <p>User-defined unique identifier of the referenced resource. Required if <code>id</code> is absent.</p>
+     * @param key
+     * @return Builder
      */
 
     public StagedQuoteResourceIdentifierBuilder key(@Nullable final String key) {

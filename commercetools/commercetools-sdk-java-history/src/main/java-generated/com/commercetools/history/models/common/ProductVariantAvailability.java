@@ -35,6 +35,7 @@ public interface ProductVariantAvailability {
 
     /**
      *
+     * @return isOnStock
      */
     @NotNull
     @JsonProperty("isOnStock")
@@ -42,6 +43,7 @@ public interface ProductVariantAvailability {
 
     /**
      *
+     * @return restockableInDays
      */
     @NotNull
     @JsonProperty("restockableInDays")
@@ -49,6 +51,7 @@ public interface ProductVariantAvailability {
 
     /**
      *
+     * @return availableQuantity
      */
     @NotNull
     @JsonProperty("availableQuantity")
@@ -56,6 +59,7 @@ public interface ProductVariantAvailability {
 
     /**
      *
+     * @return channels
      */
     @NotNull
     @Valid

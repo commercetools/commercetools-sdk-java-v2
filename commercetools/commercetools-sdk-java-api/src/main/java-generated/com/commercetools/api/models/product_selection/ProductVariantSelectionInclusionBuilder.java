@@ -26,6 +26,8 @@ public class ProductVariantSelectionInclusionBuilder implements Builder<ProductV
 
     /**
      *  <p>Non-empty array of SKUs representing Product Variants to be included into the Product Selection.</p>
+     * @param skus
+     * @return Builder
      */
 
     public ProductVariantSelectionInclusionBuilder skus(final String... skus) {
@@ -35,6 +37,8 @@ public class ProductVariantSelectionInclusionBuilder implements Builder<ProductV
 
     /**
      *  <p>Non-empty array of SKUs representing Product Variants to be included into the Product Selection.</p>
+     * @param skus
+     * @return Builder
      */
 
     public ProductVariantSelectionInclusionBuilder skus(final java.util.List<String> skus) {
@@ -44,6 +48,8 @@ public class ProductVariantSelectionInclusionBuilder implements Builder<ProductV
 
     /**
      *  <p>Non-empty array of SKUs representing Product Variants to be included into the Product Selection.</p>
+     * @param skus
+     * @return Builder
      */
 
     public ProductVariantSelectionInclusionBuilder plusSkus(final String... skus) {

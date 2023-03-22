@@ -32,6 +32,8 @@ public class RemoveShoppingListLineItemChangeBuilder implements Builder<RemoveSh
 
     /**
      *
+     * @param change
+     * @return Builder
      */
 
     public RemoveShoppingListLineItemChangeBuilder change(final String change) {
@@ -41,6 +43,7 @@ public class RemoveShoppingListLineItemChangeBuilder implements Builder<RemoveSh
 
     /**
      *
+     * @return Builder
      */
 
     public RemoveShoppingListLineItemChangeBuilder previousValue(
@@ -51,6 +54,8 @@ public class RemoveShoppingListLineItemChangeBuilder implements Builder<RemoveSh
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public RemoveShoppingListLineItemChangeBuilder previousValue(
@@ -61,6 +66,7 @@ public class RemoveShoppingListLineItemChangeBuilder implements Builder<RemoveSh
 
     /**
      *
+     * @return Builder
      */
 
     public RemoveShoppingListLineItemChangeBuilder nextValue(
@@ -71,6 +77,8 @@ public class RemoveShoppingListLineItemChangeBuilder implements Builder<RemoveSh
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public RemoveShoppingListLineItemChangeBuilder nextValue(

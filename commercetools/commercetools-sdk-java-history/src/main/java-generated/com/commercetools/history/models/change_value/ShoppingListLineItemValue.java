@@ -35,6 +35,7 @@ public interface ShoppingListLineItemValue {
 
     /**
      *
+     * @return id
      */
     @NotNull
     @JsonProperty("id")
@@ -42,6 +43,7 @@ public interface ShoppingListLineItemValue {
 
     /**
      *
+     * @return name
      */
     @NotNull
     @Valid
@@ -50,6 +52,7 @@ public interface ShoppingListLineItemValue {
 
     /**
      *
+     * @return variantId
      */
     @NotNull
     @JsonProperty("variantId")

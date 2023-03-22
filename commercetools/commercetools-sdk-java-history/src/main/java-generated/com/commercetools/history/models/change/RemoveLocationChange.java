@@ -37,6 +37,7 @@ public interface RemoveLocationChange extends Change {
 
     /**
      *
+     * @return type
      */
     @NotNull
     @JsonProperty("type")
@@ -44,6 +45,7 @@ public interface RemoveLocationChange extends Change {
 
     /**
      *  <p>Update action for <code>removeLocation</code> on zones</p>
+     * @return change
      */
     @NotNull
     @JsonProperty("change")
@@ -51,6 +53,7 @@ public interface RemoveLocationChange extends Change {
 
     /**
      *  <p>Shape of the value for <code>addLocation</code> and <code>removeLocation</code> actions</p>
+     * @return previousValue
      */
     @NotNull
     @Valid
@@ -59,6 +62,7 @@ public interface RemoveLocationChange extends Change {
 
     /**
      *  <p>Shape of the value for <code>addLocation</code> and <code>removeLocation</code> actions</p>
+     * @return nextValue
      */
     @NotNull
     @Valid

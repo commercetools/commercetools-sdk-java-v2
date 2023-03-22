@@ -25,6 +25,8 @@ public class CartDiscountChangeCartPredicateActionBuilder implements Builder<Car
 
     /**
      *  <p>New value to set.</p>
+     * @param cartPredicate
+     * @return Builder
      */
 
     public CartDiscountChangeCartPredicateActionBuilder cartPredicate(final String cartPredicate) {

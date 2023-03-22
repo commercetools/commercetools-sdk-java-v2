@@ -31,6 +31,8 @@ public class StandalonePriceReferenceBuilder implements Builder<StandalonePriceR
 
     /**
      *  <p>Unique ID of the referenced resource.</p>
+     * @param id
+     * @return Builder
      */
 
     public StandalonePriceReferenceBuilder id(final String id) {
@@ -40,6 +42,7 @@ public class StandalonePriceReferenceBuilder implements Builder<StandalonePriceR
 
     /**
      *  <p>Contains the representation of the expanded StandalonePrice. Only present in responses to requests with Reference Expansion for StandalonePrice.</p>
+     * @return Builder
      */
 
     public StandalonePriceReferenceBuilder obj(
@@ -50,6 +53,8 @@ public class StandalonePriceReferenceBuilder implements Builder<StandalonePriceR
 
     /**
      *  <p>Contains the representation of the expanded StandalonePrice. Only present in responses to requests with Reference Expansion for StandalonePrice.</p>
+     * @param obj
+     * @return Builder
      */
 
     public StandalonePriceReferenceBuilder obj(

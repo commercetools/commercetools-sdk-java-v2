@@ -26,6 +26,8 @@ public class CartDiscountValueAbsoluteBuilder implements Builder<CartDiscountVal
 
     /**
      *  <p>Cent precision money values in different currencies.</p>
+     * @param money
+     * @return Builder
      */
 
     public CartDiscountValueAbsoluteBuilder money(
@@ -36,6 +38,8 @@ public class CartDiscountValueAbsoluteBuilder implements Builder<CartDiscountVal
 
     /**
      *  <p>Cent precision money values in different currencies.</p>
+     * @param money
+     * @return Builder
      */
 
     public CartDiscountValueAbsoluteBuilder money(
@@ -46,6 +50,8 @@ public class CartDiscountValueAbsoluteBuilder implements Builder<CartDiscountVal
 
     /**
      *  <p>Cent precision money values in different currencies.</p>
+     * @param money
+     * @return Builder
      */
 
     public CartDiscountValueAbsoluteBuilder plusMoney(
@@ -59,6 +65,7 @@ public class CartDiscountValueAbsoluteBuilder implements Builder<CartDiscountVal
 
     /**
      *  <p>Cent precision money values in different currencies.</p>
+     * @return Builder
      */
 
     public CartDiscountValueAbsoluteBuilder plusMoney(
@@ -72,6 +79,7 @@ public class CartDiscountValueAbsoluteBuilder implements Builder<CartDiscountVal
 
     /**
      *  <p>Cent precision money values in different currencies.</p>
+     * @return Builder
      */
 
     public CartDiscountValueAbsoluteBuilder withMoney(

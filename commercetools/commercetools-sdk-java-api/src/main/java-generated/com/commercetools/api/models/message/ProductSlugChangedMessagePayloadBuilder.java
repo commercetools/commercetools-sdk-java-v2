@@ -31,6 +31,7 @@ public class ProductSlugChangedMessagePayloadBuilder implements Builder<ProductS
 
     /**
      *  <p>The slug of the Product after the Change Slug update action.</p>
+     * @return Builder
      */
 
     public ProductSlugChangedMessagePayloadBuilder slug(
@@ -41,6 +42,8 @@ public class ProductSlugChangedMessagePayloadBuilder implements Builder<ProductS
 
     /**
      *  <p>The slug of the Product after the Change Slug update action.</p>
+     * @param slug
+     * @return Builder
      */
 
     public ProductSlugChangedMessagePayloadBuilder slug(
@@ -51,6 +54,7 @@ public class ProductSlugChangedMessagePayloadBuilder implements Builder<ProductS
 
     /**
      *  <p>The slug of the Product before the Change Slug update action.</p>
+     * @return Builder
      */
 
     public ProductSlugChangedMessagePayloadBuilder oldSlug(
@@ -61,6 +65,8 @@ public class ProductSlugChangedMessagePayloadBuilder implements Builder<ProductS
 
     /**
      *  <p>The slug of the Product before the Change Slug update action.</p>
+     * @param oldSlug
+     * @return Builder
      */
 
     public ProductSlugChangedMessagePayloadBuilder oldSlug(

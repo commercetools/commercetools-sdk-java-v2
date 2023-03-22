@@ -32,6 +32,7 @@ public interface SetCartScoreShippingRateInputValue {
 
     /**
      *
+     * @return type
      */
     @NotNull
     @JsonProperty("type")
@@ -39,6 +40,7 @@ public interface SetCartScoreShippingRateInputValue {
 
     /**
      *
+     * @return score
      */
     @NotNull
     @JsonProperty("score")

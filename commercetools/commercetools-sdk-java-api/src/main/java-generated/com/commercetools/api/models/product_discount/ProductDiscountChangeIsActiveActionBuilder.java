@@ -25,6 +25,8 @@ public class ProductDiscountChangeIsActiveActionBuilder implements Builder<Produ
 
     /**
      *  <p>New value to set. If set to <code>true</code>, the Discount will be applied to Product Prices.</p>
+     * @param isActive
+     * @return Builder
      */
 
     public ProductDiscountChangeIsActiveActionBuilder isActive(final Boolean isActive) {

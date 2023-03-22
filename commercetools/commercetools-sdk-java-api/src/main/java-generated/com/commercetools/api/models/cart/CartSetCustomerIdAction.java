@@ -31,6 +31,7 @@ public interface CartSetCustomerIdAction extends CartUpdateAction {
 
     /**
      *  <p><code>id</code> of an existing Customer. If empty, any value is removed.</p>
+     * @return customerId
      */
 
     @JsonProperty("customerId")

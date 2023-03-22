@@ -34,6 +34,7 @@ public interface CustomerSetCustomTypeAction extends CustomerUpdateAction {
 
     /**
      *  <p>Defines the Type that extends the Customer with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Customer.</p>
+     * @return type
      */
     @Valid
     @JsonProperty("type")
@@ -41,6 +42,7 @@ public interface CustomerSetCustomTypeAction extends CustomerUpdateAction {
 
     /**
      *  <p>Sets the Custom Fields fields for the Customer.</p>
+     * @return fields
      */
     @Valid
     @JsonProperty("fields")

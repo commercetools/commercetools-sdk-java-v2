@@ -35,6 +35,7 @@ public interface TypeChangeEnumValueLabelAction extends TypeUpdateAction {
 
     /**
      *  <p><code>name</code> of the FieldDefinition to update.</p>
+     * @return fieldName
      */
     @NotNull
     @JsonProperty("fieldName")
@@ -42,6 +43,7 @@ public interface TypeChangeEnumValueLabelAction extends TypeUpdateAction {
 
     /**
      *  <p>New value to set. Must not be empty.</p>
+     * @return value
      */
     @NotNull
     @Valid

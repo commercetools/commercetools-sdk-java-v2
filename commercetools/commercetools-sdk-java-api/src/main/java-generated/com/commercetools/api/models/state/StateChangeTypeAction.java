@@ -33,6 +33,7 @@ public interface StateChangeTypeAction extends StateUpdateAction {
 
     /**
      *  <p>Resource or object types the State shall be assigned to. Must not be empty.</p>
+     * @return type
      */
     @NotNull
     @JsonProperty("type")

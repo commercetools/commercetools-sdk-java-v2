@@ -30,6 +30,8 @@ public class ZoneResourceIdentifierBuilder implements Builder<ZoneResourceIdenti
 
     /**
      *  <p>Unique identifier of the referenced Zone. Either <code>id</code> or <code>key</code> is required.</p>
+     * @param id
+     * @return Builder
      */
 
     public ZoneResourceIdentifierBuilder id(@Nullable final String id) {
@@ -39,6 +41,8 @@ public class ZoneResourceIdentifierBuilder implements Builder<ZoneResourceIdenti
 
     /**
      *  <p>User-defined unique identifier of the referenced Zone. Either <code>id</code> or <code>key</code> is required.</p>
+     * @param key
+     * @return Builder
      */
 
     public ZoneResourceIdentifierBuilder key(@Nullable final String key) {

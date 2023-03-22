@@ -33,6 +33,7 @@ public interface EnumSetAttribute extends Attribute {
 
     /**
      *
+     * @return value
      */
     @NotNull
     @JsonProperty("value")

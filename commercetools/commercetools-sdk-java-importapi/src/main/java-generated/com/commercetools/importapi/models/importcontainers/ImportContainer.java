@@ -36,6 +36,7 @@ public interface ImportContainer {
 
     /**
      *  <p>User-defined unique identifier for the ImportContainer. Keys can only contain alphanumeric characters (a-Z, 0-9), underscores and hyphens (_, -).</p>
+     * @return key
      */
     @NotNull
     @JsonProperty("key")
@@ -43,6 +44,7 @@ public interface ImportContainer {
 
     /**
      *  <p>The resource type the ImportContainer is able to handle. If not present, the ImportContainer is able to import all of the supported ImportResourceTypes.</p>
+     * @return resourceType
      */
 
     @JsonProperty("resourceType")
@@ -50,6 +52,7 @@ public interface ImportContainer {
 
     /**
      *  <p>The version of the ImportContainer.</p>
+     * @return version
      */
     @NotNull
     @JsonProperty("version")
@@ -57,6 +60,7 @@ public interface ImportContainer {
 
     /**
      *  <p>The time when the ImportContainer was created.</p>
+     * @return createdAt
      */
     @NotNull
     @JsonProperty("createdAt")
@@ -64,6 +68,7 @@ public interface ImportContainer {
 
     /**
      *  <p>The last time when the ImportContainer was modified.</p>
+     * @return lastModifiedAt
      */
     @NotNull
     @JsonProperty("lastModifiedAt")

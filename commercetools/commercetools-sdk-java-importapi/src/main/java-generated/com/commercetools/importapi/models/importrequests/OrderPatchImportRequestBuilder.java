@@ -26,6 +26,8 @@ public class OrderPatchImportRequestBuilder implements Builder<OrderPatchImportR
 
     /**
      *  <p>The order patches of this request</p>
+     * @param patches
+     * @return Builder
      */
 
     public OrderPatchImportRequestBuilder patches(
@@ -36,6 +38,8 @@ public class OrderPatchImportRequestBuilder implements Builder<OrderPatchImportR
 
     /**
      *  <p>The order patches of this request</p>
+     * @param patches
+     * @return Builder
      */
 
     public OrderPatchImportRequestBuilder patches(
@@ -46,6 +50,8 @@ public class OrderPatchImportRequestBuilder implements Builder<OrderPatchImportR
 
     /**
      *  <p>The order patches of this request</p>
+     * @param patches
+     * @return Builder
      */
 
     public OrderPatchImportRequestBuilder plusPatches(
@@ -59,6 +65,7 @@ public class OrderPatchImportRequestBuilder implements Builder<OrderPatchImportR
 
     /**
      *  <p>The order patches of this request</p>
+     * @return Builder
      */
 
     public OrderPatchImportRequestBuilder plusPatches(
@@ -73,6 +80,7 @@ public class OrderPatchImportRequestBuilder implements Builder<OrderPatchImportR
 
     /**
      *  <p>The order patches of this request</p>
+     * @return Builder
      */
 
     public OrderPatchImportRequestBuilder withPatches(

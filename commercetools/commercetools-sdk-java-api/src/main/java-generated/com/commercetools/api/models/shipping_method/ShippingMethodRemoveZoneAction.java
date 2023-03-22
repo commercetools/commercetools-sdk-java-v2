@@ -35,6 +35,7 @@ public interface ShippingMethodRemoveZoneAction extends ShippingMethodUpdateActi
 
     /**
      *  <p>Value to remove from <code>zoneRates</code>.</p>
+     * @return zone
      */
     @NotNull
     @Valid

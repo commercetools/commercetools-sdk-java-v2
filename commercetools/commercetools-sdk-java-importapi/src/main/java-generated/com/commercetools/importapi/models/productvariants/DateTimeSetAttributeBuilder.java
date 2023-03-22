@@ -30,6 +30,8 @@ public class DateTimeSetAttributeBuilder implements Builder<DateTimeSetAttribute
 
     /**
      *  <p>The name of this attribute must match a name of the product types attribute definitions. The name is required if this type is used in a product variant and must not be set when used in a product variant patch.</p>
+     * @param name
+     * @return Builder
      */
 
     public DateTimeSetAttributeBuilder name(@Nullable final String name) {
@@ -39,6 +41,8 @@ public class DateTimeSetAttributeBuilder implements Builder<DateTimeSetAttribute
 
     /**
      *
+     * @param value
+     * @return Builder
      */
 
     public DateTimeSetAttributeBuilder value(final java.time.ZonedDateTime... value) {
@@ -48,6 +52,8 @@ public class DateTimeSetAttributeBuilder implements Builder<DateTimeSetAttribute
 
     /**
      *
+     * @param value
+     * @return Builder
      */
 
     public DateTimeSetAttributeBuilder value(final java.util.List<java.time.ZonedDateTime> value) {
@@ -57,6 +63,8 @@ public class DateTimeSetAttributeBuilder implements Builder<DateTimeSetAttribute
 
     /**
      *
+     * @param value
+     * @return Builder
      */
 
     public DateTimeSetAttributeBuilder plusValue(final java.time.ZonedDateTime... value) {

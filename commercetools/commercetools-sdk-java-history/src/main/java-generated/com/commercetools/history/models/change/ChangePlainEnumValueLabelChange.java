@@ -37,6 +37,7 @@ public interface ChangePlainEnumValueLabelChange extends Change {
 
     /**
      *
+     * @return type
      */
     @NotNull
     @JsonProperty("type")
@@ -44,6 +45,7 @@ public interface ChangePlainEnumValueLabelChange extends Change {
 
     /**
      *  <p>Update action for <code>changePlainEnumValueLabel</code> on types</p>
+     * @return change
      */
     @NotNull
     @JsonProperty("change")
@@ -51,6 +53,7 @@ public interface ChangePlainEnumValueLabelChange extends Change {
 
     /**
      *  <p>The name of the attribute updated.</p>
+     * @return attributeName
      */
     @NotNull
     @JsonProperty("attributeName")
@@ -58,6 +61,7 @@ public interface ChangePlainEnumValueLabelChange extends Change {
 
     /**
      *  <p>Key of the values that was updated</p>
+     * @return valueKey
      */
     @NotNull
     @JsonProperty("valueKey")
@@ -65,6 +69,7 @@ public interface ChangePlainEnumValueLabelChange extends Change {
 
     /**
      *
+     * @return previousValue
      */
     @NotNull
     @JsonProperty("previousValue")
@@ -72,6 +77,7 @@ public interface ChangePlainEnumValueLabelChange extends Change {
 
     /**
      *
+     * @return nextValue
      */
     @NotNull
     @JsonProperty("nextValue")

@@ -29,6 +29,7 @@ public class OrderEditAppliedMessagePayloadBuilder implements Builder<OrderEditA
 
     /**
      *  <p>OrderEdit that was applied.</p>
+     * @return Builder
      */
 
     public OrderEditAppliedMessagePayloadBuilder edit(
@@ -39,6 +40,8 @@ public class OrderEditAppliedMessagePayloadBuilder implements Builder<OrderEditA
 
     /**
      *  <p>OrderEdit that was applied.</p>
+     * @param edit
+     * @return Builder
      */
 
     public OrderEditAppliedMessagePayloadBuilder edit(final com.commercetools.api.models.order_edit.OrderEdit edit) {
@@ -48,6 +51,7 @@ public class OrderEditAppliedMessagePayloadBuilder implements Builder<OrderEditA
 
     /**
      *  <p>Information about a successfully applied OrderEdit.</p>
+     * @return Builder
      */
 
     public OrderEditAppliedMessagePayloadBuilder result(
@@ -58,6 +62,8 @@ public class OrderEditAppliedMessagePayloadBuilder implements Builder<OrderEditA
 
     /**
      *  <p>Information about a successfully applied OrderEdit.</p>
+     * @param result
+     * @return Builder
      */
 
     public OrderEditAppliedMessagePayloadBuilder result(

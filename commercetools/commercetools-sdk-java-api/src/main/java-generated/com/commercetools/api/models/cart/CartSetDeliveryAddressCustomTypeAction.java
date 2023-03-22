@@ -36,6 +36,7 @@ public interface CartSetDeliveryAddressCustomTypeAction extends CartUpdateAction
 
     /**
      *  <p><code>id</code> of the Delivery.</p>
+     * @return deliveryId
      */
     @NotNull
     @JsonProperty("deliveryId")
@@ -43,6 +44,7 @@ public interface CartSetDeliveryAddressCustomTypeAction extends CartUpdateAction
 
     /**
      *  <p>Defines the Type that extends the Delivery <code>address</code> with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Delivery <code>address</code>.</p>
+     * @return type
      */
     @Valid
     @JsonProperty("type")
@@ -50,6 +52,7 @@ public interface CartSetDeliveryAddressCustomTypeAction extends CartUpdateAction
 
     /**
      *  <p>Sets the Custom Fields fields for the Delivery <code>address</code>.</p>
+     * @return fields
      */
     @Valid
     @JsonProperty("fields")

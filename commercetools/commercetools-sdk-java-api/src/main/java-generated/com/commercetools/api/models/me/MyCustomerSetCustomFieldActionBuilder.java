@@ -30,6 +30,8 @@ public class MyCustomerSetCustomFieldActionBuilder implements Builder<MyCustomer
 
     /**
      *  <p>Name of the Custom Field.</p>
+     * @param name
+     * @return Builder
      */
 
     public MyCustomerSetCustomFieldActionBuilder name(final String name) {
@@ -39,6 +41,8 @@ public class MyCustomerSetCustomFieldActionBuilder implements Builder<MyCustomer
 
     /**
      *  <p>If <code>value</code> is absent or <code>null</code>, this field will be removed if it exists. If <code>value</code> is provided, it is set for the field defined by <code>name</code>. Trying to remove a field that does not exist will fail with an InvalidOperation error.</p>
+     * @param value
+     * @return Builder
      */
 
     public MyCustomerSetCustomFieldActionBuilder value(@Nullable final java.lang.Object value) {

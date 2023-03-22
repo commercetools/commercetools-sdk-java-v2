@@ -33,6 +33,7 @@ public interface StateSetRolesAction extends StateUpdateAction {
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
+     * @return roles
      */
     @NotNull
     @JsonProperty("roles")

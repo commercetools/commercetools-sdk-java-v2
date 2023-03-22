@@ -25,6 +25,8 @@ public class CustomerPasswordUpdatedMessagePayloadBuilder implements Builder<Cus
 
     /**
      *  <p>Whether the Customer's password was updated during the Reset password or Change password flow.</p>
+     * @param reset
+     * @return Builder
      */
 
     public CustomerPasswordUpdatedMessagePayloadBuilder reset(final Boolean reset) {

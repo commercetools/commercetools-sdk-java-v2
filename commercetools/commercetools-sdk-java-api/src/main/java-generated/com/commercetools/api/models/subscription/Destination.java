@@ -40,6 +40,7 @@ public interface Destination {
 
     /**
      *
+     * @return type
      */
     @NotNull
     @JsonProperty("type")

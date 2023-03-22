@@ -36,6 +36,7 @@ public interface DirectDiscountDraft extends io.vrap.rmf.base.client.Draft<Direc
 
     /**
      *  <p>Defines the effect the Discount will have.</p>
+     * @return value
      */
     @NotNull
     @Valid
@@ -45,6 +46,7 @@ public interface DirectDiscountDraft extends io.vrap.rmf.base.client.Draft<Direc
     /**
      *  <p>Defines what part of the Cart will be discounted.</p>
      *  <p>If <code>value</code> is set to <code>giftLineItem</code>, this must not be set.</p>
+     * @return target
      */
     @Valid
     @JsonProperty("target")

@@ -33,6 +33,7 @@ public interface ProductSelectionSetting {
 
     /**
      *
+     * @return productSelection
      */
     @NotNull
     @Valid
@@ -41,6 +42,7 @@ public interface ProductSelectionSetting {
 
     /**
      *
+     * @return active
      */
     @NotNull
     @JsonProperty("active")

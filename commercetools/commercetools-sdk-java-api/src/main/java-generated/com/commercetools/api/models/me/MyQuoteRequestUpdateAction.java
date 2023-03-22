@@ -34,6 +34,7 @@ public interface MyQuoteRequestUpdateAction
 
     /**
      *
+     * @return action
      */
     @NotNull
     @JsonProperty("action")

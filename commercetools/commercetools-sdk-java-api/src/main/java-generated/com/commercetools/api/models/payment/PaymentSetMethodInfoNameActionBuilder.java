@@ -28,6 +28,7 @@ public class PaymentSetMethodInfoNameActionBuilder implements Builder<PaymentSet
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
+     * @return Builder
      */
 
     public PaymentSetMethodInfoNameActionBuilder name(
@@ -38,6 +39,8 @@ public class PaymentSetMethodInfoNameActionBuilder implements Builder<PaymentSet
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
+     * @param name
+     * @return Builder
      */
 
     public PaymentSetMethodInfoNameActionBuilder name(

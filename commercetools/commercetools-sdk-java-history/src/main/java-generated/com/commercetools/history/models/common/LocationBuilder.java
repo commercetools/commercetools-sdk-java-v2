@@ -28,6 +28,8 @@ public class LocationBuilder implements Builder<Location> {
 
     /**
      *  <p>Two-digit country code as per ISO 3166-1 alpha-2.</p>
+     * @param country
+     * @return Builder
      */
 
     public LocationBuilder country(final String country) {
@@ -37,6 +39,8 @@ public class LocationBuilder implements Builder<Location> {
 
     /**
      *
+     * @param state
+     * @return Builder
      */
 
     public LocationBuilder state(final String state) {

@@ -30,6 +30,7 @@ public interface CustomerSetLocaleAction extends CustomerUpdateAction {
 
     /**
      *  <p>Value to set. Must be one of the languages supported by the Project.</p>
+     * @return locale
      */
 
     @JsonProperty("locale")

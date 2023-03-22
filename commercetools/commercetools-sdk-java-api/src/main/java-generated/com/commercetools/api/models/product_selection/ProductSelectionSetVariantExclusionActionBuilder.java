@@ -32,6 +32,7 @@ public class ProductSelectionSetVariantExclusionActionBuilder
 
     /**
      *  <p>ResourceIdentifier of the Product</p>
+     * @return Builder
      */
 
     public ProductSelectionSetVariantExclusionActionBuilder product(
@@ -43,6 +44,8 @@ public class ProductSelectionSetVariantExclusionActionBuilder
 
     /**
      *  <p>ResourceIdentifier of the Product</p>
+     * @param product
+     * @return Builder
      */
 
     public ProductSelectionSetVariantExclusionActionBuilder product(
@@ -53,6 +56,7 @@ public class ProductSelectionSetVariantExclusionActionBuilder
 
     /**
      *  <p>Determines which Variants of the previously excluded Product are to be included in the Product Selection of type Individual Exclusion. Leave it empty to unset an existing Variant Exclusion.</p>
+     * @return Builder
      */
 
     public ProductSelectionSetVariantExclusionActionBuilder variantExclusion(
@@ -65,6 +69,8 @@ public class ProductSelectionSetVariantExclusionActionBuilder
 
     /**
      *  <p>Determines which Variants of the previously excluded Product are to be included in the Product Selection of type Individual Exclusion. Leave it empty to unset an existing Variant Exclusion.</p>
+     * @param variantExclusion
+     * @return Builder
      */
 
     public ProductSelectionSetVariantExclusionActionBuilder variantExclusion(

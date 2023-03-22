@@ -26,6 +26,7 @@ public class ProductSelectionChangeNameActionBuilder implements Builder<ProductS
 
     /**
      *  <p>The new name to be set for the ProductSelection.</p>
+     * @return Builder
      */
 
     public ProductSelectionChangeNameActionBuilder name(
@@ -36,6 +37,8 @@ public class ProductSelectionChangeNameActionBuilder implements Builder<ProductS
 
     /**
      *  <p>The new name to be set for the ProductSelection.</p>
+     * @param name
+     * @return Builder
      */
 
     public ProductSelectionChangeNameActionBuilder name(

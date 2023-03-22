@@ -35,6 +35,8 @@ public class OrderSetDeliveryAddressCustomTypeActionBuilder
 
     /**
      *
+     * @param deliveryId
+     * @return Builder
      */
 
     public OrderSetDeliveryAddressCustomTypeActionBuilder deliveryId(final String deliveryId) {
@@ -44,6 +46,7 @@ public class OrderSetDeliveryAddressCustomTypeActionBuilder
 
     /**
      *  <p>Defines the Type that extends the <code>address</code> in a Delivery with Custom Fields. If absent, any existing Type and Custom Fields are removed from the <code>address</code> in a Delivery.</p>
+     * @return Builder
      */
 
     public OrderSetDeliveryAddressCustomTypeActionBuilder type(
@@ -54,6 +57,8 @@ public class OrderSetDeliveryAddressCustomTypeActionBuilder
 
     /**
      *  <p>Defines the Type that extends the <code>address</code> in a Delivery with Custom Fields. If absent, any existing Type and Custom Fields are removed from the <code>address</code> in a Delivery.</p>
+     * @param type
+     * @return Builder
      */
 
     public OrderSetDeliveryAddressCustomTypeActionBuilder type(
@@ -64,6 +69,7 @@ public class OrderSetDeliveryAddressCustomTypeActionBuilder
 
     /**
      *  <p>Sets the Custom Fields fields for the <code>address</code> in a Delivery.</p>
+     * @return Builder
      */
 
     public OrderSetDeliveryAddressCustomTypeActionBuilder fields(
@@ -74,6 +80,8 @@ public class OrderSetDeliveryAddressCustomTypeActionBuilder
 
     /**
      *  <p>Sets the Custom Fields fields for the <code>address</code> in a Delivery.</p>
+     * @param fields
+     * @return Builder
      */
 
     public OrderSetDeliveryAddressCustomTypeActionBuilder fields(

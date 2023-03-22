@@ -33,6 +33,7 @@ public interface TaxCategoryRemoveTaxRateAction extends TaxCategoryUpdateAction 
 
     /**
      *  <p>ID of the TaxRate to remove.</p>
+     * @return taxRateId
      */
     @NotNull
     @JsonProperty("taxRateId")

@@ -33,6 +33,8 @@ public class ItemShippingTargetBuilder implements Builder<ItemShippingTarget> {
 
     /**
      *  <p>Key of the address in the Cart <code>itemShippingAddresses</code>. Duplicate address keys are not allowed.</p>
+     * @param addressKey
+     * @return Builder
      */
 
     public ItemShippingTargetBuilder addressKey(final String addressKey) {
@@ -43,6 +45,8 @@ public class ItemShippingTargetBuilder implements Builder<ItemShippingTarget> {
     /**
      *  <p>Quantity of Line Items or Custom Line Items shipped to the address with the specified <code>addressKey</code>.</p>
      *  <p>If a quantity is updated to <code>0</code> when defining ItemShippingDetailsDraft, the <code>targets</code> are removed from a Line Item or Custom Line Item in the resulting ItemShippingDetails.</p>
+     * @param quantity
+     * @return Builder
      */
 
     public ItemShippingTargetBuilder quantity(final Long quantity) {
@@ -53,6 +57,8 @@ public class ItemShippingTargetBuilder implements Builder<ItemShippingTarget> {
     /**
      *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multiple</code> ShippingMode.</p>
      *  <p>It connects Line Item quantities with individual shipping addresses.</p>
+     * @param shippingMethodKey
+     * @return Builder
      */
 
     public ItemShippingTargetBuilder shippingMethodKey(@Nullable final String shippingMethodKey) {

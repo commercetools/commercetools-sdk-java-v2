@@ -37,6 +37,8 @@ public class ProductSelectionDraftBuilder implements Builder<ProductSelectionDra
 
     /**
      *  <p>User-defined unique identifier for the ProductSelection.</p>
+     * @param key
+     * @return Builder
      */
 
     public ProductSelectionDraftBuilder key(@Nullable final String key) {
@@ -46,6 +48,7 @@ public class ProductSelectionDraftBuilder implements Builder<ProductSelectionDra
 
     /**
      *  <p>Name of the ProductSelection. Not checked for uniqueness, but distinct names are recommended.</p>
+     * @return Builder
      */
 
     public ProductSelectionDraftBuilder name(
@@ -56,6 +59,8 @@ public class ProductSelectionDraftBuilder implements Builder<ProductSelectionDra
 
     /**
      *  <p>Name of the ProductSelection. Not checked for uniqueness, but distinct names are recommended.</p>
+     * @param name
+     * @return Builder
      */
 
     public ProductSelectionDraftBuilder name(final com.commercetools.api.models.common.LocalizedString name) {
@@ -65,6 +70,7 @@ public class ProductSelectionDraftBuilder implements Builder<ProductSelectionDra
 
     /**
      *  <p>Custom Fields of this ProductSelection.</p>
+     * @return Builder
      */
 
     public ProductSelectionDraftBuilder custom(
@@ -75,6 +81,8 @@ public class ProductSelectionDraftBuilder implements Builder<ProductSelectionDra
 
     /**
      *  <p>Custom Fields of this ProductSelection.</p>
+     * @param custom
+     * @return Builder
      */
 
     public ProductSelectionDraftBuilder custom(
@@ -85,6 +93,8 @@ public class ProductSelectionDraftBuilder implements Builder<ProductSelectionDra
 
     /**
      *  <p>Type of the Product Selection.</p>
+     * @param type
+     * @return Builder
      */
 
     public ProductSelectionDraftBuilder type(

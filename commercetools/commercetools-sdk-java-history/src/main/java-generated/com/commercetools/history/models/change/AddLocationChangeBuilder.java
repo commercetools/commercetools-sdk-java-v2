@@ -32,6 +32,8 @@ public class AddLocationChangeBuilder implements Builder<AddLocationChange> {
 
     /**
      *  <p>Update action for <code>addLocation</code> on zones</p>
+     * @param change
+     * @return Builder
      */
 
     public AddLocationChangeBuilder change(final String change) {
@@ -41,6 +43,7 @@ public class AddLocationChangeBuilder implements Builder<AddLocationChange> {
 
     /**
      *  <p>Shape of the value for <code>addLocation</code> and <code>removeLocation</code> actions</p>
+     * @return Builder
      */
 
     public AddLocationChangeBuilder previousValue(
@@ -51,6 +54,8 @@ public class AddLocationChangeBuilder implements Builder<AddLocationChange> {
 
     /**
      *  <p>Shape of the value for <code>addLocation</code> and <code>removeLocation</code> actions</p>
+     * @param previousValue
+     * @return Builder
      */
 
     public AddLocationChangeBuilder previousValue(
@@ -61,6 +66,7 @@ public class AddLocationChangeBuilder implements Builder<AddLocationChange> {
 
     /**
      *  <p>Shape of the value for <code>addLocation</code> and <code>removeLocation</code> actions</p>
+     * @return Builder
      */
 
     public AddLocationChangeBuilder nextValue(
@@ -71,6 +77,8 @@ public class AddLocationChangeBuilder implements Builder<AddLocationChange> {
 
     /**
      *  <p>Shape of the value for <code>addLocation</code> and <code>removeLocation</code> actions</p>
+     * @param nextValue
+     * @return Builder
      */
 
     public AddLocationChangeBuilder nextValue(final com.commercetools.history.models.common.Location nextValue) {

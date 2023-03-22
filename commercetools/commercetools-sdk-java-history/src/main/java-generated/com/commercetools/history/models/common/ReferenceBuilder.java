@@ -28,6 +28,8 @@ public class ReferenceBuilder implements Builder<Reference> {
 
     /**
      *
+     * @param id
+     * @return Builder
      */
 
     public ReferenceBuilder id(final String id) {
@@ -37,6 +39,8 @@ public class ReferenceBuilder implements Builder<Reference> {
 
     /**
      *
+     * @param typeId
+     * @return Builder
      */
 
     public ReferenceBuilder typeId(final com.commercetools.history.models.common.ReferenceTypeId typeId) {

@@ -35,6 +35,7 @@ public interface ProductSelectionCreatedMessagePayload extends MessagePayload {
 
     /**
      *  <p>The <code>type</code> and <code>name</code> of the individual Product Selection.</p>
+     * @return productSelection
      */
     @NotNull
     @Valid

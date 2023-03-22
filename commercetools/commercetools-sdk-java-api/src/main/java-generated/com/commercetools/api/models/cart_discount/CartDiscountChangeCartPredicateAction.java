@@ -33,6 +33,7 @@ public interface CartDiscountChangeCartPredicateAction extends CartDiscountUpdat
 
     /**
      *  <p>New value to set.</p>
+     * @return cartPredicate
      */
     @NotNull
     @JsonProperty("cartPredicate")

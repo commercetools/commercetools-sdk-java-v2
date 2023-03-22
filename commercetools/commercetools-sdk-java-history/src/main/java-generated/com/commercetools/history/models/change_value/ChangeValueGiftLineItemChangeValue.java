@@ -37,6 +37,7 @@ public interface ChangeValueGiftLineItemChangeValue extends ChangeValueChangeVal
 
     /**
      *
+     * @return type
      */
     @NotNull
     @JsonProperty("type")
@@ -44,6 +45,7 @@ public interface ChangeValueGiftLineItemChangeValue extends ChangeValueChangeVal
 
     /**
      *
+     * @return product
      */
     @NotNull
     @Valid
@@ -52,6 +54,7 @@ public interface ChangeValueGiftLineItemChangeValue extends ChangeValueChangeVal
 
     /**
      *
+     * @return variantId
      */
     @NotNull
     @JsonProperty("variantId")
@@ -59,6 +62,7 @@ public interface ChangeValueGiftLineItemChangeValue extends ChangeValueChangeVal
 
     /**
      *
+     * @return supplyChannel
      */
     @Valid
     @JsonProperty("supplyChannel")
@@ -66,6 +70,7 @@ public interface ChangeValueGiftLineItemChangeValue extends ChangeValueChangeVal
 
     /**
      *
+     * @return distributionChannel
      */
     @NotNull
     @Valid

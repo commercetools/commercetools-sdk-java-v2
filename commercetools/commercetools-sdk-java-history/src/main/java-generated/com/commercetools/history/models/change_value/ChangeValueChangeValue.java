@@ -37,6 +37,7 @@ public interface ChangeValueChangeValue {
 
     /**
      *
+     * @return type
      */
     @NotNull
     @JsonProperty("type")

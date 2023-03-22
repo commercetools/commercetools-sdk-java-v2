@@ -25,6 +25,8 @@ public class TimeFieldBuilder implements Builder<TimeField> {
 
     /**
      *
+     * @param value
+     * @return Builder
      */
 
     public TimeFieldBuilder value(final java.time.LocalTime value) {

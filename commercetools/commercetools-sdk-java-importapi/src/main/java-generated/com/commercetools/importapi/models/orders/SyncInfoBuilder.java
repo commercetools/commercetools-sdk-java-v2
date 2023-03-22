@@ -34,6 +34,7 @@ public class SyncInfoBuilder implements Builder<SyncInfo> {
 
     /**
      *  <p>Maps to <code>SyncInfo.channel</code></p>
+     * @return Builder
      */
 
     public SyncInfoBuilder channel(
@@ -44,6 +45,8 @@ public class SyncInfoBuilder implements Builder<SyncInfo> {
 
     /**
      *  <p>Maps to <code>SyncInfo.channel</code></p>
+     * @param channel
+     * @return Builder
      */
 
     public SyncInfoBuilder channel(final com.commercetools.importapi.models.common.ChannelKeyReference channel) {
@@ -53,6 +56,8 @@ public class SyncInfoBuilder implements Builder<SyncInfo> {
 
     /**
      *  <p>Maps to <code>SyncInfo.externalId</code></p>
+     * @param externalId
+     * @return Builder
      */
 
     public SyncInfoBuilder externalId(@Nullable final String externalId) {
@@ -62,6 +67,8 @@ public class SyncInfoBuilder implements Builder<SyncInfo> {
 
     /**
      *  <p>Maps to <code>SyncInfo.syncedAt</code></p>
+     * @param syncedAt
+     * @return Builder
      */
 
     public SyncInfoBuilder syncedAt(final java.time.ZonedDateTime syncedAt) {

@@ -33,6 +33,7 @@ public interface CloudEventsFormat extends DeliveryFormat {
 
     /**
      *
+     * @return cloudEventsVersion
      */
     @NotNull
     @JsonProperty("cloudEventsVersion")

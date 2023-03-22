@@ -31,6 +31,8 @@ public class CustomerGroupReferenceBuilder implements Builder<CustomerGroupRefer
 
     /**
      *  <p>Unique identifier of the referenced CustomerGroup.</p>
+     * @param id
+     * @return Builder
      */
 
     public CustomerGroupReferenceBuilder id(final String id) {
@@ -40,6 +42,7 @@ public class CustomerGroupReferenceBuilder implements Builder<CustomerGroupRefer
 
     /**
      *  <p>Contains the representation of the expanded CustomerGroup. Only present in responses to requests with Reference Expansion for CustomerGroups.</p>
+     * @return Builder
      */
 
     public CustomerGroupReferenceBuilder obj(
@@ -50,6 +53,8 @@ public class CustomerGroupReferenceBuilder implements Builder<CustomerGroupRefer
 
     /**
      *  <p>Contains the representation of the expanded CustomerGroup. Only present in responses to requests with Reference Expansion for CustomerGroups.</p>
+     * @param obj
+     * @return Builder
      */
 
     public CustomerGroupReferenceBuilder obj(

@@ -88,6 +88,8 @@ public class CompanyBuilder implements Builder<Company> {
 
     /**
      *  <p>Unique identifier of the Business Unit.</p>
+     * @param id
+     * @return Builder
      */
 
     public CompanyBuilder id(final String id) {
@@ -97,6 +99,8 @@ public class CompanyBuilder implements Builder<Company> {
 
     /**
      *  <p>Current version of the Business Unit.</p>
+     * @param version
+     * @return Builder
      */
 
     public CompanyBuilder version(final Long version) {
@@ -106,6 +110,8 @@ public class CompanyBuilder implements Builder<Company> {
 
     /**
      *  <p>Date and time (UTC) the Business Unit was initially created.</p>
+     * @param createdAt
+     * @return Builder
      */
 
     public CompanyBuilder createdAt(final java.time.ZonedDateTime createdAt) {
@@ -115,6 +121,8 @@ public class CompanyBuilder implements Builder<Company> {
 
     /**
      *  <p>Date and time (UTC) the Business Unit was last updated.</p>
+     * @param lastModifiedAt
+     * @return Builder
      */
 
     public CompanyBuilder lastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {
@@ -124,6 +132,7 @@ public class CompanyBuilder implements Builder<Company> {
 
     /**
      *  <p>Present on resources updated after 1 February 2019 except for events not tracked.</p>
+     * @return Builder
      */
 
     public CompanyBuilder lastModifiedBy(
@@ -134,6 +143,8 @@ public class CompanyBuilder implements Builder<Company> {
 
     /**
      *  <p>Present on resources updated after 1 February 2019 except for events not tracked.</p>
+     * @param lastModifiedBy
+     * @return Builder
      */
 
     public CompanyBuilder lastModifiedBy(
@@ -144,6 +155,7 @@ public class CompanyBuilder implements Builder<Company> {
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @return Builder
      */
 
     public CompanyBuilder createdBy(
@@ -154,6 +166,8 @@ public class CompanyBuilder implements Builder<Company> {
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param createdBy
+     * @return Builder
      */
 
     public CompanyBuilder createdBy(@Nullable final com.commercetools.api.models.common.CreatedBy createdBy) {
@@ -163,6 +177,8 @@ public class CompanyBuilder implements Builder<Company> {
 
     /**
      *  <p>User-defined unique identifier of the Business Unit.</p>
+     * @param key
+     * @return Builder
      */
 
     public CompanyBuilder key(final String key) {
@@ -172,6 +188,8 @@ public class CompanyBuilder implements Builder<Company> {
 
     /**
      *  <p>Indicates whether the Business Unit can be edited and used in Orders.</p>
+     * @param status
+     * @return Builder
      */
 
     public CompanyBuilder status(final com.commercetools.api.models.business_unit.BusinessUnitStatus status) {
@@ -183,6 +201,8 @@ public class CompanyBuilder implements Builder<Company> {
      *  <p>References to Stores the Business Unit is associated with. Only present when <code>storeMode</code> is <code>Explicit</code>.</p>
      *  <p>If the Business Unit has Stores defined, then all of its Carts, Orders, Quotes, or Quote Requests must belong to one of the Business Unit's Stores.</p>
      *  <p>If the Business Unit has no Stores, then all of its Carts, Orders, Quotes, or Quote Requests must not belong to any Store.</p>
+     * @param stores
+     * @return Builder
      */
 
     public CompanyBuilder stores(@Nullable final com.commercetools.api.models.store.StoreKeyReference... stores) {
@@ -194,6 +214,8 @@ public class CompanyBuilder implements Builder<Company> {
      *  <p>References to Stores the Business Unit is associated with. Only present when <code>storeMode</code> is <code>Explicit</code>.</p>
      *  <p>If the Business Unit has Stores defined, then all of its Carts, Orders, Quotes, or Quote Requests must belong to one of the Business Unit's Stores.</p>
      *  <p>If the Business Unit has no Stores, then all of its Carts, Orders, Quotes, or Quote Requests must not belong to any Store.</p>
+     * @param stores
+     * @return Builder
      */
 
     public CompanyBuilder stores(
@@ -206,6 +228,8 @@ public class CompanyBuilder implements Builder<Company> {
      *  <p>References to Stores the Business Unit is associated with. Only present when <code>storeMode</code> is <code>Explicit</code>.</p>
      *  <p>If the Business Unit has Stores defined, then all of its Carts, Orders, Quotes, or Quote Requests must belong to one of the Business Unit's Stores.</p>
      *  <p>If the Business Unit has no Stores, then all of its Carts, Orders, Quotes, or Quote Requests must not belong to any Store.</p>
+     * @param stores
+     * @return Builder
      */
 
     public CompanyBuilder plusStores(@Nullable final com.commercetools.api.models.store.StoreKeyReference... stores) {
@@ -220,6 +244,7 @@ public class CompanyBuilder implements Builder<Company> {
      *  <p>References to Stores the Business Unit is associated with. Only present when <code>storeMode</code> is <code>Explicit</code>.</p>
      *  <p>If the Business Unit has Stores defined, then all of its Carts, Orders, Quotes, or Quote Requests must belong to one of the Business Unit's Stores.</p>
      *  <p>If the Business Unit has no Stores, then all of its Carts, Orders, Quotes, or Quote Requests must not belong to any Store.</p>
+     * @return Builder
      */
 
     public CompanyBuilder plusStores(
@@ -235,6 +260,7 @@ public class CompanyBuilder implements Builder<Company> {
      *  <p>References to Stores the Business Unit is associated with. Only present when <code>storeMode</code> is <code>Explicit</code>.</p>
      *  <p>If the Business Unit has Stores defined, then all of its Carts, Orders, Quotes, or Quote Requests must belong to one of the Business Unit's Stores.</p>
      *  <p>If the Business Unit has no Stores, then all of its Carts, Orders, Quotes, or Quote Requests must not belong to any Store.</p>
+     * @return Builder
      */
 
     public CompanyBuilder withStores(
@@ -246,6 +272,8 @@ public class CompanyBuilder implements Builder<Company> {
 
     /**
      *  <p>Is always <code>Explicit</code> since a Company does not have a parent Business Unit the Stores can be inherited from.</p>
+     * @param storeMode
+     * @return Builder
      */
 
     public CompanyBuilder storeMode(final com.commercetools.api.models.business_unit.BusinessUnitStoreMode storeMode) {
@@ -255,6 +283,8 @@ public class CompanyBuilder implements Builder<Company> {
 
     /**
      *  <p>Name of the Business Unit.</p>
+     * @param name
+     * @return Builder
      */
 
     public CompanyBuilder name(final String name) {
@@ -264,6 +294,8 @@ public class CompanyBuilder implements Builder<Company> {
 
     /**
      *  <p>Email address of the Business Unit.</p>
+     * @param contactEmail
+     * @return Builder
      */
 
     public CompanyBuilder contactEmail(@Nullable final String contactEmail) {
@@ -273,6 +305,7 @@ public class CompanyBuilder implements Builder<Company> {
 
     /**
      *  <p>Custom Fields for the Business Unit.</p>
+     * @return Builder
      */
 
     public CompanyBuilder custom(
@@ -283,6 +316,8 @@ public class CompanyBuilder implements Builder<Company> {
 
     /**
      *  <p>Custom Fields for the Business Unit.</p>
+     * @param custom
+     * @return Builder
      */
 
     public CompanyBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFields custom) {
@@ -292,6 +327,8 @@ public class CompanyBuilder implements Builder<Company> {
 
     /**
      *  <p>Addresses used by the Business Unit.</p>
+     * @param addresses
+     * @return Builder
      */
 
     public CompanyBuilder addresses(final com.commercetools.api.models.common.Address... addresses) {
@@ -301,6 +338,8 @@ public class CompanyBuilder implements Builder<Company> {
 
     /**
      *  <p>Addresses used by the Business Unit.</p>
+     * @param addresses
+     * @return Builder
      */
 
     public CompanyBuilder addresses(final java.util.List<com.commercetools.api.models.common.Address> addresses) {
@@ -310,6 +349,8 @@ public class CompanyBuilder implements Builder<Company> {
 
     /**
      *  <p>Addresses used by the Business Unit.</p>
+     * @param addresses
+     * @return Builder
      */
 
     public CompanyBuilder plusAddresses(final com.commercetools.api.models.common.Address... addresses) {
@@ -322,6 +363,7 @@ public class CompanyBuilder implements Builder<Company> {
 
     /**
      *  <p>Addresses used by the Business Unit.</p>
+     * @return Builder
      */
 
     public CompanyBuilder plusAddresses(
@@ -335,6 +377,7 @@ public class CompanyBuilder implements Builder<Company> {
 
     /**
      *  <p>Addresses used by the Business Unit.</p>
+     * @return Builder
      */
 
     public CompanyBuilder withAddresses(
@@ -346,6 +389,8 @@ public class CompanyBuilder implements Builder<Company> {
 
     /**
      *  <p>Unique identifiers of addresses used as shipping addresses.</p>
+     * @param shippingAddressIds
+     * @return Builder
      */
 
     public CompanyBuilder shippingAddressIds(@Nullable final String... shippingAddressIds) {
@@ -355,6 +400,8 @@ public class CompanyBuilder implements Builder<Company> {
 
     /**
      *  <p>Unique identifiers of addresses used as shipping addresses.</p>
+     * @param shippingAddressIds
+     * @return Builder
      */
 
     public CompanyBuilder shippingAddressIds(@Nullable final java.util.List<String> shippingAddressIds) {
@@ -364,6 +411,8 @@ public class CompanyBuilder implements Builder<Company> {
 
     /**
      *  <p>Unique identifiers of addresses used as shipping addresses.</p>
+     * @param shippingAddressIds
+     * @return Builder
      */
 
     public CompanyBuilder plusShippingAddressIds(@Nullable final String... shippingAddressIds) {
@@ -376,6 +425,8 @@ public class CompanyBuilder implements Builder<Company> {
 
     /**
      *  <p>Unique identifier of the address used as the default shipping address.</p>
+     * @param defaultShippingAddressId
+     * @return Builder
      */
 
     public CompanyBuilder defaultShippingAddressId(@Nullable final String defaultShippingAddressId) {
@@ -385,6 +436,8 @@ public class CompanyBuilder implements Builder<Company> {
 
     /**
      *  <p>Unique identifiers of addresses used as billing addresses.</p>
+     * @param billingAddressIds
+     * @return Builder
      */
 
     public CompanyBuilder billingAddressIds(@Nullable final String... billingAddressIds) {
@@ -394,6 +447,8 @@ public class CompanyBuilder implements Builder<Company> {
 
     /**
      *  <p>Unique identifiers of addresses used as billing addresses.</p>
+     * @param billingAddressIds
+     * @return Builder
      */
 
     public CompanyBuilder billingAddressIds(@Nullable final java.util.List<String> billingAddressIds) {
@@ -403,6 +458,8 @@ public class CompanyBuilder implements Builder<Company> {
 
     /**
      *  <p>Unique identifiers of addresses used as billing addresses.</p>
+     * @param billingAddressIds
+     * @return Builder
      */
 
     public CompanyBuilder plusBillingAddressIds(@Nullable final String... billingAddressIds) {
@@ -415,6 +472,8 @@ public class CompanyBuilder implements Builder<Company> {
 
     /**
      *  <p>Unique identifier of the address used as the default billing address.</p>
+     * @param defaultBillingAddressId
+     * @return Builder
      */
 
     public CompanyBuilder defaultBillingAddressId(@Nullable final String defaultBillingAddressId) {
@@ -424,6 +483,8 @@ public class CompanyBuilder implements Builder<Company> {
 
     /**
      *  <p>Members that are part of the Business Unit in specific roles.</p>
+     * @param associates
+     * @return Builder
      */
 
     public CompanyBuilder associates(final com.commercetools.api.models.business_unit.Associate... associates) {
@@ -433,6 +494,8 @@ public class CompanyBuilder implements Builder<Company> {
 
     /**
      *  <p>Members that are part of the Business Unit in specific roles.</p>
+     * @param associates
+     * @return Builder
      */
 
     public CompanyBuilder associates(
@@ -443,6 +506,8 @@ public class CompanyBuilder implements Builder<Company> {
 
     /**
      *  <p>Members that are part of the Business Unit in specific roles.</p>
+     * @param associates
+     * @return Builder
      */
 
     public CompanyBuilder plusAssociates(final com.commercetools.api.models.business_unit.Associate... associates) {
@@ -455,6 +520,7 @@ public class CompanyBuilder implements Builder<Company> {
 
     /**
      *  <p>Members that are part of the Business Unit in specific roles.</p>
+     * @return Builder
      */
 
     public CompanyBuilder plusAssociates(
@@ -468,6 +534,7 @@ public class CompanyBuilder implements Builder<Company> {
 
     /**
      *  <p>Members that are part of the Business Unit in specific roles.</p>
+     * @return Builder
      */
 
     public CompanyBuilder withAssociates(
@@ -479,6 +546,7 @@ public class CompanyBuilder implements Builder<Company> {
 
     /**
      *  <p>Parent unit of the Business Unit. Only present when the <code>unitType</code> is <code>Division</code>.</p>
+     * @return Builder
      */
 
     public CompanyBuilder parentUnit(
@@ -490,6 +558,8 @@ public class CompanyBuilder implements Builder<Company> {
 
     /**
      *  <p>Parent unit of the Business Unit. Only present when the <code>unitType</code> is <code>Division</code>.</p>
+     * @param parentUnit
+     * @return Builder
      */
 
     public CompanyBuilder parentUnit(
@@ -500,6 +570,7 @@ public class CompanyBuilder implements Builder<Company> {
 
     /**
      *  <p>Top-level unit of the Business Unit. The top-level unit is of <code>unitType</code> <code>Company</code>.</p>
+     * @return Builder
      */
 
     public CompanyBuilder topLevelUnit(
@@ -512,6 +583,8 @@ public class CompanyBuilder implements Builder<Company> {
 
     /**
      *  <p>Top-level unit of the Business Unit. The top-level unit is of <code>unitType</code> <code>Company</code>.</p>
+     * @param topLevelUnit
+     * @return Builder
      */
 
     public CompanyBuilder topLevelUnit(

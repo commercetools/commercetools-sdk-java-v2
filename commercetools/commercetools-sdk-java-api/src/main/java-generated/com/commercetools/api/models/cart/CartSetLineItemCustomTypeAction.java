@@ -36,6 +36,7 @@ public interface CartSetLineItemCustomTypeAction extends CartUpdateAction {
 
     /**
      *  <p><code>id</code> of the LineItem to update.</p>
+     * @return lineItemId
      */
     @NotNull
     @JsonProperty("lineItemId")
@@ -43,6 +44,7 @@ public interface CartSetLineItemCustomTypeAction extends CartUpdateAction {
 
     /**
      *  <p>Defines the Type that extends the Line Item with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Line Item.</p>
+     * @return type
      */
     @Valid
     @JsonProperty("type")
@@ -50,6 +52,7 @@ public interface CartSetLineItemCustomTypeAction extends CartUpdateAction {
 
     /**
      *  <p>Sets the Custom Fields fields for the Line Item.</p>
+     * @return fields
      */
     @Valid
     @JsonProperty("fields")

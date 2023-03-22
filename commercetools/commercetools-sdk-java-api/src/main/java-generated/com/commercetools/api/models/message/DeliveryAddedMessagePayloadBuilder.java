@@ -31,6 +31,7 @@ public class DeliveryAddedMessagePayloadBuilder implements Builder<DeliveryAdded
 
     /**
      *  <p>Delivery that was added to the Order. The Delivery in the Message body does not contain Parcels if those were part of the initial Add Delivery update action. In that case, the update action produces an additional ParcelAddedToDelivery Message containing information about the Parcels.</p>
+     * @return Builder
      */
 
     public DeliveryAddedMessagePayloadBuilder delivery(
@@ -41,6 +42,8 @@ public class DeliveryAddedMessagePayloadBuilder implements Builder<DeliveryAdded
 
     /**
      *  <p>Delivery that was added to the Order. The Delivery in the Message body does not contain Parcels if those were part of the initial Add Delivery update action. In that case, the update action produces an additional ParcelAddedToDelivery Message containing information about the Parcels.</p>
+     * @param delivery
+     * @return Builder
      */
 
     public DeliveryAddedMessagePayloadBuilder delivery(final com.commercetools.api.models.order.Delivery delivery) {
@@ -50,6 +53,8 @@ public class DeliveryAddedMessagePayloadBuilder implements Builder<DeliveryAdded
 
     /**
      *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multi</code> ShippingMode.</p>
+     * @param shippingKey
+     * @return Builder
      */
 
     public DeliveryAddedMessagePayloadBuilder shippingKey(@Nullable final String shippingKey) {

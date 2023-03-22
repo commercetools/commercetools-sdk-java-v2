@@ -32,6 +32,8 @@ public class SetBillingAddressChangeBuilder implements Builder<SetBillingAddress
 
     /**
      *  <p>Update action for <code>setBillingAddress</code></p>
+     * @param change
+     * @return Builder
      */
 
     public SetBillingAddressChangeBuilder change(final String change) {
@@ -41,6 +43,7 @@ public class SetBillingAddressChangeBuilder implements Builder<SetBillingAddress
 
     /**
      *
+     * @return Builder
      */
 
     public SetBillingAddressChangeBuilder nextValue(
@@ -51,6 +54,8 @@ public class SetBillingAddressChangeBuilder implements Builder<SetBillingAddress
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public SetBillingAddressChangeBuilder nextValue(final com.commercetools.history.models.common.Address nextValue) {
@@ -60,6 +65,7 @@ public class SetBillingAddressChangeBuilder implements Builder<SetBillingAddress
 
     /**
      *
+     * @return Builder
      */
 
     public SetBillingAddressChangeBuilder previousValue(
@@ -70,6 +76,8 @@ public class SetBillingAddressChangeBuilder implements Builder<SetBillingAddress
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public SetBillingAddressChangeBuilder previousValue(

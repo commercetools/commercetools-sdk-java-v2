@@ -33,6 +33,7 @@ public interface ParcelTrackingData {
 
     /**
      *
+     * @return parcelId
      */
     @NotNull
     @JsonProperty("parcelId")
@@ -40,6 +41,7 @@ public interface ParcelTrackingData {
 
     /**
      *
+     * @return trackingData
      */
     @Valid
     @JsonProperty("trackingData")

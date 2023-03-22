@@ -26,6 +26,7 @@ public class PaymentAddTransactionActionBuilder implements Builder<PaymentAddTra
 
     /**
      *  <p>Value to append to the <code>transactions</code> array.</p>
+     * @return Builder
      */
 
     public PaymentAddTransactionActionBuilder transaction(
@@ -36,6 +37,8 @@ public class PaymentAddTransactionActionBuilder implements Builder<PaymentAddTra
 
     /**
      *  <p>Value to append to the <code>transactions</code> array.</p>
+     * @param transaction
+     * @return Builder
      */
 
     public PaymentAddTransactionActionBuilder transaction(

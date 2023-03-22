@@ -34,6 +34,8 @@ public class ImportOperationStatusBuilder implements Builder<ImportOperationStat
 
     /**
      *  <p>The ID of the ImportOperation.</p>
+     * @param operationId
+     * @return Builder
      */
 
     public ImportOperationStatusBuilder operationId(@Nullable final String operationId) {
@@ -43,6 +45,8 @@ public class ImportOperationStatusBuilder implements Builder<ImportOperationStat
 
     /**
      *  <p>The validation state of the ImportOperation.</p>
+     * @param state
+     * @return Builder
      */
 
     public ImportOperationStatusBuilder state(
@@ -53,6 +57,8 @@ public class ImportOperationStatusBuilder implements Builder<ImportOperationStat
 
     /**
      *  <p>The validation errors for the ImportOperation. See Errors.</p>
+     * @param errors
+     * @return Builder
      */
 
     public ImportOperationStatusBuilder errors(
@@ -63,6 +69,8 @@ public class ImportOperationStatusBuilder implements Builder<ImportOperationStat
 
     /**
      *  <p>The validation errors for the ImportOperation. See Errors.</p>
+     * @param errors
+     * @return Builder
      */
 
     public ImportOperationStatusBuilder errors(
@@ -73,6 +81,8 @@ public class ImportOperationStatusBuilder implements Builder<ImportOperationStat
 
     /**
      *  <p>The validation errors for the ImportOperation. See Errors.</p>
+     * @param errors
+     * @return Builder
      */
 
     public ImportOperationStatusBuilder plusErrors(
@@ -86,6 +96,7 @@ public class ImportOperationStatusBuilder implements Builder<ImportOperationStat
 
     /**
      *  <p>The validation errors for the ImportOperation. See Errors.</p>
+     * @return Builder
      */
 
     public ImportOperationStatusBuilder plusErrors(
@@ -99,6 +110,7 @@ public class ImportOperationStatusBuilder implements Builder<ImportOperationStat
 
     /**
      *  <p>The validation errors for the ImportOperation. See Errors.</p>
+     * @return Builder
      */
 
     public ImportOperationStatusBuilder withErrors(

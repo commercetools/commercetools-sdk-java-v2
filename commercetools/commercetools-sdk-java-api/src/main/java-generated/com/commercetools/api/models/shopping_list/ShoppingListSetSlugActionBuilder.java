@@ -28,6 +28,7 @@ public class ShoppingListSetSlugActionBuilder implements Builder<ShoppingListSet
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed. Each slug is unique across a Project, but a ShoppingList can have the same slug for different languages. Must match the pattern <code>^[A-Za-z0-9_-]{2,256}+$</code></p>
+     * @return Builder
      */
 
     public ShoppingListSetSlugActionBuilder slug(
@@ -38,6 +39,8 @@ public class ShoppingListSetSlugActionBuilder implements Builder<ShoppingListSet
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed. Each slug is unique across a Project, but a ShoppingList can have the same slug for different languages. Must match the pattern <code>^[A-Za-z0-9_-]{2,256}+$</code></p>
+     * @param slug
+     * @return Builder
      */
 
     public ShoppingListSetSlugActionBuilder slug(

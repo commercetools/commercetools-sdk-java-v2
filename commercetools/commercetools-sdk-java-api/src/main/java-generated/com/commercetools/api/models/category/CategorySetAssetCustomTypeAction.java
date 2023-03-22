@@ -34,6 +34,7 @@ public interface CategorySetAssetCustomTypeAction extends CategoryUpdateAction {
 
     /**
      *  <p>New value to set. Either <code>assetId</code> or <code>assetKey</code> is required.</p>
+     * @return assetId
      */
 
     @JsonProperty("assetId")
@@ -41,6 +42,7 @@ public interface CategorySetAssetCustomTypeAction extends CategoryUpdateAction {
 
     /**
      *  <p>New value to set. Either <code>assetId</code> or <code>assetKey</code> is required.</p>
+     * @return assetKey
      */
 
     @JsonProperty("assetKey")
@@ -48,6 +50,7 @@ public interface CategorySetAssetCustomTypeAction extends CategoryUpdateAction {
 
     /**
      *  <p>Defines the Type that extends the Asset with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Asset.</p>
+     * @return type
      */
     @Valid
     @JsonProperty("type")
@@ -55,6 +58,7 @@ public interface CategorySetAssetCustomTypeAction extends CategoryUpdateAction {
 
     /**
      *  <p>Sets the Custom Fields fields for the Asset.</p>
+     * @return fields
      */
     @Valid
     @JsonProperty("fields")

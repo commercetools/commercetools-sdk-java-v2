@@ -40,6 +40,7 @@ public interface StoreCountriesChangedMessage extends Message {
 
     /**
      *  <p>Countries added to the Store.</p>
+     * @return addedCountries
      */
     @Valid
     @JsonProperty("addedCountries")
@@ -47,6 +48,7 @@ public interface StoreCountriesChangedMessage extends Message {
 
     /**
      *  <p>Countries removed from the Store.</p>
+     * @return removedCountries
      */
     @Valid
     @JsonProperty("removedCountries")

@@ -33,6 +33,7 @@ public interface CustomerGroupChangeNameAction extends CustomerGroupUpdateAction
 
     /**
      *  <p>New name of the CustomerGroup.</p>
+     * @return name
      */
     @NotNull
     @JsonProperty("name")

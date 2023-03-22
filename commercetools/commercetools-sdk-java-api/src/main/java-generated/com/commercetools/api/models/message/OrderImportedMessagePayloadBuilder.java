@@ -26,6 +26,7 @@ public class OrderImportedMessagePayloadBuilder implements Builder<OrderImported
 
     /**
      *  <p>Order that was imported.</p>
+     * @return Builder
      */
 
     public OrderImportedMessagePayloadBuilder order(
@@ -36,6 +37,8 @@ public class OrderImportedMessagePayloadBuilder implements Builder<OrderImported
 
     /**
      *  <p>Order that was imported.</p>
+     * @param order
+     * @return Builder
      */
 
     public OrderImportedMessagePayloadBuilder order(final com.commercetools.api.models.order.Order order) {

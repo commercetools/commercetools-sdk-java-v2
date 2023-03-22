@@ -34,6 +34,7 @@ public interface ExtensionChangeDestinationAction extends ExtensionUpdateAction 
 
     /**
      *  <p>New value to set. Must not be empty.</p>
+     * @return destination
      */
     @NotNull
     @Valid

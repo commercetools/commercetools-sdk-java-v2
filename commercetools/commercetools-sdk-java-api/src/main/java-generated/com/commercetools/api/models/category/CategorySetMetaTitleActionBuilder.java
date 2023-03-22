@@ -28,6 +28,7 @@ public class CategorySetMetaTitleActionBuilder implements Builder<CategorySetMet
 
     /**
      *  <p>Value to set.</p>
+     * @return Builder
      */
 
     public CategorySetMetaTitleActionBuilder metaTitle(
@@ -38,6 +39,8 @@ public class CategorySetMetaTitleActionBuilder implements Builder<CategorySetMet
 
     /**
      *  <p>Value to set.</p>
+     * @param metaTitle
+     * @return Builder
      */
 
     public CategorySetMetaTitleActionBuilder metaTitle(

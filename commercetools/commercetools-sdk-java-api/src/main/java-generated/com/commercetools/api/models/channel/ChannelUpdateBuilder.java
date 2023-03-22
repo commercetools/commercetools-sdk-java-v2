@@ -29,6 +29,8 @@ public class ChannelUpdateBuilder implements Builder<ChannelUpdate> {
 
     /**
      *  <p>Expected version of the Channel on which the changes should be applied. If the expected version does not match the actual version, a ConcurrentModification error is returned.</p>
+     * @param version
+     * @return Builder
      */
 
     public ChannelUpdateBuilder version(final Long version) {
@@ -38,6 +40,8 @@ public class ChannelUpdateBuilder implements Builder<ChannelUpdate> {
 
     /**
      *  <p>Update actions to be performed on the Channel.</p>
+     * @param actions
+     * @return Builder
      */
 
     public ChannelUpdateBuilder actions(final com.commercetools.api.models.channel.ChannelUpdateAction... actions) {
@@ -47,6 +51,8 @@ public class ChannelUpdateBuilder implements Builder<ChannelUpdate> {
 
     /**
      *  <p>Update actions to be performed on the Channel.</p>
+     * @param actions
+     * @return Builder
      */
 
     public ChannelUpdateBuilder actions(
@@ -57,6 +63,8 @@ public class ChannelUpdateBuilder implements Builder<ChannelUpdate> {
 
     /**
      *  <p>Update actions to be performed on the Channel.</p>
+     * @param actions
+     * @return Builder
      */
 
     public ChannelUpdateBuilder plusActions(final com.commercetools.api.models.channel.ChannelUpdateAction... actions) {
@@ -69,6 +77,7 @@ public class ChannelUpdateBuilder implements Builder<ChannelUpdate> {
 
     /**
      *  <p>Update actions to be performed on the Channel.</p>
+     * @return Builder
      */
 
     public ChannelUpdateBuilder plusActions(
@@ -82,6 +91,7 @@ public class ChannelUpdateBuilder implements Builder<ChannelUpdate> {
 
     /**
      *  <p>Update actions to be performed on the Channel.</p>
+     * @return Builder
      */
 
     public ChannelUpdateBuilder withActions(

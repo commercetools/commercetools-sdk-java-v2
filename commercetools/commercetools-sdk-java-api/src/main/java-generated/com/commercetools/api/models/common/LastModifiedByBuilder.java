@@ -37,6 +37,8 @@ public class LastModifiedByBuilder implements Builder<LastModifiedBy> {
 
     /**
      *  <p><code>id</code> of the APIClient which modified the resource.</p>
+     * @param clientId
+     * @return Builder
      */
 
     public LastModifiedByBuilder clientId(@Nullable final String clientId) {
@@ -46,6 +48,8 @@ public class LastModifiedByBuilder implements Builder<LastModifiedBy> {
 
     /**
      *  <p>External user ID provided by <code>X-External-User-ID</code> HTTP Header.</p>
+     * @param externalUserId
+     * @return Builder
      */
 
     public LastModifiedByBuilder externalUserId(@Nullable final String externalUserId) {
@@ -55,6 +59,7 @@ public class LastModifiedByBuilder implements Builder<LastModifiedBy> {
 
     /**
      *  <p>Indicates the Customer who modified the resource using a token from the password flow.</p>
+     * @return Builder
      */
 
     public LastModifiedByBuilder customer(
@@ -65,6 +70,8 @@ public class LastModifiedByBuilder implements Builder<LastModifiedBy> {
 
     /**
      *  <p>Indicates the Customer who modified the resource using a token from the password flow.</p>
+     * @param customer
+     * @return Builder
      */
 
     public LastModifiedByBuilder customer(
@@ -75,6 +82,8 @@ public class LastModifiedByBuilder implements Builder<LastModifiedBy> {
 
     /**
      *  <p>Indicates the anonymous session during which the resource was modified.</p>
+     * @param anonymousId
+     * @return Builder
      */
 
     public LastModifiedByBuilder anonymousId(@Nullable final String anonymousId) {

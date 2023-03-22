@@ -26,6 +26,8 @@ public class MyShoppingListChangeLineItemsOrderActionBuilder
 
     /**
      *  <p>All existing ShoppingListLineItem <code>id</code>s of the ShoppingList in the desired new order.</p>
+     * @param lineItemOrder
+     * @return Builder
      */
 
     public MyShoppingListChangeLineItemsOrderActionBuilder lineItemOrder(final String... lineItemOrder) {
@@ -35,6 +37,8 @@ public class MyShoppingListChangeLineItemsOrderActionBuilder
 
     /**
      *  <p>All existing ShoppingListLineItem <code>id</code>s of the ShoppingList in the desired new order.</p>
+     * @param lineItemOrder
+     * @return Builder
      */
 
     public MyShoppingListChangeLineItemsOrderActionBuilder lineItemOrder(final java.util.List<String> lineItemOrder) {
@@ -44,6 +48,8 @@ public class MyShoppingListChangeLineItemsOrderActionBuilder
 
     /**
      *  <p>All existing ShoppingListLineItem <code>id</code>s of the ShoppingList in the desired new order.</p>
+     * @param lineItemOrder
+     * @return Builder
      */
 
     public MyShoppingListChangeLineItemsOrderActionBuilder plusLineItemOrder(final String... lineItemOrder) {

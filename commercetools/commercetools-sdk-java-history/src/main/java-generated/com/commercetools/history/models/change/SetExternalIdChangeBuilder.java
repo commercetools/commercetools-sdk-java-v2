@@ -31,6 +31,8 @@ public class SetExternalIdChangeBuilder implements Builder<SetExternalIdChange> 
 
     /**
      *  <p>Shape of the action for <code>setExternalId</code></p>
+     * @param change
+     * @return Builder
      */
 
     public SetExternalIdChangeBuilder change(final String change) {
@@ -40,6 +42,8 @@ public class SetExternalIdChangeBuilder implements Builder<SetExternalIdChange> 
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public SetExternalIdChangeBuilder previousValue(final String previousValue) {
@@ -49,6 +53,8 @@ public class SetExternalIdChangeBuilder implements Builder<SetExternalIdChange> 
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public SetExternalIdChangeBuilder nextValue(final String nextValue) {

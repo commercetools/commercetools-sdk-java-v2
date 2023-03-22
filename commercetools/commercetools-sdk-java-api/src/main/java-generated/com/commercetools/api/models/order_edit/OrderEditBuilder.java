@@ -61,6 +61,8 @@ public class OrderEditBuilder implements Builder<OrderEdit> {
 
     /**
      *  <p>Unique identifier of the OrderEdit.</p>
+     * @param id
+     * @return Builder
      */
 
     public OrderEditBuilder id(final String id) {
@@ -70,6 +72,8 @@ public class OrderEditBuilder implements Builder<OrderEdit> {
 
     /**
      *  <p>The current version of the OrderEdit.</p>
+     * @param version
+     * @return Builder
      */
 
     public OrderEditBuilder version(final Long version) {
@@ -79,6 +83,8 @@ public class OrderEditBuilder implements Builder<OrderEdit> {
 
     /**
      *
+     * @param createdAt
+     * @return Builder
      */
 
     public OrderEditBuilder createdAt(final java.time.ZonedDateTime createdAt) {
@@ -88,6 +94,8 @@ public class OrderEditBuilder implements Builder<OrderEdit> {
 
     /**
      *
+     * @param lastModifiedAt
+     * @return Builder
      */
 
     public OrderEditBuilder lastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {
@@ -97,6 +105,7 @@ public class OrderEditBuilder implements Builder<OrderEdit> {
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @return Builder
      */
 
     public OrderEditBuilder lastModifiedBy(
@@ -107,6 +116,8 @@ public class OrderEditBuilder implements Builder<OrderEdit> {
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param lastModifiedBy
+     * @return Builder
      */
 
     public OrderEditBuilder lastModifiedBy(
@@ -117,6 +128,7 @@ public class OrderEditBuilder implements Builder<OrderEdit> {
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @return Builder
      */
 
     public OrderEditBuilder createdBy(
@@ -127,6 +139,8 @@ public class OrderEditBuilder implements Builder<OrderEdit> {
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param createdBy
+     * @return Builder
      */
 
     public OrderEditBuilder createdBy(@Nullable final com.commercetools.api.models.common.CreatedBy createdBy) {
@@ -136,6 +150,8 @@ public class OrderEditBuilder implements Builder<OrderEdit> {
 
     /**
      *  <p>User-defined unique identifier of the OrderEdit.</p>
+     * @param key
+     * @return Builder
      */
 
     public OrderEditBuilder key(@Nullable final String key) {
@@ -145,6 +161,7 @@ public class OrderEditBuilder implements Builder<OrderEdit> {
 
     /**
      *  <p>The order to be updated with this edit.</p>
+     * @return Builder
      */
 
     public OrderEditBuilder resource(
@@ -155,6 +172,8 @@ public class OrderEditBuilder implements Builder<OrderEdit> {
 
     /**
      *  <p>The order to be updated with this edit.</p>
+     * @param resource
+     * @return Builder
      */
 
     public OrderEditBuilder resource(final com.commercetools.api.models.order.OrderReference resource) {
@@ -164,6 +183,8 @@ public class OrderEditBuilder implements Builder<OrderEdit> {
 
     /**
      *  <p>The actions to apply to the Order. Cannot be updated after the edit has been applied.</p>
+     * @param stagedActions
+     * @return Builder
      */
 
     public OrderEditBuilder stagedActions(
@@ -174,6 +195,8 @@ public class OrderEditBuilder implements Builder<OrderEdit> {
 
     /**
      *  <p>The actions to apply to the Order. Cannot be updated after the edit has been applied.</p>
+     * @param stagedActions
+     * @return Builder
      */
 
     public OrderEditBuilder stagedActions(
@@ -184,6 +207,8 @@ public class OrderEditBuilder implements Builder<OrderEdit> {
 
     /**
      *  <p>The actions to apply to the Order. Cannot be updated after the edit has been applied.</p>
+     * @param stagedActions
+     * @return Builder
      */
 
     public OrderEditBuilder plusStagedActions(
@@ -197,6 +222,7 @@ public class OrderEditBuilder implements Builder<OrderEdit> {
 
     /**
      *  <p>The actions to apply to the Order. Cannot be updated after the edit has been applied.</p>
+     * @return Builder
      */
 
     public OrderEditBuilder plusStagedActions(
@@ -211,6 +237,7 @@ public class OrderEditBuilder implements Builder<OrderEdit> {
 
     /**
      *  <p>The actions to apply to the Order. Cannot be updated after the edit has been applied.</p>
+     * @return Builder
      */
 
     public OrderEditBuilder withStagedActions(
@@ -223,6 +250,7 @@ public class OrderEditBuilder implements Builder<OrderEdit> {
 
     /**
      *
+     * @return Builder
      */
 
     public OrderEditBuilder custom(
@@ -233,6 +261,8 @@ public class OrderEditBuilder implements Builder<OrderEdit> {
 
     /**
      *
+     * @param custom
+     * @return Builder
      */
 
     public OrderEditBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFields custom) {
@@ -242,6 +272,8 @@ public class OrderEditBuilder implements Builder<OrderEdit> {
 
     /**
      *  <p>Contains a preview of the changes in case of unapplied edit. For applied edits, it contains the summary of the changes.</p>
+     * @param result
+     * @return Builder
      */
 
     public OrderEditBuilder result(final com.commercetools.api.models.order_edit.OrderEditResult result) {
@@ -251,6 +283,7 @@ public class OrderEditBuilder implements Builder<OrderEdit> {
 
     /**
      *  <p>Contains a preview of the changes in case of unapplied edit. For applied edits, it contains the summary of the changes.</p>
+     * @return Builder
      */
 
     public OrderEditBuilder result(
@@ -261,6 +294,8 @@ public class OrderEditBuilder implements Builder<OrderEdit> {
 
     /**
      *  <p>This field can be used to add textual information regarding the edit.</p>
+     * @param comment
+     * @return Builder
      */
 
     public OrderEditBuilder comment(@Nullable final String comment) {

@@ -28,6 +28,8 @@ public class AzureEventGridDestinationBuilder implements Builder<AzureEventGridD
 
     /**
      *  <p>URI of the topic.</p>
+     * @param uri
+     * @return Builder
      */
 
     public AzureEventGridDestinationBuilder uri(final String uri) {
@@ -37,6 +39,8 @@ public class AzureEventGridDestinationBuilder implements Builder<AzureEventGridD
 
     /**
      *  <p>Partially hidden on retrieval for security reasons.</p>
+     * @param accessKey
+     * @return Builder
      */
 
     public AzureEventGridDestinationBuilder accessKey(final String accessKey) {

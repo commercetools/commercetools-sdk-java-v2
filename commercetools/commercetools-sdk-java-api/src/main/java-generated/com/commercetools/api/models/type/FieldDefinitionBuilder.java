@@ -40,6 +40,8 @@ public class FieldDefinitionBuilder implements Builder<FieldDefinition> {
 
     /**
      *  <p>Data type of the Custom Field to define.</p>
+     * @param type
+     * @return Builder
      */
 
     public FieldDefinitionBuilder type(final com.commercetools.api.models.type.FieldType type) {
@@ -49,6 +51,7 @@ public class FieldDefinitionBuilder implements Builder<FieldDefinition> {
 
     /**
      *  <p>Data type of the Custom Field to define.</p>
+     * @return Builder
      */
 
     public FieldDefinitionBuilder type(
@@ -59,6 +62,8 @@ public class FieldDefinitionBuilder implements Builder<FieldDefinition> {
 
     /**
      *  <p>Name of the Custom Field to define. Must be unique for a given ResourceTypeId. In case there is a FieldDefinition with the same <code>name</code> in another Type, both FieldDefinitions must have the same <code>type</code>.</p>
+     * @param name
+     * @return Builder
      */
 
     public FieldDefinitionBuilder name(final String name) {
@@ -68,6 +73,7 @@ public class FieldDefinitionBuilder implements Builder<FieldDefinition> {
 
     /**
      *  <p>A human-readable label for the field.</p>
+     * @return Builder
      */
 
     public FieldDefinitionBuilder label(
@@ -78,6 +84,8 @@ public class FieldDefinitionBuilder implements Builder<FieldDefinition> {
 
     /**
      *  <p>A human-readable label for the field.</p>
+     * @param label
+     * @return Builder
      */
 
     public FieldDefinitionBuilder label(final com.commercetools.api.models.common.LocalizedString label) {
@@ -87,6 +95,8 @@ public class FieldDefinitionBuilder implements Builder<FieldDefinition> {
 
     /**
      *  <p>Defines whether the field is required to have a value.</p>
+     * @param required
+     * @return Builder
      */
 
     public FieldDefinitionBuilder required(final Boolean required) {
@@ -96,6 +106,8 @@ public class FieldDefinitionBuilder implements Builder<FieldDefinition> {
 
     /**
      *  <p>Defines the visual representation of the field in user interfaces like the Merchant Center. It is only relevant for string-based FieldTypes like CustomFieldStringType and CustomFieldLocalizedStringType.</p>
+     * @param inputHint
+     * @return Builder
      */
 
     public FieldDefinitionBuilder inputHint(

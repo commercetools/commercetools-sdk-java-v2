@@ -42,6 +42,7 @@ public interface BusinessUnitAssociatesSetMessage extends Message {
 
     /**
      *  <p>The list of Associates that was updated on the Business Unit.</p>
+     * @return associates
      */
     @NotNull
     @Valid

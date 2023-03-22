@@ -31,6 +31,7 @@ public interface UserProvidedIdentifiers {
 
     /**
      *  <p>User-provided unique identifier of the resource.</p>
+     * @return key
      */
 
     @JsonProperty("key")
@@ -38,6 +39,7 @@ public interface UserProvidedIdentifiers {
 
     /**
      *  <p>User-provided unique identifier of the resource.</p>
+     * @return externalId
      */
 
     @JsonProperty("externalId")
@@ -45,6 +47,7 @@ public interface UserProvidedIdentifiers {
 
     /**
      *  <p>User-provided unique identifier of an Order.</p>
+     * @return orderNumber
      */
 
     @JsonProperty("orderNumber")
@@ -52,6 +55,7 @@ public interface UserProvidedIdentifiers {
 
     /**
      *  <p>User-provided unique identifier of a Customer.</p>
+     * @return customerNumber
      */
 
     @JsonProperty("customerNumber")
@@ -59,6 +63,7 @@ public interface UserProvidedIdentifiers {
 
     /**
      *  <p>Unique SKU of a Product Variant.</p>
+     * @return sku
      */
 
     @JsonProperty("sku")
@@ -66,6 +71,7 @@ public interface UserProvidedIdentifiers {
 
     /**
      *  <p>Unique identifier usually used in deep-link URLs for a Product. The value corresponds to the slug in the <code>current</code> Product Projection.</p>
+     * @return slug
      */
     @Valid
     @JsonProperty("slug")
@@ -73,6 +79,7 @@ public interface UserProvidedIdentifiers {
 
     /**
      *  <p>Unique identifier of a Custom Object.</p>
+     * @return containerAndKey
      */
     @Valid
     @JsonProperty("containerAndKey")

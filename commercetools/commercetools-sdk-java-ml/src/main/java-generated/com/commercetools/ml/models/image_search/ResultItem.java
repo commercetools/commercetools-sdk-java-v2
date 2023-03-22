@@ -34,6 +34,7 @@ public interface ResultItem {
 
     /**
      *  <p>The URL of the image.</p>
+     * @return imageUrl
      */
     @NotNull
     @JsonProperty("imageUrl")
@@ -41,6 +42,7 @@ public interface ResultItem {
 
     /**
      *  <p>An array of product variants containing the image URL.</p>
+     * @return productVariants
      */
     @NotNull
     @Valid

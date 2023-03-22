@@ -37,6 +37,7 @@ public interface ChangeAttributeConstraintChange extends Change {
 
     /**
      *
+     * @return type
      */
     @NotNull
     @JsonProperty("type")
@@ -44,6 +45,7 @@ public interface ChangeAttributeConstraintChange extends Change {
 
     /**
      *
+     * @return change
      */
     @NotNull
     @JsonProperty("change")
@@ -51,6 +53,7 @@ public interface ChangeAttributeConstraintChange extends Change {
 
     /**
      *  <p>name of the updated attribute</p>
+     * @return attributeName
      */
     @NotNull
     @JsonProperty("attributeName")
@@ -58,6 +61,7 @@ public interface ChangeAttributeConstraintChange extends Change {
 
     /**
      *
+     * @return previousValue
      */
     @NotNull
     @JsonProperty("previousValue")
@@ -65,6 +69,7 @@ public interface ChangeAttributeConstraintChange extends Change {
 
     /**
      *
+     * @return nextValue
      */
     @NotNull
     @JsonProperty("nextValue")

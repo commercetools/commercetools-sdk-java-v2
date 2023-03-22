@@ -28,6 +28,7 @@ public interface TrackingData {
 
     /**
      *
+     * @return trackingId
      */
 
     @JsonProperty("trackingId")
@@ -35,6 +36,7 @@ public interface TrackingData {
 
     /**
      *
+     * @return carrier
      */
 
     @JsonProperty("carrier")
@@ -42,6 +44,7 @@ public interface TrackingData {
 
     /**
      *
+     * @return provider
      */
 
     @JsonProperty("provider")
@@ -49,6 +52,7 @@ public interface TrackingData {
 
     /**
      *
+     * @return providerTransaction
      */
 
     @JsonProperty("providerTransaction")
@@ -56,6 +60,7 @@ public interface TrackingData {
 
     /**
      *
+     * @return isReturn
      */
 
     @JsonProperty("isReturn")

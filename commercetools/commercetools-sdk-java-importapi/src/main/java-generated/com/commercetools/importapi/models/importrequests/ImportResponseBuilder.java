@@ -26,6 +26,8 @@ public class ImportResponseBuilder implements Builder<ImportResponse> {
 
     /**
      *
+     * @param operationStatus
+     * @return Builder
      */
 
     public ImportResponseBuilder operationStatus(
@@ -36,6 +38,8 @@ public class ImportResponseBuilder implements Builder<ImportResponse> {
 
     /**
      *
+     * @param operationStatus
+     * @return Builder
      */
 
     public ImportResponseBuilder operationStatus(
@@ -46,6 +50,8 @@ public class ImportResponseBuilder implements Builder<ImportResponse> {
 
     /**
      *
+     * @param operationStatus
+     * @return Builder
      */
 
     public ImportResponseBuilder plusOperationStatus(
@@ -59,6 +65,7 @@ public class ImportResponseBuilder implements Builder<ImportResponse> {
 
     /**
      *
+     * @return Builder
      */
 
     public ImportResponseBuilder plusOperationStatus(
@@ -74,6 +81,7 @@ public class ImportResponseBuilder implements Builder<ImportResponse> {
 
     /**
      *
+     * @return Builder
      */
 
     public ImportResponseBuilder withOperationStatus(

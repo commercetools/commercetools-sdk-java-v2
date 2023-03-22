@@ -67,6 +67,8 @@ public class ChannelBuilder implements Builder<Channel> {
 
     /**
      *  <p>Unique identifier of the Channel.</p>
+     * @param id
+     * @return Builder
      */
 
     public ChannelBuilder id(final String id) {
@@ -76,6 +78,8 @@ public class ChannelBuilder implements Builder<Channel> {
 
     /**
      *  <p>Current version of the Channel.</p>
+     * @param version
+     * @return Builder
      */
 
     public ChannelBuilder version(final Long version) {
@@ -85,6 +89,8 @@ public class ChannelBuilder implements Builder<Channel> {
 
     /**
      *  <p>Date and time (UTC) the Channel was initially created.</p>
+     * @param createdAt
+     * @return Builder
      */
 
     public ChannelBuilder createdAt(final java.time.ZonedDateTime createdAt) {
@@ -94,6 +100,8 @@ public class ChannelBuilder implements Builder<Channel> {
 
     /**
      *  <p>Date and time (UTC) the Channel was last updated.</p>
+     * @param lastModifiedAt
+     * @return Builder
      */
 
     public ChannelBuilder lastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {
@@ -103,6 +111,7 @@ public class ChannelBuilder implements Builder<Channel> {
 
     /**
      *  <p>Present on resources updated after 1 February 2019 except for events not tracked.</p>
+     * @return Builder
      */
 
     public ChannelBuilder lastModifiedBy(
@@ -113,6 +122,8 @@ public class ChannelBuilder implements Builder<Channel> {
 
     /**
      *  <p>Present on resources updated after 1 February 2019 except for events not tracked.</p>
+     * @param lastModifiedBy
+     * @return Builder
      */
 
     public ChannelBuilder lastModifiedBy(
@@ -123,6 +134,7 @@ public class ChannelBuilder implements Builder<Channel> {
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @return Builder
      */
 
     public ChannelBuilder createdBy(
@@ -133,6 +145,8 @@ public class ChannelBuilder implements Builder<Channel> {
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param createdBy
+     * @return Builder
      */
 
     public ChannelBuilder createdBy(@Nullable final com.commercetools.api.models.common.CreatedBy createdBy) {
@@ -142,6 +156,8 @@ public class ChannelBuilder implements Builder<Channel> {
 
     /**
      *  <p>User-defined unique identifier of the Channel.</p>
+     * @param key
+     * @return Builder
      */
 
     public ChannelBuilder key(final String key) {
@@ -151,6 +167,8 @@ public class ChannelBuilder implements Builder<Channel> {
 
     /**
      *  <p>Roles of the Channel.</p>
+     * @param roles
+     * @return Builder
      */
 
     public ChannelBuilder roles(final com.commercetools.api.models.channel.ChannelRoleEnum... roles) {
@@ -160,6 +178,8 @@ public class ChannelBuilder implements Builder<Channel> {
 
     /**
      *  <p>Roles of the Channel.</p>
+     * @param roles
+     * @return Builder
      */
 
     public ChannelBuilder roles(final java.util.List<com.commercetools.api.models.channel.ChannelRoleEnum> roles) {
@@ -169,6 +189,8 @@ public class ChannelBuilder implements Builder<Channel> {
 
     /**
      *  <p>Roles of the Channel.</p>
+     * @param roles
+     * @return Builder
      */
 
     public ChannelBuilder plusRoles(final com.commercetools.api.models.channel.ChannelRoleEnum... roles) {
@@ -181,6 +203,7 @@ public class ChannelBuilder implements Builder<Channel> {
 
     /**
      *  <p>Name of the Channel.</p>
+     * @return Builder
      */
 
     public ChannelBuilder name(
@@ -191,6 +214,8 @@ public class ChannelBuilder implements Builder<Channel> {
 
     /**
      *  <p>Name of the Channel.</p>
+     * @param name
+     * @return Builder
      */
 
     public ChannelBuilder name(@Nullable final com.commercetools.api.models.common.LocalizedString name) {
@@ -200,6 +225,7 @@ public class ChannelBuilder implements Builder<Channel> {
 
     /**
      *  <p>Description of the Channel.</p>
+     * @return Builder
      */
 
     public ChannelBuilder description(
@@ -210,6 +236,8 @@ public class ChannelBuilder implements Builder<Channel> {
 
     /**
      *  <p>Description of the Channel.</p>
+     * @param description
+     * @return Builder
      */
 
     public ChannelBuilder description(@Nullable final com.commercetools.api.models.common.LocalizedString description) {
@@ -219,6 +247,7 @@ public class ChannelBuilder implements Builder<Channel> {
 
     /**
      *  <p>Address where the Channel is located (for example, if the Channel is a physical store).</p>
+     * @return Builder
      */
 
     public ChannelBuilder address(
@@ -229,6 +258,8 @@ public class ChannelBuilder implements Builder<Channel> {
 
     /**
      *  <p>Address where the Channel is located (for example, if the Channel is a physical store).</p>
+     * @param address
+     * @return Builder
      */
 
     public ChannelBuilder address(@Nullable final com.commercetools.api.models.common.Address address) {
@@ -238,6 +269,7 @@ public class ChannelBuilder implements Builder<Channel> {
 
     /**
      *  <p>Statistics about the review ratings taken into account for the Channel.</p>
+     * @return Builder
      */
 
     public ChannelBuilder reviewRatingStatistics(
@@ -250,6 +282,8 @@ public class ChannelBuilder implements Builder<Channel> {
 
     /**
      *  <p>Statistics about the review ratings taken into account for the Channel.</p>
+     * @param reviewRatingStatistics
+     * @return Builder
      */
 
     public ChannelBuilder reviewRatingStatistics(
@@ -260,6 +294,7 @@ public class ChannelBuilder implements Builder<Channel> {
 
     /**
      *  <p>Custom Fields defined for the Channel.</p>
+     * @return Builder
      */
 
     public ChannelBuilder custom(
@@ -270,6 +305,8 @@ public class ChannelBuilder implements Builder<Channel> {
 
     /**
      *  <p>Custom Fields defined for the Channel.</p>
+     * @param custom
+     * @return Builder
      */
 
     public ChannelBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFields custom) {
@@ -279,6 +316,8 @@ public class ChannelBuilder implements Builder<Channel> {
 
     /**
      *  <p>GeoJSON geometry object encoding the geo location of the Channel.</p>
+     * @param geoLocation
+     * @return Builder
      */
 
     public ChannelBuilder geoLocation(@Nullable final com.commercetools.api.models.common.GeoJson geoLocation) {
@@ -288,6 +327,7 @@ public class ChannelBuilder implements Builder<Channel> {
 
     /**
      *  <p>GeoJSON geometry object encoding the geo location of the Channel.</p>
+     * @return Builder
      */
 
     public ChannelBuilder geoLocation(

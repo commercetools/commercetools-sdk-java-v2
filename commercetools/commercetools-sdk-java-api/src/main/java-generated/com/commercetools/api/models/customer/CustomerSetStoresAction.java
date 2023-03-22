@@ -33,6 +33,7 @@ public interface CustomerSetStoresAction extends CustomerUpdateAction {
 
     /**
      *  <p>ResourceIdentifier of the Stores to set.</p>
+     * @return stores
      */
     @Valid
     @JsonProperty("stores")

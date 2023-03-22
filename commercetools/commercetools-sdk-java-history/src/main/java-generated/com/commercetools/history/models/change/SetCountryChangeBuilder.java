@@ -31,6 +31,8 @@ public class SetCountryChangeBuilder implements Builder<SetCountryChange> {
 
     /**
      *  <p>Update action for <code>setCountry</code></p>
+     * @param change
+     * @return Builder
      */
 
     public SetCountryChangeBuilder change(final String change) {
@@ -40,6 +42,8 @@ public class SetCountryChangeBuilder implements Builder<SetCountryChange> {
 
     /**
      *  <p>Two-digit country code as per ISO 3166-1 alpha-2.</p>
+     * @param previousValue
+     * @return Builder
      */
 
     public SetCountryChangeBuilder previousValue(final String previousValue) {
@@ -49,6 +53,8 @@ public class SetCountryChangeBuilder implements Builder<SetCountryChange> {
 
     /**
      *  <p>Two-digit country code as per ISO 3166-1 alpha-2.</p>
+     * @param nextValue
+     * @return Builder
      */
 
     public SetCountryChangeBuilder nextValue(final String nextValue) {

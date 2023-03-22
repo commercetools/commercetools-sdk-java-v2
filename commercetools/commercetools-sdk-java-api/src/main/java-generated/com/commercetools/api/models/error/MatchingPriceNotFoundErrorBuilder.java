@@ -48,6 +48,8 @@ public class MatchingPriceNotFoundErrorBuilder implements Builder<MatchingPriceN
 
     /**
      *  <p><code>"The variant $variantId of product $productId does not contain a price for currency $currencyCode, $country, $customerGroup, $channel."</code></p>
+     * @param message
+     * @return Builder
      */
 
     public MatchingPriceNotFoundErrorBuilder message(final String message) {
@@ -78,6 +80,8 @@ public class MatchingPriceNotFoundErrorBuilder implements Builder<MatchingPriceN
 
     /**
      *  <p>Unique identifier of a Product.</p>
+     * @param productId
+     * @return Builder
      */
 
     public MatchingPriceNotFoundErrorBuilder productId(final String productId) {
@@ -87,6 +91,8 @@ public class MatchingPriceNotFoundErrorBuilder implements Builder<MatchingPriceN
 
     /**
      *  <p>Unique identifier of a ProductVariant in the Product.</p>
+     * @param variantId
+     * @return Builder
      */
 
     public MatchingPriceNotFoundErrorBuilder variantId(final Integer variantId) {
@@ -96,6 +102,8 @@ public class MatchingPriceNotFoundErrorBuilder implements Builder<MatchingPriceN
 
     /**
      *  <p>Currency code of the country.</p>
+     * @param currency
+     * @return Builder
      */
 
     public MatchingPriceNotFoundErrorBuilder currency(@Nullable final String currency) {
@@ -105,6 +113,8 @@ public class MatchingPriceNotFoundErrorBuilder implements Builder<MatchingPriceN
 
     /**
      *  <p>Country code of the geographic location.</p>
+     * @param country
+     * @return Builder
      */
 
     public MatchingPriceNotFoundErrorBuilder country(@Nullable final String country) {
@@ -114,6 +124,7 @@ public class MatchingPriceNotFoundErrorBuilder implements Builder<MatchingPriceN
 
     /**
      *  <p>Customer Group associated with the Price.</p>
+     * @return Builder
      */
 
     public MatchingPriceNotFoundErrorBuilder customerGroup(
@@ -126,6 +137,8 @@ public class MatchingPriceNotFoundErrorBuilder implements Builder<MatchingPriceN
 
     /**
      *  <p>Customer Group associated with the Price.</p>
+     * @param customerGroup
+     * @return Builder
      */
 
     public MatchingPriceNotFoundErrorBuilder customerGroup(
@@ -136,6 +149,7 @@ public class MatchingPriceNotFoundErrorBuilder implements Builder<MatchingPriceN
 
     /**
      *  <p>Channel associated with the Price.</p>
+     * @return Builder
      */
 
     public MatchingPriceNotFoundErrorBuilder channel(
@@ -146,6 +160,8 @@ public class MatchingPriceNotFoundErrorBuilder implements Builder<MatchingPriceN
 
     /**
      *  <p>Channel associated with the Price.</p>
+     * @param channel
+     * @return Builder
      */
 
     public MatchingPriceNotFoundErrorBuilder channel(

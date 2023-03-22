@@ -34,6 +34,7 @@ public interface ShoppingListChangeLineItemQuantityAction extends ShoppingListUp
 
     /**
      *  <p>The <code>id</code> of the ShoppingListLineItem to update.</p>
+     * @return lineItemId
      */
     @NotNull
     @JsonProperty("lineItemId")
@@ -41,6 +42,7 @@ public interface ShoppingListChangeLineItemQuantityAction extends ShoppingListUp
 
     /**
      *  <p>New value to set. If <code>0</code>, the ShoppingListLineItem is removed from the ShoppingList.</p>
+     * @return quantity
      */
     @NotNull
     @JsonProperty("quantity")

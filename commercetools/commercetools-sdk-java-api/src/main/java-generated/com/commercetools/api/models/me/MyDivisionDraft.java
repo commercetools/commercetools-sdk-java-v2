@@ -37,6 +37,7 @@ public interface MyDivisionDraft extends MyBusinessUnitDraft, io.vrap.rmf.base.c
 
     /**
      *  <p>The parent unit of this Division. Can be a Company or a Division.</p>
+     * @return parentUnit
      */
     @NotNull
     @Valid

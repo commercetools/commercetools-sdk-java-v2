@@ -40,6 +40,7 @@ public interface TaxCategoryUpdateAction
 
     /**
      *
+     * @return action
      */
     @NotNull
     @JsonProperty("action")

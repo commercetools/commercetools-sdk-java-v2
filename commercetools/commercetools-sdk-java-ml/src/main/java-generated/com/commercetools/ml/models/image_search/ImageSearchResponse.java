@@ -35,6 +35,7 @@ public interface ImageSearchResponse {
 
     /**
      *  <p>The maximum number of results to return from a query.</p>
+     * @return count
      */
     @NotNull
     @JsonProperty("count")
@@ -42,6 +43,7 @@ public interface ImageSearchResponse {
 
     /**
      *  <p>Number of elements skipped.</p>
+     * @return offset
      */
     @NotNull
     @JsonProperty("offset")
@@ -49,6 +51,7 @@ public interface ImageSearchResponse {
 
     /**
      *  <p>The total number of product images that were have been analyzed.</p>
+     * @return total
      */
     @NotNull
     @JsonProperty("total")
@@ -56,6 +59,7 @@ public interface ImageSearchResponse {
 
     /**
      *  <p>An array of image URLs of images that are similar to the query image. If no matching images are found, results is empty.</p>
+     * @return results
      */
     @NotNull
     @Valid

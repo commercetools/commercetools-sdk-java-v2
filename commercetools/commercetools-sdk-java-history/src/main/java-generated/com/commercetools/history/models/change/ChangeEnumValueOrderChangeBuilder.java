@@ -35,6 +35,8 @@ public class ChangeEnumValueOrderChangeBuilder implements Builder<ChangeEnumValu
 
     /**
      *  <p>Update action for <code>changeEnumValueOrder</code> on types</p>
+     * @param change
+     * @return Builder
      */
 
     public ChangeEnumValueOrderChangeBuilder change(final String change) {
@@ -44,6 +46,8 @@ public class ChangeEnumValueOrderChangeBuilder implements Builder<ChangeEnumValu
 
     /**
      *  <p>The name of the field/attribute definition updated.</p>
+     * @param fieldName
+     * @return Builder
      */
 
     public ChangeEnumValueOrderChangeBuilder fieldName(final String fieldName) {
@@ -53,6 +57,8 @@ public class ChangeEnumValueOrderChangeBuilder implements Builder<ChangeEnumValu
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public ChangeEnumValueOrderChangeBuilder nextValue(
@@ -63,6 +69,8 @@ public class ChangeEnumValueOrderChangeBuilder implements Builder<ChangeEnumValu
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public ChangeEnumValueOrderChangeBuilder nextValue(
@@ -73,6 +81,8 @@ public class ChangeEnumValueOrderChangeBuilder implements Builder<ChangeEnumValu
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public ChangeEnumValueOrderChangeBuilder plusNextValue(
@@ -86,6 +96,7 @@ public class ChangeEnumValueOrderChangeBuilder implements Builder<ChangeEnumValu
 
     /**
      *
+     * @return Builder
      */
 
     public ChangeEnumValueOrderChangeBuilder plusNextValue(
@@ -99,6 +110,7 @@ public class ChangeEnumValueOrderChangeBuilder implements Builder<ChangeEnumValu
 
     /**
      *
+     * @return Builder
      */
 
     public ChangeEnumValueOrderChangeBuilder withNextValue(
@@ -110,6 +122,8 @@ public class ChangeEnumValueOrderChangeBuilder implements Builder<ChangeEnumValu
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public ChangeEnumValueOrderChangeBuilder previousValue(
@@ -120,6 +134,8 @@ public class ChangeEnumValueOrderChangeBuilder implements Builder<ChangeEnumValu
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public ChangeEnumValueOrderChangeBuilder previousValue(
@@ -130,6 +146,8 @@ public class ChangeEnumValueOrderChangeBuilder implements Builder<ChangeEnumValu
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public ChangeEnumValueOrderChangeBuilder plusPreviousValue(
@@ -143,6 +161,7 @@ public class ChangeEnumValueOrderChangeBuilder implements Builder<ChangeEnumValu
 
     /**
      *
+     * @return Builder
      */
 
     public ChangeEnumValueOrderChangeBuilder plusPreviousValue(
@@ -157,6 +176,7 @@ public class ChangeEnumValueOrderChangeBuilder implements Builder<ChangeEnumValu
 
     /**
      *
+     * @return Builder
      */
 
     public ChangeEnumValueOrderChangeBuilder withPreviousValue(

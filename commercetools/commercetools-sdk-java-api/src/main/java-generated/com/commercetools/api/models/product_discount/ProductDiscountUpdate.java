@@ -34,6 +34,7 @@ public interface ProductDiscountUpdate extends
 
     /**
      *  <p>Expected version of the ProductDiscount on which the changes should be applied. If the expected version does not match the actual version, a ConcurrentModification error is returned.</p>
+     * @return version
      */
     @NotNull
     @JsonProperty("version")
@@ -41,6 +42,7 @@ public interface ProductDiscountUpdate extends
 
     /**
      *  <p>Update actions to be performed on the ProductDiscount.</p>
+     * @return actions
      */
     @NotNull
     @Valid

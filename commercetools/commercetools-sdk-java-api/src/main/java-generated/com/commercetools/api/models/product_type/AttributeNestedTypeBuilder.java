@@ -26,6 +26,7 @@ public class AttributeNestedTypeBuilder implements Builder<AttributeNestedType> 
 
     /**
      *  <p>Attributes that can be stored as nested Attributes of the current Attribute.</p>
+     * @return Builder
      */
 
     public AttributeNestedTypeBuilder typeReference(
@@ -37,6 +38,8 @@ public class AttributeNestedTypeBuilder implements Builder<AttributeNestedType> 
 
     /**
      *  <p>Attributes that can be stored as nested Attributes of the current Attribute.</p>
+     * @param typeReference
+     * @return Builder
      */
 
     public AttributeNestedTypeBuilder typeReference(

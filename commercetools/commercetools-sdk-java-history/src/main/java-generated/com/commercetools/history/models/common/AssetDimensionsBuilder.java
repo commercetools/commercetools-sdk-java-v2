@@ -28,6 +28,8 @@ public class AssetDimensionsBuilder implements Builder<AssetDimensions> {
 
     /**
      *
+     * @param w
+     * @return Builder
      */
 
     public AssetDimensionsBuilder w(final Integer w) {
@@ -37,6 +39,8 @@ public class AssetDimensionsBuilder implements Builder<AssetDimensions> {
 
     /**
      *
+     * @param h
+     * @return Builder
      */
 
     public AssetDimensionsBuilder h(final Integer h) {

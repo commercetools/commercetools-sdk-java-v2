@@ -29,6 +29,7 @@ public class BusinessUnitDefaultShippingAddressSetMessagePayloadBuilder
 
     /**
      *  <p>The address that was set as the default shipping address.</p>
+     * @return Builder
      */
 
     public BusinessUnitDefaultShippingAddressSetMessagePayloadBuilder address(
@@ -39,6 +40,8 @@ public class BusinessUnitDefaultShippingAddressSetMessagePayloadBuilder
 
     /**
      *  <p>The address that was set as the default shipping address.</p>
+     * @param address
+     * @return Builder
      */
 
     public BusinessUnitDefaultShippingAddressSetMessagePayloadBuilder address(

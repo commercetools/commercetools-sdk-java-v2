@@ -31,6 +31,7 @@ public interface PaymentStatus {
 
     /**
      *  <p>External reference that identifies the current status of the Payment.</p>
+     * @return interfaceCode
      */
 
     @JsonProperty("interfaceCode")
@@ -38,6 +39,7 @@ public interface PaymentStatus {
 
     /**
      *  <p>Text describing the current status of the Payment.</p>
+     * @return interfaceText
      */
 
     @JsonProperty("interfaceText")
@@ -45,6 +47,7 @@ public interface PaymentStatus {
 
     /**
      *  <p>Reference to a State.</p>
+     * @return state
      */
     @Valid
     @JsonProperty("state")

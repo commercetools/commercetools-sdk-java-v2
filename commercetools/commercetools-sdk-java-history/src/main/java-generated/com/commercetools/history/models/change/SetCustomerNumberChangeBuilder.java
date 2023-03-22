@@ -31,6 +31,8 @@ public class SetCustomerNumberChangeBuilder implements Builder<SetCustomerNumber
 
     /**
      *  <p>Shape of the action for <code>setCustomerNumber</code></p>
+     * @param change
+     * @return Builder
      */
 
     public SetCustomerNumberChangeBuilder change(final String change) {
@@ -40,6 +42,8 @@ public class SetCustomerNumberChangeBuilder implements Builder<SetCustomerNumber
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public SetCustomerNumberChangeBuilder previousValue(final String previousValue) {
@@ -49,6 +53,8 @@ public class SetCustomerNumberChangeBuilder implements Builder<SetCustomerNumber
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public SetCustomerNumberChangeBuilder nextValue(final String nextValue) {

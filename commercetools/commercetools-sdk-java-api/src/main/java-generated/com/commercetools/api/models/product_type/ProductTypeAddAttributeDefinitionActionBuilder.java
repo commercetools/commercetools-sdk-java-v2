@@ -27,6 +27,7 @@ public class ProductTypeAddAttributeDefinitionActionBuilder
 
     /**
      *  <p>Value to append to <code>attributes</code>.</p>
+     * @return Builder
      */
 
     public ProductTypeAddAttributeDefinitionActionBuilder attribute(
@@ -38,6 +39,8 @@ public class ProductTypeAddAttributeDefinitionActionBuilder
 
     /**
      *  <p>Value to append to <code>attributes</code>.</p>
+     * @param attribute
+     * @return Builder
      */
 
     public ProductTypeAddAttributeDefinitionActionBuilder attribute(

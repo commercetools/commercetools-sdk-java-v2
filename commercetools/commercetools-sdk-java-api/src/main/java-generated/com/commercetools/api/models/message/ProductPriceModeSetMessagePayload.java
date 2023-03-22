@@ -34,6 +34,7 @@ public interface ProductPriceModeSetMessagePayload extends MessagePayload {
 
     /**
      *  <p>The PriceMode that was set.</p>
+     * @return to
      */
     @NotNull
     @JsonProperty("to")

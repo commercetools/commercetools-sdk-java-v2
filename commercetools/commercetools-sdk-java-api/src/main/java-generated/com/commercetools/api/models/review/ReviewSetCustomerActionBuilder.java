@@ -28,6 +28,7 @@ public class ReviewSetCustomerActionBuilder implements Builder<ReviewSetCustomer
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
+     * @return Builder
      */
 
     public ReviewSetCustomerActionBuilder customer(
@@ -39,6 +40,8 @@ public class ReviewSetCustomerActionBuilder implements Builder<ReviewSetCustomer
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
+     * @param customer
+     * @return Builder
      */
 
     public ReviewSetCustomerActionBuilder customer(

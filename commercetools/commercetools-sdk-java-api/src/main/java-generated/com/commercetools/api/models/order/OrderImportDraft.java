@@ -46,6 +46,7 @@ public interface OrderImportDraft extends com.commercetools.api.models.Customiza
 
     /**
      *  <p>String that unique identifies an order. It can be used to create more human-readable (in contrast to ID) identifier for the order. It should be unique within a project.</p>
+     * @return orderNumber
      */
 
     @JsonProperty("orderNumber")
@@ -53,6 +54,7 @@ public interface OrderImportDraft extends com.commercetools.api.models.Customiza
 
     /**
      *  <p>If given the customer with that ID must exist in the project.</p>
+     * @return customerId
      */
 
     @JsonProperty("customerId")
@@ -60,6 +62,7 @@ public interface OrderImportDraft extends com.commercetools.api.models.Customiza
 
     /**
      *  <p>The customer email can be used when no check against existing Customers is desired during order import.</p>
+     * @return customerEmail
      */
 
     @JsonProperty("customerEmail")
@@ -67,6 +70,7 @@ public interface OrderImportDraft extends com.commercetools.api.models.Customiza
 
     /**
      *  <p>If not given <code>customLineItems</code> must not be empty.</p>
+     * @return lineItems
      */
     @Valid
     @JsonProperty("lineItems")
@@ -74,6 +78,7 @@ public interface OrderImportDraft extends com.commercetools.api.models.Customiza
 
     /**
      *  <p>If not given <code>lineItems</code> must not be empty.</p>
+     * @return customLineItems
      */
     @Valid
     @JsonProperty("customLineItems")
@@ -81,6 +86,7 @@ public interface OrderImportDraft extends com.commercetools.api.models.Customiza
 
     /**
      *
+     * @return totalPrice
      */
     @NotNull
     @Valid
@@ -89,6 +95,7 @@ public interface OrderImportDraft extends com.commercetools.api.models.Customiza
 
     /**
      *  <p>Order Import does not support calculation of taxes. When setting the draft the taxedPrice is to be provided.</p>
+     * @return taxedPrice
      */
     @Valid
     @JsonProperty("taxedPrice")
@@ -96,6 +103,7 @@ public interface OrderImportDraft extends com.commercetools.api.models.Customiza
 
     /**
      *
+     * @return shippingAddress
      */
     @Valid
     @JsonProperty("shippingAddress")
@@ -103,6 +111,7 @@ public interface OrderImportDraft extends com.commercetools.api.models.Customiza
 
     /**
      *
+     * @return billingAddress
      */
     @Valid
     @JsonProperty("billingAddress")
@@ -110,6 +119,7 @@ public interface OrderImportDraft extends com.commercetools.api.models.Customiza
 
     /**
      *  <p>Set when the customer is set and the customer is a member of a customer group. Used for product variant price selection.</p>
+     * @return customerGroup
      */
     @Valid
     @JsonProperty("customerGroup")
@@ -117,6 +127,7 @@ public interface OrderImportDraft extends com.commercetools.api.models.Customiza
 
     /**
      *  <p>A two-digit country code as per ISO 3166-1 alpha-2. Used for product variant price selection.</p>
+     * @return country
      */
 
     @JsonProperty("country")
@@ -124,6 +135,7 @@ public interface OrderImportDraft extends com.commercetools.api.models.Customiza
 
     /**
      *  <p>If not given the <code>Open</code> state will be assigned by default.</p>
+     * @return orderState
      */
 
     @JsonProperty("orderState")
@@ -131,6 +143,7 @@ public interface OrderImportDraft extends com.commercetools.api.models.Customiza
 
     /**
      *  <p>This reference can point to a state in a custom workflow.</p>
+     * @return state
      */
     @Valid
     @JsonProperty("state")
@@ -138,6 +151,7 @@ public interface OrderImportDraft extends com.commercetools.api.models.Customiza
 
     /**
      *
+     * @return shipmentState
      */
 
     @JsonProperty("shipmentState")
@@ -145,6 +159,7 @@ public interface OrderImportDraft extends com.commercetools.api.models.Customiza
 
     /**
      *
+     * @return paymentState
      */
 
     @JsonProperty("paymentState")
@@ -152,6 +167,7 @@ public interface OrderImportDraft extends com.commercetools.api.models.Customiza
 
     /**
      *  <p>Set if the ShippingMethod is set.</p>
+     * @return shippingInfo
      */
     @Valid
     @JsonProperty("shippingInfo")
@@ -159,6 +175,7 @@ public interface OrderImportDraft extends com.commercetools.api.models.Customiza
 
     /**
      *
+     * @return paymentInfo
      */
     @Valid
     @JsonProperty("paymentInfo")
@@ -166,6 +183,7 @@ public interface OrderImportDraft extends com.commercetools.api.models.Customiza
 
     /**
      *
+     * @return completedAt
      */
 
     @JsonProperty("completedAt")
@@ -173,6 +191,7 @@ public interface OrderImportDraft extends com.commercetools.api.models.Customiza
 
     /**
      *  <p>The custom fields.</p>
+     * @return custom
      */
     @Valid
     @JsonProperty("custom")
@@ -180,6 +199,7 @@ public interface OrderImportDraft extends com.commercetools.api.models.Customiza
 
     /**
      *  <p>If not given the mode <code>None</code> will be assigned by default.</p>
+     * @return inventoryMode
      */
 
     @JsonProperty("inventoryMode")
@@ -187,6 +207,7 @@ public interface OrderImportDraft extends com.commercetools.api.models.Customiza
 
     /**
      *  <p>If not given the tax rounding mode <code>HalfEven</code> will be assigned by default.</p>
+     * @return taxRoundingMode
      */
 
     @JsonProperty("taxRoundingMode")
@@ -194,6 +215,7 @@ public interface OrderImportDraft extends com.commercetools.api.models.Customiza
 
     /**
      *  <p>Contains addresses for orders with multiple shipping addresses.</p>
+     * @return itemShippingAddresses
      */
     @Valid
     @JsonProperty("itemShippingAddresses")
@@ -201,6 +223,7 @@ public interface OrderImportDraft extends com.commercetools.api.models.Customiza
 
     /**
      *  <p>The Business Unit the Cart belongs to.</p>
+     * @return businessUnit
      */
     @Valid
     @JsonProperty("businessUnit")
@@ -208,6 +231,7 @@ public interface OrderImportDraft extends com.commercetools.api.models.Customiza
 
     /**
      *
+     * @return store
      */
     @Valid
     @JsonProperty("store")
@@ -215,6 +239,7 @@ public interface OrderImportDraft extends com.commercetools.api.models.Customiza
 
     /**
      *  <p>The default origin is <code>Customer</code>.</p>
+     * @return origin
      */
 
     @JsonProperty("origin")

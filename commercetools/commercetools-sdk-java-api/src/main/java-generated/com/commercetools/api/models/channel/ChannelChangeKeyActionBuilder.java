@@ -25,6 +25,8 @@ public class ChannelChangeKeyActionBuilder implements Builder<ChannelChangeKeyAc
 
     /**
      *  <p>New value to set. Must not be empty.</p>
+     * @param key
+     * @return Builder
      */
 
     public ChannelChangeKeyActionBuilder key(final String key) {

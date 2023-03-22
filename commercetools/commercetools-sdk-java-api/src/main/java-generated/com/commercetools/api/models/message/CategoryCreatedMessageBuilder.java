@@ -58,6 +58,8 @@ public class CategoryCreatedMessageBuilder implements Builder<CategoryCreatedMes
 
     /**
      *  <p>Unique identifier of the Message. Can be used to track which Messages have been processed.</p>
+     * @param id
+     * @return Builder
      */
 
     public CategoryCreatedMessageBuilder id(final String id) {
@@ -67,6 +69,8 @@ public class CategoryCreatedMessageBuilder implements Builder<CategoryCreatedMes
 
     /**
      *  <p>Version of a resource. In case of Messages, this is always <code>1</code>.</p>
+     * @param version
+     * @return Builder
      */
 
     public CategoryCreatedMessageBuilder version(final Long version) {
@@ -76,6 +80,8 @@ public class CategoryCreatedMessageBuilder implements Builder<CategoryCreatedMes
 
     /**
      *  <p>Date and time (UTC) the Message was generated.</p>
+     * @param createdAt
+     * @return Builder
      */
 
     public CategoryCreatedMessageBuilder createdAt(final java.time.ZonedDateTime createdAt) {
@@ -85,6 +91,8 @@ public class CategoryCreatedMessageBuilder implements Builder<CategoryCreatedMes
 
     /**
      *  <p>Value of <code>createdAt</code>.</p>
+     * @param lastModifiedAt
+     * @return Builder
      */
 
     public CategoryCreatedMessageBuilder lastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {
@@ -94,6 +102,7 @@ public class CategoryCreatedMessageBuilder implements Builder<CategoryCreatedMes
 
     /**
      *  <p>Value of <code>createdBy</code>.</p>
+     * @return Builder
      */
 
     public CategoryCreatedMessageBuilder lastModifiedBy(
@@ -104,6 +113,8 @@ public class CategoryCreatedMessageBuilder implements Builder<CategoryCreatedMes
 
     /**
      *  <p>Value of <code>createdBy</code>.</p>
+     * @param lastModifiedBy
+     * @return Builder
      */
 
     public CategoryCreatedMessageBuilder lastModifiedBy(
@@ -114,6 +125,7 @@ public class CategoryCreatedMessageBuilder implements Builder<CategoryCreatedMes
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @return Builder
      */
 
     public CategoryCreatedMessageBuilder createdBy(
@@ -124,6 +136,8 @@ public class CategoryCreatedMessageBuilder implements Builder<CategoryCreatedMes
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param createdBy
+     * @return Builder
      */
 
     public CategoryCreatedMessageBuilder createdBy(
@@ -134,6 +148,8 @@ public class CategoryCreatedMessageBuilder implements Builder<CategoryCreatedMes
 
     /**
      *  <p>Message number in relation to other Messages for a given resource. The <code>sequenceNumber</code> of the next Message for the resource is the successor of the <code>sequenceNumber</code> of the current Message. Meaning, the <code>sequenceNumber</code> of the next Message equals the <code>sequenceNumber</code> of the current Message + 1. <code>sequenceNumber</code> can be used to ensure that Messages are processed in the correct order for a particular resource.</p>
+     * @param sequenceNumber
+     * @return Builder
      */
 
     public CategoryCreatedMessageBuilder sequenceNumber(final Long sequenceNumber) {
@@ -143,6 +159,8 @@ public class CategoryCreatedMessageBuilder implements Builder<CategoryCreatedMes
 
     /**
      *  <p>Reference to the resource on which the change or action was performed.</p>
+     * @param resource
+     * @return Builder
      */
 
     public CategoryCreatedMessageBuilder resource(final com.commercetools.api.models.common.Reference resource) {
@@ -152,6 +170,7 @@ public class CategoryCreatedMessageBuilder implements Builder<CategoryCreatedMes
 
     /**
      *  <p>Reference to the resource on which the change or action was performed.</p>
+     * @return Builder
      */
 
     public CategoryCreatedMessageBuilder resource(
@@ -162,6 +181,8 @@ public class CategoryCreatedMessageBuilder implements Builder<CategoryCreatedMes
 
     /**
      *  <p>Version of the resource on which the change or action was performed.</p>
+     * @param resourceVersion
+     * @return Builder
      */
 
     public CategoryCreatedMessageBuilder resourceVersion(final Long resourceVersion) {
@@ -171,6 +192,7 @@ public class CategoryCreatedMessageBuilder implements Builder<CategoryCreatedMes
 
     /**
      *  <p>User-provided identifiers of the resource, such as <code>key</code> or <code>externalId</code>. Only present if the resource has such identifiers.</p>
+     * @return Builder
      */
 
     public CategoryCreatedMessageBuilder resourceUserProvidedIdentifiers(
@@ -183,6 +205,8 @@ public class CategoryCreatedMessageBuilder implements Builder<CategoryCreatedMes
 
     /**
      *  <p>User-provided identifiers of the resource, such as <code>key</code> or <code>externalId</code>. Only present if the resource has such identifiers.</p>
+     * @param resourceUserProvidedIdentifiers
+     * @return Builder
      */
 
     public CategoryCreatedMessageBuilder resourceUserProvidedIdentifiers(
@@ -193,6 +217,7 @@ public class CategoryCreatedMessageBuilder implements Builder<CategoryCreatedMes
 
     /**
      *  <p>Category that was created.</p>
+     * @return Builder
      */
 
     public CategoryCreatedMessageBuilder category(
@@ -203,6 +228,8 @@ public class CategoryCreatedMessageBuilder implements Builder<CategoryCreatedMes
 
     /**
      *  <p>Category that was created.</p>
+     * @param category
+     * @return Builder
      */
 
     public CategoryCreatedMessageBuilder category(final com.commercetools.api.models.category.Category category) {

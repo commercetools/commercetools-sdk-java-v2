@@ -36,6 +36,7 @@ public interface StagedOrderSetParcelTrackingDataAction extends StagedOrderUpdat
 
     /**
      *
+     * @return parcelId
      */
     @NotNull
     @JsonProperty("parcelId")
@@ -43,6 +44,7 @@ public interface StagedOrderSetParcelTrackingDataAction extends StagedOrderUpdat
 
     /**
      *
+     * @return trackingData
      */
     @Valid
     @JsonProperty("trackingData")

@@ -38,6 +38,7 @@ public interface ShippingInfoImportDraft extends io.vrap.rmf.base.client.Draft<S
 
     /**
      *
+     * @return shippingMethodName
      */
     @NotNull
     @JsonProperty("shippingMethodName")
@@ -45,6 +46,7 @@ public interface ShippingInfoImportDraft extends io.vrap.rmf.base.client.Draft<S
 
     /**
      *
+     * @return price
      */
     @NotNull
     @Valid
@@ -53,6 +55,7 @@ public interface ShippingInfoImportDraft extends io.vrap.rmf.base.client.Draft<S
 
     /**
      *
+     * @return shippingRate
      */
     @NotNull
     @Valid
@@ -61,6 +64,7 @@ public interface ShippingInfoImportDraft extends io.vrap.rmf.base.client.Draft<S
 
     /**
      *
+     * @return taxRate
      */
     @Valid
     @JsonProperty("taxRate")
@@ -68,6 +72,7 @@ public interface ShippingInfoImportDraft extends io.vrap.rmf.base.client.Draft<S
 
     /**
      *  <p>References a tax category by key.</p>
+     * @return taxCategory
      */
     @Valid
     @JsonProperty("taxCategory")
@@ -75,6 +80,7 @@ public interface ShippingInfoImportDraft extends io.vrap.rmf.base.client.Draft<S
 
     /**
      *  <p>References a shipping method by key.</p>
+     * @return shippingMethod
      */
     @Valid
     @JsonProperty("shippingMethod")
@@ -82,6 +88,7 @@ public interface ShippingInfoImportDraft extends io.vrap.rmf.base.client.Draft<S
 
     /**
      *  <p>Note that you can not add a <code>DeliveryItem</code> on import, as <code>LineItems</code> and <code>CustomLineItems</code> are not yet referencable by an <code>id</code>.</p>
+     * @return deliveries
      */
     @Valid
     @JsonProperty("deliveries")
@@ -89,6 +96,7 @@ public interface ShippingInfoImportDraft extends io.vrap.rmf.base.client.Draft<S
 
     /**
      *
+     * @return discountedPrice
      */
     @Valid
     @JsonProperty("discountedPrice")
@@ -96,6 +104,7 @@ public interface ShippingInfoImportDraft extends io.vrap.rmf.base.client.Draft<S
 
     /**
      *
+     * @return shippingMethodState
      */
 
     @JsonProperty("shippingMethodState")

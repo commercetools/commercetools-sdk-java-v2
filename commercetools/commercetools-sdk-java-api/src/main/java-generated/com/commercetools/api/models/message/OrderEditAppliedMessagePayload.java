@@ -37,6 +37,7 @@ public interface OrderEditAppliedMessagePayload extends OrderMessagePayload {
 
     /**
      *  <p>OrderEdit that was applied.</p>
+     * @return edit
      */
     @NotNull
     @Valid
@@ -45,6 +46,7 @@ public interface OrderEditAppliedMessagePayload extends OrderMessagePayload {
 
     /**
      *  <p>Information about a successfully applied OrderEdit.</p>
+     * @return result
      */
     @NotNull
     @Valid

@@ -36,6 +36,7 @@ public interface MyCustomerChangeAddressAction extends MyCustomerUpdateAction {
 
     /**
      *  <p><code>id</code> of the Address to change.</p>
+     * @return addressId
      */
 
     @JsonProperty("addressId")
@@ -43,6 +44,7 @@ public interface MyCustomerChangeAddressAction extends MyCustomerUpdateAction {
 
     /**
      *  <p><code>key</code> of the Address to change.</p>
+     * @return addressKey
      */
 
     @JsonProperty("addressKey")
@@ -50,6 +52,7 @@ public interface MyCustomerChangeAddressAction extends MyCustomerUpdateAction {
 
     /**
      *  <p>Value to set.</p>
+     * @return address
      */
     @NotNull
     @Valid

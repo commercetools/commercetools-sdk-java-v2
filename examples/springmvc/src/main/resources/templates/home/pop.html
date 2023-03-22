@@ -19,7 +19,7 @@
                 </thead>
                 <tbody th:each="product : ${products}">
                 <tr>
-                    <td th:text="${product.name.values.en}">Name</td>
+                    <td th:text="${product.name.get('en')}">Name</td>
                         <td>
                             <a id="btn_add" th:href="@{/cart/add(sku=${product.masterVariant.sku})}" class="btn btn-info btn-lg">
                             <span class="glyphicon glyphicon-shopping-cart"></span> Add To Cart

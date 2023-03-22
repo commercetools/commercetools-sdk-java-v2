@@ -55,7 +55,7 @@ public class PaymentStatusDraftImpl implements PaymentStatusDraft, ModelBase {
     }
 
     /**
-     *  <p>Reference to a State.</p>
+     *  <p>ResourceIdentifier to a State.</p>
      */
 
     public com.commercetools.api.models.state.StateResourceIdentifier getState() {

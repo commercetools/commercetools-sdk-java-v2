@@ -78,4 +78,5 @@ public interface OrderSearchStatus {
     public static OrderSearchStatus[] values() {
         return OrderSearchStatusEnum.values();
     }
+
 }

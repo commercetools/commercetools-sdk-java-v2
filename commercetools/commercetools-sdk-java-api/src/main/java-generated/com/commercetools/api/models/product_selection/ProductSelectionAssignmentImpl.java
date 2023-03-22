@@ -15,7 +15,11 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * ProductSelectionAssignment
+ *  <p>Given the type of Product Selection this Assignment refers to, it may contain:</p>
+ *  <ul>
+ *   <li><code>variantSelection</code> field if the Product Selection is of type Individual.</li>
+ *   <li><code>variantExclusion</code> field if the Product Selection is of type Individual Exclusion.</li>
+ *  </ul>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductSelectionAssignmentImpl implements ProductSelectionAssignment, ModelBase {
@@ -26,14 +30,18 @@ public class ProductSelectionAssignmentImpl implements ProductSelectionAssignmen
 
     private com.commercetools.api.models.product_selection.ProductVariantSelection variantSelection;
 
+    private com.commercetools.api.models.product_selection.ProductVariantExclusion variantExclusion;
+
     @JsonCreator
     ProductSelectionAssignmentImpl(
             @JsonProperty("product") final com.commercetools.api.models.product.ProductReference product,
             @JsonProperty("productSelection") final com.commercetools.api.models.product_selection.ProductSelectionReference productSelection,
-            @JsonProperty("variantSelection") final com.commercetools.api.models.product_selection.ProductVariantSelection variantSelection) {
+            @JsonProperty("variantSelection") final com.commercetools.api.models.product_selection.ProductVariantSelection variantSelection,
+            @JsonProperty("variantExclusion") final com.commercetools.api.models.product_selection.ProductVariantExclusion variantExclusion) {
         this.product = product;
         this.productSelection = productSelection;
         this.variantSelection = variantSelection;
+        this.variantExclusion = variantExclusion;
     }
 
     public ProductSelectionAssignmentImpl() {
@@ -56,11 +64,21 @@ public class ProductSelectionAssignmentImpl implements ProductSelectionAssignmen
     }
 
     /**
-     *  <p>Selects which Variants of the newly added Product will be included, or excluded, from the Product Selection. The list of SKUs will be updated automatically on any change of those performed on the respective Product itself.</p>
+     *  <p>Define which Variants of the added Product will be included from the Product Selection.</p>
+     *  <p>This field is only available for Assignments to a Product Selection of type Individual. The list of SKUs will be updated automatically on any change of those performed on the respective Product itself.</p>
      */
 
     public com.commercetools.api.models.product_selection.ProductVariantSelection getVariantSelection() {
         return this.variantSelection;
+    }
+
+    /**
+     *  <p>Defines which Variants of the Product will be excluded from the Product Selection.</p>
+     *  <p>This field is only available for Assignments to a Product Selection of type Individual Exclusion. The list of SKUs will be updated automatically on any change of those performed on the respective Product itself.</p>
+     */
+
+    public com.commercetools.api.models.product_selection.ProductVariantExclusion getVariantExclusion() {
+        return this.variantExclusion;
     }
 
     public void setProduct(final com.commercetools.api.models.product.ProductReference product) {
@@ -77,6 +95,11 @@ public class ProductSelectionAssignmentImpl implements ProductSelectionAssignmen
         this.variantSelection = variantSelection;
     }
 
+    public void setVariantExclusion(
+            final com.commercetools.api.models.product_selection.ProductVariantExclusion variantExclusion) {
+        this.variantExclusion = variantExclusion;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -90,6 +113,7 @@ public class ProductSelectionAssignmentImpl implements ProductSelectionAssignmen
         return new EqualsBuilder().append(product, that.product)
                 .append(productSelection, that.productSelection)
                 .append(variantSelection, that.variantSelection)
+                .append(variantExclusion, that.variantExclusion)
                 .isEquals();
     }
 
@@ -98,6 +122,7 @@ public class ProductSelectionAssignmentImpl implements ProductSelectionAssignmen
         return new HashCodeBuilder(17, 37).append(product)
                 .append(productSelection)
                 .append(variantSelection)
+                .append(variantExclusion)
                 .toHashCode();
     }
 

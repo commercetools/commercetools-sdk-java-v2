@@ -78,4 +78,5 @@ public interface AnonymousCartSignInMode {
     public static AnonymousCartSignInMode[] values() {
         return AnonymousCartSignInModeEnum.values();
     }
+
 }

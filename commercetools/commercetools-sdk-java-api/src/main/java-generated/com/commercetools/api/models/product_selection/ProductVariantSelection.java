@@ -27,6 +27,8 @@ import io.vrap.rmf.base.client.utils.Generated;
  */
 @JsonSubTypes({
         @JsonSubTypes.Type(value = com.commercetools.api.models.product_selection.ProductVariantSelectionExclusionImpl.class, name = ProductVariantSelectionExclusion.EXCLUSION),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.product_selection.ProductVariantSelectionIncludeAllExceptImpl.class, name = ProductVariantSelectionIncludeAllExcept.INCLUDE_ALL_EXCEPT),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.product_selection.ProductVariantSelectionIncludeOnlyImpl.class, name = ProductVariantSelectionIncludeOnly.INCLUDE_ONLY),
         @JsonSubTypes.Type(value = com.commercetools.api.models.product_selection.ProductVariantSelectionInclusionImpl.class, name = ProductVariantSelectionInclusion.INCLUSION) })
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "type", defaultImpl = ProductVariantSelectionImpl.class, visible = true)
 @JsonDeserialize(as = ProductVariantSelectionImpl.class)
@@ -42,6 +44,14 @@ public interface ProductVariantSelection {
 
     public static com.commercetools.api.models.product_selection.ProductVariantSelectionExclusionBuilder exclusionBuilder() {
         return com.commercetools.api.models.product_selection.ProductVariantSelectionExclusionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.product_selection.ProductVariantSelectionIncludeAllExceptBuilder includeAllExceptBuilder() {
+        return com.commercetools.api.models.product_selection.ProductVariantSelectionIncludeAllExceptBuilder.of();
+    }
+
+    public static com.commercetools.api.models.product_selection.ProductVariantSelectionIncludeOnlyBuilder includeOnlyBuilder() {
+        return com.commercetools.api.models.product_selection.ProductVariantSelectionIncludeOnlyBuilder.of();
     }
 
     public static com.commercetools.api.models.product_selection.ProductVariantSelectionInclusionBuilder inclusionBuilder() {

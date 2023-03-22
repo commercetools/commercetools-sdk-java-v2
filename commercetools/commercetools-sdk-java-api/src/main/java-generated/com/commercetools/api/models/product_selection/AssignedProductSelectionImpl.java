@@ -24,15 +24,19 @@ public class AssignedProductSelectionImpl implements AssignedProductSelection, M
 
     private com.commercetools.api.models.product_selection.ProductVariantSelection variantSelection;
 
+    private com.commercetools.api.models.product_selection.ProductVariantExclusion variantExclusion;
+
     private java.time.ZonedDateTime createdAt;
 
     @JsonCreator
     AssignedProductSelectionImpl(
             @JsonProperty("productSelection") final com.commercetools.api.models.product_selection.ProductSelectionReference productSelection,
             @JsonProperty("variantSelection") final com.commercetools.api.models.product_selection.ProductVariantSelection variantSelection,
+            @JsonProperty("variantExclusion") final com.commercetools.api.models.product_selection.ProductVariantExclusion variantExclusion,
             @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt) {
         this.productSelection = productSelection;
         this.variantSelection = variantSelection;
+        this.variantExclusion = variantExclusion;
         this.createdAt = createdAt;
     }
 
@@ -48,11 +52,21 @@ public class AssignedProductSelectionImpl implements AssignedProductSelection, M
     }
 
     /**
-     *  <p>Selects which Variants of the newly added Product will be included, or excluded, from the Product Selection.</p>
+     *  <p>Defines which Variants of the Product will be included from the Product Selection.</p>
+     *  <p>This field is only available for Assignments to a Product Selection of type Individual.</p>
      */
 
     public com.commercetools.api.models.product_selection.ProductVariantSelection getVariantSelection() {
         return this.variantSelection;
+    }
+
+    /**
+     *  <p>Defines which Variants of the Product will be excluded from the Product Selection.</p>
+     *  <p>This field is only available for Assignments to a Product Selection of type Individual Exclusion.</p>
+     */
+
+    public com.commercetools.api.models.product_selection.ProductVariantExclusion getVariantExclusion() {
+        return this.variantExclusion;
     }
 
     /**
@@ -73,6 +87,11 @@ public class AssignedProductSelectionImpl implements AssignedProductSelection, M
         this.variantSelection = variantSelection;
     }
 
+    public void setVariantExclusion(
+            final com.commercetools.api.models.product_selection.ProductVariantExclusion variantExclusion) {
+        this.variantExclusion = variantExclusion;
+    }
+
     public void setCreatedAt(final java.time.ZonedDateTime createdAt) {
         this.createdAt = createdAt;
     }
@@ -89,6 +108,7 @@ public class AssignedProductSelectionImpl implements AssignedProductSelection, M
 
         return new EqualsBuilder().append(productSelection, that.productSelection)
                 .append(variantSelection, that.variantSelection)
+                .append(variantExclusion, that.variantExclusion)
                 .append(createdAt, that.createdAt)
                 .isEquals();
     }
@@ -97,6 +117,7 @@ public class AssignedProductSelectionImpl implements AssignedProductSelection, M
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(productSelection)
                 .append(variantSelection)
+                .append(variantExclusion)
                 .append(createdAt)
                 .toHashCode();
     }

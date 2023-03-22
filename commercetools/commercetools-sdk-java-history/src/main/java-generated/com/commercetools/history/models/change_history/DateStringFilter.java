@@ -67,4 +67,5 @@ public interface DateStringFilter {
     public static DateStringFilter[] values() {
         return DateStringFilterEnum.values();
     }
+
 }

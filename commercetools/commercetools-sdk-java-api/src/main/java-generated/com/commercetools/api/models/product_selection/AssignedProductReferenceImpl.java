@@ -24,12 +24,16 @@ public class AssignedProductReferenceImpl implements AssignedProductReference, M
 
     private com.commercetools.api.models.product_selection.ProductVariantSelection variantSelection;
 
+    private com.commercetools.api.models.product_selection.ProductVariantExclusion variantExclusion;
+
     @JsonCreator
     AssignedProductReferenceImpl(
             @JsonProperty("product") final com.commercetools.api.models.product.ProductReference product,
-            @JsonProperty("variantSelection") final com.commercetools.api.models.product_selection.ProductVariantSelection variantSelection) {
+            @JsonProperty("variantSelection") final com.commercetools.api.models.product_selection.ProductVariantSelection variantSelection,
+            @JsonProperty("variantExclusion") final com.commercetools.api.models.product_selection.ProductVariantExclusion variantExclusion) {
         this.product = product;
         this.variantSelection = variantSelection;
+        this.variantExclusion = variantExclusion;
     }
 
     public AssignedProductReferenceImpl() {
@@ -44,11 +48,21 @@ public class AssignedProductReferenceImpl implements AssignedProductReference, M
     }
 
     /**
-     *  <p>The Variants of the Product that are included, or excluded, from the Product Selection. In absence of this field, all Variants are deemed to be included.</p>
+     *  <p>The Variants of the Product that are included from the Product Selection.</p>
+     *  <p>This field may exist only for the IndividualProductSelectionType. In absence of this field, all Variants are deemed to be included.</p>
      */
 
     public com.commercetools.api.models.product_selection.ProductVariantSelection getVariantSelection() {
         return this.variantSelection;
+    }
+
+    /**
+     *  <p>The Variants of the Product that are excluded from the Product Selection.</p>
+     *  <p>This field may exist only for the IndividualExclusionProductSelectionType. In absence of this field, all Variants are deemed to be excluded.</p>
+     */
+
+    public com.commercetools.api.models.product_selection.ProductVariantExclusion getVariantExclusion() {
+        return this.variantExclusion;
     }
 
     public void setProduct(final com.commercetools.api.models.product.ProductReference product) {
@@ -58,6 +72,11 @@ public class AssignedProductReferenceImpl implements AssignedProductReference, M
     public void setVariantSelection(
             final com.commercetools.api.models.product_selection.ProductVariantSelection variantSelection) {
         this.variantSelection = variantSelection;
+    }
+
+    public void setVariantExclusion(
+            final com.commercetools.api.models.product_selection.ProductVariantExclusion variantExclusion) {
+        this.variantExclusion = variantExclusion;
     }
 
     @Override
@@ -72,12 +91,16 @@ public class AssignedProductReferenceImpl implements AssignedProductReference, M
 
         return new EqualsBuilder().append(product, that.product)
                 .append(variantSelection, that.variantSelection)
+                .append(variantExclusion, that.variantExclusion)
                 .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(product).append(variantSelection).toHashCode();
+        return new HashCodeBuilder(17, 37).append(product)
+                .append(variantSelection)
+                .append(variantExclusion)
+                .toHashCode();
     }
 
 }

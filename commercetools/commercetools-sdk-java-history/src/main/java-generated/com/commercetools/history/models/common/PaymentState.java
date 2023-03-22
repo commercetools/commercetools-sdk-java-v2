@@ -83,4 +83,5 @@ public interface PaymentState {
     public static PaymentState[] values() {
         return PaymentStateEnum.values();
     }
+
 }

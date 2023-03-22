@@ -126,7 +126,7 @@ public class PriceImpl implements Price, ModelBase {
     }
 
     /**
-     *  <p>Date and time until this Price is valid.</p>
+     *  <p>Date and time until this Price is valid. Prices that are no longer valid are not automatically removed, but they can be removed if necessary.</p>
      */
 
     public java.time.ZonedDateTime getValidUntil() {

@@ -80,4 +80,5 @@ public interface TaxCalculationMode {
     public static TaxCalculationMode[] values() {
         return TaxCalculationModeEnum.values();
     }
+
 }

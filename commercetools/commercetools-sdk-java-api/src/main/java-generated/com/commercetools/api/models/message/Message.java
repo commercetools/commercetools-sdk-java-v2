@@ -146,7 +146,9 @@ import io.vrap.rmf.base.client.utils.Generated;
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.ProductSelectionCreatedMessageImpl.class, name = ProductSelectionCreatedMessage.PRODUCT_SELECTION_CREATED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.ProductSelectionDeletedMessageImpl.class, name = ProductSelectionDeletedMessage.PRODUCT_SELECTION_DELETED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.ProductSelectionProductAddedMessageImpl.class, name = ProductSelectionProductAddedMessage.PRODUCT_SELECTION_PRODUCT_ADDED),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.message.ProductSelectionProductExcludedMessageImpl.class, name = ProductSelectionProductExcludedMessage.PRODUCT_SELECTION_PRODUCT_EXCLUDED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.ProductSelectionProductRemovedMessageImpl.class, name = ProductSelectionProductRemovedMessage.PRODUCT_SELECTION_PRODUCT_REMOVED),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.message.ProductSelectionVariantExclusionChangedMessageImpl.class, name = ProductSelectionVariantExclusionChangedMessage.PRODUCT_SELECTION_VARIANT_EXCLUSION_CHANGED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.ProductSelectionVariantSelectionChangedMessageImpl.class, name = ProductSelectionVariantSelectionChangedMessage.PRODUCT_SELECTION_VARIANT_SELECTION_CHANGED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.ProductSlugChangedMessageImpl.class, name = ProductSlugChangedMessage.PRODUCT_SLUG_CHANGED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.ProductStateTransitionMessageImpl.class, name = ProductStateTransitionMessage.PRODUCT_STATE_TRANSITION),
@@ -719,8 +721,16 @@ public interface Message extends BaseResource, com.commercetools.api.models.Doma
         return com.commercetools.api.models.message.ProductSelectionProductAddedMessageBuilder.of();
     }
 
+    public static com.commercetools.api.models.message.ProductSelectionProductExcludedMessageBuilder productSelectionProductExcludedBuilder() {
+        return com.commercetools.api.models.message.ProductSelectionProductExcludedMessageBuilder.of();
+    }
+
     public static com.commercetools.api.models.message.ProductSelectionProductRemovedMessageBuilder productSelectionProductRemovedBuilder() {
         return com.commercetools.api.models.message.ProductSelectionProductRemovedMessageBuilder.of();
+    }
+
+    public static com.commercetools.api.models.message.ProductSelectionVariantExclusionChangedMessageBuilder productSelectionVariantExclusionChangedBuilder() {
+        return com.commercetools.api.models.message.ProductSelectionVariantExclusionChangedMessageBuilder.of();
     }
 
     public static com.commercetools.api.models.message.ProductSelectionVariantSelectionChangedMessageBuilder productSelectionVariantSelectionChangedBuilder() {

@@ -16,7 +16,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
  *  <p>Returned when a Product is not assigned to the Product Selection.</p>
- *  <p>The error is returned as a failed response to the Set Variant Selection update action.</p>
+ *  <p>The error is returned as a failed response either to the Set Variant Selection or to the Set Variant Exclusion update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductAssignmentMissingErrorImpl implements ProductAssignmentMissingError, ModelBase {
@@ -52,7 +52,10 @@ public class ProductAssignmentMissingErrorImpl implements ProductAssignmentMissi
     }
 
     /**
-     *  <p><code>"A Product Variant Selection can only be set for a Product previously added to the Product Selection."</code></p>
+     *  <p>For Product Selection of type Individual, the message is:</p>
+     *  <p><code>"A Product Variant Selection can only be set for a Product that has previously been added to the Product Selection."</code></p>
+     *  <p>For Product Selection of type Individual Exclusion, the message is:</p>
+     *  <p><code>"A Variant Exclusion can only be set for a Product that has previously been added to the Product Selection of type Individual Exclusion."</code></p>
      */
 
     public String getMessage() {

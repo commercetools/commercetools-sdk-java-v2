@@ -90,4 +90,9 @@ public interface InventoryMode {
     public static InventoryMode[] values() {
         return InventoryModeEnum.values();
     }
+
+    public static com.commercetools.api.models.cart.InventoryMode defaultValue() {
+        return com.commercetools.api.models.cart.InventoryMode.NONE;
+    }
+
 }

@@ -75,4 +75,5 @@ public interface StagedQuoteState {
     public static StagedQuoteState[] values() {
         return StagedQuoteStateEnum.values();
     }
+
 }

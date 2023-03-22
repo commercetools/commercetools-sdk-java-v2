@@ -75,4 +75,5 @@ public interface FacetTypes {
     public static FacetTypes[] values() {
         return FacetTypesEnum.values();
     }
+
 }

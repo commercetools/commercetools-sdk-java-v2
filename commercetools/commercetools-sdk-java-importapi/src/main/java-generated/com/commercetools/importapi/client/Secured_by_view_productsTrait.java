@@ -17,4 +17,5 @@ public interface Secured_by_view_productsTrait<T extends Secured_by_view_product
     default T asSecured_by_view_productsTraitToBaseType() {
         return (T) this;
     }
+
 }

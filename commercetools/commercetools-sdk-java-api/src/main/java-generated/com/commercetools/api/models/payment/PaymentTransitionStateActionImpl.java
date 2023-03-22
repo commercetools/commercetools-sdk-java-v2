@@ -49,7 +49,7 @@ public class PaymentTransitionStateActionImpl implements PaymentTransitionStateA
     }
 
     /**
-     *  <p>Reference to a State.</p>
+     *  <p>ResourceIdentifier to a State.</p>
      */
 
     public com.commercetools.api.models.state.StateResourceIdentifier getState() {

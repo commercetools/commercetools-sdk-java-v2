@@ -78,10 +78,12 @@ public interface StoreDraft extends com.commercetools.api.models.CustomizableDra
     public List<ChannelResourceIdentifier> getSupplyChannels();
 
     /**
-     *  <p>Controls availability of Products for this Store via active Product Selections.</p>
+     *  <p>Controls availability of Products for this Store via active/inactive Product Selections:</p>
      *  <ul>
      *   <li>Leave empty if all Products in the Project should be available in this Store.</li>
-     *   <li>If provided, Products from <code>active</code> Product Selections are available in this Store.</li>
+     *   <li>If only <code>inactive</code> Product Selections of type Individual Exclusion are provided, all the Products are availlable in this Store.</li>
+     *   <li>If all the Product Selections provided are <code>inactive</code> and there's at least a Product Selection of type <code>individual</code>, no Product is availlable in this Store.</li>
+     *   <li>If at least an <code>active</code> Product Selection is provided, only <code>active</code> Product Selections are considered to compute the availlability in this Store.</li>
      *  </ul>
      */
     @Valid

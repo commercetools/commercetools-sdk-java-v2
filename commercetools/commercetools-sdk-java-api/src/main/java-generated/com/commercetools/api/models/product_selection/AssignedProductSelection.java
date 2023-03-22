@@ -41,11 +41,20 @@ public interface AssignedProductSelection {
     public ProductSelectionReference getProductSelection();
 
     /**
-     *  <p>Selects which Variants of the newly added Product will be included, or excluded, from the Product Selection.</p>
+     *  <p>Defines which Variants of the Product will be included from the Product Selection.</p>
+     *  <p>This field is only available for Assignments to a Product Selection of type Individual.</p>
      */
     @Valid
     @JsonProperty("variantSelection")
     public ProductVariantSelection getVariantSelection();
+
+    /**
+     *  <p>Defines which Variants of the Product will be excluded from the Product Selection.</p>
+     *  <p>This field is only available for Assignments to a Product Selection of type Individual Exclusion.</p>
+     */
+    @Valid
+    @JsonProperty("variantExclusion")
+    public ProductVariantExclusion getVariantExclusion();
 
     /**
      *  <p>Date and time (UTC) this assignment was initially created.</p>
@@ -58,6 +67,8 @@ public interface AssignedProductSelection {
 
     public void setVariantSelection(final ProductVariantSelection variantSelection);
 
+    public void setVariantExclusion(final ProductVariantExclusion variantExclusion);
+
     public void setCreatedAt(final ZonedDateTime createdAt);
 
     public static AssignedProductSelection of() {
@@ -68,6 +79,7 @@ public interface AssignedProductSelection {
         AssignedProductSelectionImpl instance = new AssignedProductSelectionImpl();
         instance.setProductSelection(template.getProductSelection());
         instance.setVariantSelection(template.getVariantSelection());
+        instance.setVariantExclusion(template.getVariantExclusion());
         instance.setCreatedAt(template.getCreatedAt());
         return instance;
     }

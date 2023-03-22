@@ -32,6 +32,9 @@ public class ProductSelectionDraftBuilder implements Builder<ProductSelectionDra
     @Nullable
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
 
+    @Nullable
+    private com.commercetools.api.models.product_selection.ProductSelectionTypeEnum type;
+
     /**
      *  <p>User-defined unique identifier for the ProductSelection.</p>
      */
@@ -80,6 +83,16 @@ public class ProductSelectionDraftBuilder implements Builder<ProductSelectionDra
         return this;
     }
 
+    /**
+     *  <p>Type of the Product Selection.</p>
+     */
+
+    public ProductSelectionDraftBuilder type(
+            @Nullable final com.commercetools.api.models.product_selection.ProductSelectionTypeEnum type) {
+        this.type = type;
+        return this;
+    }
+
     @Nullable
     public String getKey() {
         return this.key;
@@ -94,16 +107,21 @@ public class ProductSelectionDraftBuilder implements Builder<ProductSelectionDra
         return this.custom;
     }
 
+    @Nullable
+    public com.commercetools.api.models.product_selection.ProductSelectionTypeEnum getType() {
+        return this.type;
+    }
+
     public ProductSelectionDraft build() {
         Objects.requireNonNull(name, ProductSelectionDraft.class + ": name is missing");
-        return new ProductSelectionDraftImpl(key, name, custom);
+        return new ProductSelectionDraftImpl(key, name, custom, type);
     }
 
     /**
      * builds ProductSelectionDraft without checking for non null required values
      */
     public ProductSelectionDraft buildUnchecked() {
-        return new ProductSelectionDraftImpl(key, name, custom);
+        return new ProductSelectionDraftImpl(key, name, custom, type);
     }
 
     public static ProductSelectionDraftBuilder of() {
@@ -115,6 +133,7 @@ public class ProductSelectionDraftBuilder implements Builder<ProductSelectionDra
         builder.key = template.getKey();
         builder.name = template.getName();
         builder.custom = template.getCustom();
+        builder.type = template.getType();
         return builder;
     }
 

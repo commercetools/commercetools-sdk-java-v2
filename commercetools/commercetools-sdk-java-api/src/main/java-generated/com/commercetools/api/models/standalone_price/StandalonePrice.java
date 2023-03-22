@@ -143,7 +143,7 @@ public interface StandalonePrice
     public ZonedDateTime getValidFrom();
 
     /**
-     *  <p>Date until the Price is valid.</p>
+     *  <p>Date until the Price is valid. Standalone Prices that are no longer valid are not automatically deleted, but they can be deleted if necessary.</p>
      */
 
     @JsonProperty("validUntil")

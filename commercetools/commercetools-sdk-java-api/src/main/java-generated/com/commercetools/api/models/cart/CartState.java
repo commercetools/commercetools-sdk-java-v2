@@ -105,4 +105,5 @@ public interface CartState {
     public static CartState[] values() {
         return CartStateEnum.values();
     }
+
 }

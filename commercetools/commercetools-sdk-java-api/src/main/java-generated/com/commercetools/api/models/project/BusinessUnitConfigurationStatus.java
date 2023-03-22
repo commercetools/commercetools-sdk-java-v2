@@ -78,4 +78,5 @@ public interface BusinessUnitConfigurationStatus {
     public static BusinessUnitConfigurationStatus[] values() {
         return BusinessUnitConfigurationStatusEnum.values();
     }
+
 }

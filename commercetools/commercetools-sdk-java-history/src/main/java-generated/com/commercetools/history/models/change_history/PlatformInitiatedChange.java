@@ -87,4 +87,5 @@ public interface PlatformInitiatedChange {
     public static PlatformInitiatedChange[] values() {
         return PlatformInitiatedChangeEnum.values();
     }
+
 }

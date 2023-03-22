@@ -17,4 +17,5 @@ public interface Secured_by_manage_productsTrait<T extends Secured_by_manage_pro
     default T asSecured_by_manage_productsTraitToBaseType() {
         return (T) this;
     }
+
 }

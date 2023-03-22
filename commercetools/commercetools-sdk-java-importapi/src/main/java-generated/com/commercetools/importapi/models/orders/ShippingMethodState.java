@@ -71,4 +71,5 @@ public interface ShippingMethodState {
     public static ShippingMethodState[] values() {
         return ShippingMethodStateEnum.values();
     }
+
 }

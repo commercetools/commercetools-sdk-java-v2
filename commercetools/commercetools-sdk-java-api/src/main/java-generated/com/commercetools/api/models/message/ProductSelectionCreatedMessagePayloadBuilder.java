@@ -22,31 +22,31 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductSelectionCreatedMessagePayloadBuilder implements Builder<ProductSelectionCreatedMessagePayload> {
 
-    private com.commercetools.api.models.product_selection.IndividualProductSelectionType productSelection;
+    private com.commercetools.api.models.product_selection.ProductSelectionType productSelection;
 
     /**
      *  <p>The <code>type</code> and <code>name</code> of the individual Product Selection.</p>
      */
 
     public ProductSelectionCreatedMessagePayloadBuilder productSelection(
-            Function<com.commercetools.api.models.product_selection.IndividualProductSelectionTypeBuilder, com.commercetools.api.models.product_selection.IndividualProductSelectionTypeBuilder> builder) {
-        this.productSelection = builder
-                .apply(com.commercetools.api.models.product_selection.IndividualProductSelectionTypeBuilder.of())
-                .build();
-        return this;
-    }
-
-    /**
-     *  <p>The <code>type</code> and <code>name</code> of the individual Product Selection.</p>
-     */
-
-    public ProductSelectionCreatedMessagePayloadBuilder productSelection(
-            final com.commercetools.api.models.product_selection.IndividualProductSelectionType productSelection) {
+            final com.commercetools.api.models.product_selection.ProductSelectionType productSelection) {
         this.productSelection = productSelection;
         return this;
     }
 
-    public com.commercetools.api.models.product_selection.IndividualProductSelectionType getProductSelection() {
+    /**
+     *  <p>The <code>type</code> and <code>name</code> of the individual Product Selection.</p>
+     */
+
+    public ProductSelectionCreatedMessagePayloadBuilder productSelection(
+            Function<com.commercetools.api.models.product_selection.ProductSelectionTypeBuilder, Builder<? extends com.commercetools.api.models.product_selection.ProductSelectionType>> builder) {
+        this.productSelection = builder
+                .apply(com.commercetools.api.models.product_selection.ProductSelectionTypeBuilder.of())
+                .build();
+        return this;
+    }
+
+    public com.commercetools.api.models.product_selection.ProductSelectionType getProductSelection() {
         return this.productSelection;
     }
 

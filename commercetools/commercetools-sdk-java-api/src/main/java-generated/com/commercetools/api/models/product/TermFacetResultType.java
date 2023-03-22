@@ -87,4 +87,5 @@ public interface TermFacetResultType {
     public static TermFacetResultType[] values() {
         return TermFacetResultTypeEnum.values();
     }
+
 }

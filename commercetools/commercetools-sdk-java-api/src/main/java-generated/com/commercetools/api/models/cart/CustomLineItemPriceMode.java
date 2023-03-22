@@ -79,4 +79,5 @@ public interface CustomLineItemPriceMode {
     public static CustomLineItemPriceMode[] values() {
         return CustomLineItemPriceModeEnum.values();
     }
+
 }

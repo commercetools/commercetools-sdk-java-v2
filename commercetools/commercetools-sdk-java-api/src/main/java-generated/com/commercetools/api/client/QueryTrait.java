@@ -40,4 +40,5 @@ public interface QueryTrait<T extends QueryTrait<T>> {
     default T asQueryTraitToBaseType() {
         return (T) this;
     }
+
 }

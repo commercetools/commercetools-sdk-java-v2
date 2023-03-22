@@ -17,4 +17,5 @@ public interface Secured_by_view_ordersTrait<T extends Secured_by_view_ordersTra
     default T asSecured_by_view_ordersTraitToBaseType() {
         return (T) this;
     }
+
 }

@@ -78,4 +78,5 @@ public interface ProductPriceModeEnum {
     public static ProductPriceModeEnum[] values() {
         return ProductPriceModeEnumEnum.values();
     }
+
 }

@@ -439,8 +439,16 @@ public class MessagePayloadBuilder {
         return com.commercetools.api.models.message.ProductSelectionProductAddedMessagePayloadBuilder.of();
     }
 
+    public com.commercetools.api.models.message.ProductSelectionProductExcludedMessagePayloadBuilder productSelectionProductExcludedBuilder() {
+        return com.commercetools.api.models.message.ProductSelectionProductExcludedMessagePayloadBuilder.of();
+    }
+
     public com.commercetools.api.models.message.ProductSelectionProductRemovedMessagePayloadBuilder productSelectionProductRemovedBuilder() {
         return com.commercetools.api.models.message.ProductSelectionProductRemovedMessagePayloadBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.ProductSelectionVariantExclusionChangedMessagePayloadBuilder productSelectionVariantExclusionChangedBuilder() {
+        return com.commercetools.api.models.message.ProductSelectionVariantExclusionChangedMessagePayloadBuilder.of();
     }
 
     public com.commercetools.api.models.message.ProductSelectionVariantSelectionChangedMessagePayloadBuilder productSelectionVariantSelectionChangedBuilder() {

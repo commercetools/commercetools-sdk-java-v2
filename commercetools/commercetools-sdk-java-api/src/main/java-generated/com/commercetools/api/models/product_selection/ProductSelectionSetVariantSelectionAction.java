@@ -15,7 +15,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>Updates the Product Variant Selection of an existing Product Selection Assignment. A ProductVariantSelection can only be set if a Product has been added to the Product Selection.</p>
+ *  <p>Updates the Product Variant Selection of an existing Product Selection Assignment. A ProductVariantSelection can only be set if the Product has already been included to the Product Selection of type Individual.</p>
  *  <p>If the specified Product is not assigned to the Product Selection, a ProductAssignmentMissing error is returned.</p>
  *
  * <hr>

@@ -78,4 +78,5 @@ public interface AssociateRole {
     public static AssociateRole[] values() {
         return AssociateRoleEnum.values();
     }
+
 }

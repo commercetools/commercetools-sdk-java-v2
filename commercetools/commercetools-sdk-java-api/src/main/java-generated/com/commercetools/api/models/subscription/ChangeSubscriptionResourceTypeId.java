@@ -302,4 +302,5 @@ public interface ChangeSubscriptionResourceTypeId {
     public static ChangeSubscriptionResourceTypeId[] values() {
         return ChangeSubscriptionResourceTypeIdEnum.values();
     }
+
 }

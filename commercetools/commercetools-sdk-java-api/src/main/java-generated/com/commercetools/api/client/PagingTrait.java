@@ -54,4 +54,5 @@ public interface PagingTrait<T extends PagingTrait<T>> {
     default T asPagingTraitToBaseType() {
         return (T) this;
     }
+
 }

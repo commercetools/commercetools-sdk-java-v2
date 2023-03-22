@@ -71,4 +71,5 @@ public interface AuthenticationMode {
     public static AuthenticationMode[] values() {
         return AuthenticationModeEnum.values();
     }
+
 }

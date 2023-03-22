@@ -44,7 +44,7 @@ public interface PaymentStatusDraft extends io.vrap.rmf.base.client.Draft<Paymen
     public String getInterfaceText();
 
     /**
-     *  <p>Reference to a State.</p>
+     *  <p>ResourceIdentifier to a State.</p>
      */
     @Valid
     @JsonProperty("state")

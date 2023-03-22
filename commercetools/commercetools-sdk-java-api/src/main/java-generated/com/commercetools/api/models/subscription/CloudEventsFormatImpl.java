@@ -43,7 +43,7 @@ public class CloudEventsFormatImpl implements CloudEventsFormat, ModelBase {
     }
 
     /**
-     *  <p>Supported versions: "1.0".</p>
+     *
      */
 
     public String getCloudEventsVersion() {

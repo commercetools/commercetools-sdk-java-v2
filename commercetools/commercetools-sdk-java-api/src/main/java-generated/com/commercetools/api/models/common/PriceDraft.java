@@ -79,7 +79,7 @@ public interface PriceDraft extends com.commercetools.api.models.CustomizableDra
     public ZonedDateTime getValidFrom();
 
     /**
-     *  <p>Set this field if this Price is only valid until the specified date and time. Must be at least 1 ms later than <code>validFrom</code>.</p>
+     *  <p>Set this field if this Price is only valid until the specified date and time. Must be at least 1 ms later than <code>validFrom</code>. Prices that are no longer valid are not automatically removed, but they can be removed if necessary.</p>
      */
 
     @JsonProperty("validUntil")

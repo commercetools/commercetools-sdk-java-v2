@@ -148,4 +148,5 @@ public interface AttributeReferenceTypeId {
     public static AttributeReferenceTypeId[] values() {
         return AttributeReferenceTypeIdEnum.values();
     }
+
 }

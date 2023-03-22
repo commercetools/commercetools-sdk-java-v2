@@ -851,4 +851,5 @@ public interface UpdateType {
     public static UpdateType[] values() {
         return UpdateTypeEnum.values();
     }
+
 }

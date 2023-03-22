@@ -17,4 +17,5 @@ public interface ConflictingTrait<T extends ConflictingTrait<T>> {
     default T asConflictingTraitToBaseType() {
         return (T) this;
     }
+
 }

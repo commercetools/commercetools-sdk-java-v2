@@ -91,4 +91,5 @@ public interface ShipmentState {
     public static ShipmentState[] values() {
         return ShipmentStateEnum.values();
     }
+
 }

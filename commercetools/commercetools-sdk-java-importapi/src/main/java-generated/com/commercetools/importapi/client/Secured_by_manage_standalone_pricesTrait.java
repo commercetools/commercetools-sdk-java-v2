@@ -17,4 +17,5 @@ public interface Secured_by_manage_standalone_pricesTrait<T extends Secured_by_m
     default T asSecured_by_manage_standalone_pricesTraitToBaseType() {
         return (T) this;
     }
+
 }

@@ -17,4 +17,5 @@ public interface Secured_by_manage_import_containersTrait<T extends Secured_by_m
     default T asSecured_by_manage_import_containersTraitToBaseType() {
         return (T) this;
     }
+
 }

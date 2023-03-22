@@ -120,4 +120,5 @@ public interface StateTypeEnum {
     public static StateTypeEnum[] values() {
         return StateTypeEnumEnum.values();
     }
+
 }

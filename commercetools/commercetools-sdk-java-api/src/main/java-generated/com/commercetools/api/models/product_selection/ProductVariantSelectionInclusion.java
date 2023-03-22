@@ -27,6 +27,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProductVariantSelectionInclusionImpl.class)
+@Deprecated
 public interface ProductVariantSelectionInclusion extends ProductVariantSelection {
 
     String INCLUSION = "inclusion";

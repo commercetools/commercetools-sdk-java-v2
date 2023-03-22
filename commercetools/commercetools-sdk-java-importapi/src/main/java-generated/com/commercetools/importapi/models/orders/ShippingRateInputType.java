@@ -71,4 +71,5 @@ public interface ShippingRateInputType {
     public static ShippingRateInputType[] values() {
         return ShippingRateInputTypeEnum.values();
     }
+
 }

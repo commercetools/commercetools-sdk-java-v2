@@ -77,6 +77,9 @@ public class ContextApiHttpClientImpl extends AutoCloseableService implements Co
         final ContextApiHttpClientImpl client = copy();
         final Map<Object, Object> contextMap = new HashMap<>(client.contextMap);
         contextMap.put(value.getClass(), value);
+        if (value instanceof ClassReferenceContext) {
+            contextMap.put(((ClassReferenceContext) value).classReference(), value);
+        }
         client.contextMap = contextMap;
 
         return client;

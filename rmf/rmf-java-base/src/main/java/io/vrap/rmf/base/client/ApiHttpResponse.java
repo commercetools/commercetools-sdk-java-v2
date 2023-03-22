@@ -67,6 +67,10 @@ public class ApiHttpResponse<U> extends Base implements ContextAware<ApiHttpResp
         ApiHttpResponse<U> response = copy();
         Map<Object, Object> contextMap = new HashMap<>(response.contextMap);
         contextMap.put(value.getClass(), value);
+        if (value instanceof ClassReferenceContext) {
+            contextMap.put(((ClassReferenceContext) value).classReference(), value);
+        }
+
         response.contextMap = contextMap;
 
         return response;

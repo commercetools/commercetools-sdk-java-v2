@@ -40,7 +40,7 @@ public class NewRelicTelemetryMiddleware implements TelemetryMiddleware {
     public CompletableFuture<ApiHttpResponse<byte[]>> invoke(ApiHttpRequest request,
             Function<ApiHttpRequest, CompletableFuture<ApiHttpResponse<byte[]>>> next) {
 
-        Optional<NewRelicContext> context = Optional.ofNullable(request.getContext(NewRelicContextImpl.class));
+        Optional<NewRelicContext> context = Optional.ofNullable(request.getContext(NewRelicContext.class));
         context.map(NewRelicContext::getToken).ifPresent(Token::link);
         Optional<Token> token = context.map(NewRelicContext::getTransaction).map(Transaction::getToken);
         Optional<Segment> segment = context.map(c -> c.getTransaction()

@@ -95,7 +95,7 @@ public class FieldDefinitionBuilder implements Builder<FieldDefinition> {
     }
 
     /**
-     *  <p>Must be either <code>SingleLine</code> or <code>MultiLine</code>. Defines the visual representation of the field in user interfaces like the Merchant Center. It is only relevant for string-based FieldTypes like CustomFieldStringType and CustomFieldLocalizedStringType.</p>
+     *  <p>Defines the visual representation of the field in user interfaces like the Merchant Center. It is only relevant for string-based FieldTypes like CustomFieldStringType and CustomFieldLocalizedStringType.</p>
      */
 
     public FieldDefinitionBuilder inputHint(

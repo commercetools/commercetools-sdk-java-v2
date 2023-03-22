@@ -17,4 +17,5 @@ public interface Secured_by_view_import_containersTrait<T extends Secured_by_vie
     default T asSecured_by_view_import_containersTraitToBaseType() {
         return (T) this;
     }
+
 }

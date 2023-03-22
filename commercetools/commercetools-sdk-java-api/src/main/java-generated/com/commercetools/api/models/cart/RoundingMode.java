@@ -86,4 +86,5 @@ public interface RoundingMode {
     public static RoundingMode[] values() {
         return RoundingModeEnum.values();
     }
+
 }

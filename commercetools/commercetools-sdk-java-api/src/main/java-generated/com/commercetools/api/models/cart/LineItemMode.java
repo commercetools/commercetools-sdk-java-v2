@@ -83,4 +83,5 @@ public interface LineItemMode {
     public static LineItemMode[] values() {
         return LineItemModeEnum.values();
     }
+
 }

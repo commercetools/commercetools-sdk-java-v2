@@ -85,4 +85,5 @@ public interface SearchIndexingConfigurationStatus {
     public static SearchIndexingConfigurationStatus[] values() {
         return SearchIndexingConfigurationStatusEnum.values();
     }
+
 }

@@ -71,4 +71,5 @@ public interface ImageSearchConfigStatus {
     public static ImageSearchConfigStatus[] values() {
         return ImageSearchConfigStatusEnum.values();
     }
+
 }

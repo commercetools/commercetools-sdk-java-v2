@@ -78,4 +78,5 @@ public interface PriceselectingTrait<T extends PriceselectingTrait<T>> {
     default T asPriceselectingTraitToBaseType() {
         return (T) this;
     }
+
 }

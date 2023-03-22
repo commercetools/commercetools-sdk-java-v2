@@ -30,4 +30,5 @@ public interface SortableTrait<T extends SortableTrait<T>> {
     default T asSortableTraitToBaseType() {
         return (T) this;
     }
+
 }

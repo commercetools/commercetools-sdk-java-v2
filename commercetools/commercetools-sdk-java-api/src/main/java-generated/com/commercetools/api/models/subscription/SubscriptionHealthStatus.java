@@ -92,4 +92,5 @@ public interface SubscriptionHealthStatus {
     public static SubscriptionHealthStatus[] values() {
         return SubscriptionHealthStatusEnum.values();
     }
+
 }

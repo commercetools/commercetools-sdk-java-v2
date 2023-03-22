@@ -79,4 +79,5 @@ public interface AttributeConstraintEnum {
     public static AttributeConstraintEnum[] values() {
         return AttributeConstraintEnumEnum.values();
     }
+
 }

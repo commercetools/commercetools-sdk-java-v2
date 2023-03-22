@@ -17,4 +17,5 @@ public interface Secured_by_manage_ordersTrait<T extends Secured_by_manage_order
     default T asSecured_by_manage_ordersTraitToBaseType() {
         return (T) this;
     }
+
 }

@@ -30,4 +30,5 @@ public interface DataerasureTrait<T extends DataerasureTrait<T>> {
     default T asDataerasureTraitToBaseType() {
         return (T) this;
     }
+
 }

@@ -78,4 +78,5 @@ public interface ProductPublishScope {
     public static ProductPublishScope[] values() {
         return ProductPublishScopeEnum.values();
     }
+
 }

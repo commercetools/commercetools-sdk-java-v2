@@ -78,4 +78,5 @@ public interface StackingMode {
     public static StackingMode[] values() {
         return StackingModeEnum.values();
     }
+
 }

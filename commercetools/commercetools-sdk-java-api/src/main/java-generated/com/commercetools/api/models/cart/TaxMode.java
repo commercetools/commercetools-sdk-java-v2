@@ -100,4 +100,5 @@ public interface TaxMode {
     public static TaxMode[] values() {
         return TaxModeEnum.values();
     }
+
 }

@@ -78,4 +78,5 @@ public interface BusinessUnitStoreMode {
     public static BusinessUnitStoreMode[] values() {
         return BusinessUnitStoreModeEnum.values();
     }
+
 }

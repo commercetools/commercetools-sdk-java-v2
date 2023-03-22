@@ -79,4 +79,5 @@ public interface OrderState {
     public static OrderState[] values() {
         return OrderStateEnum.values();
     }
+
 }

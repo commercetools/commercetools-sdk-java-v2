@@ -99,4 +99,5 @@ public interface QuoteRequestState {
     public static QuoteRequestState[] values() {
         return QuoteRequestStateEnum.values();
     }
+
 }

@@ -92,4 +92,5 @@ public interface LineItemPriceMode {
     public static LineItemPriceMode[] values() {
         return LineItemPriceModeEnum.values();
     }
+
 }

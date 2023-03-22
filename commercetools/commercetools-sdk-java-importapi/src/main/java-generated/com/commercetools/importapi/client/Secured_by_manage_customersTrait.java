@@ -17,4 +17,5 @@ public interface Secured_by_manage_customersTrait<T extends Secured_by_manage_cu
     default T asSecured_by_manage_customersTraitToBaseType() {
         return (T) this;
     }
+
 }

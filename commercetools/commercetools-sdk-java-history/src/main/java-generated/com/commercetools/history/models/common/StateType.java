@@ -83,4 +83,5 @@ public interface StateType {
     public static StateType[] values() {
         return StateTypeEnum.values();
     }
+
 }

@@ -30,4 +30,5 @@ public interface ExpandableTrait<T extends ExpandableTrait<T>> {
     default T asExpandableTraitToBaseType() {
         return (T) this;
     }
+
 }

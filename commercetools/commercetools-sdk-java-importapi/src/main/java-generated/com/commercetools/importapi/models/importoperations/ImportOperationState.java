@@ -78,4 +78,5 @@ public interface ImportOperationState {
     public static ImportOperationState[] values() {
         return ImportOperationStateEnum.values();
     }
+
 }

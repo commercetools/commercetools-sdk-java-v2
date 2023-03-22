@@ -83,4 +83,5 @@ public interface TransactionType {
     public static TransactionType[] values() {
         return TransactionTypeEnum.values();
     }
+
 }

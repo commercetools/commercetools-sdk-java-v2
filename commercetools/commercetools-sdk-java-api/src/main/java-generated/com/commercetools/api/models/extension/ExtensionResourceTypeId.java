@@ -120,4 +120,5 @@ public interface ExtensionResourceTypeId {
     public static ExtensionResourceTypeId[] values() {
         return ExtensionResourceTypeIdEnum.values();
     }
+
 }

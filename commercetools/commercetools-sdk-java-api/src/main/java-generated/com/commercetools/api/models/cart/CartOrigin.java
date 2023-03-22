@@ -86,4 +86,5 @@ public interface CartOrigin {
     public static CartOrigin[] values() {
         return CartOriginEnum.values();
     }
+
 }

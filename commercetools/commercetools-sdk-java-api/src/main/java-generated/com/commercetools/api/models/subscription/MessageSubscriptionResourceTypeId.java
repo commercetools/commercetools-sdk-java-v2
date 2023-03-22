@@ -162,4 +162,5 @@ public interface MessageSubscriptionResourceTypeId {
     public static MessageSubscriptionResourceTypeId[] values() {
         return MessageSubscriptionResourceTypeIdEnum.values();
     }
+
 }

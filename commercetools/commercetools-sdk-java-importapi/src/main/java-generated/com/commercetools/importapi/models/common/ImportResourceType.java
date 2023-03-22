@@ -145,4 +145,5 @@ public interface ImportResourceType {
     public static ImportResourceType[] values() {
         return ImportResourceTypeEnum.values();
     }
+
 }

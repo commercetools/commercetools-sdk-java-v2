@@ -79,4 +79,5 @@ public interface ReturnShipmentState {
     public static ReturnShipmentState[] values() {
         return ReturnShipmentStateEnum.values();
     }
+
 }

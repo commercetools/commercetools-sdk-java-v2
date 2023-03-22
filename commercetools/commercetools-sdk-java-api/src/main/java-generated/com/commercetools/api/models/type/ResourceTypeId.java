@@ -278,4 +278,5 @@ public interface ResourceTypeId {
     public static ResourceTypeId[] values() {
         return ResourceTypeIdEnum.values();
     }
+
 }

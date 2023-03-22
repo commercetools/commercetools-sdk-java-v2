@@ -71,4 +71,5 @@ public interface TextInputHint {
     public static TextInputHint[] values() {
         return TextInputHintEnum.values();
     }
+
 }

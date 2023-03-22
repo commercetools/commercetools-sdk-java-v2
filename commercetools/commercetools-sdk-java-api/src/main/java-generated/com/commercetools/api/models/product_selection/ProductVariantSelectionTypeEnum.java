@@ -79,4 +79,5 @@ public interface ProductVariantSelectionTypeEnum {
     public static ProductVariantSelectionTypeEnum[] values() {
         return ProductVariantSelectionTypeEnumEnum.values();
     }
+
 }

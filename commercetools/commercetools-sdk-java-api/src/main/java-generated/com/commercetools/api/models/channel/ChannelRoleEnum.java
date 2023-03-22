@@ -100,4 +100,5 @@ public interface ChannelRoleEnum {
     public static ChannelRoleEnum[] values() {
         return ChannelRoleEnumEnum.values();
     }
+
 }

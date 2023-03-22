@@ -30,4 +30,5 @@ public interface ProjectionselectingTrait<T extends ProjectionselectingTrait<T>>
     default T asProjectionselectingTraitToBaseType() {
         return (T) this;
     }
+
 }

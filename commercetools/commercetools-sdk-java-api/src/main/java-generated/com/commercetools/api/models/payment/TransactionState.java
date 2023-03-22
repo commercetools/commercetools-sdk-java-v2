@@ -92,4 +92,5 @@ public interface TransactionState {
     public static TransactionState[] values() {
         return TransactionStateEnum.values();
     }
+
 }

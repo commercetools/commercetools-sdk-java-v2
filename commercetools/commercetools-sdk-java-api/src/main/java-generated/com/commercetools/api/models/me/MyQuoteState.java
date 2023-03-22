@@ -78,4 +78,5 @@ public interface MyQuoteState {
     public static MyQuoteState[] values() {
         return MyQuoteStateEnum.values();
     }
+
 }

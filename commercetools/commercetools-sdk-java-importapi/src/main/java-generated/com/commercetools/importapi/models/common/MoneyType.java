@@ -71,4 +71,5 @@ public interface MoneyType {
     public static MoneyType[] values() {
         return MoneyTypeEnum.values();
     }
+
 }

@@ -204,4 +204,5 @@ public interface ReferenceType {
     public static ReferenceType[] values() {
         return ReferenceTypeEnum.values();
     }
+
 }

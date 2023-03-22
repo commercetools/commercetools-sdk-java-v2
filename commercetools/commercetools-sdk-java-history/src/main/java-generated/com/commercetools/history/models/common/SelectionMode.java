@@ -71,4 +71,5 @@ public interface SelectionMode {
     public static SelectionMode[] values() {
         return SelectionModeEnum.values();
     }
+
 }

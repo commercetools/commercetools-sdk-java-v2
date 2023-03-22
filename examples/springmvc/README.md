@@ -1,4 +1,4 @@
-# Me endpoint checkout app
+# Spring MVC example app
 
 Example to show how Java SDK can be used in a Spring Boot application with NewRelic monitoring enabled.
 

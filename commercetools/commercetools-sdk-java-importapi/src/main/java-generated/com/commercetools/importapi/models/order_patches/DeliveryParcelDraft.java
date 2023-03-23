@@ -33,6 +33,7 @@ public interface DeliveryParcelDraft extends io.vrap.rmf.base.client.Draft<Deliv
 
     /**
      *
+     * @return measurements
      */
     @Valid
     @JsonProperty("measurements")
@@ -40,6 +41,7 @@ public interface DeliveryParcelDraft extends io.vrap.rmf.base.client.Draft<Deliv
 
     /**
      *
+     * @return trackingData
      */
     @Valid
     @JsonProperty("trackingData")
@@ -47,6 +49,7 @@ public interface DeliveryParcelDraft extends io.vrap.rmf.base.client.Draft<Deliv
 
     /**
      *
+     * @return items
      */
     @Valid
     @JsonProperty("items")

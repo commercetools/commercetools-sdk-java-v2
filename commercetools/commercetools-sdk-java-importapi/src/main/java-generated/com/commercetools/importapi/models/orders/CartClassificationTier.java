@@ -37,6 +37,7 @@ public interface CartClassificationTier extends ShippingRatePriceTier {
 
     /**
      *
+     * @return value
      */
     @NotNull
     @JsonProperty("value")
@@ -44,6 +45,7 @@ public interface CartClassificationTier extends ShippingRatePriceTier {
 
     /**
      *
+     * @return price
      */
     @NotNull
     @Valid
@@ -52,6 +54,7 @@ public interface CartClassificationTier extends ShippingRatePriceTier {
 
     /**
      *
+     * @return tiers
      */
     @NotNull
     @Valid
@@ -60,6 +63,7 @@ public interface CartClassificationTier extends ShippingRatePriceTier {
 
     /**
      *
+     * @return isMatching
      */
 
     @JsonProperty("isMatching")

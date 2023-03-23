@@ -35,6 +35,7 @@ public interface CartScoreTier extends ShippingRatePriceTier {
 
     /**
      *  <p>Abstract value for categorizing a Cart. The range starts at <code>0</code>. The default price covers <code>0</code>, tiers start at <code>1</code>. See Using Tiered Shipping Rates for details and examples.</p>
+     * @return score
      */
     @NotNull
     @JsonProperty("score")
@@ -42,6 +43,7 @@ public interface CartScoreTier extends ShippingRatePriceTier {
 
     /**
      *  <p>Defines a fixed price for the <code>score</code>.</p>
+     * @return price
      */
     @Valid
     @JsonProperty("price")
@@ -49,6 +51,7 @@ public interface CartScoreTier extends ShippingRatePriceTier {
 
     /**
      *  <p>Dynamically calculates a Price for a range of scores.</p>
+     * @return priceFunction
      */
     @Valid
     @JsonProperty("priceFunction")
@@ -56,6 +59,7 @@ public interface CartScoreTier extends ShippingRatePriceTier {
 
     /**
      *  <p>Appears in response to Get ShippingMethods for a Cart if the shipping rate matches the search query.</p>
+     * @return isMatching
      */
 
     @JsonProperty("isMatching")

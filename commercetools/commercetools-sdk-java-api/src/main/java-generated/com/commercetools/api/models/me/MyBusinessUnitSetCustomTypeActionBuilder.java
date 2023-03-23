@@ -31,6 +31,7 @@ public class MyBusinessUnitSetCustomTypeActionBuilder implements Builder<MyBusin
 
     /**
      *  <p>Defines the Type that extends the BusinessUnit with Custom Fields. If absent, any existing Type and Custom Fields are removed from the BusinessUnit.</p>
+     * @return Builder
      */
 
     public MyBusinessUnitSetCustomTypeActionBuilder type(
@@ -41,6 +42,8 @@ public class MyBusinessUnitSetCustomTypeActionBuilder implements Builder<MyBusin
 
     /**
      *  <p>Defines the Type that extends the BusinessUnit with Custom Fields. If absent, any existing Type and Custom Fields are removed from the BusinessUnit.</p>
+     * @param type
+     * @return Builder
      */
 
     public MyBusinessUnitSetCustomTypeActionBuilder type(
@@ -51,6 +54,7 @@ public class MyBusinessUnitSetCustomTypeActionBuilder implements Builder<MyBusin
 
     /**
      *  <p>Sets the Custom Fields for the BusinessUnit.</p>
+     * @return Builder
      */
 
     public MyBusinessUnitSetCustomTypeActionBuilder fields(
@@ -61,6 +65,8 @@ public class MyBusinessUnitSetCustomTypeActionBuilder implements Builder<MyBusin
 
     /**
      *  <p>Sets the Custom Fields for the BusinessUnit.</p>
+     * @param fields
+     * @return Builder
      */
 
     public MyBusinessUnitSetCustomTypeActionBuilder fields(

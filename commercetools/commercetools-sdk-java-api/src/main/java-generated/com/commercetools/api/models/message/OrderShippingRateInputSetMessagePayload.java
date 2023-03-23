@@ -33,6 +33,7 @@ public interface OrderShippingRateInputSetMessagePayload extends OrderMessagePay
 
     /**
      *  <p>ShippingRateInput after the Set ShippingRateInput update action.</p>
+     * @return shippingRateInput
      */
     @Valid
     @JsonProperty("shippingRateInput")
@@ -40,6 +41,7 @@ public interface OrderShippingRateInputSetMessagePayload extends OrderMessagePay
 
     /**
      *  <p>ShippingRateInput before the Set ShippingRateInput update action.</p>
+     * @return oldShippingRateInput
      */
     @Valid
     @JsonProperty("oldShippingRateInput")

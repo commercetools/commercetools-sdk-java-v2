@@ -31,6 +31,8 @@ public class StoreCountriesChangedMessagePayloadBuilder implements Builder<Store
 
     /**
      *  <p>Countries added to the Store.</p>
+     * @param addedCountries
+     * @return Builder
      */
 
     public StoreCountriesChangedMessagePayloadBuilder addedCountries(
@@ -41,6 +43,8 @@ public class StoreCountriesChangedMessagePayloadBuilder implements Builder<Store
 
     /**
      *  <p>Countries added to the Store.</p>
+     * @param addedCountries
+     * @return Builder
      */
 
     public StoreCountriesChangedMessagePayloadBuilder addedCountries(
@@ -51,6 +55,8 @@ public class StoreCountriesChangedMessagePayloadBuilder implements Builder<Store
 
     /**
      *  <p>Countries added to the Store.</p>
+     * @param addedCountries
+     * @return Builder
      */
 
     public StoreCountriesChangedMessagePayloadBuilder plusAddedCountries(
@@ -64,6 +70,7 @@ public class StoreCountriesChangedMessagePayloadBuilder implements Builder<Store
 
     /**
      *  <p>Countries added to the Store.</p>
+     * @return Builder
      */
 
     public StoreCountriesChangedMessagePayloadBuilder plusAddedCountries(
@@ -78,6 +85,7 @@ public class StoreCountriesChangedMessagePayloadBuilder implements Builder<Store
 
     /**
      *  <p>Countries added to the Store.</p>
+     * @return Builder
      */
 
     public StoreCountriesChangedMessagePayloadBuilder withAddedCountries(
@@ -90,6 +98,8 @@ public class StoreCountriesChangedMessagePayloadBuilder implements Builder<Store
 
     /**
      *  <p>Countries removed from the Store.</p>
+     * @param removedCountries
+     * @return Builder
      */
 
     public StoreCountriesChangedMessagePayloadBuilder removedCountries(
@@ -100,6 +110,8 @@ public class StoreCountriesChangedMessagePayloadBuilder implements Builder<Store
 
     /**
      *  <p>Countries removed from the Store.</p>
+     * @param removedCountries
+     * @return Builder
      */
 
     public StoreCountriesChangedMessagePayloadBuilder removedCountries(
@@ -110,6 +122,8 @@ public class StoreCountriesChangedMessagePayloadBuilder implements Builder<Store
 
     /**
      *  <p>Countries removed from the Store.</p>
+     * @param removedCountries
+     * @return Builder
      */
 
     public StoreCountriesChangedMessagePayloadBuilder plusRemovedCountries(
@@ -123,6 +137,7 @@ public class StoreCountriesChangedMessagePayloadBuilder implements Builder<Store
 
     /**
      *  <p>Countries removed from the Store.</p>
+     * @return Builder
      */
 
     public StoreCountriesChangedMessagePayloadBuilder plusRemovedCountries(
@@ -137,6 +152,7 @@ public class StoreCountriesChangedMessagePayloadBuilder implements Builder<Store
 
     /**
      *  <p>Countries removed from the Store.</p>
+     * @return Builder
      */
 
     public StoreCountriesChangedMessagePayloadBuilder withRemovedCountries(

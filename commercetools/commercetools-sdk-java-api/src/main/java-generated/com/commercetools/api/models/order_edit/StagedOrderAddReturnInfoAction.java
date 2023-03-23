@@ -37,6 +37,7 @@ public interface StagedOrderAddReturnInfoAction extends StagedOrderUpdateAction 
 
     /**
      *
+     * @return returnTrackingId
      */
 
     @JsonProperty("returnTrackingId")
@@ -44,6 +45,7 @@ public interface StagedOrderAddReturnInfoAction extends StagedOrderUpdateAction 
 
     /**
      *
+     * @return items
      */
     @NotNull
     @Valid
@@ -52,6 +54,7 @@ public interface StagedOrderAddReturnInfoAction extends StagedOrderUpdateAction 
 
     /**
      *
+     * @return returnDate
      */
 
     @JsonProperty("returnDate")

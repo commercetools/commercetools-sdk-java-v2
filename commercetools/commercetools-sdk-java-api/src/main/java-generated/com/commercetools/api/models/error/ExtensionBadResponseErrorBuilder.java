@@ -51,6 +51,8 @@ public class ExtensionBadResponseErrorBuilder implements Builder<ExtensionBadRes
 
     /**
      *  <p>Description of the invalid Extension response. For example, <code>"The extension did not return the expected JSON."</code>.</p>
+     * @param message
+     * @return Builder
      */
 
     public ExtensionBadResponseErrorBuilder message(final String message) {
@@ -81,6 +83,7 @@ public class ExtensionBadResponseErrorBuilder implements Builder<ExtensionBadRes
 
     /**
      *  <p>User-defined localized description of the error.</p>
+     * @return Builder
      */
 
     public ExtensionBadResponseErrorBuilder localizedMessage(
@@ -91,6 +94,8 @@ public class ExtensionBadResponseErrorBuilder implements Builder<ExtensionBadRes
 
     /**
      *  <p>User-defined localized description of the error.</p>
+     * @param localizedMessage
+     * @return Builder
      */
 
     public ExtensionBadResponseErrorBuilder localizedMessage(
@@ -101,6 +106,8 @@ public class ExtensionBadResponseErrorBuilder implements Builder<ExtensionBadRes
 
     /**
      *  <p>Any information that should be returned to the API caller.</p>
+     * @param extensionExtraInfo
+     * @return Builder
      */
 
     public ExtensionBadResponseErrorBuilder extensionExtraInfo(@Nullable final java.lang.Object extensionExtraInfo) {
@@ -110,6 +117,8 @@ public class ExtensionBadResponseErrorBuilder implements Builder<ExtensionBadRes
 
     /**
      *  <p>Additional errors related to the API Extension.</p>
+     * @param extensionErrors
+     * @return Builder
      */
 
     public ExtensionBadResponseErrorBuilder extensionErrors(
@@ -120,6 +129,8 @@ public class ExtensionBadResponseErrorBuilder implements Builder<ExtensionBadRes
 
     /**
      *  <p>Additional errors related to the API Extension.</p>
+     * @param extensionErrors
+     * @return Builder
      */
 
     public ExtensionBadResponseErrorBuilder extensionErrors(
@@ -130,6 +141,8 @@ public class ExtensionBadResponseErrorBuilder implements Builder<ExtensionBadRes
 
     /**
      *  <p>Additional errors related to the API Extension.</p>
+     * @param extensionErrors
+     * @return Builder
      */
 
     public ExtensionBadResponseErrorBuilder plusExtensionErrors(
@@ -143,6 +156,7 @@ public class ExtensionBadResponseErrorBuilder implements Builder<ExtensionBadRes
 
     /**
      *  <p>Additional errors related to the API Extension.</p>
+     * @return Builder
      */
 
     public ExtensionBadResponseErrorBuilder plusExtensionErrors(
@@ -156,6 +170,7 @@ public class ExtensionBadResponseErrorBuilder implements Builder<ExtensionBadRes
 
     /**
      *  <p>Additional errors related to the API Extension.</p>
+     * @return Builder
      */
 
     public ExtensionBadResponseErrorBuilder withExtensionErrors(
@@ -167,6 +182,8 @@ public class ExtensionBadResponseErrorBuilder implements Builder<ExtensionBadRes
 
     /**
      *  <p>The response body returned by the Extension.</p>
+     * @param extensionBody
+     * @return Builder
      */
 
     public ExtensionBadResponseErrorBuilder extensionBody(@Nullable final String extensionBody) {
@@ -176,6 +193,8 @@ public class ExtensionBadResponseErrorBuilder implements Builder<ExtensionBadRes
 
     /**
      *  <p>Http status code returned by the Extension.</p>
+     * @param extensionStatusCode
+     * @return Builder
      */
 
     public ExtensionBadResponseErrorBuilder extensionStatusCode(@Nullable final Integer extensionStatusCode) {
@@ -185,6 +204,8 @@ public class ExtensionBadResponseErrorBuilder implements Builder<ExtensionBadRes
 
     /**
      *  <p>Unique identifier of the Extension.</p>
+     * @param extensionId
+     * @return Builder
      */
 
     public ExtensionBadResponseErrorBuilder extensionId(final String extensionId) {
@@ -194,6 +215,8 @@ public class ExtensionBadResponseErrorBuilder implements Builder<ExtensionBadRes
 
     /**
      *  <p>User-defined unique identifier of the Extension.</p>
+     * @param extensionKey
+     * @return Builder
      */
 
     public ExtensionBadResponseErrorBuilder extensionKey(@Nullable final String extensionKey) {

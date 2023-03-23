@@ -27,12 +27,14 @@ import io.vrap.rmf.base.client.utils.Generated;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProductVariantSelectionInclusionImpl.class)
+@Deprecated
 public interface ProductVariantSelectionInclusion extends ProductVariantSelection {
 
     String INCLUSION = "inclusion";
 
     /**
      *
+     * @return type
      */
     @NotNull
     @JsonProperty("type")
@@ -40,6 +42,7 @@ public interface ProductVariantSelectionInclusion extends ProductVariantSelectio
 
     /**
      *  <p>Non-empty array of SKUs representing Product Variants to be included into the Product Selection.</p>
+     * @return skus
      */
     @NotNull
     @JsonProperty("skus")

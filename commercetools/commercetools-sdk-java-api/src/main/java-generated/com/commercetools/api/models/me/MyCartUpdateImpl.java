@@ -35,7 +35,7 @@ public class MyCartUpdateImpl implements MyCartUpdate, ModelBase {
     }
 
     /**
-     *
+     *  <p>Expected version of the Cart on which the changes apply. If it does not match the actual version, a 409 Conflict error is returned.</p>
      */
 
     public Long getVersion() {
@@ -43,7 +43,7 @@ public class MyCartUpdateImpl implements MyCartUpdate, ModelBase {
     }
 
     /**
-     *
+     *  <p>Update actions to be performed on the Cart.</p>
      */
 
     public java.util.List<com.commercetools.api.models.me.MyCartUpdateAction> getActions() {

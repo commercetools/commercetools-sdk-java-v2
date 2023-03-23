@@ -36,6 +36,7 @@ public interface CustomerToken {
 
     /**
      *  <p>Unique identifier of the token.</p>
+     * @return id
      */
     @NotNull
     @JsonProperty("id")
@@ -43,6 +44,7 @@ public interface CustomerToken {
 
     /**
      *  <p>Date and time (UTC) the token was initially created.</p>
+     * @return createdAt
      */
     @NotNull
     @JsonProperty("createdAt")
@@ -50,6 +52,7 @@ public interface CustomerToken {
 
     /**
      *  <p>When the token is created, <code>lastModifiedAt</code> is set to <code>createdAt</code>.</p>
+     * @return lastModifiedAt
      */
 
     @JsonProperty("lastModifiedAt")
@@ -57,6 +60,7 @@ public interface CustomerToken {
 
     /**
      *  <p>The <code>id</code> of the Customer.</p>
+     * @return customerId
      */
     @NotNull
     @JsonProperty("customerId")
@@ -64,6 +68,7 @@ public interface CustomerToken {
 
     /**
      *  <p>Date and time (UTC) the token expires.</p>
+     * @return expiresAt
      */
     @NotNull
     @JsonProperty("expiresAt")
@@ -71,6 +76,7 @@ public interface CustomerToken {
 
     /**
      *  <p>Value of the token.</p>
+     * @return value
      */
     @NotNull
     @JsonProperty("value")

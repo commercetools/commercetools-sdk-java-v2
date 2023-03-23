@@ -33,7 +33,9 @@ public class TaxPortionDraftBuilder implements Builder<TaxPortionDraft> {
     private com.commercetools.api.models.common.Money amount;
 
     /**
-     *
+     *  <p>Name of the tax portion.</p>
+     * @param name
+     * @return Builder
      */
 
     public TaxPortionDraftBuilder name(@Nullable final String name) {
@@ -42,7 +44,9 @@ public class TaxPortionDraftBuilder implements Builder<TaxPortionDraft> {
     }
 
     /**
-     *
+     *  <p>A number in the range 0-1.</p>
+     * @param rate
+     * @return Builder
      */
 
     public TaxPortionDraftBuilder rate(final Double rate) {
@@ -51,8 +55,8 @@ public class TaxPortionDraftBuilder implements Builder<TaxPortionDraft> {
     }
 
     /**
-     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
-     *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
+     *  <p>Money value for the tax portion.</p>
+     * @return Builder
      */
 
     public TaxPortionDraftBuilder amount(
@@ -62,8 +66,9 @@ public class TaxPortionDraftBuilder implements Builder<TaxPortionDraft> {
     }
 
     /**
-     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
-     *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
+     *  <p>Money value for the tax portion.</p>
+     * @param amount
+     * @return Builder
      */
 
     public TaxPortionDraftBuilder amount(final com.commercetools.api.models.common.Money amount) {

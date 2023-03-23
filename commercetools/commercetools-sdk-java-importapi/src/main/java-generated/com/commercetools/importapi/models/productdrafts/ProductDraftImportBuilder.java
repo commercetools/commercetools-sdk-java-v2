@@ -73,6 +73,8 @@ public class ProductDraftImportBuilder implements Builder<ProductDraftImport> {
 
     /**
      *  <p>User-defined unique identifier.</p>
+     * @param key
+     * @return Builder
      */
 
     public ProductDraftImportBuilder key(final String key) {
@@ -82,6 +84,7 @@ public class ProductDraftImportBuilder implements Builder<ProductDraftImport> {
 
     /**
      *  <p>The <code>productType</code> of a Product. Maps to <code>Product.productType</code>. The Reference to the ProductType with which the ProductDraft is associated. If referenced ProductType does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary ProductType is created.</p>
+     * @return Builder
      */
 
     public ProductDraftImportBuilder productType(
@@ -93,6 +96,8 @@ public class ProductDraftImportBuilder implements Builder<ProductDraftImport> {
 
     /**
      *  <p>The <code>productType</code> of a Product. Maps to <code>Product.productType</code>. The Reference to the ProductType with which the ProductDraft is associated. If referenced ProductType does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary ProductType is created.</p>
+     * @param productType
+     * @return Builder
      */
 
     public ProductDraftImportBuilder productType(
@@ -103,6 +108,7 @@ public class ProductDraftImportBuilder implements Builder<ProductDraftImport> {
 
     /**
      *
+     * @return Builder
      */
 
     public ProductDraftImportBuilder name(
@@ -113,6 +119,8 @@ public class ProductDraftImportBuilder implements Builder<ProductDraftImport> {
 
     /**
      *
+     * @param name
+     * @return Builder
      */
 
     public ProductDraftImportBuilder name(final com.commercetools.importapi.models.common.LocalizedString name) {
@@ -122,6 +130,7 @@ public class ProductDraftImportBuilder implements Builder<ProductDraftImport> {
 
     /**
      *  <p>Human-readable identifiers usually used as deep-link URL to the related product. Each slug must be unique across a project, but a product can have the same slug for different languages. Allowed are alphabetic, numeric, underscore (_) and hyphen (-) characters.</p>
+     * @return Builder
      */
 
     public ProductDraftImportBuilder slug(
@@ -132,6 +141,8 @@ public class ProductDraftImportBuilder implements Builder<ProductDraftImport> {
 
     /**
      *  <p>Human-readable identifiers usually used as deep-link URL to the related product. Each slug must be unique across a project, but a product can have the same slug for different languages. Allowed are alphabetic, numeric, underscore (_) and hyphen (-) characters.</p>
+     * @param slug
+     * @return Builder
      */
 
     public ProductDraftImportBuilder slug(final com.commercetools.importapi.models.common.LocalizedString slug) {
@@ -141,6 +152,7 @@ public class ProductDraftImportBuilder implements Builder<ProductDraftImport> {
 
     /**
      *  <p>Maps to <code>Product.description</code>.</p>
+     * @return Builder
      */
 
     public ProductDraftImportBuilder description(
@@ -151,6 +163,8 @@ public class ProductDraftImportBuilder implements Builder<ProductDraftImport> {
 
     /**
      *  <p>Maps to <code>Product.description</code>.</p>
+     * @param description
+     * @return Builder
      */
 
     public ProductDraftImportBuilder description(
@@ -161,6 +175,8 @@ public class ProductDraftImportBuilder implements Builder<ProductDraftImport> {
 
     /**
      *  <p>The Reference to the Categories with which the ProductDraft is associated. If referenced Categories do not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Categories are created.</p>
+     * @param categories
+     * @return Builder
      */
 
     public ProductDraftImportBuilder categories(
@@ -171,6 +187,8 @@ public class ProductDraftImportBuilder implements Builder<ProductDraftImport> {
 
     /**
      *  <p>The Reference to the Categories with which the ProductDraft is associated. If referenced Categories do not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Categories are created.</p>
+     * @param categories
+     * @return Builder
      */
 
     public ProductDraftImportBuilder categories(
@@ -181,6 +199,8 @@ public class ProductDraftImportBuilder implements Builder<ProductDraftImport> {
 
     /**
      *  <p>The Reference to the Categories with which the ProductDraft is associated. If referenced Categories do not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Categories are created.</p>
+     * @param categories
+     * @return Builder
      */
 
     public ProductDraftImportBuilder plusCategories(
@@ -194,6 +214,7 @@ public class ProductDraftImportBuilder implements Builder<ProductDraftImport> {
 
     /**
      *  <p>The Reference to the Categories with which the ProductDraft is associated. If referenced Categories do not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Categories are created.</p>
+     * @return Builder
      */
 
     public ProductDraftImportBuilder plusCategories(
@@ -208,6 +229,7 @@ public class ProductDraftImportBuilder implements Builder<ProductDraftImport> {
 
     /**
      *  <p>The Reference to the Categories with which the ProductDraft is associated. If referenced Categories do not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Categories are created.</p>
+     * @return Builder
      */
 
     public ProductDraftImportBuilder withCategories(
@@ -225,6 +247,7 @@ public class ProductDraftImportBuilder implements Builder<ProductDraftImport> {
      *    "en": "dog food"
      *  }
      *  </code></pre>
+     * @return Builder
      */
 
     public ProductDraftImportBuilder metaTitle(
@@ -240,6 +263,8 @@ public class ProductDraftImportBuilder implements Builder<ProductDraftImport> {
      *    "en": "dog food"
      *  }
      *  </code></pre>
+     * @param metaTitle
+     * @return Builder
      */
 
     public ProductDraftImportBuilder metaTitle(
@@ -255,6 +280,7 @@ public class ProductDraftImportBuilder implements Builder<ProductDraftImport> {
      *    "en": "dog food"
      *  }
      *  </code></pre>
+     * @return Builder
      */
 
     public ProductDraftImportBuilder metaDescription(
@@ -271,6 +297,8 @@ public class ProductDraftImportBuilder implements Builder<ProductDraftImport> {
      *    "en": "dog food"
      *  }
      *  </code></pre>
+     * @param metaDescription
+     * @return Builder
      */
 
     public ProductDraftImportBuilder metaDescription(
@@ -286,6 +314,7 @@ public class ProductDraftImportBuilder implements Builder<ProductDraftImport> {
      *    "en": "dog food"
      *  }
      *  </code></pre>
+     * @return Builder
      */
 
     public ProductDraftImportBuilder metaKeywords(
@@ -302,6 +331,8 @@ public class ProductDraftImportBuilder implements Builder<ProductDraftImport> {
      *    "en": "dog food"
      *  }
      *  </code></pre>
+     * @param metaKeywords
+     * @return Builder
      */
 
     public ProductDraftImportBuilder metaKeywords(
@@ -312,6 +343,7 @@ public class ProductDraftImportBuilder implements Builder<ProductDraftImport> {
 
     /**
      *  <p>The master Product variant. Required if the <code>variants</code> array contains a Product Variant.</p>
+     * @return Builder
      */
 
     public ProductDraftImportBuilder masterVariant(
@@ -324,6 +356,8 @@ public class ProductDraftImportBuilder implements Builder<ProductDraftImport> {
 
     /**
      *  <p>The master Product variant. Required if the <code>variants</code> array contains a Product Variant.</p>
+     * @param masterVariant
+     * @return Builder
      */
 
     public ProductDraftImportBuilder masterVariant(
@@ -334,6 +368,8 @@ public class ProductDraftImportBuilder implements Builder<ProductDraftImport> {
 
     /**
      *  <p>An array of related Product Variants.</p>
+     * @param variants
+     * @return Builder
      */
 
     public ProductDraftImportBuilder variants(
@@ -344,6 +380,8 @@ public class ProductDraftImportBuilder implements Builder<ProductDraftImport> {
 
     /**
      *  <p>An array of related Product Variants.</p>
+     * @param variants
+     * @return Builder
      */
 
     public ProductDraftImportBuilder variants(
@@ -354,6 +392,8 @@ public class ProductDraftImportBuilder implements Builder<ProductDraftImport> {
 
     /**
      *  <p>An array of related Product Variants.</p>
+     * @param variants
+     * @return Builder
      */
 
     public ProductDraftImportBuilder plusVariants(
@@ -367,6 +407,7 @@ public class ProductDraftImportBuilder implements Builder<ProductDraftImport> {
 
     /**
      *  <p>An array of related Product Variants.</p>
+     * @return Builder
      */
 
     public ProductDraftImportBuilder plusVariants(
@@ -382,6 +423,7 @@ public class ProductDraftImportBuilder implements Builder<ProductDraftImport> {
 
     /**
      *  <p>An array of related Product Variants.</p>
+     * @return Builder
      */
 
     public ProductDraftImportBuilder withVariants(
@@ -395,6 +437,7 @@ public class ProductDraftImportBuilder implements Builder<ProductDraftImport> {
 
     /**
      *  <p>The Reference to the TaxCategory with which the ProductDraft is associated. If referenced TaxCategory does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary TaxCategory is created.</p>
+     * @return Builder
      */
 
     public ProductDraftImportBuilder taxCategory(
@@ -406,6 +449,8 @@ public class ProductDraftImportBuilder implements Builder<ProductDraftImport> {
 
     /**
      *  <p>The Reference to the TaxCategory with which the ProductDraft is associated. If referenced TaxCategory does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary TaxCategory is created.</p>
+     * @param taxCategory
+     * @return Builder
      */
 
     public ProductDraftImportBuilder taxCategory(
@@ -432,6 +477,7 @@ public class ProductDraftImportBuilder implements Builder<ProductDraftImport> {
      *    ]
      *  }
      *  </code></pre>
+     * @return Builder
      */
 
     public ProductDraftImportBuilder searchKeywords(
@@ -459,6 +505,8 @@ public class ProductDraftImportBuilder implements Builder<ProductDraftImport> {
      *    ]
      *  }
      *  </code></pre>
+     * @param searchKeywords
+     * @return Builder
      */
 
     public ProductDraftImportBuilder searchKeywords(
@@ -469,6 +517,7 @@ public class ProductDraftImportBuilder implements Builder<ProductDraftImport> {
 
     /**
      *  <p>The Reference to the State with which the ProductDraft is associated. If referenced State does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary State is created.</p>
+     * @return Builder
      */
 
     public ProductDraftImportBuilder state(
@@ -479,6 +528,8 @@ public class ProductDraftImportBuilder implements Builder<ProductDraftImport> {
 
     /**
      *  <p>The Reference to the State with which the ProductDraft is associated. If referenced State does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary State is created.</p>
+     * @param state
+     * @return Builder
      */
 
     public ProductDraftImportBuilder state(
@@ -489,6 +540,8 @@ public class ProductDraftImportBuilder implements Builder<ProductDraftImport> {
 
     /**
      *  <p>If <code>publish</code> is set to either <code>true</code> or <code>false</code>, both staged and current projections are set to the same value provided by the import data. If <code>publish</code> is not set, the staged projection is set to the provided import data, but the current projection stays unchanged. However, if the import data contains no update, that is, if it matches the staged projection of the existing Product, the import induces no change in the existing Product whether <code>publish</code> is set or not.</p>
+     * @param publish
+     * @return Builder
      */
 
     public ProductDraftImportBuilder publish(@Nullable final Boolean publish) {
@@ -498,6 +551,8 @@ public class ProductDraftImportBuilder implements Builder<ProductDraftImport> {
 
     /**
      *  <p>Determines the type of Prices the API uses. See ProductPriceMode for more details. If not provided, the existing <code>Product.priceMode</code> is not changed.</p>
+     * @param priceMode
+     * @return Builder
      */
 
     public ProductDraftImportBuilder priceMode(

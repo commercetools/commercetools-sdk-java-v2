@@ -17,7 +17,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * LineItemDraft
+ *  <p>For Product Variant identification, either the <code>productId</code> and <code>variantId</code>, or <code>sku</code> must be provided.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -34,95 +34,110 @@ public interface LineItemDraft extends com.commercetools.api.models.Customizable
         io.vrap.rmf.base.client.Draft<LineItemDraft> {
 
     /**
-     *
+     *  <p><code>id</code> of a published Product.</p>
+     * @return productId
      */
 
     @JsonProperty("productId")
     public String getProductId();
 
     /**
-     *
+     *  <p><code>id</code> of the ProductVariant in the Product. If not provided, the Master Variant is used.</p>
+     * @return variantId
      */
 
     @JsonProperty("variantId")
     public Long getVariantId();
 
     /**
-     *
+     *  <p><code>sku</code> of the ProductVariant.</p>
+     * @return sku
      */
 
     @JsonProperty("sku")
     public String getSku();
 
     /**
-     *  <p>The amount of a <code>LineItem</code>in the cart. Must be a positive integer.</p>
+     *  <p>Quantity of the Product Variant to add to the Cart.</p>
+     * @return quantity
      */
 
     @JsonProperty("quantity")
     public Long getQuantity();
 
     /**
-     *  <p>When the line item was added to the cart. Optional for backwards compatibility reasons only.</p>
+     *  <p>Date and time (UTC) the Product Variant is added to the Cart. If not set, it defaults to the current date and time.</p>
+     *  <p>Optional for backwards compatibility reasons.</p>
+     * @return addedAt
      */
 
     @JsonProperty("addedAt")
     public ZonedDateTime getAddedAt();
 
     /**
-     *  <p>By providing supply channel information, you can unique identify inventory entries that should be reserved. The provided channel should have the InventorySupply role.</p>
-     */
-    @Valid
-    @JsonProperty("supplyChannel")
-    public ChannelResourceIdentifier getSupplyChannel();
-
-    /**
-     *  <p>The channel is used to select a ProductPrice. The provided channel should have the ProductDistribution role.</p>
+     *  <p>Used to select a Product Price. The referenced Channel must have the <code>ProductDistribution</code> ChannelRoleEnum.</p>
+     *  <p>If the Cart is bound to a Store with <code>distributionChannels</code> set, the Channel must match one of the Store's distribution channels.</p>
+     * @return distributionChannel
      */
     @Valid
     @JsonProperty("distributionChannel")
     public ChannelResourceIdentifier getDistributionChannel();
 
     /**
-     *  <p>An external tax rate can be set if the cart has the <code>External</code> TaxMode.</p>
+     *  <p>Used to identify Inventory entries that must be reserved. The referenced Channel must have the <code>InventorySupply</code> ChannelRoleEnum.</p>
+     * @return supplyChannel
      */
     @Valid
-    @JsonProperty("externalTaxRate")
-    public ExternalTaxRateDraft getExternalTaxRate();
+    @JsonProperty("supplyChannel")
+    public ChannelResourceIdentifier getSupplyChannel();
 
     /**
-     *  <p>The custom fields.</p>
-     */
-    @Valid
-    @JsonProperty("custom")
-    public CustomFieldsDraft getCustom();
-
-    /**
-     *  <p>Sets the line item <code>price</code> to the given value and sets the line item <code>priceMode</code> to <code>ExternalPrice</code> LineItemPriceMode.</p>
+     *  <p>Sets the LineItem <code>price</code> value, and the <code>priceMode</code> to <code>ExternalPrice</code> LineItemPriceMode.</p>
+     * @return externalPrice
      */
     @Valid
     @JsonProperty("externalPrice")
     public Money getExternalPrice();
 
     /**
-     *  <p>Sets the line item <code>price</code> and <code>totalPrice</code> to the given values and sets the line item <code>priceMode</code> to <code>ExternalTotal</code> LineItemPriceMode.</p>
+     *  <p>Sets the LineItem <code>price</code> and <code>totalPrice</code> values, and the <code>priceMode</code> to <code>ExternalTotal</code> LineItemPriceMode.</p>
+     * @return externalTotalPrice
      */
     @Valid
     @JsonProperty("externalTotalPrice")
     public ExternalLineItemTotalPrice getExternalTotalPrice();
 
     /**
-     *  <p>Inventory mode specific to the line item only, valid for the entire <code>quantity</code> of the line item. Set only if inventory mode should be different from the <code>inventoryMode</code> specified on the Cart.</p>
+     *  <p>External Tax Rate for the Line Item if the Cart has the <code>External</code> TaxMode.</p>
+     * @return externalTaxRate
+     */
+    @Valid
+    @JsonProperty("externalTaxRate")
+    public ExternalTaxRateDraft getExternalTaxRate();
+
+    /**
+     *  <p>Inventory mode specific to the Line Item only, and valid for the entire <code>quantity</code> of the Line Item. Set only if the inventory mode should be different from the <code>inventoryMode</code> specified on the Cart.</p>
+     * @return inventoryMode
      */
 
     @JsonProperty("inventoryMode")
     public InventoryMode getInventoryMode();
 
     /**
-     *  <p>Container for line item specific address(es).</p>
+     *  <p>Container for Line Item-specific addresses.</p>
+     * @return shippingDetails
      */
     @Valid
     @JsonProperty("shippingDetails")
     public ItemShippingDetailsDraft getShippingDetails();
+
+    /**
+     *  <p>Custom Fields for the Line Item.</p>
+     * @return custom
+     */
+    @Valid
+    @JsonProperty("custom")
+    public CustomFieldsDraft getCustom();
 
     public void setProductId(final String productId);
 
@@ -134,21 +149,21 @@ public interface LineItemDraft extends com.commercetools.api.models.Customizable
 
     public void setAddedAt(final ZonedDateTime addedAt);
 
-    public void setSupplyChannel(final ChannelResourceIdentifier supplyChannel);
-
     public void setDistributionChannel(final ChannelResourceIdentifier distributionChannel);
 
-    public void setExternalTaxRate(final ExternalTaxRateDraft externalTaxRate);
-
-    public void setCustom(final CustomFieldsDraft custom);
+    public void setSupplyChannel(final ChannelResourceIdentifier supplyChannel);
 
     public void setExternalPrice(final Money externalPrice);
 
     public void setExternalTotalPrice(final ExternalLineItemTotalPrice externalTotalPrice);
 
+    public void setExternalTaxRate(final ExternalTaxRateDraft externalTaxRate);
+
     public void setInventoryMode(final InventoryMode inventoryMode);
 
     public void setShippingDetails(final ItemShippingDetailsDraft shippingDetails);
+
+    public void setCustom(final CustomFieldsDraft custom);
 
     public static LineItemDraft of() {
         return new LineItemDraftImpl();
@@ -161,14 +176,14 @@ public interface LineItemDraft extends com.commercetools.api.models.Customizable
         instance.setSku(template.getSku());
         instance.setQuantity(template.getQuantity());
         instance.setAddedAt(template.getAddedAt());
-        instance.setSupplyChannel(template.getSupplyChannel());
         instance.setDistributionChannel(template.getDistributionChannel());
-        instance.setExternalTaxRate(template.getExternalTaxRate());
-        instance.setCustom(template.getCustom());
+        instance.setSupplyChannel(template.getSupplyChannel());
         instance.setExternalPrice(template.getExternalPrice());
         instance.setExternalTotalPrice(template.getExternalTotalPrice());
+        instance.setExternalTaxRate(template.getExternalTaxRate());
         instance.setInventoryMode(template.getInventoryMode());
         instance.setShippingDetails(template.getShippingDetails());
+        instance.setCustom(template.getCustom());
         return instance;
     }
 

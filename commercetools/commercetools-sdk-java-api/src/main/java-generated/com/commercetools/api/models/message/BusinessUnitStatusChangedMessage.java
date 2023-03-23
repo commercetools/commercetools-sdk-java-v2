@@ -41,6 +41,7 @@ public interface BusinessUnitStatusChangedMessage extends Message {
 
     /**
      *  <p>Updated status of the Business Unit.</p>
+     * @return active
      */
     @NotNull
     @JsonProperty("active")

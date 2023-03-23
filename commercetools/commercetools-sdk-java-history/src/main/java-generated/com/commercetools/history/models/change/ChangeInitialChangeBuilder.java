@@ -31,6 +31,8 @@ public class ChangeInitialChangeBuilder implements Builder<ChangeInitialChange> 
 
     /**
      *  <p>Shape of the action for <code>changeInitial</code></p>
+     * @param change
+     * @return Builder
      */
 
     public ChangeInitialChangeBuilder change(final String change) {
@@ -40,6 +42,8 @@ public class ChangeInitialChangeBuilder implements Builder<ChangeInitialChange> 
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public ChangeInitialChangeBuilder previousValue(final Boolean previousValue) {
@@ -49,6 +53,8 @@ public class ChangeInitialChangeBuilder implements Builder<ChangeInitialChange> 
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public ChangeInitialChangeBuilder nextValue(final Boolean nextValue) {

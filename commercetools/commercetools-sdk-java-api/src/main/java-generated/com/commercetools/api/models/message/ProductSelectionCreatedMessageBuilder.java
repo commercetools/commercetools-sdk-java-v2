@@ -54,10 +54,12 @@ public class ProductSelectionCreatedMessageBuilder implements Builder<ProductSel
     @Nullable
     private com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers;
 
-    private com.commercetools.api.models.product_selection.IndividualProductSelectionType productSelection;
+    private com.commercetools.api.models.product_selection.ProductSelectionType productSelection;
 
     /**
      *  <p>Unique identifier of the Message. Can be used to track which Messages have been processed.</p>
+     * @param id
+     * @return Builder
      */
 
     public ProductSelectionCreatedMessageBuilder id(final String id) {
@@ -67,6 +69,8 @@ public class ProductSelectionCreatedMessageBuilder implements Builder<ProductSel
 
     /**
      *  <p>Version of a resource. In case of Messages, this is always <code>1</code>.</p>
+     * @param version
+     * @return Builder
      */
 
     public ProductSelectionCreatedMessageBuilder version(final Long version) {
@@ -76,6 +80,8 @@ public class ProductSelectionCreatedMessageBuilder implements Builder<ProductSel
 
     /**
      *  <p>Date and time (UTC) the Message was generated.</p>
+     * @param createdAt
+     * @return Builder
      */
 
     public ProductSelectionCreatedMessageBuilder createdAt(final java.time.ZonedDateTime createdAt) {
@@ -85,6 +91,8 @@ public class ProductSelectionCreatedMessageBuilder implements Builder<ProductSel
 
     /**
      *  <p>Value of <code>createdAt</code>.</p>
+     * @param lastModifiedAt
+     * @return Builder
      */
 
     public ProductSelectionCreatedMessageBuilder lastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {
@@ -94,6 +102,7 @@ public class ProductSelectionCreatedMessageBuilder implements Builder<ProductSel
 
     /**
      *  <p>Value of <code>createdBy</code>.</p>
+     * @return Builder
      */
 
     public ProductSelectionCreatedMessageBuilder lastModifiedBy(
@@ -104,6 +113,8 @@ public class ProductSelectionCreatedMessageBuilder implements Builder<ProductSel
 
     /**
      *  <p>Value of <code>createdBy</code>.</p>
+     * @param lastModifiedBy
+     * @return Builder
      */
 
     public ProductSelectionCreatedMessageBuilder lastModifiedBy(
@@ -114,6 +125,7 @@ public class ProductSelectionCreatedMessageBuilder implements Builder<ProductSel
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @return Builder
      */
 
     public ProductSelectionCreatedMessageBuilder createdBy(
@@ -124,6 +136,8 @@ public class ProductSelectionCreatedMessageBuilder implements Builder<ProductSel
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param createdBy
+     * @return Builder
      */
 
     public ProductSelectionCreatedMessageBuilder createdBy(
@@ -134,6 +148,8 @@ public class ProductSelectionCreatedMessageBuilder implements Builder<ProductSel
 
     /**
      *  <p>Message number in relation to other Messages for a given resource. The <code>sequenceNumber</code> of the next Message for the resource is the successor of the <code>sequenceNumber</code> of the current Message. Meaning, the <code>sequenceNumber</code> of the next Message equals the <code>sequenceNumber</code> of the current Message + 1. <code>sequenceNumber</code> can be used to ensure that Messages are processed in the correct order for a particular resource.</p>
+     * @param sequenceNumber
+     * @return Builder
      */
 
     public ProductSelectionCreatedMessageBuilder sequenceNumber(final Long sequenceNumber) {
@@ -143,6 +159,8 @@ public class ProductSelectionCreatedMessageBuilder implements Builder<ProductSel
 
     /**
      *  <p>Reference to the resource on which the change or action was performed.</p>
+     * @param resource
+     * @return Builder
      */
 
     public ProductSelectionCreatedMessageBuilder resource(
@@ -153,6 +171,7 @@ public class ProductSelectionCreatedMessageBuilder implements Builder<ProductSel
 
     /**
      *  <p>Reference to the resource on which the change or action was performed.</p>
+     * @return Builder
      */
 
     public ProductSelectionCreatedMessageBuilder resource(
@@ -163,6 +182,8 @@ public class ProductSelectionCreatedMessageBuilder implements Builder<ProductSel
 
     /**
      *  <p>Version of the resource on which the change or action was performed.</p>
+     * @param resourceVersion
+     * @return Builder
      */
 
     public ProductSelectionCreatedMessageBuilder resourceVersion(final Long resourceVersion) {
@@ -172,6 +193,7 @@ public class ProductSelectionCreatedMessageBuilder implements Builder<ProductSel
 
     /**
      *  <p>User-provided identifiers of the resource, such as <code>key</code> or <code>externalId</code>. Only present if the resource has such identifiers.</p>
+     * @return Builder
      */
 
     public ProductSelectionCreatedMessageBuilder resourceUserProvidedIdentifiers(
@@ -184,6 +206,8 @@ public class ProductSelectionCreatedMessageBuilder implements Builder<ProductSel
 
     /**
      *  <p>User-provided identifiers of the resource, such as <code>key</code> or <code>externalId</code>. Only present if the resource has such identifiers.</p>
+     * @param resourceUserProvidedIdentifiers
+     * @return Builder
      */
 
     public ProductSelectionCreatedMessageBuilder resourceUserProvidedIdentifiers(
@@ -194,23 +218,26 @@ public class ProductSelectionCreatedMessageBuilder implements Builder<ProductSel
 
     /**
      *  <p>The <code>type</code> and <code>name</code> of the individual Product Selection.</p>
+     * @param productSelection
+     * @return Builder
      */
 
     public ProductSelectionCreatedMessageBuilder productSelection(
-            Function<com.commercetools.api.models.product_selection.IndividualProductSelectionTypeBuilder, com.commercetools.api.models.product_selection.IndividualProductSelectionTypeBuilder> builder) {
-        this.productSelection = builder
-                .apply(com.commercetools.api.models.product_selection.IndividualProductSelectionTypeBuilder.of())
-                .build();
+            final com.commercetools.api.models.product_selection.ProductSelectionType productSelection) {
+        this.productSelection = productSelection;
         return this;
     }
 
     /**
      *  <p>The <code>type</code> and <code>name</code> of the individual Product Selection.</p>
+     * @return Builder
      */
 
     public ProductSelectionCreatedMessageBuilder productSelection(
-            final com.commercetools.api.models.product_selection.IndividualProductSelectionType productSelection) {
-        this.productSelection = productSelection;
+            Function<com.commercetools.api.models.product_selection.ProductSelectionTypeBuilder, Builder<? extends com.commercetools.api.models.product_selection.ProductSelectionType>> builder) {
+        this.productSelection = builder
+                .apply(com.commercetools.api.models.product_selection.ProductSelectionTypeBuilder.of())
+                .build();
         return this;
     }
 
@@ -257,7 +284,7 @@ public class ProductSelectionCreatedMessageBuilder implements Builder<ProductSel
         return this.resourceUserProvidedIdentifiers;
     }
 
-    public com.commercetools.api.models.product_selection.IndividualProductSelectionType getProductSelection() {
+    public com.commercetools.api.models.product_selection.ProductSelectionType getProductSelection() {
         return this.productSelection;
     }
 

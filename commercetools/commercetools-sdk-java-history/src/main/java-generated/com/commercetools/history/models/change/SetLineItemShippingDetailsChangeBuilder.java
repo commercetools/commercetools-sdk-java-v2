@@ -35,6 +35,8 @@ public class SetLineItemShippingDetailsChangeBuilder implements Builder<SetLineI
 
     /**
      *  <p>Update action for <code>setLineItemShippingDetails</code></p>
+     * @param change
+     * @return Builder
      */
 
     public SetLineItemShippingDetailsChangeBuilder change(final String change) {
@@ -44,6 +46,8 @@ public class SetLineItemShippingDetailsChangeBuilder implements Builder<SetLineI
 
     /**
      *
+     * @param lineItemId
+     * @return Builder
      */
 
     public SetLineItemShippingDetailsChangeBuilder lineItemId(final String lineItemId) {
@@ -53,6 +57,7 @@ public class SetLineItemShippingDetailsChangeBuilder implements Builder<SetLineI
 
     /**
      *
+     * @return Builder
      */
 
     public SetLineItemShippingDetailsChangeBuilder nextValue(
@@ -63,6 +68,8 @@ public class SetLineItemShippingDetailsChangeBuilder implements Builder<SetLineI
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public SetLineItemShippingDetailsChangeBuilder nextValue(
@@ -73,6 +80,7 @@ public class SetLineItemShippingDetailsChangeBuilder implements Builder<SetLineI
 
     /**
      *
+     * @return Builder
      */
 
     public SetLineItemShippingDetailsChangeBuilder previousValue(
@@ -84,6 +92,8 @@ public class SetLineItemShippingDetailsChangeBuilder implements Builder<SetLineI
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public SetLineItemShippingDetailsChangeBuilder previousValue(

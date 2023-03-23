@@ -87,4 +87,5 @@ public interface DiscountCodeState {
     public static DiscountCodeState[] values() {
         return DiscountCodeStateEnum.values();
     }
+
 }

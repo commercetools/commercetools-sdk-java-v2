@@ -35,6 +35,8 @@ public class SetAssetCustomTypeChangeBuilder implements Builder<SetAssetCustomTy
 
     /**
      *  <p>Update action for <code>setAssetCustomType</code></p>
+     * @param change
+     * @return Builder
      */
 
     public SetAssetCustomTypeChangeBuilder change(final String change) {
@@ -44,6 +46,7 @@ public class SetAssetCustomTypeChangeBuilder implements Builder<SetAssetCustomTy
 
     /**
      *
+     * @return Builder
      */
 
     public SetAssetCustomTypeChangeBuilder asset(
@@ -54,6 +57,8 @@ public class SetAssetCustomTypeChangeBuilder implements Builder<SetAssetCustomTy
 
     /**
      *
+     * @param asset
+     * @return Builder
      */
 
     public SetAssetCustomTypeChangeBuilder asset(
@@ -64,6 +69,7 @@ public class SetAssetCustomTypeChangeBuilder implements Builder<SetAssetCustomTy
 
     /**
      *
+     * @return Builder
      */
 
     public SetAssetCustomTypeChangeBuilder nextValue(
@@ -74,6 +80,8 @@ public class SetAssetCustomTypeChangeBuilder implements Builder<SetAssetCustomTy
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public SetAssetCustomTypeChangeBuilder nextValue(
@@ -84,6 +92,7 @@ public class SetAssetCustomTypeChangeBuilder implements Builder<SetAssetCustomTy
 
     /**
      *
+     * @return Builder
      */
 
     public SetAssetCustomTypeChangeBuilder previousValue(
@@ -94,6 +103,8 @@ public class SetAssetCustomTypeChangeBuilder implements Builder<SetAssetCustomTy
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public SetAssetCustomTypeChangeBuilder previousValue(

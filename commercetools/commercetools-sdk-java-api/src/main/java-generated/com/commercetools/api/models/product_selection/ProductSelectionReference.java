@@ -36,6 +36,7 @@ public interface ProductSelectionReference
 
     /**
      *  <p>Unique identifier of the referenced ProductSelection.</p>
+     * @return id
      */
     @NotNull
     @JsonProperty("id")
@@ -43,6 +44,7 @@ public interface ProductSelectionReference
 
     /**
      *  <p>Contains the representation of the expanded ProductSelection. Only present in responses to requests with Reference Expansion for ProductSelections.</p>
+     * @return obj
      */
     @Valid
     @JsonProperty("obj")

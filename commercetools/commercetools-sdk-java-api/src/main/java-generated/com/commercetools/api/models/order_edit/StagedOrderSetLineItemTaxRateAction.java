@@ -36,13 +36,15 @@ public interface StagedOrderSetLineItemTaxRateAction extends StagedOrderUpdateAc
 
     /**
      *
+     * @return lineItemId
      */
     @NotNull
     @JsonProperty("lineItemId")
     public String getLineItemId();
 
     /**
-     *
+     *  <p>Controls calculation of taxed prices for Line Items, Custom Line Items, and Shipping Methods as explained in Cart tax calculation.</p>
+     * @return externalTaxRate
      */
     @Valid
     @JsonProperty("externalTaxRate")
@@ -50,6 +52,7 @@ public interface StagedOrderSetLineItemTaxRateAction extends StagedOrderUpdateAc
 
     /**
      *  <p><code>key</code> of the ShippingMethod used for this Line Item. This is required for Carts with <code>Multiple</code> ShippingMode.</p>
+     * @return shippingKey
      */
 
     @JsonProperty("shippingKey")

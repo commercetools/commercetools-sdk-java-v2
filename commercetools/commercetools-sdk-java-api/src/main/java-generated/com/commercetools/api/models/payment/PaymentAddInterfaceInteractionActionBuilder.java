@@ -31,6 +31,7 @@ public class PaymentAddInterfaceInteractionActionBuilder implements Builder<Paym
 
     /**
      *  <p>ResourceIdentifier of a Type.</p>
+     * @return Builder
      */
 
     public PaymentAddInterfaceInteractionActionBuilder type(
@@ -41,6 +42,8 @@ public class PaymentAddInterfaceInteractionActionBuilder implements Builder<Paym
 
     /**
      *  <p>ResourceIdentifier of a Type.</p>
+     * @param type
+     * @return Builder
      */
 
     public PaymentAddInterfaceInteractionActionBuilder type(
@@ -51,6 +54,7 @@ public class PaymentAddInterfaceInteractionActionBuilder implements Builder<Paym
 
     /**
      *  <p>Custom Fields as per FieldDefinitions of the Type.</p>
+     * @return Builder
      */
 
     public PaymentAddInterfaceInteractionActionBuilder fields(
@@ -61,6 +65,8 @@ public class PaymentAddInterfaceInteractionActionBuilder implements Builder<Paym
 
     /**
      *  <p>Custom Fields as per FieldDefinitions of the Type.</p>
+     * @param fields
+     * @return Builder
      */
 
     public PaymentAddInterfaceInteractionActionBuilder fields(

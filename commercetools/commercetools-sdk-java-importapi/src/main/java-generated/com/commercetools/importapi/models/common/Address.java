@@ -5,8 +5,10 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
+import com.commercetools.importapi.models.customfields.Custom;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -31,6 +33,7 @@ public interface Address {
 
     /**
      *
+     * @return id
      */
 
     @JsonProperty("id")
@@ -38,6 +41,7 @@ public interface Address {
 
     /**
      *
+     * @return key
      */
 
     @JsonProperty("key")
@@ -45,6 +49,7 @@ public interface Address {
 
     /**
      *
+     * @return title
      */
 
     @JsonProperty("title")
@@ -52,6 +57,7 @@ public interface Address {
 
     /**
      *
+     * @return salutation
      */
 
     @JsonProperty("salutation")
@@ -59,6 +65,7 @@ public interface Address {
 
     /**
      *
+     * @return firstName
      */
 
     @JsonProperty("firstName")
@@ -66,6 +73,7 @@ public interface Address {
 
     /**
      *
+     * @return lastName
      */
 
     @JsonProperty("lastName")
@@ -73,6 +81,7 @@ public interface Address {
 
     /**
      *
+     * @return streetName
      */
 
     @JsonProperty("streetName")
@@ -80,6 +89,7 @@ public interface Address {
 
     /**
      *
+     * @return streetNumber
      */
 
     @JsonProperty("streetNumber")
@@ -87,6 +97,7 @@ public interface Address {
 
     /**
      *
+     * @return additionalStreetInfo
      */
 
     @JsonProperty("additionalStreetInfo")
@@ -94,6 +105,7 @@ public interface Address {
 
     /**
      *
+     * @return postalCode
      */
 
     @JsonProperty("postalCode")
@@ -101,6 +113,7 @@ public interface Address {
 
     /**
      *
+     * @return city
      */
 
     @JsonProperty("city")
@@ -108,6 +121,7 @@ public interface Address {
 
     /**
      *
+     * @return region
      */
 
     @JsonProperty("region")
@@ -115,6 +129,7 @@ public interface Address {
 
     /**
      *
+     * @return state
      */
 
     @JsonProperty("state")
@@ -122,6 +137,7 @@ public interface Address {
 
     /**
      *  <p>A two-digit country code as per ISO 3166-1 alpha-2.</p>
+     * @return country
      */
     @NotNull
     @JsonProperty("country")
@@ -129,6 +145,7 @@ public interface Address {
 
     /**
      *
+     * @return company
      */
 
     @JsonProperty("company")
@@ -136,6 +153,7 @@ public interface Address {
 
     /**
      *
+     * @return department
      */
 
     @JsonProperty("department")
@@ -143,6 +161,7 @@ public interface Address {
 
     /**
      *
+     * @return building
      */
 
     @JsonProperty("building")
@@ -150,6 +169,7 @@ public interface Address {
 
     /**
      *
+     * @return apartment
      */
 
     @JsonProperty("apartment")
@@ -157,6 +177,7 @@ public interface Address {
 
     /**
      *
+     * @return pOBox
      */
 
     @JsonProperty("pOBox")
@@ -164,6 +185,7 @@ public interface Address {
 
     /**
      *
+     * @return phone
      */
 
     @JsonProperty("phone")
@@ -171,6 +193,7 @@ public interface Address {
 
     /**
      *
+     * @return mobile
      */
 
     @JsonProperty("mobile")
@@ -178,6 +201,7 @@ public interface Address {
 
     /**
      *
+     * @return email
      */
 
     @JsonProperty("email")
@@ -185,6 +209,7 @@ public interface Address {
 
     /**
      *
+     * @return fax
      */
 
     @JsonProperty("fax")
@@ -192,6 +217,7 @@ public interface Address {
 
     /**
      *
+     * @return additionalAddressInfo
      */
 
     @JsonProperty("additionalAddressInfo")
@@ -199,10 +225,19 @@ public interface Address {
 
     /**
      *
+     * @return externalId
      */
 
     @JsonProperty("externalId")
     public String getExternalId();
+
+    /**
+     *  <p>Custom Fields for the address.</p>
+     * @return custom
+     */
+    @Valid
+    @JsonProperty("custom")
+    public Custom getCustom();
 
     public void setId(final String id);
 
@@ -254,6 +289,8 @@ public interface Address {
 
     public void setExternalId(final String externalId);
 
+    public void setCustom(final Custom custom);
+
     public static Address of() {
         return new AddressImpl();
     }
@@ -285,6 +322,7 @@ public interface Address {
         instance.setFax(template.getFax());
         instance.setAdditionalAddressInfo(template.getAdditionalAddressInfo());
         instance.setExternalId(template.getExternalId());
+        instance.setCustom(template.getCustom());
         return instance;
     }
 

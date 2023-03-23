@@ -36,6 +36,7 @@ public interface StagedOrderSetReturnShipmentStateAction extends StagedOrderUpda
 
     /**
      *
+     * @return returnItemId
      */
     @NotNull
     @JsonProperty("returnItemId")
@@ -43,6 +44,7 @@ public interface StagedOrderSetReturnShipmentStateAction extends StagedOrderUpda
 
     /**
      *
+     * @return shipmentState
      */
     @NotNull
     @JsonProperty("shipmentState")

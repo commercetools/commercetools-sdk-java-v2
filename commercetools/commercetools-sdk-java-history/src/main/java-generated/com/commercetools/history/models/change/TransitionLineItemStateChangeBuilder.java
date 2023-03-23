@@ -38,6 +38,8 @@ public class TransitionLineItemStateChangeBuilder implements Builder<TransitionL
 
     /**
      *  <p>Update action for <code>transitionLineItemState</code></p>
+     * @param change
+     * @return Builder
      */
 
     public TransitionLineItemStateChangeBuilder change(final String change) {
@@ -47,6 +49,8 @@ public class TransitionLineItemStateChangeBuilder implements Builder<TransitionL
 
     /**
      *
+     * @param lineItemId
+     * @return Builder
      */
 
     public TransitionLineItemStateChangeBuilder lineItemId(final String lineItemId) {
@@ -56,6 +60,8 @@ public class TransitionLineItemStateChangeBuilder implements Builder<TransitionL
 
     /**
      *
+     * @param stateId
+     * @return Builder
      */
 
     public TransitionLineItemStateChangeBuilder stateId(final String stateId) {
@@ -65,6 +71,8 @@ public class TransitionLineItemStateChangeBuilder implements Builder<TransitionL
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public TransitionLineItemStateChangeBuilder nextValue(
@@ -75,6 +83,8 @@ public class TransitionLineItemStateChangeBuilder implements Builder<TransitionL
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public TransitionLineItemStateChangeBuilder nextValue(
@@ -85,6 +95,8 @@ public class TransitionLineItemStateChangeBuilder implements Builder<TransitionL
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public TransitionLineItemStateChangeBuilder plusNextValue(
@@ -98,6 +110,7 @@ public class TransitionLineItemStateChangeBuilder implements Builder<TransitionL
 
     /**
      *
+     * @return Builder
      */
 
     public TransitionLineItemStateChangeBuilder plusNextValue(
@@ -111,6 +124,7 @@ public class TransitionLineItemStateChangeBuilder implements Builder<TransitionL
 
     /**
      *
+     * @return Builder
      */
 
     public TransitionLineItemStateChangeBuilder withNextValue(
@@ -122,6 +136,8 @@ public class TransitionLineItemStateChangeBuilder implements Builder<TransitionL
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public TransitionLineItemStateChangeBuilder previousValue(
@@ -132,6 +148,8 @@ public class TransitionLineItemStateChangeBuilder implements Builder<TransitionL
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public TransitionLineItemStateChangeBuilder previousValue(
@@ -142,6 +160,8 @@ public class TransitionLineItemStateChangeBuilder implements Builder<TransitionL
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public TransitionLineItemStateChangeBuilder plusPreviousValue(
@@ -155,6 +175,7 @@ public class TransitionLineItemStateChangeBuilder implements Builder<TransitionL
 
     /**
      *
+     * @return Builder
      */
 
     public TransitionLineItemStateChangeBuilder plusPreviousValue(
@@ -168,6 +189,7 @@ public class TransitionLineItemStateChangeBuilder implements Builder<TransitionL
 
     /**
      *
+     * @return Builder
      */
 
     public TransitionLineItemStateChangeBuilder withPreviousValue(

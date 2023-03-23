@@ -28,6 +28,8 @@ public class ChannelSetGeoLocationActionBuilder implements Builder<ChannelSetGeo
 
     /**
      *  <p>Value to set.</p>
+     * @param geoLocation
+     * @return Builder
      */
 
     public ChannelSetGeoLocationActionBuilder geoLocation(
@@ -38,6 +40,7 @@ public class ChannelSetGeoLocationActionBuilder implements Builder<ChannelSetGeo
 
     /**
      *  <p>Value to set.</p>
+     * @return Builder
      */
 
     public ChannelSetGeoLocationActionBuilder geoLocation(

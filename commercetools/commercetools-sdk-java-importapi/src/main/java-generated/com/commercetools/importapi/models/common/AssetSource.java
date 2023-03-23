@@ -32,6 +32,7 @@ public interface AssetSource {
 
     /**
      *
+     * @return uri
      */
     @NotNull
     @JsonProperty("uri")
@@ -39,6 +40,7 @@ public interface AssetSource {
 
     /**
      *
+     * @return key
      */
 
     @JsonProperty("key")
@@ -46,6 +48,7 @@ public interface AssetSource {
 
     /**
      *  <p>The width and height of the Asset Source.</p>
+     * @return dimensions
      */
     @Valid
     @JsonProperty("dimensions")
@@ -53,6 +56,7 @@ public interface AssetSource {
 
     /**
      *
+     * @return contentType
      */
 
     @JsonProperty("contentType")

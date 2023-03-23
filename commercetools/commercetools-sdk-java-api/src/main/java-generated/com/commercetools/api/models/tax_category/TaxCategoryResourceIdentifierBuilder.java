@@ -30,6 +30,8 @@ public class TaxCategoryResourceIdentifierBuilder implements Builder<TaxCategory
 
     /**
      *  <p>Unique identifier of the referenced TaxCategory. Either <code>id</code> or <code>key</code> is required.</p>
+     * @param id
+     * @return Builder
      */
 
     public TaxCategoryResourceIdentifierBuilder id(@Nullable final String id) {
@@ -39,6 +41,8 @@ public class TaxCategoryResourceIdentifierBuilder implements Builder<TaxCategory
 
     /**
      *  <p>User-defined unique identifier of the referenced TaxCategory. Either <code>id</code> or <code>key</code> is required.</p>
+     * @param key
+     * @return Builder
      */
 
     public TaxCategoryResourceIdentifierBuilder key(@Nullable final String key) {

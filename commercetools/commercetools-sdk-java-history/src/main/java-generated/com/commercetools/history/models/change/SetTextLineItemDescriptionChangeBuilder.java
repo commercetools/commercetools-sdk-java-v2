@@ -35,6 +35,8 @@ public class SetTextLineItemDescriptionChangeBuilder implements Builder<SetTextL
 
     /**
      *
+     * @param change
+     * @return Builder
      */
 
     public SetTextLineItemDescriptionChangeBuilder change(final String change) {
@@ -44,6 +46,7 @@ public class SetTextLineItemDescriptionChangeBuilder implements Builder<SetTextL
 
     /**
      *
+     * @return Builder
      */
 
     public SetTextLineItemDescriptionChangeBuilder textLineItem(
@@ -55,6 +58,8 @@ public class SetTextLineItemDescriptionChangeBuilder implements Builder<SetTextL
 
     /**
      *
+     * @param textLineItem
+     * @return Builder
      */
 
     public SetTextLineItemDescriptionChangeBuilder textLineItem(
@@ -65,6 +70,7 @@ public class SetTextLineItemDescriptionChangeBuilder implements Builder<SetTextL
 
     /**
      *
+     * @return Builder
      */
 
     public SetTextLineItemDescriptionChangeBuilder previousValue(
@@ -75,6 +81,8 @@ public class SetTextLineItemDescriptionChangeBuilder implements Builder<SetTextL
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public SetTextLineItemDescriptionChangeBuilder previousValue(
@@ -85,6 +93,7 @@ public class SetTextLineItemDescriptionChangeBuilder implements Builder<SetTextL
 
     /**
      *
+     * @return Builder
      */
 
     public SetTextLineItemDescriptionChangeBuilder nextValue(
@@ -95,6 +104,8 @@ public class SetTextLineItemDescriptionChangeBuilder implements Builder<SetTextL
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public SetTextLineItemDescriptionChangeBuilder nextValue(

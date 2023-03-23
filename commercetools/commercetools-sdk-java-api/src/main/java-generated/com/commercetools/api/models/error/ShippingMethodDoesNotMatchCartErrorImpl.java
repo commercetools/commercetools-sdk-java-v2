@@ -16,7 +16,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
  *  <p>Returned when the Cart contains a ShippingMethod that is not allowed for the Cart. In this case, the ShippingMethodState value is <code>DoesNotMatchCart</code>.</p>
- *  <p>The error is returned as a failed response to the Create Order from Cart or Create Order from Cart in a Store requests.</p>
+ *  <p>The error is returned as a failed response to the Create Order from Cart or Create Order in Store from Cart requests.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ShippingMethodDoesNotMatchCartErrorImpl implements ShippingMethodDoesNotMatchCartError, ModelBase {

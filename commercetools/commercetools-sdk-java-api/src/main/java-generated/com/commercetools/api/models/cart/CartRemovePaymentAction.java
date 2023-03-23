@@ -34,7 +34,8 @@ public interface CartRemovePaymentAction extends CartUpdateAction {
     String REMOVE_PAYMENT = "removePayment";
 
     /**
-     *
+     *  <p>Payment to remove from the Cart.</p>
+     * @return payment
      */
     @NotNull
     @Valid

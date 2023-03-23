@@ -40,6 +40,7 @@ public interface SetLineItemProductKeyChange extends Change {
 
     /**
      *
+     * @return type
      */
     @NotNull
     @JsonProperty("type")
@@ -47,6 +48,7 @@ public interface SetLineItemProductKeyChange extends Change {
 
     /**
      *  <p>Update action for <code>setLineItemProductKey</code></p>
+     * @return change
      */
     @NotNull
     @JsonProperty("change")
@@ -54,6 +56,7 @@ public interface SetLineItemProductKeyChange extends Change {
 
     /**
      *
+     * @return lineItem
      */
     @NotNull
     @Valid
@@ -62,6 +65,7 @@ public interface SetLineItemProductKeyChange extends Change {
 
     /**
      *
+     * @return lineItemId
      */
     @NotNull
     @JsonProperty("lineItemId")
@@ -69,6 +73,7 @@ public interface SetLineItemProductKeyChange extends Change {
 
     /**
      *
+     * @return variant
      */
     @NotNull
     @JsonProperty("variant")
@@ -76,6 +81,7 @@ public interface SetLineItemProductKeyChange extends Change {
 
     /**
      *
+     * @return previousValue
      */
     @NotNull
     @JsonProperty("previousValue")
@@ -83,6 +89,7 @@ public interface SetLineItemProductKeyChange extends Change {
 
     /**
      *
+     * @return nextValue
      */
     @NotNull
     @JsonProperty("nextValue")

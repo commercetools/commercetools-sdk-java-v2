@@ -38,6 +38,8 @@ public class SetCustomLineItemTotalPriceChangeBuilder implements Builder<SetCust
 
     /**
      *  <p>Update action for <code>setCustomLineItemTotalPrice</code></p>
+     * @param change
+     * @return Builder
      */
 
     public SetCustomLineItemTotalPriceChangeBuilder change(final String change) {
@@ -47,6 +49,7 @@ public class SetCustomLineItemTotalPriceChangeBuilder implements Builder<SetCust
 
     /**
      *
+     * @return Builder
      */
 
     public SetCustomLineItemTotalPriceChangeBuilder customLineItem(
@@ -58,6 +61,8 @@ public class SetCustomLineItemTotalPriceChangeBuilder implements Builder<SetCust
 
     /**
      *
+     * @param customLineItem
+     * @return Builder
      */
 
     public SetCustomLineItemTotalPriceChangeBuilder customLineItem(
@@ -68,6 +73,8 @@ public class SetCustomLineItemTotalPriceChangeBuilder implements Builder<SetCust
 
     /**
      *
+     * @param customLineItemId
+     * @return Builder
      */
 
     public SetCustomLineItemTotalPriceChangeBuilder customLineItemId(final String customLineItemId) {
@@ -77,6 +84,7 @@ public class SetCustomLineItemTotalPriceChangeBuilder implements Builder<SetCust
 
     /**
      *
+     * @return Builder
      */
 
     public SetCustomLineItemTotalPriceChangeBuilder nextValue(
@@ -87,6 +95,8 @@ public class SetCustomLineItemTotalPriceChangeBuilder implements Builder<SetCust
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public SetCustomLineItemTotalPriceChangeBuilder nextValue(
@@ -97,6 +107,7 @@ public class SetCustomLineItemTotalPriceChangeBuilder implements Builder<SetCust
 
     /**
      *
+     * @return Builder
      */
 
     public SetCustomLineItemTotalPriceChangeBuilder previousValue(
@@ -107,6 +118,8 @@ public class SetCustomLineItemTotalPriceChangeBuilder implements Builder<SetCust
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public SetCustomLineItemTotalPriceChangeBuilder previousValue(

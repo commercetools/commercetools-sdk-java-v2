@@ -35,6 +35,8 @@ public class SetProductPriceCustomTypeChangeBuilder implements Builder<SetProduc
 
     /**
      *  <p>Update action for <code>setProductPriceCustomType</code></p>
+     * @param change
+     * @return Builder
      */
 
     public SetProductPriceCustomTypeChangeBuilder change(final String change) {
@@ -44,6 +46,8 @@ public class SetProductPriceCustomTypeChangeBuilder implements Builder<SetProduc
 
     /**
      *
+     * @param catalogData
+     * @return Builder
      */
 
     public SetProductPriceCustomTypeChangeBuilder catalogData(final String catalogData) {
@@ -53,6 +57,7 @@ public class SetProductPriceCustomTypeChangeBuilder implements Builder<SetProduc
 
     /**
      *
+     * @return Builder
      */
 
     public SetProductPriceCustomTypeChangeBuilder previousValue(
@@ -63,6 +68,8 @@ public class SetProductPriceCustomTypeChangeBuilder implements Builder<SetProduc
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public SetProductPriceCustomTypeChangeBuilder previousValue(
@@ -73,6 +80,7 @@ public class SetProductPriceCustomTypeChangeBuilder implements Builder<SetProduc
 
     /**
      *
+     * @return Builder
      */
 
     public SetProductPriceCustomTypeChangeBuilder nextValue(
@@ -83,6 +91,8 @@ public class SetProductPriceCustomTypeChangeBuilder implements Builder<SetProduc
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public SetProductPriceCustomTypeChangeBuilder nextValue(

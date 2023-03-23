@@ -35,6 +35,7 @@ public interface StagedQuoteTransitionStateAction extends StagedQuoteUpdateActio
 
     /**
      *  <p>Value to set. If there is no State yet, the new State must be an initial State.</p>
+     * @return state
      */
     @NotNull
     @Valid
@@ -43,6 +44,7 @@ public interface StagedQuoteTransitionStateAction extends StagedQuoteUpdateActio
 
     /**
      *  <p>Switch validations on or off.</p>
+     * @return force
      */
 
     @JsonProperty("force")

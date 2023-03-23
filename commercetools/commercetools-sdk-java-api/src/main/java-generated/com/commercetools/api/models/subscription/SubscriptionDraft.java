@@ -33,6 +33,7 @@ public interface SubscriptionDraft
 
     /**
      *  <p>Change notifications to be subscribed to.</p>
+     * @return changes
      */
     @Valid
     @JsonProperty("changes")
@@ -40,6 +41,7 @@ public interface SubscriptionDraft
 
     /**
      *  <p>Messaging service to which the messages are sent.</p>
+     * @return destination
      */
     @NotNull
     @Valid
@@ -48,6 +50,7 @@ public interface SubscriptionDraft
 
     /**
      *  <p>User-defined unique identifier for the Subscription.</p>
+     * @return key
      */
 
     @JsonProperty("key")
@@ -55,6 +58,7 @@ public interface SubscriptionDraft
 
     /**
      *  <p>Messages to be subscribed to.</p>
+     * @return messages
      */
     @Valid
     @JsonProperty("messages")
@@ -62,6 +66,7 @@ public interface SubscriptionDraft
 
     /**
      *  <p>Format in which the payload is delivered. When not provided, the PlatformFormat is selected by default.</p>
+     * @return format
      */
     @Valid
     @JsonProperty("format")

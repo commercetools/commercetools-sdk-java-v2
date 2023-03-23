@@ -43,6 +43,8 @@ public class ProductVariantDraftImportBuilder implements Builder<ProductVariantD
 
     /**
      *
+     * @param sku
+     * @return Builder
      */
 
     public ProductVariantDraftImportBuilder sku(@Nullable final String sku) {
@@ -52,6 +54,8 @@ public class ProductVariantDraftImportBuilder implements Builder<ProductVariantD
 
     /**
      *
+     * @param key
+     * @return Builder
      */
 
     public ProductVariantDraftImportBuilder key(final String key) {
@@ -61,6 +65,8 @@ public class ProductVariantDraftImportBuilder implements Builder<ProductVariantD
 
     /**
      *
+     * @param prices
+     * @return Builder
      */
 
     public ProductVariantDraftImportBuilder prices(
@@ -71,6 +77,8 @@ public class ProductVariantDraftImportBuilder implements Builder<ProductVariantD
 
     /**
      *
+     * @param prices
+     * @return Builder
      */
 
     public ProductVariantDraftImportBuilder prices(
@@ -81,6 +89,8 @@ public class ProductVariantDraftImportBuilder implements Builder<ProductVariantD
 
     /**
      *
+     * @param prices
+     * @return Builder
      */
 
     public ProductVariantDraftImportBuilder plusPrices(
@@ -94,6 +104,7 @@ public class ProductVariantDraftImportBuilder implements Builder<ProductVariantD
 
     /**
      *
+     * @return Builder
      */
 
     public ProductVariantDraftImportBuilder plusPrices(
@@ -108,6 +119,7 @@ public class ProductVariantDraftImportBuilder implements Builder<ProductVariantD
 
     /**
      *
+     * @return Builder
      */
 
     public ProductVariantDraftImportBuilder withPrices(
@@ -120,6 +132,8 @@ public class ProductVariantDraftImportBuilder implements Builder<ProductVariantD
 
     /**
      *
+     * @param attributes
+     * @return Builder
      */
 
     public ProductVariantDraftImportBuilder attributes(
@@ -130,6 +144,8 @@ public class ProductVariantDraftImportBuilder implements Builder<ProductVariantD
 
     /**
      *
+     * @param attributes
+     * @return Builder
      */
 
     public ProductVariantDraftImportBuilder attributes(
@@ -140,6 +156,8 @@ public class ProductVariantDraftImportBuilder implements Builder<ProductVariantD
 
     /**
      *
+     * @param attributes
+     * @return Builder
      */
 
     public ProductVariantDraftImportBuilder plusAttributes(
@@ -153,6 +171,7 @@ public class ProductVariantDraftImportBuilder implements Builder<ProductVariantD
 
     /**
      *
+     * @return Builder
      */
 
     public ProductVariantDraftImportBuilder plusAttributes(
@@ -167,6 +186,7 @@ public class ProductVariantDraftImportBuilder implements Builder<ProductVariantD
 
     /**
      *
+     * @return Builder
      */
 
     public ProductVariantDraftImportBuilder withAttributes(
@@ -179,6 +199,8 @@ public class ProductVariantDraftImportBuilder implements Builder<ProductVariantD
 
     /**
      *
+     * @param images
+     * @return Builder
      */
 
     public ProductVariantDraftImportBuilder images(
@@ -189,6 +211,8 @@ public class ProductVariantDraftImportBuilder implements Builder<ProductVariantD
 
     /**
      *
+     * @param images
+     * @return Builder
      */
 
     public ProductVariantDraftImportBuilder images(
@@ -199,6 +223,8 @@ public class ProductVariantDraftImportBuilder implements Builder<ProductVariantD
 
     /**
      *
+     * @param images
+     * @return Builder
      */
 
     public ProductVariantDraftImportBuilder plusImages(
@@ -212,6 +238,7 @@ public class ProductVariantDraftImportBuilder implements Builder<ProductVariantD
 
     /**
      *
+     * @return Builder
      */
 
     public ProductVariantDraftImportBuilder plusImages(
@@ -225,6 +252,7 @@ public class ProductVariantDraftImportBuilder implements Builder<ProductVariantD
 
     /**
      *
+     * @return Builder
      */
 
     public ProductVariantDraftImportBuilder withImages(
@@ -236,6 +264,8 @@ public class ProductVariantDraftImportBuilder implements Builder<ProductVariantD
 
     /**
      *
+     * @param assets
+     * @return Builder
      */
 
     public ProductVariantDraftImportBuilder assets(
@@ -246,6 +276,8 @@ public class ProductVariantDraftImportBuilder implements Builder<ProductVariantD
 
     /**
      *
+     * @param assets
+     * @return Builder
      */
 
     public ProductVariantDraftImportBuilder assets(
@@ -256,6 +288,8 @@ public class ProductVariantDraftImportBuilder implements Builder<ProductVariantD
 
     /**
      *
+     * @param assets
+     * @return Builder
      */
 
     public ProductVariantDraftImportBuilder plusAssets(
@@ -269,6 +303,7 @@ public class ProductVariantDraftImportBuilder implements Builder<ProductVariantD
 
     /**
      *
+     * @return Builder
      */
 
     public ProductVariantDraftImportBuilder plusAssets(
@@ -282,6 +317,7 @@ public class ProductVariantDraftImportBuilder implements Builder<ProductVariantD
 
     /**
      *
+     * @return Builder
      */
 
     public ProductVariantDraftImportBuilder withAssets(

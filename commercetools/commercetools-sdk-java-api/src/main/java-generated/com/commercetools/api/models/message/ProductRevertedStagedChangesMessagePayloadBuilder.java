@@ -26,6 +26,8 @@ public class ProductRevertedStagedChangesMessagePayloadBuilder
 
     /**
      *  <p>List of image URLs that were removed during the Revert Staged Changes update action.</p>
+     * @param removedImageUrls
+     * @return Builder
      */
 
     public ProductRevertedStagedChangesMessagePayloadBuilder removedImageUrls(final String... removedImageUrls) {
@@ -35,6 +37,8 @@ public class ProductRevertedStagedChangesMessagePayloadBuilder
 
     /**
      *  <p>List of image URLs that were removed during the Revert Staged Changes update action.</p>
+     * @param removedImageUrls
+     * @return Builder
      */
 
     public ProductRevertedStagedChangesMessagePayloadBuilder removedImageUrls(
@@ -45,6 +49,8 @@ public class ProductRevertedStagedChangesMessagePayloadBuilder
 
     /**
      *  <p>List of image URLs that were removed during the Revert Staged Changes update action.</p>
+     * @param removedImageUrls
+     * @return Builder
      */
 
     public ProductRevertedStagedChangesMessagePayloadBuilder plusRemovedImageUrls(final String... removedImageUrls) {

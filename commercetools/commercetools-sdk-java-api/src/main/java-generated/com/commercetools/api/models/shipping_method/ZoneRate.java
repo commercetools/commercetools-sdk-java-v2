@@ -34,6 +34,7 @@ public interface ZoneRate {
 
     /**
      *  <p>Zone for which the shipping rates are valid.</p>
+     * @return zone
      */
     @NotNull
     @Valid
@@ -42,6 +43,7 @@ public interface ZoneRate {
 
     /**
      *  <p>Shipping rates defined per currency.</p>
+     * @return shippingRates
      */
     @NotNull
     @Valid

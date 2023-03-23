@@ -32,6 +32,7 @@ public class ProductSelectionSetVariantSelectionActionBuilder
 
     /**
      *  <p>ResourceIdentifier of the Product</p>
+     * @return Builder
      */
 
     public ProductSelectionSetVariantSelectionActionBuilder product(
@@ -43,6 +44,8 @@ public class ProductSelectionSetVariantSelectionActionBuilder
 
     /**
      *  <p>ResourceIdentifier of the Product</p>
+     * @param product
+     * @return Builder
      */
 
     public ProductSelectionSetVariantSelectionActionBuilder product(
@@ -53,6 +56,8 @@ public class ProductSelectionSetVariantSelectionActionBuilder
 
     /**
      *  <p>Determines which Variants of the previously added Product are to be included in, or excluded from, the Product Selection. Leave it empty to unset an existing Variant Selection.</p>
+     * @param variantSelection
+     * @return Builder
      */
 
     public ProductSelectionSetVariantSelectionActionBuilder variantSelection(
@@ -63,6 +68,7 @@ public class ProductSelectionSetVariantSelectionActionBuilder
 
     /**
      *  <p>Determines which Variants of the previously added Product are to be included in, or excluded from, the Product Selection. Leave it empty to unset an existing Variant Selection.</p>
+     * @return Builder
      */
 
     public ProductSelectionSetVariantSelectionActionBuilder variantSelection(

@@ -18,8 +18,8 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
  *  <p>Returned when some of the Line Items are out of stock at the time of placing an Order.</p>
  *  <p>The error is returned as a failed response to:</p>
  *  <ul>
- *   <li>Create Order from Cart, Create Order from Cart in a Store, and Create Order by Import requests on Orders.</li>
- *   <li>Create Order from a Cart and Create Order in a Store from Cart requests on My Orders.</li>
+ *   <li>Create Order from Cart, Create Order in Store from Cart, and Create Order by Import requests on Orders.</li>
+ *   <li>Create Order from Cart and Create Order in Store from Cart requests on My Orders.</li>
  *  </ul>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")

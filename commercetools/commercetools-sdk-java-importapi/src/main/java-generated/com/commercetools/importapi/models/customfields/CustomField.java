@@ -55,6 +55,7 @@ public interface CustomField {
 
     /**
      *  <p>The type of this field.</p>
+     * @return type
      */
     @NotNull
     @JsonProperty("type")

@@ -45,6 +45,7 @@ public interface StagedOrderAddCustomLineItemAction extends StagedOrderUpdateAct
     /**
      *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
      *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
+     * @return money
      */
     @NotNull
     @Valid
@@ -53,6 +54,7 @@ public interface StagedOrderAddCustomLineItemAction extends StagedOrderUpdateAct
 
     /**
      *  <p>JSON object where the keys are of type Locale, and the values are the strings used for the corresponding language.</p>
+     * @return name
      */
     @NotNull
     @Valid
@@ -61,6 +63,7 @@ public interface StagedOrderAddCustomLineItemAction extends StagedOrderUpdateAct
 
     /**
      *
+     * @return quantity
      */
 
     @JsonProperty("quantity")
@@ -68,6 +71,7 @@ public interface StagedOrderAddCustomLineItemAction extends StagedOrderUpdateAct
 
     /**
      *
+     * @return slug
      */
     @NotNull
     @JsonProperty("slug")
@@ -75,6 +79,7 @@ public interface StagedOrderAddCustomLineItemAction extends StagedOrderUpdateAct
 
     /**
      *  <p>ResourceIdentifier to a TaxCategory.</p>
+     * @return taxCategory
      */
     @Valid
     @JsonProperty("taxCategory")
@@ -82,13 +87,15 @@ public interface StagedOrderAddCustomLineItemAction extends StagedOrderUpdateAct
 
     /**
      *  <p>The representation used when creating or updating a customizable data type with Custom Fields.</p>
+     * @return custom
      */
     @Valid
     @JsonProperty("custom")
     public CustomFieldsDraft getCustom();
 
     /**
-     *
+     *  <p>Controls calculation of taxed prices for Line Items, Custom Line Items, and Shipping Methods as explained in Cart tax calculation.</p>
+     * @return externalTaxRate
      */
     @Valid
     @JsonProperty("externalTaxRate")
@@ -99,6 +106,7 @@ public interface StagedOrderAddCustomLineItemAction extends StagedOrderUpdateAct
      *   <li>If <code>Standard</code>, Cart Discounts with a matching CartDiscountCustomLineItemsTarget are applied to the Custom Line Item.</li>
      *   <li>If <code>External</code>, Cart Discounts are not considered on the Custom Line Item.</li>
      *  </ul>
+     * @return priceMode
      */
 
     @JsonProperty("priceMode")

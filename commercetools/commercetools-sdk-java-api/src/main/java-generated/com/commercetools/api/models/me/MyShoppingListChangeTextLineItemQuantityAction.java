@@ -34,6 +34,7 @@ public interface MyShoppingListChangeTextLineItemQuantityAction extends MyShoppi
 
     /**
      *  <p>The <code>id</code> of the TextLineItem to update.</p>
+     * @return textLineItemId
      */
     @NotNull
     @JsonProperty("textLineItemId")
@@ -41,6 +42,7 @@ public interface MyShoppingListChangeTextLineItemQuantityAction extends MyShoppi
 
     /**
      *  <p>New value to set. If <code>0</code>, the TextLineItem is removed from the ShoppingList.</p>
+     * @return quantity
      */
     @NotNull
     @JsonProperty("quantity")

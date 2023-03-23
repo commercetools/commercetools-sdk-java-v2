@@ -34,6 +34,8 @@ public class StagedOrderAddReturnInfoActionBuilder implements Builder<StagedOrde
 
     /**
      *
+     * @param returnTrackingId
+     * @return Builder
      */
 
     public StagedOrderAddReturnInfoActionBuilder returnTrackingId(@Nullable final String returnTrackingId) {
@@ -43,6 +45,8 @@ public class StagedOrderAddReturnInfoActionBuilder implements Builder<StagedOrde
 
     /**
      *
+     * @param items
+     * @return Builder
      */
 
     public StagedOrderAddReturnInfoActionBuilder items(
@@ -53,6 +57,8 @@ public class StagedOrderAddReturnInfoActionBuilder implements Builder<StagedOrde
 
     /**
      *
+     * @param items
+     * @return Builder
      */
 
     public StagedOrderAddReturnInfoActionBuilder items(
@@ -63,6 +69,8 @@ public class StagedOrderAddReturnInfoActionBuilder implements Builder<StagedOrde
 
     /**
      *
+     * @param items
+     * @return Builder
      */
 
     public StagedOrderAddReturnInfoActionBuilder plusItems(
@@ -76,6 +84,7 @@ public class StagedOrderAddReturnInfoActionBuilder implements Builder<StagedOrde
 
     /**
      *
+     * @return Builder
      */
 
     public StagedOrderAddReturnInfoActionBuilder plusItems(
@@ -89,6 +98,7 @@ public class StagedOrderAddReturnInfoActionBuilder implements Builder<StagedOrde
 
     /**
      *
+     * @return Builder
      */
 
     public StagedOrderAddReturnInfoActionBuilder withItems(
@@ -100,6 +110,8 @@ public class StagedOrderAddReturnInfoActionBuilder implements Builder<StagedOrde
 
     /**
      *
+     * @param returnDate
+     * @return Builder
      */
 
     public StagedOrderAddReturnInfoActionBuilder returnDate(@Nullable final java.time.ZonedDateTime returnDate) {

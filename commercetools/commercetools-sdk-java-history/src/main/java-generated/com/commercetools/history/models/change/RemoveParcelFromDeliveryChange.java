@@ -37,6 +37,7 @@ public interface RemoveParcelFromDeliveryChange extends Change {
 
     /**
      *
+     * @return type
      */
     @NotNull
     @JsonProperty("type")
@@ -44,6 +45,7 @@ public interface RemoveParcelFromDeliveryChange extends Change {
 
     /**
      *  <p>Update action for <code>removeParcelFromDelivery</code></p>
+     * @return change
      */
     @NotNull
     @JsonProperty("change")
@@ -51,6 +53,7 @@ public interface RemoveParcelFromDeliveryChange extends Change {
 
     /**
      *
+     * @return deliveryId
      */
     @NotNull
     @JsonProperty("deliveryId")
@@ -58,6 +61,7 @@ public interface RemoveParcelFromDeliveryChange extends Change {
 
     /**
      *
+     * @return previousValue
      */
     @NotNull
     @Valid

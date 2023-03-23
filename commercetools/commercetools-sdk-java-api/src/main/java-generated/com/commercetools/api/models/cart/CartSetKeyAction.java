@@ -29,7 +29,8 @@ public interface CartSetKeyAction extends CartUpdateAction {
     String SET_KEY = "setKey";
 
     /**
-     *
+     *  <p>Value to set. If empty, any existing key will be removed.</p>
+     * @return key
      */
 
     @JsonProperty("key")

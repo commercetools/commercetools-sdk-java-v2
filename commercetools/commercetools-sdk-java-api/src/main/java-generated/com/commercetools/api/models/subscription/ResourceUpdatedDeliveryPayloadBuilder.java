@@ -43,6 +43,8 @@ public class ResourceUpdatedDeliveryPayloadBuilder implements Builder<ResourceUp
 
     /**
      *  <p><code>key</code> of the Project. Useful in message processing if the Destination receives events from multiple Projects.</p>
+     * @param projectKey
+     * @return Builder
      */
 
     public ResourceUpdatedDeliveryPayloadBuilder projectKey(final String projectKey) {
@@ -52,6 +54,8 @@ public class ResourceUpdatedDeliveryPayloadBuilder implements Builder<ResourceUp
 
     /**
      *  <p>Reference to the resource that triggered the message.</p>
+     * @param resource
+     * @return Builder
      */
 
     public ResourceUpdatedDeliveryPayloadBuilder resource(
@@ -62,6 +66,7 @@ public class ResourceUpdatedDeliveryPayloadBuilder implements Builder<ResourceUp
 
     /**
      *  <p>Reference to the resource that triggered the message.</p>
+     * @return Builder
      */
 
     public ResourceUpdatedDeliveryPayloadBuilder resource(
@@ -72,6 +77,7 @@ public class ResourceUpdatedDeliveryPayloadBuilder implements Builder<ResourceUp
 
     /**
      *  <p>User-defined unique identifiers of the resource.</p>
+     * @return Builder
      */
 
     public ResourceUpdatedDeliveryPayloadBuilder resourceUserProvidedIdentifiers(
@@ -84,6 +90,8 @@ public class ResourceUpdatedDeliveryPayloadBuilder implements Builder<ResourceUp
 
     /**
      *  <p>User-defined unique identifiers of the resource.</p>
+     * @param resourceUserProvidedIdentifiers
+     * @return Builder
      */
 
     public ResourceUpdatedDeliveryPayloadBuilder resourceUserProvidedIdentifiers(
@@ -94,6 +102,8 @@ public class ResourceUpdatedDeliveryPayloadBuilder implements Builder<ResourceUp
 
     /**
      *  <p>Last seen version of the resource.</p>
+     * @param version
+     * @return Builder
      */
 
     public ResourceUpdatedDeliveryPayloadBuilder version(final Long version) {
@@ -103,6 +113,8 @@ public class ResourceUpdatedDeliveryPayloadBuilder implements Builder<ResourceUp
 
     /**
      *  <p>Version of the resource before the update.</p>
+     * @param oldVersion
+     * @return Builder
      */
 
     public ResourceUpdatedDeliveryPayloadBuilder oldVersion(final Long oldVersion) {
@@ -112,6 +124,8 @@ public class ResourceUpdatedDeliveryPayloadBuilder implements Builder<ResourceUp
 
     /**
      *  <p>Date and time (UTC) the resource was last updated.</p>
+     * @param modifiedAt
+     * @return Builder
      */
 
     public ResourceUpdatedDeliveryPayloadBuilder modifiedAt(final java.time.ZonedDateTime modifiedAt) {

@@ -36,6 +36,7 @@ public interface SetSkuChange extends Change {
 
     /**
      *
+     * @return type
      */
     @NotNull
     @JsonProperty("type")
@@ -43,6 +44,7 @@ public interface SetSkuChange extends Change {
 
     /**
      *  <p>Update action for <code>setSku</code></p>
+     * @return change
      */
     @NotNull
     @JsonProperty("change")
@@ -50,6 +52,7 @@ public interface SetSkuChange extends Change {
 
     /**
      *
+     * @return catalogData
      */
     @NotNull
     @JsonProperty("catalogData")
@@ -57,6 +60,7 @@ public interface SetSkuChange extends Change {
 
     /**
      *
+     * @return previousValue
      */
     @NotNull
     @JsonProperty("previousValue")
@@ -64,6 +68,7 @@ public interface SetSkuChange extends Change {
 
     /**
      *
+     * @return nextValue
      */
     @NotNull
     @JsonProperty("nextValue")

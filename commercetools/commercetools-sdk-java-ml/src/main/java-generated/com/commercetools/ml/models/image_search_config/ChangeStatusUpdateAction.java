@@ -33,6 +33,7 @@ public interface ChangeStatusUpdateAction extends ImageSearchConfigUpdateAction 
 
     /**
      *
+     * @return status
      */
     @NotNull
     @JsonProperty("status")

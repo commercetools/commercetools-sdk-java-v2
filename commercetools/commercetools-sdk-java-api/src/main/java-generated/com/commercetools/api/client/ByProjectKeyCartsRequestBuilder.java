@@ -25,6 +25,10 @@ public class ByProjectKeyCartsRequestBuilder implements ByProjectKeyCartsRequest
         return new ByProjectKeyCartsPost(apiHttpClient, projectKey, cartDraft);
     }
 
+    public ByProjectKeyCartsPostString post(final String cartDraft) {
+        return new ByProjectKeyCartsPostString(apiHttpClient, projectKey, cartDraft);
+    }
+
     public ByProjectKeyCartsPost post(UnaryOperator<com.commercetools.api.models.cart.CartDraftBuilder> op) {
         return post(op.apply(com.commercetools.api.models.cart.CartDraftBuilder.of()).build());
     }

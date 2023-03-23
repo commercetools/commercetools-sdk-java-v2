@@ -25,6 +25,8 @@ public class CustomerEmailChangedMessagePayloadBuilder implements Builder<Custom
 
     /**
      *  <p>The <code>email</code> that was set during the Change Email update action.</p>
+     * @param email
+     * @return Builder
      */
 
     public CustomerEmailChangedMessagePayloadBuilder email(final String email) {

@@ -33,6 +33,7 @@ public interface ProductSetTaxCategoryAction extends ProductUpdateAction {
 
     /**
      *  <p>The Tax Category to set. If empty, any existing value will be removed.</p>
+     * @return taxCategory
      */
     @Valid
     @JsonProperty("taxCategory")

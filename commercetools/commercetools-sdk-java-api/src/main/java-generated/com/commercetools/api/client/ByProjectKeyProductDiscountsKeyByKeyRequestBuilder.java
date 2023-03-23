@@ -29,6 +29,11 @@ public class ByProjectKeyProductDiscountsKeyByKeyRequestBuilder {
         return new ByProjectKeyProductDiscountsKeyByKeyPost(apiHttpClient, projectKey, key, productDiscountUpdate);
     }
 
+    public ByProjectKeyProductDiscountsKeyByKeyPostString post(final String productDiscountUpdate) {
+        return new ByProjectKeyProductDiscountsKeyByKeyPostString(apiHttpClient, projectKey, key,
+            productDiscountUpdate);
+    }
+
     public ByProjectKeyProductDiscountsKeyByKeyPost post(
             UnaryOperator<com.commercetools.api.models.product_discount.ProductDiscountUpdateBuilder> op) {
         return post(op.apply(com.commercetools.api.models.product_discount.ProductDiscountUpdateBuilder.of()).build());

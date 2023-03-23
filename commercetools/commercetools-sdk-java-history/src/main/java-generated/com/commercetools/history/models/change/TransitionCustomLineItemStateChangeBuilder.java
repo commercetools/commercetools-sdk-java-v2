@@ -38,6 +38,8 @@ public class TransitionCustomLineItemStateChangeBuilder implements Builder<Trans
 
     /**
      *  <p>Update action for <code>transitionCustomLineItemState</code></p>
+     * @param change
+     * @return Builder
      */
 
     public TransitionCustomLineItemStateChangeBuilder change(final String change) {
@@ -47,6 +49,8 @@ public class TransitionCustomLineItemStateChangeBuilder implements Builder<Trans
 
     /**
      *
+     * @param lineItemId
+     * @return Builder
      */
 
     public TransitionCustomLineItemStateChangeBuilder lineItemId(final String lineItemId) {
@@ -56,6 +60,8 @@ public class TransitionCustomLineItemStateChangeBuilder implements Builder<Trans
 
     /**
      *
+     * @param stateId
+     * @return Builder
      */
 
     public TransitionCustomLineItemStateChangeBuilder stateId(final String stateId) {
@@ -65,6 +71,8 @@ public class TransitionCustomLineItemStateChangeBuilder implements Builder<Trans
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public TransitionCustomLineItemStateChangeBuilder nextValue(
@@ -75,6 +83,8 @@ public class TransitionCustomLineItemStateChangeBuilder implements Builder<Trans
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public TransitionCustomLineItemStateChangeBuilder nextValue(
@@ -85,6 +95,8 @@ public class TransitionCustomLineItemStateChangeBuilder implements Builder<Trans
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public TransitionCustomLineItemStateChangeBuilder plusNextValue(
@@ -98,6 +110,7 @@ public class TransitionCustomLineItemStateChangeBuilder implements Builder<Trans
 
     /**
      *
+     * @return Builder
      */
 
     public TransitionCustomLineItemStateChangeBuilder plusNextValue(
@@ -111,6 +124,7 @@ public class TransitionCustomLineItemStateChangeBuilder implements Builder<Trans
 
     /**
      *
+     * @return Builder
      */
 
     public TransitionCustomLineItemStateChangeBuilder withNextValue(
@@ -122,6 +136,8 @@ public class TransitionCustomLineItemStateChangeBuilder implements Builder<Trans
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public TransitionCustomLineItemStateChangeBuilder previousValue(
@@ -132,6 +148,8 @@ public class TransitionCustomLineItemStateChangeBuilder implements Builder<Trans
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public TransitionCustomLineItemStateChangeBuilder previousValue(
@@ -142,6 +160,8 @@ public class TransitionCustomLineItemStateChangeBuilder implements Builder<Trans
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public TransitionCustomLineItemStateChangeBuilder plusPreviousValue(
@@ -155,6 +175,7 @@ public class TransitionCustomLineItemStateChangeBuilder implements Builder<Trans
 
     /**
      *
+     * @return Builder
      */
 
     public TransitionCustomLineItemStateChangeBuilder plusPreviousValue(
@@ -168,6 +189,7 @@ public class TransitionCustomLineItemStateChangeBuilder implements Builder<Trans
 
     /**
      *
+     * @return Builder
      */
 
     public TransitionCustomLineItemStateChangeBuilder withPreviousValue(

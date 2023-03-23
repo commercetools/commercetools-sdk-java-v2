@@ -34,6 +34,7 @@ public interface AnonymousIdAlreadyInUseError extends ErrorObject {
 
     /**
      *
+     * @return code
      */
     @NotNull
     @JsonProperty("code")
@@ -41,6 +42,7 @@ public interface AnonymousIdAlreadyInUseError extends ErrorObject {
 
     /**
      *  <p><code>"The given anonymous ID is already in use."</code></p>
+     * @return message
      */
     @NotNull
     @JsonProperty("message")

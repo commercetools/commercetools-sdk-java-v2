@@ -33,6 +33,7 @@ public interface AssignedProductReference {
 
     /**
      *  <p>Reference to a Product that is assigned to the Product Selection.</p>
+     * @return product
      */
     @NotNull
     @Valid
@@ -40,15 +41,28 @@ public interface AssignedProductReference {
     public ProductReference getProduct();
 
     /**
-     *  <p>The Variants of the Product that are included, or excluded, from the Product Selection. In absence of this field, all Variants are deemed to be included.</p>
+     *  <p>The Variants of the Product that are included from the Product Selection.</p>
+     *  <p>This field may exist only for the IndividualProductSelectionType. In absence of this field, all Variants are deemed to be included.</p>
+     * @return variantSelection
      */
     @Valid
     @JsonProperty("variantSelection")
     public ProductVariantSelection getVariantSelection();
 
+    /**
+     *  <p>The Variants of the Product that are excluded from the Product Selection.</p>
+     *  <p>This field may exist only for the IndividualExclusionProductSelectionType. In absence of this field, all Variants are deemed to be excluded.</p>
+     * @return variantExclusion
+     */
+    @Valid
+    @JsonProperty("variantExclusion")
+    public ProductVariantExclusion getVariantExclusion();
+
     public void setProduct(final ProductReference product);
 
     public void setVariantSelection(final ProductVariantSelection variantSelection);
+
+    public void setVariantExclusion(final ProductVariantExclusion variantExclusion);
 
     public static AssignedProductReference of() {
         return new AssignedProductReferenceImpl();
@@ -58,6 +72,7 @@ public interface AssignedProductReference {
         AssignedProductReferenceImpl instance = new AssignedProductReferenceImpl();
         instance.setProduct(template.getProduct());
         instance.setVariantSelection(template.getVariantSelection());
+        instance.setVariantExclusion(template.getVariantExclusion());
         return instance;
     }
 

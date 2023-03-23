@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * CartRemoveLineItemAction
+ *  <p>The LineItem price is updated as described in LineItem Price selection.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CartRemoveLineItemActionImpl implements CartRemoveLineItemAction, ModelBase {
@@ -59,7 +59,7 @@ public class CartRemoveLineItemActionImpl implements CartRemoveLineItemAction, M
     }
 
     /**
-     *
+     *  <p><code>id</code> of the Line Item to remove.</p>
      */
 
     public String getLineItemId() {
@@ -67,7 +67,7 @@ public class CartRemoveLineItemActionImpl implements CartRemoveLineItemAction, M
     }
 
     /**
-     *
+     *  <p>New value to set. If absent or <code>0</code>, the Line Item is removed from the Cart.</p>
      */
 
     public Long getQuantity() {
@@ -75,8 +75,7 @@ public class CartRemoveLineItemActionImpl implements CartRemoveLineItemAction, M
     }
 
     /**
-     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
-     *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
+     *  <p>Sets the LineItem <code>price</code> to the given value when decreasing the quantity of a Line Item with the <code>ExternalPrice</code> LineItemPriceMode.</p>
      */
 
     public com.commercetools.api.models.common.Money getExternalPrice() {
@@ -84,7 +83,7 @@ public class CartRemoveLineItemActionImpl implements CartRemoveLineItemAction, M
     }
 
     /**
-     *
+     *  <p>Sets the LineItem <code>price</code> and <code>totalPrice</code> to the given value when decreasing the quantity of a Line Item with the <code>ExternalTotal</code> LineItemPriceMode.</p>
      */
 
     public com.commercetools.api.models.cart.ExternalLineItemTotalPrice getExternalTotalPrice() {
@@ -92,7 +91,7 @@ public class CartRemoveLineItemActionImpl implements CartRemoveLineItemAction, M
     }
 
     /**
-     *
+     *  <p>Container for Line Item-specific addresses to remove.</p>
      */
 
     public com.commercetools.api.models.cart.ItemShippingDetailsDraft getShippingDetailsToRemove() {

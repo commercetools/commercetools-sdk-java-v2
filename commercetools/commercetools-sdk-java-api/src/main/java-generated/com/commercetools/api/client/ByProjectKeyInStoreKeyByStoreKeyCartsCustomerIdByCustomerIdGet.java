@@ -18,9 +18,9 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Retrieves the active cart of the customer that has been modified most recently in a specific Store.</p>
- *  <p>If the cart exists in the project but does not have the store field, or the store field references a different store, this method returns a ResourceNotFound error.</p>
- *  <p>The cart may not contain up-to-date prices, discounts etc. If you want to ensure they're up-to-date, send an Update request with the Recalculate update action instead.</p>
+ *  <p>Retrieves the recently modified active Cart of a Customer with CartOrigin <code>Customer</code>. If no active Cart exists, a ResourceNotFound error is returned.</p>
+ *  <p>If the Cart exists in the Project but does not have the <code>store</code> field, or the <code>store</code> field references a different Store, a ResourceNotFound error is returned.</p>
+ *  <p>To ensure the Cart is up-to-date with current values (such as Prices and Discounts), use the Recalculate update action.</p>
  *
  * <hr>
  * <div class=code-example>

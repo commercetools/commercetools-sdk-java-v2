@@ -33,6 +33,7 @@ public interface ProductSelectionSettingDraft extends io.vrap.rmf.base.client.Dr
 
     /**
      *  <p>Resource Identifier of a ProductSelection.</p>
+     * @return productSelection
      */
     @NotNull
     @Valid
@@ -41,6 +42,7 @@ public interface ProductSelectionSettingDraft extends io.vrap.rmf.base.client.Dr
 
     /**
      *  <p>Set to <code>true</code> if all Products assigned to the Product Selection should become part of the Store's assortment.</p>
+     * @return active
      */
 
     @JsonProperty("active")

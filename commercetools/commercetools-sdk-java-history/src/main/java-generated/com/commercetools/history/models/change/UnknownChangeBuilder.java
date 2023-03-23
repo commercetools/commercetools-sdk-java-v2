@@ -29,6 +29,8 @@ public class UnknownChangeBuilder implements Builder<UnknownChange> {
 
     /**
      *
+     * @param change
+     * @return Builder
      */
 
     public UnknownChangeBuilder change(final String change) {
@@ -38,6 +40,8 @@ public class UnknownChangeBuilder implements Builder<UnknownChange> {
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public UnknownChangeBuilder previousValue(final java.lang.Object previousValue) {
@@ -47,6 +51,8 @@ public class UnknownChangeBuilder implements Builder<UnknownChange> {
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public UnknownChangeBuilder nextValue(final java.lang.Object nextValue) {

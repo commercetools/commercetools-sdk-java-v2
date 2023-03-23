@@ -44,6 +44,7 @@ public interface ProductPriceExternalDiscountSetMessage extends Message {
 
     /**
      *  <p>Unique identifier of the Product Variant for which the Discount was set.</p>
+     * @return variantId
      */
     @NotNull
     @JsonProperty("variantId")
@@ -51,6 +52,7 @@ public interface ProductPriceExternalDiscountSetMessage extends Message {
 
     /**
      *  <p>Key of the Product Variant for which the Discount was set.</p>
+     * @return variantKey
      */
 
     @JsonProperty("variantKey")
@@ -58,6 +60,7 @@ public interface ProductPriceExternalDiscountSetMessage extends Message {
 
     /**
      *  <p>SKU of the Product Variant for which Discount was set.</p>
+     * @return sku
      */
 
     @JsonProperty("sku")
@@ -65,6 +68,7 @@ public interface ProductPriceExternalDiscountSetMessage extends Message {
 
     /**
      *  <p>Unique identifier of the Price.</p>
+     * @return priceId
      */
     @NotNull
     @JsonProperty("priceId")
@@ -72,6 +76,7 @@ public interface ProductPriceExternalDiscountSetMessage extends Message {
 
     /**
      *  <p>Discounted Price for the Product Variant for which Discount was set.</p>
+     * @return discounted
      */
     @Valid
     @JsonProperty("discounted")
@@ -79,6 +84,7 @@ public interface ProductPriceExternalDiscountSetMessage extends Message {
 
     /**
      *  <p>Whether the update was only applied to the staged Product Projection.</p>
+     * @return staged
      */
     @NotNull
     @JsonProperty("staged")

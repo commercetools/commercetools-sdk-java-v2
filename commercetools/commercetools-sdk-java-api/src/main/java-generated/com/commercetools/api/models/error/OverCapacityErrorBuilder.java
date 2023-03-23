@@ -27,6 +27,8 @@ public class OverCapacityErrorBuilder implements Builder<OverCapacityError> {
 
     /**
      *  <p>Plain text description of the error.</p>
+     * @param message
+     * @return Builder
      */
 
     public OverCapacityErrorBuilder message(final String message) {

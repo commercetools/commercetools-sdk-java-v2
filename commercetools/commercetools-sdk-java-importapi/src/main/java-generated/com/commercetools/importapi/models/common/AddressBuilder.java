@@ -2,6 +2,7 @@
 package com.commercetools.importapi.models.common;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -97,8 +98,13 @@ public class AddressBuilder implements Builder<Address> {
     @Nullable
     private String externalId;
 
+    @Nullable
+    private com.commercetools.importapi.models.customfields.Custom custom;
+
     /**
      *
+     * @param id
+     * @return Builder
      */
 
     public AddressBuilder id(@Nullable final String id) {
@@ -108,6 +114,8 @@ public class AddressBuilder implements Builder<Address> {
 
     /**
      *
+     * @param key
+     * @return Builder
      */
 
     public AddressBuilder key(@Nullable final String key) {
@@ -117,6 +125,8 @@ public class AddressBuilder implements Builder<Address> {
 
     /**
      *
+     * @param title
+     * @return Builder
      */
 
     public AddressBuilder title(@Nullable final String title) {
@@ -126,6 +136,8 @@ public class AddressBuilder implements Builder<Address> {
 
     /**
      *
+     * @param salutation
+     * @return Builder
      */
 
     public AddressBuilder salutation(@Nullable final String salutation) {
@@ -135,6 +147,8 @@ public class AddressBuilder implements Builder<Address> {
 
     /**
      *
+     * @param firstName
+     * @return Builder
      */
 
     public AddressBuilder firstName(@Nullable final String firstName) {
@@ -144,6 +158,8 @@ public class AddressBuilder implements Builder<Address> {
 
     /**
      *
+     * @param lastName
+     * @return Builder
      */
 
     public AddressBuilder lastName(@Nullable final String lastName) {
@@ -153,6 +169,8 @@ public class AddressBuilder implements Builder<Address> {
 
     /**
      *
+     * @param streetName
+     * @return Builder
      */
 
     public AddressBuilder streetName(@Nullable final String streetName) {
@@ -162,6 +180,8 @@ public class AddressBuilder implements Builder<Address> {
 
     /**
      *
+     * @param streetNumber
+     * @return Builder
      */
 
     public AddressBuilder streetNumber(@Nullable final String streetNumber) {
@@ -171,6 +191,8 @@ public class AddressBuilder implements Builder<Address> {
 
     /**
      *
+     * @param additionalStreetInfo
+     * @return Builder
      */
 
     public AddressBuilder additionalStreetInfo(@Nullable final String additionalStreetInfo) {
@@ -180,6 +202,8 @@ public class AddressBuilder implements Builder<Address> {
 
     /**
      *
+     * @param postalCode
+     * @return Builder
      */
 
     public AddressBuilder postalCode(@Nullable final String postalCode) {
@@ -189,6 +213,8 @@ public class AddressBuilder implements Builder<Address> {
 
     /**
      *
+     * @param city
+     * @return Builder
      */
 
     public AddressBuilder city(@Nullable final String city) {
@@ -198,6 +224,8 @@ public class AddressBuilder implements Builder<Address> {
 
     /**
      *
+     * @param region
+     * @return Builder
      */
 
     public AddressBuilder region(@Nullable final String region) {
@@ -207,6 +235,8 @@ public class AddressBuilder implements Builder<Address> {
 
     /**
      *
+     * @param state
+     * @return Builder
      */
 
     public AddressBuilder state(@Nullable final String state) {
@@ -216,6 +246,8 @@ public class AddressBuilder implements Builder<Address> {
 
     /**
      *  <p>A two-digit country code as per ISO 3166-1 alpha-2.</p>
+     * @param country
+     * @return Builder
      */
 
     public AddressBuilder country(final String country) {
@@ -225,6 +257,8 @@ public class AddressBuilder implements Builder<Address> {
 
     /**
      *
+     * @param company
+     * @return Builder
      */
 
     public AddressBuilder company(@Nullable final String company) {
@@ -234,6 +268,8 @@ public class AddressBuilder implements Builder<Address> {
 
     /**
      *
+     * @param department
+     * @return Builder
      */
 
     public AddressBuilder department(@Nullable final String department) {
@@ -243,6 +279,8 @@ public class AddressBuilder implements Builder<Address> {
 
     /**
      *
+     * @param building
+     * @return Builder
      */
 
     public AddressBuilder building(@Nullable final String building) {
@@ -252,6 +290,8 @@ public class AddressBuilder implements Builder<Address> {
 
     /**
      *
+     * @param apartment
+     * @return Builder
      */
 
     public AddressBuilder apartment(@Nullable final String apartment) {
@@ -261,6 +301,8 @@ public class AddressBuilder implements Builder<Address> {
 
     /**
      *
+     * @param pOBox
+     * @return Builder
      */
 
     public AddressBuilder pOBox(@Nullable final String pOBox) {
@@ -270,6 +312,8 @@ public class AddressBuilder implements Builder<Address> {
 
     /**
      *
+     * @param phone
+     * @return Builder
      */
 
     public AddressBuilder phone(@Nullable final String phone) {
@@ -279,6 +323,8 @@ public class AddressBuilder implements Builder<Address> {
 
     /**
      *
+     * @param mobile
+     * @return Builder
      */
 
     public AddressBuilder mobile(@Nullable final String mobile) {
@@ -288,6 +334,8 @@ public class AddressBuilder implements Builder<Address> {
 
     /**
      *
+     * @param email
+     * @return Builder
      */
 
     public AddressBuilder email(@Nullable final String email) {
@@ -297,6 +345,8 @@ public class AddressBuilder implements Builder<Address> {
 
     /**
      *
+     * @param fax
+     * @return Builder
      */
 
     public AddressBuilder fax(@Nullable final String fax) {
@@ -306,6 +356,8 @@ public class AddressBuilder implements Builder<Address> {
 
     /**
      *
+     * @param additionalAddressInfo
+     * @return Builder
      */
 
     public AddressBuilder additionalAddressInfo(@Nullable final String additionalAddressInfo) {
@@ -315,10 +367,34 @@ public class AddressBuilder implements Builder<Address> {
 
     /**
      *
+     * @param externalId
+     * @return Builder
      */
 
     public AddressBuilder externalId(@Nullable final String externalId) {
         this.externalId = externalId;
+        return this;
+    }
+
+    /**
+     *  <p>Custom Fields for the address.</p>
+     * @return Builder
+     */
+
+    public AddressBuilder custom(
+            Function<com.commercetools.importapi.models.customfields.CustomBuilder, com.commercetools.importapi.models.customfields.CustomBuilder> builder) {
+        this.custom = builder.apply(com.commercetools.importapi.models.customfields.CustomBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Custom Fields for the address.</p>
+     * @param custom
+     * @return Builder
+     */
+
+    public AddressBuilder custom(@Nullable final com.commercetools.importapi.models.customfields.Custom custom) {
+        this.custom = custom;
         return this;
     }
 
@@ -446,11 +522,16 @@ public class AddressBuilder implements Builder<Address> {
         return this.externalId;
     }
 
+    @Nullable
+    public com.commercetools.importapi.models.customfields.Custom getCustom() {
+        return this.custom;
+    }
+
     public Address build() {
         Objects.requireNonNull(country, Address.class + ": country is missing");
         return new AddressImpl(id, key, title, salutation, firstName, lastName, streetName, streetNumber,
             additionalStreetInfo, postalCode, city, region, state, country, company, department, building, apartment,
-            pOBox, phone, mobile, email, fax, additionalAddressInfo, externalId);
+            pOBox, phone, mobile, email, fax, additionalAddressInfo, externalId, custom);
     }
 
     /**
@@ -459,7 +540,7 @@ public class AddressBuilder implements Builder<Address> {
     public Address buildUnchecked() {
         return new AddressImpl(id, key, title, salutation, firstName, lastName, streetName, streetNumber,
             additionalStreetInfo, postalCode, city, region, state, country, company, department, building, apartment,
-            pOBox, phone, mobile, email, fax, additionalAddressInfo, externalId);
+            pOBox, phone, mobile, email, fax, additionalAddressInfo, externalId, custom);
     }
 
     public static AddressBuilder of() {
@@ -493,6 +574,7 @@ public class AddressBuilder implements Builder<Address> {
         builder.fax = template.getFax();
         builder.additionalAddressInfo = template.getAdditionalAddressInfo();
         builder.externalId = template.getExternalId();
+        builder.custom = template.getCustom();
         return builder;
     }
 

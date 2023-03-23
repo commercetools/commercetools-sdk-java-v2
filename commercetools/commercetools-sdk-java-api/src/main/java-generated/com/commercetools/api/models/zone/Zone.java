@@ -43,6 +43,7 @@ public interface Zone extends BaseResource, ZoneMixin, com.commercetools.api.mod
 
     /**
      *  <p>Unique identifier of the Zone.</p>
+     * @return id
      */
     @NotNull
     @JsonProperty("id")
@@ -50,6 +51,7 @@ public interface Zone extends BaseResource, ZoneMixin, com.commercetools.api.mod
 
     /**
      *  <p>Current version of the Zone.</p>
+     * @return version
      */
     @NotNull
     @JsonProperty("version")
@@ -57,6 +59,7 @@ public interface Zone extends BaseResource, ZoneMixin, com.commercetools.api.mod
 
     /**
      *  <p>Date and time (UTC) the Zone was initially created.</p>
+     * @return createdAt
      */
     @NotNull
     @JsonProperty("createdAt")
@@ -64,6 +67,7 @@ public interface Zone extends BaseResource, ZoneMixin, com.commercetools.api.mod
 
     /**
      *  <p>Date and time (UTC) the Zone was last updated.</p>
+     * @return lastModifiedAt
      */
     @NotNull
     @JsonProperty("lastModifiedAt")
@@ -71,6 +75,7 @@ public interface Zone extends BaseResource, ZoneMixin, com.commercetools.api.mod
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @return lastModifiedBy
      */
     @Valid
     @JsonProperty("lastModifiedBy")
@@ -78,6 +83,7 @@ public interface Zone extends BaseResource, ZoneMixin, com.commercetools.api.mod
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @return createdBy
      */
     @Valid
     @JsonProperty("createdBy")
@@ -85,6 +91,7 @@ public interface Zone extends BaseResource, ZoneMixin, com.commercetools.api.mod
 
     /**
      *  <p>User-defined unique identifier of the Zone.</p>
+     * @return key
      */
 
     @JsonProperty("key")
@@ -92,6 +99,7 @@ public interface Zone extends BaseResource, ZoneMixin, com.commercetools.api.mod
 
     /**
      *  <p>Name of the Zone.</p>
+     * @return name
      */
     @NotNull
     @JsonProperty("name")
@@ -99,6 +107,7 @@ public interface Zone extends BaseResource, ZoneMixin, com.commercetools.api.mod
 
     /**
      *  <p>Description of the Zone.</p>
+     * @return description
      */
 
     @JsonProperty("description")
@@ -106,6 +115,7 @@ public interface Zone extends BaseResource, ZoneMixin, com.commercetools.api.mod
 
     /**
      *  <p>List of locations that belong to the Zone.</p>
+     * @return locations
      */
     @NotNull
     @Valid

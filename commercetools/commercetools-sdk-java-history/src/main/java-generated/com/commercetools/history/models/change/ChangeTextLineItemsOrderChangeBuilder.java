@@ -32,6 +32,8 @@ public class ChangeTextLineItemsOrderChangeBuilder implements Builder<ChangeText
 
     /**
      *
+     * @param change
+     * @return Builder
      */
 
     public ChangeTextLineItemsOrderChangeBuilder change(final String change) {
@@ -41,6 +43,8 @@ public class ChangeTextLineItemsOrderChangeBuilder implements Builder<ChangeText
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public ChangeTextLineItemsOrderChangeBuilder previousValue(
@@ -51,6 +55,8 @@ public class ChangeTextLineItemsOrderChangeBuilder implements Builder<ChangeText
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public ChangeTextLineItemsOrderChangeBuilder previousValue(
@@ -61,6 +67,8 @@ public class ChangeTextLineItemsOrderChangeBuilder implements Builder<ChangeText
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public ChangeTextLineItemsOrderChangeBuilder plusPreviousValue(
@@ -74,6 +82,7 @@ public class ChangeTextLineItemsOrderChangeBuilder implements Builder<ChangeText
 
     /**
      *
+     * @return Builder
      */
 
     public ChangeTextLineItemsOrderChangeBuilder plusPreviousValue(
@@ -88,6 +97,7 @@ public class ChangeTextLineItemsOrderChangeBuilder implements Builder<ChangeText
 
     /**
      *
+     * @return Builder
      */
 
     public ChangeTextLineItemsOrderChangeBuilder withPreviousValue(
@@ -100,6 +110,8 @@ public class ChangeTextLineItemsOrderChangeBuilder implements Builder<ChangeText
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public ChangeTextLineItemsOrderChangeBuilder nextValue(
@@ -110,6 +122,8 @@ public class ChangeTextLineItemsOrderChangeBuilder implements Builder<ChangeText
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public ChangeTextLineItemsOrderChangeBuilder nextValue(
@@ -120,6 +134,8 @@ public class ChangeTextLineItemsOrderChangeBuilder implements Builder<ChangeText
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public ChangeTextLineItemsOrderChangeBuilder plusNextValue(
@@ -133,6 +149,7 @@ public class ChangeTextLineItemsOrderChangeBuilder implements Builder<ChangeText
 
     /**
      *
+     * @return Builder
      */
 
     public ChangeTextLineItemsOrderChangeBuilder plusNextValue(
@@ -147,6 +164,7 @@ public class ChangeTextLineItemsOrderChangeBuilder implements Builder<ChangeText
 
     /**
      *
+     * @return Builder
      */
 
     public ChangeTextLineItemsOrderChangeBuilder withNextValue(

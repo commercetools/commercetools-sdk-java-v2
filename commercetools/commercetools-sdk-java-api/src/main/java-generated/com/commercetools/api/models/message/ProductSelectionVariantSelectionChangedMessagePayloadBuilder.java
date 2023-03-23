@@ -33,6 +33,7 @@ public class ProductSelectionVariantSelectionChangedMessagePayloadBuilder
 
     /**
      *  <p>Product for which the Product Variant Selection changed.</p>
+     * @return Builder
      */
 
     public ProductSelectionVariantSelectionChangedMessagePayloadBuilder product(
@@ -43,6 +44,8 @@ public class ProductSelectionVariantSelectionChangedMessagePayloadBuilder
 
     /**
      *  <p>Product for which the Product Variant Selection changed.</p>
+     * @param product
+     * @return Builder
      */
 
     public ProductSelectionVariantSelectionChangedMessagePayloadBuilder product(
@@ -53,6 +56,8 @@ public class ProductSelectionVariantSelectionChangedMessagePayloadBuilder
 
     /**
      *  <p>Product Variant Selection before the Set Variant Selection update action.</p>
+     * @param oldVariantSelection
+     * @return Builder
      */
 
     public ProductSelectionVariantSelectionChangedMessagePayloadBuilder oldVariantSelection(
@@ -63,6 +68,7 @@ public class ProductSelectionVariantSelectionChangedMessagePayloadBuilder
 
     /**
      *  <p>Product Variant Selection before the Set Variant Selection update action.</p>
+     * @return Builder
      */
 
     public ProductSelectionVariantSelectionChangedMessagePayloadBuilder oldVariantSelection(
@@ -75,6 +81,8 @@ public class ProductSelectionVariantSelectionChangedMessagePayloadBuilder
 
     /**
      *  <p>Product Variant Selection after the Set Variant Selection update action.</p>
+     * @param newVariantSelection
+     * @return Builder
      */
 
     public ProductSelectionVariantSelectionChangedMessagePayloadBuilder newVariantSelection(
@@ -85,6 +93,7 @@ public class ProductSelectionVariantSelectionChangedMessagePayloadBuilder
 
     /**
      *  <p>Product Variant Selection after the Set Variant Selection update action.</p>
+     * @return Builder
      */
 
     public ProductSelectionVariantSelectionChangedMessagePayloadBuilder newVariantSelection(

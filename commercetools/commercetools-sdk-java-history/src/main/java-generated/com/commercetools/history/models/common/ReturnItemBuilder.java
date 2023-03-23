@@ -46,6 +46,8 @@ public class ReturnItemBuilder implements Builder<ReturnItem> {
 
     /**
      *
+     * @param id
+     * @return Builder
      */
 
     public ReturnItemBuilder id(final String id) {
@@ -55,6 +57,8 @@ public class ReturnItemBuilder implements Builder<ReturnItem> {
 
     /**
      *
+     * @param quantity
+     * @return Builder
      */
 
     public ReturnItemBuilder quantity(final Integer quantity) {
@@ -64,6 +68,8 @@ public class ReturnItemBuilder implements Builder<ReturnItem> {
 
     /**
      *
+     * @param type
+     * @return Builder
      */
 
     public ReturnItemBuilder type(final String type) {
@@ -73,6 +79,8 @@ public class ReturnItemBuilder implements Builder<ReturnItem> {
 
     /**
      *
+     * @param comment
+     * @return Builder
      */
 
     public ReturnItemBuilder comment(final String comment) {
@@ -82,6 +90,8 @@ public class ReturnItemBuilder implements Builder<ReturnItem> {
 
     /**
      *
+     * @param shipmentState
+     * @return Builder
      */
 
     public ReturnItemBuilder shipmentState(
@@ -92,6 +102,8 @@ public class ReturnItemBuilder implements Builder<ReturnItem> {
 
     /**
      *
+     * @param paymentState
+     * @return Builder
      */
 
     public ReturnItemBuilder paymentState(
@@ -102,6 +114,8 @@ public class ReturnItemBuilder implements Builder<ReturnItem> {
 
     /**
      *
+     * @param lastModifiedAt
+     * @return Builder
      */
 
     public ReturnItemBuilder lastModifiedAt(final String lastModifiedAt) {
@@ -111,6 +125,8 @@ public class ReturnItemBuilder implements Builder<ReturnItem> {
 
     /**
      *
+     * @param createdAt
+     * @return Builder
      */
 
     public ReturnItemBuilder createdAt(final String createdAt) {

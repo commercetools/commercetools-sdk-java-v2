@@ -34,6 +34,7 @@ public interface InventoryEntrySetCustomTypeAction extends InventoryEntryUpdateA
 
     /**
      *  <p>Defines the Type that extends the InventoryEntry with Custom Fields. If absent, any existing Type and Custom Fields are removed from the InventoryEntry.</p>
+     * @return type
      */
     @Valid
     @JsonProperty("type")
@@ -41,6 +42,7 @@ public interface InventoryEntrySetCustomTypeAction extends InventoryEntryUpdateA
 
     /**
      *  <p>Sets the Custom Fields fields for the InventoryEntry.</p>
+     * @return fields
      */
     @Valid
     @JsonProperty("fields")

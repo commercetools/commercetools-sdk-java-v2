@@ -35,6 +35,7 @@ public interface PaymentChangeTransactionTimestampAction extends PaymentUpdateAc
 
     /**
      *  <p>Unique identifier of the Transaction.</p>
+     * @return transactionId
      */
     @NotNull
     @JsonProperty("transactionId")
@@ -42,6 +43,7 @@ public interface PaymentChangeTransactionTimestampAction extends PaymentUpdateAc
 
     /**
      *  <p>Timestamp of the Transaction as reported by the payment service.</p>
+     * @return timestamp
      */
     @NotNull
     @JsonProperty("timestamp")

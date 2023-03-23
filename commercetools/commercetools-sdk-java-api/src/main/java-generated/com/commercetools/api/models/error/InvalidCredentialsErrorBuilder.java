@@ -27,6 +27,8 @@ public class InvalidCredentialsErrorBuilder implements Builder<InvalidCredential
 
     /**
      *  <p><code>"Account with the given credentials not found."</code></p>
+     * @param message
+     * @return Builder
      */
 
     public InvalidCredentialsErrorBuilder message(final String message) {

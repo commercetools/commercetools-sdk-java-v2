@@ -35,6 +35,8 @@ public class SetInputTipChangeBuilder implements Builder<SetInputTipChange> {
 
     /**
      *  <p>Update action for <code>setInputTip</code> on product types</p>
+     * @param change
+     * @return Builder
      */
 
     public SetInputTipChangeBuilder change(final String change) {
@@ -44,6 +46,8 @@ public class SetInputTipChangeBuilder implements Builder<SetInputTipChange> {
 
     /**
      *  <p>The name of the updated attribute.</p>
+     * @param attributeName
+     * @return Builder
      */
 
     public SetInputTipChangeBuilder attributeName(final String attributeName) {
@@ -53,6 +57,7 @@ public class SetInputTipChangeBuilder implements Builder<SetInputTipChange> {
 
     /**
      *
+     * @return Builder
      */
 
     public SetInputTipChangeBuilder nextValue(
@@ -63,6 +68,8 @@ public class SetInputTipChangeBuilder implements Builder<SetInputTipChange> {
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public SetInputTipChangeBuilder nextValue(final com.commercetools.history.models.common.LocalizedString nextValue) {
@@ -72,6 +79,7 @@ public class SetInputTipChangeBuilder implements Builder<SetInputTipChange> {
 
     /**
      *
+     * @return Builder
      */
 
     public SetInputTipChangeBuilder previousValue(
@@ -82,6 +90,8 @@ public class SetInputTipChangeBuilder implements Builder<SetInputTipChange> {
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public SetInputTipChangeBuilder previousValue(

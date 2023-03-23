@@ -15,7 +15,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * CartAddItemShippingAddressAction
+ *  <p>Adds an address to a Cart when shipping to multiple addresses is desired.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -34,7 +34,9 @@ public interface CartAddItemShippingAddressAction extends CartUpdateAction {
     String ADD_ITEM_SHIPPING_ADDRESS = "addItemShippingAddress";
 
     /**
-     *  <p>Polymorphic base type that represents a postal address and contact details. Depending on the read or write action, it can be either Address or AddressDraft that only differ in the data type for the optional <code>custom</code> field.</p>
+     *  <p>Address to append to <code>itemShippingAddresses</code>.</p>
+     *  <p>The new Address must have a <code>key</code> that is unique accross this Cart.</p>
+     * @return address
      */
     @NotNull
     @Valid

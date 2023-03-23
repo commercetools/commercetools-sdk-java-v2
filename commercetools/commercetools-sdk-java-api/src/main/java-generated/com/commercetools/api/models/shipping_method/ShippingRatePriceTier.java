@@ -37,6 +37,7 @@ public interface ShippingRatePriceTier {
 
     /**
      *
+     * @return type
      */
     @NotNull
     @JsonProperty("type")

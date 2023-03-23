@@ -2,6 +2,7 @@
 package com.commercetools.docs.meta;
 
 /**
+ * {@include.toc}
  * <h2>Querying the API</h2>
  *
  * <h3>Predicates</h3>

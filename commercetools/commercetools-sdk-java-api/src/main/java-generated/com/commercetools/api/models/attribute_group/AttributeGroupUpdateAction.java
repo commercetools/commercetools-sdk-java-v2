@@ -40,6 +40,7 @@ public interface AttributeGroupUpdateAction
 
     /**
      *
+     * @return action
      */
     @NotNull
     @JsonProperty("action")

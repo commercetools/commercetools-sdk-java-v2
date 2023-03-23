@@ -15,7 +15,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * ExternalTaxRateDraft
+ *  <p>Controls calculation of taxed prices for Line Items, Custom Line Items, and Shipping Methods as explained in Cart tax calculation.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -33,50 +33,65 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ExternalTaxRateDraft extends io.vrap.rmf.base.client.Draft<ExternalTaxRateDraft> {
 
     /**
-     *
+     *  <p>Name of the Tax Rate.</p>
+     * @return name
      */
     @NotNull
     @JsonProperty("name")
     public String getName();
 
     /**
-     *  <p>Percentage in the range of [0..1]. Must be supplied if no <code>subRates</code> are specified. If <code>subRates</code> are specified then the <code>amount</code> can be omitted or it must be the sum of the amounts of all <code>subRates</code>.</p>
+     *  <p>Percentage in the range of 0-1.</p>
+     *  <ul>
+     *   <li>If no <code>subRates</code> are specified, a value must be defined.</li>
+     *   <li>If <code>subRates</code> are specified, this can be omitted or its value must be the sum of all <code>subRates</code> amounts.</li>
+     *  </ul>
+     * @return amount
      */
 
     @JsonProperty("amount")
     public Double getAmount();
 
     /**
-     *  <p>A two-digit country code as per ISO 3166-1 alpha-2.</p>
+     *  <ul>
+     *   <li>If set to <code>false</code>, the related price is considered the net price and the provided <code>amount</code> is applied to calculate the gross price.</li>
+     *   <li>If set to <code>true</code>, the related price is considered the gross price, and the provided <code>amount</code> is applied to calculate the net price.</li>
+     *  </ul>
+     * @return includedInPrice
+     */
+
+    @JsonProperty("includedInPrice")
+    public Boolean getIncludedInPrice();
+
+    /**
+     *  <p>Country for which the tax applies.</p>
+     * @return country
      */
     @NotNull
     @JsonProperty("country")
     public String getCountry();
 
     /**
-     *  <p>The state in the country</p>
+     *  <p>State within the specified country.</p>
+     * @return state
      */
 
     @JsonProperty("state")
     public String getState();
 
     /**
-     *  <p>For countries (e.g. the US) where the total tax is a combination of multiple taxes (e.g. state and local taxes).</p>
+     *  <p>For countries (such as the US) where the total tax is a combination of multiple taxes (such as state and local taxes).</p>
+     * @return subRates
      */
     @Valid
     @JsonProperty("subRates")
     public List<SubRate> getSubRates();
 
-    /**
-     *  <p>The default value for <code>includedInPrice</code> is FALSE.</p>
-     */
-
-    @JsonProperty("includedInPrice")
-    public Boolean getIncludedInPrice();
-
     public void setName(final String name);
 
     public void setAmount(final Double amount);
+
+    public void setIncludedInPrice(final Boolean includedInPrice);
 
     public void setCountry(final String country);
 
@@ -87,8 +102,6 @@ public interface ExternalTaxRateDraft extends io.vrap.rmf.base.client.Draft<Exte
 
     public void setSubRates(final List<SubRate> subRates);
 
-    public void setIncludedInPrice(final Boolean includedInPrice);
-
     public static ExternalTaxRateDraft of() {
         return new ExternalTaxRateDraftImpl();
     }
@@ -97,10 +110,10 @@ public interface ExternalTaxRateDraft extends io.vrap.rmf.base.client.Draft<Exte
         ExternalTaxRateDraftImpl instance = new ExternalTaxRateDraftImpl();
         instance.setName(template.getName());
         instance.setAmount(template.getAmount());
+        instance.setIncludedInPrice(template.getIncludedInPrice());
         instance.setCountry(template.getCountry());
         instance.setState(template.getState());
         instance.setSubRates(template.getSubRates());
-        instance.setIncludedInPrice(template.getIncludedInPrice());
         return instance;
     }
 

@@ -102,7 +102,7 @@ public class CartDiscountDraftImpl implements CartDiscountDraft, ModelBase {
     }
 
     /**
-     *  <p>Effect of the CartDiscount. For a target, relative or absolute discount values, or a fixed item price value can be specified. If no target is specified, a gift line item can be added to the cart.</p>
+     *  <p>Effect of the CartDiscount. For a target, relative or absolute Discount values or a fixed item Price value can be specified. If no target is specified, a Gift Line Item can be added to the Cart.</p>
      */
 
     public com.commercetools.api.models.cart_discount.CartDiscountValueDraft getValue() {

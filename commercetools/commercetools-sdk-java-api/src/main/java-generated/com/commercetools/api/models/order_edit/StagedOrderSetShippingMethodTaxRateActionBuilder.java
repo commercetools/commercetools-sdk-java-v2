@@ -28,7 +28,8 @@ public class StagedOrderSetShippingMethodTaxRateActionBuilder
     private com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate;
 
     /**
-     *
+     *  <p>Controls calculation of taxed prices for Line Items, Custom Line Items, and Shipping Methods as explained in Cart tax calculation.</p>
+     * @return Builder
      */
 
     public StagedOrderSetShippingMethodTaxRateActionBuilder externalTaxRate(
@@ -39,7 +40,9 @@ public class StagedOrderSetShippingMethodTaxRateActionBuilder
     }
 
     /**
-     *
+     *  <p>Controls calculation of taxed prices for Line Items, Custom Line Items, and Shipping Methods as explained in Cart tax calculation.</p>
+     * @param externalTaxRate
+     * @return Builder
      */
 
     public StagedOrderSetShippingMethodTaxRateActionBuilder externalTaxRate(

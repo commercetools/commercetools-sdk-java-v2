@@ -28,6 +28,8 @@ public class TypeChangeInputHintActionBuilder implements Builder<TypeChangeInput
 
     /**
      *  <p><code>name</code> of the Field Definition to update.</p>
+     * @param fieldName
+     * @return Builder
      */
 
     public TypeChangeInputHintActionBuilder fieldName(final String fieldName) {
@@ -37,6 +39,8 @@ public class TypeChangeInputHintActionBuilder implements Builder<TypeChangeInput
 
     /**
      *  <p>New value to set. Must not be empty.</p>
+     * @param inputHint
+     * @return Builder
      */
 
     public TypeChangeInputHintActionBuilder inputHint(

@@ -73,7 +73,7 @@ Other than that, in this [file](https://github.com/commercetools/commercetools-s
 ### How to use Middlewares
 We have middlewares available that can be used in base of the needs [see here](https://github.com/commercetools/commercetools-sdk-java-v2/blob/02aec228a637fb119ad6969b66c700d5f536922f/rmf/rmf-java-base/src/main/java/io/vrap/rmf/base/client/http)
 
-These are the list of middlewares available and how to use them:
+This is the list of middlewares available and how to use them:
 
 #### ErrorMiddleware - Error Handling
 

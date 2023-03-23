@@ -27,6 +27,8 @@ public class CustomerSetKeyActionBuilder implements Builder<CustomerSetKeyAction
 
     /**
      *  <p>If <code>key</code> is absent or <code>null</code>, the existing key, if any, will be removed.</p>
+     * @param key
+     * @return Builder
      */
 
     public CustomerSetKeyActionBuilder key(@Nullable final String key) {

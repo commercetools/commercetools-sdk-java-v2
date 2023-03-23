@@ -56,6 +56,8 @@ public class ShippingMethodDraftBuilder implements Builder<ShippingMethodDraft> 
 
     /**
      *  <p>User-defined unique identifier for the ShippingMethod.</p>
+     * @param key
+     * @return Builder
      */
 
     public ShippingMethodDraftBuilder key(@Nullable final String key) {
@@ -65,6 +67,8 @@ public class ShippingMethodDraftBuilder implements Builder<ShippingMethodDraft> 
 
     /**
      *  <p>Name of the ShippingMethod.</p>
+     * @param name
+     * @return Builder
      */
 
     public ShippingMethodDraftBuilder name(final String name) {
@@ -74,6 +78,7 @@ public class ShippingMethodDraftBuilder implements Builder<ShippingMethodDraft> 
 
     /**
      *  <p>Localized name of the ShippingMethod.</p>
+     * @return Builder
      */
 
     public ShippingMethodDraftBuilder localizedName(
@@ -84,6 +89,8 @@ public class ShippingMethodDraftBuilder implements Builder<ShippingMethodDraft> 
 
     /**
      *  <p>Localized name of the ShippingMethod.</p>
+     * @param localizedName
+     * @return Builder
      */
 
     public ShippingMethodDraftBuilder localizedName(
@@ -94,6 +101,8 @@ public class ShippingMethodDraftBuilder implements Builder<ShippingMethodDraft> 
 
     /**
      *  <p>Description of the ShippingMethod.</p>
+     * @param description
+     * @return Builder
      */
     @Deprecated
     public ShippingMethodDraftBuilder description(@Nullable final String description) {
@@ -103,6 +112,7 @@ public class ShippingMethodDraftBuilder implements Builder<ShippingMethodDraft> 
 
     /**
      *  <p>Localized description of the ShippingMethod.</p>
+     * @return Builder
      */
 
     public ShippingMethodDraftBuilder localizedDescription(
@@ -114,6 +124,8 @@ public class ShippingMethodDraftBuilder implements Builder<ShippingMethodDraft> 
 
     /**
      *  <p>Localized description of the ShippingMethod.</p>
+     * @param localizedDescription
+     * @return Builder
      */
 
     public ShippingMethodDraftBuilder localizedDescription(
@@ -124,6 +136,7 @@ public class ShippingMethodDraftBuilder implements Builder<ShippingMethodDraft> 
 
     /**
      *  <p>TaxCategory for all ZoneRates of the ShippingMethod.</p>
+     * @return Builder
      */
 
     public ShippingMethodDraftBuilder taxCategory(
@@ -136,6 +149,8 @@ public class ShippingMethodDraftBuilder implements Builder<ShippingMethodDraft> 
 
     /**
      *  <p>TaxCategory for all ZoneRates of the ShippingMethod.</p>
+     * @param taxCategory
+     * @return Builder
      */
 
     public ShippingMethodDraftBuilder taxCategory(
@@ -146,6 +161,8 @@ public class ShippingMethodDraftBuilder implements Builder<ShippingMethodDraft> 
 
     /**
      *  <p>Defines ShippingRates (prices) for specific zones.</p>
+     * @param zoneRates
+     * @return Builder
      */
 
     public ShippingMethodDraftBuilder zoneRates(
@@ -156,6 +173,8 @@ public class ShippingMethodDraftBuilder implements Builder<ShippingMethodDraft> 
 
     /**
      *  <p>Defines ShippingRates (prices) for specific zones.</p>
+     * @param zoneRates
+     * @return Builder
      */
 
     public ShippingMethodDraftBuilder zoneRates(
@@ -166,6 +185,8 @@ public class ShippingMethodDraftBuilder implements Builder<ShippingMethodDraft> 
 
     /**
      *  <p>Defines ShippingRates (prices) for specific zones.</p>
+     * @param zoneRates
+     * @return Builder
      */
 
     public ShippingMethodDraftBuilder plusZoneRates(
@@ -179,6 +200,7 @@ public class ShippingMethodDraftBuilder implements Builder<ShippingMethodDraft> 
 
     /**
      *  <p>Defines ShippingRates (prices) for specific zones.</p>
+     * @return Builder
      */
 
     public ShippingMethodDraftBuilder plusZoneRates(
@@ -193,6 +215,7 @@ public class ShippingMethodDraftBuilder implements Builder<ShippingMethodDraft> 
 
     /**
      *  <p>Defines ShippingRates (prices) for specific zones.</p>
+     * @return Builder
      */
 
     public ShippingMethodDraftBuilder withZoneRates(
@@ -205,6 +228,8 @@ public class ShippingMethodDraftBuilder implements Builder<ShippingMethodDraft> 
 
     /**
      *  <p>If <code>true</code> the ShippingMethod will be the Project's default ShippingMethod.</p>
+     * @param isDefault
+     * @return Builder
      */
 
     public ShippingMethodDraftBuilder isDefault(final Boolean isDefault) {
@@ -214,6 +239,8 @@ public class ShippingMethodDraftBuilder implements Builder<ShippingMethodDraft> 
 
     /**
      *  <p>Valid Cart predicate to select a ShippingMethod for a Cart.</p>
+     * @param predicate
+     * @return Builder
      */
 
     public ShippingMethodDraftBuilder predicate(@Nullable final String predicate) {
@@ -223,6 +250,7 @@ public class ShippingMethodDraftBuilder implements Builder<ShippingMethodDraft> 
 
     /**
      *  <p>Custom Fields for the ShippingMethod.</p>
+     * @return Builder
      */
 
     public ShippingMethodDraftBuilder custom(
@@ -233,6 +261,8 @@ public class ShippingMethodDraftBuilder implements Builder<ShippingMethodDraft> 
 
     /**
      *  <p>Custom Fields for the ShippingMethod.</p>
+     * @param custom
+     * @return Builder
      */
 
     public ShippingMethodDraftBuilder custom(

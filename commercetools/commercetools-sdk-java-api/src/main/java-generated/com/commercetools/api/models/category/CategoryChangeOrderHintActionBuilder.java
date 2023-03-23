@@ -25,6 +25,8 @@ public class CategoryChangeOrderHintActionBuilder implements Builder<CategoryCha
 
     /**
      *  <p>New value to set. Must be a decimal value between 0 and 1.</p>
+     * @param orderHint
+     * @return Builder
      */
 
     public CategoryChangeOrderHintActionBuilder orderHint(final String orderHint) {

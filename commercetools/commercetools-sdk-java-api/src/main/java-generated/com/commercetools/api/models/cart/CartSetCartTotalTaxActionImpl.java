@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * CartSetCartTotalTaxAction
+ *  <p>This update action results in the <code>taxedPrice</code> field being added to the Cart when the <code>ExternalAmount</code> TaxMode is used.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CartSetCartTotalTaxActionImpl implements CartSetCartTotalTaxAction, ModelBase {
@@ -48,7 +48,7 @@ public class CartSetCartTotalTaxActionImpl implements CartSetCartTotalTaxAction,
     }
 
     /**
-     *  <p>The total gross amount of the cart (totalNet + taxes).</p>
+     *  <p>The Cart's total gross price becoming the <code>totalGross</code> field (<code>totalNet</code> + taxes) on the Cart's <code>taxedPrice</code>.</p>
      */
 
     public com.commercetools.api.models.common.Money getExternalTotalGross() {
@@ -56,7 +56,7 @@ public class CartSetCartTotalTaxActionImpl implements CartSetCartTotalTaxAction,
     }
 
     /**
-     *
+     *  <p>Set if the <code>externalTotalGross</code> price is a sum of portions with different tax rates.</p>
      */
 
     public java.util.List<com.commercetools.api.models.cart.TaxPortionDraft> getExternalTaxPortions() {

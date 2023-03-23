@@ -36,6 +36,7 @@ public interface ImportOperationPagedResponse {
 
     /**
      *  <p>Number of results requested.</p>
+     * @return limit
      */
     @NotNull
     @JsonProperty("limit")
@@ -43,6 +44,7 @@ public interface ImportOperationPagedResponse {
 
     /**
      *  <p>Number of elements skipped.</p>
+     * @return offset
      */
     @NotNull
     @JsonProperty("offset")
@@ -50,6 +52,7 @@ public interface ImportOperationPagedResponse {
 
     /**
      *  <p>The actual number of results returned.</p>
+     * @return count
      */
     @NotNull
     @JsonProperty("count")
@@ -57,6 +60,7 @@ public interface ImportOperationPagedResponse {
 
     /**
      *  <p>The total number of import operations matching the query.</p>
+     * @return total
      */
     @NotNull
     @JsonProperty("total")
@@ -64,6 +68,7 @@ public interface ImportOperationPagedResponse {
 
     /**
      *  <p>The array of Import Operations matching the query.</p>
+     * @return results
      */
     @NotNull
     @Valid

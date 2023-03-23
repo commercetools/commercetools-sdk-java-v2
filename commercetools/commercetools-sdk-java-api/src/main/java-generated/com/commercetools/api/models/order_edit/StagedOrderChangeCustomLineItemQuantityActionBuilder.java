@@ -29,6 +29,8 @@ public class StagedOrderChangeCustomLineItemQuantityActionBuilder
 
     /**
      *
+     * @param customLineItemId
+     * @return Builder
      */
 
     public StagedOrderChangeCustomLineItemQuantityActionBuilder customLineItemId(final String customLineItemId) {
@@ -38,6 +40,8 @@ public class StagedOrderChangeCustomLineItemQuantityActionBuilder
 
     /**
      *
+     * @param quantity
+     * @return Builder
      */
 
     public StagedOrderChangeCustomLineItemQuantityActionBuilder quantity(final Long quantity) {

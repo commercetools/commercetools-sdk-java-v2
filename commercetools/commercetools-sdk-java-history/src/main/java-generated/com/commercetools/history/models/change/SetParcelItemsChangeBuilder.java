@@ -35,6 +35,8 @@ public class SetParcelItemsChangeBuilder implements Builder<SetParcelItemsChange
 
     /**
      *  <p>Update action for <code>setParcelItems</code></p>
+     * @param change
+     * @return Builder
      */
 
     public SetParcelItemsChangeBuilder change(final String change) {
@@ -44,6 +46,7 @@ public class SetParcelItemsChangeBuilder implements Builder<SetParcelItemsChange
 
     /**
      *
+     * @return Builder
      */
 
     public SetParcelItemsChangeBuilder parcel(
@@ -55,6 +58,8 @@ public class SetParcelItemsChangeBuilder implements Builder<SetParcelItemsChange
 
     /**
      *
+     * @param parcel
+     * @return Builder
      */
 
     public SetParcelItemsChangeBuilder parcel(
@@ -65,6 +70,8 @@ public class SetParcelItemsChangeBuilder implements Builder<SetParcelItemsChange
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public SetParcelItemsChangeBuilder nextValue(
@@ -75,6 +82,8 @@ public class SetParcelItemsChangeBuilder implements Builder<SetParcelItemsChange
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public SetParcelItemsChangeBuilder nextValue(
@@ -85,6 +94,8 @@ public class SetParcelItemsChangeBuilder implements Builder<SetParcelItemsChange
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public SetParcelItemsChangeBuilder plusNextValue(
@@ -98,6 +109,7 @@ public class SetParcelItemsChangeBuilder implements Builder<SetParcelItemsChange
 
     /**
      *
+     * @return Builder
      */
 
     public SetParcelItemsChangeBuilder plusNextValue(
@@ -111,6 +123,7 @@ public class SetParcelItemsChangeBuilder implements Builder<SetParcelItemsChange
 
     /**
      *
+     * @return Builder
      */
 
     public SetParcelItemsChangeBuilder withNextValue(
@@ -122,6 +135,8 @@ public class SetParcelItemsChangeBuilder implements Builder<SetParcelItemsChange
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public SetParcelItemsChangeBuilder previousValue(
@@ -132,6 +147,8 @@ public class SetParcelItemsChangeBuilder implements Builder<SetParcelItemsChange
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public SetParcelItemsChangeBuilder previousValue(
@@ -142,6 +159,8 @@ public class SetParcelItemsChangeBuilder implements Builder<SetParcelItemsChange
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public SetParcelItemsChangeBuilder plusPreviousValue(
@@ -155,6 +174,7 @@ public class SetParcelItemsChangeBuilder implements Builder<SetParcelItemsChange
 
     /**
      *
+     * @return Builder
      */
 
     public SetParcelItemsChangeBuilder plusPreviousValue(
@@ -168,6 +188,7 @@ public class SetParcelItemsChangeBuilder implements Builder<SetParcelItemsChange
 
     /**
      *
+     * @return Builder
      */
 
     public SetParcelItemsChangeBuilder withPreviousValue(

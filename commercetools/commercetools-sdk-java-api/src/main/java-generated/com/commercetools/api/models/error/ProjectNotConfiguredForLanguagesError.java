@@ -34,6 +34,7 @@ public interface ProjectNotConfiguredForLanguagesError extends ErrorObject {
 
     /**
      *
+     * @return code
      */
     @NotNull
     @JsonProperty("code")
@@ -41,6 +42,7 @@ public interface ProjectNotConfiguredForLanguagesError extends ErrorObject {
 
     /**
      *  <p><code>"The project is not configured for given languages."</code></p>
+     * @return message
      */
     @NotNull
     @JsonProperty("message")
@@ -48,6 +50,7 @@ public interface ProjectNotConfiguredForLanguagesError extends ErrorObject {
 
     /**
      *  <p>Languages configured for the Store.</p>
+     * @return languages
      */
 
     @JsonProperty("languages")

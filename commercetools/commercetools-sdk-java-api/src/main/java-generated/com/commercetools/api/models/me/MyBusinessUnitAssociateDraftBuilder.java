@@ -29,6 +29,8 @@ public class MyBusinessUnitAssociateDraftBuilder implements Builder<MyBusinessUn
 
     /**
      *  <p>Expected version of the BusinessUnit on which the changes should be applied. If the expected version does not match the actual version, a 409 Conflict error will be returned.</p>
+     * @param version
+     * @return Builder
      */
 
     public MyBusinessUnitAssociateDraftBuilder version(final Long version) {
@@ -38,6 +40,7 @@ public class MyBusinessUnitAssociateDraftBuilder implements Builder<MyBusinessUn
 
     /**
      *  <p>Customer to create and assign to the Business Unit.</p>
+     * @return Builder
      */
 
     public MyBusinessUnitAssociateDraftBuilder customer(
@@ -48,6 +51,8 @@ public class MyBusinessUnitAssociateDraftBuilder implements Builder<MyBusinessUn
 
     /**
      *  <p>Customer to create and assign to the Business Unit.</p>
+     * @param customer
+     * @return Builder
      */
 
     public MyBusinessUnitAssociateDraftBuilder customer(

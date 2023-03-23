@@ -33,6 +33,7 @@ public interface ProductVariantImportDraft extends io.vrap.rmf.base.client.Draft
 
     /**
      *  <p>The sequential ID of the variant within the product. The variant with provided ID should exist in some existing product, so you also need to specify the productId if this property is set, or alternatively you can just specify SKU of the product variant.</p>
+     * @return id
      */
 
     @JsonProperty("id")
@@ -40,6 +41,7 @@ public interface ProductVariantImportDraft extends io.vrap.rmf.base.client.Draft
 
     /**
      *  <p>The SKU of the existing variant.</p>
+     * @return sku
      */
 
     @JsonProperty("sku")
@@ -47,6 +49,7 @@ public interface ProductVariantImportDraft extends io.vrap.rmf.base.client.Draft
 
     /**
      *  <p>The Embedded Prices of the variant. The prices should not contain two prices for the same price scope (same currency, country, customer group, channel, valid from and valid until). If this property is defined, then it will override the <code>prices</code> property from the original product variant, otherwise <code>prices</code> property from the original product variant would be copied in the resulting order.</p>
+     * @return prices
      */
     @Valid
     @JsonProperty("prices")
@@ -54,6 +57,7 @@ public interface ProductVariantImportDraft extends io.vrap.rmf.base.client.Draft
 
     /**
      *  <p>If this property is defined, then it will override the <code>attributes</code> property from the original product variant, otherwise <code>attributes</code> property from the original product variant would be copied in the resulting order.</p>
+     * @return attributes
      */
     @Valid
     @JsonProperty("attributes")
@@ -61,6 +65,7 @@ public interface ProductVariantImportDraft extends io.vrap.rmf.base.client.Draft
 
     /**
      *  <p>If this property is defined, then it will override the <code>images</code> property from the original product variant, otherwise <code>images</code> property from the original product variant would be copied in the resulting order.</p>
+     * @return images
      */
     @Valid
     @JsonProperty("images")

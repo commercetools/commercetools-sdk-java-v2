@@ -30,6 +30,7 @@ public interface OrderPurchaseOrderNumberSetMessagePayload extends OrderMessageP
 
     /**
      *  <p>Purchase order number on the Order after the Set PurchaseOrderNumber update action.</p>
+     * @return purchaseOrderNumber
      */
 
     @JsonProperty("purchaseOrderNumber")
@@ -37,6 +38,7 @@ public interface OrderPurchaseOrderNumberSetMessagePayload extends OrderMessageP
 
     /**
      *  <p>Purchase order number on the Order before the Set PurchaseOrderNumber update action.</p>
+     * @return oldPurchaseOrderNumber
      */
 
     @JsonProperty("oldPurchaseOrderNumber")

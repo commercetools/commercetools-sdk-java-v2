@@ -26,6 +26,8 @@ public class ShoppingListChangeTextLineItemsOrderActionBuilder
 
     /**
      *  <p>Must contain all existing TextLineItem <code>id</code>s in the desired new order.</p>
+     * @param textLineItemOrder
+     * @return Builder
      */
 
     public ShoppingListChangeTextLineItemsOrderActionBuilder textLineItemOrder(final String... textLineItemOrder) {
@@ -35,6 +37,8 @@ public class ShoppingListChangeTextLineItemsOrderActionBuilder
 
     /**
      *  <p>Must contain all existing TextLineItem <code>id</code>s in the desired new order.</p>
+     * @param textLineItemOrder
+     * @return Builder
      */
 
     public ShoppingListChangeTextLineItemsOrderActionBuilder textLineItemOrder(
@@ -45,6 +49,8 @@ public class ShoppingListChangeTextLineItemsOrderActionBuilder
 
     /**
      *  <p>Must contain all existing TextLineItem <code>id</code>s in the desired new order.</p>
+     * @param textLineItemOrder
+     * @return Builder
      */
 
     public ShoppingListChangeTextLineItemsOrderActionBuilder plusTextLineItemOrder(final String... textLineItemOrder) {

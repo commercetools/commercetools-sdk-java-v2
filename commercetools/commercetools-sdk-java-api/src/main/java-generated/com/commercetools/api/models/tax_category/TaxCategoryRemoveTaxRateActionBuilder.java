@@ -25,6 +25,8 @@ public class TaxCategoryRemoveTaxRateActionBuilder implements Builder<TaxCategor
 
     /**
      *  <p>ID of the TaxRate to remove.</p>
+     * @param taxRateId
+     * @return Builder
      */
 
     public TaxCategoryRemoveTaxRateActionBuilder taxRateId(final String taxRateId) {

@@ -41,6 +41,7 @@ public class StagedOrderSetShippingAddressAndCustomShippingMethodActionBuilder
 
     /**
      *  <p>Polymorphic base type that represents a postal address and contact details. Depending on the read or write action, it can be either Address or AddressDraft that only differ in the data type for the optional <code>custom</code> field.</p>
+     * @return Builder
      */
 
     public StagedOrderSetShippingAddressAndCustomShippingMethodActionBuilder address(
@@ -51,6 +52,8 @@ public class StagedOrderSetShippingAddressAndCustomShippingMethodActionBuilder
 
     /**
      *  <p>Polymorphic base type that represents a postal address and contact details. Depending on the read or write action, it can be either Address or AddressDraft that only differ in the data type for the optional <code>custom</code> field.</p>
+     * @param address
+     * @return Builder
      */
 
     public StagedOrderSetShippingAddressAndCustomShippingMethodActionBuilder address(
@@ -61,6 +64,8 @@ public class StagedOrderSetShippingAddressAndCustomShippingMethodActionBuilder
 
     /**
      *
+     * @param shippingMethodName
+     * @return Builder
      */
 
     public StagedOrderSetShippingAddressAndCustomShippingMethodActionBuilder shippingMethodName(
@@ -71,6 +76,7 @@ public class StagedOrderSetShippingAddressAndCustomShippingMethodActionBuilder
 
     /**
      *
+     * @return Builder
      */
 
     public StagedOrderSetShippingAddressAndCustomShippingMethodActionBuilder shippingRate(
@@ -82,6 +88,8 @@ public class StagedOrderSetShippingAddressAndCustomShippingMethodActionBuilder
 
     /**
      *
+     * @param shippingRate
+     * @return Builder
      */
 
     public StagedOrderSetShippingAddressAndCustomShippingMethodActionBuilder shippingRate(
@@ -92,6 +100,7 @@ public class StagedOrderSetShippingAddressAndCustomShippingMethodActionBuilder
 
     /**
      *  <p>ResourceIdentifier to a TaxCategory.</p>
+     * @return Builder
      */
 
     public StagedOrderSetShippingAddressAndCustomShippingMethodActionBuilder taxCategory(
@@ -104,6 +113,8 @@ public class StagedOrderSetShippingAddressAndCustomShippingMethodActionBuilder
 
     /**
      *  <p>ResourceIdentifier to a TaxCategory.</p>
+     * @param taxCategory
+     * @return Builder
      */
 
     public StagedOrderSetShippingAddressAndCustomShippingMethodActionBuilder taxCategory(
@@ -113,7 +124,8 @@ public class StagedOrderSetShippingAddressAndCustomShippingMethodActionBuilder
     }
 
     /**
-     *
+     *  <p>Controls calculation of taxed prices for Line Items, Custom Line Items, and Shipping Methods as explained in Cart tax calculation.</p>
+     * @return Builder
      */
 
     public StagedOrderSetShippingAddressAndCustomShippingMethodActionBuilder externalTaxRate(
@@ -124,7 +136,9 @@ public class StagedOrderSetShippingAddressAndCustomShippingMethodActionBuilder
     }
 
     /**
-     *
+     *  <p>Controls calculation of taxed prices for Line Items, Custom Line Items, and Shipping Methods as explained in Cart tax calculation.</p>
+     * @param externalTaxRate
+     * @return Builder
      */
 
     public StagedOrderSetShippingAddressAndCustomShippingMethodActionBuilder externalTaxRate(

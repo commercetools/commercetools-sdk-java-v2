@@ -33,6 +33,7 @@ public interface SyntaxErrorError extends ErrorObject {
 
     /**
      *
+     * @return code
      */
     @NotNull
     @JsonProperty("code")
@@ -40,6 +41,7 @@ public interface SyntaxErrorError extends ErrorObject {
 
     /**
      *  <p><code>"Syntax error while parsing $fieldDefinition."</code></p>
+     * @return message
      */
     @NotNull
     @JsonProperty("message")

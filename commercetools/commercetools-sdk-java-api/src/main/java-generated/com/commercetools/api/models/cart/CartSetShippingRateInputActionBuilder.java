@@ -27,7 +27,14 @@ public class CartSetShippingRateInputActionBuilder implements Builder<CartSetShi
     private com.commercetools.api.models.cart.ShippingRateInputDraft shippingRateInput;
 
     /**
-     *  <p>Based on the definition of ShippingRateInputType. If CartClassification is defined, it must be ClassificationShippingRateInput. If CartScore is defined, it must be ScoreShippingRateInput. Otherwise it can not bet set.</p>
+     *  <p>The data type of this field depends on the <code>shippingRateInputType.type</code> configured in the Project:</p>
+     *  <ul>
+     *   <li>If <code>CartClassification</code>, it must be ClassificationShippingRateInputDraft.</li>
+     *   <li>If <code>CartScore</code>, it must be ScoreShippingRateInputDraft.</li>
+     *   <li>If <code>CartValue</code>, it cannot be set.</li>
+     *  </ul>
+     * @param shippingRateInput
+     * @return Builder
      */
 
     public CartSetShippingRateInputActionBuilder shippingRateInput(
@@ -37,7 +44,13 @@ public class CartSetShippingRateInputActionBuilder implements Builder<CartSetShi
     }
 
     /**
-     *  <p>Based on the definition of ShippingRateInputType. If CartClassification is defined, it must be ClassificationShippingRateInput. If CartScore is defined, it must be ScoreShippingRateInput. Otherwise it can not bet set.</p>
+     *  <p>The data type of this field depends on the <code>shippingRateInputType.type</code> configured in the Project:</p>
+     *  <ul>
+     *   <li>If <code>CartClassification</code>, it must be ClassificationShippingRateInputDraft.</li>
+     *   <li>If <code>CartScore</code>, it must be ScoreShippingRateInputDraft.</li>
+     *   <li>If <code>CartValue</code>, it cannot be set.</li>
+     *  </ul>
+     * @return Builder
      */
 
     public CartSetShippingRateInputActionBuilder shippingRateInput(

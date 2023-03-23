@@ -32,6 +32,7 @@ public interface ShippingMethodChangeValue {
 
     /**
      *
+     * @return id
      */
     @NotNull
     @JsonProperty("id")
@@ -39,6 +40,7 @@ public interface ShippingMethodChangeValue {
 
     /**
      *
+     * @return name
      */
     @NotNull
     @JsonProperty("name")

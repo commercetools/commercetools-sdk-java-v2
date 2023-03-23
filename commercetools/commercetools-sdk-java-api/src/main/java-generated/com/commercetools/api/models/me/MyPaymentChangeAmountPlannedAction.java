@@ -35,6 +35,7 @@ public interface MyPaymentChangeAmountPlannedAction extends MyPaymentUpdateActio
 
     /**
      *  <p>New value to set.</p>
+     * @return amount
      */
     @NotNull
     @Valid

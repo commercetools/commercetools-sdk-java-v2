@@ -35,6 +35,7 @@ public interface ReferenceAttribute extends Attribute {
 
     /**
      *  <p>References a resource by key.</p>
+     * @return value
      */
     @NotNull
     @Valid

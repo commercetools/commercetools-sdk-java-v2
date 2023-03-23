@@ -37,6 +37,7 @@ public interface StoreLanguagesChangedMessage extends Message {
 
     /**
      *  <p>Locales added to the Store after the Set Languages update action.</p>
+     * @return addedLanguages
      */
 
     @JsonProperty("addedLanguages")
@@ -44,6 +45,7 @@ public interface StoreLanguagesChangedMessage extends Message {
 
     /**
      *  <p>Locales removed from the Store during the Set Languages update action.</p>
+     * @return removedLanguages
      */
 
     @JsonProperty("removedLanguages")

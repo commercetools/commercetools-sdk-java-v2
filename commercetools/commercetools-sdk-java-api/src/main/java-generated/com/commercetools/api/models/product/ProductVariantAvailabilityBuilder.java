@@ -37,6 +37,7 @@ public class ProductVariantAvailabilityBuilder implements Builder<ProductVariant
 
     /**
      *  <p>For each InventoryEntry with a supply Channel, an entry is added to <code>channels</code>.</p>
+     * @return Builder
      */
 
     public ProductVariantAvailabilityBuilder channels(
@@ -49,6 +50,8 @@ public class ProductVariantAvailabilityBuilder implements Builder<ProductVariant
 
     /**
      *  <p>For each InventoryEntry with a supply Channel, an entry is added to <code>channels</code>.</p>
+     * @param channels
+     * @return Builder
      */
 
     public ProductVariantAvailabilityBuilder channels(
@@ -59,6 +62,8 @@ public class ProductVariantAvailabilityBuilder implements Builder<ProductVariant
 
     /**
      *  <p>Indicates whether a Product Variant is in stock.</p>
+     * @param isOnStock
+     * @return Builder
      */
 
     public ProductVariantAvailabilityBuilder isOnStock(@Nullable final Boolean isOnStock) {
@@ -68,6 +73,8 @@ public class ProductVariantAvailabilityBuilder implements Builder<ProductVariant
 
     /**
      *  <p>Number of days to restock a Product Variant once it is out of stock.</p>
+     * @param restockableInDays
+     * @return Builder
      */
 
     public ProductVariantAvailabilityBuilder restockableInDays(@Nullable final Long restockableInDays) {
@@ -77,6 +84,8 @@ public class ProductVariantAvailabilityBuilder implements Builder<ProductVariant
 
     /**
      *  <p>Number of items of the Product Variant that are in stock.</p>
+     * @param availableQuantity
+     * @return Builder
      */
 
     public ProductVariantAvailabilityBuilder availableQuantity(@Nullable final Long availableQuantity) {

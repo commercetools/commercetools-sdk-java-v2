@@ -30,4 +30,5 @@ public interface StoreprojectingTrait<T extends StoreprojectingTrait<T>> {
     default T asStoreprojectingTraitToBaseType() {
         return (T) this;
     }
+
 }

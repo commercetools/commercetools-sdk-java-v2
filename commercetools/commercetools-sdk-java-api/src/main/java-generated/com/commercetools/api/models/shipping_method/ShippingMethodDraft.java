@@ -39,6 +39,7 @@ public interface ShippingMethodDraft extends com.commercetools.api.models.Custom
 
     /**
      *  <p>User-defined unique identifier for the ShippingMethod.</p>
+     * @return key
      */
 
     @JsonProperty("key")
@@ -46,6 +47,7 @@ public interface ShippingMethodDraft extends com.commercetools.api.models.Custom
 
     /**
      *  <p>Name of the ShippingMethod.</p>
+     * @return name
      */
     @NotNull
     @JsonProperty("name")
@@ -53,6 +55,7 @@ public interface ShippingMethodDraft extends com.commercetools.api.models.Custom
 
     /**
      *  <p>Localized name of the ShippingMethod.</p>
+     * @return localizedName
      */
     @Valid
     @JsonProperty("localizedName")
@@ -60,6 +63,7 @@ public interface ShippingMethodDraft extends com.commercetools.api.models.Custom
 
     /**
      *  <p>Description of the ShippingMethod.</p>
+     * @return description
      */
     @Deprecated
     @JsonProperty("description")
@@ -67,6 +71,7 @@ public interface ShippingMethodDraft extends com.commercetools.api.models.Custom
 
     /**
      *  <p>Localized description of the ShippingMethod.</p>
+     * @return localizedDescription
      */
     @Valid
     @JsonProperty("localizedDescription")
@@ -74,6 +79,7 @@ public interface ShippingMethodDraft extends com.commercetools.api.models.Custom
 
     /**
      *  <p>TaxCategory for all ZoneRates of the ShippingMethod.</p>
+     * @return taxCategory
      */
     @NotNull
     @Valid
@@ -82,6 +88,7 @@ public interface ShippingMethodDraft extends com.commercetools.api.models.Custom
 
     /**
      *  <p>Defines ShippingRates (prices) for specific zones.</p>
+     * @return zoneRates
      */
     @NotNull
     @Valid
@@ -90,6 +97,7 @@ public interface ShippingMethodDraft extends com.commercetools.api.models.Custom
 
     /**
      *  <p>If <code>true</code> the ShippingMethod will be the Project's default ShippingMethod.</p>
+     * @return isDefault
      */
     @NotNull
     @JsonProperty("isDefault")
@@ -97,6 +105,7 @@ public interface ShippingMethodDraft extends com.commercetools.api.models.Custom
 
     /**
      *  <p>Valid Cart predicate to select a ShippingMethod for a Cart.</p>
+     * @return predicate
      */
 
     @JsonProperty("predicate")
@@ -104,6 +113,7 @@ public interface ShippingMethodDraft extends com.commercetools.api.models.Custom
 
     /**
      *  <p>Custom Fields for the ShippingMethod.</p>
+     * @return custom
      */
     @Valid
     @JsonProperty("custom")

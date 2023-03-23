@@ -27,6 +27,7 @@ public class BusinessUnitBillingAddressAddedMessagePayloadBuilder
 
     /**
      *  <p>The address that was added to the Business Unit as billing address.</p>
+     * @return Builder
      */
 
     public BusinessUnitBillingAddressAddedMessagePayloadBuilder address(
@@ -37,6 +38,8 @@ public class BusinessUnitBillingAddressAddedMessagePayloadBuilder
 
     /**
      *  <p>The address that was added to the Business Unit as billing address.</p>
+     * @param address
+     * @return Builder
      */
 
     public BusinessUnitBillingAddressAddedMessagePayloadBuilder address(

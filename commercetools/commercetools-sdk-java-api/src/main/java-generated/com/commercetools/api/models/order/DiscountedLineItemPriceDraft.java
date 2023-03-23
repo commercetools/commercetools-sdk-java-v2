@@ -36,6 +36,7 @@ public interface DiscountedLineItemPriceDraft extends io.vrap.rmf.base.client.Dr
     /**
      *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
      *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
+     * @return value
      */
     @NotNull
     @Valid
@@ -44,6 +45,7 @@ public interface DiscountedLineItemPriceDraft extends io.vrap.rmf.base.client.Dr
 
     /**
      *
+     * @return includedDiscounts
      */
     @NotNull
     @Valid

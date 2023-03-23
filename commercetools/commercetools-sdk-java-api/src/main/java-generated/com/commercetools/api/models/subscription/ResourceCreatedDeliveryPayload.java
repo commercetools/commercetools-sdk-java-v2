@@ -37,6 +37,7 @@ public interface ResourceCreatedDeliveryPayload extends DeliveryPayload {
 
     /**
      *  <p>Last seen version of the resource.</p>
+     * @return version
      */
     @NotNull
     @JsonProperty("version")
@@ -44,6 +45,7 @@ public interface ResourceCreatedDeliveryPayload extends DeliveryPayload {
 
     /**
      *  <p>Date and time (UTC) the resource was last modified.</p>
+     * @return modifiedAt
      */
     @NotNull
     @JsonProperty("modifiedAt")

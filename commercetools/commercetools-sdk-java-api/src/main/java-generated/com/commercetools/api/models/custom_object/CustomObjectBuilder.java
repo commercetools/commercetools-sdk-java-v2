@@ -51,6 +51,8 @@ public class CustomObjectBuilder implements Builder<CustomObject> {
 
     /**
      *  <p>Unique identifier of the CustomObject.</p>
+     * @param id
+     * @return Builder
      */
 
     public CustomObjectBuilder id(final String id) {
@@ -60,6 +62,8 @@ public class CustomObjectBuilder implements Builder<CustomObject> {
 
     /**
      *  <p>Current version of the CustomObject.</p>
+     * @param version
+     * @return Builder
      */
 
     public CustomObjectBuilder version(final Long version) {
@@ -69,6 +73,8 @@ public class CustomObjectBuilder implements Builder<CustomObject> {
 
     /**
      *  <p>Date and time (UTC) the CustomObject was initially created.</p>
+     * @param createdAt
+     * @return Builder
      */
 
     public CustomObjectBuilder createdAt(final java.time.ZonedDateTime createdAt) {
@@ -78,6 +84,8 @@ public class CustomObjectBuilder implements Builder<CustomObject> {
 
     /**
      *  <p>Date and time (UTC) the CustomObject was last updated.</p>
+     * @param lastModifiedAt
+     * @return Builder
      */
 
     public CustomObjectBuilder lastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {
@@ -87,6 +95,7 @@ public class CustomObjectBuilder implements Builder<CustomObject> {
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @return Builder
      */
 
     public CustomObjectBuilder lastModifiedBy(
@@ -97,6 +106,8 @@ public class CustomObjectBuilder implements Builder<CustomObject> {
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param lastModifiedBy
+     * @return Builder
      */
 
     public CustomObjectBuilder lastModifiedBy(
@@ -107,6 +118,7 @@ public class CustomObjectBuilder implements Builder<CustomObject> {
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @return Builder
      */
 
     public CustomObjectBuilder createdBy(
@@ -117,6 +129,8 @@ public class CustomObjectBuilder implements Builder<CustomObject> {
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param createdBy
+     * @return Builder
      */
 
     public CustomObjectBuilder createdBy(@Nullable final com.commercetools.api.models.common.CreatedBy createdBy) {
@@ -126,6 +140,8 @@ public class CustomObjectBuilder implements Builder<CustomObject> {
 
     /**
      *  <p>Namespace to group CustomObjects.</p>
+     * @param container
+     * @return Builder
      */
 
     public CustomObjectBuilder container(final String container) {
@@ -135,6 +151,8 @@ public class CustomObjectBuilder implements Builder<CustomObject> {
 
     /**
      *  <p>User-defined unique identifier of the CustomObject within the defined <code>container</code>.</p>
+     * @param key
+     * @return Builder
      */
 
     public CustomObjectBuilder key(final String key) {
@@ -144,6 +162,8 @@ public class CustomObjectBuilder implements Builder<CustomObject> {
 
     /**
      *  <p>JSON standard types Number, String, Boolean, Array, Object, and common API data types. For values of type Reference the integrity of the data is not guaranteed. If the referenced object is deleted, the API does not delete the corresponding reference to it and the <code>value</code> points to a non-existing object in such case.</p>
+     * @param value
+     * @return Builder
      */
 
     public CustomObjectBuilder value(final java.lang.Object value) {

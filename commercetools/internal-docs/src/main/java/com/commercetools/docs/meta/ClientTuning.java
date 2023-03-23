@@ -4,6 +4,7 @@ package com.commercetools.docs.meta;
 import io.vrap.rmf.base.client.ApiMethod;
 
 /**
+ * {@include.toc}
  * <h2 id=client-tuning>Tuning the client</h2>
  *
  * <h3 id=blocking-execution>Blocking execution</h3>

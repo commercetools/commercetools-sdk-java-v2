@@ -28,6 +28,8 @@ public class ParcelChangeValueBuilder implements Builder<ParcelChangeValue> {
 
     /**
      *
+     * @param id
+     * @return Builder
      */
 
     public ParcelChangeValueBuilder id(final String id) {
@@ -37,6 +39,8 @@ public class ParcelChangeValueBuilder implements Builder<ParcelChangeValue> {
 
     /**
      *
+     * @param createdAt
+     * @return Builder
      */
 
     public ParcelChangeValueBuilder createdAt(final String createdAt) {

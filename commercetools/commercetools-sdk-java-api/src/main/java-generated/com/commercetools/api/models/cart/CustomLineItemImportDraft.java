@@ -44,6 +44,7 @@ public interface CustomLineItemImportDraft
 
     /**
      *
+     * @return name
      */
     @NotNull
     @Valid
@@ -52,6 +53,7 @@ public interface CustomLineItemImportDraft
 
     /**
      *  <p>The amount of a CustomLineItem in the cart. Must be a positive integer.</p>
+     * @return quantity
      */
     @NotNull
     @JsonProperty("quantity")
@@ -59,6 +61,7 @@ public interface CustomLineItemImportDraft
 
     /**
      *  <p>The cost to add to the cart. The amount can be negative.</p>
+     * @return money
      */
     @NotNull
     @Valid
@@ -67,6 +70,7 @@ public interface CustomLineItemImportDraft
 
     /**
      *
+     * @return slug
      */
     @NotNull
     @JsonProperty("slug")
@@ -74,6 +78,7 @@ public interface CustomLineItemImportDraft
 
     /**
      *
+     * @return state
      */
     @Valid
     @JsonProperty("state")
@@ -81,6 +86,7 @@ public interface CustomLineItemImportDraft
 
     /**
      *
+     * @return taxRate
      */
     @Valid
     @JsonProperty("taxRate")
@@ -88,6 +94,7 @@ public interface CustomLineItemImportDraft
 
     /**
      *
+     * @return taxCategory
      */
     @Valid
     @JsonProperty("taxCategory")
@@ -95,6 +102,7 @@ public interface CustomLineItemImportDraft
 
     /**
      *  <p>The custom fields.</p>
+     * @return custom
      */
     @Valid
     @JsonProperty("custom")
@@ -102,6 +110,7 @@ public interface CustomLineItemImportDraft
 
     /**
      *
+     * @return shippingDetails
      */
     @Valid
     @JsonProperty("shippingDetails")
@@ -112,6 +121,7 @@ public interface CustomLineItemImportDraft
      *   <li>If <code>Standard</code>, Cart Discounts with a matching CartDiscountCustomLineItemsTarget are applied to the Custom Line Item.</li>
      *   <li>If <code>External</code>, Cart Discounts are not considered on the Custom Line Item.</li>
      *  </ul>
+     * @return priceMode
      */
     @NotNull
     @JsonProperty("priceMode")

@@ -34,6 +34,8 @@ public class OrderSetDeliveryCustomTypeActionBuilder implements Builder<OrderSet
 
     /**
      *
+     * @param deliveryId
+     * @return Builder
      */
 
     public OrderSetDeliveryCustomTypeActionBuilder deliveryId(final String deliveryId) {
@@ -43,6 +45,7 @@ public class OrderSetDeliveryCustomTypeActionBuilder implements Builder<OrderSet
 
     /**
      *  <p>Defines the Type that extends the Delivery with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Delivery.</p>
+     * @return Builder
      */
 
     public OrderSetDeliveryCustomTypeActionBuilder type(
@@ -53,6 +56,8 @@ public class OrderSetDeliveryCustomTypeActionBuilder implements Builder<OrderSet
 
     /**
      *  <p>Defines the Type that extends the Delivery with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Delivery.</p>
+     * @param type
+     * @return Builder
      */
 
     public OrderSetDeliveryCustomTypeActionBuilder type(
@@ -63,6 +68,7 @@ public class OrderSetDeliveryCustomTypeActionBuilder implements Builder<OrderSet
 
     /**
      *  <p>Sets the Custom Fields fields for the Delivery.</p>
+     * @return Builder
      */
 
     public OrderSetDeliveryCustomTypeActionBuilder fields(
@@ -73,6 +79,8 @@ public class OrderSetDeliveryCustomTypeActionBuilder implements Builder<OrderSet
 
     /**
      *  <p>Sets the Custom Fields fields for the Delivery.</p>
+     * @param fields
+     * @return Builder
      */
 
     public OrderSetDeliveryCustomTypeActionBuilder fields(

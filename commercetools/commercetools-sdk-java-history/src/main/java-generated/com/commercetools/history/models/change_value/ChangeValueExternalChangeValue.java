@@ -32,6 +32,7 @@ public interface ChangeValueExternalChangeValue extends ChangeValueChangeValue {
 
     /**
      *
+     * @return type
      */
     @NotNull
     @JsonProperty("type")

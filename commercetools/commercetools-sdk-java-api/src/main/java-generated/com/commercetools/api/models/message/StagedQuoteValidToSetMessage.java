@@ -41,6 +41,7 @@ public interface StagedQuoteValidToSetMessage extends Message {
 
     /**
      *  <p>Expiration date for the Staged Quote after the Set Valid To update action.</p>
+     * @return validTo
      */
     @NotNull
     @JsonProperty("validTo")

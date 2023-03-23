@@ -34,6 +34,7 @@ public interface CustomLineItemTaxedPrice {
 
     /**
      *
+     * @return totalNet
      */
     @NotNull
     @Valid
@@ -42,6 +43,7 @@ public interface CustomLineItemTaxedPrice {
 
     /**
      *
+     * @return totalGross
      */
     @NotNull
     @Valid

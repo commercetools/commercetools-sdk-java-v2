@@ -17,8 +17,8 @@ import io.vrap.rmf.base.client.utils.Generated;
  *  <p>Returned when the Cart contains a Discount Code with a DiscountCodeState other than <code>MatchesCart</code>.</p>
  *  <p>The error is returned as a failed response to:</p>
  *  <ul>
- *   <li>Create Order from Cart and Create Order from Cart in a Store requests on Orders.</li>
- *   <li>Create Order from Cart and Create Order in a Store from a Cart requests on My Orders.</li>
+ *   <li>Create Order from Cart and Create Order in Store from Cart requests on Orders.</li>
+ *   <li>Create Order from Cart and Create Order in Store from Cart requests on My Orders.</li>
  *  </ul>
  *
  * <hr>
@@ -39,6 +39,7 @@ public interface DiscountCodeNonApplicableError extends ErrorObject {
 
     /**
      *
+     * @return code
      */
     @NotNull
     @JsonProperty("code")
@@ -46,6 +47,7 @@ public interface DiscountCodeNonApplicableError extends ErrorObject {
 
     /**
      *  <p><code>"The discountCode $discountCodeId cannot be applied to the cart."</code></p>
+     * @return message
      */
     @NotNull
     @JsonProperty("message")
@@ -53,6 +55,7 @@ public interface DiscountCodeNonApplicableError extends ErrorObject {
 
     /**
      *  <p>Discount Code passed to the Cart.</p>
+     * @return discountCode
      */
 
     @JsonProperty("discountCode")
@@ -60,6 +63,7 @@ public interface DiscountCodeNonApplicableError extends ErrorObject {
 
     /**
      *  <p><code>"DoesNotExist"</code> or <code>"TimeRangeNonApplicable"</code></p>
+     * @return reason
      */
 
     @JsonProperty("reason")
@@ -67,6 +71,7 @@ public interface DiscountCodeNonApplicableError extends ErrorObject {
 
     /**
      *  <p>Unique identifier of the Discount Code.</p>
+     * @return discountCodeId
      */
 
     @JsonProperty("discountCodeId")
@@ -74,6 +79,7 @@ public interface DiscountCodeNonApplicableError extends ErrorObject {
 
     /**
      *  <p>Date and time (UTC) from which the Discount Code is valid.</p>
+     * @return validFrom
      */
 
     @JsonProperty("validFrom")
@@ -81,6 +87,7 @@ public interface DiscountCodeNonApplicableError extends ErrorObject {
 
     /**
      *  <p>Date and time (UTC) until which the Discount Code is valid.</p>
+     * @return validUntil
      */
 
     @JsonProperty("validUntil")
@@ -88,6 +95,7 @@ public interface DiscountCodeNonApplicableError extends ErrorObject {
 
     /**
      *  <p>Date and time (UTC) the Discount Code validity check was last performed.</p>
+     * @return validityCheckTime
      */
 
     @JsonProperty("validityCheckTime")

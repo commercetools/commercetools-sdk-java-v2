@@ -46,6 +46,7 @@ public interface Record {
 
     /**
      *  <p>Version of the resource after the change.</p>
+     * @return version
      */
     @NotNull
     @JsonProperty("version")
@@ -53,6 +54,7 @@ public interface Record {
 
     /**
      *  <p>Version of the resource before the change.</p>
+     * @return previousVersion
      */
     @NotNull
     @JsonProperty("previousVersion")
@@ -60,6 +62,7 @@ public interface Record {
 
     /**
      *  <p>Type of the change (creation, update or deletion).</p>
+     * @return type
      */
     @NotNull
     @JsonProperty("type")
@@ -67,6 +70,7 @@ public interface Record {
 
     /**
      *  <p>Information about the user or the API client who performed the change.</p>
+     * @return modifiedBy
      */
     @NotNull
     @Valid
@@ -75,6 +79,7 @@ public interface Record {
 
     /**
      *  <p>Date and time when the change was made.</p>
+     * @return modifiedAt
      */
     @NotNull
     @JsonProperty("modifiedAt")
@@ -82,6 +87,7 @@ public interface Record {
 
     /**
      *  <p>Information that describes the resource after the change.</p>
+     * @return label
      */
     @NotNull
     @Valid
@@ -90,6 +96,7 @@ public interface Record {
 
     /**
      *  <p>Information that describes the resource before the change.</p>
+     * @return previousLabel
      */
     @NotNull
     @Valid
@@ -98,6 +105,7 @@ public interface Record {
 
     /**
      *  <p>Shows the differences in the resource between <code>previousVersion</code> and <code>version</code>. The value is not identical to the actual array of update actions sent and is not limited to update actions (see, for example, Optimistic Concurrency Control).</p>
+     * @return changes
      */
     @NotNull
     @Valid
@@ -106,6 +114,7 @@ public interface Record {
 
     /**
      *  <p>Reference to the changed resource.</p>
+     * @return resource
      */
     @NotNull
     @Valid
@@ -114,6 +123,7 @@ public interface Record {
 
     /**
      *  <p>References to the Stores attached to the Change.</p>
+     * @return stores
      */
     @NotNull
     @Valid
@@ -122,6 +132,7 @@ public interface Record {
 
     /**
      *  <p><code>true</code> if no change was detected. The version number of the resource can be increased even without any change in the resource.</p>
+     * @return withoutChanges
      */
     @NotNull
     @JsonProperty("withoutChanges")

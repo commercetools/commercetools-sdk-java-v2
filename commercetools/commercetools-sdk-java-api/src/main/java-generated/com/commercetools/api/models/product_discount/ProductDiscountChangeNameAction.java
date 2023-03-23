@@ -35,6 +35,7 @@ public interface ProductDiscountChangeNameAction extends ProductDiscountUpdateAc
 
     /**
      *  <p>New value to set. Must not be empty.</p>
+     * @return name
      */
     @NotNull
     @Valid

@@ -31,6 +31,8 @@ public class AttributeGroupReferenceBuilder implements Builder<AttributeGroupRef
 
     /**
      *  <p>Platform-generated unique identifier of the referenced AttributeGroup.</p>
+     * @param id
+     * @return Builder
      */
 
     public AttributeGroupReferenceBuilder id(final String id) {
@@ -40,6 +42,7 @@ public class AttributeGroupReferenceBuilder implements Builder<AttributeGroupRef
 
     /**
      *  <p>Contains the representation of the expanded AttributeGroup. Only present in responses to requests with Reference Expansion for AttributeGroup.</p>
+     * @return Builder
      */
 
     public AttributeGroupReferenceBuilder obj(
@@ -50,6 +53,8 @@ public class AttributeGroupReferenceBuilder implements Builder<AttributeGroupRef
 
     /**
      *  <p>Contains the representation of the expanded AttributeGroup. Only present in responses to requests with Reference Expansion for AttributeGroup.</p>
+     * @param obj
+     * @return Builder
      */
 
     public AttributeGroupReferenceBuilder obj(

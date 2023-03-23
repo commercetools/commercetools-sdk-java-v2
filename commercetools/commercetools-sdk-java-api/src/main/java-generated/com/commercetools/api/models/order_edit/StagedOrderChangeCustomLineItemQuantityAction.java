@@ -35,6 +35,7 @@ public interface StagedOrderChangeCustomLineItemQuantityAction extends StagedOrd
 
     /**
      *
+     * @return customLineItemId
      */
     @NotNull
     @JsonProperty("customLineItemId")
@@ -42,6 +43,7 @@ public interface StagedOrderChangeCustomLineItemQuantityAction extends StagedOrd
 
     /**
      *
+     * @return quantity
      */
     @NotNull
     @JsonProperty("quantity")

@@ -26,6 +26,7 @@ public class AttributeNestedTypeBuilder implements Builder<AttributeNestedType> 
 
     /**
      *  <p>References a product type by key.</p>
+     * @return Builder
      */
 
     public AttributeNestedTypeBuilder typeReference(
@@ -38,6 +39,8 @@ public class AttributeNestedTypeBuilder implements Builder<AttributeNestedType> 
 
     /**
      *  <p>References a product type by key.</p>
+     * @param typeReference
+     * @return Builder
      */
 
     public AttributeNestedTypeBuilder typeReference(

@@ -33,6 +33,7 @@ public interface ImportResponse {
 
     /**
      *
+     * @return operationStatus
      */
     @NotNull
     @Valid

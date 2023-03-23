@@ -42,6 +42,7 @@ public interface CustomerCreatedMessage extends Message {
 
     /**
      *  <p>Customer that was created.</p>
+     * @return customer
      */
     @NotNull
     @Valid

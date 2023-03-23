@@ -26,6 +26,7 @@ public class InventoryEntryCreatedMessagePayloadBuilder implements Builder<Inven
 
     /**
      *  <p>InventoryEntry that was created.</p>
+     * @return Builder
      */
 
     public InventoryEntryCreatedMessagePayloadBuilder inventoryEntry(
@@ -36,6 +37,8 @@ public class InventoryEntryCreatedMessagePayloadBuilder implements Builder<Inven
 
     /**
      *  <p>InventoryEntry that was created.</p>
+     * @param inventoryEntry
+     * @return Builder
      */
 
     public InventoryEntryCreatedMessagePayloadBuilder inventoryEntry(

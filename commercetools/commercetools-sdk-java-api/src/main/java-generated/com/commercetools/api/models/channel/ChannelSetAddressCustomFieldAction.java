@@ -33,6 +33,7 @@ public interface ChannelSetAddressCustomFieldAction extends ChannelUpdateAction 
 
     /**
      *  <p>Name of the Custom Field.</p>
+     * @return name
      */
     @NotNull
     @JsonProperty("name")
@@ -40,6 +41,7 @@ public interface ChannelSetAddressCustomFieldAction extends ChannelUpdateAction 
 
     /**
      *  <p>Specifies the format of the value of the Custom Field defined by <code>name</code>. If <code>value</code> is absent or <code>null</code>, this field will be removed, if it exists. Removing a field that does not exist returns an InvalidOperation error.</p>
+     * @return value
      */
 
     @JsonProperty("value")

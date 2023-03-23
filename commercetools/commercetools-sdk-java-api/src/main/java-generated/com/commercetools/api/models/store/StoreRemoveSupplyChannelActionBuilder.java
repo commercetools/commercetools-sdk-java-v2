@@ -26,6 +26,7 @@ public class StoreRemoveSupplyChannelActionBuilder implements Builder<StoreRemov
 
     /**
      *  <p>Value to remove. ResourceIdentifier of a Channel with the <code>InventorySupply</code> ChannelRoleEnum.</p>
+     * @return Builder
      */
 
     public StoreRemoveSupplyChannelActionBuilder supplyChannel(
@@ -37,6 +38,8 @@ public class StoreRemoveSupplyChannelActionBuilder implements Builder<StoreRemov
 
     /**
      *  <p>Value to remove. ResourceIdentifier of a Channel with the <code>InventorySupply</code> ChannelRoleEnum.</p>
+     * @param supplyChannel
+     * @return Builder
      */
 
     public StoreRemoveSupplyChannelActionBuilder supplyChannel(

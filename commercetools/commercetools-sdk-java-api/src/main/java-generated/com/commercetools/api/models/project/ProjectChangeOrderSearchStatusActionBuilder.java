@@ -25,6 +25,8 @@ public class ProjectChangeOrderSearchStatusActionBuilder implements Builder<Proj
 
     /**
      *  <p>Activates or deactivates the Order Search feature. Activation will trigger building a search index for the Orders in the Project.</p>
+     * @param status
+     * @return Builder
      */
 
     public ProjectChangeOrderSearchStatusActionBuilder status(

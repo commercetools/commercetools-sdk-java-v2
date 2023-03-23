@@ -30,10 +30,14 @@ public class AssignedProductSelectionBuilder implements Builder<AssignedProductS
     @Nullable
     private com.commercetools.api.models.product_selection.ProductVariantSelection variantSelection;
 
+    @Nullable
+    private com.commercetools.api.models.product_selection.ProductVariantExclusion variantExclusion;
+
     private java.time.ZonedDateTime createdAt;
 
     /**
      *  <p>Reference to the Product Selection that this assignment is part of.</p>
+     * @return Builder
      */
 
     public AssignedProductSelectionBuilder productSelection(
@@ -46,6 +50,8 @@ public class AssignedProductSelectionBuilder implements Builder<AssignedProductS
 
     /**
      *  <p>Reference to the Product Selection that this assignment is part of.</p>
+     * @param productSelection
+     * @return Builder
      */
 
     public AssignedProductSelectionBuilder productSelection(
@@ -55,7 +61,10 @@ public class AssignedProductSelectionBuilder implements Builder<AssignedProductS
     }
 
     /**
-     *  <p>Selects which Variants of the newly added Product will be included, or excluded, from the Product Selection.</p>
+     *  <p>Defines which Variants of the Product will be included from the Product Selection.</p>
+     *  <p>This field is only available for Assignments to a Product Selection of type Individual.</p>
+     * @param variantSelection
+     * @return Builder
      */
 
     public AssignedProductSelectionBuilder variantSelection(
@@ -65,7 +74,9 @@ public class AssignedProductSelectionBuilder implements Builder<AssignedProductS
     }
 
     /**
-     *  <p>Selects which Variants of the newly added Product will be included, or excluded, from the Product Selection.</p>
+     *  <p>Defines which Variants of the Product will be included from the Product Selection.</p>
+     *  <p>This field is only available for Assignments to a Product Selection of type Individual.</p>
+     * @return Builder
      */
 
     public AssignedProductSelectionBuilder variantSelection(
@@ -77,7 +88,36 @@ public class AssignedProductSelectionBuilder implements Builder<AssignedProductS
     }
 
     /**
+     *  <p>Defines which Variants of the Product will be excluded from the Product Selection.</p>
+     *  <p>This field is only available for Assignments to a Product Selection of type Individual Exclusion.</p>
+     * @return Builder
+     */
+
+    public AssignedProductSelectionBuilder variantExclusion(
+            Function<com.commercetools.api.models.product_selection.ProductVariantExclusionBuilder, com.commercetools.api.models.product_selection.ProductVariantExclusionBuilder> builder) {
+        this.variantExclusion = builder
+                .apply(com.commercetools.api.models.product_selection.ProductVariantExclusionBuilder.of())
+                .build();
+        return this;
+    }
+
+    /**
+     *  <p>Defines which Variants of the Product will be excluded from the Product Selection.</p>
+     *  <p>This field is only available for Assignments to a Product Selection of type Individual Exclusion.</p>
+     * @param variantExclusion
+     * @return Builder
+     */
+
+    public AssignedProductSelectionBuilder variantExclusion(
+            @Nullable final com.commercetools.api.models.product_selection.ProductVariantExclusion variantExclusion) {
+        this.variantExclusion = variantExclusion;
+        return this;
+    }
+
+    /**
      *  <p>Date and time (UTC) this assignment was initially created.</p>
+     * @param createdAt
+     * @return Builder
      */
 
     public AssignedProductSelectionBuilder createdAt(final java.time.ZonedDateTime createdAt) {
@@ -94,6 +134,11 @@ public class AssignedProductSelectionBuilder implements Builder<AssignedProductS
         return this.variantSelection;
     }
 
+    @Nullable
+    public com.commercetools.api.models.product_selection.ProductVariantExclusion getVariantExclusion() {
+        return this.variantExclusion;
+    }
+
     public java.time.ZonedDateTime getCreatedAt() {
         return this.createdAt;
     }
@@ -101,14 +146,14 @@ public class AssignedProductSelectionBuilder implements Builder<AssignedProductS
     public AssignedProductSelection build() {
         Objects.requireNonNull(productSelection, AssignedProductSelection.class + ": productSelection is missing");
         Objects.requireNonNull(createdAt, AssignedProductSelection.class + ": createdAt is missing");
-        return new AssignedProductSelectionImpl(productSelection, variantSelection, createdAt);
+        return new AssignedProductSelectionImpl(productSelection, variantSelection, variantExclusion, createdAt);
     }
 
     /**
      * builds AssignedProductSelection without checking for non null required values
      */
     public AssignedProductSelection buildUnchecked() {
-        return new AssignedProductSelectionImpl(productSelection, variantSelection, createdAt);
+        return new AssignedProductSelectionImpl(productSelection, variantSelection, variantExclusion, createdAt);
     }
 
     public static AssignedProductSelectionBuilder of() {
@@ -119,6 +164,7 @@ public class AssignedProductSelectionBuilder implements Builder<AssignedProductS
         AssignedProductSelectionBuilder builder = new AssignedProductSelectionBuilder();
         builder.productSelection = template.getProductSelection();
         builder.variantSelection = template.getVariantSelection();
+        builder.variantExclusion = template.getVariantExclusion();
         builder.createdAt = template.getCreatedAt();
         return builder;
     }

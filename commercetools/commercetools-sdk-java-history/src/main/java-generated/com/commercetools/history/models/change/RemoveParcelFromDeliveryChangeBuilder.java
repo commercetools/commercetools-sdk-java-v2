@@ -32,6 +32,8 @@ public class RemoveParcelFromDeliveryChangeBuilder implements Builder<RemoveParc
 
     /**
      *  <p>Update action for <code>removeParcelFromDelivery</code></p>
+     * @param change
+     * @return Builder
      */
 
     public RemoveParcelFromDeliveryChangeBuilder change(final String change) {
@@ -41,6 +43,8 @@ public class RemoveParcelFromDeliveryChangeBuilder implements Builder<RemoveParc
 
     /**
      *
+     * @param deliveryId
+     * @return Builder
      */
 
     public RemoveParcelFromDeliveryChangeBuilder deliveryId(final String deliveryId) {
@@ -50,6 +54,7 @@ public class RemoveParcelFromDeliveryChangeBuilder implements Builder<RemoveParc
 
     /**
      *
+     * @return Builder
      */
 
     public RemoveParcelFromDeliveryChangeBuilder previousValue(
@@ -60,6 +65,8 @@ public class RemoveParcelFromDeliveryChangeBuilder implements Builder<RemoveParc
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public RemoveParcelFromDeliveryChangeBuilder previousValue(

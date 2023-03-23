@@ -36,7 +36,9 @@ public class CartSetCustomShippingMethodActionBuilder implements Builder<CartSet
     private com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate;
 
     /**
-     *
+     *  <p>Name of the custom Shipping Method.</p>
+     * @param shippingMethodName
+     * @return Builder
      */
 
     public CartSetCustomShippingMethodActionBuilder shippingMethodName(final String shippingMethodName) {
@@ -45,7 +47,8 @@ public class CartSetCustomShippingMethodActionBuilder implements Builder<CartSet
     }
 
     /**
-     *
+     *  <p>Determines the shipping price.</p>
+     * @return Builder
      */
 
     public CartSetCustomShippingMethodActionBuilder shippingRate(
@@ -56,7 +59,9 @@ public class CartSetCustomShippingMethodActionBuilder implements Builder<CartSet
     }
 
     /**
-     *
+     *  <p>Determines the shipping price.</p>
+     * @param shippingRate
+     * @return Builder
      */
 
     public CartSetCustomShippingMethodActionBuilder shippingRate(
@@ -66,7 +71,8 @@ public class CartSetCustomShippingMethodActionBuilder implements Builder<CartSet
     }
 
     /**
-     *  <p>ResourceIdentifier to a TaxCategory.</p>
+     *  <p>Tax Category used to determine the Tax Rate when the Cart has the <code>Platform</code> TaxMode.</p>
+     * @return Builder
      */
 
     public CartSetCustomShippingMethodActionBuilder taxCategory(
@@ -78,7 +84,9 @@ public class CartSetCustomShippingMethodActionBuilder implements Builder<CartSet
     }
 
     /**
-     *  <p>ResourceIdentifier to a TaxCategory.</p>
+     *  <p>Tax Category used to determine the Tax Rate when the Cart has the <code>Platform</code> TaxMode.</p>
+     * @param taxCategory
+     * @return Builder
      */
 
     public CartSetCustomShippingMethodActionBuilder taxCategory(
@@ -88,7 +96,8 @@ public class CartSetCustomShippingMethodActionBuilder implements Builder<CartSet
     }
 
     /**
-     *
+     *  <p>External Tax Rate for the <code>shippingRate</code> to be set if the Cart has the <code>External</code> TaxMode.</p>
+     * @return Builder
      */
 
     public CartSetCustomShippingMethodActionBuilder externalTaxRate(
@@ -99,7 +108,9 @@ public class CartSetCustomShippingMethodActionBuilder implements Builder<CartSet
     }
 
     /**
-     *
+     *  <p>External Tax Rate for the <code>shippingRate</code> to be set if the Cart has the <code>External</code> TaxMode.</p>
+     * @param externalTaxRate
+     * @return Builder
      */
 
     public CartSetCustomShippingMethodActionBuilder externalTaxRate(

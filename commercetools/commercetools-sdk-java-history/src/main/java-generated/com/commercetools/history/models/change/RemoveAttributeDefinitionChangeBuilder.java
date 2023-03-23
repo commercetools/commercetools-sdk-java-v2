@@ -29,6 +29,8 @@ public class RemoveAttributeDefinitionChangeBuilder implements Builder<RemoveAtt
 
     /**
      *  <p>Update action for <code>removeAttributeDefinition</code> on product types</p>
+     * @param change
+     * @return Builder
      */
 
     public RemoveAttributeDefinitionChangeBuilder change(final String change) {
@@ -38,6 +40,7 @@ public class RemoveAttributeDefinitionChangeBuilder implements Builder<RemoveAtt
 
     /**
      *
+     * @return Builder
      */
 
     public RemoveAttributeDefinitionChangeBuilder previousValue(
@@ -49,6 +52,8 @@ public class RemoveAttributeDefinitionChangeBuilder implements Builder<RemoveAtt
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public RemoveAttributeDefinitionChangeBuilder previousValue(

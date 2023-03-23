@@ -32,6 +32,7 @@ public class TaxedPriceBuilder implements Builder<TaxedPrice> {
 
     /**
      *  <p>Maps to <code>TaxedPrice.totalNet</code>.</p>
+     * @return Builder
      */
 
     public TaxedPriceBuilder totalNet(
@@ -42,6 +43,8 @@ public class TaxedPriceBuilder implements Builder<TaxedPrice> {
 
     /**
      *  <p>Maps to <code>TaxedPrice.totalNet</code>.</p>
+     * @param totalNet
+     * @return Builder
      */
 
     public TaxedPriceBuilder totalNet(final com.commercetools.importapi.models.common.Money totalNet) {
@@ -51,6 +54,7 @@ public class TaxedPriceBuilder implements Builder<TaxedPrice> {
 
     /**
      *  <p>Maps to <code>TaxedPrice.totalGross</code>.</p>
+     * @return Builder
      */
 
     public TaxedPriceBuilder totalGross(
@@ -61,6 +65,8 @@ public class TaxedPriceBuilder implements Builder<TaxedPrice> {
 
     /**
      *  <p>Maps to <code>TaxedPrice.totalGross</code>.</p>
+     * @param totalGross
+     * @return Builder
      */
 
     public TaxedPriceBuilder totalGross(final com.commercetools.importapi.models.common.Money totalGross) {
@@ -70,6 +76,8 @@ public class TaxedPriceBuilder implements Builder<TaxedPrice> {
 
     /**
      *  <p>Maps to <code>TaxedPrice.taxPortions</code>.</p>
+     * @param taxPortions
+     * @return Builder
      */
 
     public TaxedPriceBuilder taxPortions(final com.commercetools.importapi.models.orders.TaxPortion... taxPortions) {
@@ -79,6 +87,8 @@ public class TaxedPriceBuilder implements Builder<TaxedPrice> {
 
     /**
      *  <p>Maps to <code>TaxedPrice.taxPortions</code>.</p>
+     * @param taxPortions
+     * @return Builder
      */
 
     public TaxedPriceBuilder taxPortions(
@@ -89,6 +99,8 @@ public class TaxedPriceBuilder implements Builder<TaxedPrice> {
 
     /**
      *  <p>Maps to <code>TaxedPrice.taxPortions</code>.</p>
+     * @param taxPortions
+     * @return Builder
      */
 
     public TaxedPriceBuilder plusTaxPortions(
@@ -102,6 +114,7 @@ public class TaxedPriceBuilder implements Builder<TaxedPrice> {
 
     /**
      *  <p>Maps to <code>TaxedPrice.taxPortions</code>.</p>
+     * @return Builder
      */
 
     public TaxedPriceBuilder plusTaxPortions(
@@ -115,6 +128,7 @@ public class TaxedPriceBuilder implements Builder<TaxedPrice> {
 
     /**
      *  <p>Maps to <code>TaxedPrice.taxPortions</code>.</p>
+     * @return Builder
      */
 
     public TaxedPriceBuilder withTaxPortions(

@@ -4,6 +4,7 @@ package com.commercetools.docs.meta;
 import io.vrap.rmf.base.client.utils.json.modules.ModuleOptions;
 
 /**
+ * {@include.toc}
  * <h2>Serialization</h2>
  *
  * <p>The SDK uses <a href="https://github.com/FasterXML/jackson">Jackson</a> for searializing and deserializing JSON.

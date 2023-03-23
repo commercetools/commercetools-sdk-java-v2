@@ -205,7 +205,7 @@ public class StandalonePriceImpl implements StandalonePrice, ModelBase {
     }
 
     /**
-     *  <p>Date until the Price is valid.</p>
+     *  <p>Date until the Price is valid. Standalone Prices that are no longer valid are not automatically deleted, but they can be deleted if necessary.</p>
      */
 
     public java.time.ZonedDateTime getValidUntil() {

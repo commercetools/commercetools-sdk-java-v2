@@ -26,6 +26,10 @@ public class ByProjectKeyCustomerGroupsRequestBuilder implements ByProjectKeyCus
         return new ByProjectKeyCustomerGroupsPost(apiHttpClient, projectKey, customerGroupDraft);
     }
 
+    public ByProjectKeyCustomerGroupsPostString post(final String customerGroupDraft) {
+        return new ByProjectKeyCustomerGroupsPostString(apiHttpClient, projectKey, customerGroupDraft);
+    }
+
     public ByProjectKeyCustomerGroupsPost post(
             UnaryOperator<com.commercetools.api.models.customer_group.CustomerGroupDraftBuilder> op) {
         return post(op.apply(com.commercetools.api.models.customer_group.CustomerGroupDraftBuilder.of()).build());

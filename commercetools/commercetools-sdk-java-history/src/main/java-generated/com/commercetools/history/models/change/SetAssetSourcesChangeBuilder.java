@@ -35,6 +35,8 @@ public class SetAssetSourcesChangeBuilder implements Builder<SetAssetSourcesChan
 
     /**
      *  <p>Update action for <code>setAssetSources</code></p>
+     * @param change
+     * @return Builder
      */
 
     public SetAssetSourcesChangeBuilder change(final String change) {
@@ -44,6 +46,7 @@ public class SetAssetSourcesChangeBuilder implements Builder<SetAssetSourcesChan
 
     /**
      *
+     * @return Builder
      */
 
     public SetAssetSourcesChangeBuilder asset(
@@ -54,6 +57,8 @@ public class SetAssetSourcesChangeBuilder implements Builder<SetAssetSourcesChan
 
     /**
      *
+     * @param asset
+     * @return Builder
      */
 
     public SetAssetSourcesChangeBuilder asset(
@@ -64,6 +69,8 @@ public class SetAssetSourcesChangeBuilder implements Builder<SetAssetSourcesChan
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public SetAssetSourcesChangeBuilder nextValue(
@@ -74,6 +81,8 @@ public class SetAssetSourcesChangeBuilder implements Builder<SetAssetSourcesChan
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public SetAssetSourcesChangeBuilder nextValue(
@@ -84,6 +93,8 @@ public class SetAssetSourcesChangeBuilder implements Builder<SetAssetSourcesChan
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public SetAssetSourcesChangeBuilder plusNextValue(
@@ -97,6 +108,7 @@ public class SetAssetSourcesChangeBuilder implements Builder<SetAssetSourcesChan
 
     /**
      *
+     * @return Builder
      */
 
     public SetAssetSourcesChangeBuilder plusNextValue(
@@ -110,6 +122,7 @@ public class SetAssetSourcesChangeBuilder implements Builder<SetAssetSourcesChan
 
     /**
      *
+     * @return Builder
      */
 
     public SetAssetSourcesChangeBuilder withNextValue(
@@ -121,6 +134,8 @@ public class SetAssetSourcesChangeBuilder implements Builder<SetAssetSourcesChan
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public SetAssetSourcesChangeBuilder previousValue(
@@ -131,6 +146,8 @@ public class SetAssetSourcesChangeBuilder implements Builder<SetAssetSourcesChan
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public SetAssetSourcesChangeBuilder previousValue(
@@ -141,6 +158,8 @@ public class SetAssetSourcesChangeBuilder implements Builder<SetAssetSourcesChan
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public SetAssetSourcesChangeBuilder plusPreviousValue(
@@ -154,6 +173,7 @@ public class SetAssetSourcesChangeBuilder implements Builder<SetAssetSourcesChan
 
     /**
      *
+     * @return Builder
      */
 
     public SetAssetSourcesChangeBuilder plusPreviousValue(
@@ -167,6 +187,7 @@ public class SetAssetSourcesChangeBuilder implements Builder<SetAssetSourcesChan
 
     /**
      *
+     * @return Builder
      */
 
     public SetAssetSourcesChangeBuilder withPreviousValue(

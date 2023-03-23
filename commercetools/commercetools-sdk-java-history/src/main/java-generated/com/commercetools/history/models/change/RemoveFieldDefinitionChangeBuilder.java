@@ -29,6 +29,8 @@ public class RemoveFieldDefinitionChangeBuilder implements Builder<RemoveFieldDe
 
     /**
      *  <p>Update action for <code>removeFieldDefinition</code> on payments</p>
+     * @param change
+     * @return Builder
      */
 
     public RemoveFieldDefinitionChangeBuilder change(final String change) {
@@ -38,6 +40,7 @@ public class RemoveFieldDefinitionChangeBuilder implements Builder<RemoveFieldDe
 
     /**
      *
+     * @return Builder
      */
 
     public RemoveFieldDefinitionChangeBuilder previousValue(
@@ -48,6 +51,8 @@ public class RemoveFieldDefinitionChangeBuilder implements Builder<RemoveFieldDe
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public RemoveFieldDefinitionChangeBuilder previousValue(

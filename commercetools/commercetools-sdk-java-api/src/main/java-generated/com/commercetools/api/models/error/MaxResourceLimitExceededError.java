@@ -36,6 +36,7 @@ public interface MaxResourceLimitExceededError extends ErrorObject {
 
     /**
      *
+     * @return code
      */
     @NotNull
     @JsonProperty("code")
@@ -43,6 +44,7 @@ public interface MaxResourceLimitExceededError extends ErrorObject {
 
     /**
      *  <p><code>"You have exceeded the limit of $limit resources of type $resourceTypeId."</code></p>
+     * @return message
      */
     @NotNull
     @JsonProperty("message")
@@ -50,6 +52,7 @@ public interface MaxResourceLimitExceededError extends ErrorObject {
 
     /**
      *  <p>Resource type that reached its maximum limit of configured elements (for example, 100 Zones per Project).</p>
+     * @return exceededResource
      */
     @NotNull
     @JsonProperty("exceededResource")

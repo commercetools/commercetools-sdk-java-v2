@@ -29,6 +29,8 @@ public class CustomFieldLocalizedEnumValueBuilder implements Builder<CustomField
 
     /**
      *  <p>Key of the value used as a programmatic identifier.</p>
+     * @param key
+     * @return Builder
      */
 
     public CustomFieldLocalizedEnumValueBuilder key(final String key) {
@@ -38,6 +40,7 @@ public class CustomFieldLocalizedEnumValueBuilder implements Builder<CustomField
 
     /**
      *  <p>Descriptive localized label of the value.</p>
+     * @return Builder
      */
 
     public CustomFieldLocalizedEnumValueBuilder label(
@@ -48,6 +51,8 @@ public class CustomFieldLocalizedEnumValueBuilder implements Builder<CustomField
 
     /**
      *  <p>Descriptive localized label of the value.</p>
+     * @param label
+     * @return Builder
      */
 
     public CustomFieldLocalizedEnumValueBuilder label(final com.commercetools.api.models.common.LocalizedString label) {

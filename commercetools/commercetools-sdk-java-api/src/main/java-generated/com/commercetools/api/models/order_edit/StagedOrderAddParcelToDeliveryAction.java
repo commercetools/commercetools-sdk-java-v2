@@ -38,6 +38,7 @@ public interface StagedOrderAddParcelToDeliveryAction extends StagedOrderUpdateA
 
     /**
      *
+     * @return deliveryId
      */
     @NotNull
     @JsonProperty("deliveryId")
@@ -45,6 +46,7 @@ public interface StagedOrderAddParcelToDeliveryAction extends StagedOrderUpdateA
 
     /**
      *
+     * @return measurements
      */
     @Valid
     @JsonProperty("measurements")
@@ -52,6 +54,7 @@ public interface StagedOrderAddParcelToDeliveryAction extends StagedOrderUpdateA
 
     /**
      *
+     * @return trackingData
      */
     @Valid
     @JsonProperty("trackingData")
@@ -59,6 +62,7 @@ public interface StagedOrderAddParcelToDeliveryAction extends StagedOrderUpdateA
 
     /**
      *
+     * @return items
      */
     @Valid
     @JsonProperty("items")

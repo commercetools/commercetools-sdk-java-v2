@@ -39,6 +39,7 @@ public interface ProductDiscountDraft
 
     /**
      *  <p>Name of the ProductDiscount.</p>
+     * @return name
      */
     @NotNull
     @Valid
@@ -47,6 +48,7 @@ public interface ProductDiscountDraft
 
     /**
      *  <p>User-defined unique identifier for the ProductDiscount.</p>
+     * @return key
      */
 
     @JsonProperty("key")
@@ -54,6 +56,7 @@ public interface ProductDiscountDraft
 
     /**
      *  <p>Description of the ProductDiscount.</p>
+     * @return description
      */
     @Valid
     @JsonProperty("description")
@@ -61,6 +64,7 @@ public interface ProductDiscountDraft
 
     /**
      *  <p>Type of Discount and its corresponding value.</p>
+     * @return value
      */
     @NotNull
     @Valid
@@ -69,6 +73,7 @@ public interface ProductDiscountDraft
 
     /**
      *  <p>Valid ProductDiscount predicate.</p>
+     * @return predicate
      */
     @NotNull
     @JsonProperty("predicate")
@@ -76,6 +81,7 @@ public interface ProductDiscountDraft
 
     /**
      *  <p>Decimal value between 0 and 1 (passed as String literal) that defines the order of ProductDiscounts to apply in case more than one is applicable and active. A ProductDiscount with a higher <code>sortOrder</code> is prioritized. The value must be <strong>unique</strong> among all ProductDiscounts in the Project.</p>
+     * @return sortOrder
      */
     @NotNull
     @JsonProperty("sortOrder")
@@ -83,6 +89,7 @@ public interface ProductDiscountDraft
 
     /**
      *  <p>Set to <code>true</code> to activate the ProductDiscount, set to <code>false</code> to deactivate it (even though the <code>predicate</code> matches).</p>
+     * @return isActive
      */
     @NotNull
     @JsonProperty("isActive")
@@ -90,6 +97,7 @@ public interface ProductDiscountDraft
 
     /**
      *  <p>Date and time (UTC) from which the Discount is effective. Take Eventual Consistency into account for calculated discount values.</p>
+     * @return validFrom
      */
 
     @JsonProperty("validFrom")
@@ -97,6 +105,7 @@ public interface ProductDiscountDraft
 
     /**
      *  <p>Date and time (UTC) until which the Discount is effective. Take Eventual Consistency into account for calculated undiscounted values.</p>
+     * @return validUntil
      */
 
     @JsonProperty("validUntil")

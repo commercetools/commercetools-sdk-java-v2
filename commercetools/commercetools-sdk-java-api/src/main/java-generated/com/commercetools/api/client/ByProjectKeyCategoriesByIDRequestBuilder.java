@@ -28,6 +28,10 @@ public class ByProjectKeyCategoriesByIDRequestBuilder {
         return new ByProjectKeyCategoriesByIDPost(apiHttpClient, projectKey, ID, categoryUpdate);
     }
 
+    public ByProjectKeyCategoriesByIDPostString post(final String categoryUpdate) {
+        return new ByProjectKeyCategoriesByIDPostString(apiHttpClient, projectKey, ID, categoryUpdate);
+    }
+
     public ByProjectKeyCategoriesByIDPost post(
             UnaryOperator<com.commercetools.api.models.category.CategoryUpdateBuilder> op) {
         return post(op.apply(com.commercetools.api.models.category.CategoryUpdateBuilder.of()).build());

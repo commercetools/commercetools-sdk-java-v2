@@ -79,4 +79,5 @@ public interface ReturnPaymentState {
     public static ReturnPaymentState[] values() {
         return ReturnPaymentStateEnum.values();
     }
+
 }

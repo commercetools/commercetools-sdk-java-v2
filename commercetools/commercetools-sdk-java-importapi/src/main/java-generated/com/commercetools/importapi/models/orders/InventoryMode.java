@@ -71,4 +71,5 @@ public interface InventoryMode {
     public static InventoryMode[] values() {
         return InventoryModeEnum.values();
     }
+
 }

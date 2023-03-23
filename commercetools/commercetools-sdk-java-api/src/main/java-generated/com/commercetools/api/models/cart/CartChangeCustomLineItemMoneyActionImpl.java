@@ -47,7 +47,7 @@ public class CartChangeCustomLineItemMoneyActionImpl implements CartChangeCustom
     }
 
     /**
-     *
+     *  <p><code>id</code> of the CustomLineItem to update.</p>
      */
 
     public String getCustomLineItemId() {
@@ -55,8 +55,7 @@ public class CartChangeCustomLineItemMoneyActionImpl implements CartChangeCustom
     }
 
     /**
-     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
-     *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
+     *  <p>Value to set. Must not be empty. Can be a negative amount.</p>
      */
 
     public com.commercetools.api.models.common.Money getMoney() {

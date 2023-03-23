@@ -35,6 +35,7 @@ public interface ProductCatalogData {
 
     /**
      *  <p><code>true</code> if the Product is published.</p>
+     * @return published
      */
     @NotNull
     @JsonProperty("published")
@@ -42,6 +43,7 @@ public interface ProductCatalogData {
 
     /**
      *  <p>Current (published) data of the Product.</p>
+     * @return current
      */
     @NotNull
     @Valid
@@ -50,6 +52,7 @@ public interface ProductCatalogData {
 
     /**
      *  <p>Staged (unpublished) data of the Product.</p>
+     * @return staged
      */
     @NotNull
     @Valid
@@ -58,6 +61,7 @@ public interface ProductCatalogData {
 
     /**
      *  <p><code>true</code> if the <code>staged</code> data is different from the <code>current</code> data.</p>
+     * @return hasStagedChanges
      */
     @NotNull
     @JsonProperty("hasStagedChanges")

@@ -27,6 +27,8 @@ public class NotEnabledErrorBuilder implements Builder<NotEnabledError> {
 
     /**
      *  <p><code>"The category recommendations API is not yet enabled for your project."</code></p>
+     * @param message
+     * @return Builder
      */
 
     public NotEnabledErrorBuilder message(final String message) {

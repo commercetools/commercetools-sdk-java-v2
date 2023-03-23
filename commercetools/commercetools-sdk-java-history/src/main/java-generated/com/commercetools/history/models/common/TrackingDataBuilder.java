@@ -37,6 +37,8 @@ public class TrackingDataBuilder implements Builder<TrackingData> {
 
     /**
      *  <p>The ID to track one parcel.</p>
+     * @param trackingId
+     * @return Builder
      */
 
     public TrackingDataBuilder trackingId(final String trackingId) {
@@ -46,6 +48,8 @@ public class TrackingDataBuilder implements Builder<TrackingData> {
 
     /**
      *  <p>The carrier that delivers the parcel.</p>
+     * @param carrier
+     * @return Builder
      */
 
     public TrackingDataBuilder carrier(final String carrier) {
@@ -55,6 +59,8 @@ public class TrackingDataBuilder implements Builder<TrackingData> {
 
     /**
      *
+     * @param provider
+     * @return Builder
      */
 
     public TrackingDataBuilder provider(final String provider) {
@@ -64,6 +70,8 @@ public class TrackingDataBuilder implements Builder<TrackingData> {
 
     /**
      *
+     * @param providerTransaction
+     * @return Builder
      */
 
     public TrackingDataBuilder providerTransaction(final String providerTransaction) {
@@ -73,6 +81,8 @@ public class TrackingDataBuilder implements Builder<TrackingData> {
 
     /**
      *  <p>Flag to distinguish if the parcel is on the way to the customer (false) or on the way back (true).</p>
+     * @param isReturn
+     * @return Builder
      */
 
     public TrackingDataBuilder isReturn(final Boolean isReturn) {

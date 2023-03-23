@@ -28,6 +28,8 @@ public class ImageDimensionsBuilder implements Builder<ImageDimensions> {
 
     /**
      *
+     * @param w
+     * @return Builder
      */
 
     public ImageDimensionsBuilder w(final Integer w) {
@@ -37,6 +39,8 @@ public class ImageDimensionsBuilder implements Builder<ImageDimensions> {
 
     /**
      *
+     * @param h
+     * @return Builder
      */
 
     public ImageDimensionsBuilder h(final Integer h) {

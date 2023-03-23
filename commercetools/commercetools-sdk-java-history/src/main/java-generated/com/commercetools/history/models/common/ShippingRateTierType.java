@@ -75,4 +75,5 @@ public interface ShippingRateTierType {
     public static ShippingRateTierType[] values() {
         return ShippingRateTierTypeEnum.values();
     }
+
 }

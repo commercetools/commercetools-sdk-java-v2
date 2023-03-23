@@ -26,6 +26,10 @@ public class ByProjectKeyCustomObjectsRequestBuilder {
         return new ByProjectKeyCustomObjectsPost(apiHttpClient, projectKey, customObjectDraft);
     }
 
+    public ByProjectKeyCustomObjectsPostString post(final String customObjectDraft) {
+        return new ByProjectKeyCustomObjectsPostString(apiHttpClient, projectKey, customObjectDraft);
+    }
+
     public ByProjectKeyCustomObjectsPost post(
             UnaryOperator<com.commercetools.api.models.custom_object.CustomObjectDraftBuilder> op) {
         return post(op.apply(com.commercetools.api.models.custom_object.CustomObjectDraftBuilder.of()).build());

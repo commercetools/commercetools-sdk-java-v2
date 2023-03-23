@@ -29,6 +29,10 @@ public class ByProjectKeyAttributeGroupsKeyByKeyRequestBuilder {
         return new ByProjectKeyAttributeGroupsKeyByKeyPost(apiHttpClient, projectKey, key, attributeGroupUpdate);
     }
 
+    public ByProjectKeyAttributeGroupsKeyByKeyPostString post(final String attributeGroupUpdate) {
+        return new ByProjectKeyAttributeGroupsKeyByKeyPostString(apiHttpClient, projectKey, key, attributeGroupUpdate);
+    }
+
     public ByProjectKeyAttributeGroupsKeyByKeyPost post(
             UnaryOperator<com.commercetools.api.models.attribute_group.AttributeGroupUpdateBuilder> op) {
         return post(op.apply(com.commercetools.api.models.attribute_group.AttributeGroupUpdateBuilder.of()).build());

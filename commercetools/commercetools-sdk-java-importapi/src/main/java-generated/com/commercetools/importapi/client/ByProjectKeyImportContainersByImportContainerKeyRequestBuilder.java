@@ -26,6 +26,11 @@ public class ByProjectKeyImportContainersByImportContainerKeyRequestBuilder {
             importContainerUpdateDraft);
     }
 
+    public ByProjectKeyImportContainersByImportContainerKeyPutString put(final String importContainerUpdateDraft) {
+        return new ByProjectKeyImportContainersByImportContainerKeyPutString(apiHttpClient, projectKey,
+            importContainerKey, importContainerUpdateDraft);
+    }
+
     public ByProjectKeyImportContainersByImportContainerKeyPut put(
             UnaryOperator<com.commercetools.importapi.models.importcontainers.ImportContainerUpdateDraftBuilder> op) {
         return put(op.apply(com.commercetools.importapi.models.importcontainers.ImportContainerUpdateDraftBuilder.of())

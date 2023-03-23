@@ -32,6 +32,8 @@ public class ExtensionPredicateEvaluationFailedErrorBuilder
 
     /**
      *  <p><code>"The compared field $fieldName is not present."</code></p>
+     * @param message
+     * @return Builder
      */
 
     public ExtensionPredicateEvaluationFailedErrorBuilder message(final String message) {
@@ -62,6 +64,7 @@ public class ExtensionPredicateEvaluationFailedErrorBuilder
 
     /**
      *  <p>Details about the API Extension that was involved in the error.</p>
+     * @return Builder
      */
 
     public ExtensionPredicateEvaluationFailedErrorBuilder errorByExtension(
@@ -72,6 +75,8 @@ public class ExtensionPredicateEvaluationFailedErrorBuilder
 
     /**
      *  <p>Details about the API Extension that was involved in the error.</p>
+     * @param errorByExtension
+     * @return Builder
      */
 
     public ExtensionPredicateEvaluationFailedErrorBuilder errorByExtension(

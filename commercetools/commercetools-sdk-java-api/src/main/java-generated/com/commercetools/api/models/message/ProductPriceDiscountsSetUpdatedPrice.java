@@ -35,6 +35,7 @@ public interface ProductPriceDiscountsSetUpdatedPrice {
 
     /**
      *  <p>Unique identifier of the ProductVariant for which the Discount was set.</p>
+     * @return variantId
      */
     @NotNull
     @JsonProperty("variantId")
@@ -42,6 +43,7 @@ public interface ProductPriceDiscountsSetUpdatedPrice {
 
     /**
      *  <p>Key of the ProductVariant for which Discount was set.</p>
+     * @return variantKey
      */
 
     @JsonProperty("variantKey")
@@ -49,6 +51,7 @@ public interface ProductPriceDiscountsSetUpdatedPrice {
 
     /**
      *  <p>SKU of the ProductVariant for which Discount was set.</p>
+     * @return sku
      */
 
     @JsonProperty("sku")
@@ -56,6 +59,7 @@ public interface ProductPriceDiscountsSetUpdatedPrice {
 
     /**
      *  <p>Unique identifier of the Price.</p>
+     * @return priceId
      */
     @NotNull
     @JsonProperty("priceId")
@@ -63,6 +67,7 @@ public interface ProductPriceDiscountsSetUpdatedPrice {
 
     /**
      *  <p>Discounted Price for the ProductVariant for which Discount was set.</p>
+     * @return discounted
      */
     @Valid
     @JsonProperty("discounted")
@@ -70,6 +75,7 @@ public interface ProductPriceDiscountsSetUpdatedPrice {
 
     /**
      *  <p>Whether the update was only applied to the staged ProductProjection.</p>
+     * @return staged
      */
     @NotNull
     @JsonProperty("staged")

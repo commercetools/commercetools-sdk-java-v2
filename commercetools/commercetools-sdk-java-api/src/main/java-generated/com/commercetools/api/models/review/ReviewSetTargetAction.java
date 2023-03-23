@@ -34,6 +34,7 @@ public interface ReviewSetTargetAction extends ReviewUpdateAction {
 
     /**
      *  <p>Value to set, specified as ProductResourceIdentifier or ChannelResourceIdentifier, respectively. If empty, any existing value will be removed.</p>
+     * @return target
      */
     @NotNull
     @JsonProperty("target")

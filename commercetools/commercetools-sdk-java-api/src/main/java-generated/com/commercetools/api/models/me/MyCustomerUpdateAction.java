@@ -55,6 +55,7 @@ public interface MyCustomerUpdateAction
 
     /**
      *
+     * @return action
      */
     @NotNull
     @JsonProperty("action")

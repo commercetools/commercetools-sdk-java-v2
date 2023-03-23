@@ -32,6 +32,7 @@ public interface ParcelChangeValue {
 
     /**
      *
+     * @return id
      */
     @NotNull
     @JsonProperty("id")
@@ -39,6 +40,7 @@ public interface ParcelChangeValue {
 
     /**
      *
+     * @return createdAt
      */
     @NotNull
     @JsonProperty("createdAt")

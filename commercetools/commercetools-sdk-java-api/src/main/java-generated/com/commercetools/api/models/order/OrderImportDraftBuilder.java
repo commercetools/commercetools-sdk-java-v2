@@ -100,6 +100,8 @@ public class OrderImportDraftBuilder implements Builder<OrderImportDraft> {
 
     /**
      *  <p>String that unique identifies an order. It can be used to create more human-readable (in contrast to ID) identifier for the order. It should be unique within a project.</p>
+     * @param orderNumber
+     * @return Builder
      */
 
     public OrderImportDraftBuilder orderNumber(@Nullable final String orderNumber) {
@@ -109,6 +111,8 @@ public class OrderImportDraftBuilder implements Builder<OrderImportDraft> {
 
     /**
      *  <p>If given the customer with that ID must exist in the project.</p>
+     * @param customerId
+     * @return Builder
      */
 
     public OrderImportDraftBuilder customerId(@Nullable final String customerId) {
@@ -118,6 +122,8 @@ public class OrderImportDraftBuilder implements Builder<OrderImportDraft> {
 
     /**
      *  <p>The customer email can be used when no check against existing Customers is desired during order import.</p>
+     * @param customerEmail
+     * @return Builder
      */
 
     public OrderImportDraftBuilder customerEmail(@Nullable final String customerEmail) {
@@ -127,6 +133,8 @@ public class OrderImportDraftBuilder implements Builder<OrderImportDraft> {
 
     /**
      *  <p>If not given <code>customLineItems</code> must not be empty.</p>
+     * @param lineItems
+     * @return Builder
      */
 
     public OrderImportDraftBuilder lineItems(
@@ -137,6 +145,8 @@ public class OrderImportDraftBuilder implements Builder<OrderImportDraft> {
 
     /**
      *  <p>If not given <code>customLineItems</code> must not be empty.</p>
+     * @param lineItems
+     * @return Builder
      */
 
     public OrderImportDraftBuilder lineItems(
@@ -147,6 +157,8 @@ public class OrderImportDraftBuilder implements Builder<OrderImportDraft> {
 
     /**
      *  <p>If not given <code>customLineItems</code> must not be empty.</p>
+     * @param lineItems
+     * @return Builder
      */
 
     public OrderImportDraftBuilder plusLineItems(
@@ -160,6 +172,7 @@ public class OrderImportDraftBuilder implements Builder<OrderImportDraft> {
 
     /**
      *  <p>If not given <code>customLineItems</code> must not be empty.</p>
+     * @return Builder
      */
 
     public OrderImportDraftBuilder plusLineItems(
@@ -173,6 +186,7 @@ public class OrderImportDraftBuilder implements Builder<OrderImportDraft> {
 
     /**
      *  <p>If not given <code>customLineItems</code> must not be empty.</p>
+     * @return Builder
      */
 
     public OrderImportDraftBuilder withLineItems(
@@ -184,6 +198,8 @@ public class OrderImportDraftBuilder implements Builder<OrderImportDraft> {
 
     /**
      *  <p>If not given <code>lineItems</code> must not be empty.</p>
+     * @param customLineItems
+     * @return Builder
      */
 
     public OrderImportDraftBuilder customLineItems(
@@ -194,6 +210,8 @@ public class OrderImportDraftBuilder implements Builder<OrderImportDraft> {
 
     /**
      *  <p>If not given <code>lineItems</code> must not be empty.</p>
+     * @param customLineItems
+     * @return Builder
      */
 
     public OrderImportDraftBuilder customLineItems(
@@ -204,6 +222,8 @@ public class OrderImportDraftBuilder implements Builder<OrderImportDraft> {
 
     /**
      *  <p>If not given <code>lineItems</code> must not be empty.</p>
+     * @param customLineItems
+     * @return Builder
      */
 
     public OrderImportDraftBuilder plusCustomLineItems(
@@ -217,6 +237,7 @@ public class OrderImportDraftBuilder implements Builder<OrderImportDraft> {
 
     /**
      *  <p>If not given <code>lineItems</code> must not be empty.</p>
+     * @return Builder
      */
 
     public OrderImportDraftBuilder plusCustomLineItems(
@@ -231,6 +252,7 @@ public class OrderImportDraftBuilder implements Builder<OrderImportDraft> {
 
     /**
      *  <p>If not given <code>lineItems</code> must not be empty.</p>
+     * @return Builder
      */
 
     public OrderImportDraftBuilder withCustomLineItems(
@@ -243,6 +265,7 @@ public class OrderImportDraftBuilder implements Builder<OrderImportDraft> {
 
     /**
      *
+     * @return Builder
      */
 
     public OrderImportDraftBuilder totalPrice(
@@ -253,6 +276,8 @@ public class OrderImportDraftBuilder implements Builder<OrderImportDraft> {
 
     /**
      *
+     * @param totalPrice
+     * @return Builder
      */
 
     public OrderImportDraftBuilder totalPrice(final com.commercetools.api.models.common.Money totalPrice) {
@@ -262,6 +287,7 @@ public class OrderImportDraftBuilder implements Builder<OrderImportDraft> {
 
     /**
      *  <p>Order Import does not support calculation of taxes. When setting the draft the taxedPrice is to be provided.</p>
+     * @return Builder
      */
 
     public OrderImportDraftBuilder taxedPrice(
@@ -272,6 +298,8 @@ public class OrderImportDraftBuilder implements Builder<OrderImportDraft> {
 
     /**
      *  <p>Order Import does not support calculation of taxes. When setting the draft the taxedPrice is to be provided.</p>
+     * @param taxedPrice
+     * @return Builder
      */
 
     public OrderImportDraftBuilder taxedPrice(
@@ -282,6 +310,7 @@ public class OrderImportDraftBuilder implements Builder<OrderImportDraft> {
 
     /**
      *
+     * @return Builder
      */
 
     public OrderImportDraftBuilder shippingAddress(
@@ -292,6 +321,8 @@ public class OrderImportDraftBuilder implements Builder<OrderImportDraft> {
 
     /**
      *
+     * @param shippingAddress
+     * @return Builder
      */
 
     public OrderImportDraftBuilder shippingAddress(
@@ -302,6 +333,7 @@ public class OrderImportDraftBuilder implements Builder<OrderImportDraft> {
 
     /**
      *
+     * @return Builder
      */
 
     public OrderImportDraftBuilder billingAddress(
@@ -312,6 +344,8 @@ public class OrderImportDraftBuilder implements Builder<OrderImportDraft> {
 
     /**
      *
+     * @param billingAddress
+     * @return Builder
      */
 
     public OrderImportDraftBuilder billingAddress(
@@ -322,6 +356,7 @@ public class OrderImportDraftBuilder implements Builder<OrderImportDraft> {
 
     /**
      *  <p>Set when the customer is set and the customer is a member of a customer group. Used for product variant price selection.</p>
+     * @return Builder
      */
 
     public OrderImportDraftBuilder customerGroup(
@@ -334,6 +369,8 @@ public class OrderImportDraftBuilder implements Builder<OrderImportDraft> {
 
     /**
      *  <p>Set when the customer is set and the customer is a member of a customer group. Used for product variant price selection.</p>
+     * @param customerGroup
+     * @return Builder
      */
 
     public OrderImportDraftBuilder customerGroup(
@@ -344,6 +381,8 @@ public class OrderImportDraftBuilder implements Builder<OrderImportDraft> {
 
     /**
      *  <p>A two-digit country code as per ISO 3166-1 alpha-2. Used for product variant price selection.</p>
+     * @param country
+     * @return Builder
      */
 
     public OrderImportDraftBuilder country(@Nullable final String country) {
@@ -353,6 +392,8 @@ public class OrderImportDraftBuilder implements Builder<OrderImportDraft> {
 
     /**
      *  <p>If not given the <code>Open</code> state will be assigned by default.</p>
+     * @param orderState
+     * @return Builder
      */
 
     public OrderImportDraftBuilder orderState(
@@ -363,6 +404,7 @@ public class OrderImportDraftBuilder implements Builder<OrderImportDraft> {
 
     /**
      *  <p>This reference can point to a state in a custom workflow.</p>
+     * @return Builder
      */
 
     public OrderImportDraftBuilder state(
@@ -373,6 +415,8 @@ public class OrderImportDraftBuilder implements Builder<OrderImportDraft> {
 
     /**
      *  <p>This reference can point to a state in a custom workflow.</p>
+     * @param state
+     * @return Builder
      */
 
     public OrderImportDraftBuilder state(@Nullable final com.commercetools.api.models.state.StateReference state) {
@@ -382,6 +426,8 @@ public class OrderImportDraftBuilder implements Builder<OrderImportDraft> {
 
     /**
      *
+     * @param shipmentState
+     * @return Builder
      */
 
     public OrderImportDraftBuilder shipmentState(
@@ -392,6 +438,8 @@ public class OrderImportDraftBuilder implements Builder<OrderImportDraft> {
 
     /**
      *
+     * @param paymentState
+     * @return Builder
      */
 
     public OrderImportDraftBuilder paymentState(
@@ -402,6 +450,7 @@ public class OrderImportDraftBuilder implements Builder<OrderImportDraft> {
 
     /**
      *  <p>Set if the ShippingMethod is set.</p>
+     * @return Builder
      */
 
     public OrderImportDraftBuilder shippingInfo(
@@ -413,6 +462,8 @@ public class OrderImportDraftBuilder implements Builder<OrderImportDraft> {
 
     /**
      *  <p>Set if the ShippingMethod is set.</p>
+     * @param shippingInfo
+     * @return Builder
      */
 
     public OrderImportDraftBuilder shippingInfo(
@@ -423,6 +474,7 @@ public class OrderImportDraftBuilder implements Builder<OrderImportDraft> {
 
     /**
      *
+     * @return Builder
      */
 
     public OrderImportDraftBuilder paymentInfo(
@@ -433,6 +485,8 @@ public class OrderImportDraftBuilder implements Builder<OrderImportDraft> {
 
     /**
      *
+     * @param paymentInfo
+     * @return Builder
      */
 
     public OrderImportDraftBuilder paymentInfo(
@@ -443,6 +497,8 @@ public class OrderImportDraftBuilder implements Builder<OrderImportDraft> {
 
     /**
      *
+     * @param completedAt
+     * @return Builder
      */
 
     public OrderImportDraftBuilder completedAt(@Nullable final java.time.ZonedDateTime completedAt) {
@@ -452,6 +508,7 @@ public class OrderImportDraftBuilder implements Builder<OrderImportDraft> {
 
     /**
      *  <p>The custom fields.</p>
+     * @return Builder
      */
 
     public OrderImportDraftBuilder custom(
@@ -462,6 +519,8 @@ public class OrderImportDraftBuilder implements Builder<OrderImportDraft> {
 
     /**
      *  <p>The custom fields.</p>
+     * @param custom
+     * @return Builder
      */
 
     public OrderImportDraftBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFieldsDraft custom) {
@@ -471,6 +530,8 @@ public class OrderImportDraftBuilder implements Builder<OrderImportDraft> {
 
     /**
      *  <p>If not given the mode <code>None</code> will be assigned by default.</p>
+     * @param inventoryMode
+     * @return Builder
      */
 
     public OrderImportDraftBuilder inventoryMode(
@@ -481,6 +542,8 @@ public class OrderImportDraftBuilder implements Builder<OrderImportDraft> {
 
     /**
      *  <p>If not given the tax rounding mode <code>HalfEven</code> will be assigned by default.</p>
+     * @param taxRoundingMode
+     * @return Builder
      */
 
     public OrderImportDraftBuilder taxRoundingMode(
@@ -491,6 +554,8 @@ public class OrderImportDraftBuilder implements Builder<OrderImportDraft> {
 
     /**
      *  <p>Contains addresses for orders with multiple shipping addresses.</p>
+     * @param itemShippingAddresses
+     * @return Builder
      */
 
     public OrderImportDraftBuilder itemShippingAddresses(
@@ -501,6 +566,8 @@ public class OrderImportDraftBuilder implements Builder<OrderImportDraft> {
 
     /**
      *  <p>Contains addresses for orders with multiple shipping addresses.</p>
+     * @param itemShippingAddresses
+     * @return Builder
      */
 
     public OrderImportDraftBuilder itemShippingAddresses(
@@ -511,6 +578,8 @@ public class OrderImportDraftBuilder implements Builder<OrderImportDraft> {
 
     /**
      *  <p>Contains addresses for orders with multiple shipping addresses.</p>
+     * @param itemShippingAddresses
+     * @return Builder
      */
 
     public OrderImportDraftBuilder plusItemShippingAddresses(
@@ -524,6 +593,7 @@ public class OrderImportDraftBuilder implements Builder<OrderImportDraft> {
 
     /**
      *  <p>Contains addresses for orders with multiple shipping addresses.</p>
+     * @return Builder
      */
 
     public OrderImportDraftBuilder plusItemShippingAddresses(
@@ -538,6 +608,7 @@ public class OrderImportDraftBuilder implements Builder<OrderImportDraft> {
 
     /**
      *  <p>Contains addresses for orders with multiple shipping addresses.</p>
+     * @return Builder
      */
 
     public OrderImportDraftBuilder withItemShippingAddresses(
@@ -550,6 +621,7 @@ public class OrderImportDraftBuilder implements Builder<OrderImportDraft> {
 
     /**
      *  <p>The Business Unit the Cart belongs to.</p>
+     * @return Builder
      */
 
     public OrderImportDraftBuilder businessUnit(
@@ -562,6 +634,8 @@ public class OrderImportDraftBuilder implements Builder<OrderImportDraft> {
 
     /**
      *  <p>The Business Unit the Cart belongs to.</p>
+     * @param businessUnit
+     * @return Builder
      */
 
     public OrderImportDraftBuilder businessUnit(
@@ -572,6 +646,7 @@ public class OrderImportDraftBuilder implements Builder<OrderImportDraft> {
 
     /**
      *
+     * @return Builder
      */
 
     public OrderImportDraftBuilder store(
@@ -582,6 +657,8 @@ public class OrderImportDraftBuilder implements Builder<OrderImportDraft> {
 
     /**
      *
+     * @param store
+     * @return Builder
      */
 
     public OrderImportDraftBuilder store(
@@ -592,6 +669,8 @@ public class OrderImportDraftBuilder implements Builder<OrderImportDraft> {
 
     /**
      *  <p>The default origin is <code>Customer</code>.</p>
+     * @param origin
+     * @return Builder
      */
 
     public OrderImportDraftBuilder origin(@Nullable final com.commercetools.api.models.cart.CartOrigin origin) {

@@ -33,6 +33,7 @@ public interface ProjectChangeCountriesAction extends ProjectUpdateAction {
 
     /**
      *  <p>New value to set. Must not be empty.</p>
+     * @return countries
      */
     @NotNull
     @JsonProperty("countries")

@@ -30,6 +30,7 @@ public class DiscountedLineItemPriceDraftBuilder implements Builder<DiscountedLi
     /**
      *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
      *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
+     * @return Builder
      */
 
     public DiscountedLineItemPriceDraftBuilder value(
@@ -41,6 +42,8 @@ public class DiscountedLineItemPriceDraftBuilder implements Builder<DiscountedLi
     /**
      *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
      *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
+     * @param value
+     * @return Builder
      */
 
     public DiscountedLineItemPriceDraftBuilder value(final com.commercetools.api.models.common.Money value) {
@@ -50,6 +53,8 @@ public class DiscountedLineItemPriceDraftBuilder implements Builder<DiscountedLi
 
     /**
      *
+     * @param includedDiscounts
+     * @return Builder
      */
 
     public DiscountedLineItemPriceDraftBuilder includedDiscounts(
@@ -60,6 +65,8 @@ public class DiscountedLineItemPriceDraftBuilder implements Builder<DiscountedLi
 
     /**
      *
+     * @param includedDiscounts
+     * @return Builder
      */
 
     public DiscountedLineItemPriceDraftBuilder includedDiscounts(
@@ -70,6 +77,8 @@ public class DiscountedLineItemPriceDraftBuilder implements Builder<DiscountedLi
 
     /**
      *
+     * @param includedDiscounts
+     * @return Builder
      */
 
     public DiscountedLineItemPriceDraftBuilder plusIncludedDiscounts(
@@ -83,6 +92,7 @@ public class DiscountedLineItemPriceDraftBuilder implements Builder<DiscountedLi
 
     /**
      *
+     * @return Builder
      */
 
     public DiscountedLineItemPriceDraftBuilder plusIncludedDiscounts(
@@ -97,6 +107,7 @@ public class DiscountedLineItemPriceDraftBuilder implements Builder<DiscountedLi
 
     /**
      *
+     * @return Builder
      */
 
     public DiscountedLineItemPriceDraftBuilder withIncludedDiscounts(

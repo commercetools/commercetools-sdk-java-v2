@@ -34,6 +34,7 @@ public interface ExtensionInput {
 
     /**
      *  <p><code>Create</code> or <code>Update</code> request.</p>
+     * @return action
      */
     @NotNull
     @JsonProperty("action")
@@ -41,6 +42,7 @@ public interface ExtensionInput {
 
     /**
      *  <p>Expanded reference to the resource that triggered the Extension.</p>
+     * @return resource
      */
     @NotNull
     @Valid

@@ -29,6 +29,8 @@ public class StagedOrderSetDeliveryItemsActionBuilder implements Builder<StagedO
 
     /**
      *
+     * @param deliveryId
+     * @return Builder
      */
 
     public StagedOrderSetDeliveryItemsActionBuilder deliveryId(final String deliveryId) {
@@ -38,6 +40,8 @@ public class StagedOrderSetDeliveryItemsActionBuilder implements Builder<StagedO
 
     /**
      *
+     * @param items
+     * @return Builder
      */
 
     public StagedOrderSetDeliveryItemsActionBuilder items(
@@ -48,6 +52,8 @@ public class StagedOrderSetDeliveryItemsActionBuilder implements Builder<StagedO
 
     /**
      *
+     * @param items
+     * @return Builder
      */
 
     public StagedOrderSetDeliveryItemsActionBuilder items(
@@ -58,6 +64,8 @@ public class StagedOrderSetDeliveryItemsActionBuilder implements Builder<StagedO
 
     /**
      *
+     * @param items
+     * @return Builder
      */
 
     public StagedOrderSetDeliveryItemsActionBuilder plusItems(
@@ -71,6 +79,7 @@ public class StagedOrderSetDeliveryItemsActionBuilder implements Builder<StagedO
 
     /**
      *
+     * @return Builder
      */
 
     public StagedOrderSetDeliveryItemsActionBuilder plusItems(
@@ -84,6 +93,7 @@ public class StagedOrderSetDeliveryItemsActionBuilder implements Builder<StagedO
 
     /**
      *
+     * @return Builder
      */
 
     public StagedOrderSetDeliveryItemsActionBuilder withItems(

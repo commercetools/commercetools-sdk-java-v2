@@ -32,6 +32,7 @@ public interface Location {
 
     /**
      *  <p>Two-digit country code as per ISO 3166-1 alpha-2.</p>
+     * @return country
      */
     @NotNull
     @JsonProperty("country")
@@ -39,6 +40,7 @@ public interface Location {
 
     /**
      *
+     * @return state
      */
     @NotNull
     @JsonProperty("state")

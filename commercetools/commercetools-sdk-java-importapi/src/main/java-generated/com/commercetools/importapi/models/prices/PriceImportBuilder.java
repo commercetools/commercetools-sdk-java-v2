@@ -64,6 +64,8 @@ public class PriceImportBuilder implements Builder<PriceImport> {
 
     /**
      *  <p>User-defined unique identifier for the Embedded Price.</p>
+     * @param key
+     * @return Builder
      */
 
     public PriceImportBuilder key(final String key) {
@@ -73,6 +75,8 @@ public class PriceImportBuilder implements Builder<PriceImport> {
 
     /**
      *  <p>Maps to <code>Price.value</code>.</p>
+     * @param value
+     * @return Builder
      */
 
     public PriceImportBuilder value(final com.commercetools.importapi.models.common.TypedMoney value) {
@@ -82,6 +86,7 @@ public class PriceImportBuilder implements Builder<PriceImport> {
 
     /**
      *  <p>Maps to <code>Price.value</code>.</p>
+     * @return Builder
      */
 
     public PriceImportBuilder value(
@@ -92,6 +97,8 @@ public class PriceImportBuilder implements Builder<PriceImport> {
 
     /**
      *  <p>Maps to <code>Price.county</code>.</p>
+     * @param country
+     * @return Builder
      */
 
     public PriceImportBuilder country(@Nullable final String country) {
@@ -101,6 +108,8 @@ public class PriceImportBuilder implements Builder<PriceImport> {
 
     /**
      *  <p>Maps to <code>Price.validFrom</code>.</p>
+     * @param validFrom
+     * @return Builder
      */
 
     public PriceImportBuilder validFrom(@Nullable final java.time.ZonedDateTime validFrom) {
@@ -110,6 +119,8 @@ public class PriceImportBuilder implements Builder<PriceImport> {
 
     /**
      *  <p>Maps to <code>Price.validUntil</code>.</p>
+     * @param validUntil
+     * @return Builder
      */
 
     public PriceImportBuilder validUntil(@Nullable final java.time.ZonedDateTime validUntil) {
@@ -119,6 +130,7 @@ public class PriceImportBuilder implements Builder<PriceImport> {
 
     /**
      *  <p>The Reference to the CustomerGroup with which the Price is associated. If referenced CustomerGroup does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary CustomerGroup is created.</p>
+     * @return Builder
      */
 
     public PriceImportBuilder customerGroup(
@@ -131,6 +143,8 @@ public class PriceImportBuilder implements Builder<PriceImport> {
 
     /**
      *  <p>The Reference to the CustomerGroup with which the Price is associated. If referenced CustomerGroup does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary CustomerGroup is created.</p>
+     * @param customerGroup
+     * @return Builder
      */
 
     public PriceImportBuilder customerGroup(
@@ -141,6 +155,7 @@ public class PriceImportBuilder implements Builder<PriceImport> {
 
     /**
      *  <p>The Reference to the Channel with which the Price is associated. If referenced Channel does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Channel is created.</p>
+     * @return Builder
      */
 
     public PriceImportBuilder channel(
@@ -151,6 +166,8 @@ public class PriceImportBuilder implements Builder<PriceImport> {
 
     /**
      *  <p>The Reference to the Channel with which the Price is associated. If referenced Channel does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Channel is created.</p>
+     * @param channel
+     * @return Builder
      */
 
     public PriceImportBuilder channel(
@@ -161,6 +178,7 @@ public class PriceImportBuilder implements Builder<PriceImport> {
 
     /**
      *  <p>Sets a discounted price from an external service.</p>
+     * @return Builder
      */
 
     public PriceImportBuilder discounted(
@@ -171,6 +189,8 @@ public class PriceImportBuilder implements Builder<PriceImport> {
 
     /**
      *  <p>Sets a discounted price from an external service.</p>
+     * @param discounted
+     * @return Builder
      */
 
     public PriceImportBuilder discounted(
@@ -181,6 +201,8 @@ public class PriceImportBuilder implements Builder<PriceImport> {
 
     /**
      *  <p>Only the Embedded Price updates will be published to <code>staged</code> and <code>current</code> projection.</p>
+     * @param publish
+     * @return Builder
      */
 
     public PriceImportBuilder publish(@Nullable final Boolean publish) {
@@ -190,6 +212,8 @@ public class PriceImportBuilder implements Builder<PriceImport> {
 
     /**
      *  <p>The tiered prices for this price.</p>
+     * @param tiers
+     * @return Builder
      */
 
     public PriceImportBuilder tiers(@Nullable final com.commercetools.importapi.models.common.PriceTier... tiers) {
@@ -199,6 +223,8 @@ public class PriceImportBuilder implements Builder<PriceImport> {
 
     /**
      *  <p>The tiered prices for this price.</p>
+     * @param tiers
+     * @return Builder
      */
 
     public PriceImportBuilder tiers(
@@ -209,6 +235,8 @@ public class PriceImportBuilder implements Builder<PriceImport> {
 
     /**
      *  <p>The tiered prices for this price.</p>
+     * @param tiers
+     * @return Builder
      */
 
     public PriceImportBuilder plusTiers(@Nullable final com.commercetools.importapi.models.common.PriceTier... tiers) {
@@ -221,6 +249,7 @@ public class PriceImportBuilder implements Builder<PriceImport> {
 
     /**
      *  <p>The tiered prices for this price.</p>
+     * @return Builder
      */
 
     public PriceImportBuilder plusTiers(
@@ -234,6 +263,7 @@ public class PriceImportBuilder implements Builder<PriceImport> {
 
     /**
      *  <p>The tiered prices for this price.</p>
+     * @return Builder
      */
 
     public PriceImportBuilder withTiers(
@@ -245,6 +275,7 @@ public class PriceImportBuilder implements Builder<PriceImport> {
 
     /**
      *  <p>The custom fields for this price.</p>
+     * @return Builder
      */
 
     public PriceImportBuilder custom(
@@ -255,6 +286,8 @@ public class PriceImportBuilder implements Builder<PriceImport> {
 
     /**
      *  <p>The custom fields for this price.</p>
+     * @param custom
+     * @return Builder
      */
 
     public PriceImportBuilder custom(@Nullable final com.commercetools.importapi.models.customfields.Custom custom) {
@@ -264,6 +297,7 @@ public class PriceImportBuilder implements Builder<PriceImport> {
 
     /**
      *  <p>The ProductVariant in which this Embedded Price is contained. The Reference to the ProductVariant with which the Price is associated. If referenced ProductVariant does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary ProductVariant is created.</p>
+     * @return Builder
      */
 
     public PriceImportBuilder productVariant(
@@ -276,6 +310,8 @@ public class PriceImportBuilder implements Builder<PriceImport> {
 
     /**
      *  <p>The ProductVariant in which this Embedded Price is contained. The Reference to the ProductVariant with which the Price is associated. If referenced ProductVariant does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary ProductVariant is created.</p>
+     * @param productVariant
+     * @return Builder
      */
 
     public PriceImportBuilder productVariant(
@@ -286,6 +322,7 @@ public class PriceImportBuilder implements Builder<PriceImport> {
 
     /**
      *  <p>The Product in which the Product Variant containing this Embedded Price is contained. Maps to <code>ProductVariant.product</code>. The Reference to the Product with which the Price is associated. If referenced Product does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Product is created.</p>
+     * @return Builder
      */
 
     public PriceImportBuilder product(
@@ -296,6 +333,8 @@ public class PriceImportBuilder implements Builder<PriceImport> {
 
     /**
      *  <p>The Product in which the Product Variant containing this Embedded Price is contained. Maps to <code>ProductVariant.product</code>. The Reference to the Product with which the Price is associated. If referenced Product does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Product is created.</p>
+     * @param product
+     * @return Builder
      */
 
     public PriceImportBuilder product(final com.commercetools.importapi.models.common.ProductKeyReference product) {

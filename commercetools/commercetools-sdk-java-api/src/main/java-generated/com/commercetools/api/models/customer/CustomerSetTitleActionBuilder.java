@@ -27,6 +27,8 @@ public class CustomerSetTitleActionBuilder implements Builder<CustomerSetTitleAc
 
     /**
      *  <p>Value to set. If empty, any existing value is removed.</p>
+     * @param title
+     * @return Builder
      */
 
     public CustomerSetTitleActionBuilder title(@Nullable final String title) {

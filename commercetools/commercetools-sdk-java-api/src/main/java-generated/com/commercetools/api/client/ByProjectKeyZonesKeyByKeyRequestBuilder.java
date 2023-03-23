@@ -28,6 +28,10 @@ public class ByProjectKeyZonesKeyByKeyRequestBuilder {
         return new ByProjectKeyZonesKeyByKeyPost(apiHttpClient, projectKey, key, zoneUpdate);
     }
 
+    public ByProjectKeyZonesKeyByKeyPostString post(final String zoneUpdate) {
+        return new ByProjectKeyZonesKeyByKeyPostString(apiHttpClient, projectKey, key, zoneUpdate);
+    }
+
     public ByProjectKeyZonesKeyByKeyPost post(UnaryOperator<com.commercetools.api.models.zone.ZoneUpdateBuilder> op) {
         return post(op.apply(com.commercetools.api.models.zone.ZoneUpdateBuilder.of()).build());
     }

@@ -43,6 +43,7 @@ public interface OrderLineItemRemovedMessagePayload extends OrderMessagePayload 
 
     /**
      *  <p>Unique identifier of the Line Item.</p>
+     * @return lineItemId
      */
     @NotNull
     @JsonProperty("lineItemId")
@@ -50,6 +51,7 @@ public interface OrderLineItemRemovedMessagePayload extends OrderMessagePayload 
 
     /**
      *  <p>Quantity of Line Items that were removed during the Remove Line Item update action.</p>
+     * @return removedQuantity
      */
     @NotNull
     @JsonProperty("removedQuantity")
@@ -57,6 +59,7 @@ public interface OrderLineItemRemovedMessagePayload extends OrderMessagePayload 
 
     /**
      *  <p>Line Item quantity after the Remove Line Item update action.</p>
+     * @return newQuantity
      */
     @NotNull
     @JsonProperty("newQuantity")
@@ -64,6 +67,7 @@ public interface OrderLineItemRemovedMessagePayload extends OrderMessagePayload 
 
     /**
      *  <p>ItemStates after the Remove Line Item update action.</p>
+     * @return newState
      */
     @NotNull
     @Valid
@@ -72,6 +76,7 @@ public interface OrderLineItemRemovedMessagePayload extends OrderMessagePayload 
 
     /**
      *  <p><code>totalPrice</code> of the Order after the Remove Line Item update action.</p>
+     * @return newTotalPrice
      */
     @NotNull
     @Valid
@@ -80,6 +85,7 @@ public interface OrderLineItemRemovedMessagePayload extends OrderMessagePayload 
 
     /**
      *  <p>TaxedItemPrice of the Order after the Remove Line Item update action.</p>
+     * @return newTaxedPrice
      */
     @Valid
     @JsonProperty("newTaxedPrice")
@@ -87,6 +93,7 @@ public interface OrderLineItemRemovedMessagePayload extends OrderMessagePayload 
 
     /**
      *  <p>Price of the Order after the Remove Line Item update action.</p>
+     * @return newPrice
      */
     @Valid
     @JsonProperty("newPrice")
@@ -94,6 +101,7 @@ public interface OrderLineItemRemovedMessagePayload extends OrderMessagePayload 
 
     /**
      *  <p>Shipping Details of the Order after the Remove Line Item update action.</p>
+     * @return newShippingDetail
      */
     @Valid
     @JsonProperty("newShippingDetail")

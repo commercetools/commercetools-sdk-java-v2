@@ -38,6 +38,8 @@ public class AssetBuilder implements Builder<Asset> {
 
     /**
      *
+     * @param id
+     * @return Builder
      */
 
     public AssetBuilder id(final String id) {
@@ -47,6 +49,7 @@ public class AssetBuilder implements Builder<Asset> {
 
     /**
      *
+     * @return Builder
      */
 
     public AssetBuilder name(
@@ -57,6 +60,8 @@ public class AssetBuilder implements Builder<Asset> {
 
     /**
      *
+     * @param name
+     * @return Builder
      */
 
     public AssetBuilder name(final com.commercetools.history.models.common.LocalizedString name) {
@@ -66,6 +71,7 @@ public class AssetBuilder implements Builder<Asset> {
 
     /**
      *
+     * @return Builder
      */
 
     public AssetBuilder description(
@@ -76,6 +82,8 @@ public class AssetBuilder implements Builder<Asset> {
 
     /**
      *
+     * @param description
+     * @return Builder
      */
 
     public AssetBuilder description(final com.commercetools.history.models.common.LocalizedString description) {
@@ -85,6 +93,7 @@ public class AssetBuilder implements Builder<Asset> {
 
     /**
      *
+     * @return Builder
      */
 
     public AssetBuilder custom(
@@ -95,6 +104,8 @@ public class AssetBuilder implements Builder<Asset> {
 
     /**
      *
+     * @param custom
+     * @return Builder
      */
 
     public AssetBuilder custom(final com.commercetools.history.models.common.CustomFields custom) {
@@ -104,6 +115,8 @@ public class AssetBuilder implements Builder<Asset> {
 
     /**
      *
+     * @param key
+     * @return Builder
      */
 
     public AssetBuilder key(final String key) {

@@ -37,6 +37,7 @@ public interface OrderEditApplied extends OrderEditResult {
 
     /**
      *
+     * @return appliedAt
      */
     @NotNull
     @JsonProperty("appliedAt")
@@ -44,6 +45,7 @@ public interface OrderEditApplied extends OrderEditResult {
 
     /**
      *
+     * @return excerptBeforeEdit
      */
     @NotNull
     @Valid
@@ -52,6 +54,7 @@ public interface OrderEditApplied extends OrderEditResult {
 
     /**
      *
+     * @return excerptAfterEdit
      */
     @NotNull
     @Valid

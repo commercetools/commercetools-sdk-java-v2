@@ -33,6 +33,10 @@ public class ByProjectKeyProductTypesByIDRequestBuilder {
         return new ByProjectKeyProductTypesByIDPost(apiHttpClient, projectKey, ID, productTypeUpdate);
     }
 
+    public ByProjectKeyProductTypesByIDPostString post(final String productTypeUpdate) {
+        return new ByProjectKeyProductTypesByIDPostString(apiHttpClient, projectKey, ID, productTypeUpdate);
+    }
+
     public ByProjectKeyProductTypesByIDPost post(
             UnaryOperator<com.commercetools.api.models.product_type.ProductTypeUpdateBuilder> op) {
         return post(op.apply(com.commercetools.api.models.product_type.ProductTypeUpdateBuilder.of()).build());

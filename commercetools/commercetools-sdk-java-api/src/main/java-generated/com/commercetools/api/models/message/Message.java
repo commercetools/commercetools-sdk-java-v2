@@ -146,7 +146,9 @@ import io.vrap.rmf.base.client.utils.Generated;
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.ProductSelectionCreatedMessageImpl.class, name = ProductSelectionCreatedMessage.PRODUCT_SELECTION_CREATED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.ProductSelectionDeletedMessageImpl.class, name = ProductSelectionDeletedMessage.PRODUCT_SELECTION_DELETED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.ProductSelectionProductAddedMessageImpl.class, name = ProductSelectionProductAddedMessage.PRODUCT_SELECTION_PRODUCT_ADDED),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.message.ProductSelectionProductExcludedMessageImpl.class, name = ProductSelectionProductExcludedMessage.PRODUCT_SELECTION_PRODUCT_EXCLUDED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.ProductSelectionProductRemovedMessageImpl.class, name = ProductSelectionProductRemovedMessage.PRODUCT_SELECTION_PRODUCT_REMOVED),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.message.ProductSelectionVariantExclusionChangedMessageImpl.class, name = ProductSelectionVariantExclusionChangedMessage.PRODUCT_SELECTION_VARIANT_EXCLUSION_CHANGED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.ProductSelectionVariantSelectionChangedMessageImpl.class, name = ProductSelectionVariantSelectionChangedMessage.PRODUCT_SELECTION_VARIANT_SELECTION_CHANGED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.ProductSlugChangedMessageImpl.class, name = ProductSlugChangedMessage.PRODUCT_SLUG_CHANGED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.ProductStateTransitionMessageImpl.class, name = ProductStateTransitionMessage.PRODUCT_STATE_TRANSITION),
@@ -195,6 +197,7 @@ public interface Message extends BaseResource, com.commercetools.api.models.Doma
 
     /**
      *  <p>Unique identifier of the Message. Can be used to track which Messages have been processed.</p>
+     * @return id
      */
     @NotNull
     @JsonProperty("id")
@@ -202,6 +205,7 @@ public interface Message extends BaseResource, com.commercetools.api.models.Doma
 
     /**
      *  <p>Version of a resource. In case of Messages, this is always <code>1</code>.</p>
+     * @return version
      */
     @NotNull
     @JsonProperty("version")
@@ -209,6 +213,7 @@ public interface Message extends BaseResource, com.commercetools.api.models.Doma
 
     /**
      *  <p>Date and time (UTC) the Message was generated.</p>
+     * @return createdAt
      */
     @NotNull
     @JsonProperty("createdAt")
@@ -216,6 +221,7 @@ public interface Message extends BaseResource, com.commercetools.api.models.Doma
 
     /**
      *  <p>Value of <code>createdAt</code>.</p>
+     * @return lastModifiedAt
      */
     @NotNull
     @JsonProperty("lastModifiedAt")
@@ -223,6 +229,7 @@ public interface Message extends BaseResource, com.commercetools.api.models.Doma
 
     /**
      *  <p>Value of <code>createdBy</code>.</p>
+     * @return lastModifiedBy
      */
     @Valid
     @JsonProperty("lastModifiedBy")
@@ -230,6 +237,7 @@ public interface Message extends BaseResource, com.commercetools.api.models.Doma
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @return createdBy
      */
     @Valid
     @JsonProperty("createdBy")
@@ -237,6 +245,7 @@ public interface Message extends BaseResource, com.commercetools.api.models.Doma
 
     /**
      *  <p>Message number in relation to other Messages for a given resource. The <code>sequenceNumber</code> of the next Message for the resource is the successor of the <code>sequenceNumber</code> of the current Message. Meaning, the <code>sequenceNumber</code> of the next Message equals the <code>sequenceNumber</code> of the current Message + 1. <code>sequenceNumber</code> can be used to ensure that Messages are processed in the correct order for a particular resource.</p>
+     * @return sequenceNumber
      */
     @NotNull
     @JsonProperty("sequenceNumber")
@@ -244,6 +253,7 @@ public interface Message extends BaseResource, com.commercetools.api.models.Doma
 
     /**
      *  <p>Reference to the resource on which the change or action was performed.</p>
+     * @return resource
      */
     @NotNull
     @Valid
@@ -252,6 +262,7 @@ public interface Message extends BaseResource, com.commercetools.api.models.Doma
 
     /**
      *  <p>Version of the resource on which the change or action was performed.</p>
+     * @return resourceVersion
      */
     @NotNull
     @JsonProperty("resourceVersion")
@@ -259,6 +270,7 @@ public interface Message extends BaseResource, com.commercetools.api.models.Doma
 
     /**
      *  <p>Message Type of the Message.</p>
+     * @return type
      */
     @NotNull
     @JsonProperty("type")
@@ -266,6 +278,7 @@ public interface Message extends BaseResource, com.commercetools.api.models.Doma
 
     /**
      *  <p>User-provided identifiers of the resource, such as <code>key</code> or <code>externalId</code>. Only present if the resource has such identifiers.</p>
+     * @return resourceUserProvidedIdentifiers
      */
     @Valid
     @JsonProperty("resourceUserProvidedIdentifiers")
@@ -719,8 +732,16 @@ public interface Message extends BaseResource, com.commercetools.api.models.Doma
         return com.commercetools.api.models.message.ProductSelectionProductAddedMessageBuilder.of();
     }
 
+    public static com.commercetools.api.models.message.ProductSelectionProductExcludedMessageBuilder productSelectionProductExcludedBuilder() {
+        return com.commercetools.api.models.message.ProductSelectionProductExcludedMessageBuilder.of();
+    }
+
     public static com.commercetools.api.models.message.ProductSelectionProductRemovedMessageBuilder productSelectionProductRemovedBuilder() {
         return com.commercetools.api.models.message.ProductSelectionProductRemovedMessageBuilder.of();
+    }
+
+    public static com.commercetools.api.models.message.ProductSelectionVariantExclusionChangedMessageBuilder productSelectionVariantExclusionChangedBuilder() {
+        return com.commercetools.api.models.message.ProductSelectionVariantExclusionChangedMessageBuilder.of();
     }
 
     public static com.commercetools.api.models.message.ProductSelectionVariantSelectionChangedMessageBuilder productSelectionVariantSelectionChangedBuilder() {

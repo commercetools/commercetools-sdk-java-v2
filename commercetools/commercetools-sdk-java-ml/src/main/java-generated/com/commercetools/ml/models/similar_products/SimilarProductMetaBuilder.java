@@ -37,6 +37,7 @@ public class SimilarProductMetaBuilder implements Builder<SimilarProductMeta> {
 
     /**
      *  <p>Localized product name used for similarity estimation.</p>
+     * @return Builder
      */
 
     public SimilarProductMetaBuilder name(
@@ -47,6 +48,8 @@ public class SimilarProductMetaBuilder implements Builder<SimilarProductMeta> {
 
     /**
      *  <p>Localized product name used for similarity estimation.</p>
+     * @param name
+     * @return Builder
      */
 
     public SimilarProductMetaBuilder name(@Nullable final com.commercetools.ml.models.common.LocalizedString name) {
@@ -56,6 +59,7 @@ public class SimilarProductMetaBuilder implements Builder<SimilarProductMeta> {
 
     /**
      *  <p>Localized product description used for similarity estimation.</p>
+     * @return Builder
      */
 
     public SimilarProductMetaBuilder description(
@@ -66,6 +70,8 @@ public class SimilarProductMetaBuilder implements Builder<SimilarProductMeta> {
 
     /**
      *  <p>Localized product description used for similarity estimation.</p>
+     * @param description
+     * @return Builder
      */
 
     public SimilarProductMetaBuilder description(
@@ -76,6 +82,7 @@ public class SimilarProductMetaBuilder implements Builder<SimilarProductMeta> {
 
     /**
      *  <p>The product price in cents using the currency defined in SimilarProductSearchRequest If multiple prices exist, the median value is taken as a representative amount.</p>
+     * @return Builder
      */
 
     public SimilarProductMetaBuilder price(
@@ -86,6 +93,8 @@ public class SimilarProductMetaBuilder implements Builder<SimilarProductMeta> {
 
     /**
      *  <p>The product price in cents using the currency defined in SimilarProductSearchRequest If multiple prices exist, the median value is taken as a representative amount.</p>
+     * @param price
+     * @return Builder
      */
 
     public SimilarProductMetaBuilder price(@Nullable final com.commercetools.ml.models.common.Money price) {
@@ -95,6 +104,8 @@ public class SimilarProductMetaBuilder implements Builder<SimilarProductMeta> {
 
     /**
      *  <p>Total number of variants associated with the product.</p>
+     * @param variantCount
+     * @return Builder
      */
 
     public SimilarProductMetaBuilder variantCount(@Nullable final Long variantCount) {

@@ -24,7 +24,9 @@ public class CartChangeTaxCalculationModeActionBuilder implements Builder<CartCh
     private com.commercetools.api.models.cart.TaxCalculationMode taxCalculationMode;
 
     /**
-     *
+     *  <p>New value to set.</p>
+     * @param taxCalculationMode
+     * @return Builder
      */
 
     public CartChangeTaxCalculationModeActionBuilder taxCalculationMode(

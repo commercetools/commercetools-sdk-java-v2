@@ -42,6 +42,7 @@ public interface Project extends com.commercetools.api.models.WithKey {
 
     /**
      *  <p>Current version of the Project.</p>
+     * @return version
      */
     @NotNull
     @JsonProperty("version")
@@ -49,6 +50,7 @@ public interface Project extends com.commercetools.api.models.WithKey {
 
     /**
      *  <p>User-defined unique identifier of the Project.</p>
+     * @return key
      */
     @NotNull
     @JsonProperty("key")
@@ -56,6 +58,7 @@ public interface Project extends com.commercetools.api.models.WithKey {
 
     /**
      *  <p>Name of the Project.</p>
+     * @return name
      */
     @NotNull
     @JsonProperty("name")
@@ -63,6 +66,7 @@ public interface Project extends com.commercetools.api.models.WithKey {
 
     /**
      *  <p>Country code of the geographic location.</p>
+     * @return countries
      */
     @NotNull
     @JsonProperty("countries")
@@ -70,6 +74,7 @@ public interface Project extends com.commercetools.api.models.WithKey {
 
     /**
      *  <p>Currency code of the country. A Project must have at least one currency.</p>
+     * @return currencies
      */
     @NotNull
     @JsonProperty("currencies")
@@ -77,6 +82,7 @@ public interface Project extends com.commercetools.api.models.WithKey {
 
     /**
      *  <p>Language of the country. A Project must have at least one language.</p>
+     * @return languages
      */
     @NotNull
     @JsonProperty("languages")
@@ -84,6 +90,7 @@ public interface Project extends com.commercetools.api.models.WithKey {
 
     /**
      *  <p>Date and time (UTC) the Project was initially created.</p>
+     * @return createdAt
      */
     @NotNull
     @JsonProperty("createdAt")
@@ -91,6 +98,7 @@ public interface Project extends com.commercetools.api.models.WithKey {
 
     /**
      *  <p>Date in YYYY-MM format specifying when the trial period for the Project ends. Only present on Projects in trial period.</p>
+     * @return trialUntil
      */
 
     @JsonProperty("trialUntil")
@@ -98,6 +106,7 @@ public interface Project extends com.commercetools.api.models.WithKey {
 
     /**
      *  <p>Holds the configuration for the Messages Query feature.</p>
+     * @return messages
      */
     @NotNull
     @Valid
@@ -106,6 +115,7 @@ public interface Project extends com.commercetools.api.models.WithKey {
 
     /**
      *  <p>Holds the configuration for the Carts feature.</p>
+     * @return carts
      */
     @NotNull
     @Valid
@@ -114,6 +124,7 @@ public interface Project extends com.commercetools.api.models.WithKey {
 
     /**
      *  <p>Holds the configuration for the Shopping Lists feature. This field may not be present on Projects created before January 2020.</p>
+     * @return shoppingLists
      */
     @Valid
     @JsonProperty("shoppingLists")
@@ -121,6 +132,7 @@ public interface Project extends com.commercetools.api.models.WithKey {
 
     /**
      *  <p>Holds the configuration for the tiered shipping rates feature.</p>
+     * @return shippingRateInputType
      */
     @Valid
     @JsonProperty("shippingRateInputType")
@@ -128,6 +140,7 @@ public interface Project extends com.commercetools.api.models.WithKey {
 
     /**
      *  <p>Represents a RFC 7662 compliant OAuth 2.0 Token Introspection endpoint.</p>
+     * @return externalOAuth
      */
     @Valid
     @JsonProperty("externalOAuth")
@@ -135,6 +148,7 @@ public interface Project extends com.commercetools.api.models.WithKey {
 
     /**
      *  <p>Controls indexing of resources to be provided on high performance read-only search endpoints.</p>
+     * @return searchIndexing
      */
     @Valid
     @JsonProperty("searchIndexing")
@@ -142,6 +156,7 @@ public interface Project extends com.commercetools.api.models.WithKey {
 
     /**
      *  <p>Holds configuration specific to Business Units.</p>
+     * @return businessUnits
      */
     @Valid
     @JsonProperty("businessUnits")

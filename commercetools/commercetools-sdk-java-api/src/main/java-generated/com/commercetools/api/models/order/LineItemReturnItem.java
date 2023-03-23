@@ -39,6 +39,7 @@ public interface LineItemReturnItem extends ReturnItem {
 
     /**
      *
+     * @return lineItemId
      */
     @NotNull
     @JsonProperty("lineItemId")

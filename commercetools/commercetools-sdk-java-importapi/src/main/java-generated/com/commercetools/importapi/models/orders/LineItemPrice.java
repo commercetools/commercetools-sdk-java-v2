@@ -39,6 +39,7 @@ public interface LineItemPrice {
 
     /**
      *  <p>Maps to <code>Price.value</code>.</p>
+     * @return value
      */
     @NotNull
     @Valid
@@ -47,6 +48,7 @@ public interface LineItemPrice {
 
     /**
      *  <p>Maps to <code>Price.county</code>.</p>
+     * @return country
      */
 
     @JsonProperty("country")
@@ -54,6 +56,7 @@ public interface LineItemPrice {
 
     /**
      *  <p>Maps to <code>Price.validFrom</code>.</p>
+     * @return validFrom
      */
 
     @JsonProperty("validFrom")
@@ -61,6 +64,7 @@ public interface LineItemPrice {
 
     /**
      *  <p>Maps to <code>Price.validUntil</code>.</p>
+     * @return validUntil
      */
 
     @JsonProperty("validUntil")
@@ -68,6 +72,7 @@ public interface LineItemPrice {
 
     /**
      *  <p>References a customer group by key.</p>
+     * @return customerGroup
      */
     @Valid
     @JsonProperty("customerGroup")
@@ -75,6 +80,7 @@ public interface LineItemPrice {
 
     /**
      *  <p>References a channel by key.</p>
+     * @return channel
      */
     @Valid
     @JsonProperty("channel")
@@ -82,6 +88,7 @@ public interface LineItemPrice {
 
     /**
      *  <p>Sets a discounted price from an external service.</p>
+     * @return discounted
      */
     @Valid
     @JsonProperty("discounted")
@@ -89,6 +96,7 @@ public interface LineItemPrice {
 
     /**
      *  <p>The tiered prices for this price.</p>
+     * @return tiers
      */
     @Valid
     @JsonProperty("tiers")
@@ -96,6 +104,7 @@ public interface LineItemPrice {
 
     /**
      *  <p>Maps to <code>Price.custom</code>.</p>
+     * @return custom
      */
     @Valid
     @JsonProperty("custom")

@@ -31,6 +31,7 @@ public class ProductSelectionAddProductActionBuilder implements Builder<ProductS
 
     /**
      *  <p>ResourceIdentifier of the Product</p>
+     * @return Builder
      */
 
     public ProductSelectionAddProductActionBuilder product(
@@ -42,6 +43,8 @@ public class ProductSelectionAddProductActionBuilder implements Builder<ProductS
 
     /**
      *  <p>ResourceIdentifier of the Product</p>
+     * @param product
+     * @return Builder
      */
 
     public ProductSelectionAddProductActionBuilder product(
@@ -51,7 +54,9 @@ public class ProductSelectionAddProductActionBuilder implements Builder<ProductS
     }
 
     /**
-     *  <p>Selects which Variants of the newly added Product will be included, or excluded, from the Product Selection. If not supplied all Variants are deemed to be included.</p>
+     *  <p>Defines which Variants of the Product will be included from the Product Selection. If not supplied all Variants are deemed to be included.</p>
+     * @param variantSelection
+     * @return Builder
      */
 
     public ProductSelectionAddProductActionBuilder variantSelection(
@@ -61,7 +66,8 @@ public class ProductSelectionAddProductActionBuilder implements Builder<ProductS
     }
 
     /**
-     *  <p>Selects which Variants of the newly added Product will be included, or excluded, from the Product Selection. If not supplied all Variants are deemed to be included.</p>
+     *  <p>Defines which Variants of the Product will be included from the Product Selection. If not supplied all Variants are deemed to be included.</p>
+     * @return Builder
      */
 
     public ProductSelectionAddProductActionBuilder variantSelection(

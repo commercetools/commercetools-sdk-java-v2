@@ -28,6 +28,8 @@ public class ProductTypeRemoveEnumValuesActionBuilder implements Builder<Product
 
     /**
      *  <p>Name of the AttributeDefinition to update.</p>
+     * @param attributeName
+     * @return Builder
      */
 
     public ProductTypeRemoveEnumValuesActionBuilder attributeName(final String attributeName) {
@@ -37,6 +39,8 @@ public class ProductTypeRemoveEnumValuesActionBuilder implements Builder<Product
 
     /**
      *  <p>Keys of AttributeEnumType or AttributeLocalizedEnumType to remove.</p>
+     * @param keys
+     * @return Builder
      */
 
     public ProductTypeRemoveEnumValuesActionBuilder keys(final String... keys) {
@@ -46,6 +50,8 @@ public class ProductTypeRemoveEnumValuesActionBuilder implements Builder<Product
 
     /**
      *  <p>Keys of AttributeEnumType or AttributeLocalizedEnumType to remove.</p>
+     * @param keys
+     * @return Builder
      */
 
     public ProductTypeRemoveEnumValuesActionBuilder keys(final java.util.List<String> keys) {
@@ -55,6 +61,8 @@ public class ProductTypeRemoveEnumValuesActionBuilder implements Builder<Product
 
     /**
      *  <p>Keys of AttributeEnumType or AttributeLocalizedEnumType to remove.</p>
+     * @param keys
+     * @return Builder
      */
 
     public ProductTypeRemoveEnumValuesActionBuilder plusKeys(final String... keys) {

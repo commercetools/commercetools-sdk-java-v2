@@ -37,6 +37,7 @@ public interface CartDiscountValueDraft {
 
     /**
      *
+     * @return type
      */
     @NotNull
     @JsonProperty("type")

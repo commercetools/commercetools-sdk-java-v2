@@ -55,6 +55,8 @@ public class AttributeGroupBuilder implements Builder<AttributeGroup> {
 
     /**
      *  <p>Platform-generated unique identifier of the AttributeGroup.</p>
+     * @param id
+     * @return Builder
      */
 
     public AttributeGroupBuilder id(final String id) {
@@ -64,6 +66,8 @@ public class AttributeGroupBuilder implements Builder<AttributeGroup> {
 
     /**
      *  <p>Current version of the AttributeGroup.</p>
+     * @param version
+     * @return Builder
      */
 
     public AttributeGroupBuilder version(final Long version) {
@@ -73,6 +77,8 @@ public class AttributeGroupBuilder implements Builder<AttributeGroup> {
 
     /**
      *  <p>Date and time (UTC) the AttributeGroup was initially created.</p>
+     * @param createdAt
+     * @return Builder
      */
 
     public AttributeGroupBuilder createdAt(final java.time.ZonedDateTime createdAt) {
@@ -82,6 +88,8 @@ public class AttributeGroupBuilder implements Builder<AttributeGroup> {
 
     /**
      *  <p>Date and time (UTC) the AttributeGroup was last updated.</p>
+     * @param lastModifiedAt
+     * @return Builder
      */
 
     public AttributeGroupBuilder lastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {
@@ -91,6 +99,7 @@ public class AttributeGroupBuilder implements Builder<AttributeGroup> {
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @return Builder
      */
 
     public AttributeGroupBuilder lastModifiedBy(
@@ -101,6 +110,8 @@ public class AttributeGroupBuilder implements Builder<AttributeGroup> {
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param lastModifiedBy
+     * @return Builder
      */
 
     public AttributeGroupBuilder lastModifiedBy(
@@ -111,6 +122,7 @@ public class AttributeGroupBuilder implements Builder<AttributeGroup> {
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @return Builder
      */
 
     public AttributeGroupBuilder createdBy(
@@ -121,6 +133,8 @@ public class AttributeGroupBuilder implements Builder<AttributeGroup> {
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param createdBy
+     * @return Builder
      */
 
     public AttributeGroupBuilder createdBy(@Nullable final com.commercetools.api.models.common.CreatedBy createdBy) {
@@ -130,6 +144,7 @@ public class AttributeGroupBuilder implements Builder<AttributeGroup> {
 
     /**
      *  <p>Name of the AttributeGroup.</p>
+     * @return Builder
      */
 
     public AttributeGroupBuilder name(
@@ -140,6 +155,8 @@ public class AttributeGroupBuilder implements Builder<AttributeGroup> {
 
     /**
      *  <p>Name of the AttributeGroup.</p>
+     * @param name
+     * @return Builder
      */
 
     public AttributeGroupBuilder name(final com.commercetools.api.models.common.LocalizedString name) {
@@ -149,6 +166,7 @@ public class AttributeGroupBuilder implements Builder<AttributeGroup> {
 
     /**
      *  <p>Description of the AttributeGroup.</p>
+     * @return Builder
      */
 
     public AttributeGroupBuilder description(
@@ -159,6 +177,8 @@ public class AttributeGroupBuilder implements Builder<AttributeGroup> {
 
     /**
      *  <p>Description of the AttributeGroup.</p>
+     * @param description
+     * @return Builder
      */
 
     public AttributeGroupBuilder description(
@@ -169,6 +189,8 @@ public class AttributeGroupBuilder implements Builder<AttributeGroup> {
 
     /**
      *  <p>Attributes with unique values.</p>
+     * @param attributes
+     * @return Builder
      */
 
     public AttributeGroupBuilder attributes(
@@ -179,6 +201,8 @@ public class AttributeGroupBuilder implements Builder<AttributeGroup> {
 
     /**
      *  <p>Attributes with unique values.</p>
+     * @param attributes
+     * @return Builder
      */
 
     public AttributeGroupBuilder attributes(
@@ -189,6 +213,8 @@ public class AttributeGroupBuilder implements Builder<AttributeGroup> {
 
     /**
      *  <p>Attributes with unique values.</p>
+     * @param attributes
+     * @return Builder
      */
 
     public AttributeGroupBuilder plusAttributes(
@@ -202,6 +228,7 @@ public class AttributeGroupBuilder implements Builder<AttributeGroup> {
 
     /**
      *  <p>Attributes with unique values.</p>
+     * @return Builder
      */
 
     public AttributeGroupBuilder plusAttributes(
@@ -216,6 +243,7 @@ public class AttributeGroupBuilder implements Builder<AttributeGroup> {
 
     /**
      *  <p>Attributes with unique values.</p>
+     * @return Builder
      */
 
     public AttributeGroupBuilder withAttributes(
@@ -228,6 +256,8 @@ public class AttributeGroupBuilder implements Builder<AttributeGroup> {
 
     /**
      *  <p>User-defined unique identifier of the AttributeGroup.</p>
+     * @param key
+     * @return Builder
      */
 
     public AttributeGroupBuilder key(@Nullable final String key) {

@@ -33,6 +33,7 @@ public interface ProductRemovePriceAction extends ProductUpdateAction {
 
     /**
      *  <p>The <code>id</code> of the Embedded Price to remove.</p>
+     * @return priceId
      */
     @NotNull
     @JsonProperty("priceId")
@@ -40,6 +41,7 @@ public interface ProductRemovePriceAction extends ProductUpdateAction {
 
     /**
      *  <p>If <code>true</code>, only the staged Embedded Price is removed. If <code>false</code>, both the current and staged Embedded Price are removed.</p>
+     * @return staged
      */
 
     @JsonProperty("staged")

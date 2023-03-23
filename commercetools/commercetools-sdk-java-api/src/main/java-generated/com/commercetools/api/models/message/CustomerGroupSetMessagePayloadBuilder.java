@@ -28,6 +28,7 @@ public class CustomerGroupSetMessagePayloadBuilder implements Builder<CustomerGr
 
     /**
      *  <p>Customer Group that was set during the Set Customer Group update action.</p>
+     * @return Builder
      */
 
     public CustomerGroupSetMessagePayloadBuilder customerGroup(
@@ -40,6 +41,8 @@ public class CustomerGroupSetMessagePayloadBuilder implements Builder<CustomerGr
 
     /**
      *  <p>Customer Group that was set during the Set Customer Group update action.</p>
+     * @param customerGroup
+     * @return Builder
      */
 
     public CustomerGroupSetMessagePayloadBuilder customerGroup(

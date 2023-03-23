@@ -41,6 +41,8 @@ public class TextLineItemBuilder implements Builder<TextLineItem> {
 
     /**
      *
+     * @param addedAt
+     * @return Builder
      */
 
     public TextLineItemBuilder addedAt(final String addedAt) {
@@ -50,6 +52,7 @@ public class TextLineItemBuilder implements Builder<TextLineItem> {
 
     /**
      *
+     * @return Builder
      */
 
     public TextLineItemBuilder custom(
@@ -60,6 +63,8 @@ public class TextLineItemBuilder implements Builder<TextLineItem> {
 
     /**
      *
+     * @param custom
+     * @return Builder
      */
 
     public TextLineItemBuilder custom(final com.commercetools.history.models.common.CustomFields custom) {
@@ -69,6 +74,7 @@ public class TextLineItemBuilder implements Builder<TextLineItem> {
 
     /**
      *
+     * @return Builder
      */
 
     public TextLineItemBuilder description(
@@ -79,6 +85,8 @@ public class TextLineItemBuilder implements Builder<TextLineItem> {
 
     /**
      *
+     * @param description
+     * @return Builder
      */
 
     public TextLineItemBuilder description(final com.commercetools.history.models.common.LocalizedString description) {
@@ -88,6 +96,8 @@ public class TextLineItemBuilder implements Builder<TextLineItem> {
 
     /**
      *
+     * @param id
+     * @return Builder
      */
 
     public TextLineItemBuilder id(final String id) {
@@ -97,6 +107,7 @@ public class TextLineItemBuilder implements Builder<TextLineItem> {
 
     /**
      *
+     * @return Builder
      */
 
     public TextLineItemBuilder name(
@@ -107,6 +118,8 @@ public class TextLineItemBuilder implements Builder<TextLineItem> {
 
     /**
      *
+     * @param name
+     * @return Builder
      */
 
     public TextLineItemBuilder name(final com.commercetools.history.models.common.LocalizedString name) {
@@ -116,6 +129,8 @@ public class TextLineItemBuilder implements Builder<TextLineItem> {
 
     /**
      *
+     * @param quantity
+     * @return Builder
      */
 
     public TextLineItemBuilder quantity(final Integer quantity) {

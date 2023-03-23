@@ -35,6 +35,7 @@ public interface ChannelChangeDescriptionAction extends ChannelUpdateAction {
 
     /**
      *  <p>New value to set. Must not be empty.</p>
+     * @return description
      */
     @NotNull
     @Valid

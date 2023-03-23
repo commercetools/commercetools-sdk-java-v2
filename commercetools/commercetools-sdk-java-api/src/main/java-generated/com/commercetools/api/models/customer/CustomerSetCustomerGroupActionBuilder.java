@@ -28,6 +28,7 @@ public class CustomerSetCustomerGroupActionBuilder implements Builder<CustomerSe
 
     /**
      *  <p>Value to set. If empty, any existing value is removed.</p>
+     * @return Builder
      */
 
     public CustomerSetCustomerGroupActionBuilder customerGroup(
@@ -40,6 +41,8 @@ public class CustomerSetCustomerGroupActionBuilder implements Builder<CustomerSe
 
     /**
      *  <p>Value to set. If empty, any existing value is removed.</p>
+     * @param customerGroup
+     * @return Builder
      */
 
     public CustomerSetCustomerGroupActionBuilder customerGroup(

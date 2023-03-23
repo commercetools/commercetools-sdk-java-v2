@@ -32,6 +32,7 @@ public interface ImageDimensions {
 
     /**
      *
+     * @return w
      */
     @NotNull
     @JsonProperty("w")
@@ -39,6 +40,7 @@ public interface ImageDimensions {
 
     /**
      *
+     * @return h
      */
     @NotNull
     @JsonProperty("h")

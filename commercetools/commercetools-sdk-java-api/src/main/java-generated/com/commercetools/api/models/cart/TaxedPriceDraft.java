@@ -34,8 +34,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface TaxedPriceDraft extends io.vrap.rmf.base.client.Draft<TaxedPriceDraft> {
 
     /**
-     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
-     *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
+     *  <p>Total net price of the Line Item or Custom Line Item.</p>
+     * @return totalNet
      */
     @NotNull
     @Valid
@@ -43,8 +43,8 @@ public interface TaxedPriceDraft extends io.vrap.rmf.base.client.Draft<TaxedPric
     public Money getTotalNet();
 
     /**
-     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
-     *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
+     *  <p>Total gross price of the Line Item or Custom Line Item.</p>
+     * @return totalGross
      */
     @NotNull
     @Valid
@@ -52,7 +52,9 @@ public interface TaxedPriceDraft extends io.vrap.rmf.base.client.Draft<TaxedPric
     public Money getTotalGross();
 
     /**
-     *
+     *  <p>Taxable portions added to the <code>totalGross</code>.</p>
+     *  <p>Calculated from the TaxRates.</p>
+     * @return taxPortions
      */
     @NotNull
     @Valid

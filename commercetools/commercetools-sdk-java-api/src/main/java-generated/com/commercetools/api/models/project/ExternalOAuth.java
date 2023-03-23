@@ -33,6 +33,7 @@ public interface ExternalOAuth {
 
     /**
      *  <p>URL with authorization header.</p>
+     * @return url
      */
     @NotNull
     @JsonProperty("url")
@@ -40,6 +41,7 @@ public interface ExternalOAuth {
 
     /**
      *  <p>Must not contain any leading or trailing whitespaces. Partially hidden on retrieval.</p>
+     * @return authorizationHeader
      */
     @NotNull
     @JsonProperty("authorizationHeader")

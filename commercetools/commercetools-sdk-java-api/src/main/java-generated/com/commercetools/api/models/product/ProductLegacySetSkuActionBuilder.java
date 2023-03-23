@@ -30,6 +30,8 @@ public class ProductLegacySetSkuActionBuilder implements Builder<ProductLegacySe
 
     /**
      *
+     * @param sku
+     * @return Builder
      */
 
     public ProductLegacySetSkuActionBuilder sku(@Nullable final String sku) {
@@ -39,6 +41,8 @@ public class ProductLegacySetSkuActionBuilder implements Builder<ProductLegacySe
 
     /**
      *
+     * @param variantId
+     * @return Builder
      */
 
     public ProductLegacySetSkuActionBuilder variantId(final Integer variantId) {

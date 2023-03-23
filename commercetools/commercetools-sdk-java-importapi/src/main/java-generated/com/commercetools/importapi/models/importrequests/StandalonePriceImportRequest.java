@@ -35,6 +35,7 @@ public interface StandalonePriceImportRequest extends ImportRequest {
 
     /**
      *  <p>The Standalone Price import resources of this request.</p>
+     * @return resources
      */
     @NotNull
     @Valid

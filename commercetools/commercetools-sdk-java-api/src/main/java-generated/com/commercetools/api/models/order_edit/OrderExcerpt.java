@@ -35,6 +35,7 @@ public interface OrderExcerpt {
 
     /**
      *
+     * @return totalPrice
      */
     @NotNull
     @Valid
@@ -43,6 +44,7 @@ public interface OrderExcerpt {
 
     /**
      *
+     * @return taxedPrice
      */
     @Valid
     @JsonProperty("taxedPrice")
@@ -50,6 +52,7 @@ public interface OrderExcerpt {
 
     /**
      *
+     * @return version
      */
     @NotNull
     @JsonProperty("version")

@@ -32,6 +32,8 @@ public class DuplicateFieldErrorBuilder implements Builder<DuplicateFieldError> 
 
     /**
      *  <p><code>"A duplicate value $duplicateValue exists for field $field."</code></p>
+     * @param message
+     * @return Builder
      */
 
     public DuplicateFieldErrorBuilder message(final String message) {
@@ -62,6 +64,8 @@ public class DuplicateFieldErrorBuilder implements Builder<DuplicateFieldError> 
 
     /**
      *  <p>Name of the conflicting field.</p>
+     * @param field
+     * @return Builder
      */
 
     public DuplicateFieldErrorBuilder field(final String field) {
@@ -71,6 +75,8 @@ public class DuplicateFieldErrorBuilder implements Builder<DuplicateFieldError> 
 
     /**
      *  <p>Conflicting duplicate value.</p>
+     * @param duplicateValue
+     * @return Builder
      */
 
     public DuplicateFieldErrorBuilder duplicateValue(final java.lang.Object duplicateValue) {

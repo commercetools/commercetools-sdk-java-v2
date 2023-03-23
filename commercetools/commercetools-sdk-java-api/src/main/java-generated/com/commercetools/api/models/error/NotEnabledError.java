@@ -33,6 +33,7 @@ public interface NotEnabledError extends ErrorObject {
 
     /**
      *
+     * @return code
      */
     @NotNull
     @JsonProperty("code")
@@ -40,6 +41,7 @@ public interface NotEnabledError extends ErrorObject {
 
     /**
      *  <p><code>"The category recommendations API is not yet enabled for your project."</code></p>
+     * @return message
      */
     @NotNull
     @JsonProperty("message")

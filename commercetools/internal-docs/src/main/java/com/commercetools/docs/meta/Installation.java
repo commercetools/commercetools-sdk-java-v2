@@ -2,6 +2,7 @@
 package com.commercetools.docs.meta;
 
 /**
+ * {@include.toc}
  * <h2>Installation</h2>
  *
  * <h3>Modules</h3>

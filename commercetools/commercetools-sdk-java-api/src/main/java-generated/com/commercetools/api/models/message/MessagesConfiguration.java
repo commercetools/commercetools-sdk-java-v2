@@ -31,6 +31,7 @@ public interface MessagesConfiguration {
 
     /**
      *  <p>When <code>true</code>, the Messages Query feature is active.</p>
+     * @return enabled
      */
     @NotNull
     @JsonProperty("enabled")
@@ -38,6 +39,7 @@ public interface MessagesConfiguration {
 
     /**
      *  <p>Specifies the number of days each Message should be available via the Messages Query API. For Messages older than the specified period, it is not guaranteed that they are still accessible via the API. This field may not be present on Projects created before 8 October 2018.</p>
+     * @return deleteDaysAfterCreation
      */
 
     @JsonProperty("deleteDaysAfterCreation")

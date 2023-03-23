@@ -27,7 +27,9 @@ public class CartChangeCustomLineItemQuantityActionBuilder implements Builder<Ca
     private Long quantity;
 
     /**
-     *
+     *  <p><code>id</code> of the CustomLineItem to update.</p>
+     * @param customLineItemId
+     * @return Builder
      */
 
     public CartChangeCustomLineItemQuantityActionBuilder customLineItemId(final String customLineItemId) {
@@ -36,7 +38,10 @@ public class CartChangeCustomLineItemQuantityActionBuilder implements Builder<Ca
     }
 
     /**
-     *
+     *  <p>New value to set.</p>
+     *  <p>If <code>0</code>, the Custom Line Item is removed from the Cart.</p>
+     * @param quantity
+     * @return Builder
      */
 
     public CartChangeCustomLineItemQuantityActionBuilder quantity(final Long quantity) {

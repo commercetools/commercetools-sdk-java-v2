@@ -34,6 +34,7 @@ public interface ReferenceExistsError extends ErrorObject {
 
     /**
      *
+     * @return code
      */
     @NotNull
     @JsonProperty("code")
@@ -41,6 +42,7 @@ public interface ReferenceExistsError extends ErrorObject {
 
     /**
      *  <p><code>"Can not delete a $resource while it is referenced by at least one $referencedBy."</code></p>
+     * @return message
      */
     @NotNull
     @JsonProperty("message")
@@ -48,6 +50,7 @@ public interface ReferenceExistsError extends ErrorObject {
 
     /**
      *  <p>Type of referenced resource.</p>
+     * @return referencedBy
      */
 
     @JsonProperty("referencedBy")

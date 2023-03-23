@@ -25,6 +25,8 @@ public class StagedQuoteValidToSetMessagePayloadBuilder implements Builder<Stage
 
     /**
      *  <p>Expiration date for the Staged Quote after the Set Valid To update action.</p>
+     * @param validTo
+     * @return Builder
      */
 
     public StagedQuoteValidToSetMessagePayloadBuilder validTo(final java.time.ZonedDateTime validTo) {

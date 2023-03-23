@@ -52,6 +52,8 @@ public class CustomLineItemReturnItemBuilder implements Builder<CustomLineItemRe
 
     /**
      *  <p>Unique identifier of the ReturnItem.</p>
+     * @param id
+     * @return Builder
      */
 
     public CustomLineItemReturnItemBuilder id(final String id) {
@@ -61,6 +63,8 @@ public class CustomLineItemReturnItemBuilder implements Builder<CustomLineItemRe
 
     /**
      *
+     * @param quantity
+     * @return Builder
      */
 
     public CustomLineItemReturnItemBuilder quantity(final Long quantity) {
@@ -70,6 +74,8 @@ public class CustomLineItemReturnItemBuilder implements Builder<CustomLineItemRe
 
     /**
      *
+     * @param comment
+     * @return Builder
      */
 
     public CustomLineItemReturnItemBuilder comment(@Nullable final String comment) {
@@ -79,6 +85,8 @@ public class CustomLineItemReturnItemBuilder implements Builder<CustomLineItemRe
 
     /**
      *
+     * @param shipmentState
+     * @return Builder
      */
 
     public CustomLineItemReturnItemBuilder shipmentState(
@@ -89,6 +97,8 @@ public class CustomLineItemReturnItemBuilder implements Builder<CustomLineItemRe
 
     /**
      *
+     * @param paymentState
+     * @return Builder
      */
 
     public CustomLineItemReturnItemBuilder paymentState(
@@ -99,6 +109,7 @@ public class CustomLineItemReturnItemBuilder implements Builder<CustomLineItemRe
 
     /**
      *  <p>Custom Fields of this return item.</p>
+     * @return Builder
      */
 
     public CustomLineItemReturnItemBuilder custom(
@@ -109,6 +120,8 @@ public class CustomLineItemReturnItemBuilder implements Builder<CustomLineItemRe
 
     /**
      *  <p>Custom Fields of this return item.</p>
+     * @param custom
+     * @return Builder
      */
 
     public CustomLineItemReturnItemBuilder custom(
@@ -119,6 +132,8 @@ public class CustomLineItemReturnItemBuilder implements Builder<CustomLineItemRe
 
     /**
      *
+     * @param lastModifiedAt
+     * @return Builder
      */
 
     public CustomLineItemReturnItemBuilder lastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {
@@ -128,6 +143,8 @@ public class CustomLineItemReturnItemBuilder implements Builder<CustomLineItemRe
 
     /**
      *
+     * @param createdAt
+     * @return Builder
      */
 
     public CustomLineItemReturnItemBuilder createdAt(final java.time.ZonedDateTime createdAt) {
@@ -137,6 +154,8 @@ public class CustomLineItemReturnItemBuilder implements Builder<CustomLineItemRe
 
     /**
      *
+     * @param customLineItemId
+     * @return Builder
      */
 
     public CustomLineItemReturnItemBuilder customLineItemId(final String customLineItemId) {

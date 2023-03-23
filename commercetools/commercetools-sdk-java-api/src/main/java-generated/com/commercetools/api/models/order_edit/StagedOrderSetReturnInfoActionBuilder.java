@@ -28,6 +28,8 @@ public class StagedOrderSetReturnInfoActionBuilder implements Builder<StagedOrde
 
     /**
      *
+     * @param items
+     * @return Builder
      */
 
     public StagedOrderSetReturnInfoActionBuilder items(
@@ -38,6 +40,8 @@ public class StagedOrderSetReturnInfoActionBuilder implements Builder<StagedOrde
 
     /**
      *
+     * @param items
+     * @return Builder
      */
 
     public StagedOrderSetReturnInfoActionBuilder items(
@@ -48,6 +52,8 @@ public class StagedOrderSetReturnInfoActionBuilder implements Builder<StagedOrde
 
     /**
      *
+     * @param items
+     * @return Builder
      */
 
     public StagedOrderSetReturnInfoActionBuilder plusItems(
@@ -61,6 +67,7 @@ public class StagedOrderSetReturnInfoActionBuilder implements Builder<StagedOrde
 
     /**
      *
+     * @return Builder
      */
 
     public StagedOrderSetReturnInfoActionBuilder plusItems(
@@ -74,6 +81,7 @@ public class StagedOrderSetReturnInfoActionBuilder implements Builder<StagedOrde
 
     /**
      *
+     * @return Builder
      */
 
     public StagedOrderSetReturnInfoActionBuilder withItems(

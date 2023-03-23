@@ -439,8 +439,16 @@ public class MessageBuilder {
         return com.commercetools.api.models.message.ProductSelectionProductAddedMessageBuilder.of();
     }
 
+    public com.commercetools.api.models.message.ProductSelectionProductExcludedMessageBuilder productSelectionProductExcludedBuilder() {
+        return com.commercetools.api.models.message.ProductSelectionProductExcludedMessageBuilder.of();
+    }
+
     public com.commercetools.api.models.message.ProductSelectionProductRemovedMessageBuilder productSelectionProductRemovedBuilder() {
         return com.commercetools.api.models.message.ProductSelectionProductRemovedMessageBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.ProductSelectionVariantExclusionChangedMessageBuilder productSelectionVariantExclusionChangedBuilder() {
+        return com.commercetools.api.models.message.ProductSelectionVariantExclusionChangedMessageBuilder.of();
     }
 
     public com.commercetools.api.models.message.ProductSelectionVariantSelectionChangedMessageBuilder productSelectionVariantSelectionChangedBuilder() {

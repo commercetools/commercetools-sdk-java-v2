@@ -32,6 +32,7 @@ public interface DeliveryItem {
 
     /**
      *  <p>Unique identifier of the DeliveryItem.</p>
+     * @return id
      */
     @NotNull
     @JsonProperty("id")
@@ -39,6 +40,7 @@ public interface DeliveryItem {
 
     /**
      *
+     * @return quantity
      */
     @NotNull
     @JsonProperty("quantity")

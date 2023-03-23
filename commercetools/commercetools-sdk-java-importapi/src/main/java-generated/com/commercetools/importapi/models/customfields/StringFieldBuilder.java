@@ -25,6 +25,8 @@ public class StringFieldBuilder implements Builder<StringField> {
 
     /**
      *
+     * @param value
+     * @return Builder
      */
 
     public StringFieldBuilder value(final String value) {

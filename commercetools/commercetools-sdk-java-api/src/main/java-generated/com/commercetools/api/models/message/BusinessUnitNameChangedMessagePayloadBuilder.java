@@ -25,6 +25,8 @@ public class BusinessUnitNameChangedMessagePayloadBuilder implements Builder<Bus
 
     /**
      *  <p>Updated name of the Business Unit.</p>
+     * @param name
+     * @return Builder
      */
 
     public BusinessUnitNameChangedMessagePayloadBuilder name(final String name) {

@@ -49,6 +49,7 @@ public class OrderFromQuoteDraftBuilder implements Builder<OrderFromQuoteDraft> 
 
     /**
      *  <p>ResourceIdentifier of the Quote from which this Order is created. If the Quote has <code>QuoteState</code> in <code>Accepted</code>, <code>Declined</code> or <code>Withdrawn</code> then the order creation will fail. The creation will also fail if the <code>Quote</code> has expired (<code>validTo</code> check).</p>
+     * @return Builder
      */
 
     public OrderFromQuoteDraftBuilder quote(
@@ -59,6 +60,8 @@ public class OrderFromQuoteDraftBuilder implements Builder<OrderFromQuoteDraft> 
 
     /**
      *  <p>ResourceIdentifier of the Quote from which this Order is created. If the Quote has <code>QuoteState</code> in <code>Accepted</code>, <code>Declined</code> or <code>Withdrawn</code> then the order creation will fail. The creation will also fail if the <code>Quote</code> has expired (<code>validTo</code> check).</p>
+     * @param quote
+     * @return Builder
      */
 
     public OrderFromQuoteDraftBuilder quote(final com.commercetools.api.models.quote.QuoteResourceIdentifier quote) {
@@ -68,6 +71,8 @@ public class OrderFromQuoteDraftBuilder implements Builder<OrderFromQuoteDraft> 
 
     /**
      *  <p><code>version</code> of the Quote from which an Order is created.</p>
+     * @param version
+     * @return Builder
      */
 
     public OrderFromQuoteDraftBuilder version(final Long version) {
@@ -77,6 +82,8 @@ public class OrderFromQuoteDraftBuilder implements Builder<OrderFromQuoteDraft> 
 
     /**
      *  <p>If <code>true</code>, the <code>quoteState</code> of the referenced Quote will be set to <code>Accepted</code>.</p>
+     * @param quoteStateToAccepted
+     * @return Builder
      */
 
     public OrderFromQuoteDraftBuilder quoteStateToAccepted(@Nullable final Boolean quoteStateToAccepted) {
@@ -86,6 +93,8 @@ public class OrderFromQuoteDraftBuilder implements Builder<OrderFromQuoteDraft> 
 
     /**
      *  <p>String that uniquely identifies an order. It can be used to create more human-readable (in contrast to ID) identifier for the order. It should be unique across a project. Once it's set it cannot be changed. For easier use on Get, Update and Delete actions we suggest assigning order numbers that match the regular expression <code>[a-z0-9_\-]{2,36}</code>.</p>
+     * @param orderNumber
+     * @return Builder
      */
 
     public OrderFromQuoteDraftBuilder orderNumber(@Nullable final String orderNumber) {
@@ -95,6 +104,8 @@ public class OrderFromQuoteDraftBuilder implements Builder<OrderFromQuoteDraft> 
 
     /**
      *
+     * @param paymentState
+     * @return Builder
      */
 
     public OrderFromQuoteDraftBuilder paymentState(
@@ -105,6 +116,8 @@ public class OrderFromQuoteDraftBuilder implements Builder<OrderFromQuoteDraft> 
 
     /**
      *
+     * @param shipmentState
+     * @return Builder
      */
 
     public OrderFromQuoteDraftBuilder shipmentState(
@@ -115,6 +128,8 @@ public class OrderFromQuoteDraftBuilder implements Builder<OrderFromQuoteDraft> 
 
     /**
      *  <p>Order will be created with <code>Open</code> status by default.</p>
+     * @param orderState
+     * @return Builder
      */
 
     public OrderFromQuoteDraftBuilder orderState(
@@ -125,6 +140,7 @@ public class OrderFromQuoteDraftBuilder implements Builder<OrderFromQuoteDraft> 
 
     /**
      *
+     * @return Builder
      */
 
     public OrderFromQuoteDraftBuilder state(
@@ -135,6 +151,8 @@ public class OrderFromQuoteDraftBuilder implements Builder<OrderFromQuoteDraft> 
 
     /**
      *
+     * @param state
+     * @return Builder
      */
 
     public OrderFromQuoteDraftBuilder state(

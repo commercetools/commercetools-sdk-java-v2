@@ -32,6 +32,7 @@ public interface ProjectSetExternalOAuthAction extends ProjectUpdateAction {
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
+     * @return externalOAuth
      */
     @Valid
     @JsonProperty("externalOAuth")

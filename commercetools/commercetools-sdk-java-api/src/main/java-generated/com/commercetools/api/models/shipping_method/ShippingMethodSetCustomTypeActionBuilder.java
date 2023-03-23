@@ -31,6 +31,7 @@ public class ShippingMethodSetCustomTypeActionBuilder implements Builder<Shippin
 
     /**
      *  <p>Defines the Type that extends the ShippingMethod with Custom Fields. If absent, any existing Type and Custom Fields are removed from the ShippingMethod.</p>
+     * @return Builder
      */
 
     public ShippingMethodSetCustomTypeActionBuilder type(
@@ -41,6 +42,8 @@ public class ShippingMethodSetCustomTypeActionBuilder implements Builder<Shippin
 
     /**
      *  <p>Defines the Type that extends the ShippingMethod with Custom Fields. If absent, any existing Type and Custom Fields are removed from the ShippingMethod.</p>
+     * @param type
+     * @return Builder
      */
 
     public ShippingMethodSetCustomTypeActionBuilder type(
@@ -51,6 +54,7 @@ public class ShippingMethodSetCustomTypeActionBuilder implements Builder<Shippin
 
     /**
      *  <p>Sets the Custom Fields fields for the ShippingMethod.</p>
+     * @return Builder
      */
 
     public ShippingMethodSetCustomTypeActionBuilder fields(
@@ -61,6 +65,8 @@ public class ShippingMethodSetCustomTypeActionBuilder implements Builder<Shippin
 
     /**
      *  <p>Sets the Custom Fields fields for the ShippingMethod.</p>
+     * @param fields
+     * @return Builder
      */
 
     public ShippingMethodSetCustomTypeActionBuilder fields(

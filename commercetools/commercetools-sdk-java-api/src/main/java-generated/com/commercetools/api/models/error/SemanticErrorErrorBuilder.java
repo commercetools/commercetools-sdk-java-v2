@@ -27,6 +27,8 @@ public class SemanticErrorErrorBuilder implements Builder<SemanticErrorError> {
 
     /**
      *  <p>Plain text description of the error concerning the predicate. For example, <code>"Invalid country code $countryCode provided for the field $fieldDefinition."</code>.</p>
+     * @param message
+     * @return Builder
      */
 
     public SemanticErrorErrorBuilder message(final String message) {

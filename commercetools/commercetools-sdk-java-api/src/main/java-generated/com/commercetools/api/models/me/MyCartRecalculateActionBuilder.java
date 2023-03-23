@@ -26,7 +26,12 @@ public class MyCartRecalculateActionBuilder implements Builder<MyCartRecalculate
     private Boolean updateProductData;
 
     /**
-     *
+     *  <ul>
+     *   <li>Leave empty or set to <code>false</code> to only update the Prices and TaxRates of the Line Items.</li>
+     *   <li>Set to <code>true</code> to update the Line Items' product data (like <code>name</code>, <code>variant</code> and <code>productType</code>) also.</li>
+     *  </ul>
+     * @param updateProductData
+     * @return Builder
      */
 
     public MyCartRecalculateActionBuilder updateProductData(@Nullable final Boolean updateProductData) {

@@ -28,6 +28,8 @@ public class ValidFromAndUntilValueBuilder implements Builder<ValidFromAndUntilV
 
     /**
      *
+     * @param validFrom
+     * @return Builder
      */
 
     public ValidFromAndUntilValueBuilder validFrom(final String validFrom) {
@@ -37,6 +39,8 @@ public class ValidFromAndUntilValueBuilder implements Builder<ValidFromAndUntilV
 
     /**
      *
+     * @param validUntil
+     * @return Builder
      */
 
     public ValidFromAndUntilValueBuilder validUntil(final String validUntil) {

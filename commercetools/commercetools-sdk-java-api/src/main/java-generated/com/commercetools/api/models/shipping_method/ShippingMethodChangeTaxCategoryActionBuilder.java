@@ -26,6 +26,7 @@ public class ShippingMethodChangeTaxCategoryActionBuilder implements Builder<Shi
 
     /**
      *  <p>Value to set.</p>
+     * @return Builder
      */
 
     public ShippingMethodChangeTaxCategoryActionBuilder taxCategory(
@@ -38,6 +39,8 @@ public class ShippingMethodChangeTaxCategoryActionBuilder implements Builder<Shi
 
     /**
      *  <p>Value to set.</p>
+     * @param taxCategory
+     * @return Builder
      */
 
     public ShippingMethodChangeTaxCategoryActionBuilder taxCategory(

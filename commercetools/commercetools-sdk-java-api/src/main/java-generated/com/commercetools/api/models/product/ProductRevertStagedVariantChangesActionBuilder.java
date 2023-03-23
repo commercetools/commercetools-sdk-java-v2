@@ -26,6 +26,8 @@ public class ProductRevertStagedVariantChangesActionBuilder
 
     /**
      *  <p>The <code>id</code> of the ProductVariant to revert.</p>
+     * @param variantId
+     * @return Builder
      */
 
     public ProductRevertStagedVariantChangesActionBuilder variantId(final Long variantId) {

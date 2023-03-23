@@ -36,6 +36,7 @@ public interface HighPrecisionMoneyDraft
 
     /**
      *  <p>Number of fraction digits for a specified high precision money. It must be greater than the default number of fraction digits for the specified currency.</p>
+     * @return fractionDigits
      */
     @NotNull
     @JsonProperty("fractionDigits")
@@ -43,6 +44,7 @@ public interface HighPrecisionMoneyDraft
 
     /**
      *  <p>Amount in 1 / (10 ^ <code>fractionDigits</code>) of a currency.</p>
+     * @return preciseAmount
      */
     @NotNull
     @JsonProperty("preciseAmount")
@@ -52,6 +54,7 @@ public interface HighPrecisionMoneyDraft
      *  <p>Amount in the smallest indivisible unit of a currency. This field is optional for high precision. If provided, it is checked for validity. Example:</p>
      *  <p>A Price of 1.015 USD can be rounded either to 1.01 USD or 1.02 USD. If it lies outside of this range, an error message stating that centAmount must be rounded correctly will be returned.</p>
      *  <p>If <code>centAmount</code> is not provided, the API calculates the value automatically using the default rounding mode half even.</p>
+     * @return centAmount
      */
 
     @JsonProperty("centAmount")

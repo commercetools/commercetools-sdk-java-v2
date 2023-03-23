@@ -36,6 +36,7 @@ public interface AddDiscountCodeChange extends Change {
 
     /**
      *
+     * @return type
      */
     @NotNull
     @JsonProperty("type")
@@ -43,6 +44,7 @@ public interface AddDiscountCodeChange extends Change {
 
     /**
      *  <p>Update action for <code>addDiscountCode</code></p>
+     * @return change
      */
     @NotNull
     @JsonProperty("change")
@@ -50,6 +52,7 @@ public interface AddDiscountCodeChange extends Change {
 
     /**
      *
+     * @return nextValue
      */
     @NotNull
     @Valid

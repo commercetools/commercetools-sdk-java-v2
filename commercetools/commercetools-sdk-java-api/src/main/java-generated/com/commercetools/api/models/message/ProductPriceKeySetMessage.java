@@ -41,6 +41,7 @@ public interface ProductPriceKeySetMessage extends Message {
 
     /**
      *
+     * @return variantId
      */
     @NotNull
     @JsonProperty("variantId")
@@ -48,6 +49,7 @@ public interface ProductPriceKeySetMessage extends Message {
 
     /**
      *  <p>Unique identifier of the Price.</p>
+     * @return priceId
      */
 
     @JsonProperty("priceId")
@@ -55,6 +57,7 @@ public interface ProductPriceKeySetMessage extends Message {
 
     /**
      *  <p><code>key</code> value of the Price before the Set Price Key update action.</p>
+     * @return oldKey
      */
 
     @JsonProperty("oldKey")
@@ -62,6 +65,7 @@ public interface ProductPriceKeySetMessage extends Message {
 
     /**
      *  <p><code>key</code> value of the Price after the Set Price Key update action.</p>
+     * @return key
      */
 
     @JsonProperty("key")
@@ -69,6 +73,7 @@ public interface ProductPriceKeySetMessage extends Message {
 
     /**
      *  <p>Whether the update was only applied to the staged Product Projection.</p>
+     * @return staged
      */
     @NotNull
     @JsonProperty("staged")

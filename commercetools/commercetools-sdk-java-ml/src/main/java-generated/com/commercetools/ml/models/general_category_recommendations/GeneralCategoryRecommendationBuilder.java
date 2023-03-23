@@ -28,6 +28,8 @@ public class GeneralCategoryRecommendationBuilder implements Builder<GeneralCate
 
     /**
      *  <p>An English category name that is recommended for a product.</p>
+     * @param categoryName
+     * @return Builder
      */
 
     public GeneralCategoryRecommendationBuilder categoryName(final String categoryName) {
@@ -37,6 +39,8 @@ public class GeneralCategoryRecommendationBuilder implements Builder<GeneralCate
 
     /**
      *  <p>Probability score for the category recommendation.</p>
+     * @param confidence
+     * @return Builder
      */
 
     public GeneralCategoryRecommendationBuilder confidence(final Double confidence) {

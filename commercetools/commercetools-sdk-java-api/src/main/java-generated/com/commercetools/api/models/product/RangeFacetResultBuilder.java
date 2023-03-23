@@ -26,6 +26,8 @@ public class RangeFacetResultBuilder implements Builder<RangeFacetResult> {
 
     /**
      *
+     * @param ranges
+     * @return Builder
      */
 
     public RangeFacetResultBuilder ranges(final com.commercetools.api.models.product.FacetRange... ranges) {
@@ -35,6 +37,8 @@ public class RangeFacetResultBuilder implements Builder<RangeFacetResult> {
 
     /**
      *
+     * @param ranges
+     * @return Builder
      */
 
     public RangeFacetResultBuilder ranges(
@@ -45,6 +49,8 @@ public class RangeFacetResultBuilder implements Builder<RangeFacetResult> {
 
     /**
      *
+     * @param ranges
+     * @return Builder
      */
 
     public RangeFacetResultBuilder plusRanges(final com.commercetools.api.models.product.FacetRange... ranges) {
@@ -57,6 +63,7 @@ public class RangeFacetResultBuilder implements Builder<RangeFacetResult> {
 
     /**
      *
+     * @return Builder
      */
 
     public RangeFacetResultBuilder plusRanges(
@@ -70,6 +77,7 @@ public class RangeFacetResultBuilder implements Builder<RangeFacetResult> {
 
     /**
      *
+     * @return Builder
      */
 
     public RangeFacetResultBuilder withRanges(

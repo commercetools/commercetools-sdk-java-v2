@@ -48,6 +48,7 @@ public interface OrderLineItemDiscountSetMessage extends OrderMessage {
 
     /**
      *  <p>Unique identifier for the Line Item.</p>
+     * @return lineItemId
      */
     @NotNull
     @JsonProperty("lineItemId")
@@ -55,6 +56,7 @@ public interface OrderLineItemDiscountSetMessage extends OrderMessage {
 
     /**
      *  <p>Array of DiscountedLineItemPriceForQuantity after the Discount recalculation.</p>
+     * @return discountedPricePerQuantity
      */
     @NotNull
     @Valid
@@ -63,6 +65,7 @@ public interface OrderLineItemDiscountSetMessage extends OrderMessage {
 
     /**
      *  <p>Total Price of the Line Item after the Discount recalculation.</p>
+     * @return totalPrice
      */
     @NotNull
     @Valid
@@ -71,6 +74,7 @@ public interface OrderLineItemDiscountSetMessage extends OrderMessage {
 
     /**
      *  <p>TaxedItemPrice of the Line Item after the Discount recalculation.</p>
+     * @return taxedPrice
      */
     @Valid
     @JsonProperty("taxedPrice")
@@ -78,6 +82,7 @@ public interface OrderLineItemDiscountSetMessage extends OrderMessage {
 
     /**
      *  <p>Taxed price of the Shipping Methods in a Cart with <code>Multi</code> ShippingMode..</p>
+     * @return taxedPricePortions
      */
     @NotNull
     @Valid

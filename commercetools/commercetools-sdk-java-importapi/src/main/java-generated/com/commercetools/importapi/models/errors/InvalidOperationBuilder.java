@@ -25,6 +25,8 @@ public class InvalidOperationBuilder implements Builder<InvalidOperation> {
 
     /**
      *
+     * @param message
+     * @return Builder
      */
 
     public InvalidOperationBuilder message(final String message) {

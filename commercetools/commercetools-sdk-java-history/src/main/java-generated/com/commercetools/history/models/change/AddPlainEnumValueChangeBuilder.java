@@ -32,6 +32,8 @@ public class AddPlainEnumValueChangeBuilder implements Builder<AddPlainEnumValue
 
     /**
      *  <p>Update action for <code>addPlainEnumValue</code> on product types</p>
+     * @param change
+     * @return Builder
      */
 
     public AddPlainEnumValueChangeBuilder change(final String change) {
@@ -41,6 +43,8 @@ public class AddPlainEnumValueChangeBuilder implements Builder<AddPlainEnumValue
 
     /**
      *  <p>The name of the attribute updated.</p>
+     * @param attributeName
+     * @return Builder
      */
 
     public AddPlainEnumValueChangeBuilder attributeName(final String attributeName) {
@@ -50,6 +54,7 @@ public class AddPlainEnumValueChangeBuilder implements Builder<AddPlainEnumValue
 
     /**
      *
+     * @return Builder
      */
 
     public AddPlainEnumValueChangeBuilder nextValue(
@@ -60,6 +65,8 @@ public class AddPlainEnumValueChangeBuilder implements Builder<AddPlainEnumValue
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public AddPlainEnumValueChangeBuilder nextValue(

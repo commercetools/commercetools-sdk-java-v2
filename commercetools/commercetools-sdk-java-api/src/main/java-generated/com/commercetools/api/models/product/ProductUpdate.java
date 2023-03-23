@@ -34,6 +34,7 @@ public interface ProductUpdate
 
     /**
      *  <p>Expected version of the Product on which the changes should be applied. If the expected version does not match the actual version, a 409 Conflict will be returned.</p>
+     * @return version
      */
     @NotNull
     @JsonProperty("version")
@@ -41,6 +42,7 @@ public interface ProductUpdate
 
     /**
      *  <p>Update actions to be performed on the Product.</p>
+     * @return actions
      */
     @NotNull
     @Valid

@@ -35,7 +35,8 @@ public interface CartSetItemShippingAddressCustomTypeAction extends CartUpdateAc
     String SET_ITEM_SHIPPING_ADDRESS_CUSTOM_TYPE = "setItemShippingAddressCustomType";
 
     /**
-     *
+     *  <p><code>key</code> of the Address in <code>itemShippingAddress</code>.</p>
+     * @return addressKey
      */
     @NotNull
     @JsonProperty("addressKey")
@@ -43,6 +44,7 @@ public interface CartSetItemShippingAddressCustomTypeAction extends CartUpdateAc
 
     /**
      *  <p>Defines the Type that extends the <code>itemShippingAddress</code> with Custom Fields. If absent, any existing Type and Custom Fields are removed from the <code>itemShippingAddress</code>.</p>
+     * @return type
      */
     @Valid
     @JsonProperty("type")
@@ -50,6 +52,7 @@ public interface CartSetItemShippingAddressCustomTypeAction extends CartUpdateAc
 
     /**
      *  <p>Sets the Custom Fields fields for the <code>itemShippingAddress</code>.</p>
+     * @return fields
      */
     @Valid
     @JsonProperty("fields")

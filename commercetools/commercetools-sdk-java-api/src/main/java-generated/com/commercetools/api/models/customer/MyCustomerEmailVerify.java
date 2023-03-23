@@ -31,6 +31,7 @@ public interface MyCustomerEmailVerify {
 
     /**
      *  <p>Value of the token to verify Customer email.</p>
+     * @return tokenValue
      */
     @NotNull
     @JsonProperty("tokenValue")

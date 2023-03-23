@@ -38,6 +38,7 @@ public interface InvalidCredentialsError extends ErrorObject {
 
     /**
      *
+     * @return code
      */
     @NotNull
     @JsonProperty("code")
@@ -45,6 +46,7 @@ public interface InvalidCredentialsError extends ErrorObject {
 
     /**
      *  <p><code>"Account with the given credentials not found."</code></p>
+     * @return message
      */
     @NotNull
     @JsonProperty("message")

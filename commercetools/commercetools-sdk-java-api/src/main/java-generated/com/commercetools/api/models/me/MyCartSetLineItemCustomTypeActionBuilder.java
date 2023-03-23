@@ -33,7 +33,9 @@ public class MyCartSetLineItemCustomTypeActionBuilder implements Builder<MyCartS
     private com.commercetools.api.models.type.FieldContainer fields;
 
     /**
-     *
+     *  <p><code>id</code> of the LineItem to update.</p>
+     * @param lineItemId
+     * @return Builder
      */
 
     public MyCartSetLineItemCustomTypeActionBuilder lineItemId(final String lineItemId) {
@@ -42,7 +44,8 @@ public class MyCartSetLineItemCustomTypeActionBuilder implements Builder<MyCartS
     }
 
     /**
-     *  <p>Defines the Type that extends the LineItem with Custom Fields. If absent, any existing Type and Custom Fields are removed from the LineItem.</p>
+     *  <p>Defines the Type that extends the LineItem with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Line Item.</p>
+     * @return Builder
      */
 
     public MyCartSetLineItemCustomTypeActionBuilder type(
@@ -52,7 +55,9 @@ public class MyCartSetLineItemCustomTypeActionBuilder implements Builder<MyCartS
     }
 
     /**
-     *  <p>Defines the Type that extends the LineItem with Custom Fields. If absent, any existing Type and Custom Fields are removed from the LineItem.</p>
+     *  <p>Defines the Type that extends the LineItem with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Line Item.</p>
+     * @param type
+     * @return Builder
      */
 
     public MyCartSetLineItemCustomTypeActionBuilder type(
@@ -62,7 +67,8 @@ public class MyCartSetLineItemCustomTypeActionBuilder implements Builder<MyCartS
     }
 
     /**
-     *  <p>Sets the Custom Fields fields for the LineItem.</p>
+     *  <p>Sets the Custom Fields fields for the Line Item.</p>
+     * @return Builder
      */
 
     public MyCartSetLineItemCustomTypeActionBuilder fields(
@@ -72,7 +78,9 @@ public class MyCartSetLineItemCustomTypeActionBuilder implements Builder<MyCartS
     }
 
     /**
-     *  <p>Sets the Custom Fields fields for the LineItem.</p>
+     *  <p>Sets the Custom Fields fields for the Line Item.</p>
+     * @param fields
+     * @return Builder
      */
 
     public MyCartSetLineItemCustomTypeActionBuilder fields(

@@ -27,6 +27,8 @@ public class CustomerSetSalutationActionBuilder implements Builder<CustomerSetSa
 
     /**
      *  <p>Value to set. If empty, any existing value is removed.</p>
+     * @param salutation
+     * @return Builder
      */
 
     public CustomerSetSalutationActionBuilder salutation(@Nullable final String salutation) {

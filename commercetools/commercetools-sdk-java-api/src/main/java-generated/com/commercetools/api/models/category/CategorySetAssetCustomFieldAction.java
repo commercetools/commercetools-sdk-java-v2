@@ -33,6 +33,7 @@ public interface CategorySetAssetCustomFieldAction extends CategoryUpdateAction 
 
     /**
      *  <p>New value to set. Either <code>assetId</code> or <code>assetKey</code> is required.</p>
+     * @return assetId
      */
 
     @JsonProperty("assetId")
@@ -40,6 +41,7 @@ public interface CategorySetAssetCustomFieldAction extends CategoryUpdateAction 
 
     /**
      *  <p>New value to set. Either <code>assetId</code> or <code>assetKey</code> is required.</p>
+     * @return assetKey
      */
 
     @JsonProperty("assetKey")
@@ -47,6 +49,7 @@ public interface CategorySetAssetCustomFieldAction extends CategoryUpdateAction 
 
     /**
      *  <p>Name of the Custom Field.</p>
+     * @return name
      */
     @NotNull
     @JsonProperty("name")
@@ -54,6 +57,7 @@ public interface CategorySetAssetCustomFieldAction extends CategoryUpdateAction 
 
     /**
      *  <p>If <code>value</code> is absent or <code>null</code>, this field will be removed if it exists. Removing a field that does not exist returns an InvalidOperation error. If <code>value</code> is provided, it is set for the field defined by <code>name</code>.</p>
+     * @return value
      */
 
     @JsonProperty("value")

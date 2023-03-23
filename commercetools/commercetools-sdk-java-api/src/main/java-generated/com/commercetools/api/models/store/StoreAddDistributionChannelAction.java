@@ -36,6 +36,7 @@ public interface StoreAddDistributionChannelAction extends StoreUpdateAction {
 
     /**
      *  <p>Value to append.</p>
+     * @return distributionChannel
      */
     @NotNull
     @Valid

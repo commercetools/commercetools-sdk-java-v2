@@ -73,6 +73,7 @@ public interface Order extends BaseResource, OrderMixin, com.commercetools.api.m
 
     /**
      *  <p>Unique identifier of the Order.</p>
+     * @return id
      */
     @NotNull
     @JsonProperty("id")
@@ -80,6 +81,7 @@ public interface Order extends BaseResource, OrderMixin, com.commercetools.api.m
 
     /**
      *  <p>The current version of the order.</p>
+     * @return version
      */
     @NotNull
     @JsonProperty("version")
@@ -87,6 +89,7 @@ public interface Order extends BaseResource, OrderMixin, com.commercetools.api.m
 
     /**
      *
+     * @return createdAt
      */
     @NotNull
     @JsonProperty("createdAt")
@@ -94,6 +97,7 @@ public interface Order extends BaseResource, OrderMixin, com.commercetools.api.m
 
     /**
      *
+     * @return lastModifiedAt
      */
     @NotNull
     @JsonProperty("lastModifiedAt")
@@ -101,6 +105,7 @@ public interface Order extends BaseResource, OrderMixin, com.commercetools.api.m
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @return lastModifiedBy
      */
     @Valid
     @JsonProperty("lastModifiedBy")
@@ -108,6 +113,7 @@ public interface Order extends BaseResource, OrderMixin, com.commercetools.api.m
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @return createdBy
      */
     @Valid
     @JsonProperty("createdBy")
@@ -115,6 +121,7 @@ public interface Order extends BaseResource, OrderMixin, com.commercetools.api.m
 
     /**
      *  <p>This field will only be present if it was set for Order Import</p>
+     * @return completedAt
      */
 
     @JsonProperty("completedAt")
@@ -122,6 +129,7 @@ public interface Order extends BaseResource, OrderMixin, com.commercetools.api.m
 
     /**
      *  <p>String that uniquely identifies an order. It can be used to create more human-readable (in contrast to ID) identifier for the order. It should be unique across a project. Once it's set it cannot be changed.</p>
+     * @return orderNumber
      */
 
     @JsonProperty("orderNumber")
@@ -129,6 +137,7 @@ public interface Order extends BaseResource, OrderMixin, com.commercetools.api.m
 
     /**
      *
+     * @return customerId
      */
 
     @JsonProperty("customerId")
@@ -136,6 +145,7 @@ public interface Order extends BaseResource, OrderMixin, com.commercetools.api.m
 
     /**
      *
+     * @return customerEmail
      */
 
     @JsonProperty("customerEmail")
@@ -143,6 +153,7 @@ public interface Order extends BaseResource, OrderMixin, com.commercetools.api.m
 
     /**
      *  <p>Identifies carts and orders belonging to an anonymous session (the customer has not signed up/in yet).</p>
+     * @return anonymousId
      */
 
     @JsonProperty("anonymousId")
@@ -150,6 +161,7 @@ public interface Order extends BaseResource, OrderMixin, com.commercetools.api.m
 
     /**
      *  <p>The Business Unit the Order belongs to.</p>
+     * @return businessUnit
      */
     @Valid
     @JsonProperty("businessUnit")
@@ -157,6 +169,7 @@ public interface Order extends BaseResource, OrderMixin, com.commercetools.api.m
 
     /**
      *
+     * @return store
      */
     @Valid
     @JsonProperty("store")
@@ -164,6 +177,7 @@ public interface Order extends BaseResource, OrderMixin, com.commercetools.api.m
 
     /**
      *
+     * @return lineItems
      */
     @NotNull
     @Valid
@@ -172,6 +186,7 @@ public interface Order extends BaseResource, OrderMixin, com.commercetools.api.m
 
     /**
      *
+     * @return customLineItems
      */
     @NotNull
     @Valid
@@ -180,6 +195,7 @@ public interface Order extends BaseResource, OrderMixin, com.commercetools.api.m
 
     /**
      *
+     * @return totalPrice
      */
     @NotNull
     @Valid
@@ -188,6 +204,7 @@ public interface Order extends BaseResource, OrderMixin, com.commercetools.api.m
 
     /**
      *  <p>The taxes are calculated based on the shipping address.</p>
+     * @return taxedPrice
      */
     @Valid
     @JsonProperty("taxedPrice")
@@ -195,6 +212,7 @@ public interface Order extends BaseResource, OrderMixin, com.commercetools.api.m
 
     /**
      *  <p>Sum of <code>taxedPrice</code> of ShippingInfo across all Shipping Methods. For <code>Platform</code> TaxMode, it is set automatically only if shipping address is set or Shipping Method is added to the Cart.</p>
+     * @return taxedShippingPrice
      */
     @Valid
     @JsonProperty("taxedShippingPrice")
@@ -203,6 +221,7 @@ public interface Order extends BaseResource, OrderMixin, com.commercetools.api.m
     /**
      *  <p>Holds all shipping-related information per Shipping Method.</p>
      *  <p>For <code>Multi</code> ShippingMode, it is updated automatically after the Shipping Methods are added.</p>
+     * @return shippingAddress
      */
     @Valid
     @JsonProperty("shippingAddress")
@@ -210,6 +229,7 @@ public interface Order extends BaseResource, OrderMixin, com.commercetools.api.m
 
     /**
      *
+     * @return billingAddress
      */
     @Valid
     @JsonProperty("billingAddress")
@@ -217,6 +237,7 @@ public interface Order extends BaseResource, OrderMixin, com.commercetools.api.m
 
     /**
      *  <p>Indicates whether one or multiple Shipping Methods are added to the Cart.</p>
+     * @return shippingMode
      */
     @NotNull
     @JsonProperty("shippingMode")
@@ -225,6 +246,7 @@ public interface Order extends BaseResource, OrderMixin, com.commercetools.api.m
     /**
      *  <p>Holds all shipping-related information per Shipping Method for <code>Multi</code> ShippingMode.</p>
      *  <p>It is updated automatically after the Shipping Method is added.</p>
+     * @return shipping
      */
     @NotNull
     @Valid
@@ -233,6 +255,7 @@ public interface Order extends BaseResource, OrderMixin, com.commercetools.api.m
 
     /**
      *
+     * @return taxMode
      */
 
     @JsonProperty("taxMode")
@@ -240,6 +263,7 @@ public interface Order extends BaseResource, OrderMixin, com.commercetools.api.m
 
     /**
      *  <p>When calculating taxes for <code>taxedPrice</code>, the selected mode is used for rouding.</p>
+     * @return taxRoundingMode
      */
 
     @JsonProperty("taxRoundingMode")
@@ -247,6 +271,7 @@ public interface Order extends BaseResource, OrderMixin, com.commercetools.api.m
 
     /**
      *  <p>Set when the customer is set and the customer is a member of a customer group. Used for product variant price selection.</p>
+     * @return customerGroup
      */
     @Valid
     @JsonProperty("customerGroup")
@@ -254,6 +279,7 @@ public interface Order extends BaseResource, OrderMixin, com.commercetools.api.m
 
     /**
      *  <p>A two-digit country code as per ISO 3166-1 alpha-2. Used for product variant price selection.</p>
+     * @return country
      */
 
     @JsonProperty("country")
@@ -261,6 +287,7 @@ public interface Order extends BaseResource, OrderMixin, com.commercetools.api.m
 
     /**
      *  <p>One of the four predefined OrderStates.</p>
+     * @return orderState
      */
     @NotNull
     @JsonProperty("orderState")
@@ -268,6 +295,7 @@ public interface Order extends BaseResource, OrderMixin, com.commercetools.api.m
 
     /**
      *  <p>This reference can point to a state in a custom workflow.</p>
+     * @return state
      */
     @Valid
     @JsonProperty("state")
@@ -275,6 +303,7 @@ public interface Order extends BaseResource, OrderMixin, com.commercetools.api.m
 
     /**
      *
+     * @return shipmentState
      */
 
     @JsonProperty("shipmentState")
@@ -282,6 +311,7 @@ public interface Order extends BaseResource, OrderMixin, com.commercetools.api.m
 
     /**
      *
+     * @return paymentState
      */
 
     @JsonProperty("paymentState")
@@ -289,6 +319,7 @@ public interface Order extends BaseResource, OrderMixin, com.commercetools.api.m
 
     /**
      *  <p>Set if the ShippingMethod is set.</p>
+     * @return shippingInfo
      */
     @Valid
     @JsonProperty("shippingInfo")
@@ -296,6 +327,7 @@ public interface Order extends BaseResource, OrderMixin, com.commercetools.api.m
 
     /**
      *
+     * @return syncInfo
      */
     @NotNull
     @Valid
@@ -304,6 +336,7 @@ public interface Order extends BaseResource, OrderMixin, com.commercetools.api.m
 
     /**
      *
+     * @return returnInfo
      */
     @Valid
     @JsonProperty("returnInfo")
@@ -311,6 +344,7 @@ public interface Order extends BaseResource, OrderMixin, com.commercetools.api.m
 
     /**
      *  <p>The Purchase Order Number is typically set by the Buyer on a QuoteRequest to track the purchase order during the quote and order flow.</p>
+     * @return purchaseOrderNumber
      */
 
     @JsonProperty("purchaseOrderNumber")
@@ -318,6 +352,7 @@ public interface Order extends BaseResource, OrderMixin, com.commercetools.api.m
 
     /**
      *
+     * @return discountCodes
      */
     @Valid
     @JsonProperty("discountCodes")
@@ -325,6 +360,7 @@ public interface Order extends BaseResource, OrderMixin, com.commercetools.api.m
 
     /**
      *  <p>Internal-only field.</p>
+     * @return lastMessageSequenceNumber
      */
     @Deprecated
     @JsonProperty("lastMessageSequenceNumber")
@@ -332,6 +368,7 @@ public interface Order extends BaseResource, OrderMixin, com.commercetools.api.m
 
     /**
      *  <p>Set when this order was created from a cart. The cart will have the state <code>Ordered</code>.</p>
+     * @return cart
      */
     @Valid
     @JsonProperty("cart")
@@ -339,6 +376,7 @@ public interface Order extends BaseResource, OrderMixin, com.commercetools.api.m
 
     /**
      *  <p>Set when this order was created from a quote.</p>
+     * @return quote
      */
     @Valid
     @JsonProperty("quote")
@@ -346,6 +384,7 @@ public interface Order extends BaseResource, OrderMixin, com.commercetools.api.m
 
     /**
      *
+     * @return custom
      */
     @Valid
     @JsonProperty("custom")
@@ -353,6 +392,7 @@ public interface Order extends BaseResource, OrderMixin, com.commercetools.api.m
 
     /**
      *
+     * @return paymentInfo
      */
     @Valid
     @JsonProperty("paymentInfo")
@@ -360,6 +400,7 @@ public interface Order extends BaseResource, OrderMixin, com.commercetools.api.m
 
     /**
      *
+     * @return locale
      */
 
     @JsonProperty("locale")
@@ -367,6 +408,7 @@ public interface Order extends BaseResource, OrderMixin, com.commercetools.api.m
 
     /**
      *
+     * @return inventoryMode
      */
 
     @JsonProperty("inventoryMode")
@@ -374,6 +416,7 @@ public interface Order extends BaseResource, OrderMixin, com.commercetools.api.m
 
     /**
      *
+     * @return origin
      */
     @NotNull
     @JsonProperty("origin")
@@ -381,13 +424,20 @@ public interface Order extends BaseResource, OrderMixin, com.commercetools.api.m
 
     /**
      *  <p>When calculating taxes for <code>taxedPrice</code>, the selected mode is used for calculating the price with LineItemLevel (horizontally) or UnitPriceLevel (vertically) calculation mode.</p>
+     * @return taxCalculationMode
      */
 
     @JsonProperty("taxCalculationMode")
     public TaxCalculationMode getTaxCalculationMode();
 
     /**
-     *  <p>The shippingRateInput is used as an input to select a ShippingRatePriceTier.</p>
+     *  <p>Input used to select a ShippingRatePriceTier. The data type of this field depends on the <code>shippingRateInputType.type</code> configured in the Project:</p>
+     *  <ul>
+     *   <li>If <code>CartClassification</code>, it is ClassificationShippingRateInput.</li>
+     *   <li>If <code>CartScore</code>, it is ScoreShippingRateInput.</li>
+     *   <li>If <code>CartValue</code>, it cannot be used.</li>
+     *  </ul>
+     * @return shippingRateInput
      */
     @Valid
     @JsonProperty("shippingRateInput")
@@ -395,6 +445,7 @@ public interface Order extends BaseResource, OrderMixin, com.commercetools.api.m
 
     /**
      *  <p>Contains addresses for orders with multiple shipping addresses.</p>
+     * @return itemShippingAddresses
      */
     @Valid
     @JsonProperty("itemShippingAddresses")
@@ -402,6 +453,7 @@ public interface Order extends BaseResource, OrderMixin, com.commercetools.api.m
 
     /**
      *  <p>Automatically filled when a line item with LineItemMode <code>GiftLineItem</code> is removed from this order.</p>
+     * @return refusedGifts
      */
     @NotNull
     @Valid

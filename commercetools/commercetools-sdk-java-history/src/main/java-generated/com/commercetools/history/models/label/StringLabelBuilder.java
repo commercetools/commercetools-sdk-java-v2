@@ -25,6 +25,8 @@ public class StringLabelBuilder implements Builder<StringLabel> {
 
     /**
      *
+     * @param value
+     * @return Builder
      */
 
     public StringLabelBuilder value(final String value) {

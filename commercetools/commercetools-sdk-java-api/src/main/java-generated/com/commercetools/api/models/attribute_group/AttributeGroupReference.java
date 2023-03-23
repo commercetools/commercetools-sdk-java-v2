@@ -35,6 +35,7 @@ public interface AttributeGroupReference extends Reference, com.commercetools.ap
 
     /**
      *  <p>Contains the representation of the expanded AttributeGroup. Only present in responses to requests with Reference Expansion for AttributeGroup.</p>
+     * @return obj
      */
     @Valid
     @JsonProperty("obj")
@@ -42,6 +43,7 @@ public interface AttributeGroupReference extends Reference, com.commercetools.ap
 
     /**
      *  <p>Platform-generated unique identifier of the referenced AttributeGroup.</p>
+     * @return id
      */
     @NotNull
     @JsonProperty("id")

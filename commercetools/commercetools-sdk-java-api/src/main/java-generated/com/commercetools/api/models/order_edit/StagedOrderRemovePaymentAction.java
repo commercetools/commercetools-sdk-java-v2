@@ -36,6 +36,7 @@ public interface StagedOrderRemovePaymentAction extends StagedOrderUpdateAction 
 
     /**
      *  <p>ResourceIdentifier of a Payment.</p>
+     * @return payment
      */
     @NotNull
     @Valid

@@ -35,6 +35,7 @@ public interface VariantValues {
 
     /**
      *  <p>SKU of the ProductVariant.</p>
+     * @return sku
      */
 
     @JsonProperty("sku")
@@ -42,6 +43,7 @@ public interface VariantValues {
 
     /**
      *  <p>Embedded Prices of the ProductVariant.</p>
+     * @return prices
      */
     @NotNull
     @Valid
@@ -50,6 +52,7 @@ public interface VariantValues {
 
     /**
      *  <p>Attributes of the ProductVariant.</p>
+     * @return attributes
      */
     @NotNull
     @Valid

@@ -26,6 +26,7 @@ public class BusinessUnitRemoveStoreActionBuilder implements Builder<BusinessUni
 
     /**
      *  <p>Store to remove.</p>
+     * @return Builder
      */
 
     public BusinessUnitRemoveStoreActionBuilder store(
@@ -36,6 +37,8 @@ public class BusinessUnitRemoveStoreActionBuilder implements Builder<BusinessUni
 
     /**
      *  <p>Store to remove.</p>
+     * @param store
+     * @return Builder
      */
 
     public BusinessUnitRemoveStoreActionBuilder store(

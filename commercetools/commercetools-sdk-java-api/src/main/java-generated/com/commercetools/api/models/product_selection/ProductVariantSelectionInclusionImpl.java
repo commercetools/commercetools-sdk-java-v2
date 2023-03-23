@@ -18,6 +18,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
  *  <p>Only Product Variants with explicitly stated SKUs are part of the Product Selection.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Deprecated
 public class ProductVariantSelectionInclusionImpl implements ProductVariantSelectionInclusion, ModelBase {
 
     private com.commercetools.api.models.product_selection.ProductVariantSelectionTypeEnum type;

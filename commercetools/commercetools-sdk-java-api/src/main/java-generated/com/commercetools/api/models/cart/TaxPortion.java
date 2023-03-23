@@ -8,14 +8,14 @@ import java.util.function.Function;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
-import com.commercetools.api.models.common.TypedMoney;
+import com.commercetools.api.models.common.CentPrecisionMoney;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * TaxPortion
+ *  <p>The tax portions are calculated from the TaxRates. If a Tax Rate has SubRates, they are used and can be identified by name. Tax portions from Line Items with the same <code>rate</code> and <code>name</code> are accumulated to the same tax portion.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -33,32 +33,35 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface TaxPortion {
 
     /**
-     *
+     *  <p>Name of the tax portion.</p>
+     * @return name
      */
 
     @JsonProperty("name")
     public String getName();
 
     /**
-     *  <p>A number in the range [0..1]</p>
+     *  <p>A number in the range 0-1.</p>
+     * @return rate
      */
     @NotNull
     @JsonProperty("rate")
     public Double getRate();
 
     /**
-     *
+     *  <p>Money value of the tax portion.</p>
+     * @return amount
      */
     @NotNull
     @Valid
     @JsonProperty("amount")
-    public TypedMoney getAmount();
+    public CentPrecisionMoney getAmount();
 
     public void setName(final String name);
 
     public void setRate(final Double rate);
 
-    public void setAmount(final TypedMoney amount);
+    public void setAmount(final CentPrecisionMoney amount);
 
     public static TaxPortion of() {
         return new TaxPortionImpl();

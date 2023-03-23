@@ -31,6 +31,7 @@ public class CategorySlugChangedMessagePayloadBuilder implements Builder<Categor
 
     /**
      *  <p>The slug of the Category after the Change Slug update action.</p>
+     * @return Builder
      */
 
     public CategorySlugChangedMessagePayloadBuilder slug(
@@ -41,6 +42,8 @@ public class CategorySlugChangedMessagePayloadBuilder implements Builder<Categor
 
     /**
      *  <p>The slug of the Category after the Change Slug update action.</p>
+     * @param slug
+     * @return Builder
      */
 
     public CategorySlugChangedMessagePayloadBuilder slug(
@@ -51,6 +54,7 @@ public class CategorySlugChangedMessagePayloadBuilder implements Builder<Categor
 
     /**
      *  <p>The slug of the Category before the Change Slug update action.</p>
+     * @return Builder
      */
 
     public CategorySlugChangedMessagePayloadBuilder oldSlug(
@@ -61,6 +65,8 @@ public class CategorySlugChangedMessagePayloadBuilder implements Builder<Categor
 
     /**
      *  <p>The slug of the Category before the Change Slug update action.</p>
+     * @param oldSlug
+     * @return Builder
      */
 
     public CategorySlugChangedMessagePayloadBuilder oldSlug(

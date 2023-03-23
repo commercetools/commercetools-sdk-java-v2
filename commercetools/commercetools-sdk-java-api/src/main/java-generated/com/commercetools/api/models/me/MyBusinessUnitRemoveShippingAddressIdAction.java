@@ -30,6 +30,7 @@ public interface MyBusinessUnitRemoveShippingAddressIdAction extends MyBusinessU
 
     /**
      *  <p>ID of the shipping address to be removed. Either <code>addressId</code> or <code>addressKey</code> is required.</p>
+     * @return addressId
      */
 
     @JsonProperty("addressId")
@@ -37,6 +38,7 @@ public interface MyBusinessUnitRemoveShippingAddressIdAction extends MyBusinessU
 
     /**
      *  <p>Key of the shipping address to be removed. Either <code>addressId</code> or <code>addressKey</code> is required.</p>
+     * @return addressKey
      */
 
     @JsonProperty("addressKey")

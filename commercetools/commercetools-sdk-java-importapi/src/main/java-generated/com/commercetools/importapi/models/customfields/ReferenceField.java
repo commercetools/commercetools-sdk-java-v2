@@ -35,6 +35,7 @@ public interface ReferenceField extends CustomField {
 
     /**
      *  <p>References a resource by key</p>
+     * @return value
      */
     @NotNull
     @Valid

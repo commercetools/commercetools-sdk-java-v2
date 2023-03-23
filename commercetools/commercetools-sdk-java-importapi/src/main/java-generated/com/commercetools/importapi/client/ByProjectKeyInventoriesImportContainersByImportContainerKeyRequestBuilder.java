@@ -26,6 +26,12 @@ public class ByProjectKeyInventoriesImportContainersByImportContainerKeyRequestB
             importContainerKey, inventoryImportRequest);
     }
 
+    public ByProjectKeyInventoriesImportContainersByImportContainerKeyPostString post(
+            final String inventoryImportRequest) {
+        return new ByProjectKeyInventoriesImportContainersByImportContainerKeyPostString(apiHttpClient, projectKey,
+            importContainerKey, inventoryImportRequest);
+    }
+
     public ByProjectKeyInventoriesImportContainersByImportContainerKeyPost post(
             UnaryOperator<com.commercetools.importapi.models.importrequests.InventoryImportRequestBuilder> op) {
         return post(

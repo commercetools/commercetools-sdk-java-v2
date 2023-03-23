@@ -26,6 +26,7 @@ public class StoreRemoveDistributionChannelActionBuilder implements Builder<Stor
 
     /**
      *  <p>Value to remove. ResourceIdentifier of a Channel with the <code>ProductDistribution</code> ChannelRoleEnum.</p>
+     * @return Builder
      */
 
     public StoreRemoveDistributionChannelActionBuilder distributionChannel(
@@ -38,6 +39,8 @@ public class StoreRemoveDistributionChannelActionBuilder implements Builder<Stor
 
     /**
      *  <p>Value to remove. ResourceIdentifier of a Channel with the <code>ProductDistribution</code> ChannelRoleEnum.</p>
+     * @param distributionChannel
+     * @return Builder
      */
 
     public StoreRemoveDistributionChannelActionBuilder distributionChannel(

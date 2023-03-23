@@ -27,6 +27,7 @@ public class BusinessUnitAddressChangedMessagePayloadBuilder
 
     /**
      *  <p>Updated address of the Business Unit.</p>
+     * @return Builder
      */
 
     public BusinessUnitAddressChangedMessagePayloadBuilder address(
@@ -37,6 +38,8 @@ public class BusinessUnitAddressChangedMessagePayloadBuilder
 
     /**
      *  <p>Updated address of the Business Unit.</p>
+     * @param address
+     * @return Builder
      */
 
     public BusinessUnitAddressChangedMessagePayloadBuilder address(

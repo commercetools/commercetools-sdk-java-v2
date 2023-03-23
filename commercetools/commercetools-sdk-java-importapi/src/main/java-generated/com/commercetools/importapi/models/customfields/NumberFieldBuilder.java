@@ -25,6 +25,8 @@ public class NumberFieldBuilder implements Builder<NumberField> {
 
     /**
      *
+     * @param value
+     * @return Builder
      */
 
     public NumberFieldBuilder value(final Double value) {

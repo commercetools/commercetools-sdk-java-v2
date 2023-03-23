@@ -32,6 +32,8 @@ public class OrderCustomLineItemQuantityChangedMessagePayloadBuilder
 
     /**
      *  <p>Unique identifier of the Custom Line Item.</p>
+     * @param customLineItemId
+     * @return Builder
      */
 
     public OrderCustomLineItemQuantityChangedMessagePayloadBuilder customLineItemId(final String customLineItemId) {
@@ -41,6 +43,8 @@ public class OrderCustomLineItemQuantityChangedMessagePayloadBuilder
 
     /**
      *  <p>Custom Line Item quantity after the Change Custom Line Item Quantity update action.</p>
+     * @param quantity
+     * @return Builder
      */
 
     public OrderCustomLineItemQuantityChangedMessagePayloadBuilder quantity(final Long quantity) {
@@ -50,6 +54,8 @@ public class OrderCustomLineItemQuantityChangedMessagePayloadBuilder
 
     /**
      *  <p>Custom Line Item quantity before the Change Custom Line Item Quantity update action.</p>
+     * @param oldQuantity
+     * @return Builder
      */
 
     public OrderCustomLineItemQuantityChangedMessagePayloadBuilder oldQuantity(final Long oldQuantity) {

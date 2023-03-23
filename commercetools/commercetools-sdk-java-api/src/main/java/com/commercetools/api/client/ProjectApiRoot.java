@@ -16,9 +16,16 @@ public class ProjectApiRoot implements Closeable, ProjectScopedApiRoot {
     private final String projectKey;
     private final ApiHttpClient apiHttpClient;
 
-    private ProjectApiRoot(final String projectKey, final ApiHttpClient apiHttpClient) {
+    private final boolean closeHttpClient;
+
+    public ProjectApiRoot(final String projectKey, final ApiHttpClient apiHttpClient) {
+        this(projectKey, apiHttpClient, true);
+    }
+
+    public ProjectApiRoot(final String projectKey, final ApiHttpClient apiHttpClient, final boolean closeHttpClient) {
         this.projectKey = projectKey;
         this.apiHttpClient = apiHttpClient;
+        this.closeHttpClient = closeHttpClient;
     }
 
     public String getProjectKey() {
@@ -30,21 +37,41 @@ public class ProjectApiRoot implements Closeable, ProjectScopedApiRoot {
     }
 
     public static ProjectApiRoot of(final String projectKey) {
-        return new ProjectApiRoot(projectKey, SerializerOnlyApiHttpClient.of());
+        return of(projectKey, true);
     }
 
     public static ProjectApiRoot fromClient(final String projectKey, final ApiHttpClient apiHttpClient) {
-        return new ProjectApiRoot(projectKey, apiHttpClient);
+        return fromClient(projectKey, apiHttpClient, true);
     }
 
     public static ProjectApiRoot withContext(final String projectKey, final ApiHttpClient apiHttpClient,
             final Context context) {
-        return new ProjectApiRoot(projectKey, ContextApiHttpClient.of(apiHttpClient, context));
+        return withContext(projectKey, apiHttpClient, context, true);
     }
 
     public static ProjectApiRoot withContext(final ProjectApiRoot projectApiRoot, final Context context) {
+        return withContext(projectApiRoot, context, true);
+    }
+
+    public static ProjectApiRoot of(final String projectKey, final boolean closeHttpClient) {
+        return new ProjectApiRoot(projectKey, SerializerOnlyApiHttpClient.of(), closeHttpClient);
+    }
+
+    public static ProjectApiRoot fromClient(final String projectKey, final ApiHttpClient apiHttpClient,
+            final boolean closeHttpClient) {
+        return new ProjectApiRoot(projectKey, apiHttpClient, closeHttpClient);
+    }
+
+    public static ProjectApiRoot withContext(final String projectKey, final ApiHttpClient apiHttpClient,
+            final Context context, final boolean closeHttpClient) {
+        return new ProjectApiRoot(projectKey, ContextApiHttpClient.of(apiHttpClient, context, closeHttpClient),
+            closeHttpClient);
+    }
+
+    public static ProjectApiRoot withContext(final ProjectApiRoot projectApiRoot, final Context context,
+            final boolean closeHttpClient) {
         return new ProjectApiRoot(projectApiRoot.projectKey,
-            ContextApiHttpClient.of(projectApiRoot.apiHttpClient, context));
+            ContextApiHttpClient.of(projectApiRoot.apiHttpClient, context, closeHttpClient), closeHttpClient);
     }
 
     @Override
@@ -272,7 +299,9 @@ public class ProjectApiRoot implements Closeable, ProjectScopedApiRoot {
             return;
         }
         try {
-            apiHttpClient.close();
+            if (closeHttpClient) {
+                apiHttpClient.close();
+            }
         }
         catch (final Throwable ignored) {
         }

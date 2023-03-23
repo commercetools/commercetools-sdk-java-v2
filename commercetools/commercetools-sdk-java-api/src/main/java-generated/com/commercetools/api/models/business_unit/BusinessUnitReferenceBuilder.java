@@ -31,6 +31,8 @@ public class BusinessUnitReferenceBuilder implements Builder<BusinessUnitReferen
 
     /**
      *  <p>Unique identifier of the referenced BusinessUnit.</p>
+     * @param id
+     * @return Builder
      */
 
     public BusinessUnitReferenceBuilder id(final String id) {
@@ -40,6 +42,8 @@ public class BusinessUnitReferenceBuilder implements Builder<BusinessUnitReferen
 
     /**
      *  <p>Contains the representation of the expanded BusinessUnit. Only present in responses to requests with Reference Expansion for BusinessUnit.</p>
+     * @param obj
+     * @return Builder
      */
 
     public BusinessUnitReferenceBuilder obj(
@@ -50,6 +54,7 @@ public class BusinessUnitReferenceBuilder implements Builder<BusinessUnitReferen
 
     /**
      *  <p>Contains the representation of the expanded BusinessUnit. Only present in responses to requests with Reference Expansion for BusinessUnit.</p>
+     * @return Builder
      */
 
     public BusinessUnitReferenceBuilder obj(

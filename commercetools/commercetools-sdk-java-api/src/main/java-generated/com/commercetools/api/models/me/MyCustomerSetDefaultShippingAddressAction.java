@@ -30,6 +30,7 @@ public interface MyCustomerSetDefaultShippingAddressAction extends MyCustomerUpd
 
     /**
      *  <p><code>id</code> of the Address to become the default shipping address.</p>
+     * @return addressId
      */
 
     @JsonProperty("addressId")
@@ -37,6 +38,7 @@ public interface MyCustomerSetDefaultShippingAddressAction extends MyCustomerUpd
 
     /**
      *  <p><code>key</code> of the Address to become the default shipping address.</p>
+     * @return addressKey
      */
 
     @JsonProperty("addressKey")

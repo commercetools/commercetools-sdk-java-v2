@@ -39,6 +39,8 @@ public class MultiBuyCustomLineItemsTargetBuilder implements Builder<MultiBuyCus
 
     /**
      *  <p>Valid CustomLineItems target predicate. The Discount will be applied to Custom Line Items that are matched by the predicate.</p>
+     * @param predicate
+     * @return Builder
      */
 
     public MultiBuyCustomLineItemsTargetBuilder predicate(final String predicate) {
@@ -48,6 +50,8 @@ public class MultiBuyCustomLineItemsTargetBuilder implements Builder<MultiBuyCus
 
     /**
      *  <p>Number of Custom Line Items to be present in order to trigger an application of this Discount.</p>
+     * @param triggerQuantity
+     * @return Builder
      */
 
     public MultiBuyCustomLineItemsTargetBuilder triggerQuantity(final Integer triggerQuantity) {
@@ -57,6 +61,8 @@ public class MultiBuyCustomLineItemsTargetBuilder implements Builder<MultiBuyCus
 
     /**
      *  <p>Number of Custom Line Items that are discounted per application of this Discount.</p>
+     * @param discountedQuantity
+     * @return Builder
      */
 
     public MultiBuyCustomLineItemsTargetBuilder discountedQuantity(final Integer discountedQuantity) {
@@ -66,6 +72,8 @@ public class MultiBuyCustomLineItemsTargetBuilder implements Builder<MultiBuyCus
 
     /**
      *  <p>Maximum number of times this Discount can be applied.</p>
+     * @param maxOccurrence
+     * @return Builder
      */
 
     public MultiBuyCustomLineItemsTargetBuilder maxOccurrence(@Nullable final Integer maxOccurrence) {
@@ -75,6 +83,8 @@ public class MultiBuyCustomLineItemsTargetBuilder implements Builder<MultiBuyCus
 
     /**
      *  <p>Discounts particular Line Items only according to the SelectionMode.</p>
+     * @param selectionMode
+     * @return Builder
      */
 
     public MultiBuyCustomLineItemsTargetBuilder selectionMode(

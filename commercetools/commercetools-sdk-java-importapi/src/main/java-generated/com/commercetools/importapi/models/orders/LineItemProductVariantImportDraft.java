@@ -34,6 +34,7 @@ public interface LineItemProductVariantImportDraft
 
     /**
      *  <p>Maps to <code>ProductVariant.product</code>.</p>
+     * @return productVariant
      */
     @Valid
     @JsonProperty("productVariant")
@@ -41,6 +42,7 @@ public interface LineItemProductVariantImportDraft
 
     /**
      *  <p>Maps to <code>ProductVariantImportDraft.sku</code>.</p>
+     * @return sku
      */
 
     @JsonProperty("sku")
@@ -48,6 +50,7 @@ public interface LineItemProductVariantImportDraft
 
     /**
      *  <p>Maps to <code>ProductVariantImportDraft.prices</code></p>
+     * @return prices
      */
     @Valid
     @JsonProperty("prices")
@@ -55,6 +58,7 @@ public interface LineItemProductVariantImportDraft
 
     /**
      *  <p>Maps to <code>ProductVariantImportDraft.attributes</code></p>
+     * @return attributes
      */
     @Valid
     @JsonProperty("attributes")
@@ -62,6 +66,7 @@ public interface LineItemProductVariantImportDraft
 
     /**
      *  <p>Maps to <code>ProductVariantImportDraft.images</code>.</p>
+     * @return images
      */
     @Valid
     @JsonProperty("images")

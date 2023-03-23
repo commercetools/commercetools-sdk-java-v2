@@ -25,6 +25,8 @@ public class CartDiscountLineItemsTargetBuilder implements Builder<CartDiscountL
 
     /**
      *  <p>Valid LineItem target predicate.</p>
+     * @param predicate
+     * @return Builder
      */
 
     public CartDiscountLineItemsTargetBuilder predicate(final String predicate) {

@@ -41,6 +41,8 @@ public class TransactionBuilder implements Builder<Transaction> {
 
     /**
      *  <p>Unique identifier of the Transaction.</p>
+     * @param id
+     * @return Builder
      */
 
     public TransactionBuilder id(final String id) {
@@ -50,6 +52,8 @@ public class TransactionBuilder implements Builder<Transaction> {
 
     /**
      *  <p>Time at which the transaction took place.</p>
+     * @param timestamp
+     * @return Builder
      */
 
     public TransactionBuilder timestamp(final String timestamp) {
@@ -59,6 +63,8 @@ public class TransactionBuilder implements Builder<Transaction> {
 
     /**
      *
+     * @param type
+     * @return Builder
      */
 
     public TransactionBuilder type(final com.commercetools.history.models.common.TransactionType type) {
@@ -68,6 +74,7 @@ public class TransactionBuilder implements Builder<Transaction> {
 
     /**
      *
+     * @return Builder
      */
 
     public TransactionBuilder amount(
@@ -78,6 +85,8 @@ public class TransactionBuilder implements Builder<Transaction> {
 
     /**
      *
+     * @param amount
+     * @return Builder
      */
 
     public TransactionBuilder amount(final com.commercetools.history.models.common.Money amount) {
@@ -87,6 +96,8 @@ public class TransactionBuilder implements Builder<Transaction> {
 
     /**
      *  <p>Identifier used by the interface that manages the transaction (usually the PSP). If a matching interaction was logged in the <code>interfaceInteractions</code> array, the corresponding interaction should be findable with this ID.</p>
+     * @param interactionId
+     * @return Builder
      */
 
     public TransactionBuilder interactionId(final String interactionId) {
@@ -96,6 +107,8 @@ public class TransactionBuilder implements Builder<Transaction> {
 
     /**
      *
+     * @param state
+     * @return Builder
      */
 
     public TransactionBuilder state(final com.commercetools.history.models.common.TransactionState state) {

@@ -35,6 +35,7 @@ public interface DeliveryFormat {
 
     /**
      *
+     * @return type
      */
     @NotNull
     @JsonProperty("type")

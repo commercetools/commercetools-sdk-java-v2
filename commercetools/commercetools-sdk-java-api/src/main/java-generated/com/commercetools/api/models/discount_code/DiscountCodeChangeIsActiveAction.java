@@ -33,6 +33,7 @@ public interface DiscountCodeChangeIsActiveAction extends DiscountCodeUpdateActi
 
     /**
      *  <p>New value to set. Set to <code>true</code> to activate the DiscountCode for all matching Discounts.</p>
+     * @return isActive
      */
     @NotNull
     @JsonProperty("isActive")

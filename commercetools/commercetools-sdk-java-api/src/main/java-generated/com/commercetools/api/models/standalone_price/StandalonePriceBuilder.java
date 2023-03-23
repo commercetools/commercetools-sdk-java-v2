@@ -82,6 +82,8 @@ public class StandalonePriceBuilder implements Builder<StandalonePrice> {
 
     /**
      *  <p>Unique identifier of the StandalonePrice.</p>
+     * @param id
+     * @return Builder
      */
 
     public StandalonePriceBuilder id(final String id) {
@@ -91,6 +93,8 @@ public class StandalonePriceBuilder implements Builder<StandalonePrice> {
 
     /**
      *  <p>Current version of the StandalonePrice.</p>
+     * @param version
+     * @return Builder
      */
 
     public StandalonePriceBuilder version(final Long version) {
@@ -100,6 +104,8 @@ public class StandalonePriceBuilder implements Builder<StandalonePrice> {
 
     /**
      *  <p>Date and time (UTC) the StandalonePrice was initially created.</p>
+     * @param createdAt
+     * @return Builder
      */
 
     public StandalonePriceBuilder createdAt(final java.time.ZonedDateTime createdAt) {
@@ -109,6 +115,8 @@ public class StandalonePriceBuilder implements Builder<StandalonePrice> {
 
     /**
      *  <p>Date and time (UTC) the StandalonePrice was last updated.</p>
+     * @param lastModifiedAt
+     * @return Builder
      */
 
     public StandalonePriceBuilder lastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {
@@ -118,6 +126,7 @@ public class StandalonePriceBuilder implements Builder<StandalonePrice> {
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @return Builder
      */
 
     public StandalonePriceBuilder lastModifiedBy(
@@ -128,6 +137,8 @@ public class StandalonePriceBuilder implements Builder<StandalonePrice> {
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param lastModifiedBy
+     * @return Builder
      */
 
     public StandalonePriceBuilder lastModifiedBy(
@@ -138,6 +149,7 @@ public class StandalonePriceBuilder implements Builder<StandalonePrice> {
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @return Builder
      */
 
     public StandalonePriceBuilder createdBy(
@@ -148,6 +160,8 @@ public class StandalonePriceBuilder implements Builder<StandalonePrice> {
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param createdBy
+     * @return Builder
      */
 
     public StandalonePriceBuilder createdBy(@Nullable final com.commercetools.api.models.common.CreatedBy createdBy) {
@@ -157,6 +171,8 @@ public class StandalonePriceBuilder implements Builder<StandalonePrice> {
 
     /**
      *  <p>User-defined unique identifier of the StandalonePrice.</p>
+     * @param key
+     * @return Builder
      */
 
     public StandalonePriceBuilder key(@Nullable final String key) {
@@ -166,6 +182,8 @@ public class StandalonePriceBuilder implements Builder<StandalonePrice> {
 
     /**
      *  <p>SKU of the ProductVariant to which this Price is associated.</p>
+     * @param sku
+     * @return Builder
      */
 
     public StandalonePriceBuilder sku(final String sku) {
@@ -175,6 +193,8 @@ public class StandalonePriceBuilder implements Builder<StandalonePrice> {
 
     /**
      *  <p>Money value of this Price.</p>
+     * @param value
+     * @return Builder
      */
 
     public StandalonePriceBuilder value(final com.commercetools.api.models.common.TypedMoney value) {
@@ -184,6 +204,7 @@ public class StandalonePriceBuilder implements Builder<StandalonePrice> {
 
     /**
      *  <p>Money value of this Price.</p>
+     * @return Builder
      */
 
     public StandalonePriceBuilder value(
@@ -194,6 +215,8 @@ public class StandalonePriceBuilder implements Builder<StandalonePrice> {
 
     /**
      *  <p>Country for which this Price is valid.</p>
+     * @param country
+     * @return Builder
      */
 
     public StandalonePriceBuilder country(@Nullable final String country) {
@@ -203,6 +226,7 @@ public class StandalonePriceBuilder implements Builder<StandalonePrice> {
 
     /**
      *  <p>CustomerGroup for which this Price is valid.</p>
+     * @return Builder
      */
 
     public StandalonePriceBuilder customerGroup(
@@ -215,6 +239,8 @@ public class StandalonePriceBuilder implements Builder<StandalonePrice> {
 
     /**
      *  <p>CustomerGroup for which this Price is valid.</p>
+     * @param customerGroup
+     * @return Builder
      */
 
     public StandalonePriceBuilder customerGroup(
@@ -225,6 +251,7 @@ public class StandalonePriceBuilder implements Builder<StandalonePrice> {
 
     /**
      *  <p>Product distribution Channel for which this Price is valid.</p>
+     * @return Builder
      */
 
     public StandalonePriceBuilder channel(
@@ -235,6 +262,8 @@ public class StandalonePriceBuilder implements Builder<StandalonePrice> {
 
     /**
      *  <p>Product distribution Channel for which this Price is valid.</p>
+     * @param channel
+     * @return Builder
      */
 
     public StandalonePriceBuilder channel(
@@ -245,6 +274,8 @@ public class StandalonePriceBuilder implements Builder<StandalonePrice> {
 
     /**
      *  <p>Date from which the Price is valid.</p>
+     * @param validFrom
+     * @return Builder
      */
 
     public StandalonePriceBuilder validFrom(@Nullable final java.time.ZonedDateTime validFrom) {
@@ -253,7 +284,9 @@ public class StandalonePriceBuilder implements Builder<StandalonePrice> {
     }
 
     /**
-     *  <p>Date until the Price is valid.</p>
+     *  <p>Date until the Price is valid. Standalone Prices that are no longer valid are not automatically deleted, but they can be deleted if necessary.</p>
+     * @param validUntil
+     * @return Builder
      */
 
     public StandalonePriceBuilder validUntil(@Nullable final java.time.ZonedDateTime validUntil) {
@@ -263,6 +296,8 @@ public class StandalonePriceBuilder implements Builder<StandalonePrice> {
 
     /**
      *  <p>Price tiers if any are defined.</p>
+     * @param tiers
+     * @return Builder
      */
 
     public StandalonePriceBuilder tiers(@Nullable final com.commercetools.api.models.common.PriceTier... tiers) {
@@ -272,6 +307,8 @@ public class StandalonePriceBuilder implements Builder<StandalonePrice> {
 
     /**
      *  <p>Price tiers if any are defined.</p>
+     * @param tiers
+     * @return Builder
      */
 
     public StandalonePriceBuilder tiers(
@@ -282,6 +319,8 @@ public class StandalonePriceBuilder implements Builder<StandalonePrice> {
 
     /**
      *  <p>Price tiers if any are defined.</p>
+     * @param tiers
+     * @return Builder
      */
 
     public StandalonePriceBuilder plusTiers(@Nullable final com.commercetools.api.models.common.PriceTier... tiers) {
@@ -294,6 +333,7 @@ public class StandalonePriceBuilder implements Builder<StandalonePrice> {
 
     /**
      *  <p>Price tiers if any are defined.</p>
+     * @return Builder
      */
 
     public StandalonePriceBuilder plusTiers(
@@ -307,6 +347,7 @@ public class StandalonePriceBuilder implements Builder<StandalonePrice> {
 
     /**
      *  <p>Price tiers if any are defined.</p>
+     * @return Builder
      */
 
     public StandalonePriceBuilder withTiers(
@@ -318,6 +359,7 @@ public class StandalonePriceBuilder implements Builder<StandalonePrice> {
 
     /**
      *  <p>Set if a matching ProductDiscount exists. If set, the API uses the <code>discounted</code> value for the LineItem Price selection. When a relative discount is applied and the fraction part of the <code>discounted</code> price is 0.5, the discounted price is rounded in favor of the customer with the half down rounding.</p>
+     * @return Builder
      */
 
     public StandalonePriceBuilder discounted(
@@ -328,6 +370,8 @@ public class StandalonePriceBuilder implements Builder<StandalonePrice> {
 
     /**
      *  <p>Set if a matching ProductDiscount exists. If set, the API uses the <code>discounted</code> value for the LineItem Price selection. When a relative discount is applied and the fraction part of the <code>discounted</code> price is 0.5, the discounted price is rounded in favor of the customer with the half down rounding.</p>
+     * @param discounted
+     * @return Builder
      */
 
     public StandalonePriceBuilder discounted(
@@ -338,6 +382,7 @@ public class StandalonePriceBuilder implements Builder<StandalonePrice> {
 
     /**
      *  <p>Custom Fields for the StandalonePrice.</p>
+     * @return Builder
      */
 
     public StandalonePriceBuilder custom(
@@ -348,6 +393,8 @@ public class StandalonePriceBuilder implements Builder<StandalonePrice> {
 
     /**
      *  <p>Custom Fields for the StandalonePrice.</p>
+     * @param custom
+     * @return Builder
      */
 
     public StandalonePriceBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFields custom) {
@@ -357,6 +404,7 @@ public class StandalonePriceBuilder implements Builder<StandalonePrice> {
 
     /**
      *  <p>Staged changes of the StandalonePrice. Only present if the StandalonePrice has staged changes.</p>
+     * @return Builder
      */
 
     public StandalonePriceBuilder staged(
@@ -368,6 +416,8 @@ public class StandalonePriceBuilder implements Builder<StandalonePrice> {
 
     /**
      *  <p>Staged changes of the StandalonePrice. Only present if the StandalonePrice has staged changes.</p>
+     * @param staged
+     * @return Builder
      */
 
     public StandalonePriceBuilder staged(
@@ -378,6 +428,8 @@ public class StandalonePriceBuilder implements Builder<StandalonePrice> {
 
     /**
      *  <p>If set to <code>true</code>, the StandalonePrice is considered during price selection. If set to <code>false</code>, the StandalonePrice is not considered during price selection.</p>
+     * @param active
+     * @return Builder
      */
 
     public StandalonePriceBuilder active(final Boolean active) {

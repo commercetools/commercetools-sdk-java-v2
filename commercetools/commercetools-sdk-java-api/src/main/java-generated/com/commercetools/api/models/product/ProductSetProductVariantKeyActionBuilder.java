@@ -36,6 +36,8 @@ public class ProductSetProductVariantKeyActionBuilder implements Builder<Product
 
     /**
      *  <p>The <code>id</code> of the ProductVariant to update.</p>
+     * @param variantId
+     * @return Builder
      */
 
     public ProductSetProductVariantKeyActionBuilder variantId(@Nullable final Long variantId) {
@@ -45,6 +47,8 @@ public class ProductSetProductVariantKeyActionBuilder implements Builder<Product
 
     /**
      *  <p>The <code>sku</code> of the ProductVariant to update.</p>
+     * @param sku
+     * @return Builder
      */
 
     public ProductSetProductVariantKeyActionBuilder sku(@Nullable final String sku) {
@@ -54,6 +58,8 @@ public class ProductSetProductVariantKeyActionBuilder implements Builder<Product
 
     /**
      *  <p>Value to set. Must be unique. If empty, any existing value will be removed.</p>
+     * @param key
+     * @return Builder
      */
 
     public ProductSetProductVariantKeyActionBuilder key(@Nullable final String key) {
@@ -63,6 +69,8 @@ public class ProductSetProductVariantKeyActionBuilder implements Builder<Product
 
     /**
      *  <p>If <code>true</code>, only the staged <code>key</code> is set. If <code>false</code>, both the current and staged <code>key</code> are set.</p>
+     * @param staged
+     * @return Builder
      */
 
     public ProductSetProductVariantKeyActionBuilder staged(@Nullable final Boolean staged) {

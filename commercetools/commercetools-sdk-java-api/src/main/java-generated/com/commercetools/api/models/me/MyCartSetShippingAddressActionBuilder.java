@@ -27,7 +27,8 @@ public class MyCartSetShippingAddressActionBuilder implements Builder<MyCartSetS
     private com.commercetools.api.models.common.BaseAddress address;
 
     /**
-     *  <p>Polymorphic base type that represents a postal address and contact details. Depending on the read or write action, it can be either Address or AddressDraft that only differ in the data type for the optional <code>custom</code> field.</p>
+     *  <p>Value to set. If not set, the shipping address is unset, and the <code>taxedPrice</code> and <code>taxRate</code> are unset in all Line Items.</p>
+     * @return Builder
      */
 
     public MyCartSetShippingAddressActionBuilder address(
@@ -37,7 +38,9 @@ public class MyCartSetShippingAddressActionBuilder implements Builder<MyCartSetS
     }
 
     /**
-     *  <p>Polymorphic base type that represents a postal address and contact details. Depending on the read or write action, it can be either Address or AddressDraft that only differ in the data type for the optional <code>custom</code> field.</p>
+     *  <p>Value to set. If not set, the shipping address is unset, and the <code>taxedPrice</code> and <code>taxRate</code> are unset in all Line Items.</p>
+     * @param address
+     * @return Builder
      */
 
     public MyCartSetShippingAddressActionBuilder address(

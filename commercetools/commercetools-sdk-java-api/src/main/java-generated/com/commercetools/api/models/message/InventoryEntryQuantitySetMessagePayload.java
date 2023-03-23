@@ -38,6 +38,7 @@ public interface InventoryEntryQuantitySetMessagePayload extends MessagePayload 
 
     /**
      *  <p>Quantity on stock for the InventoryEntry before the quantity was updated.</p>
+     * @return oldQuantityOnStock
      */
     @NotNull
     @JsonProperty("oldQuantityOnStock")
@@ -45,6 +46,7 @@ public interface InventoryEntryQuantitySetMessagePayload extends MessagePayload 
 
     /**
      *  <p>Quantity on stock for the InventoryEntry after the quantity was updated.</p>
+     * @return newQuantityOnStock
      */
     @NotNull
     @JsonProperty("newQuantityOnStock")
@@ -52,6 +54,7 @@ public interface InventoryEntryQuantitySetMessagePayload extends MessagePayload 
 
     /**
      *  <p>Available quantity for the InventoryEntry before the quantity was updated.</p>
+     * @return oldAvailableQuantity
      */
     @NotNull
     @JsonProperty("oldAvailableQuantity")
@@ -59,6 +62,7 @@ public interface InventoryEntryQuantitySetMessagePayload extends MessagePayload 
 
     /**
      *  <p>Available quantity for the InventoryEntry after the quantity was updated.</p>
+     * @return newAvailableQuantity
      */
     @NotNull
     @JsonProperty("newAvailableQuantity")
@@ -66,6 +70,7 @@ public interface InventoryEntryQuantitySetMessagePayload extends MessagePayload 
 
     /**
      *  <p>Reference to the Channel where the InventoryEntry quantity was set.</p>
+     * @return supplyChannel
      */
     @Valid
     @JsonProperty("supplyChannel")

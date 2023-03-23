@@ -36,6 +36,7 @@ public interface AddProductChange extends Change {
 
     /**
      *
+     * @return type
      */
     @NotNull
     @JsonProperty("type")
@@ -43,6 +44,7 @@ public interface AddProductChange extends Change {
 
     /**
      *  <p>Update action for when a product is assigned to a product selection</p>
+     * @return change
      */
     @NotNull
     @JsonProperty("change")
@@ -50,6 +52,7 @@ public interface AddProductChange extends Change {
 
     /**
      *
+     * @return nextValue
      */
     @NotNull
     @Valid

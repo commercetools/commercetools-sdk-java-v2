@@ -42,6 +42,7 @@ public interface BusinessUnitBillingAddressAddedMessage extends Message {
 
     /**
      *  <p>The address that was added to the Business Unit as billing address.</p>
+     * @return address
      */
     @NotNull
     @Valid

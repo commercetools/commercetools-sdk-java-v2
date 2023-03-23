@@ -35,6 +35,7 @@ public interface ProductSelectionRemoveProductAction extends ProductSelectionUpd
 
     /**
      *  <p>ResourceIdentifier of the Product</p>
+     * @return product
      */
     @NotNull
     @Valid

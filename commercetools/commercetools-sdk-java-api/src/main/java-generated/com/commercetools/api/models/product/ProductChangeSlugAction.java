@@ -35,6 +35,7 @@ public interface ProductChangeSlugAction extends ProductUpdateAction {
 
     /**
      *  <p>Value to set. Must not be empty. A Product can have the same slug for different Locales, but it must be unique across the Project. Must match the pattern <code>^[A-Za-z0-9_-]{2,256}+$</code>.</p>
+     * @return slug
      */
     @NotNull
     @Valid
@@ -43,6 +44,7 @@ public interface ProductChangeSlugAction extends ProductUpdateAction {
 
     /**
      *  <p>If <code>true</code>, only the staged <code>slug</code> is updated. If <code>false</code>, both the current and staged <code>slug</code> are updated.</p>
+     * @return staged
      */
 
     @JsonProperty("staged")

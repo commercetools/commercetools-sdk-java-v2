@@ -13,7 +13,9 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>Adds a DiscountCode to the Cart to activate the related CartDiscounts. Adding a Discount Code is only possible if no DirectDiscount has been applied to the cart or the order. Discount Codes can be added to frozen Carts, but their DiscountCodeState is then <code>DoesNotMatchCart</code>.</p>
+ *  <p>Adds a DiscountCode to the Cart to activate the related Cart Discounts. Adding a Discount Code is only possible if no DirectDiscount has been applied to the Cart. Discount Codes can be added to frozen Carts, but their DiscountCodeState is then <code>DoesNotMatchCart</code>.</p>
+ *  <p>The maximum number of Discount Codes in a Cart is restricted by a limit.</p>
+ *  <p>Specific Error Code: MatchingPriceNotFound</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -32,7 +34,8 @@ public interface CartAddDiscountCodeAction extends CartUpdateAction {
     String ADD_DISCOUNT_CODE = "addDiscountCode";
 
     /**
-     *
+     *  <p><code>code</code> of a DiscountCode.</p>
+     * @return code
      */
     @NotNull
     @JsonProperty("code")

@@ -35,6 +35,8 @@ public class StagedOrderSetReturnItemCustomTypeActionBuilder
 
     /**
      *
+     * @param returnItemId
+     * @return Builder
      */
 
     public StagedOrderSetReturnItemCustomTypeActionBuilder returnItemId(final String returnItemId) {
@@ -44,6 +46,7 @@ public class StagedOrderSetReturnItemCustomTypeActionBuilder
 
     /**
      *  <p>Defines the Type that extends the ReturnItem with Custom Fields. If absent, any existing Type and Custom Fields are removed from the ReturnItem.</p>
+     * @return Builder
      */
 
     public StagedOrderSetReturnItemCustomTypeActionBuilder type(
@@ -54,6 +57,8 @@ public class StagedOrderSetReturnItemCustomTypeActionBuilder
 
     /**
      *  <p>Defines the Type that extends the ReturnItem with Custom Fields. If absent, any existing Type and Custom Fields are removed from the ReturnItem.</p>
+     * @param type
+     * @return Builder
      */
 
     public StagedOrderSetReturnItemCustomTypeActionBuilder type(
@@ -64,6 +69,7 @@ public class StagedOrderSetReturnItemCustomTypeActionBuilder
 
     /**
      *  <p>Sets the Custom Fields fields for the ReturnItem.</p>
+     * @return Builder
      */
 
     public StagedOrderSetReturnItemCustomTypeActionBuilder fields(
@@ -74,6 +80,8 @@ public class StagedOrderSetReturnItemCustomTypeActionBuilder
 
     /**
      *  <p>Sets the Custom Fields fields for the ReturnItem.</p>
+     * @param fields
+     * @return Builder
      */
 
     public StagedOrderSetReturnItemCustomTypeActionBuilder fields(

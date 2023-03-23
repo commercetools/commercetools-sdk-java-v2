@@ -34,6 +34,7 @@ public interface ZoneRateDraft extends io.vrap.rmf.base.client.Draft<ZoneRateDra
 
     /**
      *  <p>Sets the Zone for which the shippng rates are valid.</p>
+     * @return zone
      */
     @NotNull
     @Valid
@@ -42,6 +43,7 @@ public interface ZoneRateDraft extends io.vrap.rmf.base.client.Draft<ZoneRateDra
 
     /**
      *  <p>Shipping rates for the <code>currencies</code> configured in the Project. The array must not contain two ShippingRates with the same CurrencyCode.</p>
+     * @return shippingRates
      */
     @NotNull
     @Valid

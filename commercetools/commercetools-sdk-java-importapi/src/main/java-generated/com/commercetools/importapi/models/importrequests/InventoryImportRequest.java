@@ -35,6 +35,7 @@ public interface InventoryImportRequest extends ImportRequest {
 
     /**
      *  <p>The inventory import resources of this request.</p>
+     * @return resources
      */
     @NotNull
     @Valid

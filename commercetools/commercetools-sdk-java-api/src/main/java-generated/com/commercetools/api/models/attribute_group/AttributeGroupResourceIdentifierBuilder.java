@@ -30,6 +30,8 @@ public class AttributeGroupResourceIdentifierBuilder implements Builder<Attribut
 
     /**
      *  <p>Platform-generated unique identifier of the referenced AttributeGroup. Either <code>id</code> or <code>key</code> is required.</p>
+     * @param id
+     * @return Builder
      */
 
     public AttributeGroupResourceIdentifierBuilder id(@Nullable final String id) {
@@ -39,6 +41,8 @@ public class AttributeGroupResourceIdentifierBuilder implements Builder<Attribut
 
     /**
      *  <p>User-generated unique identifier of the referenced AttributeGroup. Either <code>id</code> or <code>key</code> is required.</p>
+     * @param key
+     * @return Builder
      */
 
     public AttributeGroupResourceIdentifierBuilder key(@Nullable final String key) {

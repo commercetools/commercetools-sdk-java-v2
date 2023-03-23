@@ -30,7 +30,8 @@ public class PaymentTransitionStateActionBuilder implements Builder<PaymentTrans
     private Boolean force;
 
     /**
-     *  <p>Reference to a State.</p>
+     *  <p>ResourceIdentifier to a State.</p>
+     * @return Builder
      */
 
     public PaymentTransitionStateActionBuilder state(
@@ -40,7 +41,9 @@ public class PaymentTransitionStateActionBuilder implements Builder<PaymentTrans
     }
 
     /**
-     *  <p>Reference to a State.</p>
+     *  <p>ResourceIdentifier to a State.</p>
+     * @param state
+     * @return Builder
      */
 
     public PaymentTransitionStateActionBuilder state(
@@ -51,6 +54,8 @@ public class PaymentTransitionStateActionBuilder implements Builder<PaymentTrans
 
     /**
      *  <p>Set to <code>true</code> to skip validations when transitioning to the new State.</p>
+     * @param force
+     * @return Builder
      */
 
     public PaymentTransitionStateActionBuilder force(@Nullable final Boolean force) {

@@ -25,6 +25,8 @@ public class OrderChangeOrderStateActionBuilder implements Builder<OrderChangeOr
 
     /**
      *
+     * @param orderState
+     * @return Builder
      */
 
     public OrderChangeOrderStateActionBuilder orderState(

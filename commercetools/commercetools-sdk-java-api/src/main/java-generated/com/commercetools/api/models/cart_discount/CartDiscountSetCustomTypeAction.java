@@ -34,6 +34,7 @@ public interface CartDiscountSetCustomTypeAction extends CartDiscountUpdateActio
 
     /**
      *  <p>Defines the Type that extends the CartDiscount with Custom Fields. If absent, any existing Type and Custom Fields are removed from the CartDiscount.</p>
+     * @return type
      */
     @Valid
     @JsonProperty("type")
@@ -41,6 +42,7 @@ public interface CartDiscountSetCustomTypeAction extends CartDiscountUpdateActio
 
     /**
      *  <p>Sets the Custom Fields fields for the CartDiscount.</p>
+     * @return fields
      */
     @Valid
     @JsonProperty("fields")

@@ -25,7 +25,9 @@ public class CartDiscountValueAbsoluteDraftBuilder implements Builder<CartDiscou
     private java.util.List<com.commercetools.api.models.common.Money> money;
 
     /**
-     *  <p>Money values in different currencies. An absolute Cart Discount will only match a price if this array contains a value with the same currency. If it contains 10��� and 15$, the matching ��� price will be decreased by 10��� and the matching $ price will be decreased by 15$.</p>
+     *  <p>Money values in different currencies. An absolute Cart Discount will only match a price if this array contains a value with the same currency. If it contains 10&euro; and 15$, the matching &euro; price will be decreased by 10&euro; and the matching $ price will be decreased by 15$.</p>
+     * @param money
+     * @return Builder
      */
 
     public CartDiscountValueAbsoluteDraftBuilder money(final com.commercetools.api.models.common.Money... money) {
@@ -34,7 +36,9 @@ public class CartDiscountValueAbsoluteDraftBuilder implements Builder<CartDiscou
     }
 
     /**
-     *  <p>Money values in different currencies. An absolute Cart Discount will only match a price if this array contains a value with the same currency. If it contains 10��� and 15$, the matching ��� price will be decreased by 10��� and the matching $ price will be decreased by 15$.</p>
+     *  <p>Money values in different currencies. An absolute Cart Discount will only match a price if this array contains a value with the same currency. If it contains 10&euro; and 15$, the matching &euro; price will be decreased by 10&euro; and the matching $ price will be decreased by 15$.</p>
+     * @param money
+     * @return Builder
      */
 
     public CartDiscountValueAbsoluteDraftBuilder money(
@@ -44,7 +48,9 @@ public class CartDiscountValueAbsoluteDraftBuilder implements Builder<CartDiscou
     }
 
     /**
-     *  <p>Money values in different currencies. An absolute Cart Discount will only match a price if this array contains a value with the same currency. If it contains 10��� and 15$, the matching ��� price will be decreased by 10��� and the matching $ price will be decreased by 15$.</p>
+     *  <p>Money values in different currencies. An absolute Cart Discount will only match a price if this array contains a value with the same currency. If it contains 10&euro; and 15$, the matching &euro; price will be decreased by 10&euro; and the matching $ price will be decreased by 15$.</p>
+     * @param money
+     * @return Builder
      */
 
     public CartDiscountValueAbsoluteDraftBuilder plusMoney(final com.commercetools.api.models.common.Money... money) {
@@ -56,7 +62,8 @@ public class CartDiscountValueAbsoluteDraftBuilder implements Builder<CartDiscou
     }
 
     /**
-     *  <p>Money values in different currencies. An absolute Cart Discount will only match a price if this array contains a value with the same currency. If it contains 10��� and 15$, the matching ��� price will be decreased by 10��� and the matching $ price will be decreased by 15$.</p>
+     *  <p>Money values in different currencies. An absolute Cart Discount will only match a price if this array contains a value with the same currency. If it contains 10&euro; and 15$, the matching &euro; price will be decreased by 10&euro; and the matching $ price will be decreased by 15$.</p>
+     * @return Builder
      */
 
     public CartDiscountValueAbsoluteDraftBuilder plusMoney(
@@ -69,7 +76,8 @@ public class CartDiscountValueAbsoluteDraftBuilder implements Builder<CartDiscou
     }
 
     /**
-     *  <p>Money values in different currencies. An absolute Cart Discount will only match a price if this array contains a value with the same currency. If it contains 10��� and 15$, the matching ��� price will be decreased by 10��� and the matching $ price will be decreased by 15$.</p>
+     *  <p>Money values in different currencies. An absolute Cart Discount will only match a price if this array contains a value with the same currency. If it contains 10&euro; and 15$, the matching &euro; price will be decreased by 10&euro; and the matching $ price will be decreased by 15$.</p>
+     * @return Builder
      */
 
     public CartDiscountValueAbsoluteDraftBuilder withMoney(

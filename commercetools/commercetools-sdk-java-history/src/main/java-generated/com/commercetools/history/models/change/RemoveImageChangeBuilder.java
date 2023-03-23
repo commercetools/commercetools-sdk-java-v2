@@ -35,6 +35,8 @@ public class RemoveImageChangeBuilder implements Builder<RemoveImageChange> {
 
     /**
      *  <p>Update actions for removing images</p>
+     * @param change
+     * @return Builder
      */
 
     public RemoveImageChangeBuilder change(final String change) {
@@ -44,6 +46,8 @@ public class RemoveImageChangeBuilder implements Builder<RemoveImageChange> {
 
     /**
      *
+     * @param catalogData
+     * @return Builder
      */
 
     public RemoveImageChangeBuilder catalogData(final String catalogData) {
@@ -53,6 +57,8 @@ public class RemoveImageChangeBuilder implements Builder<RemoveImageChange> {
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public RemoveImageChangeBuilder previousValue(
@@ -63,6 +69,8 @@ public class RemoveImageChangeBuilder implements Builder<RemoveImageChange> {
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public RemoveImageChangeBuilder previousValue(
@@ -73,6 +81,8 @@ public class RemoveImageChangeBuilder implements Builder<RemoveImageChange> {
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public RemoveImageChangeBuilder plusPreviousValue(
@@ -86,6 +96,7 @@ public class RemoveImageChangeBuilder implements Builder<RemoveImageChange> {
 
     /**
      *
+     * @return Builder
      */
 
     public RemoveImageChangeBuilder plusPreviousValue(
@@ -99,6 +110,7 @@ public class RemoveImageChangeBuilder implements Builder<RemoveImageChange> {
 
     /**
      *
+     * @return Builder
      */
 
     public RemoveImageChangeBuilder withPreviousValue(
@@ -110,6 +122,8 @@ public class RemoveImageChangeBuilder implements Builder<RemoveImageChange> {
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public RemoveImageChangeBuilder nextValue(final com.commercetools.history.models.common.Image... nextValue) {
@@ -119,6 +133,8 @@ public class RemoveImageChangeBuilder implements Builder<RemoveImageChange> {
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public RemoveImageChangeBuilder nextValue(
@@ -129,6 +145,8 @@ public class RemoveImageChangeBuilder implements Builder<RemoveImageChange> {
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public RemoveImageChangeBuilder plusNextValue(final com.commercetools.history.models.common.Image... nextValue) {
@@ -141,6 +159,7 @@ public class RemoveImageChangeBuilder implements Builder<RemoveImageChange> {
 
     /**
      *
+     * @return Builder
      */
 
     public RemoveImageChangeBuilder plusNextValue(
@@ -154,6 +173,7 @@ public class RemoveImageChangeBuilder implements Builder<RemoveImageChange> {
 
     /**
      *
+     * @return Builder
      */
 
     public RemoveImageChangeBuilder withNextValue(

@@ -35,6 +35,7 @@ public interface StoreRemoveCountryAction extends StoreUpdateAction {
 
     /**
      *  <p>Value to remove from <code>countries</code>.</p>
+     * @return country
      */
     @NotNull
     @Valid

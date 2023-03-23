@@ -74,6 +74,8 @@ public class ShippingMethodBuilder implements Builder<ShippingMethod> {
 
     /**
      *  <p>Unique identifier of the ShippingMethod.</p>
+     * @param id
+     * @return Builder
      */
 
     public ShippingMethodBuilder id(final String id) {
@@ -83,6 +85,8 @@ public class ShippingMethodBuilder implements Builder<ShippingMethod> {
 
     /**
      *  <p>Current version of the ShippingMethod.</p>
+     * @param version
+     * @return Builder
      */
 
     public ShippingMethodBuilder version(final Long version) {
@@ -92,6 +96,8 @@ public class ShippingMethodBuilder implements Builder<ShippingMethod> {
 
     /**
      *  <p>Date and time (UTC) the ShippingMethod was initially created.</p>
+     * @param createdAt
+     * @return Builder
      */
 
     public ShippingMethodBuilder createdAt(final java.time.ZonedDateTime createdAt) {
@@ -101,6 +107,8 @@ public class ShippingMethodBuilder implements Builder<ShippingMethod> {
 
     /**
      *  <p>Date and time (UTC) the ShippingMethod was last updated.</p>
+     * @param lastModifiedAt
+     * @return Builder
      */
 
     public ShippingMethodBuilder lastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {
@@ -110,6 +118,7 @@ public class ShippingMethodBuilder implements Builder<ShippingMethod> {
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @return Builder
      */
 
     public ShippingMethodBuilder lastModifiedBy(
@@ -120,6 +129,8 @@ public class ShippingMethodBuilder implements Builder<ShippingMethod> {
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param lastModifiedBy
+     * @return Builder
      */
 
     public ShippingMethodBuilder lastModifiedBy(
@@ -130,6 +141,7 @@ public class ShippingMethodBuilder implements Builder<ShippingMethod> {
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @return Builder
      */
 
     public ShippingMethodBuilder createdBy(
@@ -140,6 +152,8 @@ public class ShippingMethodBuilder implements Builder<ShippingMethod> {
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param createdBy
+     * @return Builder
      */
 
     public ShippingMethodBuilder createdBy(@Nullable final com.commercetools.api.models.common.CreatedBy createdBy) {
@@ -149,6 +163,8 @@ public class ShippingMethodBuilder implements Builder<ShippingMethod> {
 
     /**
      *  <p>User-defined unique identifier of the ShippingMethod.</p>
+     * @param key
+     * @return Builder
      */
 
     public ShippingMethodBuilder key(@Nullable final String key) {
@@ -158,6 +174,8 @@ public class ShippingMethodBuilder implements Builder<ShippingMethod> {
 
     /**
      *  <p>Name of the ShippingMethod.</p>
+     * @param name
+     * @return Builder
      */
 
     public ShippingMethodBuilder name(final String name) {
@@ -167,6 +185,7 @@ public class ShippingMethodBuilder implements Builder<ShippingMethod> {
 
     /**
      *  <p>Localized name of the ShippingMethod.</p>
+     * @return Builder
      */
 
     public ShippingMethodBuilder localizedName(
@@ -177,6 +196,8 @@ public class ShippingMethodBuilder implements Builder<ShippingMethod> {
 
     /**
      *  <p>Localized name of the ShippingMethod.</p>
+     * @param localizedName
+     * @return Builder
      */
 
     public ShippingMethodBuilder localizedName(
@@ -187,6 +208,8 @@ public class ShippingMethodBuilder implements Builder<ShippingMethod> {
 
     /**
      *  <p>Description of the ShippingMethod.</p>
+     * @param description
+     * @return Builder
      */
     @Deprecated
     public ShippingMethodBuilder description(@Nullable final String description) {
@@ -196,6 +219,7 @@ public class ShippingMethodBuilder implements Builder<ShippingMethod> {
 
     /**
      *  <p>Localized description of the ShippingMethod.</p>
+     * @return Builder
      */
 
     public ShippingMethodBuilder localizedDescription(
@@ -207,6 +231,8 @@ public class ShippingMethodBuilder implements Builder<ShippingMethod> {
 
     /**
      *  <p>Localized description of the ShippingMethod.</p>
+     * @param localizedDescription
+     * @return Builder
      */
 
     public ShippingMethodBuilder localizedDescription(
@@ -217,6 +243,7 @@ public class ShippingMethodBuilder implements Builder<ShippingMethod> {
 
     /**
      *  <p>TaxCategory of all ZoneRates of the ShippingMethod.</p>
+     * @return Builder
      */
 
     public ShippingMethodBuilder taxCategory(
@@ -228,6 +255,8 @@ public class ShippingMethodBuilder implements Builder<ShippingMethod> {
 
     /**
      *  <p>TaxCategory of all ZoneRates of the ShippingMethod.</p>
+     * @param taxCategory
+     * @return Builder
      */
 
     public ShippingMethodBuilder taxCategory(
@@ -238,6 +267,8 @@ public class ShippingMethodBuilder implements Builder<ShippingMethod> {
 
     /**
      *  <p>Defines ShippingRates (prices) for specific Zones.</p>
+     * @param zoneRates
+     * @return Builder
      */
 
     public ShippingMethodBuilder zoneRates(final com.commercetools.api.models.shipping_method.ZoneRate... zoneRates) {
@@ -247,6 +278,8 @@ public class ShippingMethodBuilder implements Builder<ShippingMethod> {
 
     /**
      *  <p>Defines ShippingRates (prices) for specific Zones.</p>
+     * @param zoneRates
+     * @return Builder
      */
 
     public ShippingMethodBuilder zoneRates(
@@ -257,6 +290,8 @@ public class ShippingMethodBuilder implements Builder<ShippingMethod> {
 
     /**
      *  <p>Defines ShippingRates (prices) for specific Zones.</p>
+     * @param zoneRates
+     * @return Builder
      */
 
     public ShippingMethodBuilder plusZoneRates(
@@ -270,6 +305,7 @@ public class ShippingMethodBuilder implements Builder<ShippingMethod> {
 
     /**
      *  <p>Defines ShippingRates (prices) for specific Zones.</p>
+     * @return Builder
      */
 
     public ShippingMethodBuilder plusZoneRates(
@@ -283,6 +319,7 @@ public class ShippingMethodBuilder implements Builder<ShippingMethod> {
 
     /**
      *  <p>Defines ShippingRates (prices) for specific Zones.</p>
+     * @return Builder
      */
 
     public ShippingMethodBuilder withZoneRates(
@@ -294,6 +331,8 @@ public class ShippingMethodBuilder implements Builder<ShippingMethod> {
 
     /**
      *  <p>If <code>true</code> this ShippingMethod is the Project's default ShippingMethod.</p>
+     * @param isDefault
+     * @return Builder
      */
 
     public ShippingMethodBuilder isDefault(final Boolean isDefault) {
@@ -303,6 +342,8 @@ public class ShippingMethodBuilder implements Builder<ShippingMethod> {
 
     /**
      *  <p>Valid Cart predicate to select a ShippingMethod for a Cart.</p>
+     * @param predicate
+     * @return Builder
      */
 
     public ShippingMethodBuilder predicate(@Nullable final String predicate) {
@@ -312,6 +353,7 @@ public class ShippingMethodBuilder implements Builder<ShippingMethod> {
 
     /**
      *  <p>Custom Fields of the ShippingMethod.</p>
+     * @return Builder
      */
 
     public ShippingMethodBuilder custom(
@@ -322,6 +364,8 @@ public class ShippingMethodBuilder implements Builder<ShippingMethod> {
 
     /**
      *  <p>Custom Fields of the ShippingMethod.</p>
+     * @param custom
+     * @return Builder
      */
 
     public ShippingMethodBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFields custom) {

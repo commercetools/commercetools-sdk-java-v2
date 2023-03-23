@@ -8,7 +8,7 @@ import java.util.function.Function;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
-import com.commercetools.api.models.product_selection.IndividualProductSelectionType;
+import com.commercetools.api.models.product_selection.ProductSelectionType;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -42,13 +42,14 @@ public interface ProductSelectionCreatedMessage extends Message {
 
     /**
      *  <p>The <code>type</code> and <code>name</code> of the individual Product Selection.</p>
+     * @return productSelection
      */
     @NotNull
     @Valid
     @JsonProperty("productSelection")
-    public IndividualProductSelectionType getProductSelection();
+    public ProductSelectionType getProductSelection();
 
-    public void setProductSelection(final IndividualProductSelectionType productSelection);
+    public void setProductSelection(final ProductSelectionType productSelection);
 
     public static ProductSelectionCreatedMessage of() {
         return new ProductSelectionCreatedMessageImpl();

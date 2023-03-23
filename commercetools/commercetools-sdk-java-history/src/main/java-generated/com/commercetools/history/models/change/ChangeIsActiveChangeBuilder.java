@@ -31,6 +31,8 @@ public class ChangeIsActiveChangeBuilder implements Builder<ChangeIsActiveChange
 
     /**
      *  <p>Shape of the action for <code>changeIsActive</code></p>
+     * @param change
+     * @return Builder
      */
 
     public ChangeIsActiveChangeBuilder change(final String change) {
@@ -40,6 +42,8 @@ public class ChangeIsActiveChangeBuilder implements Builder<ChangeIsActiveChange
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public ChangeIsActiveChangeBuilder previousValue(final Boolean previousValue) {
@@ -49,6 +53,8 @@ public class ChangeIsActiveChangeBuilder implements Builder<ChangeIsActiveChange
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public ChangeIsActiveChangeBuilder nextValue(final Boolean nextValue) {

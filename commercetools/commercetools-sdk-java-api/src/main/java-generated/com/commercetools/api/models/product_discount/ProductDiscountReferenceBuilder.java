@@ -31,6 +31,8 @@ public class ProductDiscountReferenceBuilder implements Builder<ProductDiscountR
 
     /**
      *  <p>Unique identifier of the referenced ProductDiscount.</p>
+     * @param id
+     * @return Builder
      */
 
     public ProductDiscountReferenceBuilder id(final String id) {
@@ -40,6 +42,7 @@ public class ProductDiscountReferenceBuilder implements Builder<ProductDiscountR
 
     /**
      *  <p>Contains the representation of the expanded ProductDiscount. Only present in responses to requests with Reference Expansion for ProductDiscounts.</p>
+     * @return Builder
      */
 
     public ProductDiscountReferenceBuilder obj(
@@ -50,6 +53,8 @@ public class ProductDiscountReferenceBuilder implements Builder<ProductDiscountR
 
     /**
      *  <p>Contains the representation of the expanded ProductDiscount. Only present in responses to requests with Reference Expansion for ProductDiscounts.</p>
+     * @param obj
+     * @return Builder
      */
 
     public ProductDiscountReferenceBuilder obj(

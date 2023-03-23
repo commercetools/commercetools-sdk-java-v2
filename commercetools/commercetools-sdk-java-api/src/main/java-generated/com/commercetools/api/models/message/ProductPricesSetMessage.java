@@ -44,6 +44,7 @@ public interface ProductPricesSetMessage extends Message {
 
     /**
      *  <p>Unique identifier of the ProductVariant for which the Price was set.</p>
+     * @return variantId
      */
     @NotNull
     @JsonProperty("variantId")
@@ -51,6 +52,7 @@ public interface ProductPricesSetMessage extends Message {
 
     /**
      *  <p>The Embedded Prices that were set on the ProductVariant.</p>
+     * @return prices
      */
     @NotNull
     @Valid
@@ -59,6 +61,7 @@ public interface ProductPricesSetMessage extends Message {
 
     /**
      *  <p>Whether the update was only applied to the staged Product Projection.</p>
+     * @return staged
      */
     @NotNull
     @JsonProperty("staged")

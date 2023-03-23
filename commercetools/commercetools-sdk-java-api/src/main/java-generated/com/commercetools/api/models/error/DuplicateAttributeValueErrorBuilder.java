@@ -31,6 +31,8 @@ public class DuplicateAttributeValueErrorBuilder implements Builder<DuplicateAtt
 
     /**
      *  <p><code>"Attribute can't have the same value in a different variant."</code></p>
+     * @param message
+     * @return Builder
      */
 
     public DuplicateAttributeValueErrorBuilder message(final String message) {
@@ -61,6 +63,7 @@ public class DuplicateAttributeValueErrorBuilder implements Builder<DuplicateAtt
 
     /**
      *  <p>Conflicting Attributes.</p>
+     * @return Builder
      */
 
     public DuplicateAttributeValueErrorBuilder attribute(
@@ -71,6 +74,8 @@ public class DuplicateAttributeValueErrorBuilder implements Builder<DuplicateAtt
 
     /**
      *  <p>Conflicting Attributes.</p>
+     * @param attribute
+     * @return Builder
      */
 
     public DuplicateAttributeValueErrorBuilder attribute(

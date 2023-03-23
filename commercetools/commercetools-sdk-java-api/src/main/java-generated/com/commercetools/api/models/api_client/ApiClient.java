@@ -31,10 +31,11 @@ import io.vrap.rmf.base.client.utils.Generated;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ApiClientImpl.class)
-public interface ApiClient {
+public interface ApiClient extends com.commercetools.api.models.Identifiable<ApiClient> {
 
     /**
      *  <p>The OAuth2 <code>client_id</code> that can be used to obtain an access token.</p>
+     * @return id
      */
     @NotNull
     @JsonProperty("id")
@@ -42,6 +43,7 @@ public interface ApiClient {
 
     /**
      *  <p>Name of the APIClient.</p>
+     * @return name
      */
     @NotNull
     @JsonProperty("name")
@@ -49,6 +51,7 @@ public interface ApiClient {
 
     /**
      *  <p>Whitespace-separated list of OAuth scopes that can be used when obtaining an access token.</p>
+     * @return scope
      */
     @NotNull
     @JsonProperty("scope")
@@ -56,6 +59,7 @@ public interface ApiClient {
 
     /**
      *  <p>Only shown once in the response of creating the APIClient. This is the OAuth2 <code>client_secret</code> that can be used to obtain an access token.</p>
+     * @return secret
      */
 
     @JsonProperty("secret")
@@ -63,6 +67,7 @@ public interface ApiClient {
 
     /**
      *  <p>Date of the last day this APIClient was used to obtain an access token.</p>
+     * @return lastUsedAt
      */
 
     @JsonProperty("lastUsedAt")
@@ -70,6 +75,7 @@ public interface ApiClient {
 
     /**
      *  <p>If set, the Client will be deleted on (or shortly after) this point in time.</p>
+     * @return deleteAt
      */
 
     @JsonProperty("deleteAt")
@@ -77,6 +83,7 @@ public interface ApiClient {
 
     /**
      *  <p>Date and time (UTC) the APIClient was initially created at.</p>
+     * @return createdAt
      */
 
     @JsonProperty("createdAt")
@@ -84,6 +91,7 @@ public interface ApiClient {
 
     /**
      *  <p>Expiration time in seconds for each access token obtained by the APIClient. Only present when set with the APIClientDraft. If not present the default value applies.</p>
+     * @return accessTokenValiditySeconds
      */
 
     @JsonProperty("accessTokenValiditySeconds")
@@ -91,6 +99,7 @@ public interface ApiClient {
 
     /**
      *  <p>Inactivity expiration time in seconds for each refresh token obtained by the APIClient. Only present when set with the APIClientDraft. If not present the default value applies.</p>
+     * @return refreshTokenValiditySeconds
      */
 
     @JsonProperty("refreshTokenValiditySeconds")

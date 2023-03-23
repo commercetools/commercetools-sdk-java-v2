@@ -35,6 +35,7 @@ public interface MoneyField extends CustomField {
 
     /**
      *
+     * @return value
      */
     @NotNull
     @Valid

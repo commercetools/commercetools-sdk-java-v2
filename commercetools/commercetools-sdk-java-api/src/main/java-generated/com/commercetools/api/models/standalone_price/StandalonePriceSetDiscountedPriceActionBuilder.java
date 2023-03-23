@@ -29,6 +29,7 @@ public class StandalonePriceSetDiscountedPriceActionBuilder
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
+     * @return Builder
      */
 
     public StandalonePriceSetDiscountedPriceActionBuilder discounted(
@@ -39,6 +40,8 @@ public class StandalonePriceSetDiscountedPriceActionBuilder
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
+     * @param discounted
+     * @return Builder
      */
 
     public StandalonePriceSetDiscountedPriceActionBuilder discounted(

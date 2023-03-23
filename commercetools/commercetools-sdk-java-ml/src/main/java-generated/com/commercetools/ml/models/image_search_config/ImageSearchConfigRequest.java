@@ -32,6 +32,7 @@ public interface ImageSearchConfigRequest {
 
     /**
      *  <p>The list of update actions to be performed on the project.</p>
+     * @return actions
      */
     @NotNull
     @Valid

@@ -1,10 +1,12 @@
 
 package com.commercetools;
 
+import static com.commercetools.TestUtils.stringFromResource;
 import static org.assertj.core.api.Assertions.assertThat;
 
 import java.util.Collections;
 
+import javax.money.CurrencyUnit;
 import javax.money.MonetaryAmount;
 
 import com.commercetools.api.models.cart.*;
@@ -16,6 +18,7 @@ import com.fasterxml.jackson.databind.JsonNode;
 import io.vrap.rmf.base.client.utils.json.JsonUtils;
 
 import org.assertj.core.api.Assertions;
+import org.javamoney.moneta.CurrencyUnitBuilder;
 import org.javamoney.moneta.FastMoney;
 import org.junit.jupiter.api.Test;
 
@@ -235,7 +238,7 @@ public class MoneyTest {
     @Test
     public void serialization() {
         Cart cart = Cart.builder()
-                .totalPrice(b -> b.centPrecisionBuilder().centAmount(100L).fractionDigits(2).currencyCode("EUR"))
+                .totalPrice(b -> b.centAmount(100L).fractionDigits(2).currencyCode("EUR"))
                 .buildUnchecked();
 
         JsonNode cartNode = JsonUtils.toJsonNode(cart);
@@ -245,22 +248,6 @@ public class MoneyTest {
         Assertions.assertThat(cartNode.get("totalPrice").get("centAmount").asInt()).isEqualTo(100);
         Assertions.assertThat(cartNode.get("totalPrice").get("fractionDigits").asInt()).isEqualTo(2);
         Assertions.assertThat(cartNode.get("totalPrice").get("currencyCode").asText()).isEqualTo("EUR");
-
-        Cart highCart = Cart.builder()
-                .totalPrice(b -> b.highPrecisionBuilder()
-                        .centAmount(100L)
-                        .fractionDigits(3)
-                        .preciseAmount(1000L)
-                        .currencyCode("EUR"))
-                .buildUnchecked();
-
-        JsonNode highCartNode = JsonUtils.toJsonNode(highCart);
-        Assertions.assertThat(highCartNode.get("totalPrice")).hasSize(5);
-        Assertions.assertThat(highCartNode.get("totalPrice").get("type").asText()).isEqualTo("highPrecision");
-        Assertions.assertThat(highCartNode.get("totalPrice").get("centAmount").asInt()).isEqualTo(100);
-        Assertions.assertThat(highCartNode.get("totalPrice").get("preciseAmount").asInt()).isEqualTo(1000);
-        Assertions.assertThat(highCartNode.get("totalPrice").get("fractionDigits").asInt()).isEqualTo(3);
-        Assertions.assertThat(highCartNode.get("totalPrice").get("currencyCode").asText()).isEqualTo("EUR");
     }
 
     @Test
@@ -334,6 +321,46 @@ public class MoneyTest {
         final TaxRate taxRate = taxRateOf(false);
         final Money amount = centMonetaryAmountOf(119);
         assertThat(MoneyUtil.calculateNetPrice(amount, taxRate)).isEqualTo(centMonetaryAmountOf(119));
+    }
+
+    @Test
+    public void zeroAmountString() {
+        final MonetaryAmount zeroAmount = MoneyUtil.zeroAmount("EUR");
+
+        assertThat(zeroAmount.getNumber().doubleValue()).isEqualTo(0);
+        assertThat(zeroAmount.getCurrency()).isEqualTo(CurrencyUnitBuilder.of("EUR", "").build());
+    }
+
+    @Test
+    public void zeroAmountStringCurrencyUnit() {
+        final CurrencyUnit currencyUnit = CurrencyUnitBuilder.of("EUR", "").build();
+        final MonetaryAmount zeroAmount = MoneyUtil.zeroAmount(currencyUnit);
+
+        assertThat(zeroAmount.getNumber().doubleValue()).isEqualTo(0);
+        assertThat(zeroAmount.getCurrency()).isEqualTo(CurrencyUnitBuilder.of("EUR", "").build());
+    }
+
+    @Test
+    public void convertNetToGross() {
+        final MonetaryAmount netAmount = centMonetaryAmountOf(100L);
+        final double taxRate = 0.19;
+
+        assertThat(MoneyUtil.convertNetToGrossPrice(netAmount, taxRate)).isEqualTo(centMonetaryAmountOf(119L));
+    }
+
+    @Test
+    public void convertGrossToNetPrice() {
+        final MonetaryAmount grossAmount = centMonetaryAmountOf(119L);
+        final double taxRate = 0.19;
+
+        assertThat(MoneyUtil.convertGrossToNetPrice(grossAmount, taxRate)).isEqualTo(centMonetaryAmountOf(100L));
+    }
+
+    @Test
+    public void toMonetaryAmount() {
+        Price price = JsonUtils.fromJsonString(stringFromResource("price.json"), Price.class);
+
+        Assertions.assertThat(price.getValue().getCurrency()).isEqualTo(DefaultCurrencyUnits.EUR);
     }
 
     private static TaxedItemPrice taxedPriceOf() {

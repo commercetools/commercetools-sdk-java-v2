@@ -37,6 +37,8 @@ public class DeliveryDraftBuilder implements Builder<DeliveryDraft> {
 
     /**
      *  <p>Items which are shipped in this delivery regardless their distribution over several parcels. Can also be specified individually for each Parcel.</p>
+     * @param items
+     * @return Builder
      */
 
     public DeliveryDraftBuilder items(@Nullable final com.commercetools.api.models.order.DeliveryItem... items) {
@@ -46,6 +48,8 @@ public class DeliveryDraftBuilder implements Builder<DeliveryDraft> {
 
     /**
      *  <p>Items which are shipped in this delivery regardless their distribution over several parcels. Can also be specified individually for each Parcel.</p>
+     * @param items
+     * @return Builder
      */
 
     public DeliveryDraftBuilder items(
@@ -56,6 +60,8 @@ public class DeliveryDraftBuilder implements Builder<DeliveryDraft> {
 
     /**
      *  <p>Items which are shipped in this delivery regardless their distribution over several parcels. Can also be specified individually for each Parcel.</p>
+     * @param items
+     * @return Builder
      */
 
     public DeliveryDraftBuilder plusItems(@Nullable final com.commercetools.api.models.order.DeliveryItem... items) {
@@ -68,6 +74,7 @@ public class DeliveryDraftBuilder implements Builder<DeliveryDraft> {
 
     /**
      *  <p>Items which are shipped in this delivery regardless their distribution over several parcels. Can also be specified individually for each Parcel.</p>
+     * @return Builder
      */
 
     public DeliveryDraftBuilder plusItems(
@@ -81,6 +88,7 @@ public class DeliveryDraftBuilder implements Builder<DeliveryDraft> {
 
     /**
      *  <p>Items which are shipped in this delivery regardless their distribution over several parcels. Can also be specified individually for each Parcel.</p>
+     * @return Builder
      */
 
     public DeliveryDraftBuilder withItems(
@@ -92,6 +100,8 @@ public class DeliveryDraftBuilder implements Builder<DeliveryDraft> {
 
     /**
      *
+     * @param parcels
+     * @return Builder
      */
 
     public DeliveryDraftBuilder parcels(@Nullable final com.commercetools.api.models.order.ParcelDraft... parcels) {
@@ -101,6 +111,8 @@ public class DeliveryDraftBuilder implements Builder<DeliveryDraft> {
 
     /**
      *
+     * @param parcels
+     * @return Builder
      */
 
     public DeliveryDraftBuilder parcels(
@@ -111,6 +123,8 @@ public class DeliveryDraftBuilder implements Builder<DeliveryDraft> {
 
     /**
      *
+     * @param parcels
+     * @return Builder
      */
 
     public DeliveryDraftBuilder plusParcels(@Nullable final com.commercetools.api.models.order.ParcelDraft... parcels) {
@@ -123,6 +137,7 @@ public class DeliveryDraftBuilder implements Builder<DeliveryDraft> {
 
     /**
      *
+     * @return Builder
      */
 
     public DeliveryDraftBuilder plusParcels(
@@ -136,6 +151,7 @@ public class DeliveryDraftBuilder implements Builder<DeliveryDraft> {
 
     /**
      *
+     * @return Builder
      */
 
     public DeliveryDraftBuilder withParcels(
@@ -147,6 +163,7 @@ public class DeliveryDraftBuilder implements Builder<DeliveryDraft> {
 
     /**
      *
+     * @return Builder
      */
 
     public DeliveryDraftBuilder address(
@@ -157,6 +174,8 @@ public class DeliveryDraftBuilder implements Builder<DeliveryDraft> {
 
     /**
      *
+     * @param address
+     * @return Builder
      */
 
     public DeliveryDraftBuilder address(@Nullable final com.commercetools.api.models.common.AddressDraft address) {
@@ -166,6 +185,7 @@ public class DeliveryDraftBuilder implements Builder<DeliveryDraft> {
 
     /**
      *  <p>Custom Fields for the Transaction.</p>
+     * @return Builder
      */
 
     public DeliveryDraftBuilder custom(
@@ -176,6 +196,8 @@ public class DeliveryDraftBuilder implements Builder<DeliveryDraft> {
 
     /**
      *  <p>Custom Fields for the Transaction.</p>
+     * @param custom
+     * @return Builder
      */
 
     public DeliveryDraftBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFieldsDraft custom) {

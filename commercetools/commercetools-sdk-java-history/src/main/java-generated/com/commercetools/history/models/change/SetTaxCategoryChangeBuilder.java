@@ -32,6 +32,8 @@ public class SetTaxCategoryChangeBuilder implements Builder<SetTaxCategoryChange
 
     /**
      *  <p>Shape of the action for <code>setTaxCategory</code></p>
+     * @param change
+     * @return Builder
      */
 
     public SetTaxCategoryChangeBuilder change(final String change) {
@@ -41,6 +43,7 @@ public class SetTaxCategoryChangeBuilder implements Builder<SetTaxCategoryChange
 
     /**
      *
+     * @return Builder
      */
 
     public SetTaxCategoryChangeBuilder previousValue(
@@ -51,6 +54,8 @@ public class SetTaxCategoryChangeBuilder implements Builder<SetTaxCategoryChange
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public SetTaxCategoryChangeBuilder previousValue(
@@ -61,6 +66,7 @@ public class SetTaxCategoryChangeBuilder implements Builder<SetTaxCategoryChange
 
     /**
      *
+     * @return Builder
      */
 
     public SetTaxCategoryChangeBuilder nextValue(
@@ -71,6 +77,8 @@ public class SetTaxCategoryChangeBuilder implements Builder<SetTaxCategoryChange
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public SetTaxCategoryChangeBuilder nextValue(final com.commercetools.history.models.common.Reference nextValue) {

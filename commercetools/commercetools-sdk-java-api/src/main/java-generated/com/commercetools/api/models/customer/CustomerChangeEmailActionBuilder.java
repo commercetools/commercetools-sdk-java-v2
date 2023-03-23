@@ -25,6 +25,8 @@ public class CustomerChangeEmailActionBuilder implements Builder<CustomerChangeE
 
     /**
      *  <p>Value to set.</p>
+     * @param email
+     * @return Builder
      */
 
     public CustomerChangeEmailActionBuilder email(final String email) {

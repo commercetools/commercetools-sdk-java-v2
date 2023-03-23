@@ -35,6 +35,7 @@ public interface TypeDraft extends com.commercetools.api.models.WithKey, io.vrap
 
     /**
      *  <p>User-defined unique identifier for the Type.</p>
+     * @return key
      */
     @NotNull
     @JsonProperty("key")
@@ -42,6 +43,7 @@ public interface TypeDraft extends com.commercetools.api.models.WithKey, io.vrap
 
     /**
      *  <p>Name of the Type.</p>
+     * @return name
      */
     @NotNull
     @Valid
@@ -50,6 +52,7 @@ public interface TypeDraft extends com.commercetools.api.models.WithKey, io.vrap
 
     /**
      *  <p>Description of the Type.</p>
+     * @return description
      */
     @Valid
     @JsonProperty("description")
@@ -57,6 +60,7 @@ public interface TypeDraft extends com.commercetools.api.models.WithKey, io.vrap
 
     /**
      *  <p>Resources and/or data types for which the Type is defined.</p>
+     * @return resourceTypeIds
      */
     @NotNull
     @JsonProperty("resourceTypeIds")
@@ -64,6 +68,7 @@ public interface TypeDraft extends com.commercetools.api.models.WithKey, io.vrap
 
     /**
      *  <p>Defines Custom Fields.</p>
+     * @return fieldDefinitions
      */
     @Valid
     @JsonProperty("fieldDefinitions")

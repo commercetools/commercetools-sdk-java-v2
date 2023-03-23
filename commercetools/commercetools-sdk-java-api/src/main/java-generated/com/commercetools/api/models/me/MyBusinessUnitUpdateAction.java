@@ -51,6 +51,7 @@ public interface MyBusinessUnitUpdateAction {
 
     /**
      *
+     * @return action
      */
     @NotNull
     @JsonProperty("action")

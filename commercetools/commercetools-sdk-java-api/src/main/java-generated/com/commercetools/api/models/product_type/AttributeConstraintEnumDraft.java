@@ -67,4 +67,5 @@ public interface AttributeConstraintEnumDraft {
     public static AttributeConstraintEnumDraft[] values() {
         return AttributeConstraintEnumDraftEnum.values();
     }
+
 }

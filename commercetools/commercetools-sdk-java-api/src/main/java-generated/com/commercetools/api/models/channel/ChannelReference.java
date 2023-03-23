@@ -35,6 +35,7 @@ public interface ChannelReference extends Reference, com.commercetools.api.model
 
     /**
      *  <p>Contains the representation of the expanded Channel. Only present in responses to requests with Reference Expansion for Channels.</p>
+     * @return obj
      */
     @Valid
     @JsonProperty("obj")
@@ -42,6 +43,7 @@ public interface ChannelReference extends Reference, com.commercetools.api.model
 
     /**
      *  <p>Unique identifier of the referenced Channel.</p>
+     * @return id
      */
     @NotNull
     @JsonProperty("id")

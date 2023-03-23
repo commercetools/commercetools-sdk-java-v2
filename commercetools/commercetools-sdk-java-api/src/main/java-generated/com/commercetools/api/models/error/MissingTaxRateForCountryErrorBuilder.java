@@ -38,6 +38,8 @@ public class MissingTaxRateForCountryErrorBuilder implements Builder<MissingTaxR
 
     /**
      *  <p><code>"Tax category $taxCategoryId is missing a tax rate for country $countriesAndStates."</code></p>
+     * @param message
+     * @return Builder
      */
 
     public MissingTaxRateForCountryErrorBuilder message(final String message) {
@@ -68,6 +70,8 @@ public class MissingTaxRateForCountryErrorBuilder implements Builder<MissingTaxR
 
     /**
      *  <p>Unique identifier of the TaxCategory.</p>
+     * @param taxCategoryId
+     * @return Builder
      */
 
     public MissingTaxRateForCountryErrorBuilder taxCategoryId(final String taxCategoryId) {
@@ -77,6 +81,8 @@ public class MissingTaxRateForCountryErrorBuilder implements Builder<MissingTaxR
 
     /**
      *  <p>Country code of the geographic location.</p>
+     * @param country
+     * @return Builder
      */
 
     public MissingTaxRateForCountryErrorBuilder country(@Nullable final String country) {
@@ -86,6 +92,8 @@ public class MissingTaxRateForCountryErrorBuilder implements Builder<MissingTaxR
 
     /**
      *  <p>State within the country, such as Texas in the United States.</p>
+     * @param state
+     * @return Builder
      */
 
     public MissingTaxRateForCountryErrorBuilder state(@Nullable final String state) {

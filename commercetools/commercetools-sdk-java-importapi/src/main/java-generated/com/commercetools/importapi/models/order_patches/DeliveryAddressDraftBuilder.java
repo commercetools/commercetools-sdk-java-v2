@@ -31,6 +31,8 @@ public class DeliveryAddressDraftBuilder implements Builder<DeliveryAddressDraft
 
     /**
      *
+     * @param deliveryId
+     * @return Builder
      */
 
     public DeliveryAddressDraftBuilder deliveryId(final String deliveryId) {
@@ -40,6 +42,7 @@ public class DeliveryAddressDraftBuilder implements Builder<DeliveryAddressDraft
 
     /**
      *
+     * @return Builder
      */
 
     public DeliveryAddressDraftBuilder address(
@@ -50,6 +53,8 @@ public class DeliveryAddressDraftBuilder implements Builder<DeliveryAddressDraft
 
     /**
      *
+     * @param address
+     * @return Builder
      */
 
     public DeliveryAddressDraftBuilder address(

@@ -27,6 +27,8 @@ public class NoMatchingProductDiscountFoundErrorBuilder implements Builder<NoMat
 
     /**
      *  <p><code>"Couldn't find a matching product discount for: productId=$productId, variantId=$variantId, price=$price."</code></p>
+     * @param message
+     * @return Builder
      */
 
     public NoMatchingProductDiscountFoundErrorBuilder message(final String message) {

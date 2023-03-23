@@ -31,6 +31,8 @@ public class SetReturnShipmentStateChangeBuilder implements Builder<SetReturnShi
 
     /**
      *  <p>Update action for <code>setReturnShipmentState</code></p>
+     * @param change
+     * @return Builder
      */
 
     public SetReturnShipmentStateChangeBuilder change(final String change) {
@@ -40,6 +42,8 @@ public class SetReturnShipmentStateChangeBuilder implements Builder<SetReturnShi
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public SetReturnShipmentStateChangeBuilder nextValue(
@@ -50,6 +54,8 @@ public class SetReturnShipmentStateChangeBuilder implements Builder<SetReturnShi
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public SetReturnShipmentStateChangeBuilder previousValue(

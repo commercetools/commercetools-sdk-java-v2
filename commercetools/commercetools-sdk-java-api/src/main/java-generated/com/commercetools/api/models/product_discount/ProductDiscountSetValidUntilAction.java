@@ -31,6 +31,7 @@ public interface ProductDiscountSetValidUntilAction extends ProductDiscountUpdat
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed. Take Eventual Consistency into account for calculated undiscounted values.</p>
+     * @return validUntil
      */
 
     @JsonProperty("validUntil")

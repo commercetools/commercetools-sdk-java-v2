@@ -33,6 +33,7 @@ public interface ItemShippingDetails {
 
     /**
      *
+     * @return targets
      */
     @NotNull
     @Valid
@@ -41,6 +42,7 @@ public interface ItemShippingDetails {
 
     /**
      *  <p>true if the quantity of the (custom) line item is equal to the sum of the sub-quantities in <code>targets</code>, <code>false</code> otherwise. A cart cannot be ordered when the value is <code>false</code>. The error InvalidItemShippingDetails will be triggered.</p>
+     * @return valid
      */
     @NotNull
     @JsonProperty("valid")

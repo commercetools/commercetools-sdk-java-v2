@@ -58,6 +58,8 @@ public class ShoppingListLineItemBuilder implements Builder<ShoppingListLineItem
 
     /**
      *  <p>Date and time (UTC) the ShoppingListLineItem was added to the ShoppingList.</p>
+     * @param addedAt
+     * @return Builder
      */
 
     public ShoppingListLineItemBuilder addedAt(final java.time.ZonedDateTime addedAt) {
@@ -67,6 +69,7 @@ public class ShoppingListLineItemBuilder implements Builder<ShoppingListLineItem
 
     /**
      *  <p>Custom Fields of the ShoppingListLineItem.</p>
+     * @return Builder
      */
 
     public ShoppingListLineItemBuilder custom(
@@ -77,6 +80,8 @@ public class ShoppingListLineItemBuilder implements Builder<ShoppingListLineItem
 
     /**
      *  <p>Custom Fields of the ShoppingListLineItem.</p>
+     * @param custom
+     * @return Builder
      */
 
     public ShoppingListLineItemBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFields custom) {
@@ -87,6 +92,8 @@ public class ShoppingListLineItemBuilder implements Builder<ShoppingListLineItem
     /**
      *  <p>If the Product or Product Variant is deleted, <code>deactivatedAt</code> is the date and time (UTC) of deletion.</p>
      *  <p>This data is updated in an eventual consistent manner when the Product Variant cannot be ordered anymore.</p>
+     * @param deactivatedAt
+     * @return Builder
      */
 
     public ShoppingListLineItemBuilder deactivatedAt(@Nullable final java.time.ZonedDateTime deactivatedAt) {
@@ -96,6 +103,8 @@ public class ShoppingListLineItemBuilder implements Builder<ShoppingListLineItem
 
     /**
      *  <p>Unique identifier of the ShoppingListLineItem.</p>
+     * @param id
+     * @return Builder
      */
 
     public ShoppingListLineItemBuilder id(final String id) {
@@ -106,6 +115,7 @@ public class ShoppingListLineItemBuilder implements Builder<ShoppingListLineItem
     /**
      *  <p>Name of the Product.</p>
      *  <p>This data is updated in an eventual consistent manner when the Product's name changes.</p>
+     * @return Builder
      */
 
     public ShoppingListLineItemBuilder name(
@@ -117,6 +127,8 @@ public class ShoppingListLineItemBuilder implements Builder<ShoppingListLineItem
     /**
      *  <p>Name of the Product.</p>
      *  <p>This data is updated in an eventual consistent manner when the Product's name changes.</p>
+     * @param name
+     * @return Builder
      */
 
     public ShoppingListLineItemBuilder name(final com.commercetools.api.models.common.LocalizedString name) {
@@ -126,6 +138,8 @@ public class ShoppingListLineItemBuilder implements Builder<ShoppingListLineItem
 
     /**
      *  <p>Unique identifier of a Product.</p>
+     * @param productId
+     * @return Builder
      */
 
     public ShoppingListLineItemBuilder productId(final String productId) {
@@ -135,6 +149,7 @@ public class ShoppingListLineItemBuilder implements Builder<ShoppingListLineItem
 
     /**
      *  <p>The Product Type defining the Attributes of the Product.</p>
+     * @return Builder
      */
 
     public ShoppingListLineItemBuilder productType(
@@ -146,6 +161,8 @@ public class ShoppingListLineItemBuilder implements Builder<ShoppingListLineItem
 
     /**
      *  <p>The Product Type defining the Attributes of the Product.</p>
+     * @param productType
+     * @return Builder
      */
 
     public ShoppingListLineItemBuilder productType(
@@ -156,6 +173,8 @@ public class ShoppingListLineItemBuilder implements Builder<ShoppingListLineItem
 
     /**
      *  <p>Number of Products in the ShoppingListLineItem.</p>
+     * @param quantity
+     * @return Builder
      */
 
     public ShoppingListLineItemBuilder quantity(final Long quantity) {
@@ -165,6 +184,8 @@ public class ShoppingListLineItemBuilder implements Builder<ShoppingListLineItem
 
     /**
      *  <p><code>id</code> of the ProductVariant the ShoppingListLineItem refers to. If not set, the ShoppingListLineItem refers to the Master Variant.</p>
+     * @param variantId
+     * @return Builder
      */
 
     public ShoppingListLineItemBuilder variantId(@Nullable final Long variantId) {
@@ -173,8 +194,9 @@ public class ShoppingListLineItemBuilder implements Builder<ShoppingListLineItem
     }
 
     /**
-     *  <p>Data of the ProductVariant. Returned when expanded using <code>expand=lineItems[*].variant</code>.</p>
-     *  <p><em>Limitation: <code>expand=lineItems[0].variant</code> is not supported.</em></p>
+     *  <p>Data of the ProductVariant.</p>
+     *  <p>Returned when expanded using <code>expand=lineItems[*].variant</code>. You cannot expand only a single element of the array.</p>
+     * @return Builder
      */
 
     public ShoppingListLineItemBuilder variant(
@@ -184,8 +206,10 @@ public class ShoppingListLineItemBuilder implements Builder<ShoppingListLineItem
     }
 
     /**
-     *  <p>Data of the ProductVariant. Returned when expanded using <code>expand=lineItems[*].variant</code>.</p>
-     *  <p><em>Limitation: <code>expand=lineItems[0].variant</code> is not supported.</em></p>
+     *  <p>Data of the ProductVariant.</p>
+     *  <p>Returned when expanded using <code>expand=lineItems[*].variant</code>. You cannot expand only a single element of the array.</p>
+     * @param variant
+     * @return Builder
      */
 
     public ShoppingListLineItemBuilder variant(
@@ -195,8 +219,9 @@ public class ShoppingListLineItemBuilder implements Builder<ShoppingListLineItem
     }
 
     /**
-     *  <p>Slug of the current ProductData. Only returned when expanded using <code>expand=lineItems[*].productSlug</code>.</p>
-     *  <p><em>Limitation: <code>expand=lineItems[0].productSlug</code> is not supported.</em></p>
+     *  <p>Slug of the current ProductData.</p>
+     *  <p>Returned when expanded using <code>expand=lineItems[*].productSlug</code>. You cannot expand only a single element of the array.</p>
+     * @return Builder
      */
 
     public ShoppingListLineItemBuilder productSlug(
@@ -206,8 +231,10 @@ public class ShoppingListLineItemBuilder implements Builder<ShoppingListLineItem
     }
 
     /**
-     *  <p>Slug of the current ProductData. Only returned when expanded using <code>expand=lineItems[*].productSlug</code>.</p>
-     *  <p><em>Limitation: <code>expand=lineItems[0].productSlug</code> is not supported.</em></p>
+     *  <p>Slug of the current ProductData.</p>
+     *  <p>Returned when expanded using <code>expand=lineItems[*].productSlug</code>. You cannot expand only a single element of the array.</p>
+     * @param productSlug
+     * @return Builder
      */
 
     public ShoppingListLineItemBuilder productSlug(

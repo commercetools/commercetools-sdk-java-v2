@@ -35,6 +35,7 @@ public interface SetCartClassificationShippingRateInputValue {
 
     /**
      *
+     * @return type
      */
     @NotNull
     @JsonProperty("type")
@@ -42,6 +43,7 @@ public interface SetCartClassificationShippingRateInputValue {
 
     /**
      *
+     * @return key
      */
     @NotNull
     @JsonProperty("key")
@@ -49,6 +51,7 @@ public interface SetCartClassificationShippingRateInputValue {
 
     /**
      *
+     * @return label
      */
     @NotNull
     @Valid

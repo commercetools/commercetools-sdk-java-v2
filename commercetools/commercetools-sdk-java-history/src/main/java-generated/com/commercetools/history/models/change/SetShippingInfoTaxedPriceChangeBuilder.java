@@ -32,6 +32,8 @@ public class SetShippingInfoTaxedPriceChangeBuilder implements Builder<SetShippi
 
     /**
      *  <p>Update action for <code>setShippingInfoTaxedPrice</code></p>
+     * @param change
+     * @return Builder
      */
 
     public SetShippingInfoTaxedPriceChangeBuilder change(final String change) {
@@ -41,6 +43,7 @@ public class SetShippingInfoTaxedPriceChangeBuilder implements Builder<SetShippi
 
     /**
      *
+     * @return Builder
      */
 
     public SetShippingInfoTaxedPriceChangeBuilder nextValue(
@@ -51,6 +54,8 @@ public class SetShippingInfoTaxedPriceChangeBuilder implements Builder<SetShippi
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public SetShippingInfoTaxedPriceChangeBuilder nextValue(
@@ -61,6 +66,7 @@ public class SetShippingInfoTaxedPriceChangeBuilder implements Builder<SetShippi
 
     /**
      *
+     * @return Builder
      */
 
     public SetShippingInfoTaxedPriceChangeBuilder previousValue(
@@ -71,6 +77,8 @@ public class SetShippingInfoTaxedPriceChangeBuilder implements Builder<SetShippi
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public SetShippingInfoTaxedPriceChangeBuilder previousValue(

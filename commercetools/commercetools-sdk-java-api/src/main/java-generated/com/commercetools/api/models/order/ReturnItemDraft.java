@@ -35,6 +35,7 @@ public interface ReturnItemDraft extends com.commercetools.api.models.Customizab
 
     /**
      *
+     * @return quantity
      */
     @NotNull
     @JsonProperty("quantity")
@@ -42,6 +43,7 @@ public interface ReturnItemDraft extends com.commercetools.api.models.Customizab
 
     /**
      *
+     * @return lineItemId
      */
 
     @JsonProperty("lineItemId")
@@ -49,6 +51,7 @@ public interface ReturnItemDraft extends com.commercetools.api.models.Customizab
 
     /**
      *
+     * @return customLineItemId
      */
 
     @JsonProperty("customLineItemId")
@@ -56,6 +59,7 @@ public interface ReturnItemDraft extends com.commercetools.api.models.Customizab
 
     /**
      *
+     * @return comment
      */
 
     @JsonProperty("comment")
@@ -63,6 +67,7 @@ public interface ReturnItemDraft extends com.commercetools.api.models.Customizab
 
     /**
      *
+     * @return shipmentState
      */
     @NotNull
     @JsonProperty("shipmentState")
@@ -70,6 +75,7 @@ public interface ReturnItemDraft extends com.commercetools.api.models.Customizab
 
     /**
      *  <p>Custom Fields of this return item.</p>
+     * @return custom
      */
     @Valid
     @JsonProperty("custom")

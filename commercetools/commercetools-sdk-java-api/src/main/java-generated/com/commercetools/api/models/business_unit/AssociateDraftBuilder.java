@@ -29,6 +29,8 @@ public class AssociateDraftBuilder implements Builder<AssociateDraft> {
 
     /**
      *  <p>Roles the Associate should hold within the Business Unit.</p>
+     * @param roles
+     * @return Builder
      */
 
     public AssociateDraftBuilder roles(final com.commercetools.api.models.business_unit.AssociateRole... roles) {
@@ -38,6 +40,8 @@ public class AssociateDraftBuilder implements Builder<AssociateDraft> {
 
     /**
      *  <p>Roles the Associate should hold within the Business Unit.</p>
+     * @param roles
+     * @return Builder
      */
 
     public AssociateDraftBuilder roles(
@@ -48,6 +52,8 @@ public class AssociateDraftBuilder implements Builder<AssociateDraft> {
 
     /**
      *  <p>Roles the Associate should hold within the Business Unit.</p>
+     * @param roles
+     * @return Builder
      */
 
     public AssociateDraftBuilder plusRoles(final com.commercetools.api.models.business_unit.AssociateRole... roles) {
@@ -60,6 +66,7 @@ public class AssociateDraftBuilder implements Builder<AssociateDraft> {
 
     /**
      *  <p>The Customer to be part of the Business Unit.</p>
+     * @return Builder
      */
 
     public AssociateDraftBuilder customer(
@@ -71,6 +78,8 @@ public class AssociateDraftBuilder implements Builder<AssociateDraft> {
 
     /**
      *  <p>The Customer to be part of the Business Unit.</p>
+     * @param customer
+     * @return Builder
      */
 
     public AssociateDraftBuilder customer(

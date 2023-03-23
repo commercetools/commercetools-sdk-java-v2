@@ -34,6 +34,8 @@ public class MyBusinessUnitSetAddressCustomFieldActionBuilder
 
     /**
      *  <p>ID of the <code>address</code> to be extended.</p>
+     * @param addressId
+     * @return Builder
      */
 
     public MyBusinessUnitSetAddressCustomFieldActionBuilder addressId(final String addressId) {
@@ -43,6 +45,8 @@ public class MyBusinessUnitSetAddressCustomFieldActionBuilder
 
     /**
      *  <p>Name of the Custom Field.</p>
+     * @param name
+     * @return Builder
      */
 
     public MyBusinessUnitSetAddressCustomFieldActionBuilder name(final String name) {
@@ -52,6 +56,8 @@ public class MyBusinessUnitSetAddressCustomFieldActionBuilder
 
     /**
      *  <p>If <code>value</code> is absent or <code>null</code>, this field will be removed if it exists. Trying to remove a field that does not exist will fail with an InvalidOperation error. If <code>value</code> is provided, it is set for the field defined by <code>name</code>.</p>
+     * @param value
+     * @return Builder
      */
 
     public MyBusinessUnitSetAddressCustomFieldActionBuilder value(@Nullable final java.lang.Object value) {

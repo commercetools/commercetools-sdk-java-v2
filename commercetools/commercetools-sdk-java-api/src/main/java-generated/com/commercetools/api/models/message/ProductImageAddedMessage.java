@@ -44,6 +44,7 @@ public interface ProductImageAddedMessage extends Message {
 
     /**
      *  <p>Unique identifier of the Product Variant to which the Image was added.</p>
+     * @return variantId
      */
     @NotNull
     @JsonProperty("variantId")
@@ -51,6 +52,7 @@ public interface ProductImageAddedMessage extends Message {
 
     /**
      *  <p>Image that was added.</p>
+     * @return image
      */
     @NotNull
     @Valid
@@ -59,6 +61,7 @@ public interface ProductImageAddedMessage extends Message {
 
     /**
      *  <p>Whether the update was only applied to the staged Product Projection.</p>
+     * @return staged
      */
     @NotNull
     @JsonProperty("staged")

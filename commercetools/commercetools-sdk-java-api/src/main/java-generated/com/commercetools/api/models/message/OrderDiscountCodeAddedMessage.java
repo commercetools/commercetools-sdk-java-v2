@@ -42,6 +42,7 @@ public interface OrderDiscountCodeAddedMessage extends OrderMessage {
 
     /**
      *  <p>DiscountCode that was added.</p>
+     * @return discountCode
      */
     @NotNull
     @Valid

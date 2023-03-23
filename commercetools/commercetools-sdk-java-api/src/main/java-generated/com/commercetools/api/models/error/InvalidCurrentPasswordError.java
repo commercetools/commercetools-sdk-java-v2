@@ -38,6 +38,7 @@ public interface InvalidCurrentPasswordError extends ErrorObject {
 
     /**
      *
+     * @return code
      */
     @NotNull
     @JsonProperty("code")
@@ -45,6 +46,7 @@ public interface InvalidCurrentPasswordError extends ErrorObject {
 
     /**
      *  <p><code>"The given current password does not match."</code></p>
+     * @return message
      */
     @NotNull
     @JsonProperty("message")

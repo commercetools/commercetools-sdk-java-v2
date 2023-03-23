@@ -34,6 +34,7 @@ public interface BusinessUnitKeyReference extends KeyReference {
 
     /**
      *  <p>Unique and immutable key of the referenced BusinessUnit.</p>
+     * @return key
      */
     @NotNull
     @JsonProperty("key")

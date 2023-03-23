@@ -34,6 +34,7 @@ public interface CustomObjectKeyReference extends KeyReference {
 
     /**
      *
+     * @return container
      */
     @NotNull
     @JsonProperty("container")

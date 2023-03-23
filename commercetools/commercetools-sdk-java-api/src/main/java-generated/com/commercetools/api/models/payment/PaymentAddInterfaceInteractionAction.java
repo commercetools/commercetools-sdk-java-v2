@@ -36,6 +36,7 @@ public interface PaymentAddInterfaceInteractionAction extends PaymentUpdateActio
 
     /**
      *  <p>ResourceIdentifier of a Type.</p>
+     * @return type
      */
     @NotNull
     @Valid
@@ -44,6 +45,7 @@ public interface PaymentAddInterfaceInteractionAction extends PaymentUpdateActio
 
     /**
      *  <p>Custom Fields as per FieldDefinitions of the Type.</p>
+     * @return fields
      */
     @Valid
     @JsonProperty("fields")

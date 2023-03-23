@@ -49,6 +49,8 @@ public class StoreDraftBuilder implements Builder<StoreDraft> {
 
     /**
      *  <p>User-defined unique and immutable identifier for the Store. Keys can only contain alphanumeric characters, underscores, and hyphens.</p>
+     * @param key
+     * @return Builder
      */
 
     public StoreDraftBuilder key(final String key) {
@@ -58,6 +60,7 @@ public class StoreDraftBuilder implements Builder<StoreDraft> {
 
     /**
      *  <p>Name of the Store.</p>
+     * @return Builder
      */
 
     public StoreDraftBuilder name(
@@ -68,6 +71,8 @@ public class StoreDraftBuilder implements Builder<StoreDraft> {
 
     /**
      *  <p>Name of the Store.</p>
+     * @param name
+     * @return Builder
      */
 
     public StoreDraftBuilder name(@Nullable final com.commercetools.api.models.common.LocalizedString name) {
@@ -77,6 +82,8 @@ public class StoreDraftBuilder implements Builder<StoreDraft> {
 
     /**
      *  <p>Languages defined in Project. Only languages defined in the Project can be used.</p>
+     * @param languages
+     * @return Builder
      */
 
     public StoreDraftBuilder languages(@Nullable final String... languages) {
@@ -86,6 +93,8 @@ public class StoreDraftBuilder implements Builder<StoreDraft> {
 
     /**
      *  <p>Languages defined in Project. Only languages defined in the Project can be used.</p>
+     * @param languages
+     * @return Builder
      */
 
     public StoreDraftBuilder languages(@Nullable final java.util.List<String> languages) {
@@ -95,6 +104,8 @@ public class StoreDraftBuilder implements Builder<StoreDraft> {
 
     /**
      *  <p>Languages defined in Project. Only languages defined in the Project can be used.</p>
+     * @param languages
+     * @return Builder
      */
 
     public StoreDraftBuilder plusLanguages(@Nullable final String... languages) {
@@ -107,6 +118,8 @@ public class StoreDraftBuilder implements Builder<StoreDraft> {
 
     /**
      *  <p>Countries defined for the Store.</p>
+     * @param countries
+     * @return Builder
      */
 
     public StoreDraftBuilder countries(
@@ -117,6 +130,8 @@ public class StoreDraftBuilder implements Builder<StoreDraft> {
 
     /**
      *  <p>Countries defined for the Store.</p>
+     * @param countries
+     * @return Builder
      */
 
     public StoreDraftBuilder countries(
@@ -127,6 +142,8 @@ public class StoreDraftBuilder implements Builder<StoreDraft> {
 
     /**
      *  <p>Countries defined for the Store.</p>
+     * @param countries
+     * @return Builder
      */
 
     public StoreDraftBuilder plusCountries(
@@ -140,6 +157,7 @@ public class StoreDraftBuilder implements Builder<StoreDraft> {
 
     /**
      *  <p>Countries defined for the Store.</p>
+     * @return Builder
      */
 
     public StoreDraftBuilder plusCountries(
@@ -153,6 +171,7 @@ public class StoreDraftBuilder implements Builder<StoreDraft> {
 
     /**
      *  <p>Countries defined for the Store.</p>
+     * @return Builder
      */
 
     public StoreDraftBuilder withCountries(
@@ -164,6 +183,8 @@ public class StoreDraftBuilder implements Builder<StoreDraft> {
 
     /**
      *  <p>ResourceIdentifier of a Channel with <code>ProductDistribution</code> ChannelRoleEnum.</p>
+     * @param distributionChannels
+     * @return Builder
      */
 
     public StoreDraftBuilder distributionChannels(
@@ -174,6 +195,8 @@ public class StoreDraftBuilder implements Builder<StoreDraft> {
 
     /**
      *  <p>ResourceIdentifier of a Channel with <code>ProductDistribution</code> ChannelRoleEnum.</p>
+     * @param distributionChannels
+     * @return Builder
      */
 
     public StoreDraftBuilder distributionChannels(
@@ -184,6 +207,8 @@ public class StoreDraftBuilder implements Builder<StoreDraft> {
 
     /**
      *  <p>ResourceIdentifier of a Channel with <code>ProductDistribution</code> ChannelRoleEnum.</p>
+     * @param distributionChannels
+     * @return Builder
      */
 
     public StoreDraftBuilder plusDistributionChannels(
@@ -197,6 +222,7 @@ public class StoreDraftBuilder implements Builder<StoreDraft> {
 
     /**
      *  <p>ResourceIdentifier of a Channel with <code>ProductDistribution</code> ChannelRoleEnum.</p>
+     * @return Builder
      */
 
     public StoreDraftBuilder plusDistributionChannels(
@@ -211,6 +237,7 @@ public class StoreDraftBuilder implements Builder<StoreDraft> {
 
     /**
      *  <p>ResourceIdentifier of a Channel with <code>ProductDistribution</code> ChannelRoleEnum.</p>
+     * @return Builder
      */
 
     public StoreDraftBuilder withDistributionChannels(
@@ -223,6 +250,8 @@ public class StoreDraftBuilder implements Builder<StoreDraft> {
 
     /**
      *  <p>ResourceIdentifier of a Channel with <code>InventorySupply</code> ChannelRoleEnum.</p>
+     * @param supplyChannels
+     * @return Builder
      */
 
     public StoreDraftBuilder supplyChannels(
@@ -233,6 +262,8 @@ public class StoreDraftBuilder implements Builder<StoreDraft> {
 
     /**
      *  <p>ResourceIdentifier of a Channel with <code>InventorySupply</code> ChannelRoleEnum.</p>
+     * @param supplyChannels
+     * @return Builder
      */
 
     public StoreDraftBuilder supplyChannels(
@@ -243,6 +274,8 @@ public class StoreDraftBuilder implements Builder<StoreDraft> {
 
     /**
      *  <p>ResourceIdentifier of a Channel with <code>InventorySupply</code> ChannelRoleEnum.</p>
+     * @param supplyChannels
+     * @return Builder
      */
 
     public StoreDraftBuilder plusSupplyChannels(
@@ -256,6 +289,7 @@ public class StoreDraftBuilder implements Builder<StoreDraft> {
 
     /**
      *  <p>ResourceIdentifier of a Channel with <code>InventorySupply</code> ChannelRoleEnum.</p>
+     * @return Builder
      */
 
     public StoreDraftBuilder plusSupplyChannels(
@@ -270,6 +304,7 @@ public class StoreDraftBuilder implements Builder<StoreDraft> {
 
     /**
      *  <p>ResourceIdentifier of a Channel with <code>InventorySupply</code> ChannelRoleEnum.</p>
+     * @return Builder
      */
 
     public StoreDraftBuilder withSupplyChannels(
@@ -281,11 +316,15 @@ public class StoreDraftBuilder implements Builder<StoreDraft> {
     }
 
     /**
-     *  <p>Controls availability of Products for this Store via active Product Selections.</p>
+     *  <p>Controls availability of Products for this Store via active/inactive Product Selections:</p>
      *  <ul>
      *   <li>Leave empty if all Products in the Project should be available in this Store.</li>
-     *   <li>If provided, Products from <code>active</code> Product Selections are available in this Store.</li>
+     *   <li>If only <code>inactive</code> Product Selections of type Individual Exclusion are provided, all the Products are availlable in this Store.</li>
+     *   <li>If all the Product Selections provided are <code>inactive</code> and there's at least a Product Selection of type <code>individual</code>, no Product is availlable in this Store.</li>
+     *   <li>If at least an <code>active</code> Product Selection is provided, only <code>active</code> Product Selections are considered to compute the availlability in this Store.</li>
      *  </ul>
+     * @param productSelections
+     * @return Builder
      */
 
     public StoreDraftBuilder productSelections(
@@ -295,11 +334,15 @@ public class StoreDraftBuilder implements Builder<StoreDraft> {
     }
 
     /**
-     *  <p>Controls availability of Products for this Store via active Product Selections.</p>
+     *  <p>Controls availability of Products for this Store via active/inactive Product Selections:</p>
      *  <ul>
      *   <li>Leave empty if all Products in the Project should be available in this Store.</li>
-     *   <li>If provided, Products from <code>active</code> Product Selections are available in this Store.</li>
+     *   <li>If only <code>inactive</code> Product Selections of type Individual Exclusion are provided, all the Products are availlable in this Store.</li>
+     *   <li>If all the Product Selections provided are <code>inactive</code> and there's at least a Product Selection of type <code>individual</code>, no Product is availlable in this Store.</li>
+     *   <li>If at least an <code>active</code> Product Selection is provided, only <code>active</code> Product Selections are considered to compute the availlability in this Store.</li>
      *  </ul>
+     * @param productSelections
+     * @return Builder
      */
 
     public StoreDraftBuilder productSelections(
@@ -309,11 +352,15 @@ public class StoreDraftBuilder implements Builder<StoreDraft> {
     }
 
     /**
-     *  <p>Controls availability of Products for this Store via active Product Selections.</p>
+     *  <p>Controls availability of Products for this Store via active/inactive Product Selections:</p>
      *  <ul>
      *   <li>Leave empty if all Products in the Project should be available in this Store.</li>
-     *   <li>If provided, Products from <code>active</code> Product Selections are available in this Store.</li>
+     *   <li>If only <code>inactive</code> Product Selections of type Individual Exclusion are provided, all the Products are availlable in this Store.</li>
+     *   <li>If all the Product Selections provided are <code>inactive</code> and there's at least a Product Selection of type <code>individual</code>, no Product is availlable in this Store.</li>
+     *   <li>If at least an <code>active</code> Product Selection is provided, only <code>active</code> Product Selections are considered to compute the availlability in this Store.</li>
      *  </ul>
+     * @param productSelections
+     * @return Builder
      */
 
     public StoreDraftBuilder plusProductSelections(
@@ -326,11 +373,14 @@ public class StoreDraftBuilder implements Builder<StoreDraft> {
     }
 
     /**
-     *  <p>Controls availability of Products for this Store via active Product Selections.</p>
+     *  <p>Controls availability of Products for this Store via active/inactive Product Selections:</p>
      *  <ul>
      *   <li>Leave empty if all Products in the Project should be available in this Store.</li>
-     *   <li>If provided, Products from <code>active</code> Product Selections are available in this Store.</li>
+     *   <li>If only <code>inactive</code> Product Selections of type Individual Exclusion are provided, all the Products are availlable in this Store.</li>
+     *   <li>If all the Product Selections provided are <code>inactive</code> and there's at least a Product Selection of type <code>individual</code>, no Product is availlable in this Store.</li>
+     *   <li>If at least an <code>active</code> Product Selection is provided, only <code>active</code> Product Selections are considered to compute the availlability in this Store.</li>
      *  </ul>
+     * @return Builder
      */
 
     public StoreDraftBuilder plusProductSelections(
@@ -344,11 +394,14 @@ public class StoreDraftBuilder implements Builder<StoreDraft> {
     }
 
     /**
-     *  <p>Controls availability of Products for this Store via active Product Selections.</p>
+     *  <p>Controls availability of Products for this Store via active/inactive Product Selections:</p>
      *  <ul>
      *   <li>Leave empty if all Products in the Project should be available in this Store.</li>
-     *   <li>If provided, Products from <code>active</code> Product Selections are available in this Store.</li>
+     *   <li>If only <code>inactive</code> Product Selections of type Individual Exclusion are provided, all the Products are availlable in this Store.</li>
+     *   <li>If all the Product Selections provided are <code>inactive</code> and there's at least a Product Selection of type <code>individual</code>, no Product is availlable in this Store.</li>
+     *   <li>If at least an <code>active</code> Product Selection is provided, only <code>active</code> Product Selections are considered to compute the availlability in this Store.</li>
      *  </ul>
+     * @return Builder
      */
 
     public StoreDraftBuilder withProductSelections(
@@ -361,6 +414,7 @@ public class StoreDraftBuilder implements Builder<StoreDraft> {
 
     /**
      *  <p>Custom fields for the Store.</p>
+     * @return Builder
      */
 
     public StoreDraftBuilder custom(
@@ -371,6 +425,8 @@ public class StoreDraftBuilder implements Builder<StoreDraft> {
 
     /**
      *  <p>Custom fields for the Store.</p>
+     * @param custom
+     * @return Builder
      */
 
     public StoreDraftBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFieldsDraft custom) {

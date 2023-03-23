@@ -33,6 +33,7 @@ public interface Custom {
 
     /**
      *  <p>The type that provides the field definitions for this object.</p>
+     * @return type
      */
     @NotNull
     @Valid
@@ -41,6 +42,7 @@ public interface Custom {
 
     /**
      *  <p>The custom fields of this object.</p>
+     * @return fields
      */
     @Valid
     @JsonProperty("fields")

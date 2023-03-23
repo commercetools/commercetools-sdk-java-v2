@@ -36,6 +36,7 @@ public interface StagedOrderSetLineItemTotalPriceAction extends StagedOrderUpdat
 
     /**
      *
+     * @return lineItemId
      */
     @NotNull
     @JsonProperty("lineItemId")
@@ -43,6 +44,7 @@ public interface StagedOrderSetLineItemTotalPriceAction extends StagedOrderUpdat
 
     /**
      *
+     * @return externalTotalPrice
      */
     @Valid
     @JsonProperty("externalTotalPrice")

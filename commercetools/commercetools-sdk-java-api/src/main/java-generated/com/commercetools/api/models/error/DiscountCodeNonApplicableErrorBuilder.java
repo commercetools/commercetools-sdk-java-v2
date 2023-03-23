@@ -47,6 +47,8 @@ public class DiscountCodeNonApplicableErrorBuilder implements Builder<DiscountCo
 
     /**
      *  <p><code>"The discountCode $discountCodeId cannot be applied to the cart."</code></p>
+     * @param message
+     * @return Builder
      */
 
     public DiscountCodeNonApplicableErrorBuilder message(final String message) {
@@ -77,6 +79,8 @@ public class DiscountCodeNonApplicableErrorBuilder implements Builder<DiscountCo
 
     /**
      *  <p>Discount Code passed to the Cart.</p>
+     * @param discountCode
+     * @return Builder
      */
 
     public DiscountCodeNonApplicableErrorBuilder discountCode(@Nullable final String discountCode) {
@@ -86,6 +90,8 @@ public class DiscountCodeNonApplicableErrorBuilder implements Builder<DiscountCo
 
     /**
      *  <p><code>"DoesNotExist"</code> or <code>"TimeRangeNonApplicable"</code></p>
+     * @param reason
+     * @return Builder
      */
 
     public DiscountCodeNonApplicableErrorBuilder reason(@Nullable final String reason) {
@@ -95,6 +101,8 @@ public class DiscountCodeNonApplicableErrorBuilder implements Builder<DiscountCo
 
     /**
      *  <p>Unique identifier of the Discount Code.</p>
+     * @param discountCodeId
+     * @return Builder
      */
 
     public DiscountCodeNonApplicableErrorBuilder discountCodeId(@Nullable final String discountCodeId) {
@@ -104,6 +112,8 @@ public class DiscountCodeNonApplicableErrorBuilder implements Builder<DiscountCo
 
     /**
      *  <p>Date and time (UTC) from which the Discount Code is valid.</p>
+     * @param validFrom
+     * @return Builder
      */
 
     public DiscountCodeNonApplicableErrorBuilder validFrom(@Nullable final java.time.ZonedDateTime validFrom) {
@@ -113,6 +123,8 @@ public class DiscountCodeNonApplicableErrorBuilder implements Builder<DiscountCo
 
     /**
      *  <p>Date and time (UTC) until which the Discount Code is valid.</p>
+     * @param validUntil
+     * @return Builder
      */
 
     public DiscountCodeNonApplicableErrorBuilder validUntil(@Nullable final java.time.ZonedDateTime validUntil) {
@@ -122,6 +134,8 @@ public class DiscountCodeNonApplicableErrorBuilder implements Builder<DiscountCo
 
     /**
      *  <p>Date and time (UTC) the Discount Code validity check was last performed.</p>
+     * @param validityCheckTime
+     * @return Builder
      */
 
     public DiscountCodeNonApplicableErrorBuilder validityCheckTime(

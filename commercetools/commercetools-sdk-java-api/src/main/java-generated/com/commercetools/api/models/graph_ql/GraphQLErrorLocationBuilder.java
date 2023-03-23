@@ -28,6 +28,8 @@ public class GraphQLErrorLocationBuilder implements Builder<GraphQLErrorLocation
 
     /**
      *
+     * @param line
+     * @return Builder
      */
 
     public GraphQLErrorLocationBuilder line(final Integer line) {
@@ -37,6 +39,8 @@ public class GraphQLErrorLocationBuilder implements Builder<GraphQLErrorLocation
 
     /**
      *
+     * @param column
+     * @return Builder
      */
 
     public GraphQLErrorLocationBuilder column(final Integer column) {

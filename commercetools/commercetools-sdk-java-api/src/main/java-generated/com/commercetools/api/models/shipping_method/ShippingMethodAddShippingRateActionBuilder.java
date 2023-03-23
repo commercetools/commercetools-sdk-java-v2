@@ -29,6 +29,7 @@ public class ShippingMethodAddShippingRateActionBuilder implements Builder<Shipp
 
     /**
      *  <p>Zone to which the ShippingRate should be added.</p>
+     * @return Builder
      */
 
     public ShippingMethodAddShippingRateActionBuilder zone(
@@ -39,6 +40,8 @@ public class ShippingMethodAddShippingRateActionBuilder implements Builder<Shipp
 
     /**
      *  <p>Zone to which the ShippingRate should be added.</p>
+     * @param zone
+     * @return Builder
      */
 
     public ShippingMethodAddShippingRateActionBuilder zone(
@@ -49,6 +52,7 @@ public class ShippingMethodAddShippingRateActionBuilder implements Builder<Shipp
 
     /**
      *  <p>Value to add to <code>shippingRates</code>.</p>
+     * @return Builder
      */
 
     public ShippingMethodAddShippingRateActionBuilder shippingRate(
@@ -60,6 +64,8 @@ public class ShippingMethodAddShippingRateActionBuilder implements Builder<Shipp
 
     /**
      *  <p>Value to add to <code>shippingRates</code>.</p>
+     * @param shippingRate
+     * @return Builder
      */
 
     public ShippingMethodAddShippingRateActionBuilder shippingRate(

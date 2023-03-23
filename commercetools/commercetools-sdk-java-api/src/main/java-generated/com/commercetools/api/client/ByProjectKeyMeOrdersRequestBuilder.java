@@ -25,6 +25,10 @@ public class ByProjectKeyMeOrdersRequestBuilder {
         return new ByProjectKeyMeOrdersPost(apiHttpClient, projectKey, myOrderFromCartDraft);
     }
 
+    public ByProjectKeyMeOrdersPostString post(final String myOrderFromCartDraft) {
+        return new ByProjectKeyMeOrdersPostString(apiHttpClient, projectKey, myOrderFromCartDraft);
+    }
+
     public ByProjectKeyMeOrdersPost post(
             UnaryOperator<com.commercetools.api.models.me.MyOrderFromCartDraftBuilder> op) {
         return post(op.apply(com.commercetools.api.models.me.MyOrderFromCartDraftBuilder.of()).build());
@@ -32,6 +36,10 @@ public class ByProjectKeyMeOrdersRequestBuilder {
 
     public ByProjectKeyMeOrdersByIDRequestBuilder withId(String ID) {
         return new ByProjectKeyMeOrdersByIDRequestBuilder(apiHttpClient, projectKey, ID);
+    }
+
+    public ByProjectKeyMeOrdersQuotesRequestBuilder quotes() {
+        return new ByProjectKeyMeOrdersQuotesRequestBuilder(apiHttpClient, projectKey);
     }
 
 }

@@ -35,6 +35,8 @@ public class StagedOrderSetItemShippingAddressCustomTypeActionBuilder
 
     /**
      *
+     * @param addressKey
+     * @return Builder
      */
 
     public StagedOrderSetItemShippingAddressCustomTypeActionBuilder addressKey(final String addressKey) {
@@ -44,6 +46,7 @@ public class StagedOrderSetItemShippingAddressCustomTypeActionBuilder
 
     /**
      *  <p>Defines the Type that extends the <code>itemShippingAddress</code> with Custom Fields. If absent, any existing Type and Custom Fields are removed from the <code>itemShippingAddress</code>.</p>
+     * @return Builder
      */
 
     public StagedOrderSetItemShippingAddressCustomTypeActionBuilder type(
@@ -54,6 +57,8 @@ public class StagedOrderSetItemShippingAddressCustomTypeActionBuilder
 
     /**
      *  <p>Defines the Type that extends the <code>itemShippingAddress</code> with Custom Fields. If absent, any existing Type and Custom Fields are removed from the <code>itemShippingAddress</code>.</p>
+     * @param type
+     * @return Builder
      */
 
     public StagedOrderSetItemShippingAddressCustomTypeActionBuilder type(
@@ -64,6 +69,7 @@ public class StagedOrderSetItemShippingAddressCustomTypeActionBuilder
 
     /**
      *  <p>Sets the Custom Fields fields for the <code>itemShippingAddress</code>.</p>
+     * @return Builder
      */
 
     public StagedOrderSetItemShippingAddressCustomTypeActionBuilder fields(
@@ -74,6 +80,8 @@ public class StagedOrderSetItemShippingAddressCustomTypeActionBuilder
 
     /**
      *  <p>Sets the Custom Fields fields for the <code>itemShippingAddress</code>.</p>
+     * @param fields
+     * @return Builder
      */
 
     public StagedOrderSetItemShippingAddressCustomTypeActionBuilder fields(

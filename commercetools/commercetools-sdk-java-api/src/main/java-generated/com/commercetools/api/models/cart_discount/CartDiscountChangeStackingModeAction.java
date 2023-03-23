@@ -33,6 +33,7 @@ public interface CartDiscountChangeStackingModeAction extends CartDiscountUpdate
 
     /**
      *  <p>New value to set.</p>
+     * @return stackingMode
      */
     @NotNull
     @JsonProperty("stackingMode")

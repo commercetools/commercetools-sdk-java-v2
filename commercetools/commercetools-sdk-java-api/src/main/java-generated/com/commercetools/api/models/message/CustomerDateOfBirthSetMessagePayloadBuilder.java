@@ -27,6 +27,8 @@ public class CustomerDateOfBirthSetMessagePayloadBuilder implements Builder<Cust
 
     /**
      *  <p>The <code>dateOfBirth</code> that was set during the Set Date of Birth update action.</p>
+     * @param dateOfBirth
+     * @return Builder
      */
 
     public CustomerDateOfBirthSetMessagePayloadBuilder dateOfBirth(@Nullable final java.time.LocalDate dateOfBirth) {

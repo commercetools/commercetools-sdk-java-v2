@@ -42,6 +42,7 @@ public interface ReviewCreatedMessage extends Message {
 
     /**
      *  <p>Review that was created.</p>
+     * @return review
      */
     @NotNull
     @Valid

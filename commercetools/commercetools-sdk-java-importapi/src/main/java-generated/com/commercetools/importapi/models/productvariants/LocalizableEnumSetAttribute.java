@@ -33,6 +33,7 @@ public interface LocalizableEnumSetAttribute extends Attribute {
 
     /**
      *
+     * @return value
      */
     @NotNull
     @JsonProperty("value")

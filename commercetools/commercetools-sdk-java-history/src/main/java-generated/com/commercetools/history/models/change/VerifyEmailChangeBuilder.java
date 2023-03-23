@@ -25,6 +25,8 @@ public class VerifyEmailChangeBuilder implements Builder<VerifyEmailChange> {
 
     /**
      *
+     * @param change
+     * @return Builder
      */
 
     public VerifyEmailChangeBuilder change(final String change) {

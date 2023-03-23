@@ -23,12 +23,16 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusLineItems(lineItemsBuilder -> lineItemsBuilder)
  *             .plusCustomLineItems(customLineItemsBuilder -> customLineItemsBuilder)
  *             .totalPrice(totalPriceBuilder -> totalPriceBuilder)
- *             .cartState(CartState.ACTIVE)
- *             .shippingMode(ShippingMode.SINGLE)
- *             .plusShipping(shippingBuilder -> shippingBuilder)
  *             .taxMode(TaxMode.PLATFORM)
  *             .taxRoundingMode(RoundingMode.HALF_EVEN)
  *             .taxCalculationMode(TaxCalculationMode.LINE_ITEM_LEVEL)
+ *             .inventoryMode(InventoryMode.NONE)
+ *             .cartState(CartState.ACTIVE)
+ *             .shippingMode(ShippingMode.SINGLE)
+ *             .plusShipping(shippingBuilder -> shippingBuilder)
+ *             .plusItemShippingAddresses(itemShippingAddressesBuilder -> itemShippingAddressesBuilder)
+ *             .plusDiscountCodes(discountCodesBuilder -> discountCodesBuilder)
+ *             .plusDirectDiscounts(directDiscountsBuilder -> directDiscountsBuilder)
  *             .plusRefusedGifts(refusedGiftsBuilder -> refusedGiftsBuilder)
  *             .origin(CartOrigin.CUSTOMER)
  *             .build()
@@ -50,16 +54,13 @@ public class CartBuilder implements Builder<Cart> {
     private String key;
 
     @Nullable
-    private com.commercetools.api.models.common.LastModifiedBy lastModifiedBy;
-
-    @Nullable
-    private com.commercetools.api.models.common.CreatedBy createdBy;
-
-    @Nullable
     private String customerId;
 
     @Nullable
     private String customerEmail;
+
+    @Nullable
+    private com.commercetools.api.models.customer_group.CustomerGroupReference customerGroup;
 
     @Nullable
     private String anonymousId;
@@ -74,7 +75,10 @@ public class CartBuilder implements Builder<Cart> {
 
     private java.util.List<com.commercetools.api.models.cart.CustomLineItem> customLineItems;
 
-    private com.commercetools.api.models.common.TypedMoney totalPrice;
+    @Nullable
+    private Long totalLineItemQuantity;
+
+    private com.commercetools.api.models.common.CentPrecisionMoney totalPrice;
 
     @Nullable
     private com.commercetools.api.models.cart.TaxedPrice taxedPrice;
@@ -82,69 +86,67 @@ public class CartBuilder implements Builder<Cart> {
     @Nullable
     private com.commercetools.api.models.cart.TaxedPrice taxedShippingPrice;
 
-    private com.commercetools.api.models.cart.CartState cartState;
-
-    @Nullable
-    private com.commercetools.api.models.common.Address shippingAddress;
-
-    @Nullable
-    private com.commercetools.api.models.common.Address billingAddress;
-
-    private com.commercetools.api.models.cart.ShippingMode shippingMode;
-
-    private java.util.List<com.commercetools.api.models.cart.Shipping> shipping;
-
-    @Nullable
-    private com.commercetools.api.models.cart.InventoryMode inventoryMode;
-
     private com.commercetools.api.models.cart.TaxMode taxMode;
 
     private com.commercetools.api.models.cart.RoundingMode taxRoundingMode;
 
     private com.commercetools.api.models.cart.TaxCalculationMode taxCalculationMode;
 
-    @Nullable
-    private com.commercetools.api.models.customer_group.CustomerGroupReference customerGroup;
+    private com.commercetools.api.models.cart.InventoryMode inventoryMode;
+
+    private com.commercetools.api.models.cart.CartState cartState;
 
     @Nullable
-    private String country;
+    private com.commercetools.api.models.common.Address billingAddress;
+
+    @Nullable
+    private com.commercetools.api.models.common.Address shippingAddress;
+
+    private com.commercetools.api.models.cart.ShippingMode shippingMode;
 
     @Nullable
     private com.commercetools.api.models.cart.ShippingInfo shippingInfo;
 
+    private java.util.List<com.commercetools.api.models.cart.Shipping> shipping;
+
     @Nullable
+    private com.commercetools.api.models.cart.ShippingRateInput shippingRateInput;
+
+    private java.util.List<com.commercetools.api.models.common.Address> itemShippingAddresses;
+
     private java.util.List<com.commercetools.api.models.cart.DiscountCodeInfo> discountCodes;
 
-    @Nullable
     private java.util.List<com.commercetools.api.models.cart.DirectDiscount> directDiscounts;
 
-    @Nullable
-    private com.commercetools.api.models.type.CustomFields custom;
+    private java.util.List<com.commercetools.api.models.cart_discount.CartDiscountReference> refusedGifts;
 
     @Nullable
     private com.commercetools.api.models.order.PaymentInfo paymentInfo;
 
     @Nullable
-    private String locale;
+    private String country;
 
     @Nullable
-    private Integer deleteDaysAfterLastModification;
-
-    private java.util.List<com.commercetools.api.models.cart_discount.CartDiscountReference> refusedGifts;
+    private String locale;
 
     private com.commercetools.api.models.cart.CartOrigin origin;
 
     @Nullable
-    private com.commercetools.api.models.cart.ShippingRateInput shippingRateInput;
+    private com.commercetools.api.models.type.CustomFields custom;
 
     @Nullable
-    private java.util.List<com.commercetools.api.models.common.Address> itemShippingAddresses;
+    private Integer deleteDaysAfterLastModification;
 
     @Nullable
-    private Long totalLineItemQuantity;
+    private com.commercetools.api.models.common.LastModifiedBy lastModifiedBy;
+
+    @Nullable
+    private com.commercetools.api.models.common.CreatedBy createdBy;
 
     /**
      *  <p>Unique identifier of the Cart.</p>
+     * @param id
+     * @return Builder
      */
 
     public CartBuilder id(final String id) {
@@ -153,7 +155,9 @@ public class CartBuilder implements Builder<Cart> {
     }
 
     /**
-     *  <p>The current version of the cart.</p>
+     *  <p>Current version of the Cart.</p>
+     * @param version
+     * @return Builder
      */
 
     public CartBuilder version(final Long version) {
@@ -162,7 +166,9 @@ public class CartBuilder implements Builder<Cart> {
     }
 
     /**
-     *
+     *  <p>Date and time (UTC) the Cart was initially created.</p>
+     * @param createdAt
+     * @return Builder
      */
 
     public CartBuilder createdAt(final java.time.ZonedDateTime createdAt) {
@@ -171,7 +177,9 @@ public class CartBuilder implements Builder<Cart> {
     }
 
     /**
-     *
+     *  <p>Date and time (UTC) the Cart was last updated.</p>
+     * @param lastModifiedAt
+     * @return Builder
      */
 
     public CartBuilder lastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {
@@ -181,6 +189,8 @@ public class CartBuilder implements Builder<Cart> {
 
     /**
      *  <p>User-defined unique identifier of the Cart.</p>
+     * @param key
+     * @return Builder
      */
 
     public CartBuilder key(@Nullable final String key) {
@@ -189,46 +199,9 @@ public class CartBuilder implements Builder<Cart> {
     }
 
     /**
-     *  <p>Present on resources updated after 1 February 2019 except for events not tracked.</p>
-     */
-
-    public CartBuilder lastModifiedBy(
-            Function<com.commercetools.api.models.common.LastModifiedByBuilder, com.commercetools.api.models.common.LastModifiedByBuilder> builder) {
-        this.lastModifiedBy = builder.apply(com.commercetools.api.models.common.LastModifiedByBuilder.of()).build();
-        return this;
-    }
-
-    /**
-     *  <p>Present on resources updated after 1 February 2019 except for events not tracked.</p>
-     */
-
-    public CartBuilder lastModifiedBy(
-            @Nullable final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy) {
-        this.lastModifiedBy = lastModifiedBy;
-        return this;
-    }
-
-    /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
-     */
-
-    public CartBuilder createdBy(
-            Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedByBuilder> builder) {
-        this.createdBy = builder.apply(com.commercetools.api.models.common.CreatedByBuilder.of()).build();
-        return this;
-    }
-
-    /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
-     */
-
-    public CartBuilder createdBy(@Nullable final com.commercetools.api.models.common.CreatedBy createdBy) {
-        this.createdBy = createdBy;
-        return this;
-    }
-
-    /**
-     *
+     *  <p><code>id</code> of the Customer that the Cart belongs to.</p>
+     * @param customerId
+     * @return Builder
      */
 
     public CartBuilder customerId(@Nullable final String customerId) {
@@ -237,7 +210,9 @@ public class CartBuilder implements Builder<Cart> {
     }
 
     /**
-     *
+     *  <p>Email address of the Customer that the Cart belongs to.</p>
+     * @param customerEmail
+     * @return Builder
      */
 
     public CartBuilder customerEmail(@Nullable final String customerEmail) {
@@ -246,7 +221,34 @@ public class CartBuilder implements Builder<Cart> {
     }
 
     /**
-     *  <p>Identifies carts and orders belonging to an anonymous session (the customer has not signed up/in yet).</p>
+     *  <p>Reference to the Customer Group of the Customer that the Cart belongs to. Used for LineItem Price selection.</p>
+     * @return Builder
+     */
+
+    public CartBuilder customerGroup(
+            Function<com.commercetools.api.models.customer_group.CustomerGroupReferenceBuilder, com.commercetools.api.models.customer_group.CustomerGroupReferenceBuilder> builder) {
+        this.customerGroup = builder
+                .apply(com.commercetools.api.models.customer_group.CustomerGroupReferenceBuilder.of())
+                .build();
+        return this;
+    }
+
+    /**
+     *  <p>Reference to the Customer Group of the Customer that the Cart belongs to. Used for LineItem Price selection.</p>
+     * @param customerGroup
+     * @return Builder
+     */
+
+    public CartBuilder customerGroup(
+            @Nullable final com.commercetools.api.models.customer_group.CustomerGroupReference customerGroup) {
+        this.customerGroup = customerGroup;
+        return this;
+    }
+
+    /**
+     *  <p>Anonymous session associated with the Cart.</p>
+     * @param anonymousId
+     * @return Builder
      */
 
     public CartBuilder anonymousId(@Nullable final String anonymousId) {
@@ -255,7 +257,8 @@ public class CartBuilder implements Builder<Cart> {
     }
 
     /**
-     *  <p>The Business Unit the Cart belongs to.</p>
+     *  <p>Reference to a Business Unit the Cart belongs to.</p>
+     * @return Builder
      */
 
     public CartBuilder businessUnit(
@@ -267,7 +270,9 @@ public class CartBuilder implements Builder<Cart> {
     }
 
     /**
-     *  <p>The Business Unit the Cart belongs to.</p>
+     *  <p>Reference to a Business Unit the Cart belongs to.</p>
+     * @param businessUnit
+     * @return Builder
      */
 
     public CartBuilder businessUnit(
@@ -277,7 +282,8 @@ public class CartBuilder implements Builder<Cart> {
     }
 
     /**
-     *
+     *  <p>Reference to a Store the Cart belongs to.</p>
+     * @return Builder
      */
 
     public CartBuilder store(
@@ -287,7 +293,9 @@ public class CartBuilder implements Builder<Cart> {
     }
 
     /**
-     *
+     *  <p>Reference to a Store the Cart belongs to.</p>
+     * @param store
+     * @return Builder
      */
 
     public CartBuilder store(@Nullable final com.commercetools.api.models.store.StoreKeyReference store) {
@@ -296,7 +304,9 @@ public class CartBuilder implements Builder<Cart> {
     }
 
     /**
-     *
+     *  <p>Line Items added to the Cart.</p>
+     * @param lineItems
+     * @return Builder
      */
 
     public CartBuilder lineItems(final com.commercetools.api.models.cart.LineItem... lineItems) {
@@ -305,7 +315,9 @@ public class CartBuilder implements Builder<Cart> {
     }
 
     /**
-     *
+     *  <p>Line Items added to the Cart.</p>
+     * @param lineItems
+     * @return Builder
      */
 
     public CartBuilder lineItems(final java.util.List<com.commercetools.api.models.cart.LineItem> lineItems) {
@@ -314,7 +326,9 @@ public class CartBuilder implements Builder<Cart> {
     }
 
     /**
-     *
+     *  <p>Line Items added to the Cart.</p>
+     * @param lineItems
+     * @return Builder
      */
 
     public CartBuilder plusLineItems(final com.commercetools.api.models.cart.LineItem... lineItems) {
@@ -326,7 +340,8 @@ public class CartBuilder implements Builder<Cart> {
     }
 
     /**
-     *
+     *  <p>Line Items added to the Cart.</p>
+     * @return Builder
      */
 
     public CartBuilder plusLineItems(
@@ -339,7 +354,8 @@ public class CartBuilder implements Builder<Cart> {
     }
 
     /**
-     *
+     *  <p>Line Items added to the Cart.</p>
+     * @return Builder
      */
 
     public CartBuilder withLineItems(
@@ -350,7 +366,9 @@ public class CartBuilder implements Builder<Cart> {
     }
 
     /**
-     *
+     *  <p>Custom Line Items added to the Cart.</p>
+     * @param customLineItems
+     * @return Builder
      */
 
     public CartBuilder customLineItems(final com.commercetools.api.models.cart.CustomLineItem... customLineItems) {
@@ -359,7 +377,9 @@ public class CartBuilder implements Builder<Cart> {
     }
 
     /**
-     *
+     *  <p>Custom Line Items added to the Cart.</p>
+     * @param customLineItems
+     * @return Builder
      */
 
     public CartBuilder customLineItems(
@@ -369,7 +389,9 @@ public class CartBuilder implements Builder<Cart> {
     }
 
     /**
-     *
+     *  <p>Custom Line Items added to the Cart.</p>
+     * @param customLineItems
+     * @return Builder
      */
 
     public CartBuilder plusCustomLineItems(final com.commercetools.api.models.cart.CustomLineItem... customLineItems) {
@@ -381,7 +403,8 @@ public class CartBuilder implements Builder<Cart> {
     }
 
     /**
-     *
+     *  <p>Custom Line Items added to the Cart.</p>
+     * @return Builder
      */
 
     public CartBuilder plusCustomLineItems(
@@ -394,7 +417,8 @@ public class CartBuilder implements Builder<Cart> {
     }
 
     /**
-     *
+     *  <p>Custom Line Items added to the Cart.</p>
+     * @return Builder
      */
 
     public CartBuilder withCustomLineItems(
@@ -405,26 +429,46 @@ public class CartBuilder implements Builder<Cart> {
     }
 
     /**
-     *  <p>The sum of all <code>totalPrice</code> fields of the <code>lineItems</code> and <code>customLineItems</code>, as well as the <code>price</code> field of <code>shippingInfo</code> (if it exists). <code>totalPrice</code> may or may not include the taxes: it depends on the taxRate.includedInPrice property of each price.</p>
+     *  <p>Sum of all LineItem quantities, excluding CustomLineItems. Only present when the Cart has at least one LineItem.</p>
+     * @param totalLineItemQuantity
+     * @return Builder
      */
 
-    public CartBuilder totalPrice(final com.commercetools.api.models.common.TypedMoney totalPrice) {
+    public CartBuilder totalLineItemQuantity(@Nullable final Long totalLineItemQuantity) {
+        this.totalLineItemQuantity = totalLineItemQuantity;
+        return this;
+    }
+
+    /**
+     *  <p>Sum of the <code>totalPrice</code> field of all LineItems and CustomLineItems, and if available, the <code>price</code> field of ShippingInfo.</p>
+     *  <p>Taxes are included if TaxRate <code>includedInPrice</code> is <code>true</code> for each price.</p>
+     * @return Builder
+     */
+
+    public CartBuilder totalPrice(
+            Function<com.commercetools.api.models.common.CentPrecisionMoneyBuilder, com.commercetools.api.models.common.CentPrecisionMoneyBuilder> builder) {
+        this.totalPrice = builder.apply(com.commercetools.api.models.common.CentPrecisionMoneyBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Sum of the <code>totalPrice</code> field of all LineItems and CustomLineItems, and if available, the <code>price</code> field of ShippingInfo.</p>
+     *  <p>Taxes are included if TaxRate <code>includedInPrice</code> is <code>true</code> for each price.</p>
+     * @param totalPrice
+     * @return Builder
+     */
+
+    public CartBuilder totalPrice(final com.commercetools.api.models.common.CentPrecisionMoney totalPrice) {
         this.totalPrice = totalPrice;
         return this;
     }
 
     /**
-     *  <p>The sum of all <code>totalPrice</code> fields of the <code>lineItems</code> and <code>customLineItems</code>, as well as the <code>price</code> field of <code>shippingInfo</code> (if it exists). <code>totalPrice</code> may or may not include the taxes: it depends on the taxRate.includedInPrice property of each price.</p>
-     */
-
-    public CartBuilder totalPrice(
-            Function<com.commercetools.api.models.common.TypedMoneyBuilder, Builder<? extends com.commercetools.api.models.common.TypedMoney>> builder) {
-        this.totalPrice = builder.apply(com.commercetools.api.models.common.TypedMoneyBuilder.of()).build();
-        return this;
-    }
-
-    /**
-     *  <p>Not set until the shipping address is set. Will be set automatically in the <code>Platform</code> TaxMode. For the <code>External</code> tax mode it will be set as soon as the external tax rates for all line items, custom line items, and shipping in the cart are set.</p>
+     *  <ul>
+     *   <li>For a Cart with <code>Platform</code> TaxMode, it is automatically set when a shipping address is set.</li>
+     *   <li>For a Cart with <code>External</code> TaxMode, it is automatically set when the external Tax Rate for all Line Items, Custom Line Items, and Shipping Methods in the Cart are set.</li>
+     *  </ul>
+     * @return Builder
      */
 
     public CartBuilder taxedPrice(
@@ -434,7 +478,12 @@ public class CartBuilder implements Builder<Cart> {
     }
 
     /**
-     *  <p>Not set until the shipping address is set. Will be set automatically in the <code>Platform</code> TaxMode. For the <code>External</code> tax mode it will be set as soon as the external tax rates for all line items, custom line items, and shipping in the cart are set.</p>
+     *  <ul>
+     *   <li>For a Cart with <code>Platform</code> TaxMode, it is automatically set when a shipping address is set.</li>
+     *   <li>For a Cart with <code>External</code> TaxMode, it is automatically set when the external Tax Rate for all Line Items, Custom Line Items, and Shipping Methods in the Cart are set.</li>
+     *  </ul>
+     * @param taxedPrice
+     * @return Builder
      */
 
     public CartBuilder taxedPrice(@Nullable final com.commercetools.api.models.cart.TaxedPrice taxedPrice) {
@@ -443,7 +492,8 @@ public class CartBuilder implements Builder<Cart> {
     }
 
     /**
-     *  <p>Sum of <code>taxedPrice</code> of ShippingInfo across all Shipping Methods. For <code>Platform</code> TaxMode, it is set automatically only if shipping address is set or Shipping Method is added to the Cart.</p>
+     *  <p>Sum of the <code>taxedPrice</code> field of ShippingInfo across all Shipping Methods.</p>
+     * @return Builder
      */
 
     public CartBuilder taxedShippingPrice(
@@ -453,7 +503,9 @@ public class CartBuilder implements Builder<Cart> {
     }
 
     /**
-     *  <p>Sum of <code>taxedPrice</code> of ShippingInfo across all Shipping Methods. For <code>Platform</code> TaxMode, it is set automatically only if shipping address is set or Shipping Method is added to the Cart.</p>
+     *  <p>Sum of the <code>taxedPrice</code> field of ShippingInfo across all Shipping Methods.</p>
+     * @param taxedShippingPrice
+     * @return Builder
      */
 
     public CartBuilder taxedShippingPrice(
@@ -463,7 +515,54 @@ public class CartBuilder implements Builder<Cart> {
     }
 
     /**
-     *
+     *  <p>Indicates how Tax Rates are set.</p>
+     * @param taxMode
+     * @return Builder
+     */
+
+    public CartBuilder taxMode(final com.commercetools.api.models.cart.TaxMode taxMode) {
+        this.taxMode = taxMode;
+        return this;
+    }
+
+    /**
+     *  <p>Indicates how monetary values are rounded when calculating taxes for <code>taxedPrice</code>.</p>
+     * @param taxRoundingMode
+     * @return Builder
+     */
+
+    public CartBuilder taxRoundingMode(final com.commercetools.api.models.cart.RoundingMode taxRoundingMode) {
+        this.taxRoundingMode = taxRoundingMode;
+        return this;
+    }
+
+    /**
+     *  <p>Indicates how taxes are calculated when calculating taxes for <code>taxedPrice</code>.</p>
+     * @param taxCalculationMode
+     * @return Builder
+     */
+
+    public CartBuilder taxCalculationMode(
+            final com.commercetools.api.models.cart.TaxCalculationMode taxCalculationMode) {
+        this.taxCalculationMode = taxCalculationMode;
+        return this;
+    }
+
+    /**
+     *  <p>Indicates how stock quantities are tracked for Line Items in the Cart.</p>
+     * @param inventoryMode
+     * @return Builder
+     */
+
+    public CartBuilder inventoryMode(final com.commercetools.api.models.cart.InventoryMode inventoryMode) {
+        this.inventoryMode = inventoryMode;
+        return this;
+    }
+
+    /**
+     *  <p>Current status of the Cart.</p>
+     * @param cartState
+     * @return Builder
      */
 
     public CartBuilder cartState(final com.commercetools.api.models.cart.CartState cartState) {
@@ -472,26 +571,8 @@ public class CartBuilder implements Builder<Cart> {
     }
 
     /**
-     *  <p>The shipping address is used to determine the eligible shipping methods and rates as well as the tax rate of the line items.</p>
-     */
-
-    public CartBuilder shippingAddress(
-            Function<com.commercetools.api.models.common.AddressBuilder, com.commercetools.api.models.common.AddressBuilder> builder) {
-        this.shippingAddress = builder.apply(com.commercetools.api.models.common.AddressBuilder.of()).build();
-        return this;
-    }
-
-    /**
-     *  <p>The shipping address is used to determine the eligible shipping methods and rates as well as the tax rate of the line items.</p>
-     */
-
-    public CartBuilder shippingAddress(@Nullable final com.commercetools.api.models.common.Address shippingAddress) {
-        this.shippingAddress = shippingAddress;
-        return this;
-    }
-
-    /**
-     *
+     *  <p>Billing address associated with the Cart.</p>
+     * @return Builder
      */
 
     public CartBuilder billingAddress(
@@ -501,7 +582,9 @@ public class CartBuilder implements Builder<Cart> {
     }
 
     /**
-     *
+     *  <p>Billing address associated with the Cart.</p>
+     * @param billingAddress
+     * @return Builder
      */
 
     public CartBuilder billingAddress(@Nullable final com.commercetools.api.models.common.Address billingAddress) {
@@ -510,7 +593,31 @@ public class CartBuilder implements Builder<Cart> {
     }
 
     /**
-     *  <p>Indicates whether one or multiple Shipping Methods are added to the Cart.</p>
+     *  <p>Shipping address associated with the Cart. Determines eligible ShippingMethod rates and Tax Rates of Line Items.</p>
+     * @return Builder
+     */
+
+    public CartBuilder shippingAddress(
+            Function<com.commercetools.api.models.common.AddressBuilder, com.commercetools.api.models.common.AddressBuilder> builder) {
+        this.shippingAddress = builder.apply(com.commercetools.api.models.common.AddressBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Shipping address associated with the Cart. Determines eligible ShippingMethod rates and Tax Rates of Line Items.</p>
+     * @param shippingAddress
+     * @return Builder
+     */
+
+    public CartBuilder shippingAddress(@Nullable final com.commercetools.api.models.common.Address shippingAddress) {
+        this.shippingAddress = shippingAddress;
+        return this;
+    }
+
+    /**
+     *  <p>Indicates whether the Cart has one or multiple Shipping Methods.</p>
+     * @param shippingMode
+     * @return Builder
      */
 
     public CartBuilder shippingMode(final com.commercetools.api.models.cart.ShippingMode shippingMode) {
@@ -519,8 +626,31 @@ public class CartBuilder implements Builder<Cart> {
     }
 
     /**
-     *  <p>Holds all shipping-related information per Shipping Method of a Cart with <code>Multiple</code> ShippingMode.</p>
-     *  <p>It is automatically updated after the Shipping Method is added.</p>
+     *  <p>Shipping-related information of a Cart with <code>Single</code> ShippingMode. Automatically set when a Shipping Method is set.</p>
+     * @return Builder
+     */
+
+    public CartBuilder shippingInfo(
+            Function<com.commercetools.api.models.cart.ShippingInfoBuilder, com.commercetools.api.models.cart.ShippingInfoBuilder> builder) {
+        this.shippingInfo = builder.apply(com.commercetools.api.models.cart.ShippingInfoBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Shipping-related information of a Cart with <code>Single</code> ShippingMode. Automatically set when a Shipping Method is set.</p>
+     * @param shippingInfo
+     * @return Builder
+     */
+
+    public CartBuilder shippingInfo(@Nullable final com.commercetools.api.models.cart.ShippingInfo shippingInfo) {
+        this.shippingInfo = shippingInfo;
+        return this;
+    }
+
+    /**
+     *  <p>Shipping-related information of a Cart with <code>Multiple</code> ShippingMode. Updated automatically each time a new Shipping Method is added.</p>
+     * @param shipping
+     * @return Builder
      */
 
     public CartBuilder shipping(final com.commercetools.api.models.cart.Shipping... shipping) {
@@ -529,8 +659,9 @@ public class CartBuilder implements Builder<Cart> {
     }
 
     /**
-     *  <p>Holds all shipping-related information per Shipping Method of a Cart with <code>Multiple</code> ShippingMode.</p>
-     *  <p>It is automatically updated after the Shipping Method is added.</p>
+     *  <p>Shipping-related information of a Cart with <code>Multiple</code> ShippingMode. Updated automatically each time a new Shipping Method is added.</p>
+     * @param shipping
+     * @return Builder
      */
 
     public CartBuilder shipping(final java.util.List<com.commercetools.api.models.cart.Shipping> shipping) {
@@ -539,8 +670,9 @@ public class CartBuilder implements Builder<Cart> {
     }
 
     /**
-     *  <p>Holds all shipping-related information per Shipping Method of a Cart with <code>Multiple</code> ShippingMode.</p>
-     *  <p>It is automatically updated after the Shipping Method is added.</p>
+     *  <p>Shipping-related information of a Cart with <code>Multiple</code> ShippingMode. Updated automatically each time a new Shipping Method is added.</p>
+     * @param shipping
+     * @return Builder
      */
 
     public CartBuilder plusShipping(final com.commercetools.api.models.cart.Shipping... shipping) {
@@ -552,8 +684,8 @@ public class CartBuilder implements Builder<Cart> {
     }
 
     /**
-     *  <p>Holds all shipping-related information per Shipping Method of a Cart with <code>Multiple</code> ShippingMode.</p>
-     *  <p>It is automatically updated after the Shipping Method is added.</p>
+     *  <p>Shipping-related information of a Cart with <code>Multiple</code> ShippingMode. Updated automatically each time a new Shipping Method is added.</p>
+     * @return Builder
      */
 
     public CartBuilder plusShipping(
@@ -566,8 +698,8 @@ public class CartBuilder implements Builder<Cart> {
     }
 
     /**
-     *  <p>Holds all shipping-related information per Shipping Method of a Cart with <code>Multiple</code> ShippingMode.</p>
-     *  <p>It is automatically updated after the Shipping Method is added.</p>
+     *  <p>Shipping-related information of a Cart with <code>Multiple</code> ShippingMode. Updated automatically each time a new Shipping Method is added.</p>
+     * @return Builder
      */
 
     public CartBuilder withShipping(
@@ -578,118 +710,138 @@ public class CartBuilder implements Builder<Cart> {
     }
 
     /**
-     *
+     *  <p>Input used to select a ShippingRatePriceTier. The data type of this field depends on the <code>shippingRateInputType.type</code> configured in the Project:</p>
+     *  <ul>
+     *   <li>If <code>CartClassification</code>, it is ClassificationShippingRateInput.</li>
+     *   <li>If <code>CartScore</code>, it is ScoreShippingRateInput.</li>
+     *   <li>If <code>CartValue</code>, it cannot be used.</li>
+     *  </ul>
+     * @param shippingRateInput
+     * @return Builder
      */
 
-    public CartBuilder inventoryMode(@Nullable final com.commercetools.api.models.cart.InventoryMode inventoryMode) {
-        this.inventoryMode = inventoryMode;
+    public CartBuilder shippingRateInput(
+            @Nullable final com.commercetools.api.models.cart.ShippingRateInput shippingRateInput) {
+        this.shippingRateInput = shippingRateInput;
         return this;
     }
 
     /**
-     *
+     *  <p>Input used to select a ShippingRatePriceTier. The data type of this field depends on the <code>shippingRateInputType.type</code> configured in the Project:</p>
+     *  <ul>
+     *   <li>If <code>CartClassification</code>, it is ClassificationShippingRateInput.</li>
+     *   <li>If <code>CartScore</code>, it is ScoreShippingRateInput.</li>
+     *   <li>If <code>CartValue</code>, it cannot be used.</li>
+     *  </ul>
+     * @return Builder
      */
 
-    public CartBuilder taxMode(final com.commercetools.api.models.cart.TaxMode taxMode) {
-        this.taxMode = taxMode;
+    public CartBuilder shippingRateInput(
+            Function<com.commercetools.api.models.cart.ShippingRateInputBuilder, Builder<? extends com.commercetools.api.models.cart.ShippingRateInput>> builder) {
+        this.shippingRateInput = builder.apply(com.commercetools.api.models.cart.ShippingRateInputBuilder.of()).build();
         return this;
     }
 
     /**
-     *  <p>When calculating taxes for <code>taxedPrice</code>, the selected mode is used for rounding.</p>
+     *  <p>Additional shipping addresses of the Cart as specified by LineItems using the <code>shippingDetails</code> field.</p>
+     *  <p>Eligible Shipping Methods or applicable Tax Rates are determined by the address in <code>shippingAddress</code>, and not <code>itemShippingAddresses</code>.</p>
+     * @param itemShippingAddresses
+     * @return Builder
      */
 
-    public CartBuilder taxRoundingMode(final com.commercetools.api.models.cart.RoundingMode taxRoundingMode) {
-        this.taxRoundingMode = taxRoundingMode;
+    public CartBuilder itemShippingAddresses(
+            final com.commercetools.api.models.common.Address... itemShippingAddresses) {
+        this.itemShippingAddresses = new ArrayList<>(Arrays.asList(itemShippingAddresses));
         return this;
     }
 
     /**
-     *  <p>When calculating taxes for <code>taxedPrice</code>, the selected mode is used for calculating the price with <code>LineItemLevel</code> (horizontally) or <code>UnitPriceLevel</code> (vertically) calculation mode.</p>
+     *  <p>Additional shipping addresses of the Cart as specified by LineItems using the <code>shippingDetails</code> field.</p>
+     *  <p>Eligible Shipping Methods or applicable Tax Rates are determined by the address in <code>shippingAddress</code>, and not <code>itemShippingAddresses</code>.</p>
+     * @param itemShippingAddresses
+     * @return Builder
      */
 
-    public CartBuilder taxCalculationMode(
-            final com.commercetools.api.models.cart.TaxCalculationMode taxCalculationMode) {
-        this.taxCalculationMode = taxCalculationMode;
+    public CartBuilder itemShippingAddresses(
+            final java.util.List<com.commercetools.api.models.common.Address> itemShippingAddresses) {
+        this.itemShippingAddresses = itemShippingAddresses;
         return this;
     }
 
     /**
-     *  <p>Set automatically when the customer is set and the customer is a member of a customer group. Used for product variant price selection.</p>
+     *  <p>Additional shipping addresses of the Cart as specified by LineItems using the <code>shippingDetails</code> field.</p>
+     *  <p>Eligible Shipping Methods or applicable Tax Rates are determined by the address in <code>shippingAddress</code>, and not <code>itemShippingAddresses</code>.</p>
+     * @param itemShippingAddresses
+     * @return Builder
      */
 
-    public CartBuilder customerGroup(
-            Function<com.commercetools.api.models.customer_group.CustomerGroupReferenceBuilder, com.commercetools.api.models.customer_group.CustomerGroupReferenceBuilder> builder) {
-        this.customerGroup = builder
-                .apply(com.commercetools.api.models.customer_group.CustomerGroupReferenceBuilder.of())
-                .build();
+    public CartBuilder plusItemShippingAddresses(
+            final com.commercetools.api.models.common.Address... itemShippingAddresses) {
+        if (this.itemShippingAddresses == null) {
+            this.itemShippingAddresses = new ArrayList<>();
+        }
+        this.itemShippingAddresses.addAll(Arrays.asList(itemShippingAddresses));
         return this;
     }
 
     /**
-     *  <p>Set automatically when the customer is set and the customer is a member of a customer group. Used for product variant price selection.</p>
+     *  <p>Additional shipping addresses of the Cart as specified by LineItems using the <code>shippingDetails</code> field.</p>
+     *  <p>Eligible Shipping Methods or applicable Tax Rates are determined by the address in <code>shippingAddress</code>, and not <code>itemShippingAddresses</code>.</p>
+     * @return Builder
      */
 
-    public CartBuilder customerGroup(
-            @Nullable final com.commercetools.api.models.customer_group.CustomerGroupReference customerGroup) {
-        this.customerGroup = customerGroup;
+    public CartBuilder plusItemShippingAddresses(
+            Function<com.commercetools.api.models.common.AddressBuilder, com.commercetools.api.models.common.AddressBuilder> builder) {
+        if (this.itemShippingAddresses == null) {
+            this.itemShippingAddresses = new ArrayList<>();
+        }
+        this.itemShippingAddresses.add(builder.apply(com.commercetools.api.models.common.AddressBuilder.of()).build());
         return this;
     }
 
     /**
-     *  <p>A two-digit country code as per ISO 3166-1 alpha-2. Used for product variant price selection.</p>
+     *  <p>Additional shipping addresses of the Cart as specified by LineItems using the <code>shippingDetails</code> field.</p>
+     *  <p>Eligible Shipping Methods or applicable Tax Rates are determined by the address in <code>shippingAddress</code>, and not <code>itemShippingAddresses</code>.</p>
+     * @return Builder
      */
 
-    public CartBuilder country(@Nullable final String country) {
-        this.country = country;
+    public CartBuilder withItemShippingAddresses(
+            Function<com.commercetools.api.models.common.AddressBuilder, com.commercetools.api.models.common.AddressBuilder> builder) {
+        this.itemShippingAddresses = new ArrayList<>();
+        this.itemShippingAddresses.add(builder.apply(com.commercetools.api.models.common.AddressBuilder.of()).build());
         return this;
     }
 
     /**
-     *  <p>Shipping-related information of a Cart with <code>Single</code> ShippingMode. Set automatically once the ShippingMethod is set.</p>
+     *  <p>Discount Codes applied to the Cart. A Cart that has <code>directDiscounts</code> cannot have <code>discountCodes</code>.</p>
+     * @param discountCodes
+     * @return Builder
      */
 
-    public CartBuilder shippingInfo(
-            Function<com.commercetools.api.models.cart.ShippingInfoBuilder, com.commercetools.api.models.cart.ShippingInfoBuilder> builder) {
-        this.shippingInfo = builder.apply(com.commercetools.api.models.cart.ShippingInfoBuilder.of()).build();
-        return this;
-    }
-
-    /**
-     *  <p>Shipping-related information of a Cart with <code>Single</code> ShippingMode. Set automatically once the ShippingMethod is set.</p>
-     */
-
-    public CartBuilder shippingInfo(@Nullable final com.commercetools.api.models.cart.ShippingInfo shippingInfo) {
-        this.shippingInfo = shippingInfo;
-        return this;
-    }
-
-    /**
-     *
-     */
-
-    public CartBuilder discountCodes(
-            @Nullable final com.commercetools.api.models.cart.DiscountCodeInfo... discountCodes) {
+    public CartBuilder discountCodes(final com.commercetools.api.models.cart.DiscountCodeInfo... discountCodes) {
         this.discountCodes = new ArrayList<>(Arrays.asList(discountCodes));
         return this;
     }
 
     /**
-     *
+     *  <p>Discount Codes applied to the Cart. A Cart that has <code>directDiscounts</code> cannot have <code>discountCodes</code>.</p>
+     * @param discountCodes
+     * @return Builder
      */
 
     public CartBuilder discountCodes(
-            @Nullable final java.util.List<com.commercetools.api.models.cart.DiscountCodeInfo> discountCodes) {
+            final java.util.List<com.commercetools.api.models.cart.DiscountCodeInfo> discountCodes) {
         this.discountCodes = discountCodes;
         return this;
     }
 
     /**
-     *
+     *  <p>Discount Codes applied to the Cart. A Cart that has <code>directDiscounts</code> cannot have <code>discountCodes</code>.</p>
+     * @param discountCodes
+     * @return Builder
      */
 
-    public CartBuilder plusDiscountCodes(
-            @Nullable final com.commercetools.api.models.cart.DiscountCodeInfo... discountCodes) {
+    public CartBuilder plusDiscountCodes(final com.commercetools.api.models.cart.DiscountCodeInfo... discountCodes) {
         if (this.discountCodes == null) {
             this.discountCodes = new ArrayList<>();
         }
@@ -698,7 +850,8 @@ public class CartBuilder implements Builder<Cart> {
     }
 
     /**
-     *
+     *  <p>Discount Codes applied to the Cart. A Cart that has <code>directDiscounts</code> cannot have <code>discountCodes</code>.</p>
+     * @return Builder
      */
 
     public CartBuilder plusDiscountCodes(
@@ -711,7 +864,8 @@ public class CartBuilder implements Builder<Cart> {
     }
 
     /**
-     *
+     *  <p>Discount Codes applied to the Cart. A Cart that has <code>directDiscounts</code> cannot have <code>discountCodes</code>.</p>
+     * @return Builder
      */
 
     public CartBuilder withDiscountCodes(
@@ -722,31 +876,35 @@ public class CartBuilder implements Builder<Cart> {
     }
 
     /**
-     *
+     *  <p>Direct Discounts added to the Cart. A Cart that has <code>discountCodes</code> cannot have <code>directDiscounts</code>.</p>
+     * @param directDiscounts
+     * @return Builder
      */
 
-    public CartBuilder directDiscounts(
-            @Nullable final com.commercetools.api.models.cart.DirectDiscount... directDiscounts) {
+    public CartBuilder directDiscounts(final com.commercetools.api.models.cart.DirectDiscount... directDiscounts) {
         this.directDiscounts = new ArrayList<>(Arrays.asList(directDiscounts));
         return this;
     }
 
     /**
-     *
+     *  <p>Direct Discounts added to the Cart. A Cart that has <code>discountCodes</code> cannot have <code>directDiscounts</code>.</p>
+     * @param directDiscounts
+     * @return Builder
      */
 
     public CartBuilder directDiscounts(
-            @Nullable final java.util.List<com.commercetools.api.models.cart.DirectDiscount> directDiscounts) {
+            final java.util.List<com.commercetools.api.models.cart.DirectDiscount> directDiscounts) {
         this.directDiscounts = directDiscounts;
         return this;
     }
 
     /**
-     *
+     *  <p>Direct Discounts added to the Cart. A Cart that has <code>discountCodes</code> cannot have <code>directDiscounts</code>.</p>
+     * @param directDiscounts
+     * @return Builder
      */
 
-    public CartBuilder plusDirectDiscounts(
-            @Nullable final com.commercetools.api.models.cart.DirectDiscount... directDiscounts) {
+    public CartBuilder plusDirectDiscounts(final com.commercetools.api.models.cart.DirectDiscount... directDiscounts) {
         if (this.directDiscounts == null) {
             this.directDiscounts = new ArrayList<>();
         }
@@ -755,7 +913,8 @@ public class CartBuilder implements Builder<Cart> {
     }
 
     /**
-     *
+     *  <p>Direct Discounts added to the Cart. A Cart that has <code>discountCodes</code> cannot have <code>directDiscounts</code>.</p>
+     * @return Builder
      */
 
     public CartBuilder plusDirectDiscounts(
@@ -768,7 +927,8 @@ public class CartBuilder implements Builder<Cart> {
     }
 
     /**
-     *
+     *  <p>Direct Discounts added to the Cart. A Cart that has <code>discountCodes</code> cannot have <code>directDiscounts</code>.</p>
+     * @return Builder
      */
 
     public CartBuilder withDirectDiscounts(
@@ -779,63 +939,9 @@ public class CartBuilder implements Builder<Cart> {
     }
 
     /**
-     *
-     */
-
-    public CartBuilder custom(
-            Function<com.commercetools.api.models.type.CustomFieldsBuilder, com.commercetools.api.models.type.CustomFieldsBuilder> builder) {
-        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsBuilder.of()).build();
-        return this;
-    }
-
-    /**
-     *
-     */
-
-    public CartBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFields custom) {
-        this.custom = custom;
-        return this;
-    }
-
-    /**
-     *
-     */
-
-    public CartBuilder paymentInfo(
-            Function<com.commercetools.api.models.order.PaymentInfoBuilder, com.commercetools.api.models.order.PaymentInfoBuilder> builder) {
-        this.paymentInfo = builder.apply(com.commercetools.api.models.order.PaymentInfoBuilder.of()).build();
-        return this;
-    }
-
-    /**
-     *
-     */
-
-    public CartBuilder paymentInfo(@Nullable final com.commercetools.api.models.order.PaymentInfo paymentInfo) {
-        this.paymentInfo = paymentInfo;
-        return this;
-    }
-
-    /**
-     *
-     */
-
-    public CartBuilder locale(@Nullable final String locale) {
-        this.locale = locale;
-        return this;
-    }
-
-    /**
-     *  <p>The cart will be deleted automatically if it hasn't been modified for the specified amount of days and it is in the <code>Active</code> CartState.</p>
-     */
-
-    public CartBuilder deleteDaysAfterLastModification(@Nullable final Integer deleteDaysAfterLastModification) {
-        this.deleteDaysAfterLastModification = deleteDaysAfterLastModification;
-        return this;
-    }
-
-    /**
-     *  <p>Automatically filled when a line item with LineItemMode <code>GiftLineItem</code> is removed from the cart.</p>
+     *  <p>Automatically set when a Line Item with <code>GiftLineItem</code> LineItemMode is removed from the Cart.</p>
+     * @param refusedGifts
+     * @return Builder
      */
 
     public CartBuilder refusedGifts(
@@ -845,7 +951,9 @@ public class CartBuilder implements Builder<Cart> {
     }
 
     /**
-     *  <p>Automatically filled when a line item with LineItemMode <code>GiftLineItem</code> is removed from the cart.</p>
+     *  <p>Automatically set when a Line Item with <code>GiftLineItem</code> LineItemMode is removed from the Cart.</p>
+     * @param refusedGifts
+     * @return Builder
      */
 
     public CartBuilder refusedGifts(
@@ -855,7 +963,9 @@ public class CartBuilder implements Builder<Cart> {
     }
 
     /**
-     *  <p>Automatically filled when a line item with LineItemMode <code>GiftLineItem</code> is removed from the cart.</p>
+     *  <p>Automatically set when a Line Item with <code>GiftLineItem</code> LineItemMode is removed from the Cart.</p>
+     * @param refusedGifts
+     * @return Builder
      */
 
     public CartBuilder plusRefusedGifts(
@@ -868,7 +978,8 @@ public class CartBuilder implements Builder<Cart> {
     }
 
     /**
-     *  <p>Automatically filled when a line item with LineItemMode <code>GiftLineItem</code> is removed from the cart.</p>
+     *  <p>Automatically set when a Line Item with <code>GiftLineItem</code> LineItemMode is removed from the Cart.</p>
+     * @return Builder
      */
 
     public CartBuilder plusRefusedGifts(
@@ -882,7 +993,8 @@ public class CartBuilder implements Builder<Cart> {
     }
 
     /**
-     *  <p>Automatically filled when a line item with LineItemMode <code>GiftLineItem</code> is removed from the cart.</p>
+     *  <p>Automatically set when a Line Item with <code>GiftLineItem</code> LineItemMode is removed from the Cart.</p>
+     * @return Builder
      */
 
     public CartBuilder withRefusedGifts(
@@ -894,7 +1006,53 @@ public class CartBuilder implements Builder<Cart> {
     }
 
     /**
-     *  <p>The origin field indicates how this cart was created. The value <code>Customer</code> indicates, that the cart was created by the customer.</p>
+     *  <p>Payment information related to the Cart.</p>
+     * @return Builder
+     */
+
+    public CartBuilder paymentInfo(
+            Function<com.commercetools.api.models.order.PaymentInfoBuilder, com.commercetools.api.models.order.PaymentInfoBuilder> builder) {
+        this.paymentInfo = builder.apply(com.commercetools.api.models.order.PaymentInfoBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Payment information related to the Cart.</p>
+     * @param paymentInfo
+     * @return Builder
+     */
+
+    public CartBuilder paymentInfo(@Nullable final com.commercetools.api.models.order.PaymentInfo paymentInfo) {
+        this.paymentInfo = paymentInfo;
+        return this;
+    }
+
+    /**
+     *  <p>Used for LineItem Price selection.</p>
+     * @param country
+     * @return Builder
+     */
+
+    public CartBuilder country(@Nullable final String country) {
+        this.country = country;
+        return this;
+    }
+
+    /**
+     *  <p>Languages of the Cart. Can only contain languages supported by the Project.</p>
+     * @param locale
+     * @return Builder
+     */
+
+    public CartBuilder locale(@Nullable final String locale) {
+        this.locale = locale;
+        return this;
+    }
+
+    /**
+     *  <p>Indicates how the Cart was created.</p>
+     * @param origin
+     * @return Builder
      */
 
     public CartBuilder origin(final com.commercetools.api.models.cart.CartOrigin origin) {
@@ -903,88 +1061,80 @@ public class CartBuilder implements Builder<Cart> {
     }
 
     /**
-     *  <p>The shippingRateInput is used as an input to select a ShippingRatePriceTier.</p>
+     *  <p>Custom Fields of the Cart.</p>
+     * @return Builder
      */
 
-    public CartBuilder shippingRateInput(
-            @Nullable final com.commercetools.api.models.cart.ShippingRateInput shippingRateInput) {
-        this.shippingRateInput = shippingRateInput;
+    public CartBuilder custom(
+            Function<com.commercetools.api.models.type.CustomFieldsBuilder, com.commercetools.api.models.type.CustomFieldsBuilder> builder) {
+        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsBuilder.of()).build();
         return this;
     }
 
     /**
-     *  <p>The shippingRateInput is used as an input to select a ShippingRatePriceTier.</p>
+     *  <p>Custom Fields of the Cart.</p>
+     * @param custom
+     * @return Builder
      */
 
-    public CartBuilder shippingRateInput(
-            Function<com.commercetools.api.models.cart.ShippingRateInputBuilder, Builder<? extends com.commercetools.api.models.cart.ShippingRateInput>> builder) {
-        this.shippingRateInput = builder.apply(com.commercetools.api.models.cart.ShippingRateInputBuilder.of()).build();
+    public CartBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFields custom) {
+        this.custom = custom;
         return this;
     }
 
     /**
-     *  <p>Contains addresses for carts with multiple shipping addresses. Line items reference these addresses under their <code>shippingDetails</code>. The addresses captured here are not used to determine eligible shipping methods or the applicable tax rate. Only the cart's <code>shippingAddress</code> is used for this.</p>
+     *  <p>Number of days after which an active Cart is deleted since its last modification. Configured in Project settings.</p>
+     * @param deleteDaysAfterLastModification
+     * @return Builder
      */
 
-    public CartBuilder itemShippingAddresses(
-            @Nullable final com.commercetools.api.models.common.Address... itemShippingAddresses) {
-        this.itemShippingAddresses = new ArrayList<>(Arrays.asList(itemShippingAddresses));
+    public CartBuilder deleteDaysAfterLastModification(@Nullable final Integer deleteDaysAfterLastModification) {
+        this.deleteDaysAfterLastModification = deleteDaysAfterLastModification;
         return this;
     }
 
     /**
-     *  <p>Contains addresses for carts with multiple shipping addresses. Line items reference these addresses under their <code>shippingDetails</code>. The addresses captured here are not used to determine eligible shipping methods or the applicable tax rate. Only the cart's <code>shippingAddress</code> is used for this.</p>
+     *  <p>Present on resources updated after 1 February 2019 except for events not tracked.</p>
+     * @return Builder
      */
 
-    public CartBuilder itemShippingAddresses(
-            @Nullable final java.util.List<com.commercetools.api.models.common.Address> itemShippingAddresses) {
-        this.itemShippingAddresses = itemShippingAddresses;
+    public CartBuilder lastModifiedBy(
+            Function<com.commercetools.api.models.common.LastModifiedByBuilder, com.commercetools.api.models.common.LastModifiedByBuilder> builder) {
+        this.lastModifiedBy = builder.apply(com.commercetools.api.models.common.LastModifiedByBuilder.of()).build();
         return this;
     }
 
     /**
-     *  <p>Contains addresses for carts with multiple shipping addresses. Line items reference these addresses under their <code>shippingDetails</code>. The addresses captured here are not used to determine eligible shipping methods or the applicable tax rate. Only the cart's <code>shippingAddress</code> is used for this.</p>
+     *  <p>Present on resources updated after 1 February 2019 except for events not tracked.</p>
+     * @param lastModifiedBy
+     * @return Builder
      */
 
-    public CartBuilder plusItemShippingAddresses(
-            @Nullable final com.commercetools.api.models.common.Address... itemShippingAddresses) {
-        if (this.itemShippingAddresses == null) {
-            this.itemShippingAddresses = new ArrayList<>();
-        }
-        this.itemShippingAddresses.addAll(Arrays.asList(itemShippingAddresses));
+    public CartBuilder lastModifiedBy(
+            @Nullable final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy) {
+        this.lastModifiedBy = lastModifiedBy;
         return this;
     }
 
     /**
-     *  <p>Contains addresses for carts with multiple shipping addresses. Line items reference these addresses under their <code>shippingDetails</code>. The addresses captured here are not used to determine eligible shipping methods or the applicable tax rate. Only the cart's <code>shippingAddress</code> is used for this.</p>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @return Builder
      */
 
-    public CartBuilder plusItemShippingAddresses(
-            Function<com.commercetools.api.models.common.AddressBuilder, com.commercetools.api.models.common.AddressBuilder> builder) {
-        if (this.itemShippingAddresses == null) {
-            this.itemShippingAddresses = new ArrayList<>();
-        }
-        this.itemShippingAddresses.add(builder.apply(com.commercetools.api.models.common.AddressBuilder.of()).build());
+    public CartBuilder createdBy(
+            Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedByBuilder> builder) {
+        this.createdBy = builder.apply(com.commercetools.api.models.common.CreatedByBuilder.of()).build();
         return this;
     }
 
     /**
-     *  <p>Contains addresses for carts with multiple shipping addresses. Line items reference these addresses under their <code>shippingDetails</code>. The addresses captured here are not used to determine eligible shipping methods or the applicable tax rate. Only the cart's <code>shippingAddress</code> is used for this.</p>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param createdBy
+     * @return Builder
      */
 
-    public CartBuilder withItemShippingAddresses(
-            Function<com.commercetools.api.models.common.AddressBuilder, com.commercetools.api.models.common.AddressBuilder> builder) {
-        this.itemShippingAddresses = new ArrayList<>();
-        this.itemShippingAddresses.add(builder.apply(com.commercetools.api.models.common.AddressBuilder.of()).build());
-        return this;
-    }
-
-    /**
-     *  <p>The sum off all the Line Items quantities. Does not take Custom Line Items into consideration.</p>
-     */
-
-    public CartBuilder totalLineItemQuantity(@Nullable final Long totalLineItemQuantity) {
-        this.totalLineItemQuantity = totalLineItemQuantity;
+    public CartBuilder createdBy(@Nullable final com.commercetools.api.models.common.CreatedBy createdBy) {
+        this.createdBy = createdBy;
         return this;
     }
 
@@ -1010,16 +1160,6 @@ public class CartBuilder implements Builder<Cart> {
     }
 
     @Nullable
-    public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy() {
-        return this.lastModifiedBy;
-    }
-
-    @Nullable
-    public com.commercetools.api.models.common.CreatedBy getCreatedBy() {
-        return this.createdBy;
-    }
-
-    @Nullable
     public String getCustomerId() {
         return this.customerId;
     }
@@ -1027,6 +1167,11 @@ public class CartBuilder implements Builder<Cart> {
     @Nullable
     public String getCustomerEmail() {
         return this.customerEmail;
+    }
+
+    @Nullable
+    public com.commercetools.api.models.customer_group.CustomerGroupReference getCustomerGroup() {
+        return this.customerGroup;
     }
 
     @Nullable
@@ -1052,7 +1197,12 @@ public class CartBuilder implements Builder<Cart> {
         return this.customLineItems;
     }
 
-    public com.commercetools.api.models.common.TypedMoney getTotalPrice() {
+    @Nullable
+    public Long getTotalLineItemQuantity() {
+        return this.totalLineItemQuantity;
+    }
+
+    public com.commercetools.api.models.common.CentPrecisionMoney getTotalPrice() {
         return this.totalPrice;
     }
 
@@ -1064,33 +1214,6 @@ public class CartBuilder implements Builder<Cart> {
     @Nullable
     public com.commercetools.api.models.cart.TaxedPrice getTaxedShippingPrice() {
         return this.taxedShippingPrice;
-    }
-
-    public com.commercetools.api.models.cart.CartState getCartState() {
-        return this.cartState;
-    }
-
-    @Nullable
-    public com.commercetools.api.models.common.Address getShippingAddress() {
-        return this.shippingAddress;
-    }
-
-    @Nullable
-    public com.commercetools.api.models.common.Address getBillingAddress() {
-        return this.billingAddress;
-    }
-
-    public com.commercetools.api.models.cart.ShippingMode getShippingMode() {
-        return this.shippingMode;
-    }
-
-    public java.util.List<com.commercetools.api.models.cart.Shipping> getShipping() {
-        return this.shipping;
-    }
-
-    @Nullable
-    public com.commercetools.api.models.cart.InventoryMode getInventoryMode() {
-        return this.inventoryMode;
     }
 
     public com.commercetools.api.models.cart.TaxMode getTaxMode() {
@@ -1105,14 +1228,26 @@ public class CartBuilder implements Builder<Cart> {
         return this.taxCalculationMode;
     }
 
-    @Nullable
-    public com.commercetools.api.models.customer_group.CustomerGroupReference getCustomerGroup() {
-        return this.customerGroup;
+    public com.commercetools.api.models.cart.InventoryMode getInventoryMode() {
+        return this.inventoryMode;
+    }
+
+    public com.commercetools.api.models.cart.CartState getCartState() {
+        return this.cartState;
     }
 
     @Nullable
-    public String getCountry() {
-        return this.country;
+    public com.commercetools.api.models.common.Address getBillingAddress() {
+        return this.billingAddress;
+    }
+
+    @Nullable
+    public com.commercetools.api.models.common.Address getShippingAddress() {
+        return this.shippingAddress;
+    }
+
+    public com.commercetools.api.models.cart.ShippingMode getShippingMode() {
+        return this.shippingMode;
     }
 
     @Nullable
@@ -1120,19 +1255,29 @@ public class CartBuilder implements Builder<Cart> {
         return this.shippingInfo;
     }
 
+    public java.util.List<com.commercetools.api.models.cart.Shipping> getShipping() {
+        return this.shipping;
+    }
+
     @Nullable
+    public com.commercetools.api.models.cart.ShippingRateInput getShippingRateInput() {
+        return this.shippingRateInput;
+    }
+
+    public java.util.List<com.commercetools.api.models.common.Address> getItemShippingAddresses() {
+        return this.itemShippingAddresses;
+    }
+
     public java.util.List<com.commercetools.api.models.cart.DiscountCodeInfo> getDiscountCodes() {
         return this.discountCodes;
     }
 
-    @Nullable
     public java.util.List<com.commercetools.api.models.cart.DirectDiscount> getDirectDiscounts() {
         return this.directDiscounts;
     }
 
-    @Nullable
-    public com.commercetools.api.models.type.CustomFields getCustom() {
-        return this.custom;
+    public java.util.List<com.commercetools.api.models.cart_discount.CartDiscountReference> getRefusedGifts() {
+        return this.refusedGifts;
     }
 
     @Nullable
@@ -1141,17 +1286,13 @@ public class CartBuilder implements Builder<Cart> {
     }
 
     @Nullable
-    public String getLocale() {
-        return this.locale;
+    public String getCountry() {
+        return this.country;
     }
 
     @Nullable
-    public Integer getDeleteDaysAfterLastModification() {
-        return this.deleteDaysAfterLastModification;
-    }
-
-    public java.util.List<com.commercetools.api.models.cart_discount.CartDiscountReference> getRefusedGifts() {
-        return this.refusedGifts;
+    public String getLocale() {
+        return this.locale;
     }
 
     public com.commercetools.api.models.cart.CartOrigin getOrigin() {
@@ -1159,18 +1300,23 @@ public class CartBuilder implements Builder<Cart> {
     }
 
     @Nullable
-    public com.commercetools.api.models.cart.ShippingRateInput getShippingRateInput() {
-        return this.shippingRateInput;
+    public com.commercetools.api.models.type.CustomFields getCustom() {
+        return this.custom;
     }
 
     @Nullable
-    public java.util.List<com.commercetools.api.models.common.Address> getItemShippingAddresses() {
-        return this.itemShippingAddresses;
+    public Integer getDeleteDaysAfterLastModification() {
+        return this.deleteDaysAfterLastModification;
     }
 
     @Nullable
-    public Long getTotalLineItemQuantity() {
-        return this.totalLineItemQuantity;
+    public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy() {
+        return this.lastModifiedBy;
+    }
+
+    @Nullable
+    public com.commercetools.api.models.common.CreatedBy getCreatedBy() {
+        return this.createdBy;
     }
 
     public Cart build() {
@@ -1181,32 +1327,36 @@ public class CartBuilder implements Builder<Cart> {
         Objects.requireNonNull(lineItems, Cart.class + ": lineItems is missing");
         Objects.requireNonNull(customLineItems, Cart.class + ": customLineItems is missing");
         Objects.requireNonNull(totalPrice, Cart.class + ": totalPrice is missing");
-        Objects.requireNonNull(cartState, Cart.class + ": cartState is missing");
-        Objects.requireNonNull(shippingMode, Cart.class + ": shippingMode is missing");
-        Objects.requireNonNull(shipping, Cart.class + ": shipping is missing");
         Objects.requireNonNull(taxMode, Cart.class + ": taxMode is missing");
         Objects.requireNonNull(taxRoundingMode, Cart.class + ": taxRoundingMode is missing");
         Objects.requireNonNull(taxCalculationMode, Cart.class + ": taxCalculationMode is missing");
+        Objects.requireNonNull(inventoryMode, Cart.class + ": inventoryMode is missing");
+        Objects.requireNonNull(cartState, Cart.class + ": cartState is missing");
+        Objects.requireNonNull(shippingMode, Cart.class + ": shippingMode is missing");
+        Objects.requireNonNull(shipping, Cart.class + ": shipping is missing");
+        Objects.requireNonNull(itemShippingAddresses, Cart.class + ": itemShippingAddresses is missing");
+        Objects.requireNonNull(discountCodes, Cart.class + ": discountCodes is missing");
+        Objects.requireNonNull(directDiscounts, Cart.class + ": directDiscounts is missing");
         Objects.requireNonNull(refusedGifts, Cart.class + ": refusedGifts is missing");
         Objects.requireNonNull(origin, Cart.class + ": origin is missing");
-        return new CartImpl(id, version, createdAt, lastModifiedAt, key, lastModifiedBy, createdBy, customerId,
-            customerEmail, anonymousId, businessUnit, store, lineItems, customLineItems, totalPrice, taxedPrice,
-            taxedShippingPrice, cartState, shippingAddress, billingAddress, shippingMode, shipping, inventoryMode,
-            taxMode, taxRoundingMode, taxCalculationMode, customerGroup, country, shippingInfo, discountCodes,
-            directDiscounts, custom, paymentInfo, locale, deleteDaysAfterLastModification, refusedGifts, origin,
-            shippingRateInput, itemShippingAddresses, totalLineItemQuantity);
+        return new CartImpl(id, version, createdAt, lastModifiedAt, key, customerId, customerEmail, customerGroup,
+            anonymousId, businessUnit, store, lineItems, customLineItems, totalLineItemQuantity, totalPrice, taxedPrice,
+            taxedShippingPrice, taxMode, taxRoundingMode, taxCalculationMode, inventoryMode, cartState, billingAddress,
+            shippingAddress, shippingMode, shippingInfo, shipping, shippingRateInput, itemShippingAddresses,
+            discountCodes, directDiscounts, refusedGifts, paymentInfo, country, locale, origin, custom,
+            deleteDaysAfterLastModification, lastModifiedBy, createdBy);
     }
 
     /**
      * builds Cart without checking for non null required values
      */
     public Cart buildUnchecked() {
-        return new CartImpl(id, version, createdAt, lastModifiedAt, key, lastModifiedBy, createdBy, customerId,
-            customerEmail, anonymousId, businessUnit, store, lineItems, customLineItems, totalPrice, taxedPrice,
-            taxedShippingPrice, cartState, shippingAddress, billingAddress, shippingMode, shipping, inventoryMode,
-            taxMode, taxRoundingMode, taxCalculationMode, customerGroup, country, shippingInfo, discountCodes,
-            directDiscounts, custom, paymentInfo, locale, deleteDaysAfterLastModification, refusedGifts, origin,
-            shippingRateInput, itemShippingAddresses, totalLineItemQuantity);
+        return new CartImpl(id, version, createdAt, lastModifiedAt, key, customerId, customerEmail, customerGroup,
+            anonymousId, businessUnit, store, lineItems, customLineItems, totalLineItemQuantity, totalPrice, taxedPrice,
+            taxedShippingPrice, taxMode, taxRoundingMode, taxCalculationMode, inventoryMode, cartState, billingAddress,
+            shippingAddress, shippingMode, shippingInfo, shipping, shippingRateInput, itemShippingAddresses,
+            discountCodes, directDiscounts, refusedGifts, paymentInfo, country, locale, origin, custom,
+            deleteDaysAfterLastModification, lastModifiedBy, createdBy);
     }
 
     public static CartBuilder of() {
@@ -1220,41 +1370,41 @@ public class CartBuilder implements Builder<Cart> {
         builder.createdAt = template.getCreatedAt();
         builder.lastModifiedAt = template.getLastModifiedAt();
         builder.key = template.getKey();
-        builder.lastModifiedBy = template.getLastModifiedBy();
-        builder.createdBy = template.getCreatedBy();
         builder.customerId = template.getCustomerId();
         builder.customerEmail = template.getCustomerEmail();
+        builder.customerGroup = template.getCustomerGroup();
         builder.anonymousId = template.getAnonymousId();
         builder.businessUnit = template.getBusinessUnit();
         builder.store = template.getStore();
         builder.lineItems = template.getLineItems();
         builder.customLineItems = template.getCustomLineItems();
+        builder.totalLineItemQuantity = template.getTotalLineItemQuantity();
         builder.totalPrice = template.getTotalPrice();
         builder.taxedPrice = template.getTaxedPrice();
         builder.taxedShippingPrice = template.getTaxedShippingPrice();
-        builder.cartState = template.getCartState();
-        builder.shippingAddress = template.getShippingAddress();
-        builder.billingAddress = template.getBillingAddress();
-        builder.shippingMode = template.getShippingMode();
-        builder.shipping = template.getShipping();
-        builder.inventoryMode = template.getInventoryMode();
         builder.taxMode = template.getTaxMode();
         builder.taxRoundingMode = template.getTaxRoundingMode();
         builder.taxCalculationMode = template.getTaxCalculationMode();
-        builder.customerGroup = template.getCustomerGroup();
-        builder.country = template.getCountry();
+        builder.inventoryMode = template.getInventoryMode();
+        builder.cartState = template.getCartState();
+        builder.billingAddress = template.getBillingAddress();
+        builder.shippingAddress = template.getShippingAddress();
+        builder.shippingMode = template.getShippingMode();
         builder.shippingInfo = template.getShippingInfo();
-        builder.discountCodes = template.getDiscountCodes();
-        builder.directDiscounts = template.getDirectDiscounts();
-        builder.custom = template.getCustom();
-        builder.paymentInfo = template.getPaymentInfo();
-        builder.locale = template.getLocale();
-        builder.deleteDaysAfterLastModification = template.getDeleteDaysAfterLastModification();
-        builder.refusedGifts = template.getRefusedGifts();
-        builder.origin = template.getOrigin();
+        builder.shipping = template.getShipping();
         builder.shippingRateInput = template.getShippingRateInput();
         builder.itemShippingAddresses = template.getItemShippingAddresses();
-        builder.totalLineItemQuantity = template.getTotalLineItemQuantity();
+        builder.discountCodes = template.getDiscountCodes();
+        builder.directDiscounts = template.getDirectDiscounts();
+        builder.refusedGifts = template.getRefusedGifts();
+        builder.paymentInfo = template.getPaymentInfo();
+        builder.country = template.getCountry();
+        builder.locale = template.getLocale();
+        builder.origin = template.getOrigin();
+        builder.custom = template.getCustom();
+        builder.deleteDaysAfterLastModification = template.getDeleteDaysAfterLastModification();
+        builder.lastModifiedBy = template.getLastModifiedBy();
+        builder.createdBy = template.getCreatedBy();
         return builder;
     }
 

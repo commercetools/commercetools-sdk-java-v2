@@ -28,6 +28,8 @@ public class StagedOrderSetReturnPaymentStateActionBuilder implements Builder<St
 
     /**
      *
+     * @param returnItemId
+     * @return Builder
      */
 
     public StagedOrderSetReturnPaymentStateActionBuilder returnItemId(final String returnItemId) {
@@ -37,6 +39,8 @@ public class StagedOrderSetReturnPaymentStateActionBuilder implements Builder<St
 
     /**
      *
+     * @param paymentState
+     * @return Builder
      */
 
     public StagedOrderSetReturnPaymentStateActionBuilder paymentState(

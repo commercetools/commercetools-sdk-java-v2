@@ -31,6 +31,8 @@ public class OrderPurchaseOrderNumberSetMessagePayloadBuilder
 
     /**
      *  <p>Purchase order number on the Order after the Set PurchaseOrderNumber update action.</p>
+     * @param purchaseOrderNumber
+     * @return Builder
      */
 
     public OrderPurchaseOrderNumberSetMessagePayloadBuilder purchaseOrderNumber(
@@ -41,6 +43,8 @@ public class OrderPurchaseOrderNumberSetMessagePayloadBuilder
 
     /**
      *  <p>Purchase order number on the Order before the Set PurchaseOrderNumber update action.</p>
+     * @param oldPurchaseOrderNumber
+     * @return Builder
      */
 
     public OrderPurchaseOrderNumberSetMessagePayloadBuilder oldPurchaseOrderNumber(

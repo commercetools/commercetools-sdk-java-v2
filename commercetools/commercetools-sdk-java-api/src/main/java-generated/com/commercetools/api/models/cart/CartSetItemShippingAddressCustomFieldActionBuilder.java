@@ -33,7 +33,9 @@ public class CartSetItemShippingAddressCustomFieldActionBuilder
     private java.lang.Object value;
 
     /**
-     *
+     *  <p><code>key</code> of the Address in <code>itemShippingAddress</code>.</p>
+     * @param addressKey
+     * @return Builder
      */
 
     public CartSetItemShippingAddressCustomFieldActionBuilder addressKey(final String addressKey) {
@@ -43,6 +45,8 @@ public class CartSetItemShippingAddressCustomFieldActionBuilder
 
     /**
      *  <p>Name of the Custom Field.</p>
+     * @param name
+     * @return Builder
      */
 
     public CartSetItemShippingAddressCustomFieldActionBuilder name(final String name) {
@@ -52,6 +56,8 @@ public class CartSetItemShippingAddressCustomFieldActionBuilder
 
     /**
      *  <p>If <code>value</code> is absent or <code>null</code>, this field will be removed if it exists. Removing a field that does not exist returns an InvalidOperation error. If <code>value</code> is provided, it is set for the field defined by <code>name</code>.</p>
+     * @param value
+     * @return Builder
      */
 
     public CartSetItemShippingAddressCustomFieldActionBuilder value(@Nullable final java.lang.Object value) {

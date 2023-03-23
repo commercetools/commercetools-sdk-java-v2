@@ -34,6 +34,7 @@ public class StagedOrderAddShoppingListActionBuilder implements Builder<StagedOr
 
     /**
      *  <p>ResourceIdentifier to a ShoppingList.</p>
+     * @return Builder
      */
 
     public StagedOrderAddShoppingListActionBuilder shoppingList(
@@ -46,6 +47,8 @@ public class StagedOrderAddShoppingListActionBuilder implements Builder<StagedOr
 
     /**
      *  <p>ResourceIdentifier to a ShoppingList.</p>
+     * @param shoppingList
+     * @return Builder
      */
 
     public StagedOrderAddShoppingListActionBuilder shoppingList(
@@ -56,6 +59,7 @@ public class StagedOrderAddShoppingListActionBuilder implements Builder<StagedOr
 
     /**
      *  <p>ResourceIdentifier to a Channel.</p>
+     * @return Builder
      */
 
     public StagedOrderAddShoppingListActionBuilder supplyChannel(
@@ -67,6 +71,8 @@ public class StagedOrderAddShoppingListActionBuilder implements Builder<StagedOr
 
     /**
      *  <p>ResourceIdentifier to a Channel.</p>
+     * @param supplyChannel
+     * @return Builder
      */
 
     public StagedOrderAddShoppingListActionBuilder supplyChannel(
@@ -77,6 +83,7 @@ public class StagedOrderAddShoppingListActionBuilder implements Builder<StagedOr
 
     /**
      *  <p>ResourceIdentifier to a Channel.</p>
+     * @return Builder
      */
 
     public StagedOrderAddShoppingListActionBuilder distributionChannel(
@@ -89,6 +96,8 @@ public class StagedOrderAddShoppingListActionBuilder implements Builder<StagedOr
 
     /**
      *  <p>ResourceIdentifier to a Channel.</p>
+     * @param distributionChannel
+     * @return Builder
      */
 
     public StagedOrderAddShoppingListActionBuilder distributionChannel(

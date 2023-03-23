@@ -34,6 +34,7 @@ public interface StandalonePriceSetCustomTypeAction extends StandalonePriceUpdat
 
     /**
      *  <p>Defines the Type that extends the StandalonePrice with Custom Fields. If absent, any existing Type and Custom Fields are removed from the StandalonePrice.</p>
+     * @return type
      */
     @Valid
     @JsonProperty("type")
@@ -41,6 +42,7 @@ public interface StandalonePriceSetCustomTypeAction extends StandalonePriceUpdat
 
     /**
      *  <p>Sets the Custom Fields fields for the StandalonePrice.</p>
+     * @return fields
      */
     @Valid
     @JsonProperty("fields")

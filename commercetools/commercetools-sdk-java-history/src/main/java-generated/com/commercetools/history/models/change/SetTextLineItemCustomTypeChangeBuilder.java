@@ -35,6 +35,8 @@ public class SetTextLineItemCustomTypeChangeBuilder implements Builder<SetTextLi
 
     /**
      *  <p>Update action for <code>setTextLineItemCustomType</code></p>
+     * @param change
+     * @return Builder
      */
 
     public SetTextLineItemCustomTypeChangeBuilder change(final String change) {
@@ -44,6 +46,7 @@ public class SetTextLineItemCustomTypeChangeBuilder implements Builder<SetTextLi
 
     /**
      *
+     * @return Builder
      */
 
     public SetTextLineItemCustomTypeChangeBuilder textLineItem(
@@ -55,6 +58,8 @@ public class SetTextLineItemCustomTypeChangeBuilder implements Builder<SetTextLi
 
     /**
      *
+     * @param textLineItem
+     * @return Builder
      */
 
     public SetTextLineItemCustomTypeChangeBuilder textLineItem(
@@ -65,6 +70,7 @@ public class SetTextLineItemCustomTypeChangeBuilder implements Builder<SetTextLi
 
     /**
      *
+     * @return Builder
      */
 
     public SetTextLineItemCustomTypeChangeBuilder nextValue(
@@ -75,6 +81,8 @@ public class SetTextLineItemCustomTypeChangeBuilder implements Builder<SetTextLi
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public SetTextLineItemCustomTypeChangeBuilder nextValue(
@@ -85,6 +93,7 @@ public class SetTextLineItemCustomTypeChangeBuilder implements Builder<SetTextLi
 
     /**
      *
+     * @return Builder
      */
 
     public SetTextLineItemCustomTypeChangeBuilder previousValue(
@@ -95,6 +104,8 @@ public class SetTextLineItemCustomTypeChangeBuilder implements Builder<SetTextLi
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public SetTextLineItemCustomTypeChangeBuilder previousValue(

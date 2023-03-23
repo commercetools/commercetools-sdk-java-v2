@@ -31,6 +31,8 @@ public class ZoneReferenceBuilder implements Builder<ZoneReference> {
 
     /**
      *  <p>Unique identifier of the referenced Zone.</p>
+     * @param id
+     * @return Builder
      */
 
     public ZoneReferenceBuilder id(final String id) {
@@ -40,6 +42,7 @@ public class ZoneReferenceBuilder implements Builder<ZoneReference> {
 
     /**
      *  <p>Contains the representation of the expanded Zone. Only present in responses to requests with Reference Expansion for Zones.</p>
+     * @return Builder
      */
 
     public ZoneReferenceBuilder obj(
@@ -50,6 +53,8 @@ public class ZoneReferenceBuilder implements Builder<ZoneReference> {
 
     /**
      *  <p>Contains the representation of the expanded Zone. Only present in responses to requests with Reference Expansion for Zones.</p>
+     * @param obj
+     * @return Builder
      */
 
     public ZoneReferenceBuilder obj(@Nullable final com.commercetools.api.models.zone.Zone obj) {

@@ -31,6 +31,7 @@ public class StandalonePriceChangeValueActionBuilder implements Builder<Standalo
 
     /**
      *  <p>New value to set. Must not be empty.</p>
+     * @return Builder
      */
 
     public StandalonePriceChangeValueActionBuilder value(
@@ -41,6 +42,8 @@ public class StandalonePriceChangeValueActionBuilder implements Builder<Standalo
 
     /**
      *  <p>New value to set. Must not be empty.</p>
+     * @param value
+     * @return Builder
      */
 
     public StandalonePriceChangeValueActionBuilder value(final com.commercetools.api.models.common.Money value) {
@@ -50,6 +53,8 @@ public class StandalonePriceChangeValueActionBuilder implements Builder<Standalo
 
     /**
      *  <p>If set to <code>true</code> the update action applies to the StagedStandalonePrice. If set to <code>false</code>, the update action applies to the current StandalonePrice.</p>
+     * @param staged
+     * @return Builder
      */
 
     public StandalonePriceChangeValueActionBuilder staged(@Nullable final Boolean staged) {

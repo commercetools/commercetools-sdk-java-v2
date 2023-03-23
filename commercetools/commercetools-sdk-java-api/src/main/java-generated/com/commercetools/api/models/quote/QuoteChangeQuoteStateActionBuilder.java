@@ -25,6 +25,8 @@ public class QuoteChangeQuoteStateActionBuilder implements Builder<QuoteChangeQu
 
     /**
      *  <p>New state to be set for the Quote.</p>
+     * @param quoteState
+     * @return Builder
      */
 
     public QuoteChangeQuoteStateActionBuilder quoteState(

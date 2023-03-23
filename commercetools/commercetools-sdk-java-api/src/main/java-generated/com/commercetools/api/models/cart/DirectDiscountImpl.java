@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * DirectDiscount
+ *  <p>Represents a CartDiscount that is only associated with a single Cart or Order.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class DirectDiscountImpl implements DirectDiscount, ModelBase {
@@ -39,7 +39,7 @@ public class DirectDiscountImpl implements DirectDiscount, ModelBase {
     }
 
     /**
-     *  <p>The unique ID of the cart discount.</p>
+     *  <p>Unique identifier of the Direct Discount.</p>
      */
 
     public String getId() {
@@ -47,7 +47,7 @@ public class DirectDiscountImpl implements DirectDiscount, ModelBase {
     }
 
     /**
-     *
+     *  <p>Effect of the Discount on the Cart.</p>
      */
 
     public com.commercetools.api.models.cart_discount.CartDiscountValue getValue() {
@@ -55,7 +55,8 @@ public class DirectDiscountImpl implements DirectDiscount, ModelBase {
     }
 
     /**
-     *  <p>Empty when the <code>value</code> has type <code>giftLineItem</code>, otherwise a CartDiscountTarget is set.</p>
+     *  <p>Part of the Cart that is discounted.</p>
+     *  <p>Empty when the <code>value</code> is set to <code>giftLineItem</code>.</p>
      */
 
     public com.commercetools.api.models.cart_discount.CartDiscountTarget getTarget() {

@@ -36,13 +36,20 @@ public interface StagedOrderSetCustomLineItemTaxAmountAction extends StagedOrder
 
     /**
      *
+     * @return customLineItemId
      */
     @NotNull
     @JsonProperty("customLineItemId")
     public String getCustomLineItemId();
 
     /**
-     *
+     *  <p>Cannot be used in LineItemDraft or CustomLineItemDraft.</p>
+     *  <p>Can only be set by these update actions:</p>
+     *  <ul>
+     *   <li>Set LineItem TaxAmount, Set CustomLineItem TaxAmount, or Set ShippingMethod TaxAmount on Carts</li>
+     *   <li>Set LineItem TaxAmount, Set CustomLineItem TaxAmount, or Set ShippingMethod TaxAmount on Order Edits</li>
+     *  </ul>
+     * @return externalTaxAmount
      */
     @Valid
     @JsonProperty("externalTaxAmount")

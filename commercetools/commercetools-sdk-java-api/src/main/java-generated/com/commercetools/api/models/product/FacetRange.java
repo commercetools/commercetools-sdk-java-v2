@@ -39,6 +39,7 @@ public interface FacetRange {
 
     /**
      *
+     * @return from
      */
     @NotNull
     @JsonProperty("from")
@@ -46,6 +47,7 @@ public interface FacetRange {
 
     /**
      *
+     * @return fromStr
      */
     @NotNull
     @JsonProperty("fromStr")
@@ -53,6 +55,7 @@ public interface FacetRange {
 
     /**
      *
+     * @return to
      */
     @NotNull
     @JsonProperty("to")
@@ -60,6 +63,7 @@ public interface FacetRange {
 
     /**
      *
+     * @return toStr
      */
     @NotNull
     @JsonProperty("toStr")
@@ -67,6 +71,7 @@ public interface FacetRange {
 
     /**
      *
+     * @return count
      */
     @NotNull
     @JsonProperty("count")
@@ -74,6 +79,7 @@ public interface FacetRange {
 
     /**
      *
+     * @return productCount
      */
 
     @JsonProperty("productCount")
@@ -81,6 +87,7 @@ public interface FacetRange {
 
     /**
      *
+     * @return total
      */
     @NotNull
     @JsonProperty("total")
@@ -88,6 +95,7 @@ public interface FacetRange {
 
     /**
      *
+     * @return min
      */
     @NotNull
     @JsonProperty("min")
@@ -95,6 +103,7 @@ public interface FacetRange {
 
     /**
      *
+     * @return max
      */
     @NotNull
     @JsonProperty("max")
@@ -102,6 +111,7 @@ public interface FacetRange {
 
     /**
      *
+     * @return mean
      */
     @NotNull
     @JsonProperty("mean")

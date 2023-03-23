@@ -33,7 +33,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface DiscountCodeInfo {
 
     /**
-     *
+     *  <p>Discount Code associated with the Cart or Order.</p>
+     * @return discountCode
      */
     @NotNull
     @Valid
@@ -41,7 +42,8 @@ public interface DiscountCodeInfo {
     public DiscountCodeReference getDiscountCode();
 
     /**
-     *
+     *  <p>Indicates the state of the Discount Code applied to the Cart or Order.</p>
+     * @return state
      */
     @NotNull
     @JsonProperty("state")

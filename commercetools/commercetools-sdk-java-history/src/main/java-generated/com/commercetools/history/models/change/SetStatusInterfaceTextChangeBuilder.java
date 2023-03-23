@@ -31,6 +31,8 @@ public class SetStatusInterfaceTextChangeBuilder implements Builder<SetStatusInt
 
     /**
      *  <p>Shape of the action for <code>setStatusInterfaceText</code></p>
+     * @param change
+     * @return Builder
      */
 
     public SetStatusInterfaceTextChangeBuilder change(final String change) {
@@ -40,6 +42,8 @@ public class SetStatusInterfaceTextChangeBuilder implements Builder<SetStatusInt
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public SetStatusInterfaceTextChangeBuilder previousValue(final String previousValue) {
@@ -49,6 +53,8 @@ public class SetStatusInterfaceTextChangeBuilder implements Builder<SetStatusInt
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public SetStatusInterfaceTextChangeBuilder nextValue(final String nextValue) {

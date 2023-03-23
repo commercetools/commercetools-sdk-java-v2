@@ -31,6 +31,8 @@ public class DuplicateAttributeValuesErrorBuilder implements Builder<DuplicateAt
 
     /**
      *  <p><code>"The set of attributes must be unique across all variants."</code></p>
+     * @param message
+     * @return Builder
      */
 
     public DuplicateAttributeValuesErrorBuilder message(final String message) {
@@ -61,6 +63,8 @@ public class DuplicateAttributeValuesErrorBuilder implements Builder<DuplicateAt
 
     /**
      *  <p>Conflicting Attributes.</p>
+     * @param attributes
+     * @return Builder
      */
 
     public DuplicateAttributeValuesErrorBuilder attributes(
@@ -71,6 +75,8 @@ public class DuplicateAttributeValuesErrorBuilder implements Builder<DuplicateAt
 
     /**
      *  <p>Conflicting Attributes.</p>
+     * @param attributes
+     * @return Builder
      */
 
     public DuplicateAttributeValuesErrorBuilder attributes(
@@ -81,6 +87,8 @@ public class DuplicateAttributeValuesErrorBuilder implements Builder<DuplicateAt
 
     /**
      *  <p>Conflicting Attributes.</p>
+     * @param attributes
+     * @return Builder
      */
 
     public DuplicateAttributeValuesErrorBuilder plusAttributes(
@@ -94,6 +102,7 @@ public class DuplicateAttributeValuesErrorBuilder implements Builder<DuplicateAt
 
     /**
      *  <p>Conflicting Attributes.</p>
+     * @return Builder
      */
 
     public DuplicateAttributeValuesErrorBuilder plusAttributes(
@@ -107,6 +116,7 @@ public class DuplicateAttributeValuesErrorBuilder implements Builder<DuplicateAt
 
     /**
      *  <p>Conflicting Attributes.</p>
+     * @return Builder
      */
 
     public DuplicateAttributeValuesErrorBuilder withAttributes(

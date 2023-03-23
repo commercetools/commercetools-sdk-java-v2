@@ -26,6 +26,8 @@ public class PriceImportRequestBuilder implements Builder<PriceImportRequest> {
 
     /**
      *  <p>The price import resources of this request.</p>
+     * @param resources
+     * @return Builder
      */
 
     public PriceImportRequestBuilder resources(
@@ -36,6 +38,8 @@ public class PriceImportRequestBuilder implements Builder<PriceImportRequest> {
 
     /**
      *  <p>The price import resources of this request.</p>
+     * @param resources
+     * @return Builder
      */
 
     public PriceImportRequestBuilder resources(
@@ -46,6 +50,8 @@ public class PriceImportRequestBuilder implements Builder<PriceImportRequest> {
 
     /**
      *  <p>The price import resources of this request.</p>
+     * @param resources
+     * @return Builder
      */
 
     public PriceImportRequestBuilder plusResources(
@@ -59,6 +65,7 @@ public class PriceImportRequestBuilder implements Builder<PriceImportRequest> {
 
     /**
      *  <p>The price import resources of this request.</p>
+     * @return Builder
      */
 
     public PriceImportRequestBuilder plusResources(
@@ -72,6 +79,7 @@ public class PriceImportRequestBuilder implements Builder<PriceImportRequest> {
 
     /**
      *  <p>The price import resources of this request.</p>
+     * @return Builder
      */
 
     public PriceImportRequestBuilder withResources(

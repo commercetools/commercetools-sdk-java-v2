@@ -52,6 +52,7 @@ public interface DiscountCode
 
     /**
      *  <p>Unique identifier of the DiscountCode.</p>
+     * @return id
      */
     @NotNull
     @JsonProperty("id")
@@ -59,6 +60,7 @@ public interface DiscountCode
 
     /**
      *  <p>Current version of the DiscountCode.</p>
+     * @return version
      */
     @NotNull
     @JsonProperty("version")
@@ -66,6 +68,7 @@ public interface DiscountCode
 
     /**
      *  <p>Date and time (UTC) the DiscountCode was initially created.</p>
+     * @return createdAt
      */
     @NotNull
     @JsonProperty("createdAt")
@@ -73,6 +76,7 @@ public interface DiscountCode
 
     /**
      *  <p>Date and time (UTC) the DiscountCode was last updated.</p>
+     * @return lastModifiedAt
      */
     @NotNull
     @JsonProperty("lastModifiedAt")
@@ -80,6 +84,7 @@ public interface DiscountCode
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @return lastModifiedBy
      */
     @Valid
     @JsonProperty("lastModifiedBy")
@@ -87,6 +92,7 @@ public interface DiscountCode
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @return createdBy
      */
     @Valid
     @JsonProperty("createdBy")
@@ -94,6 +100,7 @@ public interface DiscountCode
 
     /**
      *  <p>Name of the DiscountCode.</p>
+     * @return name
      */
     @Valid
     @JsonProperty("name")
@@ -101,6 +108,7 @@ public interface DiscountCode
 
     /**
      *  <p>Description of the DiscountCode.</p>
+     * @return description
      */
     @Valid
     @JsonProperty("description")
@@ -108,6 +116,7 @@ public interface DiscountCode
 
     /**
      *  <p>User-defined unique identifier of the DiscountCode added to the Cart to apply the related CartDiscounts.</p>
+     * @return code
      */
     @NotNull
     @JsonProperty("code")
@@ -115,6 +124,7 @@ public interface DiscountCode
 
     /**
      *  <p>Reference to CartDiscounts that can be applied to the Cart once the DiscountCode is applied.</p>
+     * @return cartDiscounts
      */
     @NotNull
     @Valid
@@ -123,6 +133,7 @@ public interface DiscountCode
 
     /**
      *  <p>DiscountCode can only be applied to Carts that match this predicate.</p>
+     * @return cartPredicate
      */
 
     @JsonProperty("cartPredicate")
@@ -130,6 +141,7 @@ public interface DiscountCode
 
     /**
      *  <p>Indicates if the DiscountCode is active and can be applied to the Cart.</p>
+     * @return isActive
      */
     @NotNull
     @JsonProperty("isActive")
@@ -137,6 +149,7 @@ public interface DiscountCode
 
     /**
      *  <p>Array generated from the Cart predicate. It contains the references of all the resources that are addressed in the predicate.</p>
+     * @return references
      */
     @NotNull
     @Valid
@@ -145,6 +158,7 @@ public interface DiscountCode
 
     /**
      *  <p>Number of times the DiscountCode can be applied. DiscountCode application is counted at the time of Order creation or edit. However, Order cancellation or deletion does not decrement the count.</p>
+     * @return maxApplications
      */
 
     @JsonProperty("maxApplications")
@@ -152,6 +166,7 @@ public interface DiscountCode
 
     /**
      *  <p>Number of times the DiscountCode can be applied per Customer (anonymous Carts are not supported). DiscountCode application is counted at the time of Order creation or edit. However, Order cancellation or deletion does not decrement the count.</p>
+     * @return maxApplicationsPerCustomer
      */
 
     @JsonProperty("maxApplicationsPerCustomer")
@@ -159,6 +174,7 @@ public interface DiscountCode
 
     /**
      *  <p>Custom Fields of the DiscountCode.</p>
+     * @return custom
      */
     @Valid
     @JsonProperty("custom")
@@ -166,6 +182,7 @@ public interface DiscountCode
 
     /**
      *  <p>Groups to which the DiscountCode belongs to.</p>
+     * @return groups
      */
     @NotNull
     @JsonProperty("groups")
@@ -173,6 +190,7 @@ public interface DiscountCode
 
     /**
      *  <p>Date and time (UTC) from which the DiscountCode is effective.</p>
+     * @return validFrom
      */
 
     @JsonProperty("validFrom")
@@ -180,6 +198,7 @@ public interface DiscountCode
 
     /**
      *  <p>Date and time (UTC) until which the DiscountCode is effective.</p>
+     * @return validUntil
      */
 
     @JsonProperty("validUntil")
@@ -187,6 +206,7 @@ public interface DiscountCode
 
     /**
      *  <p>Used and managed by the API and must not be used in customer logic. The value can change at any time due to internal and external factors.</p>
+     * @return applicationVersion
      */
 
     @JsonProperty("applicationVersion")

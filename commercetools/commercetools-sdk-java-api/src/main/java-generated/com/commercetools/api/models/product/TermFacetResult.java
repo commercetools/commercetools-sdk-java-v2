@@ -38,6 +38,7 @@ public interface TermFacetResult extends FacetResult {
 
     /**
      *
+     * @return dataType
      */
     @NotNull
     @JsonProperty("dataType")
@@ -45,6 +46,7 @@ public interface TermFacetResult extends FacetResult {
 
     /**
      *
+     * @return missing
      */
     @NotNull
     @JsonProperty("missing")
@@ -52,6 +54,7 @@ public interface TermFacetResult extends FacetResult {
 
     /**
      *
+     * @return total
      */
     @NotNull
     @JsonProperty("total")
@@ -59,6 +62,7 @@ public interface TermFacetResult extends FacetResult {
 
     /**
      *
+     * @return other
      */
     @NotNull
     @JsonProperty("other")
@@ -66,6 +70,7 @@ public interface TermFacetResult extends FacetResult {
 
     /**
      *
+     * @return terms
      */
     @NotNull
     @Valid

@@ -26,6 +26,8 @@ public class BusinessUnitStoresSetMessagePayloadBuilder implements Builder<Busin
 
     /**
      *  <p>Stores of the Business Unit after the Set Stores update action.</p>
+     * @param stores
+     * @return Builder
      */
 
     public BusinessUnitStoresSetMessagePayloadBuilder stores(
@@ -36,6 +38,8 @@ public class BusinessUnitStoresSetMessagePayloadBuilder implements Builder<Busin
 
     /**
      *  <p>Stores of the Business Unit after the Set Stores update action.</p>
+     * @param stores
+     * @return Builder
      */
 
     public BusinessUnitStoresSetMessagePayloadBuilder stores(
@@ -46,6 +50,8 @@ public class BusinessUnitStoresSetMessagePayloadBuilder implements Builder<Busin
 
     /**
      *  <p>Stores of the Business Unit after the Set Stores update action.</p>
+     * @param stores
+     * @return Builder
      */
 
     public BusinessUnitStoresSetMessagePayloadBuilder plusStores(
@@ -59,6 +65,7 @@ public class BusinessUnitStoresSetMessagePayloadBuilder implements Builder<Busin
 
     /**
      *  <p>Stores of the Business Unit after the Set Stores update action.</p>
+     * @return Builder
      */
 
     public BusinessUnitStoresSetMessagePayloadBuilder plusStores(
@@ -72,6 +79,7 @@ public class BusinessUnitStoresSetMessagePayloadBuilder implements Builder<Busin
 
     /**
      *  <p>Stores of the Business Unit after the Set Stores update action.</p>
+     * @return Builder
      */
 
     public BusinessUnitStoresSetMessagePayloadBuilder withStores(

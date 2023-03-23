@@ -82,6 +82,8 @@ public class CategoryBuilder implements Builder<Category> {
 
     /**
      *  <p>Unique identifier of the Category.</p>
+     * @param id
+     * @return Builder
      */
 
     public CategoryBuilder id(final String id) {
@@ -91,6 +93,8 @@ public class CategoryBuilder implements Builder<Category> {
 
     /**
      *  <p>Current version of the Category.</p>
+     * @param version
+     * @return Builder
      */
 
     public CategoryBuilder version(final Long version) {
@@ -100,6 +104,8 @@ public class CategoryBuilder implements Builder<Category> {
 
     /**
      *  <p>Date and time (UTC) the Category was initially created.</p>
+     * @param createdAt
+     * @return Builder
      */
 
     public CategoryBuilder createdAt(final java.time.ZonedDateTime createdAt) {
@@ -109,6 +115,8 @@ public class CategoryBuilder implements Builder<Category> {
 
     /**
      *  <p>Date and time (UTC) the Category was last updated.</p>
+     * @param lastModifiedAt
+     * @return Builder
      */
 
     public CategoryBuilder lastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {
@@ -118,6 +126,7 @@ public class CategoryBuilder implements Builder<Category> {
 
     /**
      *  <p>Present on resources updated after 1 February 2019 except for events not tracked.</p>
+     * @return Builder
      */
 
     public CategoryBuilder lastModifiedBy(
@@ -128,6 +137,8 @@ public class CategoryBuilder implements Builder<Category> {
 
     /**
      *  <p>Present on resources updated after 1 February 2019 except for events not tracked.</p>
+     * @param lastModifiedBy
+     * @return Builder
      */
 
     public CategoryBuilder lastModifiedBy(
@@ -138,6 +149,7 @@ public class CategoryBuilder implements Builder<Category> {
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @return Builder
      */
 
     public CategoryBuilder createdBy(
@@ -148,6 +160,8 @@ public class CategoryBuilder implements Builder<Category> {
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param createdBy
+     * @return Builder
      */
 
     public CategoryBuilder createdBy(@Nullable final com.commercetools.api.models.common.CreatedBy createdBy) {
@@ -157,6 +171,7 @@ public class CategoryBuilder implements Builder<Category> {
 
     /**
      *  <p>Name of the Category.</p>
+     * @return Builder
      */
 
     public CategoryBuilder name(
@@ -167,6 +182,8 @@ public class CategoryBuilder implements Builder<Category> {
 
     /**
      *  <p>Name of the Category.</p>
+     * @param name
+     * @return Builder
      */
 
     public CategoryBuilder name(final com.commercetools.api.models.common.LocalizedString name) {
@@ -176,6 +193,7 @@ public class CategoryBuilder implements Builder<Category> {
 
     /**
      *  <p>User-defined identifier used as a deep-link URL to the related Category per Locale. A Category can have the same slug for different Locales, but they are unique across the Project. Valid slugs match the pattern <code>^[A-Za-z0-9_-]{2,256}+$</code>. For good performance, indexes are provided for the first 15 <code>languages</code> set in a Project.</p>
+     * @return Builder
      */
 
     public CategoryBuilder slug(
@@ -186,6 +204,8 @@ public class CategoryBuilder implements Builder<Category> {
 
     /**
      *  <p>User-defined identifier used as a deep-link URL to the related Category per Locale. A Category can have the same slug for different Locales, but they are unique across the Project. Valid slugs match the pattern <code>^[A-Za-z0-9_-]{2,256}+$</code>. For good performance, indexes are provided for the first 15 <code>languages</code> set in a Project.</p>
+     * @param slug
+     * @return Builder
      */
 
     public CategoryBuilder slug(final com.commercetools.api.models.common.LocalizedString slug) {
@@ -195,6 +215,7 @@ public class CategoryBuilder implements Builder<Category> {
 
     /**
      *  <p>Description of the Category.</p>
+     * @return Builder
      */
 
     public CategoryBuilder description(
@@ -205,6 +226,8 @@ public class CategoryBuilder implements Builder<Category> {
 
     /**
      *  <p>Description of the Category.</p>
+     * @param description
+     * @return Builder
      */
 
     public CategoryBuilder description(
@@ -215,6 +238,8 @@ public class CategoryBuilder implements Builder<Category> {
 
     /**
      *  <p>Contains the parent path towards the root Category.</p>
+     * @param ancestors
+     * @return Builder
      */
 
     public CategoryBuilder ancestors(final com.commercetools.api.models.category.CategoryReference... ancestors) {
@@ -224,6 +249,8 @@ public class CategoryBuilder implements Builder<Category> {
 
     /**
      *  <p>Contains the parent path towards the root Category.</p>
+     * @param ancestors
+     * @return Builder
      */
 
     public CategoryBuilder ancestors(
@@ -234,6 +261,8 @@ public class CategoryBuilder implements Builder<Category> {
 
     /**
      *  <p>Contains the parent path towards the root Category.</p>
+     * @param ancestors
+     * @return Builder
      */
 
     public CategoryBuilder plusAncestors(final com.commercetools.api.models.category.CategoryReference... ancestors) {
@@ -246,6 +275,7 @@ public class CategoryBuilder implements Builder<Category> {
 
     /**
      *  <p>Contains the parent path towards the root Category.</p>
+     * @return Builder
      */
 
     public CategoryBuilder plusAncestors(
@@ -259,6 +289,7 @@ public class CategoryBuilder implements Builder<Category> {
 
     /**
      *  <p>Contains the parent path towards the root Category.</p>
+     * @return Builder
      */
 
     public CategoryBuilder withAncestors(
@@ -270,6 +301,7 @@ public class CategoryBuilder implements Builder<Category> {
 
     /**
      *  <p>Parent Category of this Category.</p>
+     * @return Builder
      */
 
     public CategoryBuilder parent(
@@ -280,6 +312,8 @@ public class CategoryBuilder implements Builder<Category> {
 
     /**
      *  <p>Parent Category of this Category.</p>
+     * @param parent
+     * @return Builder
      */
 
     public CategoryBuilder parent(@Nullable final com.commercetools.api.models.category.CategoryReference parent) {
@@ -289,6 +323,8 @@ public class CategoryBuilder implements Builder<Category> {
 
     /**
      *  <p>Decimal value between 0 and 1 used to order Categories that are on the same level in the Category tree.</p>
+     * @param orderHint
+     * @return Builder
      */
 
     public CategoryBuilder orderHint(final String orderHint) {
@@ -298,6 +334,8 @@ public class CategoryBuilder implements Builder<Category> {
 
     /**
      *  <p>Additional identifier for external systems like Customer Relationship Management (CRM) or Enterprise Resource Planning (ERP).</p>
+     * @param externalId
+     * @return Builder
      */
 
     public CategoryBuilder externalId(@Nullable final String externalId) {
@@ -307,6 +345,7 @@ public class CategoryBuilder implements Builder<Category> {
 
     /**
      *  <p>Name of the Category used by external search engines for improved search engine performance.</p>
+     * @return Builder
      */
 
     public CategoryBuilder metaTitle(
@@ -317,6 +356,8 @@ public class CategoryBuilder implements Builder<Category> {
 
     /**
      *  <p>Name of the Category used by external search engines for improved search engine performance.</p>
+     * @param metaTitle
+     * @return Builder
      */
 
     public CategoryBuilder metaTitle(@Nullable final com.commercetools.api.models.common.LocalizedString metaTitle) {
@@ -326,6 +367,7 @@ public class CategoryBuilder implements Builder<Category> {
 
     /**
      *  <p>Description of the Category used by external search engines for improved search engine performance.</p>
+     * @return Builder
      */
 
     public CategoryBuilder metaDescription(
@@ -336,6 +378,8 @@ public class CategoryBuilder implements Builder<Category> {
 
     /**
      *  <p>Description of the Category used by external search engines for improved search engine performance.</p>
+     * @param metaDescription
+     * @return Builder
      */
 
     public CategoryBuilder metaDescription(
@@ -346,6 +390,7 @@ public class CategoryBuilder implements Builder<Category> {
 
     /**
      *  <p>Keywords related to the Category for improved search engine performance.</p>
+     * @return Builder
      */
 
     public CategoryBuilder metaKeywords(
@@ -356,6 +401,8 @@ public class CategoryBuilder implements Builder<Category> {
 
     /**
      *  <p>Keywords related to the Category for improved search engine performance.</p>
+     * @param metaKeywords
+     * @return Builder
      */
 
     public CategoryBuilder metaKeywords(
@@ -366,6 +413,7 @@ public class CategoryBuilder implements Builder<Category> {
 
     /**
      *  <p>Custom Fields for the Category.</p>
+     * @return Builder
      */
 
     public CategoryBuilder custom(
@@ -376,6 +424,8 @@ public class CategoryBuilder implements Builder<Category> {
 
     /**
      *  <p>Custom Fields for the Category.</p>
+     * @param custom
+     * @return Builder
      */
 
     public CategoryBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFields custom) {
@@ -385,6 +435,8 @@ public class CategoryBuilder implements Builder<Category> {
 
     /**
      *  <p>Media related to the Category.</p>
+     * @param assets
+     * @return Builder
      */
 
     public CategoryBuilder assets(@Nullable final com.commercetools.api.models.common.Asset... assets) {
@@ -394,6 +446,8 @@ public class CategoryBuilder implements Builder<Category> {
 
     /**
      *  <p>Media related to the Category.</p>
+     * @param assets
+     * @return Builder
      */
 
     public CategoryBuilder assets(@Nullable final java.util.List<com.commercetools.api.models.common.Asset> assets) {
@@ -403,6 +457,8 @@ public class CategoryBuilder implements Builder<Category> {
 
     /**
      *  <p>Media related to the Category.</p>
+     * @param assets
+     * @return Builder
      */
 
     public CategoryBuilder plusAssets(@Nullable final com.commercetools.api.models.common.Asset... assets) {
@@ -415,6 +471,7 @@ public class CategoryBuilder implements Builder<Category> {
 
     /**
      *  <p>Media related to the Category.</p>
+     * @return Builder
      */
 
     public CategoryBuilder plusAssets(
@@ -428,6 +485,7 @@ public class CategoryBuilder implements Builder<Category> {
 
     /**
      *  <p>Media related to the Category.</p>
+     * @return Builder
      */
 
     public CategoryBuilder withAssets(
@@ -439,6 +497,8 @@ public class CategoryBuilder implements Builder<Category> {
 
     /**
      *  <p>User-defined unique identifier of the Category.</p>
+     * @param key
+     * @return Builder
      */
 
     public CategoryBuilder key(@Nullable final String key) {

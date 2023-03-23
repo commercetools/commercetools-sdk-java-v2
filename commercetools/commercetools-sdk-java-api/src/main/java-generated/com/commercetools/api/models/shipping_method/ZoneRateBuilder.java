@@ -29,6 +29,7 @@ public class ZoneRateBuilder implements Builder<ZoneRate> {
 
     /**
      *  <p>Zone for which the shipping rates are valid.</p>
+     * @return Builder
      */
 
     public ZoneRateBuilder zone(
@@ -39,6 +40,8 @@ public class ZoneRateBuilder implements Builder<ZoneRate> {
 
     /**
      *  <p>Zone for which the shipping rates are valid.</p>
+     * @param zone
+     * @return Builder
      */
 
     public ZoneRateBuilder zone(final com.commercetools.api.models.zone.ZoneReference zone) {
@@ -48,6 +51,8 @@ public class ZoneRateBuilder implements Builder<ZoneRate> {
 
     /**
      *  <p>Shipping rates defined per currency.</p>
+     * @param shippingRates
+     * @return Builder
      */
 
     public ZoneRateBuilder shippingRates(
@@ -58,6 +63,8 @@ public class ZoneRateBuilder implements Builder<ZoneRate> {
 
     /**
      *  <p>Shipping rates defined per currency.</p>
+     * @param shippingRates
+     * @return Builder
      */
 
     public ZoneRateBuilder shippingRates(
@@ -68,6 +75,8 @@ public class ZoneRateBuilder implements Builder<ZoneRate> {
 
     /**
      *  <p>Shipping rates defined per currency.</p>
+     * @param shippingRates
+     * @return Builder
      */
 
     public ZoneRateBuilder plusShippingRates(
@@ -81,6 +90,7 @@ public class ZoneRateBuilder implements Builder<ZoneRate> {
 
     /**
      *  <p>Shipping rates defined per currency.</p>
+     * @return Builder
      */
 
     public ZoneRateBuilder plusShippingRates(
@@ -95,6 +105,7 @@ public class ZoneRateBuilder implements Builder<ZoneRate> {
 
     /**
      *  <p>Shipping rates defined per currency.</p>
+     * @return Builder
      */
 
     public ZoneRateBuilder withShippingRates(

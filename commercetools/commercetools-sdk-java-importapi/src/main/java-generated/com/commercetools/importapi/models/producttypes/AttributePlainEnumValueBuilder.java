@@ -28,6 +28,8 @@ public class AttributePlainEnumValueBuilder implements Builder<AttributePlainEnu
 
     /**
      *
+     * @param key
+     * @return Builder
      */
 
     public AttributePlainEnumValueBuilder key(final String key) {
@@ -37,6 +39,8 @@ public class AttributePlainEnumValueBuilder implements Builder<AttributePlainEnu
 
     /**
      *
+     * @param label
+     * @return Builder
      */
 
     public AttributePlainEnumValueBuilder label(final String label) {

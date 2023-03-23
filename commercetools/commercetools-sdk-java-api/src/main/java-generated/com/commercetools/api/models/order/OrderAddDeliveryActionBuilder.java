@@ -40,6 +40,8 @@ public class OrderAddDeliveryActionBuilder implements Builder<OrderAddDeliveryAc
 
     /**
      *
+     * @param items
+     * @return Builder
      */
 
     public OrderAddDeliveryActionBuilder items(
@@ -50,6 +52,8 @@ public class OrderAddDeliveryActionBuilder implements Builder<OrderAddDeliveryAc
 
     /**
      *
+     * @param items
+     * @return Builder
      */
 
     public OrderAddDeliveryActionBuilder items(
@@ -60,6 +64,8 @@ public class OrderAddDeliveryActionBuilder implements Builder<OrderAddDeliveryAc
 
     /**
      *
+     * @param items
+     * @return Builder
      */
 
     public OrderAddDeliveryActionBuilder plusItems(
@@ -73,6 +79,7 @@ public class OrderAddDeliveryActionBuilder implements Builder<OrderAddDeliveryAc
 
     /**
      *
+     * @return Builder
      */
 
     public OrderAddDeliveryActionBuilder plusItems(
@@ -86,6 +93,7 @@ public class OrderAddDeliveryActionBuilder implements Builder<OrderAddDeliveryAc
 
     /**
      *
+     * @return Builder
      */
 
     public OrderAddDeliveryActionBuilder withItems(
@@ -97,6 +105,8 @@ public class OrderAddDeliveryActionBuilder implements Builder<OrderAddDeliveryAc
 
     /**
      *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multi</code> ShippingMode.</p>
+     * @param shippingKey
+     * @return Builder
      */
 
     public OrderAddDeliveryActionBuilder shippingKey(@Nullable final String shippingKey) {
@@ -106,6 +116,7 @@ public class OrderAddDeliveryActionBuilder implements Builder<OrderAddDeliveryAc
 
     /**
      *  <p>Polymorphic base type that represents a postal address and contact details. Depending on the read or write action, it can be either Address or AddressDraft that only differ in the data type for the optional <code>custom</code> field.</p>
+     * @return Builder
      */
 
     public OrderAddDeliveryActionBuilder address(
@@ -116,6 +127,8 @@ public class OrderAddDeliveryActionBuilder implements Builder<OrderAddDeliveryAc
 
     /**
      *  <p>Polymorphic base type that represents a postal address and contact details. Depending on the read or write action, it can be either Address or AddressDraft that only differ in the data type for the optional <code>custom</code> field.</p>
+     * @param address
+     * @return Builder
      */
 
     public OrderAddDeliveryActionBuilder address(
@@ -126,6 +139,8 @@ public class OrderAddDeliveryActionBuilder implements Builder<OrderAddDeliveryAc
 
     /**
      *
+     * @param parcels
+     * @return Builder
      */
 
     public OrderAddDeliveryActionBuilder parcels(
@@ -136,6 +151,8 @@ public class OrderAddDeliveryActionBuilder implements Builder<OrderAddDeliveryAc
 
     /**
      *
+     * @param parcels
+     * @return Builder
      */
 
     public OrderAddDeliveryActionBuilder parcels(
@@ -146,6 +163,8 @@ public class OrderAddDeliveryActionBuilder implements Builder<OrderAddDeliveryAc
 
     /**
      *
+     * @param parcels
+     * @return Builder
      */
 
     public OrderAddDeliveryActionBuilder plusParcels(
@@ -159,6 +178,7 @@ public class OrderAddDeliveryActionBuilder implements Builder<OrderAddDeliveryAc
 
     /**
      *
+     * @return Builder
      */
 
     public OrderAddDeliveryActionBuilder plusParcels(
@@ -172,6 +192,7 @@ public class OrderAddDeliveryActionBuilder implements Builder<OrderAddDeliveryAc
 
     /**
      *
+     * @return Builder
      */
 
     public OrderAddDeliveryActionBuilder withParcels(
@@ -183,6 +204,7 @@ public class OrderAddDeliveryActionBuilder implements Builder<OrderAddDeliveryAc
 
     /**
      *  <p>Custom Fields for the Transaction.</p>
+     * @return Builder
      */
 
     public OrderAddDeliveryActionBuilder custom(
@@ -193,6 +215,8 @@ public class OrderAddDeliveryActionBuilder implements Builder<OrderAddDeliveryAc
 
     /**
      *  <p>Custom Fields for the Transaction.</p>
+     * @param custom
+     * @return Builder
      */
 
     public OrderAddDeliveryActionBuilder custom(

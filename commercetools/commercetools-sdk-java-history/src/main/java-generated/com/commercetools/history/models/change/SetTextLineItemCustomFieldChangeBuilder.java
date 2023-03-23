@@ -39,6 +39,8 @@ public class SetTextLineItemCustomFieldChangeBuilder implements Builder<SetTextL
 
     /**
      *  <p>Update action for <code>setTextLineItemCustomField</code></p>
+     * @param change
+     * @return Builder
      */
 
     public SetTextLineItemCustomFieldChangeBuilder change(final String change) {
@@ -48,6 +50,8 @@ public class SetTextLineItemCustomFieldChangeBuilder implements Builder<SetTextL
 
     /**
      *
+     * @param name
+     * @return Builder
      */
 
     public SetTextLineItemCustomFieldChangeBuilder name(final String name) {
@@ -57,6 +61,8 @@ public class SetTextLineItemCustomFieldChangeBuilder implements Builder<SetTextL
 
     /**
      *
+     * @param customTypeId
+     * @return Builder
      */
 
     public SetTextLineItemCustomFieldChangeBuilder customTypeId(final String customTypeId) {
@@ -66,6 +72,7 @@ public class SetTextLineItemCustomFieldChangeBuilder implements Builder<SetTextL
 
     /**
      *
+     * @return Builder
      */
 
     public SetTextLineItemCustomFieldChangeBuilder textLineItem(
@@ -77,6 +84,8 @@ public class SetTextLineItemCustomFieldChangeBuilder implements Builder<SetTextL
 
     /**
      *
+     * @param textLineItem
+     * @return Builder
      */
 
     public SetTextLineItemCustomFieldChangeBuilder textLineItem(
@@ -87,6 +96,8 @@ public class SetTextLineItemCustomFieldChangeBuilder implements Builder<SetTextL
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public SetTextLineItemCustomFieldChangeBuilder nextValue(final java.lang.Object nextValue) {
@@ -96,6 +107,8 @@ public class SetTextLineItemCustomFieldChangeBuilder implements Builder<SetTextL
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public SetTextLineItemCustomFieldChangeBuilder previousValue(final java.lang.Object previousValue) {

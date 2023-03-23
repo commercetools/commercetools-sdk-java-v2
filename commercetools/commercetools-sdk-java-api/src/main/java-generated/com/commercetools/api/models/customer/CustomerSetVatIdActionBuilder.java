@@ -27,6 +27,8 @@ public class CustomerSetVatIdActionBuilder implements Builder<CustomerSetVatIdAc
 
     /**
      *  <p>Value to set. If empty, any existing value is removed.</p>
+     * @param vatId
+     * @return Builder
      */
 
     public CustomerSetVatIdActionBuilder vatId(@Nullable final String vatId) {

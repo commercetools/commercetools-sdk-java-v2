@@ -33,6 +33,8 @@ public class StagedOrderSetParcelCustomFieldActionBuilder implements Builder<Sta
 
     /**
      *
+     * @param parcelId
+     * @return Builder
      */
 
     public StagedOrderSetParcelCustomFieldActionBuilder parcelId(final String parcelId) {
@@ -42,6 +44,8 @@ public class StagedOrderSetParcelCustomFieldActionBuilder implements Builder<Sta
 
     /**
      *  <p>Name of the Custom Field.</p>
+     * @param name
+     * @return Builder
      */
 
     public StagedOrderSetParcelCustomFieldActionBuilder name(final String name) {
@@ -51,6 +55,8 @@ public class StagedOrderSetParcelCustomFieldActionBuilder implements Builder<Sta
 
     /**
      *  <p>If <code>value</code> is absent or <code>null</code>, this field will be removed if it exists. Removing a field that does not exist returns an InvalidOperation error. If <code>value</code> is provided, it is set for the field defined by <code>name</code>.</p>
+     * @param value
+     * @return Builder
      */
 
     public StagedOrderSetParcelCustomFieldActionBuilder value(@Nullable final java.lang.Object value) {

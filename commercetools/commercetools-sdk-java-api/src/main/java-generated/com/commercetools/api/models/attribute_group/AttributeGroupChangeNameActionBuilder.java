@@ -26,6 +26,7 @@ public class AttributeGroupChangeNameActionBuilder implements Builder<AttributeG
 
     /**
      *  <p>New value to set. Must not be empty.</p>
+     * @return Builder
      */
 
     public AttributeGroupChangeNameActionBuilder name(
@@ -36,6 +37,8 @@ public class AttributeGroupChangeNameActionBuilder implements Builder<AttributeG
 
     /**
      *  <p>New value to set. Must not be empty.</p>
+     * @param name
+     * @return Builder
      */
 
     public AttributeGroupChangeNameActionBuilder name(final com.commercetools.api.models.common.LocalizedString name) {

@@ -30,6 +30,7 @@ public interface MyPaymentSetMethodInfoMethodAction extends MyPaymentUpdateActio
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
+     * @return method
      */
 
     @JsonProperty("method")

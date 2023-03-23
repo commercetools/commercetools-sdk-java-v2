@@ -36,6 +36,7 @@ public interface OrderEditDraft extends com.commercetools.api.models.Customizabl
 
     /**
      *  <p>User-defined unique identifier for the OrderEdit.</p>
+     * @return key
      */
 
     @JsonProperty("key")
@@ -43,6 +44,7 @@ public interface OrderEditDraft extends com.commercetools.api.models.Customizabl
 
     /**
      *  <p>The order to be updated with this edit.</p>
+     * @return resource
      */
     @NotNull
     @Valid
@@ -51,6 +53,7 @@ public interface OrderEditDraft extends com.commercetools.api.models.Customizabl
 
     /**
      *  <p>The actions to apply to <code>resource</code>.</p>
+     * @return stagedActions
      */
     @Valid
     @JsonProperty("stagedActions")
@@ -58,6 +61,7 @@ public interface OrderEditDraft extends com.commercetools.api.models.Customizabl
 
     /**
      *  <p>The custom fields.</p>
+     * @return custom
      */
     @Valid
     @JsonProperty("custom")
@@ -65,6 +69,7 @@ public interface OrderEditDraft extends com.commercetools.api.models.Customizabl
 
     /**
      *  <p>This field can be used to add additional textual information regarding the edit.</p>
+     * @return comment
      */
 
     @JsonProperty("comment")
@@ -72,6 +77,7 @@ public interface OrderEditDraft extends com.commercetools.api.models.Customizabl
 
     /**
      *  <p>When set to <code>true</code> the edit is applied on the Order without persisting it.</p>
+     * @return dryRun
      */
 
     @JsonProperty("dryRun")

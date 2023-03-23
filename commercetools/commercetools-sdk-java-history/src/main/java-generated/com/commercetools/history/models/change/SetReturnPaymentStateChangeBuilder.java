@@ -31,6 +31,8 @@ public class SetReturnPaymentStateChangeBuilder implements Builder<SetReturnPaym
 
     /**
      *  <p>Update action for <code>setReturnPaymentState</code></p>
+     * @param change
+     * @return Builder
      */
 
     public SetReturnPaymentStateChangeBuilder change(final String change) {
@@ -40,6 +42,8 @@ public class SetReturnPaymentStateChangeBuilder implements Builder<SetReturnPaym
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public SetReturnPaymentStateChangeBuilder nextValue(
@@ -50,6 +54,8 @@ public class SetReturnPaymentStateChangeBuilder implements Builder<SetReturnPaym
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public SetReturnPaymentStateChangeBuilder previousValue(

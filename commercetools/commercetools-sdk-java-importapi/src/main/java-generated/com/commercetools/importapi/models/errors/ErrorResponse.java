@@ -33,6 +33,7 @@ public interface ErrorResponse {
 
     /**
      *  <p>The http status code of the response.</p>
+     * @return statusCode
      */
     @NotNull
     @JsonProperty("statusCode")
@@ -40,6 +41,7 @@ public interface ErrorResponse {
 
     /**
      *  <p>Describes the error.</p>
+     * @return message
      */
     @NotNull
     @JsonProperty("message")
@@ -47,6 +49,7 @@ public interface ErrorResponse {
 
     /**
      *  <p>This property is only used for OAuth2 errors. Contains the error code.</p>
+     * @return error
      */
 
     @JsonProperty("error")
@@ -54,6 +57,7 @@ public interface ErrorResponse {
 
     /**
      *  <p>This property is only used for OAuth2 errors. Additional information to assist the client developer in understanding the error.</p>
+     * @return error_description
      */
 
     @JsonProperty("error_description")
@@ -61,6 +65,7 @@ public interface ErrorResponse {
 
     /**
      *  <p>The errors that caused this error response.</p>
+     * @return errors
      */
     @Valid
     @JsonProperty("errors")

@@ -43,6 +43,8 @@ public class ParcelBuilder implements Builder<Parcel> {
 
     /**
      *  <p>Unique identifier of the Parcel.</p>
+     * @param id
+     * @return Builder
      */
 
     public ParcelBuilder id(final String id) {
@@ -52,6 +54,8 @@ public class ParcelBuilder implements Builder<Parcel> {
 
     /**
      *
+     * @param createdAt
+     * @return Builder
      */
 
     public ParcelBuilder createdAt(final java.time.ZonedDateTime createdAt) {
@@ -61,6 +65,7 @@ public class ParcelBuilder implements Builder<Parcel> {
 
     /**
      *
+     * @return Builder
      */
 
     public ParcelBuilder measurements(
@@ -71,6 +76,8 @@ public class ParcelBuilder implements Builder<Parcel> {
 
     /**
      *
+     * @param measurements
+     * @return Builder
      */
 
     public ParcelBuilder measurements(
@@ -81,6 +88,7 @@ public class ParcelBuilder implements Builder<Parcel> {
 
     /**
      *
+     * @return Builder
      */
 
     public ParcelBuilder trackingData(
@@ -91,6 +99,8 @@ public class ParcelBuilder implements Builder<Parcel> {
 
     /**
      *
+     * @param trackingData
+     * @return Builder
      */
 
     public ParcelBuilder trackingData(@Nullable final com.commercetools.api.models.order.TrackingData trackingData) {
@@ -100,6 +110,8 @@ public class ParcelBuilder implements Builder<Parcel> {
 
     /**
      *  <p>The delivery items contained in this parcel.</p>
+     * @param items
+     * @return Builder
      */
 
     public ParcelBuilder items(@Nullable final com.commercetools.api.models.order.DeliveryItem... items) {
@@ -109,6 +121,8 @@ public class ParcelBuilder implements Builder<Parcel> {
 
     /**
      *  <p>The delivery items contained in this parcel.</p>
+     * @param items
+     * @return Builder
      */
 
     public ParcelBuilder items(@Nullable final java.util.List<com.commercetools.api.models.order.DeliveryItem> items) {
@@ -118,6 +132,8 @@ public class ParcelBuilder implements Builder<Parcel> {
 
     /**
      *  <p>The delivery items contained in this parcel.</p>
+     * @param items
+     * @return Builder
      */
 
     public ParcelBuilder plusItems(@Nullable final com.commercetools.api.models.order.DeliveryItem... items) {
@@ -130,6 +146,7 @@ public class ParcelBuilder implements Builder<Parcel> {
 
     /**
      *  <p>The delivery items contained in this parcel.</p>
+     * @return Builder
      */
 
     public ParcelBuilder plusItems(
@@ -143,6 +160,7 @@ public class ParcelBuilder implements Builder<Parcel> {
 
     /**
      *  <p>The delivery items contained in this parcel.</p>
+     * @return Builder
      */
 
     public ParcelBuilder withItems(
@@ -154,6 +172,7 @@ public class ParcelBuilder implements Builder<Parcel> {
 
     /**
      *  <p>Custom Fields of this parcel.</p>
+     * @return Builder
      */
 
     public ParcelBuilder custom(
@@ -164,6 +183,8 @@ public class ParcelBuilder implements Builder<Parcel> {
 
     /**
      *  <p>Custom Fields of this parcel.</p>
+     * @param custom
+     * @return Builder
      */
 
     public ParcelBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFields custom) {

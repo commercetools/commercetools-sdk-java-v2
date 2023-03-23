@@ -32,6 +32,7 @@ public interface SearchKeyword {
 
     /**
      *
+     * @return text
      */
     @NotNull
     @JsonProperty("text")
@@ -39,6 +40,7 @@ public interface SearchKeyword {
 
     /**
      *  <p>The tokenizer defines the tokens that are used to match against the Suggest Query input.</p>
+     * @return suggestTokenizer
      */
     @Valid
     @JsonProperty("suggestTokenizer")

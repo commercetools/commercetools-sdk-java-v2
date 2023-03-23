@@ -32,6 +32,7 @@ public interface OrderSetReturnInfoAction extends OrderUpdateAction {
 
     /**
      *
+     * @return items
      */
     @Valid
     @JsonProperty("items")

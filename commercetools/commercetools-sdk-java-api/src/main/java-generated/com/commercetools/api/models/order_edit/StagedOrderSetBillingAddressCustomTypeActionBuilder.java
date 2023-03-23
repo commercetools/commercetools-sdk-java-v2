@@ -32,6 +32,7 @@ public class StagedOrderSetBillingAddressCustomTypeActionBuilder
 
     /**
      *  <p>Defines the Type that extends the <code>billingAddress</code> with Custom Fields. If absent, any existing Type and Custom Fields are removed from the <code>billingAddress</code>.</p>
+     * @return Builder
      */
 
     public StagedOrderSetBillingAddressCustomTypeActionBuilder type(
@@ -42,6 +43,8 @@ public class StagedOrderSetBillingAddressCustomTypeActionBuilder
 
     /**
      *  <p>Defines the Type that extends the <code>billingAddress</code> with Custom Fields. If absent, any existing Type and Custom Fields are removed from the <code>billingAddress</code>.</p>
+     * @param type
+     * @return Builder
      */
 
     public StagedOrderSetBillingAddressCustomTypeActionBuilder type(
@@ -52,6 +55,7 @@ public class StagedOrderSetBillingAddressCustomTypeActionBuilder
 
     /**
      *  <p>Sets the Custom Fields fields for the <code>billingAddress</code>.</p>
+     * @return Builder
      */
 
     public StagedOrderSetBillingAddressCustomTypeActionBuilder fields(
@@ -62,6 +66,8 @@ public class StagedOrderSetBillingAddressCustomTypeActionBuilder
 
     /**
      *  <p>Sets the Custom Fields fields for the <code>billingAddress</code>.</p>
+     * @param fields
+     * @return Builder
      */
 
     public StagedOrderSetBillingAddressCustomTypeActionBuilder fields(

@@ -45,6 +45,7 @@ public interface PriceImport extends ImportResource {
 
     /**
      *  <p>User-defined unique identifier for the Embedded Price.</p>
+     * @return key
      */
     @NotNull
     @JsonProperty("key")
@@ -52,6 +53,7 @@ public interface PriceImport extends ImportResource {
 
     /**
      *  <p>Maps to <code>Price.value</code>.</p>
+     * @return value
      */
     @NotNull
     @Valid
@@ -60,6 +62,7 @@ public interface PriceImport extends ImportResource {
 
     /**
      *  <p>Maps to <code>Price.county</code>.</p>
+     * @return country
      */
 
     @JsonProperty("country")
@@ -67,6 +70,7 @@ public interface PriceImport extends ImportResource {
 
     /**
      *  <p>Maps to <code>Price.validFrom</code>.</p>
+     * @return validFrom
      */
 
     @JsonProperty("validFrom")
@@ -74,6 +78,7 @@ public interface PriceImport extends ImportResource {
 
     /**
      *  <p>Maps to <code>Price.validUntil</code>.</p>
+     * @return validUntil
      */
 
     @JsonProperty("validUntil")
@@ -81,6 +86,7 @@ public interface PriceImport extends ImportResource {
 
     /**
      *  <p>The Reference to the CustomerGroup with which the Price is associated. If referenced CustomerGroup does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary CustomerGroup is created.</p>
+     * @return customerGroup
      */
     @Valid
     @JsonProperty("customerGroup")
@@ -88,6 +94,7 @@ public interface PriceImport extends ImportResource {
 
     /**
      *  <p>The Reference to the Channel with which the Price is associated. If referenced Channel does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Channel is created.</p>
+     * @return channel
      */
     @Valid
     @JsonProperty("channel")
@@ -95,6 +102,7 @@ public interface PriceImport extends ImportResource {
 
     /**
      *  <p>Sets a discounted price from an external service.</p>
+     * @return discounted
      */
     @Valid
     @JsonProperty("discounted")
@@ -102,6 +110,7 @@ public interface PriceImport extends ImportResource {
 
     /**
      *  <p>Only the Embedded Price updates will be published to <code>staged</code> and <code>current</code> projection.</p>
+     * @return publish
      */
 
     @JsonProperty("publish")
@@ -109,6 +118,7 @@ public interface PriceImport extends ImportResource {
 
     /**
      *  <p>The tiered prices for this price.</p>
+     * @return tiers
      */
     @Valid
     @JsonProperty("tiers")
@@ -116,6 +126,7 @@ public interface PriceImport extends ImportResource {
 
     /**
      *  <p>The custom fields for this price.</p>
+     * @return custom
      */
     @Valid
     @JsonProperty("custom")
@@ -123,6 +134,7 @@ public interface PriceImport extends ImportResource {
 
     /**
      *  <p>The ProductVariant in which this Embedded Price is contained. The Reference to the ProductVariant with which the Price is associated. If referenced ProductVariant does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary ProductVariant is created.</p>
+     * @return productVariant
      */
     @NotNull
     @Valid
@@ -131,6 +143,7 @@ public interface PriceImport extends ImportResource {
 
     /**
      *  <p>The Product in which the Product Variant containing this Embedded Price is contained. Maps to <code>ProductVariant.product</code>. The Reference to the Product with which the Price is associated. If referenced Product does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Product is created.</p>
+     * @return product
      */
     @NotNull
     @Valid

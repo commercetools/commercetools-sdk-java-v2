@@ -28,6 +28,10 @@ public class ByProjectKeyTypesKeyByKeyRequestBuilder {
         return new ByProjectKeyTypesKeyByKeyPost(apiHttpClient, projectKey, key, typeUpdate);
     }
 
+    public ByProjectKeyTypesKeyByKeyPostString post(final String typeUpdate) {
+        return new ByProjectKeyTypesKeyByKeyPostString(apiHttpClient, projectKey, key, typeUpdate);
+    }
+
     public ByProjectKeyTypesKeyByKeyPost post(UnaryOperator<com.commercetools.api.models.type.TypeUpdateBuilder> op) {
         return post(op.apply(com.commercetools.api.models.type.TypeUpdateBuilder.of()).build());
     }

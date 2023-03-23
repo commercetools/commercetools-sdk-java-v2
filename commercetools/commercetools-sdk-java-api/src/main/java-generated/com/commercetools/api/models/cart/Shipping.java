@@ -35,7 +35,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface Shipping {
 
     /**
-     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multiple</code> ShippingMode.</p>
+     *  <p>User-defined unique identifier of the Shipping in a Cart with <code>Multiple</code> ShippingMode.</p>
+     * @return shippingKey
      */
     @NotNull
     @JsonProperty("shippingKey")
@@ -43,6 +44,7 @@ public interface Shipping {
 
     /**
      *  <p>Automatically set when the Shipping Method is added.</p>
+     * @return shippingInfo
      */
     @NotNull
     @Valid
@@ -50,7 +52,8 @@ public interface Shipping {
     public ShippingInfo getShippingInfo();
 
     /**
-     *  <p>Determines the shipping rates and Tax Rates of the associated Line Item quantities.</p>
+     *  <p>Determines the shipping rates and Tax Rates of associated Line Items.</p>
+     * @return shippingAddress
      */
     @NotNull
     @Valid
@@ -58,11 +61,13 @@ public interface Shipping {
     public Address getShippingAddress();
 
     /**
-     *  <p>Used as an input to select a ShippingRatePriceTier.</p>
+     *  <p>Used as an input to select a ShippingRatePriceTier. The data type of this field depends on the <code>shippingRateInputType.type</code> configured in the Project:</p>
      *  <ul>
-     *   <li>Must be ClassificationShippingRateInput if ShippingRateInputType is CartClassificationType.</li>
-     *   <li>Must be ScoreShippingRateInput if ShippingRateInputType is CartScoreType.</li>
+     *   <li>If <code>CartClassification</code>, it is ClassificationShippingRateInput.</li>
+     *   <li>If <code>CartScore</code>, it is ScoreShippingRateInput.</li>
+     *   <li>If <code>CartValue</code>, it cannot be used.</li>
      *  </ul>
+     * @return shippingRateInput
      */
     @Valid
     @JsonProperty("shippingRateInput")
@@ -70,6 +75,7 @@ public interface Shipping {
 
     /**
      *  <p>Custom Fields of Shipping.</p>
+     * @return shippingCustomFields
      */
     @Valid
     @JsonProperty("shippingCustomFields")

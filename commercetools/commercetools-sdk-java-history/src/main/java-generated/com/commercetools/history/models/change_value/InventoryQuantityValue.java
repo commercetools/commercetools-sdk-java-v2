@@ -32,6 +32,7 @@ public interface InventoryQuantityValue {
 
     /**
      *
+     * @return quantityOnStock
      */
     @NotNull
     @JsonProperty("quantityOnStock")
@@ -39,6 +40,7 @@ public interface InventoryQuantityValue {
 
     /**
      *
+     * @return availableQuantity
      */
     @NotNull
     @JsonProperty("availableQuantity")

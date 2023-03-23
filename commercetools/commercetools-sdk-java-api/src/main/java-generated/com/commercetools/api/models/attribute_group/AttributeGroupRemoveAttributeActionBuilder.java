@@ -26,6 +26,7 @@ public class AttributeGroupRemoveAttributeActionBuilder implements Builder<Attri
 
     /**
      *  <p>Value to remove.</p>
+     * @return Builder
      */
 
     public AttributeGroupRemoveAttributeActionBuilder attribute(
@@ -37,6 +38,8 @@ public class AttributeGroupRemoveAttributeActionBuilder implements Builder<Attri
 
     /**
      *  <p>Value to remove.</p>
+     * @param attribute
+     * @return Builder
      */
 
     public AttributeGroupRemoveAttributeActionBuilder attribute(

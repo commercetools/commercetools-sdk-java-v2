@@ -49,6 +49,8 @@ public class OrderLineItemRemovedMessagePayloadBuilder implements Builder<OrderL
 
     /**
      *  <p>Unique identifier of the Line Item.</p>
+     * @param lineItemId
+     * @return Builder
      */
 
     public OrderLineItemRemovedMessagePayloadBuilder lineItemId(final String lineItemId) {
@@ -58,6 +60,8 @@ public class OrderLineItemRemovedMessagePayloadBuilder implements Builder<OrderL
 
     /**
      *  <p>Quantity of Line Items that were removed during the Remove Line Item update action.</p>
+     * @param removedQuantity
+     * @return Builder
      */
 
     public OrderLineItemRemovedMessagePayloadBuilder removedQuantity(final Long removedQuantity) {
@@ -67,6 +71,8 @@ public class OrderLineItemRemovedMessagePayloadBuilder implements Builder<OrderL
 
     /**
      *  <p>Line Item quantity after the Remove Line Item update action.</p>
+     * @param newQuantity
+     * @return Builder
      */
 
     public OrderLineItemRemovedMessagePayloadBuilder newQuantity(final Long newQuantity) {
@@ -76,6 +82,8 @@ public class OrderLineItemRemovedMessagePayloadBuilder implements Builder<OrderL
 
     /**
      *  <p>ItemStates after the Remove Line Item update action.</p>
+     * @param newState
+     * @return Builder
      */
 
     public OrderLineItemRemovedMessagePayloadBuilder newState(
@@ -86,6 +94,8 @@ public class OrderLineItemRemovedMessagePayloadBuilder implements Builder<OrderL
 
     /**
      *  <p>ItemStates after the Remove Line Item update action.</p>
+     * @param newState
+     * @return Builder
      */
 
     public OrderLineItemRemovedMessagePayloadBuilder newState(
@@ -96,6 +106,8 @@ public class OrderLineItemRemovedMessagePayloadBuilder implements Builder<OrderL
 
     /**
      *  <p>ItemStates after the Remove Line Item update action.</p>
+     * @param newState
+     * @return Builder
      */
 
     public OrderLineItemRemovedMessagePayloadBuilder plusNewState(
@@ -109,6 +121,7 @@ public class OrderLineItemRemovedMessagePayloadBuilder implements Builder<OrderL
 
     /**
      *  <p>ItemStates after the Remove Line Item update action.</p>
+     * @return Builder
      */
 
     public OrderLineItemRemovedMessagePayloadBuilder plusNewState(
@@ -122,6 +135,7 @@ public class OrderLineItemRemovedMessagePayloadBuilder implements Builder<OrderL
 
     /**
      *  <p>ItemStates after the Remove Line Item update action.</p>
+     * @return Builder
      */
 
     public OrderLineItemRemovedMessagePayloadBuilder withNewState(
@@ -133,6 +147,7 @@ public class OrderLineItemRemovedMessagePayloadBuilder implements Builder<OrderL
 
     /**
      *  <p><code>totalPrice</code> of the Order after the Remove Line Item update action.</p>
+     * @return Builder
      */
 
     public OrderLineItemRemovedMessagePayloadBuilder newTotalPrice(
@@ -143,6 +158,8 @@ public class OrderLineItemRemovedMessagePayloadBuilder implements Builder<OrderL
 
     /**
      *  <p><code>totalPrice</code> of the Order after the Remove Line Item update action.</p>
+     * @param newTotalPrice
+     * @return Builder
      */
 
     public OrderLineItemRemovedMessagePayloadBuilder newTotalPrice(
@@ -153,6 +170,7 @@ public class OrderLineItemRemovedMessagePayloadBuilder implements Builder<OrderL
 
     /**
      *  <p>TaxedItemPrice of the Order after the Remove Line Item update action.</p>
+     * @return Builder
      */
 
     public OrderLineItemRemovedMessagePayloadBuilder newTaxedPrice(
@@ -163,6 +181,8 @@ public class OrderLineItemRemovedMessagePayloadBuilder implements Builder<OrderL
 
     /**
      *  <p>TaxedItemPrice of the Order after the Remove Line Item update action.</p>
+     * @param newTaxedPrice
+     * @return Builder
      */
 
     public OrderLineItemRemovedMessagePayloadBuilder newTaxedPrice(
@@ -173,6 +193,7 @@ public class OrderLineItemRemovedMessagePayloadBuilder implements Builder<OrderL
 
     /**
      *  <p>Price of the Order after the Remove Line Item update action.</p>
+     * @return Builder
      */
 
     public OrderLineItemRemovedMessagePayloadBuilder newPrice(
@@ -183,6 +204,8 @@ public class OrderLineItemRemovedMessagePayloadBuilder implements Builder<OrderL
 
     /**
      *  <p>Price of the Order after the Remove Line Item update action.</p>
+     * @param newPrice
+     * @return Builder
      */
 
     public OrderLineItemRemovedMessagePayloadBuilder newPrice(
@@ -193,6 +216,7 @@ public class OrderLineItemRemovedMessagePayloadBuilder implements Builder<OrderL
 
     /**
      *  <p>Shipping Details of the Order after the Remove Line Item update action.</p>
+     * @return Builder
      */
 
     public OrderLineItemRemovedMessagePayloadBuilder newShippingDetail(
@@ -204,6 +228,8 @@ public class OrderLineItemRemovedMessagePayloadBuilder implements Builder<OrderL
 
     /**
      *  <p>Shipping Details of the Order after the Remove Line Item update action.</p>
+     * @param newShippingDetail
+     * @return Builder
      */
 
     public OrderLineItemRemovedMessagePayloadBuilder newShippingDetail(

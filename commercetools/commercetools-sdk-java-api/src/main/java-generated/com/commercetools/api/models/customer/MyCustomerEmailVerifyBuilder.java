@@ -25,6 +25,8 @@ public class MyCustomerEmailVerifyBuilder implements Builder<MyCustomerEmailVeri
 
     /**
      *  <p>Value of the token to verify Customer email.</p>
+     * @param tokenValue
+     * @return Builder
      */
 
     public MyCustomerEmailVerifyBuilder tokenValue(final String tokenValue) {

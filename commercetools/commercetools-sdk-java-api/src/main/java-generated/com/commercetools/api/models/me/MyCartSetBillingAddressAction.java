@@ -32,7 +32,8 @@ public interface MyCartSetBillingAddressAction extends MyCartUpdateAction {
     String SET_BILLING_ADDRESS = "setBillingAddress";
 
     /**
-     *  <p>Polymorphic base type that represents a postal address and contact details. Depending on the read or write action, it can be either Address or AddressDraft that only differ in the data type for the optional <code>custom</code> field.</p>
+     *  <p>Value to set. If empty, any existing value is removed.</p>
+     * @return address
      */
     @Valid
     @JsonProperty("address")

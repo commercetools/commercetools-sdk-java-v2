@@ -36,6 +36,7 @@ public interface MultiBuyCustomLineItemsTarget extends CartDiscountTarget {
 
     /**
      *  <p>Valid CustomLineItems target predicate. The Discount will be applied to Custom Line Items that are matched by the predicate.</p>
+     * @return predicate
      */
     @NotNull
     @JsonProperty("predicate")
@@ -43,6 +44,7 @@ public interface MultiBuyCustomLineItemsTarget extends CartDiscountTarget {
 
     /**
      *  <p>Number of Custom Line Items to be present in order to trigger an application of this Discount.</p>
+     * @return triggerQuantity
      */
     @NotNull
     @JsonProperty("triggerQuantity")
@@ -50,6 +52,7 @@ public interface MultiBuyCustomLineItemsTarget extends CartDiscountTarget {
 
     /**
      *  <p>Number of Custom Line Items that are discounted per application of this Discount.</p>
+     * @return discountedQuantity
      */
     @NotNull
     @JsonProperty("discountedQuantity")
@@ -57,6 +60,7 @@ public interface MultiBuyCustomLineItemsTarget extends CartDiscountTarget {
 
     /**
      *  <p>Maximum number of times this Discount can be applied.</p>
+     * @return maxOccurrence
      */
 
     @JsonProperty("maxOccurrence")
@@ -64,6 +68,7 @@ public interface MultiBuyCustomLineItemsTarget extends CartDiscountTarget {
 
     /**
      *  <p>Discounts particular Line Items only according to the SelectionMode.</p>
+     * @return selectionMode
      */
     @NotNull
     @JsonProperty("selectionMode")

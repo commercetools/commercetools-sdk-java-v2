@@ -55,6 +55,8 @@ public class ScopedPriceBuilder implements Builder<ScopedPrice> {
 
     /**
      *  <p>Platform-generated unique identifier of the Price.</p>
+     * @param id
+     * @return Builder
      */
 
     public ScopedPriceBuilder id(final String id) {
@@ -64,6 +66,8 @@ public class ScopedPriceBuilder implements Builder<ScopedPrice> {
 
     /**
      *  <p>Original value of the Price.</p>
+     * @param value
+     * @return Builder
      */
 
     public ScopedPriceBuilder value(final com.commercetools.api.models.common.TypedMoney value) {
@@ -73,6 +77,7 @@ public class ScopedPriceBuilder implements Builder<ScopedPrice> {
 
     /**
      *  <p>Original value of the Price.</p>
+     * @return Builder
      */
 
     public ScopedPriceBuilder value(
@@ -83,6 +88,8 @@ public class ScopedPriceBuilder implements Builder<ScopedPrice> {
 
     /**
      *  <p>If available, either the original price <code>value</code> or <code>discounted</code> value.</p>
+     * @param currentValue
+     * @return Builder
      */
 
     public ScopedPriceBuilder currentValue(final com.commercetools.api.models.common.TypedMoney currentValue) {
@@ -92,6 +99,7 @@ public class ScopedPriceBuilder implements Builder<ScopedPrice> {
 
     /**
      *  <p>If available, either the original price <code>value</code> or <code>discounted</code> value.</p>
+     * @return Builder
      */
 
     public ScopedPriceBuilder currentValue(
@@ -102,6 +110,8 @@ public class ScopedPriceBuilder implements Builder<ScopedPrice> {
 
     /**
      *  <p>Country code of the geographic location.</p>
+     * @param country
+     * @return Builder
      */
 
     public ScopedPriceBuilder country(@Nullable final String country) {
@@ -111,6 +121,7 @@ public class ScopedPriceBuilder implements Builder<ScopedPrice> {
 
     /**
      *  <p>Reference to a CustomerGroup.</p>
+     * @return Builder
      */
 
     public ScopedPriceBuilder customerGroup(
@@ -123,6 +134,8 @@ public class ScopedPriceBuilder implements Builder<ScopedPrice> {
 
     /**
      *  <p>Reference to a CustomerGroup.</p>
+     * @param customerGroup
+     * @return Builder
      */
 
     public ScopedPriceBuilder customerGroup(
@@ -133,6 +146,7 @@ public class ScopedPriceBuilder implements Builder<ScopedPrice> {
 
     /**
      *  <p>Reference to a Channel.</p>
+     * @return Builder
      */
 
     public ScopedPriceBuilder channel(
@@ -143,6 +157,8 @@ public class ScopedPriceBuilder implements Builder<ScopedPrice> {
 
     /**
      *  <p>Reference to a Channel.</p>
+     * @param channel
+     * @return Builder
      */
 
     public ScopedPriceBuilder channel(@Nullable final com.commercetools.api.models.channel.ChannelReference channel) {
@@ -152,6 +168,8 @@ public class ScopedPriceBuilder implements Builder<ScopedPrice> {
 
     /**
      *  <p>Date and time from which the Price is valid.</p>
+     * @param validFrom
+     * @return Builder
      */
 
     public ScopedPriceBuilder validFrom(@Nullable final java.time.ZonedDateTime validFrom) {
@@ -161,6 +179,8 @@ public class ScopedPriceBuilder implements Builder<ScopedPrice> {
 
     /**
      *  <p>Date and time until which the Price is valid.</p>
+     * @param validUntil
+     * @return Builder
      */
 
     public ScopedPriceBuilder validUntil(@Nullable final java.time.ZonedDateTime validUntil) {
@@ -169,8 +189,9 @@ public class ScopedPriceBuilder implements Builder<ScopedPrice> {
     }
 
     /**
-     *  <p>Is set if a matching ProductDiscount exists. If set, the Cart uses the discounted value for the Cart Price calculation.</p>
+     *  <p>Is set when a matching ProductDiscount exists. If set, the Cart uses the discounted value for the Cart Price calculation.</p>
      *  <p>When a relative Product Discount is applied and the fractional part of the discounted Price is 0.5, the discounted Price is rounded half down in favor of the Customer.</p>
+     * @return Builder
      */
 
     public ScopedPriceBuilder discounted(
@@ -180,8 +201,10 @@ public class ScopedPriceBuilder implements Builder<ScopedPrice> {
     }
 
     /**
-     *  <p>Is set if a matching ProductDiscount exists. If set, the Cart uses the discounted value for the Cart Price calculation.</p>
+     *  <p>Is set when a matching ProductDiscount exists. If set, the Cart uses the discounted value for the Cart Price calculation.</p>
      *  <p>When a relative Product Discount is applied and the fractional part of the discounted Price is 0.5, the discounted Price is rounded half down in favor of the Customer.</p>
+     * @param discounted
+     * @return Builder
      */
 
     public ScopedPriceBuilder discounted(
@@ -192,6 +215,7 @@ public class ScopedPriceBuilder implements Builder<ScopedPrice> {
 
     /**
      *  <p>Custom Fields for the Price.</p>
+     * @return Builder
      */
 
     public ScopedPriceBuilder custom(
@@ -202,6 +226,8 @@ public class ScopedPriceBuilder implements Builder<ScopedPrice> {
 
     /**
      *  <p>Custom Fields for the Price.</p>
+     * @param custom
+     * @return Builder
      */
 
     public ScopedPriceBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFields custom) {

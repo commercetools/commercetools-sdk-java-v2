@@ -16,8 +16,8 @@ import io.vrap.rmf.base.client.utils.Generated;
  *  <p>Returned when some of the Line Items are out of stock at the time of placing an Order.</p>
  *  <p>The error is returned as a failed response to:</p>
  *  <ul>
- *   <li>Create Order from Cart, Create Order from Cart in a Store, and Create Order by Import requests on Orders.</li>
- *   <li>Create Order from a Cart and Create Order in a Store from Cart requests on My Orders.</li>
+ *   <li>Create Order from Cart, Create Order in Store from Cart, and Create Order by Import requests on Orders.</li>
+ *   <li>Create Order from Cart and Create Order in Store from Cart requests on My Orders.</li>
  *  </ul>
  *
  * <hr>
@@ -40,6 +40,7 @@ public interface OutOfStockError extends ErrorObject {
 
     /**
      *
+     * @return code
      */
     @NotNull
     @JsonProperty("code")
@@ -47,6 +48,7 @@ public interface OutOfStockError extends ErrorObject {
 
     /**
      *  <p><code>"Some line items are out of stock at the time of placing the order: $itemSku."</code></p>
+     * @return message
      */
     @NotNull
     @JsonProperty("message")
@@ -54,6 +56,7 @@ public interface OutOfStockError extends ErrorObject {
 
     /**
      *  <p>Unique identifiers of the Line Items that are out of stock.</p>
+     * @return lineItems
      */
     @NotNull
     @JsonProperty("lineItems")
@@ -61,6 +64,7 @@ public interface OutOfStockError extends ErrorObject {
 
     /**
      *  <p>SKUs of the Line Items that are out of stock.</p>
+     * @return skus
      */
     @NotNull
     @JsonProperty("skus")

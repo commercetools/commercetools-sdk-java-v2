@@ -38,6 +38,8 @@ public class ImportContainerPagedResponseBuilder implements Builder<ImportContai
 
     /**
      *  <p>Number of results requested.</p>
+     * @param limit
+     * @return Builder
      */
 
     public ImportContainerPagedResponseBuilder limit(final Integer limit) {
@@ -47,6 +49,8 @@ public class ImportContainerPagedResponseBuilder implements Builder<ImportContai
 
     /**
      *  <p>Number of elements skipped.</p>
+     * @param offset
+     * @return Builder
      */
 
     public ImportContainerPagedResponseBuilder offset(final Long offset) {
@@ -56,6 +60,8 @@ public class ImportContainerPagedResponseBuilder implements Builder<ImportContai
 
     /**
      *  <p>The actual number of results returned.</p>
+     * @param count
+     * @return Builder
      */
 
     public ImportContainerPagedResponseBuilder count(final Long count) {
@@ -65,6 +71,8 @@ public class ImportContainerPagedResponseBuilder implements Builder<ImportContai
 
     /**
      *  <p>The total number of results matching the query.</p>
+     * @param total
+     * @return Builder
      */
 
     public ImportContainerPagedResponseBuilder total(final Long total) {
@@ -74,6 +82,8 @@ public class ImportContainerPagedResponseBuilder implements Builder<ImportContai
 
     /**
      *  <p>The array of Import Containers matching the query.</p>
+     * @param results
+     * @return Builder
      */
 
     public ImportContainerPagedResponseBuilder results(
@@ -84,6 +94,8 @@ public class ImportContainerPagedResponseBuilder implements Builder<ImportContai
 
     /**
      *  <p>The array of Import Containers matching the query.</p>
+     * @param results
+     * @return Builder
      */
 
     public ImportContainerPagedResponseBuilder results(
@@ -94,6 +106,8 @@ public class ImportContainerPagedResponseBuilder implements Builder<ImportContai
 
     /**
      *  <p>The array of Import Containers matching the query.</p>
+     * @param results
+     * @return Builder
      */
 
     public ImportContainerPagedResponseBuilder plusResults(
@@ -107,6 +121,7 @@ public class ImportContainerPagedResponseBuilder implements Builder<ImportContai
 
     /**
      *  <p>The array of Import Containers matching the query.</p>
+     * @return Builder
      */
 
     public ImportContainerPagedResponseBuilder plusResults(
@@ -121,6 +136,7 @@ public class ImportContainerPagedResponseBuilder implements Builder<ImportContai
 
     /**
      *  <p>The array of Import Containers matching the query.</p>
+     * @return Builder
      */
 
     public ImportContainerPagedResponseBuilder withResults(

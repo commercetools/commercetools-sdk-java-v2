@@ -30,6 +30,8 @@ public class BooleanAttributeBuilder implements Builder<BooleanAttribute> {
 
     /**
      *  <p>The name of this attribute must match a name of the product types attribute definitions. The name is required if this type is used in a product variant and must not be set when used in a product variant patch.</p>
+     * @param name
+     * @return Builder
      */
 
     public BooleanAttributeBuilder name(@Nullable final String name) {
@@ -39,6 +41,8 @@ public class BooleanAttributeBuilder implements Builder<BooleanAttribute> {
 
     /**
      *
+     * @param value
+     * @return Builder
      */
 
     public BooleanAttributeBuilder value(final Boolean value) {

@@ -30,6 +30,7 @@ public interface CategoryRemoveAssetAction extends CategoryUpdateAction {
 
     /**
      *  <p>Value to remove. Either <code>assetId</code> or <code>assetKey</code> is required.</p>
+     * @return assetId
      */
 
     @JsonProperty("assetId")
@@ -37,6 +38,7 @@ public interface CategoryRemoveAssetAction extends CategoryUpdateAction {
 
     /**
      *  <p>Value to remove. Either <code>assetId</code> or <code>assetKey</code> is required.</p>
+     * @return assetKey
      */
 
     @JsonProperty("assetKey")

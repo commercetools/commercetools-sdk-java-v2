@@ -27,6 +27,8 @@ public class CustomerSetFirstNameActionBuilder implements Builder<CustomerSetFir
 
     /**
      *  <p>Value to set. If empty, any existing value is removed.</p>
+     * @param firstName
+     * @return Builder
      */
 
     public CustomerSetFirstNameActionBuilder firstName(@Nullable final String firstName) {

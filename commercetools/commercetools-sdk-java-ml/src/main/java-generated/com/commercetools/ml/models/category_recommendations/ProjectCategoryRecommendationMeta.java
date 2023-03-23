@@ -31,6 +31,7 @@ public interface ProjectCategoryRecommendationMeta {
 
     /**
      *  <p>The product name that was used to generate recommendations.</p>
+     * @return productName
      */
 
     @JsonProperty("productName")
@@ -38,6 +39,7 @@ public interface ProjectCategoryRecommendationMeta {
 
     /**
      *  <p>The product image that was used to generate recommendations.</p>
+     * @return productImageUrl
      */
 
     @JsonProperty("productImageUrl")
@@ -45,6 +47,7 @@ public interface ProjectCategoryRecommendationMeta {
 
     /**
      *  <p>Top 5 general categories that were used internally to generate the project-specific categories. These category names are not related to the categories defined in the project, but they provide additional information to understand the project-specific categories in the results section.</p>
+     * @return generalCategoryNames
      */
     @NotNull
     @JsonProperty("generalCategoryNames")

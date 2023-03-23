@@ -38,6 +38,8 @@ public class SetLineItemDiscountedPriceChangeBuilder implements Builder<SetLineI
 
     /**
      *  <p>Update action for <code>setLineItemDiscountedPrice</code></p>
+     * @param change
+     * @return Builder
      */
 
     public SetLineItemDiscountedPriceChangeBuilder change(final String change) {
@@ -47,6 +49,7 @@ public class SetLineItemDiscountedPriceChangeBuilder implements Builder<SetLineI
 
     /**
      *
+     * @return Builder
      */
 
     public SetLineItemDiscountedPriceChangeBuilder lineItem(
@@ -57,6 +60,8 @@ public class SetLineItemDiscountedPriceChangeBuilder implements Builder<SetLineI
 
     /**
      *
+     * @param lineItem
+     * @return Builder
      */
 
     public SetLineItemDiscountedPriceChangeBuilder lineItem(
@@ -67,6 +72,8 @@ public class SetLineItemDiscountedPriceChangeBuilder implements Builder<SetLineI
 
     /**
      *
+     * @param variant
+     * @return Builder
      */
 
     public SetLineItemDiscountedPriceChangeBuilder variant(final String variant) {
@@ -76,6 +83,7 @@ public class SetLineItemDiscountedPriceChangeBuilder implements Builder<SetLineI
 
     /**
      *
+     * @return Builder
      */
 
     public SetLineItemDiscountedPriceChangeBuilder nextValue(
@@ -87,6 +95,8 @@ public class SetLineItemDiscountedPriceChangeBuilder implements Builder<SetLineI
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public SetLineItemDiscountedPriceChangeBuilder nextValue(
@@ -97,6 +107,7 @@ public class SetLineItemDiscountedPriceChangeBuilder implements Builder<SetLineI
 
     /**
      *
+     * @return Builder
      */
 
     public SetLineItemDiscountedPriceChangeBuilder previousValue(
@@ -108,6 +119,8 @@ public class SetLineItemDiscountedPriceChangeBuilder implements Builder<SetLineI
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public SetLineItemDiscountedPriceChangeBuilder previousValue(

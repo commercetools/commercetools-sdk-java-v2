@@ -31,6 +31,8 @@ public class SetValidUntilChangeBuilder implements Builder<SetValidUntilChange> 
 
     /**
      *  <p>Shape of the action for <code>setValidUntil</code></p>
+     * @param change
+     * @return Builder
      */
 
     public SetValidUntilChangeBuilder change(final String change) {
@@ -40,6 +42,8 @@ public class SetValidUntilChangeBuilder implements Builder<SetValidUntilChange> 
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public SetValidUntilChangeBuilder previousValue(final String previousValue) {
@@ -49,6 +53,8 @@ public class SetValidUntilChangeBuilder implements Builder<SetValidUntilChange> 
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public SetValidUntilChangeBuilder nextValue(final String nextValue) {

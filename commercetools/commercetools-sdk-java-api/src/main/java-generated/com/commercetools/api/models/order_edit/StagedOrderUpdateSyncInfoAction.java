@@ -37,6 +37,7 @@ public interface StagedOrderUpdateSyncInfoAction extends StagedOrderUpdateAction
 
     /**
      *  <p>ResourceIdentifier to a Channel.</p>
+     * @return channel
      */
     @NotNull
     @Valid
@@ -45,6 +46,7 @@ public interface StagedOrderUpdateSyncInfoAction extends StagedOrderUpdateAction
 
     /**
      *
+     * @return externalId
      */
 
     @JsonProperty("externalId")
@@ -52,6 +54,7 @@ public interface StagedOrderUpdateSyncInfoAction extends StagedOrderUpdateAction
 
     /**
      *
+     * @return syncedAt
      */
 
     @JsonProperty("syncedAt")

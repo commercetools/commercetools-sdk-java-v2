@@ -34,6 +34,7 @@ public interface EnumValueIsUsedError extends ErrorObject {
 
     /**
      *
+     * @return code
      */
     @NotNull
     @JsonProperty("code")
@@ -41,6 +42,7 @@ public interface EnumValueIsUsedError extends ErrorObject {
 
     /**
      *  <p><code>"$enumKeysTranscript is used by some products and cannot be deleted because the $attributeName attribute is required."</code></p>
+     * @return message
      */
     @NotNull
     @JsonProperty("message")

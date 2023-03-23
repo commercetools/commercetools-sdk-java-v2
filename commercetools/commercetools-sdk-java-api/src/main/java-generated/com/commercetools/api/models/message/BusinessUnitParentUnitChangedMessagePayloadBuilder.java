@@ -32,6 +32,7 @@ public class BusinessUnitParentUnitChangedMessagePayloadBuilder
 
     /**
      *  <p>Parent unit of the Business Unit before the Change Parent Unit update action.</p>
+     * @return Builder
      */
 
     public BusinessUnitParentUnitChangedMessagePayloadBuilder oldParentUnit(
@@ -44,6 +45,8 @@ public class BusinessUnitParentUnitChangedMessagePayloadBuilder
 
     /**
      *  <p>Parent unit of the Business Unit before the Change Parent Unit update action.</p>
+     * @param oldParentUnit
+     * @return Builder
      */
 
     public BusinessUnitParentUnitChangedMessagePayloadBuilder oldParentUnit(
@@ -54,6 +57,7 @@ public class BusinessUnitParentUnitChangedMessagePayloadBuilder
 
     /**
      *  <p>Parent unit of the Business Unit after the Change Parent Unit update action.</p>
+     * @return Builder
      */
 
     public BusinessUnitParentUnitChangedMessagePayloadBuilder newParentUnit(
@@ -66,6 +70,8 @@ public class BusinessUnitParentUnitChangedMessagePayloadBuilder
 
     /**
      *  <p>Parent unit of the Business Unit after the Change Parent Unit update action.</p>
+     * @param newParentUnit
+     * @return Builder
      */
 
     public BusinessUnitParentUnitChangedMessagePayloadBuilder newParentUnit(

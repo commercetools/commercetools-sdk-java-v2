@@ -31,6 +31,8 @@ public class ChangeQuoteRequestStateChangeBuilder implements Builder<ChangeQuote
 
     /**
      *
+     * @param change
+     * @return Builder
      */
 
     public ChangeQuoteRequestStateChangeBuilder change(final String change) {
@@ -40,6 +42,8 @@ public class ChangeQuoteRequestStateChangeBuilder implements Builder<ChangeQuote
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public ChangeQuoteRequestStateChangeBuilder nextValue(
@@ -50,6 +54,8 @@ public class ChangeQuoteRequestStateChangeBuilder implements Builder<ChangeQuote
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public ChangeQuoteRequestStateChangeBuilder previousValue(

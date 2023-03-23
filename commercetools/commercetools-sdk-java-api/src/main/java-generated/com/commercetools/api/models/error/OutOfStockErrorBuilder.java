@@ -33,6 +33,8 @@ public class OutOfStockErrorBuilder implements Builder<OutOfStockError> {
 
     /**
      *  <p><code>"Some line items are out of stock at the time of placing the order: $itemSku."</code></p>
+     * @param message
+     * @return Builder
      */
 
     public OutOfStockErrorBuilder message(final String message) {
@@ -63,6 +65,8 @@ public class OutOfStockErrorBuilder implements Builder<OutOfStockError> {
 
     /**
      *  <p>Unique identifiers of the Line Items that are out of stock.</p>
+     * @param lineItems
+     * @return Builder
      */
 
     public OutOfStockErrorBuilder lineItems(final String... lineItems) {
@@ -72,6 +76,8 @@ public class OutOfStockErrorBuilder implements Builder<OutOfStockError> {
 
     /**
      *  <p>Unique identifiers of the Line Items that are out of stock.</p>
+     * @param lineItems
+     * @return Builder
      */
 
     public OutOfStockErrorBuilder lineItems(final java.util.List<String> lineItems) {
@@ -81,6 +87,8 @@ public class OutOfStockErrorBuilder implements Builder<OutOfStockError> {
 
     /**
      *  <p>Unique identifiers of the Line Items that are out of stock.</p>
+     * @param lineItems
+     * @return Builder
      */
 
     public OutOfStockErrorBuilder plusLineItems(final String... lineItems) {
@@ -93,6 +101,8 @@ public class OutOfStockErrorBuilder implements Builder<OutOfStockError> {
 
     /**
      *  <p>SKUs of the Line Items that are out of stock.</p>
+     * @param skus
+     * @return Builder
      */
 
     public OutOfStockErrorBuilder skus(final String... skus) {
@@ -102,6 +112,8 @@ public class OutOfStockErrorBuilder implements Builder<OutOfStockError> {
 
     /**
      *  <p>SKUs of the Line Items that are out of stock.</p>
+     * @param skus
+     * @return Builder
      */
 
     public OutOfStockErrorBuilder skus(final java.util.List<String> skus) {
@@ -111,6 +123,8 @@ public class OutOfStockErrorBuilder implements Builder<OutOfStockError> {
 
     /**
      *  <p>SKUs of the Line Items that are out of stock.</p>
+     * @param skus
+     * @return Builder
      */
 
     public OutOfStockErrorBuilder plusSkus(final String... skus) {

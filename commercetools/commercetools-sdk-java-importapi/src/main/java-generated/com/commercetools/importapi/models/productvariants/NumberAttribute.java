@@ -33,6 +33,7 @@ public interface NumberAttribute extends Attribute {
 
     /**
      *
+     * @return value
      */
     @NotNull
     @JsonProperty("value")

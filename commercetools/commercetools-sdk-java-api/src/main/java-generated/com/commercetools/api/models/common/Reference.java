@@ -93,6 +93,7 @@ public interface Reference extends ReferenceMixin {
 
     /**
      *  <p>Type of referenced resource.</p>
+     * @return typeId
      */
     @NotNull
     @JsonProperty("typeId")
@@ -100,6 +101,7 @@ public interface Reference extends ReferenceMixin {
 
     /**
      *  <p>Unique ID of the referenced resource.</p>
+     * @return id
      */
     @NotNull
     @JsonProperty("id")

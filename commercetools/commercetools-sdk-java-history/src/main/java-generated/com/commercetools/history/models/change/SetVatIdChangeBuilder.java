@@ -31,6 +31,8 @@ public class SetVatIdChangeBuilder implements Builder<SetVatIdChange> {
 
     /**
      *  <p>Shape of the action for <code>setVatId</code></p>
+     * @param change
+     * @return Builder
      */
 
     public SetVatIdChangeBuilder change(final String change) {
@@ -40,6 +42,8 @@ public class SetVatIdChangeBuilder implements Builder<SetVatIdChange> {
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public SetVatIdChangeBuilder previousValue(final String previousValue) {
@@ -49,6 +53,8 @@ public class SetVatIdChangeBuilder implements Builder<SetVatIdChange> {
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public SetVatIdChangeBuilder nextValue(final String nextValue) {

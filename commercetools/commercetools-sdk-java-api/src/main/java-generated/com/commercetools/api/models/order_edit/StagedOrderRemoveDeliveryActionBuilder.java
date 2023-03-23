@@ -25,6 +25,8 @@ public class StagedOrderRemoveDeliveryActionBuilder implements Builder<StagedOrd
 
     /**
      *
+     * @param deliveryId
+     * @return Builder
      */
 
     public StagedOrderRemoveDeliveryActionBuilder deliveryId(final String deliveryId) {

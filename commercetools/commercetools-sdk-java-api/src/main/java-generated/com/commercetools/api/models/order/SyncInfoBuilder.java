@@ -34,6 +34,7 @@ public class SyncInfoBuilder implements Builder<SyncInfo> {
 
     /**
      *  <p>Connection to a particular synchronization destination.</p>
+     * @return Builder
      */
 
     public SyncInfoBuilder channel(
@@ -44,6 +45,8 @@ public class SyncInfoBuilder implements Builder<SyncInfo> {
 
     /**
      *  <p>Connection to a particular synchronization destination.</p>
+     * @param channel
+     * @return Builder
      */
 
     public SyncInfoBuilder channel(final com.commercetools.api.models.channel.ChannelReference channel) {
@@ -53,6 +56,8 @@ public class SyncInfoBuilder implements Builder<SyncInfo> {
 
     /**
      *  <p>Can be used to reference an external order instance, file etc.</p>
+     * @param externalId
+     * @return Builder
      */
 
     public SyncInfoBuilder externalId(@Nullable final String externalId) {
@@ -62,6 +67,8 @@ public class SyncInfoBuilder implements Builder<SyncInfo> {
 
     /**
      *
+     * @param syncedAt
+     * @return Builder
      */
 
     public SyncInfoBuilder syncedAt(final java.time.ZonedDateTime syncedAt) {

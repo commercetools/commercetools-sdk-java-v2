@@ -26,6 +26,8 @@ public class ImageSearchConfigRequestBuilder implements Builder<ImageSearchConfi
 
     /**
      *  <p>The list of update actions to be performed on the project.</p>
+     * @param actions
+     * @return Builder
      */
 
     public ImageSearchConfigRequestBuilder actions(
@@ -36,6 +38,8 @@ public class ImageSearchConfigRequestBuilder implements Builder<ImageSearchConfi
 
     /**
      *  <p>The list of update actions to be performed on the project.</p>
+     * @param actions
+     * @return Builder
      */
 
     public ImageSearchConfigRequestBuilder actions(
@@ -46,6 +50,8 @@ public class ImageSearchConfigRequestBuilder implements Builder<ImageSearchConfi
 
     /**
      *  <p>The list of update actions to be performed on the project.</p>
+     * @param actions
+     * @return Builder
      */
 
     public ImageSearchConfigRequestBuilder plusActions(
@@ -59,6 +65,7 @@ public class ImageSearchConfigRequestBuilder implements Builder<ImageSearchConfi
 
     /**
      *  <p>The list of update actions to be performed on the project.</p>
+     * @return Builder
      */
 
     public ImageSearchConfigRequestBuilder plusActions(
@@ -74,6 +81,7 @@ public class ImageSearchConfigRequestBuilder implements Builder<ImageSearchConfi
 
     /**
      *  <p>The list of update actions to be performed on the project.</p>
+     * @return Builder
      */
 
     public ImageSearchConfigRequestBuilder withActions(

@@ -30,6 +30,7 @@ public interface StoreSetLanguagesAction extends StoreUpdateAction {
 
     /**
      *  <p>Value to set.</p>
+     * @return languages
      */
 
     @JsonProperty("languages")

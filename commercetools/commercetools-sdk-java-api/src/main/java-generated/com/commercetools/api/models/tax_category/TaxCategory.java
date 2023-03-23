@@ -44,6 +44,7 @@ public interface TaxCategory
 
     /**
      *  <p>Unique identifier of the TaxCategory.</p>
+     * @return id
      */
     @NotNull
     @JsonProperty("id")
@@ -51,6 +52,7 @@ public interface TaxCategory
 
     /**
      *  <p>Current version of the TaxCategory.</p>
+     * @return version
      */
     @NotNull
     @JsonProperty("version")
@@ -58,6 +60,7 @@ public interface TaxCategory
 
     /**
      *  <p>Date and time (UTC) the TaxCategory was initially created.</p>
+     * @return createdAt
      */
     @NotNull
     @JsonProperty("createdAt")
@@ -65,6 +68,7 @@ public interface TaxCategory
 
     /**
      *  <p>Date and time (UTC) the TaxCategory was last updated.</p>
+     * @return lastModifiedAt
      */
     @NotNull
     @JsonProperty("lastModifiedAt")
@@ -72,6 +76,7 @@ public interface TaxCategory
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @return lastModifiedBy
      */
     @Valid
     @JsonProperty("lastModifiedBy")
@@ -79,6 +84,7 @@ public interface TaxCategory
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @return createdBy
      */
     @Valid
     @JsonProperty("createdBy")
@@ -86,6 +92,7 @@ public interface TaxCategory
 
     /**
      *  <p>Name of the TaxCategory.</p>
+     * @return name
      */
     @NotNull
     @JsonProperty("name")
@@ -93,6 +100,7 @@ public interface TaxCategory
 
     /**
      *  <p>Description of the TaxCategory.</p>
+     * @return description
      */
 
     @JsonProperty("description")
@@ -100,6 +108,7 @@ public interface TaxCategory
 
     /**
      *  <p>Tax rates and subrates of states and countries. Each TaxRate in the array has a unique ID.</p>
+     * @return rates
      */
     @NotNull
     @Valid
@@ -108,6 +117,7 @@ public interface TaxCategory
 
     /**
      *  <p>User-defined unique identifier of the TaxCategory.</p>
+     * @return key
      */
 
     @JsonProperty("key")

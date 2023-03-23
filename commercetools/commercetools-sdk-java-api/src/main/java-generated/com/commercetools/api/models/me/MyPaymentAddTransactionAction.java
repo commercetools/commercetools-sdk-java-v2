@@ -35,6 +35,7 @@ public interface MyPaymentAddTransactionAction extends MyPaymentUpdateAction {
 
     /**
      *  <p>Transaction to add to the Payment.</p>
+     * @return transaction
      */
     @NotNull
     @Valid

@@ -42,6 +42,7 @@ public interface OrderCustomLineItemQuantityChangedMessage extends OrderMessage 
 
     /**
      *  <p>Unique identifier of the Custom Line Item.</p>
+     * @return customLineItemId
      */
     @NotNull
     @JsonProperty("customLineItemId")
@@ -49,6 +50,7 @@ public interface OrderCustomLineItemQuantityChangedMessage extends OrderMessage 
 
     /**
      *  <p>Custom Line Item quantity after the Change Custom Line Item Quantity update action.</p>
+     * @return quantity
      */
     @NotNull
     @JsonProperty("quantity")
@@ -56,6 +58,7 @@ public interface OrderCustomLineItemQuantityChangedMessage extends OrderMessage 
 
     /**
      *  <p>Custom Line Item quantity before the Change Custom Line Item Quantity update action.</p>
+     * @return oldQuantity
      */
     @NotNull
     @JsonProperty("oldQuantity")

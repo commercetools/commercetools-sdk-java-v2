@@ -32,6 +32,8 @@ public class StoreSupplyChannelsChangedMessagePayloadBuilder
 
     /**
      *  <p>Inventory supply Channels that have been added to the Store.</p>
+     * @param addedSupplyChannels
+     * @return Builder
      */
 
     public StoreSupplyChannelsChangedMessagePayloadBuilder addedSupplyChannels(
@@ -42,6 +44,8 @@ public class StoreSupplyChannelsChangedMessagePayloadBuilder
 
     /**
      *  <p>Inventory supply Channels that have been added to the Store.</p>
+     * @param addedSupplyChannels
+     * @return Builder
      */
 
     public StoreSupplyChannelsChangedMessagePayloadBuilder addedSupplyChannels(
@@ -52,6 +56,8 @@ public class StoreSupplyChannelsChangedMessagePayloadBuilder
 
     /**
      *  <p>Inventory supply Channels that have been added to the Store.</p>
+     * @param addedSupplyChannels
+     * @return Builder
      */
 
     public StoreSupplyChannelsChangedMessagePayloadBuilder plusAddedSupplyChannels(
@@ -65,6 +71,7 @@ public class StoreSupplyChannelsChangedMessagePayloadBuilder
 
     /**
      *  <p>Inventory supply Channels that have been added to the Store.</p>
+     * @return Builder
      */
 
     public StoreSupplyChannelsChangedMessagePayloadBuilder plusAddedSupplyChannels(
@@ -79,6 +86,7 @@ public class StoreSupplyChannelsChangedMessagePayloadBuilder
 
     /**
      *  <p>Inventory supply Channels that have been added to the Store.</p>
+     * @return Builder
      */
 
     public StoreSupplyChannelsChangedMessagePayloadBuilder withAddedSupplyChannels(
@@ -91,6 +99,8 @@ public class StoreSupplyChannelsChangedMessagePayloadBuilder
 
     /**
      *  <p>Inventory supply Channels that have been removed from the Store.</p>
+     * @param removedSupplyChannels
+     * @return Builder
      */
 
     public StoreSupplyChannelsChangedMessagePayloadBuilder removedSupplyChannels(
@@ -101,6 +111,8 @@ public class StoreSupplyChannelsChangedMessagePayloadBuilder
 
     /**
      *  <p>Inventory supply Channels that have been removed from the Store.</p>
+     * @param removedSupplyChannels
+     * @return Builder
      */
 
     public StoreSupplyChannelsChangedMessagePayloadBuilder removedSupplyChannels(
@@ -111,6 +123,8 @@ public class StoreSupplyChannelsChangedMessagePayloadBuilder
 
     /**
      *  <p>Inventory supply Channels that have been removed from the Store.</p>
+     * @param removedSupplyChannels
+     * @return Builder
      */
 
     public StoreSupplyChannelsChangedMessagePayloadBuilder plusRemovedSupplyChannels(
@@ -124,6 +138,7 @@ public class StoreSupplyChannelsChangedMessagePayloadBuilder
 
     /**
      *  <p>Inventory supply Channels that have been removed from the Store.</p>
+     * @return Builder
      */
 
     public StoreSupplyChannelsChangedMessagePayloadBuilder plusRemovedSupplyChannels(
@@ -138,6 +153,7 @@ public class StoreSupplyChannelsChangedMessagePayloadBuilder
 
     /**
      *  <p>Inventory supply Channels that have been removed from the Store.</p>
+     * @return Builder
      */
 
     public StoreSupplyChannelsChangedMessagePayloadBuilder withRemovedSupplyChannels(

@@ -39,6 +39,8 @@ public class SqsDestinationBuilder implements Builder<SqsDestination> {
 
     /**
      *  <p>Only present if <code>authenticationMode</code> is set to <code>Credentials</code>.</p>
+     * @param accessKey
+     * @return Builder
      */
 
     public SqsDestinationBuilder accessKey(@Nullable final String accessKey) {
@@ -48,6 +50,8 @@ public class SqsDestinationBuilder implements Builder<SqsDestination> {
 
     /**
      *  <p>Only present if <code>authenticationMode</code> is set to <code>Credentials</code>.</p>
+     * @param accessSecret
+     * @return Builder
      */
 
     public SqsDestinationBuilder accessSecret(@Nullable final String accessSecret) {
@@ -57,6 +61,8 @@ public class SqsDestinationBuilder implements Builder<SqsDestination> {
 
     /**
      *  <p>URL of the Amazon SQS queue.</p>
+     * @param queueUrl
+     * @return Builder
      */
 
     public SqsDestinationBuilder queueUrl(final String queueUrl) {
@@ -66,6 +72,8 @@ public class SqsDestinationBuilder implements Builder<SqsDestination> {
 
     /**
      *  <p>AWS Region the message queue is located in.</p>
+     * @param region
+     * @return Builder
      */
 
     public SqsDestinationBuilder region(final String region) {
@@ -75,6 +83,8 @@ public class SqsDestinationBuilder implements Builder<SqsDestination> {
 
     /**
      *  <p>Defines the method of authentication for the SQS queue.</p>
+     * @param authenticationMode
+     * @return Builder
      */
 
     public SqsDestinationBuilder authenticationMode(

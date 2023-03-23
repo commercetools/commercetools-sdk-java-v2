@@ -34,6 +34,7 @@ public interface ProductSetSearchKeywordsAction extends ProductUpdateAction {
 
     /**
      *  <p>Value to set.</p>
+     * @return searchKeywords
      */
     @NotNull
     @Valid
@@ -42,6 +43,7 @@ public interface ProductSetSearchKeywordsAction extends ProductUpdateAction {
 
     /**
      *  <p>If <code>true</code>, only the staged <code>searchKeywords</code> is updated. If <code>false</code>, both the current and staged <code>searchKeywords</code> are updated.</p>
+     * @return staged
      */
 
     @JsonProperty("staged")

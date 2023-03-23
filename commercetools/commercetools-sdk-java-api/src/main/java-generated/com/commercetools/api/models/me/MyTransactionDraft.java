@@ -38,6 +38,7 @@ public interface MyTransactionDraft extends com.commercetools.api.models.Customi
 
     /**
      *  <p>Date and time (UTC) the Transaction took place.</p>
+     * @return timestamp
      */
 
     @JsonProperty("timestamp")
@@ -45,6 +46,7 @@ public interface MyTransactionDraft extends com.commercetools.api.models.Customi
 
     /**
      *  <p>Type of the Transaction. Only <code>Authorization</code> or <code>Charge</code> is allowed.</p>
+     * @return type
      */
     @NotNull
     @JsonProperty("type")
@@ -52,6 +54,7 @@ public interface MyTransactionDraft extends com.commercetools.api.models.Customi
 
     /**
      *  <p>Money value for the Transaction.</p>
+     * @return amount
      */
     @NotNull
     @Valid
@@ -60,6 +63,7 @@ public interface MyTransactionDraft extends com.commercetools.api.models.Customi
 
     /**
      *  <p>Identifier used by the payment service that manages the Transaction. Can be used to correlate the Transaction to an interface interaction.</p>
+     * @return interactionId
      */
 
     @JsonProperty("interactionId")
@@ -67,6 +71,7 @@ public interface MyTransactionDraft extends com.commercetools.api.models.Customi
 
     /**
      *  <p>Custom Fields of the Transaction.</p>
+     * @return custom
      */
     @Valid
     @JsonProperty("custom")

@@ -49,6 +49,8 @@ public class ProductVariantImportBuilder implements Builder<ProductVariantImport
 
     /**
      *  <p>User-defined unique identifier.</p>
+     * @param key
+     * @return Builder
      */
 
     public ProductVariantImportBuilder key(final String key) {
@@ -58,6 +60,8 @@ public class ProductVariantImportBuilder implements Builder<ProductVariantImport
 
     /**
      *  <p>Maps to <code>ProductVariant.sku</code>.</p>
+     * @param sku
+     * @return Builder
      */
 
     public ProductVariantImportBuilder sku(@Nullable final String sku) {
@@ -67,6 +71,8 @@ public class ProductVariantImportBuilder implements Builder<ProductVariantImport
 
     /**
      *  <p>Maps to <code>ProductVariant.isMasterVariant</code>.</p>
+     * @param isMasterVariant
+     * @return Builder
      */
 
     public ProductVariantImportBuilder isMasterVariant(final Boolean isMasterVariant) {
@@ -76,6 +82,8 @@ public class ProductVariantImportBuilder implements Builder<ProductVariantImport
 
     /**
      *  <p>Maps to <code>ProductVariant.attributes</code>. The referenced attribute must be defined in an already existing ProductType in the project, or the <code>state</code> of the ImportOperation will be <code>unresolved</code>.</p>
+     * @param attributes
+     * @return Builder
      */
 
     public ProductVariantImportBuilder attributes(
@@ -86,6 +94,8 @@ public class ProductVariantImportBuilder implements Builder<ProductVariantImport
 
     /**
      *  <p>Maps to <code>ProductVariant.attributes</code>. The referenced attribute must be defined in an already existing ProductType in the project, or the <code>state</code> of the ImportOperation will be <code>unresolved</code>.</p>
+     * @param attributes
+     * @return Builder
      */
 
     public ProductVariantImportBuilder attributes(
@@ -96,6 +106,8 @@ public class ProductVariantImportBuilder implements Builder<ProductVariantImport
 
     /**
      *  <p>Maps to <code>ProductVariant.attributes</code>. The referenced attribute must be defined in an already existing ProductType in the project, or the <code>state</code> of the ImportOperation will be <code>unresolved</code>.</p>
+     * @param attributes
+     * @return Builder
      */
 
     public ProductVariantImportBuilder plusAttributes(
@@ -109,6 +121,7 @@ public class ProductVariantImportBuilder implements Builder<ProductVariantImport
 
     /**
      *  <p>Maps to <code>ProductVariant.attributes</code>. The referenced attribute must be defined in an already existing ProductType in the project, or the <code>state</code> of the ImportOperation will be <code>unresolved</code>.</p>
+     * @return Builder
      */
 
     public ProductVariantImportBuilder plusAttributes(
@@ -123,6 +136,7 @@ public class ProductVariantImportBuilder implements Builder<ProductVariantImport
 
     /**
      *  <p>Maps to <code>ProductVariant.attributes</code>. The referenced attribute must be defined in an already existing ProductType in the project, or the <code>state</code> of the ImportOperation will be <code>unresolved</code>.</p>
+     * @return Builder
      */
 
     public ProductVariantImportBuilder withAttributes(
@@ -135,6 +149,8 @@ public class ProductVariantImportBuilder implements Builder<ProductVariantImport
 
     /**
      *  <p>Maps to <code>ProductVariant.images</code>.</p>
+     * @param images
+     * @return Builder
      */
 
     public ProductVariantImportBuilder images(
@@ -145,6 +161,8 @@ public class ProductVariantImportBuilder implements Builder<ProductVariantImport
 
     /**
      *  <p>Maps to <code>ProductVariant.images</code>.</p>
+     * @param images
+     * @return Builder
      */
 
     public ProductVariantImportBuilder images(
@@ -155,6 +173,8 @@ public class ProductVariantImportBuilder implements Builder<ProductVariantImport
 
     /**
      *  <p>Maps to <code>ProductVariant.images</code>.</p>
+     * @param images
+     * @return Builder
      */
 
     public ProductVariantImportBuilder plusImages(
@@ -168,6 +188,7 @@ public class ProductVariantImportBuilder implements Builder<ProductVariantImport
 
     /**
      *  <p>Maps to <code>ProductVariant.images</code>.</p>
+     * @return Builder
      */
 
     public ProductVariantImportBuilder plusImages(
@@ -181,6 +202,7 @@ public class ProductVariantImportBuilder implements Builder<ProductVariantImport
 
     /**
      *  <p>Maps to <code>ProductVariant.images</code>.</p>
+     * @return Builder
      */
 
     public ProductVariantImportBuilder withImages(
@@ -192,6 +214,8 @@ public class ProductVariantImportBuilder implements Builder<ProductVariantImport
 
     /**
      *  <p>Maps to <code>ProductVariant.assets</code>.</p>
+     * @param assets
+     * @return Builder
      */
 
     public ProductVariantImportBuilder assets(
@@ -202,6 +226,8 @@ public class ProductVariantImportBuilder implements Builder<ProductVariantImport
 
     /**
      *  <p>Maps to <code>ProductVariant.assets</code>.</p>
+     * @param assets
+     * @return Builder
      */
 
     public ProductVariantImportBuilder assets(
@@ -212,6 +238,8 @@ public class ProductVariantImportBuilder implements Builder<ProductVariantImport
 
     /**
      *  <p>Maps to <code>ProductVariant.assets</code>.</p>
+     * @param assets
+     * @return Builder
      */
 
     public ProductVariantImportBuilder plusAssets(
@@ -225,6 +253,7 @@ public class ProductVariantImportBuilder implements Builder<ProductVariantImport
 
     /**
      *  <p>Maps to <code>ProductVariant.assets</code>.</p>
+     * @return Builder
      */
 
     public ProductVariantImportBuilder plusAssets(
@@ -238,6 +267,7 @@ public class ProductVariantImportBuilder implements Builder<ProductVariantImport
 
     /**
      *  <p>Maps to <code>ProductVariant.assets</code>.</p>
+     * @return Builder
      */
 
     public ProductVariantImportBuilder withAssets(
@@ -249,6 +279,8 @@ public class ProductVariantImportBuilder implements Builder<ProductVariantImport
 
     /**
      *  <p>If <code>publish</code> is set to either <code>true</code> or <code>false</code>, both staged and current projections are set to the same value provided by the import data. If <code>publish</code> is not set, the staged projection is set to the provided import data, but the current projection stays unchanged. However, if the import data contains no update, that is, if it matches the staged projection of the existing Product, the import induces no change in the existing Product whether <code>publish</code> is set or not.</p>
+     * @param publish
+     * @return Builder
      */
 
     public ProductVariantImportBuilder publish(@Nullable final Boolean publish) {
@@ -258,6 +290,7 @@ public class ProductVariantImportBuilder implements Builder<ProductVariantImport
 
     /**
      *  <p>The Product to which this Product Variant belongs. Maps to <code>ProductVariant.product</code>. The Reference to the Product with which the ProductVariant is associated. If referenced Product does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Product is created.</p>
+     * @return Builder
      */
 
     public ProductVariantImportBuilder product(
@@ -268,6 +301,8 @@ public class ProductVariantImportBuilder implements Builder<ProductVariantImport
 
     /**
      *  <p>The Product to which this Product Variant belongs. Maps to <code>ProductVariant.product</code>. The Reference to the Product with which the ProductVariant is associated. If referenced Product does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Product is created.</p>
+     * @param product
+     * @return Builder
      */
 
     public ProductVariantImportBuilder product(

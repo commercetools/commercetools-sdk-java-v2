@@ -33,7 +33,7 @@ import io.vrap.rmf.base.client.utils.Generated;
         @JsonSubTypes.Type(value = com.commercetools.api.models.error.AttributeNameDoesNotExistErrorImpl.class, name = AttributeNameDoesNotExistError.ATTRIBUTE_NAME_DOES_NOT_EXIST),
         @JsonSubTypes.Type(value = com.commercetools.api.models.error.BadGatewayErrorImpl.class, name = BadGatewayError.BAD_GATEWAY),
         @JsonSubTypes.Type(value = com.commercetools.api.models.error.ConcurrentModificationErrorImpl.class, name = ConcurrentModificationError.CONCURRENT_MODIFICATION),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.error.CountryNotConfiguredInStoreImpl.class, name = CountryNotConfiguredInStore.COUNTRY_NOT_CONFIGURED_IN_STORE),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.error.CountryNotConfiguredInStoreErrorImpl.class, name = CountryNotConfiguredInStoreError.COUNTRY_NOT_CONFIGURED_IN_STORE),
         @JsonSubTypes.Type(value = com.commercetools.api.models.error.DiscountCodeNonApplicableErrorImpl.class, name = DiscountCodeNonApplicableError.DISCOUNT_CODE_NON_APPLICABLE),
         @JsonSubTypes.Type(value = com.commercetools.api.models.error.DuplicateAttributeValueErrorImpl.class, name = DuplicateAttributeValueError.DUPLICATE_ATTRIBUTE_VALUE),
         @JsonSubTypes.Type(value = com.commercetools.api.models.error.DuplicateAttributeValuesErrorImpl.class, name = DuplicateAttributeValuesError.DUPLICATE_ATTRIBUTE_VALUES),
@@ -104,6 +104,7 @@ public interface ErrorObject {
 
     /**
      *  <p>Error identifier.</p>
+     * @return code
      */
     @NotNull
     @JsonProperty("code")
@@ -111,6 +112,7 @@ public interface ErrorObject {
 
     /**
      *  <p>Plain text description of the cause of the error.</p>
+     * @return message
      */
     @NotNull
     @JsonProperty("message")
@@ -152,8 +154,8 @@ public interface ErrorObject {
         return com.commercetools.api.models.error.ConcurrentModificationErrorBuilder.of();
     }
 
-    public static com.commercetools.api.models.error.CountryNotConfiguredInStoreBuilder countryNotConfiguredInStoreBuilder() {
-        return com.commercetools.api.models.error.CountryNotConfiguredInStoreBuilder.of();
+    public static com.commercetools.api.models.error.CountryNotConfiguredInStoreErrorBuilder countryNotConfiguredInStoreBuilder() {
+        return com.commercetools.api.models.error.CountryNotConfiguredInStoreErrorBuilder.of();
     }
 
     public static com.commercetools.api.models.error.DiscountCodeNonApplicableErrorBuilder discountCodeNonApplicableBuilder() {

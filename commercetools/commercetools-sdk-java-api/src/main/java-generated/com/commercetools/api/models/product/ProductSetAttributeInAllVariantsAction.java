@@ -33,6 +33,7 @@ public interface ProductSetAttributeInAllVariantsAction extends ProductUpdateAct
 
     /**
      *  <p>The name of the Attribute to set.</p>
+     * @return name
      */
     @NotNull
     @JsonProperty("name")
@@ -49,6 +50,7 @@ public interface ProductSetAttributeInAllVariantsAction extends ProductUpdateAct
      *   <li>For Nested Type Attributes, use the list of values of all Attributes of the nested Product as <code>value</code>.</li>
      *   <li>For Reference Type Attributes, use the Reference object as <code>value</code>.</li>
      *  </ul>
+     * @return value
      */
 
     @JsonProperty("value")
@@ -56,6 +58,7 @@ public interface ProductSetAttributeInAllVariantsAction extends ProductUpdateAct
 
     /**
      *  <p>If <code>true</code>, only the staged Attributes are set. If <code>false</code>, both the current and staged Attributes are set.</p>
+     * @return staged
      */
 
     @JsonProperty("staged")

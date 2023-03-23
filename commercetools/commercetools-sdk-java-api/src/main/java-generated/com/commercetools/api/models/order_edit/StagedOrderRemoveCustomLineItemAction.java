@@ -34,6 +34,7 @@ public interface StagedOrderRemoveCustomLineItemAction extends StagedOrderUpdate
 
     /**
      *
+     * @return customLineItemId
      */
     @NotNull
     @JsonProperty("customLineItemId")

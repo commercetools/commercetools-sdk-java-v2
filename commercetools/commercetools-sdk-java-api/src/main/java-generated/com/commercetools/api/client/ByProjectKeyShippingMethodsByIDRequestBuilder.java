@@ -29,6 +29,10 @@ public class ByProjectKeyShippingMethodsByIDRequestBuilder {
         return new ByProjectKeyShippingMethodsByIDPost(apiHttpClient, projectKey, ID, shippingMethodUpdate);
     }
 
+    public ByProjectKeyShippingMethodsByIDPostString post(final String shippingMethodUpdate) {
+        return new ByProjectKeyShippingMethodsByIDPostString(apiHttpClient, projectKey, ID, shippingMethodUpdate);
+    }
+
     public ByProjectKeyShippingMethodsByIDPost post(
             UnaryOperator<com.commercetools.api.models.shipping_method.ShippingMethodUpdateBuilder> op) {
         return post(op.apply(com.commercetools.api.models.shipping_method.ShippingMethodUpdateBuilder.of()).build());

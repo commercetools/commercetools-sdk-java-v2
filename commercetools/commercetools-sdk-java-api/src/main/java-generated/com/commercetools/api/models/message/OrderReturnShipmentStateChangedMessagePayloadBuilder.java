@@ -29,6 +29,8 @@ public class OrderReturnShipmentStateChangedMessagePayloadBuilder
 
     /**
      *  <p>Unique identifier of the ReturnItem.</p>
+     * @param returnItemId
+     * @return Builder
      */
 
     public OrderReturnShipmentStateChangedMessagePayloadBuilder returnItemId(final String returnItemId) {
@@ -38,6 +40,8 @@ public class OrderReturnShipmentStateChangedMessagePayloadBuilder
 
     /**
      *  <p>State of the ReturnItem after the Set Return Shipment State update action.</p>
+     * @param returnShipmentState
+     * @return Builder
      */
 
     public OrderReturnShipmentStateChangedMessagePayloadBuilder returnShipmentState(

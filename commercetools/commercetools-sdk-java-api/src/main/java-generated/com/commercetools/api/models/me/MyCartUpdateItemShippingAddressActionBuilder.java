@@ -25,7 +25,8 @@ public class MyCartUpdateItemShippingAddressActionBuilder implements Builder<MyC
     private com.commercetools.api.models.common.BaseAddress address;
 
     /**
-     *  <p>Polymorphic base type that represents a postal address and contact details. Depending on the read or write action, it can be either Address or AddressDraft that only differ in the data type for the optional <code>custom</code> field.</p>
+     *  <p>The new Address with the same <code>key</code> as the Address it will replace.</p>
+     * @return Builder
      */
 
     public MyCartUpdateItemShippingAddressActionBuilder address(
@@ -35,7 +36,9 @@ public class MyCartUpdateItemShippingAddressActionBuilder implements Builder<MyC
     }
 
     /**
-     *  <p>Polymorphic base type that represents a postal address and contact details. Depending on the read or write action, it can be either Address or AddressDraft that only differ in the data type for the optional <code>custom</code> field.</p>
+     *  <p>The new Address with the same <code>key</code> as the Address it will replace.</p>
+     * @param address
+     * @return Builder
      */
 
     public MyCartUpdateItemShippingAddressActionBuilder address(

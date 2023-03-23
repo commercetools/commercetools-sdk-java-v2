@@ -27,6 +27,8 @@ public class StagedOrderSetCustomerIdActionBuilder implements Builder<StagedOrde
 
     /**
      *
+     * @param customerId
+     * @return Builder
      */
 
     public StagedOrderSetCustomerIdActionBuilder customerId(@Nullable final String customerId) {

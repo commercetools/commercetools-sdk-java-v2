@@ -37,6 +37,7 @@ public interface PriceDraft extends com.commercetools.api.models.CustomizableDra
 
     /**
      *  <p>User-defined identifier for the Price. It must be unique per ProductVariant.</p>
+     * @return key
      */
 
     @JsonProperty("key")
@@ -44,6 +45,7 @@ public interface PriceDraft extends com.commercetools.api.models.CustomizableDra
 
     /**
      *  <p>Money value of this Price.</p>
+     * @return value
      */
     @NotNull
     @Valid
@@ -52,6 +54,7 @@ public interface PriceDraft extends com.commercetools.api.models.CustomizableDra
 
     /**
      *  <p>Set this field if this Price is only valid for the specified country.</p>
+     * @return country
      */
 
     @JsonProperty("country")
@@ -59,6 +62,7 @@ public interface PriceDraft extends com.commercetools.api.models.CustomizableDra
 
     /**
      *  <p>Set this field if this Price is only valid for the referenced CustomerGroup.</p>
+     * @return customerGroup
      */
     @Valid
     @JsonProperty("customerGroup")
@@ -66,6 +70,7 @@ public interface PriceDraft extends com.commercetools.api.models.CustomizableDra
 
     /**
      *  <p>Set this field if this Price is only valid for the referenced <code>ProductDistribution</code> Channel.</p>
+     * @return channel
      */
     @Valid
     @JsonProperty("channel")
@@ -73,13 +78,15 @@ public interface PriceDraft extends com.commercetools.api.models.CustomizableDra
 
     /**
      *  <p>Set this field if this Price is only valid from the specified date and time. Must be at least 1 ms earlier than <code>validUntil</code>.</p>
+     * @return validFrom
      */
 
     @JsonProperty("validFrom")
     public ZonedDateTime getValidFrom();
 
     /**
-     *  <p>Set this field if this Price is only valid until the specified date and time. Must be at least 1 ms later than <code>validFrom</code>.</p>
+     *  <p>Set this field if this Price is only valid until the specified date and time. Must be at least 1 ms later than <code>validFrom</code>. Prices that are no longer valid are not automatically removed, but they can be removed if necessary.</p>
+     * @return validUntil
      */
 
     @JsonProperty("validUntil")
@@ -93,6 +100,7 @@ public interface PriceDraft extends com.commercetools.api.models.CustomizableDra
      *   <li>A ProductDiscountValue of type <code>external</code>.</li>
      *   <li>A <code>predicate</code> that matches the ProductVariant the Price is referenced from.</li>
      *  </ul>
+     * @return discounted
      */
     @Valid
     @JsonProperty("discounted")
@@ -100,6 +108,7 @@ public interface PriceDraft extends com.commercetools.api.models.CustomizableDra
 
     /**
      *  <p>Set this field to specify different Prices for certain LineItem quantities.</p>
+     * @return tiers
      */
     @Valid
     @JsonProperty("tiers")
@@ -107,6 +116,7 @@ public interface PriceDraft extends com.commercetools.api.models.CustomizableDra
 
     /**
      *  <p>Custom Fields for the Price.</p>
+     * @return custom
      */
     @Valid
     @JsonProperty("custom")

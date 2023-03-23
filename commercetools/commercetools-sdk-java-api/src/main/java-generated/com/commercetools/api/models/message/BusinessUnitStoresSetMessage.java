@@ -42,6 +42,7 @@ public interface BusinessUnitStoresSetMessage extends Message {
 
     /**
      *  <p>Stores of the Business Unit after the Set Stores update action.</p>
+     * @return stores
      */
     @NotNull
     @Valid

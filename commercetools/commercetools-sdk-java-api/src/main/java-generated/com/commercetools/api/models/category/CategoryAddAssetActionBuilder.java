@@ -31,6 +31,7 @@ public class CategoryAddAssetActionBuilder implements Builder<CategoryAddAssetAc
 
     /**
      *  <p>Value to append.</p>
+     * @return Builder
      */
 
     public CategoryAddAssetActionBuilder asset(
@@ -41,6 +42,8 @@ public class CategoryAddAssetActionBuilder implements Builder<CategoryAddAssetAc
 
     /**
      *  <p>Value to append.</p>
+     * @param asset
+     * @return Builder
      */
 
     public CategoryAddAssetActionBuilder asset(final com.commercetools.api.models.common.AssetDraft asset) {
@@ -50,6 +53,8 @@ public class CategoryAddAssetActionBuilder implements Builder<CategoryAddAssetAc
 
     /**
      *  <p>Position in the array at which the Asset should be put. When specified, the value must be between <code>0</code> and the total number of Assets minus <code>1</code>.</p>
+     * @param position
+     * @return Builder
      */
 
     public CategoryAddAssetActionBuilder position(@Nullable final Integer position) {

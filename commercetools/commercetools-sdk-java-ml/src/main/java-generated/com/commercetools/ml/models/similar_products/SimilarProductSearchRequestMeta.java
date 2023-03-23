@@ -32,6 +32,7 @@ public interface SimilarProductSearchRequestMeta {
 
     /**
      *  <p>The SimilarityMeasures used in this search.</p>
+     * @return similarityMeasures
      */
     @NotNull
     @Valid

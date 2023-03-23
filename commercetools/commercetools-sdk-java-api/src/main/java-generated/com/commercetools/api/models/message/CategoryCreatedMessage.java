@@ -42,6 +42,7 @@ public interface CategoryCreatedMessage extends Message {
 
     /**
      *  <p>Category that was created.</p>
+     * @return category
      */
     @NotNull
     @Valid

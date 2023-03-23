@@ -148,4 +148,5 @@ public interface CustomFieldReferenceValue {
     public static CustomFieldReferenceValue[] values() {
         return CustomFieldReferenceValueEnum.values();
     }
+
 }

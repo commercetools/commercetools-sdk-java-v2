@@ -34,6 +34,7 @@ public interface StagedOrderSetReturnInfoAction extends StagedOrderUpdateAction 
 
     /**
      *
+     * @return items
      */
     @Valid
     @JsonProperty("items")

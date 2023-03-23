@@ -35,6 +35,7 @@ public interface EnumKeyAlreadyExistsError extends ErrorObject {
 
     /**
      *
+     * @return code
      */
     @NotNull
     @JsonProperty("code")
@@ -42,6 +43,7 @@ public interface EnumKeyAlreadyExistsError extends ErrorObject {
 
     /**
      *  <p><code>"The $attributeName attribute definition already contains an enum value with the key $enumKey."</code></p>
+     * @return message
      */
     @NotNull
     @JsonProperty("message")
@@ -49,6 +51,7 @@ public interface EnumKeyAlreadyExistsError extends ErrorObject {
 
     /**
      *  <p>Conflicting enum key.</p>
+     * @return conflictingEnumKey
      */
     @NotNull
     @JsonProperty("conflictingEnumKey")
@@ -56,6 +59,7 @@ public interface EnumKeyAlreadyExistsError extends ErrorObject {
 
     /**
      *  <p>Name of the conflicting Attribute.</p>
+     * @return conflictingAttributeName
      */
     @NotNull
     @JsonProperty("conflictingAttributeName")

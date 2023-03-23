@@ -31,6 +31,7 @@ public interface PaymentMethodInfo {
 
     /**
      *  <p>Payment service that processes the Payment (for example, a PSP). Once set, it cannot be changed. The combination of <code>paymentInterface</code> and the <code>interfaceId</code> of a Payment must be unique.</p>
+     * @return paymentInterface
      */
 
     @JsonProperty("paymentInterface")
@@ -38,6 +39,7 @@ public interface PaymentMethodInfo {
 
     /**
      *  <p>Payment method used, for example, credit card, or cash advance.</p>
+     * @return method
      */
 
     @JsonProperty("method")
@@ -45,6 +47,7 @@ public interface PaymentMethodInfo {
 
     /**
      *  <p>Localizable name of the payment method.</p>
+     * @return name
      */
     @Valid
     @JsonProperty("name")

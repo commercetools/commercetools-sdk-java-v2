@@ -31,6 +31,7 @@ public interface StagedOrderSetCustomerEmailAction extends StagedOrderUpdateActi
 
     /**
      *
+     * @return email
      */
 
     @JsonProperty("email")

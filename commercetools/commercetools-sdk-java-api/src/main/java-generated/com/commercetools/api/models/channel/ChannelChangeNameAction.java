@@ -35,6 +35,7 @@ public interface ChannelChangeNameAction extends ChannelUpdateAction {
 
     /**
      *  <p>New value to set. Must not be empty.</p>
+     * @return name
      */
     @NotNull
     @Valid

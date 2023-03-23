@@ -17,4 +17,5 @@ public interface ErrorableTrait<T extends ErrorableTrait<T>> {
     default T asErrorableTraitToBaseType() {
         return (T) this;
     }
+
 }

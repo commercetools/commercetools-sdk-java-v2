@@ -35,6 +35,8 @@ public class SetShippingMethodTaxAmountChangeBuilder implements Builder<SetShipp
 
     /**
      *  <p>Update action for <code>setShippingMethodTaxAmount</code></p>
+     * @param change
+     * @return Builder
      */
 
     public SetShippingMethodTaxAmountChangeBuilder change(final String change) {
@@ -44,6 +46,8 @@ public class SetShippingMethodTaxAmountChangeBuilder implements Builder<SetShipp
 
     /**
      *
+     * @param taxMode
+     * @return Builder
      */
 
     public SetShippingMethodTaxAmountChangeBuilder taxMode(
@@ -54,6 +58,7 @@ public class SetShippingMethodTaxAmountChangeBuilder implements Builder<SetShipp
 
     /**
      *
+     * @return Builder
      */
 
     public SetShippingMethodTaxAmountChangeBuilder nextValue(
@@ -66,6 +71,8 @@ public class SetShippingMethodTaxAmountChangeBuilder implements Builder<SetShipp
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public SetShippingMethodTaxAmountChangeBuilder nextValue(
@@ -76,6 +83,7 @@ public class SetShippingMethodTaxAmountChangeBuilder implements Builder<SetShipp
 
     /**
      *
+     * @return Builder
      */
 
     public SetShippingMethodTaxAmountChangeBuilder previousValue(
@@ -88,6 +96,8 @@ public class SetShippingMethodTaxAmountChangeBuilder implements Builder<SetShipp
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public SetShippingMethodTaxAmountChangeBuilder previousValue(

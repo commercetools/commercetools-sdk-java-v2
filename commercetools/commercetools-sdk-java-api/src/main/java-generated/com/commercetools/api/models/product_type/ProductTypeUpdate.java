@@ -34,6 +34,7 @@ public interface ProductTypeUpdate extends
 
     /**
      *  <p>Expected version of the ProductType on which the changes should be applied. If the expected version does not match the actual version, a ConcurrentModification error is returned.</p>
+     * @return version
      */
     @NotNull
     @JsonProperty("version")
@@ -41,6 +42,7 @@ public interface ProductTypeUpdate extends
 
     /**
      *  <p>Update actions to be performed on the ProductType.</p>
+     * @return actions
      */
     @NotNull
     @Valid

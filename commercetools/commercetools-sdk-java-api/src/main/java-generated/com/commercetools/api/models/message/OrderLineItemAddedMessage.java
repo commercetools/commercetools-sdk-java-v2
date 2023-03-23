@@ -43,6 +43,7 @@ public interface OrderLineItemAddedMessage extends OrderMessage {
 
     /**
      *  <p>Line Item that was added to the Order.</p>
+     * @return lineItem
      */
     @NotNull
     @Valid
@@ -51,6 +52,7 @@ public interface OrderLineItemAddedMessage extends OrderMessage {
 
     /**
      *  <p>Quantity of Line Items that were added to the Order.</p>
+     * @return addedQuantity
      */
     @NotNull
     @JsonProperty("addedQuantity")

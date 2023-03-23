@@ -26,6 +26,11 @@ public class ByProjectKeyInStoreKeyByStoreKeyCustomersEmailTokenRequestBuilder {
             customerCreateEmailToken);
     }
 
+    public ByProjectKeyInStoreKeyByStoreKeyCustomersEmailTokenPostString post(final String customerCreateEmailToken) {
+        return new ByProjectKeyInStoreKeyByStoreKeyCustomersEmailTokenPostString(apiHttpClient, projectKey, storeKey,
+            customerCreateEmailToken);
+    }
+
     public ByProjectKeyInStoreKeyByStoreKeyCustomersEmailTokenPost post(
             UnaryOperator<com.commercetools.api.models.customer.CustomerCreateEmailTokenBuilder> op) {
         return post(op.apply(com.commercetools.api.models.customer.CustomerCreateEmailTokenBuilder.of()).build());

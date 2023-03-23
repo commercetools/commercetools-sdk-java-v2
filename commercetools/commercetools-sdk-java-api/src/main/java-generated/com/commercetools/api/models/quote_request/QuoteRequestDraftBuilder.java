@@ -46,6 +46,7 @@ public class QuoteRequestDraftBuilder implements Builder<QuoteRequestDraft> {
 
     /**
      *  <p>Cart for which a Quote is requested. Anonymous Carts, Carts with Discount Codes, or Carts with a <code>Multiple</code> ShippingMode are not supported.</p>
+     * @return Builder
      */
 
     public QuoteRequestDraftBuilder cart(
@@ -56,6 +57,8 @@ public class QuoteRequestDraftBuilder implements Builder<QuoteRequestDraft> {
 
     /**
      *  <p>Cart for which a Quote is requested. Anonymous Carts, Carts with Discount Codes, or Carts with a <code>Multiple</code> ShippingMode are not supported.</p>
+     * @param cart
+     * @return Builder
      */
 
     public QuoteRequestDraftBuilder cart(final com.commercetools.api.models.cart.CartResourceIdentifier cart) {
@@ -65,6 +68,8 @@ public class QuoteRequestDraftBuilder implements Builder<QuoteRequestDraft> {
 
     /**
      *  <p>Current version of the referenced Cart.</p>
+     * @param cartVersion
+     * @return Builder
      */
 
     public QuoteRequestDraftBuilder cartVersion(final Long cartVersion) {
@@ -74,6 +79,8 @@ public class QuoteRequestDraftBuilder implements Builder<QuoteRequestDraft> {
 
     /**
      *  <p>User-defined unique identifier for the QuoteRequest.</p>
+     * @param key
+     * @return Builder
      */
 
     public QuoteRequestDraftBuilder key(@Nullable final String key) {
@@ -83,6 +90,8 @@ public class QuoteRequestDraftBuilder implements Builder<QuoteRequestDraft> {
 
     /**
      *  <p>Message from the Buyer included in the Quote Request.</p>
+     * @param comment
+     * @return Builder
      */
 
     public QuoteRequestDraftBuilder comment(final String comment) {
@@ -92,6 +101,7 @@ public class QuoteRequestDraftBuilder implements Builder<QuoteRequestDraft> {
 
     /**
      *  <p>Custom Fields to be added to the Quote Request.</p>
+     * @return Builder
      */
 
     public QuoteRequestDraftBuilder custom(
@@ -102,6 +112,8 @@ public class QuoteRequestDraftBuilder implements Builder<QuoteRequestDraft> {
 
     /**
      *  <p>Custom Fields to be added to the Quote Request.</p>
+     * @param custom
+     * @return Builder
      */
 
     public QuoteRequestDraftBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFieldsDraft custom) {
@@ -111,6 +123,7 @@ public class QuoteRequestDraftBuilder implements Builder<QuoteRequestDraft> {
 
     /**
      *  <p>State of this Quote Request. This reference can point to a State in a custom workflow.</p>
+     * @return Builder
      */
 
     public QuoteRequestDraftBuilder state(
@@ -121,6 +134,8 @@ public class QuoteRequestDraftBuilder implements Builder<QuoteRequestDraft> {
 
     /**
      *  <p>State of this Quote Request. This reference can point to a State in a custom workflow.</p>
+     * @param state
+     * @return Builder
      */
 
     public QuoteRequestDraftBuilder state(@Nullable final com.commercetools.api.models.state.StateReference state) {
@@ -130,6 +145,8 @@ public class QuoteRequestDraftBuilder implements Builder<QuoteRequestDraft> {
 
     /**
      *  <p>Identifier for a purchase order, usually in a B2B context. The Purchase Order Number is typically entered by the Buyer.</p>
+     * @param purchaseOrderNumber
+     * @return Builder
      */
 
     public QuoteRequestDraftBuilder purchaseOrderNumber(@Nullable final String purchaseOrderNumber) {

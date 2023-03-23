@@ -31,6 +31,7 @@ public interface PaymentStatusDraft extends io.vrap.rmf.base.client.Draft<Paymen
 
     /**
      *  <p>External reference that identifies the current status of the Payment.</p>
+     * @return interfaceCode
      */
 
     @JsonProperty("interfaceCode")
@@ -38,13 +39,15 @@ public interface PaymentStatusDraft extends io.vrap.rmf.base.client.Draft<Paymen
 
     /**
      *  <p>Text describing the current status of the Payment.</p>
+     * @return interfaceText
      */
 
     @JsonProperty("interfaceText")
     public String getInterfaceText();
 
     /**
-     *  <p>Reference to a State.</p>
+     *  <p>ResourceIdentifier to a State.</p>
+     * @return state
      */
     @Valid
     @JsonProperty("state")

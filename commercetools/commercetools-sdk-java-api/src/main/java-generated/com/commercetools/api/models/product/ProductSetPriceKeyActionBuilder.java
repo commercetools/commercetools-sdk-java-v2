@@ -33,6 +33,8 @@ public class ProductSetPriceKeyActionBuilder implements Builder<ProductSetPriceK
 
     /**
      *  <p>The <code>id</code> of the Price to set the key.</p>
+     * @param priceId
+     * @return Builder
      */
 
     public ProductSetPriceKeyActionBuilder priceId(final String priceId) {
@@ -42,6 +44,8 @@ public class ProductSetPriceKeyActionBuilder implements Builder<ProductSetPriceK
 
     /**
      *  <p>If <code>true</code>, only the staged Embedded Price is updated. If <code>false</code>, both the current and staged Embedded Price are updated.</p>
+     * @param staged
+     * @return Builder
      */
 
     public ProductSetPriceKeyActionBuilder staged(@Nullable final Boolean staged) {
@@ -51,6 +55,8 @@ public class ProductSetPriceKeyActionBuilder implements Builder<ProductSetPriceK
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
+     * @param key
+     * @return Builder
      */
 
     public ProductSetPriceKeyActionBuilder key(@Nullable final String key) {

@@ -30,6 +30,8 @@ public class CartResourceIdentifierBuilder implements Builder<CartResourceIdenti
 
     /**
      *  <p>Unique identifier of the referenced Cart. Either <code>id</code> or <code>key</code> is required.</p>
+     * @param id
+     * @return Builder
      */
 
     public CartResourceIdentifierBuilder id(@Nullable final String id) {
@@ -39,6 +41,8 @@ public class CartResourceIdentifierBuilder implements Builder<CartResourceIdenti
 
     /**
      *  <p>User-defined unique identifier of the referenced Cart. Either <code>id</code> or <code>key</code> is required.</p>
+     * @param key
+     * @return Builder
      */
 
     public CartResourceIdentifierBuilder key(@Nullable final String key) {

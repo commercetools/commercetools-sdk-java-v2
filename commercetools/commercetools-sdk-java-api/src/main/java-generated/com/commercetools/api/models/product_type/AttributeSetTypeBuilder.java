@@ -26,6 +26,8 @@ public class AttributeSetTypeBuilder implements Builder<AttributeSetType> {
 
     /**
      *  <p>Attribute type of the elements in the set.</p>
+     * @param elementType
+     * @return Builder
      */
 
     public AttributeSetTypeBuilder elementType(
@@ -36,6 +38,7 @@ public class AttributeSetTypeBuilder implements Builder<AttributeSetType> {
 
     /**
      *  <p>Attribute type of the elements in the set.</p>
+     * @return Builder
      */
 
     public AttributeSetTypeBuilder elementType(

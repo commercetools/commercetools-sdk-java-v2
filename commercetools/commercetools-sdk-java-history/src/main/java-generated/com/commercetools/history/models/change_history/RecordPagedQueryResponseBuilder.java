@@ -38,6 +38,8 @@ public class RecordPagedQueryResponseBuilder implements Builder<RecordPagedQuery
 
     /**
      *  <p>Number of results requested.</p>
+     * @param limit
+     * @return Builder
      */
 
     public RecordPagedQueryResponseBuilder limit(final Integer limit) {
@@ -47,6 +49,8 @@ public class RecordPagedQueryResponseBuilder implements Builder<RecordPagedQuery
 
     /**
      *  <p>Actual number of results returned.</p>
+     * @param count
+     * @return Builder
      */
 
     public RecordPagedQueryResponseBuilder count(final Integer count) {
@@ -56,6 +60,8 @@ public class RecordPagedQueryResponseBuilder implements Builder<RecordPagedQuery
 
     /**
      *  <p>Total number of results matching the query. This number is an estimation and not strongly consistent.</p>
+     * @param total
+     * @return Builder
      */
 
     public RecordPagedQueryResponseBuilder total(final Integer total) {
@@ -65,6 +71,8 @@ public class RecordPagedQueryResponseBuilder implements Builder<RecordPagedQuery
 
     /**
      *  <p>Number of elements skipped.</p>
+     * @param offset
+     * @return Builder
      */
 
     public RecordPagedQueryResponseBuilder offset(final Integer offset) {
@@ -74,6 +82,8 @@ public class RecordPagedQueryResponseBuilder implements Builder<RecordPagedQuery
 
     /**
      *
+     * @param results
+     * @return Builder
      */
 
     public RecordPagedQueryResponseBuilder results(
@@ -84,6 +94,8 @@ public class RecordPagedQueryResponseBuilder implements Builder<RecordPagedQuery
 
     /**
      *
+     * @param results
+     * @return Builder
      */
 
     public RecordPagedQueryResponseBuilder results(
@@ -94,6 +106,8 @@ public class RecordPagedQueryResponseBuilder implements Builder<RecordPagedQuery
 
     /**
      *
+     * @param results
+     * @return Builder
      */
 
     public RecordPagedQueryResponseBuilder plusResults(
@@ -107,6 +121,7 @@ public class RecordPagedQueryResponseBuilder implements Builder<RecordPagedQuery
 
     /**
      *
+     * @return Builder
      */
 
     public RecordPagedQueryResponseBuilder plusResults(
@@ -120,6 +135,7 @@ public class RecordPagedQueryResponseBuilder implements Builder<RecordPagedQuery
 
     /**
      *
+     * @return Builder
      */
 
     public RecordPagedQueryResponseBuilder withResults(

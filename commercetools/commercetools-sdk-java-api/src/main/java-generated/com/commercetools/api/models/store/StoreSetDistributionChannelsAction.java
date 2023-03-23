@@ -34,6 +34,7 @@ public interface StoreSetDistributionChannelsAction extends StoreUpdateAction {
 
     /**
      *  <p>Value to set. If not defined, the Store's <code>distributionChannels</code> are unset.</p>
+     * @return distributionChannels
      */
     @Valid
     @JsonProperty("distributionChannels")

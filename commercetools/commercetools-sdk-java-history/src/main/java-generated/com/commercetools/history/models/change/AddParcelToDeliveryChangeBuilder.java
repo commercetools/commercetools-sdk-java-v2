@@ -32,6 +32,8 @@ public class AddParcelToDeliveryChangeBuilder implements Builder<AddParcelToDeli
 
     /**
      *  <p>Update action for <code>addParcelToDelivery</code></p>
+     * @param change
+     * @return Builder
      */
 
     public AddParcelToDeliveryChangeBuilder change(final String change) {
@@ -41,6 +43,8 @@ public class AddParcelToDeliveryChangeBuilder implements Builder<AddParcelToDeli
 
     /**
      *
+     * @param deliveryId
+     * @return Builder
      */
 
     public AddParcelToDeliveryChangeBuilder deliveryId(final String deliveryId) {
@@ -50,6 +54,7 @@ public class AddParcelToDeliveryChangeBuilder implements Builder<AddParcelToDeli
 
     /**
      *
+     * @return Builder
      */
 
     public AddParcelToDeliveryChangeBuilder nextValue(
@@ -60,6 +65,8 @@ public class AddParcelToDeliveryChangeBuilder implements Builder<AddParcelToDeli
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public AddParcelToDeliveryChangeBuilder nextValue(final com.commercetools.history.models.common.Parcel nextValue) {

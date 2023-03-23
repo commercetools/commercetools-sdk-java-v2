@@ -38,6 +38,7 @@ public interface SetProductPriceCustomFieldChange extends Change {
 
     /**
      *
+     * @return type
      */
     @NotNull
     @JsonProperty("type")
@@ -45,6 +46,7 @@ public interface SetProductPriceCustomFieldChange extends Change {
 
     /**
      *  <p>Update action for <code>setProductPriceCustomField</code></p>
+     * @return change
      */
     @NotNull
     @JsonProperty("change")
@@ -52,6 +54,7 @@ public interface SetProductPriceCustomFieldChange extends Change {
 
     /**
      *
+     * @return catalogData
      */
     @NotNull
     @JsonProperty("catalogData")
@@ -59,6 +62,7 @@ public interface SetProductPriceCustomFieldChange extends Change {
 
     /**
      *
+     * @return previousValue
      */
     @NotNull
     @Valid
@@ -67,6 +71,7 @@ public interface SetProductPriceCustomFieldChange extends Change {
 
     /**
      *
+     * @return nextValue
      */
     @NotNull
     @Valid

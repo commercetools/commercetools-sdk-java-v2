@@ -78,4 +78,5 @@ public interface ExtensionAction {
     public static ExtensionAction[] values() {
         return ExtensionActionEnum.values();
     }
+
 }

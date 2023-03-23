@@ -28,7 +28,9 @@ public class DiscountedLineItemPriceBuilder implements Builder<DiscountedLineIte
     private java.util.List<com.commercetools.api.models.cart.DiscountedLineItemPortion> includedDiscounts;
 
     /**
-     *
+     *  <p>Money value of the discounted Line Item or Custom Line Item.</p>
+     * @param value
+     * @return Builder
      */
 
     public DiscountedLineItemPriceBuilder value(final com.commercetools.api.models.common.TypedMoney value) {
@@ -37,7 +39,8 @@ public class DiscountedLineItemPriceBuilder implements Builder<DiscountedLineIte
     }
 
     /**
-     *
+     *  <p>Money value of the discounted Line Item or Custom Line Item.</p>
+     * @return Builder
      */
 
     public DiscountedLineItemPriceBuilder value(
@@ -47,7 +50,9 @@ public class DiscountedLineItemPriceBuilder implements Builder<DiscountedLineIte
     }
 
     /**
-     *
+     *  <p>Discount applicable on the Line Item or Custom Line Item.</p>
+     * @param includedDiscounts
+     * @return Builder
      */
 
     public DiscountedLineItemPriceBuilder includedDiscounts(
@@ -57,7 +62,9 @@ public class DiscountedLineItemPriceBuilder implements Builder<DiscountedLineIte
     }
 
     /**
-     *
+     *  <p>Discount applicable on the Line Item or Custom Line Item.</p>
+     * @param includedDiscounts
+     * @return Builder
      */
 
     public DiscountedLineItemPriceBuilder includedDiscounts(
@@ -67,7 +74,9 @@ public class DiscountedLineItemPriceBuilder implements Builder<DiscountedLineIte
     }
 
     /**
-     *
+     *  <p>Discount applicable on the Line Item or Custom Line Item.</p>
+     * @param includedDiscounts
+     * @return Builder
      */
 
     public DiscountedLineItemPriceBuilder plusIncludedDiscounts(
@@ -80,7 +89,8 @@ public class DiscountedLineItemPriceBuilder implements Builder<DiscountedLineIte
     }
 
     /**
-     *
+     *  <p>Discount applicable on the Line Item or Custom Line Item.</p>
+     * @return Builder
      */
 
     public DiscountedLineItemPriceBuilder plusIncludedDiscounts(
@@ -94,7 +104,8 @@ public class DiscountedLineItemPriceBuilder implements Builder<DiscountedLineIte
     }
 
     /**
-     *
+     *  <p>Discount applicable on the Line Item or Custom Line Item.</p>
+     * @return Builder
      */
 
     public DiscountedLineItemPriceBuilder withIncludedDiscounts(

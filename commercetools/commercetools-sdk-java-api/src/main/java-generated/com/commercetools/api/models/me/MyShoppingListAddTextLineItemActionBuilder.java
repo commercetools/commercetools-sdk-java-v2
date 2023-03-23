@@ -40,6 +40,7 @@ public class MyShoppingListAddTextLineItemActionBuilder implements Builder<MySho
 
     /**
      *  <p>Name of the TextLineItem.</p>
+     * @return Builder
      */
 
     public MyShoppingListAddTextLineItemActionBuilder name(
@@ -50,6 +51,8 @@ public class MyShoppingListAddTextLineItemActionBuilder implements Builder<MySho
 
     /**
      *  <p>Name of the TextLineItem.</p>
+     * @param name
+     * @return Builder
      */
 
     public MyShoppingListAddTextLineItemActionBuilder name(
@@ -60,6 +63,7 @@ public class MyShoppingListAddTextLineItemActionBuilder implements Builder<MySho
 
     /**
      *  <p>Description of the TextLineItem.</p>
+     * @return Builder
      */
 
     public MyShoppingListAddTextLineItemActionBuilder description(
@@ -70,6 +74,8 @@ public class MyShoppingListAddTextLineItemActionBuilder implements Builder<MySho
 
     /**
      *  <p>Description of the TextLineItem.</p>
+     * @param description
+     * @return Builder
      */
 
     public MyShoppingListAddTextLineItemActionBuilder description(
@@ -80,6 +86,8 @@ public class MyShoppingListAddTextLineItemActionBuilder implements Builder<MySho
 
     /**
      *  <p>Number of entries in the TextLineItem.</p>
+     * @param quantity
+     * @return Builder
      */
 
     public MyShoppingListAddTextLineItemActionBuilder quantity(@Nullable final Long quantity) {
@@ -89,6 +97,8 @@ public class MyShoppingListAddTextLineItemActionBuilder implements Builder<MySho
 
     /**
      *  <p>Date and time the TextLineItem is added to the ShoppingList. If not set, the current date and time (UTC) is used.</p>
+     * @param addedAt
+     * @return Builder
      */
 
     public MyShoppingListAddTextLineItemActionBuilder addedAt(@Nullable final java.time.ZonedDateTime addedAt) {
@@ -98,6 +108,7 @@ public class MyShoppingListAddTextLineItemActionBuilder implements Builder<MySho
 
     /**
      *  <p>Custom Fields defined for the TextLineItem.</p>
+     * @return Builder
      */
 
     public MyShoppingListAddTextLineItemActionBuilder custom(
@@ -108,6 +119,8 @@ public class MyShoppingListAddTextLineItemActionBuilder implements Builder<MySho
 
     /**
      *  <p>Custom Fields defined for the TextLineItem.</p>
+     * @param custom
+     * @return Builder
      */
 
     public MyShoppingListAddTextLineItemActionBuilder custom(

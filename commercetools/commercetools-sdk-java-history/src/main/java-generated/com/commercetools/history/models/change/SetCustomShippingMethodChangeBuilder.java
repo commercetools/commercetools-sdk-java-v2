@@ -32,6 +32,8 @@ public class SetCustomShippingMethodChangeBuilder implements Builder<SetCustomSh
 
     /**
      *  <p>Update action for <code>setCustomShippingMethod</code></p>
+     * @param change
+     * @return Builder
      */
 
     public SetCustomShippingMethodChangeBuilder change(final String change) {
@@ -41,6 +43,7 @@ public class SetCustomShippingMethodChangeBuilder implements Builder<SetCustomSh
 
     /**
      *
+     * @return Builder
      */
 
     public SetCustomShippingMethodChangeBuilder nextValue(
@@ -53,6 +56,8 @@ public class SetCustomShippingMethodChangeBuilder implements Builder<SetCustomSh
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public SetCustomShippingMethodChangeBuilder nextValue(
@@ -63,6 +68,7 @@ public class SetCustomShippingMethodChangeBuilder implements Builder<SetCustomSh
 
     /**
      *
+     * @return Builder
      */
 
     public SetCustomShippingMethodChangeBuilder previousValue(
@@ -75,6 +81,8 @@ public class SetCustomShippingMethodChangeBuilder implements Builder<SetCustomSh
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public SetCustomShippingMethodChangeBuilder previousValue(

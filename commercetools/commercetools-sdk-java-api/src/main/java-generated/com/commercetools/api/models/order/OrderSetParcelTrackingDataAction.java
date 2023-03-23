@@ -34,6 +34,7 @@ public interface OrderSetParcelTrackingDataAction extends OrderUpdateAction {
 
     /**
      *
+     * @return parcelId
      */
     @NotNull
     @JsonProperty("parcelId")
@@ -41,6 +42,7 @@ public interface OrderSetParcelTrackingDataAction extends OrderUpdateAction {
 
     /**
      *
+     * @return trackingData
      */
     @Valid
     @JsonProperty("trackingData")

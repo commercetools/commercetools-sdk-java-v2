@@ -27,6 +27,7 @@ public class BusinessUnitAssociateAddedMessagePayloadBuilder
 
     /**
      *  <p>The Associate that was added to the Business Unit.</p>
+     * @return Builder
      */
 
     public BusinessUnitAssociateAddedMessagePayloadBuilder associate(
@@ -37,6 +38,8 @@ public class BusinessUnitAssociateAddedMessagePayloadBuilder
 
     /**
      *  <p>The Associate that was added to the Business Unit.</p>
+     * @param associate
+     * @return Builder
      */
 
     public BusinessUnitAssociateAddedMessagePayloadBuilder associate(

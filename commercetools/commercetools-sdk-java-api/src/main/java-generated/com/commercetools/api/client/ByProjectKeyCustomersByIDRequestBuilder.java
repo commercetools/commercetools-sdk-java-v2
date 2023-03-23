@@ -28,6 +28,10 @@ public class ByProjectKeyCustomersByIDRequestBuilder {
         return new ByProjectKeyCustomersByIDPost(apiHttpClient, projectKey, ID, customerUpdate);
     }
 
+    public ByProjectKeyCustomersByIDPostString post(final String customerUpdate) {
+        return new ByProjectKeyCustomersByIDPostString(apiHttpClient, projectKey, ID, customerUpdate);
+    }
+
     public ByProjectKeyCustomersByIDPost post(
             UnaryOperator<com.commercetools.api.models.customer.CustomerUpdateBuilder> op) {
         return post(op.apply(com.commercetools.api.models.customer.CustomerUpdateBuilder.of()).build());

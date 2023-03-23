@@ -25,6 +25,8 @@ public class ZoneChangeNameActionBuilder implements Builder<ZoneChangeNameAction
 
     /**
      *  <p>New name of the Zone.</p>
+     * @param name
+     * @return Builder
      */
 
     public ZoneChangeNameActionBuilder name(final String name) {

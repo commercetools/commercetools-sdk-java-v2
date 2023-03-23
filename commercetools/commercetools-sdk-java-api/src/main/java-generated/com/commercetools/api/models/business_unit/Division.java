@@ -45,6 +45,7 @@ public interface Division extends BusinessUnit {
 
     /**
      *  <p>Parent unit of the Division.</p>
+     * @return parentUnit
      */
     @NotNull
     @Valid
@@ -53,6 +54,7 @@ public interface Division extends BusinessUnit {
 
     /**
      *  <p>Defines whether the Stores of the Division are set explicitly or inherited from a parent Business Unit.</p>
+     * @return storeMode
      */
     @NotNull
     @JsonProperty("storeMode")

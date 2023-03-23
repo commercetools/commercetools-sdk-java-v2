@@ -29,6 +29,7 @@ public class ProductAddedToCategoryMessagePayloadBuilder implements Builder<Prod
 
     /**
      *  <p>Category the Product was added to.</p>
+     * @return Builder
      */
 
     public ProductAddedToCategoryMessagePayloadBuilder category(
@@ -39,6 +40,8 @@ public class ProductAddedToCategoryMessagePayloadBuilder implements Builder<Prod
 
     /**
      *  <p>Category the Product was added to.</p>
+     * @param category
+     * @return Builder
      */
 
     public ProductAddedToCategoryMessagePayloadBuilder category(
@@ -49,6 +52,8 @@ public class ProductAddedToCategoryMessagePayloadBuilder implements Builder<Prod
 
     /**
      *  <p>Whether the update was only applied to the staged Product Projection.</p>
+     * @param staged
+     * @return Builder
      */
 
     public ProductAddedToCategoryMessagePayloadBuilder staged(final Boolean staged) {

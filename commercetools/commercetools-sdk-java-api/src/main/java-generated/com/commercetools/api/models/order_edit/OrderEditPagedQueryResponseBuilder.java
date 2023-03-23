@@ -40,6 +40,8 @@ public class OrderEditPagedQueryResponseBuilder implements Builder<OrderEditPage
 
     /**
      *  <p>Number of results requested.</p>
+     * @param limit
+     * @return Builder
      */
 
     public OrderEditPagedQueryResponseBuilder limit(final Long limit) {
@@ -49,6 +51,8 @@ public class OrderEditPagedQueryResponseBuilder implements Builder<OrderEditPage
 
     /**
      *
+     * @param count
+     * @return Builder
      */
 
     public OrderEditPagedQueryResponseBuilder count(final Long count) {
@@ -58,6 +62,8 @@ public class OrderEditPagedQueryResponseBuilder implements Builder<OrderEditPage
 
     /**
      *
+     * @param total
+     * @return Builder
      */
 
     public OrderEditPagedQueryResponseBuilder total(@Nullable final Long total) {
@@ -67,6 +73,8 @@ public class OrderEditPagedQueryResponseBuilder implements Builder<OrderEditPage
 
     /**
      *  <p>Number of elements skipped.</p>
+     * @param offset
+     * @return Builder
      */
 
     public OrderEditPagedQueryResponseBuilder offset(final Long offset) {
@@ -76,6 +84,8 @@ public class OrderEditPagedQueryResponseBuilder implements Builder<OrderEditPage
 
     /**
      *
+     * @param results
+     * @return Builder
      */
 
     public OrderEditPagedQueryResponseBuilder results(
@@ -86,6 +96,8 @@ public class OrderEditPagedQueryResponseBuilder implements Builder<OrderEditPage
 
     /**
      *
+     * @param results
+     * @return Builder
      */
 
     public OrderEditPagedQueryResponseBuilder results(
@@ -96,6 +108,8 @@ public class OrderEditPagedQueryResponseBuilder implements Builder<OrderEditPage
 
     /**
      *
+     * @param results
+     * @return Builder
      */
 
     public OrderEditPagedQueryResponseBuilder plusResults(
@@ -109,6 +123,7 @@ public class OrderEditPagedQueryResponseBuilder implements Builder<OrderEditPage
 
     /**
      *
+     * @return Builder
      */
 
     public OrderEditPagedQueryResponseBuilder plusResults(
@@ -122,6 +137,7 @@ public class OrderEditPagedQueryResponseBuilder implements Builder<OrderEditPage
 
     /**
      *
+     * @return Builder
      */
 
     public OrderEditPagedQueryResponseBuilder withResults(

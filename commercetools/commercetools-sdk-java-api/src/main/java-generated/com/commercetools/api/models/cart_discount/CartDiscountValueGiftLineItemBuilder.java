@@ -37,6 +37,7 @@ public class CartDiscountValueGiftLineItemBuilder implements Builder<CartDiscoun
 
     /**
      *  <p>Reference to a Product.</p>
+     * @return Builder
      */
 
     public CartDiscountValueGiftLineItemBuilder product(
@@ -47,6 +48,8 @@ public class CartDiscountValueGiftLineItemBuilder implements Builder<CartDiscoun
 
     /**
      *  <p>Reference to a Product.</p>
+     * @param product
+     * @return Builder
      */
 
     public CartDiscountValueGiftLineItemBuilder product(
@@ -57,6 +60,8 @@ public class CartDiscountValueGiftLineItemBuilder implements Builder<CartDiscoun
 
     /**
      *  <p>ProductVariant of the Product.</p>
+     * @param variantId
+     * @return Builder
      */
 
     public CartDiscountValueGiftLineItemBuilder variantId(final Long variantId) {
@@ -66,6 +71,7 @@ public class CartDiscountValueGiftLineItemBuilder implements Builder<CartDiscoun
 
     /**
      *  <p>Channel must have the ChannelRoleEnum <code>InventorySupply</code>.</p>
+     * @return Builder
      */
 
     public CartDiscountValueGiftLineItemBuilder supplyChannel(
@@ -76,6 +82,8 @@ public class CartDiscountValueGiftLineItemBuilder implements Builder<CartDiscoun
 
     /**
      *  <p>Channel must have the ChannelRoleEnum <code>InventorySupply</code>.</p>
+     * @param supplyChannel
+     * @return Builder
      */
 
     public CartDiscountValueGiftLineItemBuilder supplyChannel(
@@ -86,6 +94,7 @@ public class CartDiscountValueGiftLineItemBuilder implements Builder<CartDiscoun
 
     /**
      *  <p>Channel must have the ChannelRoleEnum <code>ProductDistribution</code>.</p>
+     * @return Builder
      */
 
     public CartDiscountValueGiftLineItemBuilder distributionChannel(
@@ -97,6 +106,8 @@ public class CartDiscountValueGiftLineItemBuilder implements Builder<CartDiscoun
 
     /**
      *  <p>Channel must have the ChannelRoleEnum <code>ProductDistribution</code>.</p>
+     * @param distributionChannel
+     * @return Builder
      */
 
     public CartDiscountValueGiftLineItemBuilder distributionChannel(

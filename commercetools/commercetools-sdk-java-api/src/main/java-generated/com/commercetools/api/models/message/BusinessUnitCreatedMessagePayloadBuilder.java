@@ -26,6 +26,8 @@ public class BusinessUnitCreatedMessagePayloadBuilder implements Builder<Busines
 
     /**
      *  <p>The Business Unit that was created.</p>
+     * @param businessUnit
+     * @return Builder
      */
 
     public BusinessUnitCreatedMessagePayloadBuilder businessUnit(
@@ -36,6 +38,7 @@ public class BusinessUnitCreatedMessagePayloadBuilder implements Builder<Busines
 
     /**
      *  <p>The Business Unit that was created.</p>
+     * @return Builder
      */
 
     public BusinessUnitCreatedMessagePayloadBuilder businessUnit(

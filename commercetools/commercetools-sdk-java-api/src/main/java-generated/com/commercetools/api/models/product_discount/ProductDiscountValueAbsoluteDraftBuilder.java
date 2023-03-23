@@ -25,7 +25,9 @@ public class ProductDiscountValueAbsoluteDraftBuilder implements Builder<Product
     private java.util.List<com.commercetools.api.models.common.Money> money;
 
     /**
-     *  <p>Money values in different currencies. An absolute ProductDiscount will only match a price if this array contains a value with the same currency. For example, if it contains 10��� and 15$, the matching ��� price will be decreased by 10��� and the matching $ price will be decreased by 15$.</p>
+     *  <p>Money values in different currencies. An absolute ProductDiscount will only match a price if this array contains a value with the same currency. For example, if it contains 10&euro; and 15$, the matching &euro; price will be decreased by 10&euro; and the matching $ price will be decreased by 15$.</p>
+     * @param money
+     * @return Builder
      */
 
     public ProductDiscountValueAbsoluteDraftBuilder money(final com.commercetools.api.models.common.Money... money) {
@@ -34,7 +36,9 @@ public class ProductDiscountValueAbsoluteDraftBuilder implements Builder<Product
     }
 
     /**
-     *  <p>Money values in different currencies. An absolute ProductDiscount will only match a price if this array contains a value with the same currency. For example, if it contains 10��� and 15$, the matching ��� price will be decreased by 10��� and the matching $ price will be decreased by 15$.</p>
+     *  <p>Money values in different currencies. An absolute ProductDiscount will only match a price if this array contains a value with the same currency. For example, if it contains 10&euro; and 15$, the matching &euro; price will be decreased by 10&euro; and the matching $ price will be decreased by 15$.</p>
+     * @param money
+     * @return Builder
      */
 
     public ProductDiscountValueAbsoluteDraftBuilder money(
@@ -44,7 +48,9 @@ public class ProductDiscountValueAbsoluteDraftBuilder implements Builder<Product
     }
 
     /**
-     *  <p>Money values in different currencies. An absolute ProductDiscount will only match a price if this array contains a value with the same currency. For example, if it contains 10��� and 15$, the matching ��� price will be decreased by 10��� and the matching $ price will be decreased by 15$.</p>
+     *  <p>Money values in different currencies. An absolute ProductDiscount will only match a price if this array contains a value with the same currency. For example, if it contains 10&euro; and 15$, the matching &euro; price will be decreased by 10&euro; and the matching $ price will be decreased by 15$.</p>
+     * @param money
+     * @return Builder
      */
 
     public ProductDiscountValueAbsoluteDraftBuilder plusMoney(
@@ -57,7 +63,8 @@ public class ProductDiscountValueAbsoluteDraftBuilder implements Builder<Product
     }
 
     /**
-     *  <p>Money values in different currencies. An absolute ProductDiscount will only match a price if this array contains a value with the same currency. For example, if it contains 10��� and 15$, the matching ��� price will be decreased by 10��� and the matching $ price will be decreased by 15$.</p>
+     *  <p>Money values in different currencies. An absolute ProductDiscount will only match a price if this array contains a value with the same currency. For example, if it contains 10&euro; and 15$, the matching &euro; price will be decreased by 10&euro; and the matching $ price will be decreased by 15$.</p>
+     * @return Builder
      */
 
     public ProductDiscountValueAbsoluteDraftBuilder plusMoney(
@@ -70,7 +77,8 @@ public class ProductDiscountValueAbsoluteDraftBuilder implements Builder<Product
     }
 
     /**
-     *  <p>Money values in different currencies. An absolute ProductDiscount will only match a price if this array contains a value with the same currency. For example, if it contains 10��� and 15$, the matching ��� price will be decreased by 10��� and the matching $ price will be decreased by 15$.</p>
+     *  <p>Money values in different currencies. An absolute ProductDiscount will only match a price if this array contains a value with the same currency. For example, if it contains 10&euro; and 15$, the matching &euro; price will be decreased by 10&euro; and the matching $ price will be decreased by 15$.</p>
+     * @return Builder
      */
 
     public ProductDiscountValueAbsoluteDraftBuilder withMoney(

@@ -35,13 +35,15 @@ public interface OrderSetCustomLineItemShippingDetailsAction extends OrderUpdate
 
     /**
      *
+     * @return customLineItemId
      */
     @NotNull
     @JsonProperty("customLineItemId")
     public String getCustomLineItemId();
 
     /**
-     *
+     *  <p>For order creation and updates, the sum of the <code>targets</code> must match the quantity of the Line Items or Custom Line Items.</p>
+     * @return shippingDetails
      */
     @Valid
     @JsonProperty("shippingDetails")

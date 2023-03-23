@@ -27,6 +27,8 @@ public class ExternalOAuthFailedErrorBuilder implements Builder<ExternalOAuthFai
 
     /**
      *  <p>Plain text description detailing the external OAuth error. For example, <code>"External OAuth did not respond in time."</code>.</p>
+     * @param message
+     * @return Builder
      */
 
     public ExternalOAuthFailedErrorBuilder message(final String message) {

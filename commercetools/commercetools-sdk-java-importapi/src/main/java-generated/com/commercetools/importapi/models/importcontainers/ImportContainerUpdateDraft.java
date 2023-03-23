@@ -32,6 +32,7 @@ public interface ImportContainerUpdateDraft extends io.vrap.rmf.base.client.Draf
 
     /**
      *  <p>Current version of the ImportContainer.</p>
+     * @return version
      */
     @NotNull
     @JsonProperty("version")
@@ -39,6 +40,7 @@ public interface ImportContainerUpdateDraft extends io.vrap.rmf.base.client.Draf
 
     /**
      *  <p>The resource type to be imported. If not given, the ImportContainer is able to import all of the supported ImportResourceTypes.</p>
+     * @return resourceType
      */
 
     @JsonProperty("resourceType")

@@ -29,6 +29,8 @@ public class CustomerGroupUpdateBuilder implements Builder<CustomerGroupUpdate> 
 
     /**
      *  <p>Expected version of the CustomerGroup on which the changes should be applied. If the expected version does not match the actual version, a ConcurrentModification error is returned.</p>
+     * @param version
+     * @return Builder
      */
 
     public CustomerGroupUpdateBuilder version(final Long version) {
@@ -38,6 +40,8 @@ public class CustomerGroupUpdateBuilder implements Builder<CustomerGroupUpdate> 
 
     /**
      *  <p>Update actions to be performed on the CustomerGroup.</p>
+     * @param actions
+     * @return Builder
      */
 
     public CustomerGroupUpdateBuilder actions(
@@ -48,6 +52,8 @@ public class CustomerGroupUpdateBuilder implements Builder<CustomerGroupUpdate> 
 
     /**
      *  <p>Update actions to be performed on the CustomerGroup.</p>
+     * @param actions
+     * @return Builder
      */
 
     public CustomerGroupUpdateBuilder actions(
@@ -58,6 +64,8 @@ public class CustomerGroupUpdateBuilder implements Builder<CustomerGroupUpdate> 
 
     /**
      *  <p>Update actions to be performed on the CustomerGroup.</p>
+     * @param actions
+     * @return Builder
      */
 
     public CustomerGroupUpdateBuilder plusActions(
@@ -71,6 +79,7 @@ public class CustomerGroupUpdateBuilder implements Builder<CustomerGroupUpdate> 
 
     /**
      *  <p>Update actions to be performed on the CustomerGroup.</p>
+     * @return Builder
      */
 
     public CustomerGroupUpdateBuilder plusActions(
@@ -85,6 +94,7 @@ public class CustomerGroupUpdateBuilder implements Builder<CustomerGroupUpdate> 
 
     /**
      *  <p>Update actions to be performed on the CustomerGroup.</p>
+     * @return Builder
      */
 
     public CustomerGroupUpdateBuilder withActions(

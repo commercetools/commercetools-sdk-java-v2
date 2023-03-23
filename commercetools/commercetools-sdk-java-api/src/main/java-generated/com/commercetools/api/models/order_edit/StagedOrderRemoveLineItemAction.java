@@ -38,6 +38,7 @@ public interface StagedOrderRemoveLineItemAction extends StagedOrderUpdateAction
 
     /**
      *
+     * @return lineItemId
      */
     @NotNull
     @JsonProperty("lineItemId")
@@ -45,6 +46,7 @@ public interface StagedOrderRemoveLineItemAction extends StagedOrderUpdateAction
 
     /**
      *
+     * @return quantity
      */
 
     @JsonProperty("quantity")
@@ -53,6 +55,7 @@ public interface StagedOrderRemoveLineItemAction extends StagedOrderUpdateAction
     /**
      *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
      *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
+     * @return externalPrice
      */
     @Valid
     @JsonProperty("externalPrice")
@@ -60,13 +63,15 @@ public interface StagedOrderRemoveLineItemAction extends StagedOrderUpdateAction
 
     /**
      *
+     * @return externalTotalPrice
      */
     @Valid
     @JsonProperty("externalTotalPrice")
     public ExternalLineItemTotalPrice getExternalTotalPrice();
 
     /**
-     *
+     *  <p>For order creation and updates, the sum of the <code>targets</code> must match the quantity of the Line Items or Custom Line Items.</p>
+     * @return shippingDetailsToRemove
      */
     @Valid
     @JsonProperty("shippingDetailsToRemove")

@@ -35,6 +35,7 @@ public interface CategoryAddAssetAction extends CategoryUpdateAction {
 
     /**
      *  <p>Value to append.</p>
+     * @return asset
      */
     @NotNull
     @Valid
@@ -43,6 +44,7 @@ public interface CategoryAddAssetAction extends CategoryUpdateAction {
 
     /**
      *  <p>Position in the array at which the Asset should be put. When specified, the value must be between <code>0</code> and the total number of Assets minus <code>1</code>.</p>
+     * @return position
      */
 
     @JsonProperty("position")

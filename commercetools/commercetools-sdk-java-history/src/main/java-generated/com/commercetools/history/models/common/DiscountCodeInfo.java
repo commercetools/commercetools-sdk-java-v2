@@ -33,6 +33,7 @@ public interface DiscountCodeInfo {
 
     /**
      *
+     * @return discountCode
      */
     @NotNull
     @Valid
@@ -41,6 +42,7 @@ public interface DiscountCodeInfo {
 
     /**
      *
+     * @return state
      */
     @NotNull
     @JsonProperty("state")

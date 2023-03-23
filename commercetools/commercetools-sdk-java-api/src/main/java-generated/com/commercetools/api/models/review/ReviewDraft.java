@@ -35,13 +35,15 @@ public interface ReviewDraft extends com.commercetools.api.models.CustomizableDr
 
     /**
      *  <p>User-defined unique identifier for the Review.</p>
+     * @return key
      */
 
     @JsonProperty("key")
     public String getKey();
 
     /**
-     *  <p>If set, this value must be unique among Reviews. For example, if you want to have only one Review per Customer and per Product, you can set the value to Customer <code>id</code>��+ Product <code>id</code>.</p>
+     *  <p>If set, this value must be unique among Reviews. For example, if you want to have only one Review per Customer and per Product, you can set the value to Customer <code>id</code>&nbsp;+ Product <code>id</code>.</p>
+     * @return uniquenessValue
      */
 
     @JsonProperty("uniquenessValue")
@@ -49,6 +51,7 @@ public interface ReviewDraft extends com.commercetools.api.models.CustomizableDr
 
     /**
      *  <p>Language in which the content of the Review is written.</p>
+     * @return locale
      */
 
     @JsonProperty("locale")
@@ -56,6 +59,7 @@ public interface ReviewDraft extends com.commercetools.api.models.CustomizableDr
 
     /**
      *  <p>Name of the author.</p>
+     * @return authorName
      */
 
     @JsonProperty("authorName")
@@ -63,6 +67,7 @@ public interface ReviewDraft extends com.commercetools.api.models.CustomizableDr
 
     /**
      *  <p>Title of the Review.</p>
+     * @return title
      */
 
     @JsonProperty("title")
@@ -70,6 +75,7 @@ public interface ReviewDraft extends com.commercetools.api.models.CustomizableDr
 
     /**
      *  <p>Content of the Review.</p>
+     * @return text
      */
 
     @JsonProperty("text")
@@ -78,6 +84,7 @@ public interface ReviewDraft extends com.commercetools.api.models.CustomizableDr
     /**
      *  <p>Draft type to create a Reference or a KeyReference to a resource. Provide either the <code>id</code> or (wherever supported) the <code>key</code> of the resource to reference, but depending on the API endpoint the response returns either a Reference or a KeyReference. For example, the field <code>parent</code> of a CategoryDraft takes a ResourceIdentifier for its value while the value of the corresponding field of a Category is a Reference.</p>
      *  <p>Each resource type has its corresponding ResourceIdentifier, like ChannelResourceIdentifier.</p>
+     * @return target
      */
     @Valid
     @JsonProperty("target")
@@ -85,6 +92,7 @@ public interface ReviewDraft extends com.commercetools.api.models.CustomizableDr
 
     /**
      *  <p>State of the Review. Used for approval processes, see Review approval process for details.</p>
+     * @return state
      */
     @Valid
     @JsonProperty("state")
@@ -92,6 +100,7 @@ public interface ReviewDraft extends com.commercetools.api.models.CustomizableDr
 
     /**
      *  <p>Rating of the targeted Product or Channel. This rating can represent the number of stars, a percentage, or a like (+1)/dislike (-1). A rating is used in the ratings statistics of the targeted object, unless the Review is in a State that does not have the role <code>ReviewIncludedInStatistics</code>.</p>
+     * @return rating
      */
 
     @JsonProperty("rating")
@@ -99,6 +108,7 @@ public interface ReviewDraft extends com.commercetools.api.models.CustomizableDr
 
     /**
      *  <p>Customer who created the Review.</p>
+     * @return customer
      */
     @Valid
     @JsonProperty("customer")
@@ -106,6 +116,7 @@ public interface ReviewDraft extends com.commercetools.api.models.CustomizableDr
 
     /**
      *  <p>Custom Fields for the Review.</p>
+     * @return custom
      */
     @Valid
     @JsonProperty("custom")

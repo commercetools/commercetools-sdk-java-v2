@@ -28,6 +28,8 @@ public class ImageSearchConfigResponseBuilder implements Builder<ImageSearchConf
 
     /**
      *  <p>The image search activation status.</p>
+     * @param status
+     * @return Builder
      */
 
     public ImageSearchConfigResponseBuilder status(
@@ -38,6 +40,8 @@ public class ImageSearchConfigResponseBuilder implements Builder<ImageSearchConf
 
     /**
      *
+     * @param lastModifiedAt
+     * @return Builder
      */
 
     public ImageSearchConfigResponseBuilder lastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {

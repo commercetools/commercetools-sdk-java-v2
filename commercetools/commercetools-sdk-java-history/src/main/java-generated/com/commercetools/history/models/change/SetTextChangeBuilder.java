@@ -31,6 +31,8 @@ public class SetTextChangeBuilder implements Builder<SetTextChange> {
 
     /**
      *  <p>Shape of the action for <code>setText</code></p>
+     * @param change
+     * @return Builder
      */
 
     public SetTextChangeBuilder change(final String change) {
@@ -40,6 +42,8 @@ public class SetTextChangeBuilder implements Builder<SetTextChange> {
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public SetTextChangeBuilder previousValue(final String previousValue) {
@@ -49,6 +53,8 @@ public class SetTextChangeBuilder implements Builder<SetTextChange> {
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public SetTextChangeBuilder nextValue(final String nextValue) {

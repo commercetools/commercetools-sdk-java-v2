@@ -31,6 +31,7 @@ public class StagedQuoteSetCustomTypeActionBuilder implements Builder<StagedQuot
 
     /**
      *  <p>Defines the Type that extends the StagedQuote with Custom Fields. If absent, any existing Type and Custom Fields are removed from the StagedQuote.</p>
+     * @return Builder
      */
 
     public StagedQuoteSetCustomTypeActionBuilder type(
@@ -41,6 +42,8 @@ public class StagedQuoteSetCustomTypeActionBuilder implements Builder<StagedQuot
 
     /**
      *  <p>Defines the Type that extends the StagedQuote with Custom Fields. If absent, any existing Type and Custom Fields are removed from the StagedQuote.</p>
+     * @param type
+     * @return Builder
      */
 
     public StagedQuoteSetCustomTypeActionBuilder type(
@@ -51,6 +54,7 @@ public class StagedQuoteSetCustomTypeActionBuilder implements Builder<StagedQuot
 
     /**
      *  <p>Sets the Custom Fields fields for the StagedQuote.</p>
+     * @return Builder
      */
 
     public StagedQuoteSetCustomTypeActionBuilder fields(
@@ -61,6 +65,8 @@ public class StagedQuoteSetCustomTypeActionBuilder implements Builder<StagedQuot
 
     /**
      *  <p>Sets the Custom Fields fields for the StagedQuote.</p>
+     * @param fields
+     * @return Builder
      */
 
     public StagedQuoteSetCustomTypeActionBuilder fields(

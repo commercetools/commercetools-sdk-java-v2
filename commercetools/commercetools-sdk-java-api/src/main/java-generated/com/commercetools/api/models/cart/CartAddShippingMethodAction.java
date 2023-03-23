@@ -9,15 +9,16 @@ import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.common.BaseAddress;
-import com.commercetools.api.models.order.Delivery;
-import com.commercetools.api.models.shipping_method.ShippingMethodReference;
+import com.commercetools.api.models.order.DeliveryDraft;
+import com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifier;
+import com.commercetools.api.models.type.CustomFieldsDraft;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>This update action fails with an InvalidOperation error if the referenced shipping method has a predicate that does not match the Cart.</p>
+ *  <p>Adds a Shipping Method for a specified shipping address to a Cart with <code>Multiple</code> ShippingMode.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -27,7 +28,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .shippingKey("{shippingKey}")
  *             .shippingMethod(shippingMethodBuilder -> shippingMethodBuilder)
  *             .shippingAddress(shippingAddressBuilder -> shippingAddressBuilder)
- *             .plusDeliveries(deliveriesBuilder -> deliveriesBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -39,22 +39,25 @@ public interface CartAddShippingMethodAction extends CartUpdateAction {
     String ADD_SHIPPING_METHOD = "addShippingMethod";
 
     /**
-     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multiple</code> ShippingMode.</p>
+     *  <p>User-defined identifier for the Shipping that must be unique across the Cart with <code>Multiple</code> ShippingMode.</p>
+     * @return shippingKey
      */
     @NotNull
     @JsonProperty("shippingKey")
     public String getShippingKey();
 
     /**
-     *  <p>Value to set. If empty, any existing value is removed.</p>
+     *  <p>RecourceIdentifier to a ShippingMethod to add to the Cart with <code>Multiple</code> ShippingMode. If the referenced Shipping Method has a predicate that does not match the Cart, an InvalidOperation error is returned.</p>
+     * @return shippingMethod
      */
     @NotNull
     @Valid
     @JsonProperty("shippingMethod")
-    public ShippingMethodReference getShippingMethod();
+    public ShippingMethodResourceIdentifier getShippingMethod();
 
     /**
      *  <p>Determines the shipping rate and Tax Rate of the Line Items.</p>
+     * @return shippingAddress
      */
     @NotNull
     @Valid
@@ -62,55 +65,58 @@ public interface CartAddShippingMethodAction extends CartUpdateAction {
     public BaseAddress getShippingAddress();
 
     /**
-     *  <p>Used as an input to select a ShippingRatePriceTier.</p>
+     *  <p>Input used to select a ShippingRatePriceTier. The data type of this field depends on the <code>shippingRateInputType.type</code> configured in the Project:</p>
      *  <ul>
-     *   <li>Must be ClassificationShippingRateInput if ShippingRateInputType is CartClassificationType.</li>
-     *   <li>Must be ScoreShippingRateInput if ShippingRateInputType is CartScoreType.</li>
+     *   <li>If <code>CartClassification</code>, it must be ClassificationShippingRateInputDraft.</li>
+     *   <li>If <code>CartScore</code>, it must be ScoreShippingRateInputDraft.</li>
+     *   <li>If <code>CartValue</code>, it cannot be set.</li>
      *  </ul>
-     *  <p>The <code>shippingRateInput</code> cannot be set on the Cart if CartValueType is defined.</p>
+     * @return shippingRateInput
      */
     @Valid
     @JsonProperty("shippingRateInput")
     public ShippingRateInputDraft getShippingRateInput();
 
     /**
-     *  <p>Tax Rate used to tax a shipping expense if a Cart has the <code>External</code> TaxMode.</p>
+     *  <p>Tax Rate used to tax a shipping expense if the Cart has the <code>External</code> TaxMode.</p>
+     * @return externalTaxRate
      */
-
+    @Valid
     @JsonProperty("externalTaxRate")
-    public String getExternalTaxRate();
+    public ExternalTaxRateDraft getExternalTaxRate();
 
     /**
-     *  <p>Deliveries tied to a Shipping Method in a multi-shipping method Cart. It holds information on how items are delivered to customers.</p>
+     *  <p>Deliveries to be shipped with the referenced Shipping Method.</p>
+     * @return deliveries
      */
-    @NotNull
     @Valid
     @JsonProperty("deliveries")
-    public List<Delivery> getDeliveries();
+    public List<DeliveryDraft> getDeliveries();
 
     /**
      *  <p>Custom Fields for the Shipping Method.</p>
+     * @return custom
      */
-
+    @Valid
     @JsonProperty("custom")
-    public String getCustom();
+    public CustomFieldsDraft getCustom();
 
     public void setShippingKey(final String shippingKey);
 
-    public void setShippingMethod(final ShippingMethodReference shippingMethod);
+    public void setShippingMethod(final ShippingMethodResourceIdentifier shippingMethod);
 
     public void setShippingAddress(final BaseAddress shippingAddress);
 
     public void setShippingRateInput(final ShippingRateInputDraft shippingRateInput);
 
-    public void setExternalTaxRate(final String externalTaxRate);
+    public void setExternalTaxRate(final ExternalTaxRateDraft externalTaxRate);
 
     @JsonIgnore
-    public void setDeliveries(final Delivery... deliveries);
+    public void setDeliveries(final DeliveryDraft... deliveries);
 
-    public void setDeliveries(final List<Delivery> deliveries);
+    public void setDeliveries(final List<DeliveryDraft> deliveries);
 
-    public void setCustom(final String custom);
+    public void setCustom(final CustomFieldsDraft custom);
 
     public static CartAddShippingMethodAction of() {
         return new CartAddShippingMethodActionImpl();

@@ -31,6 +31,8 @@ public class SetValidFromChangeBuilder implements Builder<SetValidFromChange> {
 
     /**
      *  <p>Shape of the action for <code>setValidFrom</code></p>
+     * @param change
+     * @return Builder
      */
 
     public SetValidFromChangeBuilder change(final String change) {
@@ -40,6 +42,8 @@ public class SetValidFromChangeBuilder implements Builder<SetValidFromChange> {
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public SetValidFromChangeBuilder previousValue(final String previousValue) {
@@ -49,6 +53,8 @@ public class SetValidFromChangeBuilder implements Builder<SetValidFromChange> {
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public SetValidFromChangeBuilder nextValue(final String nextValue) {

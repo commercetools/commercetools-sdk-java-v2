@@ -28,6 +28,8 @@ public class ProductTypeChangeAttributeNameActionBuilder implements Builder<Prod
 
     /**
      *  <p>Name of the AttributeDefinition to update.</p>
+     * @param attributeName
+     * @return Builder
      */
 
     public ProductTypeChangeAttributeNameActionBuilder attributeName(final String attributeName) {
@@ -38,6 +40,8 @@ public class ProductTypeChangeAttributeNameActionBuilder implements Builder<Prod
     /**
      *  <p>New user-defined name of the Attribute that is unique with the Project.</p>
      *  <p>When using the same <code>name</code> for an Attribute in two or more ProductTypes, all fields of the AttributeDefinition of this Attribute must be the same across the ProductTypes. If not, an AttributeDefinitionAlreadyExists error is returned. An exception to this are the values of an <code>enum</code> or <code>lenum</code> type and sets thereof.</p>
+     * @param newAttributeName
+     * @return Builder
      */
 
     public ProductTypeChangeAttributeNameActionBuilder newAttributeName(final String newAttributeName) {

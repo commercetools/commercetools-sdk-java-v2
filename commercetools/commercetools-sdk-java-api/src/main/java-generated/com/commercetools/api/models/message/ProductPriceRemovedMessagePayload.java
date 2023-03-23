@@ -37,6 +37,7 @@ public interface ProductPriceRemovedMessagePayload extends MessagePayload {
 
     /**
      *  <p>Unique identifier of the ProductVariant for which the Price was removed.</p>
+     * @return variantId
      */
     @NotNull
     @JsonProperty("variantId")
@@ -44,6 +45,7 @@ public interface ProductPriceRemovedMessagePayload extends MessagePayload {
 
     /**
      *  <p>The Embedded Price that was removed from the ProductVariant.</p>
+     * @return price
      */
     @NotNull
     @Valid
@@ -52,6 +54,7 @@ public interface ProductPriceRemovedMessagePayload extends MessagePayload {
 
     /**
      *  <p>Whether the update was only applied to the staged Product Projection.</p>
+     * @return staged
      */
     @NotNull
     @JsonProperty("staged")

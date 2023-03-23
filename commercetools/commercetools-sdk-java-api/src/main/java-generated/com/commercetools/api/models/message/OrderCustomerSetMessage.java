@@ -41,6 +41,7 @@ public interface OrderCustomerSetMessage extends OrderMessage {
 
     /**
      *  <p>Customer on the Order after the Set Customer Id update action.</p>
+     * @return customer
      */
     @Valid
     @JsonProperty("customer")
@@ -48,6 +49,7 @@ public interface OrderCustomerSetMessage extends OrderMessage {
 
     /**
      *  <p>CustomerGroup on the Order after the Set Customer Id update action.</p>
+     * @return customerGroup
      */
     @Valid
     @JsonProperty("customerGroup")
@@ -55,6 +57,7 @@ public interface OrderCustomerSetMessage extends OrderMessage {
 
     /**
      *  <p>Customer on the Order before the Set Customer Id update action.</p>
+     * @return oldCustomer
      */
     @Valid
     @JsonProperty("oldCustomer")
@@ -62,6 +65,7 @@ public interface OrderCustomerSetMessage extends OrderMessage {
 
     /**
      *  <p>CustomerGroup on the Order before the Set Customer Id update action.</p>
+     * @return oldCustomerGroup
      */
     @Valid
     @JsonProperty("oldCustomerGroup")

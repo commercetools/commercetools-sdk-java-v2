@@ -40,6 +40,7 @@ public interface BusinessUnitNameChangedMessage extends Message {
 
     /**
      *  <p>Updated name of the Business Unit.</p>
+     * @return name
      */
     @NotNull
     @JsonProperty("name")

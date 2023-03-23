@@ -55,6 +55,8 @@ public class TaxCategoryBuilder implements Builder<TaxCategory> {
 
     /**
      *  <p>Unique identifier of the TaxCategory.</p>
+     * @param id
+     * @return Builder
      */
 
     public TaxCategoryBuilder id(final String id) {
@@ -64,6 +66,8 @@ public class TaxCategoryBuilder implements Builder<TaxCategory> {
 
     /**
      *  <p>Current version of the TaxCategory.</p>
+     * @param version
+     * @return Builder
      */
 
     public TaxCategoryBuilder version(final Long version) {
@@ -73,6 +77,8 @@ public class TaxCategoryBuilder implements Builder<TaxCategory> {
 
     /**
      *  <p>Date and time (UTC) the TaxCategory was initially created.</p>
+     * @param createdAt
+     * @return Builder
      */
 
     public TaxCategoryBuilder createdAt(final java.time.ZonedDateTime createdAt) {
@@ -82,6 +88,8 @@ public class TaxCategoryBuilder implements Builder<TaxCategory> {
 
     /**
      *  <p>Date and time (UTC) the TaxCategory was last updated.</p>
+     * @param lastModifiedAt
+     * @return Builder
      */
 
     public TaxCategoryBuilder lastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {
@@ -91,6 +99,7 @@ public class TaxCategoryBuilder implements Builder<TaxCategory> {
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @return Builder
      */
 
     public TaxCategoryBuilder lastModifiedBy(
@@ -101,6 +110,8 @@ public class TaxCategoryBuilder implements Builder<TaxCategory> {
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param lastModifiedBy
+     * @return Builder
      */
 
     public TaxCategoryBuilder lastModifiedBy(
@@ -111,6 +122,7 @@ public class TaxCategoryBuilder implements Builder<TaxCategory> {
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @return Builder
      */
 
     public TaxCategoryBuilder createdBy(
@@ -121,6 +133,8 @@ public class TaxCategoryBuilder implements Builder<TaxCategory> {
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param createdBy
+     * @return Builder
      */
 
     public TaxCategoryBuilder createdBy(@Nullable final com.commercetools.api.models.common.CreatedBy createdBy) {
@@ -130,6 +144,8 @@ public class TaxCategoryBuilder implements Builder<TaxCategory> {
 
     /**
      *  <p>Name of the TaxCategory.</p>
+     * @param name
+     * @return Builder
      */
 
     public TaxCategoryBuilder name(final String name) {
@@ -139,6 +155,8 @@ public class TaxCategoryBuilder implements Builder<TaxCategory> {
 
     /**
      *  <p>Description of the TaxCategory.</p>
+     * @param description
+     * @return Builder
      */
 
     public TaxCategoryBuilder description(@Nullable final String description) {
@@ -148,6 +166,8 @@ public class TaxCategoryBuilder implements Builder<TaxCategory> {
 
     /**
      *  <p>Tax rates and subrates of states and countries. Each TaxRate in the array has a unique ID.</p>
+     * @param rates
+     * @return Builder
      */
 
     public TaxCategoryBuilder rates(final com.commercetools.api.models.tax_category.TaxRate... rates) {
@@ -157,6 +177,8 @@ public class TaxCategoryBuilder implements Builder<TaxCategory> {
 
     /**
      *  <p>Tax rates and subrates of states and countries. Each TaxRate in the array has a unique ID.</p>
+     * @param rates
+     * @return Builder
      */
 
     public TaxCategoryBuilder rates(final java.util.List<com.commercetools.api.models.tax_category.TaxRate> rates) {
@@ -166,6 +188,8 @@ public class TaxCategoryBuilder implements Builder<TaxCategory> {
 
     /**
      *  <p>Tax rates and subrates of states and countries. Each TaxRate in the array has a unique ID.</p>
+     * @param rates
+     * @return Builder
      */
 
     public TaxCategoryBuilder plusRates(final com.commercetools.api.models.tax_category.TaxRate... rates) {
@@ -178,6 +202,7 @@ public class TaxCategoryBuilder implements Builder<TaxCategory> {
 
     /**
      *  <p>Tax rates and subrates of states and countries. Each TaxRate in the array has a unique ID.</p>
+     * @return Builder
      */
 
     public TaxCategoryBuilder plusRates(
@@ -191,6 +216,7 @@ public class TaxCategoryBuilder implements Builder<TaxCategory> {
 
     /**
      *  <p>Tax rates and subrates of states and countries. Each TaxRate in the array has a unique ID.</p>
+     * @return Builder
      */
 
     public TaxCategoryBuilder withRates(
@@ -202,6 +228,8 @@ public class TaxCategoryBuilder implements Builder<TaxCategory> {
 
     /**
      *  <p>User-defined unique identifier of the TaxCategory.</p>
+     * @param key
+     * @return Builder
      */
 
     public TaxCategoryBuilder key(@Nullable final String key) {

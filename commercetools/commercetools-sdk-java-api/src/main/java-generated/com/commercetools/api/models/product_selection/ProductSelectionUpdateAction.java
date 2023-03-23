@@ -28,10 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonSubTypes({
         @JsonSubTypes.Type(value = com.commercetools.api.models.product_selection.ProductSelectionAddProductActionImpl.class, name = ProductSelectionAddProductAction.ADD_PRODUCT),
         @JsonSubTypes.Type(value = com.commercetools.api.models.product_selection.ProductSelectionChangeNameActionImpl.class, name = ProductSelectionChangeNameAction.CHANGE_NAME),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.product_selection.ProductSelectionExcludeProductActionImpl.class, name = ProductSelectionExcludeProductAction.EXCLUDE_PRODUCT),
         @JsonSubTypes.Type(value = com.commercetools.api.models.product_selection.ProductSelectionRemoveProductActionImpl.class, name = ProductSelectionRemoveProductAction.REMOVE_PRODUCT),
         @JsonSubTypes.Type(value = com.commercetools.api.models.product_selection.ProductSelectionSetCustomFieldActionImpl.class, name = ProductSelectionSetCustomFieldAction.SET_CUSTOM_FIELD),
         @JsonSubTypes.Type(value = com.commercetools.api.models.product_selection.ProductSelectionSetCustomTypeActionImpl.class, name = ProductSelectionSetCustomTypeAction.SET_CUSTOM_TYPE),
         @JsonSubTypes.Type(value = com.commercetools.api.models.product_selection.ProductSelectionSetKeyActionImpl.class, name = ProductSelectionSetKeyAction.SET_KEY),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.product_selection.ProductSelectionSetVariantExclusionActionImpl.class, name = ProductSelectionSetVariantExclusionAction.SET_VARIANT_EXCLUSION),
         @JsonSubTypes.Type(value = com.commercetools.api.models.product_selection.ProductSelectionSetVariantSelectionActionImpl.class, name = ProductSelectionSetVariantSelectionAction.SET_VARIANT_SELECTION) })
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "action", defaultImpl = ProductSelectionUpdateActionImpl.class, visible = true)
 @JsonDeserialize(as = ProductSelectionUpdateActionImpl.class)
@@ -41,6 +43,7 @@ public interface ProductSelectionUpdateAction
 
     /**
      *
+     * @return action
      */
     @NotNull
     @JsonProperty("action")
@@ -52,6 +55,10 @@ public interface ProductSelectionUpdateAction
 
     public static com.commercetools.api.models.product_selection.ProductSelectionChangeNameActionBuilder changeNameBuilder() {
         return com.commercetools.api.models.product_selection.ProductSelectionChangeNameActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.product_selection.ProductSelectionExcludeProductActionBuilder excludeProductBuilder() {
+        return com.commercetools.api.models.product_selection.ProductSelectionExcludeProductActionBuilder.of();
     }
 
     public static com.commercetools.api.models.product_selection.ProductSelectionRemoveProductActionBuilder removeProductBuilder() {
@@ -68,6 +75,10 @@ public interface ProductSelectionUpdateAction
 
     public static com.commercetools.api.models.product_selection.ProductSelectionSetKeyActionBuilder setKeyBuilder() {
         return com.commercetools.api.models.product_selection.ProductSelectionSetKeyActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.product_selection.ProductSelectionSetVariantExclusionActionBuilder setVariantExclusionBuilder() {
+        return com.commercetools.api.models.product_selection.ProductSelectionSetVariantExclusionActionBuilder.of();
     }
 
     public static com.commercetools.api.models.product_selection.ProductSelectionSetVariantSelectionActionBuilder setVariantSelectionBuilder() {

@@ -33,6 +33,7 @@ public interface CategorySetDescriptionAction extends CategoryUpdateAction {
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
+     * @return description
      */
     @Valid
     @JsonProperty("description")

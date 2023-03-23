@@ -32,6 +32,8 @@ public class StoreDistributionChannelsChangedMessagePayloadBuilder
 
     /**
      *  <p>Product distribution Channels that have been added to the Store.</p>
+     * @param addedDistributionChannels
+     * @return Builder
      */
 
     public StoreDistributionChannelsChangedMessagePayloadBuilder addedDistributionChannels(
@@ -42,6 +44,8 @@ public class StoreDistributionChannelsChangedMessagePayloadBuilder
 
     /**
      *  <p>Product distribution Channels that have been added to the Store.</p>
+     * @param addedDistributionChannels
+     * @return Builder
      */
 
     public StoreDistributionChannelsChangedMessagePayloadBuilder addedDistributionChannels(
@@ -52,6 +56,8 @@ public class StoreDistributionChannelsChangedMessagePayloadBuilder
 
     /**
      *  <p>Product distribution Channels that have been added to the Store.</p>
+     * @param addedDistributionChannels
+     * @return Builder
      */
 
     public StoreDistributionChannelsChangedMessagePayloadBuilder plusAddedDistributionChannels(
@@ -65,6 +71,7 @@ public class StoreDistributionChannelsChangedMessagePayloadBuilder
 
     /**
      *  <p>Product distribution Channels that have been added to the Store.</p>
+     * @return Builder
      */
 
     public StoreDistributionChannelsChangedMessagePayloadBuilder plusAddedDistributionChannels(
@@ -79,6 +86,7 @@ public class StoreDistributionChannelsChangedMessagePayloadBuilder
 
     /**
      *  <p>Product distribution Channels that have been added to the Store.</p>
+     * @return Builder
      */
 
     public StoreDistributionChannelsChangedMessagePayloadBuilder withAddedDistributionChannels(
@@ -91,6 +99,8 @@ public class StoreDistributionChannelsChangedMessagePayloadBuilder
 
     /**
      *  <p>Product distribution Channels that have been removed from the Store.</p>
+     * @param removedDistributionChannels
+     * @return Builder
      */
 
     public StoreDistributionChannelsChangedMessagePayloadBuilder removedDistributionChannels(
@@ -101,6 +111,8 @@ public class StoreDistributionChannelsChangedMessagePayloadBuilder
 
     /**
      *  <p>Product distribution Channels that have been removed from the Store.</p>
+     * @param removedDistributionChannels
+     * @return Builder
      */
 
     public StoreDistributionChannelsChangedMessagePayloadBuilder removedDistributionChannels(
@@ -111,6 +123,8 @@ public class StoreDistributionChannelsChangedMessagePayloadBuilder
 
     /**
      *  <p>Product distribution Channels that have been removed from the Store.</p>
+     * @param removedDistributionChannels
+     * @return Builder
      */
 
     public StoreDistributionChannelsChangedMessagePayloadBuilder plusRemovedDistributionChannels(
@@ -124,6 +138,7 @@ public class StoreDistributionChannelsChangedMessagePayloadBuilder
 
     /**
      *  <p>Product distribution Channels that have been removed from the Store.</p>
+     * @return Builder
      */
 
     public StoreDistributionChannelsChangedMessagePayloadBuilder plusRemovedDistributionChannels(
@@ -138,6 +153,7 @@ public class StoreDistributionChannelsChangedMessagePayloadBuilder
 
     /**
      *  <p>Product distribution Channels that have been removed from the Store.</p>
+     * @return Builder
      */
 
     public StoreDistributionChannelsChangedMessagePayloadBuilder withRemovedDistributionChannels(

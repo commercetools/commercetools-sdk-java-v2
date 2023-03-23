@@ -34,6 +34,7 @@ public interface SearchDeactivatedError extends ErrorObject {
 
     /**
      *
+     * @return code
      */
     @NotNull
     @JsonProperty("code")
@@ -41,6 +42,7 @@ public interface SearchDeactivatedError extends ErrorObject {
 
     /**
      *  <p><code>"The endpoint is deactivated for this project. Please enable it via the Project endpoint, via the Merchant Center in the Project settings, or reach out to Support to enable it."</code></p>
+     * @return message
      */
     @NotNull
     @JsonProperty("message")

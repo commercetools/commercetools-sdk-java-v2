@@ -7,7 +7,8 @@ import io.vrap.rmf.base.client.ApiHttpClient;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-public class ByProjectKeyInStoreKeyByStoreKeyCustomersRequestBuilder {
+public class ByProjectKeyInStoreKeyByStoreKeyCustomersRequestBuilder
+        implements ByProjectKeyInStoreKeyByStoreKeyCustomersRequestMixin {
 
     private final ApiHttpClient apiHttpClient;
     private final String projectKey;
@@ -27,6 +28,11 @@ public class ByProjectKeyInStoreKeyByStoreKeyCustomersRequestBuilder {
     public ByProjectKeyInStoreKeyByStoreKeyCustomersPost post(
             com.commercetools.api.models.customer.CustomerDraft customerDraft) {
         return new ByProjectKeyInStoreKeyByStoreKeyCustomersPost(apiHttpClient, projectKey, storeKey, customerDraft);
+    }
+
+    public ByProjectKeyInStoreKeyByStoreKeyCustomersPostString post(final String customerDraft) {
+        return new ByProjectKeyInStoreKeyByStoreKeyCustomersPostString(apiHttpClient, projectKey, storeKey,
+            customerDraft);
     }
 
     public ByProjectKeyInStoreKeyByStoreKeyCustomersPost post(

@@ -36,6 +36,7 @@ public interface StagedOrderRemoveDiscountCodeAction extends StagedOrderUpdateAc
 
     /**
      *  <p>Reference to a DiscountCode.</p>
+     * @return discountCode
      */
     @NotNull
     @Valid

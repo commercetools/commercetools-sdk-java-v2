@@ -33,6 +33,7 @@ public interface ReturnInfoSetMessagePayload extends OrderMessagePayload {
 
     /**
      *  <p>The ReturnInfo that was set on the Order or Order Edit.</p>
+     * @return returnInfo
      */
     @Valid
     @JsonProperty("returnInfo")

@@ -24,15 +24,6 @@ import io.vrap.rmf.base.client.utils.Generated;
 public class MyCartAddLineItemActionBuilder implements Builder<MyCartAddLineItemAction> {
 
     @Nullable
-    private com.commercetools.api.models.type.CustomFieldsDraft custom;
-
-    @Nullable
-    private com.commercetools.api.models.channel.ChannelResourceIdentifier distributionChannel;
-
-    @Nullable
-    private com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate;
-
-    @Nullable
     private String productId;
 
     @Nullable
@@ -45,42 +36,83 @@ public class MyCartAddLineItemActionBuilder implements Builder<MyCartAddLineItem
     private Long quantity;
 
     @Nullable
+    private java.time.ZonedDateTime addedAt;
+
+    @Nullable
+    private com.commercetools.api.models.channel.ChannelResourceIdentifier distributionChannel;
+
+    @Nullable
     private com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel;
-
-    @Nullable
-    private com.commercetools.api.models.common.Money externalPrice;
-
-    @Nullable
-    private com.commercetools.api.models.cart.ExternalLineItemTotalPrice externalTotalPrice;
 
     @Nullable
     private com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails;
 
     @Nullable
-    private java.time.ZonedDateTime addedAt;
+    private com.commercetools.api.models.type.CustomFieldsDraft custom;
 
     /**
-     *  <p>The representation used when creating or updating a customizable data type with Custom Fields.</p>
+     *  <p><code>id</code> of the Product.</p>
+     *  <p>Either the <code>productId</code> and <code>variantId</code>, or <code>sku</code> must be provided.</p>
+     * @param productId
+     * @return Builder
      */
 
-    public MyCartAddLineItemActionBuilder custom(
-            Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraftBuilder> builder) {
-        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsDraftBuilder.of()).build();
+    public MyCartAddLineItemActionBuilder productId(@Nullable final String productId) {
+        this.productId = productId;
         return this;
     }
 
     /**
-     *  <p>The representation used when creating or updating a customizable data type with Custom Fields.</p>
+     *  <p><code>id</code> of the ProductVariant in the Product.</p>
+     *  <p>If not given, the Master Variant is used.</p>
+     *  <p>Either the <code>productId</code> and <code>variantId</code>, or <code>sku</code> must be provided.</p>
+     * @param variantId
+     * @return Builder
      */
 
-    public MyCartAddLineItemActionBuilder custom(
-            @Nullable final com.commercetools.api.models.type.CustomFieldsDraft custom) {
-        this.custom = custom;
+    public MyCartAddLineItemActionBuilder variantId(@Nullable final Long variantId) {
+        this.variantId = variantId;
         return this;
     }
 
     /**
-     *  <p>ResourceIdentifier to a Channel.</p>
+     *  <p><code>sku</code> of the ProductVariant.</p>
+     *  <p>Either the <code>productId</code> and <code>variantId</code>, or <code>sku</code> must be provided.</p>
+     * @param sku
+     * @return Builder
+     */
+
+    public MyCartAddLineItemActionBuilder sku(@Nullable final String sku) {
+        this.sku = sku;
+        return this;
+    }
+
+    /**
+     *  <p>Number of Line Items to add to the Cart.</p>
+     * @param quantity
+     * @return Builder
+     */
+
+    public MyCartAddLineItemActionBuilder quantity(@Nullable final Long quantity) {
+        this.quantity = quantity;
+        return this;
+    }
+
+    /**
+     *  <p>Date and time (UTC) the Line Item was added to the Cart. If not set, it defaults to the current date and time.</p>
+     *  <p>Optional for backwards compatibility reasons.</p>
+     * @param addedAt
+     * @return Builder
+     */
+
+    public MyCartAddLineItemActionBuilder addedAt(@Nullable final java.time.ZonedDateTime addedAt) {
+        this.addedAt = addedAt;
+        return this;
+    }
+
+    /**
+     *  <p>Used to select a Product Price. The Channel must have the <code>ProductDistribution</code> ChannelRoleEnum. If the Cart is bound to a Store with <code>distributionChannels</code> set, the Channel must match one of the Store's distribution channels.</p>
+     * @return Builder
      */
 
     public MyCartAddLineItemActionBuilder distributionChannel(
@@ -92,7 +124,9 @@ public class MyCartAddLineItemActionBuilder implements Builder<MyCartAddLineItem
     }
 
     /**
-     *  <p>ResourceIdentifier to a Channel.</p>
+     *  <p>Used to select a Product Price. The Channel must have the <code>ProductDistribution</code> ChannelRoleEnum. If the Cart is bound to a Store with <code>distributionChannels</code> set, the Channel must match one of the Store's distribution channels.</p>
+     * @param distributionChannel
+     * @return Builder
      */
 
     public MyCartAddLineItemActionBuilder distributionChannel(
@@ -102,64 +136,8 @@ public class MyCartAddLineItemActionBuilder implements Builder<MyCartAddLineItem
     }
 
     /**
-     *
-     */
-
-    public MyCartAddLineItemActionBuilder externalTaxRate(
-            Function<com.commercetools.api.models.cart.ExternalTaxRateDraftBuilder, com.commercetools.api.models.cart.ExternalTaxRateDraftBuilder> builder) {
-        this.externalTaxRate = builder.apply(com.commercetools.api.models.cart.ExternalTaxRateDraftBuilder.of())
-                .build();
-        return this;
-    }
-
-    /**
-     *
-     */
-
-    public MyCartAddLineItemActionBuilder externalTaxRate(
-            @Nullable final com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate) {
-        this.externalTaxRate = externalTaxRate;
-        return this;
-    }
-
-    /**
-     *
-     */
-
-    public MyCartAddLineItemActionBuilder productId(@Nullable final String productId) {
-        this.productId = productId;
-        return this;
-    }
-
-    /**
-     *
-     */
-
-    public MyCartAddLineItemActionBuilder variantId(@Nullable final Long variantId) {
-        this.variantId = variantId;
-        return this;
-    }
-
-    /**
-     *
-     */
-
-    public MyCartAddLineItemActionBuilder sku(@Nullable final String sku) {
-        this.sku = sku;
-        return this;
-    }
-
-    /**
-     *
-     */
-
-    public MyCartAddLineItemActionBuilder quantity(@Nullable final Long quantity) {
-        this.quantity = quantity;
-        return this;
-    }
-
-    /**
-     *  <p>ResourceIdentifier to a Channel.</p>
+     *  <p>Used to identify Inventory entries that must be reserved. The Channel must have the <code>InventorySupply</code> ChannelRoleEnum.</p>
+     * @return Builder
      */
 
     public MyCartAddLineItemActionBuilder supplyChannel(
@@ -170,7 +148,9 @@ public class MyCartAddLineItemActionBuilder implements Builder<MyCartAddLineItem
     }
 
     /**
-     *  <p>ResourceIdentifier to a Channel.</p>
+     *  <p>Used to identify Inventory entries that must be reserved. The Channel must have the <code>InventorySupply</code> ChannelRoleEnum.</p>
+     * @param supplyChannel
+     * @return Builder
      */
 
     public MyCartAddLineItemActionBuilder supplyChannel(
@@ -180,51 +160,8 @@ public class MyCartAddLineItemActionBuilder implements Builder<MyCartAddLineItem
     }
 
     /**
-     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
-     *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
-     */
-
-    public MyCartAddLineItemActionBuilder externalPrice(
-            Function<com.commercetools.api.models.common.MoneyBuilder, com.commercetools.api.models.common.MoneyBuilder> builder) {
-        this.externalPrice = builder.apply(com.commercetools.api.models.common.MoneyBuilder.of()).build();
-        return this;
-    }
-
-    /**
-     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
-     *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
-     */
-
-    public MyCartAddLineItemActionBuilder externalPrice(
-            @Nullable final com.commercetools.api.models.common.Money externalPrice) {
-        this.externalPrice = externalPrice;
-        return this;
-    }
-
-    /**
-     *
-     */
-
-    public MyCartAddLineItemActionBuilder externalTotalPrice(
-            Function<com.commercetools.api.models.cart.ExternalLineItemTotalPriceBuilder, com.commercetools.api.models.cart.ExternalLineItemTotalPriceBuilder> builder) {
-        this.externalTotalPrice = builder
-                .apply(com.commercetools.api.models.cart.ExternalLineItemTotalPriceBuilder.of())
-                .build();
-        return this;
-    }
-
-    /**
-     *
-     */
-
-    public MyCartAddLineItemActionBuilder externalTotalPrice(
-            @Nullable final com.commercetools.api.models.cart.ExternalLineItemTotalPrice externalTotalPrice) {
-        this.externalTotalPrice = externalTotalPrice;
-        return this;
-    }
-
-    /**
-     *
+     *  <p>Container for Line Item-specific addresses.</p>
+     * @return Builder
      */
 
     public MyCartAddLineItemActionBuilder shippingDetails(
@@ -235,7 +172,9 @@ public class MyCartAddLineItemActionBuilder implements Builder<MyCartAddLineItem
     }
 
     /**
-     *
+     *  <p>Container for Line Item-specific addresses.</p>
+     * @param shippingDetails
+     * @return Builder
      */
 
     public MyCartAddLineItemActionBuilder shippingDetails(
@@ -245,27 +184,26 @@ public class MyCartAddLineItemActionBuilder implements Builder<MyCartAddLineItem
     }
 
     /**
-     *
+     *  <p>Custom Fields for the Line Item.</p>
+     * @return Builder
      */
 
-    public MyCartAddLineItemActionBuilder addedAt(@Nullable final java.time.ZonedDateTime addedAt) {
-        this.addedAt = addedAt;
+    public MyCartAddLineItemActionBuilder custom(
+            Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraftBuilder> builder) {
+        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsDraftBuilder.of()).build();
         return this;
     }
 
-    @Nullable
-    public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
-        return this.custom;
-    }
+    /**
+     *  <p>Custom Fields for the Line Item.</p>
+     * @param custom
+     * @return Builder
+     */
 
-    @Nullable
-    public com.commercetools.api.models.channel.ChannelResourceIdentifier getDistributionChannel() {
-        return this.distributionChannel;
-    }
-
-    @Nullable
-    public com.commercetools.api.models.cart.ExternalTaxRateDraft getExternalTaxRate() {
-        return this.externalTaxRate;
+    public MyCartAddLineItemActionBuilder custom(
+            @Nullable final com.commercetools.api.models.type.CustomFieldsDraft custom) {
+        this.custom = custom;
+        return this;
     }
 
     @Nullable
@@ -289,18 +227,18 @@ public class MyCartAddLineItemActionBuilder implements Builder<MyCartAddLineItem
     }
 
     @Nullable
+    public java.time.ZonedDateTime getAddedAt() {
+        return this.addedAt;
+    }
+
+    @Nullable
+    public com.commercetools.api.models.channel.ChannelResourceIdentifier getDistributionChannel() {
+        return this.distributionChannel;
+    }
+
+    @Nullable
     public com.commercetools.api.models.channel.ChannelResourceIdentifier getSupplyChannel() {
         return this.supplyChannel;
-    }
-
-    @Nullable
-    public com.commercetools.api.models.common.Money getExternalPrice() {
-        return this.externalPrice;
-    }
-
-    @Nullable
-    public com.commercetools.api.models.cart.ExternalLineItemTotalPrice getExternalTotalPrice() {
-        return this.externalTotalPrice;
     }
 
     @Nullable
@@ -309,21 +247,21 @@ public class MyCartAddLineItemActionBuilder implements Builder<MyCartAddLineItem
     }
 
     @Nullable
-    public java.time.ZonedDateTime getAddedAt() {
-        return this.addedAt;
+    public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
+        return this.custom;
     }
 
     public MyCartAddLineItemAction build() {
-        return new MyCartAddLineItemActionImpl(custom, distributionChannel, externalTaxRate, productId, variantId, sku,
-            quantity, supplyChannel, externalPrice, externalTotalPrice, shippingDetails, addedAt);
+        return new MyCartAddLineItemActionImpl(productId, variantId, sku, quantity, addedAt, distributionChannel,
+            supplyChannel, shippingDetails, custom);
     }
 
     /**
      * builds MyCartAddLineItemAction without checking for non null required values
      */
     public MyCartAddLineItemAction buildUnchecked() {
-        return new MyCartAddLineItemActionImpl(custom, distributionChannel, externalTaxRate, productId, variantId, sku,
-            quantity, supplyChannel, externalPrice, externalTotalPrice, shippingDetails, addedAt);
+        return new MyCartAddLineItemActionImpl(productId, variantId, sku, quantity, addedAt, distributionChannel,
+            supplyChannel, shippingDetails, custom);
     }
 
     public static MyCartAddLineItemActionBuilder of() {
@@ -332,18 +270,15 @@ public class MyCartAddLineItemActionBuilder implements Builder<MyCartAddLineItem
 
     public static MyCartAddLineItemActionBuilder of(final MyCartAddLineItemAction template) {
         MyCartAddLineItemActionBuilder builder = new MyCartAddLineItemActionBuilder();
-        builder.custom = template.getCustom();
-        builder.distributionChannel = template.getDistributionChannel();
-        builder.externalTaxRate = template.getExternalTaxRate();
         builder.productId = template.getProductId();
         builder.variantId = template.getVariantId();
         builder.sku = template.getSku();
         builder.quantity = template.getQuantity();
-        builder.supplyChannel = template.getSupplyChannel();
-        builder.externalPrice = template.getExternalPrice();
-        builder.externalTotalPrice = template.getExternalTotalPrice();
-        builder.shippingDetails = template.getShippingDetails();
         builder.addedAt = template.getAddedAt();
+        builder.distributionChannel = template.getDistributionChannel();
+        builder.supplyChannel = template.getSupplyChannel();
+        builder.shippingDetails = template.getShippingDetails();
+        builder.custom = template.getCustom();
         return builder;
     }
 

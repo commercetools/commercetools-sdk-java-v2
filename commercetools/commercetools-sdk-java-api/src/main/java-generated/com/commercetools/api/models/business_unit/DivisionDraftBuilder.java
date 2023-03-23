@@ -67,6 +67,8 @@ public class DivisionDraftBuilder implements Builder<DivisionDraft> {
 
     /**
      *  <p>User-defined unique identifier for the Business Unit.</p>
+     * @param key
+     * @return Builder
      */
 
     public DivisionDraftBuilder key(final String key) {
@@ -76,6 +78,8 @@ public class DivisionDraftBuilder implements Builder<DivisionDraft> {
 
     /**
      *  <p>Indicates whether the Business Unit can be edited and used in Orders.</p>
+     * @param status
+     * @return Builder
      */
 
     public DivisionDraftBuilder status(
@@ -85,7 +89,11 @@ public class DivisionDraftBuilder implements Builder<DivisionDraft> {
     }
 
     /**
-     *  <p>Sets the Stores the Business Unit is associated with. Can only be set when <code>storeMode</code> is <code>Explicit</code>. If not empty, the Business Unit can only be linked to Carts and Orders of a referenced Store. If empty, the Business Unit can only create Carts, Orders, or Quotes that have no <code>store</code> value. Defaults to empty for Companies and not set for Divisions.</p>
+     *  <p>Sets the Stores the Business Unit is associated with. Can only be set when <code>storeMode</code> is <code>Explicit</code>. Defaults to empty for Companies and not set for Divisions.</p>
+     *  <p>If the Business Unit has Stores defined, then all of its Carts, Orders, Quotes, or Quote Requests must belong to one of the Business Unit's Stores.</p>
+     *  <p>If the Business Unit has no Stores, then all of its Carts, Orders, Quotes, or Quote Requests must not belong to any Store.</p>
+     * @param stores
+     * @return Builder
      */
 
     public DivisionDraftBuilder stores(
@@ -95,7 +103,11 @@ public class DivisionDraftBuilder implements Builder<DivisionDraft> {
     }
 
     /**
-     *  <p>Sets the Stores the Business Unit is associated with. Can only be set when <code>storeMode</code> is <code>Explicit</code>. If not empty, the Business Unit can only be linked to Carts and Orders of a referenced Store. If empty, the Business Unit can only create Carts, Orders, or Quotes that have no <code>store</code> value. Defaults to empty for Companies and not set for Divisions.</p>
+     *  <p>Sets the Stores the Business Unit is associated with. Can only be set when <code>storeMode</code> is <code>Explicit</code>. Defaults to empty for Companies and not set for Divisions.</p>
+     *  <p>If the Business Unit has Stores defined, then all of its Carts, Orders, Quotes, or Quote Requests must belong to one of the Business Unit's Stores.</p>
+     *  <p>If the Business Unit has no Stores, then all of its Carts, Orders, Quotes, or Quote Requests must not belong to any Store.</p>
+     * @param stores
+     * @return Builder
      */
 
     public DivisionDraftBuilder stores(
@@ -105,7 +117,11 @@ public class DivisionDraftBuilder implements Builder<DivisionDraft> {
     }
 
     /**
-     *  <p>Sets the Stores the Business Unit is associated with. Can only be set when <code>storeMode</code> is <code>Explicit</code>. If not empty, the Business Unit can only be linked to Carts and Orders of a referenced Store. If empty, the Business Unit can only create Carts, Orders, or Quotes that have no <code>store</code> value. Defaults to empty for Companies and not set for Divisions.</p>
+     *  <p>Sets the Stores the Business Unit is associated with. Can only be set when <code>storeMode</code> is <code>Explicit</code>. Defaults to empty for Companies and not set for Divisions.</p>
+     *  <p>If the Business Unit has Stores defined, then all of its Carts, Orders, Quotes, or Quote Requests must belong to one of the Business Unit's Stores.</p>
+     *  <p>If the Business Unit has no Stores, then all of its Carts, Orders, Quotes, or Quote Requests must not belong to any Store.</p>
+     * @param stores
+     * @return Builder
      */
 
     public DivisionDraftBuilder plusStores(
@@ -118,7 +134,10 @@ public class DivisionDraftBuilder implements Builder<DivisionDraft> {
     }
 
     /**
-     *  <p>Sets the Stores the Business Unit is associated with. Can only be set when <code>storeMode</code> is <code>Explicit</code>. If not empty, the Business Unit can only be linked to Carts and Orders of a referenced Store. If empty, the Business Unit can only create Carts, Orders, or Quotes that have no <code>store</code> value. Defaults to empty for Companies and not set for Divisions.</p>
+     *  <p>Sets the Stores the Business Unit is associated with. Can only be set when <code>storeMode</code> is <code>Explicit</code>. Defaults to empty for Companies and not set for Divisions.</p>
+     *  <p>If the Business Unit has Stores defined, then all of its Carts, Orders, Quotes, or Quote Requests must belong to one of the Business Unit's Stores.</p>
+     *  <p>If the Business Unit has no Stores, then all of its Carts, Orders, Quotes, or Quote Requests must not belong to any Store.</p>
+     * @return Builder
      */
 
     public DivisionDraftBuilder plusStores(
@@ -131,7 +150,10 @@ public class DivisionDraftBuilder implements Builder<DivisionDraft> {
     }
 
     /**
-     *  <p>Sets the Stores the Business Unit is associated with. Can only be set when <code>storeMode</code> is <code>Explicit</code>. If not empty, the Business Unit can only be linked to Carts and Orders of a referenced Store. If empty, the Business Unit can only create Carts, Orders, or Quotes that have no <code>store</code> value. Defaults to empty for Companies and not set for Divisions.</p>
+     *  <p>Sets the Stores the Business Unit is associated with. Can only be set when <code>storeMode</code> is <code>Explicit</code>. Defaults to empty for Companies and not set for Divisions.</p>
+     *  <p>If the Business Unit has Stores defined, then all of its Carts, Orders, Quotes, or Quote Requests must belong to one of the Business Unit's Stores.</p>
+     *  <p>If the Business Unit has no Stores, then all of its Carts, Orders, Quotes, or Quote Requests must not belong to any Store.</p>
+     * @return Builder
      */
 
     public DivisionDraftBuilder withStores(
@@ -143,6 +165,8 @@ public class DivisionDraftBuilder implements Builder<DivisionDraft> {
 
     /**
      *  <p>If not set, the Division inherits the Stores from its <code>parentUnit</code>. Set this to <code>Explicit</code> if you want to set the Stores explicitly in the <code>stores</code> field instead.</p>
+     * @param storeMode
+     * @return Builder
      */
 
     public DivisionDraftBuilder storeMode(
@@ -153,6 +177,8 @@ public class DivisionDraftBuilder implements Builder<DivisionDraft> {
 
     /**
      *  <p>Name of the Business Unit.</p>
+     * @param name
+     * @return Builder
      */
 
     public DivisionDraftBuilder name(final String name) {
@@ -162,6 +188,8 @@ public class DivisionDraftBuilder implements Builder<DivisionDraft> {
 
     /**
      *  <p>Email address of the Business Unit.</p>
+     * @param contactEmail
+     * @return Builder
      */
 
     public DivisionDraftBuilder contactEmail(@Nullable final String contactEmail) {
@@ -171,6 +199,8 @@ public class DivisionDraftBuilder implements Builder<DivisionDraft> {
 
     /**
      *  <p>List of members that are part of the Business Unit in specific roles.</p>
+     * @param associates
+     * @return Builder
      */
 
     public DivisionDraftBuilder associates(
@@ -181,6 +211,8 @@ public class DivisionDraftBuilder implements Builder<DivisionDraft> {
 
     /**
      *  <p>List of members that are part of the Business Unit in specific roles.</p>
+     * @param associates
+     * @return Builder
      */
 
     public DivisionDraftBuilder associates(
@@ -191,6 +223,8 @@ public class DivisionDraftBuilder implements Builder<DivisionDraft> {
 
     /**
      *  <p>List of members that are part of the Business Unit in specific roles.</p>
+     * @param associates
+     * @return Builder
      */
 
     public DivisionDraftBuilder plusAssociates(
@@ -204,6 +238,7 @@ public class DivisionDraftBuilder implements Builder<DivisionDraft> {
 
     /**
      *  <p>List of members that are part of the Business Unit in specific roles.</p>
+     * @return Builder
      */
 
     public DivisionDraftBuilder plusAssociates(
@@ -218,6 +253,7 @@ public class DivisionDraftBuilder implements Builder<DivisionDraft> {
 
     /**
      *  <p>List of members that are part of the Business Unit in specific roles.</p>
+     * @return Builder
      */
 
     public DivisionDraftBuilder withAssociates(
@@ -230,6 +266,8 @@ public class DivisionDraftBuilder implements Builder<DivisionDraft> {
 
     /**
      *  <p>Addresses used by the Business Unit.</p>
+     * @param addresses
+     * @return Builder
      */
 
     public DivisionDraftBuilder addresses(
@@ -240,6 +278,8 @@ public class DivisionDraftBuilder implements Builder<DivisionDraft> {
 
     /**
      *  <p>Addresses used by the Business Unit.</p>
+     * @param addresses
+     * @return Builder
      */
 
     public DivisionDraftBuilder addresses(
@@ -250,6 +290,8 @@ public class DivisionDraftBuilder implements Builder<DivisionDraft> {
 
     /**
      *  <p>Addresses used by the Business Unit.</p>
+     * @param addresses
+     * @return Builder
      */
 
     public DivisionDraftBuilder plusAddresses(
@@ -263,6 +305,7 @@ public class DivisionDraftBuilder implements Builder<DivisionDraft> {
 
     /**
      *  <p>Addresses used by the Business Unit.</p>
+     * @return Builder
      */
 
     public DivisionDraftBuilder plusAddresses(
@@ -276,6 +319,7 @@ public class DivisionDraftBuilder implements Builder<DivisionDraft> {
 
     /**
      *  <p>Addresses used by the Business Unit.</p>
+     * @return Builder
      */
 
     public DivisionDraftBuilder withAddresses(
@@ -287,6 +331,8 @@ public class DivisionDraftBuilder implements Builder<DivisionDraft> {
 
     /**
      *  <p>Indexes of entries in <code>addresses</code> to set as shipping addresses. The <code>shippingAddressIds</code> of the Customer will be replaced by these addresses.</p>
+     * @param shippingAddresses
+     * @return Builder
      */
 
     public DivisionDraftBuilder shippingAddresses(@Nullable final Integer... shippingAddresses) {
@@ -296,6 +342,8 @@ public class DivisionDraftBuilder implements Builder<DivisionDraft> {
 
     /**
      *  <p>Indexes of entries in <code>addresses</code> to set as shipping addresses. The <code>shippingAddressIds</code> of the Customer will be replaced by these addresses.</p>
+     * @param shippingAddresses
+     * @return Builder
      */
 
     public DivisionDraftBuilder shippingAddresses(@Nullable final java.util.List<Integer> shippingAddresses) {
@@ -305,6 +353,8 @@ public class DivisionDraftBuilder implements Builder<DivisionDraft> {
 
     /**
      *  <p>Indexes of entries in <code>addresses</code> to set as shipping addresses. The <code>shippingAddressIds</code> of the Customer will be replaced by these addresses.</p>
+     * @param shippingAddresses
+     * @return Builder
      */
 
     public DivisionDraftBuilder plusShippingAddresses(@Nullable final Integer... shippingAddresses) {
@@ -317,6 +367,8 @@ public class DivisionDraftBuilder implements Builder<DivisionDraft> {
 
     /**
      *  <p>Index of the entry in <code>addresses</code> to set as the default shipping address.</p>
+     * @param defaultShippingAddress
+     * @return Builder
      */
 
     public DivisionDraftBuilder defaultShippingAddress(@Nullable final Integer defaultShippingAddress) {
@@ -326,6 +378,8 @@ public class DivisionDraftBuilder implements Builder<DivisionDraft> {
 
     /**
      *  <p>Indexes of entries in <code>addresses</code> to set as billing addresses. The <code>billingAddressIds</code> of the Customer will be replaced by these addresses.</p>
+     * @param billingAddresses
+     * @return Builder
      */
 
     public DivisionDraftBuilder billingAddresses(@Nullable final Integer... billingAddresses) {
@@ -335,6 +389,8 @@ public class DivisionDraftBuilder implements Builder<DivisionDraft> {
 
     /**
      *  <p>Indexes of entries in <code>addresses</code> to set as billing addresses. The <code>billingAddressIds</code> of the Customer will be replaced by these addresses.</p>
+     * @param billingAddresses
+     * @return Builder
      */
 
     public DivisionDraftBuilder billingAddresses(@Nullable final java.util.List<Integer> billingAddresses) {
@@ -344,6 +400,8 @@ public class DivisionDraftBuilder implements Builder<DivisionDraft> {
 
     /**
      *  <p>Indexes of entries in <code>addresses</code> to set as billing addresses. The <code>billingAddressIds</code> of the Customer will be replaced by these addresses.</p>
+     * @param billingAddresses
+     * @return Builder
      */
 
     public DivisionDraftBuilder plusBillingAddresses(@Nullable final Integer... billingAddresses) {
@@ -356,6 +414,8 @@ public class DivisionDraftBuilder implements Builder<DivisionDraft> {
 
     /**
      *  <p>Index of the entry in <code>addresses</code> to set as the default billing address.</p>
+     * @param defaultBillingAddress
+     * @return Builder
      */
 
     public DivisionDraftBuilder defaultBillingAddress(@Nullable final Integer defaultBillingAddress) {
@@ -365,6 +425,7 @@ public class DivisionDraftBuilder implements Builder<DivisionDraft> {
 
     /**
      *  <p>Custom Fields for the Business Unit.</p>
+     * @return Builder
      */
 
     public DivisionDraftBuilder custom(
@@ -375,6 +436,8 @@ public class DivisionDraftBuilder implements Builder<DivisionDraft> {
 
     /**
      *  <p>Custom Fields for the Business Unit.</p>
+     * @param custom
+     * @return Builder
      */
 
     public DivisionDraftBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFieldsDraft custom) {
@@ -384,6 +447,7 @@ public class DivisionDraftBuilder implements Builder<DivisionDraft> {
 
     /**
      *  <p>The parent unit of this Division. Can be a Company or a Division.</p>
+     * @return Builder
      */
 
     public DivisionDraftBuilder parentUnit(
@@ -396,6 +460,8 @@ public class DivisionDraftBuilder implements Builder<DivisionDraft> {
 
     /**
      *  <p>The parent unit of this Division. Can be a Company or a Division.</p>
+     * @param parentUnit
+     * @return Builder
      */
 
     public DivisionDraftBuilder parentUnit(

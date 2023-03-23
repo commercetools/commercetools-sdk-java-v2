@@ -25,6 +25,10 @@ public class ByProjectKeyExtensionsRequestBuilder implements ByProjectKeyExtensi
         return new ByProjectKeyExtensionsPost(apiHttpClient, projectKey, extensionDraft);
     }
 
+    public ByProjectKeyExtensionsPostString post(final String extensionDraft) {
+        return new ByProjectKeyExtensionsPostString(apiHttpClient, projectKey, extensionDraft);
+    }
+
     public ByProjectKeyExtensionsPost post(
             UnaryOperator<com.commercetools.api.models.extension.ExtensionDraftBuilder> op) {
         return post(op.apply(com.commercetools.api.models.extension.ExtensionDraftBuilder.of()).build());

@@ -29,7 +29,8 @@ public interface MyCartSetLocaleAction extends MyCartUpdateAction {
     String SET_LOCALE = "setLocale";
 
     /**
-     *
+     *  <p>Value to set. Must be one of the Project's <code>languages</code>. If empty, any existing value will be removed.</p>
+     * @return locale
      */
 
     @JsonProperty("locale")

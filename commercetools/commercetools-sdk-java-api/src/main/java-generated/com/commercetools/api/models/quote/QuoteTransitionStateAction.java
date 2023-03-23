@@ -35,6 +35,7 @@ public interface QuoteTransitionStateAction extends QuoteUpdateAction {
 
     /**
      *  <p>Value to set. If there is no State yet, this must be an initial State.</p>
+     * @return state
      */
     @NotNull
     @Valid
@@ -43,6 +44,7 @@ public interface QuoteTransitionStateAction extends QuoteUpdateAction {
 
     /**
      *  <p>Switch validations on or off.</p>
+     * @return force
      */
 
     @JsonProperty("force")

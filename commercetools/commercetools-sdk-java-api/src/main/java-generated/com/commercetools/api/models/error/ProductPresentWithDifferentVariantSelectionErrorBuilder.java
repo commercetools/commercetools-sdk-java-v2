@@ -35,6 +35,8 @@ public class ProductPresentWithDifferentVariantSelectionErrorBuilder
 
     /**
      *  <p><code>"Product is already present with the following different $variantSelections."</code></p>
+     * @param message
+     * @return Builder
      */
 
     public ProductPresentWithDifferentVariantSelectionErrorBuilder message(final String message) {
@@ -66,6 +68,7 @@ public class ProductPresentWithDifferentVariantSelectionErrorBuilder
 
     /**
      *  <p>Reference to the Product for which the error was returned.</p>
+     * @return Builder
      */
 
     public ProductPresentWithDifferentVariantSelectionErrorBuilder product(
@@ -76,6 +79,8 @@ public class ProductPresentWithDifferentVariantSelectionErrorBuilder
 
     /**
      *  <p>Reference to the Product for which the error was returned.</p>
+     * @param product
+     * @return Builder
      */
 
     public ProductPresentWithDifferentVariantSelectionErrorBuilder product(
@@ -85,7 +90,9 @@ public class ProductPresentWithDifferentVariantSelectionErrorBuilder
     }
 
     /**
-     *  <p>Existing Product Variant Selection for the Product in the Product Selection.</p>
+     *  <p>Existing Product Variant Selection or Exclusion for the Product in the Product Selection.</p>
+     * @param existingVariantSelection
+     * @return Builder
      */
 
     public ProductPresentWithDifferentVariantSelectionErrorBuilder existingVariantSelection(
@@ -95,7 +102,8 @@ public class ProductPresentWithDifferentVariantSelectionErrorBuilder
     }
 
     /**
-     *  <p>Existing Product Variant Selection for the Product in the Product Selection.</p>
+     *  <p>Existing Product Variant Selection or Exclusion for the Product in the Product Selection.</p>
+     * @return Builder
      */
 
     public ProductPresentWithDifferentVariantSelectionErrorBuilder existingVariantSelection(

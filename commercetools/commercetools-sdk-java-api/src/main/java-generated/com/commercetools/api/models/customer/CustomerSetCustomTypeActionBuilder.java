@@ -31,6 +31,7 @@ public class CustomerSetCustomTypeActionBuilder implements Builder<CustomerSetCu
 
     /**
      *  <p>Defines the Type that extends the Customer with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Customer.</p>
+     * @return Builder
      */
 
     public CustomerSetCustomTypeActionBuilder type(
@@ -41,6 +42,8 @@ public class CustomerSetCustomTypeActionBuilder implements Builder<CustomerSetCu
 
     /**
      *  <p>Defines the Type that extends the Customer with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Customer.</p>
+     * @param type
+     * @return Builder
      */
 
     public CustomerSetCustomTypeActionBuilder type(
@@ -51,6 +54,7 @@ public class CustomerSetCustomTypeActionBuilder implements Builder<CustomerSetCu
 
     /**
      *  <p>Sets the Custom Fields fields for the Customer.</p>
+     * @return Builder
      */
 
     public CustomerSetCustomTypeActionBuilder fields(
@@ -61,6 +65,8 @@ public class CustomerSetCustomTypeActionBuilder implements Builder<CustomerSetCu
 
     /**
      *  <p>Sets the Custom Fields fields for the Customer.</p>
+     * @param fields
+     * @return Builder
      */
 
     public CustomerSetCustomTypeActionBuilder fields(

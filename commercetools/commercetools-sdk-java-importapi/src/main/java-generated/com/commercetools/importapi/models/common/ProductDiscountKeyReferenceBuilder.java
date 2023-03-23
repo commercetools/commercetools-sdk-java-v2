@@ -25,6 +25,8 @@ public class ProductDiscountKeyReferenceBuilder implements Builder<ProductDiscou
 
     /**
      *
+     * @param key
+     * @return Builder
      */
 
     public ProductDiscountKeyReferenceBuilder key(final String key) {

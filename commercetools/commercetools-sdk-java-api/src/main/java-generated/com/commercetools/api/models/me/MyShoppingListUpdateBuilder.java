@@ -29,6 +29,8 @@ public class MyShoppingListUpdateBuilder implements Builder<MyShoppingListUpdate
 
     /**
      *  <p>Expected version of the ShoppingList on which the changes should be applied. If the expected version does not match the actual version, a 409 Conflict will be returned.</p>
+     * @param version
+     * @return Builder
      */
 
     public MyShoppingListUpdateBuilder version(final Long version) {
@@ -38,6 +40,8 @@ public class MyShoppingListUpdateBuilder implements Builder<MyShoppingListUpdate
 
     /**
      *  <p>List of update actions to be performed on the ShoppingList.</p>
+     * @param actions
+     * @return Builder
      */
 
     public MyShoppingListUpdateBuilder actions(
@@ -48,6 +52,8 @@ public class MyShoppingListUpdateBuilder implements Builder<MyShoppingListUpdate
 
     /**
      *  <p>List of update actions to be performed on the ShoppingList.</p>
+     * @param actions
+     * @return Builder
      */
 
     public MyShoppingListUpdateBuilder actions(
@@ -58,6 +64,8 @@ public class MyShoppingListUpdateBuilder implements Builder<MyShoppingListUpdate
 
     /**
      *  <p>List of update actions to be performed on the ShoppingList.</p>
+     * @param actions
+     * @return Builder
      */
 
     public MyShoppingListUpdateBuilder plusActions(
@@ -71,6 +79,7 @@ public class MyShoppingListUpdateBuilder implements Builder<MyShoppingListUpdate
 
     /**
      *  <p>List of update actions to be performed on the ShoppingList.</p>
+     * @return Builder
      */
 
     public MyShoppingListUpdateBuilder plusActions(
@@ -84,6 +93,7 @@ public class MyShoppingListUpdateBuilder implements Builder<MyShoppingListUpdate
 
     /**
      *  <p>List of update actions to be performed on the ShoppingList.</p>
+     * @return Builder
      */
 
     public MyShoppingListUpdateBuilder withActions(

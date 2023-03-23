@@ -28,6 +28,10 @@ public class ByProjectKeyStatesKeyByKeyRequestBuilder {
         return new ByProjectKeyStatesKeyByKeyPost(apiHttpClient, projectKey, key, stateUpdate);
     }
 
+    public ByProjectKeyStatesKeyByKeyPostString post(final String stateUpdate) {
+        return new ByProjectKeyStatesKeyByKeyPostString(apiHttpClient, projectKey, key, stateUpdate);
+    }
+
     public ByProjectKeyStatesKeyByKeyPost post(
             UnaryOperator<com.commercetools.api.models.state.StateUpdateBuilder> op) {
         return post(op.apply(com.commercetools.api.models.state.StateUpdateBuilder.of()).build());

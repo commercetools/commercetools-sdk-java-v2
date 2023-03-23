@@ -31,7 +31,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ReplicaMyCartDraft extends io.vrap.rmf.base.client.Draft<ReplicaMyCartDraft> {
 
     /**
-     *
+     *  <p>Reference to a Cart or Order that is replicated.</p>
+     * @return reference
      */
     @NotNull
     @JsonProperty("reference")

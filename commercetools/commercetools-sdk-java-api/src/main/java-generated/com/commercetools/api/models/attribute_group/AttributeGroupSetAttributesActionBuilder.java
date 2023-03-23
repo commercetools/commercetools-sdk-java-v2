@@ -26,6 +26,8 @@ public class AttributeGroupSetAttributesActionBuilder implements Builder<Attribu
 
     /**
      *  <p>New unique values to set.</p>
+     * @param attributes
+     * @return Builder
      */
 
     public AttributeGroupSetAttributesActionBuilder attributes(
@@ -36,6 +38,8 @@ public class AttributeGroupSetAttributesActionBuilder implements Builder<Attribu
 
     /**
      *  <p>New unique values to set.</p>
+     * @param attributes
+     * @return Builder
      */
 
     public AttributeGroupSetAttributesActionBuilder attributes(
@@ -46,6 +50,8 @@ public class AttributeGroupSetAttributesActionBuilder implements Builder<Attribu
 
     /**
      *  <p>New unique values to set.</p>
+     * @param attributes
+     * @return Builder
      */
 
     public AttributeGroupSetAttributesActionBuilder plusAttributes(
@@ -59,6 +65,7 @@ public class AttributeGroupSetAttributesActionBuilder implements Builder<Attribu
 
     /**
      *  <p>New unique values to set.</p>
+     * @return Builder
      */
 
     public AttributeGroupSetAttributesActionBuilder plusAttributes(
@@ -73,6 +80,7 @@ public class AttributeGroupSetAttributesActionBuilder implements Builder<Attribu
 
     /**
      *  <p>New unique values to set.</p>
+     * @return Builder
      */
 
     public AttributeGroupSetAttributesActionBuilder withAttributes(

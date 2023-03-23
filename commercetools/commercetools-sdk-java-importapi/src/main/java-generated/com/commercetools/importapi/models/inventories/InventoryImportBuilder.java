@@ -46,6 +46,8 @@ public class InventoryImportBuilder implements Builder<InventoryImport> {
 
     /**
      *  <p>User-defined unique identifier.</p>
+     * @param key
+     * @return Builder
      */
 
     public InventoryImportBuilder key(final String key) {
@@ -55,6 +57,8 @@ public class InventoryImportBuilder implements Builder<InventoryImport> {
 
     /**
      *  <p>Maps to <code>Inventory.sku</code></p>
+     * @param sku
+     * @return Builder
      */
 
     public InventoryImportBuilder sku(final String sku) {
@@ -64,6 +68,8 @@ public class InventoryImportBuilder implements Builder<InventoryImport> {
 
     /**
      *  <p>Maps to <code>Inventory.quantityOnStock</code></p>
+     * @param quantityOnStock
+     * @return Builder
      */
 
     public InventoryImportBuilder quantityOnStock(final Long quantityOnStock) {
@@ -73,6 +79,8 @@ public class InventoryImportBuilder implements Builder<InventoryImport> {
 
     /**
      *  <p>Maps to <code>Inventory.restockableInDays</code></p>
+     * @param restockableInDays
+     * @return Builder
      */
 
     public InventoryImportBuilder restockableInDays(@Nullable final Long restockableInDays) {
@@ -82,6 +90,8 @@ public class InventoryImportBuilder implements Builder<InventoryImport> {
 
     /**
      *  <p>Maps to <code>Inventory.expectedDelivery</code></p>
+     * @param expectedDelivery
+     * @return Builder
      */
 
     public InventoryImportBuilder expectedDelivery(@Nullable final java.time.ZonedDateTime expectedDelivery) {
@@ -91,6 +101,7 @@ public class InventoryImportBuilder implements Builder<InventoryImport> {
 
     /**
      *  <p>Maps to <code>Inventory.supplyChannel</code></p>
+     * @return Builder
      */
 
     public InventoryImportBuilder supplyChannel(
@@ -102,6 +113,8 @@ public class InventoryImportBuilder implements Builder<InventoryImport> {
 
     /**
      *  <p>Maps to <code>Inventory.supplyChannel</code></p>
+     * @param supplyChannel
+     * @return Builder
      */
 
     public InventoryImportBuilder supplyChannel(
@@ -112,6 +125,7 @@ public class InventoryImportBuilder implements Builder<InventoryImport> {
 
     /**
      *  <p>Maps to <code>Inventory.custom</code>.</p>
+     * @return Builder
      */
 
     public InventoryImportBuilder custom(
@@ -122,6 +136,8 @@ public class InventoryImportBuilder implements Builder<InventoryImport> {
 
     /**
      *  <p>Maps to <code>Inventory.custom</code>.</p>
+     * @param custom
+     * @return Builder
      */
 
     public InventoryImportBuilder custom(

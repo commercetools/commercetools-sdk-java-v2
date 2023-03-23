@@ -28,6 +28,8 @@ public class SetCartScoreShippingRateInputValueBuilder implements Builder<SetCar
 
     /**
      *
+     * @param type
+     * @return Builder
      */
 
     public SetCartScoreShippingRateInputValueBuilder type(final String type) {
@@ -37,6 +39,8 @@ public class SetCartScoreShippingRateInputValueBuilder implements Builder<SetCar
 
     /**
      *
+     * @param score
+     * @return Builder
      */
 
     public SetCartScoreShippingRateInputValueBuilder score(final Integer score) {

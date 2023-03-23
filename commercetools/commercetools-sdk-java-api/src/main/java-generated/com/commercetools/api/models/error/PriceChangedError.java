@@ -16,8 +16,8 @@ import io.vrap.rmf.base.client.utils.Generated;
  *  <p>Returned when the Price, Tax Rate, or Shipping Rate of some Line Items changed since they were last added to the Cart.</p>
  *  <p>The error is returned as a failed response to:</p>
  *  <ul>
- *   <li>Create Order from Cart and Create Order from Cart in a Store requests on Orders.</li>
- *   <li>Create Order from a Cart and Create Order in a Store from a Cart requests on My Orders.</li>
+ *   <li>Create Order from Cart and Create Order in Store from Cart requests on Orders.</li>
+ *   <li>Create Order from Cart and Create Order in Store from Cart requests on My Orders.</li>
  *  </ul>
  *
  * <hr>
@@ -40,6 +40,7 @@ public interface PriceChangedError extends ErrorObject {
 
     /**
      *
+     * @return code
      */
     @NotNull
     @JsonProperty("code")
@@ -47,6 +48,7 @@ public interface PriceChangedError extends ErrorObject {
 
     /**
      *  <p>Plain text description of the reason for the Price change. For example, <code>"The price or tax of some line items changed at the time of placing the order: $lineItems."</code>.</p>
+     * @return message
      */
     @NotNull
     @JsonProperty("message")
@@ -54,6 +56,7 @@ public interface PriceChangedError extends ErrorObject {
 
     /**
      *  <p>Unique identifiers of the Line Items for which the Price or TaxRate has changed.</p>
+     * @return lineItems
      */
     @NotNull
     @JsonProperty("lineItems")
@@ -61,6 +64,7 @@ public interface PriceChangedError extends ErrorObject {
 
     /**
      *  <p><code>true</code> if the ShippingRate has changed.</p>
+     * @return shipping
      */
     @NotNull
     @JsonProperty("shipping")

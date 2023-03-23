@@ -22,7 +22,7 @@ public interface ChannelRoleEnum {
     ChannelRoleEnum INVENTORY_SUPPLY = ChannelRoleEnumEnum.INVENTORY_SUPPLY;
     /**
     	<p>Channel can be used to expose Products to a specific distribution Channel.
-    	The Channel can be used by a Cart to <a href="/../api/projects/carts#lineitem-price-selection">select</a> a Product Price.</p>
+    	The Channel can be used by a Cart to <a href="ctp:api:type:LineItemPriceSelection">select</a> a Product Price.</p>
 
     */
     ChannelRoleEnum PRODUCT_DISTRIBUTION = ChannelRoleEnumEnum.PRODUCT_DISTRIBUTION;
@@ -100,4 +100,5 @@ public interface ChannelRoleEnum {
     public static ChannelRoleEnum[] values() {
         return ChannelRoleEnumEnum.values();
     }
+
 }

@@ -78,4 +78,5 @@ public interface StateRoleEnum {
     public static StateRoleEnum[] values() {
         return StateRoleEnumEnum.values();
     }
+
 }

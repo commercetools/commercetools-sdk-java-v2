@@ -28,7 +28,9 @@ public class DiscountedLineItemPriceForQuantityBuilder implements Builder<Discou
     private com.commercetools.api.models.cart.DiscountedLineItemPrice discountedPrice;
 
     /**
-     *
+     *  <p>Number of Line Items or Custom Line Items in the Cart.</p>
+     * @param quantity
+     * @return Builder
      */
 
     public DiscountedLineItemPriceForQuantityBuilder quantity(final Long quantity) {
@@ -37,7 +39,8 @@ public class DiscountedLineItemPriceForQuantityBuilder implements Builder<Discou
     }
 
     /**
-     *
+     *  <p>Discounted price of the Line Item or Custom Line Item.</p>
+     * @return Builder
      */
 
     public DiscountedLineItemPriceForQuantityBuilder discountedPrice(
@@ -48,7 +51,9 @@ public class DiscountedLineItemPriceForQuantityBuilder implements Builder<Discou
     }
 
     /**
-     *
+     *  <p>Discounted price of the Line Item or Custom Line Item.</p>
+     * @param discountedPrice
+     * @return Builder
      */
 
     public DiscountedLineItemPriceForQuantityBuilder discountedPrice(

@@ -37,6 +37,7 @@ public interface Delivery {
 
     /**
      *
+     * @return id
      */
     @NotNull
     @JsonProperty("id")
@@ -44,6 +45,7 @@ public interface Delivery {
 
     /**
      *
+     * @return createdAt
      */
     @NotNull
     @JsonProperty("createdAt")
@@ -51,6 +53,7 @@ public interface Delivery {
 
     /**
      *
+     * @return items
      */
     @NotNull
     @Valid
@@ -59,6 +62,7 @@ public interface Delivery {
 
     /**
      *
+     * @return parcels
      */
     @NotNull
     @Valid
@@ -67,6 +71,7 @@ public interface Delivery {
 
     /**
      *
+     * @return address
      */
     @Valid
     @JsonProperty("address")

@@ -23,7 +23,9 @@ public class ReplicaMyCartDraftBuilder implements Builder<ReplicaMyCartDraft> {
     private java.lang.Object reference;
 
     /**
-     *
+     *  <p>Reference to a Cart or Order that is replicated.</p>
+     * @param reference
+     * @return Builder
      */
 
     public ReplicaMyCartDraftBuilder reference(final java.lang.Object reference) {

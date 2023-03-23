@@ -26,6 +26,7 @@ public class BusinessUnitChangeAssociateActionBuilder implements Builder<Busines
 
     /**
      *  <p>New version of an existing Associate.</p>
+     * @return Builder
      */
 
     public BusinessUnitChangeAssociateActionBuilder associate(
@@ -36,6 +37,8 @@ public class BusinessUnitChangeAssociateActionBuilder implements Builder<Busines
 
     /**
      *  <p>New version of an existing Associate.</p>
+     * @param associate
+     * @return Builder
      */
 
     public BusinessUnitChangeAssociateActionBuilder associate(

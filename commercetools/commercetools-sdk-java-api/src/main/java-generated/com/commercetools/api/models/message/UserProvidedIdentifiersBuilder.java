@@ -46,6 +46,8 @@ public class UserProvidedIdentifiersBuilder implements Builder<UserProvidedIdent
 
     /**
      *  <p>User-provided unique identifier of the resource.</p>
+     * @param key
+     * @return Builder
      */
 
     public UserProvidedIdentifiersBuilder key(@Nullable final String key) {
@@ -55,6 +57,8 @@ public class UserProvidedIdentifiersBuilder implements Builder<UserProvidedIdent
 
     /**
      *  <p>User-provided unique identifier of the resource.</p>
+     * @param externalId
+     * @return Builder
      */
 
     public UserProvidedIdentifiersBuilder externalId(@Nullable final String externalId) {
@@ -64,6 +68,8 @@ public class UserProvidedIdentifiersBuilder implements Builder<UserProvidedIdent
 
     /**
      *  <p>User-provided unique identifier of an Order.</p>
+     * @param orderNumber
+     * @return Builder
      */
 
     public UserProvidedIdentifiersBuilder orderNumber(@Nullable final String orderNumber) {
@@ -73,6 +79,8 @@ public class UserProvidedIdentifiersBuilder implements Builder<UserProvidedIdent
 
     /**
      *  <p>User-provided unique identifier of a Customer.</p>
+     * @param customerNumber
+     * @return Builder
      */
 
     public UserProvidedIdentifiersBuilder customerNumber(@Nullable final String customerNumber) {
@@ -82,6 +90,8 @@ public class UserProvidedIdentifiersBuilder implements Builder<UserProvidedIdent
 
     /**
      *  <p>Unique SKU of a Product Variant.</p>
+     * @param sku
+     * @return Builder
      */
 
     public UserProvidedIdentifiersBuilder sku(@Nullable final String sku) {
@@ -91,6 +101,7 @@ public class UserProvidedIdentifiersBuilder implements Builder<UserProvidedIdent
 
     /**
      *  <p>Unique identifier usually used in deep-link URLs for a Product. The value corresponds to the slug in the <code>current</code> Product Projection.</p>
+     * @return Builder
      */
 
     public UserProvidedIdentifiersBuilder slug(
@@ -101,6 +112,8 @@ public class UserProvidedIdentifiersBuilder implements Builder<UserProvidedIdent
 
     /**
      *  <p>Unique identifier usually used in deep-link URLs for a Product. The value corresponds to the slug in the <code>current</code> Product Projection.</p>
+     * @param slug
+     * @return Builder
      */
 
     public UserProvidedIdentifiersBuilder slug(
@@ -111,6 +124,7 @@ public class UserProvidedIdentifiersBuilder implements Builder<UserProvidedIdent
 
     /**
      *  <p>Unique identifier of a Custom Object.</p>
+     * @return Builder
      */
 
     public UserProvidedIdentifiersBuilder containerAndKey(
@@ -121,6 +135,8 @@ public class UserProvidedIdentifiersBuilder implements Builder<UserProvidedIdent
 
     /**
      *  <p>Unique identifier of a Custom Object.</p>
+     * @param containerAndKey
+     * @return Builder
      */
 
     public UserProvidedIdentifiersBuilder containerAndKey(

@@ -30,6 +30,7 @@ public interface OrderEditSetCommentAction extends OrderEditUpdateAction {
 
     /**
      *
+     * @return comment
      */
 
     @JsonProperty("comment")

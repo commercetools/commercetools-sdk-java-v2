@@ -30,6 +30,8 @@ public class CustomerResourceIdentifierBuilder implements Builder<CustomerResour
 
     /**
      *  <p>Unique identifier of the referenced Customer.</p>
+     * @param id
+     * @return Builder
      */
 
     public CustomerResourceIdentifierBuilder id(@Nullable final String id) {
@@ -39,6 +41,8 @@ public class CustomerResourceIdentifierBuilder implements Builder<CustomerResour
 
     /**
      *  <p>User-defined unique identifier of the referenced Customer.</p>
+     * @param key
+     * @return Builder
      */
 
     public CustomerResourceIdentifierBuilder key(@Nullable final String key) {

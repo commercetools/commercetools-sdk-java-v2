@@ -35,6 +35,8 @@ public class ImageSearchResponseBuilder implements Builder<ImageSearchResponse> 
 
     /**
      *  <p>The maximum number of results to return from a query.</p>
+     * @param count
+     * @return Builder
      */
 
     public ImageSearchResponseBuilder count(final Integer count) {
@@ -44,6 +46,8 @@ public class ImageSearchResponseBuilder implements Builder<ImageSearchResponse> 
 
     /**
      *  <p>Number of elements skipped.</p>
+     * @param offset
+     * @return Builder
      */
 
     public ImageSearchResponseBuilder offset(final Double offset) {
@@ -53,6 +57,8 @@ public class ImageSearchResponseBuilder implements Builder<ImageSearchResponse> 
 
     /**
      *  <p>The total number of product images that were have been analyzed.</p>
+     * @param total
+     * @return Builder
      */
 
     public ImageSearchResponseBuilder total(final Integer total) {
@@ -62,6 +68,8 @@ public class ImageSearchResponseBuilder implements Builder<ImageSearchResponse> 
 
     /**
      *  <p>An array of image URLs of images that are similar to the query image. If no matching images are found, results is empty.</p>
+     * @param results
+     * @return Builder
      */
 
     public ImageSearchResponseBuilder results(final com.commercetools.ml.models.image_search.ResultItem... results) {
@@ -71,6 +79,8 @@ public class ImageSearchResponseBuilder implements Builder<ImageSearchResponse> 
 
     /**
      *  <p>An array of image URLs of images that are similar to the query image. If no matching images are found, results is empty.</p>
+     * @param results
+     * @return Builder
      */
 
     public ImageSearchResponseBuilder results(
@@ -81,6 +91,8 @@ public class ImageSearchResponseBuilder implements Builder<ImageSearchResponse> 
 
     /**
      *  <p>An array of image URLs of images that are similar to the query image. If no matching images are found, results is empty.</p>
+     * @param results
+     * @return Builder
      */
 
     public ImageSearchResponseBuilder plusResults(
@@ -94,6 +106,7 @@ public class ImageSearchResponseBuilder implements Builder<ImageSearchResponse> 
 
     /**
      *  <p>An array of image URLs of images that are similar to the query image. If no matching images are found, results is empty.</p>
+     * @return Builder
      */
 
     public ImageSearchResponseBuilder plusResults(
@@ -107,6 +120,7 @@ public class ImageSearchResponseBuilder implements Builder<ImageSearchResponse> 
 
     /**
      *  <p>An array of image URLs of images that are similar to the query image. If no matching images are found, results is empty.</p>
+     * @return Builder
      */
 
     public ImageSearchResponseBuilder withResults(

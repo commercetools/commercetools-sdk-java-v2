@@ -26,6 +26,10 @@ public class ByProjectKeyShippingMethodsRequestBuilder implements ByProjectKeySh
         return new ByProjectKeyShippingMethodsPost(apiHttpClient, projectKey, shippingMethodDraft);
     }
 
+    public ByProjectKeyShippingMethodsPostString post(final String shippingMethodDraft) {
+        return new ByProjectKeyShippingMethodsPostString(apiHttpClient, projectKey, shippingMethodDraft);
+    }
+
     public ByProjectKeyShippingMethodsPost post(
             UnaryOperator<com.commercetools.api.models.shipping_method.ShippingMethodDraftBuilder> op) {
         return post(op.apply(com.commercetools.api.models.shipping_method.ShippingMethodDraftBuilder.of()).build());

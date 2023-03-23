@@ -21,6 +21,10 @@ public class ByProjectKeyMeSignupRequestBuilder {
         return new ByProjectKeyMeSignupPost(apiHttpClient, projectKey, myCustomerDraft);
     }
 
+    public ByProjectKeyMeSignupPostString post(final String myCustomerDraft) {
+        return new ByProjectKeyMeSignupPostString(apiHttpClient, projectKey, myCustomerDraft);
+    }
+
     public ByProjectKeyMeSignupPost post(UnaryOperator<com.commercetools.api.models.me.MyCustomerDraftBuilder> op) {
         return post(op.apply(com.commercetools.api.models.me.MyCustomerDraftBuilder.of()).build());
     }

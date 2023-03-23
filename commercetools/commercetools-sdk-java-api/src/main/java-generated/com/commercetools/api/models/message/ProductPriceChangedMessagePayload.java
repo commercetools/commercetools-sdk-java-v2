@@ -38,6 +38,7 @@ public interface ProductPriceChangedMessagePayload extends MessagePayload {
 
     /**
      *  <p>Unique identifier of the ProductVariant for which the Price was changed.</p>
+     * @return variantId
      */
     @NotNull
     @JsonProperty("variantId")
@@ -45,6 +46,7 @@ public interface ProductPriceChangedMessagePayload extends MessagePayload {
 
     /**
      *  <p>The current Embedded Price before the Change Embedded Price update action.</p>
+     * @return oldPrice
      */
     @NotNull
     @Valid
@@ -53,6 +55,7 @@ public interface ProductPriceChangedMessagePayload extends MessagePayload {
 
     /**
      *  <p>The Embedded Price after the Change Embedded Price update action.</p>
+     * @return newPrice
      */
     @NotNull
     @Valid
@@ -61,6 +64,7 @@ public interface ProductPriceChangedMessagePayload extends MessagePayload {
 
     /**
      *  <p>Whether the update was only applied to the staged Product Projection.</p>
+     * @return staged
      */
     @NotNull
     @JsonProperty("staged")
@@ -68,6 +72,7 @@ public interface ProductPriceChangedMessagePayload extends MessagePayload {
 
     /**
      *  <p>The staged Embedded Price before the Change Embedded Price update action.</p>
+     * @return oldStagedPrice
      */
     @Valid
     @JsonProperty("oldStagedPrice")

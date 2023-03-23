@@ -35,6 +35,8 @@ public class AddBillingAddressIdChangeBuilder implements Builder<AddBillingAddre
 
     /**
      *  <p>Update action for <code>addBillingAddressId</code> action on customers.</p>
+     * @param change
+     * @return Builder
      */
 
     public AddBillingAddressIdChangeBuilder change(final String change) {
@@ -44,6 +46,8 @@ public class AddBillingAddressIdChangeBuilder implements Builder<AddBillingAddre
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public AddBillingAddressIdChangeBuilder nextValue(final String... nextValue) {
@@ -53,6 +57,8 @@ public class AddBillingAddressIdChangeBuilder implements Builder<AddBillingAddre
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public AddBillingAddressIdChangeBuilder nextValue(final java.util.List<String> nextValue) {
@@ -62,6 +68,8 @@ public class AddBillingAddressIdChangeBuilder implements Builder<AddBillingAddre
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public AddBillingAddressIdChangeBuilder plusNextValue(final String... nextValue) {
@@ -74,6 +82,8 @@ public class AddBillingAddressIdChangeBuilder implements Builder<AddBillingAddre
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public AddBillingAddressIdChangeBuilder previousValue(final String... previousValue) {
@@ -83,6 +93,8 @@ public class AddBillingAddressIdChangeBuilder implements Builder<AddBillingAddre
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public AddBillingAddressIdChangeBuilder previousValue(final java.util.List<String> previousValue) {
@@ -92,6 +104,8 @@ public class AddBillingAddressIdChangeBuilder implements Builder<AddBillingAddre
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public AddBillingAddressIdChangeBuilder plusPreviousValue(final String... previousValue) {
@@ -104,6 +118,7 @@ public class AddBillingAddressIdChangeBuilder implements Builder<AddBillingAddre
 
     /**
      *
+     * @return Builder
      */
 
     public AddBillingAddressIdChangeBuilder address(
@@ -114,6 +129,8 @@ public class AddBillingAddressIdChangeBuilder implements Builder<AddBillingAddre
 
     /**
      *
+     * @param address
+     * @return Builder
      */
 
     public AddBillingAddressIdChangeBuilder address(final com.commercetools.history.models.common.Address address) {

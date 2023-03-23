@@ -42,6 +42,7 @@ public interface PaymentCreatedMessage extends Message {
 
     /**
      *  <p>Payment that was created.</p>
+     * @return payment
      */
     @NotNull
     @Valid

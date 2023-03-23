@@ -35,6 +35,7 @@ public interface ProductTypeChangeLocalizedEnumValueOrderAction extends ProductT
 
     /**
      *  <p>Name of the AttributeDefinition to update.</p>
+     * @return attributeName
      */
     @NotNull
     @JsonProperty("attributeName")
@@ -42,6 +43,7 @@ public interface ProductTypeChangeLocalizedEnumValueOrderAction extends ProductT
 
     /**
      *  <p>Values must be equal to the values of the Attribute enum values (except for the order). If not, an EnumValuesMustMatch error is returned.</p>
+     * @return values
      */
     @NotNull
     @Valid

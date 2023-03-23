@@ -44,6 +44,8 @@ public class ProductPriceExternalDiscountSetMessagePayloadBuilder
 
     /**
      *  <p>Unique identifier of the Product Variant for which the Discount was set.</p>
+     * @param variantId
+     * @return Builder
      */
 
     public ProductPriceExternalDiscountSetMessagePayloadBuilder variantId(final Integer variantId) {
@@ -53,6 +55,8 @@ public class ProductPriceExternalDiscountSetMessagePayloadBuilder
 
     /**
      *  <p>Key of the Product Variant for which the Discount was set.</p>
+     * @param variantKey
+     * @return Builder
      */
 
     public ProductPriceExternalDiscountSetMessagePayloadBuilder variantKey(@Nullable final String variantKey) {
@@ -62,6 +66,8 @@ public class ProductPriceExternalDiscountSetMessagePayloadBuilder
 
     /**
      *  <p>SKU of the Product Variant for which Discount was set.</p>
+     * @param sku
+     * @return Builder
      */
 
     public ProductPriceExternalDiscountSetMessagePayloadBuilder sku(@Nullable final String sku) {
@@ -71,6 +77,8 @@ public class ProductPriceExternalDiscountSetMessagePayloadBuilder
 
     /**
      *  <p>Unique identifier of the Price.</p>
+     * @param priceId
+     * @return Builder
      */
 
     public ProductPriceExternalDiscountSetMessagePayloadBuilder priceId(final String priceId) {
@@ -80,6 +88,7 @@ public class ProductPriceExternalDiscountSetMessagePayloadBuilder
 
     /**
      *  <p>Discounted Price for the Product Variant for which Discount was set.</p>
+     * @return Builder
      */
 
     public ProductPriceExternalDiscountSetMessagePayloadBuilder discounted(
@@ -90,6 +99,8 @@ public class ProductPriceExternalDiscountSetMessagePayloadBuilder
 
     /**
      *  <p>Discounted Price for the Product Variant for which Discount was set.</p>
+     * @param discounted
+     * @return Builder
      */
 
     public ProductPriceExternalDiscountSetMessagePayloadBuilder discounted(
@@ -100,6 +111,8 @@ public class ProductPriceExternalDiscountSetMessagePayloadBuilder
 
     /**
      *  <p>Whether the update was only applied to the staged Product Projection.</p>
+     * @param staged
+     * @return Builder
      */
 
     public ProductPriceExternalDiscountSetMessagePayloadBuilder staged(final Boolean staged) {

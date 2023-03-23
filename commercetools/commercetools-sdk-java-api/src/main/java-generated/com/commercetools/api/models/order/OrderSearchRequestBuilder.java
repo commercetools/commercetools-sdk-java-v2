@@ -37,6 +37,7 @@ public class OrderSearchRequestBuilder implements Builder<OrderSearchRequest> {
 
     /**
      *  <p>The Order search query.</p>
+     * @return Builder
      */
 
     public OrderSearchRequestBuilder query(
@@ -47,6 +48,8 @@ public class OrderSearchRequestBuilder implements Builder<OrderSearchRequest> {
 
     /**
      *  <p>The Order search query.</p>
+     * @param query
+     * @return Builder
      */
 
     public OrderSearchRequestBuilder query(final com.commercetools.api.models.order.OrderSearchQuery query) {
@@ -56,6 +59,8 @@ public class OrderSearchRequestBuilder implements Builder<OrderSearchRequest> {
 
     /**
      *  <p>Controls how results to your query are sorted. If not provided, the results are sorted by relevance in descending order.</p>
+     * @param sort
+     * @return Builder
      */
 
     public OrderSearchRequestBuilder sort(
@@ -66,6 +71,8 @@ public class OrderSearchRequestBuilder implements Builder<OrderSearchRequest> {
 
     /**
      *  <p>Controls how results to your query are sorted. If not provided, the results are sorted by relevance in descending order.</p>
+     * @param sort
+     * @return Builder
      */
 
     public OrderSearchRequestBuilder sort(
@@ -76,6 +83,8 @@ public class OrderSearchRequestBuilder implements Builder<OrderSearchRequest> {
 
     /**
      *  <p>Controls how results to your query are sorted. If not provided, the results are sorted by relevance in descending order.</p>
+     * @param sort
+     * @return Builder
      */
 
     public OrderSearchRequestBuilder plusSort(
@@ -89,6 +98,7 @@ public class OrderSearchRequestBuilder implements Builder<OrderSearchRequest> {
 
     /**
      *  <p>Controls how results to your query are sorted. If not provided, the results are sorted by relevance in descending order.</p>
+     * @return Builder
      */
 
     public OrderSearchRequestBuilder plusSort(
@@ -102,6 +112,7 @@ public class OrderSearchRequestBuilder implements Builder<OrderSearchRequest> {
 
     /**
      *  <p>Controls how results to your query are sorted. If not provided, the results are sorted by relevance in descending order.</p>
+     * @return Builder
      */
 
     public OrderSearchRequestBuilder withSort(
@@ -113,6 +124,8 @@ public class OrderSearchRequestBuilder implements Builder<OrderSearchRequest> {
 
     /**
      *  <p>The maximum number of search results to be returned.</p>
+     * @param limit
+     * @return Builder
      */
 
     public OrderSearchRequestBuilder limit(@Nullable final Integer limit) {
@@ -122,6 +135,8 @@ public class OrderSearchRequestBuilder implements Builder<OrderSearchRequest> {
 
     /**
      *  <p>The number of search results to be skipped in the response for pagination.</p>
+     * @param offset
+     * @return Builder
      */
 
     public OrderSearchRequestBuilder offset(@Nullable final Integer offset) {

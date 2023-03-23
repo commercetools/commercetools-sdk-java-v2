@@ -79,4 +79,5 @@ public interface ShippingMode {
     public static ShippingMode[] values() {
         return ShippingModeEnum.values();
     }
+
 }

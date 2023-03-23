@@ -33,6 +33,7 @@ public interface ImportSummary {
 
     /**
      *  <p>The import status of an ImportContainer given by the number of resources in each Processing State.</p>
+     * @return states
      */
     @NotNull
     @Valid
@@ -41,6 +42,7 @@ public interface ImportSummary {
 
     /**
      *  <p>The total number of ImportOperations received for this Import Summary.</p>
+     * @return total
      */
     @NotNull
     @JsonProperty("total")

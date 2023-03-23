@@ -32,6 +32,8 @@ public class ChangeLocalizedDescriptionChangeBuilder implements Builder<ChangeLo
 
     /**
      *  <p>Shape of the action for <code>changeDescription</code></p>
+     * @param change
+     * @return Builder
      */
 
     public ChangeLocalizedDescriptionChangeBuilder change(final String change) {
@@ -41,6 +43,7 @@ public class ChangeLocalizedDescriptionChangeBuilder implements Builder<ChangeLo
 
     /**
      *
+     * @return Builder
      */
 
     public ChangeLocalizedDescriptionChangeBuilder previousValue(
@@ -51,6 +54,8 @@ public class ChangeLocalizedDescriptionChangeBuilder implements Builder<ChangeLo
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public ChangeLocalizedDescriptionChangeBuilder previousValue(
@@ -61,6 +66,7 @@ public class ChangeLocalizedDescriptionChangeBuilder implements Builder<ChangeLo
 
     /**
      *
+     * @return Builder
      */
 
     public ChangeLocalizedDescriptionChangeBuilder nextValue(
@@ -71,6 +77,8 @@ public class ChangeLocalizedDescriptionChangeBuilder implements Builder<ChangeLo
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public ChangeLocalizedDescriptionChangeBuilder nextValue(

@@ -42,6 +42,7 @@ public interface BusinessUnitStoreRemovedMessage extends Message {
 
     /**
      *  <p>The Store that was removed from the Business Unit.</p>
+     * @return store
      */
     @NotNull
     @Valid

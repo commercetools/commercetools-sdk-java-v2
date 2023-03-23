@@ -32,6 +32,8 @@ public class SetStoreChangeBuilder implements Builder<SetStoreChange> {
 
     /**
      *  <p>Shape of the action for <code>setStore</code></p>
+     * @param change
+     * @return Builder
      */
 
     public SetStoreChangeBuilder change(final String change) {
@@ -41,6 +43,7 @@ public class SetStoreChangeBuilder implements Builder<SetStoreChange> {
 
     /**
      *
+     * @return Builder
      */
 
     public SetStoreChangeBuilder previousValue(
@@ -51,6 +54,8 @@ public class SetStoreChangeBuilder implements Builder<SetStoreChange> {
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public SetStoreChangeBuilder previousValue(final com.commercetools.history.models.common.Reference previousValue) {
@@ -60,6 +65,7 @@ public class SetStoreChangeBuilder implements Builder<SetStoreChange> {
 
     /**
      *
+     * @return Builder
      */
 
     public SetStoreChangeBuilder nextValue(
@@ -70,6 +76,8 @@ public class SetStoreChangeBuilder implements Builder<SetStoreChange> {
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public SetStoreChangeBuilder nextValue(final com.commercetools.history.models.common.Reference nextValue) {

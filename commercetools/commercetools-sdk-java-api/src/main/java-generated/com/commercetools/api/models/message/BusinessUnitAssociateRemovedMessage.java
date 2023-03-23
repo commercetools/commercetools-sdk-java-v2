@@ -42,6 +42,7 @@ public interface BusinessUnitAssociateRemovedMessage extends Message {
 
     /**
      *  <p>The Associate that was removed from the Business Unit.</p>
+     * @return associate
      */
     @NotNull
     @Valid

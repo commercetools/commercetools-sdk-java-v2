@@ -26,6 +26,7 @@ public class StagedQuoteCreatedMessagePayloadBuilder implements Builder<StagedQu
 
     /**
      *  <p>Staged Quote that was created.</p>
+     * @return Builder
      */
 
     public StagedQuoteCreatedMessagePayloadBuilder stagedQuote(
@@ -36,6 +37,8 @@ public class StagedQuoteCreatedMessagePayloadBuilder implements Builder<StagedQu
 
     /**
      *  <p>Staged Quote that was created.</p>
+     * @param stagedQuote
+     * @return Builder
      */
 
     public StagedQuoteCreatedMessagePayloadBuilder stagedQuote(

@@ -31,6 +31,7 @@ public interface ResourceUpdateError extends ErrorObject {
 
     /**
      *
+     * @return resource
      */
 
     @JsonProperty("resource")

@@ -30,4 +30,5 @@ public interface VersionedTrait<T extends VersionedTrait<T>> {
     default T asVersionedTraitToBaseType() {
         return (T) this;
     }
+
 }

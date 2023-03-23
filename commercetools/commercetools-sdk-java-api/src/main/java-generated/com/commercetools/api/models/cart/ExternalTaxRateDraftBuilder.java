@@ -30,6 +30,9 @@ public class ExternalTaxRateDraftBuilder implements Builder<ExternalTaxRateDraft
     @Nullable
     private Double amount;
 
+    @Nullable
+    private Boolean includedInPrice;
+
     private String country;
 
     @Nullable
@@ -38,11 +41,10 @@ public class ExternalTaxRateDraftBuilder implements Builder<ExternalTaxRateDraft
     @Nullable
     private java.util.List<com.commercetools.api.models.tax_category.SubRate> subRates;
 
-    @Nullable
-    private Boolean includedInPrice;
-
     /**
-     *
+     *  <p>Name of the Tax Rate.</p>
+     * @param name
+     * @return Builder
      */
 
     public ExternalTaxRateDraftBuilder name(final String name) {
@@ -51,7 +53,13 @@ public class ExternalTaxRateDraftBuilder implements Builder<ExternalTaxRateDraft
     }
 
     /**
-     *  <p>Percentage in the range of [0..1]. Must be supplied if no <code>subRates</code> are specified. If <code>subRates</code> are specified then the <code>amount</code> can be omitted or it must be the sum of the amounts of all <code>subRates</code>.</p>
+     *  <p>Percentage in the range of 0-1.</p>
+     *  <ul>
+     *   <li>If no <code>subRates</code> are specified, a value must be defined.</li>
+     *   <li>If <code>subRates</code> are specified, this can be omitted or its value must be the sum of all <code>subRates</code> amounts.</li>
+     *  </ul>
+     * @param amount
+     * @return Builder
      */
 
     public ExternalTaxRateDraftBuilder amount(@Nullable final Double amount) {
@@ -60,7 +68,23 @@ public class ExternalTaxRateDraftBuilder implements Builder<ExternalTaxRateDraft
     }
 
     /**
-     *  <p>A two-digit country code as per ISO 3166-1 alpha-2.</p>
+     *  <ul>
+     *   <li>If set to <code>false</code>, the related price is considered the net price and the provided <code>amount</code> is applied to calculate the gross price.</li>
+     *   <li>If set to <code>true</code>, the related price is considered the gross price, and the provided <code>amount</code> is applied to calculate the net price.</li>
+     *  </ul>
+     * @param includedInPrice
+     * @return Builder
+     */
+
+    public ExternalTaxRateDraftBuilder includedInPrice(@Nullable final Boolean includedInPrice) {
+        this.includedInPrice = includedInPrice;
+        return this;
+    }
+
+    /**
+     *  <p>Country for which the tax applies.</p>
+     * @param country
+     * @return Builder
      */
 
     public ExternalTaxRateDraftBuilder country(final String country) {
@@ -69,7 +93,9 @@ public class ExternalTaxRateDraftBuilder implements Builder<ExternalTaxRateDraft
     }
 
     /**
-     *  <p>The state in the country</p>
+     *  <p>State within the specified country.</p>
+     * @param state
+     * @return Builder
      */
 
     public ExternalTaxRateDraftBuilder state(@Nullable final String state) {
@@ -78,7 +104,9 @@ public class ExternalTaxRateDraftBuilder implements Builder<ExternalTaxRateDraft
     }
 
     /**
-     *  <p>For countries (e.g. the US) where the total tax is a combination of multiple taxes (e.g. state and local taxes).</p>
+     *  <p>For countries (such as the US) where the total tax is a combination of multiple taxes (such as state and local taxes).</p>
+     * @param subRates
+     * @return Builder
      */
 
     public ExternalTaxRateDraftBuilder subRates(
@@ -88,7 +116,9 @@ public class ExternalTaxRateDraftBuilder implements Builder<ExternalTaxRateDraft
     }
 
     /**
-     *  <p>For countries (e.g. the US) where the total tax is a combination of multiple taxes (e.g. state and local taxes).</p>
+     *  <p>For countries (such as the US) where the total tax is a combination of multiple taxes (such as state and local taxes).</p>
+     * @param subRates
+     * @return Builder
      */
 
     public ExternalTaxRateDraftBuilder subRates(
@@ -98,7 +128,9 @@ public class ExternalTaxRateDraftBuilder implements Builder<ExternalTaxRateDraft
     }
 
     /**
-     *  <p>For countries (e.g. the US) where the total tax is a combination of multiple taxes (e.g. state and local taxes).</p>
+     *  <p>For countries (such as the US) where the total tax is a combination of multiple taxes (such as state and local taxes).</p>
+     * @param subRates
+     * @return Builder
      */
 
     public ExternalTaxRateDraftBuilder plusSubRates(
@@ -111,7 +143,8 @@ public class ExternalTaxRateDraftBuilder implements Builder<ExternalTaxRateDraft
     }
 
     /**
-     *  <p>For countries (e.g. the US) where the total tax is a combination of multiple taxes (e.g. state and local taxes).</p>
+     *  <p>For countries (such as the US) where the total tax is a combination of multiple taxes (such as state and local taxes).</p>
+     * @return Builder
      */
 
     public ExternalTaxRateDraftBuilder plusSubRates(
@@ -124,22 +157,14 @@ public class ExternalTaxRateDraftBuilder implements Builder<ExternalTaxRateDraft
     }
 
     /**
-     *  <p>For countries (e.g. the US) where the total tax is a combination of multiple taxes (e.g. state and local taxes).</p>
+     *  <p>For countries (such as the US) where the total tax is a combination of multiple taxes (such as state and local taxes).</p>
+     * @return Builder
      */
 
     public ExternalTaxRateDraftBuilder withSubRates(
             Function<com.commercetools.api.models.tax_category.SubRateBuilder, com.commercetools.api.models.tax_category.SubRateBuilder> builder) {
         this.subRates = new ArrayList<>();
         this.subRates.add(builder.apply(com.commercetools.api.models.tax_category.SubRateBuilder.of()).build());
-        return this;
-    }
-
-    /**
-     *  <p>The default value for <code>includedInPrice</code> is FALSE.</p>
-     */
-
-    public ExternalTaxRateDraftBuilder includedInPrice(@Nullable final Boolean includedInPrice) {
-        this.includedInPrice = includedInPrice;
         return this;
     }
 
@@ -150,6 +175,11 @@ public class ExternalTaxRateDraftBuilder implements Builder<ExternalTaxRateDraft
     @Nullable
     public Double getAmount() {
         return this.amount;
+    }
+
+    @Nullable
+    public Boolean getIncludedInPrice() {
+        return this.includedInPrice;
     }
 
     public String getCountry() {
@@ -166,22 +196,17 @@ public class ExternalTaxRateDraftBuilder implements Builder<ExternalTaxRateDraft
         return this.subRates;
     }
 
-    @Nullable
-    public Boolean getIncludedInPrice() {
-        return this.includedInPrice;
-    }
-
     public ExternalTaxRateDraft build() {
         Objects.requireNonNull(name, ExternalTaxRateDraft.class + ": name is missing");
         Objects.requireNonNull(country, ExternalTaxRateDraft.class + ": country is missing");
-        return new ExternalTaxRateDraftImpl(name, amount, country, state, subRates, includedInPrice);
+        return new ExternalTaxRateDraftImpl(name, amount, includedInPrice, country, state, subRates);
     }
 
     /**
      * builds ExternalTaxRateDraft without checking for non null required values
      */
     public ExternalTaxRateDraft buildUnchecked() {
-        return new ExternalTaxRateDraftImpl(name, amount, country, state, subRates, includedInPrice);
+        return new ExternalTaxRateDraftImpl(name, amount, includedInPrice, country, state, subRates);
     }
 
     public static ExternalTaxRateDraftBuilder of() {
@@ -192,10 +217,10 @@ public class ExternalTaxRateDraftBuilder implements Builder<ExternalTaxRateDraft
         ExternalTaxRateDraftBuilder builder = new ExternalTaxRateDraftBuilder();
         builder.name = template.getName();
         builder.amount = template.getAmount();
+        builder.includedInPrice = template.getIncludedInPrice();
         builder.country = template.getCountry();
         builder.state = template.getState();
         builder.subRates = template.getSubRates();
-        builder.includedInPrice = template.getIncludedInPrice();
         return builder;
     }
 

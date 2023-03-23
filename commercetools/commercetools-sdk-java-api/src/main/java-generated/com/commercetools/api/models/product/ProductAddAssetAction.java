@@ -35,6 +35,7 @@ public interface ProductAddAssetAction extends ProductUpdateAction {
 
     /**
      *  <p>The <code>id</code> of the ProductVariant to update.</p>
+     * @return variantId
      */
 
     @JsonProperty("variantId")
@@ -42,6 +43,7 @@ public interface ProductAddAssetAction extends ProductUpdateAction {
 
     /**
      *  <p>The <code>sku</code> of the ProductVariant to update.</p>
+     * @return sku
      */
 
     @JsonProperty("sku")
@@ -49,6 +51,7 @@ public interface ProductAddAssetAction extends ProductUpdateAction {
 
     /**
      *  <p>If <code>true</code>, only the staged <code>assets</code> are updated. If <code>false</code>, both the current and staged <code>assets</code> are updated.</p>
+     * @return staged
      */
 
     @JsonProperty("staged")
@@ -56,6 +59,7 @@ public interface ProductAddAssetAction extends ProductUpdateAction {
 
     /**
      *  <p>Value to append.</p>
+     * @return asset
      */
     @NotNull
     @Valid
@@ -64,6 +68,7 @@ public interface ProductAddAssetAction extends ProductUpdateAction {
 
     /**
      *  <p>Position in <code>assets</code> where the Asset should be put. When specified, the value must be between <code>0</code> and the total number of Assets minus <code>1</code>.</p>
+     * @return position
      */
 
     @JsonProperty("position")

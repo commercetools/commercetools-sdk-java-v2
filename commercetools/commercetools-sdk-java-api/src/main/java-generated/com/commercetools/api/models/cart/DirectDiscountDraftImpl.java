@@ -15,7 +15,9 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * DirectDiscountDraft
+ *  <p>Represents a CartDiscount that can only be associated with a single Cart or Order.</p>
+ *  <p>Direct Discounts are always active and valid, and have the default <code>Stacking</code> StackingMode. They apply in the order in which they are listed in the <code>directDiscounts</code> array of Carts or Orders, and do not have a sorting order like Cart Discounts.</p>
+ *  <p>If a Direct Discount is present, any matching Cart Discounts in the Project are ignored. Additionally, a Cart or Order supports either Discount Codes or Direct Discounts at the same time.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class DirectDiscountDraftImpl implements DirectDiscountDraft, ModelBase {
@@ -36,7 +38,7 @@ public class DirectDiscountDraftImpl implements DirectDiscountDraft, ModelBase {
     }
 
     /**
-     *
+     *  <p>Defines the effect the Discount will have.</p>
      */
 
     public com.commercetools.api.models.cart_discount.CartDiscountValue getValue() {
@@ -44,7 +46,8 @@ public class DirectDiscountDraftImpl implements DirectDiscountDraft, ModelBase {
     }
 
     /**
-     *  <p>Empty when the <code>value</code> has type <code>giftLineItem</code>, otherwise a CartDiscountTarget is set.</p>
+     *  <p>Defines what part of the Cart will be discounted.</p>
+     *  <p>If <code>value</code> is set to <code>giftLineItem</code>, this must not be set.</p>
      */
 
     public com.commercetools.api.models.cart_discount.CartDiscountTarget getTarget() {

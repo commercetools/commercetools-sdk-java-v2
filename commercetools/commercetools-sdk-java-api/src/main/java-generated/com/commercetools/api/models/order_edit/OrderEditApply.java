@@ -32,6 +32,7 @@ public interface OrderEditApply {
 
     /**
      *
+     * @return editVersion
      */
     @NotNull
     @JsonProperty("editVersion")
@@ -39,6 +40,7 @@ public interface OrderEditApply {
 
     /**
      *
+     * @return resourceVersion
      */
     @NotNull
     @JsonProperty("resourceVersion")

@@ -41,6 +41,8 @@ public class SetLineItemProductKeyChangeBuilder implements Builder<SetLineItemPr
 
     /**
      *  <p>Update action for <code>setLineItemProductKey</code></p>
+     * @param change
+     * @return Builder
      */
 
     public SetLineItemProductKeyChangeBuilder change(final String change) {
@@ -50,6 +52,7 @@ public class SetLineItemProductKeyChangeBuilder implements Builder<SetLineItemPr
 
     /**
      *
+     * @return Builder
      */
 
     public SetLineItemProductKeyChangeBuilder lineItem(
@@ -60,6 +63,8 @@ public class SetLineItemProductKeyChangeBuilder implements Builder<SetLineItemPr
 
     /**
      *
+     * @param lineItem
+     * @return Builder
      */
 
     public SetLineItemProductKeyChangeBuilder lineItem(
@@ -70,6 +75,8 @@ public class SetLineItemProductKeyChangeBuilder implements Builder<SetLineItemPr
 
     /**
      *
+     * @param lineItemId
+     * @return Builder
      */
 
     public SetLineItemProductKeyChangeBuilder lineItemId(final String lineItemId) {
@@ -79,6 +86,8 @@ public class SetLineItemProductKeyChangeBuilder implements Builder<SetLineItemPr
 
     /**
      *
+     * @param variant
+     * @return Builder
      */
 
     public SetLineItemProductKeyChangeBuilder variant(final String variant) {
@@ -88,6 +97,8 @@ public class SetLineItemProductKeyChangeBuilder implements Builder<SetLineItemPr
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public SetLineItemProductKeyChangeBuilder previousValue(final String previousValue) {
@@ -97,6 +108,8 @@ public class SetLineItemProductKeyChangeBuilder implements Builder<SetLineItemPr
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public SetLineItemProductKeyChangeBuilder nextValue(final String nextValue) {

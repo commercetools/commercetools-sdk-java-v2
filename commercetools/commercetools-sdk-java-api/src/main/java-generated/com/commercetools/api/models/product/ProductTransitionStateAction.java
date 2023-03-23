@@ -33,6 +33,7 @@ public interface ProductTransitionStateAction extends ProductUpdateAction {
 
     /**
      *  <p>The State to transition to. If there is no existing State, this must be an initial State.</p>
+     * @return state
      */
     @Valid
     @JsonProperty("state")
@@ -40,6 +41,7 @@ public interface ProductTransitionStateAction extends ProductUpdateAction {
 
     /**
      *  <p>If <code>true</code>, validations are disabled.</p>
+     * @return force
      */
 
     @JsonProperty("force")

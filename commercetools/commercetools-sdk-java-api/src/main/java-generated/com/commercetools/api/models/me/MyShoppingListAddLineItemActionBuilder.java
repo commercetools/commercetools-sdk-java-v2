@@ -43,6 +43,8 @@ public class MyShoppingListAddLineItemActionBuilder implements Builder<MyShoppin
 
     /**
      *  <p><code>sku</code> of the ProductVariant.</p>
+     * @param sku
+     * @return Builder
      */
 
     public MyShoppingListAddLineItemActionBuilder sku(@Nullable final String sku) {
@@ -52,6 +54,8 @@ public class MyShoppingListAddLineItemActionBuilder implements Builder<MyShoppin
 
     /**
      *  <p>Unique identifier of a Product.</p>
+     * @param productId
+     * @return Builder
      */
 
     public MyShoppingListAddLineItemActionBuilder productId(@Nullable final String productId) {
@@ -61,6 +65,8 @@ public class MyShoppingListAddLineItemActionBuilder implements Builder<MyShoppin
 
     /**
      *  <p><code>id</code> of the ProductVariant. If not set, the ShoppingListLineItem refers to the Master Variant.</p>
+     * @param variantId
+     * @return Builder
      */
 
     public MyShoppingListAddLineItemActionBuilder variantId(@Nullable final Long variantId) {
@@ -70,6 +76,8 @@ public class MyShoppingListAddLineItemActionBuilder implements Builder<MyShoppin
 
     /**
      *  <p>Number of Products in the ShoppingListLineItem.</p>
+     * @param quantity
+     * @return Builder
      */
 
     public MyShoppingListAddLineItemActionBuilder quantity(@Nullable final Long quantity) {
@@ -79,6 +87,8 @@ public class MyShoppingListAddLineItemActionBuilder implements Builder<MyShoppin
 
     /**
      *  <p>Date and time the TextLineItem is added to the ShoppingList. If not set, the current date and time (UTC) is used.</p>
+     * @param addedAt
+     * @return Builder
      */
 
     public MyShoppingListAddLineItemActionBuilder addedAt(@Nullable final java.time.ZonedDateTime addedAt) {
@@ -88,6 +98,7 @@ public class MyShoppingListAddLineItemActionBuilder implements Builder<MyShoppin
 
     /**
      *  <p>Custom Fields defined for the ShoppingListLineItem.</p>
+     * @return Builder
      */
 
     public MyShoppingListAddLineItemActionBuilder custom(
@@ -98,6 +109,8 @@ public class MyShoppingListAddLineItemActionBuilder implements Builder<MyShoppin
 
     /**
      *  <p>Custom Fields defined for the ShoppingListLineItem.</p>
+     * @param custom
+     * @return Builder
      */
 
     public MyShoppingListAddLineItemActionBuilder custom(

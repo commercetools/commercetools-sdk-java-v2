@@ -14,7 +14,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 /**
  *  <p>Returned when Line Item or Custom Line Item quantities set under ItemShippingDetails do not match the sum of the quantities in their respective shipping details.</p>
- *  <p>The error is returned as a failed response to the Create Order from Cart and Create Order from Cart in a Store requests.</p>
+ *  <p>The error is returned as a failed response to the Create Order from Cart and Create Order in Store from Cart requests.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -36,6 +36,7 @@ public interface InvalidItemShippingDetailsError extends ErrorObject {
 
     /**
      *
+     * @return code
      */
     @NotNull
     @JsonProperty("code")
@@ -43,6 +44,7 @@ public interface InvalidItemShippingDetailsError extends ErrorObject {
 
     /**
      *  <p><code>"Inconsistent shipping details for $subject with ID $itemId. $subject quantity is $itemQuantity and shippingTargets quantity sum is $quantitySum."</code></p>
+     * @return message
      */
     @NotNull
     @JsonProperty("message")
@@ -50,6 +52,7 @@ public interface InvalidItemShippingDetailsError extends ErrorObject {
 
     /**
      *  <p><code>"LineItem"</code> or <code>"CustomLineItem"</code></p>
+     * @return subject
      */
     @NotNull
     @JsonProperty("subject")
@@ -57,6 +60,7 @@ public interface InvalidItemShippingDetailsError extends ErrorObject {
 
     /**
      *  <p>Unique identifier of the Line Item or Custom Line Item.</p>
+     * @return itemId
      */
     @NotNull
     @JsonProperty("itemId")

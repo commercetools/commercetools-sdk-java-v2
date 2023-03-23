@@ -34,6 +34,7 @@ public interface BaseResource {
 
     /**
      *
+     * @return id
      */
     @NotNull
     @JsonProperty("id")
@@ -41,6 +42,7 @@ public interface BaseResource {
 
     /**
      *
+     * @return version
      */
     @NotNull
     @JsonProperty("version")
@@ -48,6 +50,7 @@ public interface BaseResource {
 
     /**
      *
+     * @return createdAt
      */
     @NotNull
     @JsonProperty("createdAt")
@@ -55,6 +58,7 @@ public interface BaseResource {
 
     /**
      *
+     * @return lastModifiedAt
      */
     @NotNull
     @JsonProperty("lastModifiedAt")

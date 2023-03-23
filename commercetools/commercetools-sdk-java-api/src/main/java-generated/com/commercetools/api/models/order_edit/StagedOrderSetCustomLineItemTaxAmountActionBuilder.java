@@ -32,6 +32,8 @@ public class StagedOrderSetCustomLineItemTaxAmountActionBuilder
 
     /**
      *
+     * @param customLineItemId
+     * @return Builder
      */
 
     public StagedOrderSetCustomLineItemTaxAmountActionBuilder customLineItemId(final String customLineItemId) {
@@ -40,7 +42,13 @@ public class StagedOrderSetCustomLineItemTaxAmountActionBuilder
     }
 
     /**
-     *
+     *  <p>Cannot be used in LineItemDraft or CustomLineItemDraft.</p>
+     *  <p>Can only be set by these update actions:</p>
+     *  <ul>
+     *   <li>Set LineItem TaxAmount, Set CustomLineItem TaxAmount, or Set ShippingMethod TaxAmount on Carts</li>
+     *   <li>Set LineItem TaxAmount, Set CustomLineItem TaxAmount, or Set ShippingMethod TaxAmount on Order Edits</li>
+     *  </ul>
+     * @return Builder
      */
 
     public StagedOrderSetCustomLineItemTaxAmountActionBuilder externalTaxAmount(
@@ -51,7 +59,14 @@ public class StagedOrderSetCustomLineItemTaxAmountActionBuilder
     }
 
     /**
-     *
+     *  <p>Cannot be used in LineItemDraft or CustomLineItemDraft.</p>
+     *  <p>Can only be set by these update actions:</p>
+     *  <ul>
+     *   <li>Set LineItem TaxAmount, Set CustomLineItem TaxAmount, or Set ShippingMethod TaxAmount on Carts</li>
+     *   <li>Set LineItem TaxAmount, Set CustomLineItem TaxAmount, or Set ShippingMethod TaxAmount on Order Edits</li>
+     *  </ul>
+     * @param externalTaxAmount
+     * @return Builder
      */
 
     public StagedOrderSetCustomLineItemTaxAmountActionBuilder externalTaxAmount(

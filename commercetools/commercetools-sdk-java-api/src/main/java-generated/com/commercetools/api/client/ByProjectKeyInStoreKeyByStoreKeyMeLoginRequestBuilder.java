@@ -25,6 +25,11 @@ public class ByProjectKeyInStoreKeyByStoreKeyMeLoginRequestBuilder {
         return new ByProjectKeyInStoreKeyByStoreKeyMeLoginPost(apiHttpClient, projectKey, storeKey, myCustomerSignin);
     }
 
+    public ByProjectKeyInStoreKeyByStoreKeyMeLoginPostString post(final String myCustomerSignin) {
+        return new ByProjectKeyInStoreKeyByStoreKeyMeLoginPostString(apiHttpClient, projectKey, storeKey,
+            myCustomerSignin);
+    }
+
     public ByProjectKeyInStoreKeyByStoreKeyMeLoginPost post(
             UnaryOperator<com.commercetools.api.models.customer.MyCustomerSigninBuilder> op) {
         return post(op.apply(com.commercetools.api.models.customer.MyCustomerSigninBuilder.of()).build());

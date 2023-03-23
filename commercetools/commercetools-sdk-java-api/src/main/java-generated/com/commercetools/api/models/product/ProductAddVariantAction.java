@@ -35,6 +35,7 @@ public interface ProductAddVariantAction extends ProductUpdateAction {
 
     /**
      *  <p>Value to set. Must be unique.</p>
+     * @return sku
      */
 
     @JsonProperty("sku")
@@ -42,6 +43,7 @@ public interface ProductAddVariantAction extends ProductUpdateAction {
 
     /**
      *  <p>Value to set. Must be unique.</p>
+     * @return key
      */
 
     @JsonProperty("key")
@@ -49,6 +51,7 @@ public interface ProductAddVariantAction extends ProductUpdateAction {
 
     /**
      *  <p>Embedded Prices for the Product Variant.</p>
+     * @return prices
      */
     @Valid
     @JsonProperty("prices")
@@ -56,6 +59,7 @@ public interface ProductAddVariantAction extends ProductUpdateAction {
 
     /**
      *  <p>Images for the Product Variant.</p>
+     * @return images
      */
     @Valid
     @JsonProperty("images")
@@ -63,6 +67,7 @@ public interface ProductAddVariantAction extends ProductUpdateAction {
 
     /**
      *  <p>Attributes for the Product Variant.</p>
+     * @return attributes
      */
     @Valid
     @JsonProperty("attributes")
@@ -70,6 +75,7 @@ public interface ProductAddVariantAction extends ProductUpdateAction {
 
     /**
      *  <p>If <code>true</code> the new Product Variant is only staged. If <code>false</code> the new Product Variant is both current and staged.</p>
+     * @return staged
      */
 
     @JsonProperty("staged")
@@ -77,6 +83,7 @@ public interface ProductAddVariantAction extends ProductUpdateAction {
 
     /**
      *  <p>Media assets for the Product Variant.</p>
+     * @return assets
      */
     @Valid
     @JsonProperty("assets")

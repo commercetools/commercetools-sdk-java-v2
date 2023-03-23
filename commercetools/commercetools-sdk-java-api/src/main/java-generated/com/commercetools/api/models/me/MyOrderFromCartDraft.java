@@ -32,6 +32,7 @@ public interface MyOrderFromCartDraft extends io.vrap.rmf.base.client.Draft<MyOr
 
     /**
      *  <p>Unique identifier of the Cart that initiates an Order creation.</p>
+     * @return id
      */
     @NotNull
     @JsonProperty("id")
@@ -39,6 +40,7 @@ public interface MyOrderFromCartDraft extends io.vrap.rmf.base.client.Draft<MyOr
 
     /**
      *
+     * @return version
      */
     @NotNull
     @JsonProperty("version")

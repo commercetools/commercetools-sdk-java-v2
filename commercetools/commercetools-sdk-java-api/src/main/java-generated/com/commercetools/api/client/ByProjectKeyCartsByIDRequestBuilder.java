@@ -28,6 +28,10 @@ public class ByProjectKeyCartsByIDRequestBuilder {
         return new ByProjectKeyCartsByIDPost(apiHttpClient, projectKey, ID, cartUpdate);
     }
 
+    public ByProjectKeyCartsByIDPostString post(final String cartUpdate) {
+        return new ByProjectKeyCartsByIDPostString(apiHttpClient, projectKey, ID, cartUpdate);
+    }
+
     public ByProjectKeyCartsByIDPost post(UnaryOperator<com.commercetools.api.models.cart.CartUpdateBuilder> op) {
         return post(op.apply(com.commercetools.api.models.cart.CartUpdateBuilder.of()).build());
     }

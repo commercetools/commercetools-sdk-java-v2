@@ -29,6 +29,8 @@ public class TypeAddLocalizedEnumValueActionBuilder implements Builder<TypeAddLo
 
     /**
      *  <p><code>name</code> of the FieldDefinition to update.</p>
+     * @param fieldName
+     * @return Builder
      */
 
     public TypeAddLocalizedEnumValueActionBuilder fieldName(final String fieldName) {
@@ -38,6 +40,7 @@ public class TypeAddLocalizedEnumValueActionBuilder implements Builder<TypeAddLo
 
     /**
      *  <p>Value to append to the array.</p>
+     * @return Builder
      */
 
     public TypeAddLocalizedEnumValueActionBuilder value(
@@ -48,6 +51,8 @@ public class TypeAddLocalizedEnumValueActionBuilder implements Builder<TypeAddLo
 
     /**
      *  <p>Value to append to the array.</p>
+     * @param value
+     * @return Builder
      */
 
     public TypeAddLocalizedEnumValueActionBuilder value(

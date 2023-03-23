@@ -30,6 +30,8 @@ public class ShoppingListResourceIdentifierBuilder implements Builder<ShoppingLi
 
     /**
      *  <p>Unique identifier of the referenced ShoppingList. Either <code>id</code> or <code>key</code> is required.</p>
+     * @param id
+     * @return Builder
      */
 
     public ShoppingListResourceIdentifierBuilder id(@Nullable final String id) {
@@ -39,6 +41,8 @@ public class ShoppingListResourceIdentifierBuilder implements Builder<ShoppingLi
 
     /**
      *  <p>User-defined unique identifier of the referenced ShoppingList. Either <code>id</code> or <code>key</code> is required.</p>
+     * @param key
+     * @return Builder
      */
 
     public ShoppingListResourceIdentifierBuilder key(@Nullable final String key) {

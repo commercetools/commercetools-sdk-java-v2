@@ -25,6 +25,8 @@ public class ChannelSetRolesActionBuilder implements Builder<ChannelSetRolesActi
 
     /**
      *  <p>Value to set. If not specified, then <code>InventorySupply</code> is assigned by default.</p>
+     * @param roles
+     * @return Builder
      */
 
     public ChannelSetRolesActionBuilder roles(final com.commercetools.api.models.channel.ChannelRoleEnum... roles) {
@@ -34,6 +36,8 @@ public class ChannelSetRolesActionBuilder implements Builder<ChannelSetRolesActi
 
     /**
      *  <p>Value to set. If not specified, then <code>InventorySupply</code> is assigned by default.</p>
+     * @param roles
+     * @return Builder
      */
 
     public ChannelSetRolesActionBuilder roles(
@@ -44,6 +48,8 @@ public class ChannelSetRolesActionBuilder implements Builder<ChannelSetRolesActi
 
     /**
      *  <p>Value to set. If not specified, then <code>InventorySupply</code> is assigned by default.</p>
+     * @param roles
+     * @return Builder
      */
 
     public ChannelSetRolesActionBuilder plusRoles(final com.commercetools.api.models.channel.ChannelRoleEnum... roles) {

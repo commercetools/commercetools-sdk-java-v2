@@ -31,6 +31,8 @@ public class SetDescriptionChangeBuilder implements Builder<SetDescriptionChange
 
     /**
      *  <p>Shape of the action for <code>setDescription</code></p>
+     * @param change
+     * @return Builder
      */
 
     public SetDescriptionChangeBuilder change(final String change) {
@@ -40,6 +42,8 @@ public class SetDescriptionChangeBuilder implements Builder<SetDescriptionChange
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public SetDescriptionChangeBuilder previousValue(final String previousValue) {
@@ -49,6 +53,8 @@ public class SetDescriptionChangeBuilder implements Builder<SetDescriptionChange
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public SetDescriptionChangeBuilder nextValue(final String nextValue) {

@@ -32,6 +32,7 @@ public interface ReviewResourceIdentifier
 
     /**
      *  <p>Unique identifier of the referenced Review. Either <code>id</code> or <code>key</code> is required.</p>
+     * @return id
      */
 
     @JsonProperty("id")
@@ -39,6 +40,7 @@ public interface ReviewResourceIdentifier
 
     /**
      *  <p>User-defined unique identifier of the referenced Review. Either <code>id</code> or <code>key</code> is required.</p>
+     * @return key
      */
 
     @JsonProperty("key")

@@ -36,6 +36,7 @@ public interface TypeChangeLabelAction extends TypeUpdateAction {
 
     /**
      *  <p>Name of the Field Definition to update.</p>
+     * @return fieldName
      */
     @NotNull
     @JsonProperty("fieldName")
@@ -43,6 +44,7 @@ public interface TypeChangeLabelAction extends TypeUpdateAction {
 
     /**
      *  <p>JSON object where the keys are of type Locale, and the values are the strings used for the corresponding language.</p>
+     * @return label
      */
     @NotNull
     @Valid

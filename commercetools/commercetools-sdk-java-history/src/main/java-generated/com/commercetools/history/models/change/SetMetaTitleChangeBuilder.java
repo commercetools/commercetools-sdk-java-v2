@@ -32,6 +32,8 @@ public class SetMetaTitleChangeBuilder implements Builder<SetMetaTitleChange> {
 
     /**
      *  <p>Shape of the action for <code>setMetaTitle</code></p>
+     * @param change
+     * @return Builder
      */
 
     public SetMetaTitleChangeBuilder change(final String change) {
@@ -41,6 +43,7 @@ public class SetMetaTitleChangeBuilder implements Builder<SetMetaTitleChange> {
 
     /**
      *
+     * @return Builder
      */
 
     public SetMetaTitleChangeBuilder previousValue(
@@ -51,6 +54,8 @@ public class SetMetaTitleChangeBuilder implements Builder<SetMetaTitleChange> {
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public SetMetaTitleChangeBuilder previousValue(
@@ -61,6 +66,7 @@ public class SetMetaTitleChangeBuilder implements Builder<SetMetaTitleChange> {
 
     /**
      *
+     * @return Builder
      */
 
     public SetMetaTitleChangeBuilder nextValue(
@@ -71,6 +77,8 @@ public class SetMetaTitleChangeBuilder implements Builder<SetMetaTitleChange> {
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public SetMetaTitleChangeBuilder nextValue(

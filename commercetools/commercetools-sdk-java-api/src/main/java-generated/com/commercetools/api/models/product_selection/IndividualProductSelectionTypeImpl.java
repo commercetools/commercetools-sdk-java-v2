@@ -36,7 +36,7 @@ public class IndividualProductSelectionTypeImpl implements IndividualProductSele
     }
 
     /**
-     *  <p>The following type of Product Selections is supported:</p>
+     *  <p>The following types of Product Selections are supported:</p>
      */
 
     public com.commercetools.api.models.product_selection.ProductSelectionTypeEnum getType() {

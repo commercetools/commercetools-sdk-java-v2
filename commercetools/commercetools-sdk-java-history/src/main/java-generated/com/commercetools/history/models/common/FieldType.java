@@ -31,6 +31,7 @@ public interface FieldType {
 
     /**
      *
+     * @return name
      */
     @NotNull
     @JsonProperty("name")

@@ -42,6 +42,7 @@ public interface PaymentTransactionStateChangedMessage extends Message {
 
     /**
      *  <p>Unique identifier for the Transaction for which the Transaction State changed.</p>
+     * @return transactionId
      */
     @NotNull
     @JsonProperty("transactionId")
@@ -49,6 +50,7 @@ public interface PaymentTransactionStateChangedMessage extends Message {
 
     /**
      *  <p>Transaction State after the Change Transaction State update action.</p>
+     * @return state
      */
     @NotNull
     @JsonProperty("state")

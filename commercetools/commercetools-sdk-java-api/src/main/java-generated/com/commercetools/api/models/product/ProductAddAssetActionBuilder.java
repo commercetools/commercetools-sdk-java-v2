@@ -40,6 +40,8 @@ public class ProductAddAssetActionBuilder implements Builder<ProductAddAssetActi
 
     /**
      *  <p>The <code>id</code> of the ProductVariant to update.</p>
+     * @param variantId
+     * @return Builder
      */
 
     public ProductAddAssetActionBuilder variantId(@Nullable final Long variantId) {
@@ -49,6 +51,8 @@ public class ProductAddAssetActionBuilder implements Builder<ProductAddAssetActi
 
     /**
      *  <p>The <code>sku</code> of the ProductVariant to update.</p>
+     * @param sku
+     * @return Builder
      */
 
     public ProductAddAssetActionBuilder sku(@Nullable final String sku) {
@@ -58,6 +62,8 @@ public class ProductAddAssetActionBuilder implements Builder<ProductAddAssetActi
 
     /**
      *  <p>If <code>true</code>, only the staged <code>assets</code> are updated. If <code>false</code>, both the current and staged <code>assets</code> are updated.</p>
+     * @param staged
+     * @return Builder
      */
 
     public ProductAddAssetActionBuilder staged(@Nullable final Boolean staged) {
@@ -67,6 +73,7 @@ public class ProductAddAssetActionBuilder implements Builder<ProductAddAssetActi
 
     /**
      *  <p>Value to append.</p>
+     * @return Builder
      */
 
     public ProductAddAssetActionBuilder asset(
@@ -77,6 +84,8 @@ public class ProductAddAssetActionBuilder implements Builder<ProductAddAssetActi
 
     /**
      *  <p>Value to append.</p>
+     * @param asset
+     * @return Builder
      */
 
     public ProductAddAssetActionBuilder asset(final com.commercetools.api.models.common.AssetDraft asset) {
@@ -86,6 +95,8 @@ public class ProductAddAssetActionBuilder implements Builder<ProductAddAssetActi
 
     /**
      *  <p>Position in <code>assets</code> where the Asset should be put. When specified, the value must be between <code>0</code> and the total number of Assets minus <code>1</code>.</p>
+     * @param position
+     * @return Builder
      */
 
     public ProductAddAssetActionBuilder position(@Nullable final Integer position) {

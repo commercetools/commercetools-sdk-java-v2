@@ -29,6 +29,8 @@ public class AddTransactionChangeBuilder implements Builder<AddTransactionChange
 
     /**
      *  <p>Update action for <code>addTransaction</code> on payments</p>
+     * @param change
+     * @return Builder
      */
 
     public AddTransactionChangeBuilder change(final String change) {
@@ -38,6 +40,7 @@ public class AddTransactionChangeBuilder implements Builder<AddTransactionChange
 
     /**
      *
+     * @return Builder
      */
 
     public AddTransactionChangeBuilder nextValue(
@@ -48,6 +51,8 @@ public class AddTransactionChangeBuilder implements Builder<AddTransactionChange
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public AddTransactionChangeBuilder nextValue(final com.commercetools.history.models.common.Transaction nextValue) {

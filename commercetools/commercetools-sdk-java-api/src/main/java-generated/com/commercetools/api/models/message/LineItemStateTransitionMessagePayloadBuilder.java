@@ -38,6 +38,8 @@ public class LineItemStateTransitionMessagePayloadBuilder implements Builder<Lin
 
     /**
      *  <p>Unique identifier of the Line Item.</p>
+     * @param lineItemId
+     * @return Builder
      */
 
     public LineItemStateTransitionMessagePayloadBuilder lineItemId(final String lineItemId) {
@@ -47,6 +49,8 @@ public class LineItemStateTransitionMessagePayloadBuilder implements Builder<Lin
 
     /**
      *  <p>Date and time (UTC) when the transition of the Line Item State was performed.</p>
+     * @param transitionDate
+     * @return Builder
      */
 
     public LineItemStateTransitionMessagePayloadBuilder transitionDate(final java.time.ZonedDateTime transitionDate) {
@@ -56,6 +60,8 @@ public class LineItemStateTransitionMessagePayloadBuilder implements Builder<Lin
 
     /**
      *  <p>Number of Line Items for which the State was transitioned.</p>
+     * @param quantity
+     * @return Builder
      */
 
     public LineItemStateTransitionMessagePayloadBuilder quantity(final Long quantity) {
@@ -65,6 +71,7 @@ public class LineItemStateTransitionMessagePayloadBuilder implements Builder<Lin
 
     /**
      *  <p>State the Line Item was transitioned from.</p>
+     * @return Builder
      */
 
     public LineItemStateTransitionMessagePayloadBuilder fromState(
@@ -75,6 +82,8 @@ public class LineItemStateTransitionMessagePayloadBuilder implements Builder<Lin
 
     /**
      *  <p>State the Line Item was transitioned from.</p>
+     * @param fromState
+     * @return Builder
      */
 
     public LineItemStateTransitionMessagePayloadBuilder fromState(
@@ -85,6 +94,7 @@ public class LineItemStateTransitionMessagePayloadBuilder implements Builder<Lin
 
     /**
      *  <p>State the Line Item was transitioned to.</p>
+     * @return Builder
      */
 
     public LineItemStateTransitionMessagePayloadBuilder toState(
@@ -95,6 +105,8 @@ public class LineItemStateTransitionMessagePayloadBuilder implements Builder<Lin
 
     /**
      *  <p>State the Line Item was transitioned to.</p>
+     * @param toState
+     * @return Builder
      */
 
     public LineItemStateTransitionMessagePayloadBuilder toState(

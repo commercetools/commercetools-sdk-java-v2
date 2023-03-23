@@ -33,6 +33,7 @@ public interface ReturnInfoDraft extends io.vrap.rmf.base.client.Draft<ReturnInf
 
     /**
      *
+     * @return items
      */
     @NotNull
     @Valid
@@ -41,6 +42,7 @@ public interface ReturnInfoDraft extends io.vrap.rmf.base.client.Draft<ReturnInf
 
     /**
      *  <p>Identifies, which return tracking ID is connected to this particular return.</p>
+     * @return returnTrackingId
      */
 
     @JsonProperty("returnTrackingId")
@@ -48,6 +50,7 @@ public interface ReturnInfoDraft extends io.vrap.rmf.base.client.Draft<ReturnInf
 
     /**
      *
+     * @return returnDate
      */
 
     @JsonProperty("returnDate")

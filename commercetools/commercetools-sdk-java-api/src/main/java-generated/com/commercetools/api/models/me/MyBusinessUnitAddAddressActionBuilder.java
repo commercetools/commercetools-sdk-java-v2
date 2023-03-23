@@ -26,6 +26,7 @@ public class MyBusinessUnitAddAddressActionBuilder implements Builder<MyBusiness
 
     /**
      *  <p>The address to add to <code>addresses</code>.</p>
+     * @return Builder
      */
 
     public MyBusinessUnitAddAddressActionBuilder address(
@@ -36,6 +37,8 @@ public class MyBusinessUnitAddAddressActionBuilder implements Builder<MyBusiness
 
     /**
      *  <p>The address to add to <code>addresses</code>.</p>
+     * @param address
+     * @return Builder
      */
 
     public MyBusinessUnitAddAddressActionBuilder address(

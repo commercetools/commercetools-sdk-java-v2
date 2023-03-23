@@ -35,6 +35,7 @@ public interface ShippingMethodChangeTaxCategoryAction extends ShippingMethodUpd
 
     /**
      *  <p>Value to set.</p>
+     * @return taxCategory
      */
     @NotNull
     @Valid

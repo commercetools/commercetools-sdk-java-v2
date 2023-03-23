@@ -31,6 +31,8 @@ public class DiscountCodeReferenceBuilder implements Builder<DiscountCodeReferen
 
     /**
      *  <p>Unique identifier of the referenced DiscountCode.</p>
+     * @param id
+     * @return Builder
      */
 
     public DiscountCodeReferenceBuilder id(final String id) {
@@ -40,6 +42,7 @@ public class DiscountCodeReferenceBuilder implements Builder<DiscountCodeReferen
 
     /**
      *  <p>Contains the representation of the expanded DiscountCode. Only present in responses to requests with Reference Expansion for DiscountCodes.</p>
+     * @return Builder
      */
 
     public DiscountCodeReferenceBuilder obj(
@@ -50,6 +53,8 @@ public class DiscountCodeReferenceBuilder implements Builder<DiscountCodeReferen
 
     /**
      *  <p>Contains the representation of the expanded DiscountCode. Only present in responses to requests with Reference Expansion for DiscountCodes.</p>
+     * @param obj
+     * @return Builder
      */
 
     public DiscountCodeReferenceBuilder obj(

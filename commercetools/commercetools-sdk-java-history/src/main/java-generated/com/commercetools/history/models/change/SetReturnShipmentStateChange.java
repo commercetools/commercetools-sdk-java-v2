@@ -36,6 +36,7 @@ public interface SetReturnShipmentStateChange extends Change {
 
     /**
      *
+     * @return type
      */
     @NotNull
     @JsonProperty("type")
@@ -43,6 +44,7 @@ public interface SetReturnShipmentStateChange extends Change {
 
     /**
      *  <p>Update action for <code>setReturnShipmentState</code></p>
+     * @return change
      */
     @NotNull
     @JsonProperty("change")
@@ -50,6 +52,7 @@ public interface SetReturnShipmentStateChange extends Change {
 
     /**
      *
+     * @return nextValue
      */
     @NotNull
     @JsonProperty("nextValue")
@@ -57,6 +60,7 @@ public interface SetReturnShipmentStateChange extends Change {
 
     /**
      *
+     * @return previousValue
      */
     @NotNull
     @JsonProperty("previousValue")

@@ -35,6 +35,7 @@ public interface TypeAddEnumValueAction extends TypeUpdateAction {
 
     /**
      *  <p><code>name</code> of the Field Definition to update.</p>
+     * @return fieldName
      */
     @NotNull
     @JsonProperty("fieldName")
@@ -42,6 +43,7 @@ public interface TypeAddEnumValueAction extends TypeUpdateAction {
 
     /**
      *  <p>Value to append to the array.</p>
+     * @return value
      */
     @NotNull
     @Valid

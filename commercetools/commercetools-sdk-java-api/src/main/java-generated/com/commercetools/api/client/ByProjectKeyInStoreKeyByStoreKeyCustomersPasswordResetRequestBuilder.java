@@ -26,6 +26,11 @@ public class ByProjectKeyInStoreKeyByStoreKeyCustomersPasswordResetRequestBuilde
             customerResetPassword);
     }
 
+    public ByProjectKeyInStoreKeyByStoreKeyCustomersPasswordResetPostString post(final String customerResetPassword) {
+        return new ByProjectKeyInStoreKeyByStoreKeyCustomersPasswordResetPostString(apiHttpClient, projectKey, storeKey,
+            customerResetPassword);
+    }
+
     public ByProjectKeyInStoreKeyByStoreKeyCustomersPasswordResetPost post(
             UnaryOperator<com.commercetools.api.models.customer.CustomerResetPasswordBuilder> op) {
         return post(op.apply(com.commercetools.api.models.customer.CustomerResetPasswordBuilder.of()).build());

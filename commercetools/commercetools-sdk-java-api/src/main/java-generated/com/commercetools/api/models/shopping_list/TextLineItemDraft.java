@@ -36,6 +36,7 @@ public interface TextLineItemDraft extends com.commercetools.api.models.Customiz
 
     /**
      *  <p>Date and time the TextLineItem is added to the ShoppingList. If not set, the current date and time (UTC) is used.</p>
+     * @return addedAt
      */
 
     @JsonProperty("addedAt")
@@ -43,6 +44,7 @@ public interface TextLineItemDraft extends com.commercetools.api.models.Customiz
 
     /**
      *  <p>Custom Fields for the TextLineItem.</p>
+     * @return custom
      */
     @Valid
     @JsonProperty("custom")
@@ -50,6 +52,7 @@ public interface TextLineItemDraft extends com.commercetools.api.models.Customiz
 
     /**
      *  <p>Description of the TextLineItem.</p>
+     * @return description
      */
     @Valid
     @JsonProperty("description")
@@ -57,6 +60,7 @@ public interface TextLineItemDraft extends com.commercetools.api.models.Customiz
 
     /**
      *  <p>Name of the TextLineItem.</p>
+     * @return name
      */
     @NotNull
     @Valid
@@ -65,6 +69,7 @@ public interface TextLineItemDraft extends com.commercetools.api.models.Customiz
 
     /**
      *  <p>Number of entries in the TextLineItem.</p>
+     * @return quantity
      */
 
     @JsonProperty("quantity")

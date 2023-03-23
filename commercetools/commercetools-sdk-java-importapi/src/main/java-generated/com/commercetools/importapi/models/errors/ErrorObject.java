@@ -55,6 +55,7 @@ public interface ErrorObject {
 
     /**
      *
+     * @return code
      */
     @NotNull
     @JsonProperty("code")
@@ -62,6 +63,7 @@ public interface ErrorObject {
 
     /**
      *
+     * @return message
      */
     @NotNull
     @JsonProperty("message")

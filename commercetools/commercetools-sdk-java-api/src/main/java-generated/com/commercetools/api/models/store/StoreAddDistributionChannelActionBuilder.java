@@ -26,6 +26,7 @@ public class StoreAddDistributionChannelActionBuilder implements Builder<StoreAd
 
     /**
      *  <p>Value to append.</p>
+     * @return Builder
      */
 
     public StoreAddDistributionChannelActionBuilder distributionChannel(
@@ -38,6 +39,8 @@ public class StoreAddDistributionChannelActionBuilder implements Builder<StoreAd
 
     /**
      *  <p>Value to append.</p>
+     * @param distributionChannel
+     * @return Builder
      */
 
     public StoreAddDistributionChannelActionBuilder distributionChannel(

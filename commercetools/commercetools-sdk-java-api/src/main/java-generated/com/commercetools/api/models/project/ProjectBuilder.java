@@ -70,6 +70,8 @@ public class ProjectBuilder implements Builder<Project> {
 
     /**
      *  <p>Current version of the Project.</p>
+     * @param version
+     * @return Builder
      */
 
     public ProjectBuilder version(final Long version) {
@@ -79,6 +81,8 @@ public class ProjectBuilder implements Builder<Project> {
 
     /**
      *  <p>User-defined unique identifier of the Project.</p>
+     * @param key
+     * @return Builder
      */
 
     public ProjectBuilder key(final String key) {
@@ -88,6 +92,8 @@ public class ProjectBuilder implements Builder<Project> {
 
     /**
      *  <p>Name of the Project.</p>
+     * @param name
+     * @return Builder
      */
 
     public ProjectBuilder name(final String name) {
@@ -97,6 +103,8 @@ public class ProjectBuilder implements Builder<Project> {
 
     /**
      *  <p>Country code of the geographic location.</p>
+     * @param countries
+     * @return Builder
      */
 
     public ProjectBuilder countries(final String... countries) {
@@ -106,6 +114,8 @@ public class ProjectBuilder implements Builder<Project> {
 
     /**
      *  <p>Country code of the geographic location.</p>
+     * @param countries
+     * @return Builder
      */
 
     public ProjectBuilder countries(final java.util.List<String> countries) {
@@ -115,6 +125,8 @@ public class ProjectBuilder implements Builder<Project> {
 
     /**
      *  <p>Country code of the geographic location.</p>
+     * @param countries
+     * @return Builder
      */
 
     public ProjectBuilder plusCountries(final String... countries) {
@@ -127,6 +139,8 @@ public class ProjectBuilder implements Builder<Project> {
 
     /**
      *  <p>Currency code of the country. A Project must have at least one currency.</p>
+     * @param currencies
+     * @return Builder
      */
 
     public ProjectBuilder currencies(final String... currencies) {
@@ -136,6 +150,8 @@ public class ProjectBuilder implements Builder<Project> {
 
     /**
      *  <p>Currency code of the country. A Project must have at least one currency.</p>
+     * @param currencies
+     * @return Builder
      */
 
     public ProjectBuilder currencies(final java.util.List<String> currencies) {
@@ -145,6 +161,8 @@ public class ProjectBuilder implements Builder<Project> {
 
     /**
      *  <p>Currency code of the country. A Project must have at least one currency.</p>
+     * @param currencies
+     * @return Builder
      */
 
     public ProjectBuilder plusCurrencies(final String... currencies) {
@@ -157,6 +175,8 @@ public class ProjectBuilder implements Builder<Project> {
 
     /**
      *  <p>Language of the country. A Project must have at least one language.</p>
+     * @param languages
+     * @return Builder
      */
 
     public ProjectBuilder languages(final String... languages) {
@@ -166,6 +186,8 @@ public class ProjectBuilder implements Builder<Project> {
 
     /**
      *  <p>Language of the country. A Project must have at least one language.</p>
+     * @param languages
+     * @return Builder
      */
 
     public ProjectBuilder languages(final java.util.List<String> languages) {
@@ -175,6 +197,8 @@ public class ProjectBuilder implements Builder<Project> {
 
     /**
      *  <p>Language of the country. A Project must have at least one language.</p>
+     * @param languages
+     * @return Builder
      */
 
     public ProjectBuilder plusLanguages(final String... languages) {
@@ -187,6 +211,8 @@ public class ProjectBuilder implements Builder<Project> {
 
     /**
      *  <p>Date and time (UTC) the Project was initially created.</p>
+     * @param createdAt
+     * @return Builder
      */
 
     public ProjectBuilder createdAt(final java.time.ZonedDateTime createdAt) {
@@ -196,6 +222,8 @@ public class ProjectBuilder implements Builder<Project> {
 
     /**
      *  <p>Date in YYYY-MM format specifying when the trial period for the Project ends. Only present on Projects in trial period.</p>
+     * @param trialUntil
+     * @return Builder
      */
 
     public ProjectBuilder trialUntil(@Nullable final String trialUntil) {
@@ -205,6 +233,7 @@ public class ProjectBuilder implements Builder<Project> {
 
     /**
      *  <p>Holds the configuration for the Messages Query feature.</p>
+     * @return Builder
      */
 
     public ProjectBuilder messages(
@@ -215,6 +244,8 @@ public class ProjectBuilder implements Builder<Project> {
 
     /**
      *  <p>Holds the configuration for the Messages Query feature.</p>
+     * @param messages
+     * @return Builder
      */
 
     public ProjectBuilder messages(final com.commercetools.api.models.message.MessagesConfiguration messages) {
@@ -224,6 +255,7 @@ public class ProjectBuilder implements Builder<Project> {
 
     /**
      *  <p>Holds the configuration for the Carts feature.</p>
+     * @return Builder
      */
 
     public ProjectBuilder carts(
@@ -234,6 +266,8 @@ public class ProjectBuilder implements Builder<Project> {
 
     /**
      *  <p>Holds the configuration for the Carts feature.</p>
+     * @param carts
+     * @return Builder
      */
 
     public ProjectBuilder carts(final com.commercetools.api.models.project.CartsConfiguration carts) {
@@ -243,6 +277,7 @@ public class ProjectBuilder implements Builder<Project> {
 
     /**
      *  <p>Holds the configuration for the Shopping Lists feature. This field may not be present on Projects created before January 2020.</p>
+     * @return Builder
      */
 
     public ProjectBuilder shoppingLists(
@@ -254,6 +289,8 @@ public class ProjectBuilder implements Builder<Project> {
 
     /**
      *  <p>Holds the configuration for the Shopping Lists feature. This field may not be present on Projects created before January 2020.</p>
+     * @param shoppingLists
+     * @return Builder
      */
 
     public ProjectBuilder shoppingLists(
@@ -264,6 +301,8 @@ public class ProjectBuilder implements Builder<Project> {
 
     /**
      *  <p>Holds the configuration for the tiered shipping rates feature.</p>
+     * @param shippingRateInputType
+     * @return Builder
      */
 
     public ProjectBuilder shippingRateInputType(
@@ -274,6 +313,7 @@ public class ProjectBuilder implements Builder<Project> {
 
     /**
      *  <p>Holds the configuration for the tiered shipping rates feature.</p>
+     * @return Builder
      */
 
     public ProjectBuilder shippingRateInputType(
@@ -286,6 +326,7 @@ public class ProjectBuilder implements Builder<Project> {
 
     /**
      *  <p>Represents a RFC 7662 compliant OAuth 2.0 Token Introspection endpoint.</p>
+     * @return Builder
      */
 
     public ProjectBuilder externalOAuth(
@@ -296,6 +337,8 @@ public class ProjectBuilder implements Builder<Project> {
 
     /**
      *  <p>Represents a RFC 7662 compliant OAuth 2.0 Token Introspection endpoint.</p>
+     * @param externalOAuth
+     * @return Builder
      */
 
     public ProjectBuilder externalOAuth(
@@ -306,6 +349,7 @@ public class ProjectBuilder implements Builder<Project> {
 
     /**
      *  <p>Controls indexing of resources to be provided on high performance read-only search endpoints.</p>
+     * @return Builder
      */
 
     public ProjectBuilder searchIndexing(
@@ -318,6 +362,8 @@ public class ProjectBuilder implements Builder<Project> {
 
     /**
      *  <p>Controls indexing of resources to be provided on high performance read-only search endpoints.</p>
+     * @param searchIndexing
+     * @return Builder
      */
 
     public ProjectBuilder searchIndexing(
@@ -328,6 +374,7 @@ public class ProjectBuilder implements Builder<Project> {
 
     /**
      *  <p>Holds configuration specific to Business Units.</p>
+     * @return Builder
      */
 
     public ProjectBuilder businessUnits(
@@ -339,6 +386,8 @@ public class ProjectBuilder implements Builder<Project> {
 
     /**
      *  <p>Holds configuration specific to Business Units.</p>
+     * @param businessUnits
+     * @return Builder
      */
 
     public ProjectBuilder businessUnits(

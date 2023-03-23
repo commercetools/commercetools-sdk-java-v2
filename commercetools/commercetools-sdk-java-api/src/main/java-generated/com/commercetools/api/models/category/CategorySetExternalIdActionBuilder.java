@@ -27,6 +27,8 @@ public class CategorySetExternalIdActionBuilder implements Builder<CategorySetEx
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
+     * @param externalId
+     * @return Builder
      */
 
     public CategorySetExternalIdActionBuilder externalId(@Nullable final String externalId) {

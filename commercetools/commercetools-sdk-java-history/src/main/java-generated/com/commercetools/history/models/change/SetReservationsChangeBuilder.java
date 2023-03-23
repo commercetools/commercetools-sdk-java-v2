@@ -32,6 +32,8 @@ public class SetReservationsChangeBuilder implements Builder<SetReservationsChan
 
     /**
      *  <p>Update action for <code>setReservations</code> on inventories</p>
+     * @param change
+     * @return Builder
      */
 
     public SetReservationsChangeBuilder change(final String change) {
@@ -41,6 +43,8 @@ public class SetReservationsChangeBuilder implements Builder<SetReservationsChan
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public SetReservationsChangeBuilder nextValue(
@@ -51,6 +55,8 @@ public class SetReservationsChangeBuilder implements Builder<SetReservationsChan
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public SetReservationsChangeBuilder nextValue(
@@ -61,6 +67,8 @@ public class SetReservationsChangeBuilder implements Builder<SetReservationsChan
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public SetReservationsChangeBuilder plusNextValue(
@@ -74,6 +82,7 @@ public class SetReservationsChangeBuilder implements Builder<SetReservationsChan
 
     /**
      *
+     * @return Builder
      */
 
     public SetReservationsChangeBuilder plusNextValue(
@@ -87,6 +96,7 @@ public class SetReservationsChangeBuilder implements Builder<SetReservationsChan
 
     /**
      *
+     * @return Builder
      */
 
     public SetReservationsChangeBuilder withNextValue(
@@ -98,6 +108,8 @@ public class SetReservationsChangeBuilder implements Builder<SetReservationsChan
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public SetReservationsChangeBuilder previousValue(
@@ -108,6 +120,8 @@ public class SetReservationsChangeBuilder implements Builder<SetReservationsChan
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public SetReservationsChangeBuilder previousValue(
@@ -118,6 +132,8 @@ public class SetReservationsChangeBuilder implements Builder<SetReservationsChan
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public SetReservationsChangeBuilder plusPreviousValue(
@@ -131,6 +147,7 @@ public class SetReservationsChangeBuilder implements Builder<SetReservationsChan
 
     /**
      *
+     * @return Builder
      */
 
     public SetReservationsChangeBuilder plusPreviousValue(
@@ -144,6 +161,7 @@ public class SetReservationsChangeBuilder implements Builder<SetReservationsChan
 
     /**
      *
+     * @return Builder
      */
 
     public SetReservationsChangeBuilder withPreviousValue(

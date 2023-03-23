@@ -34,6 +34,7 @@ public interface DiscountCodeSetCustomTypeAction extends DiscountCodeUpdateActio
 
     /**
      *  <p>Defines the Type that extends the DiscountCode with Custom Fields. If absent, any existing Type and Custom Fields are removed from the DiscountCode.</p>
+     * @return type
      */
     @Valid
     @JsonProperty("type")
@@ -41,6 +42,7 @@ public interface DiscountCodeSetCustomTypeAction extends DiscountCodeUpdateActio
 
     /**
      *  <p>Sets the Custom Fields fields for the DiscountCode.</p>
+     * @return fields
      */
     @Valid
     @JsonProperty("fields")

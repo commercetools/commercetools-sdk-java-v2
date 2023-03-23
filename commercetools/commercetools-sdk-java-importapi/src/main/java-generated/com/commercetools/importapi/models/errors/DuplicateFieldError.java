@@ -31,6 +31,7 @@ public interface DuplicateFieldError extends ErrorObject {
 
     /**
      *  <p>The name of the field.</p>
+     * @return field
      */
 
     @JsonProperty("field")
@@ -38,6 +39,7 @@ public interface DuplicateFieldError extends ErrorObject {
 
     /**
      *  <p>The offending duplicate value.</p>
+     * @return duplicateValue
      */
 
     @JsonProperty("duplicateValue")

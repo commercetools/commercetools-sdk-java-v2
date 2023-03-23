@@ -34,6 +34,7 @@ public interface ImageSearchConfigUpdateAction {
 
     /**
      *
+     * @return action
      */
     @NotNull
     @JsonProperty("action")

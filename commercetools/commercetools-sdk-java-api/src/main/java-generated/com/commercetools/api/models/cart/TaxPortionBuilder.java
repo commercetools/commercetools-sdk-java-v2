@@ -30,10 +30,12 @@ public class TaxPortionBuilder implements Builder<TaxPortion> {
 
     private Double rate;
 
-    private com.commercetools.api.models.common.TypedMoney amount;
+    private com.commercetools.api.models.common.CentPrecisionMoney amount;
 
     /**
-     *
+     *  <p>Name of the tax portion.</p>
+     * @param name
+     * @return Builder
      */
 
     public TaxPortionBuilder name(@Nullable final String name) {
@@ -42,7 +44,9 @@ public class TaxPortionBuilder implements Builder<TaxPortion> {
     }
 
     /**
-     *  <p>A number in the range [0..1]</p>
+     *  <p>A number in the range 0-1.</p>
+     * @param rate
+     * @return Builder
      */
 
     public TaxPortionBuilder rate(final Double rate) {
@@ -51,21 +55,24 @@ public class TaxPortionBuilder implements Builder<TaxPortion> {
     }
 
     /**
-     *
+     *  <p>Money value of the tax portion.</p>
+     * @return Builder
      */
 
-    public TaxPortionBuilder amount(final com.commercetools.api.models.common.TypedMoney amount) {
-        this.amount = amount;
+    public TaxPortionBuilder amount(
+            Function<com.commercetools.api.models.common.CentPrecisionMoneyBuilder, com.commercetools.api.models.common.CentPrecisionMoneyBuilder> builder) {
+        this.amount = builder.apply(com.commercetools.api.models.common.CentPrecisionMoneyBuilder.of()).build();
         return this;
     }
 
     /**
-     *
+     *  <p>Money value of the tax portion.</p>
+     * @param amount
+     * @return Builder
      */
 
-    public TaxPortionBuilder amount(
-            Function<com.commercetools.api.models.common.TypedMoneyBuilder, Builder<? extends com.commercetools.api.models.common.TypedMoney>> builder) {
-        this.amount = builder.apply(com.commercetools.api.models.common.TypedMoneyBuilder.of()).build();
+    public TaxPortionBuilder amount(final com.commercetools.api.models.common.CentPrecisionMoney amount) {
+        this.amount = amount;
         return this;
     }
 
@@ -78,7 +85,7 @@ public class TaxPortionBuilder implements Builder<TaxPortion> {
         return this.rate;
     }
 
-    public com.commercetools.api.models.common.TypedMoney getAmount() {
+    public com.commercetools.api.models.common.CentPrecisionMoney getAmount() {
         return this.amount;
     }
 

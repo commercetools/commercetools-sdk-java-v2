@@ -36,6 +36,7 @@ public interface OrderSetCustomLineItemCustomTypeAction extends OrderUpdateActio
 
     /**
      *
+     * @return customLineItemId
      */
     @NotNull
     @JsonProperty("customLineItemId")
@@ -43,6 +44,7 @@ public interface OrderSetCustomLineItemCustomTypeAction extends OrderUpdateActio
 
     /**
      *  <p>Defines the Type that extends the CustomLineItem with Custom Fields. If absent, any existing Type and Custom Fields are removed from the CustomLineItem.</p>
+     * @return type
      */
     @Valid
     @JsonProperty("type")
@@ -50,6 +52,7 @@ public interface OrderSetCustomLineItemCustomTypeAction extends OrderUpdateActio
 
     /**
      *  <p>Sets the Custom Fields fields for the CustomLineItem.</p>
+     * @return fields
      */
     @Valid
     @JsonProperty("fields")

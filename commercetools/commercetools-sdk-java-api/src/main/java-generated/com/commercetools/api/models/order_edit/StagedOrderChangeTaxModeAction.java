@@ -34,7 +34,8 @@ public interface StagedOrderChangeTaxModeAction extends StagedOrderUpdateAction 
     String CHANGE_TAX_MODE = "changeTaxMode";
 
     /**
-     *
+     *  <p>Indicates how taxes are set on the Cart.</p>
+     * @return taxMode
      */
     @NotNull
     @JsonProperty("taxMode")

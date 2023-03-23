@@ -30,6 +30,7 @@ public interface MyCustomerSetMiddleNameAction extends MyCustomerUpdateAction {
 
     /**
      *  <p>Value to set. If empty, any existing value is removed.</p>
+     * @return middleName
      */
 
     @JsonProperty("middleName")

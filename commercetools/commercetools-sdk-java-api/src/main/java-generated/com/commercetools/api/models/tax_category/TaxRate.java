@@ -35,6 +35,7 @@ public interface TaxRate {
 
     /**
      *  <p>Present if the TaxRate is part of a TaxCategory. Absent for external TaxRates in LineItem, CustomLineItem, and ShippingInfo.</p>
+     * @return id
      */
 
     @JsonProperty("id")
@@ -42,6 +43,7 @@ public interface TaxRate {
 
     /**
      *  <p>Name of the TaxRate.</p>
+     * @return name
      */
     @NotNull
     @JsonProperty("name")
@@ -49,6 +51,7 @@ public interface TaxRate {
 
     /**
      *  <p>Tax rate. If subrates are used, the amount must be the sum of all subrates.</p>
+     * @return amount
      */
     @NotNull
     @JsonProperty("amount")
@@ -56,6 +59,7 @@ public interface TaxRate {
 
     /**
      *  <p>If <code>true</code>, tax is included in Embedded Prices or Standalone Prices, and the <code>taxedPrice</code> is present on LineItems. In this case, the <code>totalNet</code> price on TaxedPrice includes the TaxRate.</p>
+     * @return includedInPrice
      */
     @NotNull
     @JsonProperty("includedInPrice")
@@ -63,6 +67,7 @@ public interface TaxRate {
 
     /**
      *  <p>Country in which the tax rate is applied in ISO 3166-1 alpha-2 format.</p>
+     * @return country
      */
     @NotNull
     @JsonProperty("country")
@@ -70,6 +75,7 @@ public interface TaxRate {
 
     /**
      *  <p>State within the country, such as Texas in the United States.</p>
+     * @return state
      */
 
     @JsonProperty("state")
@@ -77,6 +83,7 @@ public interface TaxRate {
 
     /**
      *  <p>Used to calculate the taxPortions field in a Cart or Order. It is useful if the total tax of a country (such as the US) is a combination of multiple taxes (such as state and local taxes).</p>
+     * @return subRates
      */
     @Valid
     @JsonProperty("subRates")

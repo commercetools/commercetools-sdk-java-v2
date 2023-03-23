@@ -26,6 +26,7 @@ public class PaymentCreatedMessagePayloadBuilder implements Builder<PaymentCreat
 
     /**
      *  <p>Payment that was created.</p>
+     * @return Builder
      */
 
     public PaymentCreatedMessagePayloadBuilder payment(
@@ -36,6 +37,8 @@ public class PaymentCreatedMessagePayloadBuilder implements Builder<PaymentCreat
 
     /**
      *  <p>Payment that was created.</p>
+     * @param payment
+     * @return Builder
      */
 
     public PaymentCreatedMessagePayloadBuilder payment(final com.commercetools.api.models.payment.Payment payment) {

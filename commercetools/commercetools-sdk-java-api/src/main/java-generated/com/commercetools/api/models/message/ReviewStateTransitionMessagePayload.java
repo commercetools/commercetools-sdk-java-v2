@@ -39,6 +39,7 @@ public interface ReviewStateTransitionMessagePayload extends MessagePayload {
 
     /**
      *  <p>State of the Review before the Transition State update action.</p>
+     * @return oldState
      */
     @Valid
     @JsonProperty("oldState")
@@ -46,6 +47,7 @@ public interface ReviewStateTransitionMessagePayload extends MessagePayload {
 
     /**
      *  <p>State of the Review after the Transition State update action.</p>
+     * @return newState
      */
     @NotNull
     @Valid
@@ -54,6 +56,7 @@ public interface ReviewStateTransitionMessagePayload extends MessagePayload {
 
     /**
      *  <p>Whether the old Review was taken into account in the rating statistics of the target before the state transition.</p>
+     * @return oldIncludedInStatistics
      */
     @NotNull
     @JsonProperty("oldIncludedInStatistics")
@@ -61,6 +64,7 @@ public interface ReviewStateTransitionMessagePayload extends MessagePayload {
 
     /**
      *  <p>Whether the new Review was taken into account in the rating statistics of the target after the state transition.</p>
+     * @return newIncludedInStatistics
      */
     @NotNull
     @JsonProperty("newIncludedInStatistics")
@@ -68,6 +72,7 @@ public interface ReviewStateTransitionMessagePayload extends MessagePayload {
 
     /**
      *  <p>Reference to the resource that the Review belongs to.</p>
+     * @return target
      */
     @Valid
     @JsonProperty("target")
@@ -75,6 +80,7 @@ public interface ReviewStateTransitionMessagePayload extends MessagePayload {
 
     /**
      *  <p>Whether State transition validations were turned off during the Transition State update action.</p>
+     * @return force
      */
     @NotNull
     @JsonProperty("force")

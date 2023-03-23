@@ -30,6 +30,8 @@ public class PaymentResourceIdentifierBuilder implements Builder<PaymentResource
 
     /**
      *  <p>Unique identifier of the referenced Payment. Either <code>id</code> or <code>key</code> is required.</p>
+     * @param id
+     * @return Builder
      */
 
     public PaymentResourceIdentifierBuilder id(@Nullable final String id) {
@@ -39,6 +41,8 @@ public class PaymentResourceIdentifierBuilder implements Builder<PaymentResource
 
     /**
      *  <p>User-defined unique identifier of the referenced Payment. Either <code>id</code> or <code>key</code> is required.</p>
+     * @param key
+     * @return Builder
      */
 
     public PaymentResourceIdentifierBuilder key(@Nullable final String key) {

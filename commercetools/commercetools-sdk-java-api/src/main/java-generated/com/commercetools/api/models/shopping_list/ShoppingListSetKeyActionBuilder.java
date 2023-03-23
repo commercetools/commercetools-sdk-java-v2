@@ -27,6 +27,8 @@ public class ShoppingListSetKeyActionBuilder implements Builder<ShoppingListSetK
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
+     * @param key
+     * @return Builder
      */
 
     public ShoppingListSetKeyActionBuilder key(@Nullable final String key) {

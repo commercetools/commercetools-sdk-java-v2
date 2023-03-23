@@ -26,6 +26,11 @@ public class ByProjectKeyInStoreKeyByStoreKeyCustomersEmailConfirmRequestBuilder
             customerEmailVerify);
     }
 
+    public ByProjectKeyInStoreKeyByStoreKeyCustomersEmailConfirmPostString post(final String customerEmailVerify) {
+        return new ByProjectKeyInStoreKeyByStoreKeyCustomersEmailConfirmPostString(apiHttpClient, projectKey, storeKey,
+            customerEmailVerify);
+    }
+
     public ByProjectKeyInStoreKeyByStoreKeyCustomersEmailConfirmPost post(
             UnaryOperator<com.commercetools.api.models.customer.CustomerEmailVerifyBuilder> op) {
         return post(op.apply(com.commercetools.api.models.customer.CustomerEmailVerifyBuilder.of()).build());

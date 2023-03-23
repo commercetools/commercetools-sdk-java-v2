@@ -30,6 +30,8 @@ public class DuplicateEnumValuesErrorBuilder implements Builder<DuplicateEnumVal
 
     /**
      *  <p><code>"The enum values contain duplicate keys: $listOfDuplicateKeys."</code></p>
+     * @param message
+     * @return Builder
      */
 
     public DuplicateEnumValuesErrorBuilder message(final String message) {
@@ -60,6 +62,8 @@ public class DuplicateEnumValuesErrorBuilder implements Builder<DuplicateEnumVal
 
     /**
      *  <p>Duplicate keys.</p>
+     * @param duplicates
+     * @return Builder
      */
 
     public DuplicateEnumValuesErrorBuilder duplicates(final String... duplicates) {
@@ -69,6 +73,8 @@ public class DuplicateEnumValuesErrorBuilder implements Builder<DuplicateEnumVal
 
     /**
      *  <p>Duplicate keys.</p>
+     * @param duplicates
+     * @return Builder
      */
 
     public DuplicateEnumValuesErrorBuilder duplicates(final java.util.List<String> duplicates) {
@@ -78,6 +84,8 @@ public class DuplicateEnumValuesErrorBuilder implements Builder<DuplicateEnumVal
 
     /**
      *  <p>Duplicate keys.</p>
+     * @param duplicates
+     * @return Builder
      */
 
     public DuplicateEnumValuesErrorBuilder plusDuplicates(final String... duplicates) {

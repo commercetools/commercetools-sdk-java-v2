@@ -107,4 +107,5 @@ public interface QuoteState {
     public static QuoteState[] values() {
         return QuoteStateEnum.values();
     }
+
 }

@@ -34,6 +34,7 @@ public interface OrderSetReturnShipmentStateAction extends OrderUpdateAction {
 
     /**
      *
+     * @return returnItemId
      */
     @NotNull
     @JsonProperty("returnItemId")
@@ -41,6 +42,7 @@ public interface OrderSetReturnShipmentStateAction extends OrderUpdateAction {
 
     /**
      *
+     * @return shipmentState
      */
     @NotNull
     @JsonProperty("shipmentState")

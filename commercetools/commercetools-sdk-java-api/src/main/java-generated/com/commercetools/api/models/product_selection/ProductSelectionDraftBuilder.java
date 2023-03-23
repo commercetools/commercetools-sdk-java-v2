@@ -32,8 +32,13 @@ public class ProductSelectionDraftBuilder implements Builder<ProductSelectionDra
     @Nullable
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
 
+    @Nullable
+    private com.commercetools.api.models.product_selection.ProductSelectionTypeEnum type;
+
     /**
      *  <p>User-defined unique identifier for the ProductSelection.</p>
+     * @param key
+     * @return Builder
      */
 
     public ProductSelectionDraftBuilder key(@Nullable final String key) {
@@ -43,6 +48,7 @@ public class ProductSelectionDraftBuilder implements Builder<ProductSelectionDra
 
     /**
      *  <p>Name of the ProductSelection. Not checked for uniqueness, but distinct names are recommended.</p>
+     * @return Builder
      */
 
     public ProductSelectionDraftBuilder name(
@@ -53,6 +59,8 @@ public class ProductSelectionDraftBuilder implements Builder<ProductSelectionDra
 
     /**
      *  <p>Name of the ProductSelection. Not checked for uniqueness, but distinct names are recommended.</p>
+     * @param name
+     * @return Builder
      */
 
     public ProductSelectionDraftBuilder name(final com.commercetools.api.models.common.LocalizedString name) {
@@ -62,6 +70,7 @@ public class ProductSelectionDraftBuilder implements Builder<ProductSelectionDra
 
     /**
      *  <p>Custom Fields of this ProductSelection.</p>
+     * @return Builder
      */
 
     public ProductSelectionDraftBuilder custom(
@@ -72,11 +81,25 @@ public class ProductSelectionDraftBuilder implements Builder<ProductSelectionDra
 
     /**
      *  <p>Custom Fields of this ProductSelection.</p>
+     * @param custom
+     * @return Builder
      */
 
     public ProductSelectionDraftBuilder custom(
             @Nullable final com.commercetools.api.models.type.CustomFieldsDraft custom) {
         this.custom = custom;
+        return this;
+    }
+
+    /**
+     *  <p>Type of the Product Selection.</p>
+     * @param type
+     * @return Builder
+     */
+
+    public ProductSelectionDraftBuilder type(
+            @Nullable final com.commercetools.api.models.product_selection.ProductSelectionTypeEnum type) {
+        this.type = type;
         return this;
     }
 
@@ -94,16 +117,21 @@ public class ProductSelectionDraftBuilder implements Builder<ProductSelectionDra
         return this.custom;
     }
 
+    @Nullable
+    public com.commercetools.api.models.product_selection.ProductSelectionTypeEnum getType() {
+        return this.type;
+    }
+
     public ProductSelectionDraft build() {
         Objects.requireNonNull(name, ProductSelectionDraft.class + ": name is missing");
-        return new ProductSelectionDraftImpl(key, name, custom);
+        return new ProductSelectionDraftImpl(key, name, custom, type);
     }
 
     /**
      * builds ProductSelectionDraft without checking for non null required values
      */
     public ProductSelectionDraft buildUnchecked() {
-        return new ProductSelectionDraftImpl(key, name, custom);
+        return new ProductSelectionDraftImpl(key, name, custom, type);
     }
 
     public static ProductSelectionDraftBuilder of() {
@@ -115,6 +143,7 @@ public class ProductSelectionDraftBuilder implements Builder<ProductSelectionDra
         builder.key = template.getKey();
         builder.name = template.getName();
         builder.custom = template.getCustom();
+        builder.type = template.getType();
         return builder;
     }
 

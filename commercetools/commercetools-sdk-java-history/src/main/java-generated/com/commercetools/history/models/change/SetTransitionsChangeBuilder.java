@@ -32,6 +32,8 @@ public class SetTransitionsChangeBuilder implements Builder<SetTransitionsChange
 
     /**
      *  <p>Shape of the action for <code>setTransitions</code></p>
+     * @param change
+     * @return Builder
      */
 
     public SetTransitionsChangeBuilder change(final String change) {
@@ -41,6 +43,8 @@ public class SetTransitionsChangeBuilder implements Builder<SetTransitionsChange
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public SetTransitionsChangeBuilder previousValue(
@@ -51,6 +55,8 @@ public class SetTransitionsChangeBuilder implements Builder<SetTransitionsChange
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public SetTransitionsChangeBuilder previousValue(
@@ -61,6 +67,8 @@ public class SetTransitionsChangeBuilder implements Builder<SetTransitionsChange
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public SetTransitionsChangeBuilder plusPreviousValue(
@@ -74,6 +82,7 @@ public class SetTransitionsChangeBuilder implements Builder<SetTransitionsChange
 
     /**
      *
+     * @return Builder
      */
 
     public SetTransitionsChangeBuilder plusPreviousValue(
@@ -87,6 +96,7 @@ public class SetTransitionsChangeBuilder implements Builder<SetTransitionsChange
 
     /**
      *
+     * @return Builder
      */
 
     public SetTransitionsChangeBuilder withPreviousValue(
@@ -98,6 +108,8 @@ public class SetTransitionsChangeBuilder implements Builder<SetTransitionsChange
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public SetTransitionsChangeBuilder nextValue(final com.commercetools.history.models.common.Reference... nextValue) {
@@ -107,6 +119,8 @@ public class SetTransitionsChangeBuilder implements Builder<SetTransitionsChange
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public SetTransitionsChangeBuilder nextValue(
@@ -117,6 +131,8 @@ public class SetTransitionsChangeBuilder implements Builder<SetTransitionsChange
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public SetTransitionsChangeBuilder plusNextValue(
@@ -130,6 +146,7 @@ public class SetTransitionsChangeBuilder implements Builder<SetTransitionsChange
 
     /**
      *
+     * @return Builder
      */
 
     public SetTransitionsChangeBuilder plusNextValue(
@@ -143,6 +160,7 @@ public class SetTransitionsChangeBuilder implements Builder<SetTransitionsChange
 
     /**
      *
+     * @return Builder
      */
 
     public SetTransitionsChangeBuilder withNextValue(

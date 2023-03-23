@@ -31,6 +31,8 @@ public class ChangeShipmentStateChangeBuilder implements Builder<ChangeShipmentS
 
     /**
      *  <p>Update action for <code>changeShipmentState</code></p>
+     * @param change
+     * @return Builder
      */
 
     public ChangeShipmentStateChangeBuilder change(final String change) {
@@ -40,6 +42,8 @@ public class ChangeShipmentStateChangeBuilder implements Builder<ChangeShipmentS
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public ChangeShipmentStateChangeBuilder nextValue(
@@ -50,6 +54,8 @@ public class ChangeShipmentStateChangeBuilder implements Builder<ChangeShipmentS
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public ChangeShipmentStateChangeBuilder previousValue(

@@ -30,6 +30,7 @@ public interface CustomerSetCustomerNumberAction extends CustomerUpdateAction {
 
     /**
      *  <p>Value to set. Once set, it cannot be changed.</p>
+     * @return customerNumber
      */
 
     @JsonProperty("customerNumber")

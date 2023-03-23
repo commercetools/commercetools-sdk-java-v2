@@ -15,8 +15,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Returned when a Product is already assigned to a Product Selection, but the Product Selection has a different Product Variant Selection.</p>
- *  <p>The error is returned as a failed response to the Add Product update action.</p>
+ *  <p>Returned when a Product is already assigned to a Product Selection, but the Product Selection has either a different Product Variant Selection or a different Product Variant Exclusion.</p>
+ *  <p>The error is returned as a failed response either to the Add Product or to the Exclude Product update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductPresentWithDifferentVariantSelectionErrorImpl
@@ -81,7 +81,7 @@ public class ProductPresentWithDifferentVariantSelectionErrorImpl
     }
 
     /**
-     *  <p>Existing Product Variant Selection for the Product in the Product Selection.</p>
+     *  <p>Existing Product Variant Selection or Exclusion for the Product in the Product Selection.</p>
      */
 
     public com.commercetools.api.models.product_selection.ProductVariantSelection getExistingVariantSelection() {

@@ -31,6 +31,7 @@ public interface RemoveParcelFromDeliveryDraft extends io.vrap.rmf.base.client.D
 
     /**
      *
+     * @return parcelId
      */
     @NotNull
     @JsonProperty("parcelId")

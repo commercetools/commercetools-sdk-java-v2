@@ -26,6 +26,11 @@ public class ByProjectKeyInStoreKeyByStoreKeyCartsReplicateRequestBuilder {
             replicaCartDraft);
     }
 
+    public ByProjectKeyInStoreKeyByStoreKeyCartsReplicatePostString post(final String replicaCartDraft) {
+        return new ByProjectKeyInStoreKeyByStoreKeyCartsReplicatePostString(apiHttpClient, projectKey, storeKey,
+            replicaCartDraft);
+    }
+
     public ByProjectKeyInStoreKeyByStoreKeyCartsReplicatePost post(
             UnaryOperator<com.commercetools.api.models.cart.ReplicaCartDraftBuilder> op) {
         return post(op.apply(com.commercetools.api.models.cart.ReplicaCartDraftBuilder.of()).build());

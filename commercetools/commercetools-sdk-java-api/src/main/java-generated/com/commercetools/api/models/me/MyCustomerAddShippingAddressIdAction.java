@@ -30,6 +30,7 @@ public interface MyCustomerAddShippingAddressIdAction extends MyCustomerUpdateAc
 
     /**
      *  <p><code>id</code> of the Address to become a shipping address.</p>
+     * @return addressId
      */
 
     @JsonProperty("addressId")
@@ -37,6 +38,7 @@ public interface MyCustomerAddShippingAddressIdAction extends MyCustomerUpdateAc
 
     /**
      *  <p><code>key</code> of the Address to become a shipping address.</p>
+     * @return addressKey
      */
 
     @JsonProperty("addressKey")

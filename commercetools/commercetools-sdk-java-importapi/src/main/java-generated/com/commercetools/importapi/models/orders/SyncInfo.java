@@ -35,6 +35,7 @@ public interface SyncInfo {
 
     /**
      *  <p>Maps to <code>SyncInfo.channel</code></p>
+     * @return channel
      */
     @NotNull
     @Valid
@@ -43,6 +44,7 @@ public interface SyncInfo {
 
     /**
      *  <p>Maps to <code>SyncInfo.externalId</code></p>
+     * @return externalId
      */
 
     @JsonProperty("externalId")
@@ -50,6 +52,7 @@ public interface SyncInfo {
 
     /**
      *  <p>Maps to <code>SyncInfo.syncedAt</code></p>
+     * @return syncedAt
      */
     @NotNull
     @JsonProperty("syncedAt")

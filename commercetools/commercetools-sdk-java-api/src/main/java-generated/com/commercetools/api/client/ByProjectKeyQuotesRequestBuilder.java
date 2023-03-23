@@ -25,6 +25,10 @@ public class ByProjectKeyQuotesRequestBuilder implements ByProjectKeyQuotesReque
         return new ByProjectKeyQuotesPost(apiHttpClient, projectKey, quoteDraft);
     }
 
+    public ByProjectKeyQuotesPostString post(final String quoteDraft) {
+        return new ByProjectKeyQuotesPostString(apiHttpClient, projectKey, quoteDraft);
+    }
+
     public ByProjectKeyQuotesPost post(UnaryOperator<com.commercetools.api.models.quote.QuoteDraftBuilder> op) {
         return post(op.apply(com.commercetools.api.models.quote.QuoteDraftBuilder.of()).build());
     }

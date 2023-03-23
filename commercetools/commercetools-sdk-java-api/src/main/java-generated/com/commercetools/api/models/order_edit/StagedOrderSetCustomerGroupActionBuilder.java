@@ -28,6 +28,7 @@ public class StagedOrderSetCustomerGroupActionBuilder implements Builder<StagedO
 
     /**
      *  <p>ResourceIdentifier to a CustomerGroup.</p>
+     * @return Builder
      */
 
     public StagedOrderSetCustomerGroupActionBuilder customerGroup(
@@ -40,6 +41,8 @@ public class StagedOrderSetCustomerGroupActionBuilder implements Builder<StagedO
 
     /**
      *  <p>ResourceIdentifier to a CustomerGroup.</p>
+     * @param customerGroup
+     * @return Builder
      */
 
     public StagedOrderSetCustomerGroupActionBuilder customerGroup(

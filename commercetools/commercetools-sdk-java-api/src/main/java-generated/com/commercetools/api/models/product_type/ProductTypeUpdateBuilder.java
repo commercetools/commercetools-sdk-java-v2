@@ -29,6 +29,8 @@ public class ProductTypeUpdateBuilder implements Builder<ProductTypeUpdate> {
 
     /**
      *  <p>Expected version of the ProductType on which the changes should be applied. If the expected version does not match the actual version, a ConcurrentModification error is returned.</p>
+     * @param version
+     * @return Builder
      */
 
     public ProductTypeUpdateBuilder version(final Long version) {
@@ -38,6 +40,8 @@ public class ProductTypeUpdateBuilder implements Builder<ProductTypeUpdate> {
 
     /**
      *  <p>Update actions to be performed on the ProductType.</p>
+     * @param actions
+     * @return Builder
      */
 
     public ProductTypeUpdateBuilder actions(
@@ -48,6 +52,8 @@ public class ProductTypeUpdateBuilder implements Builder<ProductTypeUpdate> {
 
     /**
      *  <p>Update actions to be performed on the ProductType.</p>
+     * @param actions
+     * @return Builder
      */
 
     public ProductTypeUpdateBuilder actions(
@@ -58,6 +64,8 @@ public class ProductTypeUpdateBuilder implements Builder<ProductTypeUpdate> {
 
     /**
      *  <p>Update actions to be performed on the ProductType.</p>
+     * @param actions
+     * @return Builder
      */
 
     public ProductTypeUpdateBuilder plusActions(
@@ -71,6 +79,7 @@ public class ProductTypeUpdateBuilder implements Builder<ProductTypeUpdate> {
 
     /**
      *  <p>Update actions to be performed on the ProductType.</p>
+     * @return Builder
      */
 
     public ProductTypeUpdateBuilder plusActions(
@@ -85,6 +94,7 @@ public class ProductTypeUpdateBuilder implements Builder<ProductTypeUpdate> {
 
     /**
      *  <p>Update actions to be performed on the ProductType.</p>
+     * @return Builder
      */
 
     public ProductTypeUpdateBuilder withActions(

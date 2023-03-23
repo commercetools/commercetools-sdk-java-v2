@@ -32,6 +32,8 @@ public class SetDefaultShippingAddressChangeBuilder implements Builder<SetDefaul
 
     /**
      *  <p>Update action for <code>setDefaultShippingAddress</code> action.</p>
+     * @param change
+     * @return Builder
      */
 
     public SetDefaultShippingAddressChangeBuilder change(final String change) {
@@ -41,6 +43,7 @@ public class SetDefaultShippingAddressChangeBuilder implements Builder<SetDefaul
 
     /**
      *
+     * @return Builder
      */
 
     public SetDefaultShippingAddressChangeBuilder nextValue(
@@ -51,6 +54,8 @@ public class SetDefaultShippingAddressChangeBuilder implements Builder<SetDefaul
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public SetDefaultShippingAddressChangeBuilder nextValue(
@@ -61,6 +66,7 @@ public class SetDefaultShippingAddressChangeBuilder implements Builder<SetDefaul
 
     /**
      *
+     * @return Builder
      */
 
     public SetDefaultShippingAddressChangeBuilder previousValue(
@@ -71,6 +77,8 @@ public class SetDefaultShippingAddressChangeBuilder implements Builder<SetDefaul
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public SetDefaultShippingAddressChangeBuilder previousValue(

@@ -25,6 +25,8 @@ public class StagedOrderChangeOrderStateActionBuilder implements Builder<StagedO
 
     /**
      *
+     * @param orderState
+     * @return Builder
      */
 
     public StagedOrderChangeOrderStateActionBuilder orderState(

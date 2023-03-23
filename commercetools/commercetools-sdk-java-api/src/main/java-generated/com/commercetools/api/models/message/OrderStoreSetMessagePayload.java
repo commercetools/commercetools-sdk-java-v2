@@ -33,6 +33,7 @@ public interface OrderStoreSetMessagePayload extends OrderMessagePayload {
 
     /**
      *  <p>Store that was set.</p>
+     * @return store
      */
     @Valid
     @JsonProperty("store")

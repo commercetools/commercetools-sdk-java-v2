@@ -38,6 +38,8 @@ public class ChangeTargetMultiBuyCustomLineItemsChangeValueBuilder
 
     /**
      *
+     * @param predicate
+     * @return Builder
      */
 
     public ChangeTargetMultiBuyCustomLineItemsChangeValueBuilder predicate(final String predicate) {
@@ -47,6 +49,8 @@ public class ChangeTargetMultiBuyCustomLineItemsChangeValueBuilder
 
     /**
      *  <p>Quantity of line items that need to be present in order to trigger an application of this discount.</p>
+     * @param triggerQuantity
+     * @return Builder
      */
 
     public ChangeTargetMultiBuyCustomLineItemsChangeValueBuilder triggerQuantity(final Integer triggerQuantity) {
@@ -56,6 +60,8 @@ public class ChangeTargetMultiBuyCustomLineItemsChangeValueBuilder
 
     /**
      *  <p>Quantity of line items that are discounted per application of this discount.</p>
+     * @param discountedQuantity
+     * @return Builder
      */
 
     public ChangeTargetMultiBuyCustomLineItemsChangeValueBuilder discountedQuantity(final Integer discountedQuantity) {
@@ -65,6 +71,8 @@ public class ChangeTargetMultiBuyCustomLineItemsChangeValueBuilder
 
     /**
      *  <p>Maximum number of applications of this discount.</p>
+     * @param maxOccurrence
+     * @return Builder
      */
 
     public ChangeTargetMultiBuyCustomLineItemsChangeValueBuilder maxOccurrence(final Integer maxOccurrence) {
@@ -74,6 +82,8 @@ public class ChangeTargetMultiBuyCustomLineItemsChangeValueBuilder
 
     /**
      *
+     * @param selectionMode
+     * @return Builder
      */
 
     public ChangeTargetMultiBuyCustomLineItemsChangeValueBuilder selectionMode(

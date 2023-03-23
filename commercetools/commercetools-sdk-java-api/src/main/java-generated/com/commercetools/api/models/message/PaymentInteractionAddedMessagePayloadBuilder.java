@@ -26,6 +26,7 @@ public class PaymentInteractionAddedMessagePayloadBuilder implements Builder<Pay
 
     /**
      *  <p>The interface interaction that was added to the Payment.</p>
+     * @return Builder
      */
 
     public PaymentInteractionAddedMessagePayloadBuilder interaction(
@@ -36,6 +37,8 @@ public class PaymentInteractionAddedMessagePayloadBuilder implements Builder<Pay
 
     /**
      *  <p>The interface interaction that was added to the Payment.</p>
+     * @param interaction
+     * @return Builder
      */
 
     public PaymentInteractionAddedMessagePayloadBuilder interaction(

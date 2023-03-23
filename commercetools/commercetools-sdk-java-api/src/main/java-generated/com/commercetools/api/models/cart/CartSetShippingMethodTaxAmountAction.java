@@ -13,7 +13,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * CartSetShippingMethodTaxAmountAction
+ *  <p>A Shipping Method tax amount can be set if the Cart has the <code>ExternalAmount</code> TaxMode.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -31,7 +31,8 @@ public interface CartSetShippingMethodTaxAmountAction extends CartUpdateAction {
     String SET_SHIPPING_METHOD_TAX_AMOUNT = "setShippingMethodTaxAmount";
 
     /**
-     *
+     *  <p>Value to set. If empty, any existing value is removed.</p>
+     * @return externalTaxAmount
      */
     @Valid
     @JsonProperty("externalTaxAmount")

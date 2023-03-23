@@ -42,4 +42,5 @@ public class ApiRoot implements Closeable {
         catch (final Throwable ignored) {
         }
     }
+
 }

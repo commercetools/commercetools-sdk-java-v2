@@ -37,6 +37,8 @@ public class StagedOrderAddDeliveryActionBuilder implements Builder<StagedOrderA
 
     /**
      *
+     * @param items
+     * @return Builder
      */
 
     public StagedOrderAddDeliveryActionBuilder items(
@@ -47,6 +49,8 @@ public class StagedOrderAddDeliveryActionBuilder implements Builder<StagedOrderA
 
     /**
      *
+     * @param items
+     * @return Builder
      */
 
     public StagedOrderAddDeliveryActionBuilder items(
@@ -57,6 +61,8 @@ public class StagedOrderAddDeliveryActionBuilder implements Builder<StagedOrderA
 
     /**
      *
+     * @param items
+     * @return Builder
      */
 
     public StagedOrderAddDeliveryActionBuilder plusItems(
@@ -70,6 +76,7 @@ public class StagedOrderAddDeliveryActionBuilder implements Builder<StagedOrderA
 
     /**
      *
+     * @return Builder
      */
 
     public StagedOrderAddDeliveryActionBuilder plusItems(
@@ -83,6 +90,7 @@ public class StagedOrderAddDeliveryActionBuilder implements Builder<StagedOrderA
 
     /**
      *
+     * @return Builder
      */
 
     public StagedOrderAddDeliveryActionBuilder withItems(
@@ -94,6 +102,7 @@ public class StagedOrderAddDeliveryActionBuilder implements Builder<StagedOrderA
 
     /**
      *  <p>Polymorphic base type that represents a postal address and contact details. Depending on the read or write action, it can be either Address or AddressDraft that only differ in the data type for the optional <code>custom</code> field.</p>
+     * @return Builder
      */
 
     public StagedOrderAddDeliveryActionBuilder address(
@@ -104,6 +113,8 @@ public class StagedOrderAddDeliveryActionBuilder implements Builder<StagedOrderA
 
     /**
      *  <p>Polymorphic base type that represents a postal address and contact details. Depending on the read or write action, it can be either Address or AddressDraft that only differ in the data type for the optional <code>custom</code> field.</p>
+     * @param address
+     * @return Builder
      */
 
     public StagedOrderAddDeliveryActionBuilder address(
@@ -114,6 +125,8 @@ public class StagedOrderAddDeliveryActionBuilder implements Builder<StagedOrderA
 
     /**
      *
+     * @param parcels
+     * @return Builder
      */
 
     public StagedOrderAddDeliveryActionBuilder parcels(
@@ -124,6 +137,8 @@ public class StagedOrderAddDeliveryActionBuilder implements Builder<StagedOrderA
 
     /**
      *
+     * @param parcels
+     * @return Builder
      */
 
     public StagedOrderAddDeliveryActionBuilder parcels(
@@ -134,6 +149,8 @@ public class StagedOrderAddDeliveryActionBuilder implements Builder<StagedOrderA
 
     /**
      *
+     * @param parcels
+     * @return Builder
      */
 
     public StagedOrderAddDeliveryActionBuilder plusParcels(
@@ -147,6 +164,7 @@ public class StagedOrderAddDeliveryActionBuilder implements Builder<StagedOrderA
 
     /**
      *
+     * @return Builder
      */
 
     public StagedOrderAddDeliveryActionBuilder plusParcels(
@@ -160,6 +178,7 @@ public class StagedOrderAddDeliveryActionBuilder implements Builder<StagedOrderA
 
     /**
      *
+     * @return Builder
      */
 
     public StagedOrderAddDeliveryActionBuilder withParcels(
@@ -171,6 +190,7 @@ public class StagedOrderAddDeliveryActionBuilder implements Builder<StagedOrderA
 
     /**
      *  <p>Custom Fields for the Transaction.</p>
+     * @return Builder
      */
 
     public StagedOrderAddDeliveryActionBuilder custom(
@@ -181,6 +201,8 @@ public class StagedOrderAddDeliveryActionBuilder implements Builder<StagedOrderA
 
     /**
      *  <p>Custom Fields for the Transaction.</p>
+     * @param custom
+     * @return Builder
      */
 
     public StagedOrderAddDeliveryActionBuilder custom(

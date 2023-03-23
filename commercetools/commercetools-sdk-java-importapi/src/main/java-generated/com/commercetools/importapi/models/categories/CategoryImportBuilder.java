@@ -61,6 +61,8 @@ public class CategoryImportBuilder implements Builder<CategoryImport> {
 
     /**
      *  <p>User-defined unique identifier.</p>
+     * @param key
+     * @return Builder
      */
 
     public CategoryImportBuilder key(final String key) {
@@ -70,6 +72,7 @@ public class CategoryImportBuilder implements Builder<CategoryImport> {
 
     /**
      *  <p>Maps to <code>Category.name</code>.</p>
+     * @return Builder
      */
 
     public CategoryImportBuilder name(
@@ -80,6 +83,8 @@ public class CategoryImportBuilder implements Builder<CategoryImport> {
 
     /**
      *  <p>Maps to <code>Category.name</code>.</p>
+     * @param name
+     * @return Builder
      */
 
     public CategoryImportBuilder name(final com.commercetools.importapi.models.common.LocalizedString name) {
@@ -89,6 +94,7 @@ public class CategoryImportBuilder implements Builder<CategoryImport> {
 
     /**
      *  <p>Maps to <code>Category.slug</code>. Must match the pattern <code>[-a-zA-Z0-9_]{2,256}</code>.</p>
+     * @return Builder
      */
 
     public CategoryImportBuilder slug(
@@ -99,6 +105,8 @@ public class CategoryImportBuilder implements Builder<CategoryImport> {
 
     /**
      *  <p>Maps to <code>Category.slug</code>. Must match the pattern <code>[-a-zA-Z0-9_]{2,256}</code>.</p>
+     * @param slug
+     * @return Builder
      */
 
     public CategoryImportBuilder slug(final com.commercetools.importapi.models.common.LocalizedString slug) {
@@ -108,6 +116,7 @@ public class CategoryImportBuilder implements Builder<CategoryImport> {
 
     /**
      *  <p>Maps to <code>Category.description</code>.</p>
+     * @return Builder
      */
 
     public CategoryImportBuilder description(
@@ -118,6 +127,8 @@ public class CategoryImportBuilder implements Builder<CategoryImport> {
 
     /**
      *  <p>Maps to <code>Category.description</code>.</p>
+     * @param description
+     * @return Builder
      */
 
     public CategoryImportBuilder description(
@@ -128,6 +139,7 @@ public class CategoryImportBuilder implements Builder<CategoryImport> {
 
     /**
      *  <p>Maps to <code>Category.parent</code>. The Reference to the parent Category with which the Category is associated. If referenced Category does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Category is created.</p>
+     * @return Builder
      */
 
     public CategoryImportBuilder parent(
@@ -138,6 +150,8 @@ public class CategoryImportBuilder implements Builder<CategoryImport> {
 
     /**
      *  <p>Maps to <code>Category.parent</code>. The Reference to the parent Category with which the Category is associated. If referenced Category does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Category is created.</p>
+     * @param parent
+     * @return Builder
      */
 
     public CategoryImportBuilder parent(
@@ -148,6 +162,8 @@ public class CategoryImportBuilder implements Builder<CategoryImport> {
 
     /**
      *  <p>Maps to <code>Category.orderHint</code>.</p>
+     * @param orderHint
+     * @return Builder
      */
 
     public CategoryImportBuilder orderHint(@Nullable final String orderHint) {
@@ -157,6 +173,8 @@ public class CategoryImportBuilder implements Builder<CategoryImport> {
 
     /**
      *  <p>Maps to <code>Category.externalId</code>.</p>
+     * @param externalId
+     * @return Builder
      */
 
     public CategoryImportBuilder externalId(@Nullable final String externalId) {
@@ -166,6 +184,7 @@ public class CategoryImportBuilder implements Builder<CategoryImport> {
 
     /**
      *  <p>Maps to <code>Category.metaTitle</code>.</p>
+     * @return Builder
      */
 
     public CategoryImportBuilder metaTitle(
@@ -176,6 +195,8 @@ public class CategoryImportBuilder implements Builder<CategoryImport> {
 
     /**
      *  <p>Maps to <code>Category.metaTitle</code>.</p>
+     * @param metaTitle
+     * @return Builder
      */
 
     public CategoryImportBuilder metaTitle(
@@ -186,6 +207,7 @@ public class CategoryImportBuilder implements Builder<CategoryImport> {
 
     /**
      *  <p>Maps to <code>Category.metaDescription</code>.</p>
+     * @return Builder
      */
 
     public CategoryImportBuilder metaDescription(
@@ -197,6 +219,8 @@ public class CategoryImportBuilder implements Builder<CategoryImport> {
 
     /**
      *  <p>Maps to <code>Category.metaDescription</code>.</p>
+     * @param metaDescription
+     * @return Builder
      */
 
     public CategoryImportBuilder metaDescription(
@@ -207,6 +231,7 @@ public class CategoryImportBuilder implements Builder<CategoryImport> {
 
     /**
      *  <p>Maps to <code>Category.metaKeywords</code>.</p>
+     * @return Builder
      */
 
     public CategoryImportBuilder metaKeywords(
@@ -218,6 +243,8 @@ public class CategoryImportBuilder implements Builder<CategoryImport> {
 
     /**
      *  <p>Maps to <code>Category.metaKeywords</code>.</p>
+     * @param metaKeywords
+     * @return Builder
      */
 
     public CategoryImportBuilder metaKeywords(
@@ -228,6 +255,8 @@ public class CategoryImportBuilder implements Builder<CategoryImport> {
 
     /**
      *
+     * @param assets
+     * @return Builder
      */
 
     public CategoryImportBuilder assets(@Nullable final com.commercetools.importapi.models.common.Asset... assets) {
@@ -237,6 +266,8 @@ public class CategoryImportBuilder implements Builder<CategoryImport> {
 
     /**
      *
+     * @param assets
+     * @return Builder
      */
 
     public CategoryImportBuilder assets(
@@ -247,6 +278,8 @@ public class CategoryImportBuilder implements Builder<CategoryImport> {
 
     /**
      *
+     * @param assets
+     * @return Builder
      */
 
     public CategoryImportBuilder plusAssets(@Nullable final com.commercetools.importapi.models.common.Asset... assets) {
@@ -259,6 +292,7 @@ public class CategoryImportBuilder implements Builder<CategoryImport> {
 
     /**
      *
+     * @return Builder
      */
 
     public CategoryImportBuilder plusAssets(
@@ -272,6 +306,7 @@ public class CategoryImportBuilder implements Builder<CategoryImport> {
 
     /**
      *
+     * @return Builder
      */
 
     public CategoryImportBuilder withAssets(
@@ -283,6 +318,7 @@ public class CategoryImportBuilder implements Builder<CategoryImport> {
 
     /**
      *  <p>The custom fields for this Category.</p>
+     * @return Builder
      */
 
     public CategoryImportBuilder custom(
@@ -293,6 +329,8 @@ public class CategoryImportBuilder implements Builder<CategoryImport> {
 
     /**
      *  <p>The custom fields for this Category.</p>
+     * @param custom
+     * @return Builder
      */
 
     public CategoryImportBuilder custom(@Nullable final com.commercetools.importapi.models.customfields.Custom custom) {

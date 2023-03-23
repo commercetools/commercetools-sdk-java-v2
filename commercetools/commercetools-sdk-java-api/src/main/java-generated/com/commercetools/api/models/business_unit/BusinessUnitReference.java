@@ -35,6 +35,7 @@ public interface BusinessUnitReference extends Reference, com.commercetools.api.
 
     /**
      *  <p>Contains the representation of the expanded BusinessUnit. Only present in responses to requests with Reference Expansion for BusinessUnit.</p>
+     * @return obj
      */
     @Valid
     @JsonProperty("obj")
@@ -42,6 +43,7 @@ public interface BusinessUnitReference extends Reference, com.commercetools.api.
 
     /**
      *  <p>Unique identifier of the referenced BusinessUnit.</p>
+     * @return id
      */
     @NotNull
     @JsonProperty("id")

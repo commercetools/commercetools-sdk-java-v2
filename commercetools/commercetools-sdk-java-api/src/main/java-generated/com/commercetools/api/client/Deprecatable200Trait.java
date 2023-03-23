@@ -17,4 +17,5 @@ public interface Deprecatable200Trait<T extends Deprecatable200Trait<T>> {
     default T asDeprecatable200TraitToBaseType() {
         return (T) this;
     }
+
 }

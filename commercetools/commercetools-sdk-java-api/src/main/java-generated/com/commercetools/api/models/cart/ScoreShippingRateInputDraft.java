@@ -33,7 +33,8 @@ public interface ScoreShippingRateInputDraft
     String SCORE = "Score";
 
     /**
-     *
+     *  <p>Abstract value for categorizing a Cart.</p>
+     * @return score
      */
     @NotNull
     @JsonProperty("score")

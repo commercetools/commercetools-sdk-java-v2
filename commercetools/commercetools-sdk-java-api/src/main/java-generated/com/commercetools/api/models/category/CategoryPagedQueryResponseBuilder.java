@@ -40,6 +40,8 @@ public class CategoryPagedQueryResponseBuilder implements Builder<CategoryPagedQ
 
     /**
      *  <p>Number of results requested.</p>
+     * @param limit
+     * @return Builder
      */
 
     public CategoryPagedQueryResponseBuilder limit(final Long limit) {
@@ -49,6 +51,8 @@ public class CategoryPagedQueryResponseBuilder implements Builder<CategoryPagedQ
 
     /**
      *  <p>Number of elements skipped.</p>
+     * @param offset
+     * @return Builder
      */
 
     public CategoryPagedQueryResponseBuilder offset(final Long offset) {
@@ -58,6 +62,8 @@ public class CategoryPagedQueryResponseBuilder implements Builder<CategoryPagedQ
 
     /**
      *  <p>Actual number of results returned.</p>
+     * @param count
+     * @return Builder
      */
 
     public CategoryPagedQueryResponseBuilder count(final Long count) {
@@ -67,6 +73,8 @@ public class CategoryPagedQueryResponseBuilder implements Builder<CategoryPagedQ
 
     /**
      *  <p>Total number of results matching the query. This number is an estimation that is not strongly consistent. This field is returned by default. For improved performance, calculating this field can be deactivated by using the query parameter <code>withTotal=false</code>. When the results are filtered with a Query Predicate, <code>total</code> is subject to a limit.</p>
+     * @param total
+     * @return Builder
      */
 
     public CategoryPagedQueryResponseBuilder total(@Nullable final Long total) {
@@ -76,6 +84,8 @@ public class CategoryPagedQueryResponseBuilder implements Builder<CategoryPagedQ
 
     /**
      *  <p>Category matching the query.</p>
+     * @param results
+     * @return Builder
      */
 
     public CategoryPagedQueryResponseBuilder results(final com.commercetools.api.models.category.Category... results) {
@@ -85,6 +95,8 @@ public class CategoryPagedQueryResponseBuilder implements Builder<CategoryPagedQ
 
     /**
      *  <p>Category matching the query.</p>
+     * @param results
+     * @return Builder
      */
 
     public CategoryPagedQueryResponseBuilder results(
@@ -95,6 +107,8 @@ public class CategoryPagedQueryResponseBuilder implements Builder<CategoryPagedQ
 
     /**
      *  <p>Category matching the query.</p>
+     * @param results
+     * @return Builder
      */
 
     public CategoryPagedQueryResponseBuilder plusResults(
@@ -108,6 +122,7 @@ public class CategoryPagedQueryResponseBuilder implements Builder<CategoryPagedQ
 
     /**
      *  <p>Category matching the query.</p>
+     * @return Builder
      */
 
     public CategoryPagedQueryResponseBuilder plusResults(
@@ -121,6 +136,7 @@ public class CategoryPagedQueryResponseBuilder implements Builder<CategoryPagedQ
 
     /**
      *  <p>Category matching the query.</p>
+     * @return Builder
      */
 
     public CategoryPagedQueryResponseBuilder withResults(

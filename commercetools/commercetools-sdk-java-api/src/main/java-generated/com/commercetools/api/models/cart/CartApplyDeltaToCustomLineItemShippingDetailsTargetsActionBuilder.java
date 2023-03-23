@@ -29,7 +29,9 @@ public class CartApplyDeltaToCustomLineItemShippingDetailsTargetsActionBuilder
     private java.util.List<com.commercetools.api.models.cart.ItemShippingTarget> targetsDelta;
 
     /**
-     *
+     *  <p><code>id</code> of the CustomLineItem to update.</p>
+     * @param customLineItemId
+     * @return Builder
      */
 
     public CartApplyDeltaToCustomLineItemShippingDetailsTargetsActionBuilder customLineItemId(
@@ -39,7 +41,9 @@ public class CartApplyDeltaToCustomLineItemShippingDetailsTargetsActionBuilder
     }
 
     /**
-     *
+     *  <p>Using positive or negative quantities increases or decreases the number of items shipped to an address.</p>
+     * @param targetsDelta
+     * @return Builder
      */
 
     public CartApplyDeltaToCustomLineItemShippingDetailsTargetsActionBuilder targetsDelta(
@@ -49,7 +53,9 @@ public class CartApplyDeltaToCustomLineItemShippingDetailsTargetsActionBuilder
     }
 
     /**
-     *
+     *  <p>Using positive or negative quantities increases or decreases the number of items shipped to an address.</p>
+     * @param targetsDelta
+     * @return Builder
      */
 
     public CartApplyDeltaToCustomLineItemShippingDetailsTargetsActionBuilder targetsDelta(
@@ -59,7 +65,9 @@ public class CartApplyDeltaToCustomLineItemShippingDetailsTargetsActionBuilder
     }
 
     /**
-     *
+     *  <p>Using positive or negative quantities increases or decreases the number of items shipped to an address.</p>
+     * @param targetsDelta
+     * @return Builder
      */
 
     public CartApplyDeltaToCustomLineItemShippingDetailsTargetsActionBuilder plusTargetsDelta(
@@ -72,7 +80,8 @@ public class CartApplyDeltaToCustomLineItemShippingDetailsTargetsActionBuilder
     }
 
     /**
-     *
+     *  <p>Using positive or negative quantities increases or decreases the number of items shipped to an address.</p>
+     * @return Builder
      */
 
     public CartApplyDeltaToCustomLineItemShippingDetailsTargetsActionBuilder plusTargetsDelta(
@@ -85,7 +94,8 @@ public class CartApplyDeltaToCustomLineItemShippingDetailsTargetsActionBuilder
     }
 
     /**
-     *
+     *  <p>Using positive or negative quantities increases or decreases the number of items shipped to an address.</p>
+     * @return Builder
      */
 
     public CartApplyDeltaToCustomLineItemShippingDetailsTargetsActionBuilder withTargetsDelta(

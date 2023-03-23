@@ -33,6 +33,7 @@ public interface BooleanField extends CustomField {
 
     /**
      *
+     * @return value
      */
     @NotNull
     @JsonProperty("value")

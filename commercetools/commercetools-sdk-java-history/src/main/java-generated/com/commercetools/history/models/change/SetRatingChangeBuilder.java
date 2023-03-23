@@ -31,6 +31,8 @@ public class SetRatingChangeBuilder implements Builder<SetRatingChange> {
 
     /**
      *  <p>Shape of the action for <code>setRating</code></p>
+     * @param change
+     * @return Builder
      */
 
     public SetRatingChangeBuilder change(final String change) {
@@ -40,6 +42,8 @@ public class SetRatingChangeBuilder implements Builder<SetRatingChange> {
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public SetRatingChangeBuilder previousValue(final Integer previousValue) {
@@ -49,6 +53,8 @@ public class SetRatingChangeBuilder implements Builder<SetRatingChange> {
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public SetRatingChangeBuilder nextValue(final Integer nextValue) {

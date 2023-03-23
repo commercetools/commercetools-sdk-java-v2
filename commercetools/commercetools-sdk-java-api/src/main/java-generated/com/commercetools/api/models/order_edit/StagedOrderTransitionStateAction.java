@@ -36,6 +36,7 @@ public interface StagedOrderTransitionStateAction extends StagedOrderUpdateActio
 
     /**
      *  <p>ResourceIdentifier to a State.</p>
+     * @return state
      */
     @NotNull
     @Valid
@@ -44,6 +45,7 @@ public interface StagedOrderTransitionStateAction extends StagedOrderUpdateActio
 
     /**
      *
+     * @return force
      */
 
     @JsonProperty("force")

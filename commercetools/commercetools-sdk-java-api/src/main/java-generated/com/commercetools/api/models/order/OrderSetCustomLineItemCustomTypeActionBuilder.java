@@ -34,6 +34,8 @@ public class OrderSetCustomLineItemCustomTypeActionBuilder implements Builder<Or
 
     /**
      *
+     * @param customLineItemId
+     * @return Builder
      */
 
     public OrderSetCustomLineItemCustomTypeActionBuilder customLineItemId(final String customLineItemId) {
@@ -43,6 +45,7 @@ public class OrderSetCustomLineItemCustomTypeActionBuilder implements Builder<Or
 
     /**
      *  <p>Defines the Type that extends the CustomLineItem with Custom Fields. If absent, any existing Type and Custom Fields are removed from the CustomLineItem.</p>
+     * @return Builder
      */
 
     public OrderSetCustomLineItemCustomTypeActionBuilder type(
@@ -53,6 +56,8 @@ public class OrderSetCustomLineItemCustomTypeActionBuilder implements Builder<Or
 
     /**
      *  <p>Defines the Type that extends the CustomLineItem with Custom Fields. If absent, any existing Type and Custom Fields are removed from the CustomLineItem.</p>
+     * @param type
+     * @return Builder
      */
 
     public OrderSetCustomLineItemCustomTypeActionBuilder type(
@@ -63,6 +68,7 @@ public class OrderSetCustomLineItemCustomTypeActionBuilder implements Builder<Or
 
     /**
      *  <p>Sets the Custom Fields fields for the CustomLineItem.</p>
+     * @return Builder
      */
 
     public OrderSetCustomLineItemCustomTypeActionBuilder fields(
@@ -73,6 +79,8 @@ public class OrderSetCustomLineItemCustomTypeActionBuilder implements Builder<Or
 
     /**
      *  <p>Sets the Custom Fields fields for the CustomLineItem.</p>
+     * @param fields
+     * @return Builder
      */
 
     public OrderSetCustomLineItemCustomTypeActionBuilder fields(

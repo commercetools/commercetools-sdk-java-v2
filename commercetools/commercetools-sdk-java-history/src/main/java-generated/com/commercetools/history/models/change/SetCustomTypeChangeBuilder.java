@@ -32,6 +32,8 @@ public class SetCustomTypeChangeBuilder implements Builder<SetCustomTypeChange> 
 
     /**
      *  <p>Update action for setting a custom type</p>
+     * @param change
+     * @return Builder
      */
 
     public SetCustomTypeChangeBuilder change(final String change) {
@@ -41,6 +43,7 @@ public class SetCustomTypeChangeBuilder implements Builder<SetCustomTypeChange> 
 
     /**
      *
+     * @return Builder
      */
 
     public SetCustomTypeChangeBuilder nextValue(
@@ -51,6 +54,8 @@ public class SetCustomTypeChangeBuilder implements Builder<SetCustomTypeChange> 
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public SetCustomTypeChangeBuilder nextValue(final com.commercetools.history.models.common.CustomFields nextValue) {
@@ -60,6 +65,7 @@ public class SetCustomTypeChangeBuilder implements Builder<SetCustomTypeChange> 
 
     /**
      *
+     * @return Builder
      */
 
     public SetCustomTypeChangeBuilder previousValue(
@@ -70,6 +76,8 @@ public class SetCustomTypeChangeBuilder implements Builder<SetCustomTypeChange> 
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public SetCustomTypeChangeBuilder previousValue(

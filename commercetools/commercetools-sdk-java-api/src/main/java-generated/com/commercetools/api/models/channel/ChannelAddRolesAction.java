@@ -33,6 +33,7 @@ public interface ChannelAddRolesAction extends ChannelUpdateAction {
 
     /**
      *  <p>Value to append to the array.</p>
+     * @return roles
      */
     @NotNull
     @JsonProperty("roles")

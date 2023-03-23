@@ -28,20 +28,20 @@ public class ShippingDraftImpl implements ShippingDraft, ModelBase {
 
     private com.commercetools.api.models.cart.ShippingRateInputDraft shippingRateInput;
 
-    private String externalTaxRate;
+    private com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate;
 
-    private java.util.List<com.commercetools.api.models.order.Delivery> deliveries;
+    private java.util.List<com.commercetools.api.models.order.DeliveryDraft> deliveries;
 
-    private String custom;
+    private com.commercetools.api.models.type.CustomFieldsDraft custom;
 
     @JsonCreator
     ShippingDraftImpl(@JsonProperty("key") final String key,
             @JsonProperty("shippingMethod") final com.commercetools.api.models.shipping_method.ShippingMethodReference shippingMethod,
             @JsonProperty("shippingAddress") final com.commercetools.api.models.common.BaseAddress shippingAddress,
             @JsonProperty("shippingRateInput") final com.commercetools.api.models.cart.ShippingRateInputDraft shippingRateInput,
-            @JsonProperty("externalTaxRate") final String externalTaxRate,
-            @JsonProperty("deliveries") final java.util.List<com.commercetools.api.models.order.Delivery> deliveries,
-            @JsonProperty("custom") final String custom) {
+            @JsonProperty("externalTaxRate") final com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate,
+            @JsonProperty("deliveries") final java.util.List<com.commercetools.api.models.order.DeliveryDraft> deliveries,
+            @JsonProperty("custom") final com.commercetools.api.models.type.CustomFieldsDraft custom) {
         this.key = key;
         this.shippingMethod = shippingMethod;
         this.shippingAddress = shippingAddress;
@@ -55,7 +55,7 @@ public class ShippingDraftImpl implements ShippingDraft, ModelBase {
     }
 
     /**
-     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multiple</code> ShippingMode.</p>
+     *  <p>User-defined unique identifier for the Shipping in a Cart with <code>Multiple</code> ShippingMode.</p>
      */
 
     public String getKey() {
@@ -79,12 +79,12 @@ public class ShippingDraftImpl implements ShippingDraft, ModelBase {
     }
 
     /**
-     *  <p>Used as an input to select a ShippingRatePriceTier.</p>
+     *  <p>Input used to select a ShippingRatePriceTier. The data type of this field depends on the <code>shippingRateInputType.type</code> configured in the Project:</p>
      *  <ul>
-     *   <li>Must be ClassificationShippingRateInput if ShippingRateInputType is CartClassificationType.</li>
-     *   <li>Must be ScoreShippingRateInput if ShippingRateInputType is CartScoreType.</li>
+     *   <li>If <code>CartClassification</code>, it must be ClassificationShippingRateInputDraft.</li>
+     *   <li>If <code>CartScore</code>, it must be ScoreShippingRateInputDraft.</li>
+     *   <li>If <code>CartValue</code>, it cannot be set.</li>
      *  </ul>
-     *  <p>The <code>shippingRateInput</code> cannot be set on the Cart if CartValueType is defined.</p>
      */
 
     public com.commercetools.api.models.cart.ShippingRateInputDraft getShippingRateInput() {
@@ -95,15 +95,15 @@ public class ShippingDraftImpl implements ShippingDraft, ModelBase {
      *  <p>Tax Rate used for taxing a shipping expense if the Cart has the <code>External</code> TaxMode.</p>
      */
 
-    public String getExternalTaxRate() {
+    public com.commercetools.api.models.cart.ExternalTaxRateDraft getExternalTaxRate() {
         return this.externalTaxRate;
     }
 
     /**
-     *  <p>Holds information on how items are delivered to customers.</p>
+     *  <p>Deliveries to be shipped with the Shipping Method.</p>
      */
 
-    public java.util.List<com.commercetools.api.models.order.Delivery> getDeliveries() {
+    public java.util.List<com.commercetools.api.models.order.DeliveryDraft> getDeliveries() {
         return this.deliveries;
     }
 
@@ -111,7 +111,7 @@ public class ShippingDraftImpl implements ShippingDraft, ModelBase {
      *  <p>Custom Fields for Shipping.</p>
      */
 
-    public String getCustom() {
+    public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
         return this.custom;
     }
 
@@ -132,19 +132,19 @@ public class ShippingDraftImpl implements ShippingDraft, ModelBase {
         this.shippingRateInput = shippingRateInput;
     }
 
-    public void setExternalTaxRate(final String externalTaxRate) {
+    public void setExternalTaxRate(final com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate) {
         this.externalTaxRate = externalTaxRate;
     }
 
-    public void setDeliveries(final com.commercetools.api.models.order.Delivery... deliveries) {
+    public void setDeliveries(final com.commercetools.api.models.order.DeliveryDraft... deliveries) {
         this.deliveries = new ArrayList<>(Arrays.asList(deliveries));
     }
 
-    public void setDeliveries(final java.util.List<com.commercetools.api.models.order.Delivery> deliveries) {
+    public void setDeliveries(final java.util.List<com.commercetools.api.models.order.DeliveryDraft> deliveries) {
         this.deliveries = deliveries;
     }
 
-    public void setCustom(final String custom) {
+    public void setCustom(final com.commercetools.api.models.type.CustomFieldsDraft custom) {
         this.custom = custom;
     }
 

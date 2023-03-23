@@ -26,6 +26,8 @@ public class ProductTypeChangeAttributeOrderByNameActionBuilder
 
     /**
      *  <p>Names of Attributes to reorder. This array must include all Attributes currently present on a ProductType in a different order.</p>
+     * @param attributeNames
+     * @return Builder
      */
 
     public ProductTypeChangeAttributeOrderByNameActionBuilder attributeNames(final String... attributeNames) {
@@ -35,6 +37,8 @@ public class ProductTypeChangeAttributeOrderByNameActionBuilder
 
     /**
      *  <p>Names of Attributes to reorder. This array must include all Attributes currently present on a ProductType in a different order.</p>
+     * @param attributeNames
+     * @return Builder
      */
 
     public ProductTypeChangeAttributeOrderByNameActionBuilder attributeNames(
@@ -45,6 +49,8 @@ public class ProductTypeChangeAttributeOrderByNameActionBuilder
 
     /**
      *  <p>Names of Attributes to reorder. This array must include all Attributes currently present on a ProductType in a different order.</p>
+     * @param attributeNames
+     * @return Builder
      */
 
     public ProductTypeChangeAttributeOrderByNameActionBuilder plusAttributeNames(final String... attributeNames) {

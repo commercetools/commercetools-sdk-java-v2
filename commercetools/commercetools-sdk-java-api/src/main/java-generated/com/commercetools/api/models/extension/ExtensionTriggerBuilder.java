@@ -33,6 +33,8 @@ public class ExtensionTriggerBuilder implements Builder<ExtensionTrigger> {
 
     /**
      *  <p><code>cart</code>, <code>order</code>, <code>payment</code>, <code>customer</code>, <code>quote-request</code>, <code>staged-quote</code>, <code>quote</code>, and <code>business-unit</code> are supported.</p>
+     * @param resourceTypeId
+     * @return Builder
      */
 
     public ExtensionTriggerBuilder resourceTypeId(
@@ -43,6 +45,8 @@ public class ExtensionTriggerBuilder implements Builder<ExtensionTrigger> {
 
     /**
      *  <p><code>Create</code> and <code>Update</code> requests are supported.</p>
+     * @param actions
+     * @return Builder
      */
 
     public ExtensionTriggerBuilder actions(final com.commercetools.api.models.extension.ExtensionAction... actions) {
@@ -52,6 +56,8 @@ public class ExtensionTriggerBuilder implements Builder<ExtensionTrigger> {
 
     /**
      *  <p><code>Create</code> and <code>Update</code> requests are supported.</p>
+     * @param actions
+     * @return Builder
      */
 
     public ExtensionTriggerBuilder actions(
@@ -62,6 +68,8 @@ public class ExtensionTriggerBuilder implements Builder<ExtensionTrigger> {
 
     /**
      *  <p><code>Create</code> and <code>Update</code> requests are supported.</p>
+     * @param actions
+     * @return Builder
      */
 
     public ExtensionTriggerBuilder plusActions(
@@ -75,6 +83,8 @@ public class ExtensionTriggerBuilder implements Builder<ExtensionTrigger> {
 
     /**
      *  <p>Valid predicate that controls the conditions under which the API Extension is called. The Extension is not triggered when the specified condition is not fulfilled.</p>
+     * @param condition
+     * @return Builder
      */
 
     public ExtensionTriggerBuilder condition(@Nullable final String condition) {

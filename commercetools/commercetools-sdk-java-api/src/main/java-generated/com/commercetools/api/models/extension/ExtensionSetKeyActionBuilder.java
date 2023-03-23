@@ -27,6 +27,8 @@ public class ExtensionSetKeyActionBuilder implements Builder<ExtensionSetKeyActi
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
+     * @param key
+     * @return Builder
      */
 
     public ExtensionSetKeyActionBuilder key(@Nullable final String key) {

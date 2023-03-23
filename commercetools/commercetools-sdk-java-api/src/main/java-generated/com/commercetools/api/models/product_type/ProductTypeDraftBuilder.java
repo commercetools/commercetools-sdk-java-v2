@@ -37,6 +37,8 @@ public class ProductTypeDraftBuilder implements Builder<ProductTypeDraft> {
 
     /**
      *  <p>User-defined unique identifier for the ProductType.</p>
+     * @param key
+     * @return Builder
      */
 
     public ProductTypeDraftBuilder key(@Nullable final String key) {
@@ -46,6 +48,8 @@ public class ProductTypeDraftBuilder implements Builder<ProductTypeDraft> {
 
     /**
      *  <p>Name of the ProductType.</p>
+     * @param name
+     * @return Builder
      */
 
     public ProductTypeDraftBuilder name(final String name) {
@@ -55,6 +59,8 @@ public class ProductTypeDraftBuilder implements Builder<ProductTypeDraft> {
 
     /**
      *  <p>Description of the ProductType.</p>
+     * @param description
+     * @return Builder
      */
 
     public ProductTypeDraftBuilder description(final String description) {
@@ -64,6 +70,8 @@ public class ProductTypeDraftBuilder implements Builder<ProductTypeDraft> {
 
     /**
      *  <p>Attributes to specify for the ProductType. Products of this ProductType have these Attributes available on their ProductVariants.</p>
+     * @param attributes
+     * @return Builder
      */
 
     public ProductTypeDraftBuilder attributes(
@@ -74,6 +82,8 @@ public class ProductTypeDraftBuilder implements Builder<ProductTypeDraft> {
 
     /**
      *  <p>Attributes to specify for the ProductType. Products of this ProductType have these Attributes available on their ProductVariants.</p>
+     * @param attributes
+     * @return Builder
      */
 
     public ProductTypeDraftBuilder attributes(
@@ -84,6 +94,8 @@ public class ProductTypeDraftBuilder implements Builder<ProductTypeDraft> {
 
     /**
      *  <p>Attributes to specify for the ProductType. Products of this ProductType have these Attributes available on their ProductVariants.</p>
+     * @param attributes
+     * @return Builder
      */
 
     public ProductTypeDraftBuilder plusAttributes(
@@ -97,6 +109,7 @@ public class ProductTypeDraftBuilder implements Builder<ProductTypeDraft> {
 
     /**
      *  <p>Attributes to specify for the ProductType. Products of this ProductType have these Attributes available on their ProductVariants.</p>
+     * @return Builder
      */
 
     public ProductTypeDraftBuilder plusAttributes(
@@ -111,6 +124,7 @@ public class ProductTypeDraftBuilder implements Builder<ProductTypeDraft> {
 
     /**
      *  <p>Attributes to specify for the ProductType. Products of this ProductType have these Attributes available on their ProductVariants.</p>
+     * @return Builder
      */
 
     public ProductTypeDraftBuilder withAttributes(

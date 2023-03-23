@@ -31,6 +31,7 @@ public class ChannelSetAddressCustomTypeActionBuilder implements Builder<Channel
 
     /**
      *  <p>Defines the Type that extends the <code>address</code> with Custom Fields. If absent, any existing Type and Custom Fields are removed from the <code>address</code>.</p>
+     * @return Builder
      */
 
     public ChannelSetAddressCustomTypeActionBuilder type(
@@ -41,6 +42,8 @@ public class ChannelSetAddressCustomTypeActionBuilder implements Builder<Channel
 
     /**
      *  <p>Defines the Type that extends the <code>address</code> with Custom Fields. If absent, any existing Type and Custom Fields are removed from the <code>address</code>.</p>
+     * @param type
+     * @return Builder
      */
 
     public ChannelSetAddressCustomTypeActionBuilder type(
@@ -51,6 +54,7 @@ public class ChannelSetAddressCustomTypeActionBuilder implements Builder<Channel
 
     /**
      *  <p>Sets the Custom Fields fields for the <code>address</code>.</p>
+     * @return Builder
      */
 
     public ChannelSetAddressCustomTypeActionBuilder fields(
@@ -61,6 +65,8 @@ public class ChannelSetAddressCustomTypeActionBuilder implements Builder<Channel
 
     /**
      *  <p>Sets the Custom Fields fields for the <code>address</code>.</p>
+     * @param fields
+     * @return Builder
      */
 
     public ChannelSetAddressCustomTypeActionBuilder fields(

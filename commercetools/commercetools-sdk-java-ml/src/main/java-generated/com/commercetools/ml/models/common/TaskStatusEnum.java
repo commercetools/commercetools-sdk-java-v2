@@ -71,4 +71,5 @@ public interface TaskStatusEnum {
     public static TaskStatusEnum[] values() {
         return TaskStatusEnumEnum.values();
     }
+
 }

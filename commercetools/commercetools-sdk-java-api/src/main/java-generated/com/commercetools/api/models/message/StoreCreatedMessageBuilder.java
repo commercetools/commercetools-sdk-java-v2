@@ -76,6 +76,8 @@ public class StoreCreatedMessageBuilder implements Builder<StoreCreatedMessage> 
 
     /**
      *  <p>Unique identifier of the Message. Can be used to track which Messages have been processed.</p>
+     * @param id
+     * @return Builder
      */
 
     public StoreCreatedMessageBuilder id(final String id) {
@@ -85,6 +87,8 @@ public class StoreCreatedMessageBuilder implements Builder<StoreCreatedMessage> 
 
     /**
      *  <p>Version of a resource. In case of Messages, this is always <code>1</code>.</p>
+     * @param version
+     * @return Builder
      */
 
     public StoreCreatedMessageBuilder version(final Long version) {
@@ -94,6 +98,8 @@ public class StoreCreatedMessageBuilder implements Builder<StoreCreatedMessage> 
 
     /**
      *  <p>Date and time (UTC) the Message was generated.</p>
+     * @param createdAt
+     * @return Builder
      */
 
     public StoreCreatedMessageBuilder createdAt(final java.time.ZonedDateTime createdAt) {
@@ -103,6 +109,8 @@ public class StoreCreatedMessageBuilder implements Builder<StoreCreatedMessage> 
 
     /**
      *  <p>Value of <code>createdAt</code>.</p>
+     * @param lastModifiedAt
+     * @return Builder
      */
 
     public StoreCreatedMessageBuilder lastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {
@@ -112,6 +120,7 @@ public class StoreCreatedMessageBuilder implements Builder<StoreCreatedMessage> 
 
     /**
      *  <p>Value of <code>createdBy</code>.</p>
+     * @return Builder
      */
 
     public StoreCreatedMessageBuilder lastModifiedBy(
@@ -122,6 +131,8 @@ public class StoreCreatedMessageBuilder implements Builder<StoreCreatedMessage> 
 
     /**
      *  <p>Value of <code>createdBy</code>.</p>
+     * @param lastModifiedBy
+     * @return Builder
      */
 
     public StoreCreatedMessageBuilder lastModifiedBy(
@@ -132,6 +143,7 @@ public class StoreCreatedMessageBuilder implements Builder<StoreCreatedMessage> 
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @return Builder
      */
 
     public StoreCreatedMessageBuilder createdBy(
@@ -142,6 +154,8 @@ public class StoreCreatedMessageBuilder implements Builder<StoreCreatedMessage> 
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param createdBy
+     * @return Builder
      */
 
     public StoreCreatedMessageBuilder createdBy(
@@ -152,6 +166,8 @@ public class StoreCreatedMessageBuilder implements Builder<StoreCreatedMessage> 
 
     /**
      *  <p>Message number in relation to other Messages for a given resource. The <code>sequenceNumber</code> of the next Message for the resource is the successor of the <code>sequenceNumber</code> of the current Message. Meaning, the <code>sequenceNumber</code> of the next Message equals the <code>sequenceNumber</code> of the current Message + 1. <code>sequenceNumber</code> can be used to ensure that Messages are processed in the correct order for a particular resource.</p>
+     * @param sequenceNumber
+     * @return Builder
      */
 
     public StoreCreatedMessageBuilder sequenceNumber(final Long sequenceNumber) {
@@ -161,6 +177,8 @@ public class StoreCreatedMessageBuilder implements Builder<StoreCreatedMessage> 
 
     /**
      *  <p>Reference to the resource on which the change or action was performed.</p>
+     * @param resource
+     * @return Builder
      */
 
     public StoreCreatedMessageBuilder resource(final com.commercetools.api.models.common.Reference resource) {
@@ -170,6 +188,7 @@ public class StoreCreatedMessageBuilder implements Builder<StoreCreatedMessage> 
 
     /**
      *  <p>Reference to the resource on which the change or action was performed.</p>
+     * @return Builder
      */
 
     public StoreCreatedMessageBuilder resource(
@@ -180,6 +199,8 @@ public class StoreCreatedMessageBuilder implements Builder<StoreCreatedMessage> 
 
     /**
      *  <p>Version of the resource on which the change or action was performed.</p>
+     * @param resourceVersion
+     * @return Builder
      */
 
     public StoreCreatedMessageBuilder resourceVersion(final Long resourceVersion) {
@@ -189,6 +210,7 @@ public class StoreCreatedMessageBuilder implements Builder<StoreCreatedMessage> 
 
     /**
      *  <p>User-provided identifiers of the resource, such as <code>key</code> or <code>externalId</code>. Only present if the resource has such identifiers.</p>
+     * @return Builder
      */
 
     public StoreCreatedMessageBuilder resourceUserProvidedIdentifiers(
@@ -201,6 +223,8 @@ public class StoreCreatedMessageBuilder implements Builder<StoreCreatedMessage> 
 
     /**
      *  <p>User-provided identifiers of the resource, such as <code>key</code> or <code>externalId</code>. Only present if the resource has such identifiers.</p>
+     * @param resourceUserProvidedIdentifiers
+     * @return Builder
      */
 
     public StoreCreatedMessageBuilder resourceUserProvidedIdentifiers(
@@ -211,6 +235,7 @@ public class StoreCreatedMessageBuilder implements Builder<StoreCreatedMessage> 
 
     /**
      *  <p>The <code>name</code> of the Store that was created.</p>
+     * @return Builder
      */
 
     public StoreCreatedMessageBuilder name(
@@ -221,6 +246,8 @@ public class StoreCreatedMessageBuilder implements Builder<StoreCreatedMessage> 
 
     /**
      *  <p>The <code>name</code> of the Store that was created.</p>
+     * @param name
+     * @return Builder
      */
 
     public StoreCreatedMessageBuilder name(@Nullable final com.commercetools.api.models.common.LocalizedString name) {
@@ -230,6 +257,8 @@ public class StoreCreatedMessageBuilder implements Builder<StoreCreatedMessage> 
 
     /**
      *  <p>Languages of the Store that was created. Languages are represented as IETF language tags.</p>
+     * @param languages
+     * @return Builder
      */
 
     public StoreCreatedMessageBuilder languages(@Nullable final String... languages) {
@@ -239,6 +268,8 @@ public class StoreCreatedMessageBuilder implements Builder<StoreCreatedMessage> 
 
     /**
      *  <p>Languages of the Store that was created. Languages are represented as IETF language tags.</p>
+     * @param languages
+     * @return Builder
      */
 
     public StoreCreatedMessageBuilder languages(@Nullable final java.util.List<String> languages) {
@@ -248,6 +279,8 @@ public class StoreCreatedMessageBuilder implements Builder<StoreCreatedMessage> 
 
     /**
      *  <p>Languages of the Store that was created. Languages are represented as IETF language tags.</p>
+     * @param languages
+     * @return Builder
      */
 
     public StoreCreatedMessageBuilder plusLanguages(@Nullable final String... languages) {
@@ -260,6 +293,8 @@ public class StoreCreatedMessageBuilder implements Builder<StoreCreatedMessage> 
 
     /**
      *  <p>Countries of the Store that was created.</p>
+     * @param countries
+     * @return Builder
      */
 
     public StoreCreatedMessageBuilder countries(
@@ -270,6 +305,8 @@ public class StoreCreatedMessageBuilder implements Builder<StoreCreatedMessage> 
 
     /**
      *  <p>Countries of the Store that was created.</p>
+     * @param countries
+     * @return Builder
      */
 
     public StoreCreatedMessageBuilder countries(
@@ -280,6 +317,8 @@ public class StoreCreatedMessageBuilder implements Builder<StoreCreatedMessage> 
 
     /**
      *  <p>Countries of the Store that was created.</p>
+     * @param countries
+     * @return Builder
      */
 
     public StoreCreatedMessageBuilder plusCountries(
@@ -293,6 +332,7 @@ public class StoreCreatedMessageBuilder implements Builder<StoreCreatedMessage> 
 
     /**
      *  <p>Countries of the Store that was created.</p>
+     * @return Builder
      */
 
     public StoreCreatedMessageBuilder plusCountries(
@@ -306,6 +346,7 @@ public class StoreCreatedMessageBuilder implements Builder<StoreCreatedMessage> 
 
     /**
      *  <p>Countries of the Store that was created.</p>
+     * @return Builder
      */
 
     public StoreCreatedMessageBuilder withCountries(
@@ -317,6 +358,8 @@ public class StoreCreatedMessageBuilder implements Builder<StoreCreatedMessage> 
 
     /**
      *  <p>Distribution Channels of the Store that was created.</p>
+     * @param distributionChannels
+     * @return Builder
      */
 
     public StoreCreatedMessageBuilder distributionChannels(
@@ -327,6 +370,8 @@ public class StoreCreatedMessageBuilder implements Builder<StoreCreatedMessage> 
 
     /**
      *  <p>Distribution Channels of the Store that was created.</p>
+     * @param distributionChannels
+     * @return Builder
      */
 
     public StoreCreatedMessageBuilder distributionChannels(
@@ -337,6 +382,8 @@ public class StoreCreatedMessageBuilder implements Builder<StoreCreatedMessage> 
 
     /**
      *  <p>Distribution Channels of the Store that was created.</p>
+     * @param distributionChannels
+     * @return Builder
      */
 
     public StoreCreatedMessageBuilder plusDistributionChannels(
@@ -350,6 +397,7 @@ public class StoreCreatedMessageBuilder implements Builder<StoreCreatedMessage> 
 
     /**
      *  <p>Distribution Channels of the Store that was created.</p>
+     * @return Builder
      */
 
     public StoreCreatedMessageBuilder plusDistributionChannels(
@@ -364,6 +412,7 @@ public class StoreCreatedMessageBuilder implements Builder<StoreCreatedMessage> 
 
     /**
      *  <p>Distribution Channels of the Store that was created.</p>
+     * @return Builder
      */
 
     public StoreCreatedMessageBuilder withDistributionChannels(
@@ -376,6 +425,8 @@ public class StoreCreatedMessageBuilder implements Builder<StoreCreatedMessage> 
 
     /**
      *  <p>Supply Channels of the Store that was created.</p>
+     * @param supplyChannels
+     * @return Builder
      */
 
     public StoreCreatedMessageBuilder supplyChannels(
@@ -386,6 +437,8 @@ public class StoreCreatedMessageBuilder implements Builder<StoreCreatedMessage> 
 
     /**
      *  <p>Supply Channels of the Store that was created.</p>
+     * @param supplyChannels
+     * @return Builder
      */
 
     public StoreCreatedMessageBuilder supplyChannels(
@@ -396,6 +449,8 @@ public class StoreCreatedMessageBuilder implements Builder<StoreCreatedMessage> 
 
     /**
      *  <p>Supply Channels of the Store that was created.</p>
+     * @param supplyChannels
+     * @return Builder
      */
 
     public StoreCreatedMessageBuilder plusSupplyChannels(
@@ -409,6 +464,7 @@ public class StoreCreatedMessageBuilder implements Builder<StoreCreatedMessage> 
 
     /**
      *  <p>Supply Channels of the Store that was created.</p>
+     * @return Builder
      */
 
     public StoreCreatedMessageBuilder plusSupplyChannels(
@@ -423,6 +479,7 @@ public class StoreCreatedMessageBuilder implements Builder<StoreCreatedMessage> 
 
     /**
      *  <p>Supply Channels of the Store that was created.</p>
+     * @return Builder
      */
 
     public StoreCreatedMessageBuilder withSupplyChannels(
@@ -435,6 +492,8 @@ public class StoreCreatedMessageBuilder implements Builder<StoreCreatedMessage> 
 
     /**
      *  <p>ProductSelectionSettings of the Store that was created.</p>
+     * @param productSelections
+     * @return Builder
      */
 
     public StoreCreatedMessageBuilder productSelections(
@@ -445,6 +504,8 @@ public class StoreCreatedMessageBuilder implements Builder<StoreCreatedMessage> 
 
     /**
      *  <p>ProductSelectionSettings of the Store that was created.</p>
+     * @param productSelections
+     * @return Builder
      */
 
     public StoreCreatedMessageBuilder productSelections(
@@ -455,6 +516,8 @@ public class StoreCreatedMessageBuilder implements Builder<StoreCreatedMessage> 
 
     /**
      *  <p>ProductSelectionSettings of the Store that was created.</p>
+     * @param productSelections
+     * @return Builder
      */
 
     public StoreCreatedMessageBuilder plusProductSelections(
@@ -468,6 +531,7 @@ public class StoreCreatedMessageBuilder implements Builder<StoreCreatedMessage> 
 
     /**
      *  <p>ProductSelectionSettings of the Store that was created.</p>
+     * @return Builder
      */
 
     public StoreCreatedMessageBuilder plusProductSelections(
@@ -482,6 +546,7 @@ public class StoreCreatedMessageBuilder implements Builder<StoreCreatedMessage> 
 
     /**
      *  <p>ProductSelectionSettings of the Store that was created.</p>
+     * @return Builder
      */
 
     public StoreCreatedMessageBuilder withProductSelections(
@@ -494,6 +559,7 @@ public class StoreCreatedMessageBuilder implements Builder<StoreCreatedMessage> 
 
     /**
      *  <p>Custom Fields on the Store that was created.</p>
+     * @return Builder
      */
 
     public StoreCreatedMessageBuilder custom(
@@ -504,6 +570,8 @@ public class StoreCreatedMessageBuilder implements Builder<StoreCreatedMessage> 
 
     /**
      *  <p>Custom Fields on the Store that was created.</p>
+     * @param custom
+     * @return Builder
      */
 
     public StoreCreatedMessageBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFields custom) {

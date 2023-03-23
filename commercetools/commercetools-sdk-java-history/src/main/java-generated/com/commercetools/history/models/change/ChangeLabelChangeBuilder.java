@@ -38,6 +38,8 @@ public class ChangeLabelChangeBuilder implements Builder<ChangeLabelChange> {
 
     /**
      *  <p>Update action for <code>changeLabel</code> on product types and types</p>
+     * @param change
+     * @return Builder
      */
 
     public ChangeLabelChangeBuilder change(final String change) {
@@ -47,6 +49,8 @@ public class ChangeLabelChangeBuilder implements Builder<ChangeLabelChange> {
 
     /**
      *  <p>The name of the field definition to update (types).</p>
+     * @param fieldName
+     * @return Builder
      */
 
     public ChangeLabelChangeBuilder fieldName(final String fieldName) {
@@ -56,6 +60,8 @@ public class ChangeLabelChangeBuilder implements Builder<ChangeLabelChange> {
 
     /**
      *  <p>The name of the attribute definition to update (product-type).</p>
+     * @param attributeName
+     * @return Builder
      */
 
     public ChangeLabelChangeBuilder attributeName(final String attributeName) {
@@ -65,6 +71,7 @@ public class ChangeLabelChangeBuilder implements Builder<ChangeLabelChange> {
 
     /**
      *
+     * @return Builder
      */
 
     public ChangeLabelChangeBuilder nextValue(
@@ -75,6 +82,8 @@ public class ChangeLabelChangeBuilder implements Builder<ChangeLabelChange> {
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public ChangeLabelChangeBuilder nextValue(final com.commercetools.history.models.common.LocalizedString nextValue) {
@@ -84,6 +93,7 @@ public class ChangeLabelChangeBuilder implements Builder<ChangeLabelChange> {
 
     /**
      *
+     * @return Builder
      */
 
     public ChangeLabelChangeBuilder previousValue(
@@ -94,6 +104,8 @@ public class ChangeLabelChangeBuilder implements Builder<ChangeLabelChange> {
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public ChangeLabelChangeBuilder previousValue(

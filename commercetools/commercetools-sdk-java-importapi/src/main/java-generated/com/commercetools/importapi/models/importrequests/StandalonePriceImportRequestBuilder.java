@@ -26,6 +26,8 @@ public class StandalonePriceImportRequestBuilder implements Builder<StandalonePr
 
     /**
      *  <p>The Standalone Price import resources of this request.</p>
+     * @param resources
+     * @return Builder
      */
 
     public StandalonePriceImportRequestBuilder resources(
@@ -36,6 +38,8 @@ public class StandalonePriceImportRequestBuilder implements Builder<StandalonePr
 
     /**
      *  <p>The Standalone Price import resources of this request.</p>
+     * @param resources
+     * @return Builder
      */
 
     public StandalonePriceImportRequestBuilder resources(
@@ -46,6 +50,8 @@ public class StandalonePriceImportRequestBuilder implements Builder<StandalonePr
 
     /**
      *  <p>The Standalone Price import resources of this request.</p>
+     * @param resources
+     * @return Builder
      */
 
     public StandalonePriceImportRequestBuilder plusResources(
@@ -59,6 +65,7 @@ public class StandalonePriceImportRequestBuilder implements Builder<StandalonePr
 
     /**
      *  <p>The Standalone Price import resources of this request.</p>
+     * @return Builder
      */
 
     public StandalonePriceImportRequestBuilder plusResources(
@@ -74,6 +81,7 @@ public class StandalonePriceImportRequestBuilder implements Builder<StandalonePr
 
     /**
      *  <p>The Standalone Price import resources of this request.</p>
+     * @return Builder
      */
 
     public StandalonePriceImportRequestBuilder withResources(

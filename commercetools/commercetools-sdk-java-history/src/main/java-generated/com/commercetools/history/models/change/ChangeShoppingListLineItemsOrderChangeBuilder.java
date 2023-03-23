@@ -32,6 +32,8 @@ public class ChangeShoppingListLineItemsOrderChangeBuilder implements Builder<Ch
 
     /**
      *
+     * @param change
+     * @return Builder
      */
 
     public ChangeShoppingListLineItemsOrderChangeBuilder change(final String change) {
@@ -41,6 +43,8 @@ public class ChangeShoppingListLineItemsOrderChangeBuilder implements Builder<Ch
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public ChangeShoppingListLineItemsOrderChangeBuilder previousValue(
@@ -51,6 +55,8 @@ public class ChangeShoppingListLineItemsOrderChangeBuilder implements Builder<Ch
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public ChangeShoppingListLineItemsOrderChangeBuilder previousValue(
@@ -61,6 +67,8 @@ public class ChangeShoppingListLineItemsOrderChangeBuilder implements Builder<Ch
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public ChangeShoppingListLineItemsOrderChangeBuilder plusPreviousValue(
@@ -74,6 +82,7 @@ public class ChangeShoppingListLineItemsOrderChangeBuilder implements Builder<Ch
 
     /**
      *
+     * @return Builder
      */
 
     public ChangeShoppingListLineItemsOrderChangeBuilder plusPreviousValue(
@@ -88,6 +97,7 @@ public class ChangeShoppingListLineItemsOrderChangeBuilder implements Builder<Ch
 
     /**
      *
+     * @return Builder
      */
 
     public ChangeShoppingListLineItemsOrderChangeBuilder withPreviousValue(
@@ -100,6 +110,8 @@ public class ChangeShoppingListLineItemsOrderChangeBuilder implements Builder<Ch
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public ChangeShoppingListLineItemsOrderChangeBuilder nextValue(
@@ -110,6 +122,8 @@ public class ChangeShoppingListLineItemsOrderChangeBuilder implements Builder<Ch
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public ChangeShoppingListLineItemsOrderChangeBuilder nextValue(
@@ -120,6 +134,8 @@ public class ChangeShoppingListLineItemsOrderChangeBuilder implements Builder<Ch
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public ChangeShoppingListLineItemsOrderChangeBuilder plusNextValue(
@@ -133,6 +149,7 @@ public class ChangeShoppingListLineItemsOrderChangeBuilder implements Builder<Ch
 
     /**
      *
+     * @return Builder
      */
 
     public ChangeShoppingListLineItemsOrderChangeBuilder plusNextValue(
@@ -147,6 +164,7 @@ public class ChangeShoppingListLineItemsOrderChangeBuilder implements Builder<Ch
 
     /**
      *
+     * @return Builder
      */
 
     public ChangeShoppingListLineItemsOrderChangeBuilder withNextValue(

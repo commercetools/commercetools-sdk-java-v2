@@ -29,6 +29,8 @@ public class SearchKeywordBuilder implements Builder<SearchKeyword> {
 
     /**
      *
+     * @param text
+     * @return Builder
      */
 
     public SearchKeywordBuilder text(final String text) {
@@ -38,6 +40,7 @@ public class SearchKeywordBuilder implements Builder<SearchKeyword> {
 
     /**
      *
+     * @return Builder
      */
 
     public SearchKeywordBuilder suggestTokenizer(
@@ -49,6 +52,8 @@ public class SearchKeywordBuilder implements Builder<SearchKeyword> {
 
     /**
      *
+     * @param suggestTokenizer
+     * @return Builder
      */
 
     public SearchKeywordBuilder suggestTokenizer(

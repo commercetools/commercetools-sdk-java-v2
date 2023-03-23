@@ -37,6 +37,7 @@ public interface QuoteDraft extends com.commercetools.api.models.CustomizableDra
 
     /**
      *  <p>User-defined unique identifier for the Quote.</p>
+     * @return key
      */
 
     @JsonProperty("key")
@@ -44,6 +45,7 @@ public interface QuoteDraft extends com.commercetools.api.models.CustomizableDra
 
     /**
      *  <p>StagedQuote from which the Quote is created.</p>
+     * @return stagedQuote
      */
     @NotNull
     @Valid
@@ -52,6 +54,7 @@ public interface QuoteDraft extends com.commercetools.api.models.CustomizableDra
 
     /**
      *  <p>Current version of the StagedQuote.</p>
+     * @return stagedQuoteVersion
      */
     @NotNull
     @JsonProperty("stagedQuoteVersion")
@@ -59,6 +62,7 @@ public interface QuoteDraft extends com.commercetools.api.models.CustomizableDra
 
     /**
      *  <p>If <code>true</code>, the <code>stagedQuoteState</code> of the referenced StagedQuote will be set to <code>Sent</code>.</p>
+     * @return stagedQuoteStateToSent
      */
 
     @JsonProperty("stagedQuoteStateToSent")
@@ -66,6 +70,7 @@ public interface QuoteDraft extends com.commercetools.api.models.CustomizableDra
 
     /**
      *  <p>State of the Quote. This reference can point to a State in a custom workflow.</p>
+     * @return state
      */
     @Valid
     @JsonProperty("state")
@@ -77,6 +82,7 @@ public interface QuoteDraft extends com.commercetools.api.models.CustomizableDra
      *   <li>If specified, the Custom Fields are merged with the Custom Fields on the referenced StagedQuote and added to the Quote.</li>
      *   <li>If empty, the Custom Fields on the referenced StagedQuote are added to the Quote automatically.</li>
      *  </ul>
+     * @return custom
      */
     @Valid
     @JsonProperty("custom")

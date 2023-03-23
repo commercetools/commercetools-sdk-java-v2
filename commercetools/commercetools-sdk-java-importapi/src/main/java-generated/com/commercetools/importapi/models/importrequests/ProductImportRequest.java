@@ -35,6 +35,7 @@ public interface ProductImportRequest extends ImportRequest {
 
     /**
      *  <p>The product import resources of this request.</p>
+     * @return resources
      */
     @NotNull
     @Valid

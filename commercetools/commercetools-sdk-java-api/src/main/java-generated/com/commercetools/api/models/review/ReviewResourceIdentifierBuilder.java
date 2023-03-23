@@ -30,6 +30,8 @@ public class ReviewResourceIdentifierBuilder implements Builder<ReviewResourceId
 
     /**
      *  <p>Unique identifier of the referenced Review. Either <code>id</code> or <code>key</code> is required.</p>
+     * @param id
+     * @return Builder
      */
 
     public ReviewResourceIdentifierBuilder id(@Nullable final String id) {
@@ -39,6 +41,8 @@ public class ReviewResourceIdentifierBuilder implements Builder<ReviewResourceId
 
     /**
      *  <p>User-defined unique identifier of the referenced Review. Either <code>id</code> or <code>key</code> is required.</p>
+     * @param key
+     * @return Builder
      */
 
     public ReviewResourceIdentifierBuilder key(@Nullable final String key) {

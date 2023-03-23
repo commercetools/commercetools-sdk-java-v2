@@ -31,6 +31,8 @@ public class SetApplicationVersionChangeBuilder implements Builder<SetApplicatio
 
     /**
      *  <p>Internal Update action for <code>setApplicationVersion</code></p>
+     * @param change
+     * @return Builder
      */
 
     public SetApplicationVersionChangeBuilder change(final String change) {
@@ -40,6 +42,8 @@ public class SetApplicationVersionChangeBuilder implements Builder<SetApplicatio
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public SetApplicationVersionChangeBuilder previousValue(final Integer previousValue) {
@@ -49,6 +53,8 @@ public class SetApplicationVersionChangeBuilder implements Builder<SetApplicatio
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public SetApplicationVersionChangeBuilder nextValue(final Integer nextValue) {

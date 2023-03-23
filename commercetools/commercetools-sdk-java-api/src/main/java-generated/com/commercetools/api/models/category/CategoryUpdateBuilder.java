@@ -29,6 +29,8 @@ public class CategoryUpdateBuilder implements Builder<CategoryUpdate> {
 
     /**
      *  <p>Expected version of the Category on which the changes should be applied. If the expected version does not match the actual version, a ConcurrentModification error is returned.</p>
+     * @param version
+     * @return Builder
      */
 
     public CategoryUpdateBuilder version(final Long version) {
@@ -38,6 +40,8 @@ public class CategoryUpdateBuilder implements Builder<CategoryUpdate> {
 
     /**
      *  <p>Update actions to be performed on the Category.</p>
+     * @param actions
+     * @return Builder
      */
 
     public CategoryUpdateBuilder actions(final com.commercetools.api.models.category.CategoryUpdateAction... actions) {
@@ -47,6 +51,8 @@ public class CategoryUpdateBuilder implements Builder<CategoryUpdate> {
 
     /**
      *  <p>Update actions to be performed on the Category.</p>
+     * @param actions
+     * @return Builder
      */
 
     public CategoryUpdateBuilder actions(
@@ -57,6 +63,8 @@ public class CategoryUpdateBuilder implements Builder<CategoryUpdate> {
 
     /**
      *  <p>Update actions to be performed on the Category.</p>
+     * @param actions
+     * @return Builder
      */
 
     public CategoryUpdateBuilder plusActions(
@@ -70,6 +78,7 @@ public class CategoryUpdateBuilder implements Builder<CategoryUpdate> {
 
     /**
      *  <p>Update actions to be performed on the Category.</p>
+     * @return Builder
      */
 
     public CategoryUpdateBuilder plusActions(
@@ -83,6 +92,7 @@ public class CategoryUpdateBuilder implements Builder<CategoryUpdate> {
 
     /**
      *  <p>Update actions to be performed on the Category.</p>
+     * @return Builder
      */
 
     public CategoryUpdateBuilder withActions(

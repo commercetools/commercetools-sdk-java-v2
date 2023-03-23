@@ -43,6 +43,8 @@ public class ProductPriceDiscountsSetUpdatedPriceBuilder implements Builder<Prod
 
     /**
      *  <p>Unique identifier of the ProductVariant for which the Discount was set.</p>
+     * @param variantId
+     * @return Builder
      */
 
     public ProductPriceDiscountsSetUpdatedPriceBuilder variantId(final Integer variantId) {
@@ -52,6 +54,8 @@ public class ProductPriceDiscountsSetUpdatedPriceBuilder implements Builder<Prod
 
     /**
      *  <p>Key of the ProductVariant for which Discount was set.</p>
+     * @param variantKey
+     * @return Builder
      */
 
     public ProductPriceDiscountsSetUpdatedPriceBuilder variantKey(@Nullable final String variantKey) {
@@ -61,6 +65,8 @@ public class ProductPriceDiscountsSetUpdatedPriceBuilder implements Builder<Prod
 
     /**
      *  <p>SKU of the ProductVariant for which Discount was set.</p>
+     * @param sku
+     * @return Builder
      */
 
     public ProductPriceDiscountsSetUpdatedPriceBuilder sku(@Nullable final String sku) {
@@ -70,6 +76,8 @@ public class ProductPriceDiscountsSetUpdatedPriceBuilder implements Builder<Prod
 
     /**
      *  <p>Unique identifier of the Price.</p>
+     * @param priceId
+     * @return Builder
      */
 
     public ProductPriceDiscountsSetUpdatedPriceBuilder priceId(final String priceId) {
@@ -79,6 +87,7 @@ public class ProductPriceDiscountsSetUpdatedPriceBuilder implements Builder<Prod
 
     /**
      *  <p>Discounted Price for the ProductVariant for which Discount was set.</p>
+     * @return Builder
      */
 
     public ProductPriceDiscountsSetUpdatedPriceBuilder discounted(
@@ -89,6 +98,8 @@ public class ProductPriceDiscountsSetUpdatedPriceBuilder implements Builder<Prod
 
     /**
      *  <p>Discounted Price for the ProductVariant for which Discount was set.</p>
+     * @param discounted
+     * @return Builder
      */
 
     public ProductPriceDiscountsSetUpdatedPriceBuilder discounted(
@@ -99,6 +110,8 @@ public class ProductPriceDiscountsSetUpdatedPriceBuilder implements Builder<Prod
 
     /**
      *  <p>Whether the update was only applied to the staged ProductProjection.</p>
+     * @param staged
+     * @return Builder
      */
 
     public ProductPriceDiscountsSetUpdatedPriceBuilder staged(final Boolean staged) {

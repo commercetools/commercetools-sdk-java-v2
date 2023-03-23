@@ -26,6 +26,7 @@ public class QuoteCreatedMessagePayloadBuilder implements Builder<QuoteCreatedMe
 
     /**
      *  <p>Quote that was created.</p>
+     * @return Builder
      */
 
     public QuoteCreatedMessagePayloadBuilder quote(
@@ -36,6 +37,8 @@ public class QuoteCreatedMessagePayloadBuilder implements Builder<QuoteCreatedMe
 
     /**
      *  <p>Quote that was created.</p>
+     * @param quote
+     * @return Builder
      */
 
     public QuoteCreatedMessagePayloadBuilder quote(final com.commercetools.api.models.quote.Quote quote) {

@@ -33,6 +33,7 @@ public interface ProductChangeAssetOrderAction extends ProductUpdateAction {
 
     /**
      *  <p>The <code>id</code> of the ProductVariant to update.</p>
+     * @return variantId
      */
 
     @JsonProperty("variantId")
@@ -40,6 +41,7 @@ public interface ProductChangeAssetOrderAction extends ProductUpdateAction {
 
     /**
      *  <p>The <code>sku</code> of the ProductVariant to update.</p>
+     * @return sku
      */
 
     @JsonProperty("sku")
@@ -47,6 +49,7 @@ public interface ProductChangeAssetOrderAction extends ProductUpdateAction {
 
     /**
      *  <p>If <code>true</code>, only the staged <code>assets</code> is updated. If <code>false</code>, both the current and staged <code>assets</code> are updated.</p>
+     * @return staged
      */
 
     @JsonProperty("staged")
@@ -54,6 +57,7 @@ public interface ProductChangeAssetOrderAction extends ProductUpdateAction {
 
     /**
      *  <p>All existing Asset <code>id</code>s of the ProductVariant in the desired new order.</p>
+     * @return assetOrder
      */
     @NotNull
     @JsonProperty("assetOrder")

@@ -32,6 +32,7 @@ public interface SearchIndexingConfigurationValues {
 
     /**
      *  <p>Current status of resource indexing. Present on Projects from 1 February 2019.</p>
+     * @return status
      */
 
     @JsonProperty("status")
@@ -39,6 +40,7 @@ public interface SearchIndexingConfigurationValues {
 
     /**
      *  <p>Date and time (UTC) the Project was last updated. Only present on Projects last modified after 1 February 2019.</p>
+     * @return lastModifiedAt
      */
 
     @JsonProperty("lastModifiedAt")
@@ -46,6 +48,7 @@ public interface SearchIndexingConfigurationValues {
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @return lastModifiedBy
      */
     @Valid
     @JsonProperty("lastModifiedBy")

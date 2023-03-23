@@ -78,4 +78,5 @@ public interface AwsAuthenticationMode {
     public static AwsAuthenticationMode[] values() {
         return AwsAuthenticationModeEnum.values();
     }
+
 }

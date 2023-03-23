@@ -35,6 +35,8 @@ public class SetShippingMethodTaxRateChangeBuilder implements Builder<SetShippin
 
     /**
      *  <p>Update action for <code>setShippingMethodTaxRate</code></p>
+     * @param change
+     * @return Builder
      */
 
     public SetShippingMethodTaxRateChangeBuilder change(final String change) {
@@ -44,6 +46,8 @@ public class SetShippingMethodTaxRateChangeBuilder implements Builder<SetShippin
 
     /**
      *
+     * @param taxMode
+     * @return Builder
      */
 
     public SetShippingMethodTaxRateChangeBuilder taxMode(
@@ -54,6 +58,7 @@ public class SetShippingMethodTaxRateChangeBuilder implements Builder<SetShippin
 
     /**
      *  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>
+     * @return Builder
      */
 
     public SetShippingMethodTaxRateChangeBuilder nextValue(
@@ -64,6 +69,8 @@ public class SetShippingMethodTaxRateChangeBuilder implements Builder<SetShippin
 
     /**
      *  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>
+     * @param nextValue
+     * @return Builder
      */
 
     public SetShippingMethodTaxRateChangeBuilder nextValue(
@@ -74,6 +81,7 @@ public class SetShippingMethodTaxRateChangeBuilder implements Builder<SetShippin
 
     /**
      *  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>
+     * @return Builder
      */
 
     public SetShippingMethodTaxRateChangeBuilder previousValue(
@@ -84,6 +92,8 @@ public class SetShippingMethodTaxRateChangeBuilder implements Builder<SetShippin
 
     /**
      *  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>
+     * @param previousValue
+     * @return Builder
      */
 
     public SetShippingMethodTaxRateChangeBuilder previousValue(

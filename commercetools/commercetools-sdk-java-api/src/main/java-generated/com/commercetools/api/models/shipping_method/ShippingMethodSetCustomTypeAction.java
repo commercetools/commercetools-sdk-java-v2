@@ -34,6 +34,7 @@ public interface ShippingMethodSetCustomTypeAction extends ShippingMethodUpdateA
 
     /**
      *  <p>Defines the Type that extends the ShippingMethod with Custom Fields. If absent, any existing Type and Custom Fields are removed from the ShippingMethod.</p>
+     * @return type
      */
     @Valid
     @JsonProperty("type")
@@ -41,6 +42,7 @@ public interface ShippingMethodSetCustomTypeAction extends ShippingMethodUpdateA
 
     /**
      *  <p>Sets the Custom Fields fields for the ShippingMethod.</p>
+     * @return fields
      */
     @Valid
     @JsonProperty("fields")

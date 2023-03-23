@@ -35,6 +35,7 @@ public interface PaymentInteractionAddedMessagePayload extends MessagePayload {
 
     /**
      *  <p>The interface interaction that was added to the Payment.</p>
+     * @return interaction
      */
     @NotNull
     @Valid

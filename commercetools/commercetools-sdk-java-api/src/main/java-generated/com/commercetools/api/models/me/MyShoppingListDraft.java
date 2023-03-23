@@ -38,6 +38,7 @@ public interface MyShoppingListDraft extends com.commercetools.api.models.Custom
 
     /**
      *  <p>Name of the ShoppingList.</p>
+     * @return name
      */
     @NotNull
     @Valid
@@ -46,6 +47,7 @@ public interface MyShoppingListDraft extends com.commercetools.api.models.Custom
 
     /**
      *  <p>Description of the ShoppingList.</p>
+     * @return description
      */
     @Valid
     @JsonProperty("description")
@@ -53,6 +55,7 @@ public interface MyShoppingListDraft extends com.commercetools.api.models.Custom
 
     /**
      *  <p>Line Items (containing Products) to add to the ShoppingList.</p>
+     * @return lineItems
      */
     @Valid
     @JsonProperty("lineItems")
@@ -60,6 +63,7 @@ public interface MyShoppingListDraft extends com.commercetools.api.models.Custom
 
     /**
      *  <p>Line Items (containing text values) to add to the ShoppingList.</p>
+     * @return textLineItems
      */
     @Valid
     @JsonProperty("textLineItems")
@@ -67,6 +71,7 @@ public interface MyShoppingListDraft extends com.commercetools.api.models.Custom
 
     /**
      *  <p>Custom Fields defined for the ShoppingList.</p>
+     * @return custom
      */
     @Valid
     @JsonProperty("custom")
@@ -74,6 +79,7 @@ public interface MyShoppingListDraft extends com.commercetools.api.models.Custom
 
     /**
      *  <p>Number of days after which the ShoppingList will be automatically deleted if it has not been modified. If not set, the default value configured in the Project is used.</p>
+     * @return deleteDaysAfterLastModification
      */
 
     @JsonProperty("deleteDaysAfterLastModification")
@@ -81,6 +87,7 @@ public interface MyShoppingListDraft extends com.commercetools.api.models.Custom
 
     /**
      *  <p>Assigns the new ShoppingList to the Store. The Store assignment can not be modified.</p>
+     * @return store
      */
     @Valid
     @JsonProperty("store")

@@ -35,6 +35,7 @@ public interface InvalidJsonInputError extends ErrorObject {
 
     /**
      *
+     * @return code
      */
     @NotNull
     @JsonProperty("code")
@@ -42,6 +43,7 @@ public interface InvalidJsonInputError extends ErrorObject {
 
     /**
      *  <p><code>"Request body does not contain valid JSON."</code></p>
+     * @return message
      */
     @NotNull
     @JsonProperty("message")
@@ -49,6 +51,7 @@ public interface InvalidJsonInputError extends ErrorObject {
 
     /**
      *  <p>Further explanation about why the JSON is invalid.</p>
+     * @return detailedErrorMessage
      */
     @NotNull
     @JsonProperty("detailedErrorMessage")

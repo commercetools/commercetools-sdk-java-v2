@@ -39,6 +39,7 @@ public interface CartDiscountDraft extends com.commercetools.api.models.Customiz
 
     /**
      *  <p>Name of the CartDiscount.</p>
+     * @return name
      */
     @NotNull
     @Valid
@@ -47,6 +48,7 @@ public interface CartDiscountDraft extends com.commercetools.api.models.Customiz
 
     /**
      *  <p>User-defined unique identifier for the CartDiscount.</p>
+     * @return key
      */
 
     @JsonProperty("key")
@@ -54,13 +56,15 @@ public interface CartDiscountDraft extends com.commercetools.api.models.Customiz
 
     /**
      *  <p>Description of the CartDiscount.</p>
+     * @return description
      */
     @Valid
     @JsonProperty("description")
     public LocalizedString getDescription();
 
     /**
-     *  <p>Effect of the CartDiscount. For a target, relative or absolute discount values, or a fixed item price value can be specified. If no target is specified, a gift line item can be added to the cart.</p>
+     *  <p>Effect of the CartDiscount. For a target, relative or absolute Discount values or a fixed item Price value can be specified. If no target is specified, a Gift Line Item can be added to the Cart.</p>
+     * @return value
      */
     @NotNull
     @Valid
@@ -69,6 +73,7 @@ public interface CartDiscountDraft extends com.commercetools.api.models.Customiz
 
     /**
      *  <p>Valid Cart Predicate.</p>
+     * @return cartPredicate
      */
     @NotNull
     @JsonProperty("cartPredicate")
@@ -76,6 +81,7 @@ public interface CartDiscountDraft extends com.commercetools.api.models.Customiz
 
     /**
      *  <p>Must not be set when the <code>value</code> has type <code>giftLineItem</code>, otherwise a CartDiscountTarget must be set.</p>
+     * @return target
      */
     @Valid
     @JsonProperty("target")
@@ -83,6 +89,7 @@ public interface CartDiscountDraft extends com.commercetools.api.models.Customiz
 
     /**
      *  <p>Value between <code>0</code> and <code>1</code>. A Discount with a higher sortOrder is prioritized. The sort order must be unambiguous among all CartDiscounts.</p>
+     * @return sortOrder
      */
     @NotNull
     @JsonProperty("sortOrder")
@@ -90,6 +97,7 @@ public interface CartDiscountDraft extends com.commercetools.api.models.Customiz
 
     /**
      *  <p>Only active Discounts can be applied to the Cart.</p>
+     * @return isActive
      */
 
     @JsonProperty("isActive")
@@ -97,6 +105,7 @@ public interface CartDiscountDraft extends com.commercetools.api.models.Customiz
 
     /**
      *  <p>Date and time (UTC) from which the Discount is effective.</p>
+     * @return validFrom
      */
 
     @JsonProperty("validFrom")
@@ -104,6 +113,7 @@ public interface CartDiscountDraft extends com.commercetools.api.models.Customiz
 
     /**
      *  <p>Date and time (UTC) until which the Discount is effective.</p>
+     * @return validUntil
      */
 
     @JsonProperty("validUntil")
@@ -111,6 +121,7 @@ public interface CartDiscountDraft extends com.commercetools.api.models.Customiz
 
     /**
      *  <p>States whether the Discount can only be used in a connection with a DiscountCode.</p>
+     * @return requiresDiscountCode
      */
 
     @JsonProperty("requiresDiscountCode")
@@ -118,6 +129,7 @@ public interface CartDiscountDraft extends com.commercetools.api.models.Customiz
 
     /**
      *  <p>Specifies whether the application of this discount causes the following discounts to be ignored.</p>
+     * @return stackingMode
      */
 
     @JsonProperty("stackingMode")
@@ -125,6 +137,7 @@ public interface CartDiscountDraft extends com.commercetools.api.models.Customiz
 
     /**
      *  <p>Custom Fields of the CartDiscount.</p>
+     * @return custom
      */
     @Valid
     @JsonProperty("custom")

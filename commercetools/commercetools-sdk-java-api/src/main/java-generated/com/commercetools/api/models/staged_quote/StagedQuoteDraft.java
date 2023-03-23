@@ -37,6 +37,7 @@ public interface StagedQuoteDraft
 
     /**
      *  <p>QuoteRequest from which the StagedQuote is created.</p>
+     * @return quoteRequest
      */
     @NotNull
     @Valid
@@ -45,6 +46,7 @@ public interface StagedQuoteDraft
 
     /**
      *  <p>Current version of the QuoteRequest.</p>
+     * @return quoteRequestVersion
      */
     @NotNull
     @JsonProperty("quoteRequestVersion")
@@ -52,6 +54,7 @@ public interface StagedQuoteDraft
 
     /**
      *  <p>If <code>true</code>, the <code>quoteRequestState</code> of the referenced QuoteRequest will be set to <code>Accepted</code>.</p>
+     * @return quoteRequestStateToAccepted
      */
 
     @JsonProperty("quoteRequestStateToAccepted")
@@ -59,6 +62,7 @@ public interface StagedQuoteDraft
 
     /**
      *  <p>User-defined unique identifier for the StagedQuote.</p>
+     * @return key
      */
 
     @JsonProperty("key")
@@ -70,6 +74,7 @@ public interface StagedQuoteDraft
      *   <li>If specified, the Custom Fields are merged with the Custom Fields on the referenced QuoteRequest and added to the StagedQuote.</li>
      *   <li>If empty, the Custom Fields on the referenced QuoteRequest are added to the StagedQuote automatically.</li>
      *  </ul>
+     * @return custom
      */
     @Valid
     @JsonProperty("custom")
@@ -77,6 +82,7 @@ public interface StagedQuoteDraft
 
     /**
      *  <p>State of the Staged Quote. This reference can point to a State in a custom workflow.</p>
+     * @return state
      */
     @Valid
     @JsonProperty("state")

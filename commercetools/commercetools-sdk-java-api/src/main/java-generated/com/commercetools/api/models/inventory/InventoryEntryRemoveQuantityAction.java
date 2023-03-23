@@ -33,6 +33,7 @@ public interface InventoryEntryRemoveQuantityAction extends InventoryEntryUpdate
 
     /**
      *  <p>Value to remove from <code>quantityOnStock</code>.</p>
+     * @return quantity
      */
     @NotNull
     @JsonProperty("quantity")

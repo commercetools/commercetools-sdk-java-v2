@@ -33,6 +33,7 @@ public interface BusinessUnitChangeNameAction extends BusinessUnitUpdateAction {
 
     /**
      *  <p>New name to set.</p>
+     * @return name
      */
     @NotNull
     @JsonProperty("name")

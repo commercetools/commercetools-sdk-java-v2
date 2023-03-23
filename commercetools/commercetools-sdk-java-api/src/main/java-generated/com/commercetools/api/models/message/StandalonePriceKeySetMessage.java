@@ -37,6 +37,7 @@ public interface StandalonePriceKeySetMessage extends Message {
 
     /**
      *  <p><code>key</code> value of the StandalonePrice after the Set Key update action.</p>
+     * @return key
      */
 
     @JsonProperty("key")
@@ -44,6 +45,7 @@ public interface StandalonePriceKeySetMessage extends Message {
 
     /**
      *  <p><code>key</code> value of the StandalonePrice before the Set Key update action.</p>
+     * @return oldKey
      */
 
     @JsonProperty("oldKey")

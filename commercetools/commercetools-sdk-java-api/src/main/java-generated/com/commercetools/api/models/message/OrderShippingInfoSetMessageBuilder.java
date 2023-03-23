@@ -61,6 +61,8 @@ public class OrderShippingInfoSetMessageBuilder implements Builder<OrderShipping
 
     /**
      *  <p>Unique identifier of the Message. Can be used to track which Messages have been processed.</p>
+     * @param id
+     * @return Builder
      */
 
     public OrderShippingInfoSetMessageBuilder id(final String id) {
@@ -70,6 +72,8 @@ public class OrderShippingInfoSetMessageBuilder implements Builder<OrderShipping
 
     /**
      *  <p>Version of a resource. In case of Messages, this is always <code>1</code>.</p>
+     * @param version
+     * @return Builder
      */
 
     public OrderShippingInfoSetMessageBuilder version(final Long version) {
@@ -79,6 +83,8 @@ public class OrderShippingInfoSetMessageBuilder implements Builder<OrderShipping
 
     /**
      *  <p>Date and time (UTC) the Message was generated.</p>
+     * @param createdAt
+     * @return Builder
      */
 
     public OrderShippingInfoSetMessageBuilder createdAt(final java.time.ZonedDateTime createdAt) {
@@ -88,6 +94,8 @@ public class OrderShippingInfoSetMessageBuilder implements Builder<OrderShipping
 
     /**
      *  <p>Value of <code>createdAt</code>.</p>
+     * @param lastModifiedAt
+     * @return Builder
      */
 
     public OrderShippingInfoSetMessageBuilder lastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {
@@ -97,6 +105,7 @@ public class OrderShippingInfoSetMessageBuilder implements Builder<OrderShipping
 
     /**
      *  <p>Value of <code>createdBy</code>.</p>
+     * @return Builder
      */
 
     public OrderShippingInfoSetMessageBuilder lastModifiedBy(
@@ -107,6 +116,8 @@ public class OrderShippingInfoSetMessageBuilder implements Builder<OrderShipping
 
     /**
      *  <p>Value of <code>createdBy</code>.</p>
+     * @param lastModifiedBy
+     * @return Builder
      */
 
     public OrderShippingInfoSetMessageBuilder lastModifiedBy(
@@ -117,6 +128,7 @@ public class OrderShippingInfoSetMessageBuilder implements Builder<OrderShipping
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @return Builder
      */
 
     public OrderShippingInfoSetMessageBuilder createdBy(
@@ -127,6 +139,8 @@ public class OrderShippingInfoSetMessageBuilder implements Builder<OrderShipping
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param createdBy
+     * @return Builder
      */
 
     public OrderShippingInfoSetMessageBuilder createdBy(
@@ -137,6 +151,8 @@ public class OrderShippingInfoSetMessageBuilder implements Builder<OrderShipping
 
     /**
      *  <p>Message number in relation to other Messages for a given resource. The <code>sequenceNumber</code> of the next Message for the resource is the successor of the <code>sequenceNumber</code> of the current Message. Meaning, the <code>sequenceNumber</code> of the next Message equals the <code>sequenceNumber</code> of the current Message + 1. <code>sequenceNumber</code> can be used to ensure that Messages are processed in the correct order for a particular resource.</p>
+     * @param sequenceNumber
+     * @return Builder
      */
 
     public OrderShippingInfoSetMessageBuilder sequenceNumber(final Long sequenceNumber) {
@@ -146,6 +162,8 @@ public class OrderShippingInfoSetMessageBuilder implements Builder<OrderShipping
 
     /**
      *  <p>Reference to the resource on which the change or action was performed.</p>
+     * @param resource
+     * @return Builder
      */
 
     public OrderShippingInfoSetMessageBuilder resource(final com.commercetools.api.models.common.Reference resource) {
@@ -155,6 +173,7 @@ public class OrderShippingInfoSetMessageBuilder implements Builder<OrderShipping
 
     /**
      *  <p>Reference to the resource on which the change or action was performed.</p>
+     * @return Builder
      */
 
     public OrderShippingInfoSetMessageBuilder resource(
@@ -165,6 +184,8 @@ public class OrderShippingInfoSetMessageBuilder implements Builder<OrderShipping
 
     /**
      *  <p>Version of the resource on which the change or action was performed.</p>
+     * @param resourceVersion
+     * @return Builder
      */
 
     public OrderShippingInfoSetMessageBuilder resourceVersion(final Long resourceVersion) {
@@ -174,6 +195,7 @@ public class OrderShippingInfoSetMessageBuilder implements Builder<OrderShipping
 
     /**
      *  <p>User-provided identifiers of the resource, such as <code>key</code> or <code>externalId</code>. Only present if the resource has such identifiers.</p>
+     * @return Builder
      */
 
     public OrderShippingInfoSetMessageBuilder resourceUserProvidedIdentifiers(
@@ -186,6 +208,8 @@ public class OrderShippingInfoSetMessageBuilder implements Builder<OrderShipping
 
     /**
      *  <p>User-provided identifiers of the resource, such as <code>key</code> or <code>externalId</code>. Only present if the resource has such identifiers.</p>
+     * @param resourceUserProvidedIdentifiers
+     * @return Builder
      */
 
     public OrderShippingInfoSetMessageBuilder resourceUserProvidedIdentifiers(
@@ -196,6 +220,7 @@ public class OrderShippingInfoSetMessageBuilder implements Builder<OrderShipping
 
     /**
      *  <p>ShippingInfo after the Set Shipping Method or Set Custom Shipping Method update action.</p>
+     * @return Builder
      */
 
     public OrderShippingInfoSetMessageBuilder shippingInfo(
@@ -206,6 +231,8 @@ public class OrderShippingInfoSetMessageBuilder implements Builder<OrderShipping
 
     /**
      *  <p>ShippingInfo after the Set Shipping Method or Set Custom Shipping Method update action.</p>
+     * @param shippingInfo
+     * @return Builder
      */
 
     public OrderShippingInfoSetMessageBuilder shippingInfo(
@@ -216,6 +243,7 @@ public class OrderShippingInfoSetMessageBuilder implements Builder<OrderShipping
 
     /**
      *  <p>ShippingInfo before the Set Shipping Method or Set Custom Shipping Method update action.</p>
+     * @return Builder
      */
 
     public OrderShippingInfoSetMessageBuilder oldShippingInfo(
@@ -226,6 +254,8 @@ public class OrderShippingInfoSetMessageBuilder implements Builder<OrderShipping
 
     /**
      *  <p>ShippingInfo before the Set Shipping Method or Set Custom Shipping Method update action.</p>
+     * @param oldShippingInfo
+     * @return Builder
      */
 
     public OrderShippingInfoSetMessageBuilder oldShippingInfo(

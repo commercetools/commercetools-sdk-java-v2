@@ -31,7 +31,9 @@ public class CartSetCustomLineItemShippingDetailsActionBuilder
     private com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails;
 
     /**
-     *
+     *  <p><code>id</code> of the CustomLineItem to update.</p>
+     * @param customLineItemId
+     * @return Builder
      */
 
     public CartSetCustomLineItemShippingDetailsActionBuilder customLineItemId(final String customLineItemId) {
@@ -40,7 +42,8 @@ public class CartSetCustomLineItemShippingDetailsActionBuilder
     }
 
     /**
-     *
+     *  <p>Value to set. If empty, any existing value is removed.</p>
+     * @return Builder
      */
 
     public CartSetCustomLineItemShippingDetailsActionBuilder shippingDetails(
@@ -51,7 +54,9 @@ public class CartSetCustomLineItemShippingDetailsActionBuilder
     }
 
     /**
-     *
+     *  <p>Value to set. If empty, any existing value is removed.</p>
+     * @param shippingDetails
+     * @return Builder
      */
 
     public CartSetCustomLineItemShippingDetailsActionBuilder shippingDetails(

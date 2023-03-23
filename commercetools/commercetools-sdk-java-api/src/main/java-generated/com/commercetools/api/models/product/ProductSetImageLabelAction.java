@@ -33,6 +33,7 @@ public interface ProductSetImageLabelAction extends ProductUpdateAction {
 
     /**
      *  <p>The <code>sku</code> of the ProductVariant to update.</p>
+     * @return sku
      */
 
     @JsonProperty("sku")
@@ -40,6 +41,7 @@ public interface ProductSetImageLabelAction extends ProductUpdateAction {
 
     /**
      *  <p>The <code>id</code> of the ProductVariant to update.</p>
+     * @return variantId
      */
 
     @JsonProperty("variantId")
@@ -47,6 +49,7 @@ public interface ProductSetImageLabelAction extends ProductUpdateAction {
 
     /**
      *  <p>The URL of the image to set the label.</p>
+     * @return imageUrl
      */
     @NotNull
     @JsonProperty("imageUrl")
@@ -54,6 +57,7 @@ public interface ProductSetImageLabelAction extends ProductUpdateAction {
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
+     * @return label
      */
 
     @JsonProperty("label")
@@ -61,6 +65,7 @@ public interface ProductSetImageLabelAction extends ProductUpdateAction {
 
     /**
      *  <p>If <code>true</code>, only the staged image is updated. If <code>false</code>, both the current and staged image is updated.</p>
+     * @return staged
      */
 
     @JsonProperty("staged")

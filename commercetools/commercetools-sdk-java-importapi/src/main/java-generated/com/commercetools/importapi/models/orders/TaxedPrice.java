@@ -35,6 +35,7 @@ public interface TaxedPrice {
 
     /**
      *  <p>Maps to <code>TaxedPrice.totalNet</code>.</p>
+     * @return totalNet
      */
     @NotNull
     @Valid
@@ -43,6 +44,7 @@ public interface TaxedPrice {
 
     /**
      *  <p>Maps to <code>TaxedPrice.totalGross</code>.</p>
+     * @return totalGross
      */
     @NotNull
     @Valid
@@ -51,6 +53,7 @@ public interface TaxedPrice {
 
     /**
      *  <p>Maps to <code>TaxedPrice.taxPortions</code>.</p>
+     * @return taxPortions
      */
     @NotNull
     @Valid

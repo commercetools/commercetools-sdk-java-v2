@@ -39,6 +39,7 @@ public interface TransitionLineItemStateChange extends Change {
 
     /**
      *
+     * @return type
      */
     @NotNull
     @JsonProperty("type")
@@ -46,6 +47,7 @@ public interface TransitionLineItemStateChange extends Change {
 
     /**
      *  <p>Update action for <code>transitionLineItemState</code></p>
+     * @return change
      */
     @NotNull
     @JsonProperty("change")
@@ -53,6 +55,7 @@ public interface TransitionLineItemStateChange extends Change {
 
     /**
      *
+     * @return lineItemId
      */
     @NotNull
     @JsonProperty("lineItemId")
@@ -60,6 +63,7 @@ public interface TransitionLineItemStateChange extends Change {
 
     /**
      *
+     * @return stateId
      */
     @NotNull
     @JsonProperty("stateId")
@@ -67,6 +71,7 @@ public interface TransitionLineItemStateChange extends Change {
 
     /**
      *
+     * @return nextValue
      */
     @NotNull
     @Valid
@@ -75,6 +80,7 @@ public interface TransitionLineItemStateChange extends Change {
 
     /**
      *
+     * @return previousValue
      */
     @NotNull
     @Valid

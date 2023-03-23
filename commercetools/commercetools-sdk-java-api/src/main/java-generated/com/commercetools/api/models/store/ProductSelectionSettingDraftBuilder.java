@@ -31,6 +31,7 @@ public class ProductSelectionSettingDraftBuilder implements Builder<ProductSelec
 
     /**
      *  <p>Resource Identifier of a ProductSelection.</p>
+     * @return Builder
      */
 
     public ProductSelectionSettingDraftBuilder productSelection(
@@ -43,6 +44,8 @@ public class ProductSelectionSettingDraftBuilder implements Builder<ProductSelec
 
     /**
      *  <p>Resource Identifier of a ProductSelection.</p>
+     * @param productSelection
+     * @return Builder
      */
 
     public ProductSelectionSettingDraftBuilder productSelection(
@@ -53,6 +56,8 @@ public class ProductSelectionSettingDraftBuilder implements Builder<ProductSelec
 
     /**
      *  <p>Set to <code>true</code> if all Products assigned to the Product Selection should become part of the Store's assortment.</p>
+     * @param active
+     * @return Builder
      */
 
     public ProductSelectionSettingDraftBuilder active(@Nullable final Boolean active) {

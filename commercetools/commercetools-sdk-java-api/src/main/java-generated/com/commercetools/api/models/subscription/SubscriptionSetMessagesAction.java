@@ -32,6 +32,7 @@ public interface SubscriptionSetMessagesAction extends SubscriptionUpdateAction 
 
     /**
      *  <p>Value to set. Can only be unset if <code>changes</code> is set.</p>
+     * @return messages
      */
     @Valid
     @JsonProperty("messages")

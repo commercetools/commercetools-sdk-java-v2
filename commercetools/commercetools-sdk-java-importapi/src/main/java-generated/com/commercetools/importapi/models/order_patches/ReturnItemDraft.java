@@ -32,6 +32,7 @@ public interface ReturnItemDraft extends io.vrap.rmf.base.client.Draft<ReturnIte
 
     /**
      *
+     * @return quantity
      */
     @NotNull
     @JsonProperty("quantity")
@@ -39,6 +40,7 @@ public interface ReturnItemDraft extends io.vrap.rmf.base.client.Draft<ReturnIte
 
     /**
      *
+     * @return lineItemId
      */
 
     @JsonProperty("lineItemId")
@@ -46,6 +48,7 @@ public interface ReturnItemDraft extends io.vrap.rmf.base.client.Draft<ReturnIte
 
     /**
      *
+     * @return customLineItemId
      */
 
     @JsonProperty("customLineItemId")
@@ -53,6 +56,7 @@ public interface ReturnItemDraft extends io.vrap.rmf.base.client.Draft<ReturnIte
 
     /**
      *
+     * @return comment
      */
 
     @JsonProperty("comment")
@@ -60,6 +64,7 @@ public interface ReturnItemDraft extends io.vrap.rmf.base.client.Draft<ReturnIte
 
     /**
      *  <p>Maps to <code>ReturnItem.shipmentState</code></p>
+     * @return shipmentState
      */
     @NotNull
     @JsonProperty("shipmentState")

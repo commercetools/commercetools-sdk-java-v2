@@ -26,6 +26,12 @@ public class ByProjectKeyInBusinessUnitKeyByBusinessUnitKeyMeCustomersRequestBui
             businessUnitKey, myBusinessUnitAssociateDraft);
     }
 
+    public ByProjectKeyInBusinessUnitKeyByBusinessUnitKeyMeCustomersPostString post(
+            final String myBusinessUnitAssociateDraft) {
+        return new ByProjectKeyInBusinessUnitKeyByBusinessUnitKeyMeCustomersPostString(apiHttpClient, projectKey,
+            businessUnitKey, myBusinessUnitAssociateDraft);
+    }
+
     public ByProjectKeyInBusinessUnitKeyByBusinessUnitKeyMeCustomersPost post(
             UnaryOperator<com.commercetools.api.models.me.MyBusinessUnitAssociateDraftBuilder> op) {
         return post(op.apply(com.commercetools.api.models.me.MyBusinessUnitAssociateDraftBuilder.of()).build());

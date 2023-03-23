@@ -26,6 +26,7 @@ public class ProductCreatedMessagePayloadBuilder implements Builder<ProductCreat
 
     /**
      *  <p>The staged Product Projection of the Product at the time of creation.</p>
+     * @return Builder
      */
 
     public ProductCreatedMessagePayloadBuilder productProjection(
@@ -37,6 +38,8 @@ public class ProductCreatedMessagePayloadBuilder implements Builder<ProductCreat
 
     /**
      *  <p>The staged Product Projection of the Product at the time of creation.</p>
+     * @param productProjection
+     * @return Builder
      */
 
     public ProductCreatedMessagePayloadBuilder productProjection(

@@ -33,6 +33,7 @@ public interface DiscountedPrice {
 
     /**
      *
+     * @return value
      */
     @NotNull
     @Valid
@@ -41,6 +42,7 @@ public interface DiscountedPrice {
 
     /**
      *  <p>Reference to a ProductDiscount.</p>
+     * @return discount
      */
     @NotNull
     @Valid

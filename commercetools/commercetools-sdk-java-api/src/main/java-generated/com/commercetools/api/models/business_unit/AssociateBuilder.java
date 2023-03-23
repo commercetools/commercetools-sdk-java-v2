@@ -29,6 +29,8 @@ public class AssociateBuilder implements Builder<Associate> {
 
     /**
      *  <p>Roles the Associate holds within the Business Unit.</p>
+     * @param roles
+     * @return Builder
      */
 
     public AssociateBuilder roles(final com.commercetools.api.models.business_unit.AssociateRole... roles) {
@@ -38,6 +40,8 @@ public class AssociateBuilder implements Builder<Associate> {
 
     /**
      *  <p>Roles the Associate holds within the Business Unit.</p>
+     * @param roles
+     * @return Builder
      */
 
     public AssociateBuilder roles(
@@ -48,6 +52,8 @@ public class AssociateBuilder implements Builder<Associate> {
 
     /**
      *  <p>Roles the Associate holds within the Business Unit.</p>
+     * @param roles
+     * @return Builder
      */
 
     public AssociateBuilder plusRoles(final com.commercetools.api.models.business_unit.AssociateRole... roles) {
@@ -60,6 +66,7 @@ public class AssociateBuilder implements Builder<Associate> {
 
     /**
      *  <p>The Customer that is part of the Business Unit.</p>
+     * @return Builder
      */
 
     public AssociateBuilder customer(
@@ -70,6 +77,8 @@ public class AssociateBuilder implements Builder<Associate> {
 
     /**
      *  <p>The Customer that is part of the Business Unit.</p>
+     * @param customer
+     * @return Builder
      */
 
     public AssociateBuilder customer(final com.commercetools.api.models.customer.CustomerReference customer) {

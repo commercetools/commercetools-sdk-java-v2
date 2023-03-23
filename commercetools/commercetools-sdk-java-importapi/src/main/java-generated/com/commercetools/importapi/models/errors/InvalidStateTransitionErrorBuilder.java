@@ -31,6 +31,8 @@ public class InvalidStateTransitionErrorBuilder implements Builder<InvalidStateT
 
     /**
      *
+     * @param message
+     * @return Builder
      */
 
     public InvalidStateTransitionErrorBuilder message(final String message) {
@@ -40,6 +42,8 @@ public class InvalidStateTransitionErrorBuilder implements Builder<InvalidStateT
 
     /**
      *  <p>Every Import Operation is assigned with one of the following states.</p>
+     * @param currentState
+     * @return Builder
      */
 
     public InvalidStateTransitionErrorBuilder currentState(
@@ -50,6 +54,8 @@ public class InvalidStateTransitionErrorBuilder implements Builder<InvalidStateT
 
     /**
      *  <p>Every Import Operation is assigned with one of the following states.</p>
+     * @param newState
+     * @return Builder
      */
 
     public InvalidStateTransitionErrorBuilder newState(

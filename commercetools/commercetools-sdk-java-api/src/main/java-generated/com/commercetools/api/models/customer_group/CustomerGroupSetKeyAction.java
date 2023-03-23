@@ -30,6 +30,7 @@ public interface CustomerGroupSetKeyAction extends CustomerGroupUpdateAction {
 
     /**
      *  <p>If <code>key</code> is absent or <code>null</code>, the existing key, if any, will be removed.</p>
+     * @return key
      */
 
     @JsonProperty("key")

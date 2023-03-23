@@ -34,6 +34,7 @@ public interface StandalonePriceActiveChangedMessagePayload extends MessagePaylo
 
     /**
      *  <p>Value of the <code>active</code> field of the StandalonePrice after the Change Active update action.</p>
+     * @return active
      */
     @NotNull
     @JsonProperty("active")
@@ -41,6 +42,7 @@ public interface StandalonePriceActiveChangedMessagePayload extends MessagePaylo
 
     /**
      *  <p>Value of the <code>active</code> field of the StandalonePrice before the Change Active update action.</p>
+     * @return oldActive
      */
     @NotNull
     @JsonProperty("oldActive")

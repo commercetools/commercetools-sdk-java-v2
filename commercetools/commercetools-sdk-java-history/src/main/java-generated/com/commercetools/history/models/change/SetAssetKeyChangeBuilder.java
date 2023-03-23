@@ -35,6 +35,8 @@ public class SetAssetKeyChangeBuilder implements Builder<SetAssetKeyChange> {
 
     /**
      *  <p>Update action for <code>setAssetKey</code></p>
+     * @param change
+     * @return Builder
      */
 
     public SetAssetKeyChangeBuilder change(final String change) {
@@ -44,6 +46,7 @@ public class SetAssetKeyChangeBuilder implements Builder<SetAssetKeyChange> {
 
     /**
      *
+     * @return Builder
      */
 
     public SetAssetKeyChangeBuilder asset(
@@ -54,6 +57,8 @@ public class SetAssetKeyChangeBuilder implements Builder<SetAssetKeyChange> {
 
     /**
      *
+     * @param asset
+     * @return Builder
      */
 
     public SetAssetKeyChangeBuilder asset(final com.commercetools.history.models.change_value.AssetChangeValue asset) {
@@ -63,6 +68,8 @@ public class SetAssetKeyChangeBuilder implements Builder<SetAssetKeyChange> {
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public SetAssetKeyChangeBuilder nextValue(final String nextValue) {
@@ -72,6 +79,8 @@ public class SetAssetKeyChangeBuilder implements Builder<SetAssetKeyChange> {
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public SetAssetKeyChangeBuilder previousValue(final String previousValue) {

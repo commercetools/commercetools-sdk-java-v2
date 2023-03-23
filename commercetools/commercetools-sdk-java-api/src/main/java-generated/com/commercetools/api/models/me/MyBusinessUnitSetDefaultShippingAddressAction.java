@@ -30,6 +30,7 @@ public interface MyBusinessUnitSetDefaultShippingAddressAction extends MyBusines
 
     /**
      *  <p>ID of the address to add as a shipping address. Either <code>addressId</code> or <code>addressKey</code> is required.</p>
+     * @return addressId
      */
 
     @JsonProperty("addressId")
@@ -37,6 +38,7 @@ public interface MyBusinessUnitSetDefaultShippingAddressAction extends MyBusines
 
     /**
      *  <p>Key of the address to add as a shipping address. Either <code>addressId</code> or <code>addressKey</code> is required.</p>
+     * @return addressKey
      */
 
     @JsonProperty("addressKey")

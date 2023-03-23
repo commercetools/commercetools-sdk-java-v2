@@ -41,6 +41,7 @@ public interface ProductPriceDiscountsSetMessage extends Message {
 
     /**
      *  <p>Array containing details about the Embedded Prices that were updated.</p>
+     * @return updatedPrices
      */
     @NotNull
     @Valid

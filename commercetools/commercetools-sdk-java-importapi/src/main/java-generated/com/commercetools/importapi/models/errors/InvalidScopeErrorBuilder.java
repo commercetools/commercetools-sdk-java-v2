@@ -25,6 +25,8 @@ public class InvalidScopeErrorBuilder implements Builder<InvalidScopeError> {
 
     /**
      *
+     * @param message
+     * @return Builder
      */
 
     public InvalidScopeErrorBuilder message(final String message) {

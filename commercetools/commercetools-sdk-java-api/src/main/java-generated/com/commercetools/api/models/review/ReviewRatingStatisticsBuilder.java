@@ -37,6 +37,8 @@ public class ReviewRatingStatisticsBuilder implements Builder<ReviewRatingStatis
 
     /**
      *  <p>Average rating of one target This number is rounded with 5 decimals.</p>
+     * @param averageRating
+     * @return Builder
      */
 
     public ReviewRatingStatisticsBuilder averageRating(final Double averageRating) {
@@ -46,6 +48,8 @@ public class ReviewRatingStatisticsBuilder implements Builder<ReviewRatingStatis
 
     /**
      *  <p>Highest rating of one target</p>
+     * @param highestRating
+     * @return Builder
      */
 
     public ReviewRatingStatisticsBuilder highestRating(final Double highestRating) {
@@ -55,6 +59,8 @@ public class ReviewRatingStatisticsBuilder implements Builder<ReviewRatingStatis
 
     /**
      *  <p>Lowest rating of one target</p>
+     * @param lowestRating
+     * @return Builder
      */
 
     public ReviewRatingStatisticsBuilder lowestRating(final Double lowestRating) {
@@ -64,6 +70,8 @@ public class ReviewRatingStatisticsBuilder implements Builder<ReviewRatingStatis
 
     /**
      *  <p>Number of ratings taken into account</p>
+     * @param count
+     * @return Builder
      */
 
     public ReviewRatingStatisticsBuilder count(final Integer count) {
@@ -73,6 +81,8 @@ public class ReviewRatingStatisticsBuilder implements Builder<ReviewRatingStatis
 
     /**
      *  <p>Full distribution of the ratings. The keys are the different ratings and the values are the count of reviews having this rating. Only the used ratings appear in this object.</p>
+     * @param ratingsDistribution
+     * @return Builder
      */
 
     public ReviewRatingStatisticsBuilder ratingsDistribution(final java.lang.Object ratingsDistribution) {

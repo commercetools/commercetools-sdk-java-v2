@@ -38,6 +38,8 @@ public class SetOrderLineItemCustomTypeChangeBuilder implements Builder<SetOrder
 
     /**
      *  <p>Update action for <code>setLineItemCustomType</code></p>
+     * @param change
+     * @return Builder
      */
 
     public SetOrderLineItemCustomTypeChangeBuilder change(final String change) {
@@ -47,6 +49,7 @@ public class SetOrderLineItemCustomTypeChangeBuilder implements Builder<SetOrder
 
     /**
      *
+     * @return Builder
      */
 
     public SetOrderLineItemCustomTypeChangeBuilder lineItem(
@@ -57,6 +60,8 @@ public class SetOrderLineItemCustomTypeChangeBuilder implements Builder<SetOrder
 
     /**
      *
+     * @param lineItem
+     * @return Builder
      */
 
     public SetOrderLineItemCustomTypeChangeBuilder lineItem(
@@ -67,6 +72,8 @@ public class SetOrderLineItemCustomTypeChangeBuilder implements Builder<SetOrder
 
     /**
      *
+     * @param variant
+     * @return Builder
      */
 
     public SetOrderLineItemCustomTypeChangeBuilder variant(final String variant) {
@@ -76,6 +83,7 @@ public class SetOrderLineItemCustomTypeChangeBuilder implements Builder<SetOrder
 
     /**
      *
+     * @return Builder
      */
 
     public SetOrderLineItemCustomTypeChangeBuilder nextValue(
@@ -86,6 +94,8 @@ public class SetOrderLineItemCustomTypeChangeBuilder implements Builder<SetOrder
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public SetOrderLineItemCustomTypeChangeBuilder nextValue(
@@ -96,6 +106,7 @@ public class SetOrderLineItemCustomTypeChangeBuilder implements Builder<SetOrder
 
     /**
      *
+     * @return Builder
      */
 
     public SetOrderLineItemCustomTypeChangeBuilder previousValue(
@@ -106,6 +117,8 @@ public class SetOrderLineItemCustomTypeChangeBuilder implements Builder<SetOrder
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public SetOrderLineItemCustomTypeChangeBuilder previousValue(

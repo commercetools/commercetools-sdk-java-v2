@@ -34,7 +34,8 @@ public interface MyCartRemoveDiscountCodeAction extends MyCartUpdateAction {
     String REMOVE_DISCOUNT_CODE = "removeDiscountCode";
 
     /**
-     *  <p>Reference to a DiscountCode.</p>
+     *  <p>Discount Code to remove from the Cart.</p>
+     * @return discountCode
      */
     @NotNull
     @Valid

@@ -29,6 +29,7 @@ public class ProductLabelBuilder implements Builder<ProductLabel> {
 
     /**
      *
+     * @return Builder
      */
 
     public ProductLabelBuilder slug(
@@ -39,6 +40,8 @@ public class ProductLabelBuilder implements Builder<ProductLabel> {
 
     /**
      *
+     * @param slug
+     * @return Builder
      */
 
     public ProductLabelBuilder slug(final com.commercetools.history.models.common.LocalizedString slug) {
@@ -48,6 +51,7 @@ public class ProductLabelBuilder implements Builder<ProductLabel> {
 
     /**
      *
+     * @return Builder
      */
 
     public ProductLabelBuilder name(
@@ -58,6 +62,8 @@ public class ProductLabelBuilder implements Builder<ProductLabel> {
 
     /**
      *
+     * @param name
+     * @return Builder
      */
 
     public ProductLabelBuilder name(final com.commercetools.history.models.common.LocalizedString name) {

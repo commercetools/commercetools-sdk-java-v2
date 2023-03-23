@@ -35,6 +35,7 @@ public interface OrderDiscountCodeRemovedMessagePayload extends OrderMessagePayl
 
     /**
      *  <p>DiscountCode that was removed.</p>
+     * @return discountCode
      */
     @NotNull
     @Valid

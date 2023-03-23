@@ -33,6 +33,7 @@ public interface ErrorResponse {
 
     /**
      *  <p>HTTP status code corresponding to the error.</p>
+     * @return statusCode
      */
     @NotNull
     @JsonProperty("statusCode")
@@ -40,6 +41,7 @@ public interface ErrorResponse {
 
     /**
      *  <p>First error message in the <code>errors</code> array.</p>
+     * @return message
      */
     @NotNull
     @JsonProperty("message")
@@ -48,6 +50,7 @@ public interface ErrorResponse {
     /**
      *  <p>Errors returned for a request.</p>
      *  <p>A single error response can contain multiple errors if the errors are related to the same HTTP status code such as <code>400</code>.</p>
+     * @return errors
      */
     @Valid
     @JsonProperty("errors")

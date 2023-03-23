@@ -45,6 +45,7 @@ public interface Label {
 
     /**
      *
+     * @return type
      */
     @NotNull
     @JsonProperty("type")

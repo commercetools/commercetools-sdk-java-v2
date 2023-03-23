@@ -46,6 +46,8 @@ public class ProductSetAssetCustomTypeActionBuilder implements Builder<ProductSe
 
     /**
      *  <p>The <code>id</code> of the ProductVariant to update.</p>
+     * @param variantId
+     * @return Builder
      */
 
     public ProductSetAssetCustomTypeActionBuilder variantId(@Nullable final Long variantId) {
@@ -55,6 +57,8 @@ public class ProductSetAssetCustomTypeActionBuilder implements Builder<ProductSe
 
     /**
      *  <p>The <code>sku</code> of the ProductVariant to update.</p>
+     * @param sku
+     * @return Builder
      */
 
     public ProductSetAssetCustomTypeActionBuilder sku(@Nullable final String sku) {
@@ -64,6 +68,8 @@ public class ProductSetAssetCustomTypeActionBuilder implements Builder<ProductSe
 
     /**
      *  <p>If <code>true</code>, only the staged Asset is updated. If <code>false</code>, both the current and staged Asset is updated.</p>
+     * @param staged
+     * @return Builder
      */
 
     public ProductSetAssetCustomTypeActionBuilder staged(@Nullable final Boolean staged) {
@@ -73,6 +79,8 @@ public class ProductSetAssetCustomTypeActionBuilder implements Builder<ProductSe
 
     /**
      *  <p>The <code>id</code> of the Asset to update.</p>
+     * @param assetId
+     * @return Builder
      */
 
     public ProductSetAssetCustomTypeActionBuilder assetId(@Nullable final String assetId) {
@@ -82,6 +90,8 @@ public class ProductSetAssetCustomTypeActionBuilder implements Builder<ProductSe
 
     /**
      *  <p>The <code>key</code> of the Asset to update.</p>
+     * @param assetKey
+     * @return Builder
      */
 
     public ProductSetAssetCustomTypeActionBuilder assetKey(@Nullable final String assetKey) {
@@ -91,6 +101,7 @@ public class ProductSetAssetCustomTypeActionBuilder implements Builder<ProductSe
 
     /**
      *  <p>Defines the Type that extends the Asset with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Asset.</p>
+     * @return Builder
      */
 
     public ProductSetAssetCustomTypeActionBuilder type(
@@ -101,6 +112,8 @@ public class ProductSetAssetCustomTypeActionBuilder implements Builder<ProductSe
 
     /**
      *  <p>Defines the Type that extends the Asset with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Asset.</p>
+     * @param type
+     * @return Builder
      */
 
     public ProductSetAssetCustomTypeActionBuilder type(
@@ -111,6 +124,7 @@ public class ProductSetAssetCustomTypeActionBuilder implements Builder<ProductSe
 
     /**
      *  <p>Sets the Custom Fields fields for the Asset.</p>
+     * @return Builder
      */
 
     public ProductSetAssetCustomTypeActionBuilder fields(
@@ -121,6 +135,8 @@ public class ProductSetAssetCustomTypeActionBuilder implements Builder<ProductSe
 
     /**
      *  <p>Sets the Custom Fields fields for the Asset.</p>
+     * @param fields
+     * @return Builder
      */
 
     public ProductSetAssetCustomTypeActionBuilder fields(

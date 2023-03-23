@@ -33,6 +33,7 @@ public interface MyQuoteRequestDraft extends io.vrap.rmf.base.client.Draft<MyQuo
 
     /**
      *  <p><code>id</code> of the Cart from which the Quote Request is created.</p>
+     * @return cartId
      */
     @NotNull
     @JsonProperty("cartId")
@@ -40,6 +41,7 @@ public interface MyQuoteRequestDraft extends io.vrap.rmf.base.client.Draft<MyQuo
 
     /**
      *  <p>Current version of the Cart.</p>
+     * @return cartVersion
      */
     @NotNull
     @JsonProperty("cartVersion")
@@ -47,6 +49,7 @@ public interface MyQuoteRequestDraft extends io.vrap.rmf.base.client.Draft<MyQuo
 
     /**
      *  <p>Message from the Buyer included in the Quote Request.</p>
+     * @return comment
      */
     @NotNull
     @JsonProperty("comment")

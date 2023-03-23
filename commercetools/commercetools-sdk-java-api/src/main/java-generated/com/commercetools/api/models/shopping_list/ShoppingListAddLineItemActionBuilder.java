@@ -43,6 +43,8 @@ public class ShoppingListAddLineItemActionBuilder implements Builder<ShoppingLis
 
     /**
      *  <p><code>sku</code> of the ProductVariant.</p>
+     * @param sku
+     * @return Builder
      */
 
     public ShoppingListAddLineItemActionBuilder sku(@Nullable final String sku) {
@@ -52,6 +54,8 @@ public class ShoppingListAddLineItemActionBuilder implements Builder<ShoppingLis
 
     /**
      *  <p>Unique identifier of a Product.</p>
+     * @param productId
+     * @return Builder
      */
 
     public ShoppingListAddLineItemActionBuilder productId(@Nullable final String productId) {
@@ -61,6 +65,8 @@ public class ShoppingListAddLineItemActionBuilder implements Builder<ShoppingLis
 
     /**
      *  <p><code>id</code> of the ProductVariant. If not set, the ShoppingListLineItem refers to the Master Variant.</p>
+     * @param variantId
+     * @return Builder
      */
 
     public ShoppingListAddLineItemActionBuilder variantId(@Nullable final Long variantId) {
@@ -70,6 +76,8 @@ public class ShoppingListAddLineItemActionBuilder implements Builder<ShoppingLis
 
     /**
      *  <p>Number of Products in the ShoppingListLineItem.</p>
+     * @param quantity
+     * @return Builder
      */
 
     public ShoppingListAddLineItemActionBuilder quantity(@Nullable final Long quantity) {
@@ -79,6 +87,8 @@ public class ShoppingListAddLineItemActionBuilder implements Builder<ShoppingLis
 
     /**
      *  <p>Date and time the TextLineItem is added to the ShoppingList. If not set, the current date and time (UTC) is used.</p>
+     * @param addedAt
+     * @return Builder
      */
 
     public ShoppingListAddLineItemActionBuilder addedAt(@Nullable final java.time.ZonedDateTime addedAt) {
@@ -88,6 +98,7 @@ public class ShoppingListAddLineItemActionBuilder implements Builder<ShoppingLis
 
     /**
      *  <p>Custom Fields defined for the ShoppingListLineItem.</p>
+     * @return Builder
      */
 
     public ShoppingListAddLineItemActionBuilder custom(
@@ -98,6 +109,8 @@ public class ShoppingListAddLineItemActionBuilder implements Builder<ShoppingLis
 
     /**
      *  <p>Custom Fields defined for the ShoppingListLineItem.</p>
+     * @param custom
+     * @return Builder
      */
 
     public ShoppingListAddLineItemActionBuilder custom(

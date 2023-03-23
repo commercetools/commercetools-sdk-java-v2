@@ -15,7 +15,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * MyCartSetShippingMethodAction
+ *  <p>To set the Cart's Shipping Method the Cart must have the <code>Single</code> ShippingMode and a <code>shippingAddress</code>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -33,14 +33,17 @@ public interface MyCartSetShippingMethodAction extends MyCartUpdateAction {
     String SET_SHIPPING_METHOD = "setShippingMethod";
 
     /**
-     *  <p>ResourceIdentifier to a ShippingMethod.</p>
+     *  <p>Value to set. If empty, any existing value is removed.</p>
+     *  <p>If the referenced Shipping Method has a predicate that does not match the Cart, an InvalidOperation error is returned.</p>
+     * @return shippingMethod
      */
     @Valid
     @JsonProperty("shippingMethod")
     public ShippingMethodResourceIdentifier getShippingMethod();
 
     /**
-     *
+     *  <p>An external Tax Rate can be set if the Cart has the <code>External</code> TaxMode.</p>
+     * @return externalTaxRate
      */
     @Valid
     @JsonProperty("externalTaxRate")

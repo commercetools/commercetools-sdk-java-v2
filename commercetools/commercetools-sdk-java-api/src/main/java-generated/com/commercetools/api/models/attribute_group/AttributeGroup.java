@@ -43,6 +43,7 @@ public interface AttributeGroup extends BaseResource, com.commercetools.api.mode
 
     /**
      *  <p>Platform-generated unique identifier of the AttributeGroup.</p>
+     * @return id
      */
     @NotNull
     @JsonProperty("id")
@@ -50,6 +51,7 @@ public interface AttributeGroup extends BaseResource, com.commercetools.api.mode
 
     /**
      *  <p>Current version of the AttributeGroup.</p>
+     * @return version
      */
     @NotNull
     @JsonProperty("version")
@@ -57,6 +59,7 @@ public interface AttributeGroup extends BaseResource, com.commercetools.api.mode
 
     /**
      *  <p>Date and time (UTC) the AttributeGroup was initially created.</p>
+     * @return createdAt
      */
     @NotNull
     @JsonProperty("createdAt")
@@ -64,6 +67,7 @@ public interface AttributeGroup extends BaseResource, com.commercetools.api.mode
 
     /**
      *  <p>Date and time (UTC) the AttributeGroup was last updated.</p>
+     * @return lastModifiedAt
      */
     @NotNull
     @JsonProperty("lastModifiedAt")
@@ -71,6 +75,7 @@ public interface AttributeGroup extends BaseResource, com.commercetools.api.mode
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @return lastModifiedBy
      */
     @Valid
     @JsonProperty("lastModifiedBy")
@@ -78,6 +83,7 @@ public interface AttributeGroup extends BaseResource, com.commercetools.api.mode
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @return createdBy
      */
     @Valid
     @JsonProperty("createdBy")
@@ -85,6 +91,7 @@ public interface AttributeGroup extends BaseResource, com.commercetools.api.mode
 
     /**
      *  <p>Name of the AttributeGroup.</p>
+     * @return name
      */
     @NotNull
     @Valid
@@ -93,6 +100,7 @@ public interface AttributeGroup extends BaseResource, com.commercetools.api.mode
 
     /**
      *  <p>Description of the AttributeGroup.</p>
+     * @return description
      */
     @Valid
     @JsonProperty("description")
@@ -100,6 +108,7 @@ public interface AttributeGroup extends BaseResource, com.commercetools.api.mode
 
     /**
      *  <p>Attributes with unique values.</p>
+     * @return attributes
      */
     @NotNull
     @Valid
@@ -108,6 +117,7 @@ public interface AttributeGroup extends BaseResource, com.commercetools.api.mode
 
     /**
      *  <p>User-defined unique identifier of the AttributeGroup.</p>
+     * @return key
      */
 
     @JsonProperty("key")

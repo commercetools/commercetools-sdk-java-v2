@@ -31,6 +31,8 @@ public class SetTitleChangeBuilder implements Builder<SetTitleChange> {
 
     /**
      *  <p>Shape of the action for <code>setTitle</code></p>
+     * @param change
+     * @return Builder
      */
 
     public SetTitleChangeBuilder change(final String change) {
@@ -40,6 +42,8 @@ public class SetTitleChangeBuilder implements Builder<SetTitleChange> {
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public SetTitleChangeBuilder previousValue(final String previousValue) {
@@ -49,6 +53,8 @@ public class SetTitleChangeBuilder implements Builder<SetTitleChange> {
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public SetTitleChangeBuilder nextValue(final String nextValue) {

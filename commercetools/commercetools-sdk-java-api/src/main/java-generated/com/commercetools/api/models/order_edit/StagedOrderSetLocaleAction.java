@@ -31,6 +31,7 @@ public interface StagedOrderSetLocaleAction extends StagedOrderUpdateAction {
 
     /**
      *
+     * @return locale
      */
 
     @JsonProperty("locale")

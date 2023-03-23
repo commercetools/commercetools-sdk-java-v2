@@ -34,6 +34,7 @@ public interface StandalonePriceReference extends Reference {
 
     /**
      *  <p>Contains the representation of the expanded StandalonePrice. Only present in responses to requests with Reference Expansion for StandalonePrice.</p>
+     * @return obj
      */
     @Valid
     @JsonProperty("obj")

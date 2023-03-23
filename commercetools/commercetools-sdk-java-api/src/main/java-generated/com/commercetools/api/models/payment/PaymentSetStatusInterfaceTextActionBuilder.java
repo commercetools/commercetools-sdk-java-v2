@@ -25,6 +25,8 @@ public class PaymentSetStatusInterfaceTextActionBuilder implements Builder<Payme
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
+     * @param interfaceText
+     * @return Builder
      */
 
     public PaymentSetStatusInterfaceTextActionBuilder interfaceText(final String interfaceText) {

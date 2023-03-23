@@ -39,6 +39,7 @@ public interface ProductData extends ProductDataLike {
 
     /**
      *  <p>Name of the Product.</p>
+     * @return name
      */
     @NotNull
     @Valid
@@ -47,6 +48,7 @@ public interface ProductData extends ProductDataLike {
 
     /**
      *  <p>Categories assigned to the Product.</p>
+     * @return categories
      */
     @NotNull
     @Valid
@@ -55,6 +57,7 @@ public interface ProductData extends ProductDataLike {
 
     /**
      *  <p>Numerical values to allow ordering of Products within a specified Category.</p>
+     * @return categoryOrderHints
      */
     @Valid
     @JsonProperty("categoryOrderHints")
@@ -62,6 +65,7 @@ public interface ProductData extends ProductDataLike {
 
     /**
      *  <p>Description of the Product.</p>
+     * @return description
      */
     @Valid
     @JsonProperty("description")
@@ -69,6 +73,7 @@ public interface ProductData extends ProductDataLike {
 
     /**
      *  <p>User-defined identifier used in a deep-link URL for the Product. Must be unique across a Project, but can be the same for Products in different Locales. Matches the pattern <code>[a-zA-Z0-9_\\-]{2,256}</code>.</p>
+     * @return slug
      */
     @NotNull
     @Valid
@@ -77,6 +82,7 @@ public interface ProductData extends ProductDataLike {
 
     /**
      *  <p>Title of the Product displayed in search results.</p>
+     * @return metaTitle
      */
     @Valid
     @JsonProperty("metaTitle")
@@ -84,6 +90,7 @@ public interface ProductData extends ProductDataLike {
 
     /**
      *  <p>Description of the Product displayed in search results below the meta title.</p>
+     * @return metaDescription
      */
     @Valid
     @JsonProperty("metaDescription")
@@ -91,6 +98,7 @@ public interface ProductData extends ProductDataLike {
 
     /**
      *  <p>Keywords that give additional information about the Product to search engines.</p>
+     * @return metaKeywords
      */
     @Valid
     @JsonProperty("metaKeywords")
@@ -98,6 +106,7 @@ public interface ProductData extends ProductDataLike {
 
     /**
      *  <p>The Master Variant of the Product.</p>
+     * @return masterVariant
      */
     @NotNull
     @Valid
@@ -106,6 +115,7 @@ public interface ProductData extends ProductDataLike {
 
     /**
      *  <p>Additional Product Variants.</p>
+     * @return variants
      */
     @NotNull
     @Valid
@@ -114,6 +124,7 @@ public interface ProductData extends ProductDataLike {
 
     /**
      *  <p>Used by Product Suggestions, but is also considered for a full text search.</p>
+     * @return searchKeywords
      */
     @NotNull
     @Valid

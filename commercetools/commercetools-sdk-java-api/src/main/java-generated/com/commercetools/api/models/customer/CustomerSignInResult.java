@@ -33,6 +33,7 @@ public interface CustomerSignInResult {
 
     /**
      *  <p>Customer signed up or signed in after authentication.</p>
+     * @return customer
      */
     @NotNull
     @Valid
@@ -41,6 +42,7 @@ public interface CustomerSignInResult {
 
     /**
      *  <p>Cart associated with the Customer. If empty, the Customer does not have a Cart assigned.</p>
+     * @return cart
      */
     @Valid
     @JsonProperty("cart")

@@ -27,12 +27,14 @@ import io.vrap.rmf.base.client.utils.Generated;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProductVariantSelectionExclusionImpl.class)
+@Deprecated
 public interface ProductVariantSelectionExclusion extends ProductVariantSelection {
 
     String EXCLUSION = "exclusion";
 
     /**
      *
+     * @return type
      */
     @NotNull
     @JsonProperty("type")
@@ -40,6 +42,7 @@ public interface ProductVariantSelectionExclusion extends ProductVariantSelectio
 
     /**
      *  <p>Non-empty array of SKUs representing Product Variants to be excluded from the Product Selection.</p>
+     * @return skus
      */
     @NotNull
     @JsonProperty("skus")

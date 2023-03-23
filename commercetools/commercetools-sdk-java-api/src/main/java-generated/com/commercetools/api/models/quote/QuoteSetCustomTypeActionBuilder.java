@@ -31,6 +31,7 @@ public class QuoteSetCustomTypeActionBuilder implements Builder<QuoteSetCustomTy
 
     /**
      *  <p>Defines the Type that extends the Quote with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Quote.</p>
+     * @return Builder
      */
 
     public QuoteSetCustomTypeActionBuilder type(
@@ -41,6 +42,8 @@ public class QuoteSetCustomTypeActionBuilder implements Builder<QuoteSetCustomTy
 
     /**
      *  <p>Defines the Type that extends the Quote with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Quote.</p>
+     * @param type
+     * @return Builder
      */
 
     public QuoteSetCustomTypeActionBuilder type(
@@ -51,6 +54,7 @@ public class QuoteSetCustomTypeActionBuilder implements Builder<QuoteSetCustomTy
 
     /**
      *  <p>Sets the Custom Fields fields for the Quote.</p>
+     * @return Builder
      */
 
     public QuoteSetCustomTypeActionBuilder fields(
@@ -61,6 +65,8 @@ public class QuoteSetCustomTypeActionBuilder implements Builder<QuoteSetCustomTy
 
     /**
      *  <p>Sets the Custom Fields fields for the Quote.</p>
+     * @param fields
+     * @return Builder
      */
 
     public QuoteSetCustomTypeActionBuilder fields(

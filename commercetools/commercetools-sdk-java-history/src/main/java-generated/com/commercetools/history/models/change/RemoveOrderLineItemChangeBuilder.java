@@ -32,6 +32,8 @@ public class RemoveOrderLineItemChangeBuilder implements Builder<RemoveOrderLine
 
     /**
      *
+     * @param change
+     * @return Builder
      */
 
     public RemoveOrderLineItemChangeBuilder change(final String change) {
@@ -41,6 +43,7 @@ public class RemoveOrderLineItemChangeBuilder implements Builder<RemoveOrderLine
 
     /**
      *
+     * @return Builder
      */
 
     public RemoveOrderLineItemChangeBuilder previousValue(
@@ -51,6 +54,8 @@ public class RemoveOrderLineItemChangeBuilder implements Builder<RemoveOrderLine
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public RemoveOrderLineItemChangeBuilder previousValue(
@@ -61,6 +66,7 @@ public class RemoveOrderLineItemChangeBuilder implements Builder<RemoveOrderLine
 
     /**
      *
+     * @return Builder
      */
 
     public RemoveOrderLineItemChangeBuilder nextValue(
@@ -71,6 +77,8 @@ public class RemoveOrderLineItemChangeBuilder implements Builder<RemoveOrderLine
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public RemoveOrderLineItemChangeBuilder nextValue(

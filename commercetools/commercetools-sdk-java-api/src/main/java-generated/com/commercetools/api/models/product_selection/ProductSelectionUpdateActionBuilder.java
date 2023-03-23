@@ -19,6 +19,10 @@ public class ProductSelectionUpdateActionBuilder {
         return com.commercetools.api.models.product_selection.ProductSelectionChangeNameActionBuilder.of();
     }
 
+    public com.commercetools.api.models.product_selection.ProductSelectionExcludeProductActionBuilder excludeProductBuilder() {
+        return com.commercetools.api.models.product_selection.ProductSelectionExcludeProductActionBuilder.of();
+    }
+
     public com.commercetools.api.models.product_selection.ProductSelectionRemoveProductActionBuilder removeProductBuilder() {
         return com.commercetools.api.models.product_selection.ProductSelectionRemoveProductActionBuilder.of();
     }
@@ -33,6 +37,10 @@ public class ProductSelectionUpdateActionBuilder {
 
     public com.commercetools.api.models.product_selection.ProductSelectionSetKeyActionBuilder setKeyBuilder() {
         return com.commercetools.api.models.product_selection.ProductSelectionSetKeyActionBuilder.of();
+    }
+
+    public com.commercetools.api.models.product_selection.ProductSelectionSetVariantExclusionActionBuilder setVariantExclusionBuilder() {
+        return com.commercetools.api.models.product_selection.ProductSelectionSetVariantExclusionActionBuilder.of();
     }
 
     public com.commercetools.api.models.product_selection.ProductSelectionSetVariantSelectionActionBuilder setVariantSelectionBuilder() {

@@ -29,6 +29,10 @@ public class ByProjectKeyShoppingListsByIDRequestBuilder {
         return new ByProjectKeyShoppingListsByIDPost(apiHttpClient, projectKey, ID, shoppingListUpdate);
     }
 
+    public ByProjectKeyShoppingListsByIDPostString post(final String shoppingListUpdate) {
+        return new ByProjectKeyShoppingListsByIDPostString(apiHttpClient, projectKey, ID, shoppingListUpdate);
+    }
+
     public ByProjectKeyShoppingListsByIDPost post(
             UnaryOperator<com.commercetools.api.models.shopping_list.ShoppingListUpdateBuilder> op) {
         return post(op.apply(com.commercetools.api.models.shopping_list.ShoppingListUpdateBuilder.of()).build());

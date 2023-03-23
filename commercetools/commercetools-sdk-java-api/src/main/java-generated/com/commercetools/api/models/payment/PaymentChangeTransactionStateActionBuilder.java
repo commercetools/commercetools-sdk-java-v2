@@ -28,6 +28,8 @@ public class PaymentChangeTransactionStateActionBuilder implements Builder<Payme
 
     /**
      *  <p>Unique identifier of the Transaction.</p>
+     * @param transactionId
+     * @return Builder
      */
 
     public PaymentChangeTransactionStateActionBuilder transactionId(final String transactionId) {
@@ -37,6 +39,8 @@ public class PaymentChangeTransactionStateActionBuilder implements Builder<Payme
 
     /**
      *  <p>New TransactionState.</p>
+     * @param state
+     * @return Builder
      */
 
     public PaymentChangeTransactionStateActionBuilder state(

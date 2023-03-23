@@ -31,6 +31,7 @@ public class MyCustomerSetCustomTypeActionBuilder implements Builder<MyCustomerS
 
     /**
      *  <p>Defines the Type that extends the MyCustomer with Custom Fields. If absent, any existing Type and Custom Fields are removed from the MyCustomer.</p>
+     * @return Builder
      */
 
     public MyCustomerSetCustomTypeActionBuilder type(
@@ -41,6 +42,8 @@ public class MyCustomerSetCustomTypeActionBuilder implements Builder<MyCustomerS
 
     /**
      *  <p>Defines the Type that extends the MyCustomer with Custom Fields. If absent, any existing Type and Custom Fields are removed from the MyCustomer.</p>
+     * @param type
+     * @return Builder
      */
 
     public MyCustomerSetCustomTypeActionBuilder type(
@@ -51,6 +54,7 @@ public class MyCustomerSetCustomTypeActionBuilder implements Builder<MyCustomerS
 
     /**
      *  <p>Sets the Custom Fields fields for the MyCustomer.</p>
+     * @return Builder
      */
 
     public MyCustomerSetCustomTypeActionBuilder fields(
@@ -61,6 +65,8 @@ public class MyCustomerSetCustomTypeActionBuilder implements Builder<MyCustomerS
 
     /**
      *  <p>Sets the Custom Fields fields for the MyCustomer.</p>
+     * @param fields
+     * @return Builder
      */
 
     public MyCustomerSetCustomTypeActionBuilder fields(

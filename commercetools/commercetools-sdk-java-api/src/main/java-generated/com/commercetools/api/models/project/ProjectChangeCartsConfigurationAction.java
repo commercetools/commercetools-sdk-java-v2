@@ -34,6 +34,7 @@ public interface ProjectChangeCartsConfigurationAction extends ProjectUpdateActi
 
     /**
      *  <p>Configuration for the Carts feature.</p>
+     * @return cartsConfiguration
      */
     @NotNull
     @Valid

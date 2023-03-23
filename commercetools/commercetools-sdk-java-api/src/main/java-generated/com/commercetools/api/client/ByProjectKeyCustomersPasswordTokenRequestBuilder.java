@@ -23,6 +23,11 @@ public class ByProjectKeyCustomersPasswordTokenRequestBuilder {
         return new ByProjectKeyCustomersPasswordTokenPost(apiHttpClient, projectKey, customerCreatePasswordResetToken);
     }
 
+    public ByProjectKeyCustomersPasswordTokenPostString post(final String customerCreatePasswordResetToken) {
+        return new ByProjectKeyCustomersPasswordTokenPostString(apiHttpClient, projectKey,
+            customerCreatePasswordResetToken);
+    }
+
     public ByProjectKeyCustomersPasswordTokenPost post(
             UnaryOperator<com.commercetools.api.models.customer.CustomerCreatePasswordResetTokenBuilder> op) {
         return post(

@@ -37,6 +37,7 @@ public interface BusinessUnitContactEmailSetMessage extends Message {
 
     /**
      *  <p>The contact email that was updated on the Business Unit.</p>
+     * @return contactEmail
      */
 
     @JsonProperty("contactEmail")

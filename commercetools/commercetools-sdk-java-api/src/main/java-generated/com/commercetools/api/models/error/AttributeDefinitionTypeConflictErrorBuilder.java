@@ -36,6 +36,8 @@ public class AttributeDefinitionTypeConflictErrorBuilder implements Builder<Attr
 
     /**
      *  <p><code>"The attribute with name $attributeName has a different type on product type $productTypeName."</code></p>
+     * @param message
+     * @return Builder
      */
 
     public AttributeDefinitionTypeConflictErrorBuilder message(final String message) {
@@ -66,6 +68,8 @@ public class AttributeDefinitionTypeConflictErrorBuilder implements Builder<Attr
 
     /**
      *  <p>Unique identifier of the Product Type containing the conflicting name.</p>
+     * @param conflictingProductTypeId
+     * @return Builder
      */
 
     public AttributeDefinitionTypeConflictErrorBuilder conflictingProductTypeId(final String conflictingProductTypeId) {
@@ -75,6 +79,8 @@ public class AttributeDefinitionTypeConflictErrorBuilder implements Builder<Attr
 
     /**
      *  <p>Name of the Product Type containing the conflicting name.</p>
+     * @param conflictingProductTypeName
+     * @return Builder
      */
 
     public AttributeDefinitionTypeConflictErrorBuilder conflictingProductTypeName(
@@ -85,6 +91,8 @@ public class AttributeDefinitionTypeConflictErrorBuilder implements Builder<Attr
 
     /**
      *  <p>Name of the conflicting Attribute.</p>
+     * @param conflictingAttributeName
+     * @return Builder
      */
 
     public AttributeDefinitionTypeConflictErrorBuilder conflictingAttributeName(final String conflictingAttributeName) {

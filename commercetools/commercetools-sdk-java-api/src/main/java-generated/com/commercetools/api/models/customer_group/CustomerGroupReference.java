@@ -35,6 +35,7 @@ public interface CustomerGroupReference extends Reference, com.commercetools.api
 
     /**
      *  <p>Contains the representation of the expanded CustomerGroup. Only present in responses to requests with Reference Expansion for CustomerGroups.</p>
+     * @return obj
      */
     @Valid
     @JsonProperty("obj")
@@ -42,6 +43,7 @@ public interface CustomerGroupReference extends Reference, com.commercetools.api
 
     /**
      *  <p>Unique identifier of the referenced CustomerGroup.</p>
+     * @return id
      */
     @NotNull
     @JsonProperty("id")

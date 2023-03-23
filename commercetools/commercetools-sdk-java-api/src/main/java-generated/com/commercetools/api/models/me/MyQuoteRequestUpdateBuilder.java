@@ -29,6 +29,8 @@ public class MyQuoteRequestUpdateBuilder implements Builder<MyQuoteRequestUpdate
 
     /**
      *
+     * @param version
+     * @return Builder
      */
 
     public MyQuoteRequestUpdateBuilder version(final Long version) {
@@ -38,6 +40,8 @@ public class MyQuoteRequestUpdateBuilder implements Builder<MyQuoteRequestUpdate
 
     /**
      *
+     * @param actions
+     * @return Builder
      */
 
     public MyQuoteRequestUpdateBuilder actions(
@@ -48,6 +52,8 @@ public class MyQuoteRequestUpdateBuilder implements Builder<MyQuoteRequestUpdate
 
     /**
      *
+     * @param actions
+     * @return Builder
      */
 
     public MyQuoteRequestUpdateBuilder actions(
@@ -58,6 +64,8 @@ public class MyQuoteRequestUpdateBuilder implements Builder<MyQuoteRequestUpdate
 
     /**
      *
+     * @param actions
+     * @return Builder
      */
 
     public MyQuoteRequestUpdateBuilder plusActions(
@@ -71,6 +79,7 @@ public class MyQuoteRequestUpdateBuilder implements Builder<MyQuoteRequestUpdate
 
     /**
      *
+     * @return Builder
      */
 
     public MyQuoteRequestUpdateBuilder plusActions(
@@ -84,6 +93,7 @@ public class MyQuoteRequestUpdateBuilder implements Builder<MyQuoteRequestUpdate
 
     /**
      *
+     * @return Builder
      */
 
     public MyQuoteRequestUpdateBuilder withActions(

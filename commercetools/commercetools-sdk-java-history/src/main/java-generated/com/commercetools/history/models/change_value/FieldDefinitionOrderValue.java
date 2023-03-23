@@ -34,6 +34,7 @@ public interface FieldDefinitionOrderValue {
 
     /**
      *
+     * @return name
      */
     @NotNull
     @JsonProperty("name")
@@ -41,6 +42,7 @@ public interface FieldDefinitionOrderValue {
 
     /**
      *
+     * @return label
      */
     @NotNull
     @Valid

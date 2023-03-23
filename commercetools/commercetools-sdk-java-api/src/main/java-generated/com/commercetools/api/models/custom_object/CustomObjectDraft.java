@@ -32,6 +32,7 @@ public interface CustomObjectDraft extends io.vrap.rmf.base.client.Draft<CustomO
 
     /**
      *  <p>Namespace to group CustomObjects.</p>
+     * @return container
      */
     @NotNull
     @JsonProperty("container")
@@ -39,6 +40,7 @@ public interface CustomObjectDraft extends io.vrap.rmf.base.client.Draft<CustomO
 
     /**
      *  <p>User-defined unique identifier of the CustomObject within the defined <code>container</code>.</p>
+     * @return key
      */
     @NotNull
     @JsonProperty("key")
@@ -46,6 +48,7 @@ public interface CustomObjectDraft extends io.vrap.rmf.base.client.Draft<CustomO
 
     /**
      *  <p>JSON standard types Number, String, Boolean, Array, Object, and common API data types. For values of type Reference the integrity of the data is not guaranteed. If the referenced object is deleted, the API does not delete the corresponding reference to it and the <code>value</code> points to a non-existing object in such case.</p>
+     * @return value
      */
     @NotNull
     @JsonProperty("value")
@@ -53,6 +56,7 @@ public interface CustomObjectDraft extends io.vrap.rmf.base.client.Draft<CustomO
 
     /**
      *  <p>Current version of the CustomObject.</p>
+     * @return version
      */
 
     @JsonProperty("version")

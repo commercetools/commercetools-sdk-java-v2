@@ -35,6 +35,7 @@ public interface BusinessUnitAssociatesSetMessagePayload extends MessagePayload 
 
     /**
      *  <p>The list of Associates that was updated on the Business Unit.</p>
+     * @return associates
      */
     @NotNull
     @Valid

@@ -29,7 +29,8 @@ public interface MyCartSetCustomerEmailAction extends MyCartUpdateAction {
     String SET_CUSTOMER_EMAIL = "setCustomerEmail";
 
     /**
-     *
+     *  <p>Value to set. If empty, any existing value is removed.</p>
+     * @return email
      */
 
     @JsonProperty("email")

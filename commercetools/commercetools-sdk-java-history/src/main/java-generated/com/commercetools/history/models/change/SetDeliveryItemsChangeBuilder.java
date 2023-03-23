@@ -35,6 +35,8 @@ public class SetDeliveryItemsChangeBuilder implements Builder<SetDeliveryItemsCh
 
     /**
      *  <p>Update action for <code>setDeliveryItems</code></p>
+     * @param change
+     * @return Builder
      */
 
     public SetDeliveryItemsChangeBuilder change(final String change) {
@@ -44,6 +46,8 @@ public class SetDeliveryItemsChangeBuilder implements Builder<SetDeliveryItemsCh
 
     /**
      *
+     * @param deliveryId
+     * @return Builder
      */
 
     public SetDeliveryItemsChangeBuilder deliveryId(final String deliveryId) {
@@ -53,6 +57,8 @@ public class SetDeliveryItemsChangeBuilder implements Builder<SetDeliveryItemsCh
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public SetDeliveryItemsChangeBuilder nextValue(
@@ -63,6 +69,8 @@ public class SetDeliveryItemsChangeBuilder implements Builder<SetDeliveryItemsCh
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public SetDeliveryItemsChangeBuilder nextValue(
@@ -73,6 +81,8 @@ public class SetDeliveryItemsChangeBuilder implements Builder<SetDeliveryItemsCh
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public SetDeliveryItemsChangeBuilder plusNextValue(
@@ -86,6 +96,7 @@ public class SetDeliveryItemsChangeBuilder implements Builder<SetDeliveryItemsCh
 
     /**
      *
+     * @return Builder
      */
 
     public SetDeliveryItemsChangeBuilder plusNextValue(
@@ -99,6 +110,7 @@ public class SetDeliveryItemsChangeBuilder implements Builder<SetDeliveryItemsCh
 
     /**
      *
+     * @return Builder
      */
 
     public SetDeliveryItemsChangeBuilder withNextValue(
@@ -110,6 +122,8 @@ public class SetDeliveryItemsChangeBuilder implements Builder<SetDeliveryItemsCh
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public SetDeliveryItemsChangeBuilder previousValue(
@@ -120,6 +134,8 @@ public class SetDeliveryItemsChangeBuilder implements Builder<SetDeliveryItemsCh
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public SetDeliveryItemsChangeBuilder previousValue(
@@ -130,6 +146,8 @@ public class SetDeliveryItemsChangeBuilder implements Builder<SetDeliveryItemsCh
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public SetDeliveryItemsChangeBuilder plusPreviousValue(
@@ -143,6 +161,7 @@ public class SetDeliveryItemsChangeBuilder implements Builder<SetDeliveryItemsCh
 
     /**
      *
+     * @return Builder
      */
 
     public SetDeliveryItemsChangeBuilder plusPreviousValue(
@@ -156,6 +175,7 @@ public class SetDeliveryItemsChangeBuilder implements Builder<SetDeliveryItemsCh
 
     /**
      *
+     * @return Builder
      */
 
     public SetDeliveryItemsChangeBuilder withPreviousValue(

@@ -35,6 +35,7 @@ public class StagedQuoteStateTransitionMessagePayloadBuilder
 
     /**
      *  <p>State of the Quote after the Transition State update action.</p>
+     * @return Builder
      */
 
     public StagedQuoteStateTransitionMessagePayloadBuilder state(
@@ -45,6 +46,8 @@ public class StagedQuoteStateTransitionMessagePayloadBuilder
 
     /**
      *  <p>State of the Quote after the Transition State update action.</p>
+     * @param state
+     * @return Builder
      */
 
     public StagedQuoteStateTransitionMessagePayloadBuilder state(
@@ -55,6 +58,7 @@ public class StagedQuoteStateTransitionMessagePayloadBuilder
 
     /**
      *  <p>State of the Quote before the Transition State update action.</p>
+     * @return Builder
      */
 
     public StagedQuoteStateTransitionMessagePayloadBuilder oldState(
@@ -65,6 +69,8 @@ public class StagedQuoteStateTransitionMessagePayloadBuilder
 
     /**
      *  <p>State of the Quote before the Transition State update action.</p>
+     * @param oldState
+     * @return Builder
      */
 
     public StagedQuoteStateTransitionMessagePayloadBuilder oldState(
@@ -75,6 +81,8 @@ public class StagedQuoteStateTransitionMessagePayloadBuilder
 
     /**
      *  <p>Whether State transition validations were turned off during the Transition State update action.</p>
+     * @param force
+     * @return Builder
      */
 
     public StagedQuoteStateTransitionMessagePayloadBuilder force(final Boolean force) {

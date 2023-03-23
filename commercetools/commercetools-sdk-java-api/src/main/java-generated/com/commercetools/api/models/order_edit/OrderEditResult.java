@@ -39,6 +39,7 @@ public interface OrderEditResult {
 
     /**
      *
+     * @return type
      */
     @NotNull
     @JsonProperty("type")

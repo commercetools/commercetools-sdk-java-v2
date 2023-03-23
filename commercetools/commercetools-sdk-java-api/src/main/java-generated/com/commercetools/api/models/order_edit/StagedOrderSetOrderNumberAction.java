@@ -31,6 +31,7 @@ public interface StagedOrderSetOrderNumberAction extends StagedOrderUpdateAction
 
     /**
      *
+     * @return orderNumber
      */
 
     @JsonProperty("orderNumber")

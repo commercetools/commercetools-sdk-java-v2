@@ -31,6 +31,8 @@ public class MyCustomerRemoveShippingAddressIdActionBuilder
 
     /**
      *  <p><code>id</code> of the Address to remove from <code>shippingAddressesIds</code>.</p>
+     * @param addressId
+     * @return Builder
      */
 
     public MyCustomerRemoveShippingAddressIdActionBuilder addressId(@Nullable final String addressId) {
@@ -40,6 +42,8 @@ public class MyCustomerRemoveShippingAddressIdActionBuilder
 
     /**
      *  <p><code>key</code> of the Address to remove from <code>shippingAddressesIds</code>.</p>
+     * @param addressKey
+     * @return Builder
      */
 
     public MyCustomerRemoveShippingAddressIdActionBuilder addressKey(@Nullable final String addressKey) {

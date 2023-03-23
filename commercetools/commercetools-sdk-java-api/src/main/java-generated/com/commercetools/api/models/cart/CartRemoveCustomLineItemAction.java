@@ -13,7 +13,8 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * CartRemoveCustomLineItemAction
+ *  <p>This update action does not support specifying quantities, unlike the Remove LineItem update action.</p>
+ *  <p>If <code>shippingDetails</code> must be partially removed, use the Change CustomLineItem Quantity update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -32,7 +33,8 @@ public interface CartRemoveCustomLineItemAction extends CartUpdateAction {
     String REMOVE_CUSTOM_LINE_ITEM = "removeCustomLineItem";
 
     /**
-     *
+     *  <p><code>id</code> of the Custom Line Item to remove.</p>
+     * @return customLineItemId
      */
     @NotNull
     @JsonProperty("customLineItemId")

@@ -37,6 +37,7 @@ public interface DuplicateFieldWithConflictingResourceError extends ErrorObject 
 
     /**
      *
+     * @return code
      */
     @NotNull
     @JsonProperty("code")
@@ -44,6 +45,7 @@ public interface DuplicateFieldWithConflictingResourceError extends ErrorObject 
 
     /**
      *  <p><code>"A duplicate value $duplicateValue exists for field $field on $conflictingResource."</code></p>
+     * @return message
      */
     @NotNull
     @JsonProperty("message")
@@ -51,6 +53,7 @@ public interface DuplicateFieldWithConflictingResourceError extends ErrorObject 
 
     /**
      *  <p>Name of the conflicting field.</p>
+     * @return field
      */
     @NotNull
     @JsonProperty("field")
@@ -58,6 +61,7 @@ public interface DuplicateFieldWithConflictingResourceError extends ErrorObject 
 
     /**
      *  <p>Conflicting duplicate value.</p>
+     * @return duplicateValue
      */
     @NotNull
     @JsonProperty("duplicateValue")
@@ -65,6 +69,7 @@ public interface DuplicateFieldWithConflictingResourceError extends ErrorObject 
 
     /**
      *  <p>Reference to the resource that has the conflicting value.</p>
+     * @return conflictingResource
      */
     @NotNull
     @Valid

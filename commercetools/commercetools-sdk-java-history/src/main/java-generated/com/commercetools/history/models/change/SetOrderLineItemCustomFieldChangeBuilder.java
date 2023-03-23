@@ -42,6 +42,8 @@ public class SetOrderLineItemCustomFieldChangeBuilder implements Builder<SetOrde
 
     /**
      *  <p>Update action for <code>setLineItemCustomField</code></p>
+     * @param change
+     * @return Builder
      */
 
     public SetOrderLineItemCustomFieldChangeBuilder change(final String change) {
@@ -51,6 +53,8 @@ public class SetOrderLineItemCustomFieldChangeBuilder implements Builder<SetOrde
 
     /**
      *
+     * @param customTypeId
+     * @return Builder
      */
 
     public SetOrderLineItemCustomFieldChangeBuilder customTypeId(final String customTypeId) {
@@ -60,6 +64,8 @@ public class SetOrderLineItemCustomFieldChangeBuilder implements Builder<SetOrde
 
     /**
      *
+     * @param name
+     * @return Builder
      */
 
     public SetOrderLineItemCustomFieldChangeBuilder name(final String name) {
@@ -69,6 +75,8 @@ public class SetOrderLineItemCustomFieldChangeBuilder implements Builder<SetOrde
 
     /**
      *
+     * @param variant
+     * @return Builder
      */
 
     public SetOrderLineItemCustomFieldChangeBuilder variant(final String variant) {
@@ -78,6 +86,7 @@ public class SetOrderLineItemCustomFieldChangeBuilder implements Builder<SetOrde
 
     /**
      *
+     * @return Builder
      */
 
     public SetOrderLineItemCustomFieldChangeBuilder lineItem(
@@ -88,6 +97,8 @@ public class SetOrderLineItemCustomFieldChangeBuilder implements Builder<SetOrde
 
     /**
      *
+     * @param lineItem
+     * @return Builder
      */
 
     public SetOrderLineItemCustomFieldChangeBuilder lineItem(
@@ -98,6 +109,8 @@ public class SetOrderLineItemCustomFieldChangeBuilder implements Builder<SetOrde
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public SetOrderLineItemCustomFieldChangeBuilder nextValue(final java.lang.Object nextValue) {
@@ -107,6 +120,8 @@ public class SetOrderLineItemCustomFieldChangeBuilder implements Builder<SetOrde
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public SetOrderLineItemCustomFieldChangeBuilder previousValue(final java.lang.Object previousValue) {

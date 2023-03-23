@@ -52,6 +52,8 @@ public class MyCompanyDraftBuilder implements Builder<MyCompanyDraft> {
 
     /**
      *  <p>User-defined unique identifier for the BusinessUnit.</p>
+     * @param key
+     * @return Builder
      */
 
     public MyCompanyDraftBuilder key(final String key) {
@@ -61,6 +63,8 @@ public class MyCompanyDraftBuilder implements Builder<MyCompanyDraft> {
 
     /**
      *  <p>Name of the Business Unit.</p>
+     * @param name
+     * @return Builder
      */
 
     public MyCompanyDraftBuilder name(final String name) {
@@ -70,6 +74,8 @@ public class MyCompanyDraftBuilder implements Builder<MyCompanyDraft> {
 
     /**
      *  <p>Email address of the Business Unit.</p>
+     * @param contactEmail
+     * @return Builder
      */
 
     public MyCompanyDraftBuilder contactEmail(@Nullable final String contactEmail) {
@@ -79,6 +85,7 @@ public class MyCompanyDraftBuilder implements Builder<MyCompanyDraft> {
 
     /**
      *  <p>Custom Fields for the Business Unit.</p>
+     * @return Builder
      */
 
     public MyCompanyDraftBuilder custom(
@@ -89,6 +96,8 @@ public class MyCompanyDraftBuilder implements Builder<MyCompanyDraft> {
 
     /**
      *  <p>Custom Fields for the Business Unit.</p>
+     * @param custom
+     * @return Builder
      */
 
     public MyCompanyDraftBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFields custom) {
@@ -98,6 +107,8 @@ public class MyCompanyDraftBuilder implements Builder<MyCompanyDraft> {
 
     /**
      *  <p>Addresses used by the Business Unit.</p>
+     * @param addresses
+     * @return Builder
      */
 
     public MyCompanyDraftBuilder addresses(
@@ -108,6 +119,8 @@ public class MyCompanyDraftBuilder implements Builder<MyCompanyDraft> {
 
     /**
      *  <p>Addresses used by the Business Unit.</p>
+     * @param addresses
+     * @return Builder
      */
 
     public MyCompanyDraftBuilder addresses(
@@ -118,6 +131,8 @@ public class MyCompanyDraftBuilder implements Builder<MyCompanyDraft> {
 
     /**
      *  <p>Addresses used by the Business Unit.</p>
+     * @param addresses
+     * @return Builder
      */
 
     public MyCompanyDraftBuilder plusAddresses(
@@ -131,6 +146,7 @@ public class MyCompanyDraftBuilder implements Builder<MyCompanyDraft> {
 
     /**
      *  <p>Addresses used by the Business Unit.</p>
+     * @return Builder
      */
 
     public MyCompanyDraftBuilder plusAddresses(
@@ -144,6 +160,7 @@ public class MyCompanyDraftBuilder implements Builder<MyCompanyDraft> {
 
     /**
      *  <p>Addresses used by the Business Unit.</p>
+     * @return Builder
      */
 
     public MyCompanyDraftBuilder withAddresses(
@@ -155,6 +172,8 @@ public class MyCompanyDraftBuilder implements Builder<MyCompanyDraft> {
 
     /**
      *  <p>Indexes of entries in <code>addresses</code> to set as shipping addresses. The <code>shippingAddressIds</code> of the Customer will be replaced by these addresses.</p>
+     * @param shippingAddresses
+     * @return Builder
      */
 
     public MyCompanyDraftBuilder shippingAddresses(@Nullable final Integer... shippingAddresses) {
@@ -164,6 +183,8 @@ public class MyCompanyDraftBuilder implements Builder<MyCompanyDraft> {
 
     /**
      *  <p>Indexes of entries in <code>addresses</code> to set as shipping addresses. The <code>shippingAddressIds</code> of the Customer will be replaced by these addresses.</p>
+     * @param shippingAddresses
+     * @return Builder
      */
 
     public MyCompanyDraftBuilder shippingAddresses(@Nullable final java.util.List<Integer> shippingAddresses) {
@@ -173,6 +194,8 @@ public class MyCompanyDraftBuilder implements Builder<MyCompanyDraft> {
 
     /**
      *  <p>Indexes of entries in <code>addresses</code> to set as shipping addresses. The <code>shippingAddressIds</code> of the Customer will be replaced by these addresses.</p>
+     * @param shippingAddresses
+     * @return Builder
      */
 
     public MyCompanyDraftBuilder plusShippingAddresses(@Nullable final Integer... shippingAddresses) {
@@ -185,6 +208,8 @@ public class MyCompanyDraftBuilder implements Builder<MyCompanyDraft> {
 
     /**
      *  <p>Index of the entry in <code>addresses</code> to set as the default shipping address.</p>
+     * @param defaultShippingAddress
+     * @return Builder
      */
 
     public MyCompanyDraftBuilder defaultShippingAddress(@Nullable final Integer defaultShippingAddress) {
@@ -194,6 +219,8 @@ public class MyCompanyDraftBuilder implements Builder<MyCompanyDraft> {
 
     /**
      *  <p>Indexes of entries in <code>addresses</code> to set as billing addresses. The <code>billingAddressIds</code> of the Customer will be replaced by these addresses.</p>
+     * @param billingAddresses
+     * @return Builder
      */
 
     public MyCompanyDraftBuilder billingAddresses(@Nullable final Integer... billingAddresses) {
@@ -203,6 +230,8 @@ public class MyCompanyDraftBuilder implements Builder<MyCompanyDraft> {
 
     /**
      *  <p>Indexes of entries in <code>addresses</code> to set as billing addresses. The <code>billingAddressIds</code> of the Customer will be replaced by these addresses.</p>
+     * @param billingAddresses
+     * @return Builder
      */
 
     public MyCompanyDraftBuilder billingAddresses(@Nullable final java.util.List<Integer> billingAddresses) {
@@ -212,6 +241,8 @@ public class MyCompanyDraftBuilder implements Builder<MyCompanyDraft> {
 
     /**
      *  <p>Indexes of entries in <code>addresses</code> to set as billing addresses. The <code>billingAddressIds</code> of the Customer will be replaced by these addresses.</p>
+     * @param billingAddresses
+     * @return Builder
      */
 
     public MyCompanyDraftBuilder plusBillingAddresses(@Nullable final Integer... billingAddresses) {
@@ -224,6 +255,8 @@ public class MyCompanyDraftBuilder implements Builder<MyCompanyDraft> {
 
     /**
      *  <p>Index of the entry in <code>addresses</code> to set as the default billing address.</p>
+     * @param defaultBillingAddress
+     * @return Builder
      */
 
     public MyCompanyDraftBuilder defaultBillingAddress(@Nullable final Integer defaultBillingAddress) {

@@ -33,6 +33,7 @@ public interface AddressDraft extends BaseAddress, com.commercetools.api.models.
 
     /**
      *  <p>Custom Fields defined for the Address.</p>
+     * @return custom
      */
     @Valid
     @JsonProperty("custom")

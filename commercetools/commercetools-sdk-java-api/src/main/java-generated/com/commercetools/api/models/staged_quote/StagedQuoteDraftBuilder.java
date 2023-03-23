@@ -43,6 +43,7 @@ public class StagedQuoteDraftBuilder implements Builder<StagedQuoteDraft> {
 
     /**
      *  <p>QuoteRequest from which the StagedQuote is created.</p>
+     * @return Builder
      */
 
     public StagedQuoteDraftBuilder quoteRequest(
@@ -55,6 +56,8 @@ public class StagedQuoteDraftBuilder implements Builder<StagedQuoteDraft> {
 
     /**
      *  <p>QuoteRequest from which the StagedQuote is created.</p>
+     * @param quoteRequest
+     * @return Builder
      */
 
     public StagedQuoteDraftBuilder quoteRequest(
@@ -65,6 +68,8 @@ public class StagedQuoteDraftBuilder implements Builder<StagedQuoteDraft> {
 
     /**
      *  <p>Current version of the QuoteRequest.</p>
+     * @param quoteRequestVersion
+     * @return Builder
      */
 
     public StagedQuoteDraftBuilder quoteRequestVersion(final Long quoteRequestVersion) {
@@ -74,6 +79,8 @@ public class StagedQuoteDraftBuilder implements Builder<StagedQuoteDraft> {
 
     /**
      *  <p>If <code>true</code>, the <code>quoteRequestState</code> of the referenced QuoteRequest will be set to <code>Accepted</code>.</p>
+     * @param quoteRequestStateToAccepted
+     * @return Builder
      */
 
     public StagedQuoteDraftBuilder quoteRequestStateToAccepted(@Nullable final Boolean quoteRequestStateToAccepted) {
@@ -83,6 +90,8 @@ public class StagedQuoteDraftBuilder implements Builder<StagedQuoteDraft> {
 
     /**
      *  <p>User-defined unique identifier for the StagedQuote.</p>
+     * @param key
+     * @return Builder
      */
 
     public StagedQuoteDraftBuilder key(@Nullable final String key) {
@@ -96,6 +105,7 @@ public class StagedQuoteDraftBuilder implements Builder<StagedQuoteDraft> {
      *   <li>If specified, the Custom Fields are merged with the Custom Fields on the referenced QuoteRequest and added to the StagedQuote.</li>
      *   <li>If empty, the Custom Fields on the referenced QuoteRequest are added to the StagedQuote automatically.</li>
      *  </ul>
+     * @return Builder
      */
 
     public StagedQuoteDraftBuilder custom(
@@ -110,6 +120,8 @@ public class StagedQuoteDraftBuilder implements Builder<StagedQuoteDraft> {
      *   <li>If specified, the Custom Fields are merged with the Custom Fields on the referenced QuoteRequest and added to the StagedQuote.</li>
      *   <li>If empty, the Custom Fields on the referenced QuoteRequest are added to the StagedQuote automatically.</li>
      *  </ul>
+     * @param custom
+     * @return Builder
      */
 
     public StagedQuoteDraftBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFieldsDraft custom) {
@@ -119,6 +131,7 @@ public class StagedQuoteDraftBuilder implements Builder<StagedQuoteDraft> {
 
     /**
      *  <p>State of the Staged Quote. This reference can point to a State in a custom workflow.</p>
+     * @return Builder
      */
 
     public StagedQuoteDraftBuilder state(
@@ -129,6 +142,8 @@ public class StagedQuoteDraftBuilder implements Builder<StagedQuoteDraft> {
 
     /**
      *  <p>State of the Staged Quote. This reference can point to a State in a custom workflow.</p>
+     * @param state
+     * @return Builder
      */
 
     public StagedQuoteDraftBuilder state(@Nullable final com.commercetools.api.models.state.StateReference state) {

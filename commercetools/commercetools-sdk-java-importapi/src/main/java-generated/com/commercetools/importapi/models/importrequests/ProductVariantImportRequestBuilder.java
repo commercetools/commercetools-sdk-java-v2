@@ -26,6 +26,8 @@ public class ProductVariantImportRequestBuilder implements Builder<ProductVarian
 
     /**
      *  <p>The product variant import resources of this request.</p>
+     * @param resources
+     * @return Builder
      */
 
     public ProductVariantImportRequestBuilder resources(
@@ -36,6 +38,8 @@ public class ProductVariantImportRequestBuilder implements Builder<ProductVarian
 
     /**
      *  <p>The product variant import resources of this request.</p>
+     * @param resources
+     * @return Builder
      */
 
     public ProductVariantImportRequestBuilder resources(
@@ -46,6 +50,8 @@ public class ProductVariantImportRequestBuilder implements Builder<ProductVarian
 
     /**
      *  <p>The product variant import resources of this request.</p>
+     * @param resources
+     * @return Builder
      */
 
     public ProductVariantImportRequestBuilder plusResources(
@@ -59,6 +65,7 @@ public class ProductVariantImportRequestBuilder implements Builder<ProductVarian
 
     /**
      *  <p>The product variant import resources of this request.</p>
+     * @return Builder
      */
 
     public ProductVariantImportRequestBuilder plusResources(
@@ -73,6 +80,7 @@ public class ProductVariantImportRequestBuilder implements Builder<ProductVarian
 
     /**
      *  <p>The product variant import resources of this request.</p>
+     * @return Builder
      */
 
     public ProductVariantImportRequestBuilder withResources(

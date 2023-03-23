@@ -28,6 +28,8 @@ public class GeoLocationBuilder implements Builder<GeoLocation> {
 
     /**
      *
+     * @param type
+     * @return Builder
      */
 
     public GeoLocationBuilder type(final String type) {
@@ -37,6 +39,8 @@ public class GeoLocationBuilder implements Builder<GeoLocation> {
 
     /**
      *
+     * @param coordinates
+     * @return Builder
      */
 
     public GeoLocationBuilder coordinates(final Integer... coordinates) {
@@ -46,6 +50,8 @@ public class GeoLocationBuilder implements Builder<GeoLocation> {
 
     /**
      *
+     * @param coordinates
+     * @return Builder
      */
 
     public GeoLocationBuilder coordinates(final java.util.List<Integer> coordinates) {
@@ -55,6 +61,8 @@ public class GeoLocationBuilder implements Builder<GeoLocation> {
 
     /**
      *
+     * @param coordinates
+     * @return Builder
      */
 
     public GeoLocationBuilder plusCoordinates(final Integer... coordinates) {

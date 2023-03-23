@@ -33,7 +33,8 @@ public interface CartSetItemShippingAddressCustomFieldAction extends CartUpdateA
     String SET_ITEM_SHIPPING_ADDRESS_CUSTOM_FIELD = "setItemShippingAddressCustomField";
 
     /**
-     *
+     *  <p><code>key</code> of the Address in <code>itemShippingAddress</code>.</p>
+     * @return addressKey
      */
     @NotNull
     @JsonProperty("addressKey")
@@ -41,6 +42,7 @@ public interface CartSetItemShippingAddressCustomFieldAction extends CartUpdateA
 
     /**
      *  <p>Name of the Custom Field.</p>
+     * @return name
      */
     @NotNull
     @JsonProperty("name")
@@ -48,6 +50,7 @@ public interface CartSetItemShippingAddressCustomFieldAction extends CartUpdateA
 
     /**
      *  <p>If <code>value</code> is absent or <code>null</code>, this field will be removed if it exists. Removing a field that does not exist returns an InvalidOperation error. If <code>value</code> is provided, it is set for the field defined by <code>name</code>.</p>
+     * @return value
      */
 
     @JsonProperty("value")

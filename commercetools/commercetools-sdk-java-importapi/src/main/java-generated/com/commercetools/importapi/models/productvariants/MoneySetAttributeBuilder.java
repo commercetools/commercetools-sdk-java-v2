@@ -31,6 +31,8 @@ public class MoneySetAttributeBuilder implements Builder<MoneySetAttribute> {
 
     /**
      *  <p>The name of this attribute must match a name of the product types attribute definitions. The name is required if this type is used in a product variant and must not be set when used in a product variant patch.</p>
+     * @param name
+     * @return Builder
      */
 
     public MoneySetAttributeBuilder name(@Nullable final String name) {
@@ -40,6 +42,8 @@ public class MoneySetAttributeBuilder implements Builder<MoneySetAttribute> {
 
     /**
      *
+     * @param value
+     * @return Builder
      */
 
     public MoneySetAttributeBuilder value(final com.commercetools.importapi.models.common.TypedMoney... value) {
@@ -49,6 +53,8 @@ public class MoneySetAttributeBuilder implements Builder<MoneySetAttribute> {
 
     /**
      *
+     * @param value
+     * @return Builder
      */
 
     public MoneySetAttributeBuilder value(
@@ -59,6 +65,8 @@ public class MoneySetAttributeBuilder implements Builder<MoneySetAttribute> {
 
     /**
      *
+     * @param value
+     * @return Builder
      */
 
     public MoneySetAttributeBuilder plusValue(final com.commercetools.importapi.models.common.TypedMoney... value) {
@@ -71,6 +79,7 @@ public class MoneySetAttributeBuilder implements Builder<MoneySetAttribute> {
 
     /**
      *
+     * @return Builder
      */
 
     public MoneySetAttributeBuilder plusValue(
@@ -84,6 +93,7 @@ public class MoneySetAttributeBuilder implements Builder<MoneySetAttribute> {
 
     /**
      *
+     * @return Builder
      */
 
     public MoneySetAttributeBuilder withValue(

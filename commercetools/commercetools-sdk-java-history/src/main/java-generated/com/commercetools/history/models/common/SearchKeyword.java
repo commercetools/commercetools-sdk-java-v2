@@ -33,6 +33,7 @@ public interface SearchKeyword {
 
     /**
      *
+     * @return text
      */
     @NotNull
     @JsonProperty("text")
@@ -40,6 +41,7 @@ public interface SearchKeyword {
 
     /**
      *
+     * @return suggestTokenizer
      */
     @NotNull
     @Valid

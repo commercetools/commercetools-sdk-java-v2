@@ -33,6 +33,7 @@ public interface StoreNameSetMessagePayload extends MessagePayload {
 
     /**
      *  <p>Name of the Store set during the Set Name update action.</p>
+     * @return name
      */
     @Valid
     @JsonProperty("name")
@@ -40,6 +41,7 @@ public interface StoreNameSetMessagePayload extends MessagePayload {
 
     /**
      *  <p>Names set for the Store in different locales.</p>
+     * @return nameAllLocales
      */
     @Valid
     @JsonProperty("nameAllLocales")

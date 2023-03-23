@@ -35,6 +35,7 @@ public interface ProjectChangeMessagesConfigurationAction extends ProjectUpdateA
 
     /**
      *  <p>Configuration for the Messages Query feature.</p>
+     * @return messagesConfiguration
      */
     @NotNull
     @Valid

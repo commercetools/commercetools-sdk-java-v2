@@ -34,6 +34,8 @@ public class ProductSetDiscountedPriceActionBuilder implements Builder<ProductSe
 
     /**
      *  <p>The <code>id</code> of the Price to set the Discount.</p>
+     * @param priceId
+     * @return Builder
      */
 
     public ProductSetDiscountedPriceActionBuilder priceId(final String priceId) {
@@ -43,6 +45,8 @@ public class ProductSetDiscountedPriceActionBuilder implements Builder<ProductSe
 
     /**
      *  <p>If <code>true</code>, only the staged Embedded Price is updated. If <code>false</code>, both the current and staged Embedded Price are updated.</p>
+     * @param staged
+     * @return Builder
      */
 
     public ProductSetDiscountedPriceActionBuilder staged(@Nullable final Boolean staged) {
@@ -52,6 +56,7 @@ public class ProductSetDiscountedPriceActionBuilder implements Builder<ProductSe
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed. The referenced ProductDiscount must have the Type <code>external</code>, be active, and its predicate must match the referenced Price.</p>
+     * @return Builder
      */
 
     public ProductSetDiscountedPriceActionBuilder discounted(
@@ -62,6 +67,8 @@ public class ProductSetDiscountedPriceActionBuilder implements Builder<ProductSe
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed. The referenced ProductDiscount must have the Type <code>external</code>, be active, and its predicate must match the referenced Price.</p>
+     * @param discounted
+     * @return Builder
      */
 
     public ProductSetDiscountedPriceActionBuilder discounted(

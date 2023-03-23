@@ -30,6 +30,8 @@ public class ImportContainerUpdateDraftBuilder implements Builder<ImportContaine
 
     /**
      *  <p>Current version of the ImportContainer.</p>
+     * @param version
+     * @return Builder
      */
 
     public ImportContainerUpdateDraftBuilder version(final Long version) {
@@ -39,6 +41,8 @@ public class ImportContainerUpdateDraftBuilder implements Builder<ImportContaine
 
     /**
      *  <p>The resource type to be imported. If not given, the ImportContainer is able to import all of the supported ImportResourceTypes.</p>
+     * @param resourceType
+     * @return Builder
      */
 
     public ImportContainerUpdateDraftBuilder resourceType(

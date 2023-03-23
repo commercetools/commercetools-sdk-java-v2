@@ -35,6 +35,7 @@ public interface StoreReference extends Reference, com.commercetools.api.models.
 
     /**
      *  <p>Contains the representation of the expanded Store. Only present in responses to requests with Reference Expansion for Stores.</p>
+     * @return obj
      */
     @Valid
     @JsonProperty("obj")
@@ -42,6 +43,7 @@ public interface StoreReference extends Reference, com.commercetools.api.models.
 
     /**
      *  <p>Unique ID of the referenced Store.</p>
+     * @return id
      */
     @NotNull
     @JsonProperty("id")

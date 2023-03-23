@@ -36,6 +36,8 @@ public class MissingRoleOnChannelErrorBuilder implements Builder<MissingRoleOnCh
 
     /**
      *  <p><code>"Given channel with $idOrKeyOfChannel does not have the required role $role."</code></p>
+     * @param message
+     * @return Builder
      */
 
     public MissingRoleOnChannelErrorBuilder message(final String message) {
@@ -66,6 +68,7 @@ public class MissingRoleOnChannelErrorBuilder implements Builder<MissingRoleOnCh
 
     /**
      *  <p>ResourceIdentifier to a given Channel.</p>
+     * @return Builder
      */
 
     public MissingRoleOnChannelErrorBuilder channel(
@@ -77,6 +80,8 @@ public class MissingRoleOnChannelErrorBuilder implements Builder<MissingRoleOnCh
 
     /**
      *  <p>ResourceIdentifier to a given Channel.</p>
+     * @param channel
+     * @return Builder
      */
 
     public MissingRoleOnChannelErrorBuilder channel(
@@ -90,6 +95,8 @@ public class MissingRoleOnChannelErrorBuilder implements Builder<MissingRoleOnCh
      *   <li><code>ProductDistribution</code> for Product Distribution Channels allowed for the Store. Also required for Standalone Prices.</li>
      *   <li><code>InventorySupply</code> for Inventory Supply Channels allowed for the Store.</li>
      *  </ul>
+     * @param missingRole
+     * @return Builder
      */
 
     public MissingRoleOnChannelErrorBuilder missingRole(

@@ -32,6 +32,7 @@ public interface ChangeTargetShippingChangeValue extends ChangeTargetChangeValue
 
     /**
      *
+     * @return type
      */
     @NotNull
     @JsonProperty("type")

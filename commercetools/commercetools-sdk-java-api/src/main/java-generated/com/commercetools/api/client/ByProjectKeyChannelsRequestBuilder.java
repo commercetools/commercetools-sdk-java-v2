@@ -25,6 +25,10 @@ public class ByProjectKeyChannelsRequestBuilder implements ByProjectKeyChannelsR
         return new ByProjectKeyChannelsPost(apiHttpClient, projectKey, channelDraft);
     }
 
+    public ByProjectKeyChannelsPostString post(final String channelDraft) {
+        return new ByProjectKeyChannelsPostString(apiHttpClient, projectKey, channelDraft);
+    }
+
     public ByProjectKeyChannelsPost post(UnaryOperator<com.commercetools.api.models.channel.ChannelDraftBuilder> op) {
         return post(op.apply(com.commercetools.api.models.channel.ChannelDraftBuilder.of()).build());
     }

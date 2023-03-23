@@ -35,6 +35,7 @@ public interface ReferenceSetField extends CustomField {
 
     /**
      *
+     * @return value
      */
     @NotNull
     @Valid

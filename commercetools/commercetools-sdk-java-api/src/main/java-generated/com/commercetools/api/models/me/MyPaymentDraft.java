@@ -36,6 +36,7 @@ public interface MyPaymentDraft extends com.commercetools.api.models.Customizabl
 
     /**
      *  <p>Money value the Payment intends to receive from the customer. The value usually matches the Cart or Order gross total.</p>
+     * @return amountPlanned
      */
     @NotNull
     @Valid
@@ -44,6 +45,7 @@ public interface MyPaymentDraft extends com.commercetools.api.models.Customizabl
 
     /**
      *  <p>Information regarding the payment interface (for example, a PSP), and the specific payment method used.</p>
+     * @return paymentMethodInfo
      */
     @Valid
     @JsonProperty("paymentMethodInfo")
@@ -51,6 +53,7 @@ public interface MyPaymentDraft extends com.commercetools.api.models.Customizabl
 
     /**
      *  <p>Custom Fields for the Payment.</p>
+     * @return custom
      */
     @Valid
     @JsonProperty("custom")
@@ -58,6 +61,7 @@ public interface MyPaymentDraft extends com.commercetools.api.models.Customizabl
 
     /**
      *  <p>Financial transactions of the TransactionTypes <code>Authorization</code> or <code>Charge</code>.</p>
+     * @return transaction
      */
     @Valid
     @JsonProperty("transaction")

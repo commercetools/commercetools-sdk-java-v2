@@ -26,6 +26,7 @@ public class StoreAddCountryActionBuilder implements Builder<StoreAddCountryActi
 
     /**
      *  <p>Value to append to <code>countries</code>.</p>
+     * @return Builder
      */
 
     public StoreAddCountryActionBuilder country(
@@ -36,6 +37,8 @@ public class StoreAddCountryActionBuilder implements Builder<StoreAddCountryActi
 
     /**
      *  <p>Value to append to <code>countries</code>.</p>
+     * @param country
+     * @return Builder
      */
 
     public StoreAddCountryActionBuilder country(final com.commercetools.api.models.store_country.StoreCountry country) {

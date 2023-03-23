@@ -40,6 +40,8 @@ public class ResourceCreatedDeliveryPayloadBuilder implements Builder<ResourceCr
 
     /**
      *  <p><code>key</code> of the Project. Useful in message processing if the Destination receives events from multiple Projects.</p>
+     * @param projectKey
+     * @return Builder
      */
 
     public ResourceCreatedDeliveryPayloadBuilder projectKey(final String projectKey) {
@@ -49,6 +51,8 @@ public class ResourceCreatedDeliveryPayloadBuilder implements Builder<ResourceCr
 
     /**
      *  <p>Reference to the resource that triggered the message.</p>
+     * @param resource
+     * @return Builder
      */
 
     public ResourceCreatedDeliveryPayloadBuilder resource(
@@ -59,6 +63,7 @@ public class ResourceCreatedDeliveryPayloadBuilder implements Builder<ResourceCr
 
     /**
      *  <p>Reference to the resource that triggered the message.</p>
+     * @return Builder
      */
 
     public ResourceCreatedDeliveryPayloadBuilder resource(
@@ -69,6 +74,7 @@ public class ResourceCreatedDeliveryPayloadBuilder implements Builder<ResourceCr
 
     /**
      *  <p>User-defined unique identifiers of the resource.</p>
+     * @return Builder
      */
 
     public ResourceCreatedDeliveryPayloadBuilder resourceUserProvidedIdentifiers(
@@ -81,6 +87,8 @@ public class ResourceCreatedDeliveryPayloadBuilder implements Builder<ResourceCr
 
     /**
      *  <p>User-defined unique identifiers of the resource.</p>
+     * @param resourceUserProvidedIdentifiers
+     * @return Builder
      */
 
     public ResourceCreatedDeliveryPayloadBuilder resourceUserProvidedIdentifiers(
@@ -91,6 +99,8 @@ public class ResourceCreatedDeliveryPayloadBuilder implements Builder<ResourceCr
 
     /**
      *  <p>Last seen version of the resource.</p>
+     * @param version
+     * @return Builder
      */
 
     public ResourceCreatedDeliveryPayloadBuilder version(final Long version) {
@@ -100,6 +110,8 @@ public class ResourceCreatedDeliveryPayloadBuilder implements Builder<ResourceCr
 
     /**
      *  <p>Date and time (UTC) the resource was last modified.</p>
+     * @param modifiedAt
+     * @return Builder
      */
 
     public ResourceCreatedDeliveryPayloadBuilder modifiedAt(final java.time.ZonedDateTime modifiedAt) {

@@ -33,6 +33,7 @@ public interface UnknownChange extends Change {
 
     /**
      *
+     * @return type
      */
     @NotNull
     @JsonProperty("type")
@@ -40,6 +41,7 @@ public interface UnknownChange extends Change {
 
     /**
      *
+     * @return change
      */
     @NotNull
     @JsonProperty("change")
@@ -47,6 +49,7 @@ public interface UnknownChange extends Change {
 
     /**
      *
+     * @return previousValue
      */
     @NotNull
     @JsonProperty("previousValue")
@@ -54,6 +57,7 @@ public interface UnknownChange extends Change {
 
     /**
      *
+     * @return nextValue
      */
     @NotNull
     @JsonProperty("nextValue")

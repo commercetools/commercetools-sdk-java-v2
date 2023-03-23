@@ -28,6 +28,7 @@ public class PaymentSetCustomerActionBuilder implements Builder<PaymentSetCustom
 
     /**
      *  <p>Value to set. If empty, any existing reference is removed.</p>
+     * @return Builder
      */
 
     public PaymentSetCustomerActionBuilder customer(
@@ -39,6 +40,8 @@ public class PaymentSetCustomerActionBuilder implements Builder<PaymentSetCustom
 
     /**
      *  <p>Value to set. If empty, any existing reference is removed.</p>
+     * @param customer
+     * @return Builder
      */
 
     public PaymentSetCustomerActionBuilder customer(

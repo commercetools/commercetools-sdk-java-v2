@@ -48,6 +48,7 @@ public interface StagedQuote extends BaseResource, com.commercetools.api.models.
 
     /**
      *  <p>The unique ID of the StagedQuote.</p>
+     * @return id
      */
     @NotNull
     @JsonProperty("id")
@@ -55,6 +56,7 @@ public interface StagedQuote extends BaseResource, com.commercetools.api.models.
 
     /**
      *  <p>Current version of the StagedQuote.</p>
+     * @return version
      */
     @NotNull
     @JsonProperty("version")
@@ -62,6 +64,7 @@ public interface StagedQuote extends BaseResource, com.commercetools.api.models.
 
     /**
      *  <p>User-specific unique identifier of the staged quote.</p>
+     * @return key
      */
 
     @JsonProperty("key")
@@ -69,6 +72,7 @@ public interface StagedQuote extends BaseResource, com.commercetools.api.models.
 
     /**
      *  <p>Date and time (UTC) the StagedQuote was initially created.</p>
+     * @return createdAt
      */
     @NotNull
     @JsonProperty("createdAt")
@@ -76,6 +80,7 @@ public interface StagedQuote extends BaseResource, com.commercetools.api.models.
 
     /**
      *  <p>Date and time (UTC) the StagedQuote was last updated.</p>
+     * @return lastModifiedAt
      */
     @NotNull
     @JsonProperty("lastModifiedAt")
@@ -83,6 +88,7 @@ public interface StagedQuote extends BaseResource, com.commercetools.api.models.
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @return lastModifiedBy
      */
     @Valid
     @JsonProperty("lastModifiedBy")
@@ -90,6 +96,7 @@ public interface StagedQuote extends BaseResource, com.commercetools.api.models.
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @return createdBy
      */
     @Valid
     @JsonProperty("createdBy")
@@ -97,6 +104,7 @@ public interface StagedQuote extends BaseResource, com.commercetools.api.models.
 
     /**
      *  <p>Predefined states tracking the status of the Staged Quote.</p>
+     * @return stagedQuoteState
      */
     @NotNull
     @JsonProperty("stagedQuoteState")
@@ -104,6 +112,7 @@ public interface StagedQuote extends BaseResource, com.commercetools.api.models.
 
     /**
      *  <p>The Buyer who requested the Quote.</p>
+     * @return customer
      */
     @Valid
     @JsonProperty("customer")
@@ -111,6 +120,7 @@ public interface StagedQuote extends BaseResource, com.commercetools.api.models.
 
     /**
      *  <p>Quote Request related to the Staged Quote.</p>
+     * @return quoteRequest
      */
     @NotNull
     @Valid
@@ -119,6 +129,7 @@ public interface StagedQuote extends BaseResource, com.commercetools.api.models.
 
     /**
      *  <p>Cart containing the offered items. May contain either DirectDiscounts or CartDiscounts.</p>
+     * @return quotationCart
      */
     @NotNull
     @Valid
@@ -127,6 +138,7 @@ public interface StagedQuote extends BaseResource, com.commercetools.api.models.
 
     /**
      *  <p>Expiration date for the Quote.</p>
+     * @return validTo
      */
 
     @JsonProperty("validTo")
@@ -134,6 +146,7 @@ public interface StagedQuote extends BaseResource, com.commercetools.api.models.
 
     /**
      *  <p>Message from the Seller included in the offer.</p>
+     * @return sellerComment
      */
 
     @JsonProperty("sellerComment")
@@ -141,6 +154,7 @@ public interface StagedQuote extends BaseResource, com.commercetools.api.models.
 
     /**
      *  <p>Custom Fields of the Staged Quote.</p>
+     * @return custom
      */
     @Valid
     @JsonProperty("custom")
@@ -148,6 +162,7 @@ public interface StagedQuote extends BaseResource, com.commercetools.api.models.
 
     /**
      *  <p>State of the Staged Quote. This reference can point to a State in a custom workflow.</p>
+     * @return state
      */
     @Valid
     @JsonProperty("state")
@@ -155,6 +170,7 @@ public interface StagedQuote extends BaseResource, com.commercetools.api.models.
 
     /**
      *  <p>The Purchase Order Number is typically set by the Buyer on a QuoteRequest to track the purchase order during the quote and order flow.</p>
+     * @return purchaseOrderNumber
      */
 
     @JsonProperty("purchaseOrderNumber")
@@ -162,6 +178,7 @@ public interface StagedQuote extends BaseResource, com.commercetools.api.models.
 
     /**
      *  <p>The BusinessUnit for the Staged Quote.</p>
+     * @return businessUnit
      */
     @Valid
     @JsonProperty("businessUnit")

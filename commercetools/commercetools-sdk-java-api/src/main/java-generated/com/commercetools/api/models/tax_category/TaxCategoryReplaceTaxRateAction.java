@@ -35,6 +35,7 @@ public interface TaxCategoryReplaceTaxRateAction extends TaxCategoryUpdateAction
 
     /**
      *  <p>ID of the TaxRate to replace.</p>
+     * @return taxRateId
      */
     @NotNull
     @JsonProperty("taxRateId")
@@ -42,6 +43,7 @@ public interface TaxCategoryReplaceTaxRateAction extends TaxCategoryUpdateAction
 
     /**
      *  <p>New TaxRate to replace with.</p>
+     * @return taxRate
      */
     @NotNull
     @Valid

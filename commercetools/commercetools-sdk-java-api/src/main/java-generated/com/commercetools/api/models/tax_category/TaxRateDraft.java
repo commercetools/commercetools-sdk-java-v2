@@ -34,6 +34,7 @@ public interface TaxRateDraft extends io.vrap.rmf.base.client.Draft<TaxRateDraft
 
     /**
      *  <p>Name of the TaxRate.</p>
+     * @return name
      */
     @NotNull
     @JsonProperty("name")
@@ -41,6 +42,7 @@ public interface TaxRateDraft extends io.vrap.rmf.base.client.Draft<TaxRateDraft
 
     /**
      *  <p>Tax rate. Must be supplied if no <code>subRates</code> are specified. If <code>subRates</code> are specified, this field can be omitted or it must be the sum of amounts of all <code>subRates</code>.</p>
+     * @return amount
      */
 
     @JsonProperty("amount")
@@ -48,6 +50,7 @@ public interface TaxRateDraft extends io.vrap.rmf.base.client.Draft<TaxRateDraft
 
     /**
      *  <p>If <code>true</code>, tax is included in Embedded Prices or Standalone Prices, and the <code>taxedPrice</code> is present on LineItems. In this case, the <code>totalNet</code> price on TaxedPrice includes the TaxRate.</p>
+     * @return includedInPrice
      */
     @NotNull
     @JsonProperty("includedInPrice")
@@ -55,6 +58,7 @@ public interface TaxRateDraft extends io.vrap.rmf.base.client.Draft<TaxRateDraft
 
     /**
      *  <p>Country in which the tax rate is applied in ISO 3166-1 alpha-2 format.</p>
+     * @return country
      */
     @NotNull
     @JsonProperty("country")
@@ -62,6 +66,7 @@ public interface TaxRateDraft extends io.vrap.rmf.base.client.Draft<TaxRateDraft
 
     /**
      *  <p>State within the country, such as Texas in the United States.</p>
+     * @return state
      */
 
     @JsonProperty("state")
@@ -69,6 +74,7 @@ public interface TaxRateDraft extends io.vrap.rmf.base.client.Draft<TaxRateDraft
 
     /**
      *  <p>Used to calculate the taxPortions field in a Cart or Order. It is useful if the total tax of a country (such as the US) is a combination of multiple taxes (such as state and local taxes).</p>
+     * @return subRates
      */
     @Valid
     @JsonProperty("subRates")

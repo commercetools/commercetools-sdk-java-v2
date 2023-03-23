@@ -46,6 +46,7 @@ public class MyShoppingListDraftBuilder implements Builder<MyShoppingListDraft> 
 
     /**
      *  <p>Name of the ShoppingList.</p>
+     * @return Builder
      */
 
     public MyShoppingListDraftBuilder name(
@@ -56,6 +57,8 @@ public class MyShoppingListDraftBuilder implements Builder<MyShoppingListDraft> 
 
     /**
      *  <p>Name of the ShoppingList.</p>
+     * @param name
+     * @return Builder
      */
 
     public MyShoppingListDraftBuilder name(final com.commercetools.api.models.common.LocalizedString name) {
@@ -65,6 +68,7 @@ public class MyShoppingListDraftBuilder implements Builder<MyShoppingListDraft> 
 
     /**
      *  <p>Description of the ShoppingList.</p>
+     * @return Builder
      */
 
     public MyShoppingListDraftBuilder description(
@@ -75,6 +79,8 @@ public class MyShoppingListDraftBuilder implements Builder<MyShoppingListDraft> 
 
     /**
      *  <p>Description of the ShoppingList.</p>
+     * @param description
+     * @return Builder
      */
 
     public MyShoppingListDraftBuilder description(
@@ -85,6 +91,8 @@ public class MyShoppingListDraftBuilder implements Builder<MyShoppingListDraft> 
 
     /**
      *  <p>Line Items (containing Products) to add to the ShoppingList.</p>
+     * @param lineItems
+     * @return Builder
      */
 
     public MyShoppingListDraftBuilder lineItems(
@@ -95,6 +103,8 @@ public class MyShoppingListDraftBuilder implements Builder<MyShoppingListDraft> 
 
     /**
      *  <p>Line Items (containing Products) to add to the ShoppingList.</p>
+     * @param lineItems
+     * @return Builder
      */
 
     public MyShoppingListDraftBuilder lineItems(
@@ -105,6 +115,8 @@ public class MyShoppingListDraftBuilder implements Builder<MyShoppingListDraft> 
 
     /**
      *  <p>Line Items (containing Products) to add to the ShoppingList.</p>
+     * @param lineItems
+     * @return Builder
      */
 
     public MyShoppingListDraftBuilder plusLineItems(
@@ -118,6 +130,7 @@ public class MyShoppingListDraftBuilder implements Builder<MyShoppingListDraft> 
 
     /**
      *  <p>Line Items (containing Products) to add to the ShoppingList.</p>
+     * @return Builder
      */
 
     public MyShoppingListDraftBuilder plusLineItems(
@@ -132,6 +145,7 @@ public class MyShoppingListDraftBuilder implements Builder<MyShoppingListDraft> 
 
     /**
      *  <p>Line Items (containing Products) to add to the ShoppingList.</p>
+     * @return Builder
      */
 
     public MyShoppingListDraftBuilder withLineItems(
@@ -144,6 +158,8 @@ public class MyShoppingListDraftBuilder implements Builder<MyShoppingListDraft> 
 
     /**
      *  <p>Line Items (containing text values) to add to the ShoppingList.</p>
+     * @param textLineItems
+     * @return Builder
      */
 
     public MyShoppingListDraftBuilder textLineItems(
@@ -154,6 +170,8 @@ public class MyShoppingListDraftBuilder implements Builder<MyShoppingListDraft> 
 
     /**
      *  <p>Line Items (containing text values) to add to the ShoppingList.</p>
+     * @param textLineItems
+     * @return Builder
      */
 
     public MyShoppingListDraftBuilder textLineItems(
@@ -164,6 +182,8 @@ public class MyShoppingListDraftBuilder implements Builder<MyShoppingListDraft> 
 
     /**
      *  <p>Line Items (containing text values) to add to the ShoppingList.</p>
+     * @param textLineItems
+     * @return Builder
      */
 
     public MyShoppingListDraftBuilder plusTextLineItems(
@@ -177,6 +197,7 @@ public class MyShoppingListDraftBuilder implements Builder<MyShoppingListDraft> 
 
     /**
      *  <p>Line Items (containing text values) to add to the ShoppingList.</p>
+     * @return Builder
      */
 
     public MyShoppingListDraftBuilder plusTextLineItems(
@@ -191,6 +212,7 @@ public class MyShoppingListDraftBuilder implements Builder<MyShoppingListDraft> 
 
     /**
      *  <p>Line Items (containing text values) to add to the ShoppingList.</p>
+     * @return Builder
      */
 
     public MyShoppingListDraftBuilder withTextLineItems(
@@ -203,6 +225,7 @@ public class MyShoppingListDraftBuilder implements Builder<MyShoppingListDraft> 
 
     /**
      *  <p>Custom Fields defined for the ShoppingList.</p>
+     * @return Builder
      */
 
     public MyShoppingListDraftBuilder custom(
@@ -213,6 +236,8 @@ public class MyShoppingListDraftBuilder implements Builder<MyShoppingListDraft> 
 
     /**
      *  <p>Custom Fields defined for the ShoppingList.</p>
+     * @param custom
+     * @return Builder
      */
 
     public MyShoppingListDraftBuilder custom(
@@ -223,6 +248,8 @@ public class MyShoppingListDraftBuilder implements Builder<MyShoppingListDraft> 
 
     /**
      *  <p>Number of days after which the ShoppingList will be automatically deleted if it has not been modified. If not set, the default value configured in the Project is used.</p>
+     * @param deleteDaysAfterLastModification
+     * @return Builder
      */
 
     public MyShoppingListDraftBuilder deleteDaysAfterLastModification(
@@ -233,6 +260,7 @@ public class MyShoppingListDraftBuilder implements Builder<MyShoppingListDraft> 
 
     /**
      *  <p>Assigns the new ShoppingList to the Store. The Store assignment can not be modified.</p>
+     * @return Builder
      */
 
     public MyShoppingListDraftBuilder store(
@@ -243,6 +271,8 @@ public class MyShoppingListDraftBuilder implements Builder<MyShoppingListDraft> 
 
     /**
      *  <p>Assigns the new ShoppingList to the Store. The Store assignment can not be modified.</p>
+     * @param store
+     * @return Builder
      */
 
     public MyShoppingListDraftBuilder store(

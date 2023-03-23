@@ -44,6 +44,7 @@ public interface OrderDiscountCodeStateSetMessage extends OrderMessage {
 
     /**
      *  <p>DiscountCode that changed due to the recalculation.</p>
+     * @return discountCode
      */
     @NotNull
     @Valid
@@ -52,6 +53,7 @@ public interface OrderDiscountCodeStateSetMessage extends OrderMessage {
 
     /**
      *  <p>DiscountCodeState after the recalculation.</p>
+     * @return state
      */
     @NotNull
     @JsonProperty("state")
@@ -59,6 +61,7 @@ public interface OrderDiscountCodeStateSetMessage extends OrderMessage {
 
     /**
      *  <p>DiscountCodeState before the recalculation.</p>
+     * @return oldState
      */
 
     @JsonProperty("oldState")

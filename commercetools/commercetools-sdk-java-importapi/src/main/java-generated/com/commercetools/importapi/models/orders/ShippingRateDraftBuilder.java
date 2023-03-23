@@ -34,6 +34,7 @@ public class ShippingRateDraftBuilder implements Builder<ShippingRateDraft> {
 
     /**
      *
+     * @return Builder
      */
 
     public ShippingRateDraftBuilder price(
@@ -44,6 +45,8 @@ public class ShippingRateDraftBuilder implements Builder<ShippingRateDraft> {
 
     /**
      *
+     * @param price
+     * @return Builder
      */
 
     public ShippingRateDraftBuilder price(final com.commercetools.importapi.models.common.Money price) {
@@ -53,6 +56,7 @@ public class ShippingRateDraftBuilder implements Builder<ShippingRateDraft> {
 
     /**
      *
+     * @return Builder
      */
 
     public ShippingRateDraftBuilder freeAbove(
@@ -63,6 +67,8 @@ public class ShippingRateDraftBuilder implements Builder<ShippingRateDraft> {
 
     /**
      *
+     * @param freeAbove
+     * @return Builder
      */
 
     public ShippingRateDraftBuilder freeAbove(
@@ -73,6 +79,8 @@ public class ShippingRateDraftBuilder implements Builder<ShippingRateDraft> {
 
     /**
      *
+     * @param tiers
+     * @return Builder
      */
 
     public ShippingRateDraftBuilder tiers(
@@ -83,6 +91,8 @@ public class ShippingRateDraftBuilder implements Builder<ShippingRateDraft> {
 
     /**
      *
+     * @param tiers
+     * @return Builder
      */
 
     public ShippingRateDraftBuilder tiers(
@@ -93,6 +103,8 @@ public class ShippingRateDraftBuilder implements Builder<ShippingRateDraft> {
 
     /**
      *
+     * @param tiers
+     * @return Builder
      */
 
     public ShippingRateDraftBuilder plusTiers(
@@ -106,6 +118,7 @@ public class ShippingRateDraftBuilder implements Builder<ShippingRateDraft> {
 
     /**
      *
+     * @return Builder
      */
 
     public ShippingRateDraftBuilder plusTiers(
@@ -120,6 +133,7 @@ public class ShippingRateDraftBuilder implements Builder<ShippingRateDraft> {
 
     /**
      *
+     * @return Builder
      */
 
     public ShippingRateDraftBuilder withTiers(

@@ -37,6 +37,7 @@ public interface SetReservationsChange extends Change {
 
     /**
      *  <p>Update action for <code>setReservations</code> on inventories</p>
+     * @return change
      */
     @NotNull
     @JsonProperty("change")
@@ -44,6 +45,7 @@ public interface SetReservationsChange extends Change {
 
     /**
      *
+     * @return type
      */
     @NotNull
     @JsonProperty("type")
@@ -51,6 +53,7 @@ public interface SetReservationsChange extends Change {
 
     /**
      *
+     * @return nextValue
      */
     @NotNull
     @Valid
@@ -59,6 +62,7 @@ public interface SetReservationsChange extends Change {
 
     /**
      *
+     * @return previousValue
      */
     @NotNull
     @Valid

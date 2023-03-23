@@ -106,4 +106,5 @@ public interface ProcessingState {
     public static ProcessingState[] values() {
         return ProcessingStateEnum.values();
     }
+
 }

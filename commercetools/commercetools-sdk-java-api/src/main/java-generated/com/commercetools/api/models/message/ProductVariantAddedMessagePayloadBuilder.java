@@ -29,6 +29,7 @@ public class ProductVariantAddedMessagePayloadBuilder implements Builder<Product
 
     /**
      *  <p>Unique identifier of the Product Variant that was added.</p>
+     * @return Builder
      */
 
     public ProductVariantAddedMessagePayloadBuilder variant(
@@ -39,6 +40,8 @@ public class ProductVariantAddedMessagePayloadBuilder implements Builder<Product
 
     /**
      *  <p>Unique identifier of the Product Variant that was added.</p>
+     * @param variant
+     * @return Builder
      */
 
     public ProductVariantAddedMessagePayloadBuilder variant(
@@ -49,6 +52,8 @@ public class ProductVariantAddedMessagePayloadBuilder implements Builder<Product
 
     /**
      *  <p>Whether the update was only applied to the staged Product Projection.</p>
+     * @param staged
+     * @return Builder
      */
 
     public ProductVariantAddedMessagePayloadBuilder staged(final Boolean staged) {

@@ -29,6 +29,10 @@ public class ByProjectKeySubscriptionsByIDRequestBuilder {
         return new ByProjectKeySubscriptionsByIDPost(apiHttpClient, projectKey, ID, subscriptionUpdate);
     }
 
+    public ByProjectKeySubscriptionsByIDPostString post(final String subscriptionUpdate) {
+        return new ByProjectKeySubscriptionsByIDPostString(apiHttpClient, projectKey, ID, subscriptionUpdate);
+    }
+
     public ByProjectKeySubscriptionsByIDPost post(
             UnaryOperator<com.commercetools.api.models.subscription.SubscriptionUpdateBuilder> op) {
         return post(op.apply(com.commercetools.api.models.subscription.SubscriptionUpdateBuilder.of()).build());

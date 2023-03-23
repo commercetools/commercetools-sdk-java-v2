@@ -37,6 +37,8 @@ public class OrderAddParcelToDeliveryActionBuilder implements Builder<OrderAddPa
 
     /**
      *
+     * @param deliveryId
+     * @return Builder
      */
 
     public OrderAddParcelToDeliveryActionBuilder deliveryId(final String deliveryId) {
@@ -46,6 +48,7 @@ public class OrderAddParcelToDeliveryActionBuilder implements Builder<OrderAddPa
 
     /**
      *
+     * @return Builder
      */
 
     public OrderAddParcelToDeliveryActionBuilder measurements(
@@ -56,6 +59,8 @@ public class OrderAddParcelToDeliveryActionBuilder implements Builder<OrderAddPa
 
     /**
      *
+     * @param measurements
+     * @return Builder
      */
 
     public OrderAddParcelToDeliveryActionBuilder measurements(
@@ -66,6 +71,7 @@ public class OrderAddParcelToDeliveryActionBuilder implements Builder<OrderAddPa
 
     /**
      *
+     * @return Builder
      */
 
     public OrderAddParcelToDeliveryActionBuilder trackingData(
@@ -76,6 +82,8 @@ public class OrderAddParcelToDeliveryActionBuilder implements Builder<OrderAddPa
 
     /**
      *
+     * @param trackingData
+     * @return Builder
      */
 
     public OrderAddParcelToDeliveryActionBuilder trackingData(
@@ -86,6 +94,8 @@ public class OrderAddParcelToDeliveryActionBuilder implements Builder<OrderAddPa
 
     /**
      *
+     * @param items
+     * @return Builder
      */
 
     public OrderAddParcelToDeliveryActionBuilder items(
@@ -96,6 +106,8 @@ public class OrderAddParcelToDeliveryActionBuilder implements Builder<OrderAddPa
 
     /**
      *
+     * @param items
+     * @return Builder
      */
 
     public OrderAddParcelToDeliveryActionBuilder items(
@@ -106,6 +118,8 @@ public class OrderAddParcelToDeliveryActionBuilder implements Builder<OrderAddPa
 
     /**
      *
+     * @param items
+     * @return Builder
      */
 
     public OrderAddParcelToDeliveryActionBuilder plusItems(
@@ -119,6 +133,7 @@ public class OrderAddParcelToDeliveryActionBuilder implements Builder<OrderAddPa
 
     /**
      *
+     * @return Builder
      */
 
     public OrderAddParcelToDeliveryActionBuilder plusItems(
@@ -132,6 +147,7 @@ public class OrderAddParcelToDeliveryActionBuilder implements Builder<OrderAddPa
 
     /**
      *
+     * @return Builder
      */
 
     public OrderAddParcelToDeliveryActionBuilder withItems(

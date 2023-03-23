@@ -30,6 +30,7 @@ public interface CustomerTitleSetMessagePayload extends MessagePayload {
 
     /**
      *  <p>The <code>title</code> that was set during the Set Title update action.</p>
+     * @return title
      */
 
     @JsonProperty("title")

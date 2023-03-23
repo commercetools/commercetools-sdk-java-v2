@@ -29,6 +29,8 @@ public class StagedOrderSetReturnShipmentStateActionBuilder
 
     /**
      *
+     * @param returnItemId
+     * @return Builder
      */
 
     public StagedOrderSetReturnShipmentStateActionBuilder returnItemId(final String returnItemId) {
@@ -38,6 +40,8 @@ public class StagedOrderSetReturnShipmentStateActionBuilder
 
     /**
      *
+     * @param shipmentState
+     * @return Builder
      */
 
     public StagedOrderSetReturnShipmentStateActionBuilder shipmentState(

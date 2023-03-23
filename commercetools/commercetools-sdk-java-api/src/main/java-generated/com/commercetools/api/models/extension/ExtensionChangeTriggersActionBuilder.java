@@ -26,6 +26,8 @@ public class ExtensionChangeTriggersActionBuilder implements Builder<ExtensionCh
 
     /**
      *  <p>New value to set. Must not be empty.</p>
+     * @param triggers
+     * @return Builder
      */
 
     public ExtensionChangeTriggersActionBuilder triggers(
@@ -36,6 +38,8 @@ public class ExtensionChangeTriggersActionBuilder implements Builder<ExtensionCh
 
     /**
      *  <p>New value to set. Must not be empty.</p>
+     * @param triggers
+     * @return Builder
      */
 
     public ExtensionChangeTriggersActionBuilder triggers(
@@ -46,6 +50,8 @@ public class ExtensionChangeTriggersActionBuilder implements Builder<ExtensionCh
 
     /**
      *  <p>New value to set. Must not be empty.</p>
+     * @param triggers
+     * @return Builder
      */
 
     public ExtensionChangeTriggersActionBuilder plusTriggers(
@@ -59,6 +65,7 @@ public class ExtensionChangeTriggersActionBuilder implements Builder<ExtensionCh
 
     /**
      *  <p>New value to set. Must not be empty.</p>
+     * @return Builder
      */
 
     public ExtensionChangeTriggersActionBuilder plusTriggers(
@@ -72,6 +79,7 @@ public class ExtensionChangeTriggersActionBuilder implements Builder<ExtensionCh
 
     /**
      *  <p>New value to set. Must not be empty.</p>
+     * @return Builder
      */
 
     public ExtensionChangeTriggersActionBuilder withTriggers(

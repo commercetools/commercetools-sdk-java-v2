@@ -31,6 +31,8 @@ public class SetAuthenticationModeChangeBuilder implements Builder<SetAuthentica
 
     /**
      *  <p>Update action for <code>setAuthenticationMode</code></p>
+     * @param change
+     * @return Builder
      */
 
     public SetAuthenticationModeChangeBuilder change(final String change) {
@@ -40,6 +42,8 @@ public class SetAuthenticationModeChangeBuilder implements Builder<SetAuthentica
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public SetAuthenticationModeChangeBuilder previousValue(
@@ -50,6 +54,8 @@ public class SetAuthenticationModeChangeBuilder implements Builder<SetAuthentica
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public SetAuthenticationModeChangeBuilder nextValue(

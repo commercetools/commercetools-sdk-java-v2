@@ -37,6 +37,8 @@ public class TaxCategoryDraftBuilder implements Builder<TaxCategoryDraft> {
 
     /**
      *  <p>Name of the TaxCategory.</p>
+     * @param name
+     * @return Builder
      */
 
     public TaxCategoryDraftBuilder name(final String name) {
@@ -46,6 +48,8 @@ public class TaxCategoryDraftBuilder implements Builder<TaxCategoryDraft> {
 
     /**
      *  <p>Description of the TaxCategory.</p>
+     * @param description
+     * @return Builder
      */
 
     public TaxCategoryDraftBuilder description(@Nullable final String description) {
@@ -55,6 +59,8 @@ public class TaxCategoryDraftBuilder implements Builder<TaxCategoryDraft> {
 
     /**
      *  <p>Tax rates and subrates of states and countries.</p>
+     * @param rates
+     * @return Builder
      */
 
     public TaxCategoryDraftBuilder rates(
@@ -65,6 +71,8 @@ public class TaxCategoryDraftBuilder implements Builder<TaxCategoryDraft> {
 
     /**
      *  <p>Tax rates and subrates of states and countries.</p>
+     * @param rates
+     * @return Builder
      */
 
     public TaxCategoryDraftBuilder rates(
@@ -75,6 +83,8 @@ public class TaxCategoryDraftBuilder implements Builder<TaxCategoryDraft> {
 
     /**
      *  <p>Tax rates and subrates of states and countries.</p>
+     * @param rates
+     * @return Builder
      */
 
     public TaxCategoryDraftBuilder plusRates(
@@ -88,6 +98,7 @@ public class TaxCategoryDraftBuilder implements Builder<TaxCategoryDraft> {
 
     /**
      *  <p>Tax rates and subrates of states and countries.</p>
+     * @return Builder
      */
 
     public TaxCategoryDraftBuilder plusRates(
@@ -101,6 +112,7 @@ public class TaxCategoryDraftBuilder implements Builder<TaxCategoryDraft> {
 
     /**
      *  <p>Tax rates and subrates of states and countries.</p>
+     * @return Builder
      */
 
     public TaxCategoryDraftBuilder withRates(
@@ -112,6 +124,8 @@ public class TaxCategoryDraftBuilder implements Builder<TaxCategoryDraft> {
 
     /**
      *  <p>User-defined unique identifier for the TaxCategory.</p>
+     * @param key
+     * @return Builder
      */
 
     public TaxCategoryDraftBuilder key(@Nullable final String key) {

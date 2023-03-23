@@ -48,6 +48,7 @@ public interface Channel extends BaseResource, ChannelMixin, com.commercetools.a
 
     /**
      *  <p>Unique identifier of the Channel.</p>
+     * @return id
      */
     @NotNull
     @JsonProperty("id")
@@ -55,6 +56,7 @@ public interface Channel extends BaseResource, ChannelMixin, com.commercetools.a
 
     /**
      *  <p>Current version of the Channel.</p>
+     * @return version
      */
     @NotNull
     @JsonProperty("version")
@@ -62,6 +64,7 @@ public interface Channel extends BaseResource, ChannelMixin, com.commercetools.a
 
     /**
      *  <p>Date and time (UTC) the Channel was initially created.</p>
+     * @return createdAt
      */
     @NotNull
     @JsonProperty("createdAt")
@@ -69,6 +72,7 @@ public interface Channel extends BaseResource, ChannelMixin, com.commercetools.a
 
     /**
      *  <p>Date and time (UTC) the Channel was last updated.</p>
+     * @return lastModifiedAt
      */
     @NotNull
     @JsonProperty("lastModifiedAt")
@@ -76,6 +80,7 @@ public interface Channel extends BaseResource, ChannelMixin, com.commercetools.a
 
     /**
      *  <p>Present on resources updated after 1 February 2019 except for events not tracked.</p>
+     * @return lastModifiedBy
      */
     @Valid
     @JsonProperty("lastModifiedBy")
@@ -83,6 +88,7 @@ public interface Channel extends BaseResource, ChannelMixin, com.commercetools.a
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @return createdBy
      */
     @Valid
     @JsonProperty("createdBy")
@@ -90,6 +96,7 @@ public interface Channel extends BaseResource, ChannelMixin, com.commercetools.a
 
     /**
      *  <p>User-defined unique identifier of the Channel.</p>
+     * @return key
      */
     @NotNull
     @JsonProperty("key")
@@ -97,6 +104,7 @@ public interface Channel extends BaseResource, ChannelMixin, com.commercetools.a
 
     /**
      *  <p>Roles of the Channel.</p>
+     * @return roles
      */
     @NotNull
     @JsonProperty("roles")
@@ -104,6 +112,7 @@ public interface Channel extends BaseResource, ChannelMixin, com.commercetools.a
 
     /**
      *  <p>Name of the Channel.</p>
+     * @return name
      */
     @Valid
     @JsonProperty("name")
@@ -111,6 +120,7 @@ public interface Channel extends BaseResource, ChannelMixin, com.commercetools.a
 
     /**
      *  <p>Description of the Channel.</p>
+     * @return description
      */
     @Valid
     @JsonProperty("description")
@@ -118,6 +128,7 @@ public interface Channel extends BaseResource, ChannelMixin, com.commercetools.a
 
     /**
      *  <p>Address where the Channel is located (for example, if the Channel is a physical store).</p>
+     * @return address
      */
     @Valid
     @JsonProperty("address")
@@ -125,6 +136,7 @@ public interface Channel extends BaseResource, ChannelMixin, com.commercetools.a
 
     /**
      *  <p>Statistics about the review ratings taken into account for the Channel.</p>
+     * @return reviewRatingStatistics
      */
     @Valid
     @JsonProperty("reviewRatingStatistics")
@@ -132,6 +144,7 @@ public interface Channel extends BaseResource, ChannelMixin, com.commercetools.a
 
     /**
      *  <p>Custom Fields defined for the Channel.</p>
+     * @return custom
      */
     @Valid
     @JsonProperty("custom")
@@ -139,6 +152,7 @@ public interface Channel extends BaseResource, ChannelMixin, com.commercetools.a
 
     /**
      *  <p>GeoJSON geometry object encoding the geo location of the Channel.</p>
+     * @return geoLocation
      */
     @Valid
     @JsonProperty("geoLocation")

@@ -40,6 +40,7 @@ public interface ProductDraft
 
     /**
      *  <p>The Product Type defining the Attributes for the Product. Cannot be changed later.</p>
+     * @return productType
      */
     @NotNull
     @Valid
@@ -48,6 +49,7 @@ public interface ProductDraft
 
     /**
      *  <p>Name of the Product.</p>
+     * @return name
      */
     @NotNull
     @Valid
@@ -56,6 +58,7 @@ public interface ProductDraft
 
     /**
      *  <p>User-defined identifier used in a deep-link URL for the Product. It must be unique across a Project, but a Product can have the same slug in different Locales. It must match the pattern <code>[a-zA-Z0-9_\\-]{2,256}</code>.</p>
+     * @return slug
      */
     @NotNull
     @Valid
@@ -64,6 +67,7 @@ public interface ProductDraft
 
     /**
      *  <p>User-defined unique identifier for the Product.</p>
+     * @return key
      */
 
     @JsonProperty("key")
@@ -71,6 +75,7 @@ public interface ProductDraft
 
     /**
      *  <p>Description of the Product.</p>
+     * @return description
      */
     @Valid
     @JsonProperty("description")
@@ -78,6 +83,7 @@ public interface ProductDraft
 
     /**
      *  <p>Categories assigned to the Product.</p>
+     * @return categories
      */
     @Valid
     @JsonProperty("categories")
@@ -85,6 +91,7 @@ public interface ProductDraft
 
     /**
      *  <p>Numerical values to allow ordering of Products within a specified Category.</p>
+     * @return categoryOrderHints
      */
     @Valid
     @JsonProperty("categoryOrderHints")
@@ -92,6 +99,7 @@ public interface ProductDraft
 
     /**
      *  <p>Title of the Product displayed in search results.</p>
+     * @return metaTitle
      */
     @Valid
     @JsonProperty("metaTitle")
@@ -99,6 +107,7 @@ public interface ProductDraft
 
     /**
      *  <p>Description of the Product displayed in search results.</p>
+     * @return metaDescription
      */
     @Valid
     @JsonProperty("metaDescription")
@@ -106,6 +115,7 @@ public interface ProductDraft
 
     /**
      *  <p>Keywords that give additional information about the Product to search engines.</p>
+     * @return metaKeywords
      */
     @Valid
     @JsonProperty("metaKeywords")
@@ -113,6 +123,7 @@ public interface ProductDraft
 
     /**
      *  <p>The Product Variant to be the Master Variant for the Product. Required if <code>variants</code> are provided also.</p>
+     * @return masterVariant
      */
     @Valid
     @JsonProperty("masterVariant")
@@ -120,6 +131,7 @@ public interface ProductDraft
 
     /**
      *  <p>The additional Product Variants for the Product.</p>
+     * @return variants
      */
     @Valid
     @JsonProperty("variants")
@@ -127,6 +139,7 @@ public interface ProductDraft
 
     /**
      *  <p>The Tax Category to be assigned to the Product.</p>
+     * @return taxCategory
      */
     @Valid
     @JsonProperty("taxCategory")
@@ -134,6 +147,7 @@ public interface ProductDraft
 
     /**
      *  <p>Used by Product Suggestions, but is also considered for a full text search.</p>
+     * @return searchKeywords
      */
     @Valid
     @JsonProperty("searchKeywords")
@@ -141,6 +155,7 @@ public interface ProductDraft
 
     /**
      *  <p>State to be assigned to the Product.</p>
+     * @return state
      */
     @Valid
     @JsonProperty("state")
@@ -148,6 +163,7 @@ public interface ProductDraft
 
     /**
      *  <p>If <code>true</code>, the Product is published immediately to the current projection.</p>
+     * @return publish
      */
 
     @JsonProperty("publish")
@@ -155,6 +171,7 @@ public interface ProductDraft
 
     /**
      *  <p>Specifies the type of prices used when looking up a price for the Product.</p>
+     * @return priceMode
      */
 
     @JsonProperty("priceMode")

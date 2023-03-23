@@ -35,6 +35,7 @@ public interface ProductSelectionProductRemovedMessagePayload extends MessagePay
 
     /**
      *  <p>Product that was removed from the Product Selection.</p>
+     * @return product
      */
     @NotNull
     @Valid

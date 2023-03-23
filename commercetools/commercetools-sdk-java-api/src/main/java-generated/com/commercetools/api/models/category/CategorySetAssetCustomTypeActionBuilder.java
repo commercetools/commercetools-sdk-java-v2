@@ -37,6 +37,8 @@ public class CategorySetAssetCustomTypeActionBuilder implements Builder<Category
 
     /**
      *  <p>New value to set. Either <code>assetId</code> or <code>assetKey</code> is required.</p>
+     * @param assetId
+     * @return Builder
      */
 
     public CategorySetAssetCustomTypeActionBuilder assetId(@Nullable final String assetId) {
@@ -46,6 +48,8 @@ public class CategorySetAssetCustomTypeActionBuilder implements Builder<Category
 
     /**
      *  <p>New value to set. Either <code>assetId</code> or <code>assetKey</code> is required.</p>
+     * @param assetKey
+     * @return Builder
      */
 
     public CategorySetAssetCustomTypeActionBuilder assetKey(@Nullable final String assetKey) {
@@ -55,6 +59,7 @@ public class CategorySetAssetCustomTypeActionBuilder implements Builder<Category
 
     /**
      *  <p>Defines the Type that extends the Asset with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Asset.</p>
+     * @return Builder
      */
 
     public CategorySetAssetCustomTypeActionBuilder type(
@@ -65,6 +70,8 @@ public class CategorySetAssetCustomTypeActionBuilder implements Builder<Category
 
     /**
      *  <p>Defines the Type that extends the Asset with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Asset.</p>
+     * @param type
+     * @return Builder
      */
 
     public CategorySetAssetCustomTypeActionBuilder type(
@@ -75,6 +82,7 @@ public class CategorySetAssetCustomTypeActionBuilder implements Builder<Category
 
     /**
      *  <p>Sets the Custom Fields fields for the Asset.</p>
+     * @return Builder
      */
 
     public CategorySetAssetCustomTypeActionBuilder fields(
@@ -85,6 +93,8 @@ public class CategorySetAssetCustomTypeActionBuilder implements Builder<Category
 
     /**
      *  <p>Sets the Custom Fields fields for the Asset.</p>
+     * @param fields
+     * @return Builder
      */
 
     public CategorySetAssetCustomTypeActionBuilder fields(

@@ -30,6 +30,8 @@ public class MessageSubscriptionBuilder implements Builder<MessageSubscription> 
 
     /**
      *  <p>Unique identifier for the type of resource, for example, <code>order</code>.</p>
+     * @param resourceTypeId
+     * @return Builder
      */
 
     public MessageSubscriptionBuilder resourceTypeId(
@@ -40,6 +42,8 @@ public class MessageSubscriptionBuilder implements Builder<MessageSubscription> 
 
     /**
      *  <p>Must contain valid message types for the resource. For example, for resource type <code>product</code> the message type <code>ProductPublished</code> is valid. If no <code>types</code> of messages are given, the Subscription will receive all messages for this resource.</p>
+     * @param types
+     * @return Builder
      */
 
     public MessageSubscriptionBuilder types(@Nullable final String... types) {
@@ -49,6 +53,8 @@ public class MessageSubscriptionBuilder implements Builder<MessageSubscription> 
 
     /**
      *  <p>Must contain valid message types for the resource. For example, for resource type <code>product</code> the message type <code>ProductPublished</code> is valid. If no <code>types</code> of messages are given, the Subscription will receive all messages for this resource.</p>
+     * @param types
+     * @return Builder
      */
 
     public MessageSubscriptionBuilder types(@Nullable final java.util.List<String> types) {
@@ -58,6 +64,8 @@ public class MessageSubscriptionBuilder implements Builder<MessageSubscription> 
 
     /**
      *  <p>Must contain valid message types for the resource. For example, for resource type <code>product</code> the message type <code>ProductPublished</code> is valid. If no <code>types</code> of messages are given, the Subscription will receive all messages for this resource.</p>
+     * @param types
+     * @return Builder
      */
 
     public MessageSubscriptionBuilder plusTypes(@Nullable final String... types) {

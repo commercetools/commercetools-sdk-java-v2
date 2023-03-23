@@ -33,6 +33,7 @@ public interface BusinessUnitNameChangedMessagePayload extends MessagePayload {
 
     /**
      *  <p>Updated name of the Business Unit.</p>
+     * @return name
      */
     @NotNull
     @JsonProperty("name")

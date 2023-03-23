@@ -27,6 +27,8 @@ public class SearchFacetPathNotFoundErrorBuilder implements Builder<SearchFacetP
 
     /**
      *  <p><code>"Facet path $path not found."</code></p>
+     * @param message
+     * @return Builder
      */
 
     public SearchFacetPathNotFoundErrorBuilder message(final String message) {

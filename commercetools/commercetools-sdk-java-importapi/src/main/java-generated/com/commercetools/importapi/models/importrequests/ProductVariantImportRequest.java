@@ -35,6 +35,7 @@ public interface ProductVariantImportRequest extends ImportRequest {
 
     /**
      *  <p>The product variant import resources of this request.</p>
+     * @return resources
      */
     @NotNull
     @Valid

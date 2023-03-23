@@ -34,6 +34,7 @@ public interface ExtensionNoResponseError extends ErrorObject {
 
     /**
      *
+     * @return code
      */
     @NotNull
     @JsonProperty("code")
@@ -41,6 +42,7 @@ public interface ExtensionNoResponseError extends ErrorObject {
 
     /**
      *  <p><code>"Extension did not respond in time."</code></p>
+     * @return message
      */
     @NotNull
     @JsonProperty("message")
@@ -48,6 +50,7 @@ public interface ExtensionNoResponseError extends ErrorObject {
 
     /**
      *  <p>Unique identifier of the API Extension.</p>
+     * @return extensionId
      */
     @NotNull
     @JsonProperty("extensionId")
@@ -55,6 +58,7 @@ public interface ExtensionNoResponseError extends ErrorObject {
 
     /**
      *  <p>User-defined unique identifier of the API Extension, if available.</p>
+     * @return extensionKey
      */
 
     @JsonProperty("extensionKey")

@@ -34,6 +34,8 @@ public class PaymentSetTransactionCustomTypeActionBuilder implements Builder<Pay
 
     /**
      *  <p>Unique identifier of the Transaction. If the specified <code>transactionId</code> does not exist, the request will fail with an InvalidOperation error.</p>
+     * @param transactionId
+     * @return Builder
      */
 
     public PaymentSetTransactionCustomTypeActionBuilder transactionId(final String transactionId) {
@@ -43,6 +45,7 @@ public class PaymentSetTransactionCustomTypeActionBuilder implements Builder<Pay
 
     /**
      *  <p>Defines the Type that extends the Transaction with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Transaction.</p>
+     * @return Builder
      */
 
     public PaymentSetTransactionCustomTypeActionBuilder type(
@@ -53,6 +56,8 @@ public class PaymentSetTransactionCustomTypeActionBuilder implements Builder<Pay
 
     /**
      *  <p>Defines the Type that extends the Transaction with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Transaction.</p>
+     * @param type
+     * @return Builder
      */
 
     public PaymentSetTransactionCustomTypeActionBuilder type(
@@ -63,6 +68,7 @@ public class PaymentSetTransactionCustomTypeActionBuilder implements Builder<Pay
 
     /**
      *  <p>Sets the Custom Fields fields for the Transaction.</p>
+     * @return Builder
      */
 
     public PaymentSetTransactionCustomTypeActionBuilder fields(
@@ -73,6 +79,8 @@ public class PaymentSetTransactionCustomTypeActionBuilder implements Builder<Pay
 
     /**
      *  <p>Sets the Custom Fields fields for the Transaction.</p>
+     * @param fields
+     * @return Builder
      */
 
     public PaymentSetTransactionCustomTypeActionBuilder fields(

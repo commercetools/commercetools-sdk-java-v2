@@ -28,6 +28,8 @@ public class GoogleCloudPubSubDestinationBuilder implements Builder<GoogleCloudP
 
     /**
      *  <p>ID of the Google Cloud project that contains the Pub/Sub topic.</p>
+     * @param projectId
+     * @return Builder
      */
 
     public GoogleCloudPubSubDestinationBuilder projectId(final String projectId) {
@@ -37,6 +39,8 @@ public class GoogleCloudPubSubDestinationBuilder implements Builder<GoogleCloudP
 
     /**
      *  <p>Name of the topic.</p>
+     * @param topic
+     * @return Builder
      */
 
     public GoogleCloudPubSubDestinationBuilder topic(final String topic) {

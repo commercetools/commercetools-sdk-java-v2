@@ -34,6 +34,7 @@ public interface TypeChangeInputHintAction extends TypeUpdateAction {
 
     /**
      *  <p><code>name</code> of the Field Definition to update.</p>
+     * @return fieldName
      */
     @NotNull
     @JsonProperty("fieldName")
@@ -41,6 +42,7 @@ public interface TypeChangeInputHintAction extends TypeUpdateAction {
 
     /**
      *  <p>New value to set. Must not be empty.</p>
+     * @return inputHint
      */
     @NotNull
     @JsonProperty("inputHint")

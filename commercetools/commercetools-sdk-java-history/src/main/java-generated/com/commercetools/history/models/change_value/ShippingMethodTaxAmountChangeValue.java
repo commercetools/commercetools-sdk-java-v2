@@ -35,6 +35,7 @@ public interface ShippingMethodTaxAmountChangeValue {
 
     /**
      *
+     * @return taxedPrice
      */
     @NotNull
     @Valid
@@ -43,6 +44,7 @@ public interface ShippingMethodTaxAmountChangeValue {
 
     /**
      *  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>
+     * @return taxRate
      */
     @NotNull
     @Valid

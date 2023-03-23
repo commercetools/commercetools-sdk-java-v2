@@ -34,6 +34,7 @@ public interface ProductSelectionSetCustomTypeAction extends ProductSelectionUpd
 
     /**
      *  <p>Defines the Type that extends the ProductSelection with Custom Fields. If absent, any existing Type and Custom Fields are removed from the ProductSelection.</p>
+     * @return type
      */
     @Valid
     @JsonProperty("type")
@@ -41,6 +42,7 @@ public interface ProductSelectionSetCustomTypeAction extends ProductSelectionUpd
 
     /**
      *  <p>Sets the Custom Fields fields for the ProductSelection.</p>
+     * @return fields
      */
     @Valid
     @JsonProperty("fields")

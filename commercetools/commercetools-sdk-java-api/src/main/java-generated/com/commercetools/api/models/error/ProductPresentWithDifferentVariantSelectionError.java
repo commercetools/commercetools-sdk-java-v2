@@ -16,8 +16,8 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>Returned when a Product is already assigned to a Product Selection, but the Product Selection has a different Product Variant Selection.</p>
- *  <p>The error is returned as a failed response to the Add Product update action.</p>
+ *  <p>Returned when a Product is already assigned to a Product Selection, but the Product Selection has either a different Product Variant Selection or a different Product Variant Exclusion.</p>
+ *  <p>The error is returned as a failed response either to the Add Product or to the Exclude Product update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -39,6 +39,7 @@ public interface ProductPresentWithDifferentVariantSelectionError extends ErrorO
 
     /**
      *
+     * @return code
      */
     @NotNull
     @JsonProperty("code")
@@ -46,6 +47,7 @@ public interface ProductPresentWithDifferentVariantSelectionError extends ErrorO
 
     /**
      *  <p><code>"Product is already present with the following different $variantSelections."</code></p>
+     * @return message
      */
     @NotNull
     @JsonProperty("message")
@@ -53,6 +55,7 @@ public interface ProductPresentWithDifferentVariantSelectionError extends ErrorO
 
     /**
      *  <p>Reference to the Product for which the error was returned.</p>
+     * @return product
      */
     @NotNull
     @Valid
@@ -60,7 +63,8 @@ public interface ProductPresentWithDifferentVariantSelectionError extends ErrorO
     public ProductReference getProduct();
 
     /**
-     *  <p>Existing Product Variant Selection for the Product in the Product Selection.</p>
+     *  <p>Existing Product Variant Selection or Exclusion for the Product in the Product Selection.</p>
+     * @return existingVariantSelection
      */
     @NotNull
     @Valid

@@ -30,6 +30,8 @@ public class ProductTypeResourceIdentifierBuilder implements Builder<ProductType
 
     /**
      *  <p>Unique identifier of the referenced ProductType. Either <code>id</code> or <code>key</code> is required.</p>
+     * @param id
+     * @return Builder
      */
 
     public ProductTypeResourceIdentifierBuilder id(@Nullable final String id) {
@@ -39,6 +41,8 @@ public class ProductTypeResourceIdentifierBuilder implements Builder<ProductType
 
     /**
      *  <p>User-defined unique identifier of the referenced ProductType. Either <code>id</code> or <code>key</code> is required.</p>
+     * @param key
+     * @return Builder
      */
 
     public ProductTypeResourceIdentifierBuilder key(@Nullable final String key) {

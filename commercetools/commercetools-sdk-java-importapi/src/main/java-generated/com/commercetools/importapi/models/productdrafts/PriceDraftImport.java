@@ -39,6 +39,7 @@ public interface PriceDraftImport {
 
     /**
      *
+     * @return value
      */
     @NotNull
     @Valid
@@ -47,6 +48,7 @@ public interface PriceDraftImport {
 
     /**
      *  <p>A two-digit country code as per ISO 3166-1 alpha-2.</p>
+     * @return country
      */
 
     @JsonProperty("country")
@@ -54,6 +56,7 @@ public interface PriceDraftImport {
 
     /**
      *  <p>References a customer group by key.</p>
+     * @return customerGroup
      */
     @Valid
     @JsonProperty("customerGroup")
@@ -61,6 +64,7 @@ public interface PriceDraftImport {
 
     /**
      *  <p>References a channel by key.</p>
+     * @return channel
      */
     @Valid
     @JsonProperty("channel")
@@ -68,6 +72,7 @@ public interface PriceDraftImport {
 
     /**
      *
+     * @return validFrom
      */
 
     @JsonProperty("validFrom")
@@ -75,6 +80,7 @@ public interface PriceDraftImport {
 
     /**
      *
+     * @return validUntil
      */
 
     @JsonProperty("validUntil")
@@ -82,6 +88,7 @@ public interface PriceDraftImport {
 
     /**
      *  <p>The custom fields for this category.</p>
+     * @return custom
      */
     @Valid
     @JsonProperty("custom")
@@ -89,6 +96,7 @@ public interface PriceDraftImport {
 
     /**
      *  <p>Sets a discounted price from an external service.</p>
+     * @return discounted
      */
     @Valid
     @JsonProperty("discounted")
@@ -96,6 +104,7 @@ public interface PriceDraftImport {
 
     /**
      *  <p>The tiered prices for this price.</p>
+     * @return tiers
      */
     @Valid
     @JsonProperty("tiers")
@@ -103,6 +112,7 @@ public interface PriceDraftImport {
 
     /**
      *  <p>User-defined unique identifier for the Embedded Price.</p>
+     * @return key
      */
 
     @JsonProperty("key")

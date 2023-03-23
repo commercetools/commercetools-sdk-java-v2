@@ -65,6 +65,8 @@ public class OrderCustomLineItemQuantityChangedMessageBuilder
 
     /**
      *  <p>Unique identifier of the Message. Can be used to track which Messages have been processed.</p>
+     * @param id
+     * @return Builder
      */
 
     public OrderCustomLineItemQuantityChangedMessageBuilder id(final String id) {
@@ -74,6 +76,8 @@ public class OrderCustomLineItemQuantityChangedMessageBuilder
 
     /**
      *  <p>Version of a resource. In case of Messages, this is always <code>1</code>.</p>
+     * @param version
+     * @return Builder
      */
 
     public OrderCustomLineItemQuantityChangedMessageBuilder version(final Long version) {
@@ -83,6 +87,8 @@ public class OrderCustomLineItemQuantityChangedMessageBuilder
 
     /**
      *  <p>Date and time (UTC) the Message was generated.</p>
+     * @param createdAt
+     * @return Builder
      */
 
     public OrderCustomLineItemQuantityChangedMessageBuilder createdAt(final java.time.ZonedDateTime createdAt) {
@@ -92,6 +98,8 @@ public class OrderCustomLineItemQuantityChangedMessageBuilder
 
     /**
      *  <p>Value of <code>createdAt</code>.</p>
+     * @param lastModifiedAt
+     * @return Builder
      */
 
     public OrderCustomLineItemQuantityChangedMessageBuilder lastModifiedAt(
@@ -102,6 +110,7 @@ public class OrderCustomLineItemQuantityChangedMessageBuilder
 
     /**
      *  <p>Value of <code>createdBy</code>.</p>
+     * @return Builder
      */
 
     public OrderCustomLineItemQuantityChangedMessageBuilder lastModifiedBy(
@@ -112,6 +121,8 @@ public class OrderCustomLineItemQuantityChangedMessageBuilder
 
     /**
      *  <p>Value of <code>createdBy</code>.</p>
+     * @param lastModifiedBy
+     * @return Builder
      */
 
     public OrderCustomLineItemQuantityChangedMessageBuilder lastModifiedBy(
@@ -122,6 +133,7 @@ public class OrderCustomLineItemQuantityChangedMessageBuilder
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @return Builder
      */
 
     public OrderCustomLineItemQuantityChangedMessageBuilder createdBy(
@@ -132,6 +144,8 @@ public class OrderCustomLineItemQuantityChangedMessageBuilder
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param createdBy
+     * @return Builder
      */
 
     public OrderCustomLineItemQuantityChangedMessageBuilder createdBy(
@@ -142,6 +156,8 @@ public class OrderCustomLineItemQuantityChangedMessageBuilder
 
     /**
      *  <p>Message number in relation to other Messages for a given resource. The <code>sequenceNumber</code> of the next Message for the resource is the successor of the <code>sequenceNumber</code> of the current Message. Meaning, the <code>sequenceNumber</code> of the next Message equals the <code>sequenceNumber</code> of the current Message + 1. <code>sequenceNumber</code> can be used to ensure that Messages are processed in the correct order for a particular resource.</p>
+     * @param sequenceNumber
+     * @return Builder
      */
 
     public OrderCustomLineItemQuantityChangedMessageBuilder sequenceNumber(final Long sequenceNumber) {
@@ -151,6 +167,8 @@ public class OrderCustomLineItemQuantityChangedMessageBuilder
 
     /**
      *  <p>Reference to the resource on which the change or action was performed.</p>
+     * @param resource
+     * @return Builder
      */
 
     public OrderCustomLineItemQuantityChangedMessageBuilder resource(
@@ -161,6 +179,7 @@ public class OrderCustomLineItemQuantityChangedMessageBuilder
 
     /**
      *  <p>Reference to the resource on which the change or action was performed.</p>
+     * @return Builder
      */
 
     public OrderCustomLineItemQuantityChangedMessageBuilder resource(
@@ -171,6 +190,8 @@ public class OrderCustomLineItemQuantityChangedMessageBuilder
 
     /**
      *  <p>Version of the resource on which the change or action was performed.</p>
+     * @param resourceVersion
+     * @return Builder
      */
 
     public OrderCustomLineItemQuantityChangedMessageBuilder resourceVersion(final Long resourceVersion) {
@@ -180,6 +201,7 @@ public class OrderCustomLineItemQuantityChangedMessageBuilder
 
     /**
      *  <p>User-provided identifiers of the resource, such as <code>key</code> or <code>externalId</code>. Only present if the resource has such identifiers.</p>
+     * @return Builder
      */
 
     public OrderCustomLineItemQuantityChangedMessageBuilder resourceUserProvidedIdentifiers(
@@ -192,6 +214,8 @@ public class OrderCustomLineItemQuantityChangedMessageBuilder
 
     /**
      *  <p>User-provided identifiers of the resource, such as <code>key</code> or <code>externalId</code>. Only present if the resource has such identifiers.</p>
+     * @param resourceUserProvidedIdentifiers
+     * @return Builder
      */
 
     public OrderCustomLineItemQuantityChangedMessageBuilder resourceUserProvidedIdentifiers(
@@ -202,6 +226,8 @@ public class OrderCustomLineItemQuantityChangedMessageBuilder
 
     /**
      *  <p>Unique identifier of the Custom Line Item.</p>
+     * @param customLineItemId
+     * @return Builder
      */
 
     public OrderCustomLineItemQuantityChangedMessageBuilder customLineItemId(final String customLineItemId) {
@@ -211,6 +237,8 @@ public class OrderCustomLineItemQuantityChangedMessageBuilder
 
     /**
      *  <p>Custom Line Item quantity after the Change Custom Line Item Quantity update action.</p>
+     * @param quantity
+     * @return Builder
      */
 
     public OrderCustomLineItemQuantityChangedMessageBuilder quantity(final Long quantity) {
@@ -220,6 +248,8 @@ public class OrderCustomLineItemQuantityChangedMessageBuilder
 
     /**
      *  <p>Custom Line Item quantity before the Change Custom Line Item Quantity update action.</p>
+     * @param oldQuantity
+     * @return Builder
      */
 
     public OrderCustomLineItemQuantityChangedMessageBuilder oldQuantity(final Long oldQuantity) {

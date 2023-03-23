@@ -31,6 +31,8 @@ public class ProductTypeSetInputTipActionBuilder implements Builder<ProductTypeS
 
     /**
      *  <p>Name of the AttributeDefinition to update.</p>
+     * @param attributeName
+     * @return Builder
      */
 
     public ProductTypeSetInputTipActionBuilder attributeName(final String attributeName) {
@@ -40,6 +42,7 @@ public class ProductTypeSetInputTipActionBuilder implements Builder<ProductTypeS
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
+     * @return Builder
      */
 
     public ProductTypeSetInputTipActionBuilder inputTip(
@@ -50,6 +53,8 @@ public class ProductTypeSetInputTipActionBuilder implements Builder<ProductTypeS
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
+     * @param inputTip
+     * @return Builder
      */
 
     public ProductTypeSetInputTipActionBuilder inputTip(

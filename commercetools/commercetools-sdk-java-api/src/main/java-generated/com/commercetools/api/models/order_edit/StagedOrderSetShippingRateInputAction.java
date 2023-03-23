@@ -33,7 +33,8 @@ public interface StagedOrderSetShippingRateInputAction extends StagedOrderUpdate
     String SET_SHIPPING_RATE_INPUT = "setShippingRateInput";
 
     /**
-     *
+     *  <p>Generic type holding specifc ShippingRateInputDraft types.</p>
+     * @return shippingRateInput
      */
     @Valid
     @JsonProperty("shippingRateInput")

@@ -37,6 +37,7 @@ public interface SetShippingInfoTaxedPriceChange extends Change {
 
     /**
      *
+     * @return type
      */
     @NotNull
     @JsonProperty("type")
@@ -44,6 +45,7 @@ public interface SetShippingInfoTaxedPriceChange extends Change {
 
     /**
      *  <p>Update action for <code>setShippingInfoTaxedPrice</code></p>
+     * @return change
      */
     @NotNull
     @JsonProperty("change")
@@ -51,6 +53,7 @@ public interface SetShippingInfoTaxedPriceChange extends Change {
 
     /**
      *
+     * @return nextValue
      */
     @NotNull
     @Valid
@@ -59,6 +62,7 @@ public interface SetShippingInfoTaxedPriceChange extends Change {
 
     /**
      *
+     * @return previousValue
      */
     @NotNull
     @Valid

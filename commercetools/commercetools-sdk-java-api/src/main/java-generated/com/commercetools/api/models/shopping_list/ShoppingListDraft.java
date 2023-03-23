@@ -37,6 +37,7 @@ public interface ShoppingListDraft extends com.commercetools.api.models.Customiz
 
     /**
      *  <p>Name of the ShoppingList.</p>
+     * @return name
      */
     @NotNull
     @Valid
@@ -45,6 +46,7 @@ public interface ShoppingListDraft extends com.commercetools.api.models.Customiz
 
     /**
      *  <p>Human-readable identifiers usually used as deep-link URL to the related ShoppingList. Each slug is unique across a Project, but a ShoppingList can have the same slug for different languages. The slug must match the pattern <code>[a-zA-Z0-9_-]{2,256}</code>.</p>
+     * @return slug
      */
     @Valid
     @JsonProperty("slug")
@@ -52,6 +54,7 @@ public interface ShoppingListDraft extends com.commercetools.api.models.Customiz
 
     /**
      *  <p>The Customer the ShoppingList should be associated to.</p>
+     * @return customer
      */
     @Valid
     @JsonProperty("customer")
@@ -59,6 +62,7 @@ public interface ShoppingListDraft extends com.commercetools.api.models.Customiz
 
     /**
      *  <p>User-defined unique identifier for the ShoppingList.</p>
+     * @return key
      */
 
     @JsonProperty("key")
@@ -66,6 +70,7 @@ public interface ShoppingListDraft extends com.commercetools.api.models.Customiz
 
     /**
      *  <p>Description of the ShoppingList.</p>
+     * @return description
      */
     @Valid
     @JsonProperty("description")
@@ -73,6 +78,7 @@ public interface ShoppingListDraft extends com.commercetools.api.models.Customiz
 
     /**
      *  <p>Identifies ShoppingLists belonging to an anonymous session.</p>
+     * @return anonymousId
      */
 
     @JsonProperty("anonymousId")
@@ -80,6 +86,7 @@ public interface ShoppingListDraft extends com.commercetools.api.models.Customiz
 
     /**
      *  <p>Number of days after which the ShoppingList will be automatically deleted if it has not been modified. If not set, the default value configured in the Project is used.</p>
+     * @return deleteDaysAfterLastModification
      */
 
     @JsonProperty("deleteDaysAfterLastModification")
@@ -87,6 +94,7 @@ public interface ShoppingListDraft extends com.commercetools.api.models.Customiz
 
     /**
      *  <p>Line Items (containing Products) to add to the ShoppingList.</p>
+     * @return lineItems
      */
     @Valid
     @JsonProperty("lineItems")
@@ -94,6 +102,7 @@ public interface ShoppingListDraft extends com.commercetools.api.models.Customiz
 
     /**
      *  <p>Line Items (containing text values) to add to the ShoppingList.</p>
+     * @return textLineItems
      */
     @Valid
     @JsonProperty("textLineItems")
@@ -101,6 +110,7 @@ public interface ShoppingListDraft extends com.commercetools.api.models.Customiz
 
     /**
      *  <p>Assigns the new ShoppingList to the Store.</p>
+     * @return store
      */
     @Valid
     @JsonProperty("store")
@@ -108,6 +118,7 @@ public interface ShoppingListDraft extends com.commercetools.api.models.Customiz
 
     /**
      *  <p>Custom Fields defined for the ShoppingList.</p>
+     * @return custom
      */
     @Valid
     @JsonProperty("custom")

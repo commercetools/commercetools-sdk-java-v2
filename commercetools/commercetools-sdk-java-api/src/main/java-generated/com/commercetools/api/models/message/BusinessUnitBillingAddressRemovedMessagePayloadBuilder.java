@@ -27,6 +27,7 @@ public class BusinessUnitBillingAddressRemovedMessagePayloadBuilder
 
     /**
      *  <p>The address that was removed from the billing addresses of the Business Unit.</p>
+     * @return Builder
      */
 
     public BusinessUnitBillingAddressRemovedMessagePayloadBuilder address(
@@ -37,6 +38,8 @@ public class BusinessUnitBillingAddressRemovedMessagePayloadBuilder
 
     /**
      *  <p>The address that was removed from the billing addresses of the Business Unit.</p>
+     * @param address
+     * @return Builder
      */
 
     public BusinessUnitBillingAddressRemovedMessagePayloadBuilder address(

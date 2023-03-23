@@ -31,6 +31,8 @@ public class OrderSetParcelMeasurementsActionBuilder implements Builder<OrderSet
 
     /**
      *
+     * @param parcelId
+     * @return Builder
      */
 
     public OrderSetParcelMeasurementsActionBuilder parcelId(final String parcelId) {
@@ -40,6 +42,7 @@ public class OrderSetParcelMeasurementsActionBuilder implements Builder<OrderSet
 
     /**
      *
+     * @return Builder
      */
 
     public OrderSetParcelMeasurementsActionBuilder measurements(
@@ -50,6 +53,8 @@ public class OrderSetParcelMeasurementsActionBuilder implements Builder<OrderSet
 
     /**
      *
+     * @param measurements
+     * @return Builder
      */
 
     public OrderSetParcelMeasurementsActionBuilder measurements(

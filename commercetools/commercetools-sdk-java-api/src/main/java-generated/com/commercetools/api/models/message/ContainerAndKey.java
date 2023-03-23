@@ -32,6 +32,7 @@ public interface ContainerAndKey {
 
     /**
      *  <p>User-defined identifier that is unique within the given container.</p>
+     * @return key
      */
     @NotNull
     @JsonProperty("key")
@@ -39,6 +40,7 @@ public interface ContainerAndKey {
 
     /**
      *  <p>Namespace to group Custom Objects.</p>
+     * @return container
      */
     @NotNull
     @JsonProperty("container")

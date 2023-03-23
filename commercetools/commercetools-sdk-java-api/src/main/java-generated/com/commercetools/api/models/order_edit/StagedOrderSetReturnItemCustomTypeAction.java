@@ -37,6 +37,7 @@ public interface StagedOrderSetReturnItemCustomTypeAction extends StagedOrderUpd
 
     /**
      *
+     * @return returnItemId
      */
     @NotNull
     @JsonProperty("returnItemId")
@@ -44,6 +45,7 @@ public interface StagedOrderSetReturnItemCustomTypeAction extends StagedOrderUpd
 
     /**
      *  <p>Defines the Type that extends the ReturnItem with Custom Fields. If absent, any existing Type and Custom Fields are removed from the ReturnItem.</p>
+     * @return type
      */
     @Valid
     @JsonProperty("type")
@@ -51,6 +53,7 @@ public interface StagedOrderSetReturnItemCustomTypeAction extends StagedOrderUpd
 
     /**
      *  <p>Sets the Custom Fields fields for the ReturnItem.</p>
+     * @return fields
      */
     @Valid
     @JsonProperty("fields")

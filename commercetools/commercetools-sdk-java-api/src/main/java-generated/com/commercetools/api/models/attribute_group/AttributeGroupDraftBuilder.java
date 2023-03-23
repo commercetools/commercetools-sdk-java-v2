@@ -37,6 +37,7 @@ public class AttributeGroupDraftBuilder implements Builder<AttributeGroupDraft> 
 
     /**
      *  <p>Name of the AttributeGroup.</p>
+     * @return Builder
      */
 
     public AttributeGroupDraftBuilder name(
@@ -47,6 +48,8 @@ public class AttributeGroupDraftBuilder implements Builder<AttributeGroupDraft> 
 
     /**
      *  <p>Name of the AttributeGroup.</p>
+     * @param name
+     * @return Builder
      */
 
     public AttributeGroupDraftBuilder name(final com.commercetools.api.models.common.LocalizedString name) {
@@ -56,6 +59,7 @@ public class AttributeGroupDraftBuilder implements Builder<AttributeGroupDraft> 
 
     /**
      *  <p>Description of the AttributeGroup.</p>
+     * @return Builder
      */
 
     public AttributeGroupDraftBuilder description(
@@ -66,6 +70,8 @@ public class AttributeGroupDraftBuilder implements Builder<AttributeGroupDraft> 
 
     /**
      *  <p>Description of the AttributeGroup.</p>
+     * @param description
+     * @return Builder
      */
 
     public AttributeGroupDraftBuilder description(
@@ -76,6 +82,8 @@ public class AttributeGroupDraftBuilder implements Builder<AttributeGroupDraft> 
 
     /**
      *  <p>Attributes with unique values.</p>
+     * @param attributes
+     * @return Builder
      */
 
     public AttributeGroupDraftBuilder attributes(
@@ -86,6 +94,8 @@ public class AttributeGroupDraftBuilder implements Builder<AttributeGroupDraft> 
 
     /**
      *  <p>Attributes with unique values.</p>
+     * @param attributes
+     * @return Builder
      */
 
     public AttributeGroupDraftBuilder attributes(
@@ -96,6 +106,8 @@ public class AttributeGroupDraftBuilder implements Builder<AttributeGroupDraft> 
 
     /**
      *  <p>Attributes with unique values.</p>
+     * @param attributes
+     * @return Builder
      */
 
     public AttributeGroupDraftBuilder plusAttributes(
@@ -109,6 +121,7 @@ public class AttributeGroupDraftBuilder implements Builder<AttributeGroupDraft> 
 
     /**
      *  <p>Attributes with unique values.</p>
+     * @return Builder
      */
 
     public AttributeGroupDraftBuilder plusAttributes(
@@ -123,6 +136,7 @@ public class AttributeGroupDraftBuilder implements Builder<AttributeGroupDraft> 
 
     /**
      *  <p>Attributes with unique values.</p>
+     * @return Builder
      */
 
     public AttributeGroupDraftBuilder withAttributes(
@@ -135,6 +149,8 @@ public class AttributeGroupDraftBuilder implements Builder<AttributeGroupDraft> 
 
     /**
      *  <p>User-defined unique identifier for the AttributeGroup.</p>
+     * @param key
+     * @return Builder
      */
 
     public AttributeGroupDraftBuilder key(@Nullable final String key) {

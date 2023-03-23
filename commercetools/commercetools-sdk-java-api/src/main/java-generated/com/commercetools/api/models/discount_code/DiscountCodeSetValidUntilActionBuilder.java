@@ -27,6 +27,8 @@ public class DiscountCodeSetValidUntilActionBuilder implements Builder<DiscountC
 
     /**
      *  <p>Value to set that must be later than <code>validFrom</code>. If empty, any existing value will be removed.</p>
+     * @param validUntil
+     * @return Builder
      */
 
     public DiscountCodeSetValidUntilActionBuilder validUntil(@Nullable final java.time.ZonedDateTime validUntil) {

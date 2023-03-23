@@ -32,7 +32,9 @@ public class CartSetLineItemCustomFieldActionBuilder implements Builder<CartSetL
     private java.lang.Object value;
 
     /**
-     *
+     *  <p><code>id</code> of the LineItem to update.</p>
+     * @param lineItemId
+     * @return Builder
      */
 
     public CartSetLineItemCustomFieldActionBuilder lineItemId(final String lineItemId) {
@@ -42,6 +44,8 @@ public class CartSetLineItemCustomFieldActionBuilder implements Builder<CartSetL
 
     /**
      *  <p>Name of the Custom Field.</p>
+     * @param name
+     * @return Builder
      */
 
     public CartSetLineItemCustomFieldActionBuilder name(final String name) {
@@ -51,6 +55,8 @@ public class CartSetLineItemCustomFieldActionBuilder implements Builder<CartSetL
 
     /**
      *  <p>If <code>value</code> is absent or <code>null</code>, this field will be removed if it exists. Removing a field that does not exist returns an InvalidOperation error. If <code>value</code> is provided, it is set for the field defined by <code>name</code>.</p>
+     * @param value
+     * @return Builder
      */
 
     public CartSetLineItemCustomFieldActionBuilder value(@Nullable final java.lang.Object value) {

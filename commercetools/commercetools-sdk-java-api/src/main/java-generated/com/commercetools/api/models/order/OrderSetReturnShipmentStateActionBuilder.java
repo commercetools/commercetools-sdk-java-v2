@@ -28,6 +28,8 @@ public class OrderSetReturnShipmentStateActionBuilder implements Builder<OrderSe
 
     /**
      *
+     * @param returnItemId
+     * @return Builder
      */
 
     public OrderSetReturnShipmentStateActionBuilder returnItemId(final String returnItemId) {
@@ -37,6 +39,8 @@ public class OrderSetReturnShipmentStateActionBuilder implements Builder<OrderSe
 
     /**
      *
+     * @param shipmentState
+     * @return Builder
      */
 
     public OrderSetReturnShipmentStateActionBuilder shipmentState(

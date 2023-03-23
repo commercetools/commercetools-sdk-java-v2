@@ -32,6 +32,8 @@ public class GraphQLErrorBuilder implements Builder<GraphQLError> {
 
     /**
      *
+     * @param message
+     * @return Builder
      */
 
     public GraphQLErrorBuilder message(final String message) {
@@ -41,6 +43,8 @@ public class GraphQLErrorBuilder implements Builder<GraphQLError> {
 
     /**
      *
+     * @param locations
+     * @return Builder
      */
 
     public GraphQLErrorBuilder locations(
@@ -51,6 +55,8 @@ public class GraphQLErrorBuilder implements Builder<GraphQLError> {
 
     /**
      *
+     * @param locations
+     * @return Builder
      */
 
     public GraphQLErrorBuilder locations(
@@ -61,6 +67,8 @@ public class GraphQLErrorBuilder implements Builder<GraphQLError> {
 
     /**
      *
+     * @param locations
+     * @return Builder
      */
 
     public GraphQLErrorBuilder plusLocations(
@@ -74,6 +82,7 @@ public class GraphQLErrorBuilder implements Builder<GraphQLError> {
 
     /**
      *
+     * @return Builder
      */
 
     public GraphQLErrorBuilder plusLocations(
@@ -88,6 +97,7 @@ public class GraphQLErrorBuilder implements Builder<GraphQLError> {
 
     /**
      *
+     * @return Builder
      */
 
     public GraphQLErrorBuilder withLocations(
@@ -100,6 +110,8 @@ public class GraphQLErrorBuilder implements Builder<GraphQLError> {
 
     /**
      *
+     * @param path
+     * @return Builder
      */
 
     public GraphQLErrorBuilder path(final java.lang.Object... path) {
@@ -109,6 +121,8 @@ public class GraphQLErrorBuilder implements Builder<GraphQLError> {
 
     /**
      *
+     * @param path
+     * @return Builder
      */
 
     public GraphQLErrorBuilder path(final java.util.List<java.lang.Object> path) {
@@ -118,6 +132,8 @@ public class GraphQLErrorBuilder implements Builder<GraphQLError> {
 
     /**
      *
+     * @param path
+     * @return Builder
      */
 
     public GraphQLErrorBuilder plusPath(final java.lang.Object... path) {

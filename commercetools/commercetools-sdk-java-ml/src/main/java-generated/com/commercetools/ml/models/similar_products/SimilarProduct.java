@@ -31,6 +31,7 @@ public interface SimilarProduct {
 
     /**
      *  <p>Reference to Product</p>
+     * @return product
      */
     @Valid
     @JsonProperty("product")
@@ -38,6 +39,7 @@ public interface SimilarProduct {
 
     /**
      *  <p>ID of the ProductVariant that was compared.</p>
+     * @return variantId
      */
 
     @JsonProperty("variantId")
@@ -45,6 +47,7 @@ public interface SimilarProduct {
 
     /**
      *  <p>Supplementary information about the data used for similarity estimation. This information helps you understand the estimated confidence score, but it should not be used to identify a product.</p>
+     * @return meta
      */
     @Valid
     @JsonProperty("meta")

@@ -34,6 +34,7 @@ public interface SubscriptionChangeDestinationAction extends SubscriptionUpdateA
 
     /**
      *  <p>New value to set. Must not be empty.</p>
+     * @return destination
      */
     @NotNull
     @Valid

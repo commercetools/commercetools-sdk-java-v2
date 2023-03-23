@@ -32,6 +32,7 @@ public interface ItemShippingDetailsDraft extends io.vrap.rmf.base.client.Draft<
 
     /**
      *  <p>Maps to <code>ItemShippingDetailsDraft.targets</code>.</p>
+     * @return targets
      */
     @NotNull
     @Valid

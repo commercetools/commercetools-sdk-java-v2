@@ -36,6 +36,7 @@ public interface Asset {
 
     /**
      *
+     * @return id
      */
     @NotNull
     @JsonProperty("id")
@@ -43,6 +44,7 @@ public interface Asset {
 
     /**
      *
+     * @return name
      */
     @NotNull
     @Valid
@@ -51,6 +53,7 @@ public interface Asset {
 
     /**
      *
+     * @return description
      */
     @NotNull
     @Valid
@@ -59,6 +62,7 @@ public interface Asset {
 
     /**
      *
+     * @return custom
      */
     @NotNull
     @Valid
@@ -67,6 +71,7 @@ public interface Asset {
 
     /**
      *
+     * @return key
      */
     @NotNull
     @JsonProperty("key")

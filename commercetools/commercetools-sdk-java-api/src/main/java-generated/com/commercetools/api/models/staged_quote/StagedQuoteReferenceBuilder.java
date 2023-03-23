@@ -31,6 +31,8 @@ public class StagedQuoteReferenceBuilder implements Builder<StagedQuoteReference
 
     /**
      *  <p>Unique ID of the referenced resource.</p>
+     * @param id
+     * @return Builder
      */
 
     public StagedQuoteReferenceBuilder id(final String id) {
@@ -40,6 +42,7 @@ public class StagedQuoteReferenceBuilder implements Builder<StagedQuoteReference
 
     /**
      *  <p>Contains the representation of the expanded StagedQuote. Only present in responses to requests with Reference Expansion for StagedQuote.</p>
+     * @return Builder
      */
 
     public StagedQuoteReferenceBuilder obj(
@@ -50,6 +53,8 @@ public class StagedQuoteReferenceBuilder implements Builder<StagedQuoteReference
 
     /**
      *  <p>Contains the representation of the expanded StagedQuote. Only present in responses to requests with Reference Expansion for StagedQuote.</p>
+     * @param obj
+     * @return Builder
      */
 
     public StagedQuoteReferenceBuilder obj(@Nullable final com.commercetools.api.models.staged_quote.StagedQuote obj) {

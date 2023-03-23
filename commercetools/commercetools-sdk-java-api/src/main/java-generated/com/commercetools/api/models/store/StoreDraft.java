@@ -37,6 +37,7 @@ public interface StoreDraft extends com.commercetools.api.models.CustomizableDra
 
     /**
      *  <p>User-defined unique and immutable identifier for the Store. Keys can only contain alphanumeric characters, underscores, and hyphens.</p>
+     * @return key
      */
     @NotNull
     @JsonProperty("key")
@@ -44,6 +45,7 @@ public interface StoreDraft extends com.commercetools.api.models.CustomizableDra
 
     /**
      *  <p>Name of the Store.</p>
+     * @return name
      */
     @Valid
     @JsonProperty("name")
@@ -51,6 +53,7 @@ public interface StoreDraft extends com.commercetools.api.models.CustomizableDra
 
     /**
      *  <p>Languages defined in Project. Only languages defined in the Project can be used.</p>
+     * @return languages
      */
 
     @JsonProperty("languages")
@@ -58,6 +61,7 @@ public interface StoreDraft extends com.commercetools.api.models.CustomizableDra
 
     /**
      *  <p>Countries defined for the Store.</p>
+     * @return countries
      */
     @Valid
     @JsonProperty("countries")
@@ -65,6 +69,7 @@ public interface StoreDraft extends com.commercetools.api.models.CustomizableDra
 
     /**
      *  <p>ResourceIdentifier of a Channel with <code>ProductDistribution</code> ChannelRoleEnum.</p>
+     * @return distributionChannels
      */
     @Valid
     @JsonProperty("distributionChannels")
@@ -72,17 +77,21 @@ public interface StoreDraft extends com.commercetools.api.models.CustomizableDra
 
     /**
      *  <p>ResourceIdentifier of a Channel with <code>InventorySupply</code> ChannelRoleEnum.</p>
+     * @return supplyChannels
      */
     @Valid
     @JsonProperty("supplyChannels")
     public List<ChannelResourceIdentifier> getSupplyChannels();
 
     /**
-     *  <p>Controls availability of Products for this Store via active Product Selections.</p>
+     *  <p>Controls availability of Products for this Store via active/inactive Product Selections:</p>
      *  <ul>
      *   <li>Leave empty if all Products in the Project should be available in this Store.</li>
-     *   <li>If provided, Products from <code>active</code> Product Selections are available in this Store.</li>
+     *   <li>If only <code>inactive</code> Product Selections of type Individual Exclusion are provided, all the Products are availlable in this Store.</li>
+     *   <li>If all the Product Selections provided are <code>inactive</code> and there's at least a Product Selection of type <code>individual</code>, no Product is availlable in this Store.</li>
+     *   <li>If at least an <code>active</code> Product Selection is provided, only <code>active</code> Product Selections are considered to compute the availlability in this Store.</li>
      *  </ul>
+     * @return productSelections
      */
     @Valid
     @JsonProperty("productSelections")
@@ -90,6 +99,7 @@ public interface StoreDraft extends com.commercetools.api.models.CustomizableDra
 
     /**
      *  <p>Custom fields for the Store.</p>
+     * @return custom
      */
     @Valid
     @JsonProperty("custom")

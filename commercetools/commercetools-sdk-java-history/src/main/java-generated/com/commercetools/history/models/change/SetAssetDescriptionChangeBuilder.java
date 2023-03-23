@@ -35,6 +35,8 @@ public class SetAssetDescriptionChangeBuilder implements Builder<SetAssetDescrip
 
     /**
      *  <p>Update action for <code>setAssetDescription</code></p>
+     * @param change
+     * @return Builder
      */
 
     public SetAssetDescriptionChangeBuilder change(final String change) {
@@ -44,6 +46,7 @@ public class SetAssetDescriptionChangeBuilder implements Builder<SetAssetDescrip
 
     /**
      *
+     * @return Builder
      */
 
     public SetAssetDescriptionChangeBuilder asset(
@@ -54,6 +57,8 @@ public class SetAssetDescriptionChangeBuilder implements Builder<SetAssetDescrip
 
     /**
      *
+     * @param asset
+     * @return Builder
      */
 
     public SetAssetDescriptionChangeBuilder asset(
@@ -64,6 +69,7 @@ public class SetAssetDescriptionChangeBuilder implements Builder<SetAssetDescrip
 
     /**
      *
+     * @return Builder
      */
 
     public SetAssetDescriptionChangeBuilder nextValue(
@@ -74,6 +80,8 @@ public class SetAssetDescriptionChangeBuilder implements Builder<SetAssetDescrip
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public SetAssetDescriptionChangeBuilder nextValue(
@@ -84,6 +92,7 @@ public class SetAssetDescriptionChangeBuilder implements Builder<SetAssetDescrip
 
     /**
      *
+     * @return Builder
      */
 
     public SetAssetDescriptionChangeBuilder previousValue(
@@ -94,6 +103,8 @@ public class SetAssetDescriptionChangeBuilder implements Builder<SetAssetDescrip
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public SetAssetDescriptionChangeBuilder previousValue(

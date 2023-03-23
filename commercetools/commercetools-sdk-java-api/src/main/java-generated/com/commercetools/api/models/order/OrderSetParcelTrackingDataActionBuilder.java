@@ -31,6 +31,8 @@ public class OrderSetParcelTrackingDataActionBuilder implements Builder<OrderSet
 
     /**
      *
+     * @param parcelId
+     * @return Builder
      */
 
     public OrderSetParcelTrackingDataActionBuilder parcelId(final String parcelId) {
@@ -40,6 +42,7 @@ public class OrderSetParcelTrackingDataActionBuilder implements Builder<OrderSet
 
     /**
      *
+     * @return Builder
      */
 
     public OrderSetParcelTrackingDataActionBuilder trackingData(
@@ -50,6 +53,8 @@ public class OrderSetParcelTrackingDataActionBuilder implements Builder<OrderSet
 
     /**
      *
+     * @param trackingData
+     * @return Builder
      */
 
     public OrderSetParcelTrackingDataActionBuilder trackingData(

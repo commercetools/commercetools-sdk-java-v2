@@ -32,6 +32,8 @@ public class ConcurrentModificationErrorBuilder implements Builder<ConcurrentMod
 
     /**
      *  <p><code>"Object $resourceId has a different version than expected. Expected: $expectedVersion - Actual: $currentVersion."</code></p>
+     * @param message
+     * @return Builder
      */
 
     public ConcurrentModificationErrorBuilder message(final String message) {
@@ -62,6 +64,8 @@ public class ConcurrentModificationErrorBuilder implements Builder<ConcurrentMod
 
     /**
      *  <p>Current version of the resource.</p>
+     * @param currentVersion
+     * @return Builder
      */
 
     public ConcurrentModificationErrorBuilder currentVersion(@Nullable final Long currentVersion) {

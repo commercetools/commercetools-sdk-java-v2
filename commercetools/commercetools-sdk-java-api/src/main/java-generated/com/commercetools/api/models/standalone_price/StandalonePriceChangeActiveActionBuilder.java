@@ -25,6 +25,8 @@ public class StandalonePriceChangeActiveActionBuilder implements Builder<Standal
 
     /**
      *  <p>New value to set for the <code>active</code> field of the StandalonePrice.</p>
+     * @param active
+     * @return Builder
      */
 
     public StandalonePriceChangeActiveActionBuilder active(final Boolean active) {

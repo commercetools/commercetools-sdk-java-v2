@@ -38,6 +38,7 @@ public interface ScopedPrice extends com.commercetools.api.models.Customizable<S
 
     /**
      *  <p>Platform-generated unique identifier of the Price.</p>
+     * @return id
      */
     @NotNull
     @JsonProperty("id")
@@ -45,6 +46,7 @@ public interface ScopedPrice extends com.commercetools.api.models.Customizable<S
 
     /**
      *  <p>Original value of the Price.</p>
+     * @return value
      */
     @NotNull
     @Valid
@@ -53,6 +55,7 @@ public interface ScopedPrice extends com.commercetools.api.models.Customizable<S
 
     /**
      *  <p>If available, either the original price <code>value</code> or <code>discounted</code> value.</p>
+     * @return currentValue
      */
     @NotNull
     @Valid
@@ -61,6 +64,7 @@ public interface ScopedPrice extends com.commercetools.api.models.Customizable<S
 
     /**
      *  <p>Country code of the geographic location.</p>
+     * @return country
      */
 
     @JsonProperty("country")
@@ -68,6 +72,7 @@ public interface ScopedPrice extends com.commercetools.api.models.Customizable<S
 
     /**
      *  <p>Reference to a CustomerGroup.</p>
+     * @return customerGroup
      */
     @Valid
     @JsonProperty("customerGroup")
@@ -75,6 +80,7 @@ public interface ScopedPrice extends com.commercetools.api.models.Customizable<S
 
     /**
      *  <p>Reference to a Channel.</p>
+     * @return channel
      */
     @Valid
     @JsonProperty("channel")
@@ -82,6 +88,7 @@ public interface ScopedPrice extends com.commercetools.api.models.Customizable<S
 
     /**
      *  <p>Date and time from which the Price is valid.</p>
+     * @return validFrom
      */
 
     @JsonProperty("validFrom")
@@ -89,14 +96,16 @@ public interface ScopedPrice extends com.commercetools.api.models.Customizable<S
 
     /**
      *  <p>Date and time until which the Price is valid.</p>
+     * @return validUntil
      */
 
     @JsonProperty("validUntil")
     public ZonedDateTime getValidUntil();
 
     /**
-     *  <p>Is set if a matching ProductDiscount exists. If set, the Cart uses the discounted value for the Cart Price calculation.</p>
+     *  <p>Is set when a matching ProductDiscount exists. If set, the Cart uses the discounted value for the Cart Price calculation.</p>
      *  <p>When a relative Product Discount is applied and the fractional part of the discounted Price is 0.5, the discounted Price is rounded half down in favor of the Customer.</p>
+     * @return discounted
      */
     @Valid
     @JsonProperty("discounted")
@@ -104,6 +113,7 @@ public interface ScopedPrice extends com.commercetools.api.models.Customizable<S
 
     /**
      *  <p>Custom Fields for the Price.</p>
+     * @return custom
      */
     @Valid
     @JsonProperty("custom")

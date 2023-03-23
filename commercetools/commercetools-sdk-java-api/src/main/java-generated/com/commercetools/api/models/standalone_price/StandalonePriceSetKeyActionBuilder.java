@@ -27,6 +27,8 @@ public class StandalonePriceSetKeyActionBuilder implements Builder<StandalonePri
 
     /**
      *  <p>Value to set. Must be unique. If empty, any existing value will be removed.</p>
+     * @param key
+     * @return Builder
      */
 
     public StandalonePriceSetKeyActionBuilder key(@Nullable final String key) {

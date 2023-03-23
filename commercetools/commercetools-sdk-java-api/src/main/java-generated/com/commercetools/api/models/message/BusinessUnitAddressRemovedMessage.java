@@ -42,6 +42,7 @@ public interface BusinessUnitAddressRemovedMessage extends Message {
 
     /**
      *  <p>The address that was removed from the Business Unit.</p>
+     * @return address
      */
     @NotNull
     @Valid

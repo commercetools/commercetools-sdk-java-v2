@@ -51,7 +51,7 @@ public class CartSetItemShippingAddressCustomFieldActionImpl
     }
 
     /**
-     *
+     *  <p><code>key</code> of the Address in <code>itemShippingAddress</code>.</p>
      */
 
     public String getAddressKey() {

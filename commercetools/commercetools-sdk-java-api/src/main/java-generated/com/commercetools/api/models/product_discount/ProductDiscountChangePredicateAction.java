@@ -33,6 +33,7 @@ public interface ProductDiscountChangePredicateAction extends ProductDiscountUpd
 
     /**
      *  <p>New value to set. Must be a valid ProductDiscount predicate.</p>
+     * @return predicate
      */
     @NotNull
     @JsonProperty("predicate")

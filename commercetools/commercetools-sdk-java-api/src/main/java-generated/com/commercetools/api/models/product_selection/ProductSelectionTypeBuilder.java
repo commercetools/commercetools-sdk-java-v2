@@ -11,6 +11,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductSelectionTypeBuilder {
 
+    public com.commercetools.api.models.product_selection.IndividualExclusionProductSelectionTypeBuilder individualExclusionBuilder() {
+        return com.commercetools.api.models.product_selection.IndividualExclusionProductSelectionTypeBuilder.of();
+    }
+
     public com.commercetools.api.models.product_selection.IndividualProductSelectionTypeBuilder individualBuilder() {
         return com.commercetools.api.models.product_selection.IndividualProductSelectionTypeBuilder.of();
     }

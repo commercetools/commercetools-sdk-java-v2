@@ -30,6 +30,8 @@ public class CustomerCreatePasswordResetTokenBuilder implements Builder<Customer
 
     /**
      *  <p>Email address of the Customer treated as case-insensitive.</p>
+     * @param email
+     * @return Builder
      */
 
     public CustomerCreatePasswordResetTokenBuilder email(final String email) {
@@ -39,6 +41,8 @@ public class CustomerCreatePasswordResetTokenBuilder implements Builder<Customer
 
     /**
      *  <p>Validity period of the generated token in minutes.</p>
+     * @param ttlMinutes
+     * @return Builder
      */
 
     public CustomerCreatePasswordResetTokenBuilder ttlMinutes(@Nullable final Long ttlMinutes) {

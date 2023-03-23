@@ -30,6 +30,8 @@ public class ProductTypeChangePlainEnumValueLabelActionBuilder
 
     /**
      *  <p>Name of the AttributeDefinition to update.</p>
+     * @param attributeName
+     * @return Builder
      */
 
     public ProductTypeChangePlainEnumValueLabelActionBuilder attributeName(final String attributeName) {
@@ -39,6 +41,7 @@ public class ProductTypeChangePlainEnumValueLabelActionBuilder
 
     /**
      *  <p>New value to set. Must be different from the existing value.</p>
+     * @return Builder
      */
 
     public ProductTypeChangePlainEnumValueLabelActionBuilder newValue(
@@ -50,6 +53,8 @@ public class ProductTypeChangePlainEnumValueLabelActionBuilder
 
     /**
      *  <p>New value to set. Must be different from the existing value.</p>
+     * @param newValue
+     * @return Builder
      */
 
     public ProductTypeChangePlainEnumValueLabelActionBuilder newValue(

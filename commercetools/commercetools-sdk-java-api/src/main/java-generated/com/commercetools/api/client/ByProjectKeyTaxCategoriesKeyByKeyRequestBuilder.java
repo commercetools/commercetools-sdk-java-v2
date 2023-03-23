@@ -29,6 +29,10 @@ public class ByProjectKeyTaxCategoriesKeyByKeyRequestBuilder {
         return new ByProjectKeyTaxCategoriesKeyByKeyPost(apiHttpClient, projectKey, key, taxCategoryUpdate);
     }
 
+    public ByProjectKeyTaxCategoriesKeyByKeyPostString post(final String taxCategoryUpdate) {
+        return new ByProjectKeyTaxCategoriesKeyByKeyPostString(apiHttpClient, projectKey, key, taxCategoryUpdate);
+    }
+
     public ByProjectKeyTaxCategoriesKeyByKeyPost post(
             UnaryOperator<com.commercetools.api.models.tax_category.TaxCategoryUpdateBuilder> op) {
         return post(op.apply(com.commercetools.api.models.tax_category.TaxCategoryUpdateBuilder.of()).build());

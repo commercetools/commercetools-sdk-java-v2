@@ -24,6 +24,8 @@ public class ReviewSetTargetActionBuilder implements Builder<ReviewSetTargetActi
 
     /**
      *  <p>Value to set, specified as ProductResourceIdentifier or ChannelResourceIdentifier, respectively. If empty, any existing value will be removed.</p>
+     * @param target
+     * @return Builder
      */
 
     public ReviewSetTargetActionBuilder target(final java.lang.Object target) {

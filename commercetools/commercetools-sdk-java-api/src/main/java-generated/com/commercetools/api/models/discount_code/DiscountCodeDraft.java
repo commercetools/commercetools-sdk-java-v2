@@ -38,6 +38,7 @@ public interface DiscountCodeDraft extends com.commercetools.api.models.Customiz
 
     /**
      *  <p>Name of the DiscountCode.</p>
+     * @return name
      */
     @Valid
     @JsonProperty("name")
@@ -45,6 +46,7 @@ public interface DiscountCodeDraft extends com.commercetools.api.models.Customiz
 
     /**
      *  <p>Description of the DiscountCode.</p>
+     * @return description
      */
     @Valid
     @JsonProperty("description")
@@ -52,6 +54,7 @@ public interface DiscountCodeDraft extends com.commercetools.api.models.Customiz
 
     /**
      *  <p>User-defined unique identifier for the DiscountCode that can be added to the Cart to apply the related CartDiscounts. It cannot be modified after the DiscountCode is created.</p>
+     * @return code
      */
     @NotNull
     @JsonProperty("code")
@@ -59,6 +62,7 @@ public interface DiscountCodeDraft extends com.commercetools.api.models.Customiz
 
     /**
      *  <p>Specify what CartDiscounts the API applies when you add the DiscountCode to the Cart.</p>
+     * @return cartDiscounts
      */
     @NotNull
     @Valid
@@ -67,6 +71,7 @@ public interface DiscountCodeDraft extends com.commercetools.api.models.Customiz
 
     /**
      *  <p>DiscountCode can only be applied to Carts that match this predicate.</p>
+     * @return cartPredicate
      */
 
     @JsonProperty("cartPredicate")
@@ -74,6 +79,7 @@ public interface DiscountCodeDraft extends com.commercetools.api.models.Customiz
 
     /**
      *  <p>Only active DiscountCodes can be applied to the Cart.</p>
+     * @return isActive
      */
 
     @JsonProperty("isActive")
@@ -81,6 +87,7 @@ public interface DiscountCodeDraft extends com.commercetools.api.models.Customiz
 
     /**
      *  <p>Number of times the DiscountCode can be applied.</p>
+     * @return maxApplications
      */
 
     @JsonProperty("maxApplications")
@@ -88,6 +95,7 @@ public interface DiscountCodeDraft extends com.commercetools.api.models.Customiz
 
     /**
      *  <p>Number of times the DiscountCode can be applied per Customer.</p>
+     * @return maxApplicationsPerCustomer
      */
 
     @JsonProperty("maxApplicationsPerCustomer")
@@ -95,6 +103,7 @@ public interface DiscountCodeDraft extends com.commercetools.api.models.Customiz
 
     /**
      *  <p>Custom Fields for the DiscountCode.</p>
+     * @return custom
      */
     @Valid
     @JsonProperty("custom")
@@ -102,6 +111,7 @@ public interface DiscountCodeDraft extends com.commercetools.api.models.Customiz
 
     /**
      *  <p>Groups to which the DiscountCode will belong to.</p>
+     * @return groups
      */
 
     @JsonProperty("groups")
@@ -109,6 +119,7 @@ public interface DiscountCodeDraft extends com.commercetools.api.models.Customiz
 
     /**
      *  <p>Date and time (UTC) from which the DiscountCode is effective. Must be earlier than <code>validUntil</code>.</p>
+     * @return validFrom
      */
 
     @JsonProperty("validFrom")
@@ -116,6 +127,7 @@ public interface DiscountCodeDraft extends com.commercetools.api.models.Customiz
 
     /**
      *  <p>Date and time (UTC) until which the DiscountCode is effective. Must be later than <code>validFrom</code>.</p>
+     * @return validUntil
      */
 
     @JsonProperty("validUntil")

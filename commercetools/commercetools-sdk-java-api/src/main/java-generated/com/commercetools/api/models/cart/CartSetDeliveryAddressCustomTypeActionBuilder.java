@@ -33,7 +33,9 @@ public class CartSetDeliveryAddressCustomTypeActionBuilder implements Builder<Ca
     private com.commercetools.api.models.type.FieldContainer fields;
 
     /**
-     *
+     *  <p><code>id</code> of the Delivery.</p>
+     * @param deliveryId
+     * @return Builder
      */
 
     public CartSetDeliveryAddressCustomTypeActionBuilder deliveryId(final String deliveryId) {
@@ -42,7 +44,8 @@ public class CartSetDeliveryAddressCustomTypeActionBuilder implements Builder<Ca
     }
 
     /**
-     *  <p>Defines the Type that extends the <code>address</code> in a Delivery with Custom Fields. If absent, any existing Type and Custom Fields are removed from the <code>address</code> in a Delivery.</p>
+     *  <p>Defines the Type that extends the Delivery <code>address</code> with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Delivery <code>address</code>.</p>
+     * @return Builder
      */
 
     public CartSetDeliveryAddressCustomTypeActionBuilder type(
@@ -52,7 +55,9 @@ public class CartSetDeliveryAddressCustomTypeActionBuilder implements Builder<Ca
     }
 
     /**
-     *  <p>Defines the Type that extends the <code>address</code> in a Delivery with Custom Fields. If absent, any existing Type and Custom Fields are removed from the <code>address</code> in a Delivery.</p>
+     *  <p>Defines the Type that extends the Delivery <code>address</code> with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Delivery <code>address</code>.</p>
+     * @param type
+     * @return Builder
      */
 
     public CartSetDeliveryAddressCustomTypeActionBuilder type(
@@ -62,7 +67,8 @@ public class CartSetDeliveryAddressCustomTypeActionBuilder implements Builder<Ca
     }
 
     /**
-     *  <p>Sets the Custom Fields fields for the <code>address</code> in a Delivery.</p>
+     *  <p>Sets the Custom Fields fields for the Delivery <code>address</code>.</p>
+     * @return Builder
      */
 
     public CartSetDeliveryAddressCustomTypeActionBuilder fields(
@@ -72,7 +78,9 @@ public class CartSetDeliveryAddressCustomTypeActionBuilder implements Builder<Ca
     }
 
     /**
-     *  <p>Sets the Custom Fields fields for the <code>address</code> in a Delivery.</p>
+     *  <p>Sets the Custom Fields fields for the Delivery <code>address</code>.</p>
+     * @param fields
+     * @return Builder
      */
 
     public CartSetDeliveryAddressCustomTypeActionBuilder fields(

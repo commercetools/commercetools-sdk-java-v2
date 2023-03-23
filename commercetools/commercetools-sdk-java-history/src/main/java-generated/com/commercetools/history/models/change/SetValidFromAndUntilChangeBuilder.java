@@ -32,6 +32,8 @@ public class SetValidFromAndUntilChangeBuilder implements Builder<SetValidFromAn
 
     /**
      *
+     * @param change
+     * @return Builder
      */
 
     public SetValidFromAndUntilChangeBuilder change(final String change) {
@@ -41,6 +43,7 @@ public class SetValidFromAndUntilChangeBuilder implements Builder<SetValidFromAn
 
     /**
      *  <p>Shape of the value for <code>setValidFromAndUntil</code> action</p>
+     * @return Builder
      */
 
     public SetValidFromAndUntilChangeBuilder previousValue(
@@ -53,6 +56,8 @@ public class SetValidFromAndUntilChangeBuilder implements Builder<SetValidFromAn
 
     /**
      *  <p>Shape of the value for <code>setValidFromAndUntil</code> action</p>
+     * @param previousValue
+     * @return Builder
      */
 
     public SetValidFromAndUntilChangeBuilder previousValue(
@@ -63,6 +68,7 @@ public class SetValidFromAndUntilChangeBuilder implements Builder<SetValidFromAn
 
     /**
      *  <p>Shape of the value for <code>setValidFromAndUntil</code> action</p>
+     * @return Builder
      */
 
     public SetValidFromAndUntilChangeBuilder nextValue(
@@ -74,6 +80,8 @@ public class SetValidFromAndUntilChangeBuilder implements Builder<SetValidFromAn
 
     /**
      *  <p>Shape of the value for <code>setValidFromAndUntil</code> action</p>
+     * @param nextValue
+     * @return Builder
      */
 
     public SetValidFromAndUntilChangeBuilder nextValue(

@@ -70,6 +70,8 @@ public class AddressImpl implements Address, ModelBase {
 
     private String externalId;
 
+    private com.commercetools.importapi.models.customfields.Custom custom;
+
     @JsonCreator
     AddressImpl(@JsonProperty("id") final String id, @JsonProperty("key") final String key,
             @JsonProperty("title") final String title, @JsonProperty("salutation") final String salutation,
@@ -85,7 +87,8 @@ public class AddressImpl implements Address, ModelBase {
             @JsonProperty("phone") final String phone, @JsonProperty("mobile") final String mobile,
             @JsonProperty("email") final String email, @JsonProperty("fax") final String fax,
             @JsonProperty("additionalAddressInfo") final String additionalAddressInfo,
-            @JsonProperty("externalId") final String externalId) {
+            @JsonProperty("externalId") final String externalId,
+            @JsonProperty("custom") final com.commercetools.importapi.models.customfields.Custom custom) {
         this.id = id;
         this.key = key;
         this.title = title;
@@ -111,6 +114,7 @@ public class AddressImpl implements Address, ModelBase {
         this.fax = fax;
         this.additionalAddressInfo = additionalAddressInfo;
         this.externalId = externalId;
+        this.custom = custom;
     }
 
     public AddressImpl() {
@@ -316,6 +320,14 @@ public class AddressImpl implements Address, ModelBase {
         return this.externalId;
     }
 
+    /**
+     *  <p>Custom Fields for the address.</p>
+     */
+
+    public com.commercetools.importapi.models.customfields.Custom getCustom() {
+        return this.custom;
+    }
+
     public void setId(final String id) {
         this.id = id;
     }
@@ -416,6 +428,10 @@ public class AddressImpl implements Address, ModelBase {
         this.externalId = externalId;
     }
 
+    public void setCustom(final com.commercetools.importapi.models.customfields.Custom custom) {
+        this.custom = custom;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -451,6 +467,7 @@ public class AddressImpl implements Address, ModelBase {
                 .append(fax, that.fax)
                 .append(additionalAddressInfo, that.additionalAddressInfo)
                 .append(externalId, that.externalId)
+                .append(custom, that.custom)
                 .isEquals();
     }
 
@@ -481,6 +498,7 @@ public class AddressImpl implements Address, ModelBase {
                 .append(fax)
                 .append(additionalAddressInfo)
                 .append(externalId)
+                .append(custom)
                 .toHashCode();
     }
 

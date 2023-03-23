@@ -26,6 +26,7 @@ public class TaxCategoryAddTaxRateActionBuilder implements Builder<TaxCategoryAd
 
     /**
      *  <p>Value to append to the <code>rates</code> array.</p>
+     * @return Builder
      */
 
     public TaxCategoryAddTaxRateActionBuilder taxRate(
@@ -36,6 +37,8 @@ public class TaxCategoryAddTaxRateActionBuilder implements Builder<TaxCategoryAd
 
     /**
      *  <p>Value to append to the <code>rates</code> array.</p>
+     * @param taxRate
+     * @return Builder
      */
 
     public TaxCategoryAddTaxRateActionBuilder taxRate(

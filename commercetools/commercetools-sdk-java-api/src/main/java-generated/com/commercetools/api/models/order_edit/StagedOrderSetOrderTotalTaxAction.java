@@ -38,6 +38,7 @@ public interface StagedOrderSetOrderTotalTaxAction extends StagedOrderUpdateActi
     /**
      *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
      *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
+     * @return externalTotalGross
      */
     @NotNull
     @Valid
@@ -46,6 +47,7 @@ public interface StagedOrderSetOrderTotalTaxAction extends StagedOrderUpdateActi
 
     /**
      *
+     * @return externalTaxPortions
      */
     @Valid
     @JsonProperty("externalTaxPortions")

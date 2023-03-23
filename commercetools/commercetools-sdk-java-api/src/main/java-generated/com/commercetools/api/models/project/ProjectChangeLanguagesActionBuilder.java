@@ -25,6 +25,8 @@ public class ProjectChangeLanguagesActionBuilder implements Builder<ProjectChang
 
     /**
      *  <p>New value to set. Must not be empty.</p>
+     * @param languages
+     * @return Builder
      */
 
     public ProjectChangeLanguagesActionBuilder languages(final String... languages) {
@@ -34,6 +36,8 @@ public class ProjectChangeLanguagesActionBuilder implements Builder<ProjectChang
 
     /**
      *  <p>New value to set. Must not be empty.</p>
+     * @param languages
+     * @return Builder
      */
 
     public ProjectChangeLanguagesActionBuilder languages(final java.util.List<String> languages) {
@@ -43,6 +47,8 @@ public class ProjectChangeLanguagesActionBuilder implements Builder<ProjectChang
 
     /**
      *  <p>New value to set. Must not be empty.</p>
+     * @param languages
+     * @return Builder
      */
 
     public ProjectChangeLanguagesActionBuilder plusLanguages(final String... languages) {

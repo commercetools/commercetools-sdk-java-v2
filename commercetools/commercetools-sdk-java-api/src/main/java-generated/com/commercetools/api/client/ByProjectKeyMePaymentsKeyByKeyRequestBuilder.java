@@ -28,6 +28,10 @@ public class ByProjectKeyMePaymentsKeyByKeyRequestBuilder {
         return new ByProjectKeyMePaymentsKeyByKeyPost(apiHttpClient, projectKey, key, myPaymentUpdate);
     }
 
+    public ByProjectKeyMePaymentsKeyByKeyPostString post(final String myPaymentUpdate) {
+        return new ByProjectKeyMePaymentsKeyByKeyPostString(apiHttpClient, projectKey, key, myPaymentUpdate);
+    }
+
     public ByProjectKeyMePaymentsKeyByKeyPost post(
             UnaryOperator<com.commercetools.api.models.me.MyPaymentUpdateBuilder> op) {
         return post(op.apply(com.commercetools.api.models.me.MyPaymentUpdateBuilder.of()).build());

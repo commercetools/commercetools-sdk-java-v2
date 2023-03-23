@@ -31,6 +31,7 @@ public class CartSetBillingAddressCustomTypeActionBuilder implements Builder<Car
 
     /**
      *  <p>Defines the Type that extends the <code>billingAddress</code> with Custom Fields. If absent, any existing Type and Custom Fields are removed from the <code>billingAddress</code>.</p>
+     * @return Builder
      */
 
     public CartSetBillingAddressCustomTypeActionBuilder type(
@@ -41,6 +42,8 @@ public class CartSetBillingAddressCustomTypeActionBuilder implements Builder<Car
 
     /**
      *  <p>Defines the Type that extends the <code>billingAddress</code> with Custom Fields. If absent, any existing Type and Custom Fields are removed from the <code>billingAddress</code>.</p>
+     * @param type
+     * @return Builder
      */
 
     public CartSetBillingAddressCustomTypeActionBuilder type(
@@ -51,6 +54,7 @@ public class CartSetBillingAddressCustomTypeActionBuilder implements Builder<Car
 
     /**
      *  <p>Sets the Custom Fields fields for the <code>billingAddress</code>.</p>
+     * @return Builder
      */
 
     public CartSetBillingAddressCustomTypeActionBuilder fields(
@@ -61,6 +65,8 @@ public class CartSetBillingAddressCustomTypeActionBuilder implements Builder<Car
 
     /**
      *  <p>Sets the Custom Fields fields for the <code>billingAddress</code>.</p>
+     * @param fields
+     * @return Builder
      */
 
     public CartSetBillingAddressCustomTypeActionBuilder fields(

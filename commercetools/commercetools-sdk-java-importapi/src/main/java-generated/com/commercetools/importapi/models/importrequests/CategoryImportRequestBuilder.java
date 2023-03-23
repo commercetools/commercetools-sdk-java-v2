@@ -26,6 +26,8 @@ public class CategoryImportRequestBuilder implements Builder<CategoryImportReque
 
     /**
      *  <p>The category import resources of this request.</p>
+     * @param resources
+     * @return Builder
      */
 
     public CategoryImportRequestBuilder resources(
@@ -36,6 +38,8 @@ public class CategoryImportRequestBuilder implements Builder<CategoryImportReque
 
     /**
      *  <p>The category import resources of this request.</p>
+     * @param resources
+     * @return Builder
      */
 
     public CategoryImportRequestBuilder resources(
@@ -46,6 +50,8 @@ public class CategoryImportRequestBuilder implements Builder<CategoryImportReque
 
     /**
      *  <p>The category import resources of this request.</p>
+     * @param resources
+     * @return Builder
      */
 
     public CategoryImportRequestBuilder plusResources(
@@ -59,6 +65,7 @@ public class CategoryImportRequestBuilder implements Builder<CategoryImportReque
 
     /**
      *  <p>The category import resources of this request.</p>
+     * @return Builder
      */
 
     public CategoryImportRequestBuilder plusResources(
@@ -73,6 +80,7 @@ public class CategoryImportRequestBuilder implements Builder<CategoryImportReque
 
     /**
      *  <p>The category import resources of this request.</p>
+     * @return Builder
      */
 
     public CategoryImportRequestBuilder withResources(

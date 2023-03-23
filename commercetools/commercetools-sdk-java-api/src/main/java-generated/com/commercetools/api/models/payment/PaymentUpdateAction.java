@@ -53,6 +53,7 @@ public interface PaymentUpdateAction extends com.commercetools.api.models.Resour
 
     /**
      *
+     * @return action
      */
     @NotNull
     @JsonProperty("action")

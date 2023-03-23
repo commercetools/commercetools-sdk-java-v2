@@ -34,6 +34,7 @@ public interface OrderReference extends Reference, com.commercetools.api.models.
 
     /**
      *
+     * @return obj
      */
     @Valid
     @JsonProperty("obj")

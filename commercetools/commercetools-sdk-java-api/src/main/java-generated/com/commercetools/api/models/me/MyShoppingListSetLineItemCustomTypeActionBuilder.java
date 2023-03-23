@@ -35,6 +35,8 @@ public class MyShoppingListSetLineItemCustomTypeActionBuilder
 
     /**
      *  <p>Unique identifier of an existing ShoppingListLineItem in the ShoppingList.</p>
+     * @param lineItemId
+     * @return Builder
      */
 
     public MyShoppingListSetLineItemCustomTypeActionBuilder lineItemId(final String lineItemId) {
@@ -44,6 +46,7 @@ public class MyShoppingListSetLineItemCustomTypeActionBuilder
 
     /**
      *  <p>Defines the Type that extends the ShoppingListLineItem with Custom Fields. If absent, any existing Type and Custom Fields are removed from the ShoppingListLineItem.</p>
+     * @return Builder
      */
 
     public MyShoppingListSetLineItemCustomTypeActionBuilder type(
@@ -54,6 +57,8 @@ public class MyShoppingListSetLineItemCustomTypeActionBuilder
 
     /**
      *  <p>Defines the Type that extends the ShoppingListLineItem with Custom Fields. If absent, any existing Type and Custom Fields are removed from the ShoppingListLineItem.</p>
+     * @param type
+     * @return Builder
      */
 
     public MyShoppingListSetLineItemCustomTypeActionBuilder type(
@@ -64,6 +69,7 @@ public class MyShoppingListSetLineItemCustomTypeActionBuilder
 
     /**
      *  <p>Sets the Custom Fields fields for the ShoppingListLineItem.</p>
+     * @return Builder
      */
 
     public MyShoppingListSetLineItemCustomTypeActionBuilder fields(
@@ -74,6 +80,8 @@ public class MyShoppingListSetLineItemCustomTypeActionBuilder
 
     /**
      *  <p>Sets the Custom Fields fields for the ShoppingListLineItem.</p>
+     * @param fields
+     * @return Builder
      */
 
     public MyShoppingListSetLineItemCustomTypeActionBuilder fields(

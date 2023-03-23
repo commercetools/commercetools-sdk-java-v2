@@ -31,6 +31,8 @@ public class OrderSetDeliveryAddressActionBuilder implements Builder<OrderSetDel
 
     /**
      *
+     * @param deliveryId
+     * @return Builder
      */
 
     public OrderSetDeliveryAddressActionBuilder deliveryId(final String deliveryId) {
@@ -40,6 +42,7 @@ public class OrderSetDeliveryAddressActionBuilder implements Builder<OrderSetDel
 
     /**
      *  <p>Polymorphic base type that represents a postal address and contact details. Depending on the read or write action, it can be either Address or AddressDraft that only differ in the data type for the optional <code>custom</code> field.</p>
+     * @return Builder
      */
 
     public OrderSetDeliveryAddressActionBuilder address(
@@ -50,6 +53,8 @@ public class OrderSetDeliveryAddressActionBuilder implements Builder<OrderSetDel
 
     /**
      *  <p>Polymorphic base type that represents a postal address and contact details. Depending on the read or write action, it can be either Address or AddressDraft that only differ in the data type for the optional <code>custom</code> field.</p>
+     * @param address
+     * @return Builder
      */
 
     public OrderSetDeliveryAddressActionBuilder address(

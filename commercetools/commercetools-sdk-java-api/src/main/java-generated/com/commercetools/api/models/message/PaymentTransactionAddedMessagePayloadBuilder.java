@@ -26,6 +26,7 @@ public class PaymentTransactionAddedMessagePayloadBuilder implements Builder<Pay
 
     /**
      *  <p>Transaction that was added to the Payment.</p>
+     * @return Builder
      */
 
     public PaymentTransactionAddedMessagePayloadBuilder transaction(
@@ -36,6 +37,8 @@ public class PaymentTransactionAddedMessagePayloadBuilder implements Builder<Pay
 
     /**
      *  <p>Transaction that was added to the Payment.</p>
+     * @param transaction
+     * @return Builder
      */
 
     public PaymentTransactionAddedMessagePayloadBuilder transaction(

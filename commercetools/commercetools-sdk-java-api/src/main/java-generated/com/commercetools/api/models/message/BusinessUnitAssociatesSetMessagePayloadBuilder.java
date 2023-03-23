@@ -27,6 +27,8 @@ public class BusinessUnitAssociatesSetMessagePayloadBuilder
 
     /**
      *  <p>The list of Associates that was updated on the Business Unit.</p>
+     * @param associates
+     * @return Builder
      */
 
     public BusinessUnitAssociatesSetMessagePayloadBuilder associates(
@@ -37,6 +39,8 @@ public class BusinessUnitAssociatesSetMessagePayloadBuilder
 
     /**
      *  <p>The list of Associates that was updated on the Business Unit.</p>
+     * @param associates
+     * @return Builder
      */
 
     public BusinessUnitAssociatesSetMessagePayloadBuilder associates(
@@ -47,6 +51,8 @@ public class BusinessUnitAssociatesSetMessagePayloadBuilder
 
     /**
      *  <p>The list of Associates that was updated on the Business Unit.</p>
+     * @param associates
+     * @return Builder
      */
 
     public BusinessUnitAssociatesSetMessagePayloadBuilder plusAssociates(
@@ -60,6 +66,7 @@ public class BusinessUnitAssociatesSetMessagePayloadBuilder
 
     /**
      *  <p>The list of Associates that was updated on the Business Unit.</p>
+     * @return Builder
      */
 
     public BusinessUnitAssociatesSetMessagePayloadBuilder plusAssociates(
@@ -73,6 +80,7 @@ public class BusinessUnitAssociatesSetMessagePayloadBuilder
 
     /**
      *  <p>The list of Associates that was updated on the Business Unit.</p>
+     * @return Builder
      */
 
     public BusinessUnitAssociatesSetMessagePayloadBuilder withAssociates(

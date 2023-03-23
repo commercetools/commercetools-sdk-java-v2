@@ -35,6 +35,7 @@ public interface BusinessUnitChangeAddressAction extends BusinessUnitUpdateActio
 
     /**
      *  <p>ID of the address to change. Either <code>addressId</code> or <code>addressKey</code> is required.</p>
+     * @return addressId
      */
 
     @JsonProperty("addressId")
@@ -42,6 +43,7 @@ public interface BusinessUnitChangeAddressAction extends BusinessUnitUpdateActio
 
     /**
      *  <p>Key of the address to change. Either <code>addressId</code> or <code>addressKey</code> is required.</p>
+     * @return addressKey
      */
 
     @JsonProperty("addressKey")
@@ -49,6 +51,7 @@ public interface BusinessUnitChangeAddressAction extends BusinessUnitUpdateActio
 
     /**
      *  <p>New address to set.</p>
+     * @return address
      */
     @NotNull
     @Valid

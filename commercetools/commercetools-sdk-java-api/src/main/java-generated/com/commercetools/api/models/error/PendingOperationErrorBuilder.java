@@ -27,6 +27,8 @@ public class PendingOperationErrorBuilder implements Builder<PendingOperationErr
 
     /**
      *  <p>Plain text description of the error.</p>
+     * @param message
+     * @return Builder
      */
 
     public PendingOperationErrorBuilder message(final String message) {

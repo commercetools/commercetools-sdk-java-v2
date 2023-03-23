@@ -25,6 +25,8 @@ public class AccessDeniedErrorBuilder implements Builder<AccessDeniedError> {
 
     /**
      *
+     * @param message
+     * @return Builder
      */
 
     public AccessDeniedErrorBuilder message(final String message) {

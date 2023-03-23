@@ -62,6 +62,8 @@ public class StoreDistributionChannelsChangedMessageBuilder
 
     /**
      *  <p>Unique identifier of the Message. Can be used to track which Messages have been processed.</p>
+     * @param id
+     * @return Builder
      */
 
     public StoreDistributionChannelsChangedMessageBuilder id(final String id) {
@@ -71,6 +73,8 @@ public class StoreDistributionChannelsChangedMessageBuilder
 
     /**
      *  <p>Version of a resource. In case of Messages, this is always <code>1</code>.</p>
+     * @param version
+     * @return Builder
      */
 
     public StoreDistributionChannelsChangedMessageBuilder version(final Long version) {
@@ -80,6 +84,8 @@ public class StoreDistributionChannelsChangedMessageBuilder
 
     /**
      *  <p>Date and time (UTC) the Message was generated.</p>
+     * @param createdAt
+     * @return Builder
      */
 
     public StoreDistributionChannelsChangedMessageBuilder createdAt(final java.time.ZonedDateTime createdAt) {
@@ -89,6 +95,8 @@ public class StoreDistributionChannelsChangedMessageBuilder
 
     /**
      *  <p>Value of <code>createdAt</code>.</p>
+     * @param lastModifiedAt
+     * @return Builder
      */
 
     public StoreDistributionChannelsChangedMessageBuilder lastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {
@@ -98,6 +106,7 @@ public class StoreDistributionChannelsChangedMessageBuilder
 
     /**
      *  <p>Value of <code>createdBy</code>.</p>
+     * @return Builder
      */
 
     public StoreDistributionChannelsChangedMessageBuilder lastModifiedBy(
@@ -108,6 +117,8 @@ public class StoreDistributionChannelsChangedMessageBuilder
 
     /**
      *  <p>Value of <code>createdBy</code>.</p>
+     * @param lastModifiedBy
+     * @return Builder
      */
 
     public StoreDistributionChannelsChangedMessageBuilder lastModifiedBy(
@@ -118,6 +129,7 @@ public class StoreDistributionChannelsChangedMessageBuilder
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @return Builder
      */
 
     public StoreDistributionChannelsChangedMessageBuilder createdBy(
@@ -128,6 +140,8 @@ public class StoreDistributionChannelsChangedMessageBuilder
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param createdBy
+     * @return Builder
      */
 
     public StoreDistributionChannelsChangedMessageBuilder createdBy(
@@ -138,6 +152,8 @@ public class StoreDistributionChannelsChangedMessageBuilder
 
     /**
      *  <p>Message number in relation to other Messages for a given resource. The <code>sequenceNumber</code> of the next Message for the resource is the successor of the <code>sequenceNumber</code> of the current Message. Meaning, the <code>sequenceNumber</code> of the next Message equals the <code>sequenceNumber</code> of the current Message + 1. <code>sequenceNumber</code> can be used to ensure that Messages are processed in the correct order for a particular resource.</p>
+     * @param sequenceNumber
+     * @return Builder
      */
 
     public StoreDistributionChannelsChangedMessageBuilder sequenceNumber(final Long sequenceNumber) {
@@ -147,6 +163,8 @@ public class StoreDistributionChannelsChangedMessageBuilder
 
     /**
      *  <p>Reference to the resource on which the change or action was performed.</p>
+     * @param resource
+     * @return Builder
      */
 
     public StoreDistributionChannelsChangedMessageBuilder resource(
@@ -157,6 +175,7 @@ public class StoreDistributionChannelsChangedMessageBuilder
 
     /**
      *  <p>Reference to the resource on which the change or action was performed.</p>
+     * @return Builder
      */
 
     public StoreDistributionChannelsChangedMessageBuilder resource(
@@ -167,6 +186,8 @@ public class StoreDistributionChannelsChangedMessageBuilder
 
     /**
      *  <p>Version of the resource on which the change or action was performed.</p>
+     * @param resourceVersion
+     * @return Builder
      */
 
     public StoreDistributionChannelsChangedMessageBuilder resourceVersion(final Long resourceVersion) {
@@ -176,6 +197,7 @@ public class StoreDistributionChannelsChangedMessageBuilder
 
     /**
      *  <p>User-provided identifiers of the resource, such as <code>key</code> or <code>externalId</code>. Only present if the resource has such identifiers.</p>
+     * @return Builder
      */
 
     public StoreDistributionChannelsChangedMessageBuilder resourceUserProvidedIdentifiers(
@@ -188,6 +210,8 @@ public class StoreDistributionChannelsChangedMessageBuilder
 
     /**
      *  <p>User-provided identifiers of the resource, such as <code>key</code> or <code>externalId</code>. Only present if the resource has such identifiers.</p>
+     * @param resourceUserProvidedIdentifiers
+     * @return Builder
      */
 
     public StoreDistributionChannelsChangedMessageBuilder resourceUserProvidedIdentifiers(
@@ -198,6 +222,8 @@ public class StoreDistributionChannelsChangedMessageBuilder
 
     /**
      *  <p>Product distribution Channels that have been added to the Store.</p>
+     * @param addedDistributionChannels
+     * @return Builder
      */
 
     public StoreDistributionChannelsChangedMessageBuilder addedDistributionChannels(
@@ -208,6 +234,8 @@ public class StoreDistributionChannelsChangedMessageBuilder
 
     /**
      *  <p>Product distribution Channels that have been added to the Store.</p>
+     * @param addedDistributionChannels
+     * @return Builder
      */
 
     public StoreDistributionChannelsChangedMessageBuilder addedDistributionChannels(
@@ -218,6 +246,8 @@ public class StoreDistributionChannelsChangedMessageBuilder
 
     /**
      *  <p>Product distribution Channels that have been added to the Store.</p>
+     * @param addedDistributionChannels
+     * @return Builder
      */
 
     public StoreDistributionChannelsChangedMessageBuilder plusAddedDistributionChannels(
@@ -231,6 +261,7 @@ public class StoreDistributionChannelsChangedMessageBuilder
 
     /**
      *  <p>Product distribution Channels that have been added to the Store.</p>
+     * @return Builder
      */
 
     public StoreDistributionChannelsChangedMessageBuilder plusAddedDistributionChannels(
@@ -245,6 +276,7 @@ public class StoreDistributionChannelsChangedMessageBuilder
 
     /**
      *  <p>Product distribution Channels that have been added to the Store.</p>
+     * @return Builder
      */
 
     public StoreDistributionChannelsChangedMessageBuilder withAddedDistributionChannels(
@@ -257,6 +289,8 @@ public class StoreDistributionChannelsChangedMessageBuilder
 
     /**
      *  <p>Product distribution Channels that have been removed from the Store.</p>
+     * @param removedDistributionChannels
+     * @return Builder
      */
 
     public StoreDistributionChannelsChangedMessageBuilder removedDistributionChannels(
@@ -267,6 +301,8 @@ public class StoreDistributionChannelsChangedMessageBuilder
 
     /**
      *  <p>Product distribution Channels that have been removed from the Store.</p>
+     * @param removedDistributionChannels
+     * @return Builder
      */
 
     public StoreDistributionChannelsChangedMessageBuilder removedDistributionChannels(
@@ -277,6 +313,8 @@ public class StoreDistributionChannelsChangedMessageBuilder
 
     /**
      *  <p>Product distribution Channels that have been removed from the Store.</p>
+     * @param removedDistributionChannels
+     * @return Builder
      */
 
     public StoreDistributionChannelsChangedMessageBuilder plusRemovedDistributionChannels(
@@ -290,6 +328,7 @@ public class StoreDistributionChannelsChangedMessageBuilder
 
     /**
      *  <p>Product distribution Channels that have been removed from the Store.</p>
+     * @return Builder
      */
 
     public StoreDistributionChannelsChangedMessageBuilder plusRemovedDistributionChannels(
@@ -304,6 +343,7 @@ public class StoreDistributionChannelsChangedMessageBuilder
 
     /**
      *  <p>Product distribution Channels that have been removed from the Store.</p>
+     * @return Builder
      */
 
     public StoreDistributionChannelsChangedMessageBuilder withRemovedDistributionChannels(

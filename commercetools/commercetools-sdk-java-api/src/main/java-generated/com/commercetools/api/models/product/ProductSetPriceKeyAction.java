@@ -33,6 +33,7 @@ public interface ProductSetPriceKeyAction extends ProductUpdateAction {
 
     /**
      *  <p>The <code>id</code> of the Price to set the key.</p>
+     * @return priceId
      */
     @NotNull
     @JsonProperty("priceId")
@@ -40,6 +41,7 @@ public interface ProductSetPriceKeyAction extends ProductUpdateAction {
 
     /**
      *  <p>If <code>true</code>, only the staged Embedded Price is updated. If <code>false</code>, both the current and staged Embedded Price are updated.</p>
+     * @return staged
      */
 
     @JsonProperty("staged")
@@ -47,6 +49,7 @@ public interface ProductSetPriceKeyAction extends ProductUpdateAction {
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
+     * @return key
      */
 
     @JsonProperty("key")

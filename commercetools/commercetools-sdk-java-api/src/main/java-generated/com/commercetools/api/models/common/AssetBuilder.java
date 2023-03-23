@@ -46,6 +46,8 @@ public class AssetBuilder implements Builder<Asset> {
 
     /**
      *  <p>Unique identifier of the Asset.</p>
+     * @param id
+     * @return Builder
      */
 
     public AssetBuilder id(final String id) {
@@ -55,6 +57,8 @@ public class AssetBuilder implements Builder<Asset> {
 
     /**
      *
+     * @param sources
+     * @return Builder
      */
 
     public AssetBuilder sources(final com.commercetools.api.models.common.AssetSource... sources) {
@@ -64,6 +68,8 @@ public class AssetBuilder implements Builder<Asset> {
 
     /**
      *
+     * @param sources
+     * @return Builder
      */
 
     public AssetBuilder sources(final java.util.List<com.commercetools.api.models.common.AssetSource> sources) {
@@ -73,6 +79,8 @@ public class AssetBuilder implements Builder<Asset> {
 
     /**
      *
+     * @param sources
+     * @return Builder
      */
 
     public AssetBuilder plusSources(final com.commercetools.api.models.common.AssetSource... sources) {
@@ -85,6 +93,7 @@ public class AssetBuilder implements Builder<Asset> {
 
     /**
      *
+     * @return Builder
      */
 
     public AssetBuilder plusSources(
@@ -98,6 +107,7 @@ public class AssetBuilder implements Builder<Asset> {
 
     /**
      *
+     * @return Builder
      */
 
     public AssetBuilder withSources(
@@ -109,6 +119,7 @@ public class AssetBuilder implements Builder<Asset> {
 
     /**
      *  <p>Name of the Asset.</p>
+     * @return Builder
      */
 
     public AssetBuilder name(
@@ -119,6 +130,8 @@ public class AssetBuilder implements Builder<Asset> {
 
     /**
      *  <p>Name of the Asset.</p>
+     * @param name
+     * @return Builder
      */
 
     public AssetBuilder name(final com.commercetools.api.models.common.LocalizedString name) {
@@ -128,6 +141,7 @@ public class AssetBuilder implements Builder<Asset> {
 
     /**
      *  <p>Description of the Asset.</p>
+     * @return Builder
      */
 
     public AssetBuilder description(
@@ -138,6 +152,8 @@ public class AssetBuilder implements Builder<Asset> {
 
     /**
      *  <p>Description of the Asset.</p>
+     * @param description
+     * @return Builder
      */
 
     public AssetBuilder description(@Nullable final com.commercetools.api.models.common.LocalizedString description) {
@@ -147,6 +163,8 @@ public class AssetBuilder implements Builder<Asset> {
 
     /**
      *  <p>Keywords for categorizing and organizing Assets.</p>
+     * @param tags
+     * @return Builder
      */
 
     public AssetBuilder tags(@Nullable final String... tags) {
@@ -156,6 +174,8 @@ public class AssetBuilder implements Builder<Asset> {
 
     /**
      *  <p>Keywords for categorizing and organizing Assets.</p>
+     * @param tags
+     * @return Builder
      */
 
     public AssetBuilder tags(@Nullable final java.util.List<String> tags) {
@@ -165,6 +185,8 @@ public class AssetBuilder implements Builder<Asset> {
 
     /**
      *  <p>Keywords for categorizing and organizing Assets.</p>
+     * @param tags
+     * @return Builder
      */
 
     public AssetBuilder plusTags(@Nullable final String... tags) {
@@ -177,6 +199,7 @@ public class AssetBuilder implements Builder<Asset> {
 
     /**
      *  <p>Custom Fields defined for the Asset.</p>
+     * @return Builder
      */
 
     public AssetBuilder custom(
@@ -187,6 +210,8 @@ public class AssetBuilder implements Builder<Asset> {
 
     /**
      *  <p>Custom Fields defined for the Asset.</p>
+     * @param custom
+     * @return Builder
      */
 
     public AssetBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFields custom) {
@@ -196,6 +221,8 @@ public class AssetBuilder implements Builder<Asset> {
 
     /**
      *  <p>User-defined unique identifier of the Asset.</p>
+     * @param key
+     * @return Builder
      */
 
     public AssetBuilder key(@Nullable final String key) {

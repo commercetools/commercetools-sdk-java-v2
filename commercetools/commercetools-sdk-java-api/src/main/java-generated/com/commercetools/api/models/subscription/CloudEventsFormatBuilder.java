@@ -24,7 +24,9 @@ public class CloudEventsFormatBuilder implements Builder<CloudEventsFormat> {
     private String cloudEventsVersion;
 
     /**
-     *  <p>Supported versions: "1.0".</p>
+     *
+     * @param cloudEventsVersion
+     * @return Builder
      */
 
     public CloudEventsFormatBuilder cloudEventsVersion(final String cloudEventsVersion) {

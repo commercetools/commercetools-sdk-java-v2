@@ -25,6 +25,8 @@ public class OrderKeyReferenceBuilder implements Builder<OrderKeyReference> {
 
     /**
      *
+     * @param key
+     * @return Builder
      */
 
     public OrderKeyReferenceBuilder key(final String key) {

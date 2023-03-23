@@ -31,6 +31,8 @@ public class SetInterfaceIdChangeBuilder implements Builder<SetInterfaceIdChange
 
     /**
      *  <p>Shape of the action for <code>setInterfaceId</code></p>
+     * @param change
+     * @return Builder
      */
 
     public SetInterfaceIdChangeBuilder change(final String change) {
@@ -40,6 +42,8 @@ public class SetInterfaceIdChangeBuilder implements Builder<SetInterfaceIdChange
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public SetInterfaceIdChangeBuilder previousValue(final String previousValue) {
@@ -49,6 +53,8 @@ public class SetInterfaceIdChangeBuilder implements Builder<SetInterfaceIdChange
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public SetInterfaceIdChangeBuilder nextValue(final String nextValue) {

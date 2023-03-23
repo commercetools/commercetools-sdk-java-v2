@@ -35,6 +35,7 @@ public interface ProductAddExternalImageAction extends ProductUpdateAction {
 
     /**
      *  <p>The <code>id</code> of the ProductVariant to update.</p>
+     * @return variantId
      */
 
     @JsonProperty("variantId")
@@ -42,6 +43,7 @@ public interface ProductAddExternalImageAction extends ProductUpdateAction {
 
     /**
      *  <p>The <code>sku</code> of the ProductVariant to update.</p>
+     * @return sku
      */
 
     @JsonProperty("sku")
@@ -49,6 +51,7 @@ public interface ProductAddExternalImageAction extends ProductUpdateAction {
 
     /**
      *  <p>Value to add to <code>images</code>.</p>
+     * @return image
      */
     @NotNull
     @Valid
@@ -57,6 +60,7 @@ public interface ProductAddExternalImageAction extends ProductUpdateAction {
 
     /**
      *  <p>If <code>true</code>, only the staged <code>images</code> is updated. If <code>false</code>, both the current and staged <code>images</code> is updated.</p>
+     * @return staged
      */
 
     @JsonProperty("staged")

@@ -37,6 +37,7 @@ public interface DeliveryChangeValue {
 
     /**
      *
+     * @return items
      */
     @NotNull
     @Valid
@@ -45,6 +46,7 @@ public interface DeliveryChangeValue {
 
     /**
      *
+     * @return address
      */
     @NotNull
     @Valid
@@ -53,6 +55,7 @@ public interface DeliveryChangeValue {
 
     /**
      *
+     * @return parcels
      */
     @NotNull
     @Valid

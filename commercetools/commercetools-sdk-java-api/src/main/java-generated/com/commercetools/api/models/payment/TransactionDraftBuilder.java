@@ -43,6 +43,8 @@ public class TransactionDraftBuilder implements Builder<TransactionDraft> {
 
     /**
      *  <p>Date and time (UTC) the Transaction took place.</p>
+     * @param timestamp
+     * @return Builder
      */
 
     public TransactionDraftBuilder timestamp(@Nullable final java.time.ZonedDateTime timestamp) {
@@ -52,6 +54,8 @@ public class TransactionDraftBuilder implements Builder<TransactionDraft> {
 
     /**
      *  <p>Type of the Transaction.</p>
+     * @param type
+     * @return Builder
      */
 
     public TransactionDraftBuilder type(final com.commercetools.api.models.payment.TransactionType type) {
@@ -61,6 +65,7 @@ public class TransactionDraftBuilder implements Builder<TransactionDraft> {
 
     /**
      *  <p>Money value for the Transaction.</p>
+     * @return Builder
      */
 
     public TransactionDraftBuilder amount(
@@ -71,6 +76,8 @@ public class TransactionDraftBuilder implements Builder<TransactionDraft> {
 
     /**
      *  <p>Money value for the Transaction.</p>
+     * @param amount
+     * @return Builder
      */
 
     public TransactionDraftBuilder amount(final com.commercetools.api.models.common.Money amount) {
@@ -80,6 +87,8 @@ public class TransactionDraftBuilder implements Builder<TransactionDraft> {
 
     /**
      *  <p>Identifier used by the payment service that manages the Transaction. Can be used to correlate the Transaction to an interface interaction.</p>
+     * @param interactionId
+     * @return Builder
      */
 
     public TransactionDraftBuilder interactionId(@Nullable final String interactionId) {
@@ -89,6 +98,8 @@ public class TransactionDraftBuilder implements Builder<TransactionDraft> {
 
     /**
      *  <p>State of the Transaction.</p>
+     * @param state
+     * @return Builder
      */
 
     public TransactionDraftBuilder state(@Nullable final com.commercetools.api.models.payment.TransactionState state) {
@@ -98,6 +109,7 @@ public class TransactionDraftBuilder implements Builder<TransactionDraft> {
 
     /**
      *  <p>Custom Fields of the Transaction.</p>
+     * @return Builder
      */
 
     public TransactionDraftBuilder custom(
@@ -108,6 +120,8 @@ public class TransactionDraftBuilder implements Builder<TransactionDraft> {
 
     /**
      *  <p>Custom Fields of the Transaction.</p>
+     * @param custom
+     * @return Builder
      */
 
     public TransactionDraftBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFieldsDraft custom) {

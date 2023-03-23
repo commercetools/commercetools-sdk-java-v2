@@ -38,6 +38,7 @@ public class ByProjectKeyProductSelectionsByIDProductsGet extends
         ApiMethod<ByProjectKeyProductSelectionsByIDProductsGet, com.commercetools.api.models.product_selection.ProductSelectionProductPagedQueryResponse>
         implements com.commercetools.api.client.ExpandableTrait<ByProjectKeyProductSelectionsByIDProductsGet>,
         com.commercetools.api.client.PagingTrait<ByProjectKeyProductSelectionsByIDProductsGet>,
+        com.commercetools.api.client.SortableTrait<ByProjectKeyProductSelectionsByIDProductsGet>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyProductSelectionsByIDProductsGet>,
         com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyProductSelectionsByIDProductsGet> {
 
@@ -103,6 +104,10 @@ public class ByProjectKeyProductSelectionsByIDProductsGet extends
 
     public List<String> getWithTotal() {
         return this.getQueryParam("withTotal");
+    }
+
+    public List<String> getSort() {
+        return this.getQueryParam("sort");
     }
 
     public void setProjectKey(final String projectKey) {
@@ -348,6 +353,65 @@ public class ByProjectKeyProductSelectionsByIDProductsGet extends
     public <TValue> ByProjectKeyProductSelectionsByIDProductsGet addWithTotal(final Collection<TValue> withTotal) {
         return copy().addQueryParams(
             withTotal.stream().map(s -> new ParamEntry<>("withTotal", s.toString())).collect(Collectors.toList()));
+    }
+
+    /**
+     * set sort with the specified value
+     */
+    public <TValue> ByProjectKeyProductSelectionsByIDProductsGet withSort(final TValue sort) {
+        return copy().withQueryParam("sort", sort);
+    }
+
+    /**
+     * add additional sort query parameter
+     */
+    public <TValue> ByProjectKeyProductSelectionsByIDProductsGet addSort(final TValue sort) {
+        return copy().addQueryParam("sort", sort);
+    }
+
+    /**
+     * set sort with the specified value
+     */
+    public ByProjectKeyProductSelectionsByIDProductsGet withSort(final Supplier<String> supplier) {
+        return copy().withQueryParam("sort", supplier.get());
+    }
+
+    /**
+     * add additional sort query parameter
+     */
+    public ByProjectKeyProductSelectionsByIDProductsGet addSort(final Supplier<String> supplier) {
+        return copy().addQueryParam("sort", supplier.get());
+    }
+
+    /**
+     * set sort with the specified value
+     */
+    public ByProjectKeyProductSelectionsByIDProductsGet withSort(final Function<StringBuilder, StringBuilder> op) {
+        return copy().withQueryParam("sort", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * add additional sort query parameter
+     */
+    public ByProjectKeyProductSelectionsByIDProductsGet addSort(final Function<StringBuilder, StringBuilder> op) {
+        return copy().addQueryParam("sort", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * set sort with the specified values
+     */
+    public <TValue> ByProjectKeyProductSelectionsByIDProductsGet withSort(final Collection<TValue> sort) {
+        return copy().withoutQueryParam("sort")
+                .addQueryParams(
+                    sort.stream().map(s -> new ParamEntry<>("sort", s.toString())).collect(Collectors.toList()));
+    }
+
+    /**
+     * add additional sort query parameters
+     */
+    public <TValue> ByProjectKeyProductSelectionsByIDProductsGet addSort(final Collection<TValue> sort) {
+        return copy().addQueryParams(
+            sort.stream().map(s -> new ParamEntry<>("sort", s.toString())).collect(Collectors.toList()));
     }
 
     @Override

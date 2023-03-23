@@ -32,6 +32,8 @@ public class OrderSetCustomLineItemShippingDetailsActionBuilder
 
     /**
      *
+     * @param customLineItemId
+     * @return Builder
      */
 
     public OrderSetCustomLineItemShippingDetailsActionBuilder customLineItemId(final String customLineItemId) {
@@ -40,7 +42,8 @@ public class OrderSetCustomLineItemShippingDetailsActionBuilder
     }
 
     /**
-     *
+     *  <p>For order creation and updates, the sum of the <code>targets</code> must match the quantity of the Line Items or Custom Line Items.</p>
+     * @return Builder
      */
 
     public OrderSetCustomLineItemShippingDetailsActionBuilder shippingDetails(
@@ -51,7 +54,9 @@ public class OrderSetCustomLineItemShippingDetailsActionBuilder
     }
 
     /**
-     *
+     *  <p>For order creation and updates, the sum of the <code>targets</code> must match the quantity of the Line Items or Custom Line Items.</p>
+     * @param shippingDetails
+     * @return Builder
      */
 
     public OrderSetCustomLineItemShippingDetailsActionBuilder shippingDetails(

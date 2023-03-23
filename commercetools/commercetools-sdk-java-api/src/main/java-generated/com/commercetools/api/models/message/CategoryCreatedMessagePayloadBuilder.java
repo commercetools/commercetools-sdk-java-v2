@@ -26,6 +26,7 @@ public class CategoryCreatedMessagePayloadBuilder implements Builder<CategoryCre
 
     /**
      *  <p>Category that was created.</p>
+     * @return Builder
      */
 
     public CategoryCreatedMessagePayloadBuilder category(
@@ -36,6 +37,8 @@ public class CategoryCreatedMessagePayloadBuilder implements Builder<CategoryCre
 
     /**
      *  <p>Category that was created.</p>
+     * @param category
+     * @return Builder
      */
 
     public CategoryCreatedMessagePayloadBuilder category(

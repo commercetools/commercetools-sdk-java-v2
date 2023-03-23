@@ -29,6 +29,8 @@ public class StoreUpdateBuilder implements Builder<StoreUpdate> {
 
     /**
      *  <p>Expected version of the Store on which the changes should be applied. If the expected version does not match the actual version, a ConcurrentModification error is returned.</p>
+     * @param version
+     * @return Builder
      */
 
     public StoreUpdateBuilder version(final Long version) {
@@ -38,6 +40,8 @@ public class StoreUpdateBuilder implements Builder<StoreUpdate> {
 
     /**
      *  <p>Update actions to be performed on the Store.</p>
+     * @param actions
+     * @return Builder
      */
 
     public StoreUpdateBuilder actions(final com.commercetools.api.models.store.StoreUpdateAction... actions) {
@@ -47,6 +51,8 @@ public class StoreUpdateBuilder implements Builder<StoreUpdate> {
 
     /**
      *  <p>Update actions to be performed on the Store.</p>
+     * @param actions
+     * @return Builder
      */
 
     public StoreUpdateBuilder actions(
@@ -57,6 +63,8 @@ public class StoreUpdateBuilder implements Builder<StoreUpdate> {
 
     /**
      *  <p>Update actions to be performed on the Store.</p>
+     * @param actions
+     * @return Builder
      */
 
     public StoreUpdateBuilder plusActions(final com.commercetools.api.models.store.StoreUpdateAction... actions) {
@@ -69,6 +77,7 @@ public class StoreUpdateBuilder implements Builder<StoreUpdate> {
 
     /**
      *  <p>Update actions to be performed on the Store.</p>
+     * @return Builder
      */
 
     public StoreUpdateBuilder plusActions(
@@ -82,6 +91,7 @@ public class StoreUpdateBuilder implements Builder<StoreUpdate> {
 
     /**
      *  <p>Update actions to be performed on the Store.</p>
+     * @return Builder
      */
 
     public StoreUpdateBuilder withActions(

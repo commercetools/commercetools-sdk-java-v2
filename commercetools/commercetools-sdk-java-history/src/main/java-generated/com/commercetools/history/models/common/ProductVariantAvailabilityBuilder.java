@@ -35,6 +35,8 @@ public class ProductVariantAvailabilityBuilder implements Builder<ProductVariant
 
     /**
      *
+     * @param isOnStock
+     * @return Builder
      */
 
     public ProductVariantAvailabilityBuilder isOnStock(final Boolean isOnStock) {
@@ -44,6 +46,8 @@ public class ProductVariantAvailabilityBuilder implements Builder<ProductVariant
 
     /**
      *
+     * @param restockableInDays
+     * @return Builder
      */
 
     public ProductVariantAvailabilityBuilder restockableInDays(final Integer restockableInDays) {
@@ -53,6 +57,8 @@ public class ProductVariantAvailabilityBuilder implements Builder<ProductVariant
 
     /**
      *
+     * @param availableQuantity
+     * @return Builder
      */
 
     public ProductVariantAvailabilityBuilder availableQuantity(final Integer availableQuantity) {
@@ -62,6 +68,7 @@ public class ProductVariantAvailabilityBuilder implements Builder<ProductVariant
 
     /**
      *
+     * @return Builder
      */
 
     public ProductVariantAvailabilityBuilder channels(
@@ -74,6 +81,8 @@ public class ProductVariantAvailabilityBuilder implements Builder<ProductVariant
 
     /**
      *
+     * @param channels
+     * @return Builder
      */
 
     public ProductVariantAvailabilityBuilder channels(

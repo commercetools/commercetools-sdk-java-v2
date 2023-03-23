@@ -28,6 +28,8 @@ public class OrderStateChangedMessagePayloadBuilder implements Builder<OrderStat
 
     /**
      *  <p>OrderState after the Change Order State update action.</p>
+     * @param orderState
+     * @return Builder
      */
 
     public OrderStateChangedMessagePayloadBuilder orderState(
@@ -38,6 +40,8 @@ public class OrderStateChangedMessagePayloadBuilder implements Builder<OrderStat
 
     /**
      *  <p>OrderState before the Change Order State update action.</p>
+     * @param oldOrderState
+     * @return Builder
      */
 
     public OrderStateChangedMessagePayloadBuilder oldOrderState(

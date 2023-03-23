@@ -38,6 +38,7 @@ public interface CartDiscountTarget {
 
     /**
      *
+     * @return type
      */
     @NotNull
     @JsonProperty("type")

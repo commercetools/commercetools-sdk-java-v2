@@ -30,6 +30,7 @@ public interface OrderSetOrderNumberAction extends OrderUpdateAction {
 
     /**
      *
+     * @return orderNumber
      */
 
     @JsonProperty("orderNumber")

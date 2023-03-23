@@ -39,6 +39,7 @@ public interface CategoryImport extends ImportResource {
 
     /**
      *  <p>Maps to <code>Category.name</code>.</p>
+     * @return name
      */
     @NotNull
     @Valid
@@ -47,6 +48,7 @@ public interface CategoryImport extends ImportResource {
 
     /**
      *  <p>Maps to <code>Category.slug</code>. Must match the pattern <code>[-a-zA-Z0-9_]{2,256}</code>.</p>
+     * @return slug
      */
     @NotNull
     @Valid
@@ -55,6 +57,7 @@ public interface CategoryImport extends ImportResource {
 
     /**
      *  <p>Maps to <code>Category.description</code>.</p>
+     * @return description
      */
     @Valid
     @JsonProperty("description")
@@ -62,6 +65,7 @@ public interface CategoryImport extends ImportResource {
 
     /**
      *  <p>Maps to <code>Category.parent</code>. The Reference to the parent Category with which the Category is associated. If referenced Category does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Category is created.</p>
+     * @return parent
      */
     @Valid
     @JsonProperty("parent")
@@ -69,6 +73,7 @@ public interface CategoryImport extends ImportResource {
 
     /**
      *  <p>Maps to <code>Category.orderHint</code>.</p>
+     * @return orderHint
      */
 
     @JsonProperty("orderHint")
@@ -76,6 +81,7 @@ public interface CategoryImport extends ImportResource {
 
     /**
      *  <p>Maps to <code>Category.externalId</code>.</p>
+     * @return externalId
      */
 
     @JsonProperty("externalId")
@@ -83,6 +89,7 @@ public interface CategoryImport extends ImportResource {
 
     /**
      *  <p>Maps to <code>Category.metaTitle</code>.</p>
+     * @return metaTitle
      */
     @Valid
     @JsonProperty("metaTitle")
@@ -90,6 +97,7 @@ public interface CategoryImport extends ImportResource {
 
     /**
      *  <p>Maps to <code>Category.metaDescription</code>.</p>
+     * @return metaDescription
      */
     @Valid
     @JsonProperty("metaDescription")
@@ -97,6 +105,7 @@ public interface CategoryImport extends ImportResource {
 
     /**
      *  <p>Maps to <code>Category.metaKeywords</code>.</p>
+     * @return metaKeywords
      */
     @Valid
     @JsonProperty("metaKeywords")
@@ -104,6 +113,7 @@ public interface CategoryImport extends ImportResource {
 
     /**
      *
+     * @return assets
      */
     @Valid
     @JsonProperty("assets")
@@ -111,6 +121,7 @@ public interface CategoryImport extends ImportResource {
 
     /**
      *  <p>The custom fields for this Category.</p>
+     * @return custom
      */
     @Valid
     @JsonProperty("custom")

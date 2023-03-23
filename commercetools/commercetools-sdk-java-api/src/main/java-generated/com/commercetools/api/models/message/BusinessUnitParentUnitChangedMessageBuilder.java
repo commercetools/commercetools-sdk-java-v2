@@ -61,6 +61,8 @@ public class BusinessUnitParentUnitChangedMessageBuilder implements Builder<Busi
 
     /**
      *  <p>Unique identifier of the Message. Can be used to track which Messages have been processed.</p>
+     * @param id
+     * @return Builder
      */
 
     public BusinessUnitParentUnitChangedMessageBuilder id(final String id) {
@@ -70,6 +72,8 @@ public class BusinessUnitParentUnitChangedMessageBuilder implements Builder<Busi
 
     /**
      *  <p>Version of a resource. In case of Messages, this is always <code>1</code>.</p>
+     * @param version
+     * @return Builder
      */
 
     public BusinessUnitParentUnitChangedMessageBuilder version(final Long version) {
@@ -79,6 +83,8 @@ public class BusinessUnitParentUnitChangedMessageBuilder implements Builder<Busi
 
     /**
      *  <p>Date and time (UTC) the Message was generated.</p>
+     * @param createdAt
+     * @return Builder
      */
 
     public BusinessUnitParentUnitChangedMessageBuilder createdAt(final java.time.ZonedDateTime createdAt) {
@@ -88,6 +94,8 @@ public class BusinessUnitParentUnitChangedMessageBuilder implements Builder<Busi
 
     /**
      *  <p>Value of <code>createdAt</code>.</p>
+     * @param lastModifiedAt
+     * @return Builder
      */
 
     public BusinessUnitParentUnitChangedMessageBuilder lastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {
@@ -97,6 +105,7 @@ public class BusinessUnitParentUnitChangedMessageBuilder implements Builder<Busi
 
     /**
      *  <p>Value of <code>createdBy</code>.</p>
+     * @return Builder
      */
 
     public BusinessUnitParentUnitChangedMessageBuilder lastModifiedBy(
@@ -107,6 +116,8 @@ public class BusinessUnitParentUnitChangedMessageBuilder implements Builder<Busi
 
     /**
      *  <p>Value of <code>createdBy</code>.</p>
+     * @param lastModifiedBy
+     * @return Builder
      */
 
     public BusinessUnitParentUnitChangedMessageBuilder lastModifiedBy(
@@ -117,6 +128,7 @@ public class BusinessUnitParentUnitChangedMessageBuilder implements Builder<Busi
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @return Builder
      */
 
     public BusinessUnitParentUnitChangedMessageBuilder createdBy(
@@ -127,6 +139,8 @@ public class BusinessUnitParentUnitChangedMessageBuilder implements Builder<Busi
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param createdBy
+     * @return Builder
      */
 
     public BusinessUnitParentUnitChangedMessageBuilder createdBy(
@@ -137,6 +151,8 @@ public class BusinessUnitParentUnitChangedMessageBuilder implements Builder<Busi
 
     /**
      *  <p>Message number in relation to other Messages for a given resource. The <code>sequenceNumber</code> of the next Message for the resource is the successor of the <code>sequenceNumber</code> of the current Message. Meaning, the <code>sequenceNumber</code> of the next Message equals the <code>sequenceNumber</code> of the current Message + 1. <code>sequenceNumber</code> can be used to ensure that Messages are processed in the correct order for a particular resource.</p>
+     * @param sequenceNumber
+     * @return Builder
      */
 
     public BusinessUnitParentUnitChangedMessageBuilder sequenceNumber(final Long sequenceNumber) {
@@ -146,6 +162,8 @@ public class BusinessUnitParentUnitChangedMessageBuilder implements Builder<Busi
 
     /**
      *  <p>Reference to the resource on which the change or action was performed.</p>
+     * @param resource
+     * @return Builder
      */
 
     public BusinessUnitParentUnitChangedMessageBuilder resource(
@@ -156,6 +174,7 @@ public class BusinessUnitParentUnitChangedMessageBuilder implements Builder<Busi
 
     /**
      *  <p>Reference to the resource on which the change or action was performed.</p>
+     * @return Builder
      */
 
     public BusinessUnitParentUnitChangedMessageBuilder resource(
@@ -166,6 +185,8 @@ public class BusinessUnitParentUnitChangedMessageBuilder implements Builder<Busi
 
     /**
      *  <p>Version of the resource on which the change or action was performed.</p>
+     * @param resourceVersion
+     * @return Builder
      */
 
     public BusinessUnitParentUnitChangedMessageBuilder resourceVersion(final Long resourceVersion) {
@@ -175,6 +196,7 @@ public class BusinessUnitParentUnitChangedMessageBuilder implements Builder<Busi
 
     /**
      *  <p>User-provided identifiers of the resource, such as <code>key</code> or <code>externalId</code>. Only present if the resource has such identifiers.</p>
+     * @return Builder
      */
 
     public BusinessUnitParentUnitChangedMessageBuilder resourceUserProvidedIdentifiers(
@@ -187,6 +209,8 @@ public class BusinessUnitParentUnitChangedMessageBuilder implements Builder<Busi
 
     /**
      *  <p>User-provided identifiers of the resource, such as <code>key</code> or <code>externalId</code>. Only present if the resource has such identifiers.</p>
+     * @param resourceUserProvidedIdentifiers
+     * @return Builder
      */
 
     public BusinessUnitParentUnitChangedMessageBuilder resourceUserProvidedIdentifiers(
@@ -197,6 +221,7 @@ public class BusinessUnitParentUnitChangedMessageBuilder implements Builder<Busi
 
     /**
      *  <p>Parent unit of the Business Unit before the Change Parent Unit update action.</p>
+     * @return Builder
      */
 
     public BusinessUnitParentUnitChangedMessageBuilder oldParentUnit(
@@ -209,6 +234,8 @@ public class BusinessUnitParentUnitChangedMessageBuilder implements Builder<Busi
 
     /**
      *  <p>Parent unit of the Business Unit before the Change Parent Unit update action.</p>
+     * @param oldParentUnit
+     * @return Builder
      */
 
     public BusinessUnitParentUnitChangedMessageBuilder oldParentUnit(
@@ -219,6 +246,7 @@ public class BusinessUnitParentUnitChangedMessageBuilder implements Builder<Busi
 
     /**
      *  <p>Parent unit of the Business Unit after the Change Parent Unit update action.</p>
+     * @return Builder
      */
 
     public BusinessUnitParentUnitChangedMessageBuilder newParentUnit(
@@ -231,6 +259,8 @@ public class BusinessUnitParentUnitChangedMessageBuilder implements Builder<Busi
 
     /**
      *  <p>Parent unit of the Business Unit after the Change Parent Unit update action.</p>
+     * @param newParentUnit
+     * @return Builder
      */
 
     public BusinessUnitParentUnitChangedMessageBuilder newParentUnit(

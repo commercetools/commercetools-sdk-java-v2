@@ -36,6 +36,7 @@ public interface CartClassificationTier extends ShippingRatePriceTier {
 
     /**
      *  <p><code>key</code> selected from the <code>values</code> of the CartClassificationType configured in the Project.</p>
+     * @return value
      */
     @NotNull
     @JsonProperty("value")
@@ -43,6 +44,7 @@ public interface CartClassificationTier extends ShippingRatePriceTier {
 
     /**
      *  <p>Fixed shipping rate for the selected classification.</p>
+     * @return price
      */
     @NotNull
     @Valid
@@ -51,6 +53,7 @@ public interface CartClassificationTier extends ShippingRatePriceTier {
 
     /**
      *  <p>Appears in response to Get ShippingMethods for a Cart if the shipping rate matches the search query.</p>
+     * @return isMatching
      */
 
     @JsonProperty("isMatching")

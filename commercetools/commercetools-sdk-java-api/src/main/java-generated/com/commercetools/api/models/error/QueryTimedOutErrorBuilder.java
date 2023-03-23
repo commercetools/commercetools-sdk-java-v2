@@ -27,6 +27,8 @@ public class QueryTimedOutErrorBuilder implements Builder<QueryTimedOutError> {
 
     /**
      *  <p><code>"The query timed out. If your query constantly times out, please check that it follows the performance best practices (see https://docs.commercetools.com/api/predicates/query#performance-considerations)."</code></p>
+     * @param message
+     * @return Builder
      */
 
     public QueryTimedOutErrorBuilder message(final String message) {

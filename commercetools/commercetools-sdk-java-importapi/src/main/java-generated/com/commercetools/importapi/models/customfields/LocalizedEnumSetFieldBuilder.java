@@ -25,6 +25,8 @@ public class LocalizedEnumSetFieldBuilder implements Builder<LocalizedEnumSetFie
 
     /**
      *
+     * @param value
+     * @return Builder
      */
 
     public LocalizedEnumSetFieldBuilder value(final String... value) {
@@ -34,6 +36,8 @@ public class LocalizedEnumSetFieldBuilder implements Builder<LocalizedEnumSetFie
 
     /**
      *
+     * @param value
+     * @return Builder
      */
 
     public LocalizedEnumSetFieldBuilder value(final java.util.List<String> value) {
@@ -43,6 +47,8 @@ public class LocalizedEnumSetFieldBuilder implements Builder<LocalizedEnumSetFie
 
     /**
      *
+     * @param value
+     * @return Builder
      */
 
     public LocalizedEnumSetFieldBuilder plusValue(final String... value) {

@@ -31,6 +31,8 @@ public class StagedOrderSetLineItemTotalPriceActionBuilder implements Builder<St
 
     /**
      *
+     * @param lineItemId
+     * @return Builder
      */
 
     public StagedOrderSetLineItemTotalPriceActionBuilder lineItemId(final String lineItemId) {
@@ -40,6 +42,7 @@ public class StagedOrderSetLineItemTotalPriceActionBuilder implements Builder<St
 
     /**
      *
+     * @return Builder
      */
 
     public StagedOrderSetLineItemTotalPriceActionBuilder externalTotalPrice(
@@ -52,6 +55,8 @@ public class StagedOrderSetLineItemTotalPriceActionBuilder implements Builder<St
 
     /**
      *
+     * @param externalTotalPrice
+     * @return Builder
      */
 
     public StagedOrderSetLineItemTotalPriceActionBuilder externalTotalPrice(

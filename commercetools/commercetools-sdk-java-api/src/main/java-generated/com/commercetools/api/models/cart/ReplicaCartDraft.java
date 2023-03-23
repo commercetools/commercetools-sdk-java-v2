@@ -15,7 +15,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * ReplicaCartDraft
+ *  <p>Used for replicating an existing Cart or Order.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -34,6 +34,7 @@ public interface ReplicaCartDraft
 
     /**
      *  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
+     * @return reference
      */
     @NotNull
     @Valid
@@ -41,7 +42,8 @@ public interface ReplicaCartDraft
     public Reference getReference();
 
     /**
-     *  <p>User-specific unique identifier of the cart.</p>
+     *  <p>User-defined unique identifier for the Cart.</p>
+     * @return key
      */
 
     @JsonProperty("key")

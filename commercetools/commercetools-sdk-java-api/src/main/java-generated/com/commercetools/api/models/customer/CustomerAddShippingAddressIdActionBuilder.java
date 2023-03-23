@@ -30,6 +30,8 @@ public class CustomerAddShippingAddressIdActionBuilder implements Builder<Custom
 
     /**
      *  <p><code>id</code> of the Address to become a shipping address.</p>
+     * @param addressId
+     * @return Builder
      */
 
     public CustomerAddShippingAddressIdActionBuilder addressId(@Nullable final String addressId) {
@@ -39,6 +41,8 @@ public class CustomerAddShippingAddressIdActionBuilder implements Builder<Custom
 
     /**
      *  <p><code>key</code> of the Address to become a shipping address.</p>
+     * @param addressKey
+     * @return Builder
      */
 
     public CustomerAddShippingAddressIdActionBuilder addressKey(@Nullable final String addressKey) {

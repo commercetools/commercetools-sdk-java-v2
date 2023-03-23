@@ -40,6 +40,7 @@ public interface PaymentStatusInterfaceCodeSetMessage extends Message {
 
     /**
      *  <p>Unique identifier for the Payment for which the Set StatusInterfaceCode update action was applied.</p>
+     * @return paymentId
      */
     @NotNull
     @JsonProperty("paymentId")
@@ -47,6 +48,7 @@ public interface PaymentStatusInterfaceCodeSetMessage extends Message {
 
     /**
      *  <p>The <code>interfaceCode</code> that was set during the Set StatusInterfaceCode update action.</p>
+     * @return interfaceCode
      */
 
     @JsonProperty("interfaceCode")

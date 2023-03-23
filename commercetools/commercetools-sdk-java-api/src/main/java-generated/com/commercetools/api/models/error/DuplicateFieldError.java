@@ -34,6 +34,7 @@ public interface DuplicateFieldError extends ErrorObject {
 
     /**
      *
+     * @return code
      */
     @NotNull
     @JsonProperty("code")
@@ -41,6 +42,7 @@ public interface DuplicateFieldError extends ErrorObject {
 
     /**
      *  <p><code>"A duplicate value $duplicateValue exists for field $field."</code></p>
+     * @return message
      */
     @NotNull
     @JsonProperty("message")
@@ -48,6 +50,7 @@ public interface DuplicateFieldError extends ErrorObject {
 
     /**
      *  <p>Name of the conflicting field.</p>
+     * @return field
      */
     @NotNull
     @JsonProperty("field")
@@ -55,6 +58,7 @@ public interface DuplicateFieldError extends ErrorObject {
 
     /**
      *  <p>Conflicting duplicate value.</p>
+     * @return duplicateValue
      */
     @NotNull
     @JsonProperty("duplicateValue")

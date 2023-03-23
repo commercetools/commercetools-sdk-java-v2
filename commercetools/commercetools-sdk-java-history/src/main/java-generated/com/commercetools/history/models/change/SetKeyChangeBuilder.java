@@ -31,6 +31,8 @@ public class SetKeyChangeBuilder implements Builder<SetKeyChange> {
 
     /**
      *  <p>Shape of the action for <code>setKey</code></p>
+     * @param change
+     * @return Builder
      */
 
     public SetKeyChangeBuilder change(final String change) {
@@ -40,6 +42,8 @@ public class SetKeyChangeBuilder implements Builder<SetKeyChange> {
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public SetKeyChangeBuilder previousValue(final String previousValue) {
@@ -49,6 +53,8 @@ public class SetKeyChangeBuilder implements Builder<SetKeyChange> {
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public SetKeyChangeBuilder nextValue(final String nextValue) {

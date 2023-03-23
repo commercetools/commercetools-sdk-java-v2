@@ -33,6 +33,7 @@ public interface CategorySetAssetKeyAction extends CategoryUpdateAction {
 
     /**
      *  <p>Value to set.</p>
+     * @return assetId
      */
     @NotNull
     @JsonProperty("assetId")
@@ -40,6 +41,7 @@ public interface CategorySetAssetKeyAction extends CategoryUpdateAction {
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
+     * @return assetKey
      */
 
     @JsonProperty("assetKey")

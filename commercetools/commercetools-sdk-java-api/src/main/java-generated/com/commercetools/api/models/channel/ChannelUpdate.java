@@ -34,6 +34,7 @@ public interface ChannelUpdate
 
     /**
      *  <p>Expected version of the Channel on which the changes should be applied. If the expected version does not match the actual version, a ConcurrentModification error is returned.</p>
+     * @return version
      */
     @NotNull
     @JsonProperty("version")
@@ -41,6 +42,7 @@ public interface ChannelUpdate
 
     /**
      *  <p>Update actions to be performed on the Channel.</p>
+     * @return actions
      */
     @NotNull
     @Valid

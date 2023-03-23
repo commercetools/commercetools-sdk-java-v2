@@ -31,6 +31,7 @@ public class StagedOrderSetShippingMethodActionBuilder implements Builder<Staged
 
     /**
      *  <p>ResourceIdentifier to a ShippingMethod.</p>
+     * @return Builder
      */
 
     public StagedOrderSetShippingMethodActionBuilder shippingMethod(
@@ -43,6 +44,8 @@ public class StagedOrderSetShippingMethodActionBuilder implements Builder<Staged
 
     /**
      *  <p>ResourceIdentifier to a ShippingMethod.</p>
+     * @param shippingMethod
+     * @return Builder
      */
 
     public StagedOrderSetShippingMethodActionBuilder shippingMethod(
@@ -52,7 +55,8 @@ public class StagedOrderSetShippingMethodActionBuilder implements Builder<Staged
     }
 
     /**
-     *
+     *  <p>Controls calculation of taxed prices for Line Items, Custom Line Items, and Shipping Methods as explained in Cart tax calculation.</p>
+     * @return Builder
      */
 
     public StagedOrderSetShippingMethodActionBuilder externalTaxRate(
@@ -63,7 +67,9 @@ public class StagedOrderSetShippingMethodActionBuilder implements Builder<Staged
     }
 
     /**
-     *
+     *  <p>Controls calculation of taxed prices for Line Items, Custom Line Items, and Shipping Methods as explained in Cart tax calculation.</p>
+     * @param externalTaxRate
+     * @return Builder
      */
 
     public StagedOrderSetShippingMethodActionBuilder externalTaxRate(

@@ -26,6 +26,8 @@ public class CustomerImportRequestBuilder implements Builder<CustomerImportReque
 
     /**
      *  <p>The customer import resources of this request.</p>
+     * @param resources
+     * @return Builder
      */
 
     public CustomerImportRequestBuilder resources(
@@ -36,6 +38,8 @@ public class CustomerImportRequestBuilder implements Builder<CustomerImportReque
 
     /**
      *  <p>The customer import resources of this request.</p>
+     * @param resources
+     * @return Builder
      */
 
     public CustomerImportRequestBuilder resources(
@@ -46,6 +50,8 @@ public class CustomerImportRequestBuilder implements Builder<CustomerImportReque
 
     /**
      *  <p>The customer import resources of this request.</p>
+     * @param resources
+     * @return Builder
      */
 
     public CustomerImportRequestBuilder plusResources(
@@ -59,6 +65,7 @@ public class CustomerImportRequestBuilder implements Builder<CustomerImportReque
 
     /**
      *  <p>The customer import resources of this request.</p>
+     * @return Builder
      */
 
     public CustomerImportRequestBuilder plusResources(
@@ -73,6 +80,7 @@ public class CustomerImportRequestBuilder implements Builder<CustomerImportReque
 
     /**
      *  <p>The customer import resources of this request.</p>
+     * @return Builder
      */
 
     public CustomerImportRequestBuilder withResources(

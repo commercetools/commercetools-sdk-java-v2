@@ -35,6 +35,7 @@ public interface VariantValues {
 
     /**
      *
+     * @return sku
      */
 
     @JsonProperty("sku")
@@ -42,6 +43,7 @@ public interface VariantValues {
 
     /**
      *
+     * @return prices
      */
     @NotNull
     @Valid
@@ -50,6 +52,7 @@ public interface VariantValues {
 
     /**
      *
+     * @return attributes
      */
     @NotNull
     @Valid

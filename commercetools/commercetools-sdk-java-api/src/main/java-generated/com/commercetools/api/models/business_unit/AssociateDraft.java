@@ -34,6 +34,7 @@ public interface AssociateDraft extends io.vrap.rmf.base.client.Draft<AssociateD
 
     /**
      *  <p>Roles the Associate should hold within the Business Unit.</p>
+     * @return roles
      */
     @NotNull
     @JsonProperty("roles")
@@ -41,6 +42,7 @@ public interface AssociateDraft extends io.vrap.rmf.base.client.Draft<AssociateD
 
     /**
      *  <p>The Customer to be part of the Business Unit.</p>
+     * @return customer
      */
     @NotNull
     @Valid

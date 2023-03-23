@@ -39,6 +39,7 @@ public interface SetCategoryOrderHintChange extends Change {
 
     /**
      *
+     * @return type
      */
     @NotNull
     @JsonProperty("type")
@@ -46,6 +47,7 @@ public interface SetCategoryOrderHintChange extends Change {
 
     /**
      *  <p>Update action for <code>setCategoryOrderHint</code></p>
+     * @return change
      */
     @NotNull
     @JsonProperty("change")
@@ -53,6 +55,7 @@ public interface SetCategoryOrderHintChange extends Change {
 
     /**
      *
+     * @return catalogData
      */
     @NotNull
     @JsonProperty("catalogData")
@@ -60,6 +63,7 @@ public interface SetCategoryOrderHintChange extends Change {
 
     /**
      *
+     * @return categoryId
      */
     @NotNull
     @JsonProperty("categoryId")
@@ -67,6 +71,7 @@ public interface SetCategoryOrderHintChange extends Change {
 
     /**
      *
+     * @return previousValue
      */
     @NotNull
     @Valid
@@ -75,6 +80,7 @@ public interface SetCategoryOrderHintChange extends Change {
 
     /**
      *
+     * @return nextValue
      */
     @NotNull
     @Valid

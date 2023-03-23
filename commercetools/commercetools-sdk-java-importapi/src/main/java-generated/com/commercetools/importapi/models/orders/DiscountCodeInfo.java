@@ -33,6 +33,7 @@ public interface DiscountCodeInfo {
 
     /**
      *  <p>References a discount code by key.</p>
+     * @return discountCode
      */
     @NotNull
     @Valid
@@ -41,6 +42,7 @@ public interface DiscountCodeInfo {
 
     /**
      *  <p>Maps to <code>DiscountCodeInfo.state</code></p>
+     * @return state
      */
 
     @JsonProperty("state")

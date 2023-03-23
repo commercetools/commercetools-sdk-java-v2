@@ -31,6 +31,8 @@ public class ChangeTaxRoundingModeChangeBuilder implements Builder<ChangeTaxRoun
 
     /**
      *  <p>Shape of the action for <code>changeTaxRoundingMode</code></p>
+     * @param change
+     * @return Builder
      */
 
     public ChangeTaxRoundingModeChangeBuilder change(final String change) {
@@ -40,6 +42,8 @@ public class ChangeTaxRoundingModeChangeBuilder implements Builder<ChangeTaxRoun
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public ChangeTaxRoundingModeChangeBuilder previousValue(
@@ -50,6 +54,8 @@ public class ChangeTaxRoundingModeChangeBuilder implements Builder<ChangeTaxRoun
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public ChangeTaxRoundingModeChangeBuilder nextValue(

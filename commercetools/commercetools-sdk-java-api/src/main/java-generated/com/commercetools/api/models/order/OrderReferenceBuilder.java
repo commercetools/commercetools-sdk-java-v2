@@ -31,6 +31,8 @@ public class OrderReferenceBuilder implements Builder<OrderReference> {
 
     /**
      *  <p>Unique ID of the referenced resource.</p>
+     * @param id
+     * @return Builder
      */
 
     public OrderReferenceBuilder id(final String id) {
@@ -40,6 +42,7 @@ public class OrderReferenceBuilder implements Builder<OrderReference> {
 
     /**
      *
+     * @return Builder
      */
 
     public OrderReferenceBuilder obj(
@@ -50,6 +53,8 @@ public class OrderReferenceBuilder implements Builder<OrderReference> {
 
     /**
      *
+     * @param obj
+     * @return Builder
      */
 
     public OrderReferenceBuilder obj(@Nullable final com.commercetools.api.models.order.Order obj) {

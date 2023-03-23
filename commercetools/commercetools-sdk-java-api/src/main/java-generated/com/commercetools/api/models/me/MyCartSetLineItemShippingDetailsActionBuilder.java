@@ -30,7 +30,9 @@ public class MyCartSetLineItemShippingDetailsActionBuilder implements Builder<My
     private com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails;
 
     /**
-     *
+     *  <p><code>id</code> of the LineItem to update.</p>
+     * @param lineItemId
+     * @return Builder
      */
 
     public MyCartSetLineItemShippingDetailsActionBuilder lineItemId(final String lineItemId) {
@@ -39,7 +41,8 @@ public class MyCartSetLineItemShippingDetailsActionBuilder implements Builder<My
     }
 
     /**
-     *
+     *  <p>Value to set. If empty, the existing value is removed.</p>
+     * @return Builder
      */
 
     public MyCartSetLineItemShippingDetailsActionBuilder shippingDetails(
@@ -50,7 +53,9 @@ public class MyCartSetLineItemShippingDetailsActionBuilder implements Builder<My
     }
 
     /**
-     *
+     *  <p>Value to set. If empty, the existing value is removed.</p>
+     * @param shippingDetails
+     * @return Builder
      */
 
     public MyCartSetLineItemShippingDetailsActionBuilder shippingDetails(

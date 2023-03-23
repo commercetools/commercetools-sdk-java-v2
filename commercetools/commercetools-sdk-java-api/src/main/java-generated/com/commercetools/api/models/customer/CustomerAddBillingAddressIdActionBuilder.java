@@ -30,6 +30,8 @@ public class CustomerAddBillingAddressIdActionBuilder implements Builder<Custome
 
     /**
      *  <p><code>id</code> of the Address to become a billing address.</p>
+     * @param addressId
+     * @return Builder
      */
 
     public CustomerAddBillingAddressIdActionBuilder addressId(@Nullable final String addressId) {
@@ -39,6 +41,8 @@ public class CustomerAddBillingAddressIdActionBuilder implements Builder<Custome
 
     /**
      *  <p><code>key</code> of the Address to become a billing address.</p>
+     * @param addressKey
+     * @return Builder
      */
 
     public CustomerAddBillingAddressIdActionBuilder addressKey(@Nullable final String addressKey) {

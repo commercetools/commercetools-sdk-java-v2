@@ -34,6 +34,7 @@ public interface ProductSelectionSetting {
 
     /**
      *  <p>Reference to a ProductSelection.</p>
+     * @return productSelection
      */
     @NotNull
     @Valid
@@ -42,6 +43,7 @@ public interface ProductSelectionSetting {
 
     /**
      *  <p>If <code>true</code>, all Products assigned to this Product Selection are part of the Store's assortment.</p>
+     * @return active
      */
     @NotNull
     @JsonProperty("active")

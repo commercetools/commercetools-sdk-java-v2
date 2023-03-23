@@ -29,6 +29,7 @@ public class ProductStateTransitionMessagePayloadBuilder implements Builder<Prod
 
     /**
      *  <p>Product State after the Transition State update action.</p>
+     * @return Builder
      */
 
     public ProductStateTransitionMessagePayloadBuilder state(
@@ -39,6 +40,8 @@ public class ProductStateTransitionMessagePayloadBuilder implements Builder<Prod
 
     /**
      *  <p>Product State after the Transition State update action.</p>
+     * @param state
+     * @return Builder
      */
 
     public ProductStateTransitionMessagePayloadBuilder state(
@@ -49,6 +52,8 @@ public class ProductStateTransitionMessagePayloadBuilder implements Builder<Prod
 
     /**
      *  <p>Whether State transition validations were turned off during the Transition State update action.</p>
+     * @param force
+     * @return Builder
      */
 
     public ProductStateTransitionMessagePayloadBuilder force(final Boolean force) {

@@ -40,6 +40,7 @@ public interface CustomerGroupSetMessage extends Message {
 
     /**
      *  <p>Customer Group that was set during the Set Customer Group update action.</p>
+     * @return customerGroup
      */
     @Valid
     @JsonProperty("customerGroup")

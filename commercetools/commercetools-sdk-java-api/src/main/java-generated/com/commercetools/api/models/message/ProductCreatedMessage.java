@@ -42,6 +42,7 @@ public interface ProductCreatedMessage extends Message {
 
     /**
      *  <p>The staged Product Projection of the Product at the time of creation.</p>
+     * @return productProjection
      */
     @NotNull
     @Valid

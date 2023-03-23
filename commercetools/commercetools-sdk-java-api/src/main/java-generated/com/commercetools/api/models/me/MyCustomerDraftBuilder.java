@@ -73,6 +73,8 @@ public class MyCustomerDraftBuilder implements Builder<MyCustomerDraft> {
 
     /**
      *  <p>Email address of the Customer that is unique for an entire Project or Store the Customer is assigned to. It is the mandatory unique identifier of a Customer.</p>
+     * @param email
+     * @return Builder
      */
 
     public MyCustomerDraftBuilder email(final String email) {
@@ -82,6 +84,8 @@ public class MyCustomerDraftBuilder implements Builder<MyCustomerDraft> {
 
     /**
      *  <p>Password of the Customer.</p>
+     * @param password
+     * @return Builder
      */
 
     public MyCustomerDraftBuilder password(final String password) {
@@ -91,6 +95,8 @@ public class MyCustomerDraftBuilder implements Builder<MyCustomerDraft> {
 
     /**
      *  <p>Given name (first name) of the Customer.</p>
+     * @param firstName
+     * @return Builder
      */
 
     public MyCustomerDraftBuilder firstName(@Nullable final String firstName) {
@@ -100,6 +106,8 @@ public class MyCustomerDraftBuilder implements Builder<MyCustomerDraft> {
 
     /**
      *  <p>Family name (last name) of the Customer.</p>
+     * @param lastName
+     * @return Builder
      */
 
     public MyCustomerDraftBuilder lastName(@Nullable final String lastName) {
@@ -109,6 +117,8 @@ public class MyCustomerDraftBuilder implements Builder<MyCustomerDraft> {
 
     /**
      *  <p>Middle name of the Customer.</p>
+     * @param middleName
+     * @return Builder
      */
 
     public MyCustomerDraftBuilder middleName(@Nullable final String middleName) {
@@ -118,6 +128,8 @@ public class MyCustomerDraftBuilder implements Builder<MyCustomerDraft> {
 
     /**
      *  <p>Title of the Customer, for example, 'Dr.'.</p>
+     * @param title
+     * @return Builder
      */
 
     public MyCustomerDraftBuilder title(@Nullable final String title) {
@@ -127,6 +139,8 @@ public class MyCustomerDraftBuilder implements Builder<MyCustomerDraft> {
 
     /**
      *  <p>Salutation of the Customer, for example, 'Mr.' or 'Mrs.'.</p>
+     * @param salutation
+     * @return Builder
      */
 
     public MyCustomerDraftBuilder salutation(@Nullable final String salutation) {
@@ -136,6 +150,8 @@ public class MyCustomerDraftBuilder implements Builder<MyCustomerDraft> {
 
     /**
      *  <p>Date of birth of the Customer.</p>
+     * @param dateOfBirth
+     * @return Builder
      */
 
     public MyCustomerDraftBuilder dateOfBirth(@Nullable final java.time.LocalDate dateOfBirth) {
@@ -145,6 +161,8 @@ public class MyCustomerDraftBuilder implements Builder<MyCustomerDraft> {
 
     /**
      *  <p>Company name of the Customer.</p>
+     * @param companyName
+     * @return Builder
      */
 
     public MyCustomerDraftBuilder companyName(@Nullable final String companyName) {
@@ -154,6 +172,8 @@ public class MyCustomerDraftBuilder implements Builder<MyCustomerDraft> {
 
     /**
      *  <p>Unique VAT ID of the Customer.</p>
+     * @param vatId
+     * @return Builder
      */
 
     public MyCustomerDraftBuilder vatId(@Nullable final String vatId) {
@@ -163,6 +183,8 @@ public class MyCustomerDraftBuilder implements Builder<MyCustomerDraft> {
 
     /**
      *  <p>Addresses of the Customer.</p>
+     * @param addresses
+     * @return Builder
      */
 
     public MyCustomerDraftBuilder addresses(
@@ -173,6 +195,8 @@ public class MyCustomerDraftBuilder implements Builder<MyCustomerDraft> {
 
     /**
      *  <p>Addresses of the Customer.</p>
+     * @param addresses
+     * @return Builder
      */
 
     public MyCustomerDraftBuilder addresses(
@@ -183,6 +207,8 @@ public class MyCustomerDraftBuilder implements Builder<MyCustomerDraft> {
 
     /**
      *  <p>Addresses of the Customer.</p>
+     * @param addresses
+     * @return Builder
      */
 
     public MyCustomerDraftBuilder plusAddresses(
@@ -196,6 +222,7 @@ public class MyCustomerDraftBuilder implements Builder<MyCustomerDraft> {
 
     /**
      *  <p>Addresses of the Customer.</p>
+     * @return Builder
      */
 
     public MyCustomerDraftBuilder plusAddresses(
@@ -209,6 +236,7 @@ public class MyCustomerDraftBuilder implements Builder<MyCustomerDraft> {
 
     /**
      *  <p>Addresses of the Customer.</p>
+     * @return Builder
      */
 
     public MyCustomerDraftBuilder withAddresses(
@@ -220,6 +248,8 @@ public class MyCustomerDraftBuilder implements Builder<MyCustomerDraft> {
 
     /**
      *  <p>Index of the address in the <code>addresses</code> array to use as the default shipping address. The <code>defaultShippingAddressId</code> of the Customer will be set to the <code>id</code> of that address.</p>
+     * @param defaultShippingAddress
+     * @return Builder
      */
 
     public MyCustomerDraftBuilder defaultShippingAddress(@Nullable final Long defaultShippingAddress) {
@@ -229,6 +259,8 @@ public class MyCustomerDraftBuilder implements Builder<MyCustomerDraft> {
 
     /**
      *  <p>Index of the address in the <code>addresses</code> array to use as the default billing address. The <code>defaultBillingAddressId</code> of the Customer will be set to the <code>id</code> of that address.</p>
+     * @param defaultBillingAddress
+     * @return Builder
      */
 
     public MyCustomerDraftBuilder defaultBillingAddress(@Nullable final Long defaultBillingAddress) {
@@ -238,6 +270,7 @@ public class MyCustomerDraftBuilder implements Builder<MyCustomerDraft> {
 
     /**
      *  <p>Custom Fields for the Customer.</p>
+     * @return Builder
      */
 
     public MyCustomerDraftBuilder custom(
@@ -248,6 +281,8 @@ public class MyCustomerDraftBuilder implements Builder<MyCustomerDraft> {
 
     /**
      *  <p>Custom Fields for the Customer.</p>
+     * @param custom
+     * @return Builder
      */
 
     public MyCustomerDraftBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFieldsDraft custom) {
@@ -257,6 +292,8 @@ public class MyCustomerDraftBuilder implements Builder<MyCustomerDraft> {
 
     /**
      *  <p>Preferred language of the Customer. Must be one of the languages supported by the Project.</p>
+     * @param locale
+     * @return Builder
      */
 
     public MyCustomerDraftBuilder locale(@Nullable final String locale) {
@@ -266,6 +303,8 @@ public class MyCustomerDraftBuilder implements Builder<MyCustomerDraft> {
 
     /**
      *  <p>Sets the Stores for the Customer.</p>
+     * @param stores
+     * @return Builder
      */
 
     public MyCustomerDraftBuilder stores(
@@ -276,6 +315,8 @@ public class MyCustomerDraftBuilder implements Builder<MyCustomerDraft> {
 
     /**
      *  <p>Sets the Stores for the Customer.</p>
+     * @param stores
+     * @return Builder
      */
 
     public MyCustomerDraftBuilder stores(
@@ -286,6 +327,8 @@ public class MyCustomerDraftBuilder implements Builder<MyCustomerDraft> {
 
     /**
      *  <p>Sets the Stores for the Customer.</p>
+     * @param stores
+     * @return Builder
      */
 
     public MyCustomerDraftBuilder plusStores(
@@ -299,6 +342,7 @@ public class MyCustomerDraftBuilder implements Builder<MyCustomerDraft> {
 
     /**
      *  <p>Sets the Stores for the Customer.</p>
+     * @return Builder
      */
 
     public MyCustomerDraftBuilder plusStores(
@@ -312,6 +356,7 @@ public class MyCustomerDraftBuilder implements Builder<MyCustomerDraft> {
 
     /**
      *  <p>Sets the Stores for the Customer.</p>
+     * @return Builder
      */
 
     public MyCustomerDraftBuilder withStores(

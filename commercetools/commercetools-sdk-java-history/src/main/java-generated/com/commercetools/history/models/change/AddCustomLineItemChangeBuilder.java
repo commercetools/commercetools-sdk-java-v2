@@ -32,6 +32,8 @@ public class AddCustomLineItemChangeBuilder implements Builder<AddCustomLineItem
 
     /**
      *  <p>Update action for adding and removing custom line items</p>
+     * @param change
+     * @return Builder
      */
 
     public AddCustomLineItemChangeBuilder change(final String change) {
@@ -41,6 +43,7 @@ public class AddCustomLineItemChangeBuilder implements Builder<AddCustomLineItem
 
     /**
      *
+     * @return Builder
      */
 
     public AddCustomLineItemChangeBuilder nextValue(
@@ -51,6 +54,8 @@ public class AddCustomLineItemChangeBuilder implements Builder<AddCustomLineItem
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public AddCustomLineItemChangeBuilder nextValue(
@@ -61,6 +66,7 @@ public class AddCustomLineItemChangeBuilder implements Builder<AddCustomLineItem
 
     /**
      *
+     * @return Builder
      */
 
     public AddCustomLineItemChangeBuilder previousValue(
@@ -71,6 +77,8 @@ public class AddCustomLineItemChangeBuilder implements Builder<AddCustomLineItem
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public AddCustomLineItemChangeBuilder previousValue(

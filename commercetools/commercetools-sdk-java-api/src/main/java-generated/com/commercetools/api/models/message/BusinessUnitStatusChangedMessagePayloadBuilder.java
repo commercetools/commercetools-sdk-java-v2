@@ -26,6 +26,8 @@ public class BusinessUnitStatusChangedMessagePayloadBuilder
 
     /**
      *  <p>Updated status of the Business Unit.</p>
+     * @param active
+     * @return Builder
      */
 
     public BusinessUnitStatusChangedMessagePayloadBuilder active(

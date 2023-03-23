@@ -31,6 +31,8 @@ public class SetSellerCommentChangeBuilder implements Builder<SetSellerCommentCh
 
     /**
      *  <p>Shape of the action for <code>setSellerComment</code></p>
+     * @param change
+     * @return Builder
      */
 
     public SetSellerCommentChangeBuilder change(final String change) {
@@ -40,6 +42,8 @@ public class SetSellerCommentChangeBuilder implements Builder<SetSellerCommentCh
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public SetSellerCommentChangeBuilder previousValue(final String previousValue) {
@@ -49,6 +53,8 @@ public class SetSellerCommentChangeBuilder implements Builder<SetSellerCommentCh
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public SetSellerCommentChangeBuilder nextValue(final String nextValue) {

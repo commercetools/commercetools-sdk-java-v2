@@ -21,8 +21,8 @@ import io.vrap.rmf.base.client.utils.Generated;
  *  <ul>
  *   <li>Add LineItem, Add CustomLineItem, and Add DiscountCode update actions on Carts.</li>
  *   <li>Add LineItem, Add CustomLineItem, and Add DiscountCode update actions on Order Edits.</li>
- *   <li>Create Order from Cart and Create Order from Cart in a Store requests on Orders.</li>
- *   <li>Create Order from a Cart and Create Order in a Store from a Cart requests on My Orders.</li>
+ *   <li>Create Order from Cart and Create Order in Store from Cart requests on Orders.</li>
+ *   <li>Create Order from Cart and Create Order in Store from Cart requests on My Orders.</li>
  *  </ul>
  *
  * <hr>
@@ -45,6 +45,7 @@ public interface MatchingPriceNotFoundError extends ErrorObject {
 
     /**
      *
+     * @return code
      */
     @NotNull
     @JsonProperty("code")
@@ -52,6 +53,7 @@ public interface MatchingPriceNotFoundError extends ErrorObject {
 
     /**
      *  <p><code>"The variant $variantId of product $productId does not contain a price for currency $currencyCode, $country, $customerGroup, $channel."</code></p>
+     * @return message
      */
     @NotNull
     @JsonProperty("message")
@@ -59,6 +61,7 @@ public interface MatchingPriceNotFoundError extends ErrorObject {
 
     /**
      *  <p>Unique identifier of a Product.</p>
+     * @return productId
      */
     @NotNull
     @JsonProperty("productId")
@@ -66,6 +69,7 @@ public interface MatchingPriceNotFoundError extends ErrorObject {
 
     /**
      *  <p>Unique identifier of a ProductVariant in the Product.</p>
+     * @return variantId
      */
     @NotNull
     @JsonProperty("variantId")
@@ -73,6 +77,7 @@ public interface MatchingPriceNotFoundError extends ErrorObject {
 
     /**
      *  <p>Currency code of the country.</p>
+     * @return currency
      */
 
     @JsonProperty("currency")
@@ -80,6 +85,7 @@ public interface MatchingPriceNotFoundError extends ErrorObject {
 
     /**
      *  <p>Country code of the geographic location.</p>
+     * @return country
      */
 
     @JsonProperty("country")
@@ -87,6 +93,7 @@ public interface MatchingPriceNotFoundError extends ErrorObject {
 
     /**
      *  <p>Customer Group associated with the Price.</p>
+     * @return customerGroup
      */
     @Valid
     @JsonProperty("customerGroup")
@@ -94,6 +101,7 @@ public interface MatchingPriceNotFoundError extends ErrorObject {
 
     /**
      *  <p>Channel associated with the Price.</p>
+     * @return channel
      */
     @Valid
     @JsonProperty("channel")

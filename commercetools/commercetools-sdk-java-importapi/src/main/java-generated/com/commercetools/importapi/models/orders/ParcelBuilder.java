@@ -40,6 +40,8 @@ public class ParcelBuilder implements Builder<Parcel> {
 
     /**
      *
+     * @param id
+     * @return Builder
      */
 
     public ParcelBuilder id(final String id) {
@@ -49,6 +51,8 @@ public class ParcelBuilder implements Builder<Parcel> {
 
     /**
      *
+     * @param createdAt
+     * @return Builder
      */
 
     public ParcelBuilder createdAt(final java.time.ZonedDateTime createdAt) {
@@ -58,6 +62,7 @@ public class ParcelBuilder implements Builder<Parcel> {
 
     /**
      *
+     * @return Builder
      */
 
     public ParcelBuilder measurements(
@@ -69,6 +74,8 @@ public class ParcelBuilder implements Builder<Parcel> {
 
     /**
      *
+     * @param measurements
+     * @return Builder
      */
 
     public ParcelBuilder measurements(
@@ -79,6 +86,7 @@ public class ParcelBuilder implements Builder<Parcel> {
 
     /**
      *
+     * @return Builder
      */
 
     public ParcelBuilder trackingData(
@@ -89,6 +97,8 @@ public class ParcelBuilder implements Builder<Parcel> {
 
     /**
      *
+     * @param trackingData
+     * @return Builder
      */
 
     public ParcelBuilder trackingData(
@@ -99,6 +109,8 @@ public class ParcelBuilder implements Builder<Parcel> {
 
     /**
      *
+     * @param items
+     * @return Builder
      */
 
     public ParcelBuilder items(@Nullable final com.commercetools.importapi.models.orders.DeliveryItem... items) {
@@ -108,6 +120,8 @@ public class ParcelBuilder implements Builder<Parcel> {
 
     /**
      *
+     * @param items
+     * @return Builder
      */
 
     public ParcelBuilder items(
@@ -118,6 +132,8 @@ public class ParcelBuilder implements Builder<Parcel> {
 
     /**
      *
+     * @param items
+     * @return Builder
      */
 
     public ParcelBuilder plusItems(@Nullable final com.commercetools.importapi.models.orders.DeliveryItem... items) {
@@ -130,6 +146,7 @@ public class ParcelBuilder implements Builder<Parcel> {
 
     /**
      *
+     * @return Builder
      */
 
     public ParcelBuilder plusItems(
@@ -143,6 +160,7 @@ public class ParcelBuilder implements Builder<Parcel> {
 
     /**
      *
+     * @return Builder
      */
 
     public ParcelBuilder withItems(

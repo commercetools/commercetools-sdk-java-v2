@@ -32,6 +32,7 @@ public interface AttributePlainEnumValue {
 
     /**
      *  <p>Key of the value used as a programmatic identifier, for example in facets &amp; filters.</p>
+     * @return key
      */
     @NotNull
     @JsonProperty("key")
@@ -39,6 +40,7 @@ public interface AttributePlainEnumValue {
 
     /**
      *  <p>Descriptive label of the value.</p>
+     * @return label
      */
     @NotNull
     @JsonProperty("label")

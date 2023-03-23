@@ -34,6 +34,7 @@ public interface TextLineItemValue {
 
     /**
      *
+     * @return id
      */
     @NotNull
     @JsonProperty("id")
@@ -41,6 +42,7 @@ public interface TextLineItemValue {
 
     /**
      *
+     * @return name
      */
     @NotNull
     @Valid

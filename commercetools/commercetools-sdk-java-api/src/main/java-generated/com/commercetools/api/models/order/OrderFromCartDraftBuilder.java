@@ -56,6 +56,8 @@ public class OrderFromCartDraftBuilder implements Builder<OrderFromCartDraft> {
 
     /**
      *  <p>Unique identifier of the Cart from which you can create an Order.</p>
+     * @param id
+     * @return Builder
      */
     @Deprecated
     public OrderFromCartDraftBuilder id(@Nullable final String id) {
@@ -65,6 +67,7 @@ public class OrderFromCartDraftBuilder implements Builder<OrderFromCartDraft> {
 
     /**
      *  <p>ResourceIdentifier of the Cart from which this order is created.</p>
+     * @return Builder
      */
 
     public OrderFromCartDraftBuilder cart(
@@ -75,6 +78,8 @@ public class OrderFromCartDraftBuilder implements Builder<OrderFromCartDraft> {
 
     /**
      *  <p>ResourceIdentifier of the Cart from which this order is created.</p>
+     * @param cart
+     * @return Builder
      */
 
     public OrderFromCartDraftBuilder cart(
@@ -85,6 +90,8 @@ public class OrderFromCartDraftBuilder implements Builder<OrderFromCartDraft> {
 
     /**
      *
+     * @param version
+     * @return Builder
      */
 
     public OrderFromCartDraftBuilder version(final Long version) {
@@ -94,6 +101,8 @@ public class OrderFromCartDraftBuilder implements Builder<OrderFromCartDraft> {
 
     /**
      *  <p>String that uniquely identifies an order. It can be used to create more human-readable (in contrast to ID) identifier for the order. It should be unique across a project. Once it's set it cannot be changed. For easier use on Get, Update and Delete actions we suggest assigning order numbers that match the regular expression <code>[a-z0-9_\-]{2,36}</code>.</p>
+     * @param orderNumber
+     * @return Builder
      */
 
     public OrderFromCartDraftBuilder orderNumber(@Nullable final String orderNumber) {
@@ -103,6 +112,8 @@ public class OrderFromCartDraftBuilder implements Builder<OrderFromCartDraft> {
 
     /**
      *  <p>Identifier for a purchase order, usually in a B2B context. The Purchase Order Number is typically entered by the Buyer and can also be used with Quotes.</p>
+     * @param purchaseOrderNumber
+     * @return Builder
      */
 
     public OrderFromCartDraftBuilder purchaseOrderNumber(@Nullable final String purchaseOrderNumber) {
@@ -112,6 +123,8 @@ public class OrderFromCartDraftBuilder implements Builder<OrderFromCartDraft> {
 
     /**
      *
+     * @param paymentState
+     * @return Builder
      */
 
     public OrderFromCartDraftBuilder paymentState(
@@ -122,6 +135,8 @@ public class OrderFromCartDraftBuilder implements Builder<OrderFromCartDraft> {
 
     /**
      *
+     * @param shipmentState
+     * @return Builder
      */
 
     public OrderFromCartDraftBuilder shipmentState(
@@ -132,6 +147,8 @@ public class OrderFromCartDraftBuilder implements Builder<OrderFromCartDraft> {
 
     /**
      *  <p>Order will be created with <code>Open</code> status by default.</p>
+     * @param orderState
+     * @return Builder
      */
 
     public OrderFromCartDraftBuilder orderState(
@@ -142,6 +159,7 @@ public class OrderFromCartDraftBuilder implements Builder<OrderFromCartDraft> {
 
     /**
      *
+     * @return Builder
      */
 
     public OrderFromCartDraftBuilder state(
@@ -152,6 +170,8 @@ public class OrderFromCartDraftBuilder implements Builder<OrderFromCartDraft> {
 
     /**
      *
+     * @param state
+     * @return Builder
      */
 
     public OrderFromCartDraftBuilder state(
@@ -162,6 +182,7 @@ public class OrderFromCartDraftBuilder implements Builder<OrderFromCartDraft> {
 
     /**
      *  <p>Custom Fields for the Order. The Custom Field type must match the type of the Custom Fields in the referenced Cart. If specified, the Custom Fields are merged with the Custom Fields on the referenced Cart and added to the Order. If empty, the Custom Fields on the referenced Cart are added to the Order automatically.</p>
+     * @return Builder
      */
 
     public OrderFromCartDraftBuilder custom(
@@ -172,6 +193,8 @@ public class OrderFromCartDraftBuilder implements Builder<OrderFromCartDraft> {
 
     /**
      *  <p>Custom Fields for the Order. The Custom Field type must match the type of the Custom Fields in the referenced Cart. If specified, the Custom Fields are merged with the Custom Fields on the referenced Cart and added to the Order. If empty, the Custom Fields on the referenced Cart are added to the Order automatically.</p>
+     * @param custom
+     * @return Builder
      */
 
     public OrderFromCartDraftBuilder custom(

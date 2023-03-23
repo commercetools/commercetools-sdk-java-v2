@@ -49,6 +49,7 @@ public interface CartDiscountUpdateAction
 
     /**
      *
+     * @return action
      */
     @NotNull
     @JsonProperty("action")

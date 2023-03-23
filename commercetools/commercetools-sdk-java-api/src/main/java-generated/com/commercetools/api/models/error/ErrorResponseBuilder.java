@@ -34,6 +34,8 @@ public class ErrorResponseBuilder implements Builder<ErrorResponse> {
 
     /**
      *  <p>HTTP status code corresponding to the error.</p>
+     * @param statusCode
+     * @return Builder
      */
 
     public ErrorResponseBuilder statusCode(final Integer statusCode) {
@@ -43,6 +45,8 @@ public class ErrorResponseBuilder implements Builder<ErrorResponse> {
 
     /**
      *  <p>First error message in the <code>errors</code> array.</p>
+     * @param message
+     * @return Builder
      */
 
     public ErrorResponseBuilder message(final String message) {
@@ -53,6 +57,8 @@ public class ErrorResponseBuilder implements Builder<ErrorResponse> {
     /**
      *  <p>Errors returned for a request.</p>
      *  <p>A single error response can contain multiple errors if the errors are related to the same HTTP status code such as <code>400</code>.</p>
+     * @param errors
+     * @return Builder
      */
 
     public ErrorResponseBuilder errors(@Nullable final com.commercetools.api.models.error.ErrorObject... errors) {
@@ -63,6 +69,8 @@ public class ErrorResponseBuilder implements Builder<ErrorResponse> {
     /**
      *  <p>Errors returned for a request.</p>
      *  <p>A single error response can contain multiple errors if the errors are related to the same HTTP status code such as <code>400</code>.</p>
+     * @param errors
+     * @return Builder
      */
 
     public ErrorResponseBuilder errors(
@@ -74,6 +82,8 @@ public class ErrorResponseBuilder implements Builder<ErrorResponse> {
     /**
      *  <p>Errors returned for a request.</p>
      *  <p>A single error response can contain multiple errors if the errors are related to the same HTTP status code such as <code>400</code>.</p>
+     * @param errors
+     * @return Builder
      */
 
     public ErrorResponseBuilder plusErrors(@Nullable final com.commercetools.api.models.error.ErrorObject... errors) {
@@ -87,6 +97,7 @@ public class ErrorResponseBuilder implements Builder<ErrorResponse> {
     /**
      *  <p>Errors returned for a request.</p>
      *  <p>A single error response can contain multiple errors if the errors are related to the same HTTP status code such as <code>400</code>.</p>
+     * @return Builder
      */
 
     public ErrorResponseBuilder plusErrors(
@@ -101,6 +112,7 @@ public class ErrorResponseBuilder implements Builder<ErrorResponse> {
     /**
      *  <p>Errors returned for a request.</p>
      *  <p>A single error response can contain multiple errors if the errors are related to the same HTTP status code such as <code>400</code>.</p>
+     * @return Builder
      */
 
     public ErrorResponseBuilder withErrors(

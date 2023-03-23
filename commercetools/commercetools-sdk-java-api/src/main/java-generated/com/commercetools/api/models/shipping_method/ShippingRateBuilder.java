@@ -37,6 +37,8 @@ public class ShippingRateBuilder implements Builder<ShippingRate> {
 
     /**
      *  <p>Currency amount of the ShippingRate.</p>
+     * @param price
+     * @return Builder
      */
 
     public ShippingRateBuilder price(final com.commercetools.api.models.common.TypedMoney price) {
@@ -46,6 +48,7 @@ public class ShippingRateBuilder implements Builder<ShippingRate> {
 
     /**
      *  <p>Currency amount of the ShippingRate.</p>
+     * @return Builder
      */
 
     public ShippingRateBuilder price(
@@ -56,6 +59,8 @@ public class ShippingRateBuilder implements Builder<ShippingRate> {
 
     /**
      *  <p>Shipping is free if the sum of the (Custom) Line Item Prices reaches the specified value.</p>
+     * @param freeAbove
+     * @return Builder
      */
 
     public ShippingRateBuilder freeAbove(@Nullable final com.commercetools.api.models.common.TypedMoney freeAbove) {
@@ -65,6 +70,7 @@ public class ShippingRateBuilder implements Builder<ShippingRate> {
 
     /**
      *  <p>Shipping is free if the sum of the (Custom) Line Item Prices reaches the specified value.</p>
+     * @return Builder
      */
 
     public ShippingRateBuilder freeAbove(
@@ -75,6 +81,8 @@ public class ShippingRateBuilder implements Builder<ShippingRate> {
 
     /**
      *  <p><code>true</code> if the ShippingRate matches given Cart or Location. Only appears in response to requests for Get ShippingMethods for a Cart or Get ShippingMethods for a Location.</p>
+     * @param isMatching
+     * @return Builder
      */
 
     public ShippingRateBuilder isMatching(@Nullable final Boolean isMatching) {
@@ -84,6 +92,8 @@ public class ShippingRateBuilder implements Builder<ShippingRate> {
 
     /**
      *  <p>Price tiers for the ShippingRate.</p>
+     * @param tiers
+     * @return Builder
      */
 
     public ShippingRateBuilder tiers(
@@ -94,6 +104,8 @@ public class ShippingRateBuilder implements Builder<ShippingRate> {
 
     /**
      *  <p>Price tiers for the ShippingRate.</p>
+     * @param tiers
+     * @return Builder
      */
 
     public ShippingRateBuilder tiers(
@@ -104,6 +116,8 @@ public class ShippingRateBuilder implements Builder<ShippingRate> {
 
     /**
      *  <p>Price tiers for the ShippingRate.</p>
+     * @param tiers
+     * @return Builder
      */
 
     public ShippingRateBuilder plusTiers(
@@ -117,6 +131,7 @@ public class ShippingRateBuilder implements Builder<ShippingRate> {
 
     /**
      *  <p>Price tiers for the ShippingRate.</p>
+     * @return Builder
      */
 
     public ShippingRateBuilder plusTiers(
@@ -131,6 +146,7 @@ public class ShippingRateBuilder implements Builder<ShippingRate> {
 
     /**
      *  <p>Price tiers for the ShippingRate.</p>
+     * @return Builder
      */
 
     public ShippingRateBuilder withTiers(

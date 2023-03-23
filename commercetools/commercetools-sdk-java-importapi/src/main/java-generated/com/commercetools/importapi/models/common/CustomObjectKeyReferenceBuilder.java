@@ -28,6 +28,8 @@ public class CustomObjectKeyReferenceBuilder implements Builder<CustomObjectKeyR
 
     /**
      *
+     * @param key
+     * @return Builder
      */
 
     public CustomObjectKeyReferenceBuilder key(final String key) {
@@ -37,6 +39,8 @@ public class CustomObjectKeyReferenceBuilder implements Builder<CustomObjectKeyR
 
     /**
      *
+     * @param container
+     * @return Builder
      */
 
     public CustomObjectKeyReferenceBuilder container(final String container) {

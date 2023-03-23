@@ -18,7 +18,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     CartAddCustomLineItemAction cartAddCustomLineItemAction = CartAddCustomLineItemAction.builder()
  *             .money(moneyBuilder -> moneyBuilder)
  *             .name(nameBuilder -> nameBuilder)
- *             .quantity(0.3)
  *             .slug("{slug}")
  *             .build()
  * </code></pre>
@@ -31,6 +30,7 @@ public class CartAddCustomLineItemActionBuilder implements Builder<CartAddCustom
 
     private com.commercetools.api.models.common.LocalizedString name;
 
+    @Nullable
     private Long quantity;
 
     private String slug;
@@ -39,17 +39,20 @@ public class CartAddCustomLineItemActionBuilder implements Builder<CartAddCustom
     private com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier taxCategory;
 
     @Nullable
-    private com.commercetools.api.models.type.CustomFieldsDraft custom;
+    private com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate;
 
     @Nullable
-    private com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate;
+    private com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails;
+
+    @Nullable
+    private com.commercetools.api.models.type.CustomFieldsDraft custom;
 
     @Nullable
     private com.commercetools.api.models.cart.CustomLineItemPriceMode priceMode;
 
     /**
-     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
-     *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
+     *  <p>Money value of the Custom Line Item. The value can be negative.</p>
+     * @return Builder
      */
 
     public CartAddCustomLineItemActionBuilder money(
@@ -59,8 +62,9 @@ public class CartAddCustomLineItemActionBuilder implements Builder<CartAddCustom
     }
 
     /**
-     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
-     *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
+     *  <p>Money value of the Custom Line Item. The value can be negative.</p>
+     * @param money
+     * @return Builder
      */
 
     public CartAddCustomLineItemActionBuilder money(final com.commercetools.api.models.common.Money money) {
@@ -69,7 +73,8 @@ public class CartAddCustomLineItemActionBuilder implements Builder<CartAddCustom
     }
 
     /**
-     *  <p>JSON object where the keys are of type Locale, and the values are the strings used for the corresponding language.</p>
+     *  <p>Name of the Custom Line Item.</p>
+     * @return Builder
      */
 
     public CartAddCustomLineItemActionBuilder name(
@@ -79,7 +84,9 @@ public class CartAddCustomLineItemActionBuilder implements Builder<CartAddCustom
     }
 
     /**
-     *  <p>JSON object where the keys are of type Locale, and the values are the strings used for the corresponding language.</p>
+     *  <p>Name of the Custom Line Item.</p>
+     * @param name
+     * @return Builder
      */
 
     public CartAddCustomLineItemActionBuilder name(final com.commercetools.api.models.common.LocalizedString name) {
@@ -88,16 +95,20 @@ public class CartAddCustomLineItemActionBuilder implements Builder<CartAddCustom
     }
 
     /**
-     *
+     *  <p>Number of Custom Line Items to add to the Cart.</p>
+     * @param quantity
+     * @return Builder
      */
 
-    public CartAddCustomLineItemActionBuilder quantity(final Long quantity) {
+    public CartAddCustomLineItemActionBuilder quantity(@Nullable final Long quantity) {
         this.quantity = quantity;
         return this;
     }
 
     /**
-     *
+     *  <p>User-defined identifier used in a deep-link URL for the Custom Line Item. It must match the pattern <code>[a-zA-Z0-9_-]{2,256}</code>.</p>
+     * @param slug
+     * @return Builder
      */
 
     public CartAddCustomLineItemActionBuilder slug(final String slug) {
@@ -106,7 +117,9 @@ public class CartAddCustomLineItemActionBuilder implements Builder<CartAddCustom
     }
 
     /**
-     *  <p>ResourceIdentifier to a TaxCategory.</p>
+     *  <p>Used to select a Tax Rate when a Cart has the <code>Platform</code> TaxMode.</p>
+     *  <p>If TaxMode is <code>Platform</code>, this field must not be empty.</p>
+     * @return Builder
      */
 
     public CartAddCustomLineItemActionBuilder taxCategory(
@@ -118,7 +131,10 @@ public class CartAddCustomLineItemActionBuilder implements Builder<CartAddCustom
     }
 
     /**
-     *  <p>ResourceIdentifier to a TaxCategory.</p>
+     *  <p>Used to select a Tax Rate when a Cart has the <code>Platform</code> TaxMode.</p>
+     *  <p>If TaxMode is <code>Platform</code>, this field must not be empty.</p>
+     * @param taxCategory
+     * @return Builder
      */
 
     public CartAddCustomLineItemActionBuilder taxCategory(
@@ -128,27 +144,8 @@ public class CartAddCustomLineItemActionBuilder implements Builder<CartAddCustom
     }
 
     /**
-     *  <p>The representation used when creating or updating a customizable data type with Custom Fields.</p>
-     */
-
-    public CartAddCustomLineItemActionBuilder custom(
-            Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraftBuilder> builder) {
-        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsDraftBuilder.of()).build();
-        return this;
-    }
-
-    /**
-     *  <p>The representation used when creating or updating a customizable data type with Custom Fields.</p>
-     */
-
-    public CartAddCustomLineItemActionBuilder custom(
-            @Nullable final com.commercetools.api.models.type.CustomFieldsDraft custom) {
-        this.custom = custom;
-        return this;
-    }
-
-    /**
-     *
+     *  <p>An external Tax Rate can be set if the Cart has <code>External</code> TaxMode.</p>
+     * @return Builder
      */
 
     public CartAddCustomLineItemActionBuilder externalTaxRate(
@@ -159,7 +156,9 @@ public class CartAddCustomLineItemActionBuilder implements Builder<CartAddCustom
     }
 
     /**
-     *
+     *  <p>An external Tax Rate can be set if the Cart has <code>External</code> TaxMode.</p>
+     * @param externalTaxRate
+     * @return Builder
      */
 
     public CartAddCustomLineItemActionBuilder externalTaxRate(
@@ -169,10 +168,59 @@ public class CartAddCustomLineItemActionBuilder implements Builder<CartAddCustom
     }
 
     /**
+     *  <p>Container for Custom Line Item-specific addresses.</p>
+     * @return Builder
+     */
+
+    public CartAddCustomLineItemActionBuilder shippingDetails(
+            Function<com.commercetools.api.models.cart.ItemShippingDetailsDraftBuilder, com.commercetools.api.models.cart.ItemShippingDetailsDraftBuilder> builder) {
+        this.shippingDetails = builder.apply(com.commercetools.api.models.cart.ItemShippingDetailsDraftBuilder.of())
+                .build();
+        return this;
+    }
+
+    /**
+     *  <p>Container for Custom Line Item-specific addresses.</p>
+     * @param shippingDetails
+     * @return Builder
+     */
+
+    public CartAddCustomLineItemActionBuilder shippingDetails(
+            @Nullable final com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails) {
+        this.shippingDetails = shippingDetails;
+        return this;
+    }
+
+    /**
+     *  <p>Custom Fields for the Custom Line Item.</p>
+     * @return Builder
+     */
+
+    public CartAddCustomLineItemActionBuilder custom(
+            Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraftBuilder> builder) {
+        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsDraftBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Custom Fields for the Custom Line Item.</p>
+     * @param custom
+     * @return Builder
+     */
+
+    public CartAddCustomLineItemActionBuilder custom(
+            @Nullable final com.commercetools.api.models.type.CustomFieldsDraft custom) {
+        this.custom = custom;
+        return this;
+    }
+
+    /**
      *  <ul>
      *   <li>If <code>Standard</code>, Cart Discounts with a matching CartDiscountCustomLineItemsTarget are applied to the Custom Line Item.</li>
      *   <li>If <code>External</code>, Cart Discounts are not considered on the Custom Line Item.</li>
      *  </ul>
+     * @param priceMode
+     * @return Builder
      */
 
     public CartAddCustomLineItemActionBuilder priceMode(
@@ -189,6 +237,7 @@ public class CartAddCustomLineItemActionBuilder implements Builder<CartAddCustom
         return this.name;
     }
 
+    @Nullable
     public Long getQuantity() {
         return this.quantity;
     }
@@ -203,13 +252,18 @@ public class CartAddCustomLineItemActionBuilder implements Builder<CartAddCustom
     }
 
     @Nullable
-    public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
-        return this.custom;
+    public com.commercetools.api.models.cart.ExternalTaxRateDraft getExternalTaxRate() {
+        return this.externalTaxRate;
     }
 
     @Nullable
-    public com.commercetools.api.models.cart.ExternalTaxRateDraft getExternalTaxRate() {
-        return this.externalTaxRate;
+    public com.commercetools.api.models.cart.ItemShippingDetailsDraft getShippingDetails() {
+        return this.shippingDetails;
+    }
+
+    @Nullable
+    public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
+        return this.custom;
     }
 
     @Nullable
@@ -220,18 +274,17 @@ public class CartAddCustomLineItemActionBuilder implements Builder<CartAddCustom
     public CartAddCustomLineItemAction build() {
         Objects.requireNonNull(money, CartAddCustomLineItemAction.class + ": money is missing");
         Objects.requireNonNull(name, CartAddCustomLineItemAction.class + ": name is missing");
-        Objects.requireNonNull(quantity, CartAddCustomLineItemAction.class + ": quantity is missing");
         Objects.requireNonNull(slug, CartAddCustomLineItemAction.class + ": slug is missing");
-        return new CartAddCustomLineItemActionImpl(money, name, quantity, slug, taxCategory, custom, externalTaxRate,
-            priceMode);
+        return new CartAddCustomLineItemActionImpl(money, name, quantity, slug, taxCategory, externalTaxRate,
+            shippingDetails, custom, priceMode);
     }
 
     /**
      * builds CartAddCustomLineItemAction without checking for non null required values
      */
     public CartAddCustomLineItemAction buildUnchecked() {
-        return new CartAddCustomLineItemActionImpl(money, name, quantity, slug, taxCategory, custom, externalTaxRate,
-            priceMode);
+        return new CartAddCustomLineItemActionImpl(money, name, quantity, slug, taxCategory, externalTaxRate,
+            shippingDetails, custom, priceMode);
     }
 
     public static CartAddCustomLineItemActionBuilder of() {
@@ -245,8 +298,9 @@ public class CartAddCustomLineItemActionBuilder implements Builder<CartAddCustom
         builder.quantity = template.getQuantity();
         builder.slug = template.getSlug();
         builder.taxCategory = template.getTaxCategory();
-        builder.custom = template.getCustom();
         builder.externalTaxRate = template.getExternalTaxRate();
+        builder.shippingDetails = template.getShippingDetails();
+        builder.custom = template.getCustom();
         builder.priceMode = template.getPriceMode();
         return builder;
     }

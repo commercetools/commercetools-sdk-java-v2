@@ -41,6 +41,7 @@ public interface MyBusinessUnitDraft
 
     /**
      *  <p>User-defined unique identifier for the BusinessUnit.</p>
+     * @return key
      */
     @NotNull
     @JsonProperty("key")
@@ -48,6 +49,7 @@ public interface MyBusinessUnitDraft
 
     /**
      *  <p>Type of the Business Unit indicating its position in a hierarchy.</p>
+     * @return unitType
      */
     @NotNull
     @JsonProperty("unitType")
@@ -55,6 +57,7 @@ public interface MyBusinessUnitDraft
 
     /**
      *  <p>Name of the Business Unit.</p>
+     * @return name
      */
     @NotNull
     @JsonProperty("name")
@@ -62,6 +65,7 @@ public interface MyBusinessUnitDraft
 
     /**
      *  <p>Email address of the Business Unit.</p>
+     * @return contactEmail
      */
 
     @JsonProperty("contactEmail")
@@ -69,6 +73,7 @@ public interface MyBusinessUnitDraft
 
     /**
      *  <p>Custom Fields for the Business Unit.</p>
+     * @return custom
      */
     @Valid
     @JsonProperty("custom")
@@ -76,6 +81,7 @@ public interface MyBusinessUnitDraft
 
     /**
      *  <p>Addresses used by the Business Unit.</p>
+     * @return addresses
      */
     @Valid
     @JsonProperty("addresses")
@@ -83,6 +89,7 @@ public interface MyBusinessUnitDraft
 
     /**
      *  <p>Indexes of entries in <code>addresses</code> to set as shipping addresses. The <code>shippingAddressIds</code> of the Customer will be replaced by these addresses.</p>
+     * @return shippingAddresses
      */
 
     @JsonProperty("shippingAddresses")
@@ -90,6 +97,7 @@ public interface MyBusinessUnitDraft
 
     /**
      *  <p>Index of the entry in <code>addresses</code> to set as the default shipping address.</p>
+     * @return defaultShippingAddress
      */
 
     @JsonProperty("defaultShippingAddress")
@@ -97,6 +105,7 @@ public interface MyBusinessUnitDraft
 
     /**
      *  <p>Indexes of entries in <code>addresses</code> to set as billing addresses. The <code>billingAddressIds</code> of the Customer will be replaced by these addresses.</p>
+     * @return billingAddresses
      */
 
     @JsonProperty("billingAddresses")
@@ -104,6 +113,7 @@ public interface MyBusinessUnitDraft
 
     /**
      *  <p>Index of the entry in <code>addresses</code> to set as the default billing address.</p>
+     * @return defaultBillingAddress
      */
 
     @JsonProperty("defaultBillingAddress")

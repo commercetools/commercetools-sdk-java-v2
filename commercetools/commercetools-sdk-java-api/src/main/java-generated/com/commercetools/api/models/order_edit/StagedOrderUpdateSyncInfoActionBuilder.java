@@ -34,6 +34,7 @@ public class StagedOrderUpdateSyncInfoActionBuilder implements Builder<StagedOrd
 
     /**
      *  <p>ResourceIdentifier to a Channel.</p>
+     * @return Builder
      */
 
     public StagedOrderUpdateSyncInfoActionBuilder channel(
@@ -45,6 +46,8 @@ public class StagedOrderUpdateSyncInfoActionBuilder implements Builder<StagedOrd
 
     /**
      *  <p>ResourceIdentifier to a Channel.</p>
+     * @param channel
+     * @return Builder
      */
 
     public StagedOrderUpdateSyncInfoActionBuilder channel(
@@ -55,6 +58,8 @@ public class StagedOrderUpdateSyncInfoActionBuilder implements Builder<StagedOrd
 
     /**
      *
+     * @param externalId
+     * @return Builder
      */
 
     public StagedOrderUpdateSyncInfoActionBuilder externalId(@Nullable final String externalId) {
@@ -64,6 +69,8 @@ public class StagedOrderUpdateSyncInfoActionBuilder implements Builder<StagedOrd
 
     /**
      *
+     * @param syncedAt
+     * @return Builder
      */
 
     public StagedOrderUpdateSyncInfoActionBuilder syncedAt(@Nullable final java.time.ZonedDateTime syncedAt) {

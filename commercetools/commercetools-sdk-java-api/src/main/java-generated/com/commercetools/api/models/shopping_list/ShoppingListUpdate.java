@@ -34,6 +34,7 @@ public interface ShoppingListUpdate extends
 
     /**
      *  <p>Expected version of the ShoppingList on which the changes should be applied. If the expected version does not match the actual version, a 409 Conflict will be returned.</p>
+     * @return version
      */
     @NotNull
     @JsonProperty("version")
@@ -41,6 +42,7 @@ public interface ShoppingListUpdate extends
 
     /**
      *  <p>List of update actions to be performed on the ShoppingList.</p>
+     * @return actions
      */
     @NotNull
     @Valid

@@ -30,6 +30,7 @@ public interface ExtensionSetKeyAction extends ExtensionUpdateAction {
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
+     * @return key
      */
 
     @JsonProperty("key")

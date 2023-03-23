@@ -40,6 +40,8 @@ public class ErrorResponseBuilder implements Builder<ErrorResponse> {
 
     /**
      *
+     * @param statusCode
+     * @return Builder
      */
 
     public ErrorResponseBuilder statusCode(final Integer statusCode) {
@@ -49,6 +51,8 @@ public class ErrorResponseBuilder implements Builder<ErrorResponse> {
 
     /**
      *
+     * @param message
+     * @return Builder
      */
 
     public ErrorResponseBuilder message(final String message) {
@@ -58,6 +62,8 @@ public class ErrorResponseBuilder implements Builder<ErrorResponse> {
 
     /**
      *
+     * @param error
+     * @return Builder
      */
 
     public ErrorResponseBuilder error(@Nullable final String error) {
@@ -67,6 +73,8 @@ public class ErrorResponseBuilder implements Builder<ErrorResponse> {
 
     /**
      *
+     * @param error_description
+     * @return Builder
      */
 
     public ErrorResponseBuilder error_description(@Nullable final String error_description) {
@@ -76,6 +84,8 @@ public class ErrorResponseBuilder implements Builder<ErrorResponse> {
 
     /**
      *
+     * @param errors
+     * @return Builder
      */
 
     public ErrorResponseBuilder errors(
@@ -86,6 +96,8 @@ public class ErrorResponseBuilder implements Builder<ErrorResponse> {
 
     /**
      *
+     * @param errors
+     * @return Builder
      */
 
     public ErrorResponseBuilder errors(
@@ -96,6 +108,8 @@ public class ErrorResponseBuilder implements Builder<ErrorResponse> {
 
     /**
      *
+     * @param errors
+     * @return Builder
      */
 
     public ErrorResponseBuilder plusErrors(
@@ -109,6 +123,7 @@ public class ErrorResponseBuilder implements Builder<ErrorResponse> {
 
     /**
      *
+     * @return Builder
      */
 
     public ErrorResponseBuilder plusErrors(
@@ -122,6 +137,7 @@ public class ErrorResponseBuilder implements Builder<ErrorResponse> {
 
     /**
      *
+     * @return Builder
      */
 
     public ErrorResponseBuilder withErrors(

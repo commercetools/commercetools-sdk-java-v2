@@ -32,6 +32,7 @@ public interface Money {
 
     /**
      *
+     * @return centAmount
      */
     @NotNull
     @JsonProperty("centAmount")
@@ -39,6 +40,7 @@ public interface Money {
 
     /**
      *  <p>The currency code compliant to ISO 4217.</p>
+     * @return currencyCode
      */
     @NotNull
     @JsonProperty("currencyCode")

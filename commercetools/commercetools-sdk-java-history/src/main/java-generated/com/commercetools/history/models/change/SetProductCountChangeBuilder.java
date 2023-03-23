@@ -31,6 +31,8 @@ public class SetProductCountChangeBuilder implements Builder<SetProductCountChan
 
     /**
      *  <p>Update action for <code>setProductCount</code></p>
+     * @param change
+     * @return Builder
      */
 
     public SetProductCountChangeBuilder change(final String change) {
@@ -40,6 +42,8 @@ public class SetProductCountChangeBuilder implements Builder<SetProductCountChan
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public SetProductCountChangeBuilder previousValue(final Integer previousValue) {
@@ -49,6 +53,8 @@ public class SetProductCountChangeBuilder implements Builder<SetProductCountChan
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public SetProductCountChangeBuilder nextValue(final Integer nextValue) {

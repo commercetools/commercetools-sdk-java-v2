@@ -39,6 +39,7 @@ public interface ChangeLabelChange extends Change {
 
     /**
      *
+     * @return type
      */
     @NotNull
     @JsonProperty("type")
@@ -46,6 +47,7 @@ public interface ChangeLabelChange extends Change {
 
     /**
      *  <p>Update action for <code>changeLabel</code> on product types and types</p>
+     * @return change
      */
     @NotNull
     @JsonProperty("change")
@@ -53,6 +55,7 @@ public interface ChangeLabelChange extends Change {
 
     /**
      *  <p>The name of the field definition to update (types).</p>
+     * @return fieldName
      */
     @NotNull
     @JsonProperty("fieldName")
@@ -60,6 +63,7 @@ public interface ChangeLabelChange extends Change {
 
     /**
      *  <p>The name of the attribute definition to update (product-type).</p>
+     * @return attributeName
      */
     @NotNull
     @JsonProperty("attributeName")
@@ -67,6 +71,7 @@ public interface ChangeLabelChange extends Change {
 
     /**
      *
+     * @return nextValue
      */
     @NotNull
     @Valid
@@ -75,6 +80,7 @@ public interface ChangeLabelChange extends Change {
 
     /**
      *
+     * @return previousValue
      */
     @NotNull
     @Valid

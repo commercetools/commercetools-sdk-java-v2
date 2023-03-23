@@ -36,6 +36,7 @@ public interface ProductSetProductPriceCustomTypeAction extends ProductUpdateAct
 
     /**
      *  <p>The <code>id</code> of the Embedded Price to update.</p>
+     * @return priceId
      */
     @NotNull
     @JsonProperty("priceId")
@@ -43,6 +44,7 @@ public interface ProductSetProductPriceCustomTypeAction extends ProductUpdateAct
 
     /**
      *  <p>If <code>true</code>, only the staged Embedded Price is updated. If <code>false</code>, both the current and staged Embedded Price is updated.</p>
+     * @return staged
      */
 
     @JsonProperty("staged")
@@ -50,6 +52,7 @@ public interface ProductSetProductPriceCustomTypeAction extends ProductUpdateAct
 
     /**
      *  <p>Defines the Type that extends the Price with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Embedded Price.</p>
+     * @return type
      */
     @Valid
     @JsonProperty("type")
@@ -57,6 +60,7 @@ public interface ProductSetProductPriceCustomTypeAction extends ProductUpdateAct
 
     /**
      *  <p>Sets the Custom Fields fields for the Embedded Price.</p>
+     * @return fields
      */
     @Valid
     @JsonProperty("fields")

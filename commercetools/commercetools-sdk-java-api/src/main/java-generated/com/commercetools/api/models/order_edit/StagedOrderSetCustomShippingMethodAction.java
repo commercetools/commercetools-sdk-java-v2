@@ -39,6 +39,7 @@ public interface StagedOrderSetCustomShippingMethodAction extends StagedOrderUpd
 
     /**
      *
+     * @return shippingMethodName
      */
     @NotNull
     @JsonProperty("shippingMethodName")
@@ -46,6 +47,7 @@ public interface StagedOrderSetCustomShippingMethodAction extends StagedOrderUpd
 
     /**
      *
+     * @return shippingRate
      */
     @NotNull
     @Valid
@@ -54,13 +56,15 @@ public interface StagedOrderSetCustomShippingMethodAction extends StagedOrderUpd
 
     /**
      *  <p>ResourceIdentifier to a TaxCategory.</p>
+     * @return taxCategory
      */
     @Valid
     @JsonProperty("taxCategory")
     public TaxCategoryResourceIdentifier getTaxCategory();
 
     /**
-     *
+     *  <p>Controls calculation of taxed prices for Line Items, Custom Line Items, and Shipping Methods as explained in Cart tax calculation.</p>
+     * @return externalTaxRate
      */
     @Valid
     @JsonProperty("externalTaxRate")

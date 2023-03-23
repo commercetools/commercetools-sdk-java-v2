@@ -31,6 +31,8 @@ public class ChangeStagedQuoteStateChangeBuilder implements Builder<ChangeStaged
 
     /**
      *
+     * @param change
+     * @return Builder
      */
 
     public ChangeStagedQuoteStateChangeBuilder change(final String change) {
@@ -40,6 +42,8 @@ public class ChangeStagedQuoteStateChangeBuilder implements Builder<ChangeStaged
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public ChangeStagedQuoteStateChangeBuilder nextValue(
@@ -50,6 +54,8 @@ public class ChangeStagedQuoteStateChangeBuilder implements Builder<ChangeStaged
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public ChangeStagedQuoteStateChangeBuilder previousValue(

@@ -5,15 +5,23 @@ on:
 
 name: CI
 
+# Declare default permissions as read only.
+permissions: read-all
+
 jobs:
   integrationTest:
     name: Integration tests
 
     runs-on: ubuntu-latest
 
+    permissions:
+        contents: write  # for stefanzweifel/git-auto-commit-action to push code in repo
+
     steps:
       - name: Checkout
         uses: actions/checkout@v3
+
+      - uses: gradle/wrapper-validation-action@v1
 
       - name: Setup Java
         uses: actions/setup-java@v3
@@ -29,6 +37,19 @@ jobs:
         if: github.event_name == 'push' && github.ref != 'refs/heads/main'
         with:
             commit_message: "spotless: Fix code style"
+            commit_user_name: automation-commercetools
+            commit_user_email: automation@commercetools.com
+            commit_author: Auto Mation <automation@commercetools.com>
+
+      - name: "Run if style changes have been detected"
+        if: steps.auto-commit-action.outputs.changes_detected == 'true'
+        run: echo "${{steps.auto-commit-action.outputs.commit_hash}}" >> .git-blame-ignore-revs
+
+      - uses: stefanzweifel/git-auto-commit-action@v4
+        if: github.event_name == 'push' && github.ref != 'refs/heads/main'
+        with:
+            file_pattern: '.git-blame-ignore-revs'
+            commit_message: "spotless: add commit to blame ignore revs file"
             commit_user_name: automation-commercetools
             commit_user_email: automation@commercetools.com
             commit_author: Auto Mation <automation@commercetools.com>
@@ -88,11 +109,16 @@ jobs:
       -   name: Checkout
           uses: actions/checkout@v3
 
+      - uses: gradle/wrapper-validation-action@v1
+
       -   name: Setup Java
           uses: actions/setup-java@v3
           with:
               distribution: 'temurin'
               java-version: '16'
+
+      - name: Setup Graphviz
+        uses: ts-graphviz/setup-graphviz@v1
 
       -   name: build javadoc
           if: github.event_name == 'push' && github.ref == 'refs/heads/main'

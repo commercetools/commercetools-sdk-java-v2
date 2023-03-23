@@ -26,6 +26,8 @@ public class ProductVariantPatchRequestBuilder implements Builder<ProductVariant
 
     /**
      *  <p>The product variant patches of this request.</p>
+     * @param patches
+     * @return Builder
      */
 
     public ProductVariantPatchRequestBuilder patches(
@@ -36,6 +38,8 @@ public class ProductVariantPatchRequestBuilder implements Builder<ProductVariant
 
     /**
      *  <p>The product variant patches of this request.</p>
+     * @param patches
+     * @return Builder
      */
 
     public ProductVariantPatchRequestBuilder patches(
@@ -46,6 +50,8 @@ public class ProductVariantPatchRequestBuilder implements Builder<ProductVariant
 
     /**
      *  <p>The product variant patches of this request.</p>
+     * @param patches
+     * @return Builder
      */
 
     public ProductVariantPatchRequestBuilder plusPatches(
@@ -59,6 +65,7 @@ public class ProductVariantPatchRequestBuilder implements Builder<ProductVariant
 
     /**
      *  <p>The product variant patches of this request.</p>
+     * @return Builder
      */
 
     public ProductVariantPatchRequestBuilder plusPatches(
@@ -73,6 +80,7 @@ public class ProductVariantPatchRequestBuilder implements Builder<ProductVariant
 
     /**
      *  <p>The product variant patches of this request.</p>
+     * @return Builder
      */
 
     public ProductVariantPatchRequestBuilder withPatches(

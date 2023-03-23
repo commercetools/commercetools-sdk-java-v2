@@ -32,6 +32,8 @@ public class SetSupplyChannelChangeBuilder implements Builder<SetSupplyChannelCh
 
     /**
      *  <p>Shape of the action for <code>setSupplyChannel</code></p>
+     * @param change
+     * @return Builder
      */
 
     public SetSupplyChannelChangeBuilder change(final String change) {
@@ -41,6 +43,7 @@ public class SetSupplyChannelChangeBuilder implements Builder<SetSupplyChannelCh
 
     /**
      *
+     * @return Builder
      */
 
     public SetSupplyChannelChangeBuilder previousValue(
@@ -51,6 +54,8 @@ public class SetSupplyChannelChangeBuilder implements Builder<SetSupplyChannelCh
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public SetSupplyChannelChangeBuilder previousValue(
@@ -61,6 +66,7 @@ public class SetSupplyChannelChangeBuilder implements Builder<SetSupplyChannelCh
 
     /**
      *
+     * @return Builder
      */
 
     public SetSupplyChannelChangeBuilder nextValue(
@@ -71,6 +77,8 @@ public class SetSupplyChannelChangeBuilder implements Builder<SetSupplyChannelCh
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public SetSupplyChannelChangeBuilder nextValue(final com.commercetools.history.models.common.Reference nextValue) {

@@ -27,6 +27,8 @@ public class DiscountCodeSetMaxApplicationsActionBuilder implements Builder<Disc
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
+     * @param maxApplications
+     * @return Builder
      */
 
     public DiscountCodeSetMaxApplicationsActionBuilder maxApplications(@Nullable final Long maxApplications) {

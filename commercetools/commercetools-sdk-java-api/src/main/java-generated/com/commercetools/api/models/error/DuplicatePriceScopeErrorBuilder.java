@@ -31,6 +31,8 @@ public class DuplicatePriceScopeErrorBuilder implements Builder<DuplicatePriceSc
 
     /**
      *  <p><code>"Duplicate price scope: $priceScope. The combination of currency, country, customerGroup and channel must be unique for each price of a product variant."</code></p>
+     * @param message
+     * @return Builder
      */
 
     public DuplicatePriceScopeErrorBuilder message(final String message) {
@@ -61,6 +63,7 @@ public class DuplicatePriceScopeErrorBuilder implements Builder<DuplicatePriceSc
 
     /**
      *  <p>Conflicting Embedded Price.</p>
+     * @return Builder
      */
 
     public DuplicatePriceScopeErrorBuilder conflictingPrice(
@@ -71,6 +74,8 @@ public class DuplicatePriceScopeErrorBuilder implements Builder<DuplicatePriceSc
 
     /**
      *  <p>Conflicting Embedded Price.</p>
+     * @param conflictingPrice
+     * @return Builder
      */
 
     public DuplicatePriceScopeErrorBuilder conflictingPrice(

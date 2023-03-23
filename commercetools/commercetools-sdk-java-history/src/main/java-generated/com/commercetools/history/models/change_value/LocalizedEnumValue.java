@@ -34,6 +34,7 @@ public interface LocalizedEnumValue {
 
     /**
      *
+     * @return key
      */
     @NotNull
     @JsonProperty("key")
@@ -41,6 +42,7 @@ public interface LocalizedEnumValue {
 
     /**
      *
+     * @return label
      */
     @NotNull
     @Valid

@@ -33,7 +33,8 @@ public interface ClassificationShippingRateInputDraft
     String CLASSIFICATION = "Classification";
 
     /**
-     *
+     *  <p>Key of the value used as a programmatic identifier.</p>
+     * @return key
      */
     @NotNull
     @JsonProperty("key")

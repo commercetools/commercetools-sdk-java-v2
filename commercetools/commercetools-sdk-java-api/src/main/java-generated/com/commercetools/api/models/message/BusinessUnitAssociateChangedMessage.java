@@ -42,6 +42,7 @@ public interface BusinessUnitAssociateChangedMessage extends Message {
 
     /**
      *  <p>The Associate that was updated.</p>
+     * @return associate
      */
     @NotNull
     @Valid

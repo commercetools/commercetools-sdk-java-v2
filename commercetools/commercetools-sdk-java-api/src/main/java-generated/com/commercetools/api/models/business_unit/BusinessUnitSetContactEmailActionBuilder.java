@@ -27,6 +27,8 @@ public class BusinessUnitSetContactEmailActionBuilder implements Builder<Busines
 
     /**
      *  <p>Email to set. If <code>contactEmail</code> is absent or <code>null</code>, the existing contact email, if any, will be removed.</p>
+     * @param contactEmail
+     * @return Builder
      */
 
     public BusinessUnitSetContactEmailActionBuilder contactEmail(@Nullable final String contactEmail) {

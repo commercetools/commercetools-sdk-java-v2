@@ -32,6 +32,8 @@ public class SetCustomerGroupChangeBuilder implements Builder<SetCustomerGroupCh
 
     /**
      *  <p>Shape of the action for <code>setCustomerGroup</code></p>
+     * @param change
+     * @return Builder
      */
 
     public SetCustomerGroupChangeBuilder change(final String change) {
@@ -41,6 +43,7 @@ public class SetCustomerGroupChangeBuilder implements Builder<SetCustomerGroupCh
 
     /**
      *
+     * @return Builder
      */
 
     public SetCustomerGroupChangeBuilder previousValue(
@@ -51,6 +54,8 @@ public class SetCustomerGroupChangeBuilder implements Builder<SetCustomerGroupCh
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public SetCustomerGroupChangeBuilder previousValue(
@@ -61,6 +66,7 @@ public class SetCustomerGroupChangeBuilder implements Builder<SetCustomerGroupCh
 
     /**
      *
+     * @return Builder
      */
 
     public SetCustomerGroupChangeBuilder nextValue(
@@ -71,6 +77,8 @@ public class SetCustomerGroupChangeBuilder implements Builder<SetCustomerGroupCh
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public SetCustomerGroupChangeBuilder nextValue(final com.commercetools.history.models.common.Reference nextValue) {

@@ -33,6 +33,8 @@ public class SetCartClassificationShippingRateInputValueBuilder
 
     /**
      *
+     * @param type
+     * @return Builder
      */
 
     public SetCartClassificationShippingRateInputValueBuilder type(final String type) {
@@ -42,6 +44,8 @@ public class SetCartClassificationShippingRateInputValueBuilder
 
     /**
      *
+     * @param key
+     * @return Builder
      */
 
     public SetCartClassificationShippingRateInputValueBuilder key(final String key) {
@@ -51,6 +55,7 @@ public class SetCartClassificationShippingRateInputValueBuilder
 
     /**
      *
+     * @return Builder
      */
 
     public SetCartClassificationShippingRateInputValueBuilder label(
@@ -61,6 +66,8 @@ public class SetCartClassificationShippingRateInputValueBuilder
 
     /**
      *
+     * @param label
+     * @return Builder
      */
 
     public SetCartClassificationShippingRateInputValueBuilder label(

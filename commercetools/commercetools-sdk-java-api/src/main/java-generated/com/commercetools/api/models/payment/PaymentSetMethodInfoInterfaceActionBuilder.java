@@ -25,6 +25,8 @@ public class PaymentSetMethodInfoInterfaceActionBuilder implements Builder<Payme
 
     /**
      *  <p>Value to set. Once set, the <code>paymentInterface</code> of the <code>paymentMethodInfo</code> cannot be changed.</p>
+     * @param _interface
+     * @return Builder
      */
 
     public PaymentSetMethodInfoInterfaceActionBuilder _interface(final String _interface) {

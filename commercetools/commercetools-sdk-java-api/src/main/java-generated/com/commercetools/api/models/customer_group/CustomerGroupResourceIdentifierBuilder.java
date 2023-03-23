@@ -30,6 +30,8 @@ public class CustomerGroupResourceIdentifierBuilder implements Builder<CustomerG
 
     /**
      *  <p>Unique identifier of the referenced CustomerGroup. Either <code>id</code> or <code>key</code> is required.</p>
+     * @param id
+     * @return Builder
      */
 
     public CustomerGroupResourceIdentifierBuilder id(@Nullable final String id) {
@@ -39,6 +41,8 @@ public class CustomerGroupResourceIdentifierBuilder implements Builder<CustomerG
 
     /**
      *  <p>User-defined unique identifier of the referenced CustomerGroup. Either <code>id</code> or <code>key</code> is required.</p>
+     * @param key
+     * @return Builder
      */
 
     public CustomerGroupResourceIdentifierBuilder key(@Nullable final String key) {

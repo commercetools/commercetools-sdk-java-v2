@@ -35,6 +35,7 @@ public interface ShoppingListReference extends Reference, com.commercetools.api.
 
     /**
      *  <p>Contains the representation of the expanded ShoppingList. Only present in responses to requests with Reference Expansion for ShoppingLists.</p>
+     * @return obj
      */
     @Valid
     @JsonProperty("obj")
@@ -42,6 +43,7 @@ public interface ShoppingListReference extends Reference, com.commercetools.api.
 
     /**
      *  <p>Unique identifier of the referenced ShoppingList.</p>
+     * @return id
      */
     @NotNull
     @JsonProperty("id")

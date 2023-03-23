@@ -31,6 +31,7 @@ public interface BusinessUnitConfiguration {
 
     /**
      *  <p>Status of Business Units created using the My Business Unit endpoint.</p>
+     * @return myBusinessUnitStatusOnCreation
      */
     @NotNull
     @JsonProperty("myBusinessUnitStatusOnCreation")

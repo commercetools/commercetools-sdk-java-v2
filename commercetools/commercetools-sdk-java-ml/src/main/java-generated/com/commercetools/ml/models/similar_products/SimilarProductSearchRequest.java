@@ -30,6 +30,7 @@ public interface SimilarProductSearchRequest {
 
     /**
      *  <p>Number of results requested.</p>
+     * @return limit
      */
 
     @JsonProperty("limit")
@@ -37,6 +38,7 @@ public interface SimilarProductSearchRequest {
 
     /**
      *  <p>Number of elements skipped.</p>
+     * @return offset
      */
 
     @JsonProperty("offset")
@@ -44,6 +46,7 @@ public interface SimilarProductSearchRequest {
 
     /**
      *  <p>language tag used to prioritize language for text comparisons.</p>
+     * @return language
      */
 
     @JsonProperty("language")
@@ -51,6 +54,7 @@ public interface SimilarProductSearchRequest {
 
     /**
      *  <p>The three-digit currency code to compare prices in. When a product has multiple prices, all prices for the product are converted to the currency provided by the currency attribute and the median price is calculated for comparison. Currencies are converted using the ECB currency exchange rates at the time the request is made. Of the currency codes, only currencies with currency exchange rates provided by the ECB are supported.</p>
+     * @return currencyCode
      */
 
     @JsonProperty("currencyCode")
@@ -58,6 +62,7 @@ public interface SimilarProductSearchRequest {
 
     /**
      *  <p><code>similarityMeasures</code> defines the attributes taken into account to measure product similarity.</p>
+     * @return similarityMeasures
      */
     @Valid
     @JsonProperty("similarityMeasures")
@@ -65,6 +70,7 @@ public interface SimilarProductSearchRequest {
 
     /**
      *  <p>Array of length 2 of ProductSetSelector</p>
+     * @return productSetSelectors
      */
     @Valid
     @JsonProperty("productSetSelectors")
@@ -72,6 +78,7 @@ public interface SimilarProductSearchRequest {
 
     /**
      *
+     * @return confidenceMin
      */
 
     @JsonProperty("confidenceMin")
@@ -79,6 +86,7 @@ public interface SimilarProductSearchRequest {
 
     /**
      *
+     * @return confidenceMax
      */
 
     @JsonProperty("confidenceMax")

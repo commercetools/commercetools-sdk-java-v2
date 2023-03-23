@@ -33,7 +33,8 @@ public interface CartSetLineItemCustomFieldAction extends CartUpdateAction {
     String SET_LINE_ITEM_CUSTOM_FIELD = "setLineItemCustomField";
 
     /**
-     *
+     *  <p><code>id</code> of the LineItem to update.</p>
+     * @return lineItemId
      */
     @NotNull
     @JsonProperty("lineItemId")
@@ -41,6 +42,7 @@ public interface CartSetLineItemCustomFieldAction extends CartUpdateAction {
 
     /**
      *  <p>Name of the Custom Field.</p>
+     * @return name
      */
     @NotNull
     @JsonProperty("name")
@@ -48,6 +50,7 @@ public interface CartSetLineItemCustomFieldAction extends CartUpdateAction {
 
     /**
      *  <p>If <code>value</code> is absent or <code>null</code>, this field will be removed if it exists. Removing a field that does not exist returns an InvalidOperation error. If <code>value</code> is provided, it is set for the field defined by <code>name</code>.</p>
+     * @return value
      */
 
     @JsonProperty("value")

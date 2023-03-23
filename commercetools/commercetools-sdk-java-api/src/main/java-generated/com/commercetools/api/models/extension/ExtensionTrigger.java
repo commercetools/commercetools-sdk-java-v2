@@ -32,6 +32,7 @@ public interface ExtensionTrigger {
 
     /**
      *  <p><code>cart</code>, <code>order</code>, <code>payment</code>, <code>customer</code>, <code>quote-request</code>, <code>staged-quote</code>, <code>quote</code>, and <code>business-unit</code> are supported.</p>
+     * @return resourceTypeId
      */
     @NotNull
     @JsonProperty("resourceTypeId")
@@ -39,6 +40,7 @@ public interface ExtensionTrigger {
 
     /**
      *  <p><code>Create</code> and <code>Update</code> requests are supported.</p>
+     * @return actions
      */
     @NotNull
     @JsonProperty("actions")
@@ -46,6 +48,7 @@ public interface ExtensionTrigger {
 
     /**
      *  <p>Valid predicate that controls the conditions under which the API Extension is called. The Extension is not triggered when the specified condition is not fulfilled.</p>
+     * @return condition
      */
 
     @JsonProperty("condition")

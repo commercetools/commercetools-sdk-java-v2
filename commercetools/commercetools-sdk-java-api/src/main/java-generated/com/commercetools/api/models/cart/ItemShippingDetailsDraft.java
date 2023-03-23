@@ -14,7 +14,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * ItemShippingDetailsDraft
+ *  <p>For order creation and updates, the sum of the <code>targets</code> must match the quantity of the Line Items or Custom Line Items.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -31,7 +31,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ItemShippingDetailsDraft extends io.vrap.rmf.base.client.Draft<ItemShippingDetailsDraft> {
 
     /**
-     *  <p>Used to capture one or more (custom) line item specific shipping addresses. By specifying sub-quantities, it is possible to set multiple shipping addresses for one line item. A cart can have <code>shippingDetails</code> where the <code>targets</code> sum does not match the quantity of the line item or custom line item. For the order creation and order updates the <code>targets</code> sum must match the quantity.</p>
+     *  <p>Holds information on the quantity of Line Items or Custom Line Items and the address it is shipped.</p>
+     *  <p>If multiple shipping addresses are present for a Line Item or Custom Line Item, sub-quantities must be specified.</p>
+     * @return targets
      */
     @NotNull
     @Valid

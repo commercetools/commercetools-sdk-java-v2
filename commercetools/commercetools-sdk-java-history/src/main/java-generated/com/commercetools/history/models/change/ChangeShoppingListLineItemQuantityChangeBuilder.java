@@ -36,6 +36,8 @@ public class ChangeShoppingListLineItemQuantityChangeBuilder
 
     /**
      *
+     * @param change
+     * @return Builder
      */
 
     public ChangeShoppingListLineItemQuantityChangeBuilder change(final String change) {
@@ -45,6 +47,7 @@ public class ChangeShoppingListLineItemQuantityChangeBuilder
 
     /**
      *
+     * @return Builder
      */
 
     public ChangeShoppingListLineItemQuantityChangeBuilder lineItem(
@@ -57,6 +60,8 @@ public class ChangeShoppingListLineItemQuantityChangeBuilder
 
     /**
      *
+     * @param lineItem
+     * @return Builder
      */
 
     public ChangeShoppingListLineItemQuantityChangeBuilder lineItem(
@@ -67,6 +72,8 @@ public class ChangeShoppingListLineItemQuantityChangeBuilder
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public ChangeShoppingListLineItemQuantityChangeBuilder previousValue(final Integer previousValue) {
@@ -76,6 +83,8 @@ public class ChangeShoppingListLineItemQuantityChangeBuilder
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public ChangeShoppingListLineItemQuantityChangeBuilder nextValue(final Integer nextValue) {

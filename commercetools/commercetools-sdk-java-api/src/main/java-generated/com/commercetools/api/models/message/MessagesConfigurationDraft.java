@@ -32,6 +32,7 @@ public interface MessagesConfigurationDraft extends io.vrap.rmf.base.client.Draf
 
     /**
      *  <p>Setting to <code>true</code> activates the Messages Query feature.</p>
+     * @return enabled
      */
     @NotNull
     @JsonProperty("enabled")
@@ -39,6 +40,7 @@ public interface MessagesConfigurationDraft extends io.vrap.rmf.base.client.Draf
 
     /**
      *  <p>Specifies the number of days each Message should be available via the Messages Query API. For Messages older than the specified period, it is not guaranteed that they are still accessible via the API.</p>
+     * @return deleteDaysAfterCreation
      */
     @NotNull
     @JsonProperty("deleteDaysAfterCreation")

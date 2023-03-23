@@ -39,6 +39,8 @@ public class ProductSetAttributeActionBuilder implements Builder<ProductSetAttri
 
     /**
      *  <p>The <code>id</code> of the ProductVariant to update.</p>
+     * @param variantId
+     * @return Builder
      */
 
     public ProductSetAttributeActionBuilder variantId(@Nullable final Long variantId) {
@@ -48,6 +50,8 @@ public class ProductSetAttributeActionBuilder implements Builder<ProductSetAttri
 
     /**
      *  <p>The <code>sku</code> of the ProductVariant to update.</p>
+     * @param sku
+     * @return Builder
      */
 
     public ProductSetAttributeActionBuilder sku(@Nullable final String sku) {
@@ -57,6 +61,8 @@ public class ProductSetAttributeActionBuilder implements Builder<ProductSetAttri
 
     /**
      *  <p>The name of the Attribute to set.</p>
+     * @param name
+     * @return Builder
      */
 
     public ProductSetAttributeActionBuilder name(final String name) {
@@ -75,6 +81,8 @@ public class ProductSetAttributeActionBuilder implements Builder<ProductSetAttri
      *   <li>For Nested Type Attributes, use the list of values of all Attributes of the nested Product as <code>value</code>.</li>
      *   <li>For Reference Type Attributes, use the Reference object as <code>value</code>.</li>
      *  </ul>
+     * @param value
+     * @return Builder
      */
 
     public ProductSetAttributeActionBuilder value(@Nullable final java.lang.Object value) {
@@ -84,6 +92,8 @@ public class ProductSetAttributeActionBuilder implements Builder<ProductSetAttri
 
     /**
      *  <p>If <code>true</code>, only the staged Attribute is set. If <code>false</code>, both current and staged Attribute is set.</p>
+     * @param staged
+     * @return Builder
      */
 
     public ProductSetAttributeActionBuilder staged(@Nullable final Boolean staged) {

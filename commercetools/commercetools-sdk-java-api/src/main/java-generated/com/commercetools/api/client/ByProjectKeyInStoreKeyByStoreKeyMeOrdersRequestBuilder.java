@@ -30,6 +30,11 @@ public class ByProjectKeyInStoreKeyByStoreKeyMeOrdersRequestBuilder {
             myOrderFromCartDraft);
     }
 
+    public ByProjectKeyInStoreKeyByStoreKeyMeOrdersPostString post(final String myOrderFromCartDraft) {
+        return new ByProjectKeyInStoreKeyByStoreKeyMeOrdersPostString(apiHttpClient, projectKey, storeKey,
+            myOrderFromCartDraft);
+    }
+
     public ByProjectKeyInStoreKeyByStoreKeyMeOrdersPost post(
             UnaryOperator<com.commercetools.api.models.me.MyOrderFromCartDraftBuilder> op) {
         return post(op.apply(com.commercetools.api.models.me.MyOrderFromCartDraftBuilder.of()).build());

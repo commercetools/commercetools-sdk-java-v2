@@ -33,6 +33,7 @@ public interface ReturnInfo {
 
     /**
      *
+     * @return items
      */
     @NotNull
     @Valid
@@ -41,6 +42,7 @@ public interface ReturnInfo {
 
     /**
      *  <p>Maps to <code>ReturnInfo.returnTrackingId</code></p>
+     * @return returnTrackingId
      */
 
     @JsonProperty("returnTrackingId")
@@ -48,6 +50,7 @@ public interface ReturnInfo {
 
     /**
      *  <p>Maps to <code>ReturnInfo.returnDate</code></p>
+     * @return returnDate
      */
 
     @JsonProperty("returnDate")

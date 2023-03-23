@@ -34,6 +34,7 @@ public class ParcelAddedToDeliveryMessagePayloadBuilder implements Builder<Parce
 
     /**
      *  <p>Unique identifier of the Delivery.</p>
+     * @return Builder
      */
 
     public ParcelAddedToDeliveryMessagePayloadBuilder delivery(
@@ -44,6 +45,8 @@ public class ParcelAddedToDeliveryMessagePayloadBuilder implements Builder<Parce
 
     /**
      *  <p>Unique identifier of the Delivery.</p>
+     * @param delivery
+     * @return Builder
      */
 
     public ParcelAddedToDeliveryMessagePayloadBuilder delivery(
@@ -54,6 +57,7 @@ public class ParcelAddedToDeliveryMessagePayloadBuilder implements Builder<Parce
 
     /**
      *  <p>Parcel that was added to the Delivery.</p>
+     * @return Builder
      */
 
     public ParcelAddedToDeliveryMessagePayloadBuilder parcel(
@@ -64,6 +68,8 @@ public class ParcelAddedToDeliveryMessagePayloadBuilder implements Builder<Parce
 
     /**
      *  <p>Parcel that was added to the Delivery.</p>
+     * @param parcel
+     * @return Builder
      */
 
     public ParcelAddedToDeliveryMessagePayloadBuilder parcel(final com.commercetools.api.models.order.Parcel parcel) {
@@ -73,6 +79,8 @@ public class ParcelAddedToDeliveryMessagePayloadBuilder implements Builder<Parce
 
     /**
      *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multi</code> ShippingMode.</p>
+     * @param shippingKey
+     * @return Builder
      */
 
     public ParcelAddedToDeliveryMessagePayloadBuilder shippingKey(@Nullable final String shippingKey) {

@@ -35,6 +35,7 @@ public interface MyBusinessUnitChangeAssociateAction extends MyBusinessUnitUpdat
 
     /**
      *  <p>The Associate to add.</p>
+     * @return associate
      */
     @NotNull
     @Valid

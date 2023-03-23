@@ -40,6 +40,7 @@ public interface LocalizedStringField extends CustomField {
      *    "en": "dog food"
      *  }
      *  </code></pre>
+     * @return value
      */
     @NotNull
     @Valid

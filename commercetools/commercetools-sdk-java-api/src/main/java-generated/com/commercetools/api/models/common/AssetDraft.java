@@ -35,6 +35,7 @@ public interface AssetDraft extends com.commercetools.api.models.CustomizableDra
 
     /**
      *
+     * @return sources
      */
     @NotNull
     @Valid
@@ -43,6 +44,7 @@ public interface AssetDraft extends com.commercetools.api.models.CustomizableDra
 
     /**
      *  <p>Name of the Asset.</p>
+     * @return name
      */
     @NotNull
     @Valid
@@ -51,6 +53,7 @@ public interface AssetDraft extends com.commercetools.api.models.CustomizableDra
 
     /**
      *  <p>Description of the Asset.</p>
+     * @return description
      */
     @Valid
     @JsonProperty("description")
@@ -58,6 +61,7 @@ public interface AssetDraft extends com.commercetools.api.models.CustomizableDra
 
     /**
      *  <p>Keywords for categorizing and organizing Assets.</p>
+     * @return tags
      */
 
     @JsonProperty("tags")
@@ -65,6 +69,7 @@ public interface AssetDraft extends com.commercetools.api.models.CustomizableDra
 
     /**
      *  <p>Custom Fields defined for the Asset.</p>
+     * @return custom
      */
     @Valid
     @JsonProperty("custom")
@@ -72,6 +77,7 @@ public interface AssetDraft extends com.commercetools.api.models.CustomizableDra
 
     /**
      *  <p>User-defined unique identifier for the Asset.</p>
+     * @return key
      */
 
     @JsonProperty("key")

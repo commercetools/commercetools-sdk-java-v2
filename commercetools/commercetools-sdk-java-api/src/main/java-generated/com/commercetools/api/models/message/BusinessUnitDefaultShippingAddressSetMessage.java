@@ -40,6 +40,7 @@ public interface BusinessUnitDefaultShippingAddressSetMessage extends Message {
 
     /**
      *  <p>The address that was set as the default shipping address.</p>
+     * @return address
      */
     @Valid
     @JsonProperty("address")

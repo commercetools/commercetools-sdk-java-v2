@@ -31,6 +31,7 @@ public class ProductSetSearchKeywordsActionBuilder implements Builder<ProductSet
 
     /**
      *  <p>Value to set.</p>
+     * @return Builder
      */
 
     public ProductSetSearchKeywordsActionBuilder searchKeywords(
@@ -41,6 +42,8 @@ public class ProductSetSearchKeywordsActionBuilder implements Builder<ProductSet
 
     /**
      *  <p>Value to set.</p>
+     * @param searchKeywords
+     * @return Builder
      */
 
     public ProductSetSearchKeywordsActionBuilder searchKeywords(
@@ -51,6 +54,8 @@ public class ProductSetSearchKeywordsActionBuilder implements Builder<ProductSet
 
     /**
      *  <p>If <code>true</code>, only the staged <code>searchKeywords</code> is updated. If <code>false</code>, both the current and staged <code>searchKeywords</code> are updated.</p>
+     * @param staged
+     * @return Builder
      */
 
     public ProductSetSearchKeywordsActionBuilder staged(@Nullable final Boolean staged) {

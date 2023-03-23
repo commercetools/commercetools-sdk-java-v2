@@ -32,6 +32,8 @@ public class ProductPriceAddedMessagePayloadBuilder implements Builder<ProductPr
 
     /**
      *  <p>Unique identifier of the ProductVariant for which the Price was added.</p>
+     * @param variantId
+     * @return Builder
      */
 
     public ProductPriceAddedMessagePayloadBuilder variantId(final Long variantId) {
@@ -41,6 +43,7 @@ public class ProductPriceAddedMessagePayloadBuilder implements Builder<ProductPr
 
     /**
      *  <p>The Embedded Price that was added to the ProductVariant.</p>
+     * @return Builder
      */
 
     public ProductPriceAddedMessagePayloadBuilder price(
@@ -51,6 +54,8 @@ public class ProductPriceAddedMessagePayloadBuilder implements Builder<ProductPr
 
     /**
      *  <p>The Embedded Price that was added to the ProductVariant.</p>
+     * @param price
+     * @return Builder
      */
 
     public ProductPriceAddedMessagePayloadBuilder price(final com.commercetools.api.models.common.Price price) {
@@ -60,6 +65,8 @@ public class ProductPriceAddedMessagePayloadBuilder implements Builder<ProductPr
 
     /**
      *  <p>Whether the update was only applied to the staged Product Projection.</p>
+     * @param staged
+     * @return Builder
      */
 
     public ProductPriceAddedMessagePayloadBuilder staged(final Boolean staged) {

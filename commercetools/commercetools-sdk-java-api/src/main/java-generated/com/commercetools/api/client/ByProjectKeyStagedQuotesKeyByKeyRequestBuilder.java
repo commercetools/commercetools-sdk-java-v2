@@ -29,6 +29,10 @@ public class ByProjectKeyStagedQuotesKeyByKeyRequestBuilder {
         return new ByProjectKeyStagedQuotesKeyByKeyPost(apiHttpClient, projectKey, key, stagedQuoteUpdate);
     }
 
+    public ByProjectKeyStagedQuotesKeyByKeyPostString post(final String stagedQuoteUpdate) {
+        return new ByProjectKeyStagedQuotesKeyByKeyPostString(apiHttpClient, projectKey, key, stagedQuoteUpdate);
+    }
+
     public ByProjectKeyStagedQuotesKeyByKeyPost post(
             UnaryOperator<com.commercetools.api.models.staged_quote.StagedQuoteUpdateBuilder> op) {
         return post(op.apply(com.commercetools.api.models.staged_quote.StagedQuoteUpdateBuilder.of()).build());

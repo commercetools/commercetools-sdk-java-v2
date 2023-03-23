@@ -34,6 +34,7 @@ public interface OrderAddParcelToDeliveryAction extends OrderUpdateAction {
 
     /**
      *
+     * @return deliveryId
      */
     @NotNull
     @JsonProperty("deliveryId")
@@ -41,6 +42,7 @@ public interface OrderAddParcelToDeliveryAction extends OrderUpdateAction {
 
     /**
      *
+     * @return measurements
      */
     @Valid
     @JsonProperty("measurements")
@@ -48,6 +50,7 @@ public interface OrderAddParcelToDeliveryAction extends OrderUpdateAction {
 
     /**
      *
+     * @return trackingData
      */
     @Valid
     @JsonProperty("trackingData")
@@ -55,6 +58,7 @@ public interface OrderAddParcelToDeliveryAction extends OrderUpdateAction {
 
     /**
      *
+     * @return items
      */
     @Valid
     @JsonProperty("items")

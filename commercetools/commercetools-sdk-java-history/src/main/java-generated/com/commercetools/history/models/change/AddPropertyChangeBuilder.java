@@ -30,6 +30,8 @@ public class AddPropertyChangeBuilder implements Builder<AddPropertyChange> {
 
     /**
      *  <p>Update action for <code>addProperty</code> on custom objects</p>
+     * @param change
+     * @return Builder
      */
 
     public AddPropertyChangeBuilder change(final String change) {
@@ -39,6 +41,8 @@ public class AddPropertyChangeBuilder implements Builder<AddPropertyChange> {
 
     /**
      *  <p>Value path to the property that was added</p>
+     * @param path
+     * @return Builder
      */
 
     public AddPropertyChangeBuilder path(final String path) {
@@ -48,6 +52,8 @@ public class AddPropertyChangeBuilder implements Builder<AddPropertyChange> {
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public AddPropertyChangeBuilder nextValue(final java.lang.Object nextValue) {

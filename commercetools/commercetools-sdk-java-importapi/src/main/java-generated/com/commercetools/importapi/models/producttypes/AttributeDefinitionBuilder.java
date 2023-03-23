@@ -49,6 +49,8 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
 
     /**
      *
+     * @param type
+     * @return Builder
      */
 
     public AttributeDefinitionBuilder type(final com.commercetools.importapi.models.producttypes.AttributeType type) {
@@ -58,6 +60,7 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
 
     /**
      *
+     * @return Builder
      */
 
     public AttributeDefinitionBuilder type(
@@ -68,6 +71,8 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
 
     /**
      *
+     * @param name
+     * @return Builder
      */
 
     public AttributeDefinitionBuilder name(final String name) {
@@ -82,6 +87,7 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
      *    "en": "dog food"
      *  }
      *  </code></pre>
+     * @return Builder
      */
 
     public AttributeDefinitionBuilder label(
@@ -97,6 +103,8 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
      *    "en": "dog food"
      *  }
      *  </code></pre>
+     * @param label
+     * @return Builder
      */
 
     public AttributeDefinitionBuilder label(final com.commercetools.importapi.models.common.LocalizedString label) {
@@ -106,6 +114,8 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
 
     /**
      *
+     * @param isRequired
+     * @return Builder
      */
 
     public AttributeDefinitionBuilder isRequired(final Boolean isRequired) {
@@ -115,6 +125,8 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
 
     /**
      *
+     * @param attributeConstraint
+     * @return Builder
      */
 
     public AttributeDefinitionBuilder attributeConstraint(
@@ -130,6 +142,7 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
      *    "en": "dog food"
      *  }
      *  </code></pre>
+     * @return Builder
      */
 
     public AttributeDefinitionBuilder inputTip(
@@ -145,6 +158,8 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
      *    "en": "dog food"
      *  }
      *  </code></pre>
+     * @param inputTip
+     * @return Builder
      */
 
     public AttributeDefinitionBuilder inputTip(
@@ -155,6 +170,8 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
 
     /**
      *
+     * @param inputHint
+     * @return Builder
      */
 
     public AttributeDefinitionBuilder inputHint(
@@ -165,6 +182,8 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
 
     /**
      *
+     * @param isSearchable
+     * @return Builder
      */
 
     public AttributeDefinitionBuilder isSearchable(@Nullable final Boolean isSearchable) {

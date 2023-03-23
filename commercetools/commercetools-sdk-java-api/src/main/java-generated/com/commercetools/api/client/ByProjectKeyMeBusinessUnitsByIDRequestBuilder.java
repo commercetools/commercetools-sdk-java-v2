@@ -29,6 +29,10 @@ public class ByProjectKeyMeBusinessUnitsByIDRequestBuilder {
         return new ByProjectKeyMeBusinessUnitsByIDPost(apiHttpClient, projectKey, ID, myBusinessUnitUpdate);
     }
 
+    public ByProjectKeyMeBusinessUnitsByIDPostString post(final String myBusinessUnitUpdate) {
+        return new ByProjectKeyMeBusinessUnitsByIDPostString(apiHttpClient, projectKey, ID, myBusinessUnitUpdate);
+    }
+
     public ByProjectKeyMeBusinessUnitsByIDPost post(
             UnaryOperator<com.commercetools.api.models.me.MyBusinessUnitUpdateBuilder> op) {
         return post(op.apply(com.commercetools.api.models.me.MyBusinessUnitUpdateBuilder.of()).build());

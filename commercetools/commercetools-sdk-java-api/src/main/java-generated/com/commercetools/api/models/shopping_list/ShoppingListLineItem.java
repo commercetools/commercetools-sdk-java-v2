@@ -43,6 +43,7 @@ public interface ShoppingListLineItem extends com.commercetools.api.models.Custo
 
     /**
      *  <p>Date and time (UTC) the ShoppingListLineItem was added to the ShoppingList.</p>
+     * @return addedAt
      */
     @NotNull
     @JsonProperty("addedAt")
@@ -50,6 +51,7 @@ public interface ShoppingListLineItem extends com.commercetools.api.models.Custo
 
     /**
      *  <p>Custom Fields of the ShoppingListLineItem.</p>
+     * @return custom
      */
     @Valid
     @JsonProperty("custom")
@@ -58,6 +60,7 @@ public interface ShoppingListLineItem extends com.commercetools.api.models.Custo
     /**
      *  <p>If the Product or Product Variant is deleted, <code>deactivatedAt</code> is the date and time (UTC) of deletion.</p>
      *  <p>This data is updated in an eventual consistent manner when the Product Variant cannot be ordered anymore.</p>
+     * @return deactivatedAt
      */
 
     @JsonProperty("deactivatedAt")
@@ -65,6 +68,7 @@ public interface ShoppingListLineItem extends com.commercetools.api.models.Custo
 
     /**
      *  <p>Unique identifier of the ShoppingListLineItem.</p>
+     * @return id
      */
     @NotNull
     @JsonProperty("id")
@@ -73,6 +77,7 @@ public interface ShoppingListLineItem extends com.commercetools.api.models.Custo
     /**
      *  <p>Name of the Product.</p>
      *  <p>This data is updated in an eventual consistent manner when the Product's name changes.</p>
+     * @return name
      */
     @NotNull
     @Valid
@@ -81,6 +86,7 @@ public interface ShoppingListLineItem extends com.commercetools.api.models.Custo
 
     /**
      *  <p>Unique identifier of a Product.</p>
+     * @return productId
      */
     @NotNull
     @JsonProperty("productId")
@@ -88,6 +94,7 @@ public interface ShoppingListLineItem extends com.commercetools.api.models.Custo
 
     /**
      *  <p>The Product Type defining the Attributes of the Product.</p>
+     * @return productType
      */
     @NotNull
     @Valid
@@ -96,6 +103,7 @@ public interface ShoppingListLineItem extends com.commercetools.api.models.Custo
 
     /**
      *  <p>Number of Products in the ShoppingListLineItem.</p>
+     * @return quantity
      */
     @NotNull
     @JsonProperty("quantity")
@@ -103,22 +111,25 @@ public interface ShoppingListLineItem extends com.commercetools.api.models.Custo
 
     /**
      *  <p><code>id</code> of the ProductVariant the ShoppingListLineItem refers to. If not set, the ShoppingListLineItem refers to the Master Variant.</p>
+     * @return variantId
      */
 
     @JsonProperty("variantId")
     public Long getVariantId();
 
     /**
-     *  <p>Data of the ProductVariant. Returned when expanded using <code>expand=lineItems[*].variant</code>.</p>
-     *  <p><em>Limitation: <code>expand=lineItems[0].variant</code> is not supported.</em></p>
+     *  <p>Data of the ProductVariant.</p>
+     *  <p>Returned when expanded using <code>expand=lineItems[*].variant</code>. You cannot expand only a single element of the array.</p>
+     * @return variant
      */
     @Valid
     @JsonProperty("variant")
     public ProductVariant getVariant();
 
     /**
-     *  <p>Slug of the current ProductData. Only returned when expanded using <code>expand=lineItems[*].productSlug</code>.</p>
-     *  <p><em>Limitation: <code>expand=lineItems[0].productSlug</code> is not supported.</em></p>
+     *  <p>Slug of the current ProductData.</p>
+     *  <p>Returned when expanded using <code>expand=lineItems[*].productSlug</code>. You cannot expand only a single element of the array.</p>
+     * @return productSlug
      */
     @Valid
     @JsonProperty("productSlug")

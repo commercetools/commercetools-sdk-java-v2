@@ -43,6 +43,8 @@ public class DeliveryBuilder implements Builder<Delivery> {
 
     /**
      *  <p>Unique identifier of the Delivery.</p>
+     * @param id
+     * @return Builder
      */
 
     public DeliveryBuilder id(final String id) {
@@ -52,6 +54,8 @@ public class DeliveryBuilder implements Builder<Delivery> {
 
     /**
      *
+     * @param createdAt
+     * @return Builder
      */
 
     public DeliveryBuilder createdAt(final java.time.ZonedDateTime createdAt) {
@@ -61,6 +65,8 @@ public class DeliveryBuilder implements Builder<Delivery> {
 
     /**
      *  <p>Items which are shipped in this delivery regardless their distribution over several parcels. Can also be specified individually for each Parcel.</p>
+     * @param items
+     * @return Builder
      */
 
     public DeliveryBuilder items(final com.commercetools.api.models.order.DeliveryItem... items) {
@@ -70,6 +76,8 @@ public class DeliveryBuilder implements Builder<Delivery> {
 
     /**
      *  <p>Items which are shipped in this delivery regardless their distribution over several parcels. Can also be specified individually for each Parcel.</p>
+     * @param items
+     * @return Builder
      */
 
     public DeliveryBuilder items(final java.util.List<com.commercetools.api.models.order.DeliveryItem> items) {
@@ -79,6 +87,8 @@ public class DeliveryBuilder implements Builder<Delivery> {
 
     /**
      *  <p>Items which are shipped in this delivery regardless their distribution over several parcels. Can also be specified individually for each Parcel.</p>
+     * @param items
+     * @return Builder
      */
 
     public DeliveryBuilder plusItems(final com.commercetools.api.models.order.DeliveryItem... items) {
@@ -91,6 +101,7 @@ public class DeliveryBuilder implements Builder<Delivery> {
 
     /**
      *  <p>Items which are shipped in this delivery regardless their distribution over several parcels. Can also be specified individually for each Parcel.</p>
+     * @return Builder
      */
 
     public DeliveryBuilder plusItems(
@@ -104,6 +115,7 @@ public class DeliveryBuilder implements Builder<Delivery> {
 
     /**
      *  <p>Items which are shipped in this delivery regardless their distribution over several parcels. Can also be specified individually for each Parcel.</p>
+     * @return Builder
      */
 
     public DeliveryBuilder withItems(
@@ -115,6 +127,8 @@ public class DeliveryBuilder implements Builder<Delivery> {
 
     /**
      *
+     * @param parcels
+     * @return Builder
      */
 
     public DeliveryBuilder parcels(final com.commercetools.api.models.order.Parcel... parcels) {
@@ -124,6 +138,8 @@ public class DeliveryBuilder implements Builder<Delivery> {
 
     /**
      *
+     * @param parcels
+     * @return Builder
      */
 
     public DeliveryBuilder parcels(final java.util.List<com.commercetools.api.models.order.Parcel> parcels) {
@@ -133,6 +149,8 @@ public class DeliveryBuilder implements Builder<Delivery> {
 
     /**
      *
+     * @param parcels
+     * @return Builder
      */
 
     public DeliveryBuilder plusParcels(final com.commercetools.api.models.order.Parcel... parcels) {
@@ -145,6 +163,7 @@ public class DeliveryBuilder implements Builder<Delivery> {
 
     /**
      *
+     * @return Builder
      */
 
     public DeliveryBuilder plusParcels(
@@ -158,6 +177,7 @@ public class DeliveryBuilder implements Builder<Delivery> {
 
     /**
      *
+     * @return Builder
      */
 
     public DeliveryBuilder withParcels(
@@ -169,6 +189,7 @@ public class DeliveryBuilder implements Builder<Delivery> {
 
     /**
      *
+     * @return Builder
      */
 
     public DeliveryBuilder address(
@@ -179,6 +200,8 @@ public class DeliveryBuilder implements Builder<Delivery> {
 
     /**
      *
+     * @param address
+     * @return Builder
      */
 
     public DeliveryBuilder address(@Nullable final com.commercetools.api.models.common.Address address) {
@@ -188,6 +211,7 @@ public class DeliveryBuilder implements Builder<Delivery> {
 
     /**
      *  <p>Custom Fields for the Transaction.</p>
+     * @return Builder
      */
 
     public DeliveryBuilder custom(
@@ -198,6 +222,8 @@ public class DeliveryBuilder implements Builder<Delivery> {
 
     /**
      *  <p>Custom Fields for the Transaction.</p>
+     * @param custom
+     * @return Builder
      */
 
     public DeliveryBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFields custom) {

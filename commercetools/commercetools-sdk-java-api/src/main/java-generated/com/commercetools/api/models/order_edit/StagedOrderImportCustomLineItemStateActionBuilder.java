@@ -30,6 +30,8 @@ public class StagedOrderImportCustomLineItemStateActionBuilder
 
     /**
      *
+     * @param customLineItemId
+     * @return Builder
      */
 
     public StagedOrderImportCustomLineItemStateActionBuilder customLineItemId(final String customLineItemId) {
@@ -39,6 +41,8 @@ public class StagedOrderImportCustomLineItemStateActionBuilder
 
     /**
      *
+     * @param state
+     * @return Builder
      */
 
     public StagedOrderImportCustomLineItemStateActionBuilder state(
@@ -49,6 +53,8 @@ public class StagedOrderImportCustomLineItemStateActionBuilder
 
     /**
      *
+     * @param state
+     * @return Builder
      */
 
     public StagedOrderImportCustomLineItemStateActionBuilder state(
@@ -59,6 +65,8 @@ public class StagedOrderImportCustomLineItemStateActionBuilder
 
     /**
      *
+     * @param state
+     * @return Builder
      */
 
     public StagedOrderImportCustomLineItemStateActionBuilder plusState(
@@ -72,6 +80,7 @@ public class StagedOrderImportCustomLineItemStateActionBuilder
 
     /**
      *
+     * @return Builder
      */
 
     public StagedOrderImportCustomLineItemStateActionBuilder plusState(
@@ -85,6 +94,7 @@ public class StagedOrderImportCustomLineItemStateActionBuilder
 
     /**
      *
+     * @return Builder
      */
 
     public StagedOrderImportCustomLineItemStateActionBuilder withState(

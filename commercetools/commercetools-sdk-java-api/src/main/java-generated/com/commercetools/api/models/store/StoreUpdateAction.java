@@ -50,6 +50,7 @@ public interface StoreUpdateAction extends com.commercetools.api.models.Resource
 
     /**
      *
+     * @return action
      */
     @NotNull
     @JsonProperty("action")

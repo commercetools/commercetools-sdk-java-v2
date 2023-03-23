@@ -33,6 +33,8 @@ public class MoneyBuilder implements Builder<Money> {
 
     /**
      *
+     * @param fractionDigits
+     * @return Builder
      */
 
     public MoneyBuilder fractionDigits(@Nullable final Integer fractionDigits) {
@@ -42,6 +44,8 @@ public class MoneyBuilder implements Builder<Money> {
 
     /**
      *
+     * @param centAmount
+     * @return Builder
      */
 
     public MoneyBuilder centAmount(final Long centAmount) {
@@ -51,6 +55,8 @@ public class MoneyBuilder implements Builder<Money> {
 
     /**
      *  <p>The currency code compliant to ISO 4217.</p>
+     * @param currencyCode
+     * @return Builder
      */
 
     public MoneyBuilder currencyCode(final String currencyCode) {

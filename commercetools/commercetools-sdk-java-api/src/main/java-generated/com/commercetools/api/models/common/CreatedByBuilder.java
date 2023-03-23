@@ -37,6 +37,8 @@ public class CreatedByBuilder implements Builder<CreatedBy> {
 
     /**
      *  <p><code>id</code> of the APIClient which created the resource.</p>
+     * @param clientId
+     * @return Builder
      */
 
     public CreatedByBuilder clientId(@Nullable final String clientId) {
@@ -46,6 +48,8 @@ public class CreatedByBuilder implements Builder<CreatedBy> {
 
     /**
      *  <p>External user ID provided by <code>X-External-User-ID</code> HTTP Header.</p>
+     * @param externalUserId
+     * @return Builder
      */
 
     public CreatedByBuilder externalUserId(@Nullable final String externalUserId) {
@@ -55,6 +59,7 @@ public class CreatedByBuilder implements Builder<CreatedBy> {
 
     /**
      *  <p>Indicates the Customer who created the resource using a token from the password flow.</p>
+     * @return Builder
      */
 
     public CreatedByBuilder customer(
@@ -65,6 +70,8 @@ public class CreatedByBuilder implements Builder<CreatedBy> {
 
     /**
      *  <p>Indicates the Customer who created the resource using a token from the password flow.</p>
+     * @param customer
+     * @return Builder
      */
 
     public CreatedByBuilder customer(@Nullable final com.commercetools.api.models.customer.CustomerReference customer) {
@@ -74,6 +81,8 @@ public class CreatedByBuilder implements Builder<CreatedBy> {
 
     /**
      *  <p>Indicates the anonymous session during which the resource was created.</p>
+     * @param anonymousId
+     * @return Builder
      */
 
     public CreatedByBuilder anonymousId(@Nullable final String anonymousId) {

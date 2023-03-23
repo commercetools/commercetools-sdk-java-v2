@@ -35,6 +35,7 @@ public interface CartReference extends Reference, com.commercetools.api.models.I
 
     /**
      *  <p>Contains the representation of the expanded Cart. Only present in responses to requests with Reference Expansion for Carts.</p>
+     * @return obj
      */
     @Valid
     @JsonProperty("obj")
@@ -42,6 +43,7 @@ public interface CartReference extends Reference, com.commercetools.api.models.I
 
     /**
      *  <p>Unique identifier of the referenced Cart.</p>
+     * @return id
      */
     @NotNull
     @JsonProperty("id")

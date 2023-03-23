@@ -37,6 +37,7 @@ public interface SetValidFromAndUntilChange extends Change {
 
     /**
      *
+     * @return type
      */
     @NotNull
     @JsonProperty("type")
@@ -44,6 +45,7 @@ public interface SetValidFromAndUntilChange extends Change {
 
     /**
      *
+     * @return change
      */
     @NotNull
     @JsonProperty("change")
@@ -51,6 +53,7 @@ public interface SetValidFromAndUntilChange extends Change {
 
     /**
      *  <p>Shape of the value for <code>setValidFromAndUntil</code> action</p>
+     * @return previousValue
      */
     @NotNull
     @Valid
@@ -59,6 +62,7 @@ public interface SetValidFromAndUntilChange extends Change {
 
     /**
      *  <p>Shape of the value for <code>setValidFromAndUntil</code> action</p>
+     * @return nextValue
      */
     @NotNull
     @Valid

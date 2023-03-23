@@ -33,6 +33,7 @@ public interface SemanticErrorError extends ErrorObject {
 
     /**
      *
+     * @return code
      */
     @NotNull
     @JsonProperty("code")
@@ -40,6 +41,7 @@ public interface SemanticErrorError extends ErrorObject {
 
     /**
      *  <p>Plain text description of the error concerning the predicate. For example, <code>"Invalid country code $countryCode provided for the field $fieldDefinition."</code>.</p>
+     * @return message
      */
     @NotNull
     @JsonProperty("message")

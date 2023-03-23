@@ -34,6 +34,7 @@ public interface ProductTypeChangeAttributeConstraintAction extends ProductTypeU
 
     /**
      *  <p>Name of the AttributeDefinition to update.</p>
+     * @return attributeName
      */
     @NotNull
     @JsonProperty("attributeName")
@@ -41,6 +42,7 @@ public interface ProductTypeChangeAttributeConstraintAction extends ProductTypeU
 
     /**
      *  <p><code>None</code></p>
+     * @return newValue
      */
     @NotNull
     @JsonProperty("newValue")

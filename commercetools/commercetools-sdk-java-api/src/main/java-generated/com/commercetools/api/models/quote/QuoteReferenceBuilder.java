@@ -31,6 +31,8 @@ public class QuoteReferenceBuilder implements Builder<QuoteReference> {
 
     /**
      *  <p>Unique ID of the referenced resource.</p>
+     * @param id
+     * @return Builder
      */
 
     public QuoteReferenceBuilder id(final String id) {
@@ -40,6 +42,7 @@ public class QuoteReferenceBuilder implements Builder<QuoteReference> {
 
     /**
      *  <p>Contains the representation of the expanded Quote. Only present in responses to requests with Reference Expansion for Quote.</p>
+     * @return Builder
      */
 
     public QuoteReferenceBuilder obj(
@@ -50,6 +53,8 @@ public class QuoteReferenceBuilder implements Builder<QuoteReference> {
 
     /**
      *  <p>Contains the representation of the expanded Quote. Only present in responses to requests with Reference Expansion for Quote.</p>
+     * @param obj
+     * @return Builder
      */
 
     public QuoteReferenceBuilder obj(@Nullable final com.commercetools.api.models.quote.Quote obj) {

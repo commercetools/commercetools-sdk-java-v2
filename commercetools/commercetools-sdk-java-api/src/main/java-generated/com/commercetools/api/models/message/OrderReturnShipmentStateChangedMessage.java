@@ -42,6 +42,7 @@ public interface OrderReturnShipmentStateChangedMessage extends OrderMessage {
 
     /**
      *  <p>Unique identifier of the ReturnItem.</p>
+     * @return returnItemId
      */
     @NotNull
     @JsonProperty("returnItemId")
@@ -49,6 +50,7 @@ public interface OrderReturnShipmentStateChangedMessage extends OrderMessage {
 
     /**
      *  <p>State of the ReturnItem after the Set Return Shipment State update action.</p>
+     * @return returnShipmentState
      */
     @NotNull
     @JsonProperty("returnShipmentState")

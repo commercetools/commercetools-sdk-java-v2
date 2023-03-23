@@ -33,6 +33,7 @@ public interface CartDiscountChangeSortOrderAction extends CartDiscountUpdateAct
 
     /**
      *  <p>New value to set (between <code>0</code> and <code>1</code>). A Discount with a higher sortOrder is prioritized.</p>
+     * @return sortOrder
      */
     @NotNull
     @JsonProperty("sortOrder")

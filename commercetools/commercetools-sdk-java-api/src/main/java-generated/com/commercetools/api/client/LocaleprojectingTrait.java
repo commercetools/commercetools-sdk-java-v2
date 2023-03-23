@@ -30,4 +30,5 @@ public interface LocaleprojectingTrait<T extends LocaleprojectingTrait<T>> {
     default T asLocaleprojectingTraitToBaseType() {
         return (T) this;
     }
+
 }

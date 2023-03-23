@@ -34,6 +34,7 @@ public interface PaymentAddTransactionAction extends PaymentUpdateAction {
 
     /**
      *  <p>Value to append to the <code>transactions</code> array.</p>
+     * @return transaction
      */
     @NotNull
     @Valid

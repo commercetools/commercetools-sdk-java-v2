@@ -50,7 +50,7 @@ public class CartSetCustomLineItemCustomFieldActionImpl implements CartSetCustom
     }
 
     /**
-     *
+     *  <p><code>id</code> of the CustomLineItem to update.</p>
      */
 
     public String getCustomLineItemId() {

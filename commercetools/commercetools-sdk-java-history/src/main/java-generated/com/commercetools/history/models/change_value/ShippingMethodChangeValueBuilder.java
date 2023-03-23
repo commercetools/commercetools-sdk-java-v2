@@ -28,6 +28,8 @@ public class ShippingMethodChangeValueBuilder implements Builder<ShippingMethodC
 
     /**
      *
+     * @param id
+     * @return Builder
      */
 
     public ShippingMethodChangeValueBuilder id(final String id) {
@@ -37,6 +39,8 @@ public class ShippingMethodChangeValueBuilder implements Builder<ShippingMethodC
 
     /**
      *
+     * @param name
+     * @return Builder
      */
 
     public ShippingMethodChangeValueBuilder name(final String name) {

@@ -34,6 +34,7 @@ public interface AttributeGroupSetAttributesAction extends AttributeGroupUpdateA
 
     /**
      *  <p>New unique values to set.</p>
+     * @return attributes
      */
     @NotNull
     @Valid

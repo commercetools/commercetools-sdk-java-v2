@@ -34,6 +34,7 @@ public interface InvalidFieldError extends ErrorObject {
 
     /**
      *  <p>The name of the field.</p>
+     * @return field
      */
     @NotNull
     @JsonProperty("field")
@@ -41,6 +42,7 @@ public interface InvalidFieldError extends ErrorObject {
 
     /**
      *  <p>The invalid value.</p>
+     * @return invalidValue
      */
     @NotNull
     @JsonProperty("invalidValue")
@@ -48,6 +50,7 @@ public interface InvalidFieldError extends ErrorObject {
 
     /**
      *  <p>The set of allowed values for the field, if any.</p>
+     * @return allowedValues
      */
 
     @JsonProperty("allowedValues")
@@ -55,6 +58,7 @@ public interface InvalidFieldError extends ErrorObject {
 
     /**
      *
+     * @return resourceIndex
      */
 
     @JsonProperty("resourceIndex")

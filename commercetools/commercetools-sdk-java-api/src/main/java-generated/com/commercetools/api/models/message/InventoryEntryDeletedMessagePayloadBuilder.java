@@ -31,6 +31,8 @@ public class InventoryEntryDeletedMessagePayloadBuilder implements Builder<Inven
 
     /**
      *  <p>The <code>sku</code> of the InventoryEntry that was deleted.</p>
+     * @param sku
+     * @return Builder
      */
 
     public InventoryEntryDeletedMessagePayloadBuilder sku(final String sku) {
@@ -40,6 +42,7 @@ public class InventoryEntryDeletedMessagePayloadBuilder implements Builder<Inven
 
     /**
      *  <p>Reference to the Channel where the InventoryEntry was deleted.</p>
+     * @return Builder
      */
 
     public InventoryEntryDeletedMessagePayloadBuilder supplyChannel(
@@ -50,6 +53,8 @@ public class InventoryEntryDeletedMessagePayloadBuilder implements Builder<Inven
 
     /**
      *  <p>Reference to the Channel where the InventoryEntry was deleted.</p>
+     * @param supplyChannel
+     * @return Builder
      */
 
     public InventoryEntryDeletedMessagePayloadBuilder supplyChannel(

@@ -30,6 +30,7 @@ public interface PaymentSetStatusInterfaceCodeAction extends PaymentUpdateAction
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
+     * @return interfaceCode
      */
 
     @JsonProperty("interfaceCode")

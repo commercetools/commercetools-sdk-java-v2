@@ -32,6 +32,7 @@ public interface Reference {
 
     /**
      *
+     * @return id
      */
     @NotNull
     @JsonProperty("id")
@@ -39,6 +40,7 @@ public interface Reference {
 
     /**
      *
+     * @return typeId
      */
     @NotNull
     @JsonProperty("typeId")

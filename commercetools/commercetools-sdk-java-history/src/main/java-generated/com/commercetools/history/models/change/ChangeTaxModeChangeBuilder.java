@@ -31,6 +31,8 @@ public class ChangeTaxModeChangeBuilder implements Builder<ChangeTaxModeChange> 
 
     /**
      *  <p>Shape of the action for <code>changeTaxMode</code></p>
+     * @param change
+     * @return Builder
      */
 
     public ChangeTaxModeChangeBuilder change(final String change) {
@@ -40,6 +42,8 @@ public class ChangeTaxModeChangeBuilder implements Builder<ChangeTaxModeChange> 
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public ChangeTaxModeChangeBuilder previousValue(
@@ -50,6 +54,8 @@ public class ChangeTaxModeChangeBuilder implements Builder<ChangeTaxModeChange> 
 
     /**
      *
+     * @param nextValue
+     * @return Builder
      */
 
     public ChangeTaxModeChangeBuilder nextValue(final com.commercetools.history.models.common.TaxMode nextValue) {

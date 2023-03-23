@@ -27,6 +27,8 @@ public class InvalidCurrentPasswordErrorBuilder implements Builder<InvalidCurren
 
     /**
      *  <p><code>"The given current password does not match."</code></p>
+     * @param message
+     * @return Builder
      */
 
     public InvalidCurrentPasswordErrorBuilder message(final String message) {

@@ -34,6 +34,8 @@ public class MoneyBuilder implements Builder<Money> {
 
     /**
      *  <p>Currency code compliant to ISO 4217.</p>
+     * @param currencyCode
+     * @return Builder
      */
 
     public MoneyBuilder currencyCode(final String currencyCode) {
@@ -43,6 +45,8 @@ public class MoneyBuilder implements Builder<Money> {
 
     /**
      *
+     * @param centAmount
+     * @return Builder
      */
 
     public MoneyBuilder centAmount(final Integer centAmount) {
@@ -52,6 +56,8 @@ public class MoneyBuilder implements Builder<Money> {
 
     /**
      *
+     * @param fractionDigits
+     * @return Builder
      */
 
     public MoneyBuilder fractionDigits(final Integer fractionDigits) {
@@ -61,6 +67,8 @@ public class MoneyBuilder implements Builder<Money> {
 
     /**
      *
+     * @param type
+     * @return Builder
      */
 
     public MoneyBuilder type(final com.commercetools.history.models.common.MoneyType type) {

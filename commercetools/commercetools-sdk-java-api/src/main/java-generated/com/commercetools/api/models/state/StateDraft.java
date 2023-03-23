@@ -34,6 +34,7 @@ public interface StateDraft extends com.commercetools.api.models.WithKey, io.vra
 
     /**
      *  <p>User-defined unique identifier for the State.</p>
+     * @return key
      */
     @NotNull
     @JsonProperty("key")
@@ -41,6 +42,7 @@ public interface StateDraft extends com.commercetools.api.models.WithKey, io.vra
 
     /**
      *  <p>Specify to which resource or object type the State is assigned to.</p>
+     * @return type
      */
     @NotNull
     @JsonProperty("type")
@@ -48,6 +50,7 @@ public interface StateDraft extends com.commercetools.api.models.WithKey, io.vra
 
     /**
      *  <p>Name of the State.</p>
+     * @return name
      */
     @Valid
     @JsonProperty("name")
@@ -55,6 +58,7 @@ public interface StateDraft extends com.commercetools.api.models.WithKey, io.vra
 
     /**
      *  <p>Description of the State.</p>
+     * @return description
      */
     @Valid
     @JsonProperty("description")
@@ -62,6 +66,7 @@ public interface StateDraft extends com.commercetools.api.models.WithKey, io.vra
 
     /**
      *  <p>Set to <code>false</code> if the State is not the first step in a workflow.</p>
+     * @return initial
      */
 
     @JsonProperty("initial")
@@ -69,6 +74,7 @@ public interface StateDraft extends com.commercetools.api.models.WithKey, io.vra
 
     /**
      *  <p>If suitable, assign predifined roles the State can fulfill in case the State's <code>type</code> is <code>LineItemState</code> or <code>ReviewState</code>.</p>
+     * @return roles
      */
 
     @JsonProperty("roles")
@@ -81,6 +87,7 @@ public interface StateDraft extends com.commercetools.api.models.WithKey, io.vra
      *   <li>Set to empty list for not allowing any transition from the current State and defining it as final State for a workflow.</li>
      *   <li>Do not set this field at all to turn off validation and allowing transitions to any other State of the same <code>type</code> as the current State.</li>
      *  </ul>
+     * @return transitions
      */
     @Valid
     @JsonProperty("transitions")

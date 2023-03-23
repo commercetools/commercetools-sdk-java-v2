@@ -44,6 +44,7 @@ public interface ProductSelectionProductAddedMessage extends Message {
 
     /**
      *  <p>Product that was added to the Product Selection.</p>
+     * @return product
      */
     @NotNull
     @Valid
@@ -52,6 +53,7 @@ public interface ProductSelectionProductAddedMessage extends Message {
 
     /**
      *  <p>Product Variant Selection after the Add Product update action.</p>
+     * @return variantSelection
      */
     @NotNull
     @Valid

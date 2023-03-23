@@ -25,80 +25,90 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class TaxedItemPriceBuilder implements Builder<TaxedItemPrice> {
 
-    private com.commercetools.api.models.common.TypedMoney totalNet;
+    private com.commercetools.api.models.common.CentPrecisionMoney totalNet;
 
-    private com.commercetools.api.models.common.TypedMoney totalGross;
+    private com.commercetools.api.models.common.CentPrecisionMoney totalGross;
 
     @Nullable
-    private com.commercetools.api.models.common.TypedMoney totalTax;
+    private com.commercetools.api.models.common.CentPrecisionMoney totalTax;
 
     /**
-     *
+     *  <p>Total net amount of the Line Item or Custom Line Item.</p>
+     * @return Builder
      */
 
-    public TaxedItemPriceBuilder totalNet(final com.commercetools.api.models.common.TypedMoney totalNet) {
+    public TaxedItemPriceBuilder totalNet(
+            Function<com.commercetools.api.models.common.CentPrecisionMoneyBuilder, com.commercetools.api.models.common.CentPrecisionMoneyBuilder> builder) {
+        this.totalNet = builder.apply(com.commercetools.api.models.common.CentPrecisionMoneyBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Total net amount of the Line Item or Custom Line Item.</p>
+     * @param totalNet
+     * @return Builder
+     */
+
+    public TaxedItemPriceBuilder totalNet(final com.commercetools.api.models.common.CentPrecisionMoney totalNet) {
         this.totalNet = totalNet;
         return this;
     }
 
     /**
-     *
+     *  <p>Total gross amount of the Line Item or Custom Line Item.</p>
+     * @return Builder
      */
 
-    public TaxedItemPriceBuilder totalNet(
-            Function<com.commercetools.api.models.common.TypedMoneyBuilder, Builder<? extends com.commercetools.api.models.common.TypedMoney>> builder) {
-        this.totalNet = builder.apply(com.commercetools.api.models.common.TypedMoneyBuilder.of()).build();
+    public TaxedItemPriceBuilder totalGross(
+            Function<com.commercetools.api.models.common.CentPrecisionMoneyBuilder, com.commercetools.api.models.common.CentPrecisionMoneyBuilder> builder) {
+        this.totalGross = builder.apply(com.commercetools.api.models.common.CentPrecisionMoneyBuilder.of()).build();
         return this;
     }
 
     /**
-     *  <p>TaxedItemPrice fields can not be used in query predicates.</p>
+     *  <p>Total gross amount of the Line Item or Custom Line Item.</p>
+     * @param totalGross
+     * @return Builder
      */
 
-    public TaxedItemPriceBuilder totalGross(final com.commercetools.api.models.common.TypedMoney totalGross) {
+    public TaxedItemPriceBuilder totalGross(final com.commercetools.api.models.common.CentPrecisionMoney totalGross) {
         this.totalGross = totalGross;
         return this;
     }
 
     /**
-     *  <p>TaxedItemPrice fields can not be used in query predicates.</p>
+     *  <p>Total tax applicable for the Line Item or Custom Line Item. Automatically calculated as the difference between the <code>totalGross</code> and <code>totalNet</code> values.</p>
+     * @return Builder
      */
 
-    public TaxedItemPriceBuilder totalGross(
-            Function<com.commercetools.api.models.common.TypedMoneyBuilder, Builder<? extends com.commercetools.api.models.common.TypedMoney>> builder) {
-        this.totalGross = builder.apply(com.commercetools.api.models.common.TypedMoneyBuilder.of()).build();
+    public TaxedItemPriceBuilder totalTax(
+            Function<com.commercetools.api.models.common.CentPrecisionMoneyBuilder, com.commercetools.api.models.common.CentPrecisionMoneyBuilder> builder) {
+        this.totalTax = builder.apply(com.commercetools.api.models.common.CentPrecisionMoneyBuilder.of()).build();
         return this;
     }
 
     /**
-     *  <p>Calculated automatically as the subtraction of <code>totalGross</code> - <code>totalNet</code>.</p>
+     *  <p>Total tax applicable for the Line Item or Custom Line Item. Automatically calculated as the difference between the <code>totalGross</code> and <code>totalNet</code> values.</p>
+     * @param totalTax
+     * @return Builder
      */
 
-    public TaxedItemPriceBuilder totalTax(@Nullable final com.commercetools.api.models.common.TypedMoney totalTax) {
+    public TaxedItemPriceBuilder totalTax(
+            @Nullable final com.commercetools.api.models.common.CentPrecisionMoney totalTax) {
         this.totalTax = totalTax;
         return this;
     }
 
-    /**
-     *  <p>Calculated automatically as the subtraction of <code>totalGross</code> - <code>totalNet</code>.</p>
-     */
-
-    public TaxedItemPriceBuilder totalTax(
-            Function<com.commercetools.api.models.common.TypedMoneyBuilder, Builder<? extends com.commercetools.api.models.common.TypedMoney>> builder) {
-        this.totalTax = builder.apply(com.commercetools.api.models.common.TypedMoneyBuilder.of()).build();
-        return this;
-    }
-
-    public com.commercetools.api.models.common.TypedMoney getTotalNet() {
+    public com.commercetools.api.models.common.CentPrecisionMoney getTotalNet() {
         return this.totalNet;
     }
 
-    public com.commercetools.api.models.common.TypedMoney getTotalGross() {
+    public com.commercetools.api.models.common.CentPrecisionMoney getTotalGross() {
         return this.totalGross;
     }
 
     @Nullable
-    public com.commercetools.api.models.common.TypedMoney getTotalTax() {
+    public com.commercetools.api.models.common.CentPrecisionMoney getTotalTax() {
         return this.totalTax;
     }
 

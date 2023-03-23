@@ -35,6 +35,7 @@ public interface ProductSetDiscountedPriceAction extends ProductUpdateAction {
 
     /**
      *  <p>The <code>id</code> of the Price to set the Discount.</p>
+     * @return priceId
      */
     @NotNull
     @JsonProperty("priceId")
@@ -42,6 +43,7 @@ public interface ProductSetDiscountedPriceAction extends ProductUpdateAction {
 
     /**
      *  <p>If <code>true</code>, only the staged Embedded Price is updated. If <code>false</code>, both the current and staged Embedded Price are updated.</p>
+     * @return staged
      */
 
     @JsonProperty("staged")
@@ -49,6 +51,7 @@ public interface ProductSetDiscountedPriceAction extends ProductUpdateAction {
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed. The referenced ProductDiscount must have the Type <code>external</code>, be active, and its predicate must match the referenced Price.</p>
+     * @return discounted
      */
     @Valid
     @JsonProperty("discounted")

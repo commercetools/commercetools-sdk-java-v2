@@ -33,6 +33,7 @@ public interface ImageSearchConfigResponse {
 
     /**
      *  <p>The image search activation status.</p>
+     * @return status
      */
     @NotNull
     @JsonProperty("status")
@@ -40,6 +41,7 @@ public interface ImageSearchConfigResponse {
 
     /**
      *
+     * @return lastModifiedAt
      */
     @NotNull
     @JsonProperty("lastModifiedAt")

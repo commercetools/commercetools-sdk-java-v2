@@ -38,6 +38,7 @@ public interface CartDiscountValueGiftLineItemDraft
 
     /**
      *  <p>ResourceIdentifier of a Product.</p>
+     * @return product
      */
     @NotNull
     @Valid
@@ -46,6 +47,7 @@ public interface CartDiscountValueGiftLineItemDraft
 
     /**
      *  <p>ProductVariant of the Product.</p>
+     * @return variantId
      */
     @NotNull
     @JsonProperty("variantId")
@@ -53,6 +55,7 @@ public interface CartDiscountValueGiftLineItemDraft
 
     /**
      *  <p>Channel must have the role <code>InventorySupply</code>.</p>
+     * @return supplyChannel
      */
     @Valid
     @JsonProperty("supplyChannel")
@@ -60,6 +63,7 @@ public interface CartDiscountValueGiftLineItemDraft
 
     /**
      *  <p>Channel must have the role <code>ProductDistribution</code>.</p>
+     * @return distributionChannel
      */
     @Valid
     @JsonProperty("distributionChannel")

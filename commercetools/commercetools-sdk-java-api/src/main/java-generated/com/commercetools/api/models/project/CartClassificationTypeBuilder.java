@@ -26,6 +26,8 @@ public class CartClassificationTypeBuilder implements Builder<CartClassification
 
     /**
      *  <p>The classification items that can be used for specifying any ShippingRatePriceTier.</p>
+     * @param values
+     * @return Builder
      */
 
     public CartClassificationTypeBuilder values(
@@ -36,6 +38,8 @@ public class CartClassificationTypeBuilder implements Builder<CartClassification
 
     /**
      *  <p>The classification items that can be used for specifying any ShippingRatePriceTier.</p>
+     * @param values
+     * @return Builder
      */
 
     public CartClassificationTypeBuilder values(
@@ -46,6 +50,8 @@ public class CartClassificationTypeBuilder implements Builder<CartClassification
 
     /**
      *  <p>The classification items that can be used for specifying any ShippingRatePriceTier.</p>
+     * @param values
+     * @return Builder
      */
 
     public CartClassificationTypeBuilder plusValues(
@@ -59,6 +65,7 @@ public class CartClassificationTypeBuilder implements Builder<CartClassification
 
     /**
      *  <p>The classification items that can be used for specifying any ShippingRatePriceTier.</p>
+     * @return Builder
      */
 
     public CartClassificationTypeBuilder plusValues(
@@ -73,6 +80,7 @@ public class CartClassificationTypeBuilder implements Builder<CartClassification
 
     /**
      *  <p>The classification items that can be used for specifying any ShippingRatePriceTier.</p>
+     * @return Builder
      */
 
     public CartClassificationTypeBuilder withValues(

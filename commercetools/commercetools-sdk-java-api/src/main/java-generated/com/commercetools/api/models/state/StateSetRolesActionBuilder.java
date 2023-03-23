@@ -25,6 +25,8 @@ public class StateSetRolesActionBuilder implements Builder<StateSetRolesAction> 
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
+     * @param roles
+     * @return Builder
      */
 
     public StateSetRolesActionBuilder roles(final com.commercetools.api.models.state.StateRoleEnum... roles) {
@@ -34,6 +36,8 @@ public class StateSetRolesActionBuilder implements Builder<StateSetRolesAction> 
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
+     * @param roles
+     * @return Builder
      */
 
     public StateSetRolesActionBuilder roles(
@@ -44,6 +48,8 @@ public class StateSetRolesActionBuilder implements Builder<StateSetRolesAction> 
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
+     * @param roles
+     * @return Builder
      */
 
     public StateSetRolesActionBuilder plusRoles(final com.commercetools.api.models.state.StateRoleEnum... roles) {

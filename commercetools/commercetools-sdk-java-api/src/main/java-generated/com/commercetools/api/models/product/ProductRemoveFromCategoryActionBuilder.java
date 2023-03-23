@@ -31,6 +31,7 @@ public class ProductRemoveFromCategoryActionBuilder implements Builder<ProductRe
 
     /**
      *  <p>The Category to remove.</p>
+     * @return Builder
      */
 
     public ProductRemoveFromCategoryActionBuilder category(
@@ -42,6 +43,8 @@ public class ProductRemoveFromCategoryActionBuilder implements Builder<ProductRe
 
     /**
      *  <p>The Category to remove.</p>
+     * @param category
+     * @return Builder
      */
 
     public ProductRemoveFromCategoryActionBuilder category(
@@ -52,6 +55,8 @@ public class ProductRemoveFromCategoryActionBuilder implements Builder<ProductRe
 
     /**
      *  <p>If <code>true</code>, only the staged <code>categories</code> and <code>categoryOrderHints</code> are removed. If <code>false</code>, both the current and staged <code>categories</code> and <code>categoryOrderHints</code> are removed.</p>
+     * @param staged
+     * @return Builder
      */
 
     public ProductRemoveFromCategoryActionBuilder staged(@Nullable final Boolean staged) {

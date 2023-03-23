@@ -29,6 +29,8 @@ public class RemoveAddressChangeBuilder implements Builder<RemoveAddressChange> 
 
     /**
      *  <p>Update action for <code>removeAddress</code> action.</p>
+     * @param change
+     * @return Builder
      */
 
     public RemoveAddressChangeBuilder change(final String change) {
@@ -38,6 +40,7 @@ public class RemoveAddressChangeBuilder implements Builder<RemoveAddressChange> 
 
     /**
      *
+     * @return Builder
      */
 
     public RemoveAddressChangeBuilder previousValue(
@@ -48,6 +51,8 @@ public class RemoveAddressChangeBuilder implements Builder<RemoveAddressChange> 
 
     /**
      *
+     * @param previousValue
+     * @return Builder
      */
 
     public RemoveAddressChangeBuilder previousValue(

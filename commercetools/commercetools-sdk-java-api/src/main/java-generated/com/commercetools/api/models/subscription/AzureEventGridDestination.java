@@ -34,6 +34,7 @@ public interface AzureEventGridDestination extends Destination {
 
     /**
      *  <p>URI of the topic.</p>
+     * @return uri
      */
     @NotNull
     @JsonProperty("uri")
@@ -41,6 +42,7 @@ public interface AzureEventGridDestination extends Destination {
 
     /**
      *  <p>Partially hidden on retrieval for security reasons.</p>
+     * @return accessKey
      */
     @NotNull
     @JsonProperty("accessKey")

@@ -26,6 +26,8 @@ public class PaymentInfoBuilder implements Builder<PaymentInfo> {
 
     /**
      *
+     * @param payments
+     * @return Builder
      */
 
     public PaymentInfoBuilder payments(final com.commercetools.api.models.payment.PaymentReference... payments) {
@@ -35,6 +37,8 @@ public class PaymentInfoBuilder implements Builder<PaymentInfo> {
 
     /**
      *
+     * @param payments
+     * @return Builder
      */
 
     public PaymentInfoBuilder payments(
@@ -45,6 +49,8 @@ public class PaymentInfoBuilder implements Builder<PaymentInfo> {
 
     /**
      *
+     * @param payments
+     * @return Builder
      */
 
     public PaymentInfoBuilder plusPayments(final com.commercetools.api.models.payment.PaymentReference... payments) {
@@ -57,6 +63,7 @@ public class PaymentInfoBuilder implements Builder<PaymentInfo> {
 
     /**
      *
+     * @return Builder
      */
 
     public PaymentInfoBuilder plusPayments(
@@ -70,6 +77,7 @@ public class PaymentInfoBuilder implements Builder<PaymentInfo> {
 
     /**
      *
+     * @return Builder
      */
 
     public PaymentInfoBuilder withPayments(

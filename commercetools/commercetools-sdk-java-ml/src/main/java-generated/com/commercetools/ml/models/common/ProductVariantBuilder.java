@@ -32,6 +32,7 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
 
     /**
      *  <p>The product that contains this variant.</p>
+     * @return Builder
      */
 
     public ProductVariantBuilder product(
@@ -42,6 +43,8 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
 
     /**
      *  <p>The product that contains this variant.</p>
+     * @param product
+     * @return Builder
      */
 
     public ProductVariantBuilder product(final com.commercetools.ml.models.common.ProductReference product) {
@@ -51,6 +54,8 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
 
     /**
      *  <p>The state of the product variant.</p>
+     * @param staged
+     * @return Builder
      */
 
     public ProductVariantBuilder staged(final Boolean staged) {
@@ -60,6 +65,8 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
 
     /**
      *  <p>The id of the product variant.</p>
+     * @param variantId
+     * @return Builder
      */
 
     public ProductVariantBuilder variantId(final Integer variantId) {

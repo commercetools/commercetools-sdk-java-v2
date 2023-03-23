@@ -34,6 +34,7 @@ public interface DateAttribute extends Attribute {
 
     /**
      *
+     * @return value
      */
     @NotNull
     @JsonProperty("value")

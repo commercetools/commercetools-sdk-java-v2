@@ -40,6 +40,8 @@ public class DeliveryBuilder implements Builder<Delivery> {
 
     /**
      *
+     * @param id
+     * @return Builder
      */
 
     public DeliveryBuilder id(final String id) {
@@ -49,6 +51,8 @@ public class DeliveryBuilder implements Builder<Delivery> {
 
     /**
      *
+     * @param createdAt
+     * @return Builder
      */
 
     public DeliveryBuilder createdAt(final java.time.ZonedDateTime createdAt) {
@@ -58,6 +62,8 @@ public class DeliveryBuilder implements Builder<Delivery> {
 
     /**
      *
+     * @param items
+     * @return Builder
      */
 
     public DeliveryBuilder items(final com.commercetools.importapi.models.orders.DeliveryItem... items) {
@@ -67,6 +73,8 @@ public class DeliveryBuilder implements Builder<Delivery> {
 
     /**
      *
+     * @param items
+     * @return Builder
      */
 
     public DeliveryBuilder items(final java.util.List<com.commercetools.importapi.models.orders.DeliveryItem> items) {
@@ -76,6 +84,8 @@ public class DeliveryBuilder implements Builder<Delivery> {
 
     /**
      *
+     * @param items
+     * @return Builder
      */
 
     public DeliveryBuilder plusItems(final com.commercetools.importapi.models.orders.DeliveryItem... items) {
@@ -88,6 +98,7 @@ public class DeliveryBuilder implements Builder<Delivery> {
 
     /**
      *
+     * @return Builder
      */
 
     public DeliveryBuilder plusItems(
@@ -101,6 +112,7 @@ public class DeliveryBuilder implements Builder<Delivery> {
 
     /**
      *
+     * @return Builder
      */
 
     public DeliveryBuilder withItems(
@@ -112,6 +124,8 @@ public class DeliveryBuilder implements Builder<Delivery> {
 
     /**
      *
+     * @param parcels
+     * @return Builder
      */
 
     public DeliveryBuilder parcels(final com.commercetools.importapi.models.orders.Parcel... parcels) {
@@ -121,6 +135,8 @@ public class DeliveryBuilder implements Builder<Delivery> {
 
     /**
      *
+     * @param parcels
+     * @return Builder
      */
 
     public DeliveryBuilder parcels(final java.util.List<com.commercetools.importapi.models.orders.Parcel> parcels) {
@@ -130,6 +146,8 @@ public class DeliveryBuilder implements Builder<Delivery> {
 
     /**
      *
+     * @param parcels
+     * @return Builder
      */
 
     public DeliveryBuilder plusParcels(final com.commercetools.importapi.models.orders.Parcel... parcels) {
@@ -142,6 +160,7 @@ public class DeliveryBuilder implements Builder<Delivery> {
 
     /**
      *
+     * @return Builder
      */
 
     public DeliveryBuilder plusParcels(
@@ -155,6 +174,7 @@ public class DeliveryBuilder implements Builder<Delivery> {
 
     /**
      *
+     * @return Builder
      */
 
     public DeliveryBuilder withParcels(
@@ -166,6 +186,7 @@ public class DeliveryBuilder implements Builder<Delivery> {
 
     /**
      *
+     * @return Builder
      */
 
     public DeliveryBuilder address(
@@ -176,6 +197,8 @@ public class DeliveryBuilder implements Builder<Delivery> {
 
     /**
      *
+     * @param address
+     * @return Builder
      */
 
     public DeliveryBuilder address(@Nullable final com.commercetools.importapi.models.common.Address address) {

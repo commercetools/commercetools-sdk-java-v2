@@ -1496,6 +1496,11 @@ types:
         (java-implements):
           'com.commercetools.api.models.PagedQueryResourceRequest<ByProjectKeyOrdersEditsGet,
           com.commercetools.api.models.order_edit.OrderEditPagedQueryResponse>'
+    /search:
+      (java-mixin): |
+        public ByProjectKeyOrdersSearchByStringPost post(final String orderSearchRequest) {
+            return new ByProjectKeyOrdersSearchByStringPost(apiHttpClient, projectKey, orderSearchRequest);
+        }
     get:
       (java-implements):
         'ByProjectKeyOrdersGetMixin,

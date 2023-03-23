@@ -52,7 +52,7 @@ class ErrorMiddlewareImpl implements ErrorMiddleware {
                     try {
                         result.completeExceptionally(exceptionFactory.create(request, response));
                     }
-                    catch (Exception e) {
+                    catch (Throwable e) {
                         result.completeExceptionally(e);
                     }
                 }
